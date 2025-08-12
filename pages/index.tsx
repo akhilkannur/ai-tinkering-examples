@@ -184,7 +184,7 @@ export const getStaticProps: GetStaticProps = async () => {
   })
 
   let examples: ExampleRecord[] = []
-  let errorMessage: string | undefined
+  let errorMessage: string | null = null
 
   try {
     examples = await fetchExamples()
@@ -214,7 +214,7 @@ export const getStaticProps: GetStaticProps = async () => {
   return {
     props: { 
       examples,
-      debugInfo: process.env.NODE_ENV === 'development' ? debugInfo : undefined
+      debugInfo: process.env.NODE_ENV === 'development' ? debugInfo : null
     },
     revalidate: 300, // 5 minutes
   }

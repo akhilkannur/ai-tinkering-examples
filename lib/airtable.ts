@@ -24,16 +24,16 @@ export type ExampleRecord = {
   id: string
   title: string
   slug: string
-  summary?: string
-  screenshots?: { url: string; filename?: string }[]
-  category?: string
-  read_time?: number
-  publish_date?: string
-  workflow_steps?: string
-  original_link?: string
-  tags?: string[]
-  author_name?: string
-  author_link?: string
+  summary?: string | null
+  screenshots?: { url: string; filename?: string }[] | null
+  category?: string | null
+  read_time?: number | null
+  publish_date?: string | null
+  workflow_steps?: string | null
+  original_link?: string | null
+  tags?: string[] | null
+  author_name?: string | null
+  author_link?: string | null
 }
 
 function processRecord(record: any): ExampleRecord {
@@ -49,16 +49,16 @@ function processRecord(record: any): ExampleRecord {
     id: record.id,
     title: title || 'Untitled',
     slug,
-    summary: record.get('Summary') as string,
-    screenshots: (record.get('Screenshots') as any[]) || [],
-    category: record.get('Category') as string,
-    read_time: record.get('Read time') as number,
-    publish_date: record.get('Publish date') as string,
-    workflow_steps: record.get('Workflow steps') as string,
-    original_link: record.get('Original link') as string,
-    tags: (record.get('Tags') as string[]) || [],
-    author_name: record.get('Author name') as string,
-    author_link: record.get('Author link') as string,
+    summary: record.get('Summary') as string || null,
+    screenshots: (record.get('Screenshots') as any[]) || null,
+    category: record.get('Category') as string || null,
+    read_time: record.get('Read time') as number || null,
+    publish_date: record.get('Publish date') as string || null,
+    workflow_steps: record.get('Workflow steps') as string || null,
+    original_link: record.get('Original link') as string || null,
+    tags: (record.get('Tags') as string[]) || null,
+    author_name: record.get('Author name') as string || null,
+    author_link: record.get('Author link') as string || null,
   }
 }
 
