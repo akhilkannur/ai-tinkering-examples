@@ -1,8 +1,126 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  swcMinify: true,
+  
   images: {
-    domains: ["dl.airtableusercontent.com"],
+    // Airtable image domains
+    domains: [
+      "dl.airtableusercontent.com",
+      "attachments.airtableusercontent.com"
+    ],
+    
+    // Image optimization settings
+    formats: ['image/webp', 'image/avif'],
+    
+    // Define responsive image sizes
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    
+    // Cache optimized images for 30 days
+    minimumCacheTTL: 60 * 60 * 24 * 30,
+    
+    // Enable image optimization even for external images
+    unoptimized: false,
+    
+    // Loader configuration for better performance
+    loader: 'default',
+    
+    // Remove dangerous remote patterns and use domains instead
+    dangerouslyAllowSVG: false,
   },
+  
+  // Experimental features for better performance
+  experimental: {
+    // Enable Server Components (if using Next.js 13+)
+    appDir: false, // Set to true if using app directory
+    
+    // Optimize CSS
+    optimizeCss: true,
+    
+    // Enable SWC-based emotion for faster builds (if using emotion)
+    emotion: true,
+  },
+  
+  // Compiler optimizations
+  compiler: {
+    // Remove console.log statements in production
+    removeConsole: process.env.NODE_ENV === 'production' ? {
+      exclude: ['error', 'warn']
+    } : false,
+  },
+  
+  // Performance optimizations
+  onDemandEntries: {
+    // Period (in ms) where the server will keep pages in the buffer
+    maxInactiveAge: 25 * 1000,
+    // Number of pages that should be kept simultaneously without being disposed
+    pagesBufferLength: 2,
+  },
+  
+  // Optimize bundle size
+  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+    // Optimize bundle splitting
+    if (!isServer) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+      }
+    }
+    
+    // Add bundle analyzer in development
+    if (dev && process.env.ANALYZE === 'true') {
+      const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
+      config.plugins.push(
+        new BundleAnalyzerPlugin({
+          analyzerMode: 'server',
+          analyzerPort: 8888,
+          openAnalyzer: true,
+        })
+      )
+    }
+    
+    return config
+  },
+  
+  // Headers for better caching
+  async headers() {
+    return [
+      {
+        source: '/_next/image(.*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable'
+          }
+        ]
+      },
+      {
+        source: '/_next/static/(.*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable'
+          }
+        ]
+      }
+    ]
+  },
+  
+  // Compress responses
+  compress: true,
+  
+  // Enable built-in CSS support
+  cssModules: false,
+  
+  // PoweredBy header removal for security
+  poweredByHeader: false,
+  
+  // Generate ETags for better caching
+  generateEtags: true,
+  
+  // Trailing slash configuration
+  trailingSlash: false,
 }
+
 module.exports = nextConfig

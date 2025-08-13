@@ -1,221 +1,188 @@
-import type { GetStaticProps } from 'next'
-import Head from 'next/head'
-import Navbar from '../components/Navbar'
-import Hero from '../components/Hero'
-import NewsletterSignup from '../components/NewsletterSignup'
-import ExampleCard from '../components/ExampleCard'
-import CategoryFilter from '../components/CategoryFilter'
-import { fetchExamples, ExampleRecord } from '../lib/airtable'
 import { useState, useMemo } from 'react'
+import { GetStaticProps } from 'next'
+import { Search } from 'lucide-react'
+import ExampleCard from '../components/ExampleCard'
+import ExampleModal from '../components/ExampleModal'
+import { fetchExamples, type ExampleRecord } from '../lib/airtable'
 
-interface HomeProps {
+interface HomePageProps {
   examples: ExampleRecord[]
-  debugInfo?: {
-    hasConfig: boolean
-    errorMessage?: string
-    rawExamplesCount: number
-  }
 }
 
-export default function Home({ examples, debugInfo }: HomeProps) {
-  const [category, setCategory] = useState('All')
+export default function HomePage({ examples }: HomePageProps) {
   const [searchTerm, setSearchTerm] = useState('')
+  const [selectedCategory, setSelectedCategory] = useState('All')
+  const [selectedExample, setSelectedExample] = useState<ExampleRecord | null>(null)
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
-  console.log('Home page rendered with:', {
-    examplesCount: examples.length,
-    debugInfo
-  })
-
+  // Get unique categories
   const categories = useMemo(() => {
-    const cats = Array.from(new Set(examples.map(e => e.category || 'Uncategorized').filter(Boolean)))
-    return cats.sort()
+    const cats = examples
+      .map(ex => ex.category)
+      .filter(Boolean)
+      .filter((cat, idx, arr) => arr.indexOf(cat) === idx)
+    return ['All', ...cats]
   }, [examples])
 
+  // Filter examples
   const filteredExamples = useMemo(() => {
-    let filtered = examples
+    return examples.filter(example => {
+      const matchesSearch = !searchTerm || 
+        example.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        example.summary?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        example.tags?.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
+      
+      const matchesCategory = selectedCategory === 'All' || example.category === selectedCategory
+      
+      return matchesSearch && matchesCategory
+    })
+  }, [examples, searchTerm, selectedCategory])
 
-    // Filter by category
-    if (category !== 'All') {
-      filtered = filtered.filter(e => (e.category || '') === category)
-    }
+  const handleOpenModal = (example: ExampleRecord) => {
+    setSelectedExample(example)
+    setIsModalOpen(true)
+  }
 
-    // Filter by search term
-    if (searchTerm.trim()) {
-      const term = searchTerm.toLowerCase().trim()
-      filtered = filtered.filter(e => 
-        e.title.toLowerCase().includes(term) ||
-        e.summary?.toLowerCase().includes(term) ||
-        e.tags?.some(tag => tag.toLowerCase().includes(term))
-      )
-    }
-
-    return filtered
-  }, [examples, category, searchTerm])
+  const handleCloseModal = () => {
+    setIsModalOpen(false)
+    // Add a small delay before clearing the example to allow for exit animation
+    setTimeout(() => setSelectedExample(null), 300)
+  }
 
   return (
-    <>
-      <Head>
-        <title>AI Tinkering Examples - Copy & Try AI Workflows</title>
-        <meta name="description" content="Short, visual examples of people playing with AI — prompts, workflows, threads, videos. Curated for non-technical tinkerers." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      
-      <div className="min-h-screen bg-slate-50">
-        <Navbar />
-        <main>
-          <Hero />
-          
-          {/* Debug Information - Remove in production */}
-          {process.env.NODE_ENV === 'development' && debugInfo && (
-            <div className="max-w-4xl mx-auto px-4 mb-6">
-              <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
-                <h3 className="font-semibold text-yellow-800 mb-2">Debug Info (Development Only)</h3>
-                <div className="text-sm text-yellow-700 space-y-1">
-                  <p>Config Available: {debugInfo.hasConfig ? '✅ Yes' : '❌ No'}</p>
-                  <p>Raw Examples Count: {debugInfo.rawExamplesCount}</p>
-                  <p>Processed Examples Count: {examples.length}</p>
-                  {debugInfo.errorMessage && (
-                    <p className="text-red-700">Error: {debugInfo.errorMessage}</p>
-                  )}
-                </div>
-              </div>
-            </div>
-          )}
-          
-          <section className="max-w-4xl mx-auto px-4">
-            {/* Search Bar */}
-            <div className="mb-6">
+    <div className="min-h-screen bg-slate-50">
+      {/* Header */}
+      <div className="bg-white border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 py-8">
+          <div className="text-center mb-8">
+            <h1 className="text-4xl font-bold text-slate-900 mb-4">
+              AI examples you can copy & try
+            </h1>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+              Short, visual examples of people playing with AI — prompts, workflows, threads, videos. 
+              Curated for non-technical tinkerers.
+            </p>
+          </div>
+
+          {/* Newsletter signup */}
+          <div className="flex justify-center mb-8">
+            <button className="bg-black text-white px-6 py-3 rounded-lg font-medium hover:bg-slate-800 transition-colors">
+              Get weekly examples
+            </button>
+          </div>
+
+          {/* Search and filters */}
+          <div className="max-w-2xl mx-auto space-y-4">
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400" size={20} />
               <input
                 type="text"
                 placeholder="Search examples, tags, or descriptions..."
+                className="w-full pl-10 pr-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-slate-400 focus:outline-none"
-                aria-label="Search examples"
               />
             </div>
-
-            {/* Category Filter */}
-            {categories.length > 0 && (
-              <CategoryFilter 
-                categories={categories} 
-                selectedCategory={category}
-                onSelect={setCategory} 
-              />
-            )}
-
-            {/* Results Count */}
-            <div className="mb-4">
-              <p className="text-sm text-slate-600">
-                {filteredExamples.length} example{filteredExamples.length !== 1 ? 's' : ''} 
-                {category !== 'All' && ` in ${category}`}
-                {searchTerm && ` matching "${searchTerm}"`}
-              </p>
-            </div>
-
-            {/* Examples Grid or Empty State */}
-            {examples.length === 0 ? (
-              <div className="text-center py-16 bg-white rounded-xl border">
-                <div className="max-w-md mx-auto">
-                  <h3 className="text-lg font-semibold text-slate-900 mb-2">
-                    {debugInfo?.hasConfig ? 'No Examples Found' : 'Airtable Not Configured'}
-                  </h3>
-                  {debugInfo?.hasConfig ? (
-                    <div className="text-slate-600 space-y-2">
-                      <p>No examples were found in your Airtable base.</p>
-                      <p className="text-sm">Make sure your Airtable table has data and the correct field names.</p>
-                    </div>
-                  ) : (
-                    <div className="text-slate-600 space-y-2">
-                      <p>Your Airtable configuration is missing or incomplete.</p>
-                      <p className="text-sm">
-                        Visit <a href="/debug" className="text-blue-600 underline">/debug</a> to check your configuration.
-                      </p>
-                    </div>
-                  )}
-                </div>
-              </div>
-            ) : filteredExamples.length > 0 ? (
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
-                {filteredExamples.map(example => 
-                  <ExampleCard key={example.id} example={example} />
-                )}
-              </div>
-            ) : (
-              <div className="text-center py-12 bg-white rounded-xl border">
-                <p className="text-slate-600 mb-2">No examples found</p>
-                <p className="text-sm text-slate-500 mb-4">
-                  Try adjusting your search or category filter
-                </p>
+            
+            <div className="flex gap-2 justify-center flex-wrap">
+              {categories.map(category => (
                 <button
-                  onClick={() => {
-                    setSearchTerm('')
-                    setCategory('All')
-                  }}
-                  className="text-blue-600 hover:text-blue-800 underline"
+                  key={category}
+                  onClick={() => setSelectedCategory(category)}
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                    selectedCategory === category
+                      ? 'bg-black text-white'
+                      : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'
+                  }`}
                 >
-                  Clear filters
+                  {category}
                 </button>
-              </div>
-            )}
-          </section>
-          
-          <NewsletterSignup />
-        </main>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
-    </>
+
+      {/* Examples grid */}
+      <div className="max-w-7xl mx-auto px-4 py-8">
+        <div className="flex items-center justify-between mb-6">
+          <p className="text-slate-600">
+            {filteredExamples.length} example{filteredExamples.length !== 1 ? 's' : ''}
+            {searchTerm && ` matching "${searchTerm}"`}
+          </p>
+        </div>
+
+        {filteredExamples.length === 0 ? (
+          <div className="text-center py-12">
+            <p className="text-slate-500 text-lg">No examples found matching your criteria.</p>
+            <button
+              onClick={() => {
+                setSearchTerm('')
+                setSelectedCategory('All')
+              }}
+              className="mt-4 text-blue-600 hover:text-blue-700 underline"
+            >
+              Clear all filters
+            </button>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {filteredExamples.map((example, index) => (
+              <ExampleCard
+                key={example.id}
+                example={example}
+                priority={index < 8} // Prioritize first 8 images for faster LCP
+                onOpen={handleOpenModal}
+              />
+            ))}
+          </div>
+        )}
+      </div>
+
+      {/* Newsletter section */}
+      <div className="bg-white border-t border-slate-200 py-12">
+        <div className="max-w-2xl mx-auto text-center px-4">
+          <h2 className="text-2xl font-bold text-slate-900 mb-4">
+            Get a weekly roundup
+          </h2>
+          <p className="text-slate-600 mb-6">
+            New AI examples delivered to your inbox every week.
+          </p>
+          <div className="flex gap-3 max-w-md mx-auto">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="flex-1 px-4 py-3 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            />
+            <button className="bg-black text-white px-6 py-3 rounded-lg font-medium hover:bg-slate-800 transition-colors">
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Modal */}
+      <ExampleModal
+        example={selectedExample}
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+      />
+    </div>
   )
 }
 
-export const getStaticProps: GetStaticProps = async () => {
-  console.log('🔄 getStaticProps running on home page...')
-  
-  // Check environment variables
-  const baseId = process.env.NEXT_PUBLIC_AIRTABLE_BASE_ID
-  const apiKey = process.env.AIRTABLE_API_KEY
-  const hasConfig = !!(baseId && apiKey)
-  
-  console.log('Environment check:', {
-    hasBaseId: !!baseId,
-    hasApiKey: !!apiKey,
-    baseIdPreview: baseId ? `${baseId.slice(0, 8)}...` : 'missing',
-    apiKeyPreview: apiKey ? `${apiKey.slice(0, 8)}...` : 'missing'
-  })
-
-  let examples: ExampleRecord[] = []
-  let errorMessage: string | null = null
-
+export const getStaticProps: GetStaticProps<HomePageProps> = async () => {
   try {
-    examples = await fetchExamples()
-    console.log(`✅ Fetched ${examples.length} examples successfully`)
-    
-    // Log first example for debugging
-    if (examples.length > 0) {
-      console.log('First example preview:', {
-        id: examples[0].id,
-        title: examples[0].title,
-        slug: examples[0].slug,
-        category: examples[0].category,
-        hasScreenshots: !!examples[0].screenshots?.length
-      })
+    const examples = await fetchExamples()
+    return {
+      props: { examples },
+      revalidate: 300, // Revalidate every 5 minutes
     }
   } catch (error) {
-    console.error('❌ Error in getStaticProps:', error)
-    errorMessage = error instanceof Error ? error.message : 'Unknown error occurred'
-  }
-
-  const debugInfo = {
-    hasConfig,
-    errorMessage,
-    rawExamplesCount: examples.length
-  }
-
-  return {
-    props: { 
-      examples,
-      debugInfo: process.env.NODE_ENV === 'development' ? debugInfo : null
-    },
-    revalidate: 300, // 5 minutes
+    console.error('Failed to fetch examples:', error)
+    return {
+      props: { examples: [] },
+      revalidate: 60, // Retry more frequently on error
+    }
   }
 }
