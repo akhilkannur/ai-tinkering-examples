@@ -64,94 +64,100 @@ export default function HomePage({ examples }: HomePageProps) {
       <div className="min-h-screen bg-white font-['Inter']">
         <Navbar />
         
-        {/* Hero Section - Tobias Style */}
-        <div className="relative">
-          {/* Subtle gradient background */}
-          <div className="absolute inset-0 bg-gradient-to-b from-gray-50 via-white to-white"></div>
-          
-          <div className="relative max-w-6xl mx-auto px-6 pt-32 pb-24">
-            {/* Large, bold typography */}
-            <div className="max-w-4xl">
-              <h1 className="text-7xl sm:text-8xl lg:text-9xl font-black tracking-tight text-black leading-none mb-8">
-                AI examples
-                <br />
-                <span className="text-[#2398A7]">you can</span>
-                <br />
-                copy & try
-              </h1>
-              
-              <p className="text-xl sm:text-2xl text-gray-600 font-light leading-relaxed max-w-2xl mb-16">
-                Curated workflows and prompts for non-technical tinkerers. 
-                No fluff, just actionable examples.
-              </p>
-              
-              {/* Clean CTA */}
-              <a 
-                href="#newsletter"
-                className="group inline-flex items-center gap-4 bg-black text-white px-12 py-6 text-lg font-medium hover:bg-gray-900 transition-all duration-300"
-              >
-                Get weekly examples
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-              </a>
-            </div>
-          </div>
-          
-          {/* Minimal geometric accent */}
-          <div className="absolute top-40 right-12 w-2 h-32 bg-[#E1AA36] hidden lg:block"></div>
-        </div>
-
-        {/* Search Section */}
-        <div className="border-t border-gray-100 bg-gray-50">
-          <div className="max-w-6xl mx-auto px-6 py-16">
-            <div className="max-w-2xl">
-              <h2 className="text-3xl font-bold text-black mb-8">Find what you need</h2>
-              
-              <div className="relative mb-12">
-                <Search className="absolute left-6 top-1/2 transform -translate-y-1/2 text-gray-400" size={24} />
-                <input
-                  type="text"
-                  placeholder="Search examples..."
-                  className="w-full pl-16 pr-6 py-5 text-lg bg-white border border-gray-200 focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all duration-200"
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                />
+        {/* Compact Hero Section */}
+        <div className="relative bg-gradient-to-b from-gray-50 to-white">
+          <div className="max-w-6xl mx-auto px-6 pt-16 pb-12">
+            <div className="grid lg:grid-cols-12 gap-8 items-center">
+              {/* Hero Content - More compact */}
+              <div className="lg:col-span-8">
+                <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black tracking-tight text-black leading-tight mb-6">
+                  AI examples
+                  <br />
+                  <span className="text-[#2398A7]">you can</span> copy & try
+                </h1>
+                
+                <p className="text-lg sm:text-xl text-gray-600 font-light leading-relaxed max-w-xl mb-8">
+                  Curated workflows and prompts for non-technical tinkerers. 
+                  No fluff, just actionable examples.
+                </p>
+                
+                <a 
+                  href="#newsletter"
+                  className="group inline-flex items-center gap-3 bg-black text-white px-8 py-4 text-base font-medium hover:bg-gray-900 transition-all duration-300"
+                >
+                  Get weekly examples
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                </a>
               </div>
-              
-              <div className="flex flex-wrap gap-3">
-                {categories.map(category => (
-                  <button
-                    key={category}
-                    onClick={() => setSelectedCategory(category)}
-                    className={`px-6 py-3 text-sm font-medium transition-all duration-200 ${
-                      selectedCategory === category
-                        ? 'bg-black text-white'
-                        : 'bg-white text-gray-600 border border-gray-200 hover:border-gray-400'
-                    }`}
-                  >
-                    {category}
-                  </button>
-                ))}
+
+              {/* Search - Integrated into hero */}
+              <div className="lg:col-span-4">
+                <div className="bg-white p-6 border border-gray-100 shadow-sm">
+                  <h3 className="text-lg font-semibold text-black mb-4">Find examples</h3>
+                  
+                  <div className="relative mb-4">
+                    <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
+                    <input
+                      type="text"
+                      placeholder="Search..."
+                      className="w-full pl-12 pr-4 py-3 text-sm bg-gray-50 border border-gray-200 focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all duration-200"
+                      value={searchTerm}
+                      onChange={(e) => setSearchTerm(e.target.value)}
+                    />
+                  </div>
+                  
+                  <div className="flex flex-wrap gap-2">
+                    {categories.slice(0, 4).map(category => (
+                      <button
+                        key={category}
+                        onClick={() => setSelectedCategory(category)}
+                        className={`px-3 py-1.5 text-xs font-medium transition-all duration-200 ${
+                          selectedCategory === category
+                            ? 'bg-black text-white'
+                            : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                        }`}
+                      >
+                        {category}
+                      </button>
+                    ))}
+                    {categories.length > 4 && (
+                      <button className="px-3 py-1.5 text-xs font-medium bg-gray-100 text-gray-500">
+                        +{categories.length - 4} more
+                      </button>
+                    )}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+          
+          {/* Minimal accent line */}
+          <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-[#E1AA36] via-[#7ADAA5] to-[#2398A7] opacity-30"></div>
         </div>
 
-        {/* Examples Grid */}
-        <div className="max-w-6xl mx-auto px-6 py-24">
-          {/* Section header */}
-          <div className="flex items-end justify-between mb-16 border-b border-gray-100 pb-8">
-            <div>
-              <h2 className="text-5xl font-black text-black mb-4">
+        {/* Examples Grid - Now closer to hero */}
+        <div className="max-w-6xl mx-auto px-6 py-16">
+          {/* Compact section header */}
+          <div className="flex items-center justify-between mb-8 pb-4 border-b border-gray-100">
+            <div className="flex items-center gap-4">
+              <h2 className="text-3xl font-black text-black">
                 {filteredExamples.length}
               </h2>
-              <p className="text-xl text-gray-600 font-light">
+              <p className="text-lg text-gray-600 font-light">
                 example{filteredExamples.length !== 1 ? 's' : ''}
                 {searchTerm && ` for "${searchTerm}"`}
               </p>
             </div>
             
-            {/* Minimal accent */}
-            <div className="w-16 h-1 bg-[#7ADAA5]"></div>
+            {/* Show all categories button if truncated */}
+            {categories.length > 4 && (
+              <button 
+                className="text-sm text-[#2398A7] hover:text-black transition-colors duration-200 font-medium"
+                onClick={() => {/* Toggle showing all categories */}}
+              >
+                View all categories
+              </button>
+            )}
           </div>
 
           {filteredExamples.length === 0 ? (
@@ -169,41 +175,46 @@ export default function HomePage({ examples }: HomePageProps) {
               </button>
             </div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredExamples.map((example, index) => (
                 <div 
                   key={example.id} 
                   className="group cursor-pointer"
                   onClick={() => handleOpenModal(example)}
                 >
-                  {/* Clean card design */}
-                  <div className="border border-gray-100 hover:border-gray-300 transition-all duration-300 bg-white">
-                    {/* Image placeholder or actual image */}
-                    <div className="aspect-video bg-gray-50 border-b border-gray-100 group-hover:bg-gray-100 transition-colors duration-300">
+                  {/* Compact card design */}
+                  <div className="border border-gray-100 hover:border-gray-300 transition-all duration-300 bg-white hover:shadow-sm">
+                    {/* Smaller image area */}
+                    <div className="aspect-[4/3] bg-gray-50 border-b border-gray-100 group-hover:bg-gray-100 transition-colors duration-300">
                       {/* You can add actual image here */}
                     </div>
                     
-                    <div className="p-8">
-                      <h3 className="text-xl font-bold text-black mb-3 group-hover:text-[#2398A7] transition-colors duration-200">
+                    <div className="p-6">
+                      <h3 className="text-lg font-bold text-black mb-2 group-hover:text-[#2398A7] transition-colors duration-200 line-clamp-2">
                         {example.title}
                       </h3>
                       
                       {example.summary && (
-                        <p className="text-gray-600 leading-relaxed mb-6">
-                          {example.summary.slice(0, 120)}{example.summary.length > 120 ? '...' : ''}
+                        <p className="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3">
+                          {example.summary.slice(0, 100)}{example.summary.length > 100 ? '...' : ''}
                         </p>
                       )}
                       
                       {example.tags && (
-                        <div className="flex flex-wrap gap-2">
-                          {example.tags.slice(0, 3).map(tag => (
+                        <div className="flex flex-wrap gap-1">
+                          {example.tags.slice(0, 2).map(tag => (
                             <span 
                               key={tag}
-                              className="px-3 py-1 text-xs font-medium bg-gray-100 text-gray-700"
+                              className="px-2 py-1 text-xs font-medium bg-gray-100 text-gray-700"
                             >
                               {tag}
                             </span>
                           ))}
+                          {example.tags.length > 2 && (
+                            <span className="px-2 py-1 text-xs font-medium text-gray-500">
+                              +{example.tags.length - 2}
+                            </span>
+                          )}
                         </div>
                       )}
                     </div>
