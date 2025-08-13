@@ -30,11 +30,10 @@ const nextConfig = {
     dangerouslyAllowSVG: false,
   },
   
-  // Experimental features for better performance
-  experimental: {
-    // Enable SWC-based optimizations
-    optimizeCss: true,
-  },
+  // Removed experimental features that were causing issues
+  // experimental: {
+  //   optimizeCss: true,
+  // },
   
   // Compiler optimizations
   compiler: {
@@ -42,9 +41,6 @@ const nextConfig = {
     removeConsole: process.env.NODE_ENV === 'production' ? {
       exclude: ['error', 'warn']
     } : false,
-    
-    // Removed emotion config since we're not using emotion
-    // emotion: true,
   },
   
   // Performance optimizations

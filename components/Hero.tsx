@@ -1,4 +1,6 @@
-export default function Hero(){
+import React from 'react'
+
+export default function Hero() {
   return (
     <section className="max-w-4xl mx-auto px-4 py-12">
       <h1 className="text-4xl sm:text-5xl font-extrabold">AI examples you can copy & try</h1>
