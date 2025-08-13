@@ -64,7 +64,53 @@ export default function HomePage({ examples }: HomePageProps) {
             </p>
           </div>
 
-          {/* Newsletter signup */}
+          {/* Newsletter section */}
+      <div className="bg-white border-t border-slate-200 py-12">
+        <div className="max-w-2xl mx-auto text-center px-4">
+          <h2 className="text-2xl font-bold text-slate-900 mb-4">
+            Get a weekly roundup
+          </h2>
+          <p className="text-slate-600 mb-6">
+            New AI examples delivered to your inbox every week.
+          </p>
+          <div className="flex gap-3 max-w-md mx-auto">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="flex-1 px-4 py-3 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            />
+            <button className="bg-black text-white px-6 py-3 rounded-lg font-medium hover:bg-slate-800 transition-colors">
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Modal */}
+      <ExampleModal
+        example={selectedExample}
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+      />
+    </div>
+  )
+}
+
+export const getStaticProps: GetStaticProps<HomePageProps> = async () => {
+  try {
+    const examples = await fetchExamples()
+    return {
+      props: { examples },
+      revalidate: 300, // Revalidate every 5 minutes
+    }
+  } catch (error) {
+    console.error('Failed to fetch examples:', error)
+    return {
+      props: { examples: [] },
+      revalidate: 60, // Retry more frequently on error
+    }
+  }
+} signup */}
           <div className="flex justify-center mb-8">
             <button className="bg-black text-white px-6 py-3 rounded-lg font-medium hover:bg-slate-800 transition-colors">
               Get weekly examples
@@ -139,50 +185,4 @@ export default function HomePage({ examples }: HomePageProps) {
         )}
       </div>
 
-      {/* Newsletter section */}
-      <div className="bg-white border-t border-slate-200 py-12">
-        <div className="max-w-2xl mx-auto text-center px-4">
-          <h2 className="text-2xl font-bold text-slate-900 mb-4">
-            Get a weekly roundup
-          </h2>
-          <p className="text-slate-600 mb-6">
-            New AI examples delivered to your inbox every week.
-          </p>
-          <div className="flex gap-3 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-4 py-3 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            />
-            <button className="bg-black text-white px-6 py-3 rounded-lg font-medium hover:bg-slate-800 transition-colors">
-              Subscribe
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Modal */}
-      <ExampleModal
-        example={selectedExample}
-        isOpen={isModalOpen}
-        onClose={handleCloseModal}
-      />
-    </div>
-  )
-}
-
-export const getStaticProps: GetStaticProps<HomePageProps> = async () => {
-  try {
-    const examples = await fetchExamples()
-    return {
-      props: { examples },
-      revalidate: 300, // Revalidate every 5 minutes
-    }
-  } catch (error) {
-    console.error('Failed to fetch examples:', error)
-    return {
-      props: { examples: [] },
-      revalidate: 60, // Retry more frequently on error
-    }
-  }
-}
+      {/* Newsletter

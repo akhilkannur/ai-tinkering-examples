@@ -32,14 +32,8 @@ const nextConfig = {
   
   // Experimental features for better performance
   experimental: {
-    // Enable Server Components (if using Next.js 13+)
-    appDir: false, // Set to true if using app directory
-    
-    // Optimize CSS
+    // Enable SWC-based optimizations
     optimizeCss: true,
-    
-    // Enable SWC-based emotion for faster builds (if using emotion)
-    emotion: true,
   },
   
   // Compiler optimizations
@@ -48,6 +42,9 @@ const nextConfig = {
     removeConsole: process.env.NODE_ENV === 'production' ? {
       exclude: ['error', 'warn']
     } : false,
+    
+    // Move emotion config here (if using emotion)
+    emotion: true,
   },
   
   // Performance optimizations
@@ -66,18 +63,6 @@ const nextConfig = {
         ...config.resolve.fallback,
         fs: false,
       }
-    }
-    
-    // Add bundle analyzer in development
-    if (dev && process.env.ANALYZE === 'true') {
-      const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
-      config.plugins.push(
-        new BundleAnalyzerPlugin({
-          analyzerMode: 'server',
-          analyzerPort: 8888,
-          openAnalyzer: true,
-        })
-      )
     }
     
     return config
@@ -109,9 +94,6 @@ const nextConfig = {
   
   // Compress responses
   compress: true,
-  
-  // Enable built-in CSS support
-  cssModules: false,
   
   // PoweredBy header removal for security
   poweredByHeader: false,
