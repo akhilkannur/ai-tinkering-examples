@@ -1,7 +1,7 @@
 import { useState, useMemo } from 'react'
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
-import { Search, Sparkles, Zap, Star } from 'lucide-react'
+import { Search, ArrowRight } from 'lucide-react'
 import Navbar from '../components/Navbar'
 import ExampleCard from '../components/ExampleCard'
 import ExampleModal from '../components/ExampleModal'
@@ -48,157 +48,85 @@ export default function HomePage({ examples }: HomePageProps) {
 
   const handleCloseModal = () => {
     setIsModalOpen(false)
-    // Add a small delay before clearing the example to allow for exit animation
     setTimeout(() => setSelectedExample(null), 300)
   }
 
   return (
     <>
       <Head>
-        <title>AI Examples You Can Copy & Try | AI Tinkering Examples</title>
-        <meta name="description" content="Discover practical AI workflows, prompts, and automation ideas. Visual examples curated for non-technical tinkerers with step-by-step guides." />
-        <meta name="keywords" content="AI examples, AI workflows, automation, prompts, artificial intelligence, tutorials" />
-        <link rel="canonical" href={typeof window !== 'undefined' ? window.location.href : 'https://your-domain.com'} />
+        <title>AI Examples You Can Copy & Try</title>
+        <meta name="description" content="Curated AI workflows and prompts for non-technical tinkerers" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
       </Head>
 
-      <div className="min-h-screen" style={{ backgroundColor: '#f8fffe' }}>
+      <div className="min-h-screen bg-white font-['Inter']">
         <Navbar />
         
-        {/* Enhanced Hero Header with Color Hunt Palette */}
-        <div className="relative overflow-hidden">
-          {/* Beautiful gradient background using the color palette */}
-          <div 
-            className="absolute inset-0"
-            style={{
-              background: `
-                linear-gradient(135deg, 
-                  #7ADAA5 0%, 
-                  rgba(122, 218, 165, 0.8) 25%, 
-                  rgba(35, 152, 167, 0.9) 50%, 
-                  rgba(236, 236, 187, 0.8) 75%, 
-                  #E1AA36 100%
-                )
-              `
-            }}
-          >
-            {/* Animated gradient overlay */}
-            <div 
-              className="absolute inset-0 animate-pulse opacity-30"
-              style={{
-                background: `
-                  radial-gradient(circle at 30% 20%, rgba(122, 218, 165, 0.6) 0%, transparent 50%),
-                  radial-gradient(circle at 70% 80%, rgba(35, 152, 167, 0.5) 0%, transparent 50%),
-                  radial-gradient(circle at 20% 80%, rgba(225, 170, 54, 0.4) 0%, transparent 50%)
-                `
-              }}
-            ></div>
-            
-            {/* Floating orbs with palette colors */}
-            <div 
-              className="absolute -top-20 -left-20 w-48 h-48 rounded-full opacity-40 blur-3xl animate-bounce [animation-duration:4s]"
-              style={{ backgroundColor: '#7ADAA5' }}
-            ></div>
-            <div 
-              className="absolute top-1/3 -right-16 w-40 h-40 rounded-full opacity-35 blur-2xl animate-bounce [animation-duration:5s] [animation-delay:1s]"
-              style={{ backgroundColor: '#2398A7' }}
-            ></div>
-            <div 
-              className="absolute -bottom-16 left-1/4 w-36 h-36 rounded-full opacity-40 blur-3xl animate-bounce [animation-duration:6s] [animation-delay:2s]"
-              style={{ backgroundColor: '#E1AA36' }}
-            ></div>
-            
-            {/* Geometric decorations */}
-            <div 
-              className="absolute top-12 left-20 w-8 h-8 rounded-lg rotate-12 opacity-60 animate-spin [animation-duration:10s]"
-              style={{ backgroundColor: '#ECECBB' }}
-            ></div>
-            <div 
-              className="absolute top-32 right-24 w-6 h-6 rotate-45 opacity-50 animate-pulse [animation-duration:3s]"
-              style={{ backgroundColor: '#7ADAA5' }}
-            ></div>
-            <div 
-              className="absolute bottom-20 right-32 w-10 h-10 rounded-full opacity-45 animate-bounce [animation-duration:4s]"
-              style={{ backgroundColor: '#2398A7' }}
-            ></div>
-            
-            {/* Sparkle effects */}
-            <Star className="absolute top-1/4 left-1/3 w-4 h-4 text-white opacity-70 animate-ping [animation-duration:2s]" />
-            <Sparkles className="absolute top-3/5 right-1/4 w-5 h-5 text-white opacity-60 animate-pulse [animation-duration:3s]" />
-            <Zap className="absolute bottom-1/3 left-1/5 w-4 h-4 text-white opacity-50 animate-bounce [animation-duration:4s]" />
-          </div>
-
-          {/* Content */}
-          <div className="relative z-10 max-w-7xl mx-auto px-4 py-16">
-            <div className="text-center mb-10">
-              <h1 className="text-5xl sm:text-6xl font-extrabold text-white mb-6 drop-shadow-lg">
-                AI examples you can 
-                <span 
-                  className="block mt-2"
-                  style={{ 
-                    background: 'linear-gradient(45deg, #ECECBB, #E1AA36)',
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent',
-                    backgroundClip: 'text'
-                  }}
-                >
-                  copy & try
-                </span>
+        {/* Hero Section - Tobias Style */}
+        <div className="relative">
+          {/* Subtle gradient background */}
+          <div className="absolute inset-0 bg-gradient-to-b from-gray-50 via-white to-white"></div>
+          
+          <div className="relative max-w-6xl mx-auto px-6 pt-32 pb-24">
+            {/* Large, bold typography */}
+            <div className="max-w-4xl">
+              <h1 className="text-7xl sm:text-8xl lg:text-9xl font-black tracking-tight text-black leading-none mb-8">
+                AI examples
+                <br />
+                <span className="text-[#2398A7]">you can</span>
+                <br />
+                copy & try
               </h1>
-              <p className="text-xl text-white/90 max-w-4xl mx-auto leading-relaxed drop-shadow-md mb-8">
-                Short, visual examples of people playing with AI — prompts, workflows, threads, videos. 
-                <br className="hidden sm:block" />
-                Curated for non-technical tinkerers.
+              
+              <p className="text-xl sm:text-2xl text-gray-600 font-light leading-relaxed max-w-2xl mb-16">
+                Curated workflows and prompts for non-technical tinkerers. 
+                No fluff, just actionable examples.
               </p>
-            </div>
-
-            {/* Enhanced CTA Button */}
-            <div className="flex justify-center mb-12">
+              
+              {/* Clean CTA */}
               <a 
-                href="#newsletter" 
-                className="group relative inline-flex items-center gap-3 rounded-2xl px-10 py-5 text-xl font-bold text-white shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-2 hover:scale-105 overflow-hidden"
-                style={{
-                  background: 'linear-gradient(135deg, #2398A7 0%, #7ADAA5 100%)',
-                  boxShadow: '0 20px 40px rgba(35, 152, 167, 0.3)'
-                }}
+                href="#newsletter"
+                className="group inline-flex items-center gap-4 bg-black text-white px-12 py-6 text-lg font-medium hover:bg-gray-900 transition-all duration-300"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <Sparkles className="w-6 h-6 animate-pulse" />
-                <span className="relative z-10">Get weekly examples</span>
-                <div className="absolute -inset-1 bg-gradient-to-r from-white/30 to-white/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
+                Get weekly examples
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
               </a>
             </div>
+          </div>
+          
+          {/* Minimal geometric accent */}
+          <div className="absolute top-40 right-12 w-2 h-32 bg-[#E1AA36] hidden lg:block"></div>
+        </div>
 
-            {/* Enhanced Search and Filters */}
-            <div className="max-w-3xl mx-auto space-y-6">
-              <div className="relative group">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 group-focus-within:text-teal-600 transition-colors" size={24} />
+        {/* Search Section */}
+        <div className="border-t border-gray-100 bg-gray-50">
+          <div className="max-w-6xl mx-auto px-6 py-16">
+            <div className="max-w-2xl">
+              <h2 className="text-3xl font-bold text-black mb-8">Find what you need</h2>
+              
+              <div className="relative mb-12">
+                <Search className="absolute left-6 top-1/2 transform -translate-y-1/2 text-gray-400" size={24} />
                 <input
                   type="text"
-                  placeholder="Search examples, tags, or descriptions..."
-                  className="w-full pl-12 pr-6 py-4 text-lg border-2 border-white/30 rounded-2xl focus:outline-none focus:ring-4 focus:ring-white/20 focus:border-white/60 bg-white/20 backdrop-blur-md shadow-xl placeholder-white/70 text-white transition-all duration-300"
+                  placeholder="Search examples..."
+                  className="w-full pl-16 pr-6 py-5 text-lg bg-white border border-gray-200 focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all duration-200"
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  style={{
-                    backdropFilter: 'blur(20px)',
-                  }}
                 />
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
               </div>
               
-              <div className="flex gap-3 justify-center flex-wrap">
+              <div className="flex flex-wrap gap-3">
                 {categories.map(category => (
                   <button
                     key={category}
                     onClick={() => setSelectedCategory(category)}
-                    className={`px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 backdrop-blur-md shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 ${
+                    className={`px-6 py-3 text-sm font-medium transition-all duration-200 ${
                       selectedCategory === category
-                        ? 'text-white shadow-2xl'
-                        : 'text-white/80 hover:text-white hover:bg-white/20'
+                        ? 'bg-black text-white'
+                        : 'bg-white text-gray-600 border border-gray-200 hover:border-gray-400'
                     }`}
-                    style={{
-                      backgroundColor: selectedCategory === category ? '#2398A7' : 'rgba(255, 255, 255, 0.15)',
-                      border: selectedCategory === category ? 'none' : '1px solid rgba(255, 255, 255, 0.3)'
-                    }}
                   >
                     {category}
                   </button>
@@ -208,108 +136,130 @@ export default function HomePage({ examples }: HomePageProps) {
           </div>
         </div>
 
-        {/* Enhanced Examples Section */}
-        <div className="max-w-7xl mx-auto px-4 py-12">
-          <div className="flex items-center justify-between mb-8">
-            <div className="flex items-center gap-4">
-              <div 
-                className="w-1 h-8 rounded-full"
-                style={{ backgroundColor: '#2398A7' }}
-              ></div>
-              <h2 className="text-2xl font-bold text-gray-800">
-                {filteredExamples.length} example{filteredExamples.length !== 1 ? 's' : ''}
-                {searchTerm && (
-                  <span className="text-lg font-normal text-gray-600">
-                    {' '}matching "<span style={{ color: '#2398A7' }}>{searchTerm}</span>"
-                  </span>
-                )}
+        {/* Examples Grid */}
+        <div className="max-w-6xl mx-auto px-6 py-24">
+          {/* Section header */}
+          <div className="flex items-end justify-between mb-16 border-b border-gray-100 pb-8">
+            <div>
+              <h2 className="text-5xl font-black text-black mb-4">
+                {filteredExamples.length}
               </h2>
+              <p className="text-xl text-gray-600 font-light">
+                example{filteredExamples.length !== 1 ? 's' : ''}
+                {searchTerm && ` for "${searchTerm}"`}
+              </p>
             </div>
             
-            {/* Stats badges */}
-            <div className="hidden md:flex items-center gap-3">
-              <div 
-                className="px-4 py-2 rounded-full text-sm font-medium text-white shadow-lg"
-                style={{ backgroundColor: '#7ADAA5' }}
-              >
-                ✨ Updated Weekly
-              </div>
-              <div 
-                className="px-4 py-2 rounded-full text-sm font-medium text-white shadow-lg"
-                style={{ backgroundColor: '#E1AA36' }}
-              >
-                🚀 Ready to Use
-              </div>
-            </div>
+            {/* Minimal accent */}
+            <div className="w-16 h-1 bg-[#7ADAA5]"></div>
           </div>
 
           {filteredExamples.length === 0 ? (
-            <div className="text-center py-16">
-              <div 
-                className="w-24 h-24 rounded-full mx-auto mb-6 flex items-center justify-center"
-                style={{ backgroundColor: '#ECECBB' }}
-              >
-                <Search className="w-10 h-10" style={{ color: '#2398A7' }} />
-              </div>
-              <p className="text-xl text-gray-600 mb-4">No examples found matching your criteria.</p>
+            <div className="py-32 text-center">
+              <h3 className="text-3xl font-bold text-black mb-4">Nothing found</h3>
+              <p className="text-xl text-gray-600 mb-8">Try adjusting your search criteria</p>
               <button
                 onClick={() => {
                   setSearchTerm('')
                   setSelectedCategory('All')
                 }}
-                className="px-8 py-3 rounded-xl font-semibold text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
-                style={{ backgroundColor: '#2398A7' }}
+                className="bg-black text-white px-8 py-4 text-lg font-medium hover:bg-gray-900 transition-colors duration-200"
               >
-                Clear all filters
+                Reset filters
               </button>
             </div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
               {filteredExamples.map((example, index) => (
-                <div key={example.id} className="group">
-                  <ExampleCard
-                    example={example}
-                    priority={index < 8}
-                    onOpen={handleOpenModal}
-                  />
+                <div 
+                  key={example.id} 
+                  className="group cursor-pointer"
+                  onClick={() => handleOpenModal(example)}
+                >
+                  {/* Clean card design */}
+                  <div className="border border-gray-100 hover:border-gray-300 transition-all duration-300 bg-white">
+                    {/* Image placeholder or actual image */}
+                    <div className="aspect-video bg-gray-50 border-b border-gray-100 group-hover:bg-gray-100 transition-colors duration-300">
+                      {/* You can add actual image here */}
+                    </div>
+                    
+                    <div className="p-8">
+                      <h3 className="text-xl font-bold text-black mb-3 group-hover:text-[#2398A7] transition-colors duration-200">
+                        {example.title}
+                      </h3>
+                      
+                      {example.summary && (
+                        <p className="text-gray-600 leading-relaxed mb-6">
+                          {example.summary.slice(0, 120)}{example.summary.length > 120 ? '...' : ''}
+                        </p>
+                      )}
+                      
+                      {example.tags && (
+                        <div className="flex flex-wrap gap-2">
+                          {example.tags.slice(0, 3).map(tag => (
+                            <span 
+                              key={tag}
+                              className="px-3 py-1 text-xs font-medium bg-gray-100 text-gray-700"
+                            >
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
           )}
         </div>
 
-        {/* Enhanced Newsletter Section */}
-        <div 
-          className="relative py-20 overflow-hidden"
-          style={{
-            background: 'linear-gradient(135deg, #2398A7 0%, #7ADAA5 100%)'
-          }}
-        >
-          {/* Background decorations */}
-          <div 
-            className="absolute top-0 left-0 w-72 h-72 rounded-full opacity-20 blur-3xl"
-            style={{ backgroundColor: '#ECECBB' }}
-          ></div>
-          <div 
-            className="absolute bottom-0 right-0 w-96 h-96 rounded-full opacity-15 blur-3xl"
-            style={{ backgroundColor: '#E1AA36' }}
-          ></div>
-          
-          <div className="relative z-10 max-w-7xl mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-                Stay ahead of the AI curve
+        {/* Newsletter Section */}
+        <div className="bg-black text-white">
+          <div className="max-w-6xl mx-auto px-6 py-32">
+            <div className="max-w-3xl">
+              <h2 className="text-6xl sm:text-7xl font-black mb-8 leading-none">
+                Stay in 
+                <br />
+                <span className="text-[#7ADAA5]">the loop</span>
               </h2>
-              <p className="text-xl text-white/90 max-w-2xl mx-auto leading-relaxed">
-                Join thousands of tinkerers getting fresh AI examples, tools, and inspiration delivered weekly.
+              
+              <p className="text-xl text-gray-300 font-light leading-relaxed mb-16 max-w-2xl">
+                Get fresh AI examples delivered weekly. No spam, no BS. 
+                Just actionable insights you can use right away.
               </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 max-w-lg">
+                <input
+                  type="email"
+                  placeholder="Your email"
+                  className="flex-1 px-6 py-4 bg-white text-black text-lg focus:outline-none focus:ring-2 focus:ring-[#7ADAA5]"
+                />
+                <button className="bg-[#E1AA36] text-black px-8 py-4 text-lg font-medium hover:bg-[#d19a2e] transition-colors duration-200 whitespace-nowrap">
+                  Subscribe
+                </button>
+              </div>
             </div>
             
-            <div 
-              className="max-w-2xl mx-auto p-8 rounded-3xl shadow-2xl backdrop-blur-md border border-white/20"
-              style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)' }}
-            >
-              <NewsletterSignup />
+            {/* Geometric accent */}
+            <div className="absolute right-12 bottom-32 w-1 h-24 bg-[#2398A7] hidden lg:block"></div>
+          </div>
+        </div>
+
+        {/* Footer */}
+        <div className="bg-gray-50 border-t border-gray-100">
+          <div className="max-w-6xl mx-auto px-6 py-16">
+            <div className="flex flex-col sm:flex-row justify-between items-start gap-8">
+              <div>
+                <h3 className="text-2xl font-black text-black mb-4">AI Examples</h3>
+                <p className="text-gray-600 max-w-xs">
+                  Curated for tinkerers, made with care.
+                </p>
+              </div>
+              
+              <div className="text-sm text-gray-500">
+                © 2024 — Made for curious minds
+              </div>
             </div>
           </div>
         </div>
@@ -330,13 +280,13 @@ export const getStaticProps: GetStaticProps<HomePageProps> = async () => {
     const examples = await fetchExamples()
     return {
       props: { examples },
-      revalidate: 300, // Revalidate every 5 minutes
+      revalidate: 300,
     }
   } catch (error) {
     console.error('Failed to fetch examples:', error)
     return {
       props: { examples: [] },
-      revalidate: 60, // Retry more frequently on error
+      revalidate: 60,
     }
   }
 }
