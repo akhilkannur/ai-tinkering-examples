@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import { useRouter } from 'next/router'
 import { X, ExternalLink, User } from 'lucide-react'
 import type { ExampleRecord } from '../lib/airtable'
 import Image from 'next/image'
@@ -12,6 +13,34 @@ interface ExampleModalProps {
 export default function ExampleModal({ example, isOpen, onClose }: ExampleModalProps) {
   const modalRef = useRef<HTMLDivElement>(null)
   const contentRef = useRef<HTMLDivElement>(null)
+  const router = useRouter()
+
+  // Update URL when modal opens/closes
+  useEffect(() => {
+    if (isOpen && example) {
+      // Generate the SEO URL
+      const categorySlug = example.category?.toLowerCase().replace(/\s+/g, '-') || 'uncategorized'
+      const exampleUrl = `/ai-examples/${categorySlug}/${example.slug}`
+      
+      // Update URL without navigation
+      window.history.pushState({}, '', exampleUrl)
+    } else if (!isOpen) {
+      // Restore previous URL when modal closes
+      window.history.back()
+    }
+  }, [isOpen, example])
+
+  // Handle browser back button
+  useEffect(() => {
+    const handlePopState = () => {
+      if (isOpen) {
+        onClose()
+      }
+    }
+
+    window.addEventListener('popstate', handlePopState)
+    return () => window.removeEventListener('popstate', handlePopState)
+  }, [isOpen, onClose])
 
   // Handle escape key and outside clicks
   useEffect(() => {

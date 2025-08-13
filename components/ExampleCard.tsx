@@ -133,6 +133,7 @@ export default function ExampleCard({ example, priority = false, onOpen }: Examp
             <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
               <div className="relative share-button">
                 <button
+                  type="button"
                   onClick={handleShareClick}
                   className="p-2 bg-white/90 backdrop-blur-sm rounded-lg shadow-lg hover:bg-white transition-colors"
                   aria-label="Share example"
@@ -144,6 +145,7 @@ export default function ExampleCard({ example, priority = false, onOpen }: Examp
                 {showShareMenu && (
                   <div className="absolute top-full right-0 mt-2 bg-white rounded-lg shadow-xl border border-slate-200 py-2 min-w-[160px] z-20">
                     <button
+                      type="button"
                       onClick={(e) => shareOnSocial('facebook', e)}
                       className="flex items-center gap-3 w-full px-4 py-2 text-left hover:bg-slate-50 transition-colors"
                     >
@@ -152,6 +154,7 @@ export default function ExampleCard({ example, priority = false, onOpen }: Examp
                     </button>
                     
                     <button
+                      type="button"
                       onClick={(e) => shareOnSocial('twitter', e)}
                       className="flex items-center gap-3 w-full px-4 py-2 text-left hover:bg-slate-50 transition-colors"
                     >
@@ -160,6 +163,7 @@ export default function ExampleCard({ example, priority = false, onOpen }: Examp
                     </button>
                     
                     <button
+                      type="button"
                       onClick={(e) => shareOnSocial('linkedin', e)}
                       className="flex items-center gap-3 w-full px-4 py-2 text-left hover:bg-slate-50 transition-colors"
                     >
@@ -170,6 +174,7 @@ export default function ExampleCard({ example, priority = false, onOpen }: Examp
                     <div className="border-t border-slate-100 my-1"></div>
                     
                     <button
+                      type="button"
                       onClick={copyToClipboard}
                       className="flex items-center gap-3 w-full px-4 py-2 text-left hover:bg-slate-50 transition-colors"
                     >
