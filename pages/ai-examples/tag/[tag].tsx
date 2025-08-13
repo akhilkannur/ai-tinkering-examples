@@ -1,9 +1,11 @@
+import { useState } from 'react'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
 import { ArrowLeft, Hash } from 'lucide-react'
 import Navbar from '../../../components/Navbar'
 import ExampleCard from '../../../components/ExampleCard'
+import ExampleModal from '../../../components/ExampleModal'
 import SocialSharing from '../../../components/SocialSharing'
 import { fetchExamples, ExampleRecord } from '../../../lib/airtable'
 
@@ -14,7 +16,20 @@ interface TagPageProps {
 }
 
 export default function TagPage({ examples, tag, tagDisplayName }: TagPageProps) {
+  const [selectedExample, setSelectedExample] = useState<ExampleRecord | null>(null)
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  
   const currentUrl = typeof window !== 'undefined' ? window.location.href : `https://your-domain.com/ai-examples/tag/${tag}`
+
+  const handleOpenModal = (example: ExampleRecord) => {
+    setSelectedExample(example)
+    setIsModalOpen(true)
+  }
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false)
+    setTimeout(() => setSelectedExample(null), 300)
+  }
 
   return (
     <>
@@ -83,8 +98,13 @@ export default function TagPage({ examples, tag, tagDisplayName }: TagPageProps)
         <main className="max-w-4xl mx-auto px-4 pb-12">
           {examples.length > 0 ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {examples.map(example => (
-                <ExampleCard key={example.id} example={example} />
+              {examples.map((example, index) => (
+                <ExampleCard 
+                  key={example.id} 
+                  example={example}
+                  priority={index < 4}
+                  onOpen={handleOpenModal}
+                />
               ))}
             </div>
           ) : (
@@ -110,6 +130,13 @@ export default function TagPage({ examples, tag, tagDisplayName }: TagPageProps)
             />
           </div>
         )}
+
+        {/* Modal */}
+        <ExampleModal
+          example={selectedExample}
+          isOpen={isModalOpen}
+          onClose={handleCloseModal}
+        />
       </div>
     </>
   )
