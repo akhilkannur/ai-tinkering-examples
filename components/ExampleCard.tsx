@@ -1,5 +1,5 @@
+import React from 'react'
 import type { ExampleRecord } from '../lib/airtable'
-import Image from 'next/image'
 import { useState } from 'react'
 
 interface ExampleCardProps {
@@ -20,6 +20,11 @@ export default function ExampleCard({ example, priority = false, onOpen }: Examp
     onOpen(example)
   }
 
+  // Debug: Log image URL to console
+  if (img) {
+    console.log('Image URL for', example.title, ':', img)
+  }
+
   return (
     <article 
       className="card hover:shadow-lg transition-all duration-200 group cursor-pointer hover:scale-[1.02] transform"
@@ -28,36 +33,47 @@ export default function ExampleCard({ example, priority = false, onOpen }: Examp
       {img && (
         <div className="relative w-full h-44 mb-3 overflow-hidden rounded-xl bg-slate-100">
           {/* Loading placeholder */}
-          {imageLoading && (
+          {imageLoading && !imageError && (
             <div className="absolute inset-0 bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 animate-pulse" />
           )}
           
           {/* Error fallback */}
           {imageError && (
-            <div className="absolute inset-0 bg-slate-100 flex items-center justify-center">
-              <div className="text-slate-400 text-sm">Image unavailable</div>
+            <div className="absolute inset-0 bg-slate-100 flex items-center justify-center flex-col">
+              <div className="text-slate-400 text-sm mb-2">Image unavailable</div>
+              <div className="text-xs text-slate-400 px-2 text-center break-all">
+                {img.length > 50 ? `${img.substring(0, 50)}...` : img}
+              </div>
             </div>
           )}
           
-          {/* Optimized image */}
-          <Image 
-            src={img} 
-            alt={`${example.title} - AI workflow example screenshot`}
-            fill
-            className={`object-cover group-hover:scale-105 transition-transform duration-300 ${
-              imageLoading ? 'opacity-0' : 'opacity-100'
-            }`}
-            sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-            priority={priority} // Only for first few images
-            quality={85} // Slightly reduced quality for faster loading
-            placeholder="blur"
-            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkbHB0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
-            onLoad={() => setImageLoading(false)}
-            onError={() => {
-              setImageError(true)
-              setImageLoading(false)
-            }}
-          />
+          {/* Use regular img tag for better compatibility */}
+          {!imageError && (
+            <img 
+              src={img}
+              alt={`${example.title} - AI workflow example screenshot`}
+              className={`w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 ${
+                imageLoading ? 'opacity-0' : 'opacity-100'
+              }`}
+              onLoad={() => {
+                setImageLoading(false)
+                console.log('Image loaded successfully:', img)
+              }}
+              onError={(e) => {
+                setImageError(true)
+                setImageLoading(false)
+                console.error('Image failed to load:', img, e)
+              }}
+              loading={priority ? 'eager' : 'lazy'}
+            />
+          )}
+        </div>
+      )}
+      
+      {/* Debug info - remove in production */}
+      {!img && (
+        <div className="w-full h-44 mb-3 bg-slate-100 rounded-xl flex items-center justify-center">
+          <div className="text-slate-400 text-sm">No image URL found</div>
         </div>
       )}
       

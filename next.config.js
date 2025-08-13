@@ -4,10 +4,28 @@ const nextConfig = {
   swcMinify: true,
   
   images: {
-    // Airtable image domains
+    // Comprehensive Airtable image domains
     domains: [
       "dl.airtableusercontent.com",
-      "attachments.airtableusercontent.com"
+      "attachments.airtableusercontent.com",
+      "v5.airtableusercontent.com", // Sometimes Airtable uses versioned subdomains
+      "airtableusercontent.com" // Base domain as fallback
+    ],
+    
+    // Alternative: Use remotePatterns for more flexibility (Next.js 12.3+)
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**.airtableusercontent.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'dl.airtableusercontent.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'attachments.airtableusercontent.com',
+      }
     ],
     
     // Image optimization settings
@@ -20,20 +38,13 @@ const nextConfig = {
     // Cache optimized images for 30 days
     minimumCacheTTL: 60 * 60 * 24 * 30,
     
-    // Enable image optimization even for external images
-    unoptimized: false,
+    // Allow larger images from Airtable
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
     
-    // Loader configuration for better performance
-    loader: 'default',
-    
-    // Remove dangerous remote patterns and use domains instead
-    dangerouslyAllowSVG: false,
+    // Disable optimization for debugging (can be removed once working)
+    // unoptimized: true,
   },
-  
-  // Removed experimental features that were causing issues
-  // experimental: {
-  //   optimizeCss: true,
-  // },
   
   // Compiler optimizations
   compiler: {
@@ -64,7 +75,7 @@ const nextConfig = {
     return config
   },
   
-  // Headers for better caching
+  // Headers for better caching and CORS
   async headers() {
     return [
       {
@@ -82,6 +93,16 @@ const nextConfig = {
           {
             key: 'Cache-Control',
             value: 'public, max-age=31536000, immutable'
+          }
+        ]
+      },
+      // Allow images from Airtable
+      {
+        source: '/api/(.*)',
+        headers: [
+          {
+            key: 'Access-Control-Allow-Origin',
+            value: '*'
           }
         ]
       }
