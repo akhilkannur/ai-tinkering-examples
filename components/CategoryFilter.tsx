@@ -1,10 +1,10 @@
 interface CategoryFilterProps {
   categories: string[]
-  selectedCategory?: string
+  selectedCategory: string
   onSelect: (category: string) => void
 }
 
-export default function CategoryFilter({ categories, selectedCategory = 'All', onSelect }: CategoryFilterProps) {
+export default function CategoryFilter({ categories, selectedCategory, onSelect }: CategoryFilterProps) {
   return (
     <div className="flex gap-2 overflow-x-auto py-4 scrollbar-hide">
       <button 
