@@ -43,8 +43,8 @@ const nextConfig = {
       exclude: ['error', 'warn']
     } : false,
     
-    // Move emotion config here (if using emotion)
-    emotion: true,
+    // Removed emotion config since we're not using emotion
+    // emotion: true,
   },
   
   // Performance optimizations
