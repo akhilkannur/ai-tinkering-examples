@@ -154,21 +154,77 @@ export default function ExampleCard({ example, priority = false, onOpen }: Examp
               />
             )}
 
-            {/* Share button overlay */}
-            <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+
+          </div>
+        )}
+
+        <div className="space-y-3">
+          <div className="flex items-start justify-between">
+            <h3 className="text-lg font-semibold leading-tight group-hover:text-blue-600 transition-colors line-clamp-2">
+              {example.title}
+            </h3>
+            <div className="flex items-center gap-2 ml-2 shrink-0">
+              <span className="text-sm text-slate-500">{example.read_time ?? 1} min</span>
+              {example.original_link && (
+                <a
+                  href={example.original_link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="external-link p-1 text-slate-400 hover:text-slate-600 transition-colors"
+                  onClick={(e) => e.stopPropagation()}
+                  aria-label="View original source"
+                >
+                  <ExternalLink size={14} />
+                </a>
+              )}
+            </div>
+          </div>
+
+          {example.summary && <p className="text-sm text-slate-600 line-clamp-3 leading-relaxed">{example.summary}</p>}
+
+          <div className="flex items-center justify-between">
+            <div className="flex gap-2 flex-wrap">
+              {example.category && (
+                <span className="px-2 py-1 text-xs border rounded-full bg-slate-50 text-slate-700">
+                  {example.category}
+                </span>
+              )}
+              {example.tags?.slice(0, 2).map((tag) => (
+                <span key={tag} className="px-2 py-1 text-xs text-slate-500 bg-slate-100 rounded-full">
+                  #{tag}
+                </span>
+              ))}
+              {example.tags && example.tags.length > 2 && (
+                <span className="px-2 py-1 text-xs text-slate-400 bg-slate-100 rounded-full">
+                  +{example.tags.length - 2}
+                </span>
+              )}
+            </div>
+
+            <div className="flex items-center gap-2">
+              {publishDate && (
+                <time dateTime={example.publish_date} className="text-xs text-slate-400">
+                  {publishDate.toLocaleDateString("en-US", {
+                    month: "short",
+                    day: "numeric",
+                  })}
+                </time>
+              )}
+              
+              {/* Share button */}
               <div className="relative share-button">
                 <button
                   type="button"
                   onClick={handleShareClick}
-                  className="p-2 bg-white/90 backdrop-blur-sm rounded-lg shadow-lg hover:bg-white transition-colors"
+                  className="p-1.5 text-slate-400 hover:text-slate-600 hover:bg-slate-100 rounded-lg transition-colors"
                   aria-label="Share example"
                 >
-                  <Share2 size={16} className="text-slate-700" />
+                  <Share2 size={14} />
                 </button>
 
                 {/* Share dropdown menu */}
                 {showShareMenu && (
-                  <div className="absolute top-full right-0 mt-2 bg-white rounded-lg shadow-xl border border-slate-200 py-2 min-w-[160px] z-20">
+                  <div className="absolute top-full right-0 mt-2 bg-white rounded-lg shadow-xl border border-slate-200 py-2 min-w-[160px] z-30">
                     <button
                       type="button"
                       onClick={(e) => shareOnSocial('facebook', e)}
@@ -216,60 +272,6 @@ export default function ExampleCard({ example, priority = false, onOpen }: Examp
                 )}
               </div>
             </div>
-          </div>
-        )}
-
-        <div className="space-y-3">
-          <div className="flex items-start justify-between">
-            <h3 className="text-lg font-semibold leading-tight group-hover:text-blue-600 transition-colors line-clamp-2">
-              {example.title}
-            </h3>
-            <div className="flex items-center gap-2 ml-2 shrink-0">
-              <span className="text-sm text-slate-500">{example.read_time ?? 1} min</span>
-              {example.original_link && (
-                <a
-                  href={example.original_link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="external-link p-1 text-slate-400 hover:text-slate-600 transition-colors"
-                  onClick={(e) => e.stopPropagation()}
-                  aria-label="View original source"
-                >
-                  <ExternalLink size={14} />
-                </a>
-              )}
-            </div>
-          </div>
-
-          {example.summary && <p className="text-sm text-slate-600 line-clamp-3 leading-relaxed">{example.summary}</p>}
-
-          <div className="flex items-center justify-between">
-            <div className="flex gap-2 flex-wrap">
-              {example.category && (
-                <span className="px-2 py-1 text-xs border rounded-full bg-slate-50 text-slate-700">
-                  {example.category}
-                </span>
-              )}
-              {example.tags?.slice(0, 2).map((tag) => (
-                <span key={tag} className="px-2 py-1 text-xs text-slate-500 bg-slate-100 rounded-full">
-                  #{tag}
-                </span>
-              ))}
-              {example.tags && example.tags.length > 2 && (
-                <span className="px-2 py-1 text-xs text-slate-400 bg-slate-100 rounded-full">
-                  +{example.tags.length - 2}
-                </span>
-              )}
-            </div>
-
-            {publishDate && (
-              <time dateTime={example.publish_date} className="text-xs text-slate-400">
-                {publishDate.toLocaleDateString("en-US", {
-                  month: "short",
-                  day: "numeric",
-                })}
-              </time>
-            )}
           </div>
         </div>
       </div>
