@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 import { X, ExternalLink, User } from 'lucide-react'
 import type { ExampleRecord } from '../lib/airtable'
 import Image from 'next/image'
+import { optimizeImageUrl } from '../utils/cloudinary'
 
 interface ExampleModalProps {
   example: ExampleRecord | null
@@ -122,20 +123,23 @@ export default function ExampleModal({ example, isOpen, onClose }: ExampleModalP
           {/* Images */}
           {imgs.length > 0 && (
             <div className="space-y-4 mb-6">
-              {imgs.map((screenshot, i) => (
-                <div key={i} className="relative w-full rounded-xl overflow-hidden bg-slate-100">
-                  <Image
-                    src={screenshot.url}
-                    alt={`${example.title} screenshot ${i + 1}`}
-                    width={800}
-                    height={450}
-                    className="w-full h-auto object-cover"
-                    sizes="(max-width: 768px) 100vw, 800px"
-                    quality={90}
-                    priority={i === 0}
-                  />
-                </div>
-              ))}
+              {imgs.map((screenshot, i) => {
+                const optimizedImageUrl = optimizeImageUrl(screenshot.url, 800)
+                return (
+                  <div key={i} className="relative w-full rounded-xl overflow-hidden bg-slate-100">
+                    <Image
+                      src={optimizedImageUrl || screenshot.url}
+                      alt={`${example.title} screenshot ${i + 1}`}
+                      width={800}
+                      height={450}
+                      className="w-full h-auto object-cover"
+                      sizes="(max-width: 768px) 100vw, 800px"
+                      quality={90}
+                      priority={i === 0}
+                    />
+                  </div>
+                )
+              })}
             </div>
           )}
 
