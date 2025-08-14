@@ -23,6 +23,10 @@ export default function ExampleCard({ example, priority = false, onOpen }: Examp
 
   const img = example.screenshots?.[0]?.url
   const optimizedImageUrl = optimizeImageUrl(img, 400)
+  
+  // Debug logging
+  console.log('Original image URL:', img)
+  console.log('Optimized image URL:', optimizedImageUrl)
   const publishDate = example.publish_date ? new Date(example.publish_date) : null
   
   // Generate the SEO-friendly URL
@@ -134,7 +138,7 @@ export default function ExampleCard({ example, priority = false, onOpen }: Examp
 
             {!imageError && (
               <Image
-                src={optimizedImageUrl || "/placeholder.svg"}
+                src={optimizedImageUrl || img || "/placeholder.svg"}
                 alt={`${example.title} - AI workflow example screenshot`}
                 fill
                 className={`object-cover group-hover:scale-105 transition-transform duration-300 ${
@@ -148,7 +152,9 @@ export default function ExampleCard({ example, priority = false, onOpen }: Examp
                 placeholder="blur"
                 blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
                 onLoad={() => setImageLoading(false)}
-                onError={() => {
+                onError={(e) => {
+                  console.error('Image failed to load:', optimizedImageUrl || img)
+                  console.error('Error details:', e)
                   setImageError(true)
                   setImageLoading(false)
                 }}
