@@ -1,5 +1,4 @@
 import { useEffect, useRef } from 'react'
-import { useRouter } from 'next/router'
 import { X, ExternalLink, User } from 'lucide-react'
 import type { ExampleRecord } from '../lib/airtable'
 import Image from 'next/image'
@@ -13,36 +12,8 @@ interface ExampleModalProps {
 export default function ExampleModal({ example, isOpen, onClose }: ExampleModalProps) {
   const modalRef = useRef<HTMLDivElement>(null)
   const contentRef = useRef<HTMLDivElement>(null)
-  const router = useRouter()
 
-  // Update URL when modal opens/closes
-  useEffect(() => {
-    if (isOpen && example) {
-      // Generate the SEO URL
-      const categorySlug = example.category?.toLowerCase().replace(/\s+/g, '-') || 'uncategorized'
-      const exampleUrl = `/ai-examples/${categorySlug}/${example.slug}`
-      
-      // Update URL without navigation
-      window.history.pushState({}, '', exampleUrl)
-    } else if (!isOpen) {
-      // Restore previous URL when modal closes
-      window.history.back()
-    }
-  }, [isOpen, example])
-
-  // Handle browser back button
-  useEffect(() => {
-    const handlePopState = () => {
-      if (isOpen) {
-        onClose()
-      }
-    }
-
-    window.addEventListener('popstate', handlePopState)
-    return () => window.removeEventListener('popstate', handlePopState)
-  }, [isOpen, onClose])
-
-  // Handle escape key and outside clicks
+  // Handle escape key and outside clicks - removed URL manipulation
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose()
@@ -129,15 +100,10 @@ export default function ExampleModal({ example, isOpen, onClose }: ExampleModalP
             <div className="space-y-4 mb-6">
               {imgs.map((screenshot, i) => (
                 <div key={i} className="relative w-full rounded-xl overflow-hidden bg-slate-100">
-                  <Image
+                  <img
                     src={screenshot.url}
                     alt={`${example.title} screenshot ${i + 1}`}
-                    width={800}
-                    height={450}
                     className="w-full h-auto object-cover"
-                    sizes="(max-width: 768px) 100vw, 800px"
-                    quality={90}
-                    priority={i === 0} // Prioritize first image
                   />
                 </div>
               ))}
