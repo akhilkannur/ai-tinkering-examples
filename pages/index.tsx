@@ -165,61 +165,19 @@ export default function HomePage({ examples }: HomePageProps) {
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredExamples.map((example, index) => (
-                <div key={example.id} className="group cursor-pointer">
-                  {/* Simplified card design without complex click handlers */}
-                  <div 
-                    className="border border-gray-100 hover:border-gray-300 transition-all duration-300 bg-white hover:shadow-sm"
-                    onClick={() => handleOpenModal(example)}
-                  >
-                    {/* Image area */}
-                    <div className="aspect-[4/3] bg-gray-50 border-b border-gray-100 group-hover:bg-gray-100 transition-colors duration-300">
-                      {example.screenshots?.[0]?.url && (
-                        <img 
-                          src={example.screenshots[0].url} 
-                          alt={`${example.title} screenshot`}
-                          className="w-full h-full object-cover"
-                        />
-                      )}
-                    </div>
-                    
-                    <div className="p-6">
-                      <h3 className="text-lg font-bold text-black mb-2 group-hover:text-[#2398A7] transition-colors duration-200 line-clamp-2">
-                        {example.title}
-                      </h3>
-                      
-                      {example.summary && (
-                        <p className="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3">
-                          {example.summary.slice(0, 100)}{example.summary.length > 100 ? '...' : ''}
-                        </p>
-                      )}
-                      
-                      {example.tags && (
-                        <div className="flex flex-wrap gap-1">
-                          {example.tags.slice(0, 2).map(tag => (
-                            <span 
-                              key={tag}
-                              className="px-2 py-1 text-xs font-medium bg-gray-100 text-gray-700"
-                            >
-                              {tag}
-                            </span>
-                          ))}
-                          {example.tags.length > 2 && (
-                            <span className="px-2 py-1 text-xs font-medium text-gray-500">
-                              +{example.tags.length - 2}
-                            </span>
-                          )}
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                </div>
+                <ExampleCard
+                  key={example.id}
+                  example={example}
+                  priority={index < 6}
+                  onOpen={handleOpenModal}
+                />
               ))}
             </div>
           )}
         </div>
 
         {/* Newsletter Section */}
-        <div className="bg-black text-white">
+        <div className="bg-black text-white" id="newsletter">
           <div className="max-w-6xl mx-auto px-6 py-32">
             <div className="max-w-3xl">
               <h2 className="text-6xl sm:text-7xl font-black mb-8 leading-none">
