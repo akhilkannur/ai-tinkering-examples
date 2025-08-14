@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import { useRouter } from 'next/router'
 import { X, ExternalLink, User } from 'lucide-react'
 import type { ExampleRecord } from '../lib/airtable'
 import Image from 'next/image'
@@ -12,8 +13,32 @@ interface ExampleModalProps {
 export default function ExampleModal({ example, isOpen, onClose }: ExampleModalProps) {
   const modalRef = useRef<HTMLDivElement>(null)
   const contentRef = useRef<HTMLDivElement>(null)
+  const router = useRouter()
 
-  // Handle escape key and outside clicks - removed URL manipulation
+  // Update URL when modal opens/closes
+  useEffect(() => {
+    if (isOpen && example) {
+      const categorySlug = example.category?.toLowerCase().replace(/\s+/g, '-') || 'uncategorized'
+      const exampleUrl = `/ai-examples/${categorySlug}/${example.slug}`
+      
+      // Update URL without navigation
+      window.history.pushState(null, '', exampleUrl)
+    }
+  }, [isOpen, example])
+
+  // Handle browser back button
+  useEffect(() => {
+    const handlePopState = () => {
+      if (isOpen) {
+        onClose()
+      }
+    }
+
+    window.addEventListener('popstate', handlePopState)
+    return () => window.removeEventListener('popstate', handlePopState)
+  }, [isOpen, onClose])
+
+  // Handle escape key and outside clicks
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose()
@@ -28,7 +53,7 @@ export default function ExampleModal({ example, isOpen, onClose }: ExampleModalP
     if (isOpen) {
       document.addEventListener('keydown', handleEscape)
       document.addEventListener('mousedown', handleClickOutside)
-      document.body.style.overflow = 'hidden' // Prevent background scrolling
+      document.body.style.overflow = 'hidden'
     }
 
     return () => {
@@ -67,7 +92,6 @@ export default function ExampleModal({ example, isOpen, onClose }: ExampleModalP
               </p>
             )}
             
-            {/* Meta information */}
             <div className="flex items-center gap-4 mt-3 text-sm text-slate-500">
               {example.read_time && (
                 <span>{example.read_time} min read</span>
@@ -100,10 +124,15 @@ export default function ExampleModal({ example, isOpen, onClose }: ExampleModalP
             <div className="space-y-4 mb-6">
               {imgs.map((screenshot, i) => (
                 <div key={i} className="relative w-full rounded-xl overflow-hidden bg-slate-100">
-                  <img
+                  <Image
                     src={screenshot.url}
                     alt={`${example.title} screenshot ${i + 1}`}
+                    width={800}
+                    height={450}
                     className="w-full h-auto object-cover"
+                    sizes="(max-width: 768px) 100vw, 800px"
+                    quality={90}
+                    priority={i === 0}
                   />
                 </div>
               ))}
