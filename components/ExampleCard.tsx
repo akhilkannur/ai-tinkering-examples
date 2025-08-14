@@ -7,6 +7,7 @@ import Link from "next/link"
 import { useState } from "react"
 import { Share2, ExternalLink } from "lucide-react"
 import { Facebook, Twitter, Linkedin, Link2, Copy, Check } from "lucide-react"
+import { optimizeImageUrl } from '../utils/cloudinary'
 
 interface ExampleCardProps {
   example: ExampleRecord
@@ -21,6 +22,7 @@ export default function ExampleCard({ example, priority = false, onOpen }: Examp
   const [copied, setCopied] = useState(false)
 
   const img = example.screenshots?.[0]?.url
+  const optimizedImageUrl = optimizeImageUrl(img, 400)
   const publishDate = example.publish_date ? new Date(example.publish_date) : null
   
   // Generate the SEO-friendly URL
@@ -132,7 +134,7 @@ export default function ExampleCard({ example, priority = false, onOpen }: Examp
 
             {!imageError && (
               <Image
-                src={img || "/placeholder.svg"}
+                src={optimizedImageUrl || "/placeholder.svg"}
                 alt={`${example.title} - AI workflow example screenshot`}
                 fill
                 className={`object-cover group-hover:scale-105 transition-transform duration-300 ${
