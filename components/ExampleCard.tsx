@@ -22,11 +22,9 @@ export default function ExampleCard({ example, priority = false, onOpen }: Examp
   const [copied, setCopied] = useState(false)
 
   const img = example.screenshots?.[0]?.url
-  const optimizedImageUrl = optimizeImageUrl(img, 400)
-  
-  // Debug logging
-  console.log('Original image URL:', img)
-  console.log('Optimized image URL:', optimizedImageUrl)
+  // Temporarily disable Cloudinary optimization
+  // const optimizedImageUrl = optimizeImageUrl(img, 400)
+  const optimizedImageUrl = img
   const publishDate = example.publish_date ? new Date(example.publish_date) : null
   
   // Generate the SEO-friendly URL
