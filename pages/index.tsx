@@ -64,11 +64,11 @@ export default function HomePage({ examples }: HomePageProps) {
       <div className="min-h-screen bg-white font-['Inter']">
         <Navbar />
         
-        {/* Compact Hero Section */}
+        {/* Simplified Hero Section */}
         <div className="relative bg-gradient-to-b from-gray-50 to-white">
           <div className="max-w-6xl mx-auto px-6 pt-16 pb-12">
             <div className="grid lg:grid-cols-12 gap-8 items-center">
-              {/* Hero Content - More compact */}
+              {/* Hero Content */}
               <div className="lg:col-span-8">
                 <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black tracking-tight text-black leading-tight mb-6">
                   AI examples
@@ -90,7 +90,7 @@ export default function HomePage({ examples }: HomePageProps) {
                 </a>
               </div>
 
-              {/* Search - Integrated into hero */}
+              {/* Search */}
               <div className="lg:col-span-4">
                 <div className="bg-white p-6 border border-gray-100 shadow-sm">
                   <h3 className="text-lg font-semibold text-black mb-4">Find examples</h3>
@@ -131,13 +131,11 @@ export default function HomePage({ examples }: HomePageProps) {
             </div>
           </div>
           
-          {/* Minimal accent line */}
           <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-[#E1AA36] via-[#7ADAA5] to-[#2398A7] opacity-30"></div>
         </div>
 
-        {/* Examples Grid - Now closer to hero */}
+        {/* Examples Grid */}
         <div className="max-w-6xl mx-auto px-6 py-16">
-          {/* Compact section header */}
           <div className="flex items-center justify-between mb-8 pb-4 border-b border-gray-100">
             <div className="flex items-center gap-4">
               <h2 className="text-3xl font-black text-black">
@@ -148,16 +146,6 @@ export default function HomePage({ examples }: HomePageProps) {
                 {searchTerm && ` for "${searchTerm}"`}
               </p>
             </div>
-            
-            {/* Show all categories button if truncated */}
-            {categories.length > 4 && (
-              <button 
-                className="text-sm text-[#2398A7] hover:text-black transition-colors duration-200 font-medium"
-                onClick={() => {/* Toggle showing all categories */}}
-              >
-                View all categories
-              </button>
-            )}
           </div>
 
           {filteredExamples.length === 0 ? (
@@ -177,16 +165,21 @@ export default function HomePage({ examples }: HomePageProps) {
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredExamples.map((example, index) => (
-                <div 
-                  key={example.id} 
-                  className="group cursor-pointer"
-                  onClick={() => handleOpenModal(example)}
-                >
-                  {/* Compact card design */}
-                  <div className="border border-gray-100 hover:border-gray-300 transition-all duration-300 bg-white hover:shadow-sm">
-                    {/* Smaller image area */}
+                <div key={example.id} className="group cursor-pointer">
+                  {/* Simplified card design without complex click handlers */}
+                  <div 
+                    className="border border-gray-100 hover:border-gray-300 transition-all duration-300 bg-white hover:shadow-sm"
+                    onClick={() => handleOpenModal(example)}
+                  >
+                    {/* Image area */}
                     <div className="aspect-[4/3] bg-gray-50 border-b border-gray-100 group-hover:bg-gray-100 transition-colors duration-300">
-                      {/* You can add actual image here */}
+                      {example.screenshots?.[0]?.url && (
+                        <img 
+                          src={example.screenshots[0].url} 
+                          alt={`${example.title} screenshot`}
+                          className="w-full h-full object-cover"
+                        />
+                      )}
                     </div>
                     
                     <div className="p-6">
@@ -251,9 +244,6 @@ export default function HomePage({ examples }: HomePageProps) {
                 </button>
               </div>
             </div>
-            
-            {/* Geometric accent */}
-            <div className="absolute right-12 bottom-32 w-1 h-24 bg-[#2398A7] hidden lg:block"></div>
           </div>
         </div>
 
