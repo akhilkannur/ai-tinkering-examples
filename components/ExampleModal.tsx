@@ -124,7 +124,9 @@ export default function ExampleModal({ example, isOpen, onClose }: ExampleModalP
           {imgs.length > 0 && (
             <div className="space-y-4 mb-6">
               {imgs.map((screenshot, i) => {
-                const optimizedImageUrl = optimizeImageUrl(screenshot.url, 800)
+                // Temporarily disable Cloudinary optimization
+                // const optimizedImageUrl = optimizeImageUrl(screenshot.url, 800)
+                const optimizedImageUrl = screenshot.url
                 return (
                   <div key={i} className="relative w-full rounded-xl overflow-hidden bg-slate-100">
                     <Image
