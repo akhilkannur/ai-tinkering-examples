@@ -17,10 +17,10 @@ export default function SponsorCard({ sponsor }: SponsorCardProps) {
       className="block p-4 rounded-lg border bg-slate-50 hover:bg-slate-100 transition-colors group"
     >
       <div className="flex items-center gap-4">
-        {sponsor.Logo && (
+        {sponsor.logo && (
           <div className="relative w-12 h-12 rounded-md overflow-hidden bg-white flex-shrink-0">
             <Image 
-              src={sponsor.Logo[0].url} 
+              src={sponsor.logo[0].url} 
               alt={`${sponsor.Name} logo`} 
               fill
               className="object-contain"
