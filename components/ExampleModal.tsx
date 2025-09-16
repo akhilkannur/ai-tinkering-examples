@@ -1,12 +1,12 @@
 import { useEffect, useRef } from 'react'
 import { useRouter } from 'next/router'
 import { X, ExternalLink, User } from 'lucide-react'
-import type { ExampleRecord } from '../lib/airtable'
+import type { EnrichedExampleRecord } from '../lib/airtable'
 import Image from 'next/image'
 import { optimizeImageUrl } from '../utils/cloudinary'
 
 interface ExampleModalProps {
-  example: ExampleRecord | null
+  example: EnrichedExampleRecord | null
   isOpen: boolean
   onClose: () => void
 }
@@ -93,7 +93,33 @@ export default function ExampleModal({ example, isOpen, onClose }: ExampleModalP
               </p>
             )}
             
-            <div className="flex items-center gap-4 mt-3 text-sm text-slate-500">
+            {/* Sponsor Info */}
+            {example.sponsor && (
+              <a 
+                href={example.sponsor.website || '#'}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-4 p-2 bg-slate-100/80 rounded-lg hover:bg-slate-200/70 transition-colors"
+              >
+                <div className="flex items-center gap-3">
+                  <span className="text-xs text-slate-500">Sponsored by</span>
+                  {example.sponsor.logo?.[0]?.url ? (
+                    <div className="relative h-6 w-20">
+                      <Image
+                        src={example.sponsor.logo[0].url}
+                        alt={`${example.sponsor.name} logo`}
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                  ) : (
+                    <span className="text-sm font-semibold text-slate-700">{example.sponsor.name}</span>
+                  )}
+                </div>
+              </a>
+            )}
+
+            <div className="flex items-center gap-4 mt-4 text-sm text-slate-500">
               {example.read_time && (
                 <span>{example.read_time} min read</span>
               )}

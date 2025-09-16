@@ -6,10 +6,7 @@ import Navbar from '../../components/Navbar'
 import ExampleCard from '../../components/ExampleCard'
 import CategoryFilter from '../../components/CategoryFilter'
 import ExampleModal from '../../components/ExampleModal'
-import { fetchExamples, fetchSponsors, fetchCategories, ExampleRecord, SponsorRecord, CategoryRecord } from '../../lib/airtable'
-
-// Add sponsor to the example type for use in the component
-export type EnrichedExampleRecord = ExampleRecord & { sponsor?: SponsorRecord };
+import { fetchExamples, fetchSponsors, fetchCategories, ExampleRecord, SponsorRecord, CategoryRecord, EnrichedExampleRecord } from '../../lib/airtable'
 
 interface ExamplesPageProps {
   examples: EnrichedExampleRecord[]

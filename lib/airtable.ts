@@ -58,6 +58,8 @@ export type ExampleRecord = {
   Sponsored?: boolean | null
 }
 
+export type EnrichedExampleRecord = ExampleRecord & { sponsor?: SponsorRecord | null };
+
 // --- PROCESSORS ---
 
 function processExampleRecord(record: any): ExampleRecord {

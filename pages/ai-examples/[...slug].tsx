@@ -12,11 +12,9 @@ import {
   fetchSponsors,
   ExampleRecord, 
   SponsorRecord, 
-  CategoryRecord 
+  CategoryRecord, 
+  EnrichedExampleRecord
 } from '../../lib/airtable'
-
-// Create an enriched type that includes the sponsor
-export type EnrichedExampleRecord = ExampleRecord & { sponsor?: SponsorRecord };
 
 interface ExamplePageProps {
   example: EnrichedExampleRecord | null
