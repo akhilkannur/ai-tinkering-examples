@@ -1,0 +1,19 @@
+# AI Tinkering Examples - Robots.txt
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://your-domain.com/sitemap.xml
+
+# Disallow debug and admin pages
+Disallow: /debug
+Disallow: /api/
+
+# Allow all AI example pages
+Allow: /ai-examples/
+Allow: /ai-examples/category/
+Allow: /ai-examples/tag/
+
+# Crawl delay (optional - helps prevent overwhelming your server)
+Crawl-delay: 1
