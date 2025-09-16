@@ -3,12 +3,16 @@ import Airtable from 'airtable'
 // Configuration
 const baseId = process.env.NEXT_PUBLIC_AIRTABLE_BASE_ID
 const apiKey = process.env.AIRTABLE_API_KEY
-const tableName = process.env.NEXT_PUBLIC_AIRTABLE_TABLE || 'Examples'
+const examplesTable = process.env.NEXT_PUBLIC_AIRTABLE_TABLE || 'Examples'
+const categoriesTable = process.env.NEXT_PUBLIC_AIRTABLE_CATEGORIES_TABLE || 'Categories'
+const sponsorsTable = process.env.NEXT_PUBLIC_AIRTABLE_SPONSORS_TABLE || 'Sponsors'
 
 console.log('Airtable Config:', {
   baseId: baseId ? `${baseId.slice(0, 8)}...` : 'missing',
   apiKey: apiKey ? `${apiKey.slice(0, 8)}...` : 'missing',
-  tableName
+  examplesTable,
+  categoriesTable,
+  sponsorsTable,
 })
 
 if (!baseId || !apiKey) {
@@ -20,13 +24,30 @@ if (!baseId || !apiKey) {
 
 const base = baseId && apiKey ? new Airtable({ apiKey }).base(baseId) : null
 
+// --- TYPES ---
+
+export type SponsorRecord = {
+  id: string;
+  name: string;
+  logo?: { url: string }[] | null;
+  website?: string | null;
+  categoryId?: string | null;
+};
+
+
+export type CategoryRecord = {
+  id: string;
+  name: string;
+};
+
 export type ExampleRecord = {
   id: string
   title: string
   slug: string
   summary?: string | null
   screenshots?: { url: string; filename?: string }[] | null
-  category?: string | null
+  category?: string | null // This will be the category NAME after processing
+  categoryId?: string | null // This is the raw linked record ID
   read_time?: number | null
   publish_date?: string | null
   workflow_steps?: string | null
@@ -37,7 +58,9 @@ export type ExampleRecord = {
   Sponsored?: boolean | null
 }
 
-function processRecord(record: any): ExampleRecord {
+// --- PROCESSORS ---
+
+function processExampleRecord(record: any): ExampleRecord {
   const title = record.get('Title') as string
   const slug = (record.get('Slug') as string) || 
     title?.toLowerCase()
@@ -46,13 +69,16 @@ function processRecord(record: any): ExampleRecord {
       .replace(/\s+/g, '-') || 
     `record-${record.id}`
 
+  // Category is now a linked record, which returns an array of IDs
+  const categoryIds = record.get('Category') as string[] | null
+
   return {
     id: record.id,
     title: title || 'Untitled',
     slug,
     summary: record.get('Summary') as string || null,
     screenshots: (record.get('Screenshots') as any[]) || null,
-    category: record.get('Category') as string || null,
+    categoryId: categoryIds?.[0] || null, // Store the first linked category ID
     read_time: record.get('Read time') as number || null,
     publish_date: record.get('Publish date') as string || null,
     workflow_steps: record.get('Workflow steps') as string || null,
@@ -64,56 +90,48 @@ function processRecord(record: any): ExampleRecord {
   }
 }
 
-export async function fetchExamples(): Promise<ExampleRecord[]> {
+function processCategoryRecord(record: any): CategoryRecord {
+  return {
+    id: record.id,
+    name: record.get('Name') as string,
+  };
+}
+
+function processSponsorRecord(record: any): SponsorRecord {
+  const categoryIds = record.get('Category') as string[] | null;
+  return {
+    id: record.id,
+    name: record.get('Name') as string,
+    logo: record.get('Logo') as { url: string }[] | null,
+    website: record.get('Website') as string | null,
+    categoryId: categoryIds?.[0] || null,
+  };
+}
+
+// --- FETCHERS ---
+
+async function fetchAll<T>(tableName: string, processFn: (record: any) => T): Promise<T[]> {
   if (!base) {
-    console.warn('⚠️ Airtable not configured, returning empty array')
-    return []
+    console.warn(`⚠️ Airtable not configured, returning empty array for ${tableName}`);
+    return [];
   }
 
-  console.log('🔄 Fetching examples from Airtable...')
-  
+  console.log(`🔄 Fetching all records from ${tableName}...`);
   try {
-    const records: ExampleRecord[] = []
-    
-    // Use the promise-based approach instead of eachPage
-    const result = await base(tableName)
-      .select({
-        view: 'Grid view',
-        sort: [{ field: 'Publish date', direction: 'desc' }],
-        // Remove maxRecords to get all records
-      })
-      .all()
-
-    console.log(`✅ Found ${result.length} records in Airtable`)
-
-    result.forEach(record => {
-      try {
-        const processedRecord = processRecord(record)
-        records.push(processedRecord)
-      } catch (error) {
-        console.error(`❌ Error processing record ${record.id}:`, error)
-      }
-    })
-
-    console.log(`✅ Successfully processed ${records.length} examples`)
-    return records
-
+    const allRecords = await base(tableName).select().all();
+    console.log(`✅ Found ${allRecords.length} records in ${tableName}`);
+    const processed = allRecords.map(processFn);
+    return processed;
   } catch (error) {
-    console.error('❌ Error fetching examples from Airtable:', error)
-    
-    // Check if it's an authentication error
-    if (error instanceof Error && error.message.includes('AUTHENTICATION_REQUIRED')) {
-      console.error('🔐 Authentication failed. Check your AIRTABLE_API_KEY')
-    }
-    
-    // Check if it's a base/table not found error
-    if (error instanceof Error && error.message.includes('NOT_FOUND')) {
-      console.error('🔍 Base or table not found. Check your NEXT_PUBLIC_AIRTABLE_BASE_ID and table name')
-    }
-
-    return []
+    console.error(`❌ Error fetching from ${tableName}:`, error);
+    return [];
   }
 }
+
+export const fetchExamples = () => fetchAll(examplesTable, processExampleRecord);
+export const fetchCategories = () => fetchAll(categoriesTable, processCategoryRecord);
+export const fetchSponsors = () => fetchAll(sponsorsTable, processSponsorRecord);
+
 
 export async function fetchExampleBySlug(slug: string): Promise<ExampleRecord | null> {
   if (!base) {
@@ -125,7 +143,7 @@ export async function fetchExampleBySlug(slug: string): Promise<ExampleRecord | 
 
   try {
     // First try to find by Slug field
-    let records = await base(tableName)
+    let records = await base(examplesTable)
       .select({ 
         filterByFormula: `{Slug} = "${slug}"`,
         maxRecords: 1 
@@ -137,10 +155,10 @@ export async function fetchExampleBySlug(slug: string): Promise<ExampleRecord | 
       console.log(`🔍 No record found with slug "${slug}", trying title-based search...`)
       
       // Get all records and find matching slug
-      const allRecords = await base(tableName).select().all()
+      const allRecords = await base(examplesTable).select().all()
       
       for (const record of allRecords) {
-        const processedRecord = processRecord(record)
+        const processedRecord = processExampleRecord(record)
         if (processedRecord.slug === slug) {
           records = [record]
           break
@@ -153,7 +171,7 @@ export async function fetchExampleBySlug(slug: string): Promise<ExampleRecord | 
       return null
     }
 
-    const example = processRecord(records[0])
+    const example = processExampleRecord(records[0])
     console.log(`✅ Found example: ${example.title}`)
     return example
 
@@ -168,7 +186,7 @@ export async function testAirtableConnection(): Promise<boolean> {
   if (!base) return false
   
   try {
-    const result = await base(tableName).select({ maxRecords: 1 }).all()
+    const result = await base(examplesTable).select({ maxRecords: 1 }).all()
     console.log('✅ Airtable connection successful')
     return true
   } catch (error) {

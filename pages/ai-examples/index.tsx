@@ -6,24 +6,22 @@ import Navbar from '../../components/Navbar'
 import ExampleCard from '../../components/ExampleCard'
 import CategoryFilter from '../../components/CategoryFilter'
 import ExampleModal from '../../components/ExampleModal'
-import { fetchExamples, ExampleRecord } from '../../lib/airtable'
+import { fetchExamples, fetchSponsors, fetchCategories, ExampleRecord, SponsorRecord, CategoryRecord } from '../../lib/airtable'
+
+// Add sponsor to the example type for use in the component
+export type EnrichedExampleRecord = ExampleRecord & { sponsor?: SponsorRecord };
 
 interface ExamplesPageProps {
-  examples: ExampleRecord[]
+  examples: EnrichedExampleRecord[]
+  categories: string[]
 }
 
-export default function ExamplesPage({ examples }: ExamplesPageProps) {
+export default function ExamplesPage({ examples, categories }: ExamplesPageProps) {
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('All')
-  const [filteredExamples, setFilteredExamples] = useState<ExampleRecord[]>([])
-  const [modalExample, setModalExample] = useState<ExampleRecord | null>(null)
+  const [filteredExamples, setFilteredExamples] = useState<EnrichedExampleRecord[]>([])
+  const [modalExample, setModalExample] = useState<EnrichedExampleRecord | null>(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
-
-  // Get unique categories
-  const categories = examples
-    .map(ex => ex.category)
-    .filter(Boolean)
-    .filter((cat, idx, arr) => arr.indexOf(cat) === idx) as string[]
 
   useEffect(() => {
     let results = examples
@@ -42,7 +40,7 @@ export default function ExamplesPage({ examples }: ExamplesPageProps) {
     setFilteredExamples(results)
   }, [examples, searchTerm, selectedCategory])
 
-  const handleOpenModal = (example: ExampleRecord) => {
+  const handleOpenModal = (example: EnrichedExampleRecord) => {
     setModalExample(example)
     setIsModalOpen(true)
   }
@@ -112,6 +110,7 @@ export default function ExamplesPage({ examples }: ExamplesPageProps) {
                 <ExampleCard
                   key={example.id}
                   example={example}
+                  sponsor={example.sponsor}
                   priority={index < 6}
                   onOpen={handleOpenModal}
                 />
@@ -149,15 +148,45 @@ export default function ExamplesPage({ examples }: ExamplesPageProps) {
 
 export const getStaticProps: GetStaticProps<ExamplesPageProps> = async () => {
   try {
-    const examples = await fetchExamples()
+    // Fetch all data in parallel
+    const [rawExamples, categories, sponsors] = await Promise.all([
+      fetchExamples(),
+      fetchCategories(),
+      fetchSponsors()
+    ]);
+
+    // Create lookup maps for efficient data joining
+    const categoriesById = new Map(categories.map(c => [c.id, c.name]));
+    const sponsorsByCategoryId = new Map(sponsors.map(s => [s.categoryId, s]));
+
+    // Enrich examples with category names and sponsor info
+    const examples: EnrichedExampleRecord[] = rawExamples.map(example => {
+      const categoryName = example.categoryId ? categoriesById.get(example.categoryId) : null;
+      const sponsor = example.categoryId ? sponsorsByCategoryId.get(example.categoryId) : undefined;
+      
+      return {
+        ...example,
+        category: categoryName || example.category, // Fallback to original if any
+        sponsor: sponsor,
+      };
+    });
+
+    const categoryNames = [...categoriesById.values()];
+
     return { 
-      props: { examples },
+      props: { 
+        examples,
+        categories: categoryNames,
+      },
       revalidate: 300 // Revalidate every 5 minutes
     }
   } catch (error) {
-    console.error('Failed to fetch examples:', error)
+    console.error('Failed to fetch data for examples page:', error)
     return { 
-      props: { examples: [] },
+      props: { 
+        examples: [],
+        categories: [],
+      },
       revalidate: 60 // Retry more frequently on error
     }
   }
