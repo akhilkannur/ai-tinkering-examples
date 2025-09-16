@@ -31,7 +31,6 @@ export default function SponsorCard({ sponsor }: SponsorCardProps) {
           <p className="font-semibold text-slate-800 group-hover:text-blue-600">
             {sponsor.name}
           </p>
-          <p className="text-sm text-slate-600">{sponsor.snippet}</p>
         </div>
         <ExternalLink size={16} className="text-slate-400 group-hover:text-blue-600 transition-colors flex-shrink-0" />
       </div>
