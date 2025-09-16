@@ -65,7 +65,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools }: Home
         <div className="relative bg-gradient-to-b from-gray-50 to-white">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 pt-8 sm:pt-12 pb-6 sm:pb-8">
             <div className="text-center mb-6">
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-black leading-tight mb-3 sm:mb-4">
+              <h1 className="text-2xl font-bold text-slate-900 leading-tight mb-3 sm:mb-4"> {/* Adjusted size */}
                 AI examples
                 <span className="text-[#2398A7]"> you can</span> copy & try
               </h1>
@@ -161,26 +161,26 @@ export default function HomePage({ examples, featuredJobs, featuredTools }: Home
 
         {/* Newsletter Section - Moved Down */}
         <div className="bg-black text-white" id="newsletter">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16"> {/* Reduced padding */}
             <div className="max-w-3xl text-center mx-auto">
-              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 leading-none">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-4 leading-none"> {/* Reduced font size */}
                 Stay in 
                 <br />
                 <span className="text-[#7ADAA5]">the loop</span>
               </h2>
               
-              <p className="text-lg sm:text-xl text-gray-300 font-light leading-relaxed mb-12 max-w-2xl mx-auto">
+              <p className="text-base sm:text-lg text-gray-300 font-light leading-relaxed mb-8 max-w-2xl mx-auto"> {/* Reduced font size and margin */}
                 Get fresh AI examples delivered weekly. No spam, no BS. 
                 Just actionable insights you can use right away.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+              <div className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto"> {/* Reduced gap */}
                 <input
                   type="email"
                   placeholder="Your email"
-                  className="flex-1 px-6 py-4 bg-white text-black text-lg focus:outline-none focus:ring-2 focus:ring-[#7ADAA5]"
+                  className="flex-1 px-5 py-3 bg-white text-black text-base focus:outline-none focus:ring-2 focus:ring-[#7ADAA5]" {/* Reduced padding and font size */}
                 />
-                <button className="bg-[#E1AA36] text-black px-8 py-4 text-lg font-medium hover:bg-[#d19a2e] transition-colors duration-200 whitespace-nowrap">
+                <button className="bg-[#E1AA36] text-black px-6 py-3 text-base font-medium hover:bg-[#d19a2e] transition-colors duration-200 whitespace-nowrap"> {/* Reduced padding and font size */}
                   Subscribe
                 </button>
               </div>
