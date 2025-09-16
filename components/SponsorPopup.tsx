@@ -38,12 +38,12 @@ export default function SponsorPopup({ sponsors }: SponsorPopupProps) {
       >
         <X size={16} />
       </button>
-      <a href={currentSponsor.Link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 group">
-        {currentSponsor.Logo && (
+      <a href={currentSponsor.website} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 group">
+        {currentSponsor.logo && (
           <div className="relative w-10 h-10 rounded-md overflow-hidden bg-white flex-shrink-0">
             <Image 
-              src={currentSponsor.Logo[0].url} 
-              alt={`${currentSponsor.Name} logo`} 
+              src={currentSponsor.logo[0].url} 
+              alt={`${currentSponsor.name} logo`} 
               fill
               className="object-contain"
             />
@@ -51,9 +51,9 @@ export default function SponsorPopup({ sponsors }: SponsorPopupProps) {
         )}
         <div>
           <p className="font-semibold text-sm text-slate-800 group-hover:text-blue-600 transition-colors">
-            {currentSponsor.Name}
+            {currentSponsor.name}
           </p>
-          <p className="text-xs text-slate-500">{currentSponsor.Snippet}</p>
+          <p className="text-xs text-slate-500">{currentSponsor.snippet}</p>
         </div>
       </a>
     </div>
