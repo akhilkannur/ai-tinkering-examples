@@ -6,6 +6,8 @@ const apiKey = process.env.AIRTABLE_API_KEY
 const examplesTable = process.env.NEXT_PUBLIC_AIRTABLE_TABLE || 'Examples'
 const categoriesTable = process.env.NEXT_PUBLIC_AIRTABLE_CATEGORIES_TABLE || 'Categories'
 const sponsorsTable = process.env.NEXT_PUBLIC_AIRTABLE_SPONSORS_TABLE || 'Sponsors'
+const jobsTable = process.env.NEXT_PUBLIC_AIRTABLE_JOBS_TABLE || 'Jobs'
+const toolsTable = process.env.NEXT_PUBLIC_AIRTABLE_TOOLS_TABLE || 'Tools'
 
 console.log('Airtable Config:', {
   baseId: baseId ? `${baseId.slice(0, 8)}...` : 'missing',
@@ -13,6 +15,8 @@ console.log('Airtable Config:', {
   examplesTable,
   categoriesTable,
   sponsorsTable,
+  jobsTable,
+  toolsTable,
 })
 
 if (!baseId || !apiKey) {
@@ -35,6 +39,25 @@ export type SponsorRecord = {
   description?: string | null;
 };
 
+export type JobRecord = {
+  id: string;
+  jobTitle: string;
+  companyName: string;
+  companyLogo?: { url: string }[] | null;
+  jobUrl: string;
+  location?: string | null;
+  description?: string | null;
+  featured: boolean;
+};
+
+export type ToolRecord = {
+  id: string;
+  toolName: string;
+  logo?: { url: string }[] | null;
+  websiteUrl: string;
+  shortDescription?: string | null;
+  featured: boolean;
+};
 
 export type CategoryRecord = {
   id: string;
@@ -112,6 +135,30 @@ function processSponsorRecord(record: any): SponsorRecord {
   };
 }
 
+function processJobRecord(record: any): JobRecord {
+  return {
+    id: record.id,
+    jobTitle: record.get('Job Title') as string || 'Untitled Job',
+    companyName: record.get('Company Name') as string || 'Unknown Company',
+    companyLogo: (record.get('Company Logo') as { url: string }[] | null) ?? null,
+    jobUrl: record.get('Job URL') as string || '#',
+    location: record.get('Location') as string || null,
+    description: record.get('Description') as string || null,
+    featured: record.get('Featured') as boolean || false,
+  };
+}
+
+function processToolRecord(record: any): ToolRecord {
+  return {
+    id: record.id,
+    toolName: record.get('Tool Name') as string || 'Untitled Tool',
+    logo: (record.get('Logo') as { url: string }[] | null) ?? null,
+    websiteUrl: record.get('Website URL') as string || '#',
+    shortDescription: record.get('Short Description') as string || null,
+    featured: record.get('Featured') as boolean || false,
+  };
+}
+
 // --- FETCHERS ---
 
 async function fetchAll<T>(tableName: string, processFn: (record: any) => T): Promise<T[]> {
@@ -135,6 +182,34 @@ async function fetchAll<T>(tableName: string, processFn: (record: any) => T): Pr
 export const fetchExamples = () => fetchAll(examplesTable, processExampleRecord);
 export const fetchCategories = () => fetchAll(categoriesTable, processCategoryRecord);
 export const fetchSponsors = () => fetchAll(sponsorsTable, processSponsorRecord);
+
+export async function fetchFeaturedJobs(): Promise<JobRecord[]> {
+  if (!base) {
+    console.warn('⚠️ Airtable not configured for jobs, returning empty array');
+    return [];
+  }
+  try {
+    const records = await base(jobsTable).select({ filterByFormula: '{Featured}' }).all();
+    return records.map(processJobRecord);
+  } catch (error) {
+    console.error('❌ Error fetching featured jobs from Airtable:', error);
+    return [];
+  }
+}
+
+export async function fetchFeaturedTools(): Promise<ToolRecord[]> {
+  if (!base) {
+    console.warn('⚠️ Airtable not configured for tools, returning empty array');
+    return [];
+  }
+  try {
+    const records = await base(toolsTable).select({ filterByFormula: '{Featured}' }).all();
+    return records.map(processToolRecord);
+  } catch (error) {
+    console.error('❌ Error fetching featured tools from Airtable:', error);
+    return [];
+  }
+}
 
 
 export async function fetchExampleBySlug(slug: string): Promise<ExampleRecord | null> {

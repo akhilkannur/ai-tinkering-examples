@@ -1,29 +1,34 @@
 import { useState, useMemo } from 'react'
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
+import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import Navbar from '../components/Navbar'
 import ExampleCard from '../components/ExampleCard'
 import ExampleModal from '../components/ExampleModal'
 import NewsletterSignup from '../components/NewsletterSignup'
-import { fetchExamples, type ExampleRecord } from '../lib/airtable'
+import HorizontalStrip from '../components/HorizontalStrip'
+import JobCard from '../components/JobCard'
+import ToolCard from '../components/ToolCard'
+import { fetchEnrichedExamples, fetchFeaturedJobs, fetchFeaturedTools, EnrichedExampleRecord, JobRecord, ToolRecord } from '../lib/airtable'
 
 interface HomePageProps {
-  examples: ExampleRecord[]
+  examples: EnrichedExampleRecord[]
+  featuredJobs: JobRecord[]
+  featuredTools: ToolRecord[]
 }
 
-export default function HomePage({ examples }: HomePageProps) {
+export default function HomePage({ examples, featuredJobs, featuredTools }: HomePageProps) {
   const [selectedCategory, setSelectedCategory] = useState('All')
-  const [selectedExample, setSelectedExample] = useState<ExampleRecord | null>(null)
+  const [selectedExample, setSelectedExample] = useState<EnrichedExampleRecord | null>(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
 
   // Get unique categories
   const categories = useMemo(() => {
     const cats = examples
       .map(ex => ex.category)
-      .filter(Boolean)
-      .filter((cat, idx, arr) => arr.indexOf(cat) === idx)
-    return ['All', ...cats]
+      .filter(Boolean) as string[]
+    return ['All', ...new Set(cats)]
   }, [examples])
 
   // Filter examples by category only
@@ -33,7 +38,7 @@ export default function HomePage({ examples }: HomePageProps) {
       : examples.filter(example => example.category === selectedCategory)
   }, [examples, selectedCategory])
 
-  const handleOpenModal = (example: ExampleRecord) => {
+  const handleOpenModal = (example: EnrichedExampleRecord) => {
     setSelectedExample(example)
     setIsModalOpen(true)
   }
@@ -101,6 +106,20 @@ export default function HomePage({ examples }: HomePageProps) {
           
           <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-[#E1AA36] via-[#7ADAA5] to-[#2398A7] opacity-30"></div>
         </div>
+
+        {/* Sponsored Jobs Strip */}
+        <HorizontalStrip 
+          title="Sponsored Jobs"
+          items={featuredJobs}
+          renderItem={(job) => <JobCard job={job} />}
+        />
+
+        {/* Featured Tools Strip */}
+        <HorizontalStrip 
+          title="Featured Tools"
+          items={featuredTools}
+          renderItem={(tool) => <ToolCard tool={tool} />}
+        />
 
         {/* Examples Grid - Immediately Visible */}
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
@@ -198,15 +217,20 @@ export default function HomePage({ examples }: HomePageProps) {
 
 export const getStaticProps: GetStaticProps<HomePageProps> = async () => {
   try {
-    const examples = await fetchExamples()
+    const [examples, featuredJobs, featuredTools] = await Promise.all([
+      fetchEnrichedExamples(),
+      fetchFeaturedJobs(),
+      fetchFeaturedTools(),
+    ]);
+
     return {
-      props: { examples },
+      props: { examples, featuredJobs, featuredTools },
       revalidate: 300,
     }
   } catch (error) {
-    console.error('Failed to fetch examples:', error)
+    console.error('Failed to fetch data for homepage:', error)
     return {
-      props: { examples: [] },
+      props: { examples: [], featuredJobs: [], featuredTools: [] },
       revalidate: 60,
     }
   }
