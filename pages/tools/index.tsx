@@ -32,6 +32,20 @@ export default function ToolsPage({ tools }: ToolsPageProps) {
       <Head>
         <title>AI Tools | Discover the Best AI Software - AI Tinkering Examples</title>
         <meta name="description" content="Browse a comprehensive directory of AI tools and software." />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="AI Tools | Discover the Best AI Software" />
+        <meta property="og:description" content="Browse a comprehensive directory of AI tools and software." />
+        <meta property="og:url" content="https://your-domain.com/tools" />
+        <meta property="og:image" content="https://your-domain.com/social-share-default.jpg" />
+        <meta property="og:site_name" content="AI Tinkering Examples" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="AI Tools | Discover the Best AI Software" />
+        <meta name="twitter:description" content="Browse a comprehensive directory of AI tools and software." />
+        <meta name="twitter:image" content="https://your-domain.com/social-share-default.jpg" />
       </Head>
 
       <div className="min-h-screen bg-slate-50">

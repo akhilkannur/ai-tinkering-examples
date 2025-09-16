@@ -58,6 +58,20 @@ export default function HomePage({ examples, featuredJobs, featuredTools }: Home
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="AI Examples You Can Copy & Try" />
+        <meta property="og:description" content="Curated AI workflows and prompts for non-technical tinkerers. No fluff, just actionable examples." />
+        <meta property="og:url" content="https://your-domain.com/" />
+        <meta property="og:image" content="https://your-domain.com/social-share-default.jpg" />
+        <meta property="og:site_name" content="AI Tinkering Examples" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="AI Examples You Can Copy & Try" />
+        <meta name="twitter:description" content="Curated AI workflows and prompts for non-technical tinkerers. No fluff, just actionable examples." />
+        <meta name="twitter:image" content="https://your-domain.com/social-share-default.jpg" />
       </Head>
 
       <div className="min-h-screen bg-white font-['Inter']">
@@ -134,9 +148,9 @@ export default function HomePage({ examples, featuredJobs, featuredTools }: Home
             <>
               {/* Category indicator */}
               <div className="mb-6">
-                <p className="text-sm text-gray-500">
+                <h2 className="text-2xl font-bold text-slate-900 mb-6"> {/* Changed to h2 and applied styling */}
                   {selectedCategory === 'All' ? 'All examples' : selectedCategory}
-                </p>
+                </h2>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">

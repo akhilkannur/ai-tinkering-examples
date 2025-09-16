@@ -54,11 +54,26 @@ export default function ExamplesPage({ examples, categories }: ExamplesPageProps
         <meta name="description" content={`Browse ${examples.length} AI workflow examples with step-by-step guides, prompts, and automation ideas for non-technical tinkerers.`} />
         <meta name="keywords" content="AI examples, AI workflows, automation, prompts, artificial intelligence, guides" />
         <link rel="canonical" href={typeof window !== 'undefined' ? window.location.href : 'https://your-domain.com/ai-examples'} />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="AI Examples | Browse AI Workflows & Prompts" />
+        <meta property="og:description" content="Curated AI workflows and prompts for non-technical tinkerers. No fluff, just actionable examples." />
+        <meta property="og:url" content="https://your-domain.com/ai-examples" />
+        <meta property="og:image" content="https://your-domain.com/social-share-default.jpg" />
+        <meta property="og:site_name" content="AI Tinkering Examples" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="AI Examples | Browse AI Workflows & Prompts" />
+        <meta name="twitter:description" content="Curated AI workflows and prompts for non-technical tinkerers. No fluff, just actionable examples." />
+        <meta name="twitter:image" content="https://your-domain.com/social-share-default.jpg" />
       </Head>
 
       <div className="min-h-screen bg-slate-50">
         <Navbar />
         
+        {/* Header */}
         <header className="max-w-6xl mx-auto px-4 py-8">
           <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4">
             AI Examples Library
@@ -67,6 +82,7 @@ export default function ExamplesPage({ examples, categories }: ExamplesPageProps
             Browse practical AI workflows, prompts, and automation ideas you can copy and try.
           </p>
 
+          {/* Search */}
           <div className="relative max-w-2xl">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400" size={20} />
             <input
@@ -79,6 +95,7 @@ export default function ExamplesPage({ examples, categories }: ExamplesPageProps
           </div>
         </header>
 
+        {/* Category Filter */}
         <section className="max-w-6xl mx-auto px-4">
           <CategoryFilter
             categories={categories}
@@ -86,6 +103,7 @@ export default function ExamplesPage({ examples, categories }: ExamplesPageProps
             onSelect={setSelectedCategory}
           />
 
+          {/* Results Count */}
           <div className="mt-4 mb-6">
             <p className="text-sm text-slate-600">
               {filteredExamples.length} example{filteredExamples.length !== 1 ? 's' : ''}
@@ -95,6 +113,7 @@ export default function ExamplesPage({ examples, categories }: ExamplesPageProps
           </div>
         </section>
 
+        {/* Examples Grid */}
         <main className="max-w-6xl mx-auto px-4 pb-12">
           {filteredExamples.length > 0 ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -102,7 +121,6 @@ export default function ExamplesPage({ examples, categories }: ExamplesPageProps
                 <ExampleCard
                   key={example.id}
                   example={example}
-                  sponsor={example.sponsor}
                   priority={index < 6}
                   onOpen={handleOpenModal}
                 />
@@ -127,6 +145,7 @@ export default function ExamplesPage({ examples, categories }: ExamplesPageProps
           )}
         </main>
 
+        {/* Modal */}
         <ExampleModal
           example={modalExample}
           isOpen={isModalOpen}
@@ -139,7 +158,7 @@ export default function ExamplesPage({ examples, categories }: ExamplesPageProps
 
 export const getStaticProps: GetStaticProps<ExamplesPageProps> = async () => {
   try {
-    const examples = await fetchEnrichedExamples();
+    const examples = await fetchEnrichedExamples()
     const categories = examples.map(e => e.category).filter(Boolean) as string[];
     const uniqueCategories = [...new Set(categories)];
 
