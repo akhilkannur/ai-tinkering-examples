@@ -13,6 +13,36 @@ interface ExampleModalProps {
 export default function ExampleModal({ example, isOpen, onClose }: ExampleModalProps) {
   const modalRef = useRef<HTMLDivElement>(null)
   const contentRef = useRef<HTMLDivElement>(null)
+  const router = useRouter()
+
+  // Update URL when modal opens/closes
+  useEffect(() => {
+    if (isOpen && example) {
+      const categorySlug = example.category?.toLowerCase().replace(/\s+/g, '-') || 'uncategorized'
+      const exampleUrl = `/ai-examples/${categorySlug}/${example.slug}`
+      
+      // Update URL without navigation
+      window.history.pushState(null, '', exampleUrl)
+    } else if (!isOpen && example) {
+      // When closing, revert URL to the main examples page
+      router.push('/ai-examples', undefined, { shallow: true });
+    }
+  }, [isOpen, example, router])
+
+  // Handle browser back button
+  useEffect(() => {
+    const handlePopState = () => {
+      if (isOpen) {
+        onClose()
+      } else {
+        // If modal is closed and user navigates back, ensure URL is correct
+        router.push('/ai-examples', undefined, { shallow: true });
+      }
+    }
+
+    window.addEventListener('popstate', handlePopState)
+    return () => window.removeEventListener('popstate', handlePopState)
+  }, [isOpen, onClose, router])
 
   // Handle escape key and outside clicks
   useEffect(() => {
