@@ -48,6 +48,8 @@ export default function HomePage({ examples, featuredJobs, featuredTools }: Home
     setTimeout(() => setSelectedExample(null), 300)
   }
 
+  const examplesToShowBeforeJobsStrip = 6; // Corresponds to 2 rows in a 3-column layout
+
   return (
     <>
       <Head>
@@ -107,23 +109,15 @@ export default function HomePage({ examples, featuredJobs, featuredTools }: Home
           <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-[#E1AA36] via-[#7ADAA5] to-[#2398A7] opacity-30"></div>
         </div>
 
-        {/* Featured Tools Strip */}
+        {/* Featured Tools Strip - Remains above examples */}
         <HorizontalStrip 
           title="Featured Tools"
           items={featuredTools}
           renderItem={(tool) => <ToolCard tool={tool} />}
-          viewAllLink="/tools" // Assuming a /tools page exists or will be created
+          viewAllLink="/tools"
         />
 
-        {/* Featured Jobs Strip */}
-        <HorizontalStrip 
-          title="Featured Jobs"
-          items={featuredJobs}
-          renderItem={(job) => <JobCard job={job} />}
-          viewAllLink="/jobs" // Assuming a /jobs page exists or will be created
-        />
-
-        {/* Examples Grid - Immediately Visible */}
+        {/* Examples Grid */}
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
           {filteredExamples.length === 0 ? (
             <div className="py-16 text-center">
@@ -146,7 +140,28 @@ export default function HomePage({ examples, featuredJobs, featuredTools }: Home
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-                {filteredExamples.map((example, index) => (
+                {/* Render first set of examples */}
+                {filteredExamples.slice(0, examplesToShowBeforeJobsStrip).map((example, index) => (
+                  <ExampleCard
+                    key={example.id}
+                    example={example}
+                    priority={index < 6}
+                    onOpen={handleOpenModal}
+                  />
+                ))}
+              </div>
+
+              {/* Featured Jobs Strip - Inserted between examples */}
+              <HorizontalStrip 
+                title="Featured Jobs"
+                items={featuredJobs}
+                renderItem={(job) => <JobCard job={job} />}
+                viewAllLink="/jobs"
+              />
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                {/* Render remaining examples */}
+                {filteredExamples.slice(examplesToShowBeforeJobsStrip).map((example, index) => (
                   <ExampleCard
                     key={example.id}
                     example={example}

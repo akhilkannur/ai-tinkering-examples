@@ -218,7 +218,7 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
                 )}
               </div>
 
-              <div className="flex items-center justify-between pt-2">
+              <div className="flex items-center gap-2">
                 {publishDate && (
                   <time dateTime={example.publish_date} className="text-xs text-slate-400">
                     {publishDate.toLocaleDateString("en-US", {
