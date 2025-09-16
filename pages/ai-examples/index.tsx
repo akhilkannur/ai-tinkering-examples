@@ -148,6 +148,7 @@ export default function ExamplesPage({ examples, categories }: ExamplesPageProps
 
 export const getStaticProps: GetStaticProps<ExamplesPageProps> = async () => {
   try {
+    console.log('--- Starting Data Fetch for Examples Page ---');
     // Fetch all data in parallel
     const [rawExamples, categories, sponsors] = await Promise.all([
       fetchExamples(),
@@ -155,9 +156,19 @@ export const getStaticProps: GetStaticProps<ExamplesPageProps> = async () => {
       fetchSponsors()
     ]);
 
+    console.log(`Fetched ${rawExamples.length} examples, ${categories.length} categories, ${sponsors.length} sponsors.`);
+
     // Create lookup maps for efficient data joining
     const categoriesById = new Map(categories.map(c => [c.id, c.name]));
     const sponsorsByCategoryId = new Map(sponsors.map(s => [s.categoryId, s]));
+
+    // --- DEBUGGING LOGS ---
+    console.log('Categories Map:', categoriesById);
+    console.log('Sponsors Map (by Category ID):', sponsorsByCategoryId);
+    if (rawExamples.length > 0) {
+      console.log('First Raw Example Record:', rawExamples[0]);
+    }
+    // --- END DEBUGGING LOGS ---
 
     // Enrich examples with category names and sponsor info
     const examples: EnrichedExampleRecord[] = rawExamples.map(example => {
@@ -172,7 +183,13 @@ export const getStaticProps: GetStaticProps<ExamplesPageProps> = async () => {
       };
     });
 
+    if (examples.length > 0) {
+        console.log('First ENRICHED Example Record:', examples[0]);
+    }
+
     const categoryNames = [...categoriesById.values()];
+
+    console.log('--- Data Fetch Finished Successfully ---');
 
     return { 
       props: { 
