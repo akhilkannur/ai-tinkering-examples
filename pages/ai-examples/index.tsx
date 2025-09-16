@@ -6,7 +6,7 @@ import Navbar from '../../components/Navbar'
 import ExampleCard from '../../components/ExampleCard'
 import CategoryFilter from '../../components/CategoryFilter'
 import ExampleModal from '../../components/ExampleModal'
-import { fetchExamples, fetchSponsors, fetchCategories, ExampleRecord, SponsorRecord, CategoryRecord, EnrichedExampleRecord } from '../../lib/airtable'
+import { fetchEnrichedExamples, EnrichedExampleRecord } from '../../lib/airtable'
 
 interface ExamplesPageProps {
   examples: EnrichedExampleRecord[]
@@ -59,7 +59,6 @@ export default function ExamplesPage({ examples, categories }: ExamplesPageProps
       <div className="min-h-screen bg-slate-50">
         <Navbar />
         
-        {/* Header */}
         <header className="max-w-6xl mx-auto px-4 py-8">
           <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4">
             AI Examples Library
@@ -68,7 +67,6 @@ export default function ExamplesPage({ examples, categories }: ExamplesPageProps
             Browse practical AI workflows, prompts, and automation ideas you can copy and try.
           </p>
 
-          {/* Search */}
           <div className="relative max-w-2xl">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400" size={20} />
             <input
@@ -81,7 +79,6 @@ export default function ExamplesPage({ examples, categories }: ExamplesPageProps
           </div>
         </header>
 
-        {/* Category Filter */}
         <section className="max-w-6xl mx-auto px-4">
           <CategoryFilter
             categories={categories}
@@ -89,7 +86,6 @@ export default function ExamplesPage({ examples, categories }: ExamplesPageProps
             onSelect={setSelectedCategory}
           />
 
-          {/* Results Count */}
           <div className="mt-4 mb-6">
             <p className="text-sm text-slate-600">
               {filteredExamples.length} example{filteredExamples.length !== 1 ? 's' : ''}
@@ -99,7 +95,6 @@ export default function ExamplesPage({ examples, categories }: ExamplesPageProps
           </div>
         </section>
 
-        {/* Examples Grid */}
         <main className="max-w-6xl mx-auto px-4 pb-12">
           {filteredExamples.length > 0 ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -132,7 +127,6 @@ export default function ExamplesPage({ examples, categories }: ExamplesPageProps
           )}
         </main>
 
-        {/* Modal */}
         <ExampleModal
           example={modalExample}
           isOpen={isModalOpen}
@@ -145,53 +139,14 @@ export default function ExamplesPage({ examples, categories }: ExamplesPageProps
 
 export const getStaticProps: GetStaticProps<ExamplesPageProps> = async () => {
   try {
-    console.log('--- Starting Data Fetch for Examples Page ---');
-    // Fetch all data in parallel
-    const [rawExamples, categories, sponsors] = await Promise.all([
-      fetchExamples(),
-      fetchCategories(),
-      fetchSponsors()
-    ]);
-
-    console.log(`Fetched ${rawExamples.length} examples, ${categories.length} categories, ${sponsors.length} sponsors.`);
-
-    // Create lookup maps for efficient data joining
-    const categoriesById = new Map(categories.map(c => [c.id, c.name]));
-    const sponsorsByCategoryId = new Map(sponsors.map(s => [s.categoryId, s]));
-
-    // --- DEBUGGING LOGS ---
-    console.log('Categories Map:', categoriesById);
-    console.log('Sponsors Map (by Category ID):', sponsorsByCategoryId);
-    if (rawExamples.length > 0) {
-      console.log('First Raw Example Record:', rawExamples[0]);
-    }
-    // --- END DEBUGGING LOGS ---
-
-    // Enrich examples with category names and sponsor info
-    const examples: EnrichedExampleRecord[] = rawExamples.map(example => {
-      const categoryName = example.categoryId ? categoriesById.get(example.categoryId) : null;
-      // Ensure sponsor is `null` if not found, not `undefined`
-      const sponsor = example.categoryId ? (sponsorsByCategoryId.get(example.categoryId) ?? null) : null;
-      
-      return {
-        ...example,
-        category: categoryName || example.category, // Fallback to original if any
-        sponsor: sponsor,
-      };
-    });
-
-    if (examples.length > 0) {
-        console.log('First ENRICHED Example Record:', examples[0]);
-    }
-
-    const categoryNames = [...categoriesById.values()];
-
-    console.log('--- Data Fetch Finished Successfully ---');
+    const examples = await fetchEnrichedExamples();
+    const categories = examples.map(e => e.category).filter(Boolean) as string[];
+    const uniqueCategories = [...new Set(categories)];
 
     return { 
       props: { 
         examples,
-        categories: categoryNames,
+        categories: uniqueCategories,
       },
       revalidate: 300 // Revalidate every 5 minutes
     }

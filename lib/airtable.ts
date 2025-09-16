@@ -183,6 +183,44 @@ export async function fetchExampleBySlug(slug: string): Promise<ExampleRecord | 
   }
 }
 
+// --- ENRICHMENT HELPERS ---
+
+async function enrichExamples(examples: ExampleRecord[]): Promise<EnrichedExampleRecord[]> {
+  const [categories, sponsors] = await Promise.all([
+    fetchCategories(),
+    fetchSponsors(),
+  ]);
+
+  const categoriesById = new Map(categories.map(c => [c.id, c.name]));
+  const sponsorsByCategoryId = new Map(sponsors.map(s => [s.categoryId, s]));
+
+  return examples.map(example => {
+    const categoryName = example.categoryId ? categoriesById.get(example.categoryId) : null;
+    const sponsor = example.categoryId ? (sponsorsByCategoryId.get(example.categoryId) ?? null) : null;
+    return {
+      ...example,
+      category: categoryName || example.category,
+      sponsor: sponsor,
+    };
+  });
+}
+
+// --- PUBLIC API ---
+
+export async function fetchEnrichedExamples(): Promise<EnrichedExampleRecord[]> {
+  const rawExamples = await fetchExamples();
+  return enrichExamples(rawExamples);
+}
+
+export async function fetchEnrichedExampleBySlug(slug: string): Promise<EnrichedExampleRecord | null> {
+  const example = await fetchExampleBySlug(slug);
+  if (!example) return null;
+
+  const [enriched] = await enrichExamples([example]);
+  return enriched;
+}
+
+
 // Helper function to test Airtable connection
 export async function testAirtableConnection(): Promise<boolean> {
   if (!base) return false
