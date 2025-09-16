@@ -65,7 +65,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools }: Home
         <div className="relative bg-gradient-to-b from-gray-50 to-white">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 pt-8 sm:pt-12 pb-6 sm:pb-8">
             <div className="text-center mb-6">
-              <h1 className="text-2xl font-bold text-slate-900 leading-tight mb-3 sm:mb-4"> {/* Adjusted size */}
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-black leading-tight mb-3 sm:mb-4"> {/* Restored original size */}
                 AI examples
                 <span className="text-[#2398A7]"> you can</span> copy & try
               </h1>
