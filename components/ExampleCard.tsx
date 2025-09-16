@@ -71,7 +71,7 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
 
     const shareUrls = {
       facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
-      twitter: `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`,
+      twitter: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}&title=${encodedTitle}&summary=${encodedDescription}`,
       linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}&title=${encodedTitle}&summary=${encodedDescription}`,
     }
 
@@ -194,32 +194,6 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
           </div>
 
           <div className="space-y-3">
-            {/* Sponsor Section */}
-            {sponsor && sponsor.website && (
-              <a 
-                href={sponsor.website}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={(e) => e.stopPropagation()}
-                className="sponsor-link mt-3 p-2 bg-slate-100/80 rounded-lg flex items-center gap-3 hover:bg-slate-200/70 transition-colors text-left"
-              >
-                <span className="text-xs text-slate-500 flex-shrink-0">Sponsored by</span>
-                {sponsor.logo?.[0]?.url ? (
-                  <div className="relative w-20 h-6">
-                    <Image
-                      src={sponsor.logo[0].url}
-                      alt={`${sponsor.name} logo`}
-                      fill
-                      className="object-contain"
-                      sizes="80px"
-                    />
-                  </div>
-                ) : (
-                  <span className="text-xs font-semibold text-slate-700 truncate">{sponsor.name}</span>
-                )}
-              </a>
-            )}
-
             <div className="flex items-center justify-between pt-2">
               <div className="flex gap-2 flex-wrap items-center">
                 {example.Sponsored && (
@@ -242,9 +216,30 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
                     +{example.tags.length - 2}
                   </span>
                 )}
+                {sponsor && sponsor.website && (
+                  <a 
+                    href={sponsor.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    className="sponsor-link px-2 py-1 text-xs border rounded-full bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors flex items-center gap-1"
+                  >
+                    {sponsor.logo?.[0]?.url ? (
+                      <Image
+                        src={sponsor.logo[0].url}
+                        alt={`${sponsor.name} logo`}
+                        width={12}
+                        height={12}
+                        className="object-contain"
+                      />
+                    ) : (
+                      <span className="font-semibold">{sponsor.name}</span>
+                    )}
+                  </a>
+                )}
               </div>
 
-              <div className="flex items-center gap-2">
+              <div className="flex items-center justify-between pt-2">
                 {publishDate && (
                   <time dateTime={example.publish_date} className="text-xs text-slate-400">
                     {publishDate.toLocaleDateString("en-US", {

@@ -79,22 +79,19 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
             href={example.sponsor.website || '#'}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block my-4 p-3 bg-slate-100/80 rounded-lg hover:bg-slate-200/70 transition-colors"
+            className="inline-block my-4 p-2 bg-slate-50 rounded-lg hover:bg-slate-100 transition-colors flex items-center gap-2 text-sm text-slate-600"
           >
-            <div className="flex items-center gap-4">
-              <span className="text-sm text-slate-500">Sponsored by</span>
-              {example.sponsor.logo?.[0]?.url ? (
-                <div className="relative h-8 w-24">
-                  <img
-                    src={example.sponsor.logo[0].url}
-                    alt={`${example.sponsor.name} logo`}
-                    className="object-contain h-full w-full"
-                  />
-                </div>
-              ) : (
-                <span className="text-sm font-semibold text-slate-700">{example.sponsor.name}</span>
-              )}
-            </div>
+            {example.sponsor.logo?.[0]?.url ? (
+              <Image
+                src={example.sponsor.logo[0].url}
+                alt={`${example.sponsor.name} logo`}
+                width={20}
+                height={20}
+                className="object-contain"
+              />
+            ) : (
+              <span className="font-semibold">{example.sponsor.name}</span>
+            )}
           </a>
         )}
       </header>
