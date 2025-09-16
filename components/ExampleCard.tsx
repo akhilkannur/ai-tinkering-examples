@@ -216,27 +216,6 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
                     +{example.tags.length - 2}
                   </span>
                 )}
-                {sponsor && sponsor.website && (
-                  <a 
-                    href={sponsor.website}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={(e) => e.stopPropagation()}
-                    className="sponsor-link px-2 py-1 text-xs border rounded-full bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors flex items-center gap-1"
-                  >
-                    {sponsor.logo?.[0]?.url ? (
-                      <Image
-                        src={sponsor.logo[0].url}
-                        alt={`${sponsor.name} logo`}
-                        width={12}
-                        height={12}
-                        className="object-contain"
-                      />
-                    ) : (
-                      <span className="font-semibold">{sponsor.name}</span>
-                    )}
-                  </a>
-                )}
               </div>
 
               <div className="flex items-center justify-between pt-2">

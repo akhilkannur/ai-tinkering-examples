@@ -73,13 +73,6 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
             {example.summary}
           </p>
         )}
-
-        {/* Sponsor Info */}
-        {example.sponsor && (
-          <div className="my-8">
-            <SponsorDetailCard sponsor={example.sponsor} />
-          </div>
-        )}
       </header>
 
       {/* Main Content */}
@@ -100,6 +93,13 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
                 />
               </div>
             ))}
+          </div>
+        )}
+
+        {/* Sponsor Info */}
+        {example.sponsor && (
+          <div className="my-8">
+            <SponsorDetailCard sponsor={example.sponsor} />
           </div>
         )}
 
