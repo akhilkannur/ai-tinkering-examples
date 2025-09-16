@@ -21,7 +21,7 @@ export default function SponsorCard({ sponsor }: SponsorCardProps) {
           <div className="relative w-12 h-12 rounded-md overflow-hidden bg-white flex-shrink-0">
             <Image 
               src={sponsor.logo[0].url} 
-              alt={`${sponsor.Name} logo`} 
+              alt={`${sponsor.name} logo`} 
               fill
               className="object-contain"
             />
