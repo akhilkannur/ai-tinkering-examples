@@ -2,6 +2,7 @@ import type { EnrichedExampleRecord } from '../lib/airtable'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Clock, Calendar, User, Tag } from 'lucide-react'
+import SponsorDetailCard from './SponsorDetailCard'
 
 interface ExampleBodyProps {
   example: EnrichedExampleRecord
@@ -75,24 +76,9 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
 
         {/* Sponsor Info */}
         {example.sponsor && (
-          <a 
-            href={example.sponsor.website || '#'}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block my-4 p-2 bg-slate-50 rounded-lg hover:bg-slate-100 transition-colors flex items-center gap-2 text-sm text-slate-600"
-          >
-            {example.sponsor.logo?.[0]?.url ? (
-              <Image
-                src={example.sponsor.logo[0].url}
-                alt={`${example.sponsor.name} logo`}
-                width={20}
-                height={20}
-                className="object-contain"
-              />
-            ) : (
-              <span className="font-semibold">{example.sponsor.name}</span>
-            )}
-          </a>
+          <div className="my-8">
+            <SponsorDetailCard sponsor={example.sponsor} />
+          </div>
         )}
       </header>
 

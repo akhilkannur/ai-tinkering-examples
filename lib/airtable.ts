@@ -32,7 +32,7 @@ export type SponsorRecord = {
   logo?: { url: string }[] | null;
   website?: string | null;
   categoryId?: string | null;
-  snippet?: string | null;
+  description?: string | null;
 };
 
 
@@ -108,7 +108,7 @@ function processSponsorRecord(record: any): SponsorRecord {
     logo: (record.get('Logo') as { url: string }[] | null) ?? null,
     website: (record.get('Website') as string | null) ?? null,
     categoryId: categoryIds?.[0] || null,
-    snippet: (record.get('Snippet') as string | null) ?? null,
+    description: (record.get('Description') as string | null) ?? null,
   };
 }
 
@@ -175,7 +175,7 @@ export async function fetchExampleBySlug(slug: string): Promise<ExampleRecord | 
       return null
     }
 
-    const example = processExampleRecord(records[0])
+    const example = processRecord(records[0])
     console.log(`✅ Found example: ${example.title}`)
     return example
 
