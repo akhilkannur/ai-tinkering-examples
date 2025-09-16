@@ -175,7 +175,7 @@ export async function fetchExampleBySlug(slug: string): Promise<ExampleRecord | 
       return null
     }
 
-    const example = processRecord(records[0])
+    const example = processExampleRecord(records[0])
     console.log(`✅ Found example: ${example.title}`)
     return example
 
