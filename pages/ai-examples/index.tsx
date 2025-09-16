@@ -60,12 +60,6 @@ export default function ExamplesPage({ examples, categories }: ExamplesPageProps
       </Head>
 
       <div className="min-h-screen bg-slate-50">
-        {/* --- TEMPORARY DEBUG VIEW --- */}
-        <pre style={{ backgroundColor: 'black', color: 'white', padding: 20, margin: 20, borderRadius: 10, zIndex: 9999, position: 'relative' }}>
-          {JSON.stringify(examples, null, 2)}
-        </pre>
-        {/* --- END TEMPORARY DEBUG VIEW --- */}
-
         <Navbar />
         
         {/* Header */}

@@ -5,10 +5,21 @@ import { ArrowLeft, Clock, Calendar, User, Tag } from 'lucide-react'
 import Navbar from '../../components/Navbar'
 import ExampleDetail from '../../components/ExampleDetail'
 import SocialSharing from '../../components/SocialSharing'
-import { fetchExamples, fetchExampleBySlug, ExampleRecord } from '../../lib/airtable'
+import { 
+  fetchExamples, 
+  fetchExampleBySlug, 
+  fetchCategories, 
+  fetchSponsors,
+  ExampleRecord, 
+  SponsorRecord, 
+  CategoryRecord 
+} from '../../lib/airtable'
+
+// Create an enriched type that includes the sponsor
+export type EnrichedExampleRecord = ExampleRecord & { sponsor?: SponsorRecord };
 
 interface ExamplePageProps {
-  example: ExampleRecord | null
+  example: EnrichedExampleRecord | null
 }
 
 export default function ExamplePage({ example }: ExamplePageProps) {
@@ -40,7 +51,8 @@ export default function ExamplePage({ example }: ExamplePageProps) {
   }
 
   const publishDate = example.publish_date ? new Date(example.publish_date) : null
-  const currentUrl = typeof window !== 'undefined' ? window.location.href : `https://your-domain.com/ai-examples/${example.category?.toLowerCase().replace(/\s+/g, '-')}/${example.slug}`
+  const categorySlug = example.category?.toLowerCase().replace(/\s+/g, '-') || 'uncategorized'
+  const currentUrl = typeof window !== 'undefined' ? window.location.href : `https://your-domain.com/ai-examples/${categorySlug}/${example.slug}`
 
   // Generate structured data for SEO
   const structuredData = {
@@ -54,7 +66,11 @@ export default function ExamplePage({ example }: ExamplePageProps) {
     },
     "publisher": {
       "@type": "Organization",
-      "name": "AI Tinkering Examples"
+      "name": "AI Tinkering Examples",
+      "logo": {
+        "@type": "ImageObject",
+        "url": example.sponsor?.logo?.[0]?.url || 'https://your-domain.com/logo.png'
+      }
     },
     "datePublished": example.publish_date,
     "dateModified": example.publish_date,
@@ -127,7 +143,7 @@ export default function ExamplePage({ example }: ExamplePageProps) {
             {example.category && (
               <li className="before:content-['/'] before:mx-2">
                 <Link 
-                  href={`/ai-examples/category/${example.category.toLowerCase().replace(/\s+/g, '-')}`}
+                  href={`/ai-examples/category/${categorySlug}`}
                   className="hover:text-slate-900 transition-colors"
                 >
                   {example.category}
@@ -145,7 +161,7 @@ export default function ExamplePage({ example }: ExamplePageProps) {
           <div className="flex flex-wrap items-center gap-3 text-sm text-slate-600 mb-6">
             {example.category && (
               <Link 
-                href={`/ai-examples/category/${example.category.toLowerCase().replace(/\s+/g, '-')}`}
+                href={`/ai-examples/category/${categorySlug}`}
                 className="inline-flex items-center gap-1 px-3 py-1 border rounded-full bg-white hover:bg-slate-50 transition-colors"
               >
                 <Tag size={14} />
@@ -199,6 +215,31 @@ export default function ExamplePage({ example }: ExamplePageProps) {
               {example.summary}
             </p>
           )}
+
+          {/* Sponsor Info */}
+          {example.sponsor && (
+            <a 
+              href={example.sponsor.website || '#'}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block my-4 p-3 bg-slate-100/80 rounded-lg hover:bg-slate-200/70 transition-colors"
+            >
+              <div className="flex items-center gap-4">
+                <span className="text-sm text-slate-500">Sponsored by</span>
+                {example.sponsor.logo?.[0]?.url ? (
+                  <div className="relative h-8 w-24">
+                    <img
+                      src={example.sponsor.logo[0].url}
+                      alt={`${example.sponsor.name} logo`}
+                      className="object-contain h-full w-full"
+                    />
+                  </div>
+                ) : (
+                  <span className="text-sm font-semibold text-slate-700">{example.sponsor.name}</span>
+                )}
+              </div>
+            </a>
+          )}
         </header>
 
         {/* Main Content */}
@@ -241,15 +282,18 @@ export default function ExamplePage({ example }: ExamplePageProps) {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   try {
-    const examples = await fetchExamples()
-    const paths = examples.map(example => ({
-      params: { 
-        slug: [
-          example.category?.toLowerCase().replace(/\s+/g, '-') || 'uncategorized',
-          example.slug
-        ]
+    const [examples, categories] = await Promise.all([fetchExamples(), fetchCategories()]);
+    const categoriesById = new Map(categories.map(c => [c.id, c.name]));
+
+    const paths = examples.map(example => {
+      const categoryName = example.categoryId ? categoriesById.get(example.categoryId) : 'uncategorized';
+      const categorySlug = categoryName.toLowerCase().replace(/\s+/g, '-');
+      return {
+        params: { 
+          slug: [categorySlug, example.slug]
+        }
       }
-    }))
+    });
     
     return { paths, fallback: 'blocking' }
   } catch (error) {
@@ -260,21 +304,38 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const slugArray = params?.slug as string[]
-  const exampleSlug = slugArray?.[slugArray.length - 1] // Get the last part as the example slug
+  const exampleSlug = slugArray?.[slugArray.length - 1]
   
   if (!exampleSlug) {
     return { notFound: true }
   }
   
   try {
-    const example = await fetchExampleBySlug(exampleSlug)
+    const [example, categories, sponsors] = await Promise.all([
+      fetchExampleBySlug(exampleSlug),
+      fetchCategories(),
+      fetchSponsors(),
+    ]);
     
     if (!example) {
       return { notFound: true }
     }
 
+    // Enrich the single example
+    const categoriesById = new Map(categories.map(c => [c.id, c.name]));
+    const sponsorsByCategoryId = new Map(sponsors.map(s => [s.categoryId, s]));
+
+    const categoryName = example.categoryId ? categoriesById.get(example.categoryId) : null;
+    const sponsor = example.categoryId ? (sponsorsByCategoryId.get(example.categoryId) ?? null) : null;
+
+    const enrichedExample: EnrichedExampleRecord = {
+      ...example,
+      category: categoryName || example.category,
+      sponsor: sponsor,
+    };
+
     return { 
-      props: { example }, 
+      props: { example: enrichedExample }, 
       revalidate: 300 // 5 minutes
     }
   } catch (error) {

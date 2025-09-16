@@ -195,24 +195,28 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
 
           <div className="space-y-3">
             {/* Sponsor Section */}
-            {sponsor && sponsor.website && sponsorLogo && (
+            {sponsor && sponsor.website && (
               <a 
                 href={sponsor.website}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={(e) => e.stopPropagation()}
-                className="sponsor-link mt-3 p-2 bg-slate-100/80 rounded-lg flex items-center gap-3 hover:bg-slate-200/70 transition-colors"
+                className="sponsor-link mt-3 p-2 bg-slate-100/80 rounded-lg flex items-center gap-3 hover:bg-slate-200/70 transition-colors text-left"
               >
-                <span className="text-xs text-slate-500">Sponsored by</span>
-                <div className="relative w-20 h-6">
-                  <Image
-                    src={sponsorLogo}
-                    alt={`${sponsor.name} logo`}
-                    fill
-                    className="object-contain"
-                    sizes="80px"
-                  />
-                </div>
+                <span className="text-xs text-slate-500 flex-shrink-0">Sponsored by</span>
+                {sponsor.logo?.[0]?.url ? (
+                  <div className="relative w-20 h-6">
+                    <Image
+                      src={sponsor.logo[0].url}
+                      alt={`${sponsor.name} logo`}
+                      fill
+                      className="object-contain"
+                      sizes="80px"
+                    />
+                  </div>
+                ) : (
+                  <span className="text-xs font-semibold text-slate-700 truncate">{sponsor.name}</span>
+                )}
               </a>
             )}
 
