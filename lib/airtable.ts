@@ -101,9 +101,9 @@ function processSponsorRecord(record: any): SponsorRecord {
   const categoryIds = record.get('Category') as string[] | null;
   return {
     id: record.id,
-    name: record.get('Name') as string,
-    logo: record.get('Logo') as { url: string }[] | null,
-    website: record.get('Website') as string | null,
+    name: (record.get('Name') as string) || 'Unnamed Sponsor',
+    logo: (record.get('Logo') as { url: string }[] | null) ?? null,
+    website: (record.get('Website') as string | null) ?? null,
     categoryId: categoryIds?.[0] || null,
   };
 }

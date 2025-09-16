@@ -162,7 +162,8 @@ export const getStaticProps: GetStaticProps<ExamplesPageProps> = async () => {
     // Enrich examples with category names and sponsor info
     const examples: EnrichedExampleRecord[] = rawExamples.map(example => {
       const categoryName = example.categoryId ? categoriesById.get(example.categoryId) : null;
-      const sponsor = example.categoryId ? sponsorsByCategoryId.get(example.categoryId) : undefined;
+      // Ensure sponsor is `null` if not found, not `undefined`
+      const sponsor = example.categoryId ? (sponsorsByCategoryId.get(example.categoryId) ?? null) : null;
       
       return {
         ...example,
