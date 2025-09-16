@@ -11,7 +11,7 @@ export default function SponsorCard({ sponsor }: SponsorCardProps) {
 
   return (
     <a 
-      href={sponsor.Link} 
+      href={sponsor.website} 
       target="_blank" 
       rel="noopener noreferrer"
       className="block p-4 rounded-lg border bg-slate-50 hover:bg-slate-100 transition-colors group"
