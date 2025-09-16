@@ -197,6 +197,20 @@ export async function fetchFeaturedJobs(): Promise<JobRecord[]> {
   }
 }
 
+export async function fetchAllJobs(): Promise<JobRecord[]> {
+  if (!base) {
+    console.warn('⚠️ Airtable not configured for jobs, returning empty array');
+    return [];
+  }
+  try {
+    const records = await base(jobsTable).select().all();
+    return records.map(processJobRecord);
+  } catch (error) {
+    console.error('❌ Error fetching all jobs from Airtable:', error);
+    return [];
+  }
+}
+
 export async function fetchFeaturedTools(): Promise<ToolRecord[]> {
   if (!base) {
     console.warn('⚠️ Airtable not configured for tools, returning empty array');
@@ -207,6 +221,20 @@ export async function fetchFeaturedTools(): Promise<ToolRecord[]> {
     return records.map(processToolRecord);
   } catch (error) {
     console.error('❌ Error fetching featured tools from Airtable:', error);
+    return [];
+  }
+}
+
+export async function fetchAllTools(): Promise<ToolRecord[]> {
+  if (!base) {
+    console.warn('⚠️ Airtable not configured for tools, returning empty array');
+    return [];
+  }
+  try {
+    const records = await base(toolsTable).select().all();
+    return records.map(processToolRecord);
+  } catch (error) {
+    console.error('❌ Error fetching all tools from Airtable:', error);
     return [];
   }
 }
