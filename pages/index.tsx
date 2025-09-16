@@ -178,9 +178,9 @@ export default function HomePage({ examples, featuredJobs, featuredTools }: Home
                 <input
                   type="email"
                   placeholder="Your email"
-                  className="flex-1 px-5 py-3 bg-white text-black text-base focus:outline-none focus:ring-2 focus:ring-[#7ADAA5]" {/* Reduced padding and font size */}
+                  className="flex-1 px-5 py-3 bg-white text-black text-base focus:outline-none focus:ring-2 focus:ring-[#7ADAA5]" 
                 />
-                <button className="bg-[#E1AA36] text-black px-6 py-3 text-base font-medium hover:bg-[#d19a2e] transition-colors duration-200 whitespace-nowrap"> {/* Reduced padding and font size */}
+                <button className="bg-[#E1AA36] text-black px-6 py-3 text-base font-medium hover:bg-[#d19a2e] transition-colors duration-200 whitespace-nowrap"> 
                   Subscribe
                 </button>
               </div>
