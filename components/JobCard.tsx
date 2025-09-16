@@ -14,9 +14,9 @@ export default function JobCard({ job }: JobCardProps) {
       rel="noopener noreferrer"
       className="block p-3 border border-slate-200 rounded-lg bg-white hover:bg-slate-50 transition-colors shadow-sm h-full flex flex-col justify-between"
     >
-      <div>
+      <div className="flex items-center gap-3">
         {job.companyLogo?.[0]?.url && (
-          <div className="relative w-10 h-10 rounded-full overflow-hidden bg-slate-100 mb-2">
+          <div className="relative w-10 h-10 rounded-full overflow-hidden bg-slate-100 flex-shrink-0">
             <Image 
               src={job.companyLogo[0].url}
               alt={`${job.companyName} logo`}
@@ -25,16 +25,15 @@ export default function JobCard({ job }: JobCardProps) {
             />
           </div>
         )}
-        <h3 className="text-sm font-semibold text-slate-900 mb-0.5">{job.jobTitle}</h3>
-        <p className="text-xs text-slate-700">{job.companyName}</p>
-        {job.location && (
-          <p className="text-xs text-slate-500 flex items-center gap-1 mt-1">
-            <MapPin size={10} /> {job.location}
-          </p>
-        )}
-        {job.description && (
-          <p className="text-xs text-slate-600 mt-2 line-clamp-2">{job.description}</p>
-        )}
+        <div>
+          <h3 className="text-sm font-semibold text-slate-900">{job.jobTitle}</h3>
+          <p className="text-xs text-slate-700">{job.companyName}</p>
+          {job.location && (
+            <p className="text-xs text-slate-500 flex items-center gap-1 mt-0.5">
+              <MapPin size={10} /> {job.location}
+            </p>
+          )}
+        </div>
       </div>
     </a>
   )

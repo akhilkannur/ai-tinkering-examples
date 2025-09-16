@@ -107,18 +107,20 @@ export default function HomePage({ examples, featuredJobs, featuredTools }: Home
           <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-[#E1AA36] via-[#7ADAA5] to-[#2398A7] opacity-30"></div>
         </div>
 
-        {/* Sponsored Jobs Strip */}
-        <HorizontalStrip 
-          title="Sponsored Jobs"
-          items={featuredJobs}
-          renderItem={(job) => <JobCard job={job} />}
-        />
-
         {/* Featured Tools Strip */}
         <HorizontalStrip 
           title="Featured Tools"
           items={featuredTools}
           renderItem={(tool) => <ToolCard tool={tool} />}
+          viewAllLink="/tools" // Assuming a /tools page exists or will be created
+        />
+
+        {/* Featured Jobs Strip */}
+        <HorizontalStrip 
+          title="Featured Jobs"
+          items={featuredJobs}
+          renderItem={(job) => <JobCard job={job} />}
+          viewAllLink="/jobs" // Assuming a /jobs page exists or will be created
         />
 
         {/* Examples Grid - Immediately Visible */}
