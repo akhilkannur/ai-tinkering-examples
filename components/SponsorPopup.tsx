@@ -53,7 +53,6 @@ export default function SponsorPopup({ sponsors }: SponsorPopupProps) {
           <p className="font-semibold text-sm text-slate-800 group-hover:text-blue-600 transition-colors">
             {currentSponsor.name}
           </p>
-          <p className="text-xs text-slate-500">{currentSponsor.snippet}</p>
         </div>
       </a>
     </div>
