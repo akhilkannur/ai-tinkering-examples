@@ -32,6 +32,7 @@ export type SponsorRecord = {
   logo?: { url: string }[] | null;
   website?: string | null;
   categoryId?: string | null;
+  snippet?: string | null;
 };
 
 
@@ -107,6 +108,7 @@ function processSponsorRecord(record: any): SponsorRecord {
     logo: (record.get('Logo') as { url: string }[] | null) ?? null,
     website: (record.get('Website') as string | null) ?? null,
     categoryId: categoryIds?.[0] || null,
+    snippet: (record.get('Snippet') as string | null) ?? null,
   };
 }
 

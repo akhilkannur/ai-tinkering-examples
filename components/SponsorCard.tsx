@@ -29,7 +29,7 @@ export default function SponsorCard({ sponsor }: SponsorCardProps) {
         )}
         <div className="flex-grow">
           <p className="font-semibold text-slate-800 group-hover:text-blue-600">
-            {sponsor.Name}
+            {sponsor.name}
           </p>
           <p className="text-sm text-slate-600">{sponsor.Snippet}</p>
         </div>
