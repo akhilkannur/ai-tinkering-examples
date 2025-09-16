@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from 'react'
-import type { SponsorRecord } from '../lib/sponsors'
+import type { SponsorRecord } from '../lib/airtable'
 import Image from 'next/image'
 import { X } from 'lucide-react'
 
