@@ -190,6 +190,11 @@ export default function ExampleCard({ example, priority = false, onOpen }: Examp
 
           <div className="flex items-center justify-between">
             <div className="flex gap-2 flex-wrap">
+              {example.Sponsored && (
+                <span className="px-2 py-1 text-xs border rounded-full bg-yellow-100 text-yellow-800 font-semibold">
+                  Sponsored
+                </span>
+              )}
               {example.category && (
                 <span className="px-2 py-1 text-xs border rounded-full bg-slate-50 text-slate-700">
                   {example.category}

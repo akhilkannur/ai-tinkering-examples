@@ -34,6 +34,7 @@ export type ExampleRecord = {
   tags?: string[] | null
   author_name?: string | null
   author_link?: string | null
+  Sponsored?: boolean | null
 }
 
 function processRecord(record: any): ExampleRecord {
@@ -59,6 +60,7 @@ function processRecord(record: any): ExampleRecord {
     tags: (record.get('Tags') as string[]) || null,
     author_name: record.get('Author name') as string || null,
     author_link: record.get('Author link') as string || null,
+    Sponsored: record.get('Sponsored') as boolean || false,
   }
 }
 
