@@ -10,7 +10,7 @@ import NewsletterSignup from '../components/NewsletterSignup'
 import HorizontalStrip from '../components/HorizontalStrip'
 import JobCard from '../components/JobCard'
 import ToolCard from '../components/ToolCard'
-import SocialSharing from '../components/SocialSharing' // Import SocialSharing
+import SocialSharing from '../components/SocialSharing' 
 import { fetchEnrichedExamples, fetchFeaturedJobs, fetchFeaturedTools, EnrichedExampleRecord, JobRecord, ToolRecord } from '../lib/airtable'
 
 interface HomePageProps {
@@ -23,6 +23,11 @@ export default function HomePage({ examples, featuredJobs, featuredTools }: Home
   const [selectedCategory, setSelectedCategory] = useState('All')
   const [selectedExample, setSelectedExample] = useState<EnrichedExampleRecord | null>(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
+
+  // Define homepage meta variables inside the component
+  const homepageUrl = "https://your-domain.com/"; // Replace with your actual domain
+  const homepageTitle = "AI Examples You Can Copy & Try";
+  const homepageDescription = "Curated AI workflows and prompts for non-technical tinkerers. No fluff, just actionable examples.";
 
   // Get unique categories
   const categories = useMemo(() => {
@@ -54,24 +59,24 @@ export default function HomePage({ examples, featuredJobs, featuredTools }: Home
   return (
     <>
       <Head>
-        <title>AI Examples You Can Copy & Try</title>
-        <meta name="description" content="Curated AI workflows and prompts for non-technical tinkerers" />
+        <title>{homepageTitle}</title>
+        <meta name="description" content={homepageDescription} />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" /> {/* Changed font to Outfit */}
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="AI Examples You Can Copy & Try" />
-        <meta property="og:description" content="Curated AI workflows and prompts for non-technical tinkerers. No fluff, just actionable examples." />
-        <meta property="og:url" content="https://your-domain.com/" />
+        <meta property="og:title" content={homepageTitle} />
+        <meta property="og:description" content={homepageDescription} />
+        <meta property="og:url" content={homepageUrl} />
         <meta property="og:image" content="https://your-domain.com/social-share-default.jpg" />
         <meta property="og:site_name" content="AI Tinkering Examples" />
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="AI Examples You Can Copy & Try" />
-        <meta name="twitter:description" content="Curated AI workflows and prompts for non-technical tinkerers. No fluff, just actionable examples." />
+        <meta name="twitter:title" content={homepageTitle} />
+        <meta name="twitter:description" content={homepageDescription} />
         <meta name="twitter:image" content="https://your-domain.com/social-share-default.jpg" />
       </Head>
 
