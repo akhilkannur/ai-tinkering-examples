@@ -188,29 +188,29 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
               </div>
             </div>
 
-            {example.summary && <p className="text-sm text-slate-600 line-clamp-2 leading-relaxed mt-2">{example.summary}</p>} {/* Changed line-clamp-3 to line-clamp-2 */}
+            {/* Removed summary: example.summary && <p className="text-sm text-slate-600 line-clamp-2 leading-relaxed mt-2">{example.summary}</p> */}
           </div>
 
           <div className="space-y-3">
             <div className="flex items-center justify-between pt-2">
               <div className="flex gap-2 flex-wrap items-center">
                 {example.Sponsored && (
-                  <span className="px-2 py-1 text-xs border rounded-md bg-yellow-100 text-yellow-800 font-semibold"> {/* Changed rounded-full to rounded-md */}
+                  <span className="px-2 py-1 text-xs border rounded-md bg-yellow-100 text-yellow-800 font-semibold">
                     Sponsored
                   </span>
                 )}
                 {example.category && (
-                  <span className="px-2 py-1 text-xs border rounded-md bg-slate-50 text-slate-700"> {/* Changed rounded-full to rounded-md */}
+                  <span className="px-2 py-1 text-xs rounded-md bg-slate-100 text-slate-700"> {/* Removed border */}
                     {example.category}
                   </span>
                 )}
                 {example.tags?.slice(0, 2).map((tag) => (
-                  <span key={tag} className="px-2 py-1 text-xs text-slate-500 bg-slate-100 rounded-md"> {/* Changed rounded-full to rounded-md */}
+                  <span key={tag} className="px-2 py-1 text-xs text-slate-500 bg-slate-100 rounded-md"> 
                     #{tag}
                   </span>
                 ))}
                 {example.tags && example.tags.length > 2 && (
-                  <span className="px-2 py-1 text-xs text-slate-400 bg-slate-100 rounded-md"> {/* Changed rounded-full to rounded-md */}
+                  <span className="px-2 py-1 text-xs text-slate-400 bg-slate-100 rounded-md"> 
                     +{example.tags.length - 2}
                   </span>
                 )}
