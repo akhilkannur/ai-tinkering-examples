@@ -78,10 +78,10 @@ export default function HomePage({ examples, featuredJobs, featuredTools }: Home
         <Navbar />
         
         {/* Compact Hero Section */}
-        <div className="relative bg-gradient-to-b from-gray-50 to-white">
+        <div className="relative bg-gradient-to-b from-blue-50 to-white"> {/* Enhanced gradient */}
           <div className="max-w-6xl mx-auto px-4 sm:px-6 pt-8 sm:pt-12 pb-6 sm:pb-8">
             <div className="text-center mb-6">
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-black leading-tight mb-3 sm:mb-4"> {/* Restored original size */}
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-slate-900 leading-tight mb-3 sm:mb-4"> {/* Restored original size */}
                 AI examples
                 <span className="text-[#2398A7]"> you can</span> copy & try
               </h1>
@@ -132,7 +132,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools }: Home
         />
 
         {/* Examples Grid */}
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12 bg-gray-50"> {/* Added subtle background */}
           {filteredExamples.length === 0 ? (
             <div className="py-16 text-center">
               <h3 className="text-2xl font-bold text-black mb-3">Nothing found</h3>
