@@ -99,23 +99,6 @@ export default function HomePage({ examples, featuredJobs, featuredTools }: Home
                   Get weekly examples
                   <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform duration-300" />
                 </a>
-
-                {/* Category Filter */}
-                <div className="flex flex-wrap justify-center gap-2">
-                  {categories.map(category => (
-                    <button
-                      key={category}
-                      onClick={() => setSelectedCategory(category)}
-                      className={`px-3 py-1.5 text-xs font-medium transition-all duration-200 ${
-                        selectedCategory === category
-                          ? 'bg-black text-white'
-                          : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                      }`}
-                    >
-                      {category}
-                    </button>
-                  ))}
-                </div>
               </div>
             </div>
           </div>
@@ -132,7 +115,24 @@ export default function HomePage({ examples, featuredJobs, featuredTools }: Home
         />
 
         {/* Examples Grid */}
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12 bg-gray-50"> {/* Added subtle background */}
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+          {/* Category Filter - Moved here */}
+          <div className="flex flex-wrap justify-center gap-2 mb-6">
+            {categories.map(category => (
+              <button
+                key={category}
+                onClick={() => setSelectedCategory(category)}
+                className={`px-3 py-1.5 text-xs font-medium transition-all duration-200 ${
+                  selectedCategory === category
+                    ? 'bg-black text-white'
+                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                }`}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+
           {filteredExamples.length === 0 ? (
             <div className="py-16 text-center">
               <h3 className="text-2xl font-bold text-black mb-3">Nothing found</h3>
@@ -146,13 +146,8 @@ export default function HomePage({ examples, featuredJobs, featuredTools }: Home
             </div>
           ) : (
             <>
-              {/* Category indicator */}
-              <div className="mb-6">
-                <h2 className="text-2xl font-bold text-slate-900 mb-6"> {/* Changed to h2 and applied styling */}
-                  {selectedCategory === 'All' ? 'All examples' : selectedCategory}
-                </h2>
-              </div>
-
+              {/* Category indicator - Removed, replaced by filter */}
+              
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                 {/* Render first set of examples */}
                 {filteredExamples.slice(0, examplesToShowBeforeJobsStrip).map((example, index) => (

@@ -50,7 +50,7 @@ h2 {
 
 /* Card component with enhanced performance */
 .card { 
-  @apply border border-slate-100 rounded-2xl p-4 bg-white shadow-md; /* Changed shadow-sm to shadow-md */
+  @apply border border-slate-100 rounded-2xl p-4 bg-white shadow-lg; /* Changed shadow-md to shadow-lg */
   /* Use transform3d for better performance */
   transform: translate3d(0, 0, 0);
   /* Optimize repaints */
@@ -60,7 +60,7 @@ h2 {
 }
 
 .card:hover {
-  @apply shadow-lg; /* Added hover:shadow-lg */
+  @apply shadow-xl; /* Changed shadow-lg to shadow-xl */
   /* Use GPU acceleration */
   transform: translate3d(0, -2px, 0) scale(1.02);
 }
