@@ -123,9 +123,9 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
       {/* Card content with higher z-index */}
       <div className="relative z-10 flex-grow" onClick={handleCardClick}>
         {img && (
-          <div className="relative w-full h-64 mb-3 overflow-hidden rounded-t-2xl bg-gray-800"> {/* Changed h-56 to h-64, bg-slate-100 to bg-gray-800 */}
+          <div className="relative w-full h-64 mb-3 overflow-hidden rounded-t-2xl bg-gray-800"> 
             {imageLoading && (
-              <div className="absolute inset-0 bg-gradient-to-r from-gray-700 via-gray-800 to-gray-700 bg-[length:200%_100%] animate-[shimmer_1.5s_ease-in-out_infinite]" /> {/* Adjusted shimmer colors */}
+              <div className="absolute inset-0 bg-gradient-to-r from-gray-700 via-gray-800 to-gray-700 bg-[length:200%_100%] animate-[shimmer_1.5s_ease-in-out_infinite]" /> 
             )}
 
             {/* Error fallback */}
