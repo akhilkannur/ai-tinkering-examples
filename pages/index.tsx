@@ -80,7 +80,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools }: Home
         <meta name="twitter:image" content="https://your-domain.com/social-share-default.jpg" />
       </Head>
 
-      <div className="min-h-screen bg-white font-['Plus Jakarta Sans']"> {/* Changed font-['Outfit'] to font-['Plus Jakarta Sans'] */}
+      <div className="min-h-screen bg-white font-['Plus Jakarta Sans']"> {/* Changed font-['Inter'] to font-['Plus Jakarta Sans'] */}
         <Navbar />
         
         {/* Compact Hero Section */}
@@ -129,6 +129,28 @@ export default function HomePage({ examples, featuredJobs, featuredTools }: Home
 
         {/* Examples Grid */}
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12 bg-gray-50"> {/* Added subtle background */}
+          {/* Category Filter - Moved here */}
+          <div className="flex flex-wrap justify-center gap-2 mb-6">
+            {categories.map(category => (
+              <button
+                key={category}
+                onClick={() => setSelectedCategory(category)}
+                className={`px-3 py-1.5 text-xs font-medium transition-all duration-200 ${
+                  selectedCategory === category
+                    ? 'bg-black text-white'
+                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                }`}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+
+          {/* All Examples Heading */}
+          <h2 className="text-2xl font-bold text-slate-900 mb-6"> 
+            {selectedCategory === 'All' ? 'All examples' : selectedCategory}
+          </h2>
+
           {filteredExamples.length === 0 ? (
             <div className="py-16 text-center">
               <h3 className="text-2xl font-bold text-black mb-3">Nothing found</h3>
@@ -142,23 +164,6 @@ export default function HomePage({ examples, featuredJobs, featuredTools }: Home
             </div>
           ) : (
             <>
-              {/* Category Filter - Moved here */}
-              <div className="flex flex-wrap justify-center gap-2 mb-6">
-                {categories.map(category => (
-                  <button
-                    key={category}
-                    onClick={() => setSelectedCategory(category)}
-                    className={`px-3 py-1.5 text-xs font-medium transition-all duration-200 ${
-                      selectedCategory === category
-                        ? 'bg-black text-white'
-                        : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                    }`}
-                  >
-                    {category}
-                  </button>
-                ))}
-              </div>
-
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                 {/* Render first set of examples */}
                 {filteredExamples.slice(0, examplesToShowBeforeJobsStrip).map((example, index) => (
