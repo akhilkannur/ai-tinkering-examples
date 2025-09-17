@@ -11,11 +11,11 @@ export default function ToolCard({ tool }: ToolCardProps) {
       href={tool.websiteUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="block p-3 border border-slate-200 rounded-lg bg-white hover:bg-slate-50 transition-colors shadow-md h-full flex flex-col justify-between" {/* Adjusted colors and shadow */}
+      className="block p-3 border border-slate-200 rounded-lg bg-white hover:bg-slate-50 transition-colors shadow-md h-full flex flex-col justify-between" 
     >
       <div className="flex items-center gap-3">
         {tool.logo?.[0]?.url && (
-          <div className="relative w-10 h-10 rounded-full overflow-hidden bg-slate-100 mb-2"> {/* Adjusted background */}
+          <div className="relative w-10 h-10 rounded-full overflow-hidden bg-slate-100 mb-2"> 
             <Image 
               src={tool.logo[0].url}
               alt={`${tool.toolName} logo`}
@@ -25,7 +25,7 @@ export default function ToolCard({ tool }: ToolCardProps) {
           </div>
         )}
         <div>
-          <h3 className="text-sm font-semibold text-slate-900">{tool.toolName}</h3> {/* Adjusted text color */}
+          <h3 className="text-sm font-semibold text-slate-900">{tool.toolName}</h3> 
         </div>
       </div>
     </a>
