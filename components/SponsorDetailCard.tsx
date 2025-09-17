@@ -13,11 +13,11 @@ export default function SponsorDetailCard({ sponsor }: SponsorDetailCardProps) {
       href={sponsor.website || '#'}
       target="_blank"
       rel="noopener noreferrer"
-      className="block p-3 border border-gray-700 rounded-lg bg-gray-900 hover:bg-gray-800 transition-colors shadow-md" {/* Adjusted colors and shadow */}
+      className="block p-3 border border-gray-700 rounded-lg bg-gray-900 hover:bg-gray-800 transition-colors shadow-md" 
     >
       <div className="flex items-center gap-3 mb-1">
         {sponsor.logo?.[0]?.url && (
-          <div className="relative w-12 h-12 flex-shrink-0 rounded-full overflow-hidden bg-gray-800"> {/* Adjusted background */}
+          <div className="relative w-12 h-12 flex-shrink-0 rounded-full overflow-hidden bg-gray-800"> 
             <Image 
               src={sponsor.logo[0].url}
               alt={`${sponsor.name} logo`}
@@ -27,11 +27,11 @@ export default function SponsorDetailCard({ sponsor }: SponsorDetailCardProps) {
           </div>
         )}
         <div>
-          <h3 className="text-base font-semibold text-white">{sponsor.name}</h3> {/* Adjusted text color */}
+          <h3 className="text-base font-semibold text-white">{sponsor.name}</h3> 
         </div>
       </div>
       {sponsor.description && (
-        <p className="text-xs text-gray-400 leading-relaxed"> {/* Adjusted text color */}
+        <p className="text-xs text-gray-400 leading-relaxed"> 
           {sponsor.description}
         </p>
       )}
