@@ -63,13 +63,13 @@ export default function HomePage({ examples, featuredJobs, featuredTools }: Home
         <meta name="description" content={homepageDescription} />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" /> {/* Changed font to Outfit */}
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" /> {/* Changed font to Plus Jakarta Sans */}
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:title" content={homepageTitle} />
         <meta property="og:description" content={homepageDescription} />
-        <meta property="og:url" content={homepageUrl} />
+        <meta property="og:url" content="https://your-domain.com/" />
         <meta property="og:image" content="https://your-domain.com/social-share-default.jpg" />
         <meta property="og:site_name" content="AI Tinkering Examples" />
 
@@ -80,7 +80,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools }: Home
         <meta name="twitter:image" content="https://your-domain.com/social-share-default.jpg" />
       </Head>
 
-      <div className="min-h-screen bg-white font-['Outfit']"> {/* Changed font-['Inter'] to font-['Outfit'] */}
+      <div className="min-h-screen bg-white font-['Plus Jakarta Sans']"> {/* Changed font-['Outfit'] to font-['Plus Jakarta Sans'] */}
         <Navbar />
         
         {/* Compact Hero Section */}
