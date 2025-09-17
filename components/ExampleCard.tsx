@@ -165,20 +165,20 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
           </div>
         )}
 
-        <div className="space-y-3 flex-grow flex flex-col p-4 bg-gray-900 rounded-b-2xl"> {/* Added padding and dark background */}
+        <div className="space-y-3 flex-grow flex flex-col p-4 bg-gray-900 rounded-b-2xl"> 
           <div className="flex-grow">
             <div className="flex items-start justify-between">
-              <h3 className="text-lg font-semibold leading-tight group-hover:text-blue-400 transition-colors line-clamp-2 text-white"> {/* Adjusted text color */}
+              <h3 className="text-lg font-semibold leading-tight group-hover:text-blue-400 transition-colors line-clamp-2 text-white"> 
                 {example.title}
               </h3>
               <div className="flex items-center gap-2 ml-2 shrink-0">
-                <span className="text-sm text-gray-400">{example.read_time ?? 1} min</span> {/* Adjusted text color */}
+                <span className="text-sm text-gray-400">{example.read_time ?? 1} min</span> 
                 {example.original_link && (
                   <a
                     href={example.original_link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="external-link p-1 text-gray-400 hover:text-gray-200 transition-colors" {/* Adjusted text color */}
+                    className="external-link p-1 text-gray-400 hover:text-gray-200 transition-colors" 
                     onClick={(e) => e.stopPropagation()}
                     aria-label="View original source"
                   >
@@ -188,7 +188,7 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
               </div>
             </div>
 
-            {example.summary && <p className="text-sm text-gray-400 line-clamp-3 leading-relaxed mt-2">{example.summary}</p>} {/* Adjusted text color */}
+            {example.summary && <p className="text-sm text-gray-400 line-clamp-3 leading-relaxed mt-2">{example.summary}</p>} 
           </div>
 
           <div className="space-y-3">
@@ -200,17 +200,17 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
                   </span>
                 )}
                 {example.category && (
-                  <span className="px-2 py-1 text-xs border rounded-full bg-gray-700 text-gray-300"> {/* Adjusted colors */}
+                  <span className="px-2 py-1 text-xs border rounded-full bg-gray-700 text-gray-300"> 
                     {example.category}
                   </span>
                 )}
                 {example.tags?.slice(0, 2).map((tag) => (
-                  <span key={tag} className="px-2 py-1 text-xs text-gray-400 bg-gray-700 rounded-full"> {/* Adjusted colors */}
+                  <span key={tag} className="px-2 py-1 text-xs text-gray-400 bg-gray-700 rounded-full"> 
                     #{tag}
                   </span>
                 ))}
                 {example.tags && example.tags.length > 2 && (
-                  <span className="px-2 py-1 text-xs text-gray-500 bg-gray-700 rounded-full"> {/* Adjusted colors */}
+                  <span className="px-2 py-1 text-xs text-gray-500 bg-gray-700 rounded-full"> 
                     +{example.tags.length - 2}
                   </span>
                 )}
@@ -218,7 +218,7 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
 
               <div className="flex items-center gap-2">
                 {publishDate && (
-                  <time dateTime={example.publish_date} className="text-xs text-gray-500"> {/* Adjusted text color */}
+                  <time dateTime={example.publish_date} className="text-xs text-gray-500"> 
                     {publishDate.toLocaleDateString("en-US", {
                       month: "short",
                       day: "numeric",
@@ -231,7 +231,7 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
                   <button
                     type="button"
                     onClick={handleShareClick}
-                    className="p-1.5 text-gray-500 hover:text-gray-300 hover:bg-gray-700 rounded-lg transition-colors" {/* Adjusted colors */}
+                    className="p-1.5 text-gray-500 hover:text-gray-300 hover:bg-gray-700 rounded-lg transition-colors" 
                     aria-label="Share example"
                   >
                     <Share2 size={14} />
@@ -239,11 +239,11 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
 
                   {/* Share dropdown menu */}
                   {showShareMenu && (
-                    <div className="absolute top-full right-0 mt-2 bg-gray-800 rounded-lg shadow-xl border border-gray-700 py-2 min-w-[160px] z-30"> {/* Adjusted colors */}
+                    <div className="absolute top-full right-0 mt-2 bg-gray-800 rounded-lg shadow-xl border border-gray-700 py-2 min-w-[160px] z-30"> 
                       <button
                         type="button"
                         onClick={(e) => shareOnSocial('facebook', e)}
-                        className="flex items-center gap-3 w-full px-4 py-2 text-left hover:bg-gray-700 transition-colors text-white" {/* Adjusted colors */}
+                        className="flex items-center gap-3 w-full px-4 py-2 text-left hover:bg-gray-700 transition-colors text-white" 
                       >
                         <Facebook size={16} className="text-[#1877F2]" />
                         <span className="text-sm">Facebook</span>
@@ -252,7 +252,7 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
                       <button
                         type="button"
                         onClick={(e) => shareOnSocial('twitter', e)}
-                        className="flex items-center gap-3 w-full px-4 py-2 text-left hover:bg-gray-700 transition-colors text-white" {/* Adjusted colors */}
+                        className="flex items-center gap-3 w-full px-4 py-2 text-left hover:bg-gray-700 transition-colors text-white" 
                       >
                         <Twitter size={16} className="text-[#1DA1F2]" />
                         <span className="text-sm">Twitter</span>
@@ -261,23 +261,23 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
                       <button
                         type="button"
                         onClick={(e) => shareOnSocial('linkedin', e)}
-                        className="flex items-center gap-3 w-full px-4 py-2 text-left hover:bg-gray-700 transition-colors text-white" {/* Adjusted colors */}
+                        className="flex items-center gap-3 w-full px-4 py-2 text-left hover:bg-gray-700 transition-colors text-white" 
                       >
                         <Linkedin size={16} className="text-[#0A66C2]" />
                         <span className="text-sm">LinkedIn</span>
                       </button>
                       
-                      <div className="border-t border-gray-700 my-1"></div> {/* Adjusted border color */}
+                      <div className="border-t border-gray-700 my-1"></div> 
                       
                       <button
                         type="button"
                         onClick={copyToClipboard}
-                        className="flex items-center gap-3 w-full px-4 py-2 text-left hover:bg-gray-700 transition-colors text-white" {/* Adjusted colors */}
+                        className="flex items-center gap-3 w-full px-4 py-2 text-left hover:bg-gray-700 transition-colors text-white" 
                       >
                         {copied ? (
                           <Check size={16} className="text-green-600" />
                         ) : (
-                          <Link2 size={16} className="text-gray-400" /> {/* Adjusted text color */}
+                          <Link2 size={16} className="text-gray-400" /> 
                         )}
                         <span className="text-sm">
                           {copied ? 'Copied!' : 'Copy link'}
