@@ -10,6 +10,7 @@ import NewsletterSignup from '../components/NewsletterSignup'
 import HorizontalStrip from '../components/HorizontalStrip'
 import JobCard from '../components/JobCard'
 import ToolCard from '../components/ToolCard'
+import SocialSharing from '../components/SocialSharing' // Import SocialSharing
 import { fetchEnrichedExamples, fetchFeaturedJobs, fetchFeaturedTools, EnrichedExampleRecord, JobRecord, ToolRecord } from '../lib/airtable'
 
 interface HomePageProps {
