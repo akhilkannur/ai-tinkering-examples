@@ -73,6 +73,13 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
             {example.summary}
           </p>
         )}
+
+        {/* Sponsor Info */}
+        {example.sponsor && (
+          <div className="my-8">
+            <SponsorDetailCard sponsor={example.sponsor} />
+          </div>
+        )}
       </header>
 
       {/* Main Content */}
@@ -96,17 +103,10 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
           </div>
         )}
 
-        {/* Sponsor Info */}
-        {example.sponsor && (
-          <div className="my-8">
-            <SponsorDetailCard sponsor={example.sponsor} />
-          </div>
-        )}
-
         {example.workflow_steps && (
           <section className="mb-6 p-4 border border-slate-200 rounded-xl bg-slate-50">
             <h2 className="text-lg font-semibold text-slate-900 mb-3 flex items-center gap-2">
-              🔧 How to replicate
+              📝 Curator notes {/* Changed text */}
             </h2>
             <div className="prose prose-sm max-w-none text-slate-700">
               <pre className="whitespace-pre-wrap font-sans text-sm leading-relaxed bg-white p-4 rounded-lg border">
