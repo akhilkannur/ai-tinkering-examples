@@ -123,15 +123,15 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
       {/* Card content with higher z-index */}
       <div className="relative z-10 flex-grow" onClick={handleCardClick}>
         {img && (
-          <div className="relative w-full h-64 mb-3 overflow-hidden rounded-t-2xl bg-gray-800"> 
+          <div className="relative w-full h-64 mb-3 overflow-hidden rounded-t-2xl bg-slate-100"> 
             {imageLoading && (
-              <div className="absolute inset-0 bg-gradient-to-r from-gray-700 via-gray-800 to-gray-700 bg-[length:200%_100%] animate-[shimmer_1.5s_ease-in-out_infinite]" /> 
+              <div className="absolute inset-0 bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 bg-[length:200%_100%] animate-[shimmer_1.5s_ease-in-out_infinite]" /> 
             )}
 
             {/* Error fallback */}
             {imageError && (
-              <div className="absolute inset-0 bg-gray-800 flex items-center justify-center">
-                <div className="text-gray-400 text-sm">Image unavailable</div>
+              <div className="absolute inset-0 bg-slate-100 flex items-center justify-center">
+                <div className="text-slate-400 text-sm">Image unavailable</div>
               </div>
             )}
 
@@ -165,20 +165,20 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
           </div>
         )}
 
-        <div className="space-y-3 flex-grow flex flex-col p-4 bg-gray-900 rounded-b-2xl"> 
+        <div className="space-y-3 flex-grow flex flex-col p-4 bg-white rounded-b-2xl"> 
           <div className="flex-grow">
             <div className="flex items-start justify-between">
-              <h3 className="text-lg font-semibold leading-tight group-hover:text-blue-400 transition-colors line-clamp-2 text-white"> 
+              <h3 className="text-lg font-semibold leading-tight group-hover:text-blue-600 transition-colors line-clamp-2">
                 {example.title}
               </h3>
               <div className="flex items-center gap-2 ml-2 shrink-0">
-                <span className="text-sm text-gray-400">{example.read_time ?? 1} min</span> 
+                <span className="text-sm text-slate-500">{example.read_time ?? 1} min</span> 
                 {example.original_link && (
                   <a
                     href={example.original_link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="external-link p-1 text-gray-400 hover:text-gray-200 transition-colors" 
+                    className="external-link p-1 text-slate-400 hover:text-slate-600 transition-colors" 
                     onClick={(e) => e.stopPropagation()}
                     aria-label="View original source"
                   >
@@ -188,29 +188,29 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
               </div>
             </div>
 
-            {example.summary && <p className="text-sm text-gray-400 line-clamp-3 leading-relaxed mt-2">{example.summary}</p>} 
+            {example.summary && <p className="text-sm text-slate-600 line-clamp-2 leading-relaxed mt-2">{example.summary}</p>} {/* Changed line-clamp-3 to line-clamp-2 */}
           </div>
 
           <div className="space-y-3">
             <div className="flex items-center justify-between pt-2">
               <div className="flex gap-2 flex-wrap items-center">
                 {example.Sponsored && (
-                  <span className="px-2 py-1 text-xs border rounded-full bg-yellow-100 text-yellow-800 font-semibold">
+                  <span className="px-2 py-1 text-xs border rounded-md bg-yellow-100 text-yellow-800 font-semibold"> {/* Changed rounded-full to rounded-md */}
                     Sponsored
                   </span>
                 )}
                 {example.category && (
-                  <span className="px-2 py-1 text-xs border rounded-full bg-gray-700 text-gray-300"> 
+                  <span className="px-2 py-1 text-xs border rounded-md bg-slate-50 text-slate-700"> {/* Changed rounded-full to rounded-md */}
                     {example.category}
                   </span>
                 )}
                 {example.tags?.slice(0, 2).map((tag) => (
-                  <span key={tag} className="px-2 py-1 text-xs text-gray-400 bg-gray-700 rounded-full"> 
+                  <span key={tag} className="px-2 py-1 text-xs text-slate-500 bg-slate-100 rounded-md"> {/* Changed rounded-full to rounded-md */}
                     #{tag}
                   </span>
                 ))}
                 {example.tags && example.tags.length > 2 && (
-                  <span className="px-2 py-1 text-xs text-gray-500 bg-gray-700 rounded-full"> 
+                  <span className="px-2 py-1 text-xs text-slate-400 bg-slate-100 rounded-md"> {/* Changed rounded-full to rounded-md */}
                     +{example.tags.length - 2}
                   </span>
                 )}
@@ -218,7 +218,7 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
 
               <div className="flex items-center gap-2">
                 {publishDate && (
-                  <time dateTime={example.publish_date} className="text-xs text-gray-500"> 
+                  <time dateTime={example.publish_date} className="text-xs text-slate-400"> 
                     {publishDate.toLocaleDateString("en-US", {
                       month: "short",
                       day: "numeric",
@@ -231,7 +231,7 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
                   <button
                     type="button"
                     onClick={handleShareClick}
-                    className="p-1.5 text-gray-500 hover:text-gray-300 hover:bg-gray-700 rounded-lg transition-colors" 
+                    className="p-1.5 text-slate-400 hover:text-slate-600 hover:bg-slate-100 rounded-lg transition-colors" 
                     aria-label="Share example"
                   >
                     <Share2 size={14} />
@@ -239,11 +239,11 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
 
                   {/* Share dropdown menu */}
                   {showShareMenu && (
-                    <div className="absolute top-full right-0 mt-2 bg-gray-800 rounded-lg shadow-xl border border-gray-700 py-2 min-w-[160px] z-30"> 
+                    <div className="absolute top-full right-0 mt-2 bg-white rounded-lg shadow-xl border border-slate-200 py-2 min-w-[160px] z-30"> 
                       <button
                         type="button"
                         onClick={(e) => shareOnSocial('facebook', e)}
-                        className="flex items-center gap-3 w-full px-4 py-2 text-left hover:bg-gray-700 transition-colors text-white" 
+                        className="flex items-center gap-3 w-full px-4 py-2 text-left hover:bg-slate-50 transition-colors text-slate-700" 
                       >
                         <Facebook size={16} className="text-[#1877F2]" />
                         <span className="text-sm">Facebook</span>
@@ -252,7 +252,7 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
                       <button
                         type="button"
                         onClick={(e) => shareOnSocial('twitter', e)}
-                        className="flex items-center gap-3 w-full px-4 py-2 text-left hover:bg-gray-700 transition-colors text-white" 
+                        className="flex items-center gap-3 w-full px-4 py-2 text-left hover:bg-slate-50 transition-colors text-slate-700" 
                       >
                         <Twitter size={16} className="text-[#1DA1F2]" />
                         <span className="text-sm">Twitter</span>
@@ -261,23 +261,23 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
                       <button
                         type="button"
                         onClick={(e) => shareOnSocial('linkedin', e)}
-                        className="flex items-center gap-3 w-full px-4 py-2 text-left hover:bg-gray-700 transition-colors text-white" 
+                        className="flex items-center gap-3 w-full px-4 py-2 text-left hover:bg-slate-50 transition-colors text-slate-700" 
                       >
                         <Linkedin size={16} className="text-[#0A66C2]" />
                         <span className="text-sm">LinkedIn</span>
                       </button>
                       
-                      <div className="border-t border-gray-700 my-1"></div> 
+                      <div className="border-t border-slate-100 my-1"></div> 
                       
                       <button
                         type="button"
                         onClick={copyToClipboard}
-                        className="flex items-center gap-3 w-full px-4 py-2 text-left hover:bg-gray-700 transition-colors text-white" 
+                        className="flex items-center gap-3 w-full px-4 py-2 text-left hover:bg-slate-50 transition-colors text-slate-700" 
                       >
                         {copied ? (
                           <Check size={16} className="text-green-600" />
                         ) : (
-                          <Link2 size={16} className="text-gray-400" /> 
+                          <Link2 size={16} className="text-slate-600" /> 
                         )}
                         <span className="text-sm">
                           {copied ? 'Copied!' : 'Copy link'}
