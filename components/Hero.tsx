@@ -22,7 +22,7 @@ export default function Hero() {
 
             <a 
               href="#newsletter"
-              className="group inline-flex items-center gap-3 bg-accent text-primary-bg px-8 py-4 text-lg font-bold rounded-full hover:bg-bright-pink hover:text-white transition-all duration-300 transform hover:scale-105 shadow-lg shadow-accent/20"
+              className="group inline-flex items-center gap-3 bg-accent text-electric-blue px-8 py-4 text-lg font-bold rounded-full hover:bg-accent hover:text-electric-blue transition-all duration-300 transform hover:scale-105 shadow-lg shadow-accent/20"
             >
               Get Weekly Inspiration
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1.5 transition-transform duration-300" />

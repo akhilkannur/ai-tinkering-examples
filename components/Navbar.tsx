@@ -95,7 +95,7 @@ export default function Navbar() {
               href="https://airtable.com/appUo7R0la4VUzOoT/shrk9A6i9TF4UjTfo"
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-full text-center px-3 py-3 rounded-md text-base font-bold text-primary-bg bg-accent hover:bg-bright-pink mt-4"
+              className="block w-full text-center px-3 py-3 rounded-md text-base font-bold text-electric-blue bg-accent hover:bg-accent mt-4"
               onClick={() => setIsMobileMenuOpen(false)} // Close menu on click
             >
               Submit an Example

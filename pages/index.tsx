@@ -183,7 +183,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
           </div>
         </div>
 
-        <div className="bg-primary-bg border-t border-secondary-bg">
+        <div className="bg-primary-bg border-t border-light-purple">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8">
             <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
               <h3 className="text-lg font-black text-accent">AI Examples</h3>
