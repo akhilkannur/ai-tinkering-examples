@@ -15,6 +15,8 @@ interface ExampleCardProps {
 }
 
 export default function ExampleCard({ example, sponsor, priority = false, onOpen }: ExampleCardProps) {
+  const ref = React.useRef(null)
+  const isInView = useInView(ref, { once: true, amount: 0.2 })
   const [imageLoading, setImageLoading] = useState(true)
   const [imageError, setImageError] = useState(false)
 
