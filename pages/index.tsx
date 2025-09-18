@@ -246,10 +246,10 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
 
         {/* Footer */}
         <div className="bg-gray-50 border-t border-gray-100">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
-            <div className="flex flex-col sm:flex-row justify-between items-start gap-6">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8">
+            <div className="flex flex-col sm:flex-row justify-between items-start gap-4">
               <div>
-                <h3 className="text-xl font-black text-black mb-3">AI Examples</h3>
+                <h3 className="text-lg font-black text-black mb-2">AI Examples</h3>
                 <p className="text-gray-600 max-w-xs text-sm">
                   Curated for tinkerers, made with care.
                 </p>

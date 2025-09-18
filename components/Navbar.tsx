@@ -3,6 +3,8 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { Menu, X } from 'lucide-react'
 
+import Image from 'next/image'
+
 export default function Navbar() {
   const router = useRouter()
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -19,8 +21,9 @@ export default function Navbar() {
         <div className="flex justify-between h-16">
           <div className="flex">
             <div className="flex-shrink-0 flex items-center">
-              <Link href="/" className="text-2xl font-bold text-gray-900">
-                AI Examples
+              <Link href="/" className="flex items-center">
+                <Image src="/logo.png" alt="AI Examples Logo" width={32} height={32} />
+                <span className="sr-only">AI Examples</span>
               </Link>
             </div>
             {/* Desktop Navigation */}
