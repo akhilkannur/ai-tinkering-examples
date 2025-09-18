@@ -11,15 +11,16 @@ import HorizontalStrip from '../components/HorizontalStrip'
 import JobCard from '../components/JobCard'
 import ToolCard from '../components/ToolCard'
 import SocialSharing from '../components/SocialSharing' 
-import { fetchEnrichedExamples, fetchFeaturedJobs, fetchFeaturedTools, EnrichedExampleRecord, JobRecord, ToolRecord } from '../lib/airtable'
+import { fetchEnrichedExamples, fetchFeaturedJobs, fetchFeaturedTools, fetchSiteSettings, EnrichedExampleRecord, JobRecord, ToolRecord, SiteSettingRecord } from '../lib/airtable'
 
 interface HomePageProps {
   examples: EnrichedExampleRecord[]
   featuredJobs: JobRecord[]
   featuredTools: ToolRecord[]
+  siteSettings: Record<string, boolean>;
 }
 
-export default function HomePage({ examples, featuredJobs, featuredTools }: HomePageProps) {
+export default function HomePage({ examples, featuredJobs, featuredTools, siteSettings }: HomePageProps) {
   const [selectedCategory, setSelectedCategory] = useState('All')
   const [selectedExample, setSelectedExample] = useState<EnrichedExampleRecord | null>(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -120,12 +121,14 @@ export default function HomePage({ examples, featuredJobs, featuredTools }: Home
         </div>
 
         {/* Featured Tools Strip - Remains above examples */}
-        <HorizontalStrip 
-          title="Featured Tools"
-          items={featuredTools}
-          renderItem={(tool) => <ToolCard tool={tool} />}
-          viewAllLink="/tools"
-        />
+        {siteSettings.enableFeaturedToolsSection && featuredTools.length > 0 && (
+          <HorizontalStrip 
+            title="Featured Tools"
+            items={featuredTools}
+            renderItem={(tool) => <ToolCard tool={tool} />}
+            viewAllLink="/tools"
+          />
+        )}
 
         {/* Examples Grid */}
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12 bg-gray-50"> {/* Added subtle background */}
@@ -177,12 +180,14 @@ export default function HomePage({ examples, featuredJobs, featuredTools }: Home
               </div>
 
               {/* Featured Jobs Strip - Inserted between examples */}
-              <HorizontalStrip 
-                title="Featured Jobs"
-                items={featuredJobs}
-                renderItem={(job) => <JobCard job={job} />}
-                viewAllLink="/jobs"
-              />
+              {siteSettings.enableFeaturedJobsSection && featuredJobs.length > 0 && (
+                <HorizontalStrip 
+                  title="Featured Jobs"
+                  items={featuredJobs}
+                  renderItem={(job) => <JobCard job={job} />}
+                  viewAllLink="/jobs"
+                />
+              )}
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                 {/* Render remaining examples */}
@@ -259,20 +264,26 @@ export default function HomePage({ examples, featuredJobs, featuredTools }: Home
 
 export const getStaticProps: GetStaticProps<HomePageProps> = async () => {
   try {
-    const [examples, featuredJobs, featuredTools] = await Promise.all([
+    const [examples, featuredJobs, featuredTools, siteSettingsData] = await Promise.all([
       fetchEnrichedExamples(),
       fetchFeaturedJobs(),
       fetchFeaturedTools(),
+      fetchSiteSettings(),
     ]);
 
+    const siteSettings: Record<string, boolean> = {};
+    siteSettingsData.forEach(setting => {
+      siteSettings[setting.settingName] = setting.enabled;
+    });
+
     return {
-      props: { examples, featuredJobs, featuredTools },
+      props: { examples, featuredJobs, featuredTools, siteSettings },
       revalidate: 300,
     }
   } catch (error) {
     console.error('Failed to fetch data for homepage:', error)
     return {
-      props: { examples: [], featuredJobs: [], featuredTools: [] },
+      props: { examples: [], featuredJobs: [], featuredTools: [], siteSettings: {} },
       revalidate: 60,
     }
   }

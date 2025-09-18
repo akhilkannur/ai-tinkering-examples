@@ -8,6 +8,7 @@ const categoriesTable = process.env.NEXT_PUBLIC_AIRTABLE_CATEGORIES_TABLE || 'Ca
 const sponsorsTable = process.env.NEXT_PUBLIC_AIRTABLE_SPONSORS_TABLE || 'Sponsors'
 const jobsTable = process.env.NEXT_PUBLIC_AIRTABLE_JOBS_TABLE || 'Jobs'
 const toolsTable = process.env.NEXT_PUBLIC_AIRTABLE_TOOLS_TABLE || 'Tools'
+const siteSettingsTable = process.env.NEXT_PUBLIC_AIRTABLE_SITE_SETTINGS_TABLE || 'Site Settings'
 
 console.log('Airtable Config:', {
   baseId: baseId ? `${baseId.slice(0, 8)}...` : 'missing',
@@ -17,6 +18,7 @@ console.log('Airtable Config:', {
   sponsorsTable,
   jobsTable,
   toolsTable,
+  siteSettingsTable,
 })
 
 if (!baseId || !apiKey) {
@@ -83,6 +85,12 @@ export type ExampleRecord = {
 }
 
 export type EnrichedExampleRecord = ExampleRecord & { sponsor?: SponsorRecord | null };
+
+export type SiteSettingRecord = {
+  id: string;
+  settingName: string;
+  enabled: boolean;
+};
 
 // --- PROCESSORS ---
 
@@ -156,6 +164,14 @@ function processToolRecord(record: any): ToolRecord {
     websiteUrl: record.get('Website URL') as string || '#',
     shortDescription: record.get('Short Description') as string || null,
     featured: record.get('Featured') as boolean || false,
+  };
+}
+
+function processSiteSettingRecord(record: any): SiteSettingRecord {
+  return {
+    id: record.id,
+    settingName: record.get('Setting Name') as string,
+    enabled: record.get('Enabled') as boolean || false,
   };
 }
 
@@ -235,6 +251,20 @@ export async function fetchAllTools(): Promise<ToolRecord[]> {
     return records.map(processToolRecord);
   } catch (error) {
     console.error('❌ Error fetching all tools from Airtable:', error);
+    return [];
+  }
+}
+
+export async function fetchSiteSettings(): Promise<SiteSettingRecord[]> {
+  if (!base) {
+    console.warn('⚠️ Airtable not configured for site settings, returning empty array');
+    return [];
+  }
+  try {
+    const records = await base(siteSettingsTable).select().all();
+    return records.map(processSiteSettingRecord);
+  } catch (error) {
+    console.error('❌ Error fetching site settings from Airtable:', error);
     return [];
   }
 }
