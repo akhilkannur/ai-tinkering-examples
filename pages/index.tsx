@@ -92,11 +92,11 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
         </style>
       </Head>
 
-      <div className="min-h-screen bg-white font-['Plus Jakarta Sans'] fade-in"> {/* Changed font-['Inter'] to font-['Plus Jakarta Sans'] */}
+      <div className="min-h-screen bg-offwhite font-['Plus Jakarta Sans'] fade-in"> {/* Changed font-['Inter'] to font-['Plus Jakarta Sans'] */}
         <Navbar />
         
         {/* Compact Hero Section */}
-        <div className="relative bg-gradient-to-b from-blue-50 to-white"> {/* Enhanced gradient */}
+        <div className="relative bg-primary text-white">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 pt-8 sm:pt-12 pb-6 sm:pb-8">
             <div className="text-center mb-6">
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-slate-900 leading-tight mb-3 sm:mb-4"> {/* Restored original size */}
@@ -112,7 +112,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
               <div className="flex flex-col items-center justify-center gap-4">
                 <a 
                   href="#newsletter"
-                  className="group inline-flex items-center gap-2 bg-black text-white px-6 py-3 text-sm font-medium hover:bg-gray-900 transition-all duration-300"
+                  className="group inline-flex items-center gap-2 bg-secondary text-dark px-6 py-3 text-sm font-medium hover:bg-accent2 transition-all duration-300"
                 >
                   Get weekly examples
                   <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform duration-300" />
@@ -156,8 +156,8 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
                 onClick={() => setSelectedCategory(category)}
                 className={`px-3 py-1.5 text-xs font-medium transition-all duration-200 ${
                   selectedCategory === category
-                    ? 'bg-black text-white'
-                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                    ? 'bg-primary text-white'
+                    : 'bg-light text-medium hover:bg-primary hover:text-white'
                 }`}
               >
                 {category}
@@ -225,7 +225,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
                 <span className="text-[#7ADAA5]">the loop</span>
               </h2>
               
-              <p className="text-base sm:text-lg text-gray-300 font-light leading-relaxed mb-8 max-w-2xl mx-auto"> {/* Reduced font size and margin */}
+              <p className="text-base sm:text-lg text-light font-light leading-relaxed mb-8 max-w-2xl mx-auto"> {/* Reduced font size and margin */}
                 Get fresh AI examples delivered weekly. No spam, no BS. 
                 Just actionable insights you can use right away.
               </p>
@@ -234,9 +234,9 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
                 <input
                   type="email"
                   placeholder="Your email"
-                  className="flex-1 px-5 py-3 bg-white text-black text-base focus:outline-none focus:ring-2 focus:ring-[#7ADAA5]" 
+                  className="flex-1 px-5 py-3 bg-white text-dark text-base focus:outline-none focus:ring-2 focus:ring-accent1" 
                 />
-                <button className="bg-[#E1AA36] text-black px-6 py-3 text-base font-medium hover:bg-[#d19a2e] transition-colors duration-200 whitespace-nowrap"> 
+                <button className="bg-secondary text-dark px-6 py-3 text-base font-medium hover:bg-accent2 transition-colors duration-200 whitespace-nowrap"> 
                   Subscribe
                 </button>
               </div>

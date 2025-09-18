@@ -16,13 +16,13 @@ export default function Navbar() {
   ]
 
   return (
-    <nav className="bg-white shadow-sm">
+    <nav className="">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex">
             <div className="flex-shrink-0 flex items-center">
               <Link href="/" className="flex items-center">
-                <Image src="/logo.png" alt="AI Examples Logo" width={32} height={32} />
+                <Image src="/logo.png" alt="AI Examples Logo" width={64} height={64} />
                 <span className="sr-only">AI Examples</span>
               </Link>
             </div>
