@@ -79,9 +79,20 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
         <meta name="twitter:title" content={homepageTitle} />
         <meta name="twitter:description" content={homepageDescription} />
         <meta name="twitter:image" content="https://your-domain.com/social-share-default.jpg" />
+        <style>
+          {`
+            @keyframes fadeIn {
+              from { opacity: 0; }
+              to { opacity: 1; }
+            }
+            .fade-in {
+              animation: fadeIn 0.5s ease-in-out;
+            }
+          `}
+        </style>
       </Head>
 
-      <div className="min-h-screen bg-white font-['Plus Jakarta Sans']"> {/* Changed font-['Inter'] to font-['Plus Jakarta Sans'] */}
+      <div className="min-h-screen bg-white font-['Plus Jakarta Sans'] fade-in"> {/* Changed font-['Inter'] to font-['Plus Jakarta Sans'] */}
         <Navbar />
         
         {/* Compact Hero Section */}
