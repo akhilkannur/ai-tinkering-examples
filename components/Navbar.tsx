@@ -34,8 +34,8 @@ export default function Navbar() {
                   href={link.href}
                   className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${
                     router.pathname.startsWith(link.href)
-                      ? 'border-blue-500 text-gray-900'
-                      : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'
+                      ? 'border-accent text-text-color'
+                    : 'border-transparent text-text-color hover:border-accent hover:text-text-color'
                   }`}
                 >
                   {link.label}
@@ -95,7 +95,7 @@ export default function Navbar() {
               href="https://airtable.com/appUo7R0la4VUzOoT/shrk9A6i9TF4UjTfo"
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-full text-center px-3 py-2 rounded-md text-base font-medium text-white bg-[#2398A7] hover:bg-[#1a7a85] mt-4"
+              className="block w-full text-center px-3 py-2 rounded-md text-base font-medium text-secondary-bg bg-accent hover:bg-blue-700 mt-4"
               onClick={() => setIsMobileMenuOpen(false)} // Close menu on click
             >
               Submit an Example

@@ -255,7 +255,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
                 </p>
               </div>
               
-              <div className="text-sm text-gray-500">
+              <div className="text-sm text-text-color">
                 © 2024 — Made for curious minds
               </div>
             </div>

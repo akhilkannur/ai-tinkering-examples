@@ -33,7 +33,7 @@ export default function ToolCard({ tool }: ToolCardProps) {
           </div>
         )}
         <div>
-          <h3 className="text-sm font-semibold text-dark">{tool.toolName}</h3> 
+          <h3 className="text-sm font-semibold text-text-color">{tool.toolName}</h3> 
         </div>
       </div>
     </motion.a>
