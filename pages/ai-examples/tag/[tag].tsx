@@ -109,10 +109,10 @@ export default function TagPage({ examples, tag, tagDisplayName }: TagPageProps)
             </div>
           ) : (
             <div className="text-center py-12">
-              <p className="text-slate-600 mb-4">No examples found with this tag yet.</p>
+              <p className="text-light-purple mb-4">No examples found with this tag yet.</p>
               <Link 
                 href="/ai-examples"
-                className="text-blue-600 hover:text-blue-800 underline"
+                className="text-accent hover:text-accent underline"
               >
                 Browse all examples
               </Link>

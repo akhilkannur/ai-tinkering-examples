@@ -113,7 +113,7 @@ export default function ExamplePage({ example }: ExamplePageProps) {
                   <Link
                     key={tag}
                     href={`/ai-examples/tag/${tag.toLowerCase().replace(/\s+/g, '-')}`}
-                    className="px-3 py-2 text-sm bg-slate-100 text-slate-700 rounded-full hover:bg-slate-200 transition-colors"
+                    className="px-3 py-2 text-sm bg-secondary-bg text-text-color rounded-full hover:bg-accent transition-colors"
                   >
                     #{tag}
                   </Link>
