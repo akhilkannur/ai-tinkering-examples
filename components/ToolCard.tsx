@@ -10,6 +10,8 @@ interface ToolCardProps {
 export default function ToolCard({ tool }: ToolCardProps) {
   const ref = React.useRef(null)
   const isInView = useInView(ref, { once: true, amount: 0.2 })
+  const ref = React.useRef(null)
+  const isInView = useInView(ref, { once: true, amount: 0.2 })
   return (
     <motion.a
       ref={ref}

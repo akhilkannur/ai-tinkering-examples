@@ -9,6 +9,8 @@ interface JobCardProps {
 }
 
 export default function JobCard({ job }: JobCardProps) {
+  const ref = React.useRef(null)
+  const isInView = useInView(ref, { once: true, amount: 0.2 })
   return (
     <motion.a
       ref={ref}
