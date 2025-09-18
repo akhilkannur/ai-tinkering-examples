@@ -104,8 +104,8 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
                 onClick={() => setSelectedCategory(category)}
                 className={`px-4 py-2 text-sm font-semibold rounded-full transition-all duration-300 transform hover:scale-105 ${
                   selectedCategory === category
-                    ? 'bg-accent text-primary-bg shadow-lg shadow-accent/20'
-                    : 'bg-secondary-bg text-text-color hover:bg-accent hover:text-primary-bg'
+                    ? 'bg-accent text-text-color shadow-lg shadow-accent/20'
+                    : 'bg-secondary-bg text-text-color hover:bg-accent hover:text-text-color'
                 }`}
               >
                 {category}
@@ -175,7 +175,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
                   placeholder="Your email address"
                   className="flex-1 px-6 py-3 bg-primary-bg text-light-purple text-base rounded-full focus:outline-none focus:ring-2 focus:ring-accent"
                 />
-                <button className="bg-accent text-primary-bg px-8 py-3 text-base font-bold rounded-full hover:bg-bright-pink transition-colors duration-300">
+                <button className="bg-accent text-text-color px-8 py-3 text-base font-bold rounded-full hover:bg-accent transition-colors duration-300">
                   Subscribe
                 </button>
               </div>
@@ -186,7 +186,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
         <div className="bg-primary-bg border-t border-secondary-bg">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8">
             <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-              <h3 className="text-lg font-black text-accent">AI Examples</h3>
+              <h3 className="text-lg font-black text-text-color">AI Examples</h3>
               <div className="text-sm text-text-color">
                 © 2024 — Made for curious minds
               </div>
