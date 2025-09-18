@@ -1,22 +1,18 @@
 import { ArrowRight } from 'lucide-react'
+import Image from 'next/image'
 
 export default function Hero() {
   return (
     <div className="relative bg-primary-bg text-text-color overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="relative pt-24 pb-16 sm:pt-32 sm:pb-24 text-center">
+        <div className="relative pt-24 pb-16 sm:pt-32 sm:pb-24 flex flex-col md:flex-row items-center md:justify-between gap-8">
 
-          {/* Background Shapes */}
-          <div className="absolute -top-24 -left-24 w-72 h-72 bg-natsume-gradient rounded-full opacity-20 blur-3xl animate-blob"></div>
-          <div className="absolute -bottom-16 -right-16 w-96 h-96 bg-natsume-gradient rounded-full opacity-10 blur-3xl animate-blob animation-delay-2000"></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-natsume-gradient rounded-full opacity-10 blur-3xl animate-blob animation-delay-4000"></div>
-
-          <div className="relative z-10">
+          <div className="relative z-10 text-center md:text-left md:w-1/2">
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tighter mb-6 bg-clip-text text-transparent bg-natsume-gradient">
               AI Examples, Reimagined
             </h1>
 
-            <p className="text-lg sm:text-xl text-light-purple max-w-3xl mx-auto mb-10">
+            <p className="text-lg sm:text-xl text-light-purple max-w-3xl mx-auto md:mx-0 mb-10">
               A curated collection of prompts, workflows, and AI experiments, designed to inspire and empower your creative journey.
             </p>
 
@@ -27,6 +23,16 @@ export default function Hero() {
               Get Weekly Inspiration
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1.5 transition-transform duration-300" />
             </a>
+          </div>
+
+          <div className="relative z-10 md:w-1/2 flex justify-center md:justify-end">
+            <Image
+              src="/Gemini_Generated_Image_b3hv6cb3hv6cb3hv.png"
+              alt="Hero Image"
+              width={500} 
+              height={500} 
+              className="object-contain rounded-lg shadow-lg"
+            />
           </div>
         </div>
       </div>

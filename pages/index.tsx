@@ -160,7 +160,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
           )}
         </div>
 
-        <div className="bg-light-purple text-text-color" id="newsletter">
+        <div className="bg-primary-bg text-text-color" id="newsletter">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16">
             <div className="max-w-3xl text-center mx-auto">
               <h2 className="text-4xl sm:text-5xl font-black mb-4 bg-clip-text text-transparent bg-natsume-gradient">
@@ -183,7 +183,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
           </div>
         </div>
 
-        <div className="bg-primary-bg border-t border-secondary-bg">
+        <div className="bg-primary-bg border-t border-primary-bg">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8">
             <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
               <h3 className="text-lg font-black text-text-color">AI Examples</h3>

@@ -75,7 +75,7 @@ export default function Navbar() {
 
       {/* Mobile menu, show/hide based on menu state. */}
       {isMobileMenuOpen && (
-        <div className="sm:hidden bg-secondary-bg">
+        <div className="sm:hidden bg-primary-bg">
           <div className="px-2 pt-2 pb-3 space-y-1">
             {navLinks.map((link) => (
               <Link

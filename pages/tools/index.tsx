@@ -48,7 +48,7 @@ export default function ToolsPage({ tools }: ToolsPageProps) {
         <meta name="twitter:image" content="https://your-domain.com/social-share-default.jpg" />
       </Head>
 
-      <div className="min-h-screen bg-light-purple">
+      <div className="min-h-screen bg-primary-bg">
         <Navbar />
         
         <header className="max-w-6xl mx-auto px-4 py-8">
@@ -80,13 +80,13 @@ export default function ToolsPage({ tools }: ToolsPageProps) {
             </div>
           ) : (
             <div className="text-center py-12">
-              <p className="text-slate-600 mb-2">No tools found</p>
-              <p className="text-sm text-slate-500 mb-4">
+              <p className="text-light-purple mb-2">No tools found</p>
+              <p className="text-sm text-light-purple mb-4">
                 Try adjusting your search terms.
               </p>
               <button
                 onClick={() => setSearchTerm('')}
-                className="text-blue-600 hover:text-blue-800 underline"
+                className="text-accent hover:text-accent underline"
               >
                 Clear search
               </button>

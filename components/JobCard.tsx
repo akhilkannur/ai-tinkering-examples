@@ -20,7 +20,7 @@ export default function JobCard({ job }: JobCardProps) {
       href={job.jobUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="block p-4 border border-transparent rounded-lg bg-secondary-bg shadow-lg h-full flex flex-col justify-between transform hover:-translate-y-1 hover:border-accent transition-all duration-300"
+      className="block p-4 border border-transparent rounded-lg bg-primary-bg shadow-lg h-full flex flex-col justify-between transform hover:-translate-y-1 hover:border-accent transition-all duration-300"
     >
       <div className="flex items-center gap-3">
         {job.companyLogo?.[0]?.url && (
