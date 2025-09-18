@@ -20,25 +20,14 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
           {example.category && (
             <Link 
               href={`/ai-examples/category/${categorySlug}`}
-              className="inline-flex items-center gap-1 px-3 py-1 border rounded-full bg-white hover:bg-slate-50 transition-colors"
+              className="inline-flex items-center gap-1 px-3 py-1 border rounded-full bg-accent text-secondary-bg hover:bg-blue-700 transition-colors"
             >
               <Tag size={14} />
               {example.category}
             </Link>
           )}
           
-          {publishDate && (
-            <div className="flex items-center gap-1">
-              <Calendar size={14} />
-              <time dateTime={example.publish_date}>
-                {publishDate.toLocaleDateString('en-US', { 
-                  year: 'numeric',
-                  month: 'long', 
-                  day: 'numeric' 
-                })}
-              </time>
-            </div>
-          )}
+          
           
           <div className="flex items-center gap-1">
             <Clock size={14} />

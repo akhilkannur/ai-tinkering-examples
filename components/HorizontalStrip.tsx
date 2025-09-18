@@ -17,7 +17,7 @@ export default function HorizontalStrip<T>({ title, items, renderItem, viewAllLi
   return (
     <section className="max-w-6xl mx-auto px-4 py-8 bg-secondary-bg rounded-lg">
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-2xl font-bold text-text-color">{title}</h2>
+        <h2 className="text-2xl font-bold text-text-color flex items-center gap-2"><Tool size={24} />{title}</h2>
         {viewAllLink && (
           <Link 
             href={viewAllLink}

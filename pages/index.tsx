@@ -128,7 +128,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
             </div>
           </div>
           
-          <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-[#E1AA36] via-[#7ADAA5] to-[#2398A7] opacity-30"></div>
+          
         </div>
 
         {/* Featured Tools Strip - Remains above examples */}
@@ -144,9 +144,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
         {/* Examples Grid */}
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12 bg-secondary-bg">
           {/* All Examples Heading */}
-          <h2 className="text-2xl font-bold text-text-color mb-6"> 
-            {selectedCategory === 'All' ? 'All examples' : selectedCategory}
-          </h2>
+          <h2 className="text-2xl font-bold text-text-color mb-6 flex items-center gap-2"> <Lightbulb size={24} /> {selectedCategory === 'All' ? 'All examples' : selectedCategory}</h2>
 
           {/* Category Filter - Moved here */}
           <div className="flex flex-wrap justify-center gap-2 mb-6">
