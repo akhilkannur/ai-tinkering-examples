@@ -16,7 +16,7 @@ export default function Hero() {
               AI Examples, Reimagined
             </h1>
 
-            <p className="text-lg sm:text-xl text-text-color max-w-3xl mx-auto mb-10">
+            <p className="text-lg sm:text-xl text-light-purple max-w-3xl mx-auto mb-10">
               A curated collection of prompts, workflows, and AI experiments, designed to inspire and empower your creative journey.
             </p>
 

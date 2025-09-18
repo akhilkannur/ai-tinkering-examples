@@ -3,18 +3,18 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'primary-bg': '#fec7d7',
-        'secondary-bg': '#f9f8fc',
-        'accent': '#0e172c',
-        'text-color': '#0e172c',
-        'light-purple': '#d9d4e7',
-        'bright-pink': '#a786df',
-        'electric-blue': '#fffffe',
+        'primary-bg': '#fef6e4',
+        'secondary-bg': '#f3d2c1',
+        'accent': '#f582ae',
+        'text-color': '#001858',
+        'light-purple': '#172c66',
+        'bright-pink': '#f582ae',
+        'electric-blue': '#001858',
         'navy-dark': '#1a2332',
         'navy-light': '#2a3342',
       },
       backgroundImage: {
-        'natsume-gradient': 'linear-gradient(120deg, #fec7d7 0%, #a786df 50%, #d9d4e7 100%)',
+        'natsume-gradient': 'linear-gradient(120deg, #fef6e4 0%, #f582ae 50%, #8bd3dd 100%)',
       }
     },
   },

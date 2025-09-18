@@ -49,7 +49,7 @@ export default function Navbar() {
               href="https://airtable.com/appUo7R0la4VUzOoT/shrk9A6i9TF4UjTfo"
               target="_blank"
               rel="noopener noreferrer"
-              className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-6 py-2 border border-transparent rounded-full shadow-sm text-base font-bold text-primary-bg bg-accent hover:bg-bright-pink hover:text-white transition-all duration-300 transform hover:scale-105"
+              className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-6 py-2 border border-transparent rounded-full shadow-sm text-base font-bold text-electric-blue bg-accent hover:bg-accent hover:text-electric-blue transition-all duration-300 transform hover:scale-105"
             >
               Submit an Example
             </a>
