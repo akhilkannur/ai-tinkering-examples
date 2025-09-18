@@ -80,13 +80,13 @@ export default function ExamplePage({ example }: ExamplePageProps) {
         <nav className="max-w-4xl mx-auto px-4 py-4" aria-label="Breadcrumb">
           <ol className="flex items-center space-x-2 text-sm text-slate-600">
             <li><Link href="/">Home</Link></li>
-            <li className="before:content-['/'] before:mx-2"><Link href="/ai-examples">AI Examples</Link></li>
+            <li className="before:content-['/'] before:mx-2"><Link href="/ai-examples" className="hover:text-text-color transition-colors">AI Examples</Link></li>
             {example.category && (
               <li className="before:content-['/'] before:mx-2">
                 <Link href={`/ai-examples/category/${categorySlug}`}>{example.category}</Link>
               </li>
             )}
-            <li className="before:content-['/'] before:mx-2 text-slate-900 font-medium truncate">
+            <li className="before:content-['/'] before:mx-2 text-text-color font-medium truncate font-headline">
               {example.title}
             </li>
           </ol>
@@ -106,8 +106,8 @@ export default function ExamplePage({ example }: ExamplePageProps) {
 
         {example.tags && example.tags.length > 0 && (
           <footer className="max-w-4xl mx-auto px-4 py-8">
-            <div className="border-t border-slate-200 pt-8">
-              <h3 className="text-sm font-semibold text-slate-900 mb-4">Related Topics</h3>
+            <div className="border-t border-secondary-bg pt-8">
+              <h3 className="text-sm font-semibold text-text-color mb-4 font-headline">Related Topics</h3>
               <div className="flex gap-2 flex-wrap">
                 {example.tags.map(tag => (
                   <Link

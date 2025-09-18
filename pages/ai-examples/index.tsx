@@ -54,43 +54,30 @@ export default function ExamplesPage({ examples, categories }: ExamplesPageProps
         <meta name="description" content={`Browse ${examples.length} AI workflow examples with step-by-step guides, prompts, and automation ideas for non-technical tinkerers.`} />
         <meta name="keywords" content="AI examples, AI workflows, automation, prompts, artificial intelligence, guides" />
         <link rel="canonical" href={typeof window !== 'undefined' ? window.location.href : 'https://your-domain.com/ai-examples'} />
-
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="AI Examples | Browse AI Workflows & Prompts" />
-        <meta property="og:description" content="Curated AI workflows and prompts for non-technical tinkerers. No fluff, just actionable examples." />
-        <meta property="og:url" content="https://your-domain.com/ai-examples" />
-        <meta property="og:image" content="https://your-domain.com/social-share-default.jpg" />
-        <meta property="og:site_name" content="AI Tinkering Examples" />
-
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="AI Examples | Browse AI Workflows & Prompts" />
-        <meta name="twitter:description" content="Curated AI workflows and prompts for non-technical tinkerers. No fluff, just actionable examples." />
-        <meta name="twitter:image" content="https://your-domain.com/social-share-default.jpg" />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&display=swap" rel="stylesheet" />
       </Head>
 
-      <div className="min-h-screen bg-slate-50">
+      <div className="min-h-screen bg-primary-bg font-sans text-text-color">
         <Navbar />
         
         {/* Header */}
         <header className="max-w-6xl mx-auto px-4 py-8">
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4">
+          <h1 className="text-3xl sm:text-4xl font-extrabold text-text-color mb-4 font-headline">
             AI Examples Library
           </h1>
-          <p className="text-lg text-slate-600 mb-6">
+          <p className="text-lg text-light-purple mb-6">
             Browse practical AI workflows, prompts, and automation ideas you can copy and try.
           </p>
 
           {/* Search */}
           <div className="relative max-w-2xl">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400" size={20} />
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-light-purple" size={20} />
             <input
               type="text"
               placeholder="Search examples, tags, or descriptions..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-10 pr-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white"
+              className="w-full pl-10 pr-4 py-3 border border-secondary-bg rounded-xl focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent bg-primary-bg"
             />
           </div>
         </header>
@@ -138,6 +125,7 @@ export default function ExamplesPage({ examples, categories }: ExamplesPageProps
                   setSelectedCategory('All')
                 }}
                 className="text-accent hover:text-accent underline"
+              >
                 Clear filters
               </button>
             </div>

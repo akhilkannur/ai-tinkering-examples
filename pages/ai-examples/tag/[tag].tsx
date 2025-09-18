@@ -48,22 +48,22 @@ export default function TagPage({ examples, tag, tagDisplayName }: TagPageProps)
         <meta name="twitter:title" content={`#{tagDisplayName} AI Examples`} />
         <meta name="twitter:description" content={`${examples.length} practical AI workflows tagged with ${tagDisplayName}.`} />
         
-        <link rel="canonical" content={currentUrl} />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&display=swap" rel="stylesheet" />
       </Head>
 
-      <div className="min-h-screen bg-slate-50">
+      <div className="min-h-screen bg-primary-bg font-sans text-text-color">
         <Navbar />
         
         {/* Breadcrumb */}
         <nav className="max-w-4xl mx-auto px-4 py-4" aria-label="Breadcrumb">
-          <ol className="flex items-center space-x-2 text-sm text-slate-600">
+          <ol className="flex items-center space-x-2 text-sm text-light-purple">
             <li>
-              <Link href="/" className="hover:text-slate-900 transition-colors">Home</Link>
+              <Link href="/" className="hover:text-text-color transition-colors">Home</Link>
             </li>
             <li className="before:content-['/'] before:mx-2">
-              <Link href="/ai-examples" className="hover:text-slate-900 transition-colors">AI Examples</Link>
+              <Link href="/ai-examples" className="hover:text-text-color transition-colors">AI Examples</Link>
             </li>
-            <li className="before:content-['/'] before:mx-2 text-slate-900 font-medium">
+            <li className="before:content-['/'] before:mx-2 text-text-color font-medium font-headline">
               #{tagDisplayName}
             </li>
           </ol>
@@ -73,23 +73,23 @@ export default function TagPage({ examples, tag, tagDisplayName }: TagPageProps)
         <header className="max-w-4xl mx-auto px-4 py-8">
           <Link 
             href="/ai-examples"
-            className="inline-flex items-center gap-2 text-sm text-slate-600 hover:text-slate-900 transition-colors mb-6"
+            className="inline-flex items-center gap-2 text-sm text-light-purple hover:text-text-color transition-colors mb-6"
           >
             <ArrowLeft size={16} />
             Back to All Examples
           </Link>
 
           <div className="flex items-center gap-3 mb-4">
-            <Hash size={32} className="text-slate-400" />
-            <h1 className="text-4xl sm:text-5xl font-extrabold text-slate-900">
+            <Hash size={32} className="text-light-purple" />
+            <h1 className="text-4xl sm:text-5xl font-extrabold text-text-color font-headline">
               {tagDisplayName}
             </h1>
           </div>
           
-          <p className="text-lg text-slate-600 mb-2">
+          <p className="text-lg text-light-purple mb-2">
             {examples.length} AI workflow{examples.length !== 1 ? 's' : ''} tagged with {tagDisplayName}
           </p>
-          <p className="text-slate-500">
+          <p className="text-light-purple">
             Discover automation ideas and prompts related to {tagDisplayName.toLowerCase()}
           </p>
         </header>
@@ -172,7 +172,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   if (!tagSlug) {
     return { notFound: true }
   }
-
+  
   try {
     const allExamples = await fetchExamples()
     
