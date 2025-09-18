@@ -105,7 +105,7 @@ export default function ExamplesPage({ examples, categories }: ExamplesPageProps
 
           {/* Results Count */}
           <div className="mt-4 mb-6">
-            <p className="text-sm text-slate-600">
+            <p className="text-sm text-light-purple">
               {filteredExamples.length} example{filteredExamples.length !== 1 ? 's' : ''}
               {selectedCategory !== 'All' && ` in ${selectedCategory}`}
               {searchTerm && ` matching "${searchTerm}"`}
@@ -128,8 +128,8 @@ export default function ExamplesPage({ examples, categories }: ExamplesPageProps
             </div>
           ) : (
             <div className="text-center py-12">
-              <p className="text-slate-600 mb-2">No examples found</p>
-              <p className="text-sm text-slate-500 mb-4">
+              <p className="text-light-purple mb-2">No examples found</p>
+              <p className="text-sm text-light-purple mb-4">
                 Try adjusting your search or category filter
               </p>
               <button
@@ -137,8 +137,7 @@ export default function ExamplesPage({ examples, categories }: ExamplesPageProps
                   setSearchTerm('')
                   setSelectedCategory('All')
                 }}
-                className="text-blue-600 hover:text-blue-800 underline"
-              >
+                className="text-accent hover:text-accent underline"
                 Clear filters
               </button>
             </div>

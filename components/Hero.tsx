@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <div className="relative bg-primary-bg text-text-color overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="relative pt-24 pb-16 sm:pt-32 sm:pb-24 flex flex-col md:flex-row items-center md:justify-between gap-8">
+        <div className="relative pt-12 pb-16 sm:pt-16 sm:pb-24 flex flex-col md:flex-row items-center md:justify-between gap-8">
 
           <div className="relative z-10 text-center md:text-left md:w-1/2">
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tighter mb-6 text-text-color font-headline">
