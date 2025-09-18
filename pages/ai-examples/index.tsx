@@ -144,6 +144,8 @@ export default function ExamplesPage({ examples, categories }: ExamplesPageProps
           )}
         </main>
 
+        </main>
+
         {/* Modal */}
         <ExampleModal
           example={modalExample}
