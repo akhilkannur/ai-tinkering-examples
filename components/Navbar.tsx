@@ -83,8 +83,8 @@ export default function Navbar() {
                 href={link.href}
                 className={`block px-3 py-2 rounded-md text-base font-medium ${
                   router.pathname.startsWith(link.href)
-                    ? 'bg-blue-50 text-blue-700'
-                    : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'
+                    ? 'bg-primary-bg text-secondary-bg'
+                    : 'text-secondary-bg hover:bg-primary-bg hover:text-secondary-bg'
                 }`}
                 onClick={() => setIsMobileMenuOpen(false)} // Close menu on click
               >

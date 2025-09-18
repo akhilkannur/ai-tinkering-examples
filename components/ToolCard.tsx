@@ -19,7 +19,7 @@ export default function ToolCard({ tool }: ToolCardProps) {
       href={tool.websiteUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="block p-3 border border-light rounded-lg bg-white shadow-md h-full flex flex-col justify-between"
+      className="block p-3 border border-secondary-bg rounded-lg bg-secondary-bg shadow-md h-full flex flex-col justify-between"
     >
       <div className="flex items-center gap-3">
         {tool.logo?.[0]?.url && (

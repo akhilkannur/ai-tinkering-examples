@@ -250,7 +250,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
             <div className="flex flex-col sm:flex-row justify-between items-start gap-4">
               <div>
                 <h3 className="text-lg font-black text-black mb-2">AI Examples</h3>
-                <p className="text-gray-600 max-w-xs text-sm">
+                <p className="text-text-color max-w-xs text-sm">
                   Curated for tinkerers, made with care.
                 </p>
               </div>

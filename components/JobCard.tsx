@@ -34,8 +34,8 @@ export default function JobCard({ job }: JobCardProps) {
           </div>
         )}
         <div>
-          <h3 className="text-sm font-semibold text-dark">{job.jobTitle}</h3> 
-          <p className="text-xs text-medium">{job.companyName}</p> 
+          <h3 className="text-sm font-semibold text-text-color">{job.jobTitle}</h3> 
+          <p className="text-xs text-text-color">{job.companyName}</p> 
           {job.location && (
             <p className="text-xs text-text-color flex items-center gap-1 mt-0.5"> 
               <MapPin size={10} /> {job.location}
