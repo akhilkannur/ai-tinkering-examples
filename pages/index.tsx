@@ -92,19 +92,19 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
         </style>
       </Head>
 
-      <div className="min-h-screen bg-offwhite font-['Plus Jakarta Sans'] fade-in"> {/* Changed font-['Inter'] to font-['Plus Jakarta Sans'] */}
+      <div className="min-h-screen bg-secondary-bg font-['Plus Jakarta Sans'] fade-in">
         <Navbar />
         
         {/* Compact Hero Section */}
-        <div className="relative bg-primary text-white">
+        <div className="relative bg-gradient-to-b from-navy-dark to-navy-light text-secondary-bg">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 pt-8 sm:pt-12 pb-6 sm:pb-8">
             <div className="text-center mb-6">
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-slate-900 leading-tight mb-3 sm:mb-4"> {/* Restored original size */}
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-secondary-bg leading-tight mb-3 sm:mb-4">
                 AI examples
-                <span className="text-[#2398A7]"> you can</span> copy & try
+                <span className="text-accent"> you can</span> copy & try
               </h1>
               
-              <p className="text-base sm:text-lg text-gray-600 font-light leading-relaxed max-w-2xl mx-auto mb-6">
+              <p className="text-base sm:text-lg text-secondary-bg font-light leading-relaxed max-w-2xl mx-auto mb-6">
                 Curated workflows and prompts for non-technical tinkerers. 
                 No fluff, just actionable examples.
               </p>
@@ -112,7 +112,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
               <div className="flex flex-col items-center justify-center gap-4">
                 <a 
                   href="#newsletter"
-                  className="group inline-flex items-center gap-2 bg-secondary text-dark px-6 py-3 text-sm font-medium hover:bg-accent2 transition-all duration-300"
+                  className="group inline-flex items-center gap-2 bg-accent text-secondary-bg px-6 py-3 text-sm font-medium hover:bg-blue-700 transition-all duration-300"
                 >
                   Get weekly examples
                   <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform duration-300" />
@@ -142,9 +142,9 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
         )}
 
         {/* Examples Grid */}
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12 bg-gray-50"> {/* Added subtle background */}
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12 bg-secondary-bg">
           {/* All Examples Heading */}
-          <h2 className="text-2xl font-bold text-slate-900 mb-6"> 
+          <h2 className="text-2xl font-bold text-text-color mb-6"> 
             {selectedCategory === 'All' ? 'All examples' : selectedCategory}
           </h2>
 
@@ -156,8 +156,8 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
                 onClick={() => setSelectedCategory(category)}
                 className={`px-3 py-1.5 text-xs font-medium transition-all duration-200 ${
                   selectedCategory === category
-                    ? 'bg-primary text-white'
-                    : 'bg-light text-medium hover:bg-primary hover:text-white'
+                    ? 'bg-accent text-secondary-bg'
+                    : 'bg-secondary-bg text-text-color hover:bg-accent hover:text-secondary-bg'
                 }`}
               >
                 {category}
@@ -167,11 +167,11 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
 
           {filteredExamples.length === 0 ? (
             <div className="py-16 text-center">
-              <h3 className="text-2xl font-bold text-black mb-3">Nothing found</h3>
-              <p className="text-lg text-gray-600 mb-6">Try selecting a different category</p>
+              <h3 className="text-2xl font-bold text-text-color mb-3">Nothing found</h3>
+              <p className="text-lg text-text-color mb-6">Try selecting a different category</p>
               <button
                 onClick={() => setSelectedCategory('All')}
-                className="bg-black text-white px-6 py-3 text-sm font-medium hover:bg-gray-900 transition-colors duration-200"
+                className="bg-accent text-secondary-bg px-6 py-3 text-sm font-medium hover:bg-blue-700 transition-colors duration-200"
               >
                 Show all examples
               </button>
@@ -216,27 +216,27 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
         </div>
 
         {/* Newsletter Section - Moved Down */}
-        <div className="bg-black text-white" id="newsletter">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16"> {/* Reduced padding */}
+        <div className="bg-primary-bg text-secondary-bg" id="newsletter">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
             <div className="max-w-3xl text-center mx-auto">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-4 leading-none"> {/* Reduced font size */}
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-4 leading-none">
                 Stay in 
                 <br />
-                <span className="text-[#7ADAA5]">the loop</span>
+                <span className="text-accent">the loop</span>
               </h2>
               
-              <p className="text-base sm:text-lg text-light font-light leading-relaxed mb-8 max-w-2xl mx-auto"> {/* Reduced font size and margin */}
+              <p className="text-base sm:text-lg text-secondary-bg font-light leading-relaxed mb-8 max-w-2xl mx-auto">
                 Get fresh AI examples delivered weekly. No spam, no BS. 
                 Just actionable insights you can use right away.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto"> {/* Reduced gap */}
+              <div className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto">
                 <input
                   type="email"
                   placeholder="Your email"
-                  className="flex-1 px-5 py-3 bg-white text-dark text-base focus:outline-none focus:ring-2 focus:ring-accent1" 
+                  className="flex-1 px-5 py-3 bg-secondary-bg text-text-color text-base focus:outline-none focus:ring-2 focus:ring-accent" 
                 />
-                <button className="bg-secondary text-dark px-6 py-3 text-base font-medium hover:bg-accent2 transition-colors duration-200 whitespace-nowrap"> 
+                <button className="bg-accent text-secondary-bg px-6 py-3 text-base font-medium hover:bg-blue-700 transition-colors duration-200 whitespace-nowrap"> 
                   Subscribe
                 </button>
               </div>
@@ -245,11 +245,11 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
         </div>
 
         {/* Footer */}
-        <div className="bg-gray-50 border-t border-gray-100">
+        <div className="bg-secondary-bg border-t border-light">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8">
             <div className="flex flex-col sm:flex-row justify-between items-start gap-4">
               <div>
-                <h3 className="text-lg font-black text-black mb-2">AI Examples</h3>
+                <h3 className="text-lg font-black text-text-color mb-2">AI Examples</h3>
                 <p className="text-text-color max-w-xs text-sm">
                   Curated for tinkerers, made with care.
                 </p>

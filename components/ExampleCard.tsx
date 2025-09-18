@@ -43,7 +43,7 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
       transition={{ duration: 0.5 }}
-      className="card group cursor-pointer relative flex flex-col"
+      className="card group cursor-pointer relative flex flex-col bg-secondary-bg shadow-md"
     >
       {/* SEO Link wrapper - invisible but covers the card for crawlers */}
       <Link href={exampleUrl} className="absolute inset-0 z-0" aria-label={example.title}>
@@ -92,7 +92,7 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
             )}
 
             {/* Title Overlay */}
-            <div className="absolute bottom-0 left-0 right-0 p-4 bg-primary-bg/70 rounded-b-2xl"> {/* Made background more opaque */}
+            <div className="absolute bottom-0 left-0 right-0 p-4 bg-primary-bg/70 rounded-b-2xl"> 
               <h3 className="text-lg font-semibold leading-tight text-secondary-bg line-clamp-2">
                 {example.title}
               </h3>

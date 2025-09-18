@@ -16,7 +16,7 @@ export default function Navbar() {
   ]
 
   return (
-    <nav className="">
+    <nav className="bg-primary-bg">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex">
@@ -34,8 +34,8 @@ export default function Navbar() {
                   href={link.href}
                   className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${
                     router.pathname.startsWith(link.href)
-                      ? 'border-accent text-text-color'
-                    : 'border-transparent text-text-color hover:border-accent hover:text-text-color'
+                      ? 'border-accent text-secondary-bg'
+                      : 'border-transparent text-secondary-bg hover:border-accent hover:text-secondary-bg'
                   }`}
                 >
                   {link.label}
@@ -49,7 +49,7 @@ export default function Navbar() {
               href="https://airtable.com/appUo7R0la4VUzOoT/shrk9A6i9TF4UjTfo"
               target="_blank"
               rel="noopener noreferrer"
-              className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-[#2398A7] hover:bg-[#1a7a85]"
+              className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-secondary-bg bg-accent hover:bg-blue-700"
             >
               Submit an Example
             </a>
@@ -59,7 +59,7 @@ export default function Navbar() {
           <div className="-mr-2 flex items-center sm:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+              className="inline-flex items-center justify-center p-2 rounded-md text-secondary-bg hover:text-secondary-bg hover:bg-primary-bg focus:outline-none focus:ring-2 focus:ring-inset focus:ring-accent"
               aria-expanded="false"
             >
               <span className="sr-only">Open main menu</span>
