@@ -104,84 +104,39 @@ export default function SocialSharing({
 
   // Full version for detail pages
   return (
-    <div className={`flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 p-6 bg-gradient-to-r from-slate-50 to-slate-100 rounded-xl border ${className}`}>
-      <div>
-        <h3 className="font-semibold text-slate-900 mb-1">
-          Found this helpful?
-        </h3>
-        <p className="text-sm text-slate-600">
-          Share it with others who might benefit from this AI workflow
-        </p>
-      </div>
-
-      <div className="flex items-center gap-3">
-        {/* Facebook */}
-        <a
-          href={shareData.facebook}
-          target="_blank"
-          rel="noopener noreferrer"
-          onClick={() => handleShare('facebook')}
-          className="flex items-center justify-center w-10 h-10 bg-[#1877F2] text-white rounded-lg hover:bg-[#166FE5] transition-colors"
-          aria-label="Share on Facebook"
-          title="Share on Facebook"
-        >
-          <Facebook size={18} />
-        </a>
-
-        {/* Twitter */}
+    <div className={`flex items-center gap-4 ${className}`}>
+      <span className="text-sm font-medium text-gray-600">SHARE</span>
+      <div className="flex items-center gap-2">
         <a
           href={shareData.twitter}
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => handleShare('twitter')}
-          className="flex items-center justify-center w-10 h-10 bg-[#1DA1F2] text-white rounded-lg hover:bg-[#0C85D0] transition-colors"
+          className="text-gray-500 hover:text-gray-900 transition-colors"
           aria-label="Share on Twitter"
-          title="Share on Twitter"
         >
-          <Twitter size={18} />
+          <Twitter size={20} />
         </a>
-
-        {/* LinkedIn */}
+        <a
+          href={shareData.facebook}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => handleShare('facebook')}
+          className="text-gray-500 hover:text-blue-600 transition-colors"
+          aria-label="Share on Facebook"
+        >
+          <Facebook size={20} />
+        </a>
         <a
           href={shareData.linkedin}
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => handleShare('linkedin')}
-          className="flex items-center justify-center w-10 h-10 bg-[#0A66C2] text-white rounded-lg hover:bg-[#004182] transition-colors"
+          className="text-gray-500 hover:text-blue-700 transition-colors"
           aria-label="Share on LinkedIn"
-          title="Share on LinkedIn"
         >
-          <Linkedin size={18} />
+          <Linkedin size={20} />
         </a>
-
-        {/* Copy Link */}
-        <button
-          onClick={copyToClipboard}
-          className="flex items-center justify-center w-10 h-10 bg-slate-600 text-white rounded-lg hover:bg-slate-700 transition-colors"
-          aria-label="Copy link"
-          title="Copy link"
-        >
-          {copied ? <Check size={18} /> : <Link2 size={18} />}
-        </button>
-
-        {/* Native Share (Mobile) */}
-        {typeof navigator !== 'undefined' && navigator.share && (
-          <button
-            onClick={() => {
-              navigator.share({
-                title,
-                text: description,
-                url: shareData.url,
-              })
-              handleShare('native')
-            }}
-            className="flex items-center justify-center w-10 h-10 bg-slate-800 text-white rounded-lg hover:bg-black transition-colors sm:hidden"
-            aria-label="Share"
-            title="Share"
-          >
-            <Copy size={18} />
-          </button>
-        )}
       </div>
     </div>
   )

@@ -98,7 +98,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
                 No fluff, just actionable examples.
               </p>
               
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <div className="flex flex-col items-center justify-center gap-4">
                 <a 
                   href="#newsletter"
                   className="group inline-flex items-center gap-2 bg-black text-white px-6 py-3 text-sm font-medium hover:bg-gray-900 transition-all duration-300"
@@ -132,6 +132,11 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
 
         {/* Examples Grid */}
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12 bg-gray-50"> {/* Added subtle background */}
+          {/* All Examples Heading */}
+          <h2 className="text-2xl font-bold text-slate-900 mb-6"> 
+            {selectedCategory === 'All' ? 'All examples' : selectedCategory}
+          </h2>
+
           {/* Category Filter - Moved here */}
           <div className="flex flex-wrap justify-center gap-2 mb-6">
             {categories.map(category => (
@@ -148,11 +153,6 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
               </button>
             ))}
           </div>
-
-          {/* All Examples Heading */}
-          <h2 className="text-2xl font-bold text-slate-900 mb-6"> 
-            {selectedCategory === 'All' ? 'All examples' : selectedCategory}
-          </h2>
 
           {filteredExamples.length === 0 ? (
             <div className="py-16 text-center">
