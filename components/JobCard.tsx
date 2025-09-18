@@ -39,6 +39,6 @@ export default function JobCard({ job }: JobCardProps) {
           )}
         </div>
       </div>
-    </a>
+    </motion.a>
   )
 }

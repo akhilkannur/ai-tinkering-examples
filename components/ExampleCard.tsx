@@ -1,4 +1,4 @@
-import type React from "react"
+import React from "react"
 import type { ExampleRecord, SponsorRecord } from "../lib/airtable"
 import Image from "next/image"
 import Link from "next/link"
