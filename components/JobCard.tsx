@@ -1,3 +1,5 @@
+import { motion, useInView } from 'framer-motion'
+import React from 'react'
 import type { JobRecord } from '../lib/airtable'
 import Image from 'next/image'
 import { MapPin } from 'lucide-react'

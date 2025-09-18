@@ -1,3 +1,5 @@
+import { motion, useInView } from 'framer-motion'
+import React from 'react'
 import type { ToolRecord } from '../lib/airtable'
 import Image from 'next/image'
 

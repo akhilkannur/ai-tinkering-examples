@@ -1,4 +1,5 @@
 import React from "react"
+import { motion, useInView } from 'framer-motion'
 import type { ExampleRecord, SponsorRecord } from "../lib/airtable"
 import Image from "next/image"
 import Link from "next/link"
