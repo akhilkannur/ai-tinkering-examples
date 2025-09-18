@@ -1,16 +1,14 @@
 import { useState, useMemo } from 'react'
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
-import Link from 'next/link'
-import { ArrowRight, Lightbulb } from 'lucide-react'
+import { Lightbulb } from 'lucide-react'
 import Navbar from '../components/Navbar'
+import Hero from '../components/Hero'
 import ExampleCard from '../components/ExampleCard'
 import ExampleModal from '../components/ExampleModal'
-import NewsletterSignup from '../components/NewsletterSignup'
 import HorizontalStrip from '../components/HorizontalStrip'
 import JobCard from '../components/JobCard'
 import ToolCard from '../components/ToolCard'
-import SocialSharing from '../components/SocialSharing' 
 import { fetchEnrichedExamples, fetchFeaturedJobs, fetchFeaturedTools, fetchSiteSettings, EnrichedExampleRecord, JobRecord, ToolRecord, SiteSettingRecord } from '../lib/airtable'
 
 interface HomePageProps {
@@ -25,12 +23,9 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
   const [selectedExample, setSelectedExample] = useState<EnrichedExampleRecord | null>(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
 
-  // Define homepage meta variables inside the component
-  const homepageUrl = "https://your-domain.com/"; // Replace with your actual domain
   const homepageTitle = "AI Examples You Can Copy & Try";
   const homepageDescription = "Curated AI workflows and prompts for non-technical tinkerers. No fluff, just actionable examples.";
 
-  // Get unique categories
   const categories = useMemo(() => {
     const cats = examples
       .map(ex => ex.category)
@@ -38,7 +33,6 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
     return ['All', ...new Set(cats)]
   }, [examples])
 
-  // Filter examples by category only
   const filteredExamples = useMemo(() => {
     return selectedCategory === 'All' 
       ? examples 
@@ -55,7 +49,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
     setTimeout(() => setSelectedExample(null), 300)
   }
 
-  const examplesToShowBeforeJobsStrip = 6; // Corresponds to 2 rows in a 3-column layout
+  const examplesToShowBeforeJobsStrip = 6;
 
   return (
     <>
@@ -64,21 +58,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
         <meta name="description" content={homepageDescription} />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" /> {/* Changed font to Plus Jakarta Sans */}
-
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content={homepageTitle} />
-        <meta property="og:description" content={homepageDescription} />
-        <meta property="og:url" content="https://your-domain.com/" />
-        <meta property="og:image" content="https://your-domain.com/social-share-default.jpg" />
-        <meta property="og:site_name" content="AI Tinkering Examples" />
-
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={homepageTitle} />
-        <meta name="twitter:description" content={homepageDescription} />
-        <meta name="twitter:image" content="https://your-domain.com/social-share-default.jpg" />
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
         <style>
           {`
             @keyframes fadeIn {
@@ -88,50 +68,23 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
             .fade-in {
               animation: fadeIn 0.5s ease-in-out;
             }
+            @keyframes blob {
+              0% { transform: translate(0px, 0px) scale(1); }
+              33% { transform: translate(30px, -50px) scale(1.1); }
+              66% { transform: translate(-20px, 20px) scale(0.9); }
+              100% { transform: translate(0px, 0px) scale(1); }
+            }
+            .animate-blob { animation: blob 7s infinite; }
+            .animation-delay-2000 { animation-delay: 2s; }
+            .animation-delay-4000 { animation-delay: 4s; }
           `}
         </style>
       </Head>
 
-      <div className="min-h-screen bg-secondary-bg font-['Plus Jakarta Sans'] fade-in">
+      <div className="min-h-screen bg-primary-bg font-['Plus Jakarta Sans'] text-text-color fade-in">
         <Navbar />
-        
-        {/* Compact Hero Section */}
-        <div className="relative bg-gradient-to-b from-navy-dark to-navy-light text-secondary-bg">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 pt-8 sm:pt-12 pb-6 sm:pb-8">
-            <div className="text-center mb-6">
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-secondary-bg leading-tight mb-3 sm:mb-4">
-                AI examples
-                <span className="text-accent"> you can</span> copy & try
-              </h1>
-              
-              <p className="text-base sm:text-lg text-secondary-bg font-light leading-relaxed max-w-2xl mx-auto mb-6">
-                Curated workflows and prompts for non-technical tinkerers. 
-                No fluff, just actionable examples.
-              </p>
-              
-              <div className="flex flex-col items-center justify-center gap-4">
-                <a 
-                  href="#newsletter"
-                  className="group inline-flex items-center gap-2 bg-accent text-secondary-bg px-6 py-3 text-sm font-medium hover:bg-blue-700 transition-all duration-300"
-                >
-                  Get weekly examples
-                  <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform duration-300" />
-                </a>
+        <Hero />
 
-                {/* Social Sharing Button */}
-                <SocialSharing 
-                  url={homepageUrl}
-                  title={homepageTitle}
-                  description={homepageDescription}
-                />
-              </div>
-            </div>
-          </div>
-          
-          
-        </div>
-
-        {/* Featured Tools Strip - Remains above examples */}
         {siteSettings.enableFeaturedToolsSection && featuredTools.length > 0 && (
           <HorizontalStrip 
             title="Featured Tools"
@@ -141,21 +94,18 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
           />
         )}
 
-        {/* Examples Grid */}
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12 bg-secondary-bg">
-          {/* All Examples Heading */}
-          <h2 className="text-2xl font-bold text-text-color mb-6 flex items-center gap-2"> <Lightbulb size={24} /> {selectedCategory === 'All' ? 'All examples' : selectedCategory}</h2>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+          <h2 className="text-3xl font-bold mb-8 flex items-center gap-3"> <Lightbulb size={28} className="text-accent"/> {selectedCategory === 'All' ? 'All Examples' : selectedCategory}</h2>
 
-          {/* Category Filter - Moved here */}
-          <div className="flex flex-wrap justify-center gap-2 mb-6">
+          <div className="flex flex-wrap justify-center gap-3 mb-8">
             {categories.map(category => (
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                className={`px-3 py-1.5 text-xs font-medium transition-all duration-200 ${
+                className={`px-4 py-2 text-sm font-semibold rounded-full transition-all duration-300 transform hover:scale-105 ${
                   selectedCategory === category
-                    ? 'bg-accent text-secondary-bg'
-                    : 'bg-secondary-bg text-text-color hover:bg-accent hover:text-secondary-bg'
+                    ? 'bg-accent text-primary-bg shadow-lg shadow-accent/20'
+                    : 'bg-secondary-bg text-text-color hover:bg-accent hover:text-primary-bg'
                 }`}
               >
                 {category}
@@ -164,20 +114,19 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
           </div>
 
           {filteredExamples.length === 0 ? (
-            <div className="py-16 text-center">
-              <h3 className="text-2xl font-bold text-text-color mb-3">Nothing found</h3>
-              <p className="text-lg text-text-color mb-6">Try selecting a different category</p>
+            <div className="py-20 text-center">
+              <h3 className="text-3xl font-bold mb-4">Nothing Found</h3>
+              <p className="text-lg text-light-purple mb-8">Try a different category, or check back later!</p>
               <button
                 onClick={() => setSelectedCategory('All')}
-                className="bg-accent text-secondary-bg px-6 py-3 text-sm font-medium hover:bg-blue-700 transition-colors duration-200"
+                className="bg-accent text-primary-bg px-8 py-3 text-base font-bold rounded-full hover:bg-bright-pink transition-colors duration-300"
               >
-                Show all examples
+                Show All Examples
               </button>
             </div>
           ) : (
             <>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-                {/* Render first set of examples */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredExamples.slice(0, examplesToShowBeforeJobsStrip).map((example, index) => (
                   <ExampleCard
                     key={example.id}
@@ -188,7 +137,6 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
                 ))}
               </div>
 
-              {/* Featured Jobs Strip - Inserted between examples */}
               {siteSettings.enableFeaturedJobsSection && featuredJobs.length > 0 && (
                 <HorizontalStrip 
                   title="Featured Jobs"
@@ -198,8 +146,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
                 />
               )}
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-                {/* Render remaining examples */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredExamples.slice(examplesToShowBeforeJobsStrip).map((example, index) => (
                   <ExampleCard
                     key={example.id}
@@ -213,28 +160,22 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
           )}
         </div>
 
-        {/* Newsletter Section - Moved Down */}
-        <div className="bg-primary-bg text-secondary-bg" id="newsletter">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
+        <div className="bg-secondary-bg text-text-color" id="newsletter">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16">
             <div className="max-w-3xl text-center mx-auto">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-4 leading-none">
-                Stay in 
-                <br />
-                <span className="text-accent">the loop</span>
+              <h2 className="text-4xl sm:text-5xl font-black mb-4 bg-clip-text text-transparent bg-natsume-gradient">
+                Stay in the Loop
               </h2>
-              
-              <p className="text-base sm:text-lg text-secondary-bg font-light leading-relaxed mb-8 max-w-2xl mx-auto">
-                Get fresh AI examples delivered weekly. No spam, no BS. 
-                Just actionable insights you can use right away.
+              <p className="text-lg text-light-purple mb-8 max-w-2xl mx-auto">
+                Get fresh AI examples delivered weekly. No spam, no BS. Just actionable insights.
               </p>
-              
-              <div className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto">
+              <div className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
                 <input
                   type="email"
-                  placeholder="Your email"
-                  className="flex-1 px-5 py-3 bg-secondary-bg text-text-color text-base focus:outline-none focus:ring-2 focus:ring-accent" 
+                  placeholder="Your email address"
+                  className="flex-1 px-6 py-3 bg-primary-bg text-text-color text-base rounded-full focus:outline-none focus:ring-2 focus:ring-accent"
                 />
-                <button className="bg-accent text-secondary-bg px-6 py-3 text-base font-medium hover:bg-blue-700 transition-colors duration-200 whitespace-nowrap"> 
+                <button className="bg-accent text-primary-bg px-8 py-3 text-base font-bold rounded-full hover:bg-bright-pink transition-colors duration-300">
                   Subscribe
                 </button>
               </div>
@@ -242,25 +183,17 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
           </div>
         </div>
 
-        {/* Footer */}
-        <div className="bg-secondary-bg border-t border-light">
+        <div className="bg-primary-bg border-t border-secondary-bg">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8">
-            <div className="flex flex-col sm:flex-row justify-between items-start gap-4">
-              <div>
-                <h3 className="text-lg font-black text-text-color mb-2">AI Examples</h3>
-                <p className="text-text-color max-w-xs text-sm">
-                  Curated for tinkerers, made with care.
-                </p>
-              </div>
-              
-              <div className="text-sm text-text-color">
+            <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+              <h3 className="text-lg font-black text-accent">AI Examples</h3>
+              <div className="text-sm text-light-purple">
                 © 2024 — Made for curious minds
               </div>
             </div>
           </div>
         </div>
 
-        {/* Modal */}
         <ExampleModal
           example={selectedExample}
           isOpen={isModalOpen}
