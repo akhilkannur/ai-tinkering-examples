@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { ArrowRight, Tool } from 'lucide-react'
+import { ArrowRight, Settings } from 'lucide-react'
 
 interface HorizontalStripProps<T> {
   title: string;
