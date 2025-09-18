@@ -81,7 +81,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
         </style>
       </Head>
 
-      <div className="min-h-screen bg-primary-bg font-['Plus Jakarta Sans'] text-text-color fade-in">
+      <div className="min-h-screen bg-primary-bg font-sans text-text-color fade-in">
         <Navbar />
         <Hero />
 
@@ -163,7 +163,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
         <div className="bg-primary-bg text-text-color" id="newsletter">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16">
             <div className="max-w-3xl text-center mx-auto">
-              <h2 className="text-4xl sm:text-5xl font-black mb-4 bg-clip-text text-transparent bg-natsume-gradient">
+              <h2 className="text-4xl sm:text-5xl font-black mb-4 text-text-color !text-text-color">
                 Stay in the Loop
               </h2>
               <p className="text-lg text-light-purple mb-8 max-w-2xl mx-auto">
@@ -186,7 +186,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
         <div className="bg-primary-bg border-t border-primary-bg">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8">
             <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-              <h3 className="text-lg font-black text-text-color">AI Examples</h3>
+              <h3 className="text-lg font-black text-text-color font-headline">AI Examples</h3>
               <div className="text-sm text-text-color">
                 © 2024 — Made for curious minds
               </div>

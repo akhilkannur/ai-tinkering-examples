@@ -13,8 +13,12 @@ module.exports = {
         'navy-dark': '#001858',
         'navy-light': '#8bd3dd',
       },
+      fontFamily: {
+        sans: ['Plus Jakarta Sans', 'sans-serif'],
+        headline: ['Montserrat', 'sans-serif'],
+      },
       backgroundImage: {
-        'natsume-gradient': 'linear-gradient(120deg, #f582ae 0%, #f582ae 50%, #8bd3dd 100%)',
+        'natsume-gradient': 'linear-gradient(120deg, #f582ae 0%, #9656a1 50%, #8bd3dd 100%)',
       }
     },
   },

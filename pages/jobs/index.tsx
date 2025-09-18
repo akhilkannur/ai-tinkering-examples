@@ -54,21 +54,21 @@ export default function JobsPage({ jobs }: JobsPageProps) {
         <Navbar />
         
         <header className="max-w-6xl mx-auto px-4 py-8">
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4">
+          <h1 className="text-3xl sm:text-4xl font-extrabold text-text-color mb-4 font-headline">
             AI Job Board
           </h1>
-          <p className="text-lg text-slate-600 mb-6">
+          <p className="text-lg text-light-purple mb-6">
             Find your next opportunity in the exciting world of AI.
           </p>
 
           <div className="relative max-w-2xl">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400" size={20} />
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-light-purple" size={20} />
             <input
               type="text"
               placeholder="Search jobs by title, company, or location..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-10 pr-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white"
+              className="w-full pl-10 pr-4 py-3 border border-secondary-bg rounded-xl focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent bg-primary-bg"
             />
           </div>
         </header>

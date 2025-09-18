@@ -1,5 +1,4 @@
 import { ArrowRight } from 'lucide-react'
-import Image from 'next/image'
 
 export default function Hero() {
   return (
@@ -8,7 +7,7 @@ export default function Hero() {
         <div className="relative pt-24 pb-16 sm:pt-32 sm:pb-24 flex flex-col md:flex-row items-center md:justify-between gap-8">
 
           <div className="relative z-10 text-center md:text-left md:w-1/2">
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tighter mb-6 bg-clip-text text-transparent bg-natsume-gradient">
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tighter mb-6 text-text-color font-headline">
               AI Examples, Reimagined
             </h1>
 
@@ -26,7 +25,7 @@ export default function Hero() {
           </div>
 
           <div className="relative z-10 md:w-1/2 flex justify-center md:justify-end">
-            <Image
+            <img
               src="/Gemini_Generated_Image_b3hv6cb3hv6cb3hv.png"
               alt="Hero Image"
               width={500} 
