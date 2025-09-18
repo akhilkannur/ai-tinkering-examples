@@ -93,7 +93,7 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
 
             {/* Title Overlay */}
             <div className="absolute bottom-0 left-0 right-0 p-4 bg-primary-bg/70 rounded-b-2xl"> 
-              <h3 className="text-lg font-semibold leading-tight text-secondary-bg line-clamp-2">
+              <h3 className="text-lg font-semibold leading-tight text-text-color line-clamp-2">
                 {example.title}
               </h3>
             </div>
