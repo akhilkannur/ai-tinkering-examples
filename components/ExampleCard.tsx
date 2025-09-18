@@ -100,6 +100,6 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
           </div>
         )}
       </div>
-    </article>
+    </motion.article>
   )
 }
