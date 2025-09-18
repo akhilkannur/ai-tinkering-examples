@@ -12,6 +12,7 @@ module.exports = {
         'electric-blue': '#001858',
         'navy-dark': '#001858',
         'navy-light': '#8bd3dd',
+        'section-bg-example-card': '#f3d2c1',
       },
       fontFamily: {
         sans: ['Plus Jakarta Sans', 'sans-serif'],

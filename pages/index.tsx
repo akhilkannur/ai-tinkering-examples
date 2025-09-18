@@ -94,7 +94,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
           />
         )}
 
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 bg-section-bg-example-card">
           <h2 className="text-3xl font-bold mb-8 flex items-center gap-3"> <Lightbulb size={28} className="text-accent"/> {selectedCategory === 'All' ? 'All Examples' : selectedCategory}</h2>
 
           <div className="flex flex-wrap justify-center gap-3 mb-8">
