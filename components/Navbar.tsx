@@ -23,7 +23,7 @@ export default function Navbar() {
             <div className="flex-shrink-0">
               <Link href="/" className="flex items-center gap-2">
                 <Image src="/logo.png" alt="AI Examples Logo" width={48} height={48} className="rounded-full" />
-                <span className="text-xl font-black text-accent">AI Examples</span>
+                <span className="text-xl font-black text-text-color">AI Examples</span>
               </Link>
             </div>
             {/* Desktop Navigation */}
