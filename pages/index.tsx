@@ -173,7 +173,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
                 <input
                   type="email"
                   placeholder="Your email address"
-                  className="flex-1 px-6 py-3 bg-primary-bg text-text-color text-base rounded-full focus:outline-none focus:ring-2 focus:ring-accent"
+                  className="flex-1 px-6 py-3 bg-primary-bg text-light-purple text-base rounded-full focus:outline-none focus:ring-2 focus:ring-accent"
                 />
                 <button className="bg-accent text-primary-bg px-8 py-3 text-base font-bold rounded-full hover:bg-bright-pink transition-colors duration-300">
                   Subscribe
@@ -187,7 +187,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
           <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8">
             <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
               <h3 className="text-lg font-black text-accent">AI Examples</h3>
-              <div className="text-sm text-light-purple">
+              <div className="text-sm text-text-color">
                 © 2024 — Made for curious minds
               </div>
             </div>

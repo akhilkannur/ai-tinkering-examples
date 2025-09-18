@@ -59,7 +59,7 @@ export default function Navbar() {
           <div className="-mr-2 flex items-center sm:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-light-purple hover:text-text-color focus:outline-none focus:ring-2 focus:ring-inset focus:ring-accent"
+              className="inline-flex items-center justify-center p-2 rounded-md text-text-color hover:text-text-color focus:outline-none focus:ring-2 focus:ring-inset focus:ring-accent"
               aria-expanded="false"
             >
               <span className="sr-only">Open main menu</span>
@@ -83,8 +83,8 @@ export default function Navbar() {
                 href={link.href}
                 className={`block px-3 py-2 rounded-md text-base font-medium ${
                   router.pathname.startsWith(link.href)
-                    ? 'bg-accent text-primary-bg'
-                    : 'text-text-color hover:bg-accent hover:text-primary-bg'
+                    ? 'bg-accent text-electric-blue'
+                    : 'text-text-color hover:bg-accent hover:text-electric-blue'
                 }`}
                 onClick={() => setIsMobileMenuOpen(false)} // Close menu on click
               >
