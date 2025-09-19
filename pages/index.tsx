@@ -96,8 +96,8 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
           />
         )}
 
-        <div className="max-w-6xl mx-auto px-2 sm:px-6 py-6 bg-section-bg-example-card rounded-lg shadow-lg">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-4 flex items-center gap-2 sm:gap-3">
+        <div className="max-w-6xl mx-auto px-2 sm:px-6 py-4 bg-section-bg-example-card rounded-lg shadow-lg">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4 flex items-center gap-1 sm:gap-2">
             <div className="w-24 h-24 md:w-96 md:h-96 flex items-center justify-center"> {/* This is the fixed container */}
               <Image src="/all examples.png" alt="All Examples" width={384} height={384} className="text-accent w-12 h-12 md:w-48 md:h-48 object-contain"/> {/* This is the smaller image */}
             </div>
