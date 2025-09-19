@@ -6,13 +6,13 @@ export default function Hero() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="relative pt-12 pb-16 sm:pt-16 sm:pb-24 flex flex-col md:flex-row items-center md:justify-between gap-8">
 
-          <div className="relative z-10 text-center md:text-left md:w-1/2">
+          <div className="relative z-10 order-first md:order-first text-center md:text-left md:w-1/2">
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tighter mb-6 text-text-color font-headline">
-              AI Examples, Reimagined
+              AI examples you can copy & try
             </h1>
 
             <p className="text-lg sm:text-xl text-light-purple max-w-3xl mx-auto md:mx-0 mb-10">
-              A curated collection of prompts, workflows, and AI experiments, designed to inspire and empower your creative journey.
+              Curated workflows and prompts for non-technical tinkerers. No fluff, just actionable examples.
             </p>
 
             <a 
@@ -24,7 +24,7 @@ export default function Hero() {
             </a>
           </div>
 
-          <div className="relative z-10 md:w-1/2 flex justify-center md:justify-end">
+          <div className="relative z-10 order-last md:order-last md:w-1/2 flex justify-center md:justify-end">
             <img
               src="/Gemini_Generated_Image_b3hv6cb3hv6cb3hv.png"
               alt="Hero Image"

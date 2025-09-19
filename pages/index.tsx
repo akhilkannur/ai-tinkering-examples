@@ -1,7 +1,7 @@
 import { useState, useMemo } from 'react'
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
-import { Lightbulb } from 'lucide-react'
+import Image from 'next/image'
 import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
 import ExampleCard from '../components/ExampleCard'
@@ -95,7 +95,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
         )}
 
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 bg-section-bg-example-card">
-          <h2 className="text-3xl font-bold mb-8 flex items-center gap-3"> <Lightbulb size={28} className="text-accent"/> {selectedCategory === 'All' ? 'All Examples' : selectedCategory}</h2>
+          <h2 className="text-3xl font-bold mb-8 flex items-center gap-3"> <Image src="/all examples.png" alt="All Examples" width={28} height={28} className="text-accent"/> {selectedCategory === 'All' ? 'All Examples' : selectedCategory}</h2>
 
           <div className="flex flex-wrap justify-center gap-3 mb-8">
             {categories.map(category => (
@@ -188,7 +188,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
             <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
               <h3 className="text-lg font-black text-text-color font-headline">AI Examples</h3>
               <div className="text-sm text-light-purple">
-                © 2024 — Made for curious minds
+                © 2025 — Made for curious minds
               </div>
             </div>
           </div>

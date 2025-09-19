@@ -5,7 +5,7 @@ export default function NewsletterSignup() {
   
   return (
     <div id="newsletter" className="max-w-2xl mx-auto p-6 my-8 border rounded-2xl">
-      <h3 className="text-lg font-semibold">Get a weekly roundup</h3>
+      <h2 className="text-3xl font-extrabold tracking-tight text-[#001858] sm:text-4xl">
       <p className="text-sm text-slate-600 mt-2">Handpicked AI tinkering examples delivered weekly.</p>
       {embed ? (
         <div className="mt-4" dangerouslySetInnerHTML={{__html: embed}} />
