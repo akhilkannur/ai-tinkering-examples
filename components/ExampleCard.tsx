@@ -102,7 +102,6 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
               </h3>
             </div>
           </div>
-          </div>
         )}
       </div>
     </motion.article>
