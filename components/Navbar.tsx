@@ -21,9 +21,9 @@ export default function Navbar() {
         <div className="flex justify-between h-20">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <Link href="/" className="flex items-center gap-2">
-                <Image src="/logo.png" alt="AI Examples Logo" width={144} height={144} className="rounded-full" />
-                <span className="text-xl font-black text-text-color">Real AI Examples</span>
+              <Link href="/" className="flex items-center gap-1 sm:gap-2">
+                <Image src="/logo.png" alt="AI Examples Logo" width={144} height={144} className="rounded-full w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16" />
+                <span className="text-lg sm:text-xl font-black text-text-color">Real AI Examples</span>
               </Link>
             </div>
             {/* Desktop Navigation */}
