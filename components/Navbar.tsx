@@ -22,7 +22,7 @@ export default function Navbar() {
           <div className="flex items-center">
             <div className="flex-shrink-0">
               <Link href="/" className="flex items-center gap-1 sm:gap-2">
-                <Image src="/logo.png" alt="AI Examples Logo" width={144} height={144} className="rounded-full w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16" />
+                <Image src="/logo.png" alt="AI Examples Logo" width={128} height={128} className="rounded-full w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32" />
                 <span className="text-lg sm:text-xl font-black text-text-color">Real AI Examples</span>
               </Link>
             </div>

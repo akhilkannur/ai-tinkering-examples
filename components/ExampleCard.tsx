@@ -73,13 +73,21 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
                 className={`object-cover group-hover:scale-105 transition-transform duration-300 ${
                   imageLoading ? "opacity-0" : "opacity-100"
                 }`}
-                sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                {!imageError && (
+              <Image
+                src={optimizedImageUrl || img || "/placeholder.svg"}
+                alt={`${example.title} - AI workflow example screenshot`}
+                fill
+                className={`object-cover group-hover:scale-105 transition-transform duration-300 ${
+                  imageLoading ? "opacity-0" : "opacity-100"
+                }`}
+                sizes=""(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw""
                 priority={priority}
                 loading={priority ? "eager" : "lazy"}
                 fetchPriority={priority ? "high" : "auto"}
                 quality={90}
                 placeholder="blur"
-                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAREBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
                 onLoad={() => setImageLoading(false)}
                 onError={(e) => {
                   console.error('Image failed to load:', optimizedImageUrl || img)
@@ -90,6 +98,15 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
                 unoptimized={false}
               />
             )}
+            {/* Warm Overlay Filter */}
+            <div className="absolute inset-0 bg-black/30 filter sepia-20 brightness-90 saturate-125"></div>
+
+            {/* Title Overlay */}
+            <div className="absolute bottom-0 left-0 right-0 p-4 bg-[#001858]/70 rounded-b-2xl">
+              <h3 className="text-lg font-semibold leading-tight text-[#fffffe] line-clamp-2">
+                {example.title}
+              </h3>
+            </div>}
 
             {/* Title Overlay */}
             <div className="absolute bottom-0 left-0 right-0 p-4 bg-[#001858]/70 rounded-b-2xl"> 
