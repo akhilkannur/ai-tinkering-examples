@@ -11,7 +11,7 @@ import JobCard from '../components/JobCard'
 import ToolCard from '../components/ToolCard'
 import { fetchEnrichedExamples, fetchFeaturedJobs, fetchFeaturedTools, fetchSiteSettings, EnrichedExampleRecord, JobRecord, ToolRecord, SiteSettingRecord } from '../lib/airtable'
 import WavyDivider from '../components/WavyDivider'
-import Footer from '../components/Footer'
+
 
 interface HomePageProps {
   examples: EnrichedExampleRecord[]
@@ -96,15 +96,15 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
           />
         )}
 
-        <div className="max-w-6xl mx-auto px-2 sm:px-6 py-12 bg-section-bg-example-card">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-8 flex items-center gap-2 sm:gap-3">
-            <div className="w-24 h-24 md:w-96 md:h-96 flex items-center justify-center"> {/* This is the fixed container */}
-              <Image src="/all examples.png" alt="All Examples" width={384} height={384} className="text-accent w-12 h-12 md:w-48 md:h-48 object-contain"/> {/* This is the smaller image */}
+        <div className="max-w-6xl mx-auto px-2 sm:px-6 py-6 bg-section-bg-example-card">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4 flex items-center gap-2 sm:gap-3">
+            <div className="w-16 h-16 md:w-24 md:h-24 flex items-center justify-center"> {/* This is the fixed container */}
+              <Image src="/all examples.png" alt="All Examples" width={384} height={384} className="text-accent w-12 h-12 md:w-16 md:h-16 object-contain"/> {/* This is the smaller image */}
             </div>
             {selectedCategory === 'All' ? 'All Examples' : selectedCategory}
           </h2>
 
-          <div className="flex flex-wrap justify-center gap-3 mb-8">
+          <div className="flex flex-wrap justify-center gap-3 mb-4">
             {categories.map(category => (
               <button
                 key={category}
@@ -191,7 +191,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
         </div>
 
         <WavyDivider />
-        <Footer />
+        
 
         <ExampleModal
           example={selectedExample}
