@@ -95,7 +95,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
         )}
 
         <div className="max-w-6xl mx-auto px-2 sm:px-6 py-12 bg-section-bg-example-card">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-8 flex items-center gap-2 sm:gap-3"> <Image src="/all examples.png" alt="All Examples" width={384} height={384} className="text-accent w-24 h-24 md:w-96 md:h-96"/> {selectedCategory === 'All' ? 'All Examples' : selectedCategory}</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-8 flex items-center gap-2 sm:gap-3"> <Image src="/all examples.png" alt="All Examples" width={768} height={768} className="text-accent w-48 h-48 md:w-[768px] md:h-[768px]"/> {selectedCategory === 'All' ? 'All Examples' : selectedCategory}</h2>
 
           <div className="flex flex-wrap justify-center gap-3 mb-8">
             {categories.map(category => (

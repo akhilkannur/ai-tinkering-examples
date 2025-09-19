@@ -81,7 +81,7 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
                 className={`object-cover group-hover:scale-105 transition-transform duration-300 ${
                   imageLoading ? "opacity-0" : "opacity-100"
                 }`}
-                sizes=""(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw""
+                sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                 priority={priority}
                 loading={priority ? "eager" : "lazy"}
                 fetchPriority={priority ? "high" : "auto"}
