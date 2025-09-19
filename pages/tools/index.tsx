@@ -1,7 +1,6 @@
 import { useState, useEffect, useMemo } from 'react'
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
-import { Search } from 'lucide-react'
 import Navbar from '../../components/Navbar'
 import ToolCard from '../../components/ToolCard'
 import { fetchAllTools, ToolRecord } from '../../lib/airtable'
@@ -11,21 +10,13 @@ interface ToolsPageProps {
 }
 
 export default function ToolsPage({ tools }: ToolsPageProps) {
-  const [searchTerm, setSearchTerm] = useState('')
   const [filteredTools, setFilteredTools] = useState<ToolRecord[]>([])
 
   useEffect(() => {
     let results = tools
 
-    if (searchTerm) {
-      results = results.filter(tool =>
-        tool.toolName.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        tool.shortDescription?.toLowerCase().includes(searchTerm.toLowerCase())
-      )
-    }
-
     setFilteredTools(results)
-  }, [tools, searchTerm])
+  }, [tools])
 
   return (
     <>
@@ -58,17 +49,6 @@ export default function ToolsPage({ tools }: ToolsPageProps) {
           <p className="text-lg text-light-purple mb-6">
             Discover and explore the best AI tools and software for your needs.
           </p>
-
-          <div className="relative max-w-2xl">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-light-purple" size={20} />
-            <input
-              type="text"
-              placeholder="Search tools by name or description..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-10 pr-4 py-3 border border-secondary-bg rounded-xl focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent bg-primary-bg"
-            />
-          </div>
         </header>
 
         <main className="max-w-6xl mx-auto px-4 pb-12">
@@ -85,7 +65,7 @@ export default function ToolsPage({ tools }: ToolsPageProps) {
                 Try adjusting your search terms.
               </p>
               <button
-                onClick={() => setSearchTerm('')}
+                onClick={() => {}}
                 className="text-accent hover:text-accent underline"
               >
                 Clear search

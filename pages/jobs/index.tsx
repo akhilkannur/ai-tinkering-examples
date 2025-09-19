@@ -1,7 +1,6 @@
 import { useState, useEffect, useMemo } from 'react'
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
-import { Search } from 'lucide-react'
 import Navbar from '../../components/Navbar'
 import JobCard from '../../components/JobCard'
 import { fetchAllJobs, JobRecord } from '../../lib/airtable'
@@ -11,23 +10,13 @@ interface JobsPageProps {
 }
 
 export default function JobsPage({ jobs }: JobsPageProps) {
-  const [searchTerm, setSearchTerm] = useState('')
   const [filteredJobs, setFilteredJobs] = useState<JobRecord[]>([])
 
   useEffect(() => {
     let results = jobs
 
-    if (searchTerm) {
-      results = results.filter(job =>
-        job.jobTitle.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        job.companyName.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        job.location?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        job.description?.toLowerCase().includes(searchTerm.toLowerCase())
-      )
-    }
-
     setFilteredJobs(results)
-  }, [jobs, searchTerm])
+  }, [jobs])
 
   return (
     <>
@@ -60,17 +49,6 @@ export default function JobsPage({ jobs }: JobsPageProps) {
           <p className="text-lg text-light-purple mb-6">
             Find your next opportunity in the exciting world of AI.
           </p>
-
-          <div className="relative max-w-2xl">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-light-purple" size={20} />
-            <input
-              type="text"
-              placeholder="Search jobs by title, company, or location..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-10 pr-4 py-3 border border-secondary-bg rounded-xl focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent bg-primary-bg"
-            />
-          </div>
         </header>
 
         <main className="max-w-6xl mx-auto px-4 pb-12">
@@ -87,7 +65,7 @@ export default function JobsPage({ jobs }: JobsPageProps) {
                 Try adjusting your search terms.
               </p>
               <button
-                onClick={() => setSearchTerm('')}
+                onClick={() => {}}
                 className="text-accent hover:text-accent underline"
               >
                 Clear search

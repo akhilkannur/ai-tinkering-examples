@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import { GetStaticProps } from 'next/types'
 import Head from 'next/head'
-import { Search } from 'lucide-react'
 import Navbar from '../../components/Navbar'
 import ExampleCard from '../../components/ExampleCard'
 import CategoryFilter from '../../components/CategoryFilter'
@@ -14,7 +13,6 @@ interface ExamplesPageProps {
 }
 
 export default function ExamplesPage({ examples, categories }: ExamplesPageProps) {
-  const [searchTerm, setSearchTerm] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('All')
   const [filteredExamples, setFilteredExamples] = useState<EnrichedExampleRecord[]>([])
   const [modalExample, setModalExample] = useState<EnrichedExampleRecord | null>(null)
@@ -26,16 +24,9 @@ export default function ExamplesPage({ examples, categories }: ExamplesPageProps
     if (selectedCategory !== 'All') {
       results = results.filter(ex => ex.category === selectedCategory)
     }
-    if (searchTerm) {
-      results = results.filter(ex =>
-        ex.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        ex.summary?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        ex.tags?.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-      )
-    }
 
     setFilteredExamples(results)
-  }, [examples, searchTerm, selectedCategory])
+  }, [examples, selectedCategory])
 
   const handleOpenModal = (example: EnrichedExampleRecord) => {
     setModalExample(example)
@@ -68,18 +59,6 @@ export default function ExamplesPage({ examples, categories }: ExamplesPageProps
           <p className="text-lg text-light-purple mb-6">
             Browse practical AI workflows, prompts, and automation ideas you can copy and try.
           </p>
-
-          {/* Search */}
-          <div className="relative max-w-2xl">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-light-purple" size={20} />
-            <input
-              type="text"
-              placeholder="Search examples, tags, or descriptions..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-10 pr-4 py-3 border border-secondary-bg rounded-xl focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent bg-primary-bg"
-            />
-          </div>
         </header>
 
         {/* Category Filter */}
@@ -95,7 +74,6 @@ export default function ExamplesPage({ examples, categories }: ExamplesPageProps
             <p className="text-sm text-light-purple">
               {filteredExamples.length} example{filteredExamples.length !== 1 ? 's' : ''}
               {selectedCategory !== 'All' && ` in ${selectedCategory}`}
-              {searchTerm && ` matching "${searchTerm}"`}
             </p>
           </div>
         </section>
@@ -121,7 +99,6 @@ export default function ExamplesPage({ examples, categories }: ExamplesPageProps
               </p>
               <button
                 onClick={() => {
-                  setSearchTerm('')
                   setSelectedCategory('All')
                 }}
                 className="text-accent hover:text-accent underline"
