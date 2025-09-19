@@ -17,7 +17,7 @@ export default function Navbar() {
 
   return (
     <nav className="bg-primary-bg/80 backdrop-blur-sm sticky top-0 z-50">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-1 sm:px-4 py-3">
         <div className="flex justify-between h-20">
           <div className="flex items-center">
             <div className="flex-shrink-0">
