@@ -6,6 +6,7 @@ module.exports = {
         'primary-bg': '#fef6e4',
         'secondary-bg': '#fef6e4',
         'accent': '#f582ae',
+        'accent-light': '#fce8f0', // New color
         'text-color': '#001858',
         'light-purple': '#172c66',
         'bright-pink': '#f582ae',

@@ -92,8 +92,8 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
 
         {example.workflow_steps && (
           <div className="mb-6 pl-4 border-l-4 border-slate-200">
-            <p className="text-sm text-slate-500 leading-relaxed font-roboto">
-              <span className="font-semibold">💡 Curator notes:</span> {example.workflow_steps}
+            <p className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 mb-2 leading-tight">
+              {example.workflow_steps}
             </p>
           </div>
         )}
