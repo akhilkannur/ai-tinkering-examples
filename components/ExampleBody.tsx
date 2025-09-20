@@ -33,7 +33,7 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
       {/* Main Content */}
       <div className="max-w-3xl mx-auto px-4">
         {example.summary && (
-          <p className="text-lg sm:text-xl text-light-purple leading-relaxed mb-6">
+          <p className="text-lg sm:text-xl text-slate-600 leading-relaxed mb-6 font-roboto">
             {example.summary}
           </p>
         )}
@@ -91,9 +91,11 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
         )}
 
         {example.workflow_steps && (
-          <p className="text-lg sm:text-xl text-light-purple leading-relaxed mb-6">
-            {example.workflow_steps}
-          </p>
+          <div className="mb-6 pl-4 border-l-4 border-slate-200">
+            <p className="text-sm text-slate-500 leading-relaxed font-roboto">
+              <span className="font-semibold">💡 Curator notes:</span> {example.workflow_steps}
+            </p>
+          </div>
         )}
       </div>
     </>

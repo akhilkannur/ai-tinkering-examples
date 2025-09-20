@@ -17,6 +17,7 @@ module.exports = {
       fontFamily: {
         sans: ['Plus Jakarta Sans', 'sans-serif'],
         headline: ['Montserrat', 'sans-serif'],
+        roboto: ['Roboto', 'sans-serif'],
       },
       backgroundImage: {
         'natsume-gradient': 'linear-gradient(120deg, #f582ae 0%, #9656a1 50%, #8bd3dd 100%)',

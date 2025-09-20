@@ -103,19 +103,26 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
           </h2>
 
           <div className="flex flex-wrap justify-center gap-3 mb-8">
-            {categories.map(category => (
-              <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`px-4 py-2 text-sm font-semibold rounded-full transition-all duration-300 transform hover:scale-105 ${
-                  selectedCategory === category
-                    ? 'bg-accent text-text-color shadow-lg shadow-accent/20'
-                    : 'bg-secondary-bg text-text-color hover:bg-accent hover:text-text-color'
-                }`}
-              >
-                {category}
-              </button>
-            ))}
+            {categories.map((category, index) => {
+              const tagColors = ['#a786df', '#8bd3dd', '#f582ae', '#f3d2c1', '#fef6e4', '#b0e0e6', '#add8e6', '#87cefa', '#6495ed', '#4682b4'];
+              const colorIndex = index % tagColors.length;
+              const bgColor = tagColors[colorIndex];
+              const textColor = '#001858'; // text-color from tailwind.config.js
+
+              return (
+                <button
+                  key={category}
+                  onClick={() => setSelectedCategory(category)}
+                  className={`px-4 py-2 text-sm font-semibold rounded-full transition-all duration-300 transform hover:scale-105 ${
+                    selectedCategory === category
+                      ? `bg-[${bgColor}] text-[${textColor}] shadow-lg shadow-accent/20`
+                      : `bg-secondary-bg text-[${textColor}] hover:bg-[${bgColor}] hover:text-[${textColor}]`
+                  }`}
+                >
+                  {category}
+                </button>
+              );
+            })}
           </div>
 
           {filteredExamples.length === 0 ? (
