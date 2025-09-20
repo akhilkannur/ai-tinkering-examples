@@ -103,6 +103,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
             <span className="flex-grow text-center">
               {selectedCategory === 'All' ? 'All Examples' : selectedCategory}
             </span>
+            <Image src="/all examples(1).png" alt="All Examples" width={180} height={180} className="text-accent object-contain w-45 h-45"/>
           </h2>
 
           <div className="flex flex-wrap justify-center gap-3 mb-8">
