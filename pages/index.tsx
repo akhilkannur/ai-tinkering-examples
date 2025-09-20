@@ -97,7 +97,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
         )}
 
         <div className="max-w-6xl mx-auto px-2 sm:px-6 py-8 bg-section-bg-example-card rounded-lg shadow-lg">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-6 flex flex-col items-center justify-center gap-4">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6 flex items-center justify-center gap-8 w-full">
             <Image src="/all examples.png" alt="All Examples" width={180} height={180} className="text-accent object-contain w-45 h-45"/>
             {selectedCategory === 'All' ? 'All Examples' : selectedCategory}
           </h2>

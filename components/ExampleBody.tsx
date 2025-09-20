@@ -16,43 +16,6 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
     <>
       {/* Article Header */}
       <header className="max-w-4xl mx-auto px-4 py-6">
-        <div className="flex flex-wrap items-center gap-3 text-sm text-slate-600 mb-6">
-          {example.category && (
-            <Link 
-              href={`/ai-examples/category/${categorySlug}`}
-              className="inline-flex items-center gap-1 px-3 py-1 border rounded-full bg-accent text-secondary-bg hover:bg-blue-700 transition-colors"
-            >
-              <Tag size={14} />
-              {example.category}
-            </Link>
-          )}
-          
-          
-          
-          <div className="flex items-center gap-1">
-            <Clock size={14} />
-            <span>{example.read_time || 1} min read</span>
-          </div>
-
-          {example.author_name && (
-            <div className="flex items-center gap-1">
-              <User size={14} />
-              {example.author_link ? (
-                <a 
-                  href={example.author_link} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="hover:text-slate-900 transition-colors"
-                >
-                  {example.author_name}
-                </a>
-              ) : (
-                <span>{example.author_name}</span>
-              )}
-            </div>
-          )}
-        </div>
-
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 mb-6 leading-tight">
           {example.title}
         </h1>
@@ -87,6 +50,40 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
                   quality={90}
                   priority={i === 0}
                 />
+                {i === 0 && (
+                  <div className="absolute top-4 left-4 flex flex-wrap items-center gap-3 text-sm">
+                    {example.category && (
+                      <Link 
+                        href={`/ai-examples/category/${categorySlug}`}
+                        className="inline-flex items-center gap-1 px-3 py-1 border rounded-full bg-accent text-secondary-bg hover:bg-blue-700 transition-colors"
+                      >
+                        <Tag size={14} />
+                        {example.category}
+                      </Link>
+                    )}
+                    <div className="flex items-center gap-1 bg-black/50 text-white px-3 py-1 rounded-full">
+                      <Clock size={14} />
+                      <span>{example.read_time || 1} min read</span>
+                    </div>
+                    {example.author_name && (
+                      <div className="flex items-center gap-1 bg-black/50 text-white px-3 py-1 rounded-full">
+                        <User size={14} />
+                        {example.author_link ? (
+                          <a 
+                            href={example.author_link} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="hover:underline"
+                          >
+                            {example.author_name}
+                          </a>
+                        ) : (
+                          <span>{example.author_name}</span>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                )}
               </div>
             ))}
           </div>
