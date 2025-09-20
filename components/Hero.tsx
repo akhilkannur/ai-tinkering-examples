@@ -22,7 +22,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="relative z-10 order-last md:order-last md:w-1/2 flex justify-center md:justify-center">
+          <div className="relative z-10 order-last md:order-last md:w-1/2 flex items-center justify-center">
             <img
               src="/Gemini_Generated_Image_b3hv6cb3hv6cb3hv.png"
               alt="Hero Image"
