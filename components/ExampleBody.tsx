@@ -26,12 +26,6 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
           </p>
         )}
 
-        {example.workflow_steps && (
-          <p className="text-sm text-text-color leading-relaxed">
-            <span className="font-semibold">📝 Curator notes:</span> {example.workflow_steps}
-          </p>
-        )}
-
         {/* Sponsor Info */}
         {example.sponsor && (
           <div className="my-6">
@@ -89,6 +83,14 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
               </div>
             ))}
           </div>
+        )}
+
+        {example.workflow_steps && (
+          <section className="mb-6 p-4 border border-[#001858] rounded-xl bg-primary-bg shadow-lg">
+            <p className="text-sm text-text-color leading-relaxed">
+              <span className="font-semibold">📝 Curator notes:</span> {example.workflow_steps}
+            </p>
+          </section>
         )}
       </div>
     </>
