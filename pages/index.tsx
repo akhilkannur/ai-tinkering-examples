@@ -1,6 +1,7 @@
 import { useState, useMemo } from 'react'
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
+import Script from 'next/script'
 import Image from 'next/image'
 import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
@@ -183,15 +184,9 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
               <p className="text-lg text-light-purple mb-8 max-w-2xl mx-auto">
                 Get fresh AI examples delivered weekly. No spam, no BS. Just actionable insights.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
-                <input
-                  type="email"
-                  placeholder="Your email address"
-                  className="flex-1 px-6 py-3 bg-primary-bg text-light-purple text-base rounded-full focus:outline-none focus:ring-2 focus:ring-accent"
-                />
-                <button className="bg-accent text-text-color px-8 py-3 text-base font-bold rounded-full hover:bg-accent transition-colors duration-300">
-                  Subscribe
-                </button>
+              <div className="max-w-lg mx-auto">
+                <Script async src="https://subscribe-forms.beehiiv.com/embed.js" />
+                <iframe src="https://subscribe-forms.beehiiv.com/3881a34c-be47-4794-a1d5-73fe5d800844" className="beehiiv-embed" data-test-id="beehiiv-embed" frameBorder="0" scrolling="no" style={{width: "660px", height: "307px", margin: "0 auto", borderRadius: "0px !important", backgroundColor: "transparent", boxShadow: "0 0 #0000", maxWidth: "100%"}}></iframe>
               </div>
             </div>
           </div>
