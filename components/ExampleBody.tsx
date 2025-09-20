@@ -16,19 +16,19 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
     <>
       {/* Article Header */}
       <header className="max-w-4xl mx-auto px-4 py-6">
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 mb-6 leading-tight">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 mb-4 leading-tight">
           {example.title}
         </h1>
         
         {example.summary && (
-          <p className="text-lg sm:text-xl text-slate-600 leading-relaxed mb-8 max-w-3xl">
+          <p className="text-lg sm:text-xl text-slate-600 leading-relaxed mb-6 max-w-3xl">
             {example.summary}
           </p>
         )}
 
         {/* Sponsor Info */}
         {example.sponsor && (
-          <div className="my-8">
+          <div className="my-6">
             <SponsorDetailCard sponsor={example.sponsor} />
           </div>
         )}
@@ -37,7 +37,7 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
       {/* Main Content */}
       <div className="max-w-3xl mx-auto px-4">
         {example.screenshots && example.screenshots.length > 0 && (
-          <div className="space-y-4 mb-6">
+          <div className="space-y-4 mb-4">
             {example.screenshots.map((screenshot, i) => (
               <div key={i} className="relative w-full rounded-xl overflow-hidden bg-slate-100">
                 <Image
@@ -51,7 +51,7 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
                   priority={i === 0}
                 />
                 {i === 0 && (
-                  <div className="absolute top-4 left-4 flex flex-wrap items-center gap-3 text-sm">
+                  <div className="absolute top-4 left-4 flex flex-wrap items-center gap-4 text-sm [text-shadow:1px_1px_2px_rgba(0,0,0,0.5)]">
                     {example.category && (
                       <Link 
                         href={`/ai-examples/category/${categorySlug}`}
@@ -61,10 +61,6 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
                         {example.category}
                       </Link>
                     )}
-                    <div className="flex items-center gap-1 bg-black/50 text-white px-3 py-1 rounded-full">
-                      <Clock size={14} />
-                      <span>{example.read_time || 1} min read</span>
-                    </div>
                     {example.author_name && (
                       <div className="flex items-center gap-1 bg-black/50 text-white px-3 py-1 rounded-full">
                         <User size={14} />

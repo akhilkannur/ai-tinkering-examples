@@ -13,7 +13,7 @@ export default function SponsorDetailCard({ sponsor }: SponsorDetailCardProps) {
       href={sponsor.website || '#'}
       target="_blank"
       rel="noopener noreferrer"
-      className="block p-2 border border-[#001858] rounded-lg bg-primary-bg shadow-lg transform hover:-translate-y-1 hover:border-[#001858] transition-all duration-300" 
+      className="block py-1 px-2 border border-[#001858] rounded-lg bg-primary-bg shadow-lg transform hover:-translate-y-1 hover:border-[#001858] transition-all duration-300" 
     >
       <div className="flex items-center gap-3">
         {sponsor.logo?.[0]?.url && (
