@@ -1,5 +1,4 @@
 import { ArrowRight } from 'lucide-react'
-import Script from 'next/script'
 
 export default function Hero() {
   return (
@@ -16,10 +15,13 @@ export default function Hero() {
               Curated workflows and prompts for non-technical tinkerers. No fluff, just actionable examples.
             </p>
 
-            <div>
-              <Script async src="https://subscribe-forms.beehiiv.com/embed.js" />
-              <iframe src="https://subscribe-forms.beehiiv.com/3881a34c-be47-4794-a1d5-73fe5d800844" className="beehiiv-embed" data-test-id="beehiiv-embed" frameBorder="0" scrolling="no" style={{width: "660px", height: "307px", margin: "0", borderRadius: "0px !important", backgroundColor: "transparent", boxShadow: "0 0 #0000", maxWidth: "100%"}}></iframe>
-            </div>
+            <a 
+              href="/ai-examples"
+              className="group inline-flex items-center gap-3 bg-accent text-electric-blue px-8 py-4 text-lg font-bold rounded-full hover:bg-accent hover:text-electric-blue transition-all duration-300 transform hover:scale-105 shadow-lg shadow-accent/20"
+            >
+              See Examples
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1.5 transition-transform duration-300" />
+            </a>
           </div>
 
           <div className="relative z-10 order-last md:order-last md:w-1/2 flex justify-center md:justify-end">

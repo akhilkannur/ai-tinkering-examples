@@ -182,7 +182,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
               <h2 className="text-4xl sm:text-5xl font-black mb-4 text-text-color !text-text-color">
                 Stay in the Loop
               </h2>
-              <p className="text-lg text-light-purple mb-8 max-w-2xl mx-auto">
+              <p className="text-lg text-light-purple mb-4 max-w-2xl mx-auto">
                 Get fresh AI examples delivered weekly. No spam, no BS. Just actionable insights.
               </p>
               <div className="max-w-lg mx-auto">
