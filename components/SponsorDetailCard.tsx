@@ -13,7 +13,7 @@ export default function SponsorDetailCard({ sponsor }: SponsorDetailCardProps) {
       href={sponsor.website || '#'}
       target="_blank"
       rel="noopener noreferrer"
-      className="block p-3 border border-slate-200 rounded-lg bg-white hover:bg-slate-50 transition-colors shadow-md" 
+      className="block p-4 border border-[#001858] rounded-lg bg-primary-bg shadow-lg transform hover:-translate-y-1 hover:border-[#001858] transition-all duration-300" 
     >
       <div className="flex items-center gap-3 mb-1">
         {sponsor.logo?.[0]?.url && (
@@ -27,11 +27,11 @@ export default function SponsorDetailCard({ sponsor }: SponsorDetailCardProps) {
           </div>
         )}
         <div>
-          <h3 className="text-base font-semibold text-slate-900">{sponsor.name}</h3> 
+          <h3 className="text-base font-semibold text-text-color">{sponsor.name}</h3> 
         </div>
       </div>
       {sponsor.description && (
-        <p className="text-xs text-slate-600 leading-relaxed"> 
+        <p className="text-xs text-text-color leading-relaxed"> 
           {sponsor.description}
         </p>
       )}

@@ -94,11 +94,11 @@ export default function ExampleModal({ example, isOpen, onClose }: ExampleModalP
           </button>
         </div>
 
-        <div className="overflow-y-auto max-h-[90vh] py-6">
+        <div className="overflow-y-auto max-h-[90vh] pt-6">
           <ExampleBody example={example} />
         </div>
 
-        <div className="border-t border-slate-100 p-6 bg-slate-50 rounded-b-2xl">
+        <div className="border-t border-slate-100 p-4 bg-slate-50 rounded-b-2xl">
           <div className="flex items-center justify-end">
             {example.original_link && (
               <a
