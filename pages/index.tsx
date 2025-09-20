@@ -185,7 +185,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
               <p className="text-lg text-light-purple mb-4 max-w-2xl mx-auto">
                 Get fresh AI examples delivered weekly. No spam, no BS. Just actionable insights.
               </p>
-              <div className="max-w-lg mx-auto" style={{overflow: 'hidden'}}>
+              <div className="max-w-lg mx-auto" style={{overflow: 'hidden', height: '147px'}}>
                 <Script async src="https://subscribe-forms.beehiiv.com/embed.js" />
                 <iframe src="https://subscribe-forms.beehiiv.com/646c960c-1f45-4c51-af42-0cb96adadc5f" className="beehiiv-embed" data-test-id="beehiiv-embed" frameBorder="0" scrolling="no" style={{width: "500px", height: "147px", margin: "0", borderRadius: "0px", backgroundColor: "transparent", boxShadow: "0 0 #0000", maxWidth: "100%", display: "block"}}></iframe>
               </div>
