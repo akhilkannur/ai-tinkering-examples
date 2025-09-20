@@ -12,6 +12,7 @@ import JobCard from '../components/JobCard'
 import ToolCard from '../components/ToolCard'
 import { fetchEnrichedExamples, fetchFeaturedJobs, fetchFeaturedTools, fetchSiteSettings, EnrichedExampleRecord, JobRecord, ToolRecord, SiteSettingRecord } from '../lib/airtable'
 import WavyDivider from '../components/WavyDivider'
+import CtaCard from '../components/CtaCard'
 
 
 interface HomePageProps {
@@ -141,7 +142,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
           ) : (
             <>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filteredExamples.slice(0, examplesToShowBeforeJobsStrip).map((example, index) => (
+                {filteredExamples.slice(0, 9).map((example, index) => (
                   <ExampleCard
                     key={example.id}
                     example={example}
@@ -149,6 +150,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
                     onOpen={handleOpenModal}
                   />
                 ))}
+                <CtaCard />
               </div>
 
               {siteSettings.enableFeaturedJobsSection && featuredJobs.length > 0 && (
@@ -161,7 +163,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
               )}
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filteredExamples.slice(examplesToShowBeforeJobsStrip).map((example, index) => (
+                {filteredExamples.slice(9).map((example, index) => (
                   <ExampleCard
                     key={example.id}
                     example={example}
