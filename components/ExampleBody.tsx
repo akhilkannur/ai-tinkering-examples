@@ -16,13 +16,19 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
     <>
       {/* Article Header */}
       <header className="max-w-4xl mx-auto px-4 py-6">
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 mb-4 leading-tight">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 mb-2 leading-tight">
           {example.title}
         </h1>
         
         {example.summary && (
           <p className="text-lg sm:text-xl text-slate-600 leading-relaxed mb-6 max-w-3xl">
             {example.summary}
+          </p>
+        )}
+
+        {example.workflow_steps && (
+          <p className="text-sm text-text-color leading-relaxed">
+            <span className="font-semibold">📝 Curator notes:</span> {example.workflow_steps}
           </p>
         )}
 
@@ -51,18 +57,18 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
                   priority={i === 0}
                 />
                 {i === 0 && (
-                  <div className="absolute top-4 left-4 flex flex-wrap items-center gap-4 text-sm [text-shadow:1px_1px_2px_rgba(0,0,0,0.5)]">
+                  <div className="absolute top-4 left-4 flex flex-wrap items-center gap-4 text-sm">
                     {example.category && (
                       <Link 
                         href={`/ai-examples/category/${categorySlug}`}
-                        className="inline-flex items-center gap-1 px-3 py-1 border rounded-full bg-accent text-secondary-bg hover:bg-blue-700 transition-colors"
+                        className="inline-flex items-center gap-1 px-3 py-1 border rounded-full bg-accent text-secondary-bg hover:bg-blue-700 transition-colors [text-shadow:1px_1px_2px_rgba(0,0,0,0.5)]"
                       >
                         <Tag size={14} />
                         {example.category}
                       </Link>
                     )}
                     {example.author_name && (
-                      <div className="flex items-center gap-1 bg-black/50 text-white px-3 py-1 rounded-full">
+                      <div className="flex items-center gap-1 bg-black/50 text-white px-3 py-1 rounded-full [text-shadow:1px_1px_2px_rgba(0,0,0,0.5)]">
                         <User size={14} />
                         {example.author_link ? (
                           <a 
@@ -83,19 +89,6 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
               </div>
             ))}
           </div>
-        )}
-
-        {example.workflow_steps && (
-          <section className="mb-6 p-4 border border-[#001858] rounded-xl bg-primary-bg shadow-lg">
-            <h2 className="text-lg font-semibold text-text-color mb-3 flex items-center gap-2">
-              📝 Curator notes {/* Changed text */}
-            </h2>
-            <div className="prose prose-sm max-w-none text-text-color">
-              <pre className="whitespace-pre-wrap font-sans text-sm leading-relaxed bg-white p-4 rounded-lg border border-[#001858]">
-                {example.workflow_steps}
-              </pre>
-            </div>
-          </section>
         )}
       </div>
     </>
