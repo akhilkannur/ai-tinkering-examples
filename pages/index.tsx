@@ -177,7 +177,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
         </div>
 
         <div className="bg-primary-bg text-text-color" id="newsletter">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4">
             <div className="max-w-3xl text-center mx-auto">
               <h2 className="text-4xl sm:text-5xl font-black mb-4 text-text-color !text-text-color">
                 Stay in the Loop

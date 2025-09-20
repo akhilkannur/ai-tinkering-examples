@@ -22,13 +22,13 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="relative z-10 order-last md:order-last md:w-1/2 flex justify-center md:justify-end">
+          <div className="relative z-10 order-last md:order-last md:w-1/2 flex justify-center md:justify-center">
             <img
               src="/Gemini_Generated_Image_b3hv6cb3hv6cb3hv.png"
               alt="Hero Image"
               width={500} 
               height={500} 
-              className="object-contain rounded-lg shadow-lg"
+              className="object-contain rounded-lg shadow-lg self-center"
             />
           </div>
         </div>
