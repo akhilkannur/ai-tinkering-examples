@@ -20,15 +20,11 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
           {example.title}
         </h1>
         
-        {example.summary && (
-          <p className="text-lg sm:text-xl text-slate-600 leading-relaxed mb-6 max-w-3xl">
-            {example.summary}
-          </p>
-        )}
+        
 
         {/* Sponsor Info */}
         {example.sponsor && (
-          <div className="my-6">
+          <div className="my-4">
             <SponsorDetailCard sponsor={example.sponsor} />
           </div>
         )}
@@ -36,6 +32,11 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
 
       {/* Main Content */}
       <div className="max-w-3xl mx-auto px-4">
+        {example.summary && (
+          <p className="text-lg sm:text-xl text-slate-600 leading-relaxed mb-6">
+            {example.summary}
+          </p>
+        )}
         {example.screenshots && example.screenshots.length > 0 && (
           <div className="space-y-4 mb-4">
             {example.screenshots.map((screenshot, i) => (
@@ -61,6 +62,10 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
                         {example.category}
                       </Link>
                     )}
+                    <div className="flex items-center gap-1 bg-black/50 text-white px-3 py-1 rounded-full [text-shadow:1px_1px_2px_rgba(0,0,0,0.5)]">
+                      <Clock size={14} />
+                      <span>{example.read_time || 1} min read</span>
+                    </div>
                     {example.author_name && (
                       <div className="flex items-center gap-1 bg-black/50 text-white px-3 py-1 rounded-full [text-shadow:1px_1px_2px_rgba(0,0,0,0.5)]">
                         <User size={14} />

@@ -1,6 +1,7 @@
 import { GetStaticPaths, GetStaticProps } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
+import { ExternalLink } from 'lucide-react'
 import Navbar from '../../components/Navbar'
 import ExampleBody from '../../components/ExampleBody'
 import SocialSharing from '../../components/SocialSharing'
@@ -96,12 +97,23 @@ export default function ExamplePage({ example }: ExamplePageProps) {
           <ExampleBody example={example} />
         </main>
 
-        <div className="max-w-4xl mx-auto px-4 py-8">
+        <div className="max-w-4xl mx-auto px-4 py-8 flex justify-between items-center">
           <SocialSharing 
             url={currentUrl}
             title={example.title}
             description={example.summary}
           />
+          {example.original_link && (
+            <a
+              href={example.original_link}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              <ExternalLink size={16} />
+              View Original
+            </a>
+          )}
         </div>
 
         {example.tags && example.tags.length > 0 && (
