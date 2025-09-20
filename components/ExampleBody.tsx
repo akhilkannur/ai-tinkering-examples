@@ -86,11 +86,11 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
         )}
 
         {example.workflow_steps && (
-          <section className="mb-6 p-4 border border-[#001858] rounded-xl bg-primary-bg shadow-lg">
-            <p className="text-sm text-text-color leading-relaxed">
-              <span className="font-semibold">📝 Curator notes:</span> {example.workflow_steps}
+          <div className="mb-6 pl-4 border-l-4 border-slate-200">
+            <p className="text-sm text-slate-500 leading-relaxed">
+              <span className="font-semibold">💡 Curator notes:</span> {example.workflow_steps}
             </p>
-          </section>
+          </div>
         )}
       </div>
     </>
