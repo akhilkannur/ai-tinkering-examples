@@ -4,7 +4,7 @@ import type { ExampleRecord, SponsorRecord } from "../lib/airtable"
 import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
-import { Share2, ExternalLink } from "lucide-react"
+import { Share2, ExternalLink, Clock } from "lucide-react"
 import { Facebook, Twitter, Linkedin, Link2, Copy, Check } from "lucide-react"
 import { optimizeImageUrl } from '../utils/cloudinary'
 
@@ -97,9 +97,17 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
 
             {/* Title Overlay */}
             <div className="absolute bottom-0 left-0 right-0 p-4 bg-[#001858]/80 rounded-b-2xl">
-              <h3 className="text-lg font-semibold leading-tight text-[#ffffff] line-clamp-2">
-                {example.title}
-              </h3>
+              <div className="flex items-center justify-between">
+                <h3 className="text-lg font-semibold leading-tight text-[#ffffff] line-clamp-2">
+                  {example.title}
+                </h3>
+                {example.read_time && (
+                  <div className="flex items-center gap-1 text-white text-sm">
+                    <Clock size={14} />
+                    <span>{example.read_time} min</span>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         )}
