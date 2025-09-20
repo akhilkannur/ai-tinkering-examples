@@ -33,7 +33,7 @@ const NewsletterPopup: React.FC<NewsletterPopupProps> = ({ delay = 20 }) => {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm" onClick={handleClose}>
-      <div className="bg-primary-bg p-8 rounded-lg shadow-lg max-w-md text-center relative border border-text-color font-sans" onClick={(e) => e.stopPropagation()}>
+      <div className="bg-primary-bg p-6 rounded-lg shadow-lg max-w-md text-center relative border border-text-color font-sans" onClick={(e) => e.stopPropagation()}>
         <button
           onClick={handleClose}
           className="absolute top-2 right-2 text-text-color hover:text-accent text-xl"
@@ -44,7 +44,7 @@ const NewsletterPopup: React.FC<NewsletterPopupProps> = ({ delay = 20 }) => {
           <Image src="/favicon.png" alt="Favicon" width={128} height={128} className="mx-auto" />
         </div>
         <p className="text-xl font-semibold mb-4 text-text-color">
-          Hey, I'm Akhil. Every Monday I share the AI examples I compiled in the last week. Maybe you should subscribe to it.
+          I'm Akhil. I curate a weekly newsletter with the most interesting AI examples I find. A simple, no-fluff way to keep up with what's possible. Sound useful?
         </p>
         <div className="beehiiv-form-embed">
           <Script async src="https://subscribe-forms.beehiiv.com/embed.js" />
