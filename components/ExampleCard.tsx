@@ -43,7 +43,7 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
       transition={{ duration: 0.5 }}
-      className="card group cursor-pointer relative flex flex-col bg-[#F8F8F8] shadow-lg rounded-2xl overflow-hidden border border-transparent hover:border-accent transition-all duration-300 transform hover:-translate-y-1"
+      className="card group cursor-pointer relative flex flex-col bg-[#F8F8F8] custom-shadow grid-dots-pattern rounded-2xl overflow-hidden border border-transparent hover:border-accent transition-all duration-300 transform hover:-translate-y-1"
     >
       {/* SEO Link wrapper - invisible but covers the card for crawlers */}
       <Link href={exampleUrl} className="absolute inset-0 z-0" aria-label={example.title}>

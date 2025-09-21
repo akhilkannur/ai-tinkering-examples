@@ -12,7 +12,7 @@ export default function CtaCard() {
     <div
       className="relative group p-6 rounded-lg shadow-lg flex flex-col justify-center items-center text-center h-full cursor-pointer hover:bg-accent/20 transition-all duration-300"
       onClick={scrollToNewsletter}
-      style={{ backgroundColor: '#f3d2c1' }}
+      style={{ backgroundColor: '#f3d2c1', border: '2px solid #8bd3dd' }}
     >
       <div className="relative z-10">
         <h3 className="text-2xl font-bold text-black mb-4">Want 40+ more examples?</h3>

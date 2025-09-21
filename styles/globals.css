@@ -221,3 +221,14 @@ select:focus-visible {
     color-scheme: dark;
   }
 }
+
+.custom-shadow {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.grid-dots-pattern {
+  background-image: radial-gradient(#fef6e4 10%, transparent 10%);
+  background-size: 10px 10px;
+  background-position: 0 0;
+  opacity: 0.1; /* 10% opacity */
+}
