@@ -82,40 +82,46 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
             .animation-delay-2000 { animation-delay: 2s; }
             .animation-delay-4000 { animation-delay: 4s; }
             #newsletter {
-              margin-bottom: 0 !important;
-              padding-bottom: 0 !important;
+              margin-top: 2rem !important;
+              margin-bottom: -2rem !important;
+              padding: 0 !important;
             }
 
             #newsletter iframe {
-              max-height: 260px !important;
-              height: 260px !important;
-              overflow: hidden !important;
-              margin-bottom: -20px !important;
-              display: block !important;
+              max-height: 240px !important;
+              height: 240px !important;
+              margin-bottom: -40px !important;
+              transform: translateY(-30px) !important;
+            }
+
+            #newsletter .max-w-6xl {
+              padding-top: 0 !important;
+              padding-bottom: 0 !important;
+              margin-bottom: -30px !important;
             }
 
             #newsletter .max-w-3xl {
-              margin-bottom: -10px !important;
+              margin-bottom: -30px !important;
               padding-bottom: 0 !important;
             }
 
-            /* Force remove any internal iframe padding */
             .beehiiv-embed {
-              margin: 0 auto -15px auto !important;
-              padding: 0 !important;
-              line-height: 0 !important;
+              margin: 0 auto -30px auto !important;
+              transform: translateY(-20px) !important;
             }
 
-            /* Mobile-specific fixes */
+            /* Mobile - even more aggressive */
              @media (max-width: 768px) {
               #newsletter {
-                margin-bottom: -1rem !important;
+                margin-top: 1rem !important;
+                margin-bottom: -3rem !important;
               }
               
               #newsletter iframe {
-                height: 240px !important;
-                max-height: 240px !important;
-                margin-bottom: -25px !important;
+                height: 220px !important;
+                max-height: 220px !important;
+                margin-bottom: -50px !important;
+                transform: translateY(-40px) !important;
               }
             }
             .hero-container {
@@ -231,7 +237,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
           )}
         </div>
 
-        <div className="bg-primary-bg text-text-color mt-32 mb-16" id="newsletter">
+        <div className="bg-primary-bg text-text-color mt-16 mb-16" id="newsletter">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4">
             <div className="max-w-3xl text-center mx-auto">
               <h2 className="text-4xl sm:text-5xl font-black mb-4 text-text-color !text-text-color">
@@ -248,7 +254,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
           </div>
         </div>
 
-        <WavyDivider />
+        <WavyDivider style={{marginTop: '-4rem'}} />
         
 
         <ExampleModal
