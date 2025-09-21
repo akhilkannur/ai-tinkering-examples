@@ -80,7 +80,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
             }
             .animate-blob { animation: blob 7s infinite; }
             .animation-delay-2000 { animation-delay: 2s; }
-            .animation-delay-4000 { animation-delay: 4s; }
+            .animation-delay-4000 { animation: delay 4s; }
             .hero-container {
               display: flex !important;
               align-items: center !important;
@@ -98,6 +98,16 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
               max-width: 50% !important;
               display: flex !important;
               justify-content: center !important;
+            }
+            /* More aggressive Hero form spacing control */
+            .hero-container div[style*="maxWidth"] {
+              margin-bottom: -20px !important;
+              overflow: hidden !important;
+              height: 120px !important;
+            }
+
+            .hero-container iframe[data-test-id="beehiiv-embed"] {
+              margin-bottom: -30px !important;
             }
           `}
         </style>
