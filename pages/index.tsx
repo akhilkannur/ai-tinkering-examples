@@ -81,59 +81,6 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
             .animate-blob { animation: blob 7s infinite; }
             .animation-delay-2000 { animation-delay: 2s; }
             .animation-delay-4000 { animation-delay: 4s; }
-            /* Completely eliminate newsletter section spacing */
-            #newsletter {
-              margin-top: 0 !important;
-              margin-bottom: -6rem !important;
-              padding: 0 !important;
-              height: 200px !important;
-              overflow: hidden !important;
-            }
-
-            #newsletter iframe {
-              max-height: 200px !important;
-              height: 200px !important;
-              margin-bottom: -80px !important;
-              transform: translateY(-60px) !important;
-            }
-
-            #newsletter .max-w-6xl {
-              padding: 0 !important;
-              margin: 0 !important;
-            }
-
-            #newsletter .max-w-3xl {
-              margin-bottom: -60px !important;
-              padding-bottom: 0 !important;
-            }
-
-            .beehiiv-embed {
-              margin: 0 auto -60px auto !important;
-              transform: translateY(-40px) !important;
-            }
-
-            /* Push examples section up dramatically */
-            .max-w-6xl.mx-auto.px-2 {
-              margin-top: -8rem !important;
-            }
-
-            /* Mobile - maximum aggression */
-             @media (max-width: 768px) {
-              #newsletter {
-                margin-bottom: -8rem !important;
-                height: 180px !important;
-              }
-              
-              #newsletter iframe {
-                height: 180px !important;
-                margin-bottom: -100px !important;
-                transform: translateY(-80px) !important;
-              }
-              
-              .max-w-6xl.mx-auto.px-2 {
-                margin-top: -10rem !important;
-              }
-            }
             .hero-container {
               display: flex !important;
               align-items: center !important;
@@ -247,7 +194,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
           )}
         </div>
 
-        <div className="bg-primary-bg text-text-color mt-0 mb-0" id="newsletter">
+        <div className="bg-primary-bg text-text-color mt-32 mb-16" id="newsletter">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4">
             <div className="max-w-3xl text-center mx-auto">
               <h2 className="text-4xl sm:text-5xl font-black mb-4 text-text-color !text-text-color">
@@ -258,13 +205,13 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
               </p>
                             <div className="max-w-3xl mx-auto">
                 <Script async src="https://subscribe-forms.beehiiv.com/embed.js" />
-                <iframe src="https://subscribe-forms.beehiiv.com/e3398e54-e0cf-44f9-a380-23571e7b542a" className="beehiiv-embed mx-auto block" data-test-id="beehiiv-embed" frameBorder="0" scrolling="no" style={{width: '660px', height: '280px', margin: '0 auto', borderRadius: '0px', backgroundColor: 'transparent', boxShadow: '0 0 #0000', maxWidth: '100%', display: 'block', overflow: 'hidden'}}></iframe>
+                <iframe src="https://embeds.beehiiv.com/e3398e54-e0cf-44f9-a380-23571e7b542a?slim=true" data-test-id="beehiiv-embed" width="400" height="52" frameBorder="0" scrolling="no" className="mx-auto block" style={{margin: '0 auto', borderRadius: '0px', backgroundColor: 'transparent', maxWidth: '100%'}} />
               </div>
             </div>
           </div>
         </div>
 
-        <WavyDivider style={{marginTop: '-8rem'}} />
+        <WavyDivider />
         
 
         <ExampleModal
