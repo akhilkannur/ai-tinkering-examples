@@ -81,19 +81,42 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
             .animate-blob { animation: blob 7s infinite; }
             .animation-delay-2000 { animation-delay: 2s; }
             .animation-delay-4000 { animation-delay: 4s; }
-            .beehiiv-embed {
-              display: block !important;
-              margin: 0 auto !important;
-              overflow: hidden !important;
-            }
-
             #newsletter {
-              margin-bottom: 2rem !important;
+              margin-bottom: 0 !important;
+              padding-bottom: 0 !important;
             }
 
             #newsletter iframe {
-              max-height: 280px !important;
+              max-height: 260px !important;
+              height: 260px !important;
               overflow: hidden !important;
+              margin-bottom: -20px !important;
+              display: block !important;
+            }
+
+            #newsletter .max-w-3xl {
+              margin-bottom: -10px !important;
+              padding-bottom: 0 !important;
+            }
+
+            /* Force remove any internal iframe padding */
+            .beehiiv-embed {
+              margin: 0 auto -15px auto !important;
+              padding: 0 !important;
+              line-height: 0 !important;
+            }
+
+            /* Mobile-specific fixes */
+             @media (max-width: 768px) {
+              #newsletter {
+                margin-bottom: -1rem !important;
+              }
+              
+              #newsletter iframe {
+                height: 240px !important;
+                max-height: 240px !important;
+                margin-bottom: -25px !important;
+              }
             }
             .hero-container {
               display: flex !important;
