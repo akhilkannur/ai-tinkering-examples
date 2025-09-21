@@ -185,7 +185,11 @@ async function fetchAll<T>(tableName: string, processFn: (record: any) => T): Pr
 
   console.log(`🔄 Fetching all records from ${tableName}...`);
   try {
-    const allRecords = await base(tableName).select().all();
+    let query = base(tableName).select();
+    if (tableName === examplesTable) {
+      query = query.filterByFormula('{Published}');
+    }
+    const allRecords = await query.all();
     console.log(`✅ Found ${allRecords.length} records in ${tableName}`);
     const processed = allRecords.map(processFn);
     return processed;

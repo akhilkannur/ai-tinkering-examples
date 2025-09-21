@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <div className="relative bg-primary-bg text-text-color overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="relative pt-12 pb-16 sm:pt-16 sm:pb-24 flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="relative pt-12 pb-16 sm:pt-16 sm:pb-24 flex flex-col md:flex-row items-start justify-between gap-8">
 
           <div className="relative z-10 order-first md:order-first text-center md:text-left flex-1">
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tighter mb-6 text-text-color font-headline">
@@ -27,7 +27,7 @@ export default function Hero() {
               alt="Hero Image"
               width={500} 
               height={500} 
-              className="object-contain rounded-lg shadow-lg"
+              className="object-cover h-full rounded-lg shadow-lg"
             />
           </div>
         </div>
