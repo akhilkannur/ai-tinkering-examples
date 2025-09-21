@@ -126,7 +126,8 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
           />
         )}
 
-        <div className="max-w-6xl mx-auto px-2 sm:px-6 py-8 mt-8 bg-[#f3d2c1] rounded-lg shadow-lg">
+        <div className="bg-[#fef6e4] py-8">
+          <div className="max-w-6xl mx-auto px-2 sm:px-6">
           <div className="h-0.5 bg-accent opacity-40 w-full my-4"></div>
           <h2 className="text-2xl font-bold text-text-color mb-6 flex items-center gap-8 w-full">
             <span className="flex-grow text-center">
@@ -205,6 +206,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
               </div>
             </>
           )}
+          </div>
         </div>
 
         <div className="bg-primary-bg text-text-color mt-16 mb-8" id="newsletter">
