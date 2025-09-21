@@ -16,9 +16,9 @@ export default function Hero() {
               Curated workflows and prompts for non-technical tinkerers. No fluff, just actionable examples.
             </p>
 
-            <div style={{width: "500px", maxWidth: "100%", overflow: 'hidden', height: '147px'}}>
+            <div style={{width: "660px", maxWidth: "100%", overflow: 'hidden', height: '307px'}}>
               <Script async src="https://subscribe-forms.beehiiv.com/embed.js" />
-              <iframe src="https://subscribe-forms.beehiiv.com/646c960c-1f45-4c51-af42-0cb96adadc5f" className="beehiiv-embed" data-test-id="beehiiv-embed" frameBorder="0" scrolling="no" style={{width: "500px", height: "147px", margin: "0", borderRadius: "0px", backgroundColor: "transparent", boxShadow: "0 0 #0000", maxWidth: "100%", display: "block"}}></iframe>
+              <iframe src="https://subscribe-forms.beehiiv.com/e3398e54-e0cf-44f9-a380-23571e7b542a" className="beehiiv-embed" data-test-id="beehiiv-embed" frameBorder="0" scrolling="no" style={{width: '660px', height: '307px', margin: '0', borderRadius: '0px', backgroundColor: 'transparent', boxShadow: '0 0 #0000', maxWidth: '100%'}}></iframe>
             </div>
           </div>
 
