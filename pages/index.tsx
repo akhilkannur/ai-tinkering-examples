@@ -81,47 +81,57 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
             .animate-blob { animation: blob 7s infinite; }
             .animation-delay-2000 { animation-delay: 2s; }
             .animation-delay-4000 { animation-delay: 4s; }
+            /* Completely eliminate newsletter section spacing */
             #newsletter {
-              margin-top: 2rem !important;
-              margin-bottom: -2rem !important;
+              margin-top: 0 !important;
+              margin-bottom: -6rem !important;
               padding: 0 !important;
+              height: 200px !important;
+              overflow: hidden !important;
             }
 
             #newsletter iframe {
-              max-height: 240px !important;
-              height: 240px !important;
-              margin-bottom: -40px !important;
-              transform: translateY(-30px) !important;
+              max-height: 200px !important;
+              height: 200px !important;
+              margin-bottom: -80px !important;
+              transform: translateY(-60px) !important;
             }
 
             #newsletter .max-w-6xl {
-              padding-top: 0 !important;
-              padding-bottom: 0 !important;
-              margin-bottom: -30px !important;
+              padding: 0 !important;
+              margin: 0 !important;
             }
 
             #newsletter .max-w-3xl {
-              margin-bottom: -30px !important;
+              margin-bottom: -60px !important;
               padding-bottom: 0 !important;
             }
 
             .beehiiv-embed {
-              margin: 0 auto -30px auto !important;
-              transform: translateY(-20px) !important;
+              margin: 0 auto -60px auto !important;
+              transform: translateY(-40px) !important;
             }
 
-            /* Mobile - even more aggressive */
+            /* Push examples section up dramatically */
+            .max-w-6xl.mx-auto.px-2 {
+              margin-top: -8rem !important;
+            }
+
+            /* Mobile - maximum aggression */
              @media (max-width: 768px) {
               #newsletter {
-                margin-top: 1rem !important;
-                margin-bottom: -3rem !important;
+                margin-bottom: -8rem !important;
+                height: 180px !important;
               }
               
               #newsletter iframe {
-                height: 220px !important;
-                max-height: 220px !important;
-                margin-bottom: -50px !important;
-                transform: translateY(-40px) !important;
+                height: 180px !important;
+                margin-bottom: -100px !important;
+                transform: translateY(-80px) !important;
+              }
+              
+              .max-w-6xl.mx-auto.px-2 {
+                margin-top: -10rem !important;
               }
             }
             .hero-container {
@@ -237,7 +247,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
           )}
         </div>
 
-        <div className="bg-primary-bg text-text-color mt-16 mb-16" id="newsletter">
+        <div className="bg-primary-bg text-text-color mt-0 mb-0" id="newsletter">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4">
             <div className="max-w-3xl text-center mx-auto">
               <h2 className="text-4xl sm:text-5xl font-black mb-4 text-text-color !text-text-color">
@@ -254,7 +264,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
           </div>
         </div>
 
-        <WavyDivider style={{marginTop: '-4rem'}} />
+        <WavyDivider style={{marginTop: '-8rem'}} />
         
 
         <ExampleModal
