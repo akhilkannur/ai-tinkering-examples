@@ -17,8 +17,7 @@ export default function Hero() {
             </p>
 
             <div style={{maxWidth: "100%"}}>
-              <Script async src="https://subscribe-forms.beehiiv.com/embed.js" />
-              <iframe src="https://subscribe-forms.beehiiv.com/e3398e54-e0cf-44f9-a380-23571e7b542a" className="beehiiv-embed" data-test-id="beehiiv-embed" frameBorder="0" scrolling="no" style={{width: '660px', height: '307px', margin: '0', borderRadius: '0px', backgroundColor: 'transparent', boxShadow: '0 0 #0000', maxWidth: '100%'}}></iframe>
+              <iframe src="https://embeds.beehiiv.com/e3398e54-e0cf-44f9-a380-23571e7b542a?slim=true" data-test-id="beehiiv-embed" width="400" height="52" frameBorder="0" scrolling="no" className="mx-auto block" style={{margin: '0', borderRadius: '0px', backgroundColor: 'transparent', maxWidth: '100%'}} />
             </div>
           </div>
 

@@ -116,7 +116,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
           />
         )}
 
-        <div className="max-w-6xl mx-auto px-2 sm:px-6 py-8 bg-section-bg-example-card rounded-lg shadow-lg">
+        <div className="max-w-6xl mx-auto px-2 sm:px-6 py-8 mt-8 bg-section-bg-example-card rounded-lg shadow-lg">
           <h2 className="text-3xl sm:text-4xl font-bold mb-6 flex items-center gap-8 w-full">
             <span className="flex-grow text-center">
               {selectedCategory === 'All' ? 'All Examples' : selectedCategory}
@@ -194,7 +194,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
           )}
         </div>
 
-        <div className="bg-primary-bg text-text-color mt-32 mb-16" id="newsletter">
+        <div className="bg-primary-bg text-text-color mt-16 mb-8" id="newsletter">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4">
             <div className="max-w-3xl text-center mx-auto">
               <h2 className="text-4xl sm:text-5xl font-black mb-4 text-text-color !text-text-color">
