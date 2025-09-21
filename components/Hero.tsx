@@ -16,8 +16,8 @@ export default function Hero() {
               Curated workflows and prompts for non-technical tinkerers. No fluff, just actionable examples.
             </p>
 
-            <div style={{maxWidth: "100%", overflow: "hidden", height: "120px", marginBottom: "-20px"}}>
-              <iframe src="https://subscribe-forms.beehiiv.com/44f8ba74-5250-4aac-9fa0-3ad651f05798" data-test-id="beehiiv-embed" width="500" height="147" frameBorder="0" scrolling="no" className="mx-auto block" style={{margin: '0', borderRadius: '0px', backgroundColor: 'transparent', maxWidth: '100%', transform: 'translateY(-10px)'}} />
+            <div style={{maxWidth: "100%", overflow: "hidden", height: "140px", marginBottom: "0px"}}>
+              <iframe src="https://subscribe-forms.beehiiv.com/44f8ba74-5250-4aac-9fa0-3ad651f05798" data-test-id="beehiiv-embed" width="500" height="147" frameBorder="0" scrolling="no" className="mx-auto block" style={{margin: '0', borderRadius: '0px', backgroundColor: 'transparent', maxWidth: '100%', transform: 'translateY(0px)'}} />
             </div>
           </div>
 
