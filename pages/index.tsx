@@ -204,8 +204,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
                 Get fresh AI examples delivered weekly. No spam, no BS. Just actionable insights.
               </p>
                             <div className="max-w-3xl mx-auto">
-                <Script async src="https://subscribe-forms.beehiiv.com/embed.js" />
-                <iframe src="https://embeds.beehiiv.com/e3398e54-e0cf-44f9-a380-23571e7b542a?slim=true" data-test-id="beehiiv-embed" width="400" height="52" frameBorder="0" scrolling="no" className="mx-auto block" style={{margin: '0 auto', borderRadius: '0px', backgroundColor: 'transparent', maxWidth: '100%'}} />
+                <iframe src="https://embeds.beehiiv.com/e3398e54-e0cf-44f9-a380-23571e7b542a?slim=true" data-test-id="beehiiv-embed" width="400" height="52" frameBorder="0" scrolling="no" className="mx-auto block" style={{margin: '0', borderRadius: '0px', backgroundColor: 'transparent', maxWidth: '100%'}} />
               </div>
             </div>
           </div>
