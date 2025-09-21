@@ -99,9 +99,6 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
               display: flex !important;
               justify-content: center !important;
             }
-            iframe[data-test-id="beehiiv-embed"] * {
-              all: revert !important;
-            }
           `}
         </style>
       </Head>
