@@ -81,6 +81,20 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
             .animate-blob { animation: blob 7s infinite; }
             .animation-delay-2000 { animation-delay: 2s; }
             .animation-delay-4000 { animation-delay: 4s; }
+            .beehiiv-embed {
+              display: block !important;
+              margin: 0 auto !important;
+              overflow: hidden !important;
+            }
+
+            #newsletter {
+              margin-bottom: 2rem !important;
+            }
+
+            #newsletter iframe {
+              max-height: 280px !important;
+              overflow: hidden !important;
+            }
           `}
         </style>
       </Head>
@@ -182,12 +196,12 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
               <h2 className="text-4xl sm:text-5xl font-black mb-4 text-text-color !text-text-color">
                 Stay in the Loop
               </h2>
-              <p className="text-lg text-light-purple mb-4 max-w-2xl mx-auto">
+              <p className="text-lg text-light-purple mb-6 max-w-2xl mx-auto">
                 Get fresh AI examples delivered weekly. No spam, no BS. Just actionable insights.
               </p>
                             <div className="max-w-3xl mx-auto">
                 <Script async src="https://subscribe-forms.beehiiv.com/embed.js" />
-                <iframe src="https://subscribe-forms.beehiiv.com/e3398e54-e0cf-44f9-a380-23571e7b542a" className="beehiiv-embed" data-test-id="beehiiv-embed" frameBorder="0" scrolling="no" style={{width: '660px', height: '307px', margin: '0', borderRadius: '0px', backgroundColor: 'transparent', boxShadow: '0 0 #0000', maxWidth: '100%'}}></iframe>
+                <iframe src="https://subscribe-forms.beehiiv.com/e3398e54-e0cf-44f9-a380-23571e7b542a" className="beehiiv-embed mx-auto block" data-test-id="beehiiv-embed" frameBorder="0" scrolling="no" style={{width: '660px', height: '280px', margin: '0 auto', borderRadius: '0px', backgroundColor: 'transparent', boxShadow: '0 0 #0000', maxWidth: '100%', display: 'block', overflow: 'hidden'}}></iframe>
               </div>
             </div>
           </div>
