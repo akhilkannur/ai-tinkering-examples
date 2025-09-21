@@ -110,7 +110,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
               margin-bottom: -30px !important;
             }
             .hero-image-container {
-              height: 250px; /* Adjust this value as needed */
+              height: 350px; /* Adjust this value as needed */
             }
           `}
         </style>
@@ -131,30 +131,26 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
 
         <div className="bg-[#f3d2c1] py-8">
           <div className="max-w-6xl mx-auto px-2 sm:px-6">
-          <div className="h-0.5 bg-accent opacity-40 w-full my-4"></div>
+
           <h2 className="text-2xl font-bold text-text-color mb-6 flex items-center gap-8 w-full">
             <span className="flex-grow text-center">
               <span style={{color: '#f582ae', marginRight: '0.5rem'}}>✦</span>
               {selectedCategory === 'All' ? 'All Examples' : selectedCategory}
             </span>
           </h2>
-          <div className="h-0.5 bg-accent opacity-40 w-full my-4"></div>
 
-          <div className="flex flex-wrap justify-center gap-3 mb-8">
+
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
             {categories.map((category, index) => {
-              const tagColors = ['#a786df', '#8bd3dd', '#f582ae', '#f3d2c1', '#fef6e4', '#b0e0e6', '#add8e6', '#87cefa', '#6495ed', '#4682b4'];
-              const colorIndex = index % tagColors.length;
-              const bgColor = tagColors[colorIndex];
-              const textColor = '#001858'; // text-color from tailwind.config.js
-
+              const isActive = selectedCategory === category;
               return (
                 <button
                   key={category}
                   onClick={() => setSelectedCategory(category)}
-                  className={`px-4 py-2 text-sm font-semibold rounded-full transition-all duration-300 transform hover:scale-105 ${
-                    selectedCategory === category
-                      ? `bg-[${bgColor}] text-[${textColor}] shadow-lg shadow-accent/20`
-                      : `bg-secondary-bg text-[${textColor}] hover:bg-[${bgColor}] hover:text-[${textColor}]`
+                  className={`px-6 py-3 text-base font-bold rounded-full transition-all duration-300 transform hover:scale-105 ${
+                    isActive
+                      ? 'bg-accent text-primary-bg shadow-lg'
+                      : 'bg-secondary-bg text-text-color hover:bg-accent hover:text-primary-bg'
                   }`}
                 >
                   {category}

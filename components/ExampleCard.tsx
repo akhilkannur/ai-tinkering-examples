@@ -43,7 +43,7 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
       transition={{ duration: 0.5 }}
-      className="card group cursor-pointer relative flex flex-col bg-[#fef6e4] custom-shadow grid-dots-pattern rounded-none overflow-hidden border border-transparent hover:border-accent transition-all duration-300 transform hover:-translate-y-1"
+      className="card group cursor-pointer relative flex flex-col bg-[#fef6e4] custom-shadow rounded-lg overflow-hidden border border-transparent hover:border-accent transition-all duration-300 transform hover:-translate-y-1"
     >
       {/* SEO Link wrapper - invisible but covers the card for crawlers */}
       <Link href={exampleUrl} className="absolute inset-0 z-0" aria-label={example.title}>
@@ -53,7 +53,7 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
       {/* Card content with higher z-index */}
       <div className="relative z-10 flex-grow" onClick={handleCardClick}>
         {img && (
-          <div className="relative w-full h-64 overflow-hidden rounded-t-2xl bg-slate-100 shadow-lg">
+          <div className="relative w-full h-48 overflow-hidden bg-slate-100">
             {imageLoading && (
               <div className="absolute inset-0 bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 bg-[length:200%_100%] animate-[shimmer_1.5s_ease-in-out_infinite]" />
             )}
@@ -66,51 +66,39 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
             )}
 
             {!imageError && (
-              <>
-                <Image
-                  src={optimizedImageUrl || img || "/placeholder.svg"}
-                  alt={`${example.title} - AI workflow example screenshot`}
-                  fill
-                  className={`object-cover group-hover:scale-105 transition-transform duration-300 ${
-                    imageLoading ? "opacity-0" : "opacity-100"
-                  }`}
-                  sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                  priority={priority}
-                  loading={priority ? "eager" : "lazy"}
-                  fetchPriority={priority ? "high" : "auto"}
-                  quality={90}
-                  placeholder="blur"
-                  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
-                  onLoad={() => setImageLoading(false)}
-                  onError={(e) => {
-                    console.error('Image failed to load:', optimizedImageUrl || img)
-                    console.error('Error details:', e)
-                    setImageError(true)
-                    setImageLoading(false)
-                  }}
-                  unoptimized={false}
-                />
-                {/* Warm Overlay Filter */}
-                <div className="absolute inset-0 bg-black/30 filter sepia-20 brightness-90 saturate-125"></div>
-              </>
+              <Image
+                src={optimizedImageUrl || img || "/placeholder.svg"}
+                alt={`${example.title} - AI workflow example screenshot`}
+                fill
+                className={`object-cover group-hover:scale-105 transition-transform duration-300 ${
+                  imageLoading ? "opacity-0" : "opacity-100"
+                }`}
+                sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                priority={priority}
+                loading={priority ? "eager" : "lazy"}
+                fetchPriority={priority ? "high" : "auto"}
+                quality={80}
+                onLoad={() => setImageLoading(false)}
+                onError={() => setImageError(true)}
+              />
             )}
-
-            {/* Title Overlay */}
-            <div className="absolute bottom-0 left-0 right-0 p-4 bg-[#001858]/80 rounded-b-2xl">
-              <div className="flex items-center justify-between">
-                <h3 className="text-lg font-semibold leading-tight text-[#ffffff] line-clamp-2 font-roboto">
-                  {example.title}
-                </h3>
-                {example.read_time && (
-                  <div className="flex items-center gap-1 text-white text-sm">
-                    <Clock size={14} />
-                    <span>{example.read_time} min</span>
-                  </div>
-                )}
-              </div>
-            </div>
           </div>
         )}
+        <div className="p-4">
+          <h3 className="text-lg font-bold leading-tight text-text-color line-clamp-2 mb-2">
+            {example.title}
+          </h3>
+          <div className="flex items-center justify-between text-sm text-gray-500">
+            <div className="flex items-center gap-1">
+              <Clock size={14} />
+              <span>{example.read_time} min</span>
+            </div>
+            <div className="flex items-center gap-1">
+              <Share2 size={14} />
+              <span>Share</span>
+            </div>
+          </div>
+        </div>
       </div>
     </motion.article>
   )
