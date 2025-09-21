@@ -126,13 +126,15 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
           />
         )}
 
-        <div className="max-w-6xl mx-auto px-2 sm:px-6 py-8 mt-8 bg-gradient-to-b from-[#f3d2c1] to-[#fce8f0] rounded-lg shadow-lg">
+        <div className="max-w-6xl mx-auto px-2 sm:px-6 py-8 mt-8 bg-gradient-to-tr from-[#f3d2c1] to-[#fce8f0] rounded-lg shadow-lg">
+          <div className="h-0.5 bg-accent opacity-40 w-full my-4"></div>
           <h2 className="text-2xl font-bold text-text-color mb-6 flex items-center gap-8 w-full">
             <span className="flex-grow text-center">
               <span style={{color: '#f582ae', marginRight: '0.5rem'}}>✦</span>
               {selectedCategory === 'All' ? 'All Examples' : selectedCategory}
             </span>
           </h2>
+          <div className="h-0.5 bg-accent opacity-40 w-full my-4"></div>
 
           <div className="flex flex-wrap justify-center gap-3 mb-8">
             {categories.map((category, index) => {
@@ -214,7 +216,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
               <p className="text-lg text-light-purple mb-6 max-w-2xl mx-auto">
                 Get fresh AI examples delivered weekly. No spam, no BS. Just actionable insights.
               </p>
-                            <div className="max-w-3xl mx-auto" style={{maxWidth: "100%", overflow: "hidden", height: "140px", marginBottom: "0px"}}>
+                            <div className="max-w-[500px] mx-auto" style={{overflow: "hidden", height: "140px", marginBottom: "0px"}}>
                 <iframe src="https://subscribe-forms.beehiiv.com/44f8ba74-5250-4aac-9fa0-3ad651f05798" data-test-id="beehiiv-embed" width="500" height="147" frameBorder="0" scrolling="no" className="mx-auto block" style={{margin: '0', borderRadius: '0px', backgroundColor: 'transparent', maxWidth: '100%', transform: 'translateY(0px)'}} />
               </div>
             </div>
