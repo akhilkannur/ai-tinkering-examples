@@ -53,7 +53,7 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
       {/* Card content with higher z-index */}
       <div className="relative z-10 flex-grow" onClick={handleCardClick}>
         {img && (
-          <div className="relative w-full h-56 overflow-hidden bg-[#fef6e4]">
+          <div className="relative w-full h-60 overflow-hidden bg-[#fef6e4]">
             {imageLoading && (
               <div className="absolute inset-0 bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 bg-[length:200%_100%] animate-[shimmer_1.5s_ease-in-out_infinite]" />
             )}
@@ -85,6 +85,7 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
           </div>
         )}
         <div className="p-4">
+          <p className="text-sm text-gray-500 mb-1">{example.category}</p>
           <h3 className="text-lg font-bold leading-tight text-text-color line-clamp-2 mb-2">
             {example.title}
           </h3>

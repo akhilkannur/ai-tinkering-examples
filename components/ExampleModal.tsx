@@ -65,7 +65,7 @@ export default function ExampleModal({ example, isOpen, onClose }: ExampleModalP
     >
       <div
         ref={contentRef}
-        className={`relative bg-white rounded-2xl shadow-2xl max-w-4xl max-h-[90vh] w-full mx-4 transform transition-all duration-300 ${
+        className={`relative bg-white sm:rounded-2xl shadow-2xl sm:max-w-4xl max-h-full sm:max-h-[90vh] w-full h-full sm:h-auto transform transition-all duration-300 ${
           isOpen ? 'scale-100 translate-y-0' : 'scale-95 translate-y-4'
         }`}
       >
@@ -79,7 +79,7 @@ export default function ExampleModal({ example, isOpen, onClose }: ExampleModalP
           </button>
         </div>
 
-        <div className="overflow-y-auto max-h-[calc(90vh-7rem)] pt-6">
+        <div className="overflow-y-auto max-h-[calc(100vh-7rem)] sm:max-h-[calc(90vh-7rem)] pt-6">
           <ExampleBody example={example} />
         </div>
 
