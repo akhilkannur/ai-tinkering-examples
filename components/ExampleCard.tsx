@@ -53,14 +53,14 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
       {/* Card content with higher z-index */}
       <div className="relative z-10 flex-grow" onClick={handleCardClick}>
         {img && (
-          <div className="relative w-full h-48 overflow-hidden bg-slate-100">
+          <div className="relative w-full h-48 overflow-hidden bg-[#fef6e4]">
             {imageLoading && (
               <div className="absolute inset-0 bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 bg-[length:200%_100%] animate-[shimmer_1.5s_ease-in-out_infinite]" />
             )}
 
             {/* Error fallback */}
             {imageError && (
-              <div className="absolute inset-0 bg-slate-100 flex items-center justify-center">
+              <div className="absolute inset-0 bg-[#fef6e4] flex items-center justify-center">
                 <div className="text-slate-400 text-sm">Image unavailable</div>
               </div>
             )}

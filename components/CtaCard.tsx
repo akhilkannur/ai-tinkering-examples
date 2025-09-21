@@ -16,8 +16,8 @@ export default function CtaCard() {
       <div className="relative z-10">
         <h3 className="text-2xl font-bold text-text-color mb-4">Want 40+ more examples?</h3>
         <p className="text-lg text-text-color mb-4">Get weekly AI workflows</p>
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 mx-auto text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 mx-auto text-accent animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
         </svg>
       </div>
     </div>
