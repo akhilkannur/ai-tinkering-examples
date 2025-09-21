@@ -95,6 +95,24 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
               max-height: 280px !important;
               overflow: hidden !important;
             }
+            .hero-container {
+              display: flex !important;
+              align-items: center !important;
+              justify-content: space-between !important;
+              gap: 2rem !important;
+            }
+
+            .hero-text {
+              flex: 1 !important;
+              max-width: 50% !important;
+            }
+
+            .hero-image {
+              flex: 1 !important;
+              max-width: 50% !important;
+              display: flex !important;
+              justify-content: center !important;
+            }
           `}
         </style>
       </Head>

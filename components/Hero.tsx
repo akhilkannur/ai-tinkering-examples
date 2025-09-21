@@ -5,9 +5,9 @@ export default function Hero() {
   return (
     <div className="relative bg-primary-bg text-text-color overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="relative pt-12 pb-16 sm:pt-16 sm:pb-24 flex flex-col md:flex-row items-center gap-8">
+        <div className="relative pt-12 pb-16 sm:pt-16 sm:pb-24 flex flex-col md:flex-row items-center justify-between gap-8">
 
-          <div className="relative z-10 order-first md:order-first text-center md:text-left">
+          <div className="relative z-10 order-first md:order-first text-center md:text-left flex-1">
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tighter mb-6 text-text-color font-headline">
               AI examples you can copy & try
             </h1>
@@ -22,7 +22,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="relative z-10 order-last md:order-last flex justify-center">
+          <div className="relative z-10 order-last md:order-last flex justify-center flex-1">
             <img
               src="/Gemini_Generated_Image_b3hv6cb3hv6cb3hv.png"
               alt="Hero Image"
