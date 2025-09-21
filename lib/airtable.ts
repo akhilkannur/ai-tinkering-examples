@@ -1,4 +1,4 @@
-import Airtable from 'airtable'
+import Airtable, { SelectOptions } from 'airtable'
 
 // Configuration
 const baseId = process.env.NEXT_PUBLIC_AIRTABLE_BASE_ID
@@ -185,11 +185,11 @@ async function fetchAll<T>(tableName: string, processFn: (record: any) => T): Pr
 
   console.log(`🔄 Fetching all records from ${tableName}...`);
   try {
-    let query = base(tableName).select();
+    const selectOptions: SelectOptions = {};
     if (tableName === examplesTable) {
-      query = query.filterByFormula('{Published}');
+      selectOptions.filterByFormula = '{Published}';
     }
-    const allRecords = await query.all();
+    const allRecords = await base(tableName).select(selectOptions).all();
     console.log(`✅ Found ${allRecords.length} records in ${tableName}`);
     const processed = allRecords.map(processFn);
     return processed;
