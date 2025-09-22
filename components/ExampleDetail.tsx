@@ -1,5 +1,5 @@
 import type {ExampleRecord} from '../lib/airtable'
-import { Share2 } from 'lucide-react'
+import { Share2, Facebook, Twitter, Linkedin } from 'lucide-react'
 import { useState } from 'react'
 
 export default function ExampleDetail({example}:{example:ExampleRecord}){
@@ -21,6 +21,9 @@ export default function ExampleDetail({example}:{example:ExampleRecord}){
     }
   }
 
+  const shareUrl = typeof window !== 'undefined' ? window.location.href : '';
+  const shareTitle = example.title;
+
   return (
     <article className="max-w-3xl mx-auto px-4 py-8">
       <h1 className="text-3xl font-extrabold">{example.title}</h1>
@@ -38,13 +41,25 @@ export default function ExampleDetail({example}:{example:ExampleRecord}){
         </section>
       )}
 
-      <div className="mt-6 flex gap-4 items-center">
+      <div className="mt-6 flex flex-wrap gap-4 items-center">
         {example.original_link && <a href={example.original_link} target="_blank" rel="noreferrer" className="text-sm underline">View original</a>}
         {example.author_link && <a href={example.author_link} target="_blank" rel="noreferrer" className="text-sm">By {example.author_name}</a>}
         <button onClick={handleShare} className="text-sm flex items-center gap-1">
           <Share2 size={14} />
           <span>{copied ? 'Copied!' : 'Share'}</span>
         </button>
+
+        <div className="flex gap-2">
+          <a href={`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`} target="_blank" rel="noreferrer" className="p-2 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors">
+            <Facebook size={16} />
+          </a>
+          <a href={`https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareTitle}`} target="_blank" rel="noreferrer" className="p-2 rounded-full bg-blue-400 text-white hover:bg-blue-500 transition-colors">
+            <Twitter size={16} />
+          </a>
+          <a href={`https://www.linkedin.com/shareArticle?mini=true&url=${shareUrl}&title=${shareTitle}`} target="_blank" rel="noreferrer" className="p-2 rounded-full bg-blue-700 text-white hover:bg-blue-800 transition-colors">
+            <Linkedin size={16} />
+          </a>
+        </div>
       </div>
     </article>
   )
