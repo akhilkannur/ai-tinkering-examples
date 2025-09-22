@@ -172,7 +172,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
             </div>
           ) : (
             <>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredExamples.slice(0, 9).map((example, index) => (
                   <ExampleCard
                     key={example.id}
@@ -193,7 +193,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
                 />
               )}
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredExamples.slice(9).map((example, index) => (
                   <ExampleCard
                     key={example.id}
