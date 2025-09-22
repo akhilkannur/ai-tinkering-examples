@@ -22,11 +22,6 @@ export default function Hero() {
           </div>
 
           <div className="relative z-10 order-last md:order-last flex justify-center flex-1 hero-image-container">
-            <img
-              src="/Gemini_Generated_Image_b3hv6cb3hv6cb3hv.png"
-              alt="Hero Image"
-              className="object-cover h-full rounded-lg shadow-lg"
-            />
           </div>
         </div>
       </div>

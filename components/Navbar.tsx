@@ -13,6 +13,7 @@ export default function Navbar() {
     { href: '/ai-examples', label: 'Examples' },
     { href: '/tools', label: 'Tools' },
     { href: '/jobs', label: 'Jobs' },
+    { href: '/about', label: 'About' },
   ]
 
   return (
