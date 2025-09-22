@@ -1,7 +1,26 @@
 import type {ExampleRecord} from '../lib/airtable'
+import { Share2 } from 'lucide-react'
+import { useState } from 'react'
 
 export default function ExampleDetail({example}:{example:ExampleRecord}){
   const imgs = example.screenshots || []
+  const [copied, setCopied] = useState(false)
+
+  const handleShare = () => {
+    const url = window.location.href;
+    if (navigator.share) {
+      navigator.share({
+        title: example.title,
+        text: example.summary,
+        url: url,
+      })
+    } else {
+      navigator.clipboard.writeText(url)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    }
+  }
+
   return (
     <article className="max-w-3xl mx-auto px-4 py-8">
       <h1 className="text-3xl font-extrabold">{example.title}</h1>
@@ -19,9 +38,13 @@ export default function ExampleDetail({example}:{example:ExampleRecord}){
         </section>
       )}
 
-      <div className="mt-6 flex gap-3">
+      <div className="mt-6 flex gap-4 items-center">
         {example.original_link && <a href={example.original_link} target="_blank" rel="noreferrer" className="text-sm underline">View original</a>}
         {example.author_link && <a href={example.author_link} target="_blank" rel="noreferrer" className="text-sm">By {example.author_name}</a>}
+        <button onClick={handleShare} className="text-sm flex items-center gap-1">
+          <Share2 size={14} />
+          <span>{copied ? 'Copied!' : 'Share'}</span>
+        </button>
       </div>
     </article>
   )

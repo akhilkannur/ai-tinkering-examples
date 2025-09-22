@@ -9,14 +9,14 @@ export default function Hero() {
 
           <div className="relative z-10">
             <h1 className="text-4xl sm:text-5xl font-black tracking-tighter mb-4 text-text-color font-headline">
-              AI examples you can copy & try
+              Weekly AI examples you can copy & try
             </h1>
 
             <p className="text-lg sm:text-xl text-light-purple max-w-3xl mx-auto mb-8">
-              Curated workflows and prompts for non-technical tinkerers. No fluff, just actionable examples.
+              A newsletter of real AI use cases from real people. Practical and simple for non-technical thinkers
             </p>
 
-            <div style={{maxWidth: "100%", overflow: "hidden", height: "140px", marginBottom: "0px"}}>
+            <div style={{maxWidth: "500px", overflow: "hidden", height: "140px", marginBottom: "0px", margin: "0 auto"}}>
               <iframe src="https://subscribe-forms.beehiiv.com/44f8ba74-5250-4aac-9fa0-3ad651f05798" data-test-id="beehiiv-embed" width="500" height="147" frameBorder="0" scrolling="no" className="mx-auto block" style={{margin: '0', borderRadius: '0px', backgroundColor: 'transparent', maxWidth: '100%', transform: 'translateY(0px)'}} />
             </div>
           </div>

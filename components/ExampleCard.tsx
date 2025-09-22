@@ -84,26 +84,10 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
             )}
           </div>
         )}
-        <div className="p-4">
-          <p className="text-sm font-medium text-gray-500 mb-1">{example.category}</p>
-          <h3 className="text-xl font-bold leading-tight text-text-color line-clamp-2 mb-2">
+        <div className="p-2 text-center">
+          <h3 className="text-lg font-bold leading-tight text-text-color line-clamp-2">
             {example.title}
           </h3>
-          <div className="flex items-center justify-between text-xs text-gray-500">
-            <div className="flex items-center gap-1">
-              <Clock size={12} />
-              <span>{example.read_time} min</span>
-            </div>
-            {example.author_name && (
-              <div className="flex items-center gap-1">
-                <span>by {example.author_name}</span>
-              </div>
-            )}
-            <div className="flex items-center gap-1">
-              <Share2 size={12} />
-              <span>Share</span>
-            </div>
-          </div>
         </div>
       </div>
     </motion.article>
