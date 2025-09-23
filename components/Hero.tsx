@@ -9,12 +9,12 @@ export default function Hero() {
         <div className="relative py-8 sm:py-12 text-center">
 
           <div className="relative z-10">
-            <div className="flex justify-center mb-4">
+            <div className="flex justify-center">
               <Image
                 src="/favicon.png"
                 alt="AI Examples Logo"
-                width={96}
-                height={96}
+                width={128}
+                height={128}
                 className="mx-auto"
               />
             </div>

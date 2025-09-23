@@ -120,7 +120,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
       <div className="min-h-screen bg-primary-bg font-sans text-text-color fade-in">
         <Navbar />
         <Hero />
-        <ZigzagDivider backgroundColor="#fef6e4" fillColor="#f3d2c1" />
+        <ZigzagDivider fillColor="#f3d2c1" />
 
         {siteSettings.enableFeaturedToolsSection && featuredTools.length > 0 && (
           <HorizontalStrip 
@@ -134,7 +134,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
         <div className="bg-[#f3d2c1] py-8">
           <div className="max-w-6xl mx-auto px-2 sm:px-6">
 
-          <h2 className="text-2xl font-bold text-text-color mb-6 flex items-center gap-8 w-full">
+          <h2 className="text-3xl font-extrabold text-text-color mb-6 flex items-center gap-8 w-full">
             <span className="flex-grow text-center">
               <span style={{color: '#f582ae', marginRight: '0.5rem'}}>✦</span>
               {selectedCategory === 'All' ? 'All Examples' : selectedCategory}
@@ -210,7 +210,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
           </div>
         </div>
 
-        <ZigzagDivider backgroundColor="#f3d2c1" fillColor="#fef6e4" />
+        <ZigzagDivider fillColor="#fef6e4" />
         <div className="bg-primary-bg text-text-color mt-16 mb-8" id="newsletter">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4">
             <div className="max-w-3xl text-center mx-auto">

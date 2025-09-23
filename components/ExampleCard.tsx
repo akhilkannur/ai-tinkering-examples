@@ -82,11 +82,11 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
                   onLoad={() => setImageLoading(false)}
                   onError={() => setImageError(true)}
                 />
-                <div className="absolute inset-0 bg-blue-900 opacity-20 group-hover:opacity-10 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-blue-900 opacity-10 group-hover:opacity-5 transition-opacity duration-300"></div>
                 {example.read_time && (
                   <div className="absolute bottom-2 right-2 bg-black/50 text-white text-xs px-2 py-1 rounded-md flex items-center">
                     <Clock size={12} className="mr-1" />
-                    <span>{example.read_time} min read</span>
+                    <span className="font-semibold">{example.read_time} min read</span>
                   </div>
                 )}
               </>
