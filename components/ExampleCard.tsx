@@ -45,11 +45,6 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
       transition={{ duration: 0.5 }}
       className="card group cursor-pointer relative flex flex-col bg-[#fef6e4] custom-shadow rounded-2xl overflow-hidden border border-transparent hover:border-accent transition-all duration-300 transform hover:-translate-y-1"
     >
-      {/* SEO Link wrapper - invisible but covers the card for crawlers */}
-      <Link href={exampleUrl} className="absolute inset-0 z-0" aria-label={example.title}>
-        <span className="sr-only">View {example.title} details</span>
-      </Link>
-
       {/* Card content with higher z-index */}
       <div className="relative z-10 flex-grow" onClick={handleCardClick}>
         {img && (
