@@ -1,5 +1,6 @@
 import { ArrowRight } from 'lucide-react'
 import Script from 'next/script'
+import Image from 'next/image'
 
 export default function Hero() {
   return (
@@ -8,6 +9,15 @@ export default function Hero() {
         <div className="relative py-8 sm:py-12 text-center">
 
           <div className="relative z-10">
+            <div className="flex justify-center mb-4">
+              <Image
+                src="/favicon.png"
+                alt="AI Examples Logo"
+                width={96}
+                height={96}
+                className="mx-auto"
+              />
+            </div>
             <h1 className="text-4xl sm:text-5xl font-black tracking-tighter mb-4 text-text-color font-headline">
               Weekly AI examples you can copy & try
             </h1>
