@@ -1,5 +1,6 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import { GetStaticProps } from 'next'
+import { useRouter } from 'next/router'
 import Head from 'next/head'
 import Script from 'next/script'
 import Image from 'next/image'
@@ -24,6 +25,7 @@ interface HomePageProps {
 }
 
 export default function HomePage({ examples, featuredJobs, featuredTools, siteSettings }: HomePageProps) {
+  const router = useRouter()
   const [selectedCategory, setSelectedCategory] = useState('All')
   const [selectedExample, setSelectedExample] = useState<EnrichedExampleRecord | null>(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -45,16 +47,30 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
   }, [examples, selectedCategory])
 
   const handleOpenModal = (example: EnrichedExampleRecord) => {
-    setSelectedExample(example)
-    setIsModalOpen(true)
-  }
+    const categorySlug = example.category?.toLowerCase().replace(/\s+/g, '-') || 'uncategorized';
+    router.push(`/ai-examples/${categorySlug}/${example.slug}`, undefined, { shallow: true });
+    setSelectedExample(example);
+    setIsModalOpen(true);
+  };
 
   const handleCloseModal = () => {
-    setIsModalOpen(false)
-    setTimeout(() => setSelectedExample(null), 300)
-  }
+    router.replace(router.pathname, undefined, { shallow: true });
+    setIsModalOpen(false);
+    setTimeout(() => setSelectedExample(null), 300);
+  };
 
   const examplesToShowBeforeJobsStrip = 6;
+
+  useEffect(() => {
+    if (router.query.slug && Array.isArray(router.query.slug)) {
+      const slug = router.query.slug[router.query.slug.length - 1]; // Get the actual example slug
+      const foundExample = examples.find(ex => ex.slug === slug);
+      if (foundExample) {
+        setSelectedExample(foundExample);
+        setIsModalOpen(true);
+      }
+    }
+  }, [router.query.slug, examples]);
 
   return (
     <>

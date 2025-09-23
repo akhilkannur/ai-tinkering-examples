@@ -11,7 +11,7 @@ export default function AboutPage() {
       </Head>
       <div className="min-h-screen bg-primary-bg font-sans text-text-color">
         <Navbar />
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12 min-h-[calc(100vh-200px)]">
           <h1 className="text-4xl sm:text-5xl font-black tracking-tighter mb-8 text-center">
             About AI Examples
           </h1>
