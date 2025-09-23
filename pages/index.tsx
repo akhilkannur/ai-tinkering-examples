@@ -48,7 +48,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
 
   const handleOpenModal = (example: EnrichedExampleRecord) => {
     const categorySlug = example.category?.toLowerCase().replace(/\s+/g, '-') || 'uncategorized';
-    router.push(`/ai-examples/${categorySlug}/${example.slug}`, undefined, { shallow: true });
+    // router.push(`/ai-examples/${categorySlug}/${example.slug}`, undefined, { shallow: true }); // Temporarily commented out for debugging
     setSelectedExample(example);
     setIsModalOpen(true);
   };
