@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 import { X, ExternalLink } from 'lucide-react'
 import type { EnrichedExampleRecord } from '../lib/airtable'
 import ExampleBody from './ExampleBody'
+import SocialSharing from './SocialSharing'
 
 interface ExampleModalProps {
   example: EnrichedExampleRecord | null
@@ -84,7 +85,12 @@ export default function ExampleModal({ example, isOpen, onClose }: ExampleModalP
         </div>
 
         <div className="sticky bottom-0 border-t border-slate-100 p-4 bg-slate-50 rounded-b-2xl shadow-inner">
-          <div className="flex items-center justify-end">
+          <div className="flex items-center justify-between">
+            <SocialSharing
+              example={example}
+              title={example.title}
+              compact={true}
+            />
             {example.original_link && (
               <a
                 href={example.original_link}

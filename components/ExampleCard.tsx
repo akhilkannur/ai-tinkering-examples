@@ -70,7 +70,7 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
                 src={optimizedImageUrl || img || "/placeholder.svg"}
                 alt={`${example.title} - AI workflow example screenshot`}
                 fill
-                className={`object-cover group-hover:scale-105 transition-transform duration-300 ${
+                className={`object-cover object-left-top group-hover:scale-105 transition-transform duration-300 ${
                   imageLoading ? "opacity-0" : "opacity-100"
                 }`}
                 sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
