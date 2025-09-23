@@ -108,7 +108,7 @@ export default function ExamplePage({ example }: ExamplePageProps) {
               href={example.original_link}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 bg-[#0e172c] text-[#fffffe] text-sm rounded-lg hover:bg-blue-700 transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-2 border border-transparent rounded-full shadow-sm text-base font-bold text-electric-blue bg-accent hover:bg-accent hover:text-electric-blue transition-all duration-300 transform hover:scale-105"
             >
               <ExternalLink size={16} />
               View Original

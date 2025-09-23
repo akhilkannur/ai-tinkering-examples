@@ -34,6 +34,7 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
       return
     }
     e.preventDefault()
+    e.stopPropagation()
     onOpen(example)
   }
 

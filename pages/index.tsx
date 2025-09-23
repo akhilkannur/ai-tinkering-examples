@@ -74,7 +74,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
 
   return (
     <>
-      <Head>
+            <Head>
         <title>{homepageTitle}</title>
         <meta name="description" content={homepageDescription} />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -131,6 +131,26 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
             }
           `}
         </style>
+
+        {selectedExample && (
+          <>
+            <title>{selectedExample.title} | AI Examples</title>
+            <meta name="description" content={selectedExample.summary || homepageDescription} />
+            <meta property="og:title" content={selectedExample.title} />
+            <meta property="og:description" content={selectedExample.summary || homepageDescription} />
+            {selectedExample.screenshots?.[0]?.url && (
+              <meta property="og:image" content={selectedExample.screenshots[0].url} />
+            )}
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:title" content={selectedExample.title} />
+            <meta name="twitter:description" content={selectedExample.summary || homepageDescription} />
+            {selectedExample.screenshots?.[0]?.url && (
+              <meta name="twitter:image" content={selectedExample.screenshots[0].url} />
+            )}
+            <meta property="og:url" content={`${process.env.NEXT_PUBLIC_BASE_URL || 'https://ai-examples.com'}${router.asPath}`} />
+            <meta name="twitter:url" content={`${process.env.NEXT_PUBLIC_BASE_URL || 'https://ai-examples.com'}${router.asPath}`} />
+          </>
+        )}
       </Head>
 
       <div className="min-h-screen bg-primary-bg font-sans text-text-color fade-in">
