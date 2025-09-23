@@ -43,7 +43,7 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
       transition={{ duration: 0.5 }}
-      className="card group cursor-pointer relative flex flex-col bg-[#fef6e4] custom-shadow rounded-lg overflow-hidden border border-transparent hover:border-accent transition-all duration-300 transform hover:-translate-y-1"
+      className="card group cursor-pointer relative flex flex-col bg-[#fef6e4] custom-shadow rounded-2xl overflow-hidden border border-transparent hover:border-accent transition-all duration-300 transform hover:-translate-y-1"
     >
       {/* SEO Link wrapper - invisible but covers the card for crawlers */}
       <Link href={exampleUrl} className="absolute inset-0 z-0" aria-label={example.title}>
@@ -53,7 +53,7 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
       {/* Card content with higher z-index */}
       <div className="relative z-10 flex-grow" onClick={handleCardClick}>
         {img && (
-          <div className="relative w-full h-96 overflow-hidden bg-[#fef6e4]">
+          <div className="relative w-full h-96 overflow-hidden bg-[#fef6e4] rounded-t-2xl">
             {imageLoading && (
               <div className="absolute inset-0 bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 bg-[length:200%_100%] animate-[shimmer_1.5s_ease-in-out_infinite]" />
             )}
@@ -83,20 +83,21 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
                   onError={() => setImageError(true)}
                 />
                 <div className="absolute inset-0 bg-blue-900 opacity-20 group-hover:opacity-10 transition-opacity duration-300"></div>
+                {example.read_time && (
+                  <div className="absolute bottom-2 right-2 bg-black/50 text-white text-xs px-2 py-1 rounded-md flex items-center">
+                    <Clock size={12} className="mr-1" />
+                    <span>{example.read_time} min read</span>
+                  </div>
+                )}
               </>
             )}
           </div>
         )}
         <div className="p-4 text-center">
-          <h3 className="text-lg font-bold leading-tight text-text-color line-clamp-2">
+          <h3 className="text-xl font-extrabold leading-tight text-text-color line-clamp-2">
             {example.title}
           </h3>
-          {example.read_time && (
-            <div className="mt-2 flex items-center justify-center text-xs text-slate-500">
-              <Clock size={12} className="mr-1" />
-              <span>{example.read_time} min read</span>
-            </div>
-          )}
+          
         </div>
       </div>
     </motion.article>
