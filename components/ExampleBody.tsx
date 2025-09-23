@@ -18,37 +18,39 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 mb-2 leading-tight">
           {example.title}
         </h1>
-        <div className="flex flex-wrap items-center gap-4 text-sm text-slate-600 mb-6">
-          {example.category && (
-            <Link 
-              href={`/ai-examples/category/${categorySlug}`}
-              className="inline-flex items-center gap-1 px-3 py-1 border border-transparent rounded-full bg-accent text-white hover:bg-pink-500 transition-colors"
-            >
-              <Tag size={14} />
-              {example.category}
-            </Link>
-          )}
-          <div className="flex items-center gap-1">
+        <div className="flex items-center justify-between text-sm text-slate-600 mb-6">
+          <div className="flex flex-wrap items-center gap-4"> {/* Group category and author */}
+            {example.category && (
+              <Link
+                href={`/ai-examples/category/${categorySlug}`}
+                className="inline-flex items-center gap-1 px-3 py-1 border border-transparent rounded-full bg-accent text-white hover:bg-pink-500 transition-colors"
+              >
+                <Tag size={14} />
+                {example.category}
+              </Link>
+            )}
+            {example.author_name && (
+              <div className="flex items-center gap-1">
+                <User size={14} />
+                {example.author_link ? (
+                  <a
+                    href={example.author_link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline"
+                  >
+                    {example.author_name}
+                  </a>
+                ) : (
+                  <span>{example.author_name}</span>
+                )}
+              </div>
+            )}
+          </div>
+          <div className="flex items-center gap-1"> {/* Min-read tag pushed to right */}
             <Clock size={14} />
             <span>{example.read_time || 1} min read</span>
           </div>
-          {example.author_name && (
-            <div className="flex items-center gap-1">
-              <User size={14} />
-              {example.author_link ? (
-                <a 
-                  href={example.author_link} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="hover:underline"
-                >
-                  {example.author_name}
-                </a>
-              ) : (
-                <span>{example.author_name}</span>
-              )}
-            </div>
-          )}
         </div>
 
         {/* Sponsor Info */}

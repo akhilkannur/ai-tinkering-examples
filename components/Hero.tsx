@@ -10,13 +10,15 @@ export default function Hero() {
 
           <div className="relative z-10">
             <div className="flex justify-center">
-              <Image
-                src="/favicon.png"
-                alt="AI Examples Logo"
-                width={128}
-                height={128}
-                className="mx-auto"
-              />
+              <div className="relative w-32 h-32"> {/* Added wrapper div with fixed size and relative positioning */}
+                <Image
+                  src="/logo.png"
+                  alt="AI Examples Logo"
+                  layout="fill" // Use fill layout
+                  objectFit="contain" // Ensure it fits within the container
+                  className="mx-auto" // mx-auto might not be needed with layout="fill"
+                />
+              </div>
             </div>
             <h1 className="text-4xl sm:text-5xl font-black tracking-tighter mb-4 text-text-color font-headline">
               Weekly AI examples you can copy & try
