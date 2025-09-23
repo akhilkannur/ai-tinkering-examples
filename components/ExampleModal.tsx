@@ -1,5 +1,4 @@
 import { useEffect, useRef } from 'react'
-import { useRouter } from 'next/router'
 import { X, ExternalLink } from 'lucide-react'
 import type { EnrichedExampleRecord } from '../lib/airtable'
 import ExampleBody from './ExampleBody'

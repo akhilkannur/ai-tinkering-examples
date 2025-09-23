@@ -1,7 +1,7 @@
 import type { EnrichedExampleRecord } from '../lib/airtable'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Clock, Calendar, User, Tag } from 'lucide-react'
+import { Clock, User, Tag } from 'lucide-react'
 import SponsorDetailCard from './SponsorDetailCard'
 
 interface ExampleBodyProps {
@@ -9,7 +9,6 @@ interface ExampleBodyProps {
 }
 
 export default function ExampleBody({ example }: ExampleBodyProps) {
-  const publishDate = example.publish_date ? new Date(example.publish_date) : null
   const categorySlug = example.category?.toLowerCase().replace(/\s+/g, '-') || 'uncategorized'
 
   return (

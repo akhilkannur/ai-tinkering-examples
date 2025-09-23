@@ -2,7 +2,7 @@ import { useState, useMemo, useEffect } from 'react'
 import { GetStaticProps } from 'next'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
-import Script from 'next/script'
+
 import Image from 'next/image'
 import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
@@ -60,8 +60,6 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
     setTimeout(() => setSelectedExample(null), 300);
   };
 
-  const examplesToShowBeforeJobsStrip = 6;
-
   useEffect(() => {
     if (router.query.slug && Array.isArray(router.query.slug)) {
       const slug = router.query.slug[router.query.slug.length - 1]; // Get the actual example slug
@@ -75,63 +73,12 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
 
   return (
     <>
-            <Head>
+                        <Head>
         <title>{homepageTitle}</title>
         <meta name="description" content={homepageDescription} />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-        <style>
-          {`
-            @keyframes fadeIn {
-              from { opacity: 0; }
-              to { opacity: 1; }
-            }
-            .fade-in {
-              animation: fadeIn 0.5s ease-in-out;
-            }
-            @keyframes blob {
-              0% { transform: translate(0px, 0px) scale(1); }
-              33% { transform: translate(30px, -50px) scale(1.1); }
-              66% { transform: translate(-20px, 20px) scale(0.9); }
-              100% { transform: translate(0px, 0px) scale(1); }
-            }
-            .animate-blob { animation: blob 7s infinite; }
-            .animation-delay-2000 { animation-delay: 2s; }
-            .animation-delay-4000 { animation: delay 4s; }
-            .hero-container {
-              display: flex !important;
-              align-items: center !important;
-              justify-content: space-between !important;
-              gap: 2rem !important;
-            }
-
-            .hero-text {
-              flex: 1 !important;
-              max-width: 50% !important;
-            }
-
-            .hero-image {
-              flex: 1 !important;
-              max-width: 50% !important;
-              display: flex !important;
-              justify-content: center !important;
-            }
-            /* More aggressive Hero form spacing control */
-            .hero-container div[style*="maxWidth"] {
-              margin-bottom: -20px !important;
-              overflow: hidden !important;
-              height: 120px !important;
-            }
-
-            .hero-container iframe[data-test-id="beehiiv-embed"] {
-              margin-bottom: -30px !important;
-            }
-            .hero-image-container {
-              height: 350px; /* Adjust this value as needed */
-            }
-          `}
-        </style>
 
         {selectedExample && (
           <>
@@ -148,8 +95,8 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
             {selectedExample.screenshots?.[0]?.url && (
               <meta name="twitter:image" content={selectedExample.screenshots[0].url} />
             )}
-            <meta property="og:url" content={`${process.env.NEXT_PUBLIC_BASE_URL || 'https://ai-examples.com'}${router.asPath}`} />
-            <meta name="twitter:url" content={`${process.env.NEXT_PUBLIC_BASE_URL || 'https://ai-examples.com'}${router.asPath}`} />
+            <meta property="og:url" content={`${process.env.NEXT_PUBLIC_BASE_URL}${router.asPath}`} />
+            <meta name="twitter:url" content={`${process.env.NEXT_PUBLIC_BASE_URL}${router.asPath}`} />
           </>
         )}
       </Head>

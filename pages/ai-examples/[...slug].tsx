@@ -22,7 +22,7 @@ export default function ExamplePage({ example }: ExamplePageProps) {
   }
 
   const categorySlug = example.category?.toLowerCase().replace(/\s+/g, '-') || 'uncategorized'
-  const currentUrl = `https://your-domain.com/ai-examples/${categorySlug}/${example.slug}`
+  const currentUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/ai-examples/${categorySlug}/${example.slug}`
 
   // Generate structured data for SEO
   const structuredData = {
@@ -39,7 +39,7 @@ export default function ExamplePage({ example }: ExamplePageProps) {
       "name": "AI Tinkering Examples",
       "logo": {
         "@type": "ImageObject",
-        "url": example.sponsor?.logo?.[0]?.url || 'https://your-domain.com/logo.png'
+        "url": example.sponsor?.logo?.[0]?.url || `${process.env.NEXT_PUBLIC_BASE_URL}/logo.png`
       }
     },
     "datePublished": example.publish_date,

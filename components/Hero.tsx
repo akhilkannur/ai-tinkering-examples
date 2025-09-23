@@ -1,5 +1,5 @@
-import { ArrowRight } from 'lucide-react'
-import Script from 'next/script'
+
+
 import Image from 'next/image'
 
 export default function Hero() {
@@ -26,8 +26,8 @@ export default function Hero() {
               A newsletter of real AI use cases from real people. Practical and simple for non-technical thinkers
             </p>
 
-            <div style={{maxWidth: "500px", overflow: "hidden", height: "140px", marginBottom: "0px", margin: "0 auto"}}>
-              <iframe src="https://subscribe-forms.beehiiv.com/44f8ba74-5250-4aac-9fa0-3ad651f05798" data-test-id="beehiiv-embed" width="500" height="147" frameBorder="0" scrolling="no" className="mx-auto block" style={{margin: '0', borderRadius: '0px', backgroundColor: 'transparent', maxWidth: '100%', transform: 'translateY(0px)'}} />
+            <div className="max-w-[500px] overflow-hidden h-[140px] mb-0 mx-auto">
+              <iframe src={process.env.NEXT_PUBLIC_BEEHIIV_EMBED_URL} data-test-id="beehiiv-embed" width="500" height="147" frameBorder="0" scrolling="no" className="mx-auto block m-0 rounded-none bg-transparent max-w-full translate-y-0" />
             </div>
           </div>
         </div>

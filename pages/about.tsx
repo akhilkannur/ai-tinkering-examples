@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Image from 'next/image'
 import Navbar from '../components/Navbar'
 import WavyDivider from '../components/WavyDivider'
 
@@ -17,9 +18,11 @@ export default function AboutPage() {
           </h1>
           <div className="flex flex-col md:flex-row items-center gap-8">
             <div className="md:w-1/2">
-              <img
+              <Image
                 src="/Gemini_Generated_Image_b3hv6cb3hv6cb3hv.png"
                 alt="AI Examples"
+                width={500}
+                height={300}
                 className="rounded-lg shadow-lg"
               />
             </div>

@@ -2,11 +2,8 @@ import React from "react"
 import { motion, useInView } from 'framer-motion'
 import type { ExampleRecord, SponsorRecord } from "../lib/airtable"
 import Image from "next/image"
-import Link from "next/link"
 import { useState } from "react"
-import { Share2, ExternalLink, Clock } from "lucide-react"
-import { Facebook, Twitter, Linkedin, Link2, Copy, Check } from "lucide-react"
-import { optimizeImageUrl } from '../utils/cloudinary'
+import { Clock } from "lucide-react"
 
 interface ExampleCardProps {
   example: ExampleRecord

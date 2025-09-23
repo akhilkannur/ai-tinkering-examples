@@ -45,7 +45,7 @@ export default function Navbar() {
           {/* Desktop Submit Button */}
           <div className="hidden sm:ml-6 sm:flex sm:items-center">
             <a
-              href="https://airtable.com/appUo7R0la4VUzOoT/shrk9A6i9TF4UjTfo"
+              href={process.env.NEXT_PUBLIC_AIRTABLE_SUBMIT_FORM_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-6 py-2 border border-transparent rounded-full shadow-sm text-base font-bold text-electric-blue bg-accent hover:bg-accent hover:text-electric-blue transition-all duration-300 transform hover:scale-105"
@@ -91,7 +91,7 @@ export default function Navbar() {
               </Link>
             ))}
             <a
-              href="https://airtable.com/appUo7R0la4VUzOoT/shrk9A6i9TF4UjTfo"
+              href={process.env.NEXT_PUBLIC_AIRTABLE_SUBMIT_FORM_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="block w-full text-center px-3 py-3 rounded-md text-base font-bold text-text-color bg-accent hover:bg-accent mt-4"

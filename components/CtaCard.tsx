@@ -1,4 +1,4 @@
-import { ArrowDown } from 'lucide-react';
+
 
 export default function CtaCard() {
   const scrollToNewsletter = () => {
