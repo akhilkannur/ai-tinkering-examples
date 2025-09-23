@@ -28,11 +28,31 @@ export default function AboutPage() {
             </div>
             <div className="md:w-1/2">
               <p className="text-lg text-light-purple mb-6">
-                AI Examples is a curated collection of AI workflows and prompts designed for non-technical tinkerers. Our mission is to demystify AI and make it accessible to everyone, regardless of their technical background.
-                {/* TODO: Consider adding a contextual internal link here, e.g., to /ai-examples */}
+                Let me tell you a dirty little secret…
               </p>
-              <p className="text-lg text-light-purple">
-                We believe that AI is a powerful tool that can be used to solve real-world problems and unlock new creative possibilities. That's why we provide clear, actionable examples that you can copy, try, and adapt for your own projects.
+              <p className="text-lg text-light-purple mb-6">
+                Most of the “AI stuff” you see online? It’s smoke and mirrors. Shiny screenshots. Overhyped demos. Big words to make you feel like you’re missing out on the next big thing.
+              </p>
+              <p className="text-lg text-light-purple mb-6">
+                But here’s the problem: if you’re a regular human, someone who doesn’t code, doesn’t have 10 PhDs, and doesn’t want to waste hours chasing gimmicks, none of that matters.
+              </p>
+              <p className="text-lg text-light-purple mb-6">
+                You don’t need another headline about “AI changing the world.” You need examples you can actually copy, try, and put to work today.
+              </p>
+              <p className="text-lg text-light-purple mb-6">
+                That’s why I started AI Examples.
+              </p>
+              <p className="text-lg text-light-purple mb-6">
+                Every week, I hunt through the noise, filter out the fluff, and curate only the AI workflows, prompts, and use-cases that real people are using. Things you can swipe and use without needing to be technical.
+              </p>
+              <p className="text-lg text-light-purple mb-6">
+                It’s not theory. It’s not hype. It’s the good stuff, handpicked, trimmed of fat, and delivered straight to you.
+              </p>
+              <p className="text-lg text-light-purple mb-6">
+                Because let’s be real: AI is only useful if you can do something with it.
+              </p>
+              <p className="text-lg text-light-purple mb-6">
+                See you inside,<br />Akhil<br />📩 akhil@realaiexamples.com
               </p>
             </div>
           </div>

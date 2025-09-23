@@ -12,8 +12,8 @@ export default function Hero() {
             <div className="flex justify-center">
               <div className="relative w-32 h-32"> {/* Added wrapper div with fixed size and relative positioning */}
                 <Image
-                  src="/logo.png"
-                  alt="AI Examples Logo"
+                  src="/hero_image.png"
+                  alt="Hero image for AI Examples"
                   layout="fill" // Use fill layout
                   objectFit="contain" // Ensure it fits within the container
                   className="mx-auto" // mx-auto might not be needed with layout="fill"

@@ -41,10 +41,10 @@ const NewsletterPopup: React.FC<NewsletterPopupProps> = ({ delay = 20 }) => {
           &times;
         </button>
         <div className="mb-4">
-          <Image src="/logo.png" alt="Favicon" width={128} height={128} className="mx-auto" />
+          <Image src="/favicon_canva.png" alt="Favicon" width={128} height={128} className="mx-auto" />
         </div>
         <p className="text-xl font-semibold mb-4 text-text-color">
-          I'm Akhil. I curate a weekly newsletter with the most interesting AI examples I find. A simple, no-fluff way to keep up with what's possible. Sound useful?
+          Hey, I'm Akhil. I curate a weekly newsletter with the most interesting AI examples I find. Sound useful? Subscribe today!
         </p>
         <div className="beehiiv-form-embed mx-auto block m-0 rounded-none bg-transparent max-w-full translate-y-0">
           <Script async src="https://subscribe-forms.beehiiv.com/embed.js" />
