@@ -16,7 +16,7 @@ export default function AboutPage() {
           <h1 className="text-4xl sm:text-5xl font-black tracking-tighter mb-8 text-center">
             About AI Examples
           </h1>
-          <div className="flex flex-col md:flex-row items-center gap-8">
+          <div className="flex flex-col md:flex-row items-start gap-8">
             <div className="md:w-1/2">
               <Image
                 src="/Gemini_Generated_Image_b3hv6cb3hv6cb3hv.png"
@@ -28,7 +28,7 @@ export default function AboutPage() {
             </div>
             <div className="md:w-1/2">
               <p className="text-lg text-light-purple mb-6">
-                Let me tell you a dirty little secret…
+                <span className="font-bold">Let me tell you a dirty little secret…</span>
               </p>
               <p className="text-lg text-light-purple mb-6">
                 Most of the “AI stuff” you see online? It’s smoke and mirrors. Shiny screenshots. Overhyped demos. Big words to make you feel like you’re missing out on the next big thing.
@@ -39,6 +39,7 @@ export default function AboutPage() {
               <p className="text-lg text-light-purple mb-6">
                 You don’t need another headline about “AI changing the world.” You need examples you can actually copy, try, and put to work today.
               </p>
+              <br /> {/* Added line break */}
               <p className="text-lg text-light-purple mb-6">
                 That’s why I started AI Examples.
               </p>
