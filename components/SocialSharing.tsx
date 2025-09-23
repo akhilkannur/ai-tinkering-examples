@@ -1,4 +1,4 @@
-import { Facebook, Twitter, Linkedin, Link2, Copy, Check } from 'lucide-react'
+import { Facebook, X, Linkedin, Link2, Copy, Check } from 'lucide-react'
 import { useState } from 'react'
 import type { ExampleRecord } from '../lib/airtable'
 import { getSocialShareUrls } from '../utils/urlHelpers'
@@ -63,10 +63,10 @@ export default function SocialSharing({
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => handleShare('facebook')}
-          className="p-2 text-slate-400 hover:text-[#1877F2] transition-colors"
+          className="p-2 border rounded-full text-slate-400 hover:text-[#1877F2] hover:border-[#1877F2] transition-colors"
           aria-label="Share on Facebook"
         >
-          <Facebook size={16} />
+          <Facebook size={20} />
         </a>
 
         <a
@@ -74,10 +74,10 @@ export default function SocialSharing({
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => handleShare('twitter')}
-          className="p-2 text-slate-400 hover:text-[#1DA1F2] transition-colors"
-          aria-label="Share on Twitter"
+          className="p-2 border rounded-full text-slate-400 hover:text-black hover:border-black transition-colors"
+          aria-label="Share on X"
         >
-          <Twitter size={16} />
+          <X size={20} />
         </a>
 
         <a
@@ -85,18 +85,18 @@ export default function SocialSharing({
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => handleShare('linkedin')}
-          className="p-2 text-slate-400 hover:text-[#0A66C2] transition-colors"
+          className="p-2 border rounded-full text-slate-400 hover:text-[#0A66C2] hover:border-[#0A66C2] transition-colors"
           aria-label="Share on LinkedIn"
         >
-          <Linkedin size={16} />
+          <Linkedin size={20} />
         </a>
 
         <button
           onClick={copyToClipboard}
-          className="p-2 text-slate-400 hover:text-slate-600 transition-colors"
+          className="p-2 border rounded-full text-slate-400 hover:text-slate-600 hover:border-slate-600 transition-colors"
           aria-label="Copy link"
         >
-          {copied ? <Check size={16} /> : <Link2 size={16} />}
+          {copied ? <Check size={20} /> : <Link2 size={20} />}
         </button>
       </div>
     )
@@ -112,10 +112,10 @@ export default function SocialSharing({
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => handleShare('twitter')}
-          className="text-gray-500 hover:text-gray-900 transition-colors"
-          aria-label="Share on Twitter"
+          className="text-gray-500 hover:text-black transition-colors"
+          aria-label="Share on X"
         >
-          <Twitter size={20} />
+          <X size={20} />
         </a>
         <a
           href={shareData.facebook}

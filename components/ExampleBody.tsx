@@ -23,7 +23,7 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
           {example.category && (
             <Link 
               href={`/ai-examples/category/${categorySlug}`}
-              className="inline-flex items-center gap-1 px-3 py-1 border rounded-full bg-slate-100 hover:bg-slate-200 transition-colors"
+              className="inline-flex items-center gap-1 px-3 py-1 border border-transparent rounded-full bg-accent text-white hover:bg-pink-500 transition-colors"
             >
               <Tag size={14} />
               {example.category}
