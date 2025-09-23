@@ -66,21 +66,24 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
             )}
 
             {!imageError && (
-              <Image
-                src={optimizedImageUrl || img || "/placeholder.svg"}
-                alt={`${example.title} - AI workflow example screenshot`}
-                fill
-                className={`object-cover object-left-top group-hover:scale-105 transition-transform duration-300 ${
-                  imageLoading ? "opacity-0" : "opacity-100"
-                }`}
-                sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                priority={priority}
-                loading={priority ? "eager" : "lazy"}
-                fetchPriority={priority ? "high" : "auto"}
-                quality={80}
-                onLoad={() => setImageLoading(false)}
-                onError={() => setImageError(true)}
-              />
+              <>
+                <Image
+                  src={optimizedImageUrl || img || "/placeholder.svg"}
+                  alt={`${example.title} - AI workflow example screenshot`}
+                  fill
+                  className={`object-cover object-left-top group-hover:scale-105 transition-transform duration-300 ${
+                    imageLoading ? "opacity-0" : "opacity-100"
+                  }`}
+                  sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                  priority={priority}
+                  loading={priority ? "eager" : "lazy"}
+                  fetchPriority={priority ? "high" : "auto"}
+                  quality={80}
+                  onLoad={() => setImageLoading(false)}
+                  onError={() => setImageError(true)}
+                />
+                <div className="absolute inset-0 bg-blue-900 opacity-20 group-hover:opacity-10 transition-opacity duration-300"></div>
+              </>
             )}
           </div>
         )}
@@ -88,6 +91,12 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
           <h3 className="text-lg font-bold leading-tight text-text-color line-clamp-2">
             {example.title}
           </h3>
+          {example.read_time && (
+            <div className="mt-2 flex items-center justify-center text-xs text-slate-500">
+              <Clock size={12} className="mr-1" />
+              <span>{example.read_time} min read</span>
+            </div>
+          )}
         </div>
       </div>
     </motion.article>

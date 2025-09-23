@@ -13,6 +13,7 @@ import ToolCard from '../components/ToolCard'
 import { fetchEnrichedExamples, fetchFeaturedJobs, fetchFeaturedTools, fetchSiteSettings, EnrichedExampleRecord, JobRecord, ToolRecord, SiteSettingRecord } from '../lib/airtable'
 import WavyDivider from '../components/WavyDivider'
 import CtaCard from '../components/CtaCard'
+import ZigzagDivider from '../components/ZigzagDivider'
 
 
 interface HomePageProps {
@@ -119,6 +120,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
       <div className="min-h-screen bg-primary-bg font-sans text-text-color fade-in">
         <Navbar />
         <Hero />
+        <ZigzagDivider backgroundColor="#fef6e4" fillColor="#f3d2c1" />
 
         {siteSettings.enableFeaturedToolsSection && featuredTools.length > 0 && (
           <HorizontalStrip 
@@ -208,6 +210,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
           </div>
         </div>
 
+        <ZigzagDivider backgroundColor="#f3d2c1" fillColor="#fef6e4" />
         <div className="bg-primary-bg text-text-color mt-16 mb-8" id="newsletter">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4">
             <div className="max-w-3xl text-center mx-auto">
