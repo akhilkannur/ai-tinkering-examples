@@ -29,6 +29,7 @@ export default function AboutPage() {
             <div className="md:w-1/2">
               <p className="text-lg text-light-purple mb-6">
                 AI Examples is a curated collection of AI workflows and prompts designed for non-technical tinkerers. Our mission is to demystify AI and make it accessible to everyone, regardless of their technical background.
+                {/* TODO: Consider adding a contextual internal link here, e.g., to /ai-examples */}
               </p>
               <p className="text-lg text-light-purple">
                 We believe that AI is a powerful tool that can be used to solve real-world problems and unlock new creative possibilities. That's why we provide clear, actionable examples that you can copy, try, and adapt for your own projects.

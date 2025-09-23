@@ -80,6 +80,30 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": homepageTitle,
+          "url": process.env.NEXT_PUBLIC_BASE_URL,
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": `${process.env.NEXT_PUBLIC_BASE_URL}/ai-examples?q={search_term_string}`,
+            "query-input": "required name=search_term_string"
+          }
+        })}} />
+
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": homepageTitle,
+          "url": process.env.NEXT_PUBLIC_BASE_URL,
+          "logo": `${process.env.NEXT_PUBLIC_BASE_URL}/logo.png`,
+          "sameAs": [
+            process.env.NEXT_PUBLIC_TWITTER_URL,
+            process.env.NEXT_PUBLIC_LINKEDIN_URL
+          ].filter(Boolean) // Filter out undefined/null values
+        })}} />
+
         {selectedExample && (
           <>
             <title>{selectedExample.title} | AI Examples</title>

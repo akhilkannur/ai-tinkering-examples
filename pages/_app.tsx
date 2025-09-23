@@ -22,6 +22,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={ogImage} />
+        <link rel="icon" href="/favicon.png" sizes="any" />
       </Head>
       <Component {...pageProps} />
       <Footer />
