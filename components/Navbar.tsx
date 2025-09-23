@@ -11,8 +11,6 @@ export default function Navbar() {
 
   const navLinks = [
     { href: '/ai-examples', label: 'Examples' },
-    { href: '/tools', label: 'Tools' },
-    { href: '/jobs', label: 'Jobs' },
     { href: '/about', label: 'About' },
   ]
 
