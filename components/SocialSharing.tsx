@@ -63,7 +63,7 @@ export default function SocialSharing({
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => handleShare('facebook')}
-          className="p-2 border rounded-full text-slate-400 hover:text-[#1877F2] hover:border-[#1877F2] transition-colors"
+          className="p-2 border-2 rounded-full text-slate-400 hover:text-[#1877F2] hover:border-[#1877F2] transition-colors"
           aria-label="Share on Facebook"
         >
           <Facebook size={20} />
@@ -74,7 +74,7 @@ export default function SocialSharing({
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => handleShare('twitter')}
-          className="p-2 border rounded-full text-slate-400 hover:text-black hover:border-black transition-colors"
+          className="p-2 border-2 rounded-full text-slate-400 hover:text-black hover:border-black transition-colors"
           aria-label="Share on X"
         >
           <X size={20} />
@@ -85,7 +85,7 @@ export default function SocialSharing({
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => handleShare('linkedin')}
-          className="p-2 border rounded-full text-slate-400 hover:text-[#0A66C2] hover:border-[#0A66C2] transition-colors"
+          className="p-2 border-2 rounded-full text-slate-400 hover:text-[#0A66C2] hover:border-[#0A66C2] transition-colors"
           aria-label="Share on LinkedIn"
         >
           <Linkedin size={20} />
@@ -93,7 +93,7 @@ export default function SocialSharing({
 
         <button
           onClick={copyToClipboard}
-          className="p-2 border rounded-full text-slate-400 hover:text-slate-600 hover:border-slate-600 transition-colors"
+          className="p-2 border-2 rounded-full text-slate-400 hover:text-slate-600 hover:border-slate-600 transition-colors"
           aria-label="Copy link"
         >
           {copied ? <Check size={20} /> : <Link2 size={20} />}

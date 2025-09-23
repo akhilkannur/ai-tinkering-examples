@@ -48,13 +48,14 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
 
   const handleOpenModal = (example: EnrichedExampleRecord) => {
     const categorySlug = example.category?.toLowerCase().replace(/\s+/g, '-') || 'uncategorized';
-    // router.push(`/ai-examples/${categorySlug}/${example.slug}`, undefined, { shallow: true }); // Temporarily commented out for debugging
+    const newUrl = `/ai-examples/${categorySlug}/${example.slug}`;
+    window.history.pushState(null, '', newUrl);
     setSelectedExample(example);
     setIsModalOpen(true);
   };
 
   const handleCloseModal = () => {
-    router.replace(router.pathname, undefined, { shallow: true });
+    window.history.replaceState(null, '', router.pathname);
     setIsModalOpen(false);
     setTimeout(() => setSelectedExample(null), 300);
   };

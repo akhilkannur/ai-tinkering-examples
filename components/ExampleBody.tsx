@@ -64,7 +64,7 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
       <div className="max-w-3xl mx-auto px-4">
         {example.summary && (
           <p className="text-base sm:text-lg text-slate-700 leading-relaxed mb-6 font-roboto">
-            <span className="font-bold">{example.summary.split(' ')[0]}</span>
+            <span className="font-bold">{example.summary.split(' ')[0]}</span>{' '}
             {example.summary.split(' ').slice(1).join(' ')}
           </p>
         )}
@@ -91,7 +91,7 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
         {example.workflow_steps && (
           <div className="mb-6 pl-4 border-l-4 border-slate-200">
             <p className="text-base text-slate-700 leading-relaxed font-roboto">
-              <span className="font-bold">{example.workflow_steps.split(' ')[0]}</span>
+              <span className="font-bold">{example.workflow_steps.split(' ')[0]}</span>{' '}
               {example.workflow_steps.split(' ').slice(1).join(' ')}
             </p>
           </div>
