@@ -73,7 +73,7 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
               <div key={i} className="relative w-full rounded-xl overflow-hidden bg-slate-100">
                 <Image
                   src={screenshot.url}
-                  alt={`${example.title} screenshot ${i + 1}`}
+                  alt={`${example.title} - ${example.summary || 'AI workflow example screenshot'} - Step ${i + 1}`}
                   width={800}
                   height={450}
                   className="w-full h-auto object-cover"

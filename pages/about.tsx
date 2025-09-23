@@ -20,7 +20,7 @@ export default function AboutPage() {
             <div className="md:w-1/2">
               <Image
                 src="/Gemini_Generated_Image_b3hv6cb3hv6cb3hv.png"
-                alt="AI Examples"
+                alt="Image representing AI Examples website and its content"
                 width={500}
                 height={300}
                 className="rounded-lg shadow-lg"
