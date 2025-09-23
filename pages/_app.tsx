@@ -3,6 +3,7 @@ import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import Footer from '../components/Footer'
 import NewsletterPopup from '../components/NewsletterPopup'
+import Script from 'next/script'
 
 export default function App({ Component, pageProps }: AppProps) {
   const title = "AI Examples You Can Copy & Try";
@@ -25,6 +26,16 @@ export default function App({ Component, pageProps }: AppProps) {
       <Component {...pageProps} />
       <Footer />
       <NewsletterPopup />
+      {/* Google Analytics */}
+      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-7V91K25TH0" strategy="afterInteractive" />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-7V91K25TH0');
+        `}
+      </Script>
     </>
   )
 }
