@@ -285,3 +285,9 @@ select:focus-visible {
 .hero-image-container {
   height: 350px; /* Adjust this value as needed */
 }
+
+iframe[data-test-id="beehiiv-embed"] {
+  padding: 0 !important;
+  margin: 0 !important;
+  background: transparent !important;
+}

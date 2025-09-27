@@ -48,7 +48,7 @@ const NewsletterPopup: React.FC<NewsletterPopupProps> = ({ delay = 20 }) => {
         </p>
         <div className="beehiiv-form-embed mx-auto block m-0 rounded-none bg-transparent max-w-full translate-y-0">
           <Script async src="https://subscribe-forms.beehiiv.com/embed.js" />
-          <iframe src="https://subscribe-forms.beehiiv.com/44f8ba74-5250-4aac-9fa0-3ad651f05798" data-test-id="beehiiv-embed" frameBorder="0" scrolling="no" style={{width: "100%", height: "147px"}} />
+          <iframe src="https://subscribe-forms.beehiiv.com/44f8ba74-5250-4aac-9fa0-3ad651f05798" data-test-id="beehiiv-embed" frameBorder="0" scrolling="no" />
         </div>
       </div>
     </div>
