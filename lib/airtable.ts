@@ -191,6 +191,9 @@ async function fetchAll<T>(tableName: string, processFn: (record: any) => T): Pr
     }
     const allRecords = await base(tableName).select(selectOptions).all();
     console.log(`✅ Found ${allRecords.length} records in ${tableName}`);
+    if (allRecords.length > 0) {
+      console.log('🔍 First raw record:', JSON.stringify(allRecords[0]._rawJson, null, 2));
+    }
     const processed = allRecords.map(processFn);
     return processed;
   } catch (error) {
