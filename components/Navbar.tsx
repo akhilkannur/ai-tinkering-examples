@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { Menu, X } from 'lucide-react'
+import Head from 'next/head'
 
 import Image from 'next/image'
 
@@ -15,7 +16,24 @@ export default function Navbar() {
   ]
 
   return (
-    <nav className="bg-primary-bg/80 backdrop-blur-sm sticky top-0 z-50">
+    <>
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'SiteNavigationElement',
+              'name': ['Examples', 'About'],
+              'url': [
+                'https://realaiexamples.com/ai-examples',
+                'https://realaiexamples.com/about',
+              ],
+            }),
+          }}
+        />
+      </Head>
+      <nav className="bg-primary-bg/80 backdrop-blur-sm sticky top-0 z-50">
       <div className="container mx-auto px-1 sm:px-4 py-3">
         <div className="flex justify-between h-20">
           <div className="flex items-center">

@@ -15,11 +15,11 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
     <>
       {/* Article Header */}
       <header className="max-w-4xl mx-auto px-4 py-6">
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 mb-2 leading-tight">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 mb-4 leading-tight">
           {example.title}
         </h1>
-        <div className="flex items-center justify-between text-sm text-slate-600 mb-6">
-          <div className="flex flex-wrap items-center gap-4"> {/* Group category and author */}
+        <div className="flex items-center justify-between text-sm text-slate-600 mb-6 mt-4">
+          <div className="flex flex-wrap items-center gap-6"> {/* Group category and author */}
             {example.category && (
               <Link
                 href={`/ai-examples/category/${categorySlug}`}
