@@ -187,9 +187,9 @@ async function fetchAll<T>(tableName: string, processFn: (record: any) => T): Pr
   console.log(`🔄 Fetching all records from ${tableName}...`);
   try {
     const selectOptions: SelectOptions<FieldSet> = {};
-    if (tableName === examplesTable) {
-      selectOptions.filterByFormula = '{Published}';
-    }
+    // if (tableName === examplesTable) {
+    //   selectOptions.filterByFormula = '{Published}';
+    // }
     const allRecords = await base(tableName).select(selectOptions).all();
     console.log(`✅ Found ${allRecords.length} records in ${tableName}`);
     if (allRecords.length > 0) {
