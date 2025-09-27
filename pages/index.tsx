@@ -187,7 +187,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
                   <ExampleCard
                     key={example.id}
                     example={example}
-                    priority={index < 6}
+                    priority={true}
                     onOpen={handleOpenModal}
                   />
                 ))}
@@ -208,7 +208,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
                   <ExampleCard
                     key={example.id}
                     example={example}
-                    priority={index < 6}
+                    priority={true}
                     onOpen={handleOpenModal}
                   />
                 ))}

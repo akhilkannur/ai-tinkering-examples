@@ -22,10 +22,10 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={ogImage} />
-        <link rel="icon" href="/favicon_canva.png" sizes="any" />
-        <link rel="apple-touch-icon" href="/favicon_canva.png" />
-        <link rel="icon" type="image/png" sizes="192x192" href="/favicon_canva.png" />
-        <link rel="icon" type="image/png" sizes="512x512" href="/favicon_canva.png" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon_canva.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon_canva.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon_canva.png" />
       </Head>
       <Component {...pageProps} />
       <Footer />

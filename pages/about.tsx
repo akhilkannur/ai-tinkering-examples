@@ -16,17 +16,17 @@ export default function AboutPage() {
           <h1 className="text-4xl sm:text-5xl font-black tracking-tighter mb-8 text-center">
             About AI Examples
           </h1>
-          <div className="flex flex-col md:flex-row items-start gap-8">
-            <div className="md:w-1/2">
+          <div className="flex flex-col items-center gap-8">
+            <div className="w-full max-w-lg">
               <Image
                 src="/Gemini_Generated_Image_b3hv6cb3hv6cb3hv.png"
                 alt="Image representing AI Examples website and its content"
                 width={500}
                 height={300}
-                className="rounded-lg shadow-lg"
+                className="rounded-lg shadow-lg mx-auto"
               />
             </div>
-            <div className="md:w-1/2">
+            <div className="w-full max-w-2xl">
               <p className="text-lg text-light-purple mb-6">
                 <span className="font-bold">Let me tell you a dirty little secret…</span>
               </p>
