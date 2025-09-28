@@ -62,7 +62,7 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
               <>
                 <Image
                   src={optimizedImageUrl || img || "/placeholder.svg"}
-                  alt={`${example.title} - AI workflow example screenshot`}
+                  alt={example.title}
                   fill
                   className={`object-cover object-left-top group-hover:scale-105 transition-transform duration-300 ${
                     imageLoading ? "opacity-0" : "opacity-100"

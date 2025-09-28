@@ -11,7 +11,7 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   const navLinks = [
-    { href: '/ai-examples', label: 'Examples' },
+    { href: '/ai-examples', label: 'All examples' },
     { href: '/about', label: 'About' },
   ]
 

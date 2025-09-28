@@ -30,7 +30,7 @@ export default function ExampleDetail({example}:{example:ExampleRecord}){
       <p className="text-slate-600 mt-2">{example.summary}</p>
       <div className="mt-6 flex flex-col gap-4">
         {imgs.map((s, i)=> (
-          <img key={i} src={s.url} alt={`${example.title} screenshot ${i+1}`} className="rounded-xl w-full object-cover" />
+          <img key={i} src={s.url} alt={example.title} className="rounded-xl w-full object-cover" />
         ))}
       </div>
 

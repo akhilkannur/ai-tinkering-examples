@@ -41,10 +41,19 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
   }, [examples])
 
   const filteredExamples = useMemo(() => {
-    return selectedCategory === 'All' 
-      ? examples 
-      : examples.filter(example => example.category === selectedCategory)
-  }, [examples, selectedCategory])
+    const sortedExamples = [...examples].sort((a, b) => {
+      if (a.publish_date && b.publish_date) {
+        return new Date(b.publish_date).getTime() - new Date(a.publish_date).getTime();
+      }
+      return 0;
+    });
+
+    if (selectedCategory === 'All') {
+      return sortedExamples.slice(0, 3);
+    }
+
+    return sortedExamples.filter(example => example.category === selectedCategory);
+  }, [examples, selectedCategory]);
 
   const handleOpenModal = (example: EnrichedExampleRecord) => {
     const categorySlug = example.category?.toLowerCase().replace(/\s+/g, '-') || 'uncategorized';
@@ -145,7 +154,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
           <h2 className="text-3xl font-extrabold text-text-color mb-6 flex items-center gap-8 w-full">
             <span className="flex-grow text-center">
               <span style={{color: '#f582ae', marginRight: '0.5rem'}}>✦</span>
-              {selectedCategory === 'All' ? 'All Examples' : selectedCategory}
+              {selectedCategory === 'All' ? 'Latest Examples' : selectedCategory}
             </span>
           </h2>
 
@@ -183,7 +192,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
           ) : (
             <>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {filteredExamples.slice(0, 9).map((example, index) => (
+                {filteredExamples.map((example, index) => (
                   <ExampleCard
                     key={example.id}
                     example={example}
@@ -202,17 +211,6 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
                   viewAllLink="/jobs"
                 />
               )}
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {filteredExamples.slice(9).map((example, index) => (
-                  <ExampleCard
-                    key={example.id}
-                    example={example}
-                    priority={true}
-                    onOpen={handleOpenModal}
-                  />
-                ))}
-              </div>
             </>
           )}
           </div>
