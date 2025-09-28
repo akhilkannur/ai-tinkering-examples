@@ -342,7 +342,7 @@ async function enrichExamples(examples: ExampleRecord[]): Promise<EnrichedExampl
     const sponsor = example.categoryId ? (sponsorsByCategoryId.get(example.categoryId) ?? null) : null;
     return {
       ...example,
-      category: categoryName || example.category,
+      category: categoryName || example.category || null,
       sponsor: sponsor,
     };
   });
