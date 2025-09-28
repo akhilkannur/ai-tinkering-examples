@@ -41,6 +41,23 @@ export default function ExampleDetail({example}:{example:ExampleRecord}){
         </section>
       )}
 
+      {example.tags && example.tags.length > 0 && (
+        <section className="mt-6">
+          <div className="flex flex-wrap gap-2">
+            {example.tags.map((tag, index) => (
+              <span
+                key={index}
+                className={`px-3 py-1 rounded-full text-sm font-semibold ${
+                  index % 2 === 0 ? 'bg-accent text-white' : 'bg-navy-light text-text-color'
+                }`}
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        </section>
+      )}
+
       <div className="mt-6 flex flex-wrap gap-4 items-center">
         {example.original_link && <a href={example.original_link} target="_blank" rel="noreferrer" className="text-sm underline">View original</a>}
         {example.author_link && <a href={example.author_link} target="_blank" rel="noreferrer" className="text-sm">By {example.author_name}</a>}

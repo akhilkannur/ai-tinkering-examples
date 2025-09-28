@@ -272,21 +272,7 @@ select:focus-visible {
   display: flex !important;
   justify-content: center !important;
 }
-/* More aggressive Hero form spacing control */
-.hero-container div[style*="maxWidth"] {
-  margin-bottom: -20px !important;
-  overflow: hidden !important;
-  height: 120px !important;
-}
 
-.hero-container iframe[data-test-id="beehiiv-embed"] {
-  margin-bottom: -30px !important;
-}
-.hero-image-container {
-  height: 350px; /* Adjust this value as needed */
-}
-
-iframe[src*="beehiiv.com"] {
-  margin-top: -20px !important;
-  background: #fef6e4 !important;
+.beehiiv-form-container + div {
+  display: none !important;
 }
