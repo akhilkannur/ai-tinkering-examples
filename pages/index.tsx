@@ -228,8 +228,8 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
               <p className="text-lg text-light-purple mb-6 max-w-2xl mx-auto">
                 Get fresh AI examples delivered weekly. No spam, no BS. Just actionable insights.
               </p>
-                            <div className="max-w-[500px] mx-auto" style={{overflow: "hidden", height: "140px", marginBottom: "0px"}}>
-                <iframe src="https://subscribe-forms.beehiiv.com/44f8ba74-5250-4aac-9fa0-3ad651f05798" data-test-id="beehiiv-embed" width="500" height="147" frameBorder="0" scrolling="no" className="mx-auto block" />
+                            <div className="max-w-[500px] w-full mx-auto">
+                <iframe src="https://subscribe-forms.beehiiv.com/44f8ba74-5250-4aac-9fa0-3ad651f05798" data-test-id="beehiiv-embed" style={{width: '100%', height: '147px'}} frameBorder="0" scrolling="no" className="mx-auto block" />
               </div>
             </div>
           </div>
