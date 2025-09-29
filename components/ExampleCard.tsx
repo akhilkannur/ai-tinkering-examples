@@ -1,3 +1,4 @@
+import { optimizeImageUrl } from "../utils/cloudinary";
 import React from "react"
 import { motion, useInView } from 'framer-motion'
 import type { ExampleRecord, SponsorRecord } from "../lib/airtable"
@@ -19,7 +20,7 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
   const [imageError, setImageError] = useState(false)
 
   const img = example.screenshots?.[0]?.url
-  const optimizedImageUrl = img
+  const optimizedImageUrl = img ? optimizeImageUrl(img, 750) : null;
   
   // Generate the SEO-friendly URL
   const categorySlug = example.category?.toLowerCase().replace(/\s+/g, '-') || 'uncategorized'
