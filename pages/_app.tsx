@@ -12,6 +12,14 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <>
+      {/* 
+        Favicon setup for Google Search:
+        - Google can take a few days to weeks to crawl and update the favicon.
+        - The favicon is linked using multiple <link> tags for different resolutions and for Apple devices.
+        - The favicon files (favicon.ico, favicon_canva.png) are located in the /public directory.
+        - The robots.txt file allows crawling of the favicon files.
+        - For more information, see: https://developers.google.com/search/docs/appearance/favicon-in-search
+      */}
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />

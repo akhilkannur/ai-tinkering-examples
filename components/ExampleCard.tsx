@@ -1,9 +1,8 @@
-import { optimizeImageUrl } from "../utils/cloudinary";
 import React from "react"
 import { motion, useInView } from 'framer-motion'
 import type { ExampleRecord, SponsorRecord } from "../lib/airtable"
 import Image from "next/image"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Clock } from "lucide-react"
 
 interface ExampleCardProps {
@@ -17,10 +16,20 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
   const ref = React.useRef(null)
   const isInView = useInView(ref, { once: true, amount: 0.2 })
   const [imageLoading, setImageLoading] = useState(true)
-  const [imageError, setImageError] = useState(false)
+  const [imageError, setImageError] = useState(false);
+  const [imageUrl, setImageUrl] = useState(example.screenshots?.[0]?.url || null);
 
-  const img = example.screenshots?.[0]?.url
-  const optimizedImageUrl = img ? optimizeImageUrl(img, 750) : null;
+  useEffect(() => {
+    setImageUrl(example.screenshots?.[0]?.url || null);
+    setImageError(false);
+  }, [example.screenshots]);
+
+  const handleImageError = () => {
+    setImageError(true);
+  };
+
+  const img = imageUrl;
+  const optimizedImageUrl = img;
   
   // Generate the SEO-friendly URL
   const categorySlug = example.category?.toLowerCase().replace(/\s+/g, '-') || 'uncategorized'
@@ -74,7 +83,7 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
                   fetchPriority={priority ? "high" : "auto"}
                   quality={80}
                   onLoad={() => setImageLoading(false)}
-                  onError={() => setImageError(true)}
+                  onError={handleImageError}
                 />
                 <div className="absolute inset-0 bg-blue-900 opacity-10 group-hover:opacity-5 transition-opacity duration-300"></div>
                 {example.read_time && (
