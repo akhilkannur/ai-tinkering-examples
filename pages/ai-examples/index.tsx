@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react' // Added useMemo
 import { GetStaticProps } from 'next/types'
 import Head from 'next/head'
 import Navbar from '../../components/Navbar'
@@ -7,6 +7,8 @@ import CategoryFilter from '../../components/CategoryFilter'
 import ExampleModal from '../../components/ExampleModal'
 import { fetchEnrichedExamples, EnrichedExampleRecord } from '../../lib/airtable'
 
+const INITIAL_DISPLAY_COUNT = 12; // Define initial display count
+
 interface ExamplesPageProps {
   examples: EnrichedExampleRecord[]
   categories: string[]
@@ -14,19 +16,31 @@ interface ExamplesPageProps {
 
 export default function ExamplesPage({ examples, categories }: ExamplesPageProps) {
   const [selectedCategory, setSelectedCategory] = useState('All')
-  const [filteredExamples, setFilteredExamples] = useState<EnrichedExampleRecord[]>([])
+  const [visibleExamplesCount, setVisibleExamplesCount] = useState(INITIAL_DISPLAY_COUNT) // New state for visible count
   const [modalExample, setModalExample] = useState<EnrichedExampleRecord | null>(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
 
-  useEffect(() => {
-    let results = examples
-
-    if (selectedCategory !== 'All') {
-      results = results.filter(ex => ex.category === selectedCategory)
+  // Filter examples based on category
+  const filteredByCategory = useMemo(() => {
+    if (selectedCategory === 'All') {
+      return examples;
     }
+    return examples.filter(ex => ex.category === selectedCategory);
+  }, [examples, selectedCategory]);
 
-    setFilteredExamples(results)
-  }, [examples, selectedCategory])
+  // Examples to display based on visibleExamplesCount
+  const examplesToDisplay = useMemo(() => {
+    return filteredByCategory.slice(0, visibleExamplesCount);
+  }, [filteredByCategory, visibleExamplesCount]);
+
+  // Reset visible count when category changes
+  useEffect(() => {
+    setVisibleExamplesCount(INITIAL_DISPLAY_COUNT);
+  }, [selectedCategory]);
+
+  const handleLoadMore = () => {
+    setVisibleExamplesCount(prevCount => prevCount + INITIAL_DISPLAY_COUNT); // Load more in chunks
+  };
 
   const handleOpenModal = (example: EnrichedExampleRecord) => {
     setModalExample(example)
@@ -37,6 +51,8 @@ export default function ExamplesPage({ examples, categories }: ExamplesPageProps
     setIsModalOpen(false)
     setTimeout(() => setModalExample(null), 300)
   }
+
+  const hasMoreExamples = visibleExamplesCount < filteredByCategory.length;
 
   return (
     <>
@@ -57,7 +73,7 @@ export default function ExamplesPage({ examples, categories }: ExamplesPageProps
             AI Examples Library
           </h1>
           <p className="text-lg text-light-purple mb-6">
-            Browse practical AI workflows, prompts, and automation ideas you can copy and try.
+            Welcome to the Real AI Examples Library — a curated collection of practical AI workflows, prompts, and automation ideas you can copy and try. We focus on real-world use cases in sales, marketing, operations, content, and product development. Every example here is hand-picked for quality and updated weekly, so you’ll always find fresh, working ways people are using AI in their businesses and projects.
           </p>
         </header>
 
@@ -72,7 +88,7 @@ export default function ExamplesPage({ examples, categories }: ExamplesPageProps
           {/* Results Count */}
           <div className="mt-4 mb-6">
             <p className="text-sm text-light-purple">
-              {filteredExamples.length} example{filteredExamples.length !== 1 ? 's' : ''}
+              {filteredByCategory.length} example{filteredByCategory.length !== 1 ? 's' : ''}
               {selectedCategory !== 'All' && ` in ${selectedCategory}`}
             </p>
           </div>
@@ -80,9 +96,9 @@ export default function ExamplesPage({ examples, categories }: ExamplesPageProps
 
         {/* Examples Grid */}
         <main className="max-w-6xl mx-auto px-4 pb-12">
-          {filteredExamples.length > 0 ? (
+          {examplesToDisplay.length > 0 ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredExamples.map((example, index) => (
+              {examplesToDisplay.map((example, index) => (
                 <ExampleCard
                   key={example.id}
                   example={example}
@@ -104,6 +120,17 @@ export default function ExamplesPage({ examples, categories }: ExamplesPageProps
                 className="text-accent hover:text-accent underline"
               >
                 Clear filters
+              </button>
+            </div>
+          )}
+
+          {hasMoreExamples && (
+            <div className="text-center mt-8">
+              <button
+                onClick={handleLoadMore}
+                className="bg-accent text-white px-6 py-3 rounded-full font-bold text-lg shadow-lg hover:bg-pink-600 transition-all duration-300 transform hover:scale-105"
+              >
+                Uncover More AI Magic! ✨
               </button>
             </div>
           )}
