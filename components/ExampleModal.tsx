@@ -83,22 +83,26 @@ export default function ExampleModal({ example, isOpen, onClose }: ExampleModalP
         </div>
 
         <div className="sticky bottom-0 border-t border-slate-100 p-4 bg-slate-50 rounded-b-2xl shadow-inner">
-          <div className="flex items-center justify-between">
-            <SocialSharing
-              example={example}
-              title={example.title}
-              compact={true}
-            />
+          <div className="flex flex-wrap items-center justify-center sm:justify-between gap-4">
+            <div className="w-full sm:w-auto">
+              <SocialSharing
+                example={example}
+                title={example.title}
+                compact={true}
+              />
+            </div>
             {example.original_link && (
-              <a
-                href={example.original_link}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-2 border border-transparent rounded-full shadow-sm text-base font-bold text-electric-blue bg-accent hover:bg-accent hover:text-electric-blue transition-all duration-300 transform hover:scale-105"
-              >
-                <ExternalLink size={16} />
-                View Original
-              </a>
+              <div className="w-full sm:w-auto">
+                <a
+                  href={example.original_link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center justify-center w-full gap-2 px-6 py-2 text-base font-bold border border-transparent rounded-full shadow-sm text-electric-blue bg-accent hover:bg-accent hover:text-electric-blue transition-all duration-300 transform hover:scale-105"
+                >
+                  <ExternalLink size={16} />
+                  View Original
+                </a>
+              </div>
             )}
           </div>
         </div>
