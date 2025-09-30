@@ -19,6 +19,8 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
   const [imageError, setImageError] = useState(false);
   const [imageUrl, setImageUrl] = useState(example.screenshots?.[0]?.url || null);
 
+  console.log(`ExampleCard: ${example.title}, Read Time: ${example.read_time}`); // Debugging line
+
   useEffect(() => {
     setImageUrl(example.screenshots?.[0]?.url || null);
     setImageError(false);
@@ -95,9 +97,9 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
             {example.title}
           </h3>
           {example.read_time && (
-            <div className="flex items-center justify-center text-sm text-slate-600 mt-2">
+            <div className="flex items-center justify-center text-sm text-slate-600 mt-2 bg-red-500 text-white p-1 rounded">
               <Clock size={14} className="mr-1" />
-              <span>{example.read_time} min read</span>
+              <span>DEBUG: {example.read_time} min read</span>
             </div>
           )}
           
