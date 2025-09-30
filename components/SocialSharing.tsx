@@ -57,7 +57,7 @@ export default function SocialSharing({
   if (compact) {
     // Compact version for cards - just share icons
     return (
-      <div className={`flex items-center gap-2 ${className}`}>
+      <div className={`flex items-center justify-center gap-2 ${className}`}>
         <a
           href={shareData.facebook}
           target="_blank"
@@ -91,13 +91,7 @@ export default function SocialSharing({
           <Linkedin size={20} />
         </a>
 
-        <button
-          onClick={copyToClipboard}
-          className="p-2 border-2 rounded-full text-slate-400 hover:text-slate-600 hover:border-slate-600 transition-colors"
-          aria-label="Copy link"
-        >
-          {copied ? <Check size={20} /> : <Link2 size={20} />}
-        </button>
+        
       </div>
     )
   }

@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Clock, User, Tag } from 'lucide-react'
 import SponsorDetailCard from './SponsorDetailCard'
+import SocialSharing from './SocialSharing' // Import SocialSharing
 
 interface ExampleBodyProps {
   example: EnrichedExampleRecord
@@ -47,10 +48,7 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
               </div>
             )}
           </div>
-          <div className="flex items-center gap-1"> {/* Min-read tag pushed to right */}
-            <Clock size={14} />
-            <span>{example.read_time || 1} min read</span>
-          </div>
+          
         </div>
 
         {/* Sponsor Info */}
@@ -97,6 +95,16 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
             </p>
           </div>
         )}
+
+        {/* Social Sharing */}
+        <div className="mt-8 py-4 border-t border-slate-100">
+          <SocialSharing
+            example={example}
+            title={example.title}
+            description={example.summary}
+            compact={false} // Use full version here
+          />
+        </div>
       </div>
     </>
   )

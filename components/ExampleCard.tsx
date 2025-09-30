@@ -86,12 +86,6 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
                   onError={handleImageError}
                 />
                 <div className="absolute inset-0 bg-blue-900 opacity-10 group-hover:opacity-5 transition-opacity duration-300"></div>
-                {example.read_time && (
-                  <div className="absolute bottom-2 right-2 bg-black/50 text-white text-xs px-2 py-1 rounded-md flex items-center">
-                    <Clock size={12} className="mr-1" />
-                    <span className="font-semibold">{example.read_time} min read</span>
-                  </div>
-                )}
               </>
             )}
           </div>
@@ -100,6 +94,12 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
           <h3 className="text-lg sm:text-xl font-extrabold leading-tight text-text-color line-clamp-2">
             {example.title}
           </h3>
+          {example.read_time && (
+            <div className="flex items-center justify-center text-sm text-slate-600 mt-2">
+              <Clock size={14} className="mr-1" />
+              <span>{example.read_time} min read</span>
+            </div>
+          )}
           
         </div>
       </div>
