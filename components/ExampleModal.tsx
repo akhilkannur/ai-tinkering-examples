@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react'
 import { X, ExternalLink } from 'lucide-react'
 import type { EnrichedExampleRecord } from '../lib/airtable'
 import ExampleBody from './ExampleBody'
-import SocialSharing from './SocialSharing'
+// SocialSharing is no longer directly imported here as it's moved to ExampleBody
 
 interface ExampleModalProps {
   example: EnrichedExampleRecord | null
@@ -13,8 +13,6 @@ interface ExampleModalProps {
 export default function ExampleModal({ example, isOpen, onClose }: ExampleModalProps) {
   const modalRef = useRef<HTMLDivElement>(null)
   const contentRef = useRef<HTMLDivElement>(null)
-
-  
 
   // Handle browser back button
   useEffect(() => {
@@ -64,7 +62,7 @@ export default function ExampleModal({ example, isOpen, onClose }: ExampleModalP
     >
       <div
         ref={contentRef}
-        className={`relative bg-white sm:rounded-2xl shadow-2xl sm:max-w-4xl max-h-full sm:max-h-[90vh] w-full h-full sm:h-auto transform transition-all duration-300 ${
+        className={`relative bg-white sm:rounded-2xl shadow-2xl sm:max-w-4xl max-h-full sm:max-h-[90vh] w-full h-full sm:h-auto transform transition-all duration-300 flex flex-col ${
           isOpen ? 'scale-100 translate-y-0' : 'scale-95 translate-y-4'
         }`}
       >
@@ -78,34 +76,23 @@ export default function ExampleModal({ example, isOpen, onClose }: ExampleModalP
           </button>
         </div>
 
-        <div className="overflow-y-auto max-h-[calc(100vh-7rem)] sm:max-h-[calc(90vh-7rem)] pt-6">
+        <div className="overflow-y-auto flex-grow pt-6"> {/* Removed max-h, added flex-grow */}
           <ExampleBody example={example} />
         </div>
 
-        <div className="sticky bottom-0 border-t border-slate-100 p-4 bg-slate-50 rounded-b-2xl shadow-inner">
-          <div className="flex flex-wrap items-center justify-center sm:justify-between gap-4">
-            <div className="w-full sm:w-auto">
-              <SocialSharing
-                example={example}
-                title={example.title}
-                compact={true}
-              />
-            </div>
-            {example.original_link && (
-              <div className="w-full sm:w-auto">
-                <a
-                  href={example.original_link}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center justify-center w-full gap-2 px-6 py-2 text-base font-bold border border-transparent rounded-full shadow-sm text-electric-blue bg-accent hover:bg-accent hover:text-electric-blue transition-all duration-300 transform hover:scale-105"
-                >
-                  <ExternalLink size={16} />
-                  View Original
-                </a>
-              </div>
-            )}
+        {example.original_link && ( // Only render this div if original_link exists
+          <div className="border-t border-slate-100 p-4 bg-slate-50 rounded-b-2xl shadow-inner flex justify-center"> {/* Removed sticky bottom-0, added flex justify-center */}
+            <a
+              href={example.original_link}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-4 sm:px-6 py-2 text-base font-bold border border-transparent rounded-full shadow-sm text-electric-blue bg-accent hover:bg-accent hover:text-electric-blue transition-all duration-300 transform hover:scale-105"
+            >
+              <ExternalLink size={16} />
+              View Original
+            </a>
           </div>
-        </div>
+        )}
       </div>
     </div>
   )
