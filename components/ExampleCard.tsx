@@ -1,27 +1,40 @@
-import React from "react"
-import { motion, useInView } from 'framer-motion'
-import type { ExampleRecord, SponsorRecord } from "../lib/airtable"
-import Image from "next/image"
-import { useState, useEffect } from "react"
-import { Clock } from "lucide-react"
+import React, { useState, useEffect, useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import type { ExampleRecord, SponsorRecord } from "../lib/airtable";
+import Image from "next/image";
+import { Clock } from "lucide-react";
 
 interface ExampleCardProps {
-  example: ExampleRecord
-  sponsor?: SponsorRecord
-  priority?: boolean // For above-the-fold images
-  onOpen: (example: ExampleRecord) => void
+  example: ExampleRecord;
+  sponsor?: SponsorRecord;
+  priority?: boolean; // For above-the-fold images
+  onOpen: (example: ExampleRecord) => void;
 }
 
-export default function ExampleCard({ example, sponsor, priority = false, onOpen }: ExampleCardProps) {
-  const ref = React.useRef(null)
-  const isInView = useInView(ref, { once: true, amount: 0.2 })
-  const [imageLoading, setImageLoading] = useState(true)
+export default function ExampleCard({
+  example,
+  sponsor,
+  priority = false,
+  onOpen,
+}: ExampleCardProps) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.2 });
+  const [imageLoading, setImageLoading] = useState(true);
   const [imageError, setImageError] = useState(false);
-  const [imageUrl, setImageUrl] = useState(example.screenshots?.[0]?.url || null);
+  const [imageUrl, setImageUrl] = useState(
+    example.screenshots?.[0]?.url || null
+  );
 
   useEffect(() => {
     setImageUrl(example.screenshots?.[0]?.url || null);
     setImageError(false);
+
+    // Check if image is in cache
+    const img = new window.Image();
+    img.src = example.screenshots?.[0]?.url || "";
+    if (img.complete) {
+      setImageLoading(false);
+    }
   }, [example.screenshots]);
 
   const handleImageError = () => {
@@ -30,20 +43,25 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
 
   const img = imageUrl;
   const optimizedImageUrl = img;
-  
+
   // Generate the SEO-friendly URL
-  const categorySlug = example.category?.toLowerCase().replace(/\s+/g, '-') || 'uncategorized'
-  const exampleUrl = `/ai-examples/${categorySlug}/${example.slug}`
+  const categorySlug =
+    example.category?.toLowerCase().replace(/\s+/g, "-") || "uncategorized";
+  const exampleUrl = `/ai-examples/${categorySlug}/${example.slug}`;
 
   const handleCardClick = (e: React.MouseEvent) => {
     // Don't open modal if clicking on share button or links
-    if ((e.target as HTMLElement).closest('.share-button') || (e.target as HTMLElement).closest('.external-link') || (e.target as HTMLElement).closest('.sponsor-link')) {
-      return
+    if (
+      (e.target as HTMLElement).closest(".share-button") ||
+      (e.target as HTMLElement).closest(".external-link") ||
+      (e.target as HTMLElement).closest(".sponsor-link")
+    ) {
+      return;
     }
-    e.preventDefault()
-    e.stopPropagation()
-    onOpen(example)
-  }
+    e.preventDefault();
+    e.stopPropagation();
+    onOpen(example);
+  };
 
   return (
     <motion.article
@@ -100,9 +118,8 @@ export default function ExampleCard({ example, sponsor, priority = false, onOpen
               <span>{example.read_time} min read</span>
             </div>
           )}
-          
         </div>
       </div>
     </motion.article>
-  )
+  );
 }
