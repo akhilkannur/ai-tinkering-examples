@@ -20,11 +20,10 @@ export default function ExampleCard({
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
   const [imageStatus, setImageStatus] = useState<'loading' | 'loaded' | 'error'>('loading');
-  const [imageSrc, setImageSrc] = useState<string | null>(null);
+  const [retryCount, setRetryCount] = useState(0);
+  const MAX_RETRIES = 2;
 
   useEffect(() => {
-    // Reset state when example changes
-    setImageStatus('loading');
     const imageUrl = example.screenshots?.[0]?.url;
     
     if (!imageUrl) {
@@ -32,33 +31,37 @@ export default function ExampleCard({
       return;
     }
 
-    // Pre-load the image
+    setImageStatus('loading');
+    
     const img = new window.Image();
     
-    img.onload = () => {
-      setImageSrc(imageUrl);
+    const handleLoad = () => {
       setImageStatus('loaded');
     };
     
-    img.onerror = () => {
-      console.error('Failed to load image:', imageUrl);
-      setImageStatus('error');
+    const handleError = () => {
+      if (retryCount < MAX_RETRIES) {
+        // Retry after delay
+        setTimeout(() => {
+          setRetryCount(prev => prev + 1);
+        }, 1000 * (retryCount + 1));
+      } else {
+        setImageStatus('error');
+      }
     };
 
-    // Start loading
+    img.onload = handleLoad;
+    img.onerror = handleError;
     img.src = imageUrl;
 
-    // Cleanup
     return () => {
       img.onload = null;
       img.onerror = null;
     };
-  }, [example.screenshots]);
+  }, [example.screenshots, retryCount]);
 
-  // Generate the SEO-friendly URL
   const categorySlug =
     example.category?.toLowerCase().replace(/\s+/g, "-") || "uncategorized";
-  const exampleUrl = `/ai-examples/${categorySlug}/${example.slug}`;
 
   const handleCardClick = (e: React.MouseEvent) => {
     if (
@@ -73,6 +76,8 @@ export default function ExampleCard({
     onOpen(example);
   };
 
+  const imageUrl = example.screenshots?.[0]?.url;
+
   return (
     <motion.article
       ref={ref}
@@ -83,50 +88,34 @@ export default function ExampleCard({
     >
       <div className="relative z-10 flex-grow" onClick={handleCardClick}>
         <div className="relative w-full h-64 sm:h-80 lg:h-96 overflow-hidden bg-[#fef6e4] rounded-t-2xl">
-          {/* Loading State */}
           {imageStatus === 'loading' && (
             <div className="absolute inset-0 bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 bg-[length:200%_100%] animate-[shimmer_1.5s_ease-in-out_infinite]">
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-slate-400 text-sm animate-pulse">Loading...</div>
+                <div className="text-slate-400 text-sm">Loading image...</div>
               </div>
             </div>
           )}
 
-          {/* Error State */}
           {imageStatus === 'error' && (
-            <div className="absolute inset-0 bg-[#fef6e4] flex flex-col items-center justify-center gap-2 p-4">
-              <svg 
-                className="w-12 h-12 text-slate-300" 
-                fill="none" 
-                stroke="currentColor" 
-                viewBox="0 0 24 24"
-              >
-                <path 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round" 
-                  strokeWidth={2} 
-                  d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" 
-                />
+            <div className="absolute inset-0 bg-slate-50 flex flex-col items-center justify-center gap-2">
+              <svg className="w-16 h-16 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
-              <div className="text-slate-400 text-sm text-center">
-                Image preview unavailable
-              </div>
+              <p className="text-slate-400 text-sm">Preview unavailable</p>
             </div>
           )}
 
-          {/* Loaded Image */}
-          {imageStatus === 'loaded' && imageSrc && (
+          {imageStatus === 'loaded' && imageUrl && (
             <>
               <Image
-                src={imageSrc}
-                alt={`${example.title} - AI workflow example`}
+                src={imageUrl}
+                alt={example.title}
                 fill
                 className="object-cover object-left-top group-hover:scale-105 transition-transform duration-300"
                 sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                 priority={priority}
-                loading={priority ? "eager" : "lazy"}
-                quality={85}
-                unoptimized={false}
+                quality={80}
+                onError={() => setImageStatus('error')}
               />
               <div className="absolute inset-0 bg-blue-900 opacity-10 group-hover:opacity-5 transition-opacity duration-300"></div>
             </>

@@ -21,7 +21,6 @@ export function airtableImageLoader({ src, width, quality }: ImageLoaderProps): 
   }
 
   // For Airtable images, we'll use the original URL with query params
-  // to ensure proper loading
   const url = new URL(src);
   
   // Add width parameter if supported
@@ -42,15 +41,12 @@ export function airtableImageLoader({ src, width, quality }: ImageLoaderProps): 
  */
 export function preloadImage(src: string): Promise<string> {
   return new Promise((resolve, reject) => {
+    if (!src) {
+      reject(new Error('No image source provided'));
+      return;
+    }
+
     const img = new Image();
-    
-    img.onload = () => resolve(src);
-    img.onerror = (error) => {
-      console.error('Image preload failed:', src, error);
-      reject(new Error(`Failed to load image: ${src}`));
-    };
-    
-    // Set a timeout for slow-loading images
     const timeout = setTimeout(() => {
       reject(new Error(`Image load timeout: ${src}`));
     }, 10000); // 10 second timeout
@@ -58,6 +54,12 @@ export function preloadImage(src: string): Promise<string> {
     img.onload = () => {
       clearTimeout(timeout);
       resolve(src);
+    };
+    
+    img.onerror = (error) => {
+      clearTimeout(timeout);
+      console.error('Image preload failed:', src, error);
+      reject(new Error(`Failed to load image: ${src}`));
     };
     
     img.src = src;
@@ -114,74 +116,28 @@ export function getOptimizedAirtableImageUrl(
 ): string {
   if (!url) return '';
   
-  const urlObj = new URL(url);
-  
-  // Add optimization parameters if supported
-  if (options.width) {
-    urlObj.searchParams.set('w', options.width.toString());
-  }
-  
-  if (options.height) {
-    urlObj.searchParams.set('h', options.height.toString());
-  }
-  
-  if (options.quality) {
-    urlObj.searchParams.set('q', options.quality.toString());
-  }
-  
-  if (options.format) {
-    urlObj.searchParams.set('fm', options.format);
-  }
-  
-  return urlObj.toString();
-}
-
-/**
- * Extract image dimensions from URL or fetch from server
- */
-export async function getImageDimensions(src: string): Promise<{ width: number; height: number } | null> {
-  return new Promise((resolve) => {
-    const img = new Image();
+  try {
+    const urlObj = new URL(url);
     
-    img.onload = () => {
-      resolve({
-        width: img.naturalWidth,
-        height: img.naturalHeight
-      });
-    };
+    // Add optimization parameters if supported
+    if (options.width) {
+      urlObj.searchParams.set('w', options.width.toString());
+    }
     
-    img.onerror = () => {
-      resolve(null);
-    };
+    if (options.height) {
+      urlObj.searchParams.set('h', options.height.toString());
+    }
     
-    img.src = src;
-  });
-}
-
-/**
- * Generate placeholder blur data URL
- */
-export function generateBlurDataURL(width: number = 10, height: number = 10): string {
-  const canvas = typeof document !== 'undefined' ? document.createElement('canvas') : null;
-  
-  if (!canvas) {
-    // Server-side fallback
-    return 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==';
+    if (options.quality) {
+      urlObj.searchParams.set('q', options.quality.toString());
+    }
+    
+    if (options.format) {
+      urlObj.searchParams.set('fm', options.format);
+    }
+    
+    return urlObj.toString();
+  } catch {
+    return url; // Return original if URL parsing fails
   }
-  
-  canvas.width = width;
-  canvas.height = height;
-  
-  const ctx = canvas.getContext('2d');
-  if (!ctx) return '';
-  
-  // Create a simple gradient
-  const gradient = ctx.createLinearGradient(0, 0, width, height);
-  gradient.addColorStop(0, '#fef6e4');
-  gradient.addColorStop(1, '#f3d2c1');
-  
-  ctx.fillStyle = gradient;
-  ctx.fillRect(0, 0, width, height);
-  
-  return canvas.toDataURL('image/png');
 }
