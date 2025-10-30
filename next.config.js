@@ -8,23 +8,26 @@ const nextConfig = {
     domains: [
       "dl.airtableusercontent.com",
       "attachments.airtableusercontent.com",
-      "v5.airtableusercontent.com", // Sometimes Airtable uses versioned subdomains
-      "airtableusercontent.com" // Base domain as fallback
+      "v5.airtableusercontent.com",
+      "airtableusercontent.com"
     ],
     
-    // Alternative: Use remotePatterns for more flexibility (Next.js 12.3+)
+    // Remote patterns for more flexibility
     remotePatterns: [
       {
         protocol: 'https',
         hostname: '**.airtableusercontent.com',
+        pathname: '/**',
       },
       {
         protocol: 'https',
         hostname: 'dl.airtableusercontent.com',
+        pathname: '/**',
       },
       {
         protocol: 'https',
         hostname: 'attachments.airtableusercontent.com',
+        pathname: '/**',
       }
     ],
     
@@ -35,20 +38,22 @@ const nextConfig = {
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     
-    // Cache optimized images for 30 days
-    minimumCacheTTL: 60 * 60 * 24 * 30,
+    // Increase cache TTL to 60 days for better performance
+    minimumCacheTTL: 60 * 60 * 24 * 60,
     
-    // Allow larger images from Airtable
+    // Allow SVG with proper CSP
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
     
-    // Disable optimization for debugging (can be removed once working)
-    // unoptimized: true,
+    // Disable image optimization errors
+    unoptimized: false,
+    
+    // Add custom loader for better error handling
+    loader: 'default',
   },
   
   // Compiler optimizations
   compiler: {
-    // Remove console.log statements in production
     removeConsole: process.env.NODE_ENV === 'production' ? {
       exclude: ['error', 'warn']
     } : false,
@@ -56,15 +61,12 @@ const nextConfig = {
   
   // Performance optimizations
   onDemandEntries: {
-    // Period (in ms) where the server will keep pages in the buffer
     maxInactiveAge: 25 * 1000,
-    // Number of pages that should be kept simultaneously without being disposed
     pagesBufferLength: 2,
   },
   
   // Optimize bundle size
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
-    // Optimize bundle splitting
     if (!isServer) {
       config.resolve.fallback = {
         ...config.resolve.fallback,
@@ -72,10 +74,27 @@ const nextConfig = {
       }
     }
     
+    // Optimize image loading
+    config.module.rules.push({
+      test: /\.(png|jpg|jpeg|gif|webp|avif)$/i,
+      use: [
+        {
+          loader: 'url-loader',
+          options: {
+            limit: 8192,
+            fallback: 'file-loader',
+            publicPath: '/_next/static/images/',
+            outputPath: 'static/images/',
+            name: '[name]-[hash].[ext]',
+          },
+        },
+      ],
+    });
+    
     return config
   },
   
-  // Headers for better caching and CORS
+  // Enhanced headers for better caching and CORS
   async headers() {
     return [
       {
@@ -84,6 +103,10 @@ const nextConfig = {
           {
             key: 'Cache-Control',
             value: 'public, max-age=31536000, immutable'
+          },
+          {
+            key: 'Access-Control-Allow-Origin',
+            value: '*'
           }
         ]
       },
@@ -96,13 +119,21 @@ const nextConfig = {
           }
         ]
       },
-      // Allow images from Airtable
+      // Allow images from Airtable with proper CORS
       {
         source: '/api/(.*)',
         headers: [
           {
             key: 'Access-Control-Allow-Origin',
             value: '*'
+          },
+          {
+            key: 'Access-Control-Allow-Methods',
+            value: 'GET,OPTIONS,PATCH,DELETE,POST,PUT'
+          },
+          {
+            key: 'Access-Control-Allow-Headers',
+            value: 'X-Requested-With, Content-Type, Authorization'
           }
         ]
       }
@@ -120,6 +151,12 @@ const nextConfig = {
   
   // Trailing slash configuration
   trailingSlash: false,
+  
+  // Enable experimental features for better performance
+  experimental: {
+    optimizeCss: true,
+    optimizePackageImports: ['lucide-react'],
+  },
 }
 
 module.exports = nextConfig
