@@ -73,8 +73,8 @@ export type ExampleRecord = {
   slug: string
   summary?: string | null
   screenshots?: { url: string; filename?: string }[] | null
-  category?: string | null // This will be the category NAME after processing
-  categoryId?: string | null // This is the raw linked record ID
+  category?: string | null
+  categoryId?: string | null
   read_time?: number | null
   publish_date?: string | null
   workflow_steps?: string | null
@@ -104,16 +104,30 @@ function processExampleRecord(record: any): ExampleRecord {
       .replace(/\s+/g, '-') || 
     `record-${record.id}`
 
-  // Category is now a linked record, which returns an array of IDs
   const categoryIds = record.get('Category') as string[] | null
+  
+  // FIX: Handle Airtable attachments properly
+  const screenshotsRaw = record.get('Screenshots')
+  let screenshots = null
+  
+  if (screenshotsRaw && Array.isArray(screenshotsRaw) && screenshotsRaw.length > 0) {
+    screenshots = screenshotsRaw.map((att: any) => ({
+      url: att.url,
+      filename: att.filename || 'screenshot'
+    }))
+    
+    console.log('✅ Processed screenshots for:', title, screenshots.map((s: any) => s.url))
+  } else {
+    console.warn('⚠️ No screenshots found for:', title)
+  }
 
   return {
     id: record.id,
     title: title || 'Untitled',
     slug,
     summary: record.get('Summary') as string || null,
-    screenshots: (record.get('Screenshots') as any[]) || null,
-    categoryId: categoryIds?.[0] || null, // Store the first linked category ID
+    screenshots: screenshots,
+    categoryId: categoryIds?.[0] || null,
     read_time: record.get('Read time') as number || null,
     publish_date: record.get('Publish date') as string || null,
     workflow_steps: record.get('Workflow steps') as string || null,
@@ -192,9 +206,6 @@ async function fetchAll<T>(tableName: string, processFn: (record: any) => T): Pr
     }
     const allRecords = await base(tableName).select(selectOptions).all();
     console.log(`✅ Found ${allRecords.length} records in ${tableName}`);
-    if (allRecords.length > 0) {
-      console.log('🔍 First raw record:', JSON.stringify(allRecords[0]._rawJson, null, 2));
-    }
     const processed = allRecords.map(processFn);
     return processed;
   } catch (error) {
@@ -277,7 +288,6 @@ export async function fetchSiteSettings(): Promise<SiteSettingRecord[]> {
   }
 }
 
-
 export async function fetchExampleBySlug(slug: string): Promise<ExampleRecord | null> {
   if (!base) {
     console.warn('⚠️ Airtable not configured')
@@ -287,7 +297,6 @@ export async function fetchExampleBySlug(slug: string): Promise<ExampleRecord | 
   console.log(`🔄 Fetching example with slug: ${slug}`)
 
   try {
-    // First try to find by Slug field
     let records = await base(examplesTable)
       .select({ 
         filterByFormula: `{Slug} = "${slug}"`,
@@ -295,11 +304,9 @@ export async function fetchExampleBySlug(slug: string): Promise<ExampleRecord | 
       })
       .all()
 
-    // If no records found by Slug, try to find by generated slug from Title
     if (records.length === 0) {
       console.log(`🔍 No record found with slug "${slug}", trying title-based search...`)
       
-      // Get all records and find matching slug
       const allRecords = await base(examplesTable).select().all()
       
       for (const record of allRecords) {
@@ -363,8 +370,6 @@ export async function fetchEnrichedExampleBySlug(slug: string): Promise<Enriched
   return enriched;
 }
 
-
-// Helper function to test Airtable connection
 export async function testAirtableConnection(): Promise<boolean> {
   if (!base) return false
   
