@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import QuizCertificate from './QuizCertificate';
+import NewsletterSignup from './NewsletterSignup';
 
 const questions = [
   {
@@ -110,10 +112,14 @@ export default function AiQuiz() {
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
   const [showAnimation, setShowAnimation] = useState(false);
+  const [userName, setUserName] = useState('');
+  const [quizStarted, setQuizStarted] = useState(false);
 
   useEffect(() => {
-    setShowAnimation(true);
-  }, [currentQuestion]);
+    if (quizStarted) {
+      setShowAnimation(true);
+    }
+  }, [currentQuestion, quizStarted]);
 
   const handleAnswer = (option: string) => {
     if (selectedAnswer) return; // Prevent multiple answers
@@ -147,36 +153,52 @@ export default function AiQuiz() {
     setShowResult(false);
     setSelectedAnswer(null);
     setIsCorrect(null);
-    setShowAnimation(true);
+    setQuizStarted(false);
+    setUserName('');
   };
 
-  const getResultMessage = () => {
-    const percentage = (score / questions.length) * 100;
-    if (percentage === 100) {
-      return "Wow! You're an AI expert!";
-    } else if (percentage >= 80) {
-      return "Great job! You know a lot about AI.";
-    } else if (percentage >= 60) {
-      return "Good effort! You're on your way to becoming an AI whiz.";
-    } else {
-      return "Keep learning! The world of AI is always growing.";
+  const startQuiz = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (userName.trim() !== '') {
+      setQuizStarted(true);
     }
   };
 
   return (
     <div className="bg-primary-bg p-8 rounded-lg shadow-lg max-w-2xl mx-auto text-text-color">
-      {showResult ? (
+      {!quizStarted ? (
+        <form onSubmit={startQuiz} className="text-center">
+          <h2 className="text-3xl font-bold mb-4">Ready to test your AI knowledge?</h2>
+          <p className="text-lg text-light-purple mb-6">Enter your name to start the quiz and get your personalized certificate!</p>
+          <input
+            type="text"
+            placeholder="Your Name"
+            value={userName}
+            onChange={(e) => setUserName(e.target.value)}
+            className="w-full px-4 py-2 border rounded-lg mb-4"
+          />
+          <button
+            type="submit"
+            className="bg-accent text-white font-bold py-2 px-4 rounded-lg hover:bg-pink-700 transition-colors"
+          >
+            Start Quiz
+          </button>
+        </form>
+      ) : showResult ? (
         <div className="text-center">
-          <h2 className="text-3xl font-bold mb-4">{getResultMessage()}</h2>
-          <p className="text-xl mb-4">
-            You scored {score} out of {questions.length}
-          </p>
+          <QuizCertificate score={score} totalQuestions={questions.length} userName={userName} />
+          <div className="my-8">
+            <NewsletterSignup />
+          </div>
           <button
             onClick={restartQuiz}
             className="bg-accent text-white font-bold py-2 px-4 rounded-lg hover:bg-pink-700 transition-colors"
           >
             Restart Quiz
           </button>
+          <p className="text-sm text-gray-500 mt-4">
+            We update the quiz every week with new questions about the latest in AI. Come back next week to test your knowledge again!
+          </p>
         </div>
       ) : (
         <div className={`transition-opacity duration-500 ${showAnimation ? 'opacity-100' : 'opacity-0'}`}>
