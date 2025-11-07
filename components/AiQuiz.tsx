@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const questions = [
   {
@@ -107,24 +107,47 @@ export default function AiQuiz() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [showResult, setShowResult] = useState(false);
+  const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
+  const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
+  const [showAnimation, setShowAnimation] = useState(false);
+
+  useEffect(() => {
+    setShowAnimation(true);
+  }, [currentQuestion]);
 
   const handleAnswer = (option: string) => {
-    if (option === questions[currentQuestion].answer) {
+    if (selectedAnswer) return; // Prevent multiple answers
+
+    setSelectedAnswer(option);
+    const isAnswerCorrect = option === questions[currentQuestion].answer;
+    setIsCorrect(isAnswerCorrect);
+
+    if (isAnswerCorrect) {
       setScore(score + 1);
     }
 
-    const nextQuestion = currentQuestion + 1;
-    if (nextQuestion < questions.length) {
-      setCurrentQuestion(nextQuestion);
-    } else {
-      setShowResult(true);
-    }
+    setTimeout(() => {
+      setShowAnimation(false);
+      setTimeout(() => {
+        const nextQuestion = currentQuestion + 1;
+        if (nextQuestion < questions.length) {
+          setCurrentQuestion(nextQuestion);
+          setSelectedAnswer(null);
+          setIsCorrect(null);
+        } else {
+          setShowResult(true);
+        }
+      }, 500);
+    }, 1500);
   };
 
   const restartQuiz = () => {
     setCurrentQuestion(0);
     setScore(0);
     setShowResult(false);
+    setSelectedAnswer(null);
+    setIsCorrect(null);
+    setShowAnimation(true);
   };
 
   const getResultMessage = () => {
@@ -156,14 +179,29 @@ export default function AiQuiz() {
           </button>
         </div>
       ) : (
-        <div>
+        <div className={`transition-opacity duration-500 ${showAnimation ? 'opacity-100' : 'opacity-0'}`}>
+          <div className="w-full bg-gray-200 rounded-full h-2.5 mb-4">
+            <div
+              className="bg-accent h-2.5 rounded-full transition-all duration-500"
+              style={{ width: `${((currentQuestion) / questions.length) * 100}%` }}
+            ></div>
+          </div>
           <h2 className="text-2xl font-bold mb-4">{questions[currentQuestion].question}</h2>
           <div className="grid grid-cols-1 gap-4">
             {questions[currentQuestion].options.map((option, index) => (
               <button
                 key={index}
                 onClick={() => handleAnswer(option)}
-                className="bg-secondary-bg p-4 rounded-lg text-left hover:bg-accent-light transition-colors"
+                disabled={selectedAnswer !== null}
+                className={`p-4 rounded-lg text-left transition-colors duration-300 ${
+                  selectedAnswer
+                    ? option === questions[currentQuestion].answer
+                      ? 'bg-green-500 text-white'
+                      : option === selectedAnswer
+                      ? 'bg-red-500 text-white'
+                      : 'bg-secondary-bg'
+                    : 'bg-secondary-bg hover:bg-accent-light'
+                }`}
               >
                 {option}
               </button>
