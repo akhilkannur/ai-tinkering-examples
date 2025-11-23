@@ -9,7 +9,7 @@ import ExampleCard from '../components/ExampleCard'
 import ExampleModal from '../components/ExampleModal'
 import HorizontalStrip from '../components/HorizontalStrip'
 import JobCard from '../components/JobCard'
-import ToolCard from '../components/ToolCard'
+import AIToolCard from '../components/AIToolCard'
 import { fetchEnrichedExamples, fetchFeaturedJobs, fetchFeaturedTools, fetchSiteSettings, EnrichedExampleRecord, JobRecord, ToolRecord } from '../lib/airtable'
 import WavyDivider from '../components/WavyDivider'
 import CtaCard from '../components/CtaCard'
@@ -120,7 +120,14 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
             <HorizontalStrip 
               title="Featured AI Tools"
               items={featuredTools}
-              renderItem={(tool) => <ToolCard tool={tool} />}
+              renderItem={(tool) => <AIToolCard
+              key={tool.id}
+              name={tool.toolName}
+              description={tool.shortDescription}
+              url={tool.websiteUrl}
+              imageUrl={tool.logo?.[0]?.url}
+              category={null}
+            />}
               viewAllLink="/tools"
             />
           </div>
