@@ -1,95 +1,94 @@
-import { useState, useEffect, useMemo } from 'react'
-import { GetStaticProps } from 'next'
-import Head from 'next/head'
-import Navbar from '../../components/Navbar'
-import ToolCard from '../../components/ToolCard'
-import { fetchAllTools, ToolRecord } from '../../lib/airtable'
 
-interface ToolsPageProps {
-  tools: ToolRecord[]
-}
+import Head from 'next/head';
+import Link from 'next/link';
+import { ArrowRight, Zap, Code, Mic, PenSquare, DollarSign } from 'lucide-react';
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer';
 
-export default function ToolsPage({ tools }: ToolsPageProps) {
-  const [filteredTools, setFilteredTools] = useState<ToolRecord[]>([])
+const hubLinks = [
+  {
+    href: '/ai-tool-finder',
+    title: 'Interactive Tool Finder',
+    description: 'Answer a few questions and get a personalized list of AI tools.',
+    icon: <Zap className="w-8 h-8 text-yellow-400" />,
+    bgColor: 'bg-gray-800'
+  },
+  {
+    href: '/tools/free-ai-tools',
+    title: 'Free AI Tools',
+    description: 'A curated list of the best tools with free or freemium plans.',
+    icon: <DollarSign className="w-8 h-8 text-teal-400" />,
+    bgColor: 'bg-teal-900'
+  },
+  {
+    href: '/tools/for-marketers',
+    title: 'AI for Marketers',
+    description: 'Tools for SEO, copywriting, and social media automation.',
+    icon: <PenSquare className="w-8 h-8 text-blue-400" />,
+    bgColor: 'bg-blue-900'
+  },
+  {
+    href: '/tools/for-developers',
+    title: 'AI for Developers',
+    description: 'Assistants for coding, debugging, and documentation.',
+    icon: <Code className="w-8 h-8 text-green-400" />,
+    bgColor: 'bg-green-900'
+  },
+  {
+    href: '/tools/for-content-creators',
+    title: 'AI for Creators',
+    description: 'Create stunning video, audio, and visuals with AI.',
+    icon: <Mic className="w-8 h-8 text-pink-400" />,
+    bgColor: 'bg-pink-900'
+  },
+];
 
-  useEffect(() => {
-    let results = tools
-
-    setFilteredTools(results)
-  }, [tools])
-
+const ToolsHubPage = () => {
   return (
-    <>
+    <div className="flex flex-col min-h-screen bg-gray-50">
       <Head>
-        <title>AI Tools | Discover the Best AI Software - AI Tinkering Examples</title>
-        <meta name="description" content="Browse a comprehensive directory of AI tools and software." />
-
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="AI Tools | Discover the Best AI Software" />
-        <meta property="og:description" content="Browse a comprehensive directory of AI tools and software." />
-        <meta property="og:url" content="https://your-domain.com/tools" />
-        <meta property="og:image" content="https://your-domain.com/social-share-default.jpg" />
-        <meta property="og:site_name" content="AI Tinkering Examples" />
-
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="AI Tools | Discover the Best AI Software" />
-        <meta name="twitter:description" content="Browse a comprehensive directory of AI tools and software." />
-        <meta name="twitter:image" content="https://your-domain.com/social-share-default.jpg" />
+        <title>AI Tool Directories | Find the Best AI for Any Task</title>
+        <meta
+          name="description"
+          content="Explore our specialized AI tool directories for marketers, developers, and content creators, or use our interactive finder to get a personalized recommendation."
+        />
       </Head>
+      <Navbar />
 
-      <div className="min-h-screen bg-primary-bg">
-        <Navbar />
-        
-        <header className="max-w-6xl mx-auto px-4 py-8">
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-text-color mb-4 font-headline">
-            AI Tools Directory
+      <main className="flex-grow container mx-auto px-4 py-12">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+            Find the Right AI Tool for the Job
           </h1>
-          <p className="text-lg text-light-purple mb-6">
-            Discover and explore the best AI tools and software for your needs.
+          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+            Whether you're a marketer, developer, or creator, we have a curated list of AI tools to help you succeed. Choose a directory below to get started.
           </p>
-        </header>
+        </div>
 
-        <main className="max-w-6xl mx-auto px-4 pb-12">
-          {filteredTools.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredTools.map(tool => (
-                <ToolCard key={tool.id} tool={tool} />
-              ))}
-            </div>
-          ) : (
-            <div className="text-center py-12">
-              <p className="text-light-purple mb-2">No tools found</p>
-              <p className="text-sm text-light-purple mb-4">
-                Try adjusting your search terms.
-              </p>
-              <button
-                onClick={() => {}}
-                className="text-accent hover:text-accent underline"
-              >
-                Clear search
-              </button>
-            </div>
-          )}
-        </main>
-      </div>
-    </>
-  )
-}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          {hubLinks.map(link => (
+            <Link href={link.href} key={link.href}>
+              <div className={`relative p-8 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1 h-full flex flex-col justify-between ${link.bgColor} text-white`}>
+                <div>
+                  <div className="mb-4">
+                    {link.icon}
+                  </div>
+                  <h2 className="text-2xl font-bold mb-2">{link.title}</h2>
+                  <p className="text-gray-300">{link.description}</p>
+                </div>
+                <div className="flex items-center justify-end text-sm font-semibold mt-6">
+                  Explore
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </main>
 
-export const getStaticProps: GetStaticProps<ToolsPageProps> = async () => {
-  try {
-    const tools = await fetchAllTools()
-    return {
-      props: { tools },
-      revalidate: 300, // Revalidate every 5 minutes
-    }
-  } catch (error) {
-    console.error('Failed to fetch tools:', error)
-    return {
-      props: { tools: [] },
-      revalidate: 60, // Retry more frequently on error
-    }
-  }
-}
+      <Footer />
+    </div>
+  );
+};
+
+export default ToolsHubPage;
