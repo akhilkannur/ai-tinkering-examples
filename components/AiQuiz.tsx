@@ -126,35 +126,41 @@ export default function AiQuiz() {
           </p>
         </div>
       ) : (
-        <div className={`transition-opacity duration-500 ${showAnimation ? 'opacity-100' : 'opacity-0'}`}>
-          <div className="w-full bg-gray-200 rounded-full h-2.5 mb-4">
-            <div
-              className="bg-accent h-2.5 rounded-full transition-all duration-500"
-              style={{ width: `${((currentQuestion) / questions.length) * 100}%` }}
-            ></div>
-          </div>
-          <h2 className="text-2xl font-bold mb-4">{questions[currentQuestion].question}</h2>
-          <div className="grid grid-cols-1 gap-4">
-            {questions[currentQuestion].options.map((option, index) => (
-              <button
-                key={index}
-                onClick={() => handleAnswer(option)}
-                disabled={selectedAnswer !== null}
-                className={`p-4 rounded-lg text-left transition-colors duration-300 ${
-                  selectedAnswer
-                    ? option === questions[currentQuestion].answer
-                      ? 'bg-green-500 text-white'
-                      : option === selectedAnswer
-                      ? 'bg-red-500 text-white'
-                      : 'bg-secondary-bg'
-                    : 'bg-secondary-bg hover:bg-accent-light'
-                }`}
-              >
-                {option}
-              </button>
-            ))}
-          </div>
-        </div>
+        <>
+          {questions && questions.length > 0 && questions[currentQuestion] ? (
+            <div className={`transition-opacity duration-500 ${showAnimation ? 'opacity-100' : 'opacity-0'}`}>
+              <div className="w-full bg-gray-200 rounded-full h-2.5 mb-4">
+                <div
+                  className="bg-accent h-2.5 rounded-full transition-all duration-500"
+                  style={{ width: `${((currentQuestion) / questions.length) * 100}%` }}
+                ></div>
+              </div>
+              <h2 className="text-2xl font-bold mb-4">{questions[currentQuestion].question}</h2>
+              <div className="grid grid-cols-1 gap-4">
+                {questions[currentQuestion].options.map((option, index) => (
+                  <button
+                    key={index}
+                    onClick={() => handleAnswer(option)}
+                    disabled={selectedAnswer !== null}
+                    className={`p-4 rounded-lg text-left transition-colors duration-300 ${
+                      selectedAnswer
+                        ? option === questions[currentQuestion].answer
+                          ? 'bg-green-500 text-white'
+                          : option === selectedAnswer
+                          ? 'bg-red-500 text-white'
+                          : 'bg-secondary-bg'
+                        : 'bg-secondary-bg hover:bg-accent-light'
+                    }`}
+                  >
+                    {option}
+                  </button>
+                ))}
+              </div>
+            </div>
+          ) : (
+            <div>Quiz data is not available.</div>
+          )}
+        </>
       )}
     </div>
   );
