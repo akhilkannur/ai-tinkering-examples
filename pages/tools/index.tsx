@@ -7,13 +7,6 @@ import Footer from '../../components/Footer';
 
 const hubLinks = [
   {
-    href: '/ai-tool-finder',
-    title: 'Interactive Tool Finder',
-    description: 'Answer a few questions and get a personalized list of AI tools.',
-    icon: <Zap className="w-8 h-8 text-yellow-400" />,
-    bgColor: 'bg-gray-800'
-  },
-  {
     href: '/tools/free-ai-tools',
     title: 'Free AI Tools',
     description: 'A curated list of the best tools with free or freemium plans.',
