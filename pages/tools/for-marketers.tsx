@@ -1,9 +1,9 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
-import { AiTool, aiTools } from '../lib/ai-tools-data';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import { AiTool, aiTools } from '../../lib/ai-tools-data';
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer';
 import { Check, X } from 'lucide-react';
 
 const marketingUseCases = ['Marketing', 'SEO', 'Social Media', 'Copywriting', 'Blog Writing'];
