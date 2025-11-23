@@ -2,9 +2,9 @@
 import { useState } from 'react';
 import Head from 'next/head';
 import { AiTool, aiTools } from '../lib/ai-tools-data';
-import AIToolCard from '../../components/AIToolCard';
-import Navbar from '../../components/Navbar';
-import Footer from '../../components/Footer';
+import AIToolCard from '../components/AIToolCard';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 type Category = 'All' | AiTool['category'];
 type Price = 'All' | AiTool['tags']['price'];

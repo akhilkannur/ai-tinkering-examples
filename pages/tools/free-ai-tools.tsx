@@ -1,9 +1,9 @@
 
 import Head from 'next/head';
 import { AiTool, aiTools } from '../lib/ai-tools-data';
-import ToolCard from '../../components/ToolCard';
-import Navbar from '../../components/Navbar';
-import Footer from '../../components/Footer';
+import AIToolCard from '../components/AIToolCard';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 const freeOrFreemium = ['Free', 'Freemium'];
 
@@ -35,7 +35,7 @@ const FreeToolsPage = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {freeTools.map(tool => (
-            <ToolCard
+            <AIToolCard
               key={tool.name}
               name={tool.name}
               description={tool.description}
