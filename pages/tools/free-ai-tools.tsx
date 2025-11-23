@@ -1,6 +1,6 @@
 
 import Head from 'next/head';
-import { AiTool, aiTools } from '../../lib/ai-tools-data';
+import { AiTool, aiTools } from '../lib/ai-tools-data';
 import ToolCard from '../../components/ToolCard';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
