@@ -11,6 +11,8 @@ interface JobCardProps {
 export default function JobCard({ job }: JobCardProps) {
   const ref = React.useRef(null)
   const isInView = useInView(ref, { once: true, amount: 0.2 })
+  const blurDataURL = job.companyLogo?.[0]?.thumbnails?.small?.url || job.companyLogo?.[0]?.thumbnails?.large?.url;
+
   return (
     <motion.a
       ref={ref}
@@ -26,10 +28,14 @@ export default function JobCard({ job }: JobCardProps) {
         {job.companyLogo?.[0]?.url && (
           <div className="relative w-10 h-10 rounded-full overflow-hidden bg-slate-100 flex-shrink-0"> 
             <Image 
-              src={job.companyLogo[0].url}
+              src={job.companyLogo[0].thumbnails?.large?.url || job.companyLogo[0].url}
               alt={`${job.companyName} logo`}
               fill
               className="object-contain"
+              {...(blurDataURL && {
+                placeholder: 'blur',
+                blurDataURL: blurDataURL,
+              })}
             />
           </div>
         )}

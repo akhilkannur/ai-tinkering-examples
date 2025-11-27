@@ -21,8 +21,10 @@ export default function ExampleCard({
   const isInView = useInView(ref, { once: true, amount: 0.2 });
   const [imageStatus, setImageStatus] = useState<'loading' | 'loaded' | 'error'>('loading');
 
-  const airtableImageUrl = example.screenshots?.[0]?.url;
+  const airtableImageUrl = example.screenshots?.[0]?.thumbnails?.large?.url || example.screenshots?.[0]?.url;
   const imageUrl = airtableImageUrl ? `/api/getImage?imageUrl=${encodeURIComponent(airtableImageUrl)}` : null;
+  const blurAirtableUrl = example.screenshots?.[0]?.thumbnails?.small?.url || example.screenshots?.[0]?.thumbnails?.large?.url;
+  const blurImageUrl = blurAirtableUrl ? `/api/getImage?imageUrl=${encodeURIComponent(blurAirtableUrl)}` : null;
 
   const handleCardClick = (e: React.MouseEvent) => {
     if (
@@ -56,7 +58,7 @@ export default function ExampleCard({
             </div>
           ) : (
             <>
-              {imageStatus === 'loading' && (
+              {imageStatus === 'loading' && !blurImageUrl && (
                 <div className="absolute inset-0 bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 bg-[length:200%_100%] animate-[shimmer_1.5s_ease-in-out_infinite]">
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-slate-400 text-sm">Loading image...</div>
@@ -73,6 +75,10 @@ export default function ExampleCard({
                 quality={80}
                 onLoad={() => setImageStatus('loaded')}
                 onError={() => setImageStatus('error')}
+                {...(blurImageUrl && {
+                  placeholder: 'blur',
+                  blurDataURL: blurImageUrl,
+                })}
               />
               <div className="absolute inset-0 bg-blue-900 opacity-10 group-hover:opacity-5 transition-opacity duration-300"></div>
             </>

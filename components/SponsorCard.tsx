@@ -9,6 +9,8 @@ interface SponsorCardProps {
 export default function SponsorCard({ sponsor }: SponsorCardProps) {
   if (!sponsor) return null
 
+  const blurDataURL = sponsor.logo?.[0]?.thumbnails?.small?.url || sponsor.logo?.[0]?.thumbnails?.large?.url;
+
   return (
     <a 
       href={sponsor.website} 
@@ -20,10 +22,14 @@ export default function SponsorCard({ sponsor }: SponsorCardProps) {
         {sponsor.logo && (
           <div className="relative w-12 h-12 rounded-md overflow-hidden bg-white flex-shrink-0">
             <Image 
-              src={sponsor.logo[0].url} 
+              src={sponsor.logo[0].thumbnails?.large?.url || sponsor.logo[0].url} 
               alt={`${sponsor.name} logo`} 
               fill
               className="object-contain"
+              {...(blurDataURL && {
+                placeholder: 'blur',
+                blurDataURL: blurDataURL,
+              })}
             />
           </div>
         )}

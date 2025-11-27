@@ -36,7 +36,13 @@ const base = baseId && apiKey ? new Airtable({ apiKey }).base(baseId) : null
 export type SponsorRecord = {
   id: string;
   name: string;
-  logo?: { url: string }[] | null;
+  logo?: { 
+    url: string;
+    thumbnails?: {
+      small: { url: string };
+      large: { url: string };
+    }
+  }[] | null;
   website?: string | null;
   categoryId?: string | null;
   description?: string | null;
@@ -46,7 +52,13 @@ export type JobRecord = {
   id: string;
   jobTitle: string;
   companyName: string;
-  companyLogo?: { url: string }[] | null;
+  companyLogo?: { 
+    url: string;
+    thumbnails?: {
+      small: { url: string };
+      large: { url: string };
+    }
+  }[] | null;
   jobUrl: string;
   location?: string | null;
   description?: string | null;
@@ -56,7 +68,13 @@ export type JobRecord = {
 export type ToolRecord = {
   id: string;
   toolName: string;
-  logo?: { url: string }[] | null;
+  logo?: { 
+    url: string;
+    thumbnails?: {
+      small: { url: string };
+      large: { url: string };
+    }
+  }[] | null;
   websiteUrl: string;
   shortDescription?: string | null;
   featured: boolean;
@@ -72,7 +90,14 @@ export type ExampleRecord = {
   title: string
   slug: string
   summary?: string | null
-  screenshots?: { url: string; filename?: string }[] | null
+  screenshots?: {
+    url: string
+    filename?: string
+    thumbnails?: {
+      small: { url: string }
+      large: { url: string }
+    }
+  }[] | null
   category?: string | null
   categoryId?: string | null
   read_time?: number | null
@@ -113,7 +138,11 @@ function processExampleRecord(record: any): ExampleRecord {
   if (screenshotsRaw && Array.isArray(screenshotsRaw) && screenshotsRaw.length > 0) {
     screenshots = screenshotsRaw.map((att: any) => ({
       url: att.url,
-      filename: att.filename || 'screenshot'
+      filename: att.filename || 'screenshot',
+      thumbnails: att.thumbnails ? {
+        small: att.thumbnails.small,
+        large: att.thumbnails.large,
+      } : undefined
     }))
     
     console.log('✅ Processed screenshots for:', title, screenshots.map((s: any) => s.url))
@@ -148,10 +177,23 @@ function processCategoryRecord(record: any): CategoryRecord {
 
 function processSponsorRecord(record: any): SponsorRecord {
   const categoryIds = record.get('Category') as string[] | null;
+  const logoRaw = record.get('Logo');
+  let logo = null;
+  if (logoRaw && Array.isArray(logoRaw) && logoRaw.length > 0) {
+    logo = logoRaw.map((att: any) => ({
+      url: att.url,
+      filename: att.filename,
+      thumbnails: att.thumbnails ? {
+        small: att.thumbnails.small,
+        large: att.thumbnails.large,
+      } : undefined
+    }));
+  }
+
   return {
     id: record.id,
     name: (record.get('Name') as string) || 'Unnamed Sponsor',
-    logo: (record.get('Logo') as { url: string }[] | null) ?? null,
+    logo: logo,
     website: (record.get('Website') as string | null) ?? null,
     categoryId: categoryIds?.[0] || null,
     description: (record.get('Description') as string | null) ?? null,
@@ -159,11 +201,24 @@ function processSponsorRecord(record: any): SponsorRecord {
 }
 
 function processJobRecord(record: any): JobRecord {
+  const companyLogoRaw = record.get('Company Logo');
+  let companyLogo = null;
+  if (companyLogoRaw && Array.isArray(companyLogoRaw) && companyLogoRaw.length > 0) {
+    companyLogo = companyLogoRaw.map((att: any) => ({
+      url: att.url,
+      filename: att.filename,
+      thumbnails: att.thumbnails ? {
+        small: att.thumbnails.small,
+        large: att.thumbnails.large,
+      } : undefined
+    }));
+  }
+
   return {
     id: record.id,
     jobTitle: record.get('Job Title') as string || 'Untitled Job',
     companyName: record.get('Company Name') as string || 'Unknown Company',
-    companyLogo: (record.get('Company Logo') as { url: string }[] | null) ?? null,
+    companyLogo: companyLogo,
     jobUrl: record.get('Job URL') as string || '#',
     location: record.get('Location') as string || null,
     description: record.get('Description') as string || null,
@@ -172,10 +227,23 @@ function processJobRecord(record: any): JobRecord {
 }
 
 function processToolRecord(record: any): ToolRecord {
+  const logoRaw = record.get('Logo');
+  let logo = null;
+  if (logoRaw && Array.isArray(logoRaw) && logoRaw.length > 0) {
+    logo = logoRaw.map((att: any) => ({
+      url: att.url,
+      filename: att.filename,
+      thumbnails: att.thumbnails ? {
+        small: att.thumbnails.small,
+        large: att.thumbnails.large,
+      } : undefined
+    }));
+  }
+
   return {
     id: record.id,
     toolName: record.get('Tool Name') as string || 'Untitled Tool',
-    logo: (record.get('Logo') as { url: string }[] | null) ?? null,
+    logo: logo,
     websiteUrl: record.get('Website URL') as string || '#',
     shortDescription: record.get('Short Description') as string || null,
     featured: record.get('Featured') as boolean || false,
