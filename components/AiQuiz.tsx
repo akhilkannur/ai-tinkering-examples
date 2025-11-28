@@ -139,13 +139,6 @@ export default function AiQuiz() {
 
   const finishQuiz = () => {
     setShowResult(true);
-    // Update high score if needed
-    if (points > highScore) { // Note: using 'points' state here might be stale due to closure if not careful, but since we calculate newPoints above, we should be safe or use a ref. 
-                              // Actually, 'points' state update is async. The safe way is to check against the calculated value, but for simplicity in this React structure, 
-                              // let's use a useEffect or check in the render. 
-                              // Better approach: check in this function using the *calculated* final score, but 'points' isn't updated immediately in this closure.
-                              // Let's allow the re-render to handle high score check in useEffect or just rely on current 'points' if we pass it or use a ref.
-                              // Actually, let's just do it in a useEffect dependent on showResult.
   };
   
   // Effect to handle High Score update when result is shown
