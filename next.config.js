@@ -8,7 +8,8 @@ const nextConfig = {
       "dl.airtableusercontent.com",
       "attachments.airtableusercontent.com",
       "v5.airtableusercontent.com",
-      "airtableusercontent.com"
+      "airtableusercontent.com",
+      "res.cloudinary.com"
     ],
     
     remotePatterns: [

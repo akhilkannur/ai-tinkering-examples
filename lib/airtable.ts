@@ -98,6 +98,7 @@ export type ExampleRecord = {
       large: { url: string }
     }
   }[] | null
+  cloudinaryPublicId?: string | null
   category?: string | null
   categoryId?: string | null
   read_time?: number | null
@@ -156,6 +157,7 @@ function processExampleRecord(record: any): ExampleRecord {
     slug,
     summary: record.get('Summary') as string || null,
     screenshots: screenshots,
+    cloudinaryPublicId: record.get('CloudinaryPublicId') as string || null,
     categoryId: categoryIds?.[0] || null,
     read_time: record.get('Read time') as number || null,
     publish_date: record.get('Publish date') as string || null,

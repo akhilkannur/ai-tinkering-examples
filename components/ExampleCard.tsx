@@ -3,6 +3,7 @@ import { motion, useInView } from "framer-motion";
 import type { ExampleRecord, SponsorRecord } from "../lib/airtable";
 import Image from "next/image";
 import { Clock } from "lucide-react";
+import { optimizeImageUrl } from "../utils/cloudinary";
 
 interface ExampleCardProps {
   example: ExampleRecord;
@@ -21,10 +22,9 @@ export default function ExampleCard({
   const isInView = useInView(ref, { once: true, amount: 0.2 });
   const [imageStatus, setImageStatus] = useState<'loading' | 'loaded' | 'error'>('loading');
 
-  const airtableImageUrl = example.screenshots?.[0]?.thumbnails?.large?.url || example.screenshots?.[0]?.url;
-  const imageUrl = airtableImageUrl ? `/api/getImage?imageUrl=${encodeURIComponent(airtableImageUrl)}` : null;
-  const blurAirtableUrl = example.screenshots?.[0]?.thumbnails?.small?.url || example.screenshots?.[0]?.thumbnails?.large?.url;
-  const blurImageUrl = blurAirtableUrl ? `/api/getImage?imageUrl=${encodeURIComponent(blurAirtableUrl)}` : null;
+  const rawAirtableUrl = example.screenshots?.[0]?.url;
+  const imageUrl = optimizeImageUrl(rawAirtableUrl, example.cloudinaryPublicId, 800);
+  const blurImageUrl = optimizeImageUrl(rawAirtableUrl, example.cloudinaryPublicId, 100);
 
   const handleCardClick = (e: React.MouseEvent) => {
     if (
