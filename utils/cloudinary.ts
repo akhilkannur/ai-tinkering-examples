@@ -15,7 +15,7 @@ export function optimizeImageUrl(airtableUrl: string | undefined | null, publicI
 
   // 1. Preferred: Permanent Cloudinary ID
   if (publicId) {
-    return `https://res.cloudinary.com/${cloudName}/image/upload/${transforms}/${publicId}`
+    return `https://res.cloudinary.com/${cloudName}/image/upload/${transforms}/v1/${publicId}`
   }
   
   // 2. Fallback: Fetch URL (for non-synced images)
