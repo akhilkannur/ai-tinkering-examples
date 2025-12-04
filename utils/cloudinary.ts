@@ -1,9 +1,9 @@
 export function optimizeImageUrl(airtableUrl: string | undefined | null, publicId?: string | null, width?: number) {
   if (!airtableUrl && !publicId) return null
   
-  const cloudName = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME
+  const cloudName = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME || 'djwapznca'
   if (!cloudName) {
-    console.warn('NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME is not set');
+    console.warn('NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME is not set and hardcoded fallback failed.');
     return airtableUrl || null;
   }
 
