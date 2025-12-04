@@ -55,6 +55,12 @@ export default function ExampleCard({
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
               <p className="text-slate-400 text-sm">Preview unavailable</p>
+              {/* DEBUG OVERLAY */}
+              <div className="absolute top-0 left-0 right-0 bg-black/80 text-white text-[10px] p-2 overflow-auto h-full text-left z-50">
+                <p><strong>Status:</strong> {imageStatus}</p>
+                <p><strong>PublicID:</strong> {example.cloudinaryPublicId || 'MISSING'}</p>
+                <p><strong>URL:</strong> {imageUrl || 'NULL'}</p>
+              </div>
             </div>
           ) : (
             <>
