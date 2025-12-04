@@ -11,7 +11,7 @@ export function optimizeImageUrl(airtableUrl: string | undefined | null, publicI
   // c_fill might crop if aspect ratio differs, c_limit is safer if we just want to resize. 
   // But original used c_fill. Sticking to it but maybe 'c_limit' is better if we don't want cropping?
   // Let's stick to previous behavior: 'c_fill'
-  const transforms = `f_auto,q_auto,${w},c_fill`
+  const transforms = `f_auto,q_auto,${w},c_limit`
 
   // 1. Preferred: Permanent Cloudinary ID
   if (publicId) {
