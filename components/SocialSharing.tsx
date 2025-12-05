@@ -99,14 +99,14 @@ export default function SocialSharing({
   // Full version for detail pages
   return (
     <div className={`flex items-center gap-4 ${className}`}>
-      <span className="text-sm font-medium text-gray-600">SHARE</span>
+      <span className="text-sm font-mono font-bold text-text-secondary">SHARE</span>
       <div className="flex items-center gap-2">
         <a
           href={shareData.twitter}
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => handleShare('twitter')}
-          className="text-gray-500 hover:text-black transition-colors"
+          className="text-text-secondary hover:text-text-color transition-colors"
           aria-label="Share on X"
         >
           <X size={20} />
@@ -116,7 +116,7 @@ export default function SocialSharing({
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => handleShare('facebook')}
-          className="text-gray-500 hover:text-blue-600 transition-colors"
+          className="text-text-secondary hover:text-accent transition-colors"
           aria-label="Share on Facebook"
         >
           <Facebook size={20} />
@@ -126,7 +126,7 @@ export default function SocialSharing({
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => handleShare('linkedin')}
-          className="text-gray-500 hover:text-blue-700 transition-colors"
+          className="text-text-secondary hover:text-accent-light transition-colors"
           aria-label="Share on LinkedIn"
         >
           <Linkedin size={20} />

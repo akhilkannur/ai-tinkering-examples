@@ -79,15 +79,15 @@ export default function ExamplePage({ example }: ExamplePageProps) {
         <Navbar />
         
         <nav className="max-w-4xl mx-auto px-4 py-4" aria-label="Breadcrumb">
-          <ol className="flex items-center space-x-2 text-sm text-slate-600">
-            <li><Link href="/">Home</Link></li>
-            <li className="before:content-['/'] before:mx-2"><Link href="/ai-examples" className="hover:text-text-color transition-colors">AI Examples</Link></li>
+          <ol className="flex items-center space-x-2 text-sm font-mono text-text-secondary">
+            <li><Link href="/" className="hover:text-accent transition-colors">Home</Link></li>
+            <li className="before:content-['/'] before:mx-2"><Link href="/ai-examples" className="hover:text-accent transition-colors">AI Examples</Link></li>
             {example.category && (
               <li className="before:content-['/'] before:mx-2">
-                <Link href={`/ai-examples/category/${categorySlug}`}>{example.category}</Link>
+                <Link href={`/ai-examples/category/${categorySlug}`} className="hover:text-accent transition-colors">{example.category}</Link>
               </li>
             )}
-            <li className="before:content-['/'] before:mx-2 text-text-color font-medium truncate font-headline">
+            <li className="before:content-['/'] before:mx-2 text-text-color font-bold truncate">
               {example.title}
             </li>
           </ol>
@@ -97,7 +97,7 @@ export default function ExamplePage({ example }: ExamplePageProps) {
           <ExampleBody example={example} />
         </main>
 
-        <div className="max-w-4xl mx-auto px-4 py-8 flex justify-between items-center">
+        <div className="max-w-4xl mx-auto px-4 py-8 flex justify-between items-center border-t border-navy-dark mt-8">
           <SocialSharing 
             url={currentUrl}
             title={example.title}
@@ -108,7 +108,7 @@ export default function ExamplePage({ example }: ExamplePageProps) {
               href={example.original_link}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-2 border border-transparent rounded-full shadow-sm text-base font-bold text-electric-blue bg-accent hover:bg-accent hover:text-electric-blue transition-all duration-300 transform hover:scale-105"
+              className="inline-flex items-center gap-2 px-6 py-2 border border-accent rounded-none shadow-none text-base font-mono font-bold text-accent bg-transparent hover:bg-accent hover:text-electric-blue transition-all duration-300"
             >
               <ExternalLink size={16} />
               View Original
@@ -118,14 +118,14 @@ export default function ExamplePage({ example }: ExamplePageProps) {
 
         {example.tags && example.tags.length > 0 && (
           <footer className="max-w-4xl mx-auto px-4 py-8">
-            <div className="border-t border-secondary-bg pt-8">
-              <h3 className="text-sm font-semibold text-text-color mb-4 font-headline">Related Topics</h3>
+            <div className="border-t border-navy-dark pt-8">
+              <h3 className="text-sm font-bold text-text-secondary mb-4 font-mono uppercase tracking-wider">Related Topics</h3>
               <div className="flex gap-2 flex-wrap">
                 {example.tags.map(tag => (
                   <Link
                     key={tag}
                     href={`/ai-examples/tag/${tag.toLowerCase().replace(/\s+/g, '-')}`}
-                    className="px-3 py-2 text-sm bg-secondary-bg text-text-color rounded-full hover:bg-accent transition-colors"
+                    className="px-3 py-2 text-sm font-mono border border-navy-dark bg-transparent text-text-secondary rounded-none hover:border-accent hover:text-accent transition-colors"
                   >
                     #{tag}
                   </Link>
