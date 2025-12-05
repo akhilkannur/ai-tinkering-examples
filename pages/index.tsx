@@ -10,6 +10,7 @@ import ExampleModal from '../components/ExampleModal'
 import HorizontalStrip from '../components/HorizontalStrip'
 import JobCard from '../components/JobCard'
 import AIToolCard from '../components/AIToolCard'
+import NewsletterForm from '../components/NewsletterForm' // Added import
 import { fetchEnrichedExamples, fetchFeaturedJobs, fetchFeaturedTools, fetchSiteSettings, EnrichedExampleRecord, JobRecord, ToolRecord } from '../lib/airtable'
 import CtaCard from '../components/CtaCard'
 
@@ -202,15 +203,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
             </p>
             
             <div className="max-w-[500px] mx-auto">
-              <iframe 
-                src="https://subscribe-forms.beehiiv.com/44f8ba74-5250-4aac-9fa0-3ad651f05798" 
-                data-test-id="beehiiv-embed" 
-                style={{width: '100%', height: '147px'}} 
-                frameBorder="0" 
-                scrolling="no" 
-                className="mx-auto block" 
-                loading="lazy" 
-              />
+              <NewsletterForm />
             </div>
           </div>
         </div>
