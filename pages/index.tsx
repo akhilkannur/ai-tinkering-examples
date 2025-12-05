@@ -11,7 +11,6 @@ import HorizontalStrip from '../components/HorizontalStrip'
 import JobCard from '../components/JobCard'
 import AIToolCard from '../components/AIToolCard'
 import { fetchEnrichedExamples, fetchFeaturedJobs, fetchFeaturedTools, fetchSiteSettings, EnrichedExampleRecord, JobRecord, ToolRecord } from '../lib/airtable'
-import WavyDivider from '../components/WavyDivider'
 import CtaCard from '../components/CtaCard'
 
 interface HomePageProps {
@@ -84,8 +83,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
         <meta name="description" content={homepageDescription} />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-
+        
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebSite",
@@ -116,7 +114,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
         <Hero />
 
         {siteSettings.enableFeaturedToolsSection && featuredTools.length > 0 && (
-          <div className="bg-secondary-bg py-12">
+          <div className="bg-secondary-bg py-12 border-b border-navy-dark">
             <HorizontalStrip 
               title="Featured AI Tools"
               items={featuredTools}
@@ -133,10 +131,10 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
           </div>
         )}
 
-        <div className="bg-[#f3d2c1] py-12">
+        <div className="bg-primary-bg py-12 border-b border-navy-dark">
           <div className="max-w-6xl mx-auto px-4 sm:px-6">
             <div className="text-center mb-8">
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-text-color mb-2">
+              <h2 className="text-3xl sm:text-4xl font-headline font-bold text-text-color mb-2 uppercase tracking-tight">
                 Latest AI Examples
               </h2>
             </div>
@@ -146,10 +144,10 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
                 <button
                   key={category}
                   onClick={() => setSelectedCategory(category)}
-                  className={`px-5 py-2.5 text-sm font-bold rounded-full transition-all duration-300 ${
+                  className={`px-5 py-2.5 text-sm font-mono font-bold border rounded-none transition-all duration-300 ${
                     selectedCategory === category
-                      ? 'bg-accent text-white shadow-md'
-                      : 'bg-white text-text-color hover:bg-accent hover:text-white'
+                      ? 'bg-accent text-electric-blue border-accent shadow-none'
+                      : 'bg-secondary-bg text-text-secondary border-navy-dark hover:border-accent hover:text-accent'
                   }`}
                 >
                   {category}
@@ -159,11 +157,11 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
 
             {filteredExamples.length === 0 ? (
               <div className="py-16 text-center">
-                <h3 className="text-2xl font-bold mb-3">Nothing Found</h3>
-                <p className="text-lg text-light-purple mb-6">Try a different category, or check back later!</p>
+                <h3 className="text-2xl font-headline font-bold mb-3">Nothing Found</h3>
+                <p className="text-lg text-text-secondary mb-6">Try a different category, or check back later!</p>
                 <button
                   onClick={() => setSelectedCategory('All')}
-                  className="bg-accent text-white px-6 py-3 text-base font-bold rounded-full hover:bg-pink-600 transition-colors duration-300"
+                  className="bg-accent text-electric-blue px-6 py-3 text-base font-mono font-bold rounded-none hover:bg-accent-hover transition-colors duration-300"
                 >
                   Show All Examples
                 </button>
@@ -184,7 +182,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
         </div>
 
         {siteSettings.enableFeaturedJobsSection && featuredJobs.length > 0 && (
-          <div className="bg-primary-bg py-12">
+          <div className="bg-primary-bg py-12 border-b border-navy-dark">
             <HorizontalStrip 
               title="Featured AI Jobs"
               items={featuredJobs}
@@ -194,12 +192,12 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
           </div>
         )}
 
-        <div className="bg-gradient-to-br from-[#f582ae] to-[#8bd3dd] text-white py-16" id="newsletter">
+        <div className="bg-secondary-bg text-text-color py-16 border-t border-navy-dark" id="newsletter">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-            <h2 className="text-4xl sm:text-5xl font-black mb-4">
+            <h2 className="text-4xl sm:text-5xl font-headline font-bold mb-4 uppercase tracking-tight text-accent">
               📬 Don't Miss Out!
             </h2>
-            <p className="text-xl mb-8">
+            <p className="text-xl mb-8 font-mono text-text-secondary">
               Get 5-10 hand-picked AI examples delivered weekly. Join hundreds of subscribers learning to use AI practically.
             </p>
             
@@ -217,7 +215,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
           </div>
         </div>
 
-        <WavyDivider />
+        {/* WavyDivider removed for Digital Workshop theme */}
 
         <ExampleModal
           example={selectedExample}
