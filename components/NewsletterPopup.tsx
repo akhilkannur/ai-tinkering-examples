@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import Image from 'next/image'; // Import Image component
-import Script from 'next/script';
+import Image from 'next/image';
+import { X } from 'lucide-react';
+import NewsletterForm from './NewsletterForm';
 
 interface NewsletterPopupProps {
   delay?: number; // in seconds
@@ -32,23 +33,32 @@ const NewsletterPopup: React.FC<NewsletterPopupProps> = ({ delay = 20 }) => {
   }
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm" onClick={handleClose}>
-      <div className="bg-primary-bg p-6 rounded-lg shadow-lg max-w-md text-center relative border border-text-color font-sans" onClick={(e) => e.stopPropagation()}>
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm" onClick={handleClose}>
+      <div 
+        className="bg-primary-bg p-8 w-full max-w-md text-center relative border border-accent shadow-[0_0_30px_rgba(212,255,0,0.15)]" 
+        onClick={(e) => e.stopPropagation()}
+      >
         <button
           onClick={handleClose}
-          className="absolute top-2 right-2 text-text-color hover:text-accent text-xl"
+          className="absolute top-0 right-0 p-3 text-text-secondary hover:text-accent hover:bg-secondary-bg transition-all duration-100 hover:scale-110 group"
         >
-          &times;
+          <X size={24} className="group-hover:rotate-90 transition-transform duration-300" />
         </button>
-        <div className="mb-4">
-          <Image src="/favicon_canva.png" alt="Favicon" width={128} height={128} className="mx-auto" />
+
+        <div className="mb-6 border border-navy-dark inline-block p-2 bg-secondary-bg">
+          <Image src="/favicon_canva.png" alt="Favicon" width={80} height={80} className="mx-auto grayscale hover:grayscale-0 transition-all duration-500" />
         </div>
-        <p className="text-xl font-semibold mb-4 text-text-color">
+
+        <h3 className="text-2xl font-headline font-bold mb-3 text-text-color uppercase tracking-tight">
+          Join the <span className="text-accent">Lab</span>
+        </h3>
+        
+        <p className="text-sm font-mono text-text-secondary mb-8 leading-relaxed">
           Hey, I'm Akhil. I curate a weekly newsletter with the most interesting AI examples I find. Sound useful? Subscribe today!
         </p>
-        <div className="beehiiv-form-embed mx-auto block m-0 rounded-none bg-transparent max-w-full translate-y-0">
-          <Script async src="https://subscribe-forms.beehiiv.com/embed.js" />
-          <iframe src="https://subscribe-forms.beehiiv.com/44f8ba74-5250-4aac-9fa0-3ad651f05798" data-test-id="beehiiv-embed" frameBorder="0" scrolling="no" style={{width: '100%', height: '147px'}} />
+
+        <div className="w-full">
+          <NewsletterForm />
         </div>
       </div>
     </div>

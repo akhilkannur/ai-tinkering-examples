@@ -22,16 +22,16 @@ export default function JobCard({ job }: JobCardProps) {
       href={job.jobUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="block p-4 border border-[#001858] rounded-lg bg-primary-bg shadow-lg h-full flex flex-col justify-between transform hover:-translate-y-1 hover:border-[#001858] transition-all duration-300"
+      className="block p-4 border border-navy-dark rounded-none bg-secondary-bg shadow-none h-full flex flex-col justify-between hover:border-accent transition-colors duration-75 group"
     >
       <div className="flex items-center gap-3">
         {job.companyLogo?.[0]?.url && (
-          <div className="relative w-10 h-10 rounded-full overflow-hidden bg-slate-100 flex-shrink-0"> 
+          <div className="relative w-10 h-10 rounded-none overflow-hidden bg-white flex-shrink-0 border border-navy-dark group-hover:border-accent transition-colors duration-75"> 
             <Image 
               src={job.companyLogo[0].thumbnails?.large?.url || job.companyLogo[0].url}
               alt={`${job.companyName} logo`}
               fill
-              className="object-contain"
+              className="object-contain p-1"
               {...(blurDataURL && {
                 placeholder: 'blur',
                 blurDataURL: blurDataURL,
@@ -40,10 +40,10 @@ export default function JobCard({ job }: JobCardProps) {
           </div>
         )}
         <div>
-          <h3 className="text-sm font-semibold text-text-color">{job.jobTitle}</h3> 
-          <p className="text-xs text-text-color">{job.companyName}</p> 
+          <h3 className="text-sm font-mono font-bold text-text-color group-hover:text-accent transition-colors duration-75">{job.jobTitle}</h3> 
+          <p className="text-xs font-mono text-text-secondary group-hover:text-text-color transition-colors duration-75">{job.companyName}</p> 
           {job.location && (
-            <p className="text-xs text-text-color flex items-center gap-1 mt-0.5"> 
+            <p className="text-xs font-mono text-text-secondary flex items-center gap-1 mt-0.5 group-hover:text-text-color transition-colors duration-75"> 
               <MapPin size={10} /> {job.location}
             </p>
           )}
