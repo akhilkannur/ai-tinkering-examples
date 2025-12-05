@@ -3,7 +3,7 @@ import React from 'react';
 export default function NewsletterForm() {
   return (
     <div className="w-full max-w-md mx-auto">
-      <div className="relative overflow-hidden h-[50px] border border-navy-dark rounded-none bg-primary-bg flex items-center">
+      <div className="relative overflow-hidden h-[60px] border border-navy-dark rounded-none bg-primary-bg flex items-center">
         {/*
           The iframe height is set to allow the Beehiiv form's input and button to show,
           while the parent div crops out the header/extra spacing.
@@ -17,9 +17,10 @@ export default function NewsletterForm() {
           style={{ 
             width: '100%', 
             height: '147px', // Beehiiv's default embed height
-            marginTop: '-62px', // Adjust this to crop the header, showing only input/button
+            marginTop: '-50px', // Adjusted to reveal input/button
           }} 
           className="mx-auto block bg-transparent" 
+          title="Beehiiv Newsletter Signup" // Added for accessibility
         />
       </div>
       <p className="text-xs text-text-secondary mt-2 font-mono text-center">
