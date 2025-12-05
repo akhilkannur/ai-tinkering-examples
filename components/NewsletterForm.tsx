@@ -1,39 +1,30 @@
-import { useState } from 'react';
-import { ArrowRight } from 'lucide-react';
+import React from 'react';
 
 export default function NewsletterForm() {
-  const [email, setEmail] = useState('');
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Redirect to Beehiiv hosted form with email pre-filled
-    const beehiivUrl = `https://subscribe-forms.beehiiv.com/44f8ba74-5250-4aac-9fa0-3ad651f05798?email=${encodeURIComponent(email)}`;
-    window.open(beehiivUrl, '_blank');
-  };
-
   return (
-    <form onSubmit={handleSubmit} className="w-full max-w-md mx-auto">
-      <div className="flex flex-col sm:flex-row gap-0">
-        <input
-          className="flex-grow appearance-none bg-primary-bg border border-navy-dark border-r-0 sm:border-r-0 text-text-color py-3 px-4 leading-tight focus:outline-none focus:border-accent font-mono placeholder-text-secondary rounded-none transition-colors"
-          type="email"
-          placeholder="Enter your email..."
-          aria-label="Email address"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
+    <div className="w-full max-w-md mx-auto">
+      <div className="relative overflow-hidden h-[50px] border border-navy-dark rounded-none bg-primary-bg flex items-center">
+        {/*
+          The iframe height is set to allow the Beehiiv form's input and button to show,
+          while the parent div crops out the header/extra spacing.
+          Adjust the iframe's `margin-top` and the parent `h-[XXpx]` value if Beehiiv's embed changes.
+        */}
+        <iframe 
+          src="https://subscribe-forms.beehiiv.com/44f8ba74-5250-4aac-9fa0-3ad651f05798" 
+          data-test-id="beehiiv-embed" 
+          frameBorder="0" 
+          scrolling="no" 
+          style={{ 
+            width: '100%', 
+            height: '147px', // Beehiiv's default embed height
+            marginTop: '-62px', // Adjust this to crop the header, showing only input/button
+          }} 
+          className="mx-auto block bg-transparent" 
         />
-        <button
-          className="flex-shrink-0 bg-accent hover:bg-accent-hover border border-accent text-electric-blue text-sm font-bold py-3 px-6 rounded-none font-mono uppercase tracking-wide transition-colors flex items-center justify-center gap-2 group"
-          type="submit"
-        >
-          Subscribe
-          <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-        </button>
       </div>
-      <p className="text-xs text-text-secondary mt-2 font-mono text-center sm:text-left">
+      <p className="text-xs text-text-secondary mt-2 font-mono text-center">
         Join hundreds of other tinkerers. No spam.
       </p>
-    </form>
+    </div>
   );
 }
