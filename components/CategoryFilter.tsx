@@ -12,7 +12,7 @@ export default function CategoryFilter({ categories, selectedCategory, onSelect 
         className={`px-4 py-2 rounded-full border whitespace-nowrap transition-colors ${
           selectedCategory === 'All' 
             ? 'bg-accent text-white border-accent' 
-            : 'border-slate-300 text-slate-700 hover:border-accent hover:text-accent'
+            : 'border-navy-dark text-text-secondary hover:text-text-color hover:border-text-secondary'
         }`}
       >
         All
@@ -24,7 +24,7 @@ export default function CategoryFilter({ categories, selectedCategory, onSelect 
           className={`px-4 py-2 rounded-full border whitespace-nowrap transition-colors ${
             selectedCategory === category 
               ? 'bg-accent text-white border-accent' 
-              : 'border-slate-300 text-slate-700 hover:border-accent hover:text-accent'
+              : 'border-navy-dark text-text-secondary hover:text-text-color hover:border-text-secondary'
           }`}
         >
           {category}

@@ -45,23 +45,23 @@ export default function ExampleCard({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
       transition={{ duration: 0.5 }}
-      className="card group cursor-pointer relative flex flex-col bg-white rounded-2xl overflow-hidden border border-slate-100 hover:border-accent/30 transition-all duration-300 transform hover:-translate-y-1 shadow-sm hover:shadow-xl hover:shadow-accent/10"
+      className="card group cursor-pointer relative flex flex-col bg-secondary-bg rounded-2xl overflow-hidden border border-navy-dark hover:border-accent transition-all duration-300 transform hover:-translate-y-1 shadow-lg shadow-accent/10"
     >
       <div className="relative z-10 flex-grow" onClick={handleCardClick}>
-        <div className="relative w-full h-64 sm:h-80 lg:h-96 overflow-hidden bg-slate-100 rounded-t-2xl border-b border-slate-50">
+        <div className="relative w-full h-64 sm:h-80 lg:h-96 overflow-hidden bg-secondary-bg rounded-t-2xl border-b border-navy-dark">
           {!imageUrl || imageStatus === 'error' ? (
-            <div className="absolute inset-0 bg-slate-50 flex flex-col items-center justify-center gap-2">
-              <svg className="w-16 h-16 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="absolute inset-0 bg-secondary-bg flex flex-col items-center justify-center gap-2">
+              <svg className="w-16 h-16 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
-              <p className="text-slate-400 text-sm">Preview unavailable</p>
+              <p className="text-slate-500 text-sm">Preview unavailable</p>
             </div>
           ) : (
             <>
               {imageStatus === 'loading' && !blurImageUrl && (
-                <div className="absolute inset-0 bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 bg-[length:200%_100%] animate-[shimmer_1.5s_ease-in-out_infinite]">
+                <div className="absolute inset-0 bg-gradient-to-r from-navy-dark via-secondary-bg to-navy-dark bg-[length:200%_100%] animate-[shimmer_1.5s_ease-in-out_infinite]">
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-slate-400 text-sm">Loading image...</div>
+                    <div className="text-slate-500 text-sm">Loading image...</div>
                   </div>
                 </div>
               )}
@@ -86,12 +86,12 @@ export default function ExampleCard({
         </div>
 
         <div className="p-5 sm:p-6 text-left">
-          <h3 className="text-lg sm:text-xl font-bold leading-tight text-slate-900 line-clamp-2 group-hover:text-accent transition-colors">
+          <h3 className="text-lg sm:text-xl font-bold leading-tight text-text-color line-clamp-2 group-hover:text-accent transition-colors">
             {example.title}
           </h3>
           {example.read_time && (
-            <div className="flex items-center mt-3 text-sm text-slate-500 font-medium">
-              <Clock size={14} className="mr-1.5" />
+            <div className="flex items-center mt-3 text-sm text-text-secondary font-medium">
+              <Clock size={14} className="mr-1.5 text-slate-500" />
               <span>{example.read_time} min read</span>
             </div>
           )}

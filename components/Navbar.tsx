@@ -35,7 +35,7 @@ export default function Navbar() {
           }}
         />
       </Head>
-      <nav className="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-100">
+      <nav className="bg-secondary-bg/80 backdrop-blur-md sticky top-0 z-50 border-b border-navy-dark">
       <div className="container mx-auto px-4 sm:px-6 py-4">
         <div className="flex justify-between h-16 items-center">
           <div className="flex items-center">
@@ -44,7 +44,7 @@ export default function Navbar() {
                 <div className="relative w-8 h-8 overflow-hidden rounded-lg">
                   <Image src="/logo.png" alt="AI Examples Logo" width={32} height={32} className="object-cover" />
                 </div>
-                <span className="text-lg font-bold text-slate-900 group-hover:text-accent transition-colors">Real AI Examples</span>
+                <span className="text-lg font-bold text-text-color group-hover:text-accent transition-colors">Real AI Examples</span>
               </Link>
             </div>
             {/* Desktop Navigation */}
@@ -56,7 +56,7 @@ export default function Navbar() {
                   className={`inline-flex items-center text-sm font-medium transition-colors duration-200 ${
                     router.pathname.startsWith(link.href)
                       ? 'text-accent'
-                      : 'text-slate-600 hover:text-slate-900'
+                      : 'text-text-secondary hover:text-text-color'
                   }`}
                 >
                   {link.label}
@@ -70,7 +70,7 @@ export default function Navbar() {
               href={process.env.NEXT_PUBLIC_AIRTABLE_SUBMIT_FORM_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-5 py-2 border border-transparent rounded-full shadow-sm text-sm font-semibold text-white bg-accent hover:bg-accent-hover transition-all duration-200 shadow-accent/20 hover:shadow-accent/40"
+              className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-5 py-2 border border-transparent rounded-full shadow-sm text-sm font-semibold text-electric-blue bg-accent hover:bg-accent-hover transition-all duration-200 shadow-accent/20 hover:shadow-accent/40"
             >
               Submit an Example
             </a>
@@ -80,7 +80,7 @@ export default function Navbar() {
           <div className="-mr-2 flex items-center md:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-slate-600 hover:text-slate-900 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-accent"
+              className="inline-flex items-center justify-center p-2 rounded-md text-text-color hover:text-text-color hover:bg-navy-dark focus:outline-none focus:ring-2 focus:ring-inset focus:ring-accent"
               aria-expanded="false"
             >
               <span className="sr-only">Open main menu</span>
@@ -96,7 +96,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-white border-b border-slate-100">
+        <div className="md:hidden bg-secondary-bg border-b border-navy-dark">
           <div className="px-2 pt-2 pb-3 space-y-1">
             {navLinks.map((link) => (
               <Link
@@ -104,8 +104,8 @@ export default function Navbar() {
                 href={link.href}
                 className={`block px-3 py-2 rounded-md text-base font-medium ${
                   router.pathname.startsWith(link.href)
-                    ? 'bg-accent/10 text-accent'
-                    : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
+                    ? 'bg-accent/20 text-accent'
+                    : 'text-text-secondary hover:bg-navy-dark hover:text-text-color'
                 }`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
@@ -116,7 +116,7 @@ export default function Navbar() {
               href={process.env.NEXT_PUBLIC_AIRTABLE_SUBMIT_FORM_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-full text-center px-3 py-3 rounded-md text-base font-bold text-white bg-accent hover:bg-accent-hover mt-4"
+              className="block w-full text-center px-3 py-3 rounded-md text-base font-bold text-electric-blue bg-accent hover:bg-accent-hover mt-4"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Submit an Example
@@ -128,3 +128,5 @@ export default function Navbar() {
     </>
   )
 }
+
+

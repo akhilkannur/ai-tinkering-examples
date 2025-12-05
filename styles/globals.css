@@ -16,7 +16,7 @@ html, body, #__next {
 }
 
 body { 
-  @apply bg-white text-slate-900 antialiased;
+  @apply bg-primary-bg text-text-color antialiased; /* Updated for dark theme */
   /* Optimize font rendering */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -51,7 +51,7 @@ h2 {
 
 /* Card component with enhanced performance */
 .card { 
-  @apply border border-slate-100 rounded-2xl p-4 bg-white shadow-lg; /* Changed shadow-md to shadow-lg */
+  @apply border border-navy-dark rounded-2xl p-4 bg-secondary-bg shadow-custom-light; /* Updated for dark theme */
   /* Use transform3d for better performance */
   transform: translate3d(0, 0, 0);
   /* Optimize repaints */
@@ -61,7 +61,7 @@ h2 {
 }
 
 .card:hover {
-  @apply shadow-xl; /* Changed shadow-lg to shadow-xl */
+  @apply shadow-xl shadow-accent/20; /* Updated for dark theme */
   /* Use GPU acceleration */
   transform: translate3d(0, -2px, 0) scale(1.02);
 }
@@ -102,7 +102,7 @@ h2 {
 }
 
 .skeleton {
-  background: linear-gradient(90deg, #f0f0f0 25%, transparent 37%, #f0f0f0 63%);
+  background: linear-gradient(90deg, #1e293b 25%, #0f172a 37%, #1e293b 63%); /* Updated for dark theme */
   background-size: 400px 100%;
   animation: shimmer 1.5s ease-in-out infinite;
 }
@@ -125,7 +125,7 @@ h2 {
 button:focus-visible,
 input:focus-visible,
 select:focus-visible {
-  outline: 2px solid #3b82f6;
+  outline: 2px solid #6366f1; /* Updated to accent color */
   outline-offset: 2px;
 }
 
@@ -136,16 +136,16 @@ select:focus-visible {
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background: #0f172a; /* Dark track */
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.2);
+  background: #334155; /* Darker thumb */
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 0, 0, 0.3);
+  background: #475569; /* Darker thumb hover */
 }
 
 /* Modal enter/exit animations */
@@ -206,7 +206,7 @@ select:focus-visible {
 @media (prefers-contrast: high) {
   .card {
     border-width: 2px;
-    border-color: #000;
+    border-color: #e2e8f0; /* Light border in high contrast */
   }
   
   button {
@@ -216,20 +216,18 @@ select:focus-visible {
 
 /* Dark mode optimizations (if implementing) */
 @media (prefers-color-scheme: dark) {
-  :root {
-    color-scheme: dark;
-  }
+  /* This block can be adjusted if full dark mode toggle is implemented */
 }
 
 .custom-shadow {
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Re-evaluate if this is still needed */
 }
 
 .grid-dots-pattern {
-  background-image: radial-gradient(#cbd5e1 10%, transparent 10%);
+  background-image: radial-gradient(#1e293b 10%, transparent 10%); /* Updated for dark theme */
   background-size: 10px 10px;
   background-position: 0 0;
-  opacity: 0.2;
+  opacity: 0.4;
 }
 
 .gradient-border {
