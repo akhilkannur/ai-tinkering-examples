@@ -1,7 +1,7 @@
 import { GetServerSideProps } from 'next'
 import { fetchExamples } from '../lib/airtable'
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://your-domain.com'
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://realaiexamples.com'
 
 function generateSitemap(examples: any[], categories: string[], tags: string[]) {
   const currentDate = new Date().toISOString()
