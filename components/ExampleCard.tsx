@@ -45,10 +45,10 @@ export default function ExampleCard({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
       transition={{ duration: 0.5 }}
-      className="card group cursor-pointer relative flex flex-col bg-secondary-bg rounded-2xl overflow-hidden border border-navy-dark hover:border-accent transition-all duration-300 transform hover:-translate-y-1 shadow-lg shadow-accent/10"
+      className="card group cursor-pointer relative flex flex-col bg-secondary-bg rounded-none overflow-hidden border border-navy-dark hover:border-accent transition-colors duration-200"
     >
       <div className="relative z-10 flex-grow" onClick={handleCardClick}>
-        <div className="relative w-full h-64 sm:h-80 lg:h-96 overflow-hidden bg-secondary-bg rounded-t-2xl border-b border-navy-dark">
+        <div className="relative w-full h-64 sm:h-80 lg:h-96 overflow-hidden bg-secondary-bg border-b border-navy-dark">
           {!imageUrl || imageStatus === 'error' ? (
             <div className="absolute inset-0 bg-secondary-bg flex flex-col items-center justify-center gap-2">
               <svg className="w-16 h-16 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -59,17 +59,15 @@ export default function ExampleCard({
           ) : (
             <>
               {imageStatus === 'loading' && !blurImageUrl && (
-                <div className="absolute inset-0 bg-gradient-to-r from-navy-dark via-secondary-bg to-navy-dark bg-[length:200%_100%] animate-[shimmer_1.5s_ease-in-out_infinite]">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-slate-500 text-sm">Loading image...</div>
-                  </div>
+                <div className="absolute inset-0 bg-secondary-bg flex items-center justify-center">
+                  <div className="text-slate-500 text-sm font-mono">Loading...</div>
                 </div>
               )}
               <Image
                 src={imageUrl}
                 alt={example.title}
                 fill
-                className="object-cover object-left-top group-hover:scale-105 transition-transform duration-500 ease-out"
+                className="object-cover object-left-top opacity-90 group-hover:opacity-100 transition-opacity duration-300"
                 sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                 priority={priority}
                 quality={80}
@@ -80,18 +78,19 @@ export default function ExampleCard({
                   blurDataURL: blurImageUrl,
                 })}
               />
-              <div className="absolute inset-0 bg-slate-900/0 group-hover:bg-slate-900/5 transition-colors duration-300"></div>
+              {/* Scanline effect overlay */}
+              <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] z-20 bg-[length:100%_2px,3px_100%] pointer-events-none"></div>
             </>
           )}
         </div>
 
         <div className="p-5 sm:p-6 text-left">
-          <h3 className="text-lg sm:text-xl font-bold leading-tight text-text-color line-clamp-2 group-hover:text-accent transition-colors">
+          <h3 className="text-lg sm:text-xl font-mono font-bold leading-tight text-text-color line-clamp-2 group-hover:text-accent transition-colors uppercase tracking-tight">
             {example.title}
           </h3>
           {example.read_time && (
-            <div className="flex items-center mt-3 text-sm text-text-secondary font-medium">
-              <Clock size={14} className="mr-1.5 text-slate-500" />
+            <div className="flex items-center mt-3 text-sm text-text-secondary font-mono">
+              <Clock size={14} className="mr-1.5 text-text-secondary" />
               <span>{example.read_time} min read</span>
             </div>
           )}

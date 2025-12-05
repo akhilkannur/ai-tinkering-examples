@@ -41,10 +41,10 @@ export default function Navbar() {
           <div className="flex items-center">
             <div className="flex-shrink-0">
               <Link href="/" className="flex items-center gap-2 group">
-                <div className="relative w-8 h-8 overflow-hidden rounded-lg">
+                <div className="relative w-8 h-8 overflow-hidden rounded-none border border-navy-dark">
                   <Image src="/logo.png" alt="AI Examples Logo" width={32} height={32} className="object-cover" />
                 </div>
-                <span className="text-lg font-bold text-text-color group-hover:text-accent transition-colors">Real AI Examples</span>
+                <span className="text-lg font-bold font-mono text-text-color group-hover:text-accent transition-colors">Real AI Examples</span>
               </Link>
             </div>
             {/* Desktop Navigation */}
@@ -53,7 +53,7 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`inline-flex items-center text-sm font-medium transition-colors duration-200 ${
+                  className={`inline-flex items-center text-sm font-mono font-medium transition-colors duration-200 ${
                     router.pathname.startsWith(link.href)
                       ? 'text-accent'
                       : 'text-text-secondary hover:text-text-color'
@@ -70,7 +70,7 @@ export default function Navbar() {
               href={process.env.NEXT_PUBLIC_AIRTABLE_SUBMIT_FORM_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-5 py-2 border border-transparent rounded-full shadow-sm text-sm font-semibold text-electric-blue bg-accent hover:bg-accent-hover transition-all duration-200 shadow-accent/20 hover:shadow-accent/40"
+              className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-5 py-2 border border-transparent rounded-none shadow-none text-sm font-mono font-bold text-electric-blue bg-accent hover:bg-accent-hover transition-all duration-200 hover:shadow-accent-glow"
             >
               Submit an Example
             </a>
