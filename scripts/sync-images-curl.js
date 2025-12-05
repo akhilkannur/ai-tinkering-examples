@@ -78,9 +78,12 @@ async function syncImages() {
       try {
         // Upload to Cloudinary
         console.log('  ☁️ Uploading to Cloudinary...');
+        // We append a timestamp to the ID to avoid caching issues if we re-upload the same record
+        const uniqueId = `example_${record.id}_${Math.floor(Date.now() / 1000)}`;
+        
         const result = await cloudinary.uploader.upload(imageUrl, {
           folder: 'ai_tinkering_examples',
-          public_id: `example_${record.id}`,
+          public_id: uniqueId,
           overwrite: true,
         });
 

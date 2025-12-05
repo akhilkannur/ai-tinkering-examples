@@ -226,15 +226,15 @@ select:focus-visible {
 }
 
 .grid-dots-pattern {
-  background-image: radial-gradient(#fef6e4 10%, transparent 10%);
+  background-image: radial-gradient(#cbd5e1 10%, transparent 10%);
   background-size: 10px 10px;
   background-position: 0 0;
-  opacity: 0.08; /* 8% opacity */
+  opacity: 0.2;
 }
 
 .gradient-border {
   border: 1px solid transparent;
-  border-image: linear-gradient(90deg, #8bd3dd, #f582ae) 1;
+  border-image: linear-gradient(90deg, #6366f1, #8b5cf6) 1;
 }
 
 @keyframes fadeIn {

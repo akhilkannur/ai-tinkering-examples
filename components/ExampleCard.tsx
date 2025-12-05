@@ -45,10 +45,10 @@ export default function ExampleCard({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
       transition={{ duration: 0.5 }}
-      className="card group cursor-pointer relative flex flex-col bg-[#fef6e4] custom-shadow rounded-2xl overflow-hidden border border-transparent hover:border-accent transition-all duration-300 transform hover:-translate-y-1"
+      className="card group cursor-pointer relative flex flex-col bg-white rounded-2xl overflow-hidden border border-slate-100 hover:border-accent/30 transition-all duration-300 transform hover:-translate-y-1 shadow-sm hover:shadow-xl hover:shadow-accent/10"
     >
       <div className="relative z-10 flex-grow" onClick={handleCardClick}>
-        <div className="relative w-full h-64 sm:h-80 lg:h-96 overflow-hidden bg-[#fef6e4] rounded-t-2xl">
+        <div className="relative w-full h-64 sm:h-80 lg:h-96 overflow-hidden bg-slate-100 rounded-t-2xl border-b border-slate-50">
           {!imageUrl || imageStatus === 'error' ? (
             <div className="absolute inset-0 bg-slate-50 flex flex-col items-center justify-center gap-2">
               <svg className="w-16 h-16 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -69,7 +69,7 @@ export default function ExampleCard({
                 src={imageUrl}
                 alt={example.title}
                 fill
-                className="object-cover object-left-top group-hover:scale-105 transition-transform duration-300"
+                className="object-cover object-left-top group-hover:scale-105 transition-transform duration-500 ease-out"
                 sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                 priority={priority}
                 quality={80}
@@ -80,18 +80,18 @@ export default function ExampleCard({
                   blurDataURL: blurImageUrl,
                 })}
               />
-              <div className="absolute inset-0 bg-blue-900 opacity-10 group-hover:opacity-5 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-slate-900/0 group-hover:bg-slate-900/5 transition-colors duration-300"></div>
             </>
           )}
         </div>
 
-        <div className="p-3 sm:p-4 text-center">
-          <h3 className="text-lg sm:text-xl font-extrabold leading-tight text-text-color line-clamp-2">
+        <div className="p-5 sm:p-6 text-left">
+          <h3 className="text-lg sm:text-xl font-bold leading-tight text-slate-900 line-clamp-2 group-hover:text-accent transition-colors">
             {example.title}
           </h3>
           {example.read_time && (
-            <div className="flex items-center justify-center text-sm text-slate-600 mt-2">
-              <Clock size={14} className="mr-1" />
+            <div className="flex items-center mt-3 text-sm text-slate-500 font-medium">
+              <Clock size={14} className="mr-1.5" />
               <span>{example.read_time} min read</span>
             </div>
           )}

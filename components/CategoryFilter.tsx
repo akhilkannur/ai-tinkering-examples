@@ -11,8 +11,8 @@ export default function CategoryFilter({ categories, selectedCategory, onSelect 
         onClick={() => onSelect('All')} 
         className={`px-4 py-2 rounded-full border whitespace-nowrap transition-colors ${
           selectedCategory === 'All' 
-            ? 'bg-black text-white border-black' 
-            : 'border-slate-300 hover:border-slate-400'
+            ? 'bg-accent text-white border-accent' 
+            : 'border-slate-300 text-slate-700 hover:border-accent hover:text-accent'
         }`}
       >
         All
@@ -23,8 +23,8 @@ export default function CategoryFilter({ categories, selectedCategory, onSelect 
           onClick={() => onSelect(category)} 
           className={`px-4 py-2 rounded-full border whitespace-nowrap transition-colors ${
             selectedCategory === category 
-              ? 'bg-black text-white border-black' 
-              : 'border-slate-300 hover:border-slate-400'
+              ? 'bg-accent text-white border-accent' 
+              : 'border-slate-300 text-slate-700 hover:border-accent hover:text-accent'
           }`}
         >
           {category}
