@@ -74,11 +74,12 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
                 <Image
                   src={screenshot.url}
                   alt={`${example.title} - ${example.summary || 'AI workflow example screenshot'} - Step ${i + 1}`}
-                  width={800}
-                  height={450}
+                  width={1200} // Increased width to hint high res
+                  height={675}
                   className="w-full h-auto object-cover"
-                  sizes="(max-width: 768px) 100vw, 800px"
-                  quality={90}
+                  // unoptimized={true} bypasses Next.js optimization to serve the original high-res file.
+                  // Critical for text legibility in screenshots.
+                  unoptimized={true} 
                   priority={i === 0}
                 />
                 
