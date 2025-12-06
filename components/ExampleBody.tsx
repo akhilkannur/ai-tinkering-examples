@@ -60,9 +60,9 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
       </header>
 
       {/* Main Content */}
-      <div className="max-w-3xl mx-auto px-4">
+      <div className="max-w-3xl mx-auto sm:px-4">
         {example.summary && (
-          <p className="text-base sm:text-lg text-text-color leading-relaxed mb-6 font-sans">
+          <p className="px-4 sm:px-0 text-base sm:text-lg text-text-color leading-relaxed mb-6 font-sans">
             <span className="font-bold">{example.summary.split(' ')[0]}</span>{' '}
             {example.summary.split(' ').slice(1).join(' ')}
           </p>
@@ -70,7 +70,7 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
         {example.screenshots && example.screenshots.length > 0 && (
           <div className="space-y-4 mb-4">
             {example.screenshots.map((screenshot, i) => (
-              <div key={i} className="relative w-full rounded-none overflow-hidden border border-navy-dark bg-secondary-bg">
+              <div key={i} className="relative w-full overflow-hidden border-y sm:border border-navy-dark bg-secondary-bg sm:rounded-none">
                 <Image
                   src={screenshot.url}
                   alt={`${example.title} - ${example.summary || 'AI workflow example screenshot'} - Step ${i + 1}`}
@@ -88,7 +88,7 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
         )}
 
         {example.workflow_steps && (
-          <div className="mb-6 pl-4 border-l-2 border-accent">
+          <div className="mb-6 mx-4 sm:mx-0 pl-4 border-l-2 border-accent">
             <p className="text-base text-text-secondary leading-relaxed font-sans">
               <span className="font-bold text-text-color">{example.workflow_steps.split(' ')[0]}</span>{' '}
               {example.workflow_steps.split(' ').slice(1).join(' ')}
@@ -97,7 +97,7 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
         )}
 
         {/* Social Sharing */}
-        <div className="mt-8 py-4 border-t border-navy-dark">
+        <div className="mt-8 mx-4 sm:mx-0 py-4 border-t border-navy-dark">
           <SocialSharing
             example={example}
             title={example.title}
