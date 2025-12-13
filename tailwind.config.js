@@ -3,19 +3,19 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'primary-bg': '#050505', // Matte Black
-        'secondary-bg': '#0B0E14', // Darker Slate/Black for cards
+        'primary-bg': '#0f172a', // Slate 900 - Softer than pure black
+        'secondary-bg': '#1e293b', // Slate 800 - Lighter for cards
         'accent': '#D4FF00', // Acid Green
         'accent-hover': '#B8DE00', // Slightly darker Acid Green
         'accent-light': '#E2FF5C', // Lighter Acid Green
-        'text-color': '#EEEEEE', // Off-white
-        'text-secondary': '#888888', // Dimmed Grey
-        'light-purple': '#888888', // Mapped to Dimmed Grey for compatibility
+        'text-color': '#f8fafc', // Slate 50 - Brighter white
+        'text-secondary': '#cbd5e1', // Slate 300 - Much higher contrast
+        'light-purple': '#cbd5e1', // Mapped to Dimmed Grey for compatibility
         'bright-pink': '#D4FF00', // Mapped to Acid Green for compatibility
-        'electric-blue': '#050505', // Black text for accent buttons
-        'navy-dark': '#222222', // Dark Grey for borders
-        'navy-light': '#333333', // Slightly lighter grey
-        'section-bg-example-card': '#0B0E14', // Matches secondary-bg
+        'electric-blue': '#0f172a', // Dark text for accent buttons
+        'navy-dark': '#334155', // Slate 700 - Visible borders
+        'navy-light': '#475569', // Slate 600 - Lighter borders
+        'section-bg-example-card': '#1e293b', // Matches secondary-bg
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
