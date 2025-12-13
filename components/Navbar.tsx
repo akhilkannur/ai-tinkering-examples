@@ -41,8 +41,8 @@ export default function Navbar() {
           <div className="flex items-center">
             <div className="flex-shrink-0">
               <Link href="/" className="flex items-center gap-2 group">
-                <div className="relative w-8 h-8 overflow-hidden rounded-none border border-navy-dark">
-                  <Image src="/logo.png" alt="AI Examples Logo" width={32} height={32} className="object-cover" />
+                <div className="relative w-12 h-12 overflow-hidden rounded-none border border-navy-dark">
+                  <Image src="/logo.png" alt="AI Examples Logo" width={48} height={48} className="object-cover" />
                 </div>
                 <span className="text-lg font-bold font-mono text-text-color group-hover:text-accent transition-colors">Real AI Examples</span>
               </Link>
