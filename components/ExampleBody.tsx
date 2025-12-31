@@ -2,6 +2,7 @@ import type { EnrichedExampleRecord } from '../lib/airtable'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Clock, User, Tag } from 'lucide-react'
+import { optimizeImageUrl } from '../utils/cloudinary'
 import SponsorDetailCard from './SponsorDetailCard'
 import SocialSharing from './SocialSharing' // Import SocialSharing
 
@@ -69,22 +70,25 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
         )}
         {example.screenshots && example.screenshots.length > 0 && (
           <div className="space-y-4 mb-4">
-            {example.screenshots.map((screenshot, i) => (
-              <div key={i} className="relative w-full overflow-hidden border-y sm:border border-navy-dark bg-secondary-bg sm:rounded-none">
-                <Image
-                  src={screenshot.url}
-                  alt={`${example.title} - ${example.summary || 'AI workflow example screenshot'} - Step ${i + 1}`}
-                  width={1200} // Increased width to hint high res
-                  height={675}
-                  className="w-full h-auto object-cover"
-                  // unoptimized={true} bypasses Next.js optimization to serve the original high-res file.
-                  // Critical for text legibility in screenshots.
-                  unoptimized={true} 
-                  priority={i === 0}
-                />
-                
-              </div>
-            ))}
+            {example.screenshots.map((screenshot, i) => {
+              // Only the first image is synced to the record's CloudinaryPublicId
+              // For others, we rely on Cloudinary fetch (or raw URL fallback)
+              const publicId = i === 0 ? example.cloudinaryPublicId : null;
+              const imageUrl = optimizeImageUrl(screenshot.url, publicId, 1200) || screenshot.url;
+
+              return (
+                <div key={i} className="relative w-full overflow-hidden border-y sm:border border-navy-dark bg-secondary-bg sm:rounded-none">
+                  <Image
+                    src={imageUrl}
+                    alt={`${example.title} - ${example.summary || 'AI workflow example screenshot'} - Step ${i + 1}`}
+                    width={1200} // Increased width to hint high res
+                    height={675}
+                    className="w-full h-auto object-cover"
+                    priority={i === 0}
+                  />
+                </div>
+              );
+            })}
           </div>
         )}
 
