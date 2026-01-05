@@ -1033,7 +1033,7 @@ export const recipes: Recipe[] = [
   },
   {
     id: 'utm-builder',
-    category: 'Marketing Ops',
+    category: 'Lead Gen',
     title: "UTM Factory",
     tagline: "Build links.",
     difficulty: 'Beginner',
