@@ -22,7 +22,7 @@ const ToolsHubPage = () => {
         <div className="text-center mb-16 max-w-4xl mx-auto">
           <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-100 text-blue-700 px-4 py-1.5 rounded-full text-sm font-semibold mb-6">
             <Terminal className="w-4 h-4" />
-            <span>The "What do I build?" Flowchart</span>
+            <span>The Terminal Cookbook</span>
           </div>
           
           <h1 className="text-5xl md:text-7xl font-extrabold text-gray-900 mb-6 tracking-tight leading-tight">
@@ -33,9 +33,9 @@ const ToolsHubPage = () => {
           </h1>
           
           <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            "I should be using Claude Code... but I have no idea what to use it for." 
+            "I want to use Claude Code... but I don't know what to build." 
             <br/><br/>
-            We've all been there. Use this <strong>Problem-to-Prompt</strong> chart to turn your daily frustrations into your first terminal-built utility.
+            Don't start with a blank screen. Pick a <strong>Blueprint</strong> from the menu below, copy it, and watch your AI build a real utility in minutes.
           </p>
         </div>
 
