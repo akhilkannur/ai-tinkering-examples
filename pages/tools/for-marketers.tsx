@@ -50,6 +50,34 @@ const ToolsForMarketers = () => {
         </div>
 
         <div className="max-w-4xl mx-auto">
+          {/* Featured Internal Tool */}
+          <div className="mb-16 bg-gradient-to-r from-blue-600 to-blue-800 rounded-xl p-8 text-white shadow-xl transform hover:-translate-y-1 transition-transform duration-300">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+              <div className="flex-1">
+                <div className="inline-block bg-blue-500 bg-opacity-30 text-blue-100 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4">
+                  Free Utility
+                </div>
+                <h2 className="text-3xl font-bold mb-3">The 'Foolproof' UTM Builder</h2>
+                <p className="text-blue-100 mb-6 text-lg">
+                  Stop messing up your analytics data with inconsistent links. Generate perfect tracking URLs for your campaigns instantly.
+                </p>
+                <Link href="/tools/utm-builder" className="inline-flex items-center bg-white text-blue-700 font-bold px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors">
+                  Build a Link Now
+                  <Check className="w-5 h-5 ml-2" />
+                </Link>
+              </div>
+              <div className="w-full md:w-1/3 bg-white/10 rounded-lg p-4 backdrop-blur-sm border border-white/20">
+                 <div className="space-y-3 opacity-80">
+                    <div className="h-2 w-3/4 bg-white/40 rounded"></div>
+                    <div className="h-8 w-full bg-white/20 rounded"></div>
+                    <div className="h-2 w-1/2 bg-white/40 rounded"></div>
+                    <div className="h-8 w-full bg-white/20 rounded"></div>
+                    <div className="h-10 w-full bg-blue-400/40 rounded mt-4"></div>
+                 </div>
+              </div>
+            </div>
+          </div>
+
           <div className="space-y-16">
             {marketerTools.map(tool => (
               <div key={tool.name} className="bg-white p-8 rounded-lg shadow-md">
