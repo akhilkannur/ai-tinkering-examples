@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { 
-  Terminal, Copy, Check, FileText, Search, X, Filter 
+  Terminal, Copy, Check, FileText, Search, X, Filter, Download
 } from 'lucide-react';
 import { recipes, categoryIcons, Category, Recipe } from '../lib/cookbook-data';
 
@@ -28,6 +28,20 @@ const TerminalCookbook = () => {
     navigator.clipboard.writeText(selectedRecipe.blueprint);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
+  };
+  
+  const handleDownload = () => {
+    if (!selectedRecipe || !selectedRecipe.sampleData) return;
+
+    const blob = new Blob([selectedRecipe.sampleData.content], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = selectedRecipe.sampleData.filename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
   };
 
   return (
@@ -85,14 +99,11 @@ const TerminalCookbook = () => {
             >
               {/* Category Strip */}
               <div className={`absolute top-0 left-0 w-1.5 h-full ${
-                recipe.category === 'Lead Gen' ? 'bg-blue-500' :
-                recipe.category === 'Enrichment' ? 'bg-indigo-500' :
-                recipe.category === 'Content Ops' ? 'bg-pink-500' :
-                recipe.category === 'SEO' ? 'bg-green-500' :
-                recipe.category === 'Competitor Intel' ? 'bg-red-500' :
-                recipe.category === 'CRO' ? 'bg-orange-500' :
-                recipe.category === 'CRM Ops' ? 'bg-yellow-500' :
-                recipe.category === 'Social Automation' ? 'bg-cyan-500' :
+                recipe.category === 'Marketing Ops' ? 'bg-blue-500' :
+                recipe.category === 'Sales Intelligence' ? 'bg-green-500' :
+                recipe.category === 'RevOps & Data' || recipe.category.includes('Data') ? 'bg-purple-500' :
+                recipe.category === 'Content Engineering' ? 'bg-pink-500' :
+                recipe.category.includes('Intel') ? 'bg-orange-500' :
                 'bg-gray-500'
               }`} />
 
@@ -120,6 +131,7 @@ const TerminalCookbook = () => {
                  }`}>
                    {recipe.difficulty}
                  </span>
+                 {recipe.sampleData && <span className="font-bold text-blue-500">Sample Data</span>}
                  <span className="font-mono">{recipe.time}</span>
               </div>
             </button>
@@ -183,15 +195,26 @@ const TerminalCookbook = () => {
                   <span className="text-gray-400 font-mono text-xs flex items-center gap-2">
                     <FileText className="w-3 h-3" /> BLUEPRINT.md
                   </span>
-                  <button
-                    onClick={handleCopy}
-                    className={`text-xs font-bold px-3 py-1.5 rounded flex items-center gap-2 transition-colors ${
-                      copied ? 'bg-green-500 text-white' : 'bg-blue-600 text-white hover:bg-blue-500'
-                    }`}
-                  >
-                    {copied ? <Check className="w-3 h-3" /> : <Copy className="w-3 h-3" />}
-                    {copied ? 'Copied!' : 'Copy'}
-                  </button>
+                  <div className="flex items-center gap-2">
+                    {selectedRecipe.sampleData && (
+                      <button
+                        onClick={handleDownload}
+                        className="text-xs font-bold px-3 py-1.5 rounded flex items-center gap-2 transition-colors bg-yellow-500 text-yellow-900 hover:bg-yellow-400"
+                      >
+                        <Download className="w-3 h-3" />
+                        Download Sample
+                      </button>
+                    )}
+                    <button
+                      onClick={handleCopy}
+                      className={`text-xs font-bold px-3 py-1.5 rounded flex items-center gap-2 transition-colors ${
+                        copied ? 'bg-green-500 text-white' : 'bg-blue-600 text-white hover:bg-blue-500'
+                      }`}
+                    >
+                      {copied ? <Check className="w-3 h-3" /> : <Copy className="w-3 h-3" />}
+                      {copied ? 'Copied!' : 'Copy'}
+                    </button>
+                  </div>
                 </div>
                 <div className="p-6 max-h-[350px] overflow-y-auto">
                   <pre className="font-mono text-sm text-blue-300 whitespace-pre-wrap leading-relaxed">
@@ -206,8 +229,8 @@ const TerminalCookbook = () => {
                    <h4 className="text-sm font-bold text-yellow-800">Instructions</h4>
                    <p className="text-sm text-yellow-700 mt-1">
                      1. Copy the blueprint above.<br/>
-                     2. Create a file named <code>BLUEPRINT.md</code> in a new folder.<br/>
-                     3. Run: <span className="font-mono bg-yellow-100 px-1 rounded">claude "Read BLUEPRINT.md and build this."</span>
+                     {selectedRecipe.sampleData && `2. Download the \`${selectedRecipe.sampleData.filename}\` sample data file.<br/>`}
+                     3. Tell your AI: <span className="italic font-semibold">"Read the blueprint and use the sample file to build this."</span>
                    </p>
                  </div>
               </div>
