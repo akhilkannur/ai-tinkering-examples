@@ -23,6 +23,10 @@ export interface Recipe {
   time: string;
   description: string;
   blueprint: string;
+  sampleData?: {
+    filename: string;
+    content: string;
+  };
 }
 
 export const recipes: Recipe[] = [
@@ -58,7 +62,11 @@ We need to build a targeted lead list of local businesses (e.g., \"Plumbers in A
    - Wait for the \"Website\" and \"Phone\" icons to render.
    - Extract text using specific aria-labels or icon locators.
 5. **Data Cleaning:** Handle missing fields (e.g., if no website, set to \"N/A\").
-6. **Export:** Save the list of dictionaries to CSV using Pandas.`
+6. **Export:** Save the list of dictionaries to CSV using Pandas.\`,
+    sampleData: {
+      filename: "search_terms.txt",
+      content: "Plumbers in Austin, TX\nDentists in Miami, FL\nCoffee Shops in Seattle, WA"
+    }
   },
   {
     id: 'linkedin-comment-export',
@@ -91,7 +99,11 @@ Identify high-intent leads by scraping users who commented on a specific viral L
    - Extract the Author Name (text), Headline (text), and Profile Link (href).
    - Ignore \"Reply\" threads (nested comments) to keep it simple, or recurse if needed.
 5. **Filtering:** Filter out \"LinkedIn Member\" (private profiles).
-6. **Save:** Dump the structured data to JSON.`
+6. **Save:** Dump the structured data to JSON.\`,
+    sampleData: {
+      filename: "target_posts.txt",
+      content: "https://www.linkedin.com/posts/jasonlemkin_saas-sales-activity-7123456789\nhttps://www.linkedin.com/posts/alexhormozi_ai-startup-advice-987654321"
+    }
   },
   {
     id: 'crunchbase-monitor',
@@ -114,14 +126,18 @@ We need a daily list of companies that just announced funding rounds to target t
 
 ## 3. Step-by-Step Logic
 1. **Fetch Feed:** Parse the TechCrunch RSS feed.
-2. **Filter:** Iterate through article titles. Keep only those matching keywords: [\"Raises\", \"Series A\", \"Series B\", \"Seed\", \"Funding\"]).
+2. **Filter:** Iterate through article titles. Keep only those matching keywords: [\"Raises\", \"Series A\", \"Series B\", \"Seed\", \"Funding\"].
 3. **Extraction (NER):**
    - For matching articles, extract the Company Name.
-   - *Simple Method:* Assume the company name is the first proper noun before the word \"raises\".
+   - *Simple Method:** Assume the company name is the first proper noun before the word \"raises\".
    - *Advanced Method:* Use Spacy's Named Entity Recognition (ORG label).
 4. **Validation:** Check if the extracted name looks like a company (not \"US\", \"AI\", \"Tech\").
 5. **Enrichment:** (Optional) Use Google Search API to find the company's homepage URL.
-6. **Alert:** If new companies found, print to console or append to CSV.`
+6. **Alert:** If new companies found, print to console or append to CSV.\`,
+    sampleData: {
+      filename: "config_keywords.json",
+      content: "{\n  \"include_terms\": [\"Series A\", \"Series B\", \"Seed Round\", \"Raises\"],\n  \"exclude_terms\": [\"Crypto\", \"Biotech\"]\n}"
+    }
   },
   {
     id: 'github-email-finder',
@@ -152,7 +168,11 @@ Build a list of developers interested in \"React\" (or any topic) by mining publ
    - Exclude generic emails (ends with @users.noreply.github.com).
    - Deduplicate based on email address.
 5. **Enrich:** Get the user's 'Bio' and 'Location' from their profile object if available.
-6. **Rate Limiting:** Monitor API headers for X-RateLimit-Remaining. Sleep if low.`
+6. **Rate Limiting:** Monitor API headers for X-RateLimit-Remaining. Sleep if low.\`,
+    sampleData: {
+      filename: "target_repos.txt",
+      content: "vercel/next.js\nfacebook/react\nshadcn-ui/ui"
+    }
   },
   {
     id: 'producthunt-launcher',
@@ -183,7 +203,11 @@ Find the Twitter handles and websites of founders who launched products today.
    - Find the \"Makers\" section in the sidebar.
    - Extract Name, Profile URL, and \"Twitter/X\" link if present.
 5. **Extract Product:** Get the \"Website\" link (redirect) for the product itself.
-6. **Save:** Aggregate Product Name, Maker Name, Twitter URL.`
+6. **Save:** Aggregate Product Name, Maker Name, Twitter URL.\`,
+    sampleData: {
+      filename: "config.json",
+      content: "{\n  \"max_products\": 10,\n  \"include_twitter\": true\n}"
+    }
   },
   {
     id: 'directory-scraper',
