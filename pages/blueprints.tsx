@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import TerminalCookbook from '../components/BuilderFlowchart';
-import { Terminal, BookOpen, Coffee } from 'lucide-react';
+import { Terminal, BookOpen, Cpu, Command } from 'lucide-react';
 
 const BlueprintsPage = () => {
   return (
@@ -11,7 +11,7 @@ const BlueprintsPage = () => {
         <title>The Terminal Cookbook | Blueprints for Non-Technical Builders</title>
         <meta
           name="description"
-          content="A library of copy-paste blueprints to build powerful internal tools using Claude Code or Gemini, without writing code yourself."
+          content="A library of copy-paste blueprints to build powerful autonomous agents using Gemini CLI, Claude Code, or Cursor."
         />
       </Head>
       <Navbar />
@@ -28,15 +28,29 @@ const BlueprintsPage = () => {
           <h1 className="text-5xl md:text-7xl font-extrabold text-gray-900 mb-6 tracking-tight leading-tight">
             Don't Learn to Code.<br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-orange-600">
-              Learn to Cook.
+              Learn to Direct.
             </span>
           </h1>
           
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            You have the raw ingredients (AI & Terminal). Here are the <strong>Recipes</strong>.
-            <br/>
-            Pick a blueprint, copy it, and let Claude Code be your sous-chef.
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed mb-8">
+            You don't need to be an engineer to build sophisticated tools.
+            These <strong>Blueprints</strong> are "Operating Instructions" for your AI Agent.
+            <br className="hidden md:block"/>
+            Copy a recipe, paste it into your terminal, and watch it work.
           </p>
+
+          {/* Compatibility Badge */}
+          <div className="flex flex-wrap justify-center gap-3">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gray-100 text-gray-600 text-sm font-medium">
+              <Command className="w-4 h-4" /> Works with Gemini CLI
+            </span>
+            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gray-100 text-gray-600 text-sm font-medium">
+              <Cpu className="w-4 h-4" /> Claude Code
+            </span>
+            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gray-100 text-gray-600 text-sm font-medium">
+              <Terminal className="w-4 h-4" /> Cursor / Windsurf
+            </span>
+          </div>
         </div>
 
         {/* The Cookbook Grid */}
@@ -45,14 +59,34 @@ const BlueprintsPage = () => {
         </div>
 
         {/* Philosophy Section */}
-        <div className="bg-gray-50 rounded-3xl p-8 md:p-12 text-center max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Why "Blueprints"?</h2>
-          <p className="text-gray-600 leading-relaxed max-w-2xl mx-auto mb-8">
-            AI coding agents work best when you give them a structure. Our blueprints are pre-written <strong>"System Prompts"</strong> that force the AI to build exactly what you want, preventing it from getting confused or asking technical questions.
-          </p>
-          <div className="inline-flex items-center gap-2 text-gray-500 font-mono text-sm bg-white px-4 py-2 rounded-lg border border-gray-200">
-            <Terminal className="w-4 h-4" />
-            <span>Tested with Claude 3.5 Sonnet & Gemini 1.5 Pro</span>
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="bg-gray-50 rounded-3xl p-8 md:p-10 text-left">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+              <span className="bg-blue-100 text-blue-700 p-1.5 rounded-lg"><Terminal className="w-5 h-5"/></span>
+              For CLI Agents
+            </h2>
+            <p className="text-gray-600 leading-relaxed mb-6">
+              If you use <strong>Gemini CLI</strong> or <strong>Claude Code</strong>, these blueprints act as "Mission Files". 
+              Instead of typing 50 small commands, you paste one blueprint, and the agent understands the full scope: 
+              from creating files to handling edge cases.
+            </p>
+            <div className="bg-white p-4 rounded-xl border border-gray-200 text-sm font-mono text-gray-500">
+              &gt; gemini run "Build the Sales Sniper..." <span className="text-green-600">✓ Accepted</span>
+            </div>
+          </div>
+
+          <div className="bg-gray-50 rounded-3xl p-8 md:p-10 text-left">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+              <span className="bg-purple-100 text-purple-700 p-1.5 rounded-lg"><Cpu className="w-5 h-5"/></span>
+              For AI Editors
+            </h2>
+            <p className="text-gray-600 leading-relaxed mb-6">
+              Using <strong>Cursor</strong> or <strong>Windsurf</strong>? Paste the blueprint into the "Composer" or "Chat" window. 
+              The AI will read the 'Role', 'Objective', and 'Workflow' and build the entire tool in your project folder automatically.
+            </p>
+            <div className="bg-white p-4 rounded-xl border border-gray-200 text-sm font-mono text-gray-500">
+              Composer: "Follow this blueprint to build..." <span className="text-purple-600">Generating...</span>
+            </div>
           </div>
         </div>
 
