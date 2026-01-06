@@ -62,7 +62,7 @@ export default function InvestorsPage({ initialInvestors }: InvestorsPageProps) 
             Micro-PE Match
           </h1>
           <p className="text-xl text-light-purple max-w-2xl mx-auto mb-8">
-            The definitive list of {initialInvestors.length} active buyers for AI tools & Micro-SaaS. 
+            Previewing 6 of {initialInvestors.length} active buyers for AI tools & Micro-SaaS. 
             <br className="hidden md:block"/>Filter by check size, deal type, and geography to find your perfect exit partner.
           </p>
           
@@ -144,85 +144,90 @@ export default function InvestorsPage({ initialInvestors }: InvestorsPageProps) 
           {/* Results Grid */}
           <div className="lg:w-3/4">
             {filteredInvestors.length > 0 ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {filteredInvestors.map((investor, idx) => (
-                  <div key={idx} className="bg-secondary-bg border border-border-color rounded-2xl p-6 hover:border-accent transition-all duration-300 shadow-lg group flex flex-col h-full">
-                    
-                    {/* Card Header */}
-                    <div className="flex justify-between items-start mb-4">
-                      <div>
-                        <h2 className="text-xl font-bold group-hover:text-accent transition-colors">{investor.FirmName}</h2>
-                        <a 
-                          href={investor.Website} 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="text-xs text-light-purple hover:text-white underline decoration-dotted"
-                        >
-                          {investor.Website.replace(/^https?:\/\/(www\.)?/, '').split('/')[0]}
-                        </a>
-                      </div>
-                      {investor.DealType && (
-                        <span className="bg-accent/10 text-accent text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider border border-accent/20">
-                          {investor.DealType}
-                        </span>
-                      )}
-                    </div>
-
-                    {/* Thesis */}
-                    <p className="text-gray-300 text-sm mb-6 flex-grow italic">
-                      "{investor.InvestmentThesis}"
-                    </p>
-
-                    {/* Data Points */}
-                    <div className="space-y-3 mb-6">
-                      {investor.CheckSize && (
-                        <div className="flex items-center text-sm">
-                          <DollarSign className="h-4 w-4 text-accent mr-2" />
-                          <span className="text-light-purple mr-2">Check Size:</span>
-                          <span className="font-semibold text-white">{investor.CheckSize}</span>
-                        </div>
-                      )}
+              <div className="space-y-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {filteredInvestors.slice(0, 6).map((investor, idx) => (
+                    <div key={idx} className="bg-secondary-bg border border-border-color rounded-2xl p-6 hover:border-accent transition-all duration-300 shadow-lg group flex flex-col h-full relative">
                       
-                      {investor.TargetEBITDA && (
-                        <div className="flex items-center text-sm">
-                          <Briefcase className="h-4 w-4 text-accent mr-2" />
-                          <span className="text-light-purple mr-2">Target:</span>
-                          <span className="text-white">{investor.TargetEBITDA}</span>
+                      {/* Card Header */}
+                      <div className="flex justify-between items-start mb-4">
+                        <div>
+                          <h2 className="text-xl font-bold group-hover:text-accent transition-colors">{investor.FirmName}</h2>
+                          <div className="text-xs text-light-purple">
+                            {investor.Website.replace(/^https?:\/\/(www\.)?/, '').split('/')[0]}
+                          </div>
                         </div>
-                      )}
+                        {investor.DealType && (
+                          <span className="bg-accent/10 text-accent text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider border border-accent/20">
+                            {investor.DealType}
+                          </span>
+                        )}
+                      </div>
 
-                      {investor.GeographicFocus && (
-                        <div className="flex items-center text-sm">
-                          <MapPin className="h-4 w-4 text-accent mr-2" />
-                          <span className="text-light-purple mr-2">Focus:</span>
-                          <span className="text-white">{investor.GeographicFocus}</span>
-                        </div>
-                      )}
+                      {/* Thesis */}
+                      <p className="text-gray-300 text-sm mb-6 flex-grow italic">
+                        "{investor.InvestmentThesis}"
+                      </p>
 
-                      {investor.KeyContact && (
-                        <div className="flex items-center text-sm">
+                      {/* Data Points */}
+                      <div className="space-y-3 mb-6">
+                        {investor.CheckSize && (
+                          <div className="flex items-center text-sm">
+                            <DollarSign className="h-4 w-4 text-accent mr-2" />
+                            <span className="text-light-purple mr-2">Check Size:</span>
+                            <span className="font-semibold text-white">{investor.CheckSize}</span>
+                          </div>
+                        )}
+                        
+                        {investor.TargetEBITDA && (
+                          <div className="flex items-center text-sm">
+                            <Briefcase className="h-4 w-4 text-accent mr-2" />
+                            <span className="text-light-purple mr-2">Target:</span>
+                            <span className="text-white">{investor.TargetEBITDA}</span>
+                          </div>
+                        )}
+
+                        {investor.GeographicFocus && (
+                          <div className="flex items-center text-sm">
+                            <MapPin className="h-4 w-4 text-accent mr-2" />
+                            <span className="text-light-purple mr-2">Focus:</span>
+                            <span className="text-white">{investor.GeographicFocus}</span>
+                          </div>
+                        )}
+
+                        {/* Hidden Contact Info in Preview */}
+                        <div className="flex items-center text-sm opacity-50 filter blur-[2px] select-none">
                           <Users className="h-4 w-4 text-accent mr-2" />
                           <span className="text-light-purple mr-2">Contact:</span>
-                          <span className="text-white truncate">{investor.KeyContact} ({investor.ContactRole})</span>
-                        </div>
-                      )}
-                    </div>
-
-                    {/* Portfolio */}
-                    {investor.PortfolioExamples && (
-                      <div className="pt-4 border-t border-border-color/50">
-                        <p className="text-xs text-light-purple mb-2">Portfolio Includes:</p>
-                        <div className="flex flex-wrap gap-2">
-                          {investor.PortfolioExamples.split(',').slice(0, 3).map((ex, i) => (
-                            <span key={i} className="bg-primary-bg text-gray-300 text-xs px-2 py-1 rounded border border-border-color">
-                              {ex.trim()}
-                            </span>
-                          ))}
+                          <span className="text-white">John Doe (Partner) - john@firm.com</span>
                         </div>
                       </div>
-                    )}
+                    </div>
+                  ))}
+                </div>
+
+                {/* Upsell / Paywall Overlay */}
+                <div className="relative mt-8">
+                   <div className="absolute inset-0 bg-gradient-to-t from-primary-bg via-transparent to-transparent z-10 -mt-32 h-32"></div>
+                   <div className="bg-gradient-to-br from-secondary-bg to-primary-bg border-2 border-accent/50 rounded-3xl p-8 md:p-12 text-center shadow-2xl relative overflow-hidden group z-20">
+                    <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                      <Users className="h-32 w-32" />
+                    </div>
+                    <h2 className="text-3xl md:text-4xl font-bold mb-4">Unlock the Full List of {initialInvestors.length} Buyers</h2>
+                    <p className="text-xl text-light-purple mb-8 max-w-2xl mx-auto">
+                      You are viewing a limited preview. Get immediate access to the <strong>verified personal emails</strong>, LinkedIn profiles, and "best way to pitch" notes for all {initialInvestors.length} partners.
+                    </p>
+                    <div className="flex flex-col md:flex-row items-center justify-center gap-4">
+                      <a 
+                        href="#" 
+                        className="bg-accent hover:bg-opacity-90 text-white px-10 py-4 rounded-2xl font-bold text-xl hover:scale-105 transition-transform shadow-xl"
+                      >
+                        Buy Full Access ($49)
+                      </a>
+                      <span className="text-light-purple font-medium text-sm">One-time payment. Lifetime updates.</span>
+                    </div>
                   </div>
-                ))}
+                </div>
               </div>
             ) : (
               <div className="text-center py-20 bg-secondary-bg rounded-3xl border border-dashed border-border-color">
@@ -245,27 +250,7 @@ export default function InvestorsPage({ initialInvestors }: InvestorsPageProps) 
           </div>
         </main>
 
-        {/* Upsell Banner */}
-        <div className="max-w-6xl mx-auto px-4 mb-20">
-          <div className="bg-gradient-to-br from-secondary-bg to-primary-bg border-2 border-accent/50 rounded-3xl p-8 md:p-12 text-center shadow-2xl relative overflow-hidden group">
-            <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-              <Users className="h-32 w-32" />
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Unlock the Full Investor Rolodex</h2>
-            <p className="text-xl text-light-purple mb-8 max-w-2xl mx-auto">
-              Get immediate access to the <strong>verified personal emails</strong> and "best way to pitch" notes for all {initialInvestors.length} partners.
-            </p>
-            <div className="flex flex-col md:flex-row items-center justify-center gap-4">
-              <a 
-                href="#" 
-                className="bg-accent hover:bg-opacity-90 text-white px-10 py-4 rounded-2xl font-bold text-xl hover:scale-105 transition-transform shadow-xl"
-              >
-                Get Full Access ($49)
-              </a>
-              <span className="text-light-purple font-medium text-sm">Includes lifetime updates + Outreach templates</span>
-            </div>
-          </div>
-        </div>
+        {/* Upsell Banner Removed - Embedded in List */}
       </div>
     </>
   )
