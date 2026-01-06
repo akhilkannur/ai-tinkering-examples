@@ -99,11 +99,14 @@ const TerminalCookbook = () => {
             >
               {/* Category Strip */}
               <div className={`absolute top-0 left-0 w-1.5 h-full ${
-                recipe.category === 'Marketing Ops' ? 'bg-blue-500' :
-                recipe.category === 'Sales Intelligence' ? 'bg-green-500' :
-                recipe.category === 'RevOps & Data' || recipe.category.includes('Data') ? 'bg-purple-500' :
-                recipe.category === 'Content Engineering' ? 'bg-pink-500' :
-                recipe.category.includes('Intel') ? 'bg-orange-500' :
+                recipe.category === 'Lead Gen' ? 'bg-blue-500' :
+                recipe.category === 'Enrichment' ? 'bg-indigo-500' :
+                recipe.category === 'Content Ops' ? 'bg-pink-500' :
+                recipe.category === 'SEO' ? 'bg-green-500' :
+                recipe.category === 'Competitor Intel' ? 'bg-red-500' :
+                recipe.category === 'CRO' ? 'bg-orange-500' :
+                recipe.category === 'CRM Ops' ? 'bg-yellow-500' :
+                recipe.category === 'Social Automation' ? 'bg-cyan-500' :
                 'bg-gray-500'
               }`} />
 
