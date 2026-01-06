@@ -3,7 +3,6 @@ import Head from 'next/head';
 import { AiTool, aiTools } from '../../lib/ai-tools-data';
 import AIToolCard from '../../components/AIToolCard';
 import Navbar from '../../components/Navbar';
-import Footer from '../../components/Footer';
 
 const freeOrFreemium = ['Free', 'Freemium'];
 
@@ -46,8 +45,6 @@ const FreeToolsPage = () => {
           ))}
         </div>
       </main>
-
-      <Footer />
     </div>
   );
 };

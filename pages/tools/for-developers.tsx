@@ -3,7 +3,6 @@ import Head from 'next/head';
 import { AiTool, aiTools } from '../../lib/ai-tools-data';
 import AIToolCard from '../../components/AIToolCard';
 import Navbar from '../../components/Navbar';
-import Footer from '../../components/Footer';
 
 const developerUseCases = ['Development', 'Code Completion', 'Debugging', 'Documentation'];
 
@@ -46,8 +45,6 @@ const ToolsForDevelopers = () => {
           ))}
         </div>
       </main>
-
-      <Footer />
     </div>
   );
 };

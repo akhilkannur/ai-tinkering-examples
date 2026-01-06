@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 import { Mail, CalendarCheck } from 'lucide-react';
 
 export default function LearnAIPage() {
@@ -66,8 +65,6 @@ export default function LearnAIPage() {
           </div>
         </div>
       </main>
-
-      <Footer />
     </div>
   );
 }

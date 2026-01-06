@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 import TerminalCookbook from '../components/BuilderFlowchart';
 import { Terminal, BookOpen, Cpu, Command } from 'lucide-react';
 
@@ -91,8 +90,6 @@ const BlueprintsPage = () => {
         </div>
 
       </main>
-
-      <Footer />
     </div>
   );
 };

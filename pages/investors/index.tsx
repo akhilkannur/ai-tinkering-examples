@@ -1,7 +1,6 @@
 import { useState, useMemo } from 'react'
 import Head from 'next/head'
 import Navbar from '../../components/Navbar'
-import Footer from '../../components/Footer'
 import { parseCSV, InvestorCSV } from '../../lib/csv-parser'
 import { GetStaticProps } from 'next'
 import { Search, Filter, MapPin, DollarSign, Briefcase, Users } from 'lucide-react'
@@ -267,8 +266,6 @@ export default function InvestorsPage({ initialInvestors }: InvestorsPageProps) 
             </div>
           </div>
         </div>
-        
-        <Footer />
       </div>
     </>
   )

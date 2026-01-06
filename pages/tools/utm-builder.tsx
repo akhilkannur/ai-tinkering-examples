@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import Navbar from '../../components/Navbar';
-import Footer from '../../components/Footer';
 import UtmBuilder from '../../components/UtmBuilder';
 
 const UtmBuilderPage = () => {
@@ -34,8 +33,6 @@ const UtmBuilderPage = () => {
             </p>
         </div>
       </main>
-
-      <Footer />
     </div>
   );
 };
