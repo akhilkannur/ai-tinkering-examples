@@ -8,7 +8,8 @@ import Script from 'next/script'
 export default function App({ Component, pageProps }: AppProps) {
   const title = "AI Examples You Can Copy & Try";
   const description = "Curated AI workflows and prompts for non-technical tinkerers. No fluff, just actionable examples.";
-  const ogImage = "/Gemini_Generated_Image_b3hv6cb3hv6cb3hv.png"; // Make sure to have an og-image.png in your public folder
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com';
+  const ogImage = `${baseUrl}/Gemini_Generated_Image_b3hv6cb3hv6cb3hv.png`; // Make sure to have an og-image.png in your public folder
 
   return (
     <>
