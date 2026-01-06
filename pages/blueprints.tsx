@@ -24,18 +24,18 @@ const BlueprintsPage = () => {
             <span>The Terminal Cookbook</span>
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-extrabold text-gray-900 mb-6 tracking-tight leading-tight">
-            Don't Learn to Code.<br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-orange-600">
-              Learn to Direct.
+          <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 tracking-tight leading-tight">
+            Better Instructions for <br />
+            <span className="text-gray-900">
+              Your AI Coding Agent.
             </span>
           </h1>
           
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed mb-8">
-            You don't need to be an engineer to build sophisticated tools.
-            These <strong>Blueprints</strong> are "Operating Instructions" for your AI Agent.
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed mb-8">
+            These are <strong>structured prompt templates</strong> designed to give AI agents clearer goals.
+            They aren't magic, but they help you skip the "blank page" problem. 
             <br className="hidden md:block"/>
-            Copy a recipe, paste it into your terminal, and watch it work.
+            Copy a recipe, paste it into your terminal, and iterate from there.
           </p>
 
           {/* Compatibility Badge */}
