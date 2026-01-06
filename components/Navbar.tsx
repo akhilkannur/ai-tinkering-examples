@@ -14,7 +14,6 @@ export default function Navbar() {
     { href: '/ai-examples', label: 'All examples' },
     { href: '/blueprints', label: 'Blueprints' }, // New link
     { href: '/investors', label: 'Sell Your Tool' },
-    { href: '/learn-ai', label: 'Learn AI One-on-One' }, // New link
     { href: '/ai-workplace-quiz', label: 'AI Quiz' },
     { href: '/about', label: 'About' },
   ]
@@ -30,8 +29,8 @@ export default function Navbar() {
               '@type': 'SiteNavigationElement',
               'name': ['Examples', 'About'],
               'url': [
-                'https://realaiexamples.com/ai-examples',
-                'https://realaiexamples.com/about',
+                `${process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com'}/ai-examples`,
+                `${process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com'}/about`,
               ],
             }),
           }}
