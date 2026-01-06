@@ -12,7 +12,7 @@ interface Question {
 const questions: Question[] = [
   {
     question: "Which AI tool is commonly used for generating realistic images from text descriptions?",
-    options: ["ChatGPT", "Midjourney", "Jasper", "Zapier"],
+    options: ["Google Sheets", "Midjourney", "Jasper", "Zapier"],
     answer: "Midjourney"
   },
   {
@@ -49,6 +49,16 @@ const questions: Question[] = [
     question: "What is a potential ethical concern when using AI in the workplace?",
     options: ["AI works too fast", "Bias in algorithms and data privacy", "AI uses too much electricity", "AI has no concerns"],
     answer: "Bias in algorithms and data privacy"
+  },
+  {
+    question: "What distinguishes an 'AI Agent' from a standard chatbot?",
+    options: ["It has a human voice", "It can autonomously execute tasks and use tools", "It is always expensive", "It only works on Tuesdays"],
+    answer: "It can autonomously execute tasks and use tools"
+  },
+  {
+    question: "What is 'Prompt Engineering'?",
+    options: ["Building physical robots", "Crafting specific inputs to guide AI outputs", " repairing computer chips", "Writing binary code"],
+    answer: "Crafting specific inputs to guide AI outputs"
   }
 ];
 
