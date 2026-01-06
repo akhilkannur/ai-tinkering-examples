@@ -25,17 +25,16 @@ const BlueprintsPage = () => {
           </div>
           
           <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 tracking-tight leading-tight">
-            Better Instructions for <br />
+            Go Beyond ChatGPT <br />
             <span className="text-gray-900">
-              Your AI Coding Agent.
+              with Gemini CLI & Claude.
             </span>
           </h1>
           
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed mb-8">
-            These are <strong>structured prompt templates</strong> designed to give AI agents clearer goals.
-            They aren't magic, but they help you skip the "blank page" problem. 
+            Tools like <strong>Claude Code</strong> and <strong>Gemini CLI</strong> aren't just for engineers. They let you run powerful workflows on your computer that ChatGPT can't do.
             <br className="hidden md:block"/>
-            Copy a recipe, paste it into your terminal, and iterate from there.
+            These blueprints are copy-paste instructions to help you get started.
           </p>
 
           {/* Compatibility Badge */}

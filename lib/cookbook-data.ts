@@ -50,7 +50,7 @@ export const recipes: Recipe[] = [
     tagline: "Autonomous B2B Prospecting Agent.",
     difficulty: 'Advanced',
     time: 'Runs Continuously',
-    description: "A highly sophisticated agent that builds its own pipeline. It searches for companies, filters out agencies, identifies decision-makers, and drafts personalized outreach, maintaining a persistent CSV database of its work.",
+    description: "A sophisticated agent that builds its own pipeline. It searches for companies, filters out agencies, identifies decision-makers, and drafts personalized outreach, maintaining a persistent CSV database of its work.",
     blueprint: `# Agent Configuration: The Sales Sniper
 
 ## Role
