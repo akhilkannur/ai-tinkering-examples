@@ -139,7 +139,7 @@ const UtmBuilder = () => {
               type="text"
               value={campaign}
               onChange={(e) => setCampaign(e.target.value)}
-              placeholder="Summer Sale 2025"
+              placeholder="Summer Sale 2026"
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
             />
             <p className="text-xs text-gray-500 mt-1">Spaces will be automatically converted to dashes.</p>

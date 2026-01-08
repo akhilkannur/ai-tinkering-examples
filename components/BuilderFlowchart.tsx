@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { 
-  Terminal, Copy, Check, FileText, Search, X, Filter, Download
+  Terminal, Copy, Check, FileText, Search, X, Filter, Download, Lock, Crown, ArrowRight
 } from 'lucide-react';
 import { recipes, categoryIcons, Category, Recipe } from '../lib/cookbook-data';
 
@@ -24,14 +24,14 @@ const TerminalCookbook = () => {
   }, [selectedCategory, searchQuery]);
 
   const handleCopy = () => {
-    if (!selectedRecipe) return;
+    if (!selectedRecipe || selectedRecipe.isPremium) return;
     navigator.clipboard.writeText(selectedRecipe.blueprint);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
   
   const handleDownload = () => {
-    if (!selectedRecipe || !selectedRecipe.sampleData) return;
+    if (!selectedRecipe || !selectedRecipe.sampleData || selectedRecipe.isPremium) return;
 
     const blob = new Blob([selectedRecipe.sampleData.content], { type: 'text/plain' });
     const url = URL.createObjectURL(blob);
@@ -83,8 +83,12 @@ const TerminalCookbook = () => {
       </div>
 
       {/* Results Count */}
-      <div className="mb-6 text-gray-500 text-sm font-medium pl-2">
-        Showing {filteredRecipes.length} recipes
+      <div className="mb-6 text-gray-500 text-sm font-medium pl-2 flex items-center gap-4">
+        <span>Showing {filteredRecipes.length} recipes</span>
+        <div className="flex items-center gap-2">
+          <span className="w-2 h-2 rounded-full bg-yellow-500"></span>
+          <span className="text-xs font-bold text-gray-400 uppercase tracking-widest">Premium Available</span>
+        </div>
       </div>
 
       {/* The Menu Grid */}
@@ -99,6 +103,7 @@ const TerminalCookbook = () => {
             >
               {/* Category Strip */}
               <div className={`absolute top-0 left-0 w-1.5 h-full ${
+                recipe.isPremium ? 'bg-yellow-500' :
                 recipe.category === 'Lead Gen' ? 'bg-blue-500' :
                 recipe.category === 'Enrichment' ? 'bg-indigo-500' :
                 recipe.category === 'Content Ops' ? 'bg-pink-500' :
@@ -111,16 +116,24 @@ const TerminalCookbook = () => {
               }`} />
 
               <div className="flex justify-between items-start mb-4 pl-3">
-                <div className="p-3 bg-gray-50 rounded-xl group-hover:bg-blue-50 transition-colors text-gray-700 group-hover:text-blue-600">
-                  <CatIcon className="w-6 h-6" />
+                <div className={`p-3 rounded-xl transition-colors ${recipe.isPremium ? 'bg-yellow-50 text-yellow-600 group-hover:bg-yellow-100' : 'bg-gray-50 text-gray-700 group-hover:bg-blue-50 group-hover:text-blue-600'}`}>
+                  {recipe.isPremium ? <Crown className="w-6 h-6" /> : <CatIcon className="w-6 h-6" />}
                 </div>
-                <span className={`text-[10px] uppercase tracking-wider font-bold px-2 py-1 rounded-full bg-gray-100 text-gray-500`}>
-                  {recipe.category}
-                </span>
+                <div className="flex flex-col items-end gap-1">
+                  {recipe.isPremium && (
+                    <span className="text-[10px] uppercase tracking-wider font-bold px-2 py-1 rounded-md bg-yellow-500 text-white shadow-sm">
+                      Premium
+                    </span>
+                  )}
+                  <span className={`text-[10px] uppercase tracking-wider font-bold px-2 py-1 rounded-full bg-gray-100 text-gray-500`}>
+                    {recipe.category}
+                  </span>
+                </div>
               </div>
               
-              <h3 className="text-lg font-bold text-gray-900 mb-1 group-hover:text-blue-600 transition-colors pl-3 leading-tight">
+              <h3 className="text-lg font-bold text-gray-900 mb-1 group-hover:text-blue-600 transition-colors pl-3 leading-tight flex items-center gap-2">
                 {recipe.title}
+                {recipe.isPremium && <Lock className="w-3.5 h-3.5 text-gray-300" />}
               </h3>
               <p className="text-gray-500 text-sm font-medium mb-4 min-h-[40px] pl-3 line-clamp-2">
                 {recipe.tagline}
@@ -134,7 +147,13 @@ const TerminalCookbook = () => {
                  }`}>
                    {recipe.difficulty}
                  </span>
-                 {recipe.sampleData && <span className="font-bold text-blue-500">Sample Data</span>}
+                 {recipe.isPremium ? (
+                   <span className="font-bold text-yellow-600 flex items-center gap-1">
+                     <Lock className="w-3 h-3" /> Pro Only
+                   </span>
+                 ) : (
+                   recipe.sampleData && <span className="font-bold text-blue-500">Sample Data</span>
+                 )}
                  <span className="font-mono">{recipe.time}</span>
               </div>
             </button>
@@ -162,16 +181,19 @@ const TerminalCookbook = () => {
           <div className="bg-white rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-hidden flex flex-col" onClick={e => e.stopPropagation()}>
             
             {/* Modal Header */}
-            <div className="p-6 border-b border-gray-100 flex justify-between items-center bg-gray-50">
+            <div className={`p-6 border-b border-gray-100 flex justify-between items-center ${selectedRecipe.isPremium ? 'bg-yellow-50' : 'bg-gray-50'}`}>
               <div className="flex items-center gap-4">
-                <div className="p-3 bg-white rounded-xl shadow-sm border border-gray-100">
-                   {React.createElement(categoryIcons[selectedRecipe.category] || Terminal, { className: "w-6 h-6 text-gray-700" })}
+                <div className={`p-3 rounded-xl shadow-sm border ${selectedRecipe.isPremium ? 'bg-white border-yellow-200 text-yellow-600' : 'bg-white border-gray-100 text-gray-700'}`}>
+                   {selectedRecipe.isPremium ? <Crown className="w-6 h-6" /> : React.createElement(categoryIcons[selectedRecipe.category] || Terminal, { className: "w-6 h-6" })}
                 </div>
                 <div>
-                  <h2 className="text-2xl font-bold text-gray-900">{selectedRecipe.title}</h2>
+                  <h2 className="text-2xl font-bold text-gray-900 flex items-center gap-2">
+                    {selectedRecipe.title}
+                    {selectedRecipe.isPremium && <Lock className="w-5 h-5 text-yellow-600" />}
+                  </h2>
                   <div className="flex items-center gap-2 mt-1">
-                    <span className="text-xs font-bold px-2 py-0.5 rounded bg-blue-100 text-blue-700 uppercase tracking-wide">
-                      {selectedRecipe.category}
+                    <span className={`text-xs font-bold px-2 py-0.5 rounded uppercase tracking-wide ${selectedRecipe.isPremium ? 'bg-yellow-500 text-white' : 'bg-blue-100 text-blue-700'}`}>
+                      {selectedRecipe.isPremium ? 'Premium Blueprint' : selectedRecipe.category}
                     </span>
                     <span className="text-gray-400 text-xs flex items-center gap-1">
                       <Terminal className="w-3 h-3" /> {selectedRecipe.time} build
@@ -193,50 +215,85 @@ const TerminalCookbook = () => {
                 <p className="text-gray-600 leading-relaxed text-lg">{selectedRecipe.description}</p>
               </div>
 
-              <div className="bg-gray-900 rounded-xl overflow-hidden border border-gray-800 shadow-inner">
-                <div className="bg-gray-800 px-4 py-2 flex items-center justify-between border-b border-gray-700">
-                  <span className="text-gray-400 font-mono text-xs flex items-center gap-2">
-                    <FileText className="w-3 h-3" /> BLUEPRINT.md
-                  </span>
-                  <div className="flex items-center gap-2">
-                    {selectedRecipe.sampleData && (
-                      <button
-                        onClick={handleDownload}
-                        className="text-xs font-bold px-3 py-1.5 rounded flex items-center gap-2 transition-colors bg-yellow-500 text-yellow-900 hover:bg-yellow-400"
-                      >
-                        <Download className="w-3 h-3" />
-                        Download Sample
-                      </button>
-                    )}
-                    <button
-                      onClick={handleCopy}
-                      className={`text-xs font-bold px-3 py-1.5 rounded flex items-center gap-2 transition-colors ${
-                        copied ? 'bg-green-500 text-white' : 'bg-blue-600 text-white hover:bg-blue-500'
-                      }`}
+              {selectedRecipe.isPremium ? (
+                /* Premium Locked State */
+                <div className="bg-gray-900 rounded-2xl p-8 text-center border-2 border-yellow-500/50 shadow-2xl relative overflow-hidden">
+                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-500 via-white to-yellow-500 animate-pulse" />
+                  <div className="relative z-10">
+                    <div className="w-20 h-20 bg-yellow-500/10 rounded-full flex items-center justify-center mx-auto mb-6 border border-yellow-500/20">
+                      <Lock className="w-10 h-10 text-yellow-500" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-2">Unlock the Sales & Marketing Toolkit</h3>
+                    <p className="text-gray-400 mb-8 max-w-md mx-auto">
+                      This blueprint is part of our **Premium Automation Kit**. Get instant access to 15+ high-ROI agentic workflows, sample data, and private guides.
+                    </p>
+                    <a 
+                      href="#" 
+                      className="inline-flex items-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-gray-900 px-8 py-4 rounded-xl font-bold text-lg transition-all transform hover:scale-105 active:scale-95 shadow-xl shadow-yellow-500/20"
                     >
-                      {copied ? <Check className="w-3 h-3" /> : <Copy className="w-3 h-3" />}
-                      {copied ? 'Copied!' : 'Copy'}
-                    </button>
+                      Unlock All 100+ Blueprints <ArrowRight className="w-5 h-5" />
+                    </a>
+                    <p className="text-gray-500 text-sm mt-6 flex items-center justify-center gap-2">
+                      <Crown className="w-4 h-4 text-yellow-500" /> One-time payment. Lifetime updates.
+                    </p>
+                  </div>
+                  
+                  {/* Blurred Background Preview */}
+                  <div className="absolute inset-0 opacity-10 pointer-events-none select-none overflow-hidden">
+                    <pre className="text-[8px] text-white p-4 filter blur-[2px]">
+                      {selectedRecipe.blueprint}
+                    </pre>
                   </div>
                 </div>
-                <div className="p-6 max-h-[350px] overflow-y-auto">
-                  <pre className="font-mono text-sm text-blue-300 whitespace-pre-wrap leading-relaxed">
-                    {selectedRecipe.blueprint}
-                  </pre>
-                </div>
-              </div>
+              ) : (
+                /* Free Content State */
+                <>
+                  <div className="bg-gray-900 rounded-xl overflow-hidden border border-gray-800 shadow-inner">
+                    <div className="bg-gray-800 px-4 py-2 flex items-center justify-between border-b border-gray-700">
+                      <span className="text-gray-400 font-mono text-xs flex items-center gap-2">
+                        <FileText className="w-3 h-3" /> BLUEPRINT.md
+                      </span>
+                      <div className="flex items-center gap-2">
+                        {selectedRecipe.sampleData && (
+                          <button
+                            onClick={handleDownload}
+                            className="text-xs font-bold px-3 py-1.5 rounded flex items-center gap-2 transition-colors bg-yellow-500 text-yellow-900 hover:bg-yellow-400"
+                          >
+                            <Download className="w-3 h-3" />
+                            Download Sample
+                          </button>
+                        )}
+                        <button
+                          onClick={handleCopy}
+                          className={`text-xs font-bold px-3 py-1.5 rounded flex items-center gap-2 transition-colors ${
+                            copied ? 'bg-green-500 text-white' : 'bg-blue-600 text-white hover:bg-blue-500'
+                          }`}
+                        >
+                          {copied ? <Check className="w-3 h-3" /> : <Copy className="w-3 h-3" />}
+                          {copied ? 'Copied!' : 'Copy'}
+                        </button>
+                      </div>
+                    </div>
+                    <div className="p-6 max-h-[350px] overflow-y-auto">
+                      <pre className="font-mono text-sm text-blue-300 whitespace-pre-wrap leading-relaxed">
+                        {selectedRecipe.blueprint}
+                      </pre>
+                    </div>
+                  </div>
 
-              <div className="mt-6 bg-yellow-50 border border-yellow-100 p-4 rounded-xl flex gap-3 items-start">
-                 <div className="bg-yellow-500 text-white w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 font-bold text-xs mt-0.5">!</div>
-                 <div>
-                   <h4 className="text-sm font-bold text-yellow-800">Instructions</h4>
-                   <p className="text-sm text-yellow-700 mt-1">
-                     1. Copy the blueprint above.<br/>
-                     {selectedRecipe.sampleData && `2. Download the \`${selectedRecipe.sampleData.filename}\` sample data file.<br/>`}
-                     3. Tell your AI: <span className="italic font-semibold">"Read the blueprint and use the sample file to build this."</span>
-                   </p>
-                 </div>
-              </div>
+                  <div className="mt-6 bg-yellow-50 border border-yellow-100 p-4 rounded-xl flex gap-3 items-start">
+                     <div className="bg-yellow-500 text-white w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 font-bold text-xs mt-0.5">!</div>
+                     <div>
+                       <h4 className="text-sm font-bold text-yellow-800">Instructions</h4>
+                       <p className="text-sm text-yellow-700 mt-1">
+                         1. Copy the blueprint above.<br/>
+                         {selectedRecipe.sampleData && \`2. Download the \\\`\${selectedRecipe.sampleData.filename}\\\` sample data file.<br/>\`}
+                         3. Tell your AI: <span className="italic font-semibold">"Read the blueprint and use the sample file to build this."</span>
+                       </p>
+                     </div>
+                  </div>
+                </>
+              )}
             </div>
 
           </div>

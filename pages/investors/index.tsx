@@ -52,6 +52,11 @@ export default function InvestorsPage({ initialInvestors }: InvestorsPageProps) 
       <Head>
         <title>Micro-PE Match | Find Buyers for Your SaaS - AI Tinkering Examples</title>
         <meta name="description" content="A curated directory of 150+ active micro-private equity firms, search funds, and aggregators looking to acquire AI and SaaS businesses." />
+        <meta property="og:title" content="Micro-PE Match | Find Buyers for Your SaaS" />
+        <meta property="og:description" content="A curated directory of 150+ active micro-private equity firms, search funds, and aggregators looking to acquire AI and SaaS businesses." />
+        <meta property="og:image" content={`${process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com'}/Gemini_Generated_Image_b3hv6cb3hv6cb3hv.png`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content={`${process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com'}/Gemini_Generated_Image_b3hv6cb3hv6cb3hv.png`} />
       </Head>
 
       <div className="min-h-screen bg-primary-bg text-text-color font-sans">

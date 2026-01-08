@@ -9,6 +9,11 @@ export default function AboutPage() {
       <Head>
         <title>About | AI Examples</title>
         <meta name="description" content="Learn more about AI Examples and our mission to provide actionable AI workflows and prompts." />
+        <meta property="og:title" content="About | AI Examples" />
+        <meta property="og:description" content="Learn more about AI Examples and our mission to provide actionable AI workflows and prompts." />
+        <meta property="og:image" content={`${process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com'}/Gemini_Generated_Image_b3hv6cb3hv6cb3hv.png`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content={`${process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com'}/Gemini_Generated_Image_b3hv6cb3hv6cb3hv.png`} />
       </Head>
       <div className="min-h-screen bg-primary-bg font-sans text-text-color">
         <Navbar />
