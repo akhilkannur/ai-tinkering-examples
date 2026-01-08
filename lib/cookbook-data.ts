@@ -603,7 +603,7 @@ Build a list of 10 target podcasts and draft a unique pitch for each.
 1.  **Draft:** Create \`podcast_pitches.md\`.
     *   *The Hook:* Mention their recent social post (Step 2).
     *   *The Value:* Suggest the 3 Gap Topics (Step 3).`,
-  }
+  },
   {
     id: 'rfp-responder',
     category: 'Outreach',
