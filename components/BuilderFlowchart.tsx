@@ -287,7 +287,11 @@ const TerminalCookbook = () => {
                        <h4 className="text-sm font-bold text-yellow-800">Instructions</h4>
                        <p className="text-sm text-yellow-700 mt-1">
                          1. Copy the blueprint above.<br/>
-                         {selectedRecipe.sampleData && \`2. Download the \\\`\${selectedRecipe.sampleData.filename}\\\` sample data file.<br/>\`}
+                     {selectedRecipe.sampleData && (
+                       <>
+                         2. Download the <code className="font-mono bg-yellow-200/50 px-1 rounded">{selectedRecipe.sampleData.filename}</code> sample data file.<br/>
+                       </>
+                     )}
                          3. Tell your AI: <span className="italic font-semibold">"Read the blueprint and use the sample file to build this."</span>
                        </p>
                      </div>
