@@ -112,7 +112,7 @@ For every fully enriched prospect:
 You are the **Local Market Analyst**. You do not just "search"; you **verify** and **structure** data. Your goal is to build a high-quality, actionable dataset of local businesses that are actually active and reachable.
 
 ## Objective
-Create a CSV file named \\`local_prospects.csv\\` containing verified local businesses in a specific niche (e.g., "Coffee Shops in Seattle" or "HVAC in Austin").
+Create a CSV file named \`local_prospects.csv\` containing verified local businesses in a specific niche (e.g., "Coffee Shops in Seattle" or "HVAC in Austin").
 
 ## Workflow
 
@@ -122,7 +122,7 @@ Create a CSV file named \\`local_prospects.csv\\` containing verified local busi
     *   *Constraint:* Avoid large aggregators like Yelp/TripAdvisor. Find the *direct* business site.
 
 ### Phase 2: Verification & Enrichment
-Iterate through your found businesses using \\`web_fetch\\`:
+Iterate through your found businesses using \`web_fetch\`:
 1.  **Website Check:**
     *   *Status:* Is the site active?
     *   *Location:* Verify the address matches the target city.
@@ -134,12 +134,12 @@ Iterate through your found businesses using \\`web_fetch\\`:
 3.  **Targeting:** Flag businesses with 3.5 - 4.2 stars as "High Priority" (they need help with reputation management).
 
 ### Phase 4: Direct Contact Discovery
-1.  **Search:** Use queries like \\`"[Business Name]" [Location] owner\\` or \\`"[Business Name]" LinkedIn\\`.
+1.  **Search:** Use queries like \`"[Business Name]" [Location] owner\` or \`"[Business Name]" LinkedIn\`.
 2.  **Identify:** Try to find the specific name of the Owner or Manager.
 
 ### Phase 5: Artifact Generation
-1.  **Structure Data:** Columns: \\`Business Name\\`, \\`Website\\`, \\`Contact Name\\`, \\`Rating\\`, \\`Review_Count\\`, \\`Active_Signal\\`, \\`Notes\\`.
-2.  **Save:** Write to \\`local_prospects.csv\\`.
+1.  **Structure Data:** Columns: \`Business Name\`, \`Website\`, \`Contact Name\`, \`Rating\`, \`Review_Count\`, \`Active_Signal\`, \`Notes\`.
+2.  **Save:** Write to \`local_prospects.csv\`.
 3.  **Report:** Output a summary table of the verified leads.`,
   },
   {
@@ -156,15 +156,15 @@ Iterate through your found businesses using \\`web_fetch\\`:
 You are the **Social Signal Scout**. You are an expert at "Social Listening". You find needle-in-a-haystack conversations where people are explicitly asking for a solution we provide.
 
 ## Objective
-Identify 5-10 high-intent leads who are currently discussing a specific problem or topic online. Save these leads to \\`social_leads.csv\\`.
+Identify 5-10 high-intent leads who are currently discussing a specific problem or topic online. Save these leads to \`social_leads.csv\`.
 
 ## Workflow
 
 ### Phase 1: Topic Definition
 1.  **Input:** Ask the user: "What problem should I listen for? (e.g., 'need a crm', 'email deliverability issues')."
 2.  **Query Formulation:** Construct advanced queries:
-    *   \\`site:reddit.com [keyword] "looking for"\\`
-    *   \\`site:linkedin.com/posts [keyword] "help needed"\\`
+    *   \`site:reddit.com [keyword] "looking for"\`
+    *   \`site:linkedin.com/posts [keyword] "help needed"\`
 
 ### Phase 2: The Hunt (Search & Filter)
 1.  **Execute Search:** Run the search queries.
@@ -183,7 +183,7 @@ Identify 5-10 high-intent leads who are currently discussing a specific problem 
 ### Phase 5: Extraction
 1.  **Source:** Record the URL.
 2.  **Context:** Extract the specific quote where they express need.
-3.  **Save:** Create/Append to \\`social_leads.csv\\` with columns: \\`Source_URL\\`, \\`Pain_Category\\`, \\`Urgency_Score\\`, \\`Pain_Point_Quote\\`.`,
+3.  **Save:** Create/Append to \`social_leads.csv\` with columns: \`Source_URL\`, \`Pain_Category\`, \`Urgency_Score\`, \`Pain_Point_Quote\`.`,
   },
   {
     id: 'lookalike-cloner',
@@ -205,7 +205,7 @@ Given a "Golden Customer" URL, find 20 other companies that match their profile 
 
 ### Phase 1: Blueprinting the Golden Customer
 1.  **Input:** Ask for the "Golden Customer URL" (e.g., "linear.app").
-2.  **Analyze:** Use \\`web_fetch\\` to scan their homepage.
+2.  **Analyze:** Use \`web_fetch\` to scan their homepage.
     *   *Tech Stack:* Look for signals (e.g., Stripe, Segment).
     *   *Business Model:* (e.g., SaaS, PLG, Enterprise).
 
@@ -222,8 +222,8 @@ Given a "Golden Customer" URL, find 20 other companies that match their profile 
 2.  **Scoring:** Rank leads higher if they have a recent growth trigger.
 
 ### Phase 5: Artifact Generation
-1.  **Save:** Create \\`lookalike_prospects.csv\\`.
-2.  **Structure:** \\`Company\\`, \\`Website\\`, \\`Match_Reason\\`, \\`Growth_Trigger\\`, \\`Priority_Score\\`.`,
+1.  **Save:** Create \`lookalike_prospects.csv\`.
+2.  **Structure:** \`Company\`, \`Website\`, \`Match_Reason\`, \`Growth_Trigger\`, \`Priority_Score\`.`,
   },
   {
     id: 'ghost-job-hunter',
@@ -454,7 +454,7 @@ Convert a provided text file or URL into a social content bundle.
 2.  **Format:** Add relevant hashtags and emoji "bullet points" based on platform norms.
 
 ### Phase 5: Output
-1.  **Save:** Create \\`social_bundle.md\\` containing all assets.`,
+1.  **Save:** Create \`social_bundle.md\` containing all assets.`,
   },
   {
     id: 'youtube-distiller',
@@ -480,7 +480,7 @@ Summarize a YouTube video into actionable study notes and a To-Do list.
     *   Identify "Golden Nuggets" that aren't common knowledge.
 4.  **Implementation Checklist:** 
     *   Create a step-by-step "To-Do" list based on the video's instructions.
-5.  **Output:** Write a structured summary to \\`video_notes.md\\` including: The Argument, Top Insights, and The Checklist.`,
+5.  **Output:** Write a structured summary to \`video_notes.md\` including: The Argument, Top Insights, and The Checklist.`,
   },
   {
     id: 'trend-hunter',
@@ -564,7 +564,7 @@ Transform a raw "Brain Dump" into a polished LinkedIn post using proven viral st
 5.  **Refinement:** 
     *   Select the best Hook from Step 3. 
     *   Add a relevant "Call to Conversation" (Question) at the end.
-6.  **Output:** Save to \\`linkedin_viral_post.md\\`.`,
+6.  **Output:** Save to \`linkedin_viral_post.md\`.`,
   },
   {
     id: 'podcast-tour-manager',
@@ -665,7 +665,7 @@ Analyze a list of recent objections and create a strategic Battle Card document.
 2.  **Safety Net:** Provide a "Second-Level Rebuttal" to keep the conversation alive.
 
 ### Phase 5: Output
-1.  **Save:** Create \\`sales_battle_cards.md\\` with formatted tables.`,
+1.  **Save:** Create \`sales_battle_cards.md\` with formatted tables.`,
   },
   {
     id: 'churn-detective',
@@ -700,7 +700,7 @@ Scan a list of customer tickets and flag accounts requiring immediate interventi
     *   *Price:* Suggest a lower-tier plan or discount.
 
 ### Phase 4: Reporting
-1.  **Output:** Save \\`at_risk_report.md\\` with prioritized action items for the CS team.`,
+1.  **Output:** Save \`at_risk_report.md\` with prioritized action items for the CS team.`,
   },
   {
     id: 'seo-cluster-architect',
@@ -740,7 +740,7 @@ Design a content cluster around a main "Seed Keyword". Output: 1 Pillar Page Out
     *   *Rule 2:* Spoke A links to Spoke B (where contextually relevant) to create a "Silo".
 
 ### Phase 5: The Blueprint
-1.  **Output:** Create \\`content_cluster_plan.md\\`.
+1.  **Output:** Create \`content_cluster_plan.md\`.
     *   Include Outlines for all 6 pages and the specific internal link Map.`,
   },
   {
@@ -846,7 +846,7 @@ Identify 5 active contributors to a specific open-source repository who are high
 
 ### Phase 5: Candidate Roster
 1.  **Compile:** Create a list of the top 5 candidates.
-2.  **Save:** Write to \\`talent_roster.md\\`.
+2.  **Save:** Write to \`talent_roster.md\`.
     *   Include: Username, Stacks, Depth Score, and "Why them" notes.`,
   },
   {
@@ -885,7 +885,7 @@ Audit a Landing Page and propose 3 data-driven A/B tests.
 2.  **Measure:** Define the "Success Metric" for each test.
 
 ### Phase 5: Output
-1.  **Save:** Create \\`cro_experiment_roadmap.md\\`.`,
+1.  **Save:** Create \`cro_experiment_roadmap.md\`.`,
   },
   {
     id: 'review-miner-pm',
@@ -920,6 +920,6 @@ Analyze 50 negative reviews of a Competitor and rank "Feature Gaps".
 1.  **Scoring:** Rank gaps by "Revenue Impact" (e.g., "Missing API" = High, "Button color" = Low).
 
 ### Phase 5: Roadmap Generation
-1.  **Output:** Save to \\`product_gap_analysis.md\\` with 3 prioritized "Next Features".`,
+1.  **Output:** Save to \`product_gap_analysis.md\` with 3 prioritized "Next Features".`,
   }
 ];
