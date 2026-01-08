@@ -35,6 +35,7 @@ export interface Recipe {
   time: string;
   description: string;
   blueprint: string;
+  isPremium?: boolean;
   sampleData?: {
     filename: string;
     content: string;
