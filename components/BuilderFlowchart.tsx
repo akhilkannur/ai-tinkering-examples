@@ -2,9 +2,13 @@ import React, { useState, useMemo } from 'react';
 import { 
   Terminal, Copy, Check, FileText, Search, X, Filter, Download, Lock, Crown, ArrowRight
 } from 'lucide-react';
-import { recipes, categoryIcons, Category, Recipe } from '../lib/cookbook-data';
+import { categoryIcons, Category, Recipe } from '../lib/cookbook-data';
 
-const TerminalCookbook = () => {
+interface TerminalCookbookProps {
+  recipes: Recipe[];
+}
+
+const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
   const [selectedCategory, setSelectedCategory] = useState<Category | 'All'>('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedRecipe, setSelectedRecipe] = useState<Recipe | null>(null);
@@ -21,7 +25,7 @@ const TerminalCookbook = () => {
         recipe.tagline.toLowerCase().includes(searchQuery.toLowerCase());
       return matchesCategory && matchesSearch;
     });
-  }, [selectedCategory, searchQuery]);
+  }, [selectedCategory, searchQuery, recipes]);
 
   const handleCopy = () => {
     if (!selectedRecipe || selectedRecipe.isPremium) return;

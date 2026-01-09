@@ -2,8 +2,23 @@ import Head from 'next/head';
 import Navbar from '../components/Navbar';
 import TerminalCookbook from '../components/BuilderFlowchart';
 import { Terminal, BookOpen, Cpu, Command } from 'lucide-react';
+import { getAllRecipes } from '../lib/recipes';
+import { Recipe } from '../lib/cookbook-data';
 
-const BlueprintsPage = () => {
+interface BlueprintsPageProps {
+  recipes: Recipe[];
+}
+
+export async function getStaticProps() {
+  const recipes = getAllRecipes();
+  return {
+    props: {
+      recipes,
+    },
+  };
+}
+
+const BlueprintsPage = ({ recipes }: BlueprintsPageProps) => {
   return (
     <div className="flex flex-col min-h-screen bg-white">
       <Head>
@@ -60,7 +75,7 @@ const BlueprintsPage = () => {
 
         {/* The Cookbook Grid */}
         <div className="mb-24">
-          <TerminalCookbook />
+          <TerminalCookbook recipes={recipes} />
         </div>
 
         {/* Philosophy Section */}
