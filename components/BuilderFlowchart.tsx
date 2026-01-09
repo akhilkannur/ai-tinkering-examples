@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
+import Link from 'next/link';
 import { 
-  Terminal, Copy, Check, FileText, Search, X, Filter, Download, Lock, Crown, ArrowRight
+  Terminal, Copy, Check, FileText, Search, X, Filter, Download, Lock, Crown, ArrowRight, ExternalLink
 } from 'lucide-react';
 import { categoryIcons, Category, Recipe } from '../lib/cookbook-data';
 
@@ -100,10 +101,10 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
         {filteredRecipes.map((recipe) => {
           const CatIcon = categoryIcons[recipe.category] || Terminal;
           return (
-            <button
+            <div
               key={recipe.id}
+              className="group text-left bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:border-blue-300 hover:-translate-y-1 transition-all duration-300 flex flex-col h-full relative overflow-hidden cursor-pointer"
               onClick={() => setSelectedRecipe(recipe)}
-              className="group text-left bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:border-blue-300 hover:-translate-y-1 transition-all duration-300 flex flex-col h-full relative overflow-hidden"
             >
               {/* Category Strip */}
               <div className={`absolute top-0 left-0 w-1.5 h-full ${
@@ -135,10 +136,12 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
                 </div>
               </div>
               
-              <h3 className="text-lg font-bold text-gray-900 mb-1 group-hover:text-blue-600 transition-colors pl-3 leading-tight flex items-center gap-2">
-                {recipe.title}
-                {recipe.isPremium && <Lock className="w-3.5 h-3.5 text-gray-300" />}
-              </h3>
+              <Link href={`/blueprints/${recipe.id}`} onClick={(e) => e.stopPropagation()}>
+                <h3 className="text-lg font-bold text-gray-900 mb-1 group-hover:text-blue-600 transition-colors pl-3 leading-tight flex items-center gap-2">
+                  {recipe.title}
+                  {recipe.isPremium && <Lock className="w-3.5 h-3.5 text-gray-300" />}
+                </h3>
+              </Link>
               <p className="text-gray-500 text-sm font-medium mb-4 min-h-[40px] pl-3 line-clamp-2">
                 {recipe.tagline}
               </p>
@@ -160,7 +163,7 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
                  )}
                  <span className="font-mono">{recipe.time}</span>
               </div>
-            </button>
+            </div>
           );
         })}
       </div>
@@ -195,13 +198,20 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
                     {selectedRecipe.title}
                     {selectedRecipe.isPremium && <Lock className="w-5 h-5 text-yellow-600" />}
                   </h2>
-                  <div className="flex items-center gap-2 mt-1">
+                  <div className="flex items-center gap-4 mt-1">
                     <span className={`text-xs font-bold px-2 py-0.5 rounded uppercase tracking-wide ${selectedRecipe.isPremium ? 'bg-yellow-500 text-white' : 'bg-blue-100 text-blue-700'}`}>
                       {selectedRecipe.isPremium ? 'Premium Blueprint' : selectedRecipe.category}
                     </span>
                     <span className="text-gray-400 text-xs flex items-center gap-1">
                       <Terminal className="w-3 h-3" /> {selectedRecipe.time} build
                     </span>
+                    <Link 
+                      href={`/blueprints/${selectedRecipe.id}`}
+                      className="text-blue-600 text-xs font-bold hover:underline flex items-center gap-1"
+                      onClick={() => setSelectedRecipe(null)}
+                    >
+                      <ExternalLink className="w-3 h-3" /> View Full Page
+                    </Link>
                   </div>
                 </div>
               </div>
