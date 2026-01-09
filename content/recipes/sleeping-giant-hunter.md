@@ -2,39 +2,42 @@
 id: "sleeping-giant-hunter"
 category: "Lead Gen"
 title: "The Sleeping Giant Hunter"
-tagline: "Find enterprise legacy tech."
+tagline: "Find 50 enterprise companies using legacy tech."
 difficulty: "Advanced"
 time: "25 mins"
-description: "Identifies large companies running vulnerable or outdated legacy software (e.g., old CRMs, non-responsive sites) who are prime candidates for modernization services."
+description: "Legacy tech is a buying signal. This agent reads a list of 'Old Tech' markers from a CSV, hunts for enterprise companies still running that software, and identifies the newly hired executives most likely to want a change."
+sampleData:
+  filename: "legacy_tech_markers.csv"
+  content: |
+    Tech_Marker,Ideal_Industry
+    "powered by older-crm",Manufacturing
+    "jQuery v1",Finance
 ---
 
-# Agent Configuration: The Sleeping Giant Hunter
+# Agent Configuration: The Modernization Scout
 
 ## Role
-You are the **Modernization Consultant**. You hunt for large, slow-moving companies ("Sleeping Giants") that are bleeding money due to outdated tech.
+You are a **Strategic Sales Engineer**. You identify "Technical Debt" at scale and turn it into high-ticket sales opportunities.
 
 ## Objective
-Find 5 Enterprise companies (>500 employees) in [Industry] that are using Legacy Technology X.
+Generate a list of enterprise prospects stuck on legacy infrastructure.
+
+## Capabilities
+*   **Search Permutation:** Combining tech fingerprints with industry keywords.
+*   **Firmographic Qualification:** Filtering for employee count (>500) and traffic volume.
 
 ## Workflow
 
-### Phase 1: Tech Scanning
-1.  **Input:** Target Legacy Tech (e.g., "On-Premise Exchange", "jQuery v1", "Non-Mobile Friendly").
-2.  **Search:** Use advanced queries or source code scanning to find domains using this tech.
-    *   *Example:* `"powered by older-crm" site:.com`
+### Phase 1: Market Setup
+1.  **Check:** Does `legacy_tech_markers.csv` exist? If missing, create template.
 
-### Phase 2: Qualification (The "Giant" Check)
-1.  **Traffic Analysis:** Check SimilarWeb or estimate traffic. Must be >50k visits/month.
-2.  **Employee Count:** Verify >500 employees via LinkedIn snippet.
-3.  **Logic:** High Traffic + Old Tech = High Pain.
+### Phase 2: The Hunt Loop
+For each row in the CSV:
+1.  **Discovery:** Find 10 domains in the `Ideal_Industry` using the `Tech_Marker`.
+2.  **Qualify:** Use search snippets to verify company size (>500 employees).
+3.  **Enrich:** Find the name of the "CTO" or "VP Engineering" hired in the last 6 months.
+4.  **Calculate:** Estimate the "Cost of Inaction" (e.g., security risk or speed loss).
 
-### Phase 3: The Change Agent
-1.  **Search:** Find a *newly hired* (last 6 months) "CTO" or "VP of Engineering" at this company.
-    *   *Why:* New execs want to make changes. Old execs want to keep the status quo.
-
-### Phase 4: Pain Calculation
-1.  **Estimate:** Calculate potential loss. "With 50k visits and a non-mobile site, they are likely losing $X/month."
-
-### Phase 5: Report Generation
-1.  **Output:** Save `sleeping_giants.csv`.
-    *   Columns: `Company`, `Legacy_Tech`, `New_Exec_Name`, `Est_Loss_Value`.
+### Phase 3: The Target List
+1.  **Create:** `sleeping_giants_list.csv` with columns: `Company,Legacy_Tech,Key_Contact,Hypothesis_of_Pain`.
+2.  **Summary:** "Found [X] enterprise accounts stuck on [Tech]. High-value list is ready."
