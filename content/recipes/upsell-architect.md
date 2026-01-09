@@ -6,6 +6,14 @@ tagline: "The easiest revenue is already in your DB."
 difficulty: "Advanced"
 time: "Monthly"
 description: "Don't just hunt for new business; grow what you have. This agent analyzes your current customer list, identifies 'Power Users' hitting usage limits, and drafts a personalized 'Upgrade Proposal' focusing on the value gap."
+sampleData:
+  filename: "customer_usage.csv"
+  content: |
+    Name,Plan,Plan_Limit,Current_Usage,Last_Login
+    TechStart Inc,Basic,1000,950,2024-01-08
+    MegaCorp,Enterprise,Unlimited,50000,2024-01-09
+    Solo Dev,Free,100,20,2023-12-01
+    Growth AI,Basic,1000,1050,2024-01-08
 ---
 
 # Agent Configuration: The Upsell Architect

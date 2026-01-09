@@ -6,6 +6,14 @@ tagline: "Never bounce an email again."
 difficulty: "Advanced"
 time: "15 mins"
 description: "Buying leads is risky; 30% of them are usually dead. This agent takes your raw CSV, uses the `curl` command to ping every company website, and automatically filters out domains that return 404/500 errors, saving your domain reputation."
+sampleData:
+  filename: "leads.csv"
+  content: |
+    Company,Website,Contact_Name,Email
+    Acme Corp,https://www.google.com,John Doe,john@acme.com
+    Dead Startup,https://thisdomaindefinitelydoesnotexist12345.com,Jane Smith,jane@deadstartup.com
+    Stripe,https://stripe.com,Patrick,patrick@stripe.com
+    Broken Link,https://httpstat.us/404,Test User,test@broken.com
 ---
 
 # Agent Configuration: The Lead List Cleaner

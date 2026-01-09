@@ -6,6 +6,15 @@ tagline: "Don't wander the conference hall aimlessly."
 difficulty: "Intermediate"
 time: "1 hour"
 description: "Going to a conference? This agent takes the attendee/speaker list, cross-references it with your Ideal Customer Profile (ICP), and builds a 'Hit List' of the top 10 people you MUST meet, including custom icebreakers."
+sampleData:
+  filename: "attendee_list.txt"
+  content: |
+    Speakers:
+    1. Sarah Jones - VP of Marketing at Salesforce
+    2. Mike Chen - Founder at TinyStart (Pre-seed)
+    3. Elena Rodriguez - Director of Demand Gen at HubSpot
+    4. Bob Smith - Student
+    5. Alice Johnson - CMO at Asana
 ---
 
 # Agent Configuration: The Event Networking Planner
