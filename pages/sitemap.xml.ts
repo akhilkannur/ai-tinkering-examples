@@ -2,7 +2,8 @@ import { GetServerSideProps } from 'next'
 import { fetchExamples } from '../lib/airtable'
 import { getAllRecipes } from '../lib/recipes'
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://realaiexamples.com'
+// Hardcode the canonical production URL to ensure GSC accepts the sitemap
+const SITE_URL = 'https://realaiexamples.com'
 
 function generateSitemap(examples: any[], recipes: any[], categories: string[], tags: string[]) {
   const currentDate = new Date().toISOString()

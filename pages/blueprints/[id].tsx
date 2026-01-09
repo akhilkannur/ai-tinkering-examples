@@ -34,7 +34,8 @@ export default function RecipePage({ recipe }: RecipePageProps) {
     URL.revokeObjectURL(url);
   };
 
-  const ogImageUrl = `https://realaiexamples.com/api/og?title=${encodeURIComponent(recipe.title)}&category=${encodeURIComponent(recipe.category)}&tagline=${encodeURIComponent(recipe.tagline)}`;
+  const SITE_URL = 'https://realaiexamples.com';
+  const ogImageUrl = `${SITE_URL}/api/og?title=${encodeURIComponent(recipe.title)}&category=${encodeURIComponent(recipe.category)}&tagline=${encodeURIComponent(recipe.tagline)}`;
 
   return (
     <div className="flex flex-col min-h-screen bg-white">
@@ -49,7 +50,7 @@ export default function RecipePage({ recipe }: RecipePageProps) {
         <meta name="twitter:title" content={`${recipe.title} | AI Agent Blueprint`} />
         <meta name="twitter:description" content={recipe.description} />
         <meta name="twitter:image" content={ogImageUrl} />
-        <link rel="canonical" content={`https://realaiexamples.com/blueprints/${recipe.id}`} />
+        <link rel="canonical" content={`${SITE_URL}/blueprints/${recipe.id}`} />
       </Head>
       
       <Navbar />
