@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Navbar from '../components/Navbar';
 import TerminalCookbook from '../components/BuilderFlowchart';
+import HowToUseGuide from '../components/HowToUseGuide';
 import { Terminal, BookOpen, Cpu, Command } from 'lucide-react';
 import { getAllRecipes } from '../lib/recipes';
 import { Recipe } from '../lib/cookbook-data';
@@ -72,6 +73,9 @@ const BlueprintsPage = ({ recipes }: BlueprintsPageProps) => {
             </span>
           </div>
         </div>
+
+        {/* How To Use Guide */}
+        <HowToUseGuide />
 
         {/* The Cookbook Grid */}
         <div className="mb-24">
