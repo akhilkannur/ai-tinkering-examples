@@ -4,8 +4,8 @@ import NewsletterForm from '../components/NewsletterForm'
 import Footer from '../components/Footer'
 
 export default function StateOfAI() {
-  const pageTitle = "The State of AI 2026: Statistics & Trends";
-  const pageDescription = "Comprehensive statistics on AI adoption, generative AI market size, and ROI for 2026. Data-backed insights for business leaders.";
+  const pageTitle = "Real People, Real Results: The State of Practical AI 2026";
+  const pageDescription = "Forget market caps. Here's how marketers, small business owners, and sales teams are actually using AI to save time and make money in 2026.";
 
   return (
     <>
@@ -25,10 +25,10 @@ export default function StateOfAI() {
           
           <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
             <h1 className="text-4xl sm:text-6xl font-headline font-bold mb-6 text-text-color uppercase tracking-tight">
-              The State of AI <span className="text-accent">2026</span>
+              Practical AI <span className="text-accent">2026</span>
             </h1>
             <p className="text-xl text-text-secondary font-mono mb-8 max-w-2xl mx-auto">
-              Adoption is no longer the goal—ROI is. Here are the 50+ statistics defining the artificial intelligence landscape this year.
+              No hype. No "future of work" fluff. Just the data on how real people are saving hours every single week.
             </p>
             <div className="inline-block px-4 py-2 border border-accent/30 rounded-full bg-accent/10 text-accent font-mono text-sm">
               Updated: January 2026
@@ -36,30 +36,30 @@ export default function StateOfAI() {
           </div>
         </div>
 
-        {/* Hero Stats Cards */}
+        {/* Hero Stats Cards (Relatable Focus) */}
         <div className="max-w-6xl mx-auto px-4 -mt-10 relative z-20 mb-20">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-primary-bg border border-navy-light p-8 shadow-xl hover:border-accent transition-colors group">
-              <div className="text-5xl font-headline font-bold text-accent mb-2 group-hover:scale-105 transition-transform">88%</div>
-              <div className="text-lg font-bold text-text-color mb-3">Organization Adoption</div>
+              <div className="text-5xl font-headline font-bold text-accent mb-2 group-hover:scale-105 transition-transform">11 hrs</div>
+              <div className="text-lg font-bold text-text-color mb-3">Saved Weekly by Marketers</div>
               <p className="text-text-secondary text-sm leading-relaxed">
-                Of organizations now use AI in at least one business function, up from just 20% in 2017.
+                Marketing teams using AI for content and email save over a full work day every week.
               </p>
             </div>
             
             <div className="bg-primary-bg border border-navy-light p-8 shadow-xl hover:border-accent transition-colors group">
-              <div className="text-5xl font-headline font-bold text-accent mb-2 group-hover:scale-105 transition-transform">79%</div>
-              <div className="text-lg font-bold text-text-color mb-3">GenAI Usage</div>
+              <div className="text-5xl font-headline font-bold text-accent mb-2 group-hover:scale-105 transition-transform">2x</div>
+              <div className="text-lg font-bold text-text-color mb-3">Sales Target Success</div>
               <p className="text-text-secondary text-sm leading-relaxed">
-                Adoption of Generative AI has nearly tripled since 2023, becoming a standard tool in 3/4 companies.
+                Salespeople using AI for admin & summaries are twice as likely to hit their quota.
               </p>
             </div>
 
             <div className="bg-primary-bg border border-navy-light p-8 shadow-xl hover:border-accent transition-colors group">
-              <div className="text-5xl font-headline font-bold text-accent mb-2 group-hover:scale-105 transition-transform">10.3x</div>
-              <div className="text-lg font-bold text-text-color mb-3">Top Performer ROI</div>
+              <div className="text-5xl font-headline font-bold text-accent mb-2 group-hover:scale-105 transition-transform">20+ hrs</div>
+              <div className="text-lg font-bold text-text-color mb-3">Saved Monthly by SMBs</div>
               <p className="text-text-secondary text-sm leading-relaxed">
-                High-performing organizations are seeing over 10x returns on their AI investments within 12 months.
+                Small business owners are automating 20+ hours of admin & support work per month.
               </p>
             </div>
           </div>
@@ -68,111 +68,98 @@ export default function StateOfAI() {
         {/* Content Body */}
         <div className="max-w-4xl mx-auto px-4 pb-20">
           
-          {/* Section 1: The Shift to Agents */}
+          {/* Section 1: Marketing */}
           <div className="mb-16">
             <h2 className="text-3xl font-headline font-bold mb-8 border-l-4 border-accent pl-4">
-              1. The Rise of AI Agents
+              1. For Marketers: The Content Engine
             </h2>
+            <p className="mb-6 text-text-secondary">
+              It's not about replacing creativity; it's about removing the grunt work. 2025 data shows massive adoption for specific tasks.
+            </p>
             <div className="bg-secondary-bg border border-navy-dark p-6 mb-8">
-              <p className="text-lg mb-4">
-                2026 is being called the "Year of the Agent." We are moving beyond chat interfaces to autonomous systems that execute tasks.
-              </p>
               <ul className="space-y-4 font-mono text-sm text-text-secondary">
                 <li className="flex items-start">
                   <span className="text-accent mr-2">➜</span>
-                  <span><strong>52%</strong> of enterprises are actively using AI agents as of late 2025.</span>
+                  <span><strong>85%</strong> of marketers now use AI for content creation (blogs, social).</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-accent mr-2">➜</span>
-                  <span><strong>39%</strong> of large companies have launched more than 10 autonomous agents.</span>
+                  <span><strong>46%</strong> use it specifically for copywriting assistance (not just generation).</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-accent mr-2">➜</span>
-                  <span><strong>15%</strong> of routine work decisions will be made autonomously by agentic AI by 2028 (Gartner).</span>
+                  <span><strong>13%</strong> increase in email click-through rates when AI optimizes subject lines.</span>
                 </li>
               </ul>
             </div>
           </div>
 
-          {/* Section 2: Market Size Visualization (CSS Bar Chart) */}
+          {/* Section 2: Small Business (Time Saved Chart) */}
           <div className="mb-16">
             <h2 className="text-3xl font-headline font-bold mb-8 border-l-4 border-accent pl-4">
-              2. Market Growth Forecast
+              2. For Small Business: The 24/7 Admin
             </h2>
             <p className="mb-6 text-text-secondary">
-              The generative AI market is exploding. While estimates vary, the trajectory is undeniable.
+              Small business owners wear too many hats. AI is taking the "Support" and "Admin" hats off their heads.
             </p>
             
             <div className="bg-secondary-bg p-8 border border-navy-dark">
+              <h3 className="font-bold mb-6 text-center text-accent uppercase tracking-widest text-sm">Impact on Small Business Operations</h3>
               <div className="space-y-6">
                 <div>
                   <div className="flex justify-between text-sm mb-1 font-mono">
-                    <span>DemandSage (Conservative)</span>
-                    <span className="text-accent">$37.89B</span>
+                    <span>Faster Customer Support Resolution</span>
+                    <span className="text-accent">92%</span>
                   </div>
                   <div className="w-full bg-navy-dark h-4 rounded-sm overflow-hidden">
-                    <div className="bg-text-secondary h-full" style={{ width: '30%' }}></div>
+                    <div className="bg-accent h-full" style={{ width: '92%' }}></div>
                   </div>
                 </div>
                 
                 <div>
                   <div className="flex justify-between text-sm mb-1 font-mono">
-                    <span>Grand View Research</span>
-                    <span className="text-accent">$69.85B</span>
+                    <span>Global Adoption Rate (SMBs)</span>
+                    <span className="text-accent">77%</span>
                   </div>
                   <div className="w-full bg-navy-dark h-4 rounded-sm overflow-hidden">
-                    <div className="bg-accent/70 h-full" style={{ width: '55%' }}></div>
+                    <div className="bg-accent/70 h-full" style={{ width: '77%' }}></div>
                   </div>
                 </div>
 
                 <div>
                   <div className="flex justify-between text-sm mb-1 font-mono">
-                    <span>UMU Projection (Bull Case)</span>
-                    <span className="text-accent">$126B</span>
+                    <span>Reported Cost Savings</span>
+                    <span className="text-accent">30%</span>
                   </div>
                   <div className="w-full bg-navy-dark h-4 rounded-sm overflow-hidden">
-                    <div className="bg-accent h-full" style={{ width: '100%' }}></div>
+                    <div className="bg-accent/40 h-full" style={{ width: '30%' }}></div>
                   </div>
                 </div>
               </div>
               <p className="text-xs text-center mt-6 text-text-secondary opacity-60">
-                Figure 1: Projected 2026 Generative AI Market Size by Source
+                Data Sources: ColorWhistle, Salesforce (2025 SMB Reports)
               </p>
             </div>
           </div>
 
-          {/* Section 3: Workforce & Productivity */}
+          {/* Section 3: Sales (The Admin Killer) */}
           <div className="mb-16">
             <h2 className="text-3xl font-headline font-bold mb-8 border-l-4 border-accent pl-4">
-              3. Workforce Impact
+              3. For Sales: The Admin Killer
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div className="border border-navy-dark p-6 hover:bg-secondary-bg transition-colors">
-                <h3 className="font-bold text-lg mb-2 text-accent">Productivity Boost</h3>
-                <p className="text-3xl font-headline mb-2">40-60 min</p>
+                <h3 className="font-bold text-lg mb-2 text-accent">CRM Data Entry</h3>
+                <p className="text-3xl font-headline mb-2">Automated</p>
                 <p className="text-sm text-text-secondary">
-                  Average time saved per day by daily AI users.
+                  Salespeople save 12 hours/week by letting AI handle CRM updates and meeting notes.
                 </p>
               </div>
               <div className="border border-navy-dark p-6 hover:bg-secondary-bg transition-colors">
-                <h3 className="font-bold text-lg mb-2 text-accent">Worker Sentiment</h3>
-                <p className="text-3xl font-headline mb-2">75%</p>
+                <h3 className="font-bold text-lg mb-2 text-accent">Daily Usage</h3>
+                <p className="text-3xl font-headline mb-2">56%</p>
                 <p className="text-sm text-text-secondary">
-                  Of workers say AI improves the quality of their output.
-                </p>
-              </div>
-              <div className="border border-navy-dark p-6 hover:bg-secondary-bg transition-colors">
-                <h3 className="font-bold text-lg mb-2 text-accent">Management Usage</h3>
-                <p className="text-3xl font-headline mb-2">33%</p>
-                <p className="text-sm text-text-secondary">
-                  Of managers use AI daily, outpacing the 27% of general white-collar workers.
-                </p>
-              </div>
-              <div className="border border-navy-dark p-6 hover:bg-secondary-bg transition-colors">
-                <h3 className="font-bold text-lg mb-2 text-accent">Investment</h3>
-                <p className="text-3xl font-headline mb-2">92%</p>
-                <p className="text-sm text-text-secondary">
-                  Of companies plan to increase AI budget in the next 3 years.
+                  Of sales professionals rely on AI tools every single day to function.
                 </p>
               </div>
             </div>
@@ -182,7 +169,7 @@ export default function StateOfAI() {
           <div className="mt-20 pt-10 border-t border-navy-dark text-sm text-text-secondary">
             <h4 className="font-bold mb-4 uppercase tracking-widest text-xs">Sources & Methodology</h4>
             <p className="mb-4 opacity-80">
-              This report aggregates data from major 2024-2025 industry reports including McKinsey, Gartner, Google Cloud, and Grand View Research. Projections for 2026 are based on CAGR estimates from these primary sources.
+              This report aggregates data from 2025 practical usage reports including HubSpot, Salesforce SMB Trends, and Gartner Sales predictions. Focus is strictly on non-technical use cases.
             </p>
           </div>
 
@@ -192,10 +179,10 @@ export default function StateOfAI() {
         <div className="bg-secondary-bg border-t border-navy-dark py-20">
           <div className="max-w-2xl mx-auto px-4 text-center">
             <h2 className="text-3xl font-headline font-bold mb-4">
-              Don't just read the stats. <span className="text-accent">Be the stat.</span>
+              Stop reading stats. <span className="text-accent">Start saving time.</span>
             </h2>
             <p className="text-text-secondary mb-8">
-              Join 5,000+ others getting practical AI workflows delivered weekly.
+              Join 5,000+ others getting one practical AI workflow delivered weekly.
             </p>
             <NewsletterForm />
           </div>
