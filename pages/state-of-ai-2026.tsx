@@ -1,11 +1,12 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import Navbar from '../components/Navbar'
 import NewsletterForm from '../components/NewsletterForm'
 import Footer from '../components/Footer'
 
 export default function StateOfAI() {
-  const pageTitle = "Real People, Real Results: The State of Practical AI 2026";
-  const pageDescription = "Forget market caps. Here's how marketers, small business owners, and sales teams are actually using AI to save time and make money in 2026.";
+  const pageTitle = "State of Practical AI 2026: The Operator's Report";
+  const pageDescription = "The unvarnished truth about AI in 2026. Reply rates are down, hallucinations are real, but the winners are saving 90% on costs. Here is the tactical data.";
 
   return (
     <>
@@ -17,172 +18,173 @@ export default function StateOfAI() {
       <div className="min-h-screen bg-primary-bg font-sans text-text-color">
         <Navbar />
 
-        {/* Hero Section */}
-        <div className="relative border-b border-navy-dark bg-secondary-bg py-16 sm:py-24">
-          <div className="absolute inset-0 pointer-events-none opacity-5">
-            <div className="absolute inset-0 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:20px_20px]" />
-          </div>
-          
-          <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
-            <h1 className="text-4xl sm:text-6xl font-headline font-bold mb-6 text-text-color uppercase tracking-tight">
-              Practical AI <span className="text-accent">2026</span>
+        {/* Header: Tactical Briefing Style */}
+        <div className="bg-secondary-bg border-b border-navy-dark py-16">
+          <div className="max-w-4xl mx-auto px-4">
+            <div className="inline-block px-3 py-1 border border-accent text-accent font-mono text-xs uppercase tracking-widest mb-4">
+              Intelligence Report • Jan 2026
+            </div>
+            <h1 className="text-3xl sm:text-5xl font-headline font-bold mb-6 text-text-color uppercase tracking-tight">
+              The State of <br className="hidden sm:block" />
+              <span className="text-accent bg-accent/10 px-2">Practical AI</span>
             </h1>
-            <p className="text-xl text-text-secondary font-mono mb-8 max-w-2xl mx-auto">
-              No hype. No "future of work" fluff. Just the data on how real people are saving hours every single week.
+            <p className="text-lg sm:text-xl text-text-secondary font-mono max-w-2xl leading-relaxed">
+              Forget "Market Cap." This report covers reply rates, hallucination costs, and the actual ROI of AI agents in the field.
             </p>
-            <div className="inline-block px-4 py-2 border border-accent/30 rounded-full bg-accent/10 text-accent font-mono text-sm">
-              Updated: January 2026
-            </div>
           </div>
         </div>
 
-        {/* Hero Stats Cards (Relatable Focus) */}
-        <div className="max-w-6xl mx-auto px-4 -mt-10 relative z-20 mb-20">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-primary-bg border border-navy-light p-8 shadow-xl hover:border-accent transition-colors group">
-              <div className="text-5xl font-headline font-bold text-accent mb-2 group-hover:scale-105 transition-transform">11 hrs</div>
-              <div className="text-lg font-bold text-text-color mb-3">Saved Weekly by Marketers</div>
-              <p className="text-text-secondary text-sm leading-relaxed">
-                Marketing teams using AI for content and email save over a full work day every week.
-              </p>
-            </div>
-            
-            <div className="bg-primary-bg border border-navy-light p-8 shadow-xl hover:border-accent transition-colors group">
-              <div className="text-5xl font-headline font-bold text-accent mb-2 group-hover:scale-105 transition-transform">2x</div>
-              <div className="text-lg font-bold text-text-color mb-3">Sales Target Success</div>
-              <p className="text-text-secondary text-sm leading-relaxed">
-                Salespeople using AI for admin & summaries are twice as likely to hit their quota.
-              </p>
-            </div>
-
-            <div className="bg-primary-bg border border-navy-light p-8 shadow-xl hover:border-accent transition-colors group">
-              <div className="text-5xl font-headline font-bold text-accent mb-2 group-hover:scale-105 transition-transform">20+ hrs</div>
-              <div className="text-lg font-bold text-text-color mb-3">Saved Monthly by SMBs</div>
-              <p className="text-text-secondary text-sm leading-relaxed">
-                Small business owners are automating 20+ hours of admin & support work per month.
+        {/* Section 1: The Cold Email Crisis (Contrarian) */}
+        <div className="max-w-4xl mx-auto px-4 py-16 border-b border-navy-dark">
+          <div className="flex flex-col sm:flex-row items-start justify-between mb-8">
+            <div>
+              <h2 className="text-2xl font-headline font-bold text-red-400 mb-2">
+                ⚠ The "Spam" Crisis
+              </h2>
+              <p className="text-text-secondary max-w-md">
+                Generic AI outreach is dying. Volume is up, but reply rates have crashed.
               </p>
             </div>
           </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+            <div className="bg-secondary-bg p-6 border border-red-900/30 relative overflow-hidden">
+              <div className="absolute top-0 right-0 p-2 opacity-10 text-9xl font-bold text-red-500 leading-none pointer-events-none">📉</div>
+              <div className="relative z-10">
+                <div className="text-4xl font-mono font-bold text-red-400 mb-1">5-10%</div>
+                <div className="text-sm font-bold uppercase tracking-widest text-text-secondary mb-4">Avg. Reply Rate</div>
+                <p className="text-sm text-text-secondary">
+                  Standard "AI-generated" cold emails are being ignored at record rates in 2026 due to lack of personalization.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-secondary-bg p-6 border border-green-900/30 relative overflow-hidden">
+              <div className="absolute top-0 right-0 p-2 opacity-10 text-9xl font-bold text-green-500 leading-none pointer-events-none">📈</div>
+              <div className="relative z-10">
+                <div className="text-4xl font-mono font-bold text-green-400 mb-1">35%+</div>
+                <div className="text-sm font-bold uppercase tracking-widest text-text-secondary mb-4">Deep Personalization</div>
+                <p className="text-sm text-text-secondary">
+                  Campaigns using AI for <strong>signal-based research</strong> (not just writing) are seeing 3x engagement.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Actionable Link */}
+          <div className="mt-8 p-4 border border-accent/30 bg-accent/5 flex items-center justify-between">
+            <div className="text-sm font-mono text-accent">
+              <span className="font-bold mr-2">TACTIC:</span>
+              Don't let AI write the email. Let it research the prospect.
+            </div>
+            <Link href="/ai-examples/sales/autonomous-sales-sniper" className="text-sm font-bold underline decoration-accent underline-offset-4 hover:text-white transition-colors">
+              Get the Recipe →
+            </Link>
+          </div>
         </div>
 
-        {/* Content Body */}
-        <div className="max-w-4xl mx-auto px-4 pb-20">
+        {/* Section 2: The Hallucination Tax (The Hidden Cost) */}
+        <div className="max-w-4xl mx-auto px-4 py-16 border-b border-navy-dark">
+          <h2 className="text-2xl font-headline font-bold mb-8">
+            The "Hallucination Tax"
+          </h2>
           
-          {/* Section 1: Marketing */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-headline font-bold mb-8 border-l-4 border-accent pl-4">
-              1. For Marketers: The Content Engine
-            </h2>
-            <p className="mb-6 text-text-secondary">
-              It's not about replacing creativity; it's about removing the grunt work. 2025 data shows massive adoption for specific tasks.
-            </p>
-            <div className="bg-secondary-bg border border-navy-dark p-6 mb-8">
-              <ul className="space-y-4 font-mono text-sm text-text-secondary">
-                <li className="flex items-start">
-                  <span className="text-accent mr-2">➜</span>
-                  <span><strong>85%</strong> of marketers now use AI for content creation (blogs, social).</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-accent mr-2">➜</span>
-                  <span><strong>46%</strong> use it specifically for copywriting assistance (not just generation).</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-accent mr-2">➜</span>
-                  <span><strong>13%</strong> increase in email click-through rates when AI optimizes subject lines.</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Section 2: Small Business (Time Saved Chart) */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-headline font-bold mb-8 border-l-4 border-accent pl-4">
-              2. For Small Business: The 24/7 Admin
-            </h2>
-            <p className="mb-6 text-text-secondary">
-              Small business owners wear too many hats. AI is taking the "Support" and "Admin" hats off their heads.
-            </p>
-            
-            <div className="bg-secondary-bg p-8 border border-navy-dark">
-              <h3 className="font-bold mb-6 text-center text-accent uppercase tracking-widest text-sm">Impact on Small Business Operations</h3>
-              <div className="space-y-6">
-                <div>
-                  <div className="flex justify-between text-sm mb-1 font-mono">
-                    <span>Faster Customer Support Resolution</span>
-                    <span className="text-accent">92%</span>
-                  </div>
-                  <div className="w-full bg-navy-dark h-4 rounded-sm overflow-hidden">
-                    <div className="bg-accent h-full" style={{ width: '92%' }}></div>
-                  </div>
-                </div>
-                
-                <div>
-                  <div className="flex justify-between text-sm mb-1 font-mono">
-                    <span>Global Adoption Rate (SMBs)</span>
-                    <span className="text-accent">77%</span>
-                  </div>
-                  <div className="w-full bg-navy-dark h-4 rounded-sm overflow-hidden">
-                    <div className="bg-accent/70 h-full" style={{ width: '77%' }}></div>
-                  </div>
-                </div>
-
-                <div>
-                  <div className="flex justify-between text-sm mb-1 font-mono">
-                    <span>Reported Cost Savings</span>
-                    <span className="text-accent">30%</span>
-                  </div>
-                  <div className="w-full bg-navy-dark h-4 rounded-sm overflow-hidden">
-                    <div className="bg-accent/40 h-full" style={{ width: '30%' }}></div>
-                  </div>
-                </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div className="col-span-1 md:col-span-2 bg-secondary-bg p-8 border border-navy-light">
+              <h3 className="font-bold text-lg mb-4 text-accent">Fact-Checking Time</h3>
+              <div className="flex items-end mb-2">
+                <span className="text-5xl font-mono font-bold">4.3</span>
+                <span className="text-xl ml-2 mb-2 text-text-secondary">hours/week</span>
               </div>
-              <p className="text-xs text-center mt-6 text-text-secondary opacity-60">
-                Data Sources: ColorWhistle, Salesforce (2025 SMB Reports)
+              <p className="text-sm text-text-secondary">
+                The average knowledge worker spends over 4 hours weekly just verifying AI outputs. Blind trust is expensive.
+              </p>
+            </div>
+
+            <div className="bg-secondary-bg p-8 border border-navy-light flex flex-col justify-center">
+              <div className="text-3xl font-mono font-bold text-red-400 mb-2">18.7%</div>
+              <div className="text-xs uppercase tracking-widest text-text-secondary">Error Rate (Legal)</div>
+              <p className="text-xs text-text-secondary mt-2">
+                Domain-specific tasks (like Legal/Medical) still see high hallucination rates in 2026.
               </p>
             </div>
           </div>
 
-          {/* Section 3: Sales (The Admin Killer) */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-headline font-bold mb-8 border-l-4 border-accent pl-4">
-              3. For Sales: The Admin Killer
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div className="border border-navy-dark p-6 hover:bg-secondary-bg transition-colors">
-                <h3 className="font-bold text-lg mb-2 text-accent">CRM Data Entry</h3>
-                <p className="text-3xl font-headline mb-2">Automated</p>
-                <p className="text-sm text-text-secondary">
-                  Salespeople save 12 hours/week by letting AI handle CRM updates and meeting notes.
-                </p>
+          <div className="mt-4 p-4 border border-accent/30 bg-accent/5 flex items-center justify-between">
+            <div className="text-sm font-mono text-accent">
+              <span className="font-bold mr-2">TACTIC:</span>
+              Always use "Human-in-the-Loop" for high-stakes outputs.
+            </div>
+            <Link href="/ai-examples/operations/contract-risk-detector" className="text-sm font-bold underline decoration-accent underline-offset-4 hover:text-white transition-colors">
+              Get the Recipe →
+            </Link>
+          </div>
+        </div>
+
+        {/* Section 3: The Cost Arbitrage (The Big Win) */}
+        <div className="max-w-4xl mx-auto px-4 py-16">
+          <h2 className="text-2xl font-headline font-bold mb-8 text-green-400">
+            The 50x Arbitrage
+          </h2>
+          <p className="text-text-secondary mb-8 max-w-2xl">
+            Why are companies moving to AI Agents despite the flaws? The economics are undeniable for routine support tasks.
+          </p>
+
+          <div className="bg-secondary-bg border border-navy-dark p-8">
+            <div className="space-y-8">
+              {/* Human Cost Bar */}
+              <div>
+                <div className="flex justify-between text-sm mb-2 font-mono">
+                  <span>Human Agent Interaction</span>
+                  <span className="text-red-400">~$5.00</span>
+                </div>
+                <div className="w-full bg-navy-dark h-8 rounded-sm overflow-hidden relative">
+                  <div className="bg-red-500/80 h-full flex items-center px-4 text-xs font-bold text-white" style={{ width: '100%' }}>
+                    Labor + Overhead + Training
+                  </div>
+                </div>
               </div>
-              <div className="border border-navy-dark p-6 hover:bg-secondary-bg transition-colors">
-                <h3 className="font-bold text-lg mb-2 text-accent">Daily Usage</h3>
-                <p className="text-3xl font-headline mb-2">56%</p>
-                <p className="text-sm text-text-secondary">
-                  Of sales professionals rely on AI tools every single day to function.
-                </p>
+
+              {/* AI Cost Bar */}
+              <div>
+                <div className="flex justify-between text-sm mb-2 font-mono">
+                  <span>AI Agent Interaction</span>
+                  <span className="text-green-400">~$0.10</span>
+                </div>
+                <div className="w-full bg-navy-dark h-8 rounded-sm overflow-hidden relative">
+                  <div className="bg-green-500 h-full flex items-center px-2 text-xs font-bold text-navy-dark" style={{ width: '5%' }}>
+                    API
+                  </div>
+                </div>
               </div>
+            </div>
+
+            <div className="mt-8 text-center">
+              <p className="text-sm text-text-secondary">
+                <strong>Result:</strong> 90% cost reduction for Tier 1 support tickets.
+              </p>
             </div>
           </div>
 
-          {/* Sources Section */}
-          <div className="mt-20 pt-10 border-t border-navy-dark text-sm text-text-secondary">
-            <h4 className="font-bold mb-4 uppercase tracking-widest text-xs">Sources & Methodology</h4>
-            <p className="mb-4 opacity-80">
-              This report aggregates data from 2025 practical usage reports including HubSpot, Salesforce SMB Trends, and Gartner Sales predictions. Focus is strictly on non-technical use cases.
-            </p>
+           <div className="mt-8 p-4 border border-accent/30 bg-accent/5 flex items-center justify-between">
+            <div className="text-sm font-mono text-accent">
+              <span className="font-bold mr-2">TACTIC:</span>
+              Start by automating "Level 1" support and routine queries.
+            </div>
+            <Link href="/ai-examples/customer-support/help-center-gap-finder" className="text-sm font-bold underline decoration-accent underline-offset-4 hover:text-white transition-colors">
+              Get the Recipe →
+            </Link>
           </div>
-
         </div>
 
-        {/* CTA Section */}
+        {/* Final CTA */}
         <div className="bg-secondary-bg border-t border-navy-dark py-20">
           <div className="max-w-2xl mx-auto px-4 text-center">
             <h2 className="text-3xl font-headline font-bold mb-4">
-              Stop reading stats. <span className="text-accent">Start saving time.</span>
+              Turn this intel into <span className="text-accent">action.</span>
             </h2>
             <p className="text-text-secondary mb-8">
-              Join 5,000+ others getting one practical AI workflow delivered weekly.
+              We track the tools that actually work. Join 5,000+ tinkerers.
             </p>
             <NewsletterForm />
           </div>
