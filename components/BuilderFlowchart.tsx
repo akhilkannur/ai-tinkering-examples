@@ -18,13 +18,19 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
   const categories: (Category | 'All')[] = ['All', ...Object.keys(categoryIcons) as Category[]];
 
   const filteredRecipes = useMemo(() => {
-    return recipes.filter(recipe => {
+    const filtered = recipes.filter(recipe => {
       const matchesCategory = selectedCategory === 'All' || recipe.category === selectedCategory;
       const matchesSearch = 
         recipe.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         recipe.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         recipe.tagline.toLowerCase().includes(searchQuery.toLowerCase());
       return matchesCategory && matchesSearch;
+    });
+
+    return filtered.sort((a, b) => {
+      if (a.id === 'agent-context-builder') return -1;
+      if (b.id === 'agent-context-builder') return 1;
+      return 0;
     });
   }, [selectedCategory, searchQuery, recipes]);
 
@@ -125,6 +131,11 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
                   {recipe.isPremium ? <Crown className="w-6 h-6" /> : <CatIcon className="w-6 h-6" />}
                 </div>
                 <div className="flex flex-col items-end gap-1">
+                  {recipe.id === 'agent-context-builder' && (
+                    <span className="text-[10px] uppercase tracking-wider font-bold px-2 py-1 rounded-full bg-indigo-100 text-indigo-700 animate-pulse border border-indigo-200">
+                       Start Here
+                    </span>
+                  )}
                   {recipe.isPremium && (
                     <span className="text-[10px] uppercase tracking-wider font-bold px-2 py-1 rounded-md bg-yellow-500 text-white shadow-sm">
                       Premium

@@ -21,13 +21,25 @@ export default function RecipePage({ recipe }: RecipePageProps) {
     setTimeout(() => setCopied(false), 2000);
   };
 
-  const handleDownload = () => {
+  const handleDownloadSample = () => {
     if (!recipe.sampleData) return;
     const blob = new Blob([recipe.sampleData.content], { type: 'text/plain' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
     a.download = recipe.sampleData.filename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
+
+  const handleDownloadBlueprint = () => {
+    const blob = new Blob([recipe.blueprint], { type: 'text/markdown' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `${recipe.id}.md`;
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
@@ -170,9 +182,16 @@ export default function RecipePage({ recipe }: RecipePageProps) {
                 </span>
               </div>
               <div className="flex items-center gap-3">
+                <button
+                  onClick={handleDownloadBlueprint}
+                  className="text-sm font-bold px-4 py-2 rounded-xl flex items-center gap-2 transition-all bg-gray-700 text-gray-200 hover:bg-gray-600 active:scale-95 shadow-lg shadow-gray-900/20"
+                >
+                  <FileText className="w-4 h-4" />
+                  Download .md
+                </button>
                 {recipe.sampleData && (
                   <button
-                    onClick={handleDownload}
+                    onClick={handleDownloadSample}
                     className="text-sm font-bold px-4 py-2 rounded-xl flex items-center gap-2 transition-all bg-yellow-500 text-yellow-900 hover:bg-yellow-400 active:scale-95 shadow-lg shadow-yellow-500/20"
                   >
                     <Download className="w-4 h-4" />
@@ -203,25 +222,64 @@ export default function RecipePage({ recipe }: RecipePageProps) {
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             <div className="bg-yellow-50 border border-yellow-100 p-8 rounded-3xl">
               <div className="bg-yellow-500 text-white w-10 h-10 rounded-2xl flex items-center justify-center font-bold text-xl mb-6 shadow-lg shadow-yellow-500/20">!</div>
-              <h3 className="text-xl font-bold text-yellow-900 mb-4">How to Run This</h3>
-              <div className="space-y-4 text-yellow-800">
-                <p className="flex gap-3">
-                  <span className="font-bold">1.</span>
-                  <span>Copy the blueprint instructions above.</span>
-                </p>
-                {recipe.sampleData && (
-                  <p className="flex gap-3">
-                    <span className="font-bold">2.</span>
-                    <span>Download the <code>{recipe.sampleData.filename}</code> file and place it in your project folder.</span>
+              <h3 className="text-xl font-bold text-yellow-900 mb-6">How to Run This</h3>
+              
+              <div className="space-y-6">
+                {/* Step 1 */}
+                <div>
+                  <h4 className="font-bold text-yellow-900 mb-2 flex items-center gap-2">
+                    <span className="w-6 h-6 rounded-full bg-yellow-200 text-yellow-800 flex items-center justify-center text-sm">1</span>
+                    Get the files
+                  </h4>
+                  <p className="text-yellow-800 text-sm mb-2 ml-8">
+                    Download the <span className="font-mono font-bold">{recipe.id}.md</span> blueprint {recipe.sampleData ? `and ${recipe.sampleData.filename}` : ''} using the buttons above.
                   </p>
-                )}
-                <p className="flex gap-3">
-                  <span className="font-bold">3.</span>
-                  <span>Open your AI Agent (Gemini CLI, Claude Code, or Cursor) and paste the blueprint.</span>
-                </p>
-                <p className="bg-white/50 p-4 rounded-xl italic font-medium text-sm">
-                  "Read this blueprint and use the provided CSV to build the automation."
-                </p>
+                </div>
+
+                {/* Step 2 */}
+                <div>
+                  <h4 className="font-bold text-yellow-900 mb-3 flex items-center gap-2">
+                    <span className="w-6 h-6 rounded-full bg-yellow-200 text-yellow-800 flex items-center justify-center text-sm">2</span>
+                    Run in Terminal
+                  </h4>
+                  <p className="text-yellow-800 text-xs mb-4 ml-8 italic opacity-80">
+                    Universal: These blueprints work with any agentic CLI. Choose your preferred tool below:
+                  </p>
+                  
+                  <div className="ml-8 space-y-4">
+                    {/* Gemini Command */}
+                    <div className="bg-white rounded-xl border border-yellow-200 overflow-hidden">
+                      <div className="px-4 py-2 bg-yellow-100/50 border-b border-yellow-100 flex justify-between items-center">
+                        <span className="text-xs font-bold text-yellow-800 uppercase tracking-wider">Gemini CLI</span>
+                        <button 
+                          onClick={() => navigator.clipboard.writeText(`gemini "Read @${recipe.id}.md and execute the workflow"`)}
+                          className="text-xs text-yellow-700 hover:text-yellow-900 font-medium"
+                        >
+                          Copy
+                        </button>
+                      </div>
+                      <div className="p-4 font-mono text-sm text-gray-700 overflow-x-auto whitespace-nowrap">
+                        gemini "Read @{recipe.id}.md and execute the workflow"
+                      </div>
+                    </div>
+
+                    {/* Claude Command */}
+                    <div className="bg-white rounded-xl border border-yellow-200 overflow-hidden">
+                      <div className="px-4 py-2 bg-yellow-100/50 border-b border-yellow-100 flex justify-between items-center">
+                        <span className="text-xs font-bold text-yellow-800 uppercase tracking-wider">Claude Code</span>
+                        <button 
+                          onClick={() => navigator.clipboard.writeText(`claude "Read ${recipe.id}.md and execute the workflow"`)}
+                          className="text-xs text-yellow-700 hover:text-yellow-900 font-medium"
+                        >
+                          Copy
+                        </button>
+                      </div>
+                      <div className="p-4 font-mono text-sm text-gray-700 overflow-x-auto whitespace-nowrap">
+                        claude "Read {recipe.id}.md and execute the workflow"
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -231,7 +289,7 @@ export default function RecipePage({ recipe }: RecipePageProps) {
               <p className="text-blue-800 leading-relaxed">
                 Blueprints act as a "Mission File". Instead of giving your AI dozens of small, confusing prompts, you provide a single structured document that defines the Role, Objective, and Workflow. 
                 <br /><br />
-                This results in 10x higher accuracy and fewer hallucinations.
+                <span className="font-bold">Tool Agnostic:</span> These work with any agentic CLI (Gemini, Claude Code, Cursor, etc.) by providing a clear instruction set for the AI to follow.
               </p>
             </div>
           </div>
