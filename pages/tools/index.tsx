@@ -41,9 +41,9 @@ export default function ToolsIndex() {
             INTELLIGENCE_FEED
           </h1>
           <p className="text-gray-500 max-w-2xl text-sm md:text-base leading-relaxed">
-            > Initializing scan of {aiTools.length} AI agents...<br/>
-            > Filtering for high-signal tools.<br/>
-            > Displaying results below.
+            &gt; Initializing scan of {aiTools.length} AI agents...<br/>
+            &gt; Filtering for high-signal tools.<br/>
+            &gt; Displaying results below.
           </p>
         </div>
 
@@ -170,7 +170,7 @@ export default function ToolsIndex() {
               onClick={() => {setSearchQuery(''); setSelectedCategory('All')}}
               className="mt-4 text-green-500 hover:underline text-sm"
             >
-              > Reset Query
+              &gt; Reset Query
             </button>
           </div>
         )}
