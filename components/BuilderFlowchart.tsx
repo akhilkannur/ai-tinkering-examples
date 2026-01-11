@@ -68,7 +68,7 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
           </div>
           <input
             type="text"
-            className="block w-full pl-10 pr-3 py-3 border border-gray-200 rounded-xl leading-5 bg-gray-50 placeholder-gray-400 focus:outline-none focus:bg-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-150 ease-in-out"
+            className="block w-full pl-10 pr-3 py-3 border border-gray-200 rounded-xl leading-5 bg-gray-50 text-gray-900 placeholder-gray-400 focus:outline-none focus:bg-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-150 ease-in-out"
             placeholder="Search 100+ blueprints..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}

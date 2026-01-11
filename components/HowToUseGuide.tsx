@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { Terminal, Copy, Play, Zap, ArrowRight, CheckCircle2 } from 'lucide-react';
 
 const HowToUseGuide = () => {
@@ -122,12 +123,14 @@ const HowToUseGuide = () => {
         <div className="flex-grow">
           <h4 className="font-bold text-yellow-900 text-sm mb-1">Want to build something bigger?</h4>
           <p className="text-yellow-800 text-sm">
-            Don't just run one recipe. Use the <strong>"Autonomous Project Manager"</strong> blueprint (Recipe #151) to chain multiple recipes together into a full workflow.
+            Don't just run one recipe. Use the <strong>"Autonomous Project Manager"</strong> blueprint to chain multiple recipes together into a full workflow.
           </p>
         </div>
-        <button className="text-xs font-bold bg-yellow-200 text-yellow-800 px-4 py-2 rounded-lg hover:bg-yellow-300 transition-colors whitespace-nowrap">
-          Find Recipe #151
-        </button>
+        <Link href="/blueprints/autonomous-project-manager">
+          <button className="text-xs font-bold bg-yellow-200 text-yellow-800 px-4 py-2 rounded-lg hover:bg-yellow-300 transition-colors whitespace-nowrap">
+            View Project Manager
+          </button>
+        </Link>
       </div>
 
     </div>

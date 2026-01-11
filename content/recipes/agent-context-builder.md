@@ -48,3 +48,23 @@ Create an `AGENTS.md` file with the following sections:
 ### Phase 3: Execution
 1.  **Write:** Save the file to the root directory.
 2.  **Summary:** "Context file created. Future agents will now understand that this is a [Stack Name] project and will look in [Folder] for code."
+
+---
+
+## See it in Action
+
+### The "Before" (The Friction)
+Imagine you have a messy folder of marketing CSVs and scripts. You ask an AI to "analyze the data."
+*   **AI responds:** *"I don't know which CSV to read. Which column is the email? Where should I save the results?"*
+*   **Result:** You spend 10 minutes explaining your file structure.
+
+### The "After" (The Frictionless Step)
+You run **The Project Architect** once. It creates an `AGENTS.md` file.
+
+### The "Aha!" Moment
+The next time you open your terminal and say *"Analyze the data,"* the AI reads the `AGENTS.md` and responds:
+*   ✅ *"I see your raw data is in `/data/raw`."*
+*   ✅ *"I'll use the mapping rules defined in your documentation."*
+*   ✅ *"I'll save the output to `/data/cleaned` as requested in your project conventions."*
+
+**One run makes every future AI interaction 10x faster.**
