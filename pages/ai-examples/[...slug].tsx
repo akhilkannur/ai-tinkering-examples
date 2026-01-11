@@ -54,6 +54,37 @@ export default function ExamplePage({ example }: ExamplePageProps) {
     "timeRequired": `PT${example.read_time || 1}M`
   }
 
+  const breadcrumbData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": process.env.NEXT_PUBLIC_BASE_URL
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "AI Examples",
+        "item": `${process.env.NEXT_PUBLIC_BASE_URL}/ai-examples`
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": example.category || "Uncategorized",
+        "item": `${process.env.NEXT_PUBLIC_BASE_URL}/ai-examples/category/${categorySlug}`
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": example.title,
+        "item": currentUrl
+      }
+    ]
+  }
+
   return (
     <>
       <Head>
@@ -68,10 +99,14 @@ export default function ExamplePage({ example }: ExamplePageProps) {
           <meta property="og:image" content={example.screenshots[0].url} />
         )}
         <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" content={currentUrl} />
+        <link rel="canonical" href={currentUrl} key="canonical" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbData) }}
         />
       </Head>
 

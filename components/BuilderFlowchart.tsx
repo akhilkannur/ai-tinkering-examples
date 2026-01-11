@@ -295,6 +295,18 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
                     </div>
                   </div>
 
+                  <div className="mt-6 flex gap-4">
+                    <Link 
+                       href={`/workbench/${selectedRecipe.id}`}
+                       className="flex-1 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl py-3 px-4 font-bold text-center shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all flex items-center justify-center gap-2"
+                    >
+                      <div className="bg-white/20 p-1 rounded-full">
+                        <Terminal className="w-4 h-4 text-white" />
+                      </div>
+                      Open in Workbench
+                    </Link>
+                  </div>
+
                   <div className="mt-6 bg-yellow-50 border border-yellow-100 p-4 rounded-xl flex gap-3 items-start">
                      <div className="bg-yellow-500 text-white w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 font-bold text-xs mt-0.5">!</div>
                      <div>

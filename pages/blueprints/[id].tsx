@@ -37,6 +37,55 @@ export default function RecipePage({ recipe }: RecipePageProps) {
   const SITE_URL = 'https://realaiexamples.com';
   const ogImageUrl = `${SITE_URL}/api/og?title=${encodeURIComponent(recipe.title)}&category=${encodeURIComponent(recipe.category)}&tagline=${encodeURIComponent(recipe.tagline)}`;
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": recipe.title,
+    "description": recipe.description,
+    "image": ogImageUrl,
+    "author": {
+      "@type": "Organization",
+      "name": "AI Tinkering Examples"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "AI Tinkering Examples",
+      "logo": {
+        "@type": "ImageObject",
+        "url": `${SITE_URL}/logo.png`
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `${SITE_URL}/blueprints/${recipe.id}`
+    }
+  };
+
+  const breadcrumbData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": SITE_URL
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blueprints",
+        "item": `${SITE_URL}/blueprints`
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": recipe.title,
+        "item": `${SITE_URL}/blueprints/${recipe.id}`
+      }
+    ]
+  };
+
   return (
     <div className="flex flex-col min-h-screen bg-white">
       <Head>
@@ -50,7 +99,15 @@ export default function RecipePage({ recipe }: RecipePageProps) {
         <meta name="twitter:title" content={`${recipe.title} | AI Agent Blueprint`} />
         <meta name="twitter:description" content={recipe.description} />
         <meta name="twitter:image" content={ogImageUrl} />
-        <link rel="canonical" content={`${SITE_URL}/blueprints/${recipe.id}`} />
+        <link rel="canonical" href={`${SITE_URL}/blueprints/${recipe.id}`} key="canonical" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbData) }}
+        />
       </Head>
       
       <Navbar />

@@ -1,15 +1,18 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 import Footer from '../components/Footer'
 import NewsletterPopup from '../components/NewsletterPopup'
 import Script from 'next/script'
 
 export default function App({ Component, pageProps }: AppProps) {
+  const router = useRouter();
   const title = "AI Examples You Can Copy & Try";
   const description = "Curated AI workflows and prompts for non-technical tinkerers. No fluff, just actionable examples.";
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com';
   const ogImage = `${baseUrl}/Gemini_Generated_Image_b3hv6cb3hv6cb3hv.png`; // Make sure to have an og-image.png in your public folder
+  const canonicalUrl = (baseUrl + router.asPath).split('?')[0];
 
   return (
     <>
@@ -31,6 +34,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={ogImage} />
+        <link rel="canonical" href={canonicalUrl} key="canonical" />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon_canva.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon_canva.png" />
