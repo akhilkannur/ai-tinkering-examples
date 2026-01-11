@@ -62,7 +62,9 @@ async function generateSitemap() {
     const categoriesRaw = await fetchAirtable(CATEGORIES_TABLE);
     const categoryMap = {};
     categoriesRaw.forEach(r => {
-      categoryMap[r.id] = r.fields.Name;
+      if (r.fields.Name) {
+        categoryMap[r.id] = r.fields.Name;
+      }
     });
 
     // 2. Fetch Examples
@@ -160,7 +162,7 @@ async function generateSitemap() {
     });
 
     // Categories (from map)
-    Object.values(categoryMap).forEach(catName => {
+    Object.values(categoryMap).filter(Boolean).forEach(catName => {
       const catSlug = catName.toLowerCase().replace(/\s+/g, '-');
       xml += `
   <url>
