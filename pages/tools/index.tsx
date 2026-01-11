@@ -2,8 +2,8 @@ import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import Navbar from '../../components/Navbar';
-import { aiTools, AiTool } from '../../lib/ai-tools-data';
-import { Search, ExternalLink, Terminal, Cpu, Activity, Hash, Filter } from 'lucide-react';
+import { aiTools } from '../../lib/ai-tools-data';
+import { Search, ExternalLink, Filter, Command, Sparkles } from 'lucide-react';
 
 export default function ToolsIndex() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -21,47 +21,44 @@ export default function ToolsIndex() {
   }, [searchQuery, selectedCategory]);
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#0a0a0a] text-gray-300 font-mono selection:bg-green-900 selection:text-green-50">
+    <div className="flex flex-col min-h-screen bg-white text-slate-900 font-sans">
       <Head>
-        <title>AI_TOOLS_DIRECTORY // 2026</title>
-        <meta name="description" content="A curated feed of the latest AI tools. Raw data. No fluff." />
+        <title>AI Tools Directory | Curated List</title>
+        <meta name="description" content="A clean, curated list of the latest AI tools for business and productivity." />
       </Head>
 
       <Navbar />
 
       <main className="container mx-auto px-4 py-12 max-w-6xl">
         
-        {/* Terminal Header */}
-        <div className="mb-12 border-b border-gray-800 pb-8">
-          <div className="flex items-center gap-3 text-green-500 mb-4">
-            <Terminal className="w-5 h-5" />
-            <span className="text-sm tracking-widest">SYSTEM_READY</span>
+        {/* Header */}
+        <div className="mb-10 pb-8 border-b border-slate-100">
+          <div className="flex items-center gap-2 text-blue-600 mb-3 font-medium text-sm">
+            <Sparkles className="w-4 h-4" />
+            <span>Updated Daily</span>
           </div>
-          <h1 className="text-3xl md:text-5xl font-bold text-white mb-4 tracking-tight">
-            INTELLIGENCE_FEED
+          <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3 tracking-tight">
+            AI Tools Directory
           </h1>
-          <p className="text-gray-500 max-w-2xl text-sm md:text-base leading-relaxed">
-            &gt; Initializing scan of {aiTools.length} AI agents...<br/>
-            &gt; Filtering for high-signal tools.<br/>
-            &gt; Displaying results below.
+          <p className="text-slate-500 text-lg">
+            A curated database of {aiTools.length} tools to speed up your workflow.
           </p>
         </div>
 
         {/* Controls */}
-        <div className="flex flex-col md:flex-row gap-6 mb-10 sticky top-20 z-30 bg-[#0a0a0a]/95 backdrop-blur-sm py-4 border-b border-gray-800">
+        <div className="flex flex-col md:flex-row gap-4 mb-8 sticky top-20 z-30 bg-white/90 backdrop-blur-md py-4 border-b border-slate-100">
           
           {/* Search Input */}
           <div className="relative flex-grow">
-            <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-              <span className="text-gray-600">root@search:~$</span>
+            <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              <Search className="h-4 w-4 text-slate-400" />
             </div>
             <input
               type="text"
-              className="block w-full pl-32 pr-4 py-3 bg-gray-900 border border-gray-800 text-green-400 placeholder-gray-600 focus:outline-none focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-all rounded-sm"
-              placeholder="find tool..."
+              className="block w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all rounded-lg text-sm"
+              placeholder="Search tools..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              autoFocus
             />
           </div>
 
@@ -71,10 +68,10 @@ export default function ToolsIndex() {
               <button
                 key={cat}
                 onClick={() => setSelectedCategory(cat)}
-                className={`px-4 py-2 text-xs font-bold uppercase tracking-wider border transition-all whitespace-nowrap ${
+                className={`px-3 py-2 text-xs font-semibold rounded-lg border transition-all whitespace-nowrap ${
                   selectedCategory === cat 
-                    ? 'bg-green-500 text-black border-green-500' 
-                    : 'bg-gray-900 text-gray-500 border-gray-800 hover:border-gray-600 hover:text-gray-300'
+                    ? 'bg-slate-900 text-white border-slate-900' 
+                    : 'bg-white text-slate-600 border-slate-200 hover:border-slate-300 hover:bg-slate-50'
                 }`}
               >
                 {cat}
@@ -83,33 +80,30 @@ export default function ToolsIndex() {
           </div>
         </div>
 
-        {/* The Feed (Table) */}
-        <div className="border border-gray-800 rounded-sm overflow-hidden bg-gray-900/30">
+        {/* The Feed (Clean List) */}
+        <div className="border border-slate-200 rounded-xl overflow-hidden bg-white shadow-sm">
           
           {/* Table Header */}
-          <div className="hidden md:grid grid-cols-12 gap-4 px-6 py-3 bg-gray-900 border-b border-gray-800 text-xs font-bold text-gray-500 uppercase tracking-widest">
-            <div className="col-span-4">Tool Identity</div>
+          <div className="hidden md:grid grid-cols-12 gap-6 px-6 py-3 bg-slate-50 border-b border-slate-200 text-xs font-semibold text-slate-500 uppercase tracking-wide">
+            <div className="col-span-4">Tool</div>
             <div className="col-span-2">Category</div>
             <div className="col-span-5">Description</div>
-            <div className="col-span-1 text-right">Access</div>
+            <div className="col-span-1 text-right">Price</div>
           </div>
 
           {/* Rows */}
-          <div className="divide-y divide-gray-800">
+          <div className="divide-y divide-slate-100">
             {filteredTools.map((tool, idx) => (
               <a 
                 key={idx} 
                 href={tool.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group grid grid-cols-1 md:grid-cols-12 gap-4 px-6 py-5 hover:bg-gray-900 transition-all duration-150 items-start relative"
+                className="group grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 px-6 py-4 hover:bg-slate-50/80 transition-colors items-center relative"
               >
-                {/* Active Indicator on Hover */}
-                <div className="absolute left-0 top-0 bottom-0 w-1 bg-green-500 opacity-0 group-hover:opacity-100 transition-opacity" />
-
-                {/* Identity */}
-                <div className="col-span-1 md:col-span-4 flex items-start gap-4">
-                  <div className="relative w-10 h-10 flex-shrink-0 bg-white rounded-sm overflow-hidden p-0.5 grayscale group-hover:grayscale-0 transition-all">
+                {/* Tool Identity */}
+                <div className="col-span-1 md:col-span-4 flex items-center gap-4">
+                  <div className="relative w-10 h-10 flex-shrink-0 bg-white rounded-lg border border-slate-200 overflow-hidden p-1 shadow-sm group-hover:shadow-md transition-all">
                     <Image 
                       src={tool.image} 
                       alt={tool.name} 
@@ -120,39 +114,40 @@ export default function ToolsIndex() {
                     />
                   </div>
                   <div>
-                    <h3 className="text-base font-bold text-gray-200 group-hover:text-green-400 transition-colors flex items-center gap-2">
+                    <h3 className="text-sm font-bold text-slate-900 group-hover:text-blue-600 transition-colors flex items-center gap-1.5">
                       {tool.name}
-                      <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 text-gray-500" />
+                      <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 text-slate-400 transition-opacity" />
                     </h3>
-                    <div className="flex flex-wrap gap-2 mt-1.5 md:hidden">
-                       <span className="text-[10px] text-gray-500 border border-gray-800 px-1.5 py-0.5">{tool.category}</span>
+                    {/* Mobile Category Tag */}
+                    <div className="md:hidden mt-1">
+                       <span className="text-[10px] font-medium bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full">{tool.category}</span>
                     </div>
                   </div>
                 </div>
 
                 {/* Category (Desktop) */}
-                <div className="hidden md:block col-span-2 mt-1">
-                  <span className="text-xs text-gray-500 border border-gray-800 px-2 py-1 bg-gray-900/50 group-hover:border-green-500/30 group-hover:text-green-500/80 transition-colors">
+                <div className="hidden md:block col-span-2">
+                  <span className="text-xs font-medium text-slate-600 bg-slate-100 px-2.5 py-1 rounded-md border border-slate-200">
                     {tool.category}
                   </span>
                 </div>
 
                 {/* Description */}
-                <div className="col-span-1 md:col-span-5 mt-1">
-                  <p className="text-sm text-gray-500 leading-relaxed line-clamp-2 group-hover:text-gray-400 group-hover:line-clamp-none transition-all">
+                <div className="col-span-1 md:col-span-5">
+                  <p className="text-sm text-slate-500 leading-relaxed line-clamp-2 md:line-clamp-1 group-hover:line-clamp-none transition-all">
                     {tool.description}
                   </p>
                 </div>
 
                 {/* Access / Status */}
-                <div className="hidden md:flex col-span-1 justify-end mt-1">
+                <div className="hidden md:flex col-span-1 justify-end">
                   {tool.tags.price === 'Free' ? (
-                    <span className="text-[10px] font-bold text-black bg-green-500 px-2 py-0.5">
-                      FREE
+                    <span className="text-[10px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-100 px-2.5 py-1 rounded-full">
+                      Free
                     </span>
                   ) : (
-                    <span className="text-[10px] text-gray-600 border border-gray-800 px-2 py-0.5">
-                      {tool.tags.price.toUpperCase()}
+                    <span className="text-[10px] font-semibold text-slate-500 bg-white border border-slate-200 px-2.5 py-1 rounded-full">
+                      {tool.tags.price}
                     </span>
                   )}
                 </div>
@@ -163,14 +158,14 @@ export default function ToolsIndex() {
 
         {/* Empty State */}
         {filteredTools.length === 0 && (
-          <div className="text-center py-20 border border-gray-800 border-dashed rounded-sm mt-8">
-            <Hash className="w-12 h-12 text-gray-700 mx-auto mb-4" />
-            <p className="text-gray-500 font-mono">ERROR: No matching records found.</p>
+          <div className="text-center py-20 bg-slate-50 rounded-xl border border-slate-200 border-dashed mt-8">
+            <Filter className="w-10 h-10 text-slate-300 mx-auto mb-3" />
+            <p className="text-slate-500 font-medium">No tools found matching your search.</p>
             <button 
               onClick={() => {setSearchQuery(''); setSelectedCategory('All')}}
-              className="mt-4 text-green-500 hover:underline text-sm"
+              className="mt-3 text-blue-600 hover:text-blue-700 text-sm font-semibold"
             >
-              &gt; Reset Query
+              Clear filters
             </button>
           </div>
         )}
