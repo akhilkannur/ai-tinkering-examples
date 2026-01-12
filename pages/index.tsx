@@ -115,20 +115,31 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
         <Hero />
 
         {siteSettings.enableFeaturedToolsSection && featuredTools.length > 0 && (
-          <div className="bg-secondary-bg py-12 border-b border-navy-dark">
-            <HorizontalStrip 
-              title="Featured AI Tools"
-              items={featuredTools}
-              renderItem={(tool) => <AIToolCard
-              key={tool.id}
-              name={tool.toolName}
-              description={tool.shortDescription}
-              url={tool.websiteUrl}
-              imageUrl={tool.logo?.[0]?.url}
-              category={null}
-            />}
-              viewAllLink="/tools"
-            />
+          <div className="bg-primary-bg py-16 border-b border-navy-dark">
+             <div className="max-w-6xl mx-auto px-4 sm:px-6">
+                <div className="flex items-center justify-between mb-8">
+                  <h2 className="text-2xl sm:text-3xl font-headline font-bold text-text-color flex items-center gap-3 uppercase tracking-tight">
+                    <span className="text-accent">#</span> Featured Tools
+                  </h2>
+                  <a href="/tools" className="text-text-secondary hover:text-accent font-mono text-sm font-bold uppercase tracking-wider transition-colors flex items-center gap-2">
+                    View All <span className="transform group-hover:translate-x-1">→</span>
+                  </a>
+                </div>
+                
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                  {featuredTools.map((tool) => (
+                    <div key={tool.id} className="h-full">
+                       <AIToolCard
+                          name={tool.toolName}
+                          description={tool.shortDescription}
+                          url={tool.websiteUrl}
+                          imageUrl={tool.logo?.[0]?.url}
+                          category={null} // Categories can be added later if needed
+                        />
+                    </div>
+                  ))}
+                </div>
+             </div>
           </div>
         )}
 
