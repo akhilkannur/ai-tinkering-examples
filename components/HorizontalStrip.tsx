@@ -15,13 +15,16 @@ export default function HorizontalStrip<T>({ title, items, renderItem, viewAllLi
   }
 
   return (
-    <section className="max-w-6xl mx-auto px-4 py-8 bg-secondary-bg rounded-lg">
+    <section className="max-w-6xl mx-auto px-4 py-8">
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-2xl font-bold text-text-color flex items-center gap-2"><Settings size={24} />{title}</h2>
+        <h2 className="text-2xl font-bold font-headline text-text-color flex items-center gap-3 uppercase tracking-tight">
+          <Settings size={24} className="text-accent" />
+          {title}
+        </h2>
         {viewAllLink && (
           <Link 
             href={viewAllLink}
-            className="inline-flex items-center gap-1 text-[#001858] hover:text-blue-700 transition-colors"
+            className="inline-flex items-center gap-1 text-text-secondary hover:text-accent transition-colors font-mono text-sm font-bold uppercase tracking-wider"
           >
             View All <ArrowRight size={16} />
           </Link>
