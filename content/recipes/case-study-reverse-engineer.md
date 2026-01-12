@@ -5,6 +5,7 @@ title: "The Case Study Decoder"
 tagline: "Who are they really selling to?"
 difficulty: "Intermediate"
 time: "Batch"
+archetype: "Hybrid"
 description: "Logos reveal strategy. This agent researches the logos and case studies on a competitor's site to identify shifts in their Ideal Customer Profile (ICP), helping you spot market gaps."
 sampleData:
   filename: "competitors.csv"

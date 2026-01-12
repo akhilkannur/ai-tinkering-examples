@@ -5,6 +5,7 @@ title: "The Business Card Digitizer"
 tagline: "From pocket to CRM in seconds."
 difficulty: "Experimental"
 time: "Batch"
+archetype: "Processor"
 description: "Don't type business cards manually. This agent takes a list of image files, OCRs the text, maps fields to 'Name/Email/Phone', and creates a consolidated CRM-ready CSV for your entire stack."
 sampleData:
   filename: "images_to_process.csv"

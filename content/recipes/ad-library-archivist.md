@@ -5,6 +5,7 @@ title: "The Ad Library Archivist"
 tagline: "Build a structured swipe file from 100 links."
 difficulty: "Beginner"
 time: "Weekly"
+archetype: "Processor"
 description: "Ads disappear. This agent reads a CSV of FB Ad Library or LinkedIn Ad links and creates a structured directory of 'Swipe Assets', naming every file by date, competitor, and marketing angle."
 sampleData:
   filename: "ad_links.csv"

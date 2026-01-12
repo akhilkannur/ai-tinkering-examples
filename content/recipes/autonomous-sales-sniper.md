@@ -5,6 +5,7 @@ title: "The Sales Sniper"
 tagline: "Autonomous B2B pipeline builder."
 difficulty: "Advanced"
 time: "Runs Continuously"
+archetype: "Hybrid"
 description: "Why wait for leads? This agent reads your target segments from a CSV, hunts for companies in those niches, disqualifies agencies/freelancers, and builds a verified outreach list automatically."
 sampleData:
   filename: "target_segments.csv"

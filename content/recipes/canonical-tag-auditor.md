@@ -5,6 +5,7 @@ title: "The Canonical Fleet Auditor"
 tagline: "Audit duplicate content across 1000 pages."
 difficulty: "Intermediate"
 time: "Monthly"
+archetype: "Processor"
 description: "Duplicate content kills rankings. This agent reads your `sitemap.xml` (or a list of URLs), crawls every page to verify the Canonical tag is correct, and identifies pages that are 'cannibalizing' your main traffic."
 sampleData:
   filename: "target_urls.csv"

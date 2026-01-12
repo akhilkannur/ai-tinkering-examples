@@ -5,6 +5,7 @@ title: "The Churn Sentinel"
 tagline: "Predict at-risk customers across 500 accounts."
 difficulty: "Advanced"
 time: "25 mins"
+archetype: "Processor"
 description: "Prevention is better than recovery. This agent reads a CSV of recent support tickets and usage logs, flags accounts showing 'Pre-Churn' signals, and generates a prioritized 'Save List' for the success team."
 sampleData:
   filename: "support_export.csv"

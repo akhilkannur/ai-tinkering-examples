@@ -1,7 +1,8 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { 
-  Terminal, Copy, Check, FileText, Search, X, Filter, Download, Lock, Crown, ArrowRight, ExternalLink
+  Terminal, Copy, Check, FileText, Search, X, Filter, Download, Lock, Crown, ArrowRight, ExternalLink, Key
 } from 'lucide-react';
 import { categoryIcons, Category, Recipe } from '../lib/cookbook-data';
 
@@ -10,12 +11,51 @@ interface TerminalCookbookProps {
 }
 
 const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
+  const router = useRouter();
   const [selectedCategory, setSelectedCategory] = useState<Category | 'All'>('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedRecipe, setSelectedRecipe] = useState<Recipe | null>(null);
   const [copied, setCopied] = useState(false);
+  
+  // Paywall State
+  const [isUnlocked, setIsUnlocked] = useState(false);
+  const [showLicenseInput, setShowLicenseInput] = useState(false);
+  const [licenseKeyInput, setLicenseKeyInput] = useState('');
+  const [unlockError, setUnlockError] = useState('');
 
   const categories: (Category | 'All')[] = ['All', ...Object.keys(categoryIcons) as Category[]];
+
+  // Check for License Key on Mount & URL changes
+  useEffect(() => {
+    // 1. Check LocalStorage
+    const hasAccess = localStorage.getItem('terminal_cookbook_premium') === 'true';
+    if (hasAccess) {
+      setIsUnlocked(true);
+    }
+
+    // 2. Check URL Parameter (Auto-unlock from email link)
+    if (router.isReady) {
+      const { license_key } = router.query;
+      if (license_key === 'TK-8821-XPRO-MQ') {
+        setIsUnlocked(true);
+        localStorage.setItem('terminal_cookbook_premium', 'true');
+        // Optional: Remove query param from URL without refresh
+        router.replace('/blueprints', undefined, { shallow: true });
+      }
+    }
+  }, [router.isReady, router.query]);
+
+  const handleLicenseSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (licenseKeyInput.trim() === 'TK-8821-XPRO-MQ') {
+      setIsUnlocked(true);
+      localStorage.setItem('terminal_cookbook_premium', 'true');
+      setShowLicenseInput(false);
+      setUnlockError('');
+    } else {
+      setUnlockError('Invalid license key. Please check your purchase email.');
+    }
+  };
 
   const filteredRecipes = useMemo(() => {
     const filtered = recipes.filter(recipe => {
@@ -34,15 +74,19 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
     });
   }, [selectedCategory, searchQuery, recipes]);
 
+  // Determine which recipes to show based on unlock status
+  const displayedRecipes = isUnlocked ? filteredRecipes : filteredRecipes.slice(0, 50);
+  const showPaywallOverlay = !isUnlocked && filteredRecipes.length > 50;
+
   const handleCopy = () => {
-    if (!selectedRecipe || selectedRecipe.isPremium) return;
+    if (!selectedRecipe || (selectedRecipe.isPremium && !isUnlocked)) return;
     navigator.clipboard.writeText(selectedRecipe.blueprint);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
   
   const handleDownload = () => {
-    if (!selectedRecipe || !selectedRecipe.sampleData || selectedRecipe.isPremium) return;
+    if (!selectedRecipe || !selectedRecipe.sampleData || (selectedRecipe.isPremium && !isUnlocked)) return;
 
     const blob = new Blob([selectedRecipe.sampleData.content], { type: 'text/plain' });
     const url = URL.createObjectURL(blob);
@@ -93,21 +137,34 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
         </div>
       </div>
 
-      {/* Results Count */}
-      <div className="mb-6 text-gray-500 text-sm font-medium pl-2 flex items-center gap-4">
-        <span>Showing {Math.min(filteredRecipes.length, 25)} of {filteredRecipes.length} recipes</span>
-        <div className="flex items-center gap-2">
-          <span className="w-2 h-2 rounded-full bg-yellow-500"></span>
-          <span className="text-xs font-bold text-gray-400 uppercase tracking-widest">Premium Available</span>
+      {/* Results Count & Status */}
+      <div className="mb-6 text-gray-500 text-sm font-medium pl-2 flex items-center justify-between">
+        <div className="flex items-center gap-4">
+          <span>Showing {displayedRecipes.length} of {filteredRecipes.length} recipes</span>
+          {!isUnlocked && (
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-yellow-500"></span>
+              <span className="text-xs font-bold text-gray-400 uppercase tracking-widest">Premium Available</span>
+            </div>
+          )}
         </div>
+        {isUnlocked && (
+           <div className="flex items-center gap-2 px-3 py-1 bg-green-50 text-green-700 rounded-full border border-green-100 animate-pulse">
+             <Crown className="w-4 h-4" />
+             <span className="text-xs font-bold uppercase tracking-wider">Premium Active</span>
+           </div>
+        )}
       </div>
 
       {/* The Menu Grid */}
       <div className="relative">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-12">
-          {/* Free Recipes (First 25) */}
-          {filteredRecipes.slice(0, 25).map((recipe) => {
+          {/* Active Recipes */}
+          {displayedRecipes.map((recipe) => {
             const CatIcon = categoryIcons[recipe.category] || Terminal;
+            // If unlocked, effectively no recipes are "locked", but we still use isPremium for badges
+            const isLocked = recipe.isPremium && !isUnlocked; 
+            
             return (
               <div
                 key={recipe.id}
@@ -139,20 +196,29 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
                       </span>
                     )}
                     {recipe.isPremium && (
-                      <span className="text-[10px] uppercase tracking-wider font-bold px-2 py-1 rounded-md bg-yellow-500 text-white shadow-sm">
-                        Premium
+                      <span className={`text-[10px] uppercase tracking-wider font-bold px-2 py-1 rounded-md shadow-sm ${isUnlocked ? 'bg-green-100 text-green-700' : 'bg-yellow-500 text-white'}`}>
+                        {isUnlocked ? 'Unlocked' : 'Premium'}
                       </span>
                     )}
                     <span className={`text-[10px] uppercase tracking-wider font-bold px-2 py-1 rounded-full bg-gray-100 text-gray-500`}>
                       {recipe.category}
                     </span>
+                    {recipe.archetype && (
+                      <span className={`text-[10px] uppercase tracking-wider font-bold px-2 py-1 rounded-full ${
+                        recipe.archetype === 'Processor' ? 'bg-blue-50 text-blue-600' :
+                        recipe.archetype === 'Researcher' ? 'bg-purple-50 text-purple-600' :
+                        'bg-orange-50 text-orange-600'
+                      }`}>
+                        {recipe.archetype}
+                      </span>
+                    )}
                   </div>
                 </div>
                 
                 <Link href={`/blueprints/${recipe.id}`} onClick={(e) => e.stopPropagation()}>
                   <h3 className="text-lg font-bold text-gray-900 mb-1 group-hover:text-blue-600 transition-colors pl-3 leading-tight flex items-center gap-2">
                     {recipe.title}
-                    {recipe.isPremium && <Lock className="w-3.5 h-3.5 text-gray-300" />}
+                    {recipe.isPremium && !isUnlocked && <Lock className="w-3.5 h-3.5 text-gray-300" />}
                   </h3>
                 </Link>
                 <p className="text-gray-500 text-sm font-medium mb-4 min-h-[40px] pl-3 line-clamp-2">
@@ -168,8 +234,9 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
                      {recipe.difficulty}
                    </span>
                    {recipe.isPremium ? (
-                     <span className="font-bold text-yellow-600 flex items-center gap-1">
-                       <Lock className="w-3 h-3" /> Pro Only
+                     <span className={`font-bold flex items-center gap-1 ${isUnlocked ? 'text-green-600' : 'text-yellow-600'}`}>
+                       {isUnlocked ? <Check className="w-3 h-3" /> : <Lock className="w-3 h-3" />} 
+                       {isUnlocked ? 'Ready' : 'Pro Only'}
                      </span>
                    ) : (
                      recipe.sampleData && <span className="font-bold text-blue-500">Sample Data</span>
@@ -180,26 +247,32 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
             );
           })}
           
-          {/* Blurred/Locked Section */}
-          {filteredRecipes.length > 25 && filteredRecipes.slice(25, 33).map((recipe) => {
+          {/* Blurred/Locked Section (Show many more to look captivating) */}
+          {showPaywallOverlay && filteredRecipes.slice(50, 100).map((recipe) => {
             const CatIcon = categoryIcons[recipe.category] || Terminal;
             return (
               <div
                 key={recipe.id}
-                className="opacity-40 blur-[2px] pointer-events-none select-none grayscale-[0.5] bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col h-full relative overflow-hidden"
+                className="opacity-60 blur-[1px] pointer-events-none select-none grayscale-[0.3] bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col h-full relative overflow-hidden transform scale-[0.98]"
               >
                  <div className="flex justify-between items-start mb-4">
-                  <div className="p-3 rounded-xl bg-gray-50 text-gray-400">
+                  <div className="p-3 rounded-xl bg-gray-50 text-gray-500">
                     <CatIcon className="w-6 h-6" />
                   </div>
+                  {/* Fake "High Value" Badge for visual interest */}
+                  {Math.random() > 0.5 && (
+                    <span className="bg-green-100 text-green-700 text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">
+                      High ROI
+                    </span>
+                  )}
                 </div>
-                <h3 className="text-lg font-bold text-gray-400 mb-1 leading-tight">
+                <h3 className="text-lg font-bold text-gray-500 mb-1 leading-tight">
                     {recipe.title}
                 </h3>
-                <p className="text-gray-300 text-sm mb-4 line-clamp-2">
+                <p className="text-gray-400 text-sm mb-4 line-clamp-2">
                   {recipe.tagline}
                 </p>
-                <div className="mt-auto pt-4 border-t border-gray-50 flex items-center justify-between text-xs text-gray-300">
+                <div className="mt-auto pt-4 border-t border-gray-50 flex items-center justify-between text-xs text-gray-400">
                    <span>{recipe.difficulty}</span>
                    <span className="font-mono">{recipe.time}</span>
                 </div>
@@ -209,23 +282,64 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
         </div>
         
         {/* Paywall Overlay CTA */}
-        {filteredRecipes.length > 25 && (
+        {showPaywallOverlay && (
             <div className="absolute bottom-0 left-0 right-0 h-[320px] bg-gradient-to-t from-white via-white/90 to-transparent flex flex-col items-center justify-center text-center z-10 pb-8">
-                <div className="bg-gray-900 text-white p-8 rounded-2xl shadow-2xl max-w-md mx-4 border border-gray-800 transform translate-y-4">
-                    <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-yellow-500/30">
-                        <Lock className="w-8 h-8 text-white" />
-                    </div>
-                    <h3 className="text-2xl font-bold mb-2">Unlock {filteredRecipes.length - 25}+ More Blueprints</h3>
-                    <p className="text-gray-400 mb-8 leading-relaxed">
-                        Get instant access to the full library of agentic workflows, including advanced scraping, sales automation, and SEO tools.
-                    </p>
-                    <button className="w-full bg-white text-gray-900 font-bold py-4 rounded-xl hover:bg-gray-100 transition-colors shadow-xl flex items-center justify-center gap-2 group">
-                        Unlock Full Access
-                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover:translate-x-1 transition-transform" />
-                    </button>
-                    <p className="mt-4 text-xs text-gray-500 font-medium">
-                        One-time purchase. Lifetime updates.
-                    </p>
+                <div className="bg-gray-900 text-white p-8 rounded-2xl shadow-2xl max-w-md mx-4 border border-gray-800 transform translate-y-4 transition-all">
+                   {!showLicenseInput ? (
+                      <>
+                        <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-yellow-500/30">
+                            <Lock className="w-8 h-8 text-white" />
+                        </div>
+                        <h3 className="text-2xl font-bold mb-2">Unlock {filteredRecipes.length - 50}+ More Blueprints</h3>
+                        <p className="text-gray-400 mb-8 leading-relaxed">
+                            Get instant access to the full library of agentic workflows, including advanced scraping, sales automation, and SEO tools.
+                        </p>
+                        <a 
+                          href="https://checkout.dodopayments.com/buy/pdt_0NW6p0szmXPS6jXW05hIP?session=sess_GCYotd6plh"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-full bg-white text-gray-900 font-bold py-4 rounded-xl hover:bg-gray-100 transition-colors shadow-xl flex items-center justify-center gap-2 group mb-4"
+                        >
+                            Unlock Full Access
+                            <ArrowRight className="w-4 h-4 text-gray-400 group-hover:translate-x-1 transition-transform" />
+                        </a>
+                        
+                        <button 
+                          onClick={() => setShowLicenseInput(true)}
+                          className="text-sm text-gray-500 hover:text-white underline decoration-gray-700 underline-offset-4 transition-colors"
+                        >
+                          I have a license key
+                        </button>
+                      </>
+                   ) : (
+                      <form onSubmit={handleLicenseSubmit} className="animate-fade-in">
+                        <div className="flex items-center justify-between mb-4">
+                           <h3 className="text-xl font-bold">Enter License Key</h3>
+                           <button type="button" onClick={() => setShowLicenseInput(false)} className="text-gray-500 hover:text-white">
+                             <X className="w-5 h-5" />
+                           </button>
+                        </div>
+                        <p className="text-gray-400 text-sm mb-4 text-left">
+                          Enter the code from your purchase email (e.g. TK-XXXX...)
+                        </p>
+                        <div className="mb-4">
+                           <input 
+                             type="text" 
+                             value={licenseKeyInput}
+                             onChange={(e) => setLicenseKeyInput(e.target.value)}
+                             placeholder="TK-XXXX-XXXX-XXXX"
+                             className="w-full bg-gray-800 border border-gray-700 text-white px-4 py-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-500 font-mono text-center uppercase tracking-widest placeholder-gray-600"
+                           />
+                           {unlockError && <p className="text-red-400 text-xs mt-2 text-left">{unlockError}</p>}
+                        </div>
+                        <button 
+                          type="submit"
+                          className="w-full bg-yellow-500 text-gray-900 font-bold py-3 rounded-xl hover:bg-yellow-400 transition-colors shadow-lg flex items-center justify-center gap-2"
+                        >
+                          <Key className="w-4 h-4" /> Activate License
+                        </button>
+                      </form>
+                   )}
                 </div>
             </div>
         )}
@@ -251,20 +365,29 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
           <div className="bg-white rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-hidden flex flex-col" onClick={e => e.stopPropagation()}>
             
             {/* Modal Header */}
-            <div className={`p-6 border-b border-gray-100 flex justify-between items-center ${selectedRecipe.isPremium ? 'bg-yellow-50' : 'bg-gray-50'}`}>
+            <div className={`p-6 border-b border-gray-100 flex justify-between items-center ${selectedRecipe.isPremium && !isUnlocked ? 'bg-yellow-50' : 'bg-gray-50'}`}>
               <div className="flex items-center gap-4">
-                <div className={`p-3 rounded-xl shadow-sm border ${selectedRecipe.isPremium ? 'bg-white border-yellow-200 text-yellow-600' : 'bg-white border-gray-100 text-gray-700'}`}>
-                   {selectedRecipe.isPremium ? <Crown className="w-6 h-6" /> : React.createElement(categoryIcons[selectedRecipe.category] || Terminal, { className: "w-6 h-6" })}
+                <div className={`p-3 rounded-xl shadow-sm border ${selectedRecipe.isPremium && !isUnlocked ? 'bg-white border-yellow-200 text-yellow-600' : 'bg-white border-gray-100 text-gray-700'}`}>
+                   {selectedRecipe.isPremium && !isUnlocked ? <Crown className="w-6 h-6" /> : React.createElement(categoryIcons[selectedRecipe.category] || Terminal, { className: "w-6 h-6" })}
                 </div>
                 <div>
                   <h2 className="text-2xl font-bold text-gray-900 flex items-center gap-2">
                     {selectedRecipe.title}
-                    {selectedRecipe.isPremium && <Lock className="w-5 h-5 text-yellow-600" />}
+                    {selectedRecipe.isPremium && !isUnlocked && <Lock className="w-5 h-5 text-yellow-600" />}
                   </h2>
                   <div className="flex items-center gap-4 mt-1">
-                    <span className={`text-xs font-bold px-2 py-0.5 rounded uppercase tracking-wide ${selectedRecipe.isPremium ? 'bg-yellow-500 text-white' : 'bg-blue-100 text-blue-700'}`}>
-                      {selectedRecipe.isPremium ? 'Premium Blueprint' : selectedRecipe.category}
+                    <span className={`text-xs font-bold px-2 py-0.5 rounded uppercase tracking-wide ${selectedRecipe.isPremium && !isUnlocked ? 'bg-yellow-500 text-white' : 'bg-blue-100 text-blue-700'}`}>
+                      {selectedRecipe.isPremium && !isUnlocked ? 'Premium Blueprint' : selectedRecipe.category}
                     </span>
+                    {selectedRecipe.archetype && (
+                      <span className={`text-xs font-bold px-2 py-0.5 rounded uppercase tracking-wide ${
+                        selectedRecipe.archetype === 'Processor' ? 'bg-blue-50 text-blue-600' :
+                        selectedRecipe.archetype === 'Researcher' ? 'bg-purple-50 text-purple-600' :
+                        'bg-orange-50 text-orange-600'
+                      }`}>
+                        {selectedRecipe.archetype}
+                      </span>
+                    )}
                     <span className="text-gray-400 text-xs flex items-center gap-1">
                       <Terminal className="w-3 h-3" /> {selectedRecipe.time} build
                     </span>
@@ -292,7 +415,7 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
                 <p className="text-gray-600 leading-relaxed text-lg">{selectedRecipe.description}</p>
               </div>
 
-              {selectedRecipe.isPremium ? (
+              {selectedRecipe.isPremium && !isUnlocked ? (
                 /* Premium Locked State */
                 <div className="bg-gray-900 rounded-2xl p-8 text-center border-2 border-yellow-500/50 shadow-2xl relative overflow-hidden">
                   <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-500 via-white to-yellow-500 animate-pulse" />
@@ -300,19 +423,57 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
                     <div className="w-20 h-20 bg-yellow-500/10 rounded-full flex items-center justify-center mx-auto mb-6 border border-yellow-500/20">
                       <Lock className="w-10 h-10 text-yellow-500" />
                     </div>
-                    <h3 className="text-2xl font-bold text-white mb-2">Unlock the Sales & Marketing Toolkit</h3>
+                    <h3 className="text-2xl font-bold text-white mb-2">Unlock this Blueprint</h3>
                     <p className="text-gray-400 mb-8 max-w-md mx-auto">
-                      This blueprint is part of our **Premium Automation Kit**. Get instant access to 15+ high-ROI agentic workflows, sample data, and private guides.
+                      Access to this workflow is locked. Activate your Premium License to view this and 100+ other advanced blueprints.
                     </p>
-                    <a 
-                      href="#" 
-                      className="inline-flex items-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-gray-900 px-8 py-4 rounded-xl font-bold text-lg transition-all transform hover:scale-105 active:scale-95 shadow-xl shadow-yellow-500/20"
-                    >
-                      Unlock All 100+ Blueprints <ArrowRight className="w-5 h-5" />
-                    </a>
-                    <p className="text-gray-500 text-sm mt-6 flex items-center justify-center gap-2">
-                      <Crown className="w-4 h-4 text-yellow-500" /> One-time payment. Lifetime updates.
-                    </p>
+                    
+                    {!showLicenseInput ? (
+                        <>
+                            <a 
+                              href="https://checkout.dodopayments.com/buy/pdt_0NW6p0szmXPS6jXW05hIP?session=sess_GCYotd6plh"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-gray-900 px-8 py-4 rounded-xl font-bold text-lg transition-all transform hover:scale-105 active:scale-95 shadow-xl shadow-yellow-500/20 mb-4"
+                            >
+                              Get Access Now <ArrowRight className="w-5 h-5" />
+                            </a>
+                            <div>
+                                <button 
+                                  onClick={() => setShowLicenseInput(true)}
+                                  className="text-sm text-gray-500 hover:text-white underline decoration-gray-700 underline-offset-4"
+                                >
+                                  I have a license key
+                                </button>
+                            </div>
+                        </>
+                    ) : (
+                      <form onSubmit={handleLicenseSubmit} className="max-w-xs mx-auto animate-fade-in">
+                        <div className="mb-4">
+                           <input 
+                             type="text" 
+                             value={licenseKeyInput}
+                             onChange={(e) => setLicenseKeyInput(e.target.value)}
+                             placeholder="TK-XXXX-XXXX-XXXX"
+                             className="w-full bg-gray-800 border border-gray-700 text-white px-4 py-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-500 font-mono text-center uppercase tracking-widest placeholder-gray-600"
+                           />
+                           {unlockError && <p className="text-red-400 text-xs mt-2">{unlockError}</p>}
+                        </div>
+                        <button 
+                          type="submit"
+                          className="w-full bg-yellow-500 text-gray-900 font-bold py-3 rounded-xl hover:bg-yellow-400 transition-colors shadow-lg flex items-center justify-center gap-2"
+                        >
+                          <Key className="w-4 h-4" /> Activate License
+                        </button>
+                        <button 
+                            type="button" 
+                            onClick={() => setShowLicenseInput(false)}
+                            className="mt-4 text-xs text-gray-500 hover:text-white"
+                        >
+                            Cancel
+                        </button>
+                      </form>
+                    )}
                   </div>
                   
                   {/* Blurred Background Preview */}
@@ -323,7 +484,7 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
                   </div>
                 </div>
               ) : (
-                /* Free Content State */
+                /* Free / Unlocked Content State */
                 <>
                   <div className="bg-gray-900 rounded-xl overflow-hidden border border-gray-800 shadow-inner">
                     <div className="bg-gray-800 px-4 py-2 flex items-center justify-between border-b border-gray-700">
@@ -358,15 +519,15 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
                     </div>
                   </div>
 
-                  <div className="mt-6 bg-yellow-50 border border-yellow-100 p-4 rounded-xl flex gap-3 items-start">
-                     <div className="bg-yellow-500 text-white w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 font-bold text-xs mt-0.5">!</div>
+                  <div className={`mt-6 p-4 rounded-xl flex gap-3 items-start border ${isUnlocked && selectedRecipe.isPremium ? 'bg-green-50 border-green-100' : 'bg-yellow-50 border-yellow-100'}`}>
+                     <div className={`${isUnlocked && selectedRecipe.isPremium ? 'bg-green-500' : 'bg-yellow-500'} text-white w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 font-bold text-xs mt-0.5`}>!</div>
                      <div>
-                       <h4 className="text-sm font-bold text-yellow-800">Instructions</h4>
-                       <p className="text-sm text-yellow-700 mt-1">
+                       <h4 className={`text-sm font-bold ${isUnlocked && selectedRecipe.isPremium ? 'text-green-800' : 'text-yellow-800'}`}>Instructions</h4>
+                       <p className={`text-sm mt-1 ${isUnlocked && selectedRecipe.isPremium ? 'text-green-700' : 'text-yellow-700'}`}>
                          1. Copy the blueprint above.<br/>
                      {selectedRecipe.sampleData && (
                        <>
-                         2. Download the <code className="font-mono bg-yellow-200/50 px-1 rounded">{selectedRecipe.sampleData.filename}</code> sample data file.<br/>
+                         2. Download the <code className={`font-mono px-1 rounded ${isUnlocked && selectedRecipe.isPremium ? 'bg-green-200/50' : 'bg-yellow-200/50'}`}>{selectedRecipe.sampleData.filename}</code> sample data file.<br/>
                        </>
                      )}
                          3. Tell your AI: <span className="italic font-semibold">"Read the blueprint and use the sample file to build this."</span>

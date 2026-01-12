@@ -5,6 +5,7 @@ title: "The Spam Word Hunter"
 tagline: "Don't trigger the filters."
 difficulty: "Beginner"
 time: "Batch"
+archetype: "Processor"
 description: "Cold emails die in spam. This agent scans a batch of email drafts for high-risk trigger words ('Guarantee', 'Free', '$$$') and suggests safer synonyms to maximize deliverability."
 sampleData:
   filename: "drafts.csv"

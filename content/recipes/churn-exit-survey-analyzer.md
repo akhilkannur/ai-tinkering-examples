@@ -5,6 +5,7 @@ title: "The Churn Survey Analyzer"
 tagline: "Find out why they really left."
 difficulty: "Intermediate"
 time: "Monthly"
+archetype: "Processor"
 description: "Exit surveys are often ignored. This agent analyzes open-ended 'Why did you cancel?' responses, clusters them into root causes (e.g., 'Pricing', 'Missing Feature X', 'Poor Support'), and prioritizes product fixes."
 sampleData:
   filename: "exit_surveys.csv"

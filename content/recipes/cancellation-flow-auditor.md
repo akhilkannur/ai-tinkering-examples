@@ -5,6 +5,7 @@ title: "The Cancellation Flow Auditor"
 tagline: "Save them before they go."
 difficulty: "Intermediate"
 time: "Batch"
+archetype: "Hybrid"
 description: "The 'Cancel' button is your last line of defense. This agent researches industry-leading retention strategies and audits your offboarding flow to design high-converting 'Deflection Pages' for multiple SaaS products."
 sampleData:
   filename: "saas_products.csv"

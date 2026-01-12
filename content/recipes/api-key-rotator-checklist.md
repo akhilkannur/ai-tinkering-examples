@@ -5,6 +5,7 @@ title: "The API Key Rotator"
 tagline: "Don't get hacked."
 difficulty: "Intermediate"
 time: "Batch"
+archetype: "Processor"
 description: "Stale keys are a security risk. This agent generates safety-first checklists for rotating API keys across multiple services (Stripe, AWS, SendGrid) without breaking production."
 sampleData:
   filename: "services.csv"

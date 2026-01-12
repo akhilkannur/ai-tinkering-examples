@@ -5,6 +5,7 @@ title: "The Affiliate Program Launcher"
 tagline: "Build a commission-only sales team."
 difficulty: "Advanced"
 time: "Hybrid"
+archetype: "Hybrid"
 description: "Affiliates drive 30% of revenue for SaaS. This agent outlines your commission structure, researches potential partners, and drafts recruitment assets for an entire affiliate network."
 sampleData:
   filename: "partners.csv"

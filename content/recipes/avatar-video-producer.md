@@ -5,6 +5,7 @@ title: "The AI Avatar Scriptwriter"
 tagline: "Scripts for HeyGen & Synthesia."
 difficulty: "Intermediate"
 time: "Batch"
+archetype: "Processor"
 description: "AI Avatars need more than just text; they need gestures and timing. This agent takes a list of topics and generates casual, 'Avatar-Ready' scripts with gestural commands (e.g., [nod], [point], [pause])."
 sampleData:
   filename: "video_topics.csv"

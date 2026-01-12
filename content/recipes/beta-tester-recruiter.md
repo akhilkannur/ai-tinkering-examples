@@ -5,6 +5,7 @@ title: "The Beta Tester Recruiter"
 tagline: "Find your first 50 users."
 difficulty: "Beginner"
 time: "Batch"
+archetype: "Processor"
 description: "Launching a new feature? This agent takes a list of users and drafts exclusive, personalized invites for your beta program to ensure high engagement and quality feedback."
 sampleData:
   filename: "users.csv"

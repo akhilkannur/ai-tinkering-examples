@@ -5,6 +5,7 @@ title: "The Bio Link Architect"
 tagline: "Optimize your 'Link in Bio' from a URL or a goal."
 difficulty: "Beginner"
 time: "One-off"
+archetype: "Hybrid"
 description: "Choice paralysis kills sales. This agent audits your current 'Link in Bio' page (if provided) or researches high-converting layouts for your niche to suggest a prioritized structure that drives users toward your primary offer."
 sampleData:
   filename: "current_links.txt"

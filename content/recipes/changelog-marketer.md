@@ -5,6 +5,7 @@ title: "The Changelog Marketer"
 tagline: "Your updates are marketing assets."
 difficulty: "Beginner"
 time: "Batch"
+archetype: "Processor"
 description: "Don't hide your hard work. This agent takes technical commit messages or Jira tickets and transforms them into high-energy 'New & Improved' Changelog posts for an entire release cycle."
 sampleData:
   filename: "releases.csv"

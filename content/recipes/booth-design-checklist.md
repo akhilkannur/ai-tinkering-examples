@@ -5,6 +5,7 @@ title: "The Event Booth Strategist"
 tagline: "Custom booth checklists for your event portfolio."
 difficulty: "Intermediate"
 time: "Batch"
+archetype: "Hybrid"
 description: "Most trade show booths are invisible. This agent researches your target events and designs custom booth layouts, swag strategies, and elevator pitches tailored to the specific audience of each show."
 sampleData:
   filename: "events.csv"

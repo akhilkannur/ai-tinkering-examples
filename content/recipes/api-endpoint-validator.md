@@ -5,6 +5,7 @@ title: "The API Fleet Monitor"
 tagline: "Health check 50 endpoints in one run."
 difficulty: "Advanced"
 time: "Daily"
+archetype: "Processor"
 description: "Ensure the demo never breaks. This agent reads a list of API endpoints from a CSV, tests them for speed and response structure, and generates a 'Green/Red' status report for the team."
 sampleData:
   filename: "api_endpoints.csv"

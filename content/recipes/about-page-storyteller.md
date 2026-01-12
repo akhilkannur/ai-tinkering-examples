@@ -5,6 +5,7 @@ title: "The About Page Storyteller"
 tagline: "Build trust with a data-backed brand story."
 difficulty: "Intermediate"
 time: "Batch"
+archetype: "Hybrid"
 description: "Faceless brands are dead. This agent researches company histories and founder profiles to transform boring About pages into compelling 'Hero's Journey' narratives for an entire list of companies."
 sampleData:
   filename: "companies.csv"

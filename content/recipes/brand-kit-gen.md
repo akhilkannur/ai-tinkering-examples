@@ -5,6 +5,7 @@ title: "The Instant Brand Architect"
 tagline: "Logo + Pattern + Vibe."
 difficulty: "Intermediate"
 time: "Batch"
+archetype: "Processor"
 isPremium: true
 description: "Instantly create cohesive visual identity starter kits for multiple projects. This agent generates logos, seamless background patterns, and defines color palettes for an entire portfolio of brands."
 sampleData:

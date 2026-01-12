@@ -5,6 +5,7 @@ title: "The Cold DM Personalizer"
 tagline: "Personalized outreach for 100 prospects at once."
 difficulty: "Beginner"
 time: "Continuous"
+archetype: "Hybrid"
 description: "Slide into DMs without looking like a bot. This agent takes a list of LinkedIn/X profiles, analyzes their recent posts for 'emotional hooks', and drafts custom opening lines for your entire list."
 sampleData:
   filename: "prospects.csv"

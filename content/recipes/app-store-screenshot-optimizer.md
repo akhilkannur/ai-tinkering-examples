@@ -5,6 +5,7 @@ title: "The App Store Screenshot Optimizer"
 tagline: "More downloads, same traffic."
 difficulty: "Intermediate"
 time: "Batch"
+archetype: "Hybrid"
 description: "Screenshots are your app's billboard. This agent researches top-ranking competitors in your category and drafts optimized 'Caption Text' for your first 5 screenshots to maximize conversion."
 sampleData:
   filename: "apps.csv"

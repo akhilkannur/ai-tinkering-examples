@@ -5,6 +5,7 @@ title: "The Tech Displacement Factory"
 tagline: "Find every user of 10 competitors in one run."
 difficulty: "Intermediate"
 time: "Weekly"
+archetype: "Processor"
 description: "BuiltWith reports are noisy. This agent reads a list of target technologies (competitors) from a CSV and filters a raw technology report to find high-value displacement opportunities matching your ICP."
 sampleData:
   filename: "competitor_tech_list.csv"

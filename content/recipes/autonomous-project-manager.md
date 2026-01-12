@@ -5,6 +5,7 @@ title: "The Autonomous Project Manager"
 tagline: "The 'Ralph Wiggum' Loop."
 difficulty: "Advanced"
 time: "Batch"
+archetype: "Processor"
 description: "This is the 'Master Blueprint' for long-running autonomous tasks. Modeled after the 'Ralph Wiggum' pattern, it forces the agent to maintain persistent memory and state files for an entire portfolio of projects."
 sampleData:
   filename: "project_goals.csv"

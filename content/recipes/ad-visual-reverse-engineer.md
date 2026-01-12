@@ -5,6 +5,7 @@ title: "The Ad Visual Intelligence Factory"
 tagline: "Reverse-engineer 10 winning ads into design briefs."
 difficulty: "Experimental"
 time: "5 mins"
+archetype: "Processor"
 description: "Why is the competition winning? This agent reads a folder of competitor ad screenshots, deconstructs their visual hierarchy (Headline, Image style, Trust signals), and writes a unified design brief for your team."
 sampleData:
   filename: "competitor_gallery/ad_01.png"

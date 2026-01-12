@@ -5,6 +5,7 @@ title: "The Brand Voice Architect"
 tagline: "Stop sounding schizophrenic."
 difficulty: "Intermediate"
 time: "Batch"
+archetype: "Hybrid"
 description: "Different employees write differently. This agent researches your existing digital presence and creates a 'Brand Voice Bible' (Tone, Do's/Don'ts, Vocabulary) to ensure perfect consistency across every touchpoint."
 sampleData:
   filename: "brands.csv"

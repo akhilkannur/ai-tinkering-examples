@@ -5,6 +5,7 @@ title: "The Case Study Factory"
 tagline: "Turn 10 transcripts into 10 closed deals."
 difficulty: "Beginner"
 time: "10 mins"
+archetype: "Processor"
 description: "Sales teams need social proof. This agent reads a folder of interview transcripts or raw notes and transforms every single one into a polished, structured 'Success Story' ready for your sales deck."
 sampleData:
   filename: "client_interviews/client_a.txt"

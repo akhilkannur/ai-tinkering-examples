@@ -5,6 +5,7 @@ title: "The 'Alternative To' Hub Builder"
 tagline: "Steal traffic from all your competitors at once."
 difficulty: "Advanced"
 time: "30 mins"
+archetype: "Hybrid"
 description: "High-intent buyers search for 'Alternatives to [Competitor]'. This agent reads a list of competitors from a CSV, researches their weaknesses, and generates a library of comparison landing pages that position YOUR product as the winner."
 sampleData:
   filename: "competitors_to_compare.csv"

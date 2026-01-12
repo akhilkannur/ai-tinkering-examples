@@ -5,6 +5,7 @@ title: "The Abandoned Cart SMS Writer"
 tagline: "Recover 15% of lost sales via text."
 difficulty: "Intermediate"
 time: "Batch"
+archetype: "Processor"
 description: "Email open rates are 20%; SMS is 98%. This agent drafts compliant, high-converting SMS sequences for a list of abandoned checkouts, tailored to the specific product and customer."
 sampleData:
   filename: "abandoned_carts.csv"

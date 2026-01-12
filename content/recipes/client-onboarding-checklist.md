@@ -5,6 +5,7 @@ title: "The Client Onboarding Checklist"
 tagline: "Impress them in Day 1."
 difficulty: "Beginner"
 time: "Batch"
+archetype: "Processor"
 description: "New clients have 'Buyer's Remorse' until they see value. This agent generates 30-day onboarding schedules (Kickoff, Access Requests, Quick Win) for your entire roster of new clients to ensure no one slips through the cracks."
 sampleData:
   filename: "clients.csv"
