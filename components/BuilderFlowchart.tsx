@@ -95,7 +95,7 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
 
       {/* Results Count */}
       <div className="mb-6 text-gray-500 text-sm font-medium pl-2 flex items-center gap-4">
-        <span>Showing {filteredRecipes.length} recipes</span>
+        <span>Showing {Math.min(filteredRecipes.length, 25)} of {filteredRecipes.length} recipes</span>
         <div className="flex items-center gap-2">
           <span className="w-2 h-2 rounded-full bg-yellow-500"></span>
           <span className="text-xs font-bold text-gray-400 uppercase tracking-widest">Premium Available</span>
@@ -103,80 +103,132 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
       </div>
 
       {/* The Menu Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-        {filteredRecipes.map((recipe) => {
-          const CatIcon = categoryIcons[recipe.category] || Terminal;
-          return (
-            <div
-              key={recipe.id}
-              className="group text-left bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:border-blue-300 hover:-translate-y-1 transition-all duration-300 flex flex-col h-full relative overflow-hidden cursor-pointer"
-              onClick={() => setSelectedRecipe(recipe)}
-            >
-              {/* Category Strip */}
-              <div className={`absolute top-0 left-0 w-1.5 h-full ${
-                recipe.isPremium ? 'bg-yellow-500' :
-                recipe.category === 'Lead Gen' ? 'bg-blue-500' :
-                recipe.category === 'Enrichment' ? 'bg-indigo-500' :
-                recipe.category === 'Content Ops' ? 'bg-pink-500' :
-                recipe.category === 'SEO' ? 'bg-green-500' :
-                recipe.category === 'Competitor Intel' ? 'bg-red-500' :
-                recipe.category === 'CRO' ? 'bg-orange-500' :
-                recipe.category === 'CRM Ops' ? 'bg-yellow-500' :
-                recipe.category === 'Social Automation' ? 'bg-cyan-500' :
-                'bg-gray-500'
-              }`} />
+      <div className="relative">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-12">
+          {/* Free Recipes (First 25) */}
+          {filteredRecipes.slice(0, 25).map((recipe) => {
+            const CatIcon = categoryIcons[recipe.category] || Terminal;
+            return (
+              <div
+                key={recipe.id}
+                className="group text-left bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:border-blue-300 hover:-translate-y-1 transition-all duration-300 flex flex-col h-full relative overflow-hidden cursor-pointer"
+                onClick={() => setSelectedRecipe(recipe)}
+              >
+                {/* Category Strip */}
+                <div className={`absolute top-0 left-0 w-1.5 h-full ${
+                  recipe.isPremium ? 'bg-yellow-500' :
+                  recipe.category === 'Lead Gen' ? 'bg-blue-500' :
+                  recipe.category === 'Enrichment' ? 'bg-indigo-500' :
+                  recipe.category === 'Content Ops' ? 'bg-pink-500' :
+                  recipe.category === 'SEO' ? 'bg-green-500' :
+                  recipe.category === 'Competitor Intel' ? 'bg-red-500' :
+                  recipe.category === 'CRO' ? 'bg-orange-500' :
+                  recipe.category === 'CRM Ops' ? 'bg-yellow-500' :
+                  recipe.category === 'Social Automation' ? 'bg-cyan-500' :
+                  'bg-gray-500'
+                }`} />
 
-              <div className="flex justify-between items-start mb-4 pl-3">
-                <div className={`p-3 rounded-xl transition-colors ${recipe.isPremium ? 'bg-yellow-50 text-yellow-600 group-hover:bg-yellow-100' : 'bg-gray-50 text-gray-700 group-hover:bg-blue-50 group-hover:text-blue-600'}`}>
-                  {recipe.isPremium ? <Crown className="w-6 h-6" /> : <CatIcon className="w-6 h-6" />}
-                </div>
-                <div className="flex flex-col items-end gap-1">
-                  {recipe.id === 'agent-context-builder' && (
-                    <span className="text-[10px] uppercase tracking-wider font-bold px-2 py-1 rounded-full bg-indigo-100 text-indigo-700 animate-pulse border border-indigo-200">
-                       Start Here
+                <div className="flex justify-between items-start mb-4 pl-3">
+                  <div className={`p-3 rounded-xl transition-colors ${recipe.isPremium ? 'bg-yellow-50 text-yellow-600 group-hover:bg-yellow-100' : 'bg-gray-50 text-gray-700 group-hover:bg-blue-50 group-hover:text-blue-600'}`}>
+                    {recipe.isPremium ? <Crown className="w-6 h-6" /> : <CatIcon className="w-6 h-6" />}
+                  </div>
+                  <div className="flex flex-col items-end gap-1">
+                    {recipe.id === 'agent-context-builder' && (
+                      <span className="text-[10px] uppercase tracking-wider font-bold px-2 py-1 rounded-full bg-indigo-100 text-indigo-700 animate-pulse border border-indigo-200">
+                         Start Here
+                      </span>
+                    )}
+                    {recipe.isPremium && (
+                      <span className="text-[10px] uppercase tracking-wider font-bold px-2 py-1 rounded-md bg-yellow-500 text-white shadow-sm">
+                        Premium
+                      </span>
+                    )}
+                    <span className={`text-[10px] uppercase tracking-wider font-bold px-2 py-1 rounded-full bg-gray-100 text-gray-500`}>
+                      {recipe.category}
                     </span>
-                  )}
-                  {recipe.isPremium && (
-                    <span className="text-[10px] uppercase tracking-wider font-bold px-2 py-1 rounded-md bg-yellow-500 text-white shadow-sm">
-                      Premium
-                    </span>
-                  )}
-                  <span className={`text-[10px] uppercase tracking-wider font-bold px-2 py-1 rounded-full bg-gray-100 text-gray-500`}>
-                    {recipe.category}
-                  </span>
+                  </div>
                 </div>
-              </div>
-              
-              <Link href={`/blueprints/${recipe.id}`} onClick={(e) => e.stopPropagation()}>
-                <h3 className="text-lg font-bold text-gray-900 mb-1 group-hover:text-blue-600 transition-colors pl-3 leading-tight flex items-center gap-2">
-                  {recipe.title}
-                  {recipe.isPremium && <Lock className="w-3.5 h-3.5 text-gray-300" />}
-                </h3>
-              </Link>
-              <p className="text-gray-500 text-sm font-medium mb-4 min-h-[40px] pl-3 line-clamp-2">
-                {recipe.tagline}
-              </p>
-              
-              <div className="mt-auto pt-4 border-t border-gray-50 flex items-center justify-between text-xs text-gray-400 pl-3">
-                 <span className={`px-2 py-0.5 rounded ${
-                    recipe.difficulty === 'Beginner' ? 'bg-green-50 text-green-600' : 
-                    recipe.difficulty === 'Intermediate' ? 'bg-yellow-50 text-yellow-600' : 
-                    'bg-red-50 text-red-600'
-                 }`}>
-                   {recipe.difficulty}
-                 </span>
-                 {recipe.isPremium ? (
-                   <span className="font-bold text-yellow-600 flex items-center gap-1">
-                     <Lock className="w-3 h-3" /> Pro Only
+                
+                <Link href={`/blueprints/${recipe.id}`} onClick={(e) => e.stopPropagation()}>
+                  <h3 className="text-lg font-bold text-gray-900 mb-1 group-hover:text-blue-600 transition-colors pl-3 leading-tight flex items-center gap-2">
+                    {recipe.title}
+                    {recipe.isPremium && <Lock className="w-3.5 h-3.5 text-gray-300" />}
+                  </h3>
+                </Link>
+                <p className="text-gray-500 text-sm font-medium mb-4 min-h-[40px] pl-3 line-clamp-2">
+                  {recipe.tagline}
+                </p>
+                
+                <div className="mt-auto pt-4 border-t border-gray-50 flex items-center justify-between text-xs text-gray-400 pl-3">
+                   <span className={`px-2 py-0.5 rounded ${
+                      recipe.difficulty === 'Beginner' ? 'bg-green-50 text-green-600' : 
+                      recipe.difficulty === 'Intermediate' ? 'bg-yellow-50 text-yellow-600' : 
+                      'bg-red-50 text-red-600'
+                   }`}>
+                     {recipe.difficulty}
                    </span>
-                 ) : (
-                   recipe.sampleData && <span className="font-bold text-blue-500">Sample Data</span>
-                 )}
-                 <span className="font-mono">{recipe.time}</span>
+                   {recipe.isPremium ? (
+                     <span className="font-bold text-yellow-600 flex items-center gap-1">
+                       <Lock className="w-3 h-3" /> Pro Only
+                     </span>
+                   ) : (
+                     recipe.sampleData && <span className="font-bold text-blue-500">Sample Data</span>
+                   )}
+                   <span className="font-mono">{recipe.time}</span>
+                </div>
               </div>
+            );
+          })}
+          
+          {/* Blurred/Locked Section */}
+          {filteredRecipes.length > 25 && filteredRecipes.slice(25, 33).map((recipe) => {
+            const CatIcon = categoryIcons[recipe.category] || Terminal;
+            return (
+              <div
+                key={recipe.id}
+                className="opacity-40 blur-[2px] pointer-events-none select-none grayscale-[0.5] bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col h-full relative overflow-hidden"
+              >
+                 <div className="flex justify-between items-start mb-4">
+                  <div className="p-3 rounded-xl bg-gray-50 text-gray-400">
+                    <CatIcon className="w-6 h-6" />
+                  </div>
+                </div>
+                <h3 className="text-lg font-bold text-gray-400 mb-1 leading-tight">
+                    {recipe.title}
+                </h3>
+                <p className="text-gray-300 text-sm mb-4 line-clamp-2">
+                  {recipe.tagline}
+                </p>
+                <div className="mt-auto pt-4 border-t border-gray-50 flex items-center justify-between text-xs text-gray-300">
+                   <span>{recipe.difficulty}</span>
+                   <span className="font-mono">{recipe.time}</span>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+        
+        {/* Paywall Overlay CTA */}
+        {filteredRecipes.length > 25 && (
+            <div className="absolute bottom-0 left-0 right-0 h-[320px] bg-gradient-to-t from-white via-white/90 to-transparent flex flex-col items-center justify-center text-center z-10 pb-8">
+                <div className="bg-gray-900 text-white p-8 rounded-2xl shadow-2xl max-w-md mx-4 border border-gray-800 transform translate-y-4">
+                    <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-yellow-500/30">
+                        <Lock className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-2xl font-bold mb-2">Unlock {filteredRecipes.length - 25}+ More Blueprints</h3>
+                    <p className="text-gray-400 mb-8 leading-relaxed">
+                        Get instant access to the full library of agentic workflows, including advanced scraping, sales automation, and SEO tools.
+                    </p>
+                    <button className="w-full bg-white text-gray-900 font-bold py-4 rounded-xl hover:bg-gray-100 transition-colors shadow-xl flex items-center justify-center gap-2 group">
+                        Unlock Full Access
+                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover:translate-x-1 transition-transform" />
+                    </button>
+                    <p className="mt-4 text-xs text-gray-500 font-medium">
+                        One-time purchase. Lifetime updates.
+                    </p>
+                </div>
             </div>
-          );
-        })}
+        )}
       </div>
 
       {filteredRecipes.length === 0 && (
