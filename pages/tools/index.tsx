@@ -1,9 +1,9 @@
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
-import Image from 'next/image';
 import Navbar from '../../components/Navbar';
 import { aiTools } from '../../lib/ai-tools-data';
-import { Search, ExternalLink, Filter, Command, Sparkles } from 'lucide-react';
+import AIToolCard from '../../components/AIToolCard';
+import { Search, Filter, Sparkles, Command } from 'lucide-react';
 
 export default function ToolsIndex() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -21,42 +21,44 @@ export default function ToolsIndex() {
   }, [searchQuery, selectedCategory]);
 
   return (
-    <div className="flex flex-col min-h-screen bg-white text-slate-900 font-sans">
+    <div className="flex flex-col min-h-screen bg-primary-bg font-sans text-text-color fade-in">
       <Head>
         <title>AI Tools Directory | Curated List</title>
-        <meta name="description" content="A clean, curated list of the latest AI tools for business and productivity." />
+        <meta name="description" content="A curated database of the latest AI tools for business and productivity." />
       </Head>
 
       <Navbar />
 
-      <main className="container mx-auto px-4 py-12 max-w-6xl">
+      <main className="container mx-auto px-4 py-16 max-w-7xl">
         
         {/* Header */}
-        <div className="mb-10 pb-8 border-b border-slate-100">
-          <div className="flex items-center gap-2 text-blue-600 mb-3 font-medium text-sm">
-            <Sparkles className="w-4 h-4" />
-            <span>Updated Daily</span>
+        <div className="text-center mb-16 max-w-3xl mx-auto">
+          <div className="inline-flex items-center gap-2 bg-navy-dark border border-navy-light/50 text-accent px-4 py-1.5 rounded-sm text-xs font-mono font-bold mb-6 uppercase tracking-wider">
+            <Command className="w-3 h-3" />
+            <span>Curated Database</span>
           </div>
-          <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3 tracking-tight">
-            AI Tools Directory
+          
+          <h1 className="text-4xl md:text-5xl font-headline font-bold text-text-color mb-6 tracking-tight leading-tight uppercase">
+            The AI Tool <span className="text-accent">Arsenal</span>
           </h1>
-          <p className="text-slate-500 text-lg">
-            A curated database of {aiTools.length} tools to speed up your workflow.
+          
+          <p className="text-lg text-text-secondary leading-relaxed font-sans max-w-2xl mx-auto">
+             Stop searching, start building. A hand-picked collection of {aiTools.length} tools verified for actual business utility.
           </p>
         </div>
 
         {/* Controls */}
-        <div className="flex flex-col md:flex-row gap-4 mb-8 sticky top-20 z-30 bg-white/90 backdrop-blur-md py-4 border-b border-slate-100">
+        <div className="flex flex-col md:flex-row gap-6 mb-12 sticky top-24 z-30 bg-primary-bg/95 backdrop-blur-sm py-4 border-b border-navy-dark">
           
           {/* Search Input */}
           <div className="relative flex-grow">
-            <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-              <Search className="h-4 w-4 text-slate-400" />
+            <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+              <Search className="h-4 w-4 text-navy-light" />
             </div>
             <input
               type="text"
-              className="block w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all rounded-lg text-sm"
-              placeholder="Search tools..."
+              className="block w-full pl-11 pr-4 py-3 bg-[#0B1221] border border-navy-dark text-text-color placeholder-navy-light focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all rounded-sm text-sm font-mono"
+              placeholder="Search tools (e.g. 'Writing', 'Video', 'SEO')..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
@@ -68,10 +70,10 @@ export default function ToolsIndex() {
               <button
                 key={cat}
                 onClick={() => setSelectedCategory(cat)}
-                className={`px-3 py-2 text-xs font-semibold rounded-lg border transition-all whitespace-nowrap ${
+                className={`px-4 py-2 text-xs font-mono font-bold border transition-all whitespace-nowrap uppercase tracking-wider ${
                   selectedCategory === cat 
-                    ? 'bg-slate-900 text-white border-slate-900' 
-                    : 'bg-white text-slate-600 border-slate-200 hover:border-slate-300 hover:bg-slate-50'
+                    ? 'bg-accent text-electric-blue border-accent' 
+                    : 'bg-[#0B1221] text-text-secondary border-navy-dark hover:border-accent hover:text-accent'
                 }`}
               >
                 {cat}
@@ -80,90 +82,30 @@ export default function ToolsIndex() {
           </div>
         </div>
 
-        {/* The Feed (Clean List) */}
-        <div className="border border-slate-200 rounded-xl overflow-hidden bg-white shadow-sm">
-          
-          {/* Table Header */}
-          <div className="hidden md:grid grid-cols-12 gap-6 px-6 py-3 bg-slate-50 border-b border-slate-200 text-xs font-semibold text-slate-500 uppercase tracking-wide">
-            <div className="col-span-4">Tool</div>
-            <div className="col-span-2">Category</div>
-            <div className="col-span-5">Description</div>
-            <div className="col-span-1 text-right">Price</div>
-          </div>
-
-          {/* Rows */}
-          <div className="divide-y divide-slate-100">
+        {/* The Grid */}
+        {filteredTools.length > 0 ? (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {filteredTools.map((tool, idx) => (
-              <a 
-                key={idx} 
-                href={tool.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 px-6 py-4 hover:bg-slate-50/80 transition-colors items-center relative"
-              >
-                {/* Tool Identity */}
-                <div className="col-span-1 md:col-span-4 flex items-center gap-4">
-                  <div className="relative w-10 h-10 flex-shrink-0 bg-white rounded-lg border border-slate-200 overflow-hidden p-1 shadow-sm group-hover:shadow-md transition-all">
-                    <Image 
-                      src={tool.image} 
-                      alt={tool.name} 
-                      width={40} 
-                      height={40}
-                      className="object-contain w-full h-full"
-                      unoptimized
-                    />
-                  </div>
-                  <div>
-                    <h3 className="text-sm font-bold text-slate-900 group-hover:text-blue-600 transition-colors flex items-center gap-1.5">
-                      {tool.name}
-                      <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 text-slate-400 transition-opacity" />
-                    </h3>
-                    {/* Mobile Category Tag */}
-                    <div className="md:hidden mt-1">
-                       <span className="text-[10px] font-medium bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full">{tool.category}</span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Category (Desktop) */}
-                <div className="hidden md:block col-span-2">
-                  <span className="text-xs font-medium text-slate-600 bg-slate-100 px-2.5 py-1 rounded-md border border-slate-200">
-                    {tool.category}
-                  </span>
-                </div>
-
-                {/* Description */}
-                <div className="col-span-1 md:col-span-5">
-                  <p className="text-sm text-slate-500 leading-relaxed line-clamp-2 md:line-clamp-1 group-hover:line-clamp-none transition-all">
-                    {tool.description}
-                  </p>
-                </div>
-
-                {/* Access / Status */}
-                <div className="hidden md:flex col-span-1 justify-end">
-                  {tool.tags.price === 'Free' ? (
-                    <span className="text-[10px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-100 px-2.5 py-1 rounded-full">
-                      Free
-                    </span>
-                  ) : (
-                    <span className="text-[10px] font-semibold text-slate-500 bg-white border border-slate-200 px-2.5 py-1 rounded-full">
-                      {tool.tags.price}
-                    </span>
-                  )}
-                </div>
-              </a>
+              <div key={idx} className="h-64">
+                <AIToolCard
+                  name={tool.name}
+                  description={tool.description}
+                  url={tool.url}
+                  imageUrl={tool.image}
+                  category={tool.category}
+                />
+              </div>
             ))}
           </div>
-        </div>
-
-        {/* Empty State */}
-        {filteredTools.length === 0 && (
-          <div className="text-center py-20 bg-slate-50 rounded-xl border border-slate-200 border-dashed mt-8">
-            <Filter className="w-10 h-10 text-slate-300 mx-auto mb-3" />
-            <p className="text-slate-500 font-medium">No tools found matching your search.</p>
+        ) : (
+          /* Empty State */
+          <div className="text-center py-24 bg-[#0B1221] border border-navy-dark border-dashed rounded-sm mt-8">
+            <Filter className="w-12 h-12 text-navy-dark mx-auto mb-4" />
+            <h3 className="text-xl font-headline font-bold text-text-color mb-2">No tools found</h3>
+            <p className="text-text-secondary font-mono text-sm mb-6">Try adjusting your search terms.</p>
             <button 
               onClick={() => {setSearchQuery(''); setSelectedCategory('All')}}
-              className="mt-3 text-blue-600 hover:text-blue-700 text-sm font-semibold"
+              className="text-accent hover:text-white font-mono text-xs font-bold uppercase tracking-widest border-b border-accent hover:border-white transition-all pb-1"
             >
               Clear filters
             </button>
