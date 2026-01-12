@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import React from 'react';
-import { ExternalLink, ArrowRight } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { ArrowRight } from 'lucide-react';
 
 interface AIToolCardProps {
   name: string;
@@ -11,6 +11,26 @@ interface AIToolCardProps {
 }
 
 export default function AIToolCard({ name, description, url, imageUrl, category }: AIToolCardProps) {
+  // Extract hostname for favicon fallback
+  const getHostname = (href: string) => {
+    try {
+      return new URL(href).hostname;
+    } catch (e) {
+      return '';
+    }
+  };
+
+  const hostname = getHostname(url);
+  const fallbackLogo = `https://www.google.com/s2/favicons?domain=${hostname}&sz=128`;
+  
+  // State to handle image source. Default to imageUrl, fallback to Google Favicon if missing or broken.
+  const [imgSrc, setImgSrc] = useState<string>(imageUrl || fallbackLogo);
+
+  useEffect(() => {
+    // If props change, reset (prioritize the provided image, or fallback immediately if empty)
+    setImgSrc(imageUrl || fallbackLogo);
+  }, [imageUrl, fallbackLogo]);
+
   return (
     <a
       href={url}
@@ -21,18 +41,14 @@ export default function AIToolCard({ name, description, url, imageUrl, category 
       {/* Top Bar: Icon + Action */}
       <div className="flex items-center justify-between p-4 border-b border-navy-dark/50 bg-secondary-bg/30">
         <div className="relative w-10 h-10 rounded-sm overflow-hidden border border-navy-dark bg-navy-dark">
-          {imageUrl ? (
-            <Image
-              src={imageUrl}
-              alt={`${name} logo`}
-              fill
-              className="object-cover"
-            />
-          ) : (
-            <div className="w-full h-full flex items-center justify-center text-[10px] font-mono text-navy-light">
-              IMG
-            </div>
-          )}
+          <Image
+            src={imgSrc}
+            alt={`${name} logo`}
+            fill
+            className="object-cover bg-white" 
+            onError={() => setImgSrc(fallbackLogo)}
+            unoptimized={true} // Needed for external URLs like Google Favicons often
+          />
         </div>
         
         <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-x-2 group-hover:translate-x-0">
