@@ -35,6 +35,7 @@ const BlueprintsPage = ({ recipes }: BlueprintsPageProps) => {
         <meta name="twitter:title" content="The Terminal Cookbook | Blueprints for Non-Technical Builders" />
         <meta name="twitter:description" content="A library of copy-paste blueprints to build powerful autonomous agents using Gemini CLI, Claude Code, or Cursor." />
         <meta name="twitter:image" content={`${process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com'}/Gemini_Generated_Image_b3hv6cb3hv6cb3hv.png`} />
+        <link rel="canonical" href="https://realaiexamples.com/blueprints" />
       </Head>
       <Navbar />
 
