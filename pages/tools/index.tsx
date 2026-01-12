@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Navbar from '../../components/Navbar';
 import { aiTools } from '../../lib/ai-tools-data';
 import AIToolCard from '../../components/AIToolCard';
-import { Search, Filter, Sparkles, Command } from 'lucide-react';
+import { Search, Filter, Sparkles, Command, Plus } from 'lucide-react';
 
 export default function ToolsIndex() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -32,7 +32,8 @@ export default function ToolsIndex() {
       <main className="container mx-auto px-4 py-16 max-w-7xl">
         
         {/* Header */}
-        <div className="text-center mb-16 max-w-3xl mx-auto">
+        <div className="text-center mb-16 max-w-3xl mx-auto relative">
+          
           <div className="inline-flex items-center gap-2 bg-navy-dark border border-navy-light/50 text-accent px-4 py-1.5 rounded-sm text-xs font-mono font-bold mb-6 uppercase tracking-wider">
             <Command className="w-3 h-3" />
             <span>Curated Database</span>
@@ -42,9 +43,18 @@ export default function ToolsIndex() {
             The AI Tool <span className="text-accent">Arsenal</span>
           </h1>
           
-          <p className="text-lg text-text-secondary leading-relaxed font-sans max-w-2xl mx-auto">
+          <p className="text-lg text-text-secondary leading-relaxed font-sans max-w-2xl mx-auto mb-8">
              Stop searching, start building. A hand-picked collection of {aiTools.length} tools verified for actual business utility.
           </p>
+
+          <a 
+            href="https://forms.gle/EYeiaQ9DkjY1Vz2m8"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-secondary-bg hover:bg-navy-dark border border-navy-light hover:border-accent text-text-color hover:text-accent font-mono text-sm font-bold px-6 py-3 rounded-sm uppercase tracking-wider transition-all shadow-lg hover:shadow-accent-glow"
+          >
+            <Plus className="w-4 h-4" /> Submit A Tool
+          </a>
         </div>
 
         {/* Controls */}
