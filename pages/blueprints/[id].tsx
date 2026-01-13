@@ -102,15 +102,15 @@ export default function RecipePage({ recipe }: RecipePageProps) {
     <div className="flex flex-col min-h-screen bg-white">
       <Head>
         <title>{recipe.title} | AI Agent Blueprint | Terminal Cookbook</title>
-        <meta name="description" content={recipe.description} />
-        <meta property="og:title" content={`${recipe.title} | AI Agent Blueprint`} />
-        <meta property="og:description" content={recipe.description} />
-        <meta property="og:image" content={ogImageUrl} />
-        <meta property="og:type" content="article" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={`${recipe.title} | AI Agent Blueprint`} />
-        <meta name="twitter:description" content={recipe.description} />
-        <meta name="twitter:image" content={ogImageUrl} />
+        <meta name="description" content={recipe.description} key="description" />
+        <meta property="og:title" content={`${recipe.title} | AI Agent Blueprint`} key="og:title" />
+        <meta property="og:description" content={recipe.description} key="og:description" />
+        <meta property="og:image" content={ogImageUrl} key="og:image" />
+        <meta property="og:type" content="article" key="og:type" />
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content={`${recipe.title} | AI Agent Blueprint`} key="twitter:title" />
+        <meta name="twitter:description" content={recipe.description} key="twitter:description" />
+        <meta name="twitter:image" content={ogImageUrl} key="twitter:image" />
         <link rel="canonical" href={`${SITE_URL}/blueprints/${recipe.id}`} key="canonical" />
         <script
           type="application/ld+json"

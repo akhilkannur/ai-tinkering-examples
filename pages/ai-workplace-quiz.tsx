@@ -8,12 +8,12 @@ export default function AiWorkplaceQuizPage() {
     <>
       <Head>
         <title>AI in the Workplace Quiz | Test Your Knowledge | AI Examples</title>
-        <meta name="description" content="Test your knowledge of the latest AI developments in marketing, sales, and HR with this interactive quiz. See how you score and challenge your colleagues!" />
-        <meta property="og:title" content="AI in the Workplace Quiz | Test Your Knowledge" />
-        <meta property="og:description" content="Test your knowledge of the latest AI developments in marketing, sales, and HR with this interactive quiz." />
-        <meta property="og:image" content={`${process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com'}/Gemini_Generated_Image_b3hv6cb3hv6cb3hv.png`} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content={`${process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com'}/Gemini_Generated_Image_b3hv6cb3hv6cb3hv.png`} />
+        <meta name="description" content="Test your knowledge of the latest AI developments in marketing, sales, and HR with this interactive quiz. See how you score and challenge your colleagues!" key="description" />
+        <meta property="og:title" content="AI in the Workplace Quiz | Test Your Knowledge" key="og:title" />
+        <meta property="og:description" content="Test your knowledge of the latest AI developments in marketing, sales, and HR with this interactive quiz." key="og:description" />
+        <meta property="og:image" content={`${process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com'}/Gemini_Generated_Image_b3hv6cb3hv6cb3hv.png`} key="og:image" />
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:image" content={`${process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com'}/Gemini_Generated_Image_b3hv6cb3hv6cb3hv.png`} key="twitter:image" />
       </Head>
       <div className="min-h-screen bg-primary-bg font-sans text-text-color">
         <Navbar />

@@ -22,7 +22,8 @@ export default function ExamplePage({ example }: ExamplePageProps) {
   }
 
   const categorySlug = example.category?.toLowerCase().replace(/\s+/g, '-') || 'uncategorized'
-  const currentUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/ai-examples/${categorySlug}/${example.slug}`
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com'
+  const currentUrl = `${baseUrl}/ai-examples/${categorySlug}/${example.slug}`
 
   // Generate structured data for SEO
   const structuredData = {
@@ -39,7 +40,7 @@ export default function ExamplePage({ example }: ExamplePageProps) {
       "name": "AI Tinkering Examples",
       "logo": {
         "@type": "ImageObject",
-        "url": example.sponsor?.logo?.[0]?.url || `${process.env.NEXT_PUBLIC_BASE_URL}/logo.png`
+        "url": example.sponsor?.logo?.[0]?.url || `${baseUrl}/logo.png`
       }
     },
     "datePublished": example.publish_date,
@@ -62,19 +63,19 @@ export default function ExamplePage({ example }: ExamplePageProps) {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": process.env.NEXT_PUBLIC_BASE_URL
+        "item": baseUrl
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "AI Examples",
-        "item": `${process.env.NEXT_PUBLIC_BASE_URL}/ai-examples`
+        "item": `${baseUrl}/ai-examples`
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": example.category || "Uncategorized",
-        "item": `${process.env.NEXT_PUBLIC_BASE_URL}/ai-examples/category/${categorySlug}`
+        "item": `${baseUrl}/ai-examples/category/${categorySlug}`
       },
       {
         "@type": "ListItem",
@@ -89,16 +90,26 @@ export default function ExamplePage({ example }: ExamplePageProps) {
     <>
       <Head>
         <title>{example.title} | AI Workflow Example | AI Tinkering Examples</title>
-        <meta name="description" content={example.summary || `Learn how to recreate this ${example.category} AI workflow: ${example.title}. Step-by-step guide with screenshots and prompts.`} />
-        <meta property="og:type" content="article" />
-        <meta property="og:title" content={`${example.title} | AI Workflow Example`} />
-        <meta property="og:description" content={example.summary || `Learn how to recreate this AI workflow: ${example.title}`} />
-        <meta property="og:url" content={currentUrl} />
-        <meta property="og:site_name" content="AI Tinkering Examples" />
+        <meta name="description" content={example.summary || `Learn how to recreate this ${example.category} AI workflow: ${example.title}. Step-by-step guide with screenshots and prompts.`} key="description" />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="article" key="og:type" />
+        <meta property="og:title" content={`${example.title} | AI Workflow Example`} key="og:title" />
+        <meta property="og:description" content={example.summary || `Learn how to recreate this AI workflow: ${example.title}`} key="og:description" />
+        <meta property="og:url" content={currentUrl} key="og:url" />
+        <meta property="og:site_name" content="AI Tinkering Examples" key="og:site_name" />
         {example.screenshots?.[0]?.url && (
-          <meta property="og:image" content={example.screenshots[0].url} />
+          <meta property="og:image" content={example.screenshots[0].url} key="og:image" />
         )}
-        <meta name="twitter:card" content="summary_large_image" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content={`${example.title} | AI Workflow Example`} key="twitter:title" />
+        <meta name="twitter:description" content={example.summary || `Learn how to recreate this AI workflow: ${example.title}`} key="twitter:description" />
+        {example.screenshots?.[0]?.url && (
+          <meta name="twitter:image" content={example.screenshots[0].url} key="twitter:image" />
+        )}
+
         <link rel="canonical" href={currentUrl} key="canonical" />
         <script
           type="application/ld+json"

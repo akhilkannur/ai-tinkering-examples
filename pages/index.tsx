@@ -29,6 +29,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
 
   const homepageTitle = "AI Examples You Can Copy & Try";
   const homepageDescription = "Curated AI workflows and prompts for non-technical tinkerers. No fluff, just actionable examples.";
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com';
 
   const categories = useMemo(() => {
     const cats = examples
@@ -81,7 +82,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
     <>
       <Head>
         <title>{homepageTitle}</title>
-        <meta name="description" content={homepageDescription} />
+        <meta name="description" content={homepageDescription} key="description" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         
@@ -89,10 +90,10 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
           "@context": "https://schema.org",
           "@type": "WebSite",
           "name": homepageTitle,
-          "url": process.env.NEXT_PUBLIC_BASE_URL,
+          "url": baseUrl,
           "potentialAction": {
             "@type": "SearchAction",
-            "target": `${process.env.NEXT_PUBLIC_BASE_URL}/ai-examples?q={search_term_string}`,
+            "target": `${baseUrl}/ai-examples?q={search_term_string}`,
             "query-input": "required name=search_term_string"
           }
         })}} />
@@ -100,11 +101,11 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
         {selectedExample && (
           <>
             <title>{selectedExample.title} | AI Examples</title>
-            <meta name="description" content={selectedExample.summary || homepageDescription} />
-            <meta property="og:title" content={selectedExample.title} />
-            <meta property="og:description" content={selectedExample.summary || homepageDescription} />
+            <meta name="description" content={selectedExample.summary || homepageDescription} key="description" />
+            <meta property="og:title" content={selectedExample.title} key="og:title" />
+            <meta property="og:description" content={selectedExample.summary || homepageDescription} key="og:description" />
             {selectedExample.screenshots?.[0]?.url && (
-              <meta property="og:image" content={selectedExample.screenshots[0].url} />
+              <meta property="og:image" content={selectedExample.screenshots[0].url} key="og:image" />
             )}
           </>
         )}
