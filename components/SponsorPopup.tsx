@@ -40,7 +40,7 @@ export default function SponsorPopup({ sponsors }: SponsorPopupProps) {
       </button>
       <a href={currentSponsor.website} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 group">
         {currentSponsor.logo && (
-          <div className="relative w-10 h-10 rounded-md overflow-hidden bg-white flex-shrink-0">
+          <div className="relative w-10 h-10 rounded-none overflow-hidden bg-white flex-shrink-0">
             <Image 
               src={currentSponsor.logo[0].url} 
               alt={`${currentSponsor.name} logo`} 

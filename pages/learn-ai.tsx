@@ -58,7 +58,7 @@ export default function LearnAIPage() {
             </p>
             <a
               href="#" // Placeholder for the form link
-              className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-md text-white bg-[#001858] hover:bg-indigo-700 transition duration-150 ease-in-out shadow-lg transform hover:-translate-y-1"
+              className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-none text-white bg-[#001858] hover:bg-indigo-700 transition duration-150 ease-in-out shadow-lg transform hover:-translate-y-1"
             >
               <CalendarCheck className="w-5 h-5 mr-2" /> I'm Interested!
             </a>

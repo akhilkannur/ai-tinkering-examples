@@ -70,9 +70,23 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
     return filtered.sort((a, b) => {
       if (a.id === 'agent-context-builder') return -1;
       if (b.id === 'agent-context-builder') return 1;
+      
+      // Sort by publish_date (newest first)
+      if (a.publish_date && b.publish_date) {
+        return new Date(b.publish_date).getTime() - new Date(a.publish_date).getTime();
+      }
       return 0;
     });
   }, [selectedCategory, searchQuery, recipes]);
+
+  // Determine if a recipe is "New" (published in the last 7 days)
+  const isNew = (dateString?: string) => {
+    if (!dateString) return false;
+    const publishDate = new Date(dateString);
+    const sevenDaysAgo = new Date();
+    sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
+    return publishDate > sevenDaysAgo;
+  };
 
   // Determine which recipes to show based on unlock status
   const displayedRecipes = isUnlocked ? filteredRecipes : filteredRecipes.slice(0, 50);
@@ -195,8 +209,13 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
                          Start Here
                       </span>
                     )}
+                    {isNew(recipe.publish_date) && (
+                      <span className="text-[10px] uppercase tracking-wider font-bold px-2 py-1 rounded-full bg-green-100 text-green-700 border border-green-200">
+                         New
+                      </span>
+                    )}
                     {recipe.isPremium && (
-                      <span className={`text-[10px] uppercase tracking-wider font-bold px-2 py-1 rounded-md shadow-sm ${isUnlocked ? 'bg-green-100 text-green-700' : 'bg-yellow-500 text-white'}`}>
+                      <span className={`text-[10px] uppercase tracking-wider font-bold px-2 py-1 rounded-none shadow-sm ${isUnlocked ? 'bg-green-100 text-green-700' : 'bg-yellow-500 text-white'}`}>
                         {isUnlocked ? 'Unlocked' : 'Premium'}
                       </span>
                     )}
