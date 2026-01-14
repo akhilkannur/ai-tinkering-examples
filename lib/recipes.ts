@@ -22,6 +22,7 @@ export function getAllRecipes(): Recipe[] {
       // Combine the data with the content (blueprint)
       return {
         ...data,
+        id: data.id || fileName.replace(/\.md$/, ''), // Fallback to filename if id is missing
         blueprint: content,
       } as Recipe;
     });

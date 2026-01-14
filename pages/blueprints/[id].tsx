@@ -301,9 +301,11 @@ export default function RecipePage({ recipe }: RecipePageProps) {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const recipes = getAllRecipes();
-  const paths = recipes.map((recipe) => ({
-    params: { id: recipe.id },
-  }));
+  const paths = recipes
+    .filter((recipe) => recipe.id) // Ensure ID exists
+    .map((recipe) => ({
+      params: { id: recipe.id },
+    }));
 
   return { paths, fallback: false };
 };
