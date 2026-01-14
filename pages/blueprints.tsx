@@ -48,30 +48,33 @@ const BlueprintsPage = ({ recipes }: BlueprintsPageProps) => {
             <span>The Terminal Cookbook</span>
           </div>
           
-          <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 tracking-tight leading-tight">
-            Go Beyond ChatGPT <br />
-            <span className="text-gray-900">
-              with Gemini CLI & Claude Cowork.
+          <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900 mb-6 tracking-tight leading-tight">
+            Stop Chatting. <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
+              Start Automating.
             </span>
           </h1>
           
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed mb-8">
-            Tools like <strong>Claude Code</strong>, <strong>Cowork</strong> and <strong>Gemini CLI</strong> aren't just for engineers. They let you run powerful workflows on your computer that ChatGPT can't do.
+          <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed mb-10">
+            ChatGPT is for questions. These blueprints are for <strong>work</strong>.
             <br className="hidden md:block"/>
-            These blueprints are copy-paste instructions to help you get started.
+            Copy-paste instructions that turn <strong>Claude Cowork</strong> and <strong>Gemini CLI</strong> into autonomous employees that scrape data, build lists, and write code for you.
           </p>
 
           {/* Compatibility Badge */}
-          <div className="flex flex-wrap justify-center gap-3">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gray-100 text-gray-600 text-sm font-medium">
-              <Command className="w-4 h-4" /> Gemini CLI
-            </span>
-            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gray-100 text-gray-600 text-sm font-medium">
-              <Cpu className="w-4 h-4" /> Claude Code / Cowork
-            </span>
-            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gray-100 text-gray-600 text-sm font-medium">
-              <Terminal className="w-4 h-4" /> Cursor / Windsurf
-            </span>
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-sm text-gray-500 mb-2">
+            <span className="uppercase tracking-widest font-bold text-xs">Choose your Agent:</span>
+            <div className="flex flex-wrap justify-center gap-3">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gray-100 text-gray-700 font-medium border border-gray-200">
+                <Cpu className="w-4 h-4 text-purple-600" /> Claude Cowork
+              </span>
+              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gray-100 text-gray-700 font-medium border border-gray-200">
+                <Command className="w-4 h-4 text-blue-600" /> Gemini CLI
+              </span>
+              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gray-100 text-gray-700 font-medium border border-gray-200">
+                <Terminal className="w-4 h-4 text-gray-600" /> Cursor
+              </span>
+            </div>
           </div>
         </div>
 
