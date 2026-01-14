@@ -19,7 +19,7 @@ if (!AIRTABLE_API_KEY || !AIRTABLE_BASE_ID) {
 
 // Helper for Airtable requests
 function fetchAirtable(tableName, view = '') {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     const options = {
       hostname: 'api.airtable.com',
       path: `/v0/${AIRTABLE_BASE_ID}/${encodeURIComponent(tableName)}${view ? '?view=' + encodeURIComponent(view) : ''}`,
@@ -27,7 +27,8 @@ function fetchAirtable(tableName, view = '') {
       headers: {
         'Authorization': `Bearer ${AIRTABLE_API_KEY}`,
         'Content-Type': 'application/json'
-      }
+      },
+      timeout: 5000 // 5 seconds timeout
     };
 
     const req = https.request(options, (res) => {
@@ -39,15 +40,27 @@ function fetchAirtable(tableName, view = '') {
             const parsed = JSON.parse(data);
             resolve(parsed.records || []);
           } catch (e) {
-            reject(e);
+            console.warn(`   ⚠️ Error parsing Airtable response for ${tableName}:`, e.message);
+            resolve([]);
           }
         } else {
-          reject(new Error(`Airtable API Error: ${res.statusCode} ${res.statusMessage}`));
+          console.warn(`   ⚠️ Airtable API Error for ${tableName}: ${res.statusCode} ${res.statusMessage}`);
+          resolve([]);
         }
       });
     });
 
-    req.on('error', (e) => reject(e));
+    req.on('error', (e) => {
+      console.warn(`   ⚠️ Network error fetching ${tableName}:`, e.message);
+      resolve([]);
+    });
+
+    req.on('timeout', () => {
+      req.destroy();
+      console.warn(`   ⚠️ Timeout fetching ${tableName}`);
+      resolve([]);
+    });
+
     req.end();
   });
 }
