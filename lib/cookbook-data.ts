@@ -37,6 +37,7 @@ export interface Recipe {
   blueprint: string;
   isPremium?: boolean;
   archetype?: 'Processor' | 'Researcher' | 'Hybrid';
+  publish_date?: string;
   sampleData?: {
     filename: string;
     content: string;
