@@ -11,7 +11,7 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   const navLinks = [
-    { href: '/ai-examples', label: 'All examples' },
+    { href: '/ai-examples', label: 'Real Examples' },
     { href: '/tools', label: 'Tools' }, // Added Tools link
     { href: '/investors', label: 'Sell Your Tool' },
     { href: '/ai-workplace-quiz', label: 'AI Quiz' },
