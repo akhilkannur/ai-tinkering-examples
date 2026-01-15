@@ -48,9 +48,7 @@ export default function ToolsIndex() {
           </p>
 
           <a 
-            href="https://forms.gle/EYeiaQ9DkjY1Vz2m8"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/investors"
             className="inline-flex items-center gap-2 bg-secondary-bg hover:bg-navy-dark border border-navy-light hover:border-accent text-text-color hover:text-accent font-mono text-sm font-bold px-6 py-3 rounded-sm uppercase tracking-wider transition-all shadow-lg hover:shadow-accent-glow"
           >
             <Plus className="w-4 h-4" /> Submit A Tool
@@ -103,6 +101,7 @@ export default function ToolsIndex() {
                   url={tool.url}
                   imageUrl={tool.image}
                   category={tool.category}
+                  featured={tool.featured}
                 />
               </div>
             ))}

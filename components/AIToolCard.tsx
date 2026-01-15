@@ -8,9 +8,10 @@ interface AIToolCardProps {
   url: string;
   imageUrl: string;
   category: string;
+  featured?: boolean;
 }
 
-export default function AIToolCard({ name, description, url, imageUrl, category }: AIToolCardProps) {
+export default function AIToolCard({ name, description, url, imageUrl, category, featured }: AIToolCardProps) {
   // Extract hostname for favicon fallback
   const getHostname = (href: string) => {
     try {
@@ -36,8 +37,13 @@ export default function AIToolCard({ name, description, url, imageUrl, category 
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="group flex flex-col h-full bg-[#0B1221] border border-navy-dark hover:border-accent/50 transition-all duration-300 relative overflow-hidden rounded-sm hover:shadow-[0_0_20px_-5px_rgba(212,255,0,0.1)]"
+      className={`group flex flex-col h-full bg-[#0B1221] border ${featured ? 'border-accent/50 shadow-[0_0_20px_-5px_rgba(238,94,62,0.2)]' : 'border-navy-dark hover:border-accent/50 hover:shadow-[0_0_20px_-5px_rgba(238,94,62,0.15)]'} transition-all duration-300 relative overflow-hidden rounded-sm`}
     >
+      {featured && (
+        <div className="absolute top-0 right-0 bg-accent text-white text-[8px] font-bold px-2 py-0.5 z-20 uppercase tracking-tighter">
+          Featured
+        </div>
+      )}
       {/* Top Bar: Icon + Action */}
       <div className="flex items-center justify-between p-4 border-b border-navy-dark/50 bg-secondary-bg/30">
         <div className="relative w-10 h-10 rounded-sm overflow-hidden border border-navy-dark bg-navy-dark">

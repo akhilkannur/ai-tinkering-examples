@@ -9,6 +9,7 @@ export interface AiTool {
     skill: string;
   };
   image: string;
+  featured?: boolean;
 }
 
 export const aiTools: AiTool[] = [

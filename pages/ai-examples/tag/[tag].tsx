@@ -56,7 +56,7 @@ export default function TagPage({ examples, tag, tagDisplayName }: TagPageProps)
         
         {/* Breadcrumb */}
         <nav className="max-w-4xl mx-auto px-4 py-4" aria-label="Breadcrumb">
-          <ol className="flex items-center space-x-2 text-sm text-light-purple">
+          <ol className="flex items-center space-x-2 text-sm text-text-color">
             <li>
               <Link href="/" className="hover:text-text-color transition-colors">Home</Link>
             </li>
@@ -73,23 +73,23 @@ export default function TagPage({ examples, tag, tagDisplayName }: TagPageProps)
         <header className="max-w-4xl mx-auto px-4 py-8">
           <Link 
             href="/ai-examples"
-            className="inline-flex items-center gap-2 text-sm text-light-purple hover:text-text-color transition-colors mb-6"
+            className="inline-flex items-center gap-2 text-sm text-text-color hover:text-text-color transition-colors mb-6"
           >
             <ArrowLeft size={16} />
             Back to All Examples
           </Link>
 
           <div className="flex items-center gap-3 mb-4">
-            <Hash size={32} className="text-light-purple" />
+            <Hash size={32} className="text-text-color" />
             <h1 className="text-4xl sm:text-5xl font-extrabold text-text-color font-headline">
               {tagDisplayName}
             </h1>
           </div>
           
-          <p className="text-lg text-light-purple mb-2">
+          <p className="text-lg text-text-color mb-2">
             {examples.length} AI workflow{examples.length !== 1 ? 's' : ''} tagged with {tagDisplayName}
           </p>
-          <p className="text-light-purple">
+          <p className="text-text-color">
             Discover automation ideas and prompts related to {tagDisplayName.toLowerCase()}
           </p>
         </header>
@@ -109,7 +109,7 @@ export default function TagPage({ examples, tag, tagDisplayName }: TagPageProps)
             </div>
           ) : (
             <div className="text-center py-12">
-              <p className="text-light-purple mb-4">No examples found with this tag yet.</p>
+              <p className="text-text-color mb-4">No examples found with this tag yet.</p>
               <Link 
                 href="/ai-examples"
                 className="text-accent hover:text-accent underline"

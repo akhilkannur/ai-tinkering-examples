@@ -54,10 +54,10 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`inline-flex items-center text-sm font-sans font-medium transition-colors duration-200 ${
+                  className={`inline-flex items-center text-base font-sans font-bold transition-colors duration-200 ${
                     router.pathname.startsWith(link.href)
                       ? 'text-accent'
-                      : 'text-text-secondary hover:text-text-color'
+                      : 'text-text-color hover:text-accent'
                   }`}
                 >
                   {link.label}
@@ -103,10 +103,10 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`block px-3 py-2 rounded-none text-base font-medium ${
+                className={`block px-3 py-2 rounded-none text-base font-bold ${
                   router.pathname.startsWith(link.href)
                     ? 'bg-accent/20 text-accent'
-                    : 'text-text-secondary hover:bg-navy-dark hover:text-text-color'
+                    : 'text-text-color hover:bg-navy-dark hover:text-accent'
                 }`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >

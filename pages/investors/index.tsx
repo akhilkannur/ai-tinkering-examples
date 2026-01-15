@@ -112,7 +112,7 @@ export default function InvestorsPage({ initialInvestors }: InvestorsPageProps) 
           <h1 className="text-4xl md:text-5xl font-headline font-bold text-text-color mb-6 tracking-tight leading-tight uppercase">
             Micro-PE <span className="text-accent">Match</span>
           </h1>
-          <p className="text-lg text-text-secondary max-w-2xl mx-auto mb-8 leading-relaxed">
+          <p className="text-lg text-text-color/80 max-w-2xl mx-auto mb-8 leading-relaxed">
             {isUnlocked ? (
                 <span className="text-accent font-bold flex items-center justify-center gap-2">
                     <Check className="w-5 h-5" /> Premium Access Active
