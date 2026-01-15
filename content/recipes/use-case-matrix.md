@@ -14,6 +14,10 @@ sampleData:
     API Access,Automate data entry
     Mobile App,Work from anywhere
     ---
+    Persona,Pain_Point
+    CTO,Too much manual work
+    Field Rep,Can't access laptop
+---
 
 ## ⚡ Run this with AI (Fastest)
 If you have **Claude Code** or **Gemini CLI** open in this folder, just copy and paste:
@@ -24,12 +28,6 @@ implement the logic in public/blueprints/use-case-matrix/README.md
 
 **Option 2: The Manual Way**
 If you prefer using the ChatGPT or Claude web browser, copy the strategy below.
-
----
-Persona,Pain_Point
-    CTO,Too much manual work
-    Field Rep,Can't access laptop
----
 
 # Agent Configuration: The Translator
 

@@ -1,7 +1,11 @@
 ---
+id: "ai-manager-handbook"
 title: "The AI Manager's Handbook"
 category: "Operations"
-time: "15"
+tagline: "Teach AI your specific rules once."
+difficulty: "Beginner"
+time: "15 min"
+archetype: "Processor"
 publish_date: "2026-01-13"
 tags:
   - "Productivity"
