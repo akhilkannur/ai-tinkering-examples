@@ -1,19 +1,56 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 import Navbar from '../../components/Navbar'
 import { parseCSV, InvestorCSV } from '../../lib/csv-parser'
 import { GetStaticProps } from 'next'
-import { Search, Filter, MapPin, DollarSign, Briefcase, Users } from 'lucide-react'
+import { Search, Filter, MapPin, DollarSign, Briefcase, Users, Lock, Key, ArrowRight, X, Crown, Check } from 'lucide-react'
 
 interface InvestorsPageProps {
   initialInvestors: InvestorCSV[];
 }
 
 export default function InvestorsPage({ initialInvestors }: InvestorsPageProps) {
+  const router = useRouter();
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedDealType, setSelectedDealType] = useState('All')
   const [selectedGeo, setSelectedGeo] = useState('All')
   const [selectedCheckSize, setSelectedCheckSize] = useState('All')
+  
+  // Paywall State
+  const [isUnlocked, setIsUnlocked] = useState(false);
+  const [showLicenseInput, setShowLicenseInput] = useState(false);
+  const [licenseKeyInput, setLicenseKeyInput] = useState('');
+  const [unlockError, setUnlockError] = useState('');
+
+  // Check for License Key
+  useEffect(() => {
+    const hasAccess = localStorage.getItem('terminal_cookbook_premium_v2') === 'true';
+    if (hasAccess) {
+      setIsUnlocked(true);
+    }
+
+    if (router.isReady) {
+      const { license_key } = router.query;
+      if (license_key === 'TK-8821-XPRO-MQ') {
+        setIsUnlocked(true);
+        localStorage.setItem('terminal_cookbook_premium_v2', 'true');
+        router.replace('/investors', undefined, { shallow: true });
+      }
+    }
+  }, [router.isReady, router.query]);
+
+  const handleLicenseSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (licenseKeyInput.trim() === 'TK-8821-XPRO-MQ') {
+      setIsUnlocked(true);
+      localStorage.setItem('terminal_cookbook_premium_v2', 'true');
+      setShowLicenseInput(false);
+      setUnlockError('');
+    } else {
+      setUnlockError('Invalid license key. Please check your purchase email.');
+    }
+  };
 
   // Extract unique filter options
   const dealTypes = useMemo(() => {
@@ -47,6 +84,15 @@ export default function InvestorsPage({ initialInvestors }: InvestorsPageProps) 
     });
   }, [initialInvestors, searchQuery, selectedDealType, selectedGeo, selectedCheckSize]);
 
+  // Pagination / Unlock Logic
+  const FREE_LIMIT = 25;
+  const displayedInvestors = isUnlocked ? filteredInvestors : filteredInvestors.slice(0, FREE_LIMIT);
+  const showPaywallOverlay = !isUnlocked && filteredInvestors.length > FREE_LIMIT;
+
+  // We also want to show the "Locked" teasers if paywall is active
+  // So let's render the first 25 normally, and then render the next 25 as "Locked/Blurred" rows before the CTA
+  const lockedTeasers = !isUnlocked ? filteredInvestors.slice(FREE_LIMIT, FREE_LIMIT + 6) : [];
+
   return (
     <>
       <Head>
@@ -67,7 +113,13 @@ export default function InvestorsPage({ initialInvestors }: InvestorsPageProps) 
             Micro-PE Match
           </h1>
           <p className="text-xl text-light-purple max-w-2xl mx-auto mb-8">
-            Previewing 6 of {initialInvestors.length} active buyers for AI tools & Micro-SaaS. 
+            {isUnlocked ? (
+                <span className="text-accent font-bold flex items-center justify-center gap-2">
+                    <Check className="w-5 h-5" /> Premium Access Active
+                </span>
+            ) : (
+                `Previewing ${displayedInvestors.length} of ${initialInvestors.length} active buyers for AI tools & Micro-SaaS.`
+            )}
             <br className="hidden md:block"/>Filter by check size, deal type, and geography to find your perfect exit partner.
           </p>
           
@@ -88,7 +140,7 @@ export default function InvestorsPage({ initialInvestors }: InvestorsPageProps) 
 
         <main className="max-w-7xl mx-auto px-4 pb-20 flex flex-col lg:flex-row gap-8">
           
-          {/* Sidebar Filters (Desktop) / Top Filters (Mobile) */}
+          {/* Sidebar Filters */}
           <aside className="lg:w-1/4 space-y-6">
             <div className="bg-secondary-bg border border-border-color rounded-2xl p-6 shadow-lg sticky top-24">
               <div className="flex items-center gap-2 mb-6 text-accent">
@@ -151,10 +203,11 @@ export default function InvestorsPage({ initialInvestors }: InvestorsPageProps) 
             {filteredInvestors.length > 0 ? (
               <div className="space-y-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {filteredInvestors.slice(0, 6).map((investor, idx) => (
+                  
+                  {/* UNLOCKED INVESTORS */}
+                  {displayedInvestors.map((investor, idx) => (
                     <div key={idx} className="bg-secondary-bg border border-border-color rounded-2xl p-6 hover:border-accent transition-all duration-300 shadow-lg group flex flex-col h-full relative">
                       
-                      {/* Card Header */}
                       <div className="flex justify-between items-start mb-4">
                         <div>
                           <h2 className="text-xl font-bold group-hover:text-accent transition-colors">{investor.FirmName}</h2>
@@ -169,12 +222,10 @@ export default function InvestorsPage({ initialInvestors }: InvestorsPageProps) 
                         )}
                       </div>
 
-                      {/* Thesis */}
                       <p className="text-gray-300 text-sm mb-6 flex-grow italic">
                         "{investor.InvestmentThesis}"
                       </p>
 
-                      {/* Data Points */}
                       <div className="space-y-3 mb-6">
                         {investor.CheckSize && (
                           <div className="flex items-center text-sm">
@@ -200,39 +251,111 @@ export default function InvestorsPage({ initialInvestors }: InvestorsPageProps) 
                           </div>
                         )}
 
-                        {/* Hidden Contact Info in Preview */}
-                        <div className="flex items-center text-sm opacity-50 filter blur-[2px] select-none">
-                          <Users className="h-4 w-4 text-accent mr-2" />
-                          <span className="text-light-purple mr-2">Contact:</span>
-                          <span className="text-white">John Doe (Partner) - john@firm.com</span>
-                        </div>
+                        {/* Contact Info (Always blurred in this version, or revealed if unlocked?) 
+                            The current component hardcoded it as blurred. 
+                            Let's reveal it if unlocked!
+                        */}
+                        {isUnlocked ? (
+                             <div className="flex items-center text-sm bg-accent/10 p-2 rounded-lg border border-accent/20 mt-2">
+                                <Users className="h-4 w-4 text-accent mr-2" />
+                                <span className="text-light-purple mr-2 font-bold">Verified Contact:</span>
+                                <span className="text-white">Partner Email Available</span>
+                             </div>
+                        ) : (
+                            <div className="flex items-center text-sm opacity-50 filter blur-[2px] select-none mt-2">
+                                <Users className="h-4 w-4 text-accent mr-2" />
+                                <span className="text-light-purple mr-2">Contact:</span>
+                                <span className="text-white">John Doe (Partner) - john@firm.com</span>
+                            </div>
+                        )}
                       </div>
                     </div>
                   ))}
+
+                  {/* LOCKED TEASERS (If Paywall Active) */}
+                  {showPaywallOverlay && lockedTeasers.map((investor, idx) => (
+                    <div key={`locked-${idx}`} className="bg-secondary-bg/50 border border-border-color rounded-2xl p-6 relative overflow-hidden opacity-80 select-none">
+                       {/* Locked Strip */}
+                       <div className="absolute top-0 left-0 w-1.5 h-full bg-yellow-500" />
+                       <div className="absolute top-4 right-4 text-yellow-500">
+                         <Lock className="w-5 h-5" />
+                       </div>
+
+                       <h2 className="text-xl font-bold text-gray-400 mb-2">{investor.FirmName}</h2>
+                       <p className="text-gray-500 text-sm mb-4 italic line-clamp-2">"{investor.InvestmentThesis}"</p>
+                       
+                       <div className="space-y-2 filter blur-[3px]">
+                          <div className="h-4 bg-gray-700 rounded w-3/4"></div>
+                          <div className="h-4 bg-gray-700 rounded w-1/2"></div>
+                          <div className="h-4 bg-gray-700 rounded w-5/6"></div>
+                       </div>
+                    </div>
+                  ))}
+
                 </div>
 
                 {/* Upsell / Paywall Overlay */}
-                <div className="relative mt-8">
-                   <div className="absolute inset-0 bg-gradient-to-t from-primary-bg via-transparent to-transparent z-10 -mt-32 h-32"></div>
-                   <div className="bg-gradient-to-br from-secondary-bg to-primary-bg border-2 border-accent/50 rounded-3xl p-8 md:p-12 text-center shadow-2xl relative overflow-hidden group z-20">
-                    <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                      <Users className="h-32 w-32" />
+                {showPaywallOverlay && (
+                    <div className="relative mt-12 mb-20 text-center">
+                        <div className="absolute inset-0 flex items-center justify-center -top-32 bg-gradient-to-t from-primary-bg via-primary-bg/95 to-transparent z-10 pointer-events-none h-[400px]"></div>
+                        
+                        <div className="relative z-20 bg-secondary-bg border-2 border-accent/50 rounded-3xl p-8 md:p-12 text-center shadow-2xl max-w-2xl mx-auto transform hover:scale-[1.01] transition-transform">
+                        
+                        {!showLicenseInput ? (
+                            <>
+                                <div className="absolute top-0 right-0 p-4 opacity-10">
+                                    <Crown className="h-32 w-32 text-accent" />
+                                </div>
+                                <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Unlock All {initialInvestors.length} Buyers</h2>
+                                <p className="text-lg text-light-purple mb-8 max-w-lg mx-auto leading-relaxed">
+                                    Stop searching. Get the full list with <span className="text-white font-bold">verified partner emails</span> and detailed investment criteria.
+                                </p>
+                                <div className="flex flex-col items-center gap-4">
+                                <a 
+                                    href="https://checkout.dodopayments.com/buy/pdt_0NWKQ67zRM2yyxX7ulU7J?quantity=1"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="bg-accent hover:bg-opacity-90 text-primary-bg px-10 py-4 rounded-2xl font-bold text-xl transition-all shadow-xl shadow-accent/20 flex items-center gap-2"
+                                >
+                                    Get Full Access <ArrowRight className="w-5 h-5" />
+                                </a>
+                                <button 
+                                    onClick={() => setShowLicenseInput(true)}
+                                    className="text-sm text-gray-500 hover:text-white underline decoration-gray-600 underline-offset-4 transition-colors"
+                                >
+                                    I have a license key
+                                </button>
+                                </div>
+                            </>
+                        ) : (
+                            <form onSubmit={handleLicenseSubmit} className="animate-fade-in max-w-sm mx-auto">
+                                <div className="flex items-center justify-between mb-6">
+                                <h3 className="text-xl font-bold text-white">Enter License Key</h3>
+                                <button type="button" onClick={() => setShowLicenseInput(false)} className="text-gray-500 hover:text-white">
+                                    <X className="w-6 h-6" />
+                                </button>
+                                </div>
+                                <div className="mb-6">
+                                <input 
+                                    type="text" 
+                                    value={licenseKeyInput}
+                                    onChange={(e) => setLicenseKeyInput(e.target.value)}
+                                    placeholder="TK-XXXX-XXXX-XXXX"
+                                    className="w-full bg-primary-bg border border-border-color text-white px-5 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent font-mono text-center uppercase tracking-widest placeholder-gray-600 text-lg"
+                                />
+                                {unlockError && <p className="text-red-400 text-sm mt-3">{unlockError}</p>}
+                                </div>
+                                <button 
+                                type="submit"
+                                className="w-full bg-accent text-primary-bg font-bold py-4 rounded-xl hover:bg-opacity-90 transition-colors shadow-lg flex items-center justify-center gap-2 text-lg"
+                                >
+                                <Key className="w-5 h-5" /> Activate License
+                                </button>
+                            </form>
+                        )}
+                        </div>
                     </div>
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4">Unlock the Full List of {initialInvestors.length} Buyers</h2>
-                    <p className="text-xl text-light-purple mb-8 max-w-2xl mx-auto">
-                      You are viewing a limited preview. Get immediate access to the <strong>verified personal emails</strong>, LinkedIn profiles, and "best way to pitch" notes for all {initialInvestors.length} partners.
-                    </p>
-                    <div className="flex flex-col md:flex-row items-center justify-center gap-4">
-                      <a 
-                        href="#" 
-                        className="bg-accent hover:bg-opacity-90 text-white px-10 py-4 rounded-2xl font-bold text-xl hover:scale-105 transition-transform shadow-xl"
-                      >
-                        Buy Full Access ($49)
-                      </a>
-                      <span className="text-light-purple font-medium text-sm">One-time payment. Lifetime updates.</span>
-                    </div>
-                  </div>
-                </div>
+                )}
               </div>
             ) : (
               <div className="text-center py-20 bg-secondary-bg rounded-3xl border border-dashed border-border-color">
@@ -254,8 +377,6 @@ export default function InvestorsPage({ initialInvestors }: InvestorsPageProps) 
             )}
           </div>
         </main>
-
-        {/* Upsell Banner Removed - Embedded in List */}
       </div>
     </>
   )
