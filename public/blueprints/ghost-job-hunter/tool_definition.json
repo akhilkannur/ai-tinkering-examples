@@ -1,0 +1,18 @@
+{
+  "name": "ghost-job-hunter",
+  "description": "High-growth startups often have budget to hire before they have the time to post a job. This agent reads a list of niches from a CSV, finds recently funded startups, identifies key leadership gaps, and drafts 'Ready-to-Send' pitches.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "niches_to_hunt.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

@@ -12,6 +12,17 @@ sampleData:
     Goal: We want to become the #1 tool for E-com marketing teams in 2024.
 ---
 
+## ⚡ Run this with AI (Fastest)
+If you have **Claude Code** or **Gemini CLI** open in this folder, just copy and paste:
+
+```bash
+implement the logic in public/blueprints/okr-drafter/README.md
+```
+
+**Option 2: The Manual Way**
+If you prefer using the ChatGPT or Claude web browser, copy the strategy below.
+
+---
 # Agent Configuration: The Chief of Staff
 
 ## Role

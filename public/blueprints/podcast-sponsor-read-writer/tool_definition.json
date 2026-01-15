@@ -1,0 +1,18 @@
+{
+  "name": "podcast-sponsor-read-writer",
+  "description": "Host-read ads convert best. This agent takes a sponsor's talking points (if provided) or researches a brand to write a natural, conversational script that fits your show's specific voice.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "sponsor_bullets.txt",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

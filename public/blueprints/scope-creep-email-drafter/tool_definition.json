@@ -1,0 +1,18 @@
+{
+  "name": "scope-creep-email-drafter",
+  "description": "Clients always ask for 'just one small change'. This agent drafts polite but firm responses that either decline requests or pivot them into paid 'Change Orders', protecting your profit margins across all your projects.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "requests.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

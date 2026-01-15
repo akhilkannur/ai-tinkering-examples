@@ -1,0 +1,18 @@
+{
+  "name": "comment-section-nurturer",
+  "description": "Comments are the highest signal of interest. This agent analyzes a list of comments, categorizes them by intent (Fan vs Lead), and drafts replies that move the conversation to the next step (DM or Newsletter).",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "comments.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

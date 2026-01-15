@@ -1,0 +1,18 @@
+{
+  "name": "feature-adoption-analyzer",
+  "description": "You launched a feature, but did it land? This agent analyzes product usage logs to calculate 'Adoption Rate' by customer segment (e.g., Enterprise vs. SMB), telling you which cohort needs more education.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "usage_logs.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

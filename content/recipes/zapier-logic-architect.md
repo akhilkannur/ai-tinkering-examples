@@ -15,6 +15,17 @@ sampleData:
     Content Distro,RSS Feed,LinkedIn,Cross-post blog updates with custom hooks
 ---
 
+## ⚡ Run this with AI (Fastest)
+If you have **Claude Code** or **Gemini CLI** open in this folder, just copy and paste:
+
+```bash
+implement the logic in public/blueprints/zapier-logic-architect/README.md
+```
+
+**Option 2: The Manual Way**
+If you prefer using the ChatGPT or Claude web browser, copy the strategy below.
+
+---
 # Agent Configuration: The Automator
 
 ## Role

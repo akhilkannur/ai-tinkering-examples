@@ -1,0 +1,18 @@
+{
+  "name": "sales-territory-mapper",
+  "description": "Redistributing territories is a headache. This agent reads a list of customer zip codes and aggregates them into balanced 'Territories' based on revenue potential, ensuring fair patches for all reps.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "customer_zips.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

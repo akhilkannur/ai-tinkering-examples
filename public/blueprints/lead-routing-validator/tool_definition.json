@@ -1,0 +1,18 @@
+{
+  "name": "lead-routing-validator",
+  "description": "Leads often fall into 'black holes' due to broken territory logic. This agent audits a CSV of recent leads, checks them against territory rules (Zip Code/Employee Count), and flags any assigned to the wrong rep or the 'Unassigned' queue.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "recent_leads.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

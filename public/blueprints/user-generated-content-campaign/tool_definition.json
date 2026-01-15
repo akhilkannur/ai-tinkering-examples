@@ -1,0 +1,18 @@
+{
+  "name": "user-generated-content-campaign",
+  "description": "Social proof is your best sales tool. This agent designs viral UGC contests and campaigns for your entire product line, incentivizing users to create high-quality marketing assets for you.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "brands.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

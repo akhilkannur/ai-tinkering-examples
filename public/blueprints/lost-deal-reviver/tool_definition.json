@@ -1,0 +1,18 @@
+{
+  "name": "lost-deal-reviver",
+  "description": "A 'No' 6 months ago might be a 'Yes' today. This agent takes a CSV of leads lost due to specific reasons (e.g., 'Missing Feature X') and drafts a hyper-relevant follow-up based on your recent product launches.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "lost_leads.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

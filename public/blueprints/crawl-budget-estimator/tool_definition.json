@@ -1,0 +1,18 @@
+{
+  "name": "crawl-budget-estimator",
+  "description": "Large sites often launch thousands of pages that never get seen. This agent analyzes your server logs (simulated via CSV) to calculate the 'Average Daily Crawl Rate' and estimates how long it will take to index a new batch of content.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "server_logs_sample.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

@@ -1,0 +1,18 @@
+{
+  "name": "twitter-follower-export-cleaner",
+  "description": "Raw Twitter data is messy. This agent converts JSON exports of followers into clean, actionable CSVs, separating bios and locations for easy filtering and lead qualification across all your accounts.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "exports.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

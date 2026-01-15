@@ -1,0 +1,18 @@
+{
+  "name": "product-description-seo",
+  "description": "Copy-pasted manufacturer descriptions hurt your SEO. This agent reads a CSV of your product catalog and rewrites every description to include long-tail keywords and benefit-driven bullets.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "catalog_raw.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

@@ -1,0 +1,18 @@
+{
+  "name": "google-ads-negative-keyword-factory",
+  "description": "Broad match wastes money. This agent reads a list of industries from a CSV and generates a standard 'Negative Keyword List' for each, blocking junk traffic (jobs, free, torrents) tailored to that sector.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "target_industries.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

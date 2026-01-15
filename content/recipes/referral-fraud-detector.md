@@ -16,6 +16,17 @@ sampleData:
     user_789,real_friend@yahoo.com,10.0.0.5,2024-10-01 12:00:00
 ---
 
+## ⚡ Run this with AI (Fastest)
+If you have **Claude Code** or **Gemini CLI** open in this folder, just copy and paste:
+
+```bash
+implement the logic in public/blueprints/referral-fraud-detector/README.md
+```
+
+**Option 2: The Manual Way**
+If you prefer using the ChatGPT or Claude web browser, copy the strategy below.
+
+---
 # Agent Configuration: The Fraud Analyst
 
 ## Role

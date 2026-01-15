@@ -1,0 +1,18 @@
+{
+  "name": "roadmap-prioritizer",
+  "description": "You have 50 feature requests and 2 developers. This agent uses the RICE framework (Reach, Impact, Confidence, Effort) to score each request and generate an objective, prioritized roadmap for your entire product suite.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "feature_requests.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

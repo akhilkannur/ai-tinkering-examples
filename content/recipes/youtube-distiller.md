@@ -15,6 +15,17 @@ sampleData:
     SEO in 2024,https://youtube.com/watch?v=789,Marketing
 ---
 
+## ⚡ Run this with AI (Fastest)
+If you have **Claude Code** or **Gemini CLI** open in this folder, just copy and paste:
+
+```bash
+implement the logic in public/blueprints/youtube-distiller/README.md
+```
+
+**Option 2: The Manual Way**
+If you prefer using the ChatGPT or Claude web browser, copy the strategy below.
+
+---
 # Agent Configuration: Video Distiller
 
 ## Role

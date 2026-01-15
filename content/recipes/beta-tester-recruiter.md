@@ -16,6 +16,17 @@ sampleData:
     Charlie,charlie@example.com,2024-01-01,Dark Mode
 ---
 
+## ⚡ Run this with AI (Fastest)
+If you have **Claude Code** or **Gemini CLI** open in this folder, just copy and paste:
+
+```bash
+implement the logic in public/blueprints/beta-tester-recruiter/README.md
+```
+
+**Option 2: The Manual Way**
+If you prefer using the ChatGPT or Claude web browser, copy the strategy below.
+
+---
 # Agent Configuration: The Beta Recruiter
 
 ## Role

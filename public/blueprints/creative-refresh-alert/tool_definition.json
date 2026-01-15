@@ -1,0 +1,18 @@
+{
+  "name": "creative-refresh-alert",
+  "description": "Ad fatigue raises CPA. This agent analyzes your ad performance reports, flagging ads with High Frequency and declining CTR, signaling exactly when to launch new creative across all your campaigns.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "ad_performance.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

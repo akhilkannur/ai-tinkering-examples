@@ -1,0 +1,18 @@
+{
+  "name": "utm-builder-spreadsheet",
+  "description": "Manual tagging causes errors and messy data. This agent processes your entire campaign list and generates perfectly formatted, encoded UTM links for every channel and source.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "campaigns.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

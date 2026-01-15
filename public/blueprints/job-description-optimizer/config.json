@@ -1,0 +1,4 @@
+{
+  "input_file": "job_postings.csv",
+  "output_file": "output.csv"
+}

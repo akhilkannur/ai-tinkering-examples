@@ -1,0 +1,18 @@
+{
+  "name": "referral-program-architect",
+  "description": "Referrals have the lowest CAC. This agent designs 'Double-Sided' referral programs tailored to your specific unit economics and business model for an entire portfolio of products.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "brands.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

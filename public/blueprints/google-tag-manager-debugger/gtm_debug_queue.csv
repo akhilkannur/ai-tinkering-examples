@@ -1,0 +1,3 @@
+Property,GTM_ID,Snippet_To_Test
+Marketing_Site,GTM-1234,"dataLayer.push({'event': 'purchase', 'val': 100})"
+Blog,GTM-5678,"dataLayer.push({'event': 'NewsletterSignup'})"

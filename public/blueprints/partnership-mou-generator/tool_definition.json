@@ -1,0 +1,18 @@
+{
+  "name": "partnership-mou-generator",
+  "description": "Alignment prevents disputes. This agent reads your partnership notes (if provided) or researches industry standards for your partnership type (Integration, Co-marketing, Referral) to draft a professional 1-page MOU.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "partnership_notes.txt",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

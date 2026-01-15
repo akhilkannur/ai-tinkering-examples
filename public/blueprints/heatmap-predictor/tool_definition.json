@@ -1,0 +1,18 @@
+{
+  "name": "heatmap-predictor",
+  "description": "Heatmaps usually require traffic. This agent analyzes a screenshot of your landing page using visual saliency principles (contrast, faces, text size) to predict where user attention will fall, generating a 'simulated heatmap' description.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "page_elements.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

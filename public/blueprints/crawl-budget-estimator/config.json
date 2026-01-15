@@ -1,0 +1,4 @@
+{
+  "input_file": "server_logs_sample.csv",
+  "output_file": "output.csv"
+}

@@ -1,0 +1,4 @@
+Old_Path,New_Path,Redirect_Type
+/about-us,/about,301
+/products/item-1,/shop/new-item-1,301
+/blog/old-post,/blog/latest-post,301

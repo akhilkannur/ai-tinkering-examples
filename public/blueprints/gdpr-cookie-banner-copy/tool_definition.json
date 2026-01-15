@@ -1,0 +1,18 @@
+{
+  "name": "gdpr-cookie-banner-copy",
+  "description": "Cookie banners annoy users and kill data collection. This agent writes 'Human' copy for your consent manager that explains *why* you track, increasing your 'Accept' rate across all your properties.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "brands.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

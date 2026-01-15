@@ -1,0 +1,14 @@
+{
+  "input_file": "messy_crm_export.csv",
+  "output_file": "final_import_ready.csv",
+  "columns": {
+    "phone": "Phone",
+    "name": "Name",
+    "email": "Email"
+  },
+  "settings": {
+    "default_country_code": "+1",
+    "format_names_title_case": true,
+    "email_lowercase": true
+  }
+}

@@ -1,0 +1,3 @@
+Customer,Logins_Last_30,Last_NPS,Payment_Status
+CustA,20,9,Paid
+CustB,0,6,Overdue

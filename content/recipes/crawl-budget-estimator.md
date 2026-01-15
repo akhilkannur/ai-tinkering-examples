@@ -16,6 +16,17 @@ sampleData:
     2023-10-02,Googlebot,/page-3
 ---
 
+## ⚡ Run this with AI (Fastest)
+If you have **Claude Code** or **Gemini CLI** open in this folder, just copy and paste:
+
+```bash
+implement the logic in public/blueprints/crawl-budget-estimator/README.md
+```
+
+**Option 2: The Manual Way**
+If you prefer using the ChatGPT or Claude web browser, copy the strategy below.
+
+---
 # Agent Configuration: The Server Admin
 
 ## Role

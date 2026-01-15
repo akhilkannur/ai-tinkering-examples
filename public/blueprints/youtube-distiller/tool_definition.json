@@ -1,0 +1,18 @@
+{
+  "name": "youtube-distiller",
+  "description": "Watches long YouTube videos and extracts key arguments, unique insights, and implementation checklists for your entire learning queue.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "videos.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

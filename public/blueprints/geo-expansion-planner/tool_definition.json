@@ -1,0 +1,18 @@
+{
+  "name": "geo-expansion-planner",
+  "description": "You're big in the US, but what about Europe? This agent analyzes your current web traffic and lead data by 'Country', comparing Conversion Rates to identify markets with high demand but low local support.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "geo_data.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

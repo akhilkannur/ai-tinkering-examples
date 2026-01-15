@@ -1,0 +1,18 @@
+{
+  "name": "internal-link-graph-visualizer",
+  "description": "Orphaned pages don't rank. This agent processes complex internal link data and generates Mermaid.js diagram code to visualize your site's architecture and identify silos.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "site_links.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

@@ -12,6 +12,17 @@ sampleData:
     User: "I really loved how easy the automation setup was. Before this, I was spending 10 hours a week on it. Now it takes 2 minutes."
 ---
 
+## ⚡ Run this with AI (Fastest)
+If you have **Claude Code** or **Gemini CLI** open in this folder, just copy and paste:
+
+```bash
+implement the logic in public/blueprints/testimonial-extractor/README.md
+```
+
+**Option 2: The Manual Way**
+If you prefer using the ChatGPT or Claude web browser, copy the strategy below.
+
+---
 # Agent Configuration: The Social Proof Factory
 
 ## Role

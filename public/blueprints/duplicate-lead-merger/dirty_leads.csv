@@ -1,0 +1,6 @@
+Lead_ID,Email,Phone,Last_Active,Company,Title
+1,john@acme.com,,2023-01-01,Acme Corp,
+2,john@acme.com,555-0199,2023-10-01,Acme Inc.,Manager
+3,sarah@beta.com,555-0200,2023-05-15,Beta LLC,Director
+4,sarah@beta.com,,2023-02-20,Beta,
+5,mike@gamma.com,555-0300,2023-11-11,Gamma,VP

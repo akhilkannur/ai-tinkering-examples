@@ -1,0 +1,18 @@
+{
+  "name": "cold-email-spam-checker",
+  "description": "Cold emails die in spam. This agent scans a batch of email drafts for high-risk trigger words ('Guarantee', 'Free', '$$$') and suggests safer synonyms to maximize deliverability.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "drafts.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

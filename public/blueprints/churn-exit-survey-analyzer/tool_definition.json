@@ -1,0 +1,18 @@
+{
+  "name": "churn-exit-survey-analyzer",
+  "description": "Exit surveys are often ignored. This agent analyzes open-ended 'Why did you cancel?' responses, clusters them into root causes (e.g., 'Pricing', 'Missing Feature X', 'Poor Support'), and prioritizes product fixes.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "exit_surveys.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

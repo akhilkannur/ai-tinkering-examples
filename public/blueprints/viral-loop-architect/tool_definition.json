@@ -1,0 +1,18 @@
+{
+  "name": "viral-loop-architect",
+  "description": "A single referral program isn't enough. This agent reads a list of user segments from a CSV and designs a specialized 'Viral Loop' for each, including custom flow diagrams and incentive math.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "user_segments.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

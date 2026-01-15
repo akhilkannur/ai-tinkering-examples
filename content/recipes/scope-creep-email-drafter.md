@@ -15,6 +15,17 @@ sampleData:
     FinTech Ads,PPC Setup,Can you manage our SEO for free this month?
 ---
 
+## ⚡ Run this with AI (Fastest)
+If you have **Claude Code** or **Gemini CLI** open in this folder, just copy and paste:
+
+```bash
+implement the logic in public/blueprints/scope-creep-email-drafter/README.md
+```
+
+**Option 2: The Manual Way**
+If you prefer using the ChatGPT or Claude web browser, copy the strategy below.
+
+---
 # Agent Configuration: The Project Manager
 
 ## Role

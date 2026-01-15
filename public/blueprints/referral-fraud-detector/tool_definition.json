@@ -1,0 +1,18 @@
+{
+  "name": "referral-fraud-detector",
+  "description": "Self-referrals and bot farms kill your program's ROI. This agent analyzes your referral logs to flag suspicious behavior—including IP collisions and sequential email patterns—so you can protect your budget.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "referral_logs.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

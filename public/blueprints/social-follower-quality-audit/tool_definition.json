@@ -1,0 +1,18 @@
+{
+  "name": "social-follower-quality-audit",
+  "description": "Follower count is a vanity metric. This agent audits your own follower list (if provided) or researches a competitor's engagement to detect 'Bot Signals' like low engagement-to-follower ratios or repetitive comment patterns.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "follower_list.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

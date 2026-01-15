@@ -14,6 +14,17 @@ sampleData:
     jane smith,(555) 012-3456,jane@globex.com
 ---
 
+## ⚡ Run this with AI (Fastest)
+If you have **Claude Code** or **Gemini CLI** open in this folder, just copy and paste:
+
+```bash
+implement the logic in public/blueprints/csv-crm-normalizer/README.md
+```
+
+**Option 2: The Manual Way**
+If you prefer using the ChatGPT or Claude web browser, copy the strategy below.
+
+---
 # Agent Configuration: The Data Cleanser
 
 ## Role

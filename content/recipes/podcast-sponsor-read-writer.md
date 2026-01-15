@@ -12,6 +12,17 @@ sampleData:
     Brand: BlueBottle Coffee. Points: Fresh beans, subscription model, 20% off with code GROW.
 ---
 
+## ⚡ Run this with AI (Fastest)
+If you have **Claude Code** or **Gemini CLI** open in this folder, just copy and paste:
+
+```bash
+implement the logic in public/blueprints/podcast-sponsor-read-writer/README.md
+```
+
+**Option 2: The Manual Way**
+If you prefer using the ChatGPT or Claude web browser, copy the strategy below.
+
+---
 # Agent Configuration: The Host-Voice Copywriter
 
 ## Role

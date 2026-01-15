@@ -1,0 +1,18 @@
+{
+  "name": "keyword-cannibalization-detective",
+  "description": "When two pages rank for the same keyword, neither ranks well. This agent analyzes GSC data (Keyword + URL) to find terms where multiple pages share impressions, suggesting which one to canonicalize or merge.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "gsc_query_data.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

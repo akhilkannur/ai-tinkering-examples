@@ -1,0 +1,18 @@
+{
+  "name": "local-seo-audit",
+  "description": "Managing SEO for multiple locations is hard. This agent reads a list of locations from a CSV, audits their Google Maps profiles, checks NAP consistency across the web, and generates a prioritized 'Fix List' for every branch.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "locations_to_audit.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

@@ -1,0 +1,18 @@
+{
+  "name": "alternative-to-builder",
+  "description": "High-intent buyers search for 'Alternatives to [Competitor]'. This agent reads a list of competitors from a CSV, researches their weaknesses, and generates a library of comparison landing pages that position YOUR product as the winner.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "competitors_to_compare.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

@@ -15,6 +15,17 @@ sampleData:
     LeadB,Bob,2023-10-08 09:00,New
 ---
 
+## ⚡ Run this with AI (Fastest)
+If you have **Claude Code** or **Gemini CLI** open in this folder, just copy and paste:
+
+```bash
+implement the logic in public/blueprints/lead-aging-alerts/README.md
+```
+
+**Option 2: The Manual Way**
+If you prefer using the ChatGPT or Claude web browser, copy the strategy below.
+
+---
 # Agent Configuration: The Alarm Clock
 
 ## Role

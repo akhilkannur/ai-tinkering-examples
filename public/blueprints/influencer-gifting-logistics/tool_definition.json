@@ -1,0 +1,18 @@
+{
+  "name": "influencer-gifting-logistics",
+  "description": "Manual gifting is slow and error-prone. This agent reads a list of influencer addresses and their chosen product variant from a CSV, cleans the data for shipping labels, and drafts the personalized tracking emails.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "gifting_list.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

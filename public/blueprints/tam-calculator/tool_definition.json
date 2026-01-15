@@ -1,0 +1,18 @@
+{
+  "name": "tam-calculator",
+  "description": "Investors need to see the math. This agent researches industry sizes, pricing benchmarks, and customer counts to calculate your TAM, SAM, and SOM using defensible 'Bottom-Up' logic for multiple market segments.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "market_segments.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

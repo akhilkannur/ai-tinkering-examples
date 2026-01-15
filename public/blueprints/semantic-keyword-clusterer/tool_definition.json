@@ -1,0 +1,18 @@
+{
+  "name": "semantic-keyword-clusterer",
+  "description": "Keyword stuffing is dead. This agent takes a raw list of keywords and groups them into 'Semantic Clusters' to help you plan Hub & Spoke content strategies at scale.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "keywords.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

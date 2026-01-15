@@ -1,0 +1,18 @@
+{
+  "name": "review-miner-pm",
+  "description": "Scrapes negative reviews for a list of competitors, identifies missing features across the market, and ranks them by revenue impact to build a winning roadmap.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "competitors_to_mine.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

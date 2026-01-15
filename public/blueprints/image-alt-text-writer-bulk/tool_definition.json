@@ -1,0 +1,18 @@
+{
+  "name": "image-alt-text-writer-bulk",
+  "description": "Missing alt text hurts SEO and accessibility. This agent takes a list of image filenames and context to generate descriptive, keyword-rich alt text for hundreds of assets in seconds.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "images.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

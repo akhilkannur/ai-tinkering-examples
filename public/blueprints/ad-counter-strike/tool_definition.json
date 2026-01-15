@@ -1,0 +1,18 @@
+{
+  "name": "ad-counter-strike",
+  "description": "Why attack one competitor? This agent reads a list of competitor landing pages from a CSV, identifies their core hooks, and generates a 'Counter-Ad' (Copy + Visual) for every single one to help you win their customers.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "competitors_to_attack.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

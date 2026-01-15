@@ -1,0 +1,18 @@
+{
+  "name": "twitter-thread-hook-writer",
+  "description": "The first tweet makes or breaks the thread. This agent reads your specific story (if provided) or researches trending topics in your niche to generate 5 high-converting hooks designed to stop the scroll.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "story_notes.txt",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

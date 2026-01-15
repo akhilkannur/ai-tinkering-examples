@@ -1,0 +1,18 @@
+{
+  "name": "email-dns-auditor",
+  "description": "Content doesn't matter if your email bounces. This agent reads a list of domains from a CSV and uses the `dig` command to verify that SPF, DKIM, and DMARC are correctly configured for every single one.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "domains_to_test.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

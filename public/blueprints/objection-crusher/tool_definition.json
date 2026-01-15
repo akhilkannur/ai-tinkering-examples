@@ -1,0 +1,18 @@
+{
+  "name": "objection-crusher",
+  "description": "Sales reps freeze when hit with a tough question. This agent reads your call notes (if provided) or researches a competitor's negative reviews to identify the most common objections and drafts a 'Kill Shot' rebuttal for each.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "call_objections.txt",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

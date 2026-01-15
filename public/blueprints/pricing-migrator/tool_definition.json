@@ -1,0 +1,18 @@
+{
+  "name": "pricing-migrator",
+  "description": "Changing pricing is scary. This agent analyzes your current customer base, simulates moving them to new 2026 pricing tiers based on their usage (Seats/Storage), and calculates the 'Revenue Uplift' and 'Churn Risk'.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "current_customers.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

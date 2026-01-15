@@ -1,0 +1,18 @@
+{
+  "name": "renewal-reminder-sequence",
+  "description": "Contracts expire. This agent automates the renewal cadence for your entire customer base, ensuring you have time to negotiate upsells or save at-risk accounts before the auto-renew date.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "contracts.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

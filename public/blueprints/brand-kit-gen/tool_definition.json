@@ -1,0 +1,18 @@
+{
+  "name": "brand-kit-gen",
+  "description": "Instantly create cohesive visual identity starter kits for multiple projects. This agent generates logos, seamless background patterns, and defines color palettes for an entire portfolio of brands.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "brands.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

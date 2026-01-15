@@ -1,0 +1,18 @@
+{
+  "name": "serp-intent-decoder",
+  "description": "Stop guessing what content to write. This agent analyzes the top ranking pages for your target keyword to decode exactly what format, length, and angle Google is currently rewarding.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "target_keywords.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

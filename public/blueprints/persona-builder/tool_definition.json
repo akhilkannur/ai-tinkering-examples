@@ -1,0 +1,18 @@
+{
+  "name": "persona-builder",
+  "description": "Vague marketing fails. This agent researches your target niches to uncover real-world fears, desires, and 'Watering Holes', building data-backed ICP cards for your entire market map.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "niches.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

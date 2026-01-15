@@ -1,0 +1,4 @@
+{
+  "input_file": "pipeline_snapshots.csv",
+  "output_file": "output.csv"
+}

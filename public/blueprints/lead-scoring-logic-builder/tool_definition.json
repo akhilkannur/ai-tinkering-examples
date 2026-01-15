@@ -1,0 +1,18 @@
+{
+  "name": "lead-scoring-logic-builder",
+  "description": "Stop wasting time on low-value leads. This agent reads your lead history CSV (if provided) or researches your industry to design a points-based logic (Title=CEO +10pts, Gmail -5pts) and writes the pseudo-code for implementation.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "lead_history.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

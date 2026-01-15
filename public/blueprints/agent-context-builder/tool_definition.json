@@ -1,0 +1,18 @@
+{
+  "name": "agent-context-builder",
+  "description": "AI agents struggle when they don't know your project's structure. This agent scans your current directory, identifies key files/stacks, and generates an `AGENTS.md` file. This file acts as a 'ReadMe for Robots,' ensuring every future agent knows exactly how to work with your code.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "project_scan_simulation.txt",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

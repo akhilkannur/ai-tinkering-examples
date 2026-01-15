@@ -1,0 +1,18 @@
+{
+  "name": "social-intent-scout",
+  "description": "Leads with intent convert 10x better. This agent reads a list of 'Pain Point Keywords' from a CSV, scans social communities for people explicitly asking for help, and builds a prioritized outreach list.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "intent_keywords.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

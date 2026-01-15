@@ -1,0 +1,18 @@
+{
+  "name": "win-loss-analysis-interviewer",
+  "description": "Sales reps rarely hear the full truth. This agent processes your internal 'Closed-Lost' notes or researches competitor G2 reviews to uncover the real reasons deals fail across your entire pipeline.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "lost_deals.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

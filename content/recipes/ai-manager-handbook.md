@@ -10,6 +10,17 @@ tags:
 summary: "Stop repeating yourself. Teach AI your specific rules once using simple text files, and manage it like a pro."
 ---
 
+## ⚡ Run this with AI (Fastest)
+If you have **Claude Code** or **Gemini CLI** open in this folder, just copy and paste:
+
+```bash
+implement the logic in public/blueprints/ai-manager-handbook/README.md
+```
+
+**Option 2: The Manual Way**
+If you prefer using the ChatGPT or Claude web browser, copy the strategy below.
+
+---
 ## Goal
 To create a "Memory System" for your AI chats. Instead of explaining your brand voice, color codes, or formatting rules every single time you start a new chat, you will build a set of simple instructions (The Handbook) that you can reference instantly. This turns you from a "Prompter" into a "Manager."
 

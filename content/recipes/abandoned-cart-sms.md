@@ -16,6 +16,17 @@ sampleData:
     Mike Ross,Wireless Headphones,199,https://store.com/cart/789
 ---
 
+## ⚡ Run this with AI (Fastest)
+If you have **Claude Code** or **Gemini CLI** open in this folder, just copy and paste:
+
+```bash
+implement the logic in public/blueprints/abandoned-cart-sms/README.md
+```
+
+**Option 2: The Manual Way**
+If you prefer using the ChatGPT or Claude web browser, copy the strategy below.
+
+---
 # Agent Configuration: The SMS Writer
 
 ## Role
@@ -45,5 +56,3 @@ For each customer in the CSV:
     *   *SMS 3 (24 hours):* The Scarcity. "Last call, [Customer_Name]! Your cart for the [Product] expires in 1 hour. [Cart_URL]. STOP to opt out."
 
 ### Phase 3: Structured Output
-1.  **Create:** `sms_recovery_sequences.csv` with columns: `Customer_Name`, `Product`, `SMS_1`, `SMS_2`, `SMS_3`.
-2.  **Report:** "Generated recovery sequences for [X] customers. Files saved to `sms_recovery_sequences.csv`."

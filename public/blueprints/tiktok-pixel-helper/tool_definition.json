@@ -1,0 +1,18 @@
+{
+  "name": "tiktok-pixel-helper",
+  "description": "TikTok pixels are finicky. This agent audits your existing event code (if provided) or researches your product type to generate a standardized event snippet including 'Value' and 'Content ID' parameters.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "current_pixel.txt",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

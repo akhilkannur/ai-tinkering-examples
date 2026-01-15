@@ -1,0 +1,18 @@
+{
+  "name": "linkedin-insight-tag-auditor",
+  "description": "The LinkedIn Insight Tag is often missing on critical pages. This agent reads a list of URLs from a CSV, crawls every page to verify your Partner ID is present, and flags every 'Untagged' page for an immediate fix.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "pages_to_audit.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

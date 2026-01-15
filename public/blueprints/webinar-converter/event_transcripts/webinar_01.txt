@@ -1,0 +1,2 @@
+Attendee: "Is this secure?"
+Host: "Yes, we use 256-bit encryption."

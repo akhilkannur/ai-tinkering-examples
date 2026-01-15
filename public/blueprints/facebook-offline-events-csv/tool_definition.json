@@ -1,0 +1,18 @@
+{
+  "name": "facebook-offline-events-csv",
+  "description": "Ads drive store visits and phone sales. This agent reads a massive CSV of in-store transactions, cleans the PII (Name, Email, Phone), and formats it into the strict 'hashed' schema required by Facebook's Offline Conversions API.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "raw_sales_log.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

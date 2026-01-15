@@ -1,0 +1,4 @@
+{
+  "input_file": "monitored_keywords.csv",
+  "output_file": "output.csv"
+}

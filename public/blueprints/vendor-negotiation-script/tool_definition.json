@@ -1,0 +1,18 @@
+{
+  "name": "vendor-negotiation-script",
+  "description": "Everything is negotiable. This agent reads your current vendor bill (if provided) or researches a specific tool to find competitor deals and parity pricing, then drafts a high-leverage negotiation script for you.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "vendor_bill.txt",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

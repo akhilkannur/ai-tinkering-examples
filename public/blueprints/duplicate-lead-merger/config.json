@@ -1,0 +1,8 @@
+{
+  "input_file": "dirty_leads.csv",
+  "output_file": "clean_leads.csv",
+  "report_file": "merge_report.csv",
+  "merge_key": "Email",
+  "priority_column": "Last_Active",
+  "columns_to_merge": ["Phone", "Company", "Title"]
+}

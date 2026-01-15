@@ -1,0 +1,18 @@
+{
+  "name": "tiktok-trend-adapter",
+  "description": "Trending sounds get views, but how do you use them for SaaS? This agent researches current TikTok trends and brainstorms specific ways to adapt them for your professional niches without being 'cringe'.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "niches.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

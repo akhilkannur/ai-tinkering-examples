@@ -1,0 +1,18 @@
+{
+  "name": "partner-program-hunter",
+  "description": "Why sell 1-to-1 when you can sell 1-to-many? This agent reads a list of adjacent tool categories from a CSV, identifies the top 5 players in each, and drafts a 'Better Together' integration pitch for their Head of Partnerships.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "adjacent_niches.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

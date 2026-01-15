@@ -1,0 +1,18 @@
+{
+  "name": "nps-classifier",
+  "description": "NPS scores are useless without context. This agent reads open-ended NPS feedback, categorizes each comment (e.g., 'Pricing', 'Support', 'Product Bug'), and quantifies the top drivers of dissatisfaction.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "nps_feedback.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

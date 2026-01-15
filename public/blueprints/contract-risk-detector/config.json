@@ -1,0 +1,4 @@
+{
+  "input_file": "contracts_to_audit.csv",
+  "output_file": "output.csv"
+}

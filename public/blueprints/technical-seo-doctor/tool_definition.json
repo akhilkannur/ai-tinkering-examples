@@ -1,0 +1,18 @@
+{
+  "name": "technical-seo-doctor",
+  "description": "Performs technical audits on multiple URLs simultaneously. This agent checks for critical failures like missing H1s, broken meta tags, and accessibility issues across your entire site.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "landing_pages.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

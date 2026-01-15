@@ -1,0 +1,18 @@
+{
+  "name": "testimonial-extractor",
+  "description": "Your customers say amazing things on Zoom, but it gets lost. This agent scans a folder of call transcripts, extracts the 'Aha! Moments', and generates a structured testimonial database.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "transcripts/call_1.txt",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

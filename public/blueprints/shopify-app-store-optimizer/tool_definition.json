@@ -1,0 +1,18 @@
+{
+  "name": "shopify-app-store-optimizer",
+  "description": "The Shopify App Store is a search engine. This agent researches top-ranking competitors and audits your app listings to ensure you rank for high-intent terms like 'Upsell' or 'Bundling'.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "apps.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

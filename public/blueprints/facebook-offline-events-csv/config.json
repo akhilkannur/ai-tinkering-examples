@@ -1,0 +1,4 @@
+{
+  "input_file": "raw_sales_log.csv",
+  "output_file": "output.csv"
+}

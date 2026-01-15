@@ -1,0 +1,18 @@
+{
+  "name": "logo-to-brand-kit",
+  "description": "Launch landing pages fast for all your projects. This agent takes a list of logo files, extracts brand DNA (colors, font vibes), and generates CSS themes or Tailwind configs for every brand in your portfolio.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "logos_to_process.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

@@ -1,0 +1,18 @@
+{
+  "name": "affiliate-program-launcher",
+  "description": "Affiliates drive 30% of revenue for SaaS. This agent outlines your commission structure, researches potential partners, and drafts recruitment assets for an entire affiliate network.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "partners.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

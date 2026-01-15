@@ -15,6 +15,17 @@ sampleData:
     The User Pivot,Busy End-User,Time to learn a new tool
 ---
 
+## ⚡ Run this with AI (Fastest)
+If you have **Claude Code** or **Gemini CLI** open in this folder, just copy and paste:
+
+```bash
+implement the logic in public/blueprints/sales-roleplay-simulator/README.md
+```
+
+**Option 2: The Manual Way**
+If you prefer using the ChatGPT or Claude web browser, copy the strategy below.
+
+---
 # Agent Configuration: The Roleplay Partner
 
 ## Role

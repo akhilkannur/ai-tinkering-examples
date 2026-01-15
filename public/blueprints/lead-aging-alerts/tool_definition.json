@@ -1,0 +1,18 @@
+{
+  "name": "lead-aging-alerts",
+  "description": "Leads go cold in 48 hours. This agent scans your 'New' lead queue, identifies records that have been untouched for >24 hours, and Slack/Emails the assigned rep to wake them up.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "new_leads.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

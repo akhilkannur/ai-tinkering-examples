@@ -1,0 +1,18 @@
+{
+  "name": "competitor-spy",
+  "description": "Builds comprehensive dossiers on your competitors. This agent researches pricing, active ad hooks, and customer complaints to build battle cards for your entire sales team.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "competitors.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

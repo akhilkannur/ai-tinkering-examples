@@ -1,0 +1,18 @@
+{
+  "name": "customer-success-handover",
+  "description": "The worst customer experience is repeating yourself. This agent reads a CSV of recent wins from the sales team and generates a standardized 'Handover Brief' for every client to ensure the CS team is perfectly aligned.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "recent_wins.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

@@ -1,0 +1,18 @@
+{
+  "name": "saas-pricing-calculator",
+  "description": "Pricing is a science. This agent models your COGS and CAC to recommend profitable pricing tiers for an entire portfolio of SaaS products.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "product_costs.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

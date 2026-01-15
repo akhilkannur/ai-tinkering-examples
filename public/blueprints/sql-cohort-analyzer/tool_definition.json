@@ -1,0 +1,18 @@
+{
+  "name": "sql-cohort-analyzer",
+  "description": "Retention is the lifeblood of SaaS. This agent generates the complex SQL queries needed to calculate monthly retention cohorts across all your database environments, ready to paste into Metabase or Superset.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "database_schemas.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

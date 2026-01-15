@@ -1,0 +1,13 @@
+{
+  "name": "ai-manager-handbook",
+  "description": "No description provided.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

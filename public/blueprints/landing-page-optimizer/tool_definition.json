@@ -1,0 +1,18 @@
+{
+  "name": "landing-page-optimizer",
+  "description": "Analyzes landing pages against top competitors and suggests psychological A/B tests to improve conversion rates for your entire portfolio.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "landing_pages.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

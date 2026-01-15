@@ -1,0 +1,18 @@
+{
+  "name": "post-event-followup-sequence",
+  "description": "You scanned the badges, now what? This agent drafts personalized 3-step email sequences for your entire list of conference leads, ensuring speed-to-lead and maximum meeting conversion.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "leads.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

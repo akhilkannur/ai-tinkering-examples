@@ -1,0 +1,4 @@
+{
+  "input_file": "enriched_sample.csv",
+  "output_file": "output.csv"
+}

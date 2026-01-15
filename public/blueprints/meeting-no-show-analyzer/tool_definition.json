@@ -1,0 +1,18 @@
+{
+  "name": "meeting-no-show-analyzer",
+  "description": "High demo volume means nothing if nobody shows up. This agent analyzes a CSV of meeting outcomes to identify patterns in no-shows: Is it a specific lead source? Time of day? Rep?",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "meeting_logs.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

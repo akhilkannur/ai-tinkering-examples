@@ -1,0 +1,18 @@
+{
+  "name": "linkedin-profile-banner-architect",
+  "description": "Your banner is prime real estate. This agent researches your niche and target audience to design text-based visual briefs for banners that state your value prop and social proof clearly across multiple profiles.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "profiles.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

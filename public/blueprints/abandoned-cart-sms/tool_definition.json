@@ -1,0 +1,18 @@
+{
+  "name": "abandoned-cart-sms",
+  "description": "Email open rates are 20%; SMS is 98%. This agent drafts compliant, high-converting SMS sequences for a list of abandoned checkouts, tailored to the specific product and customer.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "abandoned_carts.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

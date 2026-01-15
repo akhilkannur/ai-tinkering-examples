@@ -1,0 +1,18 @@
+{
+  "name": "influencer-contract-drafter",
+  "description": "Protect your brand at scale. This agent reads a list of influencers and their specific deal terms from a CSV and drafts a unique, plain-English agreement for every single creator covering Deliverables, Usage Rights, and Payment.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "creator_deal_terms.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

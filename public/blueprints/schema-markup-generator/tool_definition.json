@@ -1,0 +1,18 @@
+{
+  "name": "schema-markup-generator",
+  "description": "Rich snippets increase CTR. This agent generates valid JSON-LD Schema markup for your entire site (SaaS Products, Courses, Local Businesses) to help Google understand and highlight your content.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "pages.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

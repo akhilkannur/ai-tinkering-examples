@@ -1,0 +1,18 @@
+{
+  "name": "persona-anti-targeting",
+  "description": "Bad leads clog pipelines. This agent analyzes your 'Closed-Lost' and 'High Churn' data to identify common traits of bad customers (e.g., 'Real Estate Agents', 'Gmail users'), creating a suppression list for marketing.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "bad_outcomes.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

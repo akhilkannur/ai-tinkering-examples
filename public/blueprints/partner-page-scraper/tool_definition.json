@@ -1,0 +1,18 @@
+{
+  "name": "partner-page-scraper",
+  "description": "Agency partners drive massive distribution. This agent researches competitor partner directories to identify high-value service partners you can recruit to your own ecosystem.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "competitors.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

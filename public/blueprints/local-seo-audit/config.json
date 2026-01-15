@@ -1,0 +1,4 @@
+{
+  "input_file": "locations_to_audit.csv",
+  "output_file": "output.csv"
+}

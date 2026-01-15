@@ -1,0 +1,4 @@
+Vendor_Name,Contract_File,Priority
+CloudScale,contracts/cloudscale_msa.pdf,High
+AdsManager,contracts/ads_terms.pdf,Medium
+SaaSPro,contracts/saaspro_agreement.png,High

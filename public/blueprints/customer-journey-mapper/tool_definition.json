@@ -1,0 +1,18 @@
+{
+  "name": "customer-journey-mapper",
+  "description": "Users drop off where you least expect. This agent reads a list of customer personas from a CSV and maps their unique 5-stage journeys (Awareness to Advocacy), identifying the specific 'Friction Point' for each group.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "target_personas.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

@@ -1,0 +1,18 @@
+{
+  "name": "app-store-screenshot-optimizer",
+  "description": "Screenshots are your app's billboard. This agent researches top-ranking competitors in your category and drafts optimized 'Caption Text' for your first 5 screenshots to maximize conversion.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "apps.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

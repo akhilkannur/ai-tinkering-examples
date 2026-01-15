@@ -1,0 +1,4 @@
+Log_Path,Environment,Date
+logs/server_1.log,Production,2024-10-01
+logs/server_2.log,Production,2024-10-01
+logs/staging.log,Staging,2024-10-01

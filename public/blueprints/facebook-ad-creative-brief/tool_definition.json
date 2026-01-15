@@ -1,0 +1,18 @@
+{
+  "name": "facebook-ad-creative-brief",
+  "description": "The creative is the most important targeting lever. This agent takes a list of products and generates distinct visual concepts (UGC, Static, Carousel) with detailed instructions for your design team.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "campaigns.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

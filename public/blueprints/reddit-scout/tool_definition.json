@@ -1,0 +1,18 @@
+{
+  "name": "reddit-scout",
+  "description": "Reddit is full of people asking 'What's the best tool for X?'. This agent reads a list of keywords and subreddits from a CSV, identifies high-intent threads, and drafts non-spammy responses.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "reddit_monitor.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}

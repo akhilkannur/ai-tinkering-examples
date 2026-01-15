@@ -1,0 +1,18 @@
+{
+  "name": "changelog-marketer",
+  "description": "Don't hide your hard work. This agent takes technical commit messages or Jira tickets and transforms them into high-energy 'New & Improved' Changelog posts for an entire release cycle.",
+  "command": "python main.py",
+  "inputs": [
+    {
+      "name": "config.json",
+      "description": "Configuration settings.",
+      "required": true
+    },
+    {
+      "name": "releases.csv",
+      "description": "Input data file.",
+      "required": true
+    }
+  ],
+  "outputs": []
+}
