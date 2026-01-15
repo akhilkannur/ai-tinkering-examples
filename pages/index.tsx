@@ -1,6 +1,4 @@
-import { useState, useMemo, useEffect } from 'react'
 import { GetStaticProps } from 'next'
-import { useRouter } from 'next/router'
 import Head from 'next/head'
 import Navbar from '../components/Navbar'
 import TerminalCookbook from '../components/BuilderFlowchart'
@@ -22,29 +20,9 @@ interface HybridHomePageProps {
 }
 
 export default function HybridHomePage({ recipes, featuredJobs, featuredTools, siteSettings }: HybridHomePageProps) {
-  const router = useRouter();
-  const [isUnlocked, setIsUnlocked] = useState(false);
-  
   const homepageTitle = "The Terminal Cookbook | Real AI Examples";
   const homepageDescription = "Stop Chatting. Start Automating. A library of copy-paste blueprints to build powerful autonomous agents using Gemini CLI, Claude Code, Cowork, or Cursor.";
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com';
-
-  // Sync isUnlocked state with LocalStorage and URL on mount
-  useEffect(() => {
-    const hasAccess = localStorage.getItem('terminal_cookbook_premium') === 'true';
-    if (hasAccess) {
-      setIsUnlocked(true);
-    }
-
-    if (router.isReady) {
-      const { license_key } = router.query;
-      if (license_key === 'TK-8821-XPRO-MQ') {
-        setIsUnlocked(true);
-        localStorage.setItem('terminal_cookbook_premium', 'true');
-        router.replace('/', undefined, { shallow: true });
-      }
-    }
-  }, [router.isReady, router.query]);
 
   return (
     <>
