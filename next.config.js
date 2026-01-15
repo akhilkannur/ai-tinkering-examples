@@ -60,6 +60,16 @@ const nextConfig = {
   poweredByHeader: false,
   generateEtags: true,
   trailingSlash: false,
+
+  async redirects() {
+    return [
+      {
+        source: '/blueprints',
+        destination: '/',
+        permanent: true,
+      },
+    ]
+  },
 }
 
 module.exports = nextConfig

@@ -1,90 +1,38 @@
-import { useState, useMemo, useEffect } from 'react'
+import { useState, useMemo } from 'react'
 import { GetStaticProps } from 'next'
-import { useRouter } from 'next/router'
 import Head from 'next/head'
-
 import Navbar from '../components/Navbar'
-import Hero from '../components/Hero'
-import ExampleCard from '../components/ExampleCard'
-import ExampleModal from '../components/ExampleModal'
+import TerminalCookbook from '../components/BuilderFlowchart'
+import HowToUseGuide from '../components/HowToUseGuide'
+import { Terminal, BookOpen, Cpu, Command } from 'lucide-react'
+import { getAllRecipes } from '../lib/recipes'
+import { Recipe } from '../lib/cookbook-data'
+import { fetchFeaturedJobs, fetchFeaturedTools, fetchSiteSettings, JobRecord, ToolRecord } from '../lib/airtable'
 import HorizontalStrip from '../components/HorizontalStrip'
 import JobCard from '../components/JobCard'
 import AIToolCard from '../components/AIToolCard'
-import NewsletterForm from '../components/NewsletterForm' // Added import
-import { fetchEnrichedExamples, fetchFeaturedJobs, fetchFeaturedTools, fetchSiteSettings, EnrichedExampleRecord, JobRecord, ToolRecord } from '../lib/airtable'
-import CtaCard from '../components/CtaCard'
+import NewsletterForm from '../components/NewsletterForm'
 
-interface HomePageProps {
-  examples: EnrichedExampleRecord[]
+interface HybridHomePageProps {
+  recipes: Recipe[]
   featuredJobs: JobRecord[]
   featuredTools: ToolRecord[]
   siteSettings: Record<string, boolean>;
 }
 
-export default function HomePage({ examples, featuredJobs, featuredTools, siteSettings }: HomePageProps) {
-  const router = useRouter()
-  const [selectedCategory, setSelectedCategory] = useState('All')
-  const [selectedExample, setSelectedExample] = useState<EnrichedExampleRecord | null>(null)
-  const [isModalOpen, setIsModalOpen] = useState(false)
-
-  const homepageTitle = "AI Examples You Can Copy & Try";
-  const homepageDescription = "Curated AI workflows and prompts for non-technical tinkerers. No fluff, just actionable examples.";
+export default function HybridHomePage({ recipes, featuredJobs, featuredTools, siteSettings }: HybridHomePageProps) {
+  const homepageTitle = "The Terminal Cookbook | Real AI Examples";
+  const homepageDescription = "Stop Chatting. Start Automating. A library of copy-paste blueprints to build powerful autonomous agents using Gemini CLI, Claude Code, Cowork, or Cursor.";
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com';
-
-  const categories = useMemo(() => {
-    const cats = examples
-      .map(ex => ex.category)
-      .filter(Boolean) as string[]
-    return ['All', ...new Set(cats)]
-  }, [examples])
-
-  const filteredExamples = useMemo(() => {
-    const sortedExamples = [...examples].sort((a, b) => {
-      if (a.publish_date && b.publish_date) {
-        return new Date(b.publish_date).getTime() - new Date(a.publish_date).getTime();
-      }
-      return 0;
-    });
-
-    if (selectedCategory === 'All') {
-      return sortedExamples.slice(0, 6);
-    }
-
-    return sortedExamples.filter(example => example.category === selectedCategory);
-  }, [examples, selectedCategory]);
-
-  const handleOpenModal = (example: EnrichedExampleRecord) => {
-    const categorySlug = example.category?.toLowerCase().replace(/\s+/g, '-') || 'uncategorized';
-    const newUrl = `/ai-examples/${categorySlug}/${example.slug}`;
-    window.history.pushState(null, '', newUrl);
-    setSelectedExample(example);
-    setIsModalOpen(true);
-  };
-
-  const handleCloseModal = () => {
-    window.history.replaceState(null, '', router.pathname);
-    setIsModalOpen(false);
-    setTimeout(() => setSelectedExample(null), 300);
-  };
-
-  useEffect(() => {
-    if (router.query.slug && Array.isArray(router.query.slug)) {
-      const slug = router.query.slug[router.query.slug.length - 1];
-      const foundExample = examples.find(ex => ex.slug === slug);
-      if (foundExample) {
-        setSelectedExample(foundExample);
-        setIsModalOpen(true);
-      }
-    }
-  }, [router.query.slug, examples]);
 
   return (
     <>
       <Head>
         <title>{homepageTitle}</title>
         <meta name="description" content={homepageDescription} key="description" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <meta property="og:title" content={homepageTitle} key="og:title" />
+        <meta property="og:description" content={homepageDescription} key="og:description" />
+        <meta property="og:image" content={`${baseUrl}/Gemini_Generated_Image_b3hv6cb3hv6cb3hv.png`} key="og:image" />
         
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
@@ -97,26 +45,99 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
             "query-input": "required name=search_term_string"
           }
         })}} />
-
-        {selectedExample && (
-          <>
-            <title>{selectedExample.title} | AI Examples</title>
-            <meta name="description" content={selectedExample.summary || homepageDescription} key="description" />
-            <meta property="og:title" content={selectedExample.title} key="og:title" />
-            <meta property="og:description" content={selectedExample.summary || homepageDescription} key="og:description" />
-            {selectedExample.screenshots?.[0]?.url && (
-              <meta property="og:image" content={selectedExample.screenshots[0].url} key="og:image" />
-            )}
-          </>
-        )}
       </Head>
 
-      <div className="min-h-screen bg-primary-bg font-sans text-text-color fade-in">
+      <div className="min-h-screen bg-white font-sans text-text-color fade-in">
         <Navbar />
-        <Hero />
 
+        {/* HERO SECTION (From Blueprints) */}
+        <div className="bg-white pt-16 pb-12">
+            <div className="container mx-auto px-4 text-center max-w-4xl">
+                <div className="inline-flex items-center gap-2 bg-yellow-50 border border-yellow-100 text-yellow-800 px-4 py-1.5 rounded-full text-sm font-semibold mb-6">
+                    <BookOpen className="w-4 h-4" />
+                    <span>The Terminal Cookbook</span>
+                </div>
+                
+                <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900 mb-6 tracking-tight leading-tight">
+                    Stop Chatting. <br />
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
+                    Start Automating.
+                    </span>
+                </h1>
+                
+                <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed mb-10">
+                    ChatGPT is for questions. These blueprints are for <strong>work</strong>.
+                    <br className="hidden md:block"/>
+                    Copy-paste instructions that turn <strong>Claude Cowork</strong> and <strong>Gemini CLI</strong> into autonomous employees.
+                </p>
+
+                {/* Compatibility Badge */}
+                <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-sm text-gray-500 mb-2">
+                    <span className="uppercase tracking-widest font-bold text-xs">Choose your Agent:</span>
+                    <div className="flex flex-wrap justify-center gap-3">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gray-100 text-gray-700 font-medium border border-gray-200">
+                        <Cpu className="w-4 h-4 text-purple-600" /> Claude Cowork
+                    </span>
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gray-100 text-gray-700 font-medium border border-gray-200">
+                        <Command className="w-4 h-4 text-blue-600" /> Gemini CLI
+                    </span>
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gray-100 text-gray-700 font-medium border border-gray-200">
+                        <Terminal className="w-4 h-4 text-gray-600" /> Cursor
+                    </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {/* HOW TO USE GUIDE */}
+        <HowToUseGuide />
+
+        {/* COOKBOOK GRID (The Main Content) */}
+        <div className="bg-white pb-16">
+            <div className="container mx-auto px-4">
+               <TerminalCookbook recipes={recipes} />
+            </div>
+        </div>
+
+        {/* PHILOSOPHY SECTION */}
+        <div className="bg-white py-16 border-t border-gray-100">
+            <div className="container mx-auto px-4">
+                <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                    <div className="bg-gray-50 rounded-3xl p-8 md:p-10 text-left">
+                        <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                        <span className="bg-blue-100 text-blue-700 p-1.5 rounded-lg"><Terminal className="w-5 h-5"/></span>
+                        CLI & Folder Agents
+                        </h2>
+                        <p className="text-gray-600 leading-relaxed mb-6">
+                        If you use <strong>Gemini CLI</strong>, <strong>Claude Code</strong>, or the new <strong>Claude Cowork</strong>, these blueprints act as your foundation. 
+                        Drop a blueprint into a folder or paste it into the agent, and it understands the full scope: 
+                        from creating files to handling complex workflows.
+                        </p>
+                        <div className="bg-white p-4 rounded-xl border border-gray-200 text-sm font-mono text-gray-500">
+                        Claude: "I've read the blueprint. Starting the build..." <span className="text-green-600">✓ Running</span>
+                        </div>
+                    </div>
+
+                    <div className="bg-gray-50 rounded-3xl p-8 md:p-10 text-left">
+                        <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                        <span className="bg-purple-100 text-purple-700 p-1.5 rounded-lg"><Cpu className="w-5 h-5"/></span>
+                        For AI Editors
+                        </h2>
+                        <p className="text-gray-600 leading-relaxed mb-6">
+                        Using <strong>Cursor</strong> or <strong>Windsurf</strong>? Paste the blueprint into the "Composer" or "Chat" window. 
+                        The AI will read the 'Role', 'Objective', and 'Workflow' and build the entire tool in your project folder automatically.
+                        </p>
+                        <div className="bg-white p-4 rounded-xl border border-gray-200 text-sm font-mono text-gray-500">
+                        Composer: "Follow this blueprint to build..." <span className="text-purple-600">Generating...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {/* SECONDARY CONTENT: FEATURED TOOLS */}
         {siteSettings.enableFeaturedToolsSection && featuredTools.length > 0 && (
-          <div className="bg-primary-bg py-16 border-b border-navy-dark">
+          <div className="bg-primary-bg py-16 border-y border-navy-dark">
              <div className="max-w-6xl mx-auto px-4 sm:px-6">
                 <div className="flex items-center justify-between mb-8">
                   <h2 className="text-2xl sm:text-3xl font-headline font-bold text-text-color flex items-center gap-3 uppercase tracking-tight">
@@ -135,7 +156,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
                           description={tool.shortDescription}
                           url={tool.websiteUrl}
                           imageUrl={tool.logo?.[0]?.url}
-                          category={null} // Categories can be added later if needed
+                          category={null} 
                         />
                     </div>
                   ))}
@@ -144,56 +165,7 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
           </div>
         )}
 
-        <div className="bg-primary-bg py-12 border-b border-navy-dark">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6">
-            <div className="text-center mb-8">
-              <h2 className="text-3xl sm:text-4xl font-headline font-bold text-text-color mb-2 uppercase tracking-tight">
-                Latest AI Examples
-              </h2>
-            </div>
-
-            <div className="flex flex-wrap justify-center gap-3 mb-10">
-              {categories.map((category) => (
-                <button
-                  key={category}
-                  onClick={() => setSelectedCategory(category)}
-                  className={`px-5 py-2.5 text-sm font-mono font-bold border rounded-none transition-all duration-300 ${
-                    selectedCategory === category
-                      ? 'bg-accent text-electric-blue border-accent shadow-none'
-                      : 'bg-secondary-bg text-text-secondary border-navy-dark hover:border-accent hover:text-accent'
-                  }`}
-                >
-                  {category}
-                </button>
-              ))}
-            </div>
-
-            {filteredExamples.length === 0 ? (
-              <div className="py-16 text-center">
-                <h3 className="text-2xl font-headline font-bold mb-3">Nothing Found</h3>
-                <p className="text-lg text-text-secondary mb-6">Try a different category, or check back later!</p>
-                <button
-                  onClick={() => setSelectedCategory('All')}
-                  className="bg-accent text-electric-blue px-6 py-3 text-base font-mono font-bold rounded-none hover:bg-accent-hover transition-colors duration-300"
-                >
-                  Show All Examples
-                </button>
-              </div>
-            ) : (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {filteredExamples.map((example, index) => (
-                  <ExampleCard
-                    key={example.id}
-                    example={example}
-                    priority={index < 3}
-                    onOpen={handleOpenModal}
-                  />
-                ))}
-              </div>
-            )}
-          </div>
-        </div>
-
+        {/* SECONDARY CONTENT: JOBS */}
         {siteSettings.enableFeaturedJobsSection && featuredJobs.length > 0 && (
           <div className="bg-primary-bg py-12 border-b border-navy-dark">
             <HorizontalStrip 
@@ -205,13 +177,14 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
           </div>
         )}
 
-        <div className="bg-secondary-bg text-text-color py-16 border-t border-navy-dark" id="newsletter">
+        {/* NEWSLETTER */}
+        <div className="bg-secondary-bg text-text-color py-16" id="newsletter">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
             <h2 className="text-4xl sm:text-5xl font-headline font-bold mb-4 uppercase tracking-tight text-accent">
               📬 Don't Miss Out!
             </h2>
             <p className="text-xl mb-8 font-mono text-text-secondary">
-              Get 5-10 hand-picked AI examples delivered weekly. Join hundreds of subscribers learning to use AI practically.
+              Get 5-10 hand-picked AI blueprints delivered weekly. Join hundreds of subscribers learning to use AI practically.
             </p>
             
             <div className="max-w-[500px] mx-auto">
@@ -220,22 +193,15 @@ export default function HomePage({ examples, featuredJobs, featuredTools, siteSe
           </div>
         </div>
 
-        {/* WavyDivider removed for Digital Workshop theme */}
-
-        <ExampleModal
-          example={selectedExample}
-          isOpen={isModalOpen}
-          onClose={handleCloseModal}
-        />
       </div>
     </>
   )
 }
 
-export const getStaticProps: GetStaticProps<HomePageProps> = async () => {
+export const getStaticProps: GetStaticProps<HybridHomePageProps> = async () => {
   try {
-    const [examples, featuredJobs, featuredTools, siteSettingsData] = await Promise.all([
-      fetchEnrichedExamples(),
+    const [recipes, featuredJobs, featuredTools, siteSettingsData] = await Promise.all([
+      Promise.resolve(getAllRecipes()),
       fetchFeaturedJobs(),
       fetchFeaturedTools(),
       fetchSiteSettings(),
@@ -247,13 +213,13 @@ export const getStaticProps: GetStaticProps<HomePageProps> = async () => {
     });
 
     return {
-      props: { examples, featuredJobs, featuredTools, siteSettings },
+      props: { recipes, featuredJobs, featuredTools, siteSettings },
       revalidate: 300,
     }
   } catch (error) {
     console.error('Failed to fetch data for homepage:', error)
     return {
-      props: { examples: [], featuredJobs: [], featuredTools: [], siteSettings: {} },
+      props: { recipes: [], featuredJobs: [], featuredTools: [], siteSettings: {} },
       revalidate: 60,
     }
   }
