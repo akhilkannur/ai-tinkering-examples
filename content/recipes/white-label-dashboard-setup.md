@@ -1,18 +1,22 @@
 ---
-id: "white-label-dashboard-setup"
-category: "Agency"
-title: "The White Label Dashboard Setup"
-tagline: "Standardize your client reporting."
-difficulty: "Beginner"
-time: "Batch"
-description: "Agencies need to look professional and automate transparency. This agent designs standardized client-facing portals for your entire roster, ensuring clients can see their live stats without manual reporting."
+id: white-label-dashboard-setup
+category: Agency
+title: The White Label Dashboard Setup
+tagline: Standardize your client reporting.
+difficulty: Beginner
+time: Batch
+description: >-
+  Agencies need to look professional and automate transparency. This agent
+  designs standardized client-facing portals for your entire roster, ensuring
+  clients can see their live stats without manual reporting.
 sampleData:
-  filename: "clients.csv"
+  filename: clients.csv
   content: |
     Client_Name,Primary_Goal,Data_Source
     Glow Skincare,Direct Sales,Shopify & Meta Ads
     TechFlow SaaS,Demo Bookings,HubSpot & Google Ads
     Urban Coffee,In-store Traffic,Google Maps & Square
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

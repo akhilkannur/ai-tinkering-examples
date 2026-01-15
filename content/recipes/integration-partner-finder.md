@@ -1,17 +1,21 @@
 ---
-id: "integration-partner-finder"
-category: "SaaS"
-title: "The Strategic Integration Factory"
-tagline: "Find 50 potential partners across 10 niches."
-difficulty: "Advanced"
-time: "One-off"
-description: "Why build one integration? This agent reads a list of adjacent tool categories from a CSV and identifies the top 5 high-leverage partners in each, drafting a 'Better Together' pitch for every category."
+id: integration-partner-finder
+category: SaaS
+title: The Strategic Integration Factory
+tagline: Find 50 potential partners across 10 niches.
+difficulty: Advanced
+time: One-off
+description: >-
+  Why build one integration? This agent reads a list of adjacent tool categories
+  from a CSV and identifies the top 5 high-leverage partners in each, drafting a
+  'Better Together' pitch for every category.
 sampleData:
-  filename: "partner_niches.csv"
+  filename: partner_niches.csv
   content: |
     Niche,Target_Audience,Pain_Point
     E-com CRM,Merchants,Cart abandonment
     HR Tech,VPs of HR,Employee churn
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

@@ -1,18 +1,22 @@
 ---
-id: "schema-markup-generator"
-category: "Tech SEO"
-title: "The Schema Generator"
-tagline: "Get rich snippets."
-difficulty: "Intermediate"
-time: "Batch"
-description: "Rich snippets increase CTR. This agent generates valid JSON-LD Schema markup for your entire site (SaaS Products, Courses, Local Businesses) to help Google understand and highlight your content."
+id: schema-markup-generator
+category: Tech SEO
+title: The Schema Generator
+tagline: Get rich snippets.
+difficulty: Intermediate
+time: Batch
+description: >-
+  Rich snippets increase CTR. This agent generates valid JSON-LD Schema markup
+  for your entire site (SaaS Products, Courses, Local Businesses) to help Google
+  understand and highlight your content.
 sampleData:
-  filename: "pages.csv"
+  filename: pages.csv
   content: |
     Page_Name,Page_Type,Price,Rating
     NeoCloud,SoftwareApplication,49.99,4.8
     AI Masterclass,Course,199.00,4.9
     London Tech Hub,LocalBusiness,0.00,5.0
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

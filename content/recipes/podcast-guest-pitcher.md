@@ -1,18 +1,22 @@
 ---
-id: "podcast-guest-pitcher"
-category: "PR"
-title: "The Podcast Guest Pitcher"
-tagline: "Get booked on niche shows."
-difficulty: "Intermediate"
-time: "Batch"
-description: "Podcasts are high-trust channels. This agent researches target podcasts, analyzes their recent content, and drafts 'Value-First' pitches to hosts for your entire PR outreach list."
+id: podcast-guest-pitcher
+category: PR
+title: The Podcast Guest Pitcher
+tagline: Get booked on niche shows.
+difficulty: Intermediate
+time: Batch
+description: >-
+  Podcasts are high-trust channels. This agent researches target podcasts,
+  analyzes their recent content, and drafts 'Value-First' pitches to hosts for
+  your entire PR outreach list.
 sampleData:
-  filename: "podcasts.csv"
+  filename: podcasts.csv
   content: |
     Podcast_Name,Host_Name,Niche
     SaaS Revolution,Nathan Latka,B2B SaaS Metrics
     The Growth Lab,Sarah Chen,Marketing Experiments
     Founder Wisdom,Mike Ross,Early Stage Startups
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

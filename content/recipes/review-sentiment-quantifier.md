@@ -1,17 +1,21 @@
 ---
-id: "review-sentiment-quantifier"
-category: "Intel"
-title: "The Review Sentiment Factory"
-tagline: "Quantify the emotion of 1000+ customer reviews."
-difficulty: "Advanced"
-time: "Monthly"
-description: "Star ratings lie. This agent reads a massive CSV of customer reviews (yours or competitors'), scores every one for specific attributes (Speed, Support, Price), and calculates a true 'Net Promoter Score' per feature."
+id: review-sentiment-quantifier
+category: Intel
+title: The Review Sentiment Factory
+tagline: Quantify the emotion of 1000+ customer reviews.
+difficulty: Advanced
+time: Monthly
+description: >-
+  Star ratings lie. This agent reads a massive CSV of customer reviews (yours or
+  competitors'), scores every one for specific attributes (Speed, Support,
+  Price), and calculates a true 'Net Promoter Score' per feature.
 sampleData:
-  filename: "raw_reviews.csv"
+  filename: raw_reviews.csv
   content: |
     Review_Text,Stars
     "Great tool but the export is so slow",4
     "Support never replied to my ticket",1
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

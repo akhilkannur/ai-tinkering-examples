@@ -1,18 +1,22 @@
 ---
-id: "linkedin-ghostwriter"
-category: "Social Automation"
-title: "The LinkedIn Ghostwriter"
-tagline: "Brain Dump -> Viral Post."
-difficulty: "Intermediate"
-time: "Batch"
-description: "Dry ideas don't get reach. This agent transforms your raw brain dumps into structured, high-performing LinkedIn posts using viral templates and hook psychology for your entire content calendar."
+id: linkedin-ghostwriter
+category: Social Automation
+title: The LinkedIn Ghostwriter
+tagline: Brain Dump -> Viral Post.
+difficulty: Intermediate
+time: Batch
+description: >-
+  Dry ideas don't get reach. This agent transforms your raw brain dumps into
+  structured, high-performing LinkedIn posts using viral templates and hook
+  psychology for your entire content calendar.
 sampleData:
-  filename: "brain_dumps.csv"
+  filename: brain_dumps.csv
   content: |
     Topic,Core_Idea,Vibe
     Sales,Cold calling isn't dead it's just that people are bad at it,Contrarian
     Remote Work,I hate zoom meetings that could be an email,Relatable
     AI,Agents will replace 80% of SDR work by 2025,Bold Future
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

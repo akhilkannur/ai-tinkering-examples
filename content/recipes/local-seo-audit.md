@@ -1,17 +1,22 @@
 ---
-id: "local-seo-audit"
-category: "SEO"
-title: "The Multi-Location SEO Auditor"
-tagline: "Audit the map rankings for your entire franchise."
-difficulty: "Advanced"
-time: "15 mins"
-description: "Managing SEO for multiple locations is hard. This agent reads a list of locations from a CSV, audits their Google Maps profiles, checks NAP consistency across the web, and generates a prioritized 'Fix List' for every branch."
+id: local-seo-audit
+category: SEO
+title: The Multi-Location SEO Auditor
+tagline: Audit the map rankings for your entire franchise.
+difficulty: Advanced
+time: 15 mins
+description: >-
+  Managing SEO for multiple locations is hard. This agent reads a list of
+  locations from a CSV, audits their Google Maps profiles, checks NAP
+  consistency across the web, and generates a prioritized 'Fix List' for every
+  branch.
 sampleData:
-  filename: "locations_to_audit.csv"
+  filename: locations_to_audit.csv
   content: |
     Branch_Name,City,Phone
     Downtown Cafe,Austin,555-0199
     Eastside Bistro,Austin,555-0122
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

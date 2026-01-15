@@ -1,18 +1,22 @@
 ---
-id: "influencer-audit"
-category: "Marketing"
-title: "The Influencer Auditor"
-tagline: "Audit 50 creators in one run."
-difficulty: "Intermediate"
-time: "5 mins"
-description: "Protect your ad budget. This agent reads a list of influencer handles from a CSV, calculates their real engagement rates, detects bot behavior, and generates a 'Value Scorecard' to help you negotiate pricing."
+id: influencer-audit
+category: Marketing
+title: The Influencer Auditor
+tagline: Audit 50 creators in one run.
+difficulty: Intermediate
+time: 5 mins
+description: >-
+  Protect your ad budget. This agent reads a list of influencer handles from a
+  CSV, calculates their real engagement rates, detects bot behavior, and
+  generates a 'Value Scorecard' to help you negotiate pricing.
 sampleData:
-  filename: "influencer_leads.csv"
+  filename: influencer_leads.csv
   content: |
     Handle,Followers,Platform
     @growth_guru,100000,Twitter
     @ai_alice,50000,LinkedIn
     @tech_tom,200000,Instagram
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

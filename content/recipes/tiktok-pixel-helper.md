@@ -1,15 +1,19 @@
 ---
-id: "tiktok-pixel-helper"
-category: "Ad Ops"
-title: "The TikTok Event Validator"
-tagline: "Fix your conversion tracking from a snippet or a goal."
-difficulty: "Intermediate"
-time: "Weekly"
-description: "TikTok pixels are finicky. This agent audits your existing event code (if provided) or researches your product type to generate a standardized event snippet including 'Value' and 'Content ID' parameters."
+id: tiktok-pixel-helper
+category: Ad Ops
+title: The TikTok Event Validator
+tagline: Fix your conversion tracking from a snippet or a goal.
+difficulty: Intermediate
+time: Weekly
+description: >-
+  TikTok pixels are finicky. This agent audits your existing event code (if
+  provided) or researches your product type to generate a standardized event
+  snippet including 'Value' and 'Content ID' parameters.
 sampleData:
-  filename: "current_pixel.txt"
+  filename: current_pixel.txt
   content: |
     ttq.track('CompletePayment', { value: 100, currency: 'USD' });
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

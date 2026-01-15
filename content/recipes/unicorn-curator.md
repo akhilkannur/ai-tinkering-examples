@@ -1,18 +1,22 @@
 ---
-id: "unicorn-curator"
-category: "Content Ops"
-title: "The Unicorn Content Curator"
-tagline: "Identify viral outliers across 100 channels."
-difficulty: "Advanced"
-time: "20 mins"
-description: "Why compete on views? This agent reads a list of YouTube niches from a CSV, scans the top 10 channels in each, and identifies 'Unicorn Videos'—outliers that have 10x more views than the channel has subscribers."
+id: unicorn-curator
+category: Content Ops
+title: The Unicorn Content Curator
+tagline: Identify viral outliers across 100 channels.
+difficulty: Advanced
+time: 20 mins
+description: >-
+  Why compete on views? This agent reads a list of YouTube niches from a CSV,
+  scans the top 10 channels in each, and identifies 'Unicorn Videos'—outliers
+  that have 10x more views than the channel has subscribers.
 sampleData:
-  filename: "niches_to_mine.csv"
+  filename: niches_to_mine.csv
   content: |
     Niche
     SaaS Marketing
     Real Estate Investing
     Solo Travel
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

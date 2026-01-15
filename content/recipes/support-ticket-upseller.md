@@ -1,19 +1,30 @@
 ---
-id: "support-ticket-upseller"
-category: "Sales"
-title: "The Support Upseller"
-tagline: "Turn complaints into cash."
-difficulty: "Intermediate"
-time: "Weekly"
-description: "Your support tickets are full of people asking for features they don't have. This agent scans ticket history for keywords like 'limit', 'upgrade', or 'enterprise feature', and drafts a helpful sales email offering the solution (the higher tier)."
+id: support-ticket-upseller
+category: Sales
+title: The Support Upseller
+tagline: Turn complaints into cash.
+difficulty: Intermediate
+time: Weekly
+description: >-
+  Your support tickets are full of people asking for features they don't have.
+  This agent scans ticket history for keywords like 'limit', 'upgrade', or
+  'enterprise feature', and drafts a helpful sales email offering the solution
+  (the higher tier).
 sampleData:
-  filename: "support_tickets.csv"
-  content: |
+  filename: support_tickets.csv
+  content: >
     Ticket_ID,Customer_Email,Message
-    101,john@startups.com,I keep hitting the 500 contact limit. Can I increase this?
-    102,sarah@enterprise.com,We need SSO for our security compliance. Do you have it?
+
+    101,john@startups.com,I keep hitting the 500 contact limit. Can I increase
+    this?
+
+    102,sarah@enterprise.com,We need SSO for our security compliance. Do you
+    have it?
+
     103,dave@gmail.com,The app crashed when I clicked save.
+
     104,mike@agency.com,Is there a way to white-label the reports?
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

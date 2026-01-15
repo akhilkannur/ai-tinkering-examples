@@ -1,17 +1,21 @@
 ---
-id: "sitemap-health-check"
-category: "SEO"
-title: "The Sitemap Fleet Auditor"
-tagline: "Health check 50 sitemaps in one run."
-difficulty: "Intermediate"
-time: "Monthly"
-description: "A bad sitemap hurts your crawl budget. This agent reads a list of sitemap URLs from a CSV, crawls every URL inside them to check for 404s, 500s, or redirects, and generates a consolidated error report for your developers."
+id: sitemap-health-check
+category: SEO
+title: The Sitemap Fleet Auditor
+tagline: Health check 50 sitemaps in one run.
+difficulty: Intermediate
+time: Monthly
+description: >-
+  A bad sitemap hurts your crawl budget. This agent reads a list of sitemap URLs
+  from a CSV, crawls every URL inside them to check for 404s, 500s, or
+  redirects, and generates a consolidated error report for your developers.
 sampleData:
-  filename: "sitemaps_to_audit.csv"
+  filename: sitemaps_to_audit.csv
   content: |
     Site_Name,Sitemap_URL
     Main_Blog,https://yoursite.com/sitemap.xml
     Docs,https://docs.yoursite.com/sitemap.xml
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

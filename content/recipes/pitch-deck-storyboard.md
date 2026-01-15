@@ -1,18 +1,22 @@
 ---
-id: "pitch-deck-storyboard"
-category: "Strategy"
-title: "The Pitch Deck Storyboard"
-tagline: "Build narratives that raise money."
-difficulty: "Advanced"
-time: "Batch"
-description: "Investors scan decks in 30 seconds. This agent researches your product and industry to outline 12-slide storyboards following the 'Sequoia' framework for your entire startup portfolio."
+id: pitch-deck-storyboard
+category: Strategy
+title: The Pitch Deck Storyboard
+tagline: Build narratives that raise money.
+difficulty: Advanced
+time: Batch
+description: >-
+  Investors scan decks in 30 seconds. This agent researches your product and
+  industry to outline 12-slide storyboards following the 'Sequoia' framework for
+  your entire startup portfolio.
 sampleData:
-  filename: "startups.csv"
+  filename: startups.csv
   content: |
     Startup_Name,Website,Fundraising_Stage
     EcoFlow,https://ecoflow.io,Seed
     DataArmor,https://dataarmor.ai,Series A
     HealthHive,https://healthhive.com,Pre-seed
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

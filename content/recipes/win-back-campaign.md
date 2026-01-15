@@ -1,18 +1,22 @@
 ---
-id: "win-back-campaign"
-category: "Marketing Automation"
-title: "The Win-Back Campaign Architect"
-tagline: "It's easier to sell to an ex."
-difficulty: "Intermediate"
-time: "Quarterly"
-archetype: "Processor"
-description: "Customers leave, but they might come back. This agent identifies customers who churned >90 days ago (cool-down period) and generates a personalized 'We Miss You' offer based on their previous plan."
+id: win-back-campaign
+category: Marketing Automation
+title: The Win-Back Campaign Architect
+tagline: It's easier to sell to an ex.
+difficulty: Intermediate
+time: Quarterly
+archetype: Processor
+description: >-
+  Customers leave, but they might come back. This agent identifies customers who
+  churned >90 days ago (cool-down period) and generates a personalized 'We Miss
+  You' offer based on their previous plan.
 sampleData:
-  filename: "churned_customers.csv"
+  filename: churned_customers.csv
   content: |
     Customer,Churn_Date,Prev_Plan,LTV
     CustA,2023-01-01,Pro,5000
     CustB,2023-09-01,Starter,200
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

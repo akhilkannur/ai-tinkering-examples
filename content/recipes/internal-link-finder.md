@@ -1,18 +1,22 @@
 ---
-id: "internal-link-finder"
-category: "On-Page SEO"
-title: "The Internal Link Opportunity Finder"
-tagline: "Connect your content clusters."
-difficulty: "Beginner"
-time: "Weekly"
-archetype: "Processor"
-description: "Orphan pages starve. This agent reads your latest blog post, identifies key topics (entities), and scans your existing site map for older posts that mention those topics but don't link yet."
+id: internal-link-finder
+category: On-Page SEO
+title: The Internal Link Opportunity Finder
+tagline: Connect your content clusters.
+difficulty: Beginner
+time: Weekly
+archetype: Processor
+description: >-
+  Orphan pages starve. This agent reads your latest blog post, identifies key
+  topics (entities), and scans your existing site map for older posts that
+  mention those topics but don't link yet.
 sampleData:
-  filename: "content_inventory.csv"
+  filename: content_inventory.csv
   content: |
     URL,Content_Snippet
     /blog/seo-guide,"We discuss link building strategies..."
     /blog/new-post,"Link building is crucial for..."
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

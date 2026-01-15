@@ -1,19 +1,24 @@
 ---
-id: "crawl-budget-estimator"
-category: "Technical SEO"
-title: "The Crawl Budget Estimator"
-tagline: "Will Google actually index your 10k pages?"
-difficulty: "Advanced"
-time: "Monthly"
-archetype: "Processor"
-description: "Large sites often launch thousands of pages that never get seen. This agent analyzes your server logs (simulated via CSV) to calculate the 'Average Daily Crawl Rate' and estimates how long it will take to index a new batch of content."
+id: crawl-budget-estimator
+category: Technical SEO
+title: The Crawl Budget Estimator
+tagline: Will Google actually index your 10k pages?
+difficulty: Advanced
+time: Monthly
+archetype: Processor
+description: >-
+  Large sites often launch thousands of pages that never get seen. This agent
+  analyzes your server logs (simulated via CSV) to calculate the 'Average Daily
+  Crawl Rate' and estimates how long it will take to index a new batch of
+  content.
 sampleData:
-  filename: "server_logs_sample.csv"
+  filename: server_logs_sample.csv
   content: |
     Date,User_Agent,URL
     2023-10-01,Googlebot,/page-1
     2023-10-01,Googlebot,/page-2
     2023-10-02,Googlebot,/page-3
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

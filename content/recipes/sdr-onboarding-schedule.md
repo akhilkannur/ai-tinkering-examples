@@ -1,18 +1,22 @@
 ---
-id: "sdr-onboarding-schedule"
-category: "Hiring"
-title: "The SDR Ramp Architect"
-tagline: "Build custom 30-day onboarding plans."
-difficulty: "Intermediate"
-time: "Batch"
-description: "New SDRs fail without structure. This agent researches your tech stack and product complexity to build 4-week ramp schedules that get your new hires booking meetings in 14 days."
+id: sdr-onboarding-schedule
+category: Hiring
+title: The SDR Ramp Architect
+tagline: Build custom 30-day onboarding plans.
+difficulty: Intermediate
+time: Batch
+description: >-
+  New SDRs fail without structure. This agent researches your tech stack and
+  product complexity to build 4-week ramp schedules that get your new hires
+  booking meetings in 14 days.
 sampleData:
-  filename: "hires.csv"
+  filename: hires.csv
   content: |
     Hire_Name,Role,Tech_Stack,Target_Quota
     Alice,Inbound SDR,HubSpot & ZoomInfo,15 meetings/mo
     Bob,Outbound SDR,Salesforce & Outreach,25 meetings/mo
     Charlie,Enterprise SDR,SalesLoft & Lusha,10 meetings/mo
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

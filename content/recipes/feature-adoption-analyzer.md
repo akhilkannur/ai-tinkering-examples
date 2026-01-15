@@ -1,19 +1,23 @@
 ---
-id: "feature-adoption-analyzer"
-category: "Product Marketing"
-title: "The Feature Adoption Analyzer"
-tagline: "Who is actually using your new tool?"
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "You launched a feature, but did it land? This agent analyzes product usage logs to calculate 'Adoption Rate' by customer segment (e.g., Enterprise vs. SMB), telling you which cohort needs more education."
+id: feature-adoption-analyzer
+category: Product Marketing
+title: The Feature Adoption Analyzer
+tagline: Who is actually using your new tool?
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  You launched a feature, but did it land? This agent analyzes product usage
+  logs to calculate 'Adoption Rate' by customer segment (e.g., Enterprise vs.
+  SMB), telling you which cohort needs more education.
 sampleData:
-  filename: "usage_logs.csv"
+  filename: usage_logs.csv
   content: |
     User_ID,Segment,Used_New_Feature,Login_Count
     1,Enterprise,True,50
     2,SMB,False,10
     3,Enterprise,False,40
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

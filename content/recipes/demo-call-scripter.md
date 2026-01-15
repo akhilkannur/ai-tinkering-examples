@@ -1,17 +1,21 @@
 ---
-id: "demo-call-scripter"
-category: "Sales"
-title: "The Demo Playbook Factory"
-tagline: "Custom demo scripts for every industry you sell to."
-difficulty: "Beginner"
-time: "20 mins"
-description: "Most demos are boring feature tours. This agent reads a list of target industries and their top pains from a CSV and generates a library of 'Narrative Demo' scripts that only show features relevant to those pains."
+id: demo-call-scripter
+category: Sales
+title: The Demo Playbook Factory
+tagline: Custom demo scripts for every industry you sell to.
+difficulty: Beginner
+time: 20 mins
+description: >-
+  Most demos are boring feature tours. This agent reads a list of target
+  industries and their top pains from a CSV and generates a library of
+  'Narrative Demo' scripts that only show features relevant to those pains.
 sampleData:
-  filename: "target_industries.csv"
+  filename: target_industries.csv
   content: |
     Industry,Top_Pain,Killer_Feature
     Fintech,Security Compliance,Auto-Audit Logs
     E-com,Cart Abandonment,SMS Recovery
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

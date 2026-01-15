@@ -1,18 +1,22 @@
 ---
-id: "quality-score-doctor"
-category: "Paid Search"
-title: "The Quality Score Doctor"
-tagline: "Diagnose why your CPC is high."
-difficulty: "Intermediate"
-time: "Weekly"
-archetype: "Processor"
-description: "Quality Score (QS) determines your cost. This agent audits your keywords, isolates those with QS < 5, and identifies the culprit (CTR, Ad Relevance, or Landing Page Exp) so you can know what to fix."
+id: quality-score-doctor
+category: Paid Search
+title: The Quality Score Doctor
+tagline: Diagnose why your CPC is high.
+difficulty: Intermediate
+time: Weekly
+archetype: Processor
+description: >-
+  Quality Score (QS) determines your cost. This agent audits your keywords,
+  isolates those with QS < 5, and identifies the culprit (CTR, Ad Relevance, or
+  Landing Page Exp) so you can know what to fix.
 sampleData:
-  filename: "keyword_qs.csv"
+  filename: keyword_qs.csv
   content: |
     Keyword,QS,Exp_CTR,Ad_Relevance,Landing_Page_Exp
     "buy shoes",3,Below Average,Average,Average
     "red sneakers",9,Above Average,Above Average,Above Average
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

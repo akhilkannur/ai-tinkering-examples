@@ -1,17 +1,21 @@
 ---
-id: "feature-announcement"
-category: "Product Marketing"
-title: "The Product Marketing Engine"
-tagline: "Turn technical updates into sales momentum."
-difficulty: "Beginner"
-time: "20 mins"
-description: "Don't just ship code; ship value. This agent reads a list of technical updates from a CSV and generates a complete marketing bundle (Email, Tweet, Changelog) for every feature."
+id: feature-announcement
+category: Product Marketing
+title: The Product Marketing Engine
+tagline: Turn technical updates into sales momentum.
+difficulty: Beginner
+time: 20 mins
+description: >-
+  Don't just ship code; ship value. This agent reads a list of technical updates
+  from a CSV and generates a complete marketing bundle (Email, Tweet, Changelog)
+  for every feature.
 sampleData:
-  filename: "technical_updates.csv"
+  filename: technical_updates.csv
   content: |
     Feature_Name,Technical_Details,Release_Date
     Smart Filter,Added regex support to lead table,2024-01-10
     Zapier v2,Added 5 new actions for CRM,2024-01-12
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

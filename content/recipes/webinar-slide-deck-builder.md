@@ -1,18 +1,22 @@
 ---
-id: "webinar-slide-deck-builder"
-category: "Content"
-title: "The Webinar Deck Builder"
-tagline: "Presentations that don't suck."
-difficulty: "Intermediate"
-time: "Batch"
-description: "Most webinars are 'Death by Powerpoint'. This agent outlines high-energy slide deck structures for your entire webinar series, ensuring your narrative flows from 'Problem' to 'Offer'."
+id: webinar-slide-deck-builder
+category: Content
+title: The Webinar Deck Builder
+tagline: Presentations that don't suck.
+difficulty: Intermediate
+time: Batch
+description: >-
+  Most webinars are 'Death by Powerpoint'. This agent outlines high-energy slide
+  deck structures for your entire webinar series, ensuring your narrative flows
+  from 'Problem' to 'Offer'.
 sampleData:
-  filename: "webinars.csv"
+  filename: webinars.csv
   content: |
     Title,Primary_Outcome,Target_Audience
     Scaling B2B Sales,Learn how to book 20 meetings/mo,Sales Managers
     SEO for E-com Founders,Increase organic traffic by 50%,Store Owners
     AI-Powered Content,Build a content factory in 1 hour,Marketing Directors
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

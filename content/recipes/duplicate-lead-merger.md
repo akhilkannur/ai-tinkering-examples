@@ -1,18 +1,23 @@
 ---
-id: "duplicate-lead-merger"
-category: "RevOps"
-title: "The Duplicate Lead Merger"
-tagline: "One person, one record."
-difficulty: "Intermediate"
-time: "Weekly"
-archetype: "Processor"
-description: "Duplicates split history and confuse reps. This agent identifies duplicate emails in a CSV, applies 'Survivorship Rules' (e.g., 'Keep the one with the most recent activity' or 'Keep the one with a phone number'), and merges data into a master record."
+id: duplicate-lead-merger
+category: RevOps
+title: The Duplicate Lead Merger
+tagline: 'One person, one record.'
+difficulty: Intermediate
+time: Weekly
+archetype: Processor
+description: >-
+  Duplicates split history and confuse reps. This agent identifies duplicate
+  emails in a CSV, applies 'Survivorship Rules' (e.g., 'Keep the one with the
+  most recent activity' or 'Keep the one with a phone number'), and merges data
+  into a master record.
 sampleData:
-  filename: "dirty_leads.csv"
+  filename: dirty_leads.csv
   content: |
     Lead_ID,Email,Phone,Last_Active
     1,john@acme.com,,2023-01-01
     2,john@acme.com,555-0199,2023-10-01
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

@@ -1,15 +1,20 @@
 ---
-id: "partnership-mou-generator"
-category: "Biz Dev"
-title: "The Strategic Partnership Architect"
-tagline: "Draft a formal MOU from your notes or a partnership goal."
-difficulty: "Advanced"
-time: "One-off"
-description: "Alignment prevents disputes. This agent reads your partnership notes (if provided) or researches industry standards for your partnership type (Integration, Co-marketing, Referral) to draft a professional 1-page MOU."
+id: partnership-mou-generator
+category: Biz Dev
+title: The Strategic Partnership Architect
+tagline: Draft a formal MOU from your notes or a partnership goal.
+difficulty: Advanced
+time: One-off
+description: >-
+  Alignment prevents disputes. This agent reads your partnership notes (if
+  provided) or researches industry standards for your partnership type
+  (Integration, Co-marketing, Referral) to draft a professional 1-page MOU.
 sampleData:
-  filename: "partnership_notes.txt"
-  content: |
-    Goal: We want to swap 2 emails with Company X. They host the webinar, we provide the slides.
+  filename: partnership_notes.txt
+  content: >
+    Goal: We want to swap 2 emails with Company X. They host the webinar, we
+    provide the slides.
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

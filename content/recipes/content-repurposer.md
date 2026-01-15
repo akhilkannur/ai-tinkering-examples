@@ -1,18 +1,22 @@
 ---
-id: "content-repurposer"
-category: "Content Ops"
-title: "The Viral Editor"
-tagline: "Blog -> Thread/Newsletter."
-difficulty: "Intermediate"
-time: "Batch"
-description: "Don't let your long-form content die. This agent takes a list of articles and autonomously repurposes them into platform-specific social bundles for X, LinkedIn, and your newsletter."
+id: content-repurposer
+category: Content Ops
+title: The Viral Editor
+tagline: Blog -> Thread/Newsletter.
+difficulty: Intermediate
+time: Batch
+description: >-
+  Don't let your long-form content die. This agent takes a list of articles and
+  autonomously repurposes them into platform-specific social bundles for X,
+  LinkedIn, and your newsletter.
 sampleData:
-  filename: "articles.csv"
+  filename: articles.csv
   content: |
     Title,URL,Core_Topic
     The Future of AI Agents,https://blog.com/ai-agents,Automation
     10 Tips for Remote Work,https://blog.com/remote-tips,Culture
     SaaS Pricing Strategies,https://blog.com/pricing,Finance
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

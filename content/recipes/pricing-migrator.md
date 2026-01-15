@@ -1,18 +1,22 @@
 ---
-id: "pricing-migrator"
-category: "RevOps"
-title: "The Pricing Tier Migrator"
-tagline: "Move them up or move them out."
-difficulty: "Advanced"
-time: "One-off"
-archetype: "Processor"
-description: "Changing pricing is scary. This agent analyzes your current customer base, simulates moving them to new 2026 pricing tiers based on their usage (Seats/Storage), and calculates the 'Revenue Uplift' and 'Churn Risk'."
+id: pricing-migrator
+category: RevOps
+title: The Pricing Tier Migrator
+tagline: Move them up or move them out.
+difficulty: Advanced
+time: One-off
+archetype: Processor
+description: >-
+  Changing pricing is scary. This agent analyzes your current customer base,
+  simulates moving them to new 2026 pricing tiers based on their usage
+  (Seats/Storage), and calculates the 'Revenue Uplift' and 'Churn Risk'.
 sampleData:
-  filename: "current_customers.csv"
+  filename: current_customers.csv
   content: |
     Customer,Current_Price,Seats,Storage_GB
     Acme,100,5,10
     Globex,500,50,500
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

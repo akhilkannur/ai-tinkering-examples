@@ -1,18 +1,23 @@
 ---
-id: "ghost-job-hunter"
-category: "Lead Gen"
-title: "The Ghost Job Engine"
-tagline: "Uncover 50 hidden openings across 10 niches."
-difficulty: "Advanced"
-time: "20 mins"
-description: "High-growth startups often have budget to hire before they have the time to post a job. This agent reads a list of niches from a CSV, finds recently funded startups, identifies key leadership gaps, and drafts 'Ready-to-Send' pitches."
+id: ghost-job-hunter
+category: Lead Gen
+title: The Ghost Job Engine
+tagline: Uncover 50 hidden openings across 10 niches.
+difficulty: Advanced
+time: 20 mins
+description: >-
+  High-growth startups often have budget to hire before they have the time to
+  post a job. This agent reads a list of niches from a CSV, finds recently
+  funded startups, identifies key leadership gaps, and drafts 'Ready-to-Send'
+  pitches.
 sampleData:
-  filename: "niches_to_hunt.csv"
+  filename: niches_to_hunt.csv
   content: |
     Niche,Target_Role
     Fintech,Head of Sales
     Cybersecurity,Founding Engineer
     Web3,Growth Marketer
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

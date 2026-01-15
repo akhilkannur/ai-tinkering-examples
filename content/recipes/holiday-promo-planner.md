@@ -1,17 +1,21 @@
 ---
-id: "holiday-promo-planner"
-category: "Marketing"
-title: "The Holiday Campaign Factory"
-tagline: "Crush Black Friday across 5 products at once."
-difficulty: "Advanced"
-time: "Seasonal"
-description: "Q4 is war. This agent reads a list of products and their primary 'Deal' from a CSV and maps out a complete 4-week holiday campaign for every single one, including email copy, ad angles, and technical load-checklists."
+id: holiday-promo-planner
+category: Marketing
+title: The Holiday Campaign Factory
+tagline: Crush Black Friday across 5 products at once.
+difficulty: Advanced
+time: Seasonal
+description: >-
+  Q4 is war. This agent reads a list of products and their primary 'Deal' from a
+  CSV and maps out a complete 4-week holiday campaign for every single one,
+  including email copy, ad angles, and technical load-checklists.
 sampleData:
-  filename: "holiday_deals.csv"
+  filename: holiday_deals.csv
   content: |
     Product,Deal,Target_Revenue
     CRM_Pro,50% off annual,$100k
     Automation_Lite,$1 first month,$20k
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

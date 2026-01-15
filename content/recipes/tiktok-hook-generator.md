@@ -1,15 +1,19 @@
 ---
-id: "tiktok-hook-generator"
-category: "Social Content"
-title: "The TikTok Hook Generator"
-tagline: "Viral opening lines for your niche."
-difficulty: "Beginner"
-time: "Daily"
-archetype: "Processor"
-description: "Writer's block? This agent takes a topic and generates 10 'Viral Framework' hooks (e.g., 'Stop doing X', 'I tried Y so you don't have to', 'The secret to Z') tailored to your specific subject."
+id: tiktok-hook-generator
+category: Social Content
+title: The TikTok Hook Generator
+tagline: Viral opening lines for your niche.
+difficulty: Beginner
+time: Daily
+archetype: Processor
+description: >-
+  Writer's block? This agent takes a topic and generates 10 'Viral Framework'
+  hooks (e.g., 'Stop doing X', 'I tried Y so you don't have to', 'The secret to
+  Z') tailored to your specific subject.
 sampleData:
-  filename: "content_topic.txt"
-  content: "Topic: Learning Python for Data Science"
+  filename: content_topic.txt
+  content: 'Topic: Learning Python for Data Science'
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

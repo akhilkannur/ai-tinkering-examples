@@ -1,17 +1,21 @@
 ---
-id: "pricing-page-psychologist"
-category: "CRO"
-title: "The Pricing Auditor"
-tagline: "Audit 10 pricing pages for conversion leaks."
-difficulty: "Intermediate"
-time: "10 mins"
-description: "Audit your own pricing and your competitors' simultaneously. This agent analyzes a list of URLs against behavioral psychology principles and suggests specific changes to increase Revenue Per User."
+id: pricing-page-psychologist
+category: CRO
+title: The Pricing Auditor
+tagline: Audit 10 pricing pages for conversion leaks.
+difficulty: Intermediate
+time: 10 mins
+description: >-
+  Audit your own pricing and your competitors' simultaneously. This agent
+  analyzes a list of URLs against behavioral psychology principles and suggests
+  specific changes to increase Revenue Per User.
 sampleData:
-  filename: "pricing_urls.csv"
+  filename: pricing_urls.csv
   content: |
     Name,URL
     Our Site,https://yoursite.com/pricing
     Competitor A,https://competitor.com/plans
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

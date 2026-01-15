@@ -1,20 +1,24 @@
 ---
-id: "deal-slippage-detector"
-category: "Sales Ops"
-title: "The Deal Slippage Detector"
-tagline: "Track deals that keep moving right."
-difficulty: "Intermediate"
-time: "Weekly"
-archetype: "Processor"
-description: "Deals that push their close date 3+ times rarely close. This agent compares this week's pipeline snapshot to last week's, identifies deals where the Date changed but Stage didn't, and flags them as 'At Risk'."
+id: deal-slippage-detector
+category: Sales Ops
+title: The Deal Slippage Detector
+tagline: Track deals that keep moving right.
+difficulty: Intermediate
+time: Weekly
+archetype: Processor
+description: >-
+  Deals that push their close date 3+ times rarely close. This agent compares
+  this week's pipeline snapshot to last week's, identifies deals where the Date
+  changed but Stage didn't, and flags them as 'At Risk'.
 sampleData:
-  filename: "pipeline_snapshots.csv"
+  filename: pipeline_snapshots.csv
   content: |
     Opp_ID,Week,Close_Date,Stage
     1,Week1,2023-10-31,Negotiation
     1,Week2,2023-11-30,Negotiation
     2,Week1,2023-10-31,Discovery
     2,Week2,2023-10-31,Demo
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

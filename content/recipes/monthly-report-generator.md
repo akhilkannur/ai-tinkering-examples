@@ -1,18 +1,22 @@
 ---
-id: "monthly-report-generator"
-category: "Agency"
-title: "The Monthly Report Generator"
-tagline: "Prove your worth."
-difficulty: "Intermediate"
-time: "Batch"
-description: "Clients cancel when they don't see results. This agent processes performance data for your entire client roster and generates 'Value-First' monthly reports that prioritize revenue and lead wins."
+id: monthly-report-generator
+category: Agency
+title: The Monthly Report Generator
+tagline: Prove your worth.
+difficulty: Intermediate
+time: Batch
+description: >-
+  Clients cancel when they don't see results. This agent processes performance
+  data for your entire client roster and generates 'Value-First' monthly reports
+  that prioritize revenue and lead wins.
 sampleData:
-  filename: "client_performance.csv"
+  filename: client_performance.csv
   content: |
     Client_Name,Spend,Revenue,Leads,Prev_Month_Revenue
     Glow Skincare,5000,25000,120,20000
     TechFlow SaaS,10000,45000,350,42000
     Urban Coffee,2000,8000,45,7500
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

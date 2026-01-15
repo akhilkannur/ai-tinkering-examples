@@ -1,18 +1,22 @@
 ---
-id: "infinite-content-repurposer"
-category: "Content Ops"
-title: "The Infinite Repurposer Chain"
-tagline: "One URL, 20+ assets."
-difficulty: "Advanced"
-time: "Batch"
-description: "Why repurpose manually? This mega-chain takes a list of sources (YouTube URLs or Blog Posts) and generates complete content ecosystems: Blogs, Newsletters, Tweets, LinkedIn Posts, and TikTok hooks for an entire month of content."
+id: infinite-content-repurposer
+category: Content Ops
+title: The Infinite Repurposer Chain
+tagline: 'One URL, 20+ assets.'
+difficulty: Advanced
+time: Batch
+description: >-
+  Why repurpose manually? This mega-chain takes a list of sources (YouTube URLs
+  or Blog Posts) and generates complete content ecosystems: Blogs, Newsletters,
+  Tweets, LinkedIn Posts, and TikTok hooks for an entire month of content.
 sampleData:
-  filename: "sources.csv"
+  filename: sources.csv
   content: |
     Title,Source_URL,Target_Audience
     AI in 2024,https://youtube.com/watch?v=123,Tech Founders
     Remote Work Mastery,https://blog.com/remote,HR Managers
     Zero to One Summary,https://medium.com/summary,First-time Founders
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

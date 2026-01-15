@@ -1,16 +1,20 @@
 ---
-id: "webinar-converter"
-category: "Sales Ops"
-title: "The Webinar Sequence Factory"
-tagline: "Process 10 event transcripts into 50 follow-up emails."
-difficulty: "Intermediate"
-time: "10 mins"
-description: "Don't let your event leads go cold. This agent reads a folder of webinar/call transcripts, identifies every question and objection raised, and generates a personalized follow-up sequence for every single event."
+id: webinar-converter
+category: Sales Ops
+title: The Webinar Sequence Factory
+tagline: Process 10 event transcripts into 50 follow-up emails.
+difficulty: Intermediate
+time: 10 mins
+description: >-
+  Don't let your event leads go cold. This agent reads a folder of webinar/call
+  transcripts, identifies every question and objection raised, and generates a
+  personalized follow-up sequence for every single event.
 sampleData:
-  filename: "event_transcripts/webinar_01.txt"
+  filename: event_transcripts/webinar_01.txt
   content: |
     Attendee: "Is this secure?"
     Host: "Yes, we use 256-bit encryption."
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

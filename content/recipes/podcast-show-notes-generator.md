@@ -1,15 +1,19 @@
 ---
-id: "podcast-show-notes-generator"
-category: "Podcast"
-title: "The Show Notes Factory"
-tagline: "Generate SEO-optimized show notes for your entire season."
-difficulty: "Intermediate"
-time: "10 mins"
-description: "Podcasts need text to rank. This agent reads a folder of podcast transcripts and generates SEO-optimized Show Notes for every single episode, including a summary, bulleted takeaways, and links to resources."
+id: podcast-show-notes-generator
+category: Podcast
+title: The Show Notes Factory
+tagline: Generate SEO-optimized show notes for your entire season.
+difficulty: Intermediate
+time: 10 mins
+description: >-
+  Podcasts need text to rank. This agent reads a folder of podcast transcripts
+  and generates SEO-optimized Show Notes for every single episode, including a
+  summary, bulleted takeaways, and links to resources.
 sampleData:
-  filename: "transcripts/ep_01.txt"
+  filename: transcripts/ep_01.txt
   content: |
     Host: "Welcome back. Today we're talking to Sarah about how to scale ads."
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

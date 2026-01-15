@@ -1,18 +1,22 @@
 ---
-id: "utm-builder-spreadsheet"
-category: "Ad Ops"
-title: "The UTM Builder Formula"
-tagline: "Standardize your tracking links."
-difficulty: "Beginner"
-time: "Batch"
-description: "Manual tagging causes errors and messy data. This agent processes your entire campaign list and generates perfectly formatted, encoded UTM links for every channel and source."
+id: utm-builder-spreadsheet
+category: Ad Ops
+title: The UTM Builder Formula
+tagline: Standardize your tracking links.
+difficulty: Beginner
+time: Batch
+description: >-
+  Manual tagging causes errors and messy data. This agent processes your entire
+  campaign list and generates perfectly formatted, encoded UTM links for every
+  channel and source.
 sampleData:
-  filename: "campaigns.csv"
+  filename: campaigns.csv
   content: |
     Base_URL,Source,Medium,Campaign_Name
     https://mysite.com,twitter,social,summer_sale_2024
     https://mysite.com/pricing,newsletter,email,pro_plan_launch
     https://mysite.com/demo,google,cpc,retargeting_q4
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

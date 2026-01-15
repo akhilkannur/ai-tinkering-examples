@@ -1,19 +1,23 @@
 ---
-id: "creative-refresh-alert"
-category: "Ad Ops"
-title: "The Fatigue Detector"
-tagline: "Know when to swap ads."
-difficulty: "Intermediate"
-time: "Batch"
-description: "Ad fatigue raises CPA. This agent analyzes your ad performance reports, flagging ads with High Frequency and declining CTR, signaling exactly when to launch new creative across all your campaigns."
+id: creative-refresh-alert
+category: Ad Ops
+title: The Fatigue Detector
+tagline: Know when to swap ads.
+difficulty: Intermediate
+time: Batch
+description: >-
+  Ad fatigue raises CPA. This agent analyzes your ad performance reports,
+  flagging ads with High Frequency and declining CTR, signaling exactly when to
+  launch new creative across all your campaigns.
 sampleData:
-  filename: "ad_performance.csv"
+  filename: ad_performance.csv
   content: |
     Ad_ID,Campaign_Name,Frequency,CTR,Spend
     AD_001,Summer Sale,4.5,0.8,500
     AD_002,Summer Sale,2.1,2.5,1200
     AD_003,Retargeting,5.2,0.4,300
     AD_004,Prospecting,1.5,3.2,2000
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

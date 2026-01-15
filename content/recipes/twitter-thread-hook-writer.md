@@ -1,15 +1,19 @@
 ---
-id: "twitter-thread-hook-writer"
-category: "Social Content"
-title: "The Twitter Thread Architect"
-tagline: "Generate viral thread hooks from your story or trending news."
-difficulty: "Beginner"
-time: "Daily"
-description: "The first tweet makes or breaks the thread. This agent reads your specific story (if provided) or researches trending topics in your niche to generate 5 high-converting hooks designed to stop the scroll."
+id: twitter-thread-hook-writer
+category: Social Content
+title: The Twitter Thread Architect
+tagline: Generate viral thread hooks from your story or trending news.
+difficulty: Beginner
+time: Daily
+description: >-
+  The first tweet makes or breaks the thread. This agent reads your specific
+  story (if provided) or researches trending topics in your niche to generate 5
+  high-converting hooks designed to stop the scroll.
 sampleData:
-  filename: "story_notes.txt"
+  filename: story_notes.txt
   content: |
     I spent 48 hours building an AI tool that makes $1k a month. I used no code.
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

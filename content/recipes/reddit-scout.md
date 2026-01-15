@@ -1,18 +1,22 @@
 ---
-id: "reddit-scout"
-category: "Lead Gen"
-title: "The Reddit Signal Scout"
-tagline: "Monitor 50 subreddits for buying signals."
-difficulty: "Intermediate"
-time: "Daily"
-description: "Reddit is full of people asking 'What's the best tool for X?'. This agent reads a list of keywords and subreddits from a CSV, identifies high-intent threads, and drafts non-spammy responses."
+id: reddit-scout
+category: Lead Gen
+title: The Reddit Signal Scout
+tagline: Monitor 50 subreddits for buying signals.
+difficulty: Intermediate
+time: Daily
+description: >-
+  Reddit is full of people asking 'What's the best tool for X?'. This agent
+  reads a list of keywords and subreddits from a CSV, identifies high-intent
+  threads, and drafts non-spammy responses.
 sampleData:
-  filename: "reddit_monitor.csv"
+  filename: reddit_monitor.csv
   content: |
     Subreddit,Keyword,Intent_Signal
     r/SaaS,Best CRM,Looking for recommendations
     r/Marketing,Automate email,Process pain
     r/Entrepreneur,Alternative to HubSpot,Switching intent
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

@@ -1,15 +1,20 @@
 ---
-id: "podcast-sponsor-read-writer"
-category: "Podcast"
-title: "The Conversational Ad Read Factory"
-tagline: "Native ad reads that don't get skipped."
-difficulty: "Intermediate"
-time: "One-off"
-description: "Host-read ads convert best. This agent takes a sponsor's talking points (if provided) or researches a brand to write a natural, conversational script that fits your show's specific voice."
+id: podcast-sponsor-read-writer
+category: Podcast
+title: The Conversational Ad Read Factory
+tagline: Native ad reads that don't get skipped.
+difficulty: Intermediate
+time: One-off
+description: >-
+  Host-read ads convert best. This agent takes a sponsor's talking points (if
+  provided) or researches a brand to write a natural, conversational script that
+  fits your show's specific voice.
 sampleData:
-  filename: "sponsor_bullets.txt"
-  content: |
-    Brand: BlueBottle Coffee. Points: Fresh beans, subscription model, 20% off with code GROW.
+  filename: sponsor_bullets.txt
+  content: >
+    Brand: BlueBottle Coffee. Points: Fresh beans, subscription model, 20% off
+    with code GROW.
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

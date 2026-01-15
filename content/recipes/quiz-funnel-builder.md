@@ -1,18 +1,22 @@
 ---
-id: "quiz-funnel-builder"
-category: "Lead Gen"
-title: "The Quiz Funnel Builder"
-tagline: "Cheaper leads than a PDF."
-difficulty: "Intermediate"
-time: "Batch"
-description: "Quizzes have 40% conversion rates. This agent designs 'Diagnosis Quizzes' for your entire product catalog, segmenting users based on their answers and recommending the perfect product match."
+id: quiz-funnel-builder
+category: Lead Gen
+title: The Quiz Funnel Builder
+tagline: Cheaper leads than a PDF.
+difficulty: Intermediate
+time: Batch
+description: >-
+  Quizzes have 40% conversion rates. This agent designs 'Diagnosis Quizzes' for
+  your entire product catalog, segmenting users based on their answers and
+  recommending the perfect product match.
 sampleData:
-  filename: "products.csv"
+  filename: products.csv
   content: |
     Product_Name,Niche,Target_Customer
     NeoCloud,Cybersecurity,IT Managers
     VelvetBloom,Organic Skincare,Beauty Enthusiasts
     PixelPounce,Gaming Gear,Competitive Gamers
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

@@ -1,18 +1,22 @@
 ---
-id: "newsletter-frequency-analyst"
-category: "Intel"
-title: "The Inbox Strategy Auditor"
-tagline: "Know exactly when your competitors send."
-difficulty: "Beginner"
-time: "Batch"
-description: "Email attention is a zero-sum game. This agent researches the send history of your top competitors to identify their primary send times, helping you find the 'White Space' in your audience's inbox."
+id: newsletter-frequency-analyst
+category: Intel
+title: The Inbox Strategy Auditor
+tagline: Know exactly when your competitors send.
+difficulty: Beginner
+time: Batch
+description: >-
+  Email attention is a zero-sum game. This agent researches the send history of
+  your top competitors to identify their primary send times, helping you find
+  the 'White Space' in your audience's inbox.
 sampleData:
-  filename: "competitors.csv"
+  filename: competitors.csv
   content: |
     Competitor_Name,Newsletter_URL
     Morning Brew,https://www.morningbrew.com/daily/archives
     The Hustle,https://trends.co/blog/
     Milk Road,https://milkroad.com/daily/
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

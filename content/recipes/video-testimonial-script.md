@@ -1,18 +1,22 @@
 ---
-id: "video-testimonial-script"
-category: "Social Proof"
-title: "The Video Testimonial Director"
-tagline: "Help your clients help you."
-difficulty: "Beginner"
-time: "Batch"
-description: "Clients freeze up on camera. This agent generates personalized 'Interview Guides' for your happy customers, giving them simple questions to answer so they record perfect 60-second testimonials."
+id: video-testimonial-script
+category: Social Proof
+title: The Video Testimonial Director
+tagline: Help your clients help you.
+difficulty: Beginner
+time: Batch
+description: >-
+  Clients freeze up on camera. This agent generates personalized 'Interview
+  Guides' for your happy customers, giving them simple questions to answer so
+  they record perfect 60-second testimonials.
 sampleData:
-  filename: "clients.csv"
+  filename: clients.csv
   content: |
     Client_Name,Product_Used,Major_Win
     Jane Doe,SaaS Planner,Saved 10 hours of manual data entry weekly
     John Smith,Glow Serum,Cleared skin in 14 days
     Mike Ross,SEO Course,Ranked #1 for 'B2B Sales'
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

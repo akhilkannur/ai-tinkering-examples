@@ -1,18 +1,22 @@
 ---
-id: "job-description-optimizer"
-category: "Hiring"
-title: "The Sales Job Description Optimizer"
-tagline: "Attract 'A-Players', repel tourists."
-difficulty: "Intermediate"
-time: "Batch"
-description: "Generic JDs attract generic candidates. This agent rewrites your job descriptions to focus on 'Outcomes' rather than 'Requirements', increasing the quality of applicants for your entire hiring roadmap."
+id: job-description-optimizer
+category: Hiring
+title: The Sales Job Description Optimizer
+tagline: 'Attract ''A-Players'', repel tourists.'
+difficulty: Intermediate
+time: Batch
+description: >-
+  Generic JDs attract generic candidates. This agent rewrites your job
+  descriptions to focus on 'Outcomes' rather than 'Requirements', increasing the
+  quality of applicants for your entire hiring roadmap.
 sampleData:
-  filename: "job_postings.csv"
+  filename: job_postings.csv
   content: |
     Role,Target_Salary,Top_Requirement
     Account Executive,150k OTE,Closed $50k+ deals
     SDR,80k OTE,High-volume cold outreach
     Sales Manager,250k OTE,Scaled a team from 5 to 20
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

@@ -1,19 +1,24 @@
 ---
-id: "lead-routing-validator"
-category: "Sales Ops"
-title: "The Lead Routing Validator"
-tagline: "Ensure no lead is left behind."
-difficulty: "Intermediate"
-time: "Weekly"
-archetype: "Processor"
-description: "Leads often fall into 'black holes' due to broken territory logic. This agent audits a CSV of recent leads, checks them against territory rules (Zip Code/Employee Count), and flags any assigned to the wrong rep or the 'Unassigned' queue."
+id: lead-routing-validator
+category: Sales Ops
+title: The Lead Routing Validator
+tagline: Ensure no lead is left behind.
+difficulty: Intermediate
+time: Weekly
+archetype: Processor
+description: >-
+  Leads often fall into 'black holes' due to broken territory logic. This agent
+  audits a CSV of recent leads, checks them against territory rules (Zip
+  Code/Employee Count), and flags any assigned to the wrong rep or the
+  'Unassigned' queue.
 sampleData:
-  filename: "recent_leads.csv"
+  filename: recent_leads.csv
   content: |
     Lead_ID,Company,Zip,Emp_Count,Assigned_Rep
     101,Acme Corp,90210,500,John Doe
     102,Globex,10001,5000,Unassigned
     103,Soylent,10001,50,Jane Smith
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

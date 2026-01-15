@@ -1,18 +1,22 @@
 ---
-id: "funding-radar"
-category: "Competitor Intel"
-title: "The Capital Radar"
-tagline: "Track $1B+ in funding across 50 industries on autopilot."
-difficulty: "Intermediate"
-time: "10 mins"
-description: "Capital is intent. This agent monitors a list of industries from a CSV and generates a unified weekly report of every funding round (Seed to Series C), identifying which startups are in 'Hiring Mode'."
+id: funding-radar
+category: Competitor Intel
+title: The Capital Radar
+tagline: Track $1B+ in funding across 50 industries on autopilot.
+difficulty: Intermediate
+time: 10 mins
+description: >-
+  Capital is intent. This agent monitors a list of industries from a CSV and
+  generates a unified weekly report of every funding round (Seed to Series C),
+  identifying which startups are in 'Hiring Mode'.
 sampleData:
-  filename: "monitored_sectors.csv"
+  filename: monitored_sectors.csv
   content: |
     Industry
     Artificial Intelligence
     ClimateTech
     Logistics
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

@@ -1,16 +1,20 @@
 ---
-id: "traffic-source-reverse-engineer"
-category: "Intel"
-title: "The Traffic Source Decoder"
-tagline: "Uncover the growth engine of any competitor."
-difficulty: "Intermediate"
-time: "One-off"
-description: "SimilarWeb gives numbers, but no strategy. This agent analyzes traffic percentages (if provided) or researches a competitor's domain to identify their primary growth lever (e.g., 'High Referral' = Hidden affiliate army)."
+id: traffic-source-reverse-engineer
+category: Intel
+title: The Traffic Source Decoder
+tagline: Uncover the growth engine of any competitor.
+difficulty: Intermediate
+time: One-off
+description: >-
+  SimilarWeb gives numbers, but no strategy. This agent analyzes traffic
+  percentages (if provided) or researches a competitor's domain to identify
+  their primary growth lever (e.g., 'High Referral' = Hidden affiliate army).
 sampleData:
-  filename: "competitor_traffic.csv"
+  filename: competitor_traffic.csv
   content: |
     Domain,Direct,Organic,Social,Referral
     competitor.com,20%,50%,10%,20%
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

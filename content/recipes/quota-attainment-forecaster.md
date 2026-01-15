@@ -1,18 +1,22 @@
 ---
-id: "quota-attainment-forecaster"
-category: "Sales Ops"
-title: "The Quota Forecaster"
-tagline: "Predict end-of-month landing spots."
-difficulty: "Beginner"
-time: "Daily"
-archetype: "Processor"
-description: "Don't wait until the 31st to know you missed. This agent calculates 'Run Rate' for every rep based on current closed revenue + weighted pipeline, predicting exactly where they will land vs. their goal."
+id: quota-attainment-forecaster
+category: Sales Ops
+title: The Quota Forecaster
+tagline: Predict end-of-month landing spots.
+difficulty: Beginner
+time: Daily
+archetype: Processor
+description: >-
+  Don't wait until the 31st to know you missed. This agent calculates 'Run Rate'
+  for every rep based on current closed revenue + weighted pipeline, predicting
+  exactly where they will land vs. their goal.
 sampleData:
-  filename: "rep_performance.csv"
+  filename: rep_performance.csv
   content: |
     Rep,Quota,Closed_Won,Pipeline_Weighted,Days_Remaining
     Alice,100000,40000,30000,10
     Bob,100000,85000,5000,10
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

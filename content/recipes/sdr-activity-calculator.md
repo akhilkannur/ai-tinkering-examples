@@ -1,18 +1,22 @@
 ---
-id: "sdr-activity-calculator"
-category: "Sales Ops"
-title: "The SDR Activity Calculator"
-tagline: "Reverse-engineer quota to daily dials."
-difficulty: "Beginner"
-time: "Monthly"
-archetype: "Processor"
-description: "How many calls does it take to get a meeting? This agent calculates the specific conversion rates (Call -> Connect -> Meeting -> Opp) for your team and tells each SDR exactly how many dials they need to make daily to hit goal."
+id: sdr-activity-calculator
+category: Sales Ops
+title: The SDR Activity Calculator
+tagline: Reverse-engineer quota to daily dials.
+difficulty: Beginner
+time: Monthly
+archetype: Processor
+description: >-
+  How many calls does it take to get a meeting? This agent calculates the
+  specific conversion rates (Call -> Connect -> Meeting -> Opp) for your team
+  and tells each SDR exactly how many dials they need to make daily to hit goal.
 sampleData:
-  filename: "sdr_metrics.csv"
+  filename: sdr_metrics.csv
   content: |
     Rep,Calls,Connects,Meetings_Booked,Goal_Meetings
     Alice,1000,100,10,15
     Bob,800,40,2,15
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

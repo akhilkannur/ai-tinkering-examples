@@ -1,19 +1,23 @@
 ---
-id: "subdomain-decider"
-category: "SEO Strategy"
-title: "The Subdomain vs. Subfolder Decider"
-tagline: "End the debate with logic."
-difficulty: "Beginner"
-time: "One-off"
-archetype: "Processor"
-description: "Developers love subdomains. SEOs love subfolders. This agent runs a logic tree against your proposed project (e.g., 'Is it a totally different tech stack?', 'Does it target a different country?') and recommends the best architecture."
+id: subdomain-decider
+category: SEO Strategy
+title: The Subdomain vs. Subfolder Decider
+tagline: End the debate with logic.
+difficulty: Beginner
+time: One-off
+archetype: Processor
+description: >-
+  Developers love subdomains. SEOs love subfolders. This agent runs a logic tree
+  against your proposed project (e.g., 'Is it a totally different tech stack?',
+  'Does it target a different country?') and recommends the best architecture.
 sampleData:
-  filename: "project_specs.csv"
+  filename: project_specs.csv
   content: |
     Project,Tech_Stack,Target_Audience,Content_Relation
     Blog,Same (Next.js),Same,Supportive
     Help Center,Zendesk,Same,Supportive
     France_Site,Same,French,Localized
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

@@ -1,18 +1,22 @@
 ---
-id: "email-hard-bounce-cleaner"
-category: "Data Hygiene"
-title: "The Hard Bounce Cleaner"
-tagline: "Protect your sender reputation."
-difficulty: "Beginner"
-time: "Post-Campaign"
-archetype: "Processor"
-description: "Sending to dead emails kills your deliverability. This agent processes a 'Bounce Report' from your ESP, identifies 'Hard Bounces' (550 errors), and generates a CSV to globally suppress these emails in your CRM."
+id: email-hard-bounce-cleaner
+category: Data Hygiene
+title: The Hard Bounce Cleaner
+tagline: Protect your sender reputation.
+difficulty: Beginner
+time: Post-Campaign
+archetype: Processor
+description: >-
+  Sending to dead emails kills your deliverability. This agent processes a
+  'Bounce Report' from your ESP, identifies 'Hard Bounces' (550 errors), and
+  generates a CSV to globally suppress these emails in your CRM.
 sampleData:
-  filename: "bounce_report.csv"
+  filename: bounce_report.csv
   content: |
     Email,Bounce_Type,Error_Code
     a@test.com,Hard,550
     b@test.com,Soft,421
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

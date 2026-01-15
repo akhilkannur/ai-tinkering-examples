@@ -1,15 +1,20 @@
 ---
-id: "okr-drafter"
-category: "Strategy"
-title: "The OKR Architect"
-tagline: "Draft team goals from your vision or industry benchmarks."
-difficulty: "Intermediate"
-time: "Quarterly"
-description: "Objectives and Key Results (OKRs) drive growth. This agent takes your high-level vision (if provided) or researches your business stage (Seed, Series A, Scale) to suggest 3 measurable goals that align with market standards."
+id: okr-drafter
+category: Strategy
+title: The OKR Architect
+tagline: Draft team goals from your vision or industry benchmarks.
+difficulty: Intermediate
+time: Quarterly
+description: >-
+  Objectives and Key Results (OKRs) drive growth. This agent takes your
+  high-level vision (if provided) or researches your business stage (Seed,
+  Series A, Scale) to suggest 3 measurable goals that align with market
+  standards.
 sampleData:
-  filename: "vision_statement.txt"
+  filename: vision_statement.txt
   content: |
     Goal: We want to become the #1 tool for E-com marketing teams in 2024.
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

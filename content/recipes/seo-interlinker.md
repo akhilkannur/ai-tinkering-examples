@@ -1,17 +1,21 @@
 ---
-id: "seo-interlinker"
-category: "SEO"
-title: "The SEO Interlinker"
-tagline: "Automated internal linking for your entire blog."
-difficulty: "Intermediate"
-time: "Monthly"
-description: "Boost your 'Money Pages' by linking to them from your blog. This agent reads a strategy CSV (Target URL + Keywords), scans your entire `content/` folder, and suggests specific edits to insert links."
+id: seo-interlinker
+category: SEO
+title: The SEO Interlinker
+tagline: Automated internal linking for your entire blog.
+difficulty: Intermediate
+time: Monthly
+description: >-
+  Boost your 'Money Pages' by linking to them from your blog. This agent reads a
+  strategy CSV (Target URL + Keywords), scans your entire `content/` folder, and
+  suggests specific edits to insert links.
 sampleData:
-  filename: "link_strategy.csv"
+  filename: link_strategy.csv
   content: |
     Target_URL,Keywords
     /features/automation,"workflow automation, save time, efficiency"
     /pricing,"subscription, cost, enterprise plan"
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

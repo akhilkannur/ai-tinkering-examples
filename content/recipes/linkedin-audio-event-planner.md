@@ -1,18 +1,22 @@
 ---
-id: "linkedin-audio-event-planner"
-category: "LinkedIn"
-title: "The Audio Event Planner"
-tagline: "Live radio for B2B."
-difficulty: "Intermediate"
-time: "Batch"
-description: "LinkedIn Audio Events are low-friction webinars. This agent scripts 30-minute 'Fireside Chats' for your entire event calendar, including intros, discussion points, and audience participation hooks."
+id: linkedin-audio-event-planner
+category: LinkedIn
+title: The Audio Event Planner
+tagline: Live radio for B2B.
+difficulty: Intermediate
+time: Batch
+description: >-
+  LinkedIn Audio Events are low-friction webinars. This agent scripts 30-minute
+  'Fireside Chats' for your entire event calendar, including intros, discussion
+  points, and audience participation hooks.
 sampleData:
-  filename: "events.csv"
+  filename: events.csv
   content: |
     Topic,Guest_Name,Date
     Future of AI Agents,James Hawkins,2024-10-15
     Scaling SaaS Sales,Sarah Chen,2024-10-22
     Retention Strategies,Mike Ross,2024-10-29
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

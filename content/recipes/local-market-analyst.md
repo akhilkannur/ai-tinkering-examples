@@ -1,18 +1,22 @@
 ---
-id: "local-market-analyst"
-category: "Lead Gen"
-title: "The Local Market Factory"
-tagline: "Verified local leads for 50 cities in one run."
-difficulty: "Intermediate"
-time: "20 mins"
-description: "Why prospect one city? This agent reads a list of niches and locations from a CSV and builds a verified database of local businesses for every single one, including reputation scores and owner names."
+id: local-market-analyst
+category: Lead Gen
+title: The Local Market Factory
+tagline: Verified local leads for 50 cities in one run.
+difficulty: Intermediate
+time: 20 mins
+description: >-
+  Why prospect one city? This agent reads a list of niches and locations from a
+  CSV and builds a verified database of local businesses for every single one,
+  including reputation scores and owner names.
 sampleData:
-  filename: "prospecting_targets.csv"
+  filename: prospecting_targets.csv
   content: |
     Niche,Location
     Coffee Shops,Seattle
     HVAC,Austin
     Gyms,Miami
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

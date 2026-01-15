@@ -1,20 +1,24 @@
 ---
-id: "review-velocity-tracker"
-category: "Reputation Mgmt"
-title: "The Review Velocity Tracker"
-tagline: "Are people still talking about you?"
-difficulty: "Beginner"
-time: "Monthly"
-archetype: "Processor"
-description: "A 5-star rating from 2019 looks bad in 2026. This agent calculates the 'Review Velocity' (New Reviews / Month) for you and your competitors, alerting you if your social proof is going stale."
+id: review-velocity-tracker
+category: Reputation Mgmt
+title: The Review Velocity Tracker
+tagline: Are people still talking about you?
+difficulty: Beginner
+time: Monthly
+archetype: Processor
+description: >-
+  A 5-star rating from 2019 looks bad in 2026. This agent calculates the 'Review
+  Velocity' (New Reviews / Month) for you and your competitors, alerting you if
+  your social proof is going stale.
 sampleData:
-  filename: "review_dates.csv"
+  filename: review_dates.csv
   content: |
     Company,Review_Date,Rating
     Me,2023-10-01,5
     Me,2023-09-15,4
     CompA,2023-10-05,5
     CompA,2023-10-06,5
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

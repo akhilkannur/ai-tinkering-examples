@@ -1,18 +1,22 @@
 ---
-id: "twitter-bio-optimizer"
-category: "Twitter"
-title: "The Twitter Bio Optimizer"
-tagline: "Get followed at a glance."
-difficulty: "Beginner"
-time: "Batch"
-description: "Your bio is your personal landing page. This agent rewrites your Twitter bios to include the 'Who', 'What', and 'Proof' elements, ensuring new visitors hit the 'Follow' button for your entire team or portfolio of accounts."
+id: twitter-bio-optimizer
+category: Twitter
+title: The Twitter Bio Optimizer
+tagline: Get followed at a glance.
+difficulty: Beginner
+time: Batch
+description: >-
+  Your bio is your personal landing page. This agent rewrites your Twitter bios
+  to include the 'Who', 'What', and 'Proof' elements, ensuring new visitors hit
+  the 'Follow' button for your entire team or portfolio of accounts.
 sampleData:
-  filename: "profiles.csv"
+  filename: profiles.csv
   content: |
     Name,Role,Company,Achievement,Topic
     Alex Rivera,SDR Lead,TechFlow,Scaled to $1M ARR,Sales Automation
     Sarah Chen,Head of Design,Glow,Ex-Airbnb,UX for SaaS
     Mike Ross,SEO Lead,GrowthLabs,Ranked #1 for 'AI Tools',Search Strategy
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

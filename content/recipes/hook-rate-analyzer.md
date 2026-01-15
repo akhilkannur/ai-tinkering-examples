@@ -1,18 +1,22 @@
 ---
-id: "hook-rate-analyzer"
-category: "Video Ads"
-title: "The Hook Rate Analyzer"
-tagline: "Fix the first 3 seconds."
-difficulty: "Intermediate"
-time: "Weekly"
-archetype: "Processor"
-description: "If they don't watch past 3 seconds, your creative failed. This agent calculates 'Hook Rate' (3-Sec Views / Impressions) and 'Hold Rate' (ThruPlay / 3-Sec) for your video ads, ranking them to find the winning scroll-stoppers."
+id: hook-rate-analyzer
+category: Video Ads
+title: The Hook Rate Analyzer
+tagline: Fix the first 3 seconds.
+difficulty: Intermediate
+time: Weekly
+archetype: Processor
+description: >-
+  If they don't watch past 3 seconds, your creative failed. This agent
+  calculates 'Hook Rate' (3-Sec Views / Impressions) and 'Hold Rate' (ThruPlay /
+  3-Sec) for your video ads, ranking them to find the winning scroll-stoppers.
 sampleData:
-  filename: "video_metrics.csv"
+  filename: video_metrics.csv
   content: |
     Ad_Name,Impressions,3_Sec_Views,ThruPlays
     UGC_Testimonial,1000,400,100
     Founder_Story,1000,100,80
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

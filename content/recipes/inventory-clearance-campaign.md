@@ -1,18 +1,22 @@
 ---
-id: "inventory-clearance-campaign"
-category: "E-commerce"
-title: "The Inventory Clearance Campaign"
-tagline: "Turn dead stock into cash."
-difficulty: "Intermediate"
-time: "Batch"
-description: "Dead stock kills cash flow. This agent plans 'Mystery Box' or 'Bundle' campaigns to move slow-moving SKUs without explicitly devaluing the brand with a 'Clearance' banner."
+id: inventory-clearance-campaign
+category: E-commerce
+title: The Inventory Clearance Campaign
+tagline: Turn dead stock into cash.
+difficulty: Intermediate
+time: Batch
+description: >-
+  Dead stock kills cash flow. This agent plans 'Mystery Box' or 'Bundle'
+  campaigns to move slow-moving SKUs without explicitly devaluing the brand with
+  a 'Clearance' banner.
 sampleData:
-  filename: "dead_stock.csv"
+  filename: dead_stock.csv
   content: |
     SKU,Product_Name,Quantity,Original_Price
     JKT-001,Canvas Worker Jacket,120,150
     HAT-22,Wool Beanie Blue,85,35
     BAG-99,Mini Duffel Bag,199,85
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

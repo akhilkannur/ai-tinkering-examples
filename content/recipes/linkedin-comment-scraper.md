@@ -1,18 +1,22 @@
 ---
-id: "linkedin-comment-scraper"
-category: "Growth Hacking"
-title: "The LinkedIn Comment Miner"
-tagline: "Turn engagement into a CSV."
-difficulty: "Advanced"
-time: "Batch"
-description: "A viral post is a lead magnet. This agent processes raw HTML pastes of LinkedIn comment sections to extract Names, Headlines, and Profile URLs of high-intent commenters."
+id: linkedin-comment-scraper
+category: Growth Hacking
+title: The LinkedIn Comment Miner
+tagline: Turn engagement into a CSV.
+difficulty: Advanced
+time: Batch
+description: >-
+  A viral post is a lead magnet. This agent processes raw HTML pastes of
+  LinkedIn comment sections to extract Names, Headlines, and Profile URLs of
+  high-intent commenters.
 sampleData:
-  filename: "html_sources.csv"
+  filename: html_sources.csv
   content: |
     Post_ID,HTML_File,Target_Keyword
     post_123,raw_html/post_1.html,Interested
     post_456,raw_html/post_2.txt,PDF
     post_789,raw_html/post_3.html,Yes please
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

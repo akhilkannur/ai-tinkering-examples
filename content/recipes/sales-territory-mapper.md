@@ -1,19 +1,23 @@
 ---
-id: "sales-territory-mapper"
-category: "Sales Ops"
-title: "The Territory Mapper"
-tagline: "Balance your sales map instantly."
-difficulty: "Advanced"
-time: "Quarterly"
-archetype: "Processor"
-description: "Redistributing territories is a headache. This agent reads a list of customer zip codes and aggregates them into balanced 'Territories' based on revenue potential, ensuring fair patches for all reps."
+id: sales-territory-mapper
+category: Sales Ops
+title: The Territory Mapper
+tagline: Balance your sales map instantly.
+difficulty: Advanced
+time: Quarterly
+archetype: Processor
+description: >-
+  Redistributing territories is a headache. This agent reads a list of customer
+  zip codes and aggregates them into balanced 'Territories' based on revenue
+  potential, ensuring fair patches for all reps.
 sampleData:
-  filename: "customer_zips.csv"
+  filename: customer_zips.csv
   content: |
     Customer,Zip,ARR
     CustA,10001,50000
     CustB,10002,10000
     CustC,90210,75000
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

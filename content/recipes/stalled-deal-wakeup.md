@@ -1,17 +1,21 @@
 ---
-id: "stalled-deal-wakeup"
-category: "Sales Strategy"
-title: "The Stalled Deal Wake-Up Script"
-tagline: "Revive the 'Checking in' emails."
-difficulty: "Beginner"
-time: "Weekly"
-archetype: "Processor"
-description: "Sales reps love to send 'Just checking in.' That's weak. This agent identifies deals stuck in the same stage for >30 days and writes a 'Value-Add' email based on the prospect's industry news, not just a nudge."
+id: stalled-deal-wakeup
+category: Sales Strategy
+title: The Stalled Deal Wake-Up Script
+tagline: Revive the 'Checking in' emails.
+difficulty: Beginner
+time: Weekly
+archetype: Processor
+description: >-
+  Sales reps love to send 'Just checking in.' That's weak. This agent identifies
+  deals stuck in the same stage for >30 days and writes a 'Value-Add' email
+  based on the prospect's industry news, not just a nudge.
 sampleData:
-  filename: "stuck_deals.csv"
+  filename: stuck_deals.csv
   content: |
     Deal,Stage,Days_Stuck,Industry
     Acme Deal,Discovery,45,Retail
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

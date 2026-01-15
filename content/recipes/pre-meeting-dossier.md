@@ -1,18 +1,22 @@
 ---
-id: "pre-meeting-dossier"
-category: "Sales"
-title: "The Pre-Meeting Dossier"
-tagline: "Never go into a call blind."
-difficulty: "Beginner"
-time: "Batch"
-description: "5 minutes before a call, you need to know everything. This agent researches multiple prospects simultaneously, scraping LinkedIn, company news, and tech stacks to build 1-page 'Cheat Sheets' for your entire day of meetings."
+id: pre-meeting-dossier
+category: Sales
+title: The Pre-Meeting Dossier
+tagline: Never go into a call blind.
+difficulty: Beginner
+time: Batch
+description: >-
+  5 minutes before a call, you need to know everything. This agent researches
+  multiple prospects simultaneously, scraping LinkedIn, company news, and tech
+  stacks to build 1-page 'Cheat Sheets' for your entire day of meetings.
 sampleData:
-  filename: "meetings.csv"
+  filename: meetings.csv
   content: |
     Name,Company,LinkedIn_URL
     John Doe,Acme Corp,https://linkedin.com/in/johndoe
     Jane Smith,Globex,https://linkedin.com/in/janesmith
     Mike Ross,Pearson Hardman,https://linkedin.com/in/mikeross
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

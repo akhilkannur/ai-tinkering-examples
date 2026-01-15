@@ -1,19 +1,23 @@
 ---
-id: "keyword-cannibalization-detective"
-category: "SEO Strategy"
-title: "The Keyword Cannibalization Detective"
-tagline: "Stop competing with yourself."
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "When two pages rank for the same keyword, neither ranks well. This agent analyzes GSC data (Keyword + URL) to find terms where multiple pages share impressions, suggesting which one to canonicalize or merge."
+id: keyword-cannibalization-detective
+category: SEO Strategy
+title: The Keyword Cannibalization Detective
+tagline: Stop competing with yourself.
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  When two pages rank for the same keyword, neither ranks well. This agent
+  analyzes GSC data (Keyword + URL) to find terms where multiple pages share
+  impressions, suggesting which one to canonicalize or merge.
 sampleData:
-  filename: "gsc_query_data.csv"
+  filename: gsc_query_data.csv
   content: |
     Query,Page,Impressions,Position
     blue widgets,/products/blue-widget,1000,5
     blue widgets,/blog/top-widgets,800,8
     red widgets,/products/red-widget,500,1
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

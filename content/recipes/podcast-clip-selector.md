@@ -1,15 +1,19 @@
 ---
-id: "podcast-clip-selector"
-category: "Podcast"
-title: "The Viral Clip Factory"
-tagline: "Identify viral social clips for your entire season."
-difficulty: "Intermediate"
-time: "10 mins"
-description: "Editing a 1-hour show is hard. This agent scans a folder of transcripts for 'High Intensity' moments (laughter, debate, definitive statements) and suggests specific timestamps to cut into clips for social media."
+id: podcast-clip-selector
+category: Podcast
+title: The Viral Clip Factory
+tagline: Identify viral social clips for your entire season.
+difficulty: Intermediate
+time: 10 mins
+description: >-
+  Editing a 1-hour show is hard. This agent scans a folder of transcripts for
+  'High Intensity' moments (laughter, debate, definitive statements) and
+  suggests specific timestamps to cut into clips for social media.
 sampleData:
-  filename: "transcripts/ep_01.txt"
+  filename: transcripts/ep_01.txt
   content: |
     [05:20] Sarah: "And that's why most people are completely wrong about SEO."
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

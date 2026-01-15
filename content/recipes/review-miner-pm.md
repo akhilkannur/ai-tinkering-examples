@@ -1,17 +1,21 @@
 ---
-id: "review-miner-pm"
-category: "CRO"
-title: "The Competitive Review Miner"
-tagline: "Audit the entire market's weaknesses."
-difficulty: "Advanced"
-time: "30 mins"
-description: "Scrapes negative reviews for a list of competitors, identifies missing features across the market, and ranks them by revenue impact to build a winning roadmap."
+id: review-miner-pm
+category: CRO
+title: The Competitive Review Miner
+tagline: Audit the entire market's weaknesses.
+difficulty: Advanced
+time: 30 mins
+description: >-
+  Scrapes negative reviews for a list of competitors, identifies missing
+  features across the market, and ranks them by revenue impact to build a
+  winning roadmap.
 sampleData:
-  filename: "competitors_to_mine.csv"
+  filename: competitors_to_mine.csv
   content: |
     Competitor_Name,Review_URL
     Salesforce,https://www.g2.com/products/salesforce-sales-cloud/reviews
     HubSpot,https://www.g2.com/products/hubspot-sales-hub/reviews
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

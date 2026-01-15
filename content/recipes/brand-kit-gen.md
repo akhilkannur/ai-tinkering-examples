@@ -1,15 +1,17 @@
 ---
-id: "brand-kit-gen"
-category: "Content Ops"
-title: "The Instant Brand Architect"
-tagline: "Logo + Pattern + Vibe."
-difficulty: "Intermediate"
-time: "Batch"
-archetype: "Processor"
-isPremium: true
-description: "Instantly create cohesive visual identity starter kits for multiple projects. This agent generates logos, seamless background patterns, and defines color palettes for an entire portfolio of brands."
+id: brand-kit-gen
+category: Content Ops
+title: The Instant Brand Architect
+tagline: Logo + Pattern + Vibe.
+difficulty: Intermediate
+time: Batch
+archetype: Processor
+description: >-
+  Instantly create cohesive visual identity starter kits for multiple projects.
+  This agent generates logos, seamless background patterns, and defines color
+  palettes for an entire portfolio of brands.
 sampleData:
-  filename: "brands.csv"
+  filename: brands.csv
   content: |
     Brand_Name,Description,Core_Vibe
     NeoCloud,Cloud storage for AI researchers,Minimalist and Secure

@@ -1,18 +1,22 @@
 ---
-id: "trend-surfer-alert"
-category: "Content Ops"
-title: "The Trend Surfer"
-tagline: "Be first to the story."
-difficulty: "Advanced"
-time: "Batch"
-description: "Content is a timing game. This agent monitors your entire target keyword list for search volume spikes and auto-drafts 'Newsjacking' posts whenever a trend is detected."
+id: trend-surfer-alert
+category: Content Ops
+title: The Trend Surfer
+tagline: Be first to the story.
+difficulty: Advanced
+time: Batch
+description: >-
+  Content is a timing game. This agent monitors your entire target keyword list
+  for search volume spikes and auto-drafts 'Newsjacking' posts whenever a trend
+  is detected.
 sampleData:
-  filename: "keywords.csv"
+  filename: keywords.csv
   content: |
     Keyword,Niche,Alert_Threshold_%
     Generative AI,Tech,50
     Remote Work,HR,30
     Sustainable Fashion,Lifestyle,40
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

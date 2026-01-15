@@ -1,17 +1,21 @@
 ---
-id: "github-headhunter"
-category: "Lead Gen"
-title: "The Code Headhunter"
-tagline: "Recruit from a specific repo or a tech niche."
-difficulty: "Advanced"
-time: "25 mins"
-description: "Top engineers don't have resumes; they have PRs. This agent reads a list of repos from a CSV (if provided) or researches a tech niche (e.g., 'React Frameworks') to find and audit the top 5% of contributors."
+id: github-headhunter
+category: Lead Gen
+title: The Code Headhunter
+tagline: Recruit from a specific repo or a tech niche.
+difficulty: Advanced
+time: 25 mins
+description: >-
+  Top engineers don't have resumes; they have PRs. This agent reads a list of
+  repos from a CSV (if provided) or researches a tech niche (e.g., 'React
+  Frameworks') to find and audit the top 5% of contributors.
 sampleData:
-  filename: "target_repos.csv"
+  filename: target_repos.csv
   content: |
     Repo_URL
     vercel/next.js
     shadcn-ui/ui
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

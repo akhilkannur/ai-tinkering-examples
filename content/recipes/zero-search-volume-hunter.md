@@ -1,18 +1,22 @@
 ---
-id: "zero-search-volume-hunter"
-category: "SEO"
-title: "The Zero-Volume Hunter"
-tagline: "Rank for keywords tools ignore."
-difficulty: "Advanced"
-time: "Batch"
-description: "SEO tools are often wrong about volume. This agent identifies 'Zero Volume' keywords that actually have high intent and low competition, perfect for sniping traffic across your entire product line."
+id: zero-search-volume-hunter
+category: SEO
+title: The Zero-Volume Hunter
+tagline: Rank for keywords tools ignore.
+difficulty: Advanced
+time: Batch
+description: >-
+  SEO tools are often wrong about volume. This agent identifies 'Zero Volume'
+  keywords that actually have high intent and low competition, perfect for
+  sniping traffic across your entire product line.
 sampleData:
-  filename: "topics.csv"
+  filename: topics.csv
   content: |
     Topic,Niche,Target_Customer
     Notion,Productivity,Small Business Owners
     Stripe,Payments,SaaS Developers
     PostHog,Analytics,Product Managers
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

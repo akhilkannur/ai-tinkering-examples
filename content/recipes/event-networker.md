@@ -1,17 +1,21 @@
 ---
-id: "event-networker"
-category: "Networking"
-title: "The Multi-Event Networking Planner"
-tagline: "High-value hit lists for your entire conference calendar."
-difficulty: "Intermediate"
-time: "1 hour"
-description: "Don't wander the conference hall aimlessly. This agent reads a list of events and their attendee/speaker files, cross-references them with your ICP, and builds a 'Must-Meet' hit list for every event."
+id: event-networker
+category: Networking
+title: The Multi-Event Networking Planner
+tagline: High-value hit lists for your entire conference calendar.
+difficulty: Intermediate
+time: 1 hour
+description: >-
+  Don't wander the conference hall aimlessly. This agent reads a list of events
+  and their attendee/speaker files, cross-references them with your ICP, and
+  builds a 'Must-Meet' hit list for every event.
 sampleData:
-  filename: "event_calendar.csv"
+  filename: event_calendar.csv
   content: |
     Event_Name,Attendee_File
     SaaStr Annual,saastr_list.txt
     Web Summit,websummit_list.txt
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

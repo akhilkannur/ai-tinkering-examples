@@ -1,18 +1,22 @@
 ---
-id: "help-center-gap-finder"
-category: "Intel"
-title: "The Help Center Forensic Agent"
-tagline: "Spot competitor flaws in their support docs."
-difficulty: "Advanced"
-time: "Batch"
-description: "Support documentation reveals the truth. This agent researches competitor Help Centers to identify which features require the most 'Troubleshooting' guides, signaling UX flaws you can exploit."
+id: help-center-gap-finder
+category: Intel
+title: The Help Center Forensic Agent
+tagline: Spot competitor flaws in their support docs.
+difficulty: Advanced
+time: Batch
+description: >-
+  Support documentation reveals the truth. This agent researches competitor Help
+  Centers to identify which features require the most 'Troubleshooting' guides,
+  signaling UX flaws you can exploit.
 sampleData:
-  filename: "competitors.csv"
+  filename: competitors.csv
   content: |
     Competitor_Name,Help_Center_URL
     Stripe,https://support.stripe.com
     Intercom,https://www.intercom.com/help
     Zendesk,https://support.zendesk.com
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

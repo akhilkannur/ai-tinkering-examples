@@ -1,19 +1,23 @@
 ---
-id: "nps-classifier"
-category: "Customer Success"
-title: "The NPS Comment Classifier"
-tagline: "Turn 'Detractors' into data."
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "NPS scores are useless without context. This agent reads open-ended NPS feedback, categorizes each comment (e.g., 'Pricing', 'Support', 'Product Bug'), and quantifies the top drivers of dissatisfaction."
+id: nps-classifier
+category: Customer Success
+title: The NPS Comment Classifier
+tagline: Turn 'Detractors' into data.
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  NPS scores are useless without context. This agent reads open-ended NPS
+  feedback, categorizes each comment (e.g., 'Pricing', 'Support', 'Product
+  Bug'), and quantifies the top drivers of dissatisfaction.
 sampleData:
-  filename: "nps_feedback.csv"
+  filename: nps_feedback.csv
   content: |
     Score,Comment
     2,"Too expensive for what it does."
     9,"Love the support team!"
     4,"The app crashes on login."
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

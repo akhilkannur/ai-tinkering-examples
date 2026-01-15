@@ -1,18 +1,22 @@
 ---
-id: "product-hunt-manager"
-category: "Marketing"
-title: "The Product Hunt Launch Manager"
-tagline: "Get #1 Product of the Day."
-difficulty: "Advanced"
-time: "Batch"
-description: "A launch is a project, not just a post. This agent creates complete 'Launch Day' schedules, writes the crucial 'Maker's Comment', and drafts community outreach messages for your entire product roadmap."
+id: product-hunt-manager
+category: Marketing
+title: The Product Hunt Launch Manager
+tagline: 'Get #1 Product of the Day.'
+difficulty: Advanced
+time: Batch
+description: >-
+  A launch is a project, not just a post. This agent creates complete 'Launch
+  Day' schedules, writes the crucial 'Maker's Comment', and drafts community
+  outreach messages for your entire product roadmap.
 sampleData:
-  filename: "launches.csv"
+  filename: launches.csv
   content: |
     Product_Name,Core_Problem,Maker_Name,Launch_Date
     SocialSync,Managing 5 different social feeds is exhausting,Alex,2024-11-12
     FileVault,Sensitive files are easily leaked in Slack,Sarah,2024-11-19
     GameGuild,Finding pro teammates for casual play is hard,Mike,2024-11-26
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

@@ -1,16 +1,20 @@
 ---
-id: "haro-pitcher"
-category: "PR"
-title: "The Bulk HARO Pitcher"
-tagline: "Scan 100 media queries and draft 5 winning pitches."
-difficulty: "Advanced"
-time: "Daily"
-description: "Journalists move fast. This agent scans a large text file of media queries (from HARO or Connectively), identifies the ones you are actually qualified for, and drafts 'Ready-to-Send' pitches including your bio and headshot link."
+id: haro-pitcher
+category: PR
+title: The Bulk HARO Pitcher
+tagline: Scan 100 media queries and draft 5 winning pitches.
+difficulty: Advanced
+time: Daily
+description: >-
+  Journalists move fast. This agent scans a large text file of media queries
+  (from HARO or Connectively), identifies the ones you are actually qualified
+  for, and drafts 'Ready-to-Send' pitches including your bio and headshot link.
 sampleData:
-  filename: "media_queries.txt"
+  filename: media_queries.txt
   content: |
     Query: Looking for expert on AI in Sales. Outlet: Forbes. Deadline: 2pm.
     Query: Tips for small business taxes. Outlet: WSJ. Deadline: Tomorrow.
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

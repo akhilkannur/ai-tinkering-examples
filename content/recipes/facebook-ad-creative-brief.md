@@ -1,18 +1,22 @@
 ---
-id: "facebook-ad-creative-brief"
-category: "Ads"
-title: "The Facebook Ad Creative Brief"
-tagline: "High-converting visual concepts at scale."
-difficulty: "Intermediate"
-time: "Batch"
-description: "The creative is the most important targeting lever. This agent takes a list of products and generates distinct visual concepts (UGC, Static, Carousel) with detailed instructions for your design team."
+id: facebook-ad-creative-brief
+category: Ads
+title: The Facebook Ad Creative Brief
+tagline: High-converting visual concepts at scale.
+difficulty: Intermediate
+time: Batch
+description: >-
+  The creative is the most important targeting lever. This agent takes a list of
+  products and generates distinct visual concepts (UGC, Static, Carousel) with
+  detailed instructions for your design team.
 sampleData:
-  filename: "campaigns.csv"
+  filename: campaigns.csv
   content: |
     Product_Name,Target_Audience,Primary_Benefit
     NeoCloud,IT Managers,Unbreakable encryption
     VelvetBloom,Busy Moms,Instant skin hydration
     PixelPounce,Pro Gamers,Zero lag performance
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

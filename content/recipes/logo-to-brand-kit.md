@@ -1,18 +1,22 @@
 ---
-id: "logo-to-brand-kit"
-category: "Brand"
-title: "The Logo-to-Brand-Kit Generator"
-tagline: "Instant design systems from your logos."
-difficulty: "Experimental"
-time: "Batch"
-description: "Launch landing pages fast for all your projects. This agent takes a list of logo files, extracts brand DNA (colors, font vibes), and generates CSS themes or Tailwind configs for every brand in your portfolio."
+id: logo-to-brand-kit
+category: Brand
+title: The Logo-to-Brand-Kit Generator
+tagline: Instant design systems from your logos.
+difficulty: Experimental
+time: Batch
+description: >-
+  Launch landing pages fast for all your projects. This agent takes a list of
+  logo files, extracts brand DNA (colors, font vibes), and generates CSS themes
+  or Tailwind configs for every brand in your portfolio.
 sampleData:
-  filename: "logos_to_process.csv"
+  filename: logos_to_process.csv
   content: |
     Brand_Name,Logo_File,Target_Framework
     NeoCloud,assets/logos/neocloud.png,Tailwind
     VelvetBloom,assets/logos/velvet.jpg,Plain CSS
     PixelPounce,assets/logos/pounce.svg,Tailwind
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

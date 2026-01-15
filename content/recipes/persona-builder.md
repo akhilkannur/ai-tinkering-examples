@@ -1,18 +1,22 @@
 ---
-id: "persona-builder"
-category: "Strategy"
-title: "The AI Persona Researcher"
-tagline: "Build user avatars through research."
-difficulty: "Beginner"
-time: "Batch"
-description: "Vague marketing fails. This agent researches your target niches to uncover real-world fears, desires, and 'Watering Holes', building data-backed ICP cards for your entire market map."
+id: persona-builder
+category: Strategy
+title: The AI Persona Researcher
+tagline: Build user avatars through research.
+difficulty: Beginner
+time: Batch
+description: >-
+  Vague marketing fails. This agent researches your target niches to uncover
+  real-world fears, desires, and 'Watering Holes', building data-backed ICP
+  cards for your entire market map.
 sampleData:
-  filename: "niches.csv"
+  filename: niches.csv
   content: |
     Niche,Primary_Challenge,Platform
     Freelance Designers,Scope Creep,Reddit
     SaaS Ops Managers,Data Silos,LinkedIn
     E-com Store Owners,Ad Costs,Twitter
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

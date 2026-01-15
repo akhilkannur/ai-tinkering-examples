@@ -1,15 +1,19 @@
 ---
-id: "vendor-negotiation-script"
-category: "Finance"
-title: "The Vendor Negotiator"
-tagline: "Save 20% on your software stack from a bill or a name."
-difficulty: "Intermediate"
-time: "Annual"
-description: "Everything is negotiable. This agent reads your current vendor bill (if provided) or researches a specific tool to find competitor deals and parity pricing, then drafts a high-leverage negotiation script for you."
+id: vendor-negotiation-script
+category: Finance
+title: The Vendor Negotiator
+tagline: Save 20% on your software stack from a bill or a name.
+difficulty: Intermediate
+time: Annual
+description: >-
+  Everything is negotiable. This agent reads your current vendor bill (if
+  provided) or researches a specific tool to find competitor deals and parity
+  pricing, then drafts a high-leverage negotiation script for you.
 sampleData:
-  filename: "vendor_bill.txt"
+  filename: vendor_bill.txt
   content: |
     Service: HubSpot Pro. Monthly: $800. Renewing in 30 days.
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

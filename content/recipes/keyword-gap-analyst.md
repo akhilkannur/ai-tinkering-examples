@@ -1,18 +1,22 @@
 ---
-id: "keyword-gap-analyst"
-category: "SEO"
-title: "The Keyword Gap Analyst"
-tagline: "Steal your competitor's traffic."
-difficulty: "Advanced"
-time: "Batch"
-description: "Your competitors are ranking for keywords you haven't even thought of. This agent researches competitor sites to identify high-value keyword gaps and builds a prioritized content calendar to steal that traffic."
+id: keyword-gap-analyst
+category: SEO
+title: The Keyword Gap Analyst
+tagline: Steal your competitor's traffic.
+difficulty: Advanced
+time: Batch
+description: >-
+  Your competitors are ranking for keywords you haven't even thought of. This
+  agent researches competitor sites to identify high-value keyword gaps and
+  builds a prioritized content calendar to steal that traffic.
 sampleData:
-  filename: "competitors.csv"
+  filename: competitors.csv
   content: |
     Competitor_Name,Website,Niche
     HubSpot,https://hubspot.com,CRM & Marketing
     Salesforce,https://salesforce.com,Enterprise CRM
     Pipedrive,https://pipedrive.com,Sales CRM
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

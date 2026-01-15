@@ -1,18 +1,22 @@
 ---
-id: "programmatic-seo-builder"
-category: "SEO Content"
-title: "The Programmatic SEO Builder"
-tagline: "Build 1,000 pages with 1 template."
-difficulty: "Advanced"
-time: "One-off"
-archetype: "Processor"
-description: "Need pages for 'Best CRM for [Industry]'? This agent takes a CSV of industries and a content template (Markdown with variables), and generates ready-to-deploy MDX files for each variation."
+id: programmatic-seo-builder
+category: SEO Content
+title: The Programmatic SEO Builder
+tagline: 'Build 1,000 pages with 1 template.'
+difficulty: Advanced
+time: One-off
+archetype: Processor
+description: >-
+  Need pages for 'Best CRM for [Industry]'? This agent takes a CSV of industries
+  and a content template (Markdown with variables), and generates
+  ready-to-deploy MDX files for each variation.
 sampleData:
-  filename: "industries.csv"
+  filename: industries.csv
   content: |
     Industry,Pain_Point,Feature
     Real Estate,Tracking showings,Mobile App
     Dentists,Appointment reminders,SMS Automation
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

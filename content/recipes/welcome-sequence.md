@@ -1,18 +1,22 @@
 ---
-id: "welcome-sequence"
-category: "Retention"
-title: "The Onboarding Factory"
-tagline: "Custom welcome sequences for every persona."
-difficulty: "Intermediate"
-time: "1 hour"
-description: "Different users have different 'Aha! Moments'. This agent reads a list of user personas from a CSV and designs a specialized 5-day welcome sequence for each, ensuring they reach activation fast."
+id: welcome-sequence
+category: Retention
+title: The Onboarding Factory
+tagline: Custom welcome sequences for every persona.
+difficulty: Intermediate
+time: 1 hour
+description: >-
+  Different users have different 'Aha! Moments'. This agent reads a list of user
+  personas from a CSV and designs a specialized 5-day welcome sequence for each,
+  ensuring they reach activation fast.
 sampleData:
-  filename: "user_personas.csv"
+  filename: user_personas.csv
   content: |
     Persona,Aha_Moment,Goal
     Agency Owner,Sending first report,Profitable projects
     SaaS Founder,Installing the tag,Churn reduction
     E-com Manager,Adding first product,Increase AOV
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

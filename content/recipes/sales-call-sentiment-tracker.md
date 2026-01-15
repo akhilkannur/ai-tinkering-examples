@@ -1,18 +1,22 @@
 ---
-id: "sales-call-sentiment-tracker"
-category: "Sales Enablement"
-title: "The Call Sentiment Tracker"
-tagline: "Analyze the mood of your sales calls."
-difficulty: "Advanced"
-time: "Post-Call"
-archetype: "Processor"
-description: "Are your prospects angry or excited? This agent reads a CSV of call transcripts (or summaries), performs sentiment analysis on the prospect's dialogue, and correlates high sentiment with closed deals."
+id: sales-call-sentiment-tracker
+category: Sales Enablement
+title: The Call Sentiment Tracker
+tagline: Analyze the mood of your sales calls.
+difficulty: Advanced
+time: Post-Call
+archetype: Processor
+description: >-
+  Are your prospects angry or excited? This agent reads a CSV of call
+  transcripts (or summaries), performs sentiment analysis on the prospect's
+  dialogue, and correlates high sentiment with closed deals.
 sampleData:
-  filename: "call_transcripts.csv"
+  filename: call_transcripts.csv
   content: |
     Call_ID,Rep,Outcome,Transcript_Snippet
     1,Alice,Won,"I love this feature, exactly what we need."
     2,Bob,Lost,"This is too expensive and doesn't work."
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

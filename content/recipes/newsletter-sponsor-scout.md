@@ -1,17 +1,21 @@
 ---
-id: "newsletter-sponsor-scout"
-category: "Monetization"
-title: "The Sponsor Scout Engine"
-tagline: "Fill your ad slots for the next 6 months."
-difficulty: "Intermediate"
-time: "Weekly"
-description: "Why wait for sponsors? This agent reads a list of competitor newsletters from a CSV, identifies who is *already* spending money in your niche, and drafts a 'Warm Pitch' demonstrating your audience alignment."
+id: newsletter-sponsor-scout
+category: Monetization
+title: The Sponsor Scout Engine
+tagline: Fill your ad slots for the next 6 months.
+difficulty: Intermediate
+time: Weekly
+description: >-
+  Why wait for sponsors? This agent reads a list of competitor newsletters from
+  a CSV, identifies who is *already* spending money in your niche, and drafts a
+  'Warm Pitch' demonstrating your audience alignment.
 sampleData:
-  filename: "competitor_newsletters.csv"
+  filename: competitor_newsletters.csv
   content: |
     Show_Name,URL,Audience_Type
     The AI Digest,https://aidigest.com,Engineers
     Growth Daily,https://growth.com,Marketers
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

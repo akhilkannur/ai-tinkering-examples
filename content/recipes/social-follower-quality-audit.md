@@ -1,17 +1,21 @@
 ---
-id: "social-follower-quality-audit"
-category: "Intel"
-title: "The Social Authenticity Auditor"
-tagline: "Spot fake followers on your account or a competitor's."
-difficulty: "Intermediate"
-time: "One-off"
-description: "Follower count is a vanity metric. This agent audits your own follower list (if provided) or researches a competitor's engagement to detect 'Bot Signals' like low engagement-to-follower ratios or repetitive comment patterns."
+id: social-follower-quality-audit
+category: Intel
+title: The Social Authenticity Auditor
+tagline: Spot fake followers on your account or a competitor's.
+difficulty: Intermediate
+time: One-off
+description: >-
+  Follower count is a vanity metric. This agent audits your own follower list
+  (if provided) or researches a competitor's engagement to detect 'Bot Signals'
+  like low engagement-to-follower ratios or repetitive comment patterns.
 sampleData:
-  filename: "follower_list.csv"
+  filename: follower_list.csv
   content: |
     Username,Bio,Last_Post_Date
     RealHuman1,"Product Manager @Google",2024-01-08
     BotAccount1,"Buy crypto now",None
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

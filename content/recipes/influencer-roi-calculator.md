@@ -1,18 +1,22 @@
 ---
-id: "influencer-roi-calculator"
-category: "Influencer Marketing"
-title: "The Influencer ROI Calculator"
-tagline: "Did that shoutout actually pay off?"
-difficulty: "Beginner"
-time: "Campaign End"
-archetype: "Processor"
-description: "Influencers promise 'Brand Awareness,' but you want sales. This agent calculates the true ROI by combining 'Direct Revenue' (Codes) + 'Media Value' (CPM equivalent) to grade each creator."
+id: influencer-roi-calculator
+category: Influencer Marketing
+title: The Influencer ROI Calculator
+tagline: Did that shoutout actually pay off?
+difficulty: Beginner
+time: Campaign End
+archetype: Processor
+description: >-
+  Influencers promise 'Brand Awareness,' but you want sales. This agent
+  calculates the true ROI by combining 'Direct Revenue' (Codes) + 'Media Value'
+  (CPM equivalent) to grade each creator.
 sampleData:
-  filename: "influencer_results.csv"
+  filename: influencer_results.csv
   content: |
     Influencer,Cost,Code_Sales,Impressions,Niche_CPM
     JaneDoe,500,200,10000,20
     JohnSmith,1000,1500,50000,15
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

@@ -1,17 +1,21 @@
 ---
-id: "content-refresh-detector"
-category: "SEO"
-title: "The Portfolio Refresh Engine"
-tagline: "Revive dead content across 10 domains."
-difficulty: "Intermediate"
-time: "Monthly"
-description: "Google punishes stale sites. This agent reads a list of domains from a CSV, crawls their sitemaps to find posts older than 12 months, and generates a prioritized 'Refresh List' to regain rankings."
+id: content-refresh-detector
+category: SEO
+title: The Portfolio Refresh Engine
+tagline: Revive dead content across 10 domains.
+difficulty: Intermediate
+time: Monthly
+description: >-
+  Google punishes stale sites. This agent reads a list of domains from a CSV,
+  crawls their sitemaps to find posts older than 12 months, and generates a
+  prioritized 'Refresh List' to regain rankings.
 sampleData:
-  filename: "site_portfolio.csv"
+  filename: site_portfolio.csv
   content: |
     Site_Name,Sitemap_URL
     Main_Blog,https://yoursite.com/sitemap.xml
     Microsite_A,https://microsite.com/sitemap.xml
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

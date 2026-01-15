@@ -1,17 +1,21 @@
 ---
-id: "trend-hunter"
-category: "Content Ops"
-title: "The Trend Hunter"
-tagline: "Find the next viral topic before it peaks."
-difficulty: "Intermediate"
-time: "15 mins"
-description: "Data-driven content beats 'creative' content. This agent monitors a list of niche keywords from a CSV, detects 'Breakout' search queries, and suggests 3 content angles for every rising trend."
+id: trend-hunter
+category: Content Ops
+title: The Trend Hunter
+tagline: Find the next viral topic before it peaks.
+difficulty: Intermediate
+time: 15 mins
+description: >-
+  Data-driven content beats 'creative' content. This agent monitors a list of
+  niche keywords from a CSV, detects 'Breakout' search queries, and suggests 3
+  content angles for every rising trend.
 sampleData:
-  filename: "monitored_keywords.csv"
+  filename: monitored_keywords.csv
   content: |
     Keyword,Goal
     Generative AI,Product ideas
     Sustainable Fashion,Competitor moves
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

@@ -1,18 +1,22 @@
 ---
-id: "post-event-followup-sequence"
-category: "Events"
-title: "The Post-Event Follow-up"
-tagline: "The money is in the follow-up."
-difficulty: "Intermediate"
-time: "Batch"
-description: "You scanned the badges, now what? This agent drafts personalized 3-step email sequences for your entire list of conference leads, ensuring speed-to-lead and maximum meeting conversion."
+id: post-event-followup-sequence
+category: Events
+title: The Post-Event Follow-up
+tagline: The money is in the follow-up.
+difficulty: Intermediate
+time: Batch
+description: >-
+  You scanned the badges, now what? This agent drafts personalized 3-step email
+  sequences for your entire list of conference leads, ensuring speed-to-lead and
+  maximum meeting conversion.
 sampleData:
-  filename: "leads.csv"
+  filename: leads.csv
   content: |
     Name,Email,Event_Name,Context
     Alice Johnson,alice@techcorp.com,SaaStr Annual,Discussed AI integration
     Bob Smith,bob@startup.io,Web Summit,Interested in our pricing tiers
     Charlie Brown,charlie@enterprise.co,CES,Met at the networking dinner
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

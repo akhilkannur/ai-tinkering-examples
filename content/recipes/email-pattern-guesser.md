@@ -1,18 +1,22 @@
 ---
-id: "email-pattern-guesser"
-category: "Sales Eng"
-title: "The Email Permutator"
-tagline: "Standardize your lead research."
-difficulty: "Beginner"
-time: "Batch"
-description: "You have a list of names and domains, but no emails. This agent processes your entire lead list and generates the top 10 most common corporate email patterns for each prospect."
+id: email-pattern-guesser
+category: Sales Eng
+title: The Email Permutator
+tagline: Standardize your lead research.
+difficulty: Beginner
+time: Batch
+description: >-
+  You have a list of names and domains, but no emails. This agent processes your
+  entire lead list and generates the top 10 most common corporate email patterns
+  for each prospect.
 sampleData:
-  filename: "prospects.csv"
+  filename: prospects.csv
   content: |
     First_Name,Last_Name,Domain
     John,Doe,acme.com
     Jane,Smith,globex.io
     Mike,Ross,pearsonhardman.com
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

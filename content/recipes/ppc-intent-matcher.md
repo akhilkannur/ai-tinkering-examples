@@ -1,17 +1,21 @@
 ---
-id: "ppc-intent-matcher"
-category: "Ads"
-title: "The PPC Intent Engine"
-tagline: "High-intent ad keywords for your entire product line."
-difficulty: "Advanced"
-time: "Monthly"
-description: "Stop bidding on generic terms. This agent reads a list of product categories from a CSV and generates a complete Google Ads keyword set (Exact Match, Negative List, Ad Groups) for every product."
+id: ppc-intent-matcher
+category: Ads
+title: The PPC Intent Engine
+tagline: High-intent ad keywords for your entire product line.
+difficulty: Advanced
+time: Monthly
+description: >-
+  Stop bidding on generic terms. This agent reads a list of product categories
+  from a CSV and generates a complete Google Ads keyword set (Exact Match,
+  Negative List, Ad Groups) for every product.
 sampleData:
-  filename: "product_line.csv"
+  filename: product_line.csv
   content: |
     Product,Competitors
     CRM Software,"Salesforce, HubSpot"
     Email Marketing,"Mailchimp, ConvertKit"
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

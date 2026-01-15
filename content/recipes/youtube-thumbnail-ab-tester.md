@@ -1,16 +1,20 @@
 ---
-id: "youtube-thumbnail-ab-tester"
-category: "YouTube"
-title: "The Thumbnail Strategy Factory"
-tagline: "High-CTR concepts from your ideas or viral competitors."
-difficulty: "Beginner"
-time: "Weekly"
-description: "CTR determines your video's fate. This agent audits your thumbnail ideas (if provided) or researches the top 10 viral videos in your niche to generate 3 distinct A/B test concepts designed to win the click."
+id: youtube-thumbnail-ab-tester
+category: YouTube
+title: The Thumbnail Strategy Factory
+tagline: High-CTR concepts from your ideas or viral competitors.
+difficulty: Beginner
+time: Weekly
+description: >-
+  CTR determines your video's fate. This agent audits your thumbnail ideas (if
+  provided) or researches the top 10 viral videos in your niche to generate 3
+  distinct A/B test concepts designed to win the click.
 sampleData:
-  filename: "thumbnail_drafts.txt"
+  filename: thumbnail_drafts.txt
   content: |
     Idea 1: Me pointing at a graph.
     Idea 2: A screenshot of the code.
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

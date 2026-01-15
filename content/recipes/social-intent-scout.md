@@ -1,17 +1,21 @@
 ---
-id: "social-intent-scout"
-category: "Lead Gen"
-title: "The Social Signal Engine"
-tagline: "Find 100 leads asking for help across Reddit & LinkedIn."
-difficulty: "Advanced"
-time: "20 mins"
-description: "Leads with intent convert 10x better. This agent reads a list of 'Pain Point Keywords' from a CSV, scans social communities for people explicitly asking for help, and builds a prioritized outreach list."
+id: social-intent-scout
+category: Lead Gen
+title: The Social Signal Engine
+tagline: Find 100 leads asking for help across Reddit & LinkedIn.
+difficulty: Advanced
+time: 20 mins
+description: >-
+  Leads with intent convert 10x better. This agent reads a list of 'Pain Point
+  Keywords' from a CSV, scans social communities for people explicitly asking
+  for help, and builds a prioritized outreach list.
 sampleData:
-  filename: "intent_keywords.csv"
+  filename: intent_keywords.csv
   content: |
     Keyword,Platform
     "need a crm",Reddit
     "email deliverability issues",LinkedIn
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

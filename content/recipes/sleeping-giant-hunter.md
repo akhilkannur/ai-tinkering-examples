@@ -1,17 +1,21 @@
 ---
-id: "sleeping-giant-hunter"
-category: "Lead Gen"
-title: "The Sleeping Giant Hunter"
-tagline: "Find 50 enterprise companies using legacy tech."
-difficulty: "Advanced"
-time: "25 mins"
-description: "Legacy tech is a buying signal. This agent reads a list of 'Old Tech' markers from a CSV, hunts for enterprise companies still running that software, and identifies the newly hired executives most likely to want a change."
+id: sleeping-giant-hunter
+category: Lead Gen
+title: The Sleeping Giant Hunter
+tagline: Find 50 enterprise companies using legacy tech.
+difficulty: Advanced
+time: 25 mins
+description: >-
+  Legacy tech is a buying signal. This agent reads a list of 'Old Tech' markers
+  from a CSV, hunts for enterprise companies still running that software, and
+  identifies the newly hired executives most likely to want a change.
 sampleData:
-  filename: "legacy_tech_markers.csv"
+  filename: legacy_tech_markers.csv
   content: |
     Tech_Marker,Ideal_Industry
     "powered by older-crm",Manufacturing
     "jQuery v1",Finance
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

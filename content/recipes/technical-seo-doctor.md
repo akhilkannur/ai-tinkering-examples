@@ -1,18 +1,22 @@
 ---
-id: "technical-seo-doctor"
-category: "SEO"
-title: "The SEO Doctor"
-tagline: "Technical Site Audit at scale."
-difficulty: "Advanced"
-time: "Batch"
-description: "Performs technical audits on multiple URLs simultaneously. This agent checks for critical failures like missing H1s, broken meta tags, and accessibility issues across your entire site."
+id: technical-seo-doctor
+category: SEO
+title: The SEO Doctor
+tagline: Technical Site Audit at scale.
+difficulty: Advanced
+time: Batch
+description: >-
+  Performs technical audits on multiple URLs simultaneously. This agent checks
+  for critical failures like missing H1s, broken meta tags, and accessibility
+  issues across your entire site.
 sampleData:
-  filename: "landing_pages.csv"
+  filename: landing_pages.csv
   content: |
     Page_Name,URL,Target_Keyword
     Homepage,https://mysite.com,SaaS Automation
     Features,https://mysite.com/features,Feature Workflow
     Pricing,https://mysite.com/pricing,SaaS Pricing
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

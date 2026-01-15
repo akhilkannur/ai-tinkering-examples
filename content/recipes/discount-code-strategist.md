@@ -1,18 +1,22 @@
 ---
-id: "discount-code-strategist"
-category: "Monetization"
-title: "The Annual Promo Strategist"
-tagline: "Your entire year of sales, without brand damage."
-difficulty: "Intermediate"
-time: "Seasonal"
-description: "Don't slash prices; drive value. This agent reads your annual holiday list from a CSV and designs a 'Smart Promo' strategy for every event, ensuring you maximize revenue while protecting your margins."
+id: discount-code-strategist
+category: Monetization
+title: The Annual Promo Strategist
+tagline: 'Your entire year of sales, without brand damage.'
+difficulty: Intermediate
+time: Seasonal
+description: >-
+  Don't slash prices; drive value. This agent reads your annual holiday list
+  from a CSV and designs a 'Smart Promo' strategy for every event, ensuring you
+  maximize revenue while protecting your margins.
 sampleData:
-  filename: "holiday_calendar.csv"
+  filename: holiday_calendar.csv
   content: |
     Event,Month,Goal
     Black Friday,November,Maximum volume
     New Year,January,Annual retention
     Summer Sale,July,Move old inventory
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

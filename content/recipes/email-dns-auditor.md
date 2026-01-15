@@ -1,18 +1,22 @@
 ---
-id: "email-dns-auditor"
-category: "Tech Ops"
-title: "The Bulk Deliverability Auditor"
-tagline: "Audit the sender reputation of 100 domains."
-difficulty: "Advanced"
-time: "10 mins"
-description: "Content doesn't matter if your email bounces. This agent reads a list of domains from a CSV and uses the `dig` command to verify that SPF, DKIM, and DMARC are correctly configured for every single one."
+id: email-dns-auditor
+category: Tech Ops
+title: The Bulk Deliverability Auditor
+tagline: Audit the sender reputation of 100 domains.
+difficulty: Advanced
+time: 10 mins
+description: >-
+  Content doesn't matter if your email bounces. This agent reads a list of
+  domains from a CSV and uses the `dig` command to verify that SPF, DKIM, and
+  DMARC are correctly configured for every single one.
 sampleData:
-  filename: "domains_to_test.csv"
+  filename: domains_to_test.csv
   content: |
     Domain
     google.com
     stripe.com
     my-broken-startup.com
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

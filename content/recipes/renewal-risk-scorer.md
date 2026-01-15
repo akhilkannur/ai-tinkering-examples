@@ -1,18 +1,22 @@
 ---
-id: "renewal-risk-scorer"
-category: "Customer Success"
-title: "The Renewal Risk Scorer"
-tagline: "Predict churn before it happens."
-difficulty: "Advanced"
-time: "Monthly"
-archetype: "Processor"
-description: "Who is going to cancel? This agent calculates a 'Risk Score' (0-100) based on weighted variables: Low Usage (40%), Support Ticket Volume (20%), and Executive Sponsor Turnover (40%)."
+id: renewal-risk-scorer
+category: Customer Success
+title: The Renewal Risk Scorer
+tagline: Predict churn before it happens.
+difficulty: Advanced
+time: Monthly
+archetype: Processor
+description: >-
+  Who is going to cancel? This agent calculates a 'Risk Score' (0-100) based on
+  weighted variables: Low Usage (40%), Support Ticket Volume (20%), and
+  Executive Sponsor Turnover (40%).
 sampleData:
-  filename: "customer_signals.csv"
+  filename: customer_signals.csv
   content: |
     Customer,Usage_Drop,Pending_Tickets,Sponsor_Left
     CustA,No,0,No
     CustB,Yes,5,Yes
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

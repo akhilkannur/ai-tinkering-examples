@@ -1,18 +1,22 @@
 ---
-id: "tiktok-trend-adapter"
-category: "TikTok"
-title: "The Trend Adapter"
-tagline: "Adapt TikTok trends to your B2B niche."
-difficulty: "Intermediate"
-time: "Batch"
-description: "Trending sounds get views, but how do you use them for SaaS? This agent researches current TikTok trends and brainstorms specific ways to adapt them for your professional niches without being 'cringe'."
+id: tiktok-trend-adapter
+category: TikTok
+title: The Trend Adapter
+tagline: Adapt TikTok trends to your B2B niche.
+difficulty: Intermediate
+time: Batch
+description: >-
+  Trending sounds get views, but how do you use them for SaaS? This agent
+  researches current TikTok trends and brainstorms specific ways to adapt them
+  for your professional niches without being 'cringe'.
 sampleData:
-  filename: "niches.csv"
+  filename: niches.csv
   content: |
     Niche,Target_Audience,Tone
     Cybersecurity,CISO,Humorous
     HR Tech,People Ops,Relatable
     Sales Training,SDRs,Aggressive & High Energy
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

@@ -1,18 +1,22 @@
 ---
-id: "lead-aging-alerts"
-category: "Sales Ops"
-title: "The Lead Aging Alert System"
-tagline: "Fresh leads taste better."
-difficulty: "Intermediate"
-time: "Daily"
-archetype: "Processor"
-description: "Leads go cold in 48 hours. This agent scans your 'New' lead queue, identifies records that have been untouched for >24 hours, and Slack/Emails the assigned rep to wake them up."
+id: lead-aging-alerts
+category: Sales Ops
+title: The Lead Aging Alert System
+tagline: Fresh leads taste better.
+difficulty: Intermediate
+time: Daily
+archetype: Processor
+description: >-
+  Leads go cold in 48 hours. This agent scans your 'New' lead queue, identifies
+  records that have been untouched for >24 hours, and Slack/Emails the assigned
+  rep to wake them up.
 sampleData:
-  filename: "new_leads.csv"
+  filename: new_leads.csv
   content: |
     Lead,Assigned_To,Created_At,Status
     LeadA,Alice,2023-10-10 09:00,New
     LeadB,Bob,2023-10-08 09:00,New
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

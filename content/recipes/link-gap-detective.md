@@ -1,18 +1,22 @@
 ---
-id: "link-gap-detective"
-category: "SEO"
-title: "The Link Gap Detective"
-tagline: "Find missing backlink opportunities."
-difficulty: "Intermediate"
-time: "Batch"
-description: "Why do they rank and you don't? Links. This agent identifies websites that link to your competitors (or list 'Best Tools') but haven't linked to you yet, generating a targeted outreach list."
+id: link-gap-detective
+category: SEO
+title: The Link Gap Detective
+tagline: Find missing backlink opportunities.
+difficulty: Intermediate
+time: Batch
+description: >-
+  Why do they rank and you don't? Links. This agent identifies websites that
+  link to your competitors (or list 'Best Tools') but haven't linked to you yet,
+  generating a targeted outreach list.
 sampleData:
-  filename: "competitors_and_keywords.csv"
+  filename: competitors_and_keywords.csv
   content: |
     Competitor_Name,Search_Query
     CompetitorA,"best crm software 2024"
     CompetitorB,"top sales tools for startups"
     CompetitorC,"CompetitorC reviews"
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

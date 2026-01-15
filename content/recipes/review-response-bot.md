@@ -1,18 +1,26 @@
 ---
-id: "review-response-bot"
-category: "Support"
-title: "The Review Response Bot"
-tagline: "Turn haters into fans."
-difficulty: "Beginner"
-time: "Batch"
-description: "How you reply to negative reviews matters more than the review itself. This agent processes a list of reviews and drafts empathetic, professional responses that protect your brand's reputation."
+id: review-response-bot
+category: Support
+title: The Review Response Bot
+tagline: Turn haters into fans.
+difficulty: Beginner
+time: Batch
+description: >-
+  How you reply to negative reviews matters more than the review itself. This
+  agent processes a list of reviews and drafts empathetic, professional
+  responses that protect your brand's reputation.
 sampleData:
-  filename: "reviews.csv"
-  content: |
+  filename: reviews.csv
+  content: >
     Reviewer_Name,Rating,Review_Text
-    Jane Doe,1,The app crashed twice while I was trying to save my work. Infuriating!
+
+    Jane Doe,1,The app crashed twice while I was trying to save my work.
+    Infuriating!
+
     John Smith,2,Too expensive for what it does. There are free alternatives.
+
     TrollMaster99,1,Worst company ever. Stay away!!
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

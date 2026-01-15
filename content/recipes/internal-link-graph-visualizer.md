@@ -1,13 +1,16 @@
 ---
-id: "internal-link-graph-visualizer"
-category: "Tech SEO"
-title: "The Link Graph Architect"
-tagline: "Visualize your site structure."
-difficulty: "Advanced"
-time: "Batch"
-description: "Orphaned pages don't rank. This agent processes complex internal link data and generates Mermaid.js diagram code to visualize your site's architecture and identify silos."
+id: internal-link-graph-visualizer
+category: Tech SEO
+title: The Link Graph Architect
+tagline: Visualize your site structure.
+difficulty: Advanced
+time: Batch
+description: >-
+  Orphaned pages don't rank. This agent processes complex internal link data and
+  generates Mermaid.js diagram code to visualize your site's architecture and
+  identify silos.
 sampleData:
-  filename: "site_links.csv"
+  filename: site_links.csv
   content: |
     Source_Page,Target_Page,Link_Type
     /home,/pricing,Primary Nav
@@ -15,6 +18,7 @@ sampleData:
     /blog/post-1,/pricing,Contextual
     /blog/post-1,/home,Breadcrumb
     /services,/contact,CTA
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

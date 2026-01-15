@@ -1,17 +1,21 @@
 ---
-id: "short-form-scriptwriter"
-category: "Content Ops"
-title: "The Short-Form Script Factory"
-tagline: "Turn your entire blog into 100 vertical scripts."
-difficulty: "Intermediate"
-time: "15 mins"
-description: "Batching is the secret to content creation. This agent reads a list of URLs (or a folder of markdown files), extracts the viral hooks, and generates a library of TikTok/Reels scripts ready for recording."
+id: short-form-scriptwriter
+category: Content Ops
+title: The Short-Form Script Factory
+tagline: Turn your entire blog into 100 vertical scripts.
+difficulty: Intermediate
+time: 15 mins
+description: >-
+  Batching is the secret to content creation. This agent reads a list of URLs
+  (or a folder of markdown files), extracts the viral hooks, and generates a
+  library of TikTok/Reels scripts ready for recording.
 sampleData:
-  filename: "content_sources.csv"
+  filename: content_sources.csv
   content: |
     Title,URL,Vibe
     SEO Guide,https://yoursite.com/seo-guide,Educational
     Why AI Matters,https://yoursite.com/ai-post,Contrarian
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

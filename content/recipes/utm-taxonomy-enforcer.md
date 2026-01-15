@@ -1,17 +1,21 @@
 ---
-id: "utm-taxonomy-enforcer"
-category: "Data Hygiene"
-title: "The UTM Taxonomy Guard"
-tagline: "Audit 1000+ campaign links for tracking compliance."
-difficulty: "Beginner"
-time: "Weekly"
-description: "Inconsistent UTMs (e.g., 'fb' vs 'Facebook') break your analytics. This agent reads a list of 1000+ URLs from a CSV and validates them against your strict brand naming conventions, flagging every violation for a fix."
+id: utm-taxonomy-enforcer
+category: Data Hygiene
+title: The UTM Taxonomy Guard
+tagline: Audit 1000+ campaign links for tracking compliance.
+difficulty: Beginner
+time: Weekly
+description: >-
+  Inconsistent UTMs (e.g., 'fb' vs 'Facebook') break your analytics. This agent
+  reads a list of 1000+ URLs from a CSV and validates them against your strict
+  brand naming conventions, flagging every violation for a fix.
 sampleData:
-  filename: "links_to_audit.csv"
+  filename: links_to_audit.csv
   content: |
     Campaign,URL
     Winter_Promo,https://site.com?utm_source=FB&utm_medium=cpc
     New_User,https://site.com?utm_source=google&utm_medium=banner
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

@@ -1,18 +1,22 @@
 ---
-id: "win-loss-analysis-interviewer"
-category: "Sales Ops"
-title: "The Win/Loss Forensics Agent"
-tagline: "Uncover the real reasons you lost."
-difficulty: "Intermediate"
-time: "Batch"
-description: "Sales reps rarely hear the full truth. This agent processes your internal 'Closed-Lost' notes or researches competitor G2 reviews to uncover the real reasons deals fail across your entire pipeline."
+id: win-loss-analysis-interviewer
+category: Sales Ops
+title: The Win/Loss Forensics Agent
+tagline: Uncover the real reasons you lost.
+difficulty: Intermediate
+time: Batch
+description: >-
+  Sales reps rarely hear the full truth. This agent processes your internal
+  'Closed-Lost' notes or researches competitor G2 reviews to uncover the real
+  reasons deals fail across your entire pipeline.
 sampleData:
-  filename: "lost_deals.csv"
+  filename: lost_deals.csv
   content: |
     Deal_Name,Rep_Notes,Main_Competitor
     MegaCorp,Liked the tool but CFO blocked it due to price,Salesforce
     StartupInc,Chose an alternative with better API docs,Vanta
     TechFlow,No response after pricing proposal,Pipedrive
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

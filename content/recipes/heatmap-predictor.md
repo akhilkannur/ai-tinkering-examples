@@ -1,19 +1,24 @@
 ---
-id: "heatmap-predictor"
-category: "CRO"
-title: "The Heatmap Predictor"
-tagline: "See where they look before you launch."
-difficulty: "Beginner"
-time: "Design Phase"
-archetype: "Processor"
-description: "Heatmaps usually require traffic. This agent analyzes a screenshot of your landing page using visual saliency principles (contrast, faces, text size) to predict where user attention will fall, generating a 'simulated heatmap' description."
+id: heatmap-predictor
+category: CRO
+title: The Heatmap Predictor
+tagline: See where they look before you launch.
+difficulty: Beginner
+time: Design Phase
+archetype: Processor
+description: >-
+  Heatmaps usually require traffic. This agent analyzes a screenshot of your
+  landing page using visual saliency principles (contrast, faces, text size) to
+  predict where user attention will fall, generating a 'simulated heatmap'
+  description.
 sampleData:
-  filename: "page_elements.csv"
+  filename: page_elements.csv
   content: |
     Element,Color,Size,Location,Has_Face
     CTA Button,Red,Large,Top-Right,No
     Hero Image,Blue,Huge,Center,Yes
     Footer Link,Gray,Small,Bottom,No
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

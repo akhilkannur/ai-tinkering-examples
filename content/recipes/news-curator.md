@@ -1,17 +1,21 @@
 ---
-id: "news-curator"
-category: "Content Ops"
-title: "The Multi-Niche News Curator"
-tagline: "Draft 5 weekly newsletters in one run."
-difficulty: "Intermediate"
-time: "Weekly"
-description: "Curating news for different audiences takes hours. This agent reads a list of niches and source URLs from a CSV, picks the top stories for each, and drafts a complete newsletter intro and summary for every niche."
+id: news-curator
+category: Content Ops
+title: The Multi-Niche News Curator
+tagline: Draft 5 weekly newsletters in one run.
+difficulty: Intermediate
+time: Weekly
+description: >-
+  Curating news for different audiences takes hours. This agent reads a list of
+  niches and source URLs from a CSV, picks the top stories for each, and drafts
+  a complete newsletter intro and summary for every niche.
 sampleData:
-  filename: "newsletter_niches.csv"
+  filename: newsletter_niches.csv
   content: |
     Niche,Source_URLs,Keywords
     AI Tools,"techcrunch.com, ycombinator.com","agents, automation, llm"
     Fintech,"finextra.com, bloomberg.com","crypto, banking, payments"
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

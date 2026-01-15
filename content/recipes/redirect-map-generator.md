@@ -1,18 +1,22 @@
 ---
-id: "redirect-map-generator"
-category: "Tech SEO"
-title: "The Migration Map Generator"
-tagline: "Don't lose traffic during a redesign."
-difficulty: "Advanced"
-time: "Batch"
-description: "Site migrations often cause SEO-killing 404s. This agent processes massive lists of URL mappings and generates production-ready .htaccess, Nginx, or Cloudflare redirect rules to protect your traffic."
+id: redirect-map-generator
+category: Tech SEO
+title: The Migration Map Generator
+tagline: Don't lose traffic during a redesign.
+difficulty: Advanced
+time: Batch
+description: >-
+  Site migrations often cause SEO-killing 404s. This agent processes massive
+  lists of URL mappings and generates production-ready .htaccess, Nginx, or
+  Cloudflare redirect rules to protect your traffic.
 sampleData:
-  filename: "url_mappings.csv"
+  filename: url_mappings.csv
   content: |
     Old_Path,New_Path,Redirect_Type
     /about-us,/about,301
     /products/item-1,/shop/new-item-1,301
     /blog/old-post,/blog/latest-post,301
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

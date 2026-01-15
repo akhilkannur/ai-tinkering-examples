@@ -1,17 +1,21 @@
 ---
-id: "invoice-chaser-sequence"
-category: "Finance"
-title: "The Invoice Chaser Engine"
-tagline: "Recover $10k+ in overdue payments without being awkward."
-difficulty: "Beginner"
-time: "Weekly"
-description: "Unpaid invoices kill cash flow. This agent reads a CSV of overdue accounts, categorizes them by 'Days Overdue', and drafts a 3-step personalized dunning sequence for every client."
+id: invoice-chaser-sequence
+category: Finance
+title: The Invoice Chaser Engine
+tagline: Recover $10k+ in overdue payments without being awkward.
+difficulty: Beginner
+time: Weekly
+description: >-
+  Unpaid invoices kill cash flow. This agent reads a CSV of overdue accounts,
+  categorizes them by 'Days Overdue', and drafts a 3-step personalized dunning
+  sequence for every client.
 sampleData:
-  filename: "overdue_invoices.csv"
+  filename: overdue_invoices.csv
   content: |
     Client_Name,Email,Amount,Days_Overdue
     MegaCorp,billing@megacorp.com,5000,5
     SmallStart,founder@small.com,1200,35
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

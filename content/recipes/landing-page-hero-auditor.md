@@ -1,18 +1,28 @@
 ---
-id: "landing-page-hero-auditor"
-category: "CRO"
-title: "The Landing Page Hero Auditor"
-tagline: "Fix your site's first 5 seconds."
-difficulty: "Beginner"
-time: "Batch"
-description: "50% of users bounce in 5 seconds. This agent audits your Hero Sections (H1, Subhead, CTA) against the 'Grunt Test' for an entire portfolio of landing pages, ensuring clarity beats cleverness every time."
+id: landing-page-hero-auditor
+category: CRO
+title: The Landing Page Hero Auditor
+tagline: Fix your site's first 5 seconds.
+difficulty: Beginner
+time: Batch
+description: >-
+  50% of users bounce in 5 seconds. This agent audits your Hero Sections (H1,
+  Subhead, CTA) against the 'Grunt Test' for an entire portfolio of landing
+  pages, ensuring clarity beats cleverness every time.
 sampleData:
-  filename: "landing_pages.csv"
-  content: |
+  filename: landing_pages.csv
+  content: >
     Page_Name,H1_Text,Subhead_Text,Target_Audience
-    Home,The next-gen solution for enterprise synergy,Revolutionize your workflow with AI,Fortune 500 CEOs
-    Pricing,Affordable plans for everyone,Choose the right tier for you,SaaS Startups
-    Ebook,Master your productivity today,Download our free guide to get more done,Freelancers
+
+    Home,The next-gen solution for enterprise synergy,Revolutionize your
+    workflow with AI,Fortune 500 CEOs
+
+    Pricing,Affordable plans for everyone,Choose the right tier for you,SaaS
+    Startups
+
+    Ebook,Master your productivity today,Download our free guide to get more
+    done,Freelancers
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

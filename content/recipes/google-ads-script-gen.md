@@ -1,18 +1,22 @@
 ---
-id: "google-ads-script-gen"
-category: "Paid Search"
-title: "The Google Ads Script Generator"
-tagline: "Automate your account management."
-difficulty: "Advanced"
-time: "One-off"
-archetype: "Processor"
-description: "Don't manually pause keywords. This agent generates ready-to-paste JavaScript for Google Ads Scripts that automates tasks like 'Pause keywords with 0 conversions and >$50 spend' or 'Alert if budget paces >20% high'."
+id: google-ads-script-gen
+category: Paid Search
+title: The Google Ads Script Generator
+tagline: Automate your account management.
+difficulty: Advanced
+time: One-off
+archetype: Processor
+description: >-
+  Don't manually pause keywords. This agent generates ready-to-paste JavaScript
+  for Google Ads Scripts that automates tasks like 'Pause keywords with 0
+  conversions and >$50 spend' or 'Alert if budget paces >20% high'.
 sampleData:
-  filename: "automation_rules.csv"
+  filename: automation_rules.csv
   content: |
     Rule_Type,Threshold,Action
     Zero Conversion,Spend > 50,Pause Keyword
     High CPA,CPA > 100,Label "Review"
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

@@ -1,19 +1,23 @@
 ---
-id: "meeting-no-show-analyzer"
-category: "Sales Ops"
-title: "The No-Show Detective"
-tagline: "Why are prospects ghosting demos?"
-difficulty: "Intermediate"
-time: "Weekly"
-archetype: "Processor"
-description: "High demo volume means nothing if nobody shows up. This agent analyzes a CSV of meeting outcomes to identify patterns in no-shows: Is it a specific lead source? Time of day? Rep?"
+id: meeting-no-show-analyzer
+category: Sales Ops
+title: The No-Show Detective
+tagline: Why are prospects ghosting demos?
+difficulty: Intermediate
+time: Weekly
+archetype: Processor
+description: >-
+  High demo volume means nothing if nobody shows up. This agent analyzes a CSV
+  of meeting outcomes to identify patterns in no-shows: Is it a specific lead
+  source? Time of day? Rep?
 sampleData:
-  filename: "meeting_logs.csv"
+  filename: meeting_logs.csv
   content: |
     Meeting_ID,Rep,Lead_Source,Day,Time,Outcome
     1,Alice,Linkedin,Mon,10am,Held
     2,Bob,Cold Call,Fri,4pm,No-Show
     3,Alice,Webinar,Mon,9am,No-Show
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

@@ -1,18 +1,21 @@
 ---
-id: "youtube-distiller"
-category: "Content Ops"
-title: "The Video Distiller"
-tagline: "YouTube -> Study Notes."
-difficulty: "Beginner"
-time: "Batch"
-description: "Watches long YouTube videos and extracts key arguments, unique insights, and implementation checklists for your entire learning queue."
+id: youtube-distiller
+category: Content Ops
+title: The Video Distiller
+tagline: YouTube -> Study Notes.
+difficulty: Beginner
+time: Batch
+description: >-
+  Watches long YouTube videos and extracts key arguments, unique insights, and
+  implementation checklists for your entire learning queue.
 sampleData:
-  filename: "videos.csv"
+  filename: videos.csv
   content: |
     Title,URL,Target_Niche
     Future of AI Agents,https://youtube.com/watch?v=123,Software Engineering
     Cold Calling Masterclass,https://youtube.com/watch?v=456,Sales
     SEO in 2024,https://youtube.com/watch?v=789,Marketing
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

@@ -1,18 +1,22 @@
 ---
-id: "lead-magnet-generator"
-category: "Lead Gen"
-title: "The Lead Magnet Factory"
-tagline: "Build a library of assets from customer pains."
-difficulty: "Beginner"
-time: "20 mins"
-description: "Why build one lead magnet? This agent reads a list of customer 'Pains' and 'Desires' from a CSV and generates a complete asset brief (Outline, Title, Landing Page Copy) for every single one."
+id: lead-magnet-generator
+category: Lead Gen
+title: The Lead Magnet Factory
+tagline: Build a library of assets from customer pains.
+difficulty: Beginner
+time: 20 mins
+description: >-
+  Why build one lead magnet? This agent reads a list of customer 'Pains' and
+  'Desires' from a CSV and generates a complete asset brief (Outline, Title,
+  Landing Page Copy) for every single one.
 sampleData:
-  filename: "customer_segments.csv"
+  filename: customer_segments.csv
   content: |
     Segment,Main_Pain,Desired_Outcome
     Agency Owners,Scope Creep,Profitable Projects
     SaaS Founders,Churn,High LTV
     Solo Creators,Time Management,Consistent Content
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

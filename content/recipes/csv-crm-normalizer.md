@@ -1,17 +1,22 @@
 ---
-id: "csv-crm-normalizer"
-category: "Data Ops"
-title: "The Bulk CRM Data Normalizer"
-tagline: "Standardize 10,000 lead records for import."
-difficulty: "Intermediate"
-time: "One-off"
-description: "Salespeople upload garbage data. This agent takes a massive CSV with inconsistent phone numbers (+1..., 555-..., (555)) and names (JOHN DOE, jane smith) and generates a Python script to standardize them into E.164 and Title Case instantly."
+id: csv-crm-normalizer
+category: Data Ops
+title: The Bulk CRM Data Normalizer
+tagline: 'Standardize 10,000 lead records for import.'
+difficulty: Intermediate
+time: One-off
+description: >-
+  Salespeople upload garbage data. This agent takes a massive CSV with
+  inconsistent phone numbers (+1..., 555-..., (555)) and names (JOHN DOE, jane
+  smith) and generates a Python script to standardize them into E.164 and Title
+  Case instantly.
 sampleData:
-  filename: "messy_crm_export.csv"
+  filename: messy_crm_export.csv
   content: |
     Name,Phone,Email
     JOHN DOE,555-0199, JOHN@acme.com
     jane smith,(555) 012-3456,jane@globex.com
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

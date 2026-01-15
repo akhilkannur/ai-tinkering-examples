@@ -1,17 +1,21 @@
 ---
-id: "lead-scoring-logic-builder"
-category: "Sales Ops"
-title: "The Lead Scorer"
-tagline: "Prioritize leads from your CRM or build a model from scratch."
-difficulty: "Intermediate"
-time: "One-off"
-description: "Stop wasting time on low-value leads. This agent reads your lead history CSV (if provided) or researches your industry to design a points-based logic (Title=CEO +10pts, Gmail -5pts) and writes the pseudo-code for implementation."
+id: lead-scoring-logic-builder
+category: Sales Ops
+title: The Lead Scorer
+tagline: Prioritize leads from your CRM or build a model from scratch.
+difficulty: Intermediate
+time: One-off
+description: >-
+  Stop wasting time on low-value leads. This agent reads your lead history CSV
+  (if provided) or researches your industry to design a points-based logic
+  (Title=CEO +10pts, Gmail -5pts) and writes the pseudo-code for implementation.
 sampleData:
-  filename: "lead_history.csv"
+  filename: lead_history.csv
   content: |
     Name,Title,Email,Status
     John Doe,VP Sales,john@acme.com,Won
     Jane Smith,Manager,jane@gmail.com,Lost
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

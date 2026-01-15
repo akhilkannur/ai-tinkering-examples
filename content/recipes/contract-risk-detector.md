@@ -1,18 +1,22 @@
 ---
-id: "contract-risk-detector"
-category: "Legal Ops"
-title: "The Contract Risk Detector"
-tagline: "Find the 'gotchas' in the PDF."
-difficulty: "Experimental"
-time: "Batch"
-description: "Sales contracts often hide 3-year lock-ins or auto-renewals in the fine print. This agent scans multiple PDF agreements, highlights high-risk clauses, and suggests red-lines to protect your budget."
+id: contract-risk-detector
+category: Legal Ops
+title: The Contract Risk Detector
+tagline: Find the 'gotchas' in the PDF.
+difficulty: Experimental
+time: Batch
+description: >-
+  Sales contracts often hide 3-year lock-ins or auto-renewals in the fine print.
+  This agent scans multiple PDF agreements, highlights high-risk clauses, and
+  suggests red-lines to protect your budget.
 sampleData:
-  filename: "contracts_to_audit.csv"
+  filename: contracts_to_audit.csv
   content: |
     Vendor_Name,Contract_File,Priority
     CloudScale,contracts/cloudscale_msa.pdf,High
     AdsManager,contracts/ads_terms.pdf,Medium
     SaaSPro,contracts/saaspro_agreement.png,High
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

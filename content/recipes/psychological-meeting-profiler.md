@@ -1,18 +1,22 @@
 ---
-id: "psychological-meeting-profiler"
-category: "Sales"
-title: "The Psychological Buyer Profiler"
-tagline: "Know how to close them."
-difficulty: "Advanced"
-time: "Batch"
-description: "Deeper than a summary. This agent processes a list of sales transcripts to identify each buyer's personality type and recommends specific negotiation strategies to win them over."
+id: psychological-meeting-profiler
+category: Sales
+title: The Psychological Buyer Profiler
+tagline: Know how to close them.
+difficulty: Advanced
+time: Batch
+description: >-
+  Deeper than a summary. This agent processes a list of sales transcripts to
+  identify each buyer's personality type and recommends specific negotiation
+  strategies to win them over.
 sampleData:
-  filename: "meeting_transcripts.csv"
+  filename: meeting_transcripts.csv
   content: |
     Buyer_Name,Transcript_File,Focus_Area
     John Analytic,transcripts/call_1.txt,Security and Data Privacy
     Sarah Driver,transcripts/call_2.txt,Speed to implementation
     Mike Amiable,transcripts/call_3.txt,Team collaboration and support
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

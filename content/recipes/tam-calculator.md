@@ -1,18 +1,22 @@
 ---
-id: "tam-calculator"
-category: "Strategy"
-title: "The AI TAM Researcher"
-tagline: "Calculate your market size using real-world data."
-difficulty: "Intermediate"
-time: "Batch"
-description: "Investors need to see the math. This agent researches industry sizes, pricing benchmarks, and customer counts to calculate your TAM, SAM, and SOM using defensible 'Bottom-Up' logic for multiple market segments."
+id: tam-calculator
+category: Strategy
+title: The AI TAM Researcher
+tagline: Calculate your market size using real-world data.
+difficulty: Intermediate
+time: Batch
+description: >-
+  Investors need to see the math. This agent researches industry sizes, pricing
+  benchmarks, and customer counts to calculate your TAM, SAM, and SOM using
+  defensible 'Bottom-Up' logic for multiple market segments.
 sampleData:
-  filename: "market_segments.csv"
+  filename: market_segments.csv
   content: |
     Segment_Name,Target_Customer,Avg_Monthly_Price
     US Coffee Shops,Small independent cafes,50
     Global AI Startups,Seed stage tech companies,500
     UK Law Firms,Mid-market legal practices,2000
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

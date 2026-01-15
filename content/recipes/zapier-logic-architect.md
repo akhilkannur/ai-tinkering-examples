@@ -1,18 +1,22 @@
 ---
-id: "zapier-logic-architect"
-category: "Automation"
-title: "The Zapier Logic Architect"
-tagline: "Standardize your no-code workflows."
-difficulty: "Intermediate"
-time: "Batch"
-description: "Automation fails at edge cases. This agent designs robust Zapier workflows—including filters, formatters, and error handlers—for your entire automation roadmap."
+id: zapier-logic-architect
+category: Automation
+title: The Zapier Logic Architect
+tagline: Standardize your no-code workflows.
+difficulty: Intermediate
+time: Batch
+description: >-
+  Automation fails at edge cases. This agent designs robust Zapier
+  workflows—including filters, formatters, and error handlers—for your entire
+  automation roadmap.
 sampleData:
-  filename: "automations.csv"
+  filename: automations.csv
   content: |
     Workflow_Name,Trigger_App,Action_App,Primary_Goal
     Lead Sync,Facebook Ads,HubSpot,Add new leads to CRM with cleaned names
     Payment Alert,Stripe,Slack,Notify team of high-value (> $500) sales
     Content Distro,RSS Feed,LinkedIn,Cross-post blog updates with custom hooks
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

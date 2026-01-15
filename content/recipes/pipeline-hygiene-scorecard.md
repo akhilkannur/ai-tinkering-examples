@@ -1,18 +1,22 @@
 ---
-id: "pipeline-hygiene-scorecard"
-category: "Sales Ops"
-title: "The Pipeline Hygiene Scorer"
-tagline: "Grade your CRM data quality."
-difficulty: "Intermediate"
-time: "Weekly"
-archetype: "Processor"
-description: "Messy CRMs kill forecasts. This agent audits your open opportunities for 'Rot' (Past Close Date, No Next Step, Stagnant Stage) and assigns a 'Hygiene Score' to each rep."
+id: pipeline-hygiene-scorecard
+category: Sales Ops
+title: The Pipeline Hygiene Scorer
+tagline: Grade your CRM data quality.
+difficulty: Intermediate
+time: Weekly
+archetype: Processor
+description: >-
+  Messy CRMs kill forecasts. This agent audits your open opportunities for 'Rot'
+  (Past Close Date, No Next Step, Stagnant Stage) and assigns a 'Hygiene Score'
+  to each rep.
 sampleData:
-  filename: "open_opps.csv"
+  filename: open_opps.csv
   content: |
     Opp_ID,Rep,Close_Date,Stage_Duration,Next_Step
     1,Alice,2023-01-01,5,Call on Monday
     2,Bob,2022-12-01,90,
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

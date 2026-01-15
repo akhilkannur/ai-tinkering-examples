@@ -1,17 +1,21 @@
 ---
-id: "review-to-ad-machine"
-category: "Marketing"
-title: "The Review-to-Ad Factory"
-tagline: "Turn 100 reviews into 100 ad variations."
-difficulty: "Intermediate"
-time: "15 mins"
-description: "Stop guessing what to write in your ads. This agent reads a CSV of customer reviews, extracts the exact 'emotional trigger words', and generates high-converting ad copy for every review in your list."
+id: review-to-ad-machine
+category: Marketing
+title: The Review-to-Ad Factory
+tagline: Turn 100 reviews into 100 ad variations.
+difficulty: Intermediate
+time: 15 mins
+description: >-
+  Stop guessing what to write in your ads. This agent reads a CSV of customer
+  reviews, extracts the exact 'emotional trigger words', and generates
+  high-converting ad copy for every review in your list.
 sampleData:
-  filename: "customer_reviews.csv"
+  filename: customer_reviews.csv
   content: |
     User,Product,Review_Text
     John,CRM,It saved me 5 hours a week on manual entry.
     Sarah,Email tool,I finally stopped hitting spam filters.
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

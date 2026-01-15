@@ -1,18 +1,22 @@
 ---
-id: "unboxing-experience-designer"
-category: "E-commerce"
-title: "The Unboxing Experience Designer"
-tagline: "Make them post it on Instagram."
-difficulty: "Intermediate"
-time: "Batch"
-description: "The product isn't finished until the customer opens the box. This agent designs memorable unboxing experiences for your entire product line to maximize UGC and social sharing."
+id: unboxing-experience-designer
+category: E-commerce
+title: The Unboxing Experience Designer
+tagline: Make them post it on Instagram.
+difficulty: Intermediate
+time: Batch
+description: >-
+  The product isn't finished until the customer opens the box. This agent
+  designs memorable unboxing experiences for your entire product line to
+  maximize UGC and social sharing.
 sampleData:
-  filename: "brands.csv"
+  filename: brands.csv
   content: |
     Brand_Name,Primary_Color,Vibe
     VelvetBloom,Forest Green,Luxury and Organic
     PixelPounce,Electric Blue,Tech-forward and High-energy
     BrewBase,Warm Brown,Minimalist and Artisanal
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

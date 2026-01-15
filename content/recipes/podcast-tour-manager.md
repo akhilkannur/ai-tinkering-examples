@@ -1,17 +1,21 @@
 ---
-id: "podcast-tour-manager"
-category: "PR"
-title: "The Podcast Tour Manager"
-tagline: "Book your tour from a list or a niche goal."
-difficulty: "Intermediate"
-time: "Weekly"
-description: "Podcasts are high-trust channels. This agent reads your target show list (if provided) or researches the top 10 podcasts in your niche to draft personalized, value-first booking pitches."
+id: podcast-tour-manager
+category: PR
+title: The Podcast Tour Manager
+tagline: Book your tour from a list or a niche goal.
+difficulty: Intermediate
+time: Weekly
+description: >-
+  Podcasts are high-trust channels. This agent reads your target show list (if
+  provided) or researches the top 10 podcasts in your niche to draft
+  personalized, value-first booking pitches.
 sampleData:
-  filename: "podcast_targets.csv"
+  filename: podcast_targets.csv
   content: |
     Show_Name,Topic_Area
     The Growth Show,SaaS Marketing
     Founder Stories,Bootstrap businesses
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

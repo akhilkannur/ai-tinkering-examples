@@ -1,18 +1,22 @@
 ---
-id: "scope-creep-email-drafter"
-category: "Agency"
-title: "The Scope Creep Defender"
-tagline: "Say 'No' without losing the client."
-difficulty: "Intermediate"
-time: "Batch"
-description: "Clients always ask for 'just one small change'. This agent drafts polite but firm responses that either decline requests or pivot them into paid 'Change Orders', protecting your profit margins across all your projects."
+id: scope-creep-email-drafter
+category: Agency
+title: The Scope Creep Defender
+tagline: Say 'No' without losing the client.
+difficulty: Intermediate
+time: Batch
+description: >-
+  Clients always ask for 'just one small change'. This agent drafts polite but
+  firm responses that either decline requests or pivot them into paid 'Change
+  Orders', protecting your profit margins across all your projects.
 sampleData:
-  filename: "requests.csv"
+  filename: requests.csv
   content: |
     Client_Name,Project_Goal,Request_Text
     Acme Corp,Landing Page,Can you also redesign the logo and business cards?
     Glow Design,UX Audit,We need a 50-page documentation manual by tomorrow.
     FinTech Ads,PPC Setup,Can you manage our SEO for free this month?
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

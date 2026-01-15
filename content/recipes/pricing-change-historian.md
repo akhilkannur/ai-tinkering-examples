@@ -1,18 +1,22 @@
 ---
-id: "pricing-change-historian"
-category: "Intel"
-title: "The Pricing Historian"
-tagline: "Track their inflation."
-difficulty: "Intermediate"
-time: "Batch"
-description: "Companies raise prices slowly. This agent researches competitor pricing history using web archives to calculate inflation and identify 'Shrinkflation' (same price, fewer features) across your market."
+id: pricing-change-historian
+category: Intel
+title: The Pricing Historian
+tagline: Track their inflation.
+difficulty: Intermediate
+time: Batch
+description: >-
+  Companies raise prices slowly. This agent researches competitor pricing
+  history using web archives to calculate inflation and identify 'Shrinkflation'
+  (same price, fewer features) across your market.
 sampleData:
-  filename: "competitors.csv"
+  filename: competitors.csv
   content: |
     Competitor_Name,Pricing_URL
     Intercom,https://www.intercom.com/pricing
     Zendesk,https://www.zendesk.com/pricing
     Salesforce,https://www.salesforce.com/editions-pricing/sales-cloud/
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

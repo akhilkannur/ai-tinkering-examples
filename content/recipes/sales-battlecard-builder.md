@@ -1,18 +1,22 @@
 ---
-id: "sales-battlecard-builder"
-category: "Sales Enablement"
-title: "The Sales Battlecard Builder"
-tagline: "Destroy the competition."
-difficulty: "Intermediate"
-time: "Batch"
-description: "Sales reps freeze when a prospect says 'We use Competitor X'. This agent researches competitors and creates 1-page 'Battlecards' with specific 'Kill Points' and 'Landmines' for your entire competitive landscape."
+id: sales-battlecard-builder
+category: Sales Enablement
+title: The Sales Battlecard Builder
+tagline: Destroy the competition.
+difficulty: Intermediate
+time: Batch
+description: >-
+  Sales reps freeze when a prospect says 'We use Competitor X'. This agent
+  researches competitors and creates 1-page 'Battlecards' with specific 'Kill
+  Points' and 'Landmines' for your entire competitive landscape.
 sampleData:
-  filename: "competitors.csv"
+  filename: competitors.csv
   content: |
     Competitor_Name,Website,Primary_Product
     Vanta,https://vanta.com,Compliance Automation
     Drata,https://drata.com,Security Compliance
     Sprinto,https://sprinto.com,Compliance Software
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

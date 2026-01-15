@@ -1,17 +1,21 @@
 ---
-id: "seo-cluster-architect"
-category: "SEO"
-title: "The SEO Cluster Architect"
-tagline: "Build topical authority from a file or a goal."
-difficulty: "Advanced"
-time: "25 mins"
-description: "Pillar pages need deep structure. This agent reads your target keywords from a CSV (if provided) or researches a niche from scratch to design a complete content cluster: 1 Pillar, 5 Spokes, and a link matrix."
+id: seo-cluster-architect
+category: SEO
+title: The SEO Cluster Architect
+tagline: Build topical authority from a file or a goal.
+difficulty: Advanced
+time: 25 mins
+description: >-
+  Pillar pages need deep structure. This agent reads your target keywords from a
+  CSV (if provided) or researches a niche from scratch to design a complete
+  content cluster: 1 Pillar, 5 Spokes, and a link matrix.
 sampleData:
-  filename: "seed_keywords.csv"
+  filename: seed_keywords.csv
   content: |
     Keyword,Intent
     Sales Automation,Transactional
     Lead Scoring,Informational
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

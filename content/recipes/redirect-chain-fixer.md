@@ -1,19 +1,23 @@
 ---
-id: "redirect-chain-fixer"
-category: "Technical SEO"
-title: "The Redirect Chain Fixer"
-tagline: "Flatten your hop chains."
-difficulty: "Intermediate"
-time: "Quarterly"
-archetype: "Processor"
-description: "A -> B -> C is bad for speed and SEO. This agent takes a list of redirect hops and 'flattens' them, generating a CSV where every source points directly to the final destination (A -> C)."
+id: redirect-chain-fixer
+category: Technical SEO
+title: The Redirect Chain Fixer
+tagline: Flatten your hop chains.
+difficulty: Intermediate
+time: Quarterly
+archetype: Processor
+description: >-
+  A -> B -> C is bad for speed and SEO. This agent takes a list of redirect hops
+  and 'flattens' them, generating a CSV where every source points directly to
+  the final destination (A -> C).
 sampleData:
-  filename: "redirect_log.csv"
+  filename: redirect_log.csv
   content: |
     Source,Destination,Status
     /old-product,/temp-landing,301
     /temp-landing,/new-product,301
     /about-us,/about,301
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

@@ -1,18 +1,22 @@
 ---
-id: "renewal-reminder-sequence"
-category: "Customer Success"
-title: "The Renewal Reminder"
-tagline: "No surprise cancellations."
-difficulty: "Beginner"
-time: "Batch"
-description: "Contracts expire. This agent automates the renewal cadence for your entire customer base, ensuring you have time to negotiate upsells or save at-risk accounts before the auto-renew date."
+id: renewal-reminder-sequence
+category: Customer Success
+title: The Renewal Reminder
+tagline: No surprise cancellations.
+difficulty: Beginner
+time: Batch
+description: >-
+  Contracts expire. This agent automates the renewal cadence for your entire
+  customer base, ensuring you have time to negotiate upsells or save at-risk
+  accounts before the auto-renew date.
 sampleData:
-  filename: "contracts.csv"
+  filename: contracts.csv
   content: |
     Customer_Name,Expiry_Date,Current_MRR,Health_Score
     Acme Corp,2024-12-31,5000,9.0
     TechFlow,2024-11-15,1200,6.5
     Urban Design,2024-12-01,3000,4.2
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

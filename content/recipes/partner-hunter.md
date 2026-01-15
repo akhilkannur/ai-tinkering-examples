@@ -1,17 +1,21 @@
 ---
-id: "partner-program-hunter"
-category: "Business Dev"
-title: "The Partner Hunter Fleet"
-tagline: "Find 100 non-competing partners at once."
-difficulty: "Advanced"
-time: "Continuous"
-description: "Why sell 1-to-1 when you can sell 1-to-many? This agent reads a list of adjacent tool categories from a CSV, identifies the top 5 players in each, and drafts a 'Better Together' integration pitch for their Head of Partnerships."
+id: partner-program-hunter
+category: Business Dev
+title: The Partner Hunter Fleet
+tagline: Find 100 non-competing partners at once.
+difficulty: Advanced
+time: Continuous
+description: >-
+  Why sell 1-to-1 when you can sell 1-to-many? This agent reads a list of
+  adjacent tool categories from a CSV, identifies the top 5 players in each, and
+  drafts a 'Better Together' integration pitch for their Head of Partnerships.
 sampleData:
-  filename: "adjacent_niches.csv"
+  filename: adjacent_niches.csv
   content: |
     Niche,Target_Benefit
     Email Marketing,Increase deliverability
     CRM,Manage leads faster
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

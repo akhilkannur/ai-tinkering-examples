@@ -1,17 +1,21 @@
 ---
-id: "lost-deal-reviver"
-category: "Sales"
-title: "The Lost Deal Reviver"
-tagline: "Re-engage 100 cold leads with 'New News'."
-difficulty: "Intermediate"
-time: "Weekly"
-description: "A 'No' 6 months ago might be a 'Yes' today. This agent takes a CSV of leads lost due to specific reasons (e.g., 'Missing Feature X') and drafts a hyper-relevant follow-up based on your recent product launches."
+id: lost-deal-reviver
+category: Sales
+title: The Lost Deal Reviver
+tagline: Re-engage 100 cold leads with 'New News'.
+difficulty: Intermediate
+time: Weekly
+description: >-
+  A 'No' 6 months ago might be a 'Yes' today. This agent takes a CSV of leads
+  lost due to specific reasons (e.g., 'Missing Feature X') and drafts a
+  hyper-relevant follow-up based on your recent product launches.
 sampleData:
-  filename: "lost_leads.csv"
+  filename: lost_leads.csv
   content: |
     Name,Email,Lost_Reason,Lost_Month
     John Doe,john@acme.com,Missing API,January
     Jane Smith,jane@globex.com,Too expensive,March
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

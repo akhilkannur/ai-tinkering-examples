@@ -1,18 +1,22 @@
 ---
-id: "referral-program-architect"
-category: "Growth"
-title: "The Referral Program Architect"
-tagline: "Turn users into salespeople."
-difficulty: "Intermediate"
-time: "Batch"
-description: "Referrals have the lowest CAC. This agent designs 'Double-Sided' referral programs tailored to your specific unit economics and business model for an entire portfolio of products."
+id: referral-program-architect
+category: Growth
+title: The Referral Program Architect
+tagline: Turn users into salespeople.
+difficulty: Intermediate
+time: Batch
+description: >-
+  Referrals have the lowest CAC. This agent designs 'Double-Sided' referral
+  programs tailored to your specific unit economics and business model for an
+  entire portfolio of products.
 sampleData:
-  filename: "brands.csv"
+  filename: brands.csv
   content: |
     Brand_Name,Business_Model,Avg_LTV
     Pawsome,E-commerce,150
     FinGuard,SaaS (B2B),5000
     BrewBase,Subscription,250
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

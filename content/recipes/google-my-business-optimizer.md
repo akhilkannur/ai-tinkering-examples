@@ -1,17 +1,21 @@
 ---
-id: "google-my-business-optimizer"
-category: "Local SEO"
-title: "The GMB Fleet Optimizer"
-tagline: "Own the map pack for all 50 branches."
-difficulty: "Beginner"
-time: "Monthly"
-description: "Local businesses live or die by Google Maps. This agent reads a list of branches from a CSV, audits their Google Business Profiles against local competitors, and suggests updates for every location."
+id: google-my-business-optimizer
+category: Local SEO
+title: The GMB Fleet Optimizer
+tagline: Own the map pack for all 50 branches.
+difficulty: Beginner
+time: Monthly
+description: >-
+  Local businesses live or die by Google Maps. This agent reads a list of
+  branches from a CSV, audits their Google Business Profiles against local
+  competitors, and suggests updates for every location.
 sampleData:
-  filename: "branch_list.csv"
+  filename: branch_list.csv
   content: |
     Branch_Name,GMB_URL
     Downtown Coffee,https://g.page/downtown
     Uptown Coffee,https://g.page/uptown
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

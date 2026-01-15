@@ -1,18 +1,22 @@
 ---
-id: "robots-txt-architect"
-category: "Tech SEO"
-title: "The Robots.txt Architect"
-tagline: "Control the crawlers."
-difficulty: "Advanced"
-time: "Batch"
-description: "AI bots (GPTBot, CCBot) are scraping your proprietary data. This agent designs optimized `robots.txt` files for multiple domains that allow search engines like Google/Bing but block AI scrapers to protect your IP."
+id: robots-txt-architect
+category: Tech SEO
+title: The Robots.txt Architect
+tagline: Control the crawlers.
+difficulty: Advanced
+time: Batch
+description: >-
+  AI bots (GPTBot, CCBot) are scraping your proprietary data. This agent designs
+  optimized `robots.txt` files for multiple domains that allow search engines
+  like Google/Bing but block AI scrapers to protect your IP.
 sampleData:
-  filename: "site_configs.csv"
+  filename: site_configs.csv
   content: |
     Domain,Sitemap_URL,Block_AI
     mysite.com,https://mysite.com/sitemap.xml,True
     blog.io,https://blog.io/sitemap_index.xml,True
     docs.net,https://docs.net/sitemap.xml,False
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

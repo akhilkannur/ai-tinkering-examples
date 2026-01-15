@@ -1,17 +1,21 @@
 ---
-id: "customer-success-handover"
-category: "Customer Success"
-title: "The CS Handover Factory"
-tagline: "Standardize 50 client handovers in one run."
-difficulty: "Intermediate"
-time: "Weekly"
-description: "The worst customer experience is repeating yourself. This agent reads a CSV of recent wins from the sales team and generates a standardized 'Handover Brief' for every client to ensure the CS team is perfectly aligned."
+id: customer-success-handover
+category: Customer Success
+title: The CS Handover Factory
+tagline: Standardize 50 client handovers in one run.
+difficulty: Intermediate
+time: Weekly
+description: >-
+  The worst customer experience is repeating yourself. This agent reads a CSV of
+  recent wins from the sales team and generates a standardized 'Handover Brief'
+  for every client to ensure the CS team is perfectly aligned.
 sampleData:
-  filename: "recent_wins.csv"
+  filename: recent_wins.csv
   content: |
     Client_Name,Sales_Rep,Main_Goal,Red_Flags
     MegaCorp,John,SSO Setup,Strict legal team
     TinyStart,Sarah,Fast Launch,Limited bandwidth
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

@@ -1,18 +1,22 @@
 ---
-id: "ux-vision-auditor"
-category: "CRO"
-title: "The UX Vision Auditor"
-tagline: "An eye-tracking lab in your terminal."
-difficulty: "Experimental"
-time: "Batch"
-description: "Why aren't they converting? This agent uses Vision capabilities to audit multiple landing page screenshots, identifying visual clutter, low-contrast buttons, and confusing layouts that text-only audits miss."
+id: ux-vision-auditor
+category: CRO
+title: The UX Vision Auditor
+tagline: An eye-tracking lab in your terminal.
+difficulty: Experimental
+time: Batch
+description: >-
+  Why aren't they converting? This agent uses Vision capabilities to audit
+  multiple landing page screenshots, identifying visual clutter, low-contrast
+  buttons, and confusing layouts that text-only audits miss.
 sampleData:
-  filename: "screenshots.csv"
+  filename: screenshots.csv
   content: |
     Page_Name,Image_Path,Device_Type
     Homepage,assets/ux/home_desktop.png,Desktop
     Pricing,assets/ux/pricing_mobile.png,Mobile
     Signup,assets/ux/signup_form.webp,Desktop
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

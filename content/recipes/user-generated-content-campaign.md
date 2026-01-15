@@ -1,18 +1,22 @@
 ---
-id: "user-generated-content-campaign"
-category: "Social"
-title: "The UGC Campaign Planner"
-tagline: "High-ROI content from your users."
-difficulty: "Intermediate"
-time: "Batch"
-description: "Social proof is your best sales tool. This agent designs viral UGC contests and campaigns for your entire product line, incentivizing users to create high-quality marketing assets for you."
+id: user-generated-content-campaign
+category: Social
+title: The UGC Campaign Planner
+tagline: High-ROI content from your users.
+difficulty: Intermediate
+time: Batch
+description: >-
+  Social proof is your best sales tool. This agent designs viral UGC contests
+  and campaigns for your entire product line, incentivizing users to create
+  high-quality marketing assets for you.
 sampleData:
-  filename: "brands.csv"
+  filename: brands.csv
   content: |
     Brand_Name,Product_Category,Primary_Platform
     VelvetBloom,Skincare,Instagram/TikTok
     PixelPounce,Gaming Peripherals,X/Twitter
     BrewBase,Coffee Equipment,Instagram
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

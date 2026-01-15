@@ -1,28 +1,64 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-import { ArrowLeft, Terminal, Copy, Check, Download, FileText, Cpu, BookOpen } from 'lucide-react';
+import { useRouter } from 'next/router';
+import { ArrowLeft, Terminal, Copy, Check, Download, FileText, Cpu, BookOpen, Lock, Crown, Key, ArrowRight, X } from 'lucide-react';
 import Navbar from '../../components/Navbar';
 import { getAllRecipes } from '../../lib/recipes';
 import { Recipe, categoryIcons } from '../../lib/cookbook-data';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 interface RecipePageProps {
   recipe: Recipe;
 }
 
 export default function RecipePage({ recipe }: RecipePageProps) {
+  const router = useRouter();
   const [copied, setCopied] = useState(false);
+  const [isUnlocked, setIsUnlocked] = useState(false);
+  const [showLicenseInput, setShowLicenseInput] = useState(false);
+  const [licenseKeyInput, setLicenseKeyInput] = useState('');
+  const [unlockError, setUnlockError] = useState('');
+
   const CatIcon = categoryIcons[recipe.category] || Terminal;
 
+  useEffect(() => {
+    const hasAccess = localStorage.getItem('terminal_cookbook_premium') === 'true';
+    if (hasAccess) {
+      setIsUnlocked(true);
+    }
+
+    if (router.isReady) {
+      const { license_key } = router.query;
+      if (license_key === 'TK-8821-XPRO-MQ') {
+        setIsUnlocked(true);
+        localStorage.setItem('terminal_cookbook_premium', 'true');
+        router.replace(`/blueprints/${recipe.id}`, undefined, { shallow: true });
+      }
+    }
+  }, [router.isReady, router.query, recipe.id]);
+
+  const handleLicenseSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (licenseKeyInput.trim() === 'TK-8821-XPRO-MQ') {
+      setIsUnlocked(true);
+      localStorage.setItem('terminal_cookbook_premium', 'true');
+      setShowLicenseInput(false);
+      setUnlockError('');
+    } else {
+      setUnlockError('Invalid license key. Please check your purchase email.');
+    }
+  };
+
   const handleCopy = () => {
+    if (recipe.isPremium && !isUnlocked) return;
     navigator.clipboard.writeText(recipe.blueprint);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
 
   const handleDownloadSample = () => {
-    if (!recipe.sampleData) return;
+    if (!recipe.sampleData || (recipe.isPremium && !isUnlocked)) return;
     const blob = new Blob([recipe.sampleData.content], { type: 'text/plain' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
@@ -35,6 +71,7 @@ export default function RecipePage({ recipe }: RecipePageProps) {
   };
 
   const handleDownloadBlueprint = () => {
+    if (recipe.isPremium && !isUnlocked) return;
     const blob = new Blob([recipe.blueprint], { type: 'text/markdown' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
@@ -46,57 +83,9 @@ export default function RecipePage({ recipe }: RecipePageProps) {
     URL.revokeObjectURL(url);
   };
 
+  const isLocked = recipe.isPremium && !isUnlocked;
   const SITE_URL = 'https://realaiexamples.com';
   const ogImageUrl = `${SITE_URL}/api/og?title=${encodeURIComponent(recipe.title)}&category=${encodeURIComponent(recipe.category)}&tagline=${encodeURIComponent(recipe.tagline)}`;
-
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "TechArticle",
-    "headline": recipe.title,
-    "description": recipe.description,
-    "image": ogImageUrl,
-    "author": {
-      "@type": "Organization",
-      "name": "AI Tinkering Examples"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "AI Tinkering Examples",
-      "logo": {
-        "@type": "ImageObject",
-        "url": `${SITE_URL}/logo.png`
-      }
-    },
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": `${SITE_URL}/blueprints/${recipe.id}`
-    }
-  };
-
-  const breadcrumbData = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": SITE_URL
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Blueprints",
-        "item": `${SITE_URL}/blueprints`
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": recipe.title,
-        "item": `${SITE_URL}/blueprints/${recipe.id}`
-      }
-    ]
-  };
 
   return (
     <div className="flex flex-col min-h-screen bg-white">
@@ -107,19 +96,7 @@ export default function RecipePage({ recipe }: RecipePageProps) {
         <meta property="og:description" content={recipe.description} key="og:description" />
         <meta property="og:image" content={ogImageUrl} key="og:image" />
         <meta property="og:type" content="article" key="og:type" />
-        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
-        <meta name="twitter:title" content={`${recipe.title} | AI Agent Blueprint`} key="twitter:title" />
-        <meta name="twitter:description" content={recipe.description} key="twitter:description" />
-        <meta name="twitter:image" content={ogImageUrl} key="twitter:image" />
         <link rel="canonical" href={`${SITE_URL}/blueprints/${recipe.id}`} key="canonical" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbData) }}
-        />
       </Head>
       
       <Navbar />
@@ -128,7 +105,7 @@ export default function RecipePage({ recipe }: RecipePageProps) {
         <div className="max-w-4xl mx-auto">
           {/* Breadcrumbs */}
           <nav className="flex items-center gap-2 text-sm font-medium text-gray-500 mb-8">
-            <Link href="/blueprints" className="hover:text-blue-600 flex items-center gap-1">
+            <Link href="/" className="hover:text-blue-600 flex items-center gap-1">
               <ArrowLeft className="w-4 h-4" /> Back to Blueprints
             </Link>
             <span className="text-gray-300">/</span>
@@ -138,14 +115,17 @@ export default function RecipePage({ recipe }: RecipePageProps) {
           {/* Header */}
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12">
             <div className="flex items-center gap-6">
-              <div className="p-4 rounded-2xl bg-blue-50 text-blue-600 shadow-sm border border-blue-100">
-                <CatIcon className="w-10 h-10" />
+              <div className={`p-4 rounded-2xl shadow-sm border ${isLocked ? 'bg-yellow-50 text-yellow-600 border-yellow-100' : 'bg-blue-50 text-blue-600 border-blue-100'}`}>
+                {isLocked ? <Crown className="w-10 h-10" /> : <CatIcon className="w-10 h-10" />}
               </div>
               <div>
-                <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-2">{recipe.title}</h1>
+                <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-2 flex items-center gap-3">
+                    {recipe.title}
+                    {isLocked && <Lock className="w-6 h-6 text-yellow-500" />}
+                </h1>
                 <div className="flex flex-wrap items-center gap-3">
-                  <span className="px-3 py-1 rounded-full bg-gray-100 text-gray-600 text-xs font-bold uppercase tracking-wider">
-                    {recipe.category}
+                  <span className={`px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider ${isLocked ? 'bg-yellow-500 text-white' : 'bg-gray-100 text-gray-600'}`}>
+                    {isLocked ? 'Premium Blueprint' : recipe.category}
                   </span>
                   <span className={`px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider ${
                     recipe.difficulty === 'Beginner' ? 'bg-green-50 text-green-600' : 
@@ -162,137 +142,183 @@ export default function RecipePage({ recipe }: RecipePageProps) {
             </div>
           </div>
 
-          {/* Description */}
+          {/* Mission Overview */}
           <div className="bg-gray-50 rounded-3xl p-8 mb-12 border border-gray-100">
             <h2 className="text-xl font-bold text-gray-900 mb-4">Mission Overview</h2>
             <p className="text-gray-600 text-lg leading-relaxed">{recipe.description}</p>
           </div>
 
-          {/* Blueprint Section */}
-          <div className="bg-gray-900 rounded-2xl overflow-hidden border border-gray-800 shadow-2xl mb-12">
-            <div className="bg-gray-800 px-6 py-4 flex items-center justify-between border-b border-gray-700">
-              <div className="flex items-center gap-3">
-                <div className="flex gap-1.5">
-                  <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
-                  <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
-                  <div className="w-3 h-3 rounded-full bg-green-500/80"></div>
-                </div>
-                <span className="text-gray-400 font-mono text-xs ml-2 flex items-center gap-2">
-                  <FileText className="w-3 h-3" /> BLUEPRINT.md
-                </span>
+          {/* Locked or Unlocked Content */}
+          {isLocked ? (
+              /* PREMIUM PAYWALL */
+              <div className="bg-gray-900 rounded-3xl p-12 text-center border-4 border-yellow-500/30 shadow-2xl relative overflow-hidden mb-16">
+                 <div className="relative z-10">
+                    <div className="w-24 h-24 bg-yellow-500/10 rounded-full flex items-center justify-center mx-auto mb-8 border border-yellow-500/20">
+                      <Lock className="w-12 h-12 text-yellow-500" />
+                    </div>
+                    <h2 className="text-4xl font-bold text-white mb-4">This Blueprint is Locked</h2>
+                    <p className="text-gray-400 text-xl mb-10 max-w-xl mx-auto leading-relaxed">
+                      You are viewing a Premium AI workflow. Get instant access to this blueprint and 100+ others by joining the Terminal Cookbook Pro.
+                    </p>
+                    
+                    {!showLicenseInput ? (
+                        <div className="flex flex-col items-center gap-6">
+                            <a 
+                              href="https://checkout.dodopayments.com/buy/pdt_0NW6p0szmXPS6jXW05hIP?session=sess_GCYotd6plh"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-3 bg-yellow-500 hover:bg-yellow-400 text-gray-900 px-10 py-5 rounded-2xl font-bold text-xl transition-all transform hover:scale-105 active:scale-95 shadow-2xl shadow-yellow-500/20"
+                            >
+                              Unlock All Blueprints <ArrowRight className="w-6 h-6" />
+                            </a>
+                            <button 
+                              onClick={() => setShowLicenseInput(true)}
+                              className="text-gray-500 hover:text-white underline decoration-gray-700 underline-offset-4 font-medium transition-colors"
+                            >
+                              I already have a license key
+                            </button>
+                        </div>
+                    ) : (
+                        <form onSubmit={handleLicenseSubmit} className="max-w-md mx-auto bg-gray-800/50 p-8 rounded-2xl border border-gray-700 animate-fade-in">
+                            <div className="flex items-center justify-between mb-6">
+                                <h3 className="text-white font-bold text-lg">Activate License</h3>
+                                <button type="button" onClick={() => setShowLicenseInput(false)} className="text-gray-400 hover:text-white">
+                                    <X className="w-5 h-5" />
+                                </button>
+                            </div>
+                            <div className="mb-6">
+                                <input 
+                                    type="text" 
+                                    value={licenseKeyInput}
+                                    onChange={(e) => setLicenseKeyInput(e.target.value)}
+                                    placeholder="TK-XXXX-XXXX-XXXX"
+                                    className="w-full bg-gray-900 border border-gray-700 text-white px-5 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-500 font-mono text-center uppercase tracking-widest placeholder-gray-600 text-lg"
+                                />
+                                {unlockError && <p className="text-red-400 text-sm mt-3 text-left">{unlockError}</p>}
+                            </div>
+                            <button 
+                                type="submit"
+                                className="w-full bg-yellow-500 text-gray-900 font-bold py-4 rounded-xl hover:bg-yellow-400 transition-colors shadow-lg flex items-center justify-center gap-3 text-lg"
+                            >
+                                <Key className="w-5 h-5" /> Activate Premium
+                            </button>
+                        </form>
+                    )}
+                 </div>
+                 
+                 {/* Decorative background elements */}
+                 <div className="absolute top-0 right-0 w-64 h-64 bg-yellow-500/5 rounded-full -mr-32 -mt-32 blur-3xl"></div>
+                 <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-500/5 rounded-full -ml-32 -mb-32 blur-3xl"></div>
               </div>
-              <div className="flex items-center gap-3">
-                <button
-                  onClick={handleDownloadBlueprint}
-                  className="text-sm font-bold px-4 py-2 rounded-xl flex items-center gap-2 transition-all bg-gray-700 text-gray-200 hover:bg-gray-600 active:scale-95 shadow-lg shadow-gray-900/20"
-                >
-                  <FileText className="w-4 h-4" />
-                  Download .md
-                </button>
-                {recipe.sampleData && (
-                  <button
-                    onClick={handleDownloadSample}
-                    className="text-sm font-bold px-4 py-2 rounded-xl flex items-center gap-2 transition-all bg-yellow-500 text-yellow-900 hover:bg-yellow-400 active:scale-95 shadow-lg shadow-yellow-500/20"
-                  >
-                    <Download className="w-4 h-4" />
-                    Download Sample
-                  </button>
-                )}
-                <button
-                  onClick={handleCopy}
-                  className={`text-sm font-bold px-4 py-2 rounded-xl flex items-center gap-2 transition-all active:scale-95 shadow-lg ${
-                    copied 
-                      ? 'bg-green-500 text-white shadow-green-500/20' 
-                      : 'bg-blue-600 text-white hover:bg-blue-500 shadow-blue-600/20'
-                  }`}
-                >
-                  {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
-                  {copied ? 'Copied!' : 'Copy Blueprint'}
-                </button>
-              </div>
-            </div>
-            <div className="p-8">
-              <pre className="font-mono text-base text-blue-300 whitespace-pre-wrap leading-relaxed">
-                {recipe.blueprint}
-              </pre>
-            </div>
-          </div>
-
-          {/* Instructions */}
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
-            <div className="bg-yellow-50 border border-yellow-100 p-8 rounded-3xl">
-              <div className="bg-yellow-500 text-white w-10 h-10 rounded-2xl flex items-center justify-center font-bold text-xl mb-6 shadow-lg shadow-yellow-500/20">!</div>
-              <h3 className="text-xl font-bold text-yellow-900 mb-6">How to Run This</h3>
-              
-              <div className="space-y-6">
-                {/* Step 1 */}
-                <div>
-                  <h4 className="font-bold text-yellow-900 mb-2 flex items-center gap-2">
-                    <span className="w-6 h-6 rounded-full bg-yellow-200 text-yellow-800 flex items-center justify-center text-sm">1</span>
-                    Get the files
-                  </h4>
-                  <p className="text-yellow-800 text-sm mb-2 ml-8">
-                    Download the <span className="font-mono font-bold">{recipe.id}.md</span> blueprint {recipe.sampleData ? `and ${recipe.sampleData.filename}` : ''} using the buttons above.
-                  </p>
-                </div>
-
-                {/* Step 2 */}
-                <div>
-                  <h4 className="font-bold text-yellow-900 mb-3 flex items-center gap-2">
-                    <span className="w-6 h-6 rounded-full bg-yellow-200 text-yellow-800 flex items-center justify-center text-sm">2</span>
-                    Run in Terminal
-                  </h4>
-                  <p className="text-yellow-800 text-xs mb-4 ml-8 italic opacity-80">
-                    Universal: These blueprints work with any agentic CLI. Choose your preferred tool below:
-                  </p>
-                  
-                  <div className="ml-8 space-y-4">
-                    {/* Gemini Command */}
-                    <div className="bg-white rounded-xl border border-yellow-200 overflow-hidden">
-                      <div className="px-4 py-2 bg-yellow-100/50 border-b border-yellow-100 flex justify-between items-center">
-                        <span className="text-xs font-bold text-yellow-800 uppercase tracking-wider">Gemini CLI</span>
-                        <button 
-                          onClick={() => navigator.clipboard.writeText(`gemini "Read @${recipe.id}.md and execute the workflow"`)}
-                          className="text-xs text-yellow-700 hover:text-yellow-900 font-medium"
+          ) : (
+              /* UNLOCKED CONTENT */
+              <>
+                <div className="bg-gray-900 rounded-2xl overflow-hidden border border-gray-800 shadow-2xl mb-12">
+                    <div className="bg-gray-800 px-6 py-4 flex items-center justify-between border-b border-gray-700">
+                    <div className="flex items-center gap-3">
+                        <div className="flex gap-1.5">
+                        <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
+                        <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+                        <div className="w-3 h-3 rounded-full bg-green-500/80"></div>
+                        </div>
+                        <span className="text-gray-400 font-mono text-xs ml-2 flex items-center gap-2">
+                        <FileText className="w-3 h-3" /> BLUEPRINT.md
+                        </span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                        <button
+                        onClick={handleDownloadBlueprint}
+                        className="text-sm font-bold px-4 py-2 rounded-xl flex items-center gap-2 transition-all bg-gray-700 text-gray-200 hover:bg-gray-600 active:scale-95 shadow-lg shadow-gray-900/20"
                         >
-                          Copy
+                        <FileText className="w-4 h-4" />
+                        Download .md
                         </button>
-                      </div>
-                      <div className="p-4 font-mono text-sm text-gray-700 overflow-x-auto whitespace-nowrap">
-                        gemini "Read @{recipe.id}.md and execute the workflow"
-                      </div>
+                        {recipe.sampleData && (
+                        <button
+                            onClick={handleDownloadSample}
+                            className="text-sm font-bold px-4 py-2 rounded-xl flex items-center gap-2 transition-all bg-yellow-500 text-yellow-900 hover:bg-yellow-400 active:scale-95 shadow-lg shadow-yellow-500/20"
+                        >
+                            <Download className="w-4 h-4" />
+                            Download Sample
+                        </button>
+                        )}
+                        <button
+                        onClick={handleCopy}
+                        className={`text-sm font-bold px-4 py-2 rounded-xl flex items-center gap-2 transition-all active:scale-95 shadow-lg ${
+                            copied 
+                            ? 'bg-green-500 text-white shadow-green-500/20' 
+                            : 'bg-blue-600 text-white hover:bg-blue-500 shadow-blue-600/20'
+                        }`}
+                        >
+                        {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
+                        {copied ? 'Copied!' : 'Copy Blueprint'}
+                        </button>
+                    </div>
+                    </div>
+                    <div className="p-8">
+                    <pre className="font-mono text-base text-blue-300 whitespace-pre-wrap leading-relaxed">
+                        {recipe.blueprint}
+                    </pre>
+                    </div>
+                </div>
+
+                {/* Instructions Grid */}
+                <div className="grid md:grid-cols-2 gap-8 mb-16">
+                    <div className="bg-yellow-50 border border-yellow-100 p-8 rounded-3xl">
+                    <div className="bg-yellow-500 text-white w-10 h-10 rounded-2xl flex items-center justify-center font-bold text-xl mb-6 shadow-lg shadow-yellow-500/20">!</div>
+                    <h3 className="text-xl font-bold text-yellow-900 mb-6">How to Run This</h3>
+                    
+                    <div className="space-y-6">
+                        <div>
+                        <h4 className="font-bold text-yellow-900 mb-2 flex items-center gap-2">
+                            <span className="w-6 h-6 rounded-full bg-yellow-200 text-yellow-800 flex items-center justify-center text-sm">1</span>
+                            Get the files
+                        </h4>
+                        <p className="text-yellow-800 text-sm mb-2 ml-8">
+                            Download the <span className="font-mono font-bold">{recipe.id}.md</span> blueprint {recipe.sampleData ? `and ${recipe.sampleData.filename}` : ''} using the buttons above.
+                        </p>
+                        </div>
+
+                        <div>
+                        <h4 className="font-bold text-yellow-900 mb-3 flex items-center gap-2">
+                            <span className="w-6 h-6 rounded-full bg-yellow-200 text-yellow-800 flex items-center justify-center text-sm">2</span>
+                            Run in Terminal
+                        </h4>
+                        <p className="text-yellow-800 text-xs mb-4 ml-8 italic opacity-80">
+                            Universal: These blueprints work with any agentic CLI.
+                        </p>
+                        
+                        <div className="ml-8 space-y-4">
+                            <div className="bg-white rounded-xl border border-yellow-200 overflow-hidden">
+                            <div className="px-4 py-2 bg-yellow-100/50 border-b border-yellow-100 flex justify-between items-center">
+                                <span className="text-xs font-bold text-yellow-800 uppercase tracking-wider">Gemini CLI</span>
+                                <button 
+                                onClick={() => navigator.clipboard.writeText(`gemini "Read @${recipe.id}.md and execute the workflow"`)}
+                                className="text-xs text-yellow-700 hover:text-yellow-900 font-medium"
+                                >
+                                Copy
+                                </button>
+                            </div>
+                            <div className="p-4 font-mono text-sm text-gray-700 overflow-x-auto whitespace-nowrap">
+                                gemini "Read @{recipe.id}.md and execute the workflow"
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
                     </div>
 
-                    {/* Claude Command */}
-                    <div className="bg-white rounded-xl border border-yellow-200 overflow-hidden">
-                      <div className="px-4 py-2 bg-yellow-100/50 border-b border-yellow-100 flex justify-between items-center">
-                        <span className="text-xs font-bold text-yellow-800 uppercase tracking-wider">Claude Code</span>
-                        <button 
-                          onClick={() => navigator.clipboard.writeText(`claude "Read ${recipe.id}.md and execute the workflow"`)}
-                          className="text-xs text-yellow-700 hover:text-yellow-900 font-medium"
-                        >
-                          Copy
-                        </button>
-                      </div>
-                      <div className="p-4 font-mono text-sm text-gray-700 overflow-x-auto whitespace-nowrap">
-                        claude "Read {recipe.id}.md and execute the workflow"
-                      </div>
+                    <div className="bg-blue-50 border border-blue-100 p-8 rounded-3xl">
+                    <div className="bg-blue-600 text-white w-10 h-10 rounded-2xl flex items-center justify-center font-bold text-xl mb-6 shadow-lg shadow-blue-600/20">?</div>
+                    <h3 className="text-xl font-bold text-blue-900 mb-4">Why use blueprints?</h3>
+                    <p className="text-blue-800 leading-relaxed">
+                        Blueprints act as a "Mission File". Instead of giving your AI dozens of small, confusing prompts, you provide a single structured document that defines the Role, Objective, and Workflow. 
+                    </p>
                     </div>
-                  </div>
                 </div>
-              </div>
-            </div>
+              </>
+          )}
 
-            <div className="bg-blue-50 border border-blue-100 p-8 rounded-3xl">
-              <div className="bg-blue-600 text-white w-10 h-10 rounded-2xl flex items-center justify-center font-bold text-xl mb-6 shadow-lg shadow-blue-600/20">?</div>
-              <h3 className="text-xl font-bold text-blue-900 mb-4">Why use blueprints?</h3>
-              <p className="text-blue-800 leading-relaxed">
-                Blueprints act as a "Mission File". Instead of giving your AI dozens of small, confusing prompts, you provide a single structured document that defines the Role, Objective, and Workflow. 
-                <br /><br />
-                <span className="font-bold">Tool Agnostic:</span> These work with any agentic CLI (Gemini, Claude Code, Cursor, etc.) by providing a clear instruction set for the AI to follow.
-              </p>
-            </div>
-          </div>
         </div>
       </main>
     </div>
@@ -302,7 +328,7 @@ export default function RecipePage({ recipe }: RecipePageProps) {
 export const getStaticPaths: GetStaticPaths = async () => {
   const recipes = getAllRecipes();
   const paths = recipes
-    .filter((recipe) => recipe.id) // Ensure ID exists
+    .filter((recipe) => recipe.id)
     .map((recipe) => ({
       params: { id: recipe.id },
     }));

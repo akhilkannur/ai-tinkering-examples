@@ -1,18 +1,21 @@
 ---
-id: "landing-page-optimizer"
-category: "CRO"
-title: "The LP Optimizer"
-tagline: "A/B test ideas at scale."
-difficulty: "Intermediate"
-time: "Batch"
-description: "Analyzes landing pages against top competitors and suggests psychological A/B tests to improve conversion rates for your entire portfolio."
+id: landing-page-optimizer
+category: CRO
+title: The LP Optimizer
+tagline: A/B test ideas at scale.
+difficulty: Intermediate
+time: Batch
+description: >-
+  Analyzes landing pages against top competitors and suggests psychological A/B
+  tests to improve conversion rates for your entire portfolio.
 sampleData:
-  filename: "landing_pages.csv"
+  filename: landing_pages.csv
   content: |
     Page_Name,URL,Main_Conversion_Goal
     Homepage,https://mysite.com,Free Trial Signup
     Pricing,https://mysite.com/pricing,Pro Plan Purchase
     Demo,https://mysite.com/demo,Book a Demo
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

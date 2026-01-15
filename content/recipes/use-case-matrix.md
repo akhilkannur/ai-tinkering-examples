@@ -1,14 +1,17 @@
 ---
-id: "use-case-matrix"
-category: "Product Marketing"
-title: "The Use Case Matrix Builder"
-tagline: "Map features to pain points."
-difficulty: "Intermediate"
-time: "One-off"
-archetype: "Processor"
-description: "Sales reps pitch features; they should pitch solutions. This agent takes a list of your features and a list of buyer personas, generating a matrix of 'How Feature X helps Persona Y', used for battlecards."
+id: use-case-matrix
+category: Product Marketing
+title: The Use Case Matrix Builder
+tagline: Map features to pain points.
+difficulty: Intermediate
+time: One-off
+archetype: Processor
+description: >-
+  Sales reps pitch features; they should pitch solutions. This agent takes a
+  list of your features and a list of buyer personas, generating a matrix of
+  'How Feature X helps Persona Y', used for battlecards.
 sampleData:
-  filename: "features_personas.csv"
+  filename: features_personas.csv
   content: |
     Feature,Description
     API Access,Automate data entry
@@ -17,6 +20,7 @@ sampleData:
     Persona,Pain_Point
     CTO,Too much manual work
     Field Rep,Can't access laptop
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

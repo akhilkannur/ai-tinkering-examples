@@ -1,18 +1,22 @@
 ---
-id: "people-also-ask-scraper"
-category: "SEO"
-title: "The PAA Scraper"
-tagline: "Answer what they are asking."
-difficulty: "Intermediate"
-time: "Batch"
-description: "Google's 'People Also Ask' box is a content goldmine. This agent takes a list of keywords and researches the exact questions users are asking on Google, generating comprehensive FAQ briefs for your entire site."
+id: people-also-ask-scraper
+category: SEO
+title: The PAA Scraper
+tagline: Answer what they are asking.
+difficulty: Intermediate
+time: Batch
+description: >-
+  Google's 'People Also Ask' box is a content goldmine. This agent takes a list
+  of keywords and researches the exact questions users are asking on Google,
+  generating comprehensive FAQ briefs for your entire site.
 sampleData:
-  filename: "keywords.csv"
+  filename: keywords.csv
   content: |
     Keyword,Industry
     Best CRM for small business,SaaS
     How to start a garden,Home & Garden
     Remote work security,Cybersecurity
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

@@ -1,17 +1,21 @@
 ---
-id: "linkedin-carousel"
-category: "Social Content"
-title: "The LinkedIn Carousel Factory"
-tagline: "Turn your entire blog into 50 viral PDFs."
-difficulty: "Intermediate"
-time: "15 mins"
-description: "Carousels get the highest dwell time on LinkedIn. This agent reads a list of blog URLs from a CSV, extracts the core 'Hero's Journey', and generates a 10-slide visual script for every post."
+id: linkedin-carousel
+category: Social Content
+title: The LinkedIn Carousel Factory
+tagline: Turn your entire blog into 50 viral PDFs.
+difficulty: Intermediate
+time: 15 mins
+description: >-
+  Carousels get the highest dwell time on LinkedIn. This agent reads a list of
+  blog URLs from a CSV, extracts the core 'Hero's Journey', and generates a
+  10-slide visual script for every post.
 sampleData:
-  filename: "posts_to_convert.csv"
+  filename: posts_to_convert.csv
   content: |
     Title,URL
     How to scale ads,https://yoursite.com/scale-ads
     Why cold email is dead,https://yoursite.com/cold-email
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

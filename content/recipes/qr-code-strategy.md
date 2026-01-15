@@ -1,18 +1,22 @@
 ---
-id: "qr-code-strategy"
-category: "Offline"
-title: "The QR Code Strategist"
-tagline: "Bridge offline to online."
-difficulty: "Beginner"
-time: "Batch"
-description: "QR codes are often wasted on homepages. This agent processes your entire offline footprint and suggests high-value destinations for your QR codes to maximize utility and conversion."
+id: qr-code-strategy
+category: Offline
+title: The QR Code Strategist
+tagline: Bridge offline to online.
+difficulty: Beginner
+time: Batch
+description: >-
+  QR codes are often wasted on homepages. This agent processes your entire
+  offline footprint and suggests high-value destinations for your QR codes to
+  maximize utility and conversion.
 sampleData:
-  filename: "locations.csv"
+  filename: locations.csv
   content: |
     Location_Name,Setting,Primary_Goal
     The Coffee House,In-store Table,Drive loyalty signups
     SaaStr Booth,Physical Event,Book product demos
     Direct Mailer,Customer Home,Re-order reminder
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

@@ -1,18 +1,22 @@
 ---
-id: "featured-snippet-thief"
-category: "SEO Content"
-title: "The Featured Snippet Thief"
-tagline: "Steal position zero."
-difficulty: "Intermediate"
-time: "Weekly"
-archetype: "Processor"
-description: "You rank #3, but want #0. This agent analyzes the current Featured Snippet for a keyword (format: List, Table, Paragraph, Word Count) and tells you exactly how to restructure your content to take its spot."
+id: featured-snippet-thief
+category: SEO Content
+title: The Featured Snippet Thief
+tagline: Steal position zero.
+difficulty: Intermediate
+time: Weekly
+archetype: Processor
+description: >-
+  You rank #3, but want #0. This agent analyzes the current Featured Snippet for
+  a keyword (format: List, Table, Paragraph, Word Count) and tells you exactly
+  how to restructure your content to take its spot.
 sampleData:
-  filename: "serp_analysis.csv"
+  filename: serp_analysis.csv
   content: |
     Keyword,Current_Snippet_Type,Snippet_Text,My_Rank
     "best crm software",List,10 items,3
     "what is arr",Paragraph,45 words,2
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

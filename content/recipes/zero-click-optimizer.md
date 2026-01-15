@@ -1,18 +1,25 @@
 ---
-id: "zero-click-optimizer"
-category: "SEO Content"
-title: "The Zero-Click Optimizer"
-tagline: "Optimize for the answer engine."
-difficulty: "Intermediate"
-time: "Weekly"
-archetype: "Processor"
-description: "Users want answers, not clicks. This agent reviews your informational content and reformats the 'Answer Paragraph' (first 100 words) to be concise, direct, and factual, increasing chances of AI Overview inclusion."
+id: zero-click-optimizer
+category: SEO Content
+title: The Zero-Click Optimizer
+tagline: Optimize for the answer engine.
+difficulty: Intermediate
+time: Weekly
+archetype: Processor
+description: >-
+  Users want answers, not clicks. This agent reviews your informational content
+  and reformats the 'Answer Paragraph' (first 100 words) to be concise, direct,
+  and factual, increasing chances of AI Overview inclusion.
 sampleData:
-  filename: "blog_intros.csv"
-  content: |
+  filename: blog_intros.csv
+  content: >
     URL,Intro_Text
-    /what-is-crm,"In this fast-paced world of business, many people wonder about tools..."
+
+    /what-is-crm,"In this fast-paced world of business, many people wonder about
+    tools..."
+
     /how-to-solder,"Soldering is an art form that takes years..."
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

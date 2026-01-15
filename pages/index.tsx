@@ -1,5 +1,6 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import { GetStaticProps } from 'next'
+import { useRouter } from 'next/router'
 import Head from 'next/head'
 import Navbar from '../components/Navbar'
 import TerminalCookbook from '../components/BuilderFlowchart'
@@ -21,9 +22,29 @@ interface HybridHomePageProps {
 }
 
 export default function HybridHomePage({ recipes, featuredJobs, featuredTools, siteSettings }: HybridHomePageProps) {
+  const router = useRouter();
+  const [isUnlocked, setIsUnlocked] = useState(false);
+  
   const homepageTitle = "The Terminal Cookbook | Real AI Examples";
   const homepageDescription = "Stop Chatting. Start Automating. A library of copy-paste blueprints to build powerful autonomous agents using Gemini CLI, Claude Code, Cowork, or Cursor.";
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com';
+
+  // Sync isUnlocked state with LocalStorage and URL on mount
+  useEffect(() => {
+    const hasAccess = localStorage.getItem('terminal_cookbook_premium') === 'true';
+    if (hasAccess) {
+      setIsUnlocked(true);
+    }
+
+    if (router.isReady) {
+      const { license_key } = router.query;
+      if (license_key === 'TK-8821-XPRO-MQ') {
+        setIsUnlocked(true);
+        localStorage.setItem('terminal_cookbook_premium', 'true');
+        router.replace('/', undefined, { shallow: true });
+      }
+    }
+  }, [router.isReady, router.query]);
 
   return (
     <>
@@ -50,7 +71,7 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
       <div className="min-h-screen bg-white font-sans text-text-color fade-in">
         <Navbar />
 
-        {/* HERO SECTION (From Blueprints) */}
+        {/* HERO SECTION */}
         <div className="bg-white pt-16 pb-12">
             <div className="container mx-auto px-4 text-center max-w-4xl">
                 <div className="inline-flex items-center gap-2 bg-yellow-50 border border-yellow-100 text-yellow-800 px-4 py-1.5 rounded-full text-sm font-semibold mb-6">
@@ -92,7 +113,7 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
         {/* HOW TO USE GUIDE */}
         <HowToUseGuide />
 
-        {/* COOKBOOK GRID (The Main Content) */}
+        {/* COOKBOOK GRID */}
         <div className="bg-white pb-16">
             <div className="container mx-auto px-4">
                <TerminalCookbook recipes={recipes} />
@@ -162,18 +183,6 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
                   ))}
                 </div>
              </div>
-          </div>
-        )}
-
-        {/* SECONDARY CONTENT: JOBS */}
-        {siteSettings.enableFeaturedJobsSection && featuredJobs.length > 0 && (
-          <div className="bg-primary-bg py-12 border-b border-navy-dark">
-            <HorizontalStrip 
-              title="Featured AI Jobs"
-              items={featuredJobs}
-              renderItem={(job) => <JobCard job={job} />}
-              viewAllLink="/jobs"
-            />
           </div>
         )}
 

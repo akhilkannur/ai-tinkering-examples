@@ -1,19 +1,23 @@
 ---
-id: "content-decay-alerter"
-category: "SEO Maintenance"
-title: "The Content Decay Alerter"
-tagline: "Save your traffic before it's gone."
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Evergreen content fades. This agent compares traffic data from 'Last 30 Days' vs 'Previous 30 Days' for your top pages, flagging any significant drops (>10%) so you can refresh them."
+id: content-decay-alerter
+category: SEO Maintenance
+title: The Content Decay Alerter
+tagline: Save your traffic before it's gone.
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Evergreen content fades. This agent compares traffic data from 'Last 30 Days'
+  vs 'Previous 30 Days' for your top pages, flagging any significant drops
+  (>10%) so you can refresh them.
 sampleData:
-  filename: "traffic_data.csv"
+  filename: traffic_data.csv
   content: |
     URL,Traffic_Last_30,Traffic_Prev_30
     /blog/ultimate-guide,5000,5500
     /blog/old-post,100,200
     /blog/new-post,1000,500
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

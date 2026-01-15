@@ -1,17 +1,24 @@
 ---
-id: "product-description-seo"
-category: "E-commerce"
-title: "The SKU SEO Factory"
-tagline: "Rewrite 100 product descriptions for search in minutes."
-difficulty: "Beginner"
-time: "10 mins"
-description: "Copy-pasted manufacturer descriptions hurt your SEO. This agent reads a CSV of your product catalog and rewrites every description to include long-tail keywords and benefit-driven bullets."
+id: product-description-seo
+category: E-commerce
+title: The SKU SEO Factory
+tagline: Rewrite 100 product descriptions for search in minutes.
+difficulty: Beginner
+time: 10 mins
+description: >-
+  Copy-pasted manufacturer descriptions hurt your SEO. This agent reads a CSV of
+  your product catalog and rewrites every description to include long-tail
+  keywords and benefit-driven bullets.
 sampleData:
-  filename: "catalog_raw.csv"
-  content: |
+  filename: catalog_raw.csv
+  content: >
     SKU,Name,Raw_Features,Target_Keyword
-    HIK-01,Trekking Boots,Leather, waterproof,Vibram sole,Waterproof hiking boots
+
+    HIK-01,Trekking Boots,Leather, waterproof,Vibram sole,Waterproof hiking
+    boots
+
     TENT-02,Alpine Tent,2-person, 4-season, ultralight,Lightweight camping tent
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

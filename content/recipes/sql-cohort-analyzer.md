@@ -1,18 +1,22 @@
 ---
-id: "sql-cohort-analyzer"
-category: "Analytics"
-title: "The SQL Cohort Builder"
-tagline: "Standardize your retention metrics."
-difficulty: "Advanced"
-time: "Batch"
-description: "Retention is the lifeblood of SaaS. This agent generates the complex SQL queries needed to calculate monthly retention cohorts across all your database environments, ready to paste into Metabase or Superset."
+id: sql-cohort-analyzer
+category: Analytics
+title: The SQL Cohort Builder
+tagline: Standardize your retention metrics.
+difficulty: Advanced
+time: Batch
+description: >-
+  Retention is the lifeblood of SaaS. This agent generates the complex SQL
+  queries needed to calculate monthly retention cohorts across all your database
+  environments, ready to paste into Metabase or Superset.
 sampleData:
-  filename: "database_schemas.csv"
+  filename: database_schemas.csv
   content: |
     Environment,Users_Table,Events_Table,Signup_Date_Column
     Production,auth_users,user_events,created_at
     Staging,test_users,test_events,registered_on
     Legacy,member_db,activity_log,join_date
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

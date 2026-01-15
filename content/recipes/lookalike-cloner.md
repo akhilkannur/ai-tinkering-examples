@@ -1,18 +1,22 @@
 ---
-id: "lookalike-cloner"
-category: "Lead Gen"
-title: "The Golden Lead Cloner"
-tagline: "Clone your best customers or competitors."
-difficulty: "Advanced"
-time: "Hybrid"
-description: "Why prospect randomly? This agent takes a list of 'Golden Customers' or researches your competitors to find high-precision lookalike leads that mirror your most successful profiles."
+id: lookalike-cloner
+category: Lead Gen
+title: The Golden Lead Cloner
+tagline: Clone your best customers or competitors.
+difficulty: Advanced
+time: Hybrid
+description: >-
+  Why prospect randomly? This agent takes a list of 'Golden Customers' or
+  researches your competitors to find high-precision lookalike leads that mirror
+  your most successful profiles.
 sampleData:
-  filename: "targets.csv"
+  filename: targets.csv
   content: |
     Company_Name,Website,Niche
     Linear,https://linear.app,Project Management
     PostHog,https://posthog.com,Product Analytics
     Beehiiv,https://beehiiv.com,Email Marketing
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

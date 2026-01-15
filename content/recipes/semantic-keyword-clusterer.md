@@ -1,13 +1,16 @@
 ---
-id: "semantic-keyword-clusterer"
-category: "SEO"
-title: "The Keyword Clusterer"
-tagline: "Group keywords in seconds."
-difficulty: "Advanced"
-time: "Batch"
-description: "Keyword stuffing is dead. This agent takes a raw list of keywords and groups them into 'Semantic Clusters' to help you plan Hub & Spoke content strategies at scale."
+id: semantic-keyword-clusterer
+category: SEO
+title: The Keyword Clusterer
+tagline: Group keywords in seconds.
+difficulty: Advanced
+time: Batch
+description: >-
+  Keyword stuffing is dead. This agent takes a raw list of keywords and groups
+  them into 'Semantic Clusters' to help you plan Hub & Spoke content strategies
+  at scale.
 sampleData:
-  filename: "keywords.csv"
+  filename: keywords.csv
   content: |
     Keyword,Search_Volume
     best crm for startups,5000
@@ -15,6 +18,7 @@ sampleData:
     crm alternatives to salesforce,3000
     top startup crms,800
     what is a crm,20000
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

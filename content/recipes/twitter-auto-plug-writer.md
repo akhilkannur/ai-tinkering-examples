@@ -1,18 +1,22 @@
 ---
-id: "twitter-auto-plug-writer"
-category: "Twitter"
-title: "The Auto-Plug Writer"
-tagline: "Drive traffic from viral tweets."
-difficulty: "Beginner"
-time: "Batch"
-description: "When a tweet goes viral, you need to plug your offer. This agent drafts high-converting 'If you enjoyed this...' tweets for your entire suite of products and newsletters, ready to be appended to the end of any thread."
+id: twitter-auto-plug-writer
+category: Twitter
+title: The Auto-Plug Writer
+tagline: Drive traffic from viral tweets.
+difficulty: Beginner
+time: Batch
+description: >-
+  When a tweet goes viral, you need to plug your offer. This agent drafts
+  high-converting 'If you enjoyed this...' tweets for your entire suite of
+  products and newsletters, ready to be appended to the end of any thread.
 sampleData:
-  filename: "promotions.csv"
+  filename: promotions.csv
   content: |
     Offer_Name,Link,Core_Benefit
     Marketing Weekly,https://news.com/marketing,Daily growth hacks
     SaaS Toolkit,https://tools.io/saas,100+ vetted tools
     Agent Masterclass,https://course.com/agents,Build AI agents in 10 mins
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

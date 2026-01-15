@@ -1,18 +1,21 @@
 ---
-id: "saas-pricing-calculator"
-category: "SaaS"
-title: "The SaaS Pricing Calculator"
-tagline: "Stop undercharging."
-difficulty: "Intermediate"
-time: "Batch"
-description: "Pricing is a science. This agent models your COGS and CAC to recommend profitable pricing tiers for an entire portfolio of SaaS products."
+id: saas-pricing-calculator
+category: SaaS
+title: The SaaS Pricing Calculator
+tagline: Stop undercharging.
+difficulty: Intermediate
+time: Batch
+description: >-
+  Pricing is a science. This agent models your COGS and CAC to recommend
+  profitable pricing tiers for an entire portfolio of SaaS products.
 sampleData:
-  filename: "product_costs.csv"
+  filename: product_costs.csv
   content: |
     Product_Name,Server_Cost_Per_User,Support_Cost_Per_User,Target_Margin_%
     NeoCloud,2.50,1.00,85
     VelvetFlow,0.50,0.25,90
     DataArmor,5.00,2.00,80
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

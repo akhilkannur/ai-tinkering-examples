@@ -1,18 +1,22 @@
 ---
-id: "sales-roleplay-simulator"
-category: "Sales Training"
-title: "The Difficult Prospect Simulator"
-tagline: "Practice your pitch against AI."
-difficulty: "Advanced"
-time: "Batch"
-description: "Sales training is expensive. This agent generates custom 'Persona' briefs and grading rubrics for a list of common sales scenarios, allowing your team to practice against skeptical CTOs or budget-conscious CFOs."
+id: sales-roleplay-simulator
+category: Sales Training
+title: The Difficult Prospect Simulator
+tagline: Practice your pitch against AI.
+difficulty: Advanced
+time: Batch
+description: >-
+  Sales training is expensive. This agent generates custom 'Persona' briefs and
+  grading rubrics for a list of common sales scenarios, allowing your team to
+  practice against skeptical CTOs or budget-conscious CFOs.
 sampleData:
-  filename: "scenarios.csv"
+  filename: scenarios.csv
   content: |
     Scenario_Name,Persona_Title,Primary_Objection
     The CTO Grilling,Skeptical CTO,Security and Integration debt
     The CFO Cut,Budget-Conscious CFO,ROI and Payback Period
     The User Pivot,Busy End-User,Time to learn a new tool
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

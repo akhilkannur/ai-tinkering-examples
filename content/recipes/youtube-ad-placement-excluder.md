@@ -1,18 +1,22 @@
 ---
-id: "youtube-ad-placement-excluder"
-category: "Ad Ops"
-title: "The B2B Brand Safety Guard"
-tagline: "Block junk YouTube channels."
-difficulty: "Intermediate"
-time: "Batch"
-description: "YouTube B2B ads often run on 'Cocomelon' because kids use parents' devices. This agent researches trending kids and gaming channels to build massive 'Negative Placement' lists for your entire campaign portfolio."
+id: youtube-ad-placement-excluder
+category: Ad Ops
+title: The B2B Brand Safety Guard
+tagline: Block junk YouTube channels.
+difficulty: Intermediate
+time: Batch
+description: >-
+  YouTube B2B ads often run on 'Cocomelon' because kids use parents' devices.
+  This agent researches trending kids and gaming channels to build massive
+  'Negative Placement' lists for your entire campaign portfolio.
 sampleData:
-  filename: "campaigns.csv"
+  filename: campaigns.csv
   content: |
     Campaign_Name,Primary_Category,Exclusion_Focus
     SaaS Pro Demo,B2B Software,Kids & Animations
     Crypto Wallet,Finance,Mobile Gaming & Bots
     HR Onboarding,People Ops,Music & Compilation Channels
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

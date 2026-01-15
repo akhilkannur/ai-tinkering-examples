@@ -1,17 +1,21 @@
 ---
-id: "influencer-gifting-logistics"
-category: "E-commerce"
-title: "The Gifting Fulfillment Engine"
-tagline: "Ship product to 100 creators without errors."
-difficulty: "Intermediate"
-time: "Weekly"
-description: "Manual gifting is slow and error-prone. This agent reads a list of influencer addresses and their chosen product variant from a CSV, cleans the data for shipping labels, and drafts the personalized tracking emails."
+id: influencer-gifting-logistics
+category: E-commerce
+title: The Gifting Fulfillment Engine
+tagline: Ship product to 100 creators without errors.
+difficulty: Intermediate
+time: Weekly
+description: >-
+  Manual gifting is slow and error-prone. This agent reads a list of influencer
+  addresses and their chosen product variant from a CSV, cleans the data for
+  shipping labels, and drafts the personalized tracking emails.
 sampleData:
-  filename: "gifting_list.csv"
+  filename: gifting_list.csv
   content: |
     Name,Address,City,SKU,IG_Handle
     Sarah Jones,123 Main St Apt 4,Austin,BOOTS-BRN,@sarah_walks
     Mike Chen,456 Oak Rd,Seattle,TENT-UL,@mike_outdoors
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

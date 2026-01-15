@@ -1,18 +1,22 @@
 ---
-id: "linkedin-insight-tag-auditor"
-category: "Ad Ops"
-title: "The Insight Tag Fleet Auditor"
-tagline: "Audit retargeting tags across your entire domain portfolio."
-difficulty: "Beginner"
-time: "Monthly"
-description: "The LinkedIn Insight Tag is often missing on critical pages. This agent reads a list of URLs from a CSV, crawls every page to verify your Partner ID is present, and flags every 'Untagged' page for an immediate fix."
+id: linkedin-insight-tag-auditor
+category: Ad Ops
+title: The Insight Tag Fleet Auditor
+tagline: Audit retargeting tags across your entire domain portfolio.
+difficulty: Beginner
+time: Monthly
+description: >-
+  The LinkedIn Insight Tag is often missing on critical pages. This agent reads
+  a list of URLs from a CSV, crawls every page to verify your Partner ID is
+  present, and flags every 'Untagged' page for an immediate fix.
 sampleData:
-  filename: "pages_to_audit.csv"
+  filename: pages_to_audit.csv
   content: |
     Page_Name,URL
     Home,https://yoursite.com
     Blog,https://yoursite.com/blog
     Landing_Page,https://promo.yoursite.com
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

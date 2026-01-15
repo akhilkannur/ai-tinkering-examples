@@ -1,18 +1,28 @@
 ---
-id: "rfp-responder"
-category: "Outreach"
-title: "The RFP Responder"
-tagline: "Draft complex proposals instantly."
-difficulty: "Advanced"
-time: "Batch"
-description: "Responding to RFPs is a time-sink. This agent processes a list of RFP requirements and auto-drafts structured responses based on your standard service offerings and compliance standards."
+id: rfp-responder
+category: Outreach
+title: The RFP Responder
+tagline: Draft complex proposals instantly.
+difficulty: Advanced
+time: Batch
+description: >-
+  Responding to RFPs is a time-sink. This agent processes a list of RFP
+  requirements and auto-drafts structured responses based on your standard
+  service offerings and compliance standards.
 sampleData:
-  filename: "rfps.csv"
-  content: |
+  filename: rfps.csv
+  content: >
     Project_Name,Requirement_Text,Budget_Tier
-    City Bank Security,Must support SAML SSO and have SOC2 Type 2 compliance,Enterprise
-    EduGrowth Portal,Must support 10k concurrent users and mobile responsive,Mid-Market
-    GovNet Audit,Must have on-premise deployment option and 24/7 support,Public Sector
+
+    City Bank Security,Must support SAML SSO and have SOC2 Type 2
+    compliance,Enterprise
+
+    EduGrowth Portal,Must support 10k concurrent users and mobile
+    responsive,Mid-Market
+
+    GovNet Audit,Must have on-premise deployment option and 24/7 support,Public
+    Sector
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

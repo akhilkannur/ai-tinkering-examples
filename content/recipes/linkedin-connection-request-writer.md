@@ -1,18 +1,27 @@
 ---
-id: "linkedin-connection-request-writer"
-category: "LinkedIn"
-title: "The Connection Request Writer"
-tagline: "Get accepted by VIPs."
-difficulty: "Beginner"
-time: "Batch"
-description: "Generic requests get ignored. This agent writes personalized 'Notes' for a list of prospects, focusing on relevance and low-friction connection hooks to maximize your acceptance rate."
+id: linkedin-connection-request-writer
+category: LinkedIn
+title: The Connection Request Writer
+tagline: Get accepted by VIPs.
+difficulty: Beginner
+time: Batch
+description: >-
+  Generic requests get ignored. This agent writes personalized 'Notes' for a
+  list of prospects, focusing on relevance and low-friction connection hooks to
+  maximize your acceptance rate.
 sampleData:
-  filename: "prospects.csv"
-  content: |
+  filename: prospects.csv
+  content: >
     Name,Profile_URL,Context
-    Jason Lemkin,https://linkedin.com/in/jasonlemkin,Recent post about SaaS metrics
-    Sari Azout,https://linkedin.com/in/sariazout,Her work on Startree and curation
+
+    Jason Lemkin,https://linkedin.com/in/jasonlemkin,Recent post about SaaS
+    metrics
+
+    Sari Azout,https://linkedin.com/in/sariazout,Her work on Startree and
+    curation
+
     Andrew Chen,https://linkedin.com/in/andrewchen,Marketplace growth frameworks
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

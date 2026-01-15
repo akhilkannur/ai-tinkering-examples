@@ -1,17 +1,21 @@
 ---
-id: "customer-journey-mapper"
-category: "Strategy"
-title: "The Customer Journey Factory"
-tagline: "Map the broken road for every persona."
-difficulty: "Intermediate"
-time: "Annual"
-description: "Users drop off where you least expect. This agent reads a list of customer personas from a CSV and maps their unique 5-stage journeys (Awareness to Advocacy), identifying the specific 'Friction Point' for each group."
+id: customer-journey-mapper
+category: Strategy
+title: The Customer Journey Factory
+tagline: Map the broken road for every persona.
+difficulty: Intermediate
+time: Annual
+description: >-
+  Users drop off where you least expect. This agent reads a list of customer
+  personas from a CSV and maps their unique 5-stage journeys (Awareness to
+  Advocacy), identifying the specific 'Friction Point' for each group.
 sampleData:
-  filename: "target_personas.csv"
+  filename: target_personas.csv
   content: |
     Persona,Job_Title,Main_Goal
     Tech Founder,CTO,Scale infrastructure
     Marketing Lead,VP Growth,Lower CAC
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

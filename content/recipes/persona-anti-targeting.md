@@ -1,18 +1,22 @@
 ---
-id: "persona-anti-targeting"
-category: "Strategy"
-title: "The Anti-Targeting List Builder"
-tagline: "Who should you NOT sell to?"
-difficulty: "Beginner"
-time: "Quarterly"
-archetype: "Processor"
-description: "Bad leads clog pipelines. This agent analyzes your 'Closed-Lost' and 'High Churn' data to identify common traits of bad customers (e.g., 'Real Estate Agents', 'Gmail users'), creating a suppression list for marketing."
+id: persona-anti-targeting
+category: Strategy
+title: The Anti-Targeting List Builder
+tagline: Who should you NOT sell to?
+difficulty: Beginner
+time: Quarterly
+archetype: Processor
+description: >-
+  Bad leads clog pipelines. This agent analyzes your 'Closed-Lost' and 'High
+  Churn' data to identify common traits of bad customers (e.g., 'Real Estate
+  Agents', 'Gmail users'), creating a suppression list for marketing.
 sampleData:
-  filename: "bad_outcomes.csv"
+  filename: bad_outcomes.csv
   content: |
     Customer,Outcome,Industry,Email_Domain
     CustA,Churned,Real Estate,gmail.com
     CustB,Lost,Consultant,yahoo.com
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

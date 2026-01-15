@@ -1,18 +1,22 @@
 ---
-id: "pipeline-velocity-tracker"
-category: "Sales Ops"
-title: "The Pipeline Velocity Tracker"
-tagline: "Find the bottleneck in your sales process."
-difficulty: "Advanced"
-time: "Monthly"
-description: "Why is revenue unpredictable? Usually, deals stick in one stage (e.g., 'Proposal Sent') too long. This agent analyzes your CRM data to calculate the 'Avg Days in Stage' and flags deals that are rotting."
+id: pipeline-velocity-tracker
+category: Sales Ops
+title: The Pipeline Velocity Tracker
+tagline: Find the bottleneck in your sales process.
+difficulty: Advanced
+time: Monthly
+description: >-
+  Why is revenue unpredictable? Usually, deals stick in one stage (e.g.,
+  'Proposal Sent') too long. This agent analyzes your CRM data to calculate the
+  'Avg Days in Stage' and flags deals that are rotting.
 sampleData:
-  filename: "deal_pipeline.csv"
+  filename: deal_pipeline.csv
   content: |
     Deal_Name,Stage,Days_In_Stage,Value,Owner
     Acme Corp,Proposal,45,10000,John
     Beta Inc,Discovery,2,5000,Sarah
     Gamma LLC,Negotiation,120,50000,John
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

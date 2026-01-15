@@ -1,19 +1,23 @@
 ---
-id: "roadmap-prioritizer"
-category: "SaaS"
-title: "The Roadmap Prioritizer (RICE)"
-tagline: "Build what matters."
-difficulty: "Intermediate"
-time: "Batch"
-description: "You have 50 feature requests and 2 developers. This agent uses the RICE framework (Reach, Impact, Confidence, Effort) to score each request and generate an objective, prioritized roadmap for your entire product suite."
+id: roadmap-prioritizer
+category: SaaS
+title: The Roadmap Prioritizer (RICE)
+tagline: Build what matters.
+difficulty: Intermediate
+time: Batch
+description: >-
+  You have 50 feature requests and 2 developers. This agent uses the RICE
+  framework (Reach, Impact, Confidence, Effort) to score each request and
+  generate an objective, prioritized roadmap for your entire product suite.
 sampleData:
-  filename: "feature_requests.csv"
+  filename: feature_requests.csv
   content: |
     Feature_Name,Reach,Impact,Confidence,Effort
     SSO Integration,1000,3,0.8,2
     Dark Mode,5000,1,1.0,0.5
     AI Search,2000,3,0.5,4
     Mobile App,10000,2,0.7,6
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

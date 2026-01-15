@@ -1,19 +1,23 @@
 ---
-id: "referral-fraud-detector"
-category: "Growth Eng"
-title: "The Referral Fraud Hunter"
-tagline: "Stop paying for fake invites."
-difficulty: "Advanced"
-time: "Batch"
-description: "Self-referrals and bot farms kill your program's ROI. This agent analyzes your referral logs to flag suspicious behavior—including IP collisions and sequential email patterns—so you can protect your budget."
+id: referral-fraud-detector
+category: Growth Eng
+title: The Referral Fraud Hunter
+tagline: Stop paying for fake invites.
+difficulty: Advanced
+time: Batch
+description: >-
+  Self-referrals and bot farms kill your program's ROI. This agent analyzes your
+  referral logs to flag suspicious behavior—including IP collisions and
+  sequential email patterns—so you can protect your budget.
 sampleData:
-  filename: "referral_logs.csv"
+  filename: referral_logs.csv
   content: |
     Referrer_ID,Invitee_Email,Invitee_IP,Timestamp
     user_123,john.doe@gmail.com,192.168.1.1,2024-10-01 10:00:00
     user_123,john.doe+1@gmail.com,192.168.1.1,2024-10-01 10:00:05
     user_456,bot_army@mail.ru,45.12.33.1,2024-10-01 11:30:00
     user_789,real_friend@yahoo.com,10.0.0.5,2024-10-01 12:00:00
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

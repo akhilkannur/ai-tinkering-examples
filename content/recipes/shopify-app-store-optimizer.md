@@ -1,18 +1,22 @@
 ---
-id: "shopify-app-store-optimizer"
-category: "E-commerce"
-title: "The Shopify App Store Optimizer"
-tagline: "Get found by merchants."
-difficulty: "Advanced"
-time: "Batch"
-description: "The Shopify App Store is a search engine. This agent researches top-ranking competitors and audits your app listings to ensure you rank for high-intent terms like 'Upsell' or 'Bundling'."
+id: shopify-app-store-optimizer
+category: E-commerce
+title: The Shopify App Store Optimizer
+tagline: Get found by merchants.
+difficulty: Advanced
+time: Batch
+description: >-
+  The Shopify App Store is a search engine. This agent researches top-ranking
+  competitors and audits your app listings to ensure you rank for high-intent
+  terms like 'Upsell' or 'Bundling'.
 sampleData:
-  filename: "apps.csv"
+  filename: apps.csv
   content: |
     App_Name,Listing_URL,Primary_Keyword
     Upsell Wizard,https://apps.shopify.com/upsell-wizard,Post-purchase upsell
     Order Printer Pro,https://apps.shopify.com/printer-pro,PDF Invoices
     Loyalty Loop,https://apps.shopify.com/loyalty-loop,Loyalty Program
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

@@ -1,17 +1,21 @@
 ---
-id: "newsjacker"
-category: "Social Automation"
-title: "The Newsjacker"
-tagline: "Find trending news and draft social posts on autopilot."
-difficulty: "Intermediate"
-time: "15 mins"
-description: "Content is about timing. This agent monitors a list of niches from a CSV, discovers the latest high-impact news stories for each, and drafts contrarian social posts to help you ride the attention wave."
+id: newsjacker
+category: Social Automation
+title: The Newsjacker
+tagline: Find trending news and draft social posts on autopilot.
+difficulty: Intermediate
+time: 15 mins
+description: >-
+  Content is about timing. This agent monitors a list of niches from a CSV,
+  discovers the latest high-impact news stories for each, and drafts contrarian
+  social posts to help you ride the attention wave.
 sampleData:
-  filename: "news_niches.csv"
+  filename: news_niches.csv
   content: |
     Niche,Target_Audience
     AI Agents,SaaS Founders
     MarTech,Growth Managers
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

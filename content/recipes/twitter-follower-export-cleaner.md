@@ -1,18 +1,22 @@
 ---
-id: "twitter-follower-export-cleaner"
-category: "Data Ops"
-title: "The Twitter Follower Cleaner"
-tagline: "Analyze your audience."
-difficulty: "Intermediate"
-time: "Batch"
-description: "Raw Twitter data is messy. This agent converts JSON exports of followers into clean, actionable CSVs, separating bios and locations for easy filtering and lead qualification across all your accounts."
+id: twitter-follower-export-cleaner
+category: Data Ops
+title: The Twitter Follower Cleaner
+tagline: Analyze your audience.
+difficulty: Intermediate
+time: Batch
+description: >-
+  Raw Twitter data is messy. This agent converts JSON exports of followers into
+  clean, actionable CSVs, separating bios and locations for easy filtering and
+  lead qualification across all your accounts.
 sampleData:
-  filename: "exports.csv"
+  filename: exports.csv
   content: |
     Account_Name,JSON_File,Target_Keyword
     Main_Brand,data/followers_main.json,Founder
     Personal_Acct,data/followers_personal.json,CEO
     Side_Project,data/followers_side.json,Developer
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

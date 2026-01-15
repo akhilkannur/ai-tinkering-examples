@@ -1,17 +1,21 @@
 ---
-id: "direct-mail-campaign-planner"
-category: "Offline"
-title: "The ABM Direct Mail Engine"
-tagline: "High-impact mailers for your top 100 accounts."
-difficulty: "Advanced"
-time: "One-off"
-description: "Direct mail breaks through the noise. This agent reads a list of target accounts and their 'Tier' from a CSV and plans a customized physical mailer campaign (Lumpy mail vs Postcard) for every group."
+id: direct-mail-campaign-planner
+category: Offline
+title: The ABM Direct Mail Engine
+tagline: High-impact mailers for your top 100 accounts.
+difficulty: Advanced
+time: One-off
+description: >-
+  Direct mail breaks through the noise. This agent reads a list of target
+  accounts and their 'Tier' from a CSV and plans a customized physical mailer
+  campaign (Lumpy mail vs Postcard) for every group.
 sampleData:
-  filename: "abm_targets.csv"
+  filename: abm_targets.csv
   content: |
     Company,Tier,Main_Problem
     MegaCorp,Tier 1,Infrastructure scale
     TinyStart,Tier 3,Fast setup
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

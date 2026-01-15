@@ -1,18 +1,22 @@
 ---
-id: "partner-page-scraper"
-category: "Intel"
-title: "The Partner Page Scraper"
-tagline: "Poach their agencies."
-difficulty: "Advanced"
-time: "Batch"
-description: "Agency partners drive massive distribution. This agent researches competitor partner directories to identify high-value service partners you can recruit to your own ecosystem."
+id: partner-page-scraper
+category: Intel
+title: The Partner Page Scraper
+tagline: Poach their agencies.
+difficulty: Advanced
+time: Batch
+description: >-
+  Agency partners drive massive distribution. This agent researches competitor
+  partner directories to identify high-value service partners you can recruit to
+  your own ecosystem.
 sampleData:
-  filename: "competitors.csv"
+  filename: competitors.csv
   content: |
     Competitor_Name,Partner_Directory_URL
     Klaviyo,https://www.klaviyo.com/partners/agency
     Shopify,https://experts.shopify.com
     HubSpot,https://www.hubspot.com/solutions-directory
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

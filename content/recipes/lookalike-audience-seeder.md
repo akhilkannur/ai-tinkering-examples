@@ -1,17 +1,21 @@
 ---
-id: "lookalike-audience-seeder"
-category: "Ad Ops"
-title: "The LAL Seeder Factory"
-tagline: "Standardize 10,000 customers for 'Custom Audience' upload."
-difficulty: "Intermediate"
-time: "Monthly"
-description: "High-quality lookalikes need high-quality seeds. This agent reads your massive customer database, filters for the 'Top 10%' by LTV or Frequency, and formats the PII for secure upload to Facebook or LinkedIn."
+id: lookalike-audience-seeder
+category: Ad Ops
+title: The LAL Seeder Factory
+tagline: 'Standardize 10,000 customers for ''Custom Audience'' upload.'
+difficulty: Intermediate
+time: Monthly
+description: >-
+  High-quality lookalikes need high-quality seeds. This agent reads your massive
+  customer database, filters for the 'Top 10%' by LTV or Frequency, and formats
+  the PII for secure upload to Facebook or LinkedIn.
 sampleData:
-  filename: "customer_db.csv"
+  filename: customer_db.csv
   content: |
     Name,Email,Lifetime_Value,Purchase_Count
     John Doe,john@acme.com,5000,12
     Jane Smith,jane@globex.com,1200,3
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

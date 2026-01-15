@@ -1,18 +1,22 @@
 ---
-id: "customer-health-score"
-category: "Customer Success"
-title: "The Customer Health Score Builder"
-tagline: "Red, Yellow, or Green?"
-difficulty: "Beginner"
-time: "Weekly"
-archetype: "Processor"
-description: "A simple traffic light system for your customer base. This agent aggregates three metrics (Login Frequency, NPS, Payment Status) to assign a holistic 'Health Status' to every account."
+id: customer-health-score
+category: Customer Success
+title: The Customer Health Score Builder
+tagline: 'Red, Yellow, or Green?'
+difficulty: Beginner
+time: Weekly
+archetype: Processor
+description: >-
+  A simple traffic light system for your customer base. This agent aggregates
+  three metrics (Login Frequency, NPS, Payment Status) to assign a holistic
+  'Health Status' to every account.
 sampleData:
-  filename: "account_metrics.csv"
+  filename: account_metrics.csv
   content: |
     Customer,Logins_Last_30,Last_NPS,Payment_Status
     CustA,20,9,Paid
     CustB,0,6,Overdue
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

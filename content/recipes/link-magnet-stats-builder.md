@@ -1,17 +1,21 @@
 ---
-id: "link-magnet-stats-builder"
-category: "Content Engineering"
-title: "The Full-Stack Link Magnet"
-tagline: "Research data & build the UI."
-difficulty: "Expert"
-time: "Batch"
-description: "Don't just write a blog post; build a 'State of the Industry' landing page. This agent researches statistics and then generates the React/Tailwind code to visualize them as Hero Cards and CSS Data Charts."
+id: link-magnet-stats-builder
+category: Content Engineering
+title: The Full-Stack Link Magnet
+tagline: Research data & build the UI.
+difficulty: Expert
+time: Batch
+description: >-
+  Don't just write a blog post; build a 'State of the Industry' landing page.
+  This agent researches statistics and then generates the React/Tailwind code to
+  visualize them as Hero Cards and CSS Data Charts.
 sampleData:
-  filename: "stats_topics.csv"
+  filename: stats_topics.csv
   content: |
     Topic,Slug,Target_Audience
     "AI in Sales 2026",state-of-ai-sales,Sales Leaders
     "Remote Work 2026",remote-work-trends,HR Managers
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

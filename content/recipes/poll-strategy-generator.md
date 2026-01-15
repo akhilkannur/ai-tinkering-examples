@@ -1,18 +1,22 @@
 ---
-id: "poll-strategy-generator"
-category: "Social"
-title: "The Poll Strategy Generator"
-tagline: "Engagement farming with a purpose."
-difficulty: "Beginner"
-time: "Batch"
-description: "Polls get high reach, but often zero value. This agent generates 'Market Research' polls that double as lead qualification, allowing you to segment and DM voters based on their specific pain points."
+id: poll-strategy-generator
+category: Social
+title: The Poll Strategy Generator
+tagline: Engagement farming with a purpose.
+difficulty: Beginner
+time: Batch
+description: >-
+  Polls get high reach, but often zero value. This agent generates 'Market
+  Research' polls that double as lead qualification, allowing you to segment and
+  DM voters based on their specific pain points.
 sampleData:
-  filename: "campaign_goals.csv"
+  filename: campaign_goals.csv
   content: |
     Campaign_Name,Target_Audience,What_You_Are_Selling
     SEO Audit Sale,E-commerce Founders,Quarterly SEO Audits
     Sales Coaching,SDR Managers,3-Day Training Intensive
     App Launch,Product Leads,AI-powered task manager
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

@@ -1,17 +1,21 @@
 ---
-id: "qbr-deck-generator"
-category: "Customer Success"
-title: "The QBR Deck Factory"
-tagline: "Generate data-driven retention decks for 10 accounts at once."
-difficulty: "Intermediate"
-time: "Quarterly"
-description: "Prove your value before they ask. This agent reads a CSV of customer usage data and ROI metrics, then generates a complete Quarterly Business Review (QBR) slide script for every account."
+id: qbr-deck-generator
+category: Customer Success
+title: The QBR Deck Factory
+tagline: Generate data-driven retention decks for 10 accounts at once.
+difficulty: Intermediate
+time: Quarterly
+description: >-
+  Prove your value before they ask. This agent reads a CSV of customer usage
+  data and ROI metrics, then generates a complete Quarterly Business Review
+  (QBR) slide script for every account.
 sampleData:
-  filename: "client_usage_data.csv"
+  filename: client_usage_data.csv
   content: |
     Client,Usage_Growth,Time_Saved,Top_Feature
     MegaCorp,20%,50 hours,Bulk API
     TinyStart,5%,10 hours,Auto-Sync
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

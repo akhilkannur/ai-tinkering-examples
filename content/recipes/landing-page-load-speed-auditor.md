@@ -1,18 +1,22 @@
 ---
-id: "landing-page-load-speed-auditor"
-category: "Ad Ops"
-title: "The LP Speed Auditor"
-tagline: "Slow pages kill ROAS."
-difficulty: "Advanced"
-time: "Batch"
-description: "If your landing page takes 3s to load, you lose 50% of your paid traffic. This agent uses `curl` to measure TTFB and Total Load Time across your entire campaign portfolio, flagging pages that are too slow."
+id: landing-page-load-speed-auditor
+category: Ad Ops
+title: The LP Speed Auditor
+tagline: Slow pages kill ROAS.
+difficulty: Advanced
+time: Batch
+description: >-
+  If your landing page takes 3s to load, you lose 50% of your paid traffic. This
+  agent uses `curl` to measure TTFB and Total Load Time across your entire
+  campaign portfolio, flagging pages that are too slow.
 sampleData:
-  filename: "landing_pages.csv"
+  filename: landing_pages.csv
   content: |
     Page_Name,URL,Traffic_Source
     Home,https://mysite.com,Direct
     Summer Sale,https://mysite.com/sale,Meta Ads
     Demo,https://mysite.com/demo,Google Ads
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

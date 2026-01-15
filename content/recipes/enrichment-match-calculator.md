@@ -1,19 +1,23 @@
 ---
-id: "enrichment-match-calculator"
-category: "RevOps"
-title: "The Enrichment Match Calculator"
-tagline: "Is your data vendor lying?"
-difficulty: "Intermediate"
-time: "One-off"
-archetype: "Processor"
-description: "Vendors promise '80% match rates.' This agent tests a sample file returned from an enrichment provider (Clearbit/ZoomInfo), calculating the actual % of fields populated (Phone, Industry, Rev) to audit their performance."
+id: enrichment-match-calculator
+category: RevOps
+title: The Enrichment Match Calculator
+tagline: Is your data vendor lying?
+difficulty: Intermediate
+time: One-off
+archetype: Processor
+description: >-
+  Vendors promise '80% match rates.' This agent tests a sample file returned
+  from an enrichment provider (Clearbit/ZoomInfo), calculating the actual % of
+  fields populated (Phone, Industry, Rev) to audit their performance.
 sampleData:
-  filename: "enriched_sample.csv"
+  filename: enriched_sample.csv
   content: |
     Email,Enriched_Phone,Enriched_Industry
     a@test.com,555-0199,Software
     b@test.com,,
     c@test.com,,Retail
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

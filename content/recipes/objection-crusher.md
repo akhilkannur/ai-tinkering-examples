@@ -1,16 +1,20 @@
 ---
-id: "objection-crusher"
-category: "Sales Enablement"
-title: "The Objection Crusher"
-tagline: "Create battle cards from your notes or competitor reviews."
-difficulty: "Intermediate"
-time: "15 mins"
-description: "Sales reps freeze when hit with a tough question. This agent reads your call notes (if provided) or researches a competitor's negative reviews to identify the most common objections and drafts a 'Kill Shot' rebuttal for each."
+id: objection-crusher
+category: Sales Enablement
+title: The Objection Crusher
+tagline: Create battle cards from your notes or competitor reviews.
+difficulty: Intermediate
+time: 15 mins
+description: >-
+  Sales reps freeze when hit with a tough question. This agent reads your call
+  notes (if provided) or researches a competitor's negative reviews to identify
+  the most common objections and drafts a 'Kill Shot' rebuttal for each.
 sampleData:
-  filename: "call_objections.txt"
+  filename: call_objections.txt
   content: |
     "Your pricing is twice as high as Competitor X."
     "We don't have the dev resources to implement this."
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

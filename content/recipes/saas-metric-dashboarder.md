@@ -1,14 +1,17 @@
 ---
-id: "saas-metric-dashboarder"
-category: "RevOps"
-title: "The SaaS Metric Dashboarder"
-tagline: "Your board deck, automated."
-difficulty: "Advanced"
-time: "Monthly"
-archetype: "Processor"
-description: "Investors want the 'Magic Number.' This agent takes raw inputs (New ARR, Sales Spend, Churn) and calculates key SaaS metrics: LTV:CAC, CAC Payback Period, and Magic Number."
+id: saas-metric-dashboarder
+category: RevOps
+title: The SaaS Metric Dashboarder
+tagline: 'Your board deck, automated.'
+difficulty: Advanced
+time: Monthly
+archetype: Processor
+description: >-
+  Investors want the 'Magic Number.' This agent takes raw inputs (New ARR, Sales
+  Spend, Churn) and calculates key SaaS metrics: LTV:CAC, CAC Payback Period,
+  and Magic Number.
 sampleData:
-  filename: "financials.csv"
+  filename: financials.csv
   content: |
     Metric,Value
     New_ARR,100000
@@ -16,6 +19,7 @@ sampleData:
     Avg_ARPU,1000
     Churn_Rate,0.05
     Gross_Margin,0.80
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

@@ -1,18 +1,22 @@
 ---
-id: "serp-intent-decoder"
-category: "SEO"
-title: "The SERP Intent Decoder"
-tagline: "Crack Google's psychological code."
-difficulty: "Advanced"
-time: "Real-time"
-description: "Stop guessing what content to write. This agent analyzes the top ranking pages for your target keyword to decode exactly what format, length, and angle Google is currently rewarding."
+id: serp-intent-decoder
+category: SEO
+title: The SERP Intent Decoder
+tagline: Crack Google's psychological code.
+difficulty: Advanced
+time: Real-time
+description: >-
+  Stop guessing what content to write. This agent analyzes the top ranking pages
+  for your target keyword to decode exactly what format, length, and angle
+  Google is currently rewarding.
 sampleData:
-  filename: "target_keywords.csv"
+  filename: target_keywords.csv
   content: |
     Keyword,Priority
     "ai sales tools",High
     "how to train a sales agent",Medium
     "best crm for micro pe",High
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

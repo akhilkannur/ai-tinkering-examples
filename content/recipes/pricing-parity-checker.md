@@ -1,17 +1,22 @@
 ---
-id: "pricing-parity-checker"
-category: "Ops"
-title: "The Pricing Parity Architect"
-tagline: "Audit your international pricing or research competitor PPP."
-difficulty: "Intermediate"
-time: "Monthly"
-description: "Charging $99 in every country kills growth. This agent audits your internal pricing table (if provided) or researches your top competitors to suggest 3-tier 'Purchasing Power Parity' (PPP) adjustments for India, Brazil, and the UK."
+id: pricing-parity-checker
+category: Ops
+title: The Pricing Parity Architect
+tagline: Audit your international pricing or research competitor PPP.
+difficulty: Intermediate
+time: Monthly
+description: >-
+  Charging $99 in every country kills growth. This agent audits your internal
+  pricing table (if provided) or researches your top competitors to suggest
+  3-tier 'Purchasing Power Parity' (PPP) adjustments for India, Brazil, and the
+  UK.
 sampleData:
-  filename: "pricing_table.csv"
+  filename: pricing_table.csv
   content: |
     Plan,Price_USD
     Basic,29
     Pro,99
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

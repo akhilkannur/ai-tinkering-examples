@@ -1,18 +1,26 @@
 ---
-id: "image-alt-text-writer-bulk"
-category: "Content Ops"
-title: "The Bulk Alt Text Writer"
-tagline: "Accessibility at scale."
-difficulty: "Beginner"
-time: "Batch"
-description: "Missing alt text hurts SEO and accessibility. This agent takes a list of image filenames and context to generate descriptive, keyword-rich alt text for hundreds of assets in seconds."
+id: image-alt-text-writer-bulk
+category: Content Ops
+title: The Bulk Alt Text Writer
+tagline: Accessibility at scale.
+difficulty: Beginner
+time: Batch
+description: >-
+  Missing alt text hurts SEO and accessibility. This agent takes a list of image
+  filenames and context to generate descriptive, keyword-rich alt text for
+  hundreds of assets in seconds.
 sampleData:
-  filename: "images.csv"
-  content: |
+  filename: images.csv
+  content: >
     Filename,Context,Primary_Keyword
+
     hero_image.png,A team collaborating in a modern office,Collaborative Work
-    graph_revenue.webp,Quarterly revenue growth showing 45% increase,Business Growth
+
+    graph_revenue.webp,Quarterly revenue growth showing 45% increase,Business
+    Growth
+
     logo_footer.svg,The company logo in monochrome,Brand Identity
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

@@ -1,18 +1,22 @@
 ---
-id: "google-ads-negative-keyword-factory"
-category: "Ad Ops"
-title: "The Multi-Industry Negative Keyword Factory"
-tagline: "Protect the budget across your entire portfolio."
-difficulty: "Beginner"
-time: "One-off"
-description: "Broad match wastes money. This agent reads a list of industries from a CSV and generates a standard 'Negative Keyword List' for each, blocking junk traffic (jobs, free, torrents) tailored to that sector."
+id: google-ads-negative-keyword-factory
+category: Ad Ops
+title: The Multi-Industry Negative Keyword Factory
+tagline: Protect the budget across your entire portfolio.
+difficulty: Beginner
+time: One-off
+description: >-
+  Broad match wastes money. This agent reads a list of industries from a CSV and
+  generates a standard 'Negative Keyword List' for each, blocking junk traffic
+  (jobs, free, torrents) tailored to that sector.
 sampleData:
-  filename: "target_industries.csv"
+  filename: target_industries.csv
   content: |
     Industry,Negative_Niche
     SaaS,Careers and Definition
     E-com,Discount Hunters
     Service,Job Seekers
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

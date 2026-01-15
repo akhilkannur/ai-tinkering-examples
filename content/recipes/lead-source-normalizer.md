@@ -1,20 +1,24 @@
 ---
-id: "lead-source-normalizer"
-category: "Data Hygiene"
-title: "The Lead Source Normalizer"
-tagline: "Fix your attribution buckets."
-difficulty: "Beginner"
-time: "Weekly"
-archetype: "Processor"
-description: "Reps type whatever they want into 'Lead Source.' This agent takes a messy list ('G-Ads', 'Google PPC', 'Paid Search - Google') and maps them to a clean 'Master Channel' (e.g., 'Paid Search') using fuzzy matching logic."
+id: lead-source-normalizer
+category: Data Hygiene
+title: The Lead Source Normalizer
+tagline: Fix your attribution buckets.
+difficulty: Beginner
+time: Weekly
+archetype: Processor
+description: >-
+  Reps type whatever they want into 'Lead Source.' This agent takes a messy list
+  ('G-Ads', 'Google PPC', 'Paid Search - Google') and maps them to a clean
+  'Master Channel' (e.g., 'Paid Search') using fuzzy matching logic.
 sampleData:
-  filename: "messy_sources.csv"
+  filename: messy_sources.csv
   content: |
     Lead_ID,Raw_Source
     1,Google Ads
     2,PPC - Google
     3,Referral - Bob
     4,Conf: SaaStr
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

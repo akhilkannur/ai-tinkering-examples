@@ -1,18 +1,22 @@
 ---
-id: "log-file-parser-mock"
-category: "Tech SEO"
-title: "The Log File Analyzer"
-tagline: "What is Googlebot doing?"
-difficulty: "Advanced"
-time: "Batch"
-description: "Server logs reveal the truth. This agent processes raw server logs to count how many times Googlebot hit specific pages, identifying 'Crawl Waste' and indexing issues across your entire server."
+id: log-file-parser-mock
+category: Tech SEO
+title: The Log File Analyzer
+tagline: What is Googlebot doing?
+difficulty: Advanced
+time: Batch
+description: >-
+  Server logs reveal the truth. This agent processes raw server logs to count
+  how many times Googlebot hit specific pages, identifying 'Crawl Waste' and
+  indexing issues across your entire server.
 sampleData:
-  filename: "log_files.csv"
+  filename: log_files.csv
   content: |
     Log_Path,Environment,Date
     logs/server_1.log,Production,2024-10-01
     logs/server_2.log,Production,2024-10-01
     logs/staging.log,Staging,2024-10-01
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

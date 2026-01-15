@@ -1,18 +1,22 @@
 ---
-id: "youtube-community-tab-poster"
-category: "YouTube"
-title: "The Community Tab Poster"
-tagline: "Keep subscribers alive between uploads."
-difficulty: "Beginner"
-time: "Batch"
-description: "Don't just post videos. This agent plans high-engagement 'Community Tab' posts—Polls, Behind-the-Scenes, and Teasers—for your entire YouTube channel portfolio to keep the algorithm active."
+id: youtube-community-tab-poster
+category: YouTube
+title: The Community Tab Poster
+tagline: Keep subscribers alive between uploads.
+difficulty: Beginner
+time: Batch
+description: >-
+  Don't just post videos. This agent plans high-engagement 'Community Tab'
+  posts—Polls, Behind-the-Scenes, and Teasers—for your entire YouTube channel
+  portfolio to keep the algorithm active.
 sampleData:
-  filename: "channels.csv"
+  filename: channels.csv
   content: |
     Channel_Name,Main_Topic,Next_Video_Topic
     AI Tinkering,AI Agent Tutorials,How to build a voice agent
     SDR Lab,Sales Cold Calling,Handle the 'I have no budget' objection
     Glow Design,UX & Brand,Redesigning the Apple Homepage
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

@@ -1,17 +1,22 @@
 ---
-id: "facebook-offline-events-csv"
-category: "Ad Ops"
-title: "The Offline Conversions Factory"
-tagline: "Format 10,000 sales for Facebook ROAS reporting."
-difficulty: "Intermediate"
-time: "Weekly"
-description: "Ads drive store visits and phone sales. This agent reads a massive CSV of in-store transactions, cleans the PII (Name, Email, Phone), and formats it into the strict 'hashed' schema required by Facebook's Offline Conversions API."
+id: facebook-offline-events-csv
+category: Ad Ops
+title: The Offline Conversions Factory
+tagline: 'Format 10,000 sales for Facebook ROAS reporting.'
+difficulty: Intermediate
+time: Weekly
+description: >-
+  Ads drive store visits and phone sales. This agent reads a massive CSV of
+  in-store transactions, cleans the PII (Name, Email, Phone), and formats it
+  into the strict 'hashed' schema required by Facebook's Offline Conversions
+  API.
 sampleData:
-  filename: "raw_sales_log.csv"
+  filename: raw_sales_log.csv
   content: |
     Name,Email,Phone,Value,Date
     John Doe,john@acme.com,555-0199,500,2024-01-08
     Jane Smith,jane@globex.com,555-0122,1200,2024-01-09
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

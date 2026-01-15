@@ -1,19 +1,23 @@
 ---
-id: "geo-expansion-planner"
-category: "Strategy"
-title: "The Geographic Expansion Planner"
-tagline: "Where should we launch next?"
-difficulty: "Advanced"
-time: "One-off"
-archetype: "Processor"
-description: "You're big in the US, but what about Europe? This agent analyzes your current web traffic and lead data by 'Country', comparing Conversion Rates to identify markets with high demand but low local support."
+id: geo-expansion-planner
+category: Strategy
+title: The Geographic Expansion Planner
+tagline: Where should we launch next?
+difficulty: Advanced
+time: One-off
+archetype: Processor
+description: >-
+  You're big in the US, but what about Europe? This agent analyzes your current
+  web traffic and lead data by 'Country', comparing Conversion Rates to identify
+  markets with high demand but low local support.
 sampleData:
-  filename: "geo_data.csv"
+  filename: geo_data.csv
   content: |
     Country,Traffic,Leads,Customers
     USA,10000,500,50
     UK,5000,200,5
     Germany,4000,10,1
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

@@ -1,18 +1,22 @@
 ---
-id: "youtube-chapter-maker"
-category: "YouTube"
-title: "The Chapter Maker"
-tagline: "Rank for key moments."
-difficulty: "Intermediate"
-time: "Batch"
-description: "Google indexes video chapters directly in search results. This agent processes your video transcripts, identifies topic shifts, and generates SEO-optimized 'Chapter Lists' for your entire channel."
+id: youtube-chapter-maker
+category: YouTube
+title: The Chapter Maker
+tagline: Rank for key moments.
+difficulty: Intermediate
+time: Batch
+description: >-
+  Google indexes video chapters directly in search results. This agent processes
+  your video transcripts, identifies topic shifts, and generates SEO-optimized
+  'Chapter Lists' for your entire channel.
 sampleData:
-  filename: "transcripts.csv"
+  filename: transcripts.csv
   content: |
     Video_Title,Transcript_File,Target_Keyword
     AI Agent Tutorial,transcripts/ai_agent.txt,Build AI agents
     Sales Cold Call,transcripts/cold_call.txt,Sales objection handling
     Growth Hacking 101,transcripts/growth.txt,Scalable growth strategies
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

@@ -1,18 +1,22 @@
 ---
-id: "linkedin-profile-banner-architect"
-category: "Social"
-title: "The LinkedIn Banner Architect"
-tagline: "Build a high-converting profile banner."
-difficulty: "Beginner"
-time: "Batch"
-description: "Your banner is prime real estate. This agent researches your niche and target audience to design text-based visual briefs for banners that state your value prop and social proof clearly across multiple profiles."
+id: linkedin-profile-banner-architect
+category: Social
+title: The LinkedIn Banner Architect
+tagline: Build a high-converting profile banner.
+difficulty: Beginner
+time: Batch
+description: >-
+  Your banner is prime real estate. This agent researches your niche and target
+  audience to design text-based visual briefs for banners that state your value
+  prop and social proof clearly across multiple profiles.
 sampleData:
-  filename: "profiles.csv"
+  filename: profiles.csv
   content: |
     Name,Job_Title,Niche
     Alex Rivera,SaaS Sales Lead,B2B Outbound
     Sarah Chen,UX Researcher,Enterprise Design
     Mike Ross,SEO Consultant,E-commerce Growth
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

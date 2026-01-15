@@ -1,18 +1,22 @@
 ---
-id: "viral-loop-calculator"
-category: "Growth"
-title: "The Viral Loop Calculator"
-tagline: "Will it grow itself?"
-difficulty: "Intermediate"
-time: "Batch"
-description: "Virality is math, not magic. This agent calculates the K-Factor for your entire product line based on invite frequency and conversion rates, identifying which features are truly viral."
+id: viral-loop-calculator
+category: Growth
+title: The Viral Loop Calculator
+tagline: Will it grow itself?
+difficulty: Intermediate
+time: Batch
+description: >-
+  Virality is math, not magic. This agent calculates the K-Factor for your
+  entire product line based on invite frequency and conversion rates,
+  identifying which features are truly viral.
 sampleData:
-  filename: "growth_metrics.csv"
+  filename: growth_metrics.csv
   content: |
     Product_Name,Invites_Sent_Per_User,Invite_Conversion_Rate
     SocialSync,5.2,0.25
     FileVault,1.1,0.10
     GameGuild,12.5,0.15
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

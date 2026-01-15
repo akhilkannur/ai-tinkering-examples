@@ -1,18 +1,22 @@
 ---
-id: "linkedin-document-ad-creator"
-category: "Ads"
-title: "The LinkedIn Document Ad Creator"
-tagline: "Stop the scroll with a PDF."
-difficulty: "Intermediate"
-time: "Batch"
-description: "Document Ads (Carousels) get 3x the clicks of image ads on LinkedIn. This agent takes your whitepapers or guides and chunks them into 5-page 'Teaser PDFs' designed to maximize LinkedIn feed engagement."
+id: linkedin-document-ad-creator
+category: Ads
+title: The LinkedIn Document Ad Creator
+tagline: Stop the scroll with a PDF.
+difficulty: Intermediate
+time: Batch
+description: >-
+  Document Ads (Carousels) get 3x the clicks of image ads on LinkedIn. This
+  agent takes your whitepapers or guides and chunks them into 5-page 'Teaser
+  PDFs' designed to maximize LinkedIn feed engagement.
 sampleData:
-  filename: "assets.csv"
+  filename: assets.csv
   content: |
     Asset_Title,Core_Insight,Primary_Goal
     2024 SaaS Benchmarks,Median CAC is up 30%,Download full report
     AI Ethics Guide,Trust is the new currency,Register for webinar
     Remote Ops Manual,Async is the only way,Book a demo
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

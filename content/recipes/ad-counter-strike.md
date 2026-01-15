@@ -1,14 +1,16 @@
 ---
-id: "ad-counter-strike"
-category: "Competitor Intel"
-title: "The Ad Counter-Strike Factory"
-tagline: "Steal traffic from 10 competitors at once."
-difficulty: "Advanced"
-time: "25 mins"
-isPremium: true
-description: "Why attack one competitor? This agent reads a list of competitor landing pages from a CSV, identifies their core hooks, and generates a 'Counter-Ad' (Copy + Visual) for every single one to help you win their customers."
+id: ad-counter-strike
+category: Competitor Intel
+title: The Ad Counter-Strike Factory
+tagline: Steal traffic from 10 competitors at once.
+difficulty: Advanced
+time: 25 mins
+description: >-
+  Why attack one competitor? This agent reads a list of competitor landing pages
+  from a CSV, identifies their core hooks, and generates a 'Counter-Ad' (Copy +
+  Visual) for every single one to help you win their customers.
 sampleData:
-  filename: "competitors_to_attack.csv"
+  filename: competitors_to_attack.csv
   content: |
     Name,URL,Main_Claim
     Competitor_A,https://competitor-a.com,Fastest setup

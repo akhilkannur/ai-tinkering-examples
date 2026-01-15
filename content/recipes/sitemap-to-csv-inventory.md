@@ -1,18 +1,22 @@
 ---
-id: "sitemap-to-csv-inventory"
-category: "Tech SEO"
-title: "The Content Inventory Builder"
-tagline: "Map your entire site."
-difficulty: "Intermediate"
-time: "Batch"
-description: "You can't optimize what you can't see. This agent processes multiple `sitemap.xml` files and converts them into clean CSV inventories, adding columns for 'Last Modified' and 'Priority' to jumpstart your content audit."
+id: sitemap-to-csv-inventory
+category: Tech SEO
+title: The Content Inventory Builder
+tagline: Map your entire site.
+difficulty: Intermediate
+time: Batch
+description: >-
+  You can't optimize what you can't see. This agent processes multiple
+  `sitemap.xml` files and converts them into clean CSV inventories, adding
+  columns for 'Last Modified' and 'Priority' to jumpstart your content audit.
 sampleData:
-  filename: "sitemaps.csv"
+  filename: sitemaps.csv
   content: |
     Domain,Sitemap_URL,Environment
     mysite.com,https://mysite.com/sitemap.xml,Production
     blog.io,https://blog.io/sitemap_index.xml,Production
     staging.net,https://staging.net/sitemap.xml,Staging
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

@@ -1,18 +1,22 @@
 ---
-id: "cta-button-optimizer"
-category: "CRO"
-title: "The CTA Button Optimizer"
-tagline: "Make them click."
-difficulty: "Beginner"
-time: "Batch"
-description: "Generic buttons like 'Submit' kill conversion. This agent rewrites your Call-to-Action (CTA) buttons to be value-driven and suggests color/placement changes for an entire suite of landing pages."
+id: cta-button-optimizer
+category: CRO
+title: The CTA Button Optimizer
+tagline: Make them click.
+difficulty: Beginner
+time: Batch
+description: >-
+  Generic buttons like 'Submit' kill conversion. This agent rewrites your
+  Call-to-Action (CTA) buttons to be value-driven and suggests color/placement
+  changes for an entire suite of landing pages.
 sampleData:
-  filename: "landing_pages.csv"
+  filename: landing_pages.csv
   content: |
     Page_Name,Current_CTA,Goal
     Homepage,Sign Up,Create an account
     Pricing,Buy Now,Purchase Pro Plan
     Ebook Landing,Download,Get the PDF guide
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

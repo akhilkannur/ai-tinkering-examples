@@ -1,18 +1,22 @@
 ---
-id: "retargeting-sequence-planner"
-category: "Ads"
-title: "The Retargeting Sequence Planner"
-tagline: "The 'Stalker' ad strategy."
-difficulty: "Advanced"
-time: "Batch"
-description: "98% of visitors don't buy on the first visit. This agent maps out 30-day retargeting ad sequences for your entire product catalog, ensuring you stay top-of-mind without being annoying."
+id: retargeting-sequence-planner
+category: Ads
+title: The Retargeting Sequence Planner
+tagline: The 'Stalker' ad strategy.
+difficulty: Advanced
+time: Batch
+description: >-
+  98% of visitors don't buy on the first visit. This agent maps out 30-day
+  retargeting ad sequences for your entire product catalog, ensuring you stay
+  top-of-mind without being annoying.
 sampleData:
-  filename: "products.csv"
+  filename: products.csv
   content: |
     Product_Name,Primary_Benefit,Top_Objection
     NeoCloud,Encryption Security,Too technical to setup
     VelvetBloom,Organic Ingredients,Expensive compared to drugstore
     PixelPounce,1ms Latency,Is it worth the premium price?
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

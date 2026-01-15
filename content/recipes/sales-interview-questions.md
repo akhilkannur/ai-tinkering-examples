@@ -1,18 +1,22 @@
 ---
-id: "sales-interview-questions"
-category: "Hiring"
-title: "The Sales Interview Architect"
-tagline: "Custom assessments for any sales role."
-difficulty: "Intermediate"
-time: "Batch"
-description: "Resumes lie; behavioral interviews don't. This agent generates custom scripts of behavioral questions and weighted scorecards for all the open roles in your sales hiring roadmap."
+id: sales-interview-questions
+category: Hiring
+title: The Sales Interview Architect
+tagline: Custom assessments for any sales role.
+difficulty: Intermediate
+time: Batch
+description: >-
+  Resumes lie; behavioral interviews don't. This agent generates custom scripts
+  of behavioral questions and weighted scorecards for all the open roles in your
+  sales hiring roadmap.
 sampleData:
-  filename: "open_roles.csv"
+  filename: open_roles.csv
   content: |
     Role,Product_Price_Point,Core_Challenge
     Account Executive,50000,Long sales cycles with multiple stakeholders
     Inbound SDR,500,High-volume qualification and speed-to-lead
     Channel Manager,15000,Managing indirect revenue through partners
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

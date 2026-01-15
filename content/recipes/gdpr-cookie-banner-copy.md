@@ -1,18 +1,22 @@
 ---
-id: "gdpr-cookie-banner-copy"
-category: "Legal Ops"
-title: "The Converting Cookie Banner"
-tagline: "Compliance that doesn't kill data."
-difficulty: "Beginner"
-time: "Batch"
-description: "Cookie banners annoy users and kill data collection. This agent writes 'Human' copy for your consent manager that explains *why* you track, increasing your 'Accept' rate across all your properties."
+id: gdpr-cookie-banner-copy
+category: Legal Ops
+title: The Converting Cookie Banner
+tagline: Compliance that doesn't kill data.
+difficulty: Beginner
+time: Batch
+description: >-
+  Cookie banners annoy users and kill data collection. This agent writes 'Human'
+  copy for your consent manager that explains *why* you track, increasing your
+  'Accept' rate across all your properties.
 sampleData:
-  filename: "brands.csv"
+  filename: brands.csv
   content: |
     Brand_Name,Business_Type,Vibe
     Pawsome,E-commerce for pets,Playful
     FinGuard,Cybersecurity,Professional & Trustworthy
     BrewBase,Coffee subscription,Casual & Direct
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

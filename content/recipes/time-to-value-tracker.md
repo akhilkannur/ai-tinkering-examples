@@ -1,18 +1,22 @@
 ---
-id: "time-to-value-tracker"
-category: "Customer Success"
-title: "The Time-to-Value Tracker"
-tagline: "How fast do they win?"
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Churn happens when value is slow. This agent calculates the days between 'Account Created' and 'First Key Action' (e.g., First Report Sent) for each customer, flagging onboarding bottlenecks."
+id: time-to-value-tracker
+category: Customer Success
+title: The Time-to-Value Tracker
+tagline: How fast do they win?
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Churn happens when value is slow. This agent calculates the days between
+  'Account Created' and 'First Key Action' (e.g., First Report Sent) for each
+  customer, flagging onboarding bottlenecks.
 sampleData:
-  filename: "onboarding_events.csv"
+  filename: onboarding_events.csv
   content: |
     Customer,Signup_Date,First_Action_Date
     CustA,2023-10-01,2023-10-02
     CustB,2023-10-01,2023-10-20
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

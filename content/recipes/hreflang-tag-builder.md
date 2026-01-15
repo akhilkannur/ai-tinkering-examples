@@ -1,18 +1,25 @@
 ---
-id: "hreflang-tag-builder"
-category: "Tech SEO"
-title: "The Hreflang Builder"
-tagline: "Fix international SEO."
-difficulty: "Intermediate"
-time: "Batch"
-description: "Multi-language sites confuse Google without Hreflang. This agent generates the correct HTML tags mapping your English, Spanish, and German pages to prevent duplicate content penalties across your entire site."
+id: hreflang-tag-builder
+category: Tech SEO
+title: The Hreflang Builder
+tagline: Fix international SEO.
+difficulty: Intermediate
+time: Batch
+description: >-
+  Multi-language sites confuse Google without Hreflang. This agent generates the
+  correct HTML tags mapping your English, Spanish, and German pages to prevent
+  duplicate content penalties across your entire site.
 sampleData:
-  filename: "url_mappings.csv"
-  content: |
+  filename: url_mappings.csv
+  content: >
     Path,Lang_EN,Lang_ES,Lang_DE
+
     /home,https://site.com/,https://site.com/es/,https://site.com/de/
+
     /pricing,https://site.com/pricing,https://site.com/es/precios,https://site.com/de/preise
+
     /about,https://site.com/about,https://site.com/es/sobre-nosotros,https://site.com/de/uber-uns
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

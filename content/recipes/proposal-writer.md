@@ -1,18 +1,22 @@
 ---
-id: "proposal-writer"
-category: "Agency"
-title: "The High-Ticket Proposal Writer"
-tagline: "Close the $50k deal."
-difficulty: "Advanced"
-time: "Batch"
-description: "Stop sending generic PDFs. This agent processes your lead list and generates customized 'Solution Documents' that focus on ROI and specific outcomes for every prospective client."
+id: proposal-writer
+category: Agency
+title: The High-Ticket Proposal Writer
+tagline: Close the $50k deal.
+difficulty: Advanced
+time: Batch
+description: >-
+  Stop sending generic PDFs. This agent processes your lead list and generates
+  customized 'Solution Documents' that focus on ROI and specific outcomes for
+  every prospective client.
 sampleData:
-  filename: "leads.csv"
+  filename: leads.csv
   content: |
     Client_Name,Primary_Problem,Target_Outcome,Budget_Tier
     Acme Corp,Low website conversion,Double trial signups,Enterprise
     Glow Skincare,High CAC on Meta,Sub-$20 customer acquisition,Growth
     TechFlow SaaS,Manual sales onboarding,Automate 80% of setup,Mid-Market
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)

@@ -1,18 +1,26 @@
 ---
-id: "linkedin-newsletter-launcher"
-category: "LinkedIn"
-title: "The LinkedIn Newsletter Launcher"
-tagline: "Own your audience on-platform."
-difficulty: "Intermediate"
-time: "Batch"
-description: "LinkedIn Newsletters notify every connection. This agent helps you launch one by defining your niche, naming it, and writing the high-converting launch post to maximize your Day 1 subscriber count."
+id: linkedin-newsletter-launcher
+category: LinkedIn
+title: The LinkedIn Newsletter Launcher
+tagline: Own your audience on-platform.
+difficulty: Intermediate
+time: Batch
+description: >-
+  LinkedIn Newsletters notify every connection. This agent helps you launch one
+  by defining your niche, naming it, and writing the high-converting launch post
+  to maximize your Day 1 subscriber count.
 sampleData:
-  filename: "newsletter_ideas.csv"
-  content: |
+  filename: newsletter_ideas.csv
+  content: >
     Brand_Name,Topic,Core_Value
+
     SaaS Insider,SaaS metrics and growth,Weekly deep dives into unit economics
-    The Clean Code,Software engineering best practices,How to write maintainable React
+
+    The Clean Code,Software engineering best practices,How to write maintainable
+    React
+
     GTM Labs,Go-to-market strategies,The latest in PLG and enterprise sales
+isPremium: true
 ---
 
 ## ⚡ Run this with AI (Fastest)
