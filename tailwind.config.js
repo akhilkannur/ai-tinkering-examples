@@ -16,6 +16,8 @@ module.exports = {
         'navy-dark': '#003A70', // Denim
         'navy-light': '#204B63', // Green-2
         'section-bg-example-card': '#0B2F48', // Matches secondary-bg
+        'brand-beige': '#F2F1EC', // Bye Flakes Light Background
+        'brand-navy': '#0C2340', // Bye Flakes Dark Text
       },
       fontFamily: {
         sans: ['DM Sans', 'sans-serif'], // Proxy for Banana Grotesk
