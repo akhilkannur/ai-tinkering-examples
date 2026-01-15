@@ -28,7 +28,7 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
   // Check for License Key on Mount & URL changes
   useEffect(() => {
     // 1. Check LocalStorage
-    const hasAccess = localStorage.getItem('terminal_cookbook_premium') === 'true';
+    const hasAccess = localStorage.getItem('terminal_cookbook_premium_v2') === 'true';
     if (hasAccess) {
       setIsUnlocked(true);
     }
@@ -38,9 +38,9 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
       const { license_key } = router.query;
       if (license_key === 'TK-8821-XPRO-MQ') {
         setIsUnlocked(true);
-        localStorage.setItem('terminal_cookbook_premium', 'true');
+        localStorage.setItem('terminal_cookbook_premium_v2', 'true');
         // Optional: Remove query param from URL without refresh
-        router.replace('/blueprints', undefined, { shallow: true });
+        router.replace('/', undefined, { shallow: true });
       }
     }
   }, [router.isReady, router.query]);
@@ -49,7 +49,7 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
     e.preventDefault();
     if (licenseKeyInput.trim() === 'TK-8821-XPRO-MQ') {
       setIsUnlocked(true);
-      localStorage.setItem('terminal_cookbook_premium', 'true');
+      localStorage.setItem('terminal_cookbook_premium_v2', 'true');
       setShowLicenseInput(false);
       setUnlockError('');
     } else {

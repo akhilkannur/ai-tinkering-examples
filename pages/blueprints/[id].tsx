@@ -23,7 +23,7 @@ export default function RecipePage({ recipe }: RecipePageProps) {
   const CatIcon = categoryIcons[recipe.category] || Terminal;
 
   useEffect(() => {
-    const hasAccess = localStorage.getItem('terminal_cookbook_premium') === 'true';
+    const hasAccess = localStorage.getItem('terminal_cookbook_premium_v2') === 'true';
     if (hasAccess) {
       setIsUnlocked(true);
     }
@@ -32,7 +32,7 @@ export default function RecipePage({ recipe }: RecipePageProps) {
       const { license_key } = router.query;
       if (license_key === 'TK-8821-XPRO-MQ') {
         setIsUnlocked(true);
-        localStorage.setItem('terminal_cookbook_premium', 'true');
+        localStorage.setItem('terminal_cookbook_premium_v2', 'true');
         router.replace(`/blueprints/${recipe.id}`, undefined, { shallow: true });
       }
     }
@@ -42,7 +42,7 @@ export default function RecipePage({ recipe }: RecipePageProps) {
     e.preventDefault();
     if (licenseKeyInput.trim() === 'TK-8821-XPRO-MQ') {
       setIsUnlocked(true);
-      localStorage.setItem('terminal_cookbook_premium', 'true');
+      localStorage.setItem('terminal_cookbook_premium_v2', 'true');
       setShowLicenseInput(false);
       setUnlockError('');
     } else {
