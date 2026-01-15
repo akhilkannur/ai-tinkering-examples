@@ -266,63 +266,70 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
             );
           })}
           
-          {/* Blurred/Locked Section (Show many more to look captivating) */}
+          {/* Locked Section - Now Visible & Clickable */}
           {showPaywallOverlay && filteredRecipes.slice(50, 100).map((recipe) => {
             const CatIcon = categoryIcons[recipe.category] || Terminal;
             return (
               <div
                 key={recipe.id}
-                className="opacity-60 blur-[1px] pointer-events-none select-none grayscale-[0.3] bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col h-full relative overflow-hidden transform scale-[0.98]"
+                className="group text-left bg-gray-50 p-6 rounded-2xl shadow-sm border border-gray-200 hover:shadow-md hover:border-yellow-400 hover:-translate-y-1 transition-all duration-300 flex flex-col h-full relative overflow-hidden cursor-pointer opacity-90 hover:opacity-100"
+                onClick={() => setSelectedRecipe(recipe)}
               >
-                 <div className="flex justify-between items-start mb-4">
-                  <div className="p-3 rounded-xl bg-gray-50 text-gray-500">
+                 {/* Premium Strip */}
+                 <div className="absolute top-0 left-0 w-1.5 h-full bg-yellow-400" />
+
+                 <div className="flex justify-between items-start mb-4 pl-3">
+                  <div className="p-3 rounded-xl bg-white text-yellow-600 border border-yellow-100 shadow-sm">
                     <CatIcon className="w-6 h-6" />
                   </div>
-                  {/* Fake "High Value" Badge for visual interest */}
-                  {Math.random() > 0.5 && (
-                    <span className="bg-green-100 text-green-700 text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">
-                      High ROI
+                  <div className="flex flex-col items-end gap-1">
+                    <span className="bg-yellow-500 text-white text-[10px] font-bold px-2 py-1 rounded-sm uppercase tracking-wider shadow-sm flex items-center gap-1">
+                      <Lock className="w-3 h-3" /> Premium
                     </span>
-                  )}
+                  </div>
                 </div>
-                <h3 className="text-lg font-bold text-gray-500 mb-1 leading-tight">
+                
+                <h3 className="text-lg font-bold text-gray-800 mb-1 leading-tight pl-3 group-hover:text-yellow-700 transition-colors">
                     {recipe.title}
                 </h3>
-                <p className="text-gray-400 text-sm mb-4 line-clamp-2">
+                <p className="text-gray-500 text-sm font-medium mb-4 line-clamp-2 pl-3">
                   {recipe.tagline}
                 </p>
-                <div className="mt-auto pt-4 border-t border-gray-50 flex items-center justify-between text-xs text-gray-400">
-                   <span>{recipe.difficulty}</span>
-                   <span className="font-mono">{recipe.time}</span>
+                
+                <div className="mt-auto pt-4 border-t border-gray-200 flex items-center justify-between text-xs text-gray-400 pl-3">
+                   <span className="bg-white px-2 py-1 rounded border border-gray-200">{recipe.difficulty}</span>
+                   <span className="font-mono flex items-center gap-1"><Terminal className="w-3 h-3"/> {recipe.time}</span>
                 </div>
               </div>
             );
           })}
         </div>
         
-        {/* Paywall Overlay CTA */}
+        {/* Paywall Overlay CTA - Pushed further down/faded to allow browsing */}
         {showPaywallOverlay && (
-            <div className="absolute bottom-0 left-0 right-0 h-[320px] bg-gradient-to-t from-white via-white/90 to-transparent flex flex-col items-center justify-center text-center z-10 pb-8">
-                <div className="bg-gray-900 text-white p-8 rounded-2xl shadow-2xl max-w-md mx-4 border border-gray-800 transform translate-y-4 transition-all">
+            <div className="relative mt-12 mb-20 text-center">
+                <div className="absolute inset-0 flex items-center justify-center -top-32 bg-gradient-to-t from-white via-white/95 to-transparent z-10 pointer-events-none h-[400px]"></div>
+                
+                <div className="relative z-20 bg-gray-900 text-white p-10 rounded-3xl shadow-2xl max-w-2xl mx-auto border border-gray-800 transform hover:scale-[1.01] transition-transform">
                    {!showLicenseInput ? (
                       <>
-                        <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-yellow-500/30">
-                            <Lock className="w-8 h-8 text-white" />
+                        <div className="w-20 h-20 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-yellow-500/30 border-4 border-gray-800">
+                            <Lock className="w-10 h-10 text-white" />
                         </div>
-                        <h3 className="text-2xl font-bold mb-2">Unlock {filteredRecipes.length - 50}+ More Blueprints</h3>
-                        <p className="text-gray-400 mb-8 leading-relaxed">
-                            Get instant access to the full library of agentic workflows, including advanced scraping, sales automation, and SEO tools.
+                        <h3 className="text-3xl font-bold mb-3">Unlock {filteredRecipes.length - 50}+ Advanced Blueprints</h3>
+                        <p className="text-gray-400 mb-8 leading-relaxed text-lg max-w-lg mx-auto">
+                            You've seen the list. Now get the code. <br/>
+                            Instant access to the full library of Sales, Marketing, and SEO agents.
                         </p>
                         <a 
                           href="https://checkout.dodopayments.com/buy/pdt_0NW6p0szmXPS6jXW05hIP?session=sess_GCYotd6plh"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="w-full bg-white text-gray-900 font-bold py-4 rounded-xl hover:bg-gray-100 transition-colors shadow-xl flex items-center justify-center gap-2 group mb-4"
+                          className="w-full sm:w-auto px-12 bg-white text-gray-900 font-bold py-4 rounded-xl hover:bg-gray-100 transition-colors shadow-xl inline-flex items-center justify-center gap-2 group mb-6"
                         >
-                            Unlock Full Access
-                            <ArrowRight className="w-4 h-4 text-gray-400 group-hover:translate-x-1 transition-transform" />
+                            Get Full Access <ArrowRight className="w-5 h-5 text-gray-400 group-hover:translate-x-1 transition-transform" />
                         </a>
-                        
+                        <br/>
                         <button 
                           onClick={() => setShowLicenseInput(true)}
                           className="text-sm text-gray-500 hover:text-white underline decoration-gray-700 underline-offset-4 transition-colors"
@@ -331,31 +338,28 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
                         </button>
                       </>
                    ) : (
-                      <form onSubmit={handleLicenseSubmit} className="animate-fade-in">
-                        <div className="flex items-center justify-between mb-4">
+                      <form onSubmit={handleLicenseSubmit} className="animate-fade-in max-w-sm mx-auto">
+                        <div className="flex items-center justify-between mb-6">
                            <h3 className="text-xl font-bold">Enter License Key</h3>
                            <button type="button" onClick={() => setShowLicenseInput(false)} className="text-gray-500 hover:text-white">
-                             <X className="w-5 h-5" />
+                             <X className="w-6 h-6" />
                            </button>
                         </div>
-                        <p className="text-gray-400 text-sm mb-4 text-left">
-                          Enter the code from your purchase email (e.g. TK-XXXX...)
-                        </p>
-                        <div className="mb-4">
+                        <div className="mb-6">
                            <input 
                              type="text" 
                              value={licenseKeyInput}
                              onChange={(e) => setLicenseKeyInput(e.target.value)}
                              placeholder="TK-XXXX-XXXX-XXXX"
-                             className="w-full bg-gray-800 border border-gray-700 text-white px-4 py-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-500 font-mono text-center uppercase tracking-widest placeholder-gray-600"
+                             className="w-full bg-gray-800 border border-gray-700 text-white px-5 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-500 font-mono text-center uppercase tracking-widest placeholder-gray-600 text-lg"
                            />
-                           {unlockError && <p className="text-red-400 text-xs mt-2 text-left">{unlockError}</p>}
+                           {unlockError && <p className="text-red-400 text-sm mt-3">{unlockError}</p>}
                         </div>
                         <button 
                           type="submit"
-                          className="w-full bg-yellow-500 text-gray-900 font-bold py-3 rounded-xl hover:bg-yellow-400 transition-colors shadow-lg flex items-center justify-center gap-2"
+                          className="w-full bg-yellow-500 text-gray-900 font-bold py-4 rounded-xl hover:bg-yellow-400 transition-colors shadow-lg flex items-center justify-center gap-2 text-lg"
                         >
-                          <Key className="w-4 h-4" /> Activate License
+                          <Key className="w-5 h-5" /> Activate License
                         </button>
                       </form>
                    )}
