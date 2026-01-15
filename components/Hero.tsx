@@ -8,7 +8,7 @@ export default function Hero() {
     <div className="relative bg-primary-bg text-text-color overflow-hidden border-b border-navy-dark">
       {/* Background Decoration - Simplified for Tech Lab look */}
       <div className="absolute inset-0 pointer-events-none opacity-10">
-        <div className="absolute inset-0 bg-[radial-gradient(rgba(242,241,236,0.2)_1px,transparent_1px)] [background-size:16px_16px]" />
+        <div className="absolute inset-0 bg-[radial-gradient(#0C2340_1px,transparent_1px)] [background-size:16px_16px]" />
       </div>
 
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
