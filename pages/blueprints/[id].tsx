@@ -300,7 +300,7 @@ export default function RecipePage({ recipe }: RecipePageProps) {
                                 </button>
                             </div>
                             <div className="p-4 font-mono text-sm text-gray-700 overflow-x-auto whitespace-nowrap">
-                                gemini "Read @{recipe.id}.md and execute the workflow"
+                                gemini "Read @{recipe.id}.md {recipe.sampleData ? "and use the sample file " : ""}to execute the workflow"
                             </div>
                             </div>
                         </div>

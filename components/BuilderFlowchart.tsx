@@ -549,7 +549,7 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
                          2. Download the <code className={`font-mono px-1 rounded ${isUnlocked && selectedRecipe.isPremium ? 'bg-green-200/50' : 'bg-yellow-200/50'}`}>{selectedRecipe.sampleData.filename}</code> sample data file.<br/>
                        </>
                      )}
-                         3. Tell your AI: <span className="italic font-semibold">"Read the blueprint and use the sample file to build this."</span>
+                         3. Tell your AI: <span className="italic font-semibold">"Read the blueprint {selectedRecipe.sampleData ? "and use the sample file " : ""}to build this."</span>
                        </p>
                      </div>
                   </div>
