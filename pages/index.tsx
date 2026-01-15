@@ -20,8 +20,8 @@ interface HybridHomePageProps {
 }
 
 export default function HybridHomePage({ recipes, featuredJobs, featuredTools, siteSettings }: HybridHomePageProps) {
-  const homepageTitle = "The Terminal Cookbook | Real AI Examples";
-  const homepageDescription = "Stop Chatting. Start Automating. A library of copy-paste blueprints to build powerful autonomous agents using Gemini CLI, Claude Code, Cowork, or Cursor.";
+  const homepageTitle = "AI Blueprints: Copy, Paste, Automate Your Work";
+  const homepageDescription = "Ditch endless chats. Turn Gemini & Claude into your personal assistants with simple text-file blueprints. No coding needed.";
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com';
 
   return (
@@ -54,25 +54,28 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
             <div className="container mx-auto px-4 text-center max-w-4xl">
                 <div className="inline-flex items-center gap-2 bg-yellow-50 border border-yellow-100 text-yellow-800 px-4 py-1.5 rounded-full text-sm font-semibold mb-6">
                     <BookOpen className="w-4 h-4" />
-                    <span>The Terminal Cookbook</span>
+                    <span>The Work Automation Library</span>
                 </div>
                 
                 <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900 mb-6 tracking-tight leading-tight">
-                    Stop Chatting. <br />
+                    AI Blueprints: <br />
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
-                    Start Automating.
+                    Copy, Paste, Automate Your Work.
                     </span>
                 </h1>
                 
-                <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed mb-10">
-                    ChatGPT is for questions. These blueprints are for <strong>work</strong>.
+                <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed mb-4">
+                    Ditch endless chats. Get real work done.
+                </p>
+                <p className="text-md md:text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed mb-10">
+                    Turn tools like Gemini & Claude into your personal assistants — <strong>No Coding Needed.</strong>
                     <br className="hidden md:block"/>
-                    Copy-paste instructions that turn <strong>Claude Cowork</strong> and <strong>Gemini CLI</strong> into autonomous employees.
+                    Simple text files you can run instantly on free tools.
                 </p>
 
                 {/* Compatibility Badge */}
                 <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-sm text-gray-500 mb-2">
-                    <span className="uppercase tracking-widest font-bold text-xs">Choose your Agent:</span>
+                    <span className="uppercase tracking-widest font-bold text-xs">Use with:</span>
                     <div className="flex flex-wrap justify-center gap-3">
                     <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gray-100 text-gray-700 font-medium border border-gray-200">
                         <Cpu className="w-4 h-4 text-purple-600" /> Claude Cowork
