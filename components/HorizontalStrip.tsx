@@ -24,7 +24,7 @@ export default function HorizontalStrip<T>({ title, items, renderItem, viewAllLi
         {viewAllLink && (
           <Link 
             href={viewAllLink}
-            className="inline-flex items-center gap-1 text-text-secondary hover:text-accent transition-colors font-mono text-sm font-bold uppercase tracking-wider"
+            className="inline-flex items-center gap-1 text-text-secondary hover:text-accent transition-colors font-sans text-sm font-bold uppercase tracking-wider"
           >
             View All <ArrowRight size={16} />
           </Link>

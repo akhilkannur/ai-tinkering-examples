@@ -33,9 +33,9 @@ export default function SponsorDetailCard({ sponsor }: SponsorDetailCardProps) {
           </div>
         )}
         <div className="flex items-baseline gap-2">
-          <h3 className="text-sm font-mono font-semibold text-text-color">{sponsor.name}</h3> 
+          <h3 className="text-sm font-sans font-semibold text-text-color">{sponsor.name}</h3> 
           {sponsor.description && (
-            <p className="text-xs text-text-secondary leading-relaxed font-mono"> 
+            <p className="text-xs text-text-secondary leading-relaxed font-sans"> 
               {sponsor.description}
             </p>
           )}

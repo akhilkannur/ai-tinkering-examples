@@ -225,7 +225,7 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
                    }`}>
                      {recipe.difficulty}
                    </span>
-                   <span className="font-mono">{recipe.time}</span>
+                   <span className="font-sans">{recipe.time}</span>
                 </div>
               </div>
             );
@@ -287,7 +287,7 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
                              value={licenseKeyInput}
                              onChange={(e) => setLicenseKeyInput(e.target.value)}
                              placeholder="TK-XXXX-XXXX-XXXX"
-                             className="w-full bg-gray-800 border border-gray-700 text-white px-5 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-500 font-mono text-center uppercase tracking-widest placeholder-gray-600 text-lg"
+                             className="w-full bg-gray-800 border border-gray-700 text-white px-5 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-500 font-sans text-center uppercase tracking-widest placeholder-gray-600 text-lg"
                            />
                            {unlockError && <p className="text-red-400 text-sm mt-3">{unlockError}</p>}
                         </div>
@@ -359,7 +359,7 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
                 <>
                   <div className="bg-gray-900 rounded-xl overflow-hidden border border-gray-800 shadow-inner">
                     <div className="bg-gray-800 px-4 py-2 flex items-center justify-between border-b border-gray-700">
-                      <span className="text-gray-400 font-mono text-xs flex items-center gap-2"><FileText className="w-3 h-3" /> BLUEPRINT.md</span>
+                      <span className="text-gray-400 font-sans text-xs flex items-center gap-2"><FileText className="w-3 h-3" /> BLUEPRINT.md</span>
                       <div className="flex items-center gap-2">
                         {selectedRecipe.sampleData && (
                           <button onClick={handleDownload} className="text-xs font-bold px-3 py-1.5 rounded flex items-center gap-2 bg-yellow-500 text-yellow-900 hover:bg-yellow-400"><Download className="w-3 h-3" /> Sample</button>
@@ -368,7 +368,7 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
                       </div>
                     </div>
                     <div className="p-6 max-h-[350px] overflow-y-auto">
-                      <pre className="font-mono text-sm text-blue-300 whitespace-pre-wrap leading-relaxed">{selectedRecipe.blueprint}</pre>
+                      <pre className="font-sans text-sm text-blue-300 whitespace-pre-wrap leading-relaxed">{selectedRecipe.blueprint}</pre>
                     </div>
                   </div>
                   <div className="mt-6 p-4 rounded-xl flex gap-3 items-start border bg-yellow-50 border-yellow-100">

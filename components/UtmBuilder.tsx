@@ -149,7 +149,7 @@ const UtmBuilder = () => {
         <div className="bg-gray-50 p-6 rounded-xl border border-gray-200">
           <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Generated URL</label>
           <div className="flex flex-col md:flex-row gap-4 items-stretch">
-            <div className="flex-grow bg-white border border-gray-300 rounded-lg p-3 font-mono text-sm break-all text-gray-700 flex items-center min-h-[50px]">
+            <div className="flex-grow bg-white border border-gray-300 rounded-lg p-3 font-sans text-sm break-all text-gray-700 flex items-center min-h-[50px]">
               {generatedUrl || <span className="text-gray-400 italic">Fill in the Base URL to see the result...</span>}
             </div>
             <button
@@ -179,7 +179,7 @@ const UtmBuilder = () => {
               {history.map((item, index) => (
                 <div key={index} className="group flex items-center justify-between p-3 bg-gray-50 rounded-lg border border-transparent hover:border-gray-200 hover:bg-gray-100 transition-all">
                   <div className="truncate mr-4 flex-grow">
-                    <p className="text-sm font-mono text-gray-600 truncate" title={item.url}>{item.url}</p>
+                    <p className="text-sm font-sans text-gray-600 truncate" title={item.url}>{item.url}</p>
                     <p className="text-xs text-gray-400 mt-1">{new Date(item.timestamp).toLocaleString()}</p>
                   </div>
                   <button

@@ -20,7 +20,7 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-headline font-bold text-text-color mb-4 leading-tight">
           {example.title}
         </h1>
-        <div className="flex items-center justify-between text-sm text-text-secondary mb-6 mt-4 font-mono">
+        <div className="flex items-center justify-between text-sm text-text-secondary mb-6 mt-4 font-sans">
           <div className="flex flex-wrap items-center gap-6"> {/* Group category and author */}
             {example.category && (
               <Link

@@ -99,7 +99,7 @@ export default function SocialSharing({
   // Full version for detail pages
   return (
     <div className={`flex items-center gap-4 ${className}`}>
-      <span className="text-sm font-mono font-bold text-text-secondary">SHARE</span>
+      <span className="text-sm font-sans font-bold text-text-secondary">SHARE</span>
       <div className="flex items-center gap-2">
         <a
           href={shareData.twitter}

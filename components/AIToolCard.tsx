@@ -52,7 +52,7 @@ export default function AIToolCard({ name, description, url, imageUrl, category 
         </div>
         
         <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-x-2 group-hover:translate-x-0">
-           <span className="text-[10px] font-mono font-bold text-accent border border-accent/30 px-2 py-1 bg-accent/5 uppercase tracking-wider flex items-center gap-1">
+           <span className="text-[10px] font-sans font-bold text-accent border border-accent/30 px-2 py-1 bg-accent/5 uppercase tracking-wider flex items-center gap-1">
              Open <ArrowRight className="w-3 h-3" />
            </span>
         </div>
@@ -75,7 +75,7 @@ export default function AIToolCard({ name, description, url, imageUrl, category 
       {/* Footer / Meta (Optional) */}
       {category && (
         <div className="px-4 py-2 border-t border-navy-dark/50 bg-[#080c16]">
-          <span className="text-[10px] font-mono text-navy-light uppercase tracking-widest">
+          <span className="text-[10px] font-sans text-navy-light uppercase tracking-widest">
             {category}
           </span>
         </div>

@@ -3,34 +3,34 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'primary-bg': '#0f172a', // Slate 900 - Softer than pure black
-        'secondary-bg': '#1e293b', // Slate 800 - Lighter for cards
-        'accent': '#D4FF00', // Acid Green
-        'accent-hover': '#B8DE00', // Slightly darker Acid Green
-        'accent-light': '#E2FF5C', // Lighter Acid Green
-        'text-color': '#f8fafc', // Slate 50 - Brighter white
-        'text-secondary': '#cbd5e1', // Slate 300 - Much higher contrast
-        'light-purple': '#cbd5e1', // Mapped to Dimmed Grey for compatibility
-        'bright-pink': '#D4FF00', // Mapped to Acid Green for compatibility
-        'electric-blue': '#0f172a', // Dark text for accent buttons
-        'navy-dark': '#334155', // Slate 700 - Visible borders
-        'navy-light': '#475569', // Slate 600 - Lighter borders
-        'section-bg-example-card': '#1e293b', // Matches secondary-bg
+        'primary-bg': '#0C2340', // Navy
+        'secondary-bg': '#0B2F48', // Royal - Lighter for cards
+        'accent': '#EE5E3E', // Orange
+        'accent-hover': '#D64D2E', // Darker Orange
+        'accent-light': '#FF7F63', // Lighter Orange
+        'text-color': '#F2F1EC', // Beige
+        'text-secondary': '#9AB8C7', // Muted Blue-Grey for secondary text
+        'light-purple': '#00B0B9', // Mapped to Turquoise
+        'bright-pink': '#EE5E3E', // Mapped to Orange
+        'electric-blue': '#F2F1EC', // Light text for accent buttons
+        'navy-dark': '#003A70', // Denim
+        'navy-light': '#204B63', // Green-2
+        'section-bg-example-card': '#0B2F48', // Matches secondary-bg
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        headline: ['Space Mono', 'monospace'], // Monospace for headlines
-        mono: ['Space Mono', 'monospace'], // Explicit mono utility
-        roboto: ['Inter', 'sans-serif'], // Fallback
+        sans: ['DM Sans', 'sans-serif'], // Proxy for Banana Grotesk
+        headline: ['Libre Baskerville', 'serif'], // Proxy for GT Alpina
+        mono: ['Space Mono', 'monospace'],
+        roboto: ['DM Sans', 'sans-serif'],
       },
       backgroundImage: {
-        'modern-gradient': 'linear-gradient(135deg, #D4FF00 0%, #B8DE00 100%)', // Acid Green Gradient
-        'subtle-gradient': 'linear-gradient(to bottom, #0B0E14, #050505)',
-        'hero-gradient': 'radial-gradient(ellipse at top right, rgba(212, 255, 0, 0.15) 0%, transparent 50%), radial-gradient(ellipse at bottom left, rgba(212, 255, 0, 0.05) 0%, transparent 50%)',
+        'modern-gradient': 'linear-gradient(135deg, #EE5E3E 0%, #D64D2E 100%)', // Orange Gradient
+        'subtle-gradient': 'linear-gradient(to bottom, #0C2340, #0B2F48)',
+        'hero-gradient': 'radial-gradient(ellipse at top right, rgba(238, 94, 62, 0.15) 0%, transparent 50%), radial-gradient(ellipse at bottom left, rgba(113, 233, 241, 0.05) 0%, transparent 50%)',
       },
       boxShadow: {
-        'custom-light': 'none', // Removed soft shadow
-        'accent-glow': '0 0 10px rgba(212, 255, 0, 0.2)', // Sharper, smaller glow if needed
+        'custom-light': 'none',
+        'accent-glow': '0 0 10px rgba(238, 94, 62, 0.2)',
       },
       animation: {
         'background-pan': 'background-pan 10s ease infinite',

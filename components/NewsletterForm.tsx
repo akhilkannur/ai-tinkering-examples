@@ -18,7 +18,7 @@ export default function NewsletterForm() {
           title="Beehiiv Newsletter Signup"
         />
       </div>
-      <p className="text-xs text-text-secondary mt-2 font-mono text-center">
+      <p className="text-xs text-text-secondary mt-2 font-sans text-center">
         Join hundreds of other tinkerers. No spam.
       </p>
     </div>

@@ -45,7 +45,7 @@ export default function ExampleCard({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
       transition={{ duration: 0.5 }}
-      className="card group cursor-pointer relative flex flex-col bg-secondary-bg rounded-none overflow-hidden border border-navy-dark hover:border-accent transition-colors duration-75"
+      className="card group cursor-pointer relative flex flex-col bg-secondary-bg rounded-md overflow-hidden border border-navy-dark hover:border-accent transition-colors duration-75"
     >
       <div className="relative z-10 flex-grow" onClick={handleCardClick}>
         <div className="relative w-full h-64 sm:h-80 lg:h-96 overflow-hidden bg-secondary-bg border-b border-navy-dark group-hover:border-accent transition-colors duration-75">
@@ -60,7 +60,7 @@ export default function ExampleCard({
             <>
               {imageStatus === 'loading' && !blurImageUrl && (
                 <div className="absolute inset-0 bg-secondary-bg flex items-center justify-center">
-                  <div className="text-slate-500 text-sm font-mono">Loading...</div>
+                  <div className="text-slate-500 text-sm font-sans">Loading...</div>
                 </div>
               )}
               <Image
@@ -78,8 +78,6 @@ export default function ExampleCard({
                   blurDataURL: blurImageUrl,
                 })}
               />
-              {/* Scanline effect overlay */}
-              <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] z-20 bg-[length:100%_2px,3px_100%] pointer-events-none"></div>
             </>
           )}
         </div>
@@ -88,11 +86,11 @@ export default function ExampleCard({
           {/* Hover indicator line */}
           <div className="absolute top-0 left-0 w-0 h-[2px] bg-accent group-hover:w-full transition-all duration-300 ease-out"></div>
           
-          <h3 className="text-lg sm:text-xl font-mono font-bold leading-tight text-text-color line-clamp-2 group-hover:text-accent transition-colors duration-75 uppercase tracking-tight">
+          <h3 className="text-lg sm:text-xl font-headline font-bold leading-tight text-text-color line-clamp-2 group-hover:text-accent transition-colors duration-75 uppercase tracking-tight">
             {example.title}
           </h3>
           {example.read_time && (
-            <div className="flex items-center mt-3 text-sm text-text-secondary font-mono group-hover:text-text-color transition-colors duration-75">
+            <div className="flex items-center mt-3 text-sm text-text-secondary font-sans group-hover:text-text-color transition-colors duration-75">
               <Clock size={14} className="mr-1.5" />
               <span>{example.read_time} min read</span>
             </div>

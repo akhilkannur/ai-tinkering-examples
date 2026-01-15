@@ -1,5 +1,9 @@
 # AGENTS.md
 
+## Critical Operation Rules
+1.  **NO GHOST PUSHING:** Do NOT push changes to GitHub (`git push`) without explicit, written confirmation from the user. Even if a task seems complete, you must stop, report your changes, and ask: "Shall I push this?"
+2.  **Verify Before Commit:** Always run a build check or linter before committing to `main`.
+
 ## Project Overview
 **Name:** AI Tinkering Examples
 **Purpose:** A library of "Blueprints" (Markdown-based prompts) that instruct AI agents (Gemini CLI, Claude Code, Cursor) to perform specific professional tasks.

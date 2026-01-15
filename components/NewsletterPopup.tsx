@@ -53,7 +53,7 @@ const NewsletterPopup: React.FC<NewsletterPopupProps> = ({ delay = 20 }) => {
           Join the <span className="text-accent">Lab</span>
         </h3>
         
-        <p className="text-sm font-mono text-text-secondary mb-8 leading-relaxed">
+        <p className="text-sm font-sans text-text-secondary mb-8 leading-relaxed">
           Hey, I'm Akhil. I curate a weekly newsletter with the most interesting AI examples I find. Sound useful? Subscribe today!
         </p>
 

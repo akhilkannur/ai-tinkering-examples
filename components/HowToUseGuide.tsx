@@ -37,7 +37,7 @@ const HowToUseGuide = () => {
           </div>
           
           {/* Visual Analogy */}
-          <div className="bg-gray-950 rounded-xl border border-gray-700 p-6 shadow-2xl font-mono text-sm">
+          <div className="bg-gray-950 rounded-xl border border-gray-700 p-6 shadow-2xl font-sans text-sm">
             <div className="flex items-center gap-2 mb-4 border-b border-gray-800 pb-4">
               <div className="w-3 h-3 rounded-full bg-red-500"></div>
               <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
@@ -76,7 +76,7 @@ const HowToUseGuide = () => {
           <p className="text-sm text-gray-500 mb-4">
             We recommend <strong>Claude Code</strong> or <strong>Gemini CLI</strong>. They are free tools that run in your terminal.
           </p>
-          <div className="bg-gray-100 rounded-lg p-3 font-mono text-xs text-gray-700 flex justify-between items-center group cursor-pointer"
+          <div className="bg-gray-100 rounded-lg p-3 font-sans text-xs text-gray-700 flex justify-between items-center group cursor-pointer"
                onClick={() => navigator.clipboard.writeText('npm install -g @anthropic-ai/claude-code')}>
             <span>npm install -g @anthropic-ai/claude-code</span>
             <Copy className="w-3 h-3 text-gray-400 group-hover:text-blue-500" />
@@ -109,7 +109,7 @@ const HowToUseGuide = () => {
           <p className="text-sm text-gray-500 mb-4">
             Go back to your terminal, type <code>claude</code> or <code>gemini</code>, and paste the text.
           </p>
-          <div className="bg-gray-900 rounded-lg p-3 font-mono text-xs text-green-400">
+          <div className="bg-gray-900 rounded-lg p-3 font-sans text-xs text-green-400">
             &gt; claude "Paste here..."
           </div>
         </div>

@@ -34,7 +34,7 @@ export default function SponsorCard({ sponsor }: SponsorCardProps) {
           </div>
         )}
         <div className="flex-grow">
-          <p className="font-mono font-semibold text-text-color group-hover:text-accent transition-colors">
+          <p className="font-sans font-semibold text-text-color group-hover:text-accent transition-colors">
             {sponsor.name}
           </p>
         </div>
