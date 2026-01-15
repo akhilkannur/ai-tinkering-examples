@@ -9,10 +9,19 @@ export default function handler(req: NextRequest) {
   try {
     const { searchParams } = new URL(req.url);
 
-    // ?title=<title>
-    const title = searchParams.get('title') || 'AI Agent Blueprint';
-    const category = searchParams.get('category') || 'Automation';
-    const tagline = searchParams.get('tagline') || 'Build better workflows with AI.';
+    const mode = searchParams.get('mode');
+    
+    // Default values for homepage
+    let title = searchParams.get('title') || 'AI Blueprints';
+    let category = searchParams.get('category') || 'Work Automation';
+    let tagline = searchParams.get('tagline') || 'Copy, Paste, Automate Your Work.';
+    let siteName = 'realaiexamples.com';
+    let bottomLabel = 'The Work Automation Library';
+
+    // If it's a blueprint page, we use the passed params or defaults
+    if (mode !== 'home' && searchParams.has('title')) {
+        bottomLabel = 'Terminal Cookbook Blueprint';
+    }
 
     return new ImageResponse(
       (
@@ -39,9 +48,9 @@ export default function handler(req: NextRequest) {
           >
             <div
               style={{
-                backgroundColor: '#3b82f6',
-                color: 'white',
-                padding: '8px 20px',
+                backgroundColor: '#D4FF00', // Our brand accent color (Electric Lime/Yellow)
+                color: '#0f172a',
+                padding: '8px 24px',
                 borderRadius: '100px',
                 fontSize: '24px',
                 fontWeight: 'bold',
@@ -61,7 +70,7 @@ export default function handler(req: NextRequest) {
           >
             <div
               style={{
-                fontSize: '72px',
+                fontSize: '84px',
                 fontWeight: 'bold',
                 color: 'white',
                 lineHeight: 1.1,
@@ -73,7 +82,7 @@ export default function handler(req: NextRequest) {
             </div>
             <div
               style={{
-                fontSize: '32px',
+                fontSize: '36px',
                 color: '#94a3b8',
                 width: '800px',
                 lineHeight: 1.4,
@@ -99,22 +108,23 @@ export default function handler(req: NextRequest) {
             >
               <div
                 style={{
-                  fontSize: '24px',
-                  color: '#3b82f6',
+                  fontSize: '28px',
+                  color: '#D4FF00',
                   fontWeight: 'bold',
                   fontFamily: 'monospace',
                 }}
               >
-                realaiexamples.com
+                {siteName}
               </div>
             </div>
             <div
               style={{
-                fontSize: '20px',
+                fontSize: '22px',
                 color: '#475569',
+                fontWeight: '600',
               }}
             >
-              Terminal Cookbook Blueprint
+              {bottomLabel}
             </div>
           </div>
         </div>

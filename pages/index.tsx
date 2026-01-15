@@ -31,7 +31,7 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
         <meta name="description" content={homepageDescription} key="description" />
         <meta property="og:title" content={homepageTitle} key="og:title" />
         <meta property="og:description" content={homepageDescription} key="og:description" />
-        <meta property="og:image" content={`${baseUrl}/og-image-blueprints.svg`} key="og:image" />
+        <meta property="og:image" content={`${baseUrl}/api/og?mode=home`} key="og:image" />
         
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",

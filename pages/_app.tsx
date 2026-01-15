@@ -11,7 +11,7 @@ export default function App({ Component, pageProps }: AppProps) {
   const title = "AI Examples You Can Copy & Try";
   const description = "Curated AI workflows and prompts for non-technical tinkerers. No fluff, just actionable examples.";
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com';
-  const ogImage = `${baseUrl}/og-image-blueprints.svg`; // Updated to new branding
+  const ogImage = `${baseUrl}/api/og?mode=home`; // Dynamic branded OG image
   const canonicalUrl = (baseUrl + router.asPath).split('?')[0];
 
   return (
