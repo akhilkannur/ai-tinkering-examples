@@ -94,7 +94,7 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
 
         {example.workflow_steps && (
           <div className="mb-6 mx-4 sm:mx-0 pl-4 border-l-2 border-accent">
-            <p className="text-base text-text-secondary leading-relaxed font-sans">
+            <p className="text-base text-text-color/90 leading-relaxed font-sans">
               <span className="font-bold text-text-color">{example.workflow_steps.split(' ')[0]}</span>{' '}
               {example.workflow_steps.split(' ').slice(1).join(' ')}
             </p>

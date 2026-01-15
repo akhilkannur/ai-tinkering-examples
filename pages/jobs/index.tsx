@@ -42,11 +42,11 @@ export default function JobsPage({ jobs }: JobsPageProps) {
       <div className="min-h-screen bg-primary-bg">
         <Navbar />
         
-        <header className="max-w-6xl mx-auto px-4 py-8">
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-text-color mb-4 font-headline">
-            AI Job Board
+        <header className="max-w-6xl mx-auto px-4 py-12 md:py-16 text-center">
+          <h1 className="text-4xl md:text-5xl font-headline font-bold text-text-color mb-6 tracking-tight leading-tight uppercase">
+            AI Job <span className="text-accent">Board</span>
           </h1>
-          <p className="text-lg text-light-purple mb-6">
+          <p className="text-lg text-text-secondary max-w-2xl mx-auto mb-8 leading-relaxed">
             Find your next opportunity in the exciting world of AI.
           </p>
         </header>
@@ -60,8 +60,8 @@ export default function JobsPage({ jobs }: JobsPageProps) {
             </div>
           ) : (
             <div className="text-center py-12">
-              <p className="text-light-purple mb-2">No jobs found</p>
-              <p className="text-sm text-light-purple mb-4">
+              <p className="text-text-secondary mb-2">No jobs found</p>
+              <p className="text-sm text-text-secondary mb-4">
                 Try adjusting your search terms.
               </p>
               <button

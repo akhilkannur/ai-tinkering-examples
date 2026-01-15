@@ -40,11 +40,11 @@ export default function JobCard({ job }: JobCardProps) {
           </div>
         )}
         <div>
-          <h3 className="text-sm font-sans font-bold text-text-color group-hover:text-accent transition-colors duration-75">{job.jobTitle}</h3> 
-          <p className="text-xs font-sans text-text-secondary group-hover:text-text-color transition-colors duration-75">{job.companyName}</p> 
+          <h3 className="text-base font-headline font-bold text-text-color group-hover:text-accent transition-colors duration-75 uppercase tracking-tight">{job.jobTitle}</h3> 
+          <p className="text-sm font-sans text-text-secondary group-hover:text-text-color transition-colors duration-75">{job.companyName}</p> 
           {job.location && (
-            <p className="text-xs font-sans text-text-secondary flex items-center gap-1 mt-0.5 group-hover:text-text-color transition-colors duration-75"> 
-              <MapPin size={10} /> {job.location}
+            <p className="text-sm font-sans text-text-secondary flex items-center gap-1 mt-0.5 group-hover:text-text-color transition-colors duration-75"> 
+              <MapPin size={12} /> {job.location}
             </p>
           )}
         </div>

@@ -109,10 +109,10 @@ export default function InvestorsPage({ initialInvestors }: InvestorsPageProps) 
         <Navbar />
         
         <header className="max-w-6xl mx-auto px-4 py-12 md:py-20 text-center">
-          <h1 className="text-4xl md:text-6xl font-extrabold mb-6 font-headline bg-clip-text text-transparent bg-gradient-to-r from-accent to-light-purple">
-            Micro-PE Match
+          <h1 className="text-4xl md:text-5xl font-headline font-bold text-text-color mb-6 tracking-tight leading-tight uppercase">
+            Micro-PE <span className="text-accent">Match</span>
           </h1>
-          <p className="text-xl text-light-purple max-w-2xl mx-auto mb-8">
+          <p className="text-lg text-text-secondary max-w-2xl mx-auto mb-8 leading-relaxed">
             {isUnlocked ? (
                 <span className="text-accent font-bold flex items-center justify-center gap-2">
                     <Check className="w-5 h-5" /> Premium Access Active
@@ -120,7 +120,7 @@ export default function InvestorsPage({ initialInvestors }: InvestorsPageProps) 
             ) : (
                 `Previewing ${displayedInvestors.length} of ${initialInvestors.length} active buyers for AI tools & Micro-SaaS.`
             )}
-            <br className="hidden md:block"/>Filter by check size, deal type, and geography to find your perfect exit partner.
+            <br className="hidden md:block"/> Filter by check size, deal type, and geography to find your perfect exit partner.
           </p>
           
           {/* Search Bar */}
@@ -150,7 +150,7 @@ export default function InvestorsPage({ initialInvestors }: InvestorsPageProps) 
 
               {/* Filter Group: Deal Type */}
               <div className="mb-6">
-                <label className="block text-sm font-semibold text-light-purple mb-2">Deal Type</label>
+                <label className="block text-sm font-semibold text-text-secondary mb-2">Deal Type</label>
                 <select 
                   value={selectedDealType}
                   onChange={(e) => setSelectedDealType(e.target.value)}
@@ -164,7 +164,7 @@ export default function InvestorsPage({ initialInvestors }: InvestorsPageProps) 
 
               {/* Filter Group: Check Size */}
               <div className="mb-6">
-                <label className="block text-sm font-semibold text-light-purple mb-2">Check Size</label>
+                <label className="block text-sm font-semibold text-text-secondary mb-2">Check Size</label>
                 <select 
                   value={selectedCheckSize}
                   onChange={(e) => setSelectedCheckSize(e.target.value)}
@@ -178,7 +178,7 @@ export default function InvestorsPage({ initialInvestors }: InvestorsPageProps) 
 
               {/* Filter Group: Geography */}
               <div className="mb-6">
-                <label className="block text-sm font-semibold text-light-purple mb-2">Geography</label>
+                <label className="block text-sm font-semibold text-text-secondary mb-2">Geography</label>
                 <select 
                   value={selectedGeo}
                   onChange={(e) => setSelectedGeo(e.target.value)}
@@ -210,8 +210,8 @@ export default function InvestorsPage({ initialInvestors }: InvestorsPageProps) 
                       
                       <div className="flex justify-between items-start mb-4">
                         <div>
-                          <h2 className="text-xl font-bold group-hover:text-accent transition-colors">{investor.FirmName}</h2>
-                          <div className="text-xs text-light-purple">
+                          <h2 className="text-xl font-bold font-headline group-hover:text-accent transition-colors">{investor.FirmName}</h2>
+                          <div className="text-xs text-text-secondary">
                             {investor.Website.replace(/^https?:\/\/(www\.)?/, '').split('/')[0]}
                           </div>
                         </div>
@@ -230,24 +230,24 @@ export default function InvestorsPage({ initialInvestors }: InvestorsPageProps) 
                         {investor.CheckSize && (
                           <div className="flex items-center text-sm">
                             <DollarSign className="h-4 w-4 text-accent mr-2" />
-                            <span className="text-light-purple mr-2">Check Size:</span>
-                            <span className="font-semibold text-white">{investor.CheckSize}</span>
+                            <span className="text-text-secondary mr-2">Check Size:</span>
+                            <span className="font-semibold text-text-color">{investor.CheckSize}</span>
                           </div>
                         )}
                         
                         {investor.TargetEBITDA && (
                           <div className="flex items-center text-sm">
                             <Briefcase className="h-4 w-4 text-accent mr-2" />
-                            <span className="text-light-purple mr-2">Target:</span>
-                            <span className="text-white">{investor.TargetEBITDA}</span>
+                            <span className="text-text-secondary mr-2">Target:</span>
+                            <span className="text-text-color">{investor.TargetEBITDA}</span>
                           </div>
                         )}
 
                         {investor.GeographicFocus && (
                           <div className="flex items-center text-sm">
                             <MapPin className="h-4 w-4 text-accent mr-2" />
-                            <span className="text-light-purple mr-2">Focus:</span>
-                            <span className="text-white">{investor.GeographicFocus}</span>
+                            <span className="text-text-secondary mr-2">Focus:</span>
+                            <span className="text-text-color">{investor.GeographicFocus}</span>
                           </div>
                         )}
 
@@ -258,14 +258,14 @@ export default function InvestorsPage({ initialInvestors }: InvestorsPageProps) 
                         {isUnlocked ? (
                              <div className="flex items-center text-sm bg-accent/10 p-2 rounded-lg border border-accent/20 mt-2">
                                 <Users className="h-4 w-4 text-accent mr-2" />
-                                <span className="text-light-purple mr-2 font-bold">Verified Contact:</span>
-                                <span className="text-white">Partner Email Available</span>
+                                <span className="text-text-secondary mr-2 font-bold">Verified Contact:</span>
+                                <span className="text-text-color">Partner Email Available</span>
                              </div>
                         ) : (
                             <div className="flex items-center text-sm opacity-50 filter blur-[2px] select-none mt-2">
                                 <Users className="h-4 w-4 text-accent mr-2" />
-                                <span className="text-light-purple mr-2">Contact:</span>
-                                <span className="text-white">John Doe (Partner) - john@firm.com</span>
+                                <span className="text-text-secondary mr-2">Contact:</span>
+                                <span className="text-text-color">John Doe (Partner) - john@firm.com</span>
                             </div>
                         )}
                       </div>
@@ -281,7 +281,7 @@ export default function InvestorsPage({ initialInvestors }: InvestorsPageProps) 
                          <Lock className="w-5 h-5" />
                        </div>
 
-                       <h2 className="text-xl font-bold text-gray-400 mb-2">{investor.FirmName}</h2>
+                       <h2 className="text-xl font-bold font-headline text-gray-400 mb-2">{investor.FirmName}</h2>
                        <p className="text-gray-500 text-sm mb-4 italic line-clamp-2">"{investor.InvestmentThesis}"</p>
                        
                        <div className="space-y-2 filter blur-[3px]">
@@ -306,9 +306,9 @@ export default function InvestorsPage({ initialInvestors }: InvestorsPageProps) 
                                 <div className="absolute top-0 right-0 p-4 opacity-10">
                                     <Crown className="h-32 w-32 text-accent" />
                                 </div>
-                                <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Unlock All {initialInvestors.length} Buyers</h2>
-                                <p className="text-lg text-light-purple mb-8 max-w-lg mx-auto leading-relaxed">
-                                    Stop searching. Get the full list with <span className="text-white font-bold">verified partner emails</span> and detailed investment criteria.
+                                <h2 className="text-3xl md:text-4xl font-bold font-headline mb-4 text-text-color">Unlock All {initialInvestors.length} Buyers</h2>
+                                <p className="text-lg text-text-secondary mb-8 max-w-lg mx-auto leading-relaxed">
+                                    Stop searching. Get the full list with <span className="text-text-color font-bold">verified partner emails</span> and detailed investment criteria.
                                 </p>
                                 <div className="flex flex-col items-center gap-4">
                                 <a 
@@ -321,7 +321,7 @@ export default function InvestorsPage({ initialInvestors }: InvestorsPageProps) 
                                 </a>
                                 <button 
                                     onClick={() => setShowLicenseInput(true)}
-                                    className="text-sm text-gray-500 hover:text-white underline decoration-gray-600 underline-offset-4 transition-colors"
+                                    className="text-sm text-gray-500 hover:text-text-color underline decoration-gray-600 underline-offset-4 transition-colors"
                                 >
                                     I have a license key
                                 </button>
@@ -330,8 +330,8 @@ export default function InvestorsPage({ initialInvestors }: InvestorsPageProps) 
                         ) : (
                             <form onSubmit={handleLicenseSubmit} className="animate-fade-in max-w-sm mx-auto">
                                 <div className="flex items-center justify-between mb-6">
-                                <h3 className="text-xl font-bold text-white">Enter License Key</h3>
-                                <button type="button" onClick={() => setShowLicenseInput(false)} className="text-gray-500 hover:text-white">
+                                <h3 className="text-xl font-bold text-text-color">Enter License Key</h3>
+                                <button type="button" onClick={() => setShowLicenseInput(false)} className="text-gray-500 hover:text-text-color">
                                     <X className="w-6 h-6" />
                                 </button>
                                 </div>
@@ -341,7 +341,7 @@ export default function InvestorsPage({ initialInvestors }: InvestorsPageProps) 
                                     value={licenseKeyInput}
                                     onChange={(e) => setLicenseKeyInput(e.target.value)}
                                     placeholder="TK-XXXX-XXXX-XXXX"
-                                    className="w-full bg-primary-bg border border-border-color text-white px-5 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent font-mono text-center uppercase tracking-widest placeholder-gray-600 text-lg"
+                                    className="w-full bg-primary-bg border border-border-color text-text-color px-5 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent font-mono text-center uppercase tracking-widest placeholder-gray-600 text-lg"
                                 />
                                 {unlockError && <p className="text-red-400 text-sm mt-3">{unlockError}</p>}
                                 </div>
@@ -360,8 +360,8 @@ export default function InvestorsPage({ initialInvestors }: InvestorsPageProps) 
             ) : (
               <div className="text-center py-20 bg-secondary-bg rounded-3xl border border-dashed border-border-color">
                 <Search className="h-12 w-12 text-gray-600 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-white mb-2">No investors found</h3>
-                <p className="text-light-purple">Try adjusting your filters or search query.</p>
+                <h3 className="text-xl font-bold font-headline text-text-color mb-2">No investors found</h3>
+                <p className="text-text-secondary">Try adjusting your filters or search query.</p>
                 <button 
                   onClick={() => {
                     setSearchQuery('');

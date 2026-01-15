@@ -89,8 +89,15 @@ export default function ExampleCard({
           <h3 className="text-lg sm:text-xl font-headline font-bold leading-tight text-text-color line-clamp-2 group-hover:text-accent transition-colors duration-75 uppercase tracking-tight">
             {example.title}
           </h3>
+
+          {example.summary && (
+            <p className="mt-3 text-base text-text-color/90 line-clamp-3 leading-relaxed font-sans">
+              {example.summary}
+            </p>
+          )}
+
           {example.read_time && (
-            <div className="flex items-center mt-3 text-sm text-text-secondary font-sans group-hover:text-text-color transition-colors duration-75">
+            <div className="flex items-center mt-4 text-sm text-text-secondary font-sans group-hover:text-text-color transition-colors duration-75">
               <Clock size={14} className="mr-1.5" />
               <span>{example.read_time} min read</span>
             </div>

@@ -76,13 +76,12 @@ export default function ExamplesPage({ examples, categories }: ExamplesPageProps
       <div className="min-h-screen bg-primary-bg font-sans text-text-color">
         <Navbar />
         
-        {/* Header */}
-        <header className="max-w-6xl mx-auto px-4 py-8">
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-text-color mb-4 font-headline">
-            AI Examples Library
+        <header className="max-w-6xl mx-auto px-4 py-12 md:py-16 text-center">
+          <h1 className="text-4xl md:text-5xl font-headline font-bold text-text-color mb-6 tracking-tight leading-tight uppercase">
+            AI Examples <span className="text-accent">Library</span>
           </h1>
-          <p className="text-lg text-light-purple mb-6">
-            Welcome to the Real AI Examples Library — a curated collection of practical AI workflows, prompts, and automation ideas you can copy and try. We focus on real-world use cases in sales, marketing, operations, content, and product development. Every example here is hand-picked for quality and updated weekly, so you’ll always find fresh, working ways people are using AI in their businesses and projects.
+          <p className="text-lg text-text-secondary max-w-2xl mx-auto mb-8 leading-relaxed">
+            A library of real AI use cases shared by people on the internet. No fluff.
           </p>
         </header>
 
@@ -96,7 +95,7 @@ export default function ExamplesPage({ examples, categories }: ExamplesPageProps
 
           {/* Results Count */}
           <div className="mt-4 mb-6">
-            <p className="text-sm text-light-purple">
+            <p className="text-sm text-text-secondary">
               {filteredByCategory.length} example{filteredByCategory.length !== 1 ? 's' : ''}
               {selectedCategory !== 'All' && ` in ${selectedCategory}`}
             </p>
@@ -118,8 +117,8 @@ export default function ExamplesPage({ examples, categories }: ExamplesPageProps
             </div>
           ) : (
             <div className="text-center py-12">
-              <p className="text-light-purple mb-2">No examples found</p>
-              <p className="text-sm text-light-purple mb-4">
+              <p className="text-text-secondary mb-2">No examples found</p>
+              <p className="text-sm text-text-secondary mb-4">
                 Try adjusting your search or category filter
               </p>
               <button

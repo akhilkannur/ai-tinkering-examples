@@ -67,7 +67,7 @@ export default function AIToolCard({ name, description, url, imageUrl, category 
            {name}
          </h3>
          
-         <p className="text-xs text-text-secondary leading-relaxed line-clamp-3 font-sans opacity-80 group-hover:opacity-100 transition-opacity">
+         <p className="text-sm text-text-color/80 leading-relaxed line-clamp-3 font-sans opacity-90 group-hover:opacity-100 transition-opacity">
            {description}
          </p>
       </div>
