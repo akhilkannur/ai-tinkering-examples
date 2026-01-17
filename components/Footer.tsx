@@ -18,9 +18,15 @@ export default function Footer() {
           <Link href="/about" className="text-text-secondary hover:text-accent transition-colors">
             About
           </Link>
+          <Link href="/privacy" className="text-text-secondary hover:text-accent transition-colors">
+            Privacy
+          </Link>
+          <Link href="/terms" className="text-text-secondary hover:text-accent transition-colors">
+            Terms
+          </Link>
         </div>
         <p className="text-text-secondary text-sm font-sans opacity-60">
-          AI Tinkering Examples <span className="text-text-secondary">&copy; {new Date().getFullYear()}</span> &mdash; Made for curious minds
+          Real AI Examples <span className="text-text-secondary">&copy; {new Date().getFullYear()}</span> &mdash; Made for curious minds
         </p>
       </div>
     </footer>

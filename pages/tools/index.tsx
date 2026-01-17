@@ -46,13 +46,6 @@ export default function ToolsIndex() {
           <p className="text-lg text-text-secondary leading-relaxed font-sans max-w-2xl mx-auto mb-8">
              Stop searching, start building. A hand-picked collection of {aiTools.length} tools verified for actual business utility.
           </p>
-
-          <a 
-            href="/investors"
-            className="inline-flex items-center gap-2 bg-secondary-bg hover:bg-navy-dark border border-navy-light hover:border-accent text-text-color hover:text-accent font-mono text-sm font-bold px-6 py-3 rounded-sm uppercase tracking-wider transition-all shadow-lg hover:shadow-accent-glow"
-          >
-            <Plus className="w-4 h-4" /> Submit A Tool
-          </a>
         </div>
 
         {/* Controls */}

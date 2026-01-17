@@ -11,6 +11,7 @@ import HorizontalStrip from '../components/HorizontalStrip'
 import JobCard from '../components/JobCard'
 import AIToolCard from '../components/AIToolCard'
 import NewsletterForm from '../components/NewsletterForm'
+import ArchetypeQuiz from '../components/ArchetypeQuiz'
 
 interface HybridHomePageProps {
   recipes: Recipe[]
@@ -78,13 +79,7 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
                         href="#blueprints" 
                         className="w-full sm:w-auto px-8 py-4 bg-accent hover:bg-accent-hover text-white font-sans font-bold rounded-sm transition-all shadow-lg hover:shadow-accent-glow uppercase tracking-wider text-sm"
                     >
-                        Browse 100+ Blueprints
-                    </a>
-                    <a 
-                        href="/investors" 
-                        className="w-full sm:w-auto px-8 py-4 bg-white border border-brand-navy/10 hover:border-accent text-brand-navy hover:text-accent font-sans font-bold rounded-sm transition-all uppercase tracking-wider text-sm"
-                    >
-                        Sell Your Tool
+                        Browse 250+ Blueprints
                     </a>
                 </div>
 
@@ -105,6 +100,9 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
                 </div>
             </div>
         </div>
+
+        {/* ARCHETYPE QUIZ */}
+        <ArchetypeQuiz />
 
         {/* HOW TO USE GUIDE */}
         <HowToUseGuide />
