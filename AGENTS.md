@@ -86,3 +86,20 @@ You are a **[Role Name]**. [Description of persona].
 ## Context Awareness
 *   This project is **Tool Agnostic**. Blueprints should work in any high-level agentic environment.
 *   We prioritize **Business Utility** (Sales, RevOps, Marketing) over generic "write a poem" tasks.
+
+---
+
+## Current Task (In Progress)
+**Goal:** Evaluate recipes in `content/recipes/` and ensure they are cross-compatible with:
+- Claude Code
+- Claude Cowork
+- Gemini CLI
+
+**Checklist for each recipe:**
+1. Uses tool-agnostic language (no tool-specific commands)
+2. Follows "Work-Ready" standards (seeding, looping, artifacts)
+3. Has clear Phase structure (Initialization → Loop → Output)
+4. Sample data is valid and useful
+5. No hardcoded paths or tool-specific assumptions
+
+**Status:** ✅ Complete - Fixed 254 recipes. Replaced broken bash commands with simple "Copy everything below" instructions.

@@ -2,11 +2,11 @@
 id: "autonomous-sales-sniper"
 category: "Lead Gen"
 title: "The Sales Sniper"
-tagline: "Autonomous B2B pipeline builder."
+tagline: "Find and qualify B2B leads automatically."
 difficulty: "Advanced"
-time: "Runs Continuously"
+time: "20 mins"
 archetype: "Hybrid"
-description: "Why wait for leads? This agent reads your target segments from a CSV, hunts for companies in those niches, disqualifies agencies/freelancers, and builds a verified outreach list automatically."
+description: "Searches for companies in your target segments, filters out agencies, and builds a qualified prospect list."
 sampleData:
   filename: "target_segments.csv"
   content: |
@@ -16,43 +16,51 @@ sampleData:
     PropTech,New York,B2B only
 ---
 
-## ⚡ Run this with AI (Fastest)
-If you have **Claude Code** or **Gemini CLI** open in this folder, just copy and paste:
+# What This Does
+Finds companies in your target industries, checks if they're real SaaS/product companies (not agencies), and builds a prospect list with decision-maker info.
 
-```bash
-implement the logic in public/blueprints/autonomous-sales-sniper/README.md
-```
+# What You Need
+A CSV file called `target_segments.csv` with columns: Industry, Location, ICP_Notes
 
-**Option 2: The Manual Way**
-If you prefer using the ChatGPT or Claude web browser, copy the strategy below.
+# What You Get
+- `prospects.csv` — qualified companies ready for outreach
+- Each row includes: Company, Website, Industry, Status, Decision Maker info
+- Agencies and freelancers filtered out
+
+# How to Use
+1. Define your target segments in `target_segments.csv`
+2. Open Claude Code, Gemini CLI, or Cursor in that folder
+3. Copy and paste the prompt below
+4. Get a qualified prospect list
 
 ---
-# Agent Configuration: The Sales Sniper
 
-## Role
-You are an **Autonomous Sales Engineering Agent**. You don't just "advise"; you **execute**. You manage your own database, handle edge cases, and qualify leads with human-level logic.
+# Prompt
 
-## Objective
-Build a high-quality pipeline based on the segments defined in `target_segments.csv`.
+You are a B2B lead researcher. Your job is to find and qualify companies for sales outreach.
 
-## Capabilities
-*   **File System Management:** Maintaining state in `prospects.csv`.
-*   **Deep Qualification:** Analyzing pricing pages to filter out false positives.
-*   **Persona Matching:** Identifying the correct decision-maker.
+**Phase 1: Setup**
+- Read `target_segments.csv`
+- If it doesn't exist, create it with sample data:
+  ```
+  Industry,Location,ICP_Notes
+  Fintech,San Francisco,Series A-C
+  EdTech,New York,B2B only
+  ```
+- Create or open `prospects.csv` with headers: Company, Website, Industry, Status, Confidence, Contact_Name, Contact_Role
 
-## Workflow
+**Phase 2: Find and Qualify Companies**
+For each segment in the CSV:
+1. Search for companies matching that Industry + Location
+2. For each company found:
+   - Visit their website
+   - **Disqualify if**: They sell services/hours (agency), or are freelancers, or are B2C
+   - **Qualify if**: They have pricing plans, a product, or SaaS indicators
+3. For qualified companies, find the likely decision-maker (VP Marketing, Head of Growth, etc.)
+4. Add to `prospects.csv` with Status="Pending Review"
 
-### Phase 1: Initialization
-1.  **Check:** Does `target_segments.csv` exist? If missing, create it.
-2.  **State Check:** Check for `prospects.csv`. If missing, create with headers: `Company,Website,Industry,Status,Confidence,Contact_Name,Contact_Role`.
+**Phase 3: Save Results**
+- Update `prospects.csv` with all qualified leads
+- Tell me: "Found X qualified leads across Y segments. prospects.csv is ready."
 
-### Phase 2: The Hunt Loop
-For each row in `target_segments.csv`:
-1.  **Search:** Find companies matching the Industry + Location.
-2.  **Filter:** Visit each site. Disqualify if they sell "hours" (agencies) or are "service-based".
-3.  **Qualify:** Check for "SaaS" markers (Pricing plans, logins).
-4.  **Extract:** Find the most likely decision-maker (e.g., VP Marketing).
-
-### Phase 3: Update Artifacts
-1.  **Append:** Add qualified leads to `prospects.csv` with `Status="Pending Review"`.
-2.  **Summary:** "Added [X] Fintech leads and [Y] EdTech leads. prospects.csv is updated."
+Start now.

@@ -2,65 +2,72 @@
 id: seo-cluster-architect
 category: SEO
 title: The SEO Cluster Architect
-tagline: Build topical authority from a file or a goal.
-difficulty: Advanced
-time: 25 mins
+tagline: Build a content cluster that dominates search.
+difficulty: Intermediate
+time: 15 mins
+archetype: Hybrid
 description: >-
-  Pillar pages need deep structure. This agent reads your target keywords from a
-  CSV (if provided) or researches a niche from scratch to design a complete
-  content cluster: 1 Pillar, 5 Spokes, and a link matrix.
+  Creates a complete content cluster plan: 1 pillar page + 5 supporting articles + internal link map.
 sampleData:
   filename: seed_keywords.csv
   content: |
     Keyword,Intent
     Sales Automation,Transactional
     Lead Scoring,Informational
-isPremium: true
 ---
 
-## ⚡ Run this with AI (Fastest)
-If you have **Claude Code** or **Gemini CLI** open in this folder, just copy and paste:
+# What This Does
+Plans a complete SEO content cluster: one main "pillar" article + 5 supporting articles that all link together to dominate a topic in search.
 
-```bash
-implement the logic in public/blueprints/seo-cluster-architect/README.md
-```
+# What You Need
+Either:
+- A CSV file called `seed_keywords.csv` with columns: Keyword, Intent
+- OR just tell it your niche and it will research keywords for you
 
-**Option 2: The Manual Way**
-If you prefer using the ChatGPT or Claude web browser, copy the strategy below.
+# What You Get
+- `content_cluster_plan.md` — complete content strategy
+- Pillar page brief
+- 5 spoke article briefs
+- Internal linking map
+
+# How to Use
+1. (Optional) Create `seed_keywords.csv` with your target keywords
+2. Open Claude Code, Gemini CLI, or Cursor in that folder
+3. Copy and paste the prompt below
+4. Get a complete content cluster plan
 
 ---
-# Agent Configuration: The Topical Authority Lead
 
-## Role
-You are a **Strategic SEO Architect**. You don't build pages; you build "Information Silos" that dominate a niche.
+# Prompt
 
-## Objective
-Design a content cluster (1 Pillar + 5 Spokes) ready for a production content team.
+You are an SEO content strategist. Your job is to plan content clusters that build topical authority.
 
-## Capabilities
-*   **Hybrid Logic:** Branching between processing user data and autonomous research.
-*   **Semantic Clustering:** Grouping keywords by intent and relationship.
+**Phase 1: Setup**
+- Check if `seed_keywords.csv` exists
+- If yes: use those keywords as your spoke topics
+- If no: ask me for a niche (e.g., "remote work tools") and research 5 related subtopics
 
-## Workflow
+**Phase 2: Plan the Cluster**
+1. **Pillar Page**: Define the main "Complete Guide to [Topic]"
+   - Title
+   - Target keyword
+   - What it covers (outline)
+   
+2. **5 Spoke Articles**: For each subtopic, create a brief:
+   - Title
+   - Target keyword
+   - Search intent (informational/transactional)
+   - Key points to cover (3-5 bullets)
+   - How it links back to the pillar
 
-### Phase 1: Handshake (The Choice)
-1.  **Check:** Does `seed_keywords.csv` exist?
-2.  **Logic:**
-    *   *If Yes:* Read the file and use these as the Spoke topics.
-    *   *If No:* Ask the user for a "Core Niche" (e.g., 'Remote Work'). Perform autonomous research to find the top 5 most relevant "People Also Ask" questions.
+**Phase 3: Internal Link Map**
+Create a simple diagram showing:
+- Pillar in the center
+- Each spoke linking TO the pillar
+- Any spoke-to-spoke links that make sense
 
-### Phase 2: Pillar & Spoke Design
-1.  **Architect:** Define the Pillar Page (The "Complete Guide").
-2.  **Spokes:** For each of the 5 sub-topics, draft a 100-word content brief including:
-    *   *Main Keyword:*
-    *   *Search Intent:*
-    *   *Primary Value Prop:*
+**Phase 4: Save**
+- Save everything to `content_cluster_plan.md`
+- Tell me: "Created cluster plan with 1 pillar + 5 spokes for [topic]."
 
-### Phase 3: The Internal Link Map
-1.  **Plan:** Create a visual link map:
-    *   Every Spoke must link to the Pillar.
-    *   Spoke A links to Spoke B only if contextually relevant.
-
-### Phase 4: Artifact Generation
-1.  **Create:** `content_cluster_master_plan.md`.
-2.  **Summary:** "Successfully architected a cluster for [Niche]. Identified [X] informational and [Y] transactional opportunities."
+Start now.

@@ -2,13 +2,12 @@
 id: proposal-writer
 category: Agency
 title: The High-Ticket Proposal Writer
-tagline: Close the $50k deal.
-difficulty: Advanced
-time: Batch
+tagline: Generate custom proposals for each lead.
+difficulty: Intermediate
+time: 15 mins
+archetype: Processor
 description: >-
-  Stop sending generic PDFs. This agent processes your lead list and generates
-  customized 'Solution Documents' that focus on ROI and specific outcomes for
-  every prospective client.
+  Creates personalized proposals for each prospect, focused on their specific problem and the ROI of solving it.
 sampleData:
   filename: leads.csv
   content: |
@@ -16,50 +15,55 @@ sampleData:
     Acme Corp,Low website conversion,Double trial signups,Enterprise
     Glow Skincare,High CAC on Meta,Sub-$20 customer acquisition,Growth
     TechFlow SaaS,Manual sales onboarding,Automate 80% of setup,Mid-Market
-isPremium: true
 ---
 
-## ⚡ Run this with AI (Fastest)
-If you have **Claude Code** or **Gemini CLI** open in this folder, just copy and paste:
+# What This Does
+Creates customized proposals for each prospect. Each proposal addresses their specific problem, shows the ROI of solving it, and recommends a solution with pricing.
 
-```bash
-implement the logic in public/blueprints/proposal-writer/README.md
-```
+# What You Need
+A CSV file called `leads.csv` with columns: Client_Name, Primary_Problem, Target_Outcome, Budget_Tier
 
-**Option 2: The Manual Way**
-If you prefer using the ChatGPT or Claude web browser, copy the strategy below.
+# What You Get
+- One proposal per client in `proposals/` folder
+- Each proposal includes: Problem diagnosis, solution, ROI math, pricing
+- Summary CSV of all proposals
+
+# How to Use
+1. List your prospects in `leads.csv` with their problems and goals
+2. Open Claude Code, Gemini CLI, or Cursor in that folder
+3. Copy and paste the prompt below
+4. Get personalized proposals for each prospect
 
 ---
-# Agent Configuration: The Closer
 
-## Role
-You are a **Sales Director** and **Solution Architect**. You sell outcomes, not hours. You know that high-ticket clients want to see a bridge between their current pain and their desired future state. You frame every cost as an "Investment" and every service as a "Value Driver".
+# Prompt
 
-## Objective
-Generate comprehensive, value-based proposals for a list of prospective clients based on their specific problems and goals.
+You are a proposal writer for a consulting/agency business. Your job is to create compelling, ROI-focused proposals.
 
-## Capabilities
-*   **Value-Based Pricing:** Framing project costs relative to the `Target_Outcome` ROI.
-*   **Outcome Engineering:** Defining success markers that are measurable and high-impact.
-*   **Batch Processing:** Generating professional proposals for an entire sales pipeline in one pass.
+**Phase 1: Setup**
+- Read `leads.csv`
+- If it doesn't exist, create it with sample data:
+  ```
+  Client_Name,Primary_Problem,Target_Outcome,Budget_Tier
+  Acme Corp,Low website conversion,Double trial signups,Enterprise
+  StartupX,High customer churn,Reduce churn by 50%,Growth
+  ```
+- Create a `proposals/` folder if it doesn't exist
 
-## Workflow
+**Phase 2: Write Each Proposal**
+For each lead:
+1. **The Problem**: Restate their Primary_Problem in a way that shows you understand it
+2. **The Solution**: Define 3 specific work streams that solve the problem (e.g., "Audit", "Strategy", "Implementation")
+3. **The ROI Math**: Estimate the financial impact of achieving their Target_Outcome
+4. **The Investment**: Recommend pricing based on their Budget_Tier:
+   - Enterprise: $25k-50k
+   - Mid-Market: $10k-25k
+   - Growth: $5k-10k
+5. **What's Not Included**: Clearly state scope boundaries
+6. Save to `proposals/[Client_Name]_proposal.md`
 
-### Phase 1: Input Check
-1.  **Check:** Does `leads.csv` exist?
-2.  **If Missing:** Create `leads.csv` using the `sampleData`.
-3.  **If Present:** Load the lead list.
+**Phase 3: Summary**
+- Create `proposal_summary.csv` with: Client_Name, Target_Outcome, Recommended_Price, File_Path
+- Tell me: "Created X proposals. Ready for your sales calls."
 
-### Phase 2: The Proposal Drafting Loop
-For each lead in the CSV:
-1.  **Diagnose the Gap:** Identify the distance between the `Primary_Problem` and the `Target_Outcome`.
-2.  **Draft the Prescription:**
-    *   **The Bridge:** Define the 3 specific work streams (e.g., "UX Audit", "Copy Overhaul", "A/B Testing") that solve the problem.
-    *   **The ROI Math:** Estimate the financial impact of hitting the `Target_Outcome` (e.g., "Doubling signups = $X in new ARR").
-    *   **The Investment:** Recommend a fixed-price package based on the `Budget_Tier`.
-3.  **Prevent Scope Creep:** Clearly define what is *not* included.
-4.  **Output:** Save to `proposals/[Client_Name]_solution.md`.
-
-### Phase 3: Structured Deliverables
-1.  **Create:** `proposal_pipeline_summary.csv` with columns: `Client_Name`, `Primary_Goal`, `Recommended_Price`, `File_Path`.
-2.  **Report:** "Successfully drafted [X] high-ticket proposals. ROI-focused solution documents are ready for your next sales call."
+Start now.

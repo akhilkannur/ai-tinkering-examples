@@ -4,9 +4,9 @@ category: "Sales Eng"
 title: "The Spam Word Hunter"
 tagline: "Don't trigger the filters."
 difficulty: "Beginner"
-time: "Batch"
+time: "5 mins"
 archetype: "Processor"
-description: "Cold emails die in spam. This agent scans a batch of email drafts for high-risk trigger words ('Guarantee', 'Free', '$$$') and suggests safer synonyms to maximize deliverability."
+description: "Scans your cold emails for spam trigger words and rewrites them to land in inbox."
 sampleData:
   filename: "drafts.csv"
   content: |
@@ -16,44 +16,51 @@ sampleData:
     Quick question,"Hey, I wanted to follow up on our previous conversation about growth."
 ---
 
-## ⚡ Run this with AI (Fastest)
-If you have **Claude Code** or **Gemini CLI** open in this folder, just copy and paste:
+# What This Does
+Scans your cold email drafts for spam trigger words (FREE, Guarantee, $$$, ALL CAPS) and rewrites them to avoid spam filters.
 
-```bash
-implement the logic in public/blueprints/cold-email-spam-checker/README.md
-```
+# What You Need
+A CSV file called `drafts.csv` with columns: Subject, Body
 
-**Option 2: The Manual Way**
-If you prefer using the ChatGPT or Claude web browser, copy the strategy below.
+# What You Get
+- `sanitized_emails.csv` — cleaned versions of all your emails
+- Spam risk score for each email (1-10)
+- Summary of triggers removed
+
+# How to Use
+1. Save your email drafts as `drafts.csv`
+2. Open Claude Code, Gemini CLI, or Cursor in that folder
+3. Copy and paste the prompt below
+4. Get back clean, inbox-friendly emails
 
 ---
-# Agent Configuration: The Deliverability Expert
 
-## Role
-You are a **Copy Editor**. You optimize for inbox placement by identifying and neutralizing spam triggers that modern email filters use to block cold outreach.
+# Prompt
 
-## Objective
-Sanitize a list of email subjects and bodies to ensure they land in the primary inbox.
+You are a cold email deliverability expert. Your job is to remove spam triggers from email drafts.
 
-## Capabilities
-*   **Keyword Neutralization:** "Free" -> "Complimentary", "100%" -> "Comprehensive".
-*   **Formatting Audits:** Detecting excessive punctuation (!!!) and ALL CAPS.
-*   **Batch Processing:** Cleaning entire outreach campaigns in one pass.
+**Phase 1: Setup**
+- Read `drafts.csv`
+- If it doesn't exist, create it with sample data:
+  ```
+  Subject,Body
+  FREE GIFT INSIDE,"Click here for your risk-free trial. Guaranteed results!"
+  Quick question,"Hey, wanted to follow up on our conversation."
+  ```
 
-## Workflow
+**Phase 2: Scan Each Email**
+For each row:
+- Flag spam triggers in Subject: ALL CAPS, "Free", "Urgent", "$$$", "!!!"
+- Flag spam triggers in Body: "Risk-free", "Guaranteed", "100%", "Act now"
+- Rewrite both Subject and Body with safer alternatives:
+  - "Free" → "Complimentary"
+  - "Guaranteed" → "Proven"
+  - "100%" → "Comprehensive"
+  - Remove excessive punctuation
+- Assign a Spam Risk Score (1-10) based on triggers found
 
-### Phase 1: Input Check
-1.  **Check:** Does `drafts.csv` exist?
-2.  **If Missing:** Create `drafts.csv` using the `sampleData`.
-3.  **If Present:** Load the email list.
+**Phase 3: Save Results**
+- Save to `sanitized_emails.csv` with columns: Original_Subject, Safe_Subject, Safe_Body, Spam_Risk_Score
+- Tell me: "Cleaned X emails. Removed Y spam triggers."
 
-### Phase 2: The Sanitization Loop
-For each draft in the CSV:
-1.  **Scan Subject:** Flag ALL CAPS or trigger words (Free, Urgent, $$$).
-2.  **Scan Body:** Identify high-risk phrases (Risk-free, Guaranteed, 100%).
-3.  **Rewrite:** Suggest a "Safe" version of both Subject and Body.
-4.  **Score:** Assign a "Spam Risk Score" (1-10) based on the number of flags.
-
-### Phase 3: Structured Deliverables
-1.  **Create:** `sanitized_emails.csv` with columns: `Original_Subject`, `Safe_Subject`, `Safe_Body`, `Spam_Risk_Score`.
-2.  **Report:** "Successfully sanitized [X] drafts. [Y] high-risk triggers were removed."
+Start now.

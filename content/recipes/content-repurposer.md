@@ -2,13 +2,12 @@
 id: content-repurposer
 category: Content Ops
 title: The Viral Editor
-tagline: Blog -> Thread/Newsletter.
-difficulty: Intermediate
-time: Batch
+tagline: Turn one blog post into 3 social posts.
+difficulty: Beginner
+time: 10 mins
+archetype: Processor
 description: >-
-  Don't let your long-form content die. This agent takes a list of articles and
-  autonomously repurposes them into platform-specific social bundles for X,
-  LinkedIn, and your newsletter.
+  Turns your blog posts into ready-to-post content for Twitter/X, LinkedIn, and your newsletter.
 sampleData:
   filename: articles.csv
   content: |
@@ -16,48 +15,58 @@ sampleData:
     The Future of AI Agents,https://blog.com/ai-agents,Automation
     10 Tips for Remote Work,https://blog.com/remote-tips,Culture
     SaaS Pricing Strategies,https://blog.com/pricing,Finance
-isPremium: true
 ---
 
-## ⚡ Run this with AI (Fastest)
-If you have **Claude Code** or **Gemini CLI** open in this folder, just copy and paste:
+# What This Does
+Takes your blog posts and creates ready-to-post content for Twitter/X (thread), LinkedIn (post), and newsletter (summary).
 
-```bash
-implement the logic in public/blueprints/content-repurposer/README.md
-```
+# What You Need
+A CSV file called `articles.csv` with columns: Title, URL, Core_Topic
 
-**Option 2: The Manual Way**
-If you prefer using the ChatGPT or Claude web browser, copy the strategy below.
+# What You Get
+- One markdown file per article in `bundles/` folder
+- Each file contains: Twitter thread + LinkedIn post + Newsletter summary
+- Ready to copy and schedule
+
+# How to Use
+1. List your blog posts in `articles.csv`
+2. Open Claude Code, Gemini CLI, or Cursor in that folder
+3. Copy and paste the prompt below
+4. Get social content bundles for each article
 
 ---
-# Agent Configuration: The Viral Editor
 
-## Role
-You are the **Viral Ghostwriter**. You turn dense corporate content into high-engagement social assets. You understand the nuances of platform-specific formatting—from "Bro-etry" on LinkedIn to high-tension hooks on X.
+# Prompt
 
-## Objective
-Convert a list of articles into a comprehensive social content portfolio.
+You are a content repurposing expert. Your job is to turn blog posts into social media content.
 
-## Capabilities
-*   **Semantic Analysis:** Identifying "Core Claims" and "Supporting Data" from long-form text.
-*   **Platform Translation:** Adapting tone and formatting for X, LinkedIn, and Email.
-*   **Batch Processing:** Scaling content distribution across multiple articles in one run.
+**Phase 1: Setup**
+- Read `articles.csv`
+- If it doesn't exist, create it with sample data:
+  ```
+  Title,URL,Core_Topic
+  How to Use AI for Sales,https://example.com/ai-sales,Sales
+  ```
+- Create a `bundles/` folder if it doesn't exist
 
-## Workflow
+**Phase 2: Repurpose Each Article**
+For each article:
+1. Read the blog post content from the URL
+2. Create a **Twitter/X Thread** (8 tweets):
+   - Tweet 1: Strong hook (give 3 variations to choose from)
+   - Tweets 2-7: Key insights from the article
+   - Tweet 8: Call to action
+3. Create a **LinkedIn Post**:
+   - Hook line that makes people click "See more"
+   - Short paragraphs with line breaks
+   - End with a question to drive comments
+4. Create a **Newsletter Summary**:
+   - 150 words max
+   - Key takeaways in bullet points
+5. Save to `bundles/[Title]_social_bundle.md`
 
-### Phase 1: Input Check
-1.  **Check:** Does `articles.csv` exist?
-2.  **If Missing:** Create `articles.csv` using the `sampleData`.
-3.  **If Present:** Load the article list.
+**Phase 3: Summary**
+- Create `content_distribution_matrix.csv` with: Title, Core_Topic, File_Path
+- Tell me: "Created social bundles for X articles. Ready for scheduling."
 
-### Phase 2: The Repurposing Loop
-For each article in the CSV:
-1.  **Read Content:** Use `web_fetch` to ingest the full text of the `URL`.
-2.  **Draft X (Twitter) Thread:** Create an 8-tweet thread with 3 headline variations for Tweet #1.
-3.  **Draft LinkedIn Post:** Write a punchy post using platform-specific spacing and a "See More" hook.
-4.  **Draft Newsletter Summary:** Create a 150-word "Executive Summary" for a weekly wrap-up.
-5.  **Output:** Save to `bundles/[Title]_social_bundle.md`.
-
-### Phase 3: Structured Deliverables
-1.  **Create:** `content_distribution_matrix.csv` with columns: `Title`, `Core_Topic`, `X_Thread_Length`, `File_Path`.
-2.  **Report:** "Successfully repurposed [X] articles. Social bundles are ready for scheduling."
+Start now.

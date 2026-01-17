@@ -2,13 +2,12 @@
 id: welcome-sequence
 category: Retention
 title: The Onboarding Factory
-tagline: Custom welcome sequences for every persona.
-difficulty: Intermediate
-time: 1 hour
+tagline: Create welcome email sequences.
+difficulty: Beginner
+time: 10 mins
+archetype: Processor
 description: >-
-  Different users have different 'Aha! Moments'. This agent reads a list of user
-  personas from a CSV and designs a specialized 5-day welcome sequence for each,
-  ensuring they reach activation fast.
+  Creates a 5-email welcome sequence for each user persona, designed to get them to their "aha moment" fast.
 sampleData:
   filename: user_personas.csv
   content: |
@@ -16,47 +15,55 @@ sampleData:
     Agency Owner,Sending first report,Profitable projects
     SaaS Founder,Installing the tag,Churn reduction
     E-com Manager,Adding first product,Increase AOV
-isPremium: true
 ---
 
-## ⚡ Run this with AI (Fastest)
-If you have **Claude Code** or **Gemini CLI** open in this folder, just copy and paste:
+# What This Does
+Creates a 5-email welcome sequence for each user persona. Each sequence is designed to get that specific user type to their "aha moment" as fast as possible.
 
-```bash
-implement the logic in public/blueprints/welcome-sequence/README.md
-```
+# What You Need
+A CSV file called `user_personas.csv` with columns: Persona, Aha_Moment, Goal
 
-**Option 2: The Manual Way**
-If you prefer using the ChatGPT or Claude web browser, copy the strategy below.
+# What You Get
+- One email sequence per persona in `onboarding_flows/` folder
+- Each sequence has 5 emails with subject lines and body copy
+- Ready to upload to your email tool (HubSpot, Intercom, etc.)
+
+# How to Use
+1. List your user personas in `user_personas.csv`
+2. Open Claude Code, Gemini CLI, or Cursor in that folder
+3. Copy and paste the prompt below
+4. Get complete email sequences for each persona
 
 ---
-# Agent Configuration: The Retention Architect
 
-## Role
-You are an **Onboarding Specialist**. You know that the first 24 hours determine if a user churns or stays.
+# Prompt
 
-## Objective
-Design specialized onboarding drips for a list of personas.
+You are an email marketing specialist. Your job is to create onboarding email sequences that reduce churn.
 
-## Capabilities
-*   **Behavioral Triggering:** Mapping product features to persona-specific goals.
-*   **Outcome-Driven Copy:** Focusing on "The Win", not the "How-To".
+**Phase 1: Setup**
+- Read `user_personas.csv`
+- If it doesn't exist, create it with sample data:
+  ```
+  Persona,Aha_Moment,Goal
+  Agency Owner,Sending first report,Profitable projects
+  SaaS Founder,Installing the tag,Reduce churn
+  ```
+- Create an `onboarding_flows/` folder if it doesn't exist
 
-## Workflow
+**Phase 2: Create Sequence for Each Persona**
+For each persona:
+1. Design a 5-email sequence:
+   - **Day 0 (Welcome)**: Welcome to the community, set expectations
+   - **Day 1 (Quick Win)**: Guide them to their Aha_Moment
+   - **Day 3 (Social Proof)**: Case study of someone like them succeeding
+   - **Day 5 (Power Tip)**: Advanced feature that delivers on their Goal
+   - **Day 7 (Check-in)**: Ask if they need help, soft CTA
+2. For each email, write:
+   - Subject line (with an alternative)
+   - Email body (150-200 words)
+3. Save to `onboarding_flows/welcome-[Persona].md`
 
-### Phase 1: Context Load
-1.  **Check:** Does `user_personas.csv` exist? If missing, create template.
+**Phase 3: Summary**
+- Tell me: "Created X onboarding sequences. Ready for upload."
 
-### Phase 2: The Design Loop
-For each persona in the CSV:
-1.  **Map:** Define the 5-day arc:
-    *   *Day 0:* Welcome to the community.
-    *   *Day 1:* The Quick Win (The `Aha_Moment`).
-    *   *Day 3:* The Case Study (How others like them use us).
-    *   *Day 5:* The Power User Tip.
-2.  **Draft:** Write the subject lines and core body for all 5 emails.
-
-### Phase 3: Packaging
-1.  **Action:** Create a folder `onboarding_flows/`.
-2.  **Save:** Save each flow as `welcome-[persona].md`.
-3.  **Report:** "Generated [X] onboarding sequences. Ready for HubSpot/Intercom upload."
+Start now.

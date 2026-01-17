@@ -3,66 +3,62 @@ id: lead-list-cleaner
 category: Sales Ops
 title: The Lead List Cleaner
 tagline: Never bounce an email again.
-difficulty: Advanced
-time: 15 mins
+difficulty: Beginner
+time: 5 mins
+archetype: Processor
 description: >-
-  Buying leads is risky; 30% of them are usually dead. This agent takes your raw
-  CSV, uses the `curl` command to ping every company website, and automatically
-  filters out domains that return 404/500 errors, saving your domain reputation.
+  30% of purchased leads have dead websites. This checks each company's website and separates the good leads from the dead ones.
 sampleData:
   filename: leads.csv
-  content: >
+  content: |
     Company,Website,Contact_Name,Email
-
     Acme Corp,https://www.google.com,John Doe,john@acme.com
-
-    Dead Startup,https://thisdomaindefinitelydoesnotexist12345.com,Jane
-    Smith,jane@deadstartup.com
-
+    Dead Startup,https://thisdomaindefinitelydoesnotexist12345.com,Jane Smith,jane@deadstartup.com
     Stripe,https://stripe.com,Patrick,patrick@stripe.com
-
     Broken Link,https://httpstat.us/404,Test User,test@broken.com
-isPremium: true
 ---
 
-## ⚡ Run this with AI (Fastest)
-If you have **Claude Code** or **Gemini CLI** open in this folder, just copy and paste:
+# What This Does
+Checks if company websites in your lead list are still alive. Separates good leads from dead ones.
 
-```bash
-implement the logic in public/blueprints/lead-list-cleaner/README.md
-```
+# What You Need
+A CSV file called `leads.csv` with columns: Company, Website, Contact_Name, Email
 
-**Option 2: The Manual Way**
-If you prefer using the ChatGPT or Claude web browser, copy the strategy below.
+# What You Get
+- `verified_leads.csv` — companies with working websites
+- `dead_leads.csv` — companies with broken/dead websites
+- Summary of how many were good vs dead
+
+# How to Use
+1. Save your lead list as `leads.csv` in a folder
+2. Open Claude Code, Gemini CLI, or Cursor in that folder
+3. Copy and paste the prompt below
+4. Wait — you'll get two cleaned files
 
 ---
-# Agent Configuration: The Lead List Cleaner
 
-## Role
-You are a **Sales Operations Manager** responsible for Deliverability. You know that a high bounce rate kills your email domain reputation.
+# Prompt
 
-## Objective
-Take a CSV of prospects, verify if their company website is active, and produce a "Clean" list.
+You are a lead list cleaner. Your job is to verify which company websites are still active.
 
-## Capabilities
-*   **File I/O:** Reading/Writing CSVs.
-*   **Network Verification:** Using `run_shell_command` with `curl -I` (Head request) to check status codes.
-*   **Data Cleaning:** Removing rows with dead domains.
+**Phase 1: Setup**
+- Read `leads.csv`
+- If it doesn't exist, create it with this sample data:
+  ```
+  Company,Website,Contact_Name,Email
+  Acme Corp,https://www.google.com,John Doe,john@acme.com
+  Test Company,https://httpstat.us/404,Jane Smith,jane@test.com
+  ```
 
-## Workflow
+**Phase 2: Check Each Website**
+For each row in the CSV:
+- Try to access the Website URL
+- If it returns 200, 301, or 302 → mark as "alive"
+- If it returns 404, 500, or times out → mark as "dead"
 
-### Phase 1: Ingestion
-1.  **Input:** User provides `leads.csv`.
-2.  **Read:** `read_file` to parse the `Website` column.
+**Phase 3: Save Results**
+- Save all alive leads to `verified_leads.csv`
+- Save all dead leads to `dead_leads.csv`
+- Tell me: "Found X verified leads and Y dead leads."
 
-### Phase 2: The Ping Test
-For each unique domain in the list:
-1.  **Action:** Execute `curl -I -m 5 [Domain]` (Check headers, max 5s timeout).
-2.  **Logic:**
-    *   *200/301/302:* Alive (Keep).
-    *   *404/500/Timeout:* Dead (Discard).
-
-### Phase 3: The Scrub
-Create two files:
-1.  `verified_leads.csv`: Only the rows where the website is alive.
-2.  `dead_leads.csv`: The rejected rows (so the user can get a refund from their data provider).
+Start now.

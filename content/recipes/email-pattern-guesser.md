@@ -2,13 +2,12 @@
 id: email-pattern-guesser
 category: Sales Eng
 title: The Email Permutator
-tagline: Standardize your lead research.
+tagline: Guess email addresses from names.
 difficulty: Beginner
-time: Batch
+time: 5 mins
+archetype: Processor
 description: >-
-  You have a list of names and domains, but no emails. This agent processes your
-  entire lead list and generates the top 10 most common corporate email patterns
-  for each prospect.
+  Generates possible email addresses for your leads based on common corporate patterns like first.last@company.com.
 sampleData:
   filename: prospects.csv
   content: |
@@ -16,51 +15,52 @@ sampleData:
     John,Doe,acme.com
     Jane,Smith,globex.io
     Mike,Ross,pearsonhardman.com
-isPremium: true
 ---
 
-## ⚡ Run this with AI (Fastest)
-If you have **Claude Code** or **Gemini CLI** open in this folder, just copy and paste:
+# What This Does
+Takes a list of names and company domains, generates the most likely email addresses using common patterns (first.last@, flast@, first@, etc.).
 
-```bash
-implement the logic in public/blueprints/email-pattern-guesser/README.md
-```
+# What You Need
+A CSV file called `prospects.csv` with columns: First_Name, Last_Name, Domain
 
-**Option 2: The Manual Way**
-If you prefer using the ChatGPT or Claude web browser, copy the strategy below.
+# What You Get
+- `lead_permutations.csv` — each row has 5 possible email guesses
+- Ready to verify with tools like NeverBounce or ZeroBounce
+
+# How to Use
+1. Create your `prospects.csv` with names and company domains
+2. Open Claude Code, Gemini CLI, or Cursor in that folder
+3. Copy and paste the prompt below
+4. Get email guesses for each person
 
 ---
-# Agent Configuration: The Sourcer
 
-## Role
-You are a **Lead Researcher**. You turn basic profile data into reachable contact info by understanding the most common conventions of corporate email servers.
+# Prompt
 
-## Objective
-Generate valid email permutations for a list of prospects based on their names and company domains.
+You are a lead researcher. Your job is to generate possible email addresses for a list of prospects.
 
-## Capabilities
-*   **Permutation Logic:** Creating first.last, f.last, first, and last@ conventions.
-*   **Formatting:** Ensuring all emails are lowercase and have spaces removed.
-*   **Batch Processing:** Processing hundreds of prospects in one run.
+**Phase 1: Setup**
+- Read `prospects.csv`
+- If it doesn't exist, create it with sample data:
+  ```
+  First_Name,Last_Name,Domain
+  John,Doe,acme.com
+  Jane,Smith,globex.io
+  ```
 
-## Workflow
+**Phase 2: Generate Email Patterns**
+For each prospect:
+1. Lowercase the first name, last name, and domain
+2. Generate these 5 email patterns:
+   - first.last@domain.com
+   - firstlast@domain.com
+   - flast@domain.com (first initial + last name)
+   - first@domain.com
+   - last@domain.com
+3. Combine all 5 into a comma-separated list
 
-### Phase 1: Input Check
-1.  **Check:** Does `prospects.csv` exist?
-2.  **If Missing:** Create `prospects.csv` using the `sampleData`.
-3.  **If Present:** Load the prospect list.
+**Phase 3: Save Results**
+- Save to `lead_permutations.csv` with columns: First_Name, Last_Name, Domain, Email_Guesses
+- Tell me: "Generated email patterns for X prospects. Ready for verification."
 
-### Phase 2: The Permutation Loop
-For each prospect in the CSV:
-1.  **Normalize:** Lowercase the `First_Name`, `Last_Name`, and `Domain`.
-2.  **Generate Top 5 Patterns:**
-    *   `[First].[Last]@[Domain]`
-    *   `[FirstInitial][Last]@[Domain]`
-    *   `[First]@[Domain]`
-    *   `[First][LastInitial]@[Domain]`
-    *   `[Last]@[Domain]`
-3.  **Consolidate:** Join the patterns into a single string for the CSV.
-
-### Phase 3: Structured Deliverables
-1.  **Create:** `lead_permutations.csv` with columns: `First_Name`, `Last_Name`, `Domain`, `Email_Guesses`.
-2.  **Report:** "Successfully generated permutations for [X] prospects. Ready for email verification (e.g., NeverBounce or ZeroBounce)."
+Start now.
