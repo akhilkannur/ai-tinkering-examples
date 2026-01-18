@@ -2,52 +2,37 @@ import {
   Users, Zap, Globe, Search, BarChart,
   PenTool, Share2, Mail, Database, Target,
   Briefcase, TrendingUp, ShieldCheck, PieChart,
-  HeartHandshake, MessageSquare
+  HeartHandshake, MessageSquare, ShoppingCart, 
+  Settings, Repeat
 } from 'lucide-react';
 
 export type Category =
   | 'Lead Gen'
-  | 'Enrichment'
-  | 'Content Ops'
-  | 'SEO'
-  | 'Competitor Intel'
-  | 'CRO'
-  | 'CRM Ops'
-  | 'Social Automation'
-  | 'Outreach'
   | 'Sales Ops'
   | 'Marketing Ops'
-  | 'RevOps'
-  | 'PLG Sales'
-  | 'Field Marketing'
-  | 'Social Selling'
-  | 'Advanced RevOps'
-  | 'Customer Advocacy'
-  | 'E-commerce Growth'
-  | 'AI Setup'
-  | 'Customer Success';
+  | 'Content Ops'
+  | 'SEO'
+  | 'Competitive Intel'
+  | 'CRO'
+  | 'Paid Media'
+  | 'Customer Success'
+  | 'Retention'
+  | 'E-commerce'
+  | 'Strategic Ops';
 
 export const categoryIcons: Record<Category, any> = {
   'Lead Gen': Users,
-  'Enrichment': Database,
+  'Sales Ops': Briefcase,
+  'Marketing Ops': Settings,
   'Content Ops': PenTool,
   'SEO': Search,
-  'Competitor Intel': BarChart,
+  'Competitive Intel': BarChart,
   'CRO': Zap,
-  'CRM Ops': Target,
-  'Social Automation': Share2,
-  'Outreach': Mail,
-  'Sales Ops': Briefcase,
-  'Marketing Ops': TrendingUp,
-  'RevOps': ShieldCheck,
-  'PLG Sales': Zap,
-  'Field Marketing': Globe,
-  'Social Selling': MessageSquare,
-  'Advanced RevOps': PieChart,
-  'Customer Advocacy': HeartHandshake,
-  'E-commerce Growth': TrendingUp,
-  'AI Setup': Zap,
-  'Customer Success': HeartHandshake
+  'Paid Media': Target,
+  'Customer Success': HeartHandshake,
+  'Retention': Repeat,
+  'E-commerce': ShoppingCart,
+  'Strategic Ops': ShieldCheck
 };
 
 export const categoryDescriptions: Record<string, { title: string, description: string }> = {
@@ -62,10 +47,6 @@ export const categoryDescriptions: Record<string, { title: string, description: 
   'seo': {
     title: 'AI SEO Blueprints & Workflows',
     description: 'Move beyond keyword research. Automate internal linking, technical audits, and content clustering with agentic SEO blueprints.'
-  },
-  'revops': {
-    title: 'Revenue Operations (RevOps) Agents',
-    description: 'The unified layer for Sales and Marketing. Automate contract renewals, pricing audits, and expansion propensity scoring.'
   },
   'lead-gen': {
     title: 'AI Lead Generation Workflows',
@@ -91,4 +72,3 @@ export interface Recipe {
   };
   sampleOutput?: string;
 }
-
