@@ -19,20 +19,22 @@ sampleData:
 isPremium: true
 ---
 
-# Agent Configuration: The Postmaster
+# Agent Configuration: The Bulk Deliverability Auditor
 
 ## Role
-You are a **Deliverability Engineer**. You protect the company's email reputation. You know that missing DNS records are the #1 reason for "Silent Spam Filtering."
+Content doesn't matter if your email bounces. This agent reads a list of domains from a CSV and uses the `dig` command to verify that SPF, DKIM, and DMARC are correctly configured for every single one.
 
 ## Objective
-Audit the technical authentication records for a list of domains.
-
-## Capabilities
-*   **Shell Scripting:** Using `dig` and `grep` to query DNS servers.
-*   **Protocol Auditing:** verifying SPF, DKIM, and DMARC syntax.
+Audit the sender reputation of 100 domains.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `domains_to_test.csv` exist?
+2.  **If Missing:** Create `domains_to_test.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Context Load
 1.  **Check:** Does `domains_to_test.csv` exist? If missing, create template.
 
@@ -49,3 +51,7 @@ For each domain in the CSV:
 ### Phase 3: The Health Report
 1.  **Create:** `deliverability_health_report.csv`.
 2.  **Summary:** "Processed [X] domains. [Y] are at high risk of being blocked by Gmail/Outlook."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

@@ -6,7 +6,9 @@ tagline: Build the "Us vs Them" comparison grid for your pricing page.
 difficulty: Intermediate
 time: 15 mins
 archetype: Hybrid
-description: Researches 3 competitors to see if they have specific features (SSO, API, Dark Mode, etc.) and generates a CSV that can be turned into a checkmark grid.
+description: >-
+  Researches 3 competitors to see if they have specific features (SSO, API, Dark
+  Mode, etc.) and generates a CSV that can be turned into a checkmark grid.
 sampleData:
   filename: comparison_setup.txt
   content: |
@@ -21,24 +23,22 @@ sampleData:
     Competitor B
 ---
 
-# What This Does
-You know those charts on pricing pages with green checks and red Xs? This agent builds the data for them. It checks competitor pricing pages to verify feature availability so you don't get sued for lying.
+# Agent Configuration: The Feature Parity Matrix
 
-# What You Need
-- `comparison_setup.txt`: A file containing both your feature list and the competitors to check.
+## Role
+Researches 3 competitors to see if they have specific features (SSO, API, Dark Mode, etc.) and generates a CSV that can be turned into a checkmark grid.
 
-# What You Get
-- `comparison_matrix.csv`: The filled-out grid.
+## Objective
+Build the "Us vs Them" comparison grid for your pricing page.
 
-# How to Use
-1. List the features you care about and your competitors in the setup file.
-2. Run the blueprint.
-3. Import the CSV into a chart builder (or just use it to argue with Product Management).
+## Workflow
 
----
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `comparison_setup.txt` exist?
+2.  **If Missing:** Create `comparison_setup.txt` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
 
-# Prompt
-
+### Phase 2: The Loop
 You are a **Product Marketer**. Your job is to build a Comparison Matrix.
 
 **Phase 1: Research**
@@ -59,3 +59,7 @@ You are a **Product Marketer**. Your job is to build a Comparison Matrix.
 Save to `comparison_matrix.csv`.
 
 Start now.
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

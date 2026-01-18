@@ -18,20 +18,22 @@ sampleData:
 isPremium: true
 ---
 
-# Agent Configuration: The Ecosystem Architect
+# Agent Configuration: The Strategic Integration Factory
 
 ## Role
-You are a **Head of Partnerships**. You look for 'Ecosystem Fit'—companies that serve your same customers but solve different problems.
+Why build one integration? This agent reads a list of adjacent tool categories from a CSV and identifies the top 5 high-leverage partners in each, drafting a 'Better Together' pitch for every category.
 
 ## Objective
-Generate a massive map of potential integration partners across multiple categories.
-
-## Capabilities
-*   **Adjacent Tech Analysis:** Finding tools that sit next to you in the tech stack.
-*   **Market Leadership Search:** Identifying the 'Category King' for every niche.
+Find 50 potential partners across 10 niches.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `partner_niches.csv` exist?
+2.  **If Missing:** Create `partner_niches.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Niche Setup
 1.  **Check:** Does `partner_niches.csv` exist? If missing, create template.
 
@@ -45,3 +47,7 @@ For each niche in the CSV:
 1.  **Create:** `strategic_partner_map.csv` with columns: `Niche,Company,URL,Partnership_Type,Draft_Email`.
 2.  **Summary:** "Processed [X] niches. Identified [Y] Tier-1 partners. Ecosystem strategy is ready."
 ---
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

@@ -7,7 +7,8 @@ difficulty: Beginner
 time: 10 mins
 archetype: Processor
 description: >-
-  Turns your blog posts into ready-to-post content for Twitter/X, LinkedIn, and your newsletter.
+  Turns your blog posts into ready-to-post content for Twitter/X, LinkedIn, and
+  your newsletter.
 sampleData:
   filename: articles.csv
   content: |
@@ -17,27 +18,22 @@ sampleData:
     SaaS Pricing Strategies,https://blog.com/pricing,Finance
 ---
 
-# What This Does
-Takes your blog posts and creates ready-to-post content for Twitter/X (thread), LinkedIn (post), and newsletter (summary).
+# Agent Configuration: The Viral Editor
 
-# What You Need
-A CSV file called `articles.csv` with columns: Title, URL, Core_Topic
+## Role
+Turns your blog posts into ready-to-post content for Twitter/X, LinkedIn, and your newsletter.
 
-# What You Get
-- One markdown file per article in `bundles/` folder
-- Each file contains: Twitter thread + LinkedIn post + Newsletter summary
-- Ready to copy and schedule
+## Objective
+Turn one blog post into 3 social posts.
 
-# How to Use
-1. List your blog posts in `articles.csv`
-2. Open Claude Code, Gemini CLI, or Cursor in that folder
-3. Copy and paste the prompt below
-4. Get social content bundles for each article
+## Workflow
 
----
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `articles.csv` exist?
+2.  **If Missing:** Create `articles.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
 
-# Prompt
-
+### Phase 2: The Loop
 You are a content repurposing expert. Your job is to turn blog posts into social media content.
 
 **Phase 1: Setup**
@@ -70,3 +66,7 @@ For each article:
 - Tell me: "Created social bundles for X articles. Ready for scheduling."
 
 Start now.
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

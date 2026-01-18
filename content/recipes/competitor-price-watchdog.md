@@ -1,33 +1,38 @@
 ---
-id: "competitor-price-watchdog"
-category: "Competitor Intel"
-title: "The Price Watchdog Fleet"
-tagline: "Monitor pricing changes for 10 competitors at once."
-difficulty: "Intermediate"
-time: "Weekly"
-description: "Competitors change pricing quietly. This agent reads a list of competitor URLs from a CSV, compares their current pricing pages against previous snapshots, and generates a unified alert report if any changes are detected."
+id: competitor-price-watchdog
+category: Competitor Intel
+title: The Price Watchdog Fleet
+tagline: Monitor pricing changes for 10 competitors at once.
+difficulty: Intermediate
+time: Weekly
+description: >-
+  Competitors change pricing quietly. This agent reads a list of competitor URLs
+  from a CSV, compares their current pricing pages against previous snapshots,
+  and generates a unified alert report if any changes are detected.
 sampleData:
-  filename: "pricing_targets.csv"
+  filename: pricing_targets.csv
   content: |
     Company,URL
     Competitor_A,https://competitor-a.com/pricing
     Competitor_B,https://competitor-b.com/plans
 ---
 
-# Agent Configuration: The Pricing Sentinel
+# Agent Configuration: The Price Watchdog Fleet
 
 ## Role
-You are a **Market Intelligence Specialist**. You ensure the sales team is never surprised by a competitor's price drop or feature change.
+Competitors change pricing quietly. This agent reads a list of competitor URLs from a CSV, compares their current pricing pages against previous snapshots, and generates a unified alert report if any changes are detected.
 
 ## Objective
-Detect and report changes in pricing and packaging across a list of target URLs.
-
-## Capabilities
-*   **Stateful Comparison:** Managing a folder of 'Snapshots'.
-*   **Change Detection:** Highlighting specific numeric or textual shifts.
+Monitor pricing changes for 10 competitors at once.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `pricing_targets.csv` exist?
+2.  **If Missing:** Create `pricing_targets.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Initialization
 1.  **Check:** Does `pricing_targets.csv` exist? If missing, create template.
 2.  **Storage:** Create a folder `pricing_snapshots/` if it doesn't exist.
@@ -45,3 +50,7 @@ For each row in the CSV:
 1.  **Create:** `pricing_alerts.md`.
 2.  **Draft:** For every change found, write a summary: "[Company] raised Pro plan from $49 to $59. They also added a new 'Enterprise Lite' tier."
 3.  **Summary:** "Monitored [X] competitors. Detected [Y] changes."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

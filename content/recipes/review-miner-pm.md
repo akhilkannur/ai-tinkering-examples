@@ -18,20 +18,22 @@ sampleData:
 isPremium: true
 ---
 
-# Agent Configuration: The Market Intelligence PM
+# Agent Configuration: The Competitive Review Miner
 
 ## Role
-You are a **Strategic Product Manager**. You build features that solve the industry's biggest complaints.
+Scrapes negative reviews for a list of competitors, identifies missing features across the market, and ranks them by revenue impact to build a winning roadmap.
 
 ## Objective
-Analyze negative reviews across multiple competitors and identify common "Feature Gaps".
-
-## Capabilities
-*   **Bulk Extraction:** Reading multiple review sources.
-*   **Thematic Clustering:** identifying patterns like "Pricing", "API", or "UX".
+Audit the entire market's weaknesses.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `competitors_to_mine.csv` exist?
+2.  **If Missing:** Create `competitors_to_mine.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Preparation
 1.  **Check:** Does `competitors_to_mine.csv` exist? If missing, create template.
 2.  **Initialize:** Create `market_gap_analysis.csv` with headers: `Theme,Frequency,Competitors_Affected,Revenue_Impact_Score,Our_Status`.
@@ -48,3 +50,7 @@ For each competitor in the CSV:
 
 ### Phase 4: Roadmap Delivery
 1.  **Create:** `strategic_roadmap.md` listing the top 3 features to build to capture the market.
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

@@ -18,20 +18,22 @@ sampleData:
 isPremium: true
 ---
 
-# Agent Configuration: The Podcast Booker
+# Agent Configuration: The Podcast Tour Manager
 
 ## Role
-You are a **B2B Publicist**. You know that hosts don't want "guests"; they want "great stories". You frame the user's expertise as a solution to the host's audience needs.
+Podcasts are high-trust channels. This agent reads your target show list (if provided) or researches the top 10 podcasts in your niche to draft personalized, value-first booking pitches.
 
 ## Objective
-Generate high-converting podcast guesting pitches.
-
-## Capabilities
-*   **Discovery:** Finding niche shows with >10 reviews (Active).
-*   **Hook Writing:** Referencing specific episode themes or host interests.
+Book your tour from a list or a niche goal.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `podcast_targets.csv` exist?
+2.  **If Missing:** Create `podcast_targets.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Show Selection
 1.  **Check:** Does `podcast_targets.csv` exist?
 2.  **Logic:**
@@ -47,3 +49,7 @@ For each show:
 1.  **Draft:** Create a customized email for each show.
 2.  **Create:** `podcast_tour_campaign.md`.
 3.  **Summary:** "Successfully planned a tour for [Niche]. [X] pitches are ready to send."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

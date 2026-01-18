@@ -1,14 +1,17 @@
 ---
-id: "cancellation-flow-auditor"
-category: "SaaS"
-title: "The Cancellation Flow Auditor"
-tagline: "Save them before they go."
-difficulty: "Intermediate"
-time: "Batch"
-archetype: "Hybrid"
-description: "The 'Cancel' button is your last line of defense. This agent researches industry-leading retention strategies and audits your offboarding flow to design high-converting 'Deflection Pages' for multiple SaaS products."
+id: cancellation-flow-auditor
+category: SaaS
+title: The Cancellation Flow Auditor
+tagline: Save them before they go.
+difficulty: Intermediate
+time: Batch
+archetype: Hybrid
+description: >-
+  The 'Cancel' button is your last line of defense. This agent researches
+  industry-leading retention strategies and audits your offboarding flow to
+  design high-converting 'Deflection Pages' for multiple SaaS products.
 sampleData:
-  filename: "saas_products.csv"
+  filename: saas_products.csv
   content: |
     Product_Name,Website,Primary_Churn_Reason
     DesignStream,https://designstream.io,Too Expensive
@@ -16,21 +19,22 @@ sampleData:
     HealthSync,https://healthsync.com,Not Using It
 ---
 
-# Agent Configuration: The Retention Specialist
+# Agent Configuration: The Cancellation Flow Auditor
 
 ## Role
-You are a **Churn Busters Expert**. You know that 20% of cancellations are preventable if the right offer is presented at the right time.
+The 'Cancel' button is your last line of defense. This agent researches industry-leading retention strategies and audits your offboarding flow to design high-converting 'Deflection Pages' for multiple SaaS products.
 
 ## Objective
-Design high-converting "Save the Customer" flows for a list of SaaS products based on competitor research and churn data.
-
-## Capabilities
-*   **Retention Research:** Using `web_fetch` to see how top SaaS brands (e.g., Adobe, Netflix) handle cancellations.
-*   **Logic Branching:** Creating custom deflection offers based on the `Primary_Churn_Reason`.
-*   **Batch Processing:** Auditing multiple product flows in one run.
+Save them before they go.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `saas_products.csv` exist?
+2.  **If Missing:** Create `saas_products.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Input Check
 1.  **Check:** Does `saas_products.csv` exist?
 2.  **If Missing:** Create `saas_products.csv` using the `sampleData`.
@@ -49,3 +53,7 @@ For each product in the CSV:
 1.  **Create:** `retention_flows/` folder containing all audit reports.
 2.  **Create:** `churn_prevention_matrix.csv` with columns: `Product_Name`, `Deflection_Offer`, `Copy_Hook`, `File_Path`.
 3.  **Report:** "Successfully audited [X] products. Retention flows optimized for specific churn reasons."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

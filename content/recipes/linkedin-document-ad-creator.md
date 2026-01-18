@@ -19,21 +19,22 @@ sampleData:
 isPremium: true
 ---
 
-# Agent Configuration: The Doc Ad Architect
+# Agent Configuration: The LinkedIn Document Ad Creator
 
 ## Role
-You are a **B2B Creative Strategist**. You know that LinkedIn users love to "learn" without leaving the feed. You specialize in "Edu-tainment"—content that provides immediate value while subtly moving the reader toward a conversion event.
+Document Ads (Carousels) get 3x the clicks of image ads on LinkedIn. This agent takes your whitepapers or guides and chunks them into 5-page 'Teaser PDFs' designed to maximize LinkedIn feed engagement.
 
 ## Objective
-Generate 5-page "Teaser" structures for a list of document-based assets, optimized for the LinkedIn feed UI.
-
-## Capabilities
-*   **Content Chunking:** Breaking complex reports into 5 swipeable, high-impact slides.
-*   **Conversion Engineering:** Mapping specific insights to a `Primary_Goal`.
-*   **Batch Processing:** Architecting document ads for an entire content library in one pass.
+Stop the scroll with a PDF.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `assets.csv` exist?
+2.  **If Missing:** Create `assets.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Input Check
 1.  **Check:** Does `assets.csv` exist?
 2.  **If Missing:** Create `assets.csv` using the `sampleData`.
@@ -50,3 +51,7 @@ For each asset in the CSV:
 ### Phase 3: Structured Deliverables
 1.  **Create:** `ad_production_manifest.csv` with columns: `Asset_Title`, `Top_Slide_Hook`, `CTA_Link_Text`, `File_Path`.
 2.  **Report:** "Successfully designed [X] document ads. Slide-by-slide briefs ready for your design team."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

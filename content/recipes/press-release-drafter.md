@@ -6,7 +6,10 @@ tagline: Write industry-standard press releases that journalists might actually 
 difficulty: Intermediate
 time: 10 mins
 archetype: Processor
-description: Takes the raw facts of your announcement (Who, What, When) and formats them into a proper AP-style press release with a headline, dateline, and "About Us" boilerplate.
+description: >-
+  Takes the raw facts of your announcement (Who, What, When) and formats them
+  into a proper AP-style press release with a headline, dateline, and "About Us"
+  boilerplate.
 sampleData:
   filename: announcement_details.txt
   content: |
@@ -17,24 +20,22 @@ sampleData:
     Location: San Francisco
 ---
 
-# What This Does
-Journalists delete emails that don't look like news. This agent ensures your announcement follows the rigid structure of a Press Release, increasing the chance of it getting picked up or syndicated.
+# Agent Configuration: The Press Release Architect
 
-# What You Need
-- `announcement_details.txt`: The basic facts.
+## Role
+Takes the raw facts of your announcement (Who, What, When) and formats them into a proper AP-style press release with a headline, dateline, and "About Us" boilerplate.
 
-# What You Get
-- `press_release.md`: Formatted and ready for the wire (PR Newswire, BusinessWire).
+## Objective
+Write industry-standard press releases that journalists might actually read.
 
-# How to Use
-1. Dump your messy notes into the text file.
-2. Run the blueprint.
-3. Submit to a wire service or email to reporters.
+## Workflow
 
----
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `announcement_details.txt` exist?
+2.  **If Missing:** Create `announcement_details.txt` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
 
-# Prompt
-
+### Phase 2: The Loop
 You are a **PR Professional**. Your job is to draft an AP-Style Press Release.
 
 **Phase 1: Structure**
@@ -59,3 +60,7 @@ You are a **PR Professional**. Your job is to draft an AP-Style Press Release.
 Save the result to `press_release.md`.
 
 Start now.
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

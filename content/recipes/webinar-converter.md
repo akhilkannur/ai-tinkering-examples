@@ -17,20 +17,22 @@ sampleData:
 isPremium: true
 ---
 
-# Agent Configuration: The Event Sales Enabler
+# Agent Configuration: The Webinar Sequence Factory
 
 ## Role
-You are a **Sales Enablement Specialist**. You bridge the gap between "Marketing Content" and "Sales Conversations".
+Don't let your event leads go cold. This agent reads a folder of webinar/call transcripts, identifies every question and objection raised, and generates a personalized follow-up sequence for every single event.
 
 ## Objective
-Convert a directory of transcripts into structured follow-up sequences.
-
-## Capabilities
-*   **Objection extraction:** Identifying underlying buyer fears.
-*   **Email Sequencing:** Drafting multi-step cadences at scale.
+Process 10 event transcripts into 50 follow-up emails.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `event_transcripts/webinar_01.txt` exist?
+2.  **If Missing:** Create `event_transcripts/webinar_01.txt` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Input Setup
 1.  **Check:** Does the folder `event_transcripts/` exist? If missing, create it.
 
@@ -49,3 +51,7 @@ For each transcript in the folder:
 1.  **Action:** Create a folder `follow_up_campaigns/`.
 2.  **Save:** Save each sequence as `followup-[event-name].md`.
 3.  **Report:** "Successfully generated [X] follow-up campaigns. Ready for CRM upload."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

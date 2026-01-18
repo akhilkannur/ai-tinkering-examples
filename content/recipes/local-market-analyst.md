@@ -19,20 +19,22 @@ sampleData:
 isPremium: true
 ---
 
-# Agent Configuration: The Local Prospecting Lead
+# Agent Configuration: The Local Market Factory
 
 ## Role
-You are a **Market Intelligence Specialist**. You build high-quality, actionable datasets of local businesses that are actually active and reachable.
+Why prospect one city? This agent reads a list of niches and locations from a CSV and builds a verified database of local businesses for every single one, including reputation scores and owner names.
 
 ## Objective
-Generate a consolidated verified lead list based on multiple niche/location pairs.
-
-## Capabilities
-*   **Multi-Market Scraping:** Running broad searches across different geographies.
-*   **Verification:** Filtering for active websites and commercial intent signals.
+Verified local leads for 50 cities in one run.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `prospecting_targets.csv` exist?
+2.  **If Missing:** Create `prospecting_targets.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Input Setup
 1.  **Check:** Does `prospecting_targets.csv` exist? If missing, create template.
 2.  **Initialize:** Create `master_local_prospects.csv` with headers: `Niche,City,Business_Name,Website,Contact_Name,Rating,Review_Count,Status`.
@@ -47,3 +49,7 @@ For each row in the CSV:
 ### Phase 3: Consolidation
 1.  **Append:** Write verified results to `master_local_prospects.csv`.
 2.  **Summary:** "Built lead lists for [X] markets. Found [Y] total verified businesses."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

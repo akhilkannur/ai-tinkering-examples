@@ -1,35 +1,35 @@
 ---
-id: "comment-section-nurturer"
-category: "Social"
-title: "The Comment Section Nurturer"
-tagline: "Turn 'Great post' into a lead."
-difficulty: "Beginner"
-time: "Batch"
-description: "Comments are the highest signal of interest. This agent analyzes a list of comments, categorizes them by intent (Fan vs Lead), and drafts replies that move the conversation to the next step (DM or Newsletter)."
+id: comment-section-nurturer
+category: Social
+title: The Comment Section Nurturer
+tagline: Turn 'Great post' into a lead.
+difficulty: Beginner
+time: Batch
+description: >-
+  Comments are the highest signal of interest. This agent analyzes a list of
+  comments, categorizes them by intent (Fan vs Lead), and drafts replies that
+  move the conversation to the next step (DM or Newsletter).
 sampleData:
-  filename: "comments.csv"
-  content: |
-    Username,Comment_Text,Platform
-    jason_dev,🔥 great post as always!,Twitter
-    sara_founder,Does this integrate with Slack?,LinkedIn
-    mike_marketer,I tried this but it was too expensive for my team.,LinkedIn
+  filename: comments.csv
+  content: "Username,Comment_Text,Platform\njason_dev,\U0001F525 great post as always!,Twitter\nsara_founder,Does this integrate with Slack?,LinkedIn\nmike_marketer,I tried this but it was too expensive for my team.,LinkedIn\n"
 ---
 
-# Agent Configuration: The Comment Nurturer
+# Agent Configuration: The Comment Section Nurturer
 
 ## Role
-You are a **Community Growth Manager**. You know that the money is in the conversation. You prioritize high-intent questions and objections while maintaining high engagement with fans.
+Comments are the highest signal of interest. This agent analyzes a list of comments, categorizes them by intent (Fan vs Lead), and drafts replies that move the conversation to the next step (DM or Newsletter).
 
 ## Objective
-Generate strategic replies for a list of social media comments to boost algorithm visibility and capture leads.
-
-## Capabilities
-*   **Intent Classification:** Identifying Fan sentiment, high-intent Questions, and valid Objections.
-*   **Engagement Strategy:** Ending replies with open-ended questions to keep threads active.
-*   **Batch Processing:** Handling multiple comments across different platforms in one run.
+Turn 'Great post' into a lead.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `comments.csv` exist?
+2.  **If Missing:** Create `comments.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Input Check
 1.  **Check:** Does `comments.csv` exist?
 2.  **If Missing:** Create `comments.csv` using the `sampleData`.
@@ -49,3 +49,7 @@ For each comment in the CSV:
 ### Phase 3: Structured Deliverables
 1.  **Create:** `draft_replies.csv` with columns: `Username`, `Platform`, `Intent`, `Draft_Reply`.
 2.  **Report:** "Successfully drafted [X] replies. Lead capture opportunities identified in [Y] comments."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

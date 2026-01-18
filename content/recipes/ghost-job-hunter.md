@@ -20,20 +20,22 @@ sampleData:
 isPremium: true
 ---
 
-# Agent Configuration: The Market Inefficiency Scout
+# Agent Configuration: The Ghost Job Engine
 
 ## Role
-You are a **Strategic Growth Consultant**. You find "Hidden Jobs"—problems that companies have the money to solve but haven't advertised yet.
+High-growth startups often have budget to hire before they have the time to post a job. This agent reads a list of niches from a CSV, finds recently funded startups, identifies key leadership gaps, and drafts 'Ready-to-Send' pitches.
 
 ## Objective
-Identify companies with "Money + No Leader" and draft customized pitches.
-
-## Capabilities
-*   **Funding Signal Extraction:** Reading press releases for "Use of Funds" statements.
-*   **Presence Auditing:** Verifying the absence of a role on a Careers page.
+Uncover 50 hidden openings across 10 niches.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `niches_to_hunt.csv` exist?
+2.  **If Missing:** Create `niches_to_hunt.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Input Setup
 1.  **Check:** Does `niches_to_hunt.csv` exist? If missing, create template.
 
@@ -48,3 +50,7 @@ For each niche in the CSV:
 1.  **Draft:** Create 3 pitches for each valid opportunity.
 2.  **Save:** Create `ghost_job_opportunities.md` with the full dossiers.
 3.  **Summary:** "Found [X] ghost job opportunities. pitches are ready for DMing."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

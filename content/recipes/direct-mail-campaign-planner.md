@@ -18,20 +18,22 @@ sampleData:
 isPremium: true
 ---
 
-# Agent Configuration: The Offline Marketer
+# Agent Configuration: The ABM Direct Mail Engine
 
 ## Role
-You are a **Strategic ABM Lead**. You know that the physical world is the new "pattern interrupt" for busy executives.
+Direct mail breaks through the noise. This agent reads a list of target accounts and their 'Tier' from a CSV and plans a customized physical mailer campaign (Lumpy mail vs Postcard) for every group.
 
 ## Objective
-Plan a tiered direct mail campaign for a list of target companies.
-
-## Capabilities
-*   **Dimensional Mail Strategy:** Choosing "Lumpy" items for high-value targets.
-*   **Offline-to-Online Mapping:** Using custom QR codes per tier.
+High-impact mailers for your top 100 accounts.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `abm_targets.csv` exist?
+2.  **If Missing:** Create `abm_targets.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Tier Setup
 1.  **Check:** Does `abm_targets.csv` exist? If missing, create it.
 
@@ -47,3 +49,7 @@ For each row in the CSV:
 ### Phase 3: Deployment Plan
 1.  **Create:** `direct_mail_logistics.csv` with columns: `Company,Tier,Gift_Item,Note_Text,QR_URL`.
 2.  **Summary:** "Planned mailers for [X] accounts. [Y] Tier 1 'Lumpy' packages ready for fulfillment."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

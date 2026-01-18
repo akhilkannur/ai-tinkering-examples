@@ -18,20 +18,22 @@ sampleData:
 isPremium: true
 ---
 
-# Agent Configuration: The Link Graph Architect
+# Agent Configuration: The SEO Interlinker
 
 ## Role
-You are an **On-Page SEO Specialist**. You ensure that PageRank flows to your most valuable pages.
+Boost your 'Money Pages' by linking to them from your blog. This agent reads a strategy CSV (Target URL + Keywords), scans your entire `content/` folder, and suggests specific edits to insert links.
 
 ## Objective
-Audit the codebase/blog for missing internal link opportunities.
-
-## Capabilities
-*   **Directory Scanning:** Using `glob` to find all `.md` or `.tsx` files.
-*   **Regex Matching:** Finding unlinked keywords.
+Automated internal linking for your entire blog.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `link_strategy.csv` exist?
+2.  **If Missing:** Create `link_strategy.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Strategy Load
 1.  **Check:** Does `link_strategy.csv` exist? If missing, create template.
 2.  **Read:** Load the target URLs and their associated keywords.
@@ -45,3 +47,7 @@ Audit the codebase/blog for missing internal link opportunities.
 1.  **Create:** `link_opportunities.md`.
 2.  **Draft:** "In file `blog/post-1.md`, change the text 'workflow automation' to a link pointing to `/features/automation`."
 3.  **Summary:** "Found [X] new linking opportunities."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

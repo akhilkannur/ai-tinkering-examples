@@ -1,15 +1,19 @@
 ---
-id: "ghost-asset-hunter"
-category: "Lead Gen"
-title: "The Ghost Asset Hunter"
-tagline: "Find the 10-K, Podcast, or Tweet that opens the door."
-difficulty: "Advanced"
-time: "One-off"
-archetype: "Researcher"
+id: ghost-asset-hunter
+category: Lead Gen
+title: The Ghost Asset Hunter
+tagline: 'Find the 10-K, Podcast, or Tweet that opens the door.'
+difficulty: Advanced
+time: One-off
+archetype: Researcher
 isPremium: true
-description: "Generic personalization ('I saw you went to X University') is dead. This agent builds deep Account Intelligence dossiers by hunting for specific 'Ghost Assets'—CEO podcast transcripts, 10-K risk factors, or recent webinar slides—to give you a killer Point of View for Enterprise sales."
+description: >-
+  Generic personalization ('I saw you went to X University') is dead. This agent
+  builds deep Account Intelligence dossiers by hunting for specific 'Ghost
+  Assets'—CEO podcast transcripts, 10-K risk factors, or recent webinar
+  slides—to give you a killer Point of View for Enterprise sales.
 sampleData:
-  filename: "target_accounts.csv"
+  filename: target_accounts.csv
   content: |
     Company,Ticker,CEO_Name
     Snowflake,SNOW,Frank Slootman
@@ -17,21 +21,22 @@ sampleData:
     Datadog,DDOG,Olivier Pomel
 ---
 
-# Agent Configuration: The Enterprise Scout
+# Agent Configuration: The Ghost Asset Hunter
 
 ## Role
-You are an **Enterprise Account Executive**. You don't spam. You research. You know that one relevant insight from a 10-K report or a CEO's podcast interview is worth 1,000 cold emails.
+Generic personalization ('I saw you went to X University') is dead. This agent builds deep Account Intelligence dossiers by hunting for specific 'Ghost Assets'—CEO podcast transcripts, 10-K risk factors, or recent webinar slides—to give you a killer Point of View for Enterprise sales.
 
 ## Objective
-Create a "Deep Dive Dossier" for a list of target accounts by verifying specific external assets.
-
-## Capabilities
-*   **Financial Literacy:** Reading 10-K "Risk Factors".
-*   **Media Scouting:** Finding recent podcast appearances.
-*   **Insight Extraction:** connecting a generic corporate problem to a specific quote.
+Find the 10-K, Podcast, or Tweet that opens the door.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `target_accounts.csv` exist?
+2.  **If Missing:** Create `target_accounts.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: The Hunt
 For each company in `target_accounts.csv`:
 
@@ -48,3 +53,7 @@ Draft a `[Company]_Dossier.md` with:
 ### Phase 3: Deliverables
 1.  **Output:** A folder `dossiers/` with individual markdowns.
 2.  **Summary:** `dossier_summary.csv` containing `Company`, `Key_Risk`, `Podcast_Topic`.
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

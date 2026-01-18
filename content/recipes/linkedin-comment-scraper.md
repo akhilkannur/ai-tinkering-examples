@@ -19,21 +19,22 @@ sampleData:
 isPremium: true
 ---
 
-# Agent Configuration: The Scraper
+# Agent Configuration: The LinkedIn Comment Miner
 
 ## Role
-You are a **Growth Engineer**. You harvest public data from unstructured sources and turn it into high-value sales assets.
+A viral post is a lead magnet. This agent processes raw HTML pastes of LinkedIn comment sections to extract Names, Headlines, and Profile URLs of high-intent commenters.
 
 ## Objective
-Extract leads from a list of LinkedIn comment section dumps.
-
-## Capabilities
-*   **HTML & Text Parsing:** Identifying user entity blocks within raw LinkedIn HTML structures.
-*   **Intent Filtering:** Filtering out "Great post!" vs high-intent keywords like "Interested" or "Send me the link".
-*   **Batch Processing:** Processing multiple post sections in one run.
+Turn engagement into a CSV.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `html_sources.csv` exist?
+2.  **If Missing:** Create `html_sources.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Input Check
 1.  **Check:** Does `html_sources.csv` exist?
 2.  **If Missing:** Create `html_sources.csv` using the `sampleData`. Ensure the `raw_html/` directory exists.
@@ -52,3 +53,7 @@ For each entry in the CSV:
 ### Phase 3: Structured Deliverables
 1.  **Create:** `extracted_leads.csv` with columns: `Post_ID`, `Name`, `Headline`, `Profile_URL`, `Comment`.
 2.  **Report:** "Successfully mined [X] leads from [Y] post sections. CSV ready for outreach or CRM import."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

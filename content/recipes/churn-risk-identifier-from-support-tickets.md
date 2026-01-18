@@ -6,34 +6,39 @@ tagline: Flag at-risk customers by analyzing their support ticket tone.
 difficulty: Intermediate
 time: 5 mins
 archetype: Processor
-description: Reads a CSV of recent support tickets, analyzes the sentiment and urgency of the language, and flags customers who show signs of frustration or "pre-churn" behavior.
+description: >-
+  Reads a CSV of recent support tickets, analyzes the sentiment and urgency of
+  the language, and flags customers who show signs of frustration or "pre-churn"
+  behavior.
 sampleData:
   filename: support_tickets.csv
-  content: |
+  content: >
     Customer,Ticket_ID,Message
+
     Acme Co,101,"How do I export my data? We are evaluating other tools."
+
     Beta Inc,102,"Love the new feature, works great!"
-    Gamma LLC,103,"This is the 3rd time it crashed. Unacceptable. Fix it or we leave."
+
+    Gamma LLC,103,"This is the 3rd time it crashed. Unacceptable. Fix it or we
+    leave."
 ---
 
-# What This Does
-It acts as an "Early Warning System." It spots the subtle (and not-so-subtle) keywords that indicate a customer is looking for the door, allowing your CS team to intervene *before* they cancel.
+# Agent Configuration: The Churn Risk Detector
 
-# What You Need
-- `support_tickets.csv`: A export from Zendesk, Intercom, or HubSpot.
+## Role
+Reads a CSV of recent support tickets, analyzes the sentiment and urgency of the language, and flags customers who show signs of frustration or "pre-churn" behavior.
 
-# What You Get
-- `at_risk_customers.csv`: A prioritized list of fires to put out.
+## Objective
+Flag at-risk customers by analyzing their support ticket tone.
 
-# How to Use
-1. Export your ticket data.
-2. Run the blueprint.
-3. Send the "High Risk" list to your Head of Customer Success immediately.
+## Workflow
 
----
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `support_tickets.csv` exist?
+2.  **If Missing:** Create `support_tickets.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
 
-# Prompt
-
+### Phase 2: The Loop
 You are a **Customer Success Ops Manager**. Your job is to prevent churn by identifying "At-Risk" signals.
 
 **Phase 1: Ingest**
@@ -55,3 +60,7 @@ For each ticket, analyze the `Message` for specific triggers:
 3.  Save the results to `at_risk_customers.csv` (Filter to show only High and Medium risk first).
 
 Start now.
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

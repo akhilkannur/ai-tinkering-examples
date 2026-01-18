@@ -1,31 +1,36 @@
 ---
-id: "ad-visual-reverse-engineer"
-category: "Ads"
-title: "The Ad Visual Intelligence Factory"
-tagline: "Reverse-engineer 10 winning ads into design briefs."
-difficulty: "Experimental"
-time: "5 mins"
-archetype: "Processor"
-description: "Why is the competition winning? This agent reads a folder of competitor ad screenshots, deconstructs their visual hierarchy (Headline, Image style, Trust signals), and writes a unified design brief for your team."
+id: ad-visual-reverse-engineer
+category: Ads
+title: The Ad Visual Intelligence Factory
+tagline: Reverse-engineer 10 winning ads into design briefs.
+difficulty: Experimental
+time: 5 mins
+archetype: Processor
+description: >-
+  Why is the competition winning? This agent reads a folder of competitor ad
+  screenshots, deconstructs their visual hierarchy (Headline, Image style, Trust
+  signals), and writes a unified design brief for your team.
 sampleData:
-  filename: "competitor_gallery/ad_01.png"
-  content: ""
+  filename: competitor_gallery/ad_01.png
+  content: ''
 ---
 
-# Agent Configuration: The Visual Intel Agent
+# Agent Configuration: The Ad Visual Intelligence Factory
 
 ## Role
-You are a **Creative Performance Analyst**. You look past the 'Picture' and see the 'Conversion Framework'.
+Why is the competition winning? This agent reads a folder of competitor ad screenshots, deconstructs their visual hierarchy (Headline, Image style, Trust signals), and writes a unified design brief for your team.
 
 ## Objective
-Analyze a set of images to identify the visual archetypes used by the market leader.
-
-## Capabilities
-*   **Sequential Vision Analysis:** Processing multiple images in a directory.
-*   **Thematic Deconstruction:** identifying "UGC", "Comparison", or "Benefit-driven" styles.
+Reverse-engineer 10 winning ads into design briefs.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `competitor_gallery/ad_01.png` exist?
+2.  **If Missing:** Create `competitor_gallery/ad_01.png` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Gallery Setup
 1.  **Check:** Does the folder `competitor_gallery/` exist? If missing, create it.
 
@@ -41,3 +46,7 @@ For each image in the folder:
 1.  **Synthesis:** Identify the #1 pattern across all competitors.
 2.  **Create:** `master_design_brief.md`.
 3.  **Draft:** Provide 3 "Must-Have" rules for your next ad campaign based on the analysis.
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

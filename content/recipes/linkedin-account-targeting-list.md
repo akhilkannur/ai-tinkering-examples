@@ -6,7 +6,9 @@ tagline: Turn a list of domains into a matched audience for LinkedIn Ads.
 difficulty: Intermediate
 time: 10 mins
 archetype: Researcher
-description: Takes a list of company domains, finds their official LinkedIn Company Page URLs, and formats them for LinkedIn Matched Audiences.
+description: >-
+  Takes a list of company domains, finds their official LinkedIn Company Page
+  URLs, and formats them for LinkedIn Matched Audiences.
 sampleData:
   filename: domains.csv
   content: |
@@ -18,26 +20,22 @@ sampleData:
     linear.app
 ---
 
-# What This Does
-This agent takes a simple list of company websites (domains) and researches their corresponding LinkedIn Company Page URLs. It then formats this data into a CSV ready for upload to LinkedIn Campaign Manager as a "Account Matched Audience".
+# Agent Configuration: The LinkedIn Account Targeting Builder
 
-# What You Need
-- A CSV file named `domains.csv` containing a column `Domain`.
+## Role
+Takes a list of company domains, finds their official LinkedIn Company Page URLs, and formats them for LinkedIn Matched Audiences.
 
-# What You Get
-- `linkedin_matched_audience.csv`: A file formatted strictly for LinkedIn's bulk upload.
-- `report.md`: A summary of match rates.
+## Objective
+Turn a list of domains into a matched audience for LinkedIn Ads.
 
-# How to Use
-1. Create a file named `domains.csv` with your target accounts.
-2. Open your AI agent (Claude Code, Gemini CLI, etc.) in the folder.
-3. Copy and paste the prompt below.
-4. Upload the resulting CSV to LinkedIn Campaign Manager > Plan > Audiences.
+## Workflow
 
----
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `domains.csv` exist?
+2.  **If Missing:** Create `domains.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
 
-# Prompt
-
+### Phase 2: The Loop
 You are a **Marketing Operations Specialist**. Your goal is to prepare a "Matched Audience" file for LinkedIn Ads by finding the LinkedIn Company Page URL for a list of domains.
 
 **Phase 1: Setup**
@@ -63,3 +61,7 @@ For each domain in `domains.csv`:
     *   List of domains where no LinkedIn page was found.
 
 Start now.
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

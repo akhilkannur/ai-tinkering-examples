@@ -1,34 +1,39 @@
 ---
-id: "builtwith-tech-pivot"
-category: "Sales Eng"
-title: "The Tech Displacement Factory"
-tagline: "Find every user of 10 competitors in one run."
-difficulty: "Intermediate"
-time: "Weekly"
-archetype: "Processor"
-description: "BuiltWith reports are noisy. This agent reads a list of target technologies (competitors) from a CSV and filters a raw technology report to find high-value displacement opportunities matching your ICP."
+id: builtwith-tech-pivot
+category: Sales Eng
+title: The Tech Displacement Factory
+tagline: Find every user of 10 competitors in one run.
+difficulty: Intermediate
+time: Weekly
+archetype: Processor
+description: >-
+  BuiltWith reports are noisy. This agent reads a list of target technologies
+  (competitors) from a CSV and filters a raw technology report to find
+  high-value displacement opportunities matching your ICP.
 sampleData:
-  filename: "competitor_tech_list.csv"
+  filename: competitor_tech_list.csv
   content: |
     Tech_Name,ICP_Revenue_Min
     Marketo,10000000
     HubSpot,1000000
 ---
 
-# Agent Configuration: The Displacement Strategist
+# Agent Configuration: The Tech Displacement Factory
 
 ## Role
-You are a **Market Intelligence Analyst**. You find the "vulnerable" accounts using outdated or expensive competitor tech.
+BuiltWith reports are noisy. This agent reads a list of target technologies (competitors) from a CSV and filters a raw technology report to find high-value displacement opportunities matching your ICP.
 
 ## Objective
-Filter a massive tech dataset into prioritized sales lists.
-
-## Capabilities
-*   **Pivot Table Logic:** Grouping data by technology and revenue.
-*   **ICP Filtering:** Removing companies that are too small or in the wrong industry.
+Find every user of 10 competitors in one run.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `competitor_tech_list.csv` exist?
+2.  **If Missing:** Create `competitor_tech_list.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Resource Setup
 1.  **Check:** Does `builtwith_raw.csv` exist? If missing, ask user to upload it.
 2.  **Read:** Load the `competitor_tech_list.csv`.
@@ -43,3 +48,7 @@ For each technology in the list:
 1.  **Action:** Create a folder `displacement_lists/`.
 2.  **Save:** Save each filtered list as `users-of-[tech].csv`.
 3.  **Report:** "Found [X] total displacement opportunities across [Y] competitors."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

@@ -7,7 +7,8 @@ difficulty: Beginner
 time: 5 mins
 archetype: Processor
 description: >-
-  Generates possible email addresses for your leads based on common corporate patterns like first.last@company.com.
+  Generates possible email addresses for your leads based on common corporate
+  patterns like first.last@company.com.
 sampleData:
   filename: prospects.csv
   content: |
@@ -17,26 +18,22 @@ sampleData:
     Mike,Ross,pearsonhardman.com
 ---
 
-# What This Does
-Takes a list of names and company domains, generates the most likely email addresses using common patterns (first.last@, flast@, first@, etc.).
+# Agent Configuration: The Email Permutator
 
-# What You Need
-A CSV file called `prospects.csv` with columns: First_Name, Last_Name, Domain
+## Role
+Generates possible email addresses for your leads based on common corporate patterns like first.last@company.com.
 
-# What You Get
-- `lead_permutations.csv` — each row has 5 possible email guesses
-- Ready to verify with tools like NeverBounce or ZeroBounce
+## Objective
+Guess email addresses from names.
 
-# How to Use
-1. Create your `prospects.csv` with names and company domains
-2. Open Claude Code, Gemini CLI, or Cursor in that folder
-3. Copy and paste the prompt below
-4. Get email guesses for each person
+## Workflow
 
----
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `prospects.csv` exist?
+2.  **If Missing:** Create `prospects.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
 
-# Prompt
-
+### Phase 2: The Loop
 You are a lead researcher. Your job is to generate possible email addresses for a list of prospects.
 
 **Phase 1: Setup**
@@ -64,3 +61,7 @@ For each prospect:
 - Tell me: "Generated email patterns for X prospects. Ready for verification."
 
 Start now.
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

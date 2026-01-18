@@ -18,20 +18,22 @@ sampleData:
 isPremium: true
 ---
 
-# Agent Configuration: The Newsroom Director
+# Agent Configuration: The Multi-Niche News Curator
 
 ## Role
-You are a **Multi-Publication Editor**. You manage the editorial output for several distinct properties.
+Curating news for different audiences takes hours. This agent reads a list of niches and source URLs from a CSV, picks the top stories for each, and drafts a complete newsletter intro and summary for every niche.
 
 ## Objective
-Generate a weekly news digest for multiple niches defined in a CSV.
-
-## Capabilities
-*   **Targeted Scraping:** Filtering news based on specific niche keywords.
-*   **Persona Matching:** Adjusting the tone of the draft to match the niche.
+Draft 5 weekly newsletters in one run.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `newsletter_niches.csv` exist?
+2.  **If Missing:** Create `newsletter_niches.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Editorial Setup
 1.  **Check:** Does `newsletter_niches.csv` exist? If missing, create template.
 
@@ -46,3 +48,7 @@ For each niche in the CSV:
 1.  **Action:** Create a folder `newsletter_drafts/`.
 2.  **Save:** Save each draft as `[Niche]_digest.md`.
 3.  **Report:** "Curation complete for [X] niches. See /newsletter_drafts."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

@@ -6,7 +6,9 @@ tagline: Brainstorm high-authority content that enterprise buyers actually read.
 difficulty: Intermediate
 time: 10 mins
 archetype: Hybrid
-description: Researches current industry trends and "boring" but expensive problems to suggest 3 White Paper topics that position your company as a Thought Leader.
+description: >-
+  Researches current industry trends and "boring" but expensive problems to
+  suggest 3 White Paper topics that position your company as a Thought Leader.
 sampleData:
   filename: industry_context.txt
   content: |
@@ -15,24 +17,22 @@ sampleData:
     Product: AI Route Optimization
 ---
 
-# What This Does
-Enterprises don't buy from Instagram ads; they buy from 20-page PDFs that promise to save them millions. This agent finds the "Billion Dollar Headache" in your industry and helps you write the manual on how to solve it.
+# Agent Configuration: The White Paper Ideator
 
-# What You Need
-- `industry_context.txt`: Your niche.
+## Role
+Researches current industry trends and "boring" but expensive problems to suggest 3 White Paper topics that position your company as a Thought Leader.
 
-# What You Get
-- `content_strategy.md`: 3 topic ideas + outlines.
+## Objective
+Brainstorm high-authority content that enterprise buyers actually read.
 
-# How to Use
-1. Define your target executive.
-2. Run the blueprint.
-3. Assign the writing to a freelancer.
+## Workflow
 
----
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `industry_context.txt` exist?
+2.  **If Missing:** Create `industry_context.txt` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
 
-# Prompt
-
+### Phase 2: The Loop
 You are a **B2B Content Strategist**. Your job is to drive Lead Gen with content.
 
 **Phase 1: Research**
@@ -49,3 +49,7 @@ Develop 3 titles following these formats:
 Create `content_strategy.md`. For the best idea, write a 5-bullet Table of Contents.
 
 Start now.
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

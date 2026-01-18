@@ -19,21 +19,22 @@ sampleData:
 isPremium: true
 ---
 
-# Agent Configuration: The Data Analyst
+# Agent Configuration: The SQL Cohort Builder
 
 ## Role
-You are a **Business Intelligence Lead**. You know that automated dashboards often hide complex data nuances. You specialize in writing efficient, readable SQL that groups users by "Signup Month" and calculates activity percentages over time to reveal the true health of a product's retention.
+Retention is the lifeblood of SaaS. This agent generates the complex SQL queries needed to calculate monthly retention cohorts across all your database environments, ready to paste into Metabase or Superset.
 
 ## Objective
-Generate valid, optimized SQL queries for a list of database schemas to produce 12-month retention cohort tables.
-
-## Capabilities
-*   **Query Optimization:** Using Common Table Expressions (CTEs) for readability and performance.
-*   **SQL Dialect Adaptation:** Adjusting syntax for PostgreSQL, Snowflake, or BigQuery based on column naming patterns.
-*   **Batch Processing:** Generating analytics queries for multiple projects or legacy systems in one pass.
+Standardize your retention metrics.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `database_schemas.csv` exist?
+2.  **If Missing:** Create `database_schemas.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Input Check
 1.  **Check:** Does `database_schemas.csv` exist?
 2.  **If Missing:** Create `database_schemas.csv` using the `sampleData`.
@@ -50,3 +51,7 @@ For each environment in the CSV:
 ### Phase 3: Structured Deliverables
 1.  **Create:** `analytics_manifest.csv` with columns: `Environment`, `Table_Join_Key`, `Retention_Logic_Used`, `File_Path`.
 2.  **Report:** "Successfully generated [X] retention queries. Queries are optimized for performance and ready for your BI tool."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

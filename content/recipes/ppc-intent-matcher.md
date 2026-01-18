@@ -18,20 +18,22 @@ sampleData:
 isPremium: true
 ---
 
-# Agent Configuration: The Ad Ops Architect
+# Agent Configuration: The PPC Intent Engine
 
 ## Role
-You are a **PPC Performance Lead**. You specialize in ROAS (Return on Ad Spend) through surgical keyword targeting.
+Stop bidding on generic terms. This agent reads a list of product categories from a CSV and generates a complete Google Ads keyword set (Exact Match, Negative List, Ad Groups) for every product.
 
 ## Objective
-Convert a product list into a structured Google Ads import file.
-
-## Capabilities
-*   **Intent Expansion:** Generating "Buying" vs "Learning" modifiers.
-*   **Negative Keyword Mining:** identifying waste terms.
+High-intent ad keywords for your entire product line.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `product_line.csv` exist?
+2.  **If Missing:** Create `product_line.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Product Load
 1.  **Check:** Does `product_line.csv` exist? If missing, create template.
 
@@ -44,3 +46,7 @@ For each product in the CSV:
 ### Phase 3: The Deliverable
 1.  **Create:** `ads_import_ready.csv` with columns: `Campaign,Ad_Group,Keyword,Match_Type`.
 2.  **Summary:** "Generated keywords for [X] product categories. master_ads_sheet.csv is ready for import."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

@@ -6,7 +6,10 @@ tagline: Generate personalized landing page copy for target accounts.
 difficulty: Advanced
 time: 20 mins
 archetype: Hybrid
-description: Takes a high-value target account (e.g., "Nike"), researches their 10-k or recent strategic initiatives, and writes custom headlines and body copy for an "Account Based Marketing" landing page.
+description: >-
+  Takes a high-value target account (e.g., "Nike"), researches their 10-k or
+  recent strategic initiatives, and writes custom headlines and body copy for an
+  "Account Based Marketing" landing page.
 sampleData:
   filename: target_accounts.csv
   content: |
@@ -16,24 +19,22 @@ sampleData:
     Spotify,spotify.com,Head of Ad Sales
 ---
 
-# What This Does
-Account-Based Marketing (ABM) works best when the content feels bespoke. This agent researches what your target company is focused on *right now* (e.g., "Sustainability," "Digital Transformation") and aligns your messaging to that specific goal.
+# Agent Configuration: The ABM Campaign Asset Builder
 
-# What You Need
-- `target_accounts.csv`: The whales you want to catch.
+## Role
+Takes a high-value target account (e.g., "Nike"), researches their 10-k or recent strategic initiatives, and writes custom headlines and body copy for an "Account Based Marketing" landing page.
 
-# What You Get
-- `abm_pages/[Account]_copy.md`: Full copy for a personalized landing page (Headline, Subhead, Value Prop).
+## Objective
+Generate personalized landing page copy for target accounts.
 
-# How to Use
-1. List your top 10 target accounts.
-2. Run the blueprint.
-3. Paste the copy into your CMS (Instapage, Unbounce, Webflow).
+## Workflow
 
----
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `target_accounts.csv` exist?
+2.  **If Missing:** Create `target_accounts.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
 
-# Prompt
-
+### Phase 2: The Loop
 You are an **ABM Campaign Manager**. Your job is to create hyper-personalized landing page copy.
 
 **Phase 1: Deep Dive**
@@ -55,3 +56,7 @@ Create `abm_pages/[Account]_copy.md`. Write the following sections:
 Ensure the tone is professional, enterprise-ready, and confident.
 
 Start now.
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

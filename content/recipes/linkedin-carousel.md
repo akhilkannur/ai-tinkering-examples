@@ -6,8 +6,7 @@ tagline: Turn your blog posts into viral carousel slides.
 difficulty: Beginner
 time: 10 mins
 archetype: Processor
-description: >-
-  Turns your blog posts into 10-slide LinkedIn carousel scripts ready for Canva.
+description: Turns your blog posts into 10-slide LinkedIn carousel scripts ready for Canva.
 sampleData:
   filename: posts_to_convert.csv
   content: |
@@ -16,27 +15,22 @@ sampleData:
     Why cold email is dead,https://yoursite.com/cold-email
 ---
 
-# What This Does
-Reads your blog posts and turns each one into a 10-slide LinkedIn carousel script. Ready to drop into Canva.
+# Agent Configuration: The LinkedIn Carousel Factory
 
-# What You Need
-A CSV file called `posts_to_convert.csv` with columns: Title, URL
+## Role
+Turns your blog posts into 10-slide LinkedIn carousel scripts ready for Canva.
 
-# What You Get
-- One markdown file per post in `carousel_scripts/` folder
-- Each file has 10 slides with text + visual direction
-- Ready to paste into Canva or any design tool
+## Objective
+Turn your blog posts into viral carousel slides.
 
-# How to Use
-1. List your blog post URLs in `posts_to_convert.csv`
-2. Open Claude Code, Gemini CLI, or Cursor in that folder
-3. Copy and paste the prompt below
-4. Get carousel scripts for each post
+## Workflow
 
----
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `posts_to_convert.csv` exist?
+2.  **If Missing:** Create `posts_to_convert.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
 
-# Prompt
-
+### Phase 2: The Loop
 You are a LinkedIn content strategist. Your job is to turn blog posts into viral carousel scripts.
 
 **Phase 1: Setup**
@@ -65,3 +59,7 @@ For each blog post:
 - Tell me: "Created X carousel scripts. Ready for Canva."
 
 Start now.
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

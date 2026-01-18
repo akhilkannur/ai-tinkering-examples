@@ -6,7 +6,9 @@ tagline: Find exactly where your deals are dying.
 difficulty: Intermediate
 time: 5 mins
 archetype: Processor
-description: Reads a CSV of deal stages and conversion rates, identifies the stage with the biggest drop-off compared to industry benchmarks, and suggests fixes.
+description: >-
+  Reads a CSV of deal stages and conversion rates, identifies the stage with the
+  biggest drop-off compared to industry benchmarks, and suggests fixes.
 sampleData:
   filename: funnel_metrics.csv
   content: |
@@ -16,24 +18,22 @@ sampleData:
     Opp to Close,40,10,25%
 ---
 
-# What This Does
-You are missing quota, but why? Is it bad leads? Bad demos? Bad closing? This agent performs a "Root Cause Analysis" on your funnel to tell you exactly which part of the machine is broken.
+# Agent Configuration: The Pipeline Leak Detector
 
-# What You Need
-- `funnel_metrics.csv`: Export from Salesforce/HubSpot.
+## Role
+Reads a CSV of deal stages and conversion rates, identifies the stage with the biggest drop-off compared to industry benchmarks, and suggests fixes.
 
-# What You Get
-- `diagnosis.md`: The fix.
+## Objective
+Find exactly where your deals are dying.
 
-# How to Use
-1. Get your conversion numbers.
-2. Run the blueprint.
-3. Focus your training on the broken stage.
+## Workflow
 
----
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `funnel_metrics.csv` exist?
+2.  **If Missing:** Create `funnel_metrics.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
 
-# Prompt
-
+### Phase 2: The Loop
 You are a **RevOps Consultant**. Your job is to optimize the funnel.
 
 **Phase 1: Benchmarking**
@@ -55,3 +55,7 @@ Create `diagnosis.md`.
 *   **The Fix:** Suggest 1 specific tactic to fix it (e.g., "Implement double-dialing for SDRs").
 
 Start now.
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

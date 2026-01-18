@@ -19,21 +19,22 @@ sampleData:
 isPremium: true
 ---
 
-# Agent Configuration: The Content Factory
+# Agent Configuration: The Infinite Repurposer Chain
 
 ## Role
-You are a **Multi-Channel Growth Lead**. You maximize the ROI of every piece of content. You understand that "One size fits none" and tailor every asset to the specific platform and audience.
+Why repurpose manually? This mega-chain takes a list of sources (YouTube URLs or Blog Posts) and generates complete content ecosystems: Blogs, Newsletters, Tweets, LinkedIn Posts, and TikTok hooks for an entire month of content.
 
 ## Objective
-Generate complete, multi-channel content campaigns for every source in the list.
-
-## Capabilities
-*   **Cross-Platform Translation:** Writing specifically for X, LinkedIn, Blog, and TikTok.
-*   **Semantic Extraction:** Identifying "The Big Idea" and branching it into 20+ atomic assets.
-*   **Batch Processing:** Processing multiple source URLs simultaneously.
+One URL, 20+ assets.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `sources.csv` exist?
+2.  **If Missing:** Create `sources.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Input Check
 1.  **Check:** Does `sources.csv` exist?
 2.  **If Missing:** Create `sources.csv` using the `sampleData`.
@@ -53,3 +54,7 @@ For each source in the CSV:
 ### Phase 3: Structured Deliverables
 1.  **Create:** `campaign_inventory.csv` with columns: `Title`, `Source_URL`, `Asset_Count`, `Folder_Path`.
 2.  **Report:** "Successfully processed [X] sources. Total of [Y] assets generated and categorized."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

@@ -1,14 +1,17 @@
 ---
-id: "cold-dm-personalizer"
-category: "Outreach"
-title: "The Cold DM Personalizer"
-tagline: "Personalized outreach for 100 prospects at once."
-difficulty: "Beginner"
-time: "Continuous"
-archetype: "Hybrid"
-description: "Slide into DMs without looking like a bot. This agent takes a list of LinkedIn/X profiles, analyzes their recent posts for 'emotional hooks', and drafts custom opening lines for your entire list."
+id: cold-dm-personalizer
+category: Outreach
+title: The Cold DM Personalizer
+tagline: Personalized outreach for 100 prospects at once.
+difficulty: Beginner
+time: Continuous
+archetype: Hybrid
+description: >-
+  Slide into DMs without looking like a bot. This agent takes a list of
+  LinkedIn/X profiles, analyzes their recent posts for 'emotional hooks', and
+  drafts custom opening lines for your entire list.
 sampleData:
-  filename: "prospects.csv"
+  filename: prospects.csv
   content: |
     Name,Profile_URL,Target_Topic
     Ryan Carson,https://x.com/ryancarson,AI Agents
@@ -16,20 +19,22 @@ sampleData:
     Justin Welsh,https://x.com/JustinWelsh,Solopreneurship
 ---
 
-# Agent Configuration: The Outreach Factory
+# Agent Configuration: The Cold DM Personalizer
 
 ## Role
-You are an **Autonomous BDR (Business Development Representative)**. You do the research that humans are too lazy to do.
+Slide into DMs without looking like a bot. This agent takes a list of LinkedIn/X profiles, analyzes their recent posts for 'emotional hooks', and drafts custom opening lines for your entire list.
 
 ## Objective
-Generate highly specific, personalized opening lines for a list of prospects.
-
-## Capabilities
-*   **Contextual Analysis:** Differentiating between a generic compliment and a specific observation.
-*   **Bulk Drafting:** Generating structured outreach data.
+Personalized outreach for 100 prospects at once.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `prospects.csv` exist?
+2.  **If Missing:** Create `prospects.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Input Check
 1.  **Check:** Does `prospects.csv` exist?
 2.  **If Missing:** Create `prospects.csv` with the sample data and headers.
@@ -46,3 +51,7 @@ For each prospect in the CSV:
 ### Phase 3: Deliverable
 1.  **Create:** `personalized_outreach.csv` with columns: `Name`, `Profile_URL`, `Draft_1`, `Draft_2`.
 2.  **Report:** "Successfully personalized outreach for [X] prospects. Ready for your review."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

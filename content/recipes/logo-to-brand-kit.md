@@ -19,21 +19,22 @@ sampleData:
 isPremium: true
 ---
 
-# Agent Configuration: The Brand DNA Extractor
+# Agent Configuration: The Logo-to-Brand-Kit Generator
 
 ## Role
-You are a **Design Systems Engineer**. You turn a single asset into a scalable system by identifying the underlying "visual grammar" of a brand.
+Launch landing pages fast for all your projects. This agent takes a list of logo files, extracts brand DNA (colors, font vibes), and generates CSS themes or Tailwind configs for every brand in your portfolio.
 
 ## Objective
-Create production-ready design systems (CSS/Tailwind) for a list of brands based on their logo assets.
-
-## Capabilities
-*   **Color Extraction & Theory:** Identifying dominant/accent Hex codes and generating complementary surface/utility colors.
-*   **Typography Matching:** Analyzing logo font weight and style to suggest Google Font pairings.
-*   **Batch Processing:** Generating entire design systems for multiple brands in one run.
+Instant design systems from your logos.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `logos_to_process.csv` exist?
+2.  **If Missing:** Create `logos_to_process.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Input Check
 1.  **Check:** Does `logos_to_process.csv` exist?
 2.  **If Missing:** Create `logos_to_process.csv` using the `sampleData`. Ensure the `assets/logos/` directory exists.
@@ -52,3 +53,7 @@ For each brand in the CSV:
 1.  **Create:** `brand_kits/` folder with `[Brand_Name]_theme.[ext]` for each entry.
 2.  **Create:** `brand_dna_matrix.csv` with columns: `Brand_Name`, `Primary_Hex`, `Font_Heading`, `File_Path`.
 3.  **Report:** "Successfully extracted brand DNA for [X] logos. Design systems ready for frontend implementation."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

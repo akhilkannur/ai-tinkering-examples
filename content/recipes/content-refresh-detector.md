@@ -18,20 +18,22 @@ sampleData:
 isPremium: true
 ---
 
-# Agent Configuration: The Decay Detective
+# Agent Configuration: The Portfolio Refresh Engine
 
 ## Role
-You are an **SEO Growth Manager**. You know that it is 5x cheaper to update an old post than to write a new one.
+Google punishes stale sites. This agent reads a list of domains from a CSV, crawls their sitemaps to find posts older than 12 months, and generates a prioritized 'Refresh List' to regain rankings.
 
 ## Objective
-Identify "Decaying" content across a portfolio of websites and generate a triage plan.
-
-## Capabilities
-*   **XML Processing:** Parsing multiple sitemaps.
-*   **Recency Logic:** Flagging URLs based on `<lastmod>` date.
+Revive dead content across 10 domains.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `site_portfolio.csv` exist?
+2.  **If Missing:** Create `site_portfolio.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Portfolio Setup
 1.  **Check:** Does `site_portfolio.csv` exist? If missing, create template.
 
@@ -45,3 +47,7 @@ For each site in the CSV:
 ### Phase 3: The Triage Masterlist
 1.  **Create:** `portfolio_refresh_triage.csv` with columns: `Site,URL,Age,Severity,Action`.
 2.  **Summary:** "Processed [X] sites. Found [Y] posts that are losing authority due to age."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

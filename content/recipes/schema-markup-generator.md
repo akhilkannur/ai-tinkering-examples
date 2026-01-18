@@ -6,7 +6,9 @@ tagline: Get "Rich Snippets" on Google by generating valid Schema markup.
 difficulty: Intermediate
 time: 10 mins
 archetype: Processor
-description: Converts a CSV of product or event data into valid JSON-LD Schema markup blocks ready to be pasted into your website's header.
+description: >-
+  Converts a CSV of product or event data into valid JSON-LD Schema markup
+  blocks ready to be pasted into your website's header.
 sampleData:
   filename: products.csv
   content: |
@@ -15,24 +17,22 @@ sampleData:
     Red Gear,45.00,USD,OutOfStock,High-durability gear.
 ---
 
-# What This Does
-Schema markup (JSON-LD) tells Google exactly what your product's price and rating are, which often results in "Rich Results" (stars, prices in search). Writing this code manually for 100 products is impossible. This agent does it in one go.
+# Agent Configuration: The Bulk Schema JSON-LD Generator
 
-# What You Need
-- `products.csv`: A list of your inventory or events.
+## Role
+Converts a CSV of product or event data into valid JSON-LD Schema markup blocks ready to be pasted into your website's header.
 
-# What You Get
-- `schema_output.txt`: A text file containing all the JSON-LD blocks.
+## Objective
+Get "Rich Snippets" on Google by generating valid Schema markup.
 
-# How to Use
-1. Prepare your product CSV.
-2. Run the blueprint.
-3. Paste the generated code into your page headers or use a Tag Manager.
+## Workflow
 
----
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `products.csv` exist?
+2.  **If Missing:** Create `products.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
 
-# Prompt
-
+### Phase 2: The Loop
 You are a **Search Engine Engineer**. Your job is to generate valid structured data (Schema.org).
 
 **Phase 1: Mapping**
@@ -55,3 +55,7 @@ Wrap each block in `<script type="application/ld+json">` tags.
 Save all blocks to `schema_output.txt`.
 
 Start now.
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

@@ -19,20 +19,22 @@ sampleData:
 isPremium: true
 ---
 
-# Agent Configuration: The Asset Factory
+# Agent Configuration: The Lead Magnet Factory
 
 ## Role
-You are a **Direct Response Growth Lead**. You scale value-first lead generation.
+Why build one lead magnet? This agent reads a list of customer 'Pains' and 'Desires' from a CSV and generates a complete asset brief (Outline, Title, Landing Page Copy) for every single one.
 
 ## Objective
-Convert a list of customer segments into functional marketing assets.
-
-## Capabilities
-*   **Creative Translation:** Pain -> Tool Idea.
-*   **Copywriting:** High-converting headlines.
+Build a library of assets from customer pains.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `customer_segments.csv` exist?
+2.  **If Missing:** Create `customer_segments.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Input Check
 1.  **Check:** Does `customer_segments.csv` exist? If missing, create it.
 
@@ -46,3 +48,7 @@ For each segment in the CSV:
 1.  **Action:** Create a folder `lead_magnet_briefs/`.
 2.  **Save:** Save each brief as `[Segment].md`.
 3.  **Report:** "Generated [X] lead magnet briefs in /lead_magnet_briefs. Ready for design."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

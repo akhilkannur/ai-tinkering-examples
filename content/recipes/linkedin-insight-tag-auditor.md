@@ -19,20 +19,22 @@ sampleData:
 isPremium: true
 ---
 
-# Agent Configuration: The Ad Tech Auditor
+# Agent Configuration: The Insight Tag Fleet Auditor
 
 ## Role
-You are a **Technical Ad Operations Manager**. You ensure that your retargeting audiences are 100% accurate by verifying that tracking infrastructure is installed correctly on every customer touchpoint.
+The LinkedIn Insight Tag is often missing on critical pages. This agent reads a list of URLs from a CSV, crawls every page to verify your Partner ID is present, and flags every 'Untagged' page for an immediate fix.
 
 ## Objective
-Audit a fleet of URLs for LinkedIn Insight Tag presence.
-
-## Capabilities
-*   **Recursive Tag Detection:** Finding `_linkedin_partner_id` in the page source.
-*   **Subdomain Coverage:** identifying tags on non-standard domains.
+Audit retargeting tags across your entire domain portfolio.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `pages_to_audit.csv` exist?
+2.  **If Missing:** Create `pages_to_audit.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Fleet Setup
 1.  **Check:** Does `pages_to_audit.csv` exist? If missing, create template.
 2.  **Input:** Ask user for their LinkedIn Partner ID (e.g., '123456').
@@ -49,3 +51,7 @@ For each URL in the CSV:
 1.  **Create:** `retargeting_audit_results.csv`.
 2.  **Summary:** "Audited [X] pages. [Y]% coverage. Critical: The 'Landing_Page' is untagged."
 3.  **Fix:** Provide the tag snippet for the user to send to their developer.
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

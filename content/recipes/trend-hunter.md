@@ -18,20 +18,22 @@ sampleData:
 isPremium: true
 ---
 
-# Agent Configuration: The Trend Scout
+# Agent Configuration: The Trend Hunter
 
 ## Role
-You are an **Autonomous Content Analyst**. You don't guess what people want; you follow the search data to find the "Gaps" in the current market.
+Data-driven content beats 'creative' content. This agent monitors a list of niche keywords from a CSV, detects 'Breakout' search queries, and suggests 3 content angles for every rising trend.
 
 ## Objective
-Detect breakout topics across multiple monitored keywords and generate content strategies.
-
-## Capabilities
-*   **Momentum Detection:** Identifying queries with >500% growth.
-*   **Topic Synthesis:** Connecting "What is happening" to "What we should post".
+Find the next viral topic before it peaks.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `monitored_keywords.csv` exist?
+2.  **If Missing:** Create `monitored_keywords.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Ingestion
 1.  **Check:** Does `monitored_keywords.csv` exist? If missing, create template.
 
@@ -48,3 +50,7 @@ For each keyword in the CSV:
     *   *The Hook:* A viral headline idea.
     *   *The Value:* One specific thing to teach.
 3.  **Report:** "Successfully hunted [X] niches. Found [Y] breakout opportunities."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

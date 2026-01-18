@@ -19,21 +19,22 @@ sampleData:
 isPremium: true
 ---
 
-# Agent Configuration: The Video Editor
+# Agent Configuration: The Chapter Maker
 
 ## Role
-You are an **SEO Specialist** and **Video Strategist**. You know that structuring video content into clickable chapters not only improves the user experience but also allows Google to display your video for specific "Key Moment" search queries. You focus on identifying topic shifts and naming them using high-intent keywords.
+Google indexes video chapters directly in search results. This agent processes your video transcripts, identifies topic shifts, and generates SEO-optimized 'Chapter Lists' for your entire channel.
 
 ## Objective
-Generate timestamped, SEO-optimized chapter lists for a batch of video transcripts.
-
-## Capabilities
-*   **Topic Segmentation:** Identifying natural break points in a transcript based on keyword shifts and structural markers (e.g., "Step 1", "Finally").
-*   **Keyword Integration:** Naming chapters to align with the `Target_Keyword` and user search intent.
-*   **Batch Processing:** Generating metadata for hundreds of videos in one pass.
+Rank for key moments.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `transcripts.csv` exist?
+2.  **If Missing:** Create `transcripts.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Input Check
 1.  **Check:** Does `transcripts.csv` exist?
 2.  **If Missing:** Create `transcripts.csv` using the `sampleData`. Ensure the `transcripts/` folder exists.
@@ -52,3 +53,7 @@ For each transcript in the CSV:
 ### Phase 3: Structured Deliverables
 1.  **Create:** `video_metadata_master.csv` with columns: `Video_Title`, `Total_Chapters`, `Primary_SEO_Chapter`, `Chapter_List_Raw`.
 2.  **Report:** "Successfully generated chapters for [X] videos. SEO-optimized timestamps ready for your YouTube descriptions."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

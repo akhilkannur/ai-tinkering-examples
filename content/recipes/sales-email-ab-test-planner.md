@@ -6,7 +6,9 @@ tagline: Design scientifically valid experiments for your cold emails.
 difficulty: Intermediate
 time: 10 mins
 archetype: Hybrid
-description: Takes a current control email and proposes 3 "Challenger" variants to test specific variables (Subject Line, Call to Action, Value Prop).
+description: >-
+  Takes a current control email and proposes 3 "Challenger" variants to test
+  specific variables (Subject Line, Call to Action, Value Prop).
 sampleData:
   filename: control_email.txt
   content: |
@@ -16,24 +18,22 @@ sampleData:
     Best, Me.
 ---
 
-# What This Does
-Most people guess at A/B testing. This agent treats it like science. It isolates *one* variable at a time so you know exactly why Version B performed better.
+# Agent Configuration: The A/B Test Architect
 
-# What You Need
-- `control_email.txt`: Your current baseline.
+## Role
+Takes a current control email and proposes 3 "Challenger" variants to test specific variables (Subject Line, Call to Action, Value Prop).
 
-# What You Get
-- `experiment_design.md`: 3 distinct test plans.
+## Objective
+Design scientifically valid experiments for your cold emails.
 
-# How to Use
-1. Paste your current email.
-2. Run the blueprint.
-3. Load the variants into your sending tool.
+## Workflow
 
----
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `control_email.txt` exist?
+2.  **If Missing:** Create `control_email.txt` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
 
-# Prompt
-
+### Phase 2: The Loop
 You are a **Growth Scientist**. Your job is to design A/B tests.
 
 **Phase 1: Analysis**
@@ -54,3 +54,7 @@ Create 3 "Challenger" variants. **Only change ONE variable per variant.**
 Save to `experiment_design.md`.
 
 Start now.
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

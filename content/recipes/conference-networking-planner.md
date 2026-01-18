@@ -6,7 +6,10 @@ tagline: Prioritize who to meet at your next event.
 difficulty: Intermediate
 time: 5 mins
 archetype: Processor
-description: Reads a list of conference attendees, filters them by your "Ideal Customer Profile" (Title/Company), and creates a prioritized "Hit List" so you don't waste time talking to the wrong people.
+description: >-
+  Reads a list of conference attendees, filters them by your "Ideal Customer
+  Profile" (Title/Company), and creates a prioritized "Hit List" so you don't
+  waste time talking to the wrong people.
 sampleData:
   filename: attendees.csv
   content: |
@@ -16,25 +19,22 @@ sampleData:
     Bob Jones,Consultant,Self-Employed
 ---
 
-# What This Does
-Conferences are expensive chaos. This agent turns an attendee list (often found in the event app) into a strategic mission plan, flagging the top 10% of people who can actually buy your product.
+# Agent Configuration: The Conference Networking Strategist
 
-# What You Need
-- `attendees.csv`: Copy-pasted from the event app or website.
+## Role
+Reads a list of conference attendees, filters them by your "Ideal Customer Profile" (Title/Company), and creates a prioritized "Hit List" so you don't waste time talking to the wrong people.
 
-# What You Get
-- `networking_hitlist.csv`: Sorted by relevance.
-- `icebreakers.md`: Topics to discuss with the top tier.
+## Objective
+Prioritize who to meet at your next event.
 
-# How to Use
-1. Get the attendee list.
-2. Run the blueprint.
-3. Load the top names into your calendar or CRM.
+## Workflow
 
----
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `attendees.csv` exist?
+2.  **If Missing:** Create `attendees.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
 
-# Prompt
-
+### Phase 2: The Loop
 You are a **Field Sales Manager**. Your job is to maximize event ROI.
 
 **Phase 1: Filter**
@@ -54,3 +54,7 @@ Score the remaining leads:
     *   For the top 5 "Tier 1" leads, write a specific question related to their role (e.g., "Ask the VP Eng about scaling their dev team").
 
 Start now.
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

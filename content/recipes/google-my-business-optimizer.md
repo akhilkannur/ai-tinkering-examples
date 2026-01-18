@@ -18,20 +18,22 @@ sampleData:
 isPremium: true
 ---
 
-# Agent Configuration: The Local SEO Factory
+# Agent Configuration: The GMB Fleet Optimizer
 
 ## Role
-You are a **Franchise SEO Specialist**. You know that "Near Me" searches are the highest-intent traffic available.
+Local businesses live or die by Google Maps. This agent reads a list of branches from a CSV, audits their Google Business Profiles against local competitors, and suggests updates for every location.
 
 ## Objective
-Optimize a fleet of Google Business Profiles for maximum local visibility.
-
-## Capabilities
-*   **Comparative Benchmarking:** Seeing what the local #1 does differently for each city.
-*   **Structured Checklist Generation:** Providing actionable branch-level tasks.
+Own the map pack for all 50 branches.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `branch_list.csv` exist?
+2.  **If Missing:** Create `branch_list.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Fleet Setup
 1.  **Check:** Does `branch_list.csv` exist? If missing, create template.
 
@@ -48,3 +50,7 @@ For each branch in the CSV:
 1.  **Create:** `franchise_optimization_roadmap.md`.
 2.  **Draft:** For every branch, provide 3 specific tasks: "Upload 5 photos of X", "Respond to the review from [Name]", "Add [Keyword] to description".
 3.  **Summary:** "Processed [X] branches. [Y] are at high risk of losing rank."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

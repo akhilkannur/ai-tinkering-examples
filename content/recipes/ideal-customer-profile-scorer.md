@@ -2,11 +2,13 @@
 id: ideal-customer-profile-scorer
 category: Sales Ops
 title: ICP Scorer (Lead Grading)
-tagline: Automatically grade leads A, B, or C based on your criteria.
+tagline: 'Automatically grade leads A, B, or C based on your criteria.'
 difficulty: Intermediate
 time: 5 mins
 archetype: Processor
-description: Reads a CSV of leads and scores them (0-100) based on specific "Ideal Customer Profile" rules you define (e.g., Industry, Tech Stack, Title).
+description: >-
+  Reads a CSV of leads and scores them (0-100) based on specific "Ideal Customer
+  Profile" rules you define (e.g., Industry, Tech Stack, Title).
 sampleData:
   filename: raw_leads.csv
   content: |
@@ -16,24 +18,22 @@ sampleData:
     Gamma LLC,Consulting,5,Excel,Owner
 ---
 
-# What This Does
-It standardizes the subjective process of "Lead Qualification." Instead of guessing, you define rules (e.g., "SaaS = +20 points"), and the agent grades every lead in your CSV, sorting the best ones to the top.
+# Agent Configuration: The ICP Scorer (Lead Grading)
 
-# What You Need
-- `raw_leads.csv`: A list of leads with data points (Industry, Size, etc.).
+## Role
+Reads a CSV of leads and scores them (0-100) based on specific "Ideal Customer Profile" rules you define (e.g., Industry, Tech Stack, Title).
 
-# What You Get
-- `scored_leads.csv`: The same list, sorted by `Score`, with a `Grade` (A/B/C) and `Reasoning`.
+## Objective
+Automatically grade leads A, B, or C based on your criteria.
 
-# How to Use
-1.  Put your leads in `raw_leads.csv`.
-2.  (Optional) Edit the "Scoring Rules" in the prompt below if your criteria differ.
-3.  Run the blueprint.
+## Workflow
 
----
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `raw_leads.csv` exist?
+2.  **If Missing:** Create `raw_leads.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
 
-# Prompt
-
+### Phase 2: The Loop
 You are a **RevOps Analyst**. Your job is to score and grade leads based on an Ideal Customer Profile (ICP).
 
 **Phase 1: Define Rules**
@@ -57,3 +57,7 @@ Use this scoring logic (you can adapt this based on the CSV data):
 3.  Display the top 3 "Grade A" leads in the console.
 
 Start now.
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

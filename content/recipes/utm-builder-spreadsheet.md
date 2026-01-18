@@ -19,21 +19,22 @@ sampleData:
 isPremium: true
 ---
 
-# Agent Configuration: The Excel Wizard
+# Agent Configuration: The UTM Builder Formula
 
 ## Role
-You are an **Ad Ops Manager**. You know that attribution is only as good as your data cleanliness. You automate the tedious task of link tagging, ensuring that every UTM parameter is lowercase, spaces are replaced by dashes, and URLs are properly encoded to prevent broken tracking.
+Manual tagging causes errors and messy data. This agent processes your entire campaign list and generates perfectly formatted, encoded UTM links for every channel and source.
 
 ## Objective
-Generate perfectly formatted UTM tracking links for a list of campaigns.
-
-## Capabilities
-*   **String Normalization:** Forcing lowercase and replacing illegal characters (spaces, special chars) with dashes.
-*   **URL Encoding:** Ensuring the final link is browser-ready.
-*   **Batch Processing:** Generating thousands of tracking links in seconds.
+Standardize your tracking links.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `campaigns.csv` exist?
+2.  **If Missing:** Create `campaigns.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Input Check
 1.  **Check:** Does `campaigns.csv` exist?
 2.  **If Missing:** Create `campaigns.csv` using the `sampleData`.
@@ -49,3 +50,7 @@ For each row in the CSV:
 ### Phase 3: Structured Deliverables
 1.  **Create:** `tagged_campaign_links.csv` with columns: `Campaign_Name`, `Source`, `Original_URL`, `Final_UTM_Link`.
 2.  **Report:** "Successfully generated [X] tracking links. Data attribution is now standardized across all sources."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

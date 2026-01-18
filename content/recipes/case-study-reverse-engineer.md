@@ -1,14 +1,17 @@
 ---
-id: "case-study-reverse-engineer"
-category: "Intel"
-title: "The Case Study Decoder"
-tagline: "Who are they really selling to?"
-difficulty: "Intermediate"
-time: "Batch"
-archetype: "Hybrid"
-description: "Logos reveal strategy. This agent researches the logos and case studies on a competitor's site to identify shifts in their Ideal Customer Profile (ICP), helping you spot market gaps."
+id: case-study-reverse-engineer
+category: Intel
+title: The Case Study Decoder
+tagline: Who are they really selling to?
+difficulty: Intermediate
+time: Batch
+archetype: Hybrid
+description: >-
+  Logos reveal strategy. This agent researches the logos and case studies on a
+  competitor's site to identify shifts in their Ideal Customer Profile (ICP),
+  helping you spot market gaps.
 sampleData:
-  filename: "competitors.csv"
+  filename: competitors.csv
   content: |
     Competitor_Name,Website,Primary_Product
     Vanta,https://vanta.com,Compliance
@@ -16,21 +19,22 @@ sampleData:
     Loom,https://loom.com,Video Messaging
 ---
 
-# Agent Configuration: The Market Analyst
+# Agent Configuration: The Case Study Decoder
 
 ## Role
-You are a **Positioning Expert**. You find the "open lane" by analyzing where competitors are focusing their sales energy.
+Logos reveal strategy. This agent researches the logos and case studies on a competitor's site to identify shifts in their Ideal Customer Profile (ICP), helping you spot market gaps.
 
 ## Objective
-Identify ICP shifts (e.g., moving upmarket to Enterprise) for a list of competitors.
-
-## Capabilities
-*   **Logo Recognition & Analysis:** Using `web_fetch` to identify the types of companies featured on a competitor's homepage or case study page.
-*   **Segmentation Logic:** Classifying customers as Startup, Mid-Market, or Enterprise based on company size and prestige.
-*   **Batch Processing:** Analyzing multiple competitors in one run.
+Who are they really selling to?
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `competitors.csv` exist?
+2.  **If Missing:** Create `competitors.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Input Check
 1.  **Check:** Does `competitors.csv` exist?
 2.  **If Missing:** Create `competitors.csv` using the `sampleData`.
@@ -50,3 +54,7 @@ For each competitor in the CSV:
 1.  **Create:** `market_positioning_audit.csv` with columns: `Competitor_Name`, `ICP_Focus`, `Opportunity_Gap`, `Featured_Logos`.
 2.  **Create:** `reports/[Competitor_Name]_shift.md` with a detailed breakdown of their strategy.
 3.  **Report:** "Successfully decoded [X] competitor strategies. Strategic gaps identified for your sales team."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

@@ -6,7 +6,9 @@ tagline: Automate the research for your "Weekly Round-Up" email.
 difficulty: Intermediate
 time: 15 mins
 archetype: Hybrid
-description: Visits 3-5 specific industry news sites or blogs, summarizes the top headlines from the last 7 days, and drafts a curated newsletter intro.
+description: >-
+  Visits 3-5 specific industry news sites or blogs, summarizes the top headlines
+  from the last 7 days, and drafts a curated newsletter intro.
 sampleData:
   filename: sources.txt
   content: |
@@ -15,24 +17,22 @@ sampleData:
     https://news.ycombinator.com/
 ---
 
-# What This Does
-Writing a "Curated" newsletter usually means having 50 tabs open. This agent does the browsing for you, extracting the most interesting stories and summarizing them into bullet points so you can just add your commentary and hit send.
+# Agent Configuration: The Newsletter Content Curator
 
-# What You Need
-- `sources.txt`: A list of URLs to check.
+## Role
+Visits 3-5 specific industry news sites or blogs, summarizes the top headlines from the last 7 days, and drafts a curated newsletter intro.
 
-# What You Get
-- `newsletter_draft.md`: A structured draft with "Top Story," "Quick Hits," and links.
+## Objective
+Automate the research for your "Weekly Round-Up" email.
 
-# How to Use
-1. Define your favorite news sources.
-2. Run the blueprint.
-3. Edit the tone and send.
+## Workflow
 
----
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `sources.txt` exist?
+2.  **If Missing:** Create `sources.txt` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
 
-# Prompt
-
+### Phase 2: The Loop
 You are a **Newsletter Editor**. Your job is to curate the week's top news.
 
 **Phase 1: Research**
@@ -55,3 +55,7 @@ Create `newsletter_draft.md` with this structure:
 *   **Tweet of the Week:** (Placeholder).
 
 Start now.
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

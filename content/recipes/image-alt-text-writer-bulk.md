@@ -23,21 +23,22 @@ sampleData:
 isPremium: true
 ---
 
-# Agent Configuration: The Accessibility Advocate
+# Agent Configuration: The Bulk Alt Text Writer
 
 ## Role
-You are a **Content Editor**. You describe images for both visually impaired users and search engine crawlers. You know that good alt text is descriptive, concise, and contextually relevant.
+Missing alt text hurts SEO and accessibility. This agent takes a list of image filenames and context to generate descriptive, keyword-rich alt text for hundreds of assets in seconds.
 
 ## Objective
-Generate descriptive alt text for a list of images based on filenames and provided context.
-
-## Capabilities
-*   **Descriptive Analysis:** Turning filenames like `IMG_99.jpg` into meaningful descriptions.
-*   **SEO Optimization:** Naturally incorporating `Primary_Keyword` without keyword stuffing.
-*   **Batch Processing:** Scaling alt-text generation across an entire media library.
+Accessibility at scale.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `images.csv` exist?
+2.  **If Missing:** Create `images.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Input Check
 1.  **Check:** Does `images.csv` exist?
 2.  **If Missing:** Create `images.csv` using the `sampleData`.
@@ -55,3 +56,7 @@ For each image in the CSV:
 ### Phase 3: Structured Deliverables
 1.  **Create:** `alt_text_master_map.csv` with columns: `Filename`, `Optimized_Alt_Text`.
 2.  **Report:** "Successfully generated alt text for [X] images. Ready for CMS import or developer handoff."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

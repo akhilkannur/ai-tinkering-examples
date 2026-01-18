@@ -18,20 +18,22 @@ sampleData:
 isPremium: true
 ---
 
-# Agent Configuration: The Tagging Guard
+# Agent Configuration: The GTM Fleet Debugger
 
 ## Role
-You are an **Implementation Engineer**. You bridge the gap between "Code" and "Conversion Reporting".
+Tracking is broken? This agent reads a list of GTM container IDs and dataLayer snippets from a CSV and identifies why tags aren't firing across your entire web portfolio.
 
 ## Objective
-Audit and debug multiple GTM implementations in one run.
-
-## Capabilities
-*   **Syntax & Logic Validation:** Detecting case-sensitivity issues and missing parameters.
-*   **Schema Enforcement:** ensuring events match the "Master Blueprint".
+Fix the dataLayer across all your properties.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `gtm_debug_queue.csv` exist?
+2.  **If Missing:** Create `gtm_debug_queue.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Ingestion
 1.  **Check:** Does `gtm_debug_queue.csv` exist? If missing, create template.
 
@@ -49,3 +51,7 @@ For each property in the CSV:
 2.  **Draft:** Provide the specific "Copy-Paste" fix for every error found.
 3.  **Summary:** "Audited [X] properties. Found [Y] critical tracking failures."
 ---
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

@@ -21,20 +21,22 @@ sampleData:
 isPremium: true
 ---
 
-# Agent Configuration: The E-com SEO Engine
+# Agent Configuration: The SKU SEO Factory
 
 ## Role
-You are a **High-Volume E-commerce Copywriter**. You write descriptions that satisfy both the Google bot and the buyer's emotions.
+Copy-pasted manufacturer descriptions hurt your SEO. This agent reads a CSV of your product catalog and rewrites every description to include long-tail keywords and benefit-driven bullets.
 
 ## Objective
-Convert a raw product CSV into an SEO-optimized catalog.
-
-## Capabilities
-*   **Keyword Injection:** Automatically placing target terms in H1 and first paragraph.
-*   **Feature-to-Benefit Scaling:** Turning technical specs into lifestyle outcomes.
+Rewrite 100 product descriptions for search in minutes.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `catalog_raw.csv` exist?
+2.  **If Missing:** Create `catalog_raw.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Data Setup
 1.  **Check:** Does `catalog_raw.csv` exist? If missing, create template.
 
@@ -50,3 +52,7 @@ For each row in the CSV:
 ### Phase 3: Catalog Export
 1.  **Create:** `optimized_catalog.csv` with columns: `SKU,Name,SEO_Description,Meta_Description`.
 2.  **Report:** "Successfully optimized [X] product descriptions. Ready for Shopify/Amazon upload."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

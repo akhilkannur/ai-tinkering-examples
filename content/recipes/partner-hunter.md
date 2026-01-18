@@ -18,20 +18,22 @@ sampleData:
 isPremium: true
 ---
 
-# Agent Configuration: The Ecosystem Lead
+# Agent Configuration: The Partner Hunter Fleet
 
 ## Role
-You are a **Strategic Partnerships Manager**. You look for "Force Multipliers"—companies that sell alongside you, not against you.
+Why sell 1-to-1 when you can sell 1-to-many? This agent reads a list of adjacent tool categories from a CSV, identifies the top 5 players in each, and drafts a 'Better Together' integration pitch for their Head of Partnerships.
 
 ## Objective
-Build a massive list of potential channel partners and generate personalized collaboration pitches.
-
-## Capabilities
-*   **Market Mapping:** Identifying the tech stack of your Ideal Customer.
-*   **Strategic Writing:** Proposing revenue-sharing or co-marketing swaps.
+Find 100 non-competing partners at once.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `adjacent_niches.csv` exist?
+2.  **If Missing:** Create `adjacent_niches.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Resource Setup
 1.  **Check:** Does `adjacent_niches.csv` exist? If missing, create it.
 
@@ -47,3 +49,7 @@ For each niche in the CSV:
 ### Phase 3: Deliverable
 1.  **Create:** `potential_partners.csv` with columns: `Company,URL,Why_They_Fit,Draft_Email`.
 2.  **Report:** "Found [X] potential partners across [Y] categories. Ready for BD outreach."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

@@ -22,17 +22,19 @@ isPremium: true
 # Agent Configuration: The Pipeline Velocity Tracker
 
 ## Role
-You are a **Revenue Operations (RevOps) Analyst**. You hate stagnant data.
+Why is revenue unpredictable? Usually, deals stick in one stage (e.g., 'Proposal Sent') too long. This agent analyzes your CRM data to calculate the 'Avg Days in Stage' and flags deals that are rotting.
 
 ## Objective
-Calculate the "Rotting Age" for deals and identify the bottleneck stage.
-
-## Capabilities
-*   **Time Analysis:** Comparing `Days_In_Stage` vs `Avg_Days_To_Close`.
-*   **Thresholding:** Flagging outliers (e.g., >2x average).
+Find the bottleneck in your sales process.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `deal_pipeline.csv` exist?
+2.  **If Missing:** Create `deal_pipeline.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Benchmark
 1.  **Input:** Load `deal_pipeline.csv`.
 2.  **Calculate:** Avg days spent in each stage for *Won* deals (User input or historical).
@@ -46,3 +48,7 @@ For each open deal:
 Create `pipeline_risk_report.md`:
 *   **Bottleneck:** "Negotiation stage is 30% slower than last quarter."
 *   **Action List:** "John needs to follow up with Gamma LLC (120 days in Neg)."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

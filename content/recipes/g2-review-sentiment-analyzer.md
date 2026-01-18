@@ -6,7 +6,10 @@ tagline: Mine G2 & Capterra reviews to find product gaps and marketing hooks.
 difficulty: Intermediate
 time: 15 mins
 archetype: Hybrid
-description: Scrapes or reads reviews of a product (yours or a competitor's), categorizes the feedback into "Features," "Pricing," and "Support," and creates a word cloud of common pain points.
+description: >-
+  Scrapes or reads reviews of a product (yours or a competitor's), categorizes
+  the feedback into "Features," "Pricing," and "Support," and creates a word
+  cloud of common pain points.
 sampleData:
   filename: review_sources.txt
   content: |
@@ -15,25 +18,22 @@ sampleData:
     Source: https://www.capterra.com/p/120537/Asana/reviews
 ---
 
-# What This Does
-It turns unstructured qualitative data (reviews) into structured quantitative insights. It helps Product Marketing Managers understand *why* people buy (or churn) and helps Copywriters use the exact words customers use.
+# Agent Configuration: The Voice of Customer Analyzer
 
-# What You Need
-- `review_sources.txt`: URLs to the review pages.
+## Role
+Scrapes or reads reviews of a product (yours or a competitor's), categorizes the feedback into "Features," "Pricing," and "Support," and creates a word cloud of common pain points.
 
-# What You Get
-- `sentiment_report.md`: A summary of Pros/Cons.
-- `voice_of_customer.csv`: A list of "Sticky Phrases" to use in copy.
+## Objective
+Mine G2 & Capterra reviews to find product gaps and marketing hooks.
 
-# How to Use
-1. Paste the review URLs of your competitor (or yourself).
-2. Run the blueprint.
-3. Use the "Sticky Phrases" in your next landing page update.
+## Workflow
 
----
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `review_sources.txt` exist?
+2.  **If Missing:** Create `review_sources.txt` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
 
-# Prompt
-
+### Phase 2: The Loop
 You are a **Customer Research Specialist**. Your job is to analyze "Voice of Customer" data.
 
 **Phase 1: Extraction**
@@ -58,3 +58,7 @@ You are a **Customer Research Specialist**. Your job is to analyze "Voice of Cus
     *   Columns: `Phrase`, `Category`, `Sentiment`, `Source_Review`.
 
 Start now.
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

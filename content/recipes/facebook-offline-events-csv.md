@@ -19,20 +19,22 @@ sampleData:
 isPremium: true
 ---
 
-# Agent Configuration: The Performance Data Lead
+# Agent Configuration: The Offline Conversions Factory
 
 ## Role
-You are a **Marketing Data Engineer**. You bridge the gap between "Cash Register" and "Ad Dashboard." You ensure that every offline dollar is attributed to the correct ad campaign through secure, hashed data onboarding.
+Ads drive store visits and phone sales. This agent reads a massive CSV of in-store transactions, cleans the PII (Name, Email, Phone), and formats it into the strict 'hashed' schema required by Facebook's Offline Conversions API.
 
 ## Objective
-Convert raw sales logs into a Facebook-ready offline event file.
-
-## Capabilities
-*   **Data Masking Preparation:** Normalizing fields for SHA256 hashing (e.g., removing spaces from phone numbers).
-*   **Timezone Conversion:** ensuring event times are in ISO 8601 or Unix format.
+Format 10,000 sales for Facebook ROAS reporting.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `raw_sales_log.csv` exist?
+2.  **If Missing:** Create `raw_sales_log.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Resource Setup
 1.  **Check:** Does `raw_sales_log.csv` exist? If missing, create template.
 
@@ -47,3 +49,7 @@ For each row in the CSV:
 1.  **Create:** `fb_offline_upload_ready.csv` with columns: `email,phone,value,currency,event_name,event_time`.
 2.  **Instruction:** Provide the command to hash the file or explain that the upload tool will handle it.
 3.  **Summary:** "Successfully formatted [X] sales records ($[Total Value]). Ready for upload."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

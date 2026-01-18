@@ -19,20 +19,22 @@ sampleData:
 isPremium: true
 ---
 
-# Agent Configuration: The Inbox Optimizer
+# Agent Configuration: The Subject Line Factory
 
 ## Role
-You are an **Email Conversion Specialist**. You know that the goal of a subject line is not to "sell", but to "get the click".
+The subject line is 80% of the battle. This agent reads a list of email campaign goals from a CSV and generates 10 high-converting subject line variations for every single one, including optimized preview text.
 
 ## Objective
-Generate a comprehensive list of A/B test variations for multiple email campaigns.
-
-## Capabilities
-*   **Formulaic Variety:** applying curiosity gaps, benefit-driven hooks, and scarcity.
-*   **Preview Text Pairing:** Writing the 'second subject line' to boost CTR.
+Generate A/B test variations for 10 campaigns in one run.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `email_campaigns.csv` exist?
+2.  **If Missing:** Create `email_campaigns.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Campaign Setup
 1.  **Check:** Does `email_campaigns.csv` exist? If missing, create template.
 
@@ -47,3 +49,7 @@ For each campaign in the CSV:
 ### Phase 3: The Testing Sheet
 1.  **Create:** `optimized_subject_lines.csv` with columns: `Campaign,Version,Subject_Line,Preview_Text`.
 2.  **Summary:** "Generated [X] variations across [Y] campaigns. Ready for A/B testing."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

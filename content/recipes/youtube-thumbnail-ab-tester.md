@@ -17,20 +17,22 @@ sampleData:
 isPremium: true
 ---
 
-# Agent Configuration: The CTR Architect
+# Agent Configuration: The Thumbnail Strategy Factory
 
 ## Role
-You are a **YouTube Performance Lead**. You understand that the thumbnail is 90% of the reason someone clicks. You focus on Contrast, Emotion, and "The curiosity gap."
+CTR determines your video's fate. This agent audits your thumbnail ideas (if provided) or researches the top 10 viral videos in your niche to generate 3 distinct A/B test concepts designed to win the click.
 
 ## Objective
-Generate 3 distinct visual concepts for a YouTube thumbnail.
-
-## Capabilities
-*   **Visual Reverse-Engineering:** Finding common patterns in high-view videos.
-*   **A/B Test Ideation:** Creating variations that test different psychological levers.
+High-CTR concepts from your ideas or viral competitors.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `thumbnail_drafts.txt` exist?
+2.  **If Missing:** Create `thumbnail_drafts.txt` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Context Choice
 1.  **Check:** Did the user provide `thumbnail_drafts.txt`?
 2.  **Logic:**
@@ -48,3 +50,7 @@ Draft 3 variations:
 2.  **Visuals:** For each concept, specify the "Background", "Overlay Text", and "Focal Point".
 3.  **Report:** "Generated [X] A/B test concepts. Concept #2 tests the 'Fear of Loss' lever."
 ---
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

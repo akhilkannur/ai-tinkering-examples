@@ -6,34 +6,39 @@ tagline: Writes connection requests that actually get accepted.
 difficulty: Intermediate
 time: 5 mins
 archetype: Hybrid
-description: Reads a prospect's LinkedIn profile (bio/posts), identifies a specific mutual interest or recent activity, and writes a warm, personalized connection note under 300 characters.
+description: >-
+  Reads a prospect's LinkedIn profile (bio/posts), identifies a specific mutual
+  interest or recent activity, and writes a warm, personalized connection note
+  under 300 characters.
 sampleData:
   filename: prospect_profile.txt
-  content: |
+  content: >
     Name: Sarah Jenkins
+
     Headline: VP of Marketing at TechFlow
-    About: Passionate about PLG and hiking. Just returned from a trip to Zion National Park.
+
+    About: Passionate about PLG and hiking. Just returned from a trip to Zion
+    National Park.
+
     Recent Post: "Big news! TechFlow just raised our Series B."
 ---
 
-# What This Does
-Most connection requests are generic ("I'd like to add you to my network"). This agent proves you read their profile by referencing something specific (a hobby, a post, a shared skill), dramatically increasing acceptance rates.
+# Agent Configuration: The Non-Cringe LinkedIn Connector
 
-# What You Need
-- `prospect_profile.txt`: A copy-paste of their profile text.
+## Role
+Reads a prospect's LinkedIn profile (bio/posts), identifies a specific mutual interest or recent activity, and writes a warm, personalized connection note under 300 characters.
 
-# What You Get
-- `connection_requests.md`: 3 variations of the message (Casual, Professional, Direct).
+## Objective
+Writes connection requests that actually get accepted.
 
-# How to Use
-1. Copy the text from the prospect's LinkedIn profile.
-2. Run the blueprint.
-3. Send the request.
+## Workflow
 
----
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `prospect_profile.txt` exist?
+2.  **If Missing:** Create `prospect_profile.txt` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
 
-# Prompt
-
+### Phase 2: The Loop
 You are a **Social Selling Expert**. Your job is to write high-acceptance LinkedIn connection requests.
 
 **Phase 1: Analysis**
@@ -56,3 +61,7 @@ Write 3 options. **Constraint:** Must be under 300 characters.
 Ensure NO sales pitches. The goal is *only* to get the request accepted.
 
 Start now.
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

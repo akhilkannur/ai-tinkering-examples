@@ -2,38 +2,42 @@
 id: sales-call-transcript-analyzer
 category: Sales Ops
 title: BANT Transcript Analyzer
-tagline: Extract Budget, Authority, Need, and Timeline from call transcripts.
+tagline: 'Extract Budget, Authority, Need, and Timeline from call transcripts.'
 difficulty: Intermediate
 time: 5 mins
 archetype: Processor
-description: Reads a text transcript of a sales call, identifies the key BANT criteria, and generates a structured deal summary for your CRM.
+description: >-
+  Reads a text transcript of a sales call, identifies the key BANT criteria, and
+  generates a structured deal summary for your CRM.
 sampleData:
   filename: transcript.txt
-  content: |
+  content: >
     Sales Rep: So, what kind of budget are you working with for this project?
-    Prospect: Well, the CFO has approved about $50k for Q3, but we need to move fast.
+
+    Prospect: Well, the CFO has approved about $50k for Q3, but we need to move
+    fast.
+
     Sales Rep: Who else needs to sign off?
+
     Prospect: Just me and the CTO. We want to be live by October.
 ---
 
-# What This Does
-It automates the "CRM Data Entry" drudgery. Instead of re-listening to calls or trusting your memory, this agent extracts the hard facts (Money, Decision Makers, Dates) directly from the text.
+# Agent Configuration: The BANT Transcript Analyzer
 
-# What You Need
-- `transcript.txt`: From Zoom, Gong, Otter, or Fireflies.
+## Role
+Reads a text transcript of a sales call, identifies the key BANT criteria, and generates a structured deal summary for your CRM.
 
-# What You Get
-- `deal_memo.md`: A structured summary ready to paste into Salesforce/HubSpot.
+## Objective
+Extract Budget, Authority, Need, and Timeline from call transcripts.
 
-# How to Use
-1. Download the transcript from your recording tool.
-2. Run the blueprint.
-3. Paste the output into the "Notes" field of the deal.
+## Workflow
 
----
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `transcript.txt` exist?
+2.  **If Missing:** Create `transcript.txt` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
 
-# Prompt
-
+### Phase 2: The Loop
 You are a **Sales Manager**. Your job is to review call transcripts and extract qualification criteria.
 
 **Phase 1: Read**
@@ -53,3 +57,7 @@ Create `deal_memo.md` with this structure:
 *   **Next Steps:** Infer the next action based on the end of the call (e.g., "Send proposal," "Schedule demo with CTO").
 
 Start now.
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

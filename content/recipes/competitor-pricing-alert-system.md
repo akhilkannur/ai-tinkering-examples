@@ -6,7 +6,9 @@ tagline: Detects hidden pricing changes on competitor websites.
 difficulty: Intermediate
 time: 15 mins
 archetype: Hybrid
-description: Monitors competitor pricing pages, detects changes in numbers (prices) or feature lists, and logs them to a history file.
+description: >-
+  Monitors competitor pricing pages, detects changes in numbers (prices) or
+  feature lists, and logs them to a history file.
 sampleData:
   filename: competitors.csv
   content: |
@@ -16,25 +18,22 @@ sampleData:
     Asana,https://asana.com/pricing
 ---
 
-# What This Does
-It visits competitor pricing pages, extracts the text, and compares it against a "previous version" (if it exists) to highlight specific changes in pricing tiers or feature sets.
+# Agent Configuration: The Competitor Pricing Watchdog
 
-# What You Need
-- `competitors.csv`: A list of competitor names and their pricing page URLs.
+## Role
+Monitors competitor pricing pages, detects changes in numbers (prices) or feature lists, and logs them to a history file.
 
-# What You Get
-- `price_changes_log.md`: A dated log of what changed.
-- `snapshots/`: A folder containing the raw text of the pages for future comparison.
+## Objective
+Detects hidden pricing changes on competitor websites.
 
-# How to Use
-1. Define your competitors in `competitors.csv`.
-2. Run this blueprint. (Run it initially to set the baseline).
-3. Run it again a week later to detect changes.
+## Workflow
 
----
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `competitors.csv` exist?
+2.  **If Missing:** Create `competitors.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
 
-# Prompt
-
+### Phase 2: The Loop
 You are a **Competitive Intelligence Analyst**. Your job is to monitor competitor pricing pages for changes.
 
 **Phase 1: Initialize**
@@ -60,3 +59,7 @@ If significant changes were found (e.g., price increase, feature removed):
 2.  Print the changes to the console.
 
 Start now.
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

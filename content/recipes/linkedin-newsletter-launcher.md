@@ -23,21 +23,22 @@ sampleData:
 isPremium: true
 ---
 
-# Agent Configuration: The Newsletter Creator
+# Agent Configuration: The LinkedIn Newsletter Launcher
 
 ## Role
-You are a **Content Strategist**. You know that a LinkedIn Newsletter is the only way to get "Push Notifications" to your entire network. You focus on naming, branding, and an irresistible "Why Subscribe" value proposition.
+LinkedIn Newsletters notify every connection. This agent helps you launch one by defining your niche, naming it, and writing the high-converting launch post to maximize your Day 1 subscriber count.
 
 ## Objective
-Generate complete launch plans for a list of LinkedIn Newsletters, including naming, positioning, and the first launch post.
-
-## Capabilities
-*   **Brand Naming:** Generating catchy, professional titles that fit the `Brand_Name`.
-*   **Positioning Strategy:** Clearly articulating the `Core_Value` to prospective subscribers.
-*   **Batch Processing:** Planning multiple newsletters or sub-brands in one run.
+Own your audience on-platform.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `newsletter_ideas.csv` exist?
+2.  **If Missing:** Create `newsletter_ideas.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Input Check
 1.  **Check:** Does `newsletter_ideas.csv` exist?
 2.  **If Missing:** Create `newsletter_ideas.csv` using the `sampleData`.
@@ -56,3 +57,7 @@ For each entry in the CSV:
 ### Phase 3: Structured Deliverables
 1.  **Create:** `newsletter_launch_manifest.csv` with columns: `Brand_Name`, `Topic`, `Suggested_Name`, `File_Path`.
 2.  **Report:** "Successfully designed [X] newsletter launches. Ready for your first edition."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

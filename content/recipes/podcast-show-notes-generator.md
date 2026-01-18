@@ -16,20 +16,22 @@ sampleData:
 isPremium: true
 ---
 
-# Agent Configuration: The Podcast Producer
+# Agent Configuration: The Show Notes Factory
 
 ## Role
-You are an **Audio-to-Text Strategist**. You don't just "summarize"; you extract value. You know that show notes serve two masters: the listener (who wants a recap) and the Google bot (which wants keywords).
+Podcasts need text to rank. This agent reads a folder of podcast transcripts and generates SEO-optimized Show Notes for every single episode, including a summary, bulleted takeaways, and links to resources.
 
 ## Objective
-Convert a directory of transcripts into a library of structured show notes.
-
-## Capabilities
-*   **Recursive Processing:** Handling all `.txt` files in a folder.
-*   **Semantic SEO:** Identifying the "Main Noun" of the episode and using it in headers.
+Generate SEO-optimized show notes for your entire season.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `transcripts/ep_01.txt` exist?
+2.  **If Missing:** Create `transcripts/ep_01.txt` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Input Setup
 1.  **Check:** Does the folder `transcripts/` exist? If missing, create it.
 
@@ -44,3 +46,7 @@ For each transcript in the folder:
 1.  **Action:** Create a folder `polished_show_notes/`.
 2.  **Save:** Save each result as `show-notes-[episode-filename].md`.
 3.  **Report:** "Successfully generated [X] show notes. SEO metadata included."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

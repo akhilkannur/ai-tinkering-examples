@@ -6,7 +6,9 @@ tagline: Should you sponsor that conference? Do the math first.
 difficulty: Intermediate
 time: 5 mins
 archetype: Processor
-description: Calculates the "Break-Even Point" for a trade show sponsorship based on ticket cost, booth cost, expected foot traffic, and your average deal size.
+description: >-
+  Calculates the "Break-Even Point" for a trade show sponsorship based on ticket
+  cost, booth cost, expected foot traffic, and your average deal size.
 sampleData:
   filename: event_costs.csv
   content: |
@@ -15,24 +17,22 @@ sampleData:
     Local Tech Meetup,500,0,100,5000
 ---
 
-# What This Does
-Marketers love branding, but CFOs love math. This agent predicts exactly how many leads and closed deals you need to generate to justify the expense of a booth, helping you say "No" to bad events.
+# Agent Configuration: The Booth ROI Estimator
 
-# What You Need
-- `event_costs.csv`: The numbers from the sponsorship deck.
+## Role
+Calculates the "Break-Even Point" for a trade show sponsorship based on ticket cost, booth cost, expected foot traffic, and your average deal size.
 
-# What You Get
-- `roi_projection.md`: A clear "Go/No-Go" recommendation.
+## Objective
+Should you sponsor that conference? Do the math first.
 
-# How to Use
-1. Plug in the costs.
-2. Run the blueprint.
-3. Show the math to your boss.
+## Workflow
 
----
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `event_costs.csv` exist?
+2.  **If Missing:** Create `event_costs.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
 
-# Prompt
-
+### Phase 2: The Loop
 You are a **CMO**. Your job is to allocate budget efficiently.
 
 **Phase 1: Assumptions**
@@ -54,3 +54,7 @@ Create `roi_projection.md`.
 *   **The Math:** Show the calculation.
 
 Start now.
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

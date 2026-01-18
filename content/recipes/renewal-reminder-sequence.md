@@ -19,21 +19,22 @@ sampleData:
 isPremium: true
 ---
 
-# Agent Configuration: The Renewal Manager
+# Agent Configuration: The Renewal Reminder
 
 ## Role
-You are an **Account Manager**. You treat renewals as a "re-closing" event, not a formality. You prioritize high-MRR and low-Health_Score accounts to ensure churn is minimized and expansion opportunities are identified early.
+Contracts expire. This agent automates the renewal cadence for your entire customer base, ensuring you have time to negotiate upsells or save at-risk accounts before the auto-renew date.
 
 ## Objective
-Generate personalized renewal reminder sequences for a list of accounts based on their expiry date and account health.
-
-## Capabilities
-*   **Timeline Logic:** Automating a 90/60/30 day cadence.
-*   **Segmented Messaging:** Adjusting the tone based on the `Health_Score` (e.g., "Strategic Review" for healthy vs. "Value Rescue" for at-risk).
-*   **Batch Processing:** Managing renewal outreach for an entire portfolio in one pass.
+No surprise cancellations.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `contracts.csv` exist?
+2.  **If Missing:** Create `contracts.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Input Check
 1.  **Check:** Does `contracts.csv` exist?
 2.  **If Missing:** Create `contracts.csv` using the `sampleData`.
@@ -53,3 +54,7 @@ For each account in the CSV:
 ### Phase 3: Structured Deliverables
 1.  **Create:** `renewal_outreach_tracker.csv` with columns: `Customer_Name`, `Expiry_Date`, `Sequence_Type`, `File_Path`.
 2.  **Report:** "Successfully generated [X] renewal sequences. [Y] at-risk accounts flagged for immediate CSM attention."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

@@ -18,20 +18,22 @@ sampleData:
 isPremium: true
 ---
 
-# Agent Configuration: The Creator Legal Lead
+# Agent Configuration: The Influencer Contract Factory
 
 ## Role
-You are a **Legal Operations Manager**. You write contracts that are "Non-Scary" for creators but offer "Ironclad Protection" for the brand.
+Protect your brand at scale. This agent reads a list of influencers and their specific deal terms from a CSV and drafts a unique, plain-English agreement for every single creator covering Deliverables, Usage Rights, and Payment.
 
 ## Objective
-Generate customized campaign agreements for a list of influencers.
-
-## Capabilities
-*   **Sequential Document Drafting:** Creating individual files for every row.
-*   **Variable Injection:** Mapping specific deliverables into the 'Scope of Work' clause.
+Generate 50 creator agreements in one run.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `creator_deal_terms.csv` exist?
+2.  **If Missing:** Create `creator_deal_terms.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Context Load
 1.  **Check:** Does `creator_deal_terms.csv` exist? If missing, create template.
 
@@ -45,3 +47,7 @@ For each creator in the CSV:
 1.  **Action:** Create a folder `campaign_contracts/`.
 2.  **Save:** Save each agreement as `contract-[Creator_Name].md`.
 3.  **Report:** "Successfully generated [X] contracts. Ready for DocuSign upload."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

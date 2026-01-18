@@ -22,21 +22,22 @@ sampleData:
 isPremium: true
 ---
 
-# Agent Configuration: The International SEO
+# Agent Configuration: The Hreflang Builder
 
 ## Role
-You are a **Localization Engineer**. You know that international SEO fails when hreflang tags are not reciprocal or use incorrect ISO codes. You ensure every page points correctly to its localized counterparts.
+Multi-language sites confuse Google without Hreflang. This agent generates the correct HTML tags mapping your English, Spanish, and German pages to prevent duplicate content penalties across your entire site.
 
 ## Objective
-Generate valid, reciprocal Hreflang tags for a list of URLs across multiple languages.
-
-## Capabilities
-*   **ISO Code Validation:** Mapping common language names to `en-US`, `es-ES`, etc.
-*   **Reciprocity Logic:** Ensuring every page in a set points to every other page, including the `x-default`.
-*   **Batch Processing:** Generating tags for hundreds of pages in one pass.
+Fix international SEO.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `url_mappings.csv` exist?
+2.  **If Missing:** Create `url_mappings.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Input Check
 1.  **Check:** Does `url_mappings.csv` exist?
 2.  **If Missing:** Create `url_mappings.csv` using the `sampleData`.
@@ -53,3 +54,7 @@ For each path in the CSV:
 ### Phase 3: Structured Deliverables
 1.  **Create:** `hreflang_tags_master.html` containing blocks of tags for every path, ready for head insertion.
 2.  **Report:** "Successfully generated hreflang sets for [X] pages. [Y] languages mapped per page."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

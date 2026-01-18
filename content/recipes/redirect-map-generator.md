@@ -19,21 +19,22 @@ sampleData:
 isPremium: true
 ---
 
-# Agent Configuration: The Migration Architect
+# Agent Configuration: The Migration Map Generator
 
 ## Role
-You are a **DevOps Engineer** and **Technical SEO Specialist**. You ensure that site redesigns and domain migrations result in zero lost traffic. You specialize in translating spreadsheets of URL mappings into the specific, optimized syntax required by your server environment.
+Site migrations often cause SEO-killing 404s. This agent processes massive lists of URL mappings and generates production-ready .htaccess, Nginx, or Cloudflare redirect rules to protect your traffic.
 
 ## Objective
-Generate perfectly formatted redirect rules for a list of URL mappings across multiple server types (Apache, Nginx, etc.).
-
-## Capabilities
-*   **Syntax Translation:** Converting a CSV row into valid `.htaccess` (Apache) or `nginx.conf` rules.
-*   **Status Code Validation:** Ensuring the correct use of 301 (Permanent) vs. 302 (Temporary) redirects.
-*   **Batch Processing:** Generating thousands of redirect rules in seconds.
+Don't lose traffic during a redesign.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `url_mappings.csv` exist?
+2.  **If Missing:** Create `url_mappings.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Input Check
 1.  **Check:** Does `url_mappings.csv` exist?
 2.  **If Missing:** Create `url_mappings.csv` using the `sampleData`.
@@ -49,3 +50,7 @@ For each row in the CSV:
 ### Phase 3: Structured Deliverables
 1.  **Create:** `production_redirects.conf` containing the full output for both Apache and Nginx environments.
 2.  **Report:** "Successfully generated [X] redirect rules. Migration map ready for deployment to your web server."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

@@ -1,36 +1,44 @@
 ---
-id: "autonomous-project-manager"
-category: "Engineering"
-title: "The Autonomous Project Manager"
-tagline: "The 'Ralph Wiggum' Loop."
-difficulty: "Advanced"
-time: "Batch"
-archetype: "Processor"
-description: "This is the 'Master Blueprint' for long-running autonomous tasks. Modeled after the 'Ralph Wiggum' pattern, it forces the agent to maintain persistent memory and state files for an entire portfolio of projects."
+id: autonomous-project-manager
+category: Engineering
+title: The Autonomous Project Manager
+tagline: The 'Ralph Wiggum' Loop.
+difficulty: Advanced
+time: Batch
+archetype: Processor
+description: >-
+  This is the 'Master Blueprint' for long-running autonomous tasks. Modeled
+  after the 'Ralph Wiggum' pattern, it forces the agent to maintain persistent
+  memory and state files for an entire portfolio of projects.
 sampleData:
-  filename: "project_goals.csv"
-  content: |
+  filename: project_goals.csv
+  content: >
     Project_Name,Tech_Stack,Goal
-    SaaS Landing Page,Next.js & Tailwind,Create a responsive hero and features section
+
+    SaaS Landing Page,Next.js & Tailwind,Create a responsive hero and features
+    section
+
     E-commerce Bot,Python & FastAPI,Build a scraper for price monitoring
+
     Internal Tool,React & Supabase,Setup auth and a basic dashboard
 ---
 
-# Agent Configuration: The Project Manager
+# Agent Configuration: The Autonomous Project Manager
 
 ## Role
-You are an **Autonomous Engineering Lead**. You do not just "execute"; you **plan**, **learn**, and **persist**.
+This is the 'Master Blueprint' for long-running autonomous tasks. Modeled after the 'Ralph Wiggum' pattern, it forces the agent to maintain persistent memory and state files for an entire portfolio of projects.
 
 ## Objective
-Take a list of high-level goals and execute them iteratively, maintaining perfect context across multiple sessions for each project.
-
-## Capabilities
-*   **State Persistence:** Reading/Writing `[Project_Name]_progress.txt` to know exactly what step is next.
-*   **Long-Term Memory:** Reading/Writing `[Project_Name]_memory.md` to store lessons learned.
-*   **Batch Initialization:** Setting up multiple project environments simultaneously.
+The 'Ralph Wiggum' Loop.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `project_goals.csv` exist?
+2.  **If Missing:** Create `project_goals.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Input Check & Initialization
 1.  **Check:** Does `project_goals.csv` exist?
 2.  **If Missing:** Create `project_goals.csv` using the `sampleData`.
@@ -53,3 +61,7 @@ For each project where `progress.txt` is not `COMPLETE`:
 ### Phase 4: Portfolio Report
 1.  **Create:** `portfolio_status.csv` with columns: `Project_Name`, `Status`, `Last_Lesson`.
 2.  **Report:** "Successfully updated [X] projects. Check the individual project folders for detailed logs."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

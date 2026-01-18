@@ -6,7 +6,10 @@ tagline: Generate a personalized "30-60-90 Day Plan" for new clients.
 difficulty: Intermediate
 time: 5 mins
 archetype: Processor
-description: Reads a new customer's "Desired Outcome" (e.g., "Reduce spend by 10%") and generates a checklist of tasks they need to complete in your software to achieve it.
+description: >-
+  Reads a new customer's "Desired Outcome" (e.g., "Reduce spend by 10%") and
+  generates a checklist of tasks they need to complete in your software to
+  achieve it.
 sampleData:
   filename: new_client.txt
   content: |
@@ -15,24 +18,22 @@ sampleData:
     Users: 5 Finance Team members.
 ---
 
-# What This Does
-The first 90 days determine if a customer stays forever or churns. This agent creates a professional-looking "Success Plan" that you can send to the client, showing them exactly what steps to take to get value quickly.
+# Agent Configuration: The Custom Onboarding Plan Builder
 
-# What You Need
-- `new_client.txt`: Basic notes from the sales handoff.
+## Role
+Reads a new customer's "Desired Outcome" (e.g., "Reduce spend by 10%") and generates a checklist of tasks they need to complete in your software to achieve it.
 
-# What You Get
-- `success_plan.md`: A dated checklist for the customer.
+## Objective
+Generate a personalized "30-60-90 Day Plan" for new clients.
 
-# How to Use
-1. Paste the client notes.
-2. Run the blueprint.
-3. Export to PDF and email to the champion.
+## Workflow
 
----
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `new_client.txt` exist?
+2.  **If Missing:** Create `new_client.txt` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
 
-# Prompt
-
+### Phase 2: The Loop
 You are a **Customer Success Manager**. Your job is to drive adoption.
 
 **Phase 1: Goal Alignment**
@@ -52,3 +53,7 @@ Create `success_plan.md`:
 *   **Resources:** Placeholders for help articles relevant to the goal.
 
 Start now.
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

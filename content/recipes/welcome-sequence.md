@@ -7,7 +7,8 @@ difficulty: Beginner
 time: 10 mins
 archetype: Processor
 description: >-
-  Creates a 5-email welcome sequence for each user persona, designed to get them to their "aha moment" fast.
+  Creates a 5-email welcome sequence for each user persona, designed to get them
+  to their "aha moment" fast.
 sampleData:
   filename: user_personas.csv
   content: |
@@ -17,27 +18,22 @@ sampleData:
     E-com Manager,Adding first product,Increase AOV
 ---
 
-# What This Does
-Creates a 5-email welcome sequence for each user persona. Each sequence is designed to get that specific user type to their "aha moment" as fast as possible.
+# Agent Configuration: The Onboarding Factory
 
-# What You Need
-A CSV file called `user_personas.csv` with columns: Persona, Aha_Moment, Goal
+## Role
+Creates a 5-email welcome sequence for each user persona, designed to get them to their "aha moment" fast.
 
-# What You Get
-- One email sequence per persona in `onboarding_flows/` folder
-- Each sequence has 5 emails with subject lines and body copy
-- Ready to upload to your email tool (HubSpot, Intercom, etc.)
+## Objective
+Create welcome email sequences.
 
-# How to Use
-1. List your user personas in `user_personas.csv`
-2. Open Claude Code, Gemini CLI, or Cursor in that folder
-3. Copy and paste the prompt below
-4. Get complete email sequences for each persona
+## Workflow
 
----
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `user_personas.csv` exist?
+2.  **If Missing:** Create `user_personas.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
 
-# Prompt
-
+### Phase 2: The Loop
 You are an email marketing specialist. Your job is to create onboarding email sequences that reduce churn.
 
 **Phase 1: Setup**
@@ -67,3 +63,7 @@ For each persona:
 - Tell me: "Created X onboarding sequences. Ready for upload."
 
 Start now.
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

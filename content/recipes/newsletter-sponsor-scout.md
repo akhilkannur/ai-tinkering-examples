@@ -18,20 +18,22 @@ sampleData:
 isPremium: true
 ---
 
-# Agent Configuration: The Sponsor Hunter
+# Agent Configuration: The Sponsor Scout Engine
 
 ## Role
-You are a **Sponsorship Sales Manager**. You track where ad dollars are flowing and redirect them to your own publication.
+Why wait for sponsors? This agent reads a list of competitor newsletters from a CSV, identifies who is *already* spending money in your niche, and drafts a 'Warm Pitch' demonstrating your audience alignment.
 
 ## Objective
-Identify active advertisers in your niche and generate personalized pitches.
-
-## Capabilities
-*   **Media Monitoring:** Scanning competitor issues for "Sponsored by" tags.
-*   **Performance Comparison:** Pitching based on engagement benchmarks.
+Fill your ad slots for the next 6 months.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `competitor_newsletters.csv` exist?
+2.  **If Missing:** Create `competitor_newsletters.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Context Setup
 1.  **Check:** Does `competitor_newsletters.csv` exist? If missing, create template.
 2.  **Initialize:** Create `sponsor_prospects.csv` with headers: `Brand,Contact_Name,Reason_for_Match,Pitch_Status`.
@@ -46,3 +48,7 @@ For each newsletter in the CSV:
 ### Phase 3: Output
 1.  **Append:** Write results to `sponsor_prospects.csv`.
 2.  **Summary:** "Found [X] active advertisers. Pitch list is ready for outreach."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

@@ -6,7 +6,10 @@ tagline: The perfect script for extracting testimonials from happy clients.
 difficulty: Beginner
 time: 5 mins
 archetype: Processor
-description: Generates a list of interview questions tailored to the specific "Win" a customer experienced, designed to extract the "Before vs. After" metrics needed for a case study.
+description: >-
+  Generates a list of interview questions tailored to the specific "Win" a
+  customer experienced, designed to extract the "Before vs. After" metrics
+  needed for a case study.
 sampleData:
   filename: success_story_notes.txt
   content: |
@@ -15,24 +18,22 @@ sampleData:
     Champion: Sarah, Sales Ops.
 ---
 
-# What This Does
-You need quotes for your website ("We saved 50%!"), but clients often give vague praise ("The team is nice"). This agent gives you the questions that *force* the client to give you the specific numbers and soundbites you need.
+# Agent Configuration: The Case Study Interviewer
 
-# What You Need
-- `success_story_notes.txt`: Basic info on what went well.
+## Role
+Generates a list of interview questions tailored to the specific "Win" a customer experienced, designed to extract the "Before vs. After" metrics needed for a case study.
 
-# What You Get
-- `interview_guide.md`: A structured script for a 15-minute call.
+## Objective
+The perfect script for extracting testimonials from happy clients.
 
-# How to Use
-1. Paste what you know about the win.
-2. Run the blueprint.
-3. Get on the call and ask the questions.
+## Workflow
 
----
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `success_story_notes.txt` exist?
+2.  **If Missing:** Create `success_story_notes.txt` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
 
-# Prompt
-
+### Phase 2: The Loop
 You are a **Content Marketer**. Your job is to interview customers.
 
 **Phase 1: Strategy**
@@ -54,3 +55,7 @@ Write 5 questions:
 Save to `interview_guide.md`.
 
 Start now.
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

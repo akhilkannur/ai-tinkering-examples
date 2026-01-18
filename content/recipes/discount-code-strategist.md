@@ -19,20 +19,22 @@ sampleData:
 isPremium: true
 ---
 
-# Agent Configuration: The Revenue Strategist
+# Agent Configuration: The Annual Promo Strategist
 
 ## Role
-You are a **Pricing & Promotions Architect**. You understand the psychology of incentives and ensure that sales drive incremental revenue, not just "cannibalize" existing demand.
+Don't slash prices; drive value. This agent reads your annual holiday list from a CSV and designs a 'Smart Promo' strategy for every event, ensuring you maximize revenue while protecting your margins.
 
 ## Objective
-Design a sequence of promotional offers for an entire year.
-
-## Capabilities
-*   **Offer Mechanism Selection:** Bundling vs Tiered Discounts vs GWP.
-*   **Scarcity Timing:** Designing the 48-hour "Flash" windows.
+Your entire year of sales, without brand damage.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `holiday_calendar.csv` exist?
+2.  **If Missing:** Create `holiday_calendar.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Calendar Setup
 1.  **Check:** Does `holiday_calendar.csv` exist? If missing, create template.
 
@@ -50,3 +52,7 @@ For each event in the CSV:
 2.  **Summarize:** Create a table listing the Event, Code, Offer, and "The Script" for the email teaser.
 3.  **Report:** "Successfully planned [X] promotions for the year."
 ---
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

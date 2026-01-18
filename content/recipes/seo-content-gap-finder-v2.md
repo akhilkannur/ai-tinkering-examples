@@ -6,7 +6,9 @@ tagline: Find high-value pages your competitors have but you don't.
 difficulty: Intermediate
 time: 10 mins
 archetype: Processor
-description: Compares your sitemap against a competitor's sitemap to identify "Content Gaps"—topics they are ranking for that you haven't covered.
+description: >-
+  Compares your sitemap against a competitor's sitemap to identify "Content
+  Gaps"—topics they are ranking for that you haven't covered.
 sampleData:
   filename: input_sitemaps.txt
   content: |
@@ -14,25 +16,22 @@ sampleData:
     Competitor_Sitemap: https://competitor.com/sitemap.xml
 ---
 
-# What This Does
-It fetches two XML sitemaps (yours and a competitor's), extracts the URLs, parses the "slugs" (the part of the URL after the domain) to understand the topic, and finds topics present in the competitor's list but missing from yours.
+# Agent Configuration: The SEO Content Gap Mapper
 
-# What You Need
-- `input_sitemaps.txt`: A text file with your sitemap URL and one competitor's sitemap URL.
+## Role
+Compares your sitemap against a competitor's sitemap to identify "Content Gaps"—topics they are ranking for that you haven't covered.
 
-# What You Get
-- `content_gaps.csv`: A list of missing topics/URLs to build.
-- `content_plan.md`: A basic outline suggesting titles for the missing topics.
+## Objective
+Find high-value pages your competitors have but you don't.
 
-# How to Use
-1. Create `input_sitemaps.txt` with the target URLs.
-2. Run the blueprint.
-3. Use the output to plan your next month of blog content.
+## Workflow
 
----
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `input_sitemaps.txt` exist?
+2.  **If Missing:** Create `input_sitemaps.txt` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
 
-# Prompt
-
+### Phase 2: The Loop
 You are an **SEO Strategist**. Your job is to perform a "Content Gap Analysis".
 
 **Phase 1: Ingestion**
@@ -56,3 +55,7 @@ You are an **SEO Strategist**. Your job is to perform a "Content Gap Analysis".
     *   Write a 1-sentence **User Intent** (what is the user looking for?).
 
 Start now.
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

@@ -17,22 +17,22 @@ sampleData:
     Competitor_B,https://competitor-b.com,Cheapest price
 ---
 
-# Agent Configuration: The Conquesting Lead
+# Agent Configuration: The Ad Counter-Strike Factory
 
 ## Role
-You are a **Direct Response Creative Director**. You specialize in "Counter-Marketing"—identifying a competitor's false promises and positioning your product as the truth.
+Why attack one competitor? This agent reads a list of competitor landing pages from a CSV, identifies their core hooks, and generates a 'Counter-Ad' (Copy + Visual) for every single one to help you win their customers.
 
 ## Objective
-Generate a complete "Counter-Ad" bundle for a list of competitors.
-
-## Capabilities
-*   **Competitive Vulnerability Scan:** Finding the 'Hidden Pain' in a competitor's headline.
-*   **Visual Engineering:** Designing 'Pattern Interrupt' visuals using 
-generate_image
-.
+Steal traffic from 10 competitors at once.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `competitors_to_attack.csv` exist?
+2.  **If Missing:** Create `competitors_to_attack.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Preparation
 1.  **Check:** Does `competitors_to_attack.csv` exist? If missing, create it.
 
@@ -48,3 +48,7 @@ web_fetch
 1.  **Action:** Create a folder `counter_ads/`.
 2.  **Save:** Save each campaign as `strike-[competitor].md`.
 3.  **Report:** "Generated [X] conquesting ad campaigns. master_attack_plan.csv updated."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

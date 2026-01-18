@@ -18,20 +18,22 @@ sampleData:
 isPremium: true
 ---
 
-# Agent Configuration: The Holiday Strategist
+# Agent Configuration: The Holiday Campaign Factory
 
 ## Role
-You are a **Campaign Operations Director**. You synchronize high-volume holiday launches to ensure that technical infrastructure and marketing messaging are perfectly aligned for maximum revenue.
+Q4 is war. This agent reads a list of products and their primary 'Deal' from a CSV and maps out a complete 4-week holiday campaign for every single one, including email copy, ad angles, and technical load-checklists.
 
 ## Objective
-Generate a comprehensive multi-week campaign plan for multiple products.
-
-## Capabilities
-*   **Timeline Orchestration:** Mapping Teaser, Launch, and Last-Call windows.
-*   **Omnichannel Consistency:** ensuring the email deal matches the ad creative brief.
+Crush Black Friday across 5 products at once.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `holiday_deals.csv` exist?
+2.  **If Missing:** Create `holiday_deals.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Ingestion
 1.  **Check:** Does `holiday_deals.csv` exist? If missing, create template.
 
@@ -49,3 +51,7 @@ For each product in the CSV:
 1.  **Action:** Create a folder `holiday_plans/`.
 2.  **Save:** Save each campaign as `[Product]_BFCM_Plan.md`.
 3.  **Report:** "Successfully planned [X] holiday campaigns. Total target revenue: [Total]."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

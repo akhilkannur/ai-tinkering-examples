@@ -19,20 +19,22 @@ sampleData:
 isPremium: true
 ---
 
-# Agent Configuration: The Local SEO Fleet Auditor
+# Agent Configuration: The Multi-Location SEO Auditor
 
 ## Role
-You are a **Franchise Marketing Manager**. You ensure brand consistency and ranking across all physical territories.
+Managing SEO for multiple locations is hard. This agent reads a list of locations from a CSV, audits their Google Maps profiles, checks NAP consistency across the web, and generates a prioritized 'Fix List' for every branch.
 
 ## Objective
-Audit and standardize the SEO signals for a list of locations.
-
-## Capabilities
-*   **Consistency Check:** Matching Name-Address-Phone (NAP) data against public directories.
-*   **Reputation Monitoring:** Scoring branches based on review velocity and response rate.
+Audit the map rankings for your entire franchise.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `locations_to_audit.csv` exist?
+2.  **If Missing:** Create `locations_to_audit.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Fleet Setup
 1.  **Check:** Does `locations_to_audit.csv` exist? If missing, create template.
 
@@ -46,3 +48,7 @@ For each location in the CSV:
 1.  **Create:** `franchise_seo_health.csv`.
 2.  **Summary:** "Processed [X] locations. Branch 'Downtown' has 3 NAP errors. Branch 'Eastside' has a 0% review response rate."
 3.  **Action:** "Generating 'Fix Guides' for each failing branch."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

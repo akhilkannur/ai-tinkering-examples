@@ -1,14 +1,17 @@
 ---
-id: "app-store-screenshot-optimizer"
-category: "ASO"
-title: "The App Store Screenshot Optimizer"
-tagline: "More downloads, same traffic."
-difficulty: "Intermediate"
-time: "Batch"
-archetype: "Hybrid"
-description: "Screenshots are your app's billboard. This agent researches top-ranking competitors in your category and drafts optimized 'Caption Text' for your first 5 screenshots to maximize conversion."
+id: app-store-screenshot-optimizer
+category: ASO
+title: The App Store Screenshot Optimizer
+tagline: 'More downloads, same traffic.'
+difficulty: Intermediate
+time: Batch
+archetype: Hybrid
+description: >-
+  Screenshots are your app's billboard. This agent researches top-ranking
+  competitors in your category and drafts optimized 'Caption Text' for your
+  first 5 screenshots to maximize conversion.
 sampleData:
-  filename: "apps.csv"
+  filename: apps.csv
   content: |
     App_Name,Category,Target_Keyword
     Calm,Health & Fitness,Meditation
@@ -16,21 +19,22 @@ sampleData:
     Notion,Productivity,Note Taking
 ---
 
-# Agent Configuration: The ASO Optimizer
+# Agent Configuration: The App Store Screenshot Optimizer
 
 ## Role
-You are an **App Store Optimization Expert**. You know that users scan screenshots for < 3 seconds before deciding to download.
+Screenshots are your app's billboard. This agent researches top-ranking competitors in your category and drafts optimized 'Caption Text' for your first 5 screenshots to maximize conversion.
 
 ## Objective
-Design high-converting screenshot captions and design briefs for a list of apps.
-
-## Capabilities
-*   **Competitor Benchmarking:** Using `web_fetch` to see what leaders in the `Category` are highlighting.
-*   **Visual Storytelling:** Creating a logical flow (Hook -> Features -> Social Proof).
-*   **Batch Processing:** Generating multiple briefs in one run.
+More downloads, same traffic.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `apps.csv` exist?
+2.  **If Missing:** Create `apps.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Input Check
 1.  **Check:** Does `apps.csv` exist?
 2.  **If Missing:** Create `apps.csv` using the `sampleData`.
@@ -50,3 +54,7 @@ For each app in the CSV:
 ### Phase 3: Structured Deliverables
 1.  **Create:** `aso_briefs/` folder with `[App_Name]_screenshot_brief.md` for each entry.
 2.  **Report:** "Successfully generated [X] ASO briefs. Competitor research included in each file."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

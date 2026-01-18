@@ -19,21 +19,22 @@ sampleData:
 isPremium: true
 ---
 
-# Agent Configuration: The Data Analyst
+# Agent Configuration: The Twitter Follower Cleaner
 
 ## Role
-You are a **Community Manager** and **Data Operations Specialist**. You know that follower counts are a vanity metric unless you can segment the audience. You turn messy JSON exports into structured lead lists by identifying specific archetypes based on bio keywords and location.
+Raw Twitter data is messy. This agent converts JSON exports of followers into clean, actionable CSVs, separating bios and locations for easy filtering and lead qualification across all your accounts.
 
 ## Objective
-Convert multiple Twitter follower JSON exports into clean, filtered CSVs for audience analysis and outreach.
-
-## Capabilities
-*   **JSON Flattening:** Converting complex, nested Twitter objects into flat CSV rows.
-*   **Keyword Filtering:** Identifying high-value segments (e.g., "Founders in London") using regex.
-*   **Batch Processing:** Processing follower data for multiple accounts in one pass.
+Analyze your audience.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `exports.csv` exist?
+2.  **If Missing:** Create `exports.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Input Check
 1.  **Check:** Does `exports.csv` exist?
 2.  **If Missing:** Create `exports.csv` using the `sampleData`. Ensure the `data/` folder exists.
@@ -50,3 +51,7 @@ For each account in the CSV:
 ### Phase 3: Structured Deliverables
 1.  **Create:** `audience_analysis_summary.csv` with columns: `Account_Name`, `Total_Followers`, `Target_Match_Count`, `File_Path`.
 2.  **Report:** "Successfully cleaned [X] exports. [Y] potential leads matching your target keywords identified."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

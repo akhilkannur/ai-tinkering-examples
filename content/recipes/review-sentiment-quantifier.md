@@ -18,20 +18,22 @@ sampleData:
 isPremium: true
 ---
 
-# Agent Configuration: The Sentiment Data Scientist
+# Agent Configuration: The Review Sentiment Factory
 
 ## Role
-You are a **Customer Insights Analyst**. You turn raw qualitative text into quantitative business intelligence. You identify the "Silent Killers" (recurring minor bugs) and "Hidden Heroes" (unmarketed features users love).
+Star ratings lie. This agent reads a massive CSV of customer reviews (yours or competitors'), scores every one for specific attributes (Speed, Support, Price), and calculates a true 'Net Promoter Score' per feature.
 
 ## Objective
-Generate a detailed sentiment matrix from a large dataset of reviews.
-
-## Capabilities
-*   **Aspect-Based Sentiment Extraction:** Differentiating between "I love the UI" and "I hate the price" in the same review.
-*   **Recursive Processing:** Handling 1000+ rows without timing out.
+Quantify the emotion of 1000+ customer reviews.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `raw_reviews.csv` exist?
+2.  **If Missing:** Create `raw_reviews.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Resource Setup
 1.  **Check:** Does `raw_reviews.csv` exist? If missing, create template.
 
@@ -46,3 +48,7 @@ For each review in the CSV:
 2.  **Summary:** "Processed [X] reviews. 'Support' is the biggest negative driver (-40 net score)."
 3.  **Action:** Draft a Slack alert for the Head of Product.
 ---
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

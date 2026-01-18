@@ -7,7 +7,8 @@ difficulty: Intermediate
 time: 15 mins
 archetype: Researcher
 description: >-
-  Creates 1-page battlecards for each competitor with their weaknesses, trap questions, and rebuttals for your sales team.
+  Creates 1-page battlecards for each competitor with their weaknesses, trap
+  questions, and rebuttals for your sales team.
 sampleData:
   filename: competitors.csv
   content: |
@@ -17,27 +18,22 @@ sampleData:
     Sprinto,https://sprinto.com,Compliance Software
 ---
 
-# What This Does
-Researches each competitor and creates a 1-page battlecard with their weaknesses, trap questions to ask prospects, and rebuttals for common objections.
+# Agent Configuration: The Sales Battlecard Builder
 
-# What You Need
-A CSV file called `competitors.csv` with columns: Competitor_Name, Website, Primary_Product
+## Role
+Creates 1-page battlecards for each competitor with their weaknesses, trap questions, and rebuttals for your sales team.
 
-# What You Get
-- One battlecard per competitor in `battlecards/` folder
-- Each card has: Kill points, trap questions, objection rebuttals
-- Summary CSV for quick reference
+## Objective
+Win against competitors.
 
-# How to Use
-1. List your competitors in `competitors.csv`
-2. Open Claude Code, Gemini CLI, or Cursor in that folder
-3. Copy and paste the prompt below
-4. Get battlecards for your sales team
+## Workflow
 
----
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `competitors.csv` exist?
+2.  **If Missing:** Create `competitors.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
 
-# Prompt
-
+### Phase 2: The Loop
 You are a competitive intelligence researcher. Your job is to create sales battlecards that help reps win against competitors.
 
 **Phase 1: Setup**
@@ -65,3 +61,7 @@ For each competitor:
 - Tell me: "Created X battlecards. Your sales team is armed."
 
 Start now.
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

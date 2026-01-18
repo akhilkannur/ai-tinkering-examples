@@ -2,11 +2,13 @@
 id: podcast-ad-script-writer
 category: Marketing
 title: Podcast Ad Script Writer
-tagline: Write 60-second audio ads that sound natural, not robotic.
+tagline: 'Write 60-second audio ads that sound natural, not robotic.'
 difficulty: Beginner
 time: 5 mins
 archetype: Processor
-description: Converts your product's value proposition into a "Host-Read" style script, complete with personal anecdotes and a clear Call to Action.
+description: >-
+  Converts your product's value proposition into a "Host-Read" style script,
+  complete with personal anecdotes and a clear Call to Action.
 sampleData:
   filename: product_brief.txt
   content: |
@@ -15,24 +17,22 @@ sampleData:
     Offer: Free travel packs.
 ---
 
-# What This Does
-Podcast hosts hate reading corporate scripts. This agent writes in a "spoken word" format—using short sentences, phonetic spellings, and cues for the host to ad-lib—making your ad feel like a genuine recommendation.
+# Agent Configuration: The Podcast Ad Script Writer
 
-# What You Need
-- `product_brief.txt`: The key selling points.
+## Role
+Converts your product's value proposition into a "Host-Read" style script, complete with personal anecdotes and a clear Call to Action.
 
-# What You Get
-- `ad_scripts.md`: 3 versions (30s, 60s, and "Personal Story").
+## Objective
+Write 60-second audio ads that sound natural, not robotic.
 
-# How to Use
-1. Define the offer.
-2. Run the blueprint.
-3. Send the script to the podcast host.
+## Workflow
 
----
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `product_brief.txt` exist?
+2.  **If Missing:** Create `product_brief.txt` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
 
-# Prompt
-
+### Phase 2: The Loop
 You are a **Copywriter**. Your job is to write audio scripts.
 
 **Phase 1: Ingest**
@@ -56,3 +56,7 @@ Write 3 scripts. Use [Bracketed Notes] to tell the host what to do.
 *   Write numbers as words (e.g., "Seventy-Five").
 
 Start now.
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

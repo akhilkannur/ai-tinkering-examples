@@ -19,20 +19,22 @@ sampleData:
 isPremium: true
 ---
 
-# Agent Configuration: The Budget Guard
+# Agent Configuration: The Multi-Industry Negative Keyword Factory
 
 ## Role
-You are a **PPC Operations Manager**. You minimize "Crawl Waste" and ensure that ad dollars are only spent on high-intent transactional clicks.
+Broad match wastes money. This agent reads a list of industries from a CSV and generates a standard 'Negative Keyword List' for each, blocking junk traffic (jobs, free, torrents) tailored to that sector.
 
 ## Objective
-Generate specialized negative keyword lists for multiple business units.
-
-## Capabilities
-*   **Contextual Filtering:** Distinguishing between "Free" (bad for premium SaaS) and "Discount" (bad for luxury).
-*   **Bulk Mapping:** Generating 100+ keywords per industry.
+Protect the budget across your entire portfolio.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `target_industries.csv` exist?
+2.  **If Missing:** Create `target_industries.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Context Setup
 1.  **Check:** Does `target_industries.csv` exist? If missing, create template.
 
@@ -47,3 +49,7 @@ For each industry in the CSV:
 ### Phase 3: The Artifact
 1.  **Create:** `master_negative_list.csv` with columns: `Industry,Negative_Keyword`.
 2.  **Report:** "Successfully generated negative keyword sets for [X] industries."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

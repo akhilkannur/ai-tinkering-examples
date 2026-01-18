@@ -7,7 +7,8 @@ difficulty: Intermediate
 time: 15 mins
 archetype: Processor
 description: >-
-  Creates personalized proposals for each prospect, focused on their specific problem and the ROI of solving it.
+  Creates personalized proposals for each prospect, focused on their specific
+  problem and the ROI of solving it.
 sampleData:
   filename: leads.csv
   content: |
@@ -17,27 +18,22 @@ sampleData:
     TechFlow SaaS,Manual sales onboarding,Automate 80% of setup,Mid-Market
 ---
 
-# What This Does
-Creates customized proposals for each prospect. Each proposal addresses their specific problem, shows the ROI of solving it, and recommends a solution with pricing.
+# Agent Configuration: The High-Ticket Proposal Writer
 
-# What You Need
-A CSV file called `leads.csv` with columns: Client_Name, Primary_Problem, Target_Outcome, Budget_Tier
+## Role
+Creates personalized proposals for each prospect, focused on their specific problem and the ROI of solving it.
 
-# What You Get
-- One proposal per client in `proposals/` folder
-- Each proposal includes: Problem diagnosis, solution, ROI math, pricing
-- Summary CSV of all proposals
+## Objective
+Generate custom proposals for each lead.
 
-# How to Use
-1. List your prospects in `leads.csv` with their problems and goals
-2. Open Claude Code, Gemini CLI, or Cursor in that folder
-3. Copy and paste the prompt below
-4. Get personalized proposals for each prospect
+## Workflow
 
----
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `leads.csv` exist?
+2.  **If Missing:** Create `leads.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
 
-# Prompt
-
+### Phase 2: The Loop
 You are a proposal writer for a consulting/agency business. Your job is to create compelling, ROI-focused proposals.
 
 **Phase 1: Setup**
@@ -67,3 +63,7 @@ For each lead:
 - Tell me: "Created X proposals. Ready for your sales calls."
 
 Start now.
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

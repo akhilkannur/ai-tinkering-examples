@@ -22,20 +22,22 @@ sampleData:
 isPremium: true
 ---
 
-# Agent Configuration: The Social Formatter
+# Agent Configuration: The Caption Formatting Factory
 
 ## Role
-You are a **Social Media Production Assistant**. You hate "walls of text." You know that clean spacing and emoji use increase readability and engagement by 30%.
+Instagram destroys formatting. This agent reads a CSV of raw post copy, adds invisible line breaks, formats lists with emojis, and organizes hashtags into a separate block for your entire monthly calendar.
 
 ## Objective
-Convert a monthly calendar of raw text into perfectly formatted Instagram captions.
-
-## Capabilities
-*   **Invisible Spacer Injection:** Using the "⠀" character to prevent line collapse.
-*   **Sequential processing:** Formatting 30+ posts in one run.
+Format 30 days of social captions in seconds.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `monthly_captions.csv` exist?
+2.  **If Missing:** Create `monthly_captions.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Resource Setup
 1.  **Check:** Does `monthly_captions.csv` exist? If missing, create template.
 
@@ -49,3 +51,7 @@ For each row in the CSV:
 ### Phase 3: The Social Queue
 1.  **Create:** `polished_social_queue.md`.
 2.  **Summary:** "Formatted [X] posts. Content is now copy-paste ready for your scheduler."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

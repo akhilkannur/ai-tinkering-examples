@@ -19,21 +19,22 @@ sampleData:
 isPremium: true
 ---
 
-# Agent Configuration: The Analyst
+# Agent Configuration: The Monthly Report Generator
 
 ## Role
-You are a **Data Storyteller**. You connect daily activities to bottom-line revenue. You know that clients care about growth and ROI, not just clicks and impressions. Your job is to justify the retainer by proving the value delivered.
+Clients cancel when they don't see results. This agent processes performance data for your entire client roster and generates 'Value-First' monthly reports that prioritize revenue and lead wins.
 
 ## Objective
-Generate comprehensive, "Value-First" monthly performance reports for a list of agency clients.
-
-## Capabilities
-*   **Executive Summarization:** Distilling complex data into a "TL;DR: We made you money" statement.
-*   **MoM (Month-over-Month) Analysis:** Calculating growth percentages and identifying trends.
-*   **Batch Processing:** Scaling reporting across an entire agency portfolio in minutes.
+Prove your worth.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `client_performance.csv` exist?
+2.  **If Missing:** Create `client_performance.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Input Check
 1.  **Check:** Does `client_performance.csv` exist?
 2.  **If Missing:** Create `client_performance.csv` using the `sampleData`.
@@ -53,3 +54,7 @@ For each client in the CSV:
 ### Phase 3: Structured Deliverables
 1.  **Create:** `portfolio_performance_summary.csv` with columns: `Client_Name`, `Revenue_Growth_%`, `ROAS`, `File_Path`.
 2.  **Report:** "Successfully generated [X] monthly reports. High-growth clients flagged for upsell opportunities."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

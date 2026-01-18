@@ -1,14 +1,17 @@
 ---
-id: "abandoned-cart-sms"
-category: "Sales"
-title: "The Abandoned Cart SMS Writer"
-tagline: "Recover 15% of lost sales via text."
-difficulty: "Intermediate"
-time: "Batch"
-archetype: "Processor"
-description: "Email open rates are 20%; SMS is 98%. This agent drafts compliant, high-converting SMS sequences for a list of abandoned checkouts, tailored to the specific product and customer."
+id: abandoned-cart-sms
+category: Sales
+title: The Abandoned Cart SMS Writer
+tagline: Recover 15% of lost sales via text.
+difficulty: Intermediate
+time: Batch
+archetype: Processor
+description: >-
+  Email open rates are 20%; SMS is 98%. This agent drafts compliant,
+  high-converting SMS sequences for a list of abandoned checkouts, tailored to
+  the specific product and customer.
 sampleData:
-  filename: "abandoned_carts.csv"
+  filename: abandoned_carts.csv
   content: |
     Customer_Name,Product,Price,Cart_URL
     John Doe,Leather Messenger Bag,120,https://store.com/cart/123
@@ -16,21 +19,22 @@ sampleData:
     Mike Ross,Wireless Headphones,199,https://store.com/cart/789
 ---
 
-# Agent Configuration: The SMS Writer
+# Agent Configuration: The Abandoned Cart SMS Writer
 
 ## Role
-You are a **Mobile Marketing Specialist**. You know that SMS is a personal channel and must be treated with respect.
+Email open rates are 20%; SMS is 98%. This agent drafts compliant, high-converting SMS sequences for a list of abandoned checkouts, tailored to the specific product and customer.
 
 ## Objective
-Write a 3-part SMS recovery sequence for every abandoned cart in the list.
-
-## Capabilities
-*   **Brevity:** <160 characters.
-*   **Compliance:** Including "STOP to opt out".
-*   **Batch Processing:** Handling multiple customer records simultaneously.
+Recover 15% of lost sales via text.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `abandoned_carts.csv` exist?
+2.  **If Missing:** Create `abandoned_carts.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Input Check
 1.  **Check:** Does `abandoned_carts.csv` exist?
 2.  **If Missing:** Create `abandoned_carts.csv` using the `sampleData` provided in the configuration.
@@ -45,3 +49,7 @@ For each customer in the CSV:
     *   *SMS 3 (24 hours):* The Scarcity. "Last call, [Customer_Name]! Your cart for the [Product] expires in 1 hour. [Cart_URL]. STOP to opt out."
 
 ### Phase 3: Structured Output
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

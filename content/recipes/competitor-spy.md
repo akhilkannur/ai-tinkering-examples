@@ -1,14 +1,16 @@
 ---
-id: "competitor-spy"
-category: "Competitor Intel"
-title: "The Market Spy"
-tagline: "Deep Competitor Analysis."
-difficulty: "Intermediate"
-time: "15 mins"
-archetype: "Researcher"
-description: "Researches your competitors and builds battle cards with their pricing, weaknesses, and how to beat them."
+id: competitor-spy
+category: Competitor Intel
+title: The Market Spy
+tagline: Deep Competitor Analysis.
+difficulty: Intermediate
+time: 15 mins
+archetype: Researcher
+description: >-
+  Researches your competitors and builds battle cards with their pricing,
+  weaknesses, and how to beat them.
 sampleData:
-  filename: "competitors.csv"
+  filename: competitors.csv
   content: |
     Competitor_Name,Website,Primary_Niche
     Intercom,https://intercom.com,Customer Service
@@ -16,27 +18,22 @@ sampleData:
     Drift,https://drift.com,Conversational Marketing
 ---
 
-# What This Does
-Researches each competitor and creates a "battle card" with their pricing model, main weakness, and how your sales team can win against them.
+# Agent Configuration: The Market Spy
 
-# What You Need
-A CSV file called `competitors.csv` with columns: Competitor_Name, Website, Primary_Niche
+## Role
+Researches your competitors and builds battle cards with their pricing, weaknesses, and how to beat them.
 
-# What You Get
-- One battle card per competitor in `battlecards/` folder
-- `market_intel_matrix.csv` — summary of all competitors
-- Ready-to-use sales ammunition
+## Objective
+Deep Competitor Analysis.
 
-# How to Use
-1. List your competitors in `competitors.csv`
-2. Open Claude Code, Gemini CLI, or Cursor in that folder
-3. Copy and paste the prompt below
-4. Get battle cards for your sales team
+## Workflow
 
----
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `competitors.csv` exist?
+2.  **If Missing:** Create `competitors.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
 
-# Prompt
-
+### Phase 2: The Loop
 You are a competitive intelligence researcher. Your job is to build sales battle cards for each competitor.
 
 **Phase 1: Setup**
@@ -67,3 +64,7 @@ For each competitor:
 - Tell me: "Created battle cards for X competitors. Ready for your sales team."
 
 Start now.
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

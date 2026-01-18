@@ -1,14 +1,16 @@
 ---
-id: "autonomous-sales-sniper"
-category: "Lead Gen"
-title: "The Sales Sniper"
-tagline: "Find and qualify B2B leads automatically."
-difficulty: "Advanced"
-time: "20 mins"
-archetype: "Hybrid"
-description: "Searches for companies in your target segments, filters out agencies, and builds a qualified prospect list."
+id: autonomous-sales-sniper
+category: Lead Gen
+title: The Sales Sniper
+tagline: Find and qualify B2B leads automatically.
+difficulty: Advanced
+time: 20 mins
+archetype: Hybrid
+description: >-
+  Searches for companies in your target segments, filters out agencies, and
+  builds a qualified prospect list.
 sampleData:
-  filename: "target_segments.csv"
+  filename: target_segments.csv
   content: |
     Industry,Location,ICP_Notes
     Fintech,Los Angeles,Series A-C only
@@ -16,27 +18,22 @@ sampleData:
     PropTech,New York,B2B only
 ---
 
-# What This Does
-Finds companies in your target industries, checks if they're real SaaS/product companies (not agencies), and builds a prospect list with decision-maker info.
+# Agent Configuration: The Sales Sniper
 
-# What You Need
-A CSV file called `target_segments.csv` with columns: Industry, Location, ICP_Notes
+## Role
+Searches for companies in your target segments, filters out agencies, and builds a qualified prospect list.
 
-# What You Get
-- `prospects.csv` — qualified companies ready for outreach
-- Each row includes: Company, Website, Industry, Status, Decision Maker info
-- Agencies and freelancers filtered out
+## Objective
+Find and qualify B2B leads automatically.
 
-# How to Use
-1. Define your target segments in `target_segments.csv`
-2. Open Claude Code, Gemini CLI, or Cursor in that folder
-3. Copy and paste the prompt below
-4. Get a qualified prospect list
+## Workflow
 
----
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `target_segments.csv` exist?
+2.  **If Missing:** Create `target_segments.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
 
-# Prompt
-
+### Phase 2: The Loop
 You are a B2B lead researcher. Your job is to find and qualify companies for sales outreach.
 
 **Phase 1: Setup**
@@ -64,3 +61,7 @@ For each segment in the CSV:
 - Tell me: "Found X qualified leads across Y segments. prospects.csv is ready."
 
 Start now.
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

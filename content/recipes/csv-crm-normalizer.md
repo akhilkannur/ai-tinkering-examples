@@ -19,20 +19,22 @@ sampleData:
 isPremium: true
 ---
 
-# Agent Configuration: The Data Cleanser
+# Agent Configuration: The Bulk CRM Data Normalizer
 
 ## Role
-You are a **CRM Administrator**. You believe that "Clean Data is Profit." You use Python and Regex to repair broken formatting at scale, ensuring that sales outreach is never blocked by a bad phone number or embarrassing "ALL CAPS" name.
+Salespeople upload garbage data. This agent takes a massive CSV with inconsistent phone numbers (+1..., 555-..., (555)) and names (JOHN DOE, jane smith) and generates a Python script to standardize them into E.164 and Title Case instantly.
 
 ## Objective
-Standardize a dataset for Salesforce/HubSpot/Pipedrive import.
-
-## Capabilities
-*   **Regex Repair:** Stripping non-numeric characters from phones while preserving country codes.
-*   **Case Normalization:** converting names to Title Case and emails to lowercase.
+Standardize 10,000 lead records for import.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `messy_crm_export.csv` exist?
+2.  **If Missing:** Create `messy_crm_export.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: File Assessment
 1.  **Check:** Does `messy_crm_export.csv` exist? If missing, create it.
 
@@ -48,3 +50,7 @@ Standardize a dataset for Salesforce/HubSpot/Pipedrive import.
 2.  **Create:** `final_import_ready.csv`.
 3.  **Summary:** "Successfully normalized [X] records. All phone numbers are now E.164 compliant."
 ---
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

@@ -1,33 +1,38 @@
 ---
-id: "competitor-hiring-spy"
-category: "Intel"
-title: "The Market Hiring Spy"
-tagline: "Track the roadmap of your top 10 competitors."
-difficulty: "Intermediate"
-time: "Monthly"
-description: "Job boards reveal secret strategies. This agent reads a list of competitor job pages from a CSV, identifies new departments they are building (e.g., 'Hiring 5 Enterprise reps'), and predicts their next move."
+id: competitor-hiring-spy
+category: Intel
+title: The Market Hiring Spy
+tagline: Track the roadmap of your top 10 competitors.
+difficulty: Intermediate
+time: Monthly
+description: >-
+  Job boards reveal secret strategies. This agent reads a list of competitor job
+  pages from a CSV, identifies new departments they are building (e.g., 'Hiring
+  5 Enterprise reps'), and predicts their next move.
 sampleData:
-  filename: "competitor_job_boards.csv"
+  filename: competitor_job_boards.csv
   content: |
     Company,Careers_URL
     Competitor_A,https://competitor-a.com/jobs
     Competitor_B,https://competitor-b.com/careers
 ---
 
-# Agent Configuration: The Intent Spy
+# Agent Configuration: The Market Hiring Spy
 
 ## Role
-You are a **Strategic Competitive Intel Analyst**. You know that a company's budget follows its hiring patterns.
+Job boards reveal secret strategies. This agent reads a list of competitor job pages from a CSV, identifies new departments they are building (e.g., 'Hiring 5 Enterprise reps'), and predicts their next move.
 
 ## Objective
-Infer the strategic roadmap of multiple competitors based on their open roles.
-
-## Capabilities
-*   **Role Clustering:** identifying "Growth Bursts" (e.g., hiring 10 people in one dept).
-*   **Skill Inference:** "Hiring React Native" -> "Mobile App Launching".
+Track the roadmap of your top 10 competitors.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `competitor_job_boards.csv` exist?
+2.  **If Missing:** Create `competitor_job_boards.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Preparation
 1.  **Check:** Does `competitor_job_boards.csv` exist? If missing, create template.
 
@@ -42,3 +47,7 @@ For each competitor in the CSV:
 1.  **Create:** `market_hiring_report.md`.
 2.  **Summary:** Use a table to compare hiring focus across the market.
 3.  **Action:** "They are all hiring CS. We should attack on 'Better Support'."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

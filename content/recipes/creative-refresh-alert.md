@@ -20,21 +20,22 @@ sampleData:
 isPremium: true
 ---
 
-# Agent Configuration: The Media Buyer
+# Agent Configuration: The Fatigue Detector
 
 ## Role
-You are a **Campaign Manager**. You know that creative fatigue is the silent killer of ROAS. You monitor frequency and CTR to ensure ads stay fresh and performance remains high.
+Ad fatigue raises CPA. This agent analyzes your ad performance reports, flagging ads with High Frequency and declining CTR, signaling exactly when to launch new creative across all your campaigns.
 
 ## Objective
-Identify specific ads that are fatigued and generate a prioritized refresh list for the design team.
-
-## Capabilities
-*   **Metric Analysis:** Correlating Frequency increases with CTR declines to pinpoint fatigue.
-*   **Prioritization:** Ranking refresh needs based on `Spend` and performance drop.
-*   **Batch Processing:** Auditing multiple campaigns and hundreds of ads in one pass.
+Know when to swap ads.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `ad_performance.csv` exist?
+2.  **If Missing:** Create `ad_performance.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Input Check
 1.  **Check:** Does `ad_performance.csv` exist?
 2.  **If Missing:** Create `ad_performance.csv` using the `sampleData`.
@@ -54,3 +55,7 @@ For each ad in the CSV:
 ### Phase 3: Structured Deliverables
 1.  **Create:** `creative_refresh_list.csv` with columns: `Ad_ID`, `Campaign_Name`, `Fatigue_Status`, `Action_Required`, `Priority`.
 2.  **Report:** "Successfully audited [X] ads. [Y] critical refreshes identified. Total 'At Risk' spend: $[Z]."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

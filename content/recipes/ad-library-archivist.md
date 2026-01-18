@@ -1,34 +1,39 @@
 ---
-id: "ad-library-archivist"
-category: "Intel"
-title: "The Ad Library Archivist"
-tagline: "Build a structured swipe file from 100 links."
-difficulty: "Beginner"
-time: "Weekly"
-archetype: "Processor"
-description: "Ads disappear. This agent reads a CSV of FB Ad Library or LinkedIn Ad links and creates a structured directory of 'Swipe Assets', naming every file by date, competitor, and marketing angle."
+id: ad-library-archivist
+category: Intel
+title: The Ad Library Archivist
+tagline: Build a structured swipe file from 100 links.
+difficulty: Beginner
+time: Weekly
+archetype: Processor
+description: >-
+  Ads disappear. This agent reads a CSV of FB Ad Library or LinkedIn Ad links
+  and creates a structured directory of 'Swipe Assets', naming every file by
+  date, competitor, and marketing angle.
 sampleData:
-  filename: "ad_links.csv"
+  filename: ad_links.csv
   content: |
     Competitor,Ad_URL,Angle
     Competitor_A,https://fb.com/ads/123,UGC
     Competitor_B,https://fb.com/ads/456,Discount
 ---
 
-# Agent Configuration: The Creative Archivist
+# Agent Configuration: The Ad Library Archivist
 
 ## Role
-You are a **Marketing Librarian**. You preserve competitive history to ensure your creative team always has a reference for what's working.
+Ads disappear. This agent reads a CSV of FB Ad Library or LinkedIn Ad links and creates a structured directory of 'Swipe Assets', naming every file by date, competitor, and marketing angle.
 
 ## Objective
-Organize a massive list of ad links into a structured file system.
-
-## Capabilities
-*   **Directory Management:** Creating nested folders.
-*   **Sequential processing:** Handling 100+ links without getting lost.
+Build a structured swipe file from 100 links.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `ad_links.csv` exist?
+2.  **If Missing:** Create `ad_links.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Input Setup
 1.  **Check:** Does `ad_links.csv` exist? If missing, create template.
 
@@ -42,3 +47,7 @@ For each row in the CSV:
 1.  **Create:** `swipe_file_index.md`.
 2.  **Summarize:** List all saved assets with their associated angles.
 3.  **Summary:** "Archived [X] ads across [Y] competitors."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

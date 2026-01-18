@@ -6,7 +6,10 @@ tagline: Fix "Redirect Hops" to improve site speed and SEO.
 difficulty: Intermediate
 time: 5 mins
 archetype: Processor
-description: Reads a CSV of redirects (Source -> Destination), identifies chains where Page A goes to Page B, and Page B goes to Page C, and provides a "Flattened" list (Page A -> Page C).
+description: >-
+  Reads a CSV of redirects (Source -> Destination), identifies chains where Page
+  A goes to Page B, and Page B goes to Page C, and provides a "Flattened" list
+  (Page A -> Page C).
 sampleData:
   filename: redirects.csv
   content: |
@@ -16,24 +19,22 @@ sampleData:
     /blog/old-post,/blog/new-post
 ---
 
-# What This Does
-Redirect chains (A -> B -> C) slow down your website and lose "Link Juice." This agent identifies these multi-step hops and gives you a clean list to update in your `.htaccess` or CMS so every redirect is one-to-one.
+# Agent Configuration: The Redirect Chain Flattener
 
-# What You Need
-- `redirects.csv`: A list of your current site redirects.
+## Role
+Reads a CSV of redirects (Source -> Destination), identifies chains where Page A goes to Page B, and Page B goes to Page C, and provides a "Flattened" list (Page A -> Page C).
 
-# What You Get
-- `fixed_redirects.csv`: A list of cleaned, 1-step redirects.
+## Objective
+Fix "Redirect Hops" to improve site speed and SEO.
 
-# How to Use
-1. Export your redirect list.
-2. Run the blueprint.
-3. Import the flattened list to your server.
+## Workflow
 
----
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `redirects.csv` exist?
+2.  **If Missing:** Create `redirects.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
 
-# Prompt
-
+### Phase 2: The Loop
 You are a **Performance Engineer**. Your job is to optimize redirect logic.
 
 **Phase 1: Analysis**
@@ -54,3 +55,7 @@ Save to `fixed_redirects.csv`:
 3.  Include a column `Type` ("Original" or "Flattened").
 
 Start now.
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

@@ -19,21 +19,22 @@ sampleData:
 isPremium: true
 ---
 
-# Agent Configuration: The App Store Optimizer
+# Agent Configuration: The Shopify App Store Optimizer
 
 ## Role
-You are an **ASO Specialist** for the Shopify ecosystem. You know that merchants search for solutions to specific problems (e.g., "reduce churn", "print labels"). You optimize listings to be found by the Shopify algorithm and to convert "browsers" into "installs" through benefit-driven copy.
+The Shopify App Store is a search engine. This agent researches top-ranking competitors and audits your app listings to ensure you rank for high-intent terms like 'Upsell' or 'Bundling'.
 
 ## Objective
-Audit and optimize a list of Shopify App Store listings based on competitive research and keyword analysis.
-
-## Capabilities
-*   **Competitive Keyword Research:** Using `web_fetch` to see what terms top-ranking apps in your `Category` are using in their H1 and H2 tags.
-*   **Conversion Copywriting:** Rewriting "Key Benefits" to focus on merchant ROI (e.g., "Save 5 hours/week" vs. "Easy to use").
-*   **Batch Processing:** Optimizing an entire portfolio of Shopify apps in one run.
+Get found by merchants.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `apps.csv` exist?
+2.  **If Missing:** Create `apps.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Input Check
 1.  **Check:** Does `apps.csv` exist?
 2.  **If Missing:** Create `apps.csv` using the `sampleData`.
@@ -50,3 +51,7 @@ For each app in the CSV:
 ### Phase 3: Structured Deliverables
 1.  **Create:** `aso_impact_matrix.csv` with columns: `App_Name`, `Keyword_Density_Score`, `Top_Competitor`, `File_Path`.
 2.  **Report:** "Successfully audited [X] app listings. Optimized copy and keyword targets ready for the Partner Dashboard."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

@@ -1,34 +1,39 @@
 ---
-id: "api-endpoint-validator"
-category: "Sales Engineering"
-title: "The API Fleet Monitor"
-tagline: "Health check 50 endpoints in one run."
-difficulty: "Advanced"
-time: "Daily"
-archetype: "Processor"
-description: "Ensure the demo never breaks. This agent reads a list of API endpoints from a CSV, tests them for speed and response structure, and generates a 'Green/Red' status report for the team."
+id: api-endpoint-validator
+category: Sales Engineering
+title: The API Fleet Monitor
+tagline: Health check 50 endpoints in one run.
+difficulty: Advanced
+time: Daily
+archetype: Processor
+description: >-
+  Ensure the demo never breaks. This agent reads a list of API endpoints from a
+  CSV, tests them for speed and response structure, and generates a 'Green/Red'
+  status report for the team.
 sampleData:
-  filename: "api_endpoints.csv"
+  filename: api_endpoints.csv
   content: |
     Endpoint_Name,URL,Expected_Key
     Auth,/api/v1/login,token
     Data,/api/v1/stats,reports
 ---
 
-# Agent Configuration: The Sales Engineering Lead
+# Agent Configuration: The API Fleet Monitor
 
 ## Role
-You are a **Solution Architect**. You ensure that the technical infrastructure supporting the sales demo is 100% reliable.
+Ensure the demo never breaks. This agent reads a list of API endpoints from a CSV, tests them for speed and response structure, and generates a 'Green/Red' status report for the team.
 
 ## Objective
-Smoke test an entire API environment.
-
-## Capabilities
-*   **Bulk Testing:** Iterating through a fleet of URLs.
-*   **Structure Validation:** verifying that the JSON response contains the correct keys.
+Health check 50 endpoints in one run.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `api_endpoints.csv` exist?
+2.  **If Missing:** Create `api_endpoints.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Input Setup
 1.  **Check:** Does `api_endpoints.csv` exist? If missing, create template.
 2.  **Auth:** Ask user for the temporary Bearer Token.
@@ -43,3 +48,7 @@ For each row in the CSV:
 1.  **Create:** `api_health_status.md`.
 2.  **Report:** Use a table to show `Name | Status | Speed | Error`.
 3.  **Summary:** "Processed [X] endpoints. [Y] failed. [Z] are running slow (>500ms)."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

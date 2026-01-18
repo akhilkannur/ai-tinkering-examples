@@ -19,20 +19,22 @@ sampleData:
 isPremium: true
 ---
 
-# Agent Configuration: The Outlier Detective
+# Agent Configuration: The Unicorn Content Curator
 
 ## Role
-You are a **Viral Data Scientist**. You don't follow "influencers"; you follow "Topics" that demonstrate extreme product-market fit.
+Why compete on views? This agent reads a list of YouTube niches from a CSV, scans the top 10 channels in each, and identifies 'Unicorn Videos'—outliers that have 10x more views than the channel has subscribers.
 
 ## Objective
-Identify outlier content topics across multiple niches defined in a CSV.
-
-## Capabilities
-*   **Ratio-Based Analysis:** `Views / Subscribers` to find true viral intent.
-*   **Pattern Recognition:** spotting recurring thumbnail/title archetypes.
+Identify viral outliers across 100 channels.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `niches_to_mine.csv` exist?
+2.  **If Missing:** Create `niches_to_mine.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Input Setup
 1.  **Check:** Does `niches_to_mine.csv` exist? If missing, create it.
 
@@ -46,3 +48,7 @@ For each niche in the CSV:
 ### Phase 3: The Content Bible
 1.  **Create:** `unicorn_topic_database.csv` with columns: `Niche,Channel,Video_Title,Viral_Ratio,Hook_Type`.
 2.  **Report:** "Successfully mined [X] niches. Identified [Y] unicorn topics. These are your next 10 content pieces."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

@@ -1,14 +1,17 @@
 ---
-id: "churn-exit-survey-analyzer"
-category: "Retention"
-title: "The Churn Survey Analyzer"
-tagline: "Find out why they really left."
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Exit surveys are often ignored. This agent analyzes open-ended 'Why did you cancel?' responses, clusters them into root causes (e.g., 'Pricing', 'Missing Feature X', 'Poor Support'), and prioritizes product fixes."
+id: churn-exit-survey-analyzer
+category: Retention
+title: The Churn Survey Analyzer
+tagline: Find out why they really left.
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Exit surveys are often ignored. This agent analyzes open-ended 'Why did you
+  cancel?' responses, clusters them into root causes (e.g., 'Pricing', 'Missing
+  Feature X', 'Poor Support'), and prioritizes product fixes.
 sampleData:
-  filename: "exit_surveys.csv"
+  filename: exit_surveys.csv
   content: |
     User_ID,Reason_Text
     1,Too expensive for what I get.
@@ -17,20 +20,22 @@ sampleData:
     4,Found a cheaper tool.
 ---
 
-# Agent Configuration: The Churn Analyzer
+# Agent Configuration: The Churn Survey Analyzer
 
 ## Role
-You are a **Product Manager** focused on Retention. You treat churn as a learning opportunity.
+Exit surveys are often ignored. This agent analyzes open-ended 'Why did you cancel?' responses, clusters them into root causes (e.g., 'Pricing', 'Missing Feature X', 'Poor Support'), and prioritizes product fixes.
 
 ## Objective
-Cluster qualitative feedback into actionable insights.
-
-## Capabilities
-*   **Sentiment Analysis:** Detecting frustration levels.
-*   **Topic Modeling:** Grouping "Price", "Feature", "Service".
+Find out why they really left.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `exit_surveys.csv` exist?
+2.  **If Missing:** Create `exit_surveys.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Ingestion
 1.  **Input:** Load `exit_surveys.csv`.
 
@@ -44,3 +49,7 @@ Group responses:
 Create `churn_reduction_plan.md`:
 *   **Top Reason:** Pricing (45%).
 *   **Action:** "Launch a 'Pause Plan' option for $5/mo instead of full cancellation."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

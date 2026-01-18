@@ -6,7 +6,9 @@ tagline: Segment attendees vs. no-shows and write targeted nurture sequences.
 difficulty: Intermediate
 time: 10 mins
 archetype: Processor
-description: Reads a webinar participant list, splits them into "Attended" and "Missed", and drafts a 3-email sequence customized for each group (Recap vs. Replay).
+description: >-
+  Reads a webinar participant list, splits them into "Attended" and "Missed",
+  and drafts a 3-email sequence customized for each group (Recap vs. Replay).
 sampleData:
   filename: webinar_registrants.csv
   content: |
@@ -16,26 +18,22 @@ sampleData:
     Charlie,charlie@example.com,Attended,5
 ---
 
-# What This Does
-Webinars don't end when the camera turns off. The money is made in the follow-up. This agent ensures you treat "Super Fans" (stayed 45 mins) differently than "Ghosters" (No Show), maximizing your conversion rate.
+# Agent Configuration: The Webinar Follow-Up Architect
 
-# What You Need
-- `webinar_registrants.csv`: Export from Zoom, Luma, or Riverside.
+## Role
+Reads a webinar participant list, splits them into "Attended" and "Missed", and drafts a 3-email sequence customized for each group (Recap vs. Replay).
 
-# What You Get
-- `emails_attended.md`: Sequence for people who came.
-- `emails_noshow.md`: Sequence for people who missed it.
-- `emails_dropped_off.md`: (Bonus) Sequence for people who left early.
+## Objective
+Segment attendees vs. no-shows and write targeted nurture sequences.
 
-# How to Use
-1. Export your attendee list to CSV.
-2. Run the blueprint.
-3. Load the sequences into your email marketing tool (ConvertKit, ActiveCampaign).
+## Workflow
 
----
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `webinar_registrants.csv` exist?
+2.  **If Missing:** Create `webinar_registrants.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
 
-# Prompt
-
+### Phase 2: The Loop
 You are a **Demand Gen Marketer**. Your job is to write high-converting webinar follow-up emails.
 
 **Phase 1: Segmentation**
@@ -63,3 +61,7 @@ Write 3 distinct email sequences (Email 1 = +1 hr, Email 2 = +24 hrs).
 2.  Include a subject line for each email.
 
 Start now.
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

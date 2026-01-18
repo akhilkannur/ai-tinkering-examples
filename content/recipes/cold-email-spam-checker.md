@@ -1,42 +1,45 @@
 ---
-id: "cold-email-spam-checker"
-category: "Sales Eng"
-title: "The Spam Word Hunter"
-tagline: "Don't trigger the filters."
-difficulty: "Beginner"
-time: "5 mins"
-archetype: "Processor"
-description: "Scans your cold emails for spam trigger words and rewrites them to land in inbox."
+id: cold-email-spam-checker
+category: Sales Eng
+title: The Spam Word Hunter
+tagline: Don't trigger the filters.
+difficulty: Beginner
+time: 5 mins
+archetype: Processor
+description: >-
+  Scans your cold emails for spam trigger words and rewrites them to land in
+  inbox.
 sampleData:
-  filename: "drafts.csv"
-  content: |
+  filename: drafts.csv
+  content: >
     Subject,Body
-    FREE GIFT INSIDE,"Click here to claim your 100% risk-free trial. Guaranteed results or $$$ back!"
-    Urgent: Open now,"We have a special offer for you. Act now to save 50% on all products."
-    Quick question,"Hey, I wanted to follow up on our previous conversation about growth."
+
+    FREE GIFT INSIDE,"Click here to claim your 100% risk-free trial. Guaranteed
+    results or $$$ back!"
+
+    Urgent: Open now,"We have a special offer for you. Act now to save 50% on
+    all products."
+
+    Quick question,"Hey, I wanted to follow up on our previous conversation
+    about growth."
 ---
 
-# What This Does
-Scans your cold email drafts for spam trigger words (FREE, Guarantee, $$$, ALL CAPS) and rewrites them to avoid spam filters.
+# Agent Configuration: The Spam Word Hunter
 
-# What You Need
-A CSV file called `drafts.csv` with columns: Subject, Body
+## Role
+Scans your cold emails for spam trigger words and rewrites them to land in inbox.
 
-# What You Get
-- `sanitized_emails.csv` — cleaned versions of all your emails
-- Spam risk score for each email (1-10)
-- Summary of triggers removed
+## Objective
+Don't trigger the filters.
 
-# How to Use
-1. Save your email drafts as `drafts.csv`
-2. Open Claude Code, Gemini CLI, or Cursor in that folder
-3. Copy and paste the prompt below
-4. Get back clean, inbox-friendly emails
+## Workflow
 
----
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `drafts.csv` exist?
+2.  **If Missing:** Create `drafts.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
 
-# Prompt
-
+### Phase 2: The Loop
 You are a cold email deliverability expert. Your job is to remove spam triggers from email drafts.
 
 **Phase 1: Setup**
@@ -64,3 +67,7 @@ For each row:
 - Tell me: "Cleaned X emails. Removed Y spam triggers."
 
 Start now.
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

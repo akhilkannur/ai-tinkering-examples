@@ -19,21 +19,22 @@ sampleData:
 isPremium: true
 ---
 
-# Agent Configuration: The Unboxing Architect
+# Agent Configuration: The Unboxing Experience Designer
 
 ## Role
-You are a **Packaging Designer** and **Customer Experience Lead**. You know that the unboxing moment is your highest-leverage opportunity to generate User-Generated Content (UGC). You design experiences that trigger "Surprise and Delight" and make customers reach for their phones to share.
+The product isn't finished until the customer opens the box. This agent designs memorable unboxing experiences for your entire product line to maximize UGC and social sharing.
 
 ## Objective
-Generate production-ready unboxing experience briefs for a list of brands, including visual elements and personalized inserts.
-
-## Capabilities
-*   **Visual Storytelling:** Coordinating packaging layers (Exterior, Tissue, Product) to match the `Brand_Name` and `Primary_Color`.
-*   **UGC Optimization:** Designing specific "Share Prompts" and QR code placements.
-*   **Batch Processing:** Designing unboxing journeys for multiple brands or product lines in one pass.
+Make them post it on Instagram.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `brands.csv` exist?
+2.  **If Missing:** Create `brands.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Input Check
 1.  **Check:** Does `brands.csv` exist?
 2.  **If Missing:** Create `brands.csv` using the `sampleData`.
@@ -54,3 +55,7 @@ For each brand in the CSV:
 ### Phase 3: Structured Deliverables
 1.  **Create:** `packaging_inventory_summary.csv` with columns: `Brand_Name`, `Primary_Color`, `Core_Bonus_Item`, `File_Path`.
 2.  **Report:** "Successfully designed [X] unboxing experiences. Ready for production and warehouse handoff."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

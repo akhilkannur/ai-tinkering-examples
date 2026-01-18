@@ -6,7 +6,10 @@ tagline: Write SEO-friendly replies to Google Reviews in seconds.
 difficulty: Beginner
 time: 5 mins
 archetype: Hybrid
-description: Reads new Google Maps reviews for your business, identifies the sentiment (Positive/Negative), and writes a polite, professional response that includes your primary SEO keywords.
+description: >-
+  Reads new Google Maps reviews for your business, identifies the sentiment
+  (Positive/Negative), and writes a polite, professional response that includes
+  your primary SEO keywords.
 sampleData:
   filename: reviews.csv
   content: |
@@ -15,24 +18,22 @@ sampleData:
     Jane Smith,1,Cold pizza and rude service.
 ---
 
-# What This Does
-Replying to reviews boosts your local SEO ranking. This agent ensures you reply to *everyone*, turning 5-star reviews into keyword-rich content ("Thanks for choosing the **best deep dish in Chicago**!") and de-escalating 1-star reviews professionally.
+# Agent Configuration: The Local Review Responder
 
-# What You Need
-- `reviews.csv`: Copy from your dashboard.
+## Role
+Reads new Google Maps reviews for your business, identifies the sentiment (Positive/Negative), and writes a polite, professional response that includes your primary SEO keywords.
 
-# What You Get
-- `responses.csv`: Ready to paste back into Google.
+## Objective
+Write SEO-friendly replies to Google Reviews in seconds.
 
-# How to Use
-1. Download your new reviews.
-2. Run the blueprint.
-3. Paste the replies.
+## Workflow
 
----
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `reviews.csv` exist?
+2.  **If Missing:** Create `reviews.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
 
-# Prompt
-
+### Phase 2: The Loop
 You are a **Local SEO Manager**. Your job is to manage reputation.
 
 **Phase 1: Analysis**
@@ -54,3 +55,7 @@ Write a response for each row:
 Save to `responses.csv`.
 
 Start now.
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

@@ -6,7 +6,9 @@ tagline: Merges company news with lead lists to generate custom icebreakers.
 difficulty: Advanced
 time: 20 mins
 archetype: Hybrid
-description: Takes a CSV of leads, researches recent news for each company, and writes a personalized "first line" (icebreaker) for cold emails.
+description: >-
+  Takes a CSV of leads, researches recent news for each company, and writes a
+  personalized "first line" (icebreaker) for cold emails.
 sampleData:
   filename: leads.csv
   content: |
@@ -16,24 +18,22 @@ sampleData:
     Loom,Joe Thomas,Founder
 ---
 
-# What This Does
-Instead of generic "I hope this finds you well" emails, this agent finds a specific, recent news event (funding, product launch, podcast appearance) for each prospect and writes a relevant opening sentence connecting it to your value prop.
+# Agent Configuration: The Cold Email Personalizer
 
-# What You Need
-- `leads.csv`: Company, Contact Name, and Role.
+## Role
+Takes a CSV of leads, researches recent news for each company, and writes a personalized "first line" (icebreaker) for cold emails.
 
-# What You Get
-- `leads_enriched.csv`: The original data plus a new column: `Icebreaker_Line`.
+## Objective
+Merges company news with lead lists to generate custom icebreakers.
 
-# How to Use
-1. Prepare your `leads.csv`.
-2. Run the blueprint.
-3. Import the result into your sending tool (Instantly, SmartLead, HubSpot).
+## Workflow
 
----
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `leads.csv` exist?
+2.  **If Missing:** Create `leads.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
 
-# Prompt
-
+### Phase 2: The Loop
 You are an **SDR Manager**. Your job is to research prospects and write hyper-personalized email opening lines.
 
 **Phase 1: Setup**
@@ -56,3 +56,7 @@ For each row in `leads.csv`:
 2.  Provide a summary: "Enriched X leads. Success rate: Y%."
 
 Start now.
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

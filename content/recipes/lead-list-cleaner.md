@@ -7,38 +7,39 @@ difficulty: Beginner
 time: 5 mins
 archetype: Processor
 description: >-
-  30% of purchased leads have dead websites. This checks each company's website and separates the good leads from the dead ones.
+  30% of purchased leads have dead websites. This checks each company's website
+  and separates the good leads from the dead ones.
 sampleData:
   filename: leads.csv
-  content: |
+  content: >
     Company,Website,Contact_Name,Email
+
     Acme Corp,https://www.google.com,John Doe,john@acme.com
-    Dead Startup,https://thisdomaindefinitelydoesnotexist12345.com,Jane Smith,jane@deadstartup.com
+
+    Dead Startup,https://thisdomaindefinitelydoesnotexist12345.com,Jane
+    Smith,jane@deadstartup.com
+
     Stripe,https://stripe.com,Patrick,patrick@stripe.com
+
     Broken Link,https://httpstat.us/404,Test User,test@broken.com
 ---
 
-# What This Does
-Checks if company websites in your lead list are still alive. Separates good leads from dead ones.
+# Agent Configuration: The Lead List Cleaner
 
-# What You Need
-A CSV file called `leads.csv` with columns: Company, Website, Contact_Name, Email
+## Role
+30% of purchased leads have dead websites. This checks each company's website and separates the good leads from the dead ones.
 
-# What You Get
-- `verified_leads.csv` — companies with working websites
-- `dead_leads.csv` — companies with broken/dead websites
-- Summary of how many were good vs dead
+## Objective
+Never bounce an email again.
 
-# How to Use
-1. Save your lead list as `leads.csv` in a folder
-2. Open Claude Code, Gemini CLI, or Cursor in that folder
-3. Copy and paste the prompt below
-4. Wait — you'll get two cleaned files
+## Workflow
 
----
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `leads.csv` exist?
+2.  **If Missing:** Create `leads.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
 
-# Prompt
-
+### Phase 2: The Loop
 You are a lead list cleaner. Your job is to verify which company websites are still active.
 
 **Phase 1: Setup**
@@ -62,3 +63,7 @@ For each row in the CSV:
 - Tell me: "Found X verified leads and Y dead leads."
 
 Start now.
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

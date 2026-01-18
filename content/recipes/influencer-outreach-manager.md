@@ -6,7 +6,9 @@ tagline: Manage your influencer pipeline without a fancy CRM.
 difficulty: Intermediate
 time: 5 mins
 archetype: Processor
-description: Reads a CSV of influencers and organizes them by "Status" (Contacted, Negotiating, Live), generating a daily to-do list for follow-ups.
+description: >-
+  Reads a CSV of influencers and organizes them by "Status" (Contacted,
+  Negotiating, Live), generating a daily to-do list for follow-ups.
 sampleData:
   filename: influencers.csv
   content: |
@@ -16,25 +18,22 @@ sampleData:
     @startup_steve,Posted,2023-09-20,Free
 ---
 
-# What This Does
-Influencer marketing is messy. You forget who you DM'd. This agent acts as your CRM, telling you exactly who needs a nudge and who needs a contract, ensuring you don't drop the ball on a collaboration.
+# Agent Configuration: The Influencer Relationship Tracker
 
-# What You Need
-- `influencers.csv`: Your messy list.
+## Role
+Reads a CSV of influencers and organizes them by "Status" (Contacted, Negotiating, Live), generating a daily to-do list for follow-ups.
 
-# What You Get
-- `daily_tasks.md`: Who to DM today.
-- `pipeline_summary.md`: How much potential reach is "Negotiating".
+## Objective
+Manage your influencer pipeline without a fancy CRM.
 
-# How to Use
-1. Update your CSV.
-2. Run the blueprint.
-3. Execute the tasks.
+## Workflow
 
----
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `influencers.csv` exist?
+2.  **If Missing:** Create `influencers.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
 
-# Prompt
-
+### Phase 2: The Loop
 You are an **Influencer Marketing Manager**. Your job is to move deals forward.
 
 **Phase 1: Audit**
@@ -55,3 +54,7 @@ Create `pipeline_summary.md`:
 *   Estimated Budget (Sum of `Rate` for Negotiating).
 
 Start now.
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

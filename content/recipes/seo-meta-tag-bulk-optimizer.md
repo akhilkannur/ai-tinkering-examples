@@ -6,7 +6,9 @@ tagline: Fix missing or duplicate SEO titles and descriptions in seconds.
 difficulty: Intermediate
 time: 5 mins
 archetype: Processor
-description: Reads a CSV of URLs (from a site audit), identifies missing or poor meta tags, and rewrites them to include target keywords and stay within character limits.
+description: >-
+  Reads a CSV of URLs (from a site audit), identifies missing or poor meta tags,
+  and rewrites them to include target keywords and stay within character limits.
 sampleData:
   filename: site_audit.csv
   content: |
@@ -16,24 +18,22 @@ sampleData:
     /about,About Us - Company Name,
 ---
 
-# What This Does
-Screaming Frog audits give you the problems (Missing Title, Duplicate Description), but not the solutions. This agent fixes the spreadsheet for you, writing click-worthy tags that fit Google's pixel width limits.
+# Agent Configuration: The Bulk Meta Tag Writer
 
-# What You Need
-- `site_audit.csv`: List of pages that need fixing.
+## Role
+Reads a CSV of URLs (from a site audit), identifies missing or poor meta tags, and rewrites them to include target keywords and stay within character limits.
 
-# What You Get
-- `fixed_meta_tags.csv`: Ready for import.
+## Objective
+Fix missing or duplicate SEO titles and descriptions in seconds.
 
-# How to Use
-1. Export "Missing Meta Details" from your SEO tool.
-2. Run the blueprint.
-3. Import the new tags into WordPress/CMS.
+## Workflow
 
----
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `site_audit.csv` exist?
+2.  **If Missing:** Create `site_audit.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
 
-# Prompt
-
+### Phase 2: The Loop
 You are an **SEO Specialist**. Your job is to write high-CTR meta tags.
 
 **Phase 1: Rules**
@@ -51,3 +51,7 @@ You are an **SEO Specialist**. Your job is to write high-CTR meta tags.
 1.  Save to `fixed_meta_tags.csv` (Columns: `URL`, `New_Title`, `New_Description`, `Title_Length`, `Desc_Length`).
 
 Start now.
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

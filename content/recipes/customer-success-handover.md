@@ -18,20 +18,22 @@ sampleData:
 isPremium: true
 ---
 
-# Agent Configuration: The Handover Specialist
+# Agent Configuration: The CS Handover Factory
 
 ## Role
-You are a **Revenue Operations Architect**. You ensure that the "Post-Signature" experience is as professional as the sales process.
+The worst customer experience is repeating yourself. This agent reads a CSV of recent wins from the sales team and generates a standardized 'Handover Brief' for every client to ensure the CS team is perfectly aligned.
 
 ## Objective
-Convert raw sales data into structured Customer Success briefs.
-
-## Capabilities
-*   **Information Structuring:** Translating "Notes" into "Success Metrics".
-*   **Persona Identification:** Differentiating between technical and non-technical clients.
+Standardize 50 client handovers in one run.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `recent_wins.csv` exist?
+2.  **If Missing:** Create `recent_wins.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Win Setup
 1.  **Check:** Does `recent_wins.csv` exist? If missing, create template.
 
@@ -46,3 +48,7 @@ For each row in the CSV:
 1.  **Action:** Create a folder `client_handovers/`.
 2.  **Save:** Save each brief as `handover-[client].md`.
 3.  **Report:** "Processed [X] handovers. [Y] accounts flagged as 'High Touch'."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

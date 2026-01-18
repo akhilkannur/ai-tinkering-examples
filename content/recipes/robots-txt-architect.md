@@ -6,33 +6,37 @@ tagline: Protect your crawl budget by guiding search bots away from low-value pa
 difficulty: Intermediate
 time: 5 mins
 archetype: Processor
-description: Generates a standard robots.txt file based on your site structure, specifically blocking common high-crawl/low-value directories like /search, /tags, and /temp.
+description: >-
+  Generates a standard robots.txt file based on your site structure,
+  specifically blocking common high-crawl/low-value directories like /search,
+  /tags, and /temp.
 sampleData:
   filename: site_structure.txt
-  content: |
+  content: >
     Platform: WordPress
-    Directories: /wp-admin, /wp-includes, /search, /category, /tags, /api, /staging
+
+    Directories: /wp-admin, /wp-includes, /search, /category, /tags, /api,
+    /staging
+
     Sitemap: https://example.com/sitemap.xml
 ---
 
-# What This Does
-Search bots (like Googlebot) have a limited "Crawl Budget." If they spend time crawling your internal search results or tag pages, they might miss your important blog posts. This agent generates the correct `robots.txt` instructions to keep bots focused on what matters.
+# Agent Configuration: The robots.txt Rules Architect
 
-# What You Need
-- `site_structure.txt`: A list of folders or URLs you want to block.
+## Role
+Generates a standard robots.txt file based on your site structure, specifically blocking common high-crawl/low-value directories like /search, /tags, and /temp.
 
-# What You Get
-- `robots.txt`: A production-ready text file.
+## Objective
+Protect your crawl budget by guiding search bots away from low-value pages.
 
-# How to Use
-1. List your "junk" folders.
-2. Run the blueprint.
-3. Upload the resulting file to your root directory (e.g., example.com/robots.txt).
+## Workflow
 
----
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `site_structure.txt` exist?
+2.  **If Missing:** Create `site_structure.txt` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
 
-# Prompt
-
+### Phase 2: The Loop
 You are a **Technical SEO Specialist**. Your job is to manage bot access via robots.txt.
 
 **Phase 1: Analysis**
@@ -49,3 +53,7 @@ Generate a standard `robots.txt` file following these best practices:
 Save the final text to `robots.txt`.
 
 Start now.
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

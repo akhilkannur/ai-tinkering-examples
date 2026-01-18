@@ -6,7 +6,9 @@ tagline: Reverse-engineer your competitor's ad strategy.
 difficulty: Intermediate
 time: 15 mins
 archetype: Processor
-description: Analyzes a list of ad copy text (scraped from Facebook/LinkedIn Ad Library), groups them by "Hook Type," and identifies their winning value propositions.
+description: >-
+  Analyzes a list of ad copy text (scraped from Facebook/LinkedIn Ad Library),
+  groups them by "Hook Type," and identifies their winning value propositions.
 sampleData:
   filename: competitor_ads.txt
   content: |
@@ -15,24 +17,22 @@ sampleData:
     Ad 3: "Drowning in data? See why 5,000+ teams switched to Us."
 ---
 
-# What This Does
-It turns a random pile of competitor ads into a strategy document. It answers: "Are they pitching fear? Speed? Social proof?" so you can counter-position your own ads.
+# Agent Configuration: The Ad Library Decoder
 
-# What You Need
-- `competitor_ads.txt`: Copy-paste the text from 5-10 ads you found in the Facebook Ad Library.
+## Role
+Analyzes a list of ad copy text (scraped from Facebook/LinkedIn Ad Library), groups them by "Hook Type," and identifies their winning value propositions.
 
-# What You Get
-- `ad_strategy_analysis.md`: A breakdown of their angles.
+## Objective
+Reverse-engineer your competitor's ad strategy.
 
-# How to Use
-1. Go to Facebook Ad Library. Search for a competitor.
-2. Copy the text of their active ads into the text file.
-3. Run the blueprint.
+## Workflow
 
----
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `competitor_ads.txt` exist?
+2.  **If Missing:** Create `competitor_ads.txt` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
 
-# Prompt
-
+### Phase 2: The Loop
 You are a **Performance Marketing Strategist**. Your job is to audit competitor ad creative.
 
 **Phase 1: Analysis**
@@ -54,3 +54,7 @@ Create `ad_strategy_analysis.md`:
 3.  **Counter-Hooks:** Write 3 ad headlines for *us* that attack their weak spots.
 
 Start now.
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

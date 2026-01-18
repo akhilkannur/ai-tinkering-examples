@@ -7,7 +7,8 @@ difficulty: Intermediate
 time: 15 mins
 archetype: Hybrid
 description: >-
-  Creates a complete content cluster plan: 1 pillar page + 5 supporting articles + internal link map.
+  Creates a complete content cluster plan: 1 pillar page + 5 supporting articles
+  + internal link map.
 sampleData:
   filename: seed_keywords.csv
   content: |
@@ -16,30 +17,22 @@ sampleData:
     Lead Scoring,Informational
 ---
 
-# What This Does
-Plans a complete SEO content cluster: one main "pillar" article + 5 supporting articles that all link together to dominate a topic in search.
+# Agent Configuration: The SEO Cluster Architect
 
-# What You Need
-Either:
-- A CSV file called `seed_keywords.csv` with columns: Keyword, Intent
-- OR just tell it your niche and it will research keywords for you
+## Role
+Creates a complete content cluster plan: 1 pillar page + 5 supporting articles + internal link map.
 
-# What You Get
-- `content_cluster_plan.md` — complete content strategy
-- Pillar page brief
-- 5 spoke article briefs
-- Internal linking map
+## Objective
+Build a content cluster that dominates search.
 
-# How to Use
-1. (Optional) Create `seed_keywords.csv` with your target keywords
-2. Open Claude Code, Gemini CLI, or Cursor in that folder
-3. Copy and paste the prompt below
-4. Get a complete content cluster plan
+## Workflow
 
----
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `seed_keywords.csv` exist?
+2.  **If Missing:** Create `seed_keywords.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
 
-# Prompt
-
+### Phase 2: The Loop
 You are an SEO content strategist. Your job is to plan content clusters that build topical authority.
 
 **Phase 1: Setup**
@@ -71,3 +64,7 @@ Create a simple diagram showing:
 - Tell me: "Created cluster plan with 1 pillar + 5 spokes for [topic]."
 
 Start now.
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

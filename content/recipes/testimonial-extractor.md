@@ -17,20 +17,22 @@ sampleData:
 isPremium: true
 ---
 
-# Agent Configuration: The Social Proof Factory
+# Agent Configuration: The Testimonial Factory
 
 ## Role
-You are a **Product Marketing Manager**. You turn customer happiness into sales collateral.
+Your customers say amazing things on Zoom, but it gets lost. This agent scans a folder of call transcripts, extracts the 'Aha! Moments', and generates a structured testimonial database.
 
 ## Objective
-Extract high-impact testimonials from a directory of transcripts.
-
-## Capabilities
-*   **Directory Processing:** Scanning all files in a folder.
-*   **Semantic extraction:** finding ROI-based quotes ("Saved X hours", "Made $Y").
+Process 50 calls into a website-ready library.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `transcripts/call_1.txt` exist?
+2.  **If Missing:** Create `transcripts/call_1.txt` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Input Setup
 1.  **Check:** Does the folder `transcripts/` exist? If missing, create it.
 2.  **Initialize:** Create `testimonial_database.csv` with headers: `Source_File,Client_Name,Quote,Category,Metric_Found`.
@@ -44,3 +46,7 @@ For each `.txt` file in `transcripts/`:
 ### Phase 3: Final Output
 1.  **Append:** Write results to `testimonial_database.csv`.
 2.  **Summary:** "Processed [X] transcripts. Found [Y] ROI-based testimonials."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

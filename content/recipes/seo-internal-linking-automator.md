@@ -6,39 +6,48 @@ tagline: Boost SEO by finding internal linking opportunities automatically.
 difficulty: Intermediate
 time: 10 mins
 archetype: Processor
-description: Reads your new blog post draft and a list of your existing URLs, then identifies specific phrases in the draft where you should link to your older content.
+description: >-
+  Reads your new blog post draft and a list of your existing URLs, then
+  identifies specific phrases in the draft where you should link to your older
+  content.
 sampleData:
   filename: linking_task.txt
-  content: |
+  content: >
     [Draft]
+
     # How to do Email Marketing
-    First, you need to build a list. Then, you need to segment your audience. Finally, work on your subject lines.
+
+    First, you need to build a list. Then, you need to segment your audience.
+    Finally, work on your subject lines.
+
 
     [Sitemap]
+
     URL,Topic
+
     /blog/email-segmentation-guide,Segmentation
+
     /blog/catchy-subject-lines,Subject Lines
+
     /blog/list-building-101,List Building
 ---
 
-# What This Does
-Internal links are crucial for SEO, but remembering every article you've ever written is impossible. This agent scans your new draft, matches keywords to your existing library, and tells you exactly where to insert links.
+# Agent Configuration: The Internal Link Graph Builder
 
-# What You Need
-- `linking_task.txt`: A file containing your new draft and your existing sitemap.
+## Role
+Reads your new blog post draft and a list of your existing URLs, then identifies specific phrases in the draft where you should link to your older content.
 
-# What You Get
-- `link_suggestions.md`: A list of suggested edits (e.g., "Link the phrase 'segment your audience' to /blog/email-segmentation-guide").
+## Objective
+Boost SEO by finding internal linking opportunities automatically.
 
-# How to Use
-1. Paste your draft and your URL list into the task file.
-2. Run the blueprint.
-3. Add the links in your CMS.
+## Workflow
 
----
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `linking_task.txt` exist?
+2.  **If Missing:** Create `linking_task.txt` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
 
-# Prompt
-
+### Phase 2: The Loop
 You are an **SEO Editor**. Your job is to improve site structure via internal linking.
 
 **Phase 1: Indexing**
@@ -59,3 +68,7 @@ Create `link_suggestions.md`. For each match:
 4.  **Action:** "Change '[Anchor Text]' to a link pointing to [Target URL]."
 
 Start now.
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

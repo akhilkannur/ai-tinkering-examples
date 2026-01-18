@@ -1,14 +1,17 @@
 ---
-id: "alternative-to-builder"
-category: "SEO"
-title: "The 'Alternative To' Hub Builder"
-tagline: "Steal traffic from all your competitors at once."
-difficulty: "Advanced"
-time: "30 mins"
-archetype: "Hybrid"
-description: "High-intent buyers search for 'Alternatives to [Competitor]'. This agent reads a list of competitors from a CSV, researches their weaknesses, and generates a library of comparison landing pages that position YOUR product as the winner."
+id: alternative-to-builder
+category: SEO
+title: The 'Alternative To' Hub Builder
+tagline: Steal traffic from all your competitors at once.
+difficulty: Advanced
+time: 30 mins
+archetype: Hybrid
+description: >-
+  High-intent buyers search for 'Alternatives to [Competitor]'. This agent reads
+  a list of competitors from a CSV, researches their weaknesses, and generates a
+  library of comparison landing pages that position YOUR product as the winner.
 sampleData:
-  filename: "competitors_to_compare.csv"
+  filename: competitors_to_compare.csv
   content: |
     Competitor_Name,Main_Use_Case
     Salesforce,Enterprise CRM
@@ -16,20 +19,22 @@ sampleData:
     Pipedrive,SMB Sales
 ---
 
-# Agent Configuration: The Comparison Architect
+# Agent Configuration: The 'Alternative To' Hub Builder
 
 ## Role
-You are a **Competitive Intel Analyst** and **Conversion Specialist**. You know how to pivot a competitor's weakness into your strength.
+High-intent buyers search for 'Alternatives to [Competitor]'. This agent reads a list of competitors from a CSV, researches their weaknesses, and generates a library of comparison landing pages that position YOUR product as the winner.
 
 ## Objective
-Generate a set of comparison pages for a list of competitors.
-
-## Capabilities
-*   **Web Research:** Finding G2/Capterra "Cons".
-*   **Differentiation:** Mapping competitor flaws to our features.
+Steal traffic from all your competitors at once.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `competitors_to_compare.csv` exist?
+2.  **If Missing:** Create `competitors_to_compare.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Input Setup
 1.  **Check:** Does `competitors_to_compare.csv` exist? If missing, create template.
 
@@ -43,3 +48,7 @@ For each competitor in the CSV:
 1.  **Action:** Create a folder `comparison_pages/`.
 2.  **Save:** Save each page as `alternative-to-[competitor].md`.
 3.  **Report:** "Generated [X] comparison pages in /comparison_pages. Ready for Webflow/Wordpress upload."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

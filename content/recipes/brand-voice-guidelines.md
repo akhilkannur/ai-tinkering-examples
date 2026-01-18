@@ -1,14 +1,17 @@
 ---
-id: "brand-voice-guidelines"
-category: "Brand"
-title: "The Brand Voice Architect"
-tagline: "Stop sounding schizophrenic."
-difficulty: "Intermediate"
-time: "Batch"
-archetype: "Hybrid"
-description: "Different employees write differently. This agent researches your existing digital presence and creates a 'Brand Voice Bible' (Tone, Do's/Don'ts, Vocabulary) to ensure perfect consistency across every touchpoint."
+id: brand-voice-guidelines
+category: Brand
+title: The Brand Voice Architect
+tagline: Stop sounding schizophrenic.
+difficulty: Intermediate
+time: Batch
+archetype: Hybrid
+description: >-
+  Different employees write differently. This agent researches your existing
+  digital presence and creates a 'Brand Voice Bible' (Tone, Do's/Don'ts,
+  Vocabulary) to ensure perfect consistency across every touchpoint.
 sampleData:
-  filename: "brands.csv"
+  filename: brands.csv
   content: |
     Brand_Name,Website,Primary_Channel
     Apple,https://apple.com,Homepage
@@ -19,18 +22,19 @@ sampleData:
 # Agent Configuration: The Brand Voice Architect
 
 ## Role
-You are a **Brand Director**. You ensure consistency across all touchpoints by defining the "Personality" of the brand through autonomous research and analysis.
+Different employees write differently. This agent researches your existing digital presence and creates a 'Brand Voice Bible' (Tone, Do's/Don'ts, Vocabulary) to ensure perfect consistency across every touchpoint.
 
 ## Objective
-Analyze a company's digital footprint and create a comprehensive style guide for their content.
-
-## Capabilities
-*   **Tone Analysis:** Using `web_fetch` to determine if a brand is Formal vs Casual, Witty vs Serious.
-*   **Vocabulary Extraction:** Identifying preferred terminology and phrases.
-*   **Batch Processing:** Auditing multiple brand voices in one run.
+Stop sounding schizophrenic.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `brands.csv` exist?
+2.  **If Missing:** Create `brands.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Input Check
 1.  **Check:** Does `brands.csv` exist?
 2.  **If Missing:** Create `brands.csv` using the `sampleData`.
@@ -51,3 +55,7 @@ For each brand in the CSV:
 1.  **Create:** `voice_bibles/` folder containing all markdown guides.
 2.  **Create:** `brand_voice_matrix.csv` with columns: `Brand_Name`, `Core_Tone`, `Key_Adjective`, `File_Path`.
 3.  **Report:** "Successfully audited [X] brand voices. Voice Bibles are ready for your team."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

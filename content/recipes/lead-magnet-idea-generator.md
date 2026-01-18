@@ -2,11 +2,14 @@
 id: lead-magnet-idea-generator
 category: Marketing
 title: Lead Magnet Factory
-tagline: Generate ideas for high-converting tools, templates, and PDFs.
+tagline: 'Generate ideas for high-converting tools, templates, and PDFs.'
 difficulty: Intermediate
 time: 10 mins
 archetype: Hybrid
-description: Analyzes your website or a competitor's site to understand the audience, then brainstorms 5 "Lead Magnet" concepts (Calculators, Checklists, Scripts) that would convince a visitor to give you their email.
+description: >-
+  Analyzes your website or a competitor's site to understand the audience, then
+  brainstorms 5 "Lead Magnet" concepts (Calculators, Checklists, Scripts) that
+  would convince a visitor to give you their email.
 sampleData:
   filename: website_context.txt
   content: |
@@ -15,24 +18,22 @@ sampleData:
     Goal: Capture leads for CRM software.
 ---
 
-# What This Does
-People don't sign up for "Newsletters" anymore; they sign up for value. This agent brainstorms "Utility Marketing" ideas—tools or assets that solve a specific, small problem for your customer, earning you the right to sell the big solution later.
+# Agent Configuration: The Lead Magnet Factory
 
-# What You Need
-- `website_context.txt`: Who you are and who you want.
+## Role
+Analyzes your website or a competitor's site to understand the audience, then brainstorms 5 "Lead Magnet" concepts (Calculators, Checklists, Scripts) that would convince a visitor to give you their email.
 
-# What You Get
-- `lead_magnet_ideas.md`: 5 fully fleshed-out concepts with titles and "Hook" copy.
+## Objective
+Generate ideas for high-converting tools, templates, and PDFs.
 
-# How to Use
-1. Describe your business.
-2. Run the blueprint.
-3. Pick the best idea and build it (using the other blueprints!).
+## Workflow
 
----
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `website_context.txt` exist?
+2.  **If Missing:** Create `website_context.txt` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
 
-# Prompt
-
+### Phase 2: The Loop
 You are a **Growth Marketer**. Your job is to improve conversion rates with Lead Magnets.
 
 **Phase 1: Audience Analysis**
@@ -55,3 +56,7 @@ Create `lead_magnet_ideas.md`. For each idea:
 *   **Why it works:** Connection to the core product.
 
 Start now.
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

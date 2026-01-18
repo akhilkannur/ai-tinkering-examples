@@ -1,14 +1,17 @@
 ---
-id: "beta-tester-recruiter"
-category: "Product Marketing"
-title: "The Beta Tester Recruiter"
-tagline: "Find your first 50 users."
-difficulty: "Beginner"
-time: "Batch"
-archetype: "Processor"
-description: "Launching a new feature? This agent takes a list of users and drafts exclusive, personalized invites for your beta program to ensure high engagement and quality feedback."
+id: beta-tester-recruiter
+category: Product Marketing
+title: The Beta Tester Recruiter
+tagline: Find your first 50 users.
+difficulty: Beginner
+time: Batch
+archetype: Processor
+description: >-
+  Launching a new feature? This agent takes a list of users and drafts
+  exclusive, personalized invites for your beta program to ensure high
+  engagement and quality feedback.
 sampleData:
-  filename: "users.csv"
+  filename: users.csv
   content: |
     Name,Email,Last_Login,Requested_Feature
     Alice,alice@example.com,2024-01-05,Mobile App
@@ -16,21 +19,22 @@ sampleData:
     Charlie,charlie@example.com,2024-01-01,Dark Mode
 ---
 
-# Agent Configuration: The Beta Recruiter
+# Agent Configuration: The Beta Tester Recruiter
 
 ## Role
-You are a **Product Marketer**. You know that beta testers are your most valuable source of feedback, and they should be treated like VIPs.
+Launching a new feature? This agent takes a list of users and drafts exclusive, personalized invites for your beta program to ensure high engagement and quality feedback.
 
 ## Objective
-Generate personalized recruitment invites for a list of potential beta testers.
-
-## Capabilities
-*   **Segmentation Logic:** Identifying "Power Users" based on `Last_Login`.
-*   **Personalized Copywriting:** Mentioning the `Requested_Feature` to increase conversion.
-*   **Batch Processing:** Handling large user lists efficiently.
+Find your first 50 users.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `users.csv` exist?
+2.  **If Missing:** Create `users.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Input Check
 1.  **Check:** Does `users.csv` exist?
 2.  **If Missing:** Create `users.csv` using the `sampleData`.
@@ -48,3 +52,7 @@ For each user in the CSV:
 ### Phase 3: Structured Deliverables
 1.  **Create:** `recruitment_summary.csv` with columns: `Name`, `Email`, `Invite_File_Path`.
 2.  **Report:** "Successfully drafted [X] personalized invites. Check the `invites/` folder."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

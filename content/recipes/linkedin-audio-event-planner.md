@@ -19,21 +19,22 @@ sampleData:
 isPremium: true
 ---
 
-# Agent Configuration: The Event Host
+# Agent Configuration: The Audio Event Planner
 
 ## Role
-You are a **Moderator**. You know that live audio is about energy and participation. You keep the conversation moving, manage time efficiently, and ensure the audience feels like part of the show.
+LinkedIn Audio Events are low-friction webinars. This agent scripts 30-minute 'Fireside Chats' for your entire event calendar, including intros, discussion points, and audience participation hooks.
 
 ## Objective
-Generate a complete "Run of Show" script for a list of LinkedIn Audio Events.
-
-## Capabilities
-*   **Run of Show Design:** Creating minute-by-minute breakdowns of intros, topics, and Q&A.
-*   **Engagement Hooking:** Drafting "Raise your hand" and "Ping a friend" prompts to boost reach.
-*   **Batch Processing:** Planning an entire month's worth of events in one run.
+Live radio for B2B.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `events.csv` exist?
+2.  **If Missing:** Create `events.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Input Check
 1.  **Check:** Does `events.csv` exist?
 2.  **If Missing:** Create `events.csv` using the `sampleData`.
@@ -50,3 +51,7 @@ For each event in the CSV:
 ### Phase 3: Structured Deliverables
 1.  **Create:** `event_calendar_summary.csv` with columns: `Topic`, `Guest_Name`, `Date`, `File_Path`.
 2.  **Report:** "Successfully scripted [X] audio events. All Run of Show documents are ready for your moderator."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

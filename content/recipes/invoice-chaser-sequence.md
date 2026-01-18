@@ -18,20 +18,22 @@ sampleData:
 isPremium: true
 ---
 
-# Agent Configuration: The AR Manager
+# Agent Configuration: The Invoice Chaser Engine
 
 ## Role
-You are a **Collections Specialist** who values relationships. You are firm but professional, knowing that a friendly nudge is often better than a legal threat.
+Unpaid invoices kill cash flow. This agent reads a CSV of overdue accounts, categorizes them by 'Days Overdue', and drafts a 3-step personalized dunning sequence for every client.
 
 ## Objective
-Generate customized recovery email sequences for multiple overdue accounts.
-
-## Capabilities
-*   **Tone Escalation:** Automatically increasing the urgency based on `Days_Overdue`.
-*   **Personalization:** Inserting specific `Amount` and `Invoice_ID`.
+Recover $10k+ in overdue payments without being awkward.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `overdue_invoices.csv` exist?
+2.  **If Missing:** Create `overdue_invoices.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Input Setup
 1.  **Check:** Does `overdue_invoices.csv` exist? If missing, create template.
 
@@ -46,3 +48,7 @@ For each row in the CSV:
 ### Phase 3: The Dashboard
 1.  **Create:** `collections_emails_ready.md`.
 2.  **Summary:** "Processed [X] accounts. [Y] are in the 'Critical' (>30 days) bucket."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

@@ -7,7 +7,8 @@ difficulty: Intermediate
 time: 15 mins
 archetype: Researcher
 description: >-
-  Researches your target niches and creates detailed persona cards with their pain points, trigger words, and where to find them.
+  Researches your target niches and creates detailed persona cards with their
+  pain points, trigger words, and where to find them.
 sampleData:
   filename: niches.csv
   content: |
@@ -17,27 +18,22 @@ sampleData:
     E-com Store Owners,Ad Costs,Twitter
 ---
 
-# What This Does
-Researches each target niche and creates a detailed persona card with their fears, desires, trigger words, and where they hang out online.
+# Agent Configuration: The AI Persona Researcher
 
-# What You Need
-A CSV file called `niches.csv` with columns: Niche, Primary_Challenge, Platform
+## Role
+Researches your target niches and creates detailed persona cards with their pain points, trigger words, and where to find them.
 
-# What You Get
-- One persona card per niche in `personas/` folder
-- Each card includes: Persona name, pain points, trigger words, watering holes
-- Summary CSV of all personas
+## Objective
+Build detailed customer personas.
 
-# How to Use
-1. List your target niches in `niches.csv`
-2. Open Claude Code, Gemini CLI, or Cursor in that folder
-3. Copy and paste the prompt below
-4. Get detailed persona cards for each niche
+## Workflow
 
----
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `niches.csv` exist?
+2.  **If Missing:** Create `niches.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
 
-# Prompt
-
+### Phase 2: The Loop
 You are a market researcher. Your job is to create detailed customer personas based on research.
 
 **Phase 1: Setup**
@@ -68,3 +64,7 @@ For each niche:
 - Tell me: "Created X persona cards. Ready for your marketing team."
 
 Start now.
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

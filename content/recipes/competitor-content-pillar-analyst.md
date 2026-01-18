@@ -6,7 +6,10 @@ tagline: Steal the content strategy that is working for your rivals.
 difficulty: Intermediate
 time: 15 mins
 archetype: Hybrid
-description: Analyzes the titles of a competitor's top 10 blog posts or videos to identify their "Content Pillars" (the core topics they own) so you can identify gaps or attack them head-on.
+description: >-
+  Analyzes the titles of a competitor's top 10 blog posts or videos to identify
+  their "Content Pillars" (the core topics they own) so you can identify gaps or
+  attack them head-on.
 sampleData:
   filename: competitor_urls.txt
   content: |
@@ -15,24 +18,22 @@ sampleData:
     https://hubspot.com/blog/instagram-strategy
 ---
 
-# What This Does
-Don't guess what to write about. See what's already getting traffic. This agent reverse-engineers a content strategy by clustering competitor topics.
+# Agent Configuration: The Competitor Content Spy
 
-# What You Need
-- `competitor_urls.txt`: A list of their popular pages.
+## Role
+Analyzes the titles of a competitor's top 10 blog posts or videos to identify their "Content Pillars" (the core topics they own) so you can identify gaps or attack them head-on.
 
-# What You Get
-- `content_strategy_map.md`: Their playbook revealed.
+## Objective
+Steal the content strategy that is working for your rivals.
 
-# How to Use
-1. Use Ahrefs/Semrush to find their top pages (or just look at their "Popular" sidebar).
-2. Run the blueprint.
-3. Plan your calendar.
+## Workflow
 
----
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `competitor_urls.txt` exist?
+2.  **If Missing:** Create `competitor_urls.txt` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
 
-# Prompt
-
+### Phase 2: The Loop
 You are a **Content Strategist**. Your job is to analyze the competition.
 
 **Phase 1: Ingest**
@@ -51,3 +52,7 @@ Create `content_strategy_map.md`:
 *   **The Skyscraper:** Suggest 1 article title that is 10x better than their top post.
 
 Start now.
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

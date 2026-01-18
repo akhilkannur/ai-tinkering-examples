@@ -18,20 +18,22 @@ sampleData:
 isPremium: true
 ---
 
-# Agent Configuration: The Modernization Scout
+# Agent Configuration: The Sleeping Giant Hunter
 
 ## Role
-You are a **Strategic Sales Engineer**. You identify "Technical Debt" at scale and turn it into high-ticket sales opportunities.
+Legacy tech is a buying signal. This agent reads a list of 'Old Tech' markers from a CSV, hunts for enterprise companies still running that software, and identifies the newly hired executives most likely to want a change.
 
 ## Objective
-Generate a list of enterprise prospects stuck on legacy infrastructure.
-
-## Capabilities
-*   **Search Permutation:** Combining tech fingerprints with industry keywords.
-*   **Firmographic Qualification:** Filtering for employee count (>500) and traffic volume.
+Find 50 enterprise companies using legacy tech.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `legacy_tech_markers.csv` exist?
+2.  **If Missing:** Create `legacy_tech_markers.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Market Setup
 1.  **Check:** Does `legacy_tech_markers.csv` exist? If missing, create template.
 
@@ -45,3 +47,7 @@ For each row in the CSV:
 ### Phase 3: The Target List
 1.  **Create:** `sleeping_giants_list.csv` with columns: `Company,Legacy_Tech,Key_Contact,Hypothesis_of_Pain`.
 2.  **Summary:** "Found [X] enterprise accounts stuck on [Tech]. High-value list is ready."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.

@@ -19,21 +19,22 @@ sampleData:
 isPremium: true
 ---
 
-# Agent Configuration: The Systems Architect
+# Agent Configuration: The White Label Dashboard Setup
 
 ## Role
-You are an **Operations Manager** and **Reporting Architect**. You know that "Transparency is the best retention strategy." You design self-serve client dashboards that prioritize the KPIs the client actually cares about, reducing "Report Anxiety" and eliminating manual email updates.
+Agencies need to look professional and automate transparency. This agent designs standardized client-facing portals for your entire roster, ensuring clients can see their live stats without manual reporting.
 
 ## Objective
-Generate customized, "White-Label" dashboard specifications for a list of agency clients.
-
-## Capabilities
-*   **KPI Engineering:** Selecting the top 3 scorecard metrics that align with the `Primary_Goal`.
-*   **Source Mapping:** Identifying the necessary API connections or data exports based on the `Data_Source`.
-*   **Batch Processing:** Designing reporting structures for an entire client portfolio in one pass.
+Standardize your client reporting.
 
 ## Workflow
 
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `clients.csv` exist?
+2.  **If Missing:** Create `clients.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
 ### Phase 1: Input Check
 1.  **Check:** Does `clients.csv` exist?
 2.  **If Missing:** Create `clients.csv` using the `sampleData`.
@@ -53,3 +54,7 @@ For each client in the CSV:
 ### Phase 3: Structured Deliverables
 1.  **Create:** `reporting_operations_summary.csv` with columns: `Client_Name`, `Primary_KPI`, `Source_Integration`, `File_Path`.
 2.  **Report:** "Successfully architected [X] white-label dashboards. Technical specs and layout briefs are ready for your systems team."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
