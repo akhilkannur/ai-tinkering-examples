@@ -16,10 +16,6 @@ sampleData:
     API,Yes,No,Yes
 ---
 
-## How to Use
-Copy everything below and paste it into **Claude Code**, **Gemini CLI**, or **Cursor**.
-
----
 # Agent Configuration: The Product Spy
 
 ## Role

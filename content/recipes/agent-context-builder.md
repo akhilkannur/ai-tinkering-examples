@@ -13,10 +13,6 @@ sampleData:
     (No input file needed - this agent reads your actual file system)
 ---
 
-## How to Use
-Copy everything below and paste it into **Claude Code**, **Gemini CLI**, or **Cursor**.
-
----
 # Agent Configuration: The Architect
 
 ## Role

@@ -16,10 +16,6 @@ sampleData:
     US_Marketing_VPs,VP of Marketing or CMO at Series B healthcare startups in the US.
 ---
 
-## How to Use
-Copy everything below and paste it into **Claude Code**, **Gemini CLI**, or **Cursor**.
-
----
 # Agent Configuration: The Boolean Logic Expert
 
 ## Role

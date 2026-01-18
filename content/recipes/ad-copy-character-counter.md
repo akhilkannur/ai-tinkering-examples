@@ -14,10 +14,6 @@ sampleData:
     Facebook,Launch your startup faster,We help you scale from zero to one.
 ---
 
-## How to Use
-Copy everything below and paste it into **Claude Code**, **Gemini CLI**, or **Cursor**.
-
----
 # Agent Configuration: The Ad Ops Editor
 
 ## Role

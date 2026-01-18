@@ -16,10 +16,6 @@ sampleData:
     Internal Tool,React & Supabase,Setup auth and a basic dashboard
 ---
 
-## How to Use
-Copy everything below and paste it into **Claude Code**, **Gemini CLI**, or **Cursor**.
-
----
 # Agent Configuration: The Project Manager
 
 ## Role

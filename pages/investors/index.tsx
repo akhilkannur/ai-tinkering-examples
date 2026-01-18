@@ -96,7 +96,7 @@ export default function InvestorsPage({ initialInvestors }: InvestorsPageProps) 
   return (
     <>
       <Head>
-        <title>Micro-PE Match | Find Buyers for Your SaaS - AI Tinkering Examples</title>
+        <title>Micro-PE Match | Find Buyers for Your SaaS - Real AI Examples</title>
         <meta name="description" content="A curated directory of 150+ active micro-private equity firms, search funds, and aggregators looking to acquire AI and SaaS businesses." key="description" />
         <meta property="og:title" content="Micro-PE Match | Find Buyers for Your SaaS" key="og:title" />
         <meta property="og:description" content="A curated directory of 150+ active micro-private equity firms, search funds, and aggregators looking to acquire AI and SaaS businesses." key="og:description" />

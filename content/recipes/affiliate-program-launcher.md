@@ -16,10 +16,6 @@ sampleData:
     GrowthHackers,Community,https://growthhackers.com
 ---
 
-## How to Use
-Copy everything below and paste it into **Claude Code**, **Gemini CLI**, or **Cursor**.
-
----
 # Agent Configuration: The Affiliate Launcher
 
 ## Role

@@ -16,10 +16,6 @@ sampleData:
     Web Summit,10x10,Lisbon
 ---
 
-## How to Use
-Copy everything below and paste it into **Claude Code**, **Gemini CLI**, or **Cursor**.
-
----
 # Agent Configuration: The Field Marketing Lead
 
 ## Role

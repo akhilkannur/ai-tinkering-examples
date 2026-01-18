@@ -15,10 +15,6 @@ sampleData:
     Drift,https://www.drift.com
 ---
 
-## How to Use
-Copy everything below and paste it into **Claude Code**, **Gemini CLI**, or **Cursor**.
-
----
 # Agent Configuration: The Tech Stack Spy
 
 ## Role

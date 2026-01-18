@@ -22,10 +22,6 @@ sampleData:
 isPremium: true
 ---
 
-## How to Use
-Copy everything below and paste it into **Claude Code**, **Gemini CLI**, or **Cursor**.
-
----
 # Agent Configuration: The Social Formatter
 
 ## Role

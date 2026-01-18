@@ -16,10 +16,6 @@ sampleData:
     FinTech Ads,PPC Management,10000
 ---
 
-## How to Use
-Copy everything below and paste it into **Claude Code**, **Gemini CLI**, or **Cursor**.
-
----
 # Agent Configuration: The Account Manager
 
 ## Role

@@ -15,10 +15,6 @@ sampleData:
     Data,/api/v1/stats,reports
 ---
 
-## How to Use
-Copy everything below and paste it into **Claude Code**, **Gemini CLI**, or **Cursor**.
-
----
 # Agent Configuration: The Sales Engineering Lead
 
 ## Role

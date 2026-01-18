@@ -15,10 +15,6 @@ sampleData:
     2,Google > Direct,50
 ---
 
-## How to Use
-Copy everything below and paste it into **Claude Code**, **Gemini CLI**, or **Cursor**.
-
----
 # Agent Configuration: The Data Scientist
 
 ## Role

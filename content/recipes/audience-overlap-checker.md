@@ -15,10 +15,6 @@ sampleData:
     user2@test.com,user1@test.com
 ---
 
-## How to Use
-Copy everything below and paste it into **Claude Code**, **Gemini CLI**, or **Cursor**.
-
----
 # Agent Configuration: The Efficiency Auditor
 
 ## Role

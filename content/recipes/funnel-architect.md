@@ -16,10 +16,6 @@ sampleData:
     Enterprise Sales,Lead -> SDR Call -> AE Demo -> Legal -> PO,Sales Cycle Length
 ---
 
-## How to Use
-Copy everything below and paste it into **Claude Code**, **Gemini CLI**, or **Cursor**.
-
----
 # Agent Configuration: The Funnel Visualizer
 
 ## Role

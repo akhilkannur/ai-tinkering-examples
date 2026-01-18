@@ -16,10 +16,6 @@ sampleData:
     Mike Ross,Wireless Headphones,199,https://store.com/cart/789
 ---
 
-## How to Use
-Copy everything below and paste it into **Claude Code**, **Gemini CLI**, or **Cursor**.
-
----
 # Agent Configuration: The SMS Writer
 
 ## Role

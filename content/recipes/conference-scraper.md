@@ -15,10 +15,6 @@ sampleData:
     Collision,https://collisionconf.com/speakers
 ---
 
-## How to Use
-Copy everything below and paste it into **Claude Code**, **Gemini CLI**, or **Cursor**.
-
----
 # Agent Configuration: The Conference Scraper
 
 ## Role

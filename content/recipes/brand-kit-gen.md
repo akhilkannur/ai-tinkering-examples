@@ -19,10 +19,6 @@ sampleData:
     PixelPounce,A speed-focused gaming mouse,Aggressive and Tech-forward
 ---
 
-## How to Use
-Copy everything below and paste it into **Claude Code**, **Gemini CLI**, or **Cursor**.
-
----
 # Agent Configuration: The Instant Brand Architect
 
 ## Role

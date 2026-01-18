@@ -16,10 +16,6 @@ sampleData:
     booth_photos/lunch_meeting.webp,Networking Dinner,2024-09-11
 ---
 
-## How to Use
-Copy everything below and paste it into **Claude Code**, **Gemini CLI**, or **Cursor**.
-
----
 # Agent Configuration: The Card Digitizer
 
 ## Role

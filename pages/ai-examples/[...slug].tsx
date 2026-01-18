@@ -33,11 +33,11 @@ export default function ExamplePage({ example }: ExamplePageProps) {
     "description": example.summary,
     "author": {
       "@type": "Person",
-      "name": example.author_name || "AI Tinkering Examples"
+      "name": example.author_name || "Real AI Examples"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "AI Tinkering Examples",
+      "name": "Real AI Examples",
       "logo": {
         "@type": "ImageObject",
         "url": example.sponsor?.logo?.[0]?.url || `${baseUrl}/logo.png`
@@ -89,7 +89,7 @@ export default function ExamplePage({ example }: ExamplePageProps) {
   return (
     <>
       <Head>
-        <title>{example.title} | AI Workflow Example | AI Tinkering Examples</title>
+        <title>{example.title} | AI Workflow Example | Real AI Examples</title>
         <meta name="description" content={example.summary || `Learn how to recreate this ${example.category} AI workflow: ${example.title}. Step-by-step guide with screenshots and prompts.`} key="description" />
         
         {/* Open Graph / Facebook */}
@@ -97,7 +97,7 @@ export default function ExamplePage({ example }: ExamplePageProps) {
         <meta property="og:title" content={`${example.title} | AI Workflow Example`} key="og:title" />
         <meta property="og:description" content={example.summary || `Learn how to recreate this AI workflow: ${example.title}`} key="og:description" />
         <meta property="og:url" content={currentUrl} key="og:url" />
-        <meta property="og:site_name" content="AI Tinkering Examples" key="og:site_name" />
+        <meta property="og:site_name" content="Real AI Examples" key="og:site_name" />
         {example.screenshots?.[0]?.url && (
           <meta property="og:image" content={example.screenshots[0].url} key="og:image" />
         )}

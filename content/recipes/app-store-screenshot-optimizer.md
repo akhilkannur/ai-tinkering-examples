@@ -16,10 +16,6 @@ sampleData:
     Notion,Productivity,Note Taking
 ---
 
-## How to Use
-Copy everything below and paste it into **Claude Code**, **Gemini CLI**, or **Cursor**.
-
----
 # Agent Configuration: The ASO Optimizer
 
 ## Role

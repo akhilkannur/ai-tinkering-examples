@@ -15,10 +15,6 @@ sampleData:
     mike_marketer,I tried this but it was too expensive for my team.,LinkedIn
 ---
 
-## How to Use
-Copy everything below and paste it into **Claude Code**, **Gemini CLI**, or **Cursor**.
-
----
 # Agent Configuration: The Comment Nurturer
 
 ## Role

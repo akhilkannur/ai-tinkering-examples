@@ -17,10 +17,6 @@ sampleData:
     ClickUp,Save one day every week.,The all-in-one app to replace them all.
 ---
 
-## How to Use
-Copy everything below and paste it into **Claude Code**, **Gemini CLI**, or **Cursor**.
-
----
 # Agent Configuration: The Ad Psychologist
 
 ## Role

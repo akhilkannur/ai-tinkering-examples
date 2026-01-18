@@ -21,7 +21,7 @@ export default function JobsPage({ jobs }: JobsPageProps) {
   return (
     <>
       <Head>
-        <title>AI Jobs | Find Your Next Role in AI - AI Tinkering Examples</title>
+        <title>AI Jobs | Find Your Next Role in AI - Real AI Examples</title>
         <meta name="description" content="Browse a curated list of AI job openings from top companies." />
 
         {/* Open Graph / Facebook */}
@@ -30,7 +30,7 @@ export default function JobsPage({ jobs }: JobsPageProps) {
         <meta property="og:description" content="Browse a curated list of AI job openings from top companies." />
         <meta property="og:url" content="https://your-domain.com/jobs" />
         <meta property="og:image" content="https://your-domain.com/social-share-default.jpg" />
-        <meta property="og:site_name" content="AI Tinkering Examples" />
+        <meta property="og:site_name" content="Real AI Examples" />
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />

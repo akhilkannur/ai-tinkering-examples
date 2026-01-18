@@ -131,6 +131,8 @@ async function generateSitemap() {
       '/tools/for-marketers',
       '/tools/free-ai-tools',
       '/tools/utm-builder',
+      '/privacy',
+      '/terms',
     ];
 
     // 5. Build XML

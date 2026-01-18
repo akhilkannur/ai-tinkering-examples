@@ -57,7 +57,7 @@ export default function ExamplesPage({ examples, categories }: ExamplesPageProps
   return (
     <>
       <Head>
-        <title>AI Examples | Browse AI Workflows & Prompts | AI Tinkering Examples</title>
+        <title>AI Examples | Browse AI Workflows & Prompts | Real AI Examples</title>
         <meta name="description" content={`Browse ${examples.length} AI workflow examples with step-by-step guides, prompts, and automation ideas for non-technical tinkerers.`} />
         <meta name="keywords" content="AI examples, AI workflows, automation, prompts, artificial intelligence, guides" />
         <link rel="canonical" href={`${process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com'}/ai-examples`} />

@@ -15,10 +15,6 @@ sampleData:
     CustB,1000,1500
 ---
 
-## How to Use
-Copy everything below and paste it into **Claude Code**, **Gemini CLI**, or **Cursor**.
-
----
 # Agent Configuration: The Accountant
 
 ## Role

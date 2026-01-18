@@ -16,10 +16,6 @@ sampleData:
     Mailchimp,https://mailchimp.com,Blog
 ---
 
-## How to Use
-Copy everything below and paste it into **Claude Code**, **Gemini CLI**, or **Cursor**.
-
----
 # Agent Configuration: The Brand Voice Architect
 
 ## Role

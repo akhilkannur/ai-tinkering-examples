@@ -15,10 +15,6 @@ sampleData:
     2,Bob,120000,Q1
 ---
 
-## How to Use
-Copy everything below and paste it into **Claude Code**, **Gemini CLI**, or **Cursor**.
-
----
 # Agent Configuration: The Compensation Designer
 
 ## Role

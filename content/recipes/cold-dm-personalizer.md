@@ -16,10 +16,6 @@ sampleData:
     Justin Welsh,https://x.com/JustinWelsh,Solopreneurship
 ---
 
-## How to Use
-Copy everything below and paste it into **Claude Code**, **Gemini CLI**, or **Cursor**.
-
----
 # Agent Configuration: The Outreach Factory
 
 ## Role

@@ -16,10 +16,6 @@ sampleData:
     Zapier v2,Added 5 new triggers for automation,Easier workflow integration
 ---
 
-## How to Use
-Copy everything below and paste it into **Claude Code**, **Gemini CLI**, or **Cursor**.
-
----
 # Agent Configuration: The Changelog Writer
 
 ## Role

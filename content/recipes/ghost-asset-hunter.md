@@ -17,10 +17,6 @@ sampleData:
     Datadog,DDOG,Olivier Pomel
 ---
 
-## How to Use
-Copy everything below and paste it into **Claude Code**, **Gemini CLI**, or **Cursor**.
-
----
 # Agent Configuration: The Enterprise Scout
 
 ## Role

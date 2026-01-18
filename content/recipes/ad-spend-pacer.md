@@ -15,10 +15,6 @@ sampleData:
     Prospecting,10000,8000,15
 ---
 
-## How to Use
-Copy everything below and paste it into **Claude Code**, **Gemini CLI**, or **Cursor**.
-
----
 # Agent Configuration: The Media Buyer
 
 ## Role

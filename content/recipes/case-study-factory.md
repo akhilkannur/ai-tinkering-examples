@@ -13,10 +13,6 @@ sampleData:
     User: "The workflow automation was a game changer. We saved 20 hours a week across the team."
 ---
 
-## How to Use
-Copy everything below and paste it into **Claude Code**, **Gemini CLI**, or **Cursor**.
-
----
 # Agent Configuration: The Success Story Factory
 
 ## Role

@@ -15,10 +15,6 @@ sampleData:
     3. Buy my course.
 ---
 
-## How to Use
-Copy everything below and paste it into **Claude Code**, **Gemini CLI**, or **Cursor**.
-
----
 # Agent Configuration: The Traffic Director
 
 ## Role

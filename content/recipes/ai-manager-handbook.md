@@ -14,10 +14,6 @@ tags:
 summary: "Stop repeating yourself. Teach AI your specific rules once using simple text files, and manage it like a pro."
 ---
 
-## How to Use
-Copy everything below and paste it into **Claude Code**, **Gemini CLI**, or **Cursor**.
-
----
 ## Goal
 To create a "Memory System" for your AI chats. Instead of explaining your brand voice, color codes, or formatting rules every single time you start a new chat, you will build a set of simple instructions (The Handbook) that you can reference instantly. This turns you from a "Prompter" into a "Manager."
 

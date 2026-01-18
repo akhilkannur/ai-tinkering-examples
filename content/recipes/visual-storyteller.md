@@ -16,10 +16,6 @@ sampleData:
     The Customer Win,https://blog.com/case-study,Minimalist and Clean
 ---
 
-## How to Use
-Copy everything below and paste it into **Claude Code**, **Gemini CLI**, or **Cursor**.
-
----
 # Agent Configuration: The Visual Storyteller
 
 ## Role

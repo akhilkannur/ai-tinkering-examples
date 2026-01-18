@@ -15,10 +15,6 @@ sampleData:
     https://yoursite.com/blog/post-1
 ---
 
-## How to Use
-Copy everything below and paste it into **Claude Code**, **Gemini CLI**, or **Cursor**.
-
----
 # Agent Configuration: The Indexing Guard
 
 ## Role

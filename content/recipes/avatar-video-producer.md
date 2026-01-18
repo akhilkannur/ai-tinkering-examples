@@ -16,10 +16,6 @@ sampleData:
     Remote Work Tips,Chris,Better work-life balance
 ---
 
-## How to Use
-Copy everything below and paste it into **Claude Code**, **Gemini CLI**, or **Cursor**.
-
----
 # Agent Configuration: The Avatar Director
 
 ## Role

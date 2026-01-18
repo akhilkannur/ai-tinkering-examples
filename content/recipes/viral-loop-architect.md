@@ -16,10 +16,6 @@ sampleData:
     Creators,Publishing,Reach
 ---
 
-## How to Use
-Copy everything below and paste it into **Claude Code**, **Gemini CLI**, or **Cursor**.
-
----
 # Agent Configuration: The Growth Systems Lead
 
 ## Role

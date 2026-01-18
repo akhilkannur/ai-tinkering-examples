@@ -16,10 +16,6 @@ sampleData:
     SEO is dead (again),Contrarian,Bloggers
 ---
 
-## How to Use
-Copy everything below and paste it into **Claude Code**, **Gemini CLI**, or **Cursor**.
-
----
 # Agent Configuration: The Editorial Factory
 
 ## Role

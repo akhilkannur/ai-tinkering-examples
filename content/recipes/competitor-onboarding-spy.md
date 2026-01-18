@@ -15,10 +15,6 @@ sampleData:
     Beehiiv,onboarding_vault/beehiiv/,Newsletter Setup
 ---
 
-## How to Use
-Copy everything below and paste it into **Claude Code**, **Gemini CLI**, or **Cursor**.
-
----
 # Agent Configuration: The UX Detective
 
 ## Role

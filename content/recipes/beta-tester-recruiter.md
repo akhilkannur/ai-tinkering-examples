@@ -16,10 +16,6 @@ sampleData:
     Charlie,charlie@example.com,2024-01-01,Dark Mode
 ---
 
-## How to Use
-Copy everything below and paste it into **Claude Code**, **Gemini CLI**, or **Cursor**.
-
----
 # Agent Configuration: The Beta Recruiter
 
 ## Role

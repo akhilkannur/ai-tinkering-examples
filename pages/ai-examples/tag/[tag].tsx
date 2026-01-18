@@ -34,7 +34,7 @@ export default function TagPage({ examples, tag, tagDisplayName }: TagPageProps)
   return (
     <>
       <Head>
-        <title>#{tagDisplayName} AI Examples | AI Workflow Library | AI Tinkering Examples</title>
+        <title>#{tagDisplayName} AI Examples | AI Workflow Library | Real AI Examples</title>
         <meta name="description" content={`Explore ${examples.length} AI workflow examples tagged with ${tagDisplayName}. Practical automation ideas and step-by-step guides.`} />
         <meta name="keywords" content={`${tagDisplayName}, AI workflows, AI examples, automation, prompts`} />
         

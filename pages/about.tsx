@@ -7,10 +7,10 @@ export default function AboutPage() {
   return (
     <>
       <Head>
-        <title>About | AI Examples</title>
-        <meta name="description" content="Learn more about AI Examples and our mission to provide actionable AI workflows and prompts." key="description" />
-        <meta property="og:title" content="About | AI Examples" key="og:title" />
-        <meta property="og:description" content="Learn more about AI Examples and our mission to provide actionable AI workflows and prompts." key="og:description" />
+        <title>About | Real AI Examples</title>
+        <meta name="description" content="Learn more about Real AI Examples and our mission to provide actionable AI workflows and prompts." key="description" />
+        <meta property="og:title" content="About | Real AI Examples" key="og:title" />
+        <meta property="og:description" content="Learn more about Real AI Examples and our mission to provide actionable AI workflows and prompts." key="og:description" />
         <meta property="og:image" content={`${process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com'}/api/og?mode=home`} key="og:image" />
         <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
         <meta name="twitter:image" content={`${process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com'}/api/og?mode=home`} key="twitter:image" />
@@ -19,7 +19,7 @@ export default function AboutPage() {
         <Navbar />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12 min-h-[calc(100vh-200px)]">
           <h1 className="text-4xl sm:text-5xl font-black tracking-tighter mb-8 text-center">
-            About AI Examples
+            About Real AI Examples
           </h1>
           <div className="flex flex-col items-center gap-8">
             <div className="w-full max-w-lg">
