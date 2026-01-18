@@ -115,7 +115,7 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
           <input
             type="text"
             className="block w-full pl-10 pr-3 py-3 border border-gray-200 rounded-xl leading-5 bg-gray-50 text-gray-900 placeholder-gray-400 focus:outline-none focus:bg-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-150 ease-in-out"
-            placeholder="Search 100+ blueprints..."
+            placeholder="Search 600+ blueprints..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
@@ -351,7 +351,7 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
                       <Lock className="w-10 h-10 text-yellow-500" />
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-2">Unlock this Blueprint</h3>
-                    <p className="text-gray-400 mb-8 max-w-md mx-auto">Get access to this workflow and 200+ others by joining Pro.</p>
+                    <p className="text-gray-400 mb-8 max-w-md mx-auto">Get access to this workflow and 500+ others by joining Pro.</p>
                     <a href="https://checkout.dodopayments.com/buy/pdt_0NW6p0szmXPS6jXW05hIP?session=sess_GCYotd6plh" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-gray-900 px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-xl">Unlock Now <ArrowRight className="w-5 h-5" /></a>
                   </div>
                 </div>

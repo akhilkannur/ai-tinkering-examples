@@ -207,7 +207,7 @@ Downloaded from RealAIExamples.com`;
                     </div>
                     <h2 className="text-4xl font-bold text-white mb-4">This Blueprint is Locked</h2>
                     <p className="text-gray-400 text-xl mb-10 max-w-xl mx-auto leading-relaxed">
-                      You are viewing a Premium AI workflow. Get instant access to this blueprint and 100+ others by joining the Terminal Cookbook Pro.
+                      You are viewing a Premium AI workflow. Get instant access to this blueprint and 500+ others by joining the Terminal Cookbook Pro.
                     </p>
                     
                     {!showLicenseInput ? (
