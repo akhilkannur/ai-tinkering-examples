@@ -1,4 +1,5 @@
----id: "trial-expiry-prioritizer"
+---
+id: "trial-expiry-prioritizer"
 category: "PLG Sales"
 title: "Trial Closing Prioritizer"
 tagline: "Who gets a call 3 days before expiry?"

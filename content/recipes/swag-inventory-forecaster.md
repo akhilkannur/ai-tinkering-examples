@@ -1,4 +1,5 @@
----id: "swag-inventory-forecaster"
+---
+id: "swag-inventory-forecaster"
 category: "Field Marketing"
 title: "Swag Demand Planner"
 tagline: "How many t-shirts do we need?"

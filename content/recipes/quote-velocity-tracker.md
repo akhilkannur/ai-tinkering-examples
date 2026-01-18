@@ -1,4 +1,5 @@
----id: "quote-velocity-tracker"
+---
+id: "quote-velocity-tracker"
 category: "Advanced RevOps"
 title: "Quote Velocity Tracker"
 tagline: "How fast does a quote get signed?"

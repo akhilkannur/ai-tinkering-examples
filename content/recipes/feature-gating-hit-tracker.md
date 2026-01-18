@@ -1,4 +1,5 @@
----id: "feature-gating-hit-tracker"
+---
+id: "feature-gating-hit-tracker"
 category: "PLG Sales"
 title: "Paywall Hit Detector"
 tagline: "Who keeps clicking the 'Upgrade' button?"

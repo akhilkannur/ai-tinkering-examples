@@ -1,4 +1,5 @@
----id: "beta-program-active-roster"
+---
+id: "beta-program-active-roster"
 category: "Customer Advocacy"
 title: "Beta Tester Verifier"
 tagline: "Are they actually testing?"

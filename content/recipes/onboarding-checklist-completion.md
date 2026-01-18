@@ -1,4 +1,5 @@
----id: "onboarding-checklist-completion"
+---
+id: "onboarding-checklist-completion"
 category: "PLG Sales"
 title: "Onboarding Drop-off Audit"
 tagline: "Where do users get stuck?"

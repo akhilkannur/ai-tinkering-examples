@@ -1,4 +1,5 @@
----id: "social-engagement-to-opportunity"
+---
+id: "social-engagement-to-opportunity"
 category: "Social Selling"
 title: "Social-to-Deal Correlator"
 tagline: "Do likes lead to deals?"

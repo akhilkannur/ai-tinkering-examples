@@ -1,4 +1,5 @@
----id: "credit-card-dunning-recovery"
+---
+id: "credit-card-dunning-recovery"
 category: "PLG Sales"
 title: "High-Value Dunning Prioritizer"
 tagline: "Save the big accounts first."

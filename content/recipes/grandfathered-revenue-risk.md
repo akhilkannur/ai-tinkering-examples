@@ -1,4 +1,5 @@
----id: "grandfathered-revenue-risk"
+---
+id: "grandfathered-revenue-risk"
 category: "Advanced RevOps"
 title: "Legacy Pricing Audit"
 tagline: "How much are we losing on old plans?"

@@ -1,4 +1,5 @@
----id: "user-group-geo-locator"
+---
+id: "user-group-geo-locator"
 category: "Field Marketing"
 title: "Meetup City Selector"
 tagline: "Where should we host the next dinner?"

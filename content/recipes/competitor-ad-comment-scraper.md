@@ -1,4 +1,5 @@
----id: "competitor-ad-comment-scraper"
+---
+id: "competitor-ad-comment-scraper"
 category: "Social Selling"
 title: "Competitor Dissatisfaction Miner"
 tagline: "Find unhappy people on their ads."

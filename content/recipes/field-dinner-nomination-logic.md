@@ -1,4 +1,5 @@
----id: "field-dinner-nomination-logic"
+---
+id: "field-dinner-nomination-logic"
 category: "Field Marketing"
 title: "VIP Dinner Selector"
 tagline: "Who gets the steak dinner?"

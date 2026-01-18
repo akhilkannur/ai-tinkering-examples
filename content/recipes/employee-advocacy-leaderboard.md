@@ -1,4 +1,5 @@
----id: "employee-advocacy-leaderboard"
+---
+id: "employee-advocacy-leaderboard"
 category: "Social Selling"
 title: "Social Advocacy Leaderboard"
 tagline: "Who is the loudest brand champion?"

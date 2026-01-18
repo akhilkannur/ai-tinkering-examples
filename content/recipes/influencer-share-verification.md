@@ -1,4 +1,5 @@
----id: "influencer-share-verification"
+---
+id: "influencer-share-verification"
 category: "Social Selling"
 title: "Influencer Compliance Check"
 tagline: "Did they actually post it?"

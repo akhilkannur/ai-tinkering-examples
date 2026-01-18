@@ -1,4 +1,5 @@
----id: "contract-renewal-health-score"
+---
+id: "contract-renewal-health-score"
 category: "Advanced RevOps"
 title: "Pre-Renewal Health Check"
 tagline: "90-day warning system."

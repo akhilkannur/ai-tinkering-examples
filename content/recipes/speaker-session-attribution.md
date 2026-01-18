@@ -1,4 +1,5 @@
----id: "speaker-session-attribution"
+---
+id: "speaker-session-attribution"
 category: "Field Marketing"
 title: "Session Pipeline Attribution"
 tagline: "Did the CEO's keynote generate deals?"

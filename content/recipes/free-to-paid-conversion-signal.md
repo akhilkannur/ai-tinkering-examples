@@ -1,4 +1,5 @@
----id: "free-to-paid-conversion-signal"
+---
+id: "free-to-paid-conversion-signal"
 category: "PLG Sales"
 title: "PQL Usage Trigger"
 tagline: "Flag users who hit 90% of their free limits."

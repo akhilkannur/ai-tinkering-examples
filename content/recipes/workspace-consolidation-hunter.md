@@ -1,4 +1,5 @@
----id: "workspace-consolidation-hunter"
+---
+id: "workspace-consolidation-hunter"
 category: "PLG Sales"
 title: "Enterprise Consolidation Hunter"
 tagline: "Find 50 free users with the same email domain."

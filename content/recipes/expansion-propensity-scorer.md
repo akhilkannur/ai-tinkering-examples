@@ -1,4 +1,5 @@
----id: "expansion-propensity-scorer"
+---
+id: "expansion-propensity-scorer"
 category: "Advanced RevOps"
 title: "Upsell Propensity Scorer"
 tagline: "Who is ready to buy more?"

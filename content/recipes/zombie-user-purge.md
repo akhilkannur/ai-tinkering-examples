@@ -1,4 +1,5 @@
----id: "zombie-user-purge"
+---
+id: "zombie-user-purge"
 category: "PLG Sales"
 title: "Inactive Free User Purge"
 tagline: "Clean up database costs."

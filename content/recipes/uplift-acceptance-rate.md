@@ -1,4 +1,5 @@
----id: "uplift-acceptance-rate"
+---
+id: "uplift-acceptance-rate"
 category: "Advanced RevOps"
 title: "Price Increase Success Rate"
 tagline: "Did they accept the +5%?"

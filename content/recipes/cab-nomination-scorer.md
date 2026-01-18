@@ -1,4 +1,5 @@
----id: "cab-nomination-scorer"
+---
+id: "cab-nomination-scorer"
 category: "Customer Advocacy"
 title: "Advisory Board Scout"
 tagline: "Who should be on our CAB?"

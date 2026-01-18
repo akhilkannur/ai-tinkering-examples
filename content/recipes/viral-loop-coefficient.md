@@ -1,4 +1,5 @@
----id: "viral-loop-coefficient"
+---
+id: "viral-loop-coefficient"
 category: "PLG Sales"
 title: "Viral Coefficient Tracker"
 tagline: "Are users inviting their friends?"

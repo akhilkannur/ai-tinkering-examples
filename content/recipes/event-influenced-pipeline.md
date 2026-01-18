@@ -1,4 +1,5 @@
----id: "event-influenced-pipeline"
+---
+id: "event-influenced-pipeline"
 category: "Field Marketing"
 title: "Event Influence Calc"
 tagline: "Total pipeline touched by this event."

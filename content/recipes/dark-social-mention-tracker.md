@@ -1,4 +1,5 @@
----id: "dark-social-mention-tracker"
+---
+id: "dark-social-mention-tracker"
 category: "Social Selling"
 title: "Community Mention Alert"
 tagline: "Who is talking about us in Slack?"

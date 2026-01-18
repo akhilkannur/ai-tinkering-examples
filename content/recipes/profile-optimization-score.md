@@ -1,4 +1,5 @@
----id: "profile-optimization-score"
+---
+id: "profile-optimization-score"
 category: "Social Selling"
 title: "LinkedIn Profile Auditor"
 tagline: "Does your rep look professional?"

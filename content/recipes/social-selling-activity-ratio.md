@@ -1,4 +1,5 @@
----id: "social-selling-activity-ratio"
+---
+id: "social-selling-activity-ratio"
 category: "Social Selling"
 title: "Social Activity Mix"
 tagline: "Are we doing enough social touches?"

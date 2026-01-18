@@ -1,4 +1,5 @@
----id: "quote-to-cash-cycle-timer"
+---
+id: "quote-to-cash-cycle-timer"
 category: "Advanced RevOps"
 title: "Quote-to-Cash Speedometer"
 tagline: "Measure the speed of closing."

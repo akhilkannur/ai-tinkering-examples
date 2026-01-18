@@ -1,4 +1,5 @@
----id: "referral-program-fraud-check"
+---
+id: "referral-program-fraud-check"
 category: "Customer Advocacy"
 title: "Referral Fraud Detector"
 tagline: "Did they refer themselves?"

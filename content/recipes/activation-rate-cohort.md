@@ -1,4 +1,5 @@
----id: "activation-rate-cohort"
+---
+id: "activation-rate-cohort"
 category: "PLG Sales"
 title: "Activation Rate by Cohort"
 tagline: "Are new users activating faster?"

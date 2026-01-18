@@ -1,4 +1,5 @@
----id: "contract-clause-variance-tracker"
+---
+id: "contract-clause-variance-tracker"
 category: "Advanced RevOps"
 title: "Non-Standard Clause Tracker"
 tagline: "Who got the 'Opt-out' clause?"

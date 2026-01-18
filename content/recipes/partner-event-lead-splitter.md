@@ -1,4 +1,5 @@
----id: "partner-event-lead-splitter"
+---
+id: "partner-event-lead-splitter"
 category: "Field Marketing"
 title: "Co-Marketing Lead Splitter"
 tagline: "Share leads fairly with partners."

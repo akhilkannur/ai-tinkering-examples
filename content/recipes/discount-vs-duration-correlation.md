@@ -1,4 +1,5 @@
----id: "discount-vs-duration-correlation"
+---
+id: "discount-vs-duration-correlation"
 category: "Advanced RevOps"
 title: "Discount Efficiency Auditor"
 tagline: "Are we getting longer terms for lower prices?"

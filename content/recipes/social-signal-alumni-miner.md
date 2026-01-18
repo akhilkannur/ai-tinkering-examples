@@ -1,4 +1,5 @@
----id: "social-signal-alumni-miner"
+---
+id: "social-signal-alumni-miner"
 category: "Social Selling"
 title: "Alumni Champion Finder"
 tagline: "Track where your happy users moved."

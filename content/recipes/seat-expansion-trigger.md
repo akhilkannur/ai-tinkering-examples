@@ -1,4 +1,5 @@
----id: "seat-expansion-trigger"
+---
+id: "seat-expansion-trigger"
 category: "PLG Sales"
 title: "License Utilization Alert"
 tagline: "They just hit 9/10 seats."

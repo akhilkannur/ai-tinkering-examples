@@ -1,4 +1,5 @@
----id: "case-study-freshness-audit"
+---
+id: "case-study-freshness-audit"
 category: "Customer Advocacy"
 title: "Case Study Expiry Audit"
 tagline: "Retire assets older than 2 years."

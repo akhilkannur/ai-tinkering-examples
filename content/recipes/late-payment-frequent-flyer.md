@@ -1,4 +1,5 @@
----id: "late-payment-frequent-flyer"
+---
+id: "late-payment-frequent-flyer"
 category: "Advanced RevOps"
 title: "Bad Payer List"
 tagline: "Stop selling to people who don't pay."

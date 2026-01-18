@@ -1,4 +1,5 @@
----id: "twitter-thread-hook-analyzer"
+---
+id: "twitter-thread-hook-analyzer"
 category: "Social Selling"
 title: "Viral Hook Analyzer"
 tagline: "Which first line gets the click?"

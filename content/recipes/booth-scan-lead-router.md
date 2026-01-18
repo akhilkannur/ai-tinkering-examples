@@ -1,4 +1,5 @@
----id: "booth-scan-lead-router"
+---
+id: "booth-scan-lead-router"
 category: "Field Marketing"
 title: "Event Lead Router"
 tagline: "Route badge scans to the right rep."

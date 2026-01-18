@@ -1,4 +1,5 @@
----id: "linkedin-connection-acceptance-rate"
+---
+id: "linkedin-connection-acceptance-rate"
 category: "Social Selling"
 title: "Connection Request A/B Tester"
 tagline: "Which note gets more connects?"
