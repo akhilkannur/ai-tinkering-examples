@@ -6,7 +6,7 @@ tagline: Rewrite any text to match your specific brand personality.
 difficulty: Intermediate
 time: 5 mins
 archetype: Processor
-description: Takes a boring paragraph of text (e.g., technical documentation or a rough draft) and rewrites it into 3 distinct styles: "Professional Enterprise," "Witty/Startup," and "Direct/No-Nonsense."
+description: 'Takes a boring paragraph of text (e.g., technical documentation or a rough draft) and rewrites it into 3 distinct styles: "Professional Enterprise," "Witty/Startup," and "Direct/No-Nonsense."'
 sampleData:
   filename: rough_draft.txt
   content: |
