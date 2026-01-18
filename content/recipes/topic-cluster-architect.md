@@ -14,6 +14,19 @@ sampleData:
     crm software,10000,80
     best crm for smb,500,40
     crm pricing,200,30
+sampleOutput: |
+  # Content Cluster Map: CRM
+  
+  ## Pillar Page: CRM Software (Core Keyword)
+  
+  ### Sub-Topics (Spoke Content)
+  1. Best CRM for SMB (Informational Intent) - Priority: High
+  2. CRM Pricing (Transactional Intent) - Priority: Medium
+  3. How to implement a CRM (Educational) - Priority: Low
+  
+  ---
+  Total Estimated Traffic: 10,700/mo
+  Content Gap identified: Comparison guides vs Salesforce.
 ---
 
 # Agent Configuration: The SEO Strategist

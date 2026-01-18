@@ -21,6 +21,12 @@ sampleData:
     [Competitors]
     Competitor A
     Competitor B
+sampleOutput: |
+  Feature,Us,Competitor A,Competitor B
+  SSO,Yes,Yes,Add-on ($)
+  24/7 Support,Yes,No,Yes
+  Free Tier,No,Yes,Yes
+  API Access,Yes,Add-on ($),No
 ---
 
 # Agent Configuration: The Feature Parity Matrix

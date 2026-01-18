@@ -300,7 +300,23 @@ Downloaded from RealAIExamples.com`;
                         {recipe.blueprint}
                     </pre>
                     </div>
+                    </div>
                 </div>
+
+                {/* Output Snapshot */}
+                {recipe.sampleOutput && (
+                  <div className="mb-12">
+                    <h2 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+                      <Terminal className="w-5 h-5 text-accent" />
+                      Phase 3 Sample Output
+                    </h2>
+                    <div className="bg-gray-50 rounded-2xl p-8 border border-gray-100 shadow-inner">
+                      <div className="prose prose-sm max-w-none text-gray-600 font-mono whitespace-pre-wrap">
+                        {recipe.sampleOutput}
+                      </div>
+                    </div>
+                  </div>
+                )}
 
                 {/* Instructions Grid */}
                 <div className="grid md:grid-cols-2 gap-8 mb-16">

@@ -1,6 +1,8 @@
 import {
   Users, Zap, Globe, Search, BarChart,
-  PenTool, Share2, Mail, Database, Target
+  PenTool, Share2, Mail, Database, Target,
+  Briefcase, TrendingUp, ShieldCheck, PieChart,
+  HeartHandshake, MessageSquare
 } from 'lucide-react';
 
 export type Category =
@@ -12,7 +14,18 @@ export type Category =
   | 'CRO'
   | 'CRM Ops'
   | 'Social Automation'
-  | 'Outreach';
+  | 'Outreach'
+  | 'Sales Ops'
+  | 'Marketing Ops'
+  | 'RevOps'
+  | 'PLG Sales'
+  | 'Field Marketing'
+  | 'Social Selling'
+  | 'Advanced RevOps'
+  | 'Customer Advocacy'
+  | 'E-commerce Growth'
+  | 'AI Setup'
+  | 'Customer Success';
 
 export const categoryIcons: Record<Category, any> = {
   'Lead Gen': Users,
@@ -23,7 +36,41 @@ export const categoryIcons: Record<Category, any> = {
   'CRO': Zap,
   'CRM Ops': Target,
   'Social Automation': Share2,
-  'Outreach': Mail
+  'Outreach': Mail,
+  'Sales Ops': Briefcase,
+  'Marketing Ops': TrendingUp,
+  'RevOps': ShieldCheck,
+  'PLG Sales': Zap,
+  'Field Marketing': Globe,
+  'Social Selling': MessageSquare,
+  'Advanced RevOps': PieChart,
+  'Customer Advocacy': HeartHandshake,
+  'E-commerce Growth': TrendingUp,
+  'AI Setup': Zap,
+  'Customer Success': HeartHandshake
+};
+
+export const categoryDescriptions: Record<string, { title: string, description: string }> = {
+  'sales-ops': {
+    title: 'Sales Operations AI Blueprints',
+    description: 'Automate lead routing, quota tracking, and sales performance audits. These blueprints turn AI agents into your primary Sales Ops analysts.'
+  },
+  'marketing-ops': {
+    title: 'Marketing Operations Automation',
+    description: 'Scale your marketing infrastructure with automated attribution, campaign audits, and data hygiene workflows.'
+  },
+  'seo': {
+    title: 'AI SEO Blueprints & Workflows',
+    description: 'Move beyond keyword research. Automate internal linking, technical audits, and content clustering with agentic SEO blueprints.'
+  },
+  'revops': {
+    title: 'Revenue Operations (RevOps) Agents',
+    description: 'The unified layer for Sales and Marketing. Automate contract renewals, pricing audits, and expansion propensity scoring.'
+  },
+  'lead-gen': {
+    title: 'AI Lead Generation Workflows',
+    description: 'Stop manual prospecting. Use AI to build boolean searches, personalized DMs, and high-intent lead magnets.'
+  }
 };
 
 export interface Recipe {
@@ -42,5 +89,6 @@ export interface Recipe {
     filename: string;
     content: string;
   };
+  sampleOutput?: string;
 }
 

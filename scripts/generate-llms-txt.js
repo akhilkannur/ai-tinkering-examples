@@ -2,6 +2,7 @@ require('dotenv').config();
 const fs = require('fs');
 const path = require('path');
 const https = require('https');
+const matter = require('gray-matter');
 
 const SITE_URL = 'https://realaiexamples.com';
 const RECIPES_DIR = path.join(process.cwd(), 'content', 'recipes');
@@ -14,12 +15,11 @@ const EXAMPLES_TABLE = process.env.NEXT_PUBLIC_AIRTABLE_TABLE || 'Examples';
 const CATEGORIES_TABLE = process.env.NEXT_PUBLIC_AIRTABLE_CATEGORIES_TABLE || 'Categories';
 
 if (!AIRTABLE_API_KEY || !AIRTABLE_BASE_ID) {
-  console.error('❌ Missing Airtable configuration. Skipping llms.txt generation.');
-  process.exit(0); // Don't fail build, just skip
+  console.warn('⚠️ Missing Airtable configuration. Skipping Case Studies, but proceeding with Recipes.');
 }
 
-// Helper for Airtable requests
 function fetchAirtable(tableName, view = '') {
+  if (!AIRTABLE_API_KEY || !AIRTABLE_BASE_ID) return Promise.resolve([]);
   return new Promise((resolve) => {
     const options = {
       hostname: 'api.airtable.com',
@@ -29,7 +29,7 @@ function fetchAirtable(tableName, view = '') {
         'Authorization': `Bearer ${AIRTABLE_API_KEY}`,
         'Content-Type': 'application/json'
       },
-      timeout: 5000 // 5 seconds timeout
+      timeout: 5000
     };
 
     const req = https.request(options, (res) => {
@@ -41,56 +41,28 @@ function fetchAirtable(tableName, view = '') {
             const parsed = JSON.parse(data);
             resolve(parsed.records || []);
           } catch (e) {
-             console.warn(`   ⚠️ Error parsing Airtable response for ${tableName}:`, e.message);
             resolve([]);
           }
         } else {
-           console.warn(`   ⚠️ Airtable API Error for ${tableName}: ${res.statusCode} ${res.statusMessage}`);
           resolve([]);
         }
       });
     });
 
-    req.on('error', (e) => {
-      console.warn(`   ⚠️ Network error fetching ${tableName}:`, e.message);
-      resolve([]);
-    });
-    
-    req.on('timeout', () => {
-      req.destroy();
-      console.warn(`   ⚠️ Timeout fetching ${tableName}`);
-      resolve([]);
-    });
-
+    req.on('error', () => resolve([]));
+    req.on('timeout', () => { req.destroy(); resolve([]); });
     req.end();
   });
 }
 
-// Helper to read file content
-function readFile(filePath) {
-  try {
-    return fs.readFileSync(filePath, 'utf8');
-  } catch (e) {
-    return null;
-  }
-}
-
 async function generateLlmsTxt() {
-  console.log('🤖 Starting llms.txt generation...');
+  console.log('🤖 Starting multi-file llms.txt generation...');
 
   try {
-    // 1. Fetch Categories
-    console.log('   Fetching categories...');
     const categoriesRaw = await fetchAirtable(CATEGORIES_TABLE);
     const categoryMap = {};
-    categoriesRaw.forEach(r => {
-      if (r.fields.Name) {
-        categoryMap[r.id] = r.fields.Name;
-      }
-    });
+    categoriesRaw.forEach(r => { if (r.fields.Name) categoryMap[r.id] = r.fields.Name; });
 
-    // 2. Fetch Examples
-    console.log('   Fetching examples...');
     const examplesRaw = await fetchAirtable(EXAMPLES_TABLE);
     const examples = examplesRaw
       .filter(r => r.fields.Published)
@@ -98,90 +70,83 @@ async function generateLlmsTxt() {
         const title = r.fields.Title;
         const slug = r.fields.Slug || title?.toLowerCase().replace(/[^a-z0-9\s-]/g, '').trim().replace(/\s+/g, '-');
         let categoryName = 'uncategorized';
-        if (r.fields.Category && r.fields.Category.length > 0) {
-          const catId = r.fields.Category[0];
-          if (categoryMap[catId]) {
-            categoryName = categoryMap[catId].toLowerCase().replace(/\s+/g, '-');
-          }
+        if (r.fields.Category?.[0] && categoryMap[r.fields.Category[0]]) {
+          categoryName = categoryMap[r.fields.Category[0]].toLowerCase().replace(/\s+/g, '-');
         }
-        return {
-          title,
-          url: `${SITE_URL}/ai-examples/${categoryName}/${slug}`,
-          summary: r.fields.Summary || '',
-          category: categoryName
-        };
+        return { title, url: `${SITE_URL}/ai-examples/${categoryName}/${slug}`, summary: r.fields.Summary || '', category: categoryName };
       });
 
-    // 3. Get Recipes
-    console.log('   Reading recipe files...');
+    console.log('   Grouping recipes by niche...');
     const recipeFiles = fs.readdirSync(RECIPES_DIR).filter(f => f.endsWith('.md'));
-    const recipes = recipeFiles.map(file => {
-      const id = file.replace('.md', '');
-      const content = readFile(path.join(RECIPES_DIR, file));
-      
-      // Simple extraction of Title from MD frontmatter or first line
-      let title = id;
-      const titleMatch = content.match(/title:\s*"(.*)"/) || content.match(/^#\s+(.*)/);
-      if (titleMatch) title = titleMatch[1];
+    const recipesByCategory = {};
+    const allRecipes = [];
 
-      return {
-        title,
-        id,
-        url: `${SITE_URL}/blueprints/${id}`,
-        content // We'll use full content for llms-full.txt
+    recipeFiles.forEach(file => {
+      const filePath = path.join(RECIPES_DIR, file);
+      const rawContent = fs.readFileSync(filePath, 'utf8');
+      const { data, content } = matter(rawContent);
+      
+      const recipe = {
+        title: data.title || file.replace('.md', ''),
+        id: file.replace('.md', ''),
+        url: `${SITE_URL}/blueprints/${file.replace('.md', '')}`,
+        category: data.category || 'General',
+        tagline: data.tagline || '',
+        content: rawContent
       };
+
+      allRecipes.push(recipe);
+      
+      const normalizedCat = recipe.category.toLowerCase().replace(/[^a-z0-9]/g, '-');
+      if (!recipesByCategory[normalizedCat]) recipesByCategory[normalizedCat] = [];
+      recipesByCategory[normalizedCat].push(recipe);
     });
 
-    // --- Generate llms.txt (The Index) ---
-    let llmsTxt = `# AI Tinkering Examples (LLM Index)
-> Actionable AI workflows and blueprints for non-technical tinkerers.
+    // 1. Generate Main llms.txt (Index of Niche Files)
+    let mainLlms = `# RealAIExamples LLM Index
+> Actionable AI workflows for Sales, Marketing, and RevOps.
+
+## Niche-Specific Indices (Recommended for Context)
+${Object.keys(recipesByCategory).map(cat => `- [llms-${cat}.txt](${SITE_URL}/llms-${cat}.txt) - ${recipesByCategory[cat].length} recipes`).join('\n')}
 
 ## Core Sections
 - [Home](${SITE_URL})
-- [Blueprints (Cookbook)](${SITE_URL}/blueprints) - Detailed step-by-step AI agent recipes
-- [AI Examples](${SITE_URL}/ai-examples) - Real-world AI use cases
-- [Tools](${SITE_URL}/tools) - Curated AI tools
+- [All Blueprints](${SITE_URL}/blueprints)
+- [Case Studies](${SITE_URL}/ai-examples)
 
-## Agent Blueprints (High Value)
+## Top Recipes
+${allRecipes.slice(0, 50).map(r => `- [${r.title}](${r.url}): ${r.tagline}`).join('\n')}
 `;
+    fs.writeFileSync(path.join(OUTPUT_DIR, 'llms.txt'), mainLlms);
+    console.log('✅ Generated public/llms.txt');
 
-    recipes.forEach(r => {
-      llmsTxt += `- [${r.title}](${r.url})
-`;
+    // 2. Generate Niche Files (llms-sales.txt, etc.)
+    for (const cat in recipesByCategory) {
+      const catRecipes = recipesByCategory[cat];
+      let catContent = `# Blueprints: ${catRecipes[0].category}\n\n`;
+      
+      catRecipes.forEach(r => {
+        catContent += `## ${r.title}\n`;
+        catContent += `URL: ${r.url}\n`;
+        catContent += `Description: ${r.tagline}\n\n`;
+        catContent += `${r.content}\n\n`;
+        catContent += `---\n\n`;
+      });
+
+      fs.writeFileSync(path.join(OUTPUT_DIR, `llms-${cat}.txt`), catContent);
+      console.log(`✅ Generated public/llms-${cat}.txt (${catRecipes.length} recipes)`);
+    }
+
+    // 3. Keep llms-full.txt for backward compatibility
+    let llmsFullTxt = `# All Blueprints Content Dump\n\n`;
+    allRecipes.forEach(r => {
+      llmsFullTxt += `## ${r.title}\n${r.content}\n\n---\n\n`;
     });
-
-    llmsTxt += `
-## AI Examples (Case Studies)
-`;
-    examples.forEach(e => {
-      llmsTxt += `- [${e.title}](${e.url}): ${e.summary.slice(0, 100)}${e.summary.length > 100 ? '...' : ''}
-`;
-    });
-
-    fs.writeFileSync(path.join(OUTPUT_DIR, 'llms.txt'), llmsTxt);
-    console.log(`✅ Generated public/llms.txt`);
-
-
-    // --- Generate llms-full.txt (The Content) ---
-    /* 
-       This file contains the ACTUAL full text content of blueprints. 
-       This is incredibly valuable for an agent to "read" the whole site in one request.
-    */
-    let llmsFullTxt = `# AI Tinkering Examples - Full Content Dump\n\n`;
-
-    recipes.forEach(r => {
-      llmsFullTxt += `## Blueprint: ${r.title}\n`;
-      llmsFullTxt += `Source: ${r.url}\n\n`;
-      llmsFullTxt += `${r.content}\n\n`;
-      llmsFullTxt += `---\n\n`;
-    });
-
     fs.writeFileSync(path.join(OUTPUT_DIR, 'llms-full.txt'), llmsFullTxt);
-    console.log(`✅ Generated public/llms-full.txt`);
+    console.log('✅ Generated public/llms-full.txt');
 
   } catch (error) {
-    console.error('❌ Error generating llms.txt:', error);
-    // Don't exit 1, just log error so build continues
+    console.error('❌ Error:', error);
   }
 }
 

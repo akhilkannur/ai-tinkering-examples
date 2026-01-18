@@ -12,6 +12,7 @@ import JobCard from '../components/JobCard'
 import AIToolCard from '../components/AIToolCard'
 import NewsletterForm from '../components/NewsletterForm'
 import ArchetypeQuiz from '../components/ArchetypeQuiz'
+import StrategicKits from '../components/StrategicKits'
 
 interface HybridHomePageProps {
   recipes: Recipe[]
@@ -153,42 +154,8 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
         {/* ARCHETYPE QUIZ */}
         <ArchetypeQuiz />
 
-        {/* SECONDARY CONTENT: FEATURED TOOLS */}
-        {siteSettings.enableFeaturedToolsSection && featuredTools.length > 0 && (
-          <div className="bg-brand-navy py-20 border-y border-white/5 relative overflow-hidden">
-             {/* Abstract background element */}
-             <div className="absolute top-0 right-0 w-1/3 h-full bg-accent/5 blur-[100px] pointer-events-none" />
-             
-             <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
-                <div className="flex flex-col md:flex-row items-center justify-between mb-12 gap-6">
-                  <div>
-                    <h2 className="text-3xl sm:text-4xl font-headline font-bold text-text-color flex items-center gap-3 uppercase tracking-tight mb-2">
-                      <span className="text-accent">#</span> Featured AI Tools
-                    </h2>
-                    <p className="text-text-color/60 font-sans">Hand-picked power tools to supercharge your AI workflows.</p>
-                  </div>
-                  <a href="/tools" className="group text-text-color/80 hover:text-accent font-mono text-xs font-bold uppercase tracking-[0.2em] transition-all flex items-center gap-3 bg-white/5 px-6 py-3 border border-white/10 hover:border-accent">
-                    View Arsenal <span className="transform group-hover:translate-x-1 transition-transform">→</span>
-                  </a>
-                </div>
-                
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                  {featuredTools.map((tool) => (
-                    <div key={tool.id} className="h-full transform hover:-translate-y-1 transition-transform duration-300">
-                       <AIToolCard
-                          name={tool.toolName}
-                          description={tool.shortDescription}
-                          url={tool.websiteUrl}
-                          imageUrl={tool.logo?.[0]?.url}
-                          category={null} 
-                          featured={true}
-                        />
-                    </div>
-                  ))}
-                </div>
-             </div>
-          </div>
-        )}
+        {/* STRATEGIC KITS */}
+        <StrategicKits />
 
         {/* FAQ SECTION */}
         <div className="bg-brand-beige py-20 border-t border-brand-navy/10">
