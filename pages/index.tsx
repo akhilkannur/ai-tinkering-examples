@@ -79,7 +79,7 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
                         href="#blueprints" 
                         className="w-full sm:w-auto px-8 py-4 bg-accent hover:bg-accent-hover text-white font-sans font-bold rounded-sm transition-all shadow-lg hover:shadow-accent-glow uppercase tracking-wider text-sm"
                     >
-                        Browse 250+ Blueprints
+                        Browse 500+ Blueprints
                     </a>
                 </div>
 
@@ -189,6 +189,62 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
              </div>
           </div>
         )}
+
+        {/* FAQ SECTION */}
+        <div className="bg-brand-beige py-20 border-t border-brand-navy/10">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6">
+            <h2 className="text-3xl md:text-4xl font-headline font-bold text-brand-navy mb-12 text-center uppercase tracking-tight">
+              Behind the Blueprints: <span className="text-accent">Our Process</span>
+            </h2>
+            
+            <div className="space-y-8">
+              <div className="bg-white p-8 rounded-sm border border-brand-navy/5 shadow-sm">
+                <h3 className="text-xl font-bold mb-3 text-brand-navy flex items-center gap-2">
+                  <span className="text-accent text-lg">01</span> How are these blueprints created?
+                </h3>
+                <p className="text-brand-navy/70 leading-relaxed">
+                  Every blueprint is architected as a professional <strong>Agent Configuration</strong>. We identify high-value bottlenecks in Sales, Marketing, and RevOps, then design a multi-step logical workflow that instructs an AI agent to execute the task autonomously—from data ingestion to final reporting.
+                </p>
+              </div>
+
+              <div className="bg-white p-8 rounded-sm border border-brand-navy/5 shadow-sm">
+                <h3 className="text-xl font-bold mb-3 text-brand-navy flex items-center gap-2">
+                  <span className="text-accent text-lg">02</span> Are these just simple one-shot prompts?
+                </h3>
+                <p className="text-brand-navy/70 leading-relaxed">
+                  No. Unlike generic prompts that just "generate text," these are <strong>Work-Ready systems</strong>. Each one follows a strict 3-phase structure: <em>Initialization</em> (auto-seeding sample data), <em>The Loop</em> (processing bulk CSVs or logs), and <em>Output</em> (generating tangible files like Audit Reports or Action Lists).
+                </p>
+              </div>
+
+              <div className="bg-white p-8 rounded-sm border border-brand-navy/5 shadow-sm">
+                <h3 className="text-xl font-bold mb-3 text-brand-navy flex items-center gap-2">
+                  <span className="text-accent text-lg">03</span> Which AI tools can run these?
+                </h3>
+                <p className="text-brand-navy/70 leading-relaxed">
+                  Our blueprints are <strong>Tool-Agnostic</strong>. While they are optimized for advanced "Folder Agents" like <strong>Claude Code</strong>, <strong>Gemini CLI</strong>, and <strong>Cursor</strong>, they work in any agentic environment that can read files and follow multi-step reasoning.
+                </p>
+              </div>
+
+              <div className="bg-white p-8 rounded-sm border border-brand-navy/5 shadow-sm">
+                <h3 className="text-xl font-bold mb-3 text-brand-navy flex items-center gap-2">
+                  <span className="text-accent text-lg">04</span> Why is this better than building it myself?
+                </h3>
+                <p className="text-brand-navy/70 leading-relaxed">
+                  We've handled the "prompt engineering" and workflow logic for you. These blueprints include <strong>pre-built logic</strong> for tiered commission math, fuzzy lead matching, and churn prediction—complex tasks that take hours to debug but run in seconds with the right blueprint.
+                </p>
+              </div>
+
+              <div className="bg-white p-8 rounded-sm border border-brand-navy/5 shadow-sm">
+                <h3 className="text-xl font-bold mb-3 text-brand-navy flex items-center gap-2">
+                  <span className="text-accent text-lg">05</span> Are these just AI-generated "slop"?
+                </h3>
+                <p className="text-brand-navy/70 leading-relaxed">
+                  Absolutely not. While we use AI to help scale the documentation, every blueprint is based on <strong>real-world Revenue Operations</strong> and Sales Engineering frameworks. We architect the logic first—defining the specific math for commission tiers or the step-by-step logic for churn prediction—ensuring each one solves a concrete business problem that generic AI would struggle to handle without guidance.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
 
         {/* NEWSLETTER */}
         <div className="bg-white text-brand-navy py-16" id="newsletter">
