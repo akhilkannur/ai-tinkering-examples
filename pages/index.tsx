@@ -13,6 +13,7 @@ import AIToolCard from '../components/AIToolCard'
 import NewsletterForm from '../components/NewsletterForm'
 import ArchetypeQuiz from '../components/ArchetypeQuiz'
 import StrategicKits from '../components/StrategicKits'
+import MockTerminal from '../components/MockTerminal'
 
 interface HybridHomePageProps {
   recipes: Recipe[]
@@ -22,8 +23,8 @@ interface HybridHomePageProps {
 }
 
 export default function HybridHomePage({ recipes, featuredJobs, featuredTools, siteSettings }: HybridHomePageProps) {
-  const homepageTitle = "AI Blueprints: Copy, Paste, Automate Your Work";
-  const homepageDescription = "Ditch endless chats. Turn Gemini & Claude into your personal assistants with simple text-file blueprints. No coding needed.";
+  const homepageTitle = "AI Blueprints: Copy, Paste, Automate Your Sales & Marketing";
+  const homepageDescription = "Ditch endless chats. Turn Gemini & Claude into your personal assistants with professional text-file blueprints. No coding needed.";
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com';
 
   return (
@@ -38,7 +39,7 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebSite",
-          "name": homepageTitle,
+          "name": "Real AI Examples",
           "url": baseUrl,
           "potentialAction": {
             "@type": "SearchAction",
@@ -52,54 +53,52 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
         <Navbar />
 
         {/* HERO SECTION */}
-        <div className="bg-brand-beige pt-16 pb-12">
-            <div className="container mx-auto px-4 text-center max-w-4xl">
-                <div className="inline-flex items-center gap-2 bg-yellow-50 border border-yellow-100 text-yellow-800 px-4 py-1.5 rounded-full text-sm font-semibold mb-6">
-                    <BookOpen className="w-4 h-4" />
-                    <span>The Marketing & Sales Automation Library</span>
-                </div>
-                
-                <h1 className="text-4xl md:text-6xl font-headline font-bold text-brand-navy mb-6 tracking-tight leading-tight">
-                    Growth Blueprints: <br />
-                    <span className="text-accent">
-                    Copy, Paste, Automate Your Sales and Marketing.
-                    </span>
-                </h1>
-                
-                <p className="text-lg md:text-xl text-brand-navy/80 max-w-2xl mx-auto leading-relaxed mb-4">
-                    Ditch endless chats. Build autonomous workflows.
-                </p>
-                <p className="text-md md:text-lg text-brand-navy/60 max-w-2xl mx-auto leading-relaxed mb-10">
-                    Turn tools like Gemini & Claude into your personal <strong>marketing team</strong> — <strong>No Coding Needed.</strong>
-                    <br className="hidden md:block"/>
-                    Simple text files you can run instantly on free tools.
-                </p>
+        <div className="bg-brand-beige pt-20 pb-16">
+            <div className="container mx-auto px-4 max-w-6xl">
+                <div className="grid lg:grid-cols-2 gap-12 items-center">
+                    <div className="text-left">
+                        <div className="inline-flex items-center gap-2 bg-accent/10 text-accent px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-6">
+                            <span className="relative flex h-2 w-2">
+                              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
+                              <span className="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
+                            </span>
+                            <span>The Global Blueprint Library</span>
+                        </div>
+                        
+                        <h1 className="text-5xl md:text-7xl font-headline font-black text-brand-navy mb-6 tracking-tighter leading-[0.9]">
+                            Stop Prompting. <br />
+                            <span className="text-accent">Start Automating.</span>
+                        </h1>
+                        
+                        <p className="text-xl text-brand-navy/80 mb-10 leading-relaxed max-w-lg">
+                            Turn AI Agents into your personal Revenue Ops team. 
+                            <strong> 600+ work-ready blueprints</strong> for Sales, Marketing, and SEO. 
+                            No coding. Just results.
+                        </p>
 
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-                    <a 
-                        href="#blueprints" 
-                        className="w-full sm:w-auto px-8 py-4 bg-accent hover:bg-accent-hover text-white font-sans font-bold rounded-sm transition-all shadow-lg hover:shadow-accent-glow uppercase tracking-wider text-sm"
-                    >
-                        Browse 500+ Blueprints
-                    </a>
-                </div>
+                        <div className="flex flex-col sm:flex-row items-center gap-4 mb-12">
+                            <a 
+                                href="#blueprints" 
+                                className="w-full sm:w-auto px-10 py-5 bg-brand-navy hover:bg-black text-white font-sans font-bold rounded-xl transition-all shadow-xl hover:shadow-2xl uppercase tracking-wider text-sm flex items-center justify-center gap-2"
+                            >
+                                Browse the Library <ArrowRight className="w-4 h-4" />
+                            </a>
+                        </div>
 
-                {/* Compatibility Badge */}
-                <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-sm text-brand-navy/60 mb-2">
-                    <span className="uppercase tracking-widest font-bold text-xs">Use with:</span>
-                    <div className="flex flex-wrap justify-center gap-3">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white text-brand-navy font-medium border border-gray-200">
-                        <Cpu className="w-4 h-4 text-purple-600" /> Claude Code
-                    </span>
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white text-brand-navy font-medium border border-gray-200">
-                        <Cpu className="w-4 h-4 text-purple-600" /> Claude Cowork
-                    </span>
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white text-brand-navy font-medium border border-gray-200">
-                        <Command className="w-4 h-4 text-blue-600" /> Gemini CLI
-                    </span>
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white text-brand-navy font-medium border border-gray-200">
-                        <Terminal className="w-4 h-4 text-gray-600" /> Cursor
-                    </span>
+                        {/* Compatibility Bar */}
+                        <div className="pt-8 border-t border-brand-navy/5">
+                            <p className="text-[10px] uppercase tracking-[0.2em] font-black text-brand-navy/30 mb-4">Optimized for agentic workflows:</p>
+                            <div className="flex flex-wrap gap-4 opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition-all">
+                                <span className="flex items-center gap-1.5 text-xs font-bold"><Cpu className="w-4 h-4" /> Claude Code</span>
+                                <span className="flex items-center gap-1.5 text-xs font-bold"><Command className="w-4 h-4" /> Gemini CLI</span>
+                                <span className="flex items-center gap-1.5 text-xs font-bold"><Terminal className="w-4 h-4" /> Cursor</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="hidden lg:block relative">
+                        <div className="absolute -inset-4 bg-accent/5 blur-3xl rounded-full"></div>
+                        <MockTerminal />
                     </div>
                 </div>
             </div>
@@ -207,6 +206,15 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
                 </h3>
                 <p className="text-brand-navy/70 leading-relaxed">
                   Simple prompts often fail at complex tasks like tiered commission math or fuzzy lead matching. We've built the underlying logic into these blueprints so you don't have to spend hours debugging prompts. They are designed to be work-ready systems, not just text generators.
+                </p>
+              </div>
+
+              <div className="bg-white p-8 rounded-sm border border-brand-navy/5 shadow-sm">
+                <h3 className="text-xl font-bold mb-3 text-brand-navy flex items-center gap-2">
+                  <span className="text-accent text-lg">06</span> Is it safe to download these ZIP bundles?
+                </h3>
+                <p className="text-brand-navy/70 leading-relaxed">
+                  Yes. Our bundles contain **100% plain text files** (.md for the blueprint and .csv for the sample data). We never include executables, scripts, or binaries. You can even inspect the files in any text editor before using them. If you prefer not to download, every blueprint can also be copied and pasted directly from the page.
                 </p>
               </div>
             </div>

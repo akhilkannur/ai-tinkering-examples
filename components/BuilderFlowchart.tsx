@@ -162,6 +162,9 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
             const CatIcon = categoryIcons[recipe.category] || Terminal;
             const isLocked = !isUnlocked && (index >= 100 || recipe.isPremium);
             
+            // Logic for "NEW" badge (published in last 7 days)
+            const isNew = recipe.publish_date && (new Date().getTime() - new Date(recipe.publish_date).getTime() < 7 * 24 * 60 * 60 * 1000);
+            
             return (
               <div
                 key={recipe.id}
@@ -172,16 +175,20 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
                 }`}
                 onClick={() => setSelectedRecipe(recipe)}
               >
+                {/* Visual indicator bar */}
                 <div className={`absolute top-0 left-0 w-1.5 h-full ${
                   isLocked ? 'bg-yellow-400' :
                   recipe.category === 'Lead Gen' ? 'bg-blue-500' :
-                  recipe.category === 'Enrichment' ? 'bg-indigo-500' :
+                  recipe.category === 'Sales Ops' ? 'bg-indigo-500' :
+                  recipe.category === 'Marketing Ops' ? 'bg-orange-500' :
                   recipe.category === 'Content Ops' ? 'bg-pink-500' :
                   recipe.category === 'SEO' ? 'bg-green-500' :
-                  recipe.category === 'Competitor Intel' ? 'bg-red-500' :
-                  recipe.category === 'CRO' ? 'bg-orange-500' :
-                  recipe.category === 'CRM Ops' ? 'bg-yellow-500' :
-                  recipe.category === 'Social Automation' ? 'bg-cyan-500' :
+                  recipe.category === 'Competitive Intel' ? 'bg-red-500' :
+                  recipe.category === 'CRO' ? 'bg-cyan-500' :
+                  recipe.category === 'Paid Media' ? 'bg-purple-500' :
+                  recipe.category === 'Customer Success' ? 'bg-teal-500' :
+                  recipe.category === 'Retention' ? 'bg-rose-500' :
+                  recipe.category === 'E-commerce' ? 'bg-amber-500' :
                   'bg-gray-500'
                 }`} />
 
@@ -194,6 +201,11 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
                     {isLocked ? <Lock className="w-6 h-6" /> : <CatIcon className="w-6 h-6" />}
                   </div>
                   <div className="flex flex-col items-end gap-1">
+                    {isNew && (
+                      <span className="bg-blue-600 text-white text-[9px] font-black px-2 py-0.5 rounded-full uppercase tracking-tighter shadow-sm animate-pulse">
+                        ✨ NEW
+                      </span>
+                    )}
                     {isLocked && (
                         <span className="bg-yellow-500 text-white text-[10px] font-bold px-2 py-1 rounded-sm uppercase tracking-wider shadow-sm flex items-center gap-1">
                         <Lock className="w-3 h-3" /> Premium

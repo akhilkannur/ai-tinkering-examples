@@ -20,7 +20,7 @@ export default function handler(req: NextRequest) {
 
     // If it's a blueprint page, we use the passed params or defaults
     if (mode !== 'home' && searchParams.has('title')) {
-        bottomLabel = 'Terminal Cookbook Blueprint';
+        bottomLabel = 'Real AI Examples Blueprint';
     }
 
     return new ImageResponse(

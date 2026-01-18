@@ -216,29 +216,49 @@ Downloaded from RealAIExamples.com`;
                   </span>
               </div>
               {!isLocked && (
-                <div className="flex flex-wrap items-center gap-3 w-full md:w-auto">
-                    <button
-                        onClick={handleDownloadZip}
-                        className="flex-1 md:flex-none text-sm font-bold px-4 py-2 rounded-xl flex items-center justify-center gap-2 transition-all bg-blue-600 text-white hover:bg-blue-500 shadow-lg shadow-blue-600/20"
-                    >
-                        <Package className="w-4 h-4" />
-                        Download Zip
-                    </button>
-                    <button
-                    onClick={handleCopy}
-                    className={`flex-1 md:flex-none text-sm font-bold px-4 py-2 rounded-xl flex items-center justify-center gap-2 transition-all active:scale-95 shadow-lg ${
-                        copied 
-                        ? 'bg-green-500 text-white shadow-green-500/20' 
-                        : 'bg-gray-700 text-gray-200 hover:bg-gray-600 shadow-gray-900/20'
-                    }`}
-                    >
-                    {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
-                    {copied ? 'Copied!' : 'Copy'}
-                    </button>
-                </div>
-              )}
-              </div>
-              <div className="p-8">
+                    <div className="flex flex-wrap items-center gap-3 w-full md:w-auto">
+                        <div className="flex flex-col items-end gap-1">
+                          <button
+                              onClick={handleDownloadZip}
+                              className="flex-1 md:flex-none text-sm font-bold px-4 py-2 rounded-xl flex items-center justify-center gap-2 transition-all bg-blue-600 text-white hover:bg-blue-500 shadow-lg shadow-blue-600/20"
+                          >
+                              <Package className="w-4 h-4" />
+                              Download Zip
+                          </button>
+                          <span className="text-[10px] text-gray-500 font-mono flex items-center gap-1 uppercase tracking-tighter">
+                            <ShieldCheck className="w-3 h-3 text-green-500" /> 100% Text-Only (.md, .csv)
+                          </span>
+                        </div>
+                        <button
+                        onClick={handleCopy}
+                        className={`flex-1 md:flex-none text-sm font-bold px-4 py-2 rounded-xl flex items-center justify-center gap-2 transition-all active:scale-95 shadow-lg ${
+                            copied 
+                            ? 'bg-green-500 text-white shadow-green-500/20' 
+                            : 'bg-gray-700 text-gray-200 hover:bg-gray-600 shadow-gray-900/20'
+                        }`}
+                        >
+                        {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
+                        {copied ? 'Copied!' : 'Copy'}
+                        </button>
+                    </div>
+                    </div>
+                    <div className="bg-gray-800/50 px-6 py-2 border-b border-gray-700">
+                       <span className="text-[10px] text-gray-400 uppercase tracking-widest font-bold">Bundle Contents:</span>
+                       <div className="flex gap-4 mt-1">
+                          <span className="text-xs text-blue-400 font-mono flex items-center gap-1">
+                            <FileText className="w-3 h-3" /> {recipe.id}.md
+                          </span>
+                          {recipe.sampleData && (
+                            <span className="text-xs text-blue-400 font-mono flex items-center gap-1">
+                              <Package className="w-3 h-3" /> {recipe.sampleData.filename}
+                            </span>
+                          )}
+                          <span className="text-xs text-blue-400 font-mono flex items-center gap-1">
+                            <FileText className="w-3 h-3" /> README.txt
+                          </span>
+                       </div>
+                    </div>
+                    <div className="p-8">
                 <pre className="font-mono text-base text-blue-300 whitespace-pre-wrap leading-relaxed">
                     {publicBlueprint}
                     {!isLocked && privateBlueprint}
