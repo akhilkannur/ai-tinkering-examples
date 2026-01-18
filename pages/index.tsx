@@ -203,43 +203,43 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
                   <span className="text-accent text-lg">01</span> How are these blueprints created?
                 </h3>
                 <p className="text-brand-navy/70 leading-relaxed">
-                  Every blueprint is architected as a professional <strong>Agent Configuration</strong>. We identify high-value bottlenecks in Sales, Marketing, and RevOps, then design a multi-step logical workflow that instructs an AI agent to execute the task autonomously—from data ingestion to final reporting.
+                  These aren't just theoretical prompts. They are a mixture of workflows we use internally while running our own agencies and projects, combined with AI to help us structure and scale the documentation. We identify real bottlenecks in Sales and Marketing, then architect a multi-step workflow that an AI agent can actually execute.
                 </p>
               </div>
 
               <div className="bg-white p-8 rounded-sm border border-brand-navy/5 shadow-sm">
                 <h3 className="text-xl font-bold mb-3 text-brand-navy flex items-center gap-2">
-                  <span className="text-accent text-lg">02</span> Are these just simple one-shot prompts?
+                  <span className="text-accent text-lg">02</span> Are these tested and verified?
                 </h3>
                 <p className="text-brand-navy/70 leading-relaxed">
-                  No. Unlike generic prompts that just "generate text," these are <strong>Work-Ready systems</strong>. Each one follows a strict 3-phase structure: <em>Initialization</em> (auto-seeding sample data), <em>The Loop</em> (processing bulk CSVs or logs), and <em>Output</em> (generating tangible files like Audit Reports or Action Lists).
+                  Yes. We run and test these recipes regularly to ensure they work. For complex scenarios where we can't verify every single edge case ourselves, we rely on user feedback. We are constantly fixing bugs and updating the logic based on how these perform in the real world.
                 </p>
               </div>
 
               <div className="bg-white p-8 rounded-sm border border-brand-navy/5 shadow-sm">
                 <h3 className="text-xl font-bold mb-3 text-brand-navy flex items-center gap-2">
-                  <span className="text-accent text-lg">03</span> Which AI tools can run these?
+                  <span className="text-accent text-lg">03</span> What if a blueprint doesn't work for me?
                 </h3>
                 <p className="text-brand-navy/70 leading-relaxed">
-                  Our blueprints are <strong>Tool-Agnostic</strong>. While they are optimized for advanced "Folder Agents" like <strong>Claude Code</strong>, <strong>Gemini CLI</strong>, and <strong>Cursor</strong>, they work in any agentic environment that can read files and follow multi-step reasoning.
+                  Reach out to us! If you find a bug or have a specific use case that isn't covered, let us know. We use your feedback to fix existing blueprints and build new ones that are relevant to the actual problems you're trying to solve.
                 </p>
               </div>
 
               <div className="bg-white p-8 rounded-sm border border-brand-navy/5 shadow-sm">
                 <h3 className="text-xl font-bold mb-3 text-brand-navy flex items-center gap-2">
-                  <span className="text-accent text-lg">04</span> Why is this better than building it myself?
+                  <span className="text-accent text-lg">04</span> Which AI tools can run these?
                 </h3>
                 <p className="text-brand-navy/70 leading-relaxed">
-                  We've handled the "prompt engineering" and workflow logic for you. These blueprints include <strong>pre-built logic</strong> for tiered commission math, fuzzy lead matching, and churn prediction—complex tasks that take hours to debug but run in seconds with the right blueprint.
+                  Our blueprints are tool-agnostic. They are optimized for "Folder Agents" like Claude Code, Gemini CLI, and Cursor, but they work in any environment that can read files and follow logical instructions.
                 </p>
               </div>
 
               <div className="bg-white p-8 rounded-sm border border-brand-navy/5 shadow-sm">
                 <h3 className="text-xl font-bold mb-3 text-brand-navy flex items-center gap-2">
-                  <span className="text-accent text-lg">05</span> Are these just AI-generated "slop"?
+                  <span className="text-accent text-lg">05</span> Why use these instead of simple prompts?
                 </h3>
                 <p className="text-brand-navy/70 leading-relaxed">
-                  Absolutely not. While we use AI to help scale the documentation, every blueprint is based on <strong>real-world Revenue Operations</strong> and Sales Engineering frameworks. We architect the logic first—defining the specific math for commission tiers or the step-by-step logic for churn prediction—ensuring each one solves a concrete business problem that generic AI would struggle to handle without guidance.
+                  Simple prompts often fail at complex tasks like tiered commission math or fuzzy lead matching. We've built the underlying logic into these blueprints so you don't have to spend hours debugging prompts. They are designed to be work-ready systems, not just text generators.
                 </p>
               </div>
             </div>
