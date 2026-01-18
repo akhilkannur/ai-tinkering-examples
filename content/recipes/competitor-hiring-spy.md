@@ -1,6 +1,6 @@
 ---
 id: competitor-hiring-spy
-category: Intel
+category: Competitive Intel
 title: The Market Hiring Spy
 tagline: Track the roadmap of your top 10 competitors.
 difficulty: Intermediate

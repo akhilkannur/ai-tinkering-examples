@@ -1,14 +1,16 @@
 ---
-id: "trial-expiry-prioritizer"
-category: "PLG Sales"
-title: "Trial Closing Prioritizer"
-tagline: "Who gets a call 3 days before expiry?"
-difficulty: "Intermediate"
-time: "Daily"
-archetype: "Processor"
-description: "Scores active trials based on usage and company size to determine who gets a sales touch before their trial ends."
+id: trial-expiry-prioritizer
+category: Sales Ops
+title: Trial Closing Prioritizer
+tagline: Who gets a call 3 days before expiry?
+difficulty: Intermediate
+time: Daily
+archetype: Processor
+description: >-
+  Scores active trials based on usage and company size to determine who gets a
+  sales touch before their trial ends.
 sampleData:
-  filename: "active_trials.csv"
+  filename: active_trials.csv
   content: |
     User,Expiry_Date,Usage_Score,Company_Size
     John,2023-10-05,High,500

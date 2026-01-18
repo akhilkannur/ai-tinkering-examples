@@ -1,6 +1,6 @@
 ---
 id: scope-creep-email-drafter
-category: Agency
+category: Strategic Ops
 title: The Scope Creep Defender
 tagline: Say 'No' without losing the client.
 difficulty: Intermediate

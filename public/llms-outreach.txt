@@ -1,0 +1,140 @@
+# Blueprints: Outreach
+
+## The Cold DM Personalizer
+URL: https://realaiexamples.com/blueprints/cold-dm-personalizer
+Description: Personalized outreach for 100 prospects at once.
+
+---
+id: cold-dm-personalizer
+category: Outreach
+title: The Cold DM Personalizer
+tagline: Personalized outreach for 100 prospects at once.
+difficulty: Beginner
+time: Continuous
+archetype: Hybrid
+description: >-
+  Slide into DMs without looking like a bot. This agent takes a list of
+  LinkedIn/X profiles, analyzes their recent posts for 'emotional hooks', and
+  drafts custom opening lines for your entire list.
+sampleData:
+  filename: prospects.csv
+  content: |
+    Name,Profile_URL,Target_Topic
+    Ryan Carson,https://x.com/ryancarson,AI Agents
+    Sahil Lavingia,https://x.com/shl,Creator Economy
+    Justin Welsh,https://x.com/JustinWelsh,Solopreneurship
+---
+
+# Agent Configuration: The Cold DM Personalizer
+
+## Role
+Slide into DMs without looking like a bot. This agent takes a list of LinkedIn/X profiles, analyzes their recent posts for 'emotional hooks', and drafts custom opening lines for your entire list.
+
+## Objective
+Personalized outreach for 100 prospects at once.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `prospects.csv` exist?
+2.  **If Missing:** Create `prospects.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Check
+1.  **Check:** Does `prospects.csv` exist?
+2.  **If Missing:** Create `prospects.csv` with the sample data and headers.
+3.  **If Present:** Load the profiles.
+
+### Phase 2: The Deep Dive Loop
+For each prospect in the CSV:
+1.  **Read:** Use `web_fetch` to see their latest 3 posts.
+2.  **Analyze:** Find one *specific* sentence or idea they mentioned that relates to the `Target_Topic`.
+3.  **Draft:** Create 2 opening lines:
+    *   *The Observational:* "I loved your point about [X] in your recent post..."
+    *   *The Value-Add:* "Since you're focused on [Y], have you seen this..."
+
+### Phase 3: Deliverable
+1.  **Create:** `personalized_outreach.csv` with columns: `Name`, `Profile_URL`, `Draft_1`, `Draft_2`.
+2.  **Report:** "Successfully personalized outreach for [X] prospects. Ready for your review."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The RFP Responder
+URL: https://realaiexamples.com/blueprints/rfp-responder
+Description: Draft complex proposals instantly.
+
+---
+id: rfp-responder
+category: Outreach
+title: The RFP Responder
+tagline: Draft complex proposals instantly.
+difficulty: Advanced
+time: Batch
+description: >-
+  Responding to RFPs is a time-sink. This agent processes a list of RFP
+  requirements and auto-drafts structured responses based on your standard
+  service offerings and compliance standards.
+sampleData:
+  filename: rfps.csv
+  content: >
+    Project_Name,Requirement_Text,Budget_Tier
+
+    City Bank Security,Must support SAML SSO and have SOC2 Type 2
+    compliance,Enterprise
+
+    EduGrowth Portal,Must support 10k concurrent users and mobile
+    responsive,Mid-Market
+
+    GovNet Audit,Must have on-premise deployment option and 24/7 support,Public
+    Sector
+isPremium: true
+---
+
+# Agent Configuration: The RFP Responder
+
+## Role
+Responding to RFPs is a time-sink. This agent processes a list of RFP requirements and auto-drafts structured responses based on your standard service offerings and compliance standards.
+
+## Objective
+Draft complex proposals instantly.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `rfps.csv` exist?
+2.  **If Missing:** Create `rfps.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Check
+1.  **Check:** Does `rfps.csv` exist?
+2.  **If Missing:** Create `rfps.csv` using the `sampleData`.
+3.  **If Present:** Load the RFP list.
+
+### Phase 2: The Drafting Loop
+For each RFP in the CSV:
+1.  **Decompose:** Extract individual requirements from the `Requirement_Text`.
+2.  **Map Capabilities:** For each point:
+    *   **Confirm:** State "Yes, we support this" or "Supported via [Mechanism]".
+    *   **Detail:** Add 1-2 sentences of technical or operational detail.
+    *   **Proof:** Add a placeholder `[LINK: Relevant Case Study]`.
+3.  **Draft Executive Summary:** Create a 3-paragraph summary focused on the `Budget_Tier` and why the company is the lowest-risk partner.
+4.  **Output:** Save to `drafts/[Project_Name]_response.md`.
+
+### Phase 3: Structured Deliverables
+1.  **Create:** `rfp_pipeline_tracker.csv` with columns: `Project_Name`, `Requirement_Count`, `Compliance_Match_%`, `File_Path`.
+2.  **Report:** "Successfully drafted [X] RFP responses. High-priority 'Public Sector' requirements flagged for legal review."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+

@@ -1,0 +1,645 @@
+# Blueprints: Ad Ops
+
+## The Ad Copy Auditor
+URL: https://realaiexamples.com/blueprints/ad-copy-character-counter
+Description: Audit 100 ad variants for truncation in one run.
+
+---
+id: ad-copy-character-counter
+category: Ad Ops
+title: The Ad Copy Auditor
+tagline: Audit 100 ad variants for truncation in one run.
+difficulty: Beginner
+time: Daily
+description: >-
+  Ads get cut off on mobile if they are too long. This agent reads a CSV of your
+  ad headlines and descriptions, counts them against platform limits (Google,
+  FB, LinkedIn), and flags the ones that will be truncated.
+sampleData:
+  filename: ad_drafts.csv
+  content: >
+    Platform,Headline,Description
+
+    Google,"Get the best CRM for your small business today",Stop wasting time on
+    manual entry and start closing more deals.
+
+    Facebook,Launch your startup faster,We help you scale from zero to one.
+---
+
+# Agent Configuration: The Ad Copy Auditor
+
+## Role
+Ads get cut off on mobile if they are too long. This agent reads a CSV of your ad headlines and descriptions, counts them against platform limits (Google, FB, LinkedIn), and flags the ones that will be truncated.
+
+## Objective
+Audit 100 ad variants for truncation in one run.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `ad_drafts.csv` exist?
+2.  **If Missing:** Create `ad_drafts.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Setup
+1.  **Check:** Does `ad_drafts.csv` exist? If missing, create template.
+
+### Phase 2: The Audit Loop
+For each row in the CSV:
+1.  **Count:** Measure length of `Headline` and `Description`.
+2.  **Validate:** Compare against `Platform` limits.
+3.  **Flag:** Mark as "PASS" or "FAIL (Too Long)".
+4.  **Fix:** For every FAIL, suggest a shortened version that keeps the core meaning.
+
+### Phase 3: Deliverable
+1.  **Create:** `ad_copy_audit_results.csv` with columns: `Platform,Status,Suggested_Fix`.
+2.  **Summary:** "Processed [X] ads. Flagged [Y] for truncation issues."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The Fatigue Detector
+URL: https://realaiexamples.com/blueprints/creative-refresh-alert
+Description: Know when to swap ads.
+
+---
+id: creative-refresh-alert
+category: Ad Ops
+title: The Fatigue Detector
+tagline: Know when to swap ads.
+difficulty: Intermediate
+time: Batch
+description: >-
+  Ad fatigue raises CPA. This agent analyzes your ad performance reports,
+  flagging ads with High Frequency and declining CTR, signaling exactly when to
+  launch new creative across all your campaigns.
+sampleData:
+  filename: ad_performance.csv
+  content: |
+    Ad_ID,Campaign_Name,Frequency,CTR,Spend
+    AD_001,Summer Sale,4.5,0.8,500
+    AD_002,Summer Sale,2.1,2.5,1200
+    AD_003,Retargeting,5.2,0.4,300
+    AD_004,Prospecting,1.5,3.2,2000
+isPremium: true
+---
+
+# Agent Configuration: The Fatigue Detector
+
+## Role
+Ad fatigue raises CPA. This agent analyzes your ad performance reports, flagging ads with High Frequency and declining CTR, signaling exactly when to launch new creative across all your campaigns.
+
+## Objective
+Know when to swap ads.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `ad_performance.csv` exist?
+2.  **If Missing:** Create `ad_performance.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Check
+1.  **Check:** Does `ad_performance.csv` exist?
+2.  **If Missing:** Create `ad_performance.csv` using the `sampleData`.
+3.  **If Present:** Load the performance data.
+
+### Phase 2: The Fatigue Analysis Loop
+For each ad in the CSV:
+1.  **Calculate Fatigue Status:**
+    *   **CRITICAL FATIGUE:** If `Frequency` > 4.5 AND `CTR` < 1.0%.
+    *   **WARNING:** If `Frequency` > 3.0 AND `CTR` has dropped 20% WoW (if history provided) or is < 1.5%.
+    *   **HEALTHY:** All other ads.
+2.  **Action Item:**
+    *   **For CRITICAL:** "PAUSE & REPLACE IMMEDIATELY."
+    *   **For WARNING:** "Draft new creative for next week."
+3.  **Efficiency Check:** If `Spend` is high on a fatigued ad, mark as `High Priority`.
+
+### Phase 3: Structured Deliverables
+1.  **Create:** `creative_refresh_list.csv` with columns: `Ad_ID`, `Campaign_Name`, `Fatigue_Status`, `Action_Required`, `Priority`.
+2.  **Report:** "Successfully audited [X] ads. [Y] critical refreshes identified. Total 'At Risk' spend: $[Z]."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The Offline Conversions Factory
+URL: https://realaiexamples.com/blueprints/facebook-offline-events-csv
+Description: Format 10,000 sales for Facebook ROAS reporting.
+
+---
+id: facebook-offline-events-csv
+category: Ad Ops
+title: The Offline Conversions Factory
+tagline: 'Format 10,000 sales for Facebook ROAS reporting.'
+difficulty: Intermediate
+time: Weekly
+description: >-
+  Ads drive store visits and phone sales. This agent reads a massive CSV of
+  in-store transactions, cleans the PII (Name, Email, Phone), and formats it
+  into the strict 'hashed' schema required by Facebook's Offline Conversions
+  API.
+sampleData:
+  filename: raw_sales_log.csv
+  content: |
+    Name,Email,Phone,Value,Date
+    John Doe,john@acme.com,555-0199,500,2024-01-08
+    Jane Smith,jane@globex.com,555-0122,1200,2024-01-09
+isPremium: true
+---
+
+# Agent Configuration: The Offline Conversions Factory
+
+## Role
+Ads drive store visits and phone sales. This agent reads a massive CSV of in-store transactions, cleans the PII (Name, Email, Phone), and formats it into the strict 'hashed' schema required by Facebook's Offline Conversions API.
+
+## Objective
+Format 10,000 sales for Facebook ROAS reporting.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `raw_sales_log.csv` exist?
+2.  **If Missing:** Create `raw_sales_log.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Resource Setup
+1.  **Check:** Does `raw_sales_log.csv` exist? If missing, create template.
+
+### Phase 2: The Normalization Loop
+For each row in the CSV:
+1.  **Clean Email:** Convert to lowercase, strip whitespace.
+2.  **Clean Phone:** Remove all non-digits. Ensure country code is present.
+3.  **Format Time:** Convert the `Date` into a standardized timestamp.
+4.  **Value:** Format currency into numeric string (e.g., 500.00).
+
+### Phase 3: The Manifest
+1.  **Create:** `fb_offline_upload_ready.csv` with columns: `email,phone,value,currency,event_name,event_time`.
+2.  **Instruction:** Provide the command to hash the file or explain that the upload tool will handle it.
+3.  **Summary:** "Successfully formatted [X] sales records ($[Total Value]). Ready for upload."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The Multi-Industry Negative Keyword Factory
+URL: https://realaiexamples.com/blueprints/google-ads-negative-keyword-factory
+Description: Protect the budget across your entire portfolio.
+
+---
+id: google-ads-negative-keyword-factory
+category: Ad Ops
+title: The Multi-Industry Negative Keyword Factory
+tagline: Protect the budget across your entire portfolio.
+difficulty: Beginner
+time: One-off
+description: >-
+  Broad match wastes money. This agent reads a list of industries from a CSV and
+  generates a standard 'Negative Keyword List' for each, blocking junk traffic
+  (jobs, free, torrents) tailored to that sector.
+sampleData:
+  filename: target_industries.csv
+  content: |
+    Industry,Negative_Niche
+    SaaS,Careers and Definition
+    E-com,Discount Hunters
+    Service,Job Seekers
+isPremium: true
+---
+
+# Agent Configuration: The Multi-Industry Negative Keyword Factory
+
+## Role
+Broad match wastes money. This agent reads a list of industries from a CSV and generates a standard 'Negative Keyword List' for each, blocking junk traffic (jobs, free, torrents) tailored to that sector.
+
+## Objective
+Protect the budget across your entire portfolio.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `target_industries.csv` exist?
+2.  **If Missing:** Create `target_industries.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Context Setup
+1.  **Check:** Does `target_industries.csv` exist? If missing, create template.
+
+### Phase 2: The Factory Loop
+For each industry in the CSV:
+1.  **Generate Junk:** Add universal negatives (crack, torrent, free).
+2.  **Generate Niche Negatives:** 
+    *   *If SaaS:* add "salary", "job", "what is".
+    *   *If E-com:* add "cheap", "thrift", "used".
+3.  **Refine:** Remove keywords that might be relevant to the specific industry.
+
+### Phase 3: The Artifact
+1.  **Create:** `master_negative_list.csv` with columns: `Industry,Negative_Keyword`.
+2.  **Report:** "Successfully generated negative keyword sets for [X] industries."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The LP Speed Auditor
+URL: https://realaiexamples.com/blueprints/landing-page-load-speed-auditor
+Description: Slow pages kill ROAS.
+
+---
+id: landing-page-load-speed-auditor
+category: Ad Ops
+title: The LP Speed Auditor
+tagline: Slow pages kill ROAS.
+difficulty: Advanced
+time: Batch
+description: >-
+  If your landing page takes 3s to load, you lose 50% of your paid traffic. This
+  agent uses `curl` to measure TTFB and Total Load Time across your entire
+  campaign portfolio, flagging pages that are too slow.
+sampleData:
+  filename: landing_pages.csv
+  content: |
+    Page_Name,URL,Traffic_Source
+    Home,https://mysite.com,Direct
+    Summer Sale,https://mysite.com/sale,Meta Ads
+    Demo,https://mysite.com/demo,Google Ads
+isPremium: true
+---
+
+# Agent Configuration: The LP Speed Auditor
+
+## Role
+If your landing page takes 3s to load, you lose 50% of your paid traffic. This agent uses `curl` to measure TTFB and Total Load Time across your entire campaign portfolio, flagging pages that are too slow.
+
+## Objective
+Slow pages kill ROAS.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `landing_pages.csv` exist?
+2.  **If Missing:** Create `landing_pages.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Check
+1.  **Check:** Does `landing_pages.csv` exist?
+2.  **If Missing:** Create `landing_pages.csv` using the `sampleData`.
+3.  **If Present:** Load the page list.
+
+### Phase 2: The Speed Test Loop
+For each URL in the CSV:
+1.  **Run Test:** Execute `curl -o /dev/null -s -w "%{time_starttransfer},%{time_connect},%{time_total}" [URL]`.
+2.  **Parse Results:**
+    *   **TTFB:** Time until first byte received.
+    *   **Connect:** Time to establish TCP connection.
+    *   **Total:** Total elapsed time for the request.
+3.  **Categorize:**
+    *   **EXCELLENT:** Total < 1.0s.
+    *   **GOOD:** Total 1.0s - 2.5s.
+    *   **DANGER:** Total > 2.5s. (High risk of ad spend waste).
+4.  **Identify Bottleneck:** If `Connect` time is high, flag as "Server/DNS Issue". If `TTFB` is high, flag as "Application/DB Issue".
+
+### Phase 3: Structured Deliverables
+1.  **Create:** `load_speed_audit.csv` with columns: `Page_Name`, `URL`, `TTFB`, `Total_Time`, `Performance_Tier`.
+2.  **Report:** "Successfully audited [X] pages. [Y] pages flagged in DANGER zone. Immediate action recommended for [Traffic_Source] campaigns."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The Insight Tag Fleet Auditor
+URL: https://realaiexamples.com/blueprints/linkedin-insight-tag-auditor
+Description: Audit retargeting tags across your entire domain portfolio.
+
+---
+id: linkedin-insight-tag-auditor
+category: Ad Ops
+title: The Insight Tag Fleet Auditor
+tagline: Audit retargeting tags across your entire domain portfolio.
+difficulty: Beginner
+time: Monthly
+description: >-
+  The LinkedIn Insight Tag is often missing on critical pages. This agent reads
+  a list of URLs from a CSV, crawls every page to verify your Partner ID is
+  present, and flags every 'Untagged' page for an immediate fix.
+sampleData:
+  filename: pages_to_audit.csv
+  content: |
+    Page_Name,URL
+    Home,https://yoursite.com
+    Blog,https://yoursite.com/blog
+    Landing_Page,https://promo.yoursite.com
+isPremium: true
+---
+
+# Agent Configuration: The Insight Tag Fleet Auditor
+
+## Role
+The LinkedIn Insight Tag is often missing on critical pages. This agent reads a list of URLs from a CSV, crawls every page to verify your Partner ID is present, and flags every 'Untagged' page for an immediate fix.
+
+## Objective
+Audit retargeting tags across your entire domain portfolio.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `pages_to_audit.csv` exist?
+2.  **If Missing:** Create `pages_to_audit.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Fleet Setup
+1.  **Check:** Does `pages_to_audit.csv` exist? If missing, create template.
+2.  **Input:** Ask user for their LinkedIn Partner ID (e.g., '123456').
+
+### Phase 2: The Audit Loop
+For each URL in the CSV:
+1.  **Fetch:** Read the HTML source code.
+2.  **Scan:** Search for the specific Partner ID script marker.
+3.  **Validate:** 
+    *   *Green:* Tag found and matches ID.
+    *   *Red:* Tag missing or ID mismatch.
+
+### Phase 3: The Coverage Report
+1.  **Create:** `retargeting_audit_results.csv`.
+2.  **Summary:** "Audited [X] pages. [Y]% coverage. Critical: The 'Landing_Page' is untagged."
+3.  **Fix:** Provide the tag snippet for the user to send to their developer.
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The LAL Seeder Factory
+URL: https://realaiexamples.com/blueprints/lookalike-audience-seeder
+Description: Standardize 10,000 customers for 'Custom Audience' upload.
+
+---
+id: lookalike-audience-seeder
+category: Ad Ops
+title: The LAL Seeder Factory
+tagline: 'Standardize 10,000 customers for ''Custom Audience'' upload.'
+difficulty: Intermediate
+time: Monthly
+description: >-
+  High-quality lookalikes need high-quality seeds. This agent reads your massive
+  customer database, filters for the 'Top 10%' by LTV or Frequency, and formats
+  the PII for secure upload to Facebook or LinkedIn.
+sampleData:
+  filename: customer_db.csv
+  content: |
+    Name,Email,Lifetime_Value,Purchase_Count
+    John Doe,john@acme.com,5000,12
+    Jane Smith,jane@globex.com,1200,3
+isPremium: true
+---
+
+# Agent Configuration: The LAL Seeder Factory
+
+## Role
+High-quality lookalikes need high-quality seeds. This agent reads your massive customer database, filters for the 'Top 10%' by LTV or Frequency, and formats the PII for secure upload to Facebook or LinkedIn.
+
+## Objective
+Standardize 10,000 customers for 'Custom Audience' upload.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `customer_db.csv` exist?
+2.  **If Missing:** Create `customer_db.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Setup
+1.  **Check:** Does `customer_db.csv` exist? If missing, create template.
+
+### Phase 2: The Segmentation Loop
+1.  **Filter:** Identify users where `Lifetime_Value` > $1000 OR `Purchase_Count` > 5.
+2.  **Qualify:** Discard internal/test emails.
+3.  **Standardize:** Convert emails to lowercase and strip all punctuation from phones.
+
+### Phase 3: The Export
+1.  **Create:** `vip_lal_seed.csv` with columns: `email,phone,first_name,last_name,country`.
+2.  **Summary:** "Processed [X] customers. Identified [Y] VIPs for your Lookalike seed. Total seed value: $[Total]."
+---
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The TikTok Event Validator
+URL: https://realaiexamples.com/blueprints/tiktok-pixel-helper
+Description: Fix your conversion tracking from a snippet or a goal.
+
+---
+id: tiktok-pixel-helper
+category: Ad Ops
+title: The TikTok Event Validator
+tagline: Fix your conversion tracking from a snippet or a goal.
+difficulty: Intermediate
+time: Weekly
+description: >-
+  TikTok pixels are finicky. This agent audits your existing event code (if
+  provided) or researches your product type to generate a standardized event
+  snippet including 'Value' and 'Content ID' parameters.
+sampleData:
+  filename: current_pixel.txt
+  content: |
+    ttq.track('CompletePayment', { value: 100, currency: 'USD' });
+isPremium: true
+---
+
+# Agent Configuration: The TikTok Event Validator
+
+## Role
+TikTok pixels are finicky. This agent audits your existing event code (if provided) or researches your product type to generate a standardized event snippet including 'Value' and 'Content ID' parameters.
+
+## Objective
+Fix your conversion tracking from a snippet or a goal.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `current_pixel.txt` exist?
+2.  **If Missing:** Create `current_pixel.txt` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Context Choice
+1.  **Check:** Did the user provide `current_pixel.txt`?
+2.  **Logic:**
+    *   *If Yes:* Audit the syntax. Check for missing quotes, wrong currency codes, or case-sensitivity errors.
+    *   *If No:* Ask for "Event Type" (e.g., Purchase) and "Product Type" (e.g., E-com).
+
+### Phase 2: The Logic Check
+*   *Purchase Event:* Must have `value` and `currency`.
+*   *ViewContent Event:* Must have `content_id`.
+*   *Search Event:* Must have `query`.
+
+### Phase 3: The Fix
+1.  **Create:** `tiktok_pixel_fix.md`.
+2.  **Code:** Provide the corrected snippet.
+3.  **Summary:** "Your original code was missing [X]. The new version is now compliant with TikTok V3 standards."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The UTM Builder Formula
+URL: https://realaiexamples.com/blueprints/utm-builder-spreadsheet
+Description: Standardize your tracking links.
+
+---
+id: utm-builder-spreadsheet
+category: Ad Ops
+title: The UTM Builder Formula
+tagline: Standardize your tracking links.
+difficulty: Beginner
+time: Batch
+description: >-
+  Manual tagging causes errors and messy data. This agent processes your entire
+  campaign list and generates perfectly formatted, encoded UTM links for every
+  channel and source.
+sampleData:
+  filename: campaigns.csv
+  content: |
+    Base_URL,Source,Medium,Campaign_Name
+    https://mysite.com,twitter,social,summer_sale_2024
+    https://mysite.com/pricing,newsletter,email,pro_plan_launch
+    https://mysite.com/demo,google,cpc,retargeting_q4
+isPremium: true
+---
+
+# Agent Configuration: The UTM Builder Formula
+
+## Role
+Manual tagging causes errors and messy data. This agent processes your entire campaign list and generates perfectly formatted, encoded UTM links for every channel and source.
+
+## Objective
+Standardize your tracking links.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `campaigns.csv` exist?
+2.  **If Missing:** Create `campaigns.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Check
+1.  **Check:** Does `campaigns.csv` exist?
+2.  **If Missing:** Create `campaigns.csv` using the `sampleData`.
+3.  **If Present:** Load the campaign list.
+
+### Phase 2: The Link Building Loop
+For each row in the CSV:
+1.  **Normalize Inputs:** Convert `Source`, `Medium`, and `Campaign_Name` to lowercase. Replace spaces with underscores or dashes.
+2.  **Construct URL:** Build the string: `[Base_URL]?utm_source=[Source]&utm_medium=[Medium]&utm_campaign=[Campaign_Name]`.
+3.  **Final Polish:** Check if the `Base_URL` already has a `?` and use `&` if so.
+4.  **Draft Formulas:** Provide the equivalent Excel/Google Sheets formula for the user's future use: `=LOWER(A2) & IF(ISERROR(FIND("?",A2)),"?","&") & "utm_source=" & LOWER(B2) & ...`
+
+### Phase 3: Structured Deliverables
+1.  **Create:** `tagged_campaign_links.csv` with columns: `Campaign_Name`, `Source`, `Original_URL`, `Final_UTM_Link`.
+2.  **Report:** "Successfully generated [X] tracking links. Data attribution is now standardized across all sources."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The B2B Brand Safety Guard
+URL: https://realaiexamples.com/blueprints/youtube-ad-placement-excluder
+Description: Block junk YouTube channels.
+
+---
+id: youtube-ad-placement-excluder
+category: Ad Ops
+title: The B2B Brand Safety Guard
+tagline: Block junk YouTube channels.
+difficulty: Intermediate
+time: Batch
+description: >-
+  YouTube B2B ads often run on 'Cocomelon' because kids use parents' devices.
+  This agent researches trending kids and gaming channels to build massive
+  'Negative Placement' lists for your entire campaign portfolio.
+sampleData:
+  filename: campaigns.csv
+  content: |
+    Campaign_Name,Primary_Category,Exclusion_Focus
+    SaaS Pro Demo,B2B Software,Kids & Animations
+    Crypto Wallet,Finance,Mobile Gaming & Bots
+    HR Onboarding,People Ops,Music & Compilation Channels
+isPremium: true
+---
+
+# Agent Configuration: The B2B Brand Safety Guard
+
+## Role
+YouTube B2B ads often run on 'Cocomelon' because kids use parents' devices. This agent researches trending kids and gaming channels to build massive 'Negative Placement' lists for your entire campaign portfolio.
+
+## Objective
+Block junk YouTube channels.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `campaigns.csv` exist?
+2.  **If Missing:** Create `campaigns.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Check
+1.  **Check:** Does `campaigns.csv` exist?
+2.  **If Missing:** Create `campaigns.csv` using the `sampleData`.
+3.  **If Present:** Load the campaign list.
+
+### Phase 2: The Junk Scan Loop
+For each campaign in the CSV:
+1.  **Market Research:** Use `web_fetch` to identify the "Volume Leaders" in the specified `Exclusion_Focus` (e.g., search for "Top 50 children's channels 2024").
+2.  **Channel Audit:** Extract the Names and Channel IDs for every high-traffic result.
+3.  **Cross-Check:** Ensure high-value educational channels in the same niche are *not* included in the block list.
+4.  **Draft Exclusion List:** Format the IDs for bulk import.
+
+### Phase 3: Structured Deliverables
+1.  **Create:** `negative_placements/` folder with `[Campaign_Name]_exclusions.csv` for each entry.
+2.  **Create:** `brand_safety_summary.csv` with columns: `Campaign_Name`, `Exclusion_Count`, `Estimated_Budget_Saved`, `File_Path`.
+3.  **Report:** "Successfully identified [X] waste channels across [Y] campaigns. Exclusion lists ready for 'Negative Placement' upload in Google Ads."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+

@@ -1,6 +1,6 @@
 ---
 id: tiktok-hook-generator
-category: Social Content
+category: Content Ops
 title: The TikTok Hook Generator
 tagline: Viral opening lines for your niche.
 difficulty: Beginner

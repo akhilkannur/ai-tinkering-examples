@@ -1,6 +1,6 @@
 ---
 id: sql-cohort-analyzer
-category: Analytics
+category: CRO
 title: The SQL Cohort Builder
 tagline: Standardize your retention metrics.
 difficulty: Advanced

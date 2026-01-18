@@ -1,6 +1,6 @@
 ---
 id: google-my-business-optimizer
-category: Local SEO
+category: Strategic Ops
 title: The GMB Fleet Optimizer
 tagline: Own the map pack for all 50 branches.
 difficulty: Beginner

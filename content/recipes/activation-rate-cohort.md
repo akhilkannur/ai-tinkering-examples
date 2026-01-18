@@ -1,14 +1,16 @@
 ---
-id: "activation-rate-cohort"
-category: "PLG Sales"
-title: "Activation Rate by Cohort"
-tagline: "Are new users activating faster?"
-difficulty: "Advanced"
-time: "Monthly"
-archetype: "Processor"
-description: "Tracks the percentage of users who reach 'Activation' within 7 days, grouped by signup month."
+id: activation-rate-cohort
+category: Sales Ops
+title: Activation Rate by Cohort
+tagline: Are new users activating faster?
+difficulty: Advanced
+time: Monthly
+archetype: Processor
+description: >-
+  Tracks the percentage of users who reach 'Activation' within 7 days, grouped
+  by signup month.
 sampleData:
-  filename: "activation_data.csv"
+  filename: activation_data.csv
   content: |
     Signup_Month,Total_Signups,Activated_Within_7d
     Jan,1000,200

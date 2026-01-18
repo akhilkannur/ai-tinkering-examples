@@ -1,14 +1,16 @@
---- 
-id: "mdf-spend-auditor"
-category: "Partner Ops"
-title: "MDF Budget Reconciler"
-tagline: "Reconcile partner receipts against approved funds."
-difficulty: "Advanced"
-time: "Monthly"
-archtype: "Processor"
-description: "Compares partner-submitted receipts against the Market Development Fund (MDF) approval log."
+---
+id: mdf-spend-auditor
+category: Strategic Ops
+title: MDF Budget Reconciler
+tagline: Reconcile partner receipts against approved funds.
+difficulty: Advanced
+time: Monthly
+archtype: Processor
+description: >-
+  Compares partner-submitted receipts against the Market Development Fund (MDF)
+  approval log.
 sampleData:
-  filename: "mdf_audit.csv"
+  filename: mdf_audit.csv
   content: |
     Partner,Approved_Amt,Receipt_Amt
     Partner X,1000,950

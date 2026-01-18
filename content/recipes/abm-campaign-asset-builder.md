@@ -1,6 +1,6 @@
 ---
 id: abm-campaign-asset-builder
-category: Marketing
+category: Strategic Ops
 title: ABM Campaign Asset Builder
 tagline: Generate personalized landing page copy for target accounts.
 difficulty: Advanced

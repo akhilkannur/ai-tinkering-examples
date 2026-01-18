@@ -1,14 +1,16 @@
 ---
-id: "slow-mover-bundle-builder"
-category: "E-commerce Merchandising"
-title: "Dead Stock Bundler"
-tagline: "Clear stale inventory by bundling."
-difficulty: "Advanced"
-time: "Quarterly"
-archetype: "Processor"
-description: "Identifies low-velocity items (Dead Stock) and pairs them with high-velocity items for potential 'Mystery Box' offers."
+id: slow-mover-bundle-builder
+category: E-commerce
+title: Dead Stock Bundler
+tagline: Clear stale inventory by bundling.
+difficulty: Advanced
+time: Quarterly
+archetype: Processor
+description: >-
+  Identifies low-velocity items (Dead Stock) and pairs them with high-velocity
+  items for potential 'Mystery Box' offers.
 sampleData:
-  filename: "sku_velocity.csv"
+  filename: sku_velocity.csv
   content: |
     SKU,Velocity_Score,Stock_Level
     Cool-Jacket,High,50

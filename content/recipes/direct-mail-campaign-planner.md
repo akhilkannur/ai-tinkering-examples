@@ -1,6 +1,6 @@
 ---
 id: direct-mail-campaign-planner
-category: Offline
+category: Strategic Ops
 title: The ABM Direct Mail Engine
 tagline: High-impact mailers for your top 100 accounts.
 difficulty: Advanced

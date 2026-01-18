@@ -1,6 +1,6 @@
 ---
 id: lead-magnet-idea-generator
-category: Marketing
+category: Strategic Ops
 title: Lead Magnet Factory
 tagline: 'Generate ideas for high-converting tools, templates, and PDFs.'
 difficulty: Intermediate

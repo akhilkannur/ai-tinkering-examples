@@ -1,14 +1,16 @@
 ---
-id: "commission-payout-variance"
-category: "RevOps"
-title: "Commission Variance Alert"
-tagline: "Did John's check double MoM?"
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Checks for large Month-over-Month swings in rep commission checks to catch calculation errors."
+id: commission-payout-variance
+category: Sales Ops
+title: Commission Variance Alert
+tagline: Did John's check double MoM?
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Checks for large Month-over-Month swings in rep commission checks to catch
+  calculation errors.
 sampleData:
-  filename: "payouts.csv"
+  filename: payouts.csv
   content: |
     Rep,Month,Amount
     John,Jan,5000

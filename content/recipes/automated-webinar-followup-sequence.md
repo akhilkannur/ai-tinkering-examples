@@ -1,6 +1,6 @@
 ---
 id: automated-webinar-followup-sequence
-category: Marketing
+category: Strategic Ops
 title: Webinar Follow-Up Architect
 tagline: Segment attendees vs. no-shows and write targeted nurture sequences.
 difficulty: Intermediate

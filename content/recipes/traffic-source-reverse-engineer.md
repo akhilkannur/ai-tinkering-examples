@@ -1,6 +1,6 @@
 ---
 id: traffic-source-reverse-engineer
-category: Intel
+category: Competitive Intel
 title: The Traffic Source Decoder
 tagline: Uncover the growth engine of any competitor.
 difficulty: Intermediate

@@ -1,14 +1,16 @@
 ---
-id: "onboarding-checklist-completion"
-category: "PLG Sales"
-title: "Onboarding Drop-off Audit"
-tagline: "Where do users get stuck?"
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Measures the completion rate of each step in the 'Getting Started' checklist to identify friction."
+id: onboarding-checklist-completion
+category: Sales Ops
+title: Onboarding Drop-off Audit
+tagline: Where do users get stuck?
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Measures the completion rate of each step in the 'Getting Started' checklist
+  to identify friction.
 sampleData:
-  filename: "checklist_stats.csv"
+  filename: checklist_stats.csv
   content: |
     Step,Users_Started,Users_Completed
     Signup,1000,1000

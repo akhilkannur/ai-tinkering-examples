@@ -1,14 +1,16 @@
---- 
-id: "tech-stack-seat-auditor"
-category: "RevOps"
-title: "SaaS Seat Auditor"
-tagline: "Find unused licenses in your sales tech stack."
-difficulty: "Intermediate"
-time: "Monthly"
-archtype: "Processor"
-description: "Compares active employees against licensed users in tools like Salesforce or ZoomInfo to find waste."
+---
+id: tech-stack-seat-auditor
+category: Sales Ops
+title: SaaS Seat Auditor
+tagline: Find unused licenses in your sales tech stack.
+difficulty: Intermediate
+time: Monthly
+archtype: Processor
+description: >-
+  Compares active employees against licensed users in tools like Salesforce or
+  ZoomInfo to find waste.
 sampleData:
-  filename: "seat_audit.txt"
+  filename: seat_audit.txt
   content: |
     [Employees]
     Dave, John, Sarah

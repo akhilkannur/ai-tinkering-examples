@@ -1,6 +1,6 @@
 ---
 id: redirect-chain-fixer
-category: Technical SEO
+category: SEO
 title: Redirect Chain Flattener
 tagline: Fix "Redirect Hops" to improve site speed and SEO.
 difficulty: Intermediate

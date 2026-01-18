@@ -1,6 +1,6 @@
 ---
 id: user-generated-content-campaign
-category: Social
+category: Content Ops
 title: The UGC Campaign Planner
 tagline: High-ROI content from your users.
 difficulty: Intermediate

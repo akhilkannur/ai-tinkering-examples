@@ -1,6 +1,6 @@
 ---
 id: discount-code-strategist
-category: Monetization
+category: Strategic Ops
 title: The Annual Promo Strategist
 tagline: 'Your entire year of sales, without brand damage.'
 difficulty: Intermediate

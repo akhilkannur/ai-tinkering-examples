@@ -1,6 +1,6 @@
 ---
 id: integration-partner-finder
-category: SaaS
+category: Strategic Ops
 title: The Strategic Integration Factory
 tagline: Find 50 potential partners across 10 niches.
 difficulty: Advanced

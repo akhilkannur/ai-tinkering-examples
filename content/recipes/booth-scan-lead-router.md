@@ -1,14 +1,16 @@
 ---
-id: "booth-scan-lead-router"
-category: "Field Marketing"
-title: "Event Lead Router"
-tagline: "Route badge scans to the right rep."
-difficulty: "Intermediate"
-time: "Batch"
-archetype: "Processor"
-description: "Routes CSV exports from event badge scanners to sales reps based on territory logic (State/Industry)."
+id: booth-scan-lead-router
+category: Strategic Ops
+title: Event Lead Router
+tagline: Route badge scans to the right rep.
+difficulty: Intermediate
+time: Batch
+archetype: Processor
+description: >-
+  Routes CSV exports from event badge scanners to sales reps based on territory
+  logic (State/Industry).
 sampleData:
-  filename: "badge_scans.csv"
+  filename: badge_scans.csv
   content: |
     Name,Company,State
     John,Acme,CA

@@ -1,6 +1,6 @@
 ---
 id: podcast-guest-pitcher
-category: PR
+category: Content Ops
 title: The Podcast Guest Pitcher
 tagline: Get booked on niche shows.
 difficulty: Intermediate

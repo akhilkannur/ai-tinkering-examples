@@ -1,6 +1,6 @@
 ---
 id: cold-dm-personalizer
-category: Outreach
+category: Lead Gen
 title: The Cold DM Personalizer
 tagline: Personalized outreach for 100 prospects at once.
 difficulty: Beginner

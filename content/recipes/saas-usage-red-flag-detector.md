@@ -1,14 +1,14 @@
 ---
-id: "saas-usage-red-flag-detector"
-category: "RevOps"
-title: "Zombie Account Hunter"
-tagline: "Paying but not logging in?"
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Flags accounts with active contracts but <10% active users (high churn risk)."
+id: saas-usage-red-flag-detector
+category: Sales Ops
+title: Zombie Account Hunter
+tagline: Paying but not logging in?
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: Flags accounts with active contracts but <10% active users (high churn risk).
 sampleData:
-  filename: "usage_stats.csv"
+  filename: usage_stats.csv
   content: |
     Account,Licenses,Active_Users
     Acme,100,5

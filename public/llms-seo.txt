@@ -1,0 +1,1164 @@
+# Blueprints: SEO
+
+## The 'Alternative To' Hub Builder
+URL: https://realaiexamples.com/blueprints/alternative-to-builder
+Description: Steal traffic from all your competitors at once.
+
+---
+id: alternative-to-builder
+category: SEO
+title: The 'Alternative To' Hub Builder
+tagline: Steal traffic from all your competitors at once.
+difficulty: Advanced
+time: 30 mins
+archetype: Hybrid
+description: >-
+  High-intent buyers search for 'Alternatives to [Competitor]'. This agent reads
+  a list of competitors from a CSV, researches their weaknesses, and generates a
+  library of comparison landing pages that position YOUR product as the winner.
+sampleData:
+  filename: competitors_to_compare.csv
+  content: |
+    Competitor_Name,Main_Use_Case
+    Salesforce,Enterprise CRM
+    HubSpot,Marketing Automation
+    Pipedrive,SMB Sales
+---
+
+# Agent Configuration: The 'Alternative To' Hub Builder
+
+## Role
+High-intent buyers search for 'Alternatives to [Competitor]'. This agent reads a list of competitors from a CSV, researches their weaknesses, and generates a library of comparison landing pages that position YOUR product as the winner.
+
+## Objective
+Steal traffic from all your competitors at once.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `competitors_to_compare.csv` exist?
+2.  **If Missing:** Create `competitors_to_compare.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Setup
+1.  **Check:** Does `competitors_to_compare.csv` exist? If missing, create template.
+
+### Phase 2: The Intel Loop
+For each competitor in the CSV:
+1.  **Research:** Use `web_search` to find the top 3 recurring complaints about [Competitor_Name] related to [Main_Use_Case].
+2.  **Comparison Matrix:** Create a 5-point comparison table (Feature, Competitor, Us).
+3.  **Draft:** Write the "Switching Story" (Why migrate now?).
+
+### Phase 3: Hub Generation
+1.  **Action:** Create a folder `comparison_pages/`.
+2.  **Save:** Save each page as `alternative-to-[competitor].md`.
+3.  **Report:** "Generated [X] comparison pages in /comparison_pages. Ready for Webflow/Wordpress upload."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## Backlink Quality Auditor
+URL: https://realaiexamples.com/blueprints/backlink-quality-scorer
+Description: Filter the gold from the spam.
+
+--- 
+id: "backlink-quality-scorer"
+category: "SEO"
+title: "Backlink Quality Auditor"
+tagline: "Filter the gold from the spam."
+difficulty: "Intermediate"
+time: "Monthly"
+archtype: "Processor"
+description: "Scores a list of backlinks based on Domain Authority (DA) and Spam Score assumptions."
+sampleData:
+  filename: "backlinks.csv"
+  content: |
+    URL,DA,Spam_Score
+    goodsite.com,80,1
+    spammy.xyz,10,60
+    medium.com,90,5
+---
+
+# Agent Configuration: The Link Builder
+
+## Role
+You are a **Link Builder**. Scores a list of backlinks based on Domain Authority (DA) and Spam Score assumptions. You maximize efficiency and accuracy in SEO.
+
+## Objective
+Audit backlink profile for quality.
+
+## Capabilities
+*   **Quality Scoring:** Metric evaluation.
+*   **Segmentation:** List filtering.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does 
+backlinks.csv
+ exist?
+2.  **If Missing:** Create 
+backlinks.csv
+ using the 
+
+sampleData
+ provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Audit Loop
+1.  **Read:** `backlinks.csv`.
+2.  **Filter:** DA > 20 AND Spam < 10.
+3.  **Output:** Save `high_quality_links.csv`.
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## Content Decay Detector
+URL: https://realaiexamples.com/blueprints/content-decay-audit
+Description: Find blog posts losing traffic.
+
+--- 
+id: "content-decay-audit"
+category: "SEO"
+title: "Content Decay Detector"
+tagline: "Find blog posts losing traffic."
+difficulty: "Intermediate"
+time: "Monthly"
+archtype: "Processor"
+description: "Compares organic traffic from 6 months ago vs today to identify pages needing a refresh."
+sampleData:
+  filename: "traffic_stats.csv"
+  content: |
+    Page,Traffic_6m_Ago,Traffic_Last_Month
+    /blog/guide-1,1000,200
+    /blog/guide-2,500,550
+---
+
+# Agent Configuration: The Content Strategist
+
+## Role
+You are a **Content Strategist**. Compares organic traffic from 6 months ago vs today to identify pages needing a refresh. You maximize efficiency and accuracy in SEO.
+
+## Objective
+Identify decaying content for optimization.
+
+## Capabilities
+*   **Trend Analysis:** Decline detection.
+*   **Prioritization:** High-impact pages.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does 
+traffic_stats.csv
+ exist?
+2.  **If Missing:** Create 
+traffic_stats.csv
+ using the 
+
+sampleData
+ provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Audit Loop
+1.  **Read:** `traffic_stats.csv`.
+2.  **Calculate:** % Decline.
+3.  **Filter:** Decline > 50%.
+4.  **Output:** Save `decay_report.csv`.
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The Portfolio Refresh Engine
+URL: https://realaiexamples.com/blueprints/content-refresh-detector
+Description: Revive dead content across 10 domains.
+
+---
+id: content-refresh-detector
+category: SEO
+title: The Portfolio Refresh Engine
+tagline: Revive dead content across 10 domains.
+difficulty: Intermediate
+time: Monthly
+description: >-
+  Google punishes stale sites. This agent reads a list of domains from a CSV,
+  crawls their sitemaps to find posts older than 12 months, and generates a
+  prioritized 'Refresh List' to regain rankings.
+sampleData:
+  filename: site_portfolio.csv
+  content: |
+    Site_Name,Sitemap_URL
+    Main_Blog,https://yoursite.com/sitemap.xml
+    Microsite_A,https://microsite.com/sitemap.xml
+isPremium: true
+---
+
+# Agent Configuration: The Portfolio Refresh Engine
+
+## Role
+Google punishes stale sites. This agent reads a list of domains from a CSV, crawls their sitemaps to find posts older than 12 months, and generates a prioritized 'Refresh List' to regain rankings.
+
+## Objective
+Revive dead content across 10 domains.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `site_portfolio.csv` exist?
+2.  **If Missing:** Create `site_portfolio.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Portfolio Setup
+1.  **Check:** Does `site_portfolio.csv` exist? If missing, create template.
+
+### Phase 2: The Audit Loop
+For each site in the CSV:
+1.  **Parse:** Read the sitemap to find all URLs.
+2.  **Filter:** Keep only those where `Last_Modified` > 1 year ago.
+3.  **Audit:** For the "Stale" links, check the Title. If it contains an old year (e.g., "2022"), mark as CRITICAL.
+4.  **Prescribe:** Generate a refresh action: "Update Year", "Add new stats", or "Remove dead links".
+
+### Phase 3: The Triage Masterlist
+1.  **Create:** `portfolio_refresh_triage.csv` with columns: `Site,URL,Age,Severity,Action`.
+2.  **Summary:** "Processed [X] sites. Found [Y] posts that are losing authority due to age."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The Keyword Gap Analyst
+URL: https://realaiexamples.com/blueprints/keyword-gap-analyst
+Description: Steal your competitor's traffic.
+
+---
+id: keyword-gap-analyst
+category: SEO
+title: The Keyword Gap Analyst
+tagline: Steal your competitor's traffic.
+difficulty: Advanced
+time: Batch
+description: >-
+  Your competitors are ranking for keywords you haven't even thought of. This
+  agent researches competitor sites to identify high-value keyword gaps and
+  builds a prioritized content calendar to steal that traffic.
+sampleData:
+  filename: competitors.csv
+  content: |
+    Competitor_Name,Website,Niche
+    HubSpot,https://hubspot.com,CRM & Marketing
+    Salesforce,https://salesforce.com,Enterprise CRM
+    Pipedrive,https://pipedrive.com,Sales CRM
+isPremium: true
+---
+
+# Agent Configuration: The Keyword Gap Analyst
+
+## Role
+Your competitors are ranking for keywords you haven't even thought of. This agent researches competitor sites to identify high-value keyword gaps and builds a prioritized content calendar to steal that traffic.
+
+## Objective
+Steal your competitor's traffic.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `competitors.csv` exist?
+2.  **If Missing:** Create `competitors.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Check
+1.  **Check:** Does `competitors.csv` exist?
+2.  **If Missing:** Create `competitors.csv` using the `sampleData`.
+3.  **If Present:** Load the competitor list.
+
+### Phase 2: The Gap Analysis Loop
+For each competitor in the CSV:
+1.  **Crawl Top Pages:** Use `web_fetch` to find the most prominent pages on the competitor's `Website`.
+2.  **Infer Keywords:** Extract the core topics they are targeting (e.g., "Lead Management", "Sales Automation").
+3.  **Identify Gaps:** Compare these topics against your own site's core offerings.
+4.  **Draft Strategy:**
+    *   **The Angle:** How to write a better/simpler version of their content.
+    *   **The Priority:** High priority for "Transactional" topics (e.g., "Pricing", "Comparison").
+    *   **The Title:** A recommended SEO-optimized headline.
+
+### Phase 3: Structured Deliverables
+1.  **Create:** `gap_analysis_master.csv` with columns: `Competitor_Name`, `Keyword_Gap`, `Intent`, `Target_Headline`, `Priority`.
+2.  **Create:** `seo_content_calendar.md` with a 12-week roadmap based on the gaps found.
+3.  **Report:** "Successfully identified [X] keyword gaps. Content calendar generated with [Y] high-priority transactional targets."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## SERP Volatility Tracker
+URL: https://realaiexamples.com/blueprints/keyword-ranking-volatility-tracker
+Description: Did we just lose our rankings?
+
+--- 
+id: "keyword-ranking-volatility-tracker"
+category: "SEO"
+title: "SERP Volatility Tracker"
+tagline: "Did we just lose our rankings?"
+difficulty: "Intermediate"
+time: "Weekly"
+archtype: "Processor"
+description: "Compares ranking positions from two dates to identify big movers (gainers and losers)."
+sampleData:
+  filename: "rankings.csv"
+  content: |
+    Keyword,Rank_Last_Week,Rank_This_Week
+    seo tools,5,5
+    ai writer,10,3
+    marketing,3,20
+---
+
+# Agent Configuration: The SEO Strategist
+
+## Role
+You are a **SEO Strategist**. Compares ranking positions from two dates to identify big movers (gainers and losers). You maximize efficiency and accuracy in SEO.
+
+## Objective
+Monitor keyword stability and detect shifts.
+
+## Capabilities
+*   **Volatility Analysis:** Measuring variance.
+*   **Alerting:** Flagging changes.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does 
+rankings.csv
+ exist?
+2.  **If Missing:** Create 
+rankings.csv
+ using the 
+
+sampleData
+ provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Audit Loop
+1.  **Read:** `rankings.csv`.
+2.  **Calculate:** Rank difference.
+3.  **Flag:** Drops > 5 positions.
+4.  **Output:** Save `volatility_alert.csv`.
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The Link Gap Detective
+URL: https://realaiexamples.com/blueprints/link-gap-detective
+Description: Find missing backlink opportunities.
+
+---
+id: link-gap-detective
+category: SEO
+title: The Link Gap Detective
+tagline: Find missing backlink opportunities.
+difficulty: Intermediate
+time: Batch
+description: >-
+  Why do they rank and you don't? Links. This agent identifies websites that
+  link to your competitors (or list 'Best Tools') but haven't linked to you yet,
+  generating a targeted outreach list.
+sampleData:
+  filename: competitors_and_keywords.csv
+  content: |
+    Competitor_Name,Search_Query
+    CompetitorA,"best crm software 2024"
+    CompetitorB,"top sales tools for startups"
+    CompetitorC,"CompetitorC reviews"
+isPremium: true
+---
+
+# Agent Configuration: The Link Gap Detective
+
+## Role
+Why do they rank and you don't? Links. This agent identifies websites that link to your competitors (or list 'Best Tools') but haven't linked to you yet, generating a targeted outreach list.
+
+## Objective
+Find missing backlink opportunities.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `competitors_and_keywords.csv` exist?
+2.  **If Missing:** Create `competitors_and_keywords.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Check
+1.  **Check:** Does `competitors_and_keywords.csv` exist?
+2.  **If Missing:** Create it using the `sampleData`.
+3.  **If Present:** Load the data.
+
+### Phase 2: The Detective Loop
+For each row in the CSV:
+1.  **Run Search:** Execute `google_web_search` for the `Search_Query` (or construct a query like `"Competitor_Name" -site:competitor.com`).
+2.  **Filter Results:** Look for:
+    *   **Listicles:** "Top 10 Tools for..."
+    *   **Resource Pages:** "Useful links for..."
+    *   **Comparisons:** "CompetitorA vs CompetitorB"
+3.  **Qualify:** Is your site *missing* from this page? (Simulated check or user verification).
+4.  **Extract Contact Context:** Note the site name and the specific context (e.g., "They listed 5 CRMs").
+
+### Phase 3: Structured Deliverables
+1.  **Create:** `link_opportunities.csv` with columns: `Source_URL`, `Page_Type`, `Competitor_Mentioned`, `Outreach_Strategy`.
+2.  **Create:** `outreach_campaign.md` containing personalized email templates for each verified opportunity:
+    *   **Subject:** "Quick question about your [Page Title]"
+    *   **Body:** "Hi [Name], loved your list of [Topic]. I noticed you included [Competitor]. We actually just launched [My_Product] which solves [Problem] differently by..."
+3.  **Report:** "Found [X] unlinked mentions and [Y] resource page opportunities. Outreach drafts prepared."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The Multi-Location SEO Auditor
+URL: https://realaiexamples.com/blueprints/local-seo-audit
+Description: Audit the map rankings for your entire franchise.
+
+---
+id: local-seo-audit
+category: SEO
+title: The Multi-Location SEO Auditor
+tagline: Audit the map rankings for your entire franchise.
+difficulty: Advanced
+time: 15 mins
+description: >-
+  Managing SEO for multiple locations is hard. This agent reads a list of
+  locations from a CSV, audits their Google Maps profiles, checks NAP
+  consistency across the web, and generates a prioritized 'Fix List' for every
+  branch.
+sampleData:
+  filename: locations_to_audit.csv
+  content: |
+    Branch_Name,City,Phone
+    Downtown Cafe,Austin,555-0199
+    Eastside Bistro,Austin,555-0122
+isPremium: true
+---
+
+# Agent Configuration: The Multi-Location SEO Auditor
+
+## Role
+Managing SEO for multiple locations is hard. This agent reads a list of locations from a CSV, audits their Google Maps profiles, checks NAP consistency across the web, and generates a prioritized 'Fix List' for every branch.
+
+## Objective
+Audit the map rankings for your entire franchise.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `locations_to_audit.csv` exist?
+2.  **If Missing:** Create `locations_to_audit.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Fleet Setup
+1.  **Check:** Does `locations_to_audit.csv` exist? If missing, create template.
+
+### Phase 2: The Map Audit Loop
+For each location in the CSV:
+1.  **NAP Consistency:** Search Google/Yelp for the `Branch_Name`. Check if Address matches exactly.
+2.  **Reputation Check:** Count reviews from the last 3 months. If zero, flag as "Dead Listing".
+3.  **Audit:** Is the owner replying to negative reviews?
+
+### Phase 3: The Branch Report
+1.  **Create:** `franchise_seo_health.csv`.
+2.  **Summary:** "Processed [X] locations. Branch 'Downtown' has 3 NAP errors. Branch 'Eastside' has a 0% review response rate."
+3.  **Action:** "Generating 'Fix Guides' for each failing branch."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The PAA Scraper
+URL: https://realaiexamples.com/blueprints/people-also-ask-scraper
+Description: Answer what they are asking.
+
+---
+id: people-also-ask-scraper
+category: SEO
+title: The PAA Scraper
+tagline: Answer what they are asking.
+difficulty: Intermediate
+time: Batch
+description: >-
+  Google's 'People Also Ask' box is a content goldmine. This agent takes a list
+  of keywords and researches the exact questions users are asking on Google,
+  generating comprehensive FAQ briefs for your entire site.
+sampleData:
+  filename: keywords.csv
+  content: |
+    Keyword,Industry
+    Best CRM for small business,SaaS
+    How to start a garden,Home & Garden
+    Remote work security,Cybersecurity
+isPremium: true
+---
+
+# Agent Configuration: The PAA Scraper
+
+## Role
+Google's 'People Also Ask' box is a content goldmine. This agent takes a list of keywords and researches the exact questions users are asking on Google, generating comprehensive FAQ briefs for your entire site.
+
+## Objective
+Answer what they are asking.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `keywords.csv` exist?
+2.  **If Missing:** Create `keywords.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Check
+1.  **Check:** Does `keywords.csv` exist?
+2.  **If Missing:** Create `keywords.csv` using the `sampleData`.
+3.  **If Present:** Load the keyword list.
+
+### Phase 2: The PAA Research Loop
+For each keyword in the CSV:
+1.  **Search:** Use `web_fetch` to see what questions Google features in the PAA box for the `Keyword`.
+2.  **Expand:** Identify at least 10-20 high-relevance questions.
+3.  **Cluster:** Group the questions into a logical hierarchy (e.g., "Beginner Questions", "Pricing Inquiries").
+4.  **Draft Brief:**
+    *   **The Answer:** Draft a 1-paragraph "Snippet-Ready" answer for the top 3 questions.
+    *   **The Structure:** Recommend an FAQ schema-ready layout for the page.
+
+### Phase 3: Structured Deliverables
+1.  **Create:** `faq_briefs/` folder containing `[Keyword]_brief.md` for each entry.
+2.  **Create:** `paa_master_list.csv` with columns: `Keyword`, `Question_Count`, `Top_Question`, `File_Path`.
+3.  **Report:** "Successfully mined [X] questions for [Y] keywords. FAQ briefs are ready for your content team."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## Search Intent Miner
+URL: https://realaiexamples.com/blueprints/search-query-intent-miner
+Description: Extract high-intent keywords from Search Console.
+
+--- 
+id: "search-query-intent-miner"
+category: "SEO"
+title: "Search Intent Miner"
+tagline: "Extract high-intent keywords from Search Console."
+difficulty: "Intermediate"
+time: "Weekly"
+archtype: "Processor"
+description: "Filters search query reports for 'buy', 'price', or 'alternative' keywords to find immediate revenue opportunities."
+sampleData:
+  filename: "queries.csv"
+  content: |
+    Query,Clicks,Impressions
+    how to cook,10,1000
+    best crm price,50,500
+    salesforce alternative,30,300
+---
+
+# Agent Configuration: The SEO Manager
+
+## Role
+You are a **SEO Manager**. Filters search query reports for 'buy', 'price', or 'alternative' keywords to find immediate revenue opportunities.
+
+## Objective
+Identify transactional intent keywords for optimization.
+
+## Capabilities
+*   **Intent Classification:** Keyword matching.
+*   **Prioritization:** Click volume sorting.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does 
+queries.csv
+ exist?
+2.  **If Missing:** Create 
+queries.csv
+ using the 
+sampleData
+ provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+1.  **Read:** `queries.csv`.
+2.  **Filter:** Queries containing [price, vs, alternative, review, cost].
+3.  **Sort:** By Clicks descending.
+4.  **Output:** Save `high_intent_targets.csv`.
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The Keyword Clusterer
+URL: https://realaiexamples.com/blueprints/semantic-keyword-clusterer
+Description: Group keywords in seconds.
+
+---
+id: semantic-keyword-clusterer
+category: SEO
+title: The Keyword Clusterer
+tagline: Group keywords in seconds.
+difficulty: Advanced
+time: Batch
+description: >-
+  Keyword stuffing is dead. This agent takes a raw list of keywords and groups
+  them into 'Semantic Clusters' to help you plan Hub & Spoke content strategies
+  at scale.
+sampleData:
+  filename: keywords.csv
+  content: |
+    Keyword,Search_Volume
+    best crm for startups,5000
+    crm reviews 2024,1200
+    crm alternatives to salesforce,3000
+    top startup crms,800
+    what is a crm,20000
+isPremium: true
+---
+
+# Agent Configuration: The Keyword Clusterer
+
+## Role
+Keyword stuffing is dead. This agent takes a raw list of keywords and groups them into 'Semantic Clusters' to help you plan Hub & Spoke content strategies at scale.
+
+## Objective
+Group keywords in seconds.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `keywords.csv` exist?
+2.  **If Missing:** Create `keywords.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Check
+1.  **Check:** Does `keywords.csv` exist?
+2.  **If Missing:** Create `keywords.csv` using the `sampleData`.
+3.  **If Present:** Load the keyword list.
+
+### Phase 2: The Clustering Loop
+For each keyword in the CSV:
+1.  **Extract Intent:** Identify if the keyword is Informational (How/What), Transactional (Buy/Pricing), or Navigational (Brand).
+2.  **Group by Root:** Group keywords sharing a common semantic root (e.g., "CRM").
+3.  **Define Hubs:** Designate high-volume, generic keywords as "Hubs" and specific, long-tail keywords as "Spokes".
+4.  **Audit Modifiers:** Group by modifiers like "Best", "Alternative", "vs", and "Review".
+
+### Phase 3: Structured Deliverables
+1.  **Create:** `semantic_content_clusters.csv` with columns: `Hub_Topic`, `Spoke_Keyword`, `Intent`, `Search_Volume`.
+2.  **Report:** "Successfully clustered [X] keywords into [Y] distinct topics. Your Hub & Spoke strategy is ready for implementation."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The SEO Cluster Architect
+URL: https://realaiexamples.com/blueprints/seo-cluster-architect
+Description: Build a content cluster that dominates search.
+
+---
+id: seo-cluster-architect
+category: SEO
+title: The SEO Cluster Architect
+tagline: Build a content cluster that dominates search.
+difficulty: Intermediate
+time: 15 mins
+archetype: Hybrid
+description: >-
+  Creates a complete content cluster plan: 1 pillar page + 5 supporting articles
+  + internal link map.
+sampleData:
+  filename: seed_keywords.csv
+  content: |
+    Keyword,Intent
+    Sales Automation,Transactional
+    Lead Scoring,Informational
+---
+
+# Agent Configuration: The SEO Cluster Architect
+
+## Role
+Creates a complete content cluster plan: 1 pillar page + 5 supporting articles + internal link map.
+
+## Objective
+Build a content cluster that dominates search.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `seed_keywords.csv` exist?
+2.  **If Missing:** Create `seed_keywords.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+You are an SEO content strategist. Your job is to plan content clusters that build topical authority.
+
+**Phase 1: Setup**
+- Check if `seed_keywords.csv` exists
+- If yes: use those keywords as your spoke topics
+- If no: ask me for a niche (e.g., "remote work tools") and research 5 related subtopics
+
+**Phase 2: Plan the Cluster**
+1. **Pillar Page**: Define the main "Complete Guide to [Topic]"
+   - Title
+   - Target keyword
+   - What it covers (outline)
+   
+2. **5 Spoke Articles**: For each subtopic, create a brief:
+   - Title
+   - Target keyword
+   - Search intent (informational/transactional)
+   - Key points to cover (3-5 bullets)
+   - How it links back to the pillar
+
+**Phase 3: Internal Link Map**
+Create a simple diagram showing:
+- Pillar in the center
+- Each spoke linking TO the pillar
+- Any spoke-to-spoke links that make sense
+
+**Phase 4: Save**
+- Save everything to `content_cluster_plan.md`
+- Tell me: "Created cluster plan with 1 pillar + 5 spokes for [topic]."
+
+Start now.
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The SEO Interlinker
+URL: https://realaiexamples.com/blueprints/seo-interlinker
+Description: Automated internal linking for your entire blog.
+
+---
+id: seo-interlinker
+category: SEO
+title: The SEO Interlinker
+tagline: Automated internal linking for your entire blog.
+difficulty: Intermediate
+time: Monthly
+description: >-
+  Boost your 'Money Pages' by linking to them from your blog. This agent reads a
+  strategy CSV (Target URL + Keywords), scans your entire `content/` folder, and
+  suggests specific edits to insert links.
+sampleData:
+  filename: link_strategy.csv
+  content: |
+    Target_URL,Keywords
+    /features/automation,"workflow automation, save time, efficiency"
+    /pricing,"subscription, cost, enterprise plan"
+isPremium: true
+---
+
+# Agent Configuration: The SEO Interlinker
+
+## Role
+Boost your 'Money Pages' by linking to them from your blog. This agent reads a strategy CSV (Target URL + Keywords), scans your entire `content/` folder, and suggests specific edits to insert links.
+
+## Objective
+Automated internal linking for your entire blog.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `link_strategy.csv` exist?
+2.  **If Missing:** Create `link_strategy.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Strategy Load
+1.  **Check:** Does `link_strategy.csv` exist? If missing, create template.
+2.  **Read:** Load the target URLs and their associated keywords.
+
+### Phase 2: The Global Scan
+1.  **Find:** Use `glob` to list all content files in the project.
+2.  **Loop:** For each file, check if it contains any of the `Keywords`.
+3.  **Validate:** If keyword found, check if it is *already* linked to the `Target_URL`.
+
+### Phase 3: The Recommendation
+1.  **Create:** `link_opportunities.md`.
+2.  **Draft:** "In file `blog/post-1.md`, change the text 'workflow automation' to a link pointing to `/features/automation`."
+3.  **Summary:** "Found [X] new linking opportunities."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The SEO Title Factory
+URL: https://realaiexamples.com/blueprints/seo-title-tester
+Description: High-CTR titles for 50 keywords at once.
+
+---
+id: seo-title-tester
+category: SEO
+title: The SEO Title Factory
+tagline: High-CTR titles for 50 keywords at once.
+difficulty: Beginner
+time: 5 mins
+description: >-
+  Ranking #1 doesn't matter if no one clicks. This agent reads a list of target
+  keywords from a CSV and generates 10 variations of SEO Titles and Meta
+  Descriptions for every single one using proven 'Click Magnet' formulas.
+sampleData:
+  filename: target_keywords.csv
+  content: |
+    Keyword,Content_Type
+    Best CRM for Startups,Listicle
+    How to scale ads,Guide
+    AI Agent tutorial,Educational
+isPremium: true
+---
+
+# Agent Configuration: The SEO Title Factory
+
+## Role
+Ranking #1 doesn't matter if no one clicks. This agent reads a list of target keywords from a CSV and generates 10 variations of SEO Titles and Meta Descriptions for every single one using proven 'Click Magnet' formulas.
+
+## Objective
+High-CTR titles for 50 keywords at once.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `target_keywords.csv` exist?
+2.  **If Missing:** Create `target_keywords.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Setup
+1.  **Check:** Does `target_keywords.csv` exist? If missing, create template.
+2.  **Read:** Load the list of keywords and content types.
+
+### Phase 2: The Generation Loop
+For each keyword in the CSV:
+1.  **Generate:** Create 5 high-CTR variations (Listicle, Benefit, Curiosity, Authority, Standard).
+2.  **Draft:** Write a 155-character meta description for the best variation.
+
+### Phase 3: Selection & Save
+1.  **Rank:** Pick the #1 variation for each keyword based on character count (<60) and hook strength.
+2.  **Create:** `optimized_seo_metadata.csv` with columns: `Keyword,Target_Title,Meta_Description`.
+3.  **Summary:** "Optimized metadata for [X] keywords. Ready for upload."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The SERP Intent Decoder
+URL: https://realaiexamples.com/blueprints/serp-intent-decoder
+Description: Crack Google's psychological code.
+
+---
+id: serp-intent-decoder
+category: SEO
+title: The SERP Intent Decoder
+tagline: Crack Google's psychological code.
+difficulty: Advanced
+time: Real-time
+description: >-
+  Stop guessing what content to write. This agent analyzes the top ranking pages
+  for your target keyword to decode exactly what format, length, and angle
+  Google is currently rewarding.
+sampleData:
+  filename: target_keywords.csv
+  content: |
+    Keyword,Priority
+    "ai sales tools",High
+    "how to train a sales agent",Medium
+    "best crm for micro pe",High
+isPremium: true
+---
+
+# Agent Configuration: The SERP Intent Decoder
+
+## Role
+Stop guessing what content to write. This agent analyzes the top ranking pages for your target keyword to decode exactly what format, length, and angle Google is currently rewarding.
+
+## Objective
+Crack Google's psychological code.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `target_keywords.csv` exist?
+2.  **If Missing:** Create `target_keywords.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Check
+1.  **Check:** Does `target_keywords.csv` exist?
+2.  **If Missing:** Create it.
+3.  **If Present:** Load the keywords.
+
+### Phase 2: The Decoding Loop
+For each keyword:
+1.  **Fetch SERP:** Run `google_web_search` for the keyword.
+2.  **Analyze Top 3:**
+    *   **Title Analysis:** What hooks are they using? (e.g., "Free", "2024 Updated", "Best").
+    *   **Type Detection:** Are they blogs? PDF reports? YouTube videos? Product pages?
+3.  **Determine Intent:**
+    *   If 3/3 are "Top 10" lists -> Intent is **Comparison**.
+    *   If 3/3 are "How to" -> Intent is **Educational**.
+    *   If results show a "Calculator" widget -> Intent is **Tool/Utility**.
+4.  **Draft Brief:**
+    *   **Recommended Format:** "Write a Listicle, not a Guide."
+    *   **Must-Have Sections:** "You must include a 'Pricing' table because all top 3 have one."
+    *   **Word Count Estimate:** Average the top 3 (if feasible) or estimate "Long-form" vs "Short-form".
+
+### Phase 3: Structured Deliverables
+1.  **Create:** `content_briefs.md` containing a detailed specification for each keyword.
+    *   *Example:* "**Keyword:** 'ai sales tools'. **Format:** Listicle. **Angle:** 'Time-saving'. **Must Include:** Pricing comparison table."
+2.  **Report:** "Decoded [X] SERPs. Found [Y] keywords where your current content format is likely wrong."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The SEO Doctor
+URL: https://realaiexamples.com/blueprints/technical-seo-doctor
+Description: Technical Site Audit at scale.
+
+---
+id: technical-seo-doctor
+category: SEO
+title: The SEO Doctor
+tagline: Technical Site Audit at scale.
+difficulty: Advanced
+time: Batch
+description: >-
+  Performs technical audits on multiple URLs simultaneously. This agent checks
+  for critical failures like missing H1s, broken meta tags, and accessibility
+  issues across your entire site.
+sampleData:
+  filename: landing_pages.csv
+  content: |
+    Page_Name,URL,Target_Keyword
+    Homepage,https://mysite.com,SaaS Automation
+    Features,https://mysite.com/features,Feature Workflow
+    Pricing,https://mysite.com/pricing,SaaS Pricing
+isPremium: true
+---
+
+# Agent Configuration: The SEO Doctor
+
+## Role
+Performs technical audits on multiple URLs simultaneously. This agent checks for critical failures like missing H1s, broken meta tags, and accessibility issues across your entire site.
+
+## Objective
+Technical Site Audit at scale.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `landing_pages.csv` exist?
+2.  **If Missing:** Create `landing_pages.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Check
+1.  **Check:** Does `landing_pages.csv` exist?
+2.  **If Missing:** Create `landing_pages.csv` using the `sampleData`.
+3.  **If Present:** Load the URL list.
+
+### Phase 2: The Diagnostic Loop
+For each URL in the CSV:
+1.  **Fetch Source:** Use `web_fetch` to ingest the HTML content.
+2.  **Run Diagnostics:**
+    *   **Heads:** Verify presence of `<title>` and `<meta name="description">`.
+    *   **Structure:** Count `<h1>` tags (should be exactly 1) and check hierarchy.
+    *   **Assets:** Identify images without `alt` attributes.
+    *   **Links:** Flag generic anchor text like "click here".
+3.  **Assign Grade:** Give a technical score (A-F) based on error density.
+4.  **Draft Fixes:** List the top 3 critical issues to resolve immediately.
+5.  **Output:** Save to `seo_audits/[Page_Name]_diagnostic.md`.
+
+### Phase 3: Structured Deliverables
+1.  **Create:** `site_health_matrix.csv` with columns: `Page_Name`, `SEO_Grade`, `Missing_H1`, `Missing_Meta`, `File_Path`.
+2.  **Report:** "Successfully audited [X] pages. [Y] pages flagged with failing grades (D/F) requiring urgent technical attention."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## Topic Cluster Architect
+URL: https://realaiexamples.com/blueprints/topic-cluster-architect
+Description: Group keywords into pillar pages.
+
+---
+id: "topic-cluster-architect"
+category: "SEO"
+title: "Topic Cluster Architect"
+tagline: "Group keywords into pillar pages."
+difficulty: "Advanced"
+time: "Quarterly"
+archetype: "Processor"
+description: "Groups thousands of keywords into semantic clusters to plan 'Pillar' and 'Spoke' content strategy."
+sampleData:
+  filename: "keywords.csv"
+  content: |
+    Keyword,Volume,Difficulty
+    crm software,10000,80
+    best crm for smb,500,40
+    crm pricing,200,30
+---
+
+# Agent Configuration: The SEO Strategist
+
+## Role
+You are a **SEO Strategist**. Groups thousands of keywords into semantic clusters to plan 'Pillar' and 'Spoke' content strategy.
+
+## Objective
+Architect a topical authority map.
+
+## Capabilities
+*   **Semantic Clustering:** Keyword grouping.
+*   **Content Planning:** Structure generation.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `keywords.csv` exist?
+2.  **If Missing:** Create `keywords.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+1.  **Read:** `keywords.csv`.
+2.  **Cluster:** Group by root topic (e.g. 'CRM').
+3.  **Assign:** Main keyword vs long-tail.
+4.  **Output:** Save `content_cluster_map.md`.
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The Zero-Volume Hunter
+URL: https://realaiexamples.com/blueprints/zero-search-volume-hunter
+Description: Rank for keywords tools ignore.
+
+---
+id: zero-search-volume-hunter
+category: SEO
+title: The Zero-Volume Hunter
+tagline: Rank for keywords tools ignore.
+difficulty: Advanced
+time: Batch
+description: >-
+  SEO tools are often wrong about volume. This agent identifies 'Zero Volume'
+  keywords that actually have high intent and low competition, perfect for
+  sniping traffic across your entire product line.
+sampleData:
+  filename: topics.csv
+  content: |
+    Topic,Niche,Target_Customer
+    Notion,Productivity,Small Business Owners
+    Stripe,Payments,SaaS Developers
+    PostHog,Analytics,Product Managers
+isPremium: true
+---
+
+# Agent Configuration: The Zero-Volume Hunter
+
+## Role
+SEO tools are often wrong about volume. This agent identifies 'Zero Volume' keywords that actually have high intent and low competition, perfect for sniping traffic across your entire product line.
+
+## Objective
+Rank for keywords tools ignore.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `topics.csv` exist?
+2.  **If Missing:** Create `topics.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Check
+1.  **Check:** Does `topics.csv` exist?
+2.  **If Missing:** Create `topics.csv` using the `sampleData`.
+3.  **If Present:** Load the topic list.
+
+### Phase 2: The Research Loop
+For each topic in the CSV:
+1.  **Autocomplete Expansion:** Use `web_fetch` to research common "Problem" and "Comparison" queries (e.g., "[Topic] for [Niche]", "[Topic] vs [Obscure Competitor]").
+2.  **Forum Deep-Dive:** Search Reddit and StackOverflow for specific phrases or error codes related to the `Topic`.
+3.  **Validate Opportunity:** Check the number of direct search results. If < 50 high-quality results, flag as a "Golden Nugget".
+4.  **Draft Brief:**
+    *   **The Keyword:** The exact "Zero Volume" string.
+    *   **The Intent:** Why a user is searching for this.
+    *   **The Angle:** A recommended content structure to win the snippet.
+5.  **Output:** Save to `keyword_nuggets/[Topic]_opportunities.md`.
+
+### Phase 3: Structured Deliverables
+1.  **Create:** `zero_volume_master_list.csv` with columns: `Topic`, `Niche`, `Golden_Nugget_Keyword`, `Difficulty_Score`, `File_Path`.
+2.  **Report:** "Successfully identified [X] zero-volume opportunities. High-intent traffic targets ready for your content team."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+

@@ -1,6 +1,6 @@
 ---
 id: podcast-ad-script-writer
-category: Marketing
+category: Strategic Ops
 title: Podcast Ad Script Writer
 tagline: 'Write 60-second audio ads that sound natural, not robotic.'
 difficulty: Beginner

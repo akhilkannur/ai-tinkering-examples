@@ -1,14 +1,14 @@
 ---
-id: "linkedin-connection-acceptance-rate"
-category: "Social Selling"
-title: "Connection Request A/B Tester"
-tagline: "Which note gets more connects?"
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Tracks the acceptance rate of different LinkedIn connection request templates."
+id: linkedin-connection-acceptance-rate
+category: Strategic Ops
+title: Connection Request A/B Tester
+tagline: Which note gets more connects?
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: Tracks the acceptance rate of different LinkedIn connection request templates.
 sampleData:
-  filename: "connection_requests.csv"
+  filename: connection_requests.csv
   content: |
     Template_ID,Sent,Accepted
     A (Generic),100,20

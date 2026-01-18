@@ -1,6 +1,6 @@
 ---
 id: sales-battlecard-builder
-category: Sales Enablement
+category: Sales Ops
 title: The Sales Battlecard Builder
 tagline: Win against competitors.
 difficulty: Intermediate

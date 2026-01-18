@@ -1,6 +1,6 @@
 ---
 id: canonical-tag-auditor
-category: Tech SEO
+category: SEO
 title: The Canonical Fleet Auditor
 tagline: Audit duplicate content across 1000 pages.
 difficulty: Intermediate

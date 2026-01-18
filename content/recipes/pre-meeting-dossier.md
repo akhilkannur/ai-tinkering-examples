@@ -1,6 +1,6 @@
 ---
 id: pre-meeting-dossier
-category: Sales
+category: Sales Ops
 title: The Pre-Meeting Dossier
 tagline: Never go into a call blind.
 difficulty: Beginner

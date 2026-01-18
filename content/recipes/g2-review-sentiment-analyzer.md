@@ -1,6 +1,6 @@
 ---
 id: g2-review-sentiment-analyzer
-category: Marketing
+category: Strategic Ops
 title: Voice of Customer Analyzer
 tagline: Mine G2 & Capterra reviews to find product gaps and marketing hooks.
 difficulty: Intermediate

@@ -1,14 +1,16 @@
 ---
-id: "nps-by-product-scorer"
-category: "Analytics"
-title: "Product Satisfaction Score"
-tagline: "Which product makes people happiest?"
-difficulty: "Intermediate"
-time: "Quarterly"
-archetype: "Processor"
-description: "Scores products based on the Net Promoter Score (NPS) of customers who bought them."
+id: nps-by-product-scorer
+category: CRO
+title: Product Satisfaction Score
+tagline: Which product makes people happiest?
+difficulty: Intermediate
+time: Quarterly
+archetype: Processor
+description: >-
+  Scores products based on the Net Promoter Score (NPS) of customers who bought
+  them.
 sampleData:
-  filename: "nps_product.csv"
+  filename: nps_product.csv
   content: |
     Customer,Product,NPS
     John,Shirt,10

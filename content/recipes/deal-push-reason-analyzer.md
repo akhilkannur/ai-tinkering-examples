@@ -1,14 +1,16 @@
 ---
-id: "deal-push-reason-analyzer"
-category: "RevOps"
-title: "Deal Push Diagnostics"
-tagline: "Why did they delay... again?"
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Aggregates reasons for pushing close dates (e.g. 'Budget', 'Ghosting') to identify systemic sales issues."
+id: deal-push-reason-analyzer
+category: Sales Ops
+title: Deal Push Diagnostics
+tagline: Why did they delay... again?
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Aggregates reasons for pushing close dates (e.g. 'Budget', 'Ghosting') to
+  identify systemic sales issues.
 sampleData:
-  filename: "push_logs.csv"
+  filename: push_logs.csv
   content: |
     Deal,Push_Reason
     1,Budget

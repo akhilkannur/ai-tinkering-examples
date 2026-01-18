@@ -1,6 +1,6 @@
 ---
 id: ppc-intent-matcher
-category: Ads
+category: Paid Media
 title: The PPC Intent Engine
 tagline: High-intent ad keywords for your entire product line.
 difficulty: Advanced

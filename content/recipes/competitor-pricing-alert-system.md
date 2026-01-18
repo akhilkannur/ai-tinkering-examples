@@ -1,6 +1,6 @@
 ---
 id: competitor-pricing-alert-system
-category: Marketing
+category: Strategic Ops
 title: Competitor Pricing Watchdog
 tagline: Detects hidden pricing changes on competitor websites.
 difficulty: Intermediate

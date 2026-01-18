@@ -1,14 +1,16 @@
 ---
-id: "swag-inventory-forecaster"
-category: "Field Marketing"
-title: "Swag Demand Planner"
-tagline: "How many t-shirts do we need?"
-difficulty: "Beginner"
-time: "Batch"
-archetype: "Processor"
-description: "Predicts merchandise needs for an event based on estimated attendee count and historical 'Take Rate'."
+id: swag-inventory-forecaster
+category: Strategic Ops
+title: Swag Demand Planner
+tagline: How many t-shirts do we need?
+difficulty: Beginner
+time: Batch
+archetype: Processor
+description: >-
+  Predicts merchandise needs for an event based on estimated attendee count and
+  historical 'Take Rate'.
 sampleData:
-  filename: "event_estimates.csv"
+  filename: event_estimates.csv
   content: |
     Event,Expected_Attendees,Hist_Swag_Rate
     TechConf,5000,0.2

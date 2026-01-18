@@ -1,6 +1,6 @@
 ---
 id: case-study-reverse-engineer
-category: Intel
+category: Competitive Intel
 title: The Case Study Decoder
 tagline: Who are they really selling to?
 difficulty: Intermediate

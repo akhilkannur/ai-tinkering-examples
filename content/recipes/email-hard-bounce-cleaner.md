@@ -1,6 +1,6 @@
 ---
 id: email-hard-bounce-cleaner
-category: Data Hygiene
+category: Marketing Ops
 title: The Hard Bounce Cleaner
 tagline: Protect your sender reputation.
 difficulty: Beginner

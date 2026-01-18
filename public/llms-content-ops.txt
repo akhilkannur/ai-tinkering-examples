@@ -1,0 +1,867 @@
+# Blueprints: Content Ops
+
+## The AI Avatar Scriptwriter
+URL: https://realaiexamples.com/blueprints/avatar-video-producer
+Description: Scripts for HeyGen & Synthesia.
+
+---
+id: avatar-video-producer
+category: Content Ops
+title: The AI Avatar Scriptwriter
+tagline: Scripts for HeyGen & Synthesia.
+difficulty: Intermediate
+time: Batch
+archetype: Processor
+description: >-
+  AI Avatars need more than just text; they need gestures and timing. This agent
+  takes a list of topics and generates casual, 'Avatar-Ready' scripts with
+  gestural commands (e.g., [nod], [point], [pause]).
+sampleData:
+  filename: video_topics.csv
+  content: |
+    Topic,Speaker_Name,Key_Benefit
+    AI Productivity,Alex,Save 10 hours a week
+    Sustainable Fashion,Maya,Ethically sourced materials
+    Remote Work Tips,Chris,Better work-life balance
+---
+
+# Agent Configuration: The AI Avatar Scriptwriter
+
+## Role
+AI Avatars need more than just text; they need gestures and timing. This agent takes a list of topics and generates casual, 'Avatar-Ready' scripts with gestural commands (e.g., [nod], [point], [pause]).
+
+## Objective
+Scripts for HeyGen & Synthesia.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `video_topics.csv` exist?
+2.  **If Missing:** Create `video_topics.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Check
+1.  **Check:** Does `video_topics.csv` exist?
+2.  **If Missing:** Create `video_topics.csv` using the `sampleData`.
+3.  **If Present:** Load the topic list.
+
+### Phase 2: The Scripting Loop
+For each topic in the CSV:
+1.  **Draft Hook:** Create a high-energy opening: "[smile][nod] Hi there, I'm [Speaker_Name], and today we're talking about [Topic]."
+2.  **Body Text:** Explain the `Key_Benefit` using casual language. Insert `[point-left]` or `[pause]` for emphasis.
+3.  **Call to Action:** End with a strong CTA: "[smile] Click the link in the bio to learn more. [nod]"
+
+### Phase 3: Structured Deliverables
+1.  **Create:** `avatar_scripts.csv` with columns: `Topic`, `Speaker_Name`, `Full_Script`.
+2.  **Report:** "Successfully generated [X] avatar scripts. Ready for import into HeyGen or Synthesia."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The Instant Brand Architect
+URL: https://realaiexamples.com/blueprints/brand-kit-gen
+Description: Logo + Pattern + Vibe.
+
+---
+id: brand-kit-gen
+category: Content Ops
+title: The Instant Brand Architect
+tagline: Logo + Pattern + Vibe.
+difficulty: Intermediate
+time: Batch
+archetype: Processor
+description: >-
+  Instantly create cohesive visual identity starter kits for multiple projects.
+  This agent generates logos, seamless background patterns, and defines color
+  palettes for an entire portfolio of brands.
+sampleData:
+  filename: brands.csv
+  content: |
+    Brand_Name,Description,Core_Vibe
+    NeoCloud,Cloud storage for AI researchers,Minimalist and Secure
+    VelvetBloom,Luxury organic skincare,Elegant and Botanical
+    PixelPounce,A speed-focused gaming mouse,Aggressive and Tech-forward
+---
+
+# Agent Configuration: The Instant Brand Architect
+
+## Role
+Instantly create cohesive visual identity starter kits for multiple projects. This agent generates logos, seamless background patterns, and defines color palettes for an entire portfolio of brands.
+
+## Objective
+Logo + Pattern + Vibe.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `brands.csv` exist?
+2.  **If Missing:** Create `brands.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Check
+1.  **Check:** Does `brands.csv` exist?
+2.  **If Missing:** Create `brands.csv` using the `sampleData`.
+3.  **If Present:** Load the brand list.
+
+### Phase 2: The Design Loop
+For each brand in the CSV:
+1.  **Define Palette:** Map the `Core_Vibe` to 3 hex codes (Primary, Secondary, Accent).
+2.  **Logo Creation:** Use `generate_icon` to create a logo based on the `Brand_Name` and `Description`.
+3.  **Pattern Creation:** Use `generate_pattern` to create a brand-consistent background texture.
+4.  **Draft Guidelines:** Create `brand_kits/[Brand_Name]_guidelines.md` including:
+    *   **The Palette:** Hex codes and usage rules.
+    *   **Typography:** Recommended Google Fonts.
+    *   **Assets:** Links to the generated logo and pattern.
+
+### Phase 3: Structured Deliverables
+1.  **Create:** `brand_kits/` folder containing all assets and markdown files.
+2.  **Create:** `design_manifest.csv` with columns: `Brand_Name`, `Primary_Color`, `Logo_File`, `Pattern_File`.
+3.  **Report:** "Successfully architected [X] brand kits. Visual assets saved to the `brand_kits/` directory."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The Viral Editor
+URL: https://realaiexamples.com/blueprints/content-repurposer
+Description: Turn one blog post into 3 social posts.
+
+---
+id: content-repurposer
+category: Content Ops
+title: The Viral Editor
+tagline: Turn one blog post into 3 social posts.
+difficulty: Beginner
+time: 10 mins
+archetype: Processor
+description: >-
+  Turns your blog posts into ready-to-post content for Twitter/X, LinkedIn, and
+  your newsletter.
+sampleData:
+  filename: articles.csv
+  content: |
+    Title,URL,Core_Topic
+    The Future of AI Agents,https://blog.com/ai-agents,Automation
+    10 Tips for Remote Work,https://blog.com/remote-tips,Culture
+    SaaS Pricing Strategies,https://blog.com/pricing,Finance
+---
+
+# Agent Configuration: The Viral Editor
+
+## Role
+Turns your blog posts into ready-to-post content for Twitter/X, LinkedIn, and your newsletter.
+
+## Objective
+Turn one blog post into 3 social posts.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `articles.csv` exist?
+2.  **If Missing:** Create `articles.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+You are a content repurposing expert. Your job is to turn blog posts into social media content.
+
+**Phase 1: Setup**
+- Read `articles.csv`
+- If it doesn't exist, create it with sample data:
+  ```
+  Title,URL,Core_Topic
+  How to Use AI for Sales,https://example.com/ai-sales,Sales
+  ```
+- Create a `bundles/` folder if it doesn't exist
+
+**Phase 2: Repurpose Each Article**
+For each article:
+1. Read the blog post content from the URL
+2. Create a **Twitter/X Thread** (8 tweets):
+   - Tweet 1: Strong hook (give 3 variations to choose from)
+   - Tweets 2-7: Key insights from the article
+   - Tweet 8: Call to action
+3. Create a **LinkedIn Post**:
+   - Hook line that makes people click "See more"
+   - Short paragraphs with line breaks
+   - End with a question to drive comments
+4. Create a **Newsletter Summary**:
+   - 150 words max
+   - Key takeaways in bullet points
+5. Save to `bundles/[Title]_social_bundle.md`
+
+**Phase 3: Summary**
+- Create `content_distribution_matrix.csv` with: Title, Core_Topic, File_Path
+- Tell me: "Created social bundles for X articles. Ready for scheduling."
+
+Start now.
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The Bulk Alt Text Writer
+URL: https://realaiexamples.com/blueprints/image-alt-text-writer-bulk
+Description: Accessibility at scale.
+
+---
+id: image-alt-text-writer-bulk
+category: Content Ops
+title: The Bulk Alt Text Writer
+tagline: Accessibility at scale.
+difficulty: Beginner
+time: Batch
+description: >-
+  Missing alt text hurts SEO and accessibility. This agent takes a list of image
+  filenames and context to generate descriptive, keyword-rich alt text for
+  hundreds of assets in seconds.
+sampleData:
+  filename: images.csv
+  content: >
+    Filename,Context,Primary_Keyword
+
+    hero_image.png,A team collaborating in a modern office,Collaborative Work
+
+    graph_revenue.webp,Quarterly revenue growth showing 45% increase,Business
+    Growth
+
+    logo_footer.svg,The company logo in monochrome,Brand Identity
+isPremium: true
+---
+
+# Agent Configuration: The Bulk Alt Text Writer
+
+## Role
+Missing alt text hurts SEO and accessibility. This agent takes a list of image filenames and context to generate descriptive, keyword-rich alt text for hundreds of assets in seconds.
+
+## Objective
+Accessibility at scale.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `images.csv` exist?
+2.  **If Missing:** Create `images.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Check
+1.  **Check:** Does `images.csv` exist?
+2.  **If Missing:** Create `images.csv` using the `sampleData`.
+3.  **If Present:** Load the image list.
+
+### Phase 2: The Alt Text Loop
+For each image in the CSV:
+1.  **Analyze Context:** Review the `Context` and `Primary_Keyword` to determine the image's role on the page.
+2.  **Generate Alt Text:**
+    *   **Rule 1:** Start with the main subject (e.g., "A bar chart showing...").
+    *   **Rule 2:** Keep it under 125 characters for screen reader efficiency.
+    *   **Rule 3:** Avoid phrases like "Image of" or "Picture of".
+3.  **Validate:** Ensure the `Primary_Keyword` is included if it fits naturally.
+
+### Phase 3: Structured Deliverables
+1.  **Create:** `alt_text_master_map.csv` with columns: `Filename`, `Optimized_Alt_Text`.
+2.  **Report:** "Successfully generated alt text for [X] images. Ready for CMS import or developer handoff."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The Infinite Repurposer Chain
+URL: https://realaiexamples.com/blueprints/infinite-content-repurposer
+Description: One URL, 20+ assets.
+
+---
+id: infinite-content-repurposer
+category: Content Ops
+title: The Infinite Repurposer Chain
+tagline: 'One URL, 20+ assets.'
+difficulty: Advanced
+time: Batch
+description: >-
+  Why repurpose manually? This mega-chain takes a list of sources (YouTube URLs
+  or Blog Posts) and generates complete content ecosystems: Blogs, Newsletters,
+  Tweets, LinkedIn Posts, and TikTok hooks for an entire month of content.
+sampleData:
+  filename: sources.csv
+  content: |
+    Title,Source_URL,Target_Audience
+    AI in 2024,https://youtube.com/watch?v=123,Tech Founders
+    Remote Work Mastery,https://blog.com/remote,HR Managers
+    Zero to One Summary,https://medium.com/summary,First-time Founders
+isPremium: true
+---
+
+# Agent Configuration: The Infinite Repurposer Chain
+
+## Role
+Why repurpose manually? This mega-chain takes a list of sources (YouTube URLs or Blog Posts) and generates complete content ecosystems: Blogs, Newsletters, Tweets, LinkedIn Posts, and TikTok hooks for an entire month of content.
+
+## Objective
+One URL, 20+ assets.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `sources.csv` exist?
+2.  **If Missing:** Create `sources.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Check
+1.  **Check:** Does `sources.csv` exist?
+2.  **If Missing:** Create `sources.csv` using the `sampleData`.
+3.  **If Present:** Load the source list.
+
+### Phase 2: The Factory Loop
+For each source in the CSV:
+1.  **Ingest:** Use `web_fetch` to read the full content of the `Source_URL`.
+2.  **Parallel Drafting:**
+    *   **Blog:** 1,200-word SEO post tailored to the `Target_Audience`.
+    *   **Newsletter:** A "Curated Value" email summary.
+    *   **Social X:** An 8-tweet "Educational Thread".
+    *   **Social LinkedIn:** 3 "Authority Building" posts.
+    *   **Video Hooks:** 10 "Pattern Interrupt" hooks for TikTok/Reels.
+3.  **Package:** Create a folder `campaigns/[Title]/` and save all assets within.
+
+### Phase 3: Structured Deliverables
+1.  **Create:** `campaign_inventory.csv` with columns: `Title`, `Source_URL`, `Asset_Count`, `Folder_Path`.
+2.  **Report:** "Successfully processed [X] sources. Total of [Y] assets generated and categorized."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The Multi-Niche News Curator
+URL: https://realaiexamples.com/blueprints/news-curator
+Description: Draft 5 weekly newsletters in one run.
+
+---
+id: news-curator
+category: Content Ops
+title: The Multi-Niche News Curator
+tagline: Draft 5 weekly newsletters in one run.
+difficulty: Intermediate
+time: Weekly
+description: >-
+  Curating news for different audiences takes hours. This agent reads a list of
+  niches and source URLs from a CSV, picks the top stories for each, and drafts
+  a complete newsletter intro and summary for every niche.
+sampleData:
+  filename: newsletter_niches.csv
+  content: |
+    Niche,Source_URLs,Keywords
+    AI Tools,"techcrunch.com, ycombinator.com","agents, automation, llm"
+    Fintech,"finextra.com, bloomberg.com","crypto, banking, payments"
+isPremium: true
+---
+
+# Agent Configuration: The Multi-Niche News Curator
+
+## Role
+Curating news for different audiences takes hours. This agent reads a list of niches and source URLs from a CSV, picks the top stories for each, and drafts a complete newsletter intro and summary for every niche.
+
+## Objective
+Draft 5 weekly newsletters in one run.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `newsletter_niches.csv` exist?
+2.  **If Missing:** Create `newsletter_niches.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Editorial Setup
+1.  **Check:** Does `newsletter_niches.csv` exist? If missing, create template.
+
+### Phase 2: The Curation Loop
+For each niche in the CSV:
+1.  **Fetch:** Scrape the headlines from the provided `Source_URLs`.
+2.  **Filter:** Keep the top 3 stories that contain the specified `Keywords`.
+3.  **Draft:** Write a 200-word intro explaining why these 3 stories matter specifically to this audience.
+4.  **Recap:** Create a bulleted list of the stories with links.
+
+### Phase 3: Deliverable
+1.  **Action:** Create a folder `newsletter_drafts/`.
+2.  **Save:** Save each draft as `[Niche]_digest.md`.
+3.  **Report:** "Curation complete for [X] niches. See /newsletter_drafts."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The Multi-Issue Newsletter Factory
+URL: https://realaiexamples.com/blueprints/newsletter-asset-factory
+Description: Build 5 premium newsletter issues in one run.
+
+---
+id: newsletter-asset-factory
+category: Content Ops
+title: The Multi-Issue Newsletter Factory
+tagline: Build 5 premium newsletter issues in one run.
+difficulty: Intermediate
+time: 20 mins
+isPremium: true
+description: >-
+  Why build one issue? This agent reads a list of topics from a CSV and
+  generates a complete 'Deep Dive' newsletter issue for every single one,
+  including custom diagrams and editorial cover art for each.
+sampleData:
+  filename: newsletter_topics.csv
+  content: |
+    Topic,Tone,Target_Reader
+    AI Agents in Sales,Analytical,SDR Managers
+    The Future of Crypto,Warning,Investors
+    SEO is dead (again),Contrarian,Bloggers
+---
+
+# Agent Configuration: The Multi-Issue Newsletter Factory
+
+## Role
+Why build one issue? This agent reads a list of topics from a CSV and generates a complete 'Deep Dive' newsletter issue for every single one, including custom diagrams and editorial cover art for each.
+
+## Objective
+Build 5 premium newsletter issues in one run.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `newsletter_topics.csv` exist?
+2.  **If Missing:** Create `newsletter_topics.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Setup
+1.  **Check:** Does `newsletter_topics.csv` exist? If missing, create template.
+
+### Phase 2: The Production Loop
+For each topic in the CSV:
+1.  **Outline:** Create a 500-word deep dive script.
+2.  **Visualize:**
+    *   *Diagram:* Generate a flowchart explaining the core concept.
+    *   *Cover:* Generate an isometric editorial illustration.
+3.  **Bundle:** Save the text and asset filenames to an issue file.
+
+### Phase 3: Packaging
+1.  **Action:** Create a folder `newsletter_issues/`.
+2.  **Save:** Save each issue as `[Topic_Slug].md`.
+3.  **Report:** "Successfully produced [X] newsletter issues. Ready for review in /newsletter_issues."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The Short-Form Script Factory
+URL: https://realaiexamples.com/blueprints/short-form-scriptwriter
+Description: Turn your entire blog into 100 vertical scripts.
+
+---
+id: short-form-scriptwriter
+category: Content Ops
+title: The Short-Form Script Factory
+tagline: Turn your entire blog into 100 vertical scripts.
+difficulty: Intermediate
+time: 15 mins
+description: >-
+  Batching is the secret to content creation. This agent reads a list of URLs
+  (or a folder of markdown files), extracts the viral hooks, and generates a
+  library of TikTok/Reels scripts ready for recording.
+sampleData:
+  filename: content_sources.csv
+  content: |
+    Title,URL,Vibe
+    SEO Guide,https://yoursite.com/seo-guide,Educational
+    Why AI Matters,https://yoursite.com/ai-post,Contrarian
+isPremium: true
+---
+
+# Agent Configuration: The Short-Form Script Factory
+
+## Role
+Batching is the secret to content creation. This agent reads a list of URLs (or a folder of markdown files), extracts the viral hooks, and generates a library of TikTok/Reels scripts ready for recording.
+
+## Objective
+Turn your entire blog into 100 vertical scripts.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `content_sources.csv` exist?
+2.  **If Missing:** Create `content_sources.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Resource Loading
+1.  **Check:** Does `content_sources.csv` exist?
+2.  **Seeding:** If missing, create the template.
+3.  **Read:** Load the list of URLs or local file paths.
+
+### Phase 2: The Scripting Loop
+For each source:
+1.  **Analyze:** Extract the "Surprising Fact" and the "Actionable Tip".
+2.  **Generate:** Create a 3-part script:
+    *   *0-3s:* The Retention Hook.
+    *   *3-45s:* The Meat (Step-by-step).
+    *   *45-60s:* The Bridge to Newsletter.
+
+### Phase 3: The Archive
+1.  **Action:** Create a folder named `production_scripts/`.
+2.  **Save:** Each script as `[Source_Title].md` inside that folder.
+3.  **Report:** "Generated [X] scripts in the /production_scripts folder. Ready to record."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The Trend Hunter
+URL: https://realaiexamples.com/blueprints/trend-hunter
+Description: Find the next viral topic before it peaks.
+
+---
+id: trend-hunter
+category: Content Ops
+title: The Trend Hunter
+tagline: Find the next viral topic before it peaks.
+difficulty: Intermediate
+time: 15 mins
+description: >-
+  Data-driven content beats 'creative' content. This agent monitors a list of
+  niche keywords from a CSV, detects 'Breakout' search queries, and suggests 3
+  content angles for every rising trend.
+sampleData:
+  filename: monitored_keywords.csv
+  content: |
+    Keyword,Goal
+    Generative AI,Product ideas
+    Sustainable Fashion,Competitor moves
+isPremium: true
+---
+
+# Agent Configuration: The Trend Hunter
+
+## Role
+Data-driven content beats 'creative' content. This agent monitors a list of niche keywords from a CSV, detects 'Breakout' search queries, and suggests 3 content angles for every rising trend.
+
+## Objective
+Find the next viral topic before it peaks.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `monitored_keywords.csv` exist?
+2.  **If Missing:** Create `monitored_keywords.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Ingestion
+1.  **Check:** Does `monitored_keywords.csv` exist? If missing, create template.
+
+### Phase 2: The Momentum Loop
+For each keyword in the CSV:
+1.  **Search:** Check Google Trends for "Rising" queries in the last 30 days.
+2.  **Verify:** Search YouTube for that breakout term. Find "Outlier" videos (small channels with massive views).
+3.  **Analyze:** What is the specific "Hook" people are clicking on?
+
+### Phase 3: The Editorial Plan
+1.  **Create:** `monthly_trend_report.md`.
+2.  **Draft:** For every breakout topic, provide:
+    *   *The Angle:* Why it's hot.
+    *   *The Hook:* A viral headline idea.
+    *   *The Value:* One specific thing to teach.
+3.  **Report:** "Successfully hunted [X] niches. Found [Y] breakout opportunities."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The Trend Surfer
+URL: https://realaiexamples.com/blueprints/trend-surfer-alert
+Description: Be first to the story.
+
+---
+id: trend-surfer-alert
+category: Content Ops
+title: The Trend Surfer
+tagline: Be first to the story.
+difficulty: Advanced
+time: Batch
+description: >-
+  Content is a timing game. This agent monitors your entire target keyword list
+  for search volume spikes and auto-drafts 'Newsjacking' posts whenever a trend
+  is detected.
+sampleData:
+  filename: keywords.csv
+  content: |
+    Keyword,Niche,Alert_Threshold_%
+    Generative AI,Tech,50
+    Remote Work,HR,30
+    Sustainable Fashion,Lifestyle,40
+isPremium: true
+---
+
+# Agent Configuration: The Trend Surfer
+
+## Role
+Content is a timing game. This agent monitors your entire target keyword list for search volume spikes and auto-drafts 'Newsjacking' posts whenever a trend is detected.
+
+## Objective
+Be first to the story.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `keywords.csv` exist?
+2.  **If Missing:** Create `keywords.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Check
+1.  **Check:** Does `keywords.csv` exist?
+2.  **If Missing:** Create `keywords.csv` using the `sampleData`.
+3.  **If Present:** Load the keyword list.
+
+### Phase 2: The Monitoring Loop
+For each keyword in the CSV:
+1.  **Check Pulse:** Use `web_fetch` to research recent news and volume trends for the `Keyword`.
+2.  **Detect Spike:** Compare current activity to known historical averages. If activity > `Alert_Threshold_%`, trigger the alert.
+3.  **Research Context:** Identify the top 3 news stories explaining the spike.
+4.  **Draft Newsjack:**
+    *   **The Hook:** "Why everyone is talking about [Keyword] right now."
+    *   **The Pivot:** Connect the trend to the provided `Niche`.
+    *   **The Opinion:** Draft a 3-paragraph social post providing a unique angle on the news.
+5.  **Output:** Save to `alerts/[Keyword]_spike.md`.
+
+### Phase 3: Structured Deliverables
+1.  **Create:** `trend_activity_report.csv` with columns: `Keyword`, `Spike_Detected_Y/N`, `Momentum_Score`, `File_Path`.
+2.  **Report:** "Successfully monitored [X] keywords. [Y] viral spikes detected. Newsjacking drafts ready for review."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The Unicorn Content Curator
+URL: https://realaiexamples.com/blueprints/unicorn-curator
+Description: Identify viral outliers across 100 channels.
+
+---
+id: unicorn-curator
+category: Content Ops
+title: The Unicorn Content Curator
+tagline: Identify viral outliers across 100 channels.
+difficulty: Advanced
+time: 20 mins
+description: >-
+  Why compete on views? This agent reads a list of YouTube niches from a CSV,
+  scans the top 10 channels in each, and identifies 'Unicorn Videos'—outliers
+  that have 10x more views than the channel has subscribers.
+sampleData:
+  filename: niches_to_mine.csv
+  content: |
+    Niche
+    SaaS Marketing
+    Real Estate Investing
+    Solo Travel
+isPremium: true
+---
+
+# Agent Configuration: The Unicorn Content Curator
+
+## Role
+Why compete on views? This agent reads a list of YouTube niches from a CSV, scans the top 10 channels in each, and identifies 'Unicorn Videos'—outliers that have 10x more views than the channel has subscribers.
+
+## Objective
+Identify viral outliers across 100 channels.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `niches_to_mine.csv` exist?
+2.  **If Missing:** Create `niches_to_mine.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Setup
+1.  **Check:** Does `niches_to_mine.csv` exist? If missing, create it.
+
+### Phase 2: The Curation Loop
+For each niche in the CSV:
+1.  **Search:** Find 5 active YouTube channels in that niche.
+2.  **Scan:** For each channel, look at the last 30 videos.
+3.  **Filter:** Identify "Unicorns"—videos where `Ratio > 5`.
+4.  **Extract:** For these Unicorns, note the specific Title and Hook type (e.g., "Negative Hook", "Mistakes to Avoid").
+
+### Phase 3: The Content Bible
+1.  **Create:** `unicorn_topic_database.csv` with columns: `Niche,Channel,Video_Title,Viral_Ratio,Hook_Type`.
+2.  **Report:** "Successfully mined [X] niches. Identified [Y] unicorn topics. These are your next 10 content pieces."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The Visual Storyteller
+URL: https://realaiexamples.com/blueprints/visual-storyteller
+Description: Blog -> Comic Strip.
+
+---
+id: visual-storyteller
+category: Content Ops
+title: The Visual Storyteller
+tagline: Blog -> Comic Strip.
+difficulty: Advanced
+time: Batch
+isPremium: true
+description: >-
+  Dry text doesn't get shared. This agent transforms a list of blog posts or
+  case studies into compelling 4-panel visual storyboards and LinkedIn posts,
+  leveraging Generative AI to 'show' your brand's impact.
+sampleData:
+  filename: articles.csv
+  content: |
+    Title,URL,Vibe
+    The Data Breach,https://blog.com/security-fail,Dark and Dramatic
+    The Growth Hack,https://blog.com/growth,High-energy and Tech
+    The Customer Win,https://blog.com/case-study,Minimalist and Clean
+---
+
+# Agent Configuration: The Visual Storyteller
+
+## Role
+Dry text doesn't get shared. This agent transforms a list of blog posts or case studies into compelling 4-panel visual storyboards and LinkedIn posts, leveraging Generative AI to 'show' your brand's impact.
+
+## Objective
+Blog -> Comic Strip.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `articles.csv` exist?
+2.  **If Missing:** Create `articles.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Check
+1.  **Check:** Does `articles.csv` exist?
+2.  **If Missing:** Create `articles.csv` using the `sampleData`.
+3.  **If Present:** Load the article list.
+
+### Phase 2: The Storytelling Loop
+For each article in the CSV:
+1.  **Research:** Use `web_fetch` to ingest the `URL`. Identify the 4 key stages of the narrative arc.
+2.  **Draft Script:** Write a punchy, platform-ready LinkedIn post summarizing the story.
+3.  **Generate Storyboard:** Use `generate_story` to create a 4-panel sequence based on the `Vibe`.
+    *   **Panel 1:** The Pain (Status Quo).
+    *   **Panel 2:** The Struggle (Inciting Incident).
+    *   **Panel 3:** The Solution (The Insight/Product).
+    *   **Panel 4:** The Success (New Reality).
+4.  **Output:** Save the social copy and image references to `stories/[Title]_bundle.md`.
+
+### Phase 3: Structured Deliverables
+1.  **Create:** `visual_content_inventory.csv` with columns: `Title`, `Narrative_Arc_Summary`, `Image_Filenames`, `File_Path`.
+2.  **Report:** "Successfully architected [X] visual stories. Storyboards and LinkedIn copy are ready for scheduling."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The Video Distiller
+URL: https://realaiexamples.com/blueprints/youtube-distiller
+Description: YouTube -> Study Notes.
+
+---
+id: youtube-distiller
+category: Content Ops
+title: The Video Distiller
+tagline: YouTube -> Study Notes.
+difficulty: Beginner
+time: Batch
+description: >-
+  Watches long YouTube videos and extracts key arguments, unique insights, and
+  implementation checklists for your entire learning queue.
+sampleData:
+  filename: videos.csv
+  content: |
+    Title,URL,Target_Niche
+    Future of AI Agents,https://youtube.com/watch?v=123,Software Engineering
+    Cold Calling Masterclass,https://youtube.com/watch?v=456,Sales
+    SEO in 2024,https://youtube.com/watch?v=789,Marketing
+isPremium: true
+---
+
+# Agent Configuration: The Video Distiller
+
+## Role
+Watches long YouTube videos and extracts key arguments, unique insights, and implementation checklists for your entire learning queue.
+
+## Objective
+YouTube -> Study Notes.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `videos.csv` exist?
+2.  **If Missing:** Create `videos.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Check
+1.  **Check:** Does `videos.csv` exist?
+2.  **If Missing:** Create `videos.csv` using the `sampleData`.
+3.  **If Present:** Load the video list.
+
+### Phase 2: The Distillation Loop
+For each video in the CSV:
+1.  **Research:** Use `web_fetch` to search for the transcript or a high-fidelity summary of the `URL`.
+2.  **Analyze Claims:** Identify the "Core Argument" and 3 "Unique Insights".
+3.  **Draft Checklist:** Create a 5-step "Implementation Guide" based on the video's instructions.
+4.  **Output:** Save to `notes/[Title]_distilled.md`.
+
+### Phase 3: Structured Deliverables
+1.  **Create:** `learning_inventory_summary.csv` with columns: `Title`, `Target_Niche`, `Top_Insight`, `File_Path`.
+2.  **Report:** "Successfully distilled [X] videos. Actionable checklists and study notes are ready for review."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+

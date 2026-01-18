@@ -1,6 +1,6 @@
 ---
 id: about-page-storyteller
-category: Brand
+category: Content Ops
 title: The About Page Storyteller
 tagline: Build trust with a data-backed brand story.
 difficulty: Intermediate

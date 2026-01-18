@@ -1,6 +1,6 @@
 ---
 id: case-study-factory
-category: Sales Enablement
+category: Sales Ops
 title: The Case Study Factory
 tagline: Turn 10 transcripts into 10 closed deals.
 difficulty: Beginner

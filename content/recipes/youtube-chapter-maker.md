@@ -1,6 +1,6 @@
 ---
 id: youtube-chapter-maker
-category: YouTube
+category: Content Ops
 title: The Chapter Maker
 tagline: Rank for key moments.
 difficulty: Intermediate

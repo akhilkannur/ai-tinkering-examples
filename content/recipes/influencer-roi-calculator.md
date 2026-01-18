@@ -1,6 +1,6 @@
 ---
 id: influencer-roi-calculator
-category: Influencer Marketing
+category: Strategic Ops
 title: The Influencer ROI Calculator
 tagline: Did that shoutout actually pay off?
 difficulty: Beginner

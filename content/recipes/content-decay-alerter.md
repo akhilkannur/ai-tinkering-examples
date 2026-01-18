@@ -1,6 +1,6 @@
 ---
 id: content-decay-alerter
-category: SEO Maintenance
+category: SEO
 title: The Content Decay Alerter
 tagline: Save your traffic before it's gone.
 difficulty: Intermediate

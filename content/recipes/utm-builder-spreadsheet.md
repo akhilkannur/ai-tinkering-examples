@@ -1,6 +1,6 @@
 ---
 id: utm-builder-spreadsheet
-category: Ad Ops
+category: Paid Media
 title: The UTM Builder Formula
 tagline: Standardize your tracking links.
 difficulty: Beginner

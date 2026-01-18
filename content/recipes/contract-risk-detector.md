@@ -1,6 +1,6 @@
 ---
 id: contract-risk-detector
-category: Legal Ops
+category: Strategic Ops
 title: The Contract Risk Detector
 tagline: Find the 'gotchas' in the PDF.
 difficulty: Experimental

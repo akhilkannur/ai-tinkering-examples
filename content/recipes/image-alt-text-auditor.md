@@ -1,14 +1,16 @@
---- 
-id: "image-alt-text-auditor"
-category: "Technical SEO"
-title: "Accessibility Auditor"
-tagline: "Ensure every image has descriptive text."
-difficulty: "Beginner"
-time: "Batch"
-archtype: "Processor"
-description: "Scans a list of image tags and checks if the `alt` attribute is present and meaningful (longer than 5 chars)."
+---
+id: image-alt-text-auditor
+category: SEO
+title: Accessibility Auditor
+tagline: Ensure every image has descriptive text.
+difficulty: Beginner
+time: Batch
+archtype: Processor
+description: >-
+  Scans a list of image tags and checks if the `alt` attribute is present and
+  meaningful (longer than 5 chars).
 sampleData:
-  filename: "images.csv"
+  filename: images.csv
   content: |
     Image_URL,Alt_Text
     img1.jpg,Man looking at computer

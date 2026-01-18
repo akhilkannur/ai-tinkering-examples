@@ -1,14 +1,14 @@
---- 
-id: "canonical-url-verifier"
-category: "Technical SEO"
-title: "Canonical Tag Consistency"
-tagline: "Prevent duplicate content issues."
-difficulty: "Advanced"
-time: "Monthly"
-archtype: "Processor"
-description: "Checks if the page URL matches the Canonical URL tag. Flags mismatches."
+---
+id: canonical-url-verifier
+category: SEO
+title: Canonical Tag Consistency
+tagline: Prevent duplicate content issues.
+difficulty: Advanced
+time: Monthly
+archtype: Processor
+description: Checks if the page URL matches the Canonical URL tag. Flags mismatches.
 sampleData:
-  filename: "canonicals.csv"
+  filename: canonicals.csv
   content: |
     Page_URL,Canonical_Tag
     /product-a,/product-a

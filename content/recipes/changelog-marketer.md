@@ -1,6 +1,6 @@
 ---
 id: changelog-marketer
-category: SaaS
+category: Strategic Ops
 title: The Changelog Marketer
 tagline: Your updates are marketing assets.
 difficulty: Beginner

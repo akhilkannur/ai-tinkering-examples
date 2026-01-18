@@ -1,6 +1,6 @@
 ---
 id: autonomous-project-manager
-category: Engineering
+category: Strategic Ops
 title: The Autonomous Project Manager
 tagline: The 'Ralph Wiggum' Loop.
 difficulty: Advanced

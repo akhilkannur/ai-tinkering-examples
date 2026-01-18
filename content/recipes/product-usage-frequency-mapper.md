@@ -1,14 +1,14 @@
---- 
-id: "product-usage-frequency-mapper"
-category: "Product Analytics"
-title: "Power User Identifier"
-tagline: "Who logs in every single day?"
-difficulty: "Beginner"
-time: "Monthly"
-archtype: "Processor"
-description: "Segments users based on login frequency (DAU/MAU) to find your champions."
+---
+id: product-usage-frequency-mapper
+category: CRO
+title: Power User Identifier
+tagline: Who logs in every single day?
+difficulty: Beginner
+time: Monthly
+archtype: Processor
+description: Segments users based on login frequency (DAU/MAU) to find your champions.
 sampleData:
-  filename: "logins.csv"
+  filename: logins.csv
   content: |
     User,Login_Date
     Alice,2023-10-01

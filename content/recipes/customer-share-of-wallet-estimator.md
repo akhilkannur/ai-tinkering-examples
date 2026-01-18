@@ -1,14 +1,16 @@
 ---
-id: "customer-share-of-wallet-estimator"
-category: "E-commerce Growth"
-title: "Share of Wallet Estimator"
-tagline: "How much more could they spend?"
-difficulty: "Advanced"
-time: "Yearly"
-archetype: "Processor"
-description: "Estimates total potential spend vs actual spend based on customer industry/size proxies."
+id: customer-share-of-wallet-estimator
+category: E-commerce
+title: Share of Wallet Estimator
+tagline: How much more could they spend?
+difficulty: Advanced
+time: Yearly
+archetype: Processor
+description: >-
+  Estimates total potential spend vs actual spend based on customer
+  industry/size proxies.
 sampleData:
-  filename: "customer_potential.csv"
+  filename: customer_potential.csv
   content: |
     Customer,Employees,Avg_Spend_Per_Head,Actual_Spend
     Acme,100,10,500

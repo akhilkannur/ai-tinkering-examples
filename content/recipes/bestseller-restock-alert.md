@@ -1,14 +1,16 @@
 ---
-id: "bestseller-restock-alert"
-category: "E-commerce Merchandising"
-title: "Back-in-Stock Campaigner"
-tagline: "Launch ads when bestsellers return."
-difficulty: "Intermediate"
-time: "Weekly"
-archetype: "Processor"
-description: "Monitors inventory levels of 'A-Class' SKUs and triggers a marketing alert when stock goes from 0 to >100."
+id: bestseller-restock-alert
+category: E-commerce
+title: Back-in-Stock Campaigner
+tagline: Launch ads when bestsellers return.
+difficulty: Intermediate
+time: Weekly
+archetype: Processor
+description: >-
+  Monitors inventory levels of 'A-Class' SKUs and triggers a marketing alert
+  when stock goes from 0 to >100.
 sampleData:
-  filename: "inventory_log.csv"
+  filename: inventory_log.csv
   content: |
     SKU,Class,Old_Stock,New_Stock
     Shirt-Blue,A,0,500

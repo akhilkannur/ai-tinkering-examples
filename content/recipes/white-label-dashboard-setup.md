@@ -1,6 +1,6 @@
 ---
 id: white-label-dashboard-setup
-category: Agency
+category: Strategic Ops
 title: The White Label Dashboard Setup
 tagline: Standardize your client reporting.
 difficulty: Beginner

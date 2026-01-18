@@ -1,6 +1,6 @@
 ---
 id: review-sentiment-quantifier
-category: Intel
+category: Competitive Intel
 title: The Review Sentiment Factory
 tagline: Quantify the emotion of 1000+ customer reviews.
 difficulty: Advanced

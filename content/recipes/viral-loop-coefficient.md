@@ -1,14 +1,16 @@
 ---
-id: "viral-loop-coefficient"
-category: "PLG Sales"
-title: "Viral Coefficient Tracker"
-tagline: "Are users inviting their friends?"
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Calculates the K-factor (Viral Coefficient) by tracking the number of invites sent per active user."
+id: viral-loop-coefficient
+category: Sales Ops
+title: Viral Coefficient Tracker
+tagline: Are users inviting their friends?
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Calculates the K-factor (Viral Coefficient) by tracking the number of invites
+  sent per active user.
 sampleData:
-  filename: "invites.csv"
+  filename: invites.csv
   content: |
     User,Invites_Sent,Invites_Accepted
     John,5,2

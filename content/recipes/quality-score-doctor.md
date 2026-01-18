@@ -1,6 +1,6 @@
 ---
 id: quality-score-doctor
-category: Paid Search
+category: Paid Media
 title: The Quality Score Doctor
 tagline: Diagnose why your CPC is high.
 difficulty: Intermediate

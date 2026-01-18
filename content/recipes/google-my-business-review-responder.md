@@ -1,6 +1,6 @@
 ---
 id: google-my-business-review-responder
-category: Marketing
+category: Strategic Ops
 title: Local Review Responder
 tagline: Write SEO-friendly replies to Google Reviews in seconds.
 difficulty: Beginner

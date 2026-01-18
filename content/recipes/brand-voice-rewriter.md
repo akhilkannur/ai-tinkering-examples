@@ -1,6 +1,6 @@
 ---
 id: brand-voice-rewriter
-category: Marketing
+category: Strategic Ops
 title: Brand Voice Chameleon
 tagline: Rewrite any text to match your specific brand personality.
 difficulty: Intermediate

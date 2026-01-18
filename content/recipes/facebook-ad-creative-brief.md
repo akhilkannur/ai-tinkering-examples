@@ -1,6 +1,6 @@
 ---
 id: facebook-ad-creative-brief
-category: Ads
+category: Paid Media
 title: The Facebook Ad Creative Brief
 tagline: High-converting visual concepts at scale.
 difficulty: Intermediate

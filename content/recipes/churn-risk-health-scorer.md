@@ -1,14 +1,16 @@
---- 
-id: "churn-risk-health-scorer"
-category: "RevOps"
-title: "Churn Risk Calculator"
-tagline: "Predict churn before it happens."
-difficulty: "Advanced"
-time: "Weekly"
-archtype: "Processor"
-description: "Calculates a composite 'Health Score' based on login frequency, support tickets, and NPS."
+---
+id: churn-risk-health-scorer
+category: Sales Ops
+title: Churn Risk Calculator
+tagline: Predict churn before it happens.
+difficulty: Advanced
+time: Weekly
+archtype: Processor
+description: >-
+  Calculates a composite 'Health Score' based on login frequency, support
+  tickets, and NPS.
 sampleData:
-  filename: "health_data.csv"
+  filename: health_data.csv
   content: |
     Customer,Logins_Last_30d,Open_Tickets,NPS
     Acme,5,10,2

@@ -1,14 +1,16 @@
 ---
-id: "renewal-risk-ghosting-alert"
-category: "RevOps"
-title: "Renewal Ghosting Detector"
-tagline: "Flag accounts in renewal that haven't replied lately."
-difficulty: "Intermediate"
-time: "Weekly"
-archetype: "Processor"
-description: "Cross-references upcoming renewals with email logs to find customers who have stopped responding."
+id: renewal-risk-ghosting-alert
+category: Sales Ops
+title: Renewal Ghosting Detector
+tagline: Flag accounts in renewal that haven't replied lately.
+difficulty: Intermediate
+time: Weekly
+archetype: Processor
+description: >-
+  Cross-references upcoming renewals with email logs to find customers who have
+  stopped responding.
 sampleData:
-  filename: "renewal_audit.txt"
+  filename: renewal_audit.txt
   content: |
     [Renewals]
     Acme, 2024-01-01

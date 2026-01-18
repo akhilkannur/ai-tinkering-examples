@@ -1,6 +1,6 @@
 ---
 id: tam-calculator
-category: Strategy
+category: Strategic Ops
 title: The AI TAM Researcher
 tagline: Calculate your market size using real-world data.
 difficulty: Intermediate

@@ -1,14 +1,16 @@
---- 
-id: "deal-desk-discount-approver"
-category: "RevOps"
-title: "Discount Guardrails Bot"
-tagline: "Auto-flag quotes with excessive discounts."
-difficulty: "Intermediate"
-time: "Daily"
-archtype: "Processor"
-description: "Checks a CSV of draft quotes to flag any line items with discounts > 20% for manager approval."
+---
+id: deal-desk-discount-approver
+category: Sales Ops
+title: Discount Guardrails Bot
+tagline: Auto-flag quotes with excessive discounts.
+difficulty: Intermediate
+time: Daily
+archtype: Processor
+description: >-
+  Checks a CSV of draft quotes to flag any line items with discounts > 20% for
+  manager approval.
 sampleData:
-  filename: "draft_quotes.csv"
+  filename: draft_quotes.csv
   content: |
     Quote_ID,Product,List_Price,Net_Price,Discount_Percent
     Q-101,SaaS Pro,100,80,20

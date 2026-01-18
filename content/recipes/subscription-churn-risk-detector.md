@@ -1,14 +1,16 @@
 ---
-id: "subscription-churn-risk-detector"
-category: "Retention Marketing"
-title: "Subscription Churn Risk"
-tagline: "Flag subscribers who paused or skipped."
-difficulty: "Intermediate"
-time: "Weekly"
-archetype: "Processor"
-description: "Flags subscribers who have paused or skipped 2 consecutive months as high-risk for cancellation."
+id: subscription-churn-risk-detector
+category: Retention
+title: Subscription Churn Risk
+tagline: Flag subscribers who paused or skipped.
+difficulty: Intermediate
+time: Weekly
+archetype: Processor
+description: >-
+  Flags subscribers who have paused or skipped 2 consecutive months as high-risk
+  for cancellation.
 sampleData:
-  filename: "sub_logs.csv"
+  filename: sub_logs.csv
   content: |
     Subscriber,Month,Status
     John,Jan,Active

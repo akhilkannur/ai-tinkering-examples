@@ -1,14 +1,16 @@
---- 
-id: "renewal-price-lift-calc"
-category: "RevOps"
-title: "Renewal Price Lift Calc"
-tagline: "Apply 5% CPI increases to upcoming renewals."
-difficulty: "Beginner"
-time: "Monthly"
-archtype: "Processor"
-description: "Calculates new contract values for upcoming renewals assuming a standard price lift."
+---
+id: renewal-price-lift-calc
+category: Sales Ops
+title: Renewal Price Lift Calc
+tagline: Apply 5% CPI increases to upcoming renewals.
+difficulty: Beginner
+time: Monthly
+archtype: Processor
+description: >-
+  Calculates new contract values for upcoming renewals assuming a standard price
+  lift.
 sampleData:
-  filename: "renewals.csv"
+  filename: renewals.csv
   content: |
     Account,Current_Price
     Acme,10000

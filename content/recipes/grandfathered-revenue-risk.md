@@ -1,14 +1,16 @@
 ---
-id: "grandfathered-revenue-risk"
-category: "Advanced RevOps"
-title: "Legacy Pricing Audit"
-tagline: "How much are we losing on old plans?"
-difficulty: "Intermediate"
-time: "Quarterly"
-archetype: "Processor"
-description: "Calculates the revenue gap between legacy pricing and current market rates for existing customers."
+id: grandfathered-revenue-risk
+category: Sales Ops
+title: Legacy Pricing Audit
+tagline: How much are we losing on old plans?
+difficulty: Intermediate
+time: Quarterly
+archetype: Processor
+description: >-
+  Calculates the revenue gap between legacy pricing and current market rates for
+  existing customers.
 sampleData:
-  filename: "legacy_customers.csv"
+  filename: legacy_customers.csv
   content: |
     Customer,Current_Price,Market_Price
     Acme,500,1000

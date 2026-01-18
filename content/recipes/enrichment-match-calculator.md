@@ -1,6 +1,6 @@
 ---
 id: enrichment-match-calculator
-category: RevOps
+category: Sales Ops
 title: The Enrichment Match Calculator
 tagline: Is your data vendor lying?
 difficulty: Intermediate

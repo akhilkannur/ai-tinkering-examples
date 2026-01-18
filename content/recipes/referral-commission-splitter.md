@@ -1,14 +1,16 @@
---- 
-id: "referral-commission-splitter"
-category: "Partner Ops"
-title: "Complex Referral Splitter"
-tagline: "Calculate 3-way commission splits for partners."
-difficulty: "Advanced"
-time: "Batch"
-archtype: "Processor"
-description: "Calculates revenue shares for multi-party deals involving a source partner, an implementation partner, and the vendor."
+---
+id: referral-commission-splitter
+category: Strategic Ops
+title: Complex Referral Splitter
+tagline: Calculate 3-way commission splits for partners.
+difficulty: Advanced
+time: Batch
+archtype: Processor
+description: >-
+  Calculates revenue shares for multi-party deals involving a source partner, an
+  implementation partner, and the vendor.
 sampleData:
-  filename: "splits.csv"
+  filename: splits.csv
   content: |
     Deal_ID,Total_Amt,Source_P,Impl_P
     Deal-1,10000,Partner A,Partner B

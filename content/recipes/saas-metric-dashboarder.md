@@ -1,6 +1,6 @@
 ---
 id: saas-metric-dashboarder
-category: RevOps
+category: Sales Ops
 title: The SaaS Metric Dashboarder
 tagline: 'Your board deck, automated.'
 difficulty: Advanced

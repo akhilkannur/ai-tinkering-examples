@@ -1,6 +1,6 @@
 ---
 id: booth-design-checklist
-category: Offline
+category: Strategic Ops
 title: The Event Booth Strategist
 tagline: Custom booth checklists for your event portfolio.
 difficulty: Intermediate

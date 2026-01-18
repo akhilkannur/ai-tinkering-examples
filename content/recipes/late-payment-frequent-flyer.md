@@ -1,14 +1,16 @@
 ---
-id: "late-payment-frequent-flyer"
-category: "Advanced RevOps"
-title: "Bad Payer List"
-tagline: "Stop selling to people who don't pay."
-difficulty: "Beginner"
-time: "Monthly"
-archetype: "Processor"
-description: "Identifies customers who are chronically late on invoices to prevent Sales from expanding them without finance approval."
+id: late-payment-frequent-flyer
+category: Sales Ops
+title: Bad Payer List
+tagline: Stop selling to people who don't pay.
+difficulty: Beginner
+time: Monthly
+archetype: Processor
+description: >-
+  Identifies customers who are chronically late on invoices to prevent Sales
+  from expanding them without finance approval.
 sampleData:
-  filename: "payment_history.csv"
+  filename: payment_history.csv
   content: |
     Customer,Invoice_ID,Days_Late
     Acme,101,45

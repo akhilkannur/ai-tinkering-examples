@@ -1,6 +1,6 @@
 ---
 id: api-key-rotator-checklist
-category: Security
+category: Marketing Ops
 title: The API Key Rotator
 tagline: Don't get hacked.
 difficulty: Intermediate

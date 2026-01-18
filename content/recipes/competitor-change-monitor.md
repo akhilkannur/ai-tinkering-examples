@@ -1,19 +1,21 @@
---- 
-id: "competitor-change-monitor"
-category: "Market Intelligence"
-title: "Competitor Site Change Detector"
-tagline: "Did they change their H1? Did they raise prices?"
-difficulty: "Intermediate"
-time: "Weekly"
-archtype: "Processor"
-description: "Compares the text content of a competitor's homepage from 'Before' and 'After' snapshots to highlight messaging shifts."
+---
+id: competitor-change-monitor
+category: Competitive Intel
+title: Competitor Site Change Detector
+tagline: Did they change their H1? Did they raise prices?
+difficulty: Intermediate
+time: Weekly
+archtype: Processor
+description: >-
+  Compares the text content of a competitor's homepage from 'Before' and 'After'
+  snapshots to highlight messaging shifts.
 sampleData:
-  filename: "site_diff.txt"
+  filename: site_diff.txt
   content: |
     [Before]
     Header: The #1 CRM for SMBs.
     Price: $10/mo
-    
+
     [After]
     Header: The Enterprise Platform for Scale.
     Price: Call Sales

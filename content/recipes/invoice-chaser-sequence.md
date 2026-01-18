@@ -1,6 +1,6 @@
 ---
 id: invoice-chaser-sequence
-category: Finance
+category: Strategic Ops
 title: The Invoice Chaser Engine
 tagline: Recover $10k+ in overdue payments without being awkward.
 difficulty: Beginner

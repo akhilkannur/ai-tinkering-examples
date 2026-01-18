@@ -1,14 +1,16 @@
 ---
-id: "loyalty-point-expiry-alert"
-category: "Retention Marketing"
-title: "Point Expiry Nudge"
-tagline: "Create urgency with expiring points."
-difficulty: "Beginner"
-time: "Monthly"
-archetype: "Processor"
-description: "Flags customers with loyalty points expiring in the next 30 days to drive urgency purchases."
+id: loyalty-point-expiry-alert
+category: Retention
+title: Point Expiry Nudge
+tagline: Create urgency with expiring points.
+difficulty: Beginner
+time: Monthly
+archetype: Processor
+description: >-
+  Flags customers with loyalty points expiring in the next 30 days to drive
+  urgency purchases.
 sampleData:
-  filename: "points_ledger.csv"
+  filename: points_ledger.csv
   content: |
     Customer,Points_Balance,Expiry_Date
     John,500,2023-11-01

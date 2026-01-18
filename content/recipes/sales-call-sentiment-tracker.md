@@ -1,6 +1,6 @@
 ---
 id: sales-call-sentiment-tracker
-category: Sales Enablement
+category: Sales Ops
 title: The Call Sentiment Tracker
 tagline: Analyze the mood of your sales calls.
 difficulty: Advanced

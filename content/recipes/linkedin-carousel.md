@@ -1,6 +1,6 @@
 ---
 id: linkedin-carousel
-category: Social Content
+category: Content Ops
 title: The LinkedIn Carousel Factory
 tagline: Turn your blog posts into viral carousel slides.
 difficulty: Beginner

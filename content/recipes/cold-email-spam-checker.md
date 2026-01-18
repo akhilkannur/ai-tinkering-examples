@@ -1,6 +1,6 @@
 ---
 id: cold-email-spam-checker
-category: Sales Eng
+category: Sales Ops
 title: The Spam Word Hunter
 tagline: Don't trigger the filters.
 difficulty: Beginner

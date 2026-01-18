@@ -1,14 +1,16 @@
 ---
-id: "contract-renewal-health-score"
-category: "Advanced RevOps"
-title: "Pre-Renewal Health Check"
-tagline: "90-day warning system."
-difficulty: "Intermediate"
-time: "Weekly"
-archetype: "Processor"
-description: "Calculates a specific health score that only triggers 90 days before renewal to prioritize CS focus."
+id: contract-renewal-health-score
+category: Sales Ops
+title: Pre-Renewal Health Check
+tagline: 90-day warning system.
+difficulty: Intermediate
+time: Weekly
+archetype: Processor
+description: >-
+  Calculates a specific health score that only triggers 90 days before renewal
+  to prioritize CS focus.
 sampleData:
-  filename: "renewing_accounts.csv"
+  filename: renewing_accounts.csv
   content: |
     Customer,Days_To_Renew,Health
     Acme,85,Red

@@ -1,6 +1,6 @@
 ---
 id: stalled-deal-wakeup
-category: Sales Strategy
+category: Sales Ops
 title: The Stalled Deal Wake-Up Script
 tagline: Revive the 'Checking in' emails.
 difficulty: Beginner

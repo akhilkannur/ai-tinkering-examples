@@ -1,6 +1,6 @@
 ---
 id: facebook-offline-events-csv
-category: Ad Ops
+category: Paid Media
 title: The Offline Conversions Factory
 tagline: 'Format 10,000 sales for Facebook ROAS reporting.'
 difficulty: Intermediate

@@ -1,14 +1,16 @@
 ---
-id: "influencer-code-profitability"
-category: "E-commerce Growth"
-title: "Influencer Profit Auditor"
-tagline: "Revenue is vanity, profit is sanity."
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Calculates net profit margin per influencer campaign (Revenue - Commission - Discount - COGS)."
+id: influencer-code-profitability
+category: E-commerce
+title: Influencer Profit Auditor
+tagline: 'Revenue is vanity, profit is sanity.'
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Calculates net profit margin per influencer campaign (Revenue - Commission -
+  Discount - COGS).
 sampleData:
-  filename: "influencer_pnl.csv"
+  filename: influencer_pnl.csv
   content: |
     Influencer,Rev,Comm,Disc,COGS
     Alice,1000,100,200,400

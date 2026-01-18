@@ -1,6 +1,6 @@
 ---
 id: log-file-parser-mock
-category: Tech SEO
+category: SEO
 title: The Log File Analyzer
 tagline: What is Googlebot doing?
 difficulty: Advanced

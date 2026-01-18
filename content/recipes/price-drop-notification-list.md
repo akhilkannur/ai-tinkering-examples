@@ -1,14 +1,16 @@
 ---
-id: "price-drop-notification-list"
-category: "E-commerce Merchandising"
-title: "Price Drop Notifier"
-tagline: "Tell browsers when price drops."
-difficulty: "Intermediate"
-time: "Weekly"
-archetype: "Processor"
-description: "Identifies customers who viewed a specific product in the last 30 days that has just been marked down."
+id: price-drop-notification-list
+category: E-commerce
+title: Price Drop Notifier
+tagline: Tell browsers when price drops.
+difficulty: Intermediate
+time: Weekly
+archetype: Processor
+description: >-
+  Identifies customers who viewed a specific product in the last 30 days that
+  has just been marked down.
 sampleData:
-  filename: "browse_history.csv"
+  filename: browse_history.csv
   content: |
     User,Product_Viewed,View_Date,Current_Price,Old_Price
     John,TV,2023-10-01,400,500

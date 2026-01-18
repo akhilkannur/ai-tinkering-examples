@@ -1,6 +1,6 @@
 ---
 id: hreflang-tag-builder
-category: Tech SEO
+category: SEO
 title: The Hreflang Builder
 tagline: Fix international SEO.
 difficulty: Intermediate

@@ -1,14 +1,16 @@
---- 
-id: "channel-conflict-arbitrator"
-category: "Partner Ops"
-title: "Channel Conflict Resolver"
-tagline: "Decide who owns the lead: Partner or Direct?"
-difficulty: "Intermediate"
-time: "Daily"
-archtype: "Processor"
-description: "Compares partner registration dates against internal lead timestamps to resolve ownership disputes."
+---
+id: channel-conflict-arbitrator
+category: Strategic Ops
+title: Channel Conflict Resolver
+tagline: 'Decide who owns the lead: Partner or Direct?'
+difficulty: Intermediate
+time: Daily
+archtype: Processor
+description: >-
+  Compares partner registration dates against internal lead timestamps to
+  resolve ownership disputes.
 sampleData:
-  filename: "deal_conflict.txt"
+  filename: deal_conflict.txt
   content: |
     [Direct Inbound]
     Acme Corp, 2023-10-01

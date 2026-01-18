@@ -1,6 +1,6 @@
 ---
 id: lookalike-audience-seeder
-category: Ad Ops
+category: Paid Media
 title: The LAL Seeder Factory
 tagline: 'Standardize 10,000 customers for ''Custom Audience'' upload.'
 difficulty: Intermediate

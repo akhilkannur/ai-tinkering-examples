@@ -1,0 +1,200 @@
+# Blueprints: PR
+
+## The Bulk HARO Pitcher
+URL: https://realaiexamples.com/blueprints/haro-pitcher
+Description: Scan 100 media queries and draft 5 winning pitches.
+
+---
+id: haro-pitcher
+category: PR
+title: The Bulk HARO Pitcher
+tagline: Scan 100 media queries and draft 5 winning pitches.
+difficulty: Advanced
+time: Daily
+description: >-
+  Journalists move fast. This agent scans a large text file of media queries
+  (from HARO or Connectively), identifies the ones you are actually qualified
+  for, and drafts 'Ready-to-Send' pitches including your bio and headshot link.
+sampleData:
+  filename: media_queries.txt
+  content: |
+    Query: Looking for expert on AI in Sales. Outlet: Forbes. Deadline: 2pm.
+    Query: Tips for small business taxes. Outlet: WSJ. Deadline: Tomorrow.
+isPremium: true
+---
+
+# Agent Configuration: The Bulk HARO Pitcher
+
+## Role
+Journalists move fast. This agent scans a large text file of media queries (from HARO or Connectively), identifies the ones you are actually qualified for, and drafts 'Ready-to-Send' pitches including your bio and headshot link.
+
+## Objective
+Scan 100 media queries and draft 5 winning pitches.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `media_queries.txt` exist?
+2.  **If Missing:** Create `media_queries.txt` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Context Load
+1.  **Check:** Does `media_queries.txt` exist? If missing, create it.
+2.  **Bio Setup:** Ask the user for their "Pitch Credentials" (Title, 2-sentence bio, headshot link).
+
+### Phase 2: The Filter Loop
+1.  **Scan:** Iterate through every block in `media_queries.txt`.
+2.  **Match:** Identify queries containing target keywords (e.g., "SaaS", "AI").
+3.  **Qualify:** Ensure the user meets the journalist's requirements (e.g., "Must be a founder").
+
+### Phase 3: Pitch Production
+For every qualified query found:
+1.  **Draft:** Write a subject line: "RE: [Outlet Name] - [Bio Snippet]".
+2.  **Write:** Draft a 3-paragraph pitch:
+    *   *P1:* Why the journalist should listen to you.
+    *   *P2:* The "Value Nugget" (The expert answer).
+    *   *P3:* Link to further assets.
+
+### Phase 4: Output
+1.  **Save:** Create `daily_pr_pitches.md` with all drafted emails.
+2.  **Report:** "Found [X] opportunities. Pitch drafts are ready."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The Podcast Guest Pitcher
+URL: https://realaiexamples.com/blueprints/podcast-guest-pitcher
+Description: Get booked on niche shows.
+
+---
+id: podcast-guest-pitcher
+category: PR
+title: The Podcast Guest Pitcher
+tagline: Get booked on niche shows.
+difficulty: Intermediate
+time: Batch
+description: >-
+  Podcasts are high-trust channels. This agent researches target podcasts,
+  analyzes their recent content, and drafts 'Value-First' pitches to hosts for
+  your entire PR outreach list.
+sampleData:
+  filename: podcasts.csv
+  content: |
+    Podcast_Name,Host_Name,Niche
+    SaaS Revolution,Nathan Latka,B2B SaaS Metrics
+    The Growth Lab,Sarah Chen,Marketing Experiments
+    Founder Wisdom,Mike Ross,Early Stage Startups
+isPremium: true
+---
+
+# Agent Configuration: The Podcast Guest Pitcher
+
+## Role
+Podcasts are high-trust channels. This agent researches target podcasts, analyzes their recent content, and drafts 'Value-First' pitches to hosts for your entire PR outreach list.
+
+## Objective
+Get booked on niche shows.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `podcasts.csv` exist?
+2.  **If Missing:** Create `podcasts.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Check
+1.  **Check:** Does `podcasts.csv` exist?
+2.  **If Missing:** Create `podcasts.csv` using the `sampleData`.
+3.  **If Present:** Load the podcast list.
+
+### Phase 2: The Pitching Loop
+For each podcast in the CSV:
+1.  **Research:** Use `web_fetch` to find the podcast's website or recent episode list.
+2.  **Identify Themes:** Note the recurring format (e.g., "Interviews", "Solo-casts", "Deep Dives").
+3.  **Find the Gap:** Identify a sub-topic in the `Niche` that hasn't been covered in the last 3 months.
+4.  **Draft Pitch:**
+    *   **The Flattery:** Reference a specific recent episode or the host's style.
+    *   **The Angle:** Propose a "Contrarian Headline" based on the user's expertise.
+    *   **The Cred:** 2-3 bullet points of specific achievements related to the topic.
+5.  **Output:** Save to `podcast_pitches/[Podcast_Name]_pitch.md`.
+
+### Phase 3: Structured Deliverables
+1.  **Create:** `outreach_status_tracker.csv` with columns: `Podcast_Name`, `Host_Name`, `Proposed_Topic`, `File_Path`.
+2.  **Report:** "Successfully drafted [X] personalized pitches. High-relevance angles identified for each host."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The Podcast Tour Manager
+URL: https://realaiexamples.com/blueprints/podcast-tour-manager
+Description: Book your tour from a list or a niche goal.
+
+---
+id: podcast-tour-manager
+category: PR
+title: The Podcast Tour Manager
+tagline: Book your tour from a list or a niche goal.
+difficulty: Intermediate
+time: Weekly
+description: >-
+  Podcasts are high-trust channels. This agent reads your target show list (if
+  provided) or researches the top 10 podcasts in your niche to draft
+  personalized, value-first booking pitches.
+sampleData:
+  filename: podcast_targets.csv
+  content: |
+    Show_Name,Topic_Area
+    The Growth Show,SaaS Marketing
+    Founder Stories,Bootstrap businesses
+isPremium: true
+---
+
+# Agent Configuration: The Podcast Tour Manager
+
+## Role
+Podcasts are high-trust channels. This agent reads your target show list (if provided) or researches the top 10 podcasts in your niche to draft personalized, value-first booking pitches.
+
+## Objective
+Book your tour from a list or a niche goal.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `podcast_targets.csv` exist?
+2.  **If Missing:** Create `podcast_targets.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Show Selection
+1.  **Check:** Does `podcast_targets.csv` exist?
+2.  **Logic:**
+    *   *If Yes:* Load the provided shows.
+    *   *If No:* Ask for a "Expertise Niche" (e.g., 'Automation'). Search for the top 5 shows in that category.
+
+### Phase 2: Host Intel
+For each show:
+1.  **Analyze:** Find the latest episode title.
+2.  **Pivot:** Draft a pitch that connects your "Interview Topic" to their recent content.
+
+### Phase 3: The Pitch Kit
+1.  **Draft:** Create a customized email for each show.
+2.  **Create:** `podcast_tour_campaign.md`.
+3.  **Summary:** "Successfully planned a tour for [Niche]. [X] pitches are ready to send."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+

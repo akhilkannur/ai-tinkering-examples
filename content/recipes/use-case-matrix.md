@@ -1,6 +1,6 @@
 ---
 id: use-case-matrix
-category: Product Marketing
+category: Strategic Ops
 title: The Use Case Matrix Builder
 tagline: Map features to pain points.
 difficulty: Intermediate

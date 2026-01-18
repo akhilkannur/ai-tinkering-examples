@@ -1,14 +1,14 @@
 ---
-id: "bundle-efficacy-tracker"
-category: "E-commerce Growth"
-title: "Bundle Profitability Tracker"
-tagline: "Do bundles actually increase profit?"
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Compares Average Order Value (AOV) and Margin of bundled vs a la carte orders."
+id: bundle-efficacy-tracker
+category: E-commerce
+title: Bundle Profitability Tracker
+tagline: Do bundles actually increase profit?
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: Compares Average Order Value (AOV) and Margin of bundled vs a la carte orders.
 sampleData:
-  filename: "orders.csv"
+  filename: orders.csv
   content: |
     Order_Type,Revenue,Margin
     Bundle,100,20

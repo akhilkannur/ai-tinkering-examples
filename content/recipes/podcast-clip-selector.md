@@ -1,6 +1,6 @@
 ---
 id: podcast-clip-selector
-category: Podcast
+category: Content Ops
 title: The Viral Clip Factory
 tagline: Identify viral social clips for your entire season.
 difficulty: Intermediate

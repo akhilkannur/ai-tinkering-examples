@@ -1,14 +1,16 @@
 ---
-id: "holiday-shopper-reactivation"
-category: "Retention Marketing"
-title: "Holiday Shopper Wake-Up"
-tagline: "Re-engage Black Friday-only buyers."
-difficulty: "Beginner"
-time: "Yearly"
-archetype: "Processor"
-description: "Segments users who *only* purchase during Q4 (Black Friday/Cyber Monday) for specific holiday warm-up campaigns."
+id: holiday-shopper-reactivation
+category: Retention
+title: Holiday Shopper Wake-Up
+tagline: Re-engage Black Friday-only buyers.
+difficulty: Beginner
+time: Yearly
+archetype: Processor
+description: >-
+  Segments users who *only* purchase during Q4 (Black Friday/Cyber Monday) for
+  specific holiday warm-up campaigns.
 sampleData:
-  filename: "order_history.csv"
+  filename: order_history.csv
   content: |
     Customer,Order_Month
     John,Nov

@@ -1,14 +1,16 @@
 ---
-id: "video-testimonial-candidate-finder"
-category: "Customer Advocacy"
-title: "Video Testimonial Scout"
-tagline: "Turn text reviews into video gold."
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Flags customers who left high-sentiment text reviews (>100 words) as prime candidates for video case studies."
+id: video-testimonial-candidate-finder
+category: Customer Success
+title: Video Testimonial Scout
+tagline: Turn text reviews into video gold.
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Flags customers who left high-sentiment text reviews (>100 words) as prime
+  candidates for video case studies.
 sampleData:
-  filename: "text_reviews.csv"
+  filename: text_reviews.csv
   content: |
     Customer,Word_Count,Sentiment
     Acme,150,Positive

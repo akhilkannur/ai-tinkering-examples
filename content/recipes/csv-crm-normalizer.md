@@ -1,6 +1,6 @@
 ---
 id: csv-crm-normalizer
-category: Data Ops
+category: Marketing Ops
 title: The Bulk CRM Data Normalizer
 tagline: 'Standardize 10,000 lead records for import.'
 difficulty: Intermediate

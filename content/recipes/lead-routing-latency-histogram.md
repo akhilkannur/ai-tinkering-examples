@@ -1,14 +1,16 @@
 ---
-id: "lead-routing-latency-histogram"
-category: "Ops"
-title: "Routing Latency Auditor"
-tagline: "Measure delays in lead assignment."
-difficulty: "Intermediate"
-time: "Weekly"
-archetype: "Processor"
-description: "Analyzes the time gap between 'Lead Created' and 'Owner Assigned' to find routing bottlenecks."
+id: lead-routing-latency-histogram
+category: Marketing Ops
+title: Routing Latency Auditor
+tagline: Measure delays in lead assignment.
+difficulty: Intermediate
+time: Weekly
+archetype: Processor
+description: >-
+  Analyzes the time gap between 'Lead Created' and 'Owner Assigned' to find
+  routing bottlenecks.
 sampleData:
-  filename: "routing_logs.csv"
+  filename: routing_logs.csv
   content: |
     Lead_ID,Created_At,Assigned_At
     L-1,10:00,10:01

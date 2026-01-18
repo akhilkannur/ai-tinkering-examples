@@ -1,14 +1,16 @@
 ---
-id: "inventory-opportunity-cost"
-category: "E-commerce Growth"
-title: "Stockout Loss Estimator"
-tagline: "How much money did we lose today?"
-difficulty: "Intermediate"
-time: "Daily"
-archetype: "Processor"
-description: "Estimates lost revenue based on traffic to Out-of-Stock pages multiplied by historical conversion rate."
+id: inventory-opportunity-cost
+category: E-commerce
+title: Stockout Loss Estimator
+tagline: How much money did we lose today?
+difficulty: Intermediate
+time: Daily
+archetype: Processor
+description: >-
+  Estimates lost revenue based on traffic to Out-of-Stock pages multiplied by
+  historical conversion rate.
 sampleData:
-  filename: "oos_traffic.csv"
+  filename: oos_traffic.csv
   content: |
     SKU,Visits,Hist_Conv_Rate,Price
     Shoe,1000,0.05,100

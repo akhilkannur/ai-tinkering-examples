@@ -1,6 +1,6 @@
 ---
 id: sdr-onboarding-schedule
-category: Hiring
+category: Lead Gen
 title: The SDR Ramp Architect
 tagline: Build custom 30-day onboarding plans.
 difficulty: Intermediate

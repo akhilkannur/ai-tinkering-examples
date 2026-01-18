@@ -1,14 +1,14 @@
 ---
-id: "twitter-thread-hook-analyzer"
-category: "Social Selling"
-title: "Viral Hook Analyzer"
-tagline: "Which first line gets the click?"
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Analyzes the click-through rate of different Twitter/X thread opening lines."
+id: twitter-thread-hook-analyzer
+category: Strategic Ops
+title: Viral Hook Analyzer
+tagline: Which first line gets the click?
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: Analyzes the click-through rate of different Twitter/X thread opening lines.
 sampleData:
-  filename: "thread_stats.csv"
+  filename: thread_stats.csv
   content: |
     Hook_Text,Impressions,Clicks
     I made $1M in 2 days...,10000,500

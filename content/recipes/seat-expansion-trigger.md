@@ -1,14 +1,16 @@
 ---
-id: "seat-expansion-trigger"
-category: "PLG Sales"
-title: "License Utilization Alert"
-tagline: "They just hit 9/10 seats."
-difficulty: "Intermediate"
-time: "Weekly"
-archetype: "Processor"
-description: "Alerts Sales when an account reaches >80% license utilization, signaling an expansion opportunity."
+id: seat-expansion-trigger
+category: Sales Ops
+title: License Utilization Alert
+tagline: They just hit 9/10 seats.
+difficulty: Intermediate
+time: Weekly
+archetype: Processor
+description: >-
+  Alerts Sales when an account reaches >80% license utilization, signaling an
+  expansion opportunity.
 sampleData:
-  filename: "license_usage.csv"
+  filename: license_usage.csv
   content: |
     Account,Seats_Owned,Seats_Used
     Acme,10,9

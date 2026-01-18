@@ -1,6 +1,6 @@
 ---
 id: email-subject-line-tester
-category: Email Marketing
+category: Strategic Ops
 title: The Subject Line Factory
 tagline: Generate A/B test variations for 10 campaigns in one run.
 difficulty: Beginner

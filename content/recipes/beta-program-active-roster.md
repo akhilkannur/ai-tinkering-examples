@@ -1,14 +1,16 @@
 ---
-id: "beta-program-active-roster"
-category: "Customer Advocacy"
-title: "Beta Tester Verifier"
-tagline: "Are they actually testing?"
-difficulty: "Beginner"
-time: "Weekly"
-archetype: "Processor"
-description: "Identifies users in the Beta program who haven't logged in since the feature release, to free up spots."
+id: beta-program-active-roster
+category: Customer Success
+title: Beta Tester Verifier
+tagline: Are they actually testing?
+difficulty: Beginner
+time: Weekly
+archetype: Processor
+description: >-
+  Identifies users in the Beta program who haven't logged in since the feature
+  release, to free up spots.
 sampleData:
-  filename: "beta_users.csv"
+  filename: beta_users.csv
   content: |
     User,Beta_Feature_Usage
     John,0

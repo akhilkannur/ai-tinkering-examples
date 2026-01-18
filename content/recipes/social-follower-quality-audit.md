@@ -1,6 +1,6 @@
 ---
 id: social-follower-quality-audit
-category: Intel
+category: Competitive Intel
 title: The Social Authenticity Auditor
 tagline: Spot fake followers on your account or a competitor's.
 difficulty: Intermediate

@@ -1,6 +1,6 @@
 ---
 id: google-tag-manager-debugger
-category: MarTech
+category: Marketing Ops
 title: The GTM Fleet Debugger
 tagline: Fix the dataLayer across all your properties.
 difficulty: Advanced

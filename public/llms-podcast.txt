@@ -1,0 +1,185 @@
+# Blueprints: Podcast
+
+## The Viral Clip Factory
+URL: https://realaiexamples.com/blueprints/podcast-clip-selector
+Description: Identify viral social clips for your entire season.
+
+---
+id: podcast-clip-selector
+category: Podcast
+title: The Viral Clip Factory
+tagline: Identify viral social clips for your entire season.
+difficulty: Intermediate
+time: 10 mins
+description: >-
+  Editing a 1-hour show is hard. This agent scans a folder of transcripts for
+  'High Intensity' moments (laughter, debate, definitive statements) and
+  suggests specific timestamps to cut into clips for social media.
+sampleData:
+  filename: transcripts/ep_01.txt
+  content: |
+    [05:20] Sarah: "And that's why most people are completely wrong about SEO."
+isPremium: true
+---
+
+# Agent Configuration: The Viral Clip Factory
+
+## Role
+Editing a 1-hour show is hard. This agent scans a folder of transcripts for 'High Intensity' moments (laughter, debate, definitive statements) and suggests specific timestamps to cut into clips for social media.
+
+## Objective
+Identify viral social clips for your entire season.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `transcripts/ep_01.txt` exist?
+2.  **If Missing:** Create `transcripts/ep_01.txt` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Resource Setup
+1.  **Check:** Does the folder `transcripts/` exist? If missing, create it.
+
+### Phase 2: The Moment Hunt
+For each transcript in the folder:
+1.  **Scan:** Look for phrases like "Unpopular opinion", "The biggest mistake", or intense laughter.
+2.  **Select:** Identify 3 distinct clips:
+    *   *Clip 1: The Hook.* (Shocking statement).
+    *   *Clip 2: The Story.* (Personal anecdote).
+    *   *Clip 3: The Action.* (Step-by-step tip).
+3.  **Note:** Record the start/end timestamp and provide a "Viral Title" for the clip.
+
+### Phase 3: The Edit List
+1.  **Create:** `viral_clips_to_cut.csv` with columns: `Episode,Timestamp,Title,Hook_Type`.
+2.  **Summary:** "Found [X] viral moments across [Y] episodes. Ready for the editor."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The Show Notes Factory
+URL: https://realaiexamples.com/blueprints/podcast-show-notes-generator
+Description: Generate SEO-optimized show notes for your entire season.
+
+---
+id: podcast-show-notes-generator
+category: Podcast
+title: The Show Notes Factory
+tagline: Generate SEO-optimized show notes for your entire season.
+difficulty: Intermediate
+time: 10 mins
+description: >-
+  Podcasts need text to rank. This agent reads a folder of podcast transcripts
+  and generates SEO-optimized Show Notes for every single episode, including a
+  summary, bulleted takeaways, and links to resources.
+sampleData:
+  filename: transcripts/ep_01.txt
+  content: |
+    Host: "Welcome back. Today we're talking to Sarah about how to scale ads."
+isPremium: true
+---
+
+# Agent Configuration: The Show Notes Factory
+
+## Role
+Podcasts need text to rank. This agent reads a folder of podcast transcripts and generates SEO-optimized Show Notes for every single episode, including a summary, bulleted takeaways, and links to resources.
+
+## Objective
+Generate SEO-optimized show notes for your entire season.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `transcripts/ep_01.txt` exist?
+2.  **If Missing:** Create `transcripts/ep_01.txt` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Setup
+1.  **Check:** Does the folder `transcripts/` exist? If missing, create it.
+
+### Phase 2: The Production Loop
+For each transcript in the folder:
+1.  **Summarize:** Condense the 1-hour conversation into a 150-word "Hooky" intro.
+2.  **Extract:** Identify the "Top 5 Takeaways" as a bulleted list.
+3.  **Audit:** List every URL or Tool mentioned in the conversation.
+4.  **Format:** Use H2 and H3 tags for readability.
+
+### Phase 3: Final Output
+1.  **Action:** Create a folder `polished_show_notes/`.
+2.  **Save:** Save each result as `show-notes-[episode-filename].md`.
+3.  **Report:** "Successfully generated [X] show notes. SEO metadata included."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The Conversational Ad Read Factory
+URL: https://realaiexamples.com/blueprints/podcast-sponsor-read-writer
+Description: Native ad reads that don't get skipped.
+
+---
+id: podcast-sponsor-read-writer
+category: Podcast
+title: The Conversational Ad Read Factory
+tagline: Native ad reads that don't get skipped.
+difficulty: Intermediate
+time: One-off
+description: >-
+  Host-read ads convert best. This agent takes a sponsor's talking points (if
+  provided) or researches a brand to write a natural, conversational script that
+  fits your show's specific voice.
+sampleData:
+  filename: sponsor_bullets.txt
+  content: >
+    Brand: BlueBottle Coffee. Points: Fresh beans, subscription model, 20% off
+    with code GROW.
+isPremium: true
+---
+
+# Agent Configuration: The Conversational Ad Read Factory
+
+## Role
+Host-read ads convert best. This agent takes a sponsor's talking points (if provided) or researches a brand to write a natural, conversational script that fits your show's specific voice.
+
+## Objective
+Native ad reads that don't get skipped.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `sponsor_bullets.txt` exist?
+2.  **If Missing:** Create `sponsor_bullets.txt` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Analysis
+1.  **Check:** Did the user provide `sponsor_bullets.txt`?
+2.  **Logic:**
+    *   *If Yes:* Extract the "Must-Say" points and the Promo Code.
+    *   *If No:* Ask for the "Brand Name". Research their top 3 value props and current public offers.
+
+### Phase 2: The Scripting
+Draft 3 versions:
+*   **The "Personal Experience":** "I've been using X lately, and here's why I love it..."
+*   **The "Problem/Solution":** "If you're tired of Y, you need to try X."
+*   **The "Quick Plug":** 30-second mid-roll.
+
+### Phase 3: Output
+1.  **Create:** `conversational_ad_reads.md`.
+2.  **Report:** "Generated [X] variations. Includes specific 'Host Notes' on where to pause for effect."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+

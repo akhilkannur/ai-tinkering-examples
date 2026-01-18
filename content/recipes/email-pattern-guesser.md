@@ -1,6 +1,6 @@
 ---
 id: email-pattern-guesser
-category: Sales Eng
+category: Sales Ops
 title: The Email Permutator
 tagline: Guess email addresses from names.
 difficulty: Beginner

@@ -1,6 +1,6 @@
 ---
 id: zapier-logic-architect
-category: Automation
+category: Marketing Ops
 title: The Zapier Logic Architect
 tagline: Standardize your no-code workflows.
 difficulty: Intermediate

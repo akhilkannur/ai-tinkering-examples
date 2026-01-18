@@ -1,14 +1,16 @@
 ---
-id: "case-study-freshness-audit"
-category: "Customer Advocacy"
-title: "Case Study Expiry Audit"
-tagline: "Retire assets older than 2 years."
-difficulty: "Beginner"
-time: "Yearly"
-archetype: "Processor"
-description: "Flags case studies published more than 24 months ago for retirement or refresh."
+id: case-study-freshness-audit
+category: Customer Success
+title: Case Study Expiry Audit
+tagline: Retire assets older than 2 years.
+difficulty: Beginner
+time: Yearly
+archetype: Processor
+description: >-
+  Flags case studies published more than 24 months ago for retirement or
+  refresh.
 sampleData:
-  filename: "assets.csv"
+  filename: assets.csv
   content: |
     Asset,Pub_Date
     Acme_Story,2020-01-01

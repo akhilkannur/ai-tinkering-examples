@@ -1,6 +1,6 @@
 ---
 id: linkedin-poll-architect
-category: Marketing
+category: Strategic Ops
 title: Viral Poll Builder
 tagline: Create LinkedIn polls that drive engagement and uncover leads.
 difficulty: Beginner

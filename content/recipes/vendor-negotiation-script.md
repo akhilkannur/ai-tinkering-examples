@@ -1,6 +1,6 @@
 ---
 id: vendor-negotiation-script
-category: Finance
+category: Strategic Ops
 title: The Vendor Negotiator
 tagline: Save 20% on your software stack from a bill or a name.
 difficulty: Intermediate

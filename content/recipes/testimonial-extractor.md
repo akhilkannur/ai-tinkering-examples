@@ -1,6 +1,6 @@
 ---
 id: testimonial-extractor
-category: Social Proof
+category: Strategic Ops
 title: The Testimonial Factory
 tagline: Process 50 calls into a website-ready library.
 difficulty: Intermediate

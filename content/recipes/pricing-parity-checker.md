@@ -1,6 +1,6 @@
 ---
 id: pricing-parity-checker
-category: Ops
+category: Marketing Ops
 title: The Pricing Parity Architect
 tagline: Audit your international pricing or research competitor PPP.
 difficulty: Intermediate

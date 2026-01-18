@@ -1,14 +1,16 @@
---- 
-id: "social-engagement-rate-calculator"
-category: "Social Media"
-title: "Engagement Truth Teller"
-tagline: "Vanity metrics vs Real engagement."
-difficulty: "Beginner"
-time: "Weekly"
-archtype: "Processor"
-description: "Calculates the engagement rate (Likes + Comments / Followers) for a set of posts."
+---
+id: social-engagement-rate-calculator
+category: Content Ops
+title: Engagement Truth Teller
+tagline: Vanity metrics vs Real engagement.
+difficulty: Beginner
+time: Weekly
+archtype: Processor
+description: >-
+  Calculates the engagement rate (Likes + Comments / Followers) for a set of
+  posts.
 sampleData:
-  filename: "social_posts.csv"
+  filename: social_posts.csv
   content: |
     Post_ID,Likes,Comments,Shares,Followers_At_Time
     101,50,5,2,1000

@@ -1,6 +1,6 @@
 ---
 id: google-ads-script-gen
-category: Paid Search
+category: Paid Media
 title: The Google Ads Script Generator
 tagline: Automate your account management.
 difficulty: Advanced

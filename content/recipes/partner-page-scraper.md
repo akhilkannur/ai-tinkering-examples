@@ -1,6 +1,6 @@
 ---
 id: partner-page-scraper
-category: Intel
+category: Competitive Intel
 title: The Partner Page Scraper
 tagline: Poach their agencies.
 difficulty: Advanced

@@ -1,6 +1,6 @@
 ---
 id: influencer-audit
-category: Marketing
+category: Strategic Ops
 title: The Influencer Auditor
 tagline: Audit 50 creators in one run.
 difficulty: Intermediate

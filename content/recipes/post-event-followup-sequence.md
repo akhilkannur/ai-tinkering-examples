@@ -1,6 +1,6 @@
 ---
 id: post-event-followup-sequence
-category: Events
+category: Strategic Ops
 title: The Post-Event Follow-up
 tagline: The money is in the follow-up.
 difficulty: Intermediate

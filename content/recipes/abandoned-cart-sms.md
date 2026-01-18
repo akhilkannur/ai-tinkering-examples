@@ -1,6 +1,6 @@
 ---
 id: abandoned-cart-sms
-category: Sales
+category: Sales Ops
 title: The Abandoned Cart SMS Writer
 tagline: Recover 15% of lost sales via text.
 difficulty: Intermediate

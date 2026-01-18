@@ -1,6 +1,6 @@
 ---
 id: persona-anti-targeting
-category: Strategy
+category: Strategic Ops
 title: The Anti-Targeting List Builder
 tagline: Who should you NOT sell to?
 difficulty: Beginner

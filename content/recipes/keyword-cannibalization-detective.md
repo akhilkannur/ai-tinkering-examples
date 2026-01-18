@@ -1,6 +1,6 @@
 ---
 id: keyword-cannibalization-detective
-category: SEO Strategy
+category: SEO
 title: The Keyword Cannibalization Detective
 tagline: Stop competing with yourself.
 difficulty: Intermediate

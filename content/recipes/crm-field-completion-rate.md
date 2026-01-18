@@ -1,14 +1,16 @@
 ---
-id: "crm-field-completion-rate"
-category: "RevOps"
-title: "CRM Hygiene Scorecard"
-tagline: "Who isn't filling out 'Next Step'?"
-difficulty: "Beginner"
-time: "Weekly"
-archetype: "Processor"
-description: "Scores reps based on the completion rate of mandatory fields (Next Step, Amount, Close Date) in their pipeline."
+id: crm-field-completion-rate
+category: Sales Ops
+title: CRM Hygiene Scorecard
+tagline: Who isn't filling out 'Next Step'?
+difficulty: Beginner
+time: Weekly
+archetype: Processor
+description: >-
+  Scores reps based on the completion rate of mandatory fields (Next Step,
+  Amount, Close Date) in their pipeline.
 sampleData:
-  filename: "opp_export.csv"
+  filename: opp_export.csv
   content: |
     Rep,Opp,Next_Step
     John,O-1,Call

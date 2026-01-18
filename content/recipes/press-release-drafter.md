@@ -1,6 +1,6 @@
 ---
 id: press-release-drafter
-category: Marketing
+category: Strategic Ops
 title: Press Release Architect
 tagline: Write industry-standard press releases that journalists might actually read.
 difficulty: Intermediate

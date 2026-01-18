@@ -1,6 +1,6 @@
 ---
 id: competitor-onboarding-spy
-category: Competitor Intel
+category: Competitive Intel
 title: The Onboarding Teardown Factory
 tagline: Comparative UX audit of competitors at once.
 difficulty: Beginner

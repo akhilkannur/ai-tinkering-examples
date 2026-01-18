@@ -1,0 +1,161 @@
+# RealAIExamples LLM Index
+> Actionable AI workflows for Sales, Marketing, and RevOps.
+
+## Niche-Specific Indices (Recommended for Context)
+- [llms-sales.txt](https://realaiexamples.com/llms-sales.txt) - 6 recipes
+- [llms-marketing.txt](https://realaiexamples.com/llms-marketing.txt) - 25 recipes
+- [llms-marketing-ops.txt](https://realaiexamples.com/llms-marketing-ops.txt) - 42 recipes
+- [llms-sales-ops.txt](https://realaiexamples.com/llms-sales-ops.txt) - 95 recipes
+- [llms-brand.txt](https://realaiexamples.com/llms-brand.txt) - 3 recipes
+- [llms-plg-sales.txt](https://realaiexamples.com/llms-plg-sales.txt) - 10 recipes
+- [llms-competitive-intel.txt](https://realaiexamples.com/llms-competitive-intel.txt) - 10 recipes
+- [llms-ad-ops.txt](https://realaiexamples.com/llms-ad-ops.txt) - 10 recipes
+- [llms-competitor-intel.txt](https://realaiexamples.com/llms-competitor-intel.txt) - 6 recipes
+- [llms-paid-media.txt](https://realaiexamples.com/llms-paid-media.txt) - 14 recipes
+- [llms-intel.txt](https://realaiexamples.com/llms-intel.txt) - 11 recipes
+- [llms-ads.txt](https://realaiexamples.com/llms-ads.txt) - 5 recipes
+- [llms-customer-advocacy.txt](https://realaiexamples.com/llms-customer-advocacy.txt) - 10 recipes
+- [llms-growth.txt](https://realaiexamples.com/llms-growth.txt) - 3 recipes
+- [llms-ai-setup.txt](https://realaiexamples.com/llms-ai-setup.txt) - 1 recipes
+- [llms-operations.txt](https://realaiexamples.com/llms-operations.txt) - 1 recipes
+- [llms-seo.txt](https://realaiexamples.com/llms-seo.txt) - 18 recipes
+- [llms-sales-engineering.txt](https://realaiexamples.com/llms-sales-engineering.txt) - 1 recipes
+- [llms-security.txt](https://realaiexamples.com/llms-security.txt) - 1 recipes
+- [llms-revops.txt](https://realaiexamples.com/llms-revops.txt) - 31 recipes
+- [llms-aso.txt](https://realaiexamples.com/llms-aso.txt) - 1 recipes
+- [llms-analytics.txt](https://realaiexamples.com/llms-analytics.txt) - 12 recipes
+- [llms-paid-social.txt](https://realaiexamples.com/llms-paid-social.txt) - 1 recipes
+- [llms-engineering.txt](https://realaiexamples.com/llms-engineering.txt) - 1 recipes
+- [llms-lead-gen.txt](https://realaiexamples.com/llms-lead-gen.txt) - 13 recipes
+- [llms-content-ops.txt](https://realaiexamples.com/llms-content-ops.txt) - 13 recipes
+- [llms-off-page-seo.txt](https://realaiexamples.com/llms-off-page-seo.txt) - 1 recipes
+- [llms-sales-enablement.txt](https://realaiexamples.com/llms-sales-enablement.txt) - 10 recipes
+- [llms-e-commerce-merchandising.txt](https://realaiexamples.com/llms-e-commerce-merchandising.txt) - 10 recipes
+- [llms-product-marketing.txt](https://realaiexamples.com/llms-product-marketing.txt) - 6 recipes
+- [llms-advanced-revops.txt](https://realaiexamples.com/llms-advanced-revops.txt) - 10 recipes
+- [llms-social-content.txt](https://realaiexamples.com/llms-social-content.txt) - 4 recipes
+- [llms-offline.txt](https://realaiexamples.com/llms-offline.txt) - 3 recipes
+- [llms-field-marketing.txt](https://realaiexamples.com/llms-field-marketing.txt) - 10 recipes
+- [llms-technical-seo.txt](https://realaiexamples.com/llms-technical-seo.txt) - 13 recipes
+- [llms-sales-eng.txt](https://realaiexamples.com/llms-sales-eng.txt) - 3 recipes
+- [llms-e-commerce-growth.txt](https://realaiexamples.com/llms-e-commerce-growth.txt) - 10 recipes
+- [llms-saas.txt](https://realaiexamples.com/llms-saas.txt) - 5 recipes
+- [llms-tech-seo.txt](https://realaiexamples.com/llms-tech-seo.txt) - 6 recipes
+- [llms-retention-marketing.txt](https://realaiexamples.com/llms-retention-marketing.txt) - 10 recipes
+- [llms-sales-methodology.txt](https://realaiexamples.com/llms-sales-methodology.txt) - 1 recipes
+- [llms-partner-ops.txt](https://realaiexamples.com/llms-partner-ops.txt) - 11 recipes
+- [llms-cro.txt](https://realaiexamples.com/llms-cro.txt) - 18 recipes
+- [llms-crm-ops.txt](https://realaiexamples.com/llms-crm-ops.txt) - 2 recipes
+- [llms-customer-success.txt](https://realaiexamples.com/llms-customer-success.txt) - 24 recipes
+- [llms-retention.txt](https://realaiexamples.com/llms-retention.txt) - 2 recipes
+- [llms-agency.txt](https://realaiexamples.com/llms-agency.txt) - 5 recipes
+- [llms-outreach.txt](https://realaiexamples.com/llms-outreach.txt) - 2 recipes
+- [llms-social.txt](https://realaiexamples.com/llms-social.txt) - 4 recipes
+- [llms-hiring.txt](https://realaiexamples.com/llms-hiring.txt) - 4 recipes
+- [llms-sales-strategy.txt](https://realaiexamples.com/llms-sales-strategy.txt) - 2 recipes
+- [llms-social-selling.txt](https://realaiexamples.com/llms-social-selling.txt) - 10 recipes
+- [llms-market-intelligence.txt](https://realaiexamples.com/llms-market-intelligence.txt) - 4 recipes
+- [llms-seo-maintenance.txt](https://realaiexamples.com/llms-seo-maintenance.txt) - 1 recipes
+- [llms-legal-ops.txt](https://realaiexamples.com/llms-legal-ops.txt) - 3 recipes
+- [llms-data-ops.txt](https://realaiexamples.com/llms-data-ops.txt) - 2 recipes
+- [llms-strategy.txt](https://realaiexamples.com/llms-strategy.txt) - 8 recipes
+- [llms-monetization.txt](https://realaiexamples.com/llms-monetization.txt) - 2 recipes
+- [llms-tech-ops.txt](https://realaiexamples.com/llms-tech-ops.txt) - 1 recipes
+- [llms-data-hygiene.txt](https://realaiexamples.com/llms-data-hygiene.txt) - 2 recipes
+- [llms-email-marketing.txt](https://realaiexamples.com/llms-email-marketing.txt) - 3 recipes
+- [llms-networking.txt](https://realaiexamples.com/llms-networking.txt) - 1 recipes
+- [llms-product-management.txt](https://realaiexamples.com/llms-product-management.txt) - 1 recipes
+- [llms-seo-content.txt](https://realaiexamples.com/llms-seo-content.txt) - 3 recipes
+- [llms-paid-search.txt](https://realaiexamples.com/llms-paid-search.txt) - 2 recipes
+- [llms-local-seo.txt](https://realaiexamples.com/llms-local-seo.txt) - 1 recipes
+- [llms-martech.txt](https://realaiexamples.com/llms-martech.txt) - 1 recipes
+- [llms-pr.txt](https://realaiexamples.com/llms-pr.txt) - 3 recipes
+- [llms-video-ads.txt](https://realaiexamples.com/llms-video-ads.txt) - 1 recipes
+- [llms-e-commerce.txt](https://realaiexamples.com/llms-e-commerce.txt) - 5 recipes
+- [llms-influencer-marketing.txt](https://realaiexamples.com/llms-influencer-marketing.txt) - 1 recipes
+- [llms-instagram.txt](https://realaiexamples.com/llms-instagram.txt) - 1 recipes
+- [llms-on-page-seo.txt](https://realaiexamples.com/llms-on-page-seo.txt) - 1 recipes
+- [llms-founders.txt](https://realaiexamples.com/llms-founders.txt) - 1 recipes
+- [llms-finance.txt](https://realaiexamples.com/llms-finance.txt) - 2 recipes
+- [llms-seo-strategy.txt](https://realaiexamples.com/llms-seo-strategy.txt) - 2 recipes
+- [llms-ops.txt](https://realaiexamples.com/llms-ops.txt) - 2 recipes
+- [llms-content-engineering.txt](https://realaiexamples.com/llms-content-engineering.txt) - 1 recipes
+- [llms-linkedin.txt](https://realaiexamples.com/llms-linkedin.txt) - 3 recipes
+- [llms-growth-hacking.txt](https://realaiexamples.com/llms-growth-hacking.txt) - 1 recipes
+- [llms-social-automation.txt](https://realaiexamples.com/llms-social-automation.txt) - 2 recipes
+- [llms-business-dev.txt](https://realaiexamples.com/llms-business-dev.txt) - 1 recipes
+- [llms-biz-dev.txt](https://realaiexamples.com/llms-biz-dev.txt) - 1 recipes
+- [llms-podcast.txt](https://realaiexamples.com/llms-podcast.txt) - 3 recipes
+- [llms-events.txt](https://realaiexamples.com/llms-events.txt) - 1 recipes
+- [llms-product-analytics.txt](https://realaiexamples.com/llms-product-analytics.txt) - 2 recipes
+- [llms-growth-eng.txt](https://realaiexamples.com/llms-growth-eng.txt) - 1 recipes
+- [llms-support.txt](https://realaiexamples.com/llms-support.txt) - 1 recipes
+- [llms-reputation-mgmt.txt](https://realaiexamples.com/llms-reputation-mgmt.txt) - 1 recipes
+- [llms-sales-training.txt](https://realaiexamples.com/llms-sales-training.txt) - 1 recipes
+- [llms-social-media.txt](https://realaiexamples.com/llms-social-media.txt) - 1 recipes
+- [llms-social-proof.txt](https://realaiexamples.com/llms-social-proof.txt) - 2 recipes
+- [llms-customer-support.txt](https://realaiexamples.com/llms-customer-support.txt) - 1 recipes
+- [llms-tiktok.txt](https://realaiexamples.com/llms-tiktok.txt) - 1 recipes
+- [llms-twitter.txt](https://realaiexamples.com/llms-twitter.txt) - 2 recipes
+- [llms-account-management.txt](https://realaiexamples.com/llms-account-management.txt) - 1 recipes
+- [llms-content.txt](https://realaiexamples.com/llms-content.txt) - 1 recipes
+- [llms-marketing-automation.txt](https://realaiexamples.com/llms-marketing-automation.txt) - 1 recipes
+- [llms-youtube.txt](https://realaiexamples.com/llms-youtube.txt) - 3 recipes
+- [llms-automation.txt](https://realaiexamples.com/llms-automation.txt) - 1 recipes
+
+## Core Sections
+- [Home](https://realaiexamples.com)
+- [All Blueprints](https://realaiexamples.com/blueprints)
+- [Case Studies](https://realaiexamples.com/ai-examples)
+
+## Top Recipes
+- [The Abandoned Cart SMS Writer](https://realaiexamples.com/blueprints/abandoned-cart-sms): Recover 15% of lost sales via text.
+- [ABM Campaign Asset Builder](https://realaiexamples.com/blueprints/abm-campaign-asset-builder): Generate personalized landing page copy for target accounts.
+- [Intent Signal Aggregator](https://realaiexamples.com/blueprints/abm-intent-aggregator): Combine G2, 6sense, and Website visits.
+- [ABM Account Tiering Calc](https://realaiexamples.com/blueprints/abm-tiering-calculator): Auto-assign Tier 1/2/3 based on ICP fit and intent.
+- [The About Page Storyteller](https://realaiexamples.com/blueprints/about-page-storyteller): Build trust with a data-backed brand story.
+- [Corporate Hierarchy Builder](https://realaiexamples.com/blueprints/account-hierarchy-builder): Link subsidiaries to parents based on domain patterns.
+- [Activation Rate by Cohort](https://realaiexamples.com/blueprints/activation-rate-cohort): Are new users activating faster?
+- [Ad Copy Pivot Detector](https://realaiexamples.com/blueprints/ad-copy-benchmarker): Did they change their value prop?
+- [The Ad Copy Auditor](https://realaiexamples.com/blueprints/ad-copy-character-counter): Audit 100 ad variants for truncation in one run.
+- [The Ad Counter-Strike Factory](https://realaiexamples.com/blueprints/ad-counter-strike): Steal traffic from 10 competitors at once.
+- [Creative Fatigue Watchdog](https://realaiexamples.com/blueprints/ad-creative-fatigue-alert): Know when your ads stop working.
+- [The Ad Frequency Capper](https://realaiexamples.com/blueprints/ad-frequency-capper): Stop annoying your prospects.
+- [The Ad Library Archivist](https://realaiexamples.com/blueprints/ad-library-archivist): Build a structured swipe file from 100 links.
+- [Ad Waste Excluder](https://realaiexamples.com/blueprints/ad-placement-exclusion-lister): Block mobile apps and kids' channels.
+- [The Ad Spend Pacer](https://realaiexamples.com/blueprints/ad-spend-pacer): Land exactly on budget.
+- [The Ad Visual Intelligence Factory](https://realaiexamples.com/blueprints/ad-visual-reverse-engineer): Reverse-engineer 10 winning ads into design briefs.
+- [Advocacy Fatigue Saver](https://realaiexamples.com/blueprints/advocacy-ask-balancer): Don't ask twice in one month.
+- [The Affiliate Program Launcher](https://realaiexamples.com/blueprints/affiliate-program-launcher): Build a commission-only sales team.
+- [The Project Architect](https://realaiexamples.com/blueprints/agent-context-builder): Make any folder AI-ready instantly.
+- [The AI Manager's Handbook](https://realaiexamples.com/blueprints/ai-manager-handbook): Teach AI your specific rules once.
+- [The 'Alternative To' Hub Builder](https://realaiexamples.com/blueprints/alternative-to-builder): Steal traffic from all your competitors at once.
+- [The API Fleet Monitor](https://realaiexamples.com/blueprints/api-endpoint-validator): Health check 50 endpoints in one run.
+- [The API Key Rotator](https://realaiexamples.com/blueprints/api-key-rotator-checklist): Don't get hacked.
+- [The API Usage Biller](https://realaiexamples.com/blueprints/api-usage-biller): Don't leave money on the table.
+- [The App Store Screenshot Optimizer](https://realaiexamples.com/blueprints/app-store-screenshot-optimizer): More downloads, same traffic.
+- [The Attribution Modeler](https://realaiexamples.com/blueprints/attribution-modeler): Who actually deserves credit?
+- [Attribution Window Comparer](https://realaiexamples.com/blueprints/attribution-window-comparator): 1-day vs 7-day click impact.
+- [The Audience Overlap Checker](https://realaiexamples.com/blueprints/audience-overlap-checker): Stop bidding against yourself.
+- [Webinar Follow-Up Architect](https://realaiexamples.com/blueprints/automated-webinar-followup-sequence): Segment attendees vs. no-shows and write targeted nurture sequences.
+- [The Autonomous Project Manager](https://realaiexamples.com/blueprints/autonomous-project-manager): The 'Ralph Wiggum' Loop.
+- [The Sales Sniper](https://realaiexamples.com/blueprints/autonomous-sales-sniper): Find and qualify B2B leads automatically.
+- [The AI Avatar Scriptwriter](https://realaiexamples.com/blueprints/avatar-video-producer): Scripts for HeyGen & Synthesia.
+- [Backlink Quality Auditor](https://realaiexamples.com/blueprints/backlink-quality-scorer): Filter the gold from the spam.
+- [The Backlink Toxicity Checker](https://realaiexamples.com/blueprints/backlink-toxicity-checker): Is that link helping or hurting?
+- [Basket Correlation Engine](https://realaiexamples.com/blueprints/basket-analysis-market-basket): People who buy A also buy B.
+- [Content Usage Tracker](https://realaiexamples.com/blueprints/battlecard-usage-tracker): Which battlecards do reps actually use?
+- [Back-in-Stock Campaigner](https://realaiexamples.com/blueprints/bestseller-restock-alert): Launch ads when bestsellers return.
+- [Beta Tester Verifier](https://realaiexamples.com/blueprints/beta-program-active-roster): Are they actually testing?
+- [The Beta Tester Recruiter](https://realaiexamples.com/blueprints/beta-tester-recruiter): Find your first 50 users.
+- [Billing Contact Verifier](https://realaiexamples.com/blueprints/billing-contact-verification): Will the invoice bounce?
+- [Annual Pre-Pay Upsell](https://realaiexamples.com/blueprints/billing-frequency-upsell): Move monthly users to annual plans.
+- [The Bio Link Architect](https://realaiexamples.com/blueprints/bio-link-optimizer): Optimize your 'Link in Bio' from a URL or a goal.
+- [Blog ROI Calculator](https://realaiexamples.com/blueprints/blog-post-roi-calculator): How much revenue did that post generate?
+- [The Boolean Search Architect](https://realaiexamples.com/blueprints/boolean-search-architect): Write complex Sales Nav queries without the headache.
+- [The Event Booth Strategist](https://realaiexamples.com/blueprints/booth-design-checklist): Custom booth checklists for your event portfolio.
+- [Event Lead Router](https://realaiexamples.com/blueprints/booth-scan-lead-router): Route badge scans to the right rep.
+- [The Instant Brand Architect](https://realaiexamples.com/blueprints/brand-kit-gen): Logo + Pattern + Vibe.
+- [The Brand Voice Architect](https://realaiexamples.com/blueprints/brand-voice-guidelines): Stop sounding schizophrenic.
+- [Brand Voice Chameleon](https://realaiexamples.com/blueprints/brand-voice-rewriter): Rewrite any text to match your specific brand personality.
+- [Broken Image Hunter](https://realaiexamples.com/blueprints/broken-image-finder): Find images returning 404 errors.

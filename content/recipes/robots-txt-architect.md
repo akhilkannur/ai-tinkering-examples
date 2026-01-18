@@ -1,6 +1,6 @@
 ---
 id: robots-txt-architect
-category: Technical SEO
+category: SEO
 title: robots.txt Rules Architect
 tagline: Protect your crawl budget by guiding search bots away from low-value pages.
 difficulty: Intermediate

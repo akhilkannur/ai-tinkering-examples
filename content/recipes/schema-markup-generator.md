@@ -1,6 +1,6 @@
 ---
 id: schema-markup-generator
-category: Technical SEO
+category: SEO
 title: Bulk Schema JSON-LD Generator
 tagline: Get "Rich Snippets" on Google by generating valid Schema markup.
 difficulty: Intermediate

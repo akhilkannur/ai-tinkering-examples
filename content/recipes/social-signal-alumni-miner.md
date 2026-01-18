@@ -1,14 +1,16 @@
 ---
-id: "social-signal-alumni-miner"
-category: "Social Selling"
-title: "Alumni Champion Finder"
-tagline: "Track where your happy users moved."
-difficulty: "Advanced"
-time: "Monthly"
-archetype: "Processor"
-description: "Compares a list of 'Former Customer Contacts' against 'Current Employment' data to find champions at new prospects."
+id: social-signal-alumni-miner
+category: Strategic Ops
+title: Alumni Champion Finder
+tagline: Track where your happy users moved.
+difficulty: Advanced
+time: Monthly
+archetype: Processor
+description: >-
+  Compares a list of 'Former Customer Contacts' against 'Current Employment'
+  data to find champions at new prospects.
 sampleData:
-  filename: "alumni_tracker.csv"
+  filename: alumni_tracker.csv
   content: |
     Name,Old_Company,New_Company,New_Role
     John Doe,HappyClient Inc,Prospect Corp,VP Sales

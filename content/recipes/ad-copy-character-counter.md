@@ -1,6 +1,6 @@
 ---
 id: ad-copy-character-counter
-category: Ad Ops
+category: Paid Media
 title: The Ad Copy Auditor
 tagline: Audit 100 ad variants for truncation in one run.
 difficulty: Beginner

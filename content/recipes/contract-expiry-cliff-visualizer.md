@@ -1,14 +1,16 @@
---- 
-id: "contract-expiry-cliff-visualizer"
-category: "RevOps"
-title: "Revenue Cliff Visualizer"
-tagline: "Identify months with dangerous renewal concentration."
-difficulty: "Intermediate"
-time: "Monthly"
-archtype: "Processor"
-description: "Aggregates contract values by expiry month to identify 'cliffs' where a single month accounts for >30% of annual renewals."
+---
+id: contract-expiry-cliff-visualizer
+category: Sales Ops
+title: Revenue Cliff Visualizer
+tagline: Identify months with dangerous renewal concentration.
+difficulty: Intermediate
+time: Monthly
+archtype: Processor
+description: >-
+  Aggregates contract values by expiry month to identify 'cliffs' where a single
+  month accounts for >30% of annual renewals.
 sampleData:
-  filename: "expiry_schedule.csv"
+  filename: expiry_schedule.csv
   content: |
     Account,ARR,Expiry_Month
     Acme,100000,Jan

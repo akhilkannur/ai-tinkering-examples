@@ -1,6 +1,6 @@
 ---
 id: psychological-meeting-profiler
-category: Sales
+category: Sales Ops
 title: The Psychological Buyer Profiler
 tagline: Know how to close them.
 difficulty: Advanced

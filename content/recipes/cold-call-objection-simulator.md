@@ -1,6 +1,6 @@
 ---
 id: cold-call-objection-simulator
-category: Sales Enablement
+category: Sales Ops
 title: Cold Call Simulator (The Grumpy Prospect)
 tagline: Practice handling "I'm not interested" before you pick up the phone.
 difficulty: Intermediate

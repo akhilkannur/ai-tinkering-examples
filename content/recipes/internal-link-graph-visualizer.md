@@ -1,6 +1,6 @@
 ---
 id: internal-link-graph-visualizer
-category: Tech SEO
+category: SEO
 title: The Link Graph Architect
 tagline: Visualize your site structure.
 difficulty: Advanced

@@ -1,14 +1,17 @@
 ---
-id: "audience-overlap-checker"
-category: "Paid Social"
-title: "The Audience Overlap Checker"
-tagline: "Stop bidding against yourself."
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Are your showing the same ad to the same person in two different ad sets? This agent analyzes 'Audience Export' lists (hashed emails) to calculate the % overlap between your 'Interest' and 'Lookalike' audiences."
+id: audience-overlap-checker
+category: Paid Media
+title: The Audience Overlap Checker
+tagline: Stop bidding against yourself.
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Are your showing the same ad to the same person in two different ad sets? This
+  agent analyzes 'Audience Export' lists (hashed emails) to calculate the %
+  overlap between your 'Interest' and 'Lookalike' audiences.
 sampleData:
-  filename: "audience_data.csv"
+  filename: audience_data.csv
   content: |
     Audience_A_Emails,Audience_B_Emails
     user1@test.com,user3@test.com

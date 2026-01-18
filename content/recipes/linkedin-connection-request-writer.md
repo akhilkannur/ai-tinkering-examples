@@ -1,6 +1,6 @@
 ---
 id: linkedin-connection-request-writer
-category: LinkedIn
+category: Content Ops
 title: The Connection Request Writer
 tagline: Get accepted by VIPs.
 difficulty: Beginner

@@ -1,0 +1,198 @@
+# Blueprints: YouTube
+
+## The Chapter Maker
+URL: https://realaiexamples.com/blueprints/youtube-chapter-maker
+Description: Rank for key moments.
+
+---
+id: youtube-chapter-maker
+category: YouTube
+title: The Chapter Maker
+tagline: Rank for key moments.
+difficulty: Intermediate
+time: Batch
+description: >-
+  Google indexes video chapters directly in search results. This agent processes
+  your video transcripts, identifies topic shifts, and generates SEO-optimized
+  'Chapter Lists' for your entire channel.
+sampleData:
+  filename: transcripts.csv
+  content: |
+    Video_Title,Transcript_File,Target_Keyword
+    AI Agent Tutorial,transcripts/ai_agent.txt,Build AI agents
+    Sales Cold Call,transcripts/cold_call.txt,Sales objection handling
+    Growth Hacking 101,transcripts/growth.txt,Scalable growth strategies
+isPremium: true
+---
+
+# Agent Configuration: The Chapter Maker
+
+## Role
+Google indexes video chapters directly in search results. This agent processes your video transcripts, identifies topic shifts, and generates SEO-optimized 'Chapter Lists' for your entire channel.
+
+## Objective
+Rank for key moments.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `transcripts.csv` exist?
+2.  **If Missing:** Create `transcripts.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Check
+1.  **Check:** Does `transcripts.csv` exist?
+2.  **If Missing:** Create `transcripts.csv` using the `sampleData`. Ensure the `transcripts/` folder exists.
+3.  **If Present:** Load the transcript list.
+
+### Phase 2: The Chaptering Loop
+For each transcript in the CSV:
+1.  **Analyze Content:** Scan the `Transcript_File` for timestamp markers (e.g., `[02:15]`) and topical shifts.
+2.  **Identify Key Moments:**
+    *   **00:00:** The Hook/Intro.
+    *   **Topic Shifts:** Any time a new sub-topic or step is introduced.
+    *   **The Pitch:** When the CTA or final summary occurs.
+3.  **Draft Chapter Titles:** Create concise, descriptive titles incorporating the `Target_Keyword` where natural.
+4.  **Formatting:** Ensure the output follows the YouTube "00:00 Title" format for instant copy-pasting.
+
+### Phase 3: Structured Deliverables
+1.  **Create:** `video_metadata_master.csv` with columns: `Video_Title`, `Total_Chapters`, `Primary_SEO_Chapter`, `Chapter_List_Raw`.
+2.  **Report:** "Successfully generated chapters for [X] videos. SEO-optimized timestamps ready for your YouTube descriptions."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The Community Tab Poster
+URL: https://realaiexamples.com/blueprints/youtube-community-tab-poster
+Description: Keep subscribers alive between uploads.
+
+---
+id: youtube-community-tab-poster
+category: YouTube
+title: The Community Tab Poster
+tagline: Keep subscribers alive between uploads.
+difficulty: Beginner
+time: Batch
+description: >-
+  Don't just post videos. This agent plans high-engagement 'Community Tab'
+  posts—Polls, Behind-the-Scenes, and Teasers—for your entire YouTube channel
+  portfolio to keep the algorithm active.
+sampleData:
+  filename: channels.csv
+  content: |
+    Channel_Name,Main_Topic,Next_Video_Topic
+    AI Tinkering,AI Agent Tutorials,How to build a voice agent
+    SDR Lab,Sales Cold Calling,Handle the 'I have no budget' objection
+    Glow Design,UX & Brand,Redesigning the Apple Homepage
+isPremium: true
+---
+
+# Agent Configuration: The Community Tab Poster
+
+## Role
+Don't just post videos. This agent plans high-engagement 'Community Tab' posts—Polls, Behind-the-Scenes, and Teasers—for your entire YouTube channel portfolio to keep the algorithm active.
+
+## Objective
+Keep subscribers alive between uploads.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `channels.csv` exist?
+2.  **If Missing:** Create `channels.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Check
+1.  **Check:** Does `channels.csv` exist?
+2.  **If Missing:** Create `channels.csv` using the `sampleData`.
+3.  **If Present:** Load the channel list.
+
+### Phase 2: The Content Planning Loop
+For each channel in the CSV:
+1.  **Draft Poll (The Feedback):** "Which [Main_Topic] struggle are you facing right now?" (4 specific options).
+2.  **Draft Teaser (The Curiosity):** "Just finished filming the [Next_Video_Topic] guide. You won't believe [Specific Detail]. Dropping Tuesday! 🔔"
+3.  **Draft Relatable Post (The Vibe):** A short, text-based joke or observation about the `Main_Topic` industry.
+4.  **Draft CTA:** "Check the link in our bio for the free resource on [Main_Topic]."
+5.  **Output:** Save to `community_plans/[Channel_Name]_week.md`.
+
+### Phase 3: Structured Deliverables
+1.  **Create:** `community_engagement_manifest.csv` with columns: `Channel_Name`, `Poll_Topic`, `Teaser_Hook`, `File_Path`.
+2.  **Report:** "Successfully designed [X] weeks of community content. Ready to keep your subscribers engaged between uploads."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The Thumbnail Strategy Factory
+URL: https://realaiexamples.com/blueprints/youtube-thumbnail-ab-tester
+Description: High-CTR concepts from your ideas or viral competitors.
+
+---
+id: youtube-thumbnail-ab-tester
+category: YouTube
+title: The Thumbnail Strategy Factory
+tagline: High-CTR concepts from your ideas or viral competitors.
+difficulty: Beginner
+time: Weekly
+description: >-
+  CTR determines your video's fate. This agent audits your thumbnail ideas (if
+  provided) or researches the top 10 viral videos in your niche to generate 3
+  distinct A/B test concepts designed to win the click.
+sampleData:
+  filename: thumbnail_drafts.txt
+  content: |
+    Idea 1: Me pointing at a graph.
+    Idea 2: A screenshot of the code.
+isPremium: true
+---
+
+# Agent Configuration: The Thumbnail Strategy Factory
+
+## Role
+CTR determines your video's fate. This agent audits your thumbnail ideas (if provided) or researches the top 10 viral videos in your niche to generate 3 distinct A/B test concepts designed to win the click.
+
+## Objective
+High-CTR concepts from your ideas or viral competitors.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `thumbnail_drafts.txt` exist?
+2.  **If Missing:** Create `thumbnail_drafts.txt` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Context Choice
+1.  **Check:** Did the user provide `thumbnail_drafts.txt`?
+2.  **Logic:**
+    *   *If Yes:* Critique the drafts against the "Rule of 3" (Face, Text, Object).
+    *   *If No:* Ask for the "Video Title". Research the top 5 videos ranking for that term. Identify their common visual style.
+
+### Phase 2: Concept Generation
+Draft 3 variations:
+*   **The "Shock" (Emotion):** High contrast face, shocking result.
+*   **The "Simple" (Clarity):** One object, one word.
+*   **The "Comparison" (Benefit):** Before/After split screen.
+
+### Phase 3: The Design Brief
+1.  **Create:** `thumbnail_production_brief.md`.
+2.  **Visuals:** For each concept, specify the "Background", "Overlay Text", and "Focal Point".
+3.  **Report:** "Generated [X] A/B test concepts. Concept #2 tests the 'Fear of Loss' lever."
+---
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+

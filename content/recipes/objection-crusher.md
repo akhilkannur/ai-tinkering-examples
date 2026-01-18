@@ -1,6 +1,6 @@
 ---
 id: objection-crusher
-category: Sales Enablement
+category: Sales Ops
 title: The Objection Crusher
 tagline: Create battle cards from your notes or competitor reviews.
 difficulty: Intermediate

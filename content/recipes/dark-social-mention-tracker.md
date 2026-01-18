@@ -1,14 +1,16 @@
 ---
-id: "dark-social-mention-tracker"
-category: "Social Selling"
-title: "Community Mention Alert"
-tagline: "Who is talking about us in Slack?"
-difficulty: "Advanced"
-time: "Daily"
-archetype: "Processor"
-description: "Scrapes (simulated) Slack/Discord community exports for brand keywords to identify dark social leads."
+id: dark-social-mention-tracker
+category: Strategic Ops
+title: Community Mention Alert
+tagline: Who is talking about us in Slack?
+difficulty: Advanced
+time: Daily
+archetype: Processor
+description: >-
+  Scrapes (simulated) Slack/Discord community exports for brand keywords to
+  identify dark social leads.
 sampleData:
-  filename: "community_logs.txt"
+  filename: community_logs.txt
   content: |
     User: Has anyone tried [Brand]?
     User: Yeah it's great.

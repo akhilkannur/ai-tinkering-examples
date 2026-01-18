@@ -1,14 +1,16 @@
 ---
-id: "category-interest-tagger"
-category: "E-commerce Merchandising"
-title: "Category Affinity Tagger"
-tagline: "Tag users as 'Runners' or 'Swimmers'."
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Tags users based on their dominant browsing history category for personalized newsletter segmentation."
+id: category-interest-tagger
+category: E-commerce
+title: Category Affinity Tagger
+tagline: Tag users as 'Runners' or 'Swimmers'.
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Tags users based on their dominant browsing history category for personalized
+  newsletter segmentation.
 sampleData:
-  filename: "user_browsing.csv"
+  filename: user_browsing.csv
   content: |
     User,Category_Viewed
     John,Running

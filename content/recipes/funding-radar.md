@@ -1,6 +1,6 @@
 ---
 id: funding-radar
-category: Competitor Intel
+category: Competitive Intel
 title: The Capital Radar
 tagline: Track $1B+ in funding across 50 industries on autopilot.
 difficulty: Intermediate

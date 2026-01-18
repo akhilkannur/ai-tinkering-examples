@@ -1,14 +1,16 @@
 ---
-id: "cart-abandonment-value-segmentation"
-category: "Retention Marketing"
-title: "High-Value Cart Recovery"
-tagline: "Treat $1k carts differently than $10 carts."
-difficulty: "Intermediate"
-time: "Daily"
-archetype: "Processor"
-description: "Splits cart abandoners into 'High Value' (for personal outreach) and 'Low Value' (for automated email)."
+id: cart-abandonment-value-segmentation
+category: Retention
+title: High-Value Cart Recovery
+tagline: Treat $1k carts differently than $10 carts.
+difficulty: Intermediate
+time: Daily
+archetype: Processor
+description: >-
+  Splits cart abandoners into 'High Value' (for personal outreach) and 'Low
+  Value' (for automated email).
 sampleData:
-  filename: "abandoned_carts.csv"
+  filename: abandoned_carts.csv
   content: |
     Customer,Cart_Total,Email
     John,1200,john@acme.com

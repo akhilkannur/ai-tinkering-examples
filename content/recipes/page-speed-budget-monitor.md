@@ -1,14 +1,16 @@
---- 
-id: "page-speed-budget-monitor"
-category: "Technical SEO"
-title: "Speed Budget Enforcer"
-tagline: "Don't let your site get slow."
-difficulty: "Intermediate"
-time: "Weekly"
-archtype: "Processor"
-description: "Checks a list of page load times against a 'budget' (e.g., 2.5s LCP). Flags offenders."
+---
+id: page-speed-budget-monitor
+category: SEO
+title: Speed Budget Enforcer
+tagline: Don't let your site get slow.
+difficulty: Intermediate
+time: Weekly
+archtype: Processor
+description: >-
+  Checks a list of page load times against a 'budget' (e.g., 2.5s LCP). Flags
+  offenders.
 sampleData:
-  filename: "lighthouse_scores.csv"
+  filename: lighthouse_scores.csv
   content: |
     Page,LCP_Seconds
     /home,1.2

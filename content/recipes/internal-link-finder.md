@@ -1,6 +1,6 @@
 ---
 id: internal-link-finder
-category: On-Page SEO
+category: SEO
 title: The Internal Link Opportunity Finder
 tagline: Connect your content clusters.
 difficulty: Beginner

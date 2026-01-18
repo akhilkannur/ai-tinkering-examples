@@ -1,6 +1,6 @@
 ---
 id: ad-library-archivist
-category: Intel
+category: Competitive Intel
 title: The Ad Library Archivist
 tagline: Build a structured swipe file from 100 links.
 difficulty: Beginner

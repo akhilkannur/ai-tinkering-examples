@@ -1,14 +1,16 @@
 ---
-id: "returns-impact-on-profit"
-category: "E-commerce Growth"
-title: "Net Profit SKU Analyzer"
-tagline: "True profit after returns."
-difficulty: "Advanced"
-time: "Monthly"
-archetype: "Processor"
-description: "Calculates 'Net Profit' per SKU after factoring in return costs and refund rates."
+id: returns-impact-on-profit
+category: E-commerce
+title: Net Profit SKU Analyzer
+tagline: True profit after returns.
+difficulty: Advanced
+time: Monthly
+archetype: Processor
+description: >-
+  Calculates 'Net Profit' per SKU after factoring in return costs and refund
+  rates.
 sampleData:
-  filename: "sku_finance.csv"
+  filename: sku_finance.csv
   content: |
     SKU,Gross_Profit,Return_Cost_Total
     Shirt,10000,2000

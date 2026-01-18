@@ -1,6 +1,6 @@
 ---
 id: newsletter-sponsor-scout
-category: Monetization
+category: Strategic Ops
 title: The Sponsor Scout Engine
 tagline: Fill your ad slots for the next 6 months.
 difficulty: Intermediate

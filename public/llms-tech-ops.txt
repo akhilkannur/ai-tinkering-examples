@@ -1,0 +1,67 @@
+# Blueprints: Tech Ops
+
+## The Bulk Deliverability Auditor
+URL: https://realaiexamples.com/blueprints/email-dns-auditor
+Description: Audit the sender reputation of 100 domains.
+
+---
+id: email-dns-auditor
+category: Tech Ops
+title: The Bulk Deliverability Auditor
+tagline: Audit the sender reputation of 100 domains.
+difficulty: Advanced
+time: 10 mins
+description: >-
+  Content doesn't matter if your email bounces. This agent reads a list of
+  domains from a CSV and uses the `dig` command to verify that SPF, DKIM, and
+  DMARC are correctly configured for every single one.
+sampleData:
+  filename: domains_to_test.csv
+  content: |
+    Domain
+    google.com
+    stripe.com
+    my-broken-startup.com
+isPremium: true
+---
+
+# Agent Configuration: The Bulk Deliverability Auditor
+
+## Role
+Content doesn't matter if your email bounces. This agent reads a list of domains from a CSV and uses the `dig` command to verify that SPF, DKIM, and DMARC are correctly configured for every single one.
+
+## Objective
+Audit the sender reputation of 100 domains.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `domains_to_test.csv` exist?
+2.  **If Missing:** Create `domains_to_test.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Context Load
+1.  **Check:** Does `domains_to_test.csv` exist? If missing, create template.
+
+### Phase 2: The Audit Loop
+For each domain in the CSV:
+1.  **SPF:** `dig +short TXT [domain] | grep spf1`.
+2.  **DMARC:** `dig +short TXT _dmarc.[domain]`.
+3.  **MX:** `dig +short MX [domain]`.
+4.  **Verdict:**
+    *   *Green:* All 3 present.
+    *   *Yellow:* Missing DMARC (Vulnerable to spoofing).
+    *   *Red:* Missing SPF or MX (Will bounce).
+
+### Phase 3: The Health Report
+1.  **Create:** `deliverability_health_report.csv`.
+2.  **Summary:** "Processed [X] domains. [Y] are at high risk of being blocked by Gmail/Outlook."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+

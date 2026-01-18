@@ -1,6 +1,6 @@
 ---
 id: linkedin-profile-banner-architect
-category: Social
+category: Content Ops
 title: The LinkedIn Banner Architect
 tagline: Build a high-converting profile banner.
 difficulty: Beginner

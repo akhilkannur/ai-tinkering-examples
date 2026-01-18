@@ -1,6 +1,6 @@
 ---
 id: influencer-outreach-manager
-category: Marketing
+category: Strategic Ops
 title: Influencer Relationship Tracker
 tagline: Manage your influencer pipeline without a fancy CRM.
 difficulty: Intermediate

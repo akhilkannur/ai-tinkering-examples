@@ -1,14 +1,16 @@
---- 
-id: "quote-line-item-validator"
-category: "RevOps"
-title: "Product SKU Integrity Checker"
-tagline: "Ensure reps don't quote incompatible SKUs."
-difficulty: "Intermediate"
-time: "Daily"
-archtype: "Processor"
-description: "Audits draft quotes to ensure they don't contain incompatible product combinations (e.g., 'Starter Plan' + 'Enterprise Add-on')."
+---
+id: quote-line-item-validator
+category: Sales Ops
+title: Product SKU Integrity Checker
+tagline: Ensure reps don't quote incompatible SKUs.
+difficulty: Intermediate
+time: Daily
+archtype: Processor
+description: >-
+  Audits draft quotes to ensure they don't contain incompatible product
+  combinations (e.g., 'Starter Plan' + 'Enterprise Add-on').
 sampleData:
-  filename: "quotes.csv"
+  filename: quotes.csv
   content: |
     Quote_ID,SKU_List
     Q-1,'STARTER';'ENT_ADDON'

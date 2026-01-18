@@ -1,6 +1,6 @@
 ---
 id: swot-analysis-generator
-category: Strategy
+category: Strategic Ops
 title: The Strategic SWOT Generator
 tagline: Build a SWOT matrix from your notes or market research.
 difficulty: Intermediate

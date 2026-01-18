@@ -1,14 +1,16 @@
 ---
-id: "contract-auto-renewal-forecaster"
-category: "RevOps"
-title: "Auto-Renew Forecaster"
-tagline: "Predict passive revenue."
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Predicts revenue from contracts marked 'Auto-Renew' vs those requiring manual intervention."
+id: contract-auto-renewal-forecaster
+category: Sales Ops
+title: Auto-Renew Forecaster
+tagline: Predict passive revenue.
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Predicts revenue from contracts marked 'Auto-Renew' vs those requiring manual
+  intervention.
 sampleData:
-  filename: "contracts.csv"
+  filename: contracts.csv
   content: |
     Account,ARR,Renewal_Type
     Acme,10000,Auto

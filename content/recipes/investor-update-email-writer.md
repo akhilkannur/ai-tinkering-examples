@@ -1,6 +1,6 @@
 ---
 id: investor-update-email-writer
-category: Founders
+category: Lead Gen
 title: Investor Update Writer
 tagline: Write the monthly email that keeps your VCs happy (and helpful).
 difficulty: Beginner

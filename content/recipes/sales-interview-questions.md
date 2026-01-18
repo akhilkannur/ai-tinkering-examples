@@ -1,6 +1,6 @@
 ---
 id: sales-interview-questions
-category: Hiring
+category: Lead Gen
 title: The Sales Interview Architect
 tagline: Custom assessments for any sales role.
 difficulty: Intermediate

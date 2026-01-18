@@ -1,6 +1,6 @@
 ---
 id: podcast-tour-manager
-category: PR
+category: Content Ops
 title: The Podcast Tour Manager
 tagline: Book your tour from a list or a niche goal.
 difficulty: Intermediate

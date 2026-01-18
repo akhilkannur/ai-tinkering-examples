@@ -1,14 +1,16 @@
 ---
-id: "feature-gating-hit-tracker"
-category: "PLG Sales"
-title: "Paywall Hit Detector"
-tagline: "Who keeps clicking the 'Upgrade' button?"
-difficulty: "Intermediate"
-time: "Weekly"
-archetype: "Processor"
-description: "Tracks how often specific free users hit 'Upgrade to use this' paywalls to gauge intent."
+id: feature-gating-hit-tracker
+category: Sales Ops
+title: Paywall Hit Detector
+tagline: Who keeps clicking the 'Upgrade' button?
+difficulty: Intermediate
+time: Weekly
+archetype: Processor
+description: >-
+  Tracks how often specific free users hit 'Upgrade to use this' paywalls to
+  gauge intent.
 sampleData:
-  filename: "paywall_logs.csv"
+  filename: paywall_logs.csv
   content: |
     User,Feature_Clicked,Count
     Acme,API Access,5

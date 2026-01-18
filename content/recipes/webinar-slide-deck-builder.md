@@ -1,6 +1,6 @@
 ---
 id: webinar-slide-deck-builder
-category: Content
+category: Content Ops
 title: The Webinar Deck Builder
 tagline: Presentations that don't suck.
 difficulty: Intermediate

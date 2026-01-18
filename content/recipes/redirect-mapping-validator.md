@@ -1,14 +1,14 @@
---- 
-id: "redirect-mapping-validator"
-category: "Technical SEO"
-title: "Migration Redirect Checker"
-tagline: "Did the migration actually work?"
-difficulty: "Intermediate"
-time: "One-off"
-archtype: "Processor"
-description: "Verifies a list of expected redirects against the actual response codes."
+---
+id: redirect-mapping-validator
+category: SEO
+title: Migration Redirect Checker
+tagline: Did the migration actually work?
+difficulty: Intermediate
+time: One-off
+archtype: Processor
+description: Verifies a list of expected redirects against the actual response codes.
 sampleData:
-  filename: "redirect_plan.csv"
+  filename: redirect_plan.csv
   content: |
     Old_URL,New_URL,Actual_Status,Actual_Location
     /old, /new, 301, /new

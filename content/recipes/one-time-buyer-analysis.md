@@ -1,14 +1,16 @@
 ---
-id: "one-time-buyer-analysis"
-category: "Analytics"
-title: "One-and-Done Profiler"
-tagline: "Why do they leave after 1 buy?"
-difficulty: "Intermediate"
-time: "Quarterly"
-archetype: "Processor"
-description: "Profiles customers who bought once and never returned to find commonalities (e.g. bought Product X, came from Channel Y)."
+id: one-time-buyer-analysis
+category: CRO
+title: One-and-Done Profiler
+tagline: Why do they leave after 1 buy?
+difficulty: Intermediate
+time: Quarterly
+archetype: Processor
+description: >-
+  Profiles customers who bought once and never returned to find commonalities
+  (e.g. bought Product X, came from Channel Y).
 sampleData:
-  filename: "one_timers.csv"
+  filename: one_timers.csv
   content: |
     Customer,First_Product,Channel
     John,Sock_Bundle,TikTok

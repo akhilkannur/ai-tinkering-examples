@@ -1,6 +1,6 @@
 ---
 id: holiday-promo-planner
-category: Marketing
+category: Strategic Ops
 title: The Holiday Campaign Factory
 tagline: Crush Black Friday across 5 products at once.
 difficulty: Advanced

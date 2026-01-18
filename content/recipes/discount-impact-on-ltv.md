@@ -1,14 +1,16 @@
 ---
-id: "discount-impact-on-ltv"
-category: "RevOps"
-title: "Discount vs LTV Auditor"
-tagline: "Does high discounting lead to low LTV?"
-difficulty: "Advanced"
-time: "Quarterly"
-archetype: "Processor"
-description: "Correlates initial contract discounts with long-term customer lifetime value to find healthy discount limits."
+id: discount-impact-on-ltv
+category: Sales Ops
+title: Discount vs LTV Auditor
+tagline: Does high discounting lead to low LTV?
+difficulty: Advanced
+time: Quarterly
+archetype: Processor
+description: >-
+  Correlates initial contract discounts with long-term customer lifetime value
+  to find healthy discount limits.
 sampleData:
-  filename: "discount_ltv.csv"
+  filename: discount_ltv.csv
   content: |
     Customer,Initial_Discount_Pct,Total_LTV
     Acme,0,50000

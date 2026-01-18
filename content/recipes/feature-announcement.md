@@ -1,6 +1,6 @@
 ---
 id: feature-announcement
-category: Product Marketing
+category: Strategic Ops
 title: The Product Marketing Engine
 tagline: Turn technical updates into sales momentum.
 difficulty: Beginner

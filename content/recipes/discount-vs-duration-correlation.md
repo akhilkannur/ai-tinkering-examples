@@ -1,14 +1,16 @@
 ---
-id: "discount-vs-duration-correlation"
-category: "Advanced RevOps"
-title: "Discount Efficiency Auditor"
-tagline: "Are we getting longer terms for lower prices?"
-difficulty: "Intermediate"
-time: "Quarterly"
-archetype: "Processor"
-description: "Checks if deals with high discounts actually result in longer contract durations (as they should)."
+id: discount-vs-duration-correlation
+category: Sales Ops
+title: Discount Efficiency Auditor
+tagline: Are we getting longer terms for lower prices?
+difficulty: Intermediate
+time: Quarterly
+archetype: Processor
+description: >-
+  Checks if deals with high discounts actually result in longer contract
+  durations (as they should).
 sampleData:
-  filename: "deal_terms.csv"
+  filename: deal_terms.csv
   content: |
     Deal,Discount_Pct,Duration_Months
     1,20,12

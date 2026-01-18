@@ -1,14 +1,16 @@
 ---
-id: "refund-rate-marketing-channel"
-category: "Analytics"
-title: "Quality of Traffic Audit"
-tagline: "Which ads drive returns?"
-difficulty: "Advanced"
-time: "Monthly"
-archetype: "Processor"
-description: "Checks if certain marketing channels drive 'Bad Quality' customers who return items at a higher rate."
+id: refund-rate-marketing-channel
+category: CRO
+title: Quality of Traffic Audit
+tagline: Which ads drive returns?
+difficulty: Advanced
+time: Monthly
+archetype: Processor
+description: >-
+  Checks if certain marketing channels drive 'Bad Quality' customers who return
+  items at a higher rate.
 sampleData:
-  filename: "returns_channel.csv"
+  filename: returns_channel.csv
   content: |
     Order,Channel,Status
     1,TikTok,Returned

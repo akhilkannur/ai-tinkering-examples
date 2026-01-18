@@ -1,14 +1,16 @@
 ---
-id: "free-shipping-threshold-tester"
-category: "E-commerce Growth"
-title: "Free Shipping Modeler"
-tagline: "Should the bar be $50 or $75?"
-difficulty: "Advanced"
-time: "Ad-hoc"
-archetype: "Processor"
-description: "Simulates margin impact of moving free shipping thresholds based on current basket distributions."
+id: free-shipping-threshold-tester
+category: E-commerce
+title: Free Shipping Modeler
+tagline: Should the bar be $50 or $75?
+difficulty: Advanced
+time: Ad-hoc
+archetype: Processor
+description: >-
+  Simulates margin impact of moving free shipping thresholds based on current
+  basket distributions.
 sampleData:
-  filename: "basket_sizes.csv"
+  filename: basket_sizes.csv
   content: |
     Order_ID,Total
     1,45

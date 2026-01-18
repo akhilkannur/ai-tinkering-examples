@@ -1,14 +1,16 @@
 ---
-id: "opportunity-owner-vs-account-owner"
-category: "RevOps"
-title: "Ownership Mismatch Finder"
-tagline: "Is the Opp owner different from the Account owner?"
-difficulty: "Beginner"
-time: "Weekly"
-archetype: "Processor"
-description: "Flags discrepancies where the Opportunity Owner does not match the Account Owner, causing commission disputes."
+id: opportunity-owner-vs-account-owner
+category: Sales Ops
+title: Ownership Mismatch Finder
+tagline: Is the Opp owner different from the Account owner?
+difficulty: Beginner
+time: Weekly
+archetype: Processor
+description: >-
+  Flags discrepancies where the Opportunity Owner does not match the Account
+  Owner, causing commission disputes.
 sampleData:
-  filename: "ownership.csv"
+  filename: ownership.csv
   content: |
     Opp,Opp_Owner,Acc_Owner
     O-1,John,John

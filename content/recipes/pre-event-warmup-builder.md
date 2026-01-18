@@ -1,14 +1,16 @@
 ---
-id: "pre-event-warmup-builder"
-category: "Field Marketing"
-title: "Geo-Targeted Event Warmup"
-tagline: "Find prospects within 50 miles."
-difficulty: "Intermediate"
-time: "Batch"
-archetype: "Processor"
-description: "Filters your CRM for prospects located within a specific radius of an upcoming event city to build an invite list."
+id: pre-event-warmup-builder
+category: Strategic Ops
+title: Geo-Targeted Event Warmup
+tagline: Find prospects within 50 miles.
+difficulty: Intermediate
+time: Batch
+archetype: Processor
+description: >-
+  Filters your CRM for prospects located within a specific radius of an upcoming
+  event city to build an invite list.
 sampleData:
-  filename: "prospect_locations.csv"
+  filename: prospect_locations.csv
   content: |
     Name,City,State
     John,San Francisco,CA

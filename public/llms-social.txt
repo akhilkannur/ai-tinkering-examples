@@ -1,0 +1,270 @@
+# Blueprints: Social
+
+## The Comment Section Nurturer
+URL: https://realaiexamples.com/blueprints/comment-section-nurturer
+Description: Turn 'Great post' into a lead.
+
+---
+id: comment-section-nurturer
+category: Social
+title: The Comment Section Nurturer
+tagline: Turn 'Great post' into a lead.
+difficulty: Beginner
+time: Batch
+description: >-
+  Comments are the highest signal of interest. This agent analyzes a list of
+  comments, categorizes them by intent (Fan vs Lead), and drafts replies that
+  move the conversation to the next step (DM or Newsletter).
+sampleData:
+  filename: comments.csv
+  content: "Username,Comment_Text,Platform\njason_dev,\U0001F525 great post as always!,Twitter\nsara_founder,Does this integrate with Slack?,LinkedIn\nmike_marketer,I tried this but it was too expensive for my team.,LinkedIn\n"
+---
+
+# Agent Configuration: The Comment Section Nurturer
+
+## Role
+Comments are the highest signal of interest. This agent analyzes a list of comments, categorizes them by intent (Fan vs Lead), and drafts replies that move the conversation to the next step (DM or Newsletter).
+
+## Objective
+Turn 'Great post' into a lead.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `comments.csv` exist?
+2.  **If Missing:** Create `comments.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Check
+1.  **Check:** Does `comments.csv` exist?
+2.  **If Missing:** Create `comments.csv` using the `sampleData`.
+3.  **If Present:** Load the comment list.
+
+### Phase 2: The Nurture Loop
+For each comment in the CSV:
+1.  **Classify Intent:**
+    *   **Fan:** Simple praise or emojis.
+    *   **Question:** Inquiries about features, price, or usage.
+    *   **Objection:** Negative sentiment or comparison to competitors.
+2.  **Draft Reply:**
+    *   **If [Fan]:** "Thanks [Username]! What was the #1 takeaway for you?"
+    *   **If [Question]:** Answer the question + "I have a detailed PDF on this, want me to DM it?"
+    *   **If [Objection]:** Validate the concern + Pivot to a benefit. "Totally understand that perspective. We focused on [Feature] to solve [Problem]. Does that change things for you?"
+
+### Phase 3: Structured Deliverables
+1.  **Create:** `draft_replies.csv` with columns: `Username`, `Platform`, `Intent`, `Draft_Reply`.
+2.  **Report:** "Successfully drafted [X] replies. Lead capture opportunities identified in [Y] comments."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The LinkedIn Banner Architect
+URL: https://realaiexamples.com/blueprints/linkedin-profile-banner-architect
+Description: Build a high-converting profile banner.
+
+---
+id: linkedin-profile-banner-architect
+category: Social
+title: The LinkedIn Banner Architect
+tagline: Build a high-converting profile banner.
+difficulty: Beginner
+time: Batch
+description: >-
+  Your banner is prime real estate. This agent researches your niche and target
+  audience to design text-based visual briefs for banners that state your value
+  prop and social proof clearly across multiple profiles.
+sampleData:
+  filename: profiles.csv
+  content: |
+    Name,Job_Title,Niche
+    Alex Rivera,SaaS Sales Lead,B2B Outbound
+    Sarah Chen,UX Researcher,Enterprise Design
+    Mike Ross,SEO Consultant,E-commerce Growth
+isPremium: true
+---
+
+# Agent Configuration: The LinkedIn Banner Architect
+
+## Role
+Your banner is prime real estate. This agent researches your niche and target audience to design text-based visual briefs for banners that state your value prop and social proof clearly across multiple profiles.
+
+## Objective
+Build a high-converting profile banner.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `profiles.csv` exist?
+2.  **If Missing:** Create `profiles.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Check
+1.  **Check:** Does `profiles.csv` exist?
+2.  **If Missing:** Create `profiles.csv` using the `sampleData`.
+3.  **If Present:** Load the profile list.
+
+### Phase 2: The Niche Research Loop
+For each profile in the CSV:
+1.  **Market Research:** Use `web_fetch` to find top influencers or leaders in the `Niche`. Identify their banner themes (e.g., "Minimalist", "Bold Typography", "Action-Oriented").
+2.  **Draft the Hero Hook:** "I help [Target Audience] achieve [Result] using [Unique Mechanism]."
+3.  **Plan the Layout:**
+    *   **The Hook:** Positioned for desktop and mobile visibility (center-right).
+    *   **The Social Proof:** Mention of `Trusted by [Logos]` or specific achievements.
+    *   **The CTA:** Strategic pointer to the profile's primary link.
+4.  **Visual Brief:** Specify recommended color palettes and font styles based on the `Niche` research.
+
+### Phase 3: Structured Deliverables
+1.  **Create:** `banner_briefs/` folder with `[Name]_banner_brief.md` for each entry.
+2.  **Create:** `banner_inventory.csv` with columns: `Name`, `Job_Title`, `Primary_Hook`, `File_Path`.
+3.  **Report:** "Successfully architected [X] banner briefs. Ready for Canva or a graphic designer."
+---
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The Poll Strategy Generator
+URL: https://realaiexamples.com/blueprints/poll-strategy-generator
+Description: Engagement farming with a purpose.
+
+---
+id: poll-strategy-generator
+category: Social
+title: The Poll Strategy Generator
+tagline: Engagement farming with a purpose.
+difficulty: Beginner
+time: Batch
+description: >-
+  Polls get high reach, but often zero value. This agent generates 'Market
+  Research' polls that double as lead qualification, allowing you to segment and
+  DM voters based on their specific pain points.
+sampleData:
+  filename: campaign_goals.csv
+  content: |
+    Campaign_Name,Target_Audience,What_You_Are_Selling
+    SEO Audit Sale,E-commerce Founders,Quarterly SEO Audits
+    Sales Coaching,SDR Managers,3-Day Training Intensive
+    App Launch,Product Leads,AI-powered task manager
+isPremium: true
+---
+
+# Agent Configuration: The Poll Strategy Generator
+
+## Role
+Polls get high reach, but often zero value. This agent generates 'Market Research' polls that double as lead qualification, allowing you to segment and DM voters based on their specific pain points.
+
+## Objective
+Engagement farming with a purpose.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `campaign_goals.csv` exist?
+2.  **If Missing:** Create `campaign_goals.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Check
+1.  **Check:** Does `campaign_goals.csv` exist?
+2.  **If Missing:** Create `campaign_goals.csv` using the `sampleData`.
+3.  **If Present:** Load the campaign list.
+
+### Phase 2: The Strategy Loop
+For each campaign in the CSV:
+1.  **Draft 3 Polls:**
+    *   **Poll 1 (The Pain Point):** "What is the biggest barrier to [Target_Audience] achieving [Goal]?" (Options: Cost, Time, Expertise, Tools).
+    *   **Poll 2 (The Tool Gap):** "Which of these are you currently using for [Problem]?" (Options: Competitor A, Competitor B, Manual/Sheets, Nothing).
+    *   **Poll 3 (The Desire):** "If you could automate one part of [Process], what would it be?"
+2.  **Plan Follow-up Logic:**
+    *   **If voted [Cost]:** "Hey [Name], saw you voted 'Cost'. We actually have a starter plan designed for..."
+    *   **If voted [Time]:** "Saw your vote on the 'Time' struggle. Have you seen our 1-click template for [Process]?"
+3.  **Output:** Save to `poll_strategies/[Campaign_Name]_plan.md`.
+
+### Phase 3: Structured Deliverables
+1.  **Create:** `social_research_matrix.csv` with columns: `Campaign_Name`, `Primary_Poll_Question`, `High_Intent_Option`, `File_Path`.
+2.  **Report:** "Successfully designed [X] poll strategies. Engagement metrics and DM scripts ready for launch."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The UGC Campaign Planner
+URL: https://realaiexamples.com/blueprints/user-generated-content-campaign
+Description: High-ROI content from your users.
+
+---
+id: user-generated-content-campaign
+category: Social
+title: The UGC Campaign Planner
+tagline: High-ROI content from your users.
+difficulty: Intermediate
+time: Batch
+description: >-
+  Social proof is your best sales tool. This agent designs viral UGC contests
+  and campaigns for your entire product line, incentivizing users to create
+  high-quality marketing assets for you.
+sampleData:
+  filename: brands.csv
+  content: |
+    Brand_Name,Product_Category,Primary_Platform
+    VelvetBloom,Skincare,Instagram/TikTok
+    PixelPounce,Gaming Peripherals,X/Twitter
+    BrewBase,Coffee Equipment,Instagram
+isPremium: true
+---
+
+# Agent Configuration: The UGC Campaign Planner
+
+## Role
+Social proof is your best sales tool. This agent designs viral UGC contests and campaigns for your entire product line, incentivizing users to create high-quality marketing assets for you.
+
+## Objective
+High-ROI content from your users.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `brands.csv` exist?
+2.  **If Missing:** Create `brands.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Check
+1.  **Check:** Does `brands.csv` exist?
+2.  **If Missing:** Create `brands.csv` using the `sampleData`.
+3.  **If Present:** Load the brand list.
+
+### Phase 2: The Campaign Planning Loop
+For each brand in the CSV:
+1.  **Select Concept:**
+    *   **If [Skincare]:** "The 30-Day Glow Transformation."
+    *   **If [Gaming]:** "The ultimate [Product] Battlestation Setup."
+    *   **If [Coffee]:** "The First Sip Morning Routine."
+2.  **Define Rules:** Set clear participation requirements (e.g., Tagging, Hashtags, 15-second minimum video).
+3.  **Draft Incentive:** Recommend a "Grand Prize" and "Small Wins" (e.g., "$500 Gift Card" + "Repost on Official Account").
+4.  **Write Announcement Copy:** Create high-tension launch posts for the `Primary_Platform`.
+5.  **Output:** Save to `ugc_kits/[Brand_Name]_campaign.md`.
+
+### Phase 3: Structured Deliverables
+1.  **Create:** `ugc_master_roadmap.csv` with columns: `Brand_Name`, `Campaign_Title`, `Top_Prize`, `File_Path`.
+2.  **Report:** "Successfully designed [X] UGC campaigns. Content flywheels are ready for activation."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+

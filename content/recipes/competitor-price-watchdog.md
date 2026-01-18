@@ -1,6 +1,6 @@
 ---
 id: competitor-price-watchdog
-category: Competitor Intel
+category: Competitive Intel
 title: The Price Watchdog Fleet
 tagline: Monitor pricing changes for 10 competitors at once.
 difficulty: Intermediate

@@ -1,14 +1,16 @@
 ---
-id: "contact-enrichment-freshness"
-category: "RevOps"
-title: "Enrichment Freshness Audit"
-tagline: "Is your data stale?"
-difficulty: "Beginner"
-time: "Quarterly"
-archetype: "Processor"
-description: "Checks when contacts were last enriched to trigger updates for records older than 6 months."
+id: contact-enrichment-freshness
+category: Sales Ops
+title: Enrichment Freshness Audit
+tagline: Is your data stale?
+difficulty: Beginner
+time: Quarterly
+archetype: Processor
+description: >-
+  Checks when contacts were last enriched to trigger updates for records older
+  than 6 months.
 sampleData:
-  filename: "contacts.csv"
+  filename: contacts.csv
   content: |
     Email,Last_Enriched
     a@b.com,2023-01-01

@@ -1,14 +1,16 @@
 ---
-id: "flash-sale-inventory-monitor"
-category: "E-commerce Merchandising"
-title: "Flash Sale Brake Pedal"
-tagline: "Stop ads when stock gets low."
-difficulty: "Intermediate"
-time: "Hourly (Simulated)"
-archetype: "Processor"
-description: "Tracks inventory depletion during a sale event to recommend pausing ad spend if stock hits <5%."
+id: flash-sale-inventory-monitor
+category: E-commerce
+title: Flash Sale Brake Pedal
+tagline: Stop ads when stock gets low.
+difficulty: Intermediate
+time: Hourly (Simulated)
+archetype: Processor
+description: >-
+  Tracks inventory depletion during a sale event to recommend pausing ad spend
+  if stock hits <5%.
 sampleData:
-  filename: "sale_inventory.csv"
+  filename: sale_inventory.csv
   content: |
     SKU,Start_Stock,Current_Stock
     Promo-Item,1000,45

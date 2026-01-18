@@ -1,6 +1,6 @@
 ---
 id: monthly-report-generator
-category: Agency
+category: Strategic Ops
 title: The Monthly Report Generator
 tagline: Prove your worth.
 difficulty: Intermediate

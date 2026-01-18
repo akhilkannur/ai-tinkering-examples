@@ -1,14 +1,14 @@
 ---
-id: "testimonial-coverage-matrix"
-category: "Customer Advocacy"
-title: "Case Study Gap Finder"
-tagline: "Do we have a 'Finance' case study?"
-difficulty: "Intermediate"
-time: "Quarterly"
-archetype: "Processor"
-description: "Identifies industries or use-cases where you lack a case study or testimonial."
+id: testimonial-coverage-matrix
+category: Customer Success
+title: Case Study Gap Finder
+tagline: Do we have a 'Finance' case study?
+difficulty: Intermediate
+time: Quarterly
+archetype: Processor
+description: Identifies industries or use-cases where you lack a case study or testimonial.
 sampleData:
-  filename: "asset_inventory.csv"
+  filename: asset_inventory.csv
   content: |
     Industry,Asset_Type,Count
     Finance,Case Study,0

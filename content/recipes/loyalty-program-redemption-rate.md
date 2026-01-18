@@ -1,14 +1,16 @@
 ---
-id: "loyalty-program-redemption-rate"
-category: "E-commerce Growth"
-title: "Loyalty Health Monitor"
-tagline: "Are points being used?"
-difficulty: "Intermediate"
-time: "Quarterly"
-archetype: "Processor"
-description: "Tracks percentage of issued points that are actually redeemed to measure program engagement."
+id: loyalty-program-redemption-rate
+category: E-commerce
+title: Loyalty Health Monitor
+tagline: Are points being used?
+difficulty: Intermediate
+time: Quarterly
+archetype: Processor
+description: >-
+  Tracks percentage of issued points that are actually redeemed to measure
+  program engagement.
 sampleData:
-  filename: "loyalty_stats.csv"
+  filename: loyalty_stats.csv
   content: |
     Month,Points_Issued,Points_Redeemed
     Jan,10000,500

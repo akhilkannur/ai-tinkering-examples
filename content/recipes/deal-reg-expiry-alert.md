@@ -1,14 +1,16 @@
---- 
-id: "deal-reg-expiry-alert"
-category: "Partner Ops"
-title: "Deal Reg Expiry Monitor"
-tagline: "Flag partner deal registrations that are about to expire."
-difficulty: "Beginner"
-time: "Weekly"
-archtype: "Processor"
-description: "Monitors the 90-day protection window for partner deals and alerts when coverage is ending."
+---
+id: deal-reg-expiry-alert
+category: Strategic Ops
+title: Deal Reg Expiry Monitor
+tagline: Flag partner deal registrations that are about to expire.
+difficulty: Beginner
+time: Weekly
+archtype: Processor
+description: >-
+  Monitors the 90-day protection window for partner deals and alerts when
+  coverage is ending.
 sampleData:
-  filename: "deal_regs.csv"
+  filename: deal_regs.csv
   content: |
     Partner,Deal,Reg_Date
     Reseller A,Tesla,2023-08-01

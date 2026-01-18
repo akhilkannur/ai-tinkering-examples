@@ -1,6 +1,6 @@
 ---
 id: review-velocity-tracker
-category: Reputation Mgmt
+category: Customer Success
 title: The Review Velocity Tracker
 tagline: Are people still talking about you?
 difficulty: Beginner

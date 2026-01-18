@@ -1,7 +1,7 @@
 ---
 id: ai-manager-handbook
 title: The AI Manager's Handbook
-category: Operations
+category: Strategic Ops
 tagline: Teach AI your specific rules once.
 difficulty: Beginner
 time: 15 min

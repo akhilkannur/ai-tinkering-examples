@@ -1,6 +1,6 @@
 ---
 id: comment-section-nurturer
-category: Social
+category: Content Ops
 title: The Comment Section Nurturer
 tagline: Turn 'Great post' into a lead.
 difficulty: Beginner

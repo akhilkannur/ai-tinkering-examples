@@ -1,6 +1,6 @@
 ---
 id: linkedin-document-ad-creator
-category: Ads
+category: Paid Media
 title: The LinkedIn Document Ad Creator
 tagline: Stop the scroll with a PDF.
 difficulty: Intermediate

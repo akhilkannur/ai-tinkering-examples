@@ -1,6 +1,6 @@
 ---
 id: sales-negotiation-script-writer
-category: Sales Enablement
+category: Sales Ops
 title: The Closer's Script
 tagline: Handle "It's too expensive" like a pro.
 difficulty: Intermediate

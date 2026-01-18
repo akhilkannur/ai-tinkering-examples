@@ -1,14 +1,16 @@
 ---
-id: "expansion-propensity-scorer"
-category: "Advanced RevOps"
-title: "Upsell Propensity Scorer"
-tagline: "Who is ready to buy more?"
-difficulty: "Advanced"
-time: "Monthly"
-archetype: "Processor"
-description: "Matches historical upsell data to current customer profiles (Employee Growth + Usage) to predict expansion."
+id: expansion-propensity-scorer
+category: Sales Ops
+title: Upsell Propensity Scorer
+tagline: Who is ready to buy more?
+difficulty: Advanced
+time: Monthly
+archetype: Processor
+description: >-
+  Matches historical upsell data to current customer profiles (Employee Growth +
+  Usage) to predict expansion.
 sampleData:
-  filename: "customer_growth.csv"
+  filename: customer_growth.csv
   content: |
     Customer,Emp_Growth_Pct,Usage_Growth_Pct
     Acme,20,50

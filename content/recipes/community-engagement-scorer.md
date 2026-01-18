@@ -1,14 +1,16 @@
 ---
-id: "community-engagement-scorer"
-category: "Customer Advocacy"
-title: "Community Champion Scorer"
-tagline: "Who answers the most questions?"
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Scores users based on forum posts, replies, and likes to identify potential 'Community Champions'."
+id: community-engagement-scorer
+category: Customer Success
+title: Community Champion Scorer
+tagline: Who answers the most questions?
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Scores users based on forum posts, replies, and likes to identify potential
+  'Community Champions'.
 sampleData:
-  filename: "forum_stats.csv"
+  filename: forum_stats.csv
   content: |
     User,Posts,Replies,Likes_Received
     UserA,10,50,100

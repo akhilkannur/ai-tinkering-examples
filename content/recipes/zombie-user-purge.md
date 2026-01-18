@@ -1,14 +1,16 @@
 ---
-id: "zombie-user-purge"
-category: "PLG Sales"
-title: "Inactive Free User Purge"
-tagline: "Clean up database costs."
-difficulty: "Beginner"
-time: "Quarterly"
-archetype: "Processor"
-description: "Identifies free tier accounts with no login activity in 12 months for deletion or archiving."
+id: zombie-user-purge
+category: Sales Ops
+title: Inactive Free User Purge
+tagline: Clean up database costs.
+difficulty: Beginner
+time: Quarterly
+archetype: Processor
+description: >-
+  Identifies free tier accounts with no login activity in 12 months for deletion
+  or archiving.
 sampleData:
-  filename: "user_activity.csv"
+  filename: user_activity.csv
   content: |
     User,Last_Login,Plan
     John,2022-01-01,Free

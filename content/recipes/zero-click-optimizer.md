@@ -1,6 +1,6 @@
 ---
 id: zero-click-optimizer
-category: SEO Content
+category: SEO
 title: The Zero-Click Optimizer
 tagline: Optimize for the answer engine.
 difficulty: Intermediate

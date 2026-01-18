@@ -1,18 +1,19 @@
---- 
-id: "sales-call-keyword-tracker"
-category: "Sales Enablement"
-title: "Sales Script Compliance"
-tagline: "Did they say the pricing disclaimer?"
-difficulty: "Intermediate"
-time: "Batch"
-archtype: "Processor"
-description: "Scans call transcripts to check if reps mentioned mandatory keywords (e.g., 'compliant', 'pricing', 'next steps')."
+---
+id: sales-call-keyword-tracker
+category: Sales Ops
+title: Sales Script Compliance
+tagline: Did they say the pricing disclaimer?
+difficulty: Intermediate
+time: Batch
+archtype: Processor
+description: >-
+  Scans call transcripts to check if reps mentioned mandatory keywords (e.g.,
+  'compliant', 'pricing', 'next steps').
 sampleData:
-  filename: "transcripts.txt"
+  filename: transcripts.txt
   content: |
     Rep: Hi, are you compliant with SOC2? Prospect: Yes.
     Rep: Great, let's move to pricing.
-    
 ---
 
 # Agent Configuration: The QA Specialist

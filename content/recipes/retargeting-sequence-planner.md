@@ -1,6 +1,6 @@
 ---
 id: retargeting-sequence-planner
-category: Ads
+category: Paid Media
 title: The Retargeting Sequence Planner
 tagline: The 'Stalker' ad strategy.
 difficulty: Advanced

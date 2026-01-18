@@ -1,6 +1,6 @@
 ---
 id: product-hunt-manager
-category: Marketing
+category: Strategic Ops
 title: The Product Hunt Launch Manager
 tagline: 'Get #1 Product of the Day.'
 difficulty: Advanced

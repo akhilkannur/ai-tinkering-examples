@@ -1,6 +1,6 @@
 ---
 id: subdomain-decider
-category: SEO Strategy
+category: SEO
 title: The Subdomain vs. Subfolder Decider
 tagline: End the debate with logic.
 difficulty: Beginner

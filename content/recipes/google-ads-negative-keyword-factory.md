@@ -1,6 +1,6 @@
 ---
 id: google-ads-negative-keyword-factory
-category: Ad Ops
+category: Paid Media
 title: The Multi-Industry Negative Keyword Factory
 tagline: Protect the budget across your entire portfolio.
 difficulty: Beginner

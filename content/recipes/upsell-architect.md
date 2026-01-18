@@ -1,6 +1,6 @@
 ---
 id: upsell-architect
-category: Account Management
+category: Sales Ops
 title: The Upsell Architect
 tagline: The easiest revenue is already in your DB.
 difficulty: Advanced

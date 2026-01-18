@@ -1,0 +1,402 @@
+# Blueprints: Sales
+
+## The Abandoned Cart SMS Writer
+URL: https://realaiexamples.com/blueprints/abandoned-cart-sms
+Description: Recover 15% of lost sales via text.
+
+---
+id: abandoned-cart-sms
+category: Sales
+title: The Abandoned Cart SMS Writer
+tagline: Recover 15% of lost sales via text.
+difficulty: Intermediate
+time: Batch
+archetype: Processor
+description: >-
+  Email open rates are 20%; SMS is 98%. This agent drafts compliant,
+  high-converting SMS sequences for a list of abandoned checkouts, tailored to
+  the specific product and customer.
+sampleData:
+  filename: abandoned_carts.csv
+  content: |
+    Customer_Name,Product,Price,Cart_URL
+    John Doe,Leather Messenger Bag,120,https://store.com/cart/123
+    Jane Smith,Ceramic Vase Set,85,https://store.com/cart/456
+    Mike Ross,Wireless Headphones,199,https://store.com/cart/789
+---
+
+# Agent Configuration: The Abandoned Cart SMS Writer
+
+## Role
+Email open rates are 20%; SMS is 98%. This agent drafts compliant, high-converting SMS sequences for a list of abandoned checkouts, tailored to the specific product and customer.
+
+## Objective
+Recover 15% of lost sales via text.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `abandoned_carts.csv` exist?
+2.  **If Missing:** Create `abandoned_carts.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Check
+1.  **Check:** Does `abandoned_carts.csv` exist?
+2.  **If Missing:** Create `abandoned_carts.csv` using the `sampleData` provided in the configuration.
+3.  **If Present:** Load the customer data.
+
+### Phase 2: The Recovery Loop
+For each customer in the CSV:
+1.  **Contextualize:** Review the `Product` and `Price`.
+2.  **Draft Sequence:**
+    *   *SMS 1 (15 mins):* The Nudge. "Hey [Customer_Name], we saved your [Product]. Finish your order here: [Cart_URL]. STOP to opt out."
+    *   *SMS 2 (4 hours):* The Incentive. "Still thinking about the [Product]? Use code SHOP10 for 10% off. [Cart_URL]. STOP to opt out."
+    *   *SMS 3 (24 hours):* The Scarcity. "Last call, [Customer_Name]! Your cart for the [Product] expires in 1 hour. [Cart_URL]. STOP to opt out."
+
+### Phase 3: Structured Output
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The Demo Playbook Factory
+URL: https://realaiexamples.com/blueprints/demo-call-scripter
+Description: Custom demo scripts for every industry you sell to.
+
+---
+id: demo-call-scripter
+category: Sales
+title: The Demo Playbook Factory
+tagline: Custom demo scripts for every industry you sell to.
+difficulty: Beginner
+time: 20 mins
+description: >-
+  Most demos are boring feature tours. This agent reads a list of target
+  industries and their top pains from a CSV and generates a library of
+  'Narrative Demo' scripts that only show features relevant to those pains.
+sampleData:
+  filename: target_industries.csv
+  content: |
+    Industry,Top_Pain,Killer_Feature
+    Fintech,Security Compliance,Auto-Audit Logs
+    E-com,Cart Abandonment,SMS Recovery
+isPremium: true
+---
+
+# Agent Configuration: The Demo Playbook Factory
+
+## Role
+Most demos are boring feature tours. This agent reads a list of target industries and their top pains from a CSV and generates a library of 'Narrative Demo' scripts that only show features relevant to those pains.
+
+## Objective
+Custom demo scripts for every industry you sell to.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `target_industries.csv` exist?
+2.  **If Missing:** Create `target_industries.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Industry Setup
+1.  **Check:** Does `target_industries.csv` exist? If missing, create template.
+
+### Phase 2: The Scripting Loop
+For each industry in the CSV:
+1.  **Contextualize:** Create the "Old Way" story (The struggle without us).
+2.  **Scene 1:** Draft the recap: "You told me [Top_Pain] is the bottleneck..."
+3.  **Scene 2:** The Reveal: "Here is how [Killer_Feature] solves that in 2 clicks."
+4.  **Scene 3:** The Social Proof: "How [Competitor in Industry] used this to save time."
+
+### Phase 3: Playbook Export
+1.  **Action:** Create a folder `demo_playbooks/`.
+2.  **Save:** Save each script as `demo-[industry].md`.
+3.  **Report:** "Successfully generated [X] demo scripts. Playbook is ready for the team."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The Lost Deal Reviver
+URL: https://realaiexamples.com/blueprints/lost-deal-reviver
+Description: Re-engage 100 cold leads with 'New News'.
+
+---
+id: lost-deal-reviver
+category: Sales
+title: The Lost Deal Reviver
+tagline: Re-engage 100 cold leads with 'New News'.
+difficulty: Intermediate
+time: Weekly
+description: >-
+  A 'No' 6 months ago might be a 'Yes' today. This agent takes a CSV of leads
+  lost due to specific reasons (e.g., 'Missing Feature X') and drafts a
+  hyper-relevant follow-up based on your recent product launches.
+sampleData:
+  filename: lost_leads.csv
+  content: |
+    Name,Email,Lost_Reason,Lost_Month
+    John Doe,john@acme.com,Missing API,January
+    Jane Smith,jane@globex.com,Too expensive,March
+isPremium: true
+---
+
+# Agent Configuration: The Lost Deal Reviver
+
+## Role
+A 'No' 6 months ago might be a 'Yes' today. This agent takes a CSV of leads lost due to specific reasons (e.g., 'Missing Feature X') and drafts a hyper-relevant follow-up based on your recent product launches.
+
+## Objective
+Re-engage 100 cold leads with 'New News'.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `lost_leads.csv` exist?
+2.  **If Missing:** Create `lost_leads.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Setup
+1.  **Check:** Does `lost_leads.csv` exist? If missing, create template.
+2.  **Product Audit:** Ask the user for the top 3 biggest features or price changes launched in the last 6 months.
+
+### Phase 2: The Reviver Loop
+For each lead in the CSV:
+1.  **Match:** Does a recent product launch solve their `Lost_Reason`?
+2.  **Draft:** Write a low-pressure email:
+    *   *Hook:* Reference the specific conversation in `Lost_Month`.
+    *   *Value:* "I thought of you because we just shipped [Feature] which was the main thing you needed."
+    *   *CTA:* "Worth a 5-min peek at the new docs?"
+
+### Phase 3: Deliverable
+1.  **Create:** `revival_campaign_drafts.csv` with columns: `Name,Email,Draft_Body`.
+2.  **Summary:** "Drafted [X] follow-ups. leads lost to [Reason] had the highest match rate."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The Pre-Meeting Dossier
+URL: https://realaiexamples.com/blueprints/pre-meeting-dossier
+Description: Never go into a call blind.
+
+---
+id: pre-meeting-dossier
+category: Sales
+title: The Pre-Meeting Dossier
+tagline: Never go into a call blind.
+difficulty: Beginner
+time: Batch
+description: >-
+  5 minutes before a call, you need to know everything. This agent researches
+  multiple prospects simultaneously, scraping LinkedIn, company news, and tech
+  stacks to build 1-page 'Cheat Sheets' for your entire day of meetings.
+sampleData:
+  filename: meetings.csv
+  content: |
+    Name,Company,LinkedIn_URL
+    John Doe,Acme Corp,https://linkedin.com/in/johndoe
+    Jane Smith,Globex,https://linkedin.com/in/janesmith
+    Mike Ross,Pearson Hardman,https://linkedin.com/in/mikeross
+isPremium: true
+---
+
+# Agent Configuration: The Pre-Meeting Dossier
+
+## Role
+5 minutes before a call, you need to know everything. This agent researches multiple prospects simultaneously, scraping LinkedIn, company news, and tech stacks to build 1-page 'Cheat Sheets' for your entire day of meetings.
+
+## Objective
+Never go into a call blind.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `meetings.csv` exist?
+2.  **If Missing:** Create `meetings.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Check
+1.  **Check:** Does `meetings.csv` exist?
+2.  **If Missing:** Create `meetings.csv` using the `sampleData`.
+3.  **If Present:** Load the meeting list.
+
+### Phase 2: The Research Loop
+For each prospect in the CSV:
+1.  **Company Deep-Dive:** Use `web_fetch` to search for "[Company] news" and check their official site for latest announcements.
+2.  **Profile Audit:** Research the prospect's LinkedIn activity. Identify their top 3 recent posts or "likes".
+3.  **Tech Stack Audit:** Infer their tech stack based on job postings or "Tools we use" pages.
+4.  **Draft Dossier:**
+    *   **The Persona:** Bio, tenure, and previous companies.
+    *   **The Icebreaker:** A specific, non-generic comment about their recent activity.
+    *   **The Business Context:** Recent wins or "Red Flags" (e.g., leadership changes).
+5.  **Output:** Save to `dossiers/[Name]_brief.md`.
+
+### Phase 3: Structured Deliverables
+1.  **Create:** `daily_meeting_manifest.csv` with columns: `Name`, `Company`, `Key_Icebreaker`, `File_Path`.
+2.  **Report:** "Successfully built [X] dossiers. All meeting briefs are ready for review."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The Psychological Buyer Profiler
+URL: https://realaiexamples.com/blueprints/psychological-meeting-profiler
+Description: Know how to close them.
+
+---
+id: psychological-meeting-profiler
+category: Sales
+title: The Psychological Buyer Profiler
+tagline: Know how to close them.
+difficulty: Advanced
+time: Batch
+description: >-
+  Deeper than a summary. This agent processes a list of sales transcripts to
+  identify each buyer's personality type and recommends specific negotiation
+  strategies to win them over.
+sampleData:
+  filename: meeting_transcripts.csv
+  content: |
+    Buyer_Name,Transcript_File,Focus_Area
+    John Analytic,transcripts/call_1.txt,Security and Data Privacy
+    Sarah Driver,transcripts/call_2.txt,Speed to implementation
+    Mike Amiable,transcripts/call_3.txt,Team collaboration and support
+isPremium: true
+---
+
+# Agent Configuration: The Psychological Buyer Profiler
+
+## Role
+Deeper than a summary. This agent processes a list of sales transcripts to identify each buyer's personality type and recommends specific negotiation strategies to win them over.
+
+## Objective
+Know how to close them.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `meeting_transcripts.csv` exist?
+2.  **If Missing:** Create `meeting_transcripts.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Check
+1.  **Check:** Does `meeting_transcripts.csv` exist?
+2.  **If Missing:** Create `meeting_transcripts.csv` using the `sampleData`. Ensure the `transcripts/` folder exists.
+3.  **If Present:** Load the transcript list.
+
+### Phase 2: The Profiling Loop
+For each transcript in the CSV:
+1.  **Sentiment & Language Audit:** Scan for keywords related to the `Focus_Area`.
+2.  **Determine Archetype:**
+    *   **Analytic:** Focused on "How", "Logic", and "Data".
+    *   **Driver:** Focused on "What", "When", and "Bottom Line".
+    *   **Amiable:** Focused on "Who", "Trust", and "Support".
+    *   **Expressive:** Focused on "Why", "Vision", and "Status".
+3.  **Draft Playbook:**
+    *   **The Hook:** How to open the next call to build instant rapport.
+    *   **The Trap:** What to avoid saying (e.g., "Don't bore a Driver with technical specs").
+    *   **The Closer:** A specific closing line tailored to their type.
+4.  **Output:** Save to `playbooks/[Buyer_Name]_strategy.md`.
+
+### Phase 3: Structured Deliverables
+1.  **Create:** `sales_psychology_matrix.csv` with columns: `Buyer_Name`, `Inferred_Type`, `Primary_Driver`, `File_Path`.
+2.  **Report:** "Successfully profiled [X] buyers. Negotiation playbooks ready for the follow-up calls."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The Support Upseller
+URL: https://realaiexamples.com/blueprints/support-ticket-upseller
+Description: Turn complaints into cash.
+
+---
+id: support-ticket-upseller
+category: Sales
+title: The Support Upseller
+tagline: Turn complaints into cash.
+difficulty: Intermediate
+time: Weekly
+description: >-
+  Your support tickets are full of people asking for features they don't have.
+  This agent scans ticket history for keywords like 'limit', 'upgrade', or
+  'enterprise feature', and drafts a helpful sales email offering the solution
+  (the higher tier).
+sampleData:
+  filename: support_tickets.csv
+  content: >
+    Ticket_ID,Customer_Email,Message
+
+    101,john@startups.com,I keep hitting the 500 contact limit. Can I increase
+    this?
+
+    102,sarah@enterprise.com,We need SSO for our security compliance. Do you
+    have it?
+
+    103,dave@gmail.com,The app crashed when I clicked save.
+
+    104,mike@agency.com,Is there a way to white-label the reports?
+isPremium: true
+---
+
+# Agent Configuration: The Support Upseller
+
+## Role
+Your support tickets are full of people asking for features they don't have. This agent scans ticket history for keywords like 'limit', 'upgrade', or 'enterprise feature', and drafts a helpful sales email offering the solution (the higher tier).
+
+## Objective
+Turn complaints into cash.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `support_tickets.csv` exist?
+2.  **If Missing:** Create `support_tickets.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: The Scan
+1.  **Input:** Load `support_tickets.csv`.
+2.  **Filter:** Look for keywords: "Limit", "Increase", "SSO", "API", "White-label", "Remove branding".
+3.  **Ignore:** "Bug", "Crash", "Error", "Refund".
+
+### Phase 2: The Solution Match
+For each match, identify the Plan they *need*:
+*   *SSO/Security* -> Enterprise Plan.
+*   *Limits/Volume* -> Pro Plan.
+*   *White-label* -> Agency Plan.
+
+### Phase 3: The Draft
+Create `upsell_opportunities.csv` with a draft response:
+*   **Context:** "I see you're looking for [Feature]."
+*   **The Bridge:** "That's actually exclusive to our [Tier] plan, which also includes [Bonus Feature]."
+*   **The Softball:** "Since you're already hitting limits, I can unlock a 7-day trial of Pro so you can keep working. Want me to flip the switch?"
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+

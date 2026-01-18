@@ -1,6 +1,6 @@
 ---
 id: roadmap-prioritizer
-category: SaaS
+category: Strategic Ops
 title: The Roadmap Prioritizer (RICE)
 tagline: Build what matters.
 difficulty: Intermediate

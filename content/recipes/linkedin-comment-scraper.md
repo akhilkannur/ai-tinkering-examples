@@ -1,6 +1,6 @@
 ---
 id: linkedin-comment-scraper
-category: Growth Hacking
+category: Strategic Ops
 title: The LinkedIn Comment Miner
 tagline: Turn engagement into a CSV.
 difficulty: Advanced

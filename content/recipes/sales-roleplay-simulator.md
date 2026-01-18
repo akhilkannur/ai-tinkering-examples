@@ -1,6 +1,6 @@
 ---
 id: sales-roleplay-simulator
-category: Sales Training
+category: Sales Ops
 title: The Difficult Prospect Simulator
 tagline: Practice your pitch against AI.
 difficulty: Advanced

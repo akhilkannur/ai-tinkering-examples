@@ -1,14 +1,16 @@
 ---
-id: "uplift-acceptance-rate"
-category: "Advanced RevOps"
-title: "Price Increase Success Rate"
-tagline: "Did they accept the +5%?"
-difficulty: "Intermediate"
-time: "Yearly"
-archetype: "Processor"
-description: "Tracks how many customers accept the standard renewal price uplift vs negotiating it down."
+id: uplift-acceptance-rate
+category: Sales Ops
+title: Price Increase Success Rate
+tagline: Did they accept the +5%?
+difficulty: Intermediate
+time: Yearly
+archetype: Processor
+description: >-
+  Tracks how many customers accept the standard renewal price uplift vs
+  negotiating it down.
 sampleData:
-  filename: "renewal_outcomes.csv"
+  filename: renewal_outcomes.csv
   content: |
     Customer,Proposed_Price,Final_Price
     Acme,105,105

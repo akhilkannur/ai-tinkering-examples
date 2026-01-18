@@ -1,6 +1,6 @@
 ---
 id: linkedin-insight-tag-auditor
-category: Ad Ops
+category: Paid Media
 title: The Insight Tag Fleet Auditor
 tagline: Audit retargeting tags across your entire domain portfolio.
 difficulty: Beginner

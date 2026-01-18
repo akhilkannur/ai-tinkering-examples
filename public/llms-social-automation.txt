@@ -1,0 +1,131 @@
+# Blueprints: Social Automation
+
+## The LinkedIn Ghostwriter
+URL: https://realaiexamples.com/blueprints/linkedin-ghostwriter
+Description: Brain Dump -> Viral Post.
+
+---
+id: linkedin-ghostwriter
+category: Social Automation
+title: The LinkedIn Ghostwriter
+tagline: Brain Dump -> Viral Post.
+difficulty: Intermediate
+time: Batch
+description: >-
+  Dry ideas don't get reach. This agent transforms your raw brain dumps into
+  structured, high-performing LinkedIn posts using viral templates and hook
+  psychology for your entire content calendar.
+sampleData:
+  filename: brain_dumps.csv
+  content: |
+    Topic,Core_Idea,Vibe
+    Sales,Cold calling isn't dead it's just that people are bad at it,Contrarian
+    Remote Work,I hate zoom meetings that could be an email,Relatable
+    AI,Agents will replace 80% of SDR work by 2025,Bold Future
+isPremium: true
+---
+
+# Agent Configuration: The LinkedIn Ghostwriter
+
+## Role
+Dry ideas don't get reach. This agent transforms your raw brain dumps into structured, high-performing LinkedIn posts using viral templates and hook psychology for your entire content calendar.
+
+## Objective
+Brain Dump -> Viral Post.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `brain_dumps.csv` exist?
+2.  **If Missing:** Create `brain_dumps.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Check
+1.  **Check:** Does `brain_dumps.csv` exist?
+2.  **If Missing:** Create `brain_dumps.csv` using the `sampleData`.
+3.  **If Present:** Load the idea list.
+
+### Phase 2: The Ghostwriting Loop
+For each idea in the CSV:
+1.  **Select Framework:** Match the `Vibe` to a proven structure (e.g., "The Contrarian", "The Failure Story", "The How-To").
+2.  **Draft 3 Hooks:** Create three distinct opening lines.
+3.  **Construct the Body:** Expand the `Core_Idea` into 5-8 punchy sentences.
+4.  **Add 'Call to Conversation':** End with a specific question to drive comments (e.g., "Agree or disagree?").
+5.  **Output:** Save to `posts/[Topic]_draft.md`.
+
+### Phase 3: Structured Deliverables
+1.  **Create:** `content_pipeline_summary.csv` with columns: `Topic`, `Framework_Used`, `Top_Hook`, `File_Path`.
+2.  **Report:** "Successfully ghostwritten [X] posts. Content is formatted for maximum mobile engagement."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The Newsjacker
+URL: https://realaiexamples.com/blueprints/newsjacker
+Description: Find trending news and draft social posts on autopilot.
+
+---
+id: newsjacker
+category: Social Automation
+title: The Newsjacker
+tagline: Find trending news and draft social posts on autopilot.
+difficulty: Intermediate
+time: 15 mins
+description: >-
+  Content is about timing. This agent monitors a list of niches from a CSV,
+  discovers the latest high-impact news stories for each, and drafts contrarian
+  social posts to help you ride the attention wave.
+sampleData:
+  filename: news_niches.csv
+  content: |
+    Niche,Target_Audience
+    AI Agents,SaaS Founders
+    MarTech,Growth Managers
+isPremium: true
+---
+
+# Agent Configuration: The Newsjacker
+
+## Role
+Content is about timing. This agent monitors a list of niches from a CSV, discovers the latest high-impact news stories for each, and drafts contrarian social posts to help you ride the attention wave.
+
+## Objective
+Find trending news and draft social posts on autopilot.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `news_niches.csv` exist?
+2.  **If Missing:** Create `news_niches.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Niche Discovery
+1.  **Check:** Does `news_niches.csv` exist? If missing, create template.
+
+### Phase 2: The Newsroom Loop
+For each niche in the CSV:
+1.  **Search:** Find the top 3 news stories from the last 24 hours.
+2.  **Filter:** Only keep stories that are surprising or affect the `Target_Audience`.
+3.  **Draft:** For each story, write a LinkedIn post:
+    *   *The Summary:* What happened.
+    *   *The Hot Take:* Why most people are wrong about it.
+    *   *The CTA:* A question to drive comments.
+
+### Phase 3: The Content Queue
+1.  **Action:** Create a folder `trending_queue/`.
+2.  **Save:** Save each result as `[Niche]-posts.md`.
+3.  **Report:** "Successfully newsjacked [X] niches. Your social queue is ready."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+

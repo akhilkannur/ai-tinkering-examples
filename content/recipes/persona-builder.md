@@ -1,6 +1,6 @@
 ---
 id: persona-builder
-category: Strategy
+category: Strategic Ops
 title: The AI Persona Researcher
 tagline: Build detailed customer personas.
 difficulty: Intermediate

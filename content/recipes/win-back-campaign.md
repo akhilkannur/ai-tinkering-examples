@@ -1,6 +1,6 @@
 ---
 id: win-back-campaign
-category: Marketing Automation
+category: Marketing Ops
 title: The Win-Back Campaign Architect
 tagline: It's easier to sell to an ex.
 difficulty: Intermediate

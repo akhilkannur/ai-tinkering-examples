@@ -1,6 +1,6 @@
 ---
 id: landing-page-load-speed-auditor
-category: Ad Ops
+category: Paid Media
 title: The LP Speed Auditor
 tagline: Slow pages kill ROAS.
 difficulty: Advanced

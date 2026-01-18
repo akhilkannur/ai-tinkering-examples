@@ -1,6 +1,6 @@
 ---
 id: sales-objection-battlecard-generator
-category: Sales Enablement
+category: Sales Ops
 title: Competitor Battlecard Builder
 tagline: Arm your sales team with scripts to beat specific competitors.
 difficulty: Intermediate

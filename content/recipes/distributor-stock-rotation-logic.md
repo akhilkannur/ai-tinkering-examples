@@ -1,14 +1,16 @@
---- 
-id: "distributor-stock-rotation-logic"
-category: "Partner Ops"
-title: "Stock Rotation Auditor"
-tagline: "Calculate eligible stock returns for distributors."
-difficulty: "Advanced"
-time: "Quarterly"
-archtype: "Processor"
-description: "Calculates the maximum eligible dollar amount for stock rotation based on trailing sales volume."
+---
+id: distributor-stock-rotation-logic
+category: Strategic Ops
+title: Stock Rotation Auditor
+tagline: Calculate eligible stock returns for distributors.
+difficulty: Advanced
+time: Quarterly
+archtype: Processor
+description: >-
+  Calculates the maximum eligible dollar amount for stock rotation based on
+  trailing sales volume.
 sampleData:
-  filename: "distributor_sales.csv"
+  filename: distributor_sales.csv
   content: |
     Distributor,Trailing_Sales,Return_Request_Amt
     Disti A,1000000,50000

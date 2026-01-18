@@ -1,6 +1,6 @@
 ---
 id: competitor-hook-decoder
-category: Competitor Intel
+category: Competitive Intel
 title: The Competitor Hook Decoder
 tagline: Reverse-engineer the psychology behind their ads.
 difficulty: Intermediate

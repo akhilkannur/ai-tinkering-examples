@@ -1,6 +1,6 @@
 ---
 id: demo-call-scripter
-category: Sales
+category: Sales Ops
 title: The Demo Playbook Factory
 tagline: Custom demo scripts for every industry you sell to.
 difficulty: Beginner

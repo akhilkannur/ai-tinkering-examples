@@ -1,14 +1,16 @@
 ---
-id: "profile-optimization-score"
-category: "Social Selling"
-title: "LinkedIn Profile Auditor"
-tagline: "Does your rep look professional?"
-difficulty: "Intermediate"
-time: "Quarterly"
-archetype: "Processor"
-description: "Audits rep LinkedIn profile data for key elements (Headshot presence, Headline quality, About section length)."
+id: profile-optimization-score
+category: Strategic Ops
+title: LinkedIn Profile Auditor
+tagline: Does your rep look professional?
+difficulty: Intermediate
+time: Quarterly
+archetype: Processor
+description: >-
+  Audits rep LinkedIn profile data for key elements (Headshot presence, Headline
+  quality, About section length).
 sampleData:
-  filename: "profile_data.csv"
+  filename: profile_data.csv
   content: |
     Rep,Has_Headshot,Headline_Length
     John,Yes,5

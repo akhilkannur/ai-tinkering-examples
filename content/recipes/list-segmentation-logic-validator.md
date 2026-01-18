@@ -1,14 +1,16 @@
---- 
-id: "list-segmentation-logic-validator"
-category: "Email Marketing"
-title: "Segment Logic Checker"
-tagline: "Ensure customers aren't in 'Prospect' lists."
-difficulty: "Intermediate"
-time: "Weekly"
-archtype: "Processor"
-description: "Checks a list of contacts to ensure no one has both 'Status=Customer' and 'List=Prospect_Nurture'."
+---
+id: list-segmentation-logic-validator
+category: Strategic Ops
+title: Segment Logic Checker
+tagline: Ensure customers aren't in 'Prospect' lists.
+difficulty: Intermediate
+time: Weekly
+archtype: Processor
+description: >-
+  Checks a list of contacts to ensure no one has both 'Status=Customer' and
+  'List=Prospect_Nurture'.
 sampleData:
-  filename: "contacts.csv"
+  filename: contacts.csv
   content: |
     Email,Status,Lists
     john@acme.com,Customer,Prospect_Nurture;Newsletter

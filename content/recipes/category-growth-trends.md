@@ -1,14 +1,16 @@
 ---
-id: "category-growth-trends"
-category: "E-commerce Growth"
-title: "Category Momentum Tracker"
-tagline: "What's trending up MoM?"
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Identifies which product categories are growing fastest Month-over-Month to guide buying."
+id: category-growth-trends
+category: E-commerce
+title: Category Momentum Tracker
+tagline: What's trending up MoM?
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Identifies which product categories are growing fastest Month-over-Month to
+  guide buying.
 sampleData:
-  filename: "cat_sales.csv"
+  filename: cat_sales.csv
   content: |
     Category,Month,Sales
     Shoes,Jan,100

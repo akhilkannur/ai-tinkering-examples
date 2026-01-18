@@ -1,6 +1,6 @@
 ---
 id: event-sponsorship-roi-calculator
-category: Marketing
+category: Strategic Ops
 title: Booth ROI Estimator
 tagline: Should you sponsor that conference? Do the math first.
 difficulty: Intermediate

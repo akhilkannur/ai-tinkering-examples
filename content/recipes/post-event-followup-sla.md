@@ -1,14 +1,16 @@
 ---
-id: "post-event-followup-sla"
-category: "Field Marketing"
-title: "Event Follow-up Police"
-tagline: "Did Sales call the leads within 24h?"
-difficulty: "Intermediate"
-time: "Daily"
-archetype: "Processor"
-description: "Audits if reps have logged an activity for event leads within 24 hours of the upload timestamp."
+id: post-event-followup-sla
+category: Strategic Ops
+title: Event Follow-up Police
+tagline: Did Sales call the leads within 24h?
+difficulty: Intermediate
+time: Daily
+archetype: Processor
+description: >-
+  Audits if reps have logged an activity for event leads within 24 hours of the
+  upload timestamp.
 sampleData:
-  filename: "lead_followup.csv"
+  filename: lead_followup.csv
   content: |
     Lead,Upload_Time,First_Call_Time
     L1,2023-10-01 09:00,2023-10-01 14:00

@@ -1,6 +1,6 @@
 ---
 id: partner-program-hunter
-category: Business Dev
+category: Strategic Ops
 title: The Partner Hunter Fleet
 tagline: Find 100 non-competing partners at once.
 difficulty: Advanced

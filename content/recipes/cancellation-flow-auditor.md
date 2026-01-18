@@ -1,6 +1,6 @@
 ---
 id: cancellation-flow-auditor
-category: SaaS
+category: Strategic Ops
 title: The Cancellation Flow Auditor
 tagline: Save them before they go.
 difficulty: Intermediate

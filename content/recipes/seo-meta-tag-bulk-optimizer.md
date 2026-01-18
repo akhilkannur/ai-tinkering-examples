@@ -1,6 +1,6 @@
 ---
 id: seo-meta-tag-bulk-optimizer
-category: Marketing
+category: Strategic Ops
 title: Bulk Meta Tag Writer
 tagline: Fix missing or duplicate SEO titles and descriptions in seconds.
 difficulty: Intermediate

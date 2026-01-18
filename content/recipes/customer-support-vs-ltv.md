@@ -1,14 +1,16 @@
 ---
-id: "customer-support-vs-ltv"
-category: "Analytics"
-title: "Support Cost vs LTV"
-tagline: "Are needy customers worth it?"
-difficulty: "Advanced"
-time: "Yearly"
-archetype: "Processor"
-description: "Checks if customers with high support ticket volume actually have higher or lower Lifetime Value."
+id: customer-support-vs-ltv
+category: CRO
+title: Support Cost vs LTV
+tagline: Are needy customers worth it?
+difficulty: Advanced
+time: Yearly
+archetype: Processor
+description: >-
+  Checks if customers with high support ticket volume actually have higher or
+  lower Lifetime Value.
 sampleData:
-  filename: "support_ltv.csv"
+  filename: support_ltv.csv
   content: |
     Customer,Ticket_Count,LTV
     John,50,100

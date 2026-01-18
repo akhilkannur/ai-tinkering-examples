@@ -1,6 +1,6 @@
 ---
 id: video-testimonial-script
-category: Social Proof
+category: Strategic Ops
 title: The Video Testimonial Director
 tagline: Help your clients help you.
 difficulty: Beginner

@@ -1,6 +1,6 @@
 ---
 id: redirect-map-generator
-category: Tech SEO
+category: SEO
 title: The Migration Map Generator
 tagline: Don't lose traffic during a redesign.
 difficulty: Advanced

@@ -1,6 +1,6 @@
 ---
 id: okr-drafter
-category: Strategy
+category: Strategic Ops
 title: The OKR Architect
 tagline: Draft team goals from your vision or industry benchmarks.
 difficulty: Intermediate

@@ -1,6 +1,6 @@
 ---
 id: ad-visual-reverse-engineer
-category: Ads
+category: Paid Media
 title: The Ad Visual Intelligence Factory
 tagline: Reverse-engineer 10 winning ads into design briefs.
 difficulty: Experimental

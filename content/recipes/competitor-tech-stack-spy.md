@@ -1,13 +1,16 @@
 ---
-id: "competitor-tech-stack-spy"
-category: "Intel"
-title: "The Tech Stack Spy"
-tagline: "Audit the tech stack of your entire market."
-difficulty: "Intermediate"
-time: "10 mins"
-description: "Why check one site when you can check them all? This agent reads a list of competitor URLs from a CSV, identifies their marketing and analytics tools, and produces a consolidated landscape report."
+id: competitor-tech-stack-spy
+category: Competitive Intel
+title: The Tech Stack Spy
+tagline: Audit the tech stack of your entire market.
+difficulty: Intermediate
+time: 10 mins
+description: >-
+  Why check one site when you can check them all? This agent reads a list of
+  competitor URLs from a CSV, identifies their marketing and analytics tools,
+  and produces a consolidated landscape report.
 sampleData:
-  filename: "competitors.csv"
+  filename: competitors.csv
   content: |
     Company,Website
     Intercom,https://www.intercom.com

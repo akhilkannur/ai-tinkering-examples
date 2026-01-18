@@ -1,14 +1,16 @@
---- 
-id: "contract-renewal-auto-quoter"
-category: "RevOps"
-title: "Renewal Quote Generator"
-tagline: "Auto-generate draft quotes for upcoming renewals."
-difficulty: "Intermediate"
-time: "Monthly"
-archtype: "Processor"
-description: "Scans upcoming expirations and generates a draft quote including standard price increases and current seat counts."
+---
+id: contract-renewal-auto-quoter
+category: Sales Ops
+title: Renewal Quote Generator
+tagline: Auto-generate draft quotes for upcoming renewals.
+difficulty: Intermediate
+time: Monthly
+archtype: Processor
+description: >-
+  Scans upcoming expirations and generates a draft quote including standard
+  price increases and current seat counts.
 sampleData:
-  filename: "renewal_data.csv"
+  filename: renewal_data.csv
   content: |
     Customer,Seats,Price_Per_Seat
     Acme,100,50

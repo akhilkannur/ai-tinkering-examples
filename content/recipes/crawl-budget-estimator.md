@@ -1,6 +1,6 @@
 ---
 id: crawl-budget-estimator
-category: Technical SEO
+category: SEO
 title: The Crawl Budget Estimator
 tagline: Will Google actually index your 10k pages?
 difficulty: Advanced

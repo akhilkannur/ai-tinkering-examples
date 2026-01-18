@@ -1,14 +1,16 @@
 ---
-id: "quote-velocity-tracker"
-category: "Advanced RevOps"
-title: "Quote Velocity Tracker"
-tagline: "How fast does a quote get signed?"
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Measures the time from 'Quote Sent' to 'Quote Signed' to identify friction in the closing process."
+id: quote-velocity-tracker
+category: Sales Ops
+title: Quote Velocity Tracker
+tagline: How fast does a quote get signed?
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Measures the time from 'Quote Sent' to 'Quote Signed' to identify friction in
+  the closing process.
 sampleData:
-  filename: "quote_logs.csv"
+  filename: quote_logs.csv
   content: |
     Quote,Sent_Date,Signed_Date
     Q1,2023-10-01,2023-10-02

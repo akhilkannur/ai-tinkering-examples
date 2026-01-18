@@ -1,6 +1,6 @@
 ---
 id: support-ticket-upseller
-category: Sales
+category: Sales Ops
 title: The Support Upseller
 tagline: Turn complaints into cash.
 difficulty: Intermediate

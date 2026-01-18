@@ -1,6 +1,6 @@
 ---
 id: youtube-ad-placement-excluder
-category: Ad Ops
+category: Paid Media
 title: The B2B Brand Safety Guard
 tagline: Block junk YouTube channels.
 difficulty: Intermediate

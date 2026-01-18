@@ -1,6 +1,6 @@
 ---
 id: brand-voice-guidelines
-category: Brand
+category: Content Ops
 title: The Brand Voice Architect
 tagline: Stop sounding schizophrenic.
 difficulty: Intermediate

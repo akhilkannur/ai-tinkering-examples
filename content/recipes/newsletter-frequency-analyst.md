@@ -1,6 +1,6 @@
 ---
 id: newsletter-frequency-analyst
-category: Intel
+category: Competitive Intel
 title: The Inbox Strategy Auditor
 tagline: Know exactly when your competitors send.
 difficulty: Beginner

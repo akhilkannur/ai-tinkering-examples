@@ -1,6 +1,6 @@
 ---
 id: partnership-mou-generator
-category: Biz Dev
+category: Strategic Ops
 title: The Strategic Partnership Architect
 tagline: Draft a formal MOU from your notes or a partnership goal.
 difficulty: Advanced

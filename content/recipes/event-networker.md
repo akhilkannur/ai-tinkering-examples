@@ -1,6 +1,6 @@
 ---
 id: event-networker
-category: Networking
+category: Lead Gen
 title: The Multi-Event Networking Planner
 tagline: High-value hit lists for your entire conference calendar.
 difficulty: Intermediate

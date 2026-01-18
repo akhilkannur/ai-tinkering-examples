@@ -1,14 +1,16 @@
 ---
-id: "product-review-velocity"
-category: "E-commerce Growth"
-title: "Review Velocity Tracker"
-tagline: "Spot products going cold."
-difficulty: "Intermediate"
-time: "Weekly"
-archetype: "Processor"
-description: "Tracks new reviews per week per product to spot items that are losing social proof momentum."
+id: product-review-velocity
+category: E-commerce
+title: Review Velocity Tracker
+tagline: Spot products going cold.
+difficulty: Intermediate
+time: Weekly
+archetype: Processor
+description: >-
+  Tracks new reviews per week per product to spot items that are losing social
+  proof momentum.
 sampleData:
-  filename: "review_log.csv"
+  filename: review_log.csv
   content: |
     Product,Week,New_Reviews
     Hat,40,10

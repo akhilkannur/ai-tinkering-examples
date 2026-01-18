@@ -1,0 +1,319 @@
+# Blueprints: Ads
+
+## The Ad Visual Intelligence Factory
+URL: https://realaiexamples.com/blueprints/ad-visual-reverse-engineer
+Description: Reverse-engineer 10 winning ads into design briefs.
+
+---
+id: ad-visual-reverse-engineer
+category: Ads
+title: The Ad Visual Intelligence Factory
+tagline: Reverse-engineer 10 winning ads into design briefs.
+difficulty: Experimental
+time: 5 mins
+archetype: Processor
+description: >-
+  Why is the competition winning? This agent reads a folder of competitor ad
+  screenshots, deconstructs their visual hierarchy (Headline, Image style, Trust
+  signals), and writes a unified design brief for your team.
+sampleData:
+  filename: competitor_gallery/ad_01.png
+  content: ''
+---
+
+# Agent Configuration: The Ad Visual Intelligence Factory
+
+## Role
+Why is the competition winning? This agent reads a folder of competitor ad screenshots, deconstructs their visual hierarchy (Headline, Image style, Trust signals), and writes a unified design brief for your team.
+
+## Objective
+Reverse-engineer 10 winning ads into design briefs.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `competitor_gallery/ad_01.png` exist?
+2.  **If Missing:** Create `competitor_gallery/ad_01.png` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Gallery Setup
+1.  **Check:** Does the folder `competitor_gallery/` exist? If missing, create it.
+
+### Phase 2: The Vision Loop
+For each image in the folder:
+1.  **Look:** Analyze the visual hierarchy.
+    *   *Where is the eye drawn?*
+    *   *What font style is used?*
+    *   *Is it a real person or a product shot?*
+2.  **Transcribe:** Convert the visual elements into a text-based "Creative Spec".
+
+### Phase 3: The Unified Brief
+1.  **Synthesis:** Identify the #1 pattern across all competitors.
+2.  **Create:** `master_design_brief.md`.
+3.  **Draft:** Provide 3 "Must-Have" rules for your next ad campaign based on the analysis.
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The Facebook Ad Creative Brief
+URL: https://realaiexamples.com/blueprints/facebook-ad-creative-brief
+Description: High-converting visual concepts at scale.
+
+---
+id: facebook-ad-creative-brief
+category: Ads
+title: The Facebook Ad Creative Brief
+tagline: High-converting visual concepts at scale.
+difficulty: Intermediate
+time: Batch
+description: >-
+  The creative is the most important targeting lever. This agent takes a list of
+  products and generates distinct visual concepts (UGC, Static, Carousel) with
+  detailed instructions for your design team.
+sampleData:
+  filename: campaigns.csv
+  content: |
+    Product_Name,Target_Audience,Primary_Benefit
+    NeoCloud,IT Managers,Unbreakable encryption
+    VelvetBloom,Busy Moms,Instant skin hydration
+    PixelPounce,Pro Gamers,Zero lag performance
+isPremium: true
+---
+
+# Agent Configuration: The Facebook Ad Creative Brief
+
+## Role
+The creative is the most important targeting lever. This agent takes a list of products and generates distinct visual concepts (UGC, Static, Carousel) with detailed instructions for your design team.
+
+## Objective
+High-converting visual concepts at scale.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `campaigns.csv` exist?
+2.  **If Missing:** Create `campaigns.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Check
+1.  **Check:** Does `campaigns.csv` exist?
+2.  **If Missing:** Create `campaigns.csv` using the `sampleData`.
+3.  **If Present:** Load the campaign list.
+
+### Phase 2: The Concepting Loop
+For each product in the CSV:
+1.  **Ideate 3 Angles:**
+    *   **Concept 1 (UGC/Relatability):** iPhone-style footage focusing on the `Primary_Benefit` in a real-world setting.
+    *   **Concept 2 (Comparison/Logic):** A "Us vs. Them" split screen or before/after visual.
+    *   **Concept 3 (Authority/Social Proof):** A testimonial-led layout with a high-authority backdrop.
+2.  **Draft Visual Brief:** Specify background colors, font styles (e.g., bold sans-serif), and "The Hook" (text on image).
+3.  **Draft Primary Text:** Write 2 variations of the ad caption (one short, one long).
+4.  **Output:** Save to `creative_briefs/[Product_Name]_brief.md`.
+
+### Phase 3: Structured Deliverables
+1.  **Create:** `creative_production_summary.csv` with columns: `Product_Name`, `Target_Audience`, `Primary_Hook`, `File_Path`.
+2.  **Report:** "Successfully designed [X] ad concepts. Visual briefs and copy variations ready for your design team."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The LinkedIn Document Ad Creator
+URL: https://realaiexamples.com/blueprints/linkedin-document-ad-creator
+Description: Stop the scroll with a PDF.
+
+---
+id: linkedin-document-ad-creator
+category: Ads
+title: The LinkedIn Document Ad Creator
+tagline: Stop the scroll with a PDF.
+difficulty: Intermediate
+time: Batch
+description: >-
+  Document Ads (Carousels) get 3x the clicks of image ads on LinkedIn. This
+  agent takes your whitepapers or guides and chunks them into 5-page 'Teaser
+  PDFs' designed to maximize LinkedIn feed engagement.
+sampleData:
+  filename: assets.csv
+  content: |
+    Asset_Title,Core_Insight,Primary_Goal
+    2024 SaaS Benchmarks,Median CAC is up 30%,Download full report
+    AI Ethics Guide,Trust is the new currency,Register for webinar
+    Remote Ops Manual,Async is the only way,Book a demo
+isPremium: true
+---
+
+# Agent Configuration: The LinkedIn Document Ad Creator
+
+## Role
+Document Ads (Carousels) get 3x the clicks of image ads on LinkedIn. This agent takes your whitepapers or guides and chunks them into 5-page 'Teaser PDFs' designed to maximize LinkedIn feed engagement.
+
+## Objective
+Stop the scroll with a PDF.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `assets.csv` exist?
+2.  **If Missing:** Create `assets.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Check
+1.  **Check:** Does `assets.csv` exist?
+2.  **If Missing:** Create `assets.csv` using the `sampleData`.
+3.  **If Present:** Load the asset list.
+
+### Phase 2: The Ad Drafting Loop
+For each asset in the CSV:
+1.  **Slide 1 (The Hook):** Draft a bold cover page. "The [Asset_Title] is here. Why [Core_Insight] matters." Add "Swipe to read" indicator.
+2.  **Slides 2-4 (The Value):** Extract 3 micro-insights related to the `Core_Insight`. Each slide must have 1 headline and 1 supporting visual description.
+3.  **Slide 5 (The Pivot):** Direct the user to the `Primary_Goal`. "This is just page 1 of 50. Get the full guide below."
+4.  **UI Verification:** Ensure all slide text is centered to avoid being covered by the "Read More" or "Share" buttons.
+5.  **Output:** Save to `doc_ads/[Asset_Title]_brief.md`.
+
+### Phase 3: Structured Deliverables
+1.  **Create:** `ad_production_manifest.csv` with columns: `Asset_Title`, `Top_Slide_Hook`, `CTA_Link_Text`, `File_Path`.
+2.  **Report:** "Successfully designed [X] document ads. Slide-by-slide briefs ready for your design team."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The PPC Intent Engine
+URL: https://realaiexamples.com/blueprints/ppc-intent-matcher
+Description: High-intent ad keywords for your entire product line.
+
+---
+id: ppc-intent-matcher
+category: Ads
+title: The PPC Intent Engine
+tagline: High-intent ad keywords for your entire product line.
+difficulty: Advanced
+time: Monthly
+description: >-
+  Stop bidding on generic terms. This agent reads a list of product categories
+  from a CSV and generates a complete Google Ads keyword set (Exact Match,
+  Negative List, Ad Groups) for every product.
+sampleData:
+  filename: product_line.csv
+  content: |
+    Product,Competitors
+    CRM Software,"Salesforce, HubSpot"
+    Email Marketing,"Mailchimp, ConvertKit"
+isPremium: true
+---
+
+# Agent Configuration: The PPC Intent Engine
+
+## Role
+Stop bidding on generic terms. This agent reads a list of product categories from a CSV and generates a complete Google Ads keyword set (Exact Match, Negative List, Ad Groups) for every product.
+
+## Objective
+High-intent ad keywords for your entire product line.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `product_line.csv` exist?
+2.  **If Missing:** Create `product_line.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Product Load
+1.  **Check:** Does `product_line.csv` exist? If missing, create template.
+
+### Phase 2: The Expansion Loop
+For each product in the CSV:
+1.  **Generate Positive:** Create 30 high-intent keywords using modifiers: `[Competitor] Alternative`, `[Product] Price`, `Best [Product] for [Industry]`.
+2.  **Generate Negative:** Create 50 exclusion keywords: `Free`, `Careers`, `Login`, `Course`.
+3.  **Group:** Map keywords to specific Ad Groups.
+
+### Phase 3: The Deliverable
+1.  **Create:** `ads_import_ready.csv` with columns: `Campaign,Ad_Group,Keyword,Match_Type`.
+2.  **Summary:** "Generated keywords for [X] product categories. master_ads_sheet.csv is ready for import."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The Retargeting Sequence Planner
+URL: https://realaiexamples.com/blueprints/retargeting-sequence-planner
+Description: The 'Stalker' ad strategy.
+
+---
+id: retargeting-sequence-planner
+category: Ads
+title: The Retargeting Sequence Planner
+tagline: The 'Stalker' ad strategy.
+difficulty: Advanced
+time: Batch
+description: >-
+  98% of visitors don't buy on the first visit. This agent maps out 30-day
+  retargeting ad sequences for your entire product catalog, ensuring you stay
+  top-of-mind without being annoying.
+sampleData:
+  filename: products.csv
+  content: |
+    Product_Name,Primary_Benefit,Top_Objection
+    NeoCloud,Encryption Security,Too technical to setup
+    VelvetBloom,Organic Ingredients,Expensive compared to drugstore
+    PixelPounce,1ms Latency,Is it worth the premium price?
+isPremium: true
+---
+
+# Agent Configuration: The Retargeting Sequence Planner
+
+## Role
+98% of visitors don't buy on the first visit. This agent maps out 30-day retargeting ad sequences for your entire product catalog, ensuring you stay top-of-mind without being annoying.
+
+## Objective
+The 'Stalker' ad strategy.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `products.csv` exist?
+2.  **If Missing:** Create `products.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Check
+1.  **Check:** Does `products.csv` exist?
+2.  **If Missing:** Create `products.csv` using the `sampleData`.
+3.  **If Present:** Load the product list.
+
+### Phase 2: The Planning Loop
+For each product in the CSV:
+1.  **Draft Stage 1 (Day 1-3): The Reminder.** Focus on the `Primary_Benefit`. "Did you forget this? [Product_Name] is still waiting for you."
+2.  **Draft Stage 2 (Day 4-10): The Social Proof.** Use testimonials and "Logo Clouds" to build trust.
+3.  **Draft Stage 3 (Day 11-20): The Objection Crusher.** Directly address the `Top_Objection` (e.g., "See how we simplified our setup" or "Why organic costs more").
+4.  **Draft Stage 4 (Day 21-30): The Closer.** Introduce a limited-time discount or scarcity (e.g., "10% off for the next 24 hours").
+5.  **Output:** Save to `ad_plans/[Product_Name]_sequence.md`.
+
+### Phase 3: Structured Deliverables
+1.  **Create:** `retargeting_master_manifest.csv` with columns: `Product_Name`, `Primary_Hook`, `Objection_Handled`, `File_Path`.
+2.  **Report:** "Successfully designed [X] retargeting sequences. Creative briefs and copy variations ready for your designer."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+

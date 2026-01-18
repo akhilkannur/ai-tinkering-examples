@@ -1,6 +1,6 @@
 ---
 id: commission-calculator
-category: Hiring
+category: Lead Gen
 title: The Sales Comp Designer
 tagline: Design a commission plan that drives growth.
 difficulty: Advanced

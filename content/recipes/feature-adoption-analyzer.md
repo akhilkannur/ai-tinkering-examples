@@ -1,6 +1,6 @@
 ---
 id: feature-adoption-analyzer
-category: Product Marketing
+category: Strategic Ops
 title: The Feature Adoption Analyzer
 tagline: Who is actually using your new tool?
 difficulty: Intermediate

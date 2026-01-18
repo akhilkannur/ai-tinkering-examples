@@ -1,6 +1,6 @@
 ---
 id: sales-funnel-bottleneck-finder
-category: RevOps
+category: Sales Ops
 title: Pipeline Leak Detector
 tagline: Find exactly where your deals are dying.
 difficulty: Intermediate

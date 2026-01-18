@@ -1,6 +1,6 @@
 ---
 id: pitch-deck-storyboard
-category: Strategy
+category: Strategic Ops
 title: The Pitch Deck Storyboard
 tagline: Build narratives that raise money.
 difficulty: Advanced

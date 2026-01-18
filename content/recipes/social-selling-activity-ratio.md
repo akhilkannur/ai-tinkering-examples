@@ -1,14 +1,16 @@
 ---
-id: "social-selling-activity-ratio"
-category: "Social Selling"
-title: "Social Activity Mix"
-tagline: "Are we doing enough social touches?"
-difficulty: "Beginner"
-time: "Weekly"
-archetype: "Processor"
-description: "Measures the mix of 'Social Touches' vs 'Traditional Touches' (Call/Email) in the sales cadence."
+id: social-selling-activity-ratio
+category: Strategic Ops
+title: Social Activity Mix
+tagline: Are we doing enough social touches?
+difficulty: Beginner
+time: Weekly
+archetype: Processor
+description: >-
+  Measures the mix of 'Social Touches' vs 'Traditional Touches' (Call/Email) in
+  the sales cadence.
 sampleData:
-  filename: "cadence_activity.csv"
+  filename: cadence_activity.csv
   content: |
     Rep,Calls,Emails,Social_Interactions
     John,50,50,2

@@ -1,6 +1,6 @@
 ---
 id: youtube-community-tab-poster
-category: YouTube
+category: Content Ops
 title: The Community Tab Poster
 tagline: Keep subscribers alive between uploads.
 difficulty: Beginner

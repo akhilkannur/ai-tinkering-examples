@@ -1,6 +1,6 @@
 ---
 id: affiliate-program-launcher
-category: Growth
+category: Strategic Ops
 title: The Affiliate Program Launcher
 tagline: Build a commission-only sales team.
 difficulty: Advanced

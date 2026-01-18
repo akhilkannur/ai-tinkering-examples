@@ -1,14 +1,14 @@
---- 
-id: "competitor-pricing-parity"
-category: "Market Intelligence"
-title: "Price War Monitor"
-tagline: "Are we cheaper or more expensive?"
-difficulty: "Intermediate"
-time: "Monthly"
-archtype: "Processor"
-description: "Compares your SKU prices against a competitor's scraped price list."
+---
+id: competitor-pricing-parity
+category: Competitive Intel
+title: Price War Monitor
+tagline: Are we cheaper or more expensive?
+difficulty: Intermediate
+time: Monthly
+archtype: Processor
+description: Compares your SKU prices against a competitor's scraped price list.
 sampleData:
-  filename: "price_comparison.csv"
+  filename: price_comparison.csv
   content: |
     SKU,My_Price,Comp_Price
     Basic,10,12

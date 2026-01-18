@@ -1,6 +1,6 @@
 ---
 id: customer-journey-mapper
-category: Strategy
+category: Strategic Ops
 title: The Customer Journey Factory
 tagline: Map the broken road for every persona.
 difficulty: Intermediate

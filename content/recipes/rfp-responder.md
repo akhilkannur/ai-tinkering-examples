@@ -1,6 +1,6 @@
 ---
 id: rfp-responder
-category: Outreach
+category: Lead Gen
 title: The RFP Responder
 tagline: Draft complex proposals instantly.
 difficulty: Advanced

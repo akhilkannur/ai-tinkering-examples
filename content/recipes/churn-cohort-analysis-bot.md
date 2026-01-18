@@ -1,14 +1,16 @@
 ---
-id: "churn-cohort-analysis-bot"
-category: "RevOps"
-title: "Churn Cohort Analyzer"
-tagline: "Measure churn rate by customer vintage."
-difficulty: "Advanced"
-time: "Monthly"
-archetype: "Processor"
-description: "Segments churn data by the customer's 'Join Date' to see if newer cohorts are churning faster."
+id: churn-cohort-analysis-bot
+category: Sales Ops
+title: Churn Cohort Analyzer
+tagline: Measure churn rate by customer vintage.
+difficulty: Advanced
+time: Monthly
+archetype: Processor
+description: >-
+  Segments churn data by the customer's 'Join Date' to see if newer cohorts are
+  churning faster.
 sampleData:
-  filename: "cohort_data.csv"
+  filename: cohort_data.csv
   content: |
     Join_Month,Status,Cancel_Date
     Jan-23,Active,NULL

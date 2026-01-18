@@ -1,14 +1,16 @@
 ---
-id: "review-request-timer"
-category: "Retention Marketing"
-title: "Review Request Timer"
-tagline: "Ask for reviews when they actually get the product."
-difficulty: "Intermediate"
-time: "Daily"
-archetype: "Processor"
-description: "Calculates the optimal review request date by adding 2 days to the actual 'Delivered' timestamp from shipping logs."
+id: review-request-timer
+category: Retention
+title: Review Request Timer
+tagline: Ask for reviews when they actually get the product.
+difficulty: Intermediate
+time: Daily
+archetype: Processor
+description: >-
+  Calculates the optimal review request date by adding 2 days to the actual
+  'Delivered' timestamp from shipping logs.
 sampleData:
-  filename: "shipping_log.csv"
+  filename: shipping_log.csv
   content: |
     Order_ID,Delivered_Date,Email
     101,2023-10-01,john@acme.com

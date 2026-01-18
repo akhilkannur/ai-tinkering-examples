@@ -1,6 +1,6 @@
 ---
 id: hook-rate-analyzer
-category: Video Ads
+category: Paid Media
 title: The Hook Rate Analyzer
 tagline: Fix the first 3 seconds.
 difficulty: Intermediate

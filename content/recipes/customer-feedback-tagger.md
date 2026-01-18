@@ -1,6 +1,6 @@
 ---
 id: customer-feedback-tagger
-category: Product Marketing
+category: Strategic Ops
 title: Feedback Auto-Tagger
 tagline: Organize messy user feedback into a clean product roadmap.
 difficulty: Intermediate

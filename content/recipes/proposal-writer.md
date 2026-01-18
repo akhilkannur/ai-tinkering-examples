@@ -1,6 +1,6 @@
 ---
 id: proposal-writer
-category: Agency
+category: Strategic Ops
 title: The High-Ticket Proposal Writer
 tagline: Generate custom proposals for each lead.
 difficulty: Intermediate

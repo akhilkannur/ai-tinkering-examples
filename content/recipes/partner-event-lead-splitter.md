@@ -1,14 +1,16 @@
 ---
-id: "partner-event-lead-splitter"
-category: "Field Marketing"
-title: "Co-Marketing Lead Splitter"
-tagline: "Share leads fairly with partners."
-difficulty: "Intermediate"
-time: "Batch"
-archetype: "Processor"
-description: "Splits a master lead list from a co-hosted event according to the agreed sharing rules (e.g. Geo-based or random split)."
+id: partner-event-lead-splitter
+category: Strategic Ops
+title: Co-Marketing Lead Splitter
+tagline: Share leads fairly with partners.
+difficulty: Intermediate
+time: Batch
+archetype: Processor
+description: >-
+  Splits a master lead list from a co-hosted event according to the agreed
+  sharing rules (e.g. Geo-based or random split).
 sampleData:
-  filename: "joint_leads.csv"
+  filename: joint_leads.csv
   content: |
     Lead,Country
     John,UK

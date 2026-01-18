@@ -1,6 +1,6 @@
 ---
 id: beta-tester-recruiter
-category: Product Marketing
+category: Strategic Ops
 title: The Beta Tester Recruiter
 tagline: Find your first 50 users.
 difficulty: Beginner

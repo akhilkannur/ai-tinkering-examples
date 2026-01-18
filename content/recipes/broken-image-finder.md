@@ -1,14 +1,14 @@
---- 
-id: "broken-image-finder"
-category: "Technical SEO"
-title: "Broken Image Hunter"
-tagline: "Find images returning 404 errors."
-difficulty: "Beginner"
-time: "Monthly"
-archtype: "Processor"
-description: "Parses a list of image URLs and their status codes to identify broken assets."
+---
+id: broken-image-finder
+category: SEO
+title: Broken Image Hunter
+tagline: Find images returning 404 errors.
+difficulty: Beginner
+time: Monthly
+archtype: Processor
+description: Parses a list of image URLs and their status codes to identify broken assets.
 sampleData:
-  filename: "asset_audit.csv"
+  filename: asset_audit.csv
   content: |
     Image_URL,Status
     img1.jpg,200

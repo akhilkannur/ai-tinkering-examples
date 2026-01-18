@@ -1,6 +1,6 @@
 ---
 id: agent-context-builder
-category: AI Setup
+category: Strategic Ops
 title: The Project Architect
 tagline: Make any folder AI-ready instantly.
 difficulty: Beginner

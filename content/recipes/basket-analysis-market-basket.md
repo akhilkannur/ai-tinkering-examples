@@ -1,14 +1,16 @@
 ---
-id: "basket-analysis-market-basket"
-category: "Analytics"
-title: "Basket Correlation Engine"
-tagline: "People who buy A also buy B."
-difficulty: "Advanced"
-time: "Monthly"
-archetype: "Processor"
-description: "Finds correlations between products in the same order to power 'Frequently Bought Together' widgets."
+id: basket-analysis-market-basket
+category: CRO
+title: Basket Correlation Engine
+tagline: People who buy A also buy B.
+difficulty: Advanced
+time: Monthly
+archetype: Processor
+description: >-
+  Finds correlations between products in the same order to power 'Frequently
+  Bought Together' widgets.
 sampleData:
-  filename: "order_items.csv"
+  filename: order_items.csv
   content: |
     Order,Items
     1,Shampoo;Conditioner

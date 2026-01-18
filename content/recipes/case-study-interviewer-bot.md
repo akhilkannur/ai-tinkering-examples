@@ -1,6 +1,6 @@
 ---
 id: case-study-interviewer-bot
-category: Marketing
+category: Strategic Ops
 title: Case Study Interviewer
 tagline: The perfect script for extracting testimonials from happy clients.
 difficulty: Beginner

@@ -1,14 +1,16 @@
 ---
-id: "billing-frequency-upsell"
-category: "Advanced RevOps"
-title: "Annual Pre-Pay Upsell"
-tagline: "Move monthly users to annual plans."
-difficulty: "Beginner"
-time: "Quarterly"
-archetype: "Processor"
-description: "Identifies stable 'Monthly' customers ideal for 'Annual' conversion campaigns to improve cash flow."
+id: billing-frequency-upsell
+category: Sales Ops
+title: Annual Pre-Pay Upsell
+tagline: Move monthly users to annual plans.
+difficulty: Beginner
+time: Quarterly
+archetype: Processor
+description: >-
+  Identifies stable 'Monthly' customers ideal for 'Annual' conversion campaigns
+  to improve cash flow.
 sampleData:
-  filename: "subscriptions.csv"
+  filename: subscriptions.csv
   content: |
     Customer,Plan_Type,Tenure_Months
     Acme,Monthly,12

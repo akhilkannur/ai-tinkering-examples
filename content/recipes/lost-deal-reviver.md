@@ -1,6 +1,6 @@
 ---
 id: lost-deal-reviver
-category: Sales
+category: Sales Ops
 title: The Lost Deal Reviver
 tagline: Re-engage 100 cold leads with 'New News'.
 difficulty: Intermediate

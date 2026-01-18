@@ -1,6 +1,6 @@
 ---
 id: geo-expansion-planner
-category: Strategy
+category: Strategic Ops
 title: The Geographic Expansion Planner
 tagline: Where should we launch next?
 difficulty: Advanced

@@ -1,6 +1,6 @@
 ---
 id: referral-program-architect
-category: Growth
+category: Strategic Ops
 title: The Referral Program Architect
 tagline: Turn users into salespeople.
 difficulty: Intermediate

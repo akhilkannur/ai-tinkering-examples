@@ -1,6 +1,6 @@
 ---
 id: twitter-auto-plug-writer
-category: Twitter
+category: Strategic Ops
 title: The Auto-Plug Writer
 tagline: Drive traffic from viral tweets.
 difficulty: Beginner

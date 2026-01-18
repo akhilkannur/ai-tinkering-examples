@@ -1,6 +1,6 @@
 ---
 id: review-to-ad-machine
-category: Marketing
+category: Strategic Ops
 title: The Review-to-Ad Factory
 tagline: Turn 100 reviews into 100 ad variations.
 difficulty: Intermediate

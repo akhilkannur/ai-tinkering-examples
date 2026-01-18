@@ -1,14 +1,16 @@
---- 
-id: "ticket-response-time-tracker"
-category: "Customer Support"
-title: "Support Velocity Tracker"
-tagline: "Are we hitting our 2-hour SLA?"
-difficulty: "Beginner"
-time: "Weekly"
-archtype: "Processor"
-description: "Calculates the time difference between 'Ticket Created' and 'First Reply' to measure team performance."
+---
+id: ticket-response-time-tracker
+category: Customer Success
+title: Support Velocity Tracker
+tagline: Are we hitting our 2-hour SLA?
+difficulty: Beginner
+time: Weekly
+archtype: Processor
+description: >-
+  Calculates the time difference between 'Ticket Created' and 'First Reply' to
+  measure team performance.
 sampleData:
-  filename: "tickets.csv"
+  filename: tickets.csv
   content: |
     ID,Created_At,First_Reply_At
     101,10:00,10:15

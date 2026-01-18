@@ -1,14 +1,16 @@
---- 
-id: "indirect-revenue-forecaster"
-category: "Partner Ops"
-title: "Indirect Revenue Forecaster"
-tagline: "Forecast revenue from partner-submitted pipeline."
-difficulty: "Intermediate"
-time: "Monthly"
-archtype: "Processor"
-description: "Applies a 'Channel Discount' to partner forecasts to create a more realistic revenue prediction."
+---
+id: indirect-revenue-forecaster
+category: Strategic Ops
+title: Indirect Revenue Forecaster
+tagline: Forecast revenue from partner-submitted pipeline.
+difficulty: Intermediate
+time: Monthly
+archtype: Processor
+description: >-
+  Applies a 'Channel Discount' to partner forecasts to create a more realistic
+  revenue prediction.
 sampleData:
-  filename: "partner_pipeline.csv"
+  filename: partner_pipeline.csv
   content: |
     Partner,Deal_Amount,Partner_Confidence
     Reseller X,100000,High

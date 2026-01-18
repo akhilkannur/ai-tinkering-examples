@@ -1,14 +1,16 @@
 ---
-id: "speaker-session-attribution"
-category: "Field Marketing"
-title: "Session Pipeline Attribution"
-tagline: "Did the CEO's keynote generate deals?"
-difficulty: "Advanced"
-time: "Quarterly"
-archetype: "Processor"
-description: "Matches session attendee scans to subsequent pipeline creation to measure the ROI of speaking slots."
+id: speaker-session-attribution
+category: Strategic Ops
+title: Session Pipeline Attribution
+tagline: Did the CEO's keynote generate deals?
+difficulty: Advanced
+time: Quarterly
+archetype: Processor
+description: >-
+  Matches session attendee scans to subsequent pipeline creation to measure the
+  ROI of speaking slots.
 sampleData:
-  filename: "session_scans.csv"
+  filename: session_scans.csv
   content: |
     Attendee_Email,Session_Name,Opp_Created_Date
     john@acme.com,Keynote,2023-10-15

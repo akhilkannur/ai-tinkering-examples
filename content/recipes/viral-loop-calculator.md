@@ -1,6 +1,6 @@
 ---
 id: viral-loop-calculator
-category: Growth
+category: Strategic Ops
 title: The Viral Loop Calculator
 tagline: Will it grow itself?
 difficulty: Intermediate

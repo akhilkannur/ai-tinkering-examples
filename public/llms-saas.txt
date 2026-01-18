@@ -1,0 +1,333 @@
+# Blueprints: SaaS
+
+## The Cancellation Flow Auditor
+URL: https://realaiexamples.com/blueprints/cancellation-flow-auditor
+Description: Save them before they go.
+
+---
+id: cancellation-flow-auditor
+category: SaaS
+title: The Cancellation Flow Auditor
+tagline: Save them before they go.
+difficulty: Intermediate
+time: Batch
+archetype: Hybrid
+description: >-
+  The 'Cancel' button is your last line of defense. This agent researches
+  industry-leading retention strategies and audits your offboarding flow to
+  design high-converting 'Deflection Pages' for multiple SaaS products.
+sampleData:
+  filename: saas_products.csv
+  content: |
+    Product_Name,Website,Primary_Churn_Reason
+    DesignStream,https://designstream.io,Too Expensive
+    CodeCheck,https://codecheck.app,Missing Features
+    HealthSync,https://healthsync.com,Not Using It
+---
+
+# Agent Configuration: The Cancellation Flow Auditor
+
+## Role
+The 'Cancel' button is your last line of defense. This agent researches industry-leading retention strategies and audits your offboarding flow to design high-converting 'Deflection Pages' for multiple SaaS products.
+
+## Objective
+Save them before they go.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `saas_products.csv` exist?
+2.  **If Missing:** Create `saas_products.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Check
+1.  **Check:** Does `saas_products.csv` exist?
+2.  **If Missing:** Create `saas_products.csv` using the `sampleData`.
+3.  **If Present:** Load the product list.
+
+### Phase 2: The Audit Loop
+For each product in the CSV:
+1.  **Benchmarking:** Use `web_fetch` to research "Retention Best Practices" for the product's niche.
+2.  **Design Deflection Logic:**
+    *   **If [Too Expensive]:** Draft a "Pause Account" or "Scholarship/Discount" offer.
+    *   **If [Missing Features]:** Research the product's roadmap (via its site) and draft a "Coming Soon" teaser.
+    *   **If [Not Using It]:** Draft a re-onboarding sequence or a "Chat with an Expert" offer.
+3.  **Draft Copy:** Create `retention_flows/[Product_Name]_save_flow.md` with UI mockups for the deflection page.
+
+### Phase 3: Structured Deliverables
+1.  **Create:** `retention_flows/` folder containing all audit reports.
+2.  **Create:** `churn_prevention_matrix.csv` with columns: `Product_Name`, `Deflection_Offer`, `Copy_Hook`, `File_Path`.
+3.  **Report:** "Successfully audited [X] products. Retention flows optimized for specific churn reasons."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The Changelog Marketer
+URL: https://realaiexamples.com/blueprints/changelog-marketer
+Description: Your updates are marketing assets.
+
+---
+id: changelog-marketer
+category: SaaS
+title: The Changelog Marketer
+tagline: Your updates are marketing assets.
+difficulty: Beginner
+time: Batch
+archetype: Processor
+description: >-
+  Don't hide your hard work. This agent takes technical commit messages or Jira
+  tickets and transforms them into high-energy 'New & Improved' Changelog posts
+  for an entire release cycle.
+sampleData:
+  filename: releases.csv
+  content: >
+    Feature_Name,Technical_Notes,Impact
+
+    FastSearch,Indexing speed increased by 50% via ElasticSearch update,Search
+    results load instantly
+
+    Dark Mode,Implemented CSS variables and toggle,Reduced eye strain for night
+    users
+
+    Zapier v2,Added 5 new triggers for automation,Easier workflow integration
+---
+
+# Agent Configuration: The Changelog Marketer
+
+## Role
+Don't hide your hard work. This agent takes technical commit messages or Jira tickets and transforms them into high-energy 'New & Improved' Changelog posts for an entire release cycle.
+
+## Objective
+Your updates are marketing assets.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `releases.csv` exist?
+2.  **If Missing:** Create `releases.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Check
+1.  **Check:** Does `releases.csv` exist?
+2.  **If Missing:** Create `releases.csv` using the `sampleData`.
+3.  **If Present:** Load the release notes.
+
+### Phase 2: The Writing Loop
+For each feature in the CSV:
+1.  **Draft Headline:** Create a benefit-driven title (e.g., "Find Anything Instantly with FastSearch").
+2.  **Changelog Entry:** Write a 3-paragraph update:
+    *   **Paragraph 1 (The Why):** The problem the user was facing.
+    *   **Paragraph 2 (The What):** The technical update simplified.
+    *   **Paragraph 3 (The Benefit):** How their life is better now.
+3.  **Social Thread:** Create a 3-tweet thread version for X/Twitter.
+
+### Phase 3: Structured Deliverables
+1.  **Create:** `changelog_assets/` folder with `[Feature_Name]_marketing.md` for each entry.
+2.  **Create:** `release_summary.csv` with columns: `Feature_Name`, `Marketing_Headline`, `File_Path`.
+3.  **Report:** "Successfully drafted [X] changelog assets. Technical notes have been transformed into marketing gold."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The Strategic Integration Factory
+URL: https://realaiexamples.com/blueprints/integration-partner-finder
+Description: Find 50 potential partners across 10 niches.
+
+---
+id: integration-partner-finder
+category: SaaS
+title: The Strategic Integration Factory
+tagline: Find 50 potential partners across 10 niches.
+difficulty: Advanced
+time: One-off
+description: >-
+  Why build one integration? This agent reads a list of adjacent tool categories
+  from a CSV and identifies the top 5 high-leverage partners in each, drafting a
+  'Better Together' pitch for every category.
+sampleData:
+  filename: partner_niches.csv
+  content: |
+    Niche,Target_Audience,Pain_Point
+    E-com CRM,Merchants,Cart abandonment
+    HR Tech,VPs of HR,Employee churn
+isPremium: true
+---
+
+# Agent Configuration: The Strategic Integration Factory
+
+## Role
+Why build one integration? This agent reads a list of adjacent tool categories from a CSV and identifies the top 5 high-leverage partners in each, drafting a 'Better Together' pitch for every category.
+
+## Objective
+Find 50 potential partners across 10 niches.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `partner_niches.csv` exist?
+2.  **If Missing:** Create `partner_niches.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Niche Setup
+1.  **Check:** Does `partner_niches.csv` exist? If missing, create template.
+
+### Phase 2: The Prospecting Loop
+For each niche in the CSV:
+1.  **Search:** Find the top 5 players in the [Niche] that target [Target_Audience].
+2.  **Verify:** Check if they have an active Partner Program page.
+3.  **Draft:** Write a pitch: "Our [Product] users are asking for [Niche] automation. If we integrated, we could solve [Pain_Point] for [Target_Audience]."
+
+### Phase 3: The Partner Map
+1.  **Create:** `strategic_partner_map.csv` with columns: `Niche,Company,URL,Partnership_Type,Draft_Email`.
+2.  **Summary:** "Processed [X] niches. Identified [Y] Tier-1 partners. Ecosystem strategy is ready."
+---
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The Roadmap Prioritizer (RICE)
+URL: https://realaiexamples.com/blueprints/roadmap-prioritizer
+Description: Build what matters.
+
+---
+id: roadmap-prioritizer
+category: SaaS
+title: The Roadmap Prioritizer (RICE)
+tagline: Build what matters.
+difficulty: Intermediate
+time: Batch
+description: >-
+  You have 50 feature requests and 2 developers. This agent uses the RICE
+  framework (Reach, Impact, Confidence, Effort) to score each request and
+  generate an objective, prioritized roadmap for your entire product suite.
+sampleData:
+  filename: feature_requests.csv
+  content: |
+    Feature_Name,Reach,Impact,Confidence,Effort
+    SSO Integration,1000,3,0.8,2
+    Dark Mode,5000,1,1.0,0.5
+    AI Search,2000,3,0.5,4
+    Mobile App,10000,2,0.7,6
+isPremium: true
+---
+
+# Agent Configuration: The Roadmap Prioritizer (RICE)
+
+## Role
+You have 50 feature requests and 2 developers. This agent uses the RICE framework (Reach, Impact, Confidence, Effort) to score each request and generate an objective, prioritized roadmap for your entire product suite.
+
+## Objective
+Build what matters.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `feature_requests.csv` exist?
+2.  **If Missing:** Create `feature_requests.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Check
+1.  **Check:** Does `feature_requests.csv` exist?
+2.  **If Missing:** Create `feature_requests.csv` using the `sampleData`.
+3.  **If Present:** Load the request list.
+
+### Phase 2: The Scoring Loop
+For each feature in the CSV:
+1.  **Validate Inputs:** Ensure `Reach`, `Impact` (1-3), `Confidence` (0-1), and `Effort` (person-months) are present.
+2.  **Calculate RICE Score:** Execute the formula `(Reach * Impact * Confidence) / Effort`.
+3.  **Analyze Confidence:** If `Confidence` < 0.5, flag the feature as "Needs Research".
+4.  **Rank Priority:** Assign a tier (P0, P1, P2) based on the final score.
+
+### Phase 3: Structured Deliverables
+1.  **Create:** `prioritized_roadmap.csv` containing all features sorted by `RICE_Score` (highest first).
+2.  **Report:** "Successfully prioritized [X] features. The top 3 high-leverage items are [Top_Feature_1], [Top_Feature_2], and [Top_Feature_3]."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The SaaS Pricing Calculator
+URL: https://realaiexamples.com/blueprints/saas-pricing-calculator
+Description: Stop undercharging.
+
+---
+id: saas-pricing-calculator
+category: SaaS
+title: The SaaS Pricing Calculator
+tagline: Stop undercharging.
+difficulty: Intermediate
+time: Batch
+description: >-
+  Pricing is a science. This agent models your COGS and CAC to recommend
+  profitable pricing tiers for an entire portfolio of SaaS products.
+sampleData:
+  filename: product_costs.csv
+  content: |
+    Product_Name,Server_Cost_Per_User,Support_Cost_Per_User,Target_Margin_%
+    NeoCloud,2.50,1.00,85
+    VelvetFlow,0.50,0.25,90
+    DataArmor,5.00,2.00,80
+isPremium: true
+---
+
+# Agent Configuration: The SaaS Pricing Calculator
+
+## Role
+Pricing is a science. This agent models your COGS and CAC to recommend profitable pricing tiers for an entire portfolio of SaaS products.
+
+## Objective
+Stop undercharging.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `product_costs.csv` exist?
+2.  **If Missing:** Create `product_costs.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Check
+1.  **Check:** Does `product_costs.csv` exist?
+2.  **If Missing:** Create `product_costs.csv` using the `sampleData`.
+3.  **If Present:** Load the cost data.
+
+### Phase 2: The Pricing Loop
+For each product in the CSV:
+1.  **Calculate Base Cost:** `Total_COGS = Server_Cost + Support_Cost`.
+2.  **Model 3 Tiers:**
+    *   **Starter (Acquisition):** Priced at 2x COGS or a low-friction entry point (e.g., $19-$29).
+    *   **Pro (The Profit Engine):** Priced to hit the `Target_Margin_%` (e.g., $49-$99).
+    *   **Enterprise (The Scale):** Priced at 10x-20x COGS with custom support gating.
+3.  **Apply Charm:** Round prices to the nearest "9" or "5" (e.g., $49.99).
+4.  **Draft Output:** Create `pricing_plans/[Product_Name]_tiers.md`.
+
+### Phase 3: Structured Deliverables
+1.  **Create:** `pricing_model_summary.csv` with columns: `Product_Name`, `Starter_Price`, `Pro_Price`, `Enterprise_Price`, `Projected_Margin`.
+2.  **Report:** "Successfully modeled pricing for [X] products. Profit engines optimized for [Target_Margin_%] gross margins."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+

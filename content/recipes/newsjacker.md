@@ -1,6 +1,6 @@
 ---
 id: newsjacker
-category: Social Automation
+category: Strategic Ops
 title: The Newsjacker
 tagline: Find trending news and draft social posts on autopilot.
 difficulty: Intermediate

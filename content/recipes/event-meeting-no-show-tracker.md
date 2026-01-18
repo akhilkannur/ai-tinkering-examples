@@ -1,14 +1,16 @@
 ---
-id: "event-meeting-no-show-tracker"
-category: "Field Marketing"
-title: "Event Meeting Auditor"
-tagline: "Did they show up to the booth meeting?"
-difficulty: "Beginner"
-time: "Batch"
-archetype: "Processor"
-description: "Tracks attendance of pre-booked meetings at trade shows to calculate the 'Show Rate' and flag no-shows for follow-up."
+id: event-meeting-no-show-tracker
+category: Strategic Ops
+title: Event Meeting Auditor
+tagline: Did they show up to the booth meeting?
+difficulty: Beginner
+time: Batch
+archetype: Processor
+description: >-
+  Tracks attendance of pre-booked meetings at trade shows to calculate the 'Show
+  Rate' and flag no-shows for follow-up.
 sampleData:
-  filename: "booth_schedule.csv"
+  filename: booth_schedule.csv
   content: |
     Meeting_ID,Status
     1,Held

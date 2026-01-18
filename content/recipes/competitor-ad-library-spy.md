@@ -1,6 +1,6 @@
 ---
 id: competitor-ad-library-spy
-category: Marketing
+category: Strategic Ops
 title: Ad Library Decoder
 tagline: Reverse-engineer your competitor's ad strategy.
 difficulty: Intermediate

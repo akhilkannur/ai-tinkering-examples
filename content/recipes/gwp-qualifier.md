@@ -1,14 +1,16 @@
 ---
-id: "gwp-qualifier"
-category: "E-commerce Merchandising"
-title: "Gift-with-Purchase Qualifier"
-tagline: "Identify VIPs for surprise gifts."
-difficulty: "Beginner"
-time: "Batch"
-archetype: "Processor"
-description: "Checks order history or basket value to identify customers eligible for a 'Surprise and Delight' gift insertion."
+id: gwp-qualifier
+category: E-commerce
+title: Gift-with-Purchase Qualifier
+tagline: Identify VIPs for surprise gifts.
+difficulty: Beginner
+time: Batch
+archetype: Processor
+description: >-
+  Checks order history or basket value to identify customers eligible for a
+  'Surprise and Delight' gift insertion.
 sampleData:
-  filename: "daily_orders.csv"
+  filename: daily_orders.csv
   content: |
     Order_ID,Customer_LTV,Basket_Value
     101,500,50

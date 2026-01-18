@@ -1,0 +1,407 @@
+# Blueprints: Competitor Intel
+
+## The Ad Counter-Strike Factory
+URL: https://realaiexamples.com/blueprints/ad-counter-strike
+Description: Steal traffic from 10 competitors at once.
+
+---
+id: ad-counter-strike
+category: Competitor Intel
+title: The Ad Counter-Strike Factory
+tagline: Steal traffic from 10 competitors at once.
+difficulty: Advanced
+time: 25 mins
+description: >-
+  Why attack one competitor? This agent reads a list of competitor landing pages
+  from a CSV, identifies their core hooks, and generates a 'Counter-Ad' (Copy +
+  Visual) for every single one to help you win their customers.
+sampleData:
+  filename: competitors_to_attack.csv
+  content: |
+    Name,URL,Main_Claim
+    Competitor_A,https://competitor-a.com,Fastest setup
+    Competitor_B,https://competitor-b.com,Cheapest price
+---
+
+# Agent Configuration: The Ad Counter-Strike Factory
+
+## Role
+Why attack one competitor? This agent reads a list of competitor landing pages from a CSV, identifies their core hooks, and generates a 'Counter-Ad' (Copy + Visual) for every single one to help you win their customers.
+
+## Objective
+Steal traffic from 10 competitors at once.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `competitors_to_attack.csv` exist?
+2.  **If Missing:** Create `competitors_to_attack.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Preparation
+1.  **Check:** Does `competitors_to_attack.csv` exist? If missing, create it.
+
+### Phase 2: The Strike Loop
+For each competitor in the CSV:
+1.  **Analyze:** Use 
+web_fetch
+ to read their current claims.
+2.  **Draft:** Write a LinkedIn/FB Ad script (Primary Text + Headline) using the "Us vs Them" frame.
+3.  **Visualize:** Design and generate a "Split Screen" comparison image representing the *old way* (dark/chaotic) vs the *new way* (bright/simple).
+
+### Phase 3: Battlefield Deployment
+1.  **Action:** Create a folder `counter_ads/`.
+2.  **Save:** Save each campaign as `strike-[competitor].md`.
+3.  **Report:** "Generated [X] conquesting ad campaigns. master_attack_plan.csv updated."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The Competitor Hook Decoder
+URL: https://realaiexamples.com/blueprints/competitor-hook-decoder
+Description: Reverse-engineer the psychology behind their ads.
+
+---
+id: competitor-hook-decoder
+category: Competitor Intel
+title: The Competitor Hook Decoder
+tagline: Reverse-engineer the psychology behind their ads.
+difficulty: Intermediate
+time: Weekly
+archetype: Processor
+isPremium: true
+description: >-
+  Don't just copy competitor ads—understand WHY they work. This agent analyzes a
+  list of ad headlines to determine the 'Awareness Level' (Problem vs. Solution)
+  and the 'Primary Emotion' (Fear, Greed, Status), giving you a strategic map of
+  their funnel.
+sampleData:
+  filename: competitor_ads.csv
+  content: >
+    Competitor,Ad_Headline,Ad_Body
+
+    Jasper,Write blogs 10x faster.,Stop staring at a blank cursor. AI writes for
+    you.
+
+    Copy.ai,The end of writer's block.,Generate high-converting copy in seconds.
+
+    ClickUp,Save one day every week.,The all-in-one app to replace them all.
+---
+
+# Agent Configuration: The Competitor Hook Decoder
+
+## Role
+Don't just copy competitor ads—understand WHY they work. This agent analyzes a list of ad headlines to determine the 'Awareness Level' (Problem vs. Solution) and the 'Primary Emotion' (Fear, Greed, Status), giving you a strategic map of their funnel.
+
+## Objective
+Reverse-engineer the psychology behind their ads.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `competitor_ads.csv` exist?
+2.  **If Missing:** Create `competitor_ads.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Analysis Loop
+For each ad in `competitor_ads.csv`:
+1.  **Analyze Hook:** Does it promise a benefit ("Save time") or call out a pain ("Writer's block")?
+    *   *Pain* = Problem Aware.
+    *   *Benefit* = Solution/Product Aware.
+2.  **Analyze Emotion:** What is the deeper promise?
+    *   "Save one day" = Freedom/Time (Greed/Gain).
+    *   "Stop staring" = Relief (Comfort).
+
+### Phase 2: Strategy Mapping
+1.  **Aggregate:** Count how many ads are "Problem Focused" vs. "Solution Focused" for each competitor.
+2.  **Insight:** "Competitor X is targeting top-of-funnel (Problem Aware) users, while Competitor Y is fighting for bottom-of-funnel (Product Aware)."
+
+### Phase 3: Deliverables
+1.  **Create:** `ad_strategy_analysis.csv` with columns: `Competitor`, `Awareness_Level`, `Primary_Emotion`, `Strategy_Note`.
+2.  **Summary:** "Analyzed [X] ads. The dominant strategy in your niche is [Strategy]."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The Onboarding Teardown Factory
+URL: https://realaiexamples.com/blueprints/competitor-onboarding-spy
+Description: Comparative UX audit of competitors at once.
+
+---
+id: competitor-onboarding-spy
+category: Competitor Intel
+title: The Onboarding Teardown Factory
+tagline: Comparative UX audit of competitors at once.
+difficulty: Beginner
+time: Batch
+description: >-
+  How does your signup flow stack up? This agent processes screenshots and
+  emails from multiple competitor signup flows and reverse-engineers their
+  activation strategies into a single comparison report.
+sampleData:
+  filename: competitors_to_audit.csv
+  content: |
+    Competitor_Name,Vault_Path,Primary_Focus
+    Linear,onboarding_vault/linear/,Speed and Keyboard Shortcuts
+    PostHog,onboarding_vault/posthog/,Data Ingestion
+    Beehiiv,onboarding_vault/beehiiv/,Newsletter Setup
+---
+
+# Agent Configuration: The Onboarding Teardown Factory
+
+## Role
+How does your signup flow stack up? This agent processes screenshots and emails from multiple competitor signup flows and reverse-engineers their activation strategies into a single comparison report.
+
+## Objective
+Comparative UX audit of competitors at once.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `competitors_to_audit.csv` exist?
+2.  **If Missing:** Create `competitors_to_audit.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Check
+1.  **Check:** Does `competitors_to_audit.csv` exist?
+2.  **If Missing:** Create `competitors_to_audit.csv` using the `sampleData`. Ensure the `onboarding_vault/` directory structure exists.
+3.  **If Present:** Load the list of competitors to audit.
+
+### Phase 2: The Audit Loop
+For each competitor in the CSV:
+1.  **Read Assets:** Scan the `Vault_Path` for screenshots and `.eml` or `.txt` email files.
+2.  **Map the Journey:**
+    *   **Step 1-3:** Identify the friction (e.g., "Email verification required", "SSO available").
+    *   **The 'Aha!' Moment:** Pinpoint the exact screen where the `Primary_Focus` is delivered.
+    *   **Email Nurture:** Analyze the first 3 emails for personalization and urgency.
+3.  **Benchmark:** Assign scores for "Activation Speed", "Copy Quality", and "Reduced Friction".
+
+### Phase 3: Structured Deliverables
+1.  **Create:** `onboarding_landscape_analysis.md` containing a side-by-side matrix of all audited competitors.
+2.  **Create:** `teardown_summary.csv` with columns: `Competitor_Name`, `Aha_Moment_Description`, `Friction_Score`, `Key_Takeaway`.
+3.  **Report:** "Successfully teardowned [X] onboarding flows. 3 high-impact 'steals' identified for your own roadmap."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The Price Watchdog Fleet
+URL: https://realaiexamples.com/blueprints/competitor-price-watchdog
+Description: Monitor pricing changes for 10 competitors at once.
+
+---
+id: competitor-price-watchdog
+category: Competitor Intel
+title: The Price Watchdog Fleet
+tagline: Monitor pricing changes for 10 competitors at once.
+difficulty: Intermediate
+time: Weekly
+description: >-
+  Competitors change pricing quietly. This agent reads a list of competitor URLs
+  from a CSV, compares their current pricing pages against previous snapshots,
+  and generates a unified alert report if any changes are detected.
+sampleData:
+  filename: pricing_targets.csv
+  content: |
+    Company,URL
+    Competitor_A,https://competitor-a.com/pricing
+    Competitor_B,https://competitor-b.com/plans
+---
+
+# Agent Configuration: The Price Watchdog Fleet
+
+## Role
+Competitors change pricing quietly. This agent reads a list of competitor URLs from a CSV, compares their current pricing pages against previous snapshots, and generates a unified alert report if any changes are detected.
+
+## Objective
+Monitor pricing changes for 10 competitors at once.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `pricing_targets.csv` exist?
+2.  **If Missing:** Create `pricing_targets.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Initialization
+1.  **Check:** Does `pricing_targets.csv` exist? If missing, create template.
+2.  **Storage:** Create a folder `pricing_snapshots/` if it doesn't exist.
+
+### Phase 2: The Audit Loop
+For each row in the CSV:
+1.  **Fetch:** Use `web_fetch` to get the current text of the pricing page.
+2.  **Load State:** Look for `pricing_snapshots/[Company].txt`.
+3.  **Compare:**
+    *   *If missing:* Save current text as the baseline.
+    *   *If present:* Compare current vs saved. Identify changes in prices, currency, or feature names.
+4.  **Save State:** Overwrite the snapshot with the current version.
+
+### Phase 3: The Alert Report
+1.  **Create:** `pricing_alerts.md`.
+2.  **Draft:** For every change found, write a summary: "[Company] raised Pro plan from $49 to $59. They also added a new 'Enterprise Lite' tier."
+3.  **Summary:** "Monitored [X] competitors. Detected [Y] changes."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The Market Spy
+URL: https://realaiexamples.com/blueprints/competitor-spy
+Description: Deep Competitor Analysis.
+
+---
+id: competitor-spy
+category: Competitor Intel
+title: The Market Spy
+tagline: Deep Competitor Analysis.
+difficulty: Intermediate
+time: 15 mins
+archetype: Researcher
+description: >-
+  Researches your competitors and builds battle cards with their pricing,
+  weaknesses, and how to beat them.
+sampleData:
+  filename: competitors.csv
+  content: |
+    Competitor_Name,Website,Primary_Niche
+    Intercom,https://intercom.com,Customer Service
+    Zendesk,https://zendesk.com,Help Desk
+    Drift,https://drift.com,Conversational Marketing
+---
+
+# Agent Configuration: The Market Spy
+
+## Role
+Researches your competitors and builds battle cards with their pricing, weaknesses, and how to beat them.
+
+## Objective
+Deep Competitor Analysis.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `competitors.csv` exist?
+2.  **If Missing:** Create `competitors.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+You are a competitive intelligence researcher. Your job is to build sales battle cards for each competitor.
+
+**Phase 1: Setup**
+- Read `competitors.csv`
+- If it doesn't exist, create it with sample data:
+  ```
+  Competitor_Name,Website,Primary_Niche
+  Intercom,https://intercom.com,Customer Service
+  Zendesk,https://zendesk.com,Help Desk
+  ```
+- Create a `battlecards/` folder if it doesn't exist
+
+**Phase 2: Research Each Competitor**
+For each competitor:
+1. **Pricing**: Visit their website, find the pricing page. Note their pricing model (per-user, per-seat, flat-rate) and what features are locked behind higher tiers.
+2. **Positioning**: How do they describe themselves? What's their main promise?
+3. **Weakness**: Search for reviews on G2 or Capterra. What do 1-3 star reviews complain about most?
+4. **Battle Card**: Create a markdown file with:
+   - **Their Pitch**: How they position themselves
+   - **Reality**: What they actually deliver
+   - **Main Weakness**: Most common complaint
+   - **Killer Question**: A question for sales to ask that exposes their weakness
+   - **Why We Win**: How we're better for [their niche]
+5. Save to `battlecards/[Competitor_Name].md`
+
+**Phase 3: Create Summary**
+- Save `market_intel_matrix.csv` with columns: Competitor_Name, Pricing_Model, Main_Weakness, Battlecard_File
+- Tell me: "Created battle cards for X competitors. Ready for your sales team."
+
+Start now.
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The Capital Radar
+URL: https://realaiexamples.com/blueprints/funding-radar
+Description: Track $1B+ in funding across 50 industries on autopilot.
+
+---
+id: funding-radar
+category: Competitor Intel
+title: The Capital Radar
+tagline: Track $1B+ in funding across 50 industries on autopilot.
+difficulty: Intermediate
+time: 10 mins
+description: >-
+  Capital is intent. This agent monitors a list of industries from a CSV and
+  generates a unified weekly report of every funding round (Seed to Series C),
+  identifying which startups are in 'Hiring Mode'.
+sampleData:
+  filename: monitored_sectors.csv
+  content: |
+    Industry
+    Artificial Intelligence
+    ClimateTech
+    Logistics
+isPremium: true
+---
+
+# Agent Configuration: The Capital Radar
+
+## Role
+Capital is intent. This agent monitors a list of industries from a CSV and generates a unified weekly report of every funding round (Seed to Series C), identifying which startups are in 'Hiring Mode'.
+
+## Objective
+Track $1B+ in funding across 50 industries on autopilot.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `monitored_sectors.csv` exist?
+2.  **If Missing:** Create `monitored_sectors.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Sector Setup
+1.  **Check:** Does `monitored_sectors.csv` exist? If missing, create template.
+
+### Phase 2: The Tracker Loop
+For each industry in the CSV:
+1.  **Search:** Find news containing `"[Industry]" funding "this week"`.
+2.  **Extract:** For every match, read the article and extract:
+    *   Company Name & Website.
+    *   Round (Seed, A, B).
+    *   Lead Investor.
+    *   Growth Plan (e.g., "expanding to EU").
+
+### Phase 3: Consolidation
+1.  **Action:** Create `master_funding_database.csv`.
+2.  **Summary:** "Tracked [X] deals total. [Top Sector] had the highest concentration of capital ($[Amount])."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+

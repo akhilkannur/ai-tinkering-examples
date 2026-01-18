@@ -1,14 +1,16 @@
 ---
-id: "user-group-geo-locator"
-category: "Field Marketing"
-title: "Meetup City Selector"
-tagline: "Where should we host the next dinner?"
-difficulty: "Intermediate"
-time: "Quarterly"
-archetype: "Processor"
-description: "Analyzes customer address data to find geographic clusters with the highest density of users."
+id: user-group-geo-locator
+category: Strategic Ops
+title: Meetup City Selector
+tagline: Where should we host the next dinner?
+difficulty: Intermediate
+time: Quarterly
+archetype: Processor
+description: >-
+  Analyzes customer address data to find geographic clusters with the highest
+  density of users.
 sampleData:
-  filename: "customer_locations.csv"
+  filename: customer_locations.csv
   content: |
     Customer,City
     Acme,Austin

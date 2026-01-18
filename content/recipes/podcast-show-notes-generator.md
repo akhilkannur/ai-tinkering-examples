@@ -1,6 +1,6 @@
 ---
 id: podcast-show-notes-generator
-category: Podcast
+category: Content Ops
 title: The Show Notes Factory
 tagline: Generate SEO-optimized show notes for your entire season.
 difficulty: Intermediate

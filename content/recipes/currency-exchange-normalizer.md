@@ -1,14 +1,16 @@
---- 
-id: "currency-exchange-normalizer"
-category: "RevOps"
-title: "Global Pipeline Normalizer"
-tagline: "Convert global deals into a single master currency."
-difficulty: "Beginner"
-time: "Weekly"
-archtype: "Processor"
-description: "Converts a multi-currency pipeline CSV into a standard USD report for consolidated board reporting."
+---
+id: currency-exchange-normalizer
+category: Sales Ops
+title: Global Pipeline Normalizer
+tagline: Convert global deals into a single master currency.
+difficulty: Beginner
+time: Weekly
+archtype: Processor
+description: >-
+  Converts a multi-currency pipeline CSV into a standard USD report for
+  consolidated board reporting.
 sampleData:
-  filename: "global_pipeline.csv"
+  filename: global_pipeline.csv
   content: |
     Deal,Amount,Currency
     Deal A,1000,EUR

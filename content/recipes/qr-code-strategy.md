@@ -1,6 +1,6 @@
 ---
 id: qr-code-strategy
-category: Offline
+category: Strategic Ops
 title: The QR Code Strategist
 tagline: Bridge offline to online.
 difficulty: Beginner

@@ -1,6 +1,6 @@
 ---
 id: twitter-follower-export-cleaner
-category: Data Ops
+category: Marketing Ops
 title: The Twitter Follower Cleaner
 tagline: Analyze your audience.
 difficulty: Intermediate

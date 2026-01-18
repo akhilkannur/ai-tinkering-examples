@@ -1,6 +1,6 @@
 ---
 id: seo-internal-linking-automator
-category: Marketing
+category: Strategic Ops
 title: Internal Link Graph Builder
 tagline: Boost SEO by finding internal linking opportunities automatically.
 difficulty: Intermediate

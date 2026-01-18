@@ -1,6 +1,6 @@
 ---
 id: lead-source-normalizer
-category: Data Hygiene
+category: Marketing Ops
 title: The Lead Source Normalizer
 tagline: Fix your attribution buckets.
 difficulty: Beginner

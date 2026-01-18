@@ -1,14 +1,16 @@
 ---
-id: "reference-win-rate-impact"
-category: "Customer Advocacy"
-title: "Reference ROI Calculator"
-tagline: "Does using a reference help?"
-difficulty: "Intermediate"
-time: "Quarterly"
-archetype: "Processor"
-description: "Calculates the win rate of deals where a specific Reference was used vs deals without references."
+id: reference-win-rate-impact
+category: Customer Success
+title: Reference ROI Calculator
+tagline: Does using a reference help?
+difficulty: Intermediate
+time: Quarterly
+archetype: Processor
+description: >-
+  Calculates the win rate of deals where a specific Reference was used vs deals
+  without references.
 sampleData:
-  filename: "deals_with_refs.csv"
+  filename: deals_with_refs.csv
   content: |
     Deal,Reference_Used,Outcome
     1,Yes,Won

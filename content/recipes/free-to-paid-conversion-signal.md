@@ -1,14 +1,16 @@
 ---
-id: "free-to-paid-conversion-signal"
-category: "PLG Sales"
-title: "PQL Usage Trigger"
-tagline: "Flag users who hit 90% of their free limits."
-difficulty: "Intermediate"
-time: "Daily"
-archetype: "Processor"
-description: "Monitors free user usage logs to trigger a sales alert when a user hits specific 'Product Qualified Lead' (PQL) thresholds."
+id: free-to-paid-conversion-signal
+category: Sales Ops
+title: PQL Usage Trigger
+tagline: Flag users who hit 90% of their free limits.
+difficulty: Intermediate
+time: Daily
+archetype: Processor
+description: >-
+  Monitors free user usage logs to trigger a sales alert when a user hits
+  specific 'Product Qualified Lead' (PQL) thresholds.
 sampleData:
-  filename: "usage_logs.csv"
+  filename: usage_logs.csv
   content: |
     User_ID,Feature_A_Usage,Limit,Plan
     101,45,50,Free

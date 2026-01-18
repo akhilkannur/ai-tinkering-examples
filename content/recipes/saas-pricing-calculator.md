@@ -1,6 +1,6 @@
 ---
 id: saas-pricing-calculator
-category: SaaS
+category: Strategic Ops
 title: The SaaS Pricing Calculator
 tagline: Stop undercharging.
 difficulty: Intermediate

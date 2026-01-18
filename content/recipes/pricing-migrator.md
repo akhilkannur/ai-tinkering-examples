@@ -1,6 +1,6 @@
 ---
 id: pricing-migrator
-category: RevOps
+category: Sales Ops
 title: The Pricing Tier Migrator
 tagline: Move them up or move them out.
 difficulty: Advanced

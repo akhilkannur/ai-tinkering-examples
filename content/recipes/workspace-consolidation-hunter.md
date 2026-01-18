@@ -1,14 +1,16 @@
 ---
-id: "workspace-consolidation-hunter"
-category: "PLG Sales"
-title: "Enterprise Consolidation Hunter"
-tagline: "Find 50 free users with the same email domain."
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Groups individual free users by their email domain to identify shadow IT usage at large companies."
+id: workspace-consolidation-hunter
+category: Sales Ops
+title: Enterprise Consolidation Hunter
+tagline: Find 50 free users with the same email domain.
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Groups individual free users by their email domain to identify shadow IT usage
+  at large companies.
 sampleData:
-  filename: "users.csv"
+  filename: users.csv
   content: |
     Email,Plan
     john@ge.com,Free

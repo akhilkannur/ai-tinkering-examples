@@ -1,6 +1,6 @@
 ---
 id: podcast-sponsor-read-writer
-category: Podcast
+category: Content Ops
 title: The Conversational Ad Read Factory
 tagline: Native ad reads that don't get skipped.
 difficulty: Intermediate

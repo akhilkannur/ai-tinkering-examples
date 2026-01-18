@@ -1,14 +1,16 @@
 ---
-id: "win-back-segmenter"
-category: "Retention Marketing"
-title: "Win-Back Segmenter"
-tagline: "Identify lapsed VIPs for recovery."
-difficulty: "Beginner"
-time: "Weekly"
-archetype: "Processor"
-description: "Identifies high-value customers who haven't purchased in 180 days to trigger a dedicated win-back campaign."
+id: win-back-segmenter
+category: Retention
+title: Win-Back Segmenter
+tagline: Identify lapsed VIPs for recovery.
+difficulty: Beginner
+time: Weekly
+archetype: Processor
+description: >-
+  Identifies high-value customers who haven't purchased in 180 days to trigger a
+  dedicated win-back campaign.
 sampleData:
-  filename: "customer_history.csv"
+  filename: customer_history.csv
   content: |
     Customer,Total_Spend,Last_Order_Date
     Acme,5000,2022-01-01

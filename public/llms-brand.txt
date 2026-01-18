@@ -1,0 +1,206 @@
+# Blueprints: Brand
+
+## The About Page Storyteller
+URL: https://realaiexamples.com/blueprints/about-page-storyteller
+Description: Build trust with a data-backed brand story.
+
+---
+id: about-page-storyteller
+category: Brand
+title: The About Page Storyteller
+tagline: Build trust with a data-backed brand story.
+difficulty: Intermediate
+time: Batch
+archetype: Hybrid
+description: >-
+  Faceless brands are dead. This agent researches company histories and founder
+  profiles to transform boring About pages into compelling 'Hero's Journey'
+  narratives for an entire list of companies.
+sampleData:
+  filename: companies.csv
+  content: |
+    Company_Name,Website,Founders
+    Linear,https://linear.app,Karri Saarinen
+    PostHog,https://posthog.com,James Hawkins
+    Beehiiv,https://beehiiv.com,Tyler Denk
+---
+
+# Agent Configuration: The About Page Storyteller
+
+## Role
+Faceless brands are dead. This agent researches company histories and founder profiles to transform boring About pages into compelling 'Hero's Journey' narratives for an entire list of companies.
+
+## Objective
+Build trust with a data-backed brand story.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `companies.csv` exist?
+2.  **If Missing:** Create `companies.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Check
+1.  **Check:** Does `companies.csv` exist?
+2.  **If Missing:** Create `companies.csv` using the `sampleData`.
+3.  **If Present:** Load the company list.
+
+### Phase 2: The Research Loop
+For each company in the CSV:
+1.  **Search:** Use `web_fetch` to find the founders on LinkedIn/X and company "About" or "News" pages.
+2.  **Analyze:** Find the "Aha!" moment—why did they build this? Identify key milestones.
+3.  **Draft:** Create the page in 4 sections:
+    *   **Section 1: The Status Quo.** (The problem before the company existed).
+    *   **Section 2: The Epiphany.** (The story of the first prototype).
+    *   **Section 3: The Mission.** (Why we do this every day).
+    *   **Section 4: The Proof.** (Real numbers and logos).
+
+### Phase 3: Structured Deliverables
+1.  **Create:** A folder `brand_stories/` containing `[Company_Name]_story.md` for each entry.
+2.  **Create:** `story_summary.csv` with columns: `Company_Name`, `Emotional_Hook`, `File_Path`.
+3.  **Report:** "Successfully drafted stories for [X] companies. Check the `brand_stories/` folder."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The Brand Voice Architect
+URL: https://realaiexamples.com/blueprints/brand-voice-guidelines
+Description: Stop sounding schizophrenic.
+
+---
+id: brand-voice-guidelines
+category: Brand
+title: The Brand Voice Architect
+tagline: Stop sounding schizophrenic.
+difficulty: Intermediate
+time: Batch
+archetype: Hybrid
+description: >-
+  Different employees write differently. This agent researches your existing
+  digital presence and creates a 'Brand Voice Bible' (Tone, Do's/Don'ts,
+  Vocabulary) to ensure perfect consistency across every touchpoint.
+sampleData:
+  filename: brands.csv
+  content: |
+    Brand_Name,Website,Primary_Channel
+    Apple,https://apple.com,Homepage
+    Nike,https://nike.com,Instagram
+    Mailchimp,https://mailchimp.com,Blog
+---
+
+# Agent Configuration: The Brand Voice Architect
+
+## Role
+Different employees write differently. This agent researches your existing digital presence and creates a 'Brand Voice Bible' (Tone, Do's/Don'ts, Vocabulary) to ensure perfect consistency across every touchpoint.
+
+## Objective
+Stop sounding schizophrenic.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `brands.csv` exist?
+2.  **If Missing:** Create `brands.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Check
+1.  **Check:** Does `brands.csv` exist?
+2.  **If Missing:** Create `brands.csv` using the `sampleData`.
+3.  **If Present:** Load the brand list.
+
+### Phase 2: The Content Audit Loop
+For each brand in the CSV:
+1.  **Scrape:** Use `web_fetch` to read the `Website` or `Primary_Channel`.
+2.  **Analyze Persona:** What 3 adjectives describe this brand's current output? (e.g., "Minimalist, Direct, Empathetic").
+3.  **Define Rules:** Create a "This, Not That" list:
+    *   *We are:* [Positive Trait], but not [Negative Extreme].
+    *   *We use:* [Preferred Word] instead of [Forbidden Word].
+4.  **Draft Guidelines:** Create `voice_bibles/[Brand_Name]_voice.md` including:
+    *   **The Persona:** A 1-sentence description of the brand's character.
+    *   **Formatting Rules:** Rules for emojis, punctuation, and structure.
+
+### Phase 3: Structured Deliverables
+1.  **Create:** `voice_bibles/` folder containing all markdown guides.
+2.  **Create:** `brand_voice_matrix.csv` with columns: `Brand_Name`, `Core_Tone`, `Key_Adjective`, `File_Path`.
+3.  **Report:** "Successfully audited [X] brand voices. Voice Bibles are ready for your team."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The Logo-to-Brand-Kit Generator
+URL: https://realaiexamples.com/blueprints/logo-to-brand-kit
+Description: Instant design systems from your logos.
+
+---
+id: logo-to-brand-kit
+category: Brand
+title: The Logo-to-Brand-Kit Generator
+tagline: Instant design systems from your logos.
+difficulty: Experimental
+time: Batch
+description: >-
+  Launch landing pages fast for all your projects. This agent takes a list of
+  logo files, extracts brand DNA (colors, font vibes), and generates CSS themes
+  or Tailwind configs for every brand in your portfolio.
+sampleData:
+  filename: logos_to_process.csv
+  content: |
+    Brand_Name,Logo_File,Target_Framework
+    NeoCloud,assets/logos/neocloud.png,Tailwind
+    VelvetBloom,assets/logos/velvet.jpg,Plain CSS
+    PixelPounce,assets/logos/pounce.svg,Tailwind
+isPremium: true
+---
+
+# Agent Configuration: The Logo-to-Brand-Kit Generator
+
+## Role
+Launch landing pages fast for all your projects. This agent takes a list of logo files, extracts brand DNA (colors, font vibes), and generates CSS themes or Tailwind configs for every brand in your portfolio.
+
+## Objective
+Instant design systems from your logos.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `logos_to_process.csv` exist?
+2.  **If Missing:** Create `logos_to_process.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Check
+1.  **Check:** Does `logos_to_process.csv` exist?
+2.  **If Missing:** Create `logos_to_process.csv` using the `sampleData`. Ensure the `assets/logos/` directory exists.
+3.  **If Present:** Load the logo list.
+
+### Phase 2: The Extraction Loop
+For each brand in the CSV:
+1.  **Ingest:** Use image analysis to scan the `Logo_File`.
+2.  **Color Audit:** Identify the `Primary`, `Secondary`, and `Accent` colors. Generate a 5-step monochromatic scale for each.
+3.  **Typography Analysis:** Determine the font "vibe" (e.g., "Bold Sans-Serif", "Classic Serif"). Suggest 2 Google Font pairings (Heading and Body).
+4.  **Draft Config:**
+    *   **If [Tailwind]:** Generate a `tailwind.config.js` snippet with the custom colors and font families.
+    *   **If [Plain CSS]:** Generate a `variables.css` file with CSS Custom Properties.
+
+### Phase 3: Structured Deliverables
+1.  **Create:** `brand_kits/` folder with `[Brand_Name]_theme.[ext]` for each entry.
+2.  **Create:** `brand_dna_matrix.csv` with columns: `Brand_Name`, `Primary_Hex`, `Font_Heading`, `File_Path`.
+3.  **Report:** "Successfully extracted brand DNA for [X] logos. Design systems ready for frontend implementation."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+

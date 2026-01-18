@@ -1,6 +1,6 @@
 ---
 id: review-response-bot
-category: Support
+category: Customer Success
 title: The Review Response Bot
 tagline: Turn haters into fans.
 difficulty: Beginner

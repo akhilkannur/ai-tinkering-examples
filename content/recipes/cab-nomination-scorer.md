@@ -1,14 +1,16 @@
 ---
-id: "cab-nomination-scorer"
-category: "Customer Advocacy"
-title: "Advisory Board Scout"
-tagline: "Who should be on our CAB?"
-difficulty: "Intermediate"
-time: "Yearly"
-archetype: "Processor"
-description: "Scores customers based on spend, tenure, and strategic value to find ideal candidates for your Customer Advisory Board."
+id: cab-nomination-scorer
+category: Customer Success
+title: Advisory Board Scout
+tagline: Who should be on our CAB?
+difficulty: Intermediate
+time: Yearly
+archetype: Processor
+description: >-
+  Scores customers based on spend, tenure, and strategic value to find ideal
+  candidates for your Customer Advisory Board.
 sampleData:
-  filename: "customer_strategic.csv"
+  filename: customer_strategic.csv
   content: |
     Customer,Spend,Tenure_Yrs,Strategic_Fit
     Acme,1M,5,High

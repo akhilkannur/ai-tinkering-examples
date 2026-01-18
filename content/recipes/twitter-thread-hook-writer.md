@@ -1,6 +1,6 @@
 ---
 id: twitter-thread-hook-writer
-category: Social Content
+category: Content Ops
 title: The Twitter Thread Architect
 tagline: Generate viral thread hooks from your story or trending news.
 difficulty: Beginner

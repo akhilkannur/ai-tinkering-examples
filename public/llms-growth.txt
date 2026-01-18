@@ -1,0 +1,202 @@
+# Blueprints: Growth
+
+## The Affiliate Program Launcher
+URL: https://realaiexamples.com/blueprints/affiliate-program-launcher
+Description: Build a commission-only sales team.
+
+---
+id: affiliate-program-launcher
+category: Growth
+title: The Affiliate Program Launcher
+tagline: Build a commission-only sales team.
+difficulty: Advanced
+time: Hybrid
+archetype: Hybrid
+description: >-
+  Affiliates drive 30% of revenue for SaaS. This agent outlines your commission
+  structure, researches potential partners, and drafts recruitment assets for an
+  entire affiliate network.
+sampleData:
+  filename: partners.csv
+  content: |
+    Partner_Name,Niche,Website
+    SaasReviewer,Tech Reviews,https://saasreviewer.com
+    MarketingWeekly,Newsletter,https://marketingweekly.io
+    GrowthHackers,Community,https://growthhackers.com
+---
+
+# Agent Configuration: The Affiliate Program Launcher
+
+## Role
+Affiliates drive 30% of revenue for SaaS. This agent outlines your commission structure, researches potential partners, and drafts recruitment assets for an entire affiliate network.
+
+## Objective
+Build a commission-only sales team.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `partners.csv` exist?
+2.  **If Missing:** Create `partners.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input & Market Check
+1.  **Check:** Does `partners.csv` exist?
+2.  **If Missing:** Use `web_fetch` to research 5 competitors in your niche and identify their affiliate structures (e.g., 20% recurring). Create a `market_benchmark.md` report.
+3.  **If Present:** Load the partner list for recruitment.
+
+### Phase 2: The Program Design
+1.  **Decision:** Set the commission (e.g., 30% Recurring vs $100 CPA).
+2.  **Draft:** Create `affiliate_terms.md` covering cookie duration (e.g., 60 days) and payout thresholds.
+
+### Phase 3: The Recruitment Loop
+For each partner in the list (either provided or researched):
+1.  **Personalize:** Research their content to find a synergy (e.g., "I saw your review of [Competitor]").
+2.  **Draft Pitch:** Create `pitches/[Partner_Name]_invite.md`.
+3.  **Generate Swipe:** Create `swipe_copy.md` with email templates and social posts they can use.
+
+### Phase 4: Output
+1.  **Report:** "Successfully designed program and drafted [X] partner pitches. Files saved to `pitches/` and `affiliate_terms.md`."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The Referral Program Architect
+URL: https://realaiexamples.com/blueprints/referral-program-architect
+Description: Turn users into salespeople.
+
+---
+id: referral-program-architect
+category: Growth
+title: The Referral Program Architect
+tagline: Turn users into salespeople.
+difficulty: Intermediate
+time: Batch
+description: >-
+  Referrals have the lowest CAC. This agent designs 'Double-Sided' referral
+  programs tailored to your specific unit economics and business model for an
+  entire portfolio of products.
+sampleData:
+  filename: brands.csv
+  content: |
+    Brand_Name,Business_Model,Avg_LTV
+    Pawsome,E-commerce,150
+    FinGuard,SaaS (B2B),5000
+    BrewBase,Subscription,250
+isPremium: true
+---
+
+# Agent Configuration: The Referral Program Architect
+
+## Role
+Referrals have the lowest CAC. This agent designs 'Double-Sided' referral programs tailored to your specific unit economics and business model for an entire portfolio of products.
+
+## Objective
+Turn users into salespeople.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `brands.csv` exist?
+2.  **If Missing:** Create `brands.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Check
+1.  **Check:** Does `brands.csv` exist?
+2.  **If Missing:** Create `brands.csv` using the `sampleData`.
+3.  **If Present:** Load the brand list.
+
+### Phase 2: The Architecture Loop
+For each brand in the CSV:
+1.  **Calculate Rewards:** Set the total reward value at 15-25% of `Avg_LTV`.
+2.  **Define Structure:**
+    *   **If [E-commerce]:** Design a "Give 20%, Get $20" model.
+    *   **If [SaaS]:** Design a "Bill Credit" or "Feature Unlock" model (e.g., "Get 5GB extra storage").
+    *   **If [Subscription]:** Design a "Free Month" referral bonus.
+3.  **Draft Invite Copy:** Write a high-converting email template for the sender to share.
+4.  **Create Plan:** Save to `referral_plans/[Brand_Name]_strategy.md`.
+
+### Phase 3: Structured Deliverables
+1.  **Create:** `referral_economic_summary.csv` with columns: `Brand_Name`, `Incentive_Type`, `Total_Reward_Value`, `File_Path`.
+2.  **Report:** "Successfully designed [X] referral programs. Viral loops optimized for margin and virality."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The Viral Loop Calculator
+URL: https://realaiexamples.com/blueprints/viral-loop-calculator
+Description: Will it grow itself?
+
+---
+id: viral-loop-calculator
+category: Growth
+title: The Viral Loop Calculator
+tagline: Will it grow itself?
+difficulty: Intermediate
+time: Batch
+description: >-
+  Virality is math, not magic. This agent calculates the K-Factor for your
+  entire product line based on invite frequency and conversion rates,
+  identifying which features are truly viral.
+sampleData:
+  filename: growth_metrics.csv
+  content: |
+    Product_Name,Invites_Sent_Per_User,Invite_Conversion_Rate
+    SocialSync,5.2,0.25
+    FileVault,1.1,0.10
+    GameGuild,12.5,0.15
+isPremium: true
+---
+
+# Agent Configuration: The Viral Loop Calculator
+
+## Role
+Virality is math, not magic. This agent calculates the K-Factor for your entire product line based on invite frequency and conversion rates, identifying which features are truly viral.
+
+## Objective
+Will it grow itself?
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `growth_metrics.csv` exist?
+2.  **If Missing:** Create `growth_metrics.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Check
+1.  **Check:** Does `growth_metrics.csv` exist?
+2.  **If Missing:** Create `growth_metrics.csv` using the `sampleData`.
+3.  **If Present:** Load the metric data.
+
+### Phase 2: The Calculation Loop
+For each product in the CSV:
+1.  **Calculate K-Factor:** `K = Invites_Sent * Conversion_Rate`.
+2.  **Determine Verdict:**
+    *   **K > 1.0:** "EXPONENTIAL VIRALITY" (True viral growth).
+    *   **K 0.5 - 1.0:** "STRONG ASSIST" (Virality is reducing CAC significantly).
+    *   **K < 0.5:** "LINEAR GROWTH" (Product relies on paid/organic acquisition).
+3.  **Identify Bottleneck:** Suggest if they should focus on "Invites Sent" (Mechanism) or "Conversion" (Onboarding).
+4.  **Forecast:** Estimate the "Viral Cycle Time" needed to double the user base.
+
+### Phase 3: Structured Deliverables
+1.  **Create:** `viral_health_audit.csv` with columns: `Product_Name`, `K_Factor`, `Verdict`, `Primary_Bottleneck`.
+2.  **Report:** "Successfully audited [X] products. [Y] products identified as having true viral potential."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+

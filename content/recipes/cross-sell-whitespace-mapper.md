@@ -1,14 +1,16 @@
---- 
-id: "cross-sell-whitespace-mapper"
-category: "RevOps"
-title: "Cross-Sell Whitespace Matrix"
-tagline: "Find exactly what your customers haven't bought yet."
-difficulty: "Intermediate"
-time: "Monthly"
-archtype: "Processor"
-description: "Generates a matrix of customers vs products to identify upsell and cross-sell opportunities."
+---
+id: cross-sell-whitespace-mapper
+category: Sales Ops
+title: Cross-Sell Whitespace Matrix
+tagline: Find exactly what your customers haven't bought yet.
+difficulty: Intermediate
+time: Monthly
+archtype: Processor
+description: >-
+  Generates a matrix of customers vs products to identify upsell and cross-sell
+  opportunities.
 sampleData:
-  filename: "customer_products.csv"
+  filename: customer_products.csv
   content: |
     Customer,Product
     Acme,Platform

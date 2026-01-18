@@ -1,6 +1,6 @@
 ---
 id: poll-strategy-generator
-category: Social
+category: Content Ops
 title: The Poll Strategy Generator
 tagline: Engagement farming with a purpose.
 difficulty: Beginner

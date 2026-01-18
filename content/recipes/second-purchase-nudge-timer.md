@@ -1,14 +1,16 @@
 ---
-id: "second-purchase-nudge-timer"
-category: "Retention Marketing"
-title: "Replenishment Timer"
-tagline: "Time your re-order emails perfectly."
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Calculates the average days between 1st and 2nd purchase to identify the optimal window for sending replenishment reminders."
+id: second-purchase-nudge-timer
+category: Retention
+title: Replenishment Timer
+tagline: Time your re-order emails perfectly.
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Calculates the average days between 1st and 2nd purchase to identify the
+  optimal window for sending replenishment reminders.
 sampleData:
-  filename: "orders.csv"
+  filename: orders.csv
   content: |
     Customer,Order_Date,Order_ID
     John,2023-01-01,101

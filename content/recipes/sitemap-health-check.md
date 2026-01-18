@@ -1,6 +1,6 @@
 ---
 id: sitemap-health-check
-category: Technical SEO
+category: SEO
 title: Sitemap Health Auditor
 tagline: Find broken links and non-indexable pages in your sitemap.
 difficulty: Intermediate

@@ -1,14 +1,16 @@
---- 
-id: "revenue-leakage-hunter"
-category: "RevOps"
-title: "Revenue Leakage Audit"
-tagline: "Find users active on the platform without a contract."
-difficulty: "Advanced"
-time: "Monthly"
-archtype: "Processor"
-description: "Cross-references platform login logs against active CRM contracts to find zombie users or expired accounts still using the product."
+---
+id: revenue-leakage-hunter
+category: Sales Ops
+title: Revenue Leakage Audit
+tagline: Find users active on the platform without a contract.
+difficulty: Advanced
+time: Monthly
+archtype: Processor
+description: >-
+  Cross-references platform login logs against active CRM contracts to find
+  zombie users or expired accounts still using the product.
 sampleData:
-  filename: "leakage_audit.txt"
+  filename: leakage_audit.txt
   content: |
     [Login Logs]
     user@acme.com, 2023-10-01

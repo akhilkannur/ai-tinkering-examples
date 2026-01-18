@@ -1,14 +1,16 @@
---- 
-id: "partner-tier-promotion-tracker"
-category: "Partner Ops"
-title: "Partner Tier Auditor"
-tagline: "Check if partners qualify for Silver/Gold/Platinum."
-difficulty: "Intermediate"
-time: "Quarterly"
-archtype: "Processor"
-description: "Analyzes partner revenue against thresholds to recommend tier upgrades or downgrades."
+---
+id: partner-tier-promotion-tracker
+category: Strategic Ops
+title: Partner Tier Auditor
+tagline: Check if partners qualify for Silver/Gold/Platinum.
+difficulty: Intermediate
+time: Quarterly
+archtype: Processor
+description: >-
+  Analyzes partner revenue against thresholds to recommend tier upgrades or
+  downgrades.
 sampleData:
-  filename: "partner_rev.csv"
+  filename: partner_rev.csv
   content: |
     Partner,YTD_Revenue,Current_Tier
     Reseller A,120000,Silver

@@ -1,14 +1,16 @@
 ---
-id: "quote-to-cash-cycle-timer"
-category: "Advanced RevOps"
-title: "Quote-to-Cash Speedometer"
-tagline: "Measure the speed of closing."
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Measures the average days from 'Contract Signed' to 'Invoice Paid' to optimize cash flow."
+id: quote-to-cash-cycle-timer
+category: Sales Ops
+title: Quote-to-Cash Speedometer
+tagline: Measure the speed of closing.
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Measures the average days from 'Contract Signed' to 'Invoice Paid' to optimize
+  cash flow.
 sampleData:
-  filename: "cash_cycle.csv"
+  filename: cash_cycle.csv
   content: |
     Deal,Signed_Date,Paid_Date
     1,2023-01-01,2023-01-15

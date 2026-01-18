@@ -1,14 +1,16 @@
---- 
-id: "reseller-map-compliance"
-category: "Partner Ops"
-title: "MAP Pricing Auditor"
-tagline: "Ensure resellers aren't undercutting your price."
-difficulty: "Intermediate"
-time: "Weekly"
-archtype: "Processor"
-description: "Audits reseller pricing data to ensure compliance with Minimum Advertised Price (MAP) policies."
+---
+id: reseller-map-compliance
+category: Strategic Ops
+title: MAP Pricing Auditor
+tagline: Ensure resellers aren't undercutting your price.
+difficulty: Intermediate
+time: Weekly
+archtype: Processor
+description: >-
+  Audits reseller pricing data to ensure compliance with Minimum Advertised
+  Price (MAP) policies.
 sampleData:
-  filename: "reseller_prices.csv"
+  filename: reseller_prices.csv
   content: |
     Partner,Product,Advertised_Price,MAP_Threshold
     Shop A,Widget X,95,100

@@ -1,14 +1,17 @@
 ---
-id: "api-usage-biller"
-category: "RevOps"
-title: "The API Usage Biller"
-tagline: "Don't leave money on the table."
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Usage-based pricing is hard to track. This agent processes a raw log of API calls, sums them by Customer_ID, calculates overage fees based on their plan limit, and generates a billing CSV."
+id: api-usage-biller
+category: Sales Ops
+title: The API Usage Biller
+tagline: Don't leave money on the table.
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Usage-based pricing is hard to track. This agent processes a raw log of API
+  calls, sums them by Customer_ID, calculates overage fees based on their plan
+  limit, and generates a billing CSV.
 sampleData:
-  filename: "api_logs.csv"
+  filename: api_logs.csv
   content: |
     Customer,Plan_Limit,Calls_Made
     CustA,1000,500

@@ -1,14 +1,17 @@
 ---
-id: "comp-plan-simulator"
-category: "Sales Strategy"
-title: "The Comp Plan Simulator"
-tagline: "Model commission payouts before rollout."
-difficulty: "Advanced"
-time: "Annual"
-archetype: "Processor"
-description: "Avoid 'commission shock.' This agent takes a proposed commission structure (Base % + Accelerators) and runs historical deal data through it to see how much you would have paid out last year vs. the new plan."
+id: comp-plan-simulator
+category: Sales Ops
+title: The Comp Plan Simulator
+tagline: Model commission payouts before rollout.
+difficulty: Advanced
+time: Annual
+archetype: Processor
+description: >-
+  Avoid 'commission shock.' This agent takes a proposed commission structure
+  (Base % + Accelerators) and runs historical deal data through it to see how
+  much you would have paid out last year vs. the new plan.
 sampleData:
-  filename: "historical_deals.csv"
+  filename: historical_deals.csv
   content: |
     Deal_ID,Rep,Amount,Quarter
     1,Alice,50000,Q1

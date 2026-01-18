@@ -1,6 +1,6 @@
 ---
 id: linkedin-ghostwriter
-category: Social Automation
+category: Strategic Ops
 title: The LinkedIn Ghostwriter
 tagline: Brain Dump -> Viral Post.
 difficulty: Intermediate

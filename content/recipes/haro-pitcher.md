@@ -1,6 +1,6 @@
 ---
 id: haro-pitcher
-category: PR
+category: Content Ops
 title: The Bulk HARO Pitcher
 tagline: Scan 100 media queries and draft 5 winning pitches.
 difficulty: Advanced

@@ -1,6 +1,6 @@
 ---
 id: competitor-content-pillar-analyst
-category: Marketing
+category: Strategic Ops
 title: Competitor Content Spy
 tagline: Steal the content strategy that is working for your rivals.
 difficulty: Intermediate

@@ -1,6 +1,6 @@
 ---
 id: pricing-change-historian
-category: Intel
+category: Competitive Intel
 title: The Pricing Historian
 tagline: Track their inflation.
 difficulty: Intermediate

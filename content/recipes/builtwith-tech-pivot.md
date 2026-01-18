@@ -1,6 +1,6 @@
 ---
 id: builtwith-tech-pivot
-category: Sales Eng
+category: Sales Ops
 title: The Tech Displacement Factory
 tagline: Find every user of 10 competitors in one run.
 difficulty: Intermediate

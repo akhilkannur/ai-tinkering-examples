@@ -1,14 +1,16 @@
---- 
-id: "newsletter-list-cleaner"
-category: "Email Marketing"
-title: "List Hygiene Scrub"
-tagline: "Remove role-based and disposable emails."
-difficulty: "Beginner"
-time: "Weekly"
-archtype: "Processor"
-description: "Audits your subscriber list to remove invalid emails like `support@` or `admin@` that hurt deliverability."
+---
+id: newsletter-list-cleaner
+category: Strategic Ops
+title: List Hygiene Scrub
+tagline: Remove role-based and disposable emails.
+difficulty: Beginner
+time: Weekly
+archtype: Processor
+description: >-
+  Audits your subscriber list to remove invalid emails like `support@` or
+  `admin@` that hurt deliverability.
 sampleData:
-  filename: "subscribers.csv"
+  filename: subscribers.csv
   content: |
     Email
     john@acme.com

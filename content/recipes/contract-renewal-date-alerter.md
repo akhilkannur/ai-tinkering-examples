@@ -1,14 +1,16 @@
---- 
-id: "contract-renewal-date-alerter"
-category: "RevOps"
-title: "Renewal Radar"
-tagline: "Never miss an expiration date."
-difficulty: "Beginner"
-time: "Monthly"
-archtype: "Processor"
-description: "Scans customer contracts to flag those expiring in the next 90 days for the Customer Success team."
+---
+id: contract-renewal-date-alerter
+category: Sales Ops
+title: Renewal Radar
+tagline: Never miss an expiration date.
+difficulty: Beginner
+time: Monthly
+archtype: Processor
+description: >-
+  Scans customer contracts to flag those expiring in the next 90 days for the
+  Customer Success team.
 sampleData:
-  filename: "contracts.csv"
+  filename: contracts.csv
   content: |
     Customer,ARR,Expiration_Date
     Acme,50000,2024-01-01

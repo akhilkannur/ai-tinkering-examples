@@ -1,14 +1,16 @@
---- 
-id: "sitemap-orphan-page-finder"
-category: "Technical SEO"
-title: "Orphan Page Detective"
-tagline: "Find pages that exist but aren't in your sitemap."
-difficulty: "Advanced"
-time: "Monthly"
-archtype: "Processor"
-description: "Compares a crawl of your actual site structure against your `sitemap.xml` to find missing URLs."
+---
+id: sitemap-orphan-page-finder
+category: SEO
+title: Orphan Page Detective
+tagline: Find pages that exist but aren't in your sitemap.
+difficulty: Advanced
+time: Monthly
+archtype: Processor
+description: >-
+  Compares a crawl of your actual site structure against your `sitemap.xml` to
+  find missing URLs.
 sampleData:
-  filename: "site_audit.csv"
+  filename: site_audit.csv
   content: |
     URL,In_Sitemap
     /home,Yes

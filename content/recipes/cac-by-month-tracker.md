@@ -1,14 +1,16 @@
 ---
-id: "cac-by-month-tracker"
-category: "Analytics"
-title: "Blended CAC Tracker"
-tagline: "Is acquisition getting cheaper or expensive?"
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Tracks Blended Customer Acquisition Cost (Total Spend / Total New Customers) over time."
+id: cac-by-month-tracker
+category: CRO
+title: Blended CAC Tracker
+tagline: Is acquisition getting cheaper or expensive?
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Tracks Blended Customer Acquisition Cost (Total Spend / Total New Customers)
+  over time.
 sampleData:
-  filename: "monthly_stats.csv"
+  filename: monthly_stats.csv
   content: |
     Month,Total_Spend,New_Customers
     Jan,5000,50

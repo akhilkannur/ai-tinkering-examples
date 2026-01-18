@@ -1,6 +1,6 @@
 ---
 id: weekly-newsletter-compiler
-category: Marketing
+category: Strategic Ops
 title: Newsletter Content Curator
 tagline: Automate the research for your "Weekly Round-Up" email.
 difficulty: Intermediate

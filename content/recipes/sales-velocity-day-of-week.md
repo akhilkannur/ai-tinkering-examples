@@ -1,14 +1,16 @@
 ---
-id: "sales-velocity-day-of-week"
-category: "Analytics"
-title: "Peak Sales Timer"
-tagline: "Best day to send emails?"
-difficulty: "Beginner"
-time: "Quarterly"
-archetype: "Processor"
-description: "Identifies the day of the week with the highest average sales velocity to optimize email send times."
+id: sales-velocity-day-of-week
+category: CRO
+title: Peak Sales Timer
+tagline: Best day to send emails?
+difficulty: Beginner
+time: Quarterly
+archetype: Processor
+description: >-
+  Identifies the day of the week with the highest average sales velocity to
+  optimize email send times.
 sampleData:
-  filename: "sales_log.csv"
+  filename: sales_log.csv
   content: |
     Date,Day,Revenue
     2023-10-01,Sunday,5000

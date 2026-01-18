@@ -1,6 +1,6 @@
 ---
 id: podcast-guest-prospector
-category: Marketing
+category: Strategic Ops
 title: Podcast Guest Prospector
 tagline: Find the perfect podcasts to pitch your founder to.
 difficulty: Intermediate

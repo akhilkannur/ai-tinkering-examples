@@ -1,6 +1,6 @@
 ---
 id: api-endpoint-validator
-category: Sales Engineering
+category: Sales Ops
 title: The API Fleet Monitor
 tagline: Health check 50 endpoints in one run.
 difficulty: Advanced

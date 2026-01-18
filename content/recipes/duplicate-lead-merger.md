@@ -1,6 +1,6 @@
 ---
 id: duplicate-lead-merger
-category: RevOps
+category: Sales Ops
 title: The Duplicate Lead Merger
 tagline: 'One person, one record.'
 difficulty: Intermediate

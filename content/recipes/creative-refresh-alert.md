@@ -1,6 +1,6 @@
 ---
 id: creative-refresh-alert
-category: Ad Ops
+category: Paid Media
 title: The Fatigue Detector
 tagline: Know when to swap ads.
 difficulty: Intermediate

@@ -1,14 +1,16 @@
---- 
-id: "internal-link-anchor-auditor"
-category: "Technical SEO"
-title: "Anchor Text Optimizer"
-tagline: "Stop using 'Click Here' for your internal links."
-difficulty: "Intermediate"
-time: "Quarterly"
-archtype: "Processor"
-description: "Analyzes internal links to ensure anchor text contains target keywords rather than generic text."
+---
+id: internal-link-anchor-auditor
+category: SEO
+title: Anchor Text Optimizer
+tagline: Stop using 'Click Here' for your internal links.
+difficulty: Intermediate
+time: Quarterly
+archtype: Processor
+description: >-
+  Analyzes internal links to ensure anchor text contains target keywords rather
+  than generic text.
 sampleData:
-  filename: "internal_links.csv"
+  filename: internal_links.csv
   content: |
     Source,Target,Anchor_Text
     /blog/a,/pricing,Click Here

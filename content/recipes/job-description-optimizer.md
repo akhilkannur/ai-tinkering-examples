@@ -1,6 +1,6 @@
 ---
 id: job-description-optimizer
-category: Hiring
+category: Lead Gen
 title: The Sales Job Description Optimizer
 tagline: 'Attract ''A-Players'', repel tourists.'
 difficulty: Intermediate

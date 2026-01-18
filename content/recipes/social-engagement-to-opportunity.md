@@ -1,14 +1,16 @@
 ---
-id: "social-engagement-to-opportunity"
-category: "Social Selling"
-title: "Social-to-Deal Correlator"
-tagline: "Do likes lead to deals?"
-difficulty: "Advanced"
-time: "Quarterly"
-archetype: "Processor"
-description: "Correlates 'Likes/Comments' from prospects with subsequent Deal Creation events."
+id: social-engagement-to-opportunity
+category: Strategic Ops
+title: Social-to-Deal Correlator
+tagline: Do likes lead to deals?
+difficulty: Advanced
+time: Quarterly
+archetype: Processor
+description: >-
+  Correlates 'Likes/Comments' from prospects with subsequent Deal Creation
+  events.
 sampleData:
-  filename: "social_engagements.csv"
+  filename: social_engagements.csv
   content: |
     Prospect,Engagement_Date,Deal_Created_Date
     John,2023-10-01,2023-10-05

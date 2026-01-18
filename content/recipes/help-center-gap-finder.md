@@ -1,6 +1,6 @@
 ---
 id: help-center-gap-finder
-category: Intel
+category: Competitive Intel
 title: The Help Center Forensic Agent
 tagline: Spot competitor flaws in their support docs.
 difficulty: Advanced

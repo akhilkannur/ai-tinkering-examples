@@ -1,6 +1,6 @@
 ---
 id: gdpr-cookie-banner-copy
-category: Legal Ops
+category: Strategic Ops
 title: The Converting Cookie Banner
 tagline: Compliance that doesn't kill data.
 difficulty: Beginner

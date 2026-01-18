@@ -1,6 +1,6 @@
 ---
 id: client-onboarding-checklist
-category: Agency
+category: Strategic Ops
 title: The Client Onboarding Checklist
 tagline: Impress them in Day 1.
 difficulty: Beginner

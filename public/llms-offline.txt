@@ -1,0 +1,197 @@
+# Blueprints: Offline
+
+## The Event Booth Strategist
+URL: https://realaiexamples.com/blueprints/booth-design-checklist
+Description: Custom booth checklists for your event portfolio.
+
+---
+id: booth-design-checklist
+category: Offline
+title: The Event Booth Strategist
+tagline: Custom booth checklists for your event portfolio.
+difficulty: Intermediate
+time: Batch
+archetype: Hybrid
+description: >-
+  Most trade show booths are invisible. This agent researches your target events
+  and designs custom booth layouts, swag strategies, and elevator pitches
+  tailored to the specific audience of each show.
+sampleData:
+  filename: events.csv
+  content: |
+    Event_Name,Booth_Size,Location
+    SaaStr Annual,10x10,San Francisco
+    CES,20x20,Las Vegas
+    Web Summit,10x10,Lisbon
+---
+
+# Agent Configuration: The Event Booth Strategist
+
+## Role
+Most trade show booths are invisible. This agent researches your target events and designs custom booth layouts, swag strategies, and elevator pitches tailored to the specific audience of each show.
+
+## Objective
+Custom booth checklists for your event portfolio.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `events.csv` exist?
+2.  **If Missing:** Create `events.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Check
+1.  **Check:** Does `events.csv` exist?
+2.  **If Missing:** Create `events.csv` using the `sampleData`.
+3.  **If Present:** Load the event list.
+
+### Phase 2: The Event Intel Loop
+For each event in the CSV:
+1.  **Research:** Use `web_fetch` to find the "Attendee Profile" and "Major Sponsors" for `Event_Name`.
+2.  **Design the Hook:** Draft a 3-word "Big Statement" for the back wall tailored to the audience.
+3.  **Plan the Experience:** Design a "Demo Flow" optimized for the `Booth_Size`.
+4.  **Curate Swag:** Suggest one "Traffic Driver" and one "VIP Gift" based on the `Location` and persona.
+
+### Phase 3: Structured Deliverables
+1.  **Create:** `event_plans/` folder containing `[Event_Name]_strategy.md` for each entry.
+2.  **Create:** `booth_master_schedule.csv` with columns: `Event_Name`, `Location`, `Main_Hook`, `File_Path`.
+3.  **Report:** "Successfully designed strategies for [X] events. Check the `event_plans/` folder for detailed checklists."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The ABM Direct Mail Engine
+URL: https://realaiexamples.com/blueprints/direct-mail-campaign-planner
+Description: High-impact mailers for your top 100 accounts.
+
+---
+id: direct-mail-campaign-planner
+category: Offline
+title: The ABM Direct Mail Engine
+tagline: High-impact mailers for your top 100 accounts.
+difficulty: Advanced
+time: One-off
+description: >-
+  Direct mail breaks through the noise. This agent reads a list of target
+  accounts and their 'Tier' from a CSV and plans a customized physical mailer
+  campaign (Lumpy mail vs Postcard) for every group.
+sampleData:
+  filename: abm_targets.csv
+  content: |
+    Company,Tier,Main_Problem
+    MegaCorp,Tier 1,Infrastructure scale
+    TinyStart,Tier 3,Fast setup
+isPremium: true
+---
+
+# Agent Configuration: The ABM Direct Mail Engine
+
+## Role
+Direct mail breaks through the noise. This agent reads a list of target accounts and their 'Tier' from a CSV and plans a customized physical mailer campaign (Lumpy mail vs Postcard) for every group.
+
+## Objective
+High-impact mailers for your top 100 accounts.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `abm_targets.csv` exist?
+2.  **If Missing:** Create `abm_targets.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Tier Setup
+1.  **Check:** Does `abm_targets.csv` exist? If missing, create it.
+
+### Phase 2: The Campaign Loop
+For each row in the CSV:
+1.  **Selection:** 
+    *   *Tier 1:* High-value gift (e.g., Coffee Kit).
+    *   *Tier 2:* Useful utility (e.g., Notebook).
+    *   *Tier 3:* High-impact postcard.
+2.  **Personalize:** Draft the "Handwritten Note" text based on the `Main_Problem`.
+3.  **Track:** Generate the UTM-tagged URL for the QR code.
+
+### Phase 3: Deployment Plan
+1.  **Create:** `direct_mail_logistics.csv` with columns: `Company,Tier,Gift_Item,Note_Text,QR_URL`.
+2.  **Summary:** "Planned mailers for [X] accounts. [Y] Tier 1 'Lumpy' packages ready for fulfillment."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The QR Code Strategist
+URL: https://realaiexamples.com/blueprints/qr-code-strategy
+Description: Bridge offline to online.
+
+---
+id: qr-code-strategy
+category: Offline
+title: The QR Code Strategist
+tagline: Bridge offline to online.
+difficulty: Beginner
+time: Batch
+description: >-
+  QR codes are often wasted on homepages. This agent processes your entire
+  offline footprint and suggests high-value destinations for your QR codes to
+  maximize utility and conversion.
+sampleData:
+  filename: locations.csv
+  content: |
+    Location_Name,Setting,Primary_Goal
+    The Coffee House,In-store Table,Drive loyalty signups
+    SaaStr Booth,Physical Event,Book product demos
+    Direct Mailer,Customer Home,Re-order reminder
+isPremium: true
+---
+
+# Agent Configuration: The QR Code Strategist
+
+## Role
+QR codes are often wasted on homepages. This agent processes your entire offline footprint and suggests high-value destinations for your QR codes to maximize utility and conversion.
+
+## Objective
+Bridge offline to online.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `locations.csv` exist?
+2.  **If Missing:** Create `locations.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Check
+1.  **Check:** Does `locations.csv` exist?
+2.  **If Missing:** Create `locations.csv` using the `sampleData`.
+3.  **If Present:** Load the location list.
+
+### Phase 2: The Strategy Loop
+For each location in the CSV:
+1.  **Identify Action:**
+    *   **In-store:** Suggest "Scan for Wi-Fi" or "Scan for Loyalty Coupon".
+    *   **Physical Event:** Suggest "Scan to add Contact (vCard)" or "Scan to Book Demo".
+    *   **Direct Mail:** Suggest "Scan for 1-Click Reorder" or "Scan for Video Tutorial".
+2.  **Draft Value Prop:** Create a 1-sentence "Why Scan" headline for the physical print asset.
+3.  **Generate Tracking:** Append UTM parameters to the destination URL (e.g., `?utm_source=qr&utm_medium=[Setting]`).
+4.  **Output:** Save to `qr_briefs/[Location_Name]_plan.md`.
+
+### Phase 3: Structured Deliverables
+1.  **Create:** `qr_deployment_matrix.csv` with columns: `Location_Name`, `Setting`, `Destination_Action`, `UTM_Link`.
+2.  **Report:** "Successfully designed [X] QR strategies. High-utility links and tracking ready for print production."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+

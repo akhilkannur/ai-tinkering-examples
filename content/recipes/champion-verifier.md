@@ -1,14 +1,17 @@
 ---
-id: "champion-verifier"
-category: "Sales Methodology"
-title: "The Champion Verifier"
-tagline: "Is your champion actually a champion?"
-difficulty: "Beginner"
-time: "Deal Review"
-archetype: "Processor"
-description: "False champions lose deals. This agent evaluates a specific contact based on a checklist of 'Champion Behaviors' (e.g., Do they have power? Do they sell for you when you aren't there?) and returns a confidence score."
+id: champion-verifier
+category: Sales Ops
+title: The Champion Verifier
+tagline: Is your champion actually a champion?
+difficulty: Beginner
+time: Deal Review
+archetype: Processor
+description: >-
+  False champions lose deals. This agent evaluates a specific contact based on a
+  checklist of 'Champion Behaviors' (e.g., Do they have power? Do they sell for
+  you when you aren't there?) and returns a confidence score.
 sampleData:
-  filename: "contact_behaviors.csv"
+  filename: contact_behaviors.csv
   content: |
     Contact,Title,Access_to_EB,Shared_Pain,Met_Timeline
     John Doe,Director,Yes,Yes,No

@@ -1,14 +1,16 @@
 ---
-id: "seasonal-inventory-liquidator"
-category: "E-commerce Growth"
-title: "End-of-Season Liquidator"
-tagline: "Clear shelves before the new line drops."
-difficulty: "Intermediate"
-time: "Seasonal"
-archetype: "Processor"
-description: "Identifies seasonal SKUs with high remaining stock to schedule for aggressive discounting."
+id: seasonal-inventory-liquidator
+category: E-commerce
+title: End-of-Season Liquidator
+tagline: Clear shelves before the new line drops.
+difficulty: Intermediate
+time: Seasonal
+archetype: Processor
+description: >-
+  Identifies seasonal SKUs with high remaining stock to schedule for aggressive
+  discounting.
 sampleData:
-  filename: "seasonal_stock.csv"
+  filename: seasonal_stock.csv
   content: |
     SKU,Season,Stock
     Winter-Coat,Winter,500

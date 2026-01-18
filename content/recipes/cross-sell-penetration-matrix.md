@@ -1,14 +1,16 @@
 ---
-id: "cross-sell-penetration-matrix"
-category: "RevOps"
-title: "Product Penetration Matrix"
-tagline: "Map customers against the full product catalog."
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Generates a grid showing which products every customer owns to highlight upsell gaps."
+id: cross-sell-penetration-matrix
+category: Sales Ops
+title: Product Penetration Matrix
+tagline: Map customers against the full product catalog.
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Generates a grid showing which products every customer owns to highlight
+  upsell gaps.
 sampleData:
-  filename: "penetration_task.csv"
+  filename: penetration_task.csv
   content: |
     Customer,Product
     Acme,Base

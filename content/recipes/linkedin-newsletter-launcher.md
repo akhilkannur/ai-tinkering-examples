@@ -1,6 +1,6 @@
 ---
 id: linkedin-newsletter-launcher
-category: LinkedIn
+category: Content Ops
 title: The LinkedIn Newsletter Launcher
 tagline: Own your audience on-platform.
 difficulty: Intermediate

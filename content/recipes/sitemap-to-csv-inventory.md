@@ -1,6 +1,6 @@
 ---
 id: sitemap-to-csv-inventory
-category: Tech SEO
+category: SEO
 title: The Content Inventory Builder
 tagline: Map your entire site.
 difficulty: Intermediate

@@ -1,14 +1,16 @@
---- 
-id: "partner-certification-monitor"
-category: "Partner Ops"
-title: "Partner Credential Tracker"
-tagline: "Identify partners with expired training credentials."
-difficulty: "Beginner"
-time: "Monthly"
-archtype: "Processor"
-description: "Audits partner certification logs to ensure all active partners maintain required training levels."
+---
+id: partner-certification-monitor
+category: Strategic Ops
+title: Partner Credential Tracker
+tagline: Identify partners with expired training credentials.
+difficulty: Beginner
+time: Monthly
+archtype: Processor
+description: >-
+  Audits partner certification logs to ensure all active partners maintain
+  required training levels.
 sampleData:
-  filename: "certs.csv"
+  filename: certs.csv
   content: |
     Partner,Engineer,Cert_Type,Expiry_Date
     Acme,John,Sales Pro,2023-01-01

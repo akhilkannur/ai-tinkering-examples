@@ -1,6 +1,6 @@
 ---
 id: programmatic-seo-builder
-category: SEO Content
+category: SEO
 title: The Programmatic SEO Builder
 tagline: 'Build 1,000 pages with 1 template.'
 difficulty: Advanced

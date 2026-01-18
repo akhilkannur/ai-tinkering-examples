@@ -1,14 +1,16 @@
 ---
-id: "cross-sell-recommender"
-category: "Retention Marketing"
-title: "Cross-Sell Recommender"
-tagline: "If they bought X, sell them Y."
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Identifies customers who bought a specific primary product (e.g., Tent) but have NOT yet bought the accessory (e.g., Footprint)."
+id: cross-sell-recommender
+category: Retention
+title: Cross-Sell Recommender
+tagline: 'If they bought X, sell them Y.'
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Identifies customers who bought a specific primary product (e.g., Tent) but
+  have NOT yet bought the accessory (e.g., Footprint).
 sampleData:
-  filename: "purchase_history.csv"
+  filename: purchase_history.csv
   content: |
     Customer,Products_Owned
     John,Tent;Sleeping Bag

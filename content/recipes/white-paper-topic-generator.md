@@ -1,6 +1,6 @@
 ---
 id: white-paper-topic-generator
-category: Marketing
+category: Strategic Ops
 title: White Paper Ideator
 tagline: Brainstorm high-authority content that enterprise buyers actually read.
 difficulty: Intermediate

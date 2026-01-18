@@ -1,6 +1,6 @@
 ---
 id: link-magnet-stats-builder
-category: Content Engineering
+category: Strategic Ops
 title: The Full-Stack Link Magnet
 tagline: Research data & build the UI.
 difficulty: Expert

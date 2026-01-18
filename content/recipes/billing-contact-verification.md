@@ -1,14 +1,16 @@
 ---
-id: "billing-contact-verification"
-category: "RevOps"
-title: "Billing Contact Verifier"
-tagline: "Will the invoice bounce?"
-difficulty: "Beginner"
-time: "Monthly"
-archetype: "Processor"
-description: "Checks if the email listed as 'Billing Contact' is valid or has recently bounced."
+id: billing-contact-verification
+category: Sales Ops
+title: Billing Contact Verifier
+tagline: Will the invoice bounce?
+difficulty: Beginner
+time: Monthly
+archetype: Processor
+description: >-
+  Checks if the email listed as 'Billing Contact' is valid or has recently
+  bounced.
 sampleData:
-  filename: "billing_contacts.csv"
+  filename: billing_contacts.csv
   content: |
     Account,Billing_Email,Bounce_Status
     Acme,bill@acme.com,Ok

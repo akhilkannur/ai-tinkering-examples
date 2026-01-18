@@ -1,6 +1,6 @@
 ---
 id: tiktok-trend-adapter
-category: TikTok
+category: Content Ops
 title: The Trend Adapter
 tagline: Adapt TikTok trends to your B2B niche.
 difficulty: Intermediate

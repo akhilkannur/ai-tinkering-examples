@@ -1,14 +1,16 @@
 ---
-id: "referral-program-fraud-check"
-category: "Customer Advocacy"
-title: "Referral Fraud Detector"
-tagline: "Did they refer themselves?"
-difficulty: "Intermediate"
-time: "Weekly"
-archetype: "Processor"
-description: "Identifies self-referrals (same IP/Address) or circular referral loops in your advocacy program."
+id: referral-program-fraud-check
+category: Customer Success
+title: Referral Fraud Detector
+tagline: Did they refer themselves?
+difficulty: Intermediate
+time: Weekly
+archetype: Processor
+description: >-
+  Identifies self-referrals (same IP/Address) or circular referral loops in your
+  advocacy program.
 sampleData:
-  filename: "referrals.csv"
+  filename: referrals.csv
   content: |
     Referrer_IP,Referee_IP
     1.1.1.1,1.1.1.1

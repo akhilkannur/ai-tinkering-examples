@@ -1,14 +1,16 @@
---- 
-id: "user-onboarding-dropout-finder"
-category: "Product Analytics"
-title: "Onboarding Leak Detector"
-tagline: "Where do users quit during setup?"
-difficulty: "Intermediate"
-time: "Weekly"
-archtype: "Processor"
-description: "Analyzes the last completed step for incomplete onboarding flows to identify the friction point."
+---
+id: user-onboarding-dropout-finder
+category: CRO
+title: Onboarding Leak Detector
+tagline: Where do users quit during setup?
+difficulty: Intermediate
+time: Weekly
+archtype: Processor
+description: >-
+  Analyzes the last completed step for incomplete onboarding flows to identify
+  the friction point.
 sampleData:
-  filename: "onboarding_logs.csv"
+  filename: onboarding_logs.csv
   content: |
     User,Last_Step_Completed
     1,Email Verification

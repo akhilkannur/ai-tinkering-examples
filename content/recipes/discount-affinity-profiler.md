@@ -1,14 +1,16 @@
 ---
-id: "discount-affinity-profiler"
-category: "E-commerce Merchandising"
-title: "Discount Hunter Profiler"
-tagline: "Who only buys when it's on sale?"
-difficulty: "Intermediate"
-time: "Quarterly"
-archetype: "Processor"
-description: "Segments users who *only* buy items on discount vs those who buy full price, to optimize margin preservation."
+id: discount-affinity-profiler
+category: E-commerce
+title: Discount Hunter Profiler
+tagline: Who only buys when it's on sale?
+difficulty: Intermediate
+time: Quarterly
+archetype: Processor
+description: >-
+  Segments users who *only* buy items on discount vs those who buy full price,
+  to optimize margin preservation.
 sampleData:
-  filename: "order_lines.csv"
+  filename: order_lines.csv
   content: |
     User,Was_Discounted
     John,Yes

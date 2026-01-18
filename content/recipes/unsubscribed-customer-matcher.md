@@ -1,14 +1,16 @@
 ---
-id: "unsubscribed-customer-matcher"
-category: "Retention Marketing"
-title: "Unsub Retargeter"
-tagline: "Reach unsubscribed users via ads."
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Matches unsubscribed email users to a format suitable for Facebook/Instagram Custom Audience upload."
+id: unsubscribed-customer-matcher
+category: Retention
+title: Unsub Retargeter
+tagline: Reach unsubscribed users via ads.
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Matches unsubscribed email users to a format suitable for Facebook/Instagram
+  Custom Audience upload.
 sampleData:
-  filename: "unsubscribes.csv"
+  filename: unsubscribes.csv
   content: |
     Email,Phone,Name
     john@acme.com,555-1234,John Doe

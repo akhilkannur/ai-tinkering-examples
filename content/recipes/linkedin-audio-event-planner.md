@@ -1,6 +1,6 @@
 ---
 id: linkedin-audio-event-planner
-category: LinkedIn
+category: Content Ops
 title: The Audio Event Planner
 tagline: Live radio for B2B.
 difficulty: Intermediate

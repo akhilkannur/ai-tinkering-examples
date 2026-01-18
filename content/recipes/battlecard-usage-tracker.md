@@ -1,14 +1,16 @@
---- 
-id: "battlecard-usage-tracker"
-category: "Sales Enablement"
-title: "Content Usage Tracker"
-tagline: "Which battlecards do reps actually use?"
-difficulty: "Beginner"
-time: "Monthly"
-archtype: "Processor"
-description: "Analyzes CMS view logs to see which sales assets (battlecards, case studies) are being viewed by the team."
+---
+id: battlecard-usage-tracker
+category: Sales Ops
+title: Content Usage Tracker
+tagline: Which battlecards do reps actually use?
+difficulty: Beginner
+time: Monthly
+archtype: Processor
+description: >-
+  Analyzes CMS view logs to see which sales assets (battlecards, case studies)
+  are being viewed by the team.
 sampleData:
-  filename: "asset_views.csv"
+  filename: asset_views.csv
   content: |
     Asset,Views,Avg_Time_Spent
     Competitor A Battlecard,50,2m

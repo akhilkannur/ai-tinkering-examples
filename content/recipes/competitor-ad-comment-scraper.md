@@ -1,14 +1,16 @@
 ---
-id: "competitor-ad-comment-scraper"
-category: "Social Selling"
-title: "Competitor Dissatisfaction Miner"
-tagline: "Find unhappy people on their ads."
-difficulty: "Intermediate"
-time: "Weekly"
-archetype: "Processor"
-description: "Filters comments on competitor ads for negative sentiment keywords (e.g. 'expensive', 'broken', 'support') to identify switchers."
+id: competitor-ad-comment-scraper
+category: Strategic Ops
+title: Competitor Dissatisfaction Miner
+tagline: Find unhappy people on their ads.
+difficulty: Intermediate
+time: Weekly
+archetype: Processor
+description: >-
+  Filters comments on competitor ads for negative sentiment keywords (e.g.
+  'expensive', 'broken', 'support') to identify switchers.
 sampleData:
-  filename: "ad_comments.csv"
+  filename: ad_comments.csv
   content: |
     Comment_Text,User
     Love this!,User A

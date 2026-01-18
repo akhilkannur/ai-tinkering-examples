@@ -1,14 +1,16 @@
 ---
-id: "high-aov-cluster-analysis"
-category: "E-commerce Merchandising"
-title: "Whale Hunter (High AOV)"
-tagline: "Where do the big spenders come from?"
-difficulty: "Advanced"
-time: "Monthly"
-archetype: "Processor"
-description: "Finds the common acquisition channels for customers with Order Value > $200 (High AOV)."
+id: high-aov-cluster-analysis
+category: E-commerce
+title: Whale Hunter (High AOV)
+tagline: Where do the big spenders come from?
+difficulty: Advanced
+time: Monthly
+archetype: Processor
+description: >-
+  Finds the common acquisition channels for customers with Order Value > $200
+  (High AOV).
 sampleData:
-  filename: "orders_with_source.csv"
+  filename: orders_with_source.csv
   content: |
     Order_ID,Total,Source
     101,250,Google Ads

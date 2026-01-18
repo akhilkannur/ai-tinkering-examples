@@ -1,6 +1,6 @@
 ---
 id: ad-counter-strike
-category: Competitor Intel
+category: Competitive Intel
 title: The Ad Counter-Strike Factory
 tagline: Steal traffic from 10 competitors at once.
 difficulty: Advanced

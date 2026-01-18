@@ -1,6 +1,6 @@
 ---
 id: instagram-caption-spacer
-category: Instagram
+category: Content Ops
 title: The Caption Formatting Factory
 tagline: Format 30 days of social captions in seconds.
 difficulty: Beginner

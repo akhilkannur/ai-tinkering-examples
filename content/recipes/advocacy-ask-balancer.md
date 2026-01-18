@@ -1,14 +1,16 @@
 ---
-id: "advocacy-ask-balancer"
-category: "Customer Advocacy"
-title: "Advocacy Fatigue Saver"
-tagline: "Don't ask twice in one month."
-difficulty: "Intermediate"
-time: "Weekly"
-archetype: "Processor"
-description: "Ensures you don't ask the same customer for a Case Study, Reference, and Quote all in the same month."
+id: advocacy-ask-balancer
+category: Customer Success
+title: Advocacy Fatigue Saver
+tagline: Don't ask twice in one month.
+difficulty: Intermediate
+time: Weekly
+archetype: Processor
+description: >-
+  Ensures you don't ask the same customer for a Case Study, Reference, and Quote
+  all in the same month.
 sampleData:
-  filename: "advocacy_requests.csv"
+  filename: advocacy_requests.csv
   content: |
     Customer,Last_Request_Date
     Acme,2023-10-01

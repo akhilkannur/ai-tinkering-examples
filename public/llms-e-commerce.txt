@@ -1,0 +1,328 @@
+# Blueprints: E-commerce
+
+## The Gifting Fulfillment Engine
+URL: https://realaiexamples.com/blueprints/influencer-gifting-logistics
+Description: Ship product to 100 creators without errors.
+
+---
+id: influencer-gifting-logistics
+category: E-commerce
+title: The Gifting Fulfillment Engine
+tagline: Ship product to 100 creators without errors.
+difficulty: Intermediate
+time: Weekly
+description: >-
+  Manual gifting is slow and error-prone. This agent reads a list of influencer
+  addresses and their chosen product variant from a CSV, cleans the data for
+  shipping labels, and drafts the personalized tracking emails.
+sampleData:
+  filename: gifting_list.csv
+  content: |
+    Name,Address,City,SKU,IG_Handle
+    Sarah Jones,123 Main St Apt 4,Austin,BOOTS-BRN,@sarah_walks
+    Mike Chen,456 Oak Rd,Seattle,TENT-UL,@mike_outdoors
+isPremium: true
+---
+
+# Agent Configuration: The Gifting Fulfillment Engine
+
+## Role
+Manual gifting is slow and error-prone. This agent reads a list of influencer addresses and their chosen product variant from a CSV, cleans the data for shipping labels, and drafts the personalized tracking emails.
+
+## Objective
+Ship product to 100 creators without errors.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `gifting_list.csv` exist?
+2.  **If Missing:** Create `gifting_list.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Setup
+1.  **Check:** Does `gifting_list.csv` exist? If missing, create template.
+
+### Phase 2: The Logistics Loop
+For each row in the CSV:
+1.  **Verify:** Check if the SKU is in stock (if provided) and format the address for a shipping label.
+2.  **Personalize:** Write a 2-sentence note for the box insert referencing their `@IG_Handle`.
+3.  **Draft:** Create the "Your package is on the way" email with a placeholder for the tracking link.
+
+### Phase 3: The Manifest
+1.  **Create:** `shipping_manifest_ready.csv` formatted for UPS/FedEx upload.
+2.  **Save:** Create a file `box_insert_notes.md` with all personalized notes.
+3.  **Summary:** "Processed [X] packages. Manifest is ready for export."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The Inventory Clearance Campaign
+URL: https://realaiexamples.com/blueprints/inventory-clearance-campaign
+Description: Turn dead stock into cash.
+
+---
+id: inventory-clearance-campaign
+category: E-commerce
+title: The Inventory Clearance Campaign
+tagline: Turn dead stock into cash.
+difficulty: Intermediate
+time: Batch
+description: >-
+  Dead stock kills cash flow. This agent plans 'Mystery Box' or 'Bundle'
+  campaigns to move slow-moving SKUs without explicitly devaluing the brand with
+  a 'Clearance' banner.
+sampleData:
+  filename: dead_stock.csv
+  content: |
+    SKU,Product_Name,Quantity,Original_Price
+    JKT-001,Canvas Worker Jacket,120,150
+    HAT-22,Wool Beanie Blue,85,35
+    BAG-99,Mini Duffel Bag,199,85
+isPremium: true
+---
+
+# Agent Configuration: The Inventory Clearance Campaign
+
+## Role
+Dead stock kills cash flow. This agent plans 'Mystery Box' or 'Bundle' campaigns to move slow-moving SKUs without explicitly devaluing the brand with a 'Clearance' banner.
+
+## Objective
+Turn dead stock into cash.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `dead_stock.csv` exist?
+2.  **If Missing:** Create `dead_stock.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Check
+1.  **Check:** Does `dead_stock.csv` exist?
+2.  **If Missing:** Create `dead_stock.csv` using the `sampleData`.
+3.  **If Present:** Load the inventory data.
+
+### Phase 2: The Campaign Planning Loop
+For each SKU in the CSV:
+1.  **Select Mechanism:**
+    *   **If High Quantity (>100):** Design a "Mystery Box" or "GWP (Gift With Purchase)" strategy.
+    *   **If High Price (>$100):** Design an "Archive Sale" or "Private Member Discount".
+2.  **Draft Marketing Spin:** Create 3 high-vibe hooks for the promotion (e.g., "The Vault Reopens").
+3.  **Pricing Strategy:** Calculate the "Bundle Price" or "Discount Tier" that clears stock while preserving margins.
+
+### Phase 3: Structured Deliverables
+1.  **Create:** `clearance_campaign_master.csv` with columns: `SKU`, `Product_Name`, `Strategy`, `Promo_Hook`, `Offer_Price`.
+2.  **Report:** "Successfully designed [X] campaigns. Stock liquidation strategy ready for launch."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The SKU SEO Factory
+URL: https://realaiexamples.com/blueprints/product-description-seo
+Description: Rewrite 100 product descriptions for search in minutes.
+
+---
+id: product-description-seo
+category: E-commerce
+title: The SKU SEO Factory
+tagline: Rewrite 100 product descriptions for search in minutes.
+difficulty: Beginner
+time: 10 mins
+description: >-
+  Copy-pasted manufacturer descriptions hurt your SEO. This agent reads a CSV of
+  your product catalog and rewrites every description to include long-tail
+  keywords and benefit-driven bullets.
+sampleData:
+  filename: catalog_raw.csv
+  content: >
+    SKU,Name,Raw_Features,Target_Keyword
+
+    HIK-01,Trekking Boots,Leather, waterproof,Vibram sole,Waterproof hiking
+    boots
+
+    TENT-02,Alpine Tent,2-person, 4-season, ultralight,Lightweight camping tent
+isPremium: true
+---
+
+# Agent Configuration: The SKU SEO Factory
+
+## Role
+Copy-pasted manufacturer descriptions hurt your SEO. This agent reads a CSV of your product catalog and rewrites every description to include long-tail keywords and benefit-driven bullets.
+
+## Objective
+Rewrite 100 product descriptions for search in minutes.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `catalog_raw.csv` exist?
+2.  **If Missing:** Create `catalog_raw.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Data Setup
+1.  **Check:** Does `catalog_raw.csv` exist? If missing, create template.
+
+### Phase 2: The Rewrite Loop
+For each row in the CSV:
+1.  **Contextualize:** Read the `Raw_Features`.
+2.  **Optimize:** Draft a 200-word description:
+    *   *H1:* [Name] + [Target_Keyword].
+    *   *Body:* Use the "PAS" framework.
+    *   *Bullets:* Convert every tech spec into a user benefit.
+3.  **Validate:** Ensure the `Target_Keyword` appears exactly twice.
+
+### Phase 3: Catalog Export
+1.  **Create:** `optimized_catalog.csv` with columns: `SKU,Name,SEO_Description,Meta_Description`.
+2.  **Report:** "Successfully optimized [X] product descriptions. Ready for Shopify/Amazon upload."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The Shopify App Store Optimizer
+URL: https://realaiexamples.com/blueprints/shopify-app-store-optimizer
+Description: Get found by merchants.
+
+---
+id: shopify-app-store-optimizer
+category: E-commerce
+title: The Shopify App Store Optimizer
+tagline: Get found by merchants.
+difficulty: Advanced
+time: Batch
+description: >-
+  The Shopify App Store is a search engine. This agent researches top-ranking
+  competitors and audits your app listings to ensure you rank for high-intent
+  terms like 'Upsell' or 'Bundling'.
+sampleData:
+  filename: apps.csv
+  content: |
+    App_Name,Listing_URL,Primary_Keyword
+    Upsell Wizard,https://apps.shopify.com/upsell-wizard,Post-purchase upsell
+    Order Printer Pro,https://apps.shopify.com/printer-pro,PDF Invoices
+    Loyalty Loop,https://apps.shopify.com/loyalty-loop,Loyalty Program
+isPremium: true
+---
+
+# Agent Configuration: The Shopify App Store Optimizer
+
+## Role
+The Shopify App Store is a search engine. This agent researches top-ranking competitors and audits your app listings to ensure you rank for high-intent terms like 'Upsell' or 'Bundling'.
+
+## Objective
+Get found by merchants.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `apps.csv` exist?
+2.  **If Missing:** Create `apps.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Check
+1.  **Check:** Does `apps.csv` exist?
+2.  **If Missing:** Create `apps.csv` using the `sampleData`.
+3.  **If Present:** Load the app list.
+
+### Phase 2: The Optimization Loop
+For each app in the CSV:
+1.  **Scrape & Benchmark:** Use `web_fetch` to ingest the `Listing_URL`. Compare the current copy against the top 3 apps ranking for the `Primary_Keyword`.
+2.  **Audit Title & Tagline:** Ensure the `Primary_Keyword` is in the first 30 characters.
+3.  **Optimize Key Benefits:** Rewrite the 3 core bullets to follow the "Outcome -> Feature" framework.
+4.  **Screenshot Brief:** Suggest 3 new screenshot captions that address common merchant objections found in competitor reviews.
+5.  **Output:** Save to `aso_audits/[App_Name]_optimization.md`.
+
+### Phase 3: Structured Deliverables
+1.  **Create:** `aso_impact_matrix.csv` with columns: `App_Name`, `Keyword_Density_Score`, `Top_Competitor`, `File_Path`.
+2.  **Report:** "Successfully audited [X] app listings. Optimized copy and keyword targets ready for the Partner Dashboard."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The Unboxing Experience Designer
+URL: https://realaiexamples.com/blueprints/unboxing-experience-designer
+Description: Make them post it on Instagram.
+
+---
+id: unboxing-experience-designer
+category: E-commerce
+title: The Unboxing Experience Designer
+tagline: Make them post it on Instagram.
+difficulty: Intermediate
+time: Batch
+description: >-
+  The product isn't finished until the customer opens the box. This agent
+  designs memorable unboxing experiences for your entire product line to
+  maximize UGC and social sharing.
+sampleData:
+  filename: brands.csv
+  content: |
+    Brand_Name,Primary_Color,Vibe
+    VelvetBloom,Forest Green,Luxury and Organic
+    PixelPounce,Electric Blue,Tech-forward and High-energy
+    BrewBase,Warm Brown,Minimalist and Artisanal
+isPremium: true
+---
+
+# Agent Configuration: The Unboxing Experience Designer
+
+## Role
+The product isn't finished until the customer opens the box. This agent designs memorable unboxing experiences for your entire product line to maximize UGC and social sharing.
+
+## Objective
+Make them post it on Instagram.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `brands.csv` exist?
+2.  **If Missing:** Create `brands.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Check
+1.  **Check:** Does `brands.csv` exist?
+2.  **If Missing:** Create `brands.csv` using the `sampleData`.
+3.  **If Present:** Load the brand list.
+
+### Phase 2: The Design Loop
+For each brand in the CSV:
+1.  **Select Elements:**
+    *   **The Exterior:** Branded tape vs Custom-printed box vs Eco-friendly mailer.
+    *   **The Reveal:** Color-matched tissue paper or custom-printed filler.
+    *   **The Bonus:** A specific sticker, sample, or "Small Gift" that fits the `Vibe`.
+2.  **Draft Thank You Card:**
+    *   **The Hook:** A high-vibe headline (e.g., "You have great taste").
+    *   **The CTA:** "Tag us @[Brand] and use #[Brand]Vibes for a chance to be featured."
+3.  **Visual Instructions:** Define the exact "Assembly Order" for the warehouse team.
+4.  **Output:** Save to `unboxing_briefs/[Brand_Name]_experience.md`.
+
+### Phase 3: Structured Deliverables
+1.  **Create:** `packaging_inventory_summary.csv` with columns: `Brand_Name`, `Primary_Color`, `Core_Bonus_Item`, `File_Path`.
+2.  **Report:** "Successfully designed [X] unboxing experiences. Ready for production and warehouse handoff."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+

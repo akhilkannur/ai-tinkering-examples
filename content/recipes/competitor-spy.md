@@ -1,6 +1,6 @@
 ---
 id: competitor-spy
-category: Competitor Intel
+category: Competitive Intel
 title: The Market Spy
 tagline: Deep Competitor Analysis.
 difficulty: Intermediate

@@ -1,0 +1,133 @@
+# Blueprints: Twitter
+
+## The Auto-Plug Writer
+URL: https://realaiexamples.com/blueprints/twitter-auto-plug-writer
+Description: Drive traffic from viral tweets.
+
+---
+id: twitter-auto-plug-writer
+category: Twitter
+title: The Auto-Plug Writer
+tagline: Drive traffic from viral tweets.
+difficulty: Beginner
+time: Batch
+description: >-
+  When a tweet goes viral, you need to plug your offer. This agent drafts
+  high-converting 'If you enjoyed this...' tweets for your entire suite of
+  products and newsletters, ready to be appended to the end of any thread.
+sampleData:
+  filename: promotions.csv
+  content: |
+    Offer_Name,Link,Core_Benefit
+    Marketing Weekly,https://news.com/marketing,Daily growth hacks
+    SaaS Toolkit,https://tools.io/saas,100+ vetted tools
+    Agent Masterclass,https://course.com/agents,Build AI agents in 10 mins
+isPremium: true
+---
+
+# Agent Configuration: The Auto-Plug Writer
+
+## Role
+When a tweet goes viral, you need to plug your offer. This agent drafts high-converting 'If you enjoyed this...' tweets for your entire suite of products and newsletters, ready to be appended to the end of any thread.
+
+## Objective
+Drive traffic from viral tweets.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `promotions.csv` exist?
+2.  **If Missing:** Create `promotions.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Check
+1.  **Check:** Does `promotions.csv` exist?
+2.  **If Missing:** Create `promotions.csv` using the `sampleData`.
+3.  **If Present:** Load the offer list.
+
+### Phase 2: The Drafting Loop
+For each offer in the CSV:
+1.  **Draft 3 Variations:**
+    *   **The Narrative:** "That's a wrap! If you enjoyed this thread, you'll love [Offer_Name]. I share [Core_Benefit] every week."
+    *   **The Direct:** "Want more like this? Check out [Offer_Name]: [Link]. We focus on [Core_Benefit]."
+    *   **The CTA-Heavy:** "Join 5,000+ others getting [Core_Benefit] at [Offer_Name]. Subscribe here: [Link]"
+2.  **Character Audit:** Ensure all variations are < 240 characters to allow for link and image space.
+
+### Phase 3: Structured Deliverables
+1.  **Create:** `twitter_plugs_master.csv` with columns: `Offer_Name`, `Plug_Variation_1`, `Plug_Variation_2`, `Link`.
+2.  **Report:** "Successfully drafted [X] auto-plugs. Ready to be added to your social scheduling tool (e.g., Typefully, Hypefury)."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The Twitter Bio Optimizer
+URL: https://realaiexamples.com/blueprints/twitter-bio-optimizer
+Description: Get followed at a glance.
+
+---
+id: twitter-bio-optimizer
+category: Twitter
+title: The Twitter Bio Optimizer
+tagline: Get followed at a glance.
+difficulty: Beginner
+time: Batch
+description: >-
+  Your bio is your personal landing page. This agent rewrites your Twitter bios
+  to include the 'Who', 'What', and 'Proof' elements, ensuring new visitors hit
+  the 'Follow' button for your entire team or portfolio of accounts.
+sampleData:
+  filename: profiles.csv
+  content: |
+    Name,Role,Company,Achievement,Topic
+    Alex Rivera,SDR Lead,TechFlow,Scaled to $1M ARR,Sales Automation
+    Sarah Chen,Head of Design,Glow,Ex-Airbnb,UX for SaaS
+    Mike Ross,SEO Lead,GrowthLabs,Ranked #1 for 'AI Tools',Search Strategy
+isPremium: true
+---
+
+# Agent Configuration: The Twitter Bio Optimizer
+
+## Role
+Your bio is your personal landing page. This agent rewrites your Twitter bios to include the 'Who', 'What', and 'Proof' elements, ensuring new visitors hit the 'Follow' button for your entire team or portfolio of accounts.
+
+## Objective
+Get followed at a glance.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `profiles.csv` exist?
+2.  **If Missing:** Create `profiles.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Check
+1.  **Check:** Does `profiles.csv` exist?
+2.  **If Missing:** Create `profiles.csv` using the `sampleData`.
+3.  **If Present:** Load the profile list.
+
+### Phase 2: The Optimization Loop
+For each profile in the CSV:
+1.  **Draft 3 Variations:**
+    *   **The Authority:** "[Role] @[Company]. [Achievement]. Sharing insights on [Topic]."
+    *   **The Outcome-Led:** "Helping you [Result from Topic]. [Role] @[Company]. [Achievement]."
+    *   **The Minimalist:** "[Topic] | [Role] @[Company] | [Achievement]."
+2.  **Character Audit:** Ensure all variations are < 160 characters.
+3.  **Emoji Placement:** Add 1-2 relevant emojis to break up text and add visual interest.
+
+### Phase 3: Structured Deliverables
+1.  **Create:** `twitter_bio_matrix.csv` with columns: `Name`, `Primary_Bio`, `Minimalist_Bio`, `Character_Count`.
+2.  **Report:** "Successfully optimized [X] bios. Authority-driven profiles ready for profile updates."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+

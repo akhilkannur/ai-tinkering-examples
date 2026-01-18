@@ -1,14 +1,16 @@
 ---
-id: "attribution-window-comparator"
-category: "Analytics"
-title: "Attribution Window Comparer"
-tagline: "1-day vs 7-day click impact."
-difficulty: "Advanced"
-time: "Monthly"
-archetype: "Processor"
-description: "Compares revenue attributed under a 1-day click vs 7-day click window to understand ad latency."
+id: attribution-window-comparator
+category: CRO
+title: Attribution Window Comparer
+tagline: 1-day vs 7-day click impact.
+difficulty: Advanced
+time: Monthly
+archetype: Processor
+description: >-
+  Compares revenue attributed under a 1-day click vs 7-day click window to
+  understand ad latency.
 sampleData:
-  filename: "attr_windows.csv"
+  filename: attr_windows.csv
   content: |
     Campaign,Rev_1Day,Rev_7Day
     FB_Promo,1000,5000

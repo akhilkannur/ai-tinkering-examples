@@ -1,14 +1,17 @@
 ---
-id: "attribution-modeler"
-category: "Analytics"
-title: "The Attribution Modeler"
-tagline: "Who actually deserves credit?"
-difficulty: "Advanced"
-time: "Monthly"
-archetype: "Processor"
-description: "Facebook says they drove the sale. Google says they did. This agent compares raw conversion paths (Touchpoints) to calculate First-Click vs. Last-Click vs. Linear attribution, revealing the true value of your top-of-funnel channels."
+id: attribution-modeler
+category: CRO
+title: The Attribution Modeler
+tagline: Who actually deserves credit?
+difficulty: Advanced
+time: Monthly
+archetype: Processor
+description: >-
+  Facebook says they drove the sale. Google says they did. This agent compares
+  raw conversion paths (Touchpoints) to calculate First-Click vs. Last-Click vs.
+  Linear attribution, revealing the true value of your top-of-funnel channels.
 sampleData:
-  filename: "conversion_paths.csv"
+  filename: conversion_paths.csv
   content: |
     Path_ID,Touchpoints,Conversion_Value
     1,Facebook > Google > Direct,100

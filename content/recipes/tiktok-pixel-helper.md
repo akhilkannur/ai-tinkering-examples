@@ -1,6 +1,6 @@
 ---
 id: tiktok-pixel-helper
-category: Ad Ops
+category: Paid Media
 title: The TikTok Event Validator
 tagline: Fix your conversion tracking from a snippet or a goal.
 difficulty: Intermediate

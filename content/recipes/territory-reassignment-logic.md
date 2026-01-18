@@ -1,14 +1,16 @@
 ---
-id: "territory-reassignment-logic"
-category: "RevOps"
-title: "Bulk Territory Reassigner"
-tagline: "Move accounts from Rep A to Rep B."
-difficulty: "Intermediate"
-time: "Ad-hoc"
-archetype: "Processor"
-description: "Generates a bulk upload file to move accounts and open opportunities when a rep leaves or territories shift."
+id: territory-reassignment-logic
+category: Sales Ops
+title: Bulk Territory Reassigner
+tagline: Move accounts from Rep A to Rep B.
+difficulty: Intermediate
+time: Ad-hoc
+archetype: Processor
+description: >-
+  Generates a bulk upload file to move accounts and open opportunities when a
+  rep leaves or territories shift.
 sampleData:
-  filename: "account_list.csv"
+  filename: account_list.csv
   content: |
     Account,Current_Owner,New_Territory
     Acme,John,West

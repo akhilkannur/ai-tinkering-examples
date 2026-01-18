@@ -1,6 +1,6 @@
 ---
 id: featured-snippet-thief
-category: SEO Content
+category: SEO
 title: The Featured Snippet Thief
 tagline: Steal position zero.
 difficulty: Intermediate

@@ -1,14 +1,16 @@
---- 
-id: "channel-partner-deal-registration-tracker"
-category: "Partner Ops"
-title: "Deal Reg Conflict Finder"
-tagline: "Did we already have this lead?"
-difficulty: "Intermediate"
-time: "Weekly"
-archtype: "Processor"
-description: "Compares new Partner Deal Registrations against existing CRM Opportunities to prevent channel conflict."
+---
+id: channel-partner-deal-registration-tracker
+category: Strategic Ops
+title: Deal Reg Conflict Finder
+tagline: Did we already have this lead?
+difficulty: Intermediate
+time: Weekly
+archtype: Processor
+description: >-
+  Compares new Partner Deal Registrations against existing CRM Opportunities to
+  prevent channel conflict.
 sampleData:
-  filename: "registrations.csv"
+  filename: registrations.csv
   content: |
     Partner,Lead_Company,Date
     Reseller A,Acme Corp,2023-10-01

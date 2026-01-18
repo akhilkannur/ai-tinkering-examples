@@ -1,6 +1,6 @@
 ---
 id: twitter-bio-optimizer
-category: Twitter
+category: Strategic Ops
 title: The Twitter Bio Optimizer
 tagline: Get followed at a glance.
 difficulty: Beginner

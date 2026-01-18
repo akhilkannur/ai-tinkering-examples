@@ -1,6 +1,6 @@
 ---
 id: email-dns-auditor
-category: Tech Ops
+category: Marketing Ops
 title: The Bulk Deliverability Auditor
 tagline: Audit the sender reputation of 100 domains.
 difficulty: Advanced

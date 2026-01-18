@@ -1,6 +1,6 @@
 ---
 id: app-store-screenshot-optimizer
-category: ASO
+category: SEO
 title: The App Store Screenshot Optimizer
 tagline: 'More downloads, same traffic.'
 difficulty: Intermediate

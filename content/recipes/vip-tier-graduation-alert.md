@@ -1,14 +1,16 @@
 ---
-id: "vip-tier-graduation-alert"
-category: "Retention Marketing"
-title: "VIP Graduation Alert"
-tagline: "Nudge customers close to the next tier."
-difficulty: "Beginner"
-time: "Weekly"
-archetype: "Processor"
-description: "Identifies customers who are within $50 of the next loyalty tier to trigger a 'Top Up' campaign."
+id: vip-tier-graduation-alert
+category: Retention
+title: VIP Graduation Alert
+tagline: Nudge customers close to the next tier.
+difficulty: Beginner
+time: Weekly
+archetype: Processor
+description: >-
+  Identifies customers who are within $50 of the next loyalty tier to trigger a
+  'Top Up' campaign.
 sampleData:
-  filename: "loyalty_data.csv"
+  filename: loyalty_data.csv
   content: |
     Customer,Current_Spend,Next_Tier_Threshold
     John,950,1000

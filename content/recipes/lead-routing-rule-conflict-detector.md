@@ -1,14 +1,16 @@
 ---
-id: "lead-routing-rule-conflict-detector"
-category: "RevOps"
-title: "Routing Conflict Detector"
-tagline: "Does this lead match two reps?"
-difficulty: "Advanced"
-time: "Weekly"
-archetype: "Processor"
-description: "Simulates lead routing rules to find scenarios where a single lead matches multiple conflicting assignment rules."
+id: lead-routing-rule-conflict-detector
+category: Sales Ops
+title: Routing Conflict Detector
+tagline: Does this lead match two reps?
+difficulty: Advanced
+time: Weekly
+archetype: Processor
+description: >-
+  Simulates lead routing rules to find scenarios where a single lead matches
+  multiple conflicting assignment rules.
 sampleData:
-  filename: "routing_rules.txt"
+  filename: routing_rules.txt
   content: |
     Rule A: State=CA -> Rep 1
     Rule B: Industry=Tech -> Rep 2

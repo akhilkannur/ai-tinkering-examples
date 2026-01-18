@@ -1,6 +1,6 @@
 ---
 id: logo-to-brand-kit
-category: Brand
+category: Content Ops
 title: The Logo-to-Brand-Kit Generator
 tagline: Instant design systems from your logos.
 difficulty: Experimental

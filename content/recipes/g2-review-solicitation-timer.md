@@ -1,14 +1,16 @@
 ---
-id: "g2-review-solicitation-timer"
-category: "Customer Advocacy"
-title: "Perfect Review Timer"
-tagline: "Ask when they are happiest."
-difficulty: "Intermediate"
-time: "Daily"
-archetype: "Processor"
-description: "Times G2/Capterra review requests for exactly 3 days after a customer gives a 'Promoter' NPS score (9 or 10)."
+id: g2-review-solicitation-timer
+category: Customer Success
+title: Perfect Review Timer
+tagline: Ask when they are happiest.
+difficulty: Intermediate
+time: Daily
+archetype: Processor
+description: >-
+  Times G2/Capterra review requests for exactly 3 days after a customer gives a
+  'Promoter' NPS score (9 or 10).
 sampleData:
-  filename: "nps_feed.csv"
+  filename: nps_feed.csv
   content: |
     Customer,Score,Date
     Acme,10,2023-10-01

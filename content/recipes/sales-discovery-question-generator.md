@@ -1,6 +1,6 @@
 ---
 id: sales-discovery-question-generator
-category: Sales Enablement
+category: Sales Ops
 title: Discovery Call Scripter
 tagline: 'Generate deep, probing questions specific to your prospect''s role.'
 difficulty: Beginner

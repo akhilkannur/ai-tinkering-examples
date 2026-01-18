@@ -1,14 +1,16 @@
---- 
-id: "partner-portal-inactivity-audit"
-category: "Partner Ops"
-title: "Partner Engagement Audit"
-tagline: "Identify 'Ghost' partners who haven't logged in."
-difficulty: "Beginner"
-time: "Quarterly"
-archtype: "Processor"
-description: "Finds inactive partners to prioritize for re-engagement campaigns or program removal."
+---
+id: partner-portal-inactivity-audit
+category: Strategic Ops
+title: Partner Engagement Audit
+tagline: Identify 'Ghost' partners who haven't logged in.
+difficulty: Beginner
+time: Quarterly
+archtype: Processor
+description: >-
+  Finds inactive partners to prioritize for re-engagement campaigns or program
+  removal.
 sampleData:
-  filename: "partner_logins.csv"
+  filename: partner_logins.csv
   content: |
     Partner,Last_Login_Date
     Partner A,2023-10-01

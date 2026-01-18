@@ -1,14 +1,17 @@
 ---
-id: "backlink-toxicity-checker"
-category: "Off-Page SEO"
-title: "The Backlink Toxicity Checker"
-tagline: "Is that link helping or hurting?"
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Not all links are good. This agent audits a list of backlinks for 'Risk Signals' (High Spam Score, Irrelevant TLD, Foreign Language anchor text) and creates a disavow file for Google."
+id: backlink-toxicity-checker
+category: SEO
+title: The Backlink Toxicity Checker
+tagline: Is that link helping or hurting?
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Not all links are good. This agent audits a list of backlinks for 'Risk
+  Signals' (High Spam Score, Irrelevant TLD, Foreign Language anchor text) and
+  creates a disavow file for Google.
 sampleData:
-  filename: "backlinks.csv"
+  filename: backlinks.csv
   content: |
     Referring_Page,Domain_Auth,Spam_Score,Anchor_Text,TLD
     baddomain.xyz/links,5,60,Buy Viagar,.xyz

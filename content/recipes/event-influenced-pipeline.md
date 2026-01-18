@@ -1,14 +1,16 @@
 ---
-id: "event-influenced-pipeline"
-category: "Field Marketing"
-title: "Event Influence Calc"
-tagline: "Total pipeline touched by this event."
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Calculates total pipeline value where an 'Event Attendance' campaign member exists prior to opportunity creation."
+id: event-influenced-pipeline
+category: Strategic Ops
+title: Event Influence Calc
+tagline: Total pipeline touched by this event.
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Calculates total pipeline value where an 'Event Attendance' campaign member
+  exists prior to opportunity creation.
 sampleData:
-  filename: "campaign_members.csv"
+  filename: campaign_members.csv
   content: |
     Campaign,Opp_Value,Member_Date,Opp_Date
     Event_X,50000,2023-01-01,2023-02-01

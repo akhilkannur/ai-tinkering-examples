@@ -1,14 +1,16 @@
---- 
-id: "competitor-win-rate-trend"
-category: "Market Intelligence"
-title: "Competitor Win Rate Trend"
-tagline: "Are we winning or losing against Competitor X?"
-difficulty: "Intermediate"
-time: "Monthly"
-archtype: "Processor"
-description: "Tracks the win/loss rate against a specific competitor over time to detect shifts in market position."
+---
+id: competitor-win-rate-trend
+category: Competitive Intel
+title: Competitor Win Rate Trend
+tagline: Are we winning or losing against Competitor X?
+difficulty: Intermediate
+time: Monthly
+archtype: Processor
+description: >-
+  Tracks the win/loss rate against a specific competitor over time to detect
+  shifts in market position.
 sampleData:
-  filename: "comp_battles.csv"
+  filename: comp_battles.csv
   content: |
     Month,Competitor,Outcome
     Jan,Comp X,Won

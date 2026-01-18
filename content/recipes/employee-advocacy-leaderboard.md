@@ -1,14 +1,16 @@
 ---
-id: "employee-advocacy-leaderboard"
-category: "Social Selling"
-title: "Social Advocacy Leaderboard"
-tagline: "Who is the loudest brand champion?"
-difficulty: "Beginner"
-time: "Weekly"
-archetype: "Processor"
-description: "Ranks employees by the reach and engagement of their company-related social shares."
+id: employee-advocacy-leaderboard
+category: Strategic Ops
+title: Social Advocacy Leaderboard
+tagline: Who is the loudest brand champion?
+difficulty: Beginner
+time: Weekly
+archetype: Processor
+description: >-
+  Ranks employees by the reach and engagement of their company-related social
+  shares.
 sampleData:
-  filename: "advocacy_stats.csv"
+  filename: advocacy_stats.csv
   content: |
     Employee,Shares,Clicks,Reactions
     John,5,50,10

@@ -1,6 +1,6 @@
 ---
 id: influencer-contract-drafter
-category: Legal Ops
+category: Strategic Ops
 title: The Influencer Contract Factory
 tagline: Generate 50 creator agreements in one run.
 difficulty: Advanced

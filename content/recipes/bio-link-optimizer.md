@@ -1,6 +1,6 @@
 ---
 id: bio-link-optimizer
-category: Social Content
+category: Content Ops
 title: The Bio Link Architect
 tagline: Optimize your 'Link in Bio' from a URL or a goal.
 difficulty: Beginner

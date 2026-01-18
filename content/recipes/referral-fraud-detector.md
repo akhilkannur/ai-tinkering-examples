@@ -1,6 +1,6 @@
 ---
 id: referral-fraud-detector
-category: Growth Eng
+category: Strategic Ops
 title: The Referral Fraud Hunter
 tagline: Stop paying for fake invites.
 difficulty: Advanced

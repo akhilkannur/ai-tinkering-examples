@@ -1,14 +1,16 @@
 ---
-id: "credit-card-dunning-recovery"
-category: "PLG Sales"
-title: "High-Value Dunning Prioritizer"
-tagline: "Save the big accounts first."
-difficulty: "Beginner"
-time: "Daily"
-archetype: "Processor"
-description: "Prioritizes failed payment outreach based on the Monthly Recurring Revenue (MRR) of the account."
+id: credit-card-dunning-recovery
+category: Sales Ops
+title: High-Value Dunning Prioritizer
+tagline: Save the big accounts first.
+difficulty: Beginner
+time: Daily
+archetype: Processor
+description: >-
+  Prioritizes failed payment outreach based on the Monthly Recurring Revenue
+  (MRR) of the account.
 sampleData:
-  filename: "failed_payments.csv"
+  filename: failed_payments.csv
   content: |
     Customer,MRR,Days_Past_Due
     Acme,1000,5

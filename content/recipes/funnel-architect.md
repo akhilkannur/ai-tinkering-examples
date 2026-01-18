@@ -1,6 +1,6 @@
 ---
 id: funnel-architect
-category: CRM Ops
+category: Sales Ops
 title: The Funnel Visualizer
 tagline: Map & Fix Sales Flows.
 difficulty: Advanced

@@ -1,14 +1,16 @@
 ---
-id: "contract-clause-variance-tracker"
-category: "Advanced RevOps"
-title: "Non-Standard Clause Tracker"
-tagline: "Who got the 'Opt-out' clause?"
-difficulty: "Advanced"
-time: "Monthly"
-archetype: "Processor"
-description: "Flags contracts with non-standard clauses (e.g. 'Termination for Convenience', 'MFN') for legal review."
+id: contract-clause-variance-tracker
+category: Sales Ops
+title: Non-Standard Clause Tracker
+tagline: Who got the 'Opt-out' clause?
+difficulty: Advanced
+time: Monthly
+archetype: Processor
+description: >-
+  Flags contracts with non-standard clauses (e.g. 'Termination for Convenience',
+  'MFN') for legal review.
 sampleData:
-  filename: "contract_terms.csv"
+  filename: contract_terms.csv
   content: |
     Customer,Clauses
     Acme,Standard

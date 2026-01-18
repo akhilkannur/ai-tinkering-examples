@@ -1,6 +1,6 @@
 ---
 id: competitor-matrix-visualizer
-category: Product Marketing
+category: Strategic Ops
 title: Feature Parity Matrix
 tagline: Build the "Us vs Them" comparison grid for your pricing page.
 difficulty: Intermediate

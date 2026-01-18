@@ -1,14 +1,16 @@
 ---
-id: "influencer-share-verification"
-category: "Social Selling"
-title: "Influencer Compliance Check"
-tagline: "Did they actually post it?"
-difficulty: "Intermediate"
-time: "Weekly"
-archetype: "Processor"
-description: "Verifies if a paid influencer actually posted the agreed content by checking post logs."
+id: influencer-share-verification
+category: Strategic Ops
+title: Influencer Compliance Check
+tagline: Did they actually post it?
+difficulty: Intermediate
+time: Weekly
+archetype: Processor
+description: >-
+  Verifies if a paid influencer actually posted the agreed content by checking
+  post logs.
 sampleData:
-  filename: "post_logs.csv"
+  filename: post_logs.csv
   content: |
     Influencer,Required_Date,Actual_Post_Date
     Alice,2023-10-01,2023-10-01

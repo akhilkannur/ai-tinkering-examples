@@ -1,17 +1,23 @@
 ---
-id: "blueprint-architect"
-category: "AI Setup"
-title: "The Blueprint Architect"
-tagline: "Create your own Work-Ready blueprints."
-difficulty: "Advanced"
-time: "Batch"
-archetype: "Processor"
-description: "The meta-agent. Use this blueprint to turn any manual business process into a standardized, 3-Phase AI Agent Blueprint that follows the Terminal Cookbook standard."
+id: blueprint-architect
+category: Strategic Ops
+title: The Blueprint Architect
+tagline: Create your own Work-Ready blueprints.
+difficulty: Advanced
+time: Batch
+archetype: Processor
+description: >-
+  The meta-agent. Use this blueprint to turn any manual business process into a
+  standardized, 3-Phase AI Agent Blueprint that follows the Terminal Cookbook
+  standard.
 sampleData:
-  filename: "process_description.txt"
-  content: |
-    Goal: I want an agent that audits my LinkedIn ad spend and flags campaigns with a frequency over 3.0.
+  filename: process_description.txt
+  content: >
+    Goal: I want an agent that audits my LinkedIn ad spend and flags campaigns
+    with a frequency over 3.0.
+
     Input: A CSV with Campaign Name, Spend, and Frequency.
+
     Output: A list of 'Fatigued' campaigns and a suggested budget cut.
 ---
 

@@ -1,14 +1,16 @@
---- 
-id: "competitor-news-digest-builder"
-category: "Market Intelligence"
-title: "Competitor Radar"
-tagline: "Turn messy news alerts into a clean executive summary."
-difficulty: "Intermediate"
-time: "Weekly"
-archtype: "Hybrid"
-description: "Takes a list of competitors, searches for their latest press releases or blog posts, and summarizes strategic moves."
+---
+id: competitor-news-digest-builder
+category: Competitive Intel
+title: Competitor Radar
+tagline: Turn messy news alerts into a clean executive summary.
+difficulty: Intermediate
+time: Weekly
+archtype: Hybrid
+description: >-
+  Takes a list of competitors, searches for their latest press releases or blog
+  posts, and summarizes strategic moves.
 sampleData:
-  filename: "competitors.txt"
+  filename: competitors.txt
   content: |
     CompetitorA
     CompetitorB

@@ -1,6 +1,6 @@
 ---
 id: youtube-thumbnail-ab-tester
-category: YouTube
+category: Content Ops
 title: The Thumbnail Strategy Factory
 tagline: High-CTR concepts from your ideas or viral competitors.
 difficulty: Beginner
