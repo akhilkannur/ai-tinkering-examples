@@ -16,6 +16,7 @@
     "dotenv": "^17.2.3",
     "framer-motion": "^11.2.10",
     "gray-matter": "^4.0.3",
+    "jszip": "^3.10.1",
     "lucide-react": "^0.263.1",
     "next": "13.5.1",
     "react": "18.2.0",

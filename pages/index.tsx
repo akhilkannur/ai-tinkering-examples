@@ -55,21 +55,21 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
             <div className="container mx-auto px-4 text-center max-w-4xl">
                 <div className="inline-flex items-center gap-2 bg-yellow-50 border border-yellow-100 text-yellow-800 px-4 py-1.5 rounded-full text-sm font-semibold mb-6">
                     <BookOpen className="w-4 h-4" />
-                    <span>The Work Automation Library</span>
+                    <span>The Marketing & Sales Automation Library</span>
                 </div>
                 
                 <h1 className="text-4xl md:text-6xl font-headline font-bold text-brand-navy mb-6 tracking-tight leading-tight">
-                    AI Blueprints: <br />
+                    Growth Blueprints: <br />
                     <span className="text-accent">
-                    Copy, Paste, Automate Your Work.
+                    Copy, Paste, Automate Your Sales.
                     </span>
                 </h1>
                 
                 <p className="text-lg md:text-xl text-brand-navy/80 max-w-2xl mx-auto leading-relaxed mb-4">
-                    Ditch endless chats. Get real work done.
+                    Ditch endless chats. Build autonomous marketing workflows.
                 </p>
                 <p className="text-md md:text-lg text-brand-navy/60 max-w-2xl mx-auto leading-relaxed mb-10">
-                    Turn tools like Gemini & Claude into your personal assistants — <strong>No Coding Needed.</strong>
+                    Turn tools like Gemini & Claude into your personal <strong>marketing team</strong> — <strong>No Coding Needed.</strong>
                     <br className="hidden md:block"/>
                     Simple text files you can run instantly on free tools.
                 </p>

@@ -2,11 +2,12 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { ArrowLeft, Terminal, Copy, Check, Download, FileText, Cpu, BookOpen, Lock, Crown, Key, ArrowRight, X } from 'lucide-react';
+import { ArrowLeft, Terminal, Copy, Check, Download, FileText, Cpu, BookOpen, Lock, Crown, Key, ArrowRight, X, Package } from 'lucide-react';
 import Navbar from '../../components/Navbar';
 import { getAllRecipes } from '../../lib/recipes';
 import { Recipe, categoryIcons } from '../../lib/cookbook-data';
 import React, { useState, useEffect } from 'react';
+import JSZip from 'jszip';
 
 interface RecipePageProps {
   recipe: Recipe;
@@ -55,6 +56,44 @@ export default function RecipePage({ recipe }: RecipePageProps) {
     navigator.clipboard.writeText(recipe.blueprint);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
+  };
+
+  const handleDownloadZip = async () => {
+    if (recipe.isPremium && !isUnlocked) return;
+    
+    const zip = new JSZip();
+    
+    // Add the main blueprint file
+    zip.file(`${recipe.id}.md`, recipe.blueprint);
+    
+    // Add sample data if it exists
+    if (recipe.sampleData) {
+        zip.file(recipe.sampleData.filename, recipe.sampleData.content);
+    }
+
+    // Add a simple README
+    const readmeContent = `# ${recipe.title}
+    
+${recipe.description}
+
+## Usage
+1. Use the '${recipe.id}.md' file as your prompt/blueprint.
+${recipe.sampleData ? `2. The file '${recipe.sampleData.filename}' contains sample data for this workflow.` : ''}
+
+Downloaded from RealAIExamples.com`;
+
+    zip.file("README.txt", readmeContent);
+
+    // Generate and trigger download
+    const content = await zip.generateAsync({ type: "blob" });
+    const url = URL.createObjectURL(content);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `${recipe.id}-bundle.zip`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
   };
 
   const handleDownloadSample = () => {
@@ -140,6 +179,16 @@ export default function RecipePage({ recipe }: RecipePageProps) {
                 </div>
               </div>
             </div>
+            {/* New Main Download Action */}
+            {!isLocked && (
+                <button
+                    onClick={handleDownloadZip}
+                    className="hidden md:flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl shadow-lg shadow-blue-600/20 transition-all transform hover:-translate-y-1"
+                >
+                    <Package className="w-5 h-5" />
+                    Download Bundle
+                </button>
+            )}
           </div>
 
           {/* Mission Overview */}
@@ -214,8 +263,8 @@ export default function RecipePage({ recipe }: RecipePageProps) {
               /* UNLOCKED CONTENT */
               <>
                 <div className="bg-gray-900 rounded-2xl overflow-hidden border border-gray-800 shadow-2xl mb-12">
-                    <div className="bg-gray-800 px-6 py-4 flex items-center justify-between border-b border-gray-700">
-                    <div className="flex items-center gap-3">
+                    <div className="bg-gray-800 px-6 py-4 flex flex-col md:flex-row items-center justify-between border-b border-gray-700 gap-4">
+                    <div className="flex items-center gap-3 self-start md:self-auto">
                         <div className="flex gap-1.5">
                         <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
                         <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
@@ -225,33 +274,24 @@ export default function RecipePage({ recipe }: RecipePageProps) {
                         <FileText className="w-3 h-3" /> BLUEPRINT.md
                         </span>
                     </div>
-                    <div className="flex items-center gap-3">
+                    <div className="flex flex-wrap items-center gap-3 w-full md:w-auto">
                         <button
-                        onClick={handleDownloadBlueprint}
-                        className="text-sm font-bold px-4 py-2 rounded-xl flex items-center gap-2 transition-all bg-gray-700 text-gray-200 hover:bg-gray-600 active:scale-95 shadow-lg shadow-gray-900/20"
+                            onClick={handleDownloadZip}
+                            className="flex-1 md:flex-none text-sm font-bold px-4 py-2 rounded-xl flex items-center justify-center gap-2 transition-all bg-blue-600 text-white hover:bg-blue-500 shadow-lg shadow-blue-600/20"
                         >
-                        <FileText className="w-4 h-4" />
-                        Download .md
+                            <Package className="w-4 h-4" />
+                            Download Zip
                         </button>
-                        {recipe.sampleData && (
-                        <button
-                            onClick={handleDownloadSample}
-                            className="text-sm font-bold px-4 py-2 rounded-xl flex items-center gap-2 transition-all bg-yellow-500 text-yellow-900 hover:bg-yellow-400 active:scale-95 shadow-lg shadow-yellow-500/20"
-                        >
-                            <Download className="w-4 h-4" />
-                            Download Sample
-                        </button>
-                        )}
                         <button
                         onClick={handleCopy}
-                        className={`text-sm font-bold px-4 py-2 rounded-xl flex items-center gap-2 transition-all active:scale-95 shadow-lg ${
+                        className={`flex-1 md:flex-none text-sm font-bold px-4 py-2 rounded-xl flex items-center justify-center gap-2 transition-all active:scale-95 shadow-lg ${
                             copied 
                             ? 'bg-green-500 text-white shadow-green-500/20' 
-                            : 'bg-blue-600 text-white hover:bg-blue-500 shadow-blue-600/20'
+                            : 'bg-gray-700 text-gray-200 hover:bg-gray-600 shadow-gray-900/20'
                         }`}
                         >
                         {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
-                        {copied ? 'Copied!' : 'Copy Blueprint'}
+                        {copied ? 'Copied!' : 'Copy'}
                         </button>
                     </div>
                     </div>
@@ -275,7 +315,7 @@ export default function RecipePage({ recipe }: RecipePageProps) {
                             Get the files
                         </h4>
                         <p className="text-yellow-800 text-sm mb-2 ml-8">
-                            Download the <span className="font-mono font-bold">{recipe.id}.md</span> blueprint {recipe.sampleData ? `and ${recipe.sampleData.filename}` : ''} using the buttons above.
+                            Download the <span className="font-mono font-bold">Bundle ZIP</span> above. It contains the blueprint and any required files.
                         </p>
                         </div>
 
