@@ -126,6 +126,11 @@ Downloaded from RealAIExamples.com`;
   const SITE_URL = 'https://realaiexamples.com';
   const ogImageUrl = `${SITE_URL}/api/og?title=${encodeURIComponent(recipe.title)}&category=${encodeURIComponent(recipe.category)}&tagline=${encodeURIComponent(recipe.tagline)}`;
 
+  // For SEO: Split blueprint into public/private parts
+  const blueprintParts = recipe.blueprint.split('### Phase 2:');
+  const publicBlueprint = blueprintParts[0];
+  const privateBlueprint = blueprintParts.length > 1 ? `### Phase 2:${blueprintParts[1]}` : '';
+
   return (
     <div className="flex flex-col min-h-screen bg-white">
       <Head>
@@ -198,16 +203,59 @@ Downloaded from RealAIExamples.com`;
           </div>
 
           {/* Locked or Unlocked Content */}
-          {isLocked ? (
+          <div className="bg-gray-900 rounded-2xl overflow-hidden border border-gray-800 shadow-2xl mb-12">
+              <div className="bg-gray-800 px-6 py-4 flex flex-col md:flex-row items-center justify-between border-b border-gray-700 gap-4">
+              <div className="flex items-center gap-3 self-start md:self-auto">
+                  <div className="flex gap-1.5">
+                  <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
+                  <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+                  <div className="w-3 h-3 rounded-full bg-green-500/80"></div>
+                  </div>
+                  <span className="text-gray-400 font-mono text-xs ml-2 flex items-center gap-2">
+                  <FileText className="w-3 h-3" /> BLUEPRINT.md {isLocked && "(Preview Mode)"}
+                  </span>
+              </div>
+              {!isLocked && (
+                <div className="flex flex-wrap items-center gap-3 w-full md:w-auto">
+                    <button
+                        onClick={handleDownloadZip}
+                        className="flex-1 md:flex-none text-sm font-bold px-4 py-2 rounded-xl flex items-center justify-center gap-2 transition-all bg-blue-600 text-white hover:bg-blue-500 shadow-lg shadow-blue-600/20"
+                    >
+                        <Package className="w-4 h-4" />
+                        Download Zip
+                    </button>
+                    <button
+                    onClick={handleCopy}
+                    className={`flex-1 md:flex-none text-sm font-bold px-4 py-2 rounded-xl flex items-center justify-center gap-2 transition-all active:scale-95 shadow-lg ${
+                        copied 
+                        ? 'bg-green-500 text-white shadow-green-500/20' 
+                        : 'bg-gray-700 text-gray-200 hover:bg-gray-600 shadow-gray-900/20'
+                    }`}
+                    >
+                    {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
+                    {copied ? 'Copied!' : 'Copy'}
+                    </button>
+                </div>
+              )}
+              </div>
+              <div className="p-8">
+                <pre className="font-mono text-base text-blue-300 whitespace-pre-wrap leading-relaxed">
+                    {publicBlueprint}
+                    {!isLocked && privateBlueprint}
+                </pre>
+              </div>
+          </div>
+
+          {isLocked && (
               /* PREMIUM PAYWALL */
               <div className="bg-gray-900 rounded-3xl p-12 text-center border-4 border-yellow-500/30 shadow-2xl relative overflow-hidden mb-16">
                  <div className="relative z-10">
                     <div className="w-24 h-24 bg-yellow-500/10 rounded-full flex items-center justify-center mx-auto mb-8 border border-yellow-500/20">
                       <Lock className="w-12 h-12 text-yellow-500" />
                     </div>
-                    <h2 className="text-4xl font-bold text-white mb-4">This Blueprint is Locked</h2>
+                    <h2 className="text-4xl font-bold text-white mb-4">The Logic is Locked</h2>
                     <p className="text-gray-400 text-xl mb-10 max-w-xl mx-auto leading-relaxed">
-                      You are viewing a Premium AI workflow. Get instant access to this blueprint and 500+ others by joining the Terminal Cookbook Pro.
+                      Phase 2 (Processing) and Phase 3 (Output) are reserved for Pro members. Unlock 500+ premium automation blueprints instantly.
                     </p>
                     
                     {!showLicenseInput ? (
@@ -259,50 +307,10 @@ Downloaded from RealAIExamples.com`;
                  <div className="absolute top-0 right-0 w-64 h-64 bg-yellow-500/5 rounded-full -mr-32 -mt-32 blur-3xl"></div>
                  <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-500/5 rounded-full -ml-32 -mb-32 blur-3xl"></div>
               </div>
-          ) : (
-              /* UNLOCKED CONTENT */
-              <>
-                <div className="bg-gray-900 rounded-2xl overflow-hidden border border-gray-800 shadow-2xl mb-12">
-                    <div className="bg-gray-800 px-6 py-4 flex flex-col md:flex-row items-center justify-between border-b border-gray-700 gap-4">
-                    <div className="flex items-center gap-3 self-start md:self-auto">
-                        <div className="flex gap-1.5">
-                        <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
-                        <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
-                        <div className="w-3 h-3 rounded-full bg-green-500/80"></div>
-                        </div>
-                        <span className="text-gray-400 font-mono text-xs ml-2 flex items-center gap-2">
-                        <FileText className="w-3 h-3" /> BLUEPRINT.md
-                        </span>
-                    </div>
-                    <div className="flex flex-wrap items-center gap-3 w-full md:w-auto">
-                        <button
-                            onClick={handleDownloadZip}
-                            className="flex-1 md:flex-none text-sm font-bold px-4 py-2 rounded-xl flex items-center justify-center gap-2 transition-all bg-blue-600 text-white hover:bg-blue-500 shadow-lg shadow-blue-600/20"
-                        >
-                            <Package className="w-4 h-4" />
-                            Download Zip
-                        </button>
-                        <button
-                        onClick={handleCopy}
-                        className={`flex-1 md:flex-none text-sm font-bold px-4 py-2 rounded-xl flex items-center justify-center gap-2 transition-all active:scale-95 shadow-lg ${
-                            copied 
-                            ? 'bg-green-500 text-white shadow-green-500/20' 
-                            : 'bg-gray-700 text-gray-200 hover:bg-gray-600 shadow-gray-900/20'
-                        }`}
-                        >
-                        {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
-                        {copied ? 'Copied!' : 'Copy'}
-                        </button>
-                    </div>
-                    </div>
-                    <div className="p-8">
-                    <pre className="font-mono text-base text-blue-300 whitespace-pre-wrap leading-relaxed">
-                        {recipe.blueprint}
-                    </pre>
-                    </div>
-                    </div>
-                </div>
+          )}
 
+          {!isLocked && (
+              <>
                 {/* Output Snapshot */}
                 {recipe.sampleOutput && (
                   <div className="mb-12">

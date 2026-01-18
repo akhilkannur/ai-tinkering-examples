@@ -16,7 +16,7 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedRecipe, setSelectedRecipe] = useState<Recipe | null>(null);
   const [copied, setCopied] = useState(false);
-  const [visibleCount, setVisibleCount] = useState(50);
+  const [visibleCount, setVisibleCount] = useState(100);
   
   // Paywall State
   const [isUnlocked, setIsUnlocked] = useState(false);
@@ -76,12 +76,12 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
   }, [selectedCategory, searchQuery, recipes]);
 
   const handleLoadMore = () => {
-    setVisibleCount(prev => prev + 50);
+    setVisibleCount(prev => prev + 100);
   };
 
   const recipesToRender = filteredRecipes.slice(0, visibleCount);
   const hasMore = visibleCount < filteredRecipes.length;
-  const showPaywallOverlay = !isUnlocked && filteredRecipes.length > 50;
+  const showPaywallOverlay = !isUnlocked && filteredRecipes.length > 100;
 
   const handleCopy = () => {
     if (!selectedRecipe || (selectedRecipe.isPremium && !isUnlocked)) return;
@@ -160,7 +160,7 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-12">
           {recipesToRender.map((recipe, index) => {
             const CatIcon = categoryIcons[recipe.category] || Terminal;
-            const isLocked = !isUnlocked && (index >= 50 || recipe.isPremium);
+            const isLocked = !isUnlocked && (index >= 100 || recipe.isPremium);
             
             return (
               <div
