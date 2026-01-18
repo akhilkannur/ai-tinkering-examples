@@ -61,12 +61,12 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
                 <h1 className="text-4xl md:text-6xl font-headline font-bold text-brand-navy mb-6 tracking-tight leading-tight">
                     Growth Blueprints: <br />
                     <span className="text-accent">
-                    Copy, Paste, Automate Your Sales.
+                    Copy, Paste, Automate Your Sales and Marketing.
                     </span>
                 </h1>
                 
                 <p className="text-lg md:text-xl text-brand-navy/80 max-w-2xl mx-auto leading-relaxed mb-4">
-                    Ditch endless chats. Build autonomous marketing workflows.
+                    Ditch endless chats. Build autonomous workflows.
                 </p>
                 <p className="text-md md:text-lg text-brand-navy/60 max-w-2xl mx-auto leading-relaxed mb-10">
                     Turn tools like Gemini & Claude into your personal <strong>marketing team</strong> — <strong>No Coding Needed.</strong>
@@ -88,6 +88,9 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
                     <span className="uppercase tracking-widest font-bold text-xs">Use with:</span>
                     <div className="flex flex-wrap justify-center gap-3">
                     <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white text-brand-navy font-medium border border-gray-200">
+                        <Cpu className="w-4 h-4 text-purple-600" /> Claude Code
+                    </span>
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white text-brand-navy font-medium border border-gray-200">
                         <Cpu className="w-4 h-4 text-purple-600" /> Claude Cowork
                     </span>
                     <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white text-brand-navy font-medium border border-gray-200">
@@ -100,9 +103,6 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
                 </div>
             </div>
         </div>
-
-        {/* ARCHETYPE QUIZ */}
-        <ArchetypeQuiz />
 
         {/* HOW TO USE GUIDE */}
         <HowToUseGuide />
@@ -149,6 +149,9 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
                 </div>
             </div>
         </div>
+
+        {/* ARCHETYPE QUIZ */}
+        <ArchetypeQuiz />
 
         {/* SECONDARY CONTENT: FEATURED TOOLS */}
         {siteSettings.enableFeaturedToolsSection && featuredTools.length > 0 && (
