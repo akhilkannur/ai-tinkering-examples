@@ -8,11 +8,12 @@ time: 15 mins
 archetype: Processor
 description: Reads your startup's "Blurb" and a CSV of Investor Profiles (including their specific focus areas), then scores the fit to prevent you from pitching B2B investors with a B2C idea.
 sampleData:
-  filename: my_startup.txt
+  filename: fundraising_data.txt
   content: |
+    [Startup]
     We are a B2B SaaS platform for construction management. We sell to Enterprise GC's. Raising Seed round.
-  filename: investors.csv
-  content: |
+
+    [Investors]
     Firm,Focus,Stage
     Sequoia,Mobile & Consumer,Series A
     Brick & Mortar Ventures,Construction Tech,Seed
@@ -23,18 +24,16 @@ sampleData:
 Fundraising is a sales funnel. This agent qualifies your leads. It filters out investors who are the wrong stage or sector, saving you from sending emails that will be instantly deleted.
 
 # What You Need
-- `my_startup.txt`: Your elevator pitch.
-- `investors.csv`: A database of firms (easy to find on Airtable/Signal).
+- `fundraising_data.txt`: Your pitch and the investor list.
 
 # What You Get
 - `qualified_investors.csv`: The list of matches.
 - `email_intros.md`: Specific reasons *why* you are a fit for each.
 
 # How to Use
-1. Describe your company in the text file.
-2. Load your investor list.
-3. Run the blueprint.
-4. Pitch the top matches.
+1. Paste your pitch and investor data.
+2. Run the blueprint.
+3. Pitch the top matches.
 
 ---
 
@@ -43,8 +42,9 @@ Fundraising is a sales funnel. This agent qualifies your leads. It filters out i
 You are a **Venture Capital Analyst**. Your job is to screen deal flow.
 
 **Phase 1: Analysis**
-1. Read `my_startup.txt`. Extract: **Sector** (e.g., Construction), **Business Model** (e.g., B2B SaaS), and **Stage** (e.g., Seed).
-2. Read `investors.csv`.
+1. Read `fundraising_data.txt`.
+2. Extract from `[Startup]`: **Sector** (e.g., Construction), **Business Model** (e.g., B2B SaaS), and **Stage** (e.g., Seed).
+3. Parse the `[Investors]` list.
 
 **Phase 2: Matching**
 For each investor:
