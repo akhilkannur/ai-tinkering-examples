@@ -1,52 +1,56 @@
 ---
 id: redirect-chain-fixer
 category: Technical SEO
-title: The Redirect Chain Fixer
-tagline: Flatten your hop chains.
+title: Redirect Chain Flattener
+tagline: Fix "Redirect Hops" to improve site speed and SEO.
 difficulty: Intermediate
-time: Quarterly
+time: 5 mins
 archetype: Processor
-description: >-
-  A -> B -> C is bad for speed and SEO. This agent takes a list of redirect hops
-  and 'flattens' them, generating a CSV where every source points directly to
-  the final destination (A -> C).
+description: Reads a CSV of redirects (Source -> Destination), identifies chains where Page A goes to Page B, and Page B goes to Page C, and provides a "Flattened" list (Page A -> Page C).
 sampleData:
-  filename: redirect_log.csv
+  filename: redirects.csv
   content: |
-    Source,Destination,Status
-    /old-product,/temp-landing,301
-    /temp-landing,/new-product,301
-    /about-us,/about,301
-isPremium: true
+    Source,Destination
+    /old-page,/new-page
+    /new-page,/final-page
+    /blog/old-post,/blog/new-post
 ---
 
-# Agent Configuration: The Plumber
+# What This Does
+Redirect chains (A -> B -> C) slow down your website and lose "Link Juice." This agent identifies these multi-step hops and gives you a clean list to update in your `.htaccess` or CMS so every redirect is one-to-one.
 
-## Role
-You are a **Site Reliability Engineer**. You hate latency. You know that every 301 hop adds milliseconds to load time and dilutes PageRank.
+# What You Need
+- `redirects.csv`: A list of your current site redirects.
 
-## Objective
-Identify and resolve redirect chains.
+# What You Get
+- `fixed_redirects.csv`: A list of cleaned, 1-step redirects.
 
-## Capabilities
-*   **Path Tracing:** Following A -> B -> C logic.
-*   **Optimization:** Mapping A directly to C.
+# How to Use
+1. Export your redirect list.
+2. Run the blueprint.
+3. Import the flattened list to your server.
 
-## Workflow
+---
 
-### Phase 1: Initialization & Seeding
-1.  **Check:** Does `redirect_log.csv` exist?
-2.  **If Missing:** Create `redirect_log.csv` using the `sampleData` provided in this blueprint.
-3.  **Build Map:** Create a dictionary of Source -> Destination.
+# Prompt
 
-### Phase 2: Unravelling Loop
-Create `optimized_redirects.csv`.
+You are a **Performance Engineer**. Your job is to optimize redirect logic.
 
-For each Source in the map:
-1.  **Trace:** Follow the destination. Is the destination *also* a source?
-2.  **Loop:** Keep following until a 200 OK (or non-source) is found.
-3.  **Update:** Set original Source to point to Final Destination.
+**Phase 1: Analysis**
+1. Read `redirects.csv`.
+2. Build a map of all `Source` -> `Destination` pairs.
 
-### Phase 3: The Fix Output
-1.  **Output:** Save `optimized_redirects.csv` (Source, Final_Destination).
-2.  **Summary:** "Chains flattened. found [X] multi-hop redirects. Updated to point directly to final targets."
+**Phase 2: Chain Detection**
+1.  Iterate through the list.
+2.  If a `Destination` in one row is also a `Source` in another row, you have found a chain.
+3.  **Flatten:** Follow the chain to the very end.
+    *   *Example:* A->B and B->C becomes A->C.
+    *   *Example:* A->B, B->C, C->D becomes A->D.
+
+**Phase 3: Output**
+Save to `fixed_redirects.csv`:
+1.  All original 1-step redirects.
+2.  All newly flattened redirects.
+3.  Include a column `Type` ("Original" or "Flattened").
+
+Start now.

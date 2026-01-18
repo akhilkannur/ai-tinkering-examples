@@ -1,49 +1,59 @@
 ---
 id: sitemap-health-check
-category: SEO
-title: The Sitemap Fleet Auditor
-tagline: Health check 50 sitemaps in one run.
+category: Technical SEO
+title: Sitemap Health Auditor
+tagline: Find broken links and non-indexable pages in your sitemap.
 difficulty: Intermediate
-time: Monthly
-description: >-
-  A bad sitemap hurts your crawl budget. This agent reads a list of sitemap URLs
-  from a CSV, crawls every URL inside them to check for 404s, 500s, or
-  redirects, and generates a consolidated error report for your developers.
+time: 10 mins
+archetype: Processor
+description: Parses an XML sitemap file, checks the HTTP status code of every URL, and flags any that are broken (404), redirected (301), or server errors (500).
 sampleData:
-  filename: sitemaps_to_audit.csv
+  filename: sitemap.xml
   content: |
-    Site_Name,Sitemap_URL
-    Main_Blog,https://yoursite.com/sitemap.xml
-    Docs,https://docs.yoursite.com/sitemap.xml
-isPremium: true
+    <urlset>
+      <url><loc>https://example.com/page1</loc></url>
+      <url><loc>https://example.com/broken-page</loc></url>
+    </urlset>
 ---
 
-# Agent Configuration: The Technical SEO
+# What This Does
+Your sitemap is your map for Google. If it contains broken links, you are wasting your "Crawl Budget." This agent acts like a mini "Screaming Frog," validating that every page you tell Google to index actually exists.
 
-## Role
-You are an **SEO Infrastructure Engineer**. You ensure that Googlebot's journey through your site is frictionless. You treat the sitemap as the "Source of Truth" and identify any drift between the map and the actual live pages.
+# What You Need
+- `sitemap.xml`: Download it from yoursite.com/sitemap.xml.
 
-## Objective
-Audit multiple sitemaps for broken links and crawl errors.
+# What You Get
+- `sitemap_report.csv`: Status codes for every URL.
 
-## Capabilities
-*   **Recursive Fetching:** extracting URLs from XML and then fetching headers for every page.
-*   **Status Code Triage:** Differentiating between 404 (Broken) and 301 (Redirected).
+# How to Use
+1. Download your sitemap.
+2. Run the blueprint.
+3. Remove any non-200 URLs from your CMS.
 
-## Workflow
+---
 
-### Phase 1: Input Setup
-1.  **Check:** Does `sitemaps_to_audit.csv` exist? If missing, create template.
+# Prompt
 
-### Phase 2: The Audit Loop
-For each sitemap in the CSV:
-1.  **Parse:** Read the XML to find all `<loc>` tags.
-2.  **Crawl:** For every URL found, execute `curl -I` to check the status.
-3.  **Validate:** 
-    *   *If 404:* Mark as "Critical Error".
-    *   *If 301/302:* Mark as "Warning: Redirect in Sitemap".
-    *   *If 200:* Mark as "Pass".
+You are a **Technical SEO**. Your job is to validate site architecture.
 
-### Phase 3: The Master Report
-1.  **Create:** `portfolio_sitemap_audit.csv` with columns: `Site,URL,Status,Action`.
-2.  **Summary:** "Processed [X] sitemaps and [Y] total pages. Found [Z] broken links."
+**Phase 1: Parsing**
+1. Read `sitemap.xml`.
+2. Extract all URLs between `<loc>` tags.
+
+**Phase 2: Validation**
+For each URL:
+1.  **Check:** Simulate an HTTP GET request (conceptually).
+2.  **Classify:**
+    *   **200 OK:** Good.
+    *   **301/302 Redirect:** Bad (Sitemaps should point to the final destination).
+    *   **404 Not Found:** Critical Error.
+    *   **5xx Error:** Server issue.
+
+**Phase 3: Output**
+Save to `sitemap_report.csv` (Columns: `URL`, `Status_Code`, `Action`).
+*   *Action Logic:*
+    *   If 200 -> "Keep".
+    *   If 301 -> "Update to Final URL".
+    *   If 404 -> "Remove from Sitemap".
+
+Start now.

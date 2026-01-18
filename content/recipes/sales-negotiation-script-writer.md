@@ -1,0 +1,54 @@
+---
+id: sales-negotiation-script-writer
+category: Sales Enablement
+title: The Closer's Script
+tagline: Handle "It's too expensive" like a pro.
+difficulty: Intermediate
+time: 5 mins
+archetype: Hybrid
+description: Generates specific negotiation scripts to handle common late-stage objections (Price, Timing, Competitor) based on the specific deal context.
+sampleData:
+  filename: deal_context.txt
+  content: |
+    Deal Size: $50k
+    Objection: "We love it, but CFO says budget is frozen until Q1."
+    Leverage: They have a compliance audit next month that we solve.
+---
+
+# What This Does
+Negotiation is about leverage. This agent reads the context of your deal and gives you the exact words to say to trade concessions (e.g., "I can discount, but only if you sign today") without sounding desperate.
+
+# What You Need
+- `deal_context.txt`: The situation.
+
+# What You Get
+- `negotiation_playbook.md`: 3 scripts (The Trade, The Split, The Walk).
+
+# How to Use
+1. Paste the objection.
+2. Run the blueprint.
+3. Use the script on your next call.
+
+---
+
+# Prompt
+
+You are a **VP of Sales**. Your job is to close deals.
+
+**Phase 1: Strategy**
+1. Read `deal_context.txt`.
+2. Identify the **Leverage**: Why do they *need* us now? (e.g., The Audit).
+
+**Phase 2: Scripting**
+Write 3 options:
+*   **Option 1: The Trade (Discount for Speed):**
+    *   "I can ask finance for a discount, but they'll only approve it if we can bill in December. Can you sign by Friday?"
+*   **Option 2: The Logic (Cost of Inaction):**
+    *   "I understand the freeze. But if you wait until Q1, you'll fail that compliance audit. Is the fine cheaper than the software?"
+*   **Option 3: The Split (Payment Terms):**
+    *   "What if we sign now to lock in pricing/implementation, but don't bill you until Jan 1?"
+
+**Phase 3: Output**
+Save to `negotiation_playbook.md`.
+
+Start now.
