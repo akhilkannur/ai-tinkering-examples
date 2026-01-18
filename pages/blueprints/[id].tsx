@@ -241,23 +241,25 @@ Downloaded from RealAIExamples.com`;
                         {copied ? 'Copied!' : 'Copy'}
                         </button>
                     </div>
-                    <div className="bg-gray-800/50 px-6 py-2 border-b border-gray-700">
-                       <span className="text-[10px] text-gray-400 uppercase tracking-widest font-bold">Bundle Contents:</span>
-                       <div className="flex gap-4 mt-1">
-                          <span className="text-xs text-blue-400 font-mono flex items-center gap-1">
-                            <FileText className="w-3 h-3" /> {recipe.id}.md
-                          </span>
-                          {recipe.sampleData && (
-                            <span className="text-xs text-blue-400 font-mono flex items-center gap-1">
-                              <Package className="w-3 h-3" /> {recipe.sampleData.filename}
-                            </span>
-                          )}
-                          <span className="text-xs text-blue-400 font-mono flex items-center gap-1">
-                            <FileText className="w-3 h-3" /> README.txt
-                          </span>
-                       </div>
-                    </div>
-                    <div className="p-8">
+              )}
+              </div>
+              <div className="bg-gray-800/50 px-6 py-2 border-b border-gray-700">
+                  <span className="text-[10px] text-gray-400 uppercase tracking-widest font-bold">Bundle Contents:</span>
+                  <div className="flex gap-4 mt-1">
+                    <span className="text-xs text-blue-400 font-mono flex items-center gap-1">
+                      <FileText className="w-3 h-3" /> {recipe.id}.md
+                    </span>
+                    {recipe.sampleData && (
+                      <span className="text-xs text-blue-400 font-mono flex items-center gap-1">
+                        <Package className="w-3 h-3" /> {recipe.sampleData.filename}
+                      </span>
+                    )}
+                    <span className="text-xs text-blue-400 font-mono flex items-center gap-1">
+                      <FileText className="w-3 h-3" /> README.txt
+                    </span>
+                  </div>
+              </div>
+              <div className="p-8">
                 <pre className="font-mono text-base text-blue-300 whitespace-pre-wrap leading-relaxed">
                     {publicBlueprint}
                     {!isLocked && privateBlueprint}
