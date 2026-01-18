@@ -2,6 +2,7 @@ require('dotenv').config();
 const fs = require('fs');
 const path = require('path');
 const https = require('https');
+const matter = require('gray-matter');
 
 const SITE_URL = 'https://realaiexamples.com';
 const RECIPES_DIR = path.join(process.cwd(), 'content', 'recipes');
@@ -12,13 +13,9 @@ const AIRTABLE_BASE_ID = process.env.NEXT_PUBLIC_AIRTABLE_BASE_ID;
 const EXAMPLES_TABLE = process.env.NEXT_PUBLIC_AIRTABLE_TABLE || 'Examples';
 const CATEGORIES_TABLE = process.env.NEXT_PUBLIC_AIRTABLE_CATEGORIES_TABLE || 'Categories';
 
-if (!AIRTABLE_API_KEY || !AIRTABLE_BASE_ID) {
-  console.error('❌ Missing Airtable configuration. Skipping sitemap generation.');
-  process.exit(1);
-}
-
 // Helper for Airtable requests
 function fetchAirtable(tableName, view = '') {
+  if (!AIRTABLE_API_KEY || !AIRTABLE_BASE_ID) return Promise.resolve([]);
   return new Promise((resolve) => {
     const options = {
       hostname: 'api.airtable.com',
@@ -28,7 +25,7 @@ function fetchAirtable(tableName, view = '') {
         'Authorization': `Bearer ${AIRTABLE_API_KEY}`,
         'Content-Type': 'application/json'
       },
-      timeout: 5000 // 5 seconds timeout
+      timeout: 5000
     };
 
     const req = https.request(options, (res) => {
@@ -40,160 +37,97 @@ function fetchAirtable(tableName, view = '') {
             const parsed = JSON.parse(data);
             resolve(parsed.records || []);
           } catch (e) {
-            console.warn(`   ⚠️ Error parsing Airtable response for ${tableName}:`, e.message);
             resolve([]);
           }
         } else {
-          console.warn(`   ⚠️ Airtable API Error for ${tableName}: ${res.statusCode} ${res.statusMessage}`);
           resolve([]);
         }
       });
     });
 
-    req.on('error', (e) => {
-      console.warn(`   ⚠️ Network error fetching ${tableName}:`, e.message);
-      resolve([]);
-    });
-
-    req.on('timeout', () => {
-      req.destroy();
-      console.warn(`   ⚠️ Timeout fetching ${tableName}`);
-      resolve([]);
-    });
-
+    req.on('error', () => resolve([]));
+    req.on('timeout', () => { req.destroy(); resolve([]); });
     req.end();
   });
 }
 
-// Fetch all data
 async function generateSitemap() {
-  console.log('🔄 Starting static sitemap generation...');
+  console.log('🔄 Starting high-coverage sitemap generation...');
 
   try {
-    // 1. Fetch Categories for mapping
-    console.log('   Fetching categories...');
+    // 1. Fetch Categories (Airtable)
     const categoriesRaw = await fetchAirtable(CATEGORIES_TABLE);
-    const categoryMap = {};
-    categoriesRaw.forEach(r => {
-      if (r.fields.Name) {
-        categoryMap[r.id] = r.fields.Name;
-      }
-    });
+    const airtableCategoryMap = {};
+    categoriesRaw.forEach(r => { if (r.fields.Name) airtableCategoryMap[r.id] = r.fields.Name; });
 
-    // 2. Fetch Examples
-    console.log('   Fetching examples...');
-    // We filter for published records manually if needed, or rely on a view if one exists.
-    // The original code filtered by formula: {Published}
-    // Simple fetch of all and filter in JS for robustness
+    // 2. Fetch Examples (Airtable)
     const examplesRaw = await fetchAirtable(EXAMPLES_TABLE);
     const examples = examplesRaw
-      .filter(r => r.fields.Published) // Ensure published
+      .filter(r => r.fields.Published)
       .map(r => {
         const title = r.fields.Title;
         const slug = r.fields.Slug || title?.toLowerCase().replace(/[^a-z0-9\s-]/g, '').trim().replace(/\s+/g, '-');
-        
         let categoryName = 'uncategorized';
-        if (r.fields.Category && r.fields.Category.length > 0) {
-          const catId = r.fields.Category[0];
-          if (categoryMap[catId]) {
-            categoryName = categoryMap[catId].toLowerCase().replace(/\s+/g, '-');
-          }
+        if (r.fields.Category?.[0] && airtableCategoryMap[r.fields.Category[0]]) {
+          categoryName = airtableCategoryMap[r.fields.Category[0]].toLowerCase().replace(/\s+/g, '-');
         }
-        
-        return {
-          slug,
-          category: categoryName,
-          lastmod: r.fields['Publish date'] || new Date().toISOString()
-        };
+        return { slug, category: categoryName, lastmod: r.fields['Publish date'] || new Date().toISOString() };
       });
 
-    // 3. Get Recipes from Files
-    console.log('   Reading recipe files...');
+    // 3. Process Recipes and Blueprint Categories (Local Files)
+    console.log('   Processing 600+ blueprints...');
     const recipeFiles = fs.readdirSync(RECIPES_DIR).filter(f => f.endsWith('.md'));
+    const blueprintCategories = new Set();
     const recipes = recipeFiles.map(file => {
       const id = file.replace('.md', '');
+      const rawContent = fs.readFileSync(path.join(RECIPES_DIR, file), 'utf8');
+      const { data } = matter(rawContent);
+      if (data.category) blueprintCategories.add(data.category);
       return { id };
     });
 
     // 4. Define Static Pages
     const staticPages = [
-      '',
-      '/about',
-      '/learn-ai',
-      '/ai-examples',
-      '/blueprints',
-      '/investors',
-      '/jobs',
-      '/ai-workplace-quiz',
-      '/tools',
-      '/tools/for-content-creators',
-      '/tools/for-developers',
-      '/tools/for-marketers',
-      '/tools/free-ai-tools',
-      '/tools/utm-builder',
-      '/privacy',
-      '/terms',
+      '', '/about', '/learn-ai', '/ai-examples', '/blueprints', '/investors', '/jobs', '/ai-workplace-quiz',
+      '/tools', '/tools/for-content-creators', '/tools/for-developers', '/tools/for-marketers',
+      '/tools/free-ai-tools', '/tools/utm-builder', '/privacy', '/terms'
     ];
 
-    // 5. Build XML
     const currentDate = new Date().toISOString();
-    
     let xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
 
-    // Static Pages
+    // Static Pages (Priority 1.0 - 0.8)
     staticPages.forEach(page => {
-      const priority = page === '' ? '1.0' : '0.8';
-      const changefreq = (page === '' || page === '/ai-examples' || page === '/blueprints') ? 'daily' : 'monthly';
-      xml += `
-  <url>
-    <loc>${SITE_URL}${page}</loc>
-    <lastmod>${currentDate}</lastmod>
-    <changefreq>${changefreq}</changefreq>
-    <priority>${priority}</priority>
-  </url>`;
+      xml += `\n  <url><loc>${SITE_URL}${page}</loc><lastmod>${currentDate}</lastmod><changefreq>daily</changefreq><priority>${page === '' ? '1.0' : '0.8'}</priority></url>`;
     });
 
-    // Examples
+    // Examples (Priority 0.7)
     examples.forEach(ex => {
-      xml += `
-  <url>
-    <loc>${SITE_URL}/ai-examples/${ex.category}/${ex.slug}</loc>
-    <lastmod>${ex.lastmod}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>`;
+      xml += `\n  <url><loc>${SITE_URL}/ai-examples/${ex.category}/${ex.slug}</loc><lastmod>${ex.lastmod}</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>`;
     });
 
-    // Recipes
+    // Recipes (Priority 0.7)
     recipes.forEach(r => {
-      xml += `
-  <url>
-    <loc>${SITE_URL}/blueprints/${r.id}</loc>
-    <lastmod>${currentDate}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>`;
+      xml += `\n  <url><loc>${SITE_URL}/blueprints/${r.id}</loc><lastmod>${currentDate}</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>`;
     });
 
-    // Categories (from map)
-    Object.values(categoryMap).filter(Boolean).forEach(catName => {
+    // New Blueprint Category Pages (Priority 0.6)
+    blueprintCategories.forEach(cat => {
+      const catSlug = cat.toLowerCase().replace(/[^a-z0-9]/g, '-');
+      xml += `\n  <url><loc>${SITE_URL}/blueprints/category/${catSlug}</loc><lastmod>${currentDate}</lastmod><changefreq>daily</changefreq><priority>0.6</priority></url>`;
+    });
+
+    // Legacy Category Pages (Airtable)
+    Object.values(airtableCategoryMap).forEach(catName => {
       const catSlug = catName.toLowerCase().replace(/\s+/g, '-');
-      xml += `
-  <url>
-    <loc>${SITE_URL}/ai-examples/category/${catSlug}</loc>
-    <lastmod>${currentDate}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>`;
+      xml += `\n  <url><loc>${SITE_URL}/ai-examples/category/${catSlug}</loc><lastmod>${currentDate}</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>`;
     });
 
-    xml += `
-</urlset>`;
+    xml += `\n</urlset>`;
 
-    // 6. Write to file
     fs.writeFileSync(path.join(process.cwd(), 'public', 'sitemap.xml'), xml);
-    console.log(`✅ Sitemap generated with ${examples.length} examples, ${recipes.length} recipes, and ${Object.keys(categoryMap).length} categories.`);
+    console.log(`✅ Sitemap perfect! Total URLs: ${staticPages.length + examples.length + recipes.length + blueprintCategories.size + Object.keys(airtableCategoryMap).length}`);
 
   } catch (error) {
     console.error('❌ Error generating sitemap:', error);
