@@ -2,7 +2,7 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { ArrowLeft, Terminal, Copy, Check, Download, FileText, Cpu, BookOpen, Lock, Crown, Key, ArrowRight, X, Package } from 'lucide-react';
+import { ArrowLeft, Terminal, Copy, Check, Download, FileText, Cpu, BookOpen, Lock, Crown, Key, ArrowRight, X, Package, ShieldCheck } from 'lucide-react';
 import Navbar from '../../components/Navbar';
 import { getAllRecipes } from '../../lib/recipes';
 import { Recipe, categoryIcons } from '../../lib/cookbook-data';
@@ -134,7 +134,7 @@ Downloaded from RealAIExamples.com`;
   return (
     <div className="flex flex-col min-h-screen bg-white">
       <Head>
-        <title>{recipe.title} | AI Agent Blueprint | Terminal Cookbook</title>
+        <title>{recipe.title} | AI Agent Blueprint | Real AI Examples</title>
         <meta name="description" content={recipe.description} key="description" />
         <meta property="og:title" content={`${recipe.title} | AI Agent Blueprint`} key="og:title" />
         <meta property="og:description" content={recipe.description} key="og:description" />
