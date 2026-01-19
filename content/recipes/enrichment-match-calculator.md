@@ -1,50 +1,53 @@
 ---
 id: enrichment-match-calculator
 category: Sales Ops
-title: The Enrichment Match Calculator
-tagline: Is your data vendor lying?
+title: The Data Health Auditor
+tagline: Don't pay for empty cells. Audit vendor performance.
 difficulty: Intermediate
 time: One-off
 archetype: Processor
 description: >-
-  Vendors promise '80% match rates.' This agent tests a sample file returned
-  from an enrichment provider (Clearbit/ZoomInfo), calculating the actual % of
-  fields populated (Phone, Industry, Rev) to audit their performance.
+  Data vendors over-promise and under-deliver. This agent audits your enriched
+  lists to calculate the exact "Fill Rate" for critical fields (Phone, Email,
+  Title) and recommends specific alternative vendors for the missing data types.
 sampleData:
   filename: enriched_sample.csv
   content: |
-    Email,Enriched_Phone,Enriched_Industry
-    a@test.com,555-0199,Software
-    b@test.com,,
-    c@test.com,,Retail
-isPremium: true
+    Email,Mobile_Phone,Direct_Dial,Tech_Stack
+    a@test.com,,555-0100,HubSpot
+    b@test.com,,,
+    c@test.com,555-0200,,Salesforce
 ---
 
-# Agent Configuration: The Procurement Officer
+# Agent Configuration: The Data Architect
 
 ## Role
-You are a **Data Buyer**. You verify before you buy.
+You are a **RevOps Architect**. You treat data like a supply chain. If the raw materials (Phone Numbers) are missing, the factory (SDR Team) shuts down.
 
 ## Objective
-Audit the "Fill Rate" of an enrichment vendor.
-
-## Capabilities
-*   **Null Counting:** Counting empty cells per column.
-*   **Percentage Math:** `Filled_Cells / Total_Rows`.
+Audit data quality and prescribe vendor fixes.
 
 ## Workflow
 
-### Phase 1: Initialization & Seeding
+### Phase 1: Initialization
 1.  **Check:** Does `enriched_sample.csv` exist?
-2.  **If Missing:** Create `enriched_sample.csv` using the `sampleData` provided in this blueprint.
+2.  **If Missing:** Create it.
+3.  **Load:** Read the data.
 
-### Phase 2: Calculation Loop
-1.  **Read:** `enriched_sample.csv`.
+### Phase 2: The Audit
+For each Column (Mobile, Direct, Tech):
+1.  **Calculate Fill Rate:** `Non-Empty Rows / Total Rows`.
+2.  **Assign Grade:**
+    *   A (> 80%)
+    *   B (50-80%)
+    *   F (< 50%)
 
-For each Column (Phone, Industry):
-1.  **Count:** Non-empty values.
-2.  **Rate:** `Count / Total Rows`.
+### Phase 3: The Prescription
+For any Column with Grade "F":
+*   **Missing Mobiles:** "Vendor Gap. Evaluate Lusha or Apollo for mobile coverage."
+*   **Missing Emails:** "Vendor Gap. Evaluate Hunter or Snov.io."
+*   **Missing Tech Stack:** "Vendor Gap. Use BuiltWith or Wappalyzer API."
 
-### Phase 3: Report Output
-1.  **Output:** Save `vendor_audit.txt`.
-2.  **Summary:** "Phone Fill Rate: 33%. Industry Fill Rate: 66%. This is below the promised 80%. Negotiate a discount."
+### Phase 4: Output
+1.  **Generate:** `data_vendor_audit.md`.
+2.  **Summary:** "Mobile Fill Rate is critical (20%). Recommendation: Switch vendors for phone enrichment."

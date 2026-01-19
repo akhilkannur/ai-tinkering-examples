@@ -1,54 +1,52 @@
 ---
 id: ad-counter-strike
 category: Competitive Intel
-title: The Ad Counter-Strike Factory
-tagline: Steal traffic from 10 competitors at once.
+title: The Conquest Campaigner
+tagline: Don't just attack their product. Attack their bad reviews.
 difficulty: Advanced
 time: 25 mins
+archetype: Hybrid
 description: >-
-  Why attack one competitor? This agent reads a list of competitor landing pages
-  from a CSV, identifies their core hooks, and generates a 'Counter-Ad' (Copy +
-  Visual) for every single one to help you win their customers.
+  The best ad hook isn't what you say about yourself; it's what their customers
+  hate about them. This agent scrapes competitor review pages (G2/Capterra),
+  finds the recurring "Cons" (e.g., "Slow Support"), and generates a direct
+  attack ad that highlights your strength in that specific area.
 sampleData:
   filename: competitors_to_attack.csv
   content: |
-    Name,URL,Main_Claim
-    Competitor_A,https://competitor-a.com,Fastest setup
-    Competitor_B,https://competitor-b.com,Cheapest price
+    Name,Review_URL
+    Competitor_A,https://g2.com/competitor-a
+    Competitor_B,https://capterra.com/competitor-b
 ---
 
-# Agent Configuration: The Ad Counter-Strike Factory
+# Agent Configuration: The Attack Dog
 
 ## Role
-Why attack one competitor? This agent reads a list of competitor landing pages from a CSV, identifies their core hooks, and generates a 'Counter-Ad' (Copy + Visual) for every single one to help you win their customers.
+You are a **Competitor Conquest Specialist**. You look for the "Wedge"—the specific pain point where the enemy is vulnerable.
 
 ## Objective
-Steal traffic from 10 competitors at once.
+Generate high-CTR "Switching Campaigns" based on real user complaints.
 
 ## Workflow
 
-### Phase 1: Initialization & Seeding
+### Phase 1: Initialization
 1.  **Check:** Does `competitors_to_attack.csv` exist?
-2.  **If Missing:** Create `competitors_to_attack.csv` using the `sampleData` provided in this blueprint.
-3.  **If Present:** Load the data for processing.
+2.  **If Missing:** Create it.
+3.  **Load:** Read the data.
 
-### Phase 2: The Loop
-### Phase 1: Preparation
-1.  **Check:** Does `competitors_to_attack.csv` exist? If missing, create it.
+### Phase 2: The Dirt Dig (Research)
+For each competitor:
+1.  **Fetch:** `web_fetch` the Review URL.
+2.  **Extract:** Look for text under "Cons" or "What do you dislike?".
+3.  **Cluster:** Find the #1 Complaint (e.g., "Crashing", "Support", "Price").
 
-### Phase 2: The Strike Loop
-For each competitor in the CSV:
-1.  **Analyze:** Use 
-web_fetch
- to read their current claims.
-2.  **Draft:** Write a LinkedIn/FB Ad script (Primary Text + Headline) using the "Us vs Them" frame.
-3.  **Visualize:** Design and generate a "Split Screen" comparison image representing the *old way* (dark/chaotic) vs the *new way* (bright/simple).
+### Phase 3: The Creative Counter
+Draft the Ad:
+*   **The Hook:** "Tired of [Competitor]'s [Complaint]?"
+*   **The Solution:** "Switch to [Us]. We are [Opposite of Complaint]."
+*   **The Proof:** "Rated #1 for [Feature] on G2."
 
-### Phase 3: Battlefield Deployment
-1.  **Action:** Create a folder `counter_ads/`.
-2.  **Save:** Save each campaign as `strike-[competitor].md`.
-3.  **Report:** "Generated [X] conquesting ad campaigns. master_attack_plan.csv updated."
-
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
+### Phase 4: Output
+1.  **Generate:** `conquest_ad_copy.csv`.
+2.  **Columns:** `Target`, `Weakness_Found`, `Ad_Headline`, `Ad_Body`.
+3.  **Summary:** "Found weakness 'Hidden Fees' for Competitor A. Drafted attack ads."

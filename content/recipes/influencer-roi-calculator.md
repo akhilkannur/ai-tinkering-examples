@@ -1,51 +1,49 @@
 ---
 id: influencer-roi-calculator
 category: Strategic Ops
-title: The Influencer ROI Calculator
-tagline: Did that shoutout actually pay off?
+title: The Creator Economy Auditor
+tagline: Separate the 'Performers' from the 'Posers'.
 difficulty: Beginner
 time: Campaign End
 archetype: Processor
 description: >-
-  Influencers promise 'Brand Awareness,' but you want sales. This agent
-  calculates the true ROI by combining 'Direct Revenue' (Codes) + 'Media Value'
-  (CPM equivalent) to grade each creator.
+  Vanity metrics (Likes) rarely correlate with Wallet metrics (Sales). This agent
+  analyzes your influencer roster to classify them into "Brand Awareness Plays"
+  vs "Sales Drivers," helping you cut the dead weight.
 sampleData:
-  filename: influencer_results.csv
+  filename: influencer_performance.csv
   content: |
-    Influencer,Cost,Code_Sales,Impressions,Niche_CPM
-    JaneDoe,500,200,10000,20
-    JohnSmith,1000,1500,50000,15
-isPremium: true
+    Influencer,Cost,Sales,Engagement_Rate,Impressions
+    TikTokStar,5000,200,0.15,1000000
+    NicheBlogger,500,2000,0.05,5000
 ---
 
 # Agent Configuration: The CFO
 
 ## Role
-You are a **Marketing Director**. You don't pay for vanity metrics. You need to justify the influencer budget.
+You are a **Marketing Director**. You don't pay for "Vibes". You optimize the portfolio for blended ROI.
 
 ## Objective
-Calculate a composite ROI for influencer collaborations.
-
-## Capabilities
-*   **EMV Calculation:** `(Impressions / 1000) * CPM`.
-*   **Total Return:** `Sales + EMV`.
-*   **ROI Math:** `(Return - Cost) / Cost`.
+Classify influencers by their actual business impact.
 
 ## Workflow
 
-### Phase 1: Initialization & Seeding
-1.  **Check:** Does `influencer_results.csv` exist?
-2.  **If Missing:** Create `influencer_results.csv` using the `sampleData` provided in this blueprint.
+### Phase 1: Initialization
+1.  **Check:** Does `influencer_performance.csv` exist?
+2.  **If Missing:** Create it.
+3.  **Load:** Read the data.
 
-### Phase 2: ROI Loop
-Create `influencer_scorecard.csv`.
+### Phase 2: The Matrix
+For each Influencer:
+1.  **Calculate ROAS:** `Sales / Cost`.
+2.  **Calculate CPM:** `Cost / (Impressions/1000)`.
+3.  **Classify:**
+    *   **The Unicorn:** High ROAS (>3x) + High Engagement. *Action: Retain + Bonus.*
+    *   **The Billboard:** Low ROAS (<1x) + Cheap CPM (<$10). *Action: Keep for Brand Awareness.*
+    *   **The Money Pit:** Low ROAS + Expensive CPM. *Action: Terminate.*
+    *   **The Sniper:** High ROAS + Low Reach. *Action: Clone (find lookalikes).*
 
-For each Influencer in `influencer_results.csv`:
-1.  **Calc Media Value:** `(Impressions / 1000) * CPM`.
-2.  **Total Value:** `Code_Sales + Media_Value`.
-3.  **ROI:** `(Total Value - Cost) / Cost`.
-
-### Phase 3: Grading Output
-1.  **Output:** Save `influencer_scorecard.csv` sorted by ROI.
-2.  **Summary:** "JaneDoe failed (ROI -X%). JohnSmith is a star (ROI +50%). Renew John, drop Jane."
+### Phase 3: Output
+1.  **Generate:** `influencer_portfolio_audit.csv`.
+2.  **Columns:** `Influencer`, `Role_in_Portfolio`, `Action`.
+3.  **Summary:** "Portfolio Analysis: [X] unicorns found. [Y] money pits identified for termination."
