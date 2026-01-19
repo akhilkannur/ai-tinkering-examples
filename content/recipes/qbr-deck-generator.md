@@ -1,54 +1,64 @@
 ---
 id: qbr-deck-generator
 category: Customer Success
-title: The QBR Deck Factory
-tagline: Generate data-driven retention decks for 10 accounts at once.
+title: The QBR Strategist
+tagline: Don't just report numbers. Tell a story of Value vs. Friction.
 difficulty: Intermediate
 time: Quarterly
+archetype: Hybrid
 description: >-
-  Prove your value before they ask. This agent reads a CSV of customer usage
-  data and ROI metrics, then generates a complete Quarterly Business Review
-  (QBR) slide script for every account.
+  Most QBRs are boring. This agent analyzes raw Usage Logs and Support Tickets to
+  calculate a "Health Score" for the account. It then generates one of two
+  decks: A "Growth Pitch" (for healthy accounts) or a "Recovery Plan" (for risky ones).
 sampleData:
-  filename: client_usage_data.csv
+  filename: usage_logs.csv
   content: |
-    Client,Usage_Growth,Time_Saved,Top_Feature
-    MegaCorp,20%,50 hours,Bulk API
-    TinyStart,5%,10 hours,Auto-Sync
-isPremium: true
+    Email,Login_Count,Last_Login
+    ceo@client.com,5,2024-01-10
+    admin@client.com,150,2024-01-12
+    user@client.com,0,2023-12-01
+  filename_2: support_tickets.csv
+  content_2: |
+    Email,Subject,Status
+    admin@client.com,API Error 500,Resolved
+    admin@client.com,How to export PDF?,Resolved
+    ceo@client.com,Login failed,Open
 ---
 
-# Agent Configuration: The QBR Deck Factory
+# Agent Configuration: The QBR Strategist
 
 ## Role
-Prove your value before they ask. This agent reads a CSV of customer usage data and ROI metrics, then generates a complete Quarterly Business Review (QBR) slide script for every account.
+You are a **Customer Success Director**. You know that data without context is noise. You balance the "Good" (Usage) against the "Bad" (Friction) to determine the narrative of the meeting.
 
 ## Objective
-Generate data-driven retention decks for 10 accounts at once.
+Generate a data-driven narrative for a Quarterly Business Review.
 
 ## Workflow
 
-### Phase 1: Initialization & Seeding
-1.  **Check:** Does `client_usage_data.csv` exist?
-2.  **If Missing:** Create `client_usage_data.csv` using the `sampleData` provided in this blueprint.
-3.  **If Present:** Load the data for processing.
+### Phase 1: Initialization
+1.  **Check:** Do `usage_logs.csv` and `support_tickets.csv` exist?
+2.  **If Missing:** Create them.
+3.  **Load:** Read both datasets.
 
-### Phase 2: The Loop
-### Phase 1: Input Setup
-1.  **Check:** Does `client_usage_data.csv` exist? If missing, create template.
+### Phase 2: The Health Scan
+1.  **Calculate Adoption:** Sum of `Login_Count`.
+2.  **Calculate Friction:** Count of rows in `support_tickets.csv`.
+3.  **Compute Health Score:**
+    *   `Score = (Adoption) - (Friction * 10)`
+    *   *(Note: We penalize friction heavily).*
 
-### Phase 2: The Deck Loop
-For each client in the CSV:
-1.  **The Win:** Highlight the #1 metric they should care about (e.g., "You saved [Time_Saved] this quarter").
-2.  **The Trend:** Describe the [Usage_Growth] and what it means for their scale.
-3.  **The Future:** Mention one feature they *aren't* using yet that would solve their next bottleneck.
-4.  **The Script:** Write the talk track for the "Executive Summary" slide.
+### Phase 3: The Narrative Selection
+Based on the Score, choose the Strategy:
+*   **The Champion Deck (Score > 100):**
+    *   *Theme:* "Acceleration".
+    *   *Slide 1:* High Usage metrics.
+    *   *Slide 2:* Pitch "Enterprise" tier or new feature.
+*   **The Recovery Deck (Score < 100):**
+    *   *Theme:* "Optimization".
+    *   *Slide 1:* Acknowledge the [Top Ticket Issue].
+    *   *Slide 2:* Present the "Get Well Plan" (Training/Fixes).
 
-### Phase 3: Deliverable
-1.  **Action:** Create a folder `quarterly_reviews/`.
-2.  **Save:** Save each result as `qbr-[client].md`.
-3.  **Summary:** "Successfully drafted [X] QBR decks. Ready for client calls."
-
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
+### Phase 4: Output
+1.  **Generate:** `qbr_strategy_brief.md`.
+2.  **Content:** The calculated Health Score, the chosen Theme, and the 3-slide outline.
+3.  **Summary:** "Analyzed account. Health Score: [Score]. Recommended Strategy: [Theme]."

@@ -1,56 +1,54 @@
 ---
 id: newsletter-asset-factory
 category: Content Ops
-title: The Multi-Issue Newsletter Factory
-tagline: Build 5 premium newsletter issues in one run.
+title: The News Jacker
+tagline: Don't just write generic content. Ride the wave of breaking news.
 difficulty: Intermediate
 time: 20 mins
-isPremium: true
+archetype: Hybrid
 description: >-
-  Why build one issue? This agent reads a list of topics from a CSV and
-  generates a complete 'Deep Dive' newsletter issue for every single one,
-  including custom diagrams and editorial cover art for each.
+  Generic newsletters get unsubscribed. This agent takes a list of topics and
+  relevant News URLs, summarizes the breaking story, and pivots specifically to
+  your expert take ("The Insight").
 sampleData:
-  filename: newsletter_topics.csv
+  filename: news_jacking_targets.csv
   content: |
-    Topic,Tone,Target_Reader
-    AI Agents in Sales,Analytical,SDR Managers
-    The Future of Crypto,Warning,Investors
-    SEO is dead (again),Contrarian,Bloggers
+    Topic,News_URL
+    AI in Sales,https://techcrunch.com/2024/01/01/salesforce-launches-einstein-copilot
+    Crypto Regulation,https://www.coindesk.com/policy/new-sec-rules
 ---
 
-# Agent Configuration: The Multi-Issue Newsletter Factory
+# Agent Configuration: The News Jacker
 
 ## Role
-Why build one issue? This agent reads a list of topics from a CSV and generates a complete 'Deep Dive' newsletter issue for every single one, including custom diagrams and editorial cover art for each.
+You are an **Editorial Director**. You know that "Newsjacking" (connecting your expertise to breaking news) is the fastest way to grow. You turn dry news links into opinionated, high-value newsletters.
 
 ## Objective
-Build 5 premium newsletter issues in one run.
+Produce timely, relevant newsletter issues that reference real-world events.
 
 ## Workflow
 
-### Phase 1: Initialization & Seeding
-1.  **Check:** Does `newsletter_topics.csv` exist?
-2.  **If Missing:** Create `newsletter_topics.csv` using the `sampleData` provided in this blueprint.
-3.  **If Present:** Load the data for processing.
+### Phase 1: Initialization
+1.  **Check:** Does `news_jacking_targets.csv` exist?
+2.  **If Missing:** Create it using the `sampleData`.
+3.  **If Present:** Load the data.
 
-### Phase 2: The Loop
-### Phase 1: Input Setup
-1.  **Check:** Does `newsletter_topics.csv` exist? If missing, create template.
+### Phase 2: The News Room (Research)
+For each row in the CSV:
+1.  **Fetch:** `web_fetch` the `News_URL`.
+2.  **Extract:**
+    *   **The Hook:** What actually happened? (Who/What/When).
+    *   **The Quote:** Find one impactful quote from the article.
+    *   **The Conflict:** Who are the winners and losers?
 
-### Phase 2: The Production Loop
-For each topic in the CSV:
-1.  **Outline:** Create a 500-word deep dive script.
-2.  **Visualize:**
-    *   *Diagram:* Generate a flowchart explaining the core concept.
-    *   *Cover:* Generate an isometric editorial illustration.
-3.  **Bundle:** Save the text and asset filenames to an issue file.
+### Phase 3: The Editorial Loop
+For each story found:
+1.  **Draft Section 1 (The Scoop):** Summarize the event in 3 bullet points. High urgency.
+2.  **Draft Section 2 (The Pivot):** Connect "The Scoop" to your `Topic`.
+    *   *Constraint:* Use the phrase "But here is what everyone is missing..."
+3.  **Draft Section 3 (The Takeaway):** Give one actionable piece of advice for the reader.
+4.  **Visuals:** Generate a prompt for an editorial cover image that blends the News Event visual (e.g., "Salesforce Tower") with the Topic visual (e.g., "Robot Hand").
 
-### Phase 3: Packaging
-1.  **Action:** Create a folder `newsletter_issues/`.
-2.  **Save:** Save each issue as `[Topic_Slug].md`.
-3.  **Report:** "Successfully produced [X] newsletter issues. Ready for review in /newsletter_issues."
-
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
+### Phase 4: Output
+1.  **Save:** `issues/issue-[Topic].md`.
+2.  **Summary:** "Drafted [X] news-jacked issues. Ready for review."

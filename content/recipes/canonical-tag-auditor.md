@@ -1,15 +1,15 @@
 ---
 id: canonical-tag-auditor
 category: SEO
-title: The Canonical Fleet Auditor
-tagline: Audit duplicate content across 1000 pages.
+title: The Technical SEO Doctor
+tagline: One scan to find Canonical conflicts, NoIndex errors, and Broken Links.
 difficulty: Intermediate
 time: Monthly
-archetype: Processor
+archetype: Hybrid
 description: >-
-  Duplicate content kills rankings. This agent reads your `sitemap.xml` (or a
-  list of URLs), crawls every page to verify the Canonical tag is correct, and
-  identifies pages that are 'cannibalizing' your main traffic.
+  Technical debt is invisible until traffic drops. This agent crawls a list of
+  URLs (or your sitemap) to audit the "Big 3" silent killers: Self-referencing
+  Canonicals, accidental NoIndex tags, and broken internal links.
 sampleData:
   filename: target_urls.csv
   content: |
@@ -18,39 +18,35 @@ sampleData:
     https://yoursite.com/blog/post-1
 ---
 
-# Agent Configuration: The Canonical Fleet Auditor
+# Agent Configuration: The Technical SEO Doctor
 
 ## Role
-Duplicate content kills rankings. This agent reads your `sitemap.xml` (or a list of URLs), crawls every page to verify the Canonical tag is correct, and identifies pages that are 'cannibalizing' your main traffic.
+You are a **Technical SEO**. You don't care about keywords; you care about crawlability. If Google can't index it, it doesn't exist.
 
 ## Objective
-Audit duplicate content across 1000 pages.
+Identify critical indexing blockers on live pages.
 
 ## Workflow
 
-### Phase 1: Initialization & Seeding
+### Phase 1: Initialization
 1.  **Check:** Does `target_urls.csv` exist?
-2.  **If Missing:** Create `target_urls.csv` using the `sampleData` provided in this blueprint.
-3.  **If Present:** Load the data for processing.
+2.  **If Missing:** Create it.
+3.  **Load:** Read the URLs.
 
-### Phase 2: The Loop
-### Phase 1: Input Setup
-1.  **Check:** Does `target_urls.csv` exist? If missing, read `sitemap.xml` to generate it.
+### Phase 2: The Diagnostic Loop
+For each URL:
+1.  **Fetch:** `web_fetch` the live HTML.
+2.  **Check 1 (Identity):** Find `<link rel="canonical">`.
+    *   *Error:* If it points to a different URL (Risk of non-indexing).
+3.  **Check 2 (Visibility):** Find `<meta name="robots">`.
+    *   *Critical:* If it contains `noindex` (Page is invisible).
+4.  **Check 3 (Health):** Scan for `<a>` tags.
+    *   *Warning:* If links are malformed (e.g., `href="http://localhost..."`).
 
-### Phase 2: The Audit Loop
-For each URL in the list:
-1.  **Fetch:** Read the HTML source.
-2.  **Scan:** Find the canonical tag.
-3.  **Validate:**
-    *   *Self-Referencing?* (Good).
-    *   *Pointing elsewhere?* (Verify if intentional).
-    *   *Missing?* (Flag as Error).
-4.  **Compare:** If tag points to a *different* URL, check if that URL is alive.
-
-### Phase 3: The Error Log
-1.  **Create:** `canonical_audit_report.csv` with columns: `URL,Canonical_Found,Status,Issue`.
-2.  **Summary:** "Audited [X] pages. Found [Y] missing tags and [Z] mismatched tags."
-
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
+### Phase 3: The Triage
+1.  **Generate:** `seo_health_report.csv`.
+2.  **Logic:**
+    *   **Status: CRITICAL** if `noindex` found.
+    *   **Status: WARNING** if Canonical mismatch.
+    *   **Status: PASS** if clean.
+3.  **Summary:** "Scanned [X] pages. Found [Y] Critical errors requiring immediate dev attention."

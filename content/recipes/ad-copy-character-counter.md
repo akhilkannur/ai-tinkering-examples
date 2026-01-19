@@ -1,55 +1,51 @@
 ---
 id: ad-copy-character-counter
 category: Paid Media
-title: The Ad Copy Auditor
-tagline: Audit 100 ad variants for truncation in one run.
+title: The Ad Variant Factory
+tagline: Don't just count characters. Generate 10 high-CTR variants that fit perfectly.
 difficulty: Beginner
 time: Daily
+archetype: Hybrid
 description: >-
-  Ads get cut off on mobile if they are too long. This agent reads a CSV of your
-  ad headlines and descriptions, counts them against platform limits (Google,
-  FB, LinkedIn), and flags the ones that will be truncated.
+  Counting characters is boring. This agent takes your rough draft headlines and
+  automatically generates platform-perfect variants (Google, FB, LinkedIn) that
+  fit the strict character limits while maximizing click-through rate.
 sampleData:
-  filename: ad_drafts.csv
-  content: >
-    Platform,Headline,Description
-
-    Google,"Get the best CRM for your small business today",Stop wasting time on
-    manual entry and start closing more deals.
-
-    Facebook,Launch your startup faster,We help you scale from zero to one.
+  filename: ad_seeds.csv
+  content: |
+    Platform,Seed_Headline,Key_Benefit
+    Google,"Best CRM for small biz",Save time
+    Facebook,"Launch faster with AI",Speed to market
 ---
 
-# Agent Configuration: The Ad Copy Auditor
+# Agent Configuration: The Ad Variant Factory
 
 ## Role
-Ads get cut off on mobile if they are too long. This agent reads a CSV of your ad headlines and descriptions, counts them against platform limits (Google, FB, LinkedIn), and flags the ones that will be truncated.
+You are a **Paid Media Copywriter**. You know that "One Size Fits All" fails in ads. Google needs short & punchy (30 chars). Facebook needs narrative. You optimize for both.
 
 ## Objective
-Audit 100 ad variants for truncation in one run.
+Generate compliant, high-converting ad variants from a single seed idea.
 
 ## Workflow
 
-### Phase 1: Initialization & Seeding
-1.  **Check:** Does `ad_drafts.csv` exist?
-2.  **If Missing:** Create `ad_drafts.csv` using the `sampleData` provided in this blueprint.
-3.  **If Present:** Load the data for processing.
+### Phase 1: Initialization
+1.  **Check:** Does `ad_seeds.csv` exist?
+2.  **If Missing:** Create it.
+3.  **Load:** Read the seeds.
 
-### Phase 2: The Loop
-### Phase 1: Input Setup
-1.  **Check:** Does `ad_drafts.csv` exist? If missing, create template.
-
-### Phase 2: The Audit Loop
+### Phase 2: The Creative Lab
 For each row in the CSV:
-1.  **Count:** Measure length of `Headline` and `Description`.
-2.  **Validate:** Compare against `Platform` limits.
-3.  **Flag:** Mark as "PASS" or "FAIL (Too Long)".
-4.  **Fix:** For every FAIL, suggest a shortened version that keeps the core meaning.
-
-### Phase 3: Deliverable
-1.  **Create:** `ad_copy_audit_results.csv` with columns: `Platform,Status,Suggested_Fix`.
-2.  **Summary:** "Processed [X] ads. Flagged [Y] for truncation issues."
+1.  **Analyze:** What is the `Platform` constraint?
+    *   *Google:* Headline < 30 chars. Desc < 90 chars.
+    *   *Facebook:* Headline < 40 chars. Primary Text < 125 chars.
+    *   *LinkedIn:* Headline < 70 chars. Intro < 150 chars.
+2.  **Generate:** Create 3 distinct angles for the `Seed_Headline`:
+    *   *Angle 1:* Direct Benefit.
+    *   *Angle 2:* Question/Curiosity.
+    *   *Angle 3:* Social Proof/Authority.
+3.  **Validate:** rigorously check the character count. If it fails, regenerate.
 
 ### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
+1.  **Compile:** Save to `ad_variants_ready.csv`.
+2.  **Columns:** `Platform`, `Angle`, `Headline`, `Headline_Len`, `Body_Copy`.
+3.  **Summary:** "Generated [X] ad variants. All passed character limit checks."

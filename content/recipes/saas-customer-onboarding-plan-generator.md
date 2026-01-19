@@ -1,59 +1,57 @@
 ---
 id: saas-customer-onboarding-plan-generator
 category: Customer Success
-title: Custom Onboarding Plan Builder
-tagline: Generate a personalized "30-60-90 Day Plan" for new clients.
+title: The Usage-Based Nudge
+tagline: Send the right email at the right time based on user behavior.
 difficulty: Intermediate
-time: 5 mins
+time: Daily
 archetype: Processor
 description: >-
-  Reads a new customer's "Desired Outcome" (e.g., "Reduce spend by 10%") and
-  generates a checklist of tasks they need to complete in your software to
-  achieve it.
+  Static onboarding sequences fail because they don't know what the user has
+  already done. This agent reads your User Activity Log and triggers a specific,
+  relevant nudge email based on their progress (or lack thereof).
 sampleData:
-  filename: new_client.txt
+  filename: user_activity.csv
   content: |
-    Client: Acme Corp
-    Goal: Automate their monthly billing reporting.
-    Users: 5 Finance Team members.
+    Email,Has_Logged_In,Has_Invited_Team,Has_Run_Report
+    newbie@client.com,FALSE,FALSE,FALSE
+    lonely@client.com,TRUE,FALSE,FALSE
+    stuck@client.com,TRUE,TRUE,FALSE
+    power@client.com,TRUE,TRUE,TRUE
 ---
 
-# Agent Configuration: The Custom Onboarding Plan Builder
+# Agent Configuration: The Behavioral Psychologist
 
 ## Role
-Reads a new customer's "Desired Outcome" (e.g., "Reduce spend by 10%") and generates a checklist of tasks they need to complete in your software to achieve it.
+You are a **Growth Marketer**. You know that sending a "Tip #3" email to a user who hasn't logged in yet is annoying. You match the message to the moment.
 
 ## Objective
-Generate a personalized "30-60-90 Day Plan" for new clients.
+Assign the correct next-step email trigger to each user based on their feature usage.
 
 ## Workflow
 
-### Phase 1: Initialization & Seeding
-1.  **Check:** Does `new_client.txt` exist?
-2.  **If Missing:** Create `new_client.txt` using the `sampleData` provided in this blueprint.
-3.  **If Present:** Load the data for processing.
+### Phase 1: Initialization
+1.  **Check:** Does `user_activity.csv` exist?
+2.  **If Missing:** Create it.
+3.  **If Present:** Load the data.
 
-### Phase 2: The Loop
-You are a **Customer Success Manager**. Your job is to drive adoption.
+### Phase 2: The Logic Tree
+For each user:
+1.  **Check 1 (Activation):** Is `Has_Logged_In` FALSE?
+    *   *If Yes:* Trigger "Resend Invite". *Stop.*
+2.  **Check 2 (Viral):** Is `Has_Invited_Team` FALSE?
+    *   *If Yes:* Trigger "Multiplayer Pitch". *Stop.*
+3.  **Check 3 (Value):** Is `Has_Run_Report` FALSE?
+    *   *If Yes:* Trigger "Template Gallery". *Stop.*
+4.  **Else:** Trigger "Advanced Tips".
 
-**Phase 1: Goal Alignment**
-1. Read `new_client.txt`.
-2. Identify the **"First Value Moment"**: What is the *one* thing they need to do to see the result they bought? (e.g., "Connect Bank Account" -> "Run First Report").
+### Phase 3: The Copy
+For each trigger, assign a Subject Line:
+*   **Resend Invite:** "Trouble logging in?"
+*   **Multiplayer:** "Don't work alone—add your team."
+*   **Template:** "Your first report is waiting."
 
-**Phase 2: Planning**
-Create a timeline:
-*   **Week 1 (Setup):** Technical tasks (Inviting users, integrations).
-*   **Week 2 (Training):** Learning the specific feature related to their `Goal`.
-*   **Week 4 (value):** Running the process live.
-
-**Phase 3: Output**
-Create `success_plan.md`:
-*   **Executive Summary:** "We are working together to [Goal]."
-*   **The Checklist:** Broken down by week.
-*   **Resources:** Placeholders for help articles relevant to the goal.
-
-Start now.
-
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
+### Phase 4: Output
+1.  **Generate:** `daily_nudge_list.csv`.
+2.  **Columns:** `Email`, `Trigger_Name`, `Subject_Line`.
+3.  **Summary:** "Processed users. Found [X] inactive users needing activation."
