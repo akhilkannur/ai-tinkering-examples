@@ -37,7 +37,7 @@ export default function AIToolCard({ name, description, url, imageUrl, category,
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className={`group flex flex-col h-full bg-[#0B1221] border ${featured ? 'border-accent/50 shadow-[0_0_20px_-5px_rgba(238,94,62,0.2)]' : 'border-navy-dark hover:border-accent/50 hover:shadow-[0_0_20px_-5px_rgba(238,94,62,0.15)]'} transition-all duration-300 relative overflow-hidden rounded-sm`}
+      className={`group flex flex-col h-full bg-white border ${featured ? 'border-accent/50 shadow-[0_0_20px_-5px_rgba(238,94,62,0.2)]' : 'border-slate-200 hover:border-accent/50 hover:shadow-[0_0_20px_-5px_rgba(238,94,62,0.15)]'} transition-all duration-300 relative overflow-hidden rounded-sm`}
     >
       {featured && (
         <div className="absolute top-0 right-0 bg-accent text-white text-[8px] font-bold px-2 py-0.5 z-20 uppercase tracking-tighter">
@@ -45,8 +45,8 @@ export default function AIToolCard({ name, description, url, imageUrl, category,
         </div>
       )}
       {/* Top Bar: Icon + Action */}
-      <div className="flex items-center justify-between p-4 border-b border-navy-dark/50 bg-secondary-bg/30">
-        <div className="relative w-10 h-10 rounded-sm overflow-hidden border border-navy-dark bg-navy-dark">
+      <div className="flex items-center justify-between p-4 border-b border-slate-100 bg-slate-50">
+        <div className="relative w-10 h-10 rounded-sm overflow-hidden border border-slate-200 bg-white">
           <Image
             src={imgSrc}
             alt={`${name} logo`}
@@ -69,19 +69,19 @@ export default function AIToolCard({ name, description, url, imageUrl, category,
          {/* Subtle Grid Background Effect */}
          <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-[0.03] pointer-events-none" />
 
-         <h3 className="text-base font-headline font-bold text-text-color group-hover:text-accent transition-colors mb-2 tracking-tight">
+         <h3 className="text-base font-headline font-bold text-slate-900 group-hover:text-accent transition-colors mb-2 tracking-tight">
            {name}
          </h3>
          
-         <p className="text-sm text-text-color/80 leading-relaxed line-clamp-3 font-sans opacity-90 group-hover:opacity-100 transition-opacity">
+         <p className="text-sm text-slate-600 leading-relaxed line-clamp-3 font-sans opacity-90 group-hover:opacity-100 transition-opacity">
            {description}
          </p>
       </div>
 
       {/* Footer / Meta (Optional) */}
       {category && (
-        <div className="px-4 py-2 border-t border-navy-dark/50 bg-[#080c16]">
-          <span className="text-[10px] font-sans text-navy-light uppercase tracking-widest">
+        <div className="px-4 py-2 border-t border-slate-100 bg-slate-50">
+          <span className="text-[10px] font-sans text-slate-500 uppercase tracking-widest">
             {category}
           </span>
         </div>

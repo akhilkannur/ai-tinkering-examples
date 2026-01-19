@@ -62,7 +62,7 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
                               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
                               <span className="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
                             </span>
-                            <span>The Global Blueprint Library</span>
+                            <span>The AI Blueprint Library</span>
                         </div>
                         
                         <h1 className="text-5xl md:text-7xl font-headline font-black text-brand-navy mb-6 tracking-tighter leading-[0.9]">
@@ -72,7 +72,7 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
                         
                         <p className="text-xl text-brand-navy/80 mb-10 leading-relaxed max-w-lg">
                             Turn AI Agents into your personal Revenue Ops team. 
-                            <strong> 600+ work-ready blueprints</strong> for Sales, Marketing, and SEO. 
+                            <strong> 600+ work-ready blueprints</strong> for Sales and Marketing. 
                             No coding. Just results.
                         </p>
 

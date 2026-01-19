@@ -67,14 +67,16 @@ export default function Navbar() {
           </div>
           {/* Desktop Submit Button */}
           <div className="hidden md:flex md:items-center">
-            <a
-              href={process.env.NEXT_PUBLIC_AIRTABLE_SUBMIT_FORM_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-5 py-2 border border-transparent rounded-none shadow-none text-sm font-sans font-bold text-electric-blue bg-accent hover:bg-accent-hover transition-all duration-200 hover:shadow-accent-glow"
-            >
-              Submit an Example
-            </a>
+            {router.pathname.startsWith('/ai-examples') && (
+              <a
+                href={process.env.NEXT_PUBLIC_AIRTABLE_SUBMIT_FORM_URL || 'https://airtable.com/appUo7R0la4VUzOoT/shrX1v3Z8z2G7p9Z9'}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-5 py-2 border border-transparent rounded-none shadow-none text-sm font-sans font-bold text-electric-blue bg-accent hover:bg-accent-hover transition-all duration-200 hover:shadow-accent-glow"
+              >
+                Submit an Example
+              </a>
+            )}
           </div>
 
           {/* Mobile menu button */}
@@ -113,15 +115,17 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <a
-              href={process.env.NEXT_PUBLIC_AIRTABLE_SUBMIT_FORM_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block w-full text-center px-3 py-3 rounded-none text-base font-bold text-electric-blue bg-accent hover:bg-accent-hover mt-4"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Submit an Example
-            </a>
+            {router.pathname.startsWith('/ai-examples') && (
+              <a
+                href={process.env.NEXT_PUBLIC_AIRTABLE_SUBMIT_FORM_URL || 'https://airtable.com/appUo7R0la4VUzOoT/shrX1v3Z8z2G7p9Z9'}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full text-center px-3 py-3 rounded-none text-base font-bold text-electric-blue bg-accent hover:bg-accent-hover mt-4"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Submit an Example
+              </a>
+            )}
           </div>
         </div>
       )}
