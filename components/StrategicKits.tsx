@@ -46,39 +46,41 @@ const kits = [
 
 export default function StrategicKits() {
   return (
-    <section className="py-20 bg-white">
-      <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-700 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4">
+    <section className="py-24 bg-primary-bg border-t border-navy-dark relative overflow-hidden">
+      <div className="absolute inset-0 bg-hero-gradient opacity-10 pointer-events-none"></div>
+      
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center max-w-3xl mx-auto mb-20">
+          <div className="inline-flex items-center gap-2 bg-accent/10 text-accent border border-accent/20 px-4 py-1.5 rounded-full text-xs font-mono uppercase tracking-widest mb-6">
             <Zap className="w-3 h-3" />
             <span>Curated Bundles</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-headline font-bold text-brand-navy mb-6">
+          <h2 className="text-4xl md:text-6xl font-bold text-text-color mb-6 tracking-tight">
             Execute a Strategy, <br />
-            <span className="text-accent">Not Just a Task.</span>
+            <span className="text-transparent bg-clip-text bg-modern-gradient">Not Just a Task.</span>
           </h2>
-          <p className="text-lg text-brand-navy/60">
+          <p className="text-lg text-text-secondary font-normal">
             Generic prompts solve one problem. Our Strategic Kits combine multiple blueprints to help you dominate a specific business goal.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {kits.map((kit, idx) => (
-            <div key={idx} className={`p-8 rounded-3xl border-2 ${kit.color} ${kit.borderColor} flex flex-col h-full`}>
-              <div className="bg-white w-12 h-12 rounded-2xl flex items-center justify-center shadow-sm mb-6">
+            <div key={idx} className="group p-8 rounded-2xl bg-secondary-bg border border-navy-dark hover:border-accent/30 transition-all duration-500 flex flex-col h-full hover:shadow-[0_0_40px_rgba(244,63,94,0.05)]">
+              <div className="bg-primary-bg w-14 h-14 rounded-xl flex items-center justify-center border border-navy-dark shadow-inner mb-8 group-hover:scale-110 transition-transform duration-500">
                 {kit.icon}
               </div>
-              <h3 className="text-2xl font-bold text-brand-navy mb-3">{kit.title}</h3>
-              <p className="text-brand-navy/60 mb-8 leading-relaxed">
+              <h3 className="text-2xl font-bold text-text-color mb-4">{kit.title}</h3>
+              <p className="text-text-secondary mb-10 leading-relaxed font-normal">
                 {kit.description}
               </p>
               
               <div className="space-y-3 mt-auto">
-                <p className="text-[10px] uppercase tracking-widest font-bold text-brand-navy/40 mb-2">Included Blueprints:</p>
+                <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-text-secondary/40 mb-4">Included Blueprints:</p>
                 {kit.recipes.map((r, rIdx) => (
-                  <Link key={rIdx} href={`/blueprints/${r.id}`} className="group flex items-center justify-between p-3 bg-white/50 hover:bg-white rounded-xl border border-transparent hover:border-white shadow-sm transition-all">
-                    <span className="text-sm font-semibold text-brand-navy/80 group-hover:text-blue-600">{r.title}</span>
-                    <ArrowRight className="w-4 h-4 text-brand-navy/20 group-hover:text-blue-600 group-hover:translate-x-1 transition-all" />
+                  <Link key={rIdx} href={`/blueprints/${r.id}`} className="group/item flex items-center justify-between p-4 bg-primary-bg/50 hover:bg-primary-bg rounded-xl border border-navy-dark hover:border-accent/30 transition-all duration-300">
+                    <span className="text-sm font-bold text-text-color/80 group-hover/item:text-accent transition-colors">{r.title}</span>
+                    <ArrowRight className="w-4 h-4 text-text-secondary/30 group-hover/item:text-accent group-hover/item:translate-x-1 transition-all" />
                   </Link>
                 ))}
               </div>

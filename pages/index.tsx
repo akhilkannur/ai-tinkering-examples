@@ -91,10 +91,11 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
                         {/* Compatibility Bar */}
                         <div className="pt-8 border-t border-navy-dark">
                             <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-text-secondary/40 mb-4">Optimized for agentic workflows:</p>
-                            <div className="flex flex-wrap gap-6 opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-500">
+                            <div className="flex flex-wrap gap-x-6 gap-y-4 opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-500">
                                 <span className="flex items-center gap-2 text-sm font-bold text-text-color"><Cpu className="w-4 h-4 text-accent" /> Claude Code</span>
                                 <span className="flex items-center gap-2 text-sm font-bold text-text-color"><Command className="w-4 h-4 text-accent" /> Gemini CLI</span>
                                 <span className="flex items-center gap-2 text-sm font-bold text-text-color"><Terminal className="w-4 h-4 text-accent" /> Cursor</span>
+                                <span className="flex items-center gap-2 text-sm font-bold text-text-color"><Zap className="w-4 h-4 text-accent" /> Claude Cowork</span>
                             </div>
                         </div>
                     </div>
