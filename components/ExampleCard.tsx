@@ -45,29 +45,28 @@ export default function ExampleCard({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
       transition={{ duration: 0.5 }}
-      className="card group cursor-pointer relative flex flex-col bg-secondary-bg rounded-md overflow-hidden border border-navy-dark hover:border-accent transition-colors duration-75"
+      className="card group cursor-pointer relative flex flex-col bg-secondary-bg rounded-xl overflow-hidden border border-navy-dark hover:border-accent/50 hover:shadow-[0_0_30px_rgba(244,63,94,0.15)] transition-all duration-300"
     >
       <div className="relative z-10 flex-grow" onClick={handleCardClick}>
-        <div className="relative w-full h-64 sm:h-80 lg:h-96 overflow-hidden bg-secondary-bg border-b border-navy-dark group-hover:border-accent transition-colors duration-75">
+        <div className="relative w-full h-48 sm:h-56 overflow-hidden bg-primary-bg border-b border-navy-dark">
           {!imageUrl || imageStatus === 'error' ? (
-            <div className="absolute inset-0 bg-secondary-bg flex flex-col items-center justify-center gap-2">
-              <svg className="w-16 h-16 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="absolute inset-0 bg-secondary-bg flex flex-col items-center justify-center gap-2 opacity-50">
+              <svg className="w-12 h-12 text-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
-              <p className="text-slate-500 text-sm">Preview unavailable</p>
             </div>
           ) : (
             <>
               {imageStatus === 'loading' && !blurImageUrl && (
                 <div className="absolute inset-0 bg-secondary-bg flex items-center justify-center">
-                  <div className="text-slate-500 text-sm font-sans">Loading...</div>
+                  <div className="text-text-secondary text-xs font-mono">Loading...</div>
                 </div>
               )}
               <Image
                 src={imageUrl}
                 alt={example.title}
                 fill
-                className="object-cover object-left-top opacity-90 group-hover:opacity-100 transition-opacity duration-100"
+                className="object-cover object-top opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 ease-out"
                 sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                 priority={priority}
                 quality={80}
@@ -82,26 +81,34 @@ export default function ExampleCard({
           )}
         </div>
 
-        <div className="p-5 sm:p-6 text-left relative">
-          {/* Hover indicator line */}
-          <div className="absolute top-0 left-0 w-0 h-[2px] bg-accent group-hover:w-full transition-all duration-300 ease-out"></div>
-          
-          <h3 className="text-lg sm:text-xl font-headline font-bold leading-tight text-text-color line-clamp-2 group-hover:text-accent transition-colors duration-75 uppercase tracking-tight">
-            {example.title}
-          </h3>
+        <div className="p-5 flex flex-col gap-3 relative">
+          <div className="flex justify-between items-start gap-4">
+            <h3 className="text-lg font-bold leading-tight text-text-color line-clamp-2 group-hover:text-accent transition-colors duration-200">
+              {example.title}
+            </h3>
+            <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-accent transform translate-x-[-10px] group-hover:translate-x-0 transition-transform">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
 
           {example.summary && (
-            <p className="mt-3 text-base text-text-color/90 line-clamp-3 leading-relaxed font-sans">
+            <p className="text-sm text-text-secondary line-clamp-2 leading-relaxed font-sans">
               {example.summary}
             </p>
           )}
 
-          {example.read_time && (
-            <div className="flex items-center mt-4 text-sm text-text-secondary font-sans group-hover:text-text-color transition-colors duration-75">
-              <Clock size={14} className="mr-1.5" />
-              <span>{example.read_time} min read</span>
-            </div>
-          )}
+          <div className="pt-2 flex items-center gap-4 text-xs font-mono text-text-secondary/60">
+             {example.read_time && (
+              <span className="flex items-center gap-1">
+                <Clock size={12} />
+                {example.read_time}m
+              </span>
+            )}
+            {/* Tag placeholder if available */}
+             <span className="flex items-center gap-1 uppercase tracking-wider">
+               VIEW RECIPE
+             </span>
+          </div>
         </div>
       </div>
     </motion.article>

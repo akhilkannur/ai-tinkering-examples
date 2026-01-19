@@ -144,6 +144,137 @@ Build the string:
 
 ---
 
+## The Cold DM Personalizer
+URL: https://realaiexamples.com/blueprints/cold-dm-personalizer
+Description: Personalized outreach for 100 prospects at once.
+
+---
+id: cold-dm-personalizer
+category: Lead Gen
+title: The Cold DM Personalizer
+tagline: Personalized outreach for 100 prospects at once.
+difficulty: Beginner
+time: Continuous
+archetype: Hybrid
+description: >-
+  Slide into DMs without looking like a bot. This agent takes a list of
+  LinkedIn/X profiles, analyzes their recent posts for 'emotional hooks', and
+  drafts custom opening lines for your entire list.
+sampleData:
+  filename: prospects.csv
+  content: |
+    Name,Profile_URL,Target_Topic
+    Ryan Carson,https://x.com/ryancarson,AI Agents
+    Sahil Lavingia,https://x.com/shl,Creator Economy
+    Justin Welsh,https://x.com/JustinWelsh,Solopreneurship
+---
+
+# Agent Configuration: The Cold DM Personalizer
+
+## Role
+Slide into DMs without looking like a bot. This agent takes a list of LinkedIn/X profiles, analyzes their recent posts for 'emotional hooks', and drafts custom opening lines for your entire list.
+
+## Objective
+Personalized outreach for 100 prospects at once.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `prospects.csv` exist?
+2.  **If Missing:** Create `prospects.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Check
+1.  **Check:** Does `prospects.csv` exist?
+2.  **If Missing:** Create `prospects.csv` with the sample data and headers.
+3.  **If Present:** Load the profiles.
+
+### Phase 2: The Deep Dive Loop
+For each prospect in the CSV:
+1.  **Read:** Use `web_fetch` to see their latest 3 posts.
+2.  **Analyze:** Find one *specific* sentence or idea they mentioned that relates to the `Target_Topic`.
+3.  **Draft:** Create 2 opening lines:
+    *   *The Observational:* "I loved your point about [X] in your recent post..."
+    *   *The Value-Add:* "Since you're focused on [Y], have you seen this..."
+
+### Phase 3: Deliverable
+1.  **Create:** `personalized_outreach.csv` with columns: `Name`, `Profile_URL`, `Draft_1`, `Draft_2`.
+2.  **Report:** "Successfully personalized outreach for [X] prospects. Ready for your review."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The Sales Comp Designer
+URL: https://realaiexamples.com/blueprints/commission-calculator
+Description: Design a commission plan that drives growth.
+
+---
+id: commission-calculator
+category: Lead Gen
+title: The Sales Comp Designer
+tagline: Design a commission plan that drives growth.
+difficulty: Advanced
+time: Hybrid
+description: >-
+  Bad incentives kill sales performance. This agent researches industry
+  standards and designs tiered commission plans (Base + OTE + Accelerators) for
+  your entire sales roster.
+sampleData:
+  filename: roles.csv
+  content: |
+    Role,Avg_Deal_Size,Target_Annual_Revenue
+    Account Executive,50000,1000000
+    SDR,5000,200000
+    Customer Success,15000,500000
+---
+
+# Agent Configuration: The Sales Comp Designer
+
+## Role
+Bad incentives kill sales performance. This agent researches industry standards and designs tiered commission plans (Base + OTE + Accelerators) for your entire sales roster.
+
+## Objective
+Design a commission plan that drives growth.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `roles.csv` exist?
+2.  **If Missing:** Create `roles.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input & Benchmarking
+1.  **Check:** Does `roles.csv` exist?
+2.  **If Missing:** Use `web_fetch` to research industry standard comp structures for a typical "Seed Stage SaaS" or "Creative Agency" and create a `benchmark_report.md`.
+3.  **If Present:** Load the role list for custom modeling.
+
+### Phase 2: The Comp Design Loop
+For each role in the CSV:
+1.  **Calculate Quota:** Set quota at 5x-8x the industry standard OTE for the `Avg_Deal_Size`.
+2.  **Define Split:** Determine the Base/OTE split (e.g., 50/50 for AEs, 70/30 for CS).
+3.  **Model Commission:**
+    *   **Base Rate:** (e.g., 10% of closed revenue).
+    *   **Accelerators:** (e.g., 15% for revenue above 100% of quota).
+    *   **Multi-year Bonus:** Add logic for increased commissions on longer contracts.
+4.  **Draft Plan:** Create `comp_plans/[Role]_comp_structure.md`.
+
+### Phase 3: Structured Deliverables
+1.  **Create:** `sales_org_comp_summary.csv` with columns: `Role`, `Base_Salary`, `OTE`, `Quota`, `File_Path`.
+2.  **Report:** "Successfully designed [X] comp plans. Accelerators and clawback logic included in each file."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
 ## The Conference Batch Scraper
 URL: https://realaiexamples.com/blueprints/conference-scraper
 Description: Turn multiple speaker lists into one lead list.
@@ -197,6 +328,68 @@ For each URL in `event_urls.csv`:
 ### Phase 3: Final Output
 1.  **Append:** Write results to `master_conference_leads.csv`.
 2.  **Summary:** "Processed [X] conferences. Found [Y] total leads. master_conference_leads.csv is ready."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The Multi-Event Networking Planner
+URL: https://realaiexamples.com/blueprints/event-networker
+Description: High-value hit lists for your entire conference calendar.
+
+---
+id: event-networker
+category: Lead Gen
+title: The Multi-Event Networking Planner
+tagline: High-value hit lists for your entire conference calendar.
+difficulty: Intermediate
+time: 1 hour
+description: >-
+  Don't wander the conference hall aimlessly. This agent reads a list of events
+  and their attendee/speaker files, cross-references them with your ICP, and
+  builds a 'Must-Meet' hit list for every event.
+sampleData:
+  filename: event_calendar.csv
+  content: |
+    Event_Name,Attendee_File
+    SaaStr Annual,saastr_list.txt
+    Web Summit,websummit_list.txt
+isPremium: true
+---
+
+# Agent Configuration: The Multi-Event Networking Planner
+
+## Role
+Don't wander the conference hall aimlessly. This agent reads a list of events and their attendee/speaker files, cross-references them with your ICP, and builds a 'Must-Meet' hit list for every event.
+
+## Objective
+High-value hit lists for your entire conference calendar.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `event_calendar.csv` exist?
+2.  **If Missing:** Create `event_calendar.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Event Loading
+1.  **Check:** Does `event_calendar.csv` exist? If missing, create template.
+2.  **Verify:** Ensure the associated `Attendee_File` exists in the current directory.
+
+### Phase 2: The Prospecting Loop
+For each event in the calendar:
+1.  **Filter:** Scan the text file. Keep only those with target titles.
+2.  **Enrich:** For the Top 10 matches, find one "Recent Win" (e.g., funding, launch) via search.
+3.  **Draft:** Create a 1-sentence "Warm Intro" for each person.
+
+### Phase 3: The Hit List
+1.  **Action:** Create a folder `event_game_plans/`.
+2.  **Save:** Save each list as `[Event_Name]_hitlist.csv`.
+3.  **Summary:** "Processed [X] events. Identified [Y] Tier-1 prospects."
 
 ### Phase 3: Output
 1.  **Generate:** Create the final output artifact as specified.
@@ -392,6 +585,142 @@ Recruit from a specific repo or a tech niche.
 ### Phase 3: The Talent Roster
 1.  **Create:** `talent_roster.md`.
 2.  **Summary:** "Scanned [X] repos. Identified [Y] high-signal candidates. Talent dossier is ready."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## Investor Update Writer
+URL: https://realaiexamples.com/blueprints/investor-update-email-writer
+Description: Write the monthly email that keeps your VCs happy (and helpful).
+
+---
+id: investor-update-email-writer
+category: Lead Gen
+title: Investor Update Writer
+tagline: Write the monthly email that keeps your VCs happy (and helpful).
+difficulty: Beginner
+time: 5 mins
+archetype: Processor
+description: >-
+  Takes your raw monthly metrics (Revenue, Cash, Headcount) and bullet points
+  about "Wins" and "Asks" and formats them into the standard Sequoia/YCombinator
+  update format.
+sampleData:
+  filename: monthly_stats.txt
+  content: |
+    MRR: $50k (+10%)
+    Cash: $1.2M
+    Burn: $80k
+    Wins: Hired new CTO, Closed Acme Corp.
+    Lows: Lost Beta Client, Server outage.
+    Needs: Intro to Series A leads.
+---
+
+# Agent Configuration: The Investor Update Writer
+
+## Role
+Takes your raw monthly metrics (Revenue, Cash, Headcount) and bullet points about "Wins" and "Asks" and formats them into the standard Sequoia/YCombinator update format.
+
+## Objective
+Write the monthly email that keeps your VCs happy (and helpful).
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `monthly_stats.txt` exist?
+2.  **If Missing:** Create `monthly_stats.txt` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+You are a **Startup Founder**. Your job is to communicate with stakeholders.
+
+**Phase 1: Structure**
+1. Read `monthly_stats.txt`.
+2. Follow the "Standard Update" format:
+    *   **TL;DR:** 3 bullet points summary.
+    *   **KPIs:** A clean table of the numbers.
+    *   **Highlights:** The good stuff.
+    *   **Lowlights:** Radical transparency (what went wrong).
+    *   **The Ask:** How they can help.
+
+**Phase 2: Drafting**
+*   Write the email.
+*   *Tone:* Professional, concise, optimistic but honest.
+*   *Subject:* "Investor Update - [Month] - [Company Name]"
+
+**Phase 3: Output**
+Save to `investor_update.md`.
+
+Start now.
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The Sales Job Description Optimizer
+URL: https://realaiexamples.com/blueprints/job-description-optimizer
+Description: Attract 'A-Players', repel tourists.
+
+---
+id: job-description-optimizer
+category: Lead Gen
+title: The Sales Job Description Optimizer
+tagline: 'Attract ''A-Players'', repel tourists.'
+difficulty: Intermediate
+time: Batch
+description: >-
+  Generic JDs attract generic candidates. This agent rewrites your job
+  descriptions to focus on 'Outcomes' rather than 'Requirements', increasing the
+  quality of applicants for your entire hiring roadmap.
+sampleData:
+  filename: job_postings.csv
+  content: |
+    Role,Target_Salary,Top_Requirement
+    Account Executive,150k OTE,Closed $50k+ deals
+    SDR,80k OTE,High-volume cold outreach
+    Sales Manager,250k OTE,Scaled a team from 5 to 20
+isPremium: true
+---
+
+# Agent Configuration: The Sales Job Description Optimizer
+
+## Role
+Generic JDs attract generic candidates. This agent rewrites your job descriptions to focus on 'Outcomes' rather than 'Requirements', increasing the quality of applicants for your entire hiring roadmap.
+
+## Objective
+Attract 'A-Players', repel tourists.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `job_postings.csv` exist?
+2.  **If Missing:** Create `job_postings.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Check
+1.  **Check:** Does `job_postings.csv` exist?
+2.  **If Missing:** Create `job_postings.csv` using the `sampleData`.
+3.  **If Present:** Load the role list.
+
+### Phase 2: The Optimization Loop
+For each role in the CSV:
+1.  **Draft The Mission:** Replace "About the Role" with a high-stakes mission statement (e.g., "Your goal is to own the mid-market segment and close $1.2M in ARR").
+2.  **Define the First 90 Days:** Create a clear timeline of expectations (Day 30, Day 60, Day 90).
+3.  **Outcome-Based Requirements:** Map the `Top_Requirement` to a specific performance metric.
+4.  **Transparent Comp:** Clearly state the `Target_Salary` and the bonus structure.
+5.  **Output:** Save to `optimized_jds/[Role]_jd.md`.
+
+### Phase 3: Structured Deliverables
+1.  **Create:** `hiring_plan_summary.csv` with columns: `Role`, `OTE`, `Primary_Outcome`, `File_Path`.
+2.  **Report:** "Successfully optimized [X] job descriptions. Result-oriented JDs ready for LinkedIn and Indeed."
 
 ### Phase 3: Output
 1.  **Generate:** Create the final output artifact as specified.
@@ -716,6 +1045,209 @@ For each row in the CSV:
 ### Phase 3: Deliverable
 1.  **Create:** `reddit_opportunities.md` listing the Post URL and the Draft Comment.
 2.  **Summary:** "Found [X] buying signals across [Y] subreddits."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The RFP Responder
+URL: https://realaiexamples.com/blueprints/rfp-responder
+Description: Draft complex proposals instantly.
+
+---
+id: rfp-responder
+category: Lead Gen
+title: The RFP Responder
+tagline: Draft complex proposals instantly.
+difficulty: Advanced
+time: Batch
+description: >-
+  Responding to RFPs is a time-sink. This agent processes a list of RFP
+  requirements and auto-drafts structured responses based on your standard
+  service offerings and compliance standards.
+sampleData:
+  filename: rfps.csv
+  content: >
+    Project_Name,Requirement_Text,Budget_Tier
+
+    City Bank Security,Must support SAML SSO and have SOC2 Type 2
+    compliance,Enterprise
+
+    EduGrowth Portal,Must support 10k concurrent users and mobile
+    responsive,Mid-Market
+
+    GovNet Audit,Must have on-premise deployment option and 24/7 support,Public
+    Sector
+isPremium: true
+---
+
+# Agent Configuration: The RFP Responder
+
+## Role
+Responding to RFPs is a time-sink. This agent processes a list of RFP requirements and auto-drafts structured responses based on your standard service offerings and compliance standards.
+
+## Objective
+Draft complex proposals instantly.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `rfps.csv` exist?
+2.  **If Missing:** Create `rfps.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Check
+1.  **Check:** Does `rfps.csv` exist?
+2.  **If Missing:** Create `rfps.csv` using the `sampleData`.
+3.  **If Present:** Load the RFP list.
+
+### Phase 2: The Drafting Loop
+For each RFP in the CSV:
+1.  **Decompose:** Extract individual requirements from the `Requirement_Text`.
+2.  **Map Capabilities:** For each point:
+    *   **Confirm:** State "Yes, we support this" or "Supported via [Mechanism]".
+    *   **Detail:** Add 1-2 sentences of technical or operational detail.
+    *   **Proof:** Add a placeholder `[LINK: Relevant Case Study]`.
+3.  **Draft Executive Summary:** Create a 3-paragraph summary focused on the `Budget_Tier` and why the company is the lowest-risk partner.
+4.  **Output:** Save to `drafts/[Project_Name]_response.md`.
+
+### Phase 3: Structured Deliverables
+1.  **Create:** `rfp_pipeline_tracker.csv` with columns: `Project_Name`, `Requirement_Count`, `Compliance_Match_%`, `File_Path`.
+2.  **Report:** "Successfully drafted [X] RFP responses. High-priority 'Public Sector' requirements flagged for legal review."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The Sales Interview Architect
+URL: https://realaiexamples.com/blueprints/sales-interview-questions
+Description: Custom assessments for any sales role.
+
+---
+id: sales-interview-questions
+category: Lead Gen
+title: The Sales Interview Architect
+tagline: Custom assessments for any sales role.
+difficulty: Intermediate
+time: Batch
+description: >-
+  Resumes lie; behavioral interviews don't. This agent generates custom scripts
+  of behavioral questions and weighted scorecards for all the open roles in your
+  sales hiring roadmap.
+sampleData:
+  filename: open_roles.csv
+  content: |
+    Role,Product_Price_Point,Core_Challenge
+    Account Executive,50000,Long sales cycles with multiple stakeholders
+    Inbound SDR,500,High-volume qualification and speed-to-lead
+    Channel Manager,15000,Managing indirect revenue through partners
+isPremium: true
+---
+
+# Agent Configuration: The Sales Interview Architect
+
+## Role
+Resumes lie; behavioral interviews don't. This agent generates custom scripts of behavioral questions and weighted scorecards for all the open roles in your sales hiring roadmap.
+
+## Objective
+Custom assessments for any sales role.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `open_roles.csv` exist?
+2.  **If Missing:** Create `open_roles.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Check
+1.  **Check:** Does `open_roles.csv` exist?
+2.  **If Missing:** Create `open_roles.csv` using the `sampleData`.
+3.  **If Present:** Load the role list.
+
+### Phase 2: The Assessment Loop
+For each role in the CSV:
+1.  **Identify Success Skills:** Map the `Core_Challenge` to 3 specific skills (e.g., "Stakeholder Mapping", "Objection Neutralization").
+2.  **Draft Questions:** Generate 5 behavioral questions using the STAR method (Situation, Task, Action, Result) tailored to the `Product_Price_Point`.
+3.  **Design Micro-Challenge:** Suggest a 5-minute roleplay scenario (e.g., "Handle this gatekeeper objection").
+4.  **Create Scorecard:** Define "Green Flags" (What good looks like) and "Red Flags" for each question.
+5.  **Output:** Save to `interview_kits/[Role]_assessment.md`.
+
+### Phase 3: Structured Deliverables
+1.  **Create:** `hiring_assessment_summary.csv` with columns: `Role`, `Primary_Skill_Tested`, `Challenge_Type`, `File_Path`.
+2.  **Report:** "Successfully designed [X] interview kits. Behavioral scorecards ready for your hiring managers."
+
+### Phase 3: Output
+1.  **Generate:** Create the final output artifact as specified.
+2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The SDR Ramp Architect
+URL: https://realaiexamples.com/blueprints/sdr-onboarding-schedule
+Description: Build custom 30-day onboarding plans.
+
+---
+id: sdr-onboarding-schedule
+category: Lead Gen
+title: The SDR Ramp Architect
+tagline: Build custom 30-day onboarding plans.
+difficulty: Intermediate
+time: Batch
+description: >-
+  New SDRs fail without structure. This agent researches your tech stack and
+  product complexity to build 4-week ramp schedules that get your new hires
+  booking meetings in 14 days.
+sampleData:
+  filename: hires.csv
+  content: |
+    Hire_Name,Role,Tech_Stack,Target_Quota
+    Alice,Inbound SDR,HubSpot & ZoomInfo,15 meetings/mo
+    Bob,Outbound SDR,Salesforce & Outreach,25 meetings/mo
+    Charlie,Enterprise SDR,SalesLoft & Lusha,10 meetings/mo
+isPremium: true
+---
+
+# Agent Configuration: The SDR Ramp Architect
+
+## Role
+New SDRs fail without structure. This agent researches your tech stack and product complexity to build 4-week ramp schedules that get your new hires booking meetings in 14 days.
+
+## Objective
+Build custom 30-day onboarding plans.
+
+## Workflow
+
+### Phase 1: Initialization & Seeding
+1.  **Check:** Does `hires.csv` exist?
+2.  **If Missing:** Create `hires.csv` using the `sampleData` provided in this blueprint.
+3.  **If Present:** Load the data for processing.
+
+### Phase 2: The Loop
+### Phase 1: Input Check
+1.  **Check:** Does `hires.csv` exist?
+2.  **If Missing:** Create `hires.csv` using the `sampleData`.
+3.  **If Present:** Load the hire list.
+
+### Phase 2: The Ramp Planning Loop
+For each hire in the CSV:
+1.  **Map Foundations (Week 1):** Focus on `Tech_Stack` training and industry lingo. Include "Shadowing 5 calls" as a requirement.
+2.  **Map Launch (Week 2-3):** Set activity targets (Emails/Calls) that scale toward the `Target_Quota`.
+3.  **Map Optimization (Week 4):** Transition to full volume and advanced objection roleplay.
+4.  **Create Knowledge Check:** Draft a 5-question quiz for the end of Week 1 to verify product understanding.
+5.  **Output:** Save to `onboarding_plans/[Hire_Name]_ramp_plan.md`.
+
+### Phase 3: Structured Deliverables
+1.  **Create:** `onboarding_master_calendar.csv` with columns: `Hire_Name`, `Role`, `Ramp_Milestone_Day_14`, `File_Path`.
+2.  **Report:** "Successfully designed [X] onboarding schedules. Time-to-first-meeting optimized for each role."
 
 ### Phase 3: Output
 1.  **Generate:** Create the final output artifact as specified.

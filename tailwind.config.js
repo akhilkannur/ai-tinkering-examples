@@ -3,32 +3,32 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'primary-bg': '#0C2340', // Navy
-        'secondary-bg': '#0B2F48', // Royal - Lighter for cards
-        'accent': '#EE5E3E', // Orange
-        'accent-hover': '#D64D2E', // Darker Orange
-        'accent-light': '#FF7F63', // Lighter Orange
-        'text-color': '#F2F1EC', // Beige
-        'text-secondary': '#9AB8C7', // Muted Blue-Grey for secondary text
-        'light-purple': '#00B0B9', // Mapped to Turquoise
-        'bright-pink': '#EE5E3E', // Mapped to Orange
-        'electric-blue': '#F2F1EC', // Light text for accent buttons
-        'navy-dark': '#003A70', // Denim
-        'navy-light': '#204B63', // Green-2
-        'section-bg-example-card': '#0B2F48', // Matches secondary-bg
-        'brand-beige': '#F2F1EC', // Bye Flakes Light Background
-        'brand-navy': '#0C2340', // Bye Flakes Dark Text
+        'primary-bg': '#020617', // Slate 950 - Deep Background
+        'secondary-bg': '#0F172A', // Slate 900 - Card Background
+        'accent': '#F43F5E', // Rose 500 - Vibrant Pink/Red
+        'accent-hover': '#E11D48', // Rose 600
+        'accent-light': '#FB7185', // Rose 400
+        'text-color': '#F8FAFC', // Slate 50 - Main Text
+        'text-secondary': '#94A3B8', // Slate 400 - Secondary Text
+        'light-purple': '#0EA5E9', // Sky 500
+        'bright-pink': '#D946EF', // Fuchsia 500
+        'electric-blue': '#F8FAFC', // Text on accent
+        'navy-dark': '#1E293B', // Slate 800 - Borders
+        'navy-light': '#334155', // Slate 700
+        'section-bg-example-card': '#0F172A', // Matches secondary-bg
+        'brand-beige': '#020617', // Replaced Beige with Slate 950
+        'brand-navy': '#F8FAFC', // Replaced Navy text with Slate 50
       },
       fontFamily: {
-        sans: ['DM Sans', 'sans-serif'], // Proxy for Banana Grotesk
-        headline: ['Libre Baskerville', 'serif'], // Proxy for GT Alpina
+        sans: ['Inter', 'DM Sans', 'sans-serif'], // Added Inter
+        headline: ['DM Sans', 'sans-serif'], // Replaced Serif with Sans for modern look
         mono: ['Space Mono', 'monospace'],
-        roboto: ['DM Sans', 'sans-serif'],
+        roboto: ['Inter', 'DM Sans', 'sans-serif'],
       },
       backgroundImage: {
-        'modern-gradient': 'linear-gradient(135deg, #EE5E3E 0%, #D64D2E 100%)', // Orange Gradient
-        'subtle-gradient': 'linear-gradient(to bottom, #0C2340, #0B2F48)',
-        'hero-gradient': 'radial-gradient(ellipse at top right, rgba(238, 94, 62, 0.15) 0%, transparent 50%), radial-gradient(ellipse at bottom left, rgba(113, 233, 241, 0.05) 0%, transparent 50%)',
+        'modern-gradient': 'linear-gradient(135deg, #F43F5E 0%, #D946EF 100%)', // Rose to Fuchsia
+        'subtle-gradient': 'linear-gradient(to bottom, #020617, #0F172A)',
+        'hero-gradient': 'radial-gradient(ellipse at top right, rgba(244, 63, 94, 0.15) 0%, transparent 50%), radial-gradient(ellipse at bottom left, rgba(14, 165, 233, 0.1) 0%, transparent 50%)',
       },
       boxShadow: {
         'custom-light': 'none',
