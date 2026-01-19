@@ -60,6 +60,7 @@
 *   ✅ `product-review-velocity` - Upgraded to `The Merchandising Alert System` (Momentum Check).
 *   ✅ `partner-certification-monitor` - Upgraded to `The Partner Enablement Automator` (Compliance Nudges).
 *   ✅ `paid-search-quality-score-auditor` - Upgraded to `The CPC Savings Calculator` (Financial Impact).
+*   ✅ `event-sponsorship-roi-calculator` - Upgraded to `The Booth ROI Predictor` (Break-Even Modeling).
 
 ## Completed Mega-Batch 2 (Strategic Creators)
 *   ✅ `sdr-activity-calculator` - Upgraded to `The Quota Reverse-Engineer` (Scenario Modeling).
