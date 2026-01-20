@@ -55,7 +55,7 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
         {/* HERO SECTION */}
         <div className="bg-primary-bg pt-24 pb-20 relative overflow-hidden">
             {/* Background Gradient */}
-            <div className="absolute inset-0 bg-hero-gradient opacity-40 pointer-events-none"></div>
+            <div className="absolute inset-0 bg-hero-gradient opacity-20 pointer-events-none"></div>
 
             <div className="container mx-auto px-4 max-w-6xl relative z-10">
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -70,7 +70,7 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
                         
                         <h1 className="text-5xl md:text-7xl font-sans font-extrabold text-text-color mb-6 tracking-tight leading-[1.1]">
                             Stop Prompting. <br />
-                            <span className="text-transparent bg-clip-text bg-modern-gradient">Start Automating.</span>
+                            <span className="text-accent">Start Automating.</span>
                         </h1>
                         
                         <p className="text-lg text-text-secondary mb-10 leading-relaxed max-w-lg font-normal">
