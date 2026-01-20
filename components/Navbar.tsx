@@ -41,11 +41,15 @@ export default function Navbar() {
         <div className="flex justify-between h-16 items-center">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <Link href="/" className="flex items-center gap-2 group">
-                <div className="relative w-12 h-12 overflow-hidden rounded-none border border-navy-dark">
-                  <Image src="/logo.png" alt="AI Examples Logo" width={48} height={48} className="object-cover" />
-                </div>
-                <span className="text-lg font-bold font-sans text-text-color group-hover:text-accent transition-colors">Real AI Examples</span>
+              <Link href="/" className="flex items-center gap-3 group">
+                <Image 
+                  src="/logo.png" 
+                  alt="AI Examples Logo" 
+                  width={40} 
+                  height={40} 
+                  className="object-contain" 
+                />
+                <span className="text-xl font-bold font-sans text-text-color group-hover:text-accent transition-colors">Real AI Examples</span>
               </Link>
             </div>
             {/* Desktop Navigation */}
