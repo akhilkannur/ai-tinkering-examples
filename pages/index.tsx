@@ -158,9 +158,6 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
         {/* ARCHETYPE QUIZ */}
         <ArchetypeQuiz />
 
-        {/* STRATEGIC KITS */}
-        <StrategicKits />
-
         {/* FAQ SECTION */}
         <div className="bg-primary-bg py-24 border-t border-navy-dark">
           <div className="max-w-4xl mx-auto px-4 sm:px-6">

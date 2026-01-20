@@ -4,13 +4,13 @@ import { Terminal, Copy, Play, Zap, CheckCircle2, Cpu } from 'lucide-react';
 
 const HowToUseGuide = () => {
   return (
-    <div className="w-full max-w-5xl mx-auto mb-20">
+    <div className="w-full max-w-5xl mx-auto mb-20 px-4">
       
       {/* 1. The "What is this?" Analogy */}
-      <div className="bg-secondary-bg rounded-3xl p-8 md:p-12 text-text-color shadow-2xl mb-12 relative overflow-hidden border border-navy-dark group hover:border-accent/30 transition-all duration-500">
+      <div className="bg-secondary-bg rounded-3xl p-6 md:p-12 text-text-color shadow-2xl mb-12 relative overflow-hidden border border-navy-dark group hover:border-accent/30 transition-all duration-500">
         <div className="absolute top-0 right-0 w-64 h-64 bg-accent opacity-10 rounded-full blur-3xl -mr-16 -mt-16 group-hover:opacity-20 transition-opacity duration-500"></div>
         
-        <div className="relative z-10 grid md:grid-cols-2 gap-12 items-center">
+        <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
           <div>
             <div className="inline-flex items-center gap-2 bg-accent/10 text-accent px-3 py-1 rounded-full text-xs font-semibold mb-6 border border-accent/20">
               <Cpu className="w-3 h-3" />
@@ -65,10 +65,10 @@ const HowToUseGuide = () => {
       </div>
 
       {/* 2. The 3-Step Setup */}
-      <div className="grid md:grid-cols-3 gap-6 mb-16">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
         
         {/* Step 1 */}
-        <div className="bg-secondary-bg border border-navy-dark rounded-xl p-8 hover:border-accent/40 transition-colors group">
+        <div className="bg-secondary-bg border border-navy-dark rounded-xl p-6 md:p-8 hover:border-accent/40 transition-colors group">
           <div className="w-12 h-12 bg-primary-bg rounded-lg flex items-center justify-center text-text-secondary group-hover:text-accent group-hover:bg-accent/10 transition-colors mb-6 border border-navy-dark">
             <Terminal className="w-6 h-6" />
           </div>
@@ -84,7 +84,7 @@ const HowToUseGuide = () => {
         </div>
 
         {/* Step 2 */}
-        <div className="bg-secondary-bg border border-navy-dark rounded-xl p-8 hover:border-accent/40 transition-colors group">
+        <div className="bg-secondary-bg border border-navy-dark rounded-xl p-6 md:p-8 hover:border-accent/40 transition-colors group">
           <div className="w-12 h-12 bg-primary-bg rounded-lg flex items-center justify-center text-text-secondary group-hover:text-accent group-hover:bg-accent/10 transition-colors mb-6 border border-navy-dark">
             <Copy className="w-6 h-6" />
           </div>
@@ -101,7 +101,7 @@ const HowToUseGuide = () => {
         </div>
 
         {/* Step 3 */}
-        <div className="bg-secondary-bg border border-navy-dark rounded-xl p-8 hover:border-accent/40 transition-colors group">
+        <div className="bg-secondary-bg border border-navy-dark rounded-xl p-6 md:p-8 hover:border-accent/40 transition-colors group">
           <div className="w-12 h-12 bg-primary-bg rounded-lg flex items-center justify-center text-text-secondary group-hover:text-accent group-hover:bg-accent/10 transition-colors mb-6 border border-navy-dark">
             <Play className="w-6 h-6" />
           </div>
