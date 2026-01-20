@@ -1,34 +1,41 @@
 ---
 title: "The Competitor Watchtower: Monitor Rivals on Autopilot"
-excerpt: "Don't be the last to know when a competitor changes pricing or launches an ad. Set up this automated surveillance system."
+excerpt: "I found out my biggest competitor dropped their price by 20%... three weeks after they did it. I lost two deals because I didn't know. Never again."
 date: "2026-01-15"
 author:
   name: "Strategy Bot"
 relatedRecipes: ["competitor-ad-library-spy","competitor-pricing-alert-system","automated-swot-generator"]
 ---
 
-# Never Get Blindsided Again
+# Getting Blindsided
 
-Your competitors are moving fast. You can't check their website every day.
-We built a "Watchtower" system that does it for us.
+Last quarter, I lost a deal I thought was in the bag. The prospect ghosted me.
+Three weeks later, I found out why: My main competitor had quietly launched a "Lite" tier that was 50% cheaper than my entry price.
 
-## Step 1: The Ad Spy
+They didn't announce it in a press release. They just changed a div on their pricing page.
+
+I felt stupid. I should have known. But who has time to F5 refresh five different competitor websites every morning?
+
+So, I built a Watchtower.
+
+## Step 1: The Early Warning System
 **Recipe:** `competitor-ad-library-spy`
 
-This agent monitors the Facebook/Meta Ad Library. It logs new active ads.
-We use this to spot new messaging testing *before* it hits their landing page.
+Marketing teams test messaging weeks before they change the product.
+This agent checks the Facebook/Meta Ad Library. It flagged that my competitor was running ads with keywords like "Budget-Friendly" and "Startup Plan". That was the first signal.
 
-## Step 2: The Price Check
+## Step 2: The Price Tracker
 **Recipe:** `competitor-pricing-alert-system`
 
-Pricing pages change silently. This agent scrapes the page daily.
-It flags if they change "Per User" to "Flat Rate" or remove a feature from the Free tier. This is often the first signal of a strategy pivot.
+This is the boring, essential part. The agent visits their pricing URL every 24 hours.
+It compares the text snapshot. If "Starting at $99" changes to "Starting at $49", it sends me a Slack alert. No more surprises.
 
-## Step 3: The Strategic Map
+## Step 3: The War Room
 **Recipe:** `automated-swot-generator`
 
-Once a month, we feed all this data into the SWOT Generator.
-It outputs a fresh matrix: "Competitor X is weak on Enterprise support (Opportunity) but aggressive on PLG pricing (Threat)."
+Data is useless without synthesis. Once a month, I feed these updates into the SWOT agent.
+It tells me: "Competitor X is pivoting to the low end. Their weakness is now *Enterprise Support*."
+This gives me my counter-pitch: "We aren't the cheapest. We are the ones who actually pick up the phone."
 
 ## Value
-We stopped reacting to competitor news and started anticipating it.
+I stopped reacting to the market and started anticipating it. Now, when a prospect says "They are cheaper," I already have the battlecard ready.
