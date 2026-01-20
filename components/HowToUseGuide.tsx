@@ -115,24 +115,6 @@ const HowToUseGuide = () => {
         </div>
       </div>
 
-      {/* 3. The "Pro Tip" Box */}
-      <div className="bg-yellow-900/10 border border-yellow-500/20 rounded-xl p-6 flex flex-col md:flex-row items-start md:items-center gap-6">
-        <div className="bg-yellow-500/10 p-3 rounded-lg text-yellow-500 shrink-0 border border-yellow-500/20">
-          <Zap className="w-6 h-6" />
-        </div>
-        <div className="flex-grow">
-          <h4 className="font-bold text-yellow-500 text-sm mb-2 uppercase tracking-wide">Pro Tip</h4>
-          <p className="text-text-secondary text-sm leading-relaxed">
-            Want to build something bigger? Use the <strong className="text-text-color">"Autonomous Project Manager"</strong> blueprint to chain multiple recipes together into a full workflow.
-          </p>
-        </div>
-        <Link href="/blueprints/autonomous-project-manager">
-          <button className="text-xs font-bold bg-yellow-500 text-black px-5 py-3 rounded-lg hover:bg-yellow-400 transition-colors whitespace-nowrap shadow-lg shadow-yellow-500/10">
-            View Project Manager
-          </button>
-        </Link>
-      </div>
-
     </div>
   );
 };
