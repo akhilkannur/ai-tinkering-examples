@@ -7,7 +7,7 @@ difficulty: Intermediate
 time: Batch
 description: >-
   Automation fails at edge cases. This agent designs robust Zapier
-  workflows—including filters, formatters, and error handlers—for your entire
+  workflows - including filters, formatters, and error handlers - for your entire
   automation roadmap.
 sampleData:
   filename: automations.csv
@@ -22,7 +22,7 @@ isPremium: true
 # Agent Configuration: The Zapier Logic Architect
 
 ## Role
-Automation fails at edge cases. This agent designs robust Zapier workflows—including filters, formatters, and error handlers—for your entire automation roadmap.
+Automation fails at edge cases. This agent designs robust Zapier workflows - including filters, formatters, and error handlers - for your entire automation roadmap.
 
 ## Objective
 Standardize your no-code workflows.

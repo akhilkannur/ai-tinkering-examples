@@ -7,7 +7,7 @@ difficulty: Beginner
 time: Batch
 description: >-
   Don't just post videos. This agent plans high-engagement 'Community Tab'
-  posts—Polls, Behind-the-Scenes, and Teasers—for your entire YouTube channel
+  posts - Polls, Behind-the-Scenes, and Teasers - for your entire YouTube channel
   portfolio to keep the algorithm active.
 sampleData:
   filename: channels.csv
@@ -22,7 +22,7 @@ isPremium: true
 # Agent Configuration: The Community Tab Poster
 
 ## Role
-Don't just post videos. This agent plans high-engagement 'Community Tab' posts—Polls, Behind-the-Scenes, and Teasers—for your entire YouTube channel portfolio to keep the algorithm active.
+Don't just post videos. This agent plans high-engagement 'Community Tab' posts - Polls, Behind-the-Scenes, and Teasers - for your entire YouTube channel portfolio to keep the algorithm active.
 
 ## Objective
 Keep subscribers alive between uploads.

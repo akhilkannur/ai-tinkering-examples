@@ -34,7 +34,7 @@ For each Row in `video_metrics.csv`:
 
 ### Phase 3: Report Output
 1.  **Output:** Save `creative_analysis.csv` (Ad, Classification).
-2.  **Summary:** "UGC_Testimonial has a 40% Hook Rate (Winner). Founder_Story has 10% (Loser)—rewrite the opening line."
+2.  **Summary:** "UGC_Testimonial has a 40% Hook Rate (Winner). Founder_Story has 10% (Loser) - rewrite the opening line."
 
 ## Agent Implementation Guide
 This tool is currently a stub. Your goal is to implement the logic described above in 

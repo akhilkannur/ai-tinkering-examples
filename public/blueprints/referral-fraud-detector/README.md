@@ -1,6 +1,6 @@
 # The Referral Fraud Hunter
 
-Self-referrals and bot farms kill your program's ROI. This agent analyzes your referral logs to flag suspicious behavior—including IP collisions and sequential email patterns—so you can protect your budget.
+Self-referrals and bot farms kill your program's ROI. This agent analyzes your referral logs to flag suspicious behavior - including IP collisions and sequential email patterns - so you can protect your budget.
 
 
 # Agent Configuration: The Fraud Analyst

@@ -49,7 +49,7 @@ For each poll:
 
 **Phase 3: Conversion**
 Write a "Follow-Up DM" script for people who vote.
-*   *Example:* "Thanks for voting on my poll! Curious—did you pick 'X' because..."
+*   *Example:* "Thanks for voting on my poll! Curious - did you pick 'X' because..."
 
 Start now.
 

@@ -48,7 +48,7 @@ Write `referral_drafts.md` with 2 parts:
 
 *   **Part 2: The Ghostwritten Blurb (For Alice to send Bob):**
     *   *Subject:* Intro to [My Company]?
-    *   *Body:* "Hi Bob, I've been working with [My Company] to handle [Problem]. They've been great—saved us [Metric]. Thought of you since I know you're tackling [Topic]. Want an intro?"
+    *   *Body:* "Hi Bob, I've been working with [My Company] to handle [Problem]. They've been great - saved us [Metric]. Thought of you since I know you're tackling [Topic]. Want an intro?"
 
 Start now.
 

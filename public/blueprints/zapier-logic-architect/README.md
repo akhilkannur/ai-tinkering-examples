@@ -1,6 +1,6 @@
 # The Zapier Logic Architect
 
-Automation fails at edge cases. This agent designs robust Zapier workflows—including filters, formatters, and error handlers—for your entire automation roadmap.
+Automation fails at edge cases. This agent designs robust Zapier workflows - including filters, formatters, and error handlers - for your entire automation roadmap.
 
 
 # Agent Configuration: The Automator

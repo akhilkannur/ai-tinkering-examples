@@ -45,4 +45,4 @@ For each Campaign in `campaign_spend.csv`:
 
 ### Phase 3: Orders Output
 1.  **Output:** Save `daily_budget_adjustments.csv` (Campaign, New_Daily_Cap).
-2.  **Summary:** "Retargeting needs $[X]/day. Prospecting is hot—cut budget to $[Y]/day to avoid overspend."
+2.  **Summary:** "Retargeting needs $[X]/day. Prospecting is hot - cut budget to $[Y]/day to avoid overspend."

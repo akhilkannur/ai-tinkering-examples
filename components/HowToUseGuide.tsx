@@ -21,7 +21,7 @@ const HowToUseGuide = () => {
             </h2>
             <p className="text-text-secondary text-lg leading-relaxed mb-8 font-normal">
               ChatGPT can <em>write</em> an email, but it can't <em>send</em> it. <br/>
-              <strong className="text-text-color">Agentic Tools</strong> (like Claude Code or Gemini CLI) are different. They live on your computer, so they can create files, run searches, and manage your projects—just like a remote intern.
+              <strong className="text-text-color">Agentic Tools</strong> (like Claude Code or Gemini CLI) are different. They live on your computer, so they can create files, run searches, and manage your projects - just like a remote intern.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
                <div className="flex items-center gap-3 bg-primary-bg px-4 py-3 rounded-lg border border-navy-dark hover:border-accent/30 transition-colors">

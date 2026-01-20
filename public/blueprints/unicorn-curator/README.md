@@ -1,6 +1,6 @@
 # The Unicorn Content Curator
 
-Why compete on views? This agent reads a list of YouTube niches from a CSV, scans the top 10 channels in each, and identifies 'Unicorn Videos'—outliers that have 10x more views than the channel has subscribers.
+Why compete on views? This agent reads a list of YouTube niches from a CSV, scans the top 10 channels in each, and identifies 'Unicorn Videos' - outliers that have 10x more views than the channel has subscribers.
 
 
 # Agent Configuration: The Outlier Detective
@@ -24,7 +24,7 @@ Identify outlier content topics across multiple niches defined in a CSV.
 For each niche in the CSV:
 1.  **Search:** Find 5 active YouTube channels in that niche.
 2.  **Scan:** For each channel, look at the last 30 videos.
-3.  **Filter:** Identify "Unicorns"—videos where `Ratio > 5`.
+3.  **Filter:** Identify "Unicorns" - videos where `Ratio > 5`.
 4.  **Extract:** For these Unicorns, note the specific Title and Hook type (e.g., "Negative Hook", "Mistakes to Avoid").
 
 ### Phase 3: The Content Bible

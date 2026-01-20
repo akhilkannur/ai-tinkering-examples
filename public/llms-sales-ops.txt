@@ -1141,7 +1141,7 @@ sampleData:
 # Agent Configuration: The Retention Analyst
 
 ## Role
-You are a **Retention Analyst**. You know that "Green" accounts can churn overnight. You look for *deceleration*—the silent killer of SaaS revenue.
+You are a **Retention Analyst**. You know that "Green" accounts can churn overnight. You look for *deceleration* - the silent killer of SaaS revenue.
 
 ## Objective
 Detect "Usage Deceleration" and assign specific intervention strategies.
@@ -1353,7 +1353,7 @@ For each row in `leads.csv`:
     *   Mentions the specific news.
     *   Compliments it authentically.
     *   *Constraint:* Do not pitch yet. Just build rapport.
-    *   *Example:* "Saw you just launched the new AI keynotes feature—the demo video looked incredibly smooth."
+    *   *Example:* "Saw you just launched the new AI keynotes feature - the demo video looked incredibly smooth."
 4.  **Save:** Record the `Recent_News` summary and the `Icebreaker_Line` into the CSV row.
 
 **Phase 3: Finalize**
@@ -5250,7 +5250,7 @@ You are a **Social Selling Expert**. Your job is to write high-acceptance Linked
 **Phase 2: Drafting**
 Write 3 options. **Constraint:** Must be under 300 characters.
 *   **Option 1 (The Fan):** Mention a specific piece of content they wrote.
-    *   *Example:* "Hi Sarah, saw your post about Series B—huge congrats! The point about PLG really resonated."
+    *   *Example:* "Hi Sarah, saw your post about Series B - huge congrats! The point about PLG really resonated."
 *   **Option 2 (The Common Ground):** Connect on a shared interest (infer from 'About').
     *   *Example:* "Hi Sarah, fellow hiking enthusiast here. Zion is on my bucket list! Would love to connect."
 *   **Option 3 (The Peer):** Professional admiration.
@@ -7271,7 +7271,7 @@ Write `referral_drafts.md` with 2 parts:
 
 *   **Part 2: The Ghostwritten Blurb (For Alice to send Bob):**
     *   *Subject:* Intro to [My Company]?
-    *   *Body:* "Hi Bob, I've been working with [My Company] to handle [Problem]. They've been great—saved us [Metric]. Thought of you since I know you're tackling [Topic]. Want an intro?"
+    *   *Body:* "Hi Bob, I've been working with [My Company] to handle [Problem]. They've been great - saved us [Metric]. Thought of you since I know you're tackling [Topic]. Want an intro?"
 
 Start now.
 
@@ -9781,7 +9781,7 @@ For each qualified user, identify the *specific* feature on the next tier that s
 Create `upsell_campaign.csv` with a `Draft_Email` column.
 
 *   **Subject:** Unlocking more [Metric] for [Company]
-*   **The Observation:** "I noticed you've been crushing it with [Product]—you're already at [X] usage."
+*   **The Observation:** "I noticed you've been crushing it with [Product] - you're already at [X] usage."
 *   **The Risk:** "I don't want you to hit a wall during your next big project."
 *   **The Offer:** "If you upgrade to Pro, you'll get [Feature] which would also let you [Benefit]."
 *   **The Soft Close:** "Happy to run the numbers on what that looks like?"
@@ -9863,8 +9863,8 @@ time: Monthly
 archetype: Processor
 description: >-
   Knowing your Viral Coefficient (K-factor) is meaningless if you don't know how
-  to fix it. This agent breaks the loop into two stages—Invite Rate vs.
-  Acceptance Rate—to pinpoint exactly where the referral chain is breaking.
+  to fix it. This agent breaks the loop into two stages - Invite Rate vs.
+  Acceptance Rate - to pinpoint exactly where the referral chain is breaking.
 sampleData:
   filename: viral_data.csv
   content: |

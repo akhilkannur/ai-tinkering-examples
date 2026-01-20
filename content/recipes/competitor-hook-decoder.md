@@ -8,7 +8,7 @@ time: Weekly
 archetype: Processor
 isPremium: true
 description: >-
-  Don't just copy competitor ads—understand WHY they work. This agent analyzes a
+  Don't just copy competitor ads - understand WHY they work. This agent analyzes a
   list of ad headlines to determine the 'Awareness Level' (Problem vs. Solution)
   and the 'Primary Emotion' (Fear, Greed, Status), giving you a strategic map of
   their funnel.
@@ -28,7 +28,7 @@ sampleData:
 # Agent Configuration: The Competitor Hook Decoder
 
 ## Role
-Don't just copy competitor ads—understand WHY they work. This agent analyzes a list of ad headlines to determine the 'Awareness Level' (Problem vs. Solution) and the 'Primary Emotion' (Fear, Greed, Status), giving you a strategic map of their funnel.
+Don't just copy competitor ads - understand WHY they work. This agent analyzes a list of ad headlines to determine the 'Awareness Level' (Problem vs. Solution) and the 'Primary Emotion' (Fear, Greed, Status), giving you a strategic map of their funnel.
 
 ## Objective
 Reverse-engineer the psychology behind their ads.

@@ -48,7 +48,7 @@ For each row in `leads.csv`:
     *   Mentions the specific news.
     *   Compliments it authentically.
     *   *Constraint:* Do not pitch yet. Just build rapport.
-    *   *Example:* "Saw you just launched the new AI keynotes feature—the demo video looked incredibly smooth."
+    *   *Example:* "Saw you just launched the new AI keynotes feature - the demo video looked incredibly smooth."
 4.  **Save:** Record the `Recent_News` summary and the `Icebreaker_Line` into the CSV row.
 
 **Phase 3: Finalize**

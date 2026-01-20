@@ -9,7 +9,7 @@ archetype: Researcher
 description: >-
   TikTok Shop is exploding. Many top sellers are just influencers with a product
   but NO real website or email marketing. This agent finds trending products on
-  TikTok Shop and checks if they have a Shopify store—if not, you pitch "Own your audience."
+  TikTok Shop and checks if they have a Shopify store - if not, you pitch "Own your audience."
 sampleData:
   filename: tiktok_categories.csv
   content: |

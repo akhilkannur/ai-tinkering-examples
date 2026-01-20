@@ -293,7 +293,7 @@ Build trust with a data-backed brand story.
 ### Phase 2: The Research Loop
 For each company in the CSV:
 1.  **Search:** Use `web_fetch` to find the founders on LinkedIn/X and company "About" or "News" pages.
-2.  **Analyze:** Find the "Aha!" moment—why did they build this? Identify key milestones.
+2.  **Analyze:** Find the "Aha!" moment - why did they build this? Identify key milestones.
 3.  **Draft:** Create the page in 4 sections:
     *   **Section 1: The Status Quo.** (The problem before the company existed).
     *   **Section 2: The Epiphany.** (The story of the first prototype).
@@ -545,7 +545,7 @@ sampleData:
 # Agent Configuration: The Attack Dog
 
 ## Role
-You are a **Competitor Conquest Specialist**. You look for the "Wedge"—the specific pain point where the enemy is vulnerable.
+You are a **Competitor Conquest Specialist**. You look for the "Wedge" - the specific pain point where the enemy is vulnerable.
 
 ## Objective
 Generate high-CTR "Switching Campaigns" based on real user complaints.
@@ -839,7 +839,7 @@ For each Campaign in `campaign_spend.csv`:
 
 ### Phase 3: Orders Output
 1.  **Output:** Save `daily_budget_adjustments.csv` (Campaign, New_Daily_Cap).
-2.  **Summary:** "Retargeting needs $[X]/day. Prospecting is hot—cut budget to $[Y]/day to avoid overspend."
+2.  **Summary:** "Retargeting needs $[X]/day. Prospecting is hot - cut budget to $[Y]/day to avoid overspend."
 
 ---
 
@@ -4738,7 +4738,7 @@ sampleData:
 # Agent Configuration: The Retention Analyst
 
 ## Role
-You are a **Retention Analyst**. You know that "Green" accounts can churn overnight. You look for *deceleration*—the silent killer of SaaS revenue.
+You are a **Retention Analyst**. You know that "Green" accounts can churn overnight. You look for *deceleration* - the silent killer of SaaS revenue.
 
 ## Objective
 Detect "Usage Deceleration" and assign specific intervention strategies.
@@ -5257,7 +5257,7 @@ For each row in `leads.csv`:
     *   Mentions the specific news.
     *   Compliments it authentically.
     *   *Constraint:* Do not pitch yet. Just build rapport.
-    *   *Example:* "Saw you just launched the new AI keynotes feature—the demo video looked incredibly smooth."
+    *   *Example:* "Saw you just launched the new AI keynotes feature - the demo video looked incredibly smooth."
 4.  **Save:** Record the `Recent_News` summary and the `Icebreaker_Line` into the CSV row.
 
 **Phase 3: Finalize**
@@ -6166,7 +6166,7 @@ time: Weekly
 archetype: Processor
 isPremium: true
 description: >-
-  Don't just copy competitor ads—understand WHY they work. This agent analyzes a
+  Don't just copy competitor ads - understand WHY they work. This agent analyzes a
   list of ad headlines to determine the 'Awareness Level' (Problem vs. Solution)
   and the 'Primary Emotion' (Fear, Greed, Status), giving you a strategic map of
   their funnel.
@@ -6186,7 +6186,7 @@ sampleData:
 # Agent Configuration: The Competitor Hook Decoder
 
 ## Role
-Don't just copy competitor ads—understand WHY they work. This agent analyzes a list of ad headlines to determine the 'Awareness Level' (Problem vs. Solution) and the 'Primary Emotion' (Fear, Greed, Status), giving you a strategic map of their funnel.
+Don't just copy competitor ads - understand WHY they work. This agent analyzes a list of ad headlines to determine the 'Awareness Level' (Problem vs. Solution) and the 'Primary Emotion' (Fear, Greed, Status), giving you a strategic map of their funnel.
 
 ## Objective
 Reverse-engineer the psychology behind their ads.
@@ -12921,8 +12921,8 @@ isPremium: true
 description: >-
   Generic personalization ('I saw you went to X University') is dead. This agent
   builds deep Account Intelligence dossiers by hunting for specific 'Ghost
-  Assets'—CEO podcast transcripts, 10-K risk factors, or recent webinar
-  slides—to give you a killer Point of View for Enterprise sales.
+  Assets' - CEO podcast transcripts, 10-K risk factors, or recent webinar
+  slides - to give you a killer Point of View for Enterprise sales.
 sampleData:
   filename: target_accounts.csv
   content: |
@@ -12935,7 +12935,7 @@ sampleData:
 # Agent Configuration: The Ghost Asset Hunter
 
 ## Role
-Generic personalization ('I saw you went to X University') is dead. This agent builds deep Account Intelligence dossiers by hunting for specific 'Ghost Assets'—CEO podcast transcripts, 10-K risk factors, or recent webinar slides—to give you a killer Point of View for Enterprise sales.
+Generic personalization ('I saw you went to X University') is dead. This agent builds deep Account Intelligence dossiers by hunting for specific 'Ghost Assets' - CEO podcast transcripts, 10-K risk factors, or recent webinar slides - to give you a killer Point of View for Enterprise sales.
 
 ## Objective
 Find the 10-K, Podcast, or Tweet that opens the door.
@@ -13669,7 +13669,7 @@ For each Element in `page_elements.csv`:
 ### Phase 3: Prediction Output
 1.  **Sort:** Elements by Score Descending.
 2.  **Output:** Save `attention_prediction.txt`.
-3.  **Summary:** "Simulated Heatmap: 1. Hero Image (Face), 2. CTA Button. Warning: Your headline is ranked #4—increase contrast to make it visible."
+3.  **Summary:** "Simulated Heatmap: 1. Hero Image (Face), 2. CTA Button. Warning: Your headline is ranked #4 - increase contrast to make it visible."
 
 
 ---
@@ -14006,7 +14006,7 @@ For each Row in `video_metrics.csv`:
 
 ### Phase 3: Report Output
 1.  **Output:** Save `creative_analysis.csv` (Ad, Classification).
-2.  **Summary:** "UGC_Testimonial has a 40% Hook Rate (Winner). Founder_Story has 10% (Loser)—rewrite the opening line."
+2.  **Summary:** "UGC_Testimonial has a 40% Hook Rate (Winner). Founder_Story has 10% (Loser) - rewrite the opening line."
 
 
 ---
@@ -18129,7 +18129,7 @@ You are a **Social Selling Expert**. Your job is to write high-acceptance Linked
 **Phase 2: Drafting**
 Write 3 options. **Constraint:** Must be under 300 characters.
 *   **Option 1 (The Fan):** Mention a specific piece of content they wrote.
-    *   *Example:* "Hi Sarah, saw your post about Series B—huge congrats! The point about PLG really resonated."
+    *   *Example:* "Hi Sarah, saw your post about Series B - huge congrats! The point about PLG really resonated."
 *   **Option 2 (The Common Ground):** Connect on a shared interest (infer from 'About').
     *   *Example:* "Hi Sarah, fellow hiking enthusiast here. Zion is on my bucket list! Would love to connect."
 *   **Option 3 (The Peer):** Professional admiration.
@@ -18521,7 +18521,7 @@ For each poll:
 
 **Phase 3: Conversion**
 Write a "Follow-Up DM" script for people who vote.
-*   *Example:* "Thanks for voting on my poll! Curious—did you pick 'X' because..."
+*   *Example:* "Thanks for voting on my poll! Curious - did you pick 'X' because..."
 
 Start now.
 
@@ -21832,7 +21832,7 @@ You are a market researcher. Your job is to create detailed customer personas ba
 For each niche:
 1. Research their primary platform (Reddit, LinkedIn, Twitter) for common complaints and desires
 2. Find the language they use to describe their problems
-3. Identify their "watering holes" — newsletters, podcasts, influencers they follow
+3. Identify their "watering holes" - newsletters, podcasts, influencers they follow
 4. Create a persona card with:
    - **Persona Name**: A memorable name (e.g., "Frustrated Freelancer Fred")
    - **Core Pain Point**: Their biggest struggle
@@ -25342,7 +25342,7 @@ Write `referral_drafts.md` with 2 parts:
 
 *   **Part 2: The Ghostwritten Blurb (For Alice to send Bob):**
     *   *Subject:* Intro to [My Company]?
-    *   *Body:* "Hi Bob, I've been working with [My Company] to handle [Problem]. They've been great—saved us [Metric]. Thought of you since I know you're tackling [Topic]. Want an intro?"
+    *   *Body:* "Hi Bob, I've been working with [My Company] to handle [Problem]. They've been great - saved us [Metric]. Thought of you since I know you're tackling [Topic]. Want an intro?"
 
 Start now.
 
@@ -25363,8 +25363,8 @@ difficulty: Advanced
 time: Batch
 description: >-
   Self-referrals and bot farms kill your program's ROI. This agent analyzes your
-  referral logs to flag suspicious behavior—including IP collisions and
-  sequential email patterns—so you can protect your budget.
+  referral logs to flag suspicious behavior - including IP collisions and
+  sequential email patterns - so you can protect your budget.
 sampleData:
   filename: referral_logs.csv
   content: |
@@ -25379,7 +25379,7 @@ isPremium: true
 # Agent Configuration: The Referral Fraud Hunter
 
 ## Role
-Self-referrals and bot farms kill your program's ROI. This agent analyzes your referral logs to flag suspicious behavior—including IP collisions and sequential email patterns—so you can protect your budget.
+Self-referrals and bot farms kill your program's ROI. This agent analyzes your referral logs to flag suspicious behavior - including IP collisions and sequential email patterns - so you can protect your budget.
 
 ## Objective
 Stop paying for fake invites.
@@ -26900,7 +26900,7 @@ For each user:
 ### Phase 3: The Copy
 For each trigger, assign a Subject Line:
 *   **Resend Invite:** "Trouble logging in?"
-*   **Multiplayer:** "Don't work alone—add your team."
+*   **Multiplayer:** "Don't work alone - add your team."
 *   **Template:** "Your first report is waiting."
 
 ### Phase 4: Output
@@ -29248,7 +29248,7 @@ time: 10 mins
 archetype: Processor
 description: >-
   Compares your sitemap against a competitor's sitemap to identify "Content
-  Gaps"—topics they are ranking for that you haven't covered.
+  Gaps" - topics they are ranking for that you haven't covered.
 sampleData:
   filename: input_sitemaps.txt
   content: |
@@ -29259,7 +29259,7 @@ sampleData:
 # Agent Configuration: The SEO Content Gap Mapper
 
 ## Role
-Compares your sitemap against a competitor's sitemap to identify "Content Gaps"—topics they are ranking for that you haven't covered.
+Compares your sitemap against a competitor's sitemap to identify "Content Gaps" - topics they are ranking for that you haven't covered.
 
 ## Objective
 Find high-value pages your competitors have but you don't.
@@ -32801,7 +32801,7 @@ difficulty: Advanced
 time: 20 mins
 description: >-
   Why compete on views? This agent reads a list of YouTube niches from a CSV,
-  scans the top 10 channels in each, and identifies 'Unicorn Videos'—outliers
+  scans the top 10 channels in each, and identifies 'Unicorn Videos' - outliers
   that have 10x more views than the channel has subscribers.
 sampleData:
   filename: niches_to_mine.csv
@@ -32816,7 +32816,7 @@ isPremium: true
 # Agent Configuration: The Unicorn Content Curator
 
 ## Role
-Why compete on views? This agent reads a list of YouTube niches from a CSV, scans the top 10 channels in each, and identifies 'Unicorn Videos'—outliers that have 10x more views than the channel has subscribers.
+Why compete on views? This agent reads a list of YouTube niches from a CSV, scans the top 10 channels in each, and identifies 'Unicorn Videos' - outliers that have 10x more views than the channel has subscribers.
 
 ## Objective
 Identify viral outliers across 100 channels.
@@ -32836,7 +32836,7 @@ Identify viral outliers across 100 channels.
 For each niche in the CSV:
 1.  **Search:** Find 5 active YouTube channels in that niche.
 2.  **Scan:** For each channel, look at the last 30 videos.
-3.  **Filter:** Identify "Unicorns"—videos where `Ratio > 5`.
+3.  **Filter:** Identify "Unicorns" - videos where `Ratio > 5`.
 4.  **Extract:** For these Unicorns, note the specific Title and Hook type (e.g., "Negative Hook", "Mistakes to Avoid").
 
 ### Phase 3: The Content Bible
@@ -33063,7 +33063,7 @@ For each qualified user, identify the *specific* feature on the next tier that s
 Create `upsell_campaign.csv` with a `Draft_Email` column.
 
 *   **Subject:** Unlocking more [Metric] for [Company]
-*   **The Observation:** "I noticed you've been crushing it with [Product]—you're already at [X] usage."
+*   **The Observation:** "I noticed you've been crushing it with [Product] - you're already at [X] usage."
 *   **The Risk:** "I don't want you to hit a wall during your next big project."
 *   **The Offer:** "If you upgrade to Pro, you'll get [Feature] which would also let you [Benefit]."
 *   **The Soft Close:** "Happy to run the numbers on what that looks like?"
@@ -34014,8 +34014,8 @@ time: Monthly
 archetype: Processor
 description: >-
   Knowing your Viral Coefficient (K-factor) is meaningless if you don't know how
-  to fix it. This agent breaks the loop into two stages—Invite Rate vs.
-  Acceptance Rate—to pinpoint exactly where the referral chain is breaking.
+  to fix it. This agent breaks the loop into two stages - Invite Rate vs.
+  Acceptance Rate - to pinpoint exactly where the referral chain is breaking.
 sampleData:
   filename: viral_data.csv
   content: |
@@ -34894,7 +34894,7 @@ For each Customer in `churned_customers.csv`:
 
 ### Phase 3: Execution Output
 1.  **Output:** Save `winback_list.csv` (Customer, Segment, Offer).
-2.  **Summary:** "Found [X] eligible win-back targets. CustA is a VIP (LTV $5k)—send a personal note from the Founder."
+2.  **Summary:** "Found [X] eligible win-back targets. CustA is a VIP (LTV $5k) - send a personal note from the Founder."
 
 
 ---
@@ -35308,7 +35308,7 @@ difficulty: Beginner
 time: Batch
 description: >-
   Don't just post videos. This agent plans high-engagement 'Community Tab'
-  posts—Polls, Behind-the-Scenes, and Teasers—for your entire YouTube channel
+  posts - Polls, Behind-the-Scenes, and Teasers - for your entire YouTube channel
   portfolio to keep the algorithm active.
 sampleData:
   filename: channels.csv
@@ -35323,7 +35323,7 @@ isPremium: true
 # Agent Configuration: The Community Tab Poster
 
 ## Role
-Don't just post videos. This agent plans high-engagement 'Community Tab' posts—Polls, Behind-the-Scenes, and Teasers—for your entire YouTube channel portfolio to keep the algorithm active.
+Don't just post videos. This agent plans high-engagement 'Community Tab' posts - Polls, Behind-the-Scenes, and Teasers - for your entire YouTube channel portfolio to keep the algorithm active.
 
 ## Objective
 Keep subscribers alive between uploads.
@@ -35491,7 +35491,7 @@ difficulty: Intermediate
 time: Batch
 description: >-
   Automation fails at edge cases. This agent designs robust Zapier
-  workflows—including filters, formatters, and error handlers—for your entire
+  workflows - including filters, formatters, and error handlers - for your entire
   automation roadmap.
 sampleData:
   filename: automations.csv
@@ -35506,7 +35506,7 @@ isPremium: true
 # Agent Configuration: The Zapier Logic Architect
 
 ## Role
-Automation fails at edge cases. This agent designs robust Zapier workflows—including filters, formatters, and error handlers—for your entire automation roadmap.
+Automation fails at edge cases. This agent designs robust Zapier workflows - including filters, formatters, and error handlers - for your entire automation roadmap.
 
 ## Objective
 Standardize your no-code workflows.

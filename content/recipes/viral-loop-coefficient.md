@@ -8,8 +8,8 @@ time: Monthly
 archetype: Processor
 description: >-
   Knowing your Viral Coefficient (K-factor) is meaningless if you don't know how
-  to fix it. This agent breaks the loop into two stages—Invite Rate vs.
-  Acceptance Rate—to pinpoint exactly where the referral chain is breaking.
+  to fix it. This agent breaks the loop into two stages - Invite Rate vs.
+  Acceptance Rate - to pinpoint exactly where the referral chain is breaking.
 sampleData:
   filename: viral_data.csv
   content: |

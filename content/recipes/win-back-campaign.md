@@ -47,4 +47,4 @@ For each Customer in `churned_customers.csv`:
 
 ### Phase 3: Execution Output
 1.  **Output:** Save `winback_list.csv` (Customer, Segment, Offer).
-2.  **Summary:** "Found [X] eligible win-back targets. CustA is a VIP (LTV $5k)—send a personal note from the Founder."
+2.  **Summary:** "Found [X] eligible win-back targets. CustA is a VIP (LTV $5k) - send a personal note from the Founder."

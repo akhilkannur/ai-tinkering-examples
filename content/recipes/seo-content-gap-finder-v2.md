@@ -8,7 +8,7 @@ time: 10 mins
 archetype: Processor
 description: >-
   Compares your sitemap against a competitor's sitemap to identify "Content
-  Gaps"—topics they are ranking for that you haven't covered.
+  Gaps" - topics they are ranking for that you haven't covered.
 sampleData:
   filename: input_sitemaps.txt
   content: |
@@ -19,7 +19,7 @@ sampleData:
 # Agent Configuration: The SEO Content Gap Mapper
 
 ## Role
-Compares your sitemap against a competitor's sitemap to identify "Content Gaps"—topics they are ranking for that you haven't covered.
+Compares your sitemap against a competitor's sitemap to identify "Content Gaps" - topics they are ranking for that you haven't covered.
 
 ## Objective
 Find high-value pages your competitors have but you don't.

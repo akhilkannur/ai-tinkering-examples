@@ -3793,7 +3793,7 @@ For each poll:
 
 **Phase 3: Conversion**
 Write a "Follow-Up DM" script for people who vote.
-*   *Example:* "Thanks for voting on my poll! Curious—did you pick 'X' because..."
+*   *Example:* "Thanks for voting on my poll! Curious - did you pick 'X' because..."
 
 Start now.
 
@@ -4712,7 +4712,7 @@ You are a market researcher. Your job is to create detailed customer personas ba
 For each niche:
 1. Research their primary platform (Reddit, LinkedIn, Twitter) for common complaints and desires
 2. Find the language they use to describe their problems
-3. Identify their "watering holes" — newsletters, podcasts, influencers they follow
+3. Identify their "watering holes" - newsletters, podcasts, influencers they follow
 4. Create a persona card with:
    - **Persona Name**: A memorable name (e.g., "Frustrated Freelancer Fred")
    - **Core Pain Point**: Their biggest struggle
@@ -5530,8 +5530,8 @@ difficulty: Advanced
 time: Batch
 description: >-
   Self-referrals and bot farms kill your program's ROI. This agent analyzes your
-  referral logs to flag suspicious behavior—including IP collisions and
-  sequential email patterns—so you can protect your budget.
+  referral logs to flag suspicious behavior - including IP collisions and
+  sequential email patterns - so you can protect your budget.
 sampleData:
   filename: referral_logs.csv
   content: |
@@ -5546,7 +5546,7 @@ isPremium: true
 # Agent Configuration: The Referral Fraud Hunter
 
 ## Role
-Self-referrals and bot farms kill your program's ROI. This agent analyzes your referral logs to flag suspicious behavior—including IP collisions and sequential email patterns—so you can protect your budget.
+Self-referrals and bot farms kill your program's ROI. This agent analyzes your referral logs to flag suspicious behavior - including IP collisions and sequential email patterns - so you can protect your budget.
 
 ## Objective
 Stop paying for fake invites.
@@ -5976,7 +5976,7 @@ time: 10 mins
 archetype: Processor
 description: >-
   Compares your sitemap against a competitor's sitemap to identify "Content
-  Gaps"—topics they are ranking for that you haven't covered.
+  Gaps" - topics they are ranking for that you haven't covered.
 sampleData:
   filename: input_sitemaps.txt
   content: |
@@ -5987,7 +5987,7 @@ sampleData:
 # Agent Configuration: The SEO Content Gap Mapper
 
 ## Role
-Compares your sitemap against a competitor's sitemap to identify "Content Gaps"—topics they are ranking for that you haven't covered.
+Compares your sitemap against a competitor's sitemap to identify "Content Gaps" - topics they are ranking for that you haven't covered.
 
 ## Objective
 Find high-value pages your competitors have but you don't.

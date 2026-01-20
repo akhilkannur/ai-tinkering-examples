@@ -301,7 +301,7 @@ You are a market researcher. Your job is to create detailed customer personas ba
 For each niche:
 1. Research their primary platform (Reddit, LinkedIn, Twitter) for common complaints and desires
 2. Find the language they use to describe their problems
-3. Identify their "watering holes" — newsletters, podcasts, influencers they follow
+3. Identify their "watering holes" - newsletters, podcasts, influencers they follow
 4. Create a persona card with:
    - **Persona Name**: A memorable name (e.g., "Frustrated Freelancer Fred")
    - **Core Pain Point**: Their biggest struggle

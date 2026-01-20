@@ -35,7 +35,7 @@ For each Element in `page_elements.csv`:
 ### Phase 3: Prediction Output
 1.  **Sort:** Elements by Score Descending.
 2.  **Output:** Save `attention_prediction.txt`.
-3.  **Summary:** "Simulated Heatmap: 1. Hero Image (Face), 2. CTA Button. Warning: Your headline is ranked #4—increase contrast to make it visible."
+3.  **Summary:** "Simulated Heatmap: 1. Hero Image (Face), 2. CTA Button. Warning: Your headline is ranked #4 - increase contrast to make it visible."
 
 ## Agent Implementation Guide
 This tool is currently a stub. Your goal is to implement the logic described above in 

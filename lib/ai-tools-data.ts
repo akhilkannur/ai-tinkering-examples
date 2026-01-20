@@ -197,7 +197,7 @@ export const aiTools: AiTool[] = [
 },
   {
     name: "StrideFuel",
-    description: "Built for weight loss success—especially GLP-1 users. AI coaching, voice logging, photo recognition, HealthKit sync. You...",
+    description: "Built for weight loss success - especially GLP-1 users. AI coaching, voice logging, photo recognition, HealthKit sync. You...",
     url: "https://stride-fuel.com",
     category: "Image Generation",
     tags: {

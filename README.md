@@ -10,9 +10,9 @@ Minimal Next.js + Airtable site for short, visual AI examples.
 
 ## Airtable schema (table: Examples)
 - Title (single line)
-- Slug (single line) — optional
+- Slug (single line) - optional
 - Summary (long text)
-- Screenshots (attachment) — 1–2 images
+- Screenshots (attachment) - 1–2 images
 - Category (single select)
 - Read time (number)
 - Publish date (date)

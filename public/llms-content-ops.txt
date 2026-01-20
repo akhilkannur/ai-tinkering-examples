@@ -49,7 +49,7 @@ Build trust with a data-backed brand story.
 ### Phase 2: The Research Loop
 For each company in the CSV:
 1.  **Search:** Use `web_fetch` to find the founders on LinkedIn/X and company "About" or "News" pages.
-2.  **Analyze:** Find the "Aha!" moment—why did they build this? Identify key milestones.
+2.  **Analyze:** Find the "Aha!" moment - why did they build this? Identify key milestones.
 3.  **Draft:** Create the page in 4 sections:
     *   **Section 1: The Status Quo.** (The problem before the company existed).
     *   **Section 2: The Epiphany.** (The story of the first prototype).
@@ -2111,7 +2111,7 @@ difficulty: Advanced
 time: 20 mins
 description: >-
   Why compete on views? This agent reads a list of YouTube niches from a CSV,
-  scans the top 10 channels in each, and identifies 'Unicorn Videos'—outliers
+  scans the top 10 channels in each, and identifies 'Unicorn Videos' - outliers
   that have 10x more views than the channel has subscribers.
 sampleData:
   filename: niches_to_mine.csv
@@ -2126,7 +2126,7 @@ isPremium: true
 # Agent Configuration: The Unicorn Content Curator
 
 ## Role
-Why compete on views? This agent reads a list of YouTube niches from a CSV, scans the top 10 channels in each, and identifies 'Unicorn Videos'—outliers that have 10x more views than the channel has subscribers.
+Why compete on views? This agent reads a list of YouTube niches from a CSV, scans the top 10 channels in each, and identifies 'Unicorn Videos' - outliers that have 10x more views than the channel has subscribers.
 
 ## Objective
 Identify viral outliers across 100 channels.
@@ -2146,7 +2146,7 @@ Identify viral outliers across 100 channels.
 For each niche in the CSV:
 1.  **Search:** Find 5 active YouTube channels in that niche.
 2.  **Scan:** For each channel, look at the last 30 videos.
-3.  **Filter:** Identify "Unicorns"—videos where `Ratio > 5`.
+3.  **Filter:** Identify "Unicorns" - videos where `Ratio > 5`.
 4.  **Extract:** For these Unicorns, note the specific Title and Hook type (e.g., "Negative Hook", "Mistakes to Avoid").
 
 ### Phase 3: The Content Bible
@@ -2443,7 +2443,7 @@ difficulty: Beginner
 time: Batch
 description: >-
   Don't just post videos. This agent plans high-engagement 'Community Tab'
-  posts—Polls, Behind-the-Scenes, and Teasers—for your entire YouTube channel
+  posts - Polls, Behind-the-Scenes, and Teasers - for your entire YouTube channel
   portfolio to keep the algorithm active.
 sampleData:
   filename: channels.csv
@@ -2458,7 +2458,7 @@ isPremium: true
 # Agent Configuration: The Community Tab Poster
 
 ## Role
-Don't just post videos. This agent plans high-engagement 'Community Tab' posts—Polls, Behind-the-Scenes, and Teasers—for your entire YouTube channel portfolio to keep the algorithm active.
+Don't just post videos. This agent plans high-engagement 'Community Tab' posts - Polls, Behind-the-Scenes, and Teasers - for your entire YouTube channel portfolio to keep the algorithm active.
 
 ## Objective
 Keep subscribers alive between uploads.

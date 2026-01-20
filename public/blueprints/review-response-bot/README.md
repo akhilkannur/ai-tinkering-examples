@@ -31,7 +31,7 @@ For each review in the CSV:
     *   **Generic/Low-Intent:** Reviews with no specific detail.
 2.  **Draft Response:**
     *   **For Technical:** "Hi [Reviewer_Name], I'm the [Role]. So sorry to hear about the crash. We've flagged this for our engineers. Please email me at [Email] so I can personally ensure your work is recovered."
-    *   **For Pricing:** "We appreciate the feedback. We focus on [Key Benefit] which often requires more resources than free tools. We'd love to show you how to get more ROI—reach out at [Email]."
+    *   **For Pricing:** "We appreciate the feedback. We focus on [Key Benefit] which often requires more resources than free tools. We'd love to show you how to get more ROI - reach out at [Email]."
     *   **For Generic:** "Hi [Reviewer_Name], we take all feedback seriously. Since there are no details here, we'd love to learn more about your experience. Please reach out!"
 
 ### Phase 3: Structured Deliverables

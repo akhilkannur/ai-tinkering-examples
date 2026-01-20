@@ -52,7 +52,7 @@ For each qualified user, identify the *specific* feature on the next tier that s
 Create `upsell_campaign.csv` with a `Draft_Email` column.
 
 *   **Subject:** Unlocking more [Metric] for [Company]
-*   **The Observation:** "I noticed you've been crushing it with [Product]—you're already at [X] usage."
+*   **The Observation:** "I noticed you've been crushing it with [Product] - you're already at [X] usage."
 *   **The Risk:** "I don't want you to hit a wall during your next big project."
 *   **The Offer:** "If you upgrade to Pro, you'll get [Feature] which would also let you [Benefit]."
 *   **The Soft Close:** "Happy to run the numbers on what that looks like?"

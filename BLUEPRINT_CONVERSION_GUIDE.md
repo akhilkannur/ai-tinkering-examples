@@ -103,7 +103,7 @@ One or two sentences in plain English. No jargon. What problem does it solve?
 - (Or any other input requirements)
 
 # What You Get
-- `output.csv` — description of output
+- `output.csv` - description of output
 - Any other files created
 - Summary of results
 
@@ -165,11 +165,11 @@ Start now.
 - The "## Capabilities" section (delete, not useful)
 
 ### 3. Add New Sections
-- `# What This Does` — plain English, one sentence
-- `# What You Need` — input files/data required
-- `# What You Get` — output files/results
-- `# How to Use` — 4 simple steps
-- `# Prompt` — the actual copy-paste prompt
+- `# What This Does` - plain English, one sentence
+- `# What You Need` - input files/data required
+- `# What You Get` - output files/results
+- `# How to Use` - 4 simple steps
+- `# Prompt` - the actual copy-paste prompt
 
 ### 4. Rewrite the Prompt
 - Start with: "You are a [simple role]. Your job is to [simple task]."

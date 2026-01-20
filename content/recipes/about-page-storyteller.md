@@ -43,7 +43,7 @@ Build trust with a data-backed brand story.
 ### Phase 2: The Research Loop
 For each company in the CSV:
 1.  **Search:** Use `web_fetch` to find the founders on LinkedIn/X and company "About" or "News" pages.
-2.  **Analyze:** Find the "Aha!" moment—why did they build this? Identify key milestones.
+2.  **Analyze:** Find the "Aha!" moment - why did they build this? Identify key milestones.
 3.  **Draft:** Create the page in 4 sections:
     *   **Section 1: The Status Quo.** (The problem before the company existed).
     *   **Section 2: The Epiphany.** (The story of the first prototype).

@@ -48,7 +48,7 @@ For each user:
 ### Phase 3: The Copy
 For each trigger, assign a Subject Line:
 *   **Resend Invite:** "Trouble logging in?"
-*   **Multiplayer:** "Don't work alone—add your team."
+*   **Multiplayer:** "Don't work alone - add your team."
 *   **Template:** "Your first report is waiting."
 
 ### Phase 4: Output

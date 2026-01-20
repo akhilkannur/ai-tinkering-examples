@@ -1,6 +1,6 @@
 # The Community Tab Poster
 
-Don't just post videos. This agent plans high-engagement 'Community Tab' posts—Polls, Behind-the-Scenes, and Teasers—for your entire YouTube channel portfolio to keep the algorithm active.
+Don't just post videos. This agent plans high-engagement 'Community Tab' posts - Polls, Behind-the-Scenes, and Teasers - for your entire YouTube channel portfolio to keep the algorithm active.
 
 
 # Agent Configuration: The Community Manager
