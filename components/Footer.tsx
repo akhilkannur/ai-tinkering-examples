@@ -12,6 +12,9 @@ export default function Footer() {
           <Link href="/blueprints" className="text-text-secondary hover:text-accent transition-colors">
             Blueprints
           </Link>
+          <Link href="/blog" className="text-text-secondary hover:text-accent transition-colors">
+            Guides
+          </Link>
           <Link href="/learn-ai" className="text-text-secondary hover:text-accent transition-colors">
             Learn AI
           </Link>
