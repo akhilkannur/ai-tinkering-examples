@@ -142,7 +142,7 @@ export default function InvestorsPage({ initialInvestors }: InvestorsPageProps) 
           
           {/* Sidebar Filters */}
           <aside className="lg:w-1/4 space-y-6">
-            <div className="bg-secondary-bg border border-border-color rounded-2xl p-6 shadow-lg sticky top-24">
+            <div className="bg-secondary-bg border border-border-color rounded-lg p-6 shadow-sm sticky top-24">
               <div className="flex items-center gap-2 mb-6 text-accent">
                 <Filter className="h-5 w-5" />
                 <h3 className="font-bold text-lg">Filter Investors</h3>
@@ -206,7 +206,7 @@ export default function InvestorsPage({ initialInvestors }: InvestorsPageProps) 
                   
                   {/* UNLOCKED INVESTORS */}
                   {displayedInvestors.map((investor, idx) => (
-                    <div key={idx} className="bg-secondary-bg border border-border-color rounded-2xl p-6 hover:border-accent transition-all duration-300 shadow-lg group flex flex-col h-full relative">
+                    <div key={idx} className="bg-secondary-bg border border-border-color rounded-lg p-6 hover:border-white/20 transition-all duration-300 shadow-sm group flex flex-col h-full relative">
                       
                       <div className="flex justify-between items-start mb-4">
                         <div>
@@ -274,7 +274,7 @@ export default function InvestorsPage({ initialInvestors }: InvestorsPageProps) 
 
                   {/* LOCKED TEASERS (If Paywall Active) */}
                   {showPaywallOverlay && lockedTeasers.map((investor, idx) => (
-                    <div key={`locked-${idx}`} className="bg-secondary-bg/50 border border-border-color rounded-2xl p-6 relative overflow-hidden opacity-80 select-none">
+                    <div key={`locked-${idx}`} className="bg-secondary-bg/50 border border-border-color rounded-lg p-6 relative overflow-hidden opacity-80 select-none">
                        {/* Locked Strip */}
                        <div className="absolute top-0 left-0 w-1.5 h-full bg-yellow-500" />
                        <div className="absolute top-4 right-4 text-yellow-500">
@@ -299,7 +299,7 @@ export default function InvestorsPage({ initialInvestors }: InvestorsPageProps) 
                     <div className="relative mt-12 mb-20 text-center">
                         <div className="absolute inset-0 flex items-center justify-center -top-32 bg-gradient-to-t from-primary-bg via-primary-bg/95 to-transparent z-10 pointer-events-none h-[400px]"></div>
                         
-                        <div className="relative z-20 bg-secondary-bg border-2 border-accent/50 rounded-3xl p-8 md:p-12 text-center shadow-2xl max-w-2xl mx-auto transform hover:scale-[1.01] transition-transform">
+                        <div className="relative z-20 bg-secondary-bg border border-white/10 rounded-xl p-8 md:p-12 text-center shadow-2xl max-w-2xl mx-auto transform hover:scale-[1.01] transition-transform">
                         
                         {!showLicenseInput ? (
                             <>

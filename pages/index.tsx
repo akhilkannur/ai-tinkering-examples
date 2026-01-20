@@ -65,7 +65,7 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
                               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
                               <span className="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
                             </span>
-                            <span className="tracking-widest uppercase font-bold">The AI Blueprint Library</span>
+                            <span className="tracking-widest uppercase font-bold">AI Blueprints for Sales & Marketing</span>
                         </div>
                         
                         <h1 className="text-5xl md:text-7xl font-sans font-extrabold text-text-color mb-6 tracking-tight leading-[1.1]">
