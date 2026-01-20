@@ -34,6 +34,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="twitter:title" content={title} key="twitter:title" />
         <meta name="twitter:description" content={description} key="twitter:description" />
         <meta name="twitter:image" content={ogImage} key="twitter:image" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href={canonicalUrl} key="canonical" />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon_canva.png" />

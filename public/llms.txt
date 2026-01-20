@@ -2,18 +2,19 @@
 > Actionable AI workflows for Sales, Marketing, and RevOps.
 
 ## Niche-Specific Indices (Recommended for Context)
-- [llms-sales-ops.txt](https://realaiexamples.com/llms-sales-ops.txt) - 173 recipes
-- [llms-strategic-ops.txt](https://realaiexamples.com/llms-strategic-ops.txt) - 114 recipes
-- [llms-marketing-ops.txt](https://realaiexamples.com/llms-marketing-ops.txt) - 53 recipes
-- [llms-content-ops.txt](https://realaiexamples.com/llms-content-ops.txt) - 40 recipes
-- [llms-competitive-intel.txt](https://realaiexamples.com/llms-competitive-intel.txt) - 31 recipes
-- [llms-paid-media.txt](https://realaiexamples.com/llms-paid-media.txt) - 33 recipes
-- [llms-customer-success.txt](https://realaiexamples.com/llms-customer-success.txt) - 37 recipes
-- [llms-seo.txt](https://realaiexamples.com/llms-seo.txt) - 46 recipes
-- [llms-cro.txt](https://realaiexamples.com/llms-cro.txt) - 32 recipes
-- [llms-lead-gen.txt](https://realaiexamples.com/llms-lead-gen.txt) - 21 recipes
+- [llms-sales-ops.txt](https://realaiexamples.com/llms-sales-ops.txt) - 181 recipes
+- [llms-strategic-ops.txt](https://realaiexamples.com/llms-strategic-ops.txt) - 124 recipes
+- [llms-marketing-ops.txt](https://realaiexamples.com/llms-marketing-ops.txt) - 57 recipes
+- [llms-content-ops.txt](https://realaiexamples.com/llms-content-ops.txt) - 49 recipes
+- [llms-competitive-intel.txt](https://realaiexamples.com/llms-competitive-intel.txt) - 33 recipes
+- [llms-paid-media.txt](https://realaiexamples.com/llms-paid-media.txt) - 34 recipes
+- [llms-customer-success.txt](https://realaiexamples.com/llms-customer-success.txt) - 42 recipes
+- [llms-seo.txt](https://realaiexamples.com/llms-seo.txt) - 49 recipes
+- [llms-lead-gen.txt](https://realaiexamples.com/llms-lead-gen.txt) - 73 recipes
+- [llms-cro.txt](https://realaiexamples.com/llms-cro.txt) - 33 recipes
 - [llms-e-commerce.txt](https://realaiexamples.com/llms-e-commerce.txt) - 25 recipes
-- [llms-retention.txt](https://realaiexamples.com/llms-retention.txt) - 12 recipes
+- [llms-retention.txt](https://realaiexamples.com/llms-retention.txt) - 16 recipes
+- [llms-product-ops.txt](https://realaiexamples.com/llms-product-ops.txt) - 1 recipes
 
 ## Core Sections
 - [Home](https://realaiexamples.com)
@@ -24,6 +25,7 @@
 - [The Abandoned Cart SMS Writer](https://realaiexamples.com/blueprints/abandoned-cart-sms): Generate high-converting SMS hooks by analyzing your product page.
 - [ABM Campaign Asset Builder](https://realaiexamples.com/blueprints/abm-campaign-asset-builder): Generate personalized landing page copy for target accounts.
 - [Intent Signal Aggregator](https://realaiexamples.com/blueprints/abm-intent-aggregator): Combine G2, 6sense, and Website visits.
+- [ABM Personal Gift Recommender](https://realaiexamples.com/blueprints/abm-personal-gift-recommender): Send gifts they actually keep, not just swag.
 - [ABM Account Tiering Calc](https://realaiexamples.com/blueprints/abm-tiering-calculator): Auto-assign Tier 1/2/3 based on ICP fit and intent.
 - [The About Page Storyteller](https://realaiexamples.com/blueprints/about-page-storyteller): Build trust with a data-backed brand story.
 - [Corporate Hierarchy Builder](https://realaiexamples.com/blueprints/account-hierarchy-builder): Link subsidiaries to parents based on domain patterns.
@@ -38,23 +40,31 @@
 - [The Ad Spend Pacer](https://realaiexamples.com/blueprints/ad-spend-pacer): Land exactly on budget.
 - [The Ad Visual Intelligence Factory](https://realaiexamples.com/blueprints/ad-visual-reverse-engineer): Reverse-engineer 10 winning ads into design briefs.
 - [Advocacy Fatigue Saver](https://realaiexamples.com/blueprints/advocacy-ask-balancer): Don't ask twice in one month.
+- [Affiliate Application Auto-Screener](https://realaiexamples.com/blueprints/affiliate-application-auto-screener): Filter out spammy affiliate applications instantly.
 - [The Affiliate Program Launcher](https://realaiexamples.com/blueprints/affiliate-program-launcher): Build a commission-only sales team.
 - [The Project Architect](https://realaiexamples.com/blueprints/agent-context-builder): Make any folder AI-ready instantly.
 - [The AI Manager's Handbook](https://realaiexamples.com/blueprints/ai-manager-handbook): Teach AI your specific rules once.
 - [The 'Alternative To' Hub Builder](https://realaiexamples.com/blueprints/alternative-to-builder): Steal traffic from all your competitors at once.
+- [The Alumni Network Miner](https://realaiexamples.com/blueprints/alumni-network-miner): Find prospects who went to the same university as your executives.
+- [The Angel Portfolio Scanner](https://realaiexamples.com/blueprints/angel-investor-portfolio-scanner): Prospect companies backed by friendly Angel Investors.
+- [The 10-K Strategic Hunter](https://realaiexamples.com/blueprints/annual-report-keyword-hunter): Scan annual reports for specific strategic initiative keywords.
 - [The API Fleet Monitor](https://realaiexamples.com/blueprints/api-endpoint-validator): Health check 50 endpoints in one run.
+- [API Error Impact Alerter](https://realaiexamples.com/blueprints/api-error-impact-alerter): Know exactly which VIP customers are seeing 500 errors.
 - [The API Key Rotator](https://realaiexamples.com/blueprints/api-key-rotator-checklist): Don't get hacked.
 - [The API Usage Biller](https://realaiexamples.com/blueprints/api-usage-biller): Don't leave money on the table.
 - [The App Store Screenshot Optimizer](https://realaiexamples.com/blueprints/app-store-screenshot-optimizer): More downloads, same traffic.
 - [The Attribution Modeler](https://realaiexamples.com/blueprints/attribution-modeler): Who actually deserves credit?
 - [Attribution Window Comparer](https://realaiexamples.com/blueprints/attribution-window-comparator): 1-day vs 7-day click impact.
 - [The Audience Overlap Checker](https://realaiexamples.com/blueprints/audience-overlap-checker): Stop bidding against yourself.
+- [Automated SWOT Generator](https://realaiexamples.com/blueprints/automated-swot-generator): Generate a SWOT analysis for any company in seconds.
 - [Webinar Follow-Up Architect](https://realaiexamples.com/blueprints/automated-webinar-followup-sequence): Segment attendees vs. no-shows and write targeted nurture sequences.
 - [The Autonomous Project Manager](https://realaiexamples.com/blueprints/autonomous-project-manager): The 'Ralph Wiggum' Loop.
 - [The Sales Sniper](https://realaiexamples.com/blueprints/autonomous-sales-sniper): Find and qualify B2B leads automatically.
 - [The AI Avatar Scriptwriter](https://realaiexamples.com/blueprints/avatar-video-producer): Scripts for HeyGen & Synthesia.
+- [The Ecosystem Partner Finder](https://realaiexamples.com/blueprints/b2b-marketplace-scraper): Find leads from AppExchange, Shopify, or HubSpot app stores.
 - [Backlink Quality Auditor](https://realaiexamples.com/blueprints/backlink-quality-scorer): Filter the gold from the spam.
 - [The Backlink Toxicity Checker](https://realaiexamples.com/blueprints/backlink-toxicity-checker): Is that link helping or hurting?
+- [The Competitor Poacher](https://realaiexamples.com/blueprints/bad-review-poacher): Identify users complaining about competitors on G2/Capterra.
 - [Basket Correlation Engine](https://realaiexamples.com/blueprints/basket-analysis-market-basket): People who buy A also buy B.
 - [Content Usage Tracker](https://realaiexamples.com/blueprints/battlecard-usage-tracker): Which battlecards do reps actually use?
 - [Back-in-Stock Campaigner](https://realaiexamples.com/blueprints/bestseller-restock-alert): Launch ads when bestsellers return.
@@ -62,12 +72,3 @@
 - [The Beta Tester Recruiter](https://realaiexamples.com/blueprints/beta-tester-recruiter): Find your first 50 users.
 - [Billing Contact Verifier](https://realaiexamples.com/blueprints/billing-contact-verification): Will the invoice bounce?
 - [Annual Pre-Pay Upsell](https://realaiexamples.com/blueprints/billing-frequency-upsell): Move monthly users to annual plans.
-- [The Bio Link Architect](https://realaiexamples.com/blueprints/bio-link-optimizer): Optimize your 'Link in Bio' from a URL or a goal.
-- [Content Revenue Attributor](https://realaiexamples.com/blueprints/blog-post-roi-calculator): Stitch CRM deals to Analytics data to find your 'Money Pages'.
-- [The Blueprint Architect](https://realaiexamples.com/blueprints/blueprint-architect): Create your own Work-Ready blueprints.
-- [The Boolean Search Architect](https://realaiexamples.com/blueprints/boolean-search-architect): Write complex Sales Nav queries without the headache.
-- [The Event Booth Strategist](https://realaiexamples.com/blueprints/booth-design-checklist): Custom booth checklists for your event portfolio.
-- [Event Lead Router](https://realaiexamples.com/blueprints/booth-scan-lead-router): Route badge scans to the right rep.
-- [The Instant Brand Architect](https://realaiexamples.com/blueprints/brand-kit-gen): Logo + Pattern + Vibe.
-- [The Brand Voice Architect](https://realaiexamples.com/blueprints/brand-voice-guidelines): Stop sounding schizophrenic.
-- [Brand Voice Chameleon](https://realaiexamples.com/blueprints/brand-voice-rewriter): Rewrite any text to match your specific brand personality.
