@@ -75,7 +75,7 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
                         
                         <p className="text-lg text-text-secondary mb-10 leading-relaxed max-w-lg font-normal">
                             Turn AI Agents into your personal assistants. 
-                            <strong className="text-text-color"> 600+ blueprints</strong> for Sales & Marketing. 
+                            <strong className="text-text-color"> 700+ blueprints</strong> for Sales & Marketing. 
                             Built by non-technical tinkerers, for non-technical tinkerers.
                         </p>
 

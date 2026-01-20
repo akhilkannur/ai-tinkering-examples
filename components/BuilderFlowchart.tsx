@@ -115,7 +115,7 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
           <input
             type="text"
             className="block w-full pl-10 pr-3 py-3 border border-navy-dark rounded-lg leading-5 bg-primary-bg text-text-color placeholder-text-secondary/50 focus:outline-none focus:bg-primary-bg focus:ring-1 focus:ring-accent focus:border-accent transition duration-150 ease-in-out font-sans"
-            placeholder="Search 600+ blueprints..."
+            placeholder="Search 700+ blueprints..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
@@ -264,10 +264,10 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
                         <div className="w-20 h-20 bg-gradient-to-br from-yellow-500 to-amber-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-[0_0_30px_rgba(245,158,11,0.3)] border-4 border-secondary-bg">
                             <Lock className="w-10 h-10 text-white" />
                         </div>
-                        <h3 className="text-3xl font-bold mb-3 font-headline">Unlock {Math.max(0, filteredRecipes.length - 200)}+ Advanced Blueprints</h3>
+                        <h3 className="text-3xl font-bold mb-3 font-headline">Unlock {Math.max(0, filteredRecipes.length - 200)}+ Specialized Blueprints</h3>
                         <p className="text-text-secondary mb-8 leading-relaxed text-lg max-w-lg mx-auto">
-                            You've seen the list. Now get the code. <br/>
-                            Instant access to the full library of Sales, Marketing, and SEO agents.
+                            You've seen the list. Now get the full library. <br/>
+                            Instant access to our growing database of Sales, Marketing, and Ops blueprints—with new ones added every week.
                         </p>
                         <a 
                           href="https://checkout.dodopayments.com/buy/pdt_0NW6p0szmXPS6jXW05hIP?session=sess_GCYotd6plh"
