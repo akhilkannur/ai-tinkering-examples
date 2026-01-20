@@ -74,9 +74,9 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
                         </h1>
                         
                         <p className="text-lg text-text-secondary mb-10 leading-relaxed max-w-lg font-normal">
-                            Turn AI Agents into your personal Revenue Ops team. 
-                            <strong className="text-text-color"> 600+ work-ready blueprints</strong> for Sales and Marketing. 
-                            No coding. Just results.
+                            Turn AI Agents into your personal assistants. 
+                            <strong className="text-text-color"> 600+ blueprints</strong> for Sales & Marketing. 
+                            Built by non-technical tinkerers, for non-technical tinkerers.
                         </p>
 
                         <div className="flex flex-col sm:flex-row items-center gap-4 mb-12">
