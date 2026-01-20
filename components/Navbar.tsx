@@ -12,6 +12,7 @@ export default function Navbar() {
 
   const navLinks = [
     { href: '/ai-examples', label: 'Real Examples' },
+    { href: '/blog', label: 'Guides' },
     { href: '/tools', label: 'Tools' }, // Added Tools link
     { href: '/investors', label: 'Micro-PE Match' },
     { href: '/ai-workplace-quiz', label: 'AI Quiz' },
