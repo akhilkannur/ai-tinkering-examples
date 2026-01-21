@@ -66,6 +66,8 @@ export interface Recipe {
   isPremium?: boolean;
   archetype?: 'Processor' | 'Researcher' | 'Hybrid';
   publish_date?: string;
+  image?: string;
+  source_url?: string;
   sampleData?: {
     filename: string;
     content: string;
