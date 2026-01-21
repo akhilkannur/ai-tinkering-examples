@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import { ArrowRight } from 'lucide-react';
 
@@ -9,9 +10,10 @@ interface AIToolCardProps {
   imageUrl: string;
   category: string;
   featured?: boolean;
+  slug?: string;
 }
 
-export default function AIToolCard({ name, description, url, imageUrl, category, featured }: AIToolCardProps) {
+export default function AIToolCard({ name, description, url, imageUrl, category, featured, slug }: AIToolCardProps) {
   // Extract hostname for favicon fallback
   const getHostname = (href: string) => {
     try {
@@ -32,13 +34,8 @@ export default function AIToolCard({ name, description, url, imageUrl, category,
     setImgSrc(imageUrl || fallbackLogo);
   }, [imageUrl, fallbackLogo]);
 
-  return (
-    <a
-      href={url}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={`group flex flex-col h-full bg-white border ${featured ? 'border-accent/50 shadow-[0_0_20px_-5px_rgba(238,94,62,0.2)]' : 'border-slate-200 hover:border-accent/50 hover:shadow-[0_0_20px_-5px_rgba(238,94,62,0.15)]'} transition-all duration-300 relative overflow-hidden rounded-sm`}
-    >
+  const CardContent = () => (
+    <>
       {featured && (
         <div className="absolute top-0 right-0 bg-accent text-white text-[8px] font-bold px-2 py-0.5 z-20 uppercase tracking-tighter">
           Featured
@@ -59,7 +56,7 @@ export default function AIToolCard({ name, description, url, imageUrl, category,
         
         <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-x-2 group-hover:translate-x-0">
            <span className="text-[10px] font-sans font-bold text-accent border border-accent/30 px-2 py-1 bg-accent/5 uppercase tracking-wider flex items-center gap-1">
-             Open <ArrowRight className="w-3 h-3" />
+             {slug ? 'View' : 'Open'} <ArrowRight className="w-3 h-3" />
            </span>
         </div>
       </div>
@@ -86,6 +83,27 @@ export default function AIToolCard({ name, description, url, imageUrl, category,
           </span>
         </div>
       )}
+    </>
+  );
+
+  const cardClasses = `group flex flex-col h-full bg-white border ${featured ? 'border-accent/50 shadow-[0_0_20px_-5px_rgba(238,94,62,0.2)]' : 'border-slate-200 hover:border-accent/50 hover:shadow-[0_0_20px_-5px_rgba(238,94,62,0.15)]'} transition-all duration-300 relative overflow-hidden rounded-sm`;
+
+  if (slug) {
+    return (
+      <Link href={`/tools/${slug}`} className={cardClasses}>
+        <CardContent />
+      </Link>
+    );
+  }
+
+  return (
+    <a
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={cardClasses}
+    >
+      <CardContent />
     </a>
   );
 }

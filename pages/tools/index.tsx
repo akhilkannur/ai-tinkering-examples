@@ -20,6 +20,16 @@ export default function ToolsIndex() {
     });
   }, [searchQuery, selectedCategory]);
 
+  const slugify = (text: string) => {
+    return text
+      .toString()
+      .toLowerCase()
+      .trim()
+      .replace(/\s+/g, '-')
+      .replace(/[^\w\-]+/g, '')
+      .replace(/\-\-+/g, '-');
+  };
+
   return (
     <div className="flex flex-col min-h-screen bg-slate-50 font-sans text-slate-900 fade-in">
       <Head>
@@ -95,6 +105,7 @@ export default function ToolsIndex() {
                   imageUrl={tool.image}
                   category={tool.category}
                   featured={tool.featured}
+                  slug={slugify(tool.name)}
                 />
               </div>
             ))}
