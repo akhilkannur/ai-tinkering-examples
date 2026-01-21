@@ -30,14 +30,14 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     id: "lkr-laura-roeder-lkr-on-x",
     title: "Laura Roeder (@lkr) on X",
     slug: "lkr-laura-roeder-lkr-on-x",
-    summary: "CLAUDE CODE FOR NON DEVS Useful thing of the day: connect your stripe account. Just tell CC you want to connect your stripe account, it will guide you through how to create a read-only API key and set",
+    summary: "CLAUDE CODE FOR NON DEVS: Connect your Stripe account seamlessly. Simply tell Claude Code you want to connect Stripe, and it guides you through creating a read-only API key and setting it up.",
     screenshots: [
       {
-        url: "/images/examples/2026-01-21-lkr-laura-roeder-lkr-on-x.jpg",
-        filename: "2026-01-21-lkr-laura-roeder-lkr-on-x.jpg",
+        url: "/screenshots/lkr-tweet.png",
+        filename: "lkr-tweet.png",
         thumbnails: {
-          small: { url: "/images/examples/2026-01-21-lkr-laura-roeder-lkr-on-x.jpg" },
-          large: { url: "/images/examples/2026-01-21-lkr-laura-roeder-lkr-on-x.jpg" }
+          small: { url: "/screenshots/lkr-tweet.png" },
+          large: { url: "/screenshots/lkr-tweet.png" }
         }
       }
     ],
