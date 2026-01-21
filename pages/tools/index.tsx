@@ -44,7 +44,7 @@ export default function ToolsIndex() {
           </h1>
           
           <p className="text-lg text-slate-600 leading-relaxed font-sans max-w-2xl mx-auto mb-8">
-             Stop searching, start building. A hand-picked collection of {aiTools.length} tools verified for actual business utility.
+            Stop searching, start building. A newly launched directory of hand-picked tools. New additions every week.
           </p>
         </div>
 

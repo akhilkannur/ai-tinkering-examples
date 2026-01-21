@@ -19,3 +19,6 @@ yarn-error.log*
 # Python
 venv/
 *.zip
+
+# Amp private notes (not for public)
+.amp/
