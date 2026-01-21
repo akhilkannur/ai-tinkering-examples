@@ -24,7 +24,7 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     tags: ["Automation", "Claude"],
     Sponsored: false,
     sponsor: null
-  }
+  },
 
   {
     id: "lkr-laura-roeder-lkr-on-x",

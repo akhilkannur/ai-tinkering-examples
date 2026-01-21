@@ -92,10 +92,18 @@ async function createSocialExample() {
     const filePath = path.join(process.cwd(), 'lib/social-examples-data.ts');
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Insert before the last closing bracket
+    // Find the end of the array
     const lastBracketIndex = content.lastIndexOf('];');
     if (lastBracketIndex !== -1) {
-      content = content.substring(0, lastBracketIndex) + newEntry + content.substring(lastBracketIndex);
+      const beforeBracket = content.substring(0, lastBracketIndex).trim();
+      let prefix = "";
+      
+      // If the last character before the bracket is a closing brace and NOT a comma, add a comma
+      if (beforeBracket.endsWith('}') && !beforeBracket.endsWith('},')) {
+        prefix = ",";
+      }
+      
+      content = content.substring(0, lastBracketIndex).trimEnd() + prefix + newEntry + "\n];";
       fs.writeFileSync(filePath, content);
       console.log(`\n🎉 Entry added to lib/social-examples-data.ts`);
     } else {
