@@ -25,4 +25,28 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     Sponsored: false,
     sponsor: null
   }
-];
+
+  {
+    id: "lkr-laura-roeder-lkr-on-x",
+    title: "Laura Roeder (@lkr) on X",
+    slug: "lkr-laura-roeder-lkr-on-x",
+    summary: "CLAUDE CODE FOR NON DEVS Useful thing of the day: connect your stripe account. Just tell CC you want to connect your stripe account, it will guide you through how to create a read-only API key and set",
+    screenshots: [
+      {
+        url: "/images/examples/2026-01-21-lkr-laura-roeder-lkr-on-x.jpg",
+        filename: "2026-01-21-lkr-laura-roeder-lkr-on-x.jpg",
+        thumbnails: {
+          small: { url: "/images/examples/2026-01-21-lkr-laura-roeder-lkr-on-x.jpg" },
+          large: { url: "/images/examples/2026-01-21-lkr-laura-roeder-lkr-on-x.jpg" }
+        }
+      }
+    ],
+    category: "Marketing Ops",
+    publish_date: "2026-01-21",
+    original_link: "https://x.com/lkr/status/2013653497120804994",
+    author_name: "Laura Roeder",
+    author_link: "https://x.com/lkr",
+    tags: ["Automation"],
+    Sponsored: false,
+    sponsor: null
+  },];
