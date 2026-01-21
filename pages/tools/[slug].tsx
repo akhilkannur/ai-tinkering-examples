@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { GetStaticProps, GetStaticPaths } from 'next';
-import { ArrowLeft, ExternalLink, Share2, Check } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Share2, Check, Twitter, Linkedin } from 'lucide-react';
 
 import Navbar from '../../components/Navbar';
 import { aiTools, AiTool } from '../../lib/ai-tools-data';
@@ -15,9 +15,9 @@ const slugify = (text: string) => {
     .toString()
     .toLowerCase()
     .trim()
-    .replace(/\s+/g, '-')     // Replace spaces with -
-    .replace(/[^\w\-]+/g, '') // Remove all non-word chars
-    .replace(/\-\-+/g, '-');  // Replace multiple - with single -
+    .replace(/\s+/g, '-')
+    .replace(/[^\w\-]+/g, '')
+    .replace(/\-\-+/g, '-');
 };
 
 interface ToolPageProps {
@@ -27,6 +27,7 @@ interface ToolPageProps {
 export default function ToolPage({ tool }: ToolPageProps) {
   const router = useRouter();
   const [copied, setCopied] = useState(false);
+  const [currentUrl, setCurrentUrl] = useState('');
 
   // Fallback logo logic (same as Card)
   const getHostname = (href: string) => {
@@ -36,16 +37,24 @@ export default function ToolPage({ tool }: ToolPageProps) {
   const fallbackLogo = `https://www.google.com/s2/favicons?domain=${hostname}&sz=128`;
   const [imgSrc, setImgSrc] = useState(tool.image || fallbackLogo);
 
+  React.useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setCurrentUrl(window.location.href);
+    }
+  }, []);
+
   // If page is not generated yet
   if (router.isFallback) {
     return <div className="min-h-screen bg-slate-50 flex items-center justify-center">Loading...</div>;
   }
 
   const handleShare = () => {
-    navigator.clipboard.writeText(window.location.href);
+    navigator.clipboard.writeText(currentUrl);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
+
+  const shareText = `Check out ${tool.name} on Real AI Examples!`;
 
   return (
     <div className="flex flex-col min-h-screen bg-slate-50 font-sans text-slate-900">
@@ -105,14 +114,34 @@ export default function ToolPage({ tool }: ToolPageProps) {
                       {tool.name}
                     </h1>
                     
-                    {/* Share Button */}
-                    <button 
-                      onClick={handleShare}
-                      className="inline-flex items-center gap-2 text-xs font-mono font-bold text-slate-400 hover:text-accent transition-colors uppercase tracking-wider"
-                    >
-                      {copied ? <Check className="w-4 h-4" /> : <Share2 className="w-4 h-4" />}
-                      {copied ? 'Link Copied' : 'Share Tool'}
-                    </button>
+                    {/* Share Buttons */}
+                    <div className="flex items-center gap-3">
+                      <a 
+                        href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(currentUrl)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-slate-400 hover:text-black transition-colors"
+                        aria-label="Share on X (Twitter)"
+                      >
+                        <Twitter className="w-4 h-4" />
+                      </a>
+                      <a 
+                        href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(currentUrl)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-slate-400 hover:text-[#0077b5] transition-colors"
+                        aria-label="Share on LinkedIn"
+                      >
+                        <Linkedin className="w-4 h-4" />
+                      </a>
+                      <button 
+                        onClick={handleShare}
+                        className="inline-flex items-center gap-2 text-xs font-mono font-bold text-slate-400 hover:text-accent transition-colors uppercase tracking-wider border-l border-slate-200 pl-3 ml-1"
+                      >
+                        {copied ? <Check className="w-4 h-4" /> : <Share2 className="w-4 h-4" />}
+                        {copied ? 'Copied' : 'Copy'}
+                      </button>
+                    </div>
                   </div>
 
                   {/* Metadata Pills */}
