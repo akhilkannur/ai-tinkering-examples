@@ -1,13 +1,15 @@
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import Navbar from '../../components/Navbar';
-import { aiTools } from '../../lib/ai-tools-data';
+import { aiTools, AiTool } from '../../lib/ai-tools-data';
 import AIToolCard from '../../components/AIToolCard';
+import ToolDetailModal from '../../components/ToolDetailModal';
 import { Search, Filter, Sparkles, Command, Plus } from 'lucide-react';
 
 export default function ToolsIndex() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
+  const [selectedTool, setSelectedTool] = useState<AiTool | null>(null);
 
   const categories = ['All', ...Array.from(new Set(aiTools.map(t => t.category)))];
 
@@ -106,6 +108,7 @@ export default function ToolsIndex() {
                   category={tool.category}
                   featured={tool.featured}
                   slug={slugify(tool.name)}
+                  onClick={() => setSelectedTool(tool)}
                 />
               </div>
             ))}
@@ -123,6 +126,14 @@ export default function ToolsIndex() {
               Clear filters
             </button>
           </div>
+        )}
+
+        {/* Tool Detail Modal Overlay */}
+        {selectedTool && (
+          <ToolDetailModal 
+            tool={selectedTool} 
+            onClose={() => setSelectedTool(null)} 
+          />
         )}
 
       </main>

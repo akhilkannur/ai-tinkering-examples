@@ -11,9 +11,10 @@ interface AIToolCardProps {
   category: string;
   featured?: boolean;
   slug?: string;
+  onClick?: () => void;
 }
 
-export default function AIToolCard({ name, description, url, imageUrl, category, featured, slug }: AIToolCardProps) {
+export default function AIToolCard({ name, description, url, imageUrl, category, featured, slug, onClick }: AIToolCardProps) {
   // Extract hostname for favicon fallback
   const getHostname = (href: string) => {
     try {
@@ -33,6 +34,13 @@ export default function AIToolCard({ name, description, url, imageUrl, category,
     // If props change, reset (prioritize the provided image, or fallback immediately if empty)
     setImgSrc(imageUrl || fallbackLogo);
   }, [imageUrl, fallbackLogo]);
+
+  const handleClick = (e: React.MouseEvent) => {
+    if (onClick) {
+      e.preventDefault();
+      onClick();
+    }
+  };
 
   const CardContent = () => (
     <>
@@ -86,11 +94,11 @@ export default function AIToolCard({ name, description, url, imageUrl, category,
     </>
   );
 
-  const cardClasses = `group flex flex-col h-full bg-white border ${featured ? 'border-accent/50 shadow-[0_0_20px_-5px_rgba(238,94,62,0.2)]' : 'border-slate-200 hover:border-accent/50 hover:shadow-[0_0_20px_-5px_rgba(238,94,62,0.15)]'} transition-all duration-300 relative overflow-hidden rounded-sm`;
+  const cardClasses = `group flex flex-col h-full bg-white border ${featured ? 'border-accent/50 shadow-[0_0_20px_-5px_rgba(238,94,62,0.2)]' : 'border-slate-200 hover:border-accent/50 hover:shadow-[0_0_20px_-5px_rgba(238,94,62,0.15)]'} transition-all duration-300 relative overflow-hidden rounded-sm cursor-pointer`;
 
   if (slug) {
     return (
-      <Link href={`/tools/${slug}`} className={cardClasses}>
+      <Link href={`/tools/${slug}`} className={cardClasses} onClick={handleClick}>
         <CardContent />
       </Link>
     );
@@ -102,6 +110,7 @@ export default function AIToolCard({ name, description, url, imageUrl, category,
       target="_blank"
       rel="noopener noreferrer"
       className={cardClasses}
+      onClick={handleClick}
     >
       <CardContent />
     </a>
