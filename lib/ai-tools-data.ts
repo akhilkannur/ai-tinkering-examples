@@ -384,5 +384,53 @@ export const aiTools: AiTool[] = [
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=nicegram.app&sz=128"
+},
+  {
+    name: "LocalBiz",
+    description: "AI-powered platform that helps service businesses grow local SEO by generating location-focused blog content.",
+    url: "https://www.localbiz.ai",
+    category: "Marketing",
+    tags: {
+        useCase: ["Business"],
+        price: "Freemium",
+        skill: "Beginner"
+    },
+    image: "https://www.google.com/s2/favicons?domain=www.localbiz.ai&sz=128"
+},
+  {
+    name: "Argus AI",
+    description: "Real-time safety alert app for truck drivers that uses AI to detect crashes and slowdowns via existing DOT cameras.",
+    url: "https://www.getargus.ai",
+    category: "Productivity",
+    tags: {
+        useCase: ["Business"],
+        price: "Freemium",
+        skill: "Beginner"
+    },
+    image: "https://www.google.com/s2/favicons?domain=www.getargus.ai&sz=128"
+},
+  {
+    name: "POPJAM",
+    description: "Agentic marketing suite that simulates audience segments to generate and test highly personalized ad creatives and copy.",
+    url: "https://popjam.io",
+    category: "Marketing",
+    tags: {
+        useCase: ["Business"],
+        price: "Freemium",
+        skill: "Intermediate"
+    },
+    image: "https://www.google.com/s2/favicons?domain=popjam.io&sz=128"
+},
+  {
+    name: "Tekadio",
+    description: "AI platform for teachers that automates test creation and grading, including semantic evaluation of open-ended answers.",
+    url: "https://tekadio.app",
+    category: "Productivity",
+    tags: {
+        useCase: ["Business"],
+        price: "Freemium",
+        skill: "Beginner"
+    },
+    image: "https://www.google.com/s2/favicons?domain=tekadio.app&sz=128"
 }
 ];
