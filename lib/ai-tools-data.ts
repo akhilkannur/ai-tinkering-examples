@@ -14,9 +14,9 @@ export interface AiTool {
 
 export const aiTools: AiTool[] = [
   {
-    name: "https://www.vidmix.ai",
-    description: "AI Song Generator is an easy-to-use platform that creates high-quality, royalty-free music in various styles, perfect fo...",
-    url: "sadasdsad",
+    name: "Vidmix.ai",
+    description: "AI video generator that transforms text and images into professional videos using advanced models like Sora 2 and Veo 3.1.",
+    url: "https://www.vidmix.ai",
     category: "Video & Audio",
     tags: {
         useCase: [
@@ -25,35 +25,7 @@ export const aiTools: AiTool[] = [
         price: "Free",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=example.com&sz=128"
-},
-  {
-    name: "Ägglossning",
-    description: "Vi har all information du kan tänka dig behöva kring ägglossning, som vad är symptom, ägglossnings kalkulator och mycket...",
-    url: "https://xn--gglossning-p5a.se/",
-    category: "Marketing",
-    tags: {
-        useCase: [
-            "Business"
-        ],
-        price: "Freemium",
-        skill: "Beginner"
-    },
-    image: "https://www.google.com/s2/favicons?domain=xn--gglossning-p5a.se&sz=128"
-},
-  {
-    name: "Festklänningar",
-    description: "Hitta din festklänning smidigt idag!",
-    url: "https://xn--festklnning-q8a.se/",
-    category: "Productivity",
-    tags: {
-        useCase: [
-            "Business"
-        ],
-        price: "Freemium",
-        skill: "Beginner"
-    },
-    image: "https://www.google.com/s2/favicons?domain=xn--festklnning-q8a.se&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=vidmix.ai&sz=128"
 },
   {
     name: "Overvisual",
@@ -85,7 +57,7 @@ export const aiTools: AiTool[] = [
 },
   {
     name: "SlideWhisper",
-    description: "SlideWhisper",
+    description: "AI presentation partner that automates slide narration and facilitates live Q&A, transforming static slides into engaging experiences.",
     url: "https://www.slidewhisper.com",
     category: "Productivity",
     tags: {
@@ -168,20 +140,6 @@ export const aiTools: AiTool[] = [
     image: "https://www.google.com/s2/favicons?domain=computerkeyboardshortcuts.org&sz=128"
 },
   {
-    name: "Kataloop",
-    description: "Kataloop is a Berlin-based creative agency specializing in Webflow websites with high design and technical standards. In...",
-    url: "https://www.kataloop.com/en",
-    category: "Image Generation",
-    tags: {
-        useCase: [
-            "Business"
-        ],
-        price: "Freemium",
-        skill: "Beginner"
-    },
-    image: "https://www.google.com/s2/favicons?domain=www.kataloop.com&sz=128"
-},
-  {
     name: "Floowed",
     description: "Floowed is an AI credit workflow automation platform for credit and document-heavy processes. It extracts, validates, an...",
     url: "Floowed is an AI credit workflow automation platform for credit and document-heavy processes. It extracts, validates, and enriches application data using AI, flags risks and fraud, and lets teams design custom workflows and metrics without engineering.",
@@ -211,7 +169,7 @@ export const aiTools: AiTool[] = [
 },
   {
     name: "Oravida AI",
-    description: "Oravida AI",
+    description: "Transforms career stories into dynamic, AI-powered profiles that highlight work with media and identify skill gaps for target roles.",
     url: "https://orav.ai/",
     category: "Productivity",
     tags: {
@@ -295,7 +253,7 @@ export const aiTools: AiTool[] = [
 },
   {
     name: "Suburb Stack",
-    description: "Launch hundreds or thousands of locally targeted, conversion-optimized landing pages built to rank and convert for SEO a...",
+    description: "Landing page builder for service businesses that launches hundreds of locally targeted, conversion-optimized pages to dominate local SEO.",
     url: "https://suburbstack.com/",
     category: "Marketing",
     tags: {
@@ -308,8 +266,8 @@ export const aiTools: AiTool[] = [
     image: "https://www.google.com/s2/favicons?domain=suburbstack.com&sz=128"
 },
   {
-    name: "Cursor for Marketing Emails",
-    description: "saas, marketing, email marketing, mailchimp, cursor",
+    name: "Sequenzy",
+    description: "Email marketing tool for SaaS that uses AI to build production-ready email infrastructures, generate templates, and create context-aware copy.",
     url: "https://sequenzy.com",
     category: "Copywriting",
     tags: {
@@ -488,19 +446,5 @@ export const aiTools: AiTool[] = [
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=nicegram.app&sz=128"
-},
-  {
-    name: "The Gold Calculator",
-    description: "The Gold Calculator - Calculate Melt Value of Your Scrap Gold",
-    url: "https://thegoldcalculator.com/",
-    category: "Productivity",
-    tags: {
-        useCase: [
-            "Business"
-        ],
-        price: "Freemium",
-        skill: "Beginner"
-    },
-    image: "https://www.google.com/s2/favicons?domain=thegoldcalculator.com&sz=128"
 }
 ];
