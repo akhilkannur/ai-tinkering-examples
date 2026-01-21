@@ -19,9 +19,7 @@ export const aiTools: AiTool[] = [
     url: "https://www.vidmix.ai",
     category: "Video & Audio",
     tags: {
-        useCase: [
-            "Business"
-        ],
+        useCase: ["Business"],
         price: "Free",
         skill: "Beginner"
     },
@@ -29,13 +27,11 @@ export const aiTools: AiTool[] = [
 },
   {
     name: "Overvisual",
-    description: "Overvisual lets you create Instagram Story series in minutes. Upload your photos/videos and AI automatically places text...",
+    description: "AI-powered Instagram Story series creator. Upload photos/videos and AI automatically places text, highlights keywords, and suggests interactive layouts.",
     url: "https://www.overvisual.com/",
     category: "Video & Audio",
     tags: {
-        useCase: [
-            "Business"
-        ],
+        useCase: ["Business"],
         price: "Freemium",
         skill: "Beginner"
     },
@@ -43,13 +39,11 @@ export const aiTools: AiTool[] = [
 },
   {
     name: "ChattyFit",
-    description: "AI powered personal trainer in your pocket.",
+    description: "AI powered personal trainer in your pocket providing customized workouts and health guidance.",
     url: "https://chatty.fit",
     category: "Productivity",
     tags: {
-        useCase: [
-            "Business"
-        ],
+        useCase: ["Business"],
         price: "Freemium",
         skill: "Beginner"
     },
@@ -61,9 +55,7 @@ export const aiTools: AiTool[] = [
     url: "https://www.slidewhisper.com",
     category: "Productivity",
     tags: {
-        useCase: [
-            "Business"
-        ],
+        useCase: ["Business"],
         price: "Freemium",
         skill: "Beginner"
     },
@@ -71,13 +63,11 @@ export const aiTools: AiTool[] = [
 },
   {
     name: "imejis.io",
-    description: "Imejis.io is a bulk image generator and automated image creation platform that helps you create, customize, and generate...",
+    description: "Automated bulk image generation platform for marketers. Create and generate social media images at scale using prebuilt templates and automation.",
     url: "https://www.imejis.io",
     category: "Image Generation",
     tags: {
-        useCase: [
-            "Business"
-        ],
+        useCase: ["Business"],
         price: "Freemium",
         skill: "Beginner"
     },
@@ -85,13 +75,11 @@ export const aiTools: AiTool[] = [
 },
   {
     name: "Email Ferret",
-    description: "AI personal assistant for Gmail.",
+    description: "AI personal assistant for Gmail that helps manage, organize, and respond to emails more efficiently.",
     url: "https://emailferret.io",
     category: "Copywriting",
     tags: {
-        useCase: [
-            "Business"
-        ],
+        useCase: ["Business"],
         price: "Freemium",
         skill: "Beginner"
     },
@@ -99,13 +87,11 @@ export const aiTools: AiTool[] = [
 },
   {
     name: "AgentGatePay",
-    description: "Complete payment infrastructure for autonomous AI agents",
+    description: "Complete payment infrastructure for autonomous AI agents to facilitate secure, automated transactions.",
     url: "https://www.agentgatepay.com",
     category: "Productivity",
     tags: {
-        useCase: [
-            "Business"
-        ],
+        useCase: ["Business"],
         price: "Freemium",
         skill: "Beginner"
     },
@@ -113,13 +99,11 @@ export const aiTools: AiTool[] = [
 },
   {
     name: "Hypnotype",
-    description: "The 'Kinetic Typography' engine for audio creators. Transforms podcasts and essays into high-retention text animations t...",
+    description: "Kinetic typography engine that synchronizes word-level animations with voice audio for high-retention video storytelling.",
     url: "https://hypnotype.app",
     category: "Video & Audio",
     tags: {
-        useCase: [
-            "Business"
-        ],
+        useCase: ["Business"],
         price: "Freemium",
         skill: "Beginner"
     },
@@ -127,13 +111,11 @@ export const aiTools: AiTool[] = [
 },
   {
     name: "Computer Keyboard Shortcuts",
-    description: "The ultimate guide to computer keyboard shortcuts and hotkeys for Windows and MacOS.",
+    description: "The ultimate guide to computer keyboard shortcuts and hotkeys for Windows and MacOS productivity.",
     url: "https://computerkeyboardshortcuts.org/",
     category: "Productivity",
     tags: {
-        useCase: [
-            "Business"
-        ],
+        useCase: ["Business"],
         price: "Freemium",
         skill: "Beginner"
     },
@@ -141,27 +123,23 @@ export const aiTools: AiTool[] = [
 },
   {
     name: "Floowed",
-    description: "Floowed is an AI credit workflow automation platform for credit and document-heavy processes. It extracts, validates, an...",
-    url: "Floowed is an AI credit workflow automation platform for credit and document-heavy processes. It extracts, validates, and enriches application data using AI, flags risks and fraud, and lets teams design custom workflows and metrics without engineering.",
+    description: "AI-powered credit workflow automation platform that extracts, validates, and enriches application data while flagging risks.",
+    url: "https://floowed.com",
     category: "Image Generation",
     tags: {
-        useCase: [
-            "Business"
-        ],
+        useCase: ["Business"],
         price: "Freemium",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=example.com&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=floowed.com&sz=128"
 },
   {
     name: "StrideFuel",
-    description: "Built for weight loss success - especially GLP-1 users. AI coaching, voice logging, photo recognition, HealthKit sync. You...",
+    description: "AI-powered nutrition and weight loss companion featuring voice logging and adaptive coaching specifically designed for GLP-1 users.",
     url: "https://stride-fuel.com",
     category: "Image Generation",
     tags: {
-        useCase: [
-            "Business"
-        ],
+        useCase: ["Business"],
         price: "Free",
         skill: "Beginner"
     },
@@ -169,13 +147,11 @@ export const aiTools: AiTool[] = [
 },
   {
     name: "Oravida AI",
-    description: "Transforms career stories into dynamic, AI-powered profiles that highlight work with media and identify skill gaps for target roles.",
+    description: "Transforms career stories into dynamic, AI-powered profiles that highlight work with media and identify skill gaps.",
     url: "https://orav.ai/",
     category: "Productivity",
     tags: {
-        useCase: [
-            "Business"
-        ],
+        useCase: ["Business"],
         price: "Freemium",
         skill: "Beginner"
     },
@@ -183,27 +159,23 @@ export const aiTools: AiTool[] = [
 },
   {
     name: "AIRankPilot",
-    description: "AirRankPilot helps local businesses get discovered by Google and AI tools like ChatGPT and Perplexity. It shows you exac...",
-    url: "AirRankPilot helps local businesses get discovered by Google and AI tools like ChatGPT and Perplexity. It shows you exactly what to publish and helps you create content that search engines and AI can understand and recommend.",
+    description: "Helps local businesses get discovered by search engines and AI tools by suggesting optimized content strategies.",
+    url: "https://airankpilot.com",
     category: "Productivity",
     tags: {
-        useCase: [
-            "Business"
-        ],
+        useCase: ["Business"],
         price: "Freemium",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=example.com&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=airankpilot.com&sz=128"
 },
   {
     name: "BookSwift",
-    description: "Appointment scheduling app for independent service providers and small teams. Appointment scheduling app for independent...",
+    description: "Simplified appointment scheduling platform for independent service providers and small teams to manage bookings.",
     url: "https://www.bookswift.app",
     category: "Productivity",
     tags: {
-        useCase: [
-            "Business"
-        ],
+        useCase: ["Business"],
         price: "Freemium",
         skill: "Beginner"
     },
@@ -211,13 +183,11 @@ export const aiTools: AiTool[] = [
 },
   {
     name: "SlidesCockpit",
-    description: "Clone Viral TikToks For Your Product With AI & Auto-Post.",
+    description: "AI tool to clone viral TikTok content for your product and automate posting across platforms.",
     url: "https://slidescockpit.com/",
     category: "Productivity",
     tags: {
-        useCase: [
-            "Business"
-        ],
+        useCase: ["Business"],
         price: "Freemium",
         skill: "Beginner"
     },
@@ -225,13 +195,11 @@ export const aiTools: AiTool[] = [
 },
   {
     name: "3dSynth.app",
-    description: "A browser-based tool that skips the STL/Slicer workflow entirely.",
+    description: "A browser-based tool that simplifies the 3D printing workflow by skipping complex STL/Slicer steps.",
     url: "https://3dSynth.app",
     category: "Productivity",
     tags: {
-        useCase: [
-            "Business"
-        ],
+        useCase: ["Business"],
         price: "Freemium",
         skill: "Beginner"
     },
@@ -239,13 +207,11 @@ export const aiTools: AiTool[] = [
 },
   {
     name: "Crypto News Navigator",
-    description: "Crypto News Navigator is a trusted source for real-time crypto prices and market data. News and trends included.",
+    description: "Trusted source for real-time crypto prices, market data, and trending blockchain news.",
     url: "https://www.cryptonewsnavigator.com",
     category: "Productivity",
     tags: {
-        useCase: [
-            "Business"
-        ],
+        useCase: ["Business"],
         price: "Freemium",
         skill: "Beginner"
     },
@@ -253,13 +219,11 @@ export const aiTools: AiTool[] = [
 },
   {
     name: "Suburb Stack",
-    description: "Landing page builder for service businesses that launches hundreds of locally targeted, conversion-optimized pages to dominate local SEO.",
+    description: "Landing page builder for service businesses that launches locally targeted, conversion-optimized pages for SEO dominance.",
     url: "https://suburbstack.com/",
     category: "Marketing",
     tags: {
-        useCase: [
-            "Business"
-        ],
+        useCase: ["Business"],
         price: "Freemium",
         skill: "Beginner"
     },
@@ -267,13 +231,11 @@ export const aiTools: AiTool[] = [
 },
   {
     name: "Sequenzy",
-    description: "Email marketing tool for SaaS that uses AI to build production-ready email infrastructures, generate templates, and create context-aware copy.",
+    description: "Email marketing tool for SaaS that uses AI to build email infrastructures, generate templates, and create copy.",
     url: "https://sequenzy.com",
     category: "Copywriting",
     tags: {
-        useCase: [
-            "Business"
-        ],
+        useCase: ["Business"],
         price: "Freemium",
         skill: "Beginner"
     },
@@ -281,13 +243,11 @@ export const aiTools: AiTool[] = [
 },
   {
     name: "Markeplay",
-    description: "No-code AI-powered SaaS platform enabling rapid creation of complex, highly customizable e-commerce solutions for B2B ma...",
+    description: "No-code AI platform for manufacturing companies to build complex, customizable B2B e-commerce solutions and automated workflows.",
     url: "https://www.markeplay.com",
     category: "Code Assistance",
     tags: {
-        useCase: [
-            "Business"
-        ],
+        useCase: ["Business"],
         price: "Freemium",
         skill: "Intermediate"
     },
@@ -295,13 +255,11 @@ export const aiTools: AiTool[] = [
 },
   {
     name: "Qeeebo",
-    description: "AI-curated question-and-answer platform built to become the world’s largest.",
+    description: "AI-curated question-and-answer platform built to organize and scale global knowledge.",
     url: "https://www.qeeebo.com",
     category: "Productivity",
     tags: {
-        useCase: [
-            "Business"
-        ],
+        useCase: ["Business"],
         price: "Freemium",
         skill: "Beginner"
     },
@@ -309,13 +267,11 @@ export const aiTools: AiTool[] = [
 },
   {
     name: "feynn - Strategic Intelligence Platform",
-    description: "Structured intelligence, powered by AI",
+    description: "Structured strategic intelligence platform powered by AI for market research and competitive analysis.",
     url: "https://feynn.ai",
     category: "Productivity",
     tags: {
-        useCase: [
-            "Business"
-        ],
+        useCase: ["Business"],
         price: "Freemium",
         skill: "Beginner"
     },
@@ -323,13 +279,11 @@ export const aiTools: AiTool[] = [
 },
   {
     name: "AI Thumbnail",
-    description: "Create clickable YouTube thumbnails with AI by copying what already works and making it yours.",
+    description: "AI tool to create clickable YouTube thumbnails by analyzing successful designs and adapting them for your content.",
     url: "https://aithumbnail.gg",
     category: "Copywriting",
     tags: {
-        useCase: [
-            "Business"
-        ],
+        useCase: ["Business"],
         price: "Freemium",
         skill: "Beginner"
     },
@@ -337,13 +291,11 @@ export const aiTools: AiTool[] = [
 },
   {
     name: "AyeWatch AI",
-    description: "Personal AI Internet Monitor, that brings internet to you",
+    description: "Personal AI Internet Monitor that tracks relevant web content and delivers updates directly to you.",
     url: "https://ayewatch.ai/",
     category: "Productivity",
     tags: {
-        useCase: [
-            "Business"
-        ],
+        useCase: ["Business"],
         price: "Freemium",
         skill: "Beginner"
     },
@@ -351,13 +303,11 @@ export const aiTools: AiTool[] = [
 },
   {
     name: "PentestMate",
-    description: "Autonomous pentesting agents that test your app and deliver fix ready reports.",
+    description: "Autonomous pentesting agents that test your applications and deliver detailed, fix-ready security reports.",
     url: "https://pentestmate.com/",
     category: "Productivity",
     tags: {
-        useCase: [
-            "Business"
-        ],
+        useCase: ["Business"],
         price: "Freemium",
         skill: "Beginner"
     },
@@ -365,13 +315,11 @@ export const aiTools: AiTool[] = [
 },
   {
     name: "Bolta",
-    description: "Bolta.ai is a social media operating system that helps creators, founders, and teams plan, write, review, and publish co...",
+    description: "Social media operating system that helps teams plan, write, and publish content across multiple channels using AI.",
     url: "https://bolta.ai/",
     category: "Copywriting",
     tags: {
-        useCase: [
-            "Business"
-        ],
+        useCase: ["Business"],
         price: "Freemium",
         skill: "Beginner"
     },
@@ -379,13 +327,11 @@ export const aiTools: AiTool[] = [
 },
   {
     name: "Sana Mujer",
-    description: "We built Sana Mujer to solve a very specific access problem: millions of Spanish-speaking women live in the US, but most...",
+    description: "Spanish-first telehealth clinic providing specialized women's health services for the Spanish-speaking community in the US.",
     url: "https://www.sanamujer.com",
     category: "Productivity",
     tags: {
-        useCase: [
-            "Business"
-        ],
+        useCase: ["Business"],
         price: "Freemium",
         skill: "Beginner"
     },
@@ -393,13 +339,11 @@ export const aiTools: AiTool[] = [
 },
   {
     name: "Beatable",
-    description: "Beatable helps founders and investors validate business in seconds. The platform delivers in-depth competitor analysis, ...",
+    description: "Business validation platform providing competitor analysis and market intelligence to assess risks and opportunities.",
     url: "https://beatable.co",
     category: "Productivity",
     tags: {
-        useCase: [
-            "Business"
-        ],
+        useCase: ["Business"],
         price: "Freemium",
         skill: "Beginner"
     },
@@ -407,13 +351,11 @@ export const aiTools: AiTool[] = [
 },
   {
     name: "Map Your Voyage",
-    description: "Plan trips from Instagram reels in minutes, not weeks!",
+    description: "AI-powered travel planner that transforms Instagram reels and social content into actionable trip itineraries.",
     url: "https://mapyourvoyage.com/",
     category: "Productivity",
     tags: {
-        useCase: [
-            "Business"
-        ],
+        useCase: ["Business"],
         price: "Freemium",
         skill: "Beginner"
     },
@@ -421,13 +363,11 @@ export const aiTools: AiTool[] = [
 },
   {
     name: "AyeCreate",
-    description: "Allscreenshots provides a screenshot API that helps developers and businesses capture, combine, and automate website scr...",
+    description: "Screenshot API that helps businesses capture, combine, and automate website screenshots for marketing and monitoring.",
     url: "https://ayecreate.ai/",
     category: "Image Generation",
     tags: {
-        useCase: [
-            "Business"
-        ],
+        useCase: ["Business"],
         price: "Freemium",
         skill: "Intermediate"
     },
@@ -435,13 +375,11 @@ export const aiTools: AiTool[] = [
 },
   {
     name: "Nicegram",
-    description: "Open‑source Telegram client, privacy‑first, with a non‑custodial multichain wallet, a built‑in AI assistant and Agent Ma...",
+    description: "Privacy-focused Telegram client featuring a built-in AI assistant, multichain wallet, and agent marketplace.",
     url: "https://nicegram.app",
     category: "Productivity",
     tags: {
-        useCase: [
-            "Business"
-        ],
+        useCase: ["Business"],
         price: "Freemium",
         skill: "Beginner"
     },
