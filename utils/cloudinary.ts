@@ -18,7 +18,12 @@ export function optimizeImageUrl(airtableUrl: string | undefined | null, publicI
     return `https://res.cloudinary.com/${cloudName}/image/upload/${transforms}/v1/${publicId}`
   }
   
-  // 2. Fallback: Fetch URL (for non-synced images)
+  // 2. Local Path Check (Don't use Cloudinary fetch for local images)
+  if (airtableUrl && airtableUrl.startsWith('/')) {
+    return airtableUrl;
+  }
+
+  // 3. Fallback: Fetch URL (for non-synced images)
   // Note: This relies on the Airtable URL being valid at the time of request
   if (airtableUrl) {
     return `https://res.cloudinary.com/${cloudName}/image/fetch/${transforms}/${encodeURIComponent(airtableUrl)}`
