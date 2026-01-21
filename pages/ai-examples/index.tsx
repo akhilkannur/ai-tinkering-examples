@@ -6,7 +6,7 @@ import ExampleCard from '../../components/ExampleCard'
 import CategoryFilter from '../../components/CategoryFilter'
 import ExampleModal from '../../components/ExampleModal'
 import { fetchEnrichedExamples, EnrichedExampleRecord } from '../../lib/airtable'
-import { getAllRecipes } from '../../lib/recipes'
+import { localSocialExamples } from '../../lib/social-examples-data'
 
 const INITIAL_DISPLAY_COUNT = 12; // Define initial display count
 
@@ -158,56 +158,8 @@ export default function ExamplesPage({ examples, categories }: ExamplesPageProps
 
 export const getStaticProps: GetStaticProps<ExamplesPageProps> = async () => {
   try {
-    // 1. Fetch from Airtable (Legacy)
-    const airtableExamples = await fetchEnrichedExamples();
-
-    // 2. Fetch from Local Markdown (New)
-    const localRecipes = getAllRecipes();
-    
-    // Map local recipes to EnrichedExampleRecord format
-    const localExamples: EnrichedExampleRecord[] = localRecipes.map(recipe => {
-      // Handle the image: Recipe has 'image' field, EnrichedRecord expects 'screenshots' array
-      let screenshots = null;
-      if (recipe.image) {
-        screenshots = [{
-          url: recipe.image,
-          filename: recipe.title + '-image',
-          thumbnails: {
-            small: { url: recipe.image },
-            large: { url: recipe.image }
-          }
-        }];
-      } else if (recipe.sampleData?.content) {
-         // Fallback if no image but has sample data (unlikely for new ones)
-      }
-
-      // Check for source URL (often in source_url in md, but ExampleRecord uses original_link)
-      // I need to cast recipe to 'any' to access source_url if it's not in the strict type yet, or check data type
-      const sourceUrl = (recipe as any).source_url || (recipe as any).original_link || null;
-
-      return {
-        id: recipe.id,
-        title: recipe.title,
-        slug: recipe.id, // Using filename as slug
-        summary: recipe.description || recipe.tagline,
-        screenshots: screenshots,
-        category: recipe.category,
-        categoryId: null, // No ID for local
-        read_time: parseInt(recipe.time) || 5, // Approximate
-        publish_date: (recipe as any).publish_date || new Date().toISOString(),
-        workflow_steps: recipe.blueprint, // The content
-        original_link: sourceUrl,
-        tags: [recipe.difficulty], // Use difficulty as a tag
-        author_name: null,
-        author_link: null,
-        Sponsored: false,
-        sponsor: null
-      };
-    });
-
-    // 3. Merge (Local first, so they appear at the top if sorted by date/default)
-    // Actually, airtableExamples are usually sorted. Let's prepend local ones.
-    const allExamples = [...localExamples, ...airtableExamples];
+    const airtableExamples = await fetchEnrichedExamples()
+    const allExamples = [...localSocialExamples, ...airtableExamples];
 
     const categories = allExamples.map(e => e.category).filter(Boolean) as string[];
     const uniqueCategories = [...new Set(categories)];
@@ -221,13 +173,12 @@ export const getStaticProps: GetStaticProps<ExamplesPageProps> = async () => {
     }
   } catch (error) {
     console.error('Failed to fetch data for examples page:', error)
-    // Fallback to empty if everything fails
     return { 
       props: { 
-        examples: [],
-        categories: [],
+        examples: localSocialExamples, // Fallback to local at least
+        categories: [...new Set(localSocialExamples.map(e => e.category).filter(Boolean) as string[])],
       },
-      revalidate: 60 
+      revalidate: 60 // Retry more frequently on error
     }
   }
 }
