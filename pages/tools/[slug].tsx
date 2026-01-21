@@ -57,7 +57,7 @@ export default function ToolPage({ tool }: ToolPageProps) {
   const shareText = `Check out ${tool.name} on Real AI Examples!`;
 
   return (
-    <div className="flex flex-col min-h-screen bg-slate-50 font-sans text-slate-900">
+    <div className="flex flex-col min-h-screen bg-slate-100 font-sans text-slate-900">
       <Head>
         <title>{tool.name} | Verified on Real AI Examples</title>
         <meta name="description" content={`Check out ${tool.name} on Real AI Examples. ${tool.description}`} />
@@ -76,16 +76,26 @@ export default function ToolPage({ tool }: ToolPageProps) {
 
       <Navbar />
 
-      <main className="flex-grow container mx-auto px-4 py-12 max-w-4xl">
+      {/* Main Container - Centered Focus Mode */}
+      <main className="flex-grow flex flex-col items-center justify-center container mx-auto px-4 py-12 relative">
         
-        {/* Breadcrumb */}
-        <Link href="/tools" className="inline-flex items-center text-slate-500 hover:text-accent mb-8 transition-colors text-sm font-mono uppercase tracking-wider group">
-          <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
-          Back to Directory
-        </Link>
+        {/* Clickable Backdrop Area (Optional: To mimic modal closing) */}
+        <div 
+            className="absolute inset-0 cursor-default" 
+            onClick={() => router.push('/tools')}
+            aria-label="Return to directory"
+        />
 
-        {/* Main Card */}
-        <div className="bg-white border border-slate-200 shadow-sm rounded-sm overflow-hidden relative">
+        {/* Floating Back Link (Visible but unobtrusive) */}
+        <div className="absolute top-8 left-4 md:left-8 z-10">
+            <Link href="/tools" className="inline-flex items-center text-slate-500 hover:text-accent transition-colors text-sm font-mono uppercase tracking-wider group bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full border border-slate-200 shadow-sm">
+                <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
+                Back
+            </Link>
+        </div>
+
+        {/* Main Card (Z-Index to sit above backdrop) */}
+        <div className="bg-white border border-slate-200 shadow-xl rounded-sm overflow-hidden relative w-full max-w-4xl z-20">
             
             {/* Top "Featured" Strip */}
             <div className="h-1 bg-accent w-full"></div>
