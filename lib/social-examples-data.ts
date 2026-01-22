@@ -50,30 +50,6 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     sponsor: null
   },
   {
-    id: "short-courses-ai-learning-ai-course",
-    title: "AI Learning: AI Course",
-    slug: "short-courses-ai-learning-ai-course",
-    summary: "deeplearning offers an educational resource on AI Course. This course provides practical skills and knowledge for AI practitioners.",
-    screenshots: [
-      {
-        url: "/images/examples/2026-01-22-short-courses-ai-learning-ai-course.jpg",
-        filename: "2026-01-22-short-courses-ai-learning-ai-course.jpg",
-        thumbnails: {
-          small: { url: "/images/examples/2026-01-22-short-courses-ai-learning-ai-course.jpg" },
-          large: { url: "/images/examples/2026-01-22-short-courses-ai-learning-ai-course.jpg" }
-        }
-      }
-    ],
-    category: "Marketing Ops",
-    publish_date: "2026-01-22",
-    original_link: "https://www.deeplearning.ai/short-courses/gemini-cli-code-and-create-with-an-open-source-agent/",
-    author_name: "Unknown",
-    author_link: "https://x.com/short-courses",
-    tags: ["Automation"],
-    Sponsored: false,
-    sponsor: null
-  },
-  {
     id: "aiedge_-getting-started-w-claude-cowork-10-essential-workf",
     title: "Getting Started w/ Claude Cowork: 10 Essential Workflows (+ prompts)",
     slug: "aiedge_-getting-started-w-claude-cowork-10-essential-workf",
@@ -94,6 +70,30 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     author_name: "AI Edge",
     author_link: "https://x.com/aiedge_",
     tags: ["Claude", "Automation", "Workflows"],
+    Sponsored: false,
+    sponsor: null
+  },
+  {
+    id: "short-courses-automate-software-dev-creative-workflows-with-gemi",
+    title: "Automate Software Dev & Creative Workflows with Gemini CLI",
+    slug: "short-courses-automate-software-dev-creative-workflows-with-gemi",
+    summary: "A free course by DeepLearning.AI teaching how to use Gemini CLI and MCP to coordinate local files with cloud services like Google Workspace and Canva for automated development.",
+    screenshots: [
+      {
+        url: "/images/examples/2026-01-22-short-courses-automate-software-dev-creative-workflows-with-gemi.jpg",
+        filename: "2026-01-22-short-courses-automate-software-dev-creative-workflows-with-gemi.jpg",
+        thumbnails: {
+          small: { url: "/images/examples/2026-01-22-short-courses-automate-software-dev-creative-workflows-with-gemi.jpg" },
+          large: { url: "/images/examples/2026-01-22-short-courses-automate-software-dev-creative-workflows-with-gemi.jpg" }
+        }
+      }
+    ],
+    category: "Marketing Ops",
+    publish_date: "2026-01-22",
+    original_link: "https://www.deeplearning.ai/short-courses/gemini-cli-code-and-create-with-an-open-source-agent/",
+    author_name: "DeepLearning.AI",
+    author_link: "https://www.deeplearning.ai",
+    tags: ["Gemini", "CLI", "Automation", "Course"],
     Sponsored: false,
     sponsor: null
   },
