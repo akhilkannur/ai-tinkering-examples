@@ -73,13 +73,39 @@ async function captureScreenshot(url, outputName = 'screenshot.png', options = {
       fs.mkdirSync(dir, { recursive: true });
     }
 
-    console.log(`📸 Taking screenshot with clipping...`);
-    await page.screenshot({
+    console.log(`📸 Taking screenshot...`);
+    
+    let screenshotOptions = {
       path: outputPath,
-      clip: clip,  // Apply the clipping rectangle
-      type: 'jpeg', // Use JPEG for smaller file sizes
-      quality: 85   // Good balance between quality and file size
-    });
+      type: 'jpeg',
+      quality: 85
+    };
+
+    // If it's Twitter/X, try to find the tweet element for better clipping
+    if (url.includes('twitter.com') || url.includes('x.com')) {
+      const tweetElement = await page.$('[data-testid="tweet"]');
+      if (tweetElement) {
+        console.log(`🎯 Found tweet element, using it for clipping...`);
+        const boundingBox = await tweetElement.boundingBox();
+        if (boundingBox) {
+          // Add some padding
+          screenshotOptions.clip = {
+            x: Math.max(0, boundingBox.x - 10),
+            y: Math.max(0, boundingBox.y - 10),
+            width: boundingBox.width + 20,
+            height: boundingBox.height + 20
+          };
+        }
+      }
+    }
+
+    // Fallback to preset clip if element clipping wasn't applied
+    if (!screenshotOptions.clip) {
+      console.log(`✂️  Using preset clipping coordinates:`, clip);
+      screenshotOptions.clip = clip;
+    }
+
+    await page.screenshot(screenshotOptions);
 
     console.log(`✅ Screenshot saved to: ${outputPath}`);
 

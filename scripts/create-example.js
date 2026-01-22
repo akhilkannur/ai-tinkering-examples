@@ -7,6 +7,23 @@ const url = args[0];
 const useLocalCapture = args.includes('--local') || args.includes('-l'); // Flag to use local capture instead of Microlink
 const useBeautifulCapture = args.includes('--beautiful') || args.includes('-b'); // Flag to create beautiful screenshots
 
+// Extract optional arguments
+const getArgValue = (argName) => {
+  const index = args.findIndex(a => a.startsWith(`--${argName}=`));
+  if (index !== -1) return args[index].split('=')[1].replace(/^"(.*)"$/, '$1').replace(/^'(.*)'$/, '$1');
+  
+  const flagIndex = args.indexOf(`--${argName}`);
+  if (flagIndex !== -1 && args[flagIndex + 1] && !args[flagIndex + 1].startsWith('--')) {
+    return args[flagIndex + 1];
+  }
+  return null;
+};
+
+const manualTitle = getArgValue('title');
+const manualSummary = getArgValue('summary');
+const manualCategory = getArgValue('category');
+const manualTags = getArgValue('tags');
+
 if (!url) {
   console.error('Please provide a URL (e.g., Twitter link)');
   process.exit(1);
@@ -285,7 +302,8 @@ async function extractContentFromUrl(url) {
 
     return {
       title: insightfulTitle,
-      summary: insightfulSummary.substring(0, 200)
+      summary: insightfulSummary.substring(0, 200),
+      authorName: authorName
     };
   } catch (error) {
     console.error(`❌ Error extracting content: ${error.message}`);
@@ -294,7 +312,8 @@ async function extractContentFromUrl(url) {
     // Return fallback content
     return {
       title: 'Content from URL',
-      summary: 'Automated screenshot capture from provided URL. Content extraction failed, but visual representation available.'
+      summary: 'Automated screenshot capture from provided URL. Content extraction failed, but visual representation available.',
+      authorName: url.split('/')[3] || 'Unknown'
     };
   }
 }
@@ -323,9 +342,9 @@ async function createSocialExample() {
 
       // Extract content from the URL
       const contentData = await extractContentFromUrl(url);
-      title = contentData.title;
-      description = contentData.summary;
-      author = 'Unknown';
+      title = manualTitle || contentData.title;
+      description = manualSummary || contentData.summary;
+      author = contentData.authorName || 'Unknown';
     } else {
       // Use Microlink API as before
       const response = await fetch(MICROLINK_API);
@@ -336,8 +355,8 @@ async function createSocialExample() {
       }
 
       const meta = data.data;
-      title = (meta.title || 'New AI Automation').replace(/"/g, "'");
-      description = (meta.description || 'No description found.').replace(/"/g, "'");
+      title = manualTitle || (meta.title || 'New AI Automation').replace(/"/g, "'");
+      description = manualSummary || (meta.description || 'No description found.').replace(/"/g, "'");
       author = meta.author || 'Unknown';
       authorHandle = url.split('/')[3] || author;
 
@@ -367,6 +386,8 @@ async function createSocialExample() {
     const cleanAuthor = author.replace(/[\\"]/g, "'");
     const cleanId = id.replace(/[\\"]/g, "'");
     const cleanSlug = id.replace(/[\\"]/g, "'");
+    const cleanCategory = manualCategory || "Marketing Ops";
+    const cleanTags = manualTags ? manualTags.split(',').map(t => `"${t.trim()}"`).join(', ') : '"Automation"';
 
     const newEntry = `
   {
@@ -384,12 +405,12 @@ async function createSocialExample() {
         }
       }
     ],
-    category: "Marketing Ops",
+    category: "${cleanCategory}",
     publish_date: "${date}",
     original_link: "${url}",
     author_name: "${cleanAuthor}",
     author_link: "https://x.com/${authorHandle}",
-    tags: ["Automation"],
+    tags: [${cleanTags}],
     Sponsored: false,
     sponsor: null
   },`;
