@@ -5,6 +5,7 @@ const https = require('https');
 const args = process.argv.slice(2);
 const url = args[0];
 const useLocalCapture = args.includes('--local') || args.includes('-l'); // Flag to use local capture instead of Microlink
+const useBeautifulCapture = args.includes('--beautiful') || args.includes('-b'); // Flag to create beautiful screenshots
 
 if (!url) {
   console.error('Please provide a URL (e.g., Twitter link)');
@@ -34,7 +35,7 @@ async function downloadImage(url, filepath) {
 
 // Import the local screenshot capture function
 async function captureLocalScreenshot(url, imageFilename) {
-  const captureScreenshot = require('./capture-screenshot.js');
+  const captureScreenshotModule = require('./capture-screenshot.js');
   // Extract just the filename without the directory structure for saving
   const fileName = path.basename(imageFilename);
   const tempPath = path.join(process.cwd(), 'public', 'screenshots', fileName);
@@ -44,13 +45,20 @@ async function captureLocalScreenshot(url, imageFilename) {
   // Ensure target directory exists
   fs.mkdirSync(targetDir, { recursive: true });
 
-  // Capture to temporary location
-  await captureScreenshot(url, fileName);
+  // Capture to temporary location using the function directly
+  await captureScreenshotModule(url, fileName);
 
   // Move the file to the target location
   if (fs.existsSync(tempPath)) {
     fs.renameSync(tempPath, targetPath);
     console.log(`✅ Moved screenshot to: ${targetPath}`);
+  }
+
+  // If beautiful capture is requested, process the image
+  if (useBeautifulCapture) {
+    console.log('🎨 Beautifying screenshot...');
+    const beautifyScreenshot = require('./beautify-screenshot.js');
+    await beautifyScreenshot(targetPath, targetPath); // Overwrite with beautiful version
   }
 
   return targetPath;
