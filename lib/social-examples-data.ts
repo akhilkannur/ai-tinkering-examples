@@ -26,17 +26,17 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     sponsor: null
   },
   {
-    id: "lkr-ai-tool-integration-connecting-stripe-with-claude-",
-    title: "AI Tool Integration: Connecting Stripe with Claude Code",
-    slug: "lkr-ai-tool-integration-connecting-stripe-with-claude-",
-    summary: "Demonstrates how to integrate Stripe with Claude Code using read-only API keys. Shows practical AI application for business operations.",
+    id: "lkr-connecting-stripe-with-claude-code",
+    title: "Connecting Stripe with Claude Code",
+    slug: "lkr-connecting-stripe-with-claude-code",
+    summary: "lkr demonstrates how to integrate Stripe with Claude Code using read-only API keys. This practical AI application can streamline business operations and save hours of manual work.",
     screenshots: [
       {
-        url: "/images/examples/2026-01-22-lkr-ai-tool-integration-connecting-stripe-with-claude-.jpg",
-        filename: "2026-01-22-lkr-ai-tool-integration-connecting-stripe-with-claude-.jpg",
+        url: "/images/examples/2026-01-22-lkr-connecting-stripe-with-claude-code.jpg",
+        filename: "2026-01-22-lkr-connecting-stripe-with-claude-code.jpg",
         thumbnails: {
-          small: { url: "/images/examples/2026-01-22-lkr-ai-tool-integration-connecting-stripe-with-claude-.jpg" },
-          large: { url: "/images/examples/2026-01-22-lkr-ai-tool-integration-connecting-stripe-with-claude-.jpg" }
+          small: { url: "/images/examples/2026-01-22-lkr-connecting-stripe-with-claude-code.jpg" },
+          large: { url: "/images/examples/2026-01-22-lkr-connecting-stripe-with-claude-code.jpg" }
         }
       }
     ],

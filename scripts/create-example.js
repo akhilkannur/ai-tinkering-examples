@@ -168,28 +168,31 @@ async function extractContentFromUrl(url) {
       // Create an insightful summary based on content analysis
       const lowerContent = content.toLowerCase();
 
+      // Extract author name from URL for more personal touch
+      const authorName = url.split('/')[3] || 'Someone';
+
       // Identify key topics and themes
       if (lowerContent.includes('claude') || lowerContent.includes('ai') || lowerContent.includes('automation')) {
         if (lowerContent.includes('stripe') || lowerContent.includes('connect')) {
-          insightfulTitle = 'AI Tool Integration: Connecting Stripe with Claude Code';
-          insightfulSummary = 'Demonstrates how to integrate Stripe with Claude Code using read-only API keys. Shows practical AI application for business operations.';
+          insightfulTitle = 'Connecting Stripe with Claude Code';
+          insightfulSummary = `${authorName} demonstrates how to integrate Stripe with Claude Code using read-only API keys. This practical AI application can streamline business operations and save hours of manual work.`;
         } else if (lowerContent.includes('workflow') || lowerContent.includes('automation')) {
-          insightfulTitle = 'AI Workflow Automation Tip';
-          insightfulSummary = 'Practical AI automation technique that saves time and increases efficiency. Highlights specific implementation details.';
+          insightfulTitle = 'AI Workflow Automation';
+          insightfulSummary = `${authorName} shares a practical automation technique that can save significant time. The specific implementation details make this immediately actionable.`;
         } else {
-          insightfulTitle = 'AI Tool Usage Insight';
-          insightfulSummary = 'Valuable insight about AI tool usage that can improve productivity. Contains actionable advice for implementation.';
+          insightfulTitle = 'AI Tool Usage Tip';
+          insightfulSummary = `${authorName} reveals a valuable AI tool usage technique that can boost productivity. The actionable advice is ready to implement today.`;
         }
       } else if (lowerContent.includes('marketing') || lowerContent.includes('growth') || lowerContent.includes('strategy')) {
-        insightfulTitle = 'Marketing Strategy Insight';
-        insightfulSummary = 'Actionable marketing strategy that delivers measurable results. Contains specific tactics worth implementing.';
+        insightfulTitle = 'Marketing Strategy';
+        insightfulSummary = `${authorName} shares an actionable marketing strategy with proven results. The specific tactics mentioned are worth testing in your campaigns.`;
       } else if (lowerContent.includes('productivity') || lowerContent.includes('efficiency') || lowerContent.includes('tool')) {
-        insightfulTitle = 'Productivity Enhancement Tip';
-        insightfulSummary = 'Effective productivity tip that can significantly improve workflow. Practical advice with clear benefits.';
+        insightfulTitle = 'Productivity Tip';
+        insightfulSummary = `${authorName} offers an effective productivity tip that can transform your workflow. The practical advice delivers clear benefits.`;
       } else {
         // Generic insight for other content
-        insightfulTitle = 'Valuable Insight from Community';
-        insightfulSummary = `Key takeaway from community discussion: "${content.substring(0, 80)}${content.length > 80 ? '...' : ''}". This provides actionable value for professionals.`;
+        insightfulTitle = 'Community Insight';
+        insightfulSummary = `${authorName} shares a key takeaway that's worth your attention: "${content.substring(0, 80)}${content.length > 80 ? '...' : ''}". This insight offers practical value for professionals.`;
       }
     } else {
       insightfulTitle = 'Content from URL';
