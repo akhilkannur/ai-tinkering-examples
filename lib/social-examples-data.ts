@@ -90,6 +90,7 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     ],
     category: "Marketing Ops",
     publish_date: "2026-01-22",
+    original_link: "https://x.com/aiedge_/status/2013641070815650252",
     author_name: "AI Edge",
     author_link: "https://x.com/aiedge_",
     tags: ["Claude", "Automation", "Workflows"],
