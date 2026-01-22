@@ -25,28 +25,28 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     Sponsored: false,
     sponsor: null
   },
-
   {
-    id: "lkr-laura-roeder-lkr-on-x",
-    title: "Laura Roeder (@lkr) on X",
-    slug: "lkr-laura-roeder-lkr-on-x",
-    summary: "CLAUDE CODE FOR NON DEVS: Connect your Stripe account seamlessly. Simply tell Claude Code you want to connect Stripe, and it guides you through creating a read-only API key and setting it up.",
+    id: "lkr-screenshot-from-x-com",
+    title: "Screenshot from x.com",
+    slug: "lkr-screenshot-from-x-com",
+    summary: "Automated screenshot capture from provided URL",
     screenshots: [
       {
-        url: "/screenshots/lkr-tweet.png",
-        filename: "lkr-tweet.png",
+        url: "/images/examples/2026-01-22-lkr-screenshot-from-x-com.jpg",
+        filename: "2026-01-22-lkr-screenshot-from-x-com.jpg",
         thumbnails: {
-          small: { url: "/screenshots/lkr-tweet.png" },
-          large: { url: "/screenshots/lkr-tweet.png" }
+          small: { url: "/images/examples/2026-01-22-lkr-screenshot-from-x-com.jpg" },
+          large: { url: "/images/examples/2026-01-22-lkr-screenshot-from-x-com.jpg" }
         }
       }
     ],
     category: "Marketing Ops",
-    publish_date: "2026-01-21",
+    publish_date: "2026-01-22",
     original_link: "https://x.com/lkr/status/2013653497120804994",
-    author_name: "Laura Roeder",
+    author_name: "Unknown",
     author_link: "https://x.com/lkr",
     tags: ["Automation"],
     Sponsored: false,
     sponsor: null
-  },];
+  },
+];

@@ -35,9 +35,25 @@ async function downloadImage(url, filepath) {
 // Import the local screenshot capture function
 async function captureLocalScreenshot(url, imageFilename) {
   const captureScreenshot = require('./capture-screenshot.js');
-  const imagePath = path.join(process.cwd(), 'public/images/examples', imageFilename);
-  fs.mkdirSync(path.dirname(imagePath), { recursive: true });
-  return await captureScreenshot(url, imageFilename.replace('/images/examples/', ''));
+  // Extract just the filename without the directory structure for saving
+  const fileName = path.basename(imageFilename);
+  const tempPath = path.join(process.cwd(), 'public', 'screenshots', fileName);
+  const targetDir = path.join(process.cwd(), 'public', 'images', 'examples');
+  const targetPath = path.join(targetDir, fileName);
+
+  // Ensure target directory exists
+  fs.mkdirSync(targetDir, { recursive: true });
+
+  // Capture to temporary location
+  await captureScreenshot(url, fileName);
+
+  // Move the file to the target location
+  if (fs.existsSync(tempPath)) {
+    fs.renameSync(tempPath, targetPath);
+    console.log(`✅ Moved screenshot to: ${targetPath}`);
+  }
+
+  return targetPath;
 }
 
 async function createSocialExample() {
