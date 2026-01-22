@@ -10,6 +10,7 @@ interface ExampleCardProps {
   sponsor?: SponsorRecord;
   priority?: boolean;
   onOpen: (example: ExampleRecord) => void;
+  isPremium?: boolean;
 }
 
 export default function ExampleCard({
@@ -17,6 +18,7 @@ export default function ExampleCard({
   sponsor,
   priority = false,
   onOpen,
+  isPremium = false,
 }: ExampleCardProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
@@ -27,6 +29,8 @@ export default function ExampleCard({
   const blurImageUrl = optimizeImageUrl(rawAirtableUrl, example.cloudinaryPublicId, 100);
 
   const handleCardClick = (e: React.MouseEvent) => {
+    if (isPremium) return; // Prevent opening if premium
+
     if (
       (e.target as HTMLElement).closest(".share-button") ||
       (e.target as HTMLElement).closest(".external-link") ||
@@ -45,8 +49,23 @@ export default function ExampleCard({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
       transition={{ duration: 0.5 }}
-      className="card group cursor-pointer relative flex flex-col bg-secondary-bg rounded-xl overflow-hidden border border-navy-dark hover:border-accent/50 hover:shadow-[0_0_30px_rgba(244,63,94,0.15)] transition-all duration-300"
+      className={`card group cursor-pointer relative flex flex-col bg-secondary-bg rounded-xl overflow-hidden border border-navy-dark transition-all duration-300 ${
+        isPremium ? 'opacity-90' : 'hover:border-accent/50 hover:shadow-[0_0_30px_rgba(244,63,94,0.15)]'
+      }`}
     >
+      {/* Premium Lock Overlay */}
+      {isPremium && (
+        <div className="absolute inset-0 z-20 flex flex-col items-center justify-center bg-primary-bg/60 backdrop-blur-[2px] text-center p-4">
+          <div className="bg-navy-dark/90 p-4 rounded-full mb-3 shadow-lg border border-accent/20">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-accent">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+          </div>
+          <span className="text-accent font-bold tracking-widest uppercase text-sm bg-primary-bg px-3 py-1 rounded border border-accent/20">Premium Example</span>
+        </div>
+      )}
+
       <div className="relative z-10 flex-grow" onClick={handleCardClick}>
         <div className="relative w-full h-48 sm:h-56 overflow-hidden bg-primary-bg border-b border-navy-dark">
           {!imageUrl || imageStatus === 'error' ? (

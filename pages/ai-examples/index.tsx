@@ -159,14 +159,75 @@ export default function ExamplesPage({ examples, categories }: ExamplesPageProps
 export const getStaticProps: GetStaticProps<ExamplesPageProps> = async () => {
   try {
     const airtableExamples = await fetchEnrichedExamples()
-    const allExamples = [...localSocialExamples, ...airtableExamples];
+    const rawExamples = [...localSocialExamples, ...airtableExamples];
 
-    const categories = allExamples.map(e => e.category).filter(Boolean) as string[];
+    // 1. Sort by date first as a baseline
+    const dateSorted = rawExamples.sort((a, b) => {
+      const dateA = new Date(a.publish_date || 0).getTime();
+      const dateB = new Date(b.publish_date || 0).getTime();
+      return dateB - dateA;
+    });
+
+    // 2. Group by Category to ensure diversity
+    const examplesByCategory: Record<string, EnrichedExampleRecord[]> = {};
+    dateSorted.forEach(ex => {
+      const cat = ex.category || 'Uncategorized';
+      if (!examplesByCategory[cat]) examplesByCategory[cat] = [];
+      examplesByCategory[cat].push(ex);
+    });
+
+    // 3. Round Robin Selection for Free Tier (Top 100)
+    // We want to pick the "best" (newest/has screenshot) from each category in a loop
+    const FREE_LIMIT = 100;
+    const freeSet = new Set<string>();
+    const categoriesList = Object.keys(examplesByCategory);
+    
+    let picks = 0;
+    let round = 0;
+    const maxPerCat = Math.ceil(FREE_LIMIT / categoriesList.length) + 5; // Allow some flex
+
+    while (picks < FREE_LIMIT && picks < rawExamples.length) {
+      let madePick = false;
+      for (const cat of categoriesList) {
+        if (examplesByCategory[cat][round]) {
+           const ex = examplesByCategory[cat][round];
+           freeSet.add(ex.id);
+           picks++;
+           madePick = true;
+           if (picks >= FREE_LIMIT) break;
+        }
+      }
+      if (!madePick) break; // No more items left to pick
+      round++;
+    }
+
+    // 4. Split and Interleave
+    // We put the picked "Free" items first, then interleave with Premium
+    const freePool = dateSorted.filter(ex => freeSet.has(ex.id));
+    const premiumPool = dateSorted.filter(ex => !freeSet.has(ex.id));
+
+    // Interleave: 2 Free, 1 Premium
+    const mixedExamples: EnrichedExampleRecord[] = [];
+    let f = 0;
+    let p = 0;
+
+    while (f < freePool.length || p < premiumPool.length) {
+      // Add up to 2 free items
+      for (let i = 0; i < 2 && f < freePool.length; i++) {
+        mixedExamples.push({ ...freePool[f++], isPremium: false } as any);
+      }
+      // Add 1 premium item
+      if (p < premiumPool.length) {
+        mixedExamples.push({ ...premiumPool[p++], isPremium: true } as any);
+      }
+    }
+
+    const categories = mixedExamples.map(e => e.category).filter(Boolean) as string[];
     const uniqueCategories = [...new Set(categories)];
 
     return { 
       props: { 
-        examples: allExamples,
+        examples: mixedExamples,
         categories: uniqueCategories,
       },
       revalidate: 300 // Revalidate every 5 minutes
