@@ -19,8 +19,8 @@ async function captureScreenshot(url, outputName = 'screenshot.png', options = {
 
   // Platform-specific presets to focus on relevant content
   const presets = {
-    twitter: { x: 340, y: 50, width: 600, height: 800 },  // Focus on centered tweet content (1280/2 - 600/2 = 340)
-    x: { x: 340, y: 50, width: 600, height: 800 },       // Same as Twitter
+    twitter: { x: 280, y: 50, width: 600, height: 800 },  // Focus on centered tweet content (observed x=283)
+    x: { x: 280, y: 50, width: 600, height: 800 },       // Same as Twitter
     linkedin: { x: 150, y: 50, width: 900, height: 600 }, // Focus on feed with 25% margins
     github: { x: 0, y: 0, width: 1280, height: 800 },     // Full page for code repos
     default: defaultClip
@@ -64,6 +64,29 @@ async function captureScreenshot(url, outputName = 'screenshot.png', options = {
 
     // Wait a bit for any lazy-loaded content
     await new Promise(resolve => setTimeout(resolve, 2000));
+
+    // Dynamic clipping for Twitter/X
+    if (url.includes('twitter.com') || url.includes('x.com')) {
+      try {
+        const tweetElement = await page.$('[data-testid="tweet"]');
+        if (tweetElement) {
+          const box = await tweetElement.boundingBox();
+          if (box) {
+            console.log(`🎯 Found tweet element at x:${box.x}, width:${box.width}`);
+            // Use the element's position but cap the height to avoid capturing 100 replies
+            // and ensure we don't go off-screen
+            clip = {
+              x: Math.max(0, box.x),
+              y: Math.max(0, box.y),
+              width: box.width,
+              height: Math.min(box.height, 800) // Cap height at 800px
+            };
+          }
+        }
+      } catch (e) {
+        console.warn('⚠️  Could not calculate dynamic clip, using preset.');
+      }
+    }
 
     const outputPath = path.join(process.cwd(), 'public', 'screenshots', outputName);
 
