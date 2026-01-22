@@ -19,9 +19,9 @@ async function captureScreenshot(url, outputName = 'screenshot.png', options = {
 
   // Platform-specific presets to focus on relevant content
   const presets = {
-    twitter: { x: 150, y: 50, width: 640, height: 400 },  // Focus on tweet content, crop 50% from right and bottom
-    x: { x: 150, y: 50, width: 640, height: 400 },       // Same as Twitter
-    linkedin: { x: 150, y: 50, width: 640, height: 400 }, // Focus on feed, crop 50% from right and bottom
+    twitter: { x: 150, y: 50, width: 900, height: 600 },  // Focus on tweet content with 25% margins
+    x: { x: 150, y: 50, width: 900, height: 600 },       // Same as Twitter
+    linkedin: { x: 150, y: 50, width: 900, height: 600 }, // Focus on feed with 25% margins
     github: { x: 0, y: 0, width: 1280, height: 800 },     // Full page for code repos
     default: defaultClip
   };
