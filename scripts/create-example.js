@@ -64,6 +64,132 @@ async function captureLocalScreenshot(url, imageFilename) {
   return targetPath;
 }
 
+// Function to extract content from the webpage
+async function extractContentFromUrl(url) {
+  const puppeteer = require('puppeteer');
+
+  console.log(`📖 Extracting content from: ${url}`);
+
+  const browser = await puppeteer.launch({
+    headless: "new",
+    args: ['--no-sandbox', '--disable-setuid-sandbox']
+  });
+
+  try {
+    const page = await browser.newPage();
+
+    // Set viewport size
+    await page.setViewport({
+      width: 1280,
+      height: 800,
+      deviceScaleFactor: 1,
+    });
+
+    await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
+
+    // Wait for content to load
+    await new Promise(resolve => setTimeout(resolve, 2000));
+
+    // Extract content based on platform
+    let content = '';
+    let title = '';
+
+    if (url.includes('x.com') || url.includes('twitter.com')) {
+      // For Twitter/X posts
+      title = await page.evaluate(() => {
+        const titleElement = document.querySelector('title');
+        return titleElement ? titleElement.textContent : '';
+      });
+
+      content = await page.evaluate(() => {
+        // Look for the main tweet content
+        const tweetElements = document.querySelectorAll('[data-testid="tweet"]');
+        if (tweetElements.length > 0) {
+          // Get the first tweet's text content
+          const tweetText = tweetElements[0].querySelector('[data-testid="tweetText"]');
+          if (tweetText) {
+            return tweetText.innerText || tweetText.textContent;
+          }
+        }
+
+        // Fallback: try to find tweet text in other selectors
+        const tweetTextElements = document.querySelectorAll('article[data-testid="tweet"] div[dir="auto"]');
+        for (const element of tweetTextElements) {
+          if (element.textContent.trim().length > 0) {
+            return element.textContent.trim();
+          }
+        }
+
+        return 'Content extraction failed';
+      });
+    } else {
+      // For other websites, extract main content
+      title = await page.evaluate(() => {
+        return document.title || '';
+      });
+
+      content = await page.evaluate(() => {
+        // Try to find main content areas
+        const selectors = [
+          'main',
+          'article',
+          '[role="main"]',
+          '.content',
+          '.post-content',
+          '.entry-content',
+          'body'
+        ];
+
+        for (const selector of selectors) {
+          const element = document.querySelector(selector);
+          if (element) {
+            // Get text content but remove excessive whitespace
+            const text = element.textContent.trim();
+            if (text.length > 0) {
+              // Limit to first 300 characters to avoid huge content
+              return text.substring(0, 300) + (text.length > 300 ? '...' : '');
+            }
+          }
+        }
+
+        // Fallback to body text
+        return document.body ? document.body.textContent.substring(0, 300) + '...' : 'Content extraction failed';
+      });
+    }
+
+    // Clean up the extracted content
+    content = content.replace(/\s+/g, ' ').trim();
+
+    // Generate a summary based on the content
+    let summary = '';
+    if (content.length > 0) {
+      // For Twitter/X, we can provide a more specific summary
+      if (url.includes('x.com') || url.includes('twitter.com')) {
+        summary = `Direct quote from ${url.split('/')[3]} on X: "${content.substring(0, 100)}${content.length > 100 ? '...' : ''}". `;
+        summary += `This post discusses important points about the topic.`;
+      } else {
+        summary = `Content from ${new URL(url).hostname}: "${content.substring(0, 100)}${content.length > 100 ? '...' : ''}". `;
+        summary += `This provides valuable insights on the subject.`;
+      }
+    } else {
+      summary = 'Automated content extraction from the provided URL.';
+    }
+
+    await browser.close();
+
+    return { title: title || 'Content from URL', summary: summary.substring(0, 200) };
+  } catch (error) {
+    console.error(`❌ Error extracting content: ${error.message}`);
+    await browser.close();
+
+    // Return fallback content
+    return {
+      title: 'Content from URL',
+      summary: 'Automated screenshot capture from provided URL. Content extraction failed, but visual representation available.'
+    };
+  }
+}
+
 async function createSocialExample() {
   console.log(`🔍 Fetching metadata for: ${url}`);
   console.log(useLocalCapture ? '📸 Using local screenshot capture' : '🌐 Using Microlink API for screenshot');
@@ -72,14 +198,14 @@ async function createSocialExample() {
     let title, description, author, authorHandle, imageUrl;
 
     if (useLocalCapture) {
-      // For local capture, we'll get basic info from the URL and use local screenshot
+      // For local capture, extract content from the URL
       const urlParts = url.split('/');
       authorHandle = urlParts[3] || 'unknown';
 
-      // Try to get page title and description via puppeteer if needed
-      // For now, we'll use a generic title and get description from URL
-      title = `Screenshot from ${urlParts[2]}`;
-      description = 'Automated screenshot capture from provided URL';
+      // Extract content from the URL
+      const contentData = await extractContentFromUrl(url);
+      title = contentData.title;
+      description = contentData.summary;
       author = 'Unknown';
     } else {
       // Use Microlink API as before
