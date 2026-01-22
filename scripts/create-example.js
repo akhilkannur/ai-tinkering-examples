@@ -242,12 +242,19 @@ async function createSocialExample() {
       console.log(`✅ Image saved to: /images/examples/${imageFilename}`);
     }
 
+    // Clean up multiline strings and escape special characters properly
+    const cleanTitle = title.replace(/[\r\n]/g, ' ').replace(/[\\"]/g, "'").substring(0, 100);
+    const cleanSummary = description.substring(0, 200).replace(/[\\"]/g, "'");
+    const cleanAuthor = author.replace(/[\\"]/g, "'");
+    const cleanId = id.replace(/[\\"]/g, "'");
+    const cleanSlug = id.replace(/[\\"]/g, "'");
+
     const newEntry = `
   {
-    id: "${id.replace(/"/g, "'")}",
-    title: "${title.replace(/"/g, "'")}",
-    slug: "${id.replace(/"/g, "'")}",
-    summary: "${description.substring(0, 200).replace(/"/g, "'")}",
+    id: "${cleanId}",
+    title: "${cleanTitle}",
+    slug: "${cleanSlug}",
+    summary: "${cleanSummary}",
     screenshots: [
       {
         url: "/images/examples/${imageFilename}",
@@ -261,7 +268,7 @@ async function createSocialExample() {
     category: "Marketing Ops",
     publish_date: "${date}",
     original_link: "${url}",
-    author_name: "${author.replace(/"/g, "'")}",
+    author_name: "${cleanAuthor}",
     author_link: "https://x.com/${authorHandle}",
     tags: ["Automation"],
     Sponsored: false,
