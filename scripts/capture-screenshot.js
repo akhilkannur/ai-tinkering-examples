@@ -60,7 +60,7 @@ async function captureScreenshot(url, outputName = 'screenshot.png', options = {
     });
 
     console.log(`🌐 Navigating to ${url}...`);
-    await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
+    await page.goto(url, { waitUntil: 'networkidle2', timeout: 120000 });
 
     // Wait a bit for any lazy-loaded content
     await new Promise(resolve => setTimeout(resolve, 2000));

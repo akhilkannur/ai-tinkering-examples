@@ -26,17 +26,17 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     sponsor: null
   },
   {
-    id: "lkr-laura-roeder-on-x-claude-code-for-non-devs-useful-",
-    title: "Laura Roeder on X: 'CLAUDE CODE FOR NON DEVS  Useful thing of the day: connect your stripe account. ",
-    slug: "lkr-laura-roeder-on-x-claude-code-for-non-devs-useful-",
-    summary: "Direct quote from lkr on X: 'CLAUDE CODE FOR NON DEVS Useful thing of the day: connect your stripe account. Just tell CC you want...'. This post discusses important points about the topic.",
+    id: "lkr-ai-tool-integration-connecting-stripe-with-claude-",
+    title: "AI Tool Integration: Connecting Stripe with Claude Code",
+    slug: "lkr-ai-tool-integration-connecting-stripe-with-claude-",
+    summary: "Demonstrates how to integrate Stripe with Claude Code using read-only API keys. Shows practical AI application for business operations.",
     screenshots: [
       {
-        url: "/images/examples/2026-01-22-lkr-laura-roeder-on-x-claude-code-for-non-devs-useful-.jpg",
-        filename: "2026-01-22-lkr-laura-roeder-on-x-claude-code-for-non-devs-useful-.jpg",
+        url: "/images/examples/2026-01-22-lkr-ai-tool-integration-connecting-stripe-with-claude-.jpg",
+        filename: "2026-01-22-lkr-ai-tool-integration-connecting-stripe-with-claude-.jpg",
         thumbnails: {
-          small: { url: "/images/examples/2026-01-22-lkr-laura-roeder-on-x-claude-code-for-non-devs-useful-.jpg" },
-          large: { url: "/images/examples/2026-01-22-lkr-laura-roeder-on-x-claude-code-for-non-devs-useful-.jpg" }
+          small: { url: "/images/examples/2026-01-22-lkr-ai-tool-integration-connecting-stripe-with-claude-.jpg" },
+          large: { url: "/images/examples/2026-01-22-lkr-ai-tool-integration-connecting-stripe-with-claude-.jpg" }
         }
       }
     ],
