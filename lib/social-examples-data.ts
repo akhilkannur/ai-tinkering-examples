@@ -49,30 +49,7 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     Sponsored: false,
     sponsor: null
   },
-  {
-    id: "aiedge_-getting-started-w-claude-cowork-10-essential-workf",
-    title: "Getting Started w/ Claude Cowork: 10 Essential Workflows (+ prompts)",
-    slug: "aiedge_-getting-started-w-claude-cowork-10-essential-workf",
-    summary: "AI Edge shares 10 practical ideas to implement Claude Cowork with as little friction as possible.",
-    screenshots: [
-      {
-        url: "/images/examples/2026-01-22-aiedge_-getting-started-w-claude-cowork-10-essential-workf.jpg",
-        filename: "2026-01-22-aiedge_-getting-started-w-claude-cowork-10-essential-workf.jpg",
-        thumbnails: {
-          small: { url: "/images/examples/2026-01-22-aiedge_-getting-started-w-claude-cowork-10-essential-workf.jpg" },
-          large: { url: "/images/examples/2026-01-22-aiedge_-getting-started-w-claude-cowork-10-essential-workf.jpg" }
-        }
-      }
-    ],
-    category: "Marketing Ops",
-    publish_date: "2026-01-22",
-    original_link: "https://x.com/aiedge_/status/2013641070815650252",
-    author_name: "AI Edge",
-    author_link: "https://x.com/aiedge_",
-    tags: ["Claude", "Automation", "Workflows"],
-    Sponsored: false,
-    sponsor: null
-  },
+];
   {
     id: "short-courses-automate-software-dev-creative-workflows-with-gemi",
     title: "Automate Software Dev & Creative Workflows with Gemini CLI",
@@ -94,6 +71,30 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     author_name: "DeepLearning.AI",
     author_link: "https://www.deeplearning.ai",
     tags: ["Gemini", "CLI", "Automation", "Course"],
+    Sponsored: false,
+    sponsor: null
+  },
+  {
+    id: "aiedge_-getting-started-w-claude-cowork-10-essential-workf",
+    title: "Getting Started w/ Claude Cowork: 10 Essential Workflows (+ prompts)",
+    slug: "aiedge_-getting-started-w-claude-cowork-10-essential-workf",
+    summary: "AI Edge shares 10 practical ideas to implement Claude Cowork with as little friction as possible.",
+    screenshots: [
+      {
+        url: "/images/examples/2026-01-22-aiedge_-getting-started-w-claude-cowork-10-essential-workf.jpg",
+        filename: "2026-01-22-aiedge_-getting-started-w-claude-cowork-10-essential-workf.jpg",
+        thumbnails: {
+          small: { url: "/images/examples/2026-01-22-aiedge_-getting-started-w-claude-cowork-10-essential-workf.jpg" },
+          large: { url: "/images/examples/2026-01-22-aiedge_-getting-started-w-claude-cowork-10-essential-workf.jpg" }
+        }
+      }
+    ],
+    category: "Marketing Ops",
+    publish_date: "2026-01-22",
+    original_link: "https://x.com/aiedge_/status/2013641070815650252",
+    author_name: "AI Edge",
+    author_link: "https://x.com/aiedge_",
+    tags: ["Claude", "Automation", "Workflows"],
     Sponsored: false,
     sponsor: null
   },
