@@ -90,7 +90,8 @@ async function generateSitemap() {
     const staticPages = [
       '', '/about', '/learn-ai', '/ai-examples', '/blueprints', '/investors', '/jobs', '/ai-workplace-quiz',
       '/tools', '/tools/for-content-creators', '/tools/for-developers', '/tools/for-marketers',
-      '/tools/free-ai-tools', '/tools/utm-builder', '/privacy', '/terms'
+      '/tools/free-ai-tools', '/tools/utm-builder', '/privacy', '/terms', 
+      '/500-ways-to-use-llms-for-work', '/state-of-ai-2026', '/how-to'
     ];
 
     const currentDate = new Date().toISOString();
@@ -108,14 +109,26 @@ async function generateSitemap() {
     });
 
     // Recipes (Priority 0.7)
+    // We also generate "How To" pages for these
     recipes.forEach(r => {
-      xml += `\n  <url><loc>${SITE_URL}/blueprints/${r.id}</loc><lastmod>${currentDate}</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>`;
+      // Original Recipe Page
+      xml += `\n  <url><loc>${SITE_URL}/ai-examples/${r.id}</loc><lastmod>${currentDate}</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>`;
+      
+      // "How To" Page (High Intent)
+      // Note: We assume all recipes have taglines for now, or the page will just use title. 
+      // The page generation logic handles the fallback, but for sitemap we just need the ID.
+      xml += `\n  <url><loc>${SITE_URL}/how-to/automate-${r.id}</loc><lastmod>${currentDate}</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>`;
     });
 
-    // New Blueprint Category Pages (Priority 0.6)
+    // New Role Pages (Priority 0.9 - High Value)
     blueprintCategories.forEach(cat => {
-      const catSlug = cat.toLowerCase().replace(/[^a-z0-9]/g, '-');
-      xml += `\n  <url><loc>${SITE_URL}/blueprints/category/${catSlug}</loc><lastmod>${currentDate}</lastmod><changefreq>daily</changefreq><priority>0.6</priority></url>`;
+      // Slugify logic matching utils/slugify.ts
+      const catSlug = cat.toLowerCase()
+        .replace(/[^a-z0-9\s-]/g, "")
+        .trim()
+        .replace(/\s+/g, "-");
+        
+      xml += `\n  <url><loc>${SITE_URL}/role/${catSlug}</loc><lastmod>${currentDate}</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>`;
     });
 
     // Legacy Category Pages (Airtable)
