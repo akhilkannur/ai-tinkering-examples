@@ -7,6 +7,17 @@ const url = args[0];
 const useLocalCapture = args.includes('--local') || args.includes('-l'); // Flag to use local capture instead of Microlink
 const useBeautifulCapture = args.includes('--beautiful') || args.includes('-b'); // Flag to create beautiful screenshots
 
+// Helper to get arg value
+const getArg = (flag) => {
+  const index = args.indexOf(flag);
+  return (index > -1 && args[index + 1] && !args[index + 1].startsWith('-')) ? args[index + 1] : null;
+};
+
+const manualTitle = getArg('--title');
+const manualSummary = getArg('--summary');
+const manualCategory = getArg('--category');
+const manualTags = getArg('--tags');
+
 if (!url) {
   console.error('Please provide a URL (e.g., Twitter link)');
   process.exit(1);
@@ -323,8 +334,8 @@ async function createSocialExample() {
 
       // Extract content from the URL
       const contentData = await extractContentFromUrl(url);
-      title = contentData.title;
-      description = contentData.summary;
+      title = manualTitle || contentData.title;
+      description = manualSummary || contentData.summary;
       author = 'Unknown';
     } else {
       // Use Microlink API as before
@@ -336,8 +347,8 @@ async function createSocialExample() {
       }
 
       const meta = data.data;
-      title = (meta.title || 'New AI Automation').replace(/"/g, "'");
-      description = (meta.description || 'No description found.').replace(/"/g, "'");
+      title = manualTitle || (meta.title || 'New AI Automation').replace(/"/g, "'");
+      description = manualSummary || (meta.description || 'No description found.').replace(/"/g, "'");
       author = meta.author || 'Unknown';
       authorHandle = url.split('/')[3] || author;
 
@@ -367,6 +378,8 @@ async function createSocialExample() {
     const cleanAuthor = author.replace(/[\\"]/g, "'");
     const cleanId = id.replace(/[\\"]/g, "'");
     const cleanSlug = id.replace(/[\\"]/g, "'");
+    const cleanCategory = manualCategory || "Marketing Ops";
+    const cleanTags = manualTags ? manualTags.split(',').map(t => `"${t.trim()}"`).join(', ') : '"Automation"';
 
     const newEntry = `
   {
@@ -384,12 +397,12 @@ async function createSocialExample() {
         }
       }
     ],
-    category: "Marketing Ops",
+    category: "${cleanCategory}",
     publish_date: "${date}",
     original_link: "${url}",
     author_name: "${cleanAuthor}",
     author_link: "https://x.com/${authorHandle}",
-    tags: ["Automation"],
+    tags: [${cleanTags}],
     Sponsored: false,
     sponsor: null
   },`;
