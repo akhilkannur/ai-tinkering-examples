@@ -188,6 +188,12 @@ async function extractContentFromUrl(url) {
           '.content',
           '.post-content',
           '.entry-content',
+          '.course-description',
+          '.course-details',
+          '.course-content',
+          '.description',
+          '.summary',
+          '.overview',
           'body'
         ];
 
@@ -208,9 +214,26 @@ async function extractContentFromUrl(url) {
       });
     }
 
-    // If we couldn't extract a proper author name, fall back to the handle
-    if (!authorName) {
-      authorName = url.split('/')[3] || 'Someone';
+    // If we couldn't extract a proper author name, determine based on URL structure
+    if (!authorName || authorName === '') {
+      // For Twitter/X URLs, use the handle from the URL
+      if (url.includes('x.com') || url.includes('twitter.com')) {
+        authorName = url.split('/')[3] || 'Someone';
+      } else {
+        // For other websites, try to extract domain name or use generic term
+        try {
+          const hostname = new URL(url).hostname.replace('www.', '');
+          const domainParts = hostname.split('.');
+          if (domainParts.length >= 2) {
+            // Use the main domain name (e.g., 'deeplearning.ai' -> 'deeplearning')
+            authorName = domainParts[0];
+          } else {
+            authorName = 'The Site';
+          }
+        } catch (e) {
+          authorName = 'Someone';
+        }
+      }
     }
 
     // Clean up the extracted content
@@ -242,6 +265,12 @@ async function extractContentFromUrl(url) {
       } else if (lowerContent.includes('productivity') || lowerContent.includes('efficiency') || lowerContent.includes('tool')) {
         insightfulTitle = 'Productivity Tip';
         insightfulSummary = `${authorName} offers an effective productivity tip that can transform your workflow. The practical advice delivers clear benefits.`;
+      } else if (lowerContent.includes('course') || lowerContent.includes('learning') || lowerContent.includes('education') || lowerContent.includes('tutorial') || lowerContent.includes('training')) {
+        // Handle educational content
+        const courseNameMatch = content.match(/(?:course|tutorial|training|learning)\s+(?:on|about|for)?\s+([^.]+)/i);
+        const courseName = courseNameMatch ? courseNameMatch[1].trim() : 'AI Course';
+        insightfulTitle = `AI Learning: ${courseName}`;
+        insightfulSummary = `${authorName} offers an educational resource on ${courseName}. This course provides practical skills and knowledge for AI practitioners.`;
       } else {
         // Generic insight for other content
         insightfulTitle = 'Community Insight';

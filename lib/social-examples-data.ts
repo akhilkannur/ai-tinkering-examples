@@ -49,4 +49,28 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     Sponsored: false,
     sponsor: null
   },
+  {
+    id: "short-courses-ai-learning-ai-course",
+    title: "AI Learning: AI Course",
+    slug: "short-courses-ai-learning-ai-course",
+    summary: "deeplearning offers an educational resource on AI Course. This course provides practical skills and knowledge for AI practitioners.",
+    screenshots: [
+      {
+        url: "/images/examples/2026-01-22-short-courses-ai-learning-ai-course.jpg",
+        filename: "2026-01-22-short-courses-ai-learning-ai-course.jpg",
+        thumbnails: {
+          small: { url: "/images/examples/2026-01-22-short-courses-ai-learning-ai-course.jpg" },
+          large: { url: "/images/examples/2026-01-22-short-courses-ai-learning-ai-course.jpg" }
+        }
+      }
+    ],
+    category: "Marketing Ops",
+    publish_date: "2026-01-22",
+    original_link: "https://www.deeplearning.ai/short-courses/gemini-cli-code-and-create-with-an-open-source-agent/",
+    author_name: "Unknown",
+    author_link: "https://x.com/short-courses",
+    tags: ["Automation"],
+    Sponsored: false,
+    sponsor: null
+  },
 ];
