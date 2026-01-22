@@ -93,12 +93,41 @@ async function extractContentFromUrl(url) {
     // Extract content based on platform
     let content = '';
     let title = '';
+    let authorName = '';
 
     if (url.includes('x.com') || url.includes('twitter.com')) {
       // For Twitter/X posts
       title = await page.evaluate(() => {
         const titleElement = document.querySelector('title');
         return titleElement ? titleElement.textContent : '';
+      });
+
+      // Extract the actual author name from the tweet
+      authorName = await page.evaluate(() => {
+        // Look for the author's display name in the tweet
+        const authorElements = document.querySelectorAll('[data-testid="User-Name"] span');
+        for (const element of authorElements) {
+          const text = element.textContent.trim();
+          // Skip if it's just the handle (starts with @)
+          if (text && !text.startsWith('@')) {
+            return text;
+          }
+        }
+        // Fallback: try other selectors for author name
+        const nameSelectors = [
+          'a[href^="/"] span',
+          '[data-testid="UserName"] span',
+          'div[dir="ltr"] span'
+        ];
+
+        for (const selector of nameSelectors) {
+          const nameElement = document.querySelector(selector);
+          if (nameElement && nameElement.textContent.trim() && !nameElement.textContent.trim().startsWith('@')) {
+            return nameElement.textContent.trim();
+          }
+        }
+
+        return '';
       });
 
       content = await page.evaluate(() => {
@@ -126,6 +155,28 @@ async function extractContentFromUrl(url) {
       // For other websites, extract main content
       title = await page.evaluate(() => {
         return document.title || '';
+      });
+
+      // Extract author name if available
+      authorName = await page.evaluate(() => {
+        // Try to find author in common meta tags or elements
+        const authorSelectors = [
+          'meta[name="author"]',
+          'meta[property="article:author"]',
+          '.author',
+          '[rel="author"]',
+          '.byline',
+          '.post-author'
+        ];
+
+        for (const selector of authorSelectors) {
+          const element = document.querySelector(selector);
+          if (element) {
+            return element.getAttribute('content') || element.textContent || element.getAttribute('title') || '';
+          }
+        }
+
+        return '';
       });
 
       content = await page.evaluate(() => {
@@ -157,6 +208,11 @@ async function extractContentFromUrl(url) {
       });
     }
 
+    // If we couldn't extract a proper author name, fall back to the handle
+    if (!authorName) {
+      authorName = url.split('/')[3] || 'Someone';
+    }
+
     // Clean up the extracted content
     content = content.replace(/\s+/g, ' ').trim();
 
@@ -167,9 +223,6 @@ async function extractContentFromUrl(url) {
     if (content.length > 0) {
       // Create an insightful summary based on content analysis
       const lowerContent = content.toLowerCase();
-
-      // Extract author name from URL for more personal touch
-      const authorName = url.split('/')[3] || 'Someone';
 
       // Identify key topics and themes
       if (lowerContent.includes('claude') || lowerContent.includes('ai') || lowerContent.includes('automation')) {

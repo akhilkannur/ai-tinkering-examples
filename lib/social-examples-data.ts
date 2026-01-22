@@ -29,7 +29,7 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     id: "lkr-connecting-stripe-with-claude-code",
     title: "Connecting Stripe with Claude Code",
     slug: "lkr-connecting-stripe-with-claude-code",
-    summary: "lkr demonstrates how to integrate Stripe with Claude Code using read-only API keys. This practical AI application can streamline business operations and save hours of manual work.",
+    summary: "Laura Roeder demonstrates how to integrate Stripe with Claude Code using read-only API keys. This practical AI application can streamline business operations and save hours of manual work.",
     screenshots: [
       {
         url: "/images/examples/2026-01-22-lkr-connecting-stripe-with-claude-code.jpg",
