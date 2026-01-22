@@ -244,10 +244,10 @@ async function createSocialExample() {
 
     const newEntry = `
   {
-    id: "${id}",
-    title: "${title}",
-    slug: "${id}",
-    summary: "${description.substring(0, 200)}",
+    id: "${id.replace(/"/g, "'")}",
+    title: "${title.replace(/"/g, "'")}",
+    slug: "${id.replace(/"/g, "'")}",
+    summary: "${description.substring(0, 200).replace(/"/g, "'")}",
     screenshots: [
       {
         url: "/images/examples/${imageFilename}",
@@ -261,7 +261,7 @@ async function createSocialExample() {
     category: "Marketing Ops",
     publish_date: "${date}",
     original_link: "${url}",
-    author_name: "${author}",
+    author_name: "${author.replace(/"/g, "'")}",
     author_link: "https://x.com/${authorHandle}",
     tags: ["Automation"],
     Sponsored: false,
