@@ -49,7 +49,6 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     Sponsored: false,
     sponsor: null
   },
-];
   {
     id: "short-courses-automate-software-dev-creative-workflows-with-gemi",
     title: "Automate Software Dev & Creative Workflows with Gemini CLI",
