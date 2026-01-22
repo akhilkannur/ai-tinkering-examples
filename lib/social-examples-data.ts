@@ -73,28 +73,4 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     Sponsored: false,
     sponsor: null
   },
-  {
-    id: "aiedge_-ai-tool-usage-tip",
-    title: "AI Tool Usage Tip",
-    slug: "aiedge_-ai-tool-usage-tip",
-    summary: "Log in reveals a valuable AI tool usage technique that can boost productivity. The actionable advice is ready to implement today.",
-    screenshots: [
-      {
-        url: "/images/examples/2026-01-22-aiedge_-ai-tool-usage-tip.jpg",
-        filename: "2026-01-22-aiedge_-ai-tool-usage-tip.jpg",
-        thumbnails: {
-          small: { url: "/images/examples/2026-01-22-aiedge_-ai-tool-usage-tip.jpg" },
-          large: { url: "/images/examples/2026-01-22-aiedge_-ai-tool-usage-tip.jpg" }
-        }
-      }
-    ],
-    category: "Marketing Ops",
-    publish_date: "2026-01-22",
-    original_link: "https://x.com/aiedge_/status/2013641070815650252",
-    author_name: "AI Edge",
-    author_link: "https://x.com/aiedge_",
-    tags: ["Automation"],
-    Sponsored: false,
-    sponsor: null
-  },
 ];
