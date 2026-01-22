@@ -7,7 +7,6 @@ import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import { getAllRecipes } from '../../lib/recipes';
 import { Recipe } from '../../lib/cookbook-data';
-import ExampleBody from '../../components/ExampleBody';
 
 interface HowToPageProps {
   recipe: Recipe;
@@ -104,8 +103,17 @@ export default function HowToPage({ recipe, problemTitle, relatedRecipes }: HowT
                    It includes the role, constraints, and multi-step workflow needed to {problemTitle}.
                 </p>
 
-                <div className="prose prose-invert max-w-none">
-                   <ExampleBody content={recipe.blueprint} />
+                <div className="relative group">
+                   <pre className="bg-primary-bg p-6 rounded-lg border border-navy-dark overflow-x-auto text-sm font-mono text-text-secondary whitespace-pre-wrap">
+                      {recipe.blueprint}
+                   </pre>
+                   <button 
+                      onClick={() => navigator.clipboard.writeText(recipe.blueprint)}
+                      className="absolute top-4 right-4 p-2 bg-secondary-bg border border-navy-dark rounded text-text-secondary hover:text-accent transition-colors opacity-0 group-hover:opacity-100"
+                      title="Copy to clipboard"
+                   >
+                      <Copy className="w-4 h-4" />
+                   </button>
                 </div>
              </div>
           </div>
