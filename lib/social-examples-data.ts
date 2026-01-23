@@ -121,4 +121,28 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     Sponsored: false,
     sponsor: null
   },
+  {
+    id: "bucco-deep-research-company-overview",
+    title: "Deep Research: 13-Point Company Overview",
+    slug: "bucco-deep-research-company-overview",
+    summary: "A 13-point framework for holistic company research using Deep Research. Focuses on strategic positioning rather than just valuation.",
+    screenshots: [
+      {
+        url: "/images/examples/2026-01-23-bucco-deep-research-prompt.jpg",
+        filename: "2026-01-23-bucco-deep-research-prompt.jpg",
+        thumbnails: {
+          small: { url: "/images/examples/2026-01-23-bucco-deep-research-prompt.jpg" },
+          large: { url: "/images/examples/2026-01-23-bucco-deep-research-prompt.jpg" }
+        }
+      }
+    ],
+    category: "Strategic Ops",
+    publish_date: "2026-01-23",
+    original_link: "https://x.com/buccocapital/status/1995310794339176558",
+    author_name: "BuccoCapital",
+    author_link: "https://x.com/buccocapital",
+    tags: ["Deep Research", "Strategy", "Due Diligence"],
+    Sponsored: false,
+    sponsor: null
+  },
 ];
