@@ -1,7 +1,7 @@
 import type { EnrichedExampleRecord } from '../lib/airtable'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Clock, User, Tag } from 'lucide-react'
+import { Clock, User, Tag, ExternalLink } from 'lucide-react'
 import { optimizeImageUrl } from '../utils/cloudinary'
 import SponsorDetailCard from './SponsorDetailCard'
 import SocialSharing from './SocialSharing' // Import SocialSharing
@@ -33,7 +33,7 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
             )}
             {example.author_name && (
               <div className="flex items-center gap-1">
-                <User size={14} />
+                <ExternalLink size={14} className="text-text-secondary" />
                 {example.author_link ? (
                   <a
                     href={example.author_link}
@@ -41,10 +41,10 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
                     rel="noopener noreferrer"
                     className="hover:text-accent transition-colors"
                   >
-                    {example.author_name}
+                    Source: {example.author_name}
                   </a>
                 ) : (
-                  <span>{example.author_name}</span>
+                  <span>Source: {example.author_name}</span>
                 )}
               </div>
             )}
