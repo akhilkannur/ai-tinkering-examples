@@ -1,7 +1,7 @@
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import Navbar from '../components/Navbar'
-import { Terminal, Minus, Square, X, Folder, File, ArrowRight } from 'lucide-react'
+import { Terminal, Minus, Square, X, Folder, File, ArrowRight, FileText } from 'lucide-react'
 import { getAllRecipes } from '../lib/recipes'
 import { Recipe } from '../lib/cookbook-data'
 import Link from 'next/link'
