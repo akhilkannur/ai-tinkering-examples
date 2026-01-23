@@ -88,7 +88,7 @@ async function generateSitemap() {
 
     // 4. Define Static Pages
     const staticPages = [
-      '', '/about', '/learn-ai', '/ai-examples', '/blueprints', '/investors', '/jobs', '/ai-workplace-quiz',
+      '', '/about', '/learn-ai', '/ai-examples', '/investors', '/jobs', '/ai-workplace-quiz',
       '/tools', '/tools/for-content-creators', '/tools/for-developers', '/tools/for-marketers',
       '/tools/free-ai-tools', '/tools/utm-builder', '/privacy', '/terms', 
       '/500-ways-to-use-llms-for-work', '/state-of-ai-2026', '/how-to'
