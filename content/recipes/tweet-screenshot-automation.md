@@ -7,9 +7,11 @@ difficulty: Advanced
 time: Automated
 archetype: Processor
 description: >-
-  Stop manually cropping screenshots. This blueprint automates the capture of
-  Twitter/X posts using a "Golden Ratio" crop that removes sidebars, signup
-  modals, and navigation headers, leaving you with a clean, professional asset.
+  Stop manually cropping screenshots. This is the exact production workflow we
+  use to curate the [AI Examples](https://realaiexamples.com/ai-examples)
+  library. It automates the capture of Twitter/X posts using a "Golden Ratio"
+  crop that removes sidebars, signup modals, and navigation headers, leaving you
+  with a clean, professional asset.
 sampleData:
   filename: urls.csv
   content: |
