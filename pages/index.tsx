@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Navbar from '../components/Navbar'
 import TerminalCookbook from '../components/BuilderFlowchart'
 import HowToUseGuide from '../components/HowToUseGuide'
-import { Terminal, BookOpen, Cpu, Command, ArrowRight, Zap } from 'lucide-react'
+import { Terminal, BookOpen, Cpu, Command, ArrowRight, Zap, Target, Search, Heart } from 'lucide-react'
 import { getAllRecipes } from '../lib/recipes'
 import { Recipe } from '../lib/cookbook-data'
 import { fetchFeaturedJobs, fetchFeaturedTools, fetchSiteSettings, JobRecord, ToolRecord } from '../lib/airtable'
@@ -88,14 +88,22 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
                             </a>
                         </div>
 
-                        {/* Compatibility Bar */}
+                        {/* Playbooks Bar */}
                         <div className="pt-8 border-t border-navy-dark">
-                            <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-text-secondary/40 mb-4">Optimized for agentic workflows:</p>
-                            <div className="flex flex-wrap gap-x-6 gap-y-4 opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-500">
-                                <span className="flex items-center gap-2 text-sm font-bold text-text-color"><Cpu className="w-4 h-4 text-accent" /> Claude Code</span>
-                                <span className="flex items-center gap-2 text-sm font-bold text-text-color"><Command className="w-4 h-4 text-accent" /> Gemini CLI</span>
-                                <span className="flex items-center gap-2 text-sm font-bold text-text-color"><Terminal className="w-4 h-4 text-accent" /> Cursor</span>
-                                <span className="flex items-center gap-2 text-sm font-bold text-text-color"><Zap className="w-4 h-4 text-accent" /> Claude Cowork</span>
+                            <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-text-secondary/40 mb-4">Popular Role-Based Playbooks:</p>
+                            <div className="flex flex-wrap gap-3">
+                                <a href="/playbook/vp-sales" className="flex items-center gap-2 text-xs font-bold text-text-color bg-secondary-bg border border-navy-dark px-3 py-1.5 rounded-full hover:border-accent hover:text-accent transition-all">
+                                  <Target className="w-3 h-3" /> VP Sales
+                                </a>
+                                <a href="/playbook/seo-manager" className="flex items-center gap-2 text-xs font-bold text-text-color bg-secondary-bg border border-navy-dark px-3 py-1.5 rounded-full hover:border-accent hover:text-accent transition-all">
+                                  <Search className="w-3 h-3" /> SEO Manager
+                                </a>
+                                <a href="/playbook/demand-gen" className="flex items-center gap-2 text-xs font-bold text-text-color bg-secondary-bg border border-navy-dark px-3 py-1.5 rounded-full hover:border-accent hover:text-accent transition-all">
+                                  <Zap className="w-3 h-3" /> Demand Gen
+                                </a>
+                                <a href="/playbook/customer-success" className="flex items-center gap-2 text-xs font-bold text-text-color bg-secondary-bg border border-navy-dark px-3 py-1.5 rounded-full hover:border-accent hover:text-accent transition-all">
+                                  <Heart className="w-3 h-3" /> Customer Success
+                                </a>
                             </div>
                         </div>
                     </div>
