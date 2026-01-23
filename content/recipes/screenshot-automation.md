@@ -1,0 +1,68 @@
+---
+id: screenshot-automation
+category: Dev Tools
+title: Automated Screenshot Capture System
+tagline: Capture beautiful, consistent screenshots from any URL programmatically.
+difficulty: Intermediate
+time: 10 mins
+archetype: Processor
+description: Automatically captures, crops, and beautifies screenshots from URLs for your portfolio or docs.
+sampleData:
+  filename: urls.csv
+  content: |
+    url,platform
+    https://x.com/user/status/12345,twitter
+    https://github.com/user/repo,github
+    https://example.com,default
+---
+
+# What This Does
+It visits a list of URLs, takes a screenshot of each, crops out the clutter (like sidebars or ads), and adds a professional "beautify" effect (shadows, gradients) to make them look like high-quality marketing assets.
+
+# What You Need
+- A list of URLs in a CSV file (e.g., `urls.csv`)
+- Node.js installed on your computer
+- (Optional) An API key if you want to use a cloud service, but this recipe works locally with Puppeteer.
+
+# What You Get
+- A folder full of high-quality `.jpg` or `.png` images
+- Consistent framing and styling for all your screenshots
+- No more manual cropping or editing in Photoshop/Canva
+
+# How to Use
+1. Prepare your `urls.csv` with the links you want to capture
+2. Open Claude Code, Gemini CLI, or Cursor in a new folder
+3. Copy and paste the prompt below
+4. Run the generated script to get your images
+
+---
+
+# Prompt
+
+You are a Senior Node.js Developer. Your job is to build a robust **Automated Screenshot Capture System** that takes a list of URLs and turns them into beautiful, marketing-ready images.
+
+**Phase 1: Setup**
+- Read `urls.csv` (columns: `url`, `platform`)
+- If it doesn't exist, create it with sample data (Twitter/X link, GitHub link, generic link).
+- Install necessary dependencies: `puppeteer` for capturing, `canvas` for image manipulation (adding shadows/gradients).
+
+**Phase 2: The Capture Script (`capture.js`)**
+Create a script that:
+1. Launches a headless browser (Puppeteer).
+2. Loops through each URL in the CSV.
+3. **Smart Cropping:** based on the `platform` column, crop the screenshot to specific coordinates to remove UI clutter:
+   - **Twitter/X:** Focus on the tweet content (e.g., width 900px, centered).
+   - **GitHub:** Focus on the repo header/README.
+   - **Default:** Full page or a standard viewport (1280x800).
+4. **Beautify:** After capturing, use `canvas` to:
+   - Add a subtle drop shadow.
+   - Add a nice gradient background or solid border.
+   - Round the corners of the screenshot.
+5. Save the final image to an `output/` folder with a safe filename (e.g., `twitter-user-status-12345.jpg`).
+
+**Phase 3: Execution**
+- Run the script and show a progress bar in the terminal.
+- Handle errors gracefully (e.g., if a page fails to load, log it and move to the next).
+- When finished, print: "✅ Captured X screenshots. Check the 'output' folder!"
+
+Start now.
