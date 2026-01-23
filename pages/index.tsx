@@ -254,7 +254,7 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
               📬 Don't Miss Out!
             </h2>
             <p className="text-xl mb-10 font-sans text-text-secondary max-w-2xl mx-auto">
-              Get 5-10 hand-picked AI blueprints delivered weekly. Join hundreds of subscribers learning to use AI practically.
+              Sign up to get 3 interesting AI recipes delivered weekly. Join hundreds of subscribers learning to use AI practically.
             </p>
             
             <div className="max-w-[500px] mx-auto">
