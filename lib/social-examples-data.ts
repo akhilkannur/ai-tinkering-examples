@@ -97,4 +97,28 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     Sponsored: false,
     sponsor: null
   },
+  {
+    id: "mehtabkarta-ai-workflow-2026-01-23",
+    title: "Competitor Promotion Schedule Hack",
+    slug: "mehtabkarta-ai-workflow-2026-01-23",
+    summary: "A simple 1-prompt hack using Deep Research and Milled to reverse-engineer a competitor's entire annual promotion calendar, revealing seasonal offers and launch strategies.",
+    screenshots: [
+      {
+        url: "/images/examples/2026-01-23-mehtabkarta-ai-workflow.jpg",
+        filename: "2026-01-23-mehtabkarta-ai-workflow.jpg",
+        thumbnails: {
+          small: { url: "/images/examples/2026-01-23-mehtabkarta-ai-workflow.jpg" },
+          large: { url: "/images/examples/2026-01-23-mehtabkarta-ai-workflow.jpg" }
+        }
+      }
+    ],
+    category: "Competitive Intel",
+    publish_date: "2026-01-23",
+    original_link: "https://x.com/MehtabKarta/status/2014392743204999396",
+    author_name: "MehtabKarta",
+    author_link: "https://x.com/MehtabKarta",
+    tags: ["Deep Research", "Prompts", "Competitor Analysis"],
+    Sponsored: false,
+    sponsor: null
+  },
 ];
