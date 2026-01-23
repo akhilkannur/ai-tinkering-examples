@@ -12,7 +12,6 @@ export default function Navbar() {
 
   const navLinks = [
     { href: '/ai-examples', label: 'Real Examples' },
-    { href: '/playbook/vp-sales', label: 'Playbooks' }, // Added Playbooks
     { href: '/tools', label: 'Tools' }, // Added Tools link
     { href: '/investors', label: 'Micro-PE Match' },
     { href: '/ai-workplace-quiz', label: 'AI Quiz' },
