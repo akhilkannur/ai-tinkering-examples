@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import Navbar from '../../components/Navbar';
-import Footer from '../../components/Footer';
 import { getAllPosts, BlogPost } from '../../lib/blog';
 import { ArrowRight, Calendar, User } from 'lucide-react';
 
@@ -71,7 +70,6 @@ export default function BlogIndex({ posts }: BlogIndexProps) {
         </div>
       </main>
 
-      <Footer />
     </div>
   );
 }

@@ -2,7 +2,6 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Navbar from '../../components/Navbar';
-import Footer from '../../components/Footer';
 import { getAllPosts, getPostBySlug, BlogPost } from '../../lib/blog';
 import { getAllRecipes } from '../../lib/recipes';
 import { Recipe, categoryIcons } from '../../lib/cookbook-data';
@@ -131,7 +130,6 @@ export default function BlogPostPage({ post, relatedRecipes }: BlogPostPageProps
         )}
       </main>
 
-      <Footer />
     </div>
   );
 }
