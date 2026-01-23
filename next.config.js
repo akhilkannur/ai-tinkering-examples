@@ -68,6 +68,26 @@ const nextConfig = {
         destination: '/',
         permanent: true,
       },
+      {
+        source: '/blueprints/:slug*',
+        destination: '/ai-examples/:slug*',
+        permanent: true,
+      },
+      {
+        source: '/ai-examples/category/building-apps',
+        destination: '/tools/for-developers',
+        permanent: true,
+      },
+      {
+        source: '/ai-examples/category/design',
+        destination: '/tools/for-content-creators',
+        permanent: true,
+      },
+      {
+        source: '/ai-examples/category/productivity',
+        destination: '/ai-examples',
+        permanent: true,
+      },
     ]
   },
 }
