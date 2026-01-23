@@ -81,7 +81,7 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
 
                         <div className="inline-block bg-accent/10 border border-accent/20 rounded-full px-3 py-1 mb-4">
                             <span className="text-xs font-bold text-accent tracking-wide uppercase flex items-center gap-2">
-                                <Zap className="w-3 h-3 fill-current" /> Launch Special: $29 (Reg. $149)
+                                <Zap className="w-3 h-3 fill-current" /> Launch Special: $29 (Normally $149)
                             </span>
                         </div>
 
