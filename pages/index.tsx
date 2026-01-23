@@ -79,14 +79,24 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
                             Built by non-technical tinkerers, for non-technical tinkerers.
                         </p>
 
-                        <div className="flex flex-col sm:flex-row items-center gap-4 mb-12">
+                        <div className="flex flex-col sm:flex-row items-center gap-4 mb-8">
+                            <a 
+                                href="https://checkout.dodopayments.com/buy/pdt_0NW6p0szmXPS6jXW05hIP"
+                                className="w-full sm:w-auto px-8 py-4 bg-accent hover:bg-accent-hover text-white font-bold rounded-lg transition-all shadow-[0_0_20px_rgba(236,72,153,0.3)] hover:shadow-[0_0_30px_rgba(236,72,153,0.5)] text-sm flex items-center justify-center gap-2 transform hover:-translate-y-1"
+                            >
+                                Get Lifetime Access <ArrowRight className="w-4 h-4" />
+                            </a>
                             <a 
                                 href="#blueprints" 
-                                className="w-full sm:w-auto px-8 py-4 bg-white hover:bg-slate-200 text-slate-900 font-bold rounded-lg transition-all shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_30px_rgba(255,255,255,0.2)] text-sm flex items-center justify-center gap-2"
+                                className="w-full sm:w-auto px-8 py-4 bg-white/5 border border-navy-dark hover:bg-white/10 text-text-color font-bold rounded-lg transition-all text-sm flex items-center justify-center gap-2"
                             >
-                                Browse the Library <ArrowRight className="w-4 h-4" />
+                                Browse Free Blueprints
                             </a>
                         </div>
+                        <p className="text-xs font-mono text-text-secondary/60 mb-12 flex items-center gap-2">
+                          <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                          One-time payment. Lifetime updates. Money-back guarantee.
+                        </p>
 
                         {/* Playbooks Bar */}
                         <div className="pt-8 border-t border-navy-dark">
