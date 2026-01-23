@@ -1,7 +1,7 @@
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import Navbar from '../components/Navbar'
-import { ArrowRight, Star, Folder, FileText, Tag, Search, Globe, Archive } from 'lucide-react'
+import { ArrowRight, Star, Folder, FileText, Tag, Search, Globe, Archive, Lock } from 'lucide-react'
 import { getAllRecipes } from '../lib/recipes'
 import { Recipe } from '../lib/cookbook-data'
 import { fetchFeaturedJobs, fetchFeaturedTools, fetchSiteSettings, JobRecord, ToolRecord } from '../lib/airtable'
