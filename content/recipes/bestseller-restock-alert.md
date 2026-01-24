@@ -40,6 +40,3 @@ Coordinate marketing with inventory availability.
 2.  **Filter:** Class 'A' AND Old=0 AND New>100.
 3.  **Output:** Save `restock_campaign_alert.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

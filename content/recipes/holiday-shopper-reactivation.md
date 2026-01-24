@@ -41,6 +41,3 @@ Reactivate seasonal buyers.
 2.  **Filter:** Customers with orders ONLY in Nov/Dec.
 3.  **Output:** Save `holiday_shoppers.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

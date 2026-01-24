@@ -34,20 +34,15 @@ Find 50 enterprise companies using legacy tech.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Market Setup
-1.  **Check:** Does `legacy_tech_markers.csv` exist? If missing, create template.
 
-### Phase 2: The Hunt Loop
+**Phase 2: The Hunt Loop**
 For each row in the CSV:
 1.  **Discovery:** Find 10 domains in the `Ideal_Industry` using the `Tech_Marker`.
 2.  **Qualify:** Use search snippets to verify company size (>500 employees).
 3.  **Enrich:** Find the name of the "CTO" or "VP Engineering" hired in the last 6 months.
 4.  **Calculate:** Estimate the "Cost of Inaction" (e.g., security risk or speed loss).
 
-### Phase 3: The Target List
+**Phase 3: The Target List**
 1.  **Create:** `sleeping_giants_list.csv` with columns: `Company,Legacy_Tech,Key_Contact,Hypothesis_of_Pain`.
 2.  **Summary:** "Found [X] enterprise accounts stuck on [Tech]. High-value list is ready."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

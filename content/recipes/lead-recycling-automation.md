@@ -46,6 +46,3 @@ sampleData
 2.  **Filter:** `Lost_Date` > 90 days ago.
 3.  **Output:** Save `recycle_list.csv` for nurture upload.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

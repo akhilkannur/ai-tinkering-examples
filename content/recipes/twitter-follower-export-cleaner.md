@@ -35,12 +35,10 @@ Analyze your audience.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `exports.csv` exist?
 2.  **If Missing:** Create `exports.csv` using the `sampleData`. Ensure the `data/` folder exists.
 3.  **If Present:** Load the export list.
 
-### Phase 2: The Cleaning Loop
+**Phase 2: The Cleaning Loop**
 For each account in the CSV:
 1.  **Read JSON:** Load the `JSON_File`.
 2.  **Flatten Data:** Extract `screen_name`, `name`, `description` (Bio), `location`, and `follower_count`.
@@ -48,10 +46,7 @@ For each account in the CSV:
 4.  **Bot Detection:** Flag accounts with no bio or default "egg" profile markers.
 5.  **Output:** Save to `cleaned_data/[Account_Name]_followers.csv`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `audience_analysis_summary.csv` with columns: `Account_Name`, `Total_Followers`, `Target_Match_Count`, `File_Path`.
 2.  **Report:** "Successfully cleaned [X] exports. [Y] potential leads matching your target keywords identified."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

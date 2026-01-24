@@ -34,23 +34,18 @@ Recruit from a specific repo or a tech niche.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Target Definition
-1.  **Check:** Does `target_repos.csv` exist?
 2.  **Logic:**
     *   *If Yes:* Use the provided list.
     *   *If No:* Ask for a "Tech Stack" (e.g., 'Rust'). Search GitHub for the top 5 most starred/active repos in that stack.
 
-### Phase 2: Contributor Audit
+**Phase 2: Contributor Audit**
 1.  **Identify:** For each repo, find the top 5 contributors from the last 90 days.
 2.  **Analyze:** Read 2 recent PRs for each user. Score them on:
     *   *Complexity:* (Fixing logic vs fixing typos).
     *   *Documentation:* (Clear comments and descriptions).
     *   *Helpfulness:* (Tone in code reviews).
 
-### Phase 3: The Talent Roster
+**Phase 3: The Talent Roster**
 1.  **Create:** `talent_roster.md`.
 2.  **Summary:** "Scanned [X] repos. Identified [Y] high-signal candidates. Talent dossier is ready."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

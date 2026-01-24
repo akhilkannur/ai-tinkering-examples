@@ -41,7 +41,7 @@ Reverse-engineer the psychology behind their ads.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Analysis Loop
+**Phase 1: Analysis Loop**
 For each ad in `competitor_ads.csv`:
 1.  **Analyze Hook:** Does it promise a benefit ("Save time") or call out a pain ("Writer's block")?
     *   *Pain* = Problem Aware.
@@ -50,14 +50,11 @@ For each ad in `competitor_ads.csv`:
     *   "Save one day" = Freedom/Time (Greed/Gain).
     *   "Stop staring" = Relief (Comfort).
 
-### Phase 2: Strategy Mapping
+**Phase 2: Strategy Mapping**
 1.  **Aggregate:** Count how many ads are "Problem Focused" vs. "Solution Focused" for each competitor.
 2.  **Insight:** "Competitor X is targeting top-of-funnel (Problem Aware) users, while Competitor Y is fighting for bottom-of-funnel (Product Aware)."
 
-### Phase 3: Deliverables
+**Phase 3: Deliverables**
 1.  **Create:** `ad_strategy_analysis.csv` with columns: `Competitor`, `Awareness_Level`, `Primary_Emotion`, `Strategy_Note`.
 2.  **Summary:** "Analyzed [X] ads. The dominant strategy in your niche is [Strategy]."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

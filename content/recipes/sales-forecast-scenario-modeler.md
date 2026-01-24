@@ -41,6 +41,3 @@ Provide a range of likely revenue outcomes.
 3.  **Apply Scenario 2 (Aggressive):** Discovery=10%, Proposal=50%, Neg=90%.
 4.  **Output:** Save `forecast_scenarios.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

@@ -35,12 +35,10 @@ One URL, 20+ assets.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `sources.csv` exist?
 2.  **If Missing:** Create `sources.csv` using the `sampleData`.
 3.  **If Present:** Load the source list.
 
-### Phase 2: The Factory Loop
+**Phase 2: The Factory Loop**
 For each source in the CSV:
 1.  **Ingest:** Use `web_fetch` to read the full content of the `Source_URL`.
 2.  **Parallel Drafting:**
@@ -51,10 +49,7 @@ For each source in the CSV:
     *   **Video Hooks:** 10 "Pattern Interrupt" hooks for TikTok/Reels.
 3.  **Package:** Create a folder `campaigns/[Title]/` and save all assets within.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `campaign_inventory.csv` with columns: `Title`, `Source_URL`, `Asset_Count`, `Folder_Path`.
 2.  **Report:** "Successfully processed [X] sources. Total of [Y] assets generated and categorized."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

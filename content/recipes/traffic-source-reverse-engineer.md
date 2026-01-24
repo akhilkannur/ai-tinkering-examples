@@ -33,13 +33,11 @@ Uncover the growth engine of any competitor.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `competitor_traffic.csv` exist?
 2.  **Logic:**
     *   *If Yes:* Process the bulk data.
     *   *If No:* Ask for a "Competitor URL". Use `web_fetch` to find public mentions of their traffic sources or marketing focus.
 
-### Phase 2: The Diagnosis Loop
+**Phase 2: The Diagnosis Loop**
 For each domain:
 1.  **Identify the 'Lead' Channel.**
 2.  **Hypothesize the 'Fuel':**
@@ -48,11 +46,8 @@ For each domain:
     *   *Referral focus?* (Partner program).
 3.  **Benchmark:** Compare their mix against our own (if data available).
 
-### Phase 3: The Attack Plan
+**Phase 3: The Attack Plan**
 1.  **Create:** `growth_engine_analysis.md`.
 2.  **Draft:** Suggest one way to "Conquest" their best channel.
 3.  **Summary:** "Processed [X] competitors. Found [Y] relying on SEO traffic."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

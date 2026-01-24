@@ -35,12 +35,10 @@ Brain Dump -> Viral Post.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `brain_dumps.csv` exist?
 2.  **If Missing:** Create `brain_dumps.csv` using the `sampleData`.
 3.  **If Present:** Load the idea list.
 
-### Phase 2: The Ghostwriting Loop
+**Phase 2: The Ghostwriting Loop**
 For each idea in the CSV:
 1.  **Select Framework:** Match the `Vibe` to a proven structure (e.g., "The Contrarian", "The Failure Story", "The How-To").
 2.  **Draft 3 Hooks:** Create three distinct opening lines.
@@ -48,10 +46,7 @@ For each idea in the CSV:
 4.  **Add 'Call to Conversation':** End with a specific question to drive comments (e.g., "Agree or disagree?").
 5.  **Output:** Save to `posts/[Topic]_draft.md`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `content_pipeline_summary.csv` with columns: `Topic`, `Framework_Used`, `Top_Hook`, `File_Path`.
 2.  **Report:** "Successfully ghostwritten [X] posts. Content is formatted for maximum mobile engagement."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

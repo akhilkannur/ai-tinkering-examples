@@ -39,6 +39,3 @@ Retarget users who opted out of email.
 2.  **Format:** Normalize Email/Phone for FB match.
 3.  **Output:** Save `unsub_audience_upload.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

@@ -34,10 +34,8 @@ Fix the dataLayer across all your properties.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Ingestion
-1.  **Check:** Does `gtm_debug_queue.csv` exist? If missing, create template.
 
-### Phase 2: The Debug Loop
+**Phase 2: The Debug Loop**
 For each property in the CSV:
 1.  **Scan:** Check the `Snippet_To_Test` against platform requirements.
 2.  **Audit:** 
@@ -46,12 +44,9 @@ For each property in the CSV:
     *   *Check 3:* Event name consistency across properties.
 3.  **Identify:** Explain exactly why the tag would fail (e.g., "Mismatched trigger name").
 
-### Phase 3: The Fix List
+**Phase 3: The Fix List**
 1.  **Create:** `martech_debug_report.md`.
 2.  **Draft:** Provide the specific "Copy-Paste" fix for every error found.
 3.  **Summary:** "Audited [X] properties. Found [Y] critical tracking failures."
 ---
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

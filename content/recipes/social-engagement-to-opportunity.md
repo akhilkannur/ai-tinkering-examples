@@ -41,6 +41,3 @@ Prove the ROI of social selling.
 3.  **Calculate:** Conversion %.
 4.  **Output:** Save `social_roi_proof.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

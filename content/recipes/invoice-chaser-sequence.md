@@ -34,10 +34,8 @@ Recover $10k+ in overdue payments without being awkward.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Setup
-1.  **Check:** Does `overdue_invoices.csv` exist? If missing, create template.
 
-### Phase 2: The Chaser Loop
+**Phase 2: The Chaser Loop**
 For each row in the CSV:
 1.  **Categorize:**
     *   *1-7 Days:* The "Friendly Reminder" (Helpful tone).
@@ -45,10 +43,7 @@ For each row in the CSV:
     *   *30+ Days:* The "Final Notice" (Serious tone).
 2.  **Draft:** Write the email body using the appropriate tone. Mention the specific `Amount` and provide a placeholder for the payment link.
 
-### Phase 3: The Dashboard
+**Phase 3: The Dashboard**
 1.  **Create:** `collections_emails_ready.md`.
 2.  **Summary:** "Processed [X] accounts. [Y] are in the 'Critical' (>30 days) bucket."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

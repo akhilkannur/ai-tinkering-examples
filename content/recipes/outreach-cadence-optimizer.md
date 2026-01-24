@@ -40,6 +40,3 @@ Optimize sales outreach timing.
 3.  **Rank:** Best time blocks.
 4.  **Output:** Save `optimal_cadence_schedule.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

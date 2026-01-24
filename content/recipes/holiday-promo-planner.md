@@ -34,10 +34,8 @@ Crush Black Friday across 5 products at once.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Ingestion
-1.  **Check:** Does `holiday_deals.csv` exist? If missing, create template.
 
-### Phase 2: The Campaign Loop
+**Phase 2: The Campaign Loop**
 For each product in the CSV:
 1.  **Map:** Define the 4-week timeline:
     *   *Week 1 (Nov 1-7):* The Teaser ("Wait for it").
@@ -47,11 +45,8 @@ For each product in the CSV:
 2.  **Draft:** Write the 'Announcement' email and the '6-hours left' email.
 3.  **Audit:** Generate a technical checklist (e.g., "Check coupon code X validity").
 
-### Phase 3: The Master Plan
+**Phase 3: The Master Plan**
 1.  **Action:** Create a folder `holiday_plans/`.
 2.  **Save:** Save each campaign as `[Product]_BFCM_Plan.md`.
 3.  **Report:** "Successfully planned [X] holiday campaigns. Total target revenue: [Total]."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

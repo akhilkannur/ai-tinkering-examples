@@ -40,6 +40,3 @@ Convert trial users to full customers.
 2.  **Filter:** Product='Sample Kit' AND Date is 14 days ago.
 3.  **Output:** Save `sample_upsell_list.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

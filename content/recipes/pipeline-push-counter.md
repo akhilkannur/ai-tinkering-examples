@@ -42,6 +42,3 @@ Identify 'slippery' deals with unstable close dates.
 4.  **Flag:** Deals with > 2 pushes.
 5.  **Output:** Save `unstable_pipeline.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

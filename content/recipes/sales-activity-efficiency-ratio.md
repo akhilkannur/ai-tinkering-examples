@@ -40,6 +40,3 @@ Find the most efficient reps, not just the loudest.
 3.  **Identify:** Low ratio reps (High Efficiency).
 4.  **Output:** Save `efficiency_leaderboard.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

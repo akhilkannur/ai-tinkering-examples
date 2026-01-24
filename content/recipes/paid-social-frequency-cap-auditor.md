@@ -40,6 +40,3 @@ Prevent ad fatigue and protect CTR.
 3.  **Flag:** Campaigns where Frequency > 4.
 4.  **Output:** Save `ad_fatigue_alerts.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

@@ -39,12 +39,10 @@ Accessibility at scale.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `images.csv` exist?
 2.  **If Missing:** Create `images.csv` using the `sampleData`.
 3.  **If Present:** Load the image list.
 
-### Phase 2: The Alt Text Loop
+**Phase 2: The Alt Text Loop**
 For each image in the CSV:
 1.  **Analyze Context:** Review the `Context` and `Primary_Keyword` to determine the image's role on the page.
 2.  **Generate Alt Text:**
@@ -53,10 +51,7 @@ For each image in the CSV:
     *   **Rule 3:** Avoid phrases like "Image of" or "Picture of".
 3.  **Validate:** Ensure the `Primary_Keyword` is included if it fits naturally.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `alt_text_master_map.csv` with columns: `Filename`, `Optimized_Alt_Text`.
 2.  **Report:** "Successfully generated alt text for [X] images. Ready for CMS import or developer handoff."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

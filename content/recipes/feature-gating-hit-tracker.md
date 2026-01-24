@@ -40,6 +40,3 @@ Identify high-intent free users.
 2.  **Filter:** Users hitting paywall > 3 times.
 3.  **Output:** Save `paywall_intent_leads.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

@@ -35,27 +35,22 @@ Know exactly when your competitors send.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `competitors.csv` exist?
 2.  **If Missing:** Create `competitors.csv` using the `sampleData`.
 3.  **If Present:** Load the competitor list.
 
-### Phase 2: The Research Loop
+**Phase 2: The Research Loop**
 For each competitor in the CSV:
 1.  **Scrape Archives:** Use `web_fetch` to ingest the `Newsletter_URL`.
 2.  **Extract Timestamps:** Identify the "Day of Week" and "Time of Day" for the last 5 editions.
 3.  **Normalize:** Convert all times to a single baseline (e.g., EST).
 4.  **Audit Strategy:** Note if they use a "Daily" vs. "Weekly" cadence and identify recurring themes in their subject lines.
 
-### Phase 3: The "Silence Slot" Recommendation
+**Phase 3: The "Silence Slot" Recommendation**
 1.  **Map Heatmap:** Consolidate all competitor send times into a weekly grid.
 2.  **Identify Slot:** Find a 2-hour window with zero competitor activity.
 3.  **Draft Strategy:** Create `send_time_strategy.md` recommending the best time to send.
 
-### Phase 4: Structured Deliverables
+**Phase 4: Structured Deliverables**
 1.  **Create:** `inbox_competitive_matrix.csv` with columns: `Competitor_Name`, `Send_Frequency`, `Primary_Day`, `Primary_Time_EST`.
 2.  **Report:** "Successfully audited [X] competitors. Recommended 'Silence Slot' identified for maximum visibility."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

@@ -48,6 +48,3 @@ sampleData
 2.  **Filter:** Expiration within 90 days.
 3.  **Output:** Save `upcoming_renewals.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

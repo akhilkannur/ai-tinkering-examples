@@ -36,12 +36,10 @@ Know when to swap ads.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `ad_performance.csv` exist?
 2.  **If Missing:** Create `ad_performance.csv` using the `sampleData`.
 3.  **If Present:** Load the performance data.
 
-### Phase 2: The Fatigue Analysis Loop
+**Phase 2: The Fatigue Analysis Loop**
 For each ad in the CSV:
 1.  **Calculate Fatigue Status:**
     *   **CRITICAL FATIGUE:** If `Frequency` > 4.5 AND `CTR` < 1.0%.
@@ -52,10 +50,7 @@ For each ad in the CSV:
     *   **For WARNING:** "Draft new creative for next week."
 3.  **Efficiency Check:** If `Spend` is high on a fatigued ad, mark as `High Priority`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `creative_refresh_list.csv` with columns: `Ad_ID`, `Campaign_Name`, `Fatigue_Status`, `Action_Required`, `Priority`.
 2.  **Report:** "Successfully audited [X] ads. [Y] critical refreshes identified. Total 'At Risk' spend: $[Z]."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

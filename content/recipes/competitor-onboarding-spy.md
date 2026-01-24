@@ -34,12 +34,10 @@ Comparative UX audit of competitors at once.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `competitors_to_audit.csv` exist?
 2.  **If Missing:** Create `competitors_to_audit.csv` using the `sampleData`. Ensure the `onboarding_vault/` directory structure exists.
 3.  **If Present:** Load the list of competitors to audit.
 
-### Phase 2: The Audit Loop
+**Phase 2: The Audit Loop**
 For each competitor in the CSV:
 1.  **Read Assets:** Scan the `Vault_Path` for screenshots and `.eml` or `.txt` email files.
 2.  **Map the Journey:**
@@ -48,11 +46,8 @@ For each competitor in the CSV:
     *   **Email Nurture:** Analyze the first 3 emails for personalization and urgency.
 3.  **Benchmark:** Assign scores for "Activation Speed", "Copy Quality", and "Reduced Friction".
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `onboarding_landscape_analysis.md` containing a side-by-side matrix of all audited competitors.
 2.  **Create:** `teardown_summary.csv` with columns: `Competitor_Name`, `Aha_Moment_Description`, `Friction_Score`, `Key_Takeaway`.
 3.  **Report:** "Successfully teardowned [X] onboarding flows. 3 high-impact 'steals' identified for your own roadmap."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

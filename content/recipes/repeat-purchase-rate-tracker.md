@@ -41,6 +41,3 @@ Track loyalty health.
 3.  **Calculate:** Rate = Repeats / Total.
 4.  **Output:** Save `retention_rate.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

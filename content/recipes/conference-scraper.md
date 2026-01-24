@@ -34,20 +34,15 @@ Turn multiple speaker lists into one lead list.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Preparation
-1.  **Check:** Does `event_urls.csv` exist? If missing, create template.
 2.  **Initialize:** Create `master_conference_leads.csv` with headers: `Event,Name,Title,Company,Source_URL`.
 
-### Phase 2: The Scrape Loop
+**Phase 2: The Scrape Loop**
 For each URL in `event_urls.csv`:
 1.  **Fetch:** `web_fetch` the HTML.
 2.  **Extract:** Look for patterns like `<h3>[Name]</h3>` near `<span>[Company]</span>`.
 3.  **Clean:** Remove HTML tags and extra whitespace.
 
-### Phase 3: Final Output
+**Phase 3: Final Output**
 1.  **Append:** Write results to `master_conference_leads.csv`.
 2.  **Summary:** "Processed [X] conferences. Found [Y] total leads. master_conference_leads.csv is ready."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

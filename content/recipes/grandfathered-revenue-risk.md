@@ -41,6 +41,3 @@ Identify revenue uplift opportunities.
 3.  **Sum:** Total Gap.
 4.  **Output:** Save `pricing_uplift_opp.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

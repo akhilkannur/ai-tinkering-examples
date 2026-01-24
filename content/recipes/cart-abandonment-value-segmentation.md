@@ -40,6 +40,3 @@ Maximize recovery revenue by prioritizing high-value carts.
 2.  **Filter:** Total > $500.
 3.  **Output:** Save `high_value_recovery.csv` for CS outreach.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

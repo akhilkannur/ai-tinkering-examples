@@ -34,10 +34,8 @@ Turn 100 reviews into 100 ad variations.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Ingestion
-1.  **Check:** Does `customer_reviews.csv` exist? If missing, create template.
 
-### Phase 2: The Copywriting Loop
+**Phase 2: The Copywriting Loop**
 For each review in the CSV:
 1.  **Extract:** Identify the specific "Aha! Moment" in the text.
 2.  **Draft:** Generate 3 ad variations:
@@ -45,11 +43,8 @@ For each review in the CSV:
     *   *Variant B:* PAS Framework (The Pain solver).
     *   *Variant C:* The "One-Liner" (Curiosity hook).
 
-### Phase 3: Campaign Bundle
+**Phase 3: Campaign Bundle**
 1.  **Action:** Create a folder `review_ads/`.
 2.  **Save:** Save each result as `ads-[User]-[Product].md`.
 3.  **Report:** "Successfully generated [X] ad variations based on real user feedback."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

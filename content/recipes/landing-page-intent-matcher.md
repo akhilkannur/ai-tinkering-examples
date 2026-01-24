@@ -39,6 +39,3 @@ Improve Quality Score via message matching.
 3.  **Flag:** Low similarity.
 4.  **Output:** Save `mismatched_ads.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

@@ -35,25 +35,20 @@ Clone your best customers or competitors.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input & Blueprinting
-1.  **Check:** Does `targets.csv` exist?
 2.  **If Missing:** Use `web_fetch` to research your own product URL and find your top 3 competitors. Use them as the initial "Golden Targets" and create a `market_map.md`.
 3.  **If Present:** Load the target list for cloning.
 
-### Phase 2: The Signal Extraction Loop
+**Phase 2: The Signal Extraction Loop**
 For each target in the CSV:
 1.  **Analyze Blueprint:** Use `web_fetch` to identify the target's `Tech_Stack`, `Ideal_Customer`, and `Core_Offering`.
 2.  **Identify Markers:** Pinpoint specific attributes (e.g., "Uses Salesforce", "B2B SaaS with >$100/mo pricing").
 
-### Phase 3: The Cloning Loop
+**Phase 3: The Cloning Loop**
 1.  **Search:** Find 10-20 companies matching the extracted `Blueprint` for each target.
 2.  **Qualify:** Check for "Growth Triggers" like recent funding or hiring surges in key departments.
 3.  **Consolidate:** Merge all found leads into a single master list.
 
-### Phase 4: Structured Deliverables
+**Phase 4: Structured Deliverables**
 1.  **Create:** `golden_lookalike_leads.csv` with columns: `Name`, `Website`, `Matched_Profile`, `Growth_Trigger`, `Fit_Score`.
 2.  **Report:** "Successfully cloned [X] profiles. [Y] high-precision leads identified for outreach."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

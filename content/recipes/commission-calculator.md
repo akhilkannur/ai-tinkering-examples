@@ -34,12 +34,10 @@ Design a commission plan that drives growth.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input & Benchmarking
-1.  **Check:** Does `roles.csv` exist?
 2.  **If Missing:** Use `web_fetch` to research industry standard comp structures for a typical "Seed Stage SaaS" or "Creative Agency" and create a `benchmark_report.md`.
 3.  **If Present:** Load the role list for custom modeling.
 
-### Phase 2: The Comp Design Loop
+**Phase 2: The Comp Design Loop**
 For each role in the CSV:
 1.  **Calculate Quota:** Set quota at 5x-8x the industry standard OTE for the `Avg_Deal_Size`.
 2.  **Define Split:** Determine the Base/OTE split (e.g., 50/50 for AEs, 70/30 for CS).
@@ -49,10 +47,7 @@ For each role in the CSV:
     *   **Multi-year Bonus:** Add logic for increased commissions on longer contracts.
 4.  **Draft Plan:** Create `comp_plans/[Role]_comp_structure.md`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `sales_org_comp_summary.csv` with columns: `Role`, `Base_Salary`, `OTE`, `Quota`, `File_Path`.
 2.  **Report:** "Successfully designed [X] comp plans. Accelerators and clawback logic included in each file."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

@@ -35,12 +35,10 @@ Rank for keywords tools ignore.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `topics.csv` exist?
 2.  **If Missing:** Create `topics.csv` using the `sampleData`.
 3.  **If Present:** Load the topic list.
 
-### Phase 2: The Research Loop
+**Phase 2: The Research Loop**
 For each topic in the CSV:
 1.  **Autocomplete Expansion:** Use `web_fetch` to research common "Problem" and "Comparison" queries (e.g., "[Topic] for [Niche]", "[Topic] vs [Obscure Competitor]").
 2.  **Forum Deep-Dive:** Search Reddit and StackOverflow for specific phrases or error codes related to the `Topic`.
@@ -51,10 +49,7 @@ For each topic in the CSV:
     *   **The Angle:** A recommended content structure to win the snippet.
 5.  **Output:** Save to `keyword_nuggets/[Topic]_opportunities.md`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `zero_volume_master_list.csv` with columns: `Topic`, `Niche`, `Golden_Nugget_Keyword`, `Difficulty_Score`, `File_Path`.
 2.  **Report:** "Successfully identified [X] zero-volume opportunities. High-intent traffic targets ready for your content team."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

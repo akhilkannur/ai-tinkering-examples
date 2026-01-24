@@ -35,12 +35,10 @@ Help your clients help you.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `clients.csv` exist?
 2.  **If Missing:** Create `clients.csv` using the `sampleData`.
 3.  **If Present:** Load the client list.
 
-### Phase 2: The Directing Loop
+**Phase 2: The Directing Loop**
 For each client in the CSV:
 1.  **Map the Narrative:**
     *   **Question 1 (The Pain):** "What was the single biggest frustration you had with [Product_Category] before you found [Product_Used]?"
@@ -52,10 +50,7 @@ For each client in the CSV:
     *   **Audio:** "Use your wired headphones' mic if you have one."
 3.  **Output:** Save to `testimonial_guides/[Client_Name]_guide.md`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `testimonial_outreach_summary.csv` with columns: `Client_Name`, `Major_Win`, `Guide_Status`, `File_Path`.
 2.  **Report:** "Successfully generated [X] interview guides. Ready to be sent to your happy customers."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

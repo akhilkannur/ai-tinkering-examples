@@ -38,6 +38,3 @@ Time seasonal campaigns perfectly.
 2.  **Identify:** Week where Volume increases > 200%.
 3.  **Output:** Save `campaign_start_dates.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

@@ -37,23 +37,20 @@ Find the 10-K, Podcast, or Tweet that opens the door.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: The Hunt
+**Phase 1: The Hunt**
 For each company in `target_accounts.csv`:
 
 1.  **SEC Search:** If `Ticker` exists, search for the latest 10-K. Extract the top 3 "Risk Factors" listed in Item 1A.
 2.  **Media Search:** Search for `[CEO_Name] podcast interview 2024`. Find the top result and extract the episode title/topic.
 3.  **News Search:** Search for `[Company] press release` (last 90 days).
 
-### Phase 2: The Synthesis
+**Phase 2: The Synthesis**
 Draft a `[Company]_Dossier.md` with:
 *   **The Hook:** "In your latest 10-K, you mentioned [Risk Factor] as a threat to growth..."
 *   **The Bridge:** "On the [Podcast Name] episode, [CEO] discussed doubling down on [Topic]..."
 *   **The Pitch:** "We help mitigate [Risk] by..."
 
-### Phase 3: Deliverables
+**Phase 3: Deliverables**
 1.  **Output:** A folder `dossiers/` with individual markdowns.
 2.  **Summary:** `dossier_summary.csv` containing `Company`, `Key_Risk`, `Podcast_Topic`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

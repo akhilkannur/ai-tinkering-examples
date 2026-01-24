@@ -41,6 +41,3 @@ Attribute direct traffic to specific outbound campaigns.
 3.  **Verify:** Check if Outbound blast occurred in the preceding 48 hours.
 4.  **Output:** Save `dark_funnel_impact.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

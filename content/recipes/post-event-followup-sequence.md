@@ -35,22 +35,17 @@ The money is in the follow-up.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `leads.csv` exist?
 2.  **If Missing:** Create `leads.csv` using the `sampleData`.
 3.  **If Present:** Load the lead list.
 
-### Phase 2: The Follow-up Loop
+**Phase 2: The Follow-up Loop**
 For each lead in the CSV:
 1.  **Draft Email 1 (Day 0/1):** The "Safe Travels" nudge. "Great meeting you at [Event_Name]! Hope your trip back is smooth."
 2.  **Draft Email 2 (Day 3):** The "Value Add". "Now that the dust has settled, I wanted to share [Asset/Link] related to our talk about [Context]."
 3.  **Draft Email 3 (Day 7):** The "Meeting Request". "Still interested in [Context]? Let's find 15 mins to chat next week."
 4.  **Output:** Save to `outreach/[Name]_sequence.md`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `outreach_manifest.csv` with columns: `Name`, `Email`, `Event_Name`, `Sequence_Status`, `File_Path`.
 2.  **Report:** "Successfully generated [X] personalized sequences. Speed-to-lead achieved for the [Event_Name] cohort."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

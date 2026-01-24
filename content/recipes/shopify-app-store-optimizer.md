@@ -35,12 +35,10 @@ Get found by merchants.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `apps.csv` exist?
 2.  **If Missing:** Create `apps.csv` using the `sampleData`.
 3.  **If Present:** Load the app list.
 
-### Phase 2: The Optimization Loop
+**Phase 2: The Optimization Loop**
 For each app in the CSV:
 1.  **Scrape & Benchmark:** Use `web_fetch` to ingest the `Listing_URL`. Compare the current copy against the top 3 apps ranking for the `Primary_Keyword`.
 2.  **Audit Title & Tagline:** Ensure the `Primary_Keyword` is in the first 30 characters.
@@ -48,10 +46,7 @@ For each app in the CSV:
 4.  **Screenshot Brief:** Suggest 3 new screenshot captions that address common merchant objections found in competitor reviews.
 5.  **Output:** Save to `aso_audits/[App_Name]_optimization.md`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `aso_impact_matrix.csv` with columns: `App_Name`, `Keyword_Density_Score`, `Top_Competitor`, `File_Path`.
 2.  **Report:** "Successfully audited [X] app listings. Optimized copy and keyword targets ready for the Partner Dashboard."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

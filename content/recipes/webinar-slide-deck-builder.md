@@ -35,12 +35,10 @@ Presentations that don't suck.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `webinars.csv` exist?
 2.  **If Missing:** Create `webinars.csv` using the `sampleData`.
 3.  **If Present:** Load the webinar list.
 
-### Phase 2: The Outlining Loop
+**Phase 2: The Outlining Loop**
 For each webinar in the CSV:
 1.  **Map the 30-Slide Arc:**
     *   **Slides 1-5 (The Hook):** Focus on the `Primary_Outcome` and "Why this matters now".
@@ -50,10 +48,7 @@ For each webinar in the CSV:
 2.  **Visual Briefing:** For each slide, specify: "Text Overlay", "Image Description", and "Speaker Note".
 3.  **Output:** Save to `webinar_outlines/[Title]_deck.md`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `webinar_production_summary.csv` with columns: `Title`, `Target_Audience`, `Main_Framework_Name`, `File_Path`.
 2.  **Report:** "Successfully outlined [X] webinar decks. Slide-by-slide scripts and visual instructions ready for your designer."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

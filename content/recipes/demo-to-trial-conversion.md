@@ -39,6 +39,3 @@ Measure the effectiveness of the demo stage.
 2.  **Calculate:** Trial Rate = Yes / Total.
 3.  **Output:** Save `demo_efficacy.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

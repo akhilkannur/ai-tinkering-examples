@@ -35,12 +35,10 @@ Bridge offline to online.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `locations.csv` exist?
 2.  **If Missing:** Create `locations.csv` using the `sampleData`.
 3.  **If Present:** Load the location list.
 
-### Phase 2: The Strategy Loop
+**Phase 2: The Strategy Loop**
 For each location in the CSV:
 1.  **Identify Action:**
     *   **In-store:** Suggest "Scan for Wi-Fi" or "Scan for Loyalty Coupon".
@@ -50,10 +48,7 @@ For each location in the CSV:
 3.  **Generate Tracking:** Append UTM parameters to the destination URL (e.g., `?utm_source=qr&utm_medium=[Setting]`).
 4.  **Output:** Save to `qr_briefs/[Location_Name]_plan.md`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `qr_deployment_matrix.csv` with columns: `Location_Name`, `Setting`, `Destination_Action`, `UTM_Link`.
 2.  **Report:** "Successfully designed [X] QR strategies. High-utility links and tracking ready for print production."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

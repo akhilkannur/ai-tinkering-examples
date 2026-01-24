@@ -43,6 +43,3 @@ Find enterprise deal opportunities in free user base.
 4.  **Filter:** Domains > 10 users.
 5.  **Output:** Save `consolidation_opps.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

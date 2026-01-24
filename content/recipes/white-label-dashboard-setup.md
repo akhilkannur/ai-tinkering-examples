@@ -35,12 +35,10 @@ Standardize your client reporting.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `clients.csv` exist?
 2.  **If Missing:** Create `clients.csv` using the `sampleData`.
 3.  **If Present:** Load the client list.
 
-### Phase 2: The Setup Loop
+**Phase 2: The Setup Loop**
 For each client in the CSV:
 1.  **Define Scorecards:** Select 3 high-impact metrics (e.g., "ROAS", "CPA", "Net New Revenue").
 2.  **Plan the Layout:**
@@ -51,10 +49,7 @@ For each client in the CSV:
 3.  **Map Data Sources:** List the specific integrations required (e.g., "Connect [Data_Source] via Zapier or Fivetran").
 4.  **Output:** Save to `dashboard_specs/[Client_Name]_config.md`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `reporting_operations_summary.csv` with columns: `Client_Name`, `Primary_KPI`, `Source_Integration`, `File_Path`.
 2.  **Report:** "Successfully architected [X] white-label dashboards. Technical specs and layout briefs are ready for your systems team."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

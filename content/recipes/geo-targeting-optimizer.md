@@ -39,6 +39,3 @@ Eliminate wasted spend in low-converting regions.
 3.  **Filter:** Top 10 cities.
 4.  **Output:** Save `geo_targets.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

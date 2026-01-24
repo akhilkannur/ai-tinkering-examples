@@ -35,12 +35,10 @@ Standardize your retention metrics.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `database_schemas.csv` exist?
 2.  **If Missing:** Create `database_schemas.csv` using the `sampleData`.
 3.  **If Present:** Load the schema list.
 
-### Phase 2: The Query Building Loop
+**Phase 2: The Query Building Loop**
 For each environment in the CSV:
 1.  **Define Cohorts:** Draft a CTE to truncate the `Signup_Date_Column` to the first of the month.
 2.  **Map Activity:** Draft a second CTE to link `Users_Table` to `Events_Table` based on unique user IDs and event timestamps.
@@ -48,10 +46,7 @@ For each environment in the CSV:
 4.  **Formatting:** Ensure all table and column names match the CSV input exactly.
 5.  **Output:** Save to `queries/[Environment]_retention.sql`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `analytics_manifest.csv` with columns: `Environment`, `Table_Join_Key`, `Retention_Logic_Used`, `File_Path`.
 2.  **Report:** "Successfully generated [X] retention queries. Queries are optimized for performance and ready for your BI tool."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

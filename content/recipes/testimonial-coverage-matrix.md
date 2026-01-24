@@ -38,6 +38,3 @@ Identify gaps in sales collateral.
 2.  **Filter:** Count = 0.
 3.  **Output:** Save `missing_case_studies.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

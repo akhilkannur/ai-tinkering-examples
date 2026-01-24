@@ -41,12 +41,10 @@ Fix your site's first 5 seconds.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `landing_pages.csv` exist?
 2.  **If Missing:** Create `landing_pages.csv` using the `sampleData`.
 3.  **If Present:** Load the page list.
 
-### Phase 2: The Audit Loop
+**Phase 2: The Audit Loop**
 For each page in the CSV:
 1.  **Run the 'Grunt Test':**
     *   **Question 1:** Does it clearly state WHAT it is? (e.g., Software, Agency, Tool).
@@ -59,10 +57,7 @@ For each page in the CSV:
     *   **The Problem-Led:** Focus on the "Nightmare State".
 4.  **Output:** Save to `hero_audits/[Page_Name]_report.md`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `hero_performance_matrix.csv` with columns: `Page_Name`, `Current_Jargon_Score`, `Recommended_H1`, `File_Path`.
 2.  **Report:** "Successfully audited [X] hero sections. [Y] pages were flagged as 'Buzzword Heavy' and require immediate rewrites."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

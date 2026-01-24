@@ -35,12 +35,10 @@ Make them post it on Instagram.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `brands.csv` exist?
 2.  **If Missing:** Create `brands.csv` using the `sampleData`.
 3.  **If Present:** Load the brand list.
 
-### Phase 2: The Design Loop
+**Phase 2: The Design Loop**
 For each brand in the CSV:
 1.  **Select Elements:**
     *   **The Exterior:** Branded tape vs Custom-printed box vs Eco-friendly mailer.
@@ -52,10 +50,7 @@ For each brand in the CSV:
 3.  **Visual Instructions:** Define the exact "Assembly Order" for the warehouse team.
 4.  **Output:** Save to `unboxing_briefs/[Brand_Name]_experience.md`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `packaging_inventory_summary.csv` with columns: `Brand_Name`, `Primary_Color`, `Core_Bonus_Item`, `File_Path`.
 2.  **Report:** "Successfully designed [X] unboxing experiences. Ready for production and warehouse handoff."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

@@ -35,24 +35,19 @@ Build a commission-only sales team.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input & Market Check
-1.  **Check:** Does `partners.csv` exist?
 2.  **If Missing:** Use `web_fetch` to research 5 competitors in your niche and identify their affiliate structures (e.g., 20% recurring). Create a `market_benchmark.md` report.
 3.  **If Present:** Load the partner list for recruitment.
 
-### Phase 2: The Program Design
+**Phase 2: The Program Design**
 1.  **Decision:** Set the commission (e.g., 30% Recurring vs $100 CPA).
 2.  **Draft:** Create `affiliate_terms.md` covering cookie duration (e.g., 60 days) and payout thresholds.
 
-### Phase 3: The Recruitment Loop
+**Phase 3: The Recruitment Loop**
 For each partner in the list (either provided or researched):
 1.  **Personalize:** Research their content to find a synergy (e.g., "I saw your review of [Competitor]").
 2.  **Draft Pitch:** Create `pitches/[Partner_Name]_invite.md`.
 3.  **Generate Swipe:** Create `swipe_copy.md` with email templates and social posts they can use.
 
-### Phase 4: Output
+**Phase 4: Output**
 1.  **Report:** "Successfully designed program and drafted [X] partner pitches. Files saved to `pitches/` and `affiliate_terms.md`."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

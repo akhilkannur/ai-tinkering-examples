@@ -35,12 +35,10 @@ Uncover the real reasons you lost.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `lost_deals.csv` exist?
 2.  **If Missing:** Create `lost_deals.csv` using the `sampleData`.
 3.  **If Present:** Load the deal list.
 
-### Phase 2: The Forensics Loop
+**Phase 2: The Forensics Loop**
 For each deal in the CSV:
 1.  **Sentiment Audit:** Analyze the `Rep_Notes`. Is the reason given (e.g., Price) consistent with the `Main_Competitor`'s known strengths?
 2.  **Competitive Research:** Use `web_fetch` to research the `Main_Competitor`'s G2/Capterra reviews for the same timeframe. Identify common "Switching Stories".
@@ -48,11 +46,8 @@ For each deal in the CSV:
 4.  **Draft Script:** Generate a 3-question "Exit Interview" script specifically for this deal's context.
 5.  **The Fix:** Suggest one specific change to the sales deck or roadmap to prevent this loss pattern.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `win_loss_forensics_master.csv` with columns: `Deal_Name`, `Root_Cause_Category`, `Real_Reason_Inferred`, `Recommended_Action`.
 2.  **Create:** `reports/win_loss_summary.md` with a high-level executive breakdown.
 3.  **Report:** "Successfully analyzed [X] lost deals. [Y]% of losses were due to [Primary Category]. Full forensics report ready."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

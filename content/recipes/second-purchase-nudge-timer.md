@@ -43,6 +43,3 @@ Optimize email timing for repeat purchases.
 4.  **Aggregate:** Average days across all customers.
 5.  **Output:** Save `replenishment_timing.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

@@ -33,11 +33,9 @@ Monitor pricing changes for 10 competitors at once.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Initialization
-1.  **Check:** Does `pricing_targets.csv` exist? If missing, create template.
 2.  **Storage:** Create a folder `pricing_snapshots/` if it doesn't exist.
 
-### Phase 2: The Audit Loop
+**Phase 2: The Audit Loop**
 For each row in the CSV:
 1.  **Fetch:** Use `web_fetch` to get the current text of the pricing page.
 2.  **Load State:** Look for `pricing_snapshots/[Company].txt`.
@@ -46,11 +44,8 @@ For each row in the CSV:
     *   *If present:* Compare current vs saved. Identify changes in prices, currency, or feature names.
 4.  **Save State:** Overwrite the snapshot with the current version.
 
-### Phase 3: The Alert Report
+**Phase 3: The Alert Report**
 1.  **Create:** `pricing_alerts.md`.
 2.  **Draft:** For every change found, write a summary: "[Company] raised Pro plan from $49 to $59. They also added a new 'Enterprise Lite' tier."
 3.  **Summary:** "Monitored [X] competitors. Detected [Y] changes."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

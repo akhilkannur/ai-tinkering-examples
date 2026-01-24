@@ -42,6 +42,3 @@ Ensure leads are assigned to reps without delay.
 3.  **Bucket:** <1m, 1-10m, 10m+.
 4.  **Output:** Save `routing_latency_report.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

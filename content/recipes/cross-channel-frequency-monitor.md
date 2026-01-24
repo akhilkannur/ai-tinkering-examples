@@ -39,6 +39,3 @@ Manage global customer frequency.
 3.  **Filter:** Total > 50.
 4.  **Output:** Save `overexposed_users.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

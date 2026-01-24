@@ -35,12 +35,10 @@ Cheaper leads than a PDF.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `products.csv` exist?
 2.  **If Missing:** Create `products.csv` using the `sampleData`.
 3.  **If Present:** Load the product list.
 
-### Phase 2: The Funnel Design Loop
+**Phase 2: The Funnel Design Loop**
 For each product in the CSV:
 1.  **Draft the Hook:** Create an irresistible quiz title (e.g., "What's Your [Niche] IQ?").
 2.  **Design 5 Questions:**
@@ -51,10 +49,7 @@ For each product in the CSV:
 4.  **Draft CTA:** Create a personalized "Next Step" for each profile linking to the `Product_Name`.
 5.  **Output:** Save to `quiz_funnels/[Product_Name]_funnel.md`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `quiz_master_manifest.csv` with columns: `Product_Name`, `Quiz_Title`, `Primary_Segment_Variable`, `File_Path`.
 2.  **Report:** "Successfully designed [X] quiz funnels. High-conversion diagnostic flows ready for implementation."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

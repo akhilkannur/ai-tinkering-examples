@@ -41,6 +41,3 @@ Liquidate slow-moving inventory profitably.
 3.  **Pair:** Suggest pairing with top High Velocity item.
 4.  **Output:** Save `bundle_proposals.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

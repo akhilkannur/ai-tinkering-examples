@@ -35,12 +35,10 @@ Track their inflation.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `competitors.csv` exist?
 2.  **If Missing:** Create `competitors.csv` using the `sampleData`.
 3.  **If Present:** Load the competitor list.
 
-### Phase 2: The History Research Loop
+**Phase 2: The History Research Loop**
 For each competitor in the CSV:
 1.  **Research Current:** Ingest the current `Pricing_URL`.
 2.  **Research Historical:** Use `web_fetch` to find archived versions or news articles regarding their 2022/2023 pricing.
@@ -49,11 +47,8 @@ For each competitor in the CSV:
     *   **Shrinkflation Check:** Compare feature lists. Did "Unlimited seats" become "Per-seat"? Did "SSO" move to a higher tier?
 4.  **Draft Sales Wedge:** "They raised prices by [X]% and cut [Feature]. Here is why our model is more sustainable."
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `pricing_evolution_reports/` folder with `[Competitor_Name]_history.md` for each entry.
 2.  **Create:** `market_inflation_matrix.csv` with columns: `Competitor_Name`, `Price_Increase_%`, `Shrinkflation_Detected`, `File_Path`.
 3.  **Report:** "Successfully tracked pricing history for [X] competitors. [Y] high-leverage sales wedges identified."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

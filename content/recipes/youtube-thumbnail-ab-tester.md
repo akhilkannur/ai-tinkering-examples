@@ -33,24 +33,21 @@ High-CTR concepts from your ideas or viral competitors.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Context Choice
+**Phase 1: Context Choice**
 1.  **Check:** Did the user provide `thumbnail_drafts.txt`?
 2.  **Logic:**
     *   *If Yes:* Critique the drafts against the "Rule of 3" (Face, Text, Object).
     *   *If No:* Ask for the "Video Title". Research the top 5 videos ranking for that term. Identify their common visual style.
 
-### Phase 2: Concept Generation
+**Phase 2: Concept Generation**
 Draft 3 variations:
 *   **The "Shock" (Emotion):** High contrast face, shocking result.
 *   **The "Simple" (Clarity):** One object, one word.
 *   **The "Comparison" (Benefit):** Before/After split screen.
 
-### Phase 3: The Design Brief
+**Phase 3: The Design Brief**
 1.  **Create:** `thumbnail_production_brief.md`.
 2.  **Visuals:** For each concept, specify the "Background", "Overlay Text", and "Focal Point".
 3.  **Report:** "Generated [X] A/B test concepts. Concept #2 tests the 'Fear of Loss' lever."
 ---
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

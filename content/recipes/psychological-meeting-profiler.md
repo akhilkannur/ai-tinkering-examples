@@ -35,12 +35,10 @@ Know how to close them.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `meeting_transcripts.csv` exist?
 2.  **If Missing:** Create `meeting_transcripts.csv` using the `sampleData`. Ensure the `transcripts/` folder exists.
 3.  **If Present:** Load the transcript list.
 
-### Phase 2: The Profiling Loop
+**Phase 2: The Profiling Loop**
 For each transcript in the CSV:
 1.  **Sentiment & Language Audit:** Scan for keywords related to the `Focus_Area`.
 2.  **Determine Archetype:**
@@ -54,10 +52,7 @@ For each transcript in the CSV:
     *   **The Closer:** A specific closing line tailored to their type.
 4.  **Output:** Save to `playbooks/[Buyer_Name]_strategy.md`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `sales_psychology_matrix.csv` with columns: `Buyer_Name`, `Inferred_Type`, `Primary_Driver`, `File_Path`.
 2.  **Report:** "Successfully profiled [X] buyers. Negotiation playbooks ready for the follow-up calls."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

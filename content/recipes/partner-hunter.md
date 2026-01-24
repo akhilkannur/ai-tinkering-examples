@@ -34,10 +34,8 @@ Find 100 non-competing partners at once.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Resource Setup
-1.  **Check:** Does `adjacent_niches.csv` exist? If missing, create it.
 
-### Phase 2: The Partnership Loop
+**Phase 2: The Partnership Loop**
 For each niche in the CSV:
 1.  **Search:** Find the top 5 tool providers in that category.
 2.  **Filter:** Exclude direct competitors.
@@ -46,10 +44,7 @@ For each niche in the CSV:
     *   *Value:* "We could drive [X] leads to you per month."
     *   *CTA:* "Open to a quick intro call?"
 
-### Phase 3: Deliverable
+**Phase 3: Deliverable**
 1.  **Create:** `potential_partners.csv` with columns: `Company,URL,Why_They_Fit,Draft_Email`.
 2.  **Report:** "Found [X] potential partners across [Y] categories. Ready for BD outreach."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

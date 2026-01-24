@@ -41,6 +41,3 @@ Identify free users ready for sales outreach.
 3.  **Filter:** Users > 90%.
 4.  **Output:** Save `pql_hot_list.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

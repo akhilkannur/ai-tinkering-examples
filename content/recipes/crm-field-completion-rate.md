@@ -41,6 +41,3 @@ Enforce CRM data quality.
 2.  **Calculate:** % populated fields per rep.
 3.  **Output:** Save `hygiene_scorecard.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

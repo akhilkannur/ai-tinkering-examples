@@ -41,6 +41,3 @@ Identify linguistic predictors of sales success.
 3.  **Compare:** Average sentiment between groups.
 4.  **Output:** Save `sentiment_win_insights.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

@@ -47,6 +47,3 @@ sampleData
 3.  **Flag:** Categories > $0 overspent.
 4.  **Output:** Save `budget_variance.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

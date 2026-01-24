@@ -35,22 +35,17 @@ Practice your pitch against AI.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `scenarios.csv` exist?
 2.  **If Missing:** Create `scenarios.csv` using the `sampleData`.
 3.  **If Present:** Load the scenario list.
 
-### Phase 2: The Simulation Setup Loop
+**Phase 2: The Simulation Setup Loop**
 For each scenario in the CSV:
 1.  **Draft Persona Brief:** Create a 3-paragraph "Character Sheet" for the AI to adopt, including their daily stress points and "Pet Peeves".
 2.  **Map Objections:** Generate 3-5 "Hard No" responses the AI will use to challenge the rep.
 3.  **Design Grading Rubric:** Define 5 specific metrics for this scenario (e.g., "Objection Neutralization", "Active Listening", "Discovery Depth").
 4.  **Output:** Save to `roleplay_kits/[Scenario_Name]_brief.md`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `training_curriculum_summary.csv` with columns: `Scenario_Name`, `Persona_Title`, `Difficulty_Level`, `File_Path`.
 2.  **Report:** "Successfully designed [X] roleplay simulations. Your team can now practice against the most difficult personas in your niche."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

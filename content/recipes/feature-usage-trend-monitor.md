@@ -42,6 +42,3 @@ Identify growing and shrinking feature sets.
 3.  **Rank:** Features by growth.
 4.  **Output:** Save `feature_momentum_report.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

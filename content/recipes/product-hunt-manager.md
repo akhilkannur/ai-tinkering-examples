@@ -35,12 +35,10 @@ Get #1 Product of the Day.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `launches.csv` exist?
 2.  **If Missing:** Create `launches.csv` using the `sampleData`.
 3.  **If Present:** Load the launch list.
 
-### Phase 2: The Launch Planning Loop
+**Phase 2: The Launch Planning Loop**
 For each product in the CSV:
 1.  **Design the Listing:**
     *   **Tagline:** "The [Adjective] way to solve [Core_Problem]."
@@ -53,10 +51,7 @@ For each product in the CSV:
 3.  **Map 24-Hour Schedule:** Create a timeline starting at 00:01 PST (Launch) through to 23:59 PST, including specific times for Twitter/X threads, newsletter blasts, and LinkedIn posts.
 4.  **Output:** Save to `launch_kits/[Product_Name]_plan.md`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `launch_master_calendar.csv` with columns: `Product_Name`, `Launch_Date`, `Top_Tagline`, `File_Path`.
 2.  **Report:** "Successfully designed [X] launch kits. Assets and schedules are ready for your next big ship."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

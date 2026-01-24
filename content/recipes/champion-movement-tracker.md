@@ -40,6 +40,3 @@ Identify warm entry points into new accounts.
 3.  **Flag:** Identify cases where Account is different.
 4.  **Output:** Save `warm_leads_report.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

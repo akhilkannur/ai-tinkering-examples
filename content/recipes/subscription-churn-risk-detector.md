@@ -41,6 +41,3 @@ Prevent subscription churn.
 2.  **Identify:** Users with 2+ consecutive 'Skipped' statuses.
 3.  **Output:** Save `churn_risk_subs.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

@@ -40,6 +40,3 @@ Operationalize VIP gifting.
 2.  **Filter:** LTV > 1000 OR Basket > 100.
 3.  **Output:** Save `gwp_packing_list.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

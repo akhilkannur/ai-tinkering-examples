@@ -39,6 +39,3 @@ Quantify the impact of social proof.
 3.  **Flag:** High Negatives + Low CR.
 4.  **Output:** Save `review_damage_report.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

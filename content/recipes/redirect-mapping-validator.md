@@ -47,6 +47,3 @@ sampleData
 3.  **Flag:** Failures.
 4.  **Output:** Save `failed_redirects.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

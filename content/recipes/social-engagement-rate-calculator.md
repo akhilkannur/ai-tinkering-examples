@@ -48,6 +48,3 @@ sampleData
 2.  **Calculate:** Rate = (Interactions / Followers) * 100.
 3.  **Output:** Save `engagement_metrics.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

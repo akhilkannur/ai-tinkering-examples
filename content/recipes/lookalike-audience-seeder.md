@@ -34,19 +34,14 @@ Standardize 10,000 customers for 'Custom Audience' upload.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Setup
-1.  **Check:** Does `customer_db.csv` exist? If missing, create template.
 
-### Phase 2: The Segmentation Loop
+**Phase 2: The Segmentation Loop**
 1.  **Filter:** Identify users where `Lifetime_Value` > $1000 OR `Purchase_Count` > 5.
 2.  **Qualify:** Discard internal/test emails.
 3.  **Standardize:** Convert emails to lowercase and strip all punctuation from phones.
 
-### Phase 3: The Export
+**Phase 3: The Export**
 1.  **Create:** `vip_lal_seed.csv` with columns: `email,phone,first_name,last_name,country`.
 2.  **Summary:** "Processed [X] customers. Identified [Y] VIPs for your Lookalike seed. Total seed value: $[Total]."
 ---
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

@@ -45,6 +45,3 @@ sampleData
 2.  **Find:** Features in `Owned` but not in `Used`.
 3.  **Output:** Save `training_outreach_list.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

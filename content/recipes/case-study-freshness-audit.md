@@ -40,6 +40,3 @@ Maintain relevant marketing assets.
 2.  **Filter:** Date > 730 days ago.
 3.  **Output:** Save `stale_assets.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

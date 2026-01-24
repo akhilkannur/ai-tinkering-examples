@@ -34,16 +34,14 @@ Find the next viral topic before it peaks.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Ingestion
-1.  **Check:** Does `monitored_keywords.csv` exist? If missing, create template.
 
-### Phase 2: The Momentum Loop
+**Phase 2: The Momentum Loop**
 For each keyword in the CSV:
 1.  **Search:** Check Google Trends for "Rising" queries in the last 30 days.
 2.  **Verify:** Search YouTube for that breakout term. Find "Outlier" videos (small channels with massive views).
 3.  **Analyze:** What is the specific "Hook" people are clicking on?
 
-### Phase 3: The Editorial Plan
+**Phase 3: The Editorial Plan**
 1.  **Create:** `monthly_trend_report.md`.
 2.  **Draft:** For every breakout topic, provide:
     *   *The Angle:* Why it's hot.
@@ -51,6 +49,3 @@ For each keyword in the CSV:
     *   *The Value:* One specific thing to teach.
 3.  **Report:** "Successfully hunted [X] niches. Found [Y] breakout opportunities."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

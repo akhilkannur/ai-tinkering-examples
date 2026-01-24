@@ -46,6 +46,3 @@ sampleData
 2.  **Filter:** `Days_In_Phase` > 14.
 3.  **Output:** Save `stalled_projects.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

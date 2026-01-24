@@ -42,6 +42,3 @@ Prioritize objections for new sales training content.
 4.  **Flag:** Objections with < 20% win rate.
 5.  **Output:** Save `objection_training_needs.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

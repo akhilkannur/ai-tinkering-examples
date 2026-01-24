@@ -35,12 +35,10 @@ Get booked on niche shows.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `podcasts.csv` exist?
 2.  **If Missing:** Create `podcasts.csv` using the `sampleData`.
 3.  **If Present:** Load the podcast list.
 
-### Phase 2: The Pitching Loop
+**Phase 2: The Pitching Loop**
 For each podcast in the CSV:
 1.  **Research:** Use `web_fetch` to find the podcast's website or recent episode list.
 2.  **Identify Themes:** Note the recurring format (e.g., "Interviews", "Solo-casts", "Deep Dives").
@@ -51,10 +49,7 @@ For each podcast in the CSV:
     *   **The Cred:** 2-3 bullet points of specific achievements related to the topic.
 5.  **Output:** Save to `podcast_pitches/[Podcast_Name]_pitch.md`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `outreach_status_tracker.csv` with columns: `Podcast_Name`, `Host_Name`, `Proposed_Topic`, `File_Path`.
 2.  **Report:** "Successfully drafted [X] personalized pitches. High-relevance angles identified for each host."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

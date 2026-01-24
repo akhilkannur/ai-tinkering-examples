@@ -41,6 +41,3 @@ Evaluate the true cost of high-maintenance customers.
 3.  **Compare:** Avg LTV.
 4.  **Output:** Save `maintenance_cost_analysis.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

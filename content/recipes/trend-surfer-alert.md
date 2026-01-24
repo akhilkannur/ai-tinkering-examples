@@ -35,12 +35,10 @@ Be first to the story.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `keywords.csv` exist?
 2.  **If Missing:** Create `keywords.csv` using the `sampleData`.
 3.  **If Present:** Load the keyword list.
 
-### Phase 2: The Monitoring Loop
+**Phase 2: The Monitoring Loop**
 For each keyword in the CSV:
 1.  **Check Pulse:** Use `web_fetch` to research recent news and volume trends for the `Keyword`.
 2.  **Detect Spike:** Compare current activity to known historical averages. If activity > `Alert_Threshold_%`, trigger the alert.
@@ -51,10 +49,7 @@ For each keyword in the CSV:
     *   **The Opinion:** Draft a 3-paragraph social post providing a unique angle on the news.
 5.  **Output:** Save to `alerts/[Keyword]_spike.md`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `trend_activity_report.csv` with columns: `Keyword`, `Spike_Detected_Y/N`, `Momentum_Score`, `File_Path`.
 2.  **Report:** "Successfully monitored [X] keywords. [Y] viral spikes detected. Newsjacking drafts ready for review."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

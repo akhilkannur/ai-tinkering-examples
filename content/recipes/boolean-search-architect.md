@@ -40,22 +40,19 @@ Write complex Sales Nav queries without the headache.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Expansion
+**Phase 1: Expansion**
 For each row in `icp_descriptions.csv`:
 1.  **Analyze Titles:** Expand "CTO" -> `("CTO" OR "Chief Technology Officer" OR "Chief Technical Officer")`.
 2.  **Analyze Exclusions:** Identify negative keywords (e.g., "Staffing", "Recruiting", "Consultant").
 3.  **Analyze Geography/Industry:** Group them separately.
 
-### Phase 2: Construction
+**Phase 2: Construction**
 Build the string:
 `([Titles]) AND ([Industries]) AND ([Locations]) AND NOT ([Exclusions])`
 
 *Rule:* All operators must be CAPITALIZED.
 
-### Phase 3: Deliverables
+**Phase 3: Deliverables**
 1.  **Create:** `boolean_strings.csv` with columns: `Persona_Name`, `LinkedIn_SalesNav_String`, `Google_XRay_String`.
 2.  **Report:** "Generated strings for [X] personas. Ready to paste into LinkedIn."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

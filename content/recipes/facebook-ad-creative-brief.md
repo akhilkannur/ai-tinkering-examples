@@ -35,12 +35,10 @@ High-converting visual concepts at scale.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `campaigns.csv` exist?
 2.  **If Missing:** Create `campaigns.csv` using the `sampleData`.
 3.  **If Present:** Load the campaign list.
 
-### Phase 2: The Concepting Loop
+**Phase 2: The Concepting Loop**
 For each product in the CSV:
 1.  **Ideate 3 Angles:**
     *   **Concept 1 (UGC/Relatability):** iPhone-style footage focusing on the `Primary_Benefit` in a real-world setting.
@@ -50,10 +48,7 @@ For each product in the CSV:
 3.  **Draft Primary Text:** Write 2 variations of the ad caption (one short, one long).
 4.  **Output:** Save to `creative_briefs/[Product_Name]_brief.md`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `creative_production_summary.csv` with columns: `Product_Name`, `Target_Audience`, `Primary_Hook`, `File_Path`.
 2.  **Report:** "Successfully designed [X] ad concepts. Visual briefs and copy variations ready for your design team."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

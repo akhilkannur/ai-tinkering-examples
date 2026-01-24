@@ -46,6 +46,6 @@ For each row in `executive_universities.csv`:
     *   **Warm Intro Angle:** "Hey [Name], I noticed you also went to [University]. My CEO, [Exec_Name], is a fellow alum..."
 3.  **Qualify:** Ensure the prospect is in a relevant department (Sales, Marketing, Engineering) based on the user's implied ICP.
 
-### Phase 3: Output
+**Phase 3: Output**
 1.  **Compile:** Create `warm_alumni_leads.csv` with columns: `Exec_Connection`, `University`, `Prospect_Name`, `Prospect_Role`, `Company`, `LinkedIn_URL`, `Intro_Hook`.
 2.  **Summary:** "Identified [X] alumni matches. The strongest overlap is between [Exec_Name] and [Target_Company]."

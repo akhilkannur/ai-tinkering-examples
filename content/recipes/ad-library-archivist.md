@@ -34,20 +34,15 @@ Build a structured swipe file from 100 links.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Setup
-1.  **Check:** Does `ad_links.csv` exist? If missing, create template.
 
-### Phase 2: The Archival Loop
+**Phase 2: The Archival Loop**
 For each row in the CSV:
 1.  **Categorize:** Determine the year and quarter.
 2.  **Naming:** Generate a standardized filename: `[YYYY-MM]_[Competitor]_[Angle].png`.
 3.  **Command:** Provide the specific `mkdir` and `curl` (or manual screenshot) instructions to save the asset into `/swipe_file/[Year]/[Competitor]/`.
 
-### Phase 3: The Index
+**Phase 3: The Index**
 1.  **Create:** `swipe_file_index.md`.
 2.  **Summarize:** List all saved assets with their associated angles.
 3.  **Summary:** "Archived [X] ads across [Y] competitors."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

@@ -41,6 +41,3 @@ Maximize 5-star review generation.
 3.  **Schedule:** Date + 3 days.
 4.  **Output:** Save `review_ask_queue.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

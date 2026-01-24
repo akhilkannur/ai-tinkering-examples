@@ -40,6 +40,3 @@ Identify outreach efficiency outliers.
 3.  **Rank:** Reps by lowest ratio.
 4.  **Output:** Save `sdr_efficiency_report.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

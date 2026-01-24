@@ -47,6 +47,3 @@ sampleData
 2.  **Calculate:** New_Price = Current_Price * 1.05.
 3.  **Output:** Save `proposed_renewal_pricing.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

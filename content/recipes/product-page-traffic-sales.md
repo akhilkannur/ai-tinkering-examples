@@ -39,6 +39,3 @@ Identify leaks in the product funnel.
 3.  **Flag:** Rate < 1%.
 4.  **Output:** Save `fix_these_pages.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

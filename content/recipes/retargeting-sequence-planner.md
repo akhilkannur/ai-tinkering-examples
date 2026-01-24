@@ -35,12 +35,10 @@ The 'Stalker' ad strategy.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `products.csv` exist?
 2.  **If Missing:** Create `products.csv` using the `sampleData`.
 3.  **If Present:** Load the product list.
 
-### Phase 2: The Planning Loop
+**Phase 2: The Planning Loop**
 For each product in the CSV:
 1.  **Draft Stage 1 (Day 1-3): The Reminder.** Focus on the `Primary_Benefit`. "Did you forget this? [Product_Name] is still waiting for you."
 2.  **Draft Stage 2 (Day 4-10): The Social Proof.** Use testimonials and "Logo Clouds" to build trust.
@@ -48,10 +46,7 @@ For each product in the CSV:
 4.  **Draft Stage 4 (Day 21-30): The Closer.** Introduce a limited-time discount or scarcity (e.g., "10% off for the next 24 hours").
 5.  **Output:** Save to `ad_plans/[Product_Name]_sequence.md`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `retargeting_master_manifest.csv` with columns: `Product_Name`, `Primary_Hook`, `Objection_Handled`, `File_Path`.
 2.  **Report:** "Successfully designed [X] retargeting sequences. Creative briefs and copy variations ready for your designer."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

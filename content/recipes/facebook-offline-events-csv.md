@@ -41,7 +41,7 @@ For each row in the CSV:
 3.  **Format Time:** Convert the `Date` into a standardized timestamp.
 4.  **Value:** Format currency into numeric string (e.g., 500.00).
 
-### Phase 3: The Manifest
+**Phase 3: The Manifest**
 1.  **Create:** `fb_offline_upload_ready.csv` with columns: `email,phone,value,currency,event_name,event_time`.
 2.  **Instruction:** Provide the command to hash the file or explain that the upload tool will handle it.
 3.  **Summary:** "Successfully formatted [X] sales records ($[Total Value]). Ready for upload."

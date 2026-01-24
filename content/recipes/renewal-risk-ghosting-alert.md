@@ -45,6 +45,3 @@ Identify ghosting risks in the renewal pipeline.
 3.  **Filter:** Renewals within 90 days AND last response > 30 days ago.
 4.  **Output:** Save `ghosting_alert.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

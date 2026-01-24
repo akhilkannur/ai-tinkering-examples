@@ -40,6 +40,3 @@ Source high-quality video candidates.
 2.  **Filter:** Word_Count > 100 AND Sentiment='Positive'.
 3.  **Output:** Save `video_candidates.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

@@ -42,6 +42,3 @@ Personalize marketing based on interest.
 3.  **Assign:** Top Category as 'Interest Tag'.
 4.  **Output:** Save `user_tags_update.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

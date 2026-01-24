@@ -38,6 +38,3 @@ Reduce CPC by avoiding partner conflict.
 2.  **Identify:** Keywords where Partner_Rank < My_Rank.
 3.  **Output:** Save `negative_keyword_candidates.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

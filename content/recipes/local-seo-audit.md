@@ -35,20 +35,15 @@ Audit the map rankings for your entire franchise.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Fleet Setup
-1.  **Check:** Does `locations_to_audit.csv` exist? If missing, create template.
 
-### Phase 2: The Map Audit Loop
+**Phase 2: The Map Audit Loop**
 For each location in the CSV:
 1.  **NAP Consistency:** Search Google/Yelp for the `Branch_Name`. Check if Address matches exactly.
 2.  **Reputation Check:** Count reviews from the last 3 months. If zero, flag as "Dead Listing".
 3.  **Audit:** Is the owner replying to negative reviews?
 
-### Phase 3: The Branch Report
+**Phase 3: The Branch Report**
 1.  **Create:** `franchise_seo_health.csv`.
 2.  **Summary:** "Processed [X] locations. Branch 'Downtown' has 3 NAP errors. Branch 'Eastside' has a 0% review response rate."
 3.  **Action:** "Generating 'Fix Guides' for each failing branch."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

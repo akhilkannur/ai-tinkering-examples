@@ -50,6 +50,3 @@ Create `content_strategy.md`. For the best idea, write a 5-bullet Table of Conte
 
 Start now.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

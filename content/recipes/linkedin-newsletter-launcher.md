@@ -39,12 +39,10 @@ Own your audience on-platform.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `newsletter_ideas.csv` exist?
 2.  **If Missing:** Create `newsletter_ideas.csv` using the `sampleData`.
 3.  **If Present:** Load the idea list.
 
-### Phase 2: The Launch Planning Loop
+**Phase 2: The Launch Planning Loop**
 For each entry in the CSV:
 1.  **Generate Naming Options:** Create 3 name variations based on the `Topic` (e.g., "The [Topic] Report", "[Brand_Name] Weekly").
 2.  **Draft Value Prop:** Write a 1-sentence "Hook" for the newsletter description.
@@ -54,10 +52,7 @@ For each entry in the CSV:
     *   **The CTA:** "Click 'Subscribe' to get notified of the first edition."
 4.  **Output:** Save to `newsletter_plans/[Brand_Name]_launch.md`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `newsletter_launch_manifest.csv` with columns: `Brand_Name`, `Topic`, `Suggested_Name`, `File_Path`.
 2.  **Report:** "Successfully designed [X] newsletter launches. Ready for your first edition."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

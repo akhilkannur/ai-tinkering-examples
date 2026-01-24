@@ -40,6 +40,3 @@ Identify the distinct roles of every marketing channel.
 3.  **Model B (Last):** Sum Revenue by `Last_Touch`.
 4.  **Output:** Save `channel_role_report.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

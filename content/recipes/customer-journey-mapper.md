@@ -34,10 +34,8 @@ Map the broken road for every persona.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Context Setup
-1.  **Check:** Does `target_personas.csv` exist? If missing, create it.
 
-### Phase 2: The Mapping Loop
+**Phase 2: The Mapping Loop**
 For each persona in the CSV:
 1.  **Stage 1: Awareness:** How do they find us? (Ad angle).
 2.  **Stage 2: Consideration:** What do they read? (Case study type).
@@ -45,11 +43,8 @@ For each persona in the CSV:
 4.  **Stage 4: Retention:** Do we ignore them after they pay?
 5.  **Stage 5: Advocacy:** What makes them refer a friend?
 
-### Phase 3: The Roadmap
+**Phase 3: The Roadmap**
 1.  **Action:** Create a folder `journey_maps/`.
 2.  **Save:** Save each map as `journey-[persona].md`.
 3.  **Summary:** "Mapped [X] journeys. Identified the #1 friction point across all personas: [Friction]."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

@@ -48,6 +48,3 @@ sampleData
 4.  **Flag:** Reps > 40% internal.
 5.  **Output:** Save `focus_time_audit.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

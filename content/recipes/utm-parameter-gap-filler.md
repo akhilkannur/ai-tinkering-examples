@@ -39,6 +39,3 @@ Fill data gaps in lead attribution.
 2.  **Infer:** If Source_UTM is NULL AND Referrer contains 'linkedin' -> Set Source='LinkedIn'.
 3.  **Output:** Save `enriched_traffic.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

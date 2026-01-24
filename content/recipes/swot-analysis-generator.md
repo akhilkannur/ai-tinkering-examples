@@ -33,21 +33,18 @@ Build a SWOT matrix from your notes or market research.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
+**Phase 1: Input Check**
 1.  **Check:** Did the user provide `internal_notes.txt`?
 2.  **Logic:**
     *   *If Yes:* Extract S and W from the notes.
     *   *If No:* Ask the user for their "Niche" and "Top 2 Competitors". Perform research to identify their relative position.
 
-### Phase 2: The External Hunt (O & T)
+**Phase 2: The External Hunt (O & T)**
 1.  **Search:** Identify 3 "Macro Trends" (Opportunities) affecting the niche (e.g., 'Rise of AI Agents').
 2.  **Analyze:** Identify 3 "External Threats" (e.g., 'Competitor X just raised $50M', 'New GDPR rules').
 
-### Phase 3: The Matrix
+**Phase 3: The Matrix**
 1.  **Create:** `executive_swot_matrix.md`.
 2.  **Format:** Use a 2x2 grid layout.
 3.  **Summary:** Provide a 1-sentence "Strategic Pivot" suggestion (e.g., "Use Strength X to capture Opportunity Y before Threat Z hits").
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

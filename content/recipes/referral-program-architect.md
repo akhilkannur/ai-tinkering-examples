@@ -35,12 +35,10 @@ Turn users into salespeople.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `brands.csv` exist?
 2.  **If Missing:** Create `brands.csv` using the `sampleData`.
 3.  **If Present:** Load the brand list.
 
-### Phase 2: The Architecture Loop
+**Phase 2: The Architecture Loop**
 For each brand in the CSV:
 1.  **Calculate Rewards:** Set the total reward value at 15-25% of `Avg_LTV`.
 2.  **Define Structure:**
@@ -50,10 +48,7 @@ For each brand in the CSV:
 3.  **Draft Invite Copy:** Write a high-converting email template for the sender to share.
 4.  **Create Plan:** Save to `referral_plans/[Brand_Name]_strategy.md`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `referral_economic_summary.csv` with columns: `Brand_Name`, `Incentive_Type`, `Total_Reward_Value`, `File_Path`.
 2.  **Report:** "Successfully designed [X] referral programs. Viral loops optimized for margin and virality."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

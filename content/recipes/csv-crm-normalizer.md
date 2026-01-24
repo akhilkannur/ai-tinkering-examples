@@ -35,22 +35,17 @@ Standardize 10,000 lead records for import.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: File Assessment
-1.  **Check:** Does `messy_crm_export.csv` exist? If missing, create it.
 
-### Phase 2: The Normalization Script
+**Phase 2: The Normalization Script**
 1.  **Generate:** Create a Python script `clean_data.py` that:
     *   *Phone:* Removes all non-digit characters. If 10 digits, appends "+1".
     *   *Name:* Converts `string.title()`.
     *   *Email:* Strips whitespace and converts to lowercase.
 2.  **Execute:** Run the script on the provided file.
 
-### Phase 3: Validation
+**Phase 3: Validation**
 1.  **Verify:** Check the first 5 rows of the output.
 2.  **Create:** `final_import_ready.csv`.
 3.  **Summary:** "Successfully normalized [X] records. All phone numbers are now E.164 compliant."
 ---
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

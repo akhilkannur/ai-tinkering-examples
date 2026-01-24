@@ -39,7 +39,7 @@ For each row in the CSV:
 2.  **Logic:** Calculate Risk Score. (High Usage Drop + Negative Sentiment = CRITICAL).
 3.  **Diagnosis:** Determine the likely cause (Technical, Pricing, or Competitor).
 
-### Phase 3: The Save Plan
+**Phase 3: The Save Plan**
 1.  **Create:** `at_risk_save_list.csv` with columns: `Customer_ID,Score,Diagnosis,Recommended_Action`.
 2.  **Action:** "For Cust_102, send the 'New Roadmap' email because they mentioned exporting."
 3.  **Summary:** "Monitored [X] accounts. Flagged [Y] as CRITICAL risk."

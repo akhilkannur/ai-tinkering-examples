@@ -36,22 +36,17 @@ Stop paying for fake invites.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `referral_logs.csv` exist?
 2.  **If Missing:** Create `referral_logs.csv` using the `sampleData`.
 3.  **If Present:** Load the referral logs.
 
-### Phase 2: The Detection Loop
+**Phase 2: The Detection Loop**
 For each row in the CSV:
 1.  **Check for IP Collisions:** Flag if the `Invitee_IP` matches the `Referrer_IP` or if multiple different invitees share the same IP.
 2.  **Email Pattern Scan:** Use regex to detect sequential variations (e.g., `+1`, `+2`) or domains known for disposable emails.
 3.  **Timestamp Velocity:** Flag events where multiple signups from the same Referrer occur within < 60 seconds of each other.
 4.  **Risk Scoring:** Assign a "Fraud Risk Score" (1-10) based on the number of flags triggered.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `fraud_audit_report.csv` with columns: `Referrer_ID`, `Invitee_Email`, `Risk_Score`, `Primary_Flag_Reason`.
 2.  **Report:** "Successfully audited [X] referrals. [Y] high-risk events identified. Recommendation: Block payments for these Referrer IDs."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

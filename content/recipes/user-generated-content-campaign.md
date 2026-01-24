@@ -35,12 +35,10 @@ High-ROI content from your users.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `brands.csv` exist?
 2.  **If Missing:** Create `brands.csv` using the `sampleData`.
 3.  **If Present:** Load the brand list.
 
-### Phase 2: The Campaign Planning Loop
+**Phase 2: The Campaign Planning Loop**
 For each brand in the CSV:
 1.  **Select Concept:**
     *   **If [Skincare]:** "The 30-Day Glow Transformation."
@@ -51,10 +49,7 @@ For each brand in the CSV:
 4.  **Write Announcement Copy:** Create high-tension launch posts for the `Primary_Platform`.
 5.  **Output:** Save to `ugc_kits/[Brand_Name]_campaign.md`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `ugc_master_roadmap.csv` with columns: `Brand_Name`, `Campaign_Title`, `Top_Prize`, `File_Path`.
 2.  **Report:** "Successfully designed [X] UGC campaigns. Content flywheels are ready for activation."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

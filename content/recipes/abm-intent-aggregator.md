@@ -49,6 +49,3 @@ sampleData
 3.  **Score:** G2=3, WebPricing=5, 6sense=4.
 4.  **Output:** Save `account_heat_map.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

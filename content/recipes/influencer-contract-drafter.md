@@ -34,20 +34,15 @@ Generate 50 creator agreements in one run.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Context Load
-1.  **Check:** Does `creator_deal_terms.csv` exist? If missing, create template.
 
-### Phase 2: The Contract Loop
+**Phase 2: The Contract Loop**
 For each creator in the CSV:
 1.  **Clause Selection:** Include standard Whitelisting (30 days) and Exclusivity (No competitors) clauses.
 2.  **Specific Mapping:** Insert the specific `Deliverables`, `Fee`, and `Deadline` into the SOW section.
 3.  **Draft:** Write the agreement in plain English.
 
-### Phase 3: Packaging
+**Phase 3: Packaging**
 1.  **Action:** Create a folder `campaign_contracts/`.
 2.  **Save:** Save each agreement as `contract-[Creator_Name].md`.
 3.  **Report:** "Successfully generated [X] contracts. Ready for DocuSign upload."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

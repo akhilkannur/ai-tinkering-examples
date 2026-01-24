@@ -40,6 +40,3 @@ Identify which channels drive the fastest deals.
 3.  **Aggregate:** Avg Days per `Lead_Source`.
 4.  **Output:** Save `channel_velocity_study.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

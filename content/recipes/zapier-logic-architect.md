@@ -35,12 +35,10 @@ Standardize your no-code workflows.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `automations.csv` exist?
 2.  **If Missing:** Create `automations.csv` using the `sampleData`.
 3.  **If Present:** Load the automation list.
 
-### Phase 2: The Design Loop
+**Phase 2: The Design Loop**
 For each workflow in the CSV:
 1.  **Define Trigger:** Identify the specific event in the `Trigger_App`.
 2.  **Map Formatting Steps:** Identify 2 necessary clean-up steps (e.g., "Standardize Phone Number", "Proper Case for Name").
@@ -49,10 +47,7 @@ For each workflow in the CSV:
 5.  **Error Prevention:** Suggest a "Search or Create" step to avoid duplicate records.
 6.  **Output:** Save to `zap_designs/[Workflow_Name]_spec.md`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `automation_ops_summary.csv` with columns: `Workflow_Name`, `Step_Count`, `Primary_Logic_Gate`, `File_Path`.
 2.  **Report:** "Successfully architected [X] Zapier workflows. Technical specs and logic maps ready for implementation."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

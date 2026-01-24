@@ -35,12 +35,10 @@ Who are they really selling to?
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `competitors.csv` exist?
 2.  **If Missing:** Create `competitors.csv` using the `sampleData`.
 3.  **If Present:** Load the competitor list.
 
-### Phase 2: The Audit Loop
+**Phase 2: The Audit Loop**
 For each competitor in the CSV:
 1.  **Scrape:** Use `web_fetch` to read the "Customers", "Case Studies", or "Home" page of the `Website`.
 2.  **Analyze Logos:** Identify the top 5-10 logos.
@@ -50,11 +48,8 @@ For each competitor in the CSV:
     *   **Enterprise:** Fortune 500 or global conglomerates.
 4.  **Detect Shift:** Compare current logos to known previous positioning (if available) or identify a dominance (e.g., "80% of logos are Enterprise").
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `market_positioning_audit.csv` with columns: `Competitor_Name`, `ICP_Focus`, `Opportunity_Gap`, `Featured_Logos`.
 2.  **Create:** `reports/[Competitor_Name]_shift.md` with a detailed breakdown of their strategy.
 3.  **Report:** "Successfully decoded [X] competitor strategies. Strategic gaps identified for your sales team."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

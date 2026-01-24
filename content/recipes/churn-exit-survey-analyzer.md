@@ -36,20 +36,17 @@ Find out why they really left.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Ingestion
+**Phase 1: Ingestion**
 1.  **Input:** Load `exit_surveys.csv`.
 
-### Phase 2: Clustering
+**Phase 2: Clustering**
 Group responses:
 *   *Category: Pricing* ("Too expensive", "Budget cut").
 *   *Category: Product Gap* ("Missing Android app", "Too slow").
 *   *Category: Service* ("Rude support").
 
-### Phase 3: The Fix
+**Phase 3: The Fix**
 Create `churn_reduction_plan.md`:
 *   **Top Reason:** Pricing (45%).
 *   **Action:** "Launch a 'Pause Plan' option for $5/mo instead of full cancellation."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

@@ -35,12 +35,10 @@ Rank for key moments.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `transcripts.csv` exist?
 2.  **If Missing:** Create `transcripts.csv` using the `sampleData`. Ensure the `transcripts/` folder exists.
 3.  **If Present:** Load the transcript list.
 
-### Phase 2: The Chaptering Loop
+**Phase 2: The Chaptering Loop**
 For each transcript in the CSV:
 1.  **Analyze Content:** Scan the `Transcript_File` for timestamp markers (e.g., `[02:15]`) and topical shifts.
 2.  **Identify Key Moments:**
@@ -50,10 +48,7 @@ For each transcript in the CSV:
 3.  **Draft Chapter Titles:** Create concise, descriptive titles incorporating the `Target_Keyword` where natural.
 4.  **Formatting:** Ensure the output follows the YouTube "00:00 Title" format for instant copy-pasting.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `video_metadata_master.csv` with columns: `Video_Title`, `Total_Chapters`, `Primary_SEO_Chapter`, `Chapter_List_Raw`.
 2.  **Report:** "Successfully generated chapters for [X] videos. SEO-optimized timestamps ready for your YouTube descriptions."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

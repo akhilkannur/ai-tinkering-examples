@@ -42,6 +42,3 @@ Debug routing logic errors.
 3.  **Flag:** If matches > 1 rule.
 4.  **Output:** Save `routing_conflicts.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

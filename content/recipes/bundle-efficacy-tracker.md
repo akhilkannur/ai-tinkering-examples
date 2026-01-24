@@ -39,6 +39,3 @@ Validate bundling strategy.
 2.  **Avg:** Revenue & Margin per Type.
 3.  **Output:** Save `bundle_analysis.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

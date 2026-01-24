@@ -35,12 +35,10 @@ Get followed at a glance.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `profiles.csv` exist?
 2.  **If Missing:** Create `profiles.csv` using the `sampleData`.
 3.  **If Present:** Load the profile list.
 
-### Phase 2: The Optimization Loop
+**Phase 2: The Optimization Loop**
 For each profile in the CSV:
 1.  **Draft 3 Variations:**
     *   **The Authority:** "[Role] @[Company]. [Achievement]. Sharing insights on [Topic]."
@@ -49,10 +47,7 @@ For each profile in the CSV:
 2.  **Character Audit:** Ensure all variations are < 160 characters.
 3.  **Emoji Placement:** Add 1-2 relevant emojis to break up text and add visual interest.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `twitter_bio_matrix.csv` with columns: `Name`, `Primary_Bio`, `Minimalist_Bio`, `Character_Count`.
 2.  **Report:** "Successfully optimized [X] bios. Authority-driven profiles ready for profile updates."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

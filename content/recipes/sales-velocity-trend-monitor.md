@@ -48,6 +48,3 @@ sampleData
 3.  **Flag:** Sustained increases (>10% per month).
 4.  **Output:** Save `velocity_trend_report.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

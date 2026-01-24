@@ -34,21 +34,16 @@ Find every user of 10 competitors in one run.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Resource Setup
-1.  **Check:** Does `builtwith_raw.csv` exist? If missing, ask user to upload it.
 2.  **Read:** Load the `competitor_tech_list.csv`.
 
-### Phase 2: The Pivot Loop
+**Phase 2: The Pivot Loop**
 For each technology in the list:
 1.  **Filter:** Extract all rows from `builtwith_raw.csv` where `Tech` == [Tech_Name].
 2.  **Qualify:** Keep only rows where `Revenue` > [ICP_Revenue_Min].
 3.  **Enrich:** Add a column `Displacement_Angle` (e.g., "HubSpot is getting too expensive for this size").
 
-### Phase 3: Segmented Export
+**Phase 3: Segmented Export**
 1.  **Action:** Create a folder `displacement_lists/`.
 2.  **Save:** Save each filtered list as `users-of-[tech].csv`.
 3.  **Report:** "Found [X] total displacement opportunities across [Y] competitors."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

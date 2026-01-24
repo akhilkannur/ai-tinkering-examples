@@ -35,12 +35,10 @@ Drive traffic from viral tweets.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `promotions.csv` exist?
 2.  **If Missing:** Create `promotions.csv` using the `sampleData`.
 3.  **If Present:** Load the offer list.
 
-### Phase 2: The Drafting Loop
+**Phase 2: The Drafting Loop**
 For each offer in the CSV:
 1.  **Draft 3 Variations:**
     *   **The Narrative:** "That's a wrap! If you enjoyed this thread, you'll love [Offer_Name]. I share [Core_Benefit] every week."
@@ -48,10 +46,7 @@ For each offer in the CSV:
     *   **The CTA-Heavy:** "Join 5,000+ others getting [Core_Benefit] at [Offer_Name]. Subscribe here: [Link]"
 2.  **Character Audit:** Ensure all variations are < 240 characters to allow for link and image space.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `twitter_plugs_master.csv` with columns: `Offer_Name`, `Plug_Variation_1`, `Plug_Variation_2`, `Link`.
 2.  **Report:** "Successfully drafted [X] auto-plugs. Ready to be added to your social scheduling tool (e.g., Typefully, Hypefury)."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

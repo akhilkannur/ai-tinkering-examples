@@ -42,6 +42,3 @@ Identify regional deviations from pricing policy.
 4.  **Flag:** Regions > 5% above global average.
 5.  **Output:** Save `discount_audit.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

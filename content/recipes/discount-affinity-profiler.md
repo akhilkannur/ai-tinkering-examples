@@ -42,6 +42,3 @@ Protect margins by suppressing discounts for full-price buyers.
 3.  **Check:** If 100% of orders are Discounted.
 4.  **Output:** Save `discount_seekers.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

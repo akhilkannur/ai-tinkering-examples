@@ -41,6 +41,3 @@ Identify the closing efficiency of different lead sources.
 3.  **Calculate:** % Won for each group.
 4.  **Output:** Save `origin_win_rate_report.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

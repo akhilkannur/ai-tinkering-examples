@@ -35,10 +35,8 @@ Track $1B+ in funding across 50 industries on autopilot.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Sector Setup
-1.  **Check:** Does `monitored_sectors.csv` exist? If missing, create template.
 
-### Phase 2: The Tracker Loop
+**Phase 2: The Tracker Loop**
 For each industry in the CSV:
 1.  **Search:** Find news containing `"[Industry]" funding "this week"`.
 2.  **Extract:** For every match, read the article and extract:
@@ -47,10 +45,7 @@ For each industry in the CSV:
     *   Lead Investor.
     *   Growth Plan (e.g., "expanding to EU").
 
-### Phase 3: Consolidation
+**Phase 3: Consolidation**
 1.  **Action:** Create `master_funding_database.csv`.
 2.  **Summary:** "Tracked [X] deals total. [Top Sector] had the highest concentration of capital ($[Amount])."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

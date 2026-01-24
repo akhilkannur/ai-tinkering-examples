@@ -39,6 +39,3 @@ Identify high-fit technical prospects.
 2.  **Filter:** Companies using 'Competitor X'.
 3.  **Output:** Save `displace_campaign_list.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

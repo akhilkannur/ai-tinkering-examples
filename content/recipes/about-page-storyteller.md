@@ -35,12 +35,10 @@ Build trust with a data-backed brand story.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `companies.csv` exist?
 2.  **If Missing:** Create `companies.csv` using the `sampleData`.
 3.  **If Present:** Load the company list.
 
-### Phase 2: The Research Loop
+**Phase 2: The Research Loop**
 For each company in the CSV:
 1.  **Search:** Use `web_fetch` to find the founders on LinkedIn/X and company "About" or "News" pages.
 2.  **Analyze:** Find the "Aha!" moment - why did they build this? Identify key milestones.
@@ -50,11 +48,8 @@ For each company in the CSV:
     *   **Section 3: The Mission.** (Why we do this every day).
     *   **Section 4: The Proof.** (Real numbers and logos).
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** A folder `brand_stories/` containing `[Company_Name]_story.md` for each entry.
 2.  **Create:** `story_summary.csv` with columns: `Company_Name`, `Emotional_Hook`, `File_Path`.
 3.  **Report:** "Successfully drafted stories for [X] companies. Check the `brand_stories/` folder."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

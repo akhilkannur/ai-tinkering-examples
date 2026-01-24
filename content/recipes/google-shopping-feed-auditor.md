@@ -38,6 +38,3 @@ Maximize product approval in Google Merchant Center.
 2.  **Filter:** Rows where GTIN is NULL.
 3.  **Output:** Save `feed_errors.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

@@ -34,20 +34,15 @@ Ship product to 100 creators without errors.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Setup
-1.  **Check:** Does `gifting_list.csv` exist? If missing, create template.
 
-### Phase 2: The Logistics Loop
+**Phase 2: The Logistics Loop**
 For each row in the CSV:
 1.  **Verify:** Check if the SKU is in stock (if provided) and format the address for a shipping label.
 2.  **Personalize:** Write a 2-sentence note for the box insert referencing their `@IG_Handle`.
 3.  **Draft:** Create the "Your package is on the way" email with a placeholder for the tracking link.
 
-### Phase 3: The Manifest
+**Phase 3: The Manifest**
 1.  **Create:** `shipping_manifest_ready.csv` formatted for UPS/FedEx upload.
 2.  **Save:** Create a file `box_insert_notes.md` with all personalized notes.
 3.  **Summary:** "Processed [X] packages. Manifest is ready for export."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

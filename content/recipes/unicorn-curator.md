@@ -35,20 +35,15 @@ Identify viral outliers across 100 channels.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Setup
-1.  **Check:** Does `niches_to_mine.csv` exist? If missing, create it.
 
-### Phase 2: The Curation Loop
+**Phase 2: The Curation Loop**
 For each niche in the CSV:
 1.  **Search:** Find 5 active YouTube channels in that niche.
 2.  **Scan:** For each channel, look at the last 30 videos.
 3.  **Filter:** Identify "Unicorns" - videos where `Ratio > 5`.
 4.  **Extract:** For these Unicorns, note the specific Title and Hook type (e.g., "Negative Hook", "Mistakes to Avoid").
 
-### Phase 3: The Content Bible
+**Phase 3: The Content Bible**
 1.  **Create:** `unicorn_topic_database.csv` with columns: `Niche,Channel,Video_Title,Viral_Ratio,Hook_Type`.
 2.  **Report:** "Successfully mined [X] niches. Identified [Y] unicorn topics. These are your next 10 content pieces."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

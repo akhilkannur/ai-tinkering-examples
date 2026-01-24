@@ -34,13 +34,13 @@ Optimize your 'Link in Bio' from a URL or a goal.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Setup
+**Phase 1: Input Setup**
 1.  **Check:** Did the user provide `current_links.txt`?
 2.  **Logic:**
     *   *If Yes:* Audit the current order. Identify the "Conversion Bottleneck."
     *   *If No:* Ask for "What do you sell?". Research the top 3 influencers in that niche to see their link structure.
 
-### Phase 2: The Re-Architecture
+**Phase 2: The Re-Architecture**
 1.  **Selection:** Keep only the top 5 links.
 2.  **Order:** 
     *   *Top:* High-Value Lead Magnet.
@@ -48,11 +48,8 @@ Optimize your 'Link in Bio' from a URL or a goal.
     *   *Bottom:* Social proof/Secondary links.
 3.  **Visuals:** Suggest button colors or emojis to draw attention to the "Top Link."
 
-### Phase 3: The Blueprint
+**Phase 3: The Blueprint**
 1.  **Create:** `link_bio_optimized.md`.
 2.  **Draft:** Provide the specific "New Headline" for every link.
 3.  **Summary:** "Optimized [X] links. Removed [Y] low-value distractions."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

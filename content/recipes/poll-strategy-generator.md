@@ -35,12 +35,10 @@ Engagement farming with a purpose.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `campaign_goals.csv` exist?
 2.  **If Missing:** Create `campaign_goals.csv` using the `sampleData`.
 3.  **If Present:** Load the campaign list.
 
-### Phase 2: The Strategy Loop
+**Phase 2: The Strategy Loop**
 For each campaign in the CSV:
 1.  **Draft 3 Polls:**
     *   **Poll 1 (The Pain Point):** "What is the biggest barrier to [Target_Audience] achieving [Goal]?" (Options: Cost, Time, Expertise, Tools).
@@ -51,10 +49,7 @@ For each campaign in the CSV:
     *   **If voted [Time]:** "Saw your vote on the 'Time' struggle. Have you seen our 1-click template for [Process]?"
 3.  **Output:** Save to `poll_strategies/[Campaign_Name]_plan.md`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `social_research_matrix.csv` with columns: `Campaign_Name`, `Primary_Poll_Question`, `High_Intent_Option`, `File_Path`.
 2.  **Report:** "Successfully designed [X] poll strategies. Engagement metrics and DM scripts ready for launch."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

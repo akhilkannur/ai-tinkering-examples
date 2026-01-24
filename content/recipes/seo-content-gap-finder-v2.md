@@ -56,6 +56,3 @@ You are an **SEO Strategist**. Your job is to perform a "Content Gap Analysis".
 
 Start now.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

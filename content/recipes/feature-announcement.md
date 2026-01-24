@@ -34,10 +34,8 @@ Turn technical updates into sales momentum.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Setup
-1.  **Check:** Does `technical_updates.csv` exist? If missing, create template.
 
-### Phase 2: The Translation Loop
+**Phase 2: The Translation Loop**
 For each feature in the CSV:
 1.  **Extract:** What is the *benefit* to the user? (Save time? Save money? Peace of mind?).
 2.  **Draft Bundle:**
@@ -45,11 +43,8 @@ For each feature in the CSV:
     *   *The Tweet:* Visual teaser with emojis.
     *   *The Slack:* Short 'Internal' briefing for the sales team.
 
-### Phase 3: Deliverable
+**Phase 3: Deliverable**
 1.  **Action:** Create a folder `feature_launches/`.
 2.  **Save:** Save each bundle as `launch-[feature-name].md`.
 3.  **Report:** "Successfully marketed [X] features. Ready to ship."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

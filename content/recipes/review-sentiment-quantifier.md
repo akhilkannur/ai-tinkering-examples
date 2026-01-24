@@ -34,21 +34,16 @@ Quantify the emotion of 1000+ customer reviews.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Resource Setup
-1.  **Check:** Does `raw_reviews.csv` exist? If missing, create template.
 
-### Phase 2: The Scoring Loop
+**Phase 2: The Scoring Loop**
 For each review in the CSV:
 1.  **Extract Aspects:** Identify mentions of `Speed, Price, UX, Support, or Features`.
 2.  **Score:** Assign -1, 0, or +1 to each mentioned aspect.
 3.  **Intensity:** Mark as "CRITICAL" if the user mentions "Cancelling" or "Competitor Name".
 
-### Phase 3: The Sentiment Matrix
+**Phase 3: The Sentiment Matrix**
 1.  **Consolidate:** Create `master_sentiment_report.csv` with columns: `Aspect,Positive_Count,Negative_Count,Net_Score`.
 2.  **Summary:** "Processed [X] reviews. 'Support' is the biggest negative driver (-40 net score)."
 3.  **Action:** Draft a Slack alert for the Head of Product.
 ---
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

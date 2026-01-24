@@ -48,6 +48,6 @@ For each Angel in the list:
     *   Check if they are **hiring** (signal of growth).
 4.  **Draft Context:** "I saw that [Angel_Name] invested in you. We work with many of their portfolio companies..."
 
-### Phase 3: Output
+**Phase 3: Output**
 1.  **Compile:** Create `angel_portfolio_leads.csv` with columns: `Angel_Backer`, `Company_Name`, `Founder`, `Website`, `Funding_Stage`, `Outreach_Context`.
 2.  **Summary:** "Found [X] active portfolio companies backed by the listed Angels."

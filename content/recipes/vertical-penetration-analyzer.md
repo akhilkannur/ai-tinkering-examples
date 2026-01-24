@@ -40,6 +40,3 @@ Identify under-penetrated verticals.
 3.  **Rank:** Lowest % first.
 4.  **Output:** Save `vertical_opportunity.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

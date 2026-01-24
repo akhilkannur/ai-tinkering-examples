@@ -40,6 +40,3 @@ Identify products that drag down sales velocity.
 3.  **Calculate:** Avg Days_To_Close.
 4.  **Output:** Save `product_velocity_report.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

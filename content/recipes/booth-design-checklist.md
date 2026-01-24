@@ -35,23 +35,18 @@ Custom booth checklists for your event portfolio.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `events.csv` exist?
 2.  **If Missing:** Create `events.csv` using the `sampleData`.
 3.  **If Present:** Load the event list.
 
-### Phase 2: The Event Intel Loop
+**Phase 2: The Event Intel Loop**
 For each event in the CSV:
 1.  **Research:** Use `web_fetch` to find the "Attendee Profile" and "Major Sponsors" for `Event_Name`.
 2.  **Design the Hook:** Draft a 3-word "Big Statement" for the back wall tailored to the audience.
 3.  **Plan the Experience:** Design a "Demo Flow" optimized for the `Booth_Size`.
 4.  **Curate Swag:** Suggest one "Traffic Driver" and one "VIP Gift" based on the `Location` and persona.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `event_plans/` folder containing `[Event_Name]_strategy.md` for each entry.
 2.  **Create:** `booth_master_schedule.csv` with columns: `Event_Name`, `Location`, `Main_Hook`, `File_Path`.
 3.  **Report:** "Successfully designed strategies for [X] events. Check the `event_plans/` folder for detailed checklists."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

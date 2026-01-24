@@ -47,6 +47,3 @@ sampleData
 2.  **Calculate:** % populated per column.
 3.  **Output:** Save `vendor_quality_report.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

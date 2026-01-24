@@ -30,12 +30,10 @@ Turn 'Great post' into a lead.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `comments.csv` exist?
 2.  **If Missing:** Create `comments.csv` using the `sampleData`.
 3.  **If Present:** Load the comment list.
 
-### Phase 2: The Nurture Loop
+**Phase 2: The Nurture Loop**
 For each comment in the CSV:
 1.  **Classify Intent:**
     *   **Fan:** Simple praise or emojis.
@@ -46,10 +44,7 @@ For each comment in the CSV:
     *   **If [Question]:** Answer the question + "I have a detailed PDF on this, want me to DM it?"
     *   **If [Objection]:** Validate the concern + Pivot to a benefit. "Totally understand that perspective. We focused on [Feature] to solve [Problem]. Does that change things for you?"
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `draft_replies.csv` with columns: `Username`, `Platform`, `Intent`, `Draft_Reply`.
 2.  **Report:** "Successfully drafted [X] replies. Lead capture opportunities identified in [Y] comments."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

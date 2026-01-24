@@ -35,12 +35,10 @@ What is Googlebot doing?
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `log_files.csv` exist?
 2.  **If Missing:** Create `log_files.csv` using the `sampleData`. Ensure the `logs/` directory exists.
 3.  **If Present:** Load the log file list.
 
-### Phase 2: The Analysis Loop
+**Phase 2: The Analysis Loop**
 For each log file in the CSV:
 1.  **Filter Bot Traffic:** Scan the file for lines where the User-Agent matches "Googlebot" or "AdsBot-Google".
 2.  **Aggregate Hits:** Group the filtered lines by `Request_URL`.
@@ -49,10 +47,7 @@ For each log file in the CSV:
     *   **Zero Frequency on High Value:** Flag `/pricing` or new `/blog` posts not being hit.
 4.  **Extract Status Codes:** Count the distribution of 200, 404, and 301 responses for bot traffic.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `bot_crawl_stats.csv` with columns: `URL`, `Googlebot_Hits`, `Avg_Status_Code`, `Crawl_Waste_Risk`.
 2.  **Report:** "Successfully analyzed [X] log files. [Y] pages identified as crawl waste. Recommendations for `robots.txt` generated."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

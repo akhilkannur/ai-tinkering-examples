@@ -40,6 +40,3 @@ Link orphaned contacts to the correct corporate accounts.
 3.  **Flag:** High confidence matches.
 4.  **Output:** Save `rehome_upload.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

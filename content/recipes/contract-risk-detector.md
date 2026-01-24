@@ -35,12 +35,10 @@ Find the 'gotchas' in the PDF.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `contracts_to_audit.csv` exist?
 2.  **If Missing:** Create `contracts_to_audit.csv` using the `sampleData`. Ensure the `contracts/` folder exists.
 3.  **If Present:** Load the contract list.
 
-### Phase 2: The Red Flag Loop
+**Phase 2: The Red Flag Loop**
 For each contract in the CSV:
 1.  **Ingest:** Read the full text from the `Contract_File`.
 2.  **Scan for 'Gotchas':**
@@ -50,11 +48,8 @@ For each contract in the CSV:
 3.  **Draft Red-lines:** Suggest specific language changes to mitigate identified risks.
 4.  **Assign Risk Score:** Grade the contract (High/Medium/Low Risk).
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `risk_assessments/` folder with `[Vendor_Name]_audit.md` for each entry.
 2.  **Create:** `contract_risk_matrix.csv` with columns: `Vendor_Name`, `Risk_Score`, `Main_Concern`, `File_Path`.
 3.  **Report:** "Successfully audited [X] contracts. [Y] critical risks identified in [Vendor_Name] agreement."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

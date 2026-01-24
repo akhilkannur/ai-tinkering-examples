@@ -41,6 +41,3 @@ Identify the commercial value of specific content assets.
 3.  **Rank:** Sort by total 'Influenced Revenue'.
 4.  **Output:** Save `top_content_assets.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

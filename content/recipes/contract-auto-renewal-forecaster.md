@@ -42,6 +42,3 @@ Forecast low-friction revenue.
 3.  **Sum:** ARR.
 4.  **Output:** Save `renewal_forecast.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

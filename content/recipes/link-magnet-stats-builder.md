@@ -34,20 +34,20 @@ Research data & build the UI.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Deep Research
+**Phase 1: Deep Research**
 For each `Topic`:
 1.  **Fetch Data:** Search for "State of [Topic] [Year] report", "statistics", and "forecasts".
 2.  **Select the "Big Three":** Identify the 3 most impactful stats for the Hero Section (Adoption Rate, Market Size, or ROI).
 3.  **Find Comparisons:** Look for data that compares X vs Y (e.g., "2024 vs 2026" or "Competitor A vs B") to map to a Bar Chart.
 
-### Phase 2: UX/UI Structuring
+**Phase 2: UX/UI Structuring**
 Plan the page layout:
 *   **Hero:** Title + Last Updated Date.
 *   **The "Numbers Row":** Grid of 3 Cards (Big Font Number + Label + Context).
 *   **The "Deep Dive":** Sections with CSS-based Bar Charts (using `width: %` style props).
 *   **The "Share Trigger":** A "Tweet This" button or "Copy Link" call-to-action.
 
-### Phase 3: Code Generation (The Upgrade)
+**Phase 3: Code Generation (The Upgrade)**
 Generate a file `pages/[Slug].tsx` containing:
 1.  **Imports:** `Head`, `Navbar`, `Footer`, `NewsletterForm`.
 2.  **Hero Section:** Tailwind-styled header with a subtle background pattern.
@@ -65,10 +65,7 @@ Generate a file `pages/[Slug].tsx` containing:
     </div>
     ```
 
-### Phase 4: Deliverables
+**Phase 4: Deliverables**
 1.  **Code:** The full `.tsx` file content.
 2.  **Report:** "Generated [Topic] page with [X] stats and [Y] visual charts. Ready for Next.js build."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

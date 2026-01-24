@@ -40,6 +40,3 @@ Drive launch sales via affinity targeting.
 2.  **Filter:** Brand = 'Nike'.
 3.  **Output:** Save `nike_drop_list.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

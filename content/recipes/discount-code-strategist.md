@@ -35,10 +35,8 @@ Your entire year of sales, without brand damage.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Calendar Setup
-1.  **Check:** Does `holiday_calendar.csv` exist? If missing, create template.
 
-### Phase 2: The Strategy Loop
+**Phase 2: The Strategy Loop**
 For each event in the CSV:
 1.  **Design:** Choose the best mechanism based on the `Goal`.
     *   *Volume:* "Buy 2, Get 1."
@@ -47,12 +45,9 @@ For each event in the CSV:
 2.  **Naming:** Generate a unique, brand-aligned discount code.
 3.  **Scarcity:** Define the urgency logic (e.g., "Only 100 uses available").
 
-### Phase 3: The Master Plan
+**Phase 3: The Master Plan**
 1.  **Create:** `annual_promo_plan.md`.
 2.  **Summarize:** Create a table listing the Event, Code, Offer, and "The Script" for the email teaser.
 3.  **Report:** "Successfully planned [X] promotions for the year."
 ---
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

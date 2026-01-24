@@ -35,12 +35,10 @@ Don't get hacked.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `services.csv` exist?
 2.  **If Missing:** Create `services.csv` using the `sampleData`.
 3.  **If Present:** Load the service list.
 
-### Phase 2: The Rotation Loop
+**Phase 2: The Rotation Loop**
 For each service in the CSV:
 1.  **Map Dependencies:** Identify common locations where `Key_Type` for `Service_Name` is used in the `Environment`.
 2.  **Generate Steps:**
@@ -49,10 +47,7 @@ For each service in the CSV:
     *   **Step 3: Verification.** How to test the new key is active.
     *   **Step 4: The Cleanup.** When and how to revoke the old key.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `rotation_master_plan.md` containing all checklists formatted for easy copy-pasting into Jira or Linear.
 2.  **Report:** "Successfully generated rotation plans for [X] services. Safety verification steps included."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

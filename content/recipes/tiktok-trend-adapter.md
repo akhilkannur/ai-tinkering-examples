@@ -35,12 +35,10 @@ Adapt TikTok trends to your B2B niche.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `niches.csv` exist?
 2.  **If Missing:** Create `niches.csv` using the `sampleData`.
 3.  **If Present:** Load the niche list.
 
-### Phase 2: The Trend Research Loop
+**Phase 2: The Trend Research Loop**
 1.  **Market Pulse:** Use `web_fetch` to identify the top 3 high-momentum trends (e.g., 'Wes Anderson style', 'Office Siren', 'Expectation vs. Reality').
 2.  **For Each Niche in CSV:**
     *   **Analyze Synergy:** Pick the trend that best fits the `Tone` and `Target_Audience`.
@@ -50,11 +48,8 @@ Adapt TikTok trends to your B2B niche.
         *   **The Punchline:** A short, high-tension joke about a specific industry pain point.
     *   **Production Brief:** Specify "Audio Name", "Text Overlays", and "Visual Hook".
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `tiktok_content_calendar.csv` with columns: `Niche`, `Trend_Used`, `Script_Hook`, `Tone_Match`.
 2.  **Create:** `production_briefs/` folder with `[Niche]_brief.md` for detailed filming instructions.
 3.  **Report:** "Successfully adapted [X] trends for [Y] niches. Ready for your social media team to film."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

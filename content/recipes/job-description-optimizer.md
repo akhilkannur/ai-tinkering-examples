@@ -35,12 +35,10 @@ Attract 'A-Players', repel tourists.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `job_postings.csv` exist?
 2.  **If Missing:** Create `job_postings.csv` using the `sampleData`.
 3.  **If Present:** Load the role list.
 
-### Phase 2: The Optimization Loop
+**Phase 2: The Optimization Loop**
 For each role in the CSV:
 1.  **Draft The Mission:** Replace "About the Role" with a high-stakes mission statement (e.g., "Your goal is to own the mid-market segment and close $1.2M in ARR").
 2.  **Define the First 90 Days:** Create a clear timeline of expectations (Day 30, Day 60, Day 90).
@@ -48,10 +46,7 @@ For each role in the CSV:
 4.  **Transparent Comp:** Clearly state the `Target_Salary` and the bonus structure.
 5.  **Output:** Save to `optimized_jds/[Role]_jd.md`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `hiring_plan_summary.csv` with columns: `Role`, `OTE`, `Primary_Outcome`, `File_Path`.
 2.  **Report:** "Successfully optimized [X] job descriptions. Result-oriented JDs ready for LinkedIn and Indeed."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

@@ -35,10 +35,8 @@ Monitor 50 subreddits for buying signals.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Preparation
-1.  **Check:** Does `reddit_monitor.csv` exist? If missing, create template.
 
-### Phase 2: The Sweep Loop
+**Phase 2: The Sweep Loop**
 For each row in the CSV:
 1.  **Search:** Look for posts in `Subreddit` containing `Keyword` from the last 48 hours.
 2.  **Filter:** Only keep posts that match the `Intent_Signal`.
@@ -47,10 +45,7 @@ For each row in the CSV:
     *   *Step 2:* Give generic advice ("You should look for a tool that does Y").
     *   *Step 3:* Mention product ("We built [Product] specifically for this...").
 
-### Phase 3: Deliverable
+**Phase 3: Deliverable**
 1.  **Create:** `reddit_opportunities.md` listing the Post URL and the Draft Comment.
 2.  **Summary:** "Found [X] buying signals across [Y] subreddits."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

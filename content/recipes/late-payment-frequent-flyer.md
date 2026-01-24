@@ -42,6 +42,3 @@ Mitigate bad debt risk.
 3.  **Flag:** > 2 late payments.
 4.  **Output:** Save `credit_hold_list.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

@@ -46,6 +46,3 @@ sampleData
 3.  **Priority:** Sort by Score ascending.
 4.  **Output:** Save `detractor_recovery_queue.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

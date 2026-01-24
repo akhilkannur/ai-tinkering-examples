@@ -48,6 +48,3 @@ sampleData
 4.  **Flag:** Accounts missing 1 or more roles.
 5.  **Output:** Save `buying_committee_gaps.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

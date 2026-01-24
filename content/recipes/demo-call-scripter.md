@@ -34,21 +34,16 @@ Custom demo scripts for every industry you sell to.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Industry Setup
-1.  **Check:** Does `target_industries.csv` exist? If missing, create template.
 
-### Phase 2: The Scripting Loop
+**Phase 2: The Scripting Loop**
 For each industry in the CSV:
 1.  **Contextualize:** Create the "Old Way" story (The struggle without us).
 2.  **Scene 1:** Draft the recap: "You told me [Top_Pain] is the bottleneck..."
 3.  **Scene 2:** The Reveal: "Here is how [Killer_Feature] solves that in 2 clicks."
 4.  **Scene 3:** The Social Proof: "How [Competitor in Industry] used this to save time."
 
-### Phase 3: Playbook Export
+**Phase 3: Playbook Export**
 1.  **Action:** Create a folder `demo_playbooks/`.
 2.  **Save:** Save each script as `demo-[industry].md`.
 3.  **Report:** "Successfully generated [X] demo scripts. Playbook is ready for the team."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

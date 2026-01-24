@@ -34,20 +34,15 @@ Find 50 potential partners across 10 niches.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Niche Setup
-1.  **Check:** Does `partner_niches.csv` exist? If missing, create template.
 
-### Phase 2: The Prospecting Loop
+**Phase 2: The Prospecting Loop**
 For each niche in the CSV:
 1.  **Search:** Find the top 5 players in the [Niche] that target [Target_Audience].
 2.  **Verify:** Check if they have an active Partner Program page.
 3.  **Draft:** Write a pitch: "Our [Product] users are asking for [Niche] automation. If we integrated, we could solve [Pain_Point] for [Target_Audience]."
 
-### Phase 3: The Partner Map
+**Phase 3: The Partner Map**
 1.  **Create:** `strategic_partner_map.csv` with columns: `Niche,Company,URL,Partnership_Type,Draft_Email`.
 2.  **Summary:** "Processed [X] niches. Identified [Y] Tier-1 partners. Ecosystem strategy is ready."
 ---
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

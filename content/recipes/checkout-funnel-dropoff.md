@@ -39,6 +39,3 @@ Optimize the checkout flow.
 3.  **Highlight:** Biggest drop.
 4.  **Output:** Save `checkout_friction.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

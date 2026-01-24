@@ -46,6 +46,3 @@ sampleData
 3.  **Flag:** Drops > 50%.
 4.  **Output:** Save `daily_risk_report.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

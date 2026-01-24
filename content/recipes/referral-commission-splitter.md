@@ -46,6 +46,3 @@ sampleData
 2.  **Apply:** 10% to Source, 20% to Impl, 70% to Vendor.
 3.  **Output:** Save `split_payout_report.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

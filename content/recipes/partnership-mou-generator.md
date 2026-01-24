@@ -33,13 +33,13 @@ Draft a formal MOU from your notes or a partnership goal.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Term Setup
+**Phase 1: Term Setup**
 1.  **Check:** Did the user provide `partnership_notes.txt`?
 2.  **Logic:**
     *   *If Yes:* Extract the obligations.
     *   *If No:* Ask for "Partner Name" and "Partnership Goal". Research standard terms for that type of deal.
 
-### Phase 2: The MOU Construction
+**Phase 2: The MOU Construction**
 Draft the 5 key sections:
 *   **The Mission:** Why are we working together?
 *   **Our Obligations:** What we will do.
@@ -47,10 +47,7 @@ Draft the 5 key sections:
 *   **The Data:** How will leads/data be handled?
 *   **The Term:** When does this agreement end?
 
-### Phase 3: Output
+**Phase 3: Output**
 1.  **Create:** `partnership_mou_v1.md`.
 2.  **Summary:** "Drafted a mutually beneficial MOU. Ready for signature."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

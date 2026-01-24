@@ -39,6 +39,3 @@ Close the conversion gap between devices.
 3.  **Flag:** Gap > 1.5%.
 4.  **Output:** Save `mobile_fix_list.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

@@ -35,20 +35,17 @@ Find the bottleneck in your sales process.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Benchmark
+**Phase 1: Benchmark**
 1.  **Input:** Load `deal_pipeline.csv`.
 2.  **Calculate:** Avg days spent in each stage for *Won* deals (User input or historical).
 
-### Phase 2: The Rot Check
+**Phase 2: The Rot Check**
 For each open deal:
 1.  **Compare:** Is `Current_Days` > `Benchmark`?
 2.  **Flag:** If yes, mark as "At Risk".
 
-### Phase 3: The Report
+**Phase 3: The Report**
 Create `pipeline_risk_report.md`:
 *   **Bottleneck:** "Negotiation stage is 30% slower than last quarter."
 *   **Action List:** "John needs to follow up with Gamma LLC (120 days in Neg)."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

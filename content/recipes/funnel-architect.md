@@ -39,12 +39,10 @@ Map & Fix Sales Flows.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `funnels.csv` exist?
 2.  **If Missing:** Create `funnels.csv` using the `sampleData`.
 3.  **If Present:** Load the funnel list.
 
-### Phase 2: The Optimization Loop
+**Phase 2: The Optimization Loop**
 For each funnel in the CSV:
 1.  **Map Current State:** Break the `Current_Steps` into a logical sequence.
 2.  **Diagnose Bottleneck:** Identify where the `Primary_Metric` is most likely suffering (e.g., "Manual legal review" or "No automated nurture after signup").
@@ -52,10 +50,7 @@ For each funnel in the CSV:
 4.  **Generate Diagram:** Use `generate_diagram` to create a vertical flowchart of the new process.
 5.  **Draft Strategy:** Create `funnel_audits/[Funnel_Name]_report.md` including the bottleneck analysis and the implementation checklist.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `funnel_portfolio_matrix.csv` with columns: `Funnel_Name`, `Identified_Leak`, `Optimization_Fix`, `File_Path`.
 2.  **Report:** "Successfully architected [X] optimized funnels. Visual diagrams and implementation roadmaps are ready."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

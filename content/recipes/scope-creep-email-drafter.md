@@ -35,12 +35,10 @@ Say 'No' without losing the client.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `requests.csv` exist?
 2.  **If Missing:** Create `requests.csv` using the `sampleData`.
 3.  **If Present:** Load the request list.
 
-### Phase 2: The Response Loop
+**Phase 2: The Response Loop**
 For each request in the CSV:
 1.  **Analyze Impact:** Determine if the `Request_Text` is a minor tweak or a major `SOW` violation.
 2.  **Draft Response:**
@@ -49,10 +47,7 @@ For each request in the CSV:
     *   **The "Upsell":** "We can definitely add that! It will require an additional [X] hours. Would you like me to send over a Change Order?"
 3.  **Output:** Save to `scope_responses/[Client_Name]_reply.md`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `scope_creep_log.csv` with columns: `Client_Name`, `Request_Summary`, `Recommended_Pivot`, `File_Path`.
 2.  **Report:** "Successfully drafted [X] scope-creep responses. Profit margins for [Project_Goal] projects have been protected."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

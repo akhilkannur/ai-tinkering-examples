@@ -40,6 +40,3 @@ Identify accounts with adoption failure.
 3.  **Flag:** < 10%.
 4.  **Output:** Save `zombie_accounts.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

@@ -33,16 +33,14 @@ Scan 100 media queries and draft 5 winning pitches.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Context Load
-1.  **Check:** Does `media_queries.txt` exist? If missing, create it.
 2.  **Bio Setup:** Ask the user for their "Pitch Credentials" (Title, 2-sentence bio, headshot link).
 
-### Phase 2: The Filter Loop
+**Phase 2: The Filter Loop**
 1.  **Scan:** Iterate through every block in `media_queries.txt`.
 2.  **Match:** Identify queries containing target keywords (e.g., "SaaS", "AI").
 3.  **Qualify:** Ensure the user meets the journalist's requirements (e.g., "Must be a founder").
 
-### Phase 3: Pitch Production
+**Phase 3: Pitch Production**
 For every qualified query found:
 1.  **Draft:** Write a subject line: "RE: [Outlet Name] - [Bio Snippet]".
 2.  **Write:** Draft a 3-paragraph pitch:
@@ -50,10 +48,7 @@ For every qualified query found:
     *   *P2:* The "Value Nugget" (The expert answer).
     *   *P3:* Link to further assets.
 
-### Phase 4: Output
+**Phase 4: Output**
 1.  **Save:** Create `daily_pr_pitches.md` with all drafted emails.
 2.  **Report:** "Found [X] opportunities. Pitch drafts are ready."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

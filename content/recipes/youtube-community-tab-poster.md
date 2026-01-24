@@ -35,12 +35,10 @@ Keep subscribers alive between uploads.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `channels.csv` exist?
 2.  **If Missing:** Create `channels.csv` using the `sampleData`.
 3.  **If Present:** Load the channel list.
 
-### Phase 2: The Content Planning Loop
+**Phase 2: The Content Planning Loop**
 For each channel in the CSV:
 1.  **Draft Poll (The Feedback):** "Which [Main_Topic] struggle are you facing right now?" (4 specific options).
 2.  **Draft Teaser (The Curiosity):** "Just finished filming the [Next_Video_Topic] guide. You won't believe [Specific Detail]. Dropping Tuesday! 🔔"
@@ -48,10 +46,7 @@ For each channel in the CSV:
 4.  **Draft CTA:** "Check the link in our bio for the free resource on [Main_Topic]."
 5.  **Output:** Save to `community_plans/[Channel_Name]_week.md`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `community_engagement_manifest.csv` with columns: `Channel_Name`, `Poll_Topic`, `Teaser_Hook`, `File_Path`.
 2.  **Report:** "Successfully designed [X] weeks of community content. Ready to keep your subscribers engaged between uploads."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

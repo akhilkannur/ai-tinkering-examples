@@ -41,6 +41,3 @@ Ensure sales team social presence is optimized.
 3.  **Flag:** Reps with missing elements.
 4.  **Output:** Save `profile_fix_list.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

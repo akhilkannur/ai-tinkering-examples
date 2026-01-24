@@ -40,6 +40,3 @@ Benchmark and optimize onboarding speed.
 3.  **Compare:** Individual vs Team average.
 4.  **Output:** Save `ramp_velocity_report.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

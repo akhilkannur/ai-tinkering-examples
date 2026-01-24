@@ -31,10 +31,8 @@ Reverse-engineer 10 winning ads into design briefs.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Gallery Setup
-1.  **Check:** Does the folder `competitor_gallery/` exist? If missing, create it.
 
-### Phase 2: The Vision Loop
+**Phase 2: The Vision Loop**
 For each image in the folder:
 1.  **Look:** Analyze the visual hierarchy.
     *   *Where is the eye drawn?*
@@ -42,11 +40,8 @@ For each image in the folder:
     *   *Is it a real person or a product shot?*
 2.  **Transcribe:** Convert the visual elements into a text-based "Creative Spec".
 
-### Phase 3: The Unified Brief
+**Phase 3: The Unified Brief**
 1.  **Synthesis:** Identify the #1 pattern across all competitors.
 2.  **Create:** `master_design_brief.md`.
 3.  **Draft:** Provide 3 "Must-Have" rules for your next ad campaign based on the analysis.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

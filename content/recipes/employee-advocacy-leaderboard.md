@@ -41,6 +41,3 @@ Gamify employee advocacy.
 3.  **Rank:** Descending.
 4.  **Output:** Save `advocacy_winners.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

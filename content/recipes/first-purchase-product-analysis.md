@@ -39,6 +39,3 @@ Focus acquisition spend on high-retention products.
 3.  **Count:** Frequency of `First_Product`.
 4.  **Output:** Save `gateway_products.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

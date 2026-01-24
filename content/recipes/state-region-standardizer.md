@@ -41,6 +41,3 @@ Cleanse geographical data for territory accuracy.
 3.  **Identify:** Unmatched states for review.
 4.  **Output:** Save `clean_states.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

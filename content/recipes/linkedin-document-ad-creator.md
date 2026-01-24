@@ -35,12 +35,10 @@ Stop the scroll with a PDF.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `assets.csv` exist?
 2.  **If Missing:** Create `assets.csv` using the `sampleData`.
 3.  **If Present:** Load the asset list.
 
-### Phase 2: The Ad Drafting Loop
+**Phase 2: The Ad Drafting Loop**
 For each asset in the CSV:
 1.  **Slide 1 (The Hook):** Draft a bold cover page. "The [Asset_Title] is here. Why [Core_Insight] matters." Add "Swipe to read" indicator.
 2.  **Slides 2-4 (The Value):** Extract 3 micro-insights related to the `Core_Insight`. Each slide must have 1 headline and 1 supporting visual description.
@@ -48,10 +46,7 @@ For each asset in the CSV:
 4.  **UI Verification:** Ensure all slide text is centered to avoid being covered by the "Read More" or "Share" buttons.
 5.  **Output:** Save to `doc_ads/[Asset_Title]_brief.md`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `ad_production_manifest.csv` with columns: `Asset_Title`, `Top_Slide_Hook`, `CTA_Link_Text`, `File_Path`.
 2.  **Report:** "Successfully designed [X] document ads. Slide-by-slide briefs ready for your design team."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

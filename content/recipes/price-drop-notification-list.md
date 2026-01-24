@@ -40,6 +40,3 @@ Drive sales via price alerts.
 2.  **Filter:** Current < Old.
 3.  **Output:** Save `price_drop_emails.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

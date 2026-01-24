@@ -35,20 +35,15 @@ Steal traffic from all your competitors at once.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Setup
-1.  **Check:** Does `competitors_to_compare.csv` exist? If missing, create template.
 
-### Phase 2: The Intel Loop
+**Phase 2: The Intel Loop**
 For each competitor in the CSV:
 1.  **Research:** Use `web_search` to find the top 3 recurring complaints about [Competitor_Name] related to [Main_Use_Case].
 2.  **Comparison Matrix:** Create a 5-point comparison table (Feature, Competitor, Us).
 3.  **Draft:** Write the "Switching Story" (Why migrate now?).
 
-### Phase 3: Hub Generation
+**Phase 3: Hub Generation**
 1.  **Action:** Create a folder `comparison_pages/`.
 2.  **Save:** Save each page as `alternative-to-[competitor].md`.
 3.  **Report:** "Generated [X] comparison pages in /comparison_pages. Ready for Webflow/Wordpress upload."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

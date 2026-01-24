@@ -41,6 +41,3 @@ Generate targeted cross-sell lists.
 2.  **Filter:** Bought 'Tent' AND NOT 'Footprint'.
 3.  **Output:** Save `cross_sell_footprint.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

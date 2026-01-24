@@ -35,12 +35,10 @@ Never go into a call blind.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `meetings.csv` exist?
 2.  **If Missing:** Create `meetings.csv` using the `sampleData`.
 3.  **If Present:** Load the meeting list.
 
-### Phase 2: The Research Loop
+**Phase 2: The Research Loop**
 For each prospect in the CSV:
 1.  **Company Deep-Dive:** Use `web_fetch` to search for "[Company] news" and check their official site for latest announcements.
 2.  **Profile Audit:** Research the prospect's LinkedIn activity. Identify their top 3 recent posts or "likes".
@@ -51,10 +49,7 @@ For each prospect in the CSV:
     *   **The Business Context:** Recent wins or "Red Flags" (e.g., leadership changes).
 5.  **Output:** Save to `dossiers/[Name]_brief.md`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `daily_meeting_manifest.csv` with columns: `Name`, `Company`, `Key_Icebreaker`, `File_Path`.
 2.  **Report:** "Successfully built [X] dossiers. All meeting briefs are ready for review."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

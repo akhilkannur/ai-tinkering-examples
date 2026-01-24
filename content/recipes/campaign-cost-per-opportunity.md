@@ -40,6 +40,3 @@ Calculate actual pipeline efficiency.
 3.  **Rank:** Sort by CPO ascending.
 4.  **Output:** Save `campaign_cpo_report.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

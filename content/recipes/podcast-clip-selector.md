@@ -32,10 +32,8 @@ Identify viral social clips for your entire season.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Resource Setup
-1.  **Check:** Does the folder `transcripts/` exist? If missing, create it.
 
-### Phase 2: The Moment Hunt
+**Phase 2: The Moment Hunt**
 For each transcript in the folder:
 1.  **Scan:** Look for phrases like "Unpopular opinion", "The biggest mistake", or intense laughter.
 2.  **Select:** Identify 3 distinct clips:
@@ -44,10 +42,7 @@ For each transcript in the folder:
     *   *Clip 3: The Action.* (Step-by-step tip).
 3.  **Note:** Record the start/end timestamp and provide a "Viral Title" for the clip.
 
-### Phase 3: The Edit List
+**Phase 3: The Edit List**
 1.  **Create:** `viral_clips_to_cut.csv` with columns: `Episode,Timestamp,Title,Hook_Type`.
 2.  **Summary:** "Found [X] viral moments across [Y] episodes. Ready for the editor."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

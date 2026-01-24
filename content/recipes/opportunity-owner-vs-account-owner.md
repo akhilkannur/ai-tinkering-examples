@@ -41,6 +41,3 @@ Maintain ownership data integrity.
 2.  **Filter:** Opp_Owner != Acc_Owner.
 3.  **Output:** Save `ownership_conflicts.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

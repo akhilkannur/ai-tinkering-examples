@@ -40,6 +40,3 @@ Identify sandbagging or over-optimism in sales commits.
 3.  **Flag:** Accuracy > 1.5 (Sandbagger) or Accuracy < 0.7 (Over-optimist).
 4.  **Output:** Save `forecast_bias_report.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

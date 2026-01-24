@@ -47,6 +47,3 @@ sampleData
 3.  **Flag:** Age > 2x Avg (Zombie) or Age < 0.2x Avg (Audit Risk).
 4.  **Output:** Save `cycle_outliers.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

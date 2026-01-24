@@ -41,6 +41,3 @@ Assess program liability and engagement.
 2.  **Calculate:** Rate = Redeemed / Issued.
 3.  **Output:** Save `loyalty_health.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

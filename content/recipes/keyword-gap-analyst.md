@@ -35,12 +35,10 @@ Steal your competitor's traffic.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `competitors.csv` exist?
 2.  **If Missing:** Create `competitors.csv` using the `sampleData`.
 3.  **If Present:** Load the competitor list.
 
-### Phase 2: The Gap Analysis Loop
+**Phase 2: The Gap Analysis Loop**
 For each competitor in the CSV:
 1.  **Crawl Top Pages:** Use `web_fetch` to find the most prominent pages on the competitor's `Website`.
 2.  **Infer Keywords:** Extract the core topics they are targeting (e.g., "Lead Management", "Sales Automation").
@@ -50,11 +48,8 @@ For each competitor in the CSV:
     *   **The Priority:** High priority for "Transactional" topics (e.g., "Pricing", "Comparison").
     *   **The Title:** A recommended SEO-optimized headline.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `gap_analysis_master.csv` with columns: `Competitor_Name`, `Keyword_Gap`, `Intent`, `Target_Headline`, `Priority`.
 2.  **Create:** `seo_content_calendar.md` with a 12-week roadmap based on the gaps found.
 3.  **Report:** "Successfully identified [X] keyword gaps. Content calendar generated with [Y] high-priority transactional targets."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

@@ -42,6 +42,3 @@ Detect performance anomalies on high-traffic pages.
 4.  **Flag:** Drift > 30% reduction.
 5.  **Output:** Save `lp_performance_alerts.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

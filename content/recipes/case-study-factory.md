@@ -33,22 +33,17 @@ Turn 10 transcripts into 10 closed deals.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Resource Setup
-1.  **Check:** Does the folder `client_interviews/` exist? If missing, create it.
 2.  **Initialize:** Create `case_study_index.csv` with headers: `Client,Hero_Metric,Status,Asset_Link`.
 
-### Phase 2: The Production Loop
+**Phase 2: The Production Loop**
 For each `.txt` file in `client_interviews/`:
 1.  **Extract:** Identify the Villain (Pain), the Hero (Product), and the Victory (ROI).
 2.  **Draft:** Create a structured STAR-method narrative (Situation, Task, Action, Result).
 3.  **Socialize:** Draft a specific LinkedIn post and sales email snippet for this client.
 
-### Phase 3: Packaging
+**Phase 3: Packaging**
 1.  **Action:** Create a folder `polished_case_studies/`.
 2.  **Save:** Save each result as `case-study-[client-name].md`.
 3.  **Summary:** "Processed [X] interviews. Generated [Y] case studies. See /polished_case_studies."
 ---
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

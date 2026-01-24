@@ -39,6 +39,3 @@ Proactively unstuck slow deals.
 2.  **Filter:** Days_Current > Avg_Days_Allowed.
 3.  **Output:** Save `acceleration_list.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

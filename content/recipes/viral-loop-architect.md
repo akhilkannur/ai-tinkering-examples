@@ -35,20 +35,15 @@ Design referral engines for every user segment.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Context Load
-1.  **Check:** Does `user_segments.csv` exist? If missing, create template.
 
-### Phase 2: The Architect Loop
+**Phase 2: The Architect Loop**
 For each segment in the CSV:
 1.  **Strategy:** Define the double-sided reward logic (e.g., "Give a Seat, Get a Seat").
 2.  **Visualize:** Generate a sequence diagram of the user journey from Invitation to Reward.
 3.  **Draft:** Write the invite email copy specifically for that segment's context.
 
-### Phase 3: Deliverable
+**Phase 3: Deliverable**
 1.  **Action:** Create a folder `growth_loops/`.
 2.  **Save:** Save each spec as `loop-[segment].md`.
 3.  **Report:** "Successfully architected [X] growth loops. Ready for technical implementation."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

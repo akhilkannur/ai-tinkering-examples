@@ -34,10 +34,8 @@ Find trending news and draft social posts on autopilot.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Niche Discovery
-1.  **Check:** Does `news_niches.csv` exist? If missing, create template.
 
-### Phase 2: The Newsroom Loop
+**Phase 2: The Newsroom Loop**
 For each niche in the CSV:
 1.  **Search:** Find the top 3 news stories from the last 24 hours.
 2.  **Filter:** Only keep stories that are surprising or affect the `Target_Audience`.
@@ -46,11 +44,8 @@ For each niche in the CSV:
     *   *The Hot Take:* Why most people are wrong about it.
     *   *The CTA:* A question to drive comments.
 
-### Phase 3: The Content Queue
+**Phase 3: The Content Queue**
 1.  **Action:** Create a folder `trending_queue/`.
 2.  **Save:** Save each result as `[Niche]-posts.md`.
 3.  **Report:** "Successfully newsjacked [X] niches. Your social queue is ready."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

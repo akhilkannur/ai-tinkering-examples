@@ -48,6 +48,3 @@ sampleData
 3.  **Flag:** Drops > 5 positions.
 4.  **Output:** Save `volatility_alert.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

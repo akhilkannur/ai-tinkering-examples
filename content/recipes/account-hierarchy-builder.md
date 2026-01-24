@@ -41,6 +41,3 @@ Map complex corporate family trees in the CRM.
 3.  **Infer:** Mark the first/oldest as Parent.
 4.  **Output:** Save `account_hierarchy.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

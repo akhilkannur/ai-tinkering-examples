@@ -35,12 +35,10 @@ Live radio for B2B.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `events.csv` exist?
 2.  **If Missing:** Create `events.csv` using the `sampleData`.
 3.  **If Present:** Load the event list.
 
-### Phase 2: The Scripting Loop
+**Phase 2: The Scripting Loop**
 For each event in the CSV:
 1.  **Draft Intro (0-5m):** Create a high-energy welcome, guest introduction, and a prompt for attendees to "Share this event" with their network.
 2.  **Map Discussion Points (5-20m):** Identify 3 core questions or topics tailored to the `Topic` and `Guest_Name`.
@@ -48,10 +46,7 @@ For each event in the CSV:
 4.  **Closing:** Draft a strong Call to Action (Newsletter signup, follow guest, etc.).
 5.  **Output:** Save to `event_scripts/[Topic]_script.md`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `event_calendar_summary.csv` with columns: `Topic`, `Guest_Name`, `Date`, `File_Path`.
 2.  **Report:** "Successfully scripted [X] audio events. All Run of Show documents are ready for your moderator."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

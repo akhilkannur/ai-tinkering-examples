@@ -41,6 +41,3 @@ Ensure invoices get delivered.
 2.  **Filter:** Bounce_Status != 'Ok'.
 3.  **Output:** Save `billing_fix_list.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

@@ -35,22 +35,17 @@ Standardize your tracking links.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `campaigns.csv` exist?
 2.  **If Missing:** Create `campaigns.csv` using the `sampleData`.
 3.  **If Present:** Load the campaign list.
 
-### Phase 2: The Link Building Loop
+**Phase 2: The Link Building Loop**
 For each row in the CSV:
 1.  **Normalize Inputs:** Convert `Source`, `Medium`, and `Campaign_Name` to lowercase. Replace spaces with underscores or dashes.
 2.  **Construct URL:** Build the string: `[Base_URL]?utm_source=[Source]&utm_medium=[Medium]&utm_campaign=[Campaign_Name]`.
 3.  **Final Polish:** Check if the `Base_URL` already has a `?` and use `&` if so.
 4.  **Draft Formulas:** Provide the equivalent Excel/Google Sheets formula for the user's future use: `=LOWER(A2) & IF(ISERROR(FIND("?",A2)),"?","&") & "utm_source=" & LOWER(B2) & ...`
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `tagged_campaign_links.csv` with columns: `Campaign_Name`, `Source`, `Original_URL`, `Final_UTM_Link`.
 2.  **Report:** "Successfully generated [X] tracking links. Data attribution is now standardized across all sources."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

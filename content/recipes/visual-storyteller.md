@@ -35,12 +35,10 @@ Blog -> Comic Strip.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `articles.csv` exist?
 2.  **If Missing:** Create `articles.csv` using the `sampleData`.
 3.  **If Present:** Load the article list.
 
-### Phase 2: The Storytelling Loop
+**Phase 2: The Storytelling Loop**
 For each article in the CSV:
 1.  **Research:** Use `web_fetch` to ingest the `URL`. Identify the 4 key stages of the narrative arc.
 2.  **Draft Script:** Write a punchy, platform-ready LinkedIn post summarizing the story.
@@ -51,10 +49,7 @@ For each article in the CSV:
     *   **Panel 4:** The Success (New Reality).
 4.  **Output:** Save the social copy and image references to `stories/[Title]_bundle.md`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `visual_content_inventory.csv` with columns: `Title`, `Narrative_Arc_Summary`, `Image_Filenames`, `File_Path`.
 2.  **Report:** "Successfully architected [X] visual stories. Storyboards and LinkedIn copy are ready for scheduling."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

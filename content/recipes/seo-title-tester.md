@@ -35,20 +35,15 @@ High-CTR titles for 50 keywords at once.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Setup
-1.  **Check:** Does `target_keywords.csv` exist? If missing, create template.
 2.  **Read:** Load the list of keywords and content types.
 
-### Phase 2: The Generation Loop
+**Phase 2: The Generation Loop**
 For each keyword in the CSV:
 1.  **Generate:** Create 5 high-CTR variations (Listicle, Benefit, Curiosity, Authority, Standard).
 2.  **Draft:** Write a 155-character meta description for the best variation.
 
-### Phase 3: Selection & Save
+**Phase 3: Selection & Save**
 1.  **Rank:** Pick the #1 variation for each keyword based on character count (<60) and hook strength.
 2.  **Create:** `optimized_seo_metadata.csv` with columns: `Keyword,Target_Title,Meta_Description`.
 3.  **Summary:** "Optimized metadata for [X] keywords. Ready for upload."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

@@ -50,6 +50,3 @@ sampleData
 3.  **Mark:** '1' for owned, '0' for whitespace.
 4.  **Output:** Save `whitespace_matrix.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

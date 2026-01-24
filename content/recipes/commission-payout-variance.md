@@ -42,6 +42,3 @@ Audit commission accuracy via anomaly detection.
 3.  **Flag:** > 100% increase.
 4.  **Output:** Save `payout_audit.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

@@ -34,20 +34,15 @@ Find 100 leads asking for help across Reddit & LinkedIn.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Signal Setup
-1.  **Check:** Does `intent_keywords.csv` exist? If missing, create template.
 
-### Phase 2: The Listening Loop
+**Phase 2: The Listening Loop**
 For each row in the CSV:
 1.  **Execute:** Run advanced search queries for `[Keyword] "looking for"` or `[Keyword] "help needed"`.
 2.  **Filter:** Ignore vendor spam and bot posts. Keep only genuine users.
 3.  **Audit:** Categorize the "Pain" (Price vs UX vs Gap).
 4.  **Score:** Assign an Urgency Score (1-10) based on the time-sensitivity of the post.
 
-### Phase 3: Lead Export
+**Phase 3: Lead Export**
 1.  **Create:** `high_intent_social_leads.csv` with columns: `Source_URL,Category,Urgency,Contact_Handle`.
 2.  **Summary:** "Processed [X] signals. Identified [Y] high-urgency leads ready for DMing."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

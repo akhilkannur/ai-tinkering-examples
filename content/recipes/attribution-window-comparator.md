@@ -40,6 +40,3 @@ Understand the time-lag of marketing impact.
 2.  **Calculate:** Lift = (7Day - 1Day) / 1Day.
 3.  **Output:** Save `attribution_lift.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

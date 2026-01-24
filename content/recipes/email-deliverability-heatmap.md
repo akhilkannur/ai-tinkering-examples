@@ -40,6 +40,3 @@ Troubleshoot deliverability by provider.
 3.  **Flag:** Rates < 10%.
 4.  **Output:** Save `deliverability_issues.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

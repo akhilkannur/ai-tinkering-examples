@@ -37,22 +37,17 @@ Group keywords in seconds.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `keywords.csv` exist?
 2.  **If Missing:** Create `keywords.csv` using the `sampleData`.
 3.  **If Present:** Load the keyword list.
 
-### Phase 2: The Clustering Loop
+**Phase 2: The Clustering Loop**
 For each keyword in the CSV:
 1.  **Extract Intent:** Identify if the keyword is Informational (How/What), Transactional (Buy/Pricing), or Navigational (Brand).
 2.  **Group by Root:** Group keywords sharing a common semantic root (e.g., "CRM").
 3.  **Define Hubs:** Designate high-volume, generic keywords as "Hubs" and specific, long-tail keywords as "Spokes".
 4.  **Audit Modifiers:** Group by modifiers like "Best", "Alternative", "vs", and "Review".
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `semantic_content_clusters.csv` with columns: `Hub_Topic`, `Spoke_Keyword`, `Intent`, `Search_Volume`.
 2.  **Report:** "Successfully clustered [X] keywords into [Y] distinct topics. Your Hub & Spoke strategy is ready for implementation."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

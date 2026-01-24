@@ -41,6 +41,3 @@ Cleanse job title data for better segmentation.
 3.  **Map:** Assign 'Manager' if Title contains [Manager, Lead].
 4.  **Output:** Save `normalized_titles.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

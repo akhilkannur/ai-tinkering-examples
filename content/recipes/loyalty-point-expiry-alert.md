@@ -40,6 +40,3 @@ Reduce point liability and drive sales.
 2.  **Filter:** Expiry within 30 days AND Balance > 100.
 3.  **Output:** Save `point_expiry_campaign.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

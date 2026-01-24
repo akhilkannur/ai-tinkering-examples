@@ -41,6 +41,3 @@ Prove event value beyond direct leads.
 3.  **Sum:** Opp_Value.
 4.  **Output:** Save `event_influence_report.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

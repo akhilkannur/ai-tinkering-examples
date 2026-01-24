@@ -40,12 +40,10 @@ Get accepted by VIPs.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `prospects.csv` exist?
 2.  **If Missing:** Create `prospects.csv` using the `sampleData`.
 3.  **If Present:** Load the prospect list.
 
-### Phase 2: The Drafting Loop
+**Phase 2: The Drafting Loop**
 For each prospect in the CSV:
 1.  **Analyze Context:** Determine if the `Context` is a "Recent Post", "Shared Interest", or "Work Observation".
 2.  **Draft 3 Variations:**
@@ -54,10 +52,7 @@ For each prospect in the CSV:
     *   **The Direct:** "Hey [Name], loved your point about [Context] in your latest post. Adding you to keep learning from your work."
 3.  **Character Check:** Ensure all variations are < 280 characters (safely below the 300 limit).
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `linkedin_outreach_notes.csv` with columns: `Name`, `Profile_URL`, `Note_Option_1`, `Note_Option_2`.
 2.  **Report:** "Successfully drafted [X] personalized notes. Ready for your LinkedIn outreach."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

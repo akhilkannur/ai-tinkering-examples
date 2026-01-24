@@ -41,6 +41,3 @@ Encourage modern selling behaviors.
 3.  **Flag:** Reps < 10% social.
 4.  **Output:** Save `social_adoption_report.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

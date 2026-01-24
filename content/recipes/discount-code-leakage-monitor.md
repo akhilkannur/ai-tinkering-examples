@@ -41,6 +41,3 @@ Detect and kill leaked promo codes.
 3.  **Flag:** Spikes > 10x normal.
 4.  **Output:** Save `leaked_codes.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

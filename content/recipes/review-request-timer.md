@@ -40,6 +40,3 @@ Maximize review generation rates.
 2.  **Calculate:** Request_Date = Delivered_Date + 2 days.
 3.  **Output:** Save `review_request_queue.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

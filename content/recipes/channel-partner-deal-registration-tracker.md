@@ -48,6 +48,3 @@ sampleData
 2.  **Match:** `Lead_Company` against internal CRM export.
 3.  **Output:** Save `deal_conflicts.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

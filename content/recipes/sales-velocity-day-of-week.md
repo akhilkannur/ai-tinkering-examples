@@ -41,6 +41,3 @@ Optimize campaign timing.
 3.  **Average:** Revenue per Day.
 4.  **Output:** Save `best_send_days.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

@@ -34,22 +34,17 @@ Book your tour from a list or a niche goal.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Show Selection
-1.  **Check:** Does `podcast_targets.csv` exist?
 2.  **Logic:**
     *   *If Yes:* Load the provided shows.
     *   *If No:* Ask for a "Expertise Niche" (e.g., 'Automation'). Search for the top 5 shows in that category.
 
-### Phase 2: Host Intel
+**Phase 2: Host Intel**
 For each show:
 1.  **Analyze:** Find the latest episode title.
 2.  **Pivot:** Draft a pitch that connects your "Interview Topic" to their recent content.
 
-### Phase 3: The Pitch Kit
+**Phase 3: The Pitch Kit**
 1.  **Draft:** Create a customized email for each show.
 2.  **Create:** `podcast_tour_campaign.md`.
 3.  **Summary:** "Successfully planned a tour for [Niche]. [X] pitches are ready to send."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

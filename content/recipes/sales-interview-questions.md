@@ -35,12 +35,10 @@ Custom assessments for any sales role.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `open_roles.csv` exist?
 2.  **If Missing:** Create `open_roles.csv` using the `sampleData`.
 3.  **If Present:** Load the role list.
 
-### Phase 2: The Assessment Loop
+**Phase 2: The Assessment Loop**
 For each role in the CSV:
 1.  **Identify Success Skills:** Map the `Core_Challenge` to 3 specific skills (e.g., "Stakeholder Mapping", "Objection Neutralization").
 2.  **Draft Questions:** Generate 5 behavioral questions using the STAR method (Situation, Task, Action, Result) tailored to the `Product_Price_Point`.
@@ -48,10 +46,7 @@ For each role in the CSV:
 4.  **Create Scorecard:** Define "Green Flags" (What good looks like) and "Red Flags" for each question.
 5.  **Output:** Save to `interview_kits/[Role]_assessment.md`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `hiring_assessment_summary.csv` with columns: `Role`, `Primary_Skill_Tested`, `Challenge_Type`, `File_Path`.
 2.  **Report:** "Successfully designed [X] interview kits. Behavioral scorecards ready for your hiring managers."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

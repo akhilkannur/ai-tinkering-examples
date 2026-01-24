@@ -41,6 +41,3 @@ Protect customer relationships from over-asking.
 3.  **Flag:** 'Do Not Contact'.
 4.  **Output:** Save `blacklisted_for_ask.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

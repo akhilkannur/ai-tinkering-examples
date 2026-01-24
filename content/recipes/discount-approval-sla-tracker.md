@@ -40,6 +40,3 @@ Ensure rapid quote turnaround.
 3.  **Flag:** > 4 hours.
 4.  **Output:** Save `approval_slowness.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

@@ -42,6 +42,3 @@ Prove the value of the reference program.
 3.  **Compare:** Win Rate %.
 4.  **Output:** Save `reference_impact.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

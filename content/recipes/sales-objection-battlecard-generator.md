@@ -57,6 +57,3 @@ Ensure the output is clean, bolded, and readable while on a call.
 
 Start now.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

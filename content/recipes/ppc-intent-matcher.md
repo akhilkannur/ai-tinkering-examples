@@ -34,19 +34,14 @@ High-intent ad keywords for your entire product line.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Product Load
-1.  **Check:** Does `product_line.csv` exist? If missing, create template.
 
-### Phase 2: The Expansion Loop
+**Phase 2: The Expansion Loop**
 For each product in the CSV:
 1.  **Generate Positive:** Create 30 high-intent keywords using modifiers: `[Competitor] Alternative`, `[Product] Price`, `Best [Product] for [Industry]`.
 2.  **Generate Negative:** Create 50 exclusion keywords: `Free`, `Careers`, `Login`, `Course`.
 3.  **Group:** Map keywords to specific Ad Groups.
 
-### Phase 3: The Deliverable
+**Phase 3: The Deliverable**
 1.  **Create:** `ads_import_ready.csv` with columns: `Campaign,Ad_Group,Keyword,Match_Type`.
 2.  **Summary:** "Generated keywords for [X] product categories. master_ads_sheet.csv is ready for import."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

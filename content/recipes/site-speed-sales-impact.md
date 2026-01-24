@@ -40,6 +40,3 @@ Justify site speed optimizations with ROI.
 3.  **Estimate:** Revenue lost at 4s vs 2s.
 4.  **Output:** Save `speed_roi_case.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

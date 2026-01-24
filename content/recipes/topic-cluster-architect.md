@@ -54,6 +54,3 @@ Architect a topical authority map.
 3.  **Assign:** Main keyword vs long-tail.
 4.  **Output:** Save `content_cluster_map.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

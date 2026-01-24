@@ -40,12 +40,10 @@ Your updates are marketing assets.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `releases.csv` exist?
 2.  **If Missing:** Create `releases.csv` using the `sampleData`.
 3.  **If Present:** Load the release notes.
 
-### Phase 2: The Writing Loop
+**Phase 2: The Writing Loop**
 For each feature in the CSV:
 1.  **Draft Headline:** Create a benefit-driven title (e.g., "Find Anything Instantly with FastSearch").
 2.  **Changelog Entry:** Write a 3-paragraph update:
@@ -54,11 +52,8 @@ For each feature in the CSV:
     *   **Paragraph 3 (The Benefit):** How their life is better now.
 3.  **Social Thread:** Create a 3-tweet thread version for X/Twitter.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `changelog_assets/` folder with `[Feature_Name]_marketing.md` for each entry.
 2.  **Create:** `release_summary.csv` with columns: `Feature_Name`, `Marketing_Headline`, `File_Path`.
 3.  **Report:** "Successfully drafted [X] changelog assets. Technical notes have been transformed into marketing gold."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

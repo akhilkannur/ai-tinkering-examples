@@ -35,12 +35,10 @@ More downloads, same traffic.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `apps.csv` exist?
 2.  **If Missing:** Create `apps.csv` using the `sampleData`.
 3.  **If Present:** Load the app list.
 
-### Phase 2: The Competitive Loop
+**Phase 2: The Competitive Loop**
 For each app in the CSV:
 1.  **Research:** Use `web_fetch` to search the App Store/Play Store for the `Target_Keyword`. Identify the top 3 apps and their screenshot themes.
 2.  **Draft Captions:** Create a 5-slide narrative:
@@ -51,10 +49,7 @@ For each app in the CSV:
     *   **Slide 5 (The CTA):** "Join [X] million users."
 3.  **Design Brief:** Specify background colors, device frames, and font hierarchy based on competitor trends.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `aso_briefs/` folder with `[App_Name]_screenshot_brief.md` for each entry.
 2.  **Report:** "Successfully generated [X] ASO briefs. Competitor research included in each file."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

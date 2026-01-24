@@ -35,12 +35,10 @@ Spot competitor flaws in their support docs.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `competitors.csv` exist?
 2.  **If Missing:** Create `competitors.csv` using the `sampleData`.
 3.  **If Present:** Load the competitor list.
 
-### Phase 2: The Gap Loop
+**Phase 2: The Gap Loop**
 For each competitor in the CSV:
 1.  **Crawl Categories:** Use `web_fetch` to identify the major help categories (e.g., Setup, Billing, API).
 2.  **Analyze Density:** Count articles in "Troubleshooting" or "Common Issues" sections.
@@ -50,11 +48,8 @@ For each competitor in the CSV:
     *   **The Sales Pivot:** A specific "wedge" headline for your sales team.
     *   **The UX Fix:** How your product should handle this feature to win.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `vulnerability_reports/` folder with `[Competitor_Name]_audit.md` for each entry.
 2.  **Create:** `competitive_friction_matrix.csv` with columns: `Competitor_Name`, `Weakest_Feature`, `Friction_Article_Count`, `File_Path`.
 3.  **Report:** "Successfully audited [X] help centers. [Y] critical UX gaps identified for exploitation."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

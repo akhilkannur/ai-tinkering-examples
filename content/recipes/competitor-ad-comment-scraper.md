@@ -40,6 +40,3 @@ Find leads actively unhappy with competitors.
 2.  **Filter:** Text contains [expensive, bug, slow, support].
 3.  **Output:** Save `competitor_detractors.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

@@ -48,6 +48,3 @@ sampleData
 4.  **Calculate:** % Saturation.
 5.  **Output:** Save `neglected_accounts.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

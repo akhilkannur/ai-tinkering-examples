@@ -35,12 +35,10 @@ Slow pages kill ROAS.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `landing_pages.csv` exist?
 2.  **If Missing:** Create `landing_pages.csv` using the `sampleData`.
 3.  **If Present:** Load the page list.
 
-### Phase 2: The Speed Test Loop
+**Phase 2: The Speed Test Loop**
 For each URL in the CSV:
 1.  **Run Test:** Execute `curl -o /dev/null -s -w "%{time_starttransfer},%{time_connect},%{time_total}" [URL]`.
 2.  **Parse Results:**
@@ -53,10 +51,7 @@ For each URL in the CSV:
     *   **DANGER:** Total > 2.5s. (High risk of ad spend waste).
 4.  **Identify Bottleneck:** If `Connect` time is high, flag as "Server/DNS Issue". If `TTFB` is high, flag as "Application/DB Issue".
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `load_speed_audit.csv` with columns: `Page_Name`, `URL`, `TTFB`, `Total_Time`, `Performance_Tier`.
 2.  **Report:** "Successfully audited [X] pages. [Y] pages flagged in DANGER zone. Immediate action recommended for [Traffic_Source] campaigns."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

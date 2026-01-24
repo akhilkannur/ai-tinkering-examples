@@ -41,6 +41,3 @@ Identify stale deals sitting too long in a single stage.
 3.  **Count:** Deals per bucket per stage.
 4.  **Output:** Save `pipeline_age_distribution.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

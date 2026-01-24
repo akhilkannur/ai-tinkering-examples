@@ -34,11 +34,9 @@ Re-engage 100 cold leads with 'New News'.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Setup
-1.  **Check:** Does `lost_leads.csv` exist? If missing, create template.
 2.  **Product Audit:** Ask the user for the top 3 biggest features or price changes launched in the last 6 months.
 
-### Phase 2: The Reviver Loop
+**Phase 2: The Reviver Loop**
 For each lead in the CSV:
 1.  **Match:** Does a recent product launch solve their `Lost_Reason`?
 2.  **Draft:** Write a low-pressure email:
@@ -46,10 +44,7 @@ For each lead in the CSV:
     *   *Value:* "I thought of you because we just shipped [Feature] which was the main thing you needed."
     *   *CTA:* "Worth a 5-min peek at the new docs?"
 
-### Phase 3: Deliverable
+**Phase 3: Deliverable**
 1.  **Create:** `revival_campaign_drafts.csv` with columns: `Name,Email,Draft_Body`.
 2.  **Summary:** "Drafted [X] follow-ups. leads lost to [Reason] had the highest match rate."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

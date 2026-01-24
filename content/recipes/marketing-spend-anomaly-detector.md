@@ -49,6 +49,3 @@ sampleData
 4.  **Flag:** > 1.5x spikes.
 5.  **Output:** Save `spend_alerts.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

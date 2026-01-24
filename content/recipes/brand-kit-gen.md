@@ -35,12 +35,10 @@ Logo + Pattern + Vibe.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `brands.csv` exist?
 2.  **If Missing:** Create `brands.csv` using the `sampleData`.
 3.  **If Present:** Load the brand list.
 
-### Phase 2: The Design Loop
+**Phase 2: The Design Loop**
 For each brand in the CSV:
 1.  **Define Palette:** Map the `Core_Vibe` to 3 hex codes (Primary, Secondary, Accent).
 2.  **Logo Creation:** Use `generate_icon` to create a logo based on the `Brand_Name` and `Description`.
@@ -50,11 +48,8 @@ For each brand in the CSV:
     *   **Typography:** Recommended Google Fonts.
     *   **Assets:** Links to the generated logo and pattern.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `brand_kits/` folder containing all assets and markdown files.
 2.  **Create:** `design_manifest.csv` with columns: `Brand_Name`, `Primary_Color`, `Logo_File`, `Pattern_File`.
 3.  **Report:** "Successfully architected [X] brand kits. Visual assets saved to the `brand_kits/` directory."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

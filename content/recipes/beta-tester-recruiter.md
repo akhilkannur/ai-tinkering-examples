@@ -35,12 +35,10 @@ Find your first 50 users.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `users.csv` exist?
 2.  **If Missing:** Create `users.csv` using the `sampleData`.
 3.  **If Present:** Load the user list.
 
-### Phase 2: The Recruitment Loop
+**Phase 2: The Recruitment Loop**
 For each user in the CSV:
 1.  **Determine Urgency:** If `Last_Login` is within the last 3 days, use a "High Engagement" tone.
 2.  **Draft Invite:**
@@ -49,10 +47,7 @@ For each user in the CSV:
     *   **The Ask:** "We just need 5 minutes of your feedback in exchange for [Incentive/Reward]."
 3.  **Output:** Create `invites/[Name]_beta_invite.txt`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `recruitment_summary.csv` with columns: `Name`, `Email`, `Invite_File_Path`.
 2.  **Report:** "Successfully drafted [X] personalized invites. Check the `invites/` folder."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

@@ -40,6 +40,3 @@ Curate high-value event guest lists.
 2.  **Filter:** Tier 1 AND Title contains [C-Level, VP].
 3.  **Output:** Save `vip_dinner_invites.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

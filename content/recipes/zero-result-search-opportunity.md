@@ -38,6 +38,3 @@ Capture missed revenue from failed searches.
 2.  **Filter:** Result_Count = 0.
 3.  **Output:** Save `missed_searches.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

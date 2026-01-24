@@ -51,6 +51,3 @@ sampleData
 4.  **Benchmark:** Compare vs goal (50/day).
 5.  **Output:** Save `daily_scorecard.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

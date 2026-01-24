@@ -49,6 +49,3 @@ sampleData
 3.  **Filter:** Remove if domain is [temp-mail, mailinator].
 4.  **Output:** Save `clean_subscribers.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

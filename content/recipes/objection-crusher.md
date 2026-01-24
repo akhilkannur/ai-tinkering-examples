@@ -33,25 +33,20 @@ Create battle cards from your notes or competitor reviews.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Ingestion
-1.  **Check:** Does `call_objections.txt` exist?
 2.  **Logic:**
     *   *If Yes:* Load the internal notes.
     *   *If No:* Ask for a "Competitor Name". Search G2/Capterra for 1-star reviews to find what users complain about (e.g., "Hard to use", "Too expensive").
 
-### Phase 2: Categorization
+**Phase 2: Categorization**
 1.  **Group:** Categorize all found objections into: `Price, Technical, Timing, or Status Quo`.
 
-### Phase 3: The Rebuttal Engine
+**Phase 3: The Rebuttal Engine**
 For each category:
 1.  **Draft:** Write a 2-paragraph response.
 2.  **Proof:** Insert a placeholder for a case study or ROI stat.
 3.  **Trap:** Suggest a question to ask the prospect to pivot the conversation.
 
-### Phase 4: Output
+**Phase 4: Output**
 1.  **Save:** Create `sales_battle_card_v1.md`.
 2.  **Summary:** "Generated rebuttals for [X] common objections. Ready for SDR training."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

@@ -40,6 +40,3 @@ Ensure effective beta testing.
 2.  **Filter:** Usage = 0.
 3.  **Output:** Save `inactive_beta_users.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

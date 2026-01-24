@@ -35,12 +35,10 @@ Calculate your market size using real-world data.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `market_segments.csv` exist?
 2.  **If Missing:** Create `market_segments.csv` using the `sampleData`.
 3.  **If Present:** Load the segment list.
 
-### Phase 2: The Research Loop
+**Phase 2: The Research Loop**
 For each segment in the CSV:
 1.  **Count Potential Customers:** Use `web_fetch` to find the most recent count of `Target_Customer` in the specified region.
 2.  **Verify ACV:** Multiply `Avg_Monthly_Price` by 12. Compare this against competitor benchmarks found on the web.
@@ -50,10 +48,7 @@ For each segment in the CSV:
     *   **SOM (Serviceable Obtainable):** Realistic 2-year market share (e.g., 1-5% of SAM).
 4.  **Draft Report:** Create `market_reports/[Segment_Name]_sizing.md` with detailed math and source citations.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `market_opportunity_matrix.csv` with columns: `Segment_Name`, `TAM_Value`, `SAM_Value`, `Growth_Potential`, `File_Path`.
 2.  **Report:** "Successfully modeled [X] market segments. Defensible bottom-up math included in each report."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

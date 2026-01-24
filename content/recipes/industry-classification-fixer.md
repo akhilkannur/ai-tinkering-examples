@@ -41,6 +41,3 @@ Clean industry data for territory planning.
 3.  **Map:** If contains [Bank, Finance, Invest] -> 'Financial Services'.
 4.  **Output:** Save `standardized_industries.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

@@ -39,6 +39,3 @@ Monitor dark social conversations.
 2.  **Find:** Mentions of [BrandName].
 3.  **Output:** Save `community_mentions.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

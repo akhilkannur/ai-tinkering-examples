@@ -40,6 +40,3 @@ Identify high-risk single-threaded deals.
 2.  **Filter:** Opportunities where `Contact_Count` <= 1.
 3.  **Output:** Save `single_thread_risk.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

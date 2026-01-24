@@ -35,12 +35,10 @@ Save them before they go.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `saas_products.csv` exist?
 2.  **If Missing:** Create `saas_products.csv` using the `sampleData`.
 3.  **If Present:** Load the product list.
 
-### Phase 2: The Audit Loop
+**Phase 2: The Audit Loop**
 For each product in the CSV:
 1.  **Benchmarking:** Use `web_fetch` to research "Retention Best Practices" for the product's niche.
 2.  **Design Deflection Logic:**
@@ -49,11 +47,8 @@ For each product in the CSV:
     *   **If [Not Using It]:** Draft a re-onboarding sequence or a "Chat with an Expert" offer.
 3.  **Draft Copy:** Create `retention_flows/[Product_Name]_save_flow.md` with UI mockups for the deflection page.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `retention_flows/` folder containing all audit reports.
 2.  **Create:** `churn_prevention_matrix.csv` with columns: `Product_Name`, `Deflection_Offer`, `Copy_Hook`, `File_Path`.
 3.  **Report:** "Successfully audited [X] products. Retention flows optimized for specific churn reasons."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

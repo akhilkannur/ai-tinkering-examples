@@ -39,6 +39,3 @@ Improve discovery quality by monitoring listening time.
 2.  **Filter:** Talk_Ratio > 60%.
 3.  **Output:** Save `coaching_opportunities.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

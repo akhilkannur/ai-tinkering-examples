@@ -39,6 +39,3 @@ Track competitor content themes.
 2.  **Extract:** Key topics.
 3.  **Output:** Save `competitor_content_calendar.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

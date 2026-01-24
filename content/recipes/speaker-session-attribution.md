@@ -40,6 +40,3 @@ Measure ROI of speaking engagements.
 2.  **Filter:** Opp_Created_Date is NOT NULL.
 3.  **Output:** Save `session_influence.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

@@ -34,21 +34,16 @@ Draft 5 weekly newsletters in one run.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Editorial Setup
-1.  **Check:** Does `newsletter_niches.csv` exist? If missing, create template.
 
-### Phase 2: The Curation Loop
+**Phase 2: The Curation Loop**
 For each niche in the CSV:
 1.  **Fetch:** Scrape the headlines from the provided `Source_URLs`.
 2.  **Filter:** Keep the top 3 stories that contain the specified `Keywords`.
 3.  **Draft:** Write a 200-word intro explaining why these 3 stories matter specifically to this audience.
 4.  **Recap:** Create a bulleted list of the stories with links.
 
-### Phase 3: Deliverable
+**Phase 3: Deliverable**
 1.  **Action:** Create a folder `newsletter_drafts/`.
 2.  **Save:** Save each draft as `[Niche]_digest.md`.
 3.  **Report:** "Curation complete for [X] niches. See /newsletter_drafts."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

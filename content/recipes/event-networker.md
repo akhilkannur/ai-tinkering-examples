@@ -34,21 +34,16 @@ High-value hit lists for your entire conference calendar.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Event Loading
-1.  **Check:** Does `event_calendar.csv` exist? If missing, create template.
 2.  **Verify:** Ensure the associated `Attendee_File` exists in the current directory.
 
-### Phase 2: The Prospecting Loop
+**Phase 2: The Prospecting Loop**
 For each event in the calendar:
 1.  **Filter:** Scan the text file. Keep only those with target titles.
 2.  **Enrich:** For the Top 10 matches, find one "Recent Win" (e.g., funding, launch) via search.
 3.  **Draft:** Create a 1-sentence "Warm Intro" for each person.
 
-### Phase 3: The Hit List
+**Phase 3: The Hit List**
 1.  **Action:** Create a folder `event_game_plans/`.
 2.  **Save:** Save each list as `[Event_Name]_hitlist.csv`.
 3.  **Summary:** "Processed [X] events. Identified [Y] Tier-1 prospects."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

@@ -33,7 +33,7 @@ Make any folder AI-ready instantly.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: The Scan
+**Phase 1: The Scan**
 1.  **Analyze:** Run a list command (`ls -R` or similar) to see the file structure.
 2.  **Identify Stack:**
     *   *Node/JS:* Look for `package.json`.
@@ -41,7 +41,7 @@ Make any folder AI-ready instantly.
     *   *Go:* Look for `go.mod`.
 3.  **Identify Key Folders:** Find where source code, tests, and assets live.
 
-### Phase 2: The Drafting
+**Phase 2: The Drafting**
 Create an `AGENTS.md` file with the following sections:
 1.  **Project Overview:** Name and Stack.
 2.  **Directory Map:** Bullet points explaining key folders (e.g., "`src/`: Main code").
@@ -50,7 +50,7 @@ Create an `AGENTS.md` file with the following sections:
     *   "Formatting rules."
     *   "Where to put new files."
 
-### Phase 3: Execution
+**Phase 3: Execution**
 1.  **Write:** Save the file to the root directory.
 2.  **Summary:** "Context file created. Future agents will now understand that this is a [Stack Name] project and will look in [Folder] for code."
 
@@ -74,6 +74,3 @@ The next time you open your terminal and say *"Analyze the data,"* the AI reads 
 
 **One run makes every future AI interaction 10x faster.**
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

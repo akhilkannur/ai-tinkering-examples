@@ -41,6 +41,3 @@ Monitor onboarding improvements.
 3.  **Trend:** Compare MoM.
 4.  **Output:** Save `activation_trends.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

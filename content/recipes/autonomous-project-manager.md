@@ -39,18 +39,16 @@ The 'Ralph Wiggum' Loop.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check & Initialization
-1.  **Check:** Does `project_goals.csv` exist?
 2.  **If Missing:** Create `project_goals.csv` using the `sampleData`.
 3.  **If Present:** Load the project list.
 
-### Phase 2: The Setup Loop
+**Phase 2: The Setup Loop**
 For each project in the CSV:
 1.  **Check Memory:** Does `[Project_Name]_memory.md` exist? If not, create it with the `Tech_Stack` and `Goal`.
 2.  **Check Progress:** Does `[Project_Name]_progress.txt` exist? If not, initialize it with `STATUS: INITIALIZING`.
 3.  **Decompose:** Create `[Project_Name]_todo.md` with a checklist of atomic steps based on the `Goal`.
 
-### Phase 3: The Execution Loop
+**Phase 3: The Execution Loop**
 For each project where `progress.txt` is not `COMPLETE`:
 1.  **Read Todo:** Get the first unchecked item in `[Project_Name]_todo.md`.
 2.  **Execute:** Perform the specific action (e.g., `write_file`).
@@ -58,10 +56,7 @@ For each project where `progress.txt` is not `COMPLETE`:
 4.  **Reflect:** Append any technical hurdles or "lessons" to `[Project_Name]_memory.md`.
 5.  **Update State:** Update the todo list and the progress file.
 
-### Phase 4: Portfolio Report
+**Phase 4: Portfolio Report**
 1.  **Create:** `portfolio_status.csv` with columns: `Project_Name`, `Status`, `Last_Lesson`.
 2.  **Report:** "Successfully updated [X] projects. Check the individual project folders for detailed logs."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

@@ -59,6 +59,3 @@ You are a **Customer Research Specialist**. Your job is to analyze "Voice of Cus
 
 Start now.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

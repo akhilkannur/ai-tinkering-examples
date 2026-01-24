@@ -34,21 +34,16 @@ Health check 50 endpoints in one run.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Setup
-1.  **Check:** Does `api_endpoints.csv` exist? If missing, create template.
 2.  **Auth:** Ask user for the temporary Bearer Token.
 
-### Phase 2: The Test Loop
+**Phase 2: The Test Loop**
 For each row in the CSV:
 1.  **Test:** Execute `curl -I` to check for 200 OK.
 2.  **Verify:** Perform a GET request. Check if the `Expected_Key` exists in the JSON output.
 3.  **Speed:** Measure the response time.
 
-### Phase 3: The Status Board
+**Phase 3: The Status Board**
 1.  **Create:** `api_health_status.md`.
 2.  **Report:** Use a table to show `Name | Status | Speed | Error`.
 3.  **Summary:** "Processed [X] endpoints. [Y] failed. [Z] are running slow (>500ms)."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

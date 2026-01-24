@@ -48,6 +48,3 @@ sampleData
 3.  **Filter:** Deals > 14 days.
 4.  **Output:** Save `rotting_deals.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

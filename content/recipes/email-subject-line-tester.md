@@ -35,10 +35,8 @@ Generate A/B test variations for 10 campaigns in one run.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Campaign Setup
-1.  **Check:** Does `email_campaigns.csv` exist? If missing, create template.
 
-### Phase 2: The Generation Loop
+**Phase 2: The Generation Loop**
 For each campaign in the CSV:
 1.  **Draft:** Create 10 subject lines using proven frameworks:
     *   *The "Quick" One:* "Quick question regarding [Topic]"
@@ -46,10 +44,7 @@ For each campaign in the CSV:
     *   *The "Negative" One:* "Why your [X] is failing."
 2.  **Pair:** For each subject, write a matching 50-character preview text.
 
-### Phase 3: The Testing Sheet
+**Phase 3: The Testing Sheet**
 1.  **Create:** `optimized_subject_lines.csv` with columns: `Campaign,Version,Subject_Line,Preview_Text`.
 2.  **Summary:** "Generated [X] variations across [Y] campaigns. Ready for A/B testing."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

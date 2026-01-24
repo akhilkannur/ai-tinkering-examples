@@ -35,10 +35,8 @@ Protect the budget across your entire portfolio.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Context Setup
-1.  **Check:** Does `target_industries.csv` exist? If missing, create template.
 
-### Phase 2: The Factory Loop
+**Phase 2: The Factory Loop**
 For each industry in the CSV:
 1.  **Generate Junk:** Add universal negatives (crack, torrent, free).
 2.  **Generate Niche Negatives:** 
@@ -46,10 +44,7 @@ For each industry in the CSV:
     *   *If E-com:* add "cheap", "thrift", "used".
 3.  **Refine:** Remove keywords that might be relevant to the specific industry.
 
-### Phase 3: The Artifact
+**Phase 3: The Artifact**
 1.  **Create:** `master_negative_list.csv` with columns: `Industry,Negative_Keyword`.
 2.  **Report:** "Successfully generated negative keyword sets for [X] industries."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

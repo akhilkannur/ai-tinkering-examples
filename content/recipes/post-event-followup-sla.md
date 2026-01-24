@@ -40,6 +40,3 @@ Enforce event lead SLA compliance.
 2.  **Filter:** First_Call_Time is NULL OR > 24 hours after Upload.
 3.  **Output:** Save `sla_breach_report.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

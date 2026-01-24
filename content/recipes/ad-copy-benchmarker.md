@@ -40,6 +40,3 @@ Monitor competitor messaging strategy.
 3.  **Flag:** New keywords (e.g. 'Money' vs 'Time').
 4.  **Output:** Save `messaging_shift_alert.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

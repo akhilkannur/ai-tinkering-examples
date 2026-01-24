@@ -58,6 +58,3 @@ Save to `sitemap_report.csv` (Columns: `URL`, `Status_Code`, `Action`).
 
 Start now.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

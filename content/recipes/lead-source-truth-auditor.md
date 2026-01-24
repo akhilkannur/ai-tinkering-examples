@@ -40,6 +40,3 @@ Uncover dark social impact.
 3.  **Count:** 'Podcast' mentions with 'Direct/Search' UTMs.
 4.  **Output:** Save `dark_social_analysis.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

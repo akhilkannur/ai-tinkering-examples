@@ -35,23 +35,20 @@ Audit your international pricing or research competitor PPP.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Analysis
+**Phase 1: Input Analysis**
 1.  **Check:** Did the user provide `pricing_table.csv`?
 2.  **Logic:**
     *   *If Yes:* Load the current USD prices.
     *   *If No:* Ask for "Product Category" and "Target Competitor". Research the competitor's localized prices in India and Brazil.
 
-### Phase 2: The Localization Loop
+**Phase 2: The Localization Loop**
 For each target market (IN, BR, UK):
 1.  **Calculate:** Apply the standard PPP adjustment index.
 2.  **Verify:** Check the latest exchange rate.
 3.  **Round:** Ensure the price ends in a "Natural" number (e.g., 999 instead of 1042).
 
-### Phase 3: The Roadmap
+**Phase 3: The Roadmap**
 1.  **Create:** `global_pricing_blueprint.md`.
 2.  **Summary:** "Your $99 Pro plan should be ₹2999 in India to maintain the same 'Purchasing Power'."
 ---
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

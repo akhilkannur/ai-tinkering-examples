@@ -40,6 +40,3 @@ Detect rising frustration in the customer base.
 3.  **Compare:** This week's avg score vs last week.
 4.  **Output:** Save `sentiment_trend_report.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

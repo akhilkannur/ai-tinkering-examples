@@ -34,22 +34,17 @@ YouTube -> Study Notes.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `videos.csv` exist?
 2.  **If Missing:** Create `videos.csv` using the `sampleData`.
 3.  **If Present:** Load the video list.
 
-### Phase 2: The Distillation Loop
+**Phase 2: The Distillation Loop**
 For each video in the CSV:
 1.  **Research:** Use `web_fetch` to search for the transcript or a high-fidelity summary of the `URL`.
 2.  **Analyze Claims:** Identify the "Core Argument" and 3 "Unique Insights".
 3.  **Draft Checklist:** Create a 5-step "Implementation Guide" based on the video's instructions.
 4.  **Output:** Save to `notes/[Title]_distilled.md`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `learning_inventory_summary.csv` with columns: `Title`, `Target_Niche`, `Top_Insight`, `File_Path`.
 2.  **Report:** "Successfully distilled [X] videos. Actionable checklists and study notes are ready for review."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

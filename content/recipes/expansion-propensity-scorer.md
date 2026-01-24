@@ -41,6 +41,3 @@ Predict next-month expansion revenue.
 3.  **Rank:** Descending.
 4.  **Output:** Save `propensity_to_buy.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

@@ -41,6 +41,3 @@ Convert high-value trials.
 3.  **Sort:** Usage_Score Descending.
 4.  **Output:** Save `trial_close_list.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

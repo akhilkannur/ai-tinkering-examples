@@ -35,12 +35,10 @@ Turn dead stock into cash.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `dead_stock.csv` exist?
 2.  **If Missing:** Create `dead_stock.csv` using the `sampleData`.
 3.  **If Present:** Load the inventory data.
 
-### Phase 2: The Campaign Planning Loop
+**Phase 2: The Campaign Planning Loop**
 For each SKU in the CSV:
 1.  **Select Mechanism:**
     *   **If High Quantity (>100):** Design a "Mystery Box" or "GWP (Gift With Purchase)" strategy.
@@ -48,10 +46,7 @@ For each SKU in the CSV:
 2.  **Draft Marketing Spin:** Create 3 high-vibe hooks for the promotion (e.g., "The Vault Reopens").
 3.  **Pricing Strategy:** Calculate the "Bundle Price" or "Discount Tier" that clears stock while preserving margins.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `clearance_campaign_master.csv` with columns: `SKU`, `Product_Name`, `Strategy`, `Promo_Hook`, `Offer_Price`.
 2.  **Report:** "Successfully designed [X] campaigns. Stock liquidation strategy ready for launch."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

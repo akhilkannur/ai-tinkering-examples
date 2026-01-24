@@ -48,6 +48,3 @@ sampleData
 3.  **Filter:** Columns with <10% utilization.
 4.  **Output:** Save `field_health_report.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

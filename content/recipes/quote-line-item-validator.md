@@ -48,6 +48,3 @@ sampleData
 3.  **Check:** Each SKU_List for violations.
 4.  **Output:** Save `invalid_quotes.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

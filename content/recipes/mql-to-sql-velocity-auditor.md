@@ -40,6 +40,3 @@ Audit the speed of the Marketing-to-Sales handoff.
 3.  **Aggregate:** Avg velocity per SDR.
 4.  **Output:** Save `handoff_velocity_report.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

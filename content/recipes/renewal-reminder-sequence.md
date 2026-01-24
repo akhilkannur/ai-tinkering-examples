@@ -35,12 +35,10 @@ No surprise cancellations.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `contracts.csv` exist?
 2.  **If Missing:** Create `contracts.csv` using the `sampleData`.
 3.  **If Present:** Load the account list.
 
-### Phase 2: The Renewal Loop
+**Phase 2: The Renewal Loop**
 For each account in the CSV:
 1.  **Calculate Cadence:**
     *   **90 Days Out:** The "Strategic Review" invite. Focus on ROI and usage wins.
@@ -51,10 +49,7 @@ For each account in the CSV:
     *   **If Health < 5:** Offer a "Success Workshop" or a "Loyalty Credit" to save the account.
 3.  **Draft Emails:** Save to `renewal_comms/[Customer_Name]_sequence.md`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `renewal_outreach_tracker.csv` with columns: `Customer_Name`, `Expiry_Date`, `Sequence_Type`, `File_Path`.
 2.  **Report:** "Successfully generated [X] renewal sequences. [Y] at-risk accounts flagged for immediate CSM attention."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

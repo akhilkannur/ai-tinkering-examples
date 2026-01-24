@@ -40,6 +40,3 @@ Identify high-value accounts with low 'Contact Density'.
 3.  **Flag:** Accounts where `Contact_Count` < 3.
 4.  **Output:** Save `unmapped_top_accounts.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

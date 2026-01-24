@@ -35,12 +35,10 @@ Build narratives that raise money.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `startups.csv` exist?
 2.  **If Missing:** Create `startups.csv` using the `sampleData`.
 3.  **If Present:** Load the startup list.
 
-### Phase 2: The Storyboarding Loop
+**Phase 2: The Storyboarding Loop**
 For each startup in the CSV:
 1.  **Scrape:** Use `web_fetch` to research the `Startup_Name` and `Website`. Identify the core problem, unique mechanism, and target customer.
 2.  **Draft the Narrative:** Outline the 12 slides following the Sequoia framework:
@@ -52,10 +50,7 @@ For each startup in the CSV:
     *   **The Ask:** Tailored to the `Fundraising_Stage`.
 3.  **Output:** Save to `storyboards/[Startup_Name]_deck.md`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `fundraising_manifest.csv` with columns: `Startup_Name`, `Stage`, `Core_Narrative_Hook`, `File_Path`.
 2.  **Report:** "Successfully storyboarded [X] pitch decks. Narratives optimized for investor 30-second scans."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

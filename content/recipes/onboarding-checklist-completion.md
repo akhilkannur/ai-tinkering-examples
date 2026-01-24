@@ -42,6 +42,3 @@ Optimize user activation.
 3.  **Highlight:** Highest drop-off.
 4.  **Output:** Save `activation_friction_report.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

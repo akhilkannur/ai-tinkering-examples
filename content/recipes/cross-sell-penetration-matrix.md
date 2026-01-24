@@ -43,6 +43,3 @@ Identify high-value cross-sell targets.
 3.  **Identify:** Customers missing high-margin products.
 4.  **Output:** Save `expansion_matrix.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

@@ -50,6 +50,6 @@ Generate a new `.md` blueprint file based on a user's process description.
 3.  **Persona Assignment:** Select a relevant B2B role (e.g., "RevOps Analyst", "Content Strategist").
 4.  **Drafting:** Generate the full Markdown content, including YAML frontmatter.
 
-### Phase 3: Output
+**Phase 3: Output**
 1.  **Generate:** Save the result as `new-agent-blueprint.md`.
 2.  **Summary:** Provide a brief explanation of why you structured the logic this way.

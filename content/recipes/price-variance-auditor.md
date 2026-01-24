@@ -40,6 +40,3 @@ Audit discounting hygiene and protect margins.
 3.  **Flag:** Deals with > 30% variance.
 4.  **Output:** Save `extreme_discounts.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

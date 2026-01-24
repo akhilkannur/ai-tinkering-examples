@@ -39,6 +39,3 @@ Improve ad targeting with first-party data.
 3.  **Take:** Top 1%.
 4.  **Output:** Save `lal_seed_audience.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

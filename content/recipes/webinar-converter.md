@@ -33,10 +33,8 @@ Process 10 event transcripts into 50 follow-up emails.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Setup
-1.  **Check:** Does the folder `event_transcripts/` exist? If missing, create it.
 
-### Phase 2: The Conversion Loop
+**Phase 2: The Conversion Loop**
 For each transcript in the folder:
 1.  **Scan:** Identify all questions asked by attendees.
 2.  **Categorize:** Group into "Pricing", "Technical", and "Competitor" buckets.
@@ -47,11 +45,8 @@ For each transcript in the folder:
     *   *Email 4:* The Competitor Comparison.
     *   *Email 5:* The "Last Call" Offer.
 
-### Phase 3: Packaging
+**Phase 3: Packaging**
 1.  **Action:** Create a folder `follow_up_campaigns/`.
 2.  **Save:** Save each sequence as `followup-[event-name].md`.
 3.  **Report:** "Successfully generated [X] follow-up campaigns. Ready for CRM upload."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

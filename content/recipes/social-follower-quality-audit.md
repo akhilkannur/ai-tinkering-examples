@@ -34,23 +34,20 @@ Spot fake followers on your account or a competitor's.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Setup
+**Phase 1: Input Setup**
 1.  **Check:** Did the user provide `follower_list.csv`?
 2.  **Logic:**
     *   *If Yes:* Audit the list. Mark users with no bio or default pics as "SUSPICIOUS."
     *   *If No:* Ask for a "Handle". Use `web_fetch` to see their last 5 posts and follower count.
 
-### Phase 2: The Audit Loop
+**Phase 2: The Audit Loop**
 1.  **Calculate:** Engagement Rate (ER).
 2.  **Benchmark:** 1-3% is standard. <0.5% is a red flag.
 3.  **Audit:** Look at the "Top Likers." Are they also in the same "Pod"?
 
-### Phase 3: The Verdict
+**Phase 3: The Verdict**
 1.  **Create:** `social_audit_report.md`.
 2.  **Score:** 1-100 (Authenticity Score).
 3.  **Summary:** "Handle @[X] has a 0.2% ER. 80% of followers are likely inactive or bots."
 ---
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

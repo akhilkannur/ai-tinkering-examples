@@ -37,10 +37,8 @@ Rewrite 100 product descriptions for search in minutes.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Data Setup
-1.  **Check:** Does `catalog_raw.csv` exist? If missing, create template.
 
-### Phase 2: The Rewrite Loop
+**Phase 2: The Rewrite Loop**
 For each row in the CSV:
 1.  **Contextualize:** Read the `Raw_Features`.
 2.  **Optimize:** Draft a 200-word description:
@@ -49,10 +47,7 @@ For each row in the CSV:
     *   *Bullets:* Convert every tech spec into a user benefit.
 3.  **Validate:** Ensure the `Target_Keyword` appears exactly twice.
 
-### Phase 3: Catalog Export
+**Phase 3: Catalog Export**
 1.  **Create:** `optimized_catalog.csv` with columns: `SKU,Name,SEO_Description,Meta_Description`.
 2.  **Report:** "Successfully optimized [X] product descriptions. Ready for Shopify/Amazon upload."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

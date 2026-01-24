@@ -35,12 +35,10 @@ Crack Google's psychological code.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `target_keywords.csv` exist?
 2.  **If Missing:** Create it.
 3.  **If Present:** Load the keywords.
 
-### Phase 2: The Decoding Loop
+**Phase 2: The Decoding Loop**
 For each keyword:
 1.  **Fetch SERP:** Run `google_web_search` for the keyword.
 2.  **Analyze Top 3:**
@@ -55,11 +53,8 @@ For each keyword:
     *   **Must-Have Sections:** "You must include a 'Pricing' table because all top 3 have one."
     *   **Word Count Estimate:** Average the top 3 (if feasible) or estimate "Long-form" vs "Short-form".
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `content_briefs.md` containing a detailed specification for each keyword.
     *   *Example:* "**Keyword:** 'ai sales tools'. **Format:** Listicle. **Angle:** 'Time-saving'. **Must Include:** Pricing comparison table."
 2.  **Report:** "Decoded [X] SERPs. Found [Y] keywords where your current content format is likely wrong."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

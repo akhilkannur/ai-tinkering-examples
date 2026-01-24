@@ -41,12 +41,10 @@ Draft complex proposals instantly.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `rfps.csv` exist?
 2.  **If Missing:** Create `rfps.csv` using the `sampleData`.
 3.  **If Present:** Load the RFP list.
 
-### Phase 2: The Drafting Loop
+**Phase 2: The Drafting Loop**
 For each RFP in the CSV:
 1.  **Decompose:** Extract individual requirements from the `Requirement_Text`.
 2.  **Map Capabilities:** For each point:
@@ -56,10 +54,7 @@ For each RFP in the CSV:
 3.  **Draft Executive Summary:** Create a 3-paragraph summary focused on the `Budget_Tier` and why the company is the lowest-risk partner.
 4.  **Output:** Save to `drafts/[Project_Name]_response.md`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `rfp_pipeline_tracker.csv` with columns: `Project_Name`, `Requirement_Count`, `Compliance_Match_%`, `File_Path`.
 2.  **Report:** "Successfully drafted [X] RFP responses. High-priority 'Public Sector' requirements flagged for legal review."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

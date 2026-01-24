@@ -40,6 +40,3 @@ Identify causes of single-purchase behavior.
 2.  **Count:** Top Products and Channels.
 3.  **Output:** Save `one_time_buyer_profile.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

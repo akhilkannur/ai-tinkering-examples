@@ -35,21 +35,16 @@ Scripts for HeyGen & Synthesia.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `video_topics.csv` exist?
 2.  **If Missing:** Create `video_topics.csv` using the `sampleData`.
 3.  **If Present:** Load the topic list.
 
-### Phase 2: The Scripting Loop
+**Phase 2: The Scripting Loop**
 For each topic in the CSV:
 1.  **Draft Hook:** Create a high-energy opening: "[smile][nod] Hi there, I'm [Speaker_Name], and today we're talking about [Topic]."
 2.  **Body Text:** Explain the `Key_Benefit` using casual language. Insert `[point-left]` or `[pause]` for emphasis.
 3.  **Call to Action:** End with a strong CTA: "[smile] Click the link in the bio to learn more. [nod]"
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `avatar_scripts.csv` with columns: `Topic`, `Speaker_Name`, `Full_Script`.
 2.  **Report:** "Successfully generated [X] avatar scripts. Ready for import into HeyGen or Synthesia."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

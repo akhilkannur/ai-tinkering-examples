@@ -41,6 +41,3 @@ Drive attendance to field events.
 2.  **Filter:** City in [San Francisco, San Jose, Oakland].
 3.  **Output:** Save `sf_event_invite_list.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

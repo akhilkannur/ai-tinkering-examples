@@ -35,10 +35,8 @@ Audit the sender reputation of 100 domains.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Context Load
-1.  **Check:** Does `domains_to_test.csv` exist? If missing, create template.
 
-### Phase 2: The Audit Loop
+**Phase 2: The Audit Loop**
 For each domain in the CSV:
 1.  **SPF:** `dig +short TXT [domain] | grep spf1`.
 2.  **DMARC:** `dig +short TXT _dmarc.[domain]`.
@@ -48,10 +46,7 @@ For each domain in the CSV:
     *   *Yellow:* Missing DMARC (Vulnerable to spoofing).
     *   *Red:* Missing SPF or MX (Will bounce).
 
-### Phase 3: The Health Report
+**Phase 3: The Health Report**
 1.  **Create:** `deliverability_health_report.csv`.
 2.  **Summary:** "Processed [X] domains. [Y] are at high risk of being blocked by Gmail/Outlook."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

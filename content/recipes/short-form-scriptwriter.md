@@ -34,12 +34,10 @@ Turn your entire blog into 100 vertical scripts.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Resource Loading
-1.  **Check:** Does `content_sources.csv` exist?
 2.  **Seeding:** If missing, create the template.
 3.  **Read:** Load the list of URLs or local file paths.
 
-### Phase 2: The Scripting Loop
+**Phase 2: The Scripting Loop**
 For each source:
 1.  **Analyze:** Extract the "Surprising Fact" and the "Actionable Tip".
 2.  **Generate:** Create a 3-part script:
@@ -47,11 +45,8 @@ For each source:
     *   *3-45s:* The Meat (Step-by-step).
     *   *45-60s:* The Bridge to Newsletter.
 
-### Phase 3: The Archive
+**Phase 3: The Archive**
 1.  **Action:** Create a folder named `production_scripts/`.
 2.  **Save:** Each script as `[Source_Title].md` inside that folder.
 3.  **Report:** "Generated [X] scripts in the /production_scripts folder. Ready to record."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

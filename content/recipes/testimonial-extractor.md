@@ -33,20 +33,15 @@ Process 50 calls into a website-ready library.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Setup
-1.  **Check:** Does the folder `transcripts/` exist? If missing, create it.
 2.  **Initialize:** Create `testimonial_database.csv` with headers: `Source_File,Client_Name,Quote,Category,Metric_Found`.
 
-### Phase 2: The Extraction Loop
+**Phase 2: The Extraction Loop**
 For each `.txt` file in `transcripts/`:
 1.  **Scan:** Find phrases signaling success (e.g., "Loved", "Saved", "Helped").
 2.  **Extract:** Isolate the specific quote and the metric (e.g., "10 hours").
 3.  **Clean:** Remove filler words while keeping the customer's voice.
 
-### Phase 3: Final Output
+**Phase 3: Final Output**
 1.  **Append:** Write results to `testimonial_database.csv`.
 2.  **Summary:** "Processed [X] transcripts. Found [Y] ROI-based testimonials."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

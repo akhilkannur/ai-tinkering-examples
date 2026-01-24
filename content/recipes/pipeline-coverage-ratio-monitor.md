@@ -46,6 +46,3 @@ sampleData
 3.  **Flag:** Ratio < 3.0.
 4.  **Output:** Save `pipeline_health.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

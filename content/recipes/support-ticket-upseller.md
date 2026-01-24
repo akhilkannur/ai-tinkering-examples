@@ -43,23 +43,20 @@ Turn complaints into cash.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: The Scan
+**Phase 1: The Scan**
 1.  **Input:** Load `support_tickets.csv`.
 2.  **Filter:** Look for keywords: "Limit", "Increase", "SSO", "API", "White-label", "Remove branding".
 3.  **Ignore:** "Bug", "Crash", "Error", "Refund".
 
-### Phase 2: The Solution Match
+**Phase 2: The Solution Match**
 For each match, identify the Plan they *need*:
 *   *SSO/Security* -> Enterprise Plan.
 *   *Limits/Volume* -> Pro Plan.
 *   *White-label* -> Agency Plan.
 
-### Phase 3: The Draft
+**Phase 3: The Draft**
 Create `upsell_opportunities.csv` with a draft response:
 *   **Context:** "I see you're looking for [Feature]."
 *   **The Bridge:** "That's actually exclusive to our [Tier] plan, which also includes [Bonus Feature]."
 *   **The Softball:** "Since you're already hitting limits, I can unlock a 7-day trial of Pro so you can keep working. Want me to flip the switch?"
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

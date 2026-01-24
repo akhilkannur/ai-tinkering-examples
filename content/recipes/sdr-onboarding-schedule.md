@@ -35,12 +35,10 @@ Build custom 30-day onboarding plans.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `hires.csv` exist?
 2.  **If Missing:** Create `hires.csv` using the `sampleData`.
 3.  **If Present:** Load the hire list.
 
-### Phase 2: The Ramp Planning Loop
+**Phase 2: The Ramp Planning Loop**
 For each hire in the CSV:
 1.  **Map Foundations (Week 1):** Focus on `Tech_Stack` training and industry lingo. Include "Shadowing 5 calls" as a requirement.
 2.  **Map Launch (Week 2-3):** Set activity targets (Emails/Calls) that scale toward the `Target_Quota`.
@@ -48,10 +46,7 @@ For each hire in the CSV:
 4.  **Create Knowledge Check:** Draft a 5-question quiz for the end of Week 1 to verify product understanding.
 5.  **Output:** Save to `onboarding_plans/[Hire_Name]_ramp_plan.md`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `onboarding_master_calendar.csv` with columns: `Hire_Name`, `Role`, `Ramp_Milestone_Day_14`, `File_Path`.
 2.  **Report:** "Successfully designed [X] onboarding schedules. Time-to-first-meeting optimized for each role."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

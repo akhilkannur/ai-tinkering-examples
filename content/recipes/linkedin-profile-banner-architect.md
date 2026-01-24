@@ -35,12 +35,10 @@ Build a high-converting profile banner.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `profiles.csv` exist?
 2.  **If Missing:** Create `profiles.csv` using the `sampleData`.
 3.  **If Present:** Load the profile list.
 
-### Phase 2: The Niche Research Loop
+**Phase 2: The Niche Research Loop**
 For each profile in the CSV:
 1.  **Market Research:** Use `web_fetch` to find top influencers or leaders in the `Niche`. Identify their banner themes (e.g., "Minimalist", "Bold Typography", "Action-Oriented").
 2.  **Draft the Hero Hook:** "I help [Target Audience] achieve [Result] using [Unique Mechanism]."
@@ -50,12 +48,9 @@ For each profile in the CSV:
     *   **The CTA:** Strategic pointer to the profile's primary link.
 4.  **Visual Brief:** Specify recommended color palettes and font styles based on the `Niche` research.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `banner_briefs/` folder with `[Name]_banner_brief.md` for each entry.
 2.  **Create:** `banner_inventory.csv` with columns: `Name`, `Job_Title`, `Primary_Hook`, `File_Path`.
 3.  **Report:** "Successfully architected [X] banner briefs. Ready for Canva or a graphic designer."
 ---
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.

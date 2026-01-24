@@ -35,22 +35,17 @@ From pocket to CRM in seconds.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `images_to_process.csv` exist?
 2.  **If Missing:** Create `images_to_process.csv` using the `sampleData`. Ensure the `booth_photos/` directory exists.
 3.  **If Present:** Load the image list.
 
-### Phase 2: The Parsing Loop
+**Phase 2: The Parsing Loop**
 For each image in the CSV:
 1.  **Read:** Use image analysis to extract all text from the `Image_Path`.
 2.  **Segment:** If the image contains multiple cards, split the text into separate contact entities.
 3.  **Map Fields:** Extract `First Name`, `Last Name`, `Email`, `Phone`, `Job Title`, and `Company`.
 4.  **Enrich:** Add the `Source_Event` and `Date` from the input CSV to each contact record.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `crm_import_ready.csv` containing all extracted contacts with standardized headers.
 2.  **Report:** "Successfully digitized [X] contacts from [Y] images. Deduplication recommended before final CRM import."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
