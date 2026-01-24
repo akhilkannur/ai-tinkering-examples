@@ -3,7 +3,7 @@ import {
   PenTool, Share2, Mail, Database, Target,
   Briefcase, TrendingUp, ShieldCheck, PieChart,
   HeartHandshake, MessageSquare, ShoppingCart, 
-  Settings, Repeat
+  Settings, Repeat, Cpu
 } from 'lucide-react';
 
 export type Category =
