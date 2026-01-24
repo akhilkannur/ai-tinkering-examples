@@ -18,7 +18,20 @@ const ToolsForContentCreators = () => {
         <meta
           name="description"
           content="The ultimate list of AI tools for content creators. Find the best AI-powered software for video editing, audio production, graphic design, and writing."
+          key="description"
         />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="article" key="og:type" />
+        <meta property="og:title" content="Essential AI Tools for Content Creators (2025) | Video, Audio, Design" key="og:title" />
+        <meta property="og:description" content="The ultimate list of AI tools for content creators. Find the best AI-powered software for video editing, audio production, graphic design, and writing." key="og:description" />
+        <meta property="og:image" content="https://realaiexamples.com/api/og?mode=home" key="og:image" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="Essential AI Tools for Content Creators (2025) | Video, Audio, Design" key="twitter:title" />
+        <meta name="twitter:description" content="The ultimate list of AI tools for content creators. Find the best AI-powered software for video editing, audio production, graphic design, and writing." key="twitter:description" />
+        <meta name="twitter:image" content="https://realaiexamples.com/api/og?mode=home" key="twitter:image" />
       </Head>
       <Navbar />
 

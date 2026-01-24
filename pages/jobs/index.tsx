@@ -22,21 +22,21 @@ export default function JobsPage({ jobs }: JobsPageProps) {
     <>
       <Head>
         <title>AI Jobs | Find Your Next Role in AI - Real AI Examples</title>
-        <meta name="description" content="Browse a curated list of AI job openings from top companies." />
+        <meta name="description" content="Browse a curated list of AI job openings from top companies." key="description" />
 
         {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="AI Jobs | Find Your Next Role in AI" />
-        <meta property="og:description" content="Browse a curated list of AI job openings from top companies." />
-        <meta property="og:url" content="https://your-domain.com/jobs" />
-        <meta property="og:image" content="https://your-domain.com/social-share-default.jpg" />
-        <meta property="og:site_name" content="Real AI Examples" />
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:title" content="AI Jobs | Find Your Next Role in AI" key="og:title" />
+        <meta property="og:description" content="Browse a curated list of AI job openings from top companies." key="og:description" />
+        <meta property="og:url" content="https://realaiexamples.com/jobs" key="og:url" />
+        <meta property="og:image" content="https://realaiexamples.com/api/og?mode=home" key="og:image" />
+        <meta property="og:site_name" content="Real AI Examples" key="og:site_name" />
 
         {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="AI Jobs | Find Your Next Role in AI" />
-        <meta name="twitter:description" content="Browse a curated list of AI job openings from top companies." />
-        <meta name="twitter:image" content="https://your-domain.com/social-share-default.jpg" />
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="AI Jobs | Find Your Next Role in AI" key="twitter:title" />
+        <meta name="twitter:description" content="Browse a curated list of AI job openings from top companies." key="twitter:description" />
+        <meta name="twitter:image" content="https://realaiexamples.com/api/og?mode=home" key="twitter:image" />
       </Head>
 
       <div className="min-h-screen bg-primary-bg">

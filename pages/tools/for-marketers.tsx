@@ -34,7 +34,20 @@ const ToolsForMarketers = () => {
         <meta
           name="description"
           content="An in-depth guide to the top AI-powered tools for marketers. Boost your SEO, automate social media, and write compelling copy with our curated list and analysis."
+          key="description"
         />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="article" key="og:type" />
+        <meta property="og:title" content="Best AI Tools for Marketers (2025) | SEO, Copywriting, Social Media" key="og:title" />
+        <meta property="og:description" content="An in-depth guide to the top AI-powered tools for marketers. Boost your SEO, automate social media, and write compelling copy with our curated list and analysis." key="og:description" />
+        <meta property="og:image" content="https://realaiexamples.com/api/og?mode=home" key="og:image" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="Best AI Tools for Marketers (2025) | SEO, Copywriting, Social Media" key="twitter:title" />
+        <meta name="twitter:description" content="An in-depth guide to the top AI-powered tools for marketers. Boost your SEO, automate social media, and write compelling copy with our curated list and analysis." key="twitter:description" />
+        <meta name="twitter:image" content="https://realaiexamples.com/api/og?mode=home" key="twitter:image" />
       </Head>
       <Navbar />
 

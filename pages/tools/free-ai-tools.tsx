@@ -18,7 +18,20 @@ const FreeToolsPage = () => {
         <meta
           name="description"
           content="A curated list of the best free and freemium AI tools. Generate images, write content, code, and more without spending a dime."
+          key="description"
         />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:title" content="The Best Free AI Tools (2025) | Image, Writing, Code" key="og:title" />
+        <meta property="og:description" content="A curated list of the best free and freemium AI tools. Generate images, write content, code, and more without spending a dime." key="og:description" />
+        <meta property="og:image" content="https://realaiexamples.com/api/og?mode=home" key="og:image" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="The Best Free AI Tools (2025) | Image, Writing, Code" key="twitter:title" />
+        <meta name="twitter:description" content="A curated list of the best free and freemium AI tools. Generate images, write content, code, and more without spending a dime." key="twitter:description" />
+        <meta name="twitter:image" content="https://realaiexamples.com/api/og?mode=home" key="twitter:image" />
       </Head>
       <Navbar />
 

@@ -19,7 +19,10 @@ export default function TagPage({ examples, tag, tagDisplayName }: TagPageProps)
   const [selectedExample, setSelectedExample] = useState<ExampleRecord | null>(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
   
-  const currentUrl = typeof window !== 'undefined' ? window.location.href : `https://your-domain.com/ai-examples/tag/${tag}`
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com';
+  const currentUrl = `${baseUrl}/ai-examples/tag/${tag}`;
+  const title = `#${tagDisplayName} AI Examples | AI Workflow Library | Real AI Examples`;
+  const description = `Explore ${examples.length} AI workflow examples tagged with ${tagDisplayName}. Practical automation ideas and step-by-step guides.`;
 
   const handleOpenModal = (example: ExampleRecord) => {
     setSelectedExample(example)
@@ -34,20 +37,24 @@ export default function TagPage({ examples, tag, tagDisplayName }: TagPageProps)
   return (
     <>
       <Head>
-        <title>#{tagDisplayName} AI Examples | AI Workflow Library | Real AI Examples</title>
-        <meta name="description" content={`Explore ${examples.length} AI workflow examples tagged with ${tagDisplayName}. Practical automation ideas and step-by-step guides.`} />
+        <title>{title}</title>
+        <meta name="description" content={description} key="description" />
         <meta name="keywords" content={`${tagDisplayName}, AI workflows, AI examples, automation, prompts`} />
         
         {/* Open Graph */}
-        <meta property="og:title" content={`#{tagDisplayName} AI Examples`} />
-        <meta property="og:description" content={`${examples.length} AI workflows tagged with ${tagDisplayName}.`} />
-        <meta property="og:url" content={currentUrl} />
-        <meta property="og:type" content="website" />
+        <meta property="og:title" content={title} key="og:title" />
+        <meta property="og:description" content={description} key="og:description" />
+        <meta property="og:url" content={currentUrl} key="og:url" />
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:image" content={`${baseUrl}/api/og?mode=home`} key="og:image" />
         
         {/* Twitter */}
-        <meta name="twitter:title" content={`#{tagDisplayName} AI Examples`} />
-        <meta name="twitter:description" content={`${examples.length} practical AI workflows tagged with ${tagDisplayName}.`} />
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content={title} key="twitter:title" />
+        <meta name="twitter:description" content={description} key="twitter:description" />
+        <meta name="twitter:image" content={`${baseUrl}/api/og?mode=home`} key="twitter:image" />
         
+        <link rel="canonical" href={currentUrl} key="canonical" />
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&display=swap" rel="stylesheet" />
       </Head>
 

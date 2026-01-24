@@ -60,18 +60,19 @@ export default function ToolPage({ tool }: ToolPageProps) {
     <div className="flex flex-col min-h-screen bg-slate-100 font-sans text-slate-900">
       <Head>
         <title>{tool.name} | Verified on Real AI Examples</title>
-        <meta name="description" content={`Check out ${tool.name} on Real AI Examples. ${tool.description}`} />
+        <meta name="description" content={`Check out ${tool.name} on Real AI Examples. ${tool.description}`} key="description" />
         
         {/* Open Graph / Social */}
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content={`${tool.name} | Featured on Real AI Examples`} />
-        <meta property="og:description" content={tool.description} />
-        <meta property="og:image" content={imgSrc} />
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:title" content={`${tool.name} | Featured on Real AI Examples`} key="og:title" />
+        <meta property="og:description" content={tool.description} key="og:description" />
+        <meta property="og:image" content={imgSrc} key="og:image" />
         
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content={`${tool.name} | Featured on Real AI Examples`} />
-        <meta name="twitter:description" content={tool.description} />
-        <meta name="twitter:image" content={imgSrc} />
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content={`${tool.name} | Featured on Real AI Examples`} key="twitter:title" />
+        <meta name="twitter:description" content={tool.description} key="twitter:description" />
+        <meta name="twitter:image" content={imgSrc} key="twitter:image" />
       </Head>
 
       <Navbar />

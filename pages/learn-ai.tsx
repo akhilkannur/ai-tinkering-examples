@@ -7,10 +7,19 @@ export default function LearnAIPage() {
     <div className="flex flex-col min-h-screen bg-gray-50">
       <Head>
         <title>Learn AI Apps One-on-One | Expert-Led Online Sessions</title>
-        <meta
-          name="description"
-          content="Accelerate your AI app learning with personalized one-on-one sessions led by experts. Master tools like n8n and more through online meetings."
-        />
+        <meta name="description" content="Accelerate your AI app learning with personalized one-on-one sessions led by experts. Master tools like n8n and more through online meetings." key="description" />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:title" content="Learn AI Apps One-on-One | Expert-Led Online Sessions" key="og:title" />
+        <meta property="og:description" content="Accelerate your AI app learning with personalized one-on-one sessions led by experts. Master tools like n8n and more through online meetings." key="og:description" />
+        <meta property="og:image" content="https://realaiexamples.com/api/og?mode=home" key="og:image" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="Learn AI Apps One-on-One | Expert-Led Online Sessions" key="twitter:title" />
+        <meta name="twitter:description" content="Accelerate your AI app learning with personalized one-on-one sessions led by experts. Master tools like n8n and more through online meetings." key="twitter:description" />
+        <meta name="twitter:image" content="https://realaiexamples.com/api/og?mode=home" key="twitter:image" />
       </Head>
 
       <Navbar />

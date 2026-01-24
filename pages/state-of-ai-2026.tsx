@@ -12,7 +12,19 @@ export default function StateOfAI() {
     <>
       <Head>
         <title>{pageTitle}</title>
-        <meta name="description" content={pageDescription} />
+        <meta name="description" content={pageDescription} key="description" />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="article" key="og:type" />
+        <meta property="og:title" content={pageTitle} key="og:title" />
+        <meta property="og:description" content={pageDescription} key="og:description" />
+        <meta property="og:image" content="https://realaiexamples.com/api/og?mode=home" key="og:image" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content={pageTitle} key="twitter:title" />
+        <meta name="twitter:description" content={pageDescription} key="twitter:description" />
+        <meta name="twitter:image" content="https://realaiexamples.com/api/og?mode=home" key="twitter:image" />
       </Head>
 
       <div className="min-h-screen bg-primary-bg font-sans text-text-color">

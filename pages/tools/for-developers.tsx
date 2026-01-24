@@ -18,7 +18,20 @@ const ToolsForDevelopers = () => {
         <meta
           name="description"
           content="Find the best AI coding assistants and tools for developers. Speed up your workflow with AI-powered code completion, debugging, and documentation."
+          key="description"
         />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="article" key="og:type" />
+        <meta property="og:title" content="Top AI Tools for Developers (2025) | Code, Debug, Document" key="og:title" />
+        <meta property="og:description" content="Find the best AI coding assistants and tools for developers. Speed up your workflow with AI-powered code completion, debugging, and documentation." key="og:description" />
+        <meta property="og:image" content="https://realaiexamples.com/api/og?mode=home" key="og:image" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="Top AI Tools for Developers (2025) | Code, Debug, Document" key="twitter:title" />
+        <meta name="twitter:description" content="Find the best AI coding assistants and tools for developers. Speed up your workflow with AI-powered code completion, debugging, and documentation." key="twitter:description" />
+        <meta name="twitter:image" content="https://realaiexamples.com/api/og?mode=home" key="twitter:image" />
       </Head>
       <Navbar />
 

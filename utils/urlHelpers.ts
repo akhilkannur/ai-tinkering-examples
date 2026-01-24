@@ -21,7 +21,7 @@ export function getFullExampleUrl(example: ExampleRecord, baseUrl?: string): str
   }
   
   // Fallback for server-side or if baseUrl is provided
-  const domain = baseUrl || process.env.NEXT_PUBLIC_SITE_URL || 'https://your-domain.com'
+  const domain = baseUrl || process.env.NEXT_PUBLIC_SITE_URL || 'https://realaiexamples.com'
   return `${domain}${relativePath}`
 }
 
@@ -80,6 +80,6 @@ export function parseExampleUrl(slugArray: string[]): { category: string; slug: 
  * Generate canonical URL
  */
 export function getCanonicalUrl(path: string, baseUrl?: string): string {
-  const domain = baseUrl || process.env.NEXT_PUBLIC_SITE_URL || 'https://your-domain.com'
+  const domain = baseUrl || process.env.NEXT_PUBLIC_SITE_URL || 'https://realaiexamples.com'
   return `${domain}${path}`
 }

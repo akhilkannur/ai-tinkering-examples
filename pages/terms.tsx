@@ -6,6 +6,19 @@ export default function Terms() {
     <>
       <Head>
         <title>Terms of Service | Real AI Examples</title>
+        <meta name="description" content="Read our terms of service to understand the rules and guidelines for using our website and blueprints." key="description" />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:title" content="Terms of Service | Real AI Examples" key="og:title" />
+        <meta property="og:description" content="Read our terms of service to understand the rules and guidelines for using our website and blueprints." key="og:description" />
+        <meta property="og:image" content="https://realaiexamples.com/api/og?mode=home" key="og:image" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="Terms of Service | Real AI Examples" key="twitter:title" />
+        <meta name="twitter:description" content="Read our terms of service to understand the rules and guidelines for using our website and blueprints." key="twitter:description" />
+        <meta name="twitter:image" content="https://realaiexamples.com/api/og?mode=home" key="twitter:image" />
       </Head>
       <div className="min-h-screen bg-brand-beige font-sans text-brand-navy">
         <Navbar />

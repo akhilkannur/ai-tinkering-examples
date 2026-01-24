@@ -9,11 +9,28 @@ interface BlogIndexProps {
 }
 
 export default function BlogIndex({ posts }: BlogIndexProps) {
+  const title = "AI Blueprint Guides | Real AI Examples";
+  const description = "Learn how to chain AI recipes together to build autonomous workflows for Sales, Marketing, and Operations.";
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com';
+  const ogImage = `${baseUrl}/api/og?mode=home`;
+
   return (
     <div className="min-h-screen bg-primary-bg text-text-color font-sans selection:bg-accent selection:text-white flex flex-col">
       <Head>
-        <title>AI Blueprint Guides | Real AI Examples</title>
-        <meta name="description" content="Learn how to chain AI recipes together to build autonomous workflows for Sales, Marketing, and Operations." />
+        <title>{title}</title>
+        <meta name="description" content={description} key="description" />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:title" content={title} key="og:title" />
+        <meta property="og:description" content={description} key="og:description" />
+        <meta property="og:image" content={ogImage} key="og:image" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content={title} key="twitter:title" />
+        <meta name="twitter:description" content={description} key="twitter:description" />
+        <meta name="twitter:image" content={ogImage} key="twitter:image" />
       </Head>
 
       <Navbar />

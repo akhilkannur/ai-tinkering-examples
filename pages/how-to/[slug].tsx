@@ -49,8 +49,22 @@ export default function HowToPage({ recipe, problemTitle, relatedRecipes }: HowT
     <div className="min-h-screen bg-primary-bg font-sans text-text-color selection:bg-accent selection:text-white">
       <Head>
         <title>{pageTitle}</title>
-        <meta name="description" content={description} />
-        <link rel="canonical" href={pageUrl} />
+        <meta name="description" content={description} key="description" />
+        <link rel="canonical" href={pageUrl} key="canonical" />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="article" key="og:type" />
+        <meta property="og:title" content={pageTitle} key="og:title" />
+        <meta property="og:description" content={description} key="og:description" />
+        <meta property="og:image" content="https://realaiexamples.com/api/og?mode=home" key="og:image" />
+        <meta property="og:url" content={pageUrl} key="og:url" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content={pageTitle} key="twitter:title" />
+        <meta name="twitter:description" content={description} key="twitter:description" />
+        <meta name="twitter:image" content="https://realaiexamples.com/api/og?mode=home" key="twitter:image" />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}

@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import { useState } from 'react'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import Navbar from '../../../components/Navbar'
@@ -13,6 +14,9 @@ interface CategoryPageProps {
 export default function CategoryPage({ examples, category }: CategoryPageProps) {
   const [selectedExample, setSelectedExample] = useState<ExampleRecord | null>(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
+  
+  const title = `${category} AI Examples | Real AI Examples`;
+  const description = `Browse ${examples.length} real-world AI examples and workflows for ${category}. See how others are using AI in production.`;
 
   const handleOpenModal = (example: ExampleRecord) => {
     setSelectedExample(example)
@@ -26,6 +30,22 @@ export default function CategoryPage({ examples, category }: CategoryPageProps) 
 
   return (
     <div className="min-h-screen bg-slate-50">
+      <Head>
+        <title>{title}</title>
+        <meta name="description" content={description} key="description" />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:title" content={title} key="og:title" />
+        <meta property="og:description" content={description} key="og:description" />
+        <meta property="og:image" content="https://realaiexamples.com/api/og?mode=home" key="og:image" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content={title} key="twitter:title" />
+        <meta name="twitter:description" content={description} key="twitter:description" />
+        <meta name="twitter:image" content="https://realaiexamples.com/api/og?mode=home" key="twitter:image" />
+      </Head>
       <Navbar />
       
       <div className="max-w-6xl mx-auto px-4 py-8">

@@ -35,8 +35,20 @@ export default function ToolsIndex() {
   return (
     <div className="flex flex-col min-h-screen bg-slate-50 font-sans text-slate-900 fade-in">
       <Head>
-        <title>AI Tools Directory | Curated List</title>
-        <meta name="description" content="A curated database of the latest AI tools for business and productivity." />
+        <title>AI Tools Directory | Curated List | Real AI Examples</title>
+        <meta name="description" content="A curated database of the latest AI tools for business and productivity. Hand-picked for Sales, Marketing, and Ops tinkerers." key="description" />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:title" content="AI Tools Directory | Curated List" key="og:title" />
+        <meta property="og:description" content="A curated database of the latest AI tools for business and productivity. Hand-picked for Sales, Marketing, and Ops tinkerers." key="og:description" />
+        <meta property="og:image" content="https://realaiexamples.com/api/og?mode=home" key="og:image" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="AI Tools Directory | Curated List" key="twitter:title" />
+        <meta name="twitter:description" content="A curated database of the latest AI tools for business and productivity. Hand-picked for Sales, Marketing, and Ops tinkerers." key="twitter:description" />
+        <meta name="twitter:image" content="https://realaiexamples.com/api/og?mode=home" key="twitter:image" />
       </Head>
 
       <Navbar />

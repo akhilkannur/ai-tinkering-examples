@@ -61,11 +61,26 @@ export default function BlogPostPage({ post, relatedRecipes }: BlogPostPageProps
     return parsed;
   };
 
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com';
+  const ogImage = `${baseUrl}/api/og?title=${encodeURIComponent(post.title)}&mode=blog`;
+
   return (
     <div className="min-h-screen bg-primary-bg text-text-color font-sans flex flex-col">
       <Head>
-        <title>{post.title} | Real AI Examples</title>
-        <meta name="description" content={post.excerpt} />
+        <title>{post.title} | AI Blueprint Guide | Real AI Examples</title>
+        <meta name="description" content={post.excerpt} key="description" />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="article" key="og:type" />
+        <meta property="og:title" content={`${post.title} | AI Blueprint Guide`} key="og:title" />
+        <meta property="og:description" content={post.excerpt} key="og:description" />
+        <meta property="og:image" content={ogImage} key="og:image" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content={`${post.title} | AI Blueprint Guide`} key="twitter:title" />
+        <meta name="twitter:description" content={post.excerpt} key="twitter:description" />
+        <meta name="twitter:image" content={ogImage} key="twitter:image" />
       </Head>
 
       <Navbar />

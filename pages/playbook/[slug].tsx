@@ -41,11 +41,27 @@ export default function PlaybookPage({ playbook, recipes }: any) {
     }
   };
 
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com';
+  const ogImage = `${baseUrl}/api/og?title=${encodeURIComponent(playbook.title)}&mode=role`;
+
   return (
     <div className="min-h-screen bg-primary-bg font-sans text-text-color selection:bg-accent selection:text-white">
       <Head>
-        <title>{playbook.title} | AI Blueprints</title>
-        <meta name="description" content={playbook.description} />
+        <title>{playbook.title} | AI Blueprints | Real AI Examples</title>
+        <meta name="description" content={playbook.description} key="description" />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:title" content={`${playbook.title} | AI Blueprints`} key="og:title" />
+        <meta property="og:description" content={playbook.description} key="og:description" />
+        <meta property="og:image" content={ogImage} key="og:image" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content={`${playbook.title} | AI Blueprints`} key="twitter:title" />
+        <meta name="twitter:description" content={playbook.description} key="twitter:description" />
+        <meta name="twitter:image" content={ogImage} key="twitter:image" />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}

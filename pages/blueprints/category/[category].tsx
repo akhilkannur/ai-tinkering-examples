@@ -33,8 +33,20 @@ export default function CategoryPage({ category, recipes }: CategoryPageProps) {
   return (
     <div className="min-h-screen bg-brand-beige font-sans text-brand-navy">
       <Head>
-        <title>{meta.title} | Terminal Cookbook</title>
-        <meta name="description" content={meta.description} />
+        <title>{meta.title} | AI Blueprints | Real AI Examples</title>
+        <meta name="description" content={meta.description} key="description" />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:title" content={`${meta.title} | AI Blueprints`} key="og:title" />
+        <meta property="og:description" content={meta.description} key="og:description" />
+        <meta property="og:image" content="https://realaiexamples.com/api/og?mode=home" key="og:image" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content={`${meta.title} | AI Blueprints`} key="twitter:title" />
+        <meta name="twitter:description" content={meta.description} key="twitter:description" />
+        <meta name="twitter:image" content="https://realaiexamples.com/api/og?mode=home" key="twitter:image" />
       </Head>
 
       <Navbar />

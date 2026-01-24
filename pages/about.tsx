@@ -12,7 +12,10 @@ export default function AboutPage() {
         <meta property="og:title" content="About | Real AI Examples" key="og:title" />
         <meta property="og:description" content="Learn more about Real AI Examples and our mission to provide actionable AI workflows and prompts." key="og:description" />
         <meta property="og:image" content={`${process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com'}/api/og?mode=home`} key="og:image" />
+        <meta property="og:type" content="website" key="og:type" />
         <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="About | Real AI Examples" key="twitter:title" />
+        <meta name="twitter:description" content="Learn more about Real AI Examples and our mission to provide actionable AI workflows and prompts." key="twitter:description" />
         <meta name="twitter:image" content={`${process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com'}/api/og?mode=home`} key="twitter:image" />
       </Head>
       <div className="min-h-screen bg-primary-bg font-sans text-text-color">

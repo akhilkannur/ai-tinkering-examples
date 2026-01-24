@@ -43,7 +43,19 @@ export default function HowToDictionary({ problems }: HowToDictionaryProps) {
     <div className="min-h-screen bg-primary-bg font-sans text-text-color selection:bg-accent selection:text-white">
       <Head>
         <title>The AI Problem Dictionary: How to Automate 500+ Tasks</title>
-        <meta name="description" content="Don't look for tools. Look for solutions. A dictionary of 500+ 'How-To' guides for automating Sales, Marketing, and SEO tasks with AI." />
+        <meta name="description" content="Don't look for tools. Look for solutions. A dictionary of 500+ 'How-To' guides for automating Sales, Marketing, and SEO tasks with AI." key="description" />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:title" content="The AI Problem Dictionary: How to Automate 500+ Tasks" key="og:title" />
+        <meta property="og:description" content="Don't look for tools. Look for solutions. A dictionary of 500+ 'How-To' guides for automating Sales, Marketing, and SEO tasks with AI." key="og:description" />
+        <meta property="og:image" content="https://realaiexamples.com/api/og?mode=home" key="og:image" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="The AI Problem Dictionary: How to Automate 500+ Tasks" key="twitter:title" />
+        <meta name="twitter:description" content="Don't look for tools. Look for solutions. A dictionary of 500+ 'How-To' guides for automating Sales, Marketing, and SEO tasks with AI." key="twitter:description" />
+        <meta name="twitter:image" content="https://realaiexamples.com/api/og?mode=home" key="twitter:image" />
       </Head>
 
       <Navbar />

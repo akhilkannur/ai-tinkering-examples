@@ -101,7 +101,10 @@ export default function InvestorsPage({ initialInvestors }: InvestorsPageProps) 
         <meta property="og:title" content="Micro-PE Match | Find Buyers for Your SaaS" key="og:title" />
         <meta property="og:description" content="A curated directory of 150+ active micro-private equity firms, search funds, and aggregators looking to acquire AI and SaaS businesses." key="og:description" />
         <meta property="og:image" content={`${process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com'}/api/og?mode=home`} key="og:image" />
+        <meta property="og:type" content="website" key="og:type" />
         <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="Micro-PE Match | Find Buyers for Your SaaS" key="twitter:title" />
+        <meta name="twitter:description" content="A curated directory of 150+ active micro-private equity firms, search funds, and aggregators looking to acquire AI and SaaS businesses." key="twitter:description" />
         <meta name="twitter:image" content={`${process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com'}/api/og?mode=home`} key="twitter:image" />
       </Head>
 

@@ -12,7 +12,10 @@ export default function AiWorkplaceQuizPage() {
         <meta property="og:title" content="AI in the Workplace Quiz | Test Your Knowledge" key="og:title" />
         <meta property="og:description" content="Test your knowledge of the latest AI developments in marketing, sales, and HR with this interactive quiz." key="og:description" />
         <meta property="og:image" content={`${process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com'}/api/og?mode=home`} key="og:image" />
+        <meta property="og:type" content="website" key="og:type" />
         <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="AI in the Workplace Quiz | Test Your Knowledge" key="twitter:title" />
+        <meta name="twitter:description" content="Test your knowledge of the latest AI developments in marketing, sales, and HR with this interactive quiz." key="twitter:description" />
         <meta name="twitter:image" content={`${process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com'}/api/og?mode=home`} key="twitter:image" />
       </Head>
       <div className="min-h-screen bg-primary-bg font-sans text-text-color">

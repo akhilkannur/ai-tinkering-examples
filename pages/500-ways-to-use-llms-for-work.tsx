@@ -15,6 +15,11 @@ interface MegaListicleProps {
 export default function FiveHundredWays({ recipes, categories }: MegaListicleProps) {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
+  
+  const title = "500 Ways to Use LLMs for Sales & Marketing | AI Blueprints";
+  const description = "Stop prompting, start automating. 500 curated AI blueprints for Sales Ops, SEOs, and Growth Marketers to build autonomous agentic workflows.";
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com';
+  const ogImage = `${baseUrl}/api/og?mode=home`;
 
   // Filter recipes based on search and category
   const filteredRecipes = useMemo(() => {
@@ -57,8 +62,21 @@ export default function FiveHundredWays({ recipes, categories }: MegaListiclePro
   return (
     <div className="min-h-screen bg-primary-bg font-sans text-text-color selection:bg-accent selection:text-white">
       <Head>
-        <title>500 Ways to Use LLMs for Sales & Marketing | AI Blueprints</title>
-        <meta name="description" content="Stop prompting, start automating. 500 curated AI blueprints for Sales Ops, SEOs, and Growth Marketers to build autonomous agentic workflows." />
+        <title>{title}</title>
+        <meta name="description" content={description} key="description" />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:title" content={title} key="og:title" />
+        <meta property="og:description" content={description} key="og:description" />
+        <meta property="og:image" content={ogImage} key="og:image" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content={title} key="twitter:title" />
+        <meta name="twitter:description" content={description} key="twitter:description" />
+        <meta name="twitter:image" content={ogImage} key="twitter:image" />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
