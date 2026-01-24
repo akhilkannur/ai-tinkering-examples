@@ -58,10 +58,11 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
   const filteredRecipes = useMemo(() => {
     const filtered = recipes.filter(recipe => {
       const matchesCategory = selectedCategory === 'All' || recipe.category === selectedCategory;
+      const lowerQuery = searchQuery.toLowerCase();
       const matchesSearch = 
-        recipe.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        recipe.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        recipe.tagline.toLowerCase().includes(searchQuery.toLowerCase());
+        (recipe.title?.toLowerCase() || '').includes(lowerQuery) ||
+        (recipe.description?.toLowerCase() || '').includes(lowerQuery) ||
+        (recipe.tagline?.toLowerCase() || '').includes(lowerQuery);
       return matchesCategory && matchesSearch;
     });
 

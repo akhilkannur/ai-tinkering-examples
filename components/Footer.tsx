@@ -63,9 +63,6 @@ export default function Footer() {
                 <Link href="/role/seo" className="hover:text-accent transition-colors">SEO & Content</Link>
               </li>
               <li>
-                <Link href="/role/growth" className="hover:text-accent transition-colors">Growth</Link>
-              </li>
-              <li>
                 <Link href="/role/paid-media" className="hover:text-accent transition-colors">Paid Media</Link>
               </li>
             </ul>
