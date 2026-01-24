@@ -29,3 +29,10 @@ export function getAllRecipes(): Recipe[] {
   
   return allRecipes;
 }
+
+export function getRelatedRecipes(currentRecipe: Recipe, limit = 3): Recipe[] {
+  const allRecipes = getAllRecipes();
+  return allRecipes
+    .filter(r => r.category === currentRecipe.category && r.id !== currentRecipe.id)
+    .slice(0, limit);
+}

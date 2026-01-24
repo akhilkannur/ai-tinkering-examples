@@ -4,16 +4,37 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { ArrowLeft, Terminal, Copy, Check, Download, FileText, Cpu, BookOpen, Lock, Crown, Key, ArrowRight, X, Package, ShieldCheck } from 'lucide-react';
 import Navbar from '../../components/Navbar';
-import { getAllRecipes } from '../../lib/recipes';
+import { getAllRecipes, getRelatedRecipes } from '../../lib/recipes';
 import { Recipe, categoryIcons } from '../../lib/cookbook-data';
+import { generateHowToSchema, generateFAQSchema, injectInternalLinks } from '../../lib/seo-utils';
 import React, { useState, useEffect } from 'react';
 import JSZip from 'jszip';
 
 interface RecipePageProps {
   recipe: Recipe;
+  relatedRecipes: Recipe[];
+  linkedDescription: string;
+  schema: any[];
 }
 
-export default function RecipePage({ recipe }: RecipePageProps) {
+const SimpleMarkdown = ({ text }: { text: string }) => {
+  if (!text) return null;
+  // Split by links [text](url)
+  const parts = text.split(/(\[[^\]]+\]\([^)]+\))/g);
+  return (
+    <span>
+      {parts.map((part, i) => {
+        const linkMatch = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+        if (linkMatch) {
+          return <Link key={i} href={linkMatch[2]} className="text-blue-600 hover:underline font-medium">{linkMatch[1]}</Link>;
+        }
+        return part;
+      })}
+    </span>
+  );
+};
+
+export default function RecipePage({ recipe, relatedRecipes, linkedDescription, schema }: RecipePageProps) {
   const router = useRouter();
   const [copied, setCopied] = useState(false);
   const [isUnlocked, setIsUnlocked] = useState(false);
@@ -96,32 +117,6 @@ Downloaded from RealAIExamples.com`;
     URL.revokeObjectURL(url);
   };
 
-  const handleDownloadSample = () => {
-    if (!recipe.sampleData || (recipe.isPremium && !isUnlocked)) return;
-    const blob = new Blob([recipe.sampleData.content], { type: 'text/plain' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = recipe.sampleData.filename;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-  };
-
-  const handleDownloadBlueprint = () => {
-    if (recipe.isPremium && !isUnlocked) return;
-    const blob = new Blob([recipe.blueprint], { type: 'text/markdown' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `${recipe.id}.md`;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-  };
-
   const isLocked = recipe.isPremium && !isUnlocked;
   const SITE_URL = 'https://realaiexamples.com';
   const ogImageUrl = `${SITE_URL}/api/og?title=${encodeURIComponent(recipe.title)}&category=${encodeURIComponent(recipe.category)}&tagline=${encodeURIComponent(recipe.tagline)}`;
@@ -148,6 +143,15 @@ Downloaded from RealAIExamples.com`;
         <meta name="twitter:image" content={ogImageUrl} key="twitter:image" />
 
         <link rel="canonical" href={`${SITE_URL}/blueprints/${recipe.id}`} key="canonical" />
+        
+        {/* Structured Data */}
+        {schema && schema.map((s, i) => (
+          <script
+            key={i}
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }}
+          />
+        ))}
       </Head>
       
       <Navbar />
@@ -206,7 +210,9 @@ Downloaded from RealAIExamples.com`;
           {/* Mission Overview */}
           <div className="bg-gray-50 rounded-3xl p-8 mb-12 border border-gray-100">
             <h2 className="text-xl font-bold text-gray-900 mb-4">Mission Overview</h2>
-            <p className="text-gray-600 text-lg leading-relaxed">{recipe.description}</p>
+            <p className="text-gray-600 text-lg leading-relaxed">
+              <SimpleMarkdown text={linkedDescription || recipe.description} />
+            </p>
           </div>
 
           {/* Locked or Unlocked Content */}
@@ -411,6 +417,39 @@ Downloaded from RealAIExamples.com`;
               </>
           )}
 
+          {/* Related Blueprints */}
+          {relatedRecipes && relatedRecipes.length > 0 && (
+            <div className="border-t border-gray-200 pt-16 mt-16">
+              <h3 className="text-2xl font-bold text-gray-900 mb-8 flex items-center gap-2">
+                <BookOpen className="w-6 h-6 text-gray-400" />
+                Related {recipe.category} Blueprints
+              </h3>
+              <div className="grid md:grid-cols-3 gap-6">
+                {relatedRecipes.map(related => (
+                  <Link key={related.id} href={`/blueprints/${related.id}`} className="group block bg-white border border-gray-200 rounded-2xl p-6 hover:border-blue-300 hover:shadow-lg transition-all">
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="bg-gray-100 text-gray-600 text-xs font-bold px-2 py-1 rounded-full uppercase tracking-wide group-hover:bg-blue-50 group-hover:text-blue-600 transition-colors">
+                        {related.difficulty}
+                      </span>
+                      <Terminal className="w-4 h-4 text-gray-400 group-hover:text-blue-500 transition-colors" />
+                    </div>
+                    <h4 className="font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-blue-600 transition-colors">
+                      {related.title}
+                    </h4>
+                    <p className="text-sm text-gray-500 line-clamp-3 mb-4">
+                      {related.tagline}
+                    </p>
+                    <div className="flex items-center text-xs text-gray-400 font-mono">
+                      <span className="flex items-center gap-1">
+                        <Terminal className="w-3 h-3" /> {related.time}
+                      </span>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
+
         </div>
       </main>
     </div>
@@ -436,9 +475,26 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     return { notFound: true };
   }
 
+  // 1. Get Related Recipes
+  const relatedRecipes = recipes
+    .filter(r => r.category === recipe.category && r.id !== recipe.id)
+    .slice(0, 3);
+
+  // 2. Generate Internal Links for Description
+  // Pass all recipes as the "glossary"
+  const linkedDescription = injectInternalLinks(recipe.description, recipes);
+
+  // 3. Generate Schema
+  const howTo = generateHowToSchema(recipe, 'https://realaiexamples.com');
+  const faq = generateFAQSchema(recipe);
+  const schema = [howTo, faq].filter(Boolean);
+
   return {
     props: {
       recipe,
+      relatedRecipes,
+      linkedDescription,
+      schema
     },
   };
 };
