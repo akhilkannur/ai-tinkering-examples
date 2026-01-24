@@ -10,6 +10,7 @@ import {
   fetchEnrichedExampleBySlug,
   EnrichedExampleRecord 
 } from '../../lib/airtable'
+import { localSocialExamples } from '../../lib/social-examples-data'
 
 interface ExamplePageProps {
   example: EnrichedExampleRecord | null
@@ -17,13 +18,17 @@ interface ExamplePageProps {
 
 export default function ExamplePage({ example }: ExamplePageProps) {
   if (!example) {
-    // This should ideally not be reached due to fallback: 'blocking' and notFound: true
     return <div>Example not found</div>
   }
 
   const categorySlug = example.category?.toLowerCase().replace(/\s+/g, '-') || 'uncategorized'
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com'
   const currentUrl = `${baseUrl}/ai-examples/${categorySlug}/${example.slug}`
+  
+  // Use the first screenshot as the social image
+  const ogImage = example.screenshots?.[0]?.url 
+    ? (example.screenshots[0].url.startsWith('http') ? example.screenshots[0].url : `${baseUrl}${example.screenshots[0].url}`)
+    : `${baseUrl}/api/og?title=${encodeURIComponent(example.title)}`;
 
   // Generate structured data for SEO
   const structuredData = {
@@ -49,7 +54,7 @@ export default function ExamplePage({ example }: ExamplePageProps) {
       "@type": "WebPage",
       "@id": currentUrl
     },
-    "image": example.screenshots?.[0]?.url,
+    "image": ogImage,
     "articleSection": example.category,
     "keywords": example.tags?.join(', '),
     "timeRequired": `PT${example.read_time || 1}M`
@@ -98,17 +103,13 @@ export default function ExamplePage({ example }: ExamplePageProps) {
         <meta property="og:description" content={example.summary || `Learn how to recreate this AI workflow: ${example.title}`} key="og:description" />
         <meta property="og:url" content={currentUrl} key="og:url" />
         <meta property="og:site_name" content="Real AI Examples" key="og:site_name" />
-        {example.screenshots?.[0]?.url && (
-          <meta property="og:image" content={example.screenshots[0].url} key="og:image" />
-        )}
+        <meta property="og:image" content={ogImage} key="og:image" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
         <meta name="twitter:title" content={`${example.title} | AI Workflow Example`} key="twitter:title" />
         <meta name="twitter:description" content={example.summary || `Learn how to recreate this AI workflow: ${example.title}`} key="twitter:description" />
-        {example.screenshots?.[0]?.url && (
-          <meta name="twitter:image" content={example.screenshots[0].url} key="twitter:image" />
-        )}
+        <meta name="twitter:image" content={ogImage} key="twitter:image" />
 
         <link rel="canonical" href={currentUrl} key="canonical" />
         <script
@@ -186,7 +187,9 @@ export default function ExamplePage({ example }: ExamplePageProps) {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const examples = await fetchEnrichedExamples();
+  const airtableExamples = await fetchEnrichedExamples();
+  const examples = [...localSocialExamples, ...airtableExamples];
+  
   const paths = examples.map(example => {
     const categorySlug = example.category?.toLowerCase().replace(/\s+/g, '-') || 'uncategorized';
     return {
@@ -207,7 +210,13 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     return { notFound: true };
   }
   
-  const example = await fetchEnrichedExampleBySlug(exampleSlug);
+  // Try local examples first
+  let example = localSocialExamples.find(ex => ex.slug === exampleSlug);
+  
+  // If not found locally, try Airtable
+  if (!example) {
+    example = await fetchEnrichedExampleBySlug(exampleSlug);
+  }
   
   if (!example) {
     return { notFound: true };
