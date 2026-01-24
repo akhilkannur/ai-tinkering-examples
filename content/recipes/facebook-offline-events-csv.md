@@ -35,10 +35,6 @@ Format 10,000 sales for Facebook ROAS reporting.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Resource Setup
-1.  **Check:** Does `raw_sales_log.csv` exist? If missing, create template.
-
-### Phase 2: The Normalization Loop
 For each row in the CSV:
 1.  **Clean Email:** Convert to lowercase, strip whitespace.
 2.  **Clean Phone:** Remove all non-digits. Ensure country code is present.
@@ -49,7 +45,3 @@ For each row in the CSV:
 1.  **Create:** `fb_offline_upload_ready.csv` with columns: `email,phone,value,currency,event_name,event_time`.
 2.  **Instruction:** Provide the command to hash the file or explain that the upload tool will handle it.
 3.  **Summary:** "Successfully formatted [X] sales records ($[Total Value]). Ready for upload."
-
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
