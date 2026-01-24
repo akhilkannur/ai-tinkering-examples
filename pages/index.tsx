@@ -40,6 +40,8 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
         <meta name="twitter:title" content={homepageTitle} key="twitter:title" />
         <meta name="twitter:description" content={homepageDescription} key="twitter:description" />
         <meta name="twitter:image" content={`${baseUrl}/api/og?mode=home`} key="twitter:image" />
+        
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebSite",
           "name": "Real AI Examples",
