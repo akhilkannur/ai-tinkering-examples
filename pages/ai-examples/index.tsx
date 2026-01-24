@@ -59,17 +59,19 @@ export default function ExamplesPage({ examples, categories }: ExamplesPageProps
     <>
       <Head>
         <title>AI Examples | Browse AI Workflows & Prompts | Real AI Examples</title>
-        <meta name="description" content={`Browse ${examples.length} AI workflow examples with step-by-step guides, prompts, and automation ideas for non-technical tinkerers.`} />
+        <meta name="description" content={`Browse ${examples.length} AI workflow examples with step-by-step guides, prompts, and automation ideas for non-technical tinkerers.`} key="description" />
         <meta name="keywords" content="AI examples, AI workflows, automation, prompts, artificial intelligence, guides" />
         <link rel="canonical" href={`${process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com'}/ai-examples`} />
         
-        <meta property="og:title" content="AI Examples | Browse AI Workflows & Prompts" />
-        <meta property="og:description" content={`Browse ${examples.length} AI workflow examples with step-by-step guides, prompts, and automation ideas for non-technical tinkerers.`} />
-        <meta property="og:image" content={`${process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com'}/api/og?mode=home`} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="AI Examples | Browse AI Workflows & Prompts" />
-        <meta name="twitter:description" content={`Browse ${examples.length} AI workflow examples with step-by-step guides, prompts, and automation ideas for non-technical tinkerers.`} />
-        <meta name="twitter:image" content={`${process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com'}/api/og?mode=home`} />
+        <meta property="og:title" content="AI Examples | Browse AI Workflows & Prompts" key="og:title" />
+        <meta property="og:description" content={`Browse ${examples.length} AI workflow examples with step-by-step guides, prompts, and automation ideas for non-technical tinkerers.`} key="og:description" />
+        <meta property="og:image" content={`${process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com'}/api/og?mode=home`} key="og:image" />
+        <meta property="og:type" content="website" key="og:type" />
+
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content="AI Examples | Browse AI Workflows & Prompts" key="twitter:title" />
+        <meta name="twitter:description" content={`Browse ${examples.length} AI workflow examples with step-by-step guides, prompts, and automation ideas for non-technical tinkerers.`} key="twitter:description" />
+        <meta name="twitter:image" content={`${process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com'}/api/og?mode=home`} key="twitter:image" />
 
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&display=swap" rel="stylesheet" />
       </Head>

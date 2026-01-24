@@ -140,6 +140,13 @@ Downloaded from RealAIExamples.com`;
         <meta property="og:description" content={recipe.description} key="og:description" />
         <meta property="og:image" content={ogImageUrl} key="og:image" />
         <meta property="og:type" content="article" key="og:type" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content={`${recipe.title} | AI Agent Blueprint`} key="twitter:title" />
+        <meta name="twitter:description" content={recipe.description} key="twitter:description" />
+        <meta name="twitter:image" content={ogImageUrl} key="twitter:image" />
+
         <link rel="canonical" href={`${SITE_URL}/blueprints/${recipe.id}`} key="canonical" />
       </Head>
       

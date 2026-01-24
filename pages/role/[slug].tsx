@@ -17,12 +17,26 @@ interface RolePageProps {
 export default function RolePage({ roleName, recipes }: RolePageProps) {
   const title = `${recipes.length} AI Blueprints for ${roleName} | Real AI Examples`;
   const description = `Curated AI workflows for ${roleName}. Automate your ${roleName.toLowerCase()} tasks with copy-paste blueprints for Gemini CLI, Claude Code, and Cursor.`;
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com';
+  const ogImage = `${baseUrl}/api/og?title=${encodeURIComponent(roleName)}&mode=role`;
 
   return (
     <div className="min-h-screen bg-primary-bg font-sans text-text-color selection:bg-accent selection:text-white">
       <Head>
         <title>{title}</title>
-        <meta name="description" content={description} />
+        <meta name="description" content={description} key="description" />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" key="og:type" />
+        <meta property="og:title" content={title} key="og:title" />
+        <meta property="og:description" content={description} key="og:description" />
+        <meta property="og:image" content={ogImage} key="og:image" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:title" content={title} key="twitter:title" />
+        <meta name="twitter:description" content={description} key="twitter:description" />
+        <meta name="twitter:image" content={ogImage} key="twitter:image" />
       </Head>
 
       <Navbar />

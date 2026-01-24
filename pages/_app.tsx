@@ -25,7 +25,7 @@ export default function App({ Component, pageProps }: AppProps) {
         - For more information, see: https://developers.google.com/search/docs/appearance/favicon-in-search
       */}
       <Head>
-        <title>{title}</title>
+        <title>AI Examples You Can Copy & Try</title>
         <meta name="description" content={description} key="description" />
         <meta property="og:title" content={title} key="og:title" />
         <meta property="og:description" content={description} key="og:description" />
