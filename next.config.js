@@ -69,11 +69,6 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/blueprints/:slug*',
-        destination: '/ai-examples/:slug*',
-        permanent: true,
-      },
-      {
         source: '/ai-examples/category/building-apps',
         destination: '/tools/for-developers',
         permanent: true,
