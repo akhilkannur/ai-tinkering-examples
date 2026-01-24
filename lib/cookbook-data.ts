@@ -18,7 +18,10 @@ export type Category =
   | 'Customer Success'
   | 'Retention'
   | 'E-commerce'
-  | 'Strategic Ops';
+  | 'Strategic Ops'
+  | 'Product Ops'
+  | 'SEO Ops'
+  | 'Dev Tools';
 
 export const categoryIcons: Record<Category, any> = {
   'Lead Gen': Users,
@@ -32,7 +35,10 @@ export const categoryIcons: Record<Category, any> = {
   'Customer Success': HeartHandshake,
   'Retention': Repeat,
   'E-commerce': ShoppingCart,
-  'Strategic Ops': ShieldCheck
+  'Strategic Ops': ShieldCheck,
+  'Product Ops': Database,
+  'SEO Ops': Globe,
+  'Dev Tools': Cpu
 };
 
 export const categoryDescriptions: Record<string, { title: string, description: string }> = {

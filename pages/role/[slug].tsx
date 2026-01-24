@@ -130,6 +130,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
     params: { slug: slugify(cat) }
   }));
 
+  // Add virtual "growth" role
+  paths.push({ params: { slug: 'growth' } });
+
   return {
     paths,
     fallback: false 
@@ -140,14 +143,24 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const slug = params?.slug as string;
   const allRecipes = getAllRecipes();
   
-  // Find category name that matches this slug
-  const matchedRecipes = allRecipes.filter(r => r.category && slugify(r.category) === slug);
+  let matchedRecipes: Recipe[] = [];
+  let roleName = '';
+
+  if (slug === 'growth') {
+    roleName = 'Growth';
+    const growthCategories = ['Lead Gen', 'Paid Media', 'CRO'];
+    matchedRecipes = allRecipes.filter(r => growthCategories.includes(r.category));
+  } else {
+    // Find category name that matches this slug
+    matchedRecipes = allRecipes.filter(r => r.category && slugify(r.category) === slug);
+    if (matchedRecipes.length > 0) {
+      roleName = matchedRecipes[0].category;
+    }
+  }
   
   if (matchedRecipes.length === 0) {
     return { notFound: true };
   }
-
-  const roleName = matchedRecipes[0].category;
 
   return {
     props: {
