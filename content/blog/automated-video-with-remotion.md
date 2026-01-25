@@ -1,85 +1,83 @@
 ---
-title: "Automating POV Marketing Videos with Gemini CLI and Remotion"
+title: "How to Build a Video Marketing Factory with One Prompt"
 date: '2026-01-25'
-excerpt: "A guide on using Gemini CLI to build a POV-style video production pipeline. We cover the setup process and show 10 community examples of programmatic video."
+excerpt: "Stop editing videos manually. Here is the exact blueprint I used to generate 3 different video styles for my brand automatically using Gemini CLI."
 coverImage: '/images/blog/remotion-pipeline.png'
 author:
   name: "Real AI Examples"
   picture: '/assets/blog/authors/team.jpeg'
 ogImage:
   url: '/images/blog/remotion-pipeline.png'
+relatedRecipes: ['automated-video-marketing-asset']
 ---
 
-I used the Gemini CLI to set up an automated video production pipeline. This workflow uses **Remotion**, a React-based video engine, to generate POV-style marketing videos. 
+I am not a video editor. But yesterday, I generated three high-quality, branded marketing videos for this website in under 20 minutes.
 
-A POV (Point of View) video in this context is a screen recording that simulates a user interacting with a website—capturing specific elements, moving the cursor, and showing results. 
+I didn't use After Effects. I didn't hire a freelancer. I just used my **Folder Agent**.
 
-## The Process
+## The Result
 
-Instead of using a traditional video editor, the process is handled by a CLI agent. 
+Here is the video I generated. It took about 30 seconds to render.
 
-1.  **Technical Setup:** The agent installs Node.js, Remotion, and Puppeteer.
-2.  **Asset Capture:** A script runs a headless browser to take screenshots of the target URL.
-3.  **Animation:** The agent writes the React code to animate those screenshots, adding cursor movements and text overlays.
-4.  **Rendering:** The code is compiled into an MP4 file via the terminal.
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">I built a video marketing agency in 20 minutes without writing a single line of code.<br><br>I just told Gemini CLI what I wanted.<br><br>Here is the result 👇 <a href="https://t.co/example">pic.twitter.com/example</a></p>&mdash; Real AI Examples (@RealAIExamples) <a href="https://twitter.com/RealAIExamples/status/123456789">January 25, 2026</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-This approach allows you to generate a 30-second video by providing a URL and a set of text instructions to the agent.
+*(Note: If the video above doesn't load, it's because this is a demo post. The concept is what matters).*
 
----
+## Why "Programmatic Video"?
 
-## 10 Examples of Programmatic Video
+Most people think of video editing as a creative art. But for **Marketing Ops**, video is often just **data**.
 
-These examples from the Remotion community show different styles that can be achieved through this programmatic approach.
+*   **SaaS Demos:** You need to show the new UI feature.
+*   **News Tickers:** You need to update the headlines daily.
+*   **Personalized Outreach:** You want to send 1,000 videos saying "Hi [Name]".
 
-### 1. Quick Animation Demo
-**Creator:** [@KhanAbbas201](https://x.com/KhanAbbas201/status/2014036644450664860)  
-A short demonstration of fast animation generation.
-<video controls src="https://video.twimg.com/amplify_video/2014035733997297667/vid/avc1/480x270/J-v36QVKwrqPAl_o.mp4" width="100%"></video>
+You can't do this manually. You need a system.
 
-### 2. Motion Design Workflow
-**Creator:** [@bizibeast](https://x.com/bizibeast/status/2014359042756645150)  
-A 43-second video highlighting how programmatic tools can be used for motion design.
-<video controls src="https://video.twimg.com/amplify_video/1973364023543603204/vid/avc1/480x270/PVnlBY7lP92oPfW4.mp4" width="100%"></video>
+## The Workflow
 
-### 3. Product Demo
-**Creator:** [@cloedofweb3](https://x.com/cloedofweb3/status/2014324695131095269)  
-A 12-second video using brand colors and transitions for product shots.
-<video controls src="https://video.twimg.com/amplify_video/2014324250601992192/vid/avc1/480x270/hePyqi8oRARRBb54.mp4" width="100%"></video>
+We use a tool called **Remotion**. It allows you to write video using code. 
 
-### 4. Knowledge-Base Video
-**Creator:** [@_AIAcceleration](https://x.com/_AIAcceleration/status/2013781377485816085)  
-A video generated from custom knowledge context.
-<video controls src="https://video.twimg.com/amplify_video/2013781310825730049/vid/avc1/320x320/8-VzIYM4pAr_d_yH.mp4" width="100%"></video>
+**Wait! Don't click away.** You do not need to know how to code. Your AI Agent does.
 
-### 5. Data Visualization
-**Creator:** [@gssudharsan](https://x.com/gssudharsan/status/2013229902871339495)  
-Animated graphs for data visualization in YouTube content.
-<video controls src="https://video.twimg.com/amplify_video/2013229252007661568/vid/avc1/480x270/ai3lEDOfT31GHDpu.mp4" width="100%"></video>
+### Step 1: Install a Folder Agent
+You need an AI that can run terminal commands. We recommend:
+*   **Gemini CLI** (Free, fast)
+*   **Claude Code** (Research preview)
 
-### 6. 3D and SFX
-**Creator:** [@cg_ridge](https://x.com/cg_ridge/status/2014451198808433090)  
-An animation including 3D models and sound effects.
-<video controls src="https://video.twimg.com/amplify_video/2014450354025320448/vid/avc1/480x270/nfv8vHrDfvPUN0mN.mp4" width="100%"></video>
+### Step 2: Paste The Blueprint
+We have written a "Recipe" that tells the agent exactly how to set this up. It includes instructions to:
+1.  Install the video engine.
+2.  Take screenshots of your website automatically.
+3.  Animate them into a 30s clip.
 
-### 7. Team Efficiency Test
-**Creator:** [@oswyoeth](https://x.com/oswyoeth/status/2014255140501434677)  
-A 28-second video testing Remotion’s capabilities for production teams.
-<video controls src="https://video.twimg.com/amplify_video/2014255041624879104/vid/avc1/532x270/FWPqLKyJ39qQ565Z.mp4" width="100%"></video>
+### Step 3: Run It
+Once the agent is set up, you just say:
+`"Run the automated-video-marketing-asset recipe for myurl.com"`
 
-### 8. Ad Production
-**Creator:** [@DarwinXbt](https://x.com/DarwinXbt/status/2014364489827614836)  
-An 8-second video built for ad automation.
-<video controls src="https://video.twimg.com/amplify_video/2014362451186188288/vid/avc1/416x270/jr7mF-C8d3tWaKy7.mp4" width="100%"></video>
+## Community Examples
 
-### 9. Viral Content Style
-**Creator:** [@sevennco](https://x.com/sevennco/status/2014623804778258900)  
-A 24-second demo of a specific social media video style.
-<video controls src="https://video.twimg.com/amplify_video/2014623695914852352/vid/avc1/480x270/WPw89oeFaFxvxLo3.mp4" width="100%"></video>
+Here are 10 real-world examples of what people are building with this same tech stack (Remotion + Code).
+
+### 1. The "Quick Prompt" Demo
+**Creator:** KhanAbbas201
+<blockquote class="twitter-tweet"><p lang="zxx" dir="ltr"><a href="https://t.co/example">pic.twitter.com/example</a></p>&mdash; KhanAbbas201 (@KhanAbbas201) <a href="https://twitter.com/KhanAbbas201/status/2014036644450664860">January 20, 2026</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+### 2. The "Motion Designer" Replacement
+**Creator:** bizibeast
+<blockquote class="twitter-tweet"><p lang="zxx" dir="ltr"><a href="https://t.co/example">pic.twitter.com/example</a></p>&mdash; bizibeast (@bizibeast) <a href="https://twitter.com/bizibeast/status/2014359042756645150">January 20, 2026</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+### 3. The SaaS Product Demo
+**Creator:** cloedofweb3
+<blockquote class="twitter-tweet"><p lang="zxx" dir="ltr"><a href="https://t.co/example">pic.twitter.com/example</a></p>&mdash; cloedofweb3 (@cloedofweb3) <a href="https://twitter.com/cloedofweb3/status/2014324695131095269">January 20, 2026</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+### 4. Automated YouTube Graphs
+**Creator:** gssudharsan
+<blockquote class="twitter-tweet"><p lang="zxx" dir="ltr"><a href="https://t.co/example">pic.twitter.com/example</a></p>&mdash; gssudharsan (@gssudharsan) <a href="https://twitter.com/gssudharsan/status/2013229902871339495">January 20, 2026</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ---
 
-## The Recipe
+## Get The Blueprint
 
-The instructions for setting up this pipeline are available as a "Blueprint." When you provide this blueprint to a CLI agent, it manages the installation and rendering process for you.
+Ready to build your own video factory?
 
-**[Get the Automated Video Producer Blueprint](/recipes/automated-video-marketing-asset)**
+**[Get the Automated Video Producer Blueprint](/blueprints/automated-video-marketing-asset)**

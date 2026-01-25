@@ -42,6 +42,11 @@ export default function BlogPostPage({ post, relatedRecipes }: BlogPostPageProps
         return <div key={index} className="h-4"></div>;
       }
 
+      // Raw HTML (Video tags, Twitter embeds)
+      if (line.trim().startsWith('<') && line.trim().endsWith('>')) {
+         return <div key={index} className="my-6" dangerouslySetInnerHTML={{ __html: line }} />;
+      }
+
       // Paragraphs
       return (
         <p key={index} className="text-text-secondary leading-relaxed mb-4 text-lg">
