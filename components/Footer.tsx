@@ -42,6 +42,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/ai-workplace-personality" className="hover:text-accent transition-colors">
+                  AI Personality Quiz
+                </Link>
+              </li>
+              <li>
                 <Link href="/blog" className="hover:text-accent transition-colors">
                   Guides & Blog
                 </Link>

@@ -11,7 +11,7 @@ import HorizontalStrip from '../components/HorizontalStrip'
 import JobCard from '../components/JobCard'
 import AIToolCard from '../components/AIToolCard'
 import NewsletterForm from '../components/NewsletterForm'
-import ArchetypeQuiz from '../components/ArchetypeQuiz'
+
 import StrategicKits from '../components/StrategicKits'
 import MockTerminal from '../components/MockTerminal'
 
@@ -137,49 +137,7 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
             </div>
         </div>
 
-        {/* PREMIUM CONTEXT PROMO */}
-        <div className="bg-secondary-bg border-y border-navy-dark py-16 relative overflow-hidden group">
-          <div className="absolute inset-0 bg-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
-          <div className="container mx-auto px-4 max-w-5xl">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-10">
-              <div className="flex-1">
-                <div className="inline-flex items-center gap-2 text-accent text-xs font-bold uppercase tracking-widest mb-4">
-                  <Cpu className="w-4 h-4" /> New: Context Library
-                </div>
-                <h2 className="text-3xl md:text-4xl font-bold text-text-color mb-4 leading-tight">
-                  Don't Start from Zero. <br/>
-                  <span className="text-accent">Give Your Agent a Brain.</span>
-                </h2>
-                <p className="text-lg text-text-secondary mb-8 leading-relaxed">
-                  Stop copying prompts one by one. Download our <strong>Master Cookbook (JSON)</strong> containing 700+ workflows. 
-                  Drop it into your project, and your agent instantly becomes a Sales & Marketing expert.
-                </p>
-                <a href="/context" className="inline-flex items-center gap-2 bg-navy-dark border border-navy-light hover:border-accent text-text-color font-bold px-6 py-3 rounded-lg transition-all group-hover:translate-x-1">
-                  <Command className="w-4 h-4 text-accent" /> Download Context Files <ArrowRight className="w-4 h-4" />
-                </a>
-              </div>
-              
-              <div className="flex-1 w-full max-w-md bg-[#1e1e1e] rounded-lg border border-navy-dark p-4 font-mono text-sm shadow-2xl relative">
-                <div className="flex gap-2 mb-4 border-b border-gray-700 pb-2">
-                  <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                </div>
-                <div className="space-y-2">
-                  <div className="text-gray-400">$ ls *.json</div>
-                  <div className="text-accent">cookbook-full.json</div>
-                  <div className="text-gray-400 mt-4">$ gemini run --context cookbook-full.json</div>
-                  <div className="text-white">
-                    <span className="text-green-400">✔</span> Loaded 723 workflows.<br/>
-                    <span className="text-green-400">✔</span> Role: Marketing Ops Expert.<br/>
-                    <span className="text-blue-400">?</span> How can I help you today?
-                  </div>
-                  <div className="animate-pulse text-accent mt-2">_</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+
 
         {/* HOW TO USE GUIDE */}
         <HowToUseGuide />
@@ -228,8 +186,49 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
             </div>
         </div>
 
-        {/* ARCHETYPE QUIZ */}
-        <ArchetypeQuiz />
+        {/* PREMIUM CONTEXT PROMO */}
+        <div className="bg-secondary-bg border-y border-navy-dark py-16 relative overflow-hidden group">
+          <div className="absolute inset-0 bg-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+          <div className="container mx-auto px-4 max-w-5xl">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-10">
+              <div className="flex-1">
+                <div className="inline-flex items-center gap-2 text-accent text-xs font-bold uppercase tracking-widest mb-4">
+                  <Cpu className="w-4 h-4" /> New: Context Library
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold text-text-color mb-4 leading-tight">
+                  Don't Start from Zero. <br/>
+                  <span className="text-accent">Give Your Agent a Brain.</span>
+                </h2>
+                <p className="text-lg text-text-secondary mb-8 leading-relaxed">
+                  Stop copying prompts one by one. Download our <strong>Master Cookbook (JSON)</strong> containing 700+ workflows. 
+                  Drop it into your project, and your agent instantly becomes a Sales & Marketing expert.
+                </p>
+                <a href="/context" className="inline-flex items-center gap-2 bg-navy-dark border border-navy-light hover:border-accent text-text-color font-bold px-6 py-3 rounded-lg transition-all group-hover:translate-x-1">
+                  <Command className="w-4 h-4 text-accent" /> Download Context Files <ArrowRight className="w-4 h-4" />
+                </a>
+              </div>
+              
+              <div className="flex-1 w-full max-w-md bg-[#1e1e1e] rounded-lg border border-navy-dark p-4 font-mono text-sm shadow-2xl relative">
+                <div className="flex gap-2 mb-4 border-b border-gray-700 pb-2">
+                  <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                  <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                  <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                </div>
+                <div className="space-y-2">
+                  <div className="text-gray-400">$ ls *.json</div>
+                  <div className="text-accent">cookbook-full.json</div>
+                  <div className="text-gray-400 mt-4">$ gemini run --context cookbook-full.json</div>
+                  <div className="text-white">
+                    <span className="text-green-400">✔</span> Loaded 723 workflows.<br/>
+                    <span className="text-green-400">✔</span> Role: Marketing Ops Expert.<br/>
+                    <span className="text-blue-400">?</span> How can I help you today?
+                  </div>
+                  <div className="animate-pulse text-accent mt-2">_</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
         {/* FAQ SECTION */}
         <div className="bg-primary-bg py-24 border-t border-navy-dark">

@@ -4,10 +4,19 @@ import { PromoRealAI } from './PromoRealAI';
 import { TikTokPOV } from './TikTokPOV';
 import { TikTokMuted } from './TikTokMuted';
 import { VideoGlitch } from './VideoGlitch';
+import { InstaCover } from './InstaCover';
 
 export const RemotionRoot: React.FC = () => {
   return (
     <>
+      <Composition
+        id="InstaCover"
+        component={InstaCover}
+        durationInFrames={1}
+        fps={30}
+        width={1080}
+        height={1350}
+      />
       <Composition
         id="BlueprintPromo"
         component={BlueprintPromo}
