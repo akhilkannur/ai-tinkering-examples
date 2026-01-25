@@ -5,7 +5,11 @@ import time
 import re
 from datetime import datetime
 
-API_KEY = "re_Jt7QMG2J_85kcBNGeD9PkMHF2EGVznnUj"
+import os
+
+API_KEY = os.environ.get("RESEND_API_KEY")
+if not API_KEY:
+    raise ValueError("RESEND_API_KEY environment variable not set")
 
 def slugify(text):
     """Mirror of the frontend slugify logic."""

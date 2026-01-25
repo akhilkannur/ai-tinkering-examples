@@ -1,14 +1,15 @@
 const fs = require('fs');
 const dotenv = require('dotenv');
 
-const envConfig = dotenv.parse(fs.readFileSync('.env'));
+const envConfig = dotenv.parse(fs.readFileSync('.env.local'));
 
-envConfig.X_API_KEY = '4nTXsNXnI1wiWuAndJ4EhpHaS';
-envConfig.X_API_KEY_SECRET = 'hCGAT2eDB4ZEheglXQMJf73gUshWgHgujAT6gJ6wnrY7xKaLxk';
-envConfig.X_ACCESS_TOKEN = '1972178357526663168-6BDUcNUxdB4sUXn87qD9tL6Suhljr2';
-envConfig.X_ACCESS_TOKEN_SECRET = 'YEg8i4mDe4Kvx43cCtNsFPKqNgZedrrrWwI04GUMn3qKM';
-envConfig.X_BEARER_TOKEN = 'AAAAAAAAAAAAAAAAAAAAAGXP7AEAAAAApnhqfYSts%2BE06%2FtnUKcMrct%2FStA%3D1PmAW74GWfUbUDC00CZeOzgAodxoNHfNLS9gqudX5gDthD4oDu';
-envConfig.X_CLIENT_SECRET_ID = 'IIj4SQ5r3Bu3Ucb_huMjvQw_dKTulBLEA2--rAliRFjSGKGc_p';
+// Ensure keys are loaded from environment if not in .env.local
+envConfig.X_API_KEY = process.env.X_API_KEY || envConfig.X_API_KEY;
+envConfig.X_API_KEY_SECRET = process.env.X_API_KEY_SECRET || envConfig.X_API_KEY_SECRET;
+envConfig.X_ACCESS_TOKEN = process.env.X_ACCESS_TOKEN || envConfig.X_ACCESS_TOKEN;
+envConfig.X_ACCESS_TOKEN_SECRET = process.env.X_ACCESS_TOKEN_SECRET || envConfig.X_ACCESS_TOKEN_SECRET;
+envConfig.X_CLIENT_ID = process.env.X_CLIENT_ID || envConfig.X_CLIENT_ID;
+envConfig.X_CLIENT_SECRET_ID = process.env.X_CLIENT_SECRET_ID || envConfig.X_CLIENT_SECRET_ID;
 
 const newEnv = Object.entries(envConfig)
   .map(([key, value]) => `${key}=${value}`)
