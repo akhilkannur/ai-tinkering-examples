@@ -86,7 +86,7 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
 
                         <div className="inline-block bg-accent/10 border border-accent/20 rounded-full px-3 py-1 mb-4">
                             <span className="text-xs font-bold text-accent tracking-wide uppercase flex items-center gap-2">
-                                <Zap className="w-3 h-3 fill-current" /> Launch Special: $29 (Normally $149)
+                                <Zap className="w-3 h-3 fill-current" /> Launch Special: $39 (Normally $149)
                             </span>
                         </div>
 
@@ -95,7 +95,7 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
                                 href="https://checkout.dodopayments.com/buy/pdt_0NW6p0szmXPS6jXW05hIP"
                                 className="w-full sm:w-auto px-8 py-4 bg-accent hover:bg-accent-hover text-white font-bold rounded-lg transition-all shadow-[0_0_20px_rgba(236,72,153,0.3)] hover:shadow-[0_0_30px_rgba(236,72,153,0.5)] text-sm flex items-center justify-center gap-2 transform hover:-translate-y-1"
                             >
-                                Get Lifetime Access for $29 <ArrowRight className="w-4 h-4" />
+                                Get Lifetime Access for $39 <ArrowRight className="w-4 h-4" />
                             </a>
                             <a 
                                 href="#blueprints" 
