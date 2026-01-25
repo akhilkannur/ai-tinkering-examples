@@ -70,6 +70,12 @@ export default function ToolsIndex() {
           <p className="text-lg text-slate-600 leading-relaxed font-sans max-w-2xl mx-auto mb-8">
             Stop searching, start building. A newly launched directory of hand-picked tools. New additions every week.
           </p>
+
+          <div className="flex flex-col items-center gap-4">
+            <p className="text-sm text-slate-500 font-sans">
+              Made a useful AI tool? <a href="https://forms.gle/KqN82GGdCohshtVx8" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline font-bold">Submit it here.</a>
+            </p>
+          </div>
         </div>
 
         {/* Controls */}
