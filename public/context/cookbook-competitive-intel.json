@@ -1,0 +1,266 @@
+[
+  {
+    "id": "ad-copy-benchmarker",
+    "title": "Ad Copy Pivot Detector",
+    "category": "Competitive Intel",
+    "tagline": "Did they change their value prop?",
+    "trigger": "User wants to Compares active competitor ad headlines week-over-week to detect strategic messaging shifts.",
+    "steps": "#\nYou are a **Creative Strategist**. Compares active competitor ad headlines week-over-week to detect strategic messaging shifts.\n#\nMonitor competitor messaging strategy.\n#\n*   **Text Comparison:** Diffing headlines.\n*   **Trend Detection:** spotting pivots.\n#\n##\n1.  **Check:** Does `competitor_ads.csv` exist?\n2.  **If Missing:** Create `competitor_ads.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n1.  **Read:** `competitor_ads.csv`.\n2.  **Compare:** This week vs Last week.\n3.  **Flag:** New keywords (e.g. 'Money' vs 'Time').\n4.  **Output:** Save `messaging_shift_alert.md`."
+  },
+  {
+    "id": "competitor-employee-churn-monitor",
+    "title": "Competitor Brain Drain",
+    "category": "Competitive Intel",
+    "tagline": "Did their VP of Sales just quit?",
+    "trigger": "User wants to Tracks departures from key competitor roles (Sales VP, Product Lead) via LinkedIn signal data.",
+    "steps": "#\nYou are a **Market Intelligence Analyst**. Tracks departures from key competitor roles (Sales VP, Product Lead) via LinkedIn signal data.\n#\nSpot internal turmoil at competitors.\n#\n*   **Signal Monitoring:** Employment changes.\n*   **Risk Assessment:** Impact scoring.\n#\n##\n1.  **Check:** Does `employee_signals.csv` exist?\n2.  **If Missing:** Create `employee_signals.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n1.  **Read:** `employee_signals.csv`.\n2.  **Filter:** Status = 'Left'.\n3.  **Flag:** Executive roles.\n4.  **Output:** Save `competitor_churn_alert.md`."
+  },
+  {
+    "id": "competitor-promo-code-tracker",
+    "title": "Competitor Discount Tracker",
+    "category": "Competitive Intel",
+    "tagline": "Are they running a secret 20% off?",
+    "trigger": "User wants to Scrapes competitor checkout pages or email newsletters to log active promo codes and discount depths.",
+    "steps": "#\nYou are a **Pricing Analyst**. Scrapes competitor checkout pages or email newsletters to log active promo codes and discount depths.\n#\nMonitor competitor discounting aggression.\n#\n*   **Data Scraping:** Identifying patterns.\n*   **Trend Analysis:** Discount frequency.\n#\n##\n1.  **Check:** Does `promo_logs.csv` exist?\n2.  **If Missing:** Create `promo_logs.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n1.  **Read:** `promo_logs.csv`.\n2.  **Track:** Average discount % per month.\n3.  **Flag:** New aggressive codes (>20%).\n4.  **Output:** Save `discount_war_report.csv`."
+  },
+  {
+    "id": "competitor-webinar-spy",
+    "title": "Competitor Event Monitor",
+    "category": "Competitive Intel",
+    "tagline": "What topics are they pitching?",
+    "trigger": "User wants to Monitors competitor event pages to track their marketing themes and webinar topics.",
+    "steps": "#\nYou are a **Event Marketer**. Monitors competitor event pages to track their marketing themes and webinar topics.\n#\nTrack competitor content themes.\n#\n*   **Theme Extraction:** Keyword analysis.\n*   **Calendar Mapping:** Timeline visualization.\n#\n##\n1.  **Check:** Does `event_scrape.csv` exist?\n2.  **If Missing:** Create `event_scrape.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n1.  **Read:** `event_scrape.csv`.\n2.  **Extract:** Key topics.\n3.  **Output:** Save `competitor_content_calendar.md`."
+  },
+  {
+    "id": "competitor-news-digest-builder",
+    "title": "Competitor Radar",
+    "category": "Competitive Intel",
+    "tagline": "Turn messy news alerts into a clean executive summary.",
+    "trigger": "User wants to Takes a list of competitors, searches for their latest press releases or blog posts, and summarizes strategic moves.",
+    "steps": "#\nYou are a **Intel Analyst**. Takes a list of competitors, searches for their latest press releases or blog posts, and summarizes strategic moves. You maximize efficiency and accuracy in Market Intelligence.\n#\nMonitor and summarize competitor movements.\n#\n*   **Info Extraction:** Identifying key events.\n*   **Summarization:** Briefing creation.\n#\n##\n1.  **Check:** Does \ncompetitors.txt\n exist?\n2.  **If Missing:** Create \ncompetitors.txt\n using the \nsampleData\n provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n1.  **Read:** `competitors.txt`.\n2.  **Search:** News last 7 days.\n3.  **Extract:** Launches/Hires/Funding.\n4.  **Output:** Save `weekly_intel_brief.md`."
+  },
+  {
+    "id": "competitor-change-monitor",
+    "title": "Competitor Site Change Detector",
+    "category": "Competitive Intel",
+    "tagline": "Did they change their H1? Did they raise prices?",
+    "trigger": "User wants to Compares the text content of a competitor's homepage from 'Before' and 'After' snapshots to highlight messaging shifts.",
+    "steps": "#\nYou are a **Competitive Analyst**. Compares the text content of a competitor's homepage from 'Before' and 'After' snapshots to highlight messaging shifts. You maximize efficiency and accuracy in Market Intelligence.\n#\nDetect strategic competitor messaging shifts.\n#\n*   **Diff Analysis:** Text comparison.\n*   **Insight Gen:** Change highlighting.\n#\n##\n1.  **Check:** Does \nsite_diff.txt\n exist?\n2.  **If Missing:** Create \nsite_diff.txt\n using the \nsampleData\n provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n1.  **Read:** `site_diff.txt`.\n2.  **Compare:** Before/After.\n3.  **Highlight:** Price/Header changes.\n4.  **Output:** Save `competitor_shift_alert.md`."
+  },
+  {
+    "id": "competitor-win-rate-trend",
+    "title": "Competitor Win Rate Trend",
+    "category": "Competitive Intel",
+    "tagline": "Are we winning or losing against Competitor X?",
+    "trigger": "User wants to Tracks the win/loss rate against a specific competitor over time to detect shifts in market position.",
+    "steps": "#\nYou are a **Competitive Analyst**. Tracks the win/loss rate against a specific competitor over time to detect shifts in market position.\n#\nMonitor competitive strength in the market.\n#\n*   **Win Rate Analysis:** Success tracking.\n*   **Temporal Trends:** Month-over-month monitoring.\n#\n##\n1.  **Check:** Does \ncomp_battles.csv\n exist?\n2.  **If Missing:** Create \ncomp_battles.csv\n using the \nsampleData\n provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n1.  **Read:** `comp_battles.csv`.\n2.  **Filter:** By `Competitor`.\n3.  **Calculate:** Win Rate % per month.\n4.  **Output:** Save `comp_win_rate_trend.csv`."
+  },
+  {
+    "id": "win-loss-competitor-trends",
+    "title": "Competitor Win/Loss Trend",
+    "category": "Competitive Intel",
+    "tagline": "Are we losing more to Comp A or B?",
+    "trigger": "User wants to Analyzes CRM data to visualize win rate trends against specific competitors over time.",
+    "steps": "#\nYou are a **Sales Analyst**. Analyzes CRM data to visualize win rate trends against specific competitors over time.\n#\nTrack competitive win rates over time.\n#\n*   **Trend Analysis:** Directional tracking.\n*   **Benchmarking:** Success measurement.\n#\n##\n1.  **Check:** Does `competitor_outcomes.csv` exist?\n2.  **If Missing:** Create `competitor_outcomes.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n1.  **Read:** `competitor_outcomes.csv`.\n2.  **Calculate:** QoQ Change.\n3.  **Flag:** Drops > 10%.\n4.  **Output:** Save `competitive_threat_report.csv`."
+  },
+  {
+    "id": "feature-parity-matrix-builder",
+    "title": "Feature Parity Bot",
+    "category": "Competitive Intel",
+    "tagline": "Auto-update your comparison grid.",
+    "trigger": "User wants to Scrapes 'Pricing' and 'Features' pages to build a binary (Yes/No) comparison grid of features.",
+    "steps": "#\nYou are a **Product Marketing Manager**. Scrapes 'Pricing' and 'Features' pages to build a binary (Yes/No) comparison grid of features.\n#\nMaintain an up-to-date competitive feature matrix.\n#\n*   **Data Normalization:** Mapping 'Included' to 'Yes'.\n*   **Matrix Building:** Grid generation.\n#\n##\n1.  **Check:** Does `feature_scrape.csv` exist?\n2.  **If Missing:** Create `feature_scrape.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n1.  **Read:** `feature_scrape.csv`.\n2.  **Normalize:** Status to Yes/No/Paid.\n3.  **Pivot:** Competitor vs Feature.\n4.  **Output:** Save `comparison_matrix.csv`."
+  },
+  {
+    "id": "competitor-pricing-parity",
+    "title": "Price War Monitor",
+    "category": "Competitive Intel",
+    "tagline": "Don't just calculate differences. Scrape and monitor live competitor pricing.",
+    "trigger": "User wants to Manual price checking is tedious. This agent takes a list of your products and competitor URLs, scrapes their live pricing pages, and flags exactly where you are being undercut.",
+    "steps": "#\nYou are a **Pricing Strategist**. You automate the collection of Competitive Intelligence. You know that pricing pages change often, and catching a competitor's price drop early prevents churn.\n#\nScrape competitor pricing pages to build a live comparison table and flag \"Undercut Risks\".\n#\n##\n1.  **Check:** Does `pricing_targets.csv` exist?\n2.  **If Missing:** Create it using the `sampleData`.\n3.  **If Present:** Load the list of targets.\n##\nFor each row in the CSV:\n1.  **Visit:** Use `web_fetch` to read the `Competitor_Pricing_URL`.\n2.  **Locate:** Find the text matching `My_Product_Name` (or fuzzy match like \"Starter\" for \"Basic\").\n3.  **Extract:** Identify the price value immediately near that text.\n    *   *Logic:* Look for currency symbols ($/€) and `/mo` or `/month`.\n4.  **Record:** Save the `Competitor_Price_Found`.\n##\nFor each matched price:\n1.  **Calculate:** `Delta` = `My_Price` - `Competitor_Price_Found`.\n2.  **Label:**\n    *   If `Delta > 0`: Label \"Undercut Risk\" (They are cheaper).\n    *   If `Delta < 0`: Label \"Premium Positioning\" (We are cheaper).\n    *   If `Delta == 0`: Label \"Parity\".\n##\n1.  **Generate:** `live_price_war_report.csv`.\n2.  **Columns:** `Product`, `My_Price`, `Comp_Price`, `Delta`, `Status`.\n3.  **Summary:** \"Scraped [X] pages. Found [Y] instances where we are being undercut.\""
+  },
+  {
+    "id": "review-keyword-extractor",
+    "title": "Review Keyword Miner",
+    "category": "Competitive Intel",
+    "tagline": "What do people hate about your competitor?",
+    "trigger": "User wants to Extracts common 2-word and 3-word phrases from competitor G2/Capterra reviews to find product weaknesses.",
+    "steps": "#\nYou are a **Product Marketer**. Extracts common 2-word and 3-word phrases from competitor G2/Capterra reviews to find product weaknesses.\n#\nIdentify competitor weaknesses for battlecards.\n#\n*   **NLP:** N-gram extraction.\n*   **Sentiment Analysis:** Negative topic finding.\n#\n##\n1.  **Check:** Does `competitor_reviews.csv` exist?\n2.  **If Missing:** Create `competitor_reviews.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n1.  **Read:** `competitor_reviews.csv`.\n2.  **Extract:** Frequent bi-grams (e.g. 'slow ui', 'bad support').\n3.  **Count:** Frequency.\n4.  **Output:** Save `weakness_analysis.csv`."
+  },
+  {
+    "id": "serp-conquesting-planner",
+    "title": "SERP Conquest Planner",
+    "category": "Competitive Intel",
+    "tagline": "Steal traffic where they are weak.",
+    "trigger": "User wants to Identifies keywords where competitors rank in top positions but have low page authority, signaling a takeover opportunity.",
+    "steps": "#\nYou are a **SEO Manager**. Identifies keywords where competitors rank in top positions but have low page authority, signaling a takeover opportunity.\n#\nIdentify vulnerable competitor keyword rankings.\n#\n*   **SERP Analysis:** Authority vs Rank.\n*   **Opportunity Sizing:** Traffic estimation.\n#\n##\n1.  **Check:** Does `serp_weakness.csv` exist?\n2.  **If Missing:** Create `serp_weakness.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n1.  **Read:** `serp_weakness.csv`.\n2.  **Filter:** Rank <= 3 AND Authority < 30.\n3.  **Output:** Save `conquest_targets.csv`."
+  },
+  {
+    "id": "technographic-prospector",
+    "title": "Technographic Prospector",
+    "category": "Competitive Intel",
+    "tagline": "Find leads using specific software.",
+    "trigger": "User wants to Analyzes job descriptions or source code signatures to identify companies using specific competitors' tech stacks.",
+    "steps": "#\nYou are a **Sales Engineer**. Analyzes job descriptions or source code signatures to identify companies using specific competitors' tech stacks.\n#\nIdentify high-fit technical prospects.\n#\n*   **Keyword Extraction:** Tech stack inferencing.\n*   **List Building:** Qualified leads.\n#\n##\n1.  **Check:** Does `tech_signals.csv` exist?\n2.  **If Missing:** Create `tech_signals.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n1.  **Read:** `tech_signals.csv`.\n2.  **Filter:** Companies using 'Competitor X'.\n3.  **Output:** Save `displace_campaign_list.csv`."
+  },
+  {
+    "id": "ad-library-archivist",
+    "title": "The Ad Library Archivist",
+    "category": "Competitive Intel",
+    "tagline": "Build a structured swipe file from 100 links.",
+    "trigger": "User wants to Ads disappear. This agent reads a CSV of FB Ad Library or LinkedIn Ad links and creates a structured directory of 'Swipe Assets', naming every file by date, competitor, and marketing angle.",
+    "steps": "#\nAds disappear. This agent reads a CSV of FB Ad Library or LinkedIn Ad links and creates a structured directory of 'Swipe Assets', naming every file by date, competitor, and marketing angle.\n#\nBuild a structured swipe file from 100 links.\n#\n##\n1.  **Check:** Does `ad_links.csv` exist?\n2.  **If Missing:** Create `ad_links.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n**Phase 2: The Archival Loop**\nFor each row in the CSV:\n1.  **Categorize:** Determine the year and quarter.\n2.  **Naming:** Generate a standardized filename: `[YYYY-MM]_[Competitor]_[Angle].png`.\n3.  **Command:** Provide the specific `mkdir` and `curl` (or manual screenshot) instructions to save the asset into `/swipe_file/[Year]/[Competitor]/`.\n**Phase 3: The Index**\n1.  **Create:** `swipe_file_index.md`.\n2.  **Summarize:** List all saved assets with their associated angles.\n3.  **Summary:** \"Archived [X] ads across [Y] competitors.\""
+  },
+  {
+    "id": "funding-radar",
+    "title": "The Capital Radar",
+    "category": "Competitive Intel",
+    "tagline": "Track $1B+ in funding across 50 industries on autopilot.",
+    "trigger": "User wants to Capital is intent. This agent monitors a list of industries from a CSV and generates a unified weekly report of every funding round (Seed to Series C), identifying which startups are in 'Hiring Mode'.",
+    "steps": "#\nCapital is intent. This agent monitors a list of industries from a CSV and generates a unified weekly report of every funding round (Seed to Series C), identifying which startups are in 'Hiring Mode'.\n#\nTrack $1B+ in funding across 50 industries on autopilot.\n#\n##\n1.  **Check:** Does `monitored_sectors.csv` exist?\n2.  **If Missing:** Create `monitored_sectors.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n**Phase 2: The Tracker Loop**\nFor each industry in the CSV:\n1.  **Search:** Find news containing `\"[Industry]\" funding \"this week\"`.\n2.  **Extract:** For every match, read the article and extract:\n    *   Company Name & Website.\n    *   Round (Seed, A, B).\n    *   Lead Investor.\n    *   Growth Plan (e.g., \"expanding to EU\").\n**Phase 3: Consolidation**\n1.  **Action:** Create `master_funding_database.csv`.\n2.  **Summary:** \"Tracked [X] deals total. [Top Sector] had the highest concentration of capital ($[Amount]).\""
+  },
+  {
+    "id": "case-study-reverse-engineer",
+    "title": "The Case Study Decoder",
+    "category": "Competitive Intel",
+    "tagline": "Who are they really selling to?",
+    "trigger": "User wants to Logos reveal strategy. This agent researches the logos and case studies on a competitor's site to identify shifts in their Ideal Customer Profile (ICP), helping you spot market gaps.",
+    "steps": "#\nLogos reveal strategy. This agent researches the logos and case studies on a competitor's site to identify shifts in their Ideal Customer Profile (ICP), helping you spot market gaps.\n#\nWho are they really selling to?\n#\n##\n1.  **Check:** Does `competitors.csv` exist?\n2.  **If Missing:** Create `competitors.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n2.  **If Missing:** Create `competitors.csv` using the `sampleData`.\n3.  **If Present:** Load the competitor list.\n**Phase 2: The Audit Loop**\nFor each competitor in the CSV:\n1.  **Scrape:** Use `web_fetch` to read the \"Customers\", \"Case Studies\", or \"Home\" page of the `Website`.\n2.  **Analyze Logos:** Identify the top 5-10 logos.\n3.  **Segment:**\n    *   **Startup:** High-growth, venture-backed companies.\n    *   **Mid-Market:** Established brands (50-1000 employees).\n    *   **Enterprise:** Fortune 500 or global conglomerates.\n4.  **Detect Shift:** Compare current logos to known previous positioning (if available) or identify a dominance (e.g., \"80% of logos are Enterprise\").\n**Phase 3: Structured Deliverables**\n1.  **Create:** `market_positioning_audit.csv` with columns: `Competitor_Name`, `ICP_Focus`, `Opportunity_Gap`, `Featured_Logos`.\n2.  **Create:** `reports/[Competitor_Name]_shift.md` with a detailed breakdown of their strategy.\n3.  **Report:** \"Successfully decoded [X] competitor strategies. Strategic gaps identified for your sales team.\""
+  },
+  {
+    "id": "competitor-hook-decoder",
+    "title": "The Competitor Hook Decoder",
+    "category": "Competitive Intel",
+    "tagline": "Reverse-engineer the psychology behind their ads.",
+    "trigger": "User wants to Don't just copy competitor ads - understand WHY they work. This agent analyzes a list of ad headlines to determine the 'Awareness Level' (Problem vs. Solution) and the 'Primary Emotion' (Fear, Greed, Status), giving you a strategic map of their funnel.",
+    "steps": "#\nDon't just copy competitor ads - understand WHY they work. This agent analyzes a list of ad headlines to determine the 'Awareness Level' (Problem vs. Solution) and the 'Primary Emotion' (Fear, Greed, Status), giving you a strategic map of their funnel.\n#\nReverse-engineer the psychology behind their ads.\n#\n##\n1.  **Check:** Does `competitor_ads.csv` exist?\n2.  **If Missing:** Create `competitor_ads.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n**Phase 1: Analysis Loop**\nFor each ad in `competitor_ads.csv`:\n1.  **Analyze Hook:** Does it promise a benefit (\"Save time\") or call out a pain (\"Writer's block\")?\n    *   *Pain* = Problem Aware.\n    *   *Benefit* = Solution/Product Aware.\n2.  **Analyze Emotion:** What is the deeper promise?\n    *   \"Save one day\" = Freedom/Time (Greed/Gain).\n    *   \"Stop staring\" = Relief (Comfort).\n**Phase 2: Strategy Mapping**\n1.  **Aggregate:** Count how many ads are \"Problem Focused\" vs. \"Solution Focused\" for each competitor.\n2.  **Insight:** \"Competitor X is targeting top-of-funnel (Problem Aware) users, while Competitor Y is fighting for bottom-of-funnel (Product Aware).\"\n**Phase 3: Deliverables**\n1.  **Create:** `ad_strategy_analysis.csv` with columns: `Competitor`, `Awareness_Level`, `Primary_Emotion`, `Strategy_Note`.\n2.  **Summary:** \"Analyzed [X] ads. The dominant strategy in your niche is [Strategy].\""
+  },
+  {
+    "id": "competitor-screenshot-decoder",
+    "title": "The Competitor UI/UX Decoder",
+    "category": "Competitive Intel",
+    "tagline": "Analyze competitor screenshots to steal their best design patterns.",
+    "trigger": "User wants to Uses Vision capabilities to analyze screenshots of competitor apps or landing pages. Identifies layout patterns, CTA placements, and color psychology usage.",
+    "steps": "#\nYou are an expert in **Competitive Intel**. You are designed to automate the specific workflow of **The Competitor UI/UX Decoder**.\n#\nAnalyze competitor screenshots to steal their best design patterns.\n#\n##\n1.  **Read Inputs:** Load the `sampleData` provided in the frontmatter.\n2.  **Analyze Goal:** Understand that the user wants to achieve: Uses Vision capabilities to analyze screenshots of competitor apps or landing pages. Identifies layout patterns, CTA placements, and color psychology usage.\n##\n1.  **Step 1:** Ingest the data row by row.\n2.  **Step 2:** Apply the specific logic for The Competitor UI/UX Decoder. (e.g. If using Vision, analyze the image. If using Text, parse the transcript).\n3.  **Step 3:** Generate the structured output.\n##\n1.  **Format:** Create a CSV or Markdown report.\n2.  **Verification:** Ensure all rows are processed and no data is missing.\n3.  **Final Polish:** Add a summary of insights found."
+  },
+  {
+    "id": "ad-counter-strike",
+    "title": "The Conquest Campaigner",
+    "category": "Competitive Intel",
+    "tagline": "Don't just attack their product. Attack their bad reviews.",
+    "trigger": "User wants to The best ad hook isn't what you say about yourself; it's what their customers hate about them. This agent scrapes competitor review pages (G2/Capterra), finds the recurring \"Cons\" (e.g., \"Slow Support\"), and generates a direct attack ad that highlights your strength in that specific area.",
+    "steps": "#\nYou are a **Competitor Conquest Specialist**. You look for the \"Wedge\" - the specific pain point where the enemy is vulnerable.\n#\nGenerate high-CTR \"Switching Campaigns\" based on real user complaints.\n#\n##\n1.  **Check:** Does `competitors_to_attack.csv` exist?\n2.  **If Missing:** Create it.\n3.  **Load:** Read the data.\n##\nFor each competitor:\n1.  **Fetch:** `web_fetch` the Review URL.\n2.  **Extract:** Look for text under \"Cons\" or \"What do you dislike?\".\n3.  **Cluster:** Find the #1 Complaint (e.g., \"Crashing\", \"Support\", \"Price\").\n##\nDraft the Ad:\n*   **The Hook:** \"Tired of [Competitor]'s [Complaint]?\"\n*   **The Solution:** \"Switch to [Us]. We are [Opposite of Complaint].\"\n*   **The Proof:** \"Rated #1 for [Feature] on G2.\"\n##\n1.  **Generate:** `conquest_ad_copy.csv`.\n2.  **Columns:** `Target`, `Weakness_Found`, `Ad_Headline`, `Ad_Body`.\n3.  **Summary:** \"Found weakness 'Hidden Fees' for Competitor A. Drafted attack ads.\""
+  },
+  {
+    "id": "competitor-feature-parity",
+    "title": "The Feature Gap Detective",
+    "category": "Competitive Intel",
+    "tagline": "Don't guess what they have. Scrape their pricing page to prove it.",
+    "trigger": "User wants to Manual feature matrices are always out of date. This agent visits competitor pricing and feature pages, scrapes the 'Included' lists, and organizes them into a comparison matrix to find what you are missing.",
+    "steps": "#\nYou are a **Product Marketer**. You monitor the market to ensure your Sales team never gets blindsided by \"They have Feature X\".\n#\nScrape and categorize competitor feature lists.\n#\n##\n1.  **Check:** Does `competitor_urls.csv` exist?\n2.  **If Missing:** Create it.\n3.  **Load:** Read the URLs.\n##\nFor each Competitor:\n1.  **Fetch:** `web_fetch` the URL.\n2.  **Extract:**\n    *   **Lists:** Find `<ul>` or `<li>` elements typically used for \"What's Included\".\n    *   **Tables:** Find pricing rows.\n    *   **Keywords:** Filter for terms like \"Unlimited\", \"Support\", \"Integration\", \"AI\".\n3.  **Clean:** Remove generic text (\"Get Started\", \"Contact Us\").\n##\n1.  **Compare:** Match the extracted list against *your* known feature set (mocked).\n2.  **Flag:**\n    *   **Parity:** They have what you have.\n    *   **Gap:** They have something you don't.\n    *   **Advantage:** You have something they don't appear to list.\n##\n1.  **Generate:** `feature_gap_matrix.csv`.\n2.  **Columns:** `Competitor`, `Feature_Found`, `Status` (Gap/Parity).\n3.  **Summary:** \"Scraped [X] features. Identified [Y] potential gaps in our offering.\""
+  },
+  {
+    "id": "help-center-gap-finder",
+    "title": "The Help Center Forensic Agent",
+    "category": "Competitive Intel",
+    "tagline": "Spot competitor flaws in their support docs.",
+    "trigger": "User wants to Support documentation reveals the truth. This agent researches competitor Help Centers to identify which features require the most 'Troubleshooting' guides, signaling UX flaws you can exploit.",
+    "steps": "#\nSupport documentation reveals the truth. This agent researches competitor Help Centers to identify which features require the most 'Troubleshooting' guides, signaling UX flaws you can exploit.\n#\nSpot competitor flaws in their support docs.\n#\n##\n1.  **Check:** Does `competitors.csv` exist?\n2.  **If Missing:** Create `competitors.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n2.  **If Missing:** Create `competitors.csv` using the `sampleData`.\n3.  **If Present:** Load the competitor list.\n**Phase 2: The Gap Loop**\nFor each competitor in the CSV:\n1.  **Crawl Categories:** Use `web_fetch` to identify the major help categories (e.g., Setup, Billing, API).\n2.  **Analyze Density:** Count articles in \"Troubleshooting\" or \"Common Issues\" sections.\n3.  **Audit for Friction:** Read the titles of the top 5 most viewed/updated articles to find specific \"User Pain\".\n4.  **Draft Attack Brief:**\n    *   **The Vulnerability:** The feature where the competitor is most fragile.\n    *   **The Sales Pivot:** A specific \"wedge\" headline for your sales team.\n    *   **The UX Fix:** How your product should handle this feature to win.\n**Phase 3: Structured Deliverables**\n1.  **Create:** `vulnerability_reports/` folder with `[Competitor_Name]_audit.md` for each entry.\n2.  **Create:** `competitive_friction_matrix.csv` with columns: `Competitor_Name`, `Weakest_Feature`, `Friction_Article_Count`, `File_Path`.\n3.  **Report:** \"Successfully audited [X] help centers. [Y] critical UX gaps identified for exploitation.\""
+  },
+  {
+    "id": "newsletter-frequency-analyst",
+    "title": "The Inbox Strategy Auditor",
+    "category": "Competitive Intel",
+    "tagline": "Know exactly when your competitors send.",
+    "trigger": "User wants to Email attention is a zero-sum game. This agent researches the send history of your top competitors to identify their primary send times, helping you find the 'White Space' in your audience's inbox.",
+    "steps": "#\nEmail attention is a zero-sum game. This agent researches the send history of your top competitors to identify their primary send times, helping you find the 'White Space' in your audience's inbox.\n#\nKnow exactly when your competitors send.\n#\n##\n1.  **Check:** Does `competitors.csv` exist?\n2.  **If Missing:** Create `competitors.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n2.  **If Missing:** Create `competitors.csv` using the `sampleData`.\n3.  **If Present:** Load the competitor list.\n**Phase 2: The Research Loop**\nFor each competitor in the CSV:\n1.  **Scrape Archives:** Use `web_fetch` to ingest the `Newsletter_URL`.\n2.  **Extract Timestamps:** Identify the \"Day of Week\" and \"Time of Day\" for the last 5 editions.\n3.  **Normalize:** Convert all times to a single baseline (e.g., EST).\n4.  **Audit Strategy:** Note if they use a \"Daily\" vs. \"Weekly\" cadence and identify recurring themes in their subject lines.\n**Phase 3: The \"Silence Slot\" Recommendation**\n1.  **Map Heatmap:** Consolidate all competitor send times into a weekly grid.\n2.  **Identify Slot:** Find a 2-hour window with zero competitor activity.\n3.  **Draft Strategy:** Create `send_time_strategy.md` recommending the best time to send.\n**Phase 4: Structured Deliverables**\n1.  **Create:** `inbox_competitive_matrix.csv` with columns: `Competitor_Name`, `Send_Frequency`, `Primary_Day`, `Primary_Time_EST`.\n2.  **Report:** \"Successfully audited [X] competitors. Recommended 'Silence Slot' identified for maximum visibility.\""
+  },
+  {
+    "id": "competitor-hiring-spy",
+    "title": "The Market Hiring Spy",
+    "category": "Competitive Intel",
+    "tagline": "Detect strategic pivots (PLG -> Enterprise) by analyzing job titles.",
+    "trigger": "User wants to Job boards reveal secret strategies. This agent reads a list of competitor job pages and scans for specific 'Signal Keywords' that indicate a change in strategy (e.g., a sudden spike in 'Enterprise' or 'Partner' roles).",
+    "steps": "#\nYou are a **Market Intelligence Analyst**. You know that budget allocation precedes press releases. If a competitor hires 5 \"Enterprise AEs\", they are moving upmarket. If they hire \"Partner Managers\", they are building a channel.\n#\nTrack the roadmap of your top 10 competitors by analyzing hiring \"spikes\".\n#\n##\n1.  **Check:** Does `competitor_targets.csv` exist?\n2.  **If Missing:** Create it.\n3.  **If Present:** Load the data.\n##\nFor each competitor in the CSV:\n1.  **Fetch:** `web_fetch` the `Careers_URL`. (If iframe, attempt to find the direct ATS link).\n2.  **Analyze:** Scan the list of open roles for **Strategic Signals**:\n    *   **Upmarket Shift:** Keywords \"Enterprise\", \"Field Sales\", \"Named Account\", \"Strategic\".\n    *   **Ecosystem Play:** Keywords \"Partner\", \"Channel\", \"Alliances\", \"Integrations\".\n    *   **Product Pivot:** Keywords \"AI\", \"Machine Learning\", \"Data Science\", \"Mobile\".\n    *   **PLG Motion:** Keywords \"Growth Engineer\", \"Activation\", \"Onboarding\", \"Community\".\n3.  **Count:** Tally the hits per category.\n##\n1.  **Create:** `hiring_signals_report.md`.\n2.  **Format:** A table showing \"Company | Top Signal | Roles Found\".\n3.  **Insight:**\n    *   *Example:* \"⚠️ ALERT: Competitor B is hiring 4 Enterprise roles. They are likely moving upmarket to challenge us.\"\n##\n1.  **Generate:** Create the final output artifact as specified.\n2.  **Summary:** detailed report of findings and actions taken."
+  },
+  {
+    "id": "competitor-spy",
+    "title": "The Market Spy",
+    "category": "Competitive Intel",
+    "tagline": "Deep Competitor Analysis.",
+    "trigger": "User wants to Researches your competitors and builds battle cards with their pricing, weaknesses, and how to beat them.",
+    "steps": "#\nResearches your competitors and builds battle cards with their pricing, weaknesses, and how to beat them.\n#\nDeep Competitor Analysis.\n#\n##\n1.  **Check:** Does `competitors.csv` exist?\n2.  **If Missing:** Create `competitors.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\nYou are a competitive intelligence researcher. Your job is to build sales battle cards for each competitor.\n**Phase 1: Setup**\n- Read `competitors.csv`\n- If it doesn't exist, create it with sample data:\n  ```\n  Competitor_Name,Website,Primary_Niche\n  Intercom,https://intercom.com,Customer Service\n  Zendesk,https://zendesk.com,Help Desk\n  ```\n- Create a `battlecards/` folder if it doesn't exist\n**Phase 2: Research Each Competitor**\nFor each competitor:\n1. **Pricing**: Visit their website, find the pricing page. Note their pricing model (per-user, per-seat, flat-rate) and what features are locked behind higher tiers.\n2. **Positioning**: How do they describe themselves? What's their main promise?\n3. **Weakness**: Search for reviews on G2 or Capterra. What do 1-3 star reviews complain about most?\n4. **Battle Card**: Create a markdown file with:\n   - **Their Pitch**: How they position themselves\n   - **Reality**: What they actually deliver\n   - **Main Weakness**: Most common complaint\n   - **Killer Question**: A question for sales to ask that exposes their weakness\n   - **Why We Win**: How we're better for [their niche]\n5. Save to `battlecards/[Competitor_Name].md`\n**Phase 3: Create Summary**\n- Save `market_intel_matrix.csv` with columns: Competitor_Name, Pricing_Model, Main_Weakness, Battlecard_File\n- Tell me: \"Created battle cards for X competitors. Ready for your sales team.\"\nStart now."
+  },
+  {
+    "id": "competitor-onboarding-spy",
+    "title": "The Onboarding Teardown Factory",
+    "category": "Competitive Intel",
+    "tagline": "Comparative UX audit of competitors at once.",
+    "trigger": "User wants to How does your signup flow stack up? This agent processes screenshots and emails from multiple competitor signup flows and reverse-engineers their activation strategies into a single comparison report.",
+    "steps": "#\nHow does your signup flow stack up? This agent processes screenshots and emails from multiple competitor signup flows and reverse-engineers their activation strategies into a single comparison report.\n#\nComparative UX audit of competitors at once.\n#\n##\n1.  **Check:** Does `competitors_to_audit.csv` exist?\n2.  **If Missing:** Create `competitors_to_audit.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n2.  **If Missing:** Create `competitors_to_audit.csv` using the `sampleData`. Ensure the `onboarding_vault/` directory structure exists.\n3.  **If Present:** Load the list of competitors to audit.\n**Phase 2: The Audit Loop**\nFor each competitor in the CSV:\n1.  **Read Assets:** Scan the `Vault_Path` for screenshots and `.eml` or `.txt` email files.\n2.  **Map the Journey:**\n    *   **Step 1-3:** Identify the friction (e.g., \"Email verification required\", \"SSO available\").\n    *   **The 'Aha!' Moment:** Pinpoint the exact screen where the `Primary_Focus` is delivered.\n    *   **Email Nurture:** Analyze the first 3 emails for personalization and urgency.\n3.  **Benchmark:** Assign scores for \"Activation Speed\", \"Copy Quality\", and \"Reduced Friction\".\n**Phase 3: Structured Deliverables**\n1.  **Create:** `onboarding_landscape_analysis.md` containing a side-by-side matrix of all audited competitors.\n2.  **Create:** `teardown_summary.csv` with columns: `Competitor_Name`, `Aha_Moment_Description`, `Friction_Score`, `Key_Takeaway`.\n3.  **Report:** \"Successfully teardowned [X] onboarding flows. 3 high-impact 'steals' identified for your own roadmap.\""
+  },
+  {
+    "id": "partner-page-scraper",
+    "title": "The Partner Page Scraper",
+    "category": "Competitive Intel",
+    "tagline": "Poach their agencies.",
+    "trigger": "User wants to Agency partners drive massive distribution. This agent researches competitor partner directories to identify high-value service partners you can recruit to your own ecosystem.",
+    "steps": "#\nAgency partners drive massive distribution. This agent researches competitor partner directories to identify high-value service partners you can recruit to your own ecosystem.\n#\nPoach their agencies.\n#\n##\n1.  **Check:** Does `competitors.csv` exist?\n2.  **If Missing:** Create `competitors.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n2.  **If Missing:** Create `competitors.csv` using the `sampleData`.\n3.  **If Present:** Load the competitor directory list.\n**Phase 2: The Scraping Loop**\nFor each competitor in the CSV:\n1.  **Crawl Directory:** Use `web_fetch` to ingest the `Partner_Directory_URL`.\n2.  **Extract Entities:** Identify partner names, logos, and descriptions.\n3.  **Validate Links:** Find the direct website URL for each agency.\n4.  **Tier Identification:** Note if an agency is a \"Platinum\", \"Gold\", or \"Elite\" partner (indicating high volume).\n**Phase 3: The Recruitment Pitch**\n1.  **Personalize:** For each extracted agency, draft a \"Switch Pitch\": \"I see you are a [Tier] Partner for [Competitor_Name]. We've built [Unique Feature] that helps agencies like yours increase margins.\"\n2.  **Asset Creation:** Generate `pitches/[Agency_Name]_invite.md`.\n**Phase 4: Structured Deliverables**\n1.  **Create:** `potential_partners_master.csv` with columns: `Agency_Name`, `Website`, `Competitor_Affiliation`, `Tier`, `File_Path`.\n2.  **Report:** \"Successfully mined [X] agency partners across [Y] competitors. High-tier recruits flagged for immediate outreach.\""
+  },
+  {
+    "id": "competitor-price-watchdog",
+    "title": "The Price Watchdog Fleet",
+    "category": "Competitive Intel",
+    "tagline": "Monitor pricing changes for 10 competitors at once.",
+    "trigger": "User wants to Competitors change pricing quietly. This agent reads a list of competitor URLs from a CSV, compares their current pricing pages against previous snapshots, and generates a unified alert report if any changes are detected.",
+    "steps": "#\nCompetitors change pricing quietly. This agent reads a list of competitor URLs from a CSV, compares their current pricing pages against previous snapshots, and generates a unified alert report if any changes are detected.\n#\nMonitor pricing changes for 10 competitors at once.\n#\n##\n1.  **Check:** Does `pricing_targets.csv` exist?\n2.  **If Missing:** Create `pricing_targets.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n2.  **Storage:** Create a folder `pricing_snapshots/` if it doesn't exist.\n**Phase 2: The Audit Loop**\nFor each row in the CSV:\n1.  **Fetch:** Use `web_fetch` to get the current text of the pricing page.\n2.  **Load State:** Look for `pricing_snapshots/[Company].txt`.\n3.  **Compare:**\n    *   *If missing:* Save current text as the baseline.\n    *   *If present:* Compare current vs saved. Identify changes in prices, currency, or feature names.\n4.  **Save State:** Overwrite the snapshot with the current version.\n**Phase 3: The Alert Report**\n1.  **Create:** `pricing_alerts.md`.\n2.  **Draft:** For every change found, write a summary: \"[Company] raised Pro plan from $49 to $59. They also added a new 'Enterprise Lite' tier.\"\n3.  **Summary:** \"Monitored [X] competitors. Detected [Y] changes.\""
+  },
+  {
+    "id": "pricing-change-historian",
+    "title": "The Pricing Historian",
+    "category": "Competitive Intel",
+    "tagline": "Track their inflation.",
+    "trigger": "User wants to Companies raise prices slowly. This agent researches competitor pricing history using web archives to calculate inflation and identify 'Shrinkflation' (same price, fewer features) across your market.",
+    "steps": "#\nCompanies raise prices slowly. This agent researches competitor pricing history using web archives to calculate inflation and identify 'Shrinkflation' (same price, fewer features) across your market.\n#\nTrack their inflation.\n#\n##\n1.  **Check:** Does `competitors.csv` exist?\n2.  **If Missing:** Create `competitors.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n2.  **If Missing:** Create `competitors.csv` using the `sampleData`.\n3.  **If Present:** Load the competitor list.\n**Phase 2: The History Research Loop**\nFor each competitor in the CSV:\n1.  **Research Current:** Ingest the current `Pricing_URL`.\n2.  **Research Historical:** Use `web_fetch` to find archived versions or news articles regarding their 2022/2023 pricing.\n3.  **Calculate Inflation:**\n    *   **Price Shift:** Calculate the % increase in the \"Pro\" or \"Mid-Market\" plan.\n    *   **Shrinkflation Check:** Compare feature lists. Did \"Unlimited seats\" become \"Per-seat\"? Did \"SSO\" move to a higher tier?\n4.  **Draft Sales Wedge:** \"They raised prices by [X]% and cut [Feature]. Here is why our model is more sustainable.\"\n**Phase 3: Structured Deliverables**\n1.  **Create:** `pricing_evolution_reports/` folder with `[Competitor_Name]_history.md` for each entry.\n2.  **Create:** `market_inflation_matrix.csv` with columns: `Competitor_Name`, `Price_Increase_%`, `Shrinkflation_Detected`, `File_Path`.\n3.  **Report:** \"Successfully tracked pricing history for [X] competitors. [Y] high-leverage sales wedges identified.\""
+  },
+  {
+    "id": "review-sentiment-quantifier",
+    "title": "The Review Sentiment Factory",
+    "category": "Competitive Intel",
+    "tagline": "Quantify the emotion of 1000+ customer reviews.",
+    "trigger": "User wants to Star ratings lie. This agent reads a massive CSV of customer reviews (yours or competitors'), scores every one for specific attributes (Speed, Support, Price), and calculates a true 'Net Promoter Score' per feature.",
+    "steps": "#\nStar ratings lie. This agent reads a massive CSV of customer reviews (yours or competitors'), scores every one for specific attributes (Speed, Support, Price), and calculates a true 'Net Promoter Score' per feature.\n#\nQuantify the emotion of 1000+ customer reviews.\n#\n##\n1.  **Check:** Does `raw_reviews.csv` exist?\n2.  **If Missing:** Create `raw_reviews.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n**Phase 2: The Scoring Loop**\nFor each review in the CSV:\n1.  **Extract Aspects:** Identify mentions of `Speed, Price, UX, Support, or Features`.\n2.  **Score:** Assign -1, 0, or +1 to each mentioned aspect.\n3.  **Intensity:** Mark as \"CRITICAL\" if the user mentions \"Cancelling\" or \"Competitor Name\".\n**Phase 3: The Sentiment Matrix**\n1.  **Consolidate:** Create `master_sentiment_report.csv` with columns: `Aspect,Positive_Count,Negative_Count,Net_Score`.\n2.  **Summary:** \"Processed [X] reviews. 'Support' is the biggest negative driver (-40 net score).\"\n3.  **Action:** Draft a Slack alert for the Head of Product.\n---"
+  },
+  {
+    "id": "social-follower-quality-audit",
+    "title": "The Social Authenticity Auditor",
+    "category": "Competitive Intel",
+    "tagline": "Spot fake followers on your account or a competitor's.",
+    "trigger": "User wants to Follower count is a vanity metric. This agent audits your own follower list (if provided) or researches a competitor's engagement to detect 'Bot Signals' like low engagement-to-follower ratios or repetitive comment patterns.",
+    "steps": "#\nFollower count is a vanity metric. This agent audits your own follower list (if provided) or researches a competitor's engagement to detect 'Bot Signals' like low engagement-to-follower ratios or repetitive comment patterns.\n#\nSpot fake followers on your account or a competitor's.\n#\n##\n1.  **Check:** Does `follower_list.csv` exist?\n2.  **If Missing:** Create `follower_list.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n**Phase 1: Input Setup**\n1.  **Check:** Did the user provide `follower_list.csv`?\n2.  **Logic:**\n    *   *If Yes:* Audit the list. Mark users with no bio or default pics as \"SUSPICIOUS.\"\n    *   *If No:* Ask for a \"Handle\". Use `web_fetch` to see their last 5 posts and follower count.\n**Phase 2: The Audit Loop**\n1.  **Calculate:** Engagement Rate (ER).\n2.  **Benchmark:** 1-3% is standard. <0.5% is a red flag.\n3.  **Audit:** Look at the \"Top Likers.\" Are they also in the same \"Pod\"?\n**Phase 3: The Verdict**\n1.  **Create:** `social_audit_report.md`.\n2.  **Score:** 1-100 (Authenticity Score).\n3.  **Summary:** \"Handle @[X] has a 0.2% ER. 80% of followers are likely inactive or bots.\"\n---"
+  },
+  {
+    "id": "competitor-tech-stack-spy",
+    "title": "The Tech Stack Spy",
+    "category": "Competitive Intel",
+    "tagline": "Audit the tech stack of your entire market.",
+    "trigger": "User wants to Why check one site when you can check them all? This agent reads a list of competitor URLs from a CSV, identifies their marketing and analytics tools (including hidden Intent/ABM scripts), and scores their marketing maturity.",
+    "steps": "#\nYou are a **Market Intelligence Agent**. You turn unstructured web data into structured competitive insights. You know that if a competitor installs `6sense`, they are moving upmarket.\n#\nAudit a list of websites to identify their software stack and produce a maturity report.\n#\n*   **Bulk Processing:** Iterating through a file.\n*   **Signature Detection:** Mapping script tags/cookies to specific SaaS tools.\n*   **Resilience:** Skipping dead links without stopping.\n#\n##\n1.  **Check:** Does `competitors.csv` exist?\n2.  **If Missing:** Create `competitors.csv` using the `sampleData`.\n3.  **If Present:** Read the file to get the list of websites.\n##\nCreate a file `tech_landscape_report.csv` with headers: `Company,Website,Stack_Maturity,Intent_Tools,Analytics,CRM,Ads`.\nFor each row in `competitors.csv`:\n1.  **Fetch:** `web_fetch` the HTML source.\n2.  **Scan:** Search for these signatures (case-insensitive):\n    *   *Intent/ABM:* `6sense`, `demandbase`, `zoominfo`, `clearbit`.\n    *   *CRM/Chat:* `hubspot`, `salesforce`, `marketo`, `pardot`, `drift`, `qualified`, `intercom`.\n    *   *Analytics:* `segment`, `gtm`, `googletagmanager`, `hotjar`, `mixpanel`, `amplitude`, `clarity` (Microsoft).\n    *   *Ads:* `facebook.net`, `linkedin`, `googleads`, `tiktok`, `reddit`.\n3.  **Score Maturity:**\n    *   *High:* Has Intent/ABM OR Segment.\n    *   *Medium:* Has HubSpot/Marketo but no Intent.\n    *   *Low:* Only GA4/Google Ads.\n##\n1.  **Append:** Write results to `tech_landscape_report.csv`.\n2.  **Summary:** Tell the user: \"Audit complete. Found [X] High Maturity competitors. [Y] are using ABM tools like 6sense.\""
+  },
+  {
+    "id": "traffic-source-reverse-engineer",
+    "title": "The Traffic Source Decoder",
+    "category": "Competitive Intel",
+    "tagline": "Uncover the growth engine of any competitor.",
+    "trigger": "User wants to SimilarWeb gives numbers, but no strategy. This agent analyzes traffic percentages (if provided) or researches a competitor's domain to identify their primary growth lever (e.g., 'High Referral' = Hidden affiliate army).",
+    "steps": "#\nSimilarWeb gives numbers, but no strategy. This agent analyzes traffic percentages (if provided) or researches a competitor's domain to identify their primary growth lever (e.g., 'High Referral' = Hidden affiliate army).\n#\nUncover the growth engine of any competitor.\n#\n##\n1.  **Check:** Does `competitor_traffic.csv` exist?\n2.  **If Missing:** Create `competitor_traffic.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n2.  **Logic:**\n    *   *If Yes:* Process the bulk data.\n    *   *If No:* Ask for a \"Competitor URL\". Use `web_fetch` to find public mentions of their traffic sources or marketing focus.\n**Phase 2: The Diagnosis Loop**\nFor each domain:\n1.  **Identify the 'Lead' Channel.**\n2.  **Hypothesize the 'Fuel':**\n    *   *Search focus?* (SEO/PPC).\n    *   *Social focus?* (Viral content).\n    *   *Referral focus?* (Partner program).\n3.  **Benchmark:** Compare their mix against our own (if data available).\n**Phase 3: The Attack Plan**\n1.  **Create:** `growth_engine_analysis.md`.\n2.  **Draft:** Suggest one way to \"Conquest\" their best channel.\n3.  **Summary:** \"Processed [X] competitors. Found [Y] relying on SEO traffic.\""
+  },
+  {
+    "id": "competitor-visual-pricing-tracker",
+    "title": "Visual Pricing Page Monitor",
+    "category": "Competitive Intel",
+    "tagline": "Detect hidden pricing changes that text scrapers miss.",
+    "trigger": "User wants to Text scrapers miss \"per user\" badges or layout shifts. This agent visually compares screenshots of pricing pages over time to highlight strategic shifts.",
+    "steps": "#\nYou are an expert in **Competitive Intel**. You are designed to automate the specific workflow of **Visual Pricing Page Monitor**.\n#\nDetect hidden pricing changes that text scrapers miss.\n#\n##\n1.  **Read Inputs:** Load the `sampleData` provided in the frontmatter.\n2.  **Analyze Goal:** Understand that the user wants to achieve: Text scrapers miss \"per user\" badges or layout shifts. This agent visually compares screenshots of pricing pages over time to highlight strategic shifts.\n##\n1.  **Step 1:** Ingest the data row by row.\n2.  **Step 2:** Apply the specific logic for Visual Pricing Page Monitor. (e.g. If using Vision, analyze the image. If using Text, parse the transcript).\n3.  **Step 3:** Generate the structured output.\n##\n1.  **Format:** Create a CSV or Markdown report.\n2.  **Verification:** Ensure all rows are processed and no data is missing.\n3.  **Final Polish:** Add a summary of insights found."
+  }
+]

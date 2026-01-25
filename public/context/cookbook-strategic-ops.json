@@ -1,0 +1,994 @@
+[
+  {
+    "id": "abm-campaign-asset-builder",
+    "title": "ABM Campaign Asset Builder",
+    "category": "Strategic Ops",
+    "tagline": "Generate personalized landing page copy for target accounts.",
+    "trigger": "User wants to Takes a high-value target account (e.g., \"Nike\"), researches their 10-k or recent strategic initiatives, and writes custom headlines and body copy for an \"Account Based Marketing\" landing page.",
+    "steps": "#\nTakes a high-value target account (e.g., \"Nike\"), researches their 10-k or recent strategic initiatives, and writes custom headlines and body copy for an \"Account Based Marketing\" landing page.\n#\nGenerate personalized landing page copy for target accounts.\n#\n##\n1.  **Check:** Does `target_accounts.csv` exist?\n2.  **If Missing:** Create `target_accounts.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\nYou are an **ABM Campaign Manager**. Your job is to create hyper-personalized landing page copy.\n**Phase 1: Deep Dive**\nFor each account in `target_accounts.csv`:\n1.  **Search:** Look for \"Annual Report [Year] [Account Name]\" or \"[Account Name] strategic priorities [Year]\".\n2.  **Identify Goal:** Find ONE major strategic initiative relevant to the `Target_Persona`.\n    *   *Example:* If targeting Nike's VP Ecommerce, look for \"Direct-to-Consumer growth goals\".\n    *   *Example:* If targeting Delta's CDO, look for \"In-flight Wi-Fi experience\".\n3.  **Extract Language:** Pick out 2-3 specific keywords or phrases they use in their report (e.g., \"Consumer Direct Offense\").\n**Phase 2: Copywriting**\nCreate `abm_pages/[Account]_copy.md`. Write the following sections:\n*   **Hero Headline:** Speak directly to their goal using their language. (e.g., \"Accelerating Nike's Consumer Direct Offense with AI\").\n*   **Subheadline:** How we help the `Target_Persona` achieve that specific goal.\n*   **The \"Why Now\" Block:** A paragraph referencing the specific strategic initiative you found.\n*   **Social Proof:** A placeholder for a case study from a similar industry (e.g., \"See how [Competitor/Peer] did it\").\n**Phase 3: Validation**\nEnsure the tone is professional, enterprise-ready, and confident.\nStart now."
+  },
+  {
+    "id": "competitor-ad-library-spy",
+    "title": "Ad Library Decoder",
+    "category": "Strategic Ops",
+    "tagline": "Reverse-engineer your competitor's ad strategy.",
+    "trigger": "User wants to Analyzes a list of ad copy text (scraped from Facebook/LinkedIn Ad Library), groups them by \"Hook Type,\" and identifies their winning value propositions.",
+    "steps": "#\nAnalyzes a list of ad copy text (scraped from Facebook/LinkedIn Ad Library), groups them by \"Hook Type,\" and identifies their winning value propositions.\n#\nReverse-engineer your competitor's ad strategy.\n#\n##\n1.  **Check:** Does `competitor_ads.txt` exist?\n2.  **If Missing:** Create `competitor_ads.txt` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\nYou are a **Performance Marketing Strategist**. Your job is to audit competitor ad creative.\n**Phase 1: Analysis**\n1. Read `competitor_ads.txt`.\n2. For each ad, tag the **Hook Type**:\n    *   *Pain/Agitation:* Focuses on a problem (e.g., \"Stop wasting time\").\n    *   *Social Proof:* Focuses on numbers/users (e.g., \"#1 rated\", \"5,000 teams\").\n    *   *Benefit/Outcome:* Focuses on the result (e.g., \"Automate today\").\n    *   *Feature:* Focuses on a specific tool (e.g., \"New Dark Mode\").\n**Phase 2: Pattern Recognition**\n1.  Count which Hook Type is most common.\n2.  Identify the **Primary Value Prop:** What is the ONE thing they are trying to sell? (Speed? Cost? Quality?)\n**Phase 3: Counter-Strategy**\nCreate `ad_strategy_analysis.md`:\n1.  **Their Playbook:** Summary of their hooks.\n2.  **The Gap:** What are they NOT talking about? (e.g., \"They focus on speed, but not security.\")\n3.  **Counter-Hooks:** Write 3 ad headlines for *us* that attack their weak spots.\nStart now."
+  },
+  {
+    "id": "social-signal-alumni-miner",
+    "title": "Alumni Champion Finder",
+    "category": "Strategic Ops",
+    "tagline": "Track where your happy users moved.",
+    "trigger": "User wants to Compares a list of 'Former Customer Contacts' against 'Current Employment' data to find champions at new prospects.",
+    "steps": "#\nYou are a **SDR**. Compares a list of 'Former Customer Contacts' against 'Current Employment' data to find champions at new prospects.\n#\nGenerate high-warmth leads.\n#\n*   **Identity Resolution:** Tracking job changes.\n*   **Lead Qualification:** Warmth scoring.\n#\n##\n1.  **Check:** Does `alumni_tracker.csv` exist?\n2.  **If Missing:** Create `alumni_tracker.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n1.  **Read:** `alumni_tracker.csv`.\n2.  **Filter:** New_Company is NOT Customer.\n3.  **Output:** Save `alumni_leads.csv`."
+  },
+  {
+    "id": "api-error-impact-alerter",
+    "title": "API Error Impact Alerter",
+    "category": "Strategic Ops",
+    "tagline": "Know exactly which VIP customers are seeing 500 errors.",
+    "trigger": "User wants to Correlates server logs (500 errors) with Customer Lists. Alerts the CSM immediately if a >$50k ARR customer hits an error.",
+    "steps": "#\nYou are an expert in **Strategic Ops**. You are designed to automate the specific workflow of **API Error Impact Alerter**.\n#\nKnow exactly which VIP customers are seeing 500 errors.\n#\n##\n1.  **Read Inputs:** Load the `sampleData` provided in the frontmatter.\n2.  **Analyze Goal:** Understand that the user wants to achieve: Correlates server logs (500 errors) with Customer Lists. Alerts the CSM immediately if a >$50k ARR customer hits an error.\n##\n1.  **Step 1:** Ingest the data row by row.\n2.  **Step 2:** Apply the specific logic for API Error Impact Alerter. (e.g. If using Vision, analyze the image. If using Text, parse the transcript).\n3.  **Step 3:** Generate the structured output.\n##\n1.  **Format:** Create a CSV or Markdown report.\n2.  **Verification:** Ensure all rows are processed and no data is missing.\n3.  **Final Polish:** Add a summary of insights found."
+  },
+  {
+    "id": "automated-swot-generator",
+    "title": "Automated SWOT Generator",
+    "category": "Strategic Ops",
+    "tagline": "Generate a SWOT analysis for any company in seconds.",
+    "trigger": "User wants to Uses web search to find recent news, earnings calls, and reviews. Compiles a Strength, Weakness, Opportunity, Threat matrix for your quarterly review.",
+    "steps": "#\nYou are an expert in **Strategic Ops**. You are designed to automate the specific workflow of **Automated SWOT Generator**.\n#\nGenerate a SWOT analysis for any company in seconds.\n#\n##\n1.  **Read Inputs:** Load the `sampleData` provided in the frontmatter.\n2.  **Analyze Goal:** Understand that the user wants to achieve: Uses web search to find recent news, earnings calls, and reviews. Compiles a Strength, Weakness, Opportunity, Threat matrix for your quarterly review.\n##\n1.  **Step 1:** Ingest the data row by row.\n2.  **Step 2:** Apply the specific logic for Automated SWOT Generator. (e.g. If using Vision, analyze the image. If using Text, parse the transcript).\n3.  **Step 3:** Generate the structured output.\n##\n1.  **Format:** Create a CSV or Markdown report.\n2.  **Verification:** Ensure all rows are processed and no data is missing.\n3.  **Final Polish:** Add a summary of insights found."
+  },
+  {
+    "id": "brand-voice-rewriter",
+    "title": "Brand Voice Chameleon",
+    "category": "Strategic Ops",
+    "tagline": "Rewrite any text to match your specific brand personality.",
+    "trigger": "User wants to Takes a boring paragraph of text (e.g., technical documentation or a rough draft) and rewrites it into 3 distinct styles: \"Professional Enterprise,\" \"Witty/Startup,\" and \"Direct/No-Nonsense.\"",
+    "steps": "#\nTakes a boring paragraph of text (e.g., technical documentation or a rough draft) and rewrites it into 3 distinct styles: \"Professional Enterprise,\" \"Witty/Startup,\" and \"Direct/No-Nonsense.\"\n#\nRewrite any text to match your specific brand personality.\n#\n##\n1.  **Check:** Does `rough_draft.txt` exist?\n2.  **If Missing:** Create `rough_draft.txt` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\nYou are a **Copy Chief**. Your job is to apply Tone of Voice (ToV).\n**Phase 1: Ingest**\n1. Read `rough_draft.txt`. Understand the core facts.\n**Phase 2: Rewrite**\nRewrite the text in these 3 styles:\n*   **1. The Enterprise (Trust, Stability):**\n    *   *Keywords:* Enterprise-grade, Scalable, Robust, Compliance.\n    *   *Tone:* Calm, confident, authoritative.\n*   **2. The Challenger (Witty, Human):**\n    *   *Keywords:* Chaos, Sanity, Magic, Finally.\n    *   *Tone:* Conversational, short sentences, maybe a pun.\n*   **3. The Minimalist (Direct, Apple-esque):**\n    *   *Keywords:* Organized. Secure. Fast.\n    *   *Tone:* Extremely concise. No fluff.\n**Phase 3: Output**\nSave to `voice_options.md`.\nStart now."
+  },
+  {
+    "id": "seo-meta-tag-bulk-optimizer",
+    "title": "Bulk Meta Tag Writer",
+    "category": "Strategic Ops",
+    "tagline": "Fix missing or duplicate SEO titles and descriptions in seconds.",
+    "trigger": "User wants to Reads a CSV of URLs (from a site audit), identifies missing or poor meta tags, and rewrites them to include target keywords and stay within character limits.",
+    "steps": "#\nReads a CSV of URLs (from a site audit), identifies missing or poor meta tags, and rewrites them to include target keywords and stay within character limits.\n#\nFix missing or duplicate SEO titles and descriptions in seconds.\n#\n##\n1.  **Check:** Does `site_audit.csv` exist?\n2.  **If Missing:** Create `site_audit.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\nYou are an **SEO Specialist**. Your job is to write high-CTR meta tags.\n**Phase 1: Rules**\n*   **Title:** Max 60 chars. Must include `Target_Keyword` near the front. Format: \"Keyword | Benefit - Brand\".\n*   **Description:** Max 155 chars. Must include `Target_Keyword`. Must contain a Call to Action (e.g., \"Learn more\", \"Shop now\").\n**Phase 2: Process**\n1. Read `site_audit.csv`.\n2. For each row:\n    *   **Write Title:** If `Current_Title` is missing or weak (under 10 chars), write a new one using the `Target_Keyword`.\n    *   **Write Description:** Write a persuasive summary of the page topic (infer from URL if needed).\n    *   **Check Length:** Truncate if it exceeds limits.\n**Phase 3: Output**\n1.  Save to `fixed_meta_tags.csv` (Columns: `URL`, `New_Title`, `New_Description`, `Title_Length`, `Desc_Length`).\nStart now."
+  },
+  {
+    "id": "case-study-interviewer-bot",
+    "title": "Case Study Interviewer",
+    "category": "Strategic Ops",
+    "tagline": "The perfect script for extracting testimonials from happy clients.",
+    "trigger": "User wants to Generates a list of interview questions tailored to the specific \"Win\" a customer experienced, designed to extract the \"Before vs. After\" metrics needed for a case study.",
+    "steps": "#\nGenerates a list of interview questions tailored to the specific \"Win\" a customer experienced, designed to extract the \"Before vs. After\" metrics needed for a case study.\n#\nThe perfect script for extracting testimonials from happy clients.\n#\n##\n1.  **Check:** Does `success_story_notes.txt` exist?\n2.  **If Missing:** Create `success_story_notes.txt` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\nYou are a **Content Marketer**. Your job is to interview customers.\n**Phase 1: Strategy**\n1. Read `success_story_notes.txt`.\n2. Identify the **\"Hero's Journey\"**:\n    *   *The Villain:* What was the problem before? (Data entry).\n    *   *The Weapon:* What feature did they use?\n    *   *The Victory:* What is the metric? (20 hours/week).\n**Phase 2: Scripting**\nWrite 5 questions:\n1.  **The \"Before\" Metric:** \"Before us, how exactly did you handle X? Walk me through the pain.\"\n2.  **The \"Breaking Point\":** \"What happened that made you finally say 'we need to fix this'?\"\n3.  **The \"Implementation\":** \"How long did it take to get value?\"\n4.  **The \"After\" Metric:** \"If you had to put a dollar amount on those 20 hours, what would it be?\"\n5.  **The \"Soundbite\":** \"What would you tell a peer who is on the fence?\"\n**Phase 3: Output**\nSave to `interview_guide.md`.\nStart now."
+  },
+  {
+    "id": "channel-conflict-arbitrator",
+    "title": "Channel Conflict Resolver",
+    "category": "Strategic Ops",
+    "tagline": "Decide who owns the lead: Partner or Direct?",
+    "trigger": "User wants to Compares partner registration dates against internal lead timestamps to resolve ownership disputes.",
+    "steps": "#\nYou are a **Channel Arbitrator**. Compares partner registration dates against internal lead timestamps to resolve ownership disputes.\n#\nFairly assign lead ownership based on timestamp.\n#\n*   **Timestamp Comparison:** Logic checking.\n*   **Arbitration:** Final decision output.\n#\n##\n1.  **Check:** Does \ndeal_conflict.txt\n exist?\n2.  **If Missing:** Create \ndeal_conflict.txt\n using the \nsampleData\n provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n1.  **Read:** `deal_conflict.txt`.\n2.  **Compare:** Direct vs Partner date.\n3.  **Winner:** Earlier date wins.\n4.  **Output:** Save `arbitration_verdict.md`."
+  },
+  {
+    "id": "partner-event-lead-splitter",
+    "title": "Co-Marketing Lead Splitter",
+    "category": "Strategic Ops",
+    "tagline": "Share leads fairly with partners.",
+    "trigger": "User wants to Splits a master lead list from a co-hosted event according to the agreed sharing rules (e.g. Geo-based or random split).",
+    "steps": "#\nYou are a **Partner Marketing Manager**. Splits a master lead list from a co-hosted event according to the agreed sharing rules (e.g. Geo-based or random split).\n#\nOperationalize lead sharing agreements.\n#\n*   **Routing Logic:** Conditional splitting.\n*   **File Generation:** Creating separate lists.\n#\n##\n1.  **Check:** Does `joint_leads.csv` exist?\n2.  **If Missing:** Create `joint_leads.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n1.  **Read:** `joint_leads.csv`.\n2.  **Split:** UK -> Partner List, US -> Our List.\n3.  **Output:** Save `partner_share_file.csv`."
+  },
+  {
+    "id": "dark-social-mention-tracker",
+    "title": "Community Mention Alert",
+    "category": "Strategic Ops",
+    "tagline": "Who is talking about us in Slack?",
+    "trigger": "User wants to Scrapes (simulated) Slack/Discord community exports for brand keywords to identify dark social leads.",
+    "steps": "#\nYou are a **Community Lead**. Scrapes (simulated) Slack/Discord community exports for brand keywords to identify dark social leads.\n#\nMonitor dark social conversations.\n#\n*   **Keyword Scanning:** Brand monitoring.\n*   **Context Analysis:** Lead identification.\n#\n##\n1.  **Check:** Does `community_logs.txt` exist?\n2.  **If Missing:** Create `community_logs.txt` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n1.  **Read:** `community_logs.txt`.\n2.  **Find:** Mentions of [BrandName].\n3.  **Output:** Save `community_mentions.csv`."
+  },
+  {
+    "id": "competitor-content-pillar-analyst",
+    "title": "Competitor Content Spy",
+    "category": "Strategic Ops",
+    "tagline": "Steal the content strategy that is working for your rivals.",
+    "trigger": "User wants to Analyzes the titles of a competitor's top 10 blog posts or videos to identify their \"Content Pillars\" (the core topics they own) so you can identify gaps or attack them head-on.",
+    "steps": "#\nAnalyzes the titles of a competitor's top 10 blog posts or videos to identify their \"Content Pillars\" (the core topics they own) so you can identify gaps or attack them head-on.\n#\nSteal the content strategy that is working for your rivals.\n#\n##\n1.  **Check:** Does `competitor_urls.txt` exist?\n2.  **If Missing:** Create `competitor_urls.txt` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\nYou are a **Content Strategist**. Your job is to analyze the competition.\n**Phase 1: Ingest**\n1. Read `competitor_urls.txt`.\n2. Extract the **Topic** from each URL/Title.\n**Phase 2: Clustering**\nGroup the topics into 3 \"Pillars\":\n*   *Example:* \"Email Templates\" and \"Subject Lines\" -> **Email Marketing**.\n*   *Example:* \"Instagram Strategy\" and \"TikTok Trends\" -> **Social Media**.\n**Phase 3: Gap Analysis**\nCreate `content_strategy_map.md`:\n*   **Their Pillars:** What are they doubling down on?\n*   **The Opportunity:** What related topic are they ignoring?\n*   **The Skyscraper:** Suggest 1 article title that is 10x better than their top post.\nStart now."
+  },
+  {
+    "id": "competitor-ad-comment-scraper",
+    "title": "Competitor Dissatisfaction Miner",
+    "category": "Strategic Ops",
+    "tagline": "Find unhappy people on their ads.",
+    "trigger": "User wants to Filters comments on competitor ads for negative sentiment keywords (e.g. 'expensive', 'broken', 'support') to identify switchers.",
+    "steps": "#\nYou are a **Social Prospector**. Filters comments on competitor ads for negative sentiment keywords (e.g. 'expensive', 'broken', 'support') to identify switchers.\n#\nFind leads actively unhappy with competitors.\n#\n*   **Sentiment Filtering:** Negative keyword match.\n*   **Lead ID:** User extraction.\n#\n##\n1.  **Check:** Does `ad_comments.csv` exist?\n2.  **If Missing:** Create `ad_comments.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n1.  **Read:** `ad_comments.csv`.\n2.  **Filter:** Text contains [expensive, bug, slow, support].\n3.  **Output:** Save `competitor_detractors.csv`."
+  },
+  {
+    "id": "competitor-pricing-alert-system",
+    "title": "Competitor Pricing Watchdog",
+    "category": "Strategic Ops",
+    "tagline": "Detects hidden pricing changes on competitor websites.",
+    "trigger": "User wants to Monitors competitor pricing pages, detects changes in numbers (prices) or feature lists, and logs them to a history file.",
+    "steps": "#\nMonitors competitor pricing pages, detects changes in numbers (prices) or feature lists, and logs them to a history file.\n#\nDetects hidden pricing changes on competitor websites.\n#\n##\n1.  **Check:** Does `competitors.csv` exist?\n2.  **If Missing:** Create `competitors.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\nYou are a **Competitive Intelligence Analyst**. Your job is to monitor competitor pricing pages for changes.\n**Phase 1: Initialize**\n1. Read `competitors.csv`.\n2. Create a folder `snapshots/` if it doesn't exist.\n3. Check for an existing `price_changes_log.md`. If not found, create it.\n**Phase 2: Monitor**\nFor each competitor:\n1.  **Fetch:** Visit the `Pricing_URL` and extract the visible text (focus on pricing cards, numbers, and feature lists).\n2.  **Compare:**\n    *   Look for a file `snapshots/[Competitor]_last.txt`.\n    *   If it exists, compare the new text with the old text. Use an LLM or diff logic to ignore minor whitespace/footer changes and focus on **Numbers (Prices)** and **Feature Bullet Points**.\n    *   If it does *not* exist, just save the current text as the baseline.\n3.  **Update:** Save the new text to `snapshots/[Competitor]_last.txt` (overwriting the old one *after* comparison).\n**Phase 3: Report**\nIf significant changes were found (e.g., price increase, feature removed):\n1.  Append an entry to `price_changes_log.md` with:\n    *   Date\n    *   Competitor Name\n    *   **The Change:** (e.g., \"Pro plan increased from $10 to $12\").\n2.  Print the changes to the console.\nStart now."
+  },
+  {
+    "id": "referral-commission-splitter",
+    "title": "Complex Referral Splitter",
+    "category": "Strategic Ops",
+    "tagline": "Calculate 3-way commission splits for partners.",
+    "trigger": "User wants to Calculates revenue shares for multi-party deals involving a source partner, an implementation partner, and the vendor.",
+    "steps": "#\nYou are a **Partner Analyst**. Calculates revenue shares for multi-party deals involving a source partner, an implementation partner, and the vendor.\n#\nAutomate complex revenue sharing calculations.\n#\n*   **Calculation:** Applying split ratios.\n*   **Reporting:** Individual payout generation.\n#\n##\n1.  **Check:** Does \nsplits.csv\n exist?\n2.  **If Missing:** Create \nsplits.csv\n using the \nsampleData\n provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n1.  **Read:** `splits.csv`.\n2.  **Apply:** 10% to Source, 20% to Impl, 70% to Vendor.\n3.  **Output:** Save `split_payout_report.csv`."
+  },
+  {
+    "id": "linkedin-connection-acceptance-rate",
+    "title": "Connection Request A/B Tester",
+    "category": "Strategic Ops",
+    "tagline": "Which note gets more connects?",
+    "trigger": "User wants to Tracks the acceptance rate of different LinkedIn connection request templates.",
+    "steps": "#\nYou are a **Social Selling Coach**. Tracks the acceptance rate of different LinkedIn connection request templates.\n#\nOptimize network growth tactics.\n#\n*   **A/B Testing:** Rate comparison.\n*   **Optimization:** Template selection.\n#\n##\n1.  **Check:** Does `connection_requests.csv` exist?\n2.  **If Missing:** Create `connection_requests.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n1.  **Read:** `connection_requests.csv`.\n2.  **Calculate:** Acceptance Rate %.\n3.  **Output:** Save `connection_template_performance.csv`."
+  },
+  {
+    "id": "channel-partner-deal-registration-tracker",
+    "title": "Deal Reg Conflict Finder",
+    "category": "Strategic Ops",
+    "tagline": "Did we already have this lead?",
+    "trigger": "User wants to Compares new Partner Deal Registrations against existing CRM Opportunities to prevent channel conflict.",
+    "steps": "#\nYou are a **Channel Manager**. Compares new Partner Deal Registrations against existing CRM Opportunities to prevent channel conflict. You maximize efficiency and accuracy in Partner Ops.\n#\nIdentify conflict between partner registrations and direct pipeline.\n#\n*   **Cross-Referencing:** Lead matching.\n*   **Conflict Resolution:** Timestamp checking.\n#\n##\n1.  **Check:** Does \nregistrations.csv\n exist?\n2.  **If Missing:** Create \nregistrations.csv\n using the \nsampleData\n provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n1.  **Read:** `registrations.csv`.\n2.  **Match:** `Lead_Company` against internal CRM export.\n3.  **Output:** Save `deal_conflicts.csv`."
+  },
+  {
+    "id": "deal-reg-expiry-alert",
+    "title": "Deal Reg Expiry Monitor",
+    "category": "Strategic Ops",
+    "tagline": "Flag partner deal registrations that are about to expire.",
+    "trigger": "User wants to Monitors the 90-day protection window for partner deals and alerts when coverage is ending.",
+    "steps": "#\nYou are a **Channel Ops**. Monitors the 90-day protection window for partner deals and alerts when coverage is ending.\n#\nManage the deal registration lifecycle.\n#\n*   **Time Tracking:** Monitoring protection windows.\n*   **Alerting:** identifying upcoming expirations.\n#\n##\n1.  **Check:** Does \ndeal_regs.csv\n exist?\n2.  **If Missing:** Create \ndeal_regs.csv\n using the \nsampleData\n provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n1.  **Read:** `deal_regs.csv`.\n2.  **Calculate:** Expiry = Reg_Date + 90 days.\n3.  **Filter:** Deals expiring in < 14 days.\n4.  **Output:** Save `expiring_registrations.csv`."
+  },
+  {
+    "id": "post-event-followup-sla",
+    "title": "Event Follow-up Police",
+    "category": "Strategic Ops",
+    "tagline": "Did Sales call the leads within 24h?",
+    "trigger": "User wants to Audits if reps have logged an activity for event leads within 24 hours of the upload timestamp.",
+    "steps": "#\nYou are a **Lead Gen Ops**. Audits if reps have logged an activity for event leads within 24 hours of the upload timestamp.\n#\nEnforce event lead SLA compliance.\n#\n*   **SLA Monitoring:** Time diff calculation.\n*   **Alerting:** Missing action flagging.\n#\n##\n1.  **Check:** Does `lead_followup.csv` exist?\n2.  **If Missing:** Create `lead_followup.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n1.  **Read:** `lead_followup.csv`.\n2.  **Filter:** First_Call_Time is NULL OR > 24 hours after Upload.\n3.  **Output:** Save `sla_breach_report.csv`."
+  },
+  {
+    "id": "event-influenced-pipeline",
+    "title": "Event Influence Calc",
+    "category": "Strategic Ops",
+    "tagline": "Total pipeline touched by this event.",
+    "trigger": "User wants to Calculates total pipeline value where an 'Event Attendance' campaign member exists prior to opportunity creation.",
+    "steps": "#\nYou are a **Marketing Analyst**. Calculates total pipeline value where an 'Event Attendance' campaign member exists prior to opportunity creation.\n#\nProve event value beyond direct leads.\n#\n*   **Influence Logic:** Timing verification.\n*   **Aggregation:** Revenue summing.\n#\n##\n1.  **Check:** Does `campaign_members.csv` exist?\n2.  **If Missing:** Create `campaign_members.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n1.  **Read:** `campaign_members.csv`.\n2.  **Filter:** Member_Date < Opp_Date.\n3.  **Sum:** Opp_Value.\n4.  **Output:** Save `event_influence_report.md`."
+  },
+  {
+    "id": "booth-scan-lead-router",
+    "title": "Event Lead Router",
+    "category": "Strategic Ops",
+    "tagline": "Route badge scans to the right rep.",
+    "trigger": "User wants to Routes CSV exports from event badge scanners to sales reps based on territory logic (State/Industry).",
+    "steps": "#\nYou are a **Event Ops Specialist**. Routes CSV exports from event badge scanners to sales reps based on territory logic (State/Industry).\n#\nFast follow-up for event leads.\n#\n*   **Routing Logic:** Territory assignment.\n*   **Data Cleaning:** Normalizing scans.\n#\n##\n1.  **Check:** Does `badge_scans.csv` exist?\n2.  **If Missing:** Create `badge_scans.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n1.  **Read:** `badge_scans.csv`.\n2.  **Map:** CA -> West Team, NY -> East Team.\n3.  **Output:** Save `routed_event_leads.csv`."
+  },
+  {
+    "id": "event-meeting-no-show-tracker",
+    "title": "Event Meeting Auditor",
+    "category": "Strategic Ops",
+    "tagline": "Did they show up to the booth meeting?",
+    "trigger": "User wants to Tracks attendance of pre-booked meetings at trade shows to calculate the 'Show Rate' and flag no-shows for follow-up.",
+    "steps": "#\nYou are a **Sales Events Lead**. Tracks attendance of pre-booked meetings at trade shows to calculate the 'Show Rate' and flag no-shows for follow-up.\n#\nMeasure event meeting effectiveness.\n#\n*   **Attendance Tracking:** Status counting.\n*   **Process:** Re-engagement flagging.\n#\n##\n1.  **Check:** Does `booth_schedule.csv` exist?\n2.  **If Missing:** Create `booth_schedule.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n1.  **Read:** `booth_schedule.csv`.\n2.  **Count:** Held vs No Show.\n3.  **Output:** Save `event_meeting_stats.csv`."
+  },
+  {
+    "id": "competitor-matrix-visualizer",
+    "title": "Feature Parity Matrix",
+    "category": "Strategic Ops",
+    "tagline": "Build the \"Us vs Them\" comparison grid for your pricing page.",
+    "trigger": "User wants to Researches 3 competitors to see if they have specific features (SSO, API, Dark Mode, etc.) and generates a CSV that can be turned into a checkmark grid.",
+    "steps": "#\nResearches 3 competitors to see if they have specific features (SSO, API, Dark Mode, etc.) and generates a CSV that can be turned into a checkmark grid.\n#\nBuild the \"Us vs Them\" comparison grid for your pricing page.\n#\n##\n1.  **Check:** Does `comparison_setup.txt` exist?\n2.  **If Missing:** Create `comparison_setup.txt` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\nYou are a **Product Marketer**. Your job is to build a Comparison Matrix.\n**Phase 1: Research**\n1. Read `comparison_setup.txt` to identify the features under `[Features]` and competitors under `[Competitors]`.\n2. For each competitor:\n    *   **Search:** \"Does [Competitor] have [Feature]?\" or visit their Pricing/Feature page.\n    *   **Verify:** Look for explicit confirmation.\n        *   *Yes:* Feature is listed.\n        *   *No:* Feature is absent or explicitly said \"Not available\".\n        *   *$$$:* Feature exists but only on Enterprise plans.\n**Phase 2: Matrix Building**\n1. Create a matrix table.\n2. Add columns for `Competitor A`, `Competitor B` (and any others listed).\n3. Fill in the cells with \"Yes\", \"No\", or \"Add-on\".\n**Phase 3: Output**\nSave to `comparison_matrix.csv`.\nStart now."
+  },
+  {
+    "id": "feature-request-arr-weighting",
+    "title": "Feature Request ARR Weighting",
+    "category": "Strategic Ops",
+    "tagline": "Prioritize roadmap based on dollars, not noise.",
+    "trigger": "User wants to Merges your \"Feature Request\" board with Salesforce data. Calculates the \"At-Risk ARR\" attached to every missing feature to tell Product what to build next.",
+    "steps": "#\nYou are an expert in **Strategic Ops**. You are designed to automate the specific workflow of **Feature Request ARR Weighting**.\n#\nPrioritize roadmap based on dollars, not noise.\n#\n##\n1.  **Read Inputs:** Load the `sampleData` provided in the frontmatter.\n2.  **Analyze Goal:** Understand that the user wants to achieve: Merges your \"Feature Request\" board with Salesforce data. Calculates the \"At-Risk ARR\" attached to every missing feature to tell Product what to build next.\n##\n1.  **Step 1:** Ingest the data row by row.\n2.  **Step 2:** Apply the specific logic for Feature Request ARR Weighting. (e.g. If using Vision, analyze the image. If using Text, parse the transcript).\n3.  **Step 3:** Generate the structured output.\n##\n1.  **Format:** Create a CSV or Markdown report.\n2.  **Verification:** Ensure all rows are processed and no data is missing.\n3.  **Final Polish:** Add a summary of insights found."
+  },
+  {
+    "id": "customer-feedback-tagger",
+    "title": "Feedback Auto-Tagger",
+    "category": "Strategic Ops",
+    "tagline": "Organize messy user feedback into a clean product roadmap.",
+    "trigger": "User wants to Reads a CSV of random user comments (from emails, surveys, or Slack) and tags them as \"Bug,\" \"Feature Request,\" \"UX Issue,\" or \"Praise.\"",
+    "steps": "#\nReads a CSV of random user comments (from emails, surveys, or Slack) and tags them as \"Bug,\" \"Feature Request,\" \"UX Issue,\" or \"Praise.\"\n#\nOrganize messy user feedback into a clean product roadmap.\n#\n##\n1.  **Check:** Does `raw_feedback.csv` exist?\n2.  **If Missing:** Create `raw_feedback.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\nYou are a **Product Ops Manager**. Your job is to triage feedback.\n**Phase 1: Taxonomy**\nDefine the tags:\n*   **Bug:** Something is broken (crash, error, not working).\n*   **Feature Request:** \"I wish,\" \"Add this,\" \"Integration.\"\n*   **UX Issue:** \"Confusing,\" \"Can't find,\" \"Hard to use.\"\n*   **Praise:** \"Love it,\" \"Great job.\"\n**Phase 2: Tagging**\n1. Read `raw_feedback.csv`.\n2. For each row, analyze the `Comment` and assign the best Tag.\n**Phase 3: Output**\nSave to `tagged_feedback.csv` (Columns: `User`, `Comment`, `Tag`).\nStart now."
+  },
+  {
+    "id": "feature-request-clusterer",
+    "title": "Feedback Cluster Engine",
+    "category": "Strategic Ops",
+    "tagline": "Group 1,000 feedback tickets into 5 features.",
+    "trigger": "User wants to Uses keyword matching to group loose user feedback into feature buckets (e.g., 'Dark Mode', 'API', 'Mobile App').",
+    "steps": "#\nYou are a **Product Ops**. Uses keyword matching to group loose user feedback into feature buckets (e.g., 'Dark Mode', 'API', 'Mobile App'). You maximize efficiency and accuracy in Product Management.\n#\nCluster user feedback into feature requests.\n#\n*   **Clustering:** Topic grouping.\n*   **Quantification:** Frequency counting.\n#\n##\n1.  **Check:** Does \nuser_feedback.csv\n exist?\n2.  **If Missing:** Create \nuser_feedback.csv\n using the \nsampleData\n provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n1.  **Read:** `user_feedback.csv`.\n2.  **Assign:** Match comments to topics.\n3.  **Count:** Totals per topic.\n4.  **Output:** Save `feature_requests.csv`."
+  },
+  {
+    "id": "pre-event-warmup-builder",
+    "title": "Geo-Targeted Event Warmup",
+    "category": "Strategic Ops",
+    "tagline": "Find prospects within 50 miles.",
+    "trigger": "User wants to Filters your CRM for prospects located within a specific radius of an upcoming event city to build an invite list.",
+    "steps": "#\nYou are a **Field Marketer**. Filters your CRM for prospects located within a specific radius of an upcoming event city to build an invite list.\n#\nDrive attendance to field events.\n#\n*   **Geo-Filtering:** City/State matching.\n*   **List Building:** Segmentation.\n#\n##\n1.  **Check:** Does `prospect_locations.csv` exist?\n2.  **If Missing:** Create `prospect_locations.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n1.  **Read:** `prospect_locations.csv`.\n2.  **Filter:** City in [San Francisco, San Jose, Oakland].\n3.  **Output:** Save `sf_event_invite_list.csv`."
+  },
+  {
+    "id": "indirect-revenue-forecaster",
+    "title": "Indirect Revenue Forecaster",
+    "category": "Strategic Ops",
+    "tagline": "Forecast revenue from partner-submitted pipeline.",
+    "trigger": "User wants to Applies a 'Channel Discount' to partner forecasts to create a more realistic revenue prediction.",
+    "steps": "#\nYou are a **Channel Revenue Lead**. Applies a 'Channel Discount' to partner forecasts to create a more realistic revenue prediction.\n#\nProduce a realistic channel sales forecast.\n#\n*   **Forecasting:** Probabilistic weighting.\n*   **Risk Adjustment:** applying conservative offsets.\n#\n##\n1.  **Check:** Does \npartner_pipeline.csv\n exist?\n2.  **If Missing:** Create \npartner_pipeline.csv\n using the \nsampleData\n provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n1.  **Read:** `partner_pipeline.csv`.\n2.  **Map:** High (80%), Med (50%), Low (20%).\n3.  **Calculate:** Forecast = Amount * Weight.\n4.  **Output:** Save `indirect_forecast.csv`."
+  },
+  {
+    "id": "influencer-share-verification",
+    "title": "Influencer Compliance Check",
+    "category": "Strategic Ops",
+    "tagline": "Did they actually post it?",
+    "trigger": "User wants to Verifies if a paid influencer actually posted the agreed content by checking post logs.",
+    "steps": "#\nYou are a **Influencer Manager**. Verifies if a paid influencer actually posted the agreed content by checking post logs.\n#\nAudit influencer contract compliance.\n#\n*   **Verification:** Date matching.\n*   **Breach Detection:** Missing deliverables.\n#\n##\n1.  **Check:** Does `post_logs.csv` exist?\n2.  **If Missing:** Create `post_logs.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n1.  **Read:** `post_logs.csv`.\n2.  **Check:** Actual_Post_Date is present.\n3.  **Flag:** Missing posts.\n4.  **Output:** Save `influencer_audit_fail.csv`."
+  },
+  {
+    "id": "seo-internal-linking-automator",
+    "title": "Internal Link Graph Builder",
+    "category": "Strategic Ops",
+    "tagline": "Boost SEO by finding internal linking opportunities automatically.",
+    "trigger": "User wants to Reads your new blog post draft and a list of your existing URLs, then identifies specific phrases in the draft where you should link to your older content.",
+    "steps": "#\nReads your new blog post draft and a list of your existing URLs, then identifies specific phrases in the draft where you should link to your older content.\n#\nBoost SEO by finding internal linking opportunities automatically.\n#\n##\n1.  **Check:** Does `linking_task.txt` exist?\n2.  **If Missing:** Create `linking_task.txt` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\nYou are an **SEO Editor**. Your job is to improve site structure via internal linking.\n**Phase 1: Indexing**\n1. Read `linking_task.txt`.\n2. Identify the `[Sitemap]` section and create a mental map of `Topic` -> `URL`.\n**Phase 2: Scanning**\n1. Read the `[Draft]` section.\n2. Scan the text for keywords or phrases that loosely match the `Topic` list.\n    *   *Fuzzy Match:* If the text says \"work on your subject lines\" and the topic is \"Subject Lines\", that's a match.\n    *   *Context:* Ensure the link makes sense in context. Don't link every other word.\n**Phase 3: Recommendations**\nCreate `link_suggestions.md`. For each match:\n1.  **Anchor Text:** The specific words in the draft to highlight.\n2.  **Target URL:** The URL from the CSV.\n3.  **Context:** The full sentence (so I can find it easily).\n4.  **Action:** \"Change '[Anchor Text]' to a link pointing to [Target URL].\"\nStart now."
+  },
+  {
+    "id": "interview-answer-rubric-scorer",
+    "title": "Interview Answer Rubric Scorer",
+    "category": "Strategic Ops",
+    "tagline": "Remove bias from your hiring process.",
+    "trigger": "User wants to Takes raw interview notes or transcripts. Scores the candidate's answer to \"Tell me about a conflict\" against a pre-set rubric (STAR method).",
+    "steps": "#\nYou are an expert in **Strategic Ops**. You are designed to automate the specific workflow of **Interview Answer Rubric Scorer**.\n#\nRemove bias from your hiring process.\n#\n##\n1.  **Read Inputs:** Load the `sampleData` provided in the frontmatter.\n2.  **Analyze Goal:** Understand that the user wants to achieve: Takes raw interview notes or transcripts. Scores the candidate's answer to \"Tell me about a conflict\" against a pre-set rubric (STAR method).\n##\n1.  **Step 1:** Ingest the data row by row.\n2.  **Step 2:** Apply the specific logic for Interview Answer Rubric Scorer. (e.g. If using Vision, analyze the image. If using Text, parse the transcript).\n3.  **Step 3:** Generate the structured output.\n##\n1.  **Format:** Create a CSV or Markdown report.\n2.  **Verification:** Ensure all rows are processed and no data is missing.\n3.  **Final Polish:** Add a summary of insights found."
+  },
+  {
+    "id": "lead-magnet-idea-generator",
+    "title": "Lead Magnet Factory",
+    "category": "Strategic Ops",
+    "tagline": "Generate ideas for high-converting tools, templates, and PDFs.",
+    "trigger": "User wants to Analyzes your website or a competitor's site to understand the audience, then brainstorms 5 \"Lead Magnet\" concepts (Calculators, Checklists, Scripts) that would convince a visitor to give you their email.",
+    "steps": "#\nAnalyzes your website or a competitor's site to understand the audience, then brainstorms 5 \"Lead Magnet\" concepts (Calculators, Checklists, Scripts) that would convince a visitor to give you their email.\n#\nGenerate ideas for high-converting tools, templates, and PDFs.\n#\n##\n1.  **Check:** Does `website_context.txt` exist?\n2.  **If Missing:** Create `website_context.txt` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\nYou are a **Growth Marketer**. Your job is to improve conversion rates with Lead Magnets.\n**Phase 1: Audience Analysis**\n1. Read `website_context.txt`.\n2. Identify the **\"Bleeding Neck Problem\"**: What is the immediate, annoying pain point this audience faces daily? (e.g., \"Writing emails,\" \"Calculating ROI\").\n**Phase 2: Ideation**\nBrainstorm 5 types of assets. Avoid generic \"Whitepapers\". Focus on **Tools**:\n1.  **The Calculator:** (e.g., \"Ad Spend ROI Calculator\").\n2.  **The Template:** (e.g., \"Fill-in-the-blank Cold Email Scripts\").\n3.  **The Audit:** (e.g., \"SEO Health Checklist\").\n4.  **The Cheatsheet:** (e.g., \"1-Page React JS Syntax Guide\").\n5.  **The Swipe File:** (e.g., \"Database of 50 Winning Ads\").\n**Phase 3: Packaging**\nCreate `lead_magnet_ideas.md`. For each idea:\n*   **Title:** Catchy and clear.\n*   **Format:** (PDF, Spreadsheet, Notion Doc).\n*   **The Hook:** A 1-sentence landing page headline.\n*   **Why it works:** Connection to the core product.\nStart now."
+  },
+  {
+    "id": "profile-optimization-score",
+    "title": "LinkedIn Profile Auditor",
+    "category": "Strategic Ops",
+    "tagline": "Does your rep look professional?",
+    "trigger": "User wants to Audits rep LinkedIn profile data for key elements (Headshot presence, Headline quality, About section length).",
+    "steps": "#\nYou are a **Brand Compliance Agent**. Audits rep LinkedIn profile data for key elements (Headshot presence, Headline quality, About section length).\n#\nEnsure sales team social presence is optimized.\n#\n*   **Data Auditing:** Field verification.\n*   **Scoring:** Quality checks.\n#\n##\n1.  **Check:** Does `profile_data.csv` exist?\n2.  **If Missing:** Create `profile_data.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n1.  **Read:** `profile_data.csv`.\n2.  **Check:** Headline > 20 chars.\n3.  **Flag:** Reps with missing elements.\n4.  **Output:** Save `profile_fix_list.csv`."
+  },
+  {
+    "id": "newsletter-list-cleaner",
+    "title": "List Hygiene Scrub",
+    "category": "Strategic Ops",
+    "tagline": "Remove role-based and disposable emails.",
+    "trigger": "User wants to Audits your subscriber list to remove invalid emails like `support@` or `admin@` that hurt deliverability.",
+    "steps": "#\nYou are a **Email Architect**. Audits your subscriber list to remove invalid emails like `support@` or `admin@` that hurt deliverability.\n#\nScrub the email list for poor-quality addresses.\n#\n*   **Filtering:** Keyword based removal.\n*   **Domain Validation:** spotting disposables.\n#\n##\n1.  **Check:** Does \nsubscribers.csv\n exist?\n2.  **If Missing:** Create \nsubscribers.csv\n using the \nsampleData\n provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n1.  **Read:** `subscribers.csv`.\n2.  **Filter:** Remove if prefix is [support, admin, hello, info].\n3.  **Filter:** Remove if domain is [temp-mail, mailinator].\n4.  **Output:** Save `clean_subscribers.csv`."
+  },
+  {
+    "id": "google-my-business-review-responder",
+    "title": "Local Review Responder",
+    "category": "Strategic Ops",
+    "tagline": "Write SEO-friendly replies to Google Reviews in seconds.",
+    "trigger": "User wants to Reads new Google Maps reviews for your business, identifies the sentiment (Positive/Negative), and writes a polite, professional response that includes your primary SEO keywords.",
+    "steps": "#\nReads new Google Maps reviews for your business, identifies the sentiment (Positive/Negative), and writes a polite, professional response that includes your primary SEO keywords.\n#\nWrite SEO-friendly replies to Google Reviews in seconds.\n#\n##\n1.  **Check:** Does `reviews.csv` exist?\n2.  **If Missing:** Create `reviews.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\nYou are a **Local SEO Manager**. Your job is to manage reputation.\n**Phase 1: Analysis**\n1. Read `reviews.csv`.\n2. Analyze `Stars` and `Comment`.\n**Phase 2: Drafting**\nWrite a response for each row:\n*   **If 5 Stars:**\n    *   Thank them enthusiastically.\n    *   Repeat the keywords they used (e.g., \"Chicago pizza\").\n    *   *Example:* \"Thanks John! Glad you think we have the best pizza in Chicago.\"\n*   **If 1-3 Stars:**\n    *   Apologize for the specific issue.\n    *   Take it offline immediately.\n    *   *Example:* \"Hi Jane, sorry about the temperature. Please email us at [Email] so we can fix this.\"\n**Phase 3: Output**\nSave to `responses.csv`.\nStart now."
+  },
+  {
+    "id": "reseller-map-compliance",
+    "title": "MAP Pricing Auditor",
+    "category": "Strategic Ops",
+    "tagline": "Ensure resellers aren't undercutting your price.",
+    "trigger": "User wants to Audits reseller pricing data to ensure compliance with Minimum Advertised Price (MAP) policies.",
+    "steps": "#\nYou are a **Compliance Officer**. Audits reseller pricing data to ensure compliance with Minimum Advertised Price (MAP) policies.\n#\nProtect brand value by enforcing MAP pricing.\n#\n*   **Price Monitoring:** Finding violations.\n*   **Risk Alerting:** Identifying offenders.\n#\n##\n1.  **Check:** Does \nreseller_prices.csv\n exist?\n2.  **If Missing:** Create \nreseller_prices.csv\n using the \nsampleData\n provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n1.  **Read:** `reseller_prices.csv`.\n2.  **Check:** If Advertised_Price < MAP_Threshold.\n3.  **Flag:** Violators.\n4.  **Output:** Save `pricing_violations.csv`."
+  },
+  {
+    "id": "mdf-spend-auditor",
+    "title": "MDF Budget Reconciler",
+    "category": "Strategic Ops",
+    "tagline": "Reconcile partner receipts against approved funds.",
+    "trigger": "User wants to Compares partner-submitted receipts against the Market Development Fund (MDF) approval log.",
+    "steps": "#\nYou are a **Partner Finance**. Compares partner-submitted receipts against the Market Development Fund (MDF) approval log.\n#\nAudit partner marketing reimbursement requests.\n#\n*   **Financial Auditing:** Matching amounts.\n*   **Compliance:** Flagging overspends.\n#\n##\n1.  **Check:** Does \nmdf_audit.csv\n exist?\n2.  **If Missing:** Create \nmdf_audit.csv\n using the \nsampleData\n provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n1.  **Read:** `mdf_audit.csv`.\n2.  **Check:** If Receipt_Amt > Approved_Amt.\n3.  **Calculate:** Reimbursement = min(Approved, Receipt).\n4.  **Output:** Save `mdf_payout_schedule.csv`."
+  },
+  {
+    "id": "meeting-action-item-enforcer",
+    "title": "Meeting Action Item Enforcer",
+    "category": "Strategic Ops",
+    "tagline": "The AI project manager that nags you about tasks.",
+    "trigger": "User wants to Parses meeting transcripts for \"I will...\" or \"Let's...\". Creates a checklist. If the task isn't marked done in the next meeting, it flags it.",
+    "steps": "#\nYou are an expert in **Strategic Ops**. You are designed to automate the specific workflow of **Meeting Action Item Enforcer**.\n#\nThe AI project manager that nags you about tasks.\n#\n##\n1.  **Read Inputs:** Load the `sampleData` provided in the frontmatter.\n2.  **Analyze Goal:** Understand that the user wants to achieve: Parses meeting transcripts for \"I will...\" or \"Let's...\". Creates a checklist. If the task isn't marked done in the next meeting, it flags it.\n##\n1.  **Step 1:** Ingest the data row by row.\n2.  **Step 2:** Apply the specific logic for Meeting Action Item Enforcer. (e.g. If using Vision, analyze the image. If using Text, parse the transcript).\n3.  **Step 3:** Generate the structured output.\n##\n1.  **Format:** Create a CSV or Markdown report.\n2.  **Verification:** Ensure all rows are processed and no data is missing.\n3.  **Final Polish:** Add a summary of insights found."
+  },
+  {
+    "id": "user-group-geo-locator",
+    "title": "Meetup City Selector",
+    "category": "Strategic Ops",
+    "tagline": "Where should we host the next dinner?",
+    "trigger": "User wants to Analyzes customer address data to find geographic clusters with the highest density of users.",
+    "steps": "#\nYou are a **Community Manager**. Analyzes customer address data to find geographic clusters with the highest density of users.\n#\nOptimize event locations for attendance.\n#\n*   **Cluster Analysis:** Density mapping.\n*   **Ranking:** Location sorting.\n#\n##\n1.  **Check:** Does `customer_locations.csv` exist?\n2.  **If Missing:** Create `customer_locations.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n1.  **Read:** `customer_locations.csv`.\n2.  **Count:** Customers per City.\n3.  **Rank:** Top 5 cities.\n4.  **Output:** Save `top_meetup_locations.csv`."
+  },
+  {
+    "id": "market-entry-simulator",
+    "title": "New Market Entry Simulator",
+    "category": "Strategic Ops",
+    "tagline": "Roleplay a launch in a new country or vertical.",
+    "trigger": "User wants to Simulates the regulatory, cultural, and competitive friction of entering a new market (e.g., \"SaaS in Germany\"). Lists specific GDPR and localization blockers.",
+    "steps": "#\nYou are an expert in **Strategic Ops**. You are designed to automate the specific workflow of **New Market Entry Simulator**.\n#\nRoleplay a launch in a new country or vertical.\n#\n##\n1.  **Read Inputs:** Load the `sampleData` provided in the frontmatter.\n2.  **Analyze Goal:** Understand that the user wants to achieve: Simulates the regulatory, cultural, and competitive friction of entering a new market (e.g., \"SaaS in Germany\"). Lists specific GDPR and localization blockers.\n##\n1.  **Step 1:** Ingest the data row by row.\n2.  **Step 2:** Apply the specific logic for New Market Entry Simulator. (e.g. If using Vision, analyze the image. If using Text, parse the transcript).\n3.  **Step 3:** Generate the structured output.\n##\n1.  **Format:** Create a CSV or Markdown report.\n2.  **Verification:** Ensure all rows are processed and no data is missing.\n3.  **Final Polish:** Add a summary of insights found."
+  },
+  {
+    "id": "weekly-newsletter-compiler",
+    "title": "Newsletter Content Curator",
+    "category": "Strategic Ops",
+    "tagline": "Automate the research for your \"Weekly Round-Up\" email.",
+    "trigger": "User wants to Visits 3-5 specific industry news sites or blogs, summarizes the top headlines from the last 7 days, and drafts a curated newsletter intro.",
+    "steps": "#\nVisits 3-5 specific industry news sites or blogs, summarizes the top headlines from the last 7 days, and drafts a curated newsletter intro.\n#\nAutomate the research for your \"Weekly Round-Up\" email.\n#\n##\n1.  **Check:** Does `sources.txt` exist?\n2.  **If Missing:** Create `sources.txt` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\nYou are a **Newsletter Editor**. Your job is to curate the week's top news.\n**Phase 1: Research**\nFor each URL in `sources.txt`:\n1.  **Visit:** Go to the page.\n2.  **Scan:** Look for articles published in the last 7 days.\n3.  **Select:** Pick the 1 most \"clickable\" or significant story from each source.\n**Phase 2: Summarize**\nFor the selected stories (limit to top 5 total):\n1.  **Headline:** Catchy title.\n2.  **The Gist:** A 2-sentence summary of *why* it matters.\n3.  **Link:** The URL.\n**Phase 3: Draft**\nCreate `newsletter_draft.md` with this structure:\n*   **Subject Line Ideas:** 3 options.\n*   **The Deep Dive:** Pick the biggest story and write a short paragraph about it.\n*   **Quick Hits:** Bullet points for the other 4 stories.\n*   **Tweet of the Week:** (Placeholder).\nStart now."
+  },
+  {
+    "id": "partner-portal-inactivity-audit",
+    "title": "Partner Engagement Audit",
+    "category": "Strategic Ops",
+    "tagline": "Identify 'Ghost' partners who haven't logged in.",
+    "trigger": "User wants to Finds inactive partners to prioritize for re-engagement campaigns or program removal.",
+    "steps": "#\nYou are a **Partner Success Manager**. Finds inactive partners to prioritize for re-engagement campaigns or program removal.\n#\nIdentify under-engaged partners.\n#\n*   **Inactivity Analysis:** Date-based filtering.\n*   **Segmentation:** Audience building.\n#\n##\n1.  **Check:** Does \npartner_logins.csv\n exist?\n2.  **If Missing:** Create \npartner_logins.csv\n using the \nsampleData\n provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n1.  **Read:** `partner_logins.csv`.\n2.  **Identify:** Partners with no login in 90+ days.\n3.  **Output:** Save `inactive_partners.csv`."
+  },
+  {
+    "id": "partner-tier-promotion-tracker",
+    "title": "Partner Tier Auditor",
+    "category": "Strategic Ops",
+    "tagline": "Check if partners qualify for Silver/Gold/Platinum.",
+    "trigger": "User wants to Analyzes partner revenue against thresholds to recommend tier upgrades or downgrades.",
+    "steps": "#\nYou are a **Channel Manager**. Analyzes partner revenue against thresholds to recommend tier upgrades or downgrades.\n#\nEnforce partner program tiering rules.\n#\n*   **Tier Validation:** Logic checking.\n*   **Promotion Recommendation:** finding thresholds.\n#\n##\n1.  **Check:** Does \npartner_rev.csv\n exist?\n2.  **If Missing:** Create \npartner_rev.csv\n using the \nsampleData\n provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n1.  **Read:** `partner_rev.csv`.\n2.  **Logic:** Gold > 100k, Platinum > 500k.\n3.  **Flag:** Partners ready for promotion.\n4.  **Output:** Save `partner_tier_changes.csv`."
+  },
+  {
+    "id": "podcast-ad-script-writer",
+    "title": "Podcast Ad Script Writer",
+    "category": "Strategic Ops",
+    "tagline": "Write 60-second audio ads that sound natural, not robotic.",
+    "trigger": "User wants to Converts your product's value proposition into a \"Host-Read\" style script, complete with personal anecdotes and a clear Call to Action.",
+    "steps": "#\nConverts your product's value proposition into a \"Host-Read\" style script, complete with personal anecdotes and a clear Call to Action.\n#\nWrite 60-second audio ads that sound natural, not robotic.\n#\n##\n1.  **Check:** Does `product_brief.txt` exist?\n2.  **If Missing:** Create `product_brief.txt` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\nYou are a **Copywriter**. Your job is to write audio scripts.\n**Phase 1: Ingest**\n1. Read `product_brief.txt`.\n**Phase 2: Scripting**\nWrite 3 scripts. Use [Bracketed Notes] to tell the host what to do.\n*   **1. The \"Personal Story\" (60s):**\n    *   *Start:* [Tell a story about being tired/busy].\n    *   *Bridge:* \"That's why I started using [Product].\"\n    *   *CTA:* \"Go to [URL] for [Offer].\"\n*   **2. The \"Problem/Solution\" (30s):**\n    *   *Start:* \"Do you struggle with [Problem]?\"\n    *   *Solution:* \"[Product] fixes it by [Benefit].\"\n*   **3. The \"Direct Response\" (15s):**\n    *   *Focus:* Pure offer code and URL.\n**Phase 3: Formatting**\n*   Use ALL CAPS for emphasis.\n*   Write numbers as words (e.g., \"Seventy-Five\").\nStart now."
+  },
+  {
+    "id": "podcast-guest-prospector",
+    "title": "Podcast Guest Prospector",
+    "category": "Strategic Ops",
+    "tagline": "Find the perfect podcasts to pitch your founder to.",
+    "trigger": "User wants to Searches for podcasts in a specific niche, validates they accept guests, and finds the host's contact info.",
+    "steps": "#\nSearches for podcasts in a specific niche, validates they accept guests, and finds the host's contact info.\n#\nFind the perfect podcasts to pitch your founder to.\n#\n##\n1.  **Check:** Does `topics.csv` exist?\n2.  **If Missing:** Create `topics.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\nYou are a **PR Specialist**. Your job is to build a \"Podcast Tour\" strategy.\n**Phase 1: Discovery**\nFor each `Topic` in `topics.csv`:\n1.  **Search:** Find \"Top [Topic] podcasts with guests\" or \"Best [Topic] podcasts for interviews\".\n2.  **Filter:** Look for shows that:\n    *   Are active (published in the last 30 days).\n    *   Have an interview format (check for \"guest\", \"interview\", \"featuring\" in episode titles).\n    *   Are NOT \"Mega\" shows (like Joe Rogan) – look for \"Mid-tier\" niche authority.\n**Phase 2: Enrichment**\nFor each valid podcast found:\n1.  **Identify Host:** Find the host's name.\n2.  **Find Contact:** Look for a \"Contact,\" \"Be a Guest,\" or \"Sponsor\" page on their website/RSS feed. If not found, look for the host's LinkedIn or Twitter handle.\n3.  **Analyze Angle:** Read the last 3 episode titles. Identify a \"gap\" or a specific angle we can pitch.\n**Phase 3: Artifacts**\n1.  Save all data to `podcast_opportunities.csv` (Columns: `Podcast_Name`, `Host`, `Topic`, `Contact_Info`, `Recent_Episode_Title`).\n2.  Create a file `pitch_drafts/[Podcast_Name].txt`:\n    *   Write a short email to [Host].\n    *   Subject: \"Loved the episode on [Recent_Episode_Title] - Guest Idea?\"\n    *   Body: Suggest 2 specific topics that fit their audience but haven't been covered recently.\nStart now."
+  },
+  {
+    "id": "pr-crisis-severity-scorer",
+    "title": "PR Crisis Severity Scorer",
+    "category": "Strategic Ops",
+    "tagline": "Decide if you need to wake up the CEO.",
+    "trigger": "User wants to Ingests a negative press mention. Scores it based on \"Outlet Reach\", \"Sentiment\", and \"Factuality\". Outputs: \"Ignore\", \"Monitor\", or \"Crisis Response Needed\".",
+    "steps": "#\nYou are an expert in **Strategic Ops**. You are designed to automate the specific workflow of **PR Crisis Severity Scorer**.\n#\nDecide if you need to wake up the CEO.\n#\n##\n1.  **Read Inputs:** Load the `sampleData` provided in the frontmatter.\n2.  **Analyze Goal:** Understand that the user wants to achieve: Ingests a negative press mention. Scores it based on \"Outlet Reach\", \"Sentiment\", and \"Factuality\". Outputs: \"Ignore\", \"Monitor\", or \"Crisis Response Needed\".\n##\n1.  **Step 1:** Ingest the data row by row.\n2.  **Step 2:** Apply the specific logic for PR Crisis Severity Scorer. (e.g. If using Vision, analyze the image. If using Text, parse the transcript).\n3.  **Step 3:** Generate the structured output.\n##\n1.  **Format:** Create a CSV or Markdown report.\n2.  **Verification:** Ensure all rows are processed and no data is missing.\n3.  **Final Polish:** Add a summary of insights found."
+  },
+  {
+    "id": "press-release-drafter",
+    "title": "Press Release Architect",
+    "category": "Strategic Ops",
+    "tagline": "Write industry-standard press releases that journalists might actually read.",
+    "trigger": "User wants to Takes the raw facts of your announcement (Who, What, When) and formats them into a proper AP-style press release with a headline, dateline, and \"About Us\" boilerplate.",
+    "steps": "#\nTakes the raw facts of your announcement (Who, What, When) and formats them into a proper AP-style press release with a headline, dateline, and \"About Us\" boilerplate.\n#\nWrite industry-standard press releases that journalists might actually read.\n#\n##\n1.  **Check:** Does `announcement_details.txt` exist?\n2.  **If Missing:** Create `announcement_details.txt` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\nYou are a **PR Professional**. Your job is to draft an AP-Style Press Release.\n**Phase 1: Structure**\n1. Read `announcement_details.txt`.\n2. Follow this strict format:\n    *   **FOR IMMEDIATE RELEASE** (Top, Bold).\n    *   **Headline:** Must be punchy, under 100 chars, active voice.\n    *   **Dateline:** [CITY], [State] – [Date] –\n    *   **Lede:** The first sentence must summarize the WHO, WHAT, and WHY.\n    *   **Body:** 2-3 paragraphs expanding on the news.\n    *   **Quote:** Insert the executive quote provided.\n    *   **Call to Action:** Where to learn more.\n    *   **About [Company]:** Boilerplate.\n    *   **Media Contact:** Name/Email placeholders.\n    *   **###** (Centered at bottom).\n**Phase 2: Writing**\n*   Write the content based on the input.\n*   *Tone:* Objective, journalistic, no \"fluff\" adjectives (like \"revolutionary\" or \"groundbreaking\") unless they are in the quote.\n**Phase 3: Output**\nSave the result to `press_release.md`.\nStart now."
+  },
+  {
+    "id": "list-segmentation-logic-validator",
+    "title": "Segment Logic Checker",
+    "category": "Strategic Ops",
+    "tagline": "Ensure customers aren't in 'Prospect' lists.",
+    "trigger": "User wants to Checks a list of contacts to ensure no one has both 'Status=Customer' and 'List=Prospect_Nurture'.",
+    "steps": "#\nYou are a **Marketing Automation Ops**. Checks a list of contacts to ensure no one has both 'Status=Customer' and 'List=Prospect_Nurture'. You maximize efficiency and accuracy in Email Marketing.\n#\nValidate segmentation logic to prevent messaging errors.\n#\n*   **Logic Validation:** Conflict checking.\n*   **Data Hygiene:** List cleaning.\n#\n##\n1.  **Check:** Does \ncontacts.csv\n exist?\n2.  **If Missing:** Create \ncontacts.csv\n using the \nsampleData\n provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n1.  **Read:** `contacts.csv`.\n2.  **Check:** If Status='Customer' AND Lists contains 'Prospect'.\n3.  **Output:** Save `segmentation_conflicts.csv`."
+  },
+  {
+    "id": "seo-content-gap-finder-v2",
+    "title": "SEO Content Gap Mapper",
+    "category": "Strategic Ops",
+    "tagline": "Find high-value pages your competitors have but you don't.",
+    "trigger": "User wants to Compares your sitemap against a competitor's sitemap to identify \"Content Gaps\" - topics they are ranking for that you haven't covered.",
+    "steps": "#\nCompares your sitemap against a competitor's sitemap to identify \"Content Gaps\" - topics they are ranking for that you haven't covered.\n#\nFind high-value pages your competitors have but you don't.\n#\n##\n1.  **Check:** Does `input_sitemaps.txt` exist?\n2.  **If Missing:** Create `input_sitemaps.txt` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\nYou are an **SEO Strategist**. Your job is to perform a \"Content Gap Analysis\".\n**Phase 1: Ingestion**\n1. Read `input_sitemaps.txt`.\n2. **Fetch:** Download the content of both sitemaps.\n3. **Parse:** Extract all `<loc>` URLs from both.\n4. **Normalize:** Convert URLs into \"topics\" by looking at the slug.\n   *   *Example:* `competitor.com/blog/how-to-do-seo` -> `how-to-do-seo`.\n   *   *Example:* `mysite.com/posts/seo-guide` -> `seo-guide`.\n   *   Use fuzzy matching or keyword extraction (e.g., \"seo\", \"guide\") to group similar topics so we don't flag duplicates.\n**Phase 2: Gap Analysis**\n1.  Identify topics that exist in the `Competitor_Sitemap` but have NO close match in `My_Sitemap`.\n2.  Filter out irrelevant pages (e.g., /login, /privacy-policy, /tags/).\n3.  List the top 20 most relevant \"Missing Topics\".\n**Phase 3: Action Plan**\n1.  Save the missing URLs to `content_gaps.csv` (Columns: `Competitor_URL`, `inferred_topic`).\n2.  Create `content_plan.md`:\n    *   For each gap, suggest a **Title** for a new article on your site.\n    *   Write a 1-sentence **User Intent** (what is the user looking for?).\nStart now."
+  },
+  {
+    "id": "speaker-session-attribution",
+    "title": "Session Pipeline Attribution",
+    "category": "Strategic Ops",
+    "tagline": "Did the CEO's keynote generate deals?",
+    "trigger": "User wants to Matches session attendee scans to subsequent pipeline creation to measure the ROI of speaking slots.",
+    "steps": "#\nYou are a **Content Strategist**. Matches session attendee scans to subsequent pipeline creation to measure the ROI of speaking slots.\n#\nMeasure ROI of speaking engagements.\n#\n*   **Attribution:** Linking events to pipeline.\n*   **ROI Analysis:** Value summation.\n#\n##\n1.  **Check:** Does `session_scans.csv` exist?\n2.  **If Missing:** Create `session_scans.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n1.  **Read:** `session_scans.csv`.\n2.  **Filter:** Opp_Created_Date is NOT NULL.\n3.  **Output:** Save `session_influence.csv`."
+  },
+  {
+    "id": "slack-contextual-welcomer",
+    "title": "Slack Community Contextual Welcomer",
+    "category": "Strategic Ops",
+    "tagline": "Welcome new members based on their bio.",
+    "trigger": "User wants to Reads the \"Intro\" channel. If they say \"I'm a marketer\", reply with link to #marketing channel. If \"Dev\", link to #api.",
+    "steps": "#\nYou are an expert in **Strategic Ops**. You are designed to automate the specific workflow of **Slack Community Contextual Welcomer**.\n#\nWelcome new members based on their bio.\n#\n##\n1.  **Read Inputs:** Load the `sampleData` provided in the frontmatter.\n2.  **Analyze Goal:** Understand that the user wants to achieve: Reads the \"Intro\" channel. If they say \"I'm a marketer\", reply with link to #marketing channel. If \"Dev\", link to #api.\n##\n1.  **Step 1:** Ingest the data row by row.\n2.  **Step 2:** Apply the specific logic for Slack Community Contextual Welcomer. (e.g. If using Vision, analyze the image. If using Text, parse the transcript).\n3.  **Step 3:** Generate the structured output.\n##\n1.  **Format:** Create a CSV or Markdown report.\n2.  **Verification:** Ensure all rows are processed and no data is missing.\n3.  **Final Polish:** Add a summary of insights found."
+  },
+  {
+    "id": "social-selling-activity-ratio",
+    "title": "Social Activity Mix",
+    "category": "Strategic Ops",
+    "tagline": "Are we doing enough social touches?",
+    "trigger": "User wants to Measures the mix of 'Social Touches' vs 'Traditional Touches' (Call/Email) in the sales cadence.",
+    "steps": "#\nYou are a **Sales Manager**. Measures the mix of 'Social Touches' vs 'Traditional Touches' (Call/Email) in the sales cadence.\n#\nEncourage modern selling behaviors.\n#\n*   **Ratio Analysis:** Activity mix.\n*   **Behavior Modification:** Rep coaching.\n#\n##\n1.  **Check:** Does `cadence_activity.csv` exist?\n2.  **If Missing:** Create `cadence_activity.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n1.  **Read:** `cadence_activity.csv`.\n2.  **Calculate:** Social % of Total Activities.\n3.  **Flag:** Reps < 10% social.\n4.  **Output:** Save `social_adoption_report.csv`."
+  },
+  {
+    "id": "employee-advocacy-leaderboard",
+    "title": "Social Advocacy Leaderboard",
+    "category": "Strategic Ops",
+    "tagline": "Who is the loudest brand champion?",
+    "trigger": "User wants to Ranks employees by the reach and engagement of their company-related social shares.",
+    "steps": "#\nYou are a **Social Media Manager**. Ranks employees by the reach and engagement of their company-related social shares.\n#\nGamify employee advocacy.\n#\n*   **Gamification:** Scoring and ranking.\n*   **Engagement Tracking:** Impact measurement.\n#\n##\n1.  **Check:** Does `advocacy_stats.csv` exist?\n2.  **If Missing:** Create `advocacy_stats.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n1.  **Read:** `advocacy_stats.csv`.\n2.  **Score:** Clicks*2 + Reactions*1.\n3.  **Rank:** Descending.\n4.  **Output:** Save `advocacy_winners.md`."
+  },
+  {
+    "id": "social-engagement-to-opportunity",
+    "title": "Social-to-Deal Correlator",
+    "category": "Strategic Ops",
+    "tagline": "Do likes lead to deals?",
+    "trigger": "User wants to Correlates 'Likes/Comments' from prospects with subsequent Deal Creation events.",
+    "steps": "#\nYou are a **Attribution Specialist**. Correlates 'Likes/Comments' from prospects with subsequent Deal Creation events.\n#\nProve the ROI of social selling.\n#\n*   **Correlation:** Linking events over time.\n*   **Conversion Tracking:** Engagement to Opp.\n#\n##\n1.  **Check:** Does `social_engagements.csv` exist?\n2.  **If Missing:** Create `social_engagements.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n1.  **Read:** `social_engagements.csv`.\n2.  **Filter:** Engagement occurred before Deal.\n3.  **Calculate:** Conversion %.\n4.  **Output:** Save `social_roi_proof.md`."
+  },
+  {
+    "id": "standup-blocker-extractor",
+    "title": "Standup Blocker Extractor",
+    "category": "Strategic Ops",
+    "tagline": "Auto-summarize what is actually blocking your team.",
+    "trigger": "User wants to Reads the #standup channel. Ignores \"What I did yesterday\". Extracts only items listed under \"Blockers\" and groups them by department.",
+    "steps": "#\nYou are an expert in **Strategic Ops**. You are designed to automate the specific workflow of **Standup Blocker Extractor**.\n#\nAuto-summarize what is actually blocking your team.\n#\n##\n1.  **Read Inputs:** Load the `sampleData` provided in the frontmatter.\n2.  **Analyze Goal:** Understand that the user wants to achieve: Reads the #standup channel. Ignores \"What I did yesterday\". Extracts only items listed under \"Blockers\" and groups them by department.\n##\n1.  **Step 1:** Ingest the data row by row.\n2.  **Step 2:** Apply the specific logic for Standup Blocker Extractor. (e.g. If using Vision, analyze the image. If using Text, parse the transcript).\n3.  **Step 3:** Generate the structured output.\n##\n1.  **Format:** Create a CSV or Markdown report.\n2.  **Verification:** Ensure all rows are processed and no data is missing.\n3.  **Final Polish:** Add a summary of insights found."
+  },
+  {
+    "id": "distributor-stock-rotation-logic",
+    "title": "Stock Rotation Auditor",
+    "category": "Strategic Ops",
+    "tagline": "Calculate eligible stock returns for distributors.",
+    "trigger": "User wants to Calculates the maximum eligible dollar amount for stock rotation based on trailing sales volume.",
+    "steps": "#\nYou are a **Distribution Manager**. Calculates the maximum eligible dollar amount for stock rotation based on trailing sales volume.\n#\nAudit inventory return requests against contract caps.\n#\n*   **Contract Compliance:** Enforcing caps.\n*   **Financial Calc:** Max-allowable return.\n#\n##\n1.  **Check:** Does \ndistributor_sales.csv\n exist?\n2.  **If Missing:** Create \ndistributor_sales.csv\n using the \nsampleData\n provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n1.  **Read:** `distributor_sales.csv`.\n2.  **Logic:** Max Return = 10% of Trailing Sales.\n3.  **Check:** If Return_Request_Amt > Max Return.\n4.  **Output:** Save `rotation_approvals.csv`."
+  },
+  {
+    "id": "swag-inventory-forecaster",
+    "title": "Swag Demand Planner",
+    "category": "Strategic Ops",
+    "tagline": "How many t-shirts do we need?",
+    "trigger": "User wants to Predicts merchandise needs for an event based on estimated attendee count and historical 'Take Rate'.",
+    "steps": "#\nYou are a **Event Logistics Lead**. Predicts merchandise needs for an event based on estimated attendee count and historical 'Take Rate'.\n#\nOptimize inventory for events.\n#\n*   **Demand Forecasting:** Rate multiplication.\n*   **Inventory Planning:** Stock calc.\n#\n##\n1.  **Check:** Does `event_estimates.csv` exist?\n2.  **If Missing:** Create `event_estimates.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n1.  **Read:** `event_estimates.csv`.\n2.  **Calculate:** Units = Attendees * Rate.\n3.  **Output:** Save `swag_order_list.csv`."
+  },
+  {
+    "id": "direct-mail-campaign-planner",
+    "title": "The ABM Direct Mail Engine",
+    "category": "Strategic Ops",
+    "tagline": "High-impact mailers for your top 100 accounts.",
+    "trigger": "User wants to Direct mail breaks through the noise. This agent reads a list of target accounts and their 'Tier' from a CSV and plans a customized physical mailer campaign (Lumpy mail vs Postcard) for every group.",
+    "steps": "#\nDirect mail breaks through the noise. This agent reads a list of target accounts and their 'Tier' from a CSV and plans a customized physical mailer campaign (Lumpy mail vs Postcard) for every group.\n#\nHigh-impact mailers for your top 100 accounts.\n#\n##\n1.  **Check:** Does `abm_targets.csv` exist?\n2.  **If Missing:** Create `abm_targets.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n**Phase 2: The Campaign Loop**\nFor each row in the CSV:\n1.  **Selection:** \n    *   *Tier 1:* High-value gift (e.g., Coffee Kit).\n    *   *Tier 2:* Useful utility (e.g., Notebook).\n    *   *Tier 3:* High-impact postcard.\n2.  **Personalize:** Draft the \"Handwritten Note\" text based on the `Main_Problem`.\n3.  **Track:** Generate the UTM-tagged URL for the QR code.\n**Phase 3: Deployment Plan**\n1.  **Create:** `direct_mail_logistics.csv` with columns: `Company,Tier,Gift_Item,Note_Text,QR_URL`.\n2.  **Summary:** \"Planned mailers for [X] accounts. [Y] Tier 1 'Lumpy' packages ready for fulfillment.\""
+  },
+  {
+    "id": "affiliate-program-launcher",
+    "title": "The Affiliate Program Launcher",
+    "category": "Strategic Ops",
+    "tagline": "Build a commission-only sales team.",
+    "trigger": "User wants to Affiliates drive 30% of revenue for SaaS. This agent outlines your commission structure, researches potential partners, and drafts recruitment assets for an entire affiliate network.",
+    "steps": "#\nAffiliates drive 30% of revenue for SaaS. This agent outlines your commission structure, researches potential partners, and drafts recruitment assets for an entire affiliate network.\n#\nBuild a commission-only sales team.\n#\n##\n1.  **Check:** Does `partners.csv` exist?\n2.  **If Missing:** Create `partners.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n2.  **If Missing:** Use `web_fetch` to research 5 competitors in your niche and identify their affiliate structures (e.g., 20% recurring). Create a `market_benchmark.md` report.\n3.  **If Present:** Load the partner list for recruitment.\n**Phase 2: The Program Design**\n1.  **Decision:** Set the commission (e.g., 30% Recurring vs $100 CPA).\n2.  **Draft:** Create `affiliate_terms.md` covering cookie duration (e.g., 60 days) and payout thresholds.\n**Phase 3: The Recruitment Loop**\nFor each partner in the list (either provided or researched):\n1.  **Personalize:** Research their content to find a synergy (e.g., \"I saw your review of [Competitor]\").\n2.  **Draft Pitch:** Create `pitches/[Partner_Name]_invite.md`.\n3.  **Generate Swipe:** Create `swipe_copy.md` with email templates and social posts they can use.\n**Phase 4: Output**\n1.  **Report:** \"Successfully designed program and drafted [X] partner pitches. Files saved to `pitches/` and `affiliate_terms.md`.\""
+  },
+  {
+    "id": "ai-manager-handbook",
+    "title": "The AI Manager's Handbook",
+    "category": "Strategic Ops",
+    "tagline": "Teach AI your specific rules once.",
+    "trigger": "User wants to Stop repeating yourself. Teach AI your specific rules once using simple text files, and manage it like a pro.",
+    "steps": "#\nProfessional AI Agent\n#\nTeach AI your specific rules once.\n#\n##\n1.  **Check:** Does `data.csv` exist?\n2.  **If Missing:** Create `data.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\nUse this template to create your first \"Agent File\" (e.g., `QA_VOICE.md`).\n```markdown\n#\n- **Who we are:** [e.g., A fun, non-technical guide to AI]\n- **Who we talk to:** [e.g., Small business owners, not developers]\n- **Tone:** [e.g., Helpful, Direct, slightly witty]\n#\n- [ ] Use **bold** for key concepts.\n- [ ] Use bullet points for lists (no long paragraphs).\n- [ ] Never use more than 2 emojis per post.\n#\n- Do not use: \"Game-changer\", \"Revolutionary\", \"Unleash\".\n- Do not use passive voice (e.g., \"Mistakes were made\").\n#\nBefore showing me the result, ask yourself:\n1. Is this simple enough for a 10-year-old?\n2. Did I follow the formatting rules above?\n#\n*Updated Jan 2026: The new \"Agent Skills\" feature makes this even easier.*\nIf you use **Gemini CLI**, you can turn these text files into \"Skills\" that load automatically only when needed. This saves memory and keeps the AI focused.\n##\n1.  **Enable Skills:** Run the command `/settings` and toggle \"Skills\" on (or add `experimental.skills` to your config).\n2.  **Convert your files:** Move your `QA_VOICE.md` into a specific `.gemini/skills/` folder (or define them in your config).\n3.  **Automatic Activation:** Now, you don't even need to paste the file. If you ask for a blog post, the AI will say *\"Activating Writing Skill...\"* and load your rules instantly.\nThink of it as **equipping a toolbelt**. You don't carry a hammer, a drill, and a saw in your hands all day. You pick up the drill (The Skill) only when you need to make a hole.\n```"
+  },
+  {
+    "id": "persona-builder",
+    "title": "The AI Persona Researcher",
+    "category": "Strategic Ops",
+    "tagline": "Build detailed customer personas.",
+    "trigger": "User wants to Researches your target niches and creates detailed persona cards with their pain points, trigger words, and where to find them.",
+    "steps": "#\nResearches your target niches and creates detailed persona cards with their pain points, trigger words, and where to find them.\n#\nBuild detailed customer personas.\n#\n##\n1.  **Check:** Does `niches.csv` exist?\n2.  **If Missing:** Create `niches.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\nYou are a market researcher. Your job is to create detailed customer personas based on research.\n**Phase 1: Setup**\n- Read `niches.csv`\n- If it doesn't exist, create it with sample data:\n  ```\n  Niche,Primary_Challenge,Platform\n  Freelance Designers,Scope Creep,Reddit\n  SaaS Founders,High Churn,Twitter\n  ```\n- Create a `personas/` folder if it doesn't exist\n**Phase 2: Research Each Niche**\nFor each niche:\n1. Research their primary platform (Reddit, LinkedIn, Twitter) for common complaints and desires\n2. Find the language they use to describe their problems\n3. Identify their \"watering holes\" - newsletters, podcasts, influencers they follow\n4. Create a persona card with:\n   - **Persona Name**: A memorable name (e.g., \"Frustrated Freelancer Fred\")\n   - **Core Pain Point**: Their biggest struggle\n   - **Emotional Hook**: A quote that captures their feeling\n   - **Trigger Words**: 5-10 words that grab their attention in ads\n   - **Watering Holes**: Top 3 places to reach them\n5. Save to `personas/[Niche]_persona.md`\n**Phase 3: Summary**\n- Create `persona_matrix.csv` with: Niche, Persona_Name, Core_Pain_Point, File_Path\n- Tell me: \"Created X persona cards. Ready for your marketing team.\"\nStart now."
+  },
+  {
+    "id": "tam-calculator",
+    "title": "The AI TAM Researcher",
+    "category": "Strategic Ops",
+    "tagline": "Calculate your market size using real-world data.",
+    "trigger": "User wants to Investors need to see the math. This agent researches industry sizes, pricing benchmarks, and customer counts to calculate your TAM, SAM, and SOM using defensible 'Bottom-Up' logic for multiple market segments.",
+    "steps": "#\nInvestors need to see the math. This agent researches industry sizes, pricing benchmarks, and customer counts to calculate your TAM, SAM, and SOM using defensible 'Bottom-Up' logic for multiple market segments.\n#\nCalculate your market size using real-world data.\n#\n##\n1.  **Check:** Does `market_segments.csv` exist?\n2.  **If Missing:** Create `market_segments.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n2.  **If Missing:** Create `market_segments.csv` using the `sampleData`.\n3.  **If Present:** Load the segment list.\n**Phase 2: The Research Loop**\nFor each segment in the CSV:\n1.  **Count Potential Customers:** Use `web_fetch` to find the most recent count of `Target_Customer` in the specified region.\n2.  **Verify ACV:** Multiply `Avg_Monthly_Price` by 12. Compare this against competitor benchmarks found on the web.\n3.  **Calculate Levels:**\n    *   **TAM (Total Addressable):** Total global/national customers * ACV.\n    *   **SAM (Serviceable Available):** The portion of TAM that fits the current product/geography.\n    *   **SOM (Serviceable Obtainable):** Realistic 2-year market share (e.g., 1-5% of SAM).\n4.  **Draft Report:** Create `market_reports/[Segment_Name]_sizing.md` with detailed math and source citations.\n**Phase 3: Structured Deliverables**\n1.  **Create:** `market_opportunity_matrix.csv` with columns: `Segment_Name`, `TAM_Value`, `SAM_Value`, `Growth_Potential`, `File_Path`.\n2.  **Report:** \"Successfully modeled [X] market segments. Defensible bottom-up math included in each report.\""
+  },
+  {
+    "id": "discount-code-strategist",
+    "title": "The Annual Promo Strategist",
+    "category": "Strategic Ops",
+    "tagline": "Your entire year of sales, without brand damage.",
+    "trigger": "User wants to Don't slash prices; drive value. This agent reads your annual holiday list from a CSV and designs a 'Smart Promo' strategy for every event, ensuring you maximize revenue while protecting your margins.",
+    "steps": "#\nDon't slash prices; drive value. This agent reads your annual holiday list from a CSV and designs a 'Smart Promo' strategy for every event, ensuring you maximize revenue while protecting your margins.\n#\nYour entire year of sales, without brand damage.\n#\n##\n1.  **Check:** Does `holiday_calendar.csv` exist?\n2.  **If Missing:** Create `holiday_calendar.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n**Phase 2: The Strategy Loop**\nFor each event in the CSV:\n1.  **Design:** Choose the best mechanism based on the `Goal`.\n    *   *Volume:* \"Buy 2, Get 1.\"\n    *   *Retention:* \"Upgrade to Annual for 20% off.\"\n    *   *Clearance:* \"Mystery Bundle.\"\n2.  **Naming:** Generate a unique, brand-aligned discount code.\n3.  **Scarcity:** Define the urgency logic (e.g., \"Only 100 uses available\").\n**Phase 3: The Master Plan**\n1.  **Create:** `annual_promo_plan.md`.\n2.  **Summarize:** Create a table listing the Event, Code, Offer, and \"The Script\" for the email teaser.\n3.  **Report:** \"Successfully planned [X] promotions for the year.\"\n---"
+  },
+  {
+    "id": "persona-anti-targeting",
+    "title": "The Anti-Targeting List Builder",
+    "category": "Strategic Ops",
+    "tagline": "Who should you NOT sell to?",
+    "trigger": "User wants to Bad leads clog pipelines. This agent analyzes your 'Closed-Lost' and 'High Churn' data to identify common traits of bad customers (e.g., 'Real Estate Agents', 'Gmail users'), creating a suppression list for marketing.",
+    "steps": "#\nYou are a **Demand Gen Lead**. You know that volume is vanity. You want to block bad fit leads at the door.\n#\nIdentify \"Negative Personas\" to exclude from ad targeting.\n#\n*   **Pattern Recognition:** Finding commonalities in Churned/Lost rows.\n*   **Suppression List Gen:** Creating a file of excluded domains/titles.\n#\n##\n1.  **Check:** Does `bad_outcomes.csv` exist?\n2.  **If Missing:** Create `bad_outcomes.csv` using the `sampleData` provided in this blueprint.\n##\n1.  **Read:** `bad_outcomes.csv`.\n2.  **Count:** Which Industry appears most in \"Churned\"?\n3.  **Count:** Do free domains (gmail) correlate with \"Lost\"?\n##\n1.  **Output:** Save `negative_targeting_list.csv`.\n2.  **Summary:** \"Identified Negative Persona: 'Real Estate' (50% churn). Exclude 'Real Estate' job titles and 'gmail.com' from LinkedIn/FB audiences.\""
+  },
+  {
+    "id": "twitter-auto-plug-writer",
+    "title": "The Auto-Plug Writer",
+    "category": "Strategic Ops",
+    "tagline": "Drive traffic from viral tweets.",
+    "trigger": "User wants to When a tweet goes viral, you need to plug your offer. This agent drafts high-converting 'If you enjoyed this...' tweets for your entire suite of products and newsletters, ready to be appended to the end of any thread.",
+    "steps": "#\nWhen a tweet goes viral, you need to plug your offer. This agent drafts high-converting 'If you enjoyed this...' tweets for your entire suite of products and newsletters, ready to be appended to the end of any thread.\n#\nDrive traffic from viral tweets.\n#\n##\n1.  **Check:** Does `promotions.csv` exist?\n2.  **If Missing:** Create `promotions.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n2.  **If Missing:** Create `promotions.csv` using the `sampleData`.\n3.  **If Present:** Load the offer list.\n**Phase 2: The Drafting Loop**\nFor each offer in the CSV:\n1.  **Draft 3 Variations:**\n    *   **The Narrative:** \"That's a wrap! If you enjoyed this thread, you'll love [Offer_Name]. I share [Core_Benefit] every week.\"\n    *   **The Direct:** \"Want more like this? Check out [Offer_Name]: [Link]. We focus on [Core_Benefit].\"\n    *   **The CTA-Heavy:** \"Join 5,000+ others getting [Core_Benefit] at [Offer_Name]. Subscribe here: [Link]\"\n2.  **Character Audit:** Ensure all variations are < 240 characters to allow for link and image space.\n**Phase 3: Structured Deliverables**\n1.  **Create:** `twitter_plugs_master.csv` with columns: `Offer_Name`, `Plug_Variation_1`, `Plug_Variation_2`, `Link`.\n2.  **Report:** \"Successfully drafted [X] auto-plugs. Ready to be added to your social scheduling tool (e.g., Typefully, Hypefury).\""
+  },
+  {
+    "id": "autonomous-project-manager",
+    "title": "The Autonomous Project Manager",
+    "category": "Strategic Ops",
+    "tagline": "The 'Ralph Wiggum' Loop.",
+    "trigger": "User wants to This is the 'Master Blueprint' for long-running autonomous tasks. Modeled after the 'Ralph Wiggum' pattern, it forces the agent to maintain persistent memory and state files for an entire portfolio of projects.",
+    "steps": "#\nThis is the 'Master Blueprint' for long-running autonomous tasks. Modeled after the 'Ralph Wiggum' pattern, it forces the agent to maintain persistent memory and state files for an entire portfolio of projects.\n#\nThe 'Ralph Wiggum' Loop.\n#\n##\n1.  **Check:** Does `project_goals.csv` exist?\n2.  **If Missing:** Create `project_goals.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n2.  **If Missing:** Create `project_goals.csv` using the `sampleData`.\n3.  **If Present:** Load the project list.\n**Phase 2: The Setup Loop**\nFor each project in the CSV:\n1.  **Check Memory:** Does `[Project_Name]_memory.md` exist? If not, create it with the `Tech_Stack` and `Goal`.\n2.  **Check Progress:** Does `[Project_Name]_progress.txt` exist? If not, initialize it with `STATUS: INITIALIZING`.\n3.  **Decompose:** Create `[Project_Name]_todo.md` with a checklist of atomic steps based on the `Goal`.\n**Phase 3: The Execution Loop**\nFor each project where `progress.txt` is not `COMPLETE`:\n1.  **Read Todo:** Get the first unchecked item in `[Project_Name]_todo.md`.\n2.  **Execute:** Perform the specific action (e.g., `write_file`).\n3.  **Verify:** Check if the action was successful.\n4.  **Reflect:** Append any technical hurdles or \"lessons\" to `[Project_Name]_memory.md`.\n5.  **Update State:** Update the todo list and the progress file.\n**Phase 4: Portfolio Report**\n1.  **Create:** `portfolio_status.csv` with columns: `Project_Name`, `Status`, `Last_Lesson`.\n2.  **Report:** \"Successfully updated [X] projects. Check the individual project folders for detailed logs.\""
+  },
+  {
+    "id": "beta-tester-recruiter",
+    "title": "The Beta Tester Recruiter",
+    "category": "Strategic Ops",
+    "tagline": "Find your first 50 users.",
+    "trigger": "User wants to Launching a new feature? This agent takes a list of users and drafts exclusive, personalized invites for your beta program to ensure high engagement and quality feedback.",
+    "steps": "#\nLaunching a new feature? This agent takes a list of users and drafts exclusive, personalized invites for your beta program to ensure high engagement and quality feedback.\n#\nFind your first 50 users.\n#\n##\n1.  **Check:** Does `users.csv` exist?\n2.  **If Missing:** Create `users.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n2.  **If Missing:** Create `users.csv` using the `sampleData`.\n3.  **If Present:** Load the user list.\n**Phase 2: The Recruitment Loop**\nFor each user in the CSV:\n1.  **Determine Urgency:** If `Last_Login` is within the last 3 days, use a \"High Engagement\" tone.\n2.  **Draft Invite:**\n    *   **Subject:** \"[Name], early access to [Requested_Feature]?\"\n    *   **Body:** \"Hi [Name], because you're one of our most active users, we're inviting you to beta test the new [Requested_Feature]. You'll get early access before anyone else.\"\n    *   **The Ask:** \"We just need 5 minutes of your feedback in exchange for [Incentive/Reward].\"\n3.  **Output:** Create `invites/[Name]_beta_invite.txt`.\n**Phase 3: Structured Deliverables**\n1.  **Create:** `recruitment_summary.csv` with columns: `Name`, `Email`, `Invite_File_Path`.\n2.  **Report:** \"Successfully drafted [X] personalized invites. Check the `invites/` folder.\""
+  },
+  {
+    "id": "blueprint-architect",
+    "title": "The Blueprint Architect",
+    "category": "Strategic Ops",
+    "tagline": "Create your own Work-Ready blueprints.",
+    "trigger": "User wants to The meta-agent. Use this blueprint to turn any manual business process into a standardized, 3-Phase AI Agent Blueprint that follows the Terminal Cookbook standard.",
+    "steps": "#\nYou are a **Senior Systems Architect**. Your specialty is \"Agentic Workflow Design.\" You take messy, manual business processes and turn them into structured, tool-agnostic AI Blueprints that follow a strict 3-Phase \"Work-Ready\" standard.\n#\nGenerate a new `.md` blueprint file based on a user's process description.\n#\n*   **Workflow Standardizing:** Enforcing the 3-Phase standard (Initialization -> The Loop -> Output).\n*   **Persona Mapping:** Assigning a professional B2B persona to the task.\n*   **Sample Data Seeding:** Designing realistic CSV headers and data for testing.\n#\n##\n1.  **Check:** Does `process_description.txt` exist?\n2.  **If Missing:** Create `process_description.txt` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the requirements.\n##\n1.  **Analyze:** Read the process description.\n2.  **Architect:** Design the 3-Phase workflow:\n    *   *Phase 1:* Logic for checking and seeding input files.\n    *   *Phase 2:* Detailed \"Loop\" instructions for processing data rows.\n    *   *Phase 3:* Specified output formats (CSV, Report, etc.).\n3.  **Persona Assignment:** Select a relevant B2B role (e.g., \"RevOps Analyst\", \"Content Strategist\").\n4.  **Drafting:** Generate the full Markdown content, including YAML frontmatter.\n**Phase 3: Output**\n1.  **Generate:** Save the result as `new-agent-blueprint.md`.\n2.  **Summary:** Provide a brief explanation of why you structured the logic this way."
+  },
+  {
+    "id": "event-sponsorship-roi-calculator",
+    "title": "The Booth ROI Predictor",
+    "category": "Strategic Ops",
+    "tagline": "Don't just guess. Model the 'Break-Even' scenario before you sign the contract.",
+    "trigger": "User wants to Trade shows are money pits if you don't do the math. This agent takes the sponsorship cost and your average deal size to calculate exactly how many scans/leads you need to capture just to break even, helping you negotiate better booth placements.",
+    "steps": "#\nYou are a **Field Marketing Director**. You don't sign contracts based on \"Brand Awareness.\" You sign based on \"Math.\"\n#\nDetermine the Break-Even point for event sponsorships.\n#\n##\n1.  **Check:** Does `event_costs.csv` exist?\n2.  **If Missing:** Create it.\n3.  **Load:** Read the data.\n##\nFor each event:\n1.  **Calculate Revenue Needed:** `Total_Cost`. (To break even).\n2.  **Calculate Deals Needed:** `Total_Cost / Avg_Deal_Size`.\n3.  **Calculate Leads Needed:** `Deals Needed / Hist_Close_Rate`.\n4.  **Calculate Capture Rate Required:** `Leads Needed / Attendees`.\n##\n*   **Safe:** Required Capture Rate < 1% (Easy).\n*   **Risky:** Required Capture Rate > 5% (Very hard in a busy hall).\n*   **Impossible:** Required Capture Rate > 10%.\n##\n1.  **Generate:** `sponsorship_feasibility.csv`.\n2.  **Columns:** `Event`, `Cost`, `Leads_Needed_to_Break_Even`, `Risk_Level`.\n3.  **Summary:** \"SaaStr requires 167 leads to break even (1.6% capture). Rated: SAFE. Local Meetup requires 2 leads (2% capture). Rated: SAFE.\""
+  },
+  {
+    "id": "cancellation-flow-auditor",
+    "title": "The Cancellation Flow Auditor",
+    "category": "Strategic Ops",
+    "tagline": "Save them before they go.",
+    "trigger": "User wants to The 'Cancel' button is your last line of defense. This agent researches industry-leading retention strategies and audits your offboarding flow to design high-converting 'Deflection Pages' for multiple SaaS products.",
+    "steps": "#\nThe 'Cancel' button is your last line of defense. This agent researches industry-leading retention strategies and audits your offboarding flow to design high-converting 'Deflection Pages' for multiple SaaS products.\n#\nSave them before they go.\n#\n##\n1.  **Check:** Does `saas_products.csv` exist?\n2.  **If Missing:** Create `saas_products.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n2.  **If Missing:** Create `saas_products.csv` using the `sampleData`.\n3.  **If Present:** Load the product list.\n**Phase 2: The Audit Loop**\nFor each product in the CSV:\n1.  **Benchmarking:** Use `web_fetch` to research \"Retention Best Practices\" for the product's niche.\n2.  **Design Deflection Logic:**\n    *   **If [Too Expensive]:** Draft a \"Pause Account\" or \"Scholarship/Discount\" offer.\n    *   **If [Missing Features]:** Research the product's roadmap (via its site) and draft a \"Coming Soon\" teaser.\n    *   **If [Not Using It]:** Draft a re-onboarding sequence or a \"Chat with an Expert\" offer.\n3.  **Draft Copy:** Create `retention_flows/[Product_Name]_save_flow.md` with UI mockups for the deflection page.\n**Phase 3: Structured Deliverables**\n1.  **Create:** `retention_flows/` folder containing all audit reports.\n2.  **Create:** `churn_prevention_matrix.csv` with columns: `Product_Name`, `Deflection_Offer`, `Copy_Hook`, `File_Path`.\n3.  **Report:** \"Successfully audited [X] products. Retention flows optimized for specific churn reasons.\""
+  },
+  {
+    "id": "changelog-marketer",
+    "title": "The Changelog Marketer",
+    "category": "Strategic Ops",
+    "tagline": "Your updates are marketing assets.",
+    "trigger": "User wants to Don't hide your hard work. This agent takes technical commit messages or Jira tickets and transforms them into high-energy 'New & Improved' Changelog posts for an entire release cycle.",
+    "steps": "#\nDon't hide your hard work. This agent takes technical commit messages or Jira tickets and transforms them into high-energy 'New & Improved' Changelog posts for an entire release cycle.\n#\nYour updates are marketing assets.\n#\n##\n1.  **Check:** Does `releases.csv` exist?\n2.  **If Missing:** Create `releases.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n2.  **If Missing:** Create `releases.csv` using the `sampleData`.\n3.  **If Present:** Load the release notes.\n**Phase 2: The Writing Loop**\nFor each feature in the CSV:\n1.  **Draft Headline:** Create a benefit-driven title (e.g., \"Find Anything Instantly with FastSearch\").\n2.  **Changelog Entry:** Write a 3-paragraph update:\n    *   **Paragraph 1 (The Why):** The problem the user was facing.\n    *   **Paragraph 2 (The What):** The technical update simplified.\n    *   **Paragraph 3 (The Benefit):** How their life is better now.\n3.  **Social Thread:** Create a 3-tweet thread version for X/Twitter.\n**Phase 3: Structured Deliverables**\n1.  **Create:** `changelog_assets/` folder with `[Feature_Name]_marketing.md` for each entry.\n2.  **Create:** `release_summary.csv` with columns: `Feature_Name`, `Marketing_Headline`, `File_Path`.\n3.  **Report:** \"Successfully drafted [X] changelog assets. Technical notes have been transformed into marketing gold.\""
+  },
+  {
+    "id": "contract-risk-detector",
+    "title": "The Contract Risk Detector",
+    "category": "Strategic Ops",
+    "tagline": "Find the 'gotchas' in the PDF.",
+    "trigger": "User wants to Sales contracts often hide 3-year lock-ins or auto-renewals in the fine print. This agent scans multiple PDF agreements, highlights high-risk clauses, and suggests red-lines to protect your budget.",
+    "steps": "#\nSales contracts often hide 3-year lock-ins or auto-renewals in the fine print. This agent scans multiple PDF agreements, highlights high-risk clauses, and suggests red-lines to protect your budget.\n#\nFind the 'gotchas' in the PDF.\n#\n##\n1.  **Check:** Does `contracts_to_audit.csv` exist?\n2.  **If Missing:** Create `contracts_to_audit.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n2.  **If Missing:** Create `contracts_to_audit.csv` using the `sampleData`. Ensure the `contracts/` folder exists.\n3.  **If Present:** Load the contract list.\n**Phase 2: The Red Flag Loop**\nFor each contract in the CSV:\n1.  **Ingest:** Read the full text from the `Contract_File`.\n2.  **Scan for 'Gotchas':**\n    *   **Term & Renewal:** Identify initial term length and auto-renewal notice periods (e.g., 90-day windows).\n    *   **Financials:** Check for annual price escalators and Net-30+ payment terms.\n    *   **Termination:** Look for \"Termination for Convenience\" vs. \"Termination for Cause\".\n3.  **Draft Red-lines:** Suggest specific language changes to mitigate identified risks.\n4.  **Assign Risk Score:** Grade the contract (High/Medium/Low Risk).\n**Phase 3: Structured Deliverables**\n1.  **Create:** `risk_assessments/` folder with `[Vendor_Name]_audit.md` for each entry.\n2.  **Create:** `contract_risk_matrix.csv` with columns: `Vendor_Name`, `Risk_Score`, `Main_Concern`, `File_Path`.\n3.  **Report:** \"Successfully audited [X] contracts. [Y] critical risks identified in [Vendor_Name] agreement.\""
+  },
+  {
+    "id": "gdpr-cookie-banner-copy",
+    "title": "The Converting Cookie Banner",
+    "category": "Strategic Ops",
+    "tagline": "Compliance that doesn't kill data.",
+    "trigger": "User wants to Cookie banners annoy users and kill data collection. This agent writes 'Human' copy for your consent manager that explains *why* you track, increasing your 'Accept' rate across all your properties.",
+    "steps": "#\nCookie banners annoy users and kill data collection. This agent writes 'Human' copy for your consent manager that explains *why* you track, increasing your 'Accept' rate across all your properties.\n#\nCompliance that doesn't kill data.\n#\n##\n1.  **Check:** Does `brands.csv` exist?\n2.  **If Missing:** Create `brands.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n2.  **If Missing:** Create `brands.csv` using the `sampleData`.\n3.  **If Present:** Load the brand list.\n**Phase 2: The Drafting Loop**\nFor each brand in the CSV:\n1.  **Map Benefits:** Identify the top 2 benefits of cookies for their `Business_Type` (e.g., \"Auto-login\", \"Cart memory\", \"Personalized discounts\").\n2.  **Draft 3 Options:**\n    *   **The Transparent:** Direct explanation of what is tracked.\n    *   **The Vibe-Match:** Copy written in the brand's specific `Vibe`.\n    *   **The Minimalist:** A 1-sentence \"Fast Accept\" version.\n3.  **Compliance Check:** Ensure \"Manage Preferences\" and \"Reject All\" are included in the structure.\n**Phase 3: Structured Deliverables**\n1.  **Create:** `cookie_banner_copy.csv` with columns: `Brand_Name`, `Option_1_Copy`, `Option_2_Copy`, `Button_Accept_Text`.\n2.  **Report:** \"Successfully generated [X] cookie banners. Optimized for high consent rates and brand alignment.\""
+  },
+  {
+    "id": "influencer-roi-calculator",
+    "title": "The Creator Economy Auditor",
+    "category": "Strategic Ops",
+    "tagline": "Separate the 'Performers' from the 'Posers'.",
+    "trigger": "User wants to Vanity metrics (Likes) rarely correlate with Wallet metrics (Sales). This agent analyzes your influencer roster to classify them into \"Brand Awareness Plays\" vs \"Sales Drivers,\" helping you cut the dead weight.",
+    "steps": "#\nYou are a **Marketing Director**. You don't pay for \"Vibes\". You optimize the portfolio for blended ROI.\n#\nClassify influencers by their actual business impact.\n#\n##\n1.  **Check:** Does `influencer_performance.csv` exist?\n2.  **If Missing:** Create it.\n3.  **Load:** Read the data.\n##\nFor each Influencer:\n1.  **Calculate ROAS:** `Sales / Cost`.\n2.  **Calculate CPM:** `Cost / (Impressions/1000)`.\n3.  **Classify:**\n    *   **The Unicorn:** High ROAS (>3x) + High Engagement. *Action: Retain + Bonus.*\n    *   **The Billboard:** Low ROAS (<1x) + Cheap CPM (<$10). *Action: Keep for Brand Awareness.*\n    *   **The Money Pit:** Low ROAS + Expensive CPM. *Action: Terminate.*\n    *   **The Sniper:** High ROAS + Low Reach. *Action: Clone (find lookalikes).*\n##\n1.  **Generate:** `influencer_portfolio_audit.csv`.\n2.  **Columns:** `Influencer`, `Role_in_Portfolio`, `Action`.\n3.  **Summary:** \"Portfolio Analysis: [X] unicorns found. [Y] money pits identified for termination.\""
+  },
+  {
+    "id": "customer-journey-mapper",
+    "title": "The Customer Journey Factory",
+    "category": "Strategic Ops",
+    "tagline": "Map the broken road for every persona.",
+    "trigger": "User wants to Users drop off where you least expect. This agent reads a list of customer personas from a CSV and maps their unique 5-stage journeys (Awareness to Advocacy), identifying the specific 'Friction Point' for each group.",
+    "steps": "#\nUsers drop off where you least expect. This agent reads a list of customer personas from a CSV and maps their unique 5-stage journeys (Awareness to Advocacy), identifying the specific 'Friction Point' for each group.\n#\nMap the broken road for every persona.\n#\n##\n1.  **Check:** Does `target_personas.csv` exist?\n2.  **If Missing:** Create `target_personas.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n**Phase 2: The Mapping Loop**\nFor each persona in the CSV:\n1.  **Stage 1: Awareness:** How do they find us? (Ad angle).\n2.  **Stage 2: Consideration:** What do they read? (Case study type).\n3.  **Stage 3: Decision:** What stops them? (Friction point).\n4.  **Stage 4: Retention:** Do we ignore them after they pay?\n5.  **Stage 5: Advocacy:** What makes them refer a friend?\n**Phase 3: The Roadmap**\n1.  **Action:** Create a folder `journey_maps/`.\n2.  **Save:** Save each map as `journey-[persona].md`.\n3.  **Summary:** \"Mapped [X] journeys. Identified the #1 friction point across all personas: [Friction].\""
+  },
+  {
+    "id": "booth-design-checklist",
+    "title": "The Event Booth Strategist",
+    "category": "Strategic Ops",
+    "tagline": "Custom booth checklists for your event portfolio.",
+    "trigger": "User wants to Most trade show booths are invisible. This agent researches your target events and designs custom booth layouts, swag strategies, and elevator pitches tailored to the specific audience of each show.",
+    "steps": "#\nMost trade show booths are invisible. This agent researches your target events and designs custom booth layouts, swag strategies, and elevator pitches tailored to the specific audience of each show.\n#\nCustom booth checklists for your event portfolio.\n#\n##\n1.  **Check:** Does `events.csv` exist?\n2.  **If Missing:** Create `events.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n2.  **If Missing:** Create `events.csv` using the `sampleData`.\n3.  **If Present:** Load the event list.\n**Phase 2: The Event Intel Loop**\nFor each event in the CSV:\n1.  **Research:** Use `web_fetch` to find the \"Attendee Profile\" and \"Major Sponsors\" for `Event_Name`.\n2.  **Design the Hook:** Draft a 3-word \"Big Statement\" for the back wall tailored to the audience.\n3.  **Plan the Experience:** Design a \"Demo Flow\" optimized for the `Booth_Size`.\n4.  **Curate Swag:** Suggest one \"Traffic Driver\" and one \"VIP Gift\" based on the `Location` and persona.\n**Phase 3: Structured Deliverables**\n1.  **Create:** `event_plans/` folder containing `[Event_Name]_strategy.md` for each entry.\n2.  **Create:** `booth_master_schedule.csv` with columns: `Event_Name`, `Location`, `Main_Hook`, `File_Path`.\n3.  **Report:** \"Successfully designed strategies for [X] events. Check the `event_plans/` folder for detailed checklists.\""
+  },
+  {
+    "id": "feature-adoption-analyzer",
+    "title": "The Feature Adoption Analyzer",
+    "category": "Strategic Ops",
+    "tagline": "Who is actually using your new tool?",
+    "trigger": "User wants to You launched a feature, but did it land? This agent analyzes product usage logs to calculate 'Adoption Rate' by customer segment (e.g., Enterprise vs. SMB), telling you which cohort needs more education.",
+    "steps": "#\nYou are a **Product Marketing Manager**. You measure success by \"Monthly Active Users\" (MAU) of specific features, not just logins.\n#\nIdentify adoption gaps across customer segments.\n#\n*   **Segmentation:** Grouping usage data by Cohort.\n*   **Rate Calculation:** `% Users who Used_Feature`.\n#\n##\n1.  **Check:** Does `usage_logs.csv` exist?\n2.  **If Missing:** Create `usage_logs.csv` using the `sampleData` provided in this blueprint.\n##\nCreate `adoption_report.csv`.\n1.  **Read:** `usage_logs.csv`.\n2.  **Group:** By `Segment`.\nFor each Segment:\n1.  **Count Total:** How many unique users?\n2.  **Count Adopters:** How many `Used_New_Feature == True`?\n3.  **Rate:** `Adopters / Total`.\n##\n1.  **Output:** Save `adoption_report.csv` (Segment, Adoption_Rate).\n2.  **Summary:** \"Enterprise adoption is high (50%). SMB is low (0%). Recommendation: Launch an in-app tour specifically for SMB users.\""
+  },
+  {
+    "id": "link-magnet-stats-builder",
+    "title": "The Full-Stack Link Magnet",
+    "category": "Strategic Ops",
+    "tagline": "Research data & build the UI.",
+    "trigger": "User wants to Don't just write a blog post; build a 'State of the Industry' landing page. This agent researches statistics and then generates the React/Tailwind code to visualize them as Hero Cards and CSS Data Charts.",
+    "steps": "#\nDon't just write a blog post; build a 'State of the Industry' landing page. This agent researches statistics and then generates the React/Tailwind code to visualize them as Hero Cards and CSS Data Charts.\n#\nResearch data & build the UI.\n#\n##\n1.  **Check:** Does `stats_topics.csv` exist?\n2.  **If Missing:** Create `stats_topics.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n**Phase 1: Deep Research**\nFor each `Topic`:\n1.  **Fetch Data:** Search for \"State of [Topic] [Year] report\", \"statistics\", and \"forecasts\".\n2.  **Select the \"Big Three\":** Identify the 3 most impactful stats for the Hero Section (Adoption Rate, Market Size, or ROI).\n3.  **Find Comparisons:** Look for data that compares X vs Y (e.g., \"2024 vs 2026\" or \"Competitor A vs B\") to map to a Bar Chart.\n**Phase 2: UX/UI Structuring**\nPlan the page layout:\n*   **Hero:** Title + Last Updated Date.\n*   **The \"Numbers Row\":** Grid of 3 Cards (Big Font Number + Label + Context).\n*   **The \"Deep Dive\":** Sections with CSS-based Bar Charts (using `width: %` style props).\n*   **The \"Share Trigger\":** A \"Tweet This\" button or \"Copy Link\" call-to-action.\n**Phase 3: Code Generation (The Upgrade)**\nGenerate a file `pages/[Slug].tsx` containing:\n1.  **Imports:** `Head`, `Navbar`, `Footer`, `NewsletterForm`.\n2.  **Hero Section:** Tailwind-styled header with a subtle background pattern.\n3.  **Stat Cards:**\n    ```jsx\n    <div className=\"card border-l-4 border-accent p-6\">\n      <div className=\"text-5xl font-bold text-accent\">{Stat_Value}</div>\n      <div className=\"text-xl font-semibold\">{Stat_Label}</div>\n    </div>\n    ```\n4.  **Visual Charts:**\n    ```jsx\n    <div className=\"w-full bg-gray-800 h-4 rounded\">\n      <div className=\"bg-accent h-4 rounded\" style={{ width: '{Percentage}%' }}></div>\n    </div>\n    ```\n**Phase 4: Deliverables**\n1.  **Code:** The full `.tsx` file content.\n2.  **Report:** \"Generated [Topic] page with [X] stats and [Y] visual charts"
+  },
+  {
+    "id": "geo-expansion-planner",
+    "title": "The Geographic Expansion Planner",
+    "category": "Strategic Ops",
+    "tagline": "Where should we launch next?",
+    "trigger": "User wants to You're big in the US, but what about Europe? This agent analyzes your current web traffic and lead data by 'Country', comparing Conversion Rates to identify markets with high demand but low local support.",
+    "steps": "#\nYou are a **Expansion Strategist**. You follow the data, not the map.\n#\nIdentify the next best market for localization/sales hiring.\n#\n*   **Rate Calculation:** Visitor-to-Lead and Lead-to-Customer by Country.\n*   **Gap Analysis:** High Traffic + Low Conversion = Opportunity (Language Barrier?).\n#\n##\n1.  **Check:** Does `geo_data.csv` exist?\n2.  **If Missing:** Create `geo_data.csv` using the `sampleData` provided in this blueprint.\n##\nCreate `expansion_plan.csv`.\nFor each Country in `geo_data.csv`:\n1.  **Traffic Share:** `Traffic / Total`.\n2.  **Conv Rate:** `Customers / Leads`.\n##\n1.  **Identify UK:** High Traffic (5k), Decent Leads (200), Low Cust (5).\n    *   *Insight:* \"High intent, but sales failing. Hire a UK rep.\"\n2.  **Identify DE:** High Traffic, No Leads.\n    *   *Insight:* \"Language barrier. Translate site to German.\"\n3.  **Output:** Save `expansion_plan.csv`."
+  },
+  {
+    "id": "google-my-business-optimizer",
+    "title": "The GMB Fleet Optimizer",
+    "category": "Strategic Ops",
+    "tagline": "Own the map pack for all 50 branches.",
+    "trigger": "User wants to Local businesses live or die by Google Maps. This agent reads a list of branches from a CSV, audits their Google Business Profiles against local competitors, and suggests updates for every location.",
+    "steps": "#\nLocal businesses live or die by Google Maps. This agent reads a list of branches from a CSV, audits their Google Business Profiles against local competitors, and suggests updates for every location.\n#\nOwn the map pack for all 50 branches.\n#\n##\n1.  **Check:** Does `branch_list.csv` exist?\n2.  **If Missing:** Create `branch_list.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n**Phase 2: The Audit Loop**\nFor each branch in the CSV:\n1.  **Fetch:** Read the GMB profile details.\n2.  **Compare:** Look at the top 3 competitors in that specific ZIP code.\n3.  **Audit:**\n    *   *Photos:* Does this branch have < 20 photos?\n    *   *Reviews:* Are there unanswered negative reviews?\n    *   *Attributes:* Are they missing \"Online Booking\"?\n**Phase 3: The Action Plan**\n1.  **Create:** `franchise_optimization_roadmap.md`.\n2.  **Draft:** For every branch, provide 3 specific tasks: \"Upload 5 photos of X\", \"Respond to the review from [Name]\", \"Add [Keyword] to description\".\n3.  **Summary:** \"Processed [X] branches. [Y] are at high risk of losing rank.\""
+  },
+  {
+    "id": "proposal-writer",
+    "title": "The High-Ticket Proposal Writer",
+    "category": "Strategic Ops",
+    "tagline": "Generate custom proposals for each lead.",
+    "trigger": "User wants to Creates personalized proposals for each prospect, focused on their specific problem and the ROI of solving it.",
+    "steps": "#\nCreates personalized proposals for each prospect, focused on their specific problem and the ROI of solving it.\n#\nGenerate custom proposals for each lead.\n#\n##\n1.  **Check:** Does `leads.csv` exist?\n2.  **If Missing:** Create `leads.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\nYou are a proposal writer for a consulting/agency business. Your job is to create compelling, ROI-focused proposals.\n**Phase 1: Setup**\n- Read `leads.csv`\n- If it doesn't exist, create it with sample data:\n  ```\n  Client_Name,Primary_Problem,Target_Outcome,Budget_Tier\n  Acme Corp,Low website conversion,Double trial signups,Enterprise\n  StartupX,High customer churn,Reduce churn by 50%,Growth\n  ```\n- Create a `proposals/` folder if it doesn't exist\n**Phase 2: Write Each Proposal**\nFor each lead:\n1. **The Problem**: Restate their Primary_Problem in a way that shows you understand it\n2. **The Solution**: Define 3 specific work streams that solve the problem (e.g., \"Audit\", \"Strategy\", \"Implementation\")\n3. **The ROI Math**: Estimate the financial impact of achieving their Target_Outcome\n4. **The Investment**: Recommend pricing based on their Budget_Tier:\n   - Enterprise: $25k-50k\n   - Mid-Market: $10k-25k\n   - Growth: $5k-10k\n5. **What's Not Included**: Clearly state scope boundaries\n6. Save to `proposals/[Client_Name]_proposal.md`\n**Phase 3: Summary**\n- Create `proposal_summary.csv` with: Client_Name, Target_Outcome, Recommended_Price, File_Path\n- Tell me: \"Created X proposals. Ready for your sales calls.\"\nStart now."
+  },
+  {
+    "id": "holiday-promo-planner",
+    "title": "The Holiday Campaign Factory",
+    "category": "Strategic Ops",
+    "tagline": "Crush Black Friday across 5 products at once.",
+    "trigger": "User wants to Q4 is war. This agent reads a list of products and their primary 'Deal' from a CSV and maps out a complete 4-week holiday campaign for every single one, including email copy, ad angles, and technical load-checklists.",
+    "steps": "#\nQ4 is war. This agent reads a list of products and their primary 'Deal' from a CSV and maps out a complete 4-week holiday campaign for every single one, including email copy, ad angles, and technical load-checklists.\n#\nCrush Black Friday across 5 products at once.\n#\n##\n1.  **Check:** Does `holiday_deals.csv` exist?\n2.  **If Missing:** Create `holiday_deals.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n**Phase 2: The Campaign Loop**\nFor each product in the CSV:\n1.  **Map:** Define the 4-week timeline:\n    *   *Week 1 (Nov 1-7):* The Teaser (\"Wait for it\").\n    *   *Week 2 (Nov 14-20):* Early Access (VIPs only).\n    *   *Week 3 (Nov 24-27):* The Main Event (BFCM).\n    *   *Week 4 (Dec 1):* The Last Chance (Cyber Monday).\n2.  **Draft:** Write the 'Announcement' email and the '6-hours left' email.\n3.  **Audit:** Generate a technical checklist (e.g., \"Check coupon code X validity\").\n**Phase 3: The Master Plan**\n1.  **Action:** Create a folder `holiday_plans/`.\n2.  **Save:** Save each campaign as `[Product]_BFCM_Plan.md`.\n3.  **Report:** \"Successfully planned [X] holiday campaigns. Total target revenue: [Total].\""
+  },
+  {
+    "id": "influencer-audit",
+    "title": "The Influencer Auditor",
+    "category": "Strategic Ops",
+    "tagline": "Audit 50 creators in one run.",
+    "trigger": "User wants to Protect your ad budget. This agent reads a list of influencer handles from a CSV, calculates their real engagement rates, detects bot behavior, and generates a 'Value Scorecard' to help you negotiate pricing.",
+    "steps": "#\nProtect your ad budget. This agent reads a list of influencer handles from a CSV, calculates their real engagement rates, detects bot behavior, and generates a 'Value Scorecard' to help you negotiate pricing.\n#\nAudit 50 creators in one run.\n#\n##\n1.  **Check:** Does `influencer_leads.csv` exist?\n2.  **If Missing:** Create `influencer_leads.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n2.  **Initialize:** Create `influencer_scorecard.csv` with headers: `Handle,Followers,Engagement_Rate,Bot_Risk,Suggested_Pay`.\n**Phase 2: The Audit Loop**\nFor each creator in `influencer_leads.csv`:\n1.  **Sample:** Look at the last 5 posts.\n2.  **Calculate:** (Avg Likes + Comments) / Followers.\n3.  **Bot Check:** Scan comments for repetitive emojis or generic phrases.\n4.  **Price Anchor:** Calculate pay as `(Avg Views / 1000) * $20 CPM`.\n**Phase 3: Reporting**\n1.  **Save:** Append results to `influencer_scorecard.csv`.\n2.  **Report:** \"Audit complete. Flagged [X] creators as HIGH RISK. See influencer_scorecard.csv for pricing.\""
+  },
+  {
+    "id": "influencer-contract-drafter",
+    "title": "The Influencer Contract Factory",
+    "category": "Strategic Ops",
+    "tagline": "Generate 50 creator agreements in one run.",
+    "trigger": "User wants to Protect your brand at scale. This agent reads a list of influencers and their specific deal terms from a CSV and drafts a unique, plain-English agreement for every single creator covering Deliverables, Usage Rights, and Payment.",
+    "steps": "#\nProtect your brand at scale. This agent reads a list of influencers and their specific deal terms from a CSV and drafts a unique, plain-English agreement for every single creator covering Deliverables, Usage Rights, and Payment.\n#\nGenerate 50 creator agreements in one run.\n#\n##\n1.  **Check:** Does `creator_deal_terms.csv` exist?\n2.  **If Missing:** Create `creator_deal_terms.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n**Phase 2: The Contract Loop**\nFor each creator in the CSV:\n1.  **Clause Selection:** Include standard Whitelisting (30 days) and Exclusivity (No competitors) clauses.\n2.  **Specific Mapping:** Insert the specific `Deliverables`, `Fee`, and `Deadline` into the SOW section.\n3.  **Draft:** Write the agreement in plain English.\n**Phase 3: Packaging**\n1.  **Action:** Create a folder `campaign_contracts/`.\n2.  **Save:** Save each agreement as `contract-[Creator_Name].md`.\n3.  **Report:** \"Successfully generated [X] contracts. Ready for DocuSign upload.\""
+  },
+  {
+    "id": "invoice-chaser-sequence",
+    "title": "The Invoice Chaser Engine",
+    "category": "Strategic Ops",
+    "tagline": "Recover $10k+ in overdue payments without being awkward.",
+    "trigger": "User wants to Unpaid invoices kill cash flow. This agent reads a CSV of overdue accounts, categorizes them by 'Days Overdue', and drafts a 3-step personalized dunning sequence for every client.",
+    "steps": "#\nUnpaid invoices kill cash flow. This agent reads a CSV of overdue accounts, categorizes them by 'Days Overdue', and drafts a 3-step personalized dunning sequence for every client.\n#\nRecover $10k+ in overdue payments without being awkward.\n#\n##\n1.  **Check:** Does `overdue_invoices.csv` exist?\n2.  **If Missing:** Create `overdue_invoices.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n**Phase 2: The Chaser Loop**\nFor each row in the CSV:\n1.  **Categorize:**\n    *   *1-7 Days:* The \"Friendly Reminder\" (Helpful tone).\n    *   *8-30 Days:* The \"Firm Nudge\" (Direct tone).\n    *   *30+ Days:* The \"Final Notice\" (Serious tone).\n2.  **Draft:** Write the email body using the appropriate tone. Mention the specific `Amount` and provide a placeholder for the payment link.\n**Phase 3: The Dashboard**\n1.  **Create:** `collections_emails_ready.md`.\n2.  **Summary:** \"Processed [X] accounts. [Y] are in the 'Critical' (>30 days) bucket.\""
+  },
+  {
+    "id": "linkedin-comment-scraper",
+    "title": "The LinkedIn Comment Miner",
+    "category": "Strategic Ops",
+    "tagline": "Turn engagement into a CSV.",
+    "trigger": "User wants to A viral post is a lead magnet. This agent processes raw HTML pastes of LinkedIn comment sections to extract Names, Headlines, and Profile URLs of high-intent commenters.",
+    "steps": "#\nA viral post is a lead magnet. This agent processes raw HTML pastes of LinkedIn comment sections to extract Names, Headlines, and Profile URLs of high-intent commenters.\n#\nTurn engagement into a CSV.\n#\n##\n1.  **Check:** Does `html_sources.csv` exist?\n2.  **If Missing:** Create `html_sources.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n2.  **If Missing:** Create `html_sources.csv` using the `sampleData`. Ensure the `raw_html/` directory exists.\n3.  **If Present:** Load the source list.\n**Phase 2: The Extraction Loop**\nFor each entry in the CSV:\n1.  **Read Raw Content:** Load the `HTML_File`.\n2.  **Entity Extraction:** Parse the text to find blocks containing:\n    *   **Name:** (Found in `actor-name` or `app-aware-link`).\n    *   **Headline:** (The text immediately following the name).\n    *   **Comment Text:** (The specific words they wrote).\n3.  **Filter by Intent:** Only keep rows where `Comment_Text` contains the `Target_Keyword`.\n4.  **Format URL:** Construct the LinkedIn Profile URL from the extracted ID or slug.\n**Phase 3: Structured Deliverables**\n1.  **Create:** `extracted_leads.csv` with columns: `Post_ID`, `Name`, `Headline`, `Profile_URL`, `Comment`.\n2.  **Report:** \"Successfully mined [X] leads from [Y] post sections. CSV ready for outreach or CRM import.\""
+  },
+  {
+    "id": "linkedin-ghostwriter",
+    "title": "The LinkedIn Ghostwriter",
+    "category": "Strategic Ops",
+    "tagline": "Brain Dump -> Viral Post.",
+    "trigger": "User wants to Dry ideas don't get reach. This agent transforms your raw brain dumps into structured, high-performing LinkedIn posts using viral templates and hook psychology for your entire content calendar.",
+    "steps": "#\nDry ideas don't get reach. This agent transforms your raw brain dumps into structured, high-performing LinkedIn posts using viral templates and hook psychology for your entire content calendar.\n#\nBrain Dump -> Viral Post.\n#\n##\n1.  **Check:** Does `brain_dumps.csv` exist?\n2.  **If Missing:** Create `brain_dumps.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n2.  **If Missing:** Create `brain_dumps.csv` using the `sampleData`.\n3.  **If Present:** Load the idea list.\n**Phase 2: The Ghostwriting Loop**\nFor each idea in the CSV:\n1.  **Select Framework:** Match the `Vibe` to a proven structure (e.g., \"The Contrarian\", \"The Failure Story\", \"The How-To\").\n2.  **Draft 3 Hooks:** Create three distinct opening lines.\n3.  **Construct the Body:** Expand the `Core_Idea` into 5-8 punchy sentences.\n4.  **Add 'Call to Conversation':** End with a specific question to drive comments (e.g., \"Agree or disagree?\").\n5.  **Output:** Save to `posts/[Topic]_draft.md`.\n**Phase 3: Structured Deliverables**\n1.  **Create:** `content_pipeline_summary.csv` with columns: `Topic`, `Framework_Used`, `Top_Hook`, `File_Path`.\n2.  **Report:** \"Successfully ghostwritten [X] posts. Content is formatted for maximum mobile engagement.\""
+  },
+  {
+    "id": "monthly-report-generator",
+    "title": "The Narrative Builder",
+    "category": "Strategic Ops",
+    "tagline": "Clients don't read spreadsheets. They read stories.",
+    "trigger": "User wants to Data dumping causes churn. This agent transforms raw client performance CSVs into a cohesive narrative arc: \"The Big Win\" (What went right), \"The Learning\" (What went wrong), and \"The Ask\" (What you need next).",
+    "steps": "#\nYou are an **Account Director**. You know that clients cancel when they are confused. You translate \"Rows and Columns\" into \"Insights and Actions\".\n#\nGenerate a story-driven monthly report.\n#\n##\n1.  **Check:** Does `client_data.csv` exist?\n2.  **If Missing:** Create it.\n3.  **Load:** Read the data.\n##\nFor each client:\n1.  **Identify The Win:** Best performing metric (e.g., Revenue up 20%).\n2.  **Identify The Drag:** Worst performing metric.\n3.  **Identify The Ask:** If Budget is low, ask for more. If Budget is high, ask for \"Experimentation\".\n##\nDraft the Executive Summary:\n*   **The Hook:** \"This month, we successfully scaled [Win]...\"\n*   **The Pivot:** \"...however, we noticed friction in [Drag]. This is due to [Hypothesis].\"\n*   **The Close:** \"To solve this, we recommend unlocking [The Ask].\"\n##\n1.  **Generate:** `client_narratives.md`.\n2.  **Summary:** \"Generated narratives for [X] clients. 1 client flagged for 'Churn Risk' (Beta).\""
+  },
+  {
+    "id": "newsjacker",
+    "title": "The Newsjacker",
+    "category": "Strategic Ops",
+    "tagline": "Find trending news and draft social posts on autopilot.",
+    "trigger": "User wants to Content is about timing. This agent monitors a list of niches from a CSV, discovers the latest high-impact news stories for each, and drafts contrarian social posts to help you ride the attention wave.",
+    "steps": "#\nContent is about timing. This agent monitors a list of niches from a CSV, discovers the latest high-impact news stories for each, and drafts contrarian social posts to help you ride the attention wave.\n#\nFind trending news and draft social posts on autopilot.\n#\n##\n1.  **Check:** Does `news_niches.csv` exist?\n2.  **If Missing:** Create `news_niches.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n**Phase 2: The Newsroom Loop**\nFor each niche in the CSV:\n1.  **Search:** Find the top 3 news stories from the last 24 hours.\n2.  **Filter:** Only keep stories that are surprising or affect the `Target_Audience`.\n3.  **Draft:** For each story, write a LinkedIn post:\n    *   *The Summary:* What happened.\n    *   *The Hot Take:* Why most people are wrong about it.\n    *   *The CTA:* A question to drive comments.\n**Phase 3: The Content Queue**\n1.  **Action:** Create a folder `trending_queue/`.\n2.  **Save:** Save each result as `[Niche]-posts.md`.\n3.  **Report:** \"Successfully newsjacked [X] niches. Your social queue is ready.\""
+  },
+  {
+    "id": "okr-drafter",
+    "title": "The OKR Architect",
+    "category": "Strategic Ops",
+    "tagline": "Draft team goals from your vision or industry benchmarks.",
+    "trigger": "User wants to Objectives and Key Results (OKRs) drive growth. This agent takes your high-level vision (if provided) or researches your business stage (Seed, Series A, Scale) to suggest 3 measurable goals that align with market standards.",
+    "steps": "#\nObjectives and Key Results (OKRs) drive growth. This agent takes your high-level vision (if provided) or researches your business stage (Seed, Series A, Scale) to suggest 3 measurable goals that align with market standards.\n#\nDraft team goals from your vision or industry benchmarks.\n#\n##\n1.  **Check:** Does `vision_statement.txt` exist?\n2.  **If Missing:** Create `vision_statement.txt` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n**Phase 1: Context Setup**\n1.  **Check:** Did the user provide a `vision_statement.txt`?\n2.  **Logic:**\n    *   *If Yes:* Extract the primary objective.\n    *   *If No:* Ask for \"Company Type\" and \"Current Focus\" (e.g., 'Growth', 'Profitability', 'Retention').\n**Phase 2: The Benchmarking**\n1.  **Search:** Find industry standard metrics for that focus.\n    *   *Example (Growth):* \"Standard lead-to-close rate for SaaS\".\n**Phase 3: The OKR Draft**\n1.  **Draft:** Create 3 Objectives.\n2.  **Quantify:** For each Objective, write 3 Key Results.\n    *   *Bad KR:* \"Increase sales.\"\n    *   *Good KR:* \"Achieve $50k in new ARR by March 31.\"\n**Phase 4: Output**\n1.  **Create:** `quarterly_okrs.md`.\n2.  **Summary:** \"Designed [X] OKRs. [Y] are focused on leading indicators.\""
+  },
+  {
+    "id": "client-onboarding-checklist",
+    "title": "The Onboarding Velocity Scanner",
+    "category": "Strategic Ops",
+    "tagline": "Don't just send emails. Measure how fast clients are actually moving.",
+    "trigger": "User wants to New clients ghosting during setup is the #1 cause of early churn. This agent analyzes your onboarding logs, calculates the \"Time in Stage\" for every client, and flags the ones who are stalling before they ask for a refund.",
+    "steps": "#\nYou are an **Implementation Manager**. You know that \"Time to Value\" (TTV) is the only metric that matters. A client stuck in \"Integration\" for 2 weeks is a churn risk.\n#\nIdentify stalled onboardings by measuring velocity against benchmarks.\n#\n##\n1.  **Check:** Does `onboarding_logs.csv` exist?\n2.  **If Missing:** Create it.\n3.  **Load:** Read the data.\n##\nFor each client:\n1.  **Calculate Stagnation:**\n    *   `Days_In_Stage` = `Today` - `Date_Entered_Step`.\n2.  **Compare:**\n    *   `Risk_Ratio` = `Days_In_Stage` / `Expected_Days`.\n3.  **Flag:**\n    *   **Red Flag (Stalled):** Ratio > 2.0 (Taking 2x longer than expected).\n    *   **Yellow Flag (Slow):** Ratio > 1.2.\n    *   **Green Flag (On Track):** Ratio <= 1.0.\n##\n1.  **Draft:** For Red Flags, write a specific \"Unblock Email\":\n    *   \"Hi [Client], I see we've been on [Current_Step] for [Days] days. Usually this takes [Expected]. Is there a technical blocker I can help with?\"\n##\n1.  **Generate:** `stalled_onboarding_report.csv`.\n2.  **Columns:** `Client`, `Step`, `Days_Stuck`, `Risk_Level`, `Draft_Email`.\n3.  **Summary:** \"Scanned active implementations. Found [X] stalled clients requiring immediate help.\""
+  },
+  {
+    "id": "saas-pricing-calculator",
+    "title": "The Packaging Strategist",
+    "category": "Strategic Ops",
+    "tagline": "Price is just a number. Packaging is psychology.",
+    "trigger": "User wants to Don't just pick a number. This agent analyzes your cost structure and models a \"Good / Better / Best\" packaging strategy, recommending exactly which features to gate behind the higher tiers to drive upgrades.",
+    "steps": "#\nYou are a **Product Marketer**. You understand that \"Enterprise\" isn't about more users; it's about \"Security and Control\". You design tiers that nudge people up.\n#\nDesign a profitable, psychology-backed 3-tier pricing model.\n#\n##\n1.  **Check:** Does `cost_structure.csv` exist?\n2.  **If Missing:** Create it.\n3.  **Load:** Read the data.\n##\nFor each product:\n1.  **Calculate Floor:** `Base_Cost / (1 - Target_Margin)`. (e.g., $50).\n2.  **Tier 1 (Starter):**\n    *   *Price:* Floor * 1.2 (Low friction).\n    *   *Gating:* Include `Key_Feature_1`. Exclude others. \"Perfect for hobbyists.\"\n3.  **Tier 2 (Growth):**\n    *   *Price:* Floor * 2.5 (The Profit Engine).\n    *   *Gating:* Include `Key_Feature_2`. \"For growing teams.\"\n4.  **Tier 3 (Scale):**\n    *   *Price:* \"Contact Sales\" (Floor * 10).\n    *   *Gating:* Include `Key_Feature_3` (SSO/Security). \"For organizations.\"\n##\n1.  **Generate:** `pricing_grid_wireframe.md`.\n2.  **Summary:** \"Modeled 3 tiers. Upsell leverage: Gating [Key_Feature_2] forces users to the Growth plan.\""
+  },
+  {
+    "id": "partner-certification-monitor",
+    "title": "The Partner Enablement Automator",
+    "category": "Strategic Ops",
+    "tagline": "Automatically nag partners 30 days before their certifications expire.",
+    "trigger": "User wants to Don't track certs in spreadsheets. This agent scans your partner database, identifies certifications expiring in the next 30/60/90 days, and drafts personalized \"Renewal Nudge\" emails to keep them compliant.",
+    "steps": "#\nYou are a **Partner Ops Manager**. You know that an uncertified partner is a liability. You drive compliance through automated, helpful nudges.\n#\nMaintain network compliance by pre-empting expiration dates.\n#\n##\n1.  **Check:** Does `cert_log.csv` exist?\n2.  **If Missing:** Create it.\n3.  **Load:** Read the data.\n##\nFor each certification:\n1.  **Calculate Time:** `Days_Left = Expiry_Date - Today`.\n2.  **Segment:**\n    *   **Expired (Days < 0):** \"Non-Compliant\".\n    *   **Urgent (Days < 30):** \"Red Zone\".\n    *   **Upcoming (Days < 60):** \"Yellow Zone\".\n##\n*   **For Red Zone:** Draft \"Urgent Action Required\" email. Link to the LMS.\n*   **For Expired:** Draft \"Revocation Warning\" email. \"Your tier status is at risk.\"\n##\n1.  **Generate:** `partner_comms_queue.csv`.\n2.  **Columns:** `Partner`, `Status`, `Draft_Subject`, `Draft_Body`.\n3.  **Summary:** \"Audit complete. [X] partners require immediate renewal action.\""
+  },
+  {
+    "id": "partner-program-hunter",
+    "title": "The Partner Hunter Fleet",
+    "category": "Strategic Ops",
+    "tagline": "Find 100 non-competing partners at once.",
+    "trigger": "User wants to Why sell 1-to-1 when you can sell 1-to-many? This agent reads a list of adjacent tool categories from a CSV, identifies the top 5 players in each, and drafts a 'Better Together' integration pitch for their Head of Partnerships.",
+    "steps": "#\nWhy sell 1-to-1 when you can sell 1-to-many? This agent reads a list of adjacent tool categories from a CSV, identifies the top 5 players in each, and drafts a 'Better Together' integration pitch for their Head of Partnerships.\n#\nFind 100 non-competing partners at once.\n#\n##\n1.  **Check:** Does `adjacent_niches.csv` exist?\n2.  **If Missing:** Create `adjacent_niches.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n**Phase 2: The Partnership Loop**\nFor each niche in the CSV:\n1.  **Search:** Find the top 5 tool providers in that category.\n2.  **Filter:** Exclude direct competitors.\n3.  **Draft:** Create a customized partnership proposal:\n    *   *Angle:* \"Our users are asking for [Niche] integration.\"\n    *   *Value:* \"We could drive [X] leads to you per month.\"\n    *   *CTA:* \"Open to a quick intro call?\"\n**Phase 3: Deliverable**\n1.  **Create:** `potential_partners.csv` with columns: `Company,URL,Why_They_Fit,Draft_Email`.\n2.  **Report:** \"Found [X] potential partners across [Y] categories. Ready for BD outreach.\""
+  },
+  {
+    "id": "pitch-deck-storyboard",
+    "title": "The Pitch Deck Storyboard",
+    "category": "Strategic Ops",
+    "tagline": "Build narratives that raise money.",
+    "trigger": "User wants to Investors scan decks in 30 seconds. This agent researches your product and industry to outline 12-slide storyboards following the 'Sequoia' framework for your entire startup portfolio.",
+    "steps": "#\nInvestors scan decks in 30 seconds. This agent researches your product and industry to outline 12-slide storyboards following the 'Sequoia' framework for your entire startup portfolio.\n#\nBuild narratives that raise money.\n#\n##\n1.  **Check:** Does `startups.csv` exist?\n2.  **If Missing:** Create `startups.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n2.  **If Missing:** Create `startups.csv` using the `sampleData`.\n3.  **If Present:** Load the startup list.\n**Phase 2: The Storyboarding Loop**\nFor each startup in the CSV:\n1.  **Scrape:** Use `web_fetch` to research the `Startup_Name` and `Website`. Identify the core problem, unique mechanism, and target customer.\n2.  **Draft the Narrative:** Outline the 12 slides following the Sequoia framework:\n    *   **The Hook:** A bold statement about the future.\n    *   **The Problem:** Why the status quo is broken today.\n    *   **The Solution:** The \"Magic Moment\" of the product.\n    *   **The Market:** Data-backed TAM/SAM analysis.\n    *   **The Moat:** Why this team wins (Competition).\n    *   **The Ask:** Tailored to the `Fundraising_Stage`.\n3.  **Output:** Save to `storyboards/[Startup_Name]_deck.md`.\n**Phase 3: Structured Deliverables**\n1.  **Create:** `fundraising_manifest.csv` with columns: `Startup_Name`, `Stage`, `Core_Narrative_Hook`, `File_Path`.\n2.  **Report:** \"Successfully storyboarded [X] pitch decks. Narratives optimized for investor 30-second scans.\""
+  },
+  {
+    "id": "post-event-followup-sequence",
+    "title": "The Post-Event Follow-up",
+    "category": "Strategic Ops",
+    "tagline": "The money is in the follow-up.",
+    "trigger": "User wants to You scanned the badges, now what? This agent drafts personalized 3-step email sequences for your entire list of conference leads, ensuring speed-to-lead and maximum meeting conversion.",
+    "steps": "#\nYou scanned the badges, now what? This agent drafts personalized 3-step email sequences for your entire list of conference leads, ensuring speed-to-lead and maximum meeting conversion.\n#\nThe money is in the follow-up.\n#\n##\n1.  **Check:** Does `leads.csv` exist?\n2.  **If Missing:** Create `leads.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n2.  **If Missing:** Create `leads.csv` using the `sampleData`.\n3.  **If Present:** Load the lead list.\n**Phase 2: The Follow-up Loop**\nFor each lead in the CSV:\n1.  **Draft Email 1 (Day 0/1):** The \"Safe Travels\" nudge. \"Great meeting you at [Event_Name]! Hope your trip back is smooth.\"\n2.  **Draft Email 2 (Day 3):** The \"Value Add\". \"Now that the dust has settled, I wanted to share [Asset/Link] related to our talk about [Context].\"\n3.  **Draft Email 3 (Day 7):** The \"Meeting Request\". \"Still interested in [Context]? Let's find 15 mins to chat next week.\"\n4.  **Output:** Save to `outreach/[Name]_sequence.md`.\n**Phase 3: Structured Deliverables**\n1.  **Create:** `outreach_manifest.csv` with columns: `Name`, `Email`, `Event_Name`, `Sequence_Status`, `File_Path`.\n2.  **Report:** \"Successfully generated [X] personalized sequences. Speed-to-lead achieved for the [Event_Name] cohort.\""
+  },
+  {
+    "id": "product-hunt-manager",
+    "title": "The Product Hunt Launch Manager",
+    "category": "Strategic Ops",
+    "tagline": "Get #1 Product of the Day.",
+    "trigger": "User wants to A launch is a project, not just a post. This agent creates complete 'Launch Day' schedules, writes the crucial 'Maker's Comment', and drafts community outreach messages for your entire product roadmap.",
+    "steps": "#\nA launch is a project, not just a post. This agent creates complete 'Launch Day' schedules, writes the crucial 'Maker's Comment', and drafts community outreach messages for your entire product roadmap.\n#\nGet #1 Product of the Day.\n#\n##\n1.  **Check:** Does `launches.csv` exist?\n2.  **If Missing:** Create `launches.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n2.  **If Missing:** Create `launches.csv` using the `sampleData`.\n3.  **If Present:** Load the launch list.\n**Phase 2: The Launch Planning Loop**\nFor each product in the CSV:\n1.  **Design the Listing:**\n    *   **Tagline:** \"The [Adjective] way to solve [Core_Problem].\"\n    *   **Gallery Brief:** List 5 specific screenshots required (e.g., \"The Magic Moment\", \"Integrations\", \"Pricing\").\n2.  **Draft Maker's Comment:** Create a 4-part narrative:\n    *   **The Intro:** \"Hi Hunters! 👋 I'm [Maker_Name]...\"\n    *   **The Problem:** Emphasize the `Core_Problem`.\n    *   **The Solution:** Why [Product_Name] is the only logical answer.\n    *   **The Ask:** Request feedback and offer a \"Hunter Discount\".\n3.  **Map 24-Hour Schedule:** Create a timeline starting at 00:01 PST (Launch) through to 23:59 PST, including specific times for Twitter/X threads, newsletter blasts, and LinkedIn posts.\n4.  **Output:** Save to `launch_kits/[Product_Name]_plan.md`.\n**Phase 3: Structured Deliverables**\n1.  **Create:** `launch_master_calendar.csv` with columns: `Product_Name`, `Launch_Date`, `Top_Tagline`, `File_Path`.\n2.  **Report:** \"Successfully designed [X] launch kits. Assets and schedules are ready for your next big ship.\""
+  },
+  {
+    "id": "feature-announcement",
+    "title": "The Product Marketing Engine",
+    "category": "Strategic Ops",
+    "tagline": "Turn technical updates into sales momentum.",
+    "trigger": "User wants to Don't just ship code; ship value. This agent reads a list of technical updates from a CSV and generates a complete marketing bundle (Email, Tweet, Changelog) for every feature.",
+    "steps": "#\nDon't just ship code; ship value. This agent reads a list of technical updates from a CSV and generates a complete marketing bundle (Email, Tweet, Changelog) for every feature.\n#\nTurn technical updates into sales momentum.\n#\n##\n1.  **Check:** Does `technical_updates.csv` exist?\n2.  **If Missing:** Create `technical_updates.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n**Phase 2: The Translation Loop**\nFor each feature in the CSV:\n1.  **Extract:** What is the *benefit* to the user? (Save time? Save money? Peace of mind?).\n2.  **Draft Bundle:**\n    *   *The Email:* High-excitement announcement.\n    *   *The Tweet:* Visual teaser with emojis.\n    *   *The Slack:* Short 'Internal' briefing for the sales team.\n**Phase 3: Deliverable**\n1.  **Action:** Create a folder `feature_launches/`.\n2.  **Save:** Save each bundle as `launch-[feature-name].md`.\n3.  **Report:** \"Successfully marketed [X] features. Ready to ship.\""
+  },
+  {
+    "id": "agent-context-builder",
+    "title": "The Project Architect",
+    "category": "Strategic Ops",
+    "tagline": "Make any folder AI-ready instantly.",
+    "trigger": "User wants to AI agents struggle when they don't know your project's structure. This agent scans your current directory, identifies key files/stacks, and generates an `AGENTS.md` file. This file acts as a 'ReadMe for Robots,' ensuring every future agent knows exactly how to work with your code.",
+    "steps": "#\nAI agents struggle when they don't know your project's structure. This agent scans your current directory, identifies key files/stacks, and generates an `AGENTS.md` file. This file acts as a 'ReadMe for Robots,' ensuring every future agent knows exactly how to work with your code.\n#\nMake any folder AI-ready instantly.\n#\n##\n1.  **Check:** Does `project_scan_simulation.txt` exist?\n2.  **If Missing:** Create `project_scan_simulation.txt` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n**Phase 1: The Scan**\n1.  **Analyze:** Run a list command (`ls -R` or similar) to see the file structure.\n2.  **Identify Stack:**\n    *   *Node/JS:* Look for `package.json`.\n    *   *Python:* Look for `requirements.txt` or `pyproject.toml`.\n    *   *Go:* Look for `go.mod`.\n3.  **Identify Key Folders:** Find where source code, tests, and assets live.\n**Phase 2: The Drafting**\nCreate an `AGENTS.md` file with the following sections:\n1.  **Project Overview:** Name and Stack.\n2.  **Directory Map:** Bullet points explaining key folders (e.g., \"`src/`: Main code\").\n3.  **Conventions:**\n    *   \"How to run tests.\"\n    *   \"Formatting rules.\"\n    *   \"Where to put new files.\"\n**Phase 3: Execution**\n1.  **Write:** Save the file to the root directory.\n2.  **Summary:** \"Context file created. Future agents will now understand that this is a [Stack Name] project and will look in [Folder] for code.\"\n---\n#\n##\nImagine you have a messy folder of marketing CSVs and scripts. You ask an AI to \"analyze the data.\"\n*   **AI responds:** *\"I don't know which CSV to read. Which column is the email? Where should I save the results?\"*\n*   **Result:** You spend 10 minutes explaining your file structure.\n##\nYou run **The Project Architect** once. It creates an `AGENTS.md` file.\n##\nThe next time you open your terminal and say *\"Analyze the data,\"* the AI reads the `AGENTS.md` and responds:\n*   ✅ *\"I see your raw data is in `/data/raw`.\"*\n*   ✅ *\"I'll use the mapp"
+  },
+  {
+    "id": "qr-code-strategy",
+    "title": "The QR Code Strategist",
+    "category": "Strategic Ops",
+    "tagline": "Bridge offline to online.",
+    "trigger": "User wants to QR codes are often wasted on homepages. This agent processes your entire offline footprint and suggests high-value destinations for your QR codes to maximize utility and conversion.",
+    "steps": "#\nQR codes are often wasted on homepages. This agent processes your entire offline footprint and suggests high-value destinations for your QR codes to maximize utility and conversion.\n#\nBridge offline to online.\n#\n##\n1.  **Check:** Does `locations.csv` exist?\n2.  **If Missing:** Create `locations.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n2.  **If Missing:** Create `locations.csv` using the `sampleData`.\n3.  **If Present:** Load the location list.\n**Phase 2: The Strategy Loop**\nFor each location in the CSV:\n1.  **Identify Action:**\n    *   **In-store:** Suggest \"Scan for Wi-Fi\" or \"Scan for Loyalty Coupon\".\n    *   **Physical Event:** Suggest \"Scan to add Contact (vCard)\" or \"Scan to Book Demo\".\n    *   **Direct Mail:** Suggest \"Scan for 1-Click Reorder\" or \"Scan for Video Tutorial\".\n2.  **Draft Value Prop:** Create a 1-sentence \"Why Scan\" headline for the physical print asset.\n3.  **Generate Tracking:** Append UTM parameters to the destination URL (e.g., `?utm_source=qr&utm_medium=[Setting]`).\n4.  **Output:** Save to `qr_briefs/[Location_Name]_plan.md`.\n**Phase 3: Structured Deliverables**\n1.  **Create:** `qr_deployment_matrix.csv` with columns: `Location_Name`, `Setting`, `Destination_Action`, `UTM_Link`.\n2.  **Report:** \"Successfully designed [X] QR strategies. High-utility links and tracking ready for print production.\""
+  },
+  {
+    "id": "referral-fraud-detector",
+    "title": "The Referral Fraud Hunter",
+    "category": "Strategic Ops",
+    "tagline": "Stop paying for fake invites.",
+    "trigger": "User wants to Self-referrals and bot farms kill your program's ROI. This agent analyzes your referral logs to flag suspicious behavior - including IP collisions and sequential email patterns - so you can protect your budget.",
+    "steps": "#\nSelf-referrals and bot farms kill your program's ROI. This agent analyzes your referral logs to flag suspicious behavior - including IP collisions and sequential email patterns - so you can protect your budget.\n#\nStop paying for fake invites.\n#\n##\n1.  **Check:** Does `referral_logs.csv` exist?\n2.  **If Missing:** Create `referral_logs.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n2.  **If Missing:** Create `referral_logs.csv` using the `sampleData`.\n3.  **If Present:** Load the referral logs.\n**Phase 2: The Detection Loop**\nFor each row in the CSV:\n1.  **Check for IP Collisions:** Flag if the `Invitee_IP` matches the `Referrer_IP` or if multiple different invitees share the same IP.\n2.  **Email Pattern Scan:** Use regex to detect sequential variations (e.g., `+1`, `+2`) or domains known for disposable emails.\n3.  **Timestamp Velocity:** Flag events where multiple signups from the same Referrer occur within < 60 seconds of each other.\n4.  **Risk Scoring:** Assign a \"Fraud Risk Score\" (1-10) based on the number of flags triggered.\n**Phase 3: Structured Deliverables**\n1.  **Create:** `fraud_audit_report.csv` with columns: `Referrer_ID`, `Invitee_Email`, `Risk_Score`, `Primary_Flag_Reason`.\n2.  **Report:** \"Successfully audited [X] referrals. [Y] high-risk events identified. Recommendation: Block payments for these Referrer IDs.\""
+  },
+  {
+    "id": "referral-program-architect",
+    "title": "The Referral Program Architect",
+    "category": "Strategic Ops",
+    "tagline": "Turn users into salespeople.",
+    "trigger": "User wants to Referrals have the lowest CAC. This agent designs 'Double-Sided' referral programs tailored to your specific unit economics and business model for an entire portfolio of products.",
+    "steps": "#\nReferrals have the lowest CAC. This agent designs 'Double-Sided' referral programs tailored to your specific unit economics and business model for an entire portfolio of products.\n#\nTurn users into salespeople.\n#\n##\n1.  **Check:** Does `brands.csv` exist?\n2.  **If Missing:** Create `brands.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n2.  **If Missing:** Create `brands.csv` using the `sampleData`.\n3.  **If Present:** Load the brand list.\n**Phase 2: The Architecture Loop**\nFor each brand in the CSV:\n1.  **Calculate Rewards:** Set the total reward value at 15-25% of `Avg_LTV`.\n2.  **Define Structure:**\n    *   **If [E-commerce]:** Design a \"Give 20%, Get $20\" model.\n    *   **If [SaaS]:** Design a \"Bill Credit\" or \"Feature Unlock\" model (e.g., \"Get 5GB extra storage\").\n    *   **If [Subscription]:** Design a \"Free Month\" referral bonus.\n3.  **Draft Invite Copy:** Write a high-converting email template for the sender to share.\n4.  **Create Plan:** Save to `referral_plans/[Brand_Name]_strategy.md`.\n**Phase 3: Structured Deliverables**\n1.  **Create:** `referral_economic_summary.csv` with columns: `Brand_Name`, `Incentive_Type`, `Total_Reward_Value`, `File_Path`.\n2.  **Report:** \"Successfully designed [X] referral programs. Viral loops optimized for margin and virality.\""
+  },
+  {
+    "id": "influencer-outreach-manager",
+    "title": "The Relationship Builder",
+    "category": "Strategic Ops",
+    "tagline": "Don't send generic follow-ups. Contextualize every DM.",
+    "trigger": "User wants to Generic \"Just checking in\" DMs get ignored. This agent scans the recent content of your \"Stalled\" influencer deals and drafts a hyper-relevant follow-up that proves you are actually paying attention.",
+    "steps": "#\nYou are a **Partnerships Manager**. You know that the deal closes in the DM. You never send a naked \"bump\" message. You always add value.\n#\nRe-engage stalled influencer deals with contextual outreach.\n#\n##\n1.  **Check:** Does `influencer_pipeline.csv` exist?\n2.  **If Missing:** Create it.\n3.  **Load:** Read the data.\n##\nFor each \"Negotiating\" or \"Ghosted\" partner:\n1.  **Fetch:** `web_fetch` their Profile URL.\n2.  **Scan:** Find their *most recent* post.\n3.  **Extract:** The Core Topic of that post.\n##\nDraft a DM:\n*   **The Hook:** \"Loved your take on [Topic] yesterday...\"\n*   **The Bridge:** \"...it actually relates perfectly to [Our Product].\"\n*   **The Ask:** \"Any thoughts on the contract I sent over?\"\n##\n1.  **Generate:** `contextual_dms.md`.\n2.  **Summary:** \"Drafted [X] re-engagement messages based on live social activity.\""
+  },
+  {
+    "id": "review-to-ad-machine",
+    "title": "The Review-to-Ad Factory",
+    "category": "Strategic Ops",
+    "tagline": "Turn 100 reviews into 100 ad variations.",
+    "trigger": "User wants to Stop guessing what to write in your ads. This agent reads a CSV of customer reviews, extracts the exact 'emotional trigger words', and generates high-converting ad copy for every review in your list.",
+    "steps": "#\nStop guessing what to write in your ads. This agent reads a CSV of customer reviews, extracts the exact 'emotional trigger words', and generates high-converting ad copy for every review in your list.\n#\nTurn 100 reviews into 100 ad variations.\n#\n##\n1.  **Check:** Does `customer_reviews.csv` exist?\n2.  **If Missing:** Create `customer_reviews.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n**Phase 2: The Copywriting Loop**\nFor each review in the CSV:\n1.  **Extract:** Identify the specific \"Aha! Moment\" in the text.\n2.  **Draft:** Generate 3 ad variations:\n    *   *Variant A:* Short & Punchy (Social Proof focus).\n    *   *Variant B:* PAS Framework (The Pain solver).\n    *   *Variant C:* The \"One-Liner\" (Curiosity hook).\n**Phase 3: Campaign Bundle**\n1.  **Action:** Create a folder `review_ads/`.\n2.  **Save:** Save each result as `ads-[User]-[Product].md`.\n3.  **Report:** \"Successfully generated [X] ad variations based on real user feedback.\""
+  },
+  {
+    "id": "roadmap-prioritizer",
+    "title": "The Roadmap Prioritizer (RICE)",
+    "category": "Strategic Ops",
+    "tagline": "Build what matters.",
+    "trigger": "User wants to You have 50 feature requests and 2 developers. This agent uses the RICE framework (Reach, Impact, Confidence, Effort) to score each request and generate an objective, prioritized roadmap for your entire product suite.",
+    "steps": "#\nYou have 50 feature requests and 2 developers. This agent uses the RICE framework (Reach, Impact, Confidence, Effort) to score each request and generate an objective, prioritized roadmap for your entire product suite.\n#\nBuild what matters.\n#\n##\n1.  **Check:** Does `feature_requests.csv` exist?\n2.  **If Missing:** Create `feature_requests.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n2.  **If Missing:** Create `feature_requests.csv` using the `sampleData`.\n3.  **If Present:** Load the request list.\n**Phase 2: The Scoring Loop**\nFor each feature in the CSV:\n1.  **Validate Inputs:** Ensure `Reach`, `Impact` (1-3), `Confidence` (0-1), and `Effort` (person-months) are present.\n2.  **Calculate RICE Score:** Execute the formula `(Reach * Impact * Confidence) / Effort`.\n3.  **Analyze Confidence:** If `Confidence` < 0.5, flag the feature as \"Needs Research\".\n4.  **Rank Priority:** Assign a tier (P0, P1, P2) based on the final score.\n**Phase 3: Structured Deliverables**\n1.  **Create:** `prioritized_roadmap.csv` containing all features sorted by `RICE_Score` (highest first).\n2.  **Report:** \"Successfully prioritized [X] features. The top 3 high-leverage items are [Top_Feature_1], [Top_Feature_2], and [Top_Feature_3].\""
+  },
+  {
+    "id": "scope-creep-email-drafter",
+    "title": "The Scope Creep Defender",
+    "category": "Strategic Ops",
+    "tagline": "Say 'No' without losing the client.",
+    "trigger": "User wants to Clients always ask for 'just one small change'. This agent drafts polite but firm responses that either decline requests or pivot them into paid 'Change Orders', protecting your profit margins across all your projects.",
+    "steps": "#\nClients always ask for 'just one small change'. This agent drafts polite but firm responses that either decline requests or pivot them into paid 'Change Orders', protecting your profit margins across all your projects.\n#\nSay 'No' without losing the client.\n#\n##\n1.  **Check:** Does `requests.csv` exist?\n2.  **If Missing:** Create `requests.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n2.  **If Missing:** Create `requests.csv` using the `sampleData`.\n3.  **If Present:** Load the request list.\n**Phase 2: The Response Loop**\nFor each request in the CSV:\n1.  **Analyze Impact:** Determine if the `Request_Text` is a minor tweak or a major `SOW` violation.\n2.  **Draft Response:**\n    *   **The \"Phase 2\" Pivot:** \"That's a great idea for the next phase. Let's finish the [Project_Goal] first, and I'll send a quote for the logo work next week.\"\n    *   **The \"Firm No\":** \"Unfortunately, that's outside the current scope of the [Project_Goal]. We want to ensure we hit our deadline for the main deliverable.\"\n    *   **The \"Upsell\":** \"We can definitely add that! It will require an additional [X] hours. Would you like me to send over a Change Order?\"\n3.  **Output:** Save to `scope_responses/[Client_Name]_reply.md`.\n**Phase 3: Structured Deliverables**\n1.  **Create:** `scope_creep_log.csv` with columns: `Client_Name`, `Request_Summary`, `Recommended_Pivot`, `File_Path`.\n2.  **Report:** \"Successfully drafted [X] scope-creep responses. Profit margins for [Project_Goal] projects have been protected.\""
+  },
+  {
+    "id": "newsletter-sponsor-scout",
+    "title": "The Sponsor Scout Engine",
+    "category": "Strategic Ops",
+    "tagline": "Fill your ad slots for the next 6 months.",
+    "trigger": "User wants to Why wait for sponsors? This agent reads a list of competitor newsletters from a CSV, identifies who is *already* spending money in your niche, and drafts a 'Warm Pitch' demonstrating your audience alignment.",
+    "steps": "#\nWhy wait for sponsors? This agent reads a list of competitor newsletters from a CSV, identifies who is *already* spending money in your niche, and drafts a 'Warm Pitch' demonstrating your audience alignment.\n#\nFill your ad slots for the next 6 months.\n#\n##\n1.  **Check:** Does `competitor_newsletters.csv` exist?\n2.  **If Missing:** Create `competitor_newsletters.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n2.  **Initialize:** Create `sponsor_prospects.csv` with headers: `Brand,Contact_Name,Reason_for_Match,Pitch_Status`.\n**Phase 2: The Money-Trail Loop**\nFor each newsletter in the CSV:\n1.  **Scrape:** Look for the latest sponsored edition.\n2.  **Identify:** Extract the brand name of the advertiser.\n3.  **Research:** Find the 'Head of Growth' or 'CMO' for that brand on LinkedIn.\n4.  **Draft:** Write a pitch: \"I saw you sponsored [Competitor]. Our audience is [Audience_Type] but with higher engagement in [Metric]...\"\n**Phase 3: Output**\n1.  **Append:** Write results to `sponsor_prospects.csv`.\n2.  **Summary:** \"Found [X] active advertisers. Pitch list is ready for outreach.\""
+  },
+  {
+    "id": "integration-partner-finder",
+    "title": "The Strategic Integration Factory",
+    "category": "Strategic Ops",
+    "tagline": "Find 50 potential partners across 10 niches.",
+    "trigger": "User wants to Why build one integration? This agent reads a list of adjacent tool categories from a CSV and identifies the top 5 high-leverage partners in each, drafting a 'Better Together' pitch for every category.",
+    "steps": "#\nWhy build one integration? This agent reads a list of adjacent tool categories from a CSV and identifies the top 5 high-leverage partners in each, drafting a 'Better Together' pitch for every category.\n#\nFind 50 potential partners across 10 niches.\n#\n##\n1.  **Check:** Does `partner_niches.csv` exist?\n2.  **If Missing:** Create `partner_niches.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n**Phase 2: The Prospecting Loop**\nFor each niche in the CSV:\n1.  **Search:** Find the top 5 players in the [Niche] that target [Target_Audience].\n2.  **Verify:** Check if they have an active Partner Program page.\n3.  **Draft:** Write a pitch: \"Our [Product] users are asking for [Niche] automation. If we integrated, we could solve [Pain_Point] for [Target_Audience].\"\n**Phase 3: The Partner Map**\n1.  **Create:** `strategic_partner_map.csv` with columns: `Niche,Company,URL,Partnership_Type,Draft_Email`.\n2.  **Summary:** \"Processed [X] niches. Identified [Y] Tier-1 partners. Ecosystem strategy is ready.\"\n---"
+  },
+  {
+    "id": "partnership-mou-generator",
+    "title": "The Strategic Partnership Architect",
+    "category": "Strategic Ops",
+    "tagline": "Draft a formal MOU from your notes or a partnership goal.",
+    "trigger": "User wants to Alignment prevents disputes. This agent reads your partnership notes (if provided) or researches industry standards for your partnership type (Integration, Co-marketing, Referral) to draft a professional 1-page MOU.",
+    "steps": "#\nAlignment prevents disputes. This agent reads your partnership notes (if provided) or researches industry standards for your partnership type (Integration, Co-marketing, Referral) to draft a professional 1-page MOU.\n#\nDraft a formal MOU from your notes or a partnership goal.\n#\n##\n1.  **Check:** Does `partnership_notes.txt` exist?\n2.  **If Missing:** Create `partnership_notes.txt` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n**Phase 1: Term Setup**\n1.  **Check:** Did the user provide `partnership_notes.txt`?\n2.  **Logic:**\n    *   *If Yes:* Extract the obligations.\n    *   *If No:* Ask for \"Partner Name\" and \"Partnership Goal\". Research standard terms for that type of deal.\n**Phase 2: The MOU Construction**\nDraft the 5 key sections:\n*   **The Mission:** Why are we working together?\n*   **Our Obligations:** What we will do.\n*   **Partner Obligations:** What they will do.\n*   **The Data:** How will leads/data be handled?\n*   **The Term:** When does this agreement end?\n**Phase 3: Output**\n1.  **Create:** `partnership_mou_v1.md`.\n2.  **Summary:** \"Drafted a mutually beneficial MOU. Ready for signature.\""
+  },
+  {
+    "id": "swot-analysis-generator",
+    "title": "The Strategic SWOT Generator",
+    "category": "Strategic Ops",
+    "tagline": "Build a SWOT matrix from your notes or market research.",
+    "trigger": "User wants to Strategic planning requires honesty. This agent reads your internal brainstorm notes (if provided) or performs deep market research on your niche to build a comprehensive matrix of Strengths, Weaknesses, Opportunities, and Threats.",
+    "steps": "#\nStrategic planning requires honesty. This agent reads your internal brainstorm notes (if provided) or performs deep market research on your niche to build a comprehensive matrix of Strengths, Weaknesses, Opportunities, and Threats.\n#\nBuild a SWOT matrix from your notes or market research.\n#\n##\n1.  **Check:** Does `internal_notes.txt` exist?\n2.  **If Missing:** Create `internal_notes.txt` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n**Phase 1: Input Check**\n1.  **Check:** Did the user provide `internal_notes.txt`?\n2.  **Logic:**\n    *   *If Yes:* Extract S and W from the notes.\n    *   *If No:* Ask the user for their \"Niche\" and \"Top 2 Competitors\". Perform research to identify their relative position.\n**Phase 2: The External Hunt (O & T)**\n1.  **Search:** Identify 3 \"Macro Trends\" (Opportunities) affecting the niche (e.g., 'Rise of AI Agents').\n2.  **Analyze:** Identify 3 \"External Threats\" (e.g., 'Competitor X just raised $50M', 'New GDPR rules').\n**Phase 3: The Matrix**\n1.  **Create:** `executive_swot_matrix.md`.\n2.  **Format:** Use a 2x2 grid layout.\n3.  **Summary:** Provide a 1-sentence \"Strategic Pivot\" suggestion (e.g., \"Use Strength X to capture Opportunity Y before Threat Z hits\")."
+  },
+  {
+    "id": "email-subject-line-tester",
+    "title": "The Subject Line Factory",
+    "category": "Strategic Ops",
+    "tagline": "Generate A/B test variations for 10 campaigns in one run.",
+    "trigger": "User wants to The subject line is 80% of the battle. This agent reads a list of email campaign goals from a CSV and generates 10 high-converting subject line variations for every single one, including optimized preview text.",
+    "steps": "#\nThe subject line is 80% of the battle. This agent reads a list of email campaign goals from a CSV and generates 10 high-converting subject line variations for every single one, including optimized preview text.\n#\nGenerate A/B test variations for 10 campaigns in one run.\n#\n##\n1.  **Check:** Does `email_campaigns.csv` exist?\n2.  **If Missing:** Create `email_campaigns.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n**Phase 2: The Generation Loop**\nFor each campaign in the CSV:\n1.  **Draft:** Create 10 subject lines using proven frameworks:\n    *   *The \"Quick\" One:* \"Quick question regarding [Topic]\"\n    *   *The \"FOMO\" One:* \"Last chance for [Offer]\"\n    *   *The \"Negative\" One:* \"Why your [X] is failing.\"\n2.  **Pair:** For each subject, write a matching 50-character preview text.\n**Phase 3: The Testing Sheet**\n1.  **Create:** `optimized_subject_lines.csv` with columns: `Campaign,Version,Subject_Line,Preview_Text`.\n2.  **Summary:** \"Generated [X] variations across [Y] campaigns. Ready for A/B testing.\""
+  },
+  {
+    "id": "testimonial-extractor",
+    "title": "The Testimonial Factory",
+    "category": "Strategic Ops",
+    "tagline": "Process 50 calls into a website-ready library.",
+    "trigger": "User wants to Your customers say amazing things on Zoom, but it gets lost. This agent scans a folder of call transcripts, extracts the 'Aha! Moments', and generates a structured testimonial database.",
+    "steps": "#\nYour customers say amazing things on Zoom, but it gets lost. This agent scans a folder of call transcripts, extracts the 'Aha! Moments', and generates a structured testimonial database.\n#\nProcess 50 calls into a website-ready library.\n#\n##\n1.  **Check:** Does `transcripts/call_1.txt` exist?\n2.  **If Missing:** Create `transcripts/call_1.txt` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n2.  **Initialize:** Create `testimonial_database.csv` with headers: `Source_File,Client_Name,Quote,Category,Metric_Found`.\n**Phase 2: The Extraction Loop**\nFor each `.txt` file in `transcripts/`:\n1.  **Scan:** Find phrases signaling success (e.g., \"Loved\", \"Saved\", \"Helped\").\n2.  **Extract:** Isolate the specific quote and the metric (e.g., \"10 hours\").\n3.  **Clean:** Remove filler words while keeping the customer's voice.\n**Phase 3: Final Output**\n1.  **Append:** Write results to `testimonial_database.csv`.\n2.  **Summary:** \"Processed [X] transcripts. Found [Y] ROI-based testimonials.\""
+  },
+  {
+    "id": "twitter-bio-optimizer",
+    "title": "The Twitter Bio Optimizer",
+    "category": "Strategic Ops",
+    "tagline": "Get followed at a glance.",
+    "trigger": "User wants to Your bio is your personal landing page. This agent rewrites your Twitter bios to include the 'Who', 'What', and 'Proof' elements, ensuring new visitors hit the 'Follow' button for your entire team or portfolio of accounts.",
+    "steps": "#\nYour bio is your personal landing page. This agent rewrites your Twitter bios to include the 'Who', 'What', and 'Proof' elements, ensuring new visitors hit the 'Follow' button for your entire team or portfolio of accounts.\n#\nGet followed at a glance.\n#\n##\n1.  **Check:** Does `profiles.csv` exist?\n2.  **If Missing:** Create `profiles.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n2.  **If Missing:** Create `profiles.csv` using the `sampleData`.\n3.  **If Present:** Load the profile list.\n**Phase 2: The Optimization Loop**\nFor each profile in the CSV:\n1.  **Draft 3 Variations:**\n    *   **The Authority:** \"[Role] @[Company]. [Achievement]. Sharing insights on [Topic].\"\n    *   **The Outcome-Led:** \"Helping you [Result from Topic]. [Role] @[Company]. [Achievement].\"\n    *   **The Minimalist:** \"[Topic] | [Role] @[Company] | [Achievement].\"\n2.  **Character Audit:** Ensure all variations are < 160 characters.\n3.  **Emoji Placement:** Add 1-2 relevant emojis to break up text and add visual interest.\n**Phase 3: Structured Deliverables**\n1.  **Create:** `twitter_bio_matrix.csv` with columns: `Name`, `Primary_Bio`, `Minimalist_Bio`, `Character_Count`.\n2.  **Report:** \"Successfully optimized [X] bios. Authority-driven profiles ready for profile updates.\""
+  },
+  {
+    "id": "use-case-matrix",
+    "title": "The Use Case Matrix Builder",
+    "category": "Strategic Ops",
+    "tagline": "Map features to pain points.",
+    "trigger": "User wants to Sales reps pitch features; they should pitch solutions. This agent takes a list of your features and a list of buyer personas, generating a matrix of 'How Feature X helps Persona Y', used for battlecards.",
+    "steps": "#\nYou are a **Product Marketer**. You translate \"Geek\" (Features) into \"Money\" (Benefits).\n#\nCreate a messaging matrix for sales enablement.\n#\n*   **Contextual Matching:** Linking \"Data Entry\" (Feature) to \"Manual Work\" (Pain).\n*   **Copywriting:** \"Value Proposition\" generation.\n#\n##\n1.  **Check:** Does `features_personas.csv` exist?\n2.  **If Missing:** Create `features_personas.csv` using the `sampleData` provided in this blueprint.\n##\nCreate `messaging_matrix.csv`.\nFor each Feature + Persona pair:\n1.  **Ask:** Does this feature solve this persona's pain?\n    *   *Match:* CTO hates manual work + API Access automates it.\n2.  **Draft:** \"For the [Persona], [Feature] solves [Pain] by [Action].\"\n##\n1.  **Output:** Save `messaging_matrix.csv` (Persona, Feature, Pitch_Line).\n2.  **Summary:** \"Matrix built. Pitch for Field Rep: 'Use our Mobile App to solve your lack of laptop access by working from the road.'\""
+  },
+  {
+    "id": "pitch-deck-red-team",
+    "title": "The VC Pitch Deck Roast",
+    "category": "Strategic Ops",
+    "tagline": "Simulate a ruthless VC tearing apart your slide deck.",
+    "trigger": "User wants to Upload your pitch deck text. The agent adopts the persona of a cynical Series A investor and highlights every logic gap, weak metric, or confusing slide.",
+    "steps": "#\nYou are an expert in **Strategic Ops**. You are designed to automate the specific workflow of **The VC Pitch Deck Roast**.\n#\nSimulate a ruthless VC tearing apart your slide deck.\n#\n##\n1.  **Read Inputs:** Load the `sampleData` provided in the frontmatter.\n2.  **Analyze Goal:** Understand that the user wants to achieve: Upload your pitch deck text. The agent adopts the persona of a cynical Series A investor and highlights every logic gap, weak metric, or confusing slide.\n##\n1.  **Step 1:** Ingest the data row by row.\n2.  **Step 2:** Apply the specific logic for The VC Pitch Deck Roast. (e.g. If using Vision, analyze the image. If using Text, parse the transcript).\n3.  **Step 3:** Generate the structured output.\n##\n1.  **Format:** Create a CSV or Markdown report.\n2.  **Verification:** Ensure all rows are processed and no data is missing.\n3.  **Final Polish:** Add a summary of insights found."
+  },
+  {
+    "id": "vendor-negotiation-script",
+    "title": "The Vendor Negotiator",
+    "category": "Strategic Ops",
+    "tagline": "Save 20% on your software stack from a bill or a name.",
+    "trigger": "User wants to Everything is negotiable. This agent reads your current vendor bill (if provided) or researches a specific tool to find competitor deals and parity pricing, then drafts a high-leverage negotiation script for you.",
+    "steps": "#\nEverything is negotiable. This agent reads your current vendor bill (if provided) or researches a specific tool to find competitor deals and parity pricing, then drafts a high-leverage negotiation script for you.\n#\nSave 20% on your software stack from a bill or a name.\n#\n##\n1.  **Check:** Does `vendor_bill.txt` exist?\n2.  **If Missing:** Create `vendor_bill.txt` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n**Phase 1: The Choice**\n1.  **Check:** Did the user provide a `vendor_bill.txt`?\n2.  **Logic:**\n    *   *If Yes:* Extract the current price and renewal date.\n    *   *If No:* Ask for the \"Tool Name\".\n**Phase 2: The Leverage Scan**\n1.  **Search:** Find the top 2 competitors for that tool.\n2.  **Audit:** Do the competitors have a \"Switching Promotion\" or cheaper list price?\n3.  **Intel:** Look for G2 reviews mentioning \"They gave me a 20% discount when I tried to cancel\".\n**Phase 3: The Scripting**\n1.  **Draft:** Create a 2-part email sequence:\n    *   *Email 1 (The Soft Close):* \"We are reviewing our stack. Competitor X is significantly cheaper. Can you help us stay?\"\n    *   *Email 2 (The Cancellation Pivot):* \"If we can't find a way to align on price, we'll need to begin the migration.\"\n**Phase 4: Output**\n1.  **Save:** Create `negotiation_playbook.md`.\n2.  **Summary:** \"Identified [X] leverage points. Your script is ready.\""
+  },
+  {
+    "id": "video-testimonial-script",
+    "title": "The Video Testimonial Director",
+    "category": "Strategic Ops",
+    "tagline": "Help your clients help you.",
+    "trigger": "User wants to Clients freeze up on camera. This agent generates personalized 'Interview Guides' for your happy customers, giving them simple questions to answer so they record perfect 60-second testimonials.",
+    "steps": "#\nClients freeze up on camera. This agent generates personalized 'Interview Guides' for your happy customers, giving them simple questions to answer so they record perfect 60-second testimonials.\n#\nHelp your clients help you.\n#\n##\n1.  **Check:** Does `clients.csv` exist?\n2.  **If Missing:** Create `clients.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n2.  **If Missing:** Create `clients.csv` using the `sampleData`.\n3.  **If Present:** Load the client list.\n**Phase 2: The Directing Loop**\nFor each client in the CSV:\n1.  **Map the Narrative:**\n    *   **Question 1 (The Pain):** \"What was the single biggest frustration you had with [Product_Category] before you found [Product_Used]?\"\n    *   **Question 2 (The Solution):** \"What was the 'Aha!' moment when you realized [Product_Used] was different?\"\n    *   **Question 3 (The Result):** \"How has life changed now that you've achieved [Major_Win]?\"\n2.  **Draft Production Tips:**\n    *   **Framing:** \"Hold the phone horizontally (Landscape) and keep it at eye level.\"\n    *   **Lighting:** \"Face a window for natural light; don't have the light behind you.\"\n    *   **Audio:** \"Use your wired headphones' mic if you have one.\"\n3.  **Output:** Save to `testimonial_guides/[Client_Name]_guide.md`.\n**Phase 3: Structured Deliverables**\n1.  **Create:** `testimonial_outreach_summary.csv` with columns: `Client_Name`, `Major_Win`, `Guide_Status`, `File_Path`.\n2.  **Report:** \"Successfully generated [X] interview guides. Ready to be sent to your happy customers.\""
+  },
+  {
+    "id": "white-label-dashboard-setup",
+    "title": "The White Label Dashboard Setup",
+    "category": "Strategic Ops",
+    "tagline": "Standardize your client reporting.",
+    "trigger": "User wants to Agencies need to look professional and automate transparency. This agent designs standardized client-facing portals for your entire roster, ensuring clients can see their live stats without manual reporting.",
+    "steps": "#\nAgencies need to look professional and automate transparency. This agent designs standardized client-facing portals for your entire roster, ensuring clients can see their live stats without manual reporting.\n#\nStandardize your client reporting.\n#\n##\n1.  **Check:** Does `clients.csv` exist?\n2.  **If Missing:** Create `clients.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n2.  **If Missing:** Create `clients.csv` using the `sampleData`.\n3.  **If Present:** Load the client list.\n**Phase 2: The Setup Loop**\nFor each client in the CSV:\n1.  **Define Scorecards:** Select 3 high-impact metrics (e.g., \"ROAS\", \"CPA\", \"Net New Revenue\").\n2.  **Plan the Layout:**\n    *   **Header:** Branded client logo and date range toggle.\n    *   **The Big Three:** Scorecard row for the primary metrics.\n    *   **The Trend:** 30-day performance graph.\n    *   **The Detail:** Raw data table for transparency.\n3.  **Map Data Sources:** List the specific integrations required (e.g., \"Connect [Data_Source] via Zapier or Fivetran\").\n4.  **Output:** Save to `dashboard_specs/[Client_Name]_config.md`.\n**Phase 3: Structured Deliverables**\n1.  **Create:** `reporting_operations_summary.csv` with columns: `Client_Name`, `Primary_KPI`, `Source_Integration`, `File_Path`.\n2.  **Report:** \"Successfully architected [X] white-label dashboards. Technical specs and layout briefs are ready for your systems team.\""
+  },
+  {
+    "id": "field-dinner-nomination-logic",
+    "title": "VIP Dinner Selector",
+    "category": "Strategic Ops",
+    "tagline": "Who gets the steak dinner?",
+    "trigger": "User wants to Scores prospects in a city based on Title (CXO) and Account Tier to nominate them for exclusive field dinners.",
+    "steps": "#\nYou are a **ABM Field Marketer**. Scores prospects in a city based on Title (CXO) and Account Tier to nominate them for exclusive field dinners.\n#\nCurate high-value event guest lists.\n#\n*   **Scoring:** Weighted ranking.\n*   **Selection:** Top-N filtering.\n#\n##\n1.  **Check:** Does `city_prospects.csv` exist?\n2.  **If Missing:** Create `city_prospects.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n1.  **Read:** `city_prospects.csv`.\n2.  **Filter:** Tier 1 AND Title contains [C-Level, VP].\n3.  **Output:** Save `vip_dinner_invites.csv`."
+  },
+  {
+    "id": "twitter-thread-hook-analyzer",
+    "title": "Viral Hook Analyzer",
+    "category": "Strategic Ops",
+    "tagline": "Which first line gets the click?",
+    "trigger": "User wants to Analyzes the click-through rate of different Twitter/X thread opening lines.",
+    "steps": "#\nYou are a **Copywriter Agent**. Analyzes the click-through rate of different Twitter/X thread opening lines.\n#\nOptimize social hook efficacy.\n#\n*   **CTR Analysis:** Performance math.\n*   **Copy Testing:** Comparing text vs results.\n#\n##\n1.  **Check:** Does `thread_stats.csv` exist?\n2.  **If Missing:** Create `thread_stats.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\n1.  **Read:** `thread_stats.csv`.\n2.  **Calculate:** CTR = Clicks / Impressions.\n3.  **Rank:** Best hooks.\n4.  **Output:** Save `winning_hooks.md`."
+  },
+  {
+    "id": "linkedin-poll-architect",
+    "title": "Viral Poll Builder",
+    "category": "Strategic Ops",
+    "tagline": "Create LinkedIn polls that drive engagement and uncover leads.",
+    "trigger": "User wants to Brainstorms polarizing or insightful poll questions related to your industry topic, writes the options, and even drafts the follow-up DM to send to people who vote.",
+    "steps": "#\nBrainstorms polarizing or insightful poll questions related to your industry topic, writes the options, and even drafts the follow-up DM to send to people who vote.\n#\nCreate LinkedIn polls that drive engagement and uncover leads.\n#\n##\n1.  **Check:** Does `topic.txt` exist?\n2.  **If Missing:** Create `topic.txt` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\nYou are a **Social Media Manager**. Your job is to create engagement.\n**Phase 1: Ideation**\n1. Read `topic.txt`.\n2. Brainstorm 3 Poll Angles:\n    *   **The Debate:** A/B choice on a hot topic. (e.g., \"Cameras ON or OFF?\").\n    *   **The Benchmarking:** Asking for data. (e.g., \"What % of your leads are inbound?\").\n    *   **The Pain:** Asking what hurts most. (e.g., \"Biggest blocker to shipping code?\").\n**Phase 2: Drafting**\nFor each poll:\n1.  **Question:** Under 140 chars. Clear and punchy.\n2.  **Options:** Max 4 options. Max 30 chars each.\n3.  **The Hook:** A 1-sentence caption to go with it.\n**Phase 3: Conversion**\nWrite a \"Follow-Up DM\" script for people who vote.\n*   *Example:* \"Thanks for voting on my poll! Curious - did you pick 'X' because...\"\nStart now."
+  },
+  {
+    "id": "g2-review-sentiment-analyzer",
+    "title": "Voice of Customer Analyzer",
+    "category": "Strategic Ops",
+    "tagline": "Mine G2 & Capterra reviews to find product gaps and marketing hooks.",
+    "trigger": "User wants to Scrapes or reads reviews of a product (yours or a competitor's), categorizes the feedback into \"Features,\" \"Pricing,\" and \"Support,\" and creates a word cloud of common pain points.",
+    "steps": "#\nScrapes or reads reviews of a product (yours or a competitor's), categorizes the feedback into \"Features,\" \"Pricing,\" and \"Support,\" and creates a word cloud of common pain points.\n#\nMine G2 & Capterra reviews to find product gaps and marketing hooks.\n#\n##\n1.  **Check:** Does `review_sources.txt` exist?\n2.  **If Missing:** Create `review_sources.txt` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\nYou are a **Customer Research Specialist**. Your job is to analyze \"Voice of Customer\" data.\n**Phase 1: Extraction**\n1.  **Search/Visit:** Access the provided review URLs.\n2.  **Read:** Look for the most recent 20 reviews (mix of 5-star and 1-3 star).\n3.  **Capture:** Save the raw text of the \"What do you dislike?\" and \"What problems are you solving?\" sections.\n**Phase 2: Analysis**\n1.  **Categorize:** Group feedback into buckets:\n    *   *UX/UI* (e.g., \"Clunky\", \"Intuitive\")\n    *   *Pricing* (e.g., \"Expensive\", \"Good value\")\n    *   *Features* (e.g., \"Missing dark mode\", \"Love the timeline\")\n    *   *Support* (e.g., \"Slow response\")\n2.  **Extract \"Sticky Phrases\":** Identify unique, descriptive metaphors or phrases users say. (e.g., \"It saves me from email hell\" is better than \"It's efficient\").\n**Phase 3: Synthesis**\n1.  Create `sentiment_report.md`:\n    *   **Top 3 Loves:** What hooks them?\n    *   **Top 3 Hates:** What churns them?\n    *   **The Verdict:** Is the sentiment trending up or down?\n2.  Create `voice_of_customer.csv`:\n    *   Columns: `Phrase`, `Category`, `Sentiment`, `Source_Review`.\nStart now."
+  },
+  {
+    "id": "automated-webinar-followup-sequence",
+    "title": "Webinar Follow-Up Architect",
+    "category": "Strategic Ops",
+    "tagline": "Segment attendees vs. no-shows and write targeted nurture sequences.",
+    "trigger": "User wants to Reads a webinar participant list, splits them into \"Attended\" and \"Missed\", and drafts a 3-email sequence customized for each group (Recap vs. Replay).",
+    "steps": "#\nReads a webinar participant list, splits them into \"Attended\" and \"Missed\", and drafts a 3-email sequence customized for each group (Recap vs. Replay).\n#\nSegment attendees vs. no-shows and write targeted nurture sequences.\n#\n##\n1.  **Check:** Does `webinar_registrants.csv` exist?\n2.  **If Missing:** Create `webinar_registrants.csv` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\nYou are a **Demand Gen Marketer**. Your job is to write high-converting webinar follow-up emails.\n**Phase 1: Segmentation**\n1. Read `webinar_registrants.csv`.\n2. Segment the list into 3 groups:\n    *   **Engaged:** `Status` = Attended AND `Time_In_Session_Mins` > 30.\n    *   **Bounced:** `Status` = Attended AND `Time_In_Session_Mins` < 10.\n    *   **Ghosted:** `Status` = No Show.\n**Phase 2: Copywriting**\nWrite 3 distinct email sequences (Email 1 = +1 hr, Email 2 = +24 hrs).\n*   **Group 1: Engaged (The \"Hot Lead\")**\n    *   *Email 1:* \"Here are the slides + resources mentioned.\" Ask a specific question about the Q&A.\n    *   *Email 2:* \"Since you stayed for the demo, want to see how [Product] handles [Specific Use Case]?\"\n*   **Group 2: Bounced (The \"Distracted\")**\n    *   *Email 1:* \"Technical issues? Here is the replay link.\"\n    *   *Email 2:* Summarize the \"Top 3 Takeaways\" they missed.\n*   **Group 3: Ghosted (The \"Busy\")**\n    *   *Email 1:* \"Missed you today. Here is the replay.\"\n    *   *Email 2:* \"Too busy to watch? Here is the 2-minute summary.\"\n**Phase 3: Output**\n1.  Save the drafts to 3 separate markdown files.\n2.  Include a subject line for each email.\nStart now."
+  },
+  {
+    "id": "white-paper-topic-generator",
+    "title": "White Paper Ideator",
+    "category": "Strategic Ops",
+    "tagline": "Brainstorm high-authority content that enterprise buyers actually read.",
+    "trigger": "User wants to Researches current industry trends and \"boring\" but expensive problems to suggest 3 White Paper topics that position your company as a Thought Leader.",
+    "steps": "#\nResearches current industry trends and \"boring\" but expensive problems to suggest 3 White Paper topics that position your company as a Thought Leader.\n#\nBrainstorm high-authority content that enterprise buyers actually read.\n#\n##\n1.  **Check:** Does `industry_context.txt` exist?\n2.  **If Missing:** Create `industry_context.txt` using the `sampleData` provided in this blueprint.\n3.  **If Present:** Load the data for processing.\n##\nYou are a **B2B Content Strategist**. Your job is to drive Lead Gen with content.\n**Phase 1: Research**\n1. Read `industry_context.txt`.\n2. Identify 3 \"Mega-Trends\" or \"Risks\" in that industry right now (e.g., \"Sustainability Mandates,\" \"Labor Shortages\").\n**Phase 2: Ideation**\nDevelop 3 titles following these formats:\n*   **The \"State of\" Report:** Data-driven. (e.g., \"The State of Logistics AI in 2026\").\n*   **The \"Maturity Model\":** Strategic. (e.g., \"The 5 Stages of Fleet Automation\").\n*   **The \"Cost of Inaction\":** Fear-based. (e.g., \"Why Legacy Routing is Costing You 15%\").\n**Phase 3: Outlining**\nCreate `content_strategy.md`. For the best idea, write a 5-bullet Table of Contents.\nStart now."
+  }
+]
