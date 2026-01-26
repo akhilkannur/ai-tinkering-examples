@@ -220,4 +220,29 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     Sponsored: false,
     sponsor: null
   },
+  {
+    id: "doodlestein-deslopify-readme-prompt",
+    title: "De-Slopify Your READMEs",
+    slug: "doodlestein-deslopify-readme-prompt",
+    summary: "Jeffrey Emanuel shares a prompt to strip 'AI Slop' from your documentation. It specifically targets robotic tropes like excessive em-dashes and 'It's not just X' sentence structures.",
+    screenshots: [
+      {
+        url: "/images/examples/doodlestein-tweet.jpg",
+        filename: "doodlestein-tweet.jpg",
+        thumbnails: {
+          small: { url: "/images/examples/doodlestein-tweet.jpg" },
+          large: { url: "/images/examples/doodlestein-tweet.jpg" }
+        }
+      }
+    ],
+    category: "Agent Documentation",
+    publish_date: "2026-01-26",
+    original_link: "https://x.com/doodlestein/status/2007274424383250638",
+    author_name: "Jeffrey Emanuel",
+    author_link: "https://x.com/doodlestein",
+    tags: ["Prompt Engineering", "Documentation", "Writing", "Claude"],
+    workflow_steps: "1. Open your README.md or documentation file\n2. Run this prompt: 'Read carefully and look for telltale signs of AI slop...'\n3. AI recasts sentences to remove robotic patterns (em-dashes, 'Here's why')\n4. Review the 'more human' output",
+    Sponsored: false,
+    sponsor: null
+  },
 ];
