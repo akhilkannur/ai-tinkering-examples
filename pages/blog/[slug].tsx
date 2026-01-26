@@ -106,6 +106,12 @@ export default function BlogPostPage({ post, relatedRecipes }: BlogPostPageProps
             </div>
           </header>
 
+          {post.coverImage && (
+             <div className="mb-10 rounded-xl overflow-hidden border border-navy-dark shadow-lg">
+                <img src={post.coverImage} alt={post.title} className="w-full h-auto" />
+             </div>
+          )}
+
           <div className="prose prose-invert max-w-none">
             {renderContent(post.content)}
           </div>

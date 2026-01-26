@@ -54,12 +54,22 @@ export default function BlogIndex({ posts }: BlogIndexProps) {
             {posts.map((post) => (
               <Link key={post.slug} href={`/blog/${post.slug}`} className="group">
                 <article className="bg-secondary-bg border border-navy-dark rounded-xl overflow-hidden hover:border-accent/50 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 h-full flex flex-col">
-                  {/* Fallback Cover or Pattern */}
-                  <div className="h-48 bg-gradient-to-br from-gray-800 to-gray-900 relative">
-                     <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:16px_16px]"></div>
-                     <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-secondary-bg to-transparent">
-                     </div>
-                  </div>
+                  {/* Cover Image */}
+                  {post.coverImage ? (
+                    <div className="h-48 overflow-hidden relative border-b border-navy-dark">
+                      <img 
+                        src={post.coverImage} 
+                        alt={post.title} 
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                    </div>
+                  ) : (
+                    <div className="h-48 bg-gradient-to-br from-gray-800 to-gray-900 relative">
+                       <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                       <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-secondary-bg to-transparent">
+                       </div>
+                    </div>
+                  )}
                   
                   <div className="p-6 flex flex-col flex-grow">
                     <div className="flex items-center gap-4 text-xs text-text-secondary mb-4 font-mono">
