@@ -145,4 +145,29 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     Sponsored: false,
     sponsor: null
   },
+  {
+    id: "github-copilot-agents-md-guide",
+    title: "How to write a great agents.md",
+    slug: "github-copilot-agents-md-guide",
+    summary: "GitHub analyzed over 2,500 repositories to find out what makes an AI agent file (agents.md) effective. The key: focus on persona, commands, and explicit boundaries.",
+    screenshots: [
+      {
+        url: "/images/examples/github-agents-md-guide.jpg",
+        filename: "github-agents-md-guide.jpg",
+        thumbnails: {
+          small: { url: "/images/examples/github-agents-md-guide.jpg" },
+          large: { url: "/images/examples/github-agents-md-guide.jpg" }
+        }
+      }
+    ],
+    category: "Dev Tools",
+    publish_date: "2026-01-26",
+    original_link: "https://github.blog/ai-and-ml/github-copilot/how-to-write-a-great-agents-md-lessons-from-over-2500-repositories/",
+    author_name: "GitHub Blog",
+    author_link: "https://github.blog",
+    tags: ["Agents", "Best Practices", "Copilot", "Blueprints"],
+    workflow_steps: "1. Define a Specific Persona (e.g. 'Expert QA Engineer')\n2. Provide Executable Commands early in the file\n3. Specify the Tech Stack and Project Structure\n4. Offer concrete Code Examples instead of abstract rules\n5. Set Clear Boundaries using a 'Always/Ask/Never' system",
+    Sponsored: false,
+    sponsor: null
+  },
 ];
