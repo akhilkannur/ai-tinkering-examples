@@ -9,8 +9,8 @@ interface BlogIndexProps {
 }
 
 export default function BlogIndex({ posts }: BlogIndexProps) {
-  const title = "AI Blueprint Guides | Real AI Examples";
-  const description = "Learn how to chain AI recipes together to build autonomous workflows for Sales, Marketing, and Operations.";
+  const title = "Tinker Logs | Real AI Examples";
+  const description = "We document the exact steps we take to automate work with AI. Read how we built our scrapers, sales bots, and data tools.";
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com';
   const ogImage = `${baseUrl}/api/og?mode=home`;
 
@@ -40,11 +40,11 @@ export default function BlogIndex({ posts }: BlogIndexProps) {
            <div className="absolute inset-0 bg-hero-gradient opacity-10 pointer-events-none"></div>
            <div className="container mx-auto px-4 text-center relative z-10">
               <h1 className="text-4xl md:text-5xl font-bold font-headline mb-6 tracking-tight">
-                Blueprint <span className="text-accent">Chains</span>
+                Tinker <span className="text-accent">Logs</span>
               </h1>
               <p className="text-xl text-text-secondary max-w-2xl mx-auto leading-relaxed">
-                Atomic recipes are powerful. Chained recipes are autonomous. <br/>
-                Learn how to link blueprints together to build complete AI agents.
+                We document the exact steps we take to automate work with AI. <br/>
+                Read how we built our scrapers, sales bots, and data tools, explained step-by-step.
               </p>
            </div>
         </div>
