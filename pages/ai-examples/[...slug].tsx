@@ -236,6 +236,20 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     return { notFound: true };
   }
 
+  // Enforce Canonical URL (Redirect if category mismatch)
+  // This fixes GSC "Alternate page with proper canonical tag" issues
+  const urlCategorySlug = slugArray.length > 1 ? slugArray[slugArray.length - 2] : 'uncategorized';
+  const trueCategorySlug = example.category?.toLowerCase().replace(/\s+/g, '-') || 'uncategorized';
+
+  if (urlCategorySlug !== trueCategorySlug) {
+    return {
+      redirect: {
+        destination: `/ai-examples/${trueCategorySlug}/${example.slug}`,
+        permanent: true,
+      },
+    };
+  }
+
   return { 
     props: { example }, 
     revalidate: 300 // 5 minutes
