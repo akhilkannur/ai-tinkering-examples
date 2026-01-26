@@ -109,11 +109,8 @@ async function generateSitemap() {
     });
 
     // Recipes (Priority 0.7)
-    // We also generate "How To" pages for these
+    // We generate "How To" pages for these
     recipes.forEach(r => {
-      // Original Recipe Page
-      xml += `\n  <url><loc>${SITE_URL}/ai-examples/${r.id}</loc><lastmod>${currentDate}</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>`;
-      
       // "How To" Page (High Intent)
       // Note: We assume all recipes have taglines for now, or the page will just use title. 
       // The page generation logic handles the fallback, but for sitemap we just need the ID.
