@@ -9,6 +9,7 @@ Sitemap: https://realaiexamples.com/sitemap.xml
 # Disallow debug and admin pages
 Disallow: /debug
 Disallow: /api/
+Allow: /api/og
 
 # Allow all AI example pages
 Allow: /ai-examples/

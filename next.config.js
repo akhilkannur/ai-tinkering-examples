@@ -64,6 +64,11 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: '/index',
+        destination: '/',
+        permanent: true,
+      },
+      {
         source: '/blueprints',
         destination: '/',
         permanent: true,

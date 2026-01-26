@@ -12,7 +12,17 @@ export default function App({ Component, pageProps }: AppProps) {
   const description = "Curated AI workflows and prompts for non-technical tinkerers. No fluff, just actionable examples.";
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com';
   const ogImage = `${baseUrl}/api/og?mode=home`; // Dynamic branded OG image
-  const canonicalUrl = (baseUrl + router.asPath).split('?')[0];
+  
+  // Fix canonical URL:
+  // 1. Remove query parameters
+  // 2. Treat '/index' as '/'
+  // 3. Remove trailing slashes for non-root paths (optional but cleaner)
+  let cleanPath = router.asPath.split('?')[0];
+  if (cleanPath === '/index') cleanPath = '/';
+  
+  const canonicalUrl = cleanPath === '/' 
+    ? baseUrl 
+    : baseUrl + cleanPath.replace(/\/$/, '');
 
   return (
     <>
