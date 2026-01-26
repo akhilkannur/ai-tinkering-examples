@@ -320,4 +320,29 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     Sponsored: false,
     sponsor: null
   },
+  {
+    id: "ema-totaro-sora-ugc-scripts",
+    title: "Generating Viral UGC Scripts for Sora",
+    slug: "ema-totaro-sora-ugc-scripts",
+    summary: "Emanuele Totaro shares detailed prompt structures for generating realistic 'secretly filmed' phone videos using Sora. These scripts simulate user-generated content (UGC) with handheld camera movements, uneven lighting, and authentic dialogue.",
+    screenshots: [
+      {
+        url: "/images/examples/ema-totaro-tweet.jpg",
+        filename: "ema-totaro-tweet.jpg",
+        thumbnails: {
+          small: { url: "/images/examples/ema-totaro-tweet.jpg" },
+          large: { url: "/images/examples/ema-totaro-tweet.jpg" }
+        }
+      }
+    ],
+    category: "Paid Media",
+    publish_date: "2026-01-26",
+    original_link: "https://x.com/ema_totaro/status/1979085561223680377",
+    author_name: "Emanuele Totaro",
+    author_link: "https://x.com/ema_totaro",
+    tags: ["Video AI", "Sora", "UGC", "Ads"],
+    workflow_steps: "1. Define the 'Vibe': 'Medium-high quality phone video, filmed secretly... shaky, handheld'\n2. Set the Scene: 'Large university classroom... fluorescent lighting... students whispering'\n3. Script the Action: Professor yelling, audio peaking, abruptly cutting mid-yell",
+    Sponsored: false,
+    sponsor: null
+  },
 ];
