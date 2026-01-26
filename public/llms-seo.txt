@@ -41,23 +41,18 @@ Steal traffic from all your competitors at once.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Setup
-1.  **Check:** Does `competitors_to_compare.csv` exist? If missing, create template.
 
-### Phase 2: The Intel Loop
+**Phase 2: The Intel Loop**
 For each competitor in the CSV:
 1.  **Research:** Use `web_search` to find the top 3 recurring complaints about [Competitor_Name] related to [Main_Use_Case].
 2.  **Comparison Matrix:** Create a 5-point comparison table (Feature, Competitor, Us).
 3.  **Draft:** Write the "Switching Story" (Why migrate now?).
 
-### Phase 3: Hub Generation
+**Phase 3: Hub Generation**
 1.  **Action:** Create a folder `comparison_pages/`.
 2.  **Save:** Save each page as `alternative-to-[competitor].md`.
 3.  **Report:** "Generated [X] comparison pages in /comparison_pages. Ready for Webflow/Wordpress upload."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -103,12 +98,10 @@ More downloads, same traffic.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `apps.csv` exist?
 2.  **If Missing:** Create `apps.csv` using the `sampleData`.
 3.  **If Present:** Load the app list.
 
-### Phase 2: The Competitive Loop
+**Phase 2: The Competitive Loop**
 For each app in the CSV:
 1.  **Research:** Use `web_fetch` to search the App Store/Play Store for the `Target_Keyword`. Identify the top 3 apps and their screenshot themes.
 2.  **Draft Captions:** Create a 5-slide narrative:
@@ -119,13 +112,10 @@ For each app in the CSV:
     *   **Slide 5 (The CTA):** "Join [X] million users."
 3.  **Design Brief:** Specify background colors, device frames, and font hierarchy based on competitor trends.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `aso_briefs/` folder with `[App_Name]_screenshot_brief.md` for each entry.
 2.  **Report:** "Successfully generated [X] ASO briefs. Competitor research included in each file."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -183,9 +173,6 @@ sampleData
 2.  **Filter:** DA > 20 AND Spam < 10.
 3.  **Output:** Save `high_quality_links.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -300,9 +287,6 @@ sampleData
 2.  **Filter:** Status != 200.
 3.  **Output:** Save `broken_images.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -421,9 +405,6 @@ sampleData
 3.  **Flag:** Mismatches.
 4.  **Output:** Save `canonical_report.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -540,9 +521,6 @@ sampleData
 3.  **Filter:** Decline > 50%.
 4.  **Output:** Save `decay_report.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -587,23 +565,18 @@ Revive dead content across 10 domains.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Portfolio Setup
-1.  **Check:** Does `site_portfolio.csv` exist? If missing, create template.
 
-### Phase 2: The Audit Loop
+**Phase 2: The Audit Loop**
 For each site in the CSV:
 1.  **Parse:** Read the sitemap to find all URLs.
 2.  **Filter:** Keep only those where `Last_Modified` > 1 year ago.
 3.  **Audit:** For the "Stale" links, check the Title. If it contains an old year (e.g., "2022"), mark as CRITICAL.
 4.  **Prescribe:** Generate a refresh action: "Update Year", "Add new stats", or "Remove dead links".
 
-### Phase 3: The Triage Masterlist
+**Phase 3: The Triage Masterlist**
 1.  **Create:** `portfolio_refresh_triage.csv` with columns: `Site,URL,Age,Severity,Action`.
 2.  **Summary:** "Processed [X] sites. Found [Y] posts that are losing authority due to age."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -868,12 +841,10 @@ Fix international SEO.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `url_mappings.csv` exist?
 2.  **If Missing:** Create `url_mappings.csv` using the `sampleData`.
 3.  **If Present:** Load the mapping list.
 
-### Phase 2: The Tag Generation Loop
+**Phase 2: The Tag Generation Loop**
 For each path in the CSV:
 1.  **Identify Locales:** Map the column headers to ISO language/region codes.
 2.  **Generate Reciprocal Set:**
@@ -881,13 +852,10 @@ For each path in the CSV:
     *   Set the `x-default` (usually to the `Lang_EN` version).
 3.  **Validate:** Ensure no trailing slashes or URL inconsistencies across the set.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `hreflang_tags_master.html` containing blocks of tags for every path, ready for head insertion.
 2.  **Report:** "Successfully generated hreflang sets for [X] pages. [Y] languages mapped per page."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -947,9 +915,6 @@ sampleData
 2.  **Identify:** Empty or short alt text.
 3.  **Output:** Save `missing_alt_text.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1009,9 +974,6 @@ sampleData
 2.  **Flag:** Anchors ['Click Here', 'Read More'].
 3.  **Output:** Save `weak_anchors.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1118,23 +1080,18 @@ Visualize your site structure.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `site_links.csv` exist?
 2.  **If Missing:** Create `site_links.csv` using the `sampleData`.
 3.  **If Present:** Load the link data.
 
-### Phase 2: The Graph Generation Loop
+**Phase 2: The Graph Generation Loop**
 1.  **Map Relationships:** Transform each CSV row into a Mermaid relationship string: `[Source_Page] -- "[Link_Type]" --> [Target_Page]`.
 2.  **Style Nodes:** Assign specific colors/shapes to nodes based on `Link_Type` (e.g., CTAs in red, Nav in blue).
 3.  **Optimize Layout:** Choose the best orientation (`TD` for Top-Down or `LR` for Left-Right) based on the number of links.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `site_structure_viz.md` containing the full Mermaid.js code block, ready for preview in Obsidian, GitHub, or Mermaid Live Editor.
 2.  **Report:** "Successfully visualized [X] link relationships. [Y] potential orphaned pages detected."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1247,12 +1204,10 @@ Steal your competitor's traffic.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `competitors.csv` exist?
 2.  **If Missing:** Create `competitors.csv` using the `sampleData`.
 3.  **If Present:** Load the competitor list.
 
-### Phase 2: The Gap Analysis Loop
+**Phase 2: The Gap Analysis Loop**
 For each competitor in the CSV:
 1.  **Crawl Top Pages:** Use `web_fetch` to find the most prominent pages on the competitor's `Website`.
 2.  **Infer Keywords:** Extract the core topics they are targeting (e.g., "Lead Management", "Sales Automation").
@@ -1262,14 +1217,11 @@ For each competitor in the CSV:
     *   **The Priority:** High priority for "Transactional" topics (e.g., "Pricing", "Comparison").
     *   **The Title:** A recommended SEO-optimized headline.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `gap_analysis_master.csv` with columns: `Competitor_Name`, `Keyword_Gap`, `Intent`, `Target_Headline`, `Priority`.
 2.  **Create:** `seo_content_calendar.md` with a 12-week roadmap based on the gaps found.
 3.  **Report:** "Successfully identified [X] keyword gaps. Content calendar generated with [Y] high-priority transactional targets."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1328,9 +1280,6 @@ sampleData
 3.  **Flag:** Drops > 5 positions.
 4.  **Output:** Save `volatility_alert.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1376,12 +1325,10 @@ Find missing backlink opportunities.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `competitors_and_keywords.csv` exist?
 2.  **If Missing:** Create it using the `sampleData`.
 3.  **If Present:** Load the data.
 
-### Phase 2: The Detective Loop
+**Phase 2: The Detective Loop**
 For each row in the CSV:
 1.  **Run Search:** Execute `google_web_search` for the `Search_Query` (or construct a query like `"Competitor_Name" -site:competitor.com`).
 2.  **Filter Results:** Look for:
@@ -1391,16 +1338,13 @@ For each row in the CSV:
 3.  **Qualify:** Is your site *missing* from this page? (Simulated check or user verification).
 4.  **Extract Contact Context:** Note the site name and the specific context (e.g., "They listed 5 CRMs").
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `link_opportunities.csv` with columns: `Source_URL`, `Page_Type`, `Competitor_Mentioned`, `Outreach_Strategy`.
 2.  **Create:** `outreach_campaign.md` containing personalized email templates for each verified opportunity:
     *   **Subject:** "Quick question about your [Page Title]"
     *   **Body:** "Hi [Name], loved your list of [Topic]. I noticed you included [Competitor]. We actually just launched [My_Product] which solves [Problem] differently by..."
 3.  **Report:** "Found [X] unlinked mentions and [Y] resource page opportunities. Outreach drafts prepared."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1446,23 +1390,18 @@ Audit the map rankings for your entire franchise.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Fleet Setup
-1.  **Check:** Does `locations_to_audit.csv` exist? If missing, create template.
 
-### Phase 2: The Map Audit Loop
+**Phase 2: The Map Audit Loop**
 For each location in the CSV:
 1.  **NAP Consistency:** Search Google/Yelp for the `Branch_Name`. Check if Address matches exactly.
 2.  **Reputation Check:** Count reviews from the last 3 months. If zero, flag as "Dead Listing".
 3.  **Audit:** Is the owner replying to negative reviews?
 
-### Phase 3: The Branch Report
+**Phase 3: The Branch Report**
 1.  **Create:** `franchise_seo_health.csv`.
 2.  **Summary:** "Processed [X] locations. Branch 'Downtown' has 3 NAP errors. Branch 'Eastside' has a 0% review response rate."
 3.  **Action:** "Generating 'Fix Guides' for each failing branch."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1508,12 +1447,10 @@ What is Googlebot doing?
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `log_files.csv` exist?
 2.  **If Missing:** Create `log_files.csv` using the `sampleData`. Ensure the `logs/` directory exists.
 3.  **If Present:** Load the log file list.
 
-### Phase 2: The Analysis Loop
+**Phase 2: The Analysis Loop**
 For each log file in the CSV:
 1.  **Filter Bot Traffic:** Scan the file for lines where the User-Agent matches "Googlebot" or "AdsBot-Google".
 2.  **Aggregate Hits:** Group the filtered lines by `Request_URL`.
@@ -1522,13 +1459,10 @@ For each log file in the CSV:
     *   **Zero Frequency on High Value:** Flag `/pricing` or new `/blog` posts not being hit.
 4.  **Extract Status Codes:** Count the distribution of 200, 404, and 301 responses for bot traffic.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `bot_crawl_stats.csv` with columns: `URL`, `Googlebot_Hits`, `Avg_Status_Code`, `Crawl_Waste_Risk`.
 2.  **Report:** "Successfully analyzed [X] log files. [Y] pages identified as crawl waste. Recommendations for `robots.txt` generated."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1588,9 +1522,6 @@ sampleData
 2.  **Filter:** LCP > 2.5s.
 3.  **Output:** Save `slow_pages.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1636,12 +1567,10 @@ Answer what they are asking.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `keywords.csv` exist?
 2.  **If Missing:** Create `keywords.csv` using the `sampleData`.
 3.  **If Present:** Load the keyword list.
 
-### Phase 2: The PAA Research Loop
+**Phase 2: The PAA Research Loop**
 For each keyword in the CSV:
 1.  **Search:** Use `web_fetch` to see what questions Google features in the PAA box for the `Keyword`.
 2.  **Expand:** Identify at least 10-20 high-relevance questions.
@@ -1650,14 +1579,11 @@ For each keyword in the CSV:
     *   **The Answer:** Draft a 1-paragraph "Snippet-Ready" answer for the top 3 questions.
     *   **The Structure:** Recommend an FAQ schema-ready layout for the page.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `faq_briefs/` folder containing `[Keyword]_brief.md` for each entry.
 2.  **Create:** `paa_master_list.csv` with columns: `Keyword`, `Question_Count`, `Top_Question`, `File_Path`.
 3.  **Report:** "Successfully mined [X] questions for [Y] keywords. FAQ briefs are ready for your content team."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1787,9 +1713,6 @@ Save to `fixed_redirects.csv`:
 
 Start now.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1903,9 +1826,6 @@ sampleData
 3.  **Flag:** Failures.
 4.  **Output:** Save `failed_redirects.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1970,9 +1890,6 @@ Save the final text to `robots.txt`.
 
 Start now.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -2039,9 +1956,6 @@ Save all blocks to `schema_output.txt`.
 
 Start now.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -2099,9 +2013,6 @@ sampleData
 3.  **Sort:** By Clicks descending.
 4.  **Output:** Save `high_intent_targets.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -2149,25 +2060,20 @@ Group keywords in seconds.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `keywords.csv` exist?
 2.  **If Missing:** Create `keywords.csv` using the `sampleData`.
 3.  **If Present:** Load the keyword list.
 
-### Phase 2: The Clustering Loop
+**Phase 2: The Clustering Loop**
 For each keyword in the CSV:
 1.  **Extract Intent:** Identify if the keyword is Informational (How/What), Transactional (Buy/Pricing), or Navigational (Brand).
 2.  **Group by Root:** Group keywords sharing a common semantic root (e.g., "CRM").
 3.  **Define Hubs:** Designate high-volume, generic keywords as "Hubs" and specific, long-tail keywords as "Spokes".
 4.  **Audit Modifiers:** Group by modifiers like "Best", "Alternative", "vs", and "Review".
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `semantic_content_clusters.csv` with columns: `Hub_Topic`, `Spoke_Keyword`, `Intent`, `Search_Volume`.
 2.  **Report:** "Successfully clustered [X] keywords into [Y] distinct topics. Your Hub & Spoke strategy is ready for implementation."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -2243,9 +2149,6 @@ Create a simple diagram showing:
 
 Start now.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -2290,23 +2193,18 @@ Automated internal linking for your entire blog.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Strategy Load
-1.  **Check:** Does `link_strategy.csv` exist? If missing, create template.
 2.  **Read:** Load the target URLs and their associated keywords.
 
-### Phase 2: The Global Scan
+**Phase 2: The Global Scan**
 1.  **Find:** Use `glob` to list all content files in the project.
 2.  **Loop:** For each file, check if it contains any of the `Keywords`.
 3.  **Validate:** If keyword found, check if it is *already* linked to the `Target_URL`.
 
-### Phase 3: The Recommendation
+**Phase 3: The Recommendation**
 1.  **Create:** `link_opportunities.md`.
 2.  **Draft:** "In file `blog/post-1.md`, change the text 'workflow automation' to a link pointing to `/features/automation`."
 3.  **Summary:** "Found [X] new linking opportunities."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -2400,23 +2298,18 @@ High-CTR titles for 50 keywords at once.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Setup
-1.  **Check:** Does `target_keywords.csv` exist? If missing, create template.
 2.  **Read:** Load the list of keywords and content types.
 
-### Phase 2: The Generation Loop
+**Phase 2: The Generation Loop**
 For each keyword in the CSV:
 1.  **Generate:** Create 5 high-CTR variations (Listicle, Benefit, Curiosity, Authority, Standard).
 2.  **Draft:** Write a 155-character meta description for the best variation.
 
-### Phase 3: Selection & Save
+**Phase 3: Selection & Save**
 1.  **Rank:** Pick the #1 variation for each keyword based on character count (<60) and hook strength.
 2.  **Create:** `optimized_seo_metadata.csv` with columns: `Keyword,Target_Title,Meta_Description`.
 3.  **Summary:** "Optimized metadata for [X] keywords. Ready for upload."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -2462,12 +2355,10 @@ Crack Google's psychological code.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `target_keywords.csv` exist?
 2.  **If Missing:** Create it.
 3.  **If Present:** Load the keywords.
 
-### Phase 2: The Decoding Loop
+**Phase 2: The Decoding Loop**
 For each keyword:
 1.  **Fetch SERP:** Run `google_web_search` for the keyword.
 2.  **Analyze Top 3:**
@@ -2482,14 +2373,11 @@ For each keyword:
     *   **Must-Have Sections:** "You must include a 'Pricing' table because all top 3 have one."
     *   **Word Count Estimate:** Average the top 3 (if feasible) or estimate "Long-form" vs "Short-form".
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `content_briefs.md` containing a detailed specification for each keyword.
     *   *Example:* "**Keyword:** 'ai sales tools'. **Format:** Listicle. **Angle:** 'Time-saving'. **Must Include:** Pricing comparison table."
 2.  **Report:** "Decoded [X] SERPs. Found [Y] keywords where your current content format is likely wrong."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -2558,9 +2446,6 @@ Save to `sitemap_report.csv` (Columns: `URL`, `Status_Code`, `Action`).
 
 Start now.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -2620,9 +2505,6 @@ sampleData
 2.  **Filter:** `In_Sitemap` = No.
 3.  **Output:** Save `orphan_pages.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -2668,12 +2550,10 @@ Map your entire site.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `sitemaps.csv` exist?
 2.  **If Missing:** Create `sitemaps.csv` using the `sampleData`.
 3.  **If Present:** Load the sitemap list.
 
-### Phase 2: The Inventory Loop
+**Phase 2: The Inventory Loop**
 For each sitemap in the CSV:
 1.  **Fetch & Parse:** Use `web_fetch` to ingest the `Sitemap_URL`.
 2.  **Extract URLs:** For every `<url>` block, extract the location and metadata.
@@ -2681,13 +2561,10 @@ For each sitemap in the CSV:
 4.  **Format Priority:** Convert standard sitemap priority (0.0 - 1.0) into a "Low/Medium/High" label for easier filtering.
 5.  **Output:** Save to `inventories/[Domain]_inventory.csv`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `site_index_summary.csv` with columns: `Domain`, `Total_Pages`, `Last_Sitemap_Update`, `File_Path`.
 2.  **Report:** "Successfully inventoried [X] sitemaps. Total of [Y] pages identified for audit."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -2745,9 +2622,6 @@ sampleData
 2.  **Filter:** Status >= 400.
 3.  **Output:** Save `broken_links.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -2852,12 +2726,10 @@ Technical Site Audit at scale.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `landing_pages.csv` exist?
 2.  **If Missing:** Create `landing_pages.csv` using the `sampleData`.
 3.  **If Present:** Load the URL list.
 
-### Phase 2: The Diagnostic Loop
+**Phase 2: The Diagnostic Loop**
 For each URL in the CSV:
 1.  **Fetch Source:** Use `web_fetch` to ingest the HTML content.
 2.  **Run Diagnostics:**
@@ -2869,13 +2741,10 @@ For each URL in the CSV:
 4.  **Draft Fixes:** List the top 3 critical issues to resolve immediately.
 5.  **Output:** Save to `seo_audits/[Page_Name]_diagnostic.md`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `site_health_matrix.csv` with columns: `Page_Name`, `SEO_Grade`, `Missing_H1`, `Missing_Meta`, `File_Path`.
 2.  **Report:** "Successfully audited [X] pages. [Y] pages flagged with failing grades (D/F) requiring urgent technical attention."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -2940,9 +2809,6 @@ Architect a topical authority map.
 3.  **Assign:** Main keyword vs long-tail.
 4.  **Output:** Save `content_cluster_map.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -3050,12 +2916,10 @@ Rank for keywords tools ignore.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `topics.csv` exist?
 2.  **If Missing:** Create `topics.csv` using the `sampleData`.
 3.  **If Present:** Load the topic list.
 
-### Phase 2: The Research Loop
+**Phase 2: The Research Loop**
 For each topic in the CSV:
 1.  **Autocomplete Expansion:** Use `web_fetch` to research common "Problem" and "Comparison" queries (e.g., "[Topic] for [Niche]", "[Topic] vs [Obscure Competitor]").
 2.  **Forum Deep-Dive:** Search Reddit and StackOverflow for specific phrases or error codes related to the `Topic`.
@@ -3066,13 +2930,10 @@ For each topic in the CSV:
     *   **The Angle:** A recommended content structure to win the snippet.
 5.  **Output:** Save to `keyword_nuggets/[Topic]_opportunities.md`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `zero_volume_master_list.csv` with columns: `Topic`, `Niche`, `Golden_Nugget_Keyword`, `Difficulty_Score`, `File_Path`.
 2.  **Report:** "Successfully identified [X] zero-volume opportunities. High-intent traffic targets ready for your content team."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---

@@ -46,9 +46,6 @@ Monitor competitor messaging strategy.
 3.  **Flag:** New keywords (e.g. 'Money' vs 'Time').
 4.  **Output:** Save `messaging_shift_alert.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -153,23 +150,18 @@ Build a structured swipe file from 100 links.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Setup
-1.  **Check:** Does `ad_links.csv` exist? If missing, create template.
 
-### Phase 2: The Archival Loop
+**Phase 2: The Archival Loop**
 For each row in the CSV:
 1.  **Categorize:** Determine the year and quarter.
 2.  **Naming:** Generate a standardized filename: `[YYYY-MM]_[Competitor]_[Angle].png`.
 3.  **Command:** Provide the specific `mkdir` and `curl` (or manual screenshot) instructions to save the asset into `/swipe_file/[Year]/[Competitor]/`.
 
-### Phase 3: The Index
+**Phase 3: The Index**
 1.  **Create:** `swipe_file_index.md`.
 2.  **Summarize:** List all saved assets with their associated angles.
 3.  **Summary:** "Archived [X] ads across [Y] competitors."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -215,12 +207,10 @@ Who are they really selling to?
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `competitors.csv` exist?
 2.  **If Missing:** Create `competitors.csv` using the `sampleData`.
 3.  **If Present:** Load the competitor list.
 
-### Phase 2: The Audit Loop
+**Phase 2: The Audit Loop**
 For each competitor in the CSV:
 1.  **Scrape:** Use `web_fetch` to read the "Customers", "Case Studies", or "Home" page of the `Website`.
 2.  **Analyze Logos:** Identify the top 5-10 logos.
@@ -230,14 +220,11 @@ For each competitor in the CSV:
     *   **Enterprise:** Fortune 500 or global conglomerates.
 4.  **Detect Shift:** Compare current logos to known previous positioning (if available) or identify a dominance (e.g., "80% of logos are Enterprise").
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `market_positioning_audit.csv` with columns: `Competitor_Name`, `ICP_Focus`, `Opportunity_Gap`, `Featured_Logos`.
 2.  **Create:** `reports/[Competitor_Name]_shift.md` with a detailed breakdown of their strategy.
 3.  **Report:** "Successfully decoded [X] competitor strategies. Strategic gaps identified for your sales team."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -301,9 +288,6 @@ sampleData
 3.  **Highlight:** Price/Header changes.
 4.  **Output:** Save `competitor_shift_alert.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -354,9 +338,6 @@ Spot internal turmoil at competitors.
 3.  **Flag:** Executive roles.
 4.  **Output:** Save `competitor_churn_alert.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -529,7 +510,7 @@ Reverse-engineer the psychology behind their ads.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Analysis Loop
+**Phase 1: Analysis Loop**
 For each ad in `competitor_ads.csv`:
 1.  **Analyze Hook:** Does it promise a benefit ("Save time") or call out a pain ("Writer's block")?
     *   *Pain* = Problem Aware.
@@ -538,17 +519,14 @@ For each ad in `competitor_ads.csv`:
     *   "Save one day" = Freedom/Time (Greed/Gain).
     *   "Stop staring" = Relief (Comfort).
 
-### Phase 2: Strategy Mapping
+**Phase 2: Strategy Mapping**
 1.  **Aggregate:** Count how many ads are "Problem Focused" vs. "Solution Focused" for each competitor.
 2.  **Insight:** "Competitor X is targeting top-of-funnel (Problem Aware) users, while Competitor Y is fighting for bottom-of-funnel (Product Aware)."
 
-### Phase 3: Deliverables
+**Phase 3: Deliverables**
 1.  **Create:** `ad_strategy_analysis.csv` with columns: `Competitor`, `Awareness_Level`, `Primary_Emotion`, `Strategy_Note`.
 2.  **Summary:** "Analyzed [X] ads. The dominant strategy in your niche is [Strategy]."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -608,9 +586,6 @@ sampleData
 3.  **Extract:** Launches/Hires/Funding.
 4.  **Output:** Save `weekly_intel_brief.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -655,12 +630,10 @@ Comparative UX audit of competitors at once.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `competitors_to_audit.csv` exist?
 2.  **If Missing:** Create `competitors_to_audit.csv` using the `sampleData`. Ensure the `onboarding_vault/` directory structure exists.
 3.  **If Present:** Load the list of competitors to audit.
 
-### Phase 2: The Audit Loop
+**Phase 2: The Audit Loop**
 For each competitor in the CSV:
 1.  **Read Assets:** Scan the `Vault_Path` for screenshots and `.eml` or `.txt` email files.
 2.  **Map the Journey:**
@@ -669,14 +642,11 @@ For each competitor in the CSV:
     *   **Email Nurture:** Analyze the first 3 emails for personalization and urgency.
 3.  **Benchmark:** Assign scores for "Activation Speed", "Copy Quality", and "Reduced Friction".
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `onboarding_landscape_analysis.md` containing a side-by-side matrix of all audited competitors.
 2.  **Create:** `teardown_summary.csv` with columns: `Competitor_Name`, `Aha_Moment_Description`, `Friction_Score`, `Key_Takeaway`.
 3.  **Report:** "Successfully teardowned [X] onboarding flows. 3 high-impact 'steals' identified for your own roadmap."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -720,11 +690,9 @@ Monitor pricing changes for 10 competitors at once.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Initialization
-1.  **Check:** Does `pricing_targets.csv` exist? If missing, create template.
 2.  **Storage:** Create a folder `pricing_snapshots/` if it doesn't exist.
 
-### Phase 2: The Audit Loop
+**Phase 2: The Audit Loop**
 For each row in the CSV:
 1.  **Fetch:** Use `web_fetch` to get the current text of the pricing page.
 2.  **Load State:** Look for `pricing_snapshots/[Company].txt`.
@@ -733,14 +701,11 @@ For each row in the CSV:
     *   *If present:* Compare current vs saved. Identify changes in prices, currency, or feature names.
 4.  **Save State:** Overwrite the snapshot with the current version.
 
-### Phase 3: The Alert Report
+**Phase 3: The Alert Report**
 1.  **Create:** `pricing_alerts.md`.
 2.  **Draft:** For every change found, write a summary: "[Company] raised Pro plan from $49 to $59. They also added a new 'Enterprise Lite' tier."
 3.  **Summary:** "Monitored [X] competitors. Detected [Y] changes."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -855,9 +820,6 @@ Monitor competitor discounting aggression.
 3.  **Flag:** New aggressive codes (>20%).
 4.  **Output:** Save `discount_war_report.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -982,9 +944,6 @@ For each competitor:
 
 Start now.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1149,9 +1108,6 @@ Track competitor content themes.
 2.  **Extract:** Key topics.
 3.  **Output:** Save `competitor_content_calendar.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1211,9 +1167,6 @@ sampleData
 3.  **Calculate:** Win Rate % per month.
 4.  **Output:** Save `comp_win_rate_trend.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1264,9 +1217,6 @@ Maintain an up-to-date competitive feature matrix.
 3.  **Pivot:** Competitor vs Feature.
 4.  **Output:** Save `comparison_matrix.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1312,10 +1262,8 @@ Track $1B+ in funding across 50 industries on autopilot.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Sector Setup
-1.  **Check:** Does `monitored_sectors.csv` exist? If missing, create template.
 
-### Phase 2: The Tracker Loop
+**Phase 2: The Tracker Loop**
 For each industry in the CSV:
 1.  **Search:** Find news containing `"[Industry]" funding "this week"`.
 2.  **Extract:** For every match, read the article and extract:
@@ -1324,13 +1272,10 @@ For each industry in the CSV:
     *   Lead Investor.
     *   Growth Plan (e.g., "expanding to EU").
 
-### Phase 3: Consolidation
+**Phase 3: Consolidation**
 1.  **Action:** Create `master_funding_database.csv`.
 2.  **Summary:** "Tracked [X] deals total. [Top Sector] had the highest concentration of capital ($[Amount])."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1376,12 +1321,10 @@ Spot competitor flaws in their support docs.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `competitors.csv` exist?
 2.  **If Missing:** Create `competitors.csv` using the `sampleData`.
 3.  **If Present:** Load the competitor list.
 
-### Phase 2: The Gap Loop
+**Phase 2: The Gap Loop**
 For each competitor in the CSV:
 1.  **Crawl Categories:** Use `web_fetch` to identify the major help categories (e.g., Setup, Billing, API).
 2.  **Analyze Density:** Count articles in "Troubleshooting" or "Common Issues" sections.
@@ -1391,14 +1334,11 @@ For each competitor in the CSV:
     *   **The Sales Pivot:** A specific "wedge" headline for your sales team.
     *   **The UX Fix:** How your product should handle this feature to win.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `vulnerability_reports/` folder with `[Competitor_Name]_audit.md` for each entry.
 2.  **Create:** `competitive_friction_matrix.csv` with columns: `Competitor_Name`, `Weakest_Feature`, `Friction_Article_Count`, `File_Path`.
 3.  **Report:** "Successfully audited [X] help centers. [Y] critical UX gaps identified for exploitation."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1444,30 +1384,25 @@ Know exactly when your competitors send.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `competitors.csv` exist?
 2.  **If Missing:** Create `competitors.csv` using the `sampleData`.
 3.  **If Present:** Load the competitor list.
 
-### Phase 2: The Research Loop
+**Phase 2: The Research Loop**
 For each competitor in the CSV:
 1.  **Scrape Archives:** Use `web_fetch` to ingest the `Newsletter_URL`.
 2.  **Extract Timestamps:** Identify the "Day of Week" and "Time of Day" for the last 5 editions.
 3.  **Normalize:** Convert all times to a single baseline (e.g., EST).
 4.  **Audit Strategy:** Note if they use a "Daily" vs. "Weekly" cadence and identify recurring themes in their subject lines.
 
-### Phase 3: The "Silence Slot" Recommendation
+**Phase 3: The "Silence Slot" Recommendation**
 1.  **Map Heatmap:** Consolidate all competitor send times into a weekly grid.
 2.  **Identify Slot:** Find a 2-hour window with zero competitor activity.
 3.  **Draft Strategy:** Create `send_time_strategy.md` recommending the best time to send.
 
-### Phase 4: Structured Deliverables
+**Phase 4: Structured Deliverables**
 1.  **Create:** `inbox_competitive_matrix.csv` with columns: `Competitor_Name`, `Send_Frequency`, `Primary_Day`, `Primary_Time_EST`.
 2.  **Report:** "Successfully audited [X] competitors. Recommended 'Silence Slot' identified for maximum visibility."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1513,29 +1448,24 @@ Poach their agencies.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `competitors.csv` exist?
 2.  **If Missing:** Create `competitors.csv` using the `sampleData`.
 3.  **If Present:** Load the competitor directory list.
 
-### Phase 2: The Scraping Loop
+**Phase 2: The Scraping Loop**
 For each competitor in the CSV:
 1.  **Crawl Directory:** Use `web_fetch` to ingest the `Partner_Directory_URL`.
 2.  **Extract Entities:** Identify partner names, logos, and descriptions.
 3.  **Validate Links:** Find the direct website URL for each agency.
 4.  **Tier Identification:** Note if an agency is a "Platinum", "Gold", or "Elite" partner (indicating high volume).
 
-### Phase 3: The Recruitment Pitch
+**Phase 3: The Recruitment Pitch**
 1.  **Personalize:** For each extracted agency, draft a "Switch Pitch": "I see you are a [Tier] Partner for [Competitor_Name]. We've built [Unique Feature] that helps agencies like yours increase margins."
 2.  **Asset Creation:** Generate `pitches/[Agency_Name]_invite.md`.
 
-### Phase 4: Structured Deliverables
+**Phase 4: Structured Deliverables**
 1.  **Create:** `potential_partners_master.csv` with columns: `Agency_Name`, `Website`, `Competitor_Affiliation`, `Tier`, `File_Path`.
 2.  **Report:** "Successfully mined [X] agency partners across [Y] competitors. High-tier recruits flagged for immediate outreach."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1581,12 +1511,10 @@ Track their inflation.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `competitors.csv` exist?
 2.  **If Missing:** Create `competitors.csv` using the `sampleData`.
 3.  **If Present:** Load the competitor list.
 
-### Phase 2: The History Research Loop
+**Phase 2: The History Research Loop**
 For each competitor in the CSV:
 1.  **Research Current:** Ingest the current `Pricing_URL`.
 2.  **Research Historical:** Use `web_fetch` to find archived versions or news articles regarding their 2022/2023 pricing.
@@ -1595,14 +1523,11 @@ For each competitor in the CSV:
     *   **Shrinkflation Check:** Compare feature lists. Did "Unlimited seats" become "Per-seat"? Did "SSO" move to a higher tier?
 4.  **Draft Sales Wedge:** "They raised prices by [X]% and cut [Feature]. Here is why our model is more sustainable."
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `pricing_evolution_reports/` folder with `[Competitor_Name]_history.md` for each entry.
 2.  **Create:** `market_inflation_matrix.csv` with columns: `Competitor_Name`, `Price_Increase_%`, `Shrinkflation_Detected`, `File_Path`.
 3.  **Report:** "Successfully tracked pricing history for [X] competitors. [Y] high-leverage sales wedges identified."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1653,9 +1578,6 @@ Identify competitor weaknesses for battlecards.
 3.  **Count:** Frequency.
 4.  **Output:** Save `weakness_analysis.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1700,24 +1622,19 @@ Quantify the emotion of 1000+ customer reviews.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Resource Setup
-1.  **Check:** Does `raw_reviews.csv` exist? If missing, create template.
 
-### Phase 2: The Scoring Loop
+**Phase 2: The Scoring Loop**
 For each review in the CSV:
 1.  **Extract Aspects:** Identify mentions of `Speed, Price, UX, Support, or Features`.
 2.  **Score:** Assign -1, 0, or +1 to each mentioned aspect.
 3.  **Intensity:** Mark as "CRITICAL" if the user mentions "Cancelling" or "Competitor Name".
 
-### Phase 3: The Sentiment Matrix
+**Phase 3: The Sentiment Matrix**
 1.  **Consolidate:** Create `master_sentiment_report.csv` with columns: `Aspect,Positive_Count,Negative_Count,Net_Score`.
 2.  **Summary:** "Processed [X] reviews. 'Support' is the biggest negative driver (-40 net score)."
 3.  **Action:** Draft a Slack alert for the Head of Product.
 ---
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1767,9 +1684,6 @@ Identify vulnerable competitor keyword rankings.
 2.  **Filter:** Rank <= 3 AND Authority < 30.
 3.  **Output:** Save `conquest_targets.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1814,26 +1728,23 @@ Spot fake followers on your account or a competitor's.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Setup
+**Phase 1: Input Setup**
 1.  **Check:** Did the user provide `follower_list.csv`?
 2.  **Logic:**
     *   *If Yes:* Audit the list. Mark users with no bio or default pics as "SUSPICIOUS."
     *   *If No:* Ask for a "Handle". Use `web_fetch` to see their last 5 posts and follower count.
 
-### Phase 2: The Audit Loop
+**Phase 2: The Audit Loop**
 1.  **Calculate:** Engagement Rate (ER).
 2.  **Benchmark:** 1-3% is standard. <0.5% is a red flag.
 3.  **Audit:** Look at the "Top Likers." Are they also in the same "Pod"?
 
-### Phase 3: The Verdict
+**Phase 3: The Verdict**
 1.  **Create:** `social_audit_report.md`.
 2.  **Score:** 1-100 (Authenticity Score).
 3.  **Summary:** "Handle @[X] has a 0.2% ER. 80% of followers are likely inactive or bots."
 ---
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1883,9 +1794,6 @@ Identify high-fit technical prospects.
 2.  **Filter:** Companies using 'Competitor X'.
 3.  **Output:** Save `displace_campaign_list.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1929,13 +1837,11 @@ Uncover the growth engine of any competitor.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `competitor_traffic.csv` exist?
 2.  **Logic:**
     *   *If Yes:* Process the bulk data.
     *   *If No:* Ask for a "Competitor URL". Use `web_fetch` to find public mentions of their traffic sources or marketing focus.
 
-### Phase 2: The Diagnosis Loop
+**Phase 2: The Diagnosis Loop**
 For each domain:
 1.  **Identify the 'Lead' Channel.**
 2.  **Hypothesize the 'Fuel':**
@@ -1944,14 +1850,11 @@ For each domain:
     *   *Referral focus?* (Partner program).
 3.  **Benchmark:** Compare their mix against our own (if data available).
 
-### Phase 3: The Attack Plan
+**Phase 3: The Attack Plan**
 1.  **Create:** `growth_engine_analysis.md`.
 2.  **Draft:** Suggest one way to "Conquest" their best channel.
 3.  **Summary:** "Processed [X] competitors. Found [Y] relying on SEO traffic."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -2002,9 +1905,6 @@ Track competitive win rates over time.
 3.  **Flag:** Drops > 10%.
 4.  **Output:** Save `competitive_threat_report.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---

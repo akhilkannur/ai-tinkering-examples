@@ -46,9 +46,6 @@ Maximize recovery revenue by prioritizing high-value carts.
 2.  **Filter:** Total > $500.
 3.  **Output:** Save `high_value_recovery.csv` for CS outreach.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -144,23 +141,20 @@ Find out why they really left.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Ingestion
+**Phase 1: Ingestion**
 1.  **Input:** Load `exit_surveys.csv`.
 
-### Phase 2: Clustering
+**Phase 2: Clustering**
 Group responses:
 *   *Category: Pricing* ("Too expensive", "Budget cut").
 *   *Category: Product Gap* ("Missing Android app", "Too slow").
 *   *Category: Service* ("Rude support").
 
-### Phase 3: The Fix
+**Phase 3: The Fix**
 Create `churn_reduction_plan.md`:
 *   **Top Reason:** Pricing (45%).
 *   **Action:** "Launch a 'Pause Plan' option for $5/mo instead of full cancellation."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -261,9 +255,6 @@ Generate targeted cross-sell lists.
 2.  **Filter:** Bought 'Tent' AND NOT 'Footprint'.
 3.  **Output:** Save `cross_sell_footprint.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -315,9 +306,6 @@ Reactivate seasonal buyers.
 2.  **Filter:** Customers with orders ONLY in Nov/Dec.
 3.  **Output:** Save `holiday_shoppers.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -416,9 +404,6 @@ Reduce point liability and drive sales.
 2.  **Filter:** Expiry within 30 days AND Balance > 100.
 3.  **Output:** Save `point_expiry_campaign.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -517,9 +502,6 @@ Maximize review generation rates.
 2.  **Calculate:** Request_Date = Delivered_Date + 2 days.
 3.  **Output:** Save `review_request_queue.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -573,9 +555,6 @@ Optimize email timing for repeat purchases.
 4.  **Aggregate:** Average days across all customers.
 5.  **Output:** Save `replenishment_timing.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -627,9 +606,6 @@ Prevent subscription churn.
 2.  **Identify:** Users with 2+ consecutive 'Skipped' statuses.
 3.  **Output:** Save `churn_risk_subs.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -679,9 +655,6 @@ Retarget users who opted out of email.
 2.  **Format:** Normalize Email/Phone for FB match.
 3.  **Output:** Save `unsub_audience_upload.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -733,9 +706,6 @@ Drive incremental revenue via tier gamification.
 3.  **Filter:** Gap < 50.
 4.  **Output:** Save `vip_nudge_list.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -810,9 +780,6 @@ For each persona:
 
 Start now.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -863,9 +830,6 @@ Re-engage lapsed high-value customers.
 2.  **Filter:** Spend > $500 AND Last_Order > 180 days ago.
 3.  **Output:** Save `win_back_list.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---

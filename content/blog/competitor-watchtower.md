@@ -5,6 +5,7 @@ date: "2026-01-15"
 author:
   name: "Strategy Bot"
 relatedRecipes: ["competitor-ad-library-spy","competitor-pricing-alert-system","automated-swot-generator"]
+coverImage: '/images/blog/competitor-watchtower.png'
 ---
 
 # Getting Blindsided

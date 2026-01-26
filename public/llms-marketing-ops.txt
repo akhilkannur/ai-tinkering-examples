@@ -55,9 +55,6 @@ sampleData
 3.  **Score:** G2=3, WebPricing=5, 6sense=4.
 4.  **Output:** Save `account_heat_map.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -199,12 +196,10 @@ Don't get hacked.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `services.csv` exist?
 2.  **If Missing:** Create `services.csv` using the `sampleData`.
 3.  **If Present:** Load the service list.
 
-### Phase 2: The Rotation Loop
+**Phase 2: The Rotation Loop**
 For each service in the CSV:
 1.  **Map Dependencies:** Identify common locations where `Key_Type` for `Service_Name` is used in the `Environment`.
 2.  **Generate Steps:**
@@ -213,13 +208,10 @@ For each service in the CSV:
     *   **Step 3: Verification.** How to test the new key is active.
     *   **Step 4: The Cleanup.** When and how to revoke the old key.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `rotation_master_plan.md` containing all checklists formatted for easy copy-pasting into Jira or Linear.
 2.  **Report:** "Successfully generated rotation plans for [X] services. Safety verification steps included."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -393,9 +385,6 @@ Calculate actual pipeline efficiency.
 3.  **Rank:** Sort by CPO ascending.
 4.  **Output:** Save `campaign_cpo_report.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -454,9 +443,6 @@ sampleData
 3.  **Flag:** Non-compliant names.
 4.  **Output:** Save `naming_errors.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -515,9 +501,6 @@ sampleData
 3.  **Count:** Unique emails.
 4.  **Output:** Save `top_assets.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -569,9 +552,6 @@ Identify the commercial value of specific content assets.
 3.  **Rank:** Sort by total 'Influenced Revenue'.
 4.  **Output:** Save `top_content_assets.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -629,9 +609,6 @@ sampleData
 3.  **Trace:** The 3 pages visited immediately prior.
 4.  **Output:** Save `winning_paths.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -682,9 +659,6 @@ Optimize top-of-funnel conversion.
 3.  **Rank:** Best to worst.
 4.  **Output:** Save `magnet_performance.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -730,25 +704,20 @@ Standardize 10,000 lead records for import.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: File Assessment
-1.  **Check:** Does `messy_crm_export.csv` exist? If missing, create it.
 
-### Phase 2: The Normalization Script
+**Phase 2: The Normalization Script**
 1.  **Generate:** Create a Python script `clean_data.py` that:
     *   *Phone:* Removes all non-digit characters. If 10 digits, appends "+1".
     *   *Name:* Converts `string.title()`.
     *   *Email:* Strips whitespace and converts to lowercase.
 2.  **Execute:** Run the script on the provided file.
 
-### Phase 3: Validation
+**Phase 3: Validation**
 1.  **Verify:** Check the first 5 rows of the output.
 2.  **Create:** `final_import_ready.csv`.
 3.  **Summary:** "Successfully normalized [X] records. All phone numbers are now E.164 compliant."
 ---
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -800,9 +769,6 @@ Attribute direct traffic to specific outbound campaigns.
 3.  **Verify:** Check if Outbound blast occurred in the preceding 48 hours.
 4.  **Output:** Save `dark_funnel_impact.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -861,9 +827,6 @@ sampleData
 3.  **Filter:** Campaigns > 2%.
 4.  **Output:** Save `risk_report.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -914,9 +877,6 @@ Troubleshoot deliverability by provider.
 3.  **Flag:** Rates < 10%.
 4.  **Output:** Save `deliverability_issues.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -962,10 +922,8 @@ Audit the sender reputation of 100 domains.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Context Load
-1.  **Check:** Does `domains_to_test.csv` exist? If missing, create template.
 
-### Phase 2: The Audit Loop
+**Phase 2: The Audit Loop**
 For each domain in the CSV:
 1.  **SPF:** `dig +short TXT [domain] | grep spf1`.
 2.  **DMARC:** `dig +short TXT _dmarc.[domain]`.
@@ -975,13 +933,10 @@ For each domain in the CSV:
     *   *Yellow:* Missing DMARC (Vulnerable to spoofing).
     *   *Red:* Missing SPF or MX (Will bounce).
 
-### Phase 3: The Health Report
+**Phase 3: The Health Report**
 1.  **Create:** `deliverability_health_report.csv`.
 2.  **Summary:** "Processed [X] domains. [Y] are at high risk of being blocked by Gmail/Outlook."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1039,9 +994,6 @@ sampleData
 3.  **Flag:** Emails > 10 sends/month.
 4.  **Output:** Save `fatigued_contacts.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1156,9 +1108,6 @@ sampleData
 3.  **Flag:** Categories > $0 overspent.
 4.  **Output:** Save `budget_variance.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1215,9 +1164,6 @@ sampleData
 2.  **Format:** Names/Phones.
 3.  **Output:** Save `crm_ready_leads.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1268,9 +1214,6 @@ Identify the distinct roles of every marketing channel.
 3.  **Model B (Last):** Sum Revenue by `Last_Touch`.
 4.  **Output:** Save `channel_role_report.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1321,9 +1264,6 @@ Maximize form completion rates.
 3.  **Compare:** Long vs Short.
 4.  **Output:** Save `form_optimization.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1368,10 +1308,8 @@ Fix the dataLayer across all your properties.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Ingestion
-1.  **Check:** Does `gtm_debug_queue.csv` exist? If missing, create template.
 
-### Phase 2: The Debug Loop
+**Phase 2: The Debug Loop**
 For each property in the CSV:
 1.  **Scan:** Check the `Snippet_To_Test` against platform requirements.
 2.  **Audit:** 
@@ -1380,15 +1318,12 @@ For each property in the CSV:
     *   *Check 3:* Event name consistency across properties.
 3.  **Identify:** Explain exactly why the tag would fail (e.g., "Mismatched trigger name").
 
-### Phase 3: The Fix List
+**Phase 3: The Fix List**
 1.  **Create:** `martech_debug_report.md`.
 2.  **Draft:** Provide the specific "Copy-Paste" fix for every error found.
 3.  **Summary:** "Audited [X] properties. Found [Y] critical tracking failures."
 ---
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1446,9 +1381,6 @@ sampleData
 3.  **Calculate:** Sum(Amount) * 10% (Commission).
 4.  **Output:** Save `monthly_payouts.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1500,9 +1432,6 @@ Identify invalid email addresses before sending.
 3.  **Flag:** Domains matching [gamil, yhaoo, hotmial, outlookk].
 4.  **Output:** Save `purge_list.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1554,9 +1483,6 @@ Cleanse job title data for better segmentation.
 3.  **Map:** Assign 'Manager' if Title contains [Manager, Lead].
 4.  **Output:** Save `normalized_titles.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1614,9 +1540,6 @@ sampleData
 3.  **Test:** Significance check.
 4.  **Output:** Save `test_verdict.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1669,9 +1592,6 @@ Detect performance anomalies on high-traffic pages.
 4.  **Flag:** Drift > 30% reduction.
 5.  **Output:** Save `lp_performance_alerts.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1728,9 +1648,6 @@ sampleData
 2.  **Filter:** `Lost_Date` > 90 days ago.
 3.  **Output:** Save `recycle_list.csv` for nurture upload.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1783,9 +1700,6 @@ Ensure leads are assigned to reps without delay.
 3.  **Bucket:** <1m, 1-10m, 10m+.
 4.  **Output:** Save `routing_latency_report.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1844,9 +1758,6 @@ sampleData
 3.  **Compare:** Resulting MQL volume for each.
 4.  **Output:** Save `threshold_impact_study.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1958,9 +1869,6 @@ Uncover dark social impact.
 3.  **Count:** 'Podcast' mentions with 'Direct/Search' UTMs.
 4.  **Output:** Save `dark_social_analysis.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -2018,9 +1926,6 @@ sampleData
 4.  **Sum:** Total credit per Channel.
 5.  **Output:** Save `attribution_report.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -2077,9 +1982,6 @@ sampleData
 3.  **Flag:** Any URLs containing '404' or missing 'utm_'.
 4.  **Output:** Save `broken_lp_links.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -2130,9 +2032,6 @@ Identify which channels drive the fastest deals.
 3.  **Aggregate:** Avg Days per `Lead_Source`.
 4.  **Output:** Save `channel_velocity_study.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -2192,9 +2091,6 @@ sampleData
 4.  **Flag:** > 1.5x spikes.
 5.  **Output:** Save `spend_alerts.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -2246,9 +2142,6 @@ Identify the highest-performing nurture sequence.
 3.  **Calculate:** % conversion to MQL.
 4.  **Output:** Save `nurture_performance.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -2359,9 +2252,6 @@ Prevent ad fatigue and protect CTR.
 3.  **Flag:** Campaigns where Frequency > 4.
 4.  **Output:** Save `ad_fatigue_alerts.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -2467,9 +2357,6 @@ sampleData
 2.  **Calculate:** Growth %.
 3.  **Output:** Save `growth_report.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -2571,26 +2458,23 @@ Audit your international pricing or research competitor PPP.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Analysis
+**Phase 1: Input Analysis**
 1.  **Check:** Did the user provide `pricing_table.csv`?
 2.  **Logic:**
     *   *If Yes:* Load the current USD prices.
     *   *If No:* Ask for "Product Category" and "Target Competitor". Research the competitor's localized prices in India and Brazil.
 
-### Phase 2: The Localization Loop
+**Phase 2: The Localization Loop**
 For each target market (IN, BR, UK):
 1.  **Calculate:** Apply the standard PPP adjustment index.
 2.  **Verify:** Check the latest exchange rate.
 3.  **Round:** Ensure the price ends in a "Natural" number (e.g., 999 instead of 1042).
 
-### Phase 3: The Roadmap
+**Phase 3: The Roadmap**
 1.  **Create:** `global_pricing_blueprint.md`.
 2.  **Summary:** "Your $99 Pro plan should be ₹2999 in India to maintain the same 'Purchasing Power'."
 ---
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -2652,6 +2536,72 @@ For each Channel:
 
 ---
 
+## Tweet Screenshot Automation
+URL: https://realaiexamples.com/blueprints/tweet-screenshot-automation
+Description: Capture perfect, sidebar-free tweet cards.
+
+---
+id: tweet-screenshot-automation
+category: Marketing Ops
+title: Tweet Screenshot Automation
+tagline: Capture perfect, sidebar-free tweet cards.
+difficulty: Advanced
+time: Automated
+archetype: Processor
+description: >-
+  Stop manually cropping screenshots. This is the exact production workflow we
+  use to curate the [AI Examples](https://realaiexamples.com/ai-examples)
+  library. It automates the capture of Twitter/X posts using a "Golden Ratio"
+  crop that removes sidebars, signup modals, and navigation headers, leaving you
+  with a clean, professional asset.
+sampleData:
+  filename: urls.csv
+  content: |
+    ID,URL
+    example-1,https://x.com/MehtabKarta/status/2014392743204999396
+    example-2,https://x.com/buccocapital/status/1995310794339176558
+---
+
+# Agent Configuration: The Media Specialist
+
+## Role
+You are a **Technical Marketing Specialist** responsible for content curation. You are an expert in Puppeteer and browser automation. Your goal is to produce "clean" visual assets from social media links.
+
+## Objective
+Automatically capture high-resolution, perfectly cropped screenshots of a list of tweets.
+
+## The "Golden Ratio" Logic
+To capture a clean tweet card without sidebars or headers, use these specific browser settings:
+*   **Viewport Width:** 1280px
+*   **Device Scale Factor:** 2 (for Retina quality)
+*   **The Crop (Clip):**
+    *   **X:** 260 (Skips left nav)
+    *   **Y:** 53 (Skips top header)
+    *   **Width:** 600 (Captures the main feed column)
+    *   **Height:** 500 (Captures the post + engagement bar)
+
+## Workflow
+
+### Phase 1: Environment Setup
+1.  **Requirement:** Ensure `puppeteer` is installed.
+2.  **Data:** Read `urls.csv`.
+
+### Phase 2: Capture Loop
+For each URL in the list:
+1.  **Navigate:** Open the URL in a headless browser.
+2.  **Wait:** Wait for the `article` element to load (or wait 5 seconds for dynamic content).
+3.  **Clean:** If a "Sign Up" modal appears, use JavaScript to remove it from the DOM.
+4.  **Screenshot:** Capture the screen using the **Golden Ratio Clip** defined above.
+5.  **Save:** Save the file as `output/[ID].jpg`.
+
+### Phase 3: Manifest Generation
+1.  **Log:** Create a `manifest.json` linking the original URLs to the local file paths.
+2.  **Verify:** Check that all screenshots are > 100KB to ensure they aren't blank.
+3.  **Report:** "Successfully captured [X] social assets. Files ready in /output."
+
+
+---
+
 ## The Twitter Follower Cleaner
 URL: https://realaiexamples.com/blueprints/twitter-follower-export-cleaner
 Description: Analyze your audience.
@@ -2693,12 +2643,10 @@ Analyze your audience.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `exports.csv` exist?
 2.  **If Missing:** Create `exports.csv` using the `sampleData`. Ensure the `data/` folder exists.
 3.  **If Present:** Load the export list.
 
-### Phase 2: The Cleaning Loop
+**Phase 2: The Cleaning Loop**
 For each account in the CSV:
 1.  **Read JSON:** Load the `JSON_File`.
 2.  **Flatten Data:** Extract `screen_name`, `name`, `description` (Bio), `location`, and `follower_count`.
@@ -2706,13 +2654,10 @@ For each account in the CSV:
 4.  **Bot Detection:** Flag accounts with no bio or default "egg" profile markers.
 5.  **Output:** Save to `cleaned_data/[Account_Name]_followers.csv`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `audience_analysis_summary.csv` with columns: `Account_Name`, `Total_Followers`, `Target_Match_Count`, `File_Path`.
 2.  **Report:** "Successfully cleaned [X] exports. [Y] potential leads matching your target keywords identified."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -2771,9 +2716,6 @@ sampleData
 3.  **Calculate:** % breakdown.
 4.  **Output:** Save `churn_reasons.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -2823,9 +2765,6 @@ Fill data gaps in lead attribution.
 2.  **Infer:** If Source_UTM is NULL AND Referrer contains 'linkedin' -> Set Source='LinkedIn'.
 3.  **Output:** Save `enriched_traffic.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -2883,9 +2822,6 @@ sampleData
 3.  **Sum:** Visits.
 4.  **Output:** Save `channel_performance.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -2952,9 +2888,6 @@ Save to `utm_audit.csv` with columns: `Original_URL`, `Status`, `Error_Message`.
 
 Start now.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -3005,9 +2938,6 @@ Optimize video content for engagement.
 2.  **Identify:** Second where Retention drops > 20% suddenly.
 3.  **Output:** Save `video_fix_list.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -3066,9 +2996,6 @@ sampleData
 3.  **Label:** Hot if > 50.
 4.  **Output:** Save `lead_handoff.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -3119,9 +3046,6 @@ Quantify audience quality.
 3.  **Calculate:** Avg Score.
 4.  **Output:** Save `audience_quality_score.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -3179,9 +3103,6 @@ sampleData
 3.  **Calculate:** ROI = Pipeline / Cost.
 4.  **Output:** Save `event_performance.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -3285,12 +3206,10 @@ Standardize your no-code workflows.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `automations.csv` exist?
 2.  **If Missing:** Create `automations.csv` using the `sampleData`.
 3.  **If Present:** Load the automation list.
 
-### Phase 2: The Design Loop
+**Phase 2: The Design Loop**
 For each workflow in the CSV:
 1.  **Define Trigger:** Identify the specific event in the `Trigger_App`.
 2.  **Map Formatting Steps:** Identify 2 necessary clean-up steps (e.g., "Standardize Phone Number", "Proper Case for Name").
@@ -3299,13 +3218,10 @@ For each workflow in the CSV:
 5.  **Error Prevention:** Suggest a "Search or Create" step to avoid duplicate records.
 6.  **Output:** Save to `zap_designs/[Workflow_Name]_spec.md`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `automation_ops_summary.csv` with columns: `Workflow_Name`, `Step_Count`, `Primary_Logic_Gate`, `File_Path`.
 2.  **Report:** "Successfully architected [X] Zapier workflows. Technical specs and logic maps ready for implementation."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---

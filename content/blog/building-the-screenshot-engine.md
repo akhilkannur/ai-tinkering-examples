@@ -2,7 +2,7 @@
 title: "I Built a Headless Scraper That 'Fixes Itself' (Because I'm Lazy)"
 date: "2026-01-23"
 excerpt: "Maintaining 500+ screenshots is boring. I'm not a coder, so I 'hired' an AI agent to build a system that does the grunt work for me. Here's the messy truth of how it works."
-coverImage: "/images/blog/screenshot-engine.jpg"
+coverImage: "/images/blog/screenshot-engine.png"
 author: "Akhil Nair"
 category: "Engineering"
 ---

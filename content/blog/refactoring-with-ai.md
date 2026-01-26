@@ -2,7 +2,7 @@
 title: "Cleaning Messy Data: I Turned 200 Junk Files into Gold in 10 Mins"
 date: "2026-01-23"
 excerpt: "I had 200 text files that were completely unusable. Instead of learning Regex (which I hate), I wrote a simple guide and let the AI do the boring work."
-coverImage: "/images/blog/refactoring-with-ai.jpg"
+coverImage: "/images/blog/refactoring-with-ai.png"
 author: "Akhil Nair"
 category: "Engineering"
 ---

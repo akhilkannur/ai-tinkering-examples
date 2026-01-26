@@ -2,7 +2,7 @@
 title: "Clawdbot 101: What It Is and How to Install It (Complete Beginner's Guide)"
 date: "2026-01-26"
 excerpt: "Clawdbot is trending everywhere. But what actually is it? Do you need a Mac Mini? Is it free? This guide answers every question non-technical people are asking and shows you how to set it up in 30 minutes."
-coverImage: "/images/blog/clawdbot-guide.jpg"
+coverImage: "/images/blog/clawdbot-guide.png"
 author: "Akhil Nair"
 category: "AI Tools"
 ---

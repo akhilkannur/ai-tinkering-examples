@@ -2,12 +2,12 @@
 title: "The Tinkerer's Guide to Remotion: Building a Video Factory with AI"
 date: '2026-01-25'
 excerpt: "What is Remotion? Why is everyone talking about it? And how can you use AI to build a programmatic video pipeline without writing React code?"
-coverImage: '/images/blog/remotion-pipeline.png'
+coverImage: '/images/blog/automated-video-with-remotion.png'
 author:
   name: "Real AI Examples"
   picture: '/assets/blog/authors/team.jpeg'
 ogImage:
-  url: '/images/blog/remotion-pipeline.png'
+  url: '/images/blog/automated-video-with-remotion.png'
 relatedRecipes: ['automated-video-marketing-asset']
 ---
 

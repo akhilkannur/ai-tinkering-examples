@@ -2,7 +2,7 @@
 title: "I Built a Viral Quiz in 3 Hours (And I Don't Know React)"
 date: "2026-01-23"
 excerpt: "I wanted a BuzzFeed-style personality quiz to segment my users. I didn't want to pay for Typeform or learn state management. So I hacked it together with AI."
-coverImage: "/images/blog/quiz-architecture.jpg"
+coverImage: "/images/blog/quiz-architecture.png"
 author: "Akhil Nair"
 category: "Engineering"
 ---

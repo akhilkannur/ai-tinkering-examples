@@ -104,9 +104,6 @@ Understand the time-lag of marketing impact.
 2.  **Calculate:** Lift = (7Day - 1Day) / 1Day.
 3.  **Output:** Save `attribution_lift.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -158,9 +155,6 @@ Increase AOV via smart bundling.
 3.  **Rank:** Most frequent pairs.
 4.  **Output:** Save `bundle_recommendations.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -269,9 +263,6 @@ Optimize the checkout flow.
 3.  **Highlight:** Biggest drop.
 4.  **Output:** Save `checkout_friction.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -317,12 +308,10 @@ Make them click.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `landing_pages.csv` exist?
 2.  **If Missing:** Create `landing_pages.csv` using the `sampleData`.
 3.  **If Present:** Load the page list.
 
-### Phase 2: The Optimization Loop
+**Phase 2: The Optimization Loop**
 For each page in the CSV:
 1.  **Analyze Current CTA:** Identify friction words (Pay, Buy, Submit).
 2.  **Draft 3 Variations:**
@@ -331,13 +320,10 @@ For each page in the CSV:
     *   **The Zero-Risk:** "[CTA] - No Credit Card Required".
 3.  **Design Tweak:** Suggest 1 visual change (e.g., "Contrast color", "Add arrow icon", "Shadow for depth").
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `cta_optimization_matrix.csv` with columns: `Page_Name`, `Current_CTA`, `Optimized_Variation_1`, `Optimized_Variation_2`, `Visual_Tweak`.
 2.  **Report:** "Successfully optimized [X] CTA buttons. Micro-copy improvements ready for A/B testing."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -389,9 +375,6 @@ Evaluate the true cost of high-maintenance customers.
 3.  **Compare:** Avg LTV.
 4.  **Output:** Save `maintenance_cost_analysis.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -443,9 +426,6 @@ Detect and kill leaked promo codes.
 3.  **Flag:** Spikes > 10x normal.
 4.  **Output:** Save `leaked_codes.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -609,12 +589,10 @@ Fix your site's first 5 seconds.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `landing_pages.csv` exist?
 2.  **If Missing:** Create `landing_pages.csv` using the `sampleData`.
 3.  **If Present:** Load the page list.
 
-### Phase 2: The Audit Loop
+**Phase 2: The Audit Loop**
 For each page in the CSV:
 1.  **Run the 'Grunt Test':**
     *   **Question 1:** Does it clearly state WHAT it is? (e.g., Software, Agency, Tool).
@@ -627,13 +605,10 @@ For each page in the CSV:
     *   **The Problem-Led:** Focus on the "Nightmare State".
 4.  **Output:** Save to `hero_audits/[Page_Name]_report.md`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `hero_performance_matrix.csv` with columns: `Page_Name`, `Current_Jargon_Score`, `Recommended_H1`, `File_Path`.
 2.  **Report:** "Successfully audited [X] hero sections. [Y] pages were flagged as 'Buzzword Heavy' and require immediate rewrites."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -683,9 +658,6 @@ Improve Quality Score via message matching.
 3.  **Flag:** Low similarity.
 4.  **Output:** Save `mismatched_ads.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -730,12 +702,10 @@ A/B test ideas at scale.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `landing_pages.csv` exist?
 2.  **If Missing:** Create `landing_pages.csv` using the `sampleData`.
 3.  **If Present:** Load the page list.
 
-### Phase 2: The Optimization Loop
+**Phase 2: The Optimization Loop**
 For each page in the CSV:
 1.  **Scrape & Audit:** Use `web_fetch` to ingest the page content. Evaluate the H1, Social Proof, and CTA visibility.
 2.  **Competitor Contrast:** Research 2 competitors in the same niche. Identify if they are emphasizing different benefits (e.g., "Speed" vs "Price").
@@ -745,14 +715,11 @@ For each page in the CSV:
     *   **Test 3 (Friction):** Simplifying the CTA or adding "No credit card" language.
 4.  **Hypothesis:** Write a "If [Change], then [Increase] because [Reason]" statement for each test.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `cro_experiment_roadmaps/` folder with `[Page_Name]_audit.md` for each entry.
 2.  **Create:** `optimization_summary.csv` with columns: `Page_Name`, `Current_H1`, `Proposed_H1_Winner`, `Primary_Success_Metric`.
 3.  **Report:** "Successfully audited [X] pages. [Y] experiments identified for immediate A/B testing."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -802,9 +769,6 @@ Close the conversion gap between devices.
 3.  **Flag:** Gap > 1.5%.
 4.  **Output:** Save `mobile_fix_list.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -856,9 +820,6 @@ Identify products that drive advocacy vs detraction.
 3.  **Calculate:** Avg NPS.
 4.  **Output:** Save `product_nps.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -909,9 +870,6 @@ Identify causes of single-purchase behavior.
 2.  **Count:** Top Products and Channels.
 3.  **Output:** Save `one_time_buyer_profile.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -960,9 +918,6 @@ Retain traffic from OOS pages.
 2.  **Filter:** Status='OOS' AND Traffic > 100.
 3.  **Output:** Save `urgent_redirects.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1012,9 +967,6 @@ Maximize email list growth rate.
 3.  **Compare:** Exit vs Delay.
 4.  **Output:** Save `popup_performance.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1059,10 +1011,8 @@ Audit 10 pricing pages for conversion leaks.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Setup
-1.  **Check:** Does `pricing_urls.csv` exist? If missing, create template.
 
-### Phase 2: The Psychological Loop
+**Phase 2: The Psychological Loop**
 For each URL in the CSV:
 1.  **Fetch:** Read the pricing page content.
 2.  **Audit:** Score the page on:
@@ -1071,14 +1021,11 @@ For each URL in the CSV:
     *   *Simplicity:* Is the choice easy?
 3.  **Benchmark:** Compare the competitor's feature gating against our own.
 
-### Phase 3: The Experiment Sheet
+**Phase 3: The Experiment Sheet**
 1.  **Create:** `pricing_optimization_plan.md`.
 2.  **Draft:** "Competitor A uses [X] to look cheaper. We should counter by highlighting [Y]."
 3.  **Action:** Provide 3 specific A/B test ideas for our own page.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1128,9 +1075,6 @@ Identify leaks in the product funnel.
 3.  **Flag:** Rate < 1%.
 4.  **Output:** Save `fix_these_pages.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1189,9 +1133,6 @@ sampleData
 3.  **Segment:** Power Users (>20 days).
 4.  **Output:** Save `user_segments.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1243,9 +1184,6 @@ Optimize spend for customer quality.
 3.  **Calculate:** Return Rate %.
 4.  **Output:** Save `channel_quality_report.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1297,9 +1235,6 @@ Track loyalty health.
 3.  **Calculate:** Rate = Repeats / Total.
 4.  **Output:** Save `retention_rate.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1344,26 +1279,21 @@ Audit the entire market's weaknesses.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Preparation
-1.  **Check:** Does `competitors_to_mine.csv` exist? If missing, create template.
 2.  **Initialize:** Create `market_gap_analysis.csv` with headers: `Theme,Frequency,Competitors_Affected,Revenue_Impact_Score,Our_Status`.
 
-### Phase 2: The Mining Loop
+**Phase 2: The Mining Loop**
 For each competitor in the CSV:
 1.  **Extract:** Read the latest 20 negative (1-3 star) reviews.
 2.  **Categorize:** Group every complaint into a Theme (e.g., "Hard to integrate").
 3.  **Cross-Reference:** Note if this complaint appears across multiple competitors.
 
-### Phase 3: Priority Ranking
+**Phase 3: Priority Ranking**
 1.  **Score:** Assign a Revenue Impact score (1-10) based on how often the gap causes users to switch.
 2.  **Gap Check:** Audit the current project's capabilities. If we solve this and they don't, mark as "Unique Advantage".
 
-### Phase 4: Roadmap Delivery
+**Phase 4: Roadmap Delivery**
 1.  **Create:** `strategic_roadmap.md` listing the top 3 features to build to capture the market.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1413,9 +1343,6 @@ Quantify the impact of social proof.
 3.  **Flag:** High Negatives + Low CR.
 4.  **Output:** Save `review_damage_report.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1467,9 +1394,6 @@ Optimize campaign timing.
 3.  **Average:** Revenue per Day.
 4.  **Output:** Save `best_send_days.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1520,9 +1444,6 @@ Justify site speed optimizations with ROI.
 3.  **Estimate:** Revenue lost at 4s vs 2s.
 4.  **Output:** Save `speed_roi_case.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1568,12 +1489,10 @@ Standardize your retention metrics.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `database_schemas.csv` exist?
 2.  **If Missing:** Create `database_schemas.csv` using the `sampleData`.
 3.  **If Present:** Load the schema list.
 
-### Phase 2: The Query Building Loop
+**Phase 2: The Query Building Loop**
 For each environment in the CSV:
 1.  **Define Cohorts:** Draft a CTE to truncate the `Signup_Date_Column` to the first of the month.
 2.  **Map Activity:** Draft a second CTE to link `Users_Table` to `Events_Table` based on unique user IDs and event timestamps.
@@ -1581,13 +1500,10 @@ For each environment in the CSV:
 4.  **Formatting:** Ensure all table and column names match the CSV input exactly.
 5.  **Output:** Save to `queries/[Environment]_retention.sql`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `analytics_manifest.csv` with columns: `Environment`, `Table_Join_Key`, `Retention_Logic_Used`, `File_Path`.
 2.  **Report:** "Successfully generated [X] retention queries. Queries are optimized for performance and ready for your BI tool."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1638,9 +1554,6 @@ Select the highest-converting trust elements.
 3.  **Identify:** Winner with >90% confidence.
 4.  **Output:** Save `badge_test_winner.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1702,9 +1615,6 @@ sampleData
 3.  **Calculate:** % drop-off.
 4.  **Output:** Save `funnel_analysis.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1750,12 +1660,10 @@ An eye-tracking lab in your terminal.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `screenshots.csv` exist?
 2.  **If Missing:** Create `screenshots.csv` using the `sampleData`. Ensure the `assets/ux/` directory exists.
 3.  **If Present:** Load the image list.
 
-### Phase 2: The Vision Audit Loop
+**Phase 2: The Vision Audit Loop**
 For each image in the CSV:
 1.  **Ingest Image:** Use Vision to "look" at the `Image_Path`.
 2.  **The Squint Test:** Identify the most dominant element. If it isn't the primary CTA, flag as `High Friction`.
@@ -1766,14 +1674,11 @@ For each image in the CSV:
     *   **Consistency:** Note if the UI elements deviate from the brand Vibe.
 5.  **Draft Fixes:** Suggest specific CSS-like changes (e.g., "Change CTA to high-contrast orange #FF5500").
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `ux_audit_report.csv` with columns: `Page_Name`, `Dominant_Element`, `Top_Visual_Flaw`, `Recommended_Fix`.
 2.  **Create:** `audit_details/` folder with `[Page_Name]_roast.md` for in-depth feedback.
 3.  **Report:** "Successfully audited [X] interfaces. [Y] high-priority visual blockers identified for your design team."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1819,23 +1724,18 @@ Design referral engines for every user segment.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Context Load
-1.  **Check:** Does `user_segments.csv` exist? If missing, create template.
 
-### Phase 2: The Architect Loop
+**Phase 2: The Architect Loop**
 For each segment in the CSV:
 1.  **Strategy:** Define the double-sided reward logic (e.g., "Give a Seat, Get a Seat").
 2.  **Visualize:** Generate a sequence diagram of the user journey from Invitation to Reward.
 3.  **Draft:** Write the invite email copy specifically for that segment's context.
 
-### Phase 3: Deliverable
+**Phase 3: Deliverable**
 1.  **Action:** Create a folder `growth_loops/`.
 2.  **Save:** Save each spec as `loop-[segment].md`.
 3.  **Report:** "Successfully architected [X] growth loops. Ready for technical implementation."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1884,9 +1784,6 @@ Capture missed revenue from failed searches.
 2.  **Filter:** Result_Count = 0.
 3.  **Output:** Save `missed_searches.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---

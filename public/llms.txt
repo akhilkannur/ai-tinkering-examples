@@ -4,8 +4,8 @@
 ## Niche-Specific Indices (Recommended for Context)
 - [llms-sales-ops.txt](https://realaiexamples.com/llms-sales-ops.txt) - 181 recipes
 - [llms-strategic-ops.txt](https://realaiexamples.com/llms-strategic-ops.txt) - 124 recipes
-- [llms-marketing-ops.txt](https://realaiexamples.com/llms-marketing-ops.txt) - 57 recipes
-- [llms-content-ops.txt](https://realaiexamples.com/llms-content-ops.txt) - 49 recipes
+- [llms-marketing-ops.txt](https://realaiexamples.com/llms-marketing-ops.txt) - 58 recipes
+- [llms-content-ops.txt](https://realaiexamples.com/llms-content-ops.txt) - 51 recipes
 - [llms-competitive-intel.txt](https://realaiexamples.com/llms-competitive-intel.txt) - 33 recipes
 - [llms-paid-media.txt](https://realaiexamples.com/llms-paid-media.txt) - 34 recipes
 - [llms-customer-success.txt](https://realaiexamples.com/llms-customer-success.txt) - 42 recipes
@@ -14,7 +14,10 @@
 - [llms-cro.txt](https://realaiexamples.com/llms-cro.txt) - 33 recipes
 - [llms-e-commerce.txt](https://realaiexamples.com/llms-e-commerce.txt) - 25 recipes
 - [llms-retention.txt](https://realaiexamples.com/llms-retention.txt) - 16 recipes
+- [llms-ai-productivity.txt](https://realaiexamples.com/llms-ai-productivity.txt) - 1 recipes
 - [llms-product-ops.txt](https://realaiexamples.com/llms-product-ops.txt) - 1 recipes
+- [llms-seo-ops.txt](https://realaiexamples.com/llms-seo-ops.txt) - 2 recipes
+- [llms-dev-tools.txt](https://realaiexamples.com/llms-dev-tools.txt) - 1 recipes
 
 ## Core Sections
 - [Home](https://realaiexamples.com)
@@ -57,6 +60,7 @@
 - [Attribution Window Comparer](https://realaiexamples.com/blueprints/attribution-window-comparator): 1-day vs 7-day click impact.
 - [The Audience Overlap Checker](https://realaiexamples.com/blueprints/audience-overlap-checker): Stop bidding against yourself.
 - [Automated SWOT Generator](https://realaiexamples.com/blueprints/automated-swot-generator): Generate a SWOT analysis for any company in seconds.
+- [The Automated Video Producer](https://realaiexamples.com/blueprints/automated-video-marketing-asset): Turn any landing page into a 30s TikTok/Reels promo video.
 - [Webinar Follow-Up Architect](https://realaiexamples.com/blueprints/automated-webinar-followup-sequence): Segment attendees vs. no-shows and write targeted nurture sequences.
 - [The Autonomous Project Manager](https://realaiexamples.com/blueprints/autonomous-project-manager): The 'Ralph Wiggum' Loop.
 - [The Sales Sniper](https://realaiexamples.com/blueprints/autonomous-sales-sniper): Find and qualify B2B leads automatically.
@@ -71,4 +75,3 @@
 - [Beta Tester Verifier](https://realaiexamples.com/blueprints/beta-program-active-roster): Are they actually testing?
 - [The Beta Tester Recruiter](https://realaiexamples.com/blueprints/beta-tester-recruiter): Find your first 50 users.
 - [Billing Contact Verifier](https://realaiexamples.com/blueprints/billing-contact-verification): Will the invoice bounce?
-- [Annual Pre-Pay Upsell](https://realaiexamples.com/blueprints/billing-frequency-upsell): Move monthly users to annual plans.

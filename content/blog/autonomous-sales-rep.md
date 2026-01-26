@@ -5,6 +5,7 @@ date: "2026-01-20"
 author:
   name: "AI Tinkerer"
 relatedRecipes: ["lead-list-cleaner","linkedin-connection-request-writer-v2","cold-email-personalization-at-scale"]
+coverImage: '/images/blog/autonomous-sales-rep.png'
 ---
 
 # The Sunday Night Scramble

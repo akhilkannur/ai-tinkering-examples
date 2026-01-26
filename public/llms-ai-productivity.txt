@@ -1,0 +1,305 @@
+# Blueprints: AI Productivity
+
+## Clawdbot 101: Your Personal AI Assistant (Complete Beginner's Guide)
+URL: https://realaiexamples.com/blueprints/clawdbot-beginners-guide
+Description: Turn your computer into a 24/7 AI assistant that works across WhatsApp, Telegram, and more.
+
+---
+id: clawdbot-beginners-guide
+category: AI Productivity
+title: "Clawdbot 101: Your Personal AI Assistant (Complete Beginner's Guide)"
+tagline: Turn your computer into a 24/7 AI assistant that works across WhatsApp, Telegram, and more.
+difficulty: Beginner
+time: 30 mins
+archetype: Researcher
+description: >-
+  Clawdbot is the open-source AI assistant everyone's talking about. This guide explains what it is, 
+  why people are buying Mac Minis for it, and how to install it step-by-step—even if you've never 
+  used a terminal before. Answers all the trending questions: cost, requirements, and what it can do.
+sampleData:
+  filename: clawdbot_setup_checklist.csv
+  content: |
+    Step,Task,Status
+    1,Install Node.js 22+,pending
+    2,Run installer script,pending
+    3,Complete onboarding wizard,pending
+    4,Connect messaging app,pending
+    5,Send first message,pending
+---
+
+# Clawdbot 101: The Complete Beginner's Guide
+
+## What is Clawdbot?
+
+**Clawdbot** is a free, open-source AI assistant that runs on YOUR computer (or a cheap server) and connects to apps you already use—WhatsApp, Telegram, Discord, Slack, Signal, and even iMessage.
+
+Think of it as having a smart assistant that:
+- Lives inside your messaging apps
+- Remembers your past conversations
+- Can organize files and notes for you
+- Runs 24/7 without monthly fees (beyond AI model costs)
+- Keeps your data private on your own machine
+
+---
+
+## Why Is Everyone Talking About Clawdbot?
+
+Clawdbot went viral because it solves a real problem: **AI assistants that actually integrate into your life**.
+
+Unlike ChatGPT or Claude (web-based), Clawdbot:
+- **Works in your existing apps** (no new app to open)
+- **Remembers context** across conversations
+- **Can be proactive** (send you reminders, briefings)
+- **Runs locally** (your data stays private)
+- **Is free and open-source**
+
+---
+
+## Frequently Asked Questions (The Trending Ones)
+
+### "Do I need a Mac Mini to run Clawdbot?"
+
+**No!** This is a common myth. Clawdbot runs on:
+- Any Mac (including older ones)
+- Any Windows PC (via WSL2)
+- Any Linux computer
+- A cheap $5/month VPS server
+- AWS Free Tier (literally $0)
+
+People buy Mac Minis because they want a dedicated always-on device, but it's NOT required.
+
+### "Is Clawdbot free?"
+
+**The software is 100% free.** However, you need AI model access:
+- Use your Claude Pro/Max subscription ($20–100/month)
+- Use an Anthropic API key (pay-per-use)
+- Use OpenAI API (pay-per-use)
+- Use completely FREE local models (LM Studio)
+
+### "Is Clawdbot made by Anthropic/Claude?"
+
+**No.** Clawdbot is an independent, community-built project. It CAN use Claude (the AI model) but is not made by Anthropic.
+
+### "Is my data safe?"
+
+**Yes.** Everything runs on YOUR machine. Your conversations, files, and data never leave your control unless you explicitly connect to external services.
+
+### "Can non-technical people use it?"
+
+**Yes!** The onboarding wizard walks you through everything. If you can follow instructions and copy-paste commands, you can set it up.
+
+---
+
+## What Can Clawdbot Actually Do?
+
+### Real Use Cases People Love:
+
+1. **Personal Knowledge Manager**
+   - Send links, articles, ideas via Telegram
+   - Clawdbot summarizes and files them automatically
+
+2. **Meeting Prep Assistant**
+   - "What are my action items from last week?"
+   - "Summarize our project status"
+
+3. **Proactive Reminders**
+   - Morning briefings with your calendar
+   - Flight reminders, task follow-ups
+
+4. **Research Assistant**
+   - Web search and summarization
+   - Document analysis
+
+5. **Content Organization**
+   - Automatically categorize bookmarks
+   - Build structured notes from chaos
+
+---
+
+## System Requirements (Simple Version)
+
+| What You Need | Minimum |
+|--------------|---------|
+| **Computer** | Mac, Windows (WSL2), or Linux |
+| **Memory** | 2GB RAM |
+| **Storage** | 500MB free |
+| **Node.js** | Version 22 or higher |
+| **Internet** | Required for AI models |
+
+---
+
+## Installation Guide (Step-by-Step for Beginners)
+
+### Step 1: Check if You Have Node.js
+
+Open Terminal (Mac/Linux) or PowerShell (Windows) and type:
+
+```
+node --version
+```
+
+If you see `v22.x.x` or higher, skip to Step 2.
+
+**If not installed:** Visit https://nodejs.org and download the LTS version.
+
+### Step 2: Install Clawdbot
+
+**Mac/Linux:** Open Terminal and paste:
+```
+curl -fsSL https://clawd.bot/install.sh | bash
+```
+
+**Windows (in WSL2):** Same command in your WSL terminal.
+
+Wait 1-2 minutes for installation.
+
+### Step 3: Run the Setup Wizard
+
+Type:
+```
+clawdbot onboard
+```
+
+The wizard will ask you:
+1. **Gateway mode:** Choose "Local" (first time)
+2. **AI Model:** Pick Anthropic, OpenAI, or local models
+3. **Authentication:** Paste your API key or use Claude subscription
+4. **Messaging app:** WhatsApp, Telegram, Discord, etc.
+5. **Background service:** Choose "Yes" to run automatically
+
+### Step 4: Connect Your Messaging App
+
+**For Telegram (easiest):**
+1. Open Telegram, message `@BotFather`
+2. Type `/newbot` and follow prompts
+3. Copy the bot token
+4. Paste into the wizard
+
+**For WhatsApp:**
+1. Scan the QR code shown in terminal
+2. Done!
+
+### Step 5: Send Your First Message
+
+Message your bot: "Hello, what can you do?"
+
+🎉 **Congratulations!** You have a working AI assistant.
+
+---
+
+## Connecting Your AI Model (Detailed)
+
+### Option A: Claude Subscription (Recommended)
+
+If you have Claude Pro/Max:
+
+```
+claude setup-token
+```
+
+Copy the token and paste during wizard setup.
+
+### Option B: Anthropic API Key
+
+1. Go to https://console.anthropic.com
+2. Create an API key
+3. Paste when wizard asks
+
+### Option C: Free Local Models
+
+Use LM Studio for completely free, private AI:
+1. Download LM Studio
+2. Download a model (like Llama 3)
+3. Start the local server
+4. Configure Clawdbot to use it
+
+---
+
+## Troubleshooting Common Issues
+
+### "Command not found: clawdbot"
+
+Restart your terminal after installation.
+
+### "No credentials found"
+
+Re-run `clawdbot onboard` and set up authentication again.
+
+### "Rate limit error"
+
+Your AI provider quota is exhausted. Wait for reset or upgrade plan.
+
+### "Connection refused"
+
+The gateway isn't running. Start it with:
+```
+clawdbot gateway start
+```
+
+### Still stuck?
+
+Run these diagnostic commands:
+```
+clawdbot status
+clawdbot doctor
+clawdbot health
+```
+
+---
+
+## The $0 Setup (For the Budget-Conscious)
+
+Don't want to spend anything? Here's how:
+
+1. **Use AWS Free Tier** for hosting (750 hours/month free)
+2. **Use local models** (LM Studio + Llama 3 = $0)
+3. **Result:** A fully working AI assistant for free
+
+---
+
+## Next Steps After Setup
+
+1. **Customize your assistant's personality** in the SOUL.md file
+2. **Install skills** for specific tasks: `clawdbot skills install`
+3. **Set up scheduled routines** (morning briefings, reminders)
+4. **Explore the dashboard:** `clawdbot dashboard`
+
+---
+
+## Quick Reference Commands
+
+| Command | What It Does |
+|---------|-------------|
+| `clawdbot onboard` | Setup wizard |
+| `clawdbot status` | Check if running |
+| `clawdbot health` | Diagnose issues |
+| `clawdbot doctor` | Auto-fix common problems |
+| `clawdbot gateway start` | Start the service |
+| `clawdbot models status` | Check AI model connection |
+
+---
+
+## Resources
+
+- **Official Docs:** https://docs.clawd.bot
+- **GitHub:** https://github.com/clawdbot/clawdbot
+- **Discord Community:** https://discord.com/invite/clawd
+
+---
+
+## Summary
+
+Clawdbot is a game-changer for anyone who wants an AI assistant that:
+- Works in apps you already use
+- Runs on your own hardware
+- Remembers everything
+- Costs little to nothing
+- Keeps your data private
+
+You don't need a Mac Mini. You don't need to be technical. Follow this guide, and you'll have your own AI assistant running in under 30 minutes.
+
+**The future of personal AI is self-hosted. Welcome to the club.**
+
+
+---
+

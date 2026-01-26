@@ -52,7 +52,7 @@ For each row in `executive_universities.csv`:
     *   **Warm Intro Angle:** "Hey [Name], I noticed you also went to [University]. My CEO, [Exec_Name], is a fellow alum..."
 3.  **Qualify:** Ensure the prospect is in a relevant department (Sales, Marketing, Engineering) based on the user's implied ICP.
 
-### Phase 3: Output
+**Phase 3: Output**
 1.  **Compile:** Create `warm_alumni_leads.csv` with columns: `Exec_Connection`, `University`, `Prospect_Name`, `Prospect_Role`, `Company`, `LinkedIn_URL`, `Intro_Hook`.
 2.  **Summary:** "Identified [X] alumni matches. The strongest overlap is between [Exec_Name] and [Target_Company]."
 
@@ -113,7 +113,7 @@ For each Angel in the list:
     *   Check if they are **hiring** (signal of growth).
 4.  **Draft Context:** "I saw that [Angel_Name] invested in you. We work with many of their portfolio companies..."
 
-### Phase 3: Output
+**Phase 3: Output**
 1.  **Compile:** Create `angel_portfolio_leads.csv` with columns: `Angel_Backer`, `Company_Name`, `Founder`, `Website`, `Funding_Stage`, `Outreach_Context`.
 2.  **Summary:** "Found [X] active portfolio companies backed by the listed Angels."
 
@@ -244,9 +244,6 @@ For each segment in the CSV:
 
 Start now.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -466,25 +463,22 @@ Write complex Sales Nav queries without the headache.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Expansion
+**Phase 1: Expansion**
 For each row in `icp_descriptions.csv`:
 1.  **Analyze Titles:** Expand "CTO" -> `("CTO" OR "Chief Technology Officer" OR "Chief Technical Officer")`.
 2.  **Analyze Exclusions:** Identify negative keywords (e.g., "Staffing", "Recruiting", "Consultant").
 3.  **Analyze Geography/Industry:** Group them separately.
 
-### Phase 2: Construction
+**Phase 2: Construction**
 Build the string:
 `([Titles]) AND ([Industries]) AND ([Locations]) AND NOT ([Exclusions])`
 
 *Rule:* All operators must be CAPITALIZED.
 
-### Phase 3: Deliverables
+**Phase 3: Deliverables**
 1.  **Create:** `boolean_strings.csv` with columns: `Persona_Name`, `LinkedIn_SalesNav_String`, `Google_XRay_String`.
 2.  **Report:** "Generated strings for [X] personas. Ready to paste into LinkedIn."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -757,12 +751,10 @@ Personalized outreach for 100 prospects at once.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `prospects.csv` exist?
 2.  **If Missing:** Create `prospects.csv` with the sample data and headers.
 3.  **If Present:** Load the profiles.
 
-### Phase 2: The Deep Dive Loop
+**Phase 2: The Deep Dive Loop**
 For each prospect in the CSV:
 1.  **Read:** Use `web_fetch` to see their latest 3 posts.
 2.  **Analyze:** Find one *specific* sentence or idea they mentioned that relates to the `Target_Topic`.
@@ -770,13 +762,10 @@ For each prospect in the CSV:
     *   *The Observational:* "I loved your point about [X] in your recent post..."
     *   *The Value-Add:* "Since you're focused on [Y], have you seen this..."
 
-### Phase 3: Deliverable
+**Phase 3: Deliverable**
 1.  **Create:** `personalized_outreach.csv` with columns: `Name`, `Profile_URL`, `Draft_1`, `Draft_2`.
 2.  **Report:** "Successfully personalized outreach for [X] prospects. Ready for your review."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -821,12 +810,10 @@ Design a commission plan that drives growth.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input & Benchmarking
-1.  **Check:** Does `roles.csv` exist?
 2.  **If Missing:** Use `web_fetch` to research industry standard comp structures for a typical "Seed Stage SaaS" or "Creative Agency" and create a `benchmark_report.md`.
 3.  **If Present:** Load the role list for custom modeling.
 
-### Phase 2: The Comp Design Loop
+**Phase 2: The Comp Design Loop**
 For each role in the CSV:
 1.  **Calculate Quota:** Set quota at 5x-8x the industry standard OTE for the `Avg_Deal_Size`.
 2.  **Define Split:** Determine the Base/OTE split (e.g., 50/50 for AEs, 70/30 for CS).
@@ -836,13 +823,10 @@ For each role in the CSV:
     *   **Multi-year Bonus:** Add logic for increased commissions on longer contracts.
 4.  **Draft Plan:** Create `comp_plans/[Role]_comp_structure.md`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `sales_org_comp_summary.csv` with columns: `Role`, `Base_Salary`, `OTE`, `Quota`, `File_Path`.
 2.  **Report:** "Successfully designed [X] comp plans. Accelerators and clawback logic included in each file."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -887,23 +871,18 @@ Turn multiple speaker lists into one lead list.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Preparation
-1.  **Check:** Does `event_urls.csv` exist? If missing, create template.
 2.  **Initialize:** Create `master_conference_leads.csv` with headers: `Event,Name,Title,Company,Source_URL`.
 
-### Phase 2: The Scrape Loop
+**Phase 2: The Scrape Loop**
 For each URL in `event_urls.csv`:
 1.  **Fetch:** `web_fetch` the HTML.
 2.  **Extract:** Look for patterns like `<h3>[Name]</h3>` near `<span>[Company]</span>`.
 3.  **Clean:** Remove HTML tags and extra whitespace.
 
-### Phase 3: Final Output
+**Phase 3: Final Output**
 1.  **Append:** Write results to `master_conference_leads.csv`.
 2.  **Summary:** "Processed [X] conferences. Found [Y] total leads. master_conference_leads.csv is ready."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1551,24 +1530,19 @@ High-value hit lists for your entire conference calendar.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Event Loading
-1.  **Check:** Does `event_calendar.csv` exist? If missing, create template.
 2.  **Verify:** Ensure the associated `Attendee_File` exists in the current directory.
 
-### Phase 2: The Prospecting Loop
+**Phase 2: The Prospecting Loop**
 For each event in the calendar:
 1.  **Filter:** Scan the text file. Keep only those with target titles.
 2.  **Enrich:** For the Top 10 matches, find one "Recent Win" (e.g., funding, launch) via search.
 3.  **Draft:** Create a 1-sentence "Warm Intro" for each person.
 
-### Phase 3: The Hit List
+**Phase 3: The Hit List**
 1.  **Action:** Create a folder `event_game_plans/`.
 2.  **Save:** Save each list as `[Event_Name]_hitlist.csv`.
 3.  **Summary:** "Processed [X] events. Identified [Y] Tier-1 prospects."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1889,26 +1863,23 @@ Find the 10-K, Podcast, or Tweet that opens the door.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: The Hunt
+**Phase 1: The Hunt**
 For each company in `target_accounts.csv`:
 
 1.  **SEC Search:** If `Ticker` exists, search for the latest 10-K. Extract the top 3 "Risk Factors" listed in Item 1A.
 2.  **Media Search:** Search for `[CEO_Name] podcast interview 2024`. Find the top result and extract the episode title/topic.
 3.  **News Search:** Search for `[Company] press release` (last 90 days).
 
-### Phase 2: The Synthesis
+**Phase 2: The Synthesis**
 Draft a `[Company]_Dossier.md` with:
 *   **The Hook:** "In your latest 10-K, you mentioned [Risk Factor] as a threat to growth..."
 *   **The Bridge:** "On the [Podcast Name] episode, [CEO] discussed doubling down on [Topic]..."
 *   **The Pitch:** "We help mitigate [Risk] by..."
 
-### Phase 3: Deliverables
+**Phase 3: Deliverables**
 1.  **Output:** A folder `dossiers/` with individual markdowns.
 2.  **Summary:** `dossier_summary.csv` containing `Company`, `Key_Risk`, `Podcast_Topic`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1955,24 +1926,19 @@ Uncover 50 hidden openings across 10 niches.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Setup
-1.  **Check:** Does `niches_to_hunt.csv` exist? If missing, create template.
 
-### Phase 2: The Signal Loop
+**Phase 2: The Signal Loop**
 For each niche in the CSV:
 1.  **Search:** Find companies in [Niche] that raised >$10M in the last 60 days.
 2.  **Audit:** Visit their Careers page. Verify they do NOT have a listing for the `Target_Role`.
 3.  **Identify:** Find the CEO/Founder on LinkedIn.
 4.  **Hypothesize:** Based on the funding announcement, draft a "Hypothesis of Need" (e.g., "They raised to launch in Asia, but don't have a GM for APAC").
 
-### Phase 3: The Pitch Kit
+**Phase 3: The Pitch Kit**
 1.  **Draft:** Create 3 pitches for each valid opportunity.
 2.  **Save:** Create `ghost_job_opportunities.md` with the full dossiers.
 3.  **Summary:** "Found [X] ghost job opportunities. pitches are ready for DMing."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -2017,26 +1983,21 @@ Recruit from a specific repo or a tech niche.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Target Definition
-1.  **Check:** Does `target_repos.csv` exist?
 2.  **Logic:**
     *   *If Yes:* Use the provided list.
     *   *If No:* Ask for a "Tech Stack" (e.g., 'Rust'). Search GitHub for the top 5 most starred/active repos in that stack.
 
-### Phase 2: Contributor Audit
+**Phase 2: Contributor Audit**
 1.  **Identify:** For each repo, find the top 5 contributors from the last 90 days.
 2.  **Analyze:** Read 2 recent PRs for each user. Score them on:
     *   *Complexity:* (Fixing logic vs fixing typos).
     *   *Documentation:* (Clear comments and descriptions).
     *   *Helpfulness:* (Tone in code reviews).
 
-### Phase 3: The Talent Roster
+**Phase 3: The Talent Roster**
 1.  **Create:** `talent_roster.md`.
 2.  **Summary:** "Scanned [X] repos. Identified [Y] high-signal candidates. Talent dossier is ready."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -2487,9 +2448,6 @@ Save to `investor_update.md`.
 
 Start now.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -2593,12 +2551,10 @@ Attract 'A-Players', repel tourists.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `job_postings.csv` exist?
 2.  **If Missing:** Create `job_postings.csv` using the `sampleData`.
 3.  **If Present:** Load the role list.
 
-### Phase 2: The Optimization Loop
+**Phase 2: The Optimization Loop**
 For each role in the CSV:
 1.  **Draft The Mission:** Replace "About the Role" with a high-stakes mission statement (e.g., "Your goal is to own the mid-market segment and close $1.2M in ARR").
 2.  **Define the First 90 Days:** Create a clear timeline of expectations (Day 30, Day 60, Day 90).
@@ -2606,13 +2562,10 @@ For each role in the CSV:
 4.  **Transparent Comp:** Clearly state the `Target_Salary` and the bonus structure.
 5.  **Output:** Save to `optimized_jds/[Role]_jd.md`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `hiring_plan_summary.csv` with columns: `Role`, `OTE`, `Primary_Outcome`, `File_Path`.
 2.  **Report:** "Successfully optimized [X] job descriptions. Result-oriented JDs ready for LinkedIn and Indeed."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -2658,23 +2611,18 @@ Build a library of assets from customer pains.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `customer_segments.csv` exist? If missing, create it.
 
-### Phase 2: The Production Loop
+**Phase 2: The Production Loop**
 For each segment in the CSV:
 1.  **Ideate:** Create a "Utility Tool" idea (e.g., "The Profitability Calculator").
 2.  **Outline:** Draft the 5 key sections of the asset.
 3.  **Draft:** Write the Landing Page headline and subhead.
 
-### Phase 3: Packaging
+**Phase 3: Packaging**
 1.  **Action:** Create a folder `lead_magnet_briefs/`.
 2.  **Save:** Save each brief as `[Segment].md`.
 3.  **Report:** "Generated [X] lead magnet briefs in /lead_magnet_briefs. Ready for design."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -2776,24 +2724,19 @@ Verified local leads for 50 cities in one run.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Setup
-1.  **Check:** Does `prospecting_targets.csv` exist? If missing, create template.
 2.  **Initialize:** Create `master_local_prospects.csv` with headers: `Niche,City,Business_Name,Website,Contact_Name,Rating,Review_Count,Status`.
 
-### Phase 2: The Discovery Loop
+**Phase 2: The Discovery Loop**
 For each row in the CSV:
 1.  **Broad Search:** Find the top 10 unique businesses for the [Niche] in [Location].
 2.  **Verify:** Visit each site to ensure it's alive.
 3.  **Audit:** Extract Google/Yelp rating. Flag those with 3.5-4.2 stars as "Prime Leads" (Reputation management needed).
 4.  **Identify:** Find the specific name of the Owner/Manager via LinkedIn.
 
-### Phase 3: Consolidation
+**Phase 3: Consolidation**
 1.  **Append:** Write verified results to `master_local_prospects.csv`.
 2.  **Summary:** "Built lead lists for [X] markets. Found [Y] total verified businesses."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -2839,28 +2782,23 @@ Clone your best customers or competitors.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input & Blueprinting
-1.  **Check:** Does `targets.csv` exist?
 2.  **If Missing:** Use `web_fetch` to research your own product URL and find your top 3 competitors. Use them as the initial "Golden Targets" and create a `market_map.md`.
 3.  **If Present:** Load the target list for cloning.
 
-### Phase 2: The Signal Extraction Loop
+**Phase 2: The Signal Extraction Loop**
 For each target in the CSV:
 1.  **Analyze Blueprint:** Use `web_fetch` to identify the target's `Tech_Stack`, `Ideal_Customer`, and `Core_Offering`.
 2.  **Identify Markers:** Pinpoint specific attributes (e.g., "Uses Salesforce", "B2B SaaS with >$100/mo pricing").
 
-### Phase 3: The Cloning Loop
+**Phase 3: The Cloning Loop**
 1.  **Search:** Find 10-20 companies matching the extracted `Blueprint` for each target.
 2.  **Qualify:** Check for "Growth Triggers" like recent funding or hiring surges in key departments.
 3.  **Consolidate:** Merge all found leads into a single master list.
 
-### Phase 4: Structured Deliverables
+**Phase 4: Structured Deliverables**
 1.  **Create:** `golden_lookalike_leads.csv` with columns: `Name`, `Website`, `Matched_Profile`, `Growth_Trigger`, `Fit_Score`.
 2.  **Report:** "Successfully cloned [X] profiles. [Y] high-precision leads identified for outreach."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -3416,12 +3354,10 @@ Cheaper leads than a PDF.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `products.csv` exist?
 2.  **If Missing:** Create `products.csv` using the `sampleData`.
 3.  **If Present:** Load the product list.
 
-### Phase 2: The Funnel Design Loop
+**Phase 2: The Funnel Design Loop**
 For each product in the CSV:
 1.  **Draft the Hook:** Create an irresistible quiz title (e.g., "What's Your [Niche] IQ?").
 2.  **Design 5 Questions:**
@@ -3432,13 +3368,10 @@ For each product in the CSV:
 4.  **Draft CTA:** Create a personalized "Next Step" for each profile linking to the `Product_Name`.
 5.  **Output:** Save to `quiz_funnels/[Product_Name]_funnel.md`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `quiz_master_manifest.csv` with columns: `Product_Name`, `Quiz_Title`, `Primary_Segment_Variable`, `File_Path`.
 2.  **Report:** "Successfully designed [X] quiz funnels. High-conversion diagnostic flows ready for implementation."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -3484,10 +3417,8 @@ Monitor 50 subreddits for buying signals.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Preparation
-1.  **Check:** Does `reddit_monitor.csv` exist? If missing, create template.
 
-### Phase 2: The Sweep Loop
+**Phase 2: The Sweep Loop**
 For each row in the CSV:
 1.  **Search:** Look for posts in `Subreddit` containing `Keyword` from the last 48 hours.
 2.  **Filter:** Only keep posts that match the `Intent_Signal`.
@@ -3496,13 +3427,10 @@ For each row in the CSV:
     *   *Step 2:* Give generic advice ("You should look for a tool that does Y").
     *   *Step 3:* Mention product ("We built [Product] specifically for this...").
 
-### Phase 3: Deliverable
+**Phase 3: Deliverable**
 1.  **Create:** `reddit_opportunities.md` listing the Post URL and the Draft Comment.
 2.  **Summary:** "Found [X] buying signals across [Y] subreddits."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -3610,12 +3538,10 @@ Draft complex proposals instantly.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `rfps.csv` exist?
 2.  **If Missing:** Create `rfps.csv` using the `sampleData`.
 3.  **If Present:** Load the RFP list.
 
-### Phase 2: The Drafting Loop
+**Phase 2: The Drafting Loop**
 For each RFP in the CSV:
 1.  **Decompose:** Extract individual requirements from the `Requirement_Text`.
 2.  **Map Capabilities:** For each point:
@@ -3625,13 +3551,10 @@ For each RFP in the CSV:
 3.  **Draft Executive Summary:** Create a 3-paragraph summary focused on the `Budget_Tier` and why the company is the lowest-risk partner.
 4.  **Output:** Save to `drafts/[Project_Name]_response.md`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `rfp_pipeline_tracker.csv` with columns: `Project_Name`, `Requirement_Count`, `Compliance_Match_%`, `File_Path`.
 2.  **Report:** "Successfully drafted [X] RFP responses. High-priority 'Public Sector' requirements flagged for legal review."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -3733,12 +3656,10 @@ Custom assessments for any sales role.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `open_roles.csv` exist?
 2.  **If Missing:** Create `open_roles.csv` using the `sampleData`.
 3.  **If Present:** Load the role list.
 
-### Phase 2: The Assessment Loop
+**Phase 2: The Assessment Loop**
 For each role in the CSV:
 1.  **Identify Success Skills:** Map the `Core_Challenge` to 3 specific skills (e.g., "Stakeholder Mapping", "Objection Neutralization").
 2.  **Draft Questions:** Generate 5 behavioral questions using the STAR method (Situation, Task, Action, Result) tailored to the `Product_Price_Point`.
@@ -3746,13 +3667,10 @@ For each role in the CSV:
 4.  **Create Scorecard:** Define "Green Flags" (What good looks like) and "Red Flags" for each question.
 5.  **Output:** Save to `interview_kits/[Role]_assessment.md`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `hiring_assessment_summary.csv` with columns: `Role`, `Primary_Skill_Tested`, `Challenge_Type`, `File_Path`.
 2.  **Report:** "Successfully designed [X] interview kits. Behavioral scorecards ready for your hiring managers."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -3854,12 +3772,10 @@ Build custom 30-day onboarding plans.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `hires.csv` exist?
 2.  **If Missing:** Create `hires.csv` using the `sampleData`.
 3.  **If Present:** Load the hire list.
 
-### Phase 2: The Ramp Planning Loop
+**Phase 2: The Ramp Planning Loop**
 For each hire in the CSV:
 1.  **Map Foundations (Week 1):** Focus on `Tech_Stack` training and industry lingo. Include "Shadowing 5 calls" as a requirement.
 2.  **Map Launch (Week 2-3):** Set activity targets (Emails/Calls) that scale toward the `Target_Quota`.
@@ -3867,13 +3783,10 @@ For each hire in the CSV:
 4.  **Create Knowledge Check:** Draft a 5-question quiz for the end of Week 1 to verify product understanding.
 5.  **Output:** Save to `onboarding_plans/[Hire_Name]_ramp_plan.md`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `onboarding_master_calendar.csv` with columns: `Hire_Name`, `Role`, `Ramp_Milestone_Day_14`, `File_Path`.
 2.  **Report:** "Successfully designed [X] onboarding schedules. Time-to-first-meeting optimized for each role."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -3975,23 +3888,18 @@ Find 50 enterprise companies using legacy tech.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Market Setup
-1.  **Check:** Does `legacy_tech_markers.csv` exist? If missing, create template.
 
-### Phase 2: The Hunt Loop
+**Phase 2: The Hunt Loop**
 For each row in the CSV:
 1.  **Discovery:** Find 10 domains in the `Ideal_Industry` using the `Tech_Marker`.
 2.  **Qualify:** Use search snippets to verify company size (>500 employees).
 3.  **Enrich:** Find the name of the "CTO" or "VP Engineering" hired in the last 6 months.
 4.  **Calculate:** Estimate the "Cost of Inaction" (e.g., security risk or speed loss).
 
-### Phase 3: The Target List
+**Phase 3: The Target List**
 1.  **Create:** `sleeping_giants_list.csv` with columns: `Company,Legacy_Tech,Key_Contact,Hypothesis_of_Pain`.
 2.  **Summary:** "Found [X] enterprise accounts stuck on [Tech]. High-value list is ready."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -4036,23 +3944,18 @@ Find 100 leads asking for help across Reddit & LinkedIn.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Signal Setup
-1.  **Check:** Does `intent_keywords.csv` exist? If missing, create template.
 
-### Phase 2: The Listening Loop
+**Phase 2: The Listening Loop**
 For each row in the CSV:
 1.  **Execute:** Run advanced search queries for `[Keyword] "looking for"` or `[Keyword] "help needed"`.
 2.  **Filter:** Ignore vendor spam and bot posts. Keep only genuine users.
 3.  **Audit:** Categorize the "Pain" (Price vs UX vs Gap).
 4.  **Score:** Assign an Urgency Score (1-10) based on the time-sensitivity of the post.
 
-### Phase 3: Lead Export
+**Phase 3: Lead Export**
 1.  **Create:** `high_intent_social_leads.csv` with columns: `Source_URL,Category,Urgency,Contact_Handle`.
 2.  **Summary:** "Processed [X] signals. Identified [Y] high-urgency leads ready for DMing."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---

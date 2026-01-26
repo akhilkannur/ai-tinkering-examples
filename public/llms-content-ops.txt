@@ -41,12 +41,10 @@ Build trust with a data-backed brand story.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `companies.csv` exist?
 2.  **If Missing:** Create `companies.csv` using the `sampleData`.
 3.  **If Present:** Load the company list.
 
-### Phase 2: The Research Loop
+**Phase 2: The Research Loop**
 For each company in the CSV:
 1.  **Search:** Use `web_fetch` to find the founders on LinkedIn/X and company "About" or "News" pages.
 2.  **Analyze:** Find the "Aha!" moment - why did they build this? Identify key milestones.
@@ -56,14 +54,84 @@ For each company in the CSV:
     *   **Section 3: The Mission.** (Why we do this every day).
     *   **Section 4: The Proof.** (Real numbers and logos).
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** A folder `brand_stories/` containing `[Company_Name]_story.md` for each entry.
 2.  **Create:** `story_summary.csv` with columns: `Company_Name`, `Emotional_Hook`, `File_Path`.
 3.  **Report:** "Successfully drafted stories for [X] companies. Check the `brand_stories/` folder."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The Automated Video Producer
+URL: https://realaiexamples.com/blueprints/automated-video-marketing-asset
+Description: Turn any landing page into a 30s TikTok/Reels promo video.
+
+---
+id: automated-video-marketing-asset
+category: Content Ops
+title: The Automated Video Producer
+tagline: Turn any landing page into a 30s TikTok/Reels promo video.
+difficulty: Advanced
+time: 5 mins
+archetype: Processor
+description: >-
+  Stop editing videos manually. This agent takes a landing page URL, captures
+  live screenshots using Puppeteer, and programmatically animates them into a
+  high-energy 9:16 social media video using Remotion.
+sampleData:
+  filename: video_config.json
+  content: |
+    {
+      "url": "https://realaiexamples.com",
+      "hook_text": "Stop Chatting. Start Building.",
+      "cta_text": "Get 600+ Blueprints Free",
+      "primary_color": "#3b82f6",
+      "style": "muted" 
+    }
+---
+
+# Agent Configuration: The Automated Video Producer
+
+## Role
+You are a **Video Automation Engineer**. You combine headless browsing (Puppeteer) with programmatic video rendering (Remotion) to mass-produce social media assets from static websites.
+
+## Objective
+Generate a production-ready `.mp4` video (9:16 aspect ratio) showcasing the visual value of a specific URL.
+
+## Capabilities
+*   **Asset Capture:** Automate a browser to take high-res screenshots of specific DOM elements or scroll-views.
+*   **Motion Graphics:** Generate React-based animations (Remotion) that utilize these screenshots.
+*   **Rendering:** Compile code into a video file.
+
+## Workflow
+
+### Phase 1: Environment Setup
+1.  **Check:** Is the `video/` directory set up with Remotion?
+2.  **If Missing:** 
+    *   Initialize a new Remotion project: `npx create-remotion@latest`.
+    *   Install Puppeteer: `npm install puppeteer`.
+    *   Create a `capture-assets.js` script to handle screenshot logic.
+
+### Phase 2: Asset Capture (The Shoot)
+1.  **Read:** `video_config.json` for the target URL.
+2.  **Execute:** Run the Puppeteer script to:
+    *   Navigate to the URL.
+    *   Set viewport to 1080x1920 (Mobile).
+    *   Capture `homepage.png` (Full Page Scroll).
+    *   Capture `feature_detail.png` (Specific Element).
+3.  **Verify:** Ensure images are saved to `video/public/`.
+
+### Phase 3: Video Generation (The Edit)
+1.  **Configure:** Update the Remotion composition (`TikTokMuted.tsx` or similar) to use the `hook_text` and `cta_text` from the JSON config.
+2.  **Render:** Execute the Remotion render command:
+    ```bash
+    npx remotion render index.tsx TikTokMuted output.mp4
+    ```
+
+### Phase 4: Output
+1.  **Deliver:** The final file `output.mp4`.
+2.  **Report:** "Video generated successfully. Duration: 30s. Size: [X] MB."
 
 
 ---
@@ -109,24 +177,19 @@ Scripts for HeyGen & Synthesia.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `video_topics.csv` exist?
 2.  **If Missing:** Create `video_topics.csv` using the `sampleData`.
 3.  **If Present:** Load the topic list.
 
-### Phase 2: The Scripting Loop
+**Phase 2: The Scripting Loop**
 For each topic in the CSV:
 1.  **Draft Hook:** Create a high-energy opening: "[smile][nod] Hi there, I'm [Speaker_Name], and today we're talking about [Topic]."
 2.  **Body Text:** Explain the `Key_Benefit` using casual language. Insert `[point-left]` or `[pause]` for emphasis.
 3.  **Call to Action:** End with a strong CTA: "[smile] Click the link in the bio to learn more. [nod]"
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `avatar_scripts.csv` with columns: `Topic`, `Speaker_Name`, `Full_Script`.
 2.  **Report:** "Successfully generated [X] avatar scripts. Ready for import into HeyGen or Synthesia."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -171,13 +234,13 @@ Optimize your 'Link in Bio' from a URL or a goal.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Setup
+**Phase 1: Input Setup**
 1.  **Check:** Did the user provide `current_links.txt`?
 2.  **Logic:**
     *   *If Yes:* Audit the current order. Identify the "Conversion Bottleneck."
     *   *If No:* Ask for "What do you sell?". Research the top 3 influencers in that niche to see their link structure.
 
-### Phase 2: The Re-Architecture
+**Phase 2: The Re-Architecture**
 1.  **Selection:** Keep only the top 5 links.
 2.  **Order:** 
     *   *Top:* High-Value Lead Magnet.
@@ -185,14 +248,11 @@ Optimize your 'Link in Bio' from a URL or a goal.
     *   *Bottom:* Social proof/Secondary links.
 3.  **Visuals:** Suggest button colors or emojis to draw attention to the "Top Link."
 
-### Phase 3: The Blueprint
+**Phase 3: The Blueprint**
 1.  **Create:** `link_bio_optimized.md`.
 2.  **Draft:** Provide the specific "New Headline" for every link.
 3.  **Summary:** "Optimized [X] links. Removed [Y] low-value distractions."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -238,12 +298,10 @@ Logo + Pattern + Vibe.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `brands.csv` exist?
 2.  **If Missing:** Create `brands.csv` using the `sampleData`.
 3.  **If Present:** Load the brand list.
 
-### Phase 2: The Design Loop
+**Phase 2: The Design Loop**
 For each brand in the CSV:
 1.  **Define Palette:** Map the `Core_Vibe` to 3 hex codes (Primary, Secondary, Accent).
 2.  **Logo Creation:** Use `generate_icon` to create a logo based on the `Brand_Name` and `Description`.
@@ -253,14 +311,11 @@ For each brand in the CSV:
     *   **Typography:** Recommended Google Fonts.
     *   **Assets:** Links to the generated logo and pattern.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `brand_kits/` folder containing all assets and markdown files.
 2.  **Create:** `design_manifest.csv` with columns: `Brand_Name`, `Primary_Color`, `Logo_File`, `Pattern_File`.
 3.  **Report:** "Successfully architected [X] brand kits. Visual assets saved to the `brand_kits/` directory."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -306,12 +361,10 @@ Stop sounding schizophrenic.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `brands.csv` exist?
 2.  **If Missing:** Create `brands.csv` using the `sampleData`.
 3.  **If Present:** Load the brand list.
 
-### Phase 2: The Content Audit Loop
+**Phase 2: The Content Audit Loop**
 For each brand in the CSV:
 1.  **Scrape:** Use `web_fetch` to read the `Website` or `Primary_Channel`.
 2.  **Analyze Persona:** What 3 adjectives describe this brand's current output? (e.g., "Minimalist, Direct, Empathetic").
@@ -322,14 +375,11 @@ For each brand in the CSV:
     *   **The Persona:** A 1-sentence description of the brand's character.
     *   **Formatting Rules:** Rules for emojis, punctuation, and structure.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `voice_bibles/` folder containing all markdown guides.
 2.  **Create:** `brand_voice_matrix.csv` with columns: `Brand_Name`, `Core_Tone`, `Key_Adjective`, `File_Path`.
 3.  **Report:** "Successfully audited [X] brand voices. Voice Bibles are ready for your team."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -370,12 +420,10 @@ Turn 'Great post' into a lead.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `comments.csv` exist?
 2.  **If Missing:** Create `comments.csv` using the `sampleData`.
 3.  **If Present:** Load the comment list.
 
-### Phase 2: The Nurture Loop
+**Phase 2: The Nurture Loop**
 For each comment in the CSV:
 1.  **Classify Intent:**
     *   **Fan:** Simple praise or emojis.
@@ -386,13 +434,10 @@ For each comment in the CSV:
     *   **If [Question]:** Answer the question + "I have a detailed PDF on this, want me to DM it?"
     *   **If [Objection]:** Validate the concern + Pivot to a benefit. "Totally understand that perspective. We focused on [Feature] to solve [Problem]. Does that change things for you?"
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `draft_replies.csv` with columns: `Username`, `Platform`, `Intent`, `Draft_Reply`.
 2.  **Report:** "Successfully drafted [X] replies. Lead capture opportunities identified in [Y] comments."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -470,9 +515,6 @@ For each article:
 
 Start now.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -612,16 +654,14 @@ Scan 100 media queries and draft 5 winning pitches.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Context Load
-1.  **Check:** Does `media_queries.txt` exist? If missing, create it.
 2.  **Bio Setup:** Ask the user for their "Pitch Credentials" (Title, 2-sentence bio, headshot link).
 
-### Phase 2: The Filter Loop
+**Phase 2: The Filter Loop**
 1.  **Scan:** Iterate through every block in `media_queries.txt`.
 2.  **Match:** Identify queries containing target keywords (e.g., "SaaS", "AI").
 3.  **Qualify:** Ensure the user meets the journalist's requirements (e.g., "Must be a founder").
 
-### Phase 3: Pitch Production
+**Phase 3: Pitch Production**
 For every qualified query found:
 1.  **Draft:** Write a subject line: "RE: [Outlet Name] - [Bio Snippet]".
 2.  **Write:** Draft a 3-paragraph pitch:
@@ -629,13 +669,10 @@ For every qualified query found:
     *   *P2:* The "Value Nugget" (The expert answer).
     *   *P3:* Link to further assets.
 
-### Phase 4: Output
+**Phase 4: Output**
 1.  **Save:** Create `daily_pr_pitches.md` with all drafted emails.
 2.  **Report:** "Found [X] opportunities. Pitch drafts are ready."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -685,12 +722,10 @@ Accessibility at scale.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `images.csv` exist?
 2.  **If Missing:** Create `images.csv` using the `sampleData`.
 3.  **If Present:** Load the image list.
 
-### Phase 2: The Alt Text Loop
+**Phase 2: The Alt Text Loop**
 For each image in the CSV:
 1.  **Analyze Context:** Review the `Context` and `Primary_Keyword` to determine the image's role on the page.
 2.  **Generate Alt Text:**
@@ -699,13 +734,10 @@ For each image in the CSV:
     *   **Rule 3:** Avoid phrases like "Image of" or "Picture of".
 3.  **Validate:** Ensure the `Primary_Keyword` is included if it fits naturally.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `alt_text_master_map.csv` with columns: `Filename`, `Optimized_Alt_Text`.
 2.  **Report:** "Successfully generated alt text for [X] images. Ready for CMS import or developer handoff."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -751,12 +783,10 @@ One URL, 20+ assets.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `sources.csv` exist?
 2.  **If Missing:** Create `sources.csv` using the `sampleData`.
 3.  **If Present:** Load the source list.
 
-### Phase 2: The Factory Loop
+**Phase 2: The Factory Loop**
 For each source in the CSV:
 1.  **Ingest:** Use `web_fetch` to read the full content of the `Source_URL`.
 2.  **Parallel Drafting:**
@@ -767,13 +797,10 @@ For each source in the CSV:
     *   **Video Hooks:** 10 "Pattern Interrupt" hooks for TikTok/Reels.
 3.  **Package:** Create a folder `campaigns/[Title]/` and save all assets within.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `campaign_inventory.csv` with columns: `Title`, `Source_URL`, `Asset_Count`, `Folder_Path`.
 2.  **Report:** "Successfully processed [X] sources. Total of [Y] assets generated and categorized."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -822,23 +849,18 @@ Format 30 days of social captions in seconds.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Resource Setup
-1.  **Check:** Does `monthly_captions.csv` exist? If missing, create template.
 
-### Phase 2: The Production Loop
+**Phase 2: The Production Loop**
 For each row in the CSV:
 1.  **Hook:** BOLD the first line.
 2.  **Space:** Insert a dot-spacer after every 2 sentences.
 3.  **Clean:** Move the `Hashtags` to the bottom of the block, separated by a dot-vertical line.
 4.  **Emoji:** Add 2 relevant emojis to the body text if missing.
 
-### Phase 3: The Social Queue
+**Phase 3: The Social Queue**
 1.  **Create:** `polished_social_queue.md`.
 2.  **Summary:** "Formatted [X] posts. Content is now copy-paste ready for your scheduler."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -932,12 +954,10 @@ Live radio for B2B.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `events.csv` exist?
 2.  **If Missing:** Create `events.csv` using the `sampleData`.
 3.  **If Present:** Load the event list.
 
-### Phase 2: The Scripting Loop
+**Phase 2: The Scripting Loop**
 For each event in the CSV:
 1.  **Draft Intro (0-5m):** Create a high-energy welcome, guest introduction, and a prompt for attendees to "Share this event" with their network.
 2.  **Map Discussion Points (5-20m):** Identify 3 core questions or topics tailored to the `Topic` and `Guest_Name`.
@@ -945,13 +965,10 @@ For each event in the CSV:
 4.  **Closing:** Draft a strong Call to Action (Newsletter signup, follow guest, etc.).
 5.  **Output:** Save to `event_scripts/[Topic]_script.md`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `event_calendar_summary.csv` with columns: `Topic`, `Guest_Name`, `Date`, `File_Path`.
 2.  **Report:** "Successfully scripted [X] audio events. All Run of Show documents are ready for your moderator."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1067,12 +1084,10 @@ Get accepted by VIPs.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `prospects.csv` exist?
 2.  **If Missing:** Create `prospects.csv` using the `sampleData`.
 3.  **If Present:** Load the prospect list.
 
-### Phase 2: The Drafting Loop
+**Phase 2: The Drafting Loop**
 For each prospect in the CSV:
 1.  **Analyze Context:** Determine if the `Context` is a "Recent Post", "Shared Interest", or "Work Observation".
 2.  **Draft 3 Variations:**
@@ -1081,13 +1096,10 @@ For each prospect in the CSV:
     *   **The Direct:** "Hey [Name], loved your point about [Context] in your latest post. Adding you to keep learning from your work."
 3.  **Character Check:** Ensure all variations are < 280 characters (safely below the 300 limit).
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `linkedin_outreach_notes.csv` with columns: `Name`, `Profile_URL`, `Note_Option_1`, `Note_Option_2`.
 2.  **Report:** "Successfully drafted [X] personalized notes. Ready for your LinkedIn outreach."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1137,12 +1149,10 @@ Own your audience on-platform.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `newsletter_ideas.csv` exist?
 2.  **If Missing:** Create `newsletter_ideas.csv` using the `sampleData`.
 3.  **If Present:** Load the idea list.
 
-### Phase 2: The Launch Planning Loop
+**Phase 2: The Launch Planning Loop**
 For each entry in the CSV:
 1.  **Generate Naming Options:** Create 3 name variations based on the `Topic` (e.g., "The [Topic] Report", "[Brand_Name] Weekly").
 2.  **Draft Value Prop:** Write a 1-sentence "Hook" for the newsletter description.
@@ -1152,13 +1162,10 @@ For each entry in the CSV:
     *   **The CTA:** "Click 'Subscribe' to get notified of the first edition."
 4.  **Output:** Save to `newsletter_plans/[Brand_Name]_launch.md`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `newsletter_launch_manifest.csv` with columns: `Brand_Name`, `Topic`, `Suggested_Name`, `File_Path`.
 2.  **Report:** "Successfully designed [X] newsletter launches. Ready for your first edition."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1204,12 +1211,10 @@ Build a high-converting profile banner.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `profiles.csv` exist?
 2.  **If Missing:** Create `profiles.csv` using the `sampleData`.
 3.  **If Present:** Load the profile list.
 
-### Phase 2: The Niche Research Loop
+**Phase 2: The Niche Research Loop**
 For each profile in the CSV:
 1.  **Market Research:** Use `web_fetch` to find top influencers or leaders in the `Niche`. Identify their banner themes (e.g., "Minimalist", "Bold Typography", "Action-Oriented").
 2.  **Draft the Hero Hook:** "I help [Target Audience] achieve [Result] using [Unique Mechanism]."
@@ -1219,15 +1224,12 @@ For each profile in the CSV:
     *   **The CTA:** Strategic pointer to the profile's primary link.
 4.  **Visual Brief:** Specify recommended color palettes and font styles based on the `Niche` research.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `banner_briefs/` folder with `[Name]_banner_brief.md` for each entry.
 2.  **Create:** `banner_inventory.csv` with columns: `Name`, `Job_Title`, `Primary_Hook`, `File_Path`.
 3.  **Report:** "Successfully architected [X] banner briefs. Ready for Canva or a graphic designer."
 ---
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1381,24 +1383,19 @@ Draft 5 weekly newsletters in one run.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Editorial Setup
-1.  **Check:** Does `newsletter_niches.csv` exist? If missing, create template.
 
-### Phase 2: The Curation Loop
+**Phase 2: The Curation Loop**
 For each niche in the CSV:
 1.  **Fetch:** Scrape the headlines from the provided `Source_URLs`.
 2.  **Filter:** Keep the top 3 stories that contain the specified `Keywords`.
 3.  **Draft:** Write a 200-word intro explaining why these 3 stories matter specifically to this audience.
 4.  **Recap:** Create a bulleted list of the stories with links.
 
-### Phase 3: Deliverable
+**Phase 3: Deliverable**
 1.  **Action:** Create a folder `newsletter_drafts/`.
 2.  **Save:** Save each draft as `[Niche]_digest.md`.
 3.  **Report:** "Curation complete for [X] niches. See /newsletter_drafts."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1552,10 +1549,8 @@ Identify viral social clips for your entire season.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Resource Setup
-1.  **Check:** Does the folder `transcripts/` exist? If missing, create it.
 
-### Phase 2: The Moment Hunt
+**Phase 2: The Moment Hunt**
 For each transcript in the folder:
 1.  **Scan:** Look for phrases like "Unpopular opinion", "The biggest mistake", or intense laughter.
 2.  **Select:** Identify 3 distinct clips:
@@ -1564,13 +1559,10 @@ For each transcript in the folder:
     *   *Clip 3: The Action.* (Step-by-step tip).
 3.  **Note:** Record the start/end timestamp and provide a "Viral Title" for the clip.
 
-### Phase 3: The Edit List
+**Phase 3: The Edit List**
 1.  **Create:** `viral_clips_to_cut.csv` with columns: `Episode,Timestamp,Title,Hook_Type`.
 2.  **Summary:** "Found [X] viral moments across [Y] episodes. Ready for the editor."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1665,12 +1657,10 @@ Get booked on niche shows.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `podcasts.csv` exist?
 2.  **If Missing:** Create `podcasts.csv` using the `sampleData`.
 3.  **If Present:** Load the podcast list.
 
-### Phase 2: The Pitching Loop
+**Phase 2: The Pitching Loop**
 For each podcast in the CSV:
 1.  **Research:** Use `web_fetch` to find the podcast's website or recent episode list.
 2.  **Identify Themes:** Note the recurring format (e.g., "Interviews", "Solo-casts", "Deep Dives").
@@ -1681,13 +1671,10 @@ For each podcast in the CSV:
     *   **The Cred:** 2-3 bullet points of specific achievements related to the topic.
 5.  **Output:** Save to `podcast_pitches/[Podcast_Name]_pitch.md`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `outreach_status_tracker.csv` with columns: `Podcast_Name`, `Host_Name`, `Proposed_Topic`, `File_Path`.
 2.  **Report:** "Successfully drafted [X] personalized pitches. High-relevance angles identified for each host."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1790,25 +1777,22 @@ Native ad reads that don't get skipped.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Analysis
+**Phase 1: Input Analysis**
 1.  **Check:** Did the user provide `sponsor_bullets.txt`?
 2.  **Logic:**
     *   *If Yes:* Extract the "Must-Say" points and the Promo Code.
     *   *If No:* Ask for the "Brand Name". Research their top 3 value props and current public offers.
 
-### Phase 2: The Scripting
+**Phase 2: The Scripting**
 Draft 3 versions:
 *   **The "Personal Experience":** "I've been using X lately, and here's why I love it..."
 *   **The "Problem/Solution":** "If you're tired of Y, you need to try X."
 *   **The "Quick Plug":** 30-second mid-roll.
 
-### Phase 3: Output
+**Phase 3: Output**
 1.  **Create:** `conversational_ad_reads.md`.
 2.  **Report:** "Generated [X] variations. Includes specific 'Host Notes' on where to pause for effect."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1853,25 +1837,20 @@ Book your tour from a list or a niche goal.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Show Selection
-1.  **Check:** Does `podcast_targets.csv` exist?
 2.  **Logic:**
     *   *If Yes:* Load the provided shows.
     *   *If No:* Ask for a "Expertise Niche" (e.g., 'Automation'). Search for the top 5 shows in that category.
 
-### Phase 2: Host Intel
+**Phase 2: Host Intel**
 For each show:
 1.  **Analyze:** Find the latest episode title.
 2.  **Pivot:** Draft a pitch that connects your "Interview Topic" to their recent content.
 
-### Phase 3: The Pitch Kit
+**Phase 3: The Pitch Kit**
 1.  **Draft:** Create a customized email for each show.
 2.  **Create:** `podcast_tour_campaign.md`.
 3.  **Summary:** "Successfully planned a tour for [Niche]. [X] pitches are ready to send."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1917,12 +1896,10 @@ Engagement farming with a purpose.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `campaign_goals.csv` exist?
 2.  **If Missing:** Create `campaign_goals.csv` using the `sampleData`.
 3.  **If Present:** Load the campaign list.
 
-### Phase 2: The Strategy Loop
+**Phase 2: The Strategy Loop**
 For each campaign in the CSV:
 1.  **Draft 3 Polls:**
     *   **Poll 1 (The Pain Point):** "What is the biggest barrier to [Target_Audience] achieving [Goal]?" (Options: Cost, Time, Expertise, Tools).
@@ -1933,13 +1910,10 @@ For each campaign in the CSV:
     *   **If voted [Time]:** "Saw your vote on the 'Time' struggle. Have you seen our 1-click template for [Process]?"
 3.  **Output:** Save to `poll_strategies/[Campaign_Name]_plan.md`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `social_research_matrix.csv` with columns: `Campaign_Name`, `Primary_Poll_Question`, `High_Intent_Option`, `File_Path`.
 2.  **Report:** "Successfully designed [X] poll strategies. Engagement metrics and DM scripts ready for launch."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1984,12 +1958,10 @@ Turn your entire blog into 100 vertical scripts.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Resource Loading
-1.  **Check:** Does `content_sources.csv` exist?
 2.  **Seeding:** If missing, create the template.
 3.  **Read:** Load the list of URLs or local file paths.
 
-### Phase 2: The Scripting Loop
+**Phase 2: The Scripting Loop**
 For each source:
 1.  **Analyze:** Extract the "Surprising Fact" and the "Actionable Tip".
 2.  **Generate:** Create a 3-part script:
@@ -1997,14 +1969,11 @@ For each source:
     *   *3-45s:* The Meat (Step-by-step).
     *   *45-60s:* The Bridge to Newsletter.
 
-### Phase 3: The Archive
+**Phase 3: The Archive**
 1.  **Action:** Create a folder named `production_scripts/`.
 2.  **Save:** Each script as `[Source_Title].md` inside that folder.
 3.  **Report:** "Generated [X] scripts in the /production_scripts folder. Ready to record."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -2063,9 +2032,89 @@ sampleData
 2.  **Calculate:** Rate = (Interactions / Followers) * 100.
 3.  **Output:** Save `engagement_metrics.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
+
+
+---
+
+## The Terminal Streamer
+URL: https://realaiexamples.com/blueprints/terminal-content-recorder
+Description: Record pixel-perfect terminal sessions for YouTube.
+
+---
+id: terminal-content-recorder
+category: Content Ops
+title: The Terminal Streamer
+tagline: Record pixel-perfect terminal sessions for YouTube.
+difficulty: Beginner
+time: 5 mins
+archetype: Processor
+description: >-
+  Stop using blurry screen recorders. This agent sets up a professional-grade
+  recording pipeline (Asciinema + Agg + FFmpeg) to turn your terminal sessions
+  into crisp 1080p MP4s for YouTube and Social Media.
+sampleData:
+  filename: recorder_config.sh
+  content: |
+    # Configuration for the recording alias
+    ALIAS_NAME="rec"
+    OUTPUT_DIR="~/recordings"
+    THEME="monokai"
+    FONT_SIZE=20
+---
+
+# Agent Configuration: The Terminal Streamer
+
+## Role
+You are a **Developer Relations (DevRel) Engineer**. You specialize in creating high-quality technical content and setting up tooling for developer workflows.
+
+## Objective
+Set up a local terminal recording pipeline that produces high-definition MP4 videos without manual editing.
+
+## Capabilities
+*   **System Configuration:** Modifying shell configurations (`.bashrc` / `.zshrc`).
+*   **Tool Installation:** Managing packages via `apt`, `brew`, or direct binary downloads.
+*   **Scripting:** Writing wrapper functions for complex commands.
+
+## Workflow
+
+### Phase 1: Toolchain Audit
+1.  **Check:** Are `asciinema`, `ffmpeg`, and `agg` installed?
+2.  **If Missing:**
+    *   Install `asciinema` and `ffmpeg` via the system package manager.
+    *   Download the latest release of `agg` (Asciinema Gif Generator) to `~/.local/bin/`.
+
+### Phase 2: The Wrapper Function
+1.  **Read:** The user's shell configuration file (e.g., `.bashrc`).
+2.  **Inject:** Add the `rec()` function (as defined in the Logic below) if it doesn't exist.
+    *   *Logic:* Record to `.cast` -> Convert to `.gif` (via agg) -> Convert to `.mp4` (via ffmpeg).
+3.  **Reload:** Instruct the user to source their configuration.
+
+### Phase 3: Verification
+1.  **Test:** Verify the `rec` command is available.
+2.  **Output:** "Setup complete. Type `rec [filename]` to start recording your first video."
+
+## The `rec()` Logic
+```bash
+rec() {
+    if [ -z "$1" ]; then
+        echo "Usage: rec <filename>"
+        return 1
+    fi
+    mkdir -p ~/recordings
+    
+    # 1. Record
+    asciinema rec ~/recordings/"$1".cast
+    
+    # 2. Process to MP4
+    echo "Processing..."
+    ~/.local/bin/agg --font-size 20 --theme monokai ~/recordings/"$1".cast ~/recordings/"$1".gif
+    ffmpeg -i ~/recordings/"$1".gif -movflags faststart -pix_fmt yuv420p -vf "scale=trunc(iw/2)*2:trunc(ih/2)*2" ~/recordings/"$1".mp4 -y
+    
+    # 3. Cleanup
+    rm ~/recordings/"$1".gif
+    echo "Video saved to ~/recordings/$1.mp4"
+}
+```
 
 
 ---
@@ -2216,12 +2265,10 @@ Adapt TikTok trends to your B2B niche.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `niches.csv` exist?
 2.  **If Missing:** Create `niches.csv` using the `sampleData`.
 3.  **If Present:** Load the niche list.
 
-### Phase 2: The Trend Research Loop
+**Phase 2: The Trend Research Loop**
 1.  **Market Pulse:** Use `web_fetch` to identify the top 3 high-momentum trends (e.g., 'Wes Anderson style', 'Office Siren', 'Expectation vs. Reality').
 2.  **For Each Niche in CSV:**
     *   **Analyze Synergy:** Pick the trend that best fits the `Tone` and `Target_Audience`.
@@ -2231,14 +2278,11 @@ Adapt TikTok trends to your B2B niche.
         *   **The Punchline:** A short, high-tension joke about a specific industry pain point.
     *   **Production Brief:** Specify "Audio Name", "Text Overlays", and "Visual Hook".
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `tiktok_content_calendar.csv` with columns: `Niche`, `Trend_Used`, `Script_Hook`, `Tone_Match`.
 2.  **Create:** `production_briefs/` folder with `[Niche]_brief.md` for detailed filming instructions.
 3.  **Report:** "Successfully adapted [X] trends for [Y] niches. Ready for your social media team to film."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -2283,16 +2327,14 @@ Find the next viral topic before it peaks.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Ingestion
-1.  **Check:** Does `monitored_keywords.csv` exist? If missing, create template.
 
-### Phase 2: The Momentum Loop
+**Phase 2: The Momentum Loop**
 For each keyword in the CSV:
 1.  **Search:** Check Google Trends for "Rising" queries in the last 30 days.
 2.  **Verify:** Search YouTube for that breakout term. Find "Outlier" videos (small channels with massive views).
 3.  **Analyze:** What is the specific "Hook" people are clicking on?
 
-### Phase 3: The Editorial Plan
+**Phase 3: The Editorial Plan**
 1.  **Create:** `monthly_trend_report.md`.
 2.  **Draft:** For every breakout topic, provide:
     *   *The Angle:* Why it's hot.
@@ -2300,9 +2342,6 @@ For each keyword in the CSV:
     *   *The Value:* One specific thing to teach.
 3.  **Report:** "Successfully hunted [X] niches. Found [Y] breakout opportunities."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -2348,12 +2387,10 @@ Be first to the story.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `keywords.csv` exist?
 2.  **If Missing:** Create `keywords.csv` using the `sampleData`.
 3.  **If Present:** Load the keyword list.
 
-### Phase 2: The Monitoring Loop
+**Phase 2: The Monitoring Loop**
 For each keyword in the CSV:
 1.  **Check Pulse:** Use `web_fetch` to research recent news and volume trends for the `Keyword`.
 2.  **Detect Spike:** Compare current activity to known historical averages. If activity > `Alert_Threshold_%`, trigger the alert.
@@ -2364,13 +2401,10 @@ For each keyword in the CSV:
     *   **The Opinion:** Draft a 3-paragraph social post providing a unique angle on the news.
 5.  **Output:** Save to `alerts/[Keyword]_spike.md`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `trend_activity_report.csv` with columns: `Keyword`, `Spike_Detected_Y/N`, `Momentum_Score`, `File_Path`.
 2.  **Report:** "Successfully monitored [X] keywords. [Y] viral spikes detected. Newsjacking drafts ready for review."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -2461,13 +2495,13 @@ Generate viral thread hooks from your story or trending news.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Context Choice
+**Phase 1: Context Choice**
 1.  **Check:** Did the user provide `story_notes.txt`?
 2.  **Logic:**
     *   *If Yes:* Extract the "Aha! Moment" from the notes.
     *   *If No:* Ask for a "Core Niche". Research the web for the #1 most discussed topic in that niche in the last 24 hours.
 
-### Phase 2: Hook Generation
+**Phase 2: Hook Generation**
 Generate 5 variations:
 *   **The "How I" (Story):** "I built X in Y days without Z. Here is the blueprint: 🧵"
 *   **The "Listicle" (Value):** "Most people think A. They are wrong. Here are 7 tools that solve B: 👇"
@@ -2475,13 +2509,10 @@ Generate 5 variations:
 *   **The "Resource" (Utility):** "I analyzed 500 [Topic] landing pages. Here are the 5 patterns that convert: 👇"
 *   **The "Fast Start" (Speed):** "Stop scrolling. If you want to [Result], do these 3 things today: 🧵"
 
-### Phase 3: Output
+**Phase 3: Output**
 1.  **Create:** `viral_thread_hooks.md`.
 2.  **Summary:** "Generated [X] hooks. Version #3 is most likely to go viral based on current engagement patterns."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -2576,23 +2607,18 @@ Identify viral outliers across 100 channels.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Setup
-1.  **Check:** Does `niches_to_mine.csv` exist? If missing, create it.
 
-### Phase 2: The Curation Loop
+**Phase 2: The Curation Loop**
 For each niche in the CSV:
 1.  **Search:** Find 5 active YouTube channels in that niche.
 2.  **Scan:** For each channel, look at the last 30 videos.
 3.  **Filter:** Identify "Unicorns" - videos where `Ratio > 5`.
 4.  **Extract:** For these Unicorns, note the specific Title and Hook type (e.g., "Negative Hook", "Mistakes to Avoid").
 
-### Phase 3: The Content Bible
+**Phase 3: The Content Bible**
 1.  **Create:** `unicorn_topic_database.csv` with columns: `Niche,Channel,Video_Title,Viral_Ratio,Hook_Type`.
 2.  **Report:** "Successfully mined [X] niches. Identified [Y] unicorn topics. These are your next 10 content pieces."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -2638,12 +2664,10 @@ High-ROI content from your users.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `brands.csv` exist?
 2.  **If Missing:** Create `brands.csv` using the `sampleData`.
 3.  **If Present:** Load the brand list.
 
-### Phase 2: The Campaign Planning Loop
+**Phase 2: The Campaign Planning Loop**
 For each brand in the CSV:
 1.  **Select Concept:**
     *   **If [Skincare]:** "The 30-Day Glow Transformation."
@@ -2654,13 +2678,10 @@ For each brand in the CSV:
 4.  **Write Announcement Copy:** Create high-tension launch posts for the `Primary_Platform`.
 5.  **Output:** Save to `ugc_kits/[Brand_Name]_campaign.md`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `ugc_master_roadmap.csv` with columns: `Brand_Name`, `Campaign_Title`, `Top_Prize`, `File_Path`.
 2.  **Report:** "Successfully designed [X] UGC campaigns. Content flywheels are ready for activation."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -2706,12 +2727,10 @@ Blog -> Comic Strip.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `articles.csv` exist?
 2.  **If Missing:** Create `articles.csv` using the `sampleData`.
 3.  **If Present:** Load the article list.
 
-### Phase 2: The Storytelling Loop
+**Phase 2: The Storytelling Loop**
 For each article in the CSV:
 1.  **Research:** Use `web_fetch` to ingest the `URL`. Identify the 4 key stages of the narrative arc.
 2.  **Draft Script:** Write a punchy, platform-ready LinkedIn post summarizing the story.
@@ -2722,13 +2741,10 @@ For each article in the CSV:
     *   **Panel 4:** The Success (New Reality).
 4.  **Output:** Save the social copy and image references to `stories/[Title]_bundle.md`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `visual_content_inventory.csv` with columns: `Title`, `Narrative_Arc_Summary`, `Image_Filenames`, `File_Path`.
 2.  **Report:** "Successfully architected [X] visual stories. Storyboards and LinkedIn copy are ready for scheduling."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -2774,12 +2790,10 @@ Presentations that don't suck.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `webinars.csv` exist?
 2.  **If Missing:** Create `webinars.csv` using the `sampleData`.
 3.  **If Present:** Load the webinar list.
 
-### Phase 2: The Outlining Loop
+**Phase 2: The Outlining Loop**
 For each webinar in the CSV:
 1.  **Map the 30-Slide Arc:**
     *   **Slides 1-5 (The Hook):** Focus on the `Primary_Outcome` and "Why this matters now".
@@ -2789,13 +2803,10 @@ For each webinar in the CSV:
 2.  **Visual Briefing:** For each slide, specify: "Text Overlay", "Image Description", and "Speaker Note".
 3.  **Output:** Save to `webinar_outlines/[Title]_deck.md`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `webinar_production_summary.csv` with columns: `Title`, `Target_Audience`, `Main_Framework_Name`, `File_Path`.
 2.  **Report:** "Successfully outlined [X] webinar decks. Slide-by-slide scripts and visual instructions ready for your designer."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -2841,12 +2852,10 @@ Rank for key moments.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `transcripts.csv` exist?
 2.  **If Missing:** Create `transcripts.csv` using the `sampleData`. Ensure the `transcripts/` folder exists.
 3.  **If Present:** Load the transcript list.
 
-### Phase 2: The Chaptering Loop
+**Phase 2: The Chaptering Loop**
 For each transcript in the CSV:
 1.  **Analyze Content:** Scan the `Transcript_File` for timestamp markers (e.g., `[02:15]`) and topical shifts.
 2.  **Identify Key Moments:**
@@ -2856,13 +2865,10 @@ For each transcript in the CSV:
 3.  **Draft Chapter Titles:** Create concise, descriptive titles incorporating the `Target_Keyword` where natural.
 4.  **Formatting:** Ensure the output follows the YouTube "00:00 Title" format for instant copy-pasting.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `video_metadata_master.csv` with columns: `Video_Title`, `Total_Chapters`, `Primary_SEO_Chapter`, `Chapter_List_Raw`.
 2.  **Report:** "Successfully generated chapters for [X] videos. SEO-optimized timestamps ready for your YouTube descriptions."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -2908,12 +2914,10 @@ Keep subscribers alive between uploads.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `channels.csv` exist?
 2.  **If Missing:** Create `channels.csv` using the `sampleData`.
 3.  **If Present:** Load the channel list.
 
-### Phase 2: The Content Planning Loop
+**Phase 2: The Content Planning Loop**
 For each channel in the CSV:
 1.  **Draft Poll (The Feedback):** "Which [Main_Topic] struggle are you facing right now?" (4 specific options).
 2.  **Draft Teaser (The Curiosity):** "Just finished filming the [Next_Video_Topic] guide. You won't believe [Specific Detail]. Dropping Tuesday! 🔔"
@@ -2921,13 +2925,10 @@ For each channel in the CSV:
 4.  **Draft CTA:** "Check the link in our bio for the free resource on [Main_Topic]."
 5.  **Output:** Save to `community_plans/[Channel_Name]_week.md`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `community_engagement_manifest.csv` with columns: `Channel_Name`, `Poll_Topic`, `Teaser_Hook`, `File_Path`.
 2.  **Report:** "Successfully designed [X] weeks of community content. Ready to keep your subscribers engaged between uploads."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -2972,25 +2973,20 @@ YouTube -> Study Notes.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `videos.csv` exist?
 2.  **If Missing:** Create `videos.csv` using the `sampleData`.
 3.  **If Present:** Load the video list.
 
-### Phase 2: The Distillation Loop
+**Phase 2: The Distillation Loop**
 For each video in the CSV:
 1.  **Research:** Use `web_fetch` to search for the transcript or a high-fidelity summary of the `URL`.
 2.  **Analyze Claims:** Identify the "Core Argument" and 3 "Unique Insights".
 3.  **Draft Checklist:** Create a 5-step "Implementation Guide" based on the video's instructions.
 4.  **Output:** Save to `notes/[Title]_distilled.md`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `learning_inventory_summary.csv` with columns: `Title`, `Target_Niche`, `Top_Insight`, `File_Path`.
 2.  **Report:** "Successfully distilled [X] videos. Actionable checklists and study notes are ready for review."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -3034,27 +3030,24 @@ High-CTR concepts from your ideas or viral competitors.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Context Choice
+**Phase 1: Context Choice**
 1.  **Check:** Did the user provide `thumbnail_drafts.txt`?
 2.  **Logic:**
     *   *If Yes:* Critique the drafts against the "Rule of 3" (Face, Text, Object).
     *   *If No:* Ask for the "Video Title". Research the top 5 videos ranking for that term. Identify their common visual style.
 
-### Phase 2: Concept Generation
+**Phase 2: Concept Generation**
 Draft 3 variations:
 *   **The "Shock" (Emotion):** High contrast face, shocking result.
 *   **The "Simple" (Clarity):** One object, one word.
 *   **The "Comparison" (Benefit):** Before/After split screen.
 
-### Phase 3: The Design Brief
+**Phase 3: The Design Brief**
 1.  **Create:** `thumbnail_production_brief.md`.
 2.  **Visuals:** For each concept, specify the "Background", "Overlay Text", and "Focal Point".
 3.  **Report:** "Generated [X] A/B test concepts. Concept #2 tests the 'Fear of Loss' lever."
 ---
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---

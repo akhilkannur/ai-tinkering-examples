@@ -47,9 +47,6 @@ Protect customer relationships from over-asking.
 3.  **Flag:** 'Do Not Contact'.
 4.  **Output:** Save `blacklisted_for_ask.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -100,9 +97,6 @@ Ensure effective beta testing.
 2.  **Filter:** Usage = 0.
 3.  **Output:** Save `inactive_beta_users.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -154,9 +148,6 @@ Nominate strategic partners.
 3.  **Filter:** Fit='High'.
 4.  **Output:** Save `cab_nominees.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -207,9 +198,6 @@ Maintain relevant marketing assets.
 2.  **Filter:** Date > 730 days ago.
 3.  **Output:** Save `stale_assets.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -267,9 +255,6 @@ sampleData
 2.  **Count:** Reason frequency.
 3.  **Output:** Save `churn_report.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -341,9 +326,6 @@ For each ticket, analyze the `Message` for specific triggers:
 
 Start now.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -400,9 +382,6 @@ sampleData
 3.  **Flag:** Drops > 50%.
 4.  **Output:** Save `daily_risk_report.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -470,9 +449,6 @@ Create `churn_report.md`.
 
 Start now.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -524,9 +500,6 @@ Identify and reward superusers.
 3.  **Rank:** Descending.
 4.  **Output:** Save `top_contributors.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -685,9 +658,6 @@ Validate the predictive power of health scores.
 3.  **Identify:** Accounts with Low Health but High Logins (Opportunity).
 4.  **Output:** Save `health_score_conflicts.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -746,9 +716,6 @@ sampleData
 3.  **Count:** Movements.
 4.  **Output:** Save `tier_changes.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -793,24 +760,19 @@ Standardize 50 client handovers in one run.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Win Setup
-1.  **Check:** Does `recent_wins.csv` exist? If missing, create template.
 
-### Phase 2: The Briefing Loop
+**Phase 2: The Briefing Loop**
 For each row in the CSV:
 1.  **Extract:** Define the Success Metric (The 'Why' they bought).
 2.  **Audit:** Identify the Technical Setup required (e.g., API, SSO).
 3.  **Draft:** Write a 1-page "Client Dossier" for the CS Manager.
 4.  **Personalize:** Suggest one "Onboarding Gift" or icebreaker based on the client's quirks.
 
-### Phase 3: Deliverable
+**Phase 3: Deliverable**
 1.  **Action:** Create a folder `client_handovers/`.
 2.  **Save:** Save each brief as `handover-[client].md`.
 3.  **Report:** "Processed [X] handovers. [Y] accounts flagged as 'High Touch'."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -861,9 +823,6 @@ Detect rising frustration in the customer base.
 3.  **Compare:** This week's avg score vs last week.
 4.  **Output:** Save `sentiment_trend_report.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -919,9 +878,6 @@ sampleData
 2.  **Find:** Features in `Owned` but not in `Used`.
 3.  **Output:** Save `training_outreach_list.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -974,9 +930,6 @@ Identify growing and shrinking feature sets.
 3.  **Rank:** Features by growth.
 4.  **Output:** Save `feature_momentum_report.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1028,9 +981,6 @@ Maximize 5-star review generation.
 3.  **Schedule:** Date + 3 days.
 4.  **Output:** Save `review_ask_queue.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1087,9 +1037,6 @@ sampleData
 2.  **Filter:** `Days_In_Phase` > 14.
 3.  **Output:** Save `stalled_projects.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1206,9 +1153,6 @@ sampleData
 3.  **Priority:** Sort by Score ascending.
 4.  **Output:** Save `detractor_recovery_queue.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1268,9 +1212,6 @@ sampleData
 3.  **Calculate:** NPS Score.
 4.  **Output:** Save `nps_report.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1376,9 +1317,6 @@ sampleData
 3.  **Format:** Create QBR bullets.
 4.  **Output:** Save `qbr_summary.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1551,9 +1489,6 @@ Prove the value of the reference program.
 3.  **Compare:** Win Rate %.
 4.  **Output:** Save `reference_impact.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1604,9 +1539,6 @@ Prevent referral abuse.
 2.  **Filter:** Referrer_IP == Referee_IP.
 3.  **Output:** Save `fraudulent_referrals.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -1652,12 +1584,10 @@ No surprise cancellations.
 3.  **If Present:** Load the data for processing.
 
 ### Phase 2: The Loop
-### Phase 1: Input Check
-1.  **Check:** Does `contracts.csv` exist?
 2.  **If Missing:** Create `contracts.csv` using the `sampleData`.
 3.  **If Present:** Load the account list.
 
-### Phase 2: The Renewal Loop
+**Phase 2: The Renewal Loop**
 For each account in the CSV:
 1.  **Calculate Cadence:**
     *   **90 Days Out:** The "Strategic Review" invite. Focus on ROI and usage wins.
@@ -1668,13 +1598,10 @@ For each account in the CSV:
     *   **If Health < 5:** Offer a "Success Workshop" or a "Loyalty Credit" to save the account.
 3.  **Draft Emails:** Save to `renewal_comms/[Customer_Name]_sequence.md`.
 
-### Phase 3: Structured Deliverables
+**Phase 3: Structured Deliverables**
 1.  **Create:** `renewal_outreach_tracker.csv` with columns: `Customer_Name`, `Expiry_Date`, `Sequence_Type`, `File_Path`.
 2.  **Report:** "Successfully generated [X] renewal sequences. [Y] at-risk accounts flagged for immediate CSM attention."
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -2128,9 +2055,6 @@ Identify product areas driving support volume.
 3.  **Count:** Group totals.
 4.  **Output:** Save `support_drivers.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -2179,9 +2103,6 @@ Identify gaps in sales collateral.
 2.  **Filter:** Count = 0.
 3.  **Output:** Save `missing_case_studies.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -2296,9 +2217,6 @@ sampleData
 3.  **Aggregate:** Avg TTV per cohort.
 4.  **Output:** Save `ttv_report.md`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---
@@ -2409,9 +2327,6 @@ Source high-quality video candidates.
 2.  **Filter:** Word_Count > 100 AND Sentiment='Positive'.
 3.  **Output:** Save `video_candidates.csv`.
 
-### Phase 3: Output
-1.  **Generate:** Create the final output artifact as specified.
-2.  **Summary:** detailed report of findings and actions taken.
 
 
 ---

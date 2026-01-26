@@ -2,7 +2,7 @@
 title: "The Hidden 'Backdoor' I Built for Free AI Traffic"
 date: "2026-01-23"
 excerpt: "Robots are reading your website. If you don't roll out the red carpet for them, they'll ignore you. Here's how I added a simple text file to get AI agents to recommend me."
-coverImage: "/images/blog/llms-txt-explained.jpg"
+coverImage: "/images/blog/llms-txt-explained.png"
 author: "Akhil Nair"
 category: "Future of Web"
 ---

@@ -5,6 +5,7 @@ date: "2026-01-18"
 author:
   name: "Content Ops"
 relatedRecipes: ["youtube-distiller","twitter-thread-hook-writer","linkedin-carousel","weekly-newsletter-compiler"]
+coverImage: '/images/blog/content-repurposing.png'
 ---
 
 # The "One-and-Done" Trap
