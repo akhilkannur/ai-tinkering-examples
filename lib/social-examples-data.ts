@@ -160,13 +160,63 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
         }
       }
     ],
-    category: "Dev Tools",
+    category: "Agent Documentation",
     publish_date: "2026-01-26",
     original_link: "https://github.blog/ai-and-ml/github-copilot/how-to-write-a-great-agents-md-lessons-from-over-2500-repositories/",
     author_name: "GitHub Blog",
     author_link: "https://github.blog",
     tags: ["Agents", "Best Practices", "Copilot", "Blueprints"],
     workflow_steps: "1. Define a Specific Persona (e.g. 'Expert QA Engineer')\n2. Provide Executable Commands early in the file\n3. Specify the Tech Stack and Project Structure\n4. Offer concrete Code Examples instead of abstract rules\n5. Set Clear Boundaries using a 'Always/Ask/Never' system",
+    Sponsored: false,
+    sponsor: null
+  },
+  {
+    id: "saastr-ai-agents-directory",
+    title: "Scaling SaaS with 20+ AI Agents",
+    slug: "saastr-ai-agents-directory",
+    summary: "SaaStr.ai shows how they use a 'Agent Arsenal' to drive 8-figure revenue with a tiny team. This directory provides real-world examples of agents for mentoring, pitch analysis, and sales.",
+    screenshots: [
+      {
+        url: "/images/examples/saastr-ai-agents.jpg",
+        filename: "saastr-ai-agents.jpg",
+        thumbnails: {
+          small: { url: "/images/examples/saastr-ai-agents.jpg" },
+          large: { url: "/images/examples/saastr-ai-agents.jpg" }
+        }
+      }
+    ],
+    category: "Agent Documentation",
+    publish_date: "2026-01-26",
+    original_link: "https://saastr.ai/agents",
+    author_name: "SaaStr",
+    author_link: "https://saastr.ai",
+    tags: ["Use Cases", "SaaS", "Scaling", "Directory"],
+    workflow_steps: "1. Browse the Agent Arsenal for specific business functions\n2. Analyze how SaaStr defines agent roles (e.g. AI Mentor, VC Matchmaker)\n3. See examples of third-party agent integrations\n4. Apply the 'Full Playbook' to scale your own operations",
+    Sponsored: false,
+    sponsor: null
+  },
+  {
+    id: "matzner-jon-competitive-podcast-intel",
+    title: "Turning Podcasts into Competitive Intel",
+    slug: "matzner-jon-competitive-podcast-intel",
+    summary: "Jon Matzner explains how to use NotebookLM to analyze competitor podcast appearances. By feeding in transcripts, you can identify strategic details shared by their leadership that can be used to your advantage.",
+    screenshots: [
+      {
+        url: "/images/examples/matzner-jon-tweet.jpg",
+        filename: "matzner-jon-tweet.jpg",
+        thumbnails: {
+          small: { url: "/images/examples/matzner-jon-tweet.jpg" },
+          large: { url: "/images/examples/matzner-jon-tweet.jpg" }
+        }
+      }
+    ],
+    category: "Competitive Intel",
+    publish_date: "2026-01-26",
+    original_link: "https://x.com/MatznerJon/status/2006766272990921167",
+    author_name: "Jon Matzner",
+    author_link: "https://x.com/MatznerJon",
+    tags: ["Competitive Intel", "NotebookLM", "Podcasts", "Strategy"],
+    workflow_steps: "1. Gather all podcast episodes featuring competitor leadership\n2. Upload transcripts or audio files to NotebookLM\n3. Query the AI: 'What information shared can be exploited to my competitive advantage?'",
     Sponsored: false,
     sponsor: null
   },

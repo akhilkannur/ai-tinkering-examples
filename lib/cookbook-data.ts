@@ -3,7 +3,7 @@ import {
   PenTool, Share2, Mail, Database, Target,
   Briefcase, TrendingUp, ShieldCheck, PieChart,
   HeartHandshake, MessageSquare, ShoppingCart, 
-  Settings, Repeat, Cpu
+  Settings, Repeat, Cpu, FileText
 } from 'lucide-react';
 
 export type Category =
@@ -21,7 +21,8 @@ export type Category =
   | 'Strategic Ops'
   | 'Product Ops'
   | 'SEO Ops'
-  | 'Dev Tools';
+  | 'Dev Tools'
+  | 'Agent Documentation';
 
 export const categoryIcons: Record<Category, any> = {
   'Lead Gen': Users,
@@ -38,7 +39,8 @@ export const categoryIcons: Record<Category, any> = {
   'Strategic Ops': ShieldCheck,
   'Product Ops': Database,
   'SEO Ops': Globe,
-  'Dev Tools': Cpu
+  'Dev Tools': Cpu,
+  'Agent Documentation': FileText
 };
 
 export const categoryDescriptions: Record<string, { title: string, description: string }> = {
