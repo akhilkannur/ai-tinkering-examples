@@ -3,8 +3,8 @@ from PIL import Image, ImageDraw, ImageFont
 
 # Configuration
 OUTPUT_DIR = "public/images/blog"
-# Using the requested Malayalam font
-FONT_PATH = "/usr/share/fonts/chromeos/noto/NotoSerifMalayalam-Regular.ttf" 
+# Switched to standard Serif to ensure Latin characters render
+FONT_PATH = "/usr/share/fonts/chromeos/noto/NotoSerif-Regular.ttf"
 IMAGE_SIZE = (750, 500)
 BG_COLOR = "black"
 TEXT_COLOR = "white"
@@ -54,7 +54,8 @@ def generate_image(filename, text):
     # Save
     filepath = os.path.join(OUTPUT_DIR, filename)
     img.save(filepath)
-    print(f"Generated {filepath}")
+    size = os.path.getsize(filepath)
+    print(f"Generated {filepath} (Size: {size} bytes)")
 
 def main():
     ensure_dir(OUTPUT_DIR)
