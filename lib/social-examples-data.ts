@@ -295,4 +295,29 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     Sponsored: false,
     sponsor: null
   },
+  {
+    id: "peter-kang-ai-context-and-scenarios",
+    title: "AI as a 'Crystal Ball' for Strategy",
+    slug: "peter-kang-ai-context-and-scenarios",
+    summary: "Peter Kang shares two strategic workflows: 1) Asking ChatGPT to write a 'Context Prompt' of everything it knows about your company (to verify accuracy and port to other models), and 2) Using AI to simulate future scenarios (3-5 years out) based on current strategy docs.",
+    screenshots: [
+      {
+        url: "/images/examples/linkedin-post-7390468.jpg",
+        filename: "linkedin-post-7390468.jpg",
+        thumbnails: {
+          small: { url: "/images/examples/linkedin-post-7390468.jpg" },
+          large: { url: "/images/examples/linkedin-post-7390468.jpg" }
+        }
+      }
+    ],
+    category: "Strategic Ops",
+    publish_date: "2026-01-26",
+    original_link: "https://www.linkedin.com/feed/update/urn:li:activity:7390468002904776704/",
+    author_name: "Peter Kang",
+    author_link: "https://www.linkedin.com/in/peterkang",
+    tags: ["Strategy", "Scenario Planning", "Context Management", "ChatGPT"],
+    workflow_steps: "1. Context Check: Ask AI to 'write a context prompt based on everything you know about [My Company]'. Correct errors and use this prompt in other models.\n2. Scenario Planning: Upload strategy docs and ask AI to write speculative 3-5 year future narratives (best case, worst case, wildcards).",
+    Sponsored: false,
+    sponsor: null
+  },
 ];
