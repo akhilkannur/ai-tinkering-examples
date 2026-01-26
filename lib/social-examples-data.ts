@@ -245,4 +245,29 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     Sponsored: false,
     sponsor: null
   },
+  {
+    id: "claude-company-newsletter-automation",
+    title: "Automating Your Company Newsletter with Claude",
+    slug: "claude-company-newsletter-automation",
+    summary: "Claude can automate the creation of a professional, publication-style company newsletter by synthesizing information from internal channels like Slack, Google Drive, and Gmail. This AI workflow helps non-technical users quickly generate curated digests with data visualizations.",
+    screenshots: [
+      {
+        url: "/images/examples/claude-company-newsletter.jpg",
+        filename: "claude-company-newsletter.jpg",
+        thumbnails: {
+          small: { url: "/images/examples/claude-company-newsletter.jpg" },
+          large: { url: "/images/examples/claude-company-newsletter.jpg" }
+        }
+      }
+    ],
+    category: "Content Ops",
+    publish_date: "2026-01-26",
+    original_link: "https://claude.com/resources/use-cases/create-a-company-newsletter",
+    author_name: "Claude Resources",
+    author_link: "https://claude.com",
+    tags: ["Newsletter", "Automation", "Internal Comms", "Claude"],
+    workflow_steps: "1. Connect Claude to your Slack, Google Drive, and Gmail accounts\n2. Define the desired time period and internal channels to monitor\n3. Request specific formatting (e.g., 'British newspaper aesthetic') and data visualizations\n4. Review and refine the generated interactive HTML artifact before sharing",
+    Sponsored: false,
+    sponsor: null
+  },
 ];
