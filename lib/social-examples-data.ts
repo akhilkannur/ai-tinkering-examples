@@ -270,4 +270,29 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     Sponsored: false,
     sponsor: null
   },
+  {
+    id: "suhail-ai-tutor-prompt",
+    title: "The 'Step-by-Step' AI Tutor Prompt",
+    slug: "suhail-ai-tutor-prompt",
+    summary: "Suhail shares a powerful prompt to turn any research paper or technical document into an interactive course. The key is instructing the AI to not advance until it quizzes you and confirms your understanding.",
+    screenshots: [
+      {
+        url: "/images/examples/suhail-tweet.jpg",
+        filename: "suhail-tweet.jpg",
+        thumbnails: {
+          small: { url: "/images/examples/suhail-tweet.jpg" },
+          large: { url: "/images/examples/suhail-tweet.jpg" }
+        }
+      }
+    ],
+    category: "Strategic Ops",
+    publish_date: "2026-01-26",
+    original_link: "https://x.com/Suhail/status/1986156328096858361",
+    author_name: "Suhail",
+    author_link: "https://x.com/Suhail",
+    tags: ["Learning", "Prompt Engineering", "Research", "Education"],
+    workflow_steps: "1. Upload source material (PDF, paper, docs) to the AI\n2. Use the prompt: 'Go from high level to low level. Do not advance without confirming I understand with a quiz.'\n3. Answer the quiz questions to proceed to the next complexity level",
+    Sponsored: false,
+    sponsor: null
+  },
 ];
