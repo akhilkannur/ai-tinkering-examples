@@ -43,7 +43,7 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     category: "Marketing Ops",
     publish_date: "2026-01-22",
     original_link: "https://x.com/lkr/status/2013653497120804994",
-    author_name: "Unknown",
+    author_name: "Laura Roeder",
     author_link: "https://x.com/lkr",
     tags: ["Automation"],
     Sponsored: false,
@@ -346,41 +346,41 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     sponsor: null
   },
   {
-    id: "soniabaschez-content-from-url",
-    title: "Sonia Baschez AI Update",
-    slug: "soniabaschez-content-from-url",
-    summary: "New update from Sonia Baschez on X. (Content extraction pending)",
+    id: "soniabaschez-yapping-as-a-service-writing-prompt",
+    title: "'Yapping as a Service' Writing Prompt",
+    slug: "soniabaschez-yapping-as-a-service-writing-prompt",
+    summary: "Sonia Baschez shares her most commonly used AI writing prompt for her 'Yapping as a Service' workflow, helping maintain high-volume, high-energy content production.",
     screenshots: [
       {
-        url: "/images/examples/2026-01-28-soniabaschez-content-from-url.jpg",
-        filename: "2026-01-28-soniabaschez-content-from-url.jpg",
+        url: "/images/examples/2026-01-28-soniabaschez-yapping-as-a-service-writing-prompt.jpg",
+        filename: "2026-01-28-soniabaschez-yapping-as-a-service-writing-prompt.jpg",
         thumbnails: {
-          small: { url: "/images/examples/2026-01-28-soniabaschez-content-from-url.jpg" },
-          large: { url: "/images/examples/2026-01-28-soniabaschez-content-from-url.jpg" }
+          small: { url: "/images/examples/2026-01-28-soniabaschez-yapping-as-a-service-writing-prompt.jpg" },
+          large: { url: "/images/examples/2026-01-28-soniabaschez-yapping-as-a-service-writing-prompt.jpg" }
         }
       }
     ],
-    category: "Strategic Ops",
+    category: "Content Ops",
     publish_date: "2026-01-28",
     original_link: "https://x.com/SoniaBaschez/status/2016297236855194046",
     author_name: "Sonia Baschez",
     author_link: "https://x.com/SoniaBaschez",
-    tags: ["Strategy", "AI"],
+    tags: ["Prompts", "Writing", "Content Automation"],
     Sponsored: false,
     sponsor: null
   },
   {
-    id: "zarazhangrui-content-from-url",
-    title: "Zara Zhang VC Insight",
-    slug: "zarazhangrui-content-from-url",
-    summary: "New insight from Zara Zhang (IVP) on X. (Content extraction pending)",
+    id: "zarazhangrui-claude-skill-ai-powered-web-slides",
+    title: "Claude Skill: AI-Powered Web Slides",
+    slug: "zarazhangrui-claude-skill-ai-powered-web-slides",
+    summary: "Zara Zhang showcases a custom Claude Skill that creates beautiful, interactive presentation slides on the web, demonstrating how to extend LLMs with functional UI outputs.",
     screenshots: [
       {
-        url: "/images/examples/2026-01-28-zarazhangrui-content-from-url.jpg",
-        filename: "2026-01-28-zarazhangrui-content-from-url.jpg",
+        url: "/images/examples/2026-01-28-zarazhangrui-claude-skill-ai-powered-web-slides.jpg",
+        filename: "2026-01-28-zarazhangrui-claude-skill-ai-powered-web-slides.jpg",
         thumbnails: {
-          small: { url: "/images/examples/2026-01-28-zarazhangrui-content-from-url.jpg" },
-          large: { url: "/images/examples/2026-01-28-zarazhangrui-content-from-url.jpg" }
+          small: { url: "/images/examples/2026-01-28-zarazhangrui-claude-skill-ai-powered-web-slides.jpg" },
+          large: { url: "/images/examples/2026-01-28-zarazhangrui-claude-skill-ai-powered-web-slides.jpg" }
         }
       }
     ],
@@ -389,7 +389,7 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     original_link: "https://x.com/zarazhangrui/status/2016337615843434646",
     author_name: "Zara Zhang",
     author_link: "https://x.com/zarazhangrui",
-    tags: ["VC", "Strategy"],
+    tags: ["Claude", "Skills", "Presentations", "UI Automation"],
     Sponsored: false,
     sponsor: null
   },

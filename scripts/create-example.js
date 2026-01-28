@@ -115,27 +115,17 @@ async function extractContentFromUrl(url) {
 
       // Extract the actual author name from the tweet
       authorName = await page.evaluate(() => {
-        // Look for the author's display name in the tweet
-        const authorElements = document.querySelectorAll('[data-testid="User-Name"] span');
-        for (const element of authorElements) {
-          const text = element.textContent.trim();
-          // Skip if it's just the handle (starts with @)
-          if (text && !text.startsWith('@')) {
-            return text;
-          }
+        // Try to find the name in the tweet article
+        const tweet = document.querySelector('article[data-testid="tweet"]');
+        if (tweet) {
+          const nameSpan = tweet.querySelector('[data-testid="User-Name"] span:first-child');
+          if (nameSpan) return nameSpan.textContent.trim();
         }
-        // Fallback: try other selectors for author name
-        const nameSelectors = [
-          'a[href^="/"] span',
-          '[data-testid="UserName"] span',
-          'div[dir="ltr"] span'
-        ];
-
-        for (const selector of nameSelectors) {
-          const nameElement = document.querySelector(selector);
-          if (nameElement && nameElement.textContent.trim() && !nameElement.textContent.trim().startsWith('@')) {
-            return nameElement.textContent.trim();
-          }
+        
+        // Fallback: try title
+        const titleText = document.title;
+        if (titleText.includes('on X:')) {
+            return titleText.split('on X:')[0].trim();
         }
 
         return '';
@@ -143,21 +133,9 @@ async function extractContentFromUrl(url) {
 
       content = await page.evaluate(() => {
         // Look for the main tweet content
-        const tweetElements = document.querySelectorAll('[data-testid="tweet"]');
-        if (tweetElements.length > 0) {
-          // Get the first tweet's text content
-          const tweetText = tweetElements[0].querySelector('[data-testid="tweetText"]');
-          if (tweetText) {
-            return tweetText.innerText || tweetText.textContent;
-          }
-        }
-
-        // Fallback: try to find tweet text in other selectors
-        const tweetTextElements = document.querySelectorAll('article[data-testid="tweet"] div[dir="auto"]');
-        for (const element of tweetTextElements) {
-          if (element.textContent.trim().length > 0) {
-            return element.textContent.trim();
-          }
+        const tweetText = document.querySelector('[data-testid="tweetText"]');
+        if (tweetText) {
+          return tweetText.innerText || tweetText.textContent;
         }
 
         return 'Content extraction failed';
@@ -249,6 +227,8 @@ async function extractContentFromUrl(url) {
 
     // Clean up the extracted content
     content = content.replace(/\s+/g, ' ').trim();
+    console.log(`📝 Extracted Content: ${content.substring(0, 100)}...`);
+    console.log(`👤 Extracted Author: ${authorName}`);
 
     // Generate insightful title and summary based on the content
     let insightfulTitle = '';
@@ -296,7 +276,8 @@ async function extractContentFromUrl(url) {
 
     return {
       title: insightfulTitle,
-      summary: insightfulSummary.substring(0, 200)
+      summary: insightfulSummary.substring(0, 200),
+      author: authorName
     };
   } catch (error) {
     console.error(`❌ Error extracting content: ${error.message}`);
@@ -305,7 +286,8 @@ async function extractContentFromUrl(url) {
     // Return fallback content
     return {
       title: 'Content from URL',
-      summary: 'Automated screenshot capture from provided URL. Content extraction failed, but visual representation available.'
+      summary: 'Automated screenshot capture from provided URL. Content extraction failed, but visual representation available.',
+      author: 'Unknown'
     };
   }
 }
@@ -336,7 +318,7 @@ async function createSocialExample() {
       const contentData = await extractContentFromUrl(url);
       title = manualTitle || contentData.title;
       description = manualSummary || contentData.summary;
-      author = 'Unknown';
+      author = contentData.author || 'Unknown';
     } else {
       // Use Microlink API as before
       const response = await fetch(MICROLINK_API);
