@@ -113,7 +113,7 @@ export default function InvestorsPage({ initialInvestors }: InvestorsPageProps) 
         
         <header className="max-w-6xl mx-auto px-4 py-12 md:py-20 text-center">
           <h1 className="text-4xl md:text-5xl font-headline font-bold text-text-color mb-6 tracking-tight leading-tight uppercase">
-            Micro-PE <span className="text-accent">Match</span>
+            Exit Your <span className="text-accent">Micro-SaaS</span>
           </h1>
           <p className="text-lg text-text-color/80 max-w-2xl mx-auto mb-8 leading-relaxed">
             {isUnlocked ? (
@@ -121,7 +121,7 @@ export default function InvestorsPage({ initialInvestors }: InvestorsPageProps) 
                     <Check className="w-5 h-5" /> Premium Access Active
                 </span>
             ) : (
-                `Previewing ${displayedInvestors.length} of ${initialInvestors.length} active buyers for AI tools & Micro-SaaS.`
+                `A list of 150+ buyers who like small, boring software companies. No pitch decks, just cash for code.`
             )}
             <br className="hidden md:block"/> Filter by check size, deal type, and geography to find your perfect exit partner.
           </p>
@@ -309,9 +309,9 @@ export default function InvestorsPage({ initialInvestors }: InvestorsPageProps) 
                                 <div className="absolute top-0 right-0 p-4 opacity-10">
                                     <Crown className="h-32 w-32 text-accent" />
                                 </div>
-                                <h2 className="text-3xl md:text-4xl font-bold font-headline mb-4 text-text-color">Unlock All {initialInvestors.length} Buyers</h2>
+                                <h2 className="text-3xl md:text-4xl font-bold font-headline mb-4 text-text-color">Get the Email List</h2>
                                 <p className="text-lg text-text-secondary mb-8 max-w-lg mx-auto leading-relaxed">
-                                    Stop searching. Get the full list with <span className="text-text-color font-bold">verified partner emails</span> and detailed investment criteria.
+                                    Stop searching. Get the full list with <span className="text-text-color font-bold">verified partner emails</span> and detailed investment criteria. Or don't, and spend your weekend on Google.
                                 </p>
                                 <div className="flex flex-col items-center gap-4">
                                 <a 

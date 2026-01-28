@@ -81,10 +81,10 @@ export default function ExamplesPage({ examples, categories }: ExamplesPageProps
         
         <header className="max-w-6xl mx-auto px-4 py-12 md:py-16 text-center">
           <h1 className="text-4xl md:text-5xl font-headline font-bold text-text-color mb-6 tracking-tight leading-tight uppercase">
-            AI Examples <span className="text-accent">Library</span>
+            AI That <span className="text-accent">Actually Works</span>
           </h1>
           <p className="text-lg text-text-color/80 max-w-2xl mx-auto mb-8 leading-relaxed">
-            A library of real AI use cases shared by people on the internet. No fluff.
+            We cut through the Twitter hype to find workflows you can actually use. No magic, just better prompts.
           </p>
         </header>
 
@@ -141,7 +141,7 @@ export default function ExamplesPage({ examples, categories }: ExamplesPageProps
                 onClick={handleLoadMore}
                 className="bg-accent text-white px-6 py-3 rounded-full font-bold text-lg shadow-lg hover:bg-pink-600 transition-all duration-300 transform hover:scale-105"
               >
-                Uncover More AI Magic! ✨
+                Show More Stuff
               </button>
             </div>
           )}

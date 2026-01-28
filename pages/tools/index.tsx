@@ -60,20 +60,20 @@ export default function ToolsIndex() {
           
           <div className="inline-flex items-center gap-2 bg-white border border-slate-200 shadow-sm text-accent px-4 py-1.5 rounded-sm text-xs font-mono font-bold mb-6 uppercase tracking-wider">
             <Command className="w-3 h-3" />
-            <span>Curated Database</span>
+            <span>The Inbox</span>
           </div>
           
           <h1 className="text-4xl md:text-5xl font-headline font-bold text-slate-900 mb-6 tracking-tight leading-tight uppercase">
-            The AI Tool <span className="text-accent">Arsenal</span>
+            What the Community is <span className="text-accent">Building</span>
           </h1>
           
           <p className="text-lg text-slate-600 leading-relaxed font-sans max-w-2xl mx-auto mb-8">
-            Stop searching, start building. A newly launched directory of hand-picked tools. New additions every week.
+            People send us their AI tools every day. We delete the spam and list the ones that look real. We haven't tested them all, so judge for yourself.
           </p>
 
           <div className="flex flex-col items-center gap-4">
             <p className="text-sm text-slate-500 font-sans">
-              Made a useful AI tool? <a href="https://forms.gle/KqN82GGdCohshtVx8" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline font-bold">Submit it here.</a>
+              Building something? <a href="https://forms.gle/KqN82GGdCohshtVx8" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline font-bold">Pitch it here.</a>
             </p>
           </div>
         </div>

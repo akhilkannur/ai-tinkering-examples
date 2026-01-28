@@ -21,9 +21,12 @@ export default function AiWorkplaceQuizPage() {
       <div className="min-h-screen bg-primary-bg font-sans text-text-color">
         <Navbar />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12 min-h-[calc(100vh-200px)]">
-          <h1 className="text-4xl sm:text-5xl font-black tracking-tighter mb-8 text-center">
-            AI in the Workplace Quiz
+          <h1 className="text-4xl sm:text-5xl font-black tracking-tighter mb-4 text-center uppercase">
+            Do You Actually <span className="text-accent">Get AI?</span>
           </h1>
+          <p className="text-lg text-text-color/80 max-w-2xl mx-auto mb-12 text-center leading-relaxed">
+            A quick quiz to see if you know your LLMs from your MCPs, or if you're just reading LinkedIn headlines.
+          </p>
           <AiQuiz />
         </div>
         <WavyDivider />
