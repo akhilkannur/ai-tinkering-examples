@@ -345,4 +345,52 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     Sponsored: false,
     sponsor: null
   },
+  {
+    id: "soniabaschez-content-from-url",
+    title: "Sonia Baschez AI Update",
+    slug: "soniabaschez-content-from-url",
+    summary: "New update from Sonia Baschez on X. (Content extraction pending)",
+    screenshots: [
+      {
+        url: "/images/examples/2026-01-28-soniabaschez-content-from-url.jpg",
+        filename: "2026-01-28-soniabaschez-content-from-url.jpg",
+        thumbnails: {
+          small: { url: "/images/examples/2026-01-28-soniabaschez-content-from-url.jpg" },
+          large: { url: "/images/examples/2026-01-28-soniabaschez-content-from-url.jpg" }
+        }
+      }
+    ],
+    category: "Strategic Ops",
+    publish_date: "2026-01-28",
+    original_link: "https://x.com/SoniaBaschez/status/2016297236855194046",
+    author_name: "Sonia Baschez",
+    author_link: "https://x.com/SoniaBaschez",
+    tags: ["Strategy", "AI"],
+    Sponsored: false,
+    sponsor: null
+  },
+  {
+    id: "zarazhangrui-content-from-url",
+    title: "Zara Zhang VC Insight",
+    slug: "zarazhangrui-content-from-url",
+    summary: "New insight from Zara Zhang (IVP) on X. (Content extraction pending)",
+    screenshots: [
+      {
+        url: "/images/examples/2026-01-28-zarazhangrui-content-from-url.jpg",
+        filename: "2026-01-28-zarazhangrui-content-from-url.jpg",
+        thumbnails: {
+          small: { url: "/images/examples/2026-01-28-zarazhangrui-content-from-url.jpg" },
+          large: { url: "/images/examples/2026-01-28-zarazhangrui-content-from-url.jpg" }
+        }
+      }
+    ],
+    category: "Strategic Ops",
+    publish_date: "2026-01-28",
+    original_link: "https://x.com/zarazhangrui/status/2016337615843434646",
+    author_name: "Zara Zhang",
+    author_link: "https://x.com/zarazhangrui",
+    tags: ["VC", "Strategy"],
+    Sponsored: false,
+    sponsor: null
+  },
 ];

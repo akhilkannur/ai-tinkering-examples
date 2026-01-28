@@ -3,7 +3,7 @@ title: "The Infinite Content Engine: 1 Video to 10 Assets"
 excerpt: "We recorded a great podcast, got 500 views, and then it died. That felt like a waste. So we built a machine to force-feed that content into every other channel."
 date: "2026-01-18"
 author:
-  name: "Content Ops"
+  name: "Akhil from Real Examples"
 relatedRecipes: ["youtube-distiller","twitter-thread-hook-writer","linkedin-carousel","weekly-newsletter-compiler"]
 coverImage: '/images/blog/content-repurposing.png'
 ---

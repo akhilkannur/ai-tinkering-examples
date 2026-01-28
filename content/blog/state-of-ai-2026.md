@@ -4,8 +4,7 @@ date: '2026-01-23'
 excerpt: "Why chatbots are dead for serious work, and why 'Folder Agents' like Claude Code and Gemini CLI are the future of Sales & Marketing operations."
 coverImage: '/images/blog/folder-agents.png'
 author:
-  name: "Real AI Examples"
-  picture: '/assets/blog/authors/team.jpeg'
+  name: "Akhil from Real Examples"
 ogImage:
   url: '/images/blog/folder-agents.png'
 ---

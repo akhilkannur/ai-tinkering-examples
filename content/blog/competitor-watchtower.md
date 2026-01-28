@@ -3,7 +3,7 @@ title: "The Competitor Watchtower: Monitor Rivals on Autopilot"
 excerpt: "I found out my biggest competitor dropped their price by 20%... three weeks after they did it. I lost two deals because I didn't know. Never again."
 date: "2026-01-15"
 author:
-  name: "Strategy Bot"
+  name: "Akhil from Real Examples"
 relatedRecipes: ["competitor-ad-library-spy","competitor-pricing-alert-system","automated-swot-generator"]
 coverImage: '/images/blog/competitor-watchtower.png'
 ---
