@@ -393,4 +393,28 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     Sponsored: false,
     sponsor: null
   },
+  {
+    id: "picotrex-awesome-nano-banana-images",
+    title: "Awesome Nano Banana Images",
+    slug: "picotrex-awesome-nano-banana-images",
+    summary: "A curated collection of prompts and examples for the Nano Banana Gemini extension, showcasing high-quality image generation capabilities.",
+    screenshots: [
+      {
+        url: "/images/examples/2026-01-28-picotrex-awesome-nano-banana-images.jpg",
+        filename: "2026-01-28-picotrex-awesome-nano-banana-images.jpg",
+        thumbnails: {
+          small: { url: "/images/examples/2026-01-28-picotrex-awesome-nano-banana-images.jpg" },
+          large: { url: "/images/examples/2026-01-28-picotrex-awesome-nano-banana-images.jpg" }
+        }
+      }
+    ],
+    category: "Image Generation",
+    publish_date: "2026-01-28",
+    original_link: "https://github.com/PicoTrex/Awesome-Nano-Banana-images",
+    author_name: "PicoTrex",
+    author_link: "https://x.com/PicoTrex",
+    tags: ["Gemini", "Nano Banana", "Prompts", "Image Gen"],
+    Sponsored: false,
+    sponsor: null
+  },
 ];

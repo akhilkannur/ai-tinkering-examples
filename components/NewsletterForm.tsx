@@ -19,7 +19,7 @@ export default function NewsletterForm() {
         />
       </div>
       <p className="text-xs text-text-secondary mt-2 font-sans text-center">
-        Join hundreds of other tinkerers. No spam.
+        Zero spam. We're too busy to spam you.
       </p>
     </div>
   );

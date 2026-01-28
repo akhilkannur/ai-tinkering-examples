@@ -23,8 +23,8 @@ interface HybridHomePageProps {
 }
 
 export default function HybridHomePage({ recipes, featuredJobs, featuredTools, siteSettings }: HybridHomePageProps) {
-  const homepageTitle = "AI Blueprints: Copy, Paste, Automate Your Sales & Marketing";
-  const homepageDescription = "Ditch endless chats. Turn Gemini & Claude into your personal assistants with professional text-file blueprints. No coding needed.";
+  const homepageTitle = "Real AI Examples: Boring Files That Actually Work";
+  const homepageDescription = "We got tired of arguing with chatbots. Here are 700+ boring, reliable text files that make Gemini & Claude actually do work. No subscriptions. No hype.";
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com';
 
   return (
@@ -67,26 +67,24 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
                     <div className="text-left">
                         <div className="inline-flex items-center gap-2 bg-secondary-bg border border-navy-dark px-4 py-1.5 rounded-full text-xs font-mono text-accent mb-8 shadow-sm hover:border-accent/50 transition-colors cursor-default">
                             <span className="relative flex h-2 w-2">
-                              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
                               <span className="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
                             </span>
-                            <span className="tracking-widest uppercase font-bold">AI Blueprints for Sales & Marketing</span>
+                            <span className="tracking-widest uppercase font-bold">Zero Hype. Just Files.</span>
                         </div>
                         
                         <h1 className="text-5xl md:text-7xl font-sans font-extrabold text-text-color mb-6 tracking-tight leading-[1.1]">
-                            Stop Prompting. <br />
-                            <span className="text-accent">Start Automating.</span>
+                            We Got Tired of <br />
+                            <span className="text-accent">Arguing with Chatbots.</span>
                         </h1>
                         
                         <p className="text-lg text-text-secondary mb-10 leading-relaxed max-w-lg font-normal">
-                            Turn AI Agents into your personal assistants. 
-                            <strong className="text-text-color"> 700+ blueprints</strong> for Sales & Marketing. 
-                            Built by non-technical tinkerers, for non-technical tinkerers.
+                            Most "AI workflows" are just people bragging on Twitter. We actually have work to do. <br/><br/>
+                            These are the boring, reliable text files we use to make Claude and Gemini shut up and do the job. No code. No "thought leaders." Just results.
                         </p>
 
                         <div className="inline-block bg-accent/10 border border-accent/20 rounded-full px-3 py-1 mb-4">
                             <span className="text-xs font-bold text-accent tracking-wide uppercase flex items-center gap-2">
-                                <Zap className="w-3 h-3 fill-current" /> Launch Special: $39 (Normally $149)
+                                <Zap className="w-3 h-3 fill-current" /> 700+ Files. One Price.
                             </span>
                         </div>
 
@@ -95,18 +93,18 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
                                 href="https://checkout.dodopayments.com/buy/pdt_0NW6p0szmXPS6jXW05hIP"
                                 className="w-full sm:w-auto px-8 py-4 bg-accent hover:bg-accent-hover text-white font-bold rounded-lg transition-all shadow-[0_0_20px_rgba(236,72,153,0.3)] hover:shadow-[0_0_30px_rgba(236,72,153,0.5)] text-sm flex items-center justify-center gap-2 transform hover:-translate-y-1"
                             >
-                                Get Lifetime Access for $39 <ArrowRight className="w-4 h-4" />
+                                Steal the Library ($39) <ArrowRight className="w-4 h-4" />
                             </a>
                             <a 
                                 href="#blueprints" 
                                 className="w-full sm:w-auto px-8 py-4 bg-white/5 border border-navy-dark hover:bg-white/10 text-text-color font-bold rounded-lg transition-all text-sm flex items-center justify-center gap-2"
                             >
-                                Browse Free Blueprints
+                                See What's Inside
                             </a>
                         </div>
                         <p className="text-xs font-mono text-text-secondary/60 mb-12 flex items-center gap-2">
-                          <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                          Price increases soon. One-time payment.
+                          <span className="text-emerald-500 font-bold">✓</span>
+                          One payment. No subscriptions. No BS.
                         </p>
 
                         {/* Playbooks Bar */}
@@ -157,29 +155,28 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
                     <div className="bg-secondary-bg rounded-xl border border-navy-dark p-8 md:p-12 text-left hover:border-accent/30 transition-colors">
                         <h2 className="text-2xl font-bold text-text-color mb-4 flex items-center gap-3">
                         <span className="bg-blue-500/10 text-blue-400 p-2 rounded-lg border border-blue-500/20"><Terminal className="w-5 h-5"/></span>
-                        CLI & Folder Agents
+                        For the Command Line
                         </h2>
                         <p className="text-text-secondary leading-relaxed mb-6">
-                        If you use <strong className="text-text-color">Gemini CLI</strong>, <strong className="text-text-color">Claude Code</strong>, or the new <strong className="text-text-color">Claude Cowork</strong>, these blueprints act as your foundation. 
-                        Drop a blueprint into a folder or paste it into the agent, and it understands the full scope: 
-                        from creating files to handling complex workflows.
+                        If you use <strong className="text-text-color">Gemini CLI</strong> or <strong className="text-text-color">Claude Code</strong>, these are your instruction manuals. 
+                        Drop a file in. The agent reads it. It does the thing. We stopped trying to be clever and just started being explicit.
                         </p>
                         <div className="bg-primary-bg p-4 rounded-lg border border-navy-dark text-sm font-mono text-text-secondary/70">
-                        Claude: "I've read the blueprint. Starting the build..." <span className="text-emerald-400">✓ Running</span>
+                        Claude: "I read the file. I know what to do now." <span className="text-emerald-400">✓ Running</span>
                         </div>
                     </div>
 
                     <div className="bg-secondary-bg rounded-xl border border-navy-dark p-8 md:p-12 text-left hover:border-accent/30 transition-colors">
                         <h2 className="text-2xl font-bold text-text-color mb-4 flex items-center gap-3">
                         <span className="bg-purple-500/10 text-purple-400 p-2 rounded-lg border border-purple-500/20"><Cpu className="w-5 h-5"/></span>
-                        For AI Editors
+                        For Cursor & Windsurf
                         </h2>
                         <p className="text-text-secondary leading-relaxed mb-6">
-                        Using <strong className="text-text-color">Cursor</strong> or <strong className="text-text-color">Windsurf</strong>? Paste the blueprint into the "Composer" or "Chat" window. 
-                        The AI will read the 'Role', 'Objective', and 'Workflow' and build the entire tool in your project folder automatically.
+                        Stop typing "Please help me code a landing page" and hoping for the best. 
+                        Paste our blueprint into Composer. It gives the AI a rigid structure so it doesn't hallucinate a bunch of nonsense.
                         </p>
                         <div className="bg-primary-bg p-4 rounded-lg border border-navy-dark text-sm font-mono text-text-secondary/70">
-                        Composer: "Follow this blueprint to build..." <span className="text-purple-400">Generating...</span>
+                        Composer: "Blueprint detected. Building structure..." <span className="text-purple-400">Generating...</span>
                         </div>
                     </div>
                 </div>
@@ -196,12 +193,12 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
                   <Cpu className="w-4 h-4" /> New: Context Library
                 </div>
                 <h2 className="text-3xl md:text-4xl font-bold text-text-color mb-4 leading-tight">
-                  Don't Start from Zero. <br/>
-                  <span className="text-accent">Give Your Agent a Brain.</span>
+                  Download the Brain. <br/>
+                  <span className="text-accent">Make It Smart Instantly.</span>
                 </h2>
                 <p className="text-lg text-text-secondary mb-8 leading-relaxed">
-                  Stop copying prompts one by one. Download our <strong>Master Cookbook (JSON)</strong> containing 700+ workflows. 
-                  Drop it into your project, and your agent instantly becomes a Sales & Marketing expert.
+                  Stop copying prompts one by one. Download our <strong>Master Cookbook (JSON)</strong>. 
+                  It's 700+ workflows in a single file. Your agent goes from "confused intern" to "expert" in about 3 seconds.
                 </p>
                 <a href="/context" className="inline-flex items-center gap-2 bg-navy-dark border border-navy-light hover:border-accent text-text-color font-bold px-6 py-3 rounded-lg transition-all group-hover:translate-x-1">
                   <Command className="w-4 h-4 text-accent" /> Download Context Files <ArrowRight className="w-4 h-4" />
@@ -234,25 +231,25 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
         <div className="bg-primary-bg py-24 border-t border-navy-dark">
           <div className="max-w-4xl mx-auto px-4 sm:px-6">
             <h2 className="text-3xl md:text-5xl font-bold text-text-color mb-16 text-center tracking-tight">
-              Behind the Blueprints: <span className="text-accent">Our Process</span>
+              Why does this <span className="text-accent">exist?</span>
             </h2>
             
             <div className="space-y-6">
               <div className="bg-secondary-bg p-8 rounded-xl border border-navy-dark hover:border-navy-light transition-colors">
                 <h3 className="text-xl font-bold mb-3 text-text-color flex items-center gap-3">
-                  <span className="text-accent text-sm font-mono border border-accent/30 px-2 py-0.5 rounded">01</span> How are these blueprints created?
+                  <span className="text-accent text-sm font-mono border border-accent/30 px-2 py-0.5 rounded">01</span> How are these created?
                 </h3>
                 <p className="text-text-secondary leading-relaxed pl-10">
-                  These aren't just theoretical prompts. They are a mixture of workflows we use internally while running our own agencies and projects, combined with AI to help us structure and scale the documentation. We identify real bottlenecks in Sales and Marketing, then architect a multi-step workflow that an AI agent can actually execute.
+                  We run an agency. We needed these to work. We identified real bottlenecks in our own boring Sales/Marketing tasks, then wrote the workflows to automate them. If it's in this library, it's because we actually use it.
                 </p>
               </div>
 
               <div className="bg-secondary-bg p-8 rounded-xl border border-navy-dark hover:border-navy-light transition-colors">
                 <h3 className="text-xl font-bold mb-3 text-text-color flex items-center gap-3">
-                  <span className="text-accent text-sm font-mono border border-accent/30 px-2 py-0.5 rounded">02</span> Are these tested and verified?
+                  <span className="text-accent text-sm font-mono border border-accent/30 px-2 py-0.5 rounded">02</span> Are they tested?
                 </h3>
                 <p className="text-text-secondary leading-relaxed pl-10">
-                  Yes. We run and test these recipes regularly to ensure they work. For complex scenarios where we can't verify every single edge case ourselves, we rely on user feedback. We are constantly fixing bugs and updating the logic based on how these perform in the real world.
+                  Yes. If they break, we look stupid. We verify them regularly. If you find an edge case we missed, tell us and we'll fix it.
                 </p>
               </div>
 
@@ -261,7 +258,7 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
                   <span className="text-accent text-sm font-mono border border-accent/30 px-2 py-0.5 rounded">03</span> What if a blueprint doesn't work for me?
                 </h3>
                 <p className="text-text-secondary leading-relaxed pl-10">
-                  Reach out to us! If you find a bug or have a specific use case that isn't covered, let us know. We use your feedback to fix existing blueprints and build new ones that are relevant to the actual problems you're trying to solve.
+                  Email us. Seriously. We'd rather fix the blueprint than have you annoyed. We update logic based on feedback constantly.
                 </p>
               </div>
 
@@ -270,7 +267,7 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
                   <span className="text-accent text-sm font-mono border border-accent/30 px-2 py-0.5 rounded">04</span> Which AI tools can run these?
                 </h3>
                 <p className="text-text-secondary leading-relaxed pl-10">
-                  Our blueprints are tool-agnostic. They are optimized for "Folder Agents" like Claude Code, Gemini CLI, and Cursor, but they work in any environment that can read files and follow logical instructions.
+                  Claude Code, Gemini CLI, Cursor, Windsurf. They're just text files. They don't care what tool you use, as long as it can read English and write code.
                 </p>
               </div>
 
@@ -279,16 +276,16 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
                   <span className="text-accent text-sm font-mono border border-accent/30 px-2 py-0.5 rounded">05</span> Why use these instead of simple prompts?
                 </h3>
                 <p className="text-text-secondary leading-relaxed pl-10">
-                  Simple prompts often fail at complex tasks like tiered commission math or fuzzy lead matching. We've built the underlying logic into these blueprints so you don't have to spend hours debugging prompts. They are designed to be work-ready systems, not just text generators.
+                  Because simple prompts are vague. "Make me a marketing plan" gets you garbage. Our blueprints handle tiered commission math, fuzzy lead matching, and multi-step logic. It's the difference between a sketch and a blueprint.
                 </p>
               </div>
 
               <div className="bg-secondary-bg p-8 rounded-xl border border-navy-dark hover:border-navy-light transition-colors">
                 <h3 className="text-xl font-bold mb-3 text-text-color flex items-center gap-3">
-                  <span className="text-accent text-sm font-mono border border-accent/30 px-2 py-0.5 rounded">06</span> Is it safe to download these ZIP bundles?
+                  <span className="text-accent text-sm font-mono border border-accent/30 px-2 py-0.5 rounded">06</span> Is it safe to download?
                 </h3>
                 <p className="text-text-secondary leading-relaxed pl-10">
-                  Yes. Our bundles contain **100% plain text files** (.md for the blueprint and .csv for the sample data). We never include executables, scripts, or binaries. You can even inspect the files in any text editor before using them. If you prefer not to download, every blueprint can also be copied and pasted directly from the page.
+                  Yes. It's a ZIP file full of plain text (.md and .csv). No executables. No binaries. No weird scripts. You can open them in Notepad and read every word before using them.
                 </p>
               </div>
             </div>
@@ -302,7 +299,7 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
               📬 Don't Miss Out!
             </h2>
             <p className="text-xl mb-10 font-sans text-text-secondary max-w-2xl mx-auto">
-              Sign up to get 3 interesting AI recipes delivered weekly. Join hundreds of subscribers learning to use AI practically.
+              We send 3 emails a week. They contain files you can use. If they suck, unsubscribe. We won't be offended.
             </p>
             
             <div className="max-w-[500px] mx-auto">

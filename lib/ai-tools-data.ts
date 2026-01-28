@@ -432,5 +432,209 @@ export const aiTools: AiTool[] = [
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=tekadio.app&sz=128"
+},
+  {
+    name: "Invoplex",
+    description: "Invoplex is an invoicing tool for freelancers, creators and service-based businesses to create quotes, send invoices, track payments, and manage clients without the bloated accounting software.",
+    url: "https://invoplex.com/",
+    category: "Video & Audio",
+    tags: {
+        useCase: ["Business"],
+        price: "Free",
+        skill: "Beginner"
+    },
+    image: "https://www.google.com/s2/favicons?domain=invoplex.com&sz=128"
+},
+  {
+    name: "Docutracker",
+    description: "Docutracker lets you see when and how people read your documents, providing real-time engagement analytics to optimize follow-ups. Docutracker lets you see when and how people read your documents, providing real-time engagement analytics to optimize follow-ups.",
+    url: "https://docutracker.io",
+    category: "Productivity",
+    tags: {
+        useCase: ["Business"],
+        price: "Free",
+        skill: "Beginner"
+    },
+    image: "https://www.google.com/s2/favicons?domain=docutracker.io&sz=128"
+},
+  {
+    name: "Time",
+    description: "Time is a native macOS menu bar app for managing time zones and calendar events. Track unlimited zones, see when teammates are awake, and join meetings with one click.",
+    url: "https://menubartime.com",
+    category: "Code Assistance",
+    tags: {
+        useCase: ["Business"],
+        price: "Free",
+        skill: "Beginner"
+    },
+    image: "https://www.google.com/s2/favicons?domain=menubartime.com&sz=128"
+},
+  {
+    name: "CleanMark",
+    description: "**Dual Functionality:**   - Remove text watermarks from NotebookLM PDFs (bottom-right corner)   - Remove watermarks from Gemini AI-generated images    🔬 **Advanced Technology:**   - Powered by OpenCV inpainting algorithms for seamless removal   - Directly processes embedded PDF images to maintain resolution   - Smart watermark detection that works on both light and dark backgrounds   - Supports large files up to 100MB    ✨ **User-Friendly Experience:**   - One-click upload and process   - Preview results before downloading   - No software installation required   - Batch processing support   - Fast processing (typically under 30 seconds)",
+    url: "https://geminiwatermarkremover.net/",
+    category: "Image Generation",
+    tags: {
+        useCase: ["Business"],
+        price: "Free",
+        skill: "Beginner"
+    },
+    image: "https://www.google.com/s2/favicons?domain=geminiwatermarkremover.net&sz=128"
+},
+  {
+    name: "ArchRender",
+    description: "Photorealistic AI Rendering for Architects & Designers",
+    url: "https://www.archrender.ai/",
+    category: "Image Generation",
+    tags: {
+        useCase: ["Business"],
+        price: "Free",
+        skill: "Beginner"
+    },
+    image: "https://www.google.com/s2/favicons?domain=www.archrender.ai&sz=128"
+},
+  {
+    name: "ModulEdge",
+    description: "ModulEdge is a tech-driven manufacturer of modular data centers that bridges the gap between high-load AI hardware and legacy enterprise IT infrastructure. By combining advanced hybrid cooling with specialized environmental hardening, we enable the rapid deployment of on-prem AI modular data centers, general compute clusters, and secure data backups. Unlike traditional construction, every ModulEdge system is factory-integrated and delivered in just 3-6 months, providing a plug-and-play solution for sites with power, cooling, or site constraints.",
+    url: "https://www.moduledge.com/",
+    category: "Productivity",
+    tags: {
+        useCase: ["Business"],
+        price: "Free",
+        skill: "Beginner"
+    },
+    image: "https://www.google.com/s2/favicons?domain=www.moduledge.com&sz=128"
+},
+  {
+    name: "Tech Twitter",
+    description: "Finding signal on X is more difficult than it used to be on Twitter. We curate the best tweets on topics like AI, startups, and product development every weekday at 10 AM EST so you can focus on what matters.",
+    url: "https://www.techtwitter.com",
+    category: "Image Generation",
+    tags: {
+        useCase: ["Business"],
+        price: "Free",
+        skill: "Beginner"
+    },
+    image: "https://www.google.com/s2/favicons?domain=www.techtwitter.com&sz=128"
+},
+  {
+    name: "Bank PDF Converter",
+    description: "The most accurate bank statement converter. Convert PDF to Excel and CSV with automatic transaction validation—works with any bank, any language.",
+    url: "https://bankpdfconverter.com/",
+    category: "Productivity",
+    tags: {
+        useCase: ["Business"],
+        price: "Free",
+        skill: "Beginner"
+    },
+    image: "https://www.google.com/s2/favicons?domain=bankpdfconverter.com&sz=128"
+},
+  {
+    name: "Squared Away",
+    description: "We've all been there. You're standing in your garage, staring at a wall of boxes, trying to remember which one has the camping gear. Or you're at the hardware store, wondering if you already own a 10mm socket set buried somewhere in your basement. The mental inventory we try to keep of our belongings inevitably fails us, and we end up wasting hours searching or buying things we already own.  Squared Away is an AI-powered home inventory app that solves this problem by making it effortless to catalog everything you own. The magic is in the simplicity: just snap a photo of an item, and the app's AI does the rest. It automatically identifies what you're looking at, suggests an accurate name, assigns the right category, and generates relevant tags—all in seconds. What used to require tedious manual data entry now happens with a single tap of your camera.",
+    url: "https://squaredaway.ai",
+    category: "Image Generation",
+    tags: {
+        useCase: ["Business"],
+        price: "Free",
+        skill: "Beginner"
+    },
+    image: "https://www.google.com/s2/favicons?domain=squaredaway.ai&sz=128"
+},
+  {
+    name: "logostream",
+    description: "Company logos & icons for modern travel and finance apps.",
+    url: "https://logostream.dev",
+    category: "Code Assistance",
+    tags: {
+        useCase: ["Business"],
+        price: "Free",
+        skill: "Beginner"
+    },
+    image: "https://www.google.com/s2/favicons?domain=logostream.dev&sz=128"
+},
+  {
+    name: "Archivist",
+    description: "Turn AI-generated chaos into organized deliverables. Custom naming presets, smart collections, and bulk ZIP exports for all who've lost track of files.",
+    url: "https://getarchivist.org/",
+    category: "Image Generation",
+    tags: {
+        useCase: ["Business"],
+        price: "Free",
+        skill: "Beginner"
+    },
+    image: "https://www.google.com/s2/favicons?domain=getarchivist.org&sz=128"
+},
+  {
+    name: "Bitvoiper",
+    description: "Browser-based calling with Username Proxy system and Comprehensive Call Center Features",
+    url: "https://bitvoiper.com",
+    category: "Productivity",
+    tags: {
+        useCase: ["Business"],
+        price: "Free",
+        skill: "Beginner"
+    },
+    image: "https://www.google.com/s2/favicons?domain=bitvoiper.com&sz=128"
+},
+  {
+    name: "vitelnk",
+    description: "Secure Video Sharing Built for Professionals",
+    url: "https://vitelnk.com/",
+    category: "Video & Audio",
+    tags: {
+        useCase: ["Business"],
+        price: "Free",
+        skill: "Beginner"
+    },
+    image: "https://www.google.com/s2/favicons?domain=vitelnk.com&sz=128"
+},
+  {
+    name: "Roomika",
+    description: "Roomika is an AI-powered interior design and virtual staging platform that helps you redesign any room using a photo of your real space. Instead of starting from scratch with mood boards or generic inspiration images, Roomika lets you upload a room photo and instantly generate realistic design concepts that preserve the layout and architecture of your room — while transforming the style, furniture, and overall vibe.  Whether you’re decorating a new home, refreshing a living room, remodeling a kitchen, or trying to make a bedroom feel more modern and comfortable, Roomika makes it easy to explore professional-quality options in minutes. You can choose from a wide range of popular interior styles, from modern and contemporary to minimalist, Scandinavian, Japanese, rustic, and more. Each design is generated with a focus on photorealism so the results look believable, not cartoonish — and you can generate multiple variations to compare different looks side-by-side.  Roomika is also a powerful tool for real estate professionals, Airbnb hosts, and property managers who need high-quality staging visuals fast. With Roomika’s virtual staging features, you can furnish empty rooms, redesign outdated spaces, and create polished “after” images that help buyers and renters imagine the potential of a property. This is especially useful when you want to test design directions without spending money on physical staging, renovations, or expensive design software.  A key advantage of Roomika is its flexibility. You can upload your own inspiration images, describe the changes you want in plain English, and fine-tune designs until they match your taste. Want a brighter color palette? Different flooring? More modern furniture? A cozier aesthetic? Roomika makes it easy to iterate and explore. In addition to still images, Roomika can also generate short design videos that bring the transformation to life — perfect for sharing on social media, listing pages, or with friends and family.  Roomika is built for anyone who wants to design their space with confidence, without needing design experience. It’s fast, simple, and fun to use, while still producing results that feel like something an interior designer might deliver. If you want to quickly visualize design ideas, experiment with styles, or stage a home for sale or rent, Roomika turns your room photo into beautiful, realistic design concepts in just a few clicks.",
+    url: "https://www.roomika.ai",
+    category: "Video & Audio",
+    tags: {
+        useCase: ["Business"],
+        price: "Free",
+        skill: "Beginner"
+    },
+    image: "https://www.google.com/s2/favicons?domain=www.roomika.ai&sz=128"
+},
+  {
+    name: "Multic - Multiplayer Comics",
+    description: "GenAI Game Engine for Multiplayer Experiences",
+    url: "https://www.multic.com",
+    category: "Productivity",
+    tags: {
+        useCase: ["Business"],
+        price: "Free",
+        skill: "Beginner"
+    },
+    image: "https://www.google.com/s2/favicons?domain=www.multic.com&sz=128"
+},
+  {
+    name: "Thrive",
+    description: "Master your portfolio. Maximize your potential. Crypto Market Intelligence for Traders.",
+    url: "https://thrive.fi/",
+    category: "Productivity",
+    tags: {
+        useCase: ["Business"],
+        price: "Free",
+        skill: "Beginner"
+    },
+    image: "https://www.google.com/s2/favicons?domain=thrive.fi&sz=128"
+},
+  {
+    name: "PressBeat",
+    description: "AI-native PR agency. Get quoted in organic press on autopilot. 1 article guaranteed per month.",
+    url: "https://pressbeat.io",
+    category: "Image Generation",
+    tags: {
+        useCase: ["Business"],
+        price: "Free",
+        skill: "Beginner"
+    },
+    image: "https://www.google.com/s2/favicons?domain=pressbeat.io&sz=128"
 }
 ];
