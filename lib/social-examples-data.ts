@@ -417,4 +417,28 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     Sponsored: false,
     sponsor: null
   },
+  {
+    id: "nathanflurry-open-source-ai-engineer-agent",
+    title: "Open Source AI Engineer Agent",
+    slug: "nathanflurry-open-source-ai-engineer-agent",
+    summary: "Nathan Flurry demonstrates an open-source AI engineer agent capable of building complex features autonomously, showcasing the power of agentic orchestration.",
+    screenshots: [
+      {
+        url: "/images/examples/2026-01-29-nathanflurry-open-source-ai-engineer-agent.jpg",
+        filename: "2026-01-29-nathanflurry-open-source-ai-engineer-agent.jpg",
+        thumbnails: {
+          small: { url: "/images/examples/2026-01-29-nathanflurry-open-source-ai-engineer-agent.jpg" },
+          large: { url: "/images/examples/2026-01-29-nathanflurry-open-source-ai-engineer-agent.jpg" }
+        }
+      }
+    ],
+    category: "Code Assistance",
+    publish_date: "2026-01-29",
+    original_link: "https://x.com/NathanFlurry/status/2015128922766381249",
+    author_name: "Nathan Flurry",
+    author_link: "https://x.com/NathanFlurry",
+    tags: ["AI Agents", "Open Source", "Coding"],
+    Sponsored: false,
+    sponsor: null
+  },
 ];

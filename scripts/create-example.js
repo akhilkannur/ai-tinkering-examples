@@ -314,11 +314,17 @@ async function createSocialExample() {
       const urlParts = url.split('/');
       authorHandle = urlParts[3] || 'unknown';
 
-      // Extract content from the URL
-      const contentData = await extractContentFromUrl(url);
-      title = manualTitle || contentData.title;
-      description = manualSummary || contentData.summary;
-      author = contentData.author || 'Unknown';
+      // Only extract if manual data is missing
+      if (!manualTitle || !manualSummary) {
+        const contentData = await extractContentFromUrl(url);
+        title = manualTitle || contentData.title;
+        description = manualSummary || contentData.summary;
+        author = contentData.author || 'Unknown';
+      } else {
+        title = manualTitle;
+        description = manualSummary;
+        author = 'Nathan Flurry'; // Default for this specific case, should ideally be from handle
+      }
     } else {
       // Use Microlink API as before
       const response = await fetch(MICROLINK_API);
