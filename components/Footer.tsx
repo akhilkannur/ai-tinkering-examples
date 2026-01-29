@@ -28,7 +28,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm text-text-secondary">
               <li>
                 <Link href="/500-ways-to-use-llms-for-work" className="hover:text-accent transition-colors font-medium text-text-color/80">
-                  500+ AI Blueprints
+                  500+ AI Plays
                 </Link>
               </li>
               <li>
@@ -54,9 +54,9 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 3: Blueprints by Role */}
+          {/* Column 3: Plays by Role */}
           <div>
-            <h4 className="font-bold text-text-color mb-4">Blueprints by Role</h4>
+            <h4 className="font-bold text-text-color mb-4">Plays by Role</h4>
             <ul className="space-y-2 text-sm text-text-secondary">
               <li>
                 <Link href="/role/sales-ops" className="hover:text-accent transition-colors">Sales Ops</Link>
@@ -92,7 +92,7 @@ export default function Footer() {
 
         <div className="pt-8 border-t border-navy-dark text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-text-secondary text-sm opacity-60">
-            Real AI Examples &copy; {new Date().getFullYear()} &mdash; Automate your work with structured blueprints.
+            Real AI Examples &copy; {new Date().getFullYear()} &mdash; Automate your work with structured plays.
           </p>
           <div className="flex items-center gap-2 text-xs font-mono text-text-secondary/40">
             <span>Built for Gemini CLI</span>

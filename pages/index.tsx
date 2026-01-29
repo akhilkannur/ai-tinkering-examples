@@ -69,7 +69,7 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
                             <span className="relative flex h-2 w-2">
                               <span className="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
                             </span>
-                            <span className="tracking-widest uppercase font-bold">Zero Hype. Just Files.</span>
+                            <span className="tracking-widest uppercase font-bold">Sales & Marketing Plays. Zero Hype.</span>
                         </div>
                         
                         <h1 className="text-5xl md:text-7xl font-sans font-extrabold text-text-color mb-6 tracking-tight leading-[1.1]">
@@ -79,7 +79,7 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
                         
                         <p className="text-lg text-text-secondary mb-10 leading-relaxed max-w-lg font-normal">
                             Most "AI workflows" are just people bragging on Twitter. We actually have work to do. <br/><br/>
-                            These are the boring, reliable text files we use to make Claude and Gemini shut up and do the job. No code. No "thought leaders." Just results.
+                            These are the boring, reliable <strong className="text-text-color">Sales & Marketing plays</strong> we use to make Claude and Gemini shut up and do the job. No code. No "thought leaders." Just results.
                         </p>
 
                         <div className="inline-block bg-accent/10 border border-accent/20 rounded-full px-3 py-1 mb-4">
@@ -109,7 +109,7 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
 
                         {/* Playbooks Bar */}
                         <div className="pt-8 border-t border-navy-dark">
-                            <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-text-secondary/40 mb-4">Popular Role-Based Playbooks:</p>
+                            <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-text-secondary/40 mb-4">Popular Role-Based Plays:</p>
                             <div className="flex flex-wrap gap-3">
                                 <a href="/playbook/vp-sales" className="flex items-center gap-2 text-xs font-bold text-text-color bg-secondary-bg border border-navy-dark px-3 py-1.5 rounded-full hover:border-accent hover:text-accent transition-all">
                                   <Target className="w-3 h-3" /> VP Sales
@@ -173,10 +173,10 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
                         </h2>
                         <p className="text-text-secondary leading-relaxed mb-6">
                         Stop typing "Please help me code a landing page" and hoping for the best. 
-                        Paste our blueprint into Composer. It gives the AI a rigid structure so it doesn't hallucinate a bunch of nonsense.
+                        Paste our play into Composer. It gives the AI a rigid structure so it doesn't hallucinate a bunch of nonsense.
                         </p>
                         <div className="bg-primary-bg p-4 rounded-lg border border-navy-dark text-sm font-mono text-text-secondary/70">
-                        Composer: "Blueprint detected. Building structure..." <span className="text-purple-400">Generating...</span>
+                        Composer: "Play detected. Building structure..." <span className="text-purple-400">Generating...</span>
                         </div>
                     </div>
                 </div>
@@ -240,7 +240,7 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
                   <span className="text-accent text-sm font-mono border border-accent/30 px-2 py-0.5 rounded">01</span> How are these created?
                 </h3>
                 <p className="text-text-secondary leading-relaxed pl-10">
-                  We run an agency. We needed these to work. We identified real bottlenecks in our own boring Sales/Marketing tasks, then wrote the workflows to automate them. If it's in this library, it's because we actually use it.
+                  We run an agency. We needed these to work. We identified real bottlenecks in our own boring Sales/Marketing tasks, then wrote the plays to automate them. If it's in this library, it's because we actually use it.
                 </p>
               </div>
 
@@ -255,10 +255,10 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
 
               <div className="bg-secondary-bg p-8 rounded-xl border border-navy-dark hover:border-navy-light transition-colors">
                 <h3 className="text-xl font-bold mb-3 text-text-color flex items-center gap-3">
-                  <span className="text-accent text-sm font-mono border border-accent/30 px-2 py-0.5 rounded">03</span> What if a blueprint doesn't work for me?
+                  <span className="text-accent text-sm font-mono border border-accent/30 px-2 py-0.5 rounded">03</span> What if a play doesn't work for me?
                 </h3>
                 <p className="text-text-secondary leading-relaxed pl-10">
-                  Email us. Seriously. We'd rather fix the blueprint than have you annoyed. We update logic based on feedback constantly.
+                  Email us. Seriously. We'd rather fix the play than have you annoyed. We update logic based on feedback constantly.
                 </p>
               </div>
 
@@ -276,7 +276,7 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
                   <span className="text-accent text-sm font-mono border border-accent/30 px-2 py-0.5 rounded">05</span> Why use these instead of simple prompts?
                 </h3>
                 <p className="text-text-secondary leading-relaxed pl-10">
-                  Because simple prompts are vague. "Make me a marketing plan" gets you garbage. Our blueprints handle tiered commission math, fuzzy lead matching, and multi-step logic. It's the difference between a sketch and a blueprint.
+                  Because simple prompts are vague. "Make me a marketing plan" gets you garbage. Our plays handle tiered commission math, fuzzy lead matching, and multi-step logic. It's the difference between a sketch and a play.
                 </p>
               </div>
 
