@@ -7,9 +7,21 @@ from datetime import datetime
 
 import os
 
+# Try to load from .env.local if not in environment
+if not os.environ.get("RESEND_API_KEY"):
+    try:
+        with open('.env.local', 'r') as f:
+            for line in f:
+                line = line.strip()
+                if line.startswith('RESEND_API_KEY='):
+                    os.environ["RESEND_API_KEY"] = line.split('=', 1)[1].strip().strip('"').strip("'")
+                    break
+    except Exception:
+        pass
+
 API_KEY = os.environ.get("RESEND_API_KEY")
 if not API_KEY:
-    raise ValueError("RESEND_API_KEY environment variable not set")
+    raise ValueError("RESEND_API_KEY environment variable not set. Please set it or add it to .env.local")
 
 def slugify(text):
     """Mirror of the frontend slugify logic."""
@@ -29,7 +41,8 @@ def get_live_tool_names():
 def send_email(recipient, tool_name):
     subject = f"{tool_name} is live on Real AI Examples"
     slug = slugify(tool_name)
-    tool_url = f"https://realaiexamples.com/tools/{slug}"
+    # Add tracking parameters
+    tool_url = f"https://realaiexamples.com/tools/{slug}?utm_source=email&utm_medium=acceptance_notification&utm_campaign=tool_directory_launch"
     
     text_body = f"""Hey there!
 
