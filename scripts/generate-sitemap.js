@@ -91,7 +91,8 @@ async function generateSitemap() {
       '', '/about', '/learn-ai', '/ai-examples', '/investors', '/jobs', '/ai-workplace-quiz',
       '/tools', '/tools/for-content-creators', '/tools/for-developers', '/tools/for-marketers',
       '/tools/free-ai-tools', '/tools/utm-builder', '/privacy', '/terms', 
-      '/500-ways-to-use-llms-for-work', '/state-of-ai-2026', '/how-to', '/build-club'
+      '/500-ways-to-use-llms-for-work', '/state-of-ai-2026', '/how-to', '/build-club',
+      '/how-to/market-saas-zero-budget'
     ];
 
     const currentDate = new Date().toISOString();
