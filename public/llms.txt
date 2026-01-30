@@ -14,8 +14,8 @@
 - [llms-cro.txt](https://realaiexamples.com/llms-cro.txt) - 33 recipes
 - [llms-e-commerce.txt](https://realaiexamples.com/llms-e-commerce.txt) - 25 recipes
 - [llms-retention.txt](https://realaiexamples.com/llms-retention.txt) - 16 recipes
-- [llms-ai-productivity.txt](https://realaiexamples.com/llms-ai-productivity.txt) - 1 recipes
 - [llms-product-ops.txt](https://realaiexamples.com/llms-product-ops.txt) - 1 recipes
+- [llms-brand.txt](https://realaiexamples.com/llms-brand.txt) - 1 recipes
 - [llms-seo-ops.txt](https://realaiexamples.com/llms-seo-ops.txt) - 2 recipes
 - [llms-dev-tools.txt](https://realaiexamples.com/llms-dev-tools.txt) - 1 recipes
 

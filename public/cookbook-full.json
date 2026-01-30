@@ -1,5 +1,13 @@
 [
   {
+    "id": "franchise-brand-enforcer",
+    "title": "The Franchise Brand Enforcer",
+    "category": "Brand",
+    "tagline": "Stop local franchisees from going rogue.",
+    "trigger": "User wants to Franchise owners are busy operators, not copywriters. This agent takes their raw local inputs (Offers, Dates, Events) and merges them with your 'Headquarters' Brand Voice to generate 100% compliant local marketing assets.",
+    "steps": "You are a **Brand Compliance Officer**. You know that \"Creative Freedom\" is the enemy of \"Brand Consistency\" at the local level.\n**Goal:** Take raw, messy input from a franchisee and transform it into a polished, compliant social post.\n```csv\nFranchise_Location,Raw_Input,Platform\nAustin_Downtown,\"We are having a sale on tuesday for 50% off bc its our bday come by\",Instagram\nSeattle_North,\"Closed for snow day sorry guys\",Twitter\nMiami_Beach,\"New summer flavors are here try the mango one its fire\",Email_Subject\n```\n#\n1.  **Check:** Does `brand_guidelines.md` exist?\n2.  **If Missing:** Create it with this default strict persona:\n    *   **Tone:** Professional, Warm, Energetic (but never slangy).\n    *   **Forbidden Words:** \"Fire\", \"bc\", \"lit\", \"guys\" (use \"Everyone\"), \"bday\".\n    *   **Formatting:** Use 1 emoji max. No all-caps.\n#\nFor each row in the CSV:\n1.  **Analyze Input:** Identify the core *facts* (Date: Tuesday, Offer: 50% Off, Reason: Birthday).\n2.  **Sanitize:** Remove all forbidden words and slang.\n3.  **Rewrite:** Apply the `brand_guidelines.md` tone to the facts.\n    *   *Input:* \"bc its our bday\" -> *Output:* \"to celebrate our anniversary.\"\n4.  **Format:** Apply platform-specific rules (Hashtags for Insta, brevity for Twitter).\n#\n1.  **Create:** `compliant_posts.csv` with columns: `Location`, `Original_Draft`, `Approved_Copy`, `Compliance_Notes`.\n2.  **Report:** \"Processed [X] local drafts. Auto-corrected [Y] violations of brand policy.\""
+  },
+  {
     "id": "ad-copy-benchmarker",
     "title": "Ad Copy Pivot Detector",
     "category": "Competitive Intel",

@@ -3,17 +3,17 @@ const fs = require('fs');
 const path = require('path');
 
 // Subreddits to scan
-const SUBREDDITS = ['ChatGPT', 'ClaudeAI', 'marketing', 'sales', 'SaaS'];
+const SUBREDDITS = ['ChatGPT', 'ClaudeAI', 'marketing', 'sales', 'SaaS', 'GrowthHacking', 'sideproject', 'startups'];
 
 // Keywords to prioritize (must have at least one)
-const AI_KEYWORDS = ['ai', 'chatgpt', 'claude', 'gemini', 'automate', 'workflow', 'bot', 'agent', 'script', 'tool'];
+const AI_KEYWORDS = ['ai', 'chatgpt', 'claude', 'gemini', 'automate', 'workflow', 'bot', 'agent', 'script', 'tool', 'llm', 'openai', 'anthropic', 'stack', 'software', 'help'];
 
 // Keywords to exclude (too technical or irrelevant)
-const BLOCK_KEYWORDS = ['api', 'key', 'error', 'bug', 'deploy', 'hosting', 'server', 'down', 'outage'];
+const BLOCK_KEYWORDS = ['api', 'key', 'error', 'bug', 'deploy', 'hosting', 'server', 'down', 'outage', 'hiring', 'job'];
 
-function fetchSubreddit(subreddit) {
+function fetchSubreddit(subreddit, type = 'hot') {
   return new Promise((resolve) => {
-    const url = `https://www.reddit.com/r/${subreddit}/hot.json?limit=50`;
+    const url = `https://www.reddit.com/r/${subreddit}/${type}.json?limit=50`;
     
     https.get(url, { headers: { 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)' } }, (res) => {
       let data = '';
@@ -21,43 +21,61 @@ function fetchSubreddit(subreddit) {
       res.on('end', () => {
         try {
           const json = JSON.parse(data);
+          if (!json.data) {
+            console.error(`Invalid response for ${subreddit} (${type})`);
+            resolve([]);
+            return;
+          }
           resolve(json.data.children.map(child => child.data));
         } catch (e) {
-          console.error(`Failed to parse ${subreddit}:`, e.message);
+          console.error(`Failed to parse ${subreddit} (${type}):`, e.message);
           resolve([]);
         }
       });
     }).on('error', (e) => {
-      console.error(`Error fetching ${subreddit}:`, e.message);
+      console.error(`Error fetching ${subreddit} (${type}):`, e.message);
       resolve([]);
     });
   });
 }
 
 async function scan() {
-  console.log('🔍 Scanning Reddit for content gaps...');
+  console.log('🔍 Scanning Reddit for recent content gaps (last 48h)...');
   let allPosts = [];
+  const now = Date.now() / 1000;
+  const fortyEightHoursAgo = now - (48 * 60 * 60);
 
   for (const sub of SUBREDDITS) {
     console.log(`   Scanning r/${sub}...`);
-    const posts = await fetchSubreddit(sub);
-    allPosts = [...allPosts, ...posts];
+    const hotPosts = await fetchSubreddit(sub, 'hot');
+    const newPosts = await fetchSubreddit(sub, 'new');
+    
+    // Merge and de-duplicate
+    const seen = new Set();
+    [...hotPosts, ...newPosts].forEach(p => {
+      if (!seen.has(p.id)) {
+        allPosts.push(p);
+        seen.add(p.id);
+      }
+    });
+
     // Polite delay
-    await new Promise(r => setTimeout(r, 1000));
+    await new Promise(r => setTimeout(r, 500));
   }
 
   console.log(`
-Analyzing ${allPosts.length} raw posts...`);
+Analyzing ${allPosts.length} unique posts...`);
 
   const opportunities = allPosts
     .filter(post => {
       const title = post.title.toLowerCase();
-      const isQuestion = title.includes('?') || title.startsWith('how') || title.includes('way to');
+      const isQuestion = title.includes('?') || title.startsWith('how') || title.includes('way to') || title.includes('anyone');
       const hasAI = AI_KEYWORDS.some(k => title.includes(k));
       const isBlocked = BLOCK_KEYWORDS.some(k => title.includes(k));
-      const hasVotes = post.score > 10; // Validation threshold
+      const isRecent = post.created_utc > fortyEightHoursAgo;
+      const hasVotes = post.score >= 1; // Include all posts with at least one vote
 
-      return isQuestion && hasAI && !isBlocked && hasVotes;
+      return isQuestion && hasAI && !isBlocked && isRecent && hasVotes;
     })
     .map(post => ({
       subreddit: post.subreddit,

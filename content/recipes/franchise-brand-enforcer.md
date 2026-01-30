@@ -1,9 +1,3 @@
-# Blueprints: Brand
-
-## The Franchise Brand Enforcer
-URL: https://realaiexamples.com/blueprints/franchise-brand-enforcer
-Description: Stop local franchisees from going rogue.
-
 ---
 id: franchise-brand-enforcer
 title: The Franchise Brand Enforcer
@@ -49,7 +43,3 @@ For each row in the CSV:
 ## 3. Phase 3: Deliverables
 1.  **Create:** `compliant_posts.csv` with columns: `Location`, `Original_Draft`, `Approved_Copy`, `Compliance_Notes`.
 2.  **Report:** "Processed [X] local drafts. Auto-corrected [Y] violations of brand policy."
-
-
----
-
