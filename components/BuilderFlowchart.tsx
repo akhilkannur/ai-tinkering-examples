@@ -5,6 +5,7 @@ import {
   Terminal, Copy, Check, FileText, Search, X, Download, Lock, Crown, ArrowRight, ExternalLink, Key
 } from 'lucide-react';
 import { categoryIcons, Category, Recipe } from '../lib/cookbook-data';
+import HowToUseGuide from './HowToUseGuide';
 
 interface TerminalCookbookProps {
   recipes: Recipe[];
@@ -56,6 +57,7 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
   };
 
   const filteredRecipes = useMemo(() => {
+    // 1. Filter
     const filtered = recipes.filter(recipe => {
       const matchesCategory = selectedCategory === 'All' || recipe.category === selectedCategory;
       const lowerQuery = searchQuery.toLowerCase();
@@ -66,7 +68,8 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
       return matchesCategory && matchesSearch;
     });
 
-    return filtered.sort((a, b) => {
+    // 2. Sort by Date first (to prepare for mixing)
+    const sortedByDate = filtered.sort((a, b) => {
       if (a.id === 'agent-context-builder') return -1;
       if (b.id === 'agent-context-builder') return 1;
       if (a.publish_date && b.publish_date) {
@@ -74,6 +77,31 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
       }
       return 0;
     });
+
+    // 3. Separate & Mix
+    // We want to interleave Free and Premium to show variety.
+    // Strategy: 2 Free : 1 Premium
+    const priority = sortedByDate.filter(r => r.id === 'agent-context-builder');
+    const others = sortedByDate.filter(r => r.id !== 'agent-context-builder');
+
+    const premium = others.filter(r => r.isPremium);
+    const free = others.filter(r => !r.isPremium);
+
+    const mixed: Recipe[] = [];
+    let pIndex = 0;
+    let fIndex = 0;
+
+    // While we have items in either list
+    while (fIndex < free.length || pIndex < premium.length) {
+       // Add 2 Free
+       if (fIndex < free.length) mixed.push(free[fIndex++]);
+       if (fIndex < free.length) mixed.push(free[fIndex++]);
+       
+       // Add 1 Premium
+       if (pIndex < premium.length) mixed.push(premium[pIndex++]);
+    }
+
+    return [...priority, ...mixed];
   }, [selectedCategory, searchQuery, recipes]);
 
   const handleLoadMore = () => {
@@ -81,6 +109,9 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
   };
 
   const recipesToRender = filteredRecipes.slice(0, visibleCount);
+  const part1 = recipesToRender.slice(0, 12);
+  const part2 = recipesToRender.slice(12);
+
   const hasMore = visibleCount < filteredRecipes.length;
   // Always show the paywall/upsell at the bottom for non-pro users, regardless of list size
   const showPaywallOverlay = !isUnlocked;
@@ -103,6 +134,91 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
+  };
+  
+  const RecipeCard = ({ recipe, index }: { recipe: Recipe, index: number }) => {
+    const CatIcon = categoryIcons[recipe.category] || Terminal;
+    // Calculate global index for locking logic based on original filtered list, or just check isPremium
+    // NOTE: Index-based locking (>= 200) might be slightly offset by mixing, but 200 is deep enough it doesn't matter much.
+    // We'll trust isPremium flag primarily.
+    const isLocked = !isUnlocked && (recipe.isPremium || index >= 200);
+    const isNew = recipe.publish_date && (new Date().getTime() - new Date(recipe.publish_date).getTime() < 7 * 24 * 60 * 60 * 1000);
+
+    return (
+      <div
+        className={`group text-left bg-secondary-bg p-6 rounded-xl border transition-all duration-300 flex flex-col h-full relative overflow-hidden cursor-pointer ${
+            isLocked 
+            ? 'border-yellow-900/30 hover:border-yellow-500/50 hover:shadow-[0_0_20px_rgba(234,179,8,0.1)] opacity-80 hover:opacity-100' 
+            : 'border-navy-dark hover:shadow-[0_0_30px_rgba(244,63,94,0.1)] hover:border-accent/50 hover:-translate-y-1'
+        }`}
+        onClick={() => setSelectedRecipe(recipe)}
+      >
+        {/* Visual indicator bar */}
+        <div className={`absolute top-0 left-0 w-1 h-full opacity-60 group-hover:opacity-100 transition-opacity ${
+          isLocked ? 'bg-yellow-500' :
+          recipe.category === 'Lead Gen' ? 'bg-blue-500' :
+          recipe.category === 'Sales Ops' ? 'bg-indigo-500' :
+          recipe.category === 'Marketing Ops' ? 'bg-orange-500' :
+          recipe.category === 'Content Ops' ? 'bg-pink-500' :
+          recipe.category === 'SEO' ? 'bg-green-500' :
+          recipe.category === 'Competitive Intel' ? 'bg-red-500' :
+          recipe.category === 'CRO' ? 'bg-cyan-500' :
+          recipe.category === 'Paid Media' ? 'bg-purple-500' :
+          recipe.category === 'Customer Success' ? 'bg-teal-500' :
+          recipe.category === 'Retention' ? 'bg-rose-500' :
+          recipe.category === 'E-commerce' ? 'bg-amber-500' :
+          'bg-gray-500'
+        }`} />
+
+        <div className="flex justify-between items-start mb-4 pl-3">
+          <div className={`p-3 rounded-lg transition-colors shadow-sm ${
+              isLocked 
+              ? 'bg-yellow-900/20 text-yellow-500 border border-yellow-500/20' 
+              : 'bg-primary-bg text-text-secondary group-hover:text-accent border border-navy-dark group-hover:border-accent/30'
+          }`}>
+            {isLocked ? <Lock className="w-5 h-5" /> : <CatIcon className="w-5 h-5" />}
+          </div>
+          <div className="flex flex-col items-end gap-2">
+            {isNew && (
+              <span className="bg-accent text-white text-[9px] font-black px-2 py-0.5 rounded-sm uppercase tracking-tighter shadow-[0_0_10px_rgba(244,63,94,0.5)] animate-pulse">
+                NEW
+              </span>
+            )}
+            {isLocked && (
+                <span className="bg-yellow-500/20 text-yellow-400 border border-yellow-500/30 text-[10px] font-bold px-2 py-1 rounded-sm uppercase tracking-wider shadow-sm flex items-center gap-1">
+                <Lock className="w-3 h-3" /> Premium
+                </span>
+            )}
+            {recipe.id === 'agent-context-builder' && (
+              <span className="text-[10px] uppercase tracking-wider font-bold px-2 py-1 rounded-sm bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">
+                 Start Here
+              </span>
+            )}
+            <span className={`text-[10px] uppercase tracking-wider font-bold px-2 py-1 rounded-sm bg-primary-bg text-text-secondary border border-navy-dark`}>
+              {recipe.category}
+            </span>
+          </div>
+        </div>
+        
+        <h3 className={`text-lg font-bold mb-2 leading-tight pl-3 transition-colors ${isLocked ? 'text-text-color group-hover:text-yellow-400' : 'text-text-color group-hover:text-accent'}`}>
+            {recipe.title}
+        </h3>
+        <p className="text-text-secondary text-sm font-medium mb-4 min-h-[40px] pl-3 line-clamp-2 leading-relaxed opacity-80">
+          {recipe.tagline}
+        </p>
+        
+        <div className="mt-auto pt-4 border-t border-navy-dark flex items-center justify-between text-xs text-text-secondary/50 pl-3">
+           <span className={`px-2 py-0.5 rounded ${
+              recipe.difficulty === 'Beginner' ? 'text-green-400 bg-green-400/10' : 
+              recipe.difficulty === 'Intermediate' ? 'text-yellow-400 bg-yellow-400/10' : 
+              'text-red-400 bg-red-400/10'
+           }`}>
+             {recipe.difficulty}
+           </span>
+           <span className="font-mono">{recipe.time}</span>
+        </div>
+      </div>
+    );
   };
 
   return (
@@ -159,91 +275,24 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
       </div>
 
       <div className="relative">
+        
+        {/* Part 1: First 12 items */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-12">
-          {recipesToRender.map((recipe, index) => {
-            const CatIcon = categoryIcons[recipe.category] || Terminal;
-            const isLocked = !isUnlocked && (index >= 200 || recipe.isPremium);
-            
-            // Logic for "NEW" badge (published in last 7 days)
-            const isNew = recipe.publish_date && (new Date().getTime() - new Date(recipe.publish_date).getTime() < 7 * 24 * 60 * 60 * 1000);
-            
-            return (
-              <div
-                key={recipe.id}
-                className={`group text-left bg-secondary-bg p-6 rounded-xl border transition-all duration-300 flex flex-col h-full relative overflow-hidden cursor-pointer ${
-                    isLocked 
-                    ? 'border-yellow-900/30 hover:border-yellow-500/50 hover:shadow-[0_0_20px_rgba(234,179,8,0.1)] opacity-80 hover:opacity-100' 
-                    : 'border-navy-dark hover:shadow-[0_0_30px_rgba(244,63,94,0.1)] hover:border-accent/50 hover:-translate-y-1'
-                }`}
-                onClick={() => setSelectedRecipe(recipe)}
-              >
-                {/* Visual indicator bar */}
-                <div className={`absolute top-0 left-0 w-1 h-full opacity-60 group-hover:opacity-100 transition-opacity ${
-                  isLocked ? 'bg-yellow-500' :
-                  recipe.category === 'Lead Gen' ? 'bg-blue-500' :
-                  recipe.category === 'Sales Ops' ? 'bg-indigo-500' :
-                  recipe.category === 'Marketing Ops' ? 'bg-orange-500' :
-                  recipe.category === 'Content Ops' ? 'bg-pink-500' :
-                  recipe.category === 'SEO' ? 'bg-green-500' :
-                  recipe.category === 'Competitive Intel' ? 'bg-red-500' :
-                  recipe.category === 'CRO' ? 'bg-cyan-500' :
-                  recipe.category === 'Paid Media' ? 'bg-purple-500' :
-                  recipe.category === 'Customer Success' ? 'bg-teal-500' :
-                  recipe.category === 'Retention' ? 'bg-rose-500' :
-                  recipe.category === 'E-commerce' ? 'bg-amber-500' :
-                  'bg-gray-500'
-                }`} />
+          {part1.map((recipe, index) => (
+             <RecipeCard key={recipe.id} recipe={recipe} index={index} />
+          ))}
+        </div>
 
-                <div className="flex justify-between items-start mb-4 pl-3">
-                  <div className={`p-3 rounded-lg transition-colors shadow-sm ${
-                      isLocked 
-                      ? 'bg-yellow-900/20 text-yellow-500 border border-yellow-500/20' 
-                      : 'bg-primary-bg text-text-secondary group-hover:text-accent border border-navy-dark group-hover:border-accent/30'
-                  }`}>
-                    {isLocked ? <Lock className="w-5 h-5" /> : <CatIcon className="w-5 h-5" />}
-                  </div>
-                  <div className="flex flex-col items-end gap-2">
-                    {isNew && (
-                      <span className="bg-accent text-white text-[9px] font-black px-2 py-0.5 rounded-sm uppercase tracking-tighter shadow-[0_0_10px_rgba(244,63,94,0.5)] animate-pulse">
-                        NEW
-                      </span>
-                    )}
-                    {isLocked && (
-                        <span className="bg-yellow-500/20 text-yellow-400 border border-yellow-500/30 text-[10px] font-bold px-2 py-1 rounded-sm uppercase tracking-wider shadow-sm flex items-center gap-1">
-                        <Lock className="w-3 h-3" /> Premium
-                        </span>
-                    )}
-                    {recipe.id === 'agent-context-builder' && (
-                      <span className="text-[10px] uppercase tracking-wider font-bold px-2 py-1 rounded-sm bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">
-                         Start Here
-                      </span>
-                    )}
-                    <span className={`text-[10px] uppercase tracking-wider font-bold px-2 py-1 rounded-sm bg-primary-bg text-text-secondary border border-navy-dark`}>
-                      {recipe.category}
-                    </span>
-                  </div>
-                </div>
-                
-                <h3 className={`text-lg font-bold mb-2 leading-tight pl-3 transition-colors ${isLocked ? 'text-text-color group-hover:text-yellow-400' : 'text-text-color group-hover:text-accent'}`}>
-                    {recipe.title}
-                </h3>
-                <p className="text-text-secondary text-sm font-medium mb-4 min-h-[40px] pl-3 line-clamp-2 leading-relaxed opacity-80">
-                  {recipe.tagline}
-                </p>
-                
-                <div className="mt-auto pt-4 border-t border-navy-dark flex items-center justify-between text-xs text-text-secondary/50 pl-3">
-                   <span className={`px-2 py-0.5 rounded ${
-                      recipe.difficulty === 'Beginner' ? 'text-green-400 bg-green-400/10' : 
-                      recipe.difficulty === 'Intermediate' ? 'text-yellow-400 bg-yellow-400/10' : 
-                      'text-red-400 bg-red-400/10'
-                   }`}>
-                     {recipe.difficulty}
-                   </span>
-                   <span className="font-mono">{recipe.time}</span>
-                </div>
-              </div>
-            );
-          })}
+        {/* Interjected How-To Guide */}
+        <div className="col-span-full py-8">
+            <HowToUseGuide />
+        </div>
+
+        {/* Part 2: Remaining items */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-12">
+          {part2.map((recipe, index) => (
+             <RecipeCard key={recipe.id} recipe={recipe} index={index + 12} />
+          ))}
         </div>
 
         {hasMore && (

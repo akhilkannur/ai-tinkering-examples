@@ -5,6 +5,7 @@ import Navbar from '../../../components/Navbar'
 import ExampleCard from '../../../components/ExampleCard'
 import ExampleModal from '../../../components/ExampleModal'
 import { fetchExamples, fetchExampleBySlug, ExampleRecord } from '../../../lib/airtable'
+import CategoryGuide from '../../../components/CategoryGuide'
 
 interface CategoryPageProps {
   examples: ExampleRecord[]
@@ -17,6 +18,9 @@ export default function CategoryPage({ examples, category }: CategoryPageProps) 
   
   const title = `${category} AI Examples | Real AI Examples`;
   const description = `Browse ${examples.length} real-world AI examples and workflows for ${category}. See how others are using AI in production.`;
+
+  // Convert "Sales Ops" -> "sales-ops" for the guide key
+  const catKey = category.toLowerCase().replace(/[^a-z0-9]/g, '-');
 
   const handleOpenModal = (example: ExampleRecord) => {
     setSelectedExample(example)
@@ -74,6 +78,9 @@ export default function CategoryPage({ examples, category }: CategoryPageProps) 
             ))}
           </div>
         )}
+
+        {/* SEO Guide Content */}
+        <CategoryGuide category={catKey} />
       </div>
 
       {/* Modal */}

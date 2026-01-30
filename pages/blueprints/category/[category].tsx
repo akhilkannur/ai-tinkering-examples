@@ -7,6 +7,8 @@ import { Recipe, categoryDescriptions, categoryIcons } from '../../../lib/cookbo
 import { Terminal, ArrowLeft, Search } from 'lucide-react';
 import React, { useState, useMemo } from 'react';
 
+import CategoryGuide from '../../../components/CategoryGuide';
+
 interface CategoryPageProps {
   category: string;
   recipes: Recipe[];
@@ -97,6 +99,9 @@ export default function CategoryPage({ category, recipes }: CategoryPageProps) {
             </Link>
           ))}
         </div>
+
+        {/* SEO Content Guide */}
+        <CategoryGuide category={catKey} />
       </main>
     </div>
   );
