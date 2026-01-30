@@ -109,6 +109,42 @@ export default function BuildClub() {
           </div>
         </div>
 
+        {/* WHAT CAN YOU BUILD */}
+        <div className="container mx-auto px-4 max-w-4xl mb-24">
+          <h2 className="text-3xl font-bold text-white mb-12 text-center">What Counts as "Building"?</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="bg-[#0D1117] p-6 rounded-xl border border-navy-dark hover:border-blue-500/30 transition-all">
+              <div className="text-blue-400 mb-4 font-bold text-lg">Internal Tools</div>
+              <ul className="space-y-3 text-sm text-text-secondary">
+                <li className="flex gap-2"><span className="text-blue-500">→</span> A script to scrape LinkedIn & enrich your CRM.</li>
+                <li className="flex gap-2"><span className="text-blue-500">→</span> An automated invoice organizer for your email.</li>
+                <li className="flex gap-2"><span className="text-blue-500">→</span> A slack bot that answers HR questions.</li>
+              </ul>
+            </div>
+
+            <div className="bg-[#0D1117] p-6 rounded-xl border border-navy-dark hover:border-purple-500/30 transition-all">
+              <div className="text-purple-400 mb-4 font-bold text-lg">Marketing Assets</div>
+              <ul className="space-y-3 text-sm text-text-secondary">
+                <li className="flex gap-2"><span className="text-purple-500">→</span> A program that turns 1 blog post into 10 tweets.</li>
+                <li className="flex gap-2"><span className="text-purple-500">→</span> An AI SEO auditor for your landing pages.</li>
+                <li className="flex gap-2"><span className="text-purple-500">→</span> A personalized cold email writer.</li>
+              </ul>
+            </div>
+
+            <div className="bg-[#0D1117] p-6 rounded-xl border border-navy-dark hover:border-green-500/30 transition-all">
+              <div className="text-green-400 mb-4 font-bold text-lg">Actual Apps</div>
+              <ul className="space-y-3 text-sm text-text-secondary">
+                <li className="flex gap-2"><span className="text-green-500">→</span> A simple web app for your clients.</li>
+                <li className="flex gap-2"><span className="text-green-500">→</span> A Chrome extension that summarizes tabs.</li>
+                <li className="flex gap-2"><span className="text-green-500">→</span> A directory site (like this one).</li>
+              </ul>
+            </div>
+          </div>
+          <p className="text-center text-text-secondary text-sm mt-8">
+            <strong>The Rule:</strong> If it uses AI (LLMs, Voice, Image) and it <em>runs</em>, it counts.
+          </p>
+        </div>
+
         {/* WHO IS THIS FOR */}
         <div className="container mx-auto px-4 max-w-2xl text-center mb-24">
           <h2 className="text-3xl font-bold text-white mb-12">Who is this for?</h2>
