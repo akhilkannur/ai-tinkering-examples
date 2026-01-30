@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
 import { Terminal, Hammer, Target, XCircle, CheckCircle2, ArrowRight, ShieldAlert } from 'lucide-react'
 
 export default function BuildClub() {
@@ -158,8 +157,6 @@ export default function BuildClub() {
         </div>
 
       </main>
-      
-      <Footer />
     </div>
   )
 }
