@@ -117,7 +117,7 @@ async function generateSitemap() {
       xml += `\n  <url><loc>${SITE_URL}/how-to/automate-${r.id}</loc><lastmod>${currentDate}</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>`;
     });
 
-    // New Role Pages (Priority 0.9 - High Value)
+    // Role & Category Hub Pages (Priority 0.9 - High Value)
     blueprintCategories.forEach(cat => {
       // Slugify logic matching utils/slugify.ts
       const catSlug = cat.toLowerCase()
@@ -126,6 +126,7 @@ async function generateSitemap() {
         .replace(/\s+/g, "-");
         
       xml += `\n  <url><loc>${SITE_URL}/role/${catSlug}</loc><lastmod>${currentDate}</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>`;
+      xml += `\n  <url><loc>${SITE_URL}/blueprints/category/${catSlug}</loc><lastmod>${currentDate}</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>`;
     });
 
     // Legacy Category Pages (Airtable)
