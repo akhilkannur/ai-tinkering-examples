@@ -63,24 +63,24 @@ export default function BuildClub() {
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
                   <h3 className="text-sm font-bold text-green-400 uppercase tracking-widest mb-4 flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4" /> How it Works
+                    <CheckCircle2 className="w-4 h-4" /> The Rules
                   </h3>
                   <ul className="space-y-4">
                     <li className="flex items-start gap-3">
                       <span className="bg-green-500/10 text-green-400 w-6 h-6 flex items-center justify-center rounded text-xs font-bold mt-0.5">1</span>
-                      <span className="text-text-secondary text-sm">Everyone shares what they want to build.</span>
+                      <span className="text-text-secondary text-sm"><strong>Beta Price:</strong> $29/month.</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="bg-green-500/10 text-green-400 w-6 h-6 flex items-center justify-center rounded text-xs font-bold mt-0.5">2</span>
-                      <span className="text-text-secondary text-sm">Each week you commit to a <strong>realistic goal</strong>.</span>
+                      <span className="text-text-secondary text-sm"><strong>The Kick-Out Rule:</strong> If you miss 2 weekly updates in a row, you are removed. No refunds.</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="bg-green-500/10 text-green-400 w-6 h-6 flex items-center justify-center rounded text-xs font-bold mt-0.5">3</span>
-                      <span className="text-text-secondary text-sm">You ship proof. Loom, screenshot, demo, or repo. Real artifacts only.</span>
+                      <span className="text-text-secondary text-sm"><strong>Privacy:</strong> Share your work publicly in the group, or privately with just me. Your choice.</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="bg-green-500/10 text-green-400 w-6 h-6 flex items-center justify-center rounded text-xs font-bold mt-0.5">4</span>
-                      <span className="text-text-secondary text-sm">I help <strong>push scope down</strong> so you actually finish.</span>
+                      <span className="text-text-secondary text-sm"><strong>Time:</strong> Expect ~3-5 hours of deep work per week.</span>
                     </li>
                   </ul>
                 </div>
