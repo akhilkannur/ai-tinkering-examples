@@ -91,11 +91,11 @@ export default function ZeroBudgetMarketing() {
           
           <div className="bg-[#0D1117] rounded-lg border border-navy-dark p-6 font-mono text-xs text-blue-300 mb-8 shadow-2xl">
             <div className="mb-2 text-gray-500"># Output from 'Competitor Spy' Agent</div>
-            <div>> Scanning competitor.com...</div>
-            <div>> Found: Hubspot (CRM)</div>
-            <div>> Found: Segment (Analytics)</div>
-            <div>> Found: 6sense (Intent Data) -- <span className="text-yellow-400">WARNING: They are moving upmarket.</span></div>
-            <div>> Found: 45 new blog posts in /enterprise-sales</div>
+            <div>&gt; Scanning competitor.com...</div>
+            <div>&gt; Found: Hubspot (CRM)</div>
+            <div>&gt; Found: Segment (Analytics)</div>
+            <div>&gt; Found: 6sense (Intent Data) -- <span className="text-yellow-400">WARNING: They are moving upmarket.</span></div>
+            <div>&gt; Found: 45 new blog posts in /enterprise-sales</div>
             <div><span className="text-green-400">✓ Report generated: intel_brief.md</span></div>
           </div>
         </div>
