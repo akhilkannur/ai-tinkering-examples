@@ -441,4 +441,28 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     Sponsored: false,
     sponsor: null
   },
+  {
+    id: "benyaminholley-claude-code-docs-audit",
+    title: "Claude Code Documentation Audit Play",
+    slug: "benyaminholley-claude-code-docs-audit",
+    summary: "Benyamin Holley shares a specific prompt for Claude Code designed to audit and optimize documentation files automatically, ensuring technical accuracy and consistent brand voice.",
+    screenshots: [
+      {
+        url: "/images/examples/2026-01-29-benyaminholley-benyamin-benyaminholley-on-x.jpg",
+        filename: "2026-01-29-benyaminholley-benyamin-benyaminholley-on-x.jpg",
+        thumbnails: {
+          small: { url: "/images/examples/2026-01-29-benyaminholley-benyamin-benyaminholley-on-x.jpg" },
+          large: { url: "/images/examples/2026-01-29-benyaminholley-benyamin-benyaminholley-on-x.jpg" }
+        }
+      }
+    ],
+    category: "Code Assistance",
+    publish_date: "2026-01-29",
+    original_link: "https://x.com/BenyaminHolley/status/2016727490417307689",
+    author_name: "Benyamin Holley",
+    author_link: "https://x.com/BenyaminHolley",
+    tags: ["Claude Code", "Automation", "Documentation", "Prompts"],
+    Sponsored: false,
+    sponsor: null
+  },
 ];

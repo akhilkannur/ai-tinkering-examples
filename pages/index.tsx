@@ -22,8 +22,8 @@ interface HybridHomePageProps {
 }
 
 export default function HybridHomePage({ recipes, featuredJobs, featuredTools, siteSettings }: HybridHomePageProps) {
-  const homepageTitle = "Real AI Examples: Boring Files That Actually Work";
-  const homepageDescription = "We got tired of arguing with chatbots. Here are 700+ boring, reliable text files that make Gemini & Claude actually do work. No subscriptions. No hype.";
+  const homepageTitle = "Real AI Examples: 500+ AI Workflows That Actually Work";
+  const homepageDescription = "Stop chatting and start building. A library of reliable, copy-paste AI workflows and recipes for salespeople, marketers, and founders. Works with Gemini, Claude, and all major AI LLMs.";
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com';
 
   return (

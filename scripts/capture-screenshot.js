@@ -12,7 +12,7 @@ module.exports = async function captureScreenshot(url, filename) {
     viewport: { width: 1280, height: 800, deviceScaleFactor: 2 }
   } : {
     // Default / Twitter config
-    clip: { x: 150, y: 50, width: 900, height: 600 },
+    clip: { x: 340, y: 50, width: 600, height: 600 },
     waitFor: 'article[data-testid="tweet"]',
     viewport: { width: 1280, height: 1024, deviceScaleFactor: 2 }
   };

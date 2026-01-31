@@ -32,6 +32,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/investors" className="hover:text-accent transition-colors">
+                  Micro-PE Match
+                </Link>
+              </li>
+              <li>
                 <Link href="/state-of-ai-2026" className="hover:text-accent transition-colors">
                   State of AI 2026
                 </Link>

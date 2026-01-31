@@ -3,7 +3,13 @@ const fs = require('fs');
 const path = require('path');
 
 // Subreddits to scan
-const SUBREDDITS = ['ChatGPT', 'ClaudeAI', 'marketing', 'sales', 'SaaS', 'GrowthHacking', 'sideproject', 'startups'];
+const SUBREDDITS = [
+  'salesops', 'RevenueOperations', 'marketingops', 'coldemail', 'leadgeneration', 
+  'emailmarketing', 'HubSpot', 'PPC', 'SEO', 'googlesheets', 'excel', 'Automate', 
+  'SaaS', 'startups', 'smallbusiness', 'Entrepreneur', 'freelance', 
+  'ChatGPT', 'ClaudeAI', 'OpenAI', 'GeminiAI', 'LocalLLaMA', 'PromptEngineering', 
+  'ArtificialInteligence'
+];
 
 // Keywords to prioritize (must have at least one)
 const AI_KEYWORDS = ['ai', 'chatgpt', 'claude', 'gemini', 'automate', 'workflow', 'bot', 'agent', 'script', 'tool', 'llm', 'openai', 'anthropic', 'stack', 'software', 'help'];

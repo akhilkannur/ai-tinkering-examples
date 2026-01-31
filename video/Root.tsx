@@ -1,63 +1,112 @@
 import { Composition } from 'remotion';
-import { BlueprintPromo } from './BlueprintPromo';
-import { PromoRealAI } from './PromoRealAI';
-import { TikTokPOV } from './TikTokPOV';
-import { TikTokMuted } from './TikTokMuted';
-import { VideoGlitch } from './VideoGlitch';
-import { InstaCover } from './InstaCover';
+import { StyleKinetic } from './modern-previews/StyleKinetic';
+import { StyleRhythmic } from './modern-previews/StyleRhythmic';
+import { StyleCollage } from './modern-previews/StyleCollage';
+import { StyleFluid } from './modern-previews/StyleFluid';
+import { AIGymTrainer } from './AIGymTrainer';
+import { AIGymTrainer3D } from './AIGymTrainer3D';
+import { SimpleAIGymTrainer } from './SimpleAIGymTrainer';
+import { ToolGraveyard } from './ToolGraveyard';
+import { ToolGraveyardV2 } from './ToolGraveyardV2';
+import { ToolGraveyardCinematic } from './ToolGraveyardCinematic';
+import { ToolGraveyardRhythmic } from './ToolGraveyardRhythmic';
+import { AIGymTrainerWes } from './AIGymTrainerWes';
 
 export const RemotionRoot: React.FC = () => {
   return (
     <>
       <Composition
-        id="InstaCover"
-        component={InstaCover}
-        durationInFrames={1}
-        fps={30}
-        width={1080}
-        height={1350}
-      />
-      <Composition
-        id="BlueprintPromo"
-        component={BlueprintPromo}
-        durationInFrames={450} // 15 seconds at 30fps
-        fps={30}
-        width={1080}
-        height={1920}
-        defaultProps={{
-          title: "CHURN DETECTIVE",
-          tagline: "Predict at-risk customers across 500 accounts.",
-          category: "Sales Ops"
-        }}
-      />
-      <Composition
-        id="PromoRealAI"
-        component={PromoRealAI}
-        durationInFrames={900} // 30 seconds at 30fps
+        id="AIGymTrainerWes"
+        component={AIGymTrainerWes}
+        durationInFrames={600}
         fps={30}
         width={1080}
         height={1920}
       />
       <Composition
-        id="TikTokPOV"
-        component={TikTokPOV}
-        durationInFrames={900} // 30 seconds at 30fps
+        id="ToolGraveyardRhythmic"
+        component={ToolGraveyardRhythmic}
+        durationInFrames={520}
         fps={30}
         width={1080}
         height={1920}
       />
       <Composition
-        id="TikTokMuted"
-        component={TikTokMuted}
-        durationInFrames={900} // 30 seconds at 30fps
+        id="ToolGraveyardCinematic"
+        component={ToolGraveyardCinematic}
+        durationInFrames={670}
         fps={30}
         width={1080}
         height={1920}
       />
       <Composition
-        id="VideoGlitch"
-        component={VideoGlitch}
-        durationInFrames={600} // 20 seconds at 30fps
+        id="ToolGraveyardV2"
+        component={ToolGraveyardV2}
+        durationInFrames={430}
+        fps={30}
+        width={1080}
+        height={1920}
+      />
+      <Composition
+        id="ToolGraveyard"
+        component={ToolGraveyard}
+        durationInFrames={360}
+        fps={30}
+        width={1080}
+        height={1920}
+      />
+      <Composition
+        id="StyleKinetic"
+        component={StyleKinetic}
+        durationInFrames={90}
+        fps={30}
+        width={1080}
+        height={1920}
+      />
+      <Composition
+        id="StyleRhythmic"
+        component={StyleRhythmic}
+        durationInFrames={90}
+        fps={30}
+        width={1080}
+        height={1920}
+      />
+      <Composition
+        id="StyleCollage"
+        component={StyleCollage}
+        durationInFrames={90}
+        fps={30}
+        width={1080}
+        height={1920}
+      />
+      <Composition
+        id="StyleFluid"
+        component={StyleFluid}
+        durationInFrames={90}
+        fps={30}
+        width={1080}
+        height={1920}
+      />
+      <Composition
+        id="AIGymTrainer"
+        component={AIGymTrainer}
+        durationInFrames={750} // 25 seconds at 30fps
+        fps={30}
+        width={1080}
+        height={1920}
+      />
+      <Composition
+        id="AIGymTrainer3D"
+        component={AIGymTrainer3D}
+        durationInFrames={750} // 25 seconds at 30fps
+        fps={30}
+        width={1080}
+        height={1920}
+      />
+      <Composition
+        id="SimpleAIGymTrainer"
+        component={SimpleAIGymTrainer}
+        durationInFrames={750} // 25 seconds at 30fps
         fps={30}
         width={1080}
         height={1920}

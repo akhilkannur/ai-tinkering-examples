@@ -25,13 +25,14 @@ export default function AboutPage() {
             No Hype. <span className="text-accent">Just Files.</span>
           </h1>
           <div className="flex flex-col items-center gap-8">
-            <div className="w-full max-w-lg">
+            <div className="w-full max-w-2xl">
               <Image
-                src="/Gemini_Generated_Image_b3hv6cb3hv6cb3hv.png"
-                alt="Image representing AI Examples website and its content"
-                width={500}
-                height={300}
-                className="rounded-lg shadow-lg mx-auto"
+                src="/hero_image.png"
+                alt="Real AI Examples"
+                width={800}
+                height={450}
+                priority
+                className="rounded-lg shadow-2xl mx-auto border border-navy-dark/10"
               />
             </div>
             <div className="w-full max-w-2xl">

@@ -1,50 +1,56 @@
 ---
 id: google-ads-negative-keyword-factory
 category: Paid Media
-title: The Multi-Industry Negative Keyword Factory
-tagline: Protect the budget across your entire portfolio.
-difficulty: Beginner
+title: The Semantic Negative Keyword Factory
+tagline: Block entire intent clusters (Jobs, Research, Competitors) before they drain your budget.
+difficulty: Intermediate
 time: One-off
+archetype: Processor
 description: >-
-  Broad match wastes money. This agent reads a list of industries from a CSV and
-  generates a standard 'Negative Keyword List' for each, blocking junk traffic
-  (jobs, free, torrents) tailored to that sector.
+  Don't just block "free" and "cheap." This agent builds comprehensive negative
+  keyword lists grouped by 'Intent Categories' (Employment, Educational, Comparison). 
+  It cross-checks your target keywords to prevent accidental blocks and outputs 
+  a CSV ready for direct import into Google Ads Editor.
 sampleData:
-  filename: target_industries.csv
+  filename: campaign_profile.csv
   content: |
-    Industry,Negative_Niche
-    SaaS,Careers and Definition
-    E-com,Discount Hunters
-    Service,Job Seekers
+    Industry,Target_Product,Positive_Keywords_To_Protect
+    SaaS,CRM Software,"crm software, business crm, sales automation"
+    E-com,Luxury Watches,"luxury watches, buy rolex, premium timepieces"
 isPremium: true
 ---
 
-# Agent Configuration: The Multi-Industry Negative Keyword Factory
+# Agent Configuration: The Semantic Negative Keyword Factory
 
 ## Role
-Broad match wastes money. This agent reads a list of industries from a CSV and generates a standard 'Negative Keyword List' for each, blocking junk traffic (jobs, free, torrents) tailored to that sector.
+You are a **PPC Architect**. You build protective moats around campaigns by identifying and blocking intent clusters that look relevant but never convert.
 
 ## Objective
-Protect the budget across your entire portfolio.
+Generate a conflict-free, category-grouped negative keyword list formatted for Google Ads Editor.
 
 ## Workflow
 
-### Phase 1: Initialization & Seeding
-1.  **Check:** Does `target_industries.csv` exist?
-2.  **If Missing:** Create `target_industries.csv` using the `sampleData` provided in this blueprint.
-3.  **If Present:** Load the data for processing.
+### Phase 1: Initialization
+1.  **Input:** Read `campaign_profile.csv`.
+2.  **Define Intent Categories:** 
+    *   **Employment:** (salary, resume, jobs, career, glassdoor).
+    *   **Educational:** (what is, tutorial, course, definition, pdf, books).
+    *   **Tech Support:** (login, portal, password, reset, contact support).
+    *   **Low-Value:** (free, cheap, torrent, crack, open source).
 
-### Phase 2: The Loop
+### Phase 2: Cluster Generation
+For each industry/product in the CSV:
+1.  **Industry-Specific Junk:** Identify niche-specific waste (e.g., if selling SaaS, block "hardware").
+2.  **Competitor Research:** Identify top 10 competitors to block (unless running a competitor campaign).
+3.  **Cross-Check:** Compare every proposed negative keyword against the `Positive_Keywords_To_Protect`. 
+    *   *Rule:* If a negative keyword is contained within a positive keyword, **remove it** from the negative list.
 
-**Phase 2: The Factory Loop**
-For each industry in the CSV:
-1.  **Generate Junk:** Add universal negatives (crack, torrent, free).
-2.  **Generate Niche Negatives:** 
-    *   *If SaaS:* add "salary", "job", "what is".
-    *   *If E-com:* add "cheap", "thrift", "used".
-3.  **Refine:** Remove keywords that might be relevant to the specific industry.
+### Phase 3: Formatting for Editor
+1.  **Assign Match Types:**
+    *   Single words -> **[Exact]** or **"Phrase"** based on risk.
+    *   Compound junk -> **"Phrase"**.
+2.  **Generate Output:** Create `negative_keyword_upload.csv`.
+    *   Columns: `Campaign`, `Keyword`, `Match Type`, `Criterion Type (Negative)`.
 
-**Phase 3: The Artifact**
-1.  **Create:** `master_negative_list.csv` with columns: `Industry,Negative_Keyword`.
-2.  **Report:** "Successfully generated negative keyword sets for [X] industries."
-
+### Phase 4: Final Report
+1.  **Summary:** "Generated [X] negative keywords across 5 intent clusters. [Y] potential conflicts were automatically resolved to protect your target traffic."
