@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Real AI Examples Blog</title>
+    <link>https://realaiexamples.com</link>
+    <description>Practical AI Blueprints, Recipes, and Guides for Operations, Marketing, and Sales.</description>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 31 Jan 2026 02:56:09 GMT</lastBuildDate>
+    <atom:link href="https://realaiexamples.com/feed.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title><![CDATA[Clawdbot 101: What It Is and How to Install It (Complete Beginner's Guide)]]></title>
+      <link>https://realaiexamples.com/blog/clawdbot-beginners-guide</link>
+      <guid>https://realaiexamples.com/blog/clawdbot-beginners-guide</guid>
+      <pubDate>Mon, 26 Jan 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Clawdbot is trending everywhere. But what actually is it? Do you need a Mac Mini? Is it free? This guide answers every question non-technical people are asking and shows you how to set it up in 30 minutes.]]></description>
+      <author>Akhil from Real Examples</author>
+    </item>
+  
+    <item>
+      <title><![CDATA[The Tinkerer's Guide to Remotion: Building a Video Factory with AI]]></title>
+      <link>https://realaiexamples.com/blog/automated-video-with-remotion</link>
+      <guid>https://realaiexamples.com/blog/automated-video-with-remotion</guid>
+      <pubDate>Sun, 25 Jan 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[What is Remotion? Why is everyone talking about it? And how can you use AI to build a programmatic video pipeline without writing React code?]]></description>
+      <author>Akhil from Real Examples</author>
+    </item>
+  
+    <item>
+      <title><![CDATA[I Built a Viral Quiz in 3 Hours (And I Don't Know React)]]></title>
+      <link>https://realaiexamples.com/blog/building-the-archetype-quiz</link>
+      <guid>https://realaiexamples.com/blog/building-the-archetype-quiz</guid>
+      <pubDate>Fri, 23 Jan 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[I wanted a BuzzFeed-style personality quiz to segment my users. I didn't want to pay for Typeform or learn state management. So I hacked it together with AI.]]></description>
+      <author>Akhil from Real Examples</author>
+    </item>
+  
+    <item>
+      <title><![CDATA[I Built a Headless Scraper That 'Fixes Itself' (Because I'm Lazy)]]></title>
+      <link>https://realaiexamples.com/blog/building-the-screenshot-engine</link>
+      <guid>https://realaiexamples.com/blog/building-the-screenshot-engine</guid>
+      <pubDate>Fri, 23 Jan 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Maintaining 500+ screenshots is boring. I'm not a coder, so I 'hired' an AI agent to build a system that does the grunt work for me. Here's the messy truth of how it works.]]></description>
+      <author>Akhil from Real Examples</author>
+    </item>
+  
+    <item>
+      <title><![CDATA[Cleaning Messy Data: I Turned 200 Junk Files into Gold in 10 Mins]]></title>
+      <link>https://realaiexamples.com/blog/refactoring-with-ai</link>
+      <guid>https://realaiexamples.com/blog/refactoring-with-ai</guid>
+      <pubDate>Fri, 23 Jan 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[I had 200 text files that were completely unusable. Instead of learning Regex (which I hate), I wrote a simple guide and let the AI do the boring work.]]></description>
+      <author>Akhil from Real Examples</author>
+    </item>
+  
+    <item>
+      <title><![CDATA[State of AI 2026: The Year of the 'Folder Agent']]></title>
+      <link>https://realaiexamples.com/blog/state-of-ai-2026</link>
+      <guid>https://realaiexamples.com/blog/state-of-ai-2026</guid>
+      <pubDate>Fri, 23 Jan 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Why chatbots are dead for serious work, and why 'Folder Agents' like Claude Code and Gemini CLI are the future of Sales & Marketing operations.]]></description>
+      <author>Akhil from Real Examples</author>
+    </item>
+  
+    <item>
+      <title><![CDATA[The Hidden 'Backdoor' I Built for Free AI Traffic]]></title>
+      <link>https://realaiexamples.com/blog/why-i-added-llms-txt</link>
+      <guid>https://realaiexamples.com/blog/why-i-added-llms-txt</guid>
+      <pubDate>Fri, 23 Jan 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Robots are reading your website. If you don't roll out the red carpet for them, they'll ignore you. Here's how I added a simple text file to get AI agents to recommend me.]]></description>
+      <author>Akhil from Real Examples</author>
+    </item>
+  
+    <item>
+      <title><![CDATA[The Infinite Content Engine: 1 Video to 10 Assets]]></title>
+      <link>https://realaiexamples.com/blog/content-repurposing-engine</link>
+      <guid>https://realaiexamples.com/blog/content-repurposing-engine</guid>
+      <pubDate>Sun, 18 Jan 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[We recorded a great podcast, got 500 views, and then it died. That felt like a waste. So we built a machine to force-feed that content into every other channel.]]></description>
+      <author>Akhil from Real Examples</author>
+    </item>
+  
+    <item>
+      <title><![CDATA[The Competitor Watchtower: Monitor Rivals on Autopilot]]></title>
+      <link>https://realaiexamples.com/blog/competitor-watchtower</link>
+      <guid>https://realaiexamples.com/blog/competitor-watchtower</guid>
+      <pubDate>Thu, 15 Jan 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[I found out my biggest competitor dropped their price by 20%... three weeks after they did it. I lost two deals because I didn't know. Never again.]]></description>
+      <author>Akhil from Real Examples</author>
+    </item>
+  
+  </channel>
+</rss>
