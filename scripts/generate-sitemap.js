@@ -95,6 +95,42 @@ async function generateSitemap() {
       '/how-to/market-saas-zero-budget'
     ];
 
+    // 5. Blog Posts
+    const blogFiles = fs.existsSync(path.join(process.cwd(), 'content', 'blog')) 
+      ? fs.readdirSync(path.join(process.cwd(), 'content', 'blog')).filter(f => f.endsWith('.md'))
+      : [];
+    const blogPosts = blogFiles.map(file => file.replace('.md', ''));
+
+    // 6. AI Tools (Parse from lib/ai-tools-data.ts)
+    const toolsData = fs.readFileSync(path.join(process.cwd(), 'lib', 'ai-tools-data.ts'), 'utf8');
+    const toolNames = [];
+    // More robust regex to catch name: "..." or name: '...'
+    const toolNameRegex = /name:\s*["']([^"']+)["']/g;
+    let match;
+    while ((match = toolNameRegex.exec(toolsData)) !== null) {
+      toolNames.push(match[1]);
+    }
+    
+    // Slugify helper matching pages/tools/[slug].tsx
+    const slugifyTool = (text) => {
+      return text
+        .toString()
+        .toLowerCase()
+        .trim()
+        .replace(/\s+/g, '-')
+        .replace(/[^\w\-]+/g, '')
+        .replace(/\-\-+/g, '-');
+    };
+
+    // 7. Playbooks (Parse from lib/playbooks.ts)
+    const playbooksData = fs.readFileSync(path.join(process.cwd(), 'lib', 'playbooks.ts'), 'utf8');
+    const playbookSlugs = [];
+    // Robust regex for slug: '...' or slug: "..."
+    const playbookSlugRegex = /slug:\s*["']([^"']+)["']/g;
+    while ((match = playbookSlugRegex.exec(playbooksData)) !== null) {
+      playbookSlugs.push(match[1]);
+    }
+
     const currentDate = new Date().toISOString();
     let xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
@@ -109,13 +145,28 @@ async function generateSitemap() {
       xml += `\n  <url><loc>${SITE_URL}/ai-examples/${ex.category}/${ex.slug}</loc><lastmod>${ex.lastmod}</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>`;
     });
 
-    // Recipes (Priority 0.7)
-    // We generate "How To" pages for these
+    // Recipes (How-To & Blueprint - Priority 0.8/0.7)
     recipes.forEach(r => {
       // "How To" Page (High Intent)
-      // Note: We assume all recipes have taglines for now, or the page will just use title. 
-      // The page generation logic handles the fallback, but for sitemap we just need the ID.
       xml += `\n  <url><loc>${SITE_URL}/how-to/automate-${r.id}</loc><lastmod>${currentDate}</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>`;
+      // Technical Blueprint Page
+      xml += `\n  <url><loc>${SITE_URL}/blueprints/${r.id}</loc><lastmod>${currentDate}</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>`;
+    });
+
+    // Blog Posts (Priority 0.8)
+    blogPosts.forEach(slug => {
+      xml += `\n  <url><loc>${SITE_URL}/blog/${slug}</loc><lastmod>${currentDate}</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>`;
+    });
+
+    // Tools (Priority 0.6)
+    toolNames.forEach(name => {
+      const slug = slugifyTool(name);
+      xml += `\n  <url><loc>${SITE_URL}/tools/${slug}</loc><lastmod>${currentDate}</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>`;
+    });
+
+    // Playbooks (Priority 0.9)
+    playbookSlugs.forEach(slug => {
+      xml += `\n  <url><loc>${SITE_URL}/playbook/${slug}</loc><lastmod>${currentDate}</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>`;
     });
 
     // Role & Category Hub Pages (Priority 0.9 - High Value)
@@ -139,7 +190,10 @@ async function generateSitemap() {
     xml += `\n</urlset>`;
 
     fs.writeFileSync(path.join(process.cwd(), 'public', 'sitemap.xml'), xml);
-    console.log(`✅ Sitemap perfect! Total URLs: ${staticPages.length + examples.length + recipes.length + blueprintCategories.size + Object.keys(airtableCategoryMap).length}`);
+    const totalCount = staticPages.length + examples.length + (recipes.length * 2) + 
+                       blogPosts.length + toolNames.length + playbookSlugs.length + 
+                       (blueprintCategories.size * 2) + Object.keys(airtableCategoryMap).length;
+    console.log(`✅ Sitemap perfect! Total URLs: ${totalCount}`);
 
   } catch (error) {
     console.error('❌ Error generating sitemap:', error);

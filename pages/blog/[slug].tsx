@@ -19,7 +19,8 @@ export default function BlogPostPage({ post, relatedRecipes }: BlogPostPageProps
     return content.split('\n').map((line, index) => {
       // Headers
       if (line.startsWith('# ')) {
-        return <h1 key={index} className="text-3xl font-bold mt-8 mb-4 text-text-color">{line.replace('# ', '')}</h1>;
+        // Demote to H2 to ensure single H1 (Title) per page
+        return <h2 key={index} className="text-3xl font-bold mt-8 mb-4 text-text-color">{line.replace('# ', '')}</h2>;
       }
       if (line.startsWith('## ')) {
         return <h2 key={index} className="text-2xl font-bold mt-8 mb-4 text-text-color border-b border-navy-dark pb-2">{line.replace('## ', '')}</h2>;
@@ -69,6 +70,22 @@ export default function BlogPostPage({ post, relatedRecipes }: BlogPostPageProps
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com';
   const ogImage = `${baseUrl}/api/og?title=${encodeURIComponent(post.title)}&mode=blog`;
 
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": post.title,
+    "image": [
+      post.coverImage || ogImage
+    ],
+    "datePublished": new Date(post.date).toISOString(),
+    "dateModified": new Date(post.date).toISOString(),
+    "author": [{
+        "@type": "Person",
+        "name": post.author.name,
+        "url": "https://realaiexamples.com"
+      }]
+  };
+
   return (
     <div className="min-h-screen bg-primary-bg text-text-color font-sans flex flex-col">
       <Head>
@@ -86,6 +103,11 @@ export default function BlogPostPage({ post, relatedRecipes }: BlogPostPageProps
         <meta name="twitter:title" content={`${post.title} | AI Blueprint Guide`} key="twitter:title" />
         <meta name="twitter:description" content={post.excerpt} key="twitter:description" />
         <meta name="twitter:image" content={ogImage} key="twitter:image" />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+        />
       </Head>
 
       <Navbar />
