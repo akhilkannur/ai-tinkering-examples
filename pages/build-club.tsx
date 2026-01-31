@@ -73,9 +73,8 @@ export default function BuildClub() {
             <span className="bg-red-700 text-white px-2 italic">Start shipping.</span>
           </p>
           
-          <div className="font-header text-2xl tracking-widest mb-12 opacity-80">
-            FOR NON-TECHNICAL TINKERERS ONLY. <br/>
-            <span className="text-red-700">(DEVELOPERS: THIS IS NOT FOR YOU).</span>
+          <div className="font-header text-2xl tracking-widest mb-12 opacity-80 uppercase">
+            FOR NON-TECHNICAL TINKERERS ONLY.
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 items-start max-w-4xl mx-auto text-left">

@@ -46,10 +46,11 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="twitter:image" content={ogImage} key="twitter:image" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href={canonicalUrl} key="canonical" />
-        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon_canva.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon_canva.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/favicon_canva.png" />
+        <link rel="shortcut icon" href={`${baseUrl}/favicon.ico`} />
+        <link rel="icon" href={`${baseUrl}/favicon.ico`} type="image/x-icon" />
+        <link rel="icon" type="image/png" sizes="16x16" href={`${baseUrl}/favicon_canva.png`} />
+        <link rel="icon" type="image/png" sizes="32x32" href={`${baseUrl}/favicon_canva.png`} />
+        <link rel="apple-touch-icon" sizes="180x180" href={`${baseUrl}/favicon_canva.png`} />
       </Head>
       <Component {...pageProps} />
       <Footer />
