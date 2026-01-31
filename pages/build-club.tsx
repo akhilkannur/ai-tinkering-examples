@@ -4,8 +4,8 @@ import { Hammer, CheckCircle2, ArrowRight, XCircle } from 'lucide-react'
 import { useState, useEffect } from 'react'
 
 export default function BuildClub() {
-  const title = "The Build Club | 8-Week Execution Regimen";
-  const description = "A strict 8-week program for shipping AI tools. Miss 2 updates = You are fired. No courses. No gurus. Just shipping.";
+  const title = "The Build Club | AI Execution for Non-Technical Tinkerers";
+  const description = "A strict accountability group for shipping AI projects. Miss 2 updates = You are removed. No coding required. No gurus. Just results.";
 
   // Wes Anderson Palette
   const colors = {
@@ -72,6 +72,11 @@ export default function BuildClub() {
             Stop planning. Stop learning. <br/>
             <span className="bg-red-700 text-white px-2 italic">Start shipping.</span>
           </p>
+          
+          <div className="font-header text-2xl tracking-widest mb-12 opacity-80">
+            FOR NON-TECHNICAL TINKERERS ONLY. <br/>
+            <span className="text-red-700">(DEVELOPERS: THIS IS NOT FOR YOU).</span>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-12 items-start max-w-4xl mx-auto text-left">
             
@@ -210,7 +215,7 @@ export default function BuildClub() {
               <div className="space-y-6 font-body">
                 <div>
                   <h3 className="font-bold underline mb-1">WHO IS THIS FOR?</h3>
-                  <p>Builders who have the tools but lack the discipline. If you have 10 unfinished projects, this is for you.</p>
+                  <p>Non-technical tinkerers who have the tools but lack the discipline. If you are an advanced engineer looking for "clean code" or infrastructure talks, this is NOT for you. We focus on tools that run.</p>
                 </div>
                 <div>
                   <h3 className="font-bold underline mb-1">IS IT A COURSE?</h3>
