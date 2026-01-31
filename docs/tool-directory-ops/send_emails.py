@@ -3,6 +3,7 @@ import json
 import subprocess
 import time
 import re
+import requests
 from datetime import datetime
 
 import os
@@ -23,6 +24,9 @@ API_KEY = os.environ.get("RESEND_API_KEY")
 if not API_KEY:
     raise ValueError("RESEND_API_KEY environment variable not set. Please set it or add it to .env.local")
 
+# Audience: "Tool submissions"
+AUDIENCE_ID = "7d20626b-66a6-4dfc-86db-6231d8a06e2b"
+
 def slugify(text):
     """Mirror of the frontend slugify logic."""
     text = text.lower().strip()
@@ -38,11 +42,36 @@ def get_live_tool_names():
     names = re.findall(r'name:\s*"(.*?)"', content)
     return {n.lower().strip() for n in names}
 
+def add_contact_to_audience(email):
+    """Adds the contact to the Resend Audience."""
+    url = f"https://api.resend.com/audiences/{AUDIENCE_ID}/contacts"
+    headers = {
+        "Authorization": f"Bearer {API_KEY}",
+        "Content-Type": "application/json"
+    }
+    data = {
+        "email": email,
+        "unsubscribed": False
+    }
+    
+    try:
+        response = requests.post(url, json=data, headers=headers)
+        if response.status_code in [200, 201]:
+            print(f"   [Audience] Added: {email}")
+            return True
+        else:
+            print(f"   [Audience] Failed to add {email}: {response.text}")
+            return False
+    except Exception as e:
+        print(f"   [Audience] Error adding {email}: {str(e)}")
+        return False
+
 def send_email(recipient, tool_name):
     subject = f"{tool_name} is live on Real AI Examples"
     slug = slugify(tool_name)
     # Add tracking parameters
     tool_url = f"https://realaiexamples.com/tools/{slug}?utm_source=email&utm_medium=acceptance_notification&utm_campaign=tool_directory_launch"
+    clean_url = f"realaiexamples.com/tools/{slug}"
     
     text_body = f"""Hey there!
 
@@ -57,12 +86,23 @@ You don't need to do anything, but if you want to update any details or have que
 Thanks,
 Akhil"""
 
+    html_body = f"""<div style="font-family: sans-serif; line-height: 1.5; color: #333;">
+<p>Hey there!</p>
+<p>I wanted to reach out because you submitted <strong>{tool_name}</strong> to the Tooling Around directory recently.</p>
+<p>Since Tooling Around is no longer being maintained, I have created a directory section in my new project, <strong>Real AI Examples</strong>, this week, which focuses on practical AI use cases. I hand-picked a few submissions that stood out, and yours made the cut.</p>
+<p>Your tool is now live at: <a href="{tool_url}" style="color: #007bff; text-decoration: none;">{clean_url}</a></p>
+<p>You don't need to do anything, but if you want to update any details or have questions, just reply to this email.</p>
+<p>Thanks,<br>
+<strong>Akhil</strong></p>
+</div>"""
+
     payload = {
         "from": "akhil@mail.realaiexamples.com",
         "to": [recipient],
         "reply_to": "akhil@realaiexamples.com",
         "subject": subject,
-        "text": text_body
+        "text": text_body,
+        "html": html_body
     }
     
     json_payload = json.dumps(payload)
@@ -81,111 +121,20 @@ def process_and_send(limit=None):
     live_names = get_live_tool_names()
     print(f"Verified {len(live_names)} tools live on the site.")
     
-    tools_to_send = []
-    seen_emails = set()
-    cutoff_date = datetime(2026, 1, 12)
-    
-    # Update this set before running to avoid re-sending to old batches
-    ALREADY_SENT = {
-        "silverioguate581@gmail.com", 
-        "rokas@overvisual.com",
-        "info@popjam.io",
-        "support@localbiz.ai",
-        "robert@getargus.ai",
-        "marcel.mueller@jadenx.com",
-        "info@ultimatetools.eu",
-        "support@snaptowindow.com",
-        "blktwuj@gmail.com",
-        "sergey@nicegram.app",
-        "team@aye.international",
-        "hello@mapyourvoyage.com",
-        "hi@beatable.co",
-        "admin@sanamujer.com",
-        "andreaalexander212@gmail.com",
-        "oleg@pentestmate.com",
-        "hi@aithumbnail.com",
-        "admin@feynn.ai",
-        "talk@qeeebo.com",
-        "d.pastore@markeplay.com",
-        "nicsequenzy@gmail.com",
-        "info@suburbstack.com",
-        "admin@cryptonewsnavigator.com",
-        "hello@3dsynth.app",
-        "info@slidescockpit.com",
-        "andrew@bookswift.app",
-        "info@airankpilot.com",
-        "ankushorav@gmail.com",
-        "support@stride-fuel.com",
-        "michel@19volt.com",
-        "contact@kataloop.com",
-        "jouni.flemming.macecraft@gmail.com",
-        "hypnotype.sparked@gmail.com",
-        "support@agentgatepay.com",
-        "directory@emailferret.io",
-        "admin@imejis.io",
-        "support@slidewhisper.com",
-        "contact@chatty.fit",
-        "info@xn--festklnning-q8a.se",
-        "info@xn--gglossning-p5a.se",
-        "izoyeqofoyuy56@gmail.com",
-        "yttranscripts.org@gmail.com",
-        "generatemetadata@gmail.com",
-        "contact@makebestmusic.com",
-        "wangava498@gmail.com",
-        "seo@reasonyx.com",
-        "seomode.co@gmail.com",
-        "dharmendraramkkumar@gmail.com",
-        "actionagentsseo@gmail.com",
-        "sales@reachfast.ai",
-        "statedaoteam@gmail.com",
-        "helpful@thebuildermarket.com",
-        "rizwan@websparks.ai",
-        "sarma.bkp@acta.ai",
-        "steve@bypassgpt.org",
-        "mohanishp1@gmail.com",
-        "usefulaihub@gmail.com",
-        "contact@jobsaicopilot.com",
-        "ula@vidnoz.com",
-        "lightroompresetgeneratorcom@gmail.com",
-        "thatsmyai608@gmail.com",
-        "cognexocom@gmail.com",
-        "lvloomystery@gmail.com",
-        "hello@aichatbot.support",
-        "autopilotshortscom@gmail.com",
-        "jobbuddytechcom@gmail.com",
-        "roastmylandingpageio@gmail.com",
-        "tweetfastcom@gmail.com",
-        "contact@libretto.fm",
-        "submitsaascom@gmail.com",
-        "goodaitoolsmkt@gmail.com",
-        "mosborn@skail.ai",
-        "seoaibotcom@gmail.com",
-        "adam.barta404@gmail.com",
-        "a.h.s.arbeit@gmail.com",
-        "akhilnairmk@gmail.com",
-        "ad.tekadio@outlook.com",
-        "support@allscreenshots.com",
-        "zack@kairaweb.com",
-        "julianbornemo1@gmail.com",
-        "info@menubartime.com",
-        "support@geminiwatermarkremover.net",
-        "hello@archrender.ai",
-        "y.milyutin@moduledge.com",
-        "daniel@indiethinkers.com",
-        "support+dirs@bankpdfconverter.com",
-        "admin@sqrdaway.com",
-        "contact@logostream.dev",
-        "getarchivist@gmail.com",
-        "support@bitvoiper.com",
-        "support@vitelnk.com",
-        "info@scenelab.ai",
-        "jake@multic.com",
-        "hi@thrive.fi",
-        "support@pressbeat.io"
-    }
+    # Fetch live data from Google Sheets
+    print("Fetching live submissions from Google Sheets...")
+    sheet_url = "https://docs.google.com/spreadsheets/d/1VL4dAgyQK8EZLo6WqZeQ0zOmsCQcxQLhixmFtsJWC3A/export?format=csv"
+    try:
+        response = requests.get(sheet_url)
+        response.raise_for_status()
+        csv_content = response.text.splitlines()
+        reader = csv.DictReader(csv_content)
+    except Exception as e:
+        print(f"Error fetching Google Sheet: {e}")
+        return
 
-    with open('tools_export.csv', 'r', encoding='utf-8') as f:
-        reader = csv.DictReader(f)
+    tools_to_send = []
+
         for row in reader:
             timestamp_str = row.get('Timestamp', '').strip()
             try:
@@ -214,7 +163,7 @@ def process_and_send(limit=None):
 
             # DEDUP & ALREADY SENT CHECK
             if email_lower in seen_emails or email_lower in ALREADY_SENT:
-                print(f"Skipping {clean_name} - already sent to {email_lower}")
+                # print(f"Skipping {clean_name} - already sent to {email_lower}")
                 continue
             
             seen_emails.add(email_lower)
@@ -227,6 +176,7 @@ def process_and_send(limit=None):
         if limit and count >= limit:
             break
         if send_email(tool['email'], tool['tool_name']):
+            add_contact_to_audience(tool['email'])
             count += 1
             time.sleep(2)
 

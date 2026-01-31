@@ -4,34 +4,29 @@ This guide outlines the process for managing tool submissions, verifying content
 
 ## Workflow Overview
 
-1.  **Add New Tools**: Update `lib/ai-tools-data.ts` with new submissions from `tools_submissions.csv`.
-2.  **Verify & Clean**: Ensure descriptions are not truncated and represent the tool accurately. Use `web_fetch` to find missing descriptions.
-3.  **Cross-Check**: Run the verification script to ensure all tools marked for emailing are actually live.
-4.  **Send Emails**: Batch notify users that their tool is live.
+1.  **Fetch Live Submissions**: The system fetches data directly from the [Google Sheet](https://docs.google.com/spreadsheets/d/1VL4dAgyQK8EZLo6WqZeQ0zOmsCQcxQLhixmFtsJWC3A/export?format=csv).
+2.  **Add New Tools**: Update `lib/ai-tools-data.ts` with new submissions.
+3.  **Resend Audience**: Approved users are automatically added to the "Tool submissions" Audience in Resend for future campaigns.
+4.  **Send Emails**: notify users via HTML emails with tracking.
 
 ---
 
 ## 1. Adding Tools
-When a new submission arrives in `tools_submissions.csv`:
-- Open `lib/ai-tools-data.ts`.
-- Add a new object to the `aiTools` array.
-- **Rule**: If the name looks like a URL (e.g., `https://example.com`), clean it to a brand name (e.g., `Example`).
+When a new submission arrives:
+- Run `check_new_submissions.py` to identify candidates (filters out already sent and rejected).
+- Add to `lib/ai-tools-data.ts`.
 
 ## 2. Scripts Location
-The scripts are located in `docs/tool-directory-ops/`:
-- `generate_email_sample.py`: Preview the email for a specific tool.
-- `verify_tools_list.py`: Check for discrepancies between the CSV and the live site.
-- `send_emails.py`: The main sending script (includes Resend API logic).
+- `check_new_submissions.py`: Fetches live Google Sheet data and shows new candidates.
+- `send_emails.py`: Fetches live data, sends HTML emails, and adds users to Resend Audience.
+- `backfill_audience.py`: Utility to sync historical emails to the Resend Audience.
+- `rejected_submissions.json`: List of emails to ignore (rejections).
 
 ## 3. Sending Notifications
-To send emails to new tools:
-1.  Open `docs/tool-directory-ops/send_emails.py`.
-2.  Update the `ALREADY_SENT` set if needed (optional, the script checks against `lib/ai-tools-data.ts` anyway).
-3.  Update the `cutoff_date` if you only want to send to the most recent submissions.
-4.  Run the script:
-    ```bash
-    python3 docs/tool-directory-ops/send_emails.py
-    ```
+The script now fetches the latest data automatically:
+```bash
+python3 docs/tool-directory-ops/send_emails.py
+```
 
 ## 4. Email Template
 **From**: `akhil@mail.realaiexamples.com`  
