@@ -636,5 +636,101 @@ export const aiTools: AiTool[] = [
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=pressbeat.io&sz=128"
-}
+},
+  {
+    name: "SimpleSeverance",
+    description: "Educational platform for severance",
+    url: "https://simpleseverance.co",
+    category: "Productivity",
+    tags: {
+      useCase: ["Personal"],
+      price: "Free",
+      skill: "Beginner"
+    },
+    image: "https://www.google.com/s2/favicons?domain=simpleseverance.co&sz=128"
+  },
+  {
+    name: "CookieGuard",
+    description: "CookieGuard is a free GDPR & CCPA cookie consent tool that helps websites manage cookie banners and user consent with minimal setup.",
+    url: "https://cookieguard.co",
+    category: "Code Assistance",
+    tags: {
+      useCase: ["Business"],
+      price: "Free",
+      skill: "Intermediate"
+    },
+    image: "https://www.google.com/s2/favicons?domain=cookieguard.co&sz=128"
+  },
+  {
+    name: "sHabits",
+    description: "Minimalist UI focused on building good habits first. Visual tracking, smart reminders, and neat home screen widgets keep you committed.",
+    url: "https://simplyhabits.io/",
+    category: "Productivity",
+    tags: {
+      useCase: ["Personal"],
+      price: "Free",
+      skill: "Beginner"
+    },
+    image: "https://www.google.com/s2/favicons?domain=simplyhabits.io&sz=128"
+  },
+  {
+    name: "DiffScout",
+    description: "AI-powered price monitoring that tracks competitor prices on any website. Get instant alerts when prices change—no scrapers or CSS selectors needed.",
+    url: "https://diffscout.com",
+    category: "Marketing",
+    tags: {
+      useCase: ["Business"],
+      price: "Freemium",
+      skill: "Intermediate"
+    },
+    image: "https://www.google.com/s2/favicons?domain=diffscout.com&sz=128"
+  },
+  {
+    name: "Test-Lab.ai",
+    description: "Automated QA with AI agents. Find critical UX & flow bugs before launch.",
+    url: "https://www.test-lab.ai/",
+    category: "Code Assistance",
+    tags: {
+      useCase: ["Business"],
+      price: "Paid",
+      skill: "Advanced"
+    },
+    image: "https://www.google.com/s2/favicons?domain=www.test-lab.ai&sz=128"
+  },
+  {
+    name: "SaaS Blueprint",
+    description: "Ship faster with a production-ready SaaS blueprint that includes auth, Stripe, protected routes, docs, and Cloudflare deployment out of the box.",
+    url: "https://saasblueprint.app",
+    category: "Code Assistance",
+    tags: {
+      useCase: ["Business"],
+      price: "Paid",
+      skill: "Advanced"
+    },
+    image: "https://www.google.com/s2/favicons?domain=saasblueprint.app&sz=128"
+  },
+  {
+    name: "Bangas",
+    description: "Prompt-free AI ads | Creative OS for performance marketers",
+    url: "https://bangas.ai",
+    category: "Marketing",
+    tags: {
+      useCase: ["Business"],
+      price: "Paid",
+      skill: "Intermediate"
+    },
+    image: "https://www.google.com/s2/favicons?domain=bangas.ai&sz=128"
+  },
+  {
+    name: "ShortsAi",
+    description: "Short AI Video Generator, from UGC Ads to YouTube Shorts",
+    url: "https://shortsai.com",
+    category: "Video & Audio",
+    tags: {
+      useCase: ["Creative"],
+      price: "Freemium",
+      skill: "Beginner"
+    },
+    image: "https://www.google.com/s2/favicons?domain=shortsai.com&sz=128"
+  },
 ];
