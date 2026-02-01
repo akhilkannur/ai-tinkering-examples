@@ -29,11 +29,11 @@ export default async function handler(
 
   if (!apiKey) {
     try {
-      fs.appendFileSync(path.join(process.cwd(), 'subscribe_debug.log'), 'RESEND_API_KEY is missing.\n');
+      fs.appendFileSync(path.join(process.cwd(), 'subscribe_debug.log'), 'RESEND_API_KEY is missing from process.env.\n');
     } catch (e) {
-      console.error('RESEND_API_KEY is missing.');
+      console.error('RESEND_API_KEY is missing from process.env.');
     }
-    return res.status(500).json({ error: 'Newsletter configuration missing' });
+    return res.status(500).json({ error: 'Newsletter configuration missing (RESEND_API_KEY is not set in environment variables)' });
   }
 
   try {
@@ -82,36 +82,30 @@ export default async function handler(
         body: JSON.stringify({
           from: 'Akhil from Real AI Examples <akhil@mail.realaiexamples.com>',
           to: [email],
-          subject: 'Welcome to the Lab (+ Your AI Blueprints)',
+          subject: 'Welcome to the Lab (+ Your Blueprints)',
           reply_to: 'akhil@realaiexamples.com',
           html: `
             <div style="font-family: sans-serif; line-height: 1.6; color: #1a1a1a; max-width: 600px;">
               <p>Hey,</p>
               <p>Thanks for joining <strong>Real AI Examples</strong>. You're now part of the Lab.</p>
               
-              <p>As promised, here is your <strong>Starter Pack of 50 AI Blueprints</strong>. These are the same files I use to automate my own work.</p>
+              <p>As promised, here are some <strong>free blueprints</strong> to get you started. These are files you can actually use in your workflows.</p>
               
               <div style="margin: 30px 0;">
                 <a href="https://realaiexamples.com/ai-blueprints-starter-pack.zip" 
                    style="background-color: #000; color: #fff; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold; display: inline-block;">
-                   Download the Starter Pack (ZIP)
+                   Download the Free Blueprints (ZIP)
                 </a>
               </div>
 
               <p><strong>What to expect:</strong></p>
-              <p>We send 3 emails a week. They contain files (blueprints, CSVs, scripts) you can actually use. If they ever start to suck, just unsubscribe. I won't be offended.</p>
-
-              <p>In the meantime, if you want the full system, the <strong>Master Database</strong> contains 700+ advanced blueprints for Sales Ops, SEO, and Revenue Engineering:</p>
-              <p><a href="https://realaiexamples.com/500-ways-to-use-llms-for-work" style="color: #F43F5E; font-weight: bold;">Browse the 700+ Master Database →</a></p>
+              <p>We send 3 emails a week. They contain actionable AI tactics and files (blueprints, CSVs, scripts) you can use. If they ever start to suck, just unsubscribe. I won't be offended.</p>
 
               <p>Happy tinkering,<br>
               <strong>Akhil</strong><br>
-              Real AI Examples</p>
+              <a href="https://realaiexamples.com" style="color: #666; text-decoration: none; font-size: 12px;">realaiexamples.com</a></p>
             </div>
-          `,
-        }),
-      }
-    );
+          `
 
         if (!emailResponse.ok) {
 

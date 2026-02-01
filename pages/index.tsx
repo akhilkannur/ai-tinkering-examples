@@ -71,7 +71,7 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
                         </h1>
                         
                         <p className="text-lg text-text-secondary mb-10 leading-relaxed max-w-lg font-normal">
-                            700+ field-tested <strong className="text-text-color">Sales & Marketing plays</strong> to make Claude Code and Gemini actually do the job. No code. No "thought leaders." Just results.
+                            We send 3 emails a week. They contain files you can use. If they suck, unsubscribe. We won't be offended.
                         </p>
 
                         <div className="inline-block bg-accent/10 border border-accent/20 rounded-full px-3 py-1 mb-4">

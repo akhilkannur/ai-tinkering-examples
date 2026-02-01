@@ -10,6 +10,7 @@ export default function NewsletterSignup() {
     if (!email) return
 
     setStatus('loading')
+    setMessage('')
     try {
       const response = await fetch('/api/subscribe', {
         method: 'POST',
@@ -19,14 +20,16 @@ export default function NewsletterSignup() {
 
       if (response.ok) {
         setStatus('success')
-        setMessage('Thanks for joining the Lab!')
+        setMessage('✓ Welcome to the Lab! Check your inbox.')
         setEmail('')
       } else {
-        throw new Error('Failed to subscribe')
+        const errData = await response.json().catch(() => ({}));
+        throw new Error(errData.error || 'Failed to subscribe')
       }
-    } catch (err) {
+    } catch (err: any) {
+      console.error('Newsletter submission error:', err);
       setStatus('error')
-      setMessage('Something went wrong. Please try again.')
+      setMessage(err.message || 'Something went wrong. Please try again.')
     }
   }
   
