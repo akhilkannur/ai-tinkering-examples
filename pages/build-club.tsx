@@ -77,6 +77,28 @@ export default function BuildClub() {
             FOR NON-TECHNICAL TINKERERS ONLY.
           </div>
 
+          {/* VIDEO SECTION */}
+          <div className="max-w-4xl mx-auto mb-20 relative">
+            <div className="border-[6px] border-black bg-black shadow-[12px_12px_0px_rgba(0,0,0,1)] overflow-hidden">
+              <video 
+                autoPlay 
+                loop 
+                muted 
+                playsInline 
+                className="w-full h-auto aspect-video"
+              >
+                <source src="/videos/AIGymTrainerWes.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            {/* Stamp Overlay */}
+            <div className="absolute -bottom-6 -right-6 transform rotate-12 z-20">
+               <div className="bg-red-700 text-white font-header text-2xl px-4 py-1 border-4 border-white shadow-lg">
+                 APPROVED FOR SHIP
+               </div>
+            </div>
+          </div>
+
           <div className="grid md:grid-cols-2 gap-12 items-start max-w-4xl mx-auto text-left">
             
             {/* THE AGREEMENT (Left) */}
