@@ -3,12 +3,14 @@ import React, { useState } from 'react';
 export default function NewsletterForm() {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) return;
 
     setStatus('loading');
+    setErrorMessage('');
     try {
       const response = await fetch('/api/subscribe', {
         method: 'POST',
@@ -25,6 +27,7 @@ export default function NewsletterForm() {
       }
     } catch (err: any) {
       console.error('Newsletter submission error:', err);
+      setErrorMessage(err.message || 'Something went wrong. Try again?');
       setStatus('error');
     }
   };
@@ -58,7 +61,7 @@ export default function NewsletterForm() {
         </button>
       </form>
       {status === 'error' && (
-        <p className="text-red-500 text-xs mt-2 text-center">Something went wrong. Try again?</p>
+        <p className="text-red-500 text-xs mt-2 text-center">{errorMessage}</p>
       )}
       <p className="text-[10px] text-text-secondary mt-3 font-sans text-center uppercase tracking-tighter opacity-50">
         We send 3 emails a week. They contain files you can use. If they suck, unsubscribe. We won't be offended.
