@@ -3,11 +3,11 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { Search, ArrowRight, Layers, Filter, Zap, Terminal, Code, Cpu, Command } from 'lucide-react';
-import Navbar from '../../components/Navbar';
-import DatabaseDownloadCta from '../../components/DatabaseDownloadCta';
-import StickyActionBar from '../../components/StickyActionBar';
-import { getAllRecipes } from '../../lib/recipes';
-import { Recipe } from '../../lib/cookbook-data';
+import Navbar from '../../../components/Navbar';
+import DatabaseDownloadCta from '../../../components/DatabaseDownloadCta';
+import StickyActionBar from '../../../components/StickyActionBar';
+import { getAllRecipes } from '../../../lib/recipes';
+import { Recipe } from '../../../lib/cookbook-data';
 
 interface ToolLandingPageProps {
   toolName: string;
