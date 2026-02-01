@@ -131,6 +131,12 @@ async function generateSitemap() {
       playbookSlugs.push(match[1]);
     }
 
+    // 8. Tool Collection Pages (New)
+    const toolCollections = ['claude-code', 'gemini-cli', 'chatgpt', 'cursor'];
+
+    // 9. Task Generators (New)
+    const taskGenerators = ['audit', 'lead-gen', 'competitor-intel', 'pricing', 'sales-automation'];
+
     const currentDate = new Date().toISOString();
     let xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
@@ -138,6 +144,16 @@ async function generateSitemap() {
     // Static Pages (Priority 1.0 - 0.8)
     staticPages.forEach(page => {
       xml += `\n  <url><loc>${SITE_URL}${page}</loc><lastmod>${currentDate}</lastmod><changefreq>daily</changefreq><priority>${page === '' ? '1.0' : '0.8'}</priority></url>`;
+    });
+
+    // Tool Collections (Priority 0.9)
+    toolCollections.forEach(tool => {
+      xml += `\n  <url><loc>${SITE_URL}/tools/for/${tool}-blueprints</loc><lastmod>${currentDate}</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>`;
+    });
+
+    // Task Generators (Priority 0.9)
+    taskGenerators.forEach(task => {
+      xml += `\n  <url><loc>${SITE_URL}/generators/${task}</loc><lastmod>${currentDate}</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>`;
     });
 
     // Examples (Priority 0.7)

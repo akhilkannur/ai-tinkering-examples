@@ -2,58 +2,64 @@ import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { GetStaticProps, GetStaticPaths } from 'next';
-import { Search, ArrowRight, Layers, Filter, Zap, Terminal, Code, Cpu, Command } from 'lucide-react';
-import Navbar from '../../../components/Navbar';
-import DatabaseDownloadCta from '../../../components/DatabaseDownloadCta';
-import StickyActionBar from '../../../components/StickyActionBar';
-import { getAllRecipes } from '../../../lib/recipes';
-import { Recipe } from '../../../lib/cookbook-data';
+import { Search, ArrowRight, Layers, Filter, Zap, Target, TrendingUp, Cpu, ShieldCheck, BarChart3 } from 'lucide-react';
+import Navbar from '../../components/Navbar';
+import DatabaseDownloadCta from '../../components/DatabaseDownloadCta';
+import StickyActionBar from '../../components/StickyActionBar';
+import { getAllRecipes } from '../../lib/recipes';
+import { Recipe } from '../../lib/cookbook-data';
 
-interface ToolLandingPageProps {
-  toolName: string;
-  toolSlug: string;
+interface TaskLandingPageProps {
+  taskName: string;
+  taskSlug: string;
   recipes: Recipe[];
   categories: string[];
 }
 
-// Map of tool slugs to display names and descriptions
-const TOOL_CONFIG: Record<string, { name: string, description: string, icon: any }> = {
-  'claude-code': {
-    name: 'Claude Code',
-    description: 'Anthropic\'s agentic CLI tool. Best for coding, refactoring, and complex analysis.',
-    icon: Terminal
+const TASK_CONFIG: Record<string, { name: string, description: string, icon: any, keywords: string[] }> = {
+  'audit': {
+    name: 'AI Audit Generator',
+    description: 'Automate technical, SEO, and strategic audits. Stop checking manually and let agents find the gaps.',
+    icon: ShieldCheck,
+    keywords: ['audit', 'auditor', 'check', 'monitor', 'hygiene', 'verify']
   },
-  'gemini-cli': {
-    name: 'Gemini CLI',
-    description: 'Google\'s powerhouse for multimodal tasks and rapid prototyping in the terminal.',
-    icon: Zap
+  'lead-gen': {
+    name: 'AI Lead Generation Generator',
+    description: 'Build autonomous systems to find, score, and track high-intent prospects across the web.',
+    icon: Target,
+    keywords: ['lead', 'prospect', 'headhunter', 'hunter', 'scraper', 'finding']
   },
-  'chatgpt': {
-    name: 'ChatGPT',
-    description: 'The universal interface. Best for copywriting, ideation, and quick strategy.',
-    icon: Command
+  'competitor-intel': {
+    name: 'AI Competitor Intelligence Generator',
+    description: 'Reverse-engineer competitor ads, pricing, and hiring spikes. Know their roadmap before they announce it.',
+    icon: Cpu,
+    keywords: ['competitor', 'spy', 'intel', 'watchtower', 'market', 'decoder']
   },
-  'cursor': {
-    name: 'Cursor Editor',
-    description: 'The AI-native code editor. Best for building features and automating dev workflows.',
-    icon: Code
+  'pricing': {
+    name: 'AI Pricing & Margin Generator',
+    description: 'Optimize unit economics, calculate commission variances, and find profitable bundling strategies.',
+    icon: BarChart3,
+    keywords: ['pricing', 'margin', 'commission', 'profit', 'bill', 'payout', 'finance']
+  },
+  'sales-automation': {
+    name: 'AI Sales Automation Generator',
+    description: 'Automate outreach, negotiation scripts, and discovery calls using field-tested sales logic.',
+    icon: TrendingUp,
+    keywords: ['sales', 'sdr', 'ae', 'outreach', 'negotiation', 'call', 'pitch', 'objection']
   }
 };
 
-export default function ToolLandingPage({ toolName, toolSlug, recipes, categories }: ToolLandingPageProps) {
+export default function TaskLandingPage({ taskName, taskSlug, recipes, categories }: TaskLandingPageProps) {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   
-  const config = TOOL_CONFIG[toolSlug] || { name: 'AI Tools', description: 'Curated workflows.', icon: Cpu };
-  const ToolIcon = config.icon;
+  const config = TASK_CONFIG[taskSlug] || { name: 'AI Generator', description: 'Curated AI workflows.', icon: Zap, keywords: [] };
+  const TaskIcon = config.icon;
 
-  const title = `Best ${config.name} Workflow Generator & Prompts (2026)`;
-  const description = `Stop chatting, start building. ${recipes.length} field-tested ${config.name} workflow generators to automate Sales Ops, SEO, and Marketing.`;
+  const title = `${config.name} | Best AI Workflows for ${taskName}`;
+  const description = config.description;
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com';
-  const ogImage = `${baseUrl}/api/og?mode=tool&tool=${toolSlug}`; 
 
-  // Filter recipes (we can also filter by 'tool' property in recipe if it exists, 
-  // but for now we assume all blueprints can be adapted, so we show all/most relevant)
   const filteredRecipes = useMemo(() => {
     return recipes.filter(recipe => {
       const matchesSearch = (recipe.title?.toLowerCase() || '').includes(searchTerm.toLowerCase()) ||
@@ -80,41 +86,35 @@ export default function ToolLandingPage({ toolName, toolSlug, recipes, categorie
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} key="description" />
-        <meta property="og:title" content={title} key="og:title" />
-        <meta property="og:description" content={description} key="og:description" />
-        <link rel="canonical" href={`${baseUrl}/tools/${toolSlug}-blueprints`} />
+        <link rel="canonical" href={`${baseUrl}/generators/${taskSlug}`} />
       </Head>
 
       <Navbar />
       <StickyActionBar />
 
       <main className="pt-24 pb-20">
-        {/* Header */}
         <div className="container mx-auto px-4 mb-16 text-center max-w-4xl">
           <div className="inline-flex items-center gap-2 bg-secondary-bg border border-navy-dark px-4 py-1.5 rounded-full text-xs font-mono text-accent mb-6 shadow-sm">
-            <ToolIcon className="w-3 h-3" />
-            <span className="tracking-widest uppercase font-bold text-[10px]">{config.name} Edition</span>
+            <TaskIcon className="w-3 h-3" />
+            <span className="tracking-widest uppercase font-bold text-[10px]">{taskName} Efficiency</span>
           </div>
           <h1 className="text-4xl md:text-6xl font-extrabold text-text-color mb-6 tracking-tight leading-[1.1]">
-            Top Workflows for <br/><span className="text-accent">{config.name}</span>
+            <span className="text-accent">{config.name}</span>
           </h1>
           <p className="text-xl text-text-secondary leading-relaxed mb-10 font-normal max-w-2xl mx-auto">
-            {config.description} <br/>
-            Here are {recipes.length} blueprints you can copy-paste directly into {config.name}.
+            {config.description}
           </p>
           
-          {/* Database Download CTA */}
           <div id="database-download" className="mb-16 max-w-3xl mx-auto">
              <DatabaseDownloadCta />
           </div>
 
-          {/* Search Bar */}
           <div className="bg-secondary-bg p-4 rounded-xl border border-navy-dark shadow-2xl flex flex-col md:flex-row gap-4 max-w-2xl mx-auto sticky top-24 z-30">
             <div className="relative flex-grow">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-text-secondary w-5 h-5" />
               <input 
                 type="text" 
-                placeholder={`Search ${config.name} workflows...`}
+                placeholder={`Search ${taskName} generators...`}
                 className="w-full bg-primary-bg border border-navy-dark rounded-lg py-3 pl-10 pr-4 text-text-color focus:ring-2 focus:ring-accent focus:outline-none transition-all placeholder:text-text-secondary/50 font-medium"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
@@ -138,12 +138,11 @@ export default function ToolLandingPage({ toolName, toolSlug, recipes, categorie
           </div>
         </div>
 
-        {/* Content Grid */}
         <div className="container mx-auto px-4 max-w-6xl">
           {sortedCategories.length === 0 ? (
             <div className="text-center py-24 bg-secondary-bg border border-dashed border-navy-dark rounded-2xl">
               <Layers className="w-12 h-12 text-text-secondary mx-auto mb-4 opacity-20" />
-              <p className="text-xl text-text-secondary">No workflows found.</p>
+              <p className="text-xl text-text-secondary">No generators found for this task.</p>
             </div>
           ) : (
             <div className="space-y-20">
@@ -152,7 +151,7 @@ export default function ToolLandingPage({ toolName, toolSlug, recipes, categorie
                   <div className="flex items-center gap-4 mb-8 border-b border-navy-dark/50 pb-4">
                     <h2 className="text-3xl font-bold text-text-color tracking-tight">{category}</h2>
                     <span className="bg-accent/10 text-accent text-[10px] px-2.5 py-1 rounded-full font-mono font-bold uppercase tracking-wider border border-accent/20">
-                      {groupedRecipes[category].length}
+                      {groupedRecipes[category].length} Blueprints
                     </span>
                   </div>
                   
@@ -170,8 +169,8 @@ export default function ToolLandingPage({ toolName, toolSlug, recipes, categorie
                           {recipe.description}
                         </p>
                         <div className="flex items-center justify-between mt-auto pt-4 border-t border-navy-dark/30">
-                          <span className="text-xs font-mono text-text-color/80 bg-primary-bg px-2 py-1 rounded">
-                             {config.name} Ready
+                          <span className="text-[10px] font-mono font-bold text-accent uppercase tracking-widest">
+                             {taskSlug.replace('-', ' ')} tool
                           </span>
                           <ArrowRight className="w-4 h-4 text-text-secondary group-hover:text-accent" />
                         </div>
@@ -187,7 +186,7 @@ export default function ToolLandingPage({ toolName, toolSlug, recipes, categorie
 
       <div className="border-t border-navy-dark bg-secondary-bg py-12 text-center">
           <Link href="/500-ways-to-use-llms-for-work" className="text-text-secondary hover:text-accent underline">
-              View all 500+ Blueprints
+              View all 500+ AI Blueprints
           </Link>
       </div>
     </div>
@@ -195,9 +194,9 @@ export default function ToolLandingPage({ toolName, toolSlug, recipes, categorie
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const tools = ['claude-code', 'gemini-cli', 'chatgpt', 'cursor'];
-  const paths = tools.map(tool => ({
-    params: { tool: `${tool}-blueprints` } 
+  const tasks = Object.keys(TASK_CONFIG);
+  const paths = tasks.map(task => ({
+    params: { task } 
   }));
 
   return { paths, fallback: false };
@@ -205,17 +204,23 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const allRecipes = getAllRecipes();
-  // In a real app, you might filter recipes by tool compatibility here.
-  // For now, we return all recipes to populate the page.
-  const recipes = allRecipes.slice(0, 100); // Limit to 100 for these landing pages to keep them focused
+  const taskSlug = params?.task as string;
+  const config = TASK_CONFIG[taskSlug];
+
+  if (!config) return { notFound: true };
+
+  // Filter recipes that match ANY of the keywords in title, tagline, or category
+  const recipes = allRecipes.filter(r => {
+    const text = `${r.title} ${r.tagline} ${r.category} ${r.description}`.toLowerCase();
+    return config.keywords.some(kw => text.includes(kw));
+  });
+
   const categories = Array.from(new Set(recipes.map(r => r.category).filter(Boolean))).sort();
-  
-  const toolSlug = (params?.tool as string).replace('-blueprints', '');
 
   return {
     props: {
-      toolName: TOOL_CONFIG[toolSlug]?.name || 'AI',
-      toolSlug,
+      taskName: taskSlug.charAt(0).toUpperCase() + taskSlug.slice(1).replace('-', ' '),
+      taskSlug,
       recipes,
       categories
     },

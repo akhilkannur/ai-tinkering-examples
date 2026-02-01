@@ -124,9 +124,7 @@ export default function ExampleCard({
               </span>
             )}
             {/* Tag placeholder if available */}
-             <span className="flex items-center gap-1 uppercase tracking-wider">
-               VIEW RECIPE
-             </span>
+            <span className="font-bold text-xs tracking-wider group-hover:text-accent transition-colors">OPEN GENERATOR</span>
           </div>
         </div>
       </div>
