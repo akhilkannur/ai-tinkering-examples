@@ -43,7 +43,7 @@ export default function Navbar() {
             <div className="flex-shrink-0">
               <Link href="/" className="flex items-center gap-2 group">
                 <Image 
-                  src="/favicon_transparent.png" 
+                  src="/favicon_transparent.png?v=2" 
                   alt="AI Examples Logo" 
                   width={64} 
                   height={64} 
