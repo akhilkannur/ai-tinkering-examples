@@ -106,55 +106,33 @@ export default async function handler(
               <a href="https://realaiexamples.com" style="color: #666; text-decoration: none; font-size: 12px;">realaiexamples.com</a></p>
             </div>
           `
-
-        if (!emailResponse.ok) {
-
-          const emailData = await emailResponse.json();
-
-          try {
-
-            fs.appendFileSync(path.join(process.cwd(), 'subscribe_debug.log'), `Resend Email Error: ${JSON.stringify(emailData)}\n`);
-
-          } catch (e) {
-
-            console.error('Resend Email Error detail:', JSON.stringify(emailData, null, 2));
-
-          }
-
-          return res.status(emailResponse.status).json({ error: 'Failed to send welcome email', detail: emailData });
-
-        }
-
-    
-
-        try {
-
-          fs.appendFileSync(path.join(process.cwd(), 'subscribe_debug.log'), `Success for: ${email}\n`);
-
-        } catch (e) {
-
-          console.log(`Success for: ${email}`);
-
-        }
-
-        return res.status(201).json({ message: 'Subscribed successfully' });
-
-      } catch (error: any) {
-
-        try {
-
-          fs.appendFileSync(path.join(process.cwd(), 'subscribe_debug.log'), `Catch Error: ${error.message}\n`);
-
-        } catch (e) {
-
-          console.error('Subscription catch error:', error);
-
-        }
-
-        return res.status(500).json({ error: 'Internal server error' });
-
+        })
       }
+    );
 
+    if (!emailResponse.ok) {
+      const emailData = await emailResponse.json();
+      try {
+        fs.appendFileSync(path.join(process.cwd(), 'subscribe_debug.log'), `Resend Email Error: ${JSON.stringify(emailData)}\n`);
+      } catch (e) {
+        console.error('Resend Email Error detail:', JSON.stringify(emailData, null, 2));
+      }
+      return res.status(emailResponse.status).json({ error: 'Failed to send welcome email', detail: emailData });
     }
 
-    
+    try {
+      fs.appendFileSync(path.join(process.cwd(), 'subscribe_debug.log'), `Success for: ${email}\n`);
+    } catch (e) {
+      console.log(`Success for: ${email}`);
+    }
+
+    return res.status(201).json({ message: 'Subscribed successfully' });
+  } catch (error: any) {
+    try {
+      fs.appendFileSync(path.join(process.cwd(), 'subscribe_debug.log'), `Catch Error: ${error.message}\n`);
+    } catch (e) {
+      console.error('Subscription catch error:', error);
+    }
+    return res.status(500).json({ error: 'Internal server error' });
+  }
+}
