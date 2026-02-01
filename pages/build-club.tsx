@@ -9,9 +9,9 @@ export default function BuildClub() {
 
   // Wes Anderson Palette
   const colors = {
-    bg: '#FDF498', // Muted Yellow
-    text: '#4A2C2A', // Dark Brown
-    red: '#C0392B', // Brick Red
+    bg: '#C0392B', // Brick Red (High Contrast)
+    text: '#FFFDE7', // Paper White
+    red: '#FDF498', // Yellow (Accent)
     blue: '#3B4E59', // Slate Blue
     paper: '#FFFDE7', // Light Paper
     green: '#88A096', // Sage Green
@@ -20,7 +20,7 @@ export default function BuildClub() {
   const [signed, setSigned] = useState(false);
 
   return (
-    <div className="min-h-screen font-mono selection:bg-red-900 selection:text-white" style={{ backgroundColor: colors.bg, color: colors.text }}>
+    <div className="min-h-screen font-mono selection:bg-yellow-400 selection:text-black" style={{ backgroundColor: colors.bg, color: colors.text }}>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -34,7 +34,7 @@ export default function BuildClub() {
           @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
           .texture-overlay {
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-            opacity: 0.05;
+            opacity: 0.15;
             pointer-events: none;
           }
           .stamp {
@@ -48,7 +48,7 @@ export default function BuildClub() {
       <div className="fixed inset-0 texture-overlay z-50"></div>
 
       {/* MARQUEE BANNER */}
-      <div className="bg-red-700 text-white py-2 border-b-4 border-black font-header tracking-widest text-lg marquee-container relative z-40">
+      <div className="bg-[#FDF498] text-black py-2 border-b-4 border-black font-header tracking-widest text-lg marquee-container relative z-40">
         <div className="marquee-content">
           WARNING: LAZY PEOPLE WILL BE REMOVED. &nbsp;&nbsp; /// &nbsp;&nbsp; MISS 2 UPDATES = KICKED OUT. &nbsp;&nbsp; /// &nbsp;&nbsp; NO REFUNDS FOR SLACKERS. &nbsp;&nbsp; /// &nbsp;&nbsp; WARNING: LAZY PEOPLE WILL BE REMOVED. &nbsp;&nbsp; /// &nbsp;&nbsp; MISS 2 UPDATES = KICKED OUT. &nbsp;&nbsp; /// &nbsp;&nbsp; NO REFUNDS FOR SLACKERS.
         </div>
@@ -64,13 +64,13 @@ export default function BuildClub() {
             <span className="font-header text-2xl tracking-widest text-black">COHORT #01: BETA</span>
           </div>
           
-          <h1 className="text-7xl md:text-9xl font-header mb-6 leading-none text-black drop-shadow-sm">
+          <h1 className="text-7xl md:text-9xl font-header mb-6 leading-none text-[#FDF498] drop-shadow-[4px_4px_0px_rgba(0,0,0,1)]">
             THE BUILD CLUB
           </h1>
           
-          <p className="font-body text-xl md:text-2xl mb-10 max-w-2xl mx-auto leading-relaxed">
+          <p className="font-body text-xl md:text-2xl mb-10 max-w-2xl mx-auto leading-relaxed text-white">
             Stop planning. Stop learning. <br/>
-            <span className="bg-red-700 text-white px-2 italic">Start shipping.</span>
+            <span className="bg-[#FDF498] text-black px-2 italic font-bold border-2 border-black">Start shipping.</span>
           </p>
           
           <div className="font-header text-2xl tracking-widest mb-12 opacity-80 uppercase">
@@ -79,13 +79,13 @@ export default function BuildClub() {
 
           {/* VIDEO SECTION */}
           <div className="max-w-4xl mx-auto mb-20 relative">
-            <div className="border-[6px] border-black bg-black shadow-[12px_12px_0px_rgba(0,0,0,1)] overflow-hidden">
+            <div className="border-[6px] border-black bg-black shadow-[12px_12px_0px_rgba(0,0,0,1)] overflow-hidden p-4 md:p-8">
               <video 
                 autoPlay 
                 loop 
                 muted 
                 playsInline 
-                className="w-full h-auto aspect-video"
+                className="w-full h-auto aspect-video shadow-2xl"
               >
                 <source src="/videos/AIGymTrainerWes.mp4" type="video/mp4" />
                 Your browser does not support the video tag.

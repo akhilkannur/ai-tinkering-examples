@@ -69,7 +69,7 @@ const NewsletterPopup: React.FC<NewsletterPopupProps> = ({ delay = 60 }) => {
         </h3>
         
         <p className="text-sm font-sans text-text-secondary mb-8 leading-relaxed">
-          Hey, I'm Akhil. I curate a weekly newsletter with 3 interesting AI recipes I find. Sound useful? Subscribe today!
+          Hey, I'm Akhil. I curate a weekly newsletter with 3 field-tested AI plays I find. Sound useful? Join the Lab today!
         </p>
 
         <div className="w-full">

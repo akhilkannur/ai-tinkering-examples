@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 
 export default function NewsletterSignup() {
-  const embed = process.env.NEXT_PUBLIC_BEEHIIV_EMBED || ''
   const [email, setEmail] = useState('')
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
   const [message, setMessage] = useState('')
@@ -20,7 +19,7 @@ export default function NewsletterSignup() {
 
       if (response.ok) {
         setStatus('success')
-        setMessage('Thanks for subscribing!')
+        setMessage('Thanks for joining the Lab!')
         setEmail('')
       } else {
         throw new Error('Failed to subscribe')
@@ -32,34 +31,35 @@ export default function NewsletterSignup() {
   }
   
   return (
-    <div id="newsletter" className="max-w-2xl mx-auto p-6 my-8 border rounded-2xl bg-white shadow-sm">
-      <h2 className="text-3xl font-extrabold tracking-tight text-[#001858] sm:text-4xl">Stay in the Loop</h2>
-      <p className="text-sm text-slate-600 mt-2">Get 3 interesting AI recipes delivered weekly.</p>
-      {embed ? (
-        <div className="mt-4" dangerouslySetInnerHTML={{__html: embed}} />
-      ) : (
-        <form onSubmit={handleSubmit} className="mt-4 flex flex-col sm:flex-row gap-2">
-          <input 
-            aria-label="email" 
-            placeholder="your@email.com" 
-            className="flex-1 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-accent outline-none" 
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-            disabled={status === 'loading' || status === 'success'}
-          />
-          <button 
-            type="submit"
-            className="px-6 py-2 rounded-lg bg-black text-white hover:bg-slate-800 transition-colors disabled:bg-gray-400"
-            disabled={status === 'loading' || status === 'success'}
-          >
-            {status === 'loading' ? 'Subscribing...' : 'Subscribe'}
-          </button>
-        </form>
-      )}
+    <div id="newsletter" className="max-w-2xl mx-auto p-8 my-8 border border-navy-dark bg-secondary-bg shadow-2xl relative overflow-hidden">
+      {/* Background Glow */}
+      <div className="absolute top-0 right-0 -mt-10 -mr-10 w-32 h-32 bg-accent/5 rounded-full blur-2xl pointer-events-none"></div>
+      
+      <h2 className="text-3xl font-headline font-extrabold tracking-tight text-text-color sm:text-4xl uppercase">Join the <span className="text-accent">Lab</span></h2>
+      <p className="text-sm text-text-secondary mt-2 font-sans">Get 3 field-tested AI Plays delivered weekly. Zero hype, just execution.</p>
+      
+      <form onSubmit={handleSubmit} className="mt-6 flex flex-col sm:flex-row gap-3 relative z-10">
+        <input 
+          aria-label="email" 
+          placeholder="your@email.com" 
+          className="flex-1 px-4 py-3 bg-primary-bg border border-navy-dark text-text-color focus:ring-2 focus:ring-accent outline-none font-sans" 
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+          disabled={status === 'loading' || status === 'success'}
+        />
+        <button 
+          type="submit"
+          className="px-8 py-3 bg-accent text-white font-bold uppercase tracking-widest text-sm hover:bg-accent-hover transition-all disabled:bg-gray-600 shadow-lg hover:shadow-accent/20"
+          disabled={status === 'loading' || status === 'success'}
+        >
+          {status === 'loading' ? 'Subscribing...' : 'Subscribe'}
+        </button>
+      </form>
+      
       {message && (
-        <p className={`mt-3 text-sm font-medium ${status === 'success' ? 'text-green-600' : 'text-red-600'}`}>
+        <p className={`mt-4 text-sm font-bold ${status === 'success' ? 'text-accent' : 'text-red-500'}`}>
           {message}
         </p>
       )}
