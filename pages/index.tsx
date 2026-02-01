@@ -71,7 +71,7 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
                         </h1>
                         
                         <p className="text-lg text-text-secondary mb-10 leading-relaxed max-w-lg font-normal">
-                            We send 3 emails a week. They contain files you can use. If they suck, unsubscribe. We won't be offended.
+                            Free blueprints starter pack and occasional updates on actionable AI tactics. If they suck, unsubscribe. We won't be offended.
                         </p>
 
                         <div className="inline-block bg-accent/10 border border-accent/20 rounded-full px-3 py-1 mb-4">
@@ -288,7 +288,7 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
               📬 Don't Miss Out!
             </h2>
             <p className="text-xl mb-10 font-sans text-text-secondary max-w-2xl mx-auto">
-              We send 3 emails a week. They contain files you can use. If they suck, unsubscribe. We won't be offended.
+              Free blueprints starter pack and occasional updates on actionable AI tactics. If they suck, unsubscribe. We won't be offended.
             </p>
             
             <div className="max-w-[500px] mx-auto">

@@ -32,7 +32,7 @@ export default function Hero() {
             </h1>
 
             <p className="text-lg sm:text-xl text-brand-navy/70 max-w-2xl mx-auto mb-8 leading-relaxed font-sans">
-              We send 3 emails a week. They contain files you can use. If they suck, unsubscribe. We won't be offended.
+              Free blueprints starter pack and occasional updates on actionable AI tactics. If they suck, unsubscribe. We won't be offended.
             </p>
 
             <div className="max-w-[500px] w-full mx-auto">

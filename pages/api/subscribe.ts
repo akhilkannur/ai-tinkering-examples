@@ -89,17 +89,17 @@ export default async function handler(
               <p>Hey,</p>
               <p>Thanks for joining <strong>Real AI Examples</strong>. You're now part of the Lab.</p>
               
-              <p>As promised, here are some <strong>free blueprints</strong> to get you started. These are files you can actually use in your workflows.</p>
+              <p>As promised, here is your <strong>Free Blueprints Starter Pack</strong>. These are files (blueprints, CSVs, and scripts) you can actually use in your workflows.</p>
               
               <div style="margin: 30px 0;">
                 <a href="https://realaiexamples.com/ai-blueprints-starter-pack.zip" 
                    style="background-color: #000; color: #fff; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold; display: inline-block;">
-                   Download the Free Blueprints (ZIP)
+                   Download the Starter Pack (ZIP)
                 </a>
               </div>
 
               <p><strong>What to expect:</strong></p>
-              <p>We send 3 emails a week. They contain actionable AI tactics and files (blueprints, CSVs, scripts) you can use. If they ever start to suck, just unsubscribe. I won't be offended.</p>
+              <p>I'll send occasional emails with actionable AI use cases and new files I find. If they ever start to suck, just unsubscribe. I won't be offended.</p>
 
               <p>Happy tinkering,<br>
               <strong>Akhil</strong><br>

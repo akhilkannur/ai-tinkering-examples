@@ -48,9 +48,9 @@ const NewsletterToast: React.FC = () => {
       </div>
       
       <div className="flex-1">
-        <h4 className="font-bold text-slate-900 text-sm mb-1">Get 3 AI emails a week</h4>
+        <h4 className="font-bold text-slate-900 text-sm mb-1">Get free AI blueprints</h4>
         <p className="text-xs text-slate-600 mb-3">
-          We send files you can use. If they suck, unsubscribe.
+          Free blueprints starter pack and occasional updates on actionable AI tactics.
         </p>
         <Link 
           href="/#newsletter"
