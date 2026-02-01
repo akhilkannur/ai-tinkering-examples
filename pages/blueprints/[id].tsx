@@ -9,6 +9,7 @@ import { Recipe, categoryIcons } from '../../lib/cookbook-data';
 import { generateHowToSchema, generateFAQSchema, injectInternalLinks } from '../../lib/seo-utils';
 import React, { useState, useEffect } from 'react';
 import JSZip from 'jszip';
+import NewsletterSignup from '../../components/NewsletterSignup';
 
 interface RecipePageProps {
   recipe: Recipe;
@@ -449,6 +450,11 @@ Downloaded from RealAIExamples.com`;
               </div>
             </div>
           )}
+
+          {/* Newsletter Signup */}
+          <div className="mt-20 border-t border-gray-100 pt-16">
+            <NewsletterSignup />
+          </div>
 
         </div>
       </main>

@@ -278,7 +278,3 @@ select:focus-visible {
   display: flex !important;
   justify-content: center !important;
 }
-
-.beehiiv-form-container + div {
-  display: none !important;
-}

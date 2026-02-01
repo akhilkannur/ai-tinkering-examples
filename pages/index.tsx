@@ -57,28 +57,21 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
         <Navbar />
 
         {/* HERO SECTION */}
-        <div className="bg-primary-bg pt-24 pb-20 relative overflow-hidden">
+        <div className="bg-primary-bg pt-12 pb-20 relative overflow-hidden">
             {/* Background Gradient */}
             <div className="absolute inset-0 bg-hero-gradient opacity-20 pointer-events-none"></div>
 
             <div className="container mx-auto px-4 max-w-6xl relative z-10">
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
                     <div className="text-left">
-                        <div className="inline-flex items-center gap-2 bg-secondary-bg border border-navy-dark px-4 py-1.5 rounded-full text-xs font-mono text-accent mb-8 shadow-sm hover:border-accent/50 transition-colors cursor-default">
-                            <span className="relative flex h-2 w-2">
-                              <span className="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
-                            </span>
-                            <span className="tracking-widest uppercase font-bold">Sales & Marketing Plays. Zero Hype.</span>
-                        </div>
                         
                         <h1 className="text-5xl md:text-7xl font-sans font-extrabold text-text-color mb-6 tracking-tight leading-[1.1]">
-                            We Got Tired of <br />
-                            <span className="text-accent">Arguing with Chatbots.</span>
+                            Stop Arguing <br />
+                            <span className="text-accent">with Chatbots.</span>
                         </h1>
                         
                         <p className="text-lg text-text-secondary mb-10 leading-relaxed max-w-lg font-normal">
-                            Most "AI workflows" are just people bragging on Twitter. We actually have work to do. <br/><br/>
-                            These are the boring, reliable <strong className="text-text-color">Sales & Marketing plays</strong> we use to make Claude and Gemini shut up and do the job. No code. No "thought leaders." Just results.
+                            700+ field-tested <strong className="text-text-color">Sales & Marketing plays</strong> to make Claude Code and Gemini actually do the job. No code. No "thought leaders." Just results.
                         </p>
 
                         <div className="inline-block bg-accent/10 border border-accent/20 rounded-full px-3 py-1 mb-4">

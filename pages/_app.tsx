@@ -31,7 +31,7 @@ export default function App({ Component, pageProps }: AppProps) {
         Favicon setup for Google Search:
         - Google can take a few days to weeks to crawl and update the favicon.
         - The favicon is linked using multiple <link> tags for different resolutions and for Apple devices.
-        - The favicon files (favicon.ico, favicon_canva.png) are located in the /public directory.
+        - The favicon files (favicon.ico, favicon_transparent.png) are located in the /public directory.
         - The robots.txt file allows crawling of the favicon files.
         - For more information, see: https://developers.google.com/search/docs/appearance/favicon-in-search
       */}
@@ -49,9 +49,9 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="canonical" href={canonicalUrl} key="canonical" />
         <link rel="shortcut icon" href={`${baseUrl}/favicon.ico`} />
         <link rel="icon" href={`${baseUrl}/favicon.ico`} type="image/x-icon" />
-        <link rel="icon" type="image/png" sizes="16x16" href={`${baseUrl}/favicon_canva.png`} />
-        <link rel="icon" type="image/png" sizes="32x32" href={`${baseUrl}/favicon_canva.png`} />
-        <link rel="apple-touch-icon" sizes="180x180" href={`${baseUrl}/favicon_canva.png`} />
+        <link rel="icon" type="image/png" sizes="16x16" href={`${baseUrl}/favicon_transparent.png`} />
+        <link rel="icon" type="image/png" sizes="32x32" href={`${baseUrl}/favicon_transparent.png`} />
+        <link rel="apple-touch-icon" sizes="180x180" href={`${baseUrl}/favicon_transparent.png`} />
       </Head>
       <Component {...pageProps} />
       <Footer />

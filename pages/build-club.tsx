@@ -102,11 +102,11 @@ export default function BuildClub() {
           <div className="grid md:grid-cols-2 gap-12 items-start max-w-4xl mx-auto text-left">
             
             {/* THE AGREEMENT (Left) */}
-            <div className="bg-[#FFFDE7] p-8 border-4 border-black shadow-[8px_8px_0px_rgba(0,0,0,1)] relative">
+            <div className="bg-[#FFFDE7] p-8 border-4 border-black shadow-[8px_8px_0px_rgba(0,0,0,1)] relative text-[#4A2C2A]">
                 {/* Paper Clip Visual */}
                 <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-24 h-12 bg-gray-300 rounded-t-lg border-4 border-black border-b-0"></div>
                 
-                <h2 className="font-header text-4xl mb-6 border-b-4 border-black pb-2">MEMBERSHIP RULES</h2>
+                <h2 className="font-header text-4xl mb-6 border-b-4 border-black pb-2 text-black">MEMBERSHIP RULES</h2>
                 
                 <ul className="space-y-6 font-body text-lg">
                   <li className="flex items-start gap-3">
@@ -117,9 +117,9 @@ export default function BuildClub() {
                     <span className="font-bold text-red-700">02.</span>
                     <span><strong>Personal Accountability:</strong> We check in with you personally twice (2x) a week to keep you on track.</span>
                   </li>
-                  <li className="flex items-start gap-3 p-2 bg-red-100 border border-red-800 -mx-2">
+                  <li className="flex items-start gap-3 p-2 bg-red-100 border border-red-800 -mx-2 text-red-900">
                     <span className="font-bold text-red-700">03.</span>
-                    <span className="font-bold text-red-900">MISS 2 UPDATES = IMMEDIATE REMOVAL. (The "Kick-Out" Rule)</span>
+                    <span className="font-bold">MISS 2 UPDATES = IMMEDIATE REMOVAL. (The "Kick-Out" Rule)</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="font-bold text-red-700">04.</span>
@@ -132,13 +132,13 @@ export default function BuildClub() {
                     <div className={`w-8 h-8 border-4 border-black flex items-center justify-center transition-colors ${signed ? 'bg-black' : 'bg-white'}`} onClick={() => setSigned(!signed)}>
                       {signed && <CheckCircle2 className="text-white w-6 h-6" />}
                     </div>
-                    <span className="font-header text-xl tracking-wide group-hover:underline">I ACCEPT THE TERMS</span>
+                    <span className="font-header text-xl tracking-wide group-hover:underline text-black">I ACCEPT THE TERMS</span>
                   </label>
                 </div>
             </div>
 
             {/* THE RECEIPT (Right) */}
-            <div className="bg-white p-6 w-full max-w-sm mx-auto border border-gray-200 shadow-xl transform rotate-1 font-mono text-sm relative">
+            <div className="bg-white p-6 w-full max-w-sm mx-auto border border-gray-200 shadow-xl transform rotate-1 font-mono text-sm relative text-black">
                 {/* Receipt Jagged Edge Top */}
                 <div className="absolute top-0 left-0 w-full h-4 bg-white" style={{ clipPath: 'polygon(0% 100%, 5% 0%, 10% 100%, 15% 0%, 20% 100%, 25% 0%, 30% 100%, 35% 0%, 40% 100%, 45% 0%, 50% 100%, 55% 0%, 60% 100%, 65% 0%, 70% 100%, 75% 0%, 80% 100%, 85% 0%, 90% 100%, 95% 0%, 100% 100%)', marginTop: '-10px' }}></div>
 

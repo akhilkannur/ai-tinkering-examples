@@ -7,7 +7,7 @@ interface NewsletterPopupProps {
   delay?: number; // in seconds
 }
 
-const NewsletterPopup: React.FC<NewsletterPopupProps> = ({ delay = 60 }) => {
+const NewsletterPopup: React.FC<NewsletterPopupProps> = ({ delay = 30 }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -60,9 +60,9 @@ const NewsletterPopup: React.FC<NewsletterPopupProps> = ({ delay = 60 }) => {
           <X size={24} className="group-hover:rotate-90 transition-transform duration-300" />
         </button>
 
-        <div className="mb-6 border border-navy-dark inline-block p-2 bg-secondary-bg">
-          <Image src="/favicon_canva.png" alt="Favicon" width={80} height={80} className="mx-auto grayscale hover:grayscale-0 transition-all duration-500" />
-        </div>
+            <div className="text-center mb-6">
+              <Image src="/favicon_transparent.png" alt="Favicon" width={80} height={80} className="mx-auto grayscale hover:grayscale-0 transition-all duration-500" />
+            </div>
 
         <h3 className="text-2xl font-headline font-bold mb-3 text-text-color uppercase tracking-tight">
           Join the <span className="text-accent">Lab</span>

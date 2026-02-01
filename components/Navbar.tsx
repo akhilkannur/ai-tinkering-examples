@@ -41,13 +41,13 @@ export default function Navbar() {
         <div className="flex justify-between h-16 items-center">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <Link href="/" className="flex items-center gap-3 group">
+              <Link href="/" className="flex items-center gap-2 group">
                 <Image 
-                  src="/favicon_canva.png" 
+                  src="/favicon_transparent.png" 
                   alt="AI Examples Logo" 
-                  width={48} 
-                  height={48} 
-                  className="object-contain" 
+                  width={64} 
+                  height={64} 
+                  className="object-contain -ml-2" 
                 />
                 <span className="text-xl font-bold font-sans text-text-color group-hover:text-accent transition-colors">Real AI Examples</span>
               </Link>
