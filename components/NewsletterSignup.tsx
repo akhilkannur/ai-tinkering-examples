@@ -36,7 +36,7 @@ export default function NewsletterSignup() {
       <div className="absolute top-0 right-0 -mt-10 -mr-10 w-32 h-32 bg-accent/5 rounded-full blur-2xl pointer-events-none"></div>
       
       <h2 className="text-3xl font-headline font-extrabold tracking-tight text-text-color sm:text-4xl uppercase">Join the <span className="text-accent">Lab</span></h2>
-      <p className="text-sm text-text-secondary mt-2 font-sans">Get 3 field-tested AI Plays delivered weekly. Zero hype, just execution.</p>
+      <p className="text-sm text-text-secondary mt-2 font-sans">We send 3 emails a week. They contain files you can use. If they suck, unsubscribe. We won't be offended.</p>
       
       <form onSubmit={handleSubmit} className="mt-6 flex flex-col sm:flex-row gap-3 relative z-10">
         <input 

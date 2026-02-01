@@ -20,9 +20,11 @@ export default function NewsletterForm() {
         setStatus('success');
         setEmail('');
       } else {
-        throw new Error('Failed to subscribe');
+        const errData = await response.json().catch(() => ({}));
+        throw new Error(errData.error || 'Failed to subscribe');
       }
-    } catch (err) {
+    } catch (err: any) {
+      console.error('Newsletter submission error:', err);
       setStatus('error');
     }
   };
@@ -59,7 +61,7 @@ export default function NewsletterForm() {
         <p className="text-red-500 text-xs mt-2 text-center">Something went wrong. Try again?</p>
       )}
       <p className="text-[10px] text-text-secondary mt-3 font-sans text-center uppercase tracking-tighter opacity-50">
-        Zero spam. Just 3 field-tested AI plays every week.
+        We send 3 emails a week. They contain files you can use. If they suck, unsubscribe. We won't be offended.
       </p>
     </div>
   );
