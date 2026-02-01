@@ -43,10 +43,10 @@ export default function Navbar() {
             <div className="flex-shrink-0">
               <Link href="/" className="flex items-center gap-3 group">
                 <Image 
-                  src="/logo.png" 
+                  src="/favicon_canva.png" 
                   alt="AI Examples Logo" 
-                  width={40} 
-                  height={40} 
+                  width={48} 
+                  height={48} 
                   className="object-contain" 
                 />
                 <span className="text-xl font-bold font-sans text-text-color group-hover:text-accent transition-colors">Real AI Examples</span>
