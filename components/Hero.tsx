@@ -12,11 +12,11 @@ export default function Hero() {
       </div>
 
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="relative py-16 sm:py-24 text-center">
+        <div className="relative py-12 text-center">
 
           <div className="relative z-10 flex flex-col items-center">
-            <div className="mb-8 relative">
-              <div className="relative w-24 h-24 sm:w-32 sm:h-32 rounded-none overflow-hidden border border-brand-navy bg-white">
+            <div className="mb-6 relative">
+              <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-none overflow-hidden border border-brand-navy bg-white">
                 <Image
                   src="/hero_image.png"
                   alt="Hero image for AI Examples"
@@ -27,12 +27,12 @@ export default function Hero() {
               </div>
             </div>
             
-            <h1 className="text-4xl sm:text-6xl font-headline font-bold tracking-tight mb-6 text-brand-navy max-w-4xl uppercase">
-              Weekly AI examples you can <span className="text-accent bg-clip-text">copy & try</span>
+            <h1 className="text-4xl sm:text-6xl font-headline font-bold tracking-tight mb-4 text-brand-navy max-w-4xl uppercase">
+              AI Workflows You Can <span className="text-accent bg-clip-text">Copy.</span>
             </h1>
 
-            <p className="text-lg sm:text-xl text-brand-navy/70 max-w-2xl mx-auto mb-10 leading-relaxed font-sans">
-              A newsletter of real AI use cases from real people. Practical and simple for non-technical thinkers.
+            <p className="text-lg sm:text-xl text-brand-navy/70 max-w-2xl mx-auto mb-8 leading-relaxed font-sans">
+              Stop prompting. Start automating. 500+ field-tested blueprints for Sales & Marketing.
             </p>
 
             <div className="max-w-[500px] w-full mx-auto">
