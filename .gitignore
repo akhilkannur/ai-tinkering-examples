@@ -22,3 +22,9 @@ venv/
 
 # Amp private notes (not for public)
 .amp/
+
+# Data and Artifacts
+*.csv
+video/out/
+*.mp4
+scripts/test-puppeteer.js

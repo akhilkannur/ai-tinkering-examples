@@ -7,21 +7,36 @@ interface NewsletterPopupProps {
   delay?: number; // in seconds
 }
 
-const NewsletterPopup: React.FC<NewsletterPopupProps> = ({ delay = 20 }) => {
+const NewsletterPopup: React.FC<NewsletterPopupProps> = ({ delay = 60 }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    // Check if user has already seen the popup or is already subscribed (if you track that)
     const hasSeenPopup = localStorage.getItem('hasSeenNewsletterPopup');
     if (hasSeenPopup) {
       return;
     }
 
+    // Exit Intent Handler (Desktop)
+    const handleExitIntent = (e: MouseEvent) => {
+      if (e.clientY <= 0) {
+        setIsVisible(true);
+        localStorage.setItem('hasSeenNewsletterPopup', 'true');
+      }
+    };
+
+    // Fallback Timer (Mobile/Passive)
     const timer = setTimeout(() => {
       setIsVisible(true);
       localStorage.setItem('hasSeenNewsletterPopup', 'true');
     }, delay * 1000);
 
-    return () => clearTimeout(timer);
+    document.addEventListener('mouseleave', handleExitIntent);
+
+    return () => {
+      clearTimeout(timer);
+      document.removeEventListener('mouseleave', handleExitIntent);
+    };
   }, [delay]);
 
   const handleClose = () => {

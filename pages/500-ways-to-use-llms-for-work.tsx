@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { GetStaticProps } from 'next';
 import { Search, ArrowRight, Layers, Filter, Zap, Target, TrendingUp, Cpu } from 'lucide-react';
 import Navbar from '../components/Navbar';
+import DatabaseDownloadCta from '../components/DatabaseDownloadCta';
+import StickyActionBar from '../components/StickyActionBar';
 import { getAllRecipes } from '../lib/recipes';
 import { Recipe } from '../lib/cookbook-data';
 
@@ -84,6 +86,7 @@ export default function FiveHundredWays({ recipes, categories }: MegaListiclePro
       </Head>
 
       <Navbar />
+      <StickyActionBar />
 
       <main className="pt-24 pb-20">
         {/* Header */}
@@ -111,6 +114,11 @@ export default function FiveHundredWays({ recipes, categories }: MegaListiclePro
             <div className="flex items-center gap-2 text-xs font-mono text-text-secondary">
                <Cpu className="w-4 h-4 text-purple-400" /> SEO Content
             </div>
+          </div>
+          
+          {/* Database Download CTA */}
+          <div id="database-download" className="mb-16 max-w-3xl mx-auto">
+             <DatabaseDownloadCta />
           </div>
 
           {/* Search & Filter Bar */}
