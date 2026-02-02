@@ -63,9 +63,6 @@ export default function NewsletterForm() {
       {status === 'error' && (
         <p className="text-red-500 text-xs mt-2 text-center">{errorMessage}</p>
       )}
-      <p className="text-[10px] text-text-secondary mt-3 font-sans text-center uppercase tracking-tighter opacity-50">
-        Free blueprints starter pack and occasional updates on actionable AI tactics. If they suck, unsubscribe. We won't be offended.
-      </p>
     </div>
   );
 }

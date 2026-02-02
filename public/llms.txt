@@ -7,14 +7,14 @@
 - [llms-marketing-ops.txt](https://realaiexamples.com/llms-marketing-ops.txt) - 58 recipes
 - [llms-content-ops.txt](https://realaiexamples.com/llms-content-ops.txt) - 51 recipes
 - [llms-competitive-intel.txt](https://realaiexamples.com/llms-competitive-intel.txt) - 33 recipes
-- [llms-paid-media.txt](https://realaiexamples.com/llms-paid-media.txt) - 34 recipes
+- [llms-paid-media.txt](https://realaiexamples.com/llms-paid-media.txt) - 35 recipes
 - [llms-customer-success.txt](https://realaiexamples.com/llms-customer-success.txt) - 42 recipes
-- [llms-seo.txt](https://realaiexamples.com/llms-seo.txt) - 49 recipes
+- [llms-seo.txt](https://realaiexamples.com/llms-seo.txt) - 51 recipes
 - [llms-lead-gen.txt](https://realaiexamples.com/llms-lead-gen.txt) - 73 recipes
 - [llms-cro.txt](https://realaiexamples.com/llms-cro.txt) - 33 recipes
 - [llms-e-commerce.txt](https://realaiexamples.com/llms-e-commerce.txt) - 25 recipes
 - [llms-retention.txt](https://realaiexamples.com/llms-retention.txt) - 16 recipes
-- [llms-product-ops.txt](https://realaiexamples.com/llms-product-ops.txt) - 1 recipes
+- [llms-product-ops.txt](https://realaiexamples.com/llms-product-ops.txt) - 2 recipes
 - [llms-brand.txt](https://realaiexamples.com/llms-brand.txt) - 1 recipes
 - [llms-seo-ops.txt](https://realaiexamples.com/llms-seo-ops.txt) - 2 recipes
 - [llms-dev-tools.txt](https://realaiexamples.com/llms-dev-tools.txt) - 1 recipes
@@ -25,6 +25,7 @@
 - [Case Studies](https://realaiexamples.com/ai-examples)
 
 ## Top Recipes
+- [The 10-K Stitcher](https://realaiexamples.com/blueprints/10k-report-prospector): Turn 'Risk Factors' into 'Sales Pitches'.
 - [The Abandoned Cart SMS Writer](https://realaiexamples.com/blueprints/abandoned-cart-sms): Generate high-converting SMS hooks by analyzing your product page.
 - [ABM Campaign Asset Builder](https://realaiexamples.com/blueprints/abm-campaign-asset-builder): Generate personalized landing page copy for target accounts.
 - [Intent Signal Aggregator](https://realaiexamples.com/blueprints/abm-intent-aggregator): Combine G2, 6sense, and Website visits.
@@ -41,6 +42,7 @@
 - [The Ad Library Archivist](https://realaiexamples.com/blueprints/ad-library-archivist): Build a structured swipe file from 100 links.
 - [Ad Waste Excluder](https://realaiexamples.com/blueprints/ad-placement-exclusion-lister): Block mobile apps and kids' channels.
 - [The Ad Spend Pacer](https://realaiexamples.com/blueprints/ad-spend-pacer): Land exactly on budget.
+- [The Ad Variation Engine](https://realaiexamples.com/blueprints/ad-variation-engine): Turn 1 winner into 10 tests.
 - [The Ad Visual Intelligence Factory](https://realaiexamples.com/blueprints/ad-visual-reverse-engineer): Reverse-engineer 10 winning ads into design briefs.
 - [Advocacy Fatigue Saver](https://realaiexamples.com/blueprints/advocacy-ask-balancer): Don't ask twice in one month.
 - [Affiliate Application Auto-Screener](https://realaiexamples.com/blueprints/affiliate-application-auto-screener): Filter out spammy affiliate applications instantly.
@@ -73,5 +75,3 @@
 - [Content Usage Tracker](https://realaiexamples.com/blueprints/battlecard-usage-tracker): Which battlecards do reps actually use?
 - [Back-in-Stock Campaigner](https://realaiexamples.com/blueprints/bestseller-restock-alert): Launch ads when bestsellers return.
 - [Beta Tester Verifier](https://realaiexamples.com/blueprints/beta-program-active-roster): Are they actually testing?
-- [The Beta Tester Recruiter](https://realaiexamples.com/blueprints/beta-tester-recruiter): Find your first 50 users.
-- [Billing Contact Verifier](https://realaiexamples.com/blueprints/billing-contact-verification): Will the invoice bounce?
