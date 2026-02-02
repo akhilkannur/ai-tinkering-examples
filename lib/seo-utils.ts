@@ -12,7 +12,7 @@ export function generateHowToSchema(recipe: Recipe, siteUrl: string) {
         steps.push({
           "@type": "HowToStep",
           "name": currentStep.name,
-          "text": currentStep.text.trim()
+          "text": stripMarkdown(currentStep.text.trim())
         });
       }
       currentStep = { name: line.replace(/#|\*/g, '').trim(), text: '' };
@@ -26,7 +26,7 @@ export function generateHowToSchema(recipe: Recipe, siteUrl: string) {
     steps.push({
       "@type": "HowToStep",
       "name": currentStep.name,
-      "text": currentStep.text.trim()
+      "text": stripMarkdown(currentStep.text.trim())
     });
   }
 
@@ -59,6 +59,33 @@ export function generateHowToSchema(recipe: Recipe, siteUrl: string) {
       }
     ]
   };
+}
+
+function stripMarkdown(text: string): string {
+  if (!text) return '';
+  return text
+    // Headers
+    .replace(/^#+\s+/gm, '')
+    // Bold/Italic
+    .replace(/(\*\*|__)(.*?)\1/g, '$2')
+    .replace(/(\*|_)(.*?)\1/g, '$2')
+    // Links [text](url) -> text
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+    // Images ![alt](url) -> alt
+    .replace(/!\[([^\]]+)\]\([^)]+\)/g, '$1')
+    // Code blocks
+    .replace(/```[\s\S]*?```/g, '')
+    .replace(/`([^`]+)`/g, '$1')
+    // Lists
+    .replace(/^[\s-]*[-+*]\s+/gm, '')
+    .replace(/^\s*\d+\.\s+/gm, '')
+    // Blockquotes
+    .replace(/^\s*>\s+/gm, '')
+    // Horizontal rules
+    .replace(/^\s*[-*_]{3,}\s*$/gm, '')
+    // Newlines to spaces (optional, but safer for JSON)
+    .replace(/\n+/g, ' ')
+    .trim();
 }
 
 export function generateFAQSchema(recipe: Recipe) {
