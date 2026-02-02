@@ -491,7 +491,10 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const linkedDescription = injectInternalLinks(recipe.description, recipes);
 
   // 3. Generate Schema
-  const howTo = generateHowToSchema(recipe, 'https://realaiexamples.com');
+  const SITE_URL = 'https://realaiexamples.com';
+  const ogImageUrl = `${SITE_URL}/api/og?title=${encodeURIComponent(recipe.title)}&category=${encodeURIComponent(recipe.category)}&tagline=${encodeURIComponent(recipe.tagline)}`;
+  
+  const howTo = generateHowToSchema(recipe, SITE_URL, ogImageUrl);
   const faq = generateFAQSchema(recipe);
   const schema = [howTo, faq].filter(Boolean);
 

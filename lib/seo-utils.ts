@@ -1,6 +1,6 @@
 import { Recipe } from './cookbook-data';
 
-export function generateHowToSchema(recipe: Recipe, siteUrl: string) {
+export function generateHowToSchema(recipe: Recipe, siteUrl: string, imageUrl?: string) {
   // Try to parse "Phases" or "Steps" from the blueprint
   const steps = [];
   const lines = recipe.blueprint.split('\n');
@@ -39,7 +39,7 @@ export function generateHowToSchema(recipe: Recipe, siteUrl: string) {
     });
   }
 
-  return {
+  const schema: any = {
     "@context": "https://schema.org",
     "@type": "HowTo",
     "name": recipe.title,
@@ -59,6 +59,12 @@ export function generateHowToSchema(recipe: Recipe, siteUrl: string) {
       }
     ]
   };
+
+  if (imageUrl) {
+    schema.image = imageUrl;
+  }
+
+  return schema;
 }
 
 function stripMarkdown(text: string): string {
