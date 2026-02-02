@@ -21,7 +21,7 @@ IMAGES_TO_GENERATE = [
     ("llms-txt-explained.png", "LLMs.txt Explained"),
     ("quiz-architecture.png", "Archetype Quiz"),
     ("screenshot-engine.png", "Screenshot Engine"),
-    ("clawdbot-guide.png", "Clawdbot Guide"),
+    ("clawdbot-guide.png", "Moltbot Guide"),
     ("refactoring-with-ai.png", "Refactoring with AI"),
     ("automated-video-with-remotion.png", "Automated Video"),
 ]

@@ -1,23 +1,23 @@
 # Blueprints: AI Productivity
 
-## Clawdbot 101: Your Personal AI Assistant (Complete Beginner's Guide)
+## Moltbot (formerly Clawdbot) 101: Your Personal AI Assistant (Complete Beginner's Guide)
 URL: https://realaiexamples.com/blueprints/clawdbot-beginners-guide
-Description: Turn your computer into a 24/7 AI assistant that works across WhatsApp, Telegram, and more.
+Description: Turn your computer into a 24/7 AI assistant that works across WhatsApp, Telegram, and more using Moltbot (formerly Clawdbot).
 
 ---
 id: clawdbot-beginners-guide
 category: AI Productivity
-title: "Clawdbot 101: Your Personal AI Assistant (Complete Beginner's Guide)"
+title: "Moltbot (formerly Clawdbot) 101: Your Personal AI Assistant (Complete Beginner's Guide)"
 tagline: Turn your computer into a 24/7 AI assistant that works across WhatsApp, Telegram, and more.
 difficulty: Beginner
 time: 30 mins
 archetype: Researcher
 description: >-
-  Clawdbot is the open-source AI assistant everyone's talking about. This guide explains what it is, 
+  Moltbot (formerly Clawdbot) is the open-source AI assistant everyone's talking about. This guide explains what it is, 
   why people are buying Mac Minis for it, and how to install it step-by-step—even if you've never 
   used a terminal before. Answers all the trending questions: cost, requirements, and what it can do.
 sampleData:
-  filename: clawdbot_setup_checklist.csv
+  filename: moltbot_setup_checklist.csv
   content: |
     Step,Task,Status
     1,Install Node.js 22+,pending
@@ -27,11 +27,11 @@ sampleData:
     5,Send first message,pending
 ---
 
-# Clawdbot 101: The Complete Beginner's Guide
+# Moltbot (formerly Clawdbot) 101: The Complete Beginner's Guide
 
-## What is Clawdbot?
+## What is Moltbot?
 
-**Clawdbot** is a free, open-source AI assistant that runs on YOUR computer (or a cheap server) and connects to apps you already use—WhatsApp, Telegram, Discord, Slack, Signal, and even iMessage.
+**Moltbot** is a free, open-source AI assistant that runs on YOUR computer (or a cheap server) and connects to apps you already use—WhatsApp, Telegram, Discord, Slack, Signal, and even iMessage.
 
 Think of it as having a smart assistant that:
 - Lives inside your messaging apps
@@ -42,47 +42,47 @@ Think of it as having a smart assistant that:
 
 ---
 
-## Why Is Everyone Talking About Clawdbot?
+## Why Is Everyone Talking About Moltbot?
 
-Clawdbot went viral because it solves a real problem: **AI assistants that actually integrate into your life**.
+Moltbot went viral because it solves a real problem: **AI assistants that actually integrate into your life**.
 
-Unlike ChatGPT or Claude (web-based), Clawdbot:
-- **Works in your existing apps** (no new app to open)
-- **Remembers context** across conversations
-- **Can be proactive** (send you reminders, briefings)
-- **Runs locally** (your data stays private)
-- **Is free and open-source**
+Unlike ChatGPT or Claude (web-based), Moltbot:
+- Lives in your **existing chats** (WhatsApp, iMessage, etc.)
+- Has **long-term memory** (remembers what you said last week)
+- Can **access your files** (if you let it)
+- **Costs $0** if you run it with local models
+
+It's the first "jarvis-like" experience that is easy enough for normal people to install.
 
 ---
 
 ## Frequently Asked Questions (The Trending Ones)
 
-### "Do I need a Mac Mini to run Clawdbot?"
+### "Do I need a Mac Mini to run Moltbot?"
 
-**No!** This is a common myth. Clawdbot runs on:
-- Any Mac (including older ones)
-- Any Windows PC (via WSL2)
-- Any Linux computer
-- A cheap $5/month VPS server
-- AWS Free Tier (literally $0)
+**No!** This is a common myth. Moltbot runs on:
+- Any Mac, Windows, or Linux computer
+- Cloud servers (DigitalOcean, AWS, etc.)
+- **Cloudflare Workers** (New!)
+- Even an old laptop you leave open
 
-People buy Mac Minis because they want a dedicated always-on device, but it's NOT required.
+People buy Mac Minis just to have a dedicated "always-on" server, but it's not required.
 
-### "Is Clawdbot free?"
+### "Is Moltbot free?"
 
-**The software is 100% free.** However, you need AI model access:
-- Use your Claude Pro/Max subscription ($20–100/month)
-- Use an Anthropic API key (pay-per-use)
-- Use OpenAI API (pay-per-use)
-- Use completely FREE local models (LM Studio)
+Yes, the software is **100% free and open source**.
 
-### "Is Clawdbot made by Anthropic/Claude?"
+You only pay for the "brain" (the AI model):
+- **Free:** Use local models (like Llama 3) via LM Studio.
+- **Paid:** Connect it to Claude ($20/mo) or OpenAI (pay-per-use).
 
-**No.** Clawdbot is an independent, community-built project. It CAN use Claude (the AI model) but is not made by Anthropic.
+### "Is Moltbot made by Anthropic/Claude?"
+
+**No.** Moltbot is an independent, community-built project. It CAN use Claude (the AI model) but is not made by Anthropic.
 
 ### "Is my data safe?"
 
-**Yes.** Everything runs on YOUR machine. Your conversations, files, and data never leave your control unless you explicitly connect to external services.
+**Yes.** Everything runs on **your** device. Your chats are not sent to some random company's server (unless you use a cloud AI model, in which case it goes to them, but Moltbot itself doesn't harvest data).
 
 ### "Can non-technical people use it?"
 
@@ -90,29 +90,23 @@ People buy Mac Minis because they want a dedicated always-on device, but it's NO
 
 ---
 
-## What Can Clawdbot Actually Do?
+## What Can Moltbot Actually Do?
 
-### Real Use Cases People Love:
+1.  **"Keep this for later"**
+    -   You send a link to your **WhatsApp** bot.
+    -   Moltbot summarizes and files them automatically
+    -   Later, you ask "Where was that article about..." and it finds it.
 
-1. **Personal Knowledge Manager**
-   - Send links, articles, ideas via Telegram
-   - Clawdbot summarizes and files them automatically
+2.  **"Brief me"**
+    -   It can send you a morning summary of your calendar and news.
 
-2. **Meeting Prep Assistant**
-   - "What are my action items from last week?"
-   - "Summarize our project status"
+3.  **"Draft this"**
+    -   Dictate a messy thought while walking.
+    -   Moltbot cleans it up into a professional email.
 
-3. **Proactive Reminders**
-   - Morning briefings with your calendar
-   - Flight reminders, task follow-ups
-
-4. **Research Assistant**
-   - Web search and summarization
-   - Document analysis
-
-5. **Content Organization**
-   - Automatically categorize bookmarks
-   - Build structured notes from chaos
+4.  **"Who is this?"**
+    -   Forward a LinkedIn profile.
+    -   Moltbot researches them and gives you a summary before your meeting.
 
 ---
 
@@ -142,30 +136,26 @@ If you see `v22.x.x` or higher, skip to Step 2.
 
 **If not installed:** Visit https://nodejs.org and download the LTS version.
 
-### Step 2: Install Clawdbot
+### Step 2: Install Moltbot
 
-**Mac/Linux:** Open Terminal and paste:
+Paste the install command into your terminal:
+
+```bash
+curl -fsSL https://molt.bot/install.sh | bash
 ```
-curl -fsSL https://clawd.bot/install.sh | bash
-```
-
-**Windows (in WSL2):** Same command in your WSL terminal.
-
-Wait 1-2 minutes for installation.
 
 ### Step 3: Run the Setup Wizard
 
 Type:
-```
-clawdbot onboard
+```bash
+moltbot onboard
 ```
 
-The wizard will ask you:
-1. **Gateway mode:** Choose "Local" (first time)
-2. **AI Model:** Pick Anthropic, OpenAI, or local models
-3. **Authentication:** Paste your API key or use Claude subscription
-4. **Messaging app:** WhatsApp, Telegram, Discord, etc.
-5. **Background service:** Choose "Yes" to run automatically
+It will guide you through:
+1. Selecting your AI model (Anthropic, OpenAI, or Local)
+2. Choosing your messaging platform (WhatsApp, Telegram, etc.)
+3. Connecting your API keys
+4. Configure Moltbot to use it
 
 ### Step 4: Connect Your Messaging App
 
@@ -211,19 +201,19 @@ Use LM Studio for completely free, private AI:
 1. Download LM Studio
 2. Download a model (like Llama 3)
 3. Start the local server
-4. Configure Clawdbot to use it
+4. Configure Moltbot to use it
 
 ---
 
 ## Troubleshooting Common Issues
 
-### "Command not found: clawdbot"
+### "Command not found: moltbot"
 
 Restart your terminal after installation.
 
 ### "No credentials found"
 
-Re-run `clawdbot onboard` and set up authentication again.
+Re-run `moltbot onboard` and set up authentication again.
 
 ### "Rate limit error"
 
@@ -233,16 +223,16 @@ Your AI provider quota is exhausted. Wait for reset or upgrade plan.
 
 The gateway isn't running. Start it with:
 ```
-clawdbot gateway start
+moltbot gateway start
 ```
 
 ### Still stuck?
 
 Run these diagnostic commands:
 ```
-clawdbot status
-clawdbot doctor
-clawdbot health
+moltbot status
+moltbot doctor
+moltbot health
 ```
 
 ---
@@ -260,46 +250,36 @@ Don't want to spend anything? Here's how:
 ## Next Steps After Setup
 
 1. **Customize your assistant's personality** in the SOUL.md file
-2. **Install skills** for specific tasks: `clawdbot skills install`
+2. **Install skills** for specific tasks: `moltbot skills install`
 3. **Set up scheduled routines** (morning briefings, reminders)
-4. **Explore the dashboard:** `clawdbot dashboard`
+4. **Explore the dashboard:** `moltbot dashboard`
 
 ---
 
-## Quick Reference Commands
+## Quick Reference
 
-| Command | What It Does |
-|---------|-------------|
-| `clawdbot onboard` | Setup wizard |
-| `clawdbot status` | Check if running |
-| `clawdbot health` | Diagnose issues |
-| `clawdbot doctor` | Auto-fix common problems |
-| `clawdbot gateway start` | Start the service |
-| `clawdbot models status` | Check AI model connection |
-
----
+| Command | Action |
+| :--- | :--- |
+| `moltbot onboard` | Setup wizard |
+| `moltbot status` | Check if running |
+| `moltbot health` | Diagnose issues |
+| `moltbot doctor` | Auto-fix common problems |
+| `moltbot gateway start` | Start the service |
+| `moltbot models status` | Check AI model connection |
 
 ## Resources
 
-- **Official Docs:** https://docs.clawd.bot
-- **GitHub:** https://github.com/clawdbot/clawdbot
-- **Discord Community:** https://discord.com/invite/clawd
+- **Official Website:** https://molt.bot
+- **GitHub:** https://github.com/moltbot/moltbot
+- **Discord Community:** https://discord.gg/moltbot
 
----
+## Conclusion
 
-## Summary
+Moltbot is a game-changer for anyone who wants an AI assistant that:
+- Runs locally
+- Respects privacy
+- Integrates with real messaging apps
+- Doesn't require a monthly subscription
 
-Clawdbot is a game-changer for anyone who wants an AI assistant that:
-- Works in apps you already use
-- Runs on your own hardware
-- Remembers everything
-- Costs little to nothing
-- Keeps your data private
-
-You don't need a Mac Mini. You don't need to be technical. Follow this guide, and you'll have your own AI assistant running in under 30 minutes.
-
-**The future of personal AI is self-hosted. Welcome to the club.**
-
-
----
+It's the closest thing to "Jarvis" we have right now. Give it a try!
 

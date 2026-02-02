@@ -227,7 +227,7 @@ export const SimpleAIGymTrainer: React.FC = () => {
 					{/* Thermal receipts */}
 					<SimpleReceipt text="OpenAI API" price="-$50" frame={scene1Frame} index={0} />
 					<SimpleReceipt text="Claude Code" price="-$20" frame={scene1Frame} index={1} />
-					<SimpleReceipt text="Clawdbot" price="-$20" frame={scene1Frame} index={2} />
+					<SimpleReceipt text="Moltbot" price="-$20" frame={scene1Frame} index={2} />
 					
 					{/* Overlay text */}
 					<div

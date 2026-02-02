@@ -208,7 +208,7 @@ const AIGymTrainerScene3D: React.FC<{
 				<>
 					<PaperReceipt3D text="OpenAI API" price="-$50" frame={scene1Frame} index={0} />
 					<PaperReceipt3D text="Claude Code" price="-$20" frame={scene1Frame} index={1} />
-					<PaperReceipt3D text="Clawdbot" price="-$20" frame={scene1Frame} index={2} />
+					<PaperReceipt3D text="Moltbot" price="-$20" frame={scene1Frame} index={2} />
 				</>
 			)}
 			

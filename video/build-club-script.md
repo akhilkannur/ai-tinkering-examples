@@ -11,7 +11,7 @@
 *   **Text on Receipts:** 
     *   OpenAI API: -$50
     *   Claude Code: -$20
-    *   Clawdbot: -$20
+    *   Moltbot: -$20
 *   **Overlay Text:** "CONGRATULATIONS. YOU ARE A DONOR."
 *   **Audio:** Sarcastic cash register sounds (*Cha-ching!*).
 

@@ -5,15 +5,15 @@
     <link>https://realaiexamples.com</link>
     <description>Practical AI Blueprints, Recipes, and Guides for Operations, Marketing, and Sales.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 02 Feb 2026 02:56:51 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 02 Feb 2026 15:07:54 GMT</lastBuildDate>
     <atom:link href="https://realaiexamples.com/feed.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title><![CDATA[Clawdbot 101: What It Is and How to Install It (Complete Beginner's Guide)]]></title>
+      <title><![CDATA[Moltbot (formerly Clawdbot) 101: What It Is and How to Install It (Updated Guide)]]></title>
       <link>https://realaiexamples.com/blog/clawdbot-beginners-guide</link>
       <guid>https://realaiexamples.com/blog/clawdbot-beginners-guide</guid>
-      <pubDate>Mon, 26 Jan 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Clawdbot is trending everywhere. But what actually is it? Do you need a Mac Mini? Is it free? This guide answers every question non-technical people are asking and shows you how to set it up in 30 minutes.]]></description>
+      <pubDate>Mon, 02 Feb 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Moltbot (previously Clawdbot) is trending everywhere. But what is it? Do you need a Mac Mini? Is it free? This updated guide covers the rename, Cloudflare hosting, and setup.]]></description>
       <author>Akhil from Real Examples</author>
     </item>
   

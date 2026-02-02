@@ -1,28 +1,30 @@
 ---
-title: "Clawdbot 101: What It Is and How to Install It (Complete Beginner's Guide)"
-date: "2026-01-26"
-excerpt: "Clawdbot is trending everywhere. But what actually is it? Do you need a Mac Mini? Is it free? This guide answers every question non-technical people are asking and shows you how to set it up in 30 minutes."
+title: "Moltbot (formerly Clawdbot) 101: What It Is and How to Install It (Updated Guide)"
+date: "2026-02-02"
+excerpt: "Moltbot (previously Clawdbot) is trending everywhere. But what is it? Do you need a Mac Mini? Is it free? This updated guide covers the rename, Cloudflare hosting, and setup."
 coverImage: "/images/blog/clawdbot-guide.png"
 author:
   name: "Akhil from Real Examples"
 category: "AI Tools"
 ---
 
-Everyone's talking about Clawdbot. Mac Minis are selling out. Twitter is flooded with screenshots of people chatting with their "personal AI assistant" on WhatsApp.
+**Update (February 2026):** The project formerly known as **Clawdbot** has been renamed to **Moltbot**. This guide has been updated to reflect the new name and new hosting options like Cloudflare.
+
+Everyone's talking about Moltbot. Mac Minis are selling out. Twitter is flooded with screenshots of people chatting with their "personal AI assistant" on WhatsApp.
 
 But if you're not a developer, you're probably confused.
 
-What even *is* Clawdbot? Do you really need to buy hardware? And how hard is it to set up?
+What even *is* Moltbot? Do you really need to buy hardware? And how hard is it to set up?
 
 I'm going to answer every question I've seen trending, then walk you through the setup—even if you've never touched a terminal.
 
-## What Is Clawdbot?
+## What Is Moltbot?
 
-**Clawdbot is a free, open-source AI assistant that runs on your own computer.**
+**Moltbot is a free, open-source AI assistant that runs on your own computer (or cloud host).**
 
-Unlike ChatGPT or Claude (which live on a website), Clawdbot:
+Unlike ChatGPT or Claude (which live on a website), Moltbot:
 
-- **Runs locally** on your machine
+- **Runs locally** on your machine (or on a server you control)
 - **Connects to apps you already use**—WhatsApp, Telegram, Discord, Slack, Signal, iMessage
 - **Remembers your conversations** over time
 - **Can be proactive**—sending you reminders, briefings, and alerts
@@ -32,22 +34,23 @@ Think of it as having a smart assistant that lives *inside* your messaging apps,
 
 ## Why Is Everyone Buying Mac Minis?
 
-Here's the myth: *"You need a Mac Mini to run Clawdbot."*
+Here's the myth: *"You need a Mac Mini to run Moltbot."*
 
 **False.**
 
-Clawdbot runs on:
+Moltbot runs on:
 - Any Mac (even old ones)
 - Any Windows PC (using WSL2)
 - Any Linux machine
-- A $5/month cloud server
+- **Cloudflare** (New! Run it on the edge)
+- A $5/month cloud server (DigitalOcean, Hetzner)
 - AWS Free Tier (literally $0)
 
 People buy Mac Minis because they want a dedicated, always-on device sitting in their house. It's a luxury, not a requirement.
 
-If you have a laptop that's on most of the time, that works too.
+If you have a laptop that's on most of the time, that works too. But recently, providers like **Cloudflare** have started offering hosting solutions specifically for Moltbot, making it even easier to run without hardware.
 
-## Is Clawdbot Free?
+## Is Moltbot Free?
 
 The software is 100% free and open-source.
 
@@ -62,24 +65,24 @@ But you need an AI model to power it. Options:
 
 The cheapest path? Use local models. Your data stays on your machine, and you pay nothing.
 
-## Is Clawdbot Made by Anthropic?
+## Is Moltbot Made by Anthropic?
 
-No. Clawdbot is an independent, community-built project.
+No. Moltbot is an independent, community-built project.
 
-It *can* use Claude (the AI model from Anthropic), but Anthropic didn't build Clawdbot. It's not "Claude's official app."
+It *can* use Claude (the AI model from Anthropic), but Anthropic didn't build Moltbot. It's not "Claude's official app." (This is partly why it was renamed from Clawdbot to Moltbot—to avoid confusion!)
 
 ## Is My Data Safe?
 
-Yes. Everything runs on YOUR machine.
+Yes. Everything runs on YOUR infrastructure.
 
 Your conversations, files, and personal data never leave your control. That's the whole point—it's a self-hosted assistant.
 
-## What Can Clawdbot Actually Do?
+## What Can Moltbot Actually Do?
 
 Here's why people are excited:
 
 **1. Personal Knowledge Manager**
-Drop a link in Telegram. Clawdbot summarizes it, categorizes it, and files it away. No more lost bookmarks.
+Drop a link in Telegram. Moltbot summarizes it, categorizes it, and files it away. No more lost bookmarks.
 
 **2. Meeting Prep**
 Ask: *"What are my action items from last week?"* or *"Summarize our project status."* It remembers past conversations.
@@ -95,7 +98,7 @@ Talk to it from WhatsApp while you're on your phone. Switch to Discord on deskto
 
 ---
 
-## How to Install Clawdbot (Beginner-Friendly)
+## How to Install Moltbot (Beginner-Friendly)
 
 Don't worry—there's a wizard that walks you through everything.
 
@@ -113,26 +116,28 @@ node --version
 
 You need version 22 or higher. If it's missing, download from https://nodejs.org.
 
-### Step 2: Install Clawdbot
+### Step 2: Install Moltbot
 
-Paste this command:
+Paste this command (works for the new Moltbot version):
 
 ```
-curl -fsSL https://clawd.bot/install.sh | bash
+curl -fsSL https://molt.bot/install.sh | bash
 ```
+
+*(Note: The old clawd.bot installer still works and redirects, but this is the new standard.)*
 
 Wait a minute or two.
 
 ### Step 3: Run the Setup Wizard
 
 ```
-clawdbot onboard
+moltbot onboard
 ```
 
 The wizard asks you:
-1. **Gateway mode:** Choose "Local"
+1. **Gateway mode:** Choose "Local" (or "Cloudflare" if you're using that method)
 2. **AI Model:** Pick Anthropic, OpenAI, or local
-3. **Authentication:** Paste your API key (or use Claude subscription)
+3. **Authentication:** Paste your API key
 4. **Messaging app:** WhatsApp, Telegram, Discord, etc.
 5. **Run in background:** Choose "Yes"
 
@@ -162,7 +167,7 @@ Open your messaging app and message your bot:
 
 Want to spend nothing?
 
-1. **Hosting:** Use AWS Free Tier (750 hours/month free)
+1. **Hosting:** Use AWS Free Tier or **Cloudflare's Free Workers** plan.
 2. **AI Model:** Use LM Studio with Llama 3 (runs locally, $0)
 3. **Result:** A working AI assistant for literally zero dollars
 
@@ -172,11 +177,11 @@ You don't need a Mac Mini. You don't need a subscription. You just need to follo
 
 ## Troubleshooting
 
-**"Command not found: clawdbot"**
+**"Command not found: moltbot"**
 Restart your terminal after installation.
 
 **"No credentials found"**
-Re-run `clawdbot onboard` and set up authentication again.
+Re-run `moltbot onboard` and set up authentication again.
 
 **"Rate limit error"**
 Your AI provider's quota is exhausted. Wait or upgrade.
@@ -184,12 +189,12 @@ Your AI provider's quota is exhausted. Wait or upgrade.
 **Still stuck?**
 Run these:
 ```
-clawdbot status
-clawdbot doctor
-clawdbot health
+moltbot status
+moltbot doctor
+moltbot health
 ```
 
-Or ask in the Discord: https://discord.com/invite/clawd
+Or ask in the Discord: https://discord.com/invite/moltbot
 
 ---
 
@@ -197,11 +202,11 @@ Or ask in the Discord: https://discord.com/invite/clawd
 
 | Command | What It Does |
 |---------|-------------|
-| `clawdbot onboard` | Setup wizard |
-| `clawdbot status` | Check if running |
-| `clawdbot health` | Diagnose issues |
-| `clawdbot doctor` | Auto-fix problems |
-| `clawdbot gateway start` | Start the service |
+| `moltbot onboard` | Setup wizard |
+| `moltbot status` | Check if running |
+| `moltbot health` | Diagnose issues |
+| `moltbot doctor` | Auto-fix problems |
+| `moltbot gateway start` | Start the service |
 
 ---
 
@@ -211,7 +216,7 @@ We're at an inflection point.
 
 AI assistants used to live in browser tabs. Now they're moving into the tools we actually use—messaging apps, file systems, calendars.
 
-Clawdbot is one of the first to do this well, and it's completely open-source.
+Moltbot is one of the first to do this well, and it's completely open-source.
 
 You don't need to be technical. You don't need expensive hardware. You just need 30 minutes and curiosity.
 
