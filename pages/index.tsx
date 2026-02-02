@@ -10,6 +10,7 @@ import HorizontalStrip from '../components/HorizontalStrip'
 import JobCard from '../components/JobCard'
 import AIToolCard from '../components/AIToolCard'
 import NewsletterForm from '../components/NewsletterForm'
+import FeaturedIn from '../components/FeaturedIn'
 
 import StrategicKits from '../components/StrategicKits'
 import MockTerminal from '../components/MockTerminal'
@@ -127,7 +128,7 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
             </div>
         </div>
 
-
+        <FeaturedIn />
 
         {/* COOKBOOK GRID */}
         <div className="bg-primary-bg pb-24" id="blueprints">
