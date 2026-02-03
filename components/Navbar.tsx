@@ -1,22 +1,30 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, Terminal, Cpu } from 'lucide-react'
 import Head from 'next/head'
-
 import Image from 'next/image'
 
 export default function Navbar() {
   const router = useRouter()
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   const navLinks = [
-    { href: '/ai-examples', label: 'Real Examples' },
-    { href: '/agent-setup-service', label: 'Setup 101' },
-    { href: '/tools', label: 'Tools' },
-    { href: '/build-club', label: 'Build Club' },
-    { href: '/ai-workplace-quiz', label: 'AI Quiz' },
-    { href: '/about', label: 'About' },
+    { href: '/ai-examples', label: 'EXAMPLES', mono: true },
+    { href: '/blueprints', label: 'BLUEPRINTS', mono: true },
+    { href: '/agent-setup-service', label: 'SETUP', mono: true },
+    { href: '/build-club', label: 'BUILD CLUB', mono: true },
+    { href: '/tools', label: 'TOOLS', mono: true },
+    { href: '/about', label: 'MISSION', mono: true },
   ]
 
   return (
@@ -37,32 +45,38 @@ export default function Navbar() {
           }}
         />
       </Head>
-      <nav className="bg-secondary-bg/80 backdrop-blur-md sticky top-0 z-50 border-b border-navy-dark">
-      <div className="container mx-auto px-4 sm:px-6 py-4">
-        <div className="flex justify-between h-16 items-center">
-          <div className="flex items-center">
+      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled ? 'bg-primary-bg/90 backdrop-blur-lg border-b border-white/5 py-2' : 'bg-transparent py-4'
+      }`}>
+      <div className="container mx-auto px-4 max-w-7xl">
+        <div className="flex justify-between items-center h-16">
+          <div className="flex items-center gap-12">
             <div className="flex-shrink-0">
-              <Link href="/" className="flex items-center gap-2 group">
-                <Image 
-                  src="/favicon_transparent.png?v=2" 
-                  alt="AI Examples Logo" 
-                  width={64} 
-                  height={64} 
-                  className="object-contain -ml-2" 
-                />
-                <span className="text-xl font-bold font-sans text-text-color group-hover:text-accent transition-colors">Real AI Examples</span>
+              <Link href="/" className="flex items-center gap-3 group">
+                <div className="relative">
+                    <div className="absolute -inset-1 bg-accent rounded-full blur-md opacity-0 group-hover:opacity-40 transition-opacity"></div>
+                    <Image 
+                    src="/favicon_transparent.png?v=2" 
+                    alt="AI Examples" 
+                    width={40} 
+                    height={40} 
+                    className="relative object-contain" 
+                    />
+                </div>
+                <span className="text-lg font-black font-sans tracking-tighter text-white group-hover:text-accent transition-colors uppercase italic">Real AI Examples</span>
               </Link>
             </div>
+            
             {/* Desktop Navigation */}
-            <div className="hidden md:ml-10 md:flex md:space-x-8">
+            <div className="hidden lg:flex items-center space-x-1">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`inline-flex items-center text-base font-sans font-bold transition-colors duration-200 ${
-                    router.pathname.startsWith(link.href)
-                      ? 'text-accent'
-                      : 'text-text-color hover:text-accent'
+                  className={`px-4 py-2 text-[10px] font-mono font-bold tracking-[0.2em] transition-all duration-200 border border-transparent rounded-lg ${
+                    router.pathname === link.href
+                      ? 'text-accent bg-accent/5 border-accent/10'
+                      : 'text-text-secondary hover:text-white hover:bg-white/5'
                   }`}
                 >
                   {link.label}
@@ -70,33 +84,34 @@ export default function Navbar() {
               ))}
             </div>
           </div>
-          {/* Desktop Submit Button */}
-          <div className="hidden md:flex md:items-center">
-            {router.pathname.startsWith('/ai-examples') && (
-              <a
+
+          <div className="hidden lg:flex items-center gap-6">
+            {/* System Status Indicator */}
+            <div className="flex items-center gap-3 px-4 py-2 bg-secondary-bg/50 border border-white/5 rounded-full">
+                <div className="relative flex h-2 w-2">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                </div>
+                <span className="text-[9px] font-mono font-bold text-text-secondary uppercase tracking-widest leading-none mt-0.5">Systems_Online</span>
+            </div>
+
+            <a
                 href={process.env.NEXT_PUBLIC_AIRTABLE_SUBMIT_FORM_URL || 'https://airtable.com/appUo7R0la4VUzOoT/shrX1v3Z8z2G7p9Z9'}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-5 py-2 border border-transparent rounded-none shadow-none text-sm font-sans font-bold text-electric-blue bg-accent hover:bg-accent-hover transition-all duration-200 hover:shadow-accent-glow"
-              >
-                Submit an Example
-              </a>
-            )}
+                className="whitespace-nowrap inline-flex items-center justify-center px-6 py-2.5 rounded-lg text-xs font-mono font-bold text-white bg-accent hover:bg-accent-hover transition-all duration-200 shadow-lg shadow-accent/20 border border-accent/20"
+            >
+                [ SUBMIT_BLUEPRINT ]
+            </a>
           </div>
 
           {/* Mobile menu button */}
-          <div className="-mr-2 flex items-center md:hidden">
+          <div className="lg:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-none text-text-color hover:text-text-color hover:bg-navy-dark focus:outline-none focus:ring-2 focus:ring-inset focus:ring-accent"
-              aria-expanded="false"
+              className="p-2 text-text-secondary hover:text-white transition-colors"
             >
-              <span className="sr-only">Open main menu</span>
-              {isMobileMenuOpen ? (
-                <X className="block h-6 w-6" aria-hidden="true" />
-              ) : (
-                <Menu className="block h-6 w-6" aria-hidden="true" />
-              )}
+              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </div>
@@ -104,33 +119,31 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-secondary-bg border-b border-navy-dark">
-          <div className="px-2 pt-2 pb-3 space-y-1">
+        <div className="lg:hidden absolute top-full left-0 right-0 bg-primary-bg border-b border-white/5 p-4 animate-in slide-in-from-top-4 duration-300">
+          <div className="space-y-2">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`block px-3 py-2 rounded-none text-base font-bold ${
-                  router.pathname.startsWith(link.href)
-                    ? 'bg-accent/20 text-accent'
-                    : 'text-text-color hover:bg-navy-dark hover:text-accent'
+                className={`block px-4 py-4 text-xs font-mono font-bold tracking-widest rounded-xl ${
+                  router.pathname === link.href
+                    ? 'bg-accent text-white'
+                    : 'text-text-secondary hover:bg-white/5'
                 }`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.label}
               </Link>
             ))}
-            {router.pathname.startsWith('/ai-examples') && (
-              <a
+            <a
                 href={process.env.NEXT_PUBLIC_AIRTABLE_SUBMIT_FORM_URL || 'https://airtable.com/appUo7R0la4VUzOoT/shrX1v3Z8z2G7p9Z9'}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full text-center px-3 py-3 rounded-none text-base font-bold text-electric-blue bg-accent hover:bg-accent-hover mt-4"
+                className="block w-full text-center px-4 py-4 rounded-xl text-xs font-mono font-bold text-white bg-accent mt-4"
                 onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Submit an Example
-              </a>
-            )}
+            >
+                SUBMIT_BLUEPRINT
+            </a>
           </div>
         </div>
       )}
@@ -138,5 +151,3 @@ export default function Navbar() {
     </>
   )
 }
-
-

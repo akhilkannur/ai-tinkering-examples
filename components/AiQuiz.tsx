@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import QuizCertificate from './QuizCertificate';
 import NewsletterSignup from './NewsletterSignup';
+import { Trophy, Timer, Flame, ArrowRight, RotateCcw, Check, X } from 'lucide-react';
 
 interface Question {
   question: string;
@@ -66,8 +67,8 @@ const TIMER_DURATION = 20; // Seconds per question
 
 export default function AiQuiz() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [score, setScore] = useState(0); // Represents correct answers count
-  const [points, setPoints] = useState(0); // Represents gamified points
+  const [score, setScore] = useState(0); 
+  const [points, setPoints] = useState(0); 
   const [streak, setStreak] = useState(0);
   const [timeLeft, setTimeLeft] = useState(TIMER_DURATION);
   const [showResult, setShowResult] = useState(false);
@@ -82,7 +83,6 @@ export default function AiQuiz() {
   const quizUrl = `${process.env.NEXT_PUBLIC_BASE_URL}${router.asPath}`;
 
   useEffect(() => {
-    // Load high score from local storage on mount
     const savedHighScore = localStorage.getItem('aiQuizHighScore');
     if (savedHighScore) {
       setHighScore(parseInt(savedHighScore, 10));
@@ -92,10 +92,10 @@ export default function AiQuiz() {
 
   useEffect(() => {
     if (showResult) return;
-    if (selectedAnswer !== null) return; // Stop timer if answer selected
+    if (selectedAnswer !== null) return; 
 
     if (timeLeft === 0) {
-      handleAnswer(null); // Time's up
+      handleAnswer(null); 
       return;
     }
 
@@ -107,18 +107,17 @@ export default function AiQuiz() {
   }, [timeLeft, showResult, selectedAnswer]);
 
   useEffect(() => {
-    // Reset timer and animation when question changes
     setTimeLeft(TIMER_DURATION);
     setShowAnimation(true);
   }, [currentQuestion]);
 
   const handleAnswer = (option: string | null) => {
-    if (selectedAnswer !== null) return; // Prevent multiple answers
+    if (selectedAnswer !== null) return; 
 
     const currentQ = questions[currentQuestion];
     const isAnswerCorrect = option === currentQ.answer;
     
-    setSelectedAnswer(option || "TIME_UP"); // Mark as special value if time ran out
+    setSelectedAnswer(option || "TIME_UP"); 
     setIsCorrect(isAnswerCorrect);
 
     if (isAnswerCorrect) {
@@ -151,10 +150,9 @@ export default function AiQuiz() {
     setShowResult(true);
   };
   
-  // Effect to handle High Score update when result is shown
   useEffect(() => {
     if (showResult) {
-       const currentFinalPoints = points; // Points should be updated by now from the last answer
+       const currentFinalPoints = points;
        if (currentFinalPoints > highScore) {
          setHighScore(currentFinalPoints);
          localStorage.setItem('aiQuizHighScore', currentFinalPoints.toString());
@@ -186,76 +184,88 @@ export default function AiQuiz() {
 
   const getResultMessage = () => {
     const percentage = (score / questions.length) * 100;
-    if (percentage === 100) return "Legendary! Perfect Score!";
-    if (percentage >= 80) return "Excellent! You're an AI Pro.";
-    if (percentage >= 60) return "Good Job! Keep learning.";
-    return "Nice try! Review the topics and try again.";
+    if (percentage === 100) return "LEGENDARY_STATUS_ACHIEVED";
+    if (percentage >= 80) return "PRO_SYSTEM_OPERATOR";
+    if (percentage >= 60) return "ANALYST_GRADE_AUTHORIZED";
+    return "SYSTEM_KNOWLEDGE_INSUFFICIENT";
   };
 
   const getTimerColor = () => {
-    if (timeLeft > 10) return 'bg-green-500';
+    if (timeLeft > 10) return 'bg-accent';
     if (timeLeft > 5) return 'bg-yellow-500';
     return 'bg-red-500';
   };
 
   return (
-    <div className="bg-primary-bg p-8 rounded-lg shadow-lg max-w-2xl mx-auto text-text-color relative overflow-hidden">
+    <div className="bg-primary-bg p-1 md:p-2 rounded-3xl relative overflow-hidden font-sans">
+      
       {/* Top Bar: Score & High Score */}
       {!showResult && (
-        <div className="flex justify-between items-center mb-6 text-sm font-bold uppercase tracking-wider text-gray-500">
-          <div>Score: <span className="text-accent text-lg">{points}</span></div>
-          <div>High Score: <span className="text-gray-700 text-lg">{Math.max(points, highScore)}</span></div>
+        <div className="flex justify-between items-center mb-10 px-4">
+          <div className="font-mono text-[10px] uppercase tracking-widest text-text-secondary">
+            [ SCORE: <span className="text-accent font-bold">{points}</span> ]
+          </div>
+          <div className="font-mono text-[10px] uppercase tracking-widest text-text-secondary opacity-40">
+            [ HIGH_SCORE: {Math.max(points, highScore)} ]
+          </div>
         </div>
       )}
 
       {showResult ? (
-        <div className="text-center animate-fade-in">
-          <div className="mb-6">
-             <span className="text-6xl">🏆</span>
+        <div className="text-center animate-in fade-in zoom-in duration-500 py-8">
+          <div className="mb-8 relative inline-block">
+             <div className="absolute -inset-4 bg-accent/20 rounded-full blur-2xl animate-pulse"></div>
+             <Trophy className="w-20 h-20 text-accent relative z-10" />
           </div>
-          <h2 className="text-3xl font-bold mb-2">{getResultMessage()}</h2>
+          <h2 className="text-2xl md:text-4xl font-black mb-4 uppercase tracking-tighter italic text-white">{getResultMessage()}</h2>
           
-          <div className="grid grid-cols-2 gap-4 max-w-xs mx-auto mb-6 mt-6">
-             <div className="bg-gray-100 p-4 rounded-lg">
-                <div className="text-gray-500 text-xs uppercase">Correct</div>
-                <div className="text-2xl font-bold text-green-600">{score}/{questions.length}</div>
+          <div className="grid grid-cols-2 gap-4 max-w-sm mx-auto mb-12 mt-10">
+             <div className="bg-secondary-bg border border-white/5 p-6 rounded-2xl">
+                <div className="text-text-secondary text-[10px] font-mono uppercase tracking-widest mb-2">ACCURACY</div>
+                <div className="text-3xl font-black text-white">{score}/{questions.length}</div>
              </div>
-             <div className="bg-gray-100 p-4 rounded-lg">
-                <div className="text-gray-500 text-xs uppercase">Points</div>
-                <div className="text-2xl font-bold text-accent">{points}</div>
+             <div className="bg-secondary-bg border border-white/5 p-6 rounded-2xl">
+                <div className="text-text-secondary text-[10px] font-mono uppercase tracking-widest mb-2">POINTS</div>
+                <div className="text-3xl font-black text-accent tabular-nums">{points}</div>
              </div>
           </div>
 
           {showCertificate ? (
-            <QuizCertificate score={score} totalQuestions={questions.length} userName={userName} quizUrl={quizUrl} />
+            <div className="animate-in slide-in-from-bottom-4 duration-500">
+                <QuizCertificate score={score} totalQuestions={questions.length} userName={userName} quizUrl={quizUrl} />
+            </div>
           ) : (
-            <form onSubmit={generateCertificate} className="my-8 bg-secondary-bg p-6 rounded-xl">
-              <h3 className="text-xl font-bold mb-4">Get Your Certificate</h3>
-              <input
-                type="text"
-                placeholder="Enter your full name"
-                value={userName}
-                onChange={(e) => setUserName(e.target.value)}
-                className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg mb-4 focus:border-accent focus:outline-none transition-colors"
-              />
-              <button
-                type="submit"
-                className="w-full bg-accent text-white font-bold py-3 px-6 rounded-lg hover:bg-pink-700 transition-all transform hover:scale-105 shadow-md"
-              >
-                Generate Certificate
-              </button>
-            </form>
+            <div className="max-w-md mx-auto mb-12">
+                <form onSubmit={generateCertificate} className="bg-secondary-bg/50 border border-white/10 p-8 rounded-3xl backdrop-blur-xl">
+                    <h3 className="text-lg font-bold mb-6 uppercase tracking-tight text-white flex items-center justify-center gap-2">
+                        <ShieldCheck className="w-5 h-5 text-accent" /> Validate Identity
+                    </h3>
+                    <input
+                        type="text"
+                        placeholder="Enter full name for record..."
+                        value={userName}
+                        onChange={(e) => setUserName(e.target.value)}
+                        className="w-full px-5 py-4 bg-primary-bg border border-white/10 rounded-xl mb-6 text-white focus:border-accent focus:outline-none transition-all font-mono text-sm uppercase tracking-wider placeholder:text-text-secondary/20"
+                    />
+                    <button
+                        type="submit"
+                        className="w-full bg-white text-primary-bg font-bold py-4 rounded-xl hover:bg-accent hover:text-white transition-all transform active:scale-95 shadow-xl uppercase text-xs tracking-[0.2em]"
+                    >
+                        Issue_Certificate
+                    </button>
+                </form>
+            </div>
           )}
 
-          <div className="my-8">
+          <div className="my-16 border-t border-white/5 pt-16">
             <NewsletterSignup />
           </div>
 
           <button
             onClick={restartQuiz}
-            className="text-accent font-bold py-2 px-4 hover:underline"
+            className="inline-flex items-center gap-2 text-text-secondary font-mono text-[10px] uppercase tracking-widest hover:text-accent transition-colors"
           >
-            Restart Quiz
+            <RotateCcw className="w-3 h-3" /> Re-initialize_System
           </button>
         </div>
       ) : (
@@ -264,39 +274,41 @@ export default function AiQuiz() {
             <div className={`transition-all duration-500 ${showAnimation ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
               
               {/* Timer Bar */}
-              <div className="w-full bg-gray-200 rounded-full h-4 mb-6 relative overflow-hidden">
+              <div className="w-full bg-secondary-bg border border-white/5 rounded-full h-2 mb-12 relative overflow-hidden">
                  <div 
-                   className={`h-full transition-all duration-1000 ease-linear ${getTimerColor()}`}
+                   className={`h-full transition-all duration-1000 ease-linear ${getTimerColor()} shadow-[0_0_15px_rgba(244,63,94,0.5)]`}
                    style={{ width: `${(timeLeft / TIMER_DURATION) * 100}%` }}
                  ></div>
-                 <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center text-xs font-bold text-white drop-shadow-md">
-                    {timeLeft}s
-                 </div>
               </div>
 
               {/* Streak Indicator */}
               {streak > 1 && (
-                 <div className="absolute top-4 right-4 bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-sm font-bold animate-bounce">
-                    🔥 {streak} Streak!
+                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent text-white px-4 py-1 rounded-full text-[10px] font-mono font-black uppercase tracking-[0.2em] shadow-lg animate-bounce z-20">
+                    <Flame className="w-3 h-3 inline-block mr-1 mb-0.5 fill-white" /> {streak}_STREAK
                  </div>
               )}
 
-              {/* Question Progress */}
-              <div className="text-xs text-gray-400 font-bold uppercase mb-2">Question {currentQuestion + 1} of {questions.length}</div>
+              {/* Question UI */}
+              <div className="mb-12">
+                <div className="text-[10px] font-mono text-accent/60 font-bold uppercase tracking-[0.3em] mb-4 flex items-center gap-2">
+                    <Timer className="w-3 h-3" /> 0{currentQuestion + 1} / 0{questions.length}
+                </div>
+                <h2 className="text-2xl sm:text-4xl font-extrabold text-white leading-tight tracking-tight italic">
+                    {questions[currentQuestion].question}
+                </h2>
+              </div>
               
-              <h2 className="text-2xl sm:text-3xl font-bold mb-8 leading-tight">{questions[currentQuestion].question}</h2>
-              
-              <div className="grid grid-cols-1 gap-3">
+              <div className="grid grid-cols-1 gap-4">
                 {questions[currentQuestion].options.map((option, index) => {
-                  let btnClass = "bg-white border-2 border-gray-100 hover:border-accent hover:bg-pink-50 text-gray-700";
+                  let btnStyle = "bg-secondary-bg/40 border border-white/5 hover:border-accent/30 hover:bg-secondary-bg/60 text-text-secondary";
                   
                   if (selectedAnswer) {
                     if (option === questions[currentQuestion].answer) {
-                      btnClass = "bg-green-500 border-green-500 text-white shadow-md";
+                      btnStyle = "bg-accent/20 border-accent text-white shadow-[0_0_20px_rgba(244,63,94,0.2)]";
                     } else if (option === selectedAnswer) {
-                      btnClass = "bg-red-500 border-red-500 text-white";
+                      btnStyle = "bg-red-500/20 border-red-500 text-red-400";
                     } else {
-                      btnClass = "bg-gray-50 border-gray-100 text-gray-300";
+                      btnStyle = "bg-primary-bg border-white/5 text-text-secondary/20 opacity-40";
                     }
                   }
 
@@ -305,13 +317,19 @@ export default function AiQuiz() {
                       key={index}
                       onClick={() => handleAnswer(option)}
                       disabled={selectedAnswer !== null}
-                      className={`p-4 rounded-xl text-left font-medium transition-all duration-200 transform ${selectedAnswer === null ? 'hover:-translate-y-1' : ''} ${btnClass}`}
+                      className={`p-6 rounded-2xl text-left font-medium transition-all duration-300 relative group overflow-hidden ${btnStyle}`}
                     >
-                      <div className="flex items-center">
-                        <div className={`w-8 h-8 rounded-full flex items-center justify-center mr-4 text-sm font-bold border ${selectedAnswer && option === questions[currentQuestion].answer ? 'bg-white text-green-500 border-white' : 'bg-gray-100 text-gray-500 border-gray-200'}`}>
+                      <div className="flex items-center relative z-10">
+                        <div className={`w-10 h-10 rounded-xl flex items-center justify-center mr-6 text-xs font-mono font-bold border transition-colors ${selectedAnswer && option === questions[currentQuestion].answer ? 'bg-accent border-accent text-white' : 'bg-primary-bg border-white/10 text-text-secondary group-hover:text-white group-hover:border-accent/30'}`}>
                            {String.fromCharCode(65 + index)}
                         </div>
-                        {option}
+                        <span className="text-lg tracking-tight font-light">{option}</span>
+                        {selectedAnswer && option === questions[currentQuestion].answer && (
+                            <Check className="w-5 h-5 text-accent ml-auto" />
+                        )}
+                        {selectedAnswer && option === selectedAnswer && option !== questions[currentQuestion].answer && (
+                            <X className="w-5 h-5 text-red-500 ml-auto" />
+                        )}
                       </div>
                     </button>
                   );
@@ -319,7 +337,7 @@ export default function AiQuiz() {
               </div>
             </div>
           ) : (
-            <div className="text-center py-12 text-gray-500">Loading quiz data...</div>
+            <div className="text-center py-20 font-mono text-xs text-text-secondary animate-pulse">BOOTING_DIAGNOSTIC_DATA...</div>
           )}
         </>
       )}

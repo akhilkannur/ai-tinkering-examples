@@ -2,7 +2,7 @@ import React, { useState, useMemo, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { 
-  Terminal, Copy, Check, FileText, Search, X, Download, Lock, Crown, ArrowRight, ExternalLink, Key
+  Terminal, Copy, Check, FileText, Search, X, Download, Lock, Crown, ArrowRight, ExternalLink, Key, Zap, MousePointer2, Cpu
 } from 'lucide-react';
 import { categoryIcons, Category, Recipe } from '../lib/cookbook-data';
 import HowToUseGuide from './HowToUseGuide';
@@ -420,6 +420,45 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
                 </div>
               ) : (
                 <>
+                  {/* POWER USER SECTION: DOWNLOAD SKILLS */}
+                  <div className="bg-blue-950/50 rounded-xl p-6 mb-8 border border-blue-900/50 relative overflow-hidden group">
+                      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:20px_24px] opacity-10"></div>
+                      <div className="relative z-10">
+                          <div className="flex flex-col gap-4">
+                              <div className="flex items-center justify-between">
+                                  <div className="inline-flex items-center gap-2 px-2 py-0.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 font-bold text-[9px] uppercase tracking-widest font-mono">
+                                      <Cpu className="w-3 h-3" /> Agent-Ready
+                                  </div>
+                                  <span className="text-[9px] font-mono text-blue-400/40 uppercase tracking-widest">v2.0 Optimized</span>
+                              </div>
+                              
+                              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                                  <a 
+                                      href={`/downloads/skills/${selectedRecipe.id}.skill`}
+                                      download
+                                      className="flex items-center justify-center gap-2 bg-white text-blue-950 px-3 py-2 rounded-lg font-bold text-xs hover:bg-blue-50 transition-all shadow-md"
+                                  >
+                                      <Zap className="w-3 h-3 fill-current" /> Gemini
+                                  </a>
+                                  <a 
+                                      href={`/downloads/skills/${selectedRecipe.id}-claude.md`}
+                                      download
+                                      className="flex items-center justify-center gap-2 bg-blue-800 text-white px-3 py-2 rounded-lg font-bold text-xs hover:bg-blue-700 transition-all border border-blue-700 shadow-md"
+                                  >
+                                      <Terminal className="w-3 h-3" /> Claude
+                                  </a>
+                                  <a 
+                                      href={`/downloads/skills/${selectedRecipe.id}.cursorrules`}
+                                      download
+                                      className="flex items-center justify-center gap-2 bg-blue-600 text-white px-3 py-2 rounded-lg font-bold text-xs hover:bg-blue-500 transition-all border border-blue-500 shadow-md"
+                                  >
+                                      <MousePointer2 className="w-3 h-3" /> Cursor
+                                  </a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
                   <div className="bg-[#0D1117] rounded-lg overflow-hidden border border-navy-dark shadow-inner">
                     <div className="bg-[#161B22] px-4 py-2 flex items-center justify-between border-b border-navy-dark">
                       <span className="text-text-secondary font-mono text-xs flex items-center gap-2"><FileText className="w-3 h-3" /> BLUEPRINT.md</span>

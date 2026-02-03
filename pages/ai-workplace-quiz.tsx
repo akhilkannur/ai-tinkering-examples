@@ -1,36 +1,44 @@
 import Head from 'next/head'
 import Navbar from '../components/Navbar'
-import WavyDivider from '../components/WavyDivider'
+import Footer from '../components/Footer'
 import AiQuiz from '../components/AiQuiz'
+import { Terminal, Activity } from 'lucide-react'
 
 export default function AiWorkplaceQuizPage() {
   return (
-    <>
+    <div className="min-h-screen bg-primary-bg font-sans text-text-color selection:bg-accent/30 overflow-x-hidden">
       <Head>
         <title>AI in the Workplace Quiz | Test Your Knowledge | AI Examples</title>
         <meta name="description" content="Test your knowledge of the latest AI developments in marketing, sales, and HR with this interactive quiz. See how you score and challenge your colleagues!" key="description" />
-        <meta property="og:title" content="AI in the Workplace Quiz | Test Your Knowledge" key="og:title" />
-        <meta property="og:description" content="Test your knowledge of the latest AI developments in marketing, sales, and HR with this interactive quiz." key="og:description" />
-        <meta property="og:image" content={`${process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com'}/api/og?mode=home`} key="og:image" />
-        <meta property="og:type" content="website" key="og:type" />
-        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
-        <meta name="twitter:title" content="AI in the Workplace Quiz | Test Your Knowledge" key="twitter:title" />
-        <meta name="twitter:description" content="Test your knowledge of the latest AI developments in marketing, sales, and HR with this interactive quiz." key="twitter:description" />
-        <meta name="twitter:image" content={`${process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com'}/api/og?mode=home`} key="twitter:image" />
       </Head>
-      <div className="min-h-screen bg-primary-bg font-sans text-text-color">
-        <Navbar />
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12 min-h-[calc(100vh-200px)]">
-          <h1 className="text-4xl sm:text-5xl font-black tracking-tighter mb-4 text-center uppercase">
-            Do You Actually <span className="text-accent">Get AI?</span>
-          </h1>
-          <p className="text-lg text-text-color/80 max-w-2xl mx-auto mb-12 text-center leading-relaxed">
-            A quick quiz to see if you know your LLMs from your MCPs, or if you're just reading LinkedIn headlines.
-          </p>
-          <AiQuiz />
+
+      <Navbar />
+
+      <main className="pt-40 pb-24 relative">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none"></div>
+        
+        <div className="container mx-auto px-4 max-w-4xl relative z-10">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20 text-accent font-bold text-[10px] uppercase tracking-[0.4em] mb-8 font-mono">
+                <Activity className="w-3.5 h-3.5" /> [ RUNNING_DIAGNOSTIC: COGNITIVE_AUDIT ]
+            </div>
+            <h1 className="text-4xl md:text-6xl font-black tracking-tighter mb-6 uppercase italic text-white">
+              Do You Actually <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-purple-500">Get AI?</span>
+            </h1>
+            <p className="text-lg text-text-secondary max-w-2xl mx-auto font-light leading-relaxed">
+              A quick system check to see if you know your LLMs from your MCPs, or if you're just reading LinkedIn headlines.
+            </p>
+          </div>
+
+          <div className="bg-secondary-bg/40 backdrop-blur-xl border border-white/5 p-1 rounded-3xl overflow-hidden shadow-2xl">
+            <div className="bg-primary-bg p-8 md:p-12 rounded-[calc(1.5rem-4px)]">
+                <AiQuiz />
+            </div>
+          </div>
         </div>
-        <WavyDivider />
-      </div>
-    </>
+      </main>
+
+      <Footer />
+    </div>
   )
 }
