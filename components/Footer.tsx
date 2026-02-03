@@ -12,16 +12,16 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-12 mb-16">
           {/* Column 1: Company */}
           <div>
-            <h4 className="font-mono text-[10px] font-bold text-accent uppercase tracking-[0.3em] mb-6">[ _SOURCE ]</h4>
+            <h4 className="font-mono text-[10px] font-bold text-accent uppercase tracking-[0.3em] mb-6">[ SITE ]</h4>
             <ul className="space-y-3 text-sm text-text-secondary font-light">
               <li>
-                <Link href="/about" className="hover:text-white transition-colors">About Mission</Link>
+                <Link href="/about" className="hover:text-white transition-colors">Our Mission</Link>
               </li>
               <li>
                 <Link href="/agent-setup-service" className="hover:text-accent transition-colors font-bold text-accent italic">Setup Service</Link>
               </li>
               <li>
-                <Link href="/#newsletter" className="hover:text-white transition-colors">Intelligence Feed</Link>
+                <Link href="/#newsletter" className="hover:text-white transition-colors">Newsletter</Link>
               </li>
               <li>
                 <a href="https://twitter.com/realaiexamples" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Twitter / X</a>
@@ -31,7 +31,7 @@ export default function Footer() {
 
           {/* Column 2: Discover */}
           <div>
-            <h4 className="font-mono text-[10px] font-bold text-accent uppercase tracking-[0.3em] mb-6">[ _REPOSITORY ]</h4>
+            <h4 className="font-mono text-[10px] font-bold text-accent uppercase tracking-[0.3em] mb-6">[ DISCOVER ]</h4>
             <ul className="space-y-3 text-sm text-text-secondary font-light">
               <li>
                 <Link href="/500-ways-to-use-llms-for-work" className="hover:text-white transition-colors">
@@ -40,22 +40,22 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/investors" className="hover:text-white transition-colors">
-                  Micro-PE Match
+                  Investor Database
                 </Link>
               </li>
               <li>
                 <Link href="/learn-ai" className="hover:text-white transition-colors">
-                  Terminal 101
+                  Learn AI
                 </Link>
               </li>
               <li>
                 <Link href="/ai-workplace-quiz" className="hover:text-white transition-colors">
-                  System Audit Quiz
+                  AI Readiness Quiz
                 </Link>
               </li>
               <li>
                 <Link href="/blog" className="hover:text-white transition-colors">
-                  Engineering Blog
+                  AI Case Studies
                 </Link>
               </li>
             </ul>
@@ -63,35 +63,35 @@ export default function Footer() {
 
           {/* Column 3: Playbooks */}
           <div>
-            <h4 className="font-mono text-[10px] font-bold text-accent uppercase tracking-[0.3em] mb-6">[ _DEPARTMENTS ]</h4>
+            <h4 className="font-mono text-[10px] font-bold text-accent uppercase tracking-[0.3em] mb-6">[ BY ROLE ]</h4>
             <ul className="space-y-3 text-sm text-text-secondary font-light">
               <li>
-                <Link href="/role/sales-ops" className="hover:text-white transition-colors font-mono text-[11px]">SALES_OPS</Link>
+                <Link href="/role/sales-ops" className="hover:text-white transition-colors">Sales Ops</Link>
               </li>
               <li>
-                <Link href="/role/marketing-ops" className="hover:text-white transition-colors font-mono text-[11px]">MARKETING_OPS</Link>
+                <Link href="/role/marketing-ops" className="hover:text-white transition-colors">Marketing Ops</Link>
               </li>
               <li>
-                <Link href="/role/seo" className="hover:text-white transition-colors font-mono text-[11px]">SEO_LOGIC</Link>
+                <Link href="/role/seo" className="hover:text-white transition-colors">SEO & Search</Link>
               </li>
               <li>
-                <Link href="/role/growth" className="hover:text-white transition-colors font-mono text-[11px]">GROWTH_HACKING</Link>
+                <Link href="/role/growth" className="hover:text-white transition-colors">Growth</Link>
               </li>
               <li>
-                <Link href="/role/paid-media" className="hover:text-white transition-colors font-mono text-[11px]">PAID_ACQUISITION</Link>
+                <Link href="/role/paid-media" className="hover:text-white transition-colors">Paid Ads</Link>
               </li>
             </ul>
           </div>
 
           {/* Column 4: Legal */}
           <div>
-            <h4 className="font-mono text-[10px] font-bold text-accent uppercase tracking-[0.3em] mb-6">[ _PROTOCOLS ]</h4>
+            <h4 className="font-mono text-[10px] font-bold text-accent uppercase tracking-[0.3em] mb-6">[ LEGAL ]</h4>
             <ul className="space-y-3 text-sm text-text-secondary font-light">
               <li>
-                <Link href="/privacy" className="hover:text-white transition-colors">Security & Privacy</Link>
+                <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
               </li>
               <li>
-                <Link href="/terms" className="hover:text-white transition-colors">Access Protocols</Link>
+                <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
               </li>
             </ul>
           </div>

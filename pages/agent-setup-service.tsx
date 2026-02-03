@@ -43,12 +43,12 @@ export default function AgentSetupService() {
                         </div>
                         
                         <h1 className="text-5xl md:text-7xl font-extrabold mb-8 leading-[1.1] text-white tracking-tight">
-                            We Install the <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-purple-500">Scary Terminal Stuff</span>
+                            The AI Agent <br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-purple-500">Kickstart Jam</span>
                         </h1>
                         
                         <p className="text-xl text-text-secondary mb-10 leading-relaxed max-w-lg mx-auto lg:mx-0 font-light italic">
-                            You want to use AI agents, but the setup instructions look like alien code. <strong className="text-white font-medium not-italic">We do it for you in 60 minutes.</strong>
+                            Skip the manual. We'll install Gemini CLI & Claude Code together, then <strong className="text-white font-medium not-italic">jam on 3 custom workflows</strong> you can run the same day.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -56,7 +56,7 @@ export default function AgentSetupService() {
                                 onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
                                 className="px-8 py-4 bg-white text-primary-bg font-bold rounded-lg hover:bg-gray-100 transition-all shadow-[0_0_30px_rgba(255,255,255,0.2)] flex items-center justify-center gap-2"
                             >
-                                Book Setup ($99) <ArrowRight className="w-5 h-5" />
+                                Book a Kickstart ($99) <ArrowRight className="w-5 h-5" />
                             </button>
                             <Link href="#how-it-works" className="px-8 py-4 border border-navy-dark text-text-secondary hover:text-white hover:border-white/20 font-bold rounded-lg transition-all flex items-center justify-center font-mono text-xs uppercase tracking-widest">
                                 EXPLORE_PROCESS
@@ -158,11 +158,11 @@ export default function AgentSetupService() {
                     <div className="relative group perspective-1000">
                         <div className="absolute inset-0 bg-accent/10 rounded-3xl blur-3xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
                         <div className="relative bg-secondary-bg border border-accent rounded-3xl p-8 md:p-12 shadow-2xl transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-accent/10">
-                            <div className="absolute -right-4 -top-4 bg-accent text-white px-4 py-1 rounded-full text-[10px] font-mono font-bold uppercase tracking-widest shadow-xl transform rotate-3 z-20">SYSTEM_OPTIMIZED</div>
+                            <div className="absolute -right-4 -top-4 bg-accent text-white px-4 py-1 rounded-full text-[10px] font-mono font-bold uppercase tracking-widest shadow-xl transform rotate-3 z-20">BUILDER_MODE</div>
                             
                             <div className="flex items-center gap-4 mb-10">
                                 <div className="font-mono text-accent text-xs">MODE_02:</div>
-                                <h3 className="text-2xl font-bold text-white uppercase tracking-tighter">The "Done-For-You" Way</h3>
+                                <h3 className="text-2xl font-bold text-white uppercase tracking-tighter">The "Strategic Jam"</h3>
                             </div>
 
                             <ul className="space-y-6 relative z-10">
@@ -170,25 +170,25 @@ export default function AgentSetupService() {
                                     <div className="w-5 h-5 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0 mt-0.5 border border-accent/30">
                                         <Check className="w-3 h-3 text-accent" />
                                     </div>
-                                    <span className="text-lg font-medium text-white italic">One payment. One hour. Done.</span>
+                                    <span className="text-lg font-medium text-white italic">One payment. One hour. Zero friction.</span>
                                 </li>
                                 <li className="flex items-start gap-4">
                                     <div className="w-5 h-5 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0 mt-0.5 border border-accent/30">
                                         <Check className="w-3 h-3 text-accent" />
                                     </div>
-                                    <span className="text-lg font-medium text-white italic">We fix every error live on screen</span>
+                                    <span className="text-lg font-medium text-white italic">We brainstorm custom use-cases live.</span>
                                 </li>
                                 <li className="flex items-start gap-4">
                                     <div className="w-5 h-5 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0 mt-0.5 border border-accent/30">
                                         <Check className="w-3 h-3 text-accent" />
                                     </div>
-                                    <span className="text-lg font-medium text-white italic">Your environment is set up for life</span>
+                                    <span className="text-lg font-medium text-white italic">We build your first 'Agent Play' together.</span>
                                 </li>
                                 <li className="flex items-start gap-4">
                                     <div className="w-5 h-5 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0 mt-0.5 border border-accent/30">
                                         <Check className="w-3 h-3 text-accent" />
                                     </div>
-                                    <span className="text-lg font-medium text-white italic">Run ANY agent workflow instantly</span>
+                                    <span className="text-lg font-medium text-white italic">Go from setup to shipping in 60 mins.</span>
                                 </li>
                             </ul>
                         </div>
@@ -207,17 +207,17 @@ export default function AgentSetupService() {
 
             <div className="container mx-auto px-4 max-w-6xl relative z-10">
                 <div className="text-center mb-24">
-                    <div className="text-purple-500 font-mono text-[10px] uppercase tracking-[0.5em] mb-4">[ PROTOCOL: EXECUTION_STAGES ]</div>
-                    <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-white tracking-tight">How We'll Build It</h2>
-                    <p className="text-xl text-text-secondary max-w-2xl mx-auto font-light">A 60-minute session where you watch the magic happen.</p>
+                    <div className="text-purple-500 font-mono text-[10px] uppercase tracking-[0.5em] mb-4">[ PROTOCOL: JAM_STAGES ]</div>
+                    <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-white tracking-tight">How We'll Jam</h2>
+                    <p className="text-xl text-text-secondary max-w-2xl mx-auto font-light">A 60-minute session to get you actually using AI agents.</p>
                 </div>
 
                 <div className="grid md:grid-cols-4 gap-6">
                     {[
-                        { title: "Screen Share", desc: "You share your screen. We take remote control (with permission)." },
-                        { title: "We Install", desc: "Node.js, Gemini CLI, Claude Code, API keys. All the boring stuff." },
-                        { title: "First Run", desc: "We run a real agent workflow together to prove it works." },
-                        { title: "Handover", desc: "You get a cheat sheet and 7 days of email support." }
+                        { title: "Quick Setup", desc: "We'll get the terminal stuff out of the way first. 15 mins max." },
+                        { title: "Ideation", desc: "We jam on your actual business problems. What should we automate today?" },
+                        { title: "First Play", desc: "We run a real agent workflow together to solve a specific problem." },
+                        { title: "Handover", desc: "You get your blueprint files and 7 days of follow-up access." }
                     ].map((step, i) => (
                         <div key={i} className={`relative p-8 rounded-2xl border transition-all duration-700 group overflow-hidden ${activeStep === i ? 'bg-secondary-bg border-accent/40 shadow-2xl scale-105 z-10' : 'bg-[#0F172A]/30 border-white/5 opacity-60'}`}>
                             {/* Glass background */}
@@ -248,12 +248,12 @@ export default function AgentSetupService() {
                 
                 <div className="grid md:grid-cols-3 gap-8">
                     {[
-                        { icon: <Terminal className="w-5 h-5" />, title: "Environment", desc: "Node.js, NPM, Gemini, Claude installed correctly." },
-                        { icon: <Shield className="w-5 h-5" />, title: "Security", desc: "API keys stored safely in .env files, not exposed." },
-                        { icon: <FileText className="w-5 h-5" />, title: "Cheat Sheet", desc: "PDF with the 5 commands you'll actually need." },
-                        { icon: <Gift className="w-5 h-5" />, title: "3 Starter Kits", desc: "Ready-to-run agents for Sales & Marketing." },
-                        { icon: <MessageCircle className="w-5 h-5" />, title: "Support", desc: "If it breaks next week, we fix it for free." },
-                        { icon: <Video className="w-5 h-5" />, title: "Recording", desc: "Re-watch the setup anytime you want." }
+                        { icon: <Terminal className="w-5 h-5" />, title: "The Setup", desc: "Node.js, Gemini, Claude installed correctly." },
+                        { icon: <ShieldCheck className="w-5 h-5" />, title: "Best Practices", desc: "How to store API keys safely and avoid common pitfalls." },
+                        { icon: <Lightbulb className="w-5 h-5" />, title: "3 Custom Ideas", desc: "We'll brainstorm 3 custom blueprints for your specific business." },
+                        { icon: <Gift className="w-5 h-5" />, title: "Blueprint Pack", desc: "Instant access to 700+ ready-to-run agents." },
+                        { icon: <MessageCircle className="w-5 h-5" />, title: "Ideation Support", desc: "7 days of DM access to jam on more ideas." },
+                        { icon: <Video className="w-5 h-5" />, title: "Call Recording", desc: "Re-watch our jam session and setup steps anytime." }
                     ].map((item, idx) => (
                         <div key={idx} className="flex flex-col gap-6 p-8 bg-secondary-bg/20 border border-white/5 rounded-3xl hover:border-white/10 hover:bg-secondary-bg/40 transition-all group">
                             <div className="w-12 h-12 rounded-xl bg-navy-dark border border-white/5 flex items-center justify-center text-accent group-hover:scale-110 transition-transform">
@@ -282,13 +282,13 @@ export default function AgentSetupService() {
                         availability: [ LIMITED_3_SLOTS_REMAINING ]
                     </div>
                     
-                    <h2 className="text-4xl md:text-6xl font-extrabold mb-8 text-white tracking-tighter">Done-For-You Setup</h2>
+                    <h2 className="text-4xl md:text-6xl font-extrabold mb-8 text-white tracking-tighter">Kickstart Jam</h2>
                     
                     <div className="flex items-center justify-center gap-4 mb-12">
                        <span className="text-6xl md:text-9xl font-black text-white tracking-tighter tabular-nums">$99</span>
                        <div className="text-left">
                           <div className="text-accent font-mono text-xs font-bold">[ ONE_TIME_FEE ]</div>
-                          <div className="text-text-secondary text-sm font-light">No recurring costs</div>
+                          <div className="text-text-secondary text-sm font-light">60 minute jam session</div>
                        </div>
                     </div>
                     
@@ -310,11 +310,11 @@ export default function AgentSetupService() {
                       onClick={(e) => !accepted && e.preventDefault()}
                     >
                       <Zap className={`w-6 h-6 ${accepted ? 'text-accent animate-pulse' : 'text-text-secondary/30'}`} />
-                      INITIATE SETUP CALL
+                      INITIATE JAM SESSION
                     </a>
                     
                     <p className="text-[10px] font-mono text-text-secondary/40 mt-10 uppercase tracking-[0.2em]">
-                      // 100% refund_protocol if agent_execution fails
+                      // 100% refund_protocol if we don't ship your first play
                     </p>
                 </div>
             </div>
@@ -338,7 +338,7 @@ export default function AgentSetupService() {
                   <div className="text-center md:text-left relative z-10">
                     <div className="text-accent font-mono text-[10px] uppercase tracking-[0.4em] mb-4">[ OPERATOR: AKHIL_MK ]</div>
                     <p className="text-white text-lg leading-relaxed font-medium italic">
-                      "I run this site and I've been setting up terminal AI agents for myself and friends for years. I'm not a corporate engineer—I'm a builder who loves breaking things and fixing them. If I can't get your setup running perfectly, I'll refund your money before we even end the call."
+                      "I'm not a corporate engineer - I'm a builder who loves breaking things and fixing them. I build terminal AI agents for myself and friends every day. I'm not here to provide IT support; I'm here to show you how to actually use these agents to ship work. We'll jam on your ideas and get you running in an hour."
                     </p>
                     <div className="mt-6 flex flex-col md:flex-row items-center gap-6">
                       <a href="https://akhilhaving.fun" target="_blank" rel="noopener noreferrer" className="text-xs font-mono text-accent hover:underline uppercase tracking-widest border border-accent/20 px-4 py-2 rounded-full bg-accent/5">

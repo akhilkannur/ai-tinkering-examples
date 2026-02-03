@@ -318,7 +318,7 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
                         <h3 className="text-3xl font-bold mb-3 font-headline">Unlock All 700+ Specialized Blueprints</h3>
                         <p className="text-text-secondary mb-8 leading-relaxed text-lg max-w-lg mx-auto">
                             You've seen the list. Now get the full library. <br/>
-                            Instant access to our growing database of Sales, Marketing, and Ops blueprints - with new ones added every week.
+                            Instant access to our growing database - plus the <strong>Master Cookbook (JSON)</strong> to load all 700+ as context in one file.
                         </p>
                         <a 
                           href="https://checkout.dodopayments.com/buy/pdt_0NW6p0szmXPS6jXW05hIP?session=sess_GCYotd6plh"

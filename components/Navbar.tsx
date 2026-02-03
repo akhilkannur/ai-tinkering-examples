@@ -20,7 +20,6 @@ export default function Navbar() {
 
   const navLinks = [
     { href: '/ai-examples', label: 'EXAMPLES', mono: true },
-    { href: '/blueprints', label: 'BLUEPRINTS', mono: true },
     { href: '/agent-setup-service', label: 'SETUP', mono: true },
     { href: '/build-club', label: 'BUILD CLUB', mono: true },
     { href: '/tools', label: 'TOOLS', mono: true },
@@ -63,7 +62,7 @@ export default function Navbar() {
                     className="relative object-contain" 
                     />
                 </div>
-                <span className="text-lg font-black font-sans tracking-tighter text-white group-hover:text-accent transition-colors uppercase italic">Real AI Examples</span>
+                <span className="text-lg font-black font-sans tracking-tighter text-slate-100 group-hover:text-accent transition-colors uppercase italic">Real AI Examples</span>
               </Link>
             </div>
             
@@ -86,23 +85,6 @@ export default function Navbar() {
           </div>
 
           <div className="hidden lg:flex items-center gap-6">
-            {/* System Status Indicator */}
-            <div className="flex items-center gap-3 px-4 py-2 bg-secondary-bg/50 border border-white/5 rounded-full">
-                <div className="relative flex h-2 w-2">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
-                </div>
-                <span className="text-[11px] font-mono font-bold text-text-secondary uppercase tracking-widest leading-none mt-0.5">Systems_Online</span>
-            </div>
-
-            <a
-                href={process.env.NEXT_PUBLIC_AIRTABLE_SUBMIT_FORM_URL || 'https://airtable.com/appUo7R0la4VUzOoT/shrX1v3Z8z2G7p9Z9'}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="whitespace-nowrap inline-flex items-center justify-center px-6 py-2.5 rounded-lg text-xs font-mono font-bold text-white bg-accent hover:bg-accent-hover transition-all duration-200 shadow-lg shadow-accent/20 border border-accent/20"
-            >
-                [ SUBMIT_BLUEPRINT ]
-            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -135,15 +117,6 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <a
-                href={process.env.NEXT_PUBLIC_AIRTABLE_SUBMIT_FORM_URL || 'https://airtable.com/appUo7R0la4VUzOoT/shrX1v3Z8z2G7p9Z9'}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block w-full text-center px-4 py-4 rounded-xl text-xs font-mono font-bold text-white bg-accent mt-4"
-                onClick={() => setIsMobileMenuOpen(false)}
-            >
-                SUBMIT_BLUEPRINT
-            </a>
           </div>
         </div>
       )}

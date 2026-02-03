@@ -4,10 +4,9 @@ import Navbar from '../../components/Navbar';
 import { aiTools, AiTool } from '../../lib/ai-tools-data';
 import AIToolCard from '../../components/AIToolCard';
 import ToolDetailModal from '../../components/ToolDetailModal';
-import { Search, Filter, Sparkles, Command, Plus } from 'lucide-react';
+import { Filter, Sparkles, Command, Plus } from 'lucide-react';
 
 export default function ToolsIndex() {
-  const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [selectedTool, setSelectedTool] = useState<AiTool | null>(null);
 
@@ -15,12 +14,9 @@ export default function ToolsIndex() {
 
   const filteredTools = useMemo(() => {
     return aiTools.filter(tool => {
-      const matchesSearch = tool.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
-                            tool.description.toLowerCase().includes(searchQuery.toLowerCase());
-      const matchesCategory = selectedCategory === 'All' || tool.category === selectedCategory;
-      return matchesSearch && matchesCategory;
+      return selectedCategory === 'All' || tool.category === selectedCategory;
     });
-  }, [searchQuery, selectedCategory]);
+  }, [selectedCategory]);
 
   const slugify = (text: string) => {
     return text
@@ -79,22 +75,8 @@ export default function ToolsIndex() {
         </div>
 
         {/* Controls */}
-        <div className="flex flex-col md:flex-row gap-6 mb-12 sticky top-24 z-30 bg-slate-50/95 backdrop-blur-sm py-4 border-b border-slate-200">
+        <div className="flex flex-col md:flex-row justify-center gap-6 mb-12 sticky top-24 z-30 bg-slate-50/95 backdrop-blur-sm py-4 border-b border-slate-200">
           
-          {/* Search Input */}
-          <div className="relative flex-grow">
-            <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-              <Search className="h-4 w-4 text-slate-400" />
-            </div>
-            <input
-              type="text"
-              className="block w-full pl-11 pr-4 py-3 bg-white border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all rounded-sm text-sm font-mono"
-              placeholder="Search tools (e.g. 'Writing', 'Video', 'SEO')..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-            />
-          </div>
-
           {/* Category Filter */}
           <div className="flex gap-2 overflow-x-auto pb-2 md:pb-0 scrollbar-hide">
             {categories.map(cat => (
@@ -136,9 +118,9 @@ export default function ToolsIndex() {
           <div className="text-center py-24 bg-white border border-slate-200 border-dashed rounded-sm mt-8">
             <Filter className="w-12 h-12 text-slate-300 mx-auto mb-4" />
             <h3 className="text-xl font-headline font-bold text-slate-900 mb-2">No tools found</h3>
-            <p className="text-slate-500 font-mono text-sm mb-6">Try adjusting your search terms.</p>
+            <p className="text-slate-500 font-mono text-sm mb-6">Try adjusting your category filter.</p>
             <button 
-              onClick={() => {setSearchQuery(''); setSelectedCategory('All')}}
+              onClick={() => {setSelectedCategory('All')}}
               className="text-accent hover:text-accent-hover font-mono text-xs font-bold uppercase tracking-widest border-b border-accent hover:border-accent-hover transition-all pb-1"
             >
               Clear filters

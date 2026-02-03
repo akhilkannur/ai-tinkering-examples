@@ -40,7 +40,7 @@ export default function RolePage({ roleName, recipes }: RolePageProps) {
 
       <Navbar />
 
-      <main className="pt-24 pb-20">
+      <main className="pt-32 pb-20">
         <div className="container mx-auto px-4 max-w-6xl">
           <Link href="/500-ways-to-use-llms-for-work" className="inline-flex items-center gap-2 text-text-secondary hover:text-accent transition-colors mb-12 text-sm font-mono uppercase tracking-widest">
             <ArrowLeft className="w-4 h-4" /> All 500 Blueprints
@@ -111,7 +111,7 @@ export default function RolePage({ roleName, recipes }: RolePageProps) {
              <div className="max-w-md">
                 <h3 className="text-2xl font-bold mb-4 text-text-color">Production-Ready Logic</h3>
                 <p className="text-text-secondary leading-relaxed">
-                  Every blueprint in the <strong>{roleName}</strong> library has been tested against real-world data schemas. No "Hallucination" risks—just structured logic.
+                  Every blueprint in the <strong>{roleName}</strong> library has been tested against real-world data schemas. No "Hallucination" risks - just structured logic.
                 </p>
              </div>
              <div className="flex items-center gap-6">

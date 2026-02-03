@@ -278,3 +278,25 @@ select:focus-visible {
   display: flex !important;
   justify-content: center !important;
 }
+
+/* Build Club Theme Overrides */
+.build-club-theme nav {
+  background-color: rgba(192, 57, 43, 0.95) !important;
+  backdrop-blur: 10px;
+}
+
+.build-club-theme nav .text-text-secondary {
+  color: rgba(255, 253, 231, 0.7) !important;
+}
+
+.build-club-theme nav .text-text-secondary:hover {
+  color: #FFFDE7 !important;
+}
+
+.build-club-theme nav .text-slate-100 {
+  color: #FFFDE7 !important;
+}
+
+.build-club-theme nav .border-white\/5 {
+  border-color: rgba(0, 0, 0, 0.1) !important;
+}

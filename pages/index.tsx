@@ -147,24 +147,6 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
             </div>
         </div>
 
-        {/* CONTEXT LIBRARY BANNER */}
-        <div className="bg-secondary-bg border-y border-navy-dark py-8">
-          <div className="container mx-auto px-4 max-w-5xl">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-              <div className="flex items-center gap-4">
-                <Command className="w-8 h-8 text-accent" />
-                <div>
-                  <h3 className="text-lg font-bold text-text-color">Want all 700+ in one file?</h3>
-                  <p className="text-sm text-text-secondary">Download the Master Cookbook (JSON) and load it as context.</p>
-                </div>
-              </div>
-              <a href="/context" className="flex-shrink-0 inline-flex items-center gap-2 bg-accent hover:bg-accent-hover text-white font-bold px-6 py-3 rounded-lg transition-all text-sm">
-                Download Context Files <ArrowRight className="w-4 h-4" />
-              </a>
-            </div>
-          </div>
-        </div>
-
         {/* FAQ SECTION */}
         <div className="bg-primary-bg py-16 border-t border-navy-dark">
           <div className="max-w-4xl mx-auto px-4 sm:px-6">
@@ -176,7 +158,7 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
               <div className="bg-secondary-bg p-6 rounded-xl border border-navy-dark">
                 <h3 className="text-base font-bold mb-2 text-text-color">Which tools work?</h3>
                 <p className="text-text-secondary text-sm leading-relaxed">
-                  Claude Code, Gemini CLI, Cursor, Windsurf. They're text files — any agent can read them.
+                  Claude Code, Gemini CLI, Cursor, Windsurf. They're text files - any agent can read them.
                 </p>
               </div>
 
@@ -190,7 +172,7 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
               <div className="bg-secondary-bg p-6 rounded-xl border border-navy-dark">
                 <h3 className="text-base font-bold mb-2 text-text-color">Is it safe?</h3>
                 <p className="text-text-secondary text-sm leading-relaxed">
-                  Plain text files (.md, .csv). No executables. Open in Notepad and read every word.
+                  Plain text files (.md, .csv). No executables. We manually audit every file to prevent prompt injection and ensure zero malicious logic.
                 </p>
               </div>
             </div>

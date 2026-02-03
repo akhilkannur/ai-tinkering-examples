@@ -41,7 +41,7 @@ export default function ZeroBudgetMarketing() {
           <p className="text-xl text-text-secondary leading-relaxed max-w-3xl">
             Your competitor raised $81M. You have $0. <br/>
             You can't out-spend them. But you can <strong>out-automate</strong> them. <br/><br/>
-            Most founders think they need to hire an agency to grow. You don't. You need "Boring Agents" — simple scripts that run locally on your computer and do the grunt work of a 10-person marketing department.
+            Most founders think they need to hire an agency to grow. You don't. You need "Boring Agents" - simple scripts that run locally on your computer and do the grunt work of a 10-person marketing department.
           </p>
         </div>
 

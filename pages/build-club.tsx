@@ -47,19 +47,14 @@ export default function BuildClub() {
 
       <div className="fixed inset-0 texture-overlay z-50"></div>
 
-      {/* MARQUEE BANNER */}
-      <div className="bg-[#FDF498] text-black py-2 border-b-4 border-black font-header tracking-widest text-lg marquee-container relative z-40">
-        <div className="marquee-content">
-          WARNING: LAZY PEOPLE WILL BE REMOVED. &nbsp;&nbsp; /// &nbsp;&nbsp; MISS 2 UPDATES = KICKED OUT. &nbsp;&nbsp; /// &nbsp;&nbsp; NO REFUNDS FOR SLACKERS. &nbsp;&nbsp; /// &nbsp;&nbsp; WARNING: LAZY PEOPLE WILL BE REMOVED. &nbsp;&nbsp; /// &nbsp;&nbsp; MISS 2 UPDATES = KICKED OUT. &nbsp;&nbsp; /// &nbsp;&nbsp; NO REFUNDS FOR SLACKERS.
-        </div>
+      <div className="build-club-theme">
+        <Navbar />
       </div>
-
-      <Navbar />
 
       <main className="pt-32 pb-20 relative z-10">
         
         {/* HERO SECTION */}
-        <div className="container mx-auto px-4 max-w-5xl text-center mb-20 pt-16">
+        <div className="container mx-auto px-4 max-w-5xl text-center mb-12 pt-16">
           <div className="inline-block border-4 border-black bg-white px-6 py-2 mb-8 transform -rotate-2 shadow-[4px_4px_0px_rgba(0,0,0,1)]">
             <span className="font-header text-2xl tracking-widest text-black">COHORT #01: BETA</span>
           </div>
@@ -76,29 +71,16 @@ export default function BuildClub() {
           <div className="font-header text-2xl tracking-widest mb-12 opacity-80 uppercase">
             FOR NON-TECHNICAL, AI-CURIOUS PROFESSIONALS & OPERATORS.
           </div>
+        </div>
 
-          {/* VIDEO SECTION */}
-          <div className="max-w-4xl mx-auto mb-20 relative">
-            <div className="border-[6px] border-black bg-black shadow-[12px_12px_0px_rgba(0,0,0,1)] overflow-hidden p-4 md:p-8">
-              <video 
-                autoPlay 
-                loop 
-                muted 
-                playsInline 
-                className="w-full h-auto aspect-video shadow-2xl"
-              >
-                <source src="/videos/AIGymTrainerWes.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
+        {/* MARQUEE BANNER - Moved below hero */}
+        <div className="bg-[#FDF498] text-black py-4 border-y-4 border-black font-header tracking-widest text-2xl marquee-container relative z-40 mb-24 rotate-1">
+            <div className="marquee-content">
+            WARNING: LAZY PEOPLE WILL BE REMOVED. &nbsp;&nbsp; /// &nbsp;&nbsp; MISS 2 UPDATES = KICKED OUT. &nbsp;&nbsp; /// &nbsp;&nbsp; NO REFUNDS FOR SLACKERS. &nbsp;&nbsp; /// &nbsp;&nbsp; WARNING: LAZY PEOPLE WILL BE REMOVED. &nbsp;&nbsp; /// &nbsp;&nbsp; MISS 2 UPDATES = KICKED OUT. &nbsp;&nbsp; /// &nbsp;&nbsp; NO REFUNDS FOR SLACKERS.
             </div>
-            {/* Stamp Overlay */}
-            <div className="absolute -bottom-6 -right-6 transform rotate-12 z-20">
-               <div className="bg-red-700 text-white font-header text-2xl px-4 py-1 border-4 border-white shadow-lg">
-                 APPROVED FOR SHIP
-               </div>
-            </div>
-          </div>
+        </div>
 
+        <div className="container mx-auto px-4 max-w-5xl">
           <div className="grid md:grid-cols-2 gap-12 items-start max-w-4xl mx-auto text-left">
             
             {/* THE AGREEMENT (Left) */}
