@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Navbar from '../../components/Navbar'
-import Footer from '../../components/Footer'
-import { Terminal, Copy, Check, Info, Shield, ArrowLeft } from 'lucide-react'
+import { Terminal, Copy, Check, Info, Shield, ArrowLeft, MousePointer2, Hammer, Code2, BookOpen } from 'lucide-react'
 import { useState } from 'react'
 import Link from 'next/link'
 
@@ -44,8 +43,8 @@ export default function ClaudeSetup() {
       <Navbar />
 
       <main className="pt-32 pb-20 px-4 container mx-auto max-w-3xl">
-        <Link href="/setup" className="flex items-center text-gray-500 hover:text-black mb-8">
-            <ArrowLeft className="w-4 h-4 mr-2" /> BACK TO HUB
+        <Link href="/agent-setup-service" className="flex items-center text-gray-500 hover:text-black mb-8">
+            <ArrowLeft className="w-4 h-4 mr-2" /> BACK TO SERVICE PAGE
         </Link>
 
         <h1 className="text-5xl md:text-6xl font-header uppercase mb-4">
@@ -93,16 +92,49 @@ export default function ClaudeSetup() {
           </div>
         </div>
 
-        <div className="bg-black text-white p-10 text-center">
+        <div className="bg-white border-4 border-black p-8 mb-20">
+          <h2 className="font-header text-4xl mb-8 uppercase tracking-tight">Now what? <span className="text-purple-600">3 Ideas to Start</span></h2>
+          <div className="space-y-8 font-body">
+            <div className="flex gap-4">
+              <Hammer className="w-8 h-8 text-purple-500 flex-shrink-0" />
+              <div>
+                <h4 className="font-bold uppercase">1. Plan a Project</h4>
+                <p className="text-sm opacity-80">Open an empty folder and type: <code>claude "I want to build a simple landing page for my sales consulting business. Help me architect the files."</code></p>
+              </div>
+            </div>
+            <div className="flex gap-4">
+              <MousePointer2 className="w-8 h-8 text-blue-500 flex-shrink-0" />
+              <div>
+                <h4 className="font-bold uppercase">2. Assign a Task</h4>
+                <p className="text-sm opacity-80">Give it a goal and type: <code>claude "Read all the files in this folder and find any broken links or missing images."</code></p>
+              </div>
+            </div>
+            <div className="flex gap-4">
+              <Code2 className="w-8 h-8 text-emerald-500 flex-shrink-0" />
+              <div>
+                <h4 className="font-bold uppercase">3. Fix and Refactor</h4>
+                <p className="text-sm opacity-80">Point it at a script and type: <code>claude "Refactor this Python script to be 2x faster and add error handling."</code></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-black text-white p-10 text-center mb-12">
+            <h3 className="font-header text-4xl mb-4 uppercase text-white">Need a Blueprint?</h3>
+            <p className="font-body mb-8 opacity-80">Don't guess the prompts. Use our library of 700+ verified workflows for Sales and Marketing.</p>
+            <Link href="/#blueprints" className="inline-flex items-center gap-2 bg-purple-600 text-white px-8 py-4 font-header text-2xl tracking-widest hover:bg-purple-700 transition-colors">
+                <BookOpen className="w-6 h-6" /> BROWSE ALL BLUEPRINTS
+            </Link>
+        </div>
+
+        <div className="bg-gray-100 p-8 text-center border-2 border-black border-dashed">
             <h3 className="font-header text-4xl mb-4 uppercase">Configuration Headache?</h3>
-            <p className="font-body mb-8 opacity-80">If npm isn't cooperating or you're seeing "EACCES" errors, don't waste your afternoon. Let a professional handle the setup.</p>
-            <Link href="/agent-setup-service" className="inline-block bg-purple-600 text-white px-8 py-4 font-header text-2xl tracking-widest hover:bg-purple-700 transition-colors">
+            <p className="font-body mb-8 opacity-80 text-sm">If npm isn't cooperating or you're seeing "EACCES" errors, don't waste your afternoon. Let a professional handle the setup.</p>
+            <Link href="/agent-setup-service" className="inline-block bg-black text-white px-8 py-4 font-header text-2xl tracking-widest hover:bg-gray-800 transition-colors">
                 GET REMOTE HELP ($99)
             </Link>
         </div>
       </main>
-
-      <Footer />
     </div>
   )
 }

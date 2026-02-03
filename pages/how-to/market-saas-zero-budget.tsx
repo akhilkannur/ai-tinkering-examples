@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Navbar from '../../components/Navbar'
-import Footer from '../../components/Footer'
 import { Terminal, Target, ArrowRight, Zap, BarChart, PenTool, CheckCircle, Lock, Server, Cpu } from 'lucide-react'
 import Link from 'next/link'
 
@@ -186,8 +185,6 @@ export default function ZeroBudgetMarketing() {
         </div>
 
       </main>
-      
-      <Footer />
     </div>
   )
 }

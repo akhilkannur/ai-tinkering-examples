@@ -105,9 +105,12 @@ export default function ExamplePage({ example }: ExamplePageProps) {
         <meta property="og:url" content={currentUrl} key="og:url" />
         <meta property="og:site_name" content="Real AI Examples" key="og:site_name" />
         <meta property="og:image" content={ogImage} key="og:image" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:site" content="@realaiexamples" />
         <meta name="twitter:title" content={`${example.title} | AI Workflow Example`} key="twitter:title" />
         <meta name="twitter:description" content={example.summary || `Learn how to recreate this AI workflow: ${example.title}`} key="twitter:description" />
         <meta name="twitter:image" content={ogImage} key="twitter:image" />

@@ -14,6 +14,7 @@ import FeaturedIn from '../components/FeaturedIn'
 
 import StrategicKits from '../components/StrategicKits'
 import MockTerminal from '../components/MockTerminal'
+import { generateItemListSchema } from '../lib/seo-utils'
 
 interface HybridHomePageProps {
   recipes: Recipe[]
@@ -27,6 +28,8 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
   const homepageDescription = "Stop chatting and start building. A library of reliable, copy-paste AI workflows and recipes for salespeople, marketers, and founders. Works with Gemini, Claude, and all major AI LLMs.";
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com';
 
+  const itemListSchema = generateItemListSchema(recipes.slice(0, 12), baseUrl);
+
   return (
     <>
       <Head>
@@ -34,9 +37,14 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
         <meta name="description" content={homepageDescription} key="description" />
         <meta property="og:title" content={homepageTitle} key="og:title" />
         <meta property="og:description" content={homepageDescription} key="og:description" />
+        <meta property="og:url" content={baseUrl} key="og:url" />
         <meta property="og:image" content={`${baseUrl}/api/og?mode=home`} key="og:image" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta property="og:type" content="website" key="og:type" />
+
         <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:site" content="@realaiexamples" />
         <meta name="twitter:title" content={homepageTitle} key="twitter:title" />
         <meta name="twitter:description" content={homepageDescription} key="twitter:description" />
         <meta name="twitter:image" content={`${baseUrl}/api/og?mode=home`} key="twitter:image" />
@@ -52,6 +60,8 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
             "query-input": "required name=search_term_string"
           }
         })}} />
+
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
       </Head>
 
       <div className="min-h-screen bg-primary-bg font-sans text-text-color fade-in selection:bg-accent selection:text-white">

@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Navbar from '../../components/Navbar'
-import Footer from '../../components/Footer'
-import { Terminal, Copy, Check, Info, AlertTriangle, ArrowLeft } from 'lucide-react'
+import { Terminal, Copy, Check, Info, AlertTriangle, ArrowLeft, Layers, Search, Zap, BookOpen } from 'lucide-react'
 import { useState } from 'react'
 import Link from 'next/link'
 
@@ -44,8 +43,8 @@ export default function GeminiSetup() {
       <Navbar />
 
       <main className="pt-32 pb-20 px-4 container mx-auto max-w-3xl">
-        <Link href="/setup" className="flex items-center text-gray-500 hover:text-black mb-8">
-            <ArrowLeft className="w-4 h-4 mr-2" /> BACK TO HUB
+        <Link href="/agent-setup-service" className="flex items-center text-gray-500 hover:text-black mb-8">
+            <ArrowLeft className="w-4 h-4 mr-2" /> BACK TO SERVICE PAGE
         </Link>
 
         <h1 className="text-5xl md:text-6xl font-header uppercase mb-4">
@@ -101,16 +100,49 @@ export default function GeminiSetup() {
           </div>
         </div>
 
-        <div className="bg-black text-white p-10 text-center">
-            <h3 className="font-header text-4xl mb-4 uppercase">Something went wrong?</h3>
-            <p className="font-body mb-8 opacity-80">Terminal errors can be cryptic. If you're stuck, we can jump on a remote call and fix it in 15 minutes.</p>
-            <Link href="/agent-setup-service" className="inline-block bg-orange-500 text-white px-8 py-4 font-header text-2xl tracking-widest hover:bg-orange-600 transition-colors">
+        <div className="bg-white border-4 border-black p-8 mb-20">
+          <h2 className="font-header text-4xl mb-8 uppercase tracking-tight">Now what? <span className="text-orange-600">3 Ideas to Start</span></h2>
+          <div className="space-y-8 font-body">
+            <div className="flex gap-4">
+              <Layers className="w-8 h-8 text-orange-500 flex-shrink-0" />
+              <div>
+                <h4 className="font-bold uppercase">1. Analyze a Folder</h4>
+                <p className="text-sm opacity-80">Navigate to a folder with 50 PDFs or CSVs and type: <code>gemini "Summarize every file in this folder into a single report."</code></p>
+              </div>
+            </div>
+            <div className="flex gap-4">
+              <Search className="w-8 h-8 text-blue-500 flex-shrink-0" />
+              <div>
+                <h4 className="font-bold uppercase">2. Research Competitors</h4>
+                <p className="text-sm opacity-80">Give it a website and type: <code>gemini "Visit https://competitor.com and find their 3 biggest weaknesses according to their homepage."</code></p>
+              </div>
+            </div>
+            <div className="flex gap-4">
+              <Zap className="w-8 h-8 text-purple-500 flex-shrink-0" />
+              <div>
+                <h4 className="font-bold uppercase">3. Clean a Lead List</h4>
+                <p className="text-sm opacity-80">Give it your `leads.csv` and type: <code>gemini "Standardize the Job Titles in this CSV and mark any emails that look fake."</code></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-black text-white p-10 text-center mb-12">
+            <h3 className="font-header text-4xl mb-4 uppercase text-white">Need a Blueprint?</h3>
+            <p className="font-body mb-8 opacity-80">Don't guess the prompts. Use our library of 700+ verified workflows for Sales and Marketing.</p>
+            <Link href="/#blueprints" className="inline-flex items-center gap-2 bg-orange-500 text-white px-8 py-4 font-header text-2xl tracking-widest hover:bg-orange-600 transition-colors">
+                <BookOpen className="w-6 h-6" /> BROWSE ALL BLUEPRINTS
+            </Link>
+        </div>
+
+        <div className="bg-gray-100 p-8 text-center border-2 border-black border-dashed">
+            <h3 className="font-header text-3xl mb-4 uppercase">Something went wrong?</h3>
+            <p className="font-body mb-6 opacity-80 text-sm">Terminal errors can be cryptic. If you're stuck, we can jump on a remote call and fix it in 15 minutes.</p>
+            <Link href="/agent-setup-service" className="inline-block bg-black text-white px-6 py-3 font-header text-xl tracking-widest hover:bg-gray-800 transition-colors">
                 GET REMOTE HELP ($99)
             </Link>
         </div>
       </main>
-
-      <Footer />
     </div>
   )
 }

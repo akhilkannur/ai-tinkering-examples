@@ -1,13 +1,12 @@
 import Head from 'next/head'
 import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
-import { Monitor, Terminal, ShieldCheck, Zap, ArrowRight, CheckCircle2, Cpu, Globe, Layers, Repeat } from 'lucide-react'
+import { Terminal, Zap, ArrowRight, Cpu, Globe, Layers, Repeat, Command, Lock, FileText, Globe2, Sparkles, MousePointer2 } from 'lucide-react'
 import { useState } from 'react'
 import Link from 'next/link'
 
 export default function AgentSetupService() {
-  const title = "Agent Setup & Strategy Jam | Gemini, Claude & Qwen Configuration";
-  const description = "Professional remote installation plus a 1-hour brainstorming session. Get over the terminal friction and start building real AI workflows.";
+  const title = "Autonomous AI Setup & Strategy Jam | Gemini & Claude for Non-Techies";
+  const description = "Stop chatting with AI and start assigning it work. We remotely configure your computer into an autonomous workstation plus a 1-hour brainstorming session.";
 
   const [accepted, setAccepted] = useState(false);
 
@@ -45,102 +44,132 @@ export default function AgentSetupService() {
         
         {/* HERO */}
         <div className="container mx-auto px-4 max-w-5xl text-center mb-16">
-          <div className="inline-block border-2 border-black bg-orange-500 text-white px-4 py-1 mb-6 transform -rotate-1 font-header tracking-widest">
+          <div className="inline-block border-2 border-black bg-orange-500 text-white px-4 py-1 mb-6 transform -rotate-1 font-header tracking-widest text-sm">
             EARLY ADOPTER OFFER: 4/10 REMAINING
           </div>
           
           <h1 className="text-6xl md:text-8xl font-header mb-6 leading-none text-black uppercase">
-            Setup & <span className="text-orange-600">Strategy Jam</span>
+            THE AUTONOMOUS <br />
+            <span className="text-orange-600">WORKSTATION</span>
           </h1>
           
           <p className="font-body text-xl md:text-2xl mb-10 max-w-3xl mx-auto leading-relaxed">
-            Stop fighting with PowerShell. We'll remotely install your agents and spend an hour jamming on how to use them for your specific business. 
+            Stop chatting with AI. Start assigning it work. We'll remotely upgrade your machine and spend an hour building your first "AI Employee" together.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             <div className="flex items-center gap-2 bg-white border-2 border-black px-4 py-2">
-              <Cpu className="w-5 h-5 text-blue-600" />
-              <span className="font-bold">Gemini (2M Context)</span>
+              <Sparkles className="w-5 h-5 text-blue-600" />
+              <span className="font-bold">Infinite Memory</span>
             </div>
             <div className="flex items-center gap-2 bg-white border-2 border-black px-4 py-2">
-              <Zap className="w-5 h-5 text-purple-600" />
-              <span className="font-bold">Claude Code (Agentic)</span>
+              <MousePointer2 className="w-5 h-5 text-purple-600" />
+              <span className="font-bold">AI with Hands</span>
             </div>
             <div className="flex items-center gap-2 bg-white border-2 border-black px-4 py-2">
-              <Globe className="w-5 h-5 text-emerald-600" />
-              <span className="font-bold">Qwen & Open Source</span>
+              <Lock className="w-5 h-5 text-green-600" />
+              <span className="font-bold">Privacy Guaranteed</span>
             </div>
           </div>
         </div>
 
-        {/* BEYOND THE SANDBOX */}
+        {/* THE "WHY" SECTION */}
         <div className="container mx-auto px-4 max-w-5xl mb-24">
           <div className="bg-black text-white p-8 md:p-12 border-4 border-black shadow-[12px_12px_0px_rgba(230,126,34,1)]">
             <h2 className="font-header text-4xl md:text-5xl mb-8 text-center uppercase tracking-tight">
-              Why you need <span className="text-orange-500">Terminal Agents</span>
+              Move Beyond <span className="text-orange-500">The Sandbox</span>
             </h2>
-            <p className="font-body text-lg mb-12 opacity-80 text-center max-w-2xl mx-auto">
-              ChatGPT is a website. Terminal agents are employees with hands on your keyboard. 
-              Here is the difference between "Chatting" and "Performing."
+            <p className="font-body text-lg mb-12 opacity-80 text-center max-w-2xl mx-auto italic">
+              "ChatGPT is a website you talk to. These tools are workers that live on your computer. They don't just answer questions—they perform tasks."
             </p>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-3 gap-8 text-left">
               <div className="border border-white/20 p-6 hover:bg-white/5 transition-colors">
                 <Layers className="w-10 h-10 text-orange-500 mb-4" />
-                <h3 className="font-header text-2xl mb-2 uppercase">Massive Context</h3>
-                <p className="font-body text-sm opacity-70">Point Gemini at 1,000 PDFs or your entire 2025 email history. It doesn't forget. It doesn't hallucinate. It analyzes the "Big Picture" in seconds.</p>
+                <h3 className="font-header text-2xl mb-2 uppercase">Infinite Memory</h3>
+                <p className="font-body text-sm opacity-70">Point your AI at 500 resumes or a year's worth of emails. It "sees" everything at once to find patterns a human (or a chatbot) would miss.</p>
               </div>
               <div className="border border-white/20 p-6 hover:bg-white/5 transition-colors">
-                <Terminal className="w-10 h-10 text-purple-500 mb-4" />
-                <h3 className="font-header text-2xl mb-2 uppercase">System Access</h3>
-                <p className="font-body text-sm opacity-70">Agents can create folders, move files, and launch websites on your machine. You describe the outcome; they build the infrastructure.</p>
+                <MousePointer2 className="w-10 h-10 text-purple-500 mb-4" />
+                <h3 className="font-header text-2xl mb-2 uppercase">AI with Hands</h3>
+                <p className="font-body text-sm opacity-70">Unlike web AI, these tools can create folders, move files, and build websites directly on your desktop. You describe the result; they build the infrastructure.</p>
               </div>
               <div className="border border-white/20 p-6 hover:bg-white/5 transition-colors">
                 <Repeat className="w-10 h-10 text-blue-500 mb-4" />
-                <h3 className="font-header text-2xl mb-2 uppercase">Background Loops</h3>
-                <p className="font-body text-sm opacity-70">Close your laptop and go to lunch. Run a background command to process 5,000 rows of lead data while you do literally anything else.</p>
+                <h3 className="font-header text-2xl mb-2 uppercase">Set & Forget</h3>
+                <p className="font-body text-sm opacity-70">Close your laptop and go to lunch. Run a "Loop" that processes 1,000 leads or researches 50 competitors in the background while you do real work.</p>
               </div>
             </div>
           </div>
         </div>
 
-        {/* THE OFFER SECTION */}
+        {/* PRIVACY PROMISE */}
+        <div className="container mx-auto px-4 max-w-5xl mb-24">
+          <div className="bg-white border-4 border-black p-8 md:p-12 relative">
+            <h2 className="font-header text-4xl mb-6 uppercase tracking-tight">Your Data. Your Machine. <span className="text-orange-600">Period.</span></h2>
+            <div className="grid md:grid-cols-2 gap-12 font-body">
+              <div>
+                <p className="text-lg leading-relaxed mb-6">
+                  When you use terminal agents, your data stays in your terminal. There is no "Middleman" startup reading your files.
+                </p>
+                <ul className="space-y-4">
+                  <li className="flex gap-3 items-start">
+                    <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
+                    <span><strong>Direct Connection:</strong> Your computer talks directly to the AI model.</span>
+                  </li>
+                  <li className="flex gap-3 items-start">
+                    <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
+                    <span><strong>Zero Leaks:</strong> We configure your setup so your secret keys stay locked in your system, not on the web.</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="bg-[#Fdfaf6] p-6 border-2 border-dashed border-black">
+                <h4 className="font-bold uppercase mb-2">The Founder's Rule:</h4>
+                <p className="text-sm opacity-80">
+                  "Never upload your entire business strategy folder to a random AI website. With an autonomous workstation, you own the walls."
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* THE SESSION SECTION */}
         <div className="container mx-auto px-4 max-w-5xl grid md:grid-cols-2 gap-12 items-start mb-24">
           
           {/* THE PROCESS */}
           <div className="bg-white p-8 border-4 border-black shadow-[8px_8px_0px_rgba(0,0,0,1)] font-body">
-            <h2 className="font-header text-4xl mb-6 border-b-4 border-black pb-2">THE 60-MINUTE SESSION</h2>
+            <h2 className="font-header text-4xl mb-6 border-b-4 border-black pb-2">THE SETUP + JAM SESSION</h2>
             
             <div className="space-y-8">
               <div className="flex gap-4">
                 <div className="flex-shrink-0 w-10 h-10 bg-black text-white rounded-full flex items-center justify-center font-bold">1</div>
                 <div>
-                  <h3 className="font-bold text-lg uppercase">The Technical Handshake</h3>
-                  <p className="text-sm text-gray-600">We connect via Google Remote Desktop. We install Node.js, Git, and your chosen CLI engines (Gemini, Claude, or Qwen) while you watch.</p>
+                  <h3 className="font-bold text-lg uppercase">Boring Tech Stuff (We do it)</h3>
+                  <p className="text-sm text-gray-600">We connect remotely and handle the installation of the "Engine" and the AI tools. You just watch and ask questions.</p>
                 </div>
               </div>
               
               <div className="flex gap-4">
                 <div className="flex-shrink-0 w-10 h-10 bg-black text-white rounded-full flex items-center justify-center font-bold">2</div>
                 <div>
-                  <h3 className="font-bold text-lg uppercase">Security Hardening</h3>
-                  <p className="text-sm text-gray-600">We configure your environment variables so your API keys stay hidden. We set up your first "Work-Ready" folder with proper guardrails.</p>
+                  <h3 className="font-bold text-lg uppercase">The Tuning</h3>
+                  <p className="text-sm text-gray-600">We make sure your computer knows where the tools are hidden so they never "break" or disappear. We lock down your security keys.</p>
                 </div>
               </div>
 
               <div className="flex gap-4 p-4 bg-orange-50 border-2 border-orange-200 -mx-4">
                 <div className="flex-shrink-0 w-10 h-10 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold">3</div>
                 <div>
-                  <h3 className="font-bold text-lg uppercase">The Idea Jam</h3>
-                  <p className="text-sm text-gray-900"><strong>This is where the magic happens.</strong> We brainstorm 3 specific workflows for your role. We run the first one live together to reduce the friction of "doing it alone."</p>
+                  <h3 className="font-bold text-lg uppercase">The Strategy Jam</h3>
+                  <p className="text-sm text-gray-900 font-bold">The best part. We spend the rest of the hour brainstorming exactly how to use this for your job. We build your first custom workflow live.</p>
                 </div>
               </div>
 
               <div className="flex gap-4">
                 <div className="flex-shrink-0 w-10 h-10 bg-black text-white rounded-full flex items-center justify-center font-bold">4</div>
                 <div>
-                  <h3 className="font-bold text-lg uppercase">The Cheat Sheet</h3>
-                  <p className="text-sm text-gray-600">You get a personalized "First Week" guide with the exact commands we built during the jam session.</p>
+                  <h3 className="font-bold text-lg uppercase">The Handover</h3>
+                  <p className="text-sm text-gray-600">You receive your <strong>Agent Manifest</strong>—a simple file on your desktop with your custom commands and a "First Week" guide.</p>
                 </div>
               </div>
             </div>
@@ -153,7 +182,7 @@ export default function AgentSetupService() {
                   onChange={() => setAccepted(!accepted)}
                   className="w-6 h-6 border-2 border-black rounded-none appearance-none checked:bg-black transition-all cursor-pointer"
                 />
-                <span className="text-sm font-bold uppercase tracking-tight">I'm ready to push past the terminal friction.</span>
+                <span className="text-sm font-bold uppercase tracking-tight">I want to stop chatting and start building.</span>
               </label>
             </div>
           </div>
@@ -165,19 +194,19 @@ export default function AgentSetupService() {
 
               <div className="text-center mb-6">
                 <div className="font-header text-3xl mb-1 italic">REAL AI EXAMPLES</div>
-                <div className="text-xs text-gray-500 tracking-widest uppercase">Item: Setup + Jam Session</div>
+                <div className="text-xs text-gray-500 tracking-widest uppercase">Order: AI Upgrade Session</div>
                 <div className="text-xs text-gray-500">{new Date().toLocaleDateString()}</div>
               </div>
 
               <div className="border-b-2 border-dashed border-gray-300 mb-4"></div>
 
-              <div className="flex justify-between mb-2 font-bold uppercase">
+              <div className="flex justify-between mb-2 font-bold uppercase text-[10px] text-gray-400">
                 <span>Description</span>
                 <span>Amount</span>
               </div>
 
               <div className="flex justify-between mb-1">
-                <span>Remote Environment Setup</span>
+                <span>Workstation Setup</span>
                 <span>$99.00</span>
               </div>
               <div className="flex justify-between mb-1">
@@ -185,7 +214,7 @@ export default function AgentSetupService() {
                 <span>$99.00</span>
               </div>
               <div className="flex justify-between mb-4 italic text-gray-500">
-                <span>- Early Adopter Bundle</span>
+                <span>- Beta Tinkerer Discount</span>
                 <span>(-$99.00)</span>
               </div>
 
@@ -203,7 +232,7 @@ export default function AgentSetupService() {
                 >
                   {accepted ? "BOOK YOUR SESSION" : "CHECK BOX TO BOOK"}
                 </button>
-                <p className="mt-4 text-[10px] uppercase text-gray-400">Limited to first 10 tinkerers</p>
+                <p className="mt-4 text-[10px] uppercase text-gray-400">Limited to first 10 spots</p>
               </div>
 
               {/* Receipt Jagged Edge Bottom */}
@@ -211,27 +240,84 @@ export default function AgentSetupService() {
           </div>
         </div>
 
-        {/* USE CASES */}
+        {/* AVAILABILITY */}
+        <div className="container mx-auto px-4 max-w-4xl mb-24 text-center">
+          <div className="bg-black/5 border-2 border-black p-8 font-body">
+            <Globe2 className="w-12 h-12 mx-auto mb-4 text-orange-600" />
+            <h3 className="font-header text-3xl mb-2 uppercase">Remote Available Globally</h3>
+            <p className="max-w-xl mx-auto opacity-70">
+              We operate across all timezones. Typical turnaround: <strong>Under 48 hours.</strong>
+            </p>
+          </div>
+        </div>
+
+        {/* USE CASES - THE JAM IDEAS */}
         <div className="container mx-auto px-4 max-w-4xl mb-24">
-          <h2 className="font-header text-5xl mb-12 uppercase text-center tracking-tighter italic text-gray-400">Ideas we can jam on</h2>
+          <h2 className="font-header text-5xl mb-12 uppercase text-center tracking-tighter italic text-gray-400">Jam Ideas for Your Role</h2>
           <div className="grid md:grid-cols-3 gap-6 font-body">
-            <div className="bg-white border-2 border-black p-6">
-              <h3 className="font-bold mb-2 uppercase border-b border-black">For Sales</h3>
-              <p className="text-sm">Web scraping competitor pricing pages or enriching 100 LinkedIn profiles with recent "trigger events" autonomously.</p>
+            <div className="bg-white border-2 border-black p-6 hover:translate-y-[-4px] transition-transform">
+              <h3 className="font-bold mb-2 uppercase border-b border-black">Sales & Lead Gen</h3>
+              <p className="text-sm">Point the AI at 50 LinkedIn profiles. Have it research their websites and draft 50 unique icebreakers while you drink coffee.</p>
             </div>
-            <div className="bg-white border-2 border-black p-6">
-              <h3 className="font-bold mb-2 uppercase border-b border-black">For Marketing</h3>
-              <p className="text-sm">Turning 50 blog posts into LinkedIn threads and newsletters in one background loop while you have lunch.</p>
+            <div className="bg-white border-2 border-black p-6 hover:translate-y-[-4px] transition-transform">
+              <h3 className="font-bold mb-2 uppercase border-b border-black">Marketing Ops</h3>
+              <p className="text-sm">Turn 20 long blog posts into an entire month of social media content (LinkedIn, X, Newsletters) in one click.</p>
             </div>
-            <div className="bg-white border-2 border-black p-6">
-              <h3 className="font-bold mb-2 uppercase border-b border-black">For HR/Ops</h3>
-              <p className="text-sm">Point the agent at a folder of 500 resumes. Ask it to find the top 5 matches for a specific JD and save a CSV report.</p>
+            <div className="bg-white border-2 border-black p-6 hover:translate-y-[-4px] transition-transform">
+              <h3 className="font-bold mb-2 uppercase border-b border-black">Research & HR</h3>
+              <p className="text-sm">Analyze 1,000 pages of legal docs or resumes. Find the needle in the haystack without ever hitting "Cmd+F".</p>
+            </div>
+          </div>
+        </div>
+
+        {/* THE ENGINE ROOM (TECHNICAL 101) */}
+        <div className="container mx-auto px-4 max-w-4xl mb-24">
+          <div className="bg-white border-2 border-black p-8 md:p-12 shadow-[8px_8px_0px_rgba(0,0,0,1)]">
+            <h2 className="font-header text-4xl mb-6 uppercase border-b-2 border-black pb-2 text-black">The Engine Room</h2>
+            <div className="font-body text-lg">
+              <p className="mb-10 opacity-70 text-sm italic">
+                (This is the technical stuff we handle during your session so you don't have to.)
+              </p>
+              
+              <div className="grid md:grid-cols-2 gap-12">
+                <div className="space-y-8">
+                    <div className="flex items-start gap-4">
+                        <div className="w-10 h-10 bg-black text-white rounded flex items-center justify-center flex-shrink-0 font-bold">1</div>
+                        <div>
+                            <h4 className="font-bold uppercase">The Engine</h4>
+                            <p className="text-xs opacity-70">We install <strong>Node.js</strong>—the environment that lets modern AI agents run on your computer.</p>
+                        </div>
+                    </div>
+                    <div className="flex items-start gap-4">
+                        <div className="w-10 h-10 bg-black text-white rounded flex items-center justify-center flex-shrink-0 font-bold">2</div>
+                        <div>
+                            <h4 className="font-bold uppercase">The Tools</h4>
+                            <p className="text-xs opacity-70">We configure <strong>Gemini CLI</strong> (for massive memory) and <strong>Claude Code</strong> (for autonomous work).</p>
+                        </div>
+                    </div>
+                    <div className="flex items-start gap-4">
+                        <div className="w-10 h-10 bg-black text-white rounded flex items-center justify-center flex-shrink-0 font-bold">3</div>
+                        <div>
+                            <h4 className="font-bold uppercase">The Brain</h4>
+                            <p className="text-xs opacity-70">We secure your <strong>API Keys</strong> so you only pay for what you use, directly to the providers.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="bg-gray-50 p-6 border-2 border-black">
+                    <h4 className="font-bold uppercase mb-4 text-sm">DIY Guides (If you're brave)</h4>
+                    <ul className="space-y-4 text-sm underline">
+                        <li><Link href="/setup/gemini-cli" className="hover:text-orange-600">Gemini CLI Setup Guide</Link></li>
+                        <li><Link href="/setup/claude-code" className="hover:text-purple-600">Claude Code Setup Guide</Link></li>
+                    </ul>
+                    <p className="mt-6 text-xs italic opacity-60">Warning: Terminal errors can be frustrating. We recommend the Jam Session for a smooth start.</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
       </main>
-      <Footer />
     </div>
   )
 }

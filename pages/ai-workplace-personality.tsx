@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 import ArchetypeQuiz from '../components/ArchetypeQuiz';
 
 export default function AIWorkplacePersonalityPage() {
@@ -55,8 +54,6 @@ export default function AIWorkplacePersonalityPage() {
             </p>
           </div>
         </main>
-
-        <Footer />
       </div>
     </>
   );

@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { ArrowLeft, CheckCircle, Copy, Terminal, Download } from 'lucide-react';
 import Navbar from '../../components/Navbar';
-import Footer from '../../components/Footer';
 import { getAllRecipes } from '../../lib/recipes';
 import { Recipe } from '../../lib/cookbook-data';
 
@@ -166,15 +165,12 @@ export default function HowToPage({ recipe, problemTitle, relatedRecipes }: HowT
              <Link href="/500-ways-to-use-llms-for-work" className="inline-block bg-white text-navy-dark font-bold py-3 px-8 rounded-lg hover:bg-slate-200 transition-colors shadow-xl">
                 Browse All 500 Blueprints
              </Link>
-          </div>
-
-        </div>
-      </main>
-
-      <Footer />
-    </div>
-  );
-}
+                    </div>
+                  </div>
+                </main>
+              </div>
+            );
+          }
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const allRecipes = getAllRecipes();

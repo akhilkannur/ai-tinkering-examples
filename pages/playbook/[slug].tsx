@@ -5,7 +5,6 @@ import { GetStaticProps, GetStaticPaths } from 'next';
 import { getAllRecipes } from '../../lib/recipes';
 import { PLAYBOOKS } from '../../lib/playbooks';
 import Navbar from '../../components/Navbar';
-import Footer from '../../components/Footer';
 import { ArrowRight, CheckCircle, Lock, Zap, Target, Search, Heart, PenTool, ShoppingBag, Terminal } from 'lucide-react';
 
 // Map string icon names to Lucide components
@@ -133,8 +132,6 @@ export default function PlaybookPage({ playbook, recipes }: any) {
           </div>
         </div>
       </main>
-
-      <Footer />
     </div>
   );
 }

@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { ArrowLeft, Briefcase, Zap, ShieldCheck, Clock, Terminal } from 'lucide-react';
 import Navbar from '../../components/Navbar';
-import Footer from '../../components/Footer';
 import { getAllRecipes } from '../../lib/recipes';
 import { Recipe } from '../../lib/cookbook-data';
 import slugify from '../../utils/slugify';
@@ -129,8 +128,6 @@ export default function RolePage({ roleName, recipes }: RolePageProps) {
           </div>
         </div>
       </main>
-
-      <Footer />
     </div>
   );
 }

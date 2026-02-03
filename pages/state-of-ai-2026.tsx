@@ -2,7 +2,6 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Navbar from '../components/Navbar'
 import NewsletterForm from '../components/NewsletterForm'
-import Footer from '../components/Footer'
 
 export default function StateOfAI() {
   const pageTitle = "State of Practical AI 2026: The Operator's Report";
@@ -201,8 +200,6 @@ export default function StateOfAI() {
             <NewsletterForm />
           </div>
         </div>
-
-        <Footer />
       </div>
     </>
   )

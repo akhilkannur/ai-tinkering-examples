@@ -7,15 +7,17 @@ import CategoryFilter from '../../components/CategoryFilter'
 import ExampleModal from '../../components/ExampleModal'
 import { fetchEnrichedExamples, EnrichedExampleRecord } from '../../lib/airtable'
 import { localSocialExamples } from '../../lib/social-examples-data'
+import { generateItemListSchema } from '../../lib/seo-utils'
 
 const INITIAL_DISPLAY_COUNT = 12; // Define initial display count
 
 interface ExamplesPageProps {
   examples: EnrichedExampleRecord[]
   categories: string[]
+  itemListSchema: any
 }
 
-export default function ExamplesPage({ examples, categories }: ExamplesPageProps) {
+export default function ExamplesPage({ examples, categories, itemListSchema }: ExamplesPageProps) {
   const [selectedCategory, setSelectedCategory] = useState('All')
   const [visibleExamplesCount, setVisibleExamplesCount] = useState(INITIAL_DISPLAY_COUNT) // New state for visible count
   const [modalExample, setModalExample] = useState<EnrichedExampleRecord | null>(null)
@@ -74,6 +76,14 @@ export default function ExamplesPage({ examples, categories }: ExamplesPageProps
         <meta name="twitter:image" content={`${process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com'}/api/og?mode=home`} key="twitter:image" />
 
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&display=swap" rel="stylesheet" />
+        
+        {/* Structured Data */}
+        {itemListSchema && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+          />
+        )}
       </Head>
 
       <div className="min-h-screen bg-primary-bg font-sans text-text-color">
@@ -227,10 +237,14 @@ export const getStaticProps: GetStaticProps<ExamplesPageProps> = async () => {
     const categories = mixedExamples.map(e => e.category).filter(Boolean) as string[];
     const uniqueCategories = [...new Set(categories)];
 
+    const SITE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com';
+    const itemListSchema = generateItemListSchema(mixedExamples, SITE_URL);
+
     return { 
       props: { 
         examples: mixedExamples,
         categories: uniqueCategories,
+        itemListSchema,
       },
       revalidate: 300 // Revalidate every 5 minutes
     }

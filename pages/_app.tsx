@@ -40,8 +40,14 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="description" content={description} key="description" />
         <meta property="og:title" content={title} key="og:title" />
         <meta property="og:description" content={description} key="og:description" />
+        <meta property="og:url" content={canonicalUrl} key="og:url" />
         <meta property="og:image" content={ogImage} key="og:image" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:type" content="website" />
+
         <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:site" content="@realaiexamples" />
         <meta name="twitter:title" content={title} key="twitter:title" />
         <meta name="twitter:description" content={description} key="twitter:description" />
         <meta name="twitter:image" content={ogImage} key="twitter:image" />

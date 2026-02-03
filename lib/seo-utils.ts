@@ -9,10 +9,11 @@ export function generateHowToSchema(recipe: Recipe, siteUrl: string, imageUrl?: 
   lines.forEach(line => {
     if (line.startsWith('### Phase') || line.startsWith('## Phase') || line.startsWith('**Phase')) {
       if (currentStep.name) {
+        const stepText = stripMarkdown(currentStep.text.trim());
         steps.push({
           "@type": "HowToStep",
           "name": currentStep.name,
-          "text": stripMarkdown(currentStep.text.trim())
+          "text": stepText || `Instructions for the ${currentStep.name} phase.`
         });
       }
       currentStep = { name: line.replace(/#|\*/g, '').trim(), text: '' };
@@ -23,10 +24,11 @@ export function generateHowToSchema(recipe: Recipe, siteUrl: string, imageUrl?: 
   
   // Push the last step
   if (currentStep.name) {
+    const stepText = stripMarkdown(currentStep.text.trim());
     steps.push({
       "@type": "HowToStep",
       "name": currentStep.name,
-      "text": stripMarkdown(currentStep.text.trim())
+      "text": stepText || `Instructions for the ${currentStep.name} phase.`
     });
   }
 
@@ -39,12 +41,16 @@ export function generateHowToSchema(recipe: Recipe, siteUrl: string, imageUrl?: 
     });
   }
 
+  // Safely parse time to avoid PTNaNM
+  const timeMatch = recipe.time ? recipe.time.match(/\d+/) : null;
+  const minutes = timeMatch ? parseInt(timeMatch[0]) : 5;
+
   const schema: any = {
     "@context": "https://schema.org",
     "@type": "HowTo",
     "name": recipe.title,
     "description": recipe.description,
-    "totalTime": `PT${parseInt(recipe.time) || 5}M`, // Best guess parse
+    "totalTime": `PT${minutes}M`,
     "step": steps,
     "supply": recipe.sampleData ? [
       {
@@ -105,7 +111,16 @@ export function generateFAQSchema(recipe: Recipe) {
       "name": `What does the ${recipe.title} blueprint do?`,
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": whatDoesMatch[1].trim()
+        "text": stripMarkdown(whatDoesMatch[1].trim())
+      }
+    });
+  } else if (recipe.description) {
+    faqItems.push({
+      "@type": "Question",
+      "name": `What does the ${recipe.title} blueprint do?`,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": stripMarkdown(recipe.description)
       }
     });
   }
@@ -118,7 +133,7 @@ export function generateFAQSchema(recipe: Recipe) {
       "name": `What do I need to run the ${recipe.title} workflow?`,
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": whatNeedMatch[1].trim()
+        "text": stripMarkdown(whatNeedMatch[1].trim())
       }
     });
   }
@@ -150,7 +165,7 @@ export function injectInternalLinks(text: string, recipes: Recipe[]): string {
     if (linkedslugs.has(recipe.id)) return;
 
     // Regex to match the title case insensitive, ensuring word boundaries
-    const regex = new RegExp(`\b${escapeRegExp(recipe.title)}\b`, 'i');
+    const regex = new RegExp(`\\b${escapeRegExp(recipe.title)}\\b`, 'i');
     
     if (regex.test(newText)) {
       // Check if we are already inside a link (simple heuristic)
@@ -169,6 +184,27 @@ export function injectInternalLinks(text: string, recipes: Recipe[]): string {
   return newText;
 }
 
-function escapeRegExp(string: string) {
+export function generateItemListSchema(items: any[], siteUrl: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "numberOfItems": items.length,
+    "itemListElement": items.map((item, index) => {
+      const isRecipe = 'blueprint' in item;
+      const categorySlug = item.category?.toLowerCase().replace(/\s+/g, '-') || 'uncategorized';
+      const path = isRecipe 
+        ? `/blueprints/${item.id}` 
+        : `/ai-examples/${categorySlug}/${item.slug || item.id}`;
+      
+      return {
+        "@type": "ListItem",
+        "position": index + 1,
+        "url": `${siteUrl}${path}`
+      };
+    })
+  };
+}
+
+export function escapeRegExp(string: string) {
   return string.replace(/[.*+?^${}()|[\\]/g, '\\$&');
 }

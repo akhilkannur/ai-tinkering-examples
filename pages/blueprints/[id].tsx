@@ -134,11 +134,15 @@ Downloaded from RealAIExamples.com`;
         <meta name="description" content={recipe.description} key="description" />
         <meta property="og:title" content={`${recipe.title} | AI Agent Blueprint`} key="og:title" />
         <meta property="og:description" content={recipe.description} key="og:description" />
+        <meta property="og:url" content={`${SITE_URL}/blueprints/${recipe.id}`} key="og:url" />
         <meta property="og:image" content={ogImageUrl} key="og:image" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta property="og:type" content="article" key="og:type" />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:site" content="@realaiexamples" />
         <meta name="twitter:title" content={`${recipe.title} | AI Agent Blueprint`} key="twitter:title" />
         <meta name="twitter:description" content={recipe.description} key="twitter:description" />
         <meta name="twitter:image" content={ogImageUrl} key="twitter:image" />

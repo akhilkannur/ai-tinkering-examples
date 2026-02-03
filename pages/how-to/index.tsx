@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { GetStaticProps } from 'next';
 import { Search, BookOpen, Wrench, ArrowRight } from 'lucide-react';
 import Navbar from '../../components/Navbar';
-import Footer from '../../components/Footer';
 import { getAllRecipes } from '../../lib/recipes';
 import { Recipe } from '../../lib/cookbook-data';
 
@@ -120,8 +119,6 @@ export default function HowToDictionary({ problems }: HowToDictionaryProps) {
           )}
         </div>
       </main>
-
-      <Footer />
     </div>
   );
 }
