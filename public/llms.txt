@@ -2,10 +2,11 @@
 > Actionable AI workflows for Sales, Marketing, and RevOps.
 
 ## Downloadable AI Agent Skills
-Every blueprint on this site is now available as a downloadable skill for Gemini CLI and Claude Code.
+Every blueprint on this site is now available as a downloadable skill for Gemini CLI, Claude Code, and Cursor.
 - **Gemini CLI:** Download `.skill` files at `https://realaiexamples.com/downloads/skills/[id].skill`
 - **Claude Code:** Download instruction files at `https://realaiexamples.com/downloads/skills/[id]-claude.md`
-- **Installation:** Use `gemini skills install [file].skill` to run these as native terminal commands.
+- **Cursor:** Download `.cursorrules` files at `https://realaiexamples.com/downloads/skills/[id].cursorrules`
+- **Installation:** Use `gemini skills install [file].skill` for Gemini or add files to your project's rules/tools folder.
 
 ## Niche-Specific Indices (Recommended for Context)
 - [llms-sales-ops.txt](https://realaiexamples.com/llms-sales-ops.txt) - 181 recipes

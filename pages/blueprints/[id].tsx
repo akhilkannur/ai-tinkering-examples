@@ -2,7 +2,7 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { ArrowLeft, Terminal, Copy, Check, Download, FileText, Cpu, BookOpen, Lock, Crown, Key, ArrowRight, X, Package, ShieldCheck } from 'lucide-react';
+import { ArrowLeft, Terminal, Copy, Check, Download, FileText, Cpu, BookOpen, Lock, Crown, Key, ArrowRight, X, Package, ShieldCheck, Zap, MousePointer2 } from 'lucide-react';
 import Navbar from '../../components/Navbar';
 import { getAllRecipes, getRelatedRecipes } from '../../lib/recipes';
 import { Recipe, categoryIcons } from '../../lib/cookbook-data';
@@ -244,14 +244,21 @@ Downloaded from RealAIExamples.com`;
                                 download
                                 className="flex items-center justify-center gap-2 bg-white text-blue-950 px-6 py-3 rounded-xl font-bold text-sm hover:bg-blue-50 transition-all shadow-lg"
                             >
-                                <Zap className="w-4 h-4 fill-current" /> Gemini CLI Skill
+                                <Zap className="w-4 h-4 fill-current" /> Gemini CLI
                             </a>
                             <a 
                                 href={`/downloads/skills/${recipe.id}-claude.md`}
                                 download
                                 className="flex items-center justify-center gap-2 bg-blue-800 text-white px-6 py-3 rounded-xl font-bold text-sm hover:bg-blue-700 transition-all border border-blue-700 shadow-lg"
                             >
-                                <Terminal className="w-4 h-4" /> Claude Instruction
+                                <Terminal className="w-4 h-4" /> Claude Code
+                            </a>
+                            <a 
+                                href={`/downloads/skills/${recipe.id}.cursorrules`}
+                                download
+                                className="flex items-center justify-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-xl font-bold text-sm hover:bg-blue-500 transition-all border border-blue-500 shadow-lg"
+                            >
+                                <MousePointer2 className="w-4 h-4" /> Cursor Rule
                             </a>
                         </div>
                     </div>
