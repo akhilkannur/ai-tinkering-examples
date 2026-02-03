@@ -127,6 +127,19 @@ export default function GeminiSetup() {
           </div>
         </div>
 
+        <div className="bg-[#2C3E50] text-white p-8 mb-20 border-4 border-black shadow-[8px_8px_0px_rgba(0,0,0,1)]">
+          <h2 className="font-header text-3xl mb-4 uppercase text-orange-500">The First Assignment</h2>
+          <p className="font-body mb-6 opacity-90">Ready to see the power? Try this right now:</p>
+          <div className="space-y-4 font-body text-sm">
+            <div className="p-4 bg-black/30 border border-white/10 rounded">
+              <p className="font-bold mb-2">Goal: Find the "Ghost" Strategy</p>
+              <p className="opacity-70 mb-4">1. Create a folder called <code>marketing-test</code>.</p>
+              <p className="opacity-70 mb-4">2. Drop in 3 transcripts of your recent sales calls.</p>
+              <p className="opacity-70">3. Run: <code>gemini "Read these 3 calls. What is the one objection every customer has that we aren't answering on our website?"</code></p>
+            </div>
+          </div>
+        </div>
+
         <div className="bg-black text-white p-10 text-center mb-12">
             <h3 className="font-header text-4xl mb-4 uppercase text-white">Need a Blueprint?</h3>
             <p className="font-body mb-8 opacity-80">Don't guess the prompts. Use our library of 700+ verified workflows for Sales and Marketing.</p>

@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Image from 'next/image'
 import Navbar from '../components/Navbar'
 import { Terminal, Zap, ArrowRight, Cpu, Globe, Layers, Repeat, Command, Lock, FileText, Globe2, Sparkles, MousePointer2, CheckCircle2 } from 'lucide-react'
 import { useState } from 'react'
@@ -45,7 +46,7 @@ export default function AgentSetupService() {
         {/* HERO */}
         <div className="container mx-auto px-4 max-w-5xl text-center mb-16">
           <div className="inline-block border-2 border-black bg-orange-500 text-white px-4 py-1 mb-6 transform -rotate-1 font-header tracking-widest text-sm">
-            EARLY ADOPTER OFFER: 4/10 REMAINING
+            EARLY ADOPTER OFFER: 8/10 REMAINING
           </div>
           
           <h1 className="text-6xl md:text-8xl font-header mb-6 leading-none text-black uppercase">
@@ -58,16 +59,16 @@ export default function AgentSetupService() {
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 mb-12">
-            <div className="flex items-center gap-2 bg-white border-2 border-black px-4 py-2">
-              <Sparkles className="w-5 h-5 text-blue-600" />
+            <div className="flex items-center gap-2 bg-white border-2 border-black px-4 py-2 hover:bg-blue-50 transition-colors">
+              <Zap className="w-5 h-5 text-blue-600 animate-pulse" />
               <span className="font-bold">Infinite Memory</span>
             </div>
-            <div className="flex items-center gap-2 bg-white border-2 border-black px-4 py-2">
-              <MousePointer2 className="w-5 h-5 text-purple-600" />
+            <div className="flex items-center gap-2 bg-white border-2 border-black px-4 py-2 hover:bg-purple-50 transition-colors">
+              <Command className="w-5 h-5 text-purple-600" />
               <span className="font-bold">AI with Hands</span>
             </div>
-            <div className="flex items-center gap-2 bg-white border-2 border-black px-4 py-2">
-              <Lock className="w-5 h-5 text-green-600" />
+            <div className="flex items-center gap-2 bg-white border-2 border-black px-4 py-2 hover:bg-green-50 transition-colors">
+              <ShieldCheck className="w-5 h-5 text-green-600" />
               <span className="font-bold">Privacy Guaranteed</span>
             </div>
           </div>
@@ -76,7 +77,7 @@ export default function AgentSetupService() {
         {/* THE "WHY" SECTION */}
         <div className="container mx-auto px-4 max-w-5xl mb-24">
           <div className="bg-black text-white p-8 md:p-12 border-4 border-black shadow-[12px_12px_0px_rgba(230,126,34,1)]">
-            <h2 className="font-header text-4xl md:text-5xl mb-8 text-center uppercase tracking-tight">
+            <h2 className="font-header text-4xl md:text-5xl mb-8 text-center uppercase tracking-tight text-white">
               Move Beyond <span className="text-orange-500">The Sandbox</span>
             </h2>
             <p className="font-body text-lg mb-12 opacity-80 text-center max-w-2xl mx-auto italic">
@@ -84,18 +85,18 @@ export default function AgentSetupService() {
             </p>
 
             <div className="grid md:grid-cols-3 gap-8 text-left">
-              <div className="border border-white/20 p-6 hover:bg-white/5 transition-colors">
-                <Layers className="w-10 h-10 text-orange-500 mb-4" />
+              <div className="border border-white/20 p-6 hover:bg-orange-500/10 transition-colors group">
+                <Cpu className="w-10 h-10 text-orange-500 mb-4 group-hover:scale-110 transition-transform" />
                 <h3 className="font-header text-2xl mb-2 uppercase">Infinite Memory</h3>
                 <p className="font-body text-sm opacity-70">Point your AI at 500 resumes or a year's worth of emails. It "sees" everything at once to find patterns a human (or a chatbot) would miss.</p>
               </div>
-              <div className="border border-white/20 p-6 hover:bg-white/5 transition-colors">
-                <MousePointer2 className="w-10 h-10 text-purple-500 mb-4" />
+              <div className="border border-white/20 p-6 hover:bg-purple-500/10 transition-colors group">
+                <Terminal className="w-10 h-10 text-purple-500 mb-4 group-hover:scale-110 transition-transform" />
                 <h3 className="font-header text-2xl mb-2 uppercase">AI with Hands</h3>
                 <p className="font-body text-sm opacity-70">Unlike web AI, these tools can create folders, move files, and build websites directly on your desktop. You describe the result; they build the infrastructure.</p>
               </div>
-              <div className="border border-white/20 p-6 hover:bg-white/5 transition-colors">
-                <Repeat className="w-10 h-10 text-blue-500 mb-4" />
+              <div className="border border-white/20 p-6 hover:bg-blue-500/10 transition-colors group">
+                <Repeat className="w-10 h-10 text-blue-500 mb-4 group-hover:rotate-180 transition-transform duration-700" />
                 <h3 className="font-header text-2xl mb-2 uppercase">Set & Forget</h3>
                 <p className="font-body text-sm opacity-70">Close your laptop and go to lunch. Run a "Loop" that processes 1,000 leads or researches 50 competitors in the background while you do real work.</p>
               </div>
@@ -270,6 +271,46 @@ export default function AgentSetupService() {
           </div>
         </div>
 
+        {/* MEET YOUR GUIDE */}
+        <div className="container mx-auto px-4 max-w-4xl mb-24">
+          <div className="bg-[#2C3E50] text-white p-8 md:p-12 border-4 border-black shadow-[12px_12px_0px_rgba(0,0,0,1)] relative overflow-hidden">
+            <div className="flex flex-col md:flex-row gap-10 items-center relative z-10">
+              <div className="flex-shrink-0">
+                <div className="w-48 h-48 rounded-full border-4 border-orange-500 overflow-hidden shadow-2xl grayscale hover:grayscale-0 transition-all duration-500 relative">
+                  <Image 
+                    src="/images/akhil.jpg" 
+                    alt="Akhil MK" 
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+              <div className="text-left">
+                <h2 className="font-header text-4xl md:text-5xl mb-4 uppercase tracking-tight">Meet your guide: <span className="text-orange-500">Akhil MK</span></h2>
+                <p className="font-body text-lg mb-6 opacity-90 leading-relaxed">
+                  I spent the last 5 years building automated systems for DTC brands and running a performance agency. I'm not a "clean code" engineer—I'm a <strong>tinkerer</strong> who believes terminal agents are the ultimate leverage for non-technical founders.
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-6 font-mono text-[10px] uppercase tracking-widest text-orange-400">
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-orange-500 rounded-full"></div> Founder @ adlibrary.store
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-orange-500 rounded-full"></div> AI Sniper Architect
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-orange-500 rounded-full"></div> 700+ Blueprints Shipped
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-orange-500 rounded-full"></div> Ex-Agency Founder
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* Background Accent */}
+            <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-orange-500/10 rounded-full blur-3xl"></div>
+          </div>
+        </div>
+
         {/* THE ENGINE ROOM (TECHNICAL 101) */}
         <div className="container mx-auto px-4 max-w-4xl mb-24">
           <div className="bg-white border-2 border-black p-8 md:p-12 shadow-[8px_8px_0px_rgba(0,0,0,1)]">
@@ -281,36 +322,55 @@ export default function AgentSetupService() {
               
               <div className="grid md:grid-cols-2 gap-12">
                 <div className="space-y-8">
-                    <div className="flex items-start gap-4">
-                        <div className="w-10 h-10 bg-black text-white rounded flex items-center justify-center flex-shrink-0 font-bold">1</div>
+                    <div className="flex items-start gap-4 group">
+                        <div className="w-12 h-12 bg-black text-orange-500 rounded-lg flex items-center justify-center flex-shrink-0 border-2 border-black group-hover:bg-orange-500 group-hover:text-black transition-colors">
+                            <Cpu className="w-6 h-6" />
+                        </div>
                         <div>
-                            <h4 className="font-bold uppercase">The Engine</h4>
-                            <p className="text-xs opacity-70">We install <strong>Node.js</strong>—the environment that lets modern AI agents run on your computer.</p>
+                            <h4 className="font-bold uppercase text-sm">The Engine</h4>
+                            <p className="text-[11px] opacity-70 leading-relaxed">We install <strong>Node.js</strong>—the environment that lets modern AI agents run on your computer.</p>
                         </div>
                     </div>
-                    <div className="flex items-start gap-4">
-                        <div className="w-10 h-10 bg-black text-white rounded flex items-center justify-center flex-shrink-0 font-bold">2</div>
+                    <div className="flex items-start gap-4 group">
+                        <div className="w-12 h-12 bg-black text-purple-500 rounded-lg flex items-center justify-center flex-shrink-0 border-2 border-black group-hover:bg-purple-500 group-hover:text-black transition-colors">
+                            <Terminal className="w-6 h-6" />
+                        </div>
                         <div>
-                            <h4 className="font-bold uppercase">The Tools</h4>
-                            <p className="text-xs opacity-70">We configure <strong>Gemini CLI</strong> (for massive memory) and <strong>Claude Code</strong> (for autonomous work).</p>
+                            <h4 className="font-bold uppercase text-sm">The Tools</h4>
+                            <p className="text-[11px] opacity-70 leading-relaxed">We configure <strong>Gemini CLI</strong> (for massive memory) and <strong>Claude Code</strong> (for autonomous work).</p>
                         </div>
                     </div>
-                    <div className="flex items-start gap-4">
-                        <div className="w-10 h-10 bg-black text-white rounded flex items-center justify-center flex-shrink-0 font-bold">3</div>
+                    <div className="flex items-start gap-4 group">
+                        <div className="w-12 h-12 bg-black text-emerald-500 rounded-lg flex items-center justify-center flex-shrink-0 border-2 border-black group-hover:bg-emerald-500 group-hover:text-black transition-colors">
+                            <ShieldCheck className="w-6 h-6" />
+                        </div>
                         <div>
-                            <h4 className="font-bold uppercase">The Brain</h4>
-                            <p className="text-xs opacity-70">We secure your <strong>API Keys</strong> so you only pay for what you use, directly to the providers.</p>
+                            <h4 className="font-bold uppercase text-sm">The Brain</h4>
+                            <p className="text-[11px] opacity-70 leading-relaxed">We secure your <strong>API Keys</strong> so you only pay for what you use, directly to the providers.</p>
                         </div>
                     </div>
                 </div>
 
-                <div className="bg-gray-50 p-6 border-2 border-black">
-                    <h4 className="font-bold uppercase mb-4 text-sm">DIY Guides (If you're brave)</h4>
-                    <ul className="space-y-4 text-sm underline">
-                        <li><Link href="/setup/gemini-cli" className="hover:text-orange-600">Gemini CLI Setup Guide</Link></li>
-                        <li><Link href="/setup/claude-code" className="hover:text-purple-600">Claude Code Setup Guide</Link></li>
+                <div className="bg-orange-600 p-8 border-4 border-black text-white transform rotate-1 shadow-[8px_8px_0px_rgba(0,0,0,1)]">
+                    <h4 className="font-header text-3xl uppercase mb-4 tracking-tight">Prefer the Hard Way?</h4>
+                    <p className="font-body text-sm mb-8 opacity-90 leading-relaxed">
+                        If you're comfortable with error messages and technical friction, you can use our 101 guides to build your workstation yourself.
+                    </p>
+                    <ul className="space-y-4 font-bold uppercase tracking-widest text-sm">
+                        <li>
+                            <Link href="/setup/gemini-cli" className="flex items-center gap-2 hover:translate-x-2 transition-transform">
+                                <ArrowRight className="w-4 h-4" /> Gemini CLI Guide
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/setup/claude-code" className="flex items-center gap-2 hover:translate-x-2 transition-transform">
+                                <ArrowRight className="w-4 h-4" /> Claude Code Guide
+                            </Link>
+                        </li>
                     </ul>
-                    <p className="mt-6 text-xs italic opacity-60">Warning: Terminal errors can be frustrating. We recommend the Jam Session for a smooth start.</p>
+                    <div className="mt-10 pt-6 border-t border-white/20 text-[10px] italic opacity-60">
+                        Warning: Terminal errors can be frustrating. We recommend the Jam Session for a smooth start.
+                    </div>
                 </div>
               </div>
             </div>
