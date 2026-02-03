@@ -42,7 +42,7 @@ export default function AboutPage() {
                 </div>
               </div>
               <p className="mt-8 font-mono text-[10px] uppercase tracking-widest text-center opacity-40">
-                Figure 1.1: Reliable Workflows > AI Hype
+                Figure 1.1: Reliable Workflows &gt; AI Hype
               </p>
             </div>
 
