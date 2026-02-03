@@ -14,6 +14,9 @@ export default function Footer() {
                 <Link href="/about" className="hover:text-accent transition-colors">About Us</Link>
               </li>
               <li>
+                <Link href="/agent-setup-service" className="hover:text-accent transition-colors font-bold text-orange-500">Agent Setup Service</Link>
+              </li>
+              <li>
                 <Link href="/#newsletter" className="hover:text-accent transition-colors">Newsletter</Link>
               </li>
               <li>
