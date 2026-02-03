@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Navbar from '../components/Navbar'
-import { Terminal, Zap, ArrowRight, Cpu, Globe, Layers, Repeat, Command, Lock, FileText, Globe2, Sparkles, MousePointer2 } from 'lucide-react'
+import { Terminal, Zap, ArrowRight, Cpu, Globe, Layers, Repeat, Command, Lock, FileText, Globe2, Sparkles, MousePointer2, CheckCircle2 } from 'lucide-react'
 import { useState } from 'react'
 import Link from 'next/link'
 
