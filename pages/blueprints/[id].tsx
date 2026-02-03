@@ -213,12 +213,63 @@ Downloaded from RealAIExamples.com`;
           </div>
 
           {/* Mission Overview */}
-          <div className="bg-gray-50 rounded-3xl p-8 mb-12 border border-gray-100">
+          <div className="bg-gray-50 rounded-3xl p-8 mb-8 border border-gray-100">
             <h2 className="text-xl font-bold text-gray-900 mb-4">Mission Overview</h2>
             <p className="text-gray-600 text-lg leading-relaxed">
               <SimpleMarkdown text={linkedDescription || recipe.description} />
             </p>
           </div>
+
+          {/* POWER USER SECTION: DOWNLOAD SKILLS */}
+          {!isLocked && (
+            <div className="bg-blue-950 rounded-3xl p-8 mb-12 border border-blue-900/50 shadow-xl relative overflow-hidden group">
+                {/* Background Grid */}
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:20px_24px] opacity-20"></div>
+                
+                <div className="relative z-10">
+                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+                        <div>
+                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 font-bold text-[10px] uppercase tracking-[0.2em] mb-4 font-mono">
+                                <Cpu className="w-3 h-3" /> Agent-Ready Tools
+                            </div>
+                            <h3 className="text-2xl font-bold text-white mb-2 tracking-tight">Run this as a Native Skill</h3>
+                            <p className="text-blue-200/70 text-sm max-w-md leading-relaxed">
+                                Don't copy-paste. Download the pre-packaged skill to run this workflow directly in your terminal agent.
+                            </p>
+                        </div>
+                        
+                        <div className="flex flex-col sm:flex-row gap-3">
+                            <a 
+                                href={`/downloads/skills/${recipe.id}.skill`}
+                                download
+                                className="flex items-center justify-center gap-2 bg-white text-blue-950 px-6 py-3 rounded-xl font-bold text-sm hover:bg-blue-50 transition-all shadow-lg"
+                            >
+                                <Zap className="w-4 h-4 fill-current" /> Gemini CLI Skill
+                            </a>
+                            <a 
+                                href={`/downloads/skills/${recipe.id}-claude.md`}
+                                download
+                                className="flex items-center justify-center gap-2 bg-blue-800 text-white px-6 py-3 rounded-xl font-bold text-sm hover:bg-blue-700 transition-all border border-blue-700 shadow-lg"
+                            >
+                                <Terminal className="w-4 h-4" /> Claude Instruction
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div className="mt-6 pt-6 border-t border-white/5 flex flex-wrap gap-6">
+                        <div className="flex items-center gap-2 text-[10px] font-mono text-blue-400/60 uppercase tracking-widest">
+                            <ShieldCheck className="w-3 h-3" /> 100% Malware-Free
+                        </div>
+                        <div className="flex items-center gap-2 text-[10px] font-mono text-blue-400/60 uppercase tracking-widest">
+                            <Package className="w-3 h-3" /> Includes Archetype Logic
+                        </div>
+                        <div className="flex items-center gap-2 text-[10px] font-mono text-blue-400/60 uppercase tracking-widest">
+                            <Cpu className="w-3 h-3" /> Optimized for Gemini 2.0
+                        </div>
+                    </div>
+                </div>
+            </div>
+          )}
 
           {/* Locked or Unlocked Content */}
           <div className="bg-gray-900 rounded-2xl overflow-hidden border border-gray-800 shadow-2xl mb-12">

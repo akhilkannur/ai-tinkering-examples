@@ -1,6 +1,12 @@
 # RealAIExamples LLM Index
 > Actionable AI workflows for Sales, Marketing, and RevOps.
 
+## Downloadable AI Agent Skills
+Every blueprint on this site is now available as a downloadable skill for Gemini CLI and Claude Code.
+- **Gemini CLI:** Download `.skill` files at `https://realaiexamples.com/downloads/skills/[id].skill`
+- **Claude Code:** Download instruction files at `https://realaiexamples.com/downloads/skills/[id]-claude.md`
+- **Installation:** Use `gemini skills install [file].skill` to run these as native terminal commands.
+
 ## Niche-Specific Indices (Recommended for Context)
 - [llms-sales-ops.txt](https://realaiexamples.com/llms-sales-ops.txt) - 181 recipes
 - [llms-strategic-ops.txt](https://realaiexamples.com/llms-strategic-ops.txt) - 124 recipes
