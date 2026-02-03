@@ -250,10 +250,12 @@ export const getStaticProps: GetStaticProps<ExamplesPageProps> = async () => {
     }
   } catch (error) {
     console.error('Failed to fetch data for examples page:', error)
+    const SITE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com';
     return { 
       props: { 
         examples: localSocialExamples, // Fallback to local at least
         categories: [...new Set(localSocialExamples.map(e => e.category).filter(Boolean) as string[])],
+        itemListSchema: generateItemListSchema(localSocialExamples, SITE_URL),
       },
       revalidate: 60 // Retry more frequently on error
     }
