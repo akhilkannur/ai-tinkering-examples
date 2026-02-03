@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Navbar from '../components/Navbar'
-import { Terminal, Zap, ArrowRight, CheckCircle2, MessageCircle, Shield, Coffee, Gift, HelpCircle, Globe, Video, FileText, BookOpen, X, Check, AlertTriangle, Cpu, Command, Activity } from 'lucide-react'
+import { Terminal, Zap, ArrowRight, CheckCircle2, MessageCircle, Shield, Coffee, Gift, HelpCircle, Globe, Video, FileText, BookOpen, X, Check, AlertTriangle, Cpu, Command, Activity, ShieldCheck, Lightbulb } from 'lucide-react'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 
