@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Navbar from '../components/Navbar'
-import { Terminal, Zap, ArrowRight, CheckCircle2, MessageCircle, Shield, Coffee, Gift, HelpCircle, Globe, Video, FileText, BookOpen, X, Check } from 'lucide-react'
+import { Terminal, Zap, ArrowRight, CheckCircle2, MessageCircle, Shield, Coffee, Gift, HelpCircle, Globe, Video, FileText, BookOpen, X, Check, AlertTriangle, Cpu } from 'lucide-react'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 
@@ -44,8 +44,8 @@ export default function AgentSetupService() {
           <div className="text-center max-w-4xl mx-auto">
             
             <div className="flex justify-center mb-8">
-              <span className="text-sm font-medium text-accent tracking-wide uppercase flex items-center gap-2 bg-accent/5 px-4 py-1.5 rounded-full border border-accent/10">
-                <Coffee className="w-4 h-4" /> For Founders, Salespeople & Marketers
+              <span className="text-xs md:text-sm font-bold text-accent tracking-widest uppercase flex items-center gap-2 bg-secondary-bg px-6 py-2 rounded-full border border-navy-dark shadow-xl">
+                <Cpu className="w-4 h-4" /> For Non-Technical Tinkerers & AI Explorers
               </span>
             </div>
             
@@ -61,7 +61,7 @@ export default function AgentSetupService() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
               <button 
                 onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
-                className="w-full sm:w-auto bg-white text-primary-bg hover:bg-gray-100 font-bold py-4 px-10 rounded-full text-lg flex items-center justify-center gap-2 transition-all transform hover:-translate-y-0.5"
+                className="w-full sm:w-auto bg-white text-primary-bg hover:bg-gray-100 font-bold py-4 px-10 rounded-full text-lg flex items-center justify-center gap-2 transition-all transform hover:-translate-y-0.5 shadow-[0_0_20px_rgba(255,255,255,0.3)]"
               >
                 Book Your Setup ($99) <ArrowRight className="w-5 h-5" />
               </button>
@@ -76,37 +76,82 @@ export default function AgentSetupService() {
           </div>
         </div>
 
-        {/* BEFORE/AFTER SECTION */}
-        <div className="container mx-auto px-4 max-w-4xl mb-32">
+        {/* BEFORE/AFTER SECTION - REDESIGNED */}
+        <div className="container mx-auto px-4 max-w-5xl mb-32">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
-              From <span className="text-red-400">"Why won't this work?!"</span> to <span className="text-emerald-400">"Wait, that's it?"</span>
+              Stop fighting your computer. Start building.
             </h2>
           </div>
           
-          <div className="bg-secondary-bg/50 border border-navy-dark rounded-2xl overflow-hidden">
-             <div className="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-navy-dark">
-                <div className="p-8">
-                   <h3 className="text-red-400 font-bold mb-6 flex items-center gap-2 uppercase tracking-wider text-sm"><X className="w-4 h-4" /> The Struggle</h3>
-                   <div className="space-y-6">
-                      {beforeAfterItems.map((item, idx) => (
-                        <div key={idx} className="flex gap-4 opacity-70">
-                           <span className="text-red-400 mt-1">✗</span>
-                           <p className="text-text-secondary line-through">{item.before}</p>
-                        </div>
-                      ))}
-                   </div>
+          <div className="grid md:grid-cols-2 gap-8 relative">
+             {/* THE STRUGGLE CARD */}
+             <div className="bg-[#1a1a1a] border border-red-900/30 rounded-3xl p-8 md:p-10 relative overflow-hidden group">
+                <div className="absolute top-0 right-0 p-4 opacity-10">
+                    <AlertTriangle className="w-24 h-24 text-red-500" />
                 </div>
-                <div className="p-8 bg-navy-dark/30">
-                   <h3 className="text-emerald-400 font-bold mb-6 flex items-center gap-2 uppercase tracking-wider text-sm"><Check className="w-4 h-4" /> The Solution</h3>
-                   <div className="space-y-6">
-                      {beforeAfterItems.map((item, idx) => (
-                        <div key={idx} className="flex gap-4">
-                           <span className="text-emerald-400 mt-1">✓</span>
-                           <p className="text-white font-medium">{item.after}</p>
-                        </div>
-                      ))}
-                   </div>
+                <div className="relative z-10">
+                    <h3 className="text-red-400 font-bold mb-8 flex items-center gap-3 text-xl tracking-tight">
+                        <span className="w-8 h-8 rounded-full bg-red-500/10 flex items-center justify-center text-sm border border-red-500/20">01</span>
+                        The "DIY" Nightmare
+                    </h3>
+                    <ul className="space-y-6">
+                        <li className="flex items-start gap-4 opacity-60">
+                            <X className="w-5 h-5 text-red-500 mt-1 flex-shrink-0" />
+                            <span className="text-lg line-through decoration-red-500/50">Googling "npm not recognized" for 2 hours</span>
+                        </li>
+                        <li className="flex items-start gap-4 opacity-60">
+                            <X className="w-5 h-5 text-red-500 mt-1 flex-shrink-0" />
+                            <span className="text-lg line-through decoration-red-500/50">"Path environment variable" errors</span>
+                        </li>
+                        <li className="flex items-start gap-4 opacity-60">
+                            <X className="w-5 h-5 text-red-500 mt-1 flex-shrink-0" />
+                            <span className="text-lg line-through decoration-red-500/50">YouTube tutorials that skip steps</span>
+                        </li>
+                        <li className="flex items-start gap-4 opacity-60">
+                            <X className="w-5 h-5 text-red-500 mt-1 flex-shrink-0" />
+                            <span className="text-lg line-through decoration-red-500/50">Giving up and going back to chat</span>
+                        </li>
+                    </ul>
+                </div>
+             </div>
+
+             {/* THE SOLUTION CARD */}
+             <div className="bg-secondary-bg border-2 border-accent/50 rounded-3xl p-8 md:p-10 relative overflow-hidden shadow-[0_0_40px_rgba(244,63,94,0.1)]">
+                <div className="absolute top-0 right-0 p-4 opacity-10">
+                    <Zap className="w-24 h-24 text-accent" />
+                </div>
+                <div className="relative z-10">
+                    <h3 className="text-white font-bold mb-8 flex items-center gap-3 text-xl tracking-tight">
+                        <span className="w-8 h-8 rounded-full bg-accent flex items-center justify-center text-sm text-white font-bold">02</span>
+                        The "Done-For-You" Way
+                    </h3>
+                    <ul className="space-y-6">
+                        <li className="flex items-start gap-4">
+                            <div className="w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <Check className="w-3.5 h-3.5 text-green-400" />
+                            </div>
+                            <span className="text-lg font-medium text-white">Type one command. It just works.</span>
+                        </li>
+                        <li className="flex items-start gap-4">
+                            <div className="w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <Check className="w-3.5 h-3.5 text-green-400" />
+                            </div>
+                            <span className="text-lg font-medium text-white">Run agents from any folder</span>
+                        </li>
+                        <li className="flex items-start gap-4">
+                            <div className="w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <Check className="w-3.5 h-3.5 text-green-400" />
+                            </div>
+                            <span className="text-lg font-medium text-white">We fix errors live while you watch</span>
+                        </li>
+                        <li className="flex items-start gap-4">
+                            <div className="w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <Check className="w-3.5 h-3.5 text-green-400" />
+                            </div>
+                            <span className="text-lg font-medium text-white">Using the terminal like a pro</span>
+                        </li>
+                    </ul>
                 </div>
              </div>
           </div>
@@ -163,11 +208,11 @@ export default function AgentSetupService() {
             <h2 className="text-2xl md:text-3xl font-bold mb-10 text-center">This Is For You If...</h2>
             
             <div className="grid md:grid-cols-2 gap-x-12 gap-y-8">
-              {[
+              {[ 
                   "You've heard about \"AI agents\" but the terminal feels like hacker stuff",
                   "You tried following a tutorial and got stuck at step 3",
                   "You'd rather pay someone to do the annoying setup than waste a weekend",
-                  "You're a founder, marketer, or ops person—not a developer"
+                  "You're a tinkerer or explorer who just wants to see it work"
               ].map((text, idx) => (
                   <div key={idx} className="flex items-start gap-4">
                     <div className="w-6 h-6 rounded-full bg-emerald-500/10 flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -233,7 +278,7 @@ export default function AgentSetupService() {
                 <div className="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-secondary-bg shadow-xl overflow-hidden relative grayscale hover:grayscale-0 transition-all duration-500">
                   <Image 
                     src="/images/akhil.jpg" 
-                    alt="Akhil MK" 
+                    alt="Akhil MK"
                     fill
                     className="object-cover"
                   />
@@ -273,7 +318,7 @@ export default function AgentSetupService() {
             
             <div className="bg-primary-bg/50 border border-navy-dark rounded-2xl p-8 mb-10 max-w-lg mx-auto text-left">
               <ul className="space-y-4">
-                {[
+                {[ 
                     "60-minute live Zoom session",
                     "Gemini CLI + Claude Code installed",
                     "API keys configured securely",
@@ -294,7 +339,7 @@ export default function AgentSetupService() {
             <div className="mb-8">
               <label className="flex items-center justify-center gap-3 cursor-pointer group select-none">
                 <div 
-                  className={`w-6 h-6 border rounded flex items-center justify-center transition-all ${accepted ? 'bg-accent border-accent' : 'border-navy-light group-hover:border-accent'}`} 
+                  className={`w-6 h-6 border rounded flex items-center justify-center transition-all ${accepted ? 'bg-accent border-accent' : 'border-navy-light group-hover:border-accent'}`}
                   onClick={() => setAccepted(!accepted)}
                 >
                   {accepted && <Check className="text-white w-4 h-4" />}
