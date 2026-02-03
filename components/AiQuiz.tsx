@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import QuizCertificate from './QuizCertificate';
 import NewsletterSignup from './NewsletterSignup';
-import { Trophy, Timer, Flame, ArrowRight, RotateCcw, Check, X } from 'lucide-react';
+import { Trophy, Timer, Flame, ArrowRight, RotateCcw, Check, X, ShieldCheck } from 'lucide-react';
 
 interface Question {
   question: string;
