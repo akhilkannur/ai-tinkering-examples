@@ -68,13 +68,13 @@ export default function BuildClub() {
             THE BUILD CLUB
           </h1>
           
-          <p className="font-body text-xl md:text-2xl mb-10 max-w-2xl mx-auto leading-relaxed text-white">
-            Stop planning. Stop learning. <br/>
-            <span className="bg-[#FDF498] text-black px-2 italic font-bold border-2 border-black">Start shipping.</span>
+          <p className="font-body text-xl md:text-2xl mb-6 max-w-2xl mx-auto leading-relaxed text-white">
+            An accountability group that forces you to ship one AI tool per month.<br/>
+            <span className="bg-[#FDF498] text-black px-2 italic font-bold border-2 border-black">Or you're out.</span>
           </p>
           
           <div className="font-header text-2xl tracking-widest mb-12 opacity-80 uppercase">
-            FOR NON-TECHNICAL TINKERERS ONLY.
+            For founders, marketers & ops people. No coding.
           </div>
 
           {/* VIDEO SECTION */}
@@ -111,19 +111,19 @@ export default function BuildClub() {
                 <ul className="space-y-6 font-body text-lg">
                   <li className="flex items-start gap-3">
                     <span className="font-bold text-red-700">01.</span>
-                    <span>You must ship one (1) AI project update every week.</span>
+                    <span>Post one update every week. Screenshot, Loom, or text. Proof you made progress.</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="font-bold text-red-700">02.</span>
-                    <span><strong>Personal Accountability:</strong> We check in with you personally twice (2x) a week to keep you on track.</span>
+                    <span>I check in with you twice a week. Not a bot. Me. Async via DM.</span>
                   </li>
                   <li className="flex items-start gap-3 p-2 bg-red-100 border border-red-800 -mx-2 text-red-900">
                     <span className="font-bold text-red-700">03.</span>
-                    <span className="font-bold">MISS 2 UPDATES = IMMEDIATE REMOVAL. (The "Kick-Out" Rule)</span>
+                    <span className="font-bold">MISS 2 UPDATES = YOU'RE REMOVED. No warnings. No refunds.</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="font-bold text-red-700">04.</span>
-                    <span><strong>Your Ideas or Ours:</strong> Build your own tool or pick from our curated list of high-value blueprints.</span>
+                    <span>Build your own idea or pick from 700+ blueprints on this site. Your call.</span>
                   </li>
                 </ul>
 
@@ -160,9 +160,9 @@ export default function BuildClub() {
                   <span>$29.00/mo</span>
                 </div>
                 <div className="text-xs text-gray-500 mb-4 pl-4">
-                  - 2x Weekly Check-ins<br/>
-                  - Accountability Grp<br/>
-                  - No Refunds
+                  - 2x Weekly Check-ins (me, not a bot)<br/>
+                  - Private group chat<br/>
+                  - Access to 700+ blueprints
                 </div>
 
                 <div className="border-b-2 border-dashed border-gray-300 mb-4"></div>
@@ -207,18 +207,18 @@ export default function BuildClub() {
             <div className="grid md:grid-cols-3 gap-8 mt-4 font-body">
               <div className="text-center">
                 <div className="w-16 h-16 bg-blue-100 border-2 border-black rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">🛠️</div>
-                <h3 className="font-bold text-lg mb-2">Internal Tools</h3>
-                <p className="text-sm">Scrapers, CRM enrichers, HR bots. If it automates a task, it counts.</p>
+                <h3 className="font-bold text-lg mb-2">Automations</h3>
+                <p className="text-sm">Lead scrapers, CRM enrichers, inbox sorters. Things that save you hours.</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-red-100 border-2 border-black rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">📢</div>
-                <h3 className="font-bold text-lg mb-2">Marketing Assets</h3>
-                <p className="text-sm">Blog-to-tweet converters, SEO auditors, cold email writers.</p>
+                <h3 className="font-bold text-lg mb-2">Content Machines</h3>
+                <p className="text-sm">Blog-to-LinkedIn converters, SEO auditors, cold email generators.</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-green-100 border-2 border-black rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">📱</div>
-                <h3 className="font-bold text-lg mb-2">Actual Apps</h3>
-                <p className="text-sm">Chrome extensions, directories, web apps for clients.</p>
+                <h3 className="font-bold text-lg mb-2">Mini Products</h3>
+                <p className="text-sm">Chrome extensions, calculators, directories. Things you can charge for.</p>
               </div>
             </div>
           </div>
@@ -236,15 +236,19 @@ export default function BuildClub() {
               <div className="space-y-6 font-body">
                 <div>
                   <h3 className="font-bold underline mb-1">WHO IS THIS FOR?</h3>
-                  <p>Non-technical tinkerers who have the tools but lack the discipline. If you are an advanced engineer looking for "clean code" or infrastructure talks, this is NOT for you. We focus on tools that run.</p>
+                  <p>Founders, marketers, salespeople, ops folks. People who want to build AI tools but keep getting distracted. If you're an engineer looking for architecture talks, this isn't it.</p>
                 </div>
                 <div>
                   <h3 className="font-bold underline mb-1">IS IT A COURSE?</h3>
-                  <p>NO. There are no tutorials. No "learning modules." We assume you know how to use an LLM.</p>
+                  <p>No. Zero tutorials. I assume you know how to use ChatGPT or Claude. This is about doing, not learning.</p>
                 </div>
                 <div>
                   <h3 className="font-bold underline mb-1">WHY $29?</h3>
-                  <p>Skin in the game. If it was free, you wouldn't do the work.</p>
+                  <p>Cheap enough to join, expensive enough to hurt if you waste it. Skin in the game.</p>
+                </div>
+                <div>
+                  <h3 className="font-bold underline mb-1">WHAT WILL I HAVE AFTER 4 WEEKS?</h3>
+                  <p>At least one working AI tool. A lead scraper, a content repurposer, a Chrome extension. Something you can show people.</p>
                 </div>
               </div>
 

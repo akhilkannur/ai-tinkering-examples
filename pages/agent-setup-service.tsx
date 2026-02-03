@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Navbar from '../components/Navbar'
-import { Terminal, Zap, ArrowRight, CheckCircle2, Clock, MessageCircle, Sparkles, Shield, Coffee, Gift, HelpCircle, Globe, Video, FileText } from 'lucide-react'
+import { Terminal, Zap, ArrowRight, CheckCircle2, MessageCircle, Shield, Coffee, Gift, HelpCircle, Globe, Video, FileText, BookOpen } from 'lucide-react'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 
@@ -45,7 +45,7 @@ export default function AgentSetupService() {
             
             <div className="inline-block bg-accent/10 border border-accent/20 rounded-full px-4 py-1.5 mb-6">
               <span className="text-xs font-bold text-accent tracking-wide uppercase flex items-center gap-2">
-                <Coffee className="w-3 h-3" /> 60-Minute Remote Session
+                <Coffee className="w-3 h-3" /> For Founders, Salespeople & Marketers
               </span>
             </div>
             
@@ -54,8 +54,8 @@ export default function AgentSetupService() {
             </h1>
             
             <p className="text-xl mb-8 text-text-secondary leading-relaxed max-w-2xl mx-auto">
-              You want to use Gemini CLI or Claude Code, but the setup is a nightmare. 
-              <strong className="text-text-color"> We do it for you.</strong> Screen share, watch us work, ask questions. Walk away with a working AI agent.
+              You've seen the demos. You want in. But the terminal setup is hell.<br />
+              <strong className="text-text-color">We do it for you in 60 minutes.</strong>
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
@@ -169,45 +169,46 @@ export default function AgentSetupService() {
           </div>
         </div>
 
-        {/* WHAT YOU GET */}
+        {/* WHAT YOU WALK AWAY WITH */}
         <div className="container mx-auto px-4 max-w-5xl mb-24">
-          <h2 className="text-3xl font-bold text-center mb-12">What's Included</h2>
+          <h2 className="text-3xl font-bold text-center mb-4">What You Walk Away With</h2>
+          <p className="text-text-secondary text-center mb-12 max-w-xl mx-auto">By the end of our session, you'll have a working AI agent that can do things like research 50 leads while you grab lunch.</p>
           
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-secondary-bg border border-navy-dark rounded-xl p-6 hover:border-accent/30 transition-all">
-              <Video className="w-8 h-8 text-accent mb-4" />
-              <h3 className="font-bold text-lg mb-2">60-Min Live Session</h3>
-              <p className="text-sm text-text-secondary">Zoom screen share. We do the work, you watch and learn.</p>
-            </div>
-            
-            <div className="bg-secondary-bg border border-navy-dark rounded-xl p-6 hover:border-accent/30 transition-all">
               <Terminal className="w-8 h-8 text-purple-400 mb-4" />
-              <h3 className="font-bold text-lg mb-2">Full Tool Installation</h3>
-              <p className="text-sm text-text-secondary">Node.js, Gemini CLI, Claude Code, API keys—all configured.</p>
+              <h3 className="font-bold text-lg mb-2">Everything Installed</h3>
+              <p className="text-sm text-text-secondary">Node.js, Gemini CLI, Claude Code, API keys. Done right, first time.</p>
             </div>
             
             <div className="bg-secondary-bg border border-navy-dark rounded-xl p-6 hover:border-accent/30 transition-all">
               <Zap className="w-8 h-8 text-yellow-400 mb-4" />
-              <h3 className="font-bold text-lg mb-2">First Agent Run</h3>
-              <p className="text-sm text-text-secondary">We run a real workflow together so you see it actually work.</p>
+              <h3 className="font-bold text-lg mb-2">Your First Win</h3>
+              <p className="text-sm text-text-secondary">We run a real workflow together. You see actual output, not a demo.</p>
             </div>
             
             <div className="bg-secondary-bg border border-navy-dark rounded-xl p-6 hover:border-accent/30 transition-all">
               <FileText className="w-8 h-8 text-emerald-400 mb-4" />
-              <h3 className="font-bold text-lg mb-2">Command Cheat Sheet</h3>
-              <p className="text-sm text-text-secondary">A simple doc with the 5 commands you'll actually use.</p>
-            </div>
-            
-            <div className="bg-secondary-bg border border-navy-dark rounded-xl p-6 hover:border-accent/30 transition-all">
-              <MessageCircle className="w-8 h-8 text-blue-400 mb-4" />
-              <h3 className="font-bold text-lg mb-2">7 Days of Support</h3>
-              <p className="text-sm text-text-secondary">Email us any questions for a week. We'll unstick you.</p>
+              <h3 className="font-bold text-lg mb-2">Cheat Sheet</h3>
+              <p className="text-sm text-text-secondary">5 commands you'll actually use. No fluff. Pinned to your desktop.</p>
             </div>
             
             <div className="bg-secondary-bg border border-navy-dark rounded-xl p-6 hover:border-accent/30 transition-all">
               <Gift className="w-8 h-8 text-accent mb-4" />
-              <h3 className="font-bold text-lg mb-2">Bonus: 3 Starter Workflows</h3>
-              <p className="text-sm text-text-secondary">Pre-built blueprints for lead research, content, and data cleanup.</p>
+              <h3 className="font-bold text-lg mb-2">3 Starter Workflows</h3>
+              <p className="text-sm text-text-secondary">Lead research, content repurposing, data cleanup. Ready to run.</p>
+            </div>
+            
+            <div className="bg-secondary-bg border border-navy-dark rounded-xl p-6 hover:border-accent/30 transition-all">
+              <MessageCircle className="w-8 h-8 text-blue-400 mb-4" />
+              <h3 className="font-bold text-lg mb-2">7-Day Safety Net</h3>
+              <p className="text-sm text-text-secondary">Something breaks? Email me. I'll fix it. No extra charge.</p>
+            </div>
+            
+            <div className="bg-secondary-bg border border-navy-dark rounded-xl p-6 hover:border-accent/30 transition-all">
+              <Video className="w-8 h-8 text-accent mb-4" />
+              <h3 className="font-bold text-lg mb-2">Confidence</h3>
+              <p className="text-sm text-text-secondary">You watched it happen. You know it works. No more guessing.</p>
             </div>
           </div>
         </div>
@@ -229,14 +230,13 @@ export default function AgentSetupService() {
               <div>
                 <h2 className="text-2xl md:text-3xl font-bold mb-3">Hi, I'm Akhil.</h2>
                 <p className="text-text-secondary leading-relaxed mb-4">
-                  I run this site and I've helped 50+ non-technical founders set up terminal AI agents. 
+                  I run this site and I've been setting up terminal AI agents for myself and friends who kept asking for help. 
                   I'm not a "clean code" engineer—I'm a tinkerer who figures out what works and teaches it in plain English. 
                   If something breaks during our session, I fix it. That's it.
                 </p>
                 <div className="flex flex-wrap gap-4 text-xs font-medium text-text-secondary">
                   <span className="bg-primary-bg border border-navy-dark px-3 py-1 rounded-full">700+ Blueprints Created</span>
-                  <span className="bg-primary-bg border border-navy-dark px-3 py-1 rounded-full">50+ Setups Completed</span>
-                  <span className="bg-primary-bg border border-navy-dark px-3 py-1 rounded-full">0 Frustrated Customers</span>
+                  <span className="bg-primary-bg border border-navy-dark px-3 py-1 rounded-full">Founder @ realaiexamples.com</span>
                 </div>
               </div>
             </div>
@@ -249,7 +249,7 @@ export default function AgentSetupService() {
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent via-purple-500 to-accent"></div>
             
             <div className="inline-block bg-accent/10 border border-accent/20 rounded-full px-4 py-1 mb-6">
-              <span className="text-xs font-bold text-accent tracking-wide uppercase">Limited Availability</span>
+              <span className="text-xs font-bold text-accent tracking-wide uppercase">I take 3-4 of these per week</span>
             </div>
             
             <h2 className="text-3xl md:text-4xl font-bold mb-2">Done-For-You Setup</h2>
@@ -305,8 +305,8 @@ export default function AgentSetupService() {
               Book Your Session <ArrowRight className="w-5 h-5" />
             </a>
             
-            <p className="text-xs text-text-secondary/60 mt-4 flex items-center justify-center gap-2">
-              <Shield className="w-3 h-3" /> Secure Stripe checkout. Scheduling link sent immediately.
+            <p className="text-xs text-text-secondary/60 mt-4">
+              Scheduling link sent immediately after payment.
             </p>
           </div>
         </div>
@@ -342,6 +342,29 @@ export default function AgentSetupService() {
                 <HelpCircle className="w-5 h-5 text-accent" /> How do I book a time?
               </h3>
               <p className="text-text-secondary text-sm leading-relaxed">After payment, you'll get a Calendly link to pick a slot that works for you. Usually within 48 hours.</p>
+            </div>
+          </div>
+        </div>
+
+        {/* DIY OPTION */}
+        <div className="container mx-auto px-4 max-w-3xl mb-16">
+          <div className="bg-secondary-bg border border-navy-dark rounded-2xl p-8">
+            <div className="flex items-start gap-4">
+              <BookOpen className="w-8 h-8 text-accent flex-shrink-0 mt-1" />
+              <div>
+                <h3 className="text-xl font-bold mb-2">Prefer to DIY?</h3>
+                <p className="text-text-secondary text-sm mb-4 leading-relaxed">
+                  If you're comfortable with some terminal friction, follow our free setup guides instead.
+                </p>
+                <div className="flex flex-wrap gap-3">
+                  <Link href="/setup/gemini-cli" className="text-sm font-medium text-accent hover:underline flex items-center gap-1">
+                    Gemini CLI Guide <ArrowRight className="w-4 h-4" />
+                  </Link>
+                  <Link href="/setup/claude-code" className="text-sm font-medium text-accent hover:underline flex items-center gap-1">
+                    Claude Code Guide <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </div>

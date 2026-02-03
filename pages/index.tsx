@@ -2,7 +2,7 @@ import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import Navbar from '../components/Navbar'
 import TerminalCookbook from '../components/BuilderFlowchart'
-import { Terminal, BookOpen, Cpu, Command, ArrowRight, Zap, Target, Search, Heart } from 'lucide-react'
+import { Command, ArrowRight, Zap, Target, Search, Heart } from 'lucide-react'
 import { getAllRecipes } from '../lib/recipes'
 import { Recipe } from '../lib/cookbook-data'
 import { fetchFeaturedJobs, fetchFeaturedTools, fetchSiteSettings, JobRecord, ToolRecord } from '../lib/airtable'
@@ -147,145 +147,50 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
             </div>
         </div>
 
-        {/* PHILOSOPHY SECTION */}
-        <div className="bg-primary-bg py-24 border-t border-navy-dark relative">
-            <div className="absolute inset-0 bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:20px_20px] opacity-20"></div>
-            <div className="container mx-auto px-4 relative z-10">
-                <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                    <div className="bg-secondary-bg rounded-xl border border-navy-dark p-8 md:p-12 text-left hover:border-accent/30 transition-colors">
-                        <h2 className="text-2xl font-bold text-text-color mb-4 flex items-center gap-3">
-                        <span className="bg-blue-500/10 text-blue-400 p-2 rounded-lg border border-blue-500/20"><Terminal className="w-5 h-5"/></span>
-                        For the Command Line
-                        </h2>
-                        <p className="text-text-secondary leading-relaxed mb-6">
-                        If you use <strong className="text-text-color">Gemini CLI</strong> or <strong className="text-text-color">Claude Code</strong>, these are your instruction manuals. 
-                        Drop a file in. The agent reads it. It does the thing. We stopped trying to be clever and just started being explicit.
-                        </p>
-                        <div className="bg-primary-bg p-4 rounded-lg border border-navy-dark text-sm font-mono text-text-secondary/70">
-                        Claude: "I read the file. I know what to do now." <span className="text-emerald-400">✓ Running</span>
-                        </div>
-                    </div>
-
-                    <div className="bg-secondary-bg rounded-xl border border-navy-dark p-8 md:p-12 text-left hover:border-accent/30 transition-colors">
-                        <h2 className="text-2xl font-bold text-text-color mb-4 flex items-center gap-3">
-                        <span className="bg-purple-500/10 text-purple-400 p-2 rounded-lg border border-purple-500/20"><Cpu className="w-5 h-5"/></span>
-                        For Cursor & Windsurf
-                        </h2>
-                        <p className="text-text-secondary leading-relaxed mb-6">
-                        Stop typing "Please help me code a landing page" and hoping for the best. 
-                        Paste our play into Composer. It gives the AI a rigid structure so it doesn't hallucinate a bunch of nonsense.
-                        </p>
-                        <div className="bg-primary-bg p-4 rounded-lg border border-navy-dark text-sm font-mono text-text-secondary/70">
-                        Composer: "Play detected. Building structure..." <span className="text-purple-400">Generating...</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        {/* PREMIUM CONTEXT PROMO */}
-        <div className="bg-secondary-bg border-y border-navy-dark py-16 relative overflow-hidden group">
-          <div className="absolute inset-0 bg-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+        {/* CONTEXT LIBRARY BANNER */}
+        <div className="bg-secondary-bg border-y border-navy-dark py-8">
           <div className="container mx-auto px-4 max-w-5xl">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-10">
-              <div className="flex-1">
-                <div className="inline-flex items-center gap-2 text-accent text-xs font-bold uppercase tracking-widest mb-4">
-                  <Cpu className="w-4 h-4" /> New: Context Library
-                </div>
-                <h2 className="text-3xl md:text-4xl font-bold text-text-color mb-4 leading-tight">
-                  Download the Brain. <br/>
-                  <span className="text-accent">Make It Smart Instantly.</span>
-                </h2>
-                <p className="text-lg text-text-secondary mb-8 leading-relaxed">
-                  Stop copying prompts one by one. Download our <strong>Master Cookbook (JSON)</strong>. 
-                  It's 700+ workflows in a single file. Your agent goes from "confused intern" to "expert" in about 3 seconds.
-                </p>
-                <a href="/context" className="inline-flex items-center gap-2 bg-navy-dark border border-navy-light hover:border-accent text-text-color font-bold px-6 py-3 rounded-lg transition-all group-hover:translate-x-1">
-                  <Command className="w-4 h-4 text-accent" /> Download Context Files <ArrowRight className="w-4 h-4" />
-                </a>
-              </div>
-              
-              <div className="flex-1 w-full max-w-md bg-[#1e1e1e] rounded-lg border border-navy-dark p-4 font-mono text-sm shadow-2xl relative">
-                <div className="flex gap-2 mb-4 border-b border-gray-700 pb-2">
-                  <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                </div>
-                <div className="space-y-2">
-                  <div className="text-gray-400">$ ls *.json</div>
-                  <div className="text-accent">cookbook-full.json</div>
-                  <div className="text-gray-400 mt-4">$ gemini run --context cookbook-full.json</div>
-                  <div className="text-white">
-                    <span className="text-green-400">✔</span> Loaded 723 workflows.<br/>
-                    <span className="text-green-400">✔</span> Role: Marketing Ops Expert.<br/>
-                    <span className="text-blue-400">?</span> How can I help you today?
-                  </div>
-                  <div className="animate-pulse text-accent mt-2">_</div>
+            <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+              <div className="flex items-center gap-4">
+                <Command className="w-8 h-8 text-accent" />
+                <div>
+                  <h3 className="text-lg font-bold text-text-color">Want all 700+ in one file?</h3>
+                  <p className="text-sm text-text-secondary">Download the Master Cookbook (JSON) and load it as context.</p>
                 </div>
               </div>
+              <a href="/context" className="flex-shrink-0 inline-flex items-center gap-2 bg-accent hover:bg-accent-hover text-white font-bold px-6 py-3 rounded-lg transition-all text-sm">
+                Download Context Files <ArrowRight className="w-4 h-4" />
+              </a>
             </div>
           </div>
         </div>
 
         {/* FAQ SECTION */}
-        <div className="bg-primary-bg py-24 border-t border-navy-dark">
+        <div className="bg-primary-bg py-16 border-t border-navy-dark">
           <div className="max-w-4xl mx-auto px-4 sm:px-6">
-            <h2 className="text-3xl md:text-5xl font-bold text-text-color mb-16 text-center tracking-tight">
-              Why does this <span className="text-accent">exist?</span>
+            <h2 className="text-2xl md:text-3xl font-bold text-text-color mb-10 text-center tracking-tight">
+              Quick Questions
             </h2>
             
-            <div className="space-y-6">
-              <div className="bg-secondary-bg p-8 rounded-xl border border-navy-dark hover:border-navy-light transition-colors">
-                <h3 className="text-xl font-bold mb-3 text-text-color flex items-center gap-3">
-                  <span className="text-accent text-sm font-mono border border-accent/30 px-2 py-0.5 rounded">01</span> How are these created?
-                </h3>
-                <p className="text-text-secondary leading-relaxed pl-10">
-                  We run an agency. We needed these to work. We identified real bottlenecks in our own boring Sales/Marketing tasks, then wrote the plays to automate them. If it's in this library, it's because we actually use it.
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-secondary-bg p-6 rounded-xl border border-navy-dark">
+                <h3 className="text-base font-bold mb-2 text-text-color">Which tools work?</h3>
+                <p className="text-text-secondary text-sm leading-relaxed">
+                  Claude Code, Gemini CLI, Cursor, Windsurf. They're text files — any agent can read them.
                 </p>
               </div>
 
-              <div className="bg-secondary-bg p-8 rounded-xl border border-navy-dark hover:border-navy-light transition-colors">
-                <h3 className="text-xl font-bold mb-3 text-text-color flex items-center gap-3">
-                  <span className="text-accent text-sm font-mono border border-accent/30 px-2 py-0.5 rounded">02</span> Are they tested?
-                </h3>
-                <p className="text-text-secondary leading-relaxed pl-10">
-                  Yes. If they break, we look stupid. We verify them regularly. If you find an edge case we missed, tell us and we'll fix it.
+              <div className="bg-secondary-bg p-6 rounded-xl border border-navy-dark">
+                <h3 className="text-base font-bold mb-2 text-text-color">What if one breaks?</h3>
+                <p className="text-text-secondary text-sm leading-relaxed">
+                  Email us. We fix it. We'd rather update the play than have you annoyed.
                 </p>
               </div>
 
-              <div className="bg-secondary-bg p-8 rounded-xl border border-navy-dark hover:border-navy-light transition-colors">
-                <h3 className="text-xl font-bold mb-3 text-text-color flex items-center gap-3">
-                  <span className="text-accent text-sm font-mono border border-accent/30 px-2 py-0.5 rounded">03</span> What if a play doesn't work for me?
-                </h3>
-                <p className="text-text-secondary leading-relaxed pl-10">
-                  Email us. Seriously. We'd rather fix the play than have you annoyed. We update logic based on feedback constantly.
-                </p>
-              </div>
-
-              <div className="bg-secondary-bg p-8 rounded-xl border border-navy-dark hover:border-navy-light transition-colors">
-                <h3 className="text-xl font-bold mb-3 text-text-color flex items-center gap-3">
-                  <span className="text-accent text-sm font-mono border border-accent/30 px-2 py-0.5 rounded">04</span> Which AI tools can run these?
-                </h3>
-                <p className="text-text-secondary leading-relaxed pl-10">
-                  Claude Code, Gemini CLI, Cursor, Windsurf. They're just text files. They don't care what tool you use, as long as it can read English and write code.
-                </p>
-              </div>
-
-              <div className="bg-secondary-bg p-8 rounded-xl border border-navy-dark hover:border-navy-light transition-colors">
-                <h3 className="text-xl font-bold mb-3 text-text-color flex items-center gap-3">
-                  <span className="text-accent text-sm font-mono border border-accent/30 px-2 py-0.5 rounded">05</span> Why use these instead of simple prompts?
-                </h3>
-                <p className="text-text-secondary leading-relaxed pl-10">
-                  Because simple prompts are vague. "Make me a marketing plan" gets you garbage. Our plays handle tiered commission math, fuzzy lead matching, and multi-step logic. It's the difference between a sketch and a play.
-                </p>
-              </div>
-
-              <div className="bg-secondary-bg p-8 rounded-xl border border-navy-dark hover:border-navy-light transition-colors">
-                <h3 className="text-xl font-bold mb-3 text-text-color flex items-center gap-3">
-                  <span className="text-accent text-sm font-mono border border-accent/30 px-2 py-0.5 rounded">06</span> Is it safe to download?
-                </h3>
-                <p className="text-text-secondary leading-relaxed pl-10">
-                  Yes. It's a ZIP file full of plain text (.md and .csv). No executables. No binaries. No weird scripts. You can open them in Notepad and read every word before using them.
+              <div className="bg-secondary-bg p-6 rounded-xl border border-navy-dark">
+                <h3 className="text-base font-bold mb-2 text-text-color">Is it safe?</h3>
+                <p className="text-text-secondary text-sm leading-relaxed">
+                  Plain text files (.md, .csv). No executables. Open in Notepad and read every word.
                 </p>
               </div>
             </div>
