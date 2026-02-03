@@ -24,7 +24,7 @@ export default function GeminiSetup() {
     {
       title: "2. Update the PATH",
       description: "This tells Windows exactly where your new tools are hidden so you can use them by name.",
-      command: "$env:PATH += ";C:\Program Files\nodejs;$env:APPDATA\npm"",
+      command: '$env:PATH += ";C:\\Program Files\\nodejs;$env:APPDATA\\npm"',
       note: "This fix is critical if the next step says 'npm not found'."
     },
     {
