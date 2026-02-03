@@ -318,7 +318,7 @@ export default function AgentSetupService() {
 
               <div className="text-center">
                 <a 
-                  href={accepted ? "https://checkout.dodopayments.com/buy/pdt_0NWW6..." : "#"}
+                  href={accepted ? "https://checkout.dodopayments.com/buy/pdt_0NXg6rDNkM3SOXOy9QriP?quantity=1" : "#"}
                   className={`block w-full py-5 font-header text-3xl tracking-widest transition-all shadow-[6px_6px_0px_rgba(0,0,0,1)] border-2 border-black ${accepted ? 'bg-orange-500 text-white hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none' : 'bg-gray-100 text-gray-400 cursor-not-allowed'}`}
                   onClick={(e) => !accepted && e.preventDefault()}
                 >
