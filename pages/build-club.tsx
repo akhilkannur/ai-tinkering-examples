@@ -56,7 +56,7 @@ export default function BuildClub() {
 
       <Navbar />
 
-      <main className="pt-20 pb-20 relative z-10">
+      <main className="pt-32 pb-20 relative z-10">
         
         {/* HERO SECTION */}
         <div className="container mx-auto px-4 max-w-5xl text-center mb-20 pt-16">
@@ -74,7 +74,7 @@ export default function BuildClub() {
           </p>
           
           <div className="font-header text-2xl tracking-widest mb-12 opacity-80 uppercase">
-            For founders, marketers & ops people. No coding.
+            FOR NON-TECHNICAL, AI-CURIOUS PROFESSIONALS & OPERATORS.
           </div>
 
           {/* VIDEO SECTION */}

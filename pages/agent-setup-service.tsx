@@ -337,9 +337,17 @@ export default function AgentSetupService() {
                   
                   <div className="text-center md:text-left relative z-10">
                     <div className="text-accent font-mono text-[10px] uppercase tracking-[0.4em] mb-4">[ OPERATOR: AKHIL_MK ]</div>
-                    <p className="text-text-secondary text-base leading-relaxed font-light italic">
+                    <p className="text-white text-lg leading-relaxed font-medium italic">
                       "I run this site and I've been setting up terminal AI agents for myself and friends for years. I'm not a corporate engineer—I'm a builder who loves breaking things and fixing them. If I can't get your setup running perfectly, I'll refund your money before we even end the call."
                     </p>
+                    <div className="mt-6 flex flex-col md:flex-row items-center gap-6">
+                      <a href="https://akhilhaving.fun" target="_blank" rel="noopener noreferrer" className="text-xs font-mono text-accent hover:underline uppercase tracking-widest border border-accent/20 px-4 py-2 rounded-full bg-accent/5">
+                        [ VISIT_LOG: akhilhaving.fun ]
+                      </a>
+                      <a href="mailto:akhil@realaiexamples.com" className="text-xs font-mono text-text-secondary hover:text-white transition-colors uppercase tracking-widest">
+                        Email: akhil@realaiexamples.com
+                      </a>
+                    </div>
                   </div>
               </div>
            </div>

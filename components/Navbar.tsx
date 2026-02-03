@@ -73,7 +73,7 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`px-4 py-2 text-[10px] font-mono font-bold tracking-[0.2em] transition-all duration-200 border border-transparent rounded-lg ${
+                  className={`px-4 py-2 text-sm font-mono font-bold tracking-[0.2em] transition-all duration-200 border border-transparent rounded-lg ${
                     router.pathname === link.href
                       ? 'text-accent bg-accent/5 border-accent/10'
                       : 'text-text-secondary hover:text-white hover:bg-white/5'
@@ -92,7 +92,7 @@ export default function Navbar() {
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                     <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
                 </div>
-                <span className="text-[9px] font-mono font-bold text-text-secondary uppercase tracking-widest leading-none mt-0.5">Systems_Online</span>
+                <span className="text-[11px] font-mono font-bold text-text-secondary uppercase tracking-widest leading-none mt-0.5">Systems_Online</span>
             </div>
 
             <a

@@ -72,7 +72,7 @@ export default function HowToPage({ recipe, problemTitle, relatedRecipes }: HowT
 
       <Navbar />
 
-      <main className="pt-24 pb-20">
+      <main className="pt-32 pb-20">
         <div className="container mx-auto px-4 max-w-4xl">
           <Link href="/how-to" className="inline-flex items-center gap-2 text-text-secondary hover:text-accent transition-colors mb-8 text-sm font-mono">
             <ArrowLeft className="w-4 h-4" /> Back to Problem Dictionary

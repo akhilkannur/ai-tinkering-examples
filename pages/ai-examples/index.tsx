@@ -89,7 +89,7 @@ export default function ExamplesPage({ examples, categories, itemListSchema }: E
       <div className="min-h-screen bg-primary-bg font-sans text-text-color">
         <Navbar />
         
-        <header className="max-w-6xl mx-auto px-4 py-12 md:py-16 text-center">
+        <header className="max-w-6xl mx-auto px-4 pt-32 pb-16 text-center">
           <h1 className="text-4xl md:text-5xl font-headline font-bold text-text-color mb-6 tracking-tight leading-tight uppercase">
             AI That <span className="text-accent">Actually Works</span>
           </h1>

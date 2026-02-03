@@ -53,7 +53,7 @@ export default function ToolsIndex() {
 
       <Navbar />
 
-      <main className="container mx-auto px-4 py-16 max-w-7xl">
+      <main className="container mx-auto px-4 pt-32 pb-16 max-w-7xl">
         
         {/* Header */}
         <div className="text-center mb-16 max-w-3xl mx-auto relative">

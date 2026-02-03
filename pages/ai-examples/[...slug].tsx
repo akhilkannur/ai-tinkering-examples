@@ -129,7 +129,7 @@ export default function ExamplePage({ example }: ExamplePageProps) {
       <div className="min-h-screen bg-primary-bg">
         <Navbar />
         
-        <nav className="max-w-4xl mx-auto px-4 py-4" aria-label="Breadcrumb">
+        <nav className="max-w-4xl mx-auto px-4 pt-32 pb-4" aria-label="Breadcrumb">
           <ol className="flex items-center space-x-2 text-sm font-mono text-text-secondary">
             <li><Link href="/" className="hover:text-accent transition-colors">Home</Link></li>
             <li className="before:content-['/'] before:mx-2"><Link href="/ai-examples" className="hover:text-accent transition-colors">AI Examples</Link></li>

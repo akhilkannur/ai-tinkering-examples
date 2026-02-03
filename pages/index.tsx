@@ -68,7 +68,7 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
         <Navbar />
 
         {/* HERO SECTION */}
-        <div className="bg-primary-bg pt-12 pb-20 relative overflow-hidden">
+        <div className="bg-primary-bg pt-32 pb-20 relative overflow-hidden">
             {/* Background Gradient */}
             <div className="absolute inset-0 bg-hero-gradient opacity-20 pointer-events-none"></div>
 
