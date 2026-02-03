@@ -199,7 +199,7 @@ export default function BuildClub() {
 
         {/* WORKSHOP DETAILS */}
         <div className="container mx-auto px-4 max-w-4xl mb-24">
-          <div className="bg-white border-4 border-black p-10 relative">
+          <div className="bg-white border-4 border-black p-10 relative text-black">
             <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black text-white px-4 py-1 font-header text-xl tracking-widest">
               WHAT COUNTS AS "BUILDING"?
             </div>
@@ -229,7 +229,7 @@ export default function BuildClub() {
           <h2 className="font-header text-5xl text-center mb-12">NOTICE BOARD</h2>
           
           <div className="bg-[#5D4037] p-4 rounded-lg shadow-2xl">
-            <div className="bg-[#D7CCC8] p-8 border-2 border-[#8D6E63] relative">
+            <div className="bg-[#D7CCC8] p-8 border-2 border-[#8D6E63] relative text-[#3E2723]">
               {/* Pin */}
               <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-red-600 shadow-md"></div>
               
