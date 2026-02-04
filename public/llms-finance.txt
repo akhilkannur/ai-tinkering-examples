@@ -1,7 +1,7 @@
 # Blueprints: Finance
 
 ## The Invoice Chaser Engine
-URL: https://realaiexamples.com/blueprints/invoice-chaser-sequence
+URL: https://realaiexamples.com/skills/invoice-chaser-sequence
 Description: Recover $10k+ in overdue payments without being awkward.
 
 ---
@@ -63,7 +63,7 @@ For each row in the CSV:
 ---
 
 ## The Vendor Negotiator
-URL: https://realaiexamples.com/blueprints/vendor-negotiation-script
+URL: https://realaiexamples.com/skills/vendor-negotiation-script
 Description: Save 20% on your software stack from a bill or a name.
 
 ---

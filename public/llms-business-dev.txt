@@ -1,7 +1,7 @@
 # Blueprints: Business Dev
 
 ## The Partner Hunter Fleet
-URL: https://realaiexamples.com/blueprints/partner-hunter
+URL: https://realaiexamples.com/skills/partner-hunter
 Description: Find 100 non-competing partners at once.
 
 ---

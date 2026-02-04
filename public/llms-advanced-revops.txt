@@ -1,7 +1,7 @@
 # Blueprints: Advanced RevOps
 
 ## Annual Pre-Pay Upsell
-URL: https://realaiexamples.com/blueprints/billing-frequency-upsell
+URL: https://realaiexamples.com/skills/billing-frequency-upsell
 Description: Move monthly users to annual plans.
 
 ---
@@ -52,7 +52,7 @@ Improve cash flow via annual contracts.
 ---
 
 ## Non-Standard Clause Tracker
-URL: https://realaiexamples.com/blueprints/contract-clause-variance-tracker
+URL: https://realaiexamples.com/skills/contract-clause-variance-tracker
 Description: Who got the 'Opt-out' clause?
 
 ---
@@ -103,7 +103,7 @@ Manage contractual risk.
 ---
 
 ## Pre-Renewal Health Check
-URL: https://realaiexamples.com/blueprints/contract-renewal-health-score
+URL: https://realaiexamples.com/skills/contract-renewal-health-score
 Description: 90-day warning system.
 
 ---
@@ -154,7 +154,7 @@ Prioritize renewal saves.
 ---
 
 ## Discount Efficiency Auditor
-URL: https://realaiexamples.com/blueprints/discount-vs-duration-correlation
+URL: https://realaiexamples.com/skills/discount-vs-duration-correlation
 Description: Are we getting longer terms for lower prices?
 
 ---
@@ -206,7 +206,7 @@ Enforce 'Give to Get' negotiation logic.
 ---
 
 ## Upsell Propensity Scorer
-URL: https://realaiexamples.com/blueprints/expansion-propensity-scorer
+URL: https://realaiexamples.com/skills/expansion-propensity-scorer
 Description: Who is ready to buy more?
 
 ---
@@ -258,7 +258,7 @@ Predict next-month expansion revenue.
 ---
 
 ## Legacy Pricing Audit
-URL: https://realaiexamples.com/blueprints/grandfathered-revenue-risk
+URL: https://realaiexamples.com/skills/grandfathered-revenue-risk
 Description: How much are we losing on old plans?
 
 ---
@@ -310,7 +310,7 @@ Identify revenue uplift opportunities.
 ---
 
 ## Bad Payer List
-URL: https://realaiexamples.com/blueprints/late-payment-frequent-flyer
+URL: https://realaiexamples.com/skills/late-payment-frequent-flyer
 Description: Stop selling to people who don't pay.
 
 ---
@@ -363,7 +363,7 @@ Mitigate bad debt risk.
 ---
 
 ## Quote-to-Cash Speedometer
-URL: https://realaiexamples.com/blueprints/quote-to-cash-cycle-timer
+URL: https://realaiexamples.com/skills/quote-to-cash-cycle-timer
 Description: Measure the speed of closing.
 
 ---
@@ -415,7 +415,7 @@ Accelerate revenue recognition.
 ---
 
 ## Quote Velocity Tracker
-URL: https://realaiexamples.com/blueprints/quote-velocity-tracker
+URL: https://realaiexamples.com/skills/quote-velocity-tracker
 Description: How fast does a quote get signed?
 
 ---
@@ -467,7 +467,7 @@ Speed up the closing process.
 ---
 
 ## Price Increase Success Rate
-URL: https://realaiexamples.com/blueprints/uplift-acceptance-rate
+URL: https://realaiexamples.com/skills/uplift-acceptance-rate
 Description: Did they accept the +5%?
 
 ---

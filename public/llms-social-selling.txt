@@ -1,7 +1,7 @@
 # Blueprints: Social Selling
 
 ## Competitor Dissatisfaction Miner
-URL: https://realaiexamples.com/blueprints/competitor-ad-comment-scraper
+URL: https://realaiexamples.com/skills/competitor-ad-comment-scraper
 Description: Find unhappy people on their ads.
 
 ---
@@ -52,7 +52,7 @@ Find leads actively unhappy with competitors.
 ---
 
 ## Community Mention Alert
-URL: https://realaiexamples.com/blueprints/dark-social-mention-tracker
+URL: https://realaiexamples.com/skills/dark-social-mention-tracker
 Description: Who is talking about us in Slack?
 
 ---
@@ -102,7 +102,7 @@ Monitor dark social conversations.
 ---
 
 ## Social Advocacy Leaderboard
-URL: https://realaiexamples.com/blueprints/employee-advocacy-leaderboard
+URL: https://realaiexamples.com/skills/employee-advocacy-leaderboard
 Description: Who is the loudest brand champion?
 
 ---
@@ -154,7 +154,7 @@ Gamify employee advocacy.
 ---
 
 ## Influencer Compliance Check
-URL: https://realaiexamples.com/blueprints/influencer-share-verification
+URL: https://realaiexamples.com/skills/influencer-share-verification
 Description: Did they actually post it?
 
 ---
@@ -206,7 +206,7 @@ Audit influencer contract compliance.
 ---
 
 ## Connection Request A/B Tester
-URL: https://realaiexamples.com/blueprints/linkedin-connection-acceptance-rate
+URL: https://realaiexamples.com/skills/linkedin-connection-acceptance-rate
 Description: Which note gets more connects?
 
 ---
@@ -257,7 +257,7 @@ Optimize network growth tactics.
 ---
 
 ## LinkedIn Profile Auditor
-URL: https://realaiexamples.com/blueprints/profile-optimization-score
+URL: https://realaiexamples.com/skills/profile-optimization-score
 Description: Does your rep look professional?
 
 ---
@@ -309,7 +309,7 @@ Ensure sales team social presence is optimized.
 ---
 
 ## Social-to-Deal Correlator
-URL: https://realaiexamples.com/blueprints/social-engagement-to-opportunity
+URL: https://realaiexamples.com/skills/social-engagement-to-opportunity
 Description: Do likes lead to deals?
 
 ---
@@ -361,7 +361,7 @@ Prove the ROI of social selling.
 ---
 
 ## Social Activity Mix
-URL: https://realaiexamples.com/blueprints/social-selling-activity-ratio
+URL: https://realaiexamples.com/skills/social-selling-activity-ratio
 Description: Are we doing enough social touches?
 
 ---
@@ -413,7 +413,7 @@ Encourage modern selling behaviors.
 ---
 
 ## Alumni Champion Finder
-URL: https://realaiexamples.com/blueprints/social-signal-alumni-miner
+URL: https://realaiexamples.com/skills/social-signal-alumni-miner
 Description: Track where your happy users moved.
 
 ---
@@ -463,7 +463,7 @@ Generate high-warmth leads.
 ---
 
 ## Viral Hook Analyzer
-URL: https://realaiexamples.com/blueprints/twitter-thread-hook-analyzer
+URL: https://realaiexamples.com/skills/twitter-thread-hook-analyzer
 Description: Which first line gets the click?
 
 ---

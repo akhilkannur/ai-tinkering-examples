@@ -6,8 +6,8 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 
 export default function AgentSetupService() {
-  const title = "Done-For-You AI Agent Setup | For Non-Technical Tinkerers";
-  const description = "We'll install Gemini CLI & Claude Code on your machine via screen share. No terminal experience needed. Just show up and watch us do the hard part.";
+  const title = "AI Agent Kickstart Jam | Strategic Setup for Non-Technical Builders";
+  const description = "We'll install Gemini CLI & Claude Code together, then jam on 3 custom workflows you can run the same day. No technical setup hassle - just strategy and shipping.";
 
   const [accepted, setAccepted] = useState(false);
   const [activeStep, setActiveStep] = useState(0);

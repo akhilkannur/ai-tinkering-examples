@@ -1,7 +1,7 @@
 # Blueprints: Technical SEO
 
 ## Broken Image Hunter
-URL: https://realaiexamples.com/blueprints/broken-image-finder
+URL: https://realaiexamples.com/skills/broken-image-finder
 Description: Find images returning 404 errors.
 
 --- 
@@ -60,7 +60,7 @@ sampleData
 ---
 
 ## Canonical Tag Consistency
-URL: https://realaiexamples.com/blueprints/canonical-url-verifier
+URL: https://realaiexamples.com/skills/canonical-url-verifier
 Description: Prevent duplicate content issues.
 
 --- 
@@ -121,7 +121,7 @@ sampleData
 ---
 
 ## The Crawl Budget Estimator
-URL: https://realaiexamples.com/blueprints/crawl-budget-estimator
+URL: https://realaiexamples.com/skills/crawl-budget-estimator
 Description: Will Google actually index your 10k pages?
 
 ---
@@ -182,7 +182,7 @@ Create `crawl_forecast.csv`.
 ---
 
 ## Accessibility Auditor
-URL: https://realaiexamples.com/blueprints/image-alt-text-auditor
+URL: https://realaiexamples.com/skills/image-alt-text-auditor
 Description: Ensure every image has descriptive text.
 
 --- 
@@ -242,7 +242,7 @@ sampleData
 ---
 
 ## Anchor Text Optimizer
-URL: https://realaiexamples.com/blueprints/internal-link-anchor-auditor
+URL: https://realaiexamples.com/skills/internal-link-anchor-auditor
 Description: Stop using 'Click Here' for your internal links.
 
 --- 
@@ -302,7 +302,7 @@ sampleData
 ---
 
 ## Speed Budget Enforcer
-URL: https://realaiexamples.com/blueprints/page-speed-budget-monitor
+URL: https://realaiexamples.com/skills/page-speed-budget-monitor
 Description: Don't let your site get slow.
 
 --- 
@@ -362,7 +362,7 @@ sampleData
 ---
 
 ## Redirect Chain Flattener
-URL: https://realaiexamples.com/blueprints/redirect-chain-fixer
+URL: https://realaiexamples.com/skills/redirect-chain-fixer
 Description: Fix "Redirect Hops" to improve site speed and SEO.
 
 ---
@@ -431,7 +431,7 @@ Start now.
 ---
 
 ## Migration Redirect Checker
-URL: https://realaiexamples.com/blueprints/redirect-mapping-validator
+URL: https://realaiexamples.com/skills/redirect-mapping-validator
 Description: Did the migration actually work?
 
 --- 
@@ -491,7 +491,7 @@ sampleData
 ---
 
 ## robots.txt Rules Architect
-URL: https://realaiexamples.com/blueprints/robots-txt-architect
+URL: https://realaiexamples.com/skills/robots-txt-architect
 Description: Protect your crawl budget by guiding search bots away from low-value pages.
 
 ---
@@ -558,7 +558,7 @@ Start now.
 ---
 
 ## Bulk Schema JSON-LD Generator
-URL: https://realaiexamples.com/blueprints/schema-markup-generator
+URL: https://realaiexamples.com/skills/schema-markup-generator
 Description: Get "Rich Snippets" on Google by generating valid Schema markup.
 
 ---
@@ -627,7 +627,7 @@ Start now.
 ---
 
 ## Sitemap Health Auditor
-URL: https://realaiexamples.com/blueprints/sitemap-health-check
+URL: https://realaiexamples.com/skills/sitemap-health-check
 Description: Find broken links and non-indexable pages in your sitemap.
 
 ---
@@ -698,7 +698,7 @@ Start now.
 ---
 
 ## Orphan Page Detective
-URL: https://realaiexamples.com/blueprints/sitemap-orphan-page-finder
+URL: https://realaiexamples.com/skills/sitemap-orphan-page-finder
 Description: Find pages that exist but aren't in your sitemap.
 
 --- 
@@ -758,7 +758,7 @@ sampleData
 ---
 
 ## Broken Link Patroller
-URL: https://realaiexamples.com/blueprints/status-code-monitor-404
+URL: https://realaiexamples.com/skills/status-code-monitor-404
 Description: Find 404s before your users do.
 
 --- 

@@ -1,4 +1,0 @@
-Workflow_Name,Trigger_App,Action_App,Primary_Goal
-Lead Sync,Facebook Ads,HubSpot,Add new leads to CRM with cleaned names
-Payment Alert,Stripe,Slack,Notify team of high-value (> $500) sales
-Content Distro,RSS Feed,LinkedIn,Cross-post blog updates with custom hooks

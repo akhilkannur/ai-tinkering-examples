@@ -1,3 +1,0 @@
-Rule_Type,Threshold,Action
-Zero Conversion,Spend > 50,Pause Keyword
-High CPA,CPA > 100,Label "Review"

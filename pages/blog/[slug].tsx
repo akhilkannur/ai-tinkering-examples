@@ -150,7 +150,7 @@ export default function BlogPostPage({ post, relatedRecipes }: BlogPostPageProps
               {relatedRecipes.map(recipe => {
                 const CatIcon = categoryIcons[recipe.category] || Terminal;
                 return (
-                  <Link key={recipe.id} href={`/blueprints/${recipe.id}`} className="group">
+                  <Link key={recipe.id} href={`/skills/${recipe.id}`} className="group">
                     <div className="bg-secondary-bg border border-navy-dark p-6 rounded-xl hover:border-accent/50 transition-all duration-300 h-full">
                       <div className="flex justify-between items-start mb-4">
                         <div className="p-2 bg-primary-bg rounded-lg border border-navy-dark text-accent">

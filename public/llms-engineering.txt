@@ -1,7 +1,7 @@
 # Blueprints: Engineering
 
 ## The Autonomous Project Manager
-URL: https://realaiexamples.com/blueprints/autonomous-project-manager
+URL: https://realaiexamples.com/skills/autonomous-project-manager
 Description: The 'Ralph Wiggum' Loop.
 
 ---

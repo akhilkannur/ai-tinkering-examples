@@ -1,7 +1,7 @@
 # Blueprints: Sales Training
 
 ## The Difficult Prospect Simulator
-URL: https://realaiexamples.com/blueprints/sales-roleplay-simulator
+URL: https://realaiexamples.com/skills/sales-roleplay-simulator
 Description: Practice your pitch against AI.
 
 ---

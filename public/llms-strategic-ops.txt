@@ -1,7 +1,7 @@
 # Blueprints: Strategic Ops
 
 ## ABM Campaign Asset Builder
-URL: https://realaiexamples.com/blueprints/abm-campaign-asset-builder
+URL: https://realaiexamples.com/skills/abm-campaign-asset-builder
 Description: Generate personalized landing page copy for target accounts.
 
 ---
@@ -68,7 +68,7 @@ Start now.
 ---
 
 ## The Affiliate Program Launcher
-URL: https://realaiexamples.com/blueprints/affiliate-program-launcher
+URL: https://realaiexamples.com/skills/affiliate-program-launcher
 Description: Build a commission-only sales team.
 
 ---
@@ -129,7 +129,7 @@ For each partner in the list (either provided or researched):
 ---
 
 ## The Project Architect
-URL: https://realaiexamples.com/blueprints/agent-context-builder
+URL: https://realaiexamples.com/skills/agent-context-builder
 Description: Make any folder AI-ready instantly.
 
 ---
@@ -213,7 +213,7 @@ The next time you open your terminal and say *"Analyze the data,"* the AI reads 
 ---
 
 ## The AI Manager's Handbook
-URL: https://realaiexamples.com/blueprints/ai-manager-handbook
+URL: https://realaiexamples.com/skills/ai-manager-handbook
 Description: Teach AI your specific rules once.
 
 ---
@@ -293,7 +293,7 @@ Think of it as **equipping a toolbelt**. You don't carry a hammer, a drill, and 
 ---
 
 ## API Error Impact Alerter
-URL: https://realaiexamples.com/blueprints/api-error-impact-alerter
+URL: https://realaiexamples.com/skills/api-error-impact-alerter
 Description: Know exactly which VIP customers are seeing 500 errors.
 
 --- 
@@ -341,7 +341,7 @@ Know exactly which VIP customers are seeing 500 errors.
 ---
 
 ## Automated SWOT Generator
-URL: https://realaiexamples.com/blueprints/automated-swot-generator
+URL: https://realaiexamples.com/skills/automated-swot-generator
 Description: Generate a SWOT analysis for any company in seconds.
 
 ---
@@ -389,7 +389,7 @@ Generate a SWOT analysis for any company in seconds.
 ---
 
 ## Webinar Follow-Up Architect
-URL: https://realaiexamples.com/blueprints/automated-webinar-followup-sequence
+URL: https://realaiexamples.com/skills/automated-webinar-followup-sequence
 Description: Segment attendees vs. no-shows and write targeted nurture sequences.
 
 ---
@@ -461,7 +461,7 @@ Start now.
 ---
 
 ## The Autonomous Project Manager
-URL: https://realaiexamples.com/blueprints/autonomous-project-manager
+URL: https://realaiexamples.com/skills/autonomous-project-manager
 Description: The 'Ralph Wiggum' Loop.
 
 ---
@@ -531,7 +531,7 @@ For each project where `progress.txt` is not `COMPLETE`:
 ---
 
 ## The Beta Tester Recruiter
-URL: https://realaiexamples.com/blueprints/beta-tester-recruiter
+URL: https://realaiexamples.com/skills/beta-tester-recruiter
 Description: Find your first 50 users.
 
 ---
@@ -592,7 +592,7 @@ For each user in the CSV:
 ---
 
 ## The Blueprint Architect
-URL: https://realaiexamples.com/blueprints/blueprint-architect
+URL: https://realaiexamples.com/skills/blueprint-architect
 Description: Create your own Work-Ready blueprints.
 
 ---
@@ -655,7 +655,7 @@ Generate a new `.md` blueprint file based on a user's process description.
 ---
 
 ## The Event Booth Strategist
-URL: https://realaiexamples.com/blueprints/booth-design-checklist
+URL: https://realaiexamples.com/skills/booth-design-checklist
 Description: Custom booth checklists for your event portfolio.
 
 ---
@@ -715,7 +715,7 @@ For each event in the CSV:
 ---
 
 ## Event Lead Router
-URL: https://realaiexamples.com/blueprints/booth-scan-lead-router
+URL: https://realaiexamples.com/skills/booth-scan-lead-router
 Description: Route badge scans to the right rep.
 
 ---
@@ -765,7 +765,7 @@ Fast follow-up for event leads.
 ---
 
 ## Brand Voice Chameleon
-URL: https://realaiexamples.com/blueprints/brand-voice-rewriter
+URL: https://realaiexamples.com/skills/brand-voice-rewriter
 Description: Rewrite any text to match your specific brand personality.
 
 ---
@@ -831,7 +831,7 @@ Start now.
 ---
 
 ## The Cancellation Flow Auditor
-URL: https://realaiexamples.com/blueprints/cancellation-flow-auditor
+URL: https://realaiexamples.com/skills/cancellation-flow-auditor
 Description: Save them before they go.
 
 ---
@@ -893,7 +893,7 @@ For each product in the CSV:
 ---
 
 ## Case Study Interviewer
-URL: https://realaiexamples.com/blueprints/case-study-interviewer-bot
+URL: https://realaiexamples.com/skills/case-study-interviewer-bot
 Description: The perfect script for extracting testimonials from happy clients.
 
 ---
@@ -959,7 +959,7 @@ Start now.
 ---
 
 ## The Changelog Marketer
-URL: https://realaiexamples.com/blueprints/changelog-marketer
+URL: https://realaiexamples.com/skills/changelog-marketer
 Description: Your updates are marketing assets.
 
 ---
@@ -1026,7 +1026,7 @@ For each feature in the CSV:
 ---
 
 ## Channel Conflict Resolver
-URL: https://realaiexamples.com/blueprints/channel-conflict-arbitrator
+URL: https://realaiexamples.com/skills/channel-conflict-arbitrator
 Description: Decide who owns the lead: Partner or Direct?
 
 ---
@@ -1085,7 +1085,7 @@ sampleData
 ---
 
 ## Deal Reg Conflict Finder
-URL: https://realaiexamples.com/blueprints/channel-partner-deal-registration-tracker
+URL: https://realaiexamples.com/skills/channel-partner-deal-registration-tracker
 Description: Did we already have this lead?
 
 ---
@@ -1143,7 +1143,7 @@ sampleData
 ---
 
 ## The Onboarding Velocity Scanner
-URL: https://realaiexamples.com/blueprints/client-onboarding-checklist
+URL: https://realaiexamples.com/skills/client-onboarding-checklist
 Description: Don't just send emails. Measure how fast clients are actually moving.
 
 ---
@@ -1206,7 +1206,7 @@ For each client:
 ---
 
 ## Competitor Dissatisfaction Miner
-URL: https://realaiexamples.com/blueprints/competitor-ad-comment-scraper
+URL: https://realaiexamples.com/skills/competitor-ad-comment-scraper
 Description: Find unhappy people on their ads.
 
 ---
@@ -1256,7 +1256,7 @@ Find leads actively unhappy with competitors.
 ---
 
 ## Ad Library Decoder
-URL: https://realaiexamples.com/blueprints/competitor-ad-library-spy
+URL: https://realaiexamples.com/skills/competitor-ad-library-spy
 Description: Reverse-engineer your competitor's ad strategy.
 
 ---
@@ -1321,7 +1321,7 @@ Start now.
 ---
 
 ## Competitor Content Spy
-URL: https://realaiexamples.com/blueprints/competitor-content-pillar-analyst
+URL: https://realaiexamples.com/skills/competitor-content-pillar-analyst
 Description: Steal the content strategy that is working for your rivals.
 
 ---
@@ -1384,7 +1384,7 @@ Start now.
 ---
 
 ## Feature Parity Matrix
-URL: https://realaiexamples.com/blueprints/competitor-matrix-visualizer
+URL: https://realaiexamples.com/skills/competitor-matrix-visualizer
 Description: Build the "Us vs Them" comparison grid for your pricing page.
 
 ---
@@ -1460,7 +1460,7 @@ Start now.
 ---
 
 ## Competitor Pricing Watchdog
-URL: https://realaiexamples.com/blueprints/competitor-pricing-alert-system
+URL: https://realaiexamples.com/skills/competitor-pricing-alert-system
 Description: Detects hidden pricing changes on competitor websites.
 
 ---
@@ -1530,7 +1530,7 @@ Start now.
 ---
 
 ## The Contract Risk Detector
-URL: https://realaiexamples.com/blueprints/contract-risk-detector
+URL: https://realaiexamples.com/skills/contract-risk-detector
 Description: Find the 'gotchas' in the PDF.
 
 ---
@@ -1593,7 +1593,7 @@ For each contract in the CSV:
 ---
 
 ## Feedback Auto-Tagger
-URL: https://realaiexamples.com/blueprints/customer-feedback-tagger
+URL: https://realaiexamples.com/skills/customer-feedback-tagger
 Description: Organize messy user feedback into a clean product roadmap.
 
 ---
@@ -1655,7 +1655,7 @@ Start now.
 ---
 
 ## The Customer Journey Factory
-URL: https://realaiexamples.com/blueprints/customer-journey-mapper
+URL: https://realaiexamples.com/skills/customer-journey-mapper
 Description: Map the broken road for every persona.
 
 ---
@@ -1713,7 +1713,7 @@ For each persona in the CSV:
 ---
 
 ## Community Mention Alert
-URL: https://realaiexamples.com/blueprints/dark-social-mention-tracker
+URL: https://realaiexamples.com/skills/dark-social-mention-tracker
 Description: Who is talking about us in Slack?
 
 ---
@@ -1762,7 +1762,7 @@ Monitor dark social conversations.
 ---
 
 ## Deal Reg Expiry Monitor
-URL: https://realaiexamples.com/blueprints/deal-reg-expiry-alert
+URL: https://realaiexamples.com/skills/deal-reg-expiry-alert
 Description: Flag partner deal registrations that are about to expire.
 
 ---
@@ -1817,7 +1817,7 @@ Generate `extension_requests.md`:
 ---
 
 ## The ABM Direct Mail Engine
-URL: https://realaiexamples.com/blueprints/direct-mail-campaign-planner
+URL: https://realaiexamples.com/skills/direct-mail-campaign-planner
 Description: High-impact mailers for your top 100 accounts.
 
 ---
@@ -1875,7 +1875,7 @@ For each row in the CSV:
 ---
 
 ## The Annual Promo Strategist
-URL: https://realaiexamples.com/blueprints/discount-code-strategist
+URL: https://realaiexamples.com/skills/discount-code-strategist
 Description: Your entire year of sales, without brand damage.
 
 ---
@@ -1936,7 +1936,7 @@ For each event in the CSV:
 ---
 
 ## Stock Rotation Auditor
-URL: https://realaiexamples.com/blueprints/distributor-stock-rotation-logic
+URL: https://realaiexamples.com/skills/distributor-stock-rotation-logic
 Description: Calculate eligible stock returns for distributors.
 
 ---
@@ -1994,7 +1994,7 @@ sampleData
 ---
 
 ## The Subject Line Factory
-URL: https://realaiexamples.com/blueprints/email-subject-line-tester
+URL: https://realaiexamples.com/skills/email-subject-line-tester
 Description: Generate A/B test variations for 10 campaigns in one run.
 
 ---
@@ -2052,7 +2052,7 @@ For each campaign in the CSV:
 ---
 
 ## Social Advocacy Leaderboard
-URL: https://realaiexamples.com/blueprints/employee-advocacy-leaderboard
+URL: https://realaiexamples.com/skills/employee-advocacy-leaderboard
 Description: Who is the loudest brand champion?
 
 ---
@@ -2103,7 +2103,7 @@ Gamify employee advocacy.
 ---
 
 ## Event Influence Calc
-URL: https://realaiexamples.com/blueprints/event-influenced-pipeline
+URL: https://realaiexamples.com/skills/event-influenced-pipeline
 Description: Total pipeline touched by this event.
 
 ---
@@ -2154,7 +2154,7 @@ Prove event value beyond direct leads.
 ---
 
 ## Event Meeting Auditor
-URL: https://realaiexamples.com/blueprints/event-meeting-no-show-tracker
+URL: https://realaiexamples.com/skills/event-meeting-no-show-tracker
 Description: Did they show up to the booth meeting?
 
 ---
@@ -2205,7 +2205,7 @@ Measure event meeting effectiveness.
 ---
 
 ## The Booth ROI Predictor
-URL: https://realaiexamples.com/blueprints/event-sponsorship-roi-calculator
+URL: https://realaiexamples.com/skills/event-sponsorship-roi-calculator
 Description: Don't just guess. Model the 'Break-Even' scenario before you sign the contract.
 
 ---
@@ -2264,7 +2264,7 @@ For each event:
 ---
 
 ## The Feature Adoption Analyzer
-URL: https://realaiexamples.com/blueprints/feature-adoption-analyzer
+URL: https://realaiexamples.com/skills/feature-adoption-analyzer
 Description: Who is actually using your new tool?
 
 ---
@@ -2325,7 +2325,7 @@ For each Segment:
 ---
 
 ## The Product Marketing Engine
-URL: https://realaiexamples.com/blueprints/feature-announcement
+URL: https://realaiexamples.com/skills/feature-announcement
 Description: Turn technical updates into sales momentum.
 
 ---
@@ -2383,7 +2383,7 @@ For each feature in the CSV:
 ---
 
 ## Feature Request ARR Weighting
-URL: https://realaiexamples.com/blueprints/feature-request-arr-weighting
+URL: https://realaiexamples.com/skills/feature-request-arr-weighting
 Description: Prioritize roadmap based on dollars, not noise.
 
 ---
@@ -2432,7 +2432,7 @@ Prioritize roadmap based on dollars, not noise.
 ---
 
 ## Feedback Cluster Engine
-URL: https://realaiexamples.com/blueprints/feature-request-clusterer
+URL: https://realaiexamples.com/skills/feature-request-clusterer
 Description: Group 1,000 feedback tickets into 5 features.
 
 ---
@@ -2493,7 +2493,7 @@ sampleData
 ---
 
 ## VIP Dinner Selector
-URL: https://realaiexamples.com/blueprints/field-dinner-nomination-logic
+URL: https://realaiexamples.com/skills/field-dinner-nomination-logic
 Description: Who gets the steak dinner?
 
 ---
@@ -2543,7 +2543,7 @@ Curate high-value event guest lists.
 ---
 
 ## Voice of Customer Analyzer
-URL: https://realaiexamples.com/blueprints/g2-review-sentiment-analyzer
+URL: https://realaiexamples.com/skills/g2-review-sentiment-analyzer
 Description: Mine G2 & Capterra reviews to find product gaps and marketing hooks.
 
 ---
@@ -2612,7 +2612,7 @@ Start now.
 ---
 
 ## The Converting Cookie Banner
-URL: https://realaiexamples.com/blueprints/gdpr-cookie-banner-copy
+URL: https://realaiexamples.com/skills/gdpr-cookie-banner-copy
 Description: Compliance that doesn't kill data.
 
 ---
@@ -2673,7 +2673,7 @@ For each brand in the CSV:
 ---
 
 ## The Geographic Expansion Planner
-URL: https://realaiexamples.com/blueprints/geo-expansion-planner
+URL: https://realaiexamples.com/skills/geo-expansion-planner
 Description: Where should we launch next?
 
 ---
@@ -2734,7 +2734,7 @@ For each Country in `geo_data.csv`:
 ---
 
 ## The GMB Fleet Optimizer
-URL: https://realaiexamples.com/blueprints/google-my-business-optimizer
+URL: https://realaiexamples.com/skills/google-my-business-optimizer
 Description: Own the map pack for all 50 branches.
 
 ---
@@ -2793,7 +2793,7 @@ For each branch in the CSV:
 ---
 
 ## Local Review Responder
-URL: https://realaiexamples.com/blueprints/google-my-business-review-responder
+URL: https://realaiexamples.com/skills/google-my-business-review-responder
 Description: Write SEO-friendly replies to Google Reviews in seconds.
 
 ---
@@ -2859,7 +2859,7 @@ Start now.
 ---
 
 ## The Holiday Campaign Factory
-URL: https://realaiexamples.com/blueprints/holiday-promo-planner
+URL: https://realaiexamples.com/skills/holiday-promo-planner
 Description: Crush Black Friday across 5 products at once.
 
 ---
@@ -2919,7 +2919,7 @@ For each product in the CSV:
 ---
 
 ## Indirect Revenue Forecaster
-URL: https://realaiexamples.com/blueprints/indirect-revenue-forecaster
+URL: https://realaiexamples.com/skills/indirect-revenue-forecaster
 Description: Forecast revenue from partner-submitted pipeline.
 
 ---
@@ -2977,7 +2977,7 @@ sampleData
 ---
 
 ## The Influencer Auditor
-URL: https://realaiexamples.com/blueprints/influencer-audit
+URL: https://realaiexamples.com/skills/influencer-audit
 Description: Audit 50 creators in one run.
 
 ---
@@ -3035,7 +3035,7 @@ For each creator in `influencer_leads.csv`:
 ---
 
 ## The Influencer Contract Factory
-URL: https://realaiexamples.com/blueprints/influencer-contract-drafter
+URL: https://realaiexamples.com/skills/influencer-contract-drafter
 Description: Generate 50 creator agreements in one run.
 
 ---
@@ -3091,7 +3091,7 @@ For each creator in the CSV:
 ---
 
 ## The Relationship Builder
-URL: https://realaiexamples.com/blueprints/influencer-outreach-manager
+URL: https://realaiexamples.com/skills/influencer-outreach-manager
 Description: Don't send generic follow-ups. Contextualize every DM.
 
 ---
@@ -3149,7 +3149,7 @@ Draft a DM:
 ---
 
 ## The Creator Economy Auditor
-URL: https://realaiexamples.com/blueprints/influencer-roi-calculator
+URL: https://realaiexamples.com/skills/influencer-roi-calculator
 Description: Separate the 'Performers' from the 'Posers'.
 
 ---
@@ -3206,7 +3206,7 @@ For each Influencer:
 ---
 
 ## Influencer Compliance Check
-URL: https://realaiexamples.com/blueprints/influencer-share-verification
+URL: https://realaiexamples.com/skills/influencer-share-verification
 Description: Did they actually post it?
 
 ---
@@ -3257,7 +3257,7 @@ Audit influencer contract compliance.
 ---
 
 ## The Strategic Integration Factory
-URL: https://realaiexamples.com/blueprints/integration-partner-finder
+URL: https://realaiexamples.com/skills/integration-partner-finder
 Description: Find 50 potential partners across 10 niches.
 
 ---
@@ -3313,7 +3313,7 @@ For each niche in the CSV:
 ---
 
 ## Interview Answer Rubric Scorer
-URL: https://realaiexamples.com/blueprints/interview-answer-rubric-scorer
+URL: https://realaiexamples.com/skills/interview-answer-rubric-scorer
 Description: Remove bias from your hiring process.
 
 --- 
@@ -3361,7 +3361,7 @@ Remove bias from your hiring process.
 ---
 
 ## The Invoice Chaser Engine
-URL: https://realaiexamples.com/blueprints/invoice-chaser-sequence
+URL: https://realaiexamples.com/skills/invoice-chaser-sequence
 Description: Recover $10k+ in overdue payments without being awkward.
 
 ---
@@ -3418,7 +3418,7 @@ For each row in the CSV:
 ---
 
 ## Lead Magnet Factory
-URL: https://realaiexamples.com/blueprints/lead-magnet-idea-generator
+URL: https://realaiexamples.com/skills/lead-magnet-idea-generator
 Description: Generate ideas for high-converting tools, templates, and PDFs.
 
 ---
@@ -3485,7 +3485,7 @@ Start now.
 ---
 
 ## The Full-Stack Link Magnet
-URL: https://realaiexamples.com/blueprints/link-magnet-stats-builder
+URL: https://realaiexamples.com/skills/link-magnet-stats-builder
 Description: Research data & build the UI.
 
 ---
@@ -3564,7 +3564,7 @@ Generate a file `pages/[Slug].tsx` containing:
 ---
 
 ## The LinkedIn Comment Miner
-URL: https://realaiexamples.com/blueprints/linkedin-comment-scraper
+URL: https://realaiexamples.com/skills/linkedin-comment-scraper
 Description: Turn engagement into a CSV.
 
 ---
@@ -3626,7 +3626,7 @@ For each entry in the CSV:
 ---
 
 ## Connection Request A/B Tester
-URL: https://realaiexamples.com/blueprints/linkedin-connection-acceptance-rate
+URL: https://realaiexamples.com/skills/linkedin-connection-acceptance-rate
 Description: Which note gets more connects?
 
 ---
@@ -3674,7 +3674,7 @@ Optimize network growth tactics.
 ---
 
 ## The LinkedIn Ghostwriter
-URL: https://realaiexamples.com/blueprints/linkedin-ghostwriter
+URL: https://realaiexamples.com/skills/linkedin-ghostwriter
 Description: Brain Dump -> Viral Post.
 
 ---
@@ -3734,7 +3734,7 @@ For each idea in the CSV:
 ---
 
 ## Viral Poll Builder
-URL: https://realaiexamples.com/blueprints/linkedin-poll-architect
+URL: https://realaiexamples.com/skills/linkedin-poll-architect
 Description: Create LinkedIn polls that drive engagement and uncover leads.
 
 ---
@@ -3797,7 +3797,7 @@ Start now.
 ---
 
 ## Segment Logic Checker
-URL: https://realaiexamples.com/blueprints/list-segmentation-logic-validator
+URL: https://realaiexamples.com/skills/list-segmentation-logic-validator
 Description: Ensure customers aren't in 'Prospect' lists.
 
 ---
@@ -3855,7 +3855,7 @@ sampleData
 ---
 
 ## New Market Entry Simulator
-URL: https://realaiexamples.com/blueprints/market-entry-simulator
+URL: https://realaiexamples.com/skills/market-entry-simulator
 Description: Roleplay a launch in a new country or vertical.
 
 ---
@@ -3904,7 +3904,7 @@ Roleplay a launch in a new country or vertical.
 ---
 
 ## MDF Budget Reconciler
-URL: https://realaiexamples.com/blueprints/mdf-spend-auditor
+URL: https://realaiexamples.com/skills/mdf-spend-auditor
 Description: Reconcile partner receipts against approved funds.
 
 ---
@@ -3962,7 +3962,7 @@ sampleData
 ---
 
 ## Meeting Action Item Enforcer
-URL: https://realaiexamples.com/blueprints/meeting-action-item-enforcer
+URL: https://realaiexamples.com/skills/meeting-action-item-enforcer
 Description: The AI project manager that nags you about tasks.
 
 --- 
@@ -4010,7 +4010,7 @@ The AI project manager that nags you about tasks.
 ---
 
 ## The Narrative Builder
-URL: https://realaiexamples.com/blueprints/monthly-report-generator
+URL: https://realaiexamples.com/skills/monthly-report-generator
 Description: Clients don't read spreadsheets. They read stories.
 
 ---
@@ -4068,7 +4068,7 @@ Draft the Executive Summary:
 ---
 
 ## The Newsjacker
-URL: https://realaiexamples.com/blueprints/newsjacker
+URL: https://realaiexamples.com/skills/newsjacker
 Description: Find trending news and draft social posts on autopilot.
 
 ---
@@ -4127,7 +4127,7 @@ For each niche in the CSV:
 ---
 
 ## List Hygiene Scrub
-URL: https://realaiexamples.com/blueprints/newsletter-list-cleaner
+URL: https://realaiexamples.com/skills/newsletter-list-cleaner
 Description: Remove role-based and disposable emails.
 
 ---
@@ -4186,7 +4186,7 @@ sampleData
 ---
 
 ## The Sponsor Scout Engine
-URL: https://realaiexamples.com/blueprints/newsletter-sponsor-scout
+URL: https://realaiexamples.com/skills/newsletter-sponsor-scout
 Description: Fill your ad slots for the next 6 months.
 
 ---
@@ -4243,7 +4243,7 @@ For each newsletter in the CSV:
 ---
 
 ## The OKR Architect
-URL: https://realaiexamples.com/blueprints/okr-drafter
+URL: https://realaiexamples.com/skills/okr-drafter
 Description: Draft team goals from your vision or industry benchmarks.
 
 ---
@@ -4306,7 +4306,7 @@ Draft team goals from your vision or industry benchmarks.
 ---
 
 ## The Partner Enablement Automator
-URL: https://realaiexamples.com/blueprints/partner-certification-monitor
+URL: https://realaiexamples.com/skills/partner-certification-monitor
 Description: Automatically nag partners 30 days before their certifications expire.
 
 ---
@@ -4365,7 +4365,7 @@ For each certification:
 ---
 
 ## Co-Marketing Lead Splitter
-URL: https://realaiexamples.com/blueprints/partner-event-lead-splitter
+URL: https://realaiexamples.com/skills/partner-event-lead-splitter
 Description: Share leads fairly with partners.
 
 ---
@@ -4416,7 +4416,7 @@ Operationalize lead sharing agreements.
 ---
 
 ## The Partner Hunter Fleet
-URL: https://realaiexamples.com/blueprints/partner-hunter
+URL: https://realaiexamples.com/skills/partner-hunter
 Description: Find 100 non-competing partners at once.
 
 ---
@@ -4474,7 +4474,7 @@ For each niche in the CSV:
 ---
 
 ## Partner Engagement Audit
-URL: https://realaiexamples.com/blueprints/partner-portal-inactivity-audit
+URL: https://realaiexamples.com/skills/partner-portal-inactivity-audit
 Description: Identify 'Ghost' partners who haven't logged in.
 
 ---
@@ -4528,7 +4528,7 @@ Generate `partner_nudge_emails.md`:
 ---
 
 ## Partner Tier Auditor
-URL: https://realaiexamples.com/blueprints/partner-tier-promotion-tracker
+URL: https://realaiexamples.com/skills/partner-tier-promotion-tracker
 Description: Check if partners qualify for Silver/Gold/Platinum.
 
 ---
@@ -4587,7 +4587,7 @@ sampleData
 ---
 
 ## The Strategic Partnership Architect
-URL: https://realaiexamples.com/blueprints/partnership-mou-generator
+URL: https://realaiexamples.com/skills/partnership-mou-generator
 Description: Draft a formal MOU from your notes or a partnership goal.
 
 ---
@@ -4648,7 +4648,7 @@ Draft the 5 key sections:
 ---
 
 ## The Anti-Targeting List Builder
-URL: https://realaiexamples.com/blueprints/persona-anti-targeting
+URL: https://realaiexamples.com/skills/persona-anti-targeting
 Description: Who should you NOT sell to?
 
 ---
@@ -4703,7 +4703,7 @@ Identify "Negative Personas" to exclude from ad targeting.
 ---
 
 ## The AI Persona Researcher
-URL: https://realaiexamples.com/blueprints/persona-builder
+URL: https://realaiexamples.com/skills/persona-builder
 Description: Build detailed customer personas.
 
 ---
@@ -4778,7 +4778,7 @@ Start now.
 ---
 
 ## The VC Pitch Deck Roast
-URL: https://realaiexamples.com/blueprints/pitch-deck-red-team
+URL: https://realaiexamples.com/skills/pitch-deck-red-team
 Description: Simulate a ruthless VC tearing apart your slide deck.
 
 ---
@@ -4828,7 +4828,7 @@ Simulate a ruthless VC tearing apart your slide deck.
 ---
 
 ## The Pitch Deck Storyboard
-URL: https://realaiexamples.com/blueprints/pitch-deck-storyboard
+URL: https://realaiexamples.com/skills/pitch-deck-storyboard
 Description: Build narratives that raise money.
 
 ---
@@ -4892,7 +4892,7 @@ For each startup in the CSV:
 ---
 
 ## Podcast Ad Script Writer
-URL: https://realaiexamples.com/blueprints/podcast-ad-script-writer
+URL: https://realaiexamples.com/skills/podcast-ad-script-writer
 Description: Write 60-second audio ads that sound natural, not robotic.
 
 ---
@@ -4959,7 +4959,7 @@ Start now.
 ---
 
 ## Podcast Guest Prospector
-URL: https://realaiexamples.com/blueprints/podcast-guest-prospector
+URL: https://realaiexamples.com/skills/podcast-guest-prospector
 Description: Find the perfect podcasts to pitch your founder to.
 
 ---
@@ -5028,7 +5028,7 @@ Start now.
 ---
 
 ## The Post-Event Follow-up
-URL: https://realaiexamples.com/blueprints/post-event-followup-sequence
+URL: https://realaiexamples.com/skills/post-event-followup-sequence
 Description: The money is in the follow-up.
 
 ---
@@ -5087,7 +5087,7 @@ For each lead in the CSV:
 ---
 
 ## Event Follow-up Police
-URL: https://realaiexamples.com/blueprints/post-event-followup-sla
+URL: https://realaiexamples.com/skills/post-event-followup-sla
 Description: Did Sales call the leads within 24h?
 
 ---
@@ -5137,7 +5137,7 @@ Enforce event lead SLA compliance.
 ---
 
 ## PR Crisis Severity Scorer
-URL: https://realaiexamples.com/blueprints/pr-crisis-severity-scorer
+URL: https://realaiexamples.com/skills/pr-crisis-severity-scorer
 Description: Decide if you need to wake up the CEO.
 
 --- 
@@ -5185,7 +5185,7 @@ Decide if you need to wake up the CEO.
 ---
 
 ## Geo-Targeted Event Warmup
-URL: https://realaiexamples.com/blueprints/pre-event-warmup-builder
+URL: https://realaiexamples.com/skills/pre-event-warmup-builder
 Description: Find prospects within 50 miles.
 
 ---
@@ -5236,7 +5236,7 @@ Drive attendance to field events.
 ---
 
 ## Press Release Architect
-URL: https://realaiexamples.com/blueprints/press-release-drafter
+URL: https://realaiexamples.com/skills/press-release-drafter
 Description: Write industry-standard press releases that journalists might actually read.
 
 ---
@@ -5307,7 +5307,7 @@ Start now.
 ---
 
 ## The Product Hunt Launch Manager
-URL: https://realaiexamples.com/blueprints/product-hunt-manager
+URL: https://realaiexamples.com/skills/product-hunt-manager
 Description: Get #1 Product of the Day.
 
 ---
@@ -5372,7 +5372,7 @@ For each product in the CSV:
 ---
 
 ## LinkedIn Profile Auditor
-URL: https://realaiexamples.com/blueprints/profile-optimization-score
+URL: https://realaiexamples.com/skills/profile-optimization-score
 Description: Does your rep look professional?
 
 ---
@@ -5423,7 +5423,7 @@ Ensure sales team social presence is optimized.
 ---
 
 ## The High-Ticket Proposal Writer
-URL: https://realaiexamples.com/blueprints/proposal-writer
+URL: https://realaiexamples.com/skills/proposal-writer
 Description: Generate custom proposals for each lead.
 
 ---
@@ -5497,7 +5497,7 @@ Start now.
 ---
 
 ## The QR Code Strategist
-URL: https://realaiexamples.com/blueprints/qr-code-strategy
+URL: https://realaiexamples.com/skills/qr-code-strategy
 Description: Bridge offline to online.
 
 ---
@@ -5559,7 +5559,7 @@ For each location in the CSV:
 ---
 
 ## Complex Referral Splitter
-URL: https://realaiexamples.com/blueprints/referral-commission-splitter
+URL: https://realaiexamples.com/skills/referral-commission-splitter
 Description: Calculate 3-way commission splits for partners.
 
 ---
@@ -5615,7 +5615,7 @@ sampleData
 ---
 
 ## The Referral Fraud Hunter
-URL: https://realaiexamples.com/blueprints/referral-fraud-detector
+URL: https://realaiexamples.com/skills/referral-fraud-detector
 Description: Stop paying for fake invites.
 
 ---
@@ -5675,7 +5675,7 @@ For each row in the CSV:
 ---
 
 ## The Referral Program Architect
-URL: https://realaiexamples.com/blueprints/referral-program-architect
+URL: https://realaiexamples.com/skills/referral-program-architect
 Description: Turn users into salespeople.
 
 ---
@@ -5737,7 +5737,7 @@ For each brand in the CSV:
 ---
 
 ## MAP Pricing Auditor
-URL: https://realaiexamples.com/blueprints/reseller-map-compliance
+URL: https://realaiexamples.com/skills/reseller-map-compliance
 Description: Ensure resellers aren't undercutting your price.
 
 ---
@@ -5795,7 +5795,7 @@ sampleData
 ---
 
 ## The Review-to-Ad Factory
-URL: https://realaiexamples.com/blueprints/review-to-ad
+URL: https://realaiexamples.com/skills/review-to-ad
 Description: Turn 100 reviews into 100 ad variations.
 
 ---
@@ -5853,7 +5853,7 @@ For each review in the CSV:
 ---
 
 ## The Roadmap Prioritizer (RICE)
-URL: https://realaiexamples.com/blueprints/roadmap-prioritizer
+URL: https://realaiexamples.com/skills/roadmap-prioritizer
 Description: Build what matters.
 
 ---
@@ -5913,7 +5913,7 @@ For each feature in the CSV:
 ---
 
 ## The Packaging Strategist
-URL: https://realaiexamples.com/blueprints/saas-pricing-calculator
+URL: https://realaiexamples.com/skills/saas-pricing-calculator
 Description: Price is just a number. Packaging is psychology.
 
 ---
@@ -5971,7 +5971,7 @@ For each product:
 ---
 
 ## The Scope Creep Defender
-URL: https://realaiexamples.com/blueprints/scope-creep-email-drafter
+URL: https://realaiexamples.com/skills/scope-creep-email-drafter
 Description: Say 'No' without losing the client.
 
 ---
@@ -6032,7 +6032,7 @@ For each request in the CSV:
 ---
 
 ## SEO Content Gap Mapper
-URL: https://realaiexamples.com/blueprints/seo-content-gap-finder-v2
+URL: https://realaiexamples.com/skills/seo-content-gap-finder-v2
 Description: Find high-value pages your competitors have but you don't.
 
 ---
@@ -6098,7 +6098,7 @@ Start now.
 ---
 
 ## Internal Link Graph Builder
-URL: https://realaiexamples.com/blueprints/seo-internal-linking-automator
+URL: https://realaiexamples.com/skills/seo-internal-linking-automator
 Description: Boost SEO by finding internal linking opportunities automatically.
 
 ---
@@ -6177,7 +6177,7 @@ Start now.
 ---
 
 ## Bulk Meta Tag Writer
-URL: https://realaiexamples.com/blueprints/seo-meta-tag-bulk-optimizer
+URL: https://realaiexamples.com/skills/seo-meta-tag-bulk-optimizer
 Description: Fix missing or duplicate SEO titles and descriptions in seconds.
 
 ---
@@ -6239,7 +6239,7 @@ Start now.
 ---
 
 ## Slack Community Contextual Welcomer
-URL: https://realaiexamples.com/blueprints/slack-contextual-welcomer
+URL: https://realaiexamples.com/skills/slack-contextual-welcomer
 Description: Welcome new members based on their bio.
 
 --- 
@@ -6287,7 +6287,7 @@ Welcome new members based on their bio.
 ---
 
 ## Social-to-Deal Correlator
-URL: https://realaiexamples.com/blueprints/social-engagement-to-opportunity
+URL: https://realaiexamples.com/skills/social-engagement-to-opportunity
 Description: Do likes lead to deals?
 
 ---
@@ -6338,7 +6338,7 @@ Prove the ROI of social selling.
 ---
 
 ## Social Activity Mix
-URL: https://realaiexamples.com/blueprints/social-selling-activity-ratio
+URL: https://realaiexamples.com/skills/social-selling-activity-ratio
 Description: Are we doing enough social touches?
 
 ---
@@ -6392,7 +6392,7 @@ Generate `activity_audit.md`:
 ---
 
 ## Alumni Champion Finder
-URL: https://realaiexamples.com/blueprints/social-signal-alumni-miner
+URL: https://realaiexamples.com/skills/social-signal-alumni-miner
 Description: Track where your happy users moved.
 
 ---
@@ -6441,7 +6441,7 @@ Generate high-warmth leads.
 ---
 
 ## Session Pipeline Attribution
-URL: https://realaiexamples.com/blueprints/speaker-session-attribution
+URL: https://realaiexamples.com/skills/speaker-session-attribution
 Description: Did the CEO's keynote generate deals?
 
 ---
@@ -6491,7 +6491,7 @@ Measure ROI of speaking engagements.
 ---
 
 ## Standup Blocker Extractor
-URL: https://realaiexamples.com/blueprints/standup-blocker-extractor
+URL: https://realaiexamples.com/skills/standup-blocker-extractor
 Description: Auto-summarize what is actually blocking your team.
 
 ---
@@ -6541,7 +6541,7 @@ Auto-summarize what is actually blocking your team.
 ---
 
 ## Swag Demand Planner
-URL: https://realaiexamples.com/blueprints/swag-inventory-forecaster
+URL: https://realaiexamples.com/skills/swag-inventory-forecaster
 Description: How many t-shirts do we need?
 
 ---
@@ -6591,7 +6591,7 @@ Optimize inventory for events.
 ---
 
 ## The Strategic SWOT Generator
-URL: https://realaiexamples.com/blueprints/swot-analysis-generator
+URL: https://realaiexamples.com/skills/swot-analysis-generator
 Description: Build a SWOT matrix from your notes or market research.
 
 ---
@@ -6649,7 +6649,7 @@ Build a SWOT matrix from your notes or market research.
 ---
 
 ## The AI TAM Researcher
-URL: https://realaiexamples.com/blueprints/tam-calculator
+URL: https://realaiexamples.com/skills/tam-calculator
 Description: Calculate your market size using real-world data.
 
 ---
@@ -6711,7 +6711,7 @@ For each segment in the CSV:
 ---
 
 ## The Testimonial Factory
-URL: https://realaiexamples.com/blueprints/testimonial-extractor
+URL: https://realaiexamples.com/skills/testimonial-extractor
 Description: Process 50 calls into a website-ready library.
 
 ---
@@ -6766,7 +6766,7 @@ For each `.txt` file in `transcripts/`:
 ---
 
 ## The Auto-Plug Writer
-URL: https://realaiexamples.com/blueprints/twitter-auto-plug-writer
+URL: https://realaiexamples.com/skills/twitter-auto-plug-writer
 Description: Drive traffic from viral tweets.
 
 ---
@@ -6826,7 +6826,7 @@ For each offer in the CSV:
 ---
 
 ## The Twitter Bio Optimizer
-URL: https://realaiexamples.com/blueprints/twitter-bio-optimizer
+URL: https://realaiexamples.com/skills/twitter-bio-optimizer
 Description: Get followed at a glance.
 
 ---
@@ -6887,7 +6887,7 @@ For each profile in the CSV:
 ---
 
 ## Viral Hook Analyzer
-URL: https://realaiexamples.com/blueprints/twitter-thread-hook-analyzer
+URL: https://realaiexamples.com/skills/twitter-thread-hook-analyzer
 Description: Which first line gets the click?
 
 ---
@@ -6936,7 +6936,7 @@ Optimize social hook efficacy.
 ---
 
 ## The Use Case Matrix Builder
-URL: https://realaiexamples.com/blueprints/use-case-matrix
+URL: https://realaiexamples.com/skills/use-case-matrix
 Description: Map features to pain points.
 
 ---
@@ -6999,7 +6999,7 @@ For each Feature + Persona pair:
 ---
 
 ## Meetup City Selector
-URL: https://realaiexamples.com/blueprints/user-group-geo-locator
+URL: https://realaiexamples.com/skills/user-group-geo-locator
 Description: Where should we host the next dinner?
 
 ---
@@ -7051,7 +7051,7 @@ Optimize event locations for attendance.
 ---
 
 ## The Vendor Negotiator
-URL: https://realaiexamples.com/blueprints/vendor-negotiation-script
+URL: https://realaiexamples.com/skills/vendor-negotiation-script
 Description: Save 20% on your software stack from a bill or a name.
 
 ---
@@ -7113,7 +7113,7 @@ Save 20% on your software stack from a bill or a name.
 ---
 
 ## The Video Testimonial Director
-URL: https://realaiexamples.com/blueprints/video-testimonial-script
+URL: https://realaiexamples.com/skills/video-testimonial-script
 Description: Help your clients help you.
 
 ---
@@ -7177,7 +7177,7 @@ For each client in the CSV:
 ---
 
 ## Newsletter Content Curator
-URL: https://realaiexamples.com/blueprints/weekly-newsletter-compiler
+URL: https://realaiexamples.com/skills/weekly-newsletter-compiler
 Description: Automate the research for your "Weekly Round-Up" email.
 
 ---
@@ -7243,7 +7243,7 @@ Start now.
 ---
 
 ## The White Label Dashboard Setup
-URL: https://realaiexamples.com/blueprints/white-label-dashboard-setup
+URL: https://realaiexamples.com/skills/white-label-dashboard-setup
 Description: Standardize your client reporting.
 
 ---
@@ -7306,7 +7306,7 @@ For each client in the CSV:
 ---
 
 ## White Paper Ideator
-URL: https://realaiexamples.com/blueprints/white-paper-topic-generator
+URL: https://realaiexamples.com/skills/white-paper-topic-generator
 Description: Brainstorm high-authority content that enterprise buyers actually read.
 
 ---

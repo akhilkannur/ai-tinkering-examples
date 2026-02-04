@@ -1,7 +1,7 @@
 # Blueprints: Social Content
 
 ## The Bio Link Architect
-URL: https://realaiexamples.com/blueprints/bio-link-optimizer
+URL: https://realaiexamples.com/skills/bio-link-optimizer
 Description: Optimize your 'Link in Bio' from a URL or a goal.
 
 ---
@@ -67,7 +67,7 @@ Optimize your 'Link in Bio' from a URL or a goal.
 ---
 
 ## The LinkedIn Carousel Factory
-URL: https://realaiexamples.com/blueprints/linkedin-carousel
+URL: https://realaiexamples.com/skills/linkedin-carousel
 Description: Turn your blog posts into viral carousel slides.
 
 ---
@@ -140,7 +140,7 @@ Start now.
 ---
 
 ## The TikTok Hook Generator
-URL: https://realaiexamples.com/blueprints/tiktok-hook-generator
+URL: https://realaiexamples.com/skills/tiktok-hook-generator
 Description: Viral opening lines for your niche.
 
 ---
@@ -196,7 +196,7 @@ Read `content_topic.txt` and Apply Frameworks:
 ---
 
 ## The Twitter Thread Architect
-URL: https://realaiexamples.com/blueprints/twitter-thread-hook-writer
+URL: https://realaiexamples.com/skills/twitter-thread-hook-writer
 Description: Generate viral thread hooks from your story or trending news.
 
 ---

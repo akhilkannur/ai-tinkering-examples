@@ -1,7 +1,7 @@
 # Blueprints: Marketing
 
 ## ABM Campaign Asset Builder
-URL: https://realaiexamples.com/blueprints/abm-campaign-asset-builder
+URL: https://realaiexamples.com/skills/abm-campaign-asset-builder
 Description: Generate personalized landing page copy for target accounts.
 
 ---
@@ -71,7 +71,7 @@ Start now.
 ---
 
 ## Webinar Follow-Up Architect
-URL: https://realaiexamples.com/blueprints/automated-webinar-followup-sequence
+URL: https://realaiexamples.com/skills/automated-webinar-followup-sequence
 Description: Segment attendees vs. no-shows and write targeted nurture sequences.
 
 ---
@@ -146,7 +146,7 @@ Start now.
 ---
 
 ## Brand Voice Chameleon
-URL: https://realaiexamples.com/blueprints/brand-voice-rewriter
+URL: https://realaiexamples.com/skills/brand-voice-rewriter
 Description: Rewrite any text to match your specific brand personality.
 
 ---
@@ -215,7 +215,7 @@ Start now.
 ---
 
 ## Case Study Interviewer
-URL: https://realaiexamples.com/blueprints/case-study-interviewer-bot
+URL: https://realaiexamples.com/skills/case-study-interviewer-bot
 Description: The perfect script for extracting testimonials from happy clients.
 
 ---
@@ -284,7 +284,7 @@ Start now.
 ---
 
 ## Ad Library Decoder
-URL: https://realaiexamples.com/blueprints/competitor-ad-library-spy
+URL: https://realaiexamples.com/skills/competitor-ad-library-spy
 Description: Reverse-engineer your competitor's ad strategy.
 
 ---
@@ -352,7 +352,7 @@ Start now.
 ---
 
 ## Competitor Content Spy
-URL: https://realaiexamples.com/blueprints/competitor-content-pillar-analyst
+URL: https://realaiexamples.com/skills/competitor-content-pillar-analyst
 Description: Steal the content strategy that is working for your rivals.
 
 ---
@@ -418,7 +418,7 @@ Start now.
 ---
 
 ## Competitor Pricing Watchdog
-URL: https://realaiexamples.com/blueprints/competitor-pricing-alert-system
+URL: https://realaiexamples.com/skills/competitor-pricing-alert-system
 Description: Detects hidden pricing changes on competitor websites.
 
 ---
@@ -491,7 +491,7 @@ Start now.
 ---
 
 ## Booth ROI Estimator
-URL: https://realaiexamples.com/blueprints/event-sponsorship-roi-calculator
+URL: https://realaiexamples.com/skills/event-sponsorship-roi-calculator
 Description: Should you sponsor that conference? Do the math first.
 
 ---
@@ -559,7 +559,7 @@ Start now.
 ---
 
 ## Voice of Customer Analyzer
-URL: https://realaiexamples.com/blueprints/g2-review-sentiment-analyzer
+URL: https://realaiexamples.com/skills/g2-review-sentiment-analyzer
 Description: Mine G2 & Capterra reviews to find product gaps and marketing hooks.
 
 ---
@@ -631,7 +631,7 @@ Start now.
 ---
 
 ## Local Review Responder
-URL: https://realaiexamples.com/blueprints/google-my-business-review-responder
+URL: https://realaiexamples.com/skills/google-my-business-review-responder
 Description: Write SEO-friendly replies to Google Reviews in seconds.
 
 ---
@@ -700,7 +700,7 @@ Start now.
 ---
 
 ## The Holiday Campaign Factory
-URL: https://realaiexamples.com/blueprints/holiday-promo-planner
+URL: https://realaiexamples.com/skills/holiday-promo-planner
 Description: Crush Black Friday across 5 products at once.
 
 ---
@@ -765,7 +765,7 @@ For each product in the CSV:
 ---
 
 ## The Influencer Auditor
-URL: https://realaiexamples.com/blueprints/influencer-audit
+URL: https://realaiexamples.com/skills/influencer-audit
 Description: Audit 50 creators in one run.
 
 ---
@@ -828,7 +828,7 @@ For each creator in `influencer_leads.csv`:
 ---
 
 ## Influencer Relationship Tracker
-URL: https://realaiexamples.com/blueprints/influencer-outreach-manager
+URL: https://realaiexamples.com/skills/influencer-outreach-manager
 Description: Manage your influencer pipeline without a fancy CRM.
 
 ---
@@ -896,7 +896,7 @@ Start now.
 ---
 
 ## Lead Magnet Factory
-URL: https://realaiexamples.com/blueprints/lead-magnet-idea-generator
+URL: https://realaiexamples.com/skills/lead-magnet-idea-generator
 Description: Generate ideas for high-converting tools, templates, and PDFs.
 
 ---
@@ -966,7 +966,7 @@ Start now.
 ---
 
 ## Viral Poll Builder
-URL: https://realaiexamples.com/blueprints/linkedin-poll-architect
+URL: https://realaiexamples.com/skills/linkedin-poll-architect
 Description: Create LinkedIn polls that drive engagement and uncover leads.
 
 ---
@@ -1032,7 +1032,7 @@ Start now.
 ---
 
 ## Podcast Ad Script Writer
-URL: https://realaiexamples.com/blueprints/podcast-ad-script-writer
+URL: https://realaiexamples.com/skills/podcast-ad-script-writer
 Description: Write 60-second audio ads that sound natural, not robotic.
 
 ---
@@ -1102,7 +1102,7 @@ Start now.
 ---
 
 ## Podcast Guest Prospector
-URL: https://realaiexamples.com/blueprints/podcast-guest-prospector
+URL: https://realaiexamples.com/skills/podcast-guest-prospector
 Description: Find the perfect podcasts to pitch your founder to.
 
 ---
@@ -1174,7 +1174,7 @@ Start now.
 ---
 
 ## Press Release Architect
-URL: https://realaiexamples.com/blueprints/press-release-drafter
+URL: https://realaiexamples.com/skills/press-release-drafter
 Description: Write industry-standard press releases that journalists might actually read.
 
 ---
@@ -1248,7 +1248,7 @@ Start now.
 ---
 
 ## The Product Hunt Launch Manager
-URL: https://realaiexamples.com/blueprints/product-hunt-manager
+URL: https://realaiexamples.com/skills/product-hunt-manager
 Description: Get #1 Product of the Day.
 
 ---
@@ -1318,7 +1318,7 @@ For each product in the CSV:
 ---
 
 ## The Review-to-Ad Factory
-URL: https://realaiexamples.com/blueprints/review-to-ad
+URL: https://realaiexamples.com/skills/review-to-ad
 Description: Turn 100 reviews into 100 ad variations.
 
 ---
@@ -1381,7 +1381,7 @@ For each review in the CSV:
 ---
 
 ## SEO Content Gap Mapper
-URL: https://realaiexamples.com/blueprints/seo-content-gap-finder-v2
+URL: https://realaiexamples.com/skills/seo-content-gap-finder-v2
 Description: Find high-value pages your competitors have but you don't.
 
 ---
@@ -1450,7 +1450,7 @@ Start now.
 ---
 
 ## Internal Link Graph Builder
-URL: https://realaiexamples.com/blueprints/seo-internal-linking-automator
+URL: https://realaiexamples.com/skills/seo-internal-linking-automator
 Description: Boost SEO by finding internal linking opportunities automatically.
 
 ---
@@ -1532,7 +1532,7 @@ Start now.
 ---
 
 ## Bulk Meta Tag Writer
-URL: https://realaiexamples.com/blueprints/seo-meta-tag-bulk-optimizer
+URL: https://realaiexamples.com/skills/seo-meta-tag-bulk-optimizer
 Description: Fix missing or duplicate SEO titles and descriptions in seconds.
 
 ---
@@ -1597,7 +1597,7 @@ Start now.
 ---
 
 ## Newsletter Content Curator
-URL: https://realaiexamples.com/blueprints/weekly-newsletter-compiler
+URL: https://realaiexamples.com/skills/weekly-newsletter-compiler
 Description: Automate the research for your "Weekly Round-Up" email.
 
 ---
@@ -1666,7 +1666,7 @@ Start now.
 ---
 
 ## White Paper Ideator
-URL: https://realaiexamples.com/blueprints/white-paper-topic-generator
+URL: https://realaiexamples.com/skills/white-paper-topic-generator
 Description: Brainstorm high-authority content that enterprise buyers actually read.
 
 ---

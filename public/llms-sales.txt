@@ -1,7 +1,7 @@
 # Blueprints: Sales
 
 ## The Abandoned Cart SMS Writer
-URL: https://realaiexamples.com/blueprints/abandoned-cart-sms
+URL: https://realaiexamples.com/skills/abandoned-cart-sms
 Description: Recover 15% of lost sales via text.
 
 ---
@@ -64,7 +64,7 @@ For each customer in the CSV:
 ---
 
 ## The Demo Playbook Factory
-URL: https://realaiexamples.com/blueprints/demo-call-scripter
+URL: https://realaiexamples.com/skills/demo-call-scripter
 Description: Custom demo scripts for every industry you sell to.
 
 ---
@@ -126,7 +126,7 @@ For each industry in the CSV:
 ---
 
 ## The Lost Deal Reviver
-URL: https://realaiexamples.com/blueprints/lost-deal-reviver
+URL: https://realaiexamples.com/skills/lost-deal-reviver
 Description: Re-engage 100 cold leads with 'New News'.
 
 ---
@@ -189,7 +189,7 @@ For each lead in the CSV:
 ---
 
 ## The Pre-Meeting Dossier
-URL: https://realaiexamples.com/blueprints/pre-meeting-dossier
+URL: https://realaiexamples.com/skills/pre-meeting-dossier
 Description: Never go into a call blind.
 
 ---
@@ -257,7 +257,7 @@ For each prospect in the CSV:
 ---
 
 ## The Psychological Buyer Profiler
-URL: https://realaiexamples.com/blueprints/psychological-meeting-profiler
+URL: https://realaiexamples.com/skills/psychological-meeting-profiler
 Description: Know how to close them.
 
 ---
@@ -328,7 +328,7 @@ For each transcript in the CSV:
 ---
 
 ## The Support Upseller
-URL: https://realaiexamples.com/blueprints/support-ticket-upseller
+URL: https://realaiexamples.com/skills/support-ticket-upseller
 Description: Turn complaints into cash.
 
 ---

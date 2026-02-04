@@ -1,7 +1,7 @@
 # Blueprints: Security
 
 ## The API Key Rotator
-URL: https://realaiexamples.com/blueprints/api-key-rotator-checklist
+URL: https://realaiexamples.com/skills/api-key-rotator-checklist
 Description: Don't get hacked.
 
 ---

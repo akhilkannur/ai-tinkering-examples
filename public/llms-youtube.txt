@@ -1,7 +1,7 @@
 # Blueprints: YouTube
 
 ## The Chapter Maker
-URL: https://realaiexamples.com/blueprints/youtube-chapter-maker
+URL: https://realaiexamples.com/skills/youtube-chapter-maker
 Description: Rank for key moments.
 
 ---
@@ -68,7 +68,7 @@ For each transcript in the CSV:
 ---
 
 ## The Community Tab Poster
-URL: https://realaiexamples.com/blueprints/youtube-community-tab-poster
+URL: https://realaiexamples.com/skills/youtube-community-tab-poster
 Description: Keep subscribers alive between uploads.
 
 ---
@@ -133,7 +133,7 @@ For each channel in the CSV:
 ---
 
 ## The Thumbnail Strategy Factory
-URL: https://realaiexamples.com/blueprints/youtube-thumbnail-ab-tester
+URL: https://realaiexamples.com/skills/youtube-thumbnail-ab-tester
 Description: High-CTR concepts from your ideas or viral competitors.
 
 ---

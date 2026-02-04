@@ -1,7 +1,7 @@
 # Blueprints: Tech SEO
 
 ## The Canonical Fleet Auditor
-URL: https://realaiexamples.com/blueprints/canonical-tag-auditor
+URL: https://realaiexamples.com/skills/canonical-tag-auditor
 Description: Audit duplicate content across 1000 pages.
 
 ---
@@ -65,7 +65,7 @@ For each URL in the list:
 ---
 
 ## The Hreflang Builder
-URL: https://realaiexamples.com/blueprints/hreflang-tag-builder
+URL: https://realaiexamples.com/skills/hreflang-tag-builder
 Description: Fix international SEO.
 
 ---
@@ -133,7 +133,7 @@ For each path in the CSV:
 ---
 
 ## The Link Graph Architect
-URL: https://realaiexamples.com/blueprints/internal-link-graph-visualizer
+URL: https://realaiexamples.com/skills/internal-link-graph-visualizer
 Description: Visualize your site structure.
 
 ---
@@ -197,7 +197,7 @@ Visualize your site structure.
 ---
 
 ## The Log File Analyzer
-URL: https://realaiexamples.com/blueprints/log-file-parser-mock
+URL: https://realaiexamples.com/skills/log-file-parser-mock
 Description: What is Googlebot doing?
 
 ---
@@ -263,7 +263,7 @@ For each log file in the CSV:
 ---
 
 ## The Migration Map Generator
-URL: https://realaiexamples.com/blueprints/redirect-map-generator
+URL: https://realaiexamples.com/skills/redirect-map-generator
 Description: Don't lose traffic during a redesign.
 
 ---
@@ -327,7 +327,7 @@ For each row in the CSV:
 ---
 
 ## The Content Inventory Builder
-URL: https://realaiexamples.com/blueprints/sitemap-to-csv-inventory
+URL: https://realaiexamples.com/skills/sitemap-to-csv-inventory
 Description: Map your entire site.
 
 ---

@@ -1,7 +1,7 @@
 # Blueprints: On-Page SEO
 
 ## The Internal Link Opportunity Finder
-URL: https://realaiexamples.com/blueprints/internal-link-finder
+URL: https://realaiexamples.com/skills/internal-link-finder
 Description: Connect your content clusters.
 
 ---

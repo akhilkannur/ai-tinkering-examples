@@ -1,7 +1,7 @@
 # Blueprints: Sales Enablement
 
 ## Content Usage Tracker
-URL: https://realaiexamples.com/blueprints/battlecard-usage-tracker
+URL: https://realaiexamples.com/skills/battlecard-usage-tracker
 Description: Which battlecards do reps actually use?
 
 --- 
@@ -60,7 +60,7 @@ sampleData
 ---
 
 ## The Case Study Factory
-URL: https://realaiexamples.com/blueprints/case-study-factory
+URL: https://realaiexamples.com/skills/case-study-factory
 Description: Turn 10 transcripts into 10 closed deals.
 
 ---
@@ -122,7 +122,7 @@ For each `.txt` file in `client_interviews/`:
 ---
 
 ## Cold Call Simulator (The Grumpy Prospect)
-URL: https://realaiexamples.com/blueprints/cold-call-objection-simulator
+URL: https://realaiexamples.com/skills/cold-call-objection-simulator
 Description: Practice handling "I'm not interested" before you pick up the phone.
 
 ---
@@ -191,7 +191,7 @@ Start the roleplay now. Respond to my pitch.
 ---
 
 ## The Objection Crusher
-URL: https://realaiexamples.com/blueprints/objection-crusher
+URL: https://realaiexamples.com/skills/objection-crusher
 Description: Create battle cards from your notes or competitor reviews.
 
 ---
@@ -256,7 +256,7 @@ For each category:
 ---
 
 ## The Sales Battlecard Builder
-URL: https://realaiexamples.com/blueprints/sales-battlecard-builder
+URL: https://realaiexamples.com/skills/sales-battlecard-builder
 Description: Win against competitors.
 
 ---
@@ -331,7 +331,7 @@ Start now.
 ---
 
 ## Sales Script Compliance
-URL: https://realaiexamples.com/blueprints/sales-call-keyword-tracker
+URL: https://realaiexamples.com/skills/sales-call-keyword-tracker
 Description: Did they say the pricing disclaimer?
 
 --- 
@@ -391,7 +391,7 @@ sampleData
 ---
 
 ## The Call Sentiment Tracker
-URL: https://realaiexamples.com/blueprints/sales-call-sentiment-tracker
+URL: https://realaiexamples.com/skills/sales-call-sentiment-tracker
 Description: Analyze the mood of your sales calls.
 
 ---
@@ -449,7 +449,7 @@ For each row in `call_transcripts.csv`:
 ---
 
 ## Discovery Call Scripter
-URL: https://realaiexamples.com/blueprints/sales-discovery-question-generator
+URL: https://realaiexamples.com/skills/sales-discovery-question-generator
 Description: Generate deep, probing questions specific to your prospect's role.
 
 ---
@@ -515,7 +515,7 @@ Start now.
 ---
 
 ## The Closer's Script
-URL: https://realaiexamples.com/blueprints/sales-negotiation-script-writer
+URL: https://realaiexamples.com/skills/sales-negotiation-script-writer
 Description: Handle "It's too expensive" like a pro.
 
 ---
@@ -581,7 +581,7 @@ Start now.
 ---
 
 ## Competitor Battlecard Builder
-URL: https://realaiexamples.com/blueprints/sales-objection-battlecard-generator
+URL: https://realaiexamples.com/skills/sales-objection-battlecard-generator
 Description: Arm your sales team with scripts to beat specific competitors.
 
 ---

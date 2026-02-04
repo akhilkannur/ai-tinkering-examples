@@ -1,7 +1,7 @@
 # Blueprints: Sales Eng
 
 ## The Tech Displacement Factory
-URL: https://realaiexamples.com/blueprints/builtwith-tech-pivot
+URL: https://realaiexamples.com/skills/builtwith-tech-pivot
 Description: Find every user of 10 competitors in one run.
 
 ---
@@ -63,7 +63,7 @@ For each technology in the list:
 ---
 
 ## The Spam Word Hunter
-URL: https://realaiexamples.com/blueprints/cold-email-spam-checker
+URL: https://realaiexamples.com/skills/cold-email-spam-checker
 Description: Don't trigger the filters.
 
 ---
@@ -144,7 +144,7 @@ Start now.
 ---
 
 ## The Email Permutator
-URL: https://realaiexamples.com/blueprints/email-pattern-guesser
+URL: https://realaiexamples.com/skills/email-pattern-guesser
 Description: Guess email addresses from names.
 
 ---

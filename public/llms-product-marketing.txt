@@ -1,7 +1,7 @@
 # Blueprints: Product Marketing
 
 ## The Beta Tester Recruiter
-URL: https://realaiexamples.com/blueprints/beta-tester-recruiter
+URL: https://realaiexamples.com/skills/beta-tester-recruiter
 Description: Find your first 50 users.
 
 ---
@@ -67,7 +67,7 @@ For each user in the CSV:
 ---
 
 ## Feature Parity Matrix
-URL: https://realaiexamples.com/blueprints/competitor-matrix-visualizer
+URL: https://realaiexamples.com/skills/competitor-matrix-visualizer
 Description: Build the "Us vs Them" comparison grid for your pricing page.
 
 ---
@@ -140,7 +140,7 @@ Start now.
 ---
 
 ## Feedback Auto-Tagger
-URL: https://realaiexamples.com/blueprints/customer-feedback-tagger
+URL: https://realaiexamples.com/skills/customer-feedback-tagger
 Description: Organize messy user feedback into a clean product roadmap.
 
 ---
@@ -205,7 +205,7 @@ Start now.
 ---
 
 ## The Feature Adoption Analyzer
-URL: https://realaiexamples.com/blueprints/feature-adoption-analyzer
+URL: https://realaiexamples.com/skills/feature-adoption-analyzer
 Description: Who is actually using your new tool?
 
 ---
@@ -266,7 +266,7 @@ For each Segment:
 ---
 
 ## The Product Marketing Engine
-URL: https://realaiexamples.com/blueprints/feature-announcement
+URL: https://realaiexamples.com/skills/feature-announcement
 Description: Turn technical updates into sales momentum.
 
 ---
@@ -329,7 +329,7 @@ For each feature in the CSV:
 ---
 
 ## The Use Case Matrix Builder
-URL: https://realaiexamples.com/blueprints/use-case-matrix
+URL: https://realaiexamples.com/skills/use-case-matrix
 Description: Map features to pain points.
 
 ---

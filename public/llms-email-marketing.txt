@@ -1,7 +1,7 @@
 # Blueprints: Email Marketing
 
 ## The Subject Line Factory
-URL: https://realaiexamples.com/blueprints/email-subject-line-tester
+URL: https://realaiexamples.com/skills/email-subject-line-tester
 Description: Generate A/B test variations for 10 campaigns in one run.
 
 ---
@@ -64,7 +64,7 @@ For each campaign in the CSV:
 ---
 
 ## Segment Logic Checker
-URL: https://realaiexamples.com/blueprints/list-segmentation-logic-validator
+URL: https://realaiexamples.com/skills/list-segmentation-logic-validator
 Description: Ensure customers aren't in 'Prospect' lists.
 
 --- 
@@ -123,7 +123,7 @@ sampleData
 ---
 
 ## List Hygiene Scrub
-URL: https://realaiexamples.com/blueprints/newsletter-list-cleaner
+URL: https://realaiexamples.com/skills/newsletter-list-cleaner
 Description: Remove role-based and disposable emails.
 
 --- 

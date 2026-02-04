@@ -1,7 +1,7 @@
 # Blueprints: Social Media
 
 ## Engagement Truth Teller
-URL: https://realaiexamples.com/blueprints/social-engagement-rate-calculator
+URL: https://realaiexamples.com/skills/social-engagement-rate-calculator
 Description: Vanity metrics vs Real engagement.
 
 --- 

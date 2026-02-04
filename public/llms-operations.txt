@@ -1,7 +1,7 @@
 # Blueprints: Operations
 
 ## The AI Manager's Handbook
-URL: https://realaiexamples.com/blueprints/ai-manager-handbook
+URL: https://realaiexamples.com/skills/ai-manager-handbook
 Description: Teach AI your specific rules once.
 
 ---

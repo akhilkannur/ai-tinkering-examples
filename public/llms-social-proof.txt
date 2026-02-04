@@ -1,7 +1,7 @@
 # Blueprints: Social Proof
 
 ## The Testimonial Factory
-URL: https://realaiexamples.com/blueprints/testimonial-extractor
+URL: https://realaiexamples.com/skills/testimonial-extractor
 Description: Process 50 calls into a website-ready library.
 
 ---
@@ -61,7 +61,7 @@ For each `.txt` file in `transcripts/`:
 ---
 
 ## The Video Testimonial Director
-URL: https://realaiexamples.com/blueprints/video-testimonial-script
+URL: https://realaiexamples.com/skills/video-testimonial-script
 Description: Help your clients help you.
 
 ---

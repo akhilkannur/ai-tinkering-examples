@@ -1,7 +1,7 @@
 # Blueprints: Local SEO
 
 ## The GMB Fleet Optimizer
-URL: https://realaiexamples.com/blueprints/google-my-business-optimizer
+URL: https://realaiexamples.com/skills/google-my-business-optimizer
 Description: Own the map pack for all 50 branches.
 
 ---

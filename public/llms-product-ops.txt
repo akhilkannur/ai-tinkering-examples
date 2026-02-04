@@ -1,7 +1,7 @@
 # Blueprints: Product Ops
 
 ## Feature Sunsetting Comms Planner
-URL: https://realaiexamples.com/blueprints/feature-retirement-comms-planner
+URL: https://realaiexamples.com/skills/feature-retirement-comms-planner
 Description: Kill a feature without killing customer trust.
 
 --- 
@@ -49,7 +49,7 @@ Kill a feature without killing customer trust.
 ---
 
 ## The Friction Hunter Simulation
-URL: https://realaiexamples.com/blueprints/user-journey-friction-simulator
+URL: https://realaiexamples.com/skills/user-journey-friction-simulator
 Description: Roleplay your angriest customer.
 
 ---

@@ -78,7 +78,7 @@ export default function StrategicKits() {
               <div className="space-y-3 mt-auto">
                 <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-text-secondary/40 mb-4">Included Blueprints:</p>
                 {kit.recipes.map((r, rIdx) => (
-                  <Link key={rIdx} href={`/blueprints/${r.id}`} className="group/item flex items-center justify-between p-4 bg-primary-bg/50 hover:bg-primary-bg rounded-xl border border-navy-dark hover:border-accent/30 transition-all duration-300">
+                  <Link key={rIdx} href={`/skills/${r.id}`} className="group/item flex items-center justify-between p-4 bg-primary-bg/50 hover:bg-primary-bg rounded-xl border border-navy-dark hover:border-accent/30 transition-all duration-300">
                     <span className="text-sm font-bold text-text-color/80 group-hover/item:text-accent transition-colors">{r.title}</span>
                     <ArrowRight className="w-4 h-4 text-text-secondary/30 group-hover/item:text-accent group-hover/item:translate-x-1 transition-all" />
                   </Link>

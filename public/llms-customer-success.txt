@@ -1,7 +1,7 @@
 # Blueprints: Customer Success
 
 ## Advocacy Fatigue Saver
-URL: https://realaiexamples.com/blueprints/advocacy-ask-balancer
+URL: https://realaiexamples.com/skills/advocacy-ask-balancer
 Description: Don't ask twice in one month.
 
 ---
@@ -52,7 +52,7 @@ Protect customer relationships from over-asking.
 ---
 
 ## Beta Tester Verifier
-URL: https://realaiexamples.com/blueprints/beta-program-active-roster
+URL: https://realaiexamples.com/skills/beta-program-active-roster
 Description: Are they actually testing?
 
 ---
@@ -106,7 +106,7 @@ Generate `beta_rotation_log.md`:
 ---
 
 ## Advisory Board Scout
-URL: https://realaiexamples.com/blueprints/cab-nomination-scorer
+URL: https://realaiexamples.com/skills/cab-nomination-scorer
 Description: Who should be on our CAB?
 
 ---
@@ -157,7 +157,7 @@ Nominate strategic partners.
 ---
 
 ## Case Study Expiry Audit
-URL: https://realaiexamples.com/blueprints/case-study-freshness-audit
+URL: https://realaiexamples.com/skills/case-study-freshness-audit
 Description: Retire assets older than 2 years.
 
 ---
@@ -210,7 +210,7 @@ Generate `sales_enablement_alert.md`:
 ---
 
 ## Churn Reason Aggregator
-URL: https://realaiexamples.com/blueprints/churn-exit-interview-analyzer
+URL: https://realaiexamples.com/skills/churn-exit-interview-analyzer
 Description: Quantify why customers leave.
 
 --- 
@@ -267,7 +267,7 @@ sampleData
 ---
 
 ## Churn Risk Detector
-URL: https://realaiexamples.com/blueprints/churn-risk-identifier-from-support-tickets
+URL: https://realaiexamples.com/skills/churn-risk-identifier-from-support-tickets
 Description: Flag at-risk customers by analyzing their support ticket tone.
 
 ---
@@ -338,7 +338,7 @@ Start now.
 ---
 
 ## Churn Red Flag Report
-URL: https://realaiexamples.com/blueprints/churn-risk-red-flag-report
+URL: https://realaiexamples.com/skills/churn-risk-red-flag-report
 Description: Daily digest of customers with sudden usage drops.
 
 --- 
@@ -394,7 +394,7 @@ sampleData
 ---
 
 ## Churn Autopsy
-URL: https://realaiexamples.com/blueprints/churn-survey-analyzer
+URL: https://realaiexamples.com/skills/churn-survey-analyzer
 Description: Find out the real reason customers are leaving.
 
 ---
@@ -461,7 +461,7 @@ Start now.
 ---
 
 ## Community Champion Scorer
-URL: https://realaiexamples.com/blueprints/community-engagement-scorer
+URL: https://realaiexamples.com/skills/community-engagement-scorer
 Description: Who answers the most questions?
 
 ---
@@ -512,7 +512,7 @@ Identify and reward superusers.
 ---
 
 ## Community Toxicity Monitor
-URL: https://realaiexamples.com/blueprints/community-sentiment-watchdog
+URL: https://realaiexamples.com/skills/community-sentiment-watchdog
 Description: Spot toxic trends in Discord/Slack before they explode.
 
 ---
@@ -561,7 +561,7 @@ Spot toxic trends in Discord/Slack before they explode.
 ---
 
 ## The Customer Health Score Builder
-URL: https://realaiexamples.com/blueprints/customer-health-score
+URL: https://realaiexamples.com/skills/customer-health-score
 Description: Red, Yellow, or Green?
 
 ---
@@ -619,7 +619,7 @@ For each Customer in `account_metrics.csv`:
 ---
 
 ## Usage-to-Health Validator
-URL: https://realaiexamples.com/blueprints/customer-health-usage-correlation
+URL: https://realaiexamples.com/skills/customer-health-usage-correlation
 Description: Does high usage actually mean high health?
 
 ---
@@ -670,7 +670,7 @@ Validate the predictive power of health scores.
 ---
 
 ## Segment Migration Tracker
-URL: https://realaiexamples.com/blueprints/customer-segment-movement-tracker
+URL: https://realaiexamples.com/skills/customer-segment-movement-tracker
 Description: Who moved from Silver to Gold?
 
 --- 
@@ -728,7 +728,7 @@ sampleData
 ---
 
 ## The CS Handover Factory
-URL: https://realaiexamples.com/blueprints/customer-success-handover
+URL: https://realaiexamples.com/skills/customer-success-handover
 Description: Standardize 50 client handovers in one run.
 
 ---
@@ -785,7 +785,7 @@ For each row in the CSV:
 ---
 
 ## Support Sentiment Tracker
-URL: https://realaiexamples.com/blueprints/customer-support-sentiment-trend
+URL: https://realaiexamples.com/skills/customer-support-sentiment-trend
 Description: Monitor ticket sentiment trends over time.
 
 ---
@@ -835,7 +835,7 @@ Detect rising frustration in the customer base.
 ---
 
 ## Adoption Gap Hunter
-URL: https://realaiexamples.com/blueprints/feature-adoption-laggard-hunter
+URL: https://realaiexamples.com/skills/feature-adoption-laggard-hunter
 Description: Find clients not using the features they paid for.
 
 --- 
@@ -890,7 +890,7 @@ sampleData
 ---
 
 ## Feature Adoption Trends
-URL: https://realaiexamples.com/blueprints/feature-usage-trend-monitor
+URL: https://realaiexamples.com/skills/feature-usage-trend-monitor
 Description: Monitor monthly growth in feature usage.
 
 ---
@@ -942,7 +942,7 @@ Identify growing and shrinking feature sets.
 ---
 
 ## Perfect Review Timer
-URL: https://realaiexamples.com/blueprints/g2-review-solicitation-timer
+URL: https://realaiexamples.com/skills/g2-review-solicitation-timer
 Description: Ask when they are happiest.
 
 ---
@@ -993,7 +993,7 @@ Maximize 5-star review generation.
 ---
 
 ## Stalled Project Alert
-URL: https://realaiexamples.com/blueprints/implementation-stalled-alert
+URL: https://realaiexamples.com/skills/implementation-stalled-alert
 Description: Flag onboarding projects stuck in 'Pending'.
 
 --- 
@@ -1049,7 +1049,7 @@ sampleData
 ---
 
 ## The NPS Comment Classifier
-URL: https://realaiexamples.com/blueprints/nps-classifier
+URL: https://realaiexamples.com/skills/nps-classifier
 Description: Turn 'Detractors' into data.
 
 ---
@@ -1109,7 +1109,7 @@ For each Row:
 ---
 
 ## NPS Detractor Recovery List
-URL: https://realaiexamples.com/blueprints/nps-detractor-recovery-list
+URL: https://realaiexamples.com/skills/nps-detractor-recovery-list
 Description: Automate outreach lists for low NPS scorers.
 
 --- 
@@ -1165,7 +1165,7 @@ sampleData
 ---
 
 ## NPS Trend Spotter
-URL: https://realaiexamples.com/blueprints/nps-trend-analyzer
+URL: https://realaiexamples.com/skills/nps-trend-analyzer
 Description: Is customer sentiment trending up or down?
 
 --- 
@@ -1224,7 +1224,7 @@ sampleData
 ---
 
 ## Onboarding Milestone Celebrator
-URL: https://realaiexamples.com/blueprints/onboarding-milestone-celebrator
+URL: https://realaiexamples.com/skills/onboarding-milestone-celebrator
 Description: Automate high-fives for new users.
 
 --- 
@@ -1281,7 +1281,7 @@ Generate a JSON or Markdown list of drafts:
 ---
 
 ## QBR Data Aggregator
-URL: https://realaiexamples.com/blueprints/qbr-data-prepper
+URL: https://realaiexamples.com/skills/qbr-data-prepper
 Description: Prepare usage and support data for reviews.
 
 --- 
@@ -1338,7 +1338,7 @@ sampleData
 ---
 
 ## QBR Deck Generator
-URL: https://realaiexamples.com/blueprints/qbr-deck-generator-auto
+URL: https://realaiexamples.com/skills/qbr-deck-generator-auto
 Description: Build a Quarterly Business Review deck in minutes.
 
 --- 
@@ -1386,7 +1386,7 @@ Build a Quarterly Business Review deck in minutes.
 ---
 
 ## The QBR Strategist
-URL: https://realaiexamples.com/blueprints/qbr-deck-generator
+URL: https://realaiexamples.com/skills/qbr-deck-generator
 Description: Don't just report numbers. Tell a story of Value vs. Friction.
 
 ---
@@ -1458,7 +1458,7 @@ Based on the Score, choose the Strategy:
 ---
 
 ## Reference ROI Calculator
-URL: https://realaiexamples.com/blueprints/reference-win-rate-impact
+URL: https://realaiexamples.com/skills/reference-win-rate-impact
 Description: Does using a reference help?
 
 ---
@@ -1510,7 +1510,7 @@ Prove the value of the reference program.
 ---
 
 ## Referral Fraud Detector
-URL: https://realaiexamples.com/blueprints/referral-program-fraud-check
+URL: https://realaiexamples.com/skills/referral-program-fraud-check
 Description: Did they refer themselves?
 
 ---
@@ -1562,7 +1562,7 @@ Generate `suspicious_activity.csv`:
 ---
 
 ## The Renewal Reminder
-URL: https://realaiexamples.com/blueprints/renewal-reminder-sequence
+URL: https://realaiexamples.com/skills/renewal-reminder-sequence
 Description: No surprise cancellations.
 
 ---
@@ -1625,7 +1625,7 @@ For each account in the CSV:
 ---
 
 ## The Renewal Risk Scorer
-URL: https://realaiexamples.com/blueprints/renewal-risk-scorer
+URL: https://realaiexamples.com/skills/renewal-risk-scorer
 Description: Predict churn before it happens.
 
 ---
@@ -1684,7 +1684,7 @@ For each Customer in `customer_signals.csv`:
 ---
 
 ## The Save Playbook Auditor
-URL: https://realaiexamples.com/blueprints/renewal-save-rate-tracker
+URL: https://realaiexamples.com/skills/renewal-save-rate-tracker
 Description: Which retention tactic actually works? (Discount vs Roadmap).
 
 ---
@@ -1737,7 +1737,7 @@ Audit the efficacy of retention tactics.
 ---
 
 ## The Brand Guardian
-URL: https://realaiexamples.com/blueprints/review-response-bot
+URL: https://realaiexamples.com/skills/review-response-bot
 Description: Reply to reviews AND route the feedback to the right internal team.
 
 ---
@@ -1804,7 +1804,7 @@ For each review:
 ---
 
 ## The Social Proof Pacer
-URL: https://realaiexamples.com/blueprints/review-velocity-tracker
+URL: https://realaiexamples.com/skills/review-velocity-tracker
 Description: Calculate exactly how many 5-star reviews you need to beat your competitor.
 
 ---
@@ -1863,7 +1863,7 @@ Calculate the "Review Gap" to hit a specific star rating target.
 ---
 
 ## The Usage-Based Nudge
-URL: https://realaiexamples.com/blueprints/saas-customer-onboarding-plan-generator
+URL: https://realaiexamples.com/skills/saas-customer-onboarding-plan-generator
 Description: Send the right email at the right time based on user behavior.
 
 ---
@@ -1928,7 +1928,7 @@ For each trigger, assign a Subject Line:
 ---
 
 ## Seat Utilization Nudge
-URL: https://realaiexamples.com/blueprints/saas-seat-utilization-nudge
+URL: https://realaiexamples.com/skills/saas-seat-utilization-nudge
 Description: Remind admins they are paying for empty seats.
 
 --- 
@@ -1976,7 +1976,7 @@ Remind admins they are paying for empty seats.
 ---
 
 ## Support Ticket Empathy Auditor
-URL: https://realaiexamples.com/blueprints/support-ticket-empathy-auditor
+URL: https://realaiexamples.com/skills/support-ticket-empathy-auditor
 Description: Stop your support team from sounding like robots.
 
 ---
@@ -2026,7 +2026,7 @@ Stop your support team from sounding like robots.
 ---
 
 ## Ticket Volume Clusterer
-URL: https://realaiexamples.com/blueprints/support-ticket-volume-clusterer
+URL: https://realaiexamples.com/skills/support-ticket-volume-clusterer
 Description: Group ticket subjects into feature themes.
 
 ---
@@ -2078,7 +2078,7 @@ Identify product areas driving support volume.
 ---
 
 ## Case Study Gap Finder
-URL: https://realaiexamples.com/blueprints/testimonial-coverage-matrix
+URL: https://realaiexamples.com/skills/testimonial-coverage-matrix
 Description: Do we have a 'Finance' case study?
 
 ---
@@ -2126,7 +2126,7 @@ Generate `marketing_production_plan.md`:
 ---
 
 ## The Support Capacity Planner
-URL: https://realaiexamples.com/blueprints/ticket-response-time-tracker
+URL: https://realaiexamples.com/skills/ticket-response-time-tracker
 Description: Match your staffing schedule to your ticket volume spikes.
 
 ---
@@ -2184,7 +2184,7 @@ Eliminate SLA breaches by optimizing the shift schedule.
 ---
 
 ## Time-to-Value Clock
-URL: https://realaiexamples.com/blueprints/time-to-value-clock
+URL: https://realaiexamples.com/skills/time-to-value-clock
 Description: Measure speed from signature to setup.
 
 --- 
@@ -2240,7 +2240,7 @@ sampleData
 ---
 
 ## The Onboarding Bottleneck Finder
-URL: https://realaiexamples.com/blueprints/time-to-value-tracker
+URL: https://realaiexamples.com/skills/time-to-value-tracker
 Description: Pinpoint the exact step where users get stuck.
 
 ---
@@ -2300,7 +2300,7 @@ Identify the specific workflow step causing TTV delays.
 ---
 
 ## Video Testimonial Scout
-URL: https://realaiexamples.com/blueprints/video-testimonial-candidate-finder
+URL: https://realaiexamples.com/skills/video-testimonial-candidate-finder
 Description: Turn text reviews into video gold.
 
 ---

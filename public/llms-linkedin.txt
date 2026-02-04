@@ -1,7 +1,7 @@
 # Blueprints: LinkedIn
 
 ## The Audio Event Planner
-URL: https://realaiexamples.com/blueprints/linkedin-audio-event-planner
+URL: https://realaiexamples.com/skills/linkedin-audio-event-planner
 Description: Live radio for B2B.
 
 ---
@@ -66,7 +66,7 @@ For each event in the CSV:
 ---
 
 ## The Connection Request Writer
-URL: https://realaiexamples.com/blueprints/linkedin-connection-request-writer
+URL: https://realaiexamples.com/skills/linkedin-connection-request-writer
 Description: Get accepted by VIPs.
 
 ---
@@ -137,7 +137,7 @@ For each prospect in the CSV:
 ---
 
 ## The LinkedIn Newsletter Launcher
-URL: https://realaiexamples.com/blueprints/linkedin-newsletter-launcher
+URL: https://realaiexamples.com/skills/linkedin-newsletter-launcher
 Description: Own your audience on-platform.
 
 ---

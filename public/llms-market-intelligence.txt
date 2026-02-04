@@ -1,7 +1,7 @@
 # Blueprints: Market Intelligence
 
 ## Competitor Site Change Detector
-URL: https://realaiexamples.com/blueprints/competitor-change-monitor
+URL: https://realaiexamples.com/skills/competitor-change-monitor
 Description: Did they change their H1? Did they raise prices?
 
 --- 
@@ -65,7 +65,7 @@ sampleData
 ---
 
 ## Competitor Radar
-URL: https://realaiexamples.com/blueprints/competitor-news-digest-builder
+URL: https://realaiexamples.com/skills/competitor-news-digest-builder
 Description: Turn messy news alerts into a clean executive summary.
 
 --- 
@@ -125,7 +125,7 @@ sampleData
 ---
 
 ## Price War Monitor
-URL: https://realaiexamples.com/blueprints/competitor-pricing-parity
+URL: https://realaiexamples.com/skills/competitor-pricing-parity
 Description: Are we cheaper or more expensive?
 
 --- 
@@ -186,7 +186,7 @@ sampleData
 ---
 
 ## Competitor Win Rate Trend
-URL: https://realaiexamples.com/blueprints/competitor-win-rate-trend
+URL: https://realaiexamples.com/skills/competitor-win-rate-trend
 Description: Are we winning or losing against Competitor X?
 
 --- 

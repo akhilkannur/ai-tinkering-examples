@@ -1,7 +1,7 @@
 # Blueprints: Sales Strategy
 
 ## The Comp Plan Simulator
-URL: https://realaiexamples.com/blueprints/comp-plan-simulator
+URL: https://realaiexamples.com/skills/comp-plan-simulator
 Description: Model commission payouts before rollout.
 
 ---
@@ -55,7 +55,7 @@ For each Rep in `historical_deals.csv`:
 ---
 
 ## The Stalled Deal Wake-Up Script
-URL: https://realaiexamples.com/blueprints/stalled-deal-wakeup
+URL: https://realaiexamples.com/skills/stalled-deal-wakeup
 Description: Revive the 'Checking in' emails.
 
 ---

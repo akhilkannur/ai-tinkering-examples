@@ -1,7 +1,7 @@
 # Blueprints: Product Analytics
 
 ## Power User Identifier
-URL: https://realaiexamples.com/blueprints/product-usage-frequency-mapper
+URL: https://realaiexamples.com/skills/product-usage-frequency-mapper
 Description: Who logs in every single day?
 
 --- 
@@ -62,7 +62,7 @@ sampleData
 ---
 
 ## Onboarding Leak Detector
-URL: https://realaiexamples.com/blueprints/user-onboarding-dropout-finder
+URL: https://realaiexamples.com/skills/user-onboarding-dropout-finder
 Description: Where do users quit during setup?
 
 --- 

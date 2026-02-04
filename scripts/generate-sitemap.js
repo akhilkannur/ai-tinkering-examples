@@ -92,7 +92,7 @@ async function generateSitemap() {
       '/tools', '/tools/for-content-creators', '/tools/for-developers', '/tools/for-marketers',
       '/tools/free-ai-tools', '/tools/utm-builder', '/privacy', '/terms', 
       '/500-ways-to-use-llms-for-work', '/state-of-ai-2026', '/how-to', '/build-club',
-      '/how-to/market-saas-zero-budget'
+      '/how-to/market-saas-zero-budget', '/prompt-bundle', '/context', '/ai-workplace-personality'
     ];
 
     // 5. Blog Posts
@@ -161,12 +161,12 @@ async function generateSitemap() {
       xml += `\n  <url><loc>${SITE_URL}/ai-examples/${ex.category}/${ex.slug}</loc><lastmod>${ex.lastmod}</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>`;
     });
 
-    // Recipes (How-To & Blueprint - Priority 0.8/0.7)
+    // Recipes (How-To & Skill - Priority 0.8/0.7)
     recipes.forEach(r => {
       // "How To" Page (High Intent)
       xml += `\n  <url><loc>${SITE_URL}/how-to/automate-${r.id}</loc><lastmod>${currentDate}</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>`;
-      // Technical Blueprint Page
-      xml += `\n  <url><loc>${SITE_URL}/blueprints/${r.id}</loc><lastmod>${currentDate}</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>`;
+      // Technical Skill Page
+      xml += `\n  <url><loc>${SITE_URL}/skills/${r.id}</loc><lastmod>${currentDate}</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>`;
     });
 
     // Blog Posts (Priority 0.8)
@@ -194,7 +194,7 @@ async function generateSitemap() {
         .replace(/\s+/g, "-");
         
       xml += `\n  <url><loc>${SITE_URL}/role/${catSlug}</loc><lastmod>${currentDate}</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>`;
-      xml += `\n  <url><loc>${SITE_URL}/blueprints/category/${catSlug}</loc><lastmod>${currentDate}</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>`;
+      xml += `\n  <url><loc>${SITE_URL}/skills/category/${catSlug}</loc><lastmod>${currentDate}</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>`;
     });
 
     // Legacy Category Pages (Airtable)

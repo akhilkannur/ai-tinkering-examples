@@ -1,7 +1,7 @@
 # Blueprints: SaaS
 
 ## The Cancellation Flow Auditor
-URL: https://realaiexamples.com/blueprints/cancellation-flow-auditor
+URL: https://realaiexamples.com/skills/cancellation-flow-auditor
 Description: Save them before they go.
 
 ---
@@ -68,7 +68,7 @@ For each product in the CSV:
 ---
 
 ## The Changelog Marketer
-URL: https://realaiexamples.com/blueprints/changelog-marketer
+URL: https://realaiexamples.com/skills/changelog-marketer
 Description: Your updates are marketing assets.
 
 ---
@@ -140,7 +140,7 @@ For each feature in the CSV:
 ---
 
 ## The Strategic Integration Factory
-URL: https://realaiexamples.com/blueprints/integration-partner-finder
+URL: https://realaiexamples.com/skills/integration-partner-finder
 Description: Find 50 potential partners across 10 niches.
 
 ---
@@ -201,7 +201,7 @@ For each niche in the CSV:
 ---
 
 ## The Roadmap Prioritizer (RICE)
-URL: https://realaiexamples.com/blueprints/roadmap-prioritizer
+URL: https://realaiexamples.com/skills/roadmap-prioritizer
 Description: Build what matters.
 
 ---
@@ -266,7 +266,7 @@ For each feature in the CSV:
 ---
 
 ## The SaaS Pricing Calculator
-URL: https://realaiexamples.com/blueprints/saas-pricing-calculator
+URL: https://realaiexamples.com/skills/saas-pricing-calculator
 Description: Stop undercharging.
 
 ---

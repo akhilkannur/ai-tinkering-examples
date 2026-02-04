@@ -1,7 +1,7 @@
 # Blueprints: Monetization
 
 ## The Annual Promo Strategist
-URL: https://realaiexamples.com/blueprints/discount-code-strategist
+URL: https://realaiexamples.com/skills/discount-code-strategist
 Description: Your entire year of sales, without brand damage.
 
 ---
@@ -67,7 +67,7 @@ For each event in the CSV:
 ---
 
 ## The Sponsor Scout Engine
-URL: https://realaiexamples.com/blueprints/newsletter-sponsor-scout
+URL: https://realaiexamples.com/skills/newsletter-sponsor-scout
 Description: Fill your ad slots for the next 6 months.
 
 ---

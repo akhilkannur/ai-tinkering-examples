@@ -1,7 +1,7 @@
 # Blueprints: Reputation Mgmt
 
 ## The Review Velocity Tracker
-URL: https://realaiexamples.com/blueprints/review-velocity-tracker
+URL: https://realaiexamples.com/skills/review-velocity-tracker
 Description: Are people still talking about you?
 
 ---

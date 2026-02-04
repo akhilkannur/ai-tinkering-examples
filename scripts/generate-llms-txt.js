@@ -89,7 +89,7 @@ async function generateLlmsTxt() {
       const recipe = {
         title: data.title || file.replace('.md', ''),
         id: file.replace('.md', ''),
-        url: `${SITE_URL}/blueprints/${file.replace('.md', '')}`,
+        url: `${SITE_URL}/skills/${file.replace('.md', '')}`,
         category: data.category || 'General',
         tagline: data.tagline || '',
         content: rawContent

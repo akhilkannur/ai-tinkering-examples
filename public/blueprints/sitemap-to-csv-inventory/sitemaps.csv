@@ -1,4 +1,0 @@
-Domain,Sitemap_URL,Environment
-mysite.com,https://mysite.com/sitemap.xml,Production
-blog.io,https://blog.io/sitemap_index.xml,Production
-staging.net,https://staging.net/sitemap.xml,Staging

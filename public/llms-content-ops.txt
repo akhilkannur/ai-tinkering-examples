@@ -1,7 +1,7 @@
 # Blueprints: Content Ops
 
 ## The About Page Storyteller
-URL: https://realaiexamples.com/blueprints/about-page-storyteller
+URL: https://realaiexamples.com/skills/about-page-storyteller
 Description: Build trust with a data-backed brand story.
 
 ---
@@ -64,7 +64,7 @@ For each company in the CSV:
 ---
 
 ## The Automated Video Producer
-URL: https://realaiexamples.com/blueprints/automated-video-marketing-asset
+URL: https://realaiexamples.com/skills/automated-video-marketing-asset
 Description: Turn any landing page into a 30s TikTok/Reels promo video.
 
 ---
@@ -137,7 +137,7 @@ Generate a production-ready `.mp4` video (9:16 aspect ratio) showcasing the visu
 ---
 
 ## The AI Avatar Scriptwriter
-URL: https://realaiexamples.com/blueprints/avatar-video-producer
+URL: https://realaiexamples.com/skills/avatar-video-producer
 Description: Scripts for HeyGen & Synthesia.
 
 ---
@@ -195,7 +195,7 @@ For each topic in the CSV:
 ---
 
 ## The Bio Link Architect
-URL: https://realaiexamples.com/blueprints/bio-link-optimizer
+URL: https://realaiexamples.com/skills/bio-link-optimizer
 Description: Optimize your 'Link in Bio' from a URL or a goal.
 
 ---
@@ -258,7 +258,7 @@ Optimize your 'Link in Bio' from a URL or a goal.
 ---
 
 ## The Instant Brand Architect
-URL: https://realaiexamples.com/blueprints/brand-kit-gen
+URL: https://realaiexamples.com/skills/brand-kit-gen
 Description: Logo + Pattern + Vibe.
 
 ---
@@ -321,7 +321,7 @@ For each brand in the CSV:
 ---
 
 ## The Brand Voice Architect
-URL: https://realaiexamples.com/blueprints/brand-voice-guidelines
+URL: https://realaiexamples.com/skills/brand-voice-guidelines
 Description: Stop sounding schizophrenic.
 
 ---
@@ -385,7 +385,7 @@ For each brand in the CSV:
 ---
 
 ## The Comment Section Nurturer
-URL: https://realaiexamples.com/blueprints/comment-section-nurturer
+URL: https://realaiexamples.com/skills/comment-section-nurturer
 Description: Turn 'Great post' into a lead.
 
 ---
@@ -443,7 +443,7 @@ For each comment in the CSV:
 ---
 
 ## The Viral Editor
-URL: https://realaiexamples.com/blueprints/content-repurposer
+URL: https://realaiexamples.com/skills/content-repurposer
 Description: Turn one blog post into 3 social posts.
 
 ---
@@ -520,7 +520,7 @@ Start now.
 ---
 
 ## Docs Freshness Auditor
-URL: https://realaiexamples.com/blueprints/docs-freshness-auditor
+URL: https://realaiexamples.com/skills/docs-freshness-auditor
 Description: Flag help articles that reference old UI.
 
 --- 
@@ -568,7 +568,7 @@ Flag help articles that reference old UI.
 ---
 
 ## Changelog GIF Concept Maker
-URL: https://realaiexamples.com/blueprints/feature-demo-gif-maker
+URL: https://realaiexamples.com/skills/feature-demo-gif-maker
 Description: Turn dry changelogs into viral GIF concepts.
 
 ---
@@ -616,7 +616,7 @@ Turn dry changelogs into viral GIF concepts.
 ---
 
 ## The Bulk HARO Pitcher
-URL: https://realaiexamples.com/blueprints/haro-pitcher
+URL: https://realaiexamples.com/skills/haro-pitcher
 Description: Scan 100 media queries and draft 5 winning pitches.
 
 ---
@@ -678,7 +678,7 @@ For every qualified query found:
 ---
 
 ## The Bulk Alt Text Writer
-URL: https://realaiexamples.com/blueprints/image-alt-text-writer-bulk
+URL: https://realaiexamples.com/skills/image-alt-text-writer-bulk
 Description: Accessibility at scale.
 
 ---
@@ -743,7 +743,7 @@ For each image in the CSV:
 ---
 
 ## The Infinite Repurposer Chain
-URL: https://realaiexamples.com/blueprints/infinite-content-repurposer
+URL: https://realaiexamples.com/skills/infinite-content-repurposer
 Description: One URL, 20+ assets.
 
 ---
@@ -806,7 +806,7 @@ For each source in the CSV:
 ---
 
 ## The Caption Formatting Factory
-URL: https://realaiexamples.com/blueprints/instagram-caption-spacer
+URL: https://realaiexamples.com/skills/instagram-caption-spacer
 Description: Format 30 days of social captions in seconds.
 
 ---
@@ -866,7 +866,7 @@ For each row in the CSV:
 ---
 
 ## Link-in-Bio Broken Link Checker
-URL: https://realaiexamples.com/blueprints/link-in-bio-auditor
+URL: https://realaiexamples.com/skills/link-in-bio-auditor
 Description: Ensure your most valuable link actually works.
 
 --- 
@@ -914,7 +914,7 @@ Ensure your most valuable link actually works.
 ---
 
 ## The Audio Event Planner
-URL: https://realaiexamples.com/blueprints/linkedin-audio-event-planner
+URL: https://realaiexamples.com/skills/linkedin-audio-event-planner
 Description: Live radio for B2B.
 
 ---
@@ -974,7 +974,7 @@ For each event in the CSV:
 ---
 
 ## The Carousel Architect
-URL: https://realaiexamples.com/blueprints/linkedin-carousel
+URL: https://realaiexamples.com/skills/linkedin-carousel
 Description: Convert blog posts into high-retention slides (Hooks, Lists, CTAs).
 
 ---
@@ -1039,7 +1039,7 @@ Draft a table with the following structure:
 ---
 
 ## The Connection Request Writer
-URL: https://realaiexamples.com/blueprints/linkedin-connection-request-writer
+URL: https://realaiexamples.com/skills/linkedin-connection-request-writer
 Description: Get accepted by VIPs.
 
 ---
@@ -1105,7 +1105,7 @@ For each prospect in the CSV:
 ---
 
 ## The LinkedIn Newsletter Launcher
-URL: https://realaiexamples.com/blueprints/linkedin-newsletter-launcher
+URL: https://realaiexamples.com/skills/linkedin-newsletter-launcher
 Description: Own your audience on-platform.
 
 ---
@@ -1171,7 +1171,7 @@ For each entry in the CSV:
 ---
 
 ## The LinkedIn Banner Architect
-URL: https://realaiexamples.com/blueprints/linkedin-profile-banner-architect
+URL: https://realaiexamples.com/skills/linkedin-profile-banner-architect
 Description: Build a high-converting profile banner.
 
 ---
@@ -1235,7 +1235,7 @@ For each profile in the CSV:
 ---
 
 ## LinkedIn Visual Hook Scorer
-URL: https://realaiexamples.com/blueprints/linkedin-visual-hook-scorer
+URL: https://realaiexamples.com/skills/linkedin-visual-hook-scorer
 Description: Predict the viral potential of your image/video thumbnails.
 
 ---
@@ -1284,7 +1284,7 @@ Predict the viral potential of your image/video thumbnails.
 ---
 
 ## The Brand Scientist
-URL: https://realaiexamples.com/blueprints/logo-to-brand-kit
+URL: https://realaiexamples.com/skills/logo-to-brand-kit
 Description: Decode the psychology of your logo colors.
 
 ---
@@ -1344,7 +1344,7 @@ For each logo:
 ---
 
 ## The Multi-Niche News Curator
-URL: https://realaiexamples.com/blueprints/news-curator
+URL: https://realaiexamples.com/skills/news-curator
 Description: Draft 5 weekly newsletters in one run.
 
 ---
@@ -1401,7 +1401,7 @@ For each niche in the CSV:
 ---
 
 ## The News Jacker
-URL: https://realaiexamples.com/blueprints/newsletter-asset-factory
+URL: https://realaiexamples.com/skills/newsletter-asset-factory
 Description: Don't just write generic content. Ride the wave of breaking news.
 
 ---
@@ -1463,7 +1463,7 @@ For each story found:
 ---
 
 ## Newsletter Vibe Check
-URL: https://realaiexamples.com/blueprints/newsletter-emotional-audit
+URL: https://realaiexamples.com/skills/newsletter-emotional-audit
 Description: Make sure your weekly email isn't too depressing.
 
 ---
@@ -1512,7 +1512,7 @@ Make sure your weekly email isn't too depressing.
 ---
 
 ## The Viral Clip Factory
-URL: https://realaiexamples.com/blueprints/podcast-clip-selector
+URL: https://realaiexamples.com/skills/podcast-clip-selector
 Description: Identify viral social clips for your entire season.
 
 ---
@@ -1568,7 +1568,7 @@ For each transcript in the folder:
 ---
 
 ## Podcast Guest Matchmaker
-URL: https://realaiexamples.com/blueprints/podcast-guest-compatibility-scorer
+URL: https://realaiexamples.com/skills/podcast-guest-compatibility-scorer
 Description: Ensure your next guest matches your show's vibe.
 
 ---
@@ -1617,7 +1617,7 @@ Ensure your next guest matches your show's vibe.
 ---
 
 ## The Podcast Guest Pitcher
-URL: https://realaiexamples.com/blueprints/podcast-guest-pitcher
+URL: https://realaiexamples.com/skills/podcast-guest-pitcher
 Description: Get booked on niche shows.
 
 ---
@@ -1680,7 +1680,7 @@ For each podcast in the CSV:
 ---
 
 ## The Chapter & Timestamp Architect
-URL: https://realaiexamples.com/blueprints/podcast-show-notes-generator
+URL: https://realaiexamples.com/skills/podcast-show-notes-generator
 Description: Don't just summarize. Create clickable 'YouTube Chapters' automatically.
 
 ---
@@ -1739,7 +1739,7 @@ For each file:
 ---
 
 ## The Conversational Ad Read Factory
-URL: https://realaiexamples.com/blueprints/podcast-sponsor-read-writer
+URL: https://realaiexamples.com/skills/podcast-sponsor-read-writer
 Description: Native ad reads that don't get skipped.
 
 ---
@@ -1798,7 +1798,7 @@ Draft 3 versions:
 ---
 
 ## The Podcast Tour Manager
-URL: https://realaiexamples.com/blueprints/podcast-tour-manager
+URL: https://realaiexamples.com/skills/podcast-tour-manager
 Description: Book your tour from a list or a niche goal.
 
 ---
@@ -1856,7 +1856,7 @@ For each show:
 ---
 
 ## The Poll Strategy Generator
-URL: https://realaiexamples.com/blueprints/poll-strategy-generator
+URL: https://realaiexamples.com/skills/poll-strategy-generator
 Description: Engagement farming with a purpose.
 
 ---
@@ -1919,7 +1919,7 @@ For each campaign in the CSV:
 ---
 
 ## The Short-Form Script Factory
-URL: https://realaiexamples.com/blueprints/short-form-scriptwriter
+URL: https://realaiexamples.com/skills/short-form-scriptwriter
 Description: Turn your entire blog into 100 vertical scripts.
 
 ---
@@ -1979,7 +1979,7 @@ For each source:
 ---
 
 ## Engagement Truth Teller
-URL: https://realaiexamples.com/blueprints/social-engagement-rate-calculator
+URL: https://realaiexamples.com/skills/social-engagement-rate-calculator
 Description: Vanity metrics vs Real engagement.
 
 ---
@@ -2035,7 +2035,7 @@ Generate `viral_hooks.md`:
 ---
 
 ## The Terminal Streamer
-URL: https://realaiexamples.com/blueprints/terminal-content-recorder
+URL: https://realaiexamples.com/skills/terminal-content-recorder
 Description: Record pixel-perfect terminal sessions for YouTube.
 
 ---
@@ -2118,7 +2118,7 @@ rec() {
 ---
 
 ## TikTok Audio Trend Matcher
-URL: https://realaiexamples.com/blueprints/tiktok-audio-trend-syncer
+URL: https://realaiexamples.com/skills/tiktok-audio-trend-syncer
 Description: Match your product B-roll to today's trending audio.
 
 ---
@@ -2167,7 +2167,7 @@ Match your product B-roll to today's trending audio.
 ---
 
 ## The Viral Scripter
-URL: https://realaiexamples.com/blueprints/tiktok-hook-generator
+URL: https://realaiexamples.com/skills/tiktok-hook-generator
 Description: Don't just write hooks. Script the 'Visuals' too.
 
 ---
@@ -2223,7 +2223,7 @@ Create production-ready scripts with visual direction.
 ---
 
 ## The Trend Adapter
-URL: https://realaiexamples.com/blueprints/tiktok-trend-adapter
+URL: https://realaiexamples.com/skills/tiktok-trend-adapter
 Description: Adapt TikTok trends to your B2B niche.
 
 ---
@@ -2286,7 +2286,7 @@ Adapt TikTok trends to your B2B niche.
 ---
 
 ## The Trend Hunter
-URL: https://realaiexamples.com/blueprints/trend-hunter
+URL: https://realaiexamples.com/skills/trend-hunter
 Description: Find the next viral topic before it peaks.
 
 ---
@@ -2345,7 +2345,7 @@ For each keyword in the CSV:
 ---
 
 ## The Trend Surfer
-URL: https://realaiexamples.com/blueprints/trend-surfer-alert
+URL: https://realaiexamples.com/skills/trend-surfer-alert
 Description: Be first to the story.
 
 ---
@@ -2408,7 +2408,7 @@ For each keyword in the CSV:
 ---
 
 ## Twitter Space Scribe
-URL: https://realaiexamples.com/blueprints/twitter-space-scribe
+URL: https://realaiexamples.com/skills/twitter-space-scribe
 Description: Turn audio conversations into tweet threads.
 
 --- 
@@ -2456,7 +2456,7 @@ Turn audio conversations into tweet threads.
 ---
 
 ## The Twitter Thread Architect
-URL: https://realaiexamples.com/blueprints/twitter-thread-hook-writer
+URL: https://realaiexamples.com/skills/twitter-thread-hook-writer
 Description: Generate viral thread hooks from your story or trending news.
 
 ---
@@ -2516,7 +2516,7 @@ Generate 5 variations:
 ---
 
 ## UGC Ad Potential Scorer
-URL: https://realaiexamples.com/blueprints/ugc-visual-quality-rater
+URL: https://realaiexamples.com/skills/ugc-visual-quality-rater
 Description: Find the hidden gems in your tagged photos/videos.
 
 ---
@@ -2565,7 +2565,7 @@ Find the hidden gems in your tagged photos/videos.
 ---
 
 ## The Unicorn Content Curator
-URL: https://realaiexamples.com/blueprints/unicorn-curator
+URL: https://realaiexamples.com/skills/unicorn-curator
 Description: Identify viral outliers across 100 channels.
 
 ---
@@ -2622,7 +2622,7 @@ For each niche in the CSV:
 ---
 
 ## The UGC Campaign Planner
-URL: https://realaiexamples.com/blueprints/user-generated-content-campaign
+URL: https://realaiexamples.com/skills/user-generated-content-campaign
 Description: High-ROI content from your users.
 
 ---
@@ -2685,7 +2685,7 @@ For each brand in the CSV:
 ---
 
 ## The Visual Storyteller
-URL: https://realaiexamples.com/blueprints/visual-storyteller
+URL: https://realaiexamples.com/skills/visual-storyteller
 Description: Blog -> Comic Strip.
 
 ---
@@ -2748,7 +2748,7 @@ For each article in the CSV:
 ---
 
 ## The Webinar Deck Builder
-URL: https://realaiexamples.com/blueprints/webinar-slide-deck-builder
+URL: https://realaiexamples.com/skills/webinar-slide-deck-builder
 Description: Presentations that don't suck.
 
 ---
@@ -2810,7 +2810,7 @@ For each webinar in the CSV:
 ---
 
 ## The Chapter Maker
-URL: https://realaiexamples.com/blueprints/youtube-chapter-maker
+URL: https://realaiexamples.com/skills/youtube-chapter-maker
 Description: Rank for key moments.
 
 ---
@@ -2872,7 +2872,7 @@ For each transcript in the CSV:
 ---
 
 ## The Community Tab Poster
-URL: https://realaiexamples.com/blueprints/youtube-community-tab-poster
+URL: https://realaiexamples.com/skills/youtube-community-tab-poster
 Description: Keep subscribers alive between uploads.
 
 ---
@@ -2932,7 +2932,7 @@ For each channel in the CSV:
 ---
 
 ## The Video Distiller
-URL: https://realaiexamples.com/blueprints/youtube-distiller
+URL: https://realaiexamples.com/skills/youtube-distiller
 Description: YouTube -> Study Notes.
 
 ---
@@ -2990,7 +2990,7 @@ For each video in the CSV:
 ---
 
 ## The Thumbnail Strategy Factory
-URL: https://realaiexamples.com/blueprints/youtube-thumbnail-ab-tester
+URL: https://realaiexamples.com/skills/youtube-thumbnail-ab-tester
 Description: High-CTR concepts from your ideas or viral competitors.
 
 ---

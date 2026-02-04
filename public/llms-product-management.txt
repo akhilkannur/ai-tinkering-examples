@@ -1,7 +1,7 @@
 # Blueprints: Product Management
 
 ## Feedback Cluster Engine
-URL: https://realaiexamples.com/blueprints/feature-request-clusterer
+URL: https://realaiexamples.com/skills/feature-request-clusterer
 Description: Group 1,000 feedback tickets into 5 features.
 
 --- 

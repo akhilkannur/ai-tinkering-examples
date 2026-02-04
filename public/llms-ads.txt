@@ -1,7 +1,7 @@
 # Blueprints: Ads
 
 ## The Ad Visual Intelligence Factory
-URL: https://realaiexamples.com/blueprints/ad-visual-reverse-engineer
+URL: https://realaiexamples.com/skills/ad-visual-reverse-engineer
 Description: Reverse-engineer 10 winning ads into design briefs.
 
 ---
@@ -61,7 +61,7 @@ For each image in the folder:
 ---
 
 ## The Facebook Ad Creative Brief
-URL: https://realaiexamples.com/blueprints/facebook-ad-creative-brief
+URL: https://realaiexamples.com/skills/facebook-ad-creative-brief
 Description: High-converting visual concepts at scale.
 
 ---
@@ -128,7 +128,7 @@ For each product in the CSV:
 ---
 
 ## The LinkedIn Document Ad Creator
-URL: https://realaiexamples.com/blueprints/linkedin-document-ad-creator
+URL: https://realaiexamples.com/skills/linkedin-document-ad-creator
 Description: Stop the scroll with a PDF.
 
 ---
@@ -193,7 +193,7 @@ For each asset in the CSV:
 ---
 
 ## The PPC Intent Engine
-URL: https://realaiexamples.com/blueprints/ppc-intent-matcher
+URL: https://realaiexamples.com/skills/ppc-intent-matcher
 Description: High-intent ad keywords for your entire product line.
 
 ---
@@ -253,7 +253,7 @@ For each product in the CSV:
 ---
 
 ## The Retargeting Sequence Planner
-URL: https://realaiexamples.com/blueprints/retargeting-sequence-planner
+URL: https://realaiexamples.com/skills/retargeting-sequence-planner
 Description: The 'Stalker' ad strategy.
 
 ---

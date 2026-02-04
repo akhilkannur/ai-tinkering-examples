@@ -1,7 +1,7 @@
 # Blueprints: AI Setup
 
 ## The Project Architect
-URL: https://realaiexamples.com/blueprints/agent-context-builder
+URL: https://realaiexamples.com/skills/agent-context-builder
 Description: Make any folder AI-ready instantly.
 
 ---

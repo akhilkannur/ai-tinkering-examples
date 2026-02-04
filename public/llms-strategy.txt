@@ -1,7 +1,7 @@
 # Blueprints: Strategy
 
 ## The Customer Journey Factory
-URL: https://realaiexamples.com/blueprints/customer-journey-mapper
+URL: https://realaiexamples.com/skills/customer-journey-mapper
 Description: Map the broken road for every persona.
 
 ---
@@ -64,7 +64,7 @@ For each persona in the CSV:
 ---
 
 ## The Geographic Expansion Planner
-URL: https://realaiexamples.com/blueprints/geo-expansion-planner
+URL: https://realaiexamples.com/skills/geo-expansion-planner
 Description: Where should we launch next?
 
 ---
@@ -125,7 +125,7 @@ For each Country in `geo_data.csv`:
 ---
 
 ## The OKR Architect
-URL: https://realaiexamples.com/blueprints/okr-drafter
+URL: https://realaiexamples.com/skills/okr-drafter
 Description: Draft team goals from your vision or industry benchmarks.
 
 ---
@@ -191,7 +191,7 @@ Draft team goals from your vision or industry benchmarks.
 ---
 
 ## The Anti-Targeting List Builder
-URL: https://realaiexamples.com/blueprints/persona-anti-targeting
+URL: https://realaiexamples.com/skills/persona-anti-targeting
 Description: Who should you NOT sell to?
 
 ---
@@ -246,7 +246,7 @@ Identify "Negative Personas" to exclude from ad targeting.
 ---
 
 ## The AI Persona Researcher
-URL: https://realaiexamples.com/blueprints/persona-builder
+URL: https://realaiexamples.com/skills/persona-builder
 Description: Build detailed customer personas.
 
 ---
@@ -324,7 +324,7 @@ Start now.
 ---
 
 ## The Pitch Deck Storyboard
-URL: https://realaiexamples.com/blueprints/pitch-deck-storyboard
+URL: https://realaiexamples.com/skills/pitch-deck-storyboard
 Description: Build narratives that raise money.
 
 ---
@@ -393,7 +393,7 @@ For each startup in the CSV:
 ---
 
 ## The Strategic SWOT Generator
-URL: https://realaiexamples.com/blueprints/swot-analysis-generator
+URL: https://realaiexamples.com/skills/swot-analysis-generator
 Description: Build a SWOT matrix from your notes or market research.
 
 ---
@@ -454,7 +454,7 @@ Build a SWOT matrix from your notes or market research.
 ---
 
 ## The AI TAM Researcher
-URL: https://realaiexamples.com/blueprints/tam-calculator
+URL: https://realaiexamples.com/skills/tam-calculator
 Description: Calculate your market size using real-world data.
 
 ---

@@ -1,7 +1,7 @@
 # Blueprints: Legal Ops
 
 ## The Contract Risk Detector
-URL: https://realaiexamples.com/blueprints/contract-risk-detector
+URL: https://realaiexamples.com/skills/contract-risk-detector
 Description: Find the 'gotchas' in the PDF.
 
 ---
@@ -69,7 +69,7 @@ For each contract in the CSV:
 ---
 
 ## The Converting Cookie Banner
-URL: https://realaiexamples.com/blueprints/gdpr-cookie-banner-copy
+URL: https://realaiexamples.com/skills/gdpr-cookie-banner-copy
 Description: Compliance that doesn't kill data.
 
 ---
@@ -135,7 +135,7 @@ For each brand in the CSV:
 ---
 
 ## The Influencer Contract Factory
-URL: https://realaiexamples.com/blueprints/influencer-contract-drafter
+URL: https://realaiexamples.com/skills/influencer-contract-drafter
 Description: Generate 50 creator agreements in one run.
 
 ---

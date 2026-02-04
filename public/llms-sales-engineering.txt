@@ -1,7 +1,7 @@
 # Blueprints: Sales Engineering
 
 ## The API Fleet Monitor
-URL: https://realaiexamples.com/blueprints/api-endpoint-validator
+URL: https://realaiexamples.com/skills/api-endpoint-validator
 Description: Health check 50 endpoints in one run.
 
 ---

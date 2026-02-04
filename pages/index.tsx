@@ -99,7 +99,7 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
                                 Get 1 Year Access ($39) <ArrowRight className="w-4 h-4" />
                             </a>
                             <a 
-                                href="#blueprints" 
+                                href="#skills" 
                                 className="w-full sm:w-auto px-8 py-4 bg-white/5 border border-navy-dark hover:bg-white/10 text-text-color font-bold rounded-lg transition-all text-sm flex items-center justify-center gap-2"
                             >
                                 See What's Inside
@@ -141,7 +141,7 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
         <FeaturedIn />
 
         {/* COOKBOOK GRID */}
-        <div className="bg-primary-bg pb-24" id="blueprints">
+        <div className="bg-primary-bg pb-24" id="skills">
             <div className="container mx-auto px-4">
                <TerminalCookbook recipes={recipes} />
             </div>

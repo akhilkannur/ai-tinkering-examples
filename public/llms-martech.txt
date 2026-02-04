@@ -1,7 +1,7 @@
 # Blueprints: MarTech
 
 ## The GTM Fleet Debugger
-URL: https://realaiexamples.com/blueprints/google-tag-manager-debugger
+URL: https://realaiexamples.com/skills/google-tag-manager-debugger
 Description: Fix the dataLayer across all your properties.
 
 ---

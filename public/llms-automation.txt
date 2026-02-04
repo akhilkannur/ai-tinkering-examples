@@ -1,7 +1,7 @@
 # Blueprints: Automation
 
 ## The Zapier Logic Architect
-URL: https://realaiexamples.com/blueprints/zapier-logic-architect
+URL: https://realaiexamples.com/skills/zapier-logic-architect
 Description: Standardize your no-code workflows.
 
 ---

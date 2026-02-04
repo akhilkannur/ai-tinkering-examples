@@ -1,7 +1,7 @@
 # Blueprints: Marketing Automation
 
 ## The Win-Back Campaign Architect
-URL: https://realaiexamples.com/blueprints/win-back-campaign
+URL: https://realaiexamples.com/skills/win-back-campaign
 Description: It's easier to sell to an ex.
 
 ---

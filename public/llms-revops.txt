@@ -1,7 +1,7 @@
 # Blueprints: RevOps
 
 ## The API Usage Biller
-URL: https://realaiexamples.com/blueprints/api-usage-biller
+URL: https://realaiexamples.com/skills/api-usage-biller
 Description: Don't leave money on the table.
 
 ---
@@ -55,7 +55,7 @@ For each Customer:
 ---
 
 ## Billing Contact Verifier
-URL: https://realaiexamples.com/blueprints/billing-contact-verification
+URL: https://realaiexamples.com/skills/billing-contact-verification
 Description: Will the invoice bounce?
 
 ---
@@ -107,7 +107,7 @@ Ensure invoices get delivered.
 ---
 
 ## Churn Cohort Analyzer
-URL: https://realaiexamples.com/blueprints/churn-cohort-analysis-bot
+URL: https://realaiexamples.com/skills/churn-cohort-analysis-bot
 Description: Measure churn rate by customer vintage.
 
 ---
@@ -161,7 +161,7 @@ Identify quality trends in customer acquisition.
 ---
 
 ## Churn Risk Calculator
-URL: https://realaiexamples.com/blueprints/churn-risk-health-scorer
+URL: https://realaiexamples.com/skills/churn-risk-health-scorer
 Description: Predict churn before it happens.
 
 --- 
@@ -221,7 +221,7 @@ sampleData
 ---
 
 ## Commission Variance Alert
-URL: https://realaiexamples.com/blueprints/commission-payout-variance
+URL: https://realaiexamples.com/skills/commission-payout-variance
 Description: Did John's check double MoM?
 
 ---
@@ -274,7 +274,7 @@ Audit commission accuracy via anomaly detection.
 ---
 
 ## Enrichment Freshness Audit
-URL: https://realaiexamples.com/blueprints/contact-enrichment-freshness
+URL: https://realaiexamples.com/skills/contact-enrichment-freshness
 Description: Is your data stale?
 
 ---
@@ -326,7 +326,7 @@ Maintain database accuracy.
 ---
 
 ## Auto-Renew Forecaster
-URL: https://realaiexamples.com/blueprints/contract-auto-renewal-forecaster
+URL: https://realaiexamples.com/skills/contract-auto-renewal-forecaster
 Description: Predict passive revenue.
 
 ---
@@ -379,7 +379,7 @@ Forecast low-friction revenue.
 ---
 
 ## Revenue Cliff Visualizer
-URL: https://realaiexamples.com/blueprints/contract-expiry-cliff-visualizer
+URL: https://realaiexamples.com/skills/contract-expiry-cliff-visualizer
 Description: Identify months with dangerous renewal concentration.
 
 --- 
@@ -440,7 +440,7 @@ sampleData
 ---
 
 ## Renewal Quote Generator
-URL: https://realaiexamples.com/blueprints/contract-renewal-auto-quoter
+URL: https://realaiexamples.com/skills/contract-renewal-auto-quoter
 Description: Auto-generate draft quotes for upcoming renewals.
 
 --- 
@@ -499,7 +499,7 @@ sampleData
 ---
 
 ## Renewal Radar
-URL: https://realaiexamples.com/blueprints/contract-renewal-date-alerter
+URL: https://realaiexamples.com/skills/contract-renewal-date-alerter
 Description: Never miss an expiration date.
 
 --- 
@@ -558,7 +558,7 @@ sampleData
 ---
 
 ## CRM Hygiene Scorecard
-URL: https://realaiexamples.com/blueprints/crm-field-completion-rate
+URL: https://realaiexamples.com/skills/crm-field-completion-rate
 Description: Who isn't filling out 'Next Step'?
 
 ---
@@ -610,7 +610,7 @@ Enforce CRM data quality.
 ---
 
 ## Product Penetration Matrix
-URL: https://realaiexamples.com/blueprints/cross-sell-penetration-matrix
+URL: https://realaiexamples.com/skills/cross-sell-penetration-matrix
 Description: Map customers against the full product catalog.
 
 ---
@@ -664,7 +664,7 @@ Identify high-value cross-sell targets.
 ---
 
 ## Cross-Sell Whitespace Matrix
-URL: https://realaiexamples.com/blueprints/cross-sell-whitespace-mapper
+URL: https://realaiexamples.com/skills/cross-sell-whitespace-mapper
 Description: Find exactly what your customers haven't bought yet.
 
 --- 
@@ -725,7 +725,7 @@ sampleData
 ---
 
 ## Global Pipeline Normalizer
-URL: https://realaiexamples.com/blueprints/currency-exchange-normalizer
+URL: https://realaiexamples.com/skills/currency-exchange-normalizer
 Description: Convert global deals into a single master currency.
 
 --- 
@@ -785,7 +785,7 @@ sampleData
 ---
 
 ## Discount Guardrails Bot
-URL: https://realaiexamples.com/blueprints/deal-desk-discount-approver
+URL: https://realaiexamples.com/skills/deal-desk-discount-approver
 Description: Auto-flag quotes with excessive discounts.
 
 --- 
@@ -844,7 +844,7 @@ sampleData
 ---
 
 ## Deal Push Diagnostics
-URL: https://realaiexamples.com/blueprints/deal-push-reason-analyzer
+URL: https://realaiexamples.com/skills/deal-push-reason-analyzer
 Description: Why did they delay... again?
 
 ---
@@ -897,7 +897,7 @@ Diagnose pipeline stalling drivers.
 ---
 
 ## Discount vs LTV Auditor
-URL: https://realaiexamples.com/blueprints/discount-impact-on-ltv
+URL: https://realaiexamples.com/skills/discount-impact-on-ltv
 Description: Does high discounting lead to low LTV?
 
 ---
@@ -950,7 +950,7 @@ Optimize pricing policies for long-term revenue.
 ---
 
 ## The Duplicate Lead Merger
-URL: https://realaiexamples.com/blueprints/duplicate-lead-merger
+URL: https://realaiexamples.com/skills/duplicate-lead-merger
 Description: One person, one record.
 
 ---
@@ -1011,7 +1011,7 @@ For each Duplicate Set:
 ---
 
 ## The Enrichment Match Calculator
-URL: https://realaiexamples.com/blueprints/enrichment-match-calculator
+URL: https://realaiexamples.com/skills/enrichment-match-calculator
 Description: Is your data vendor lying?
 
 ---
@@ -1069,7 +1069,7 @@ For each Column (Phone, Industry):
 ---
 
 ## Routing Conflict Detector
-URL: https://realaiexamples.com/blueprints/lead-routing-rule-conflict-detector
+URL: https://realaiexamples.com/skills/lead-routing-rule-conflict-detector
 Description: Does this lead match two reps?
 
 ---
@@ -1122,7 +1122,7 @@ Debug routing logic errors.
 ---
 
 ## Ownership Mismatch Finder
-URL: https://realaiexamples.com/blueprints/opportunity-owner-vs-account-owner
+URL: https://realaiexamples.com/skills/opportunity-owner-vs-account-owner
 Description: Is the Opp owner different from the Account owner?
 
 ---
@@ -1174,7 +1174,7 @@ Maintain ownership data integrity.
 ---
 
 ## The Pricing Tier Migrator
-URL: https://realaiexamples.com/blueprints/pricing-migrator
+URL: https://realaiexamples.com/skills/pricing-migrator
 Description: Move them up or move them out.
 
 ---
@@ -1233,7 +1233,7 @@ For each Customer in `current_customers.csv`:
 ---
 
 ## Product SKU Integrity Checker
-URL: https://realaiexamples.com/blueprints/quote-line-item-validator
+URL: https://realaiexamples.com/skills/quote-line-item-validator
 Description: Ensure reps don't quote incompatible SKUs.
 
 --- 
@@ -1292,7 +1292,7 @@ sampleData
 ---
 
 ## Renewal Price Lift Calc
-URL: https://realaiexamples.com/blueprints/renewal-price-lift-calc
+URL: https://realaiexamples.com/skills/renewal-price-lift-calc
 Description: Apply 5% CPI increases to upcoming renewals.
 
 --- 
@@ -1350,7 +1350,7 @@ sampleData
 ---
 
 ## Renewal Ghosting Detector
-URL: https://realaiexamples.com/blueprints/renewal-risk-ghosting-alert
+URL: https://realaiexamples.com/skills/renewal-risk-ghosting-alert
 Description: Flag accounts in renewal that haven't replied lately.
 
 ---
@@ -1406,7 +1406,7 @@ Identify ghosting risks in the renewal pipeline.
 ---
 
 ## Revenue Leakage Audit
-URL: https://realaiexamples.com/blueprints/revenue-leakage-hunter
+URL: https://realaiexamples.com/skills/revenue-leakage-hunter
 Description: Find users active on the platform without a contract.
 
 --- 
@@ -1467,7 +1467,7 @@ sampleData
 ---
 
 ## The SaaS Metric Dashboarder
-URL: https://realaiexamples.com/blueprints/saas-metric-dashboarder
+URL: https://realaiexamples.com/skills/saas-metric-dashboarder
 Description: Your board deck, automated.
 
 ---
@@ -1526,7 +1526,7 @@ Calculate the health metrics of the SaaS business.
 ---
 
 ## Zombie Account Hunter
-URL: https://realaiexamples.com/blueprints/saas-usage-red-flag-detector
+URL: https://realaiexamples.com/skills/saas-usage-red-flag-detector
 Description: Paying but not logging in?
 
 ---
@@ -1579,7 +1579,7 @@ Identify accounts with adoption failure.
 ---
 
 ## Pipeline Leak Detector
-URL: https://realaiexamples.com/blueprints/sales-funnel-bottleneck-finder
+URL: https://realaiexamples.com/skills/sales-funnel-bottleneck-finder
 Description: Find exactly where your deals are dying.
 
 ---
@@ -1648,7 +1648,7 @@ Start now.
 ---
 
 ## SaaS Seat Auditor
-URL: https://realaiexamples.com/blueprints/tech-stack-seat-auditor
+URL: https://realaiexamples.com/skills/tech-stack-seat-auditor
 Description: Find unused licenses in your sales tech stack.
 
 --- 
@@ -1708,7 +1708,7 @@ sampleData
 ---
 
 ## Bulk Territory Reassigner
-URL: https://realaiexamples.com/blueprints/territory-reassignment-logic
+URL: https://realaiexamples.com/skills/territory-reassignment-logic
 Description: Move accounts from Rep A to Rep B.
 
 ---

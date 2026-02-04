@@ -176,7 +176,7 @@ export function injectInternalLinks(text: string, recipes: Recipe[]): string {
       newText = newText.replace(regex, (match) => {
         // If we successfully matched, mark as linked
         linkedslugs.add(recipe.id);
-        return `[${match}](/blueprints/${recipe.id})`;
+        return `[${match}](/skills/${recipe.id})`;
       });
     }
   });
@@ -193,7 +193,7 @@ export function generateItemListSchema(items: any[], siteUrl: string) {
       const isRecipe = 'blueprint' in item;
       const categorySlug = item.category?.toLowerCase().replace(/\s+/g, '-') || 'uncategorized';
       const path = isRecipe 
-        ? `/blueprints/${item.id}` 
+        ? `/skills/${item.id}` 
         : `/ai-examples/${categorySlug}/${item.slug || item.id}`;
       
       return {

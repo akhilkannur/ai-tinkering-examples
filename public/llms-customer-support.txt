@@ -1,7 +1,7 @@
 # Blueprints: Customer Support
 
 ## Support Velocity Tracker
-URL: https://realaiexamples.com/blueprints/ticket-response-time-tracker
+URL: https://realaiexamples.com/skills/ticket-response-time-tracker
 Description: Are we hitting our 2-hour SLA?
 
 --- 

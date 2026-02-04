@@ -1,7 +1,7 @@
 # Blueprints: Hiring
 
 ## The Sales Comp Designer
-URL: https://realaiexamples.com/blueprints/commission-calculator
+URL: https://realaiexamples.com/skills/commission-calculator
 Description: Design a commission plan that drives growth.
 
 ---
@@ -67,7 +67,7 @@ For each role in the CSV:
 ---
 
 ## The Sales Job Description Optimizer
-URL: https://realaiexamples.com/blueprints/job-description-optimizer
+URL: https://realaiexamples.com/skills/job-description-optimizer
 Description: Attract 'A-Players', repel tourists.
 
 ---
@@ -132,7 +132,7 @@ For each role in the CSV:
 ---
 
 ## The Sales Interview Architect
-URL: https://realaiexamples.com/blueprints/sales-interview-questions
+URL: https://realaiexamples.com/skills/sales-interview-questions
 Description: Custom assessments for any sales role.
 
 ---
@@ -197,7 +197,7 @@ For each role in the CSV:
 ---
 
 ## The SDR Ramp Architect
-URL: https://realaiexamples.com/blueprints/sdr-onboarding-schedule
+URL: https://realaiexamples.com/skills/sdr-onboarding-schedule
 Description: Build custom 30-day onboarding plans.
 
 ---

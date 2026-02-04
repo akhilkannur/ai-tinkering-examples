@@ -1,7 +1,7 @@
 # Blueprints: TikTok
 
 ## The Trend Adapter
-URL: https://realaiexamples.com/blueprints/tiktok-trend-adapter
+URL: https://realaiexamples.com/skills/tiktok-trend-adapter
 Description: Adapt TikTok trends to your B2B niche.
 
 ---

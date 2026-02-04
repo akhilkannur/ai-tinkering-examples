@@ -1,7 +1,7 @@
 # Blueprints: Offline
 
 ## The Event Booth Strategist
-URL: https://realaiexamples.com/blueprints/booth-design-checklist
+URL: https://realaiexamples.com/skills/booth-design-checklist
 Description: Custom booth checklists for your event portfolio.
 
 ---
@@ -66,7 +66,7 @@ For each event in the CSV:
 ---
 
 ## The ABM Direct Mail Engine
-URL: https://realaiexamples.com/blueprints/direct-mail-campaign-planner
+URL: https://realaiexamples.com/skills/direct-mail-campaign-planner
 Description: High-impact mailers for your top 100 accounts.
 
 ---
@@ -129,7 +129,7 @@ For each row in the CSV:
 ---
 
 ## The QR Code Strategist
-URL: https://realaiexamples.com/blueprints/qr-code-strategy
+URL: https://realaiexamples.com/skills/qr-code-strategy
 Description: Bridge offline to online.
 
 ---

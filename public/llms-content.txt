@@ -1,7 +1,7 @@
 # Blueprints: Content
 
 ## The Webinar Deck Builder
-URL: https://realaiexamples.com/blueprints/webinar-slide-deck-builder
+URL: https://realaiexamples.com/skills/webinar-slide-deck-builder
 Description: Presentations that don't suck.
 
 ---

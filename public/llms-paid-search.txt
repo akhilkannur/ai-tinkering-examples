@@ -1,7 +1,7 @@
 # Blueprints: Paid Search
 
 ## The Google Ads Script Generator
-URL: https://realaiexamples.com/blueprints/google-ads-script-gen
+URL: https://realaiexamples.com/skills/google-ads-script-gen
 Description: Automate your account management.
 
 ---
@@ -58,7 +58,7 @@ For each Rule in `automation_rules.csv`:
 ---
 
 ## The Quality Score Doctor
-URL: https://realaiexamples.com/blueprints/quality-score-doctor
+URL: https://realaiexamples.com/skills/quality-score-doctor
 Description: Diagnose why your CPC is high.
 
 ---

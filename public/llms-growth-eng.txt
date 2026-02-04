@@ -1,7 +1,7 @@
 # Blueprints: Growth Eng
 
 ## The Referral Fraud Hunter
-URL: https://realaiexamples.com/blueprints/referral-fraud-detector
+URL: https://realaiexamples.com/skills/referral-fraud-detector
 Description: Stop paying for fake invites.
 
 ---

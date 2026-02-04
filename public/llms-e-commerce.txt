@@ -1,7 +1,7 @@
 # Blueprints: E-commerce
 
 ## Back-in-Stock Campaigner
-URL: https://realaiexamples.com/blueprints/bestseller-restock-alert
+URL: https://realaiexamples.com/skills/bestseller-restock-alert
 Description: Launch ads when bestsellers return.
 
 ---
@@ -51,7 +51,7 @@ Coordinate marketing with inventory availability.
 ---
 
 ## Bundle Profitability Tracker
-URL: https://realaiexamples.com/blueprints/bundle-efficacy-tracker
+URL: https://realaiexamples.com/skills/bundle-efficacy-tracker
 Description: Do bundles actually increase profit?
 
 ---
@@ -110,7 +110,7 @@ Draft a `pricing_memo.md`:
 ---
 
 ## The Market Surfer
-URL: https://realaiexamples.com/blueprints/category-growth-trends
+URL: https://realaiexamples.com/skills/category-growth-trends
 Description: Buy inventory *before* the trend peaks.
 
 ---
@@ -166,7 +166,7 @@ For each Category:
 ---
 
 ## Category Affinity Tagger
-URL: https://realaiexamples.com/blueprints/category-interest-tagger
+URL: https://realaiexamples.com/skills/category-interest-tagger
 Description: Tag users as 'Runners' or 'Swimmers'.
 
 ---
@@ -218,7 +218,7 @@ Personalize marketing based on interest.
 ---
 
 ## The Upsell Hunter
-URL: https://realaiexamples.com/blueprints/customer-share-of-wallet-estimator
+URL: https://realaiexamples.com/skills/customer-share-of-wallet-estimator
 Description: Find the 'Sleeping Giants' in your customer base.
 
 ---
@@ -279,7 +279,7 @@ For each customer:
 ---
 
 ## Discount Hunter Profiler
-URL: https://realaiexamples.com/blueprints/discount-affinity-profiler
+URL: https://realaiexamples.com/skills/discount-affinity-profiler
 Description: Who only buys when it's on sale?
 
 ---
@@ -331,7 +331,7 @@ Protect margins by suppressing discounts for full-price buyers.
 ---
 
 ## Flash Sale Brake Pedal
-URL: https://realaiexamples.com/blueprints/flash-sale-inventory-monitor
+URL: https://realaiexamples.com/skills/flash-sale-inventory-monitor
 Description: Stop ads when stock gets low.
 
 ---
@@ -381,7 +381,7 @@ Prevent overselling and wasted ad spend.
 ---
 
 ## Free Shipping Modeler
-URL: https://realaiexamples.com/blueprints/free-shipping-threshold-tester
+URL: https://realaiexamples.com/skills/free-shipping-threshold-tester
 Description: Should the bar be $50 or $75?
 
 ---
@@ -438,7 +438,7 @@ Generate `shipping_strategy.md`:
 ---
 
 ## Gift-with-Purchase Qualifier
-URL: https://realaiexamples.com/blueprints/gwp-qualifier
+URL: https://realaiexamples.com/skills/gwp-qualifier
 Description: Identify VIPs for surprise gifts.
 
 ---
@@ -488,7 +488,7 @@ Operationalize VIP gifting.
 ---
 
 ## Whale Hunter (High AOV)
-URL: https://realaiexamples.com/blueprints/high-aov-cluster-analysis
+URL: https://realaiexamples.com/skills/high-aov-cluster-analysis
 Description: Where do the big spenders come from?
 
 ---
@@ -540,7 +540,7 @@ Optimize spend for high-value customers.
 ---
 
 ## Influencer Profit Auditor
-URL: https://realaiexamples.com/blueprints/influencer-code-profitability
+URL: https://realaiexamples.com/skills/influencer-code-profitability
 Description: Revenue is vanity, profit is sanity.
 
 ---
@@ -591,7 +591,7 @@ Audit influencer profitability.
 ---
 
 ## The Gifting Fulfillment Engine
-URL: https://realaiexamples.com/blueprints/influencer-gifting-logistics
+URL: https://realaiexamples.com/skills/influencer-gifting-logistics
 Description: Ship product to 100 creators without errors.
 
 ---
@@ -647,7 +647,7 @@ For each row in the CSV:
 ---
 
 ## The Inventory Clearance Campaign
-URL: https://realaiexamples.com/blueprints/inventory-clearance-campaign
+URL: https://realaiexamples.com/skills/inventory-clearance-campaign
 Description: Turn dead stock into cash.
 
 ---
@@ -707,7 +707,7 @@ For each SKU in the CSV:
 ---
 
 ## The Stockout Alarm
-URL: https://realaiexamples.com/blueprints/inventory-opportunity-cost
+URL: https://realaiexamples.com/skills/inventory-opportunity-cost
 Description: Don't just count the loss. Recover it.
 
 ---
@@ -763,7 +763,7 @@ For each SKU:
 ---
 
 ## Loyalty Health Monitor
-URL: https://realaiexamples.com/blueprints/loyalty-program-redemption-rate
+URL: https://realaiexamples.com/skills/loyalty-program-redemption-rate
 Description: Are points being used?
 
 ---
@@ -814,7 +814,7 @@ Assess program liability and engagement.
 ---
 
 ## New Drop Teaser List
-URL: https://realaiexamples.com/blueprints/new-arrival-teaser-list
+URL: https://realaiexamples.com/skills/new-arrival-teaser-list
 Description: Notify past buyers of a brand about new arrivals.
 
 ---
@@ -864,7 +864,7 @@ Drive launch sales via affinity targeting.
 ---
 
 ## Price Drop Notifier
-URL: https://realaiexamples.com/blueprints/price-drop-notification-list
+URL: https://realaiexamples.com/skills/price-drop-notification-list
 Description: Tell browsers when price drops.
 
 ---
@@ -914,7 +914,7 @@ Drive sales via price alerts.
 ---
 
 ## The SKU SEO Factory
-URL: https://realaiexamples.com/blueprints/product-description-seo
+URL: https://realaiexamples.com/skills/product-description-seo
 Description: Rewrite 100 product descriptions for search in minutes.
 
 ---
@@ -975,7 +975,7 @@ For each row in the CSV:
 ---
 
 ## The Merchandising Alert System
-URL: https://realaiexamples.com/blueprints/product-review-velocity
+URL: https://realaiexamples.com/skills/product-review-velocity
 Description: Detect when a bestseller is losing social proof momentum.
 
 ---
@@ -1035,7 +1035,7 @@ For each SKU:
 ---
 
 ## Net Profit SKU Analyzer
-URL: https://realaiexamples.com/blueprints/returns-impact-on-profit
+URL: https://realaiexamples.com/skills/returns-impact-on-profit
 Description: True profit after returns.
 
 ---
@@ -1091,7 +1091,7 @@ Generate `profit_audit_results.md`:
 ---
 
 ## Sample to Full-Size Converter
-URL: https://realaiexamples.com/blueprints/sample-pack-converter
+URL: https://realaiexamples.com/skills/sample-pack-converter
 Description: Upsell sample buyers to the real deal.
 
 ---
@@ -1141,7 +1141,7 @@ Convert trial users to full customers.
 ---
 
 ## End-of-Season Liquidator
-URL: https://realaiexamples.com/blueprints/seasonal-inventory-liquidator
+URL: https://realaiexamples.com/skills/seasonal-inventory-liquidator
 Description: Clear shelves before the new line drops.
 
 ---
@@ -1192,7 +1192,7 @@ Minimize carry-over inventory.
 ---
 
 ## The Shopify App Store Optimizer
-URL: https://realaiexamples.com/blueprints/shopify-app-store-optimizer
+URL: https://realaiexamples.com/skills/shopify-app-store-optimizer
 Description: Get found by merchants.
 
 ---
@@ -1252,7 +1252,7 @@ For each app in the CSV:
 ---
 
 ## Dead Stock Bundler
-URL: https://realaiexamples.com/blueprints/slow-mover-bundle-builder
+URL: https://realaiexamples.com/skills/slow-mover-bundle-builder
 Description: Clear stale inventory by bundling.
 
 ---
@@ -1303,7 +1303,7 @@ Liquidate slow-moving inventory profitably.
 ---
 
 ## The Unboxing Experience Designer
-URL: https://realaiexamples.com/blueprints/unboxing-experience-designer
+URL: https://realaiexamples.com/skills/unboxing-experience-designer
 Description: Make them post it on Instagram.
 
 ---

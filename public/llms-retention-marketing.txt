@@ -1,7 +1,7 @@
 # Blueprints: Retention Marketing
 
 ## High-Value Cart Recovery
-URL: https://realaiexamples.com/blueprints/cart-abandonment-value-segmentation
+URL: https://realaiexamples.com/skills/cart-abandonment-value-segmentation
 Description: Treat $1k carts differently than $10 carts.
 
 ---
@@ -52,7 +52,7 @@ Maximize recovery revenue by prioritizing high-value carts.
 ---
 
 ## Cross-Sell Recommender
-URL: https://realaiexamples.com/blueprints/cross-sell-recommender
+URL: https://realaiexamples.com/skills/cross-sell-recommender
 Description: If they bought X, sell them Y.
 
 ---
@@ -104,7 +104,7 @@ Generate targeted cross-sell lists.
 ---
 
 ## Holiday Shopper Wake-Up
-URL: https://realaiexamples.com/blueprints/holiday-shopper-reactivation
+URL: https://realaiexamples.com/skills/holiday-shopper-reactivation
 Description: Re-engage Black Friday-only buyers.
 
 ---
@@ -156,7 +156,7 @@ Reactivate seasonal buyers.
 ---
 
 ## Point Expiry Nudge
-URL: https://realaiexamples.com/blueprints/loyalty-point-expiry-alert
+URL: https://realaiexamples.com/skills/loyalty-point-expiry-alert
 Description: Create urgency with expiring points.
 
 ---
@@ -207,7 +207,7 @@ Reduce point liability and drive sales.
 ---
 
 ## Review Request Timer
-URL: https://realaiexamples.com/blueprints/review-request-timer
+URL: https://realaiexamples.com/skills/review-request-timer
 Description: Ask for reviews when they actually get the product.
 
 ---
@@ -258,7 +258,7 @@ Maximize review generation rates.
 ---
 
 ## Replenishment Timer
-URL: https://realaiexamples.com/blueprints/second-purchase-nudge-timer
+URL: https://realaiexamples.com/skills/second-purchase-nudge-timer
 Description: Time your re-order emails perfectly.
 
 ---
@@ -312,7 +312,7 @@ Optimize email timing for repeat purchases.
 ---
 
 ## Subscription Churn Risk
-URL: https://realaiexamples.com/blueprints/subscription-churn-risk-detector
+URL: https://realaiexamples.com/skills/subscription-churn-risk-detector
 Description: Flag subscribers who paused or skipped.
 
 ---
@@ -364,7 +364,7 @@ Prevent subscription churn.
 ---
 
 ## Unsub Retargeter
-URL: https://realaiexamples.com/blueprints/unsubscribed-customer-matcher
+URL: https://realaiexamples.com/skills/unsubscribed-customer-matcher
 Description: Reach unsubscribed users via ads.
 
 ---
@@ -414,7 +414,7 @@ Retarget users who opted out of email.
 ---
 
 ## VIP Graduation Alert
-URL: https://realaiexamples.com/blueprints/vip-tier-graduation-alert
+URL: https://realaiexamples.com/skills/vip-tier-graduation-alert
 Description: Nudge customers close to the next tier.
 
 ---
@@ -466,7 +466,7 @@ Drive incremental revenue via tier gamification.
 ---
 
 ## Win-Back Segmenter
-URL: https://realaiexamples.com/blueprints/win-back-segmenter
+URL: https://realaiexamples.com/skills/win-back-segmenter
 Description: Identify lapsed VIPs for recovery.
 
 ---

@@ -1,7 +1,7 @@
 # Blueprints: Customer Advocacy
 
 ## Advocacy Fatigue Saver
-URL: https://realaiexamples.com/blueprints/advocacy-ask-balancer
+URL: https://realaiexamples.com/skills/advocacy-ask-balancer
 Description: Don't ask twice in one month.
 
 ---
@@ -53,7 +53,7 @@ Protect customer relationships from over-asking.
 ---
 
 ## Beta Tester Verifier
-URL: https://realaiexamples.com/blueprints/beta-program-active-roster
+URL: https://realaiexamples.com/skills/beta-program-active-roster
 Description: Are they actually testing?
 
 ---
@@ -104,7 +104,7 @@ Ensure effective beta testing.
 ---
 
 ## Advisory Board Scout
-URL: https://realaiexamples.com/blueprints/cab-nomination-scorer
+URL: https://realaiexamples.com/skills/cab-nomination-scorer
 Description: Who should be on our CAB?
 
 ---
@@ -156,7 +156,7 @@ Nominate strategic partners.
 ---
 
 ## Case Study Expiry Audit
-URL: https://realaiexamples.com/blueprints/case-study-freshness-audit
+URL: https://realaiexamples.com/skills/case-study-freshness-audit
 Description: Retire assets older than 2 years.
 
 ---
@@ -207,7 +207,7 @@ Maintain relevant marketing assets.
 ---
 
 ## Community Champion Scorer
-URL: https://realaiexamples.com/blueprints/community-engagement-scorer
+URL: https://realaiexamples.com/skills/community-engagement-scorer
 Description: Who answers the most questions?
 
 ---
@@ -259,7 +259,7 @@ Identify and reward superusers.
 ---
 
 ## Perfect Review Timer
-URL: https://realaiexamples.com/blueprints/g2-review-solicitation-timer
+URL: https://realaiexamples.com/skills/g2-review-solicitation-timer
 Description: Ask when they are happiest.
 
 ---
@@ -311,7 +311,7 @@ Maximize 5-star review generation.
 ---
 
 ## Reference ROI Calculator
-URL: https://realaiexamples.com/blueprints/reference-win-rate-impact
+URL: https://realaiexamples.com/skills/reference-win-rate-impact
 Description: Does using a reference help?
 
 ---
@@ -364,7 +364,7 @@ Prove the value of the reference program.
 ---
 
 ## Referral Fraud Detector
-URL: https://realaiexamples.com/blueprints/referral-program-fraud-check
+URL: https://realaiexamples.com/skills/referral-program-fraud-check
 Description: Did they refer themselves?
 
 ---
@@ -415,7 +415,7 @@ Prevent referral abuse.
 ---
 
 ## Case Study Gap Finder
-URL: https://realaiexamples.com/blueprints/testimonial-coverage-matrix
+URL: https://realaiexamples.com/skills/testimonial-coverage-matrix
 Description: Do we have a 'Finance' case study?
 
 ---
@@ -466,7 +466,7 @@ Identify gaps in sales collateral.
 ---
 
 ## Video Testimonial Scout
-URL: https://realaiexamples.com/blueprints/video-testimonial-candidate-finder
+URL: https://realaiexamples.com/skills/video-testimonial-candidate-finder
 Description: Turn text reviews into video gold.
 
 ---

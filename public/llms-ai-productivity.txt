@@ -1,7 +1,7 @@
 # Blueprints: AI Productivity
 
 ## Moltbot (formerly Clawdbot) 101: Your Personal AI Assistant (Complete Beginner's Guide)
-URL: https://realaiexamples.com/blueprints/clawdbot-beginners-guide
+URL: https://realaiexamples.com/skills/clawdbot-beginners-guide
 Description: Turn your computer into a 24/7 AI assistant that works across WhatsApp, Telegram, and more using Moltbot (formerly Clawdbot).
 
 ---

@@ -1,7 +1,7 @@
 # Blueprints: Marketing Ops
 
 ## Intent Signal Aggregator
-URL: https://realaiexamples.com/blueprints/abm-intent-aggregator
+URL: https://realaiexamples.com/skills/abm-intent-aggregator
 Description: Combine G2, 6sense, and Website visits.
 
 --- 
@@ -60,7 +60,7 @@ sampleData
 ---
 
 ## ABM Personal Gift Recommender
-URL: https://realaiexamples.com/blueprints/abm-personal-gift-recommender
+URL: https://realaiexamples.com/skills/abm-personal-gift-recommender
 Description: Send gifts they actually keep, not just swag.
 
 --- 
@@ -108,7 +108,7 @@ Send gifts they actually keep, not just swag.
 ---
 
 ## Affiliate Application Auto-Screener
-URL: https://realaiexamples.com/blueprints/affiliate-application-auto-screener
+URL: https://realaiexamples.com/skills/affiliate-application-auto-screener
 Description: Filter out spammy affiliate applications instantly.
 
 --- 
@@ -156,7 +156,7 @@ Filter out spammy affiliate applications instantly.
 ---
 
 ## The API Key Rotator
-URL: https://realaiexamples.com/blueprints/api-key-rotator-checklist
+URL: https://realaiexamples.com/skills/api-key-rotator-checklist
 Description: Don't get hacked.
 
 ---
@@ -217,7 +217,7 @@ For each service in the CSV:
 ---
 
 ## Content Revenue Attributor
-URL: https://realaiexamples.com/blueprints/blog-post-roi-calculator
+URL: https://realaiexamples.com/skills/blog-post-roi-calculator
 Description: Stitch CRM deals to Analytics data to find your 'Money Pages'.
 
 ---
@@ -292,7 +292,7 @@ Identify which website entry points (First Page Seen) are actually driving **Clo
 ---
 
 ## Booth Staff Auto-Scheduler
-URL: https://realaiexamples.com/blueprints/booth-staff-auto-scheduler
+URL: https://realaiexamples.com/skills/booth-staff-auto-scheduler
 Description: Fairly rotate booth duty during conferences.
 
 --- 
@@ -340,7 +340,7 @@ Fairly rotate booth duty during conferences.
 ---
 
 ## Campaign Efficiency Scorer
-URL: https://realaiexamples.com/blueprints/campaign-cost-per-opportunity
+URL: https://realaiexamples.com/skills/campaign-cost-per-opportunity
 Description: Calculate Cost-per-Opportunity (CPO).
 
 ---
@@ -390,7 +390,7 @@ Calculate actual pipeline efficiency.
 ---
 
 ## Campaign Taxonomist
-URL: https://realaiexamples.com/blueprints/campaign-naming-convention-enforcer
+URL: https://realaiexamples.com/skills/campaign-naming-convention-enforcer
 Description: Stop messy data from breaking your reports.
 
 --- 
@@ -448,7 +448,7 @@ sampleData
 ---
 
 ## Lead Magnet Auditor
-URL: https://realaiexamples.com/blueprints/content-download-tracker
+URL: https://realaiexamples.com/skills/content-download-tracker
 Description: Which PDF is actually generating leads?
 
 --- 
@@ -506,7 +506,7 @@ sampleData
 ---
 
 ## Content Asset Influencer
-URL: https://realaiexamples.com/blueprints/content-influence-scorer
+URL: https://realaiexamples.com/skills/content-influence-scorer
 Description: Rank assets by how much pipeline they touched.
 
 ---
@@ -557,7 +557,7 @@ Identify the commercial value of specific content assets.
 ---
 
 ## Customer Content Journey
-URL: https://realaiexamples.com/blueprints/content-journey-mapper
+URL: https://realaiexamples.com/skills/content-journey-mapper
 Description: Trace the blog posts read by your best customers.
 
 --- 
@@ -614,7 +614,7 @@ sampleData
 ---
 
 ## Lead Magnet Converter
-URL: https://realaiexamples.com/blueprints/content-upgrade-conversion-rate
+URL: https://realaiexamples.com/skills/content-upgrade-conversion-rate
 Description: How many readers download the PDF?
 
 ---
@@ -664,7 +664,7 @@ Optimize top-of-funnel conversion.
 ---
 
 ## The Bulk CRM Data Normalizer
-URL: https://realaiexamples.com/blueprints/csv-crm-normalizer
+URL: https://realaiexamples.com/skills/csv-crm-normalizer
 Description: Standardize 10,000 lead records for import.
 
 ---
@@ -723,7 +723,7 @@ Standardize 10,000 lead records for import.
 ---
 
 ## Dark Funnel Correlation Bot
-URL: https://realaiexamples.com/blueprints/dark-funnel-illuminator
+URL: https://realaiexamples.com/skills/dark-funnel-illuminator
 Description: Correlate direct traffic spikes with outbound activity.
 
 ---
@@ -774,7 +774,7 @@ Attribute direct traffic to specific outbound campaigns.
 ---
 
 ## Domain Health Watchdog
-URL: https://realaiexamples.com/blueprints/email-bounce-rate-monitor
+URL: https://realaiexamples.com/skills/email-bounce-rate-monitor
 Description: Monitor bounce rates to prevent blacklisting.
 
 --- 
@@ -832,7 +832,7 @@ sampleData
 ---
 
 ## ISP Deliverability Heatmap
-URL: https://realaiexamples.com/blueprints/email-deliverability-heatmap
+URL: https://realaiexamples.com/skills/email-deliverability-heatmap
 Description: Are we blocked by Outlook?
 
 ---
@@ -882,7 +882,7 @@ Troubleshoot deliverability by provider.
 ---
 
 ## The Bulk Deliverability Auditor
-URL: https://realaiexamples.com/blueprints/email-dns-auditor
+URL: https://realaiexamples.com/skills/email-dns-auditor
 Description: Audit the sender reputation of 100 domains.
 
 ---
@@ -942,7 +942,7 @@ For each domain in the CSV:
 ---
 
 ## Email Fatigue Monitor
-URL: https://realaiexamples.com/blueprints/email-fatigue-monitor
+URL: https://realaiexamples.com/skills/email-fatigue-monitor
 Description: Prevent unsubscribes by monitoring send frequency.
 
 --- 
@@ -999,7 +999,7 @@ sampleData
 ---
 
 ## The Hard Bounce Cleaner
-URL: https://realaiexamples.com/blueprints/email-hard-bounce-cleaner
+URL: https://realaiexamples.com/skills/email-hard-bounce-cleaner
 Description: Protect your sender reputation.
 
 ---
@@ -1056,7 +1056,7 @@ For each Row in `bounce_report.csv`:
 ---
 
 ## Event Spend Pacer
-URL: https://realaiexamples.com/blueprints/event-budget-pacer
+URL: https://realaiexamples.com/skills/event-budget-pacer
 Description: Track trade show spend against approved budget.
 
 --- 
@@ -1113,7 +1113,7 @@ sampleData
 ---
 
 ## Conference Scan Cleaner
-URL: https://realaiexamples.com/blueprints/event-lead-uploader
+URL: https://realaiexamples.com/skills/event-lead-uploader
 Description: Format messy badge scans for CRM import.
 
 --- 
@@ -1169,7 +1169,7 @@ sampleData
 ---
 
 ## Attribution Model Comparer
-URL: https://realaiexamples.com/blueprints/first-vs-last-touch-comparison
+URL: https://realaiexamples.com/skills/first-vs-last-touch-comparison
 Description: Compare channel performance across different models.
 
 ---
@@ -1219,7 +1219,7 @@ Identify the distinct roles of every marketing channel.
 ---
 
 ## Form Friction Hunter
-URL: https://realaiexamples.com/blueprints/form-abandonment-rate-tracker
+URL: https://realaiexamples.com/skills/form-abandonment-rate-tracker
 Description: Is your form too long?
 
 ---
@@ -1271,7 +1271,7 @@ Generate `form_fix_list.md`:
 ---
 
 ## The GTM Fleet Debugger
-URL: https://realaiexamples.com/blueprints/google-tag-manager-debugger
+URL: https://realaiexamples.com/skills/google-tag-manager-debugger
 Description: Fix the dataLayer across all your properties.
 
 ---
@@ -1331,7 +1331,7 @@ For each property in the CSV:
 ---
 
 ## Influencer Payout Calc
-URL: https://realaiexamples.com/blueprints/influencer-payout-calculator
+URL: https://realaiexamples.com/skills/influencer-payout-calculator
 Description: Automate monthly affiliate commissions.
 
 --- 
@@ -1388,7 +1388,7 @@ sampleData
 ---
 
 ## Email Syntax Auditor
-URL: https://realaiexamples.com/blueprints/invalid-email-syntax-purge
+URL: https://realaiexamples.com/skills/invalid-email-syntax-purge
 Description: Identify and remove obvious email typos.
 
 ---
@@ -1439,7 +1439,7 @@ Identify invalid email addresses before sending.
 ---
 
 ## Job Title Normalizer
-URL: https://realaiexamples.com/blueprints/job-title-normalizer
+URL: https://realaiexamples.com/skills/job-title-normalizer
 Description: Standardize 'VP of Sales' vs 'Vice President Sales'.
 
 ---
@@ -1490,7 +1490,7 @@ Cleanse job title data for better segmentation.
 ---
 
 ## A/B Test Referee
-URL: https://realaiexamples.com/blueprints/landing-page-ab-test-significance
+URL: https://realaiexamples.com/skills/landing-page-ab-test-significance
 Description: Is Variant B actually better?
 
 --- 
@@ -1547,7 +1547,7 @@ sampleData
 ---
 
 ## LP Conversion Drift Monitor
-URL: https://realaiexamples.com/blueprints/landing-page-conversion-drift
+URL: https://realaiexamples.com/skills/landing-page-conversion-drift
 Description: Catch sudden drops in landing page conversion rates.
 
 ---
@@ -1599,7 +1599,7 @@ Detect performance anomalies on high-traffic pages.
 ---
 
 ## The Recycler
-URL: https://realaiexamples.com/blueprints/lead-recycling-automation
+URL: https://realaiexamples.com/skills/lead-recycling-automation
 Description: Move 'Closed-Lost' leads back to nurture.
 
 --- 
@@ -1655,7 +1655,7 @@ sampleData
 ---
 
 ## Routing Latency Auditor
-URL: https://realaiexamples.com/blueprints/lead-routing-latency-histogram
+URL: https://realaiexamples.com/skills/lead-routing-latency-histogram
 Description: Measure delays in lead assignment.
 
 ---
@@ -1707,7 +1707,7 @@ Ensure leads are assigned to reps without delay.
 ---
 
 ## Lead Threshold Simulator
-URL: https://realaiexamples.com/blueprints/lead-score-threshold-simulator
+URL: https://realaiexamples.com/skills/lead-score-threshold-simulator
 Description: See how threshold changes impact MQL volume.
 
 --- 
@@ -1765,7 +1765,7 @@ sampleData
 ---
 
 ## The Lead Source Normalizer
-URL: https://realaiexamples.com/blueprints/lead-source-normalizer
+URL: https://realaiexamples.com/skills/lead-source-normalizer
 Description: Fix your attribution buckets.
 
 ---
@@ -1826,7 +1826,7 @@ For each Row in `messy_sources.csv`:
 ---
 
 ## Attribution Truth Checker
-URL: https://realaiexamples.com/blueprints/lead-source-truth-auditor
+URL: https://realaiexamples.com/skills/lead-source-truth-auditor
 Description: UTM vs Self-Reported: Who is lying?
 
 ---
@@ -1876,7 +1876,7 @@ Uncover dark social impact.
 ---
 
 ## Linear Attribution Modeler
-URL: https://realaiexamples.com/blueprints/linear-attribution-modeler
+URL: https://realaiexamples.com/skills/linear-attribution-modeler
 Description: Split revenue credit across all marketing touches.
 
 --- 
@@ -1933,7 +1933,7 @@ sampleData
 ---
 
 ## LP Link Auditor
-URL: https://realaiexamples.com/blueprints/lp-dead-link-auditor
+URL: https://realaiexamples.com/skills/lp-dead-link-auditor
 Description: Ensure your paid traffic doesn't hit 404s.
 
 --- 
@@ -1989,7 +1989,7 @@ sampleData
 ---
 
 ## Lead Source Velocity
-URL: https://realaiexamples.com/blueprints/marketing-channel-velocity-tracker
+URL: https://realaiexamples.com/skills/marketing-channel-velocity-tracker
 Description: Measure avg days to close by channel.
 
 ---
@@ -2039,7 +2039,7 @@ Identify which channels drive the fastest deals.
 ---
 
 ## Ad Spend Spike Alert
-URL: https://realaiexamples.com/blueprints/marketing-spend-anomaly-detector
+URL: https://realaiexamples.com/skills/marketing-spend-anomaly-detector
 Description: Catch runaway budgets before they burn 10k.
 
 --- 
@@ -2098,7 +2098,7 @@ sampleData
 ---
 
 ## Nurture Path Auditor
-URL: https://realaiexamples.com/blueprints/nurture-path-performance-bot
+URL: https://realaiexamples.com/skills/nurture-path-performance-bot
 Description: Compare conversion rates of different nurture sequences.
 
 ---
@@ -2149,7 +2149,7 @@ Identify the highest-performing nurture sequence.
 ---
 
 ## The CPC Savings Calculator
-URL: https://realaiexamples.com/blueprints/paid-search-quality-score-auditor
+URL: https://realaiexamples.com/skills/paid-search-quality-score-auditor
 Description: Calculate exactly how much money you save by improving ad relevance.
 
 ---
@@ -2209,7 +2209,7 @@ For each keyword:
 ---
 
 ## Ad Fatigue Auditor
-URL: https://realaiexamples.com/blueprints/paid-social-frequency-cap-auditor
+URL: https://realaiexamples.com/skills/paid-social-frequency-cap-auditor
 Description: Identify campaigns with dangerously high frequency.
 
 ---
@@ -2259,7 +2259,7 @@ Prevent ad fatigue and protect CTR.
 ---
 
 ## Partner Logo Compliance Bot
-URL: https://realaiexamples.com/blueprints/partner-logo-compliance-bot
+URL: https://realaiexamples.com/skills/partner-logo-compliance-bot
 Description: Ensure partners aren't using your old ugly logo.
 
 ---
@@ -2307,7 +2307,7 @@ Ensure partners aren't using your old ugly logo.
 ---
 
 ## Podcast Growth Rate
-URL: https://realaiexamples.com/blueprints/podcast-download-growth-tracker
+URL: https://realaiexamples.com/skills/podcast-download-growth-tracker
 Description: Are we growing month over month?
 
 --- 
@@ -2360,7 +2360,7 @@ For each "Outlier" episode, generate `campaign_[episode_id].md`:
 ---
 
 ## The Brand Lift Estimator
-URL: https://realaiexamples.com/blueprints/podcast-sponsorship-roi
+URL: https://realaiexamples.com/skills/podcast-sponsorship-roi
 Description: Direct clicks are only half the story. Measure the 'Halo Effect'.
 
 ---
@@ -2416,7 +2416,7 @@ For each campaign:
 ---
 
 ## The Pricing Parity Architect
-URL: https://realaiexamples.com/blueprints/pricing-parity-checker
+URL: https://realaiexamples.com/skills/pricing-parity-checker
 Description: Audit your international pricing or research competitor PPP.
 
 ---
@@ -2478,7 +2478,7 @@ For each target market (IN, BR, UK):
 ---
 
 ## The Competitive Noise Canceler
-URL: https://realaiexamples.com/blueprints/social-share-of-voice-tracker
+URL: https://realaiexamples.com/skills/social-share-of-voice-tracker
 Description: Identify where competitors are loud so you can be louder (or go elsewhere).
 
 ---
@@ -2535,7 +2535,7 @@ For each Channel:
 ---
 
 ## Tweet Screenshot Automation
-URL: https://realaiexamples.com/blueprints/tweet-screenshot-automation
+URL: https://realaiexamples.com/skills/tweet-screenshot-automation
 Description: Capture perfect, sidebar-free tweet cards.
 
 ---
@@ -2601,7 +2601,7 @@ For each URL in the list:
 ---
 
 ## The Twitter Follower Cleaner
-URL: https://realaiexamples.com/blueprints/twitter-follower-export-cleaner
+URL: https://realaiexamples.com/skills/twitter-follower-export-cleaner
 Description: Analyze your audience.
 
 ---
@@ -2661,7 +2661,7 @@ For each account in the CSV:
 ---
 
 ## Unsub Analysis Bot
-URL: https://realaiexamples.com/blueprints/unsubscribe-reason-classifier
+URL: https://realaiexamples.com/skills/unsubscribe-reason-classifier
 Description: Why are they leaving?
 
 --- 
@@ -2719,7 +2719,7 @@ sampleData
 ---
 
 ## UTM Referrer Inference Bot
-URL: https://realaiexamples.com/blueprints/utm-parameter-gap-filler
+URL: https://realaiexamples.com/skills/utm-parameter-gap-filler
 Description: Infer missing sources based on Referrer URL.
 
 ---
@@ -2768,7 +2768,7 @@ Fill data gaps in lead attribution.
 ---
 
 ## UTM Traffic Grader
-URL: https://realaiexamples.com/blueprints/utm-performance-analyzer
+URL: https://realaiexamples.com/skills/utm-performance-analyzer
 Description: Which campaign source drives the most traffic?
 
 --- 
@@ -2825,7 +2825,7 @@ sampleData
 ---
 
 ## UTM Taxonomy Auditor
-URL: https://realaiexamples.com/blueprints/utm-taxonomy-enforcer
+URL: https://realaiexamples.com/skills/utm-taxonomy-enforcer
 Description: Standardize your tracking URLs and fix messy analytics data.
 
 ---
@@ -2891,7 +2891,7 @@ Start now.
 ---
 
 ## Video Drop-off Auditor
-URL: https://realaiexamples.com/blueprints/video-view-retention-analyst
+URL: https://realaiexamples.com/skills/video-view-retention-analyst
 Description: Where do they stop watching?
 
 ---
@@ -2941,7 +2941,7 @@ Optimize video content for engagement.
 ---
 
 ## Webinar Engagement Scorer
-URL: https://realaiexamples.com/blueprints/webinar-attendance-scorer
+URL: https://realaiexamples.com/skills/webinar-attendance-scorer
 Description: Identify hot leads based on minutes watched.
 
 --- 
@@ -2999,7 +2999,7 @@ sampleData
 ---
 
 ## Webinar Audience Quality
-URL: https://realaiexamples.com/blueprints/webinar-attendee-job-title-scorer
+URL: https://realaiexamples.com/skills/webinar-attendee-job-title-scorer
 Description: Did VPs show up, or just interns?
 
 ---
@@ -3054,7 +3054,7 @@ Generate `priority_sales_leads.md`:
 ---
 
 ## Webinar ROI Analyzer
-URL: https://realaiexamples.com/blueprints/webinar-roi-calculator
+URL: https://realaiexamples.com/skills/webinar-roi-calculator
 Description: Did we actually make money on that event?
 
 --- 
@@ -3111,7 +3111,7 @@ sampleData
 ---
 
 ## The Win-Back Campaign Architect
-URL: https://realaiexamples.com/blueprints/win-back-campaign
+URL: https://realaiexamples.com/skills/win-back-campaign
 Description: It's easier to sell to an ex.
 
 ---
@@ -3169,7 +3169,7 @@ For each Customer in `churned_customers.csv`:
 ---
 
 ## The Zapier Logic Architect
-URL: https://realaiexamples.com/blueprints/zapier-logic-architect
+URL: https://realaiexamples.com/skills/zapier-logic-architect
 Description: Standardize your no-code workflows.
 
 ---

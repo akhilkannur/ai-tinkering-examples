@@ -35,7 +35,7 @@ async function postRandomRecipe() {
     // Max 280 chars. 
     const title = data.title.toUpperCase();
     const tagline = data.tagline || '';
-    const url = `https://realaiexamples.com/blueprints/${data.id}`;
+    const url = `https://realaiexamples.com/skills/${data.id}`;
     
     const tweetText = `🤖 AI BLUEPRINT: ${title}
 

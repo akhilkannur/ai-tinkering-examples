@@ -1,7 +1,7 @@
 # Blueprints: Podcast
 
 ## The Viral Clip Factory
-URL: https://realaiexamples.com/blueprints/podcast-clip-selector
+URL: https://realaiexamples.com/skills/podcast-clip-selector
 Description: Identify viral social clips for your entire season.
 
 ---
@@ -62,7 +62,7 @@ For each transcript in the folder:
 ---
 
 ## The Show Notes Factory
-URL: https://realaiexamples.com/blueprints/podcast-show-notes-generator
+URL: https://realaiexamples.com/skills/podcast-show-notes-generator
 Description: Generate SEO-optimized show notes for your entire season.
 
 ---
@@ -122,7 +122,7 @@ For each transcript in the folder:
 ---
 
 ## The Conversational Ad Read Factory
-URL: https://realaiexamples.com/blueprints/podcast-sponsor-read-writer
+URL: https://realaiexamples.com/skills/podcast-sponsor-read-writer
 Description: Native ad reads that don't get skipped.
 
 ---

@@ -1,7 +1,7 @@
 # Blueprints: Social
 
 ## The Comment Section Nurturer
-URL: https://realaiexamples.com/blueprints/comment-section-nurturer
+URL: https://realaiexamples.com/skills/comment-section-nurturer
 Description: Turn 'Great post' into a lead.
 
 ---
@@ -64,7 +64,7 @@ For each comment in the CSV:
 ---
 
 ## The LinkedIn Banner Architect
-URL: https://realaiexamples.com/blueprints/linkedin-profile-banner-architect
+URL: https://realaiexamples.com/skills/linkedin-profile-banner-architect
 Description: Build a high-converting profile banner.
 
 ---
@@ -133,7 +133,7 @@ For each profile in the CSV:
 ---
 
 ## The Poll Strategy Generator
-URL: https://realaiexamples.com/blueprints/poll-strategy-generator
+URL: https://realaiexamples.com/skills/poll-strategy-generator
 Description: Engagement farming with a purpose.
 
 ---
@@ -201,7 +201,7 @@ For each campaign in the CSV:
 ---
 
 ## The UGC Campaign Planner
-URL: https://realaiexamples.com/blueprints/user-generated-content-campaign
+URL: https://realaiexamples.com/skills/user-generated-content-campaign
 Description: High-ROI content from your users.
 
 ---

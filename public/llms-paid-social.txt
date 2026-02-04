@@ -1,7 +1,7 @@
 # Blueprints: Paid Social
 
 ## The Audience Overlap Checker
-URL: https://realaiexamples.com/blueprints/audience-overlap-checker
+URL: https://realaiexamples.com/skills/audience-overlap-checker
 Description: Stop bidding against yourself.
 
 ---

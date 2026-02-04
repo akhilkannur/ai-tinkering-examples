@@ -1,7 +1,7 @@
 # Blueprints: Networking
 
 ## The Multi-Event Networking Planner
-URL: https://realaiexamples.com/blueprints/event-networker
+URL: https://realaiexamples.com/skills/event-networker
 Description: High-value hit lists for your entire conference calendar.
 
 ---

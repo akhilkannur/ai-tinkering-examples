@@ -1,7 +1,7 @@
 # Blueprints: Analytics
 
 ## The Attribution Modeler
-URL: https://realaiexamples.com/blueprints/attribution-modeler
+URL: https://realaiexamples.com/skills/attribution-modeler
 Description: Who actually deserves credit?
 
 ---
@@ -55,7 +55,7 @@ For each Path in `conversion_paths.csv`:
 ---
 
 ## Attribution Window Comparer
-URL: https://realaiexamples.com/blueprints/attribution-window-comparator
+URL: https://realaiexamples.com/skills/attribution-window-comparator
 Description: 1-day vs 7-day click impact.
 
 ---
@@ -106,7 +106,7 @@ Understand the time-lag of marketing impact.
 ---
 
 ## Basket Correlation Engine
-URL: https://realaiexamples.com/blueprints/basket-analysis-market-basket
+URL: https://realaiexamples.com/skills/basket-analysis-market-basket
 Description: People who buy A also buy B.
 
 ---
@@ -158,7 +158,7 @@ Increase AOV via smart bundling.
 ---
 
 ## Blended CAC Tracker
-URL: https://realaiexamples.com/blueprints/cac-by-month-tracker
+URL: https://realaiexamples.com/skills/cac-by-month-tracker
 Description: Is acquisition getting cheaper or expensive?
 
 ---
@@ -210,7 +210,7 @@ Monitor acquisition efficiency trends.
 ---
 
 ## Support Cost vs LTV
-URL: https://realaiexamples.com/blueprints/customer-support-vs-ltv
+URL: https://realaiexamples.com/skills/customer-support-vs-ltv
 Description: Are needy customers worth it?
 
 ---
@@ -262,7 +262,7 @@ Evaluate the true cost of high-maintenance customers.
 ---
 
 ## Coupon Leak Detector
-URL: https://realaiexamples.com/blueprints/discount-code-leakage-monitor
+URL: https://realaiexamples.com/skills/discount-code-leakage-monitor
 Description: Did Honey scrape your exclusive code?
 
 ---
@@ -314,7 +314,7 @@ Detect and kill leaked promo codes.
 ---
 
 ## Product Satisfaction Score
-URL: https://realaiexamples.com/blueprints/nps-by-product-scorer
+URL: https://realaiexamples.com/skills/nps-by-product-scorer
 Description: Which product makes people happiest?
 
 ---
@@ -366,7 +366,7 @@ Identify products that drive advocacy vs detraction.
 ---
 
 ## One-and-Done Profiler
-URL: https://realaiexamples.com/blueprints/one-time-buyer-analysis
+URL: https://realaiexamples.com/skills/one-time-buyer-analysis
 Description: Why do they leave after 1 buy?
 
 ---
@@ -417,7 +417,7 @@ Identify causes of single-purchase behavior.
 ---
 
 ## Quality of Traffic Audit
-URL: https://realaiexamples.com/blueprints/refund-rate-marketing-channel
+URL: https://realaiexamples.com/skills/refund-rate-marketing-channel
 Description: Which ads drive returns?
 
 ---
@@ -469,7 +469,7 @@ Optimize spend for customer quality.
 ---
 
 ## Repurchase Rate Monitor
-URL: https://realaiexamples.com/blueprints/repeat-purchase-rate-tracker
+URL: https://realaiexamples.com/skills/repeat-purchase-rate-tracker
 Description: % of new customers who buy again.
 
 ---
@@ -521,7 +521,7 @@ Track loyalty health.
 ---
 
 ## Peak Sales Timer
-URL: https://realaiexamples.com/blueprints/sales-velocity-day-of-week
+URL: https://realaiexamples.com/skills/sales-velocity-day-of-week
 Description: Best day to send emails?
 
 ---
@@ -573,7 +573,7 @@ Optimize campaign timing.
 ---
 
 ## The SQL Cohort Builder
-URL: https://realaiexamples.com/blueprints/sql-cohort-analyzer
+URL: https://realaiexamples.com/skills/sql-cohort-analyzer
 Description: Standardize your retention metrics.
 
 ---

@@ -1,7 +1,7 @@
 # Blueprints: CRM Ops
 
 ## The Churn Sentinel
-URL: https://realaiexamples.com/blueprints/churn-detective
+URL: https://realaiexamples.com/skills/churn-detective
 Description: Predict at-risk customers across 500 accounts.
 
 ---
@@ -62,7 +62,7 @@ For each row in the CSV:
 ---
 
 ## The Funnel Visualizer
-URL: https://realaiexamples.com/blueprints/funnel-architect
+URL: https://realaiexamples.com/skills/funnel-architect
 Description: Map & Fix Sales Flows.
 
 ---

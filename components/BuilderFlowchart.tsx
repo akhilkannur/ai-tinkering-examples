@@ -392,7 +392,7 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
                   </h2>
                   <div className="flex items-center gap-4 mt-1">
                     <span className="text-accent text-xs font-bold hover:underline flex items-center gap-1">
-                      <Link href={`/blueprints/${selectedRecipe.id}`} onClick={() => setSelectedRecipe(null)} className="flex items-center gap-1">
+                      <Link href={`/skills/${selectedRecipe.id}`} onClick={() => setSelectedRecipe(null)} className="flex items-center gap-1">
                         <ExternalLink className="w-3 h-3" /> Full Page
                       </Link>
                     </span>

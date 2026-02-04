@@ -1,7 +1,7 @@
 # Blueprints: SEO Maintenance
 
 ## The Content Decay Alerter
-URL: https://realaiexamples.com/blueprints/content-decay-alerter
+URL: https://realaiexamples.com/skills/content-decay-alerter
 Description: Save your traffic before it's gone.
 
 ---

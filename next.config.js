@@ -70,7 +70,17 @@ const nextConfig = {
       },
       {
         source: '/blueprints',
-        destination: '/',
+        destination: '/skills',
+        permanent: true,
+      },
+      {
+        source: '/blueprints/:id',
+        destination: '/skills/:id',
+        permanent: true,
+      },
+      {
+        source: '/blueprints/category/:slug',
+        destination: '/skills/category/:slug',
         permanent: true,
       },
       {

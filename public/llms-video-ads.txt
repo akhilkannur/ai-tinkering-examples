@@ -1,7 +1,7 @@
 # Blueprints: Video Ads
 
 ## The Hook Rate Analyzer
-URL: https://realaiexamples.com/blueprints/hook-rate-analyzer
+URL: https://realaiexamples.com/skills/hook-rate-analyzer
 Description: Fix the first 3 seconds.
 
 ---

@@ -1,7 +1,7 @@
 # Blueprints: Founders
 
 ## Investor Update Writer
-URL: https://realaiexamples.com/blueprints/investor-update-email-writer
+URL: https://realaiexamples.com/skills/investor-update-email-writer
 Description: Write the monthly email that keeps your VCs happy (and helpful).
 
 ---

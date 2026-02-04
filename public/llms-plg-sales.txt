@@ -1,7 +1,7 @@
 # Blueprints: PLG Sales
 
 ## Activation Rate by Cohort
-URL: https://realaiexamples.com/blueprints/activation-rate-cohort
+URL: https://realaiexamples.com/skills/activation-rate-cohort
 Description: Are new users activating faster?
 
 ---
@@ -53,7 +53,7 @@ Monitor onboarding improvements.
 ---
 
 ## High-Value Dunning Prioritizer
-URL: https://realaiexamples.com/blueprints/credit-card-dunning-recovery
+URL: https://realaiexamples.com/skills/credit-card-dunning-recovery
 Description: Save the big accounts first.
 
 ---
@@ -105,7 +105,7 @@ Recover revenue from failed payments efficiently.
 ---
 
 ## Paywall Hit Detector
-URL: https://realaiexamples.com/blueprints/feature-gating-hit-tracker
+URL: https://realaiexamples.com/skills/feature-gating-hit-tracker
 Description: Who keeps clicking the 'Upgrade' button?
 
 ---
@@ -156,7 +156,7 @@ Identify high-intent free users.
 ---
 
 ## PQL Usage Trigger
-URL: https://realaiexamples.com/blueprints/free-to-paid-conversion-signal
+URL: https://realaiexamples.com/skills/free-to-paid-conversion-signal
 Description: Flag users who hit 90% of their free limits.
 
 ---
@@ -208,7 +208,7 @@ Identify free users ready for sales outreach.
 ---
 
 ## Onboarding Drop-off Audit
-URL: https://realaiexamples.com/blueprints/onboarding-checklist-completion
+URL: https://realaiexamples.com/skills/onboarding-checklist-completion
 Description: Where do users get stuck?
 
 ---
@@ -261,7 +261,7 @@ Optimize user activation.
 ---
 
 ## License Utilization Alert
-URL: https://realaiexamples.com/blueprints/seat-expansion-trigger
+URL: https://realaiexamples.com/skills/seat-expansion-trigger
 Description: They just hit 9/10 seats.
 
 ---
@@ -313,7 +313,7 @@ Drive expansion revenue.
 ---
 
 ## Trial Closing Prioritizer
-URL: https://realaiexamples.com/blueprints/trial-expiry-prioritizer
+URL: https://realaiexamples.com/skills/trial-expiry-prioritizer
 Description: Who gets a call 3 days before expiry?
 
 ---
@@ -365,7 +365,7 @@ Convert high-value trials.
 ---
 
 ## Viral Coefficient Tracker
-URL: https://realaiexamples.com/blueprints/viral-loop-coefficient
+URL: https://realaiexamples.com/skills/viral-loop-coefficient
 Description: Are users inviting their friends?
 
 ---
@@ -416,7 +416,7 @@ Measure product virality.
 ---
 
 ## Enterprise Consolidation Hunter
-URL: https://realaiexamples.com/blueprints/workspace-consolidation-hunter
+URL: https://realaiexamples.com/skills/workspace-consolidation-hunter
 Description: Find 50 free users with the same email domain.
 
 ---
@@ -470,7 +470,7 @@ Find enterprise deal opportunities in free user base.
 ---
 
 ## Inactive Free User Purge
-URL: https://realaiexamples.com/blueprints/zombie-user-purge
+URL: https://realaiexamples.com/skills/zombie-user-purge
 Description: Clean up database costs.
 
 ---

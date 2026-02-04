@@ -1,7 +1,7 @@
 # Blueprints: Growth
 
 ## The Affiliate Program Launcher
-URL: https://realaiexamples.com/blueprints/affiliate-program-launcher
+URL: https://realaiexamples.com/skills/affiliate-program-launcher
 Description: Build a commission-only sales team.
 
 ---
@@ -67,7 +67,7 @@ For each partner in the list (either provided or researched):
 ---
 
 ## The Referral Program Architect
-URL: https://realaiexamples.com/blueprints/referral-program-architect
+URL: https://realaiexamples.com/skills/referral-program-architect
 Description: Turn users into salespeople.
 
 ---
@@ -134,7 +134,7 @@ For each brand in the CSV:
 ---
 
 ## The Viral Loop Calculator
-URL: https://realaiexamples.com/blueprints/viral-loop-calculator
+URL: https://realaiexamples.com/skills/viral-loop-calculator
 Description: Will it grow itself?
 
 ---

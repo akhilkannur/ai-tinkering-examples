@@ -1,7 +1,7 @@
 # Blueprints: Ops
 
 ## Routing Latency Auditor
-URL: https://realaiexamples.com/blueprints/lead-routing-latency-histogram
+URL: https://realaiexamples.com/skills/lead-routing-latency-histogram
 Description: Measure delays in lead assignment.
 
 ---
@@ -54,7 +54,7 @@ Ensure leads are assigned to reps without delay.
 ---
 
 ## The Pricing Parity Architect
-URL: https://realaiexamples.com/blueprints/pricing-parity-checker
+URL: https://realaiexamples.com/skills/pricing-parity-checker
 Description: Audit your international pricing or research competitor PPP.
 
 ---

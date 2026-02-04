@@ -1,7 +1,7 @@
 # Blueprints: E-commerce Merchandising
 
 ## Back-in-Stock Campaigner
-URL: https://realaiexamples.com/blueprints/bestseller-restock-alert
+URL: https://realaiexamples.com/skills/bestseller-restock-alert
 Description: Launch ads when bestsellers return.
 
 ---
@@ -52,7 +52,7 @@ Coordinate marketing with inventory availability.
 ---
 
 ## Category Affinity Tagger
-URL: https://realaiexamples.com/blueprints/category-interest-tagger
+URL: https://realaiexamples.com/skills/category-interest-tagger
 Description: Tag users as 'Runners' or 'Swimmers'.
 
 ---
@@ -105,7 +105,7 @@ Personalize marketing based on interest.
 ---
 
 ## Discount Hunter Profiler
-URL: https://realaiexamples.com/blueprints/discount-affinity-profiler
+URL: https://realaiexamples.com/skills/discount-affinity-profiler
 Description: Who only buys when it's on sale?
 
 ---
@@ -158,7 +158,7 @@ Protect margins by suppressing discounts for full-price buyers.
 ---
 
 ## Flash Sale Brake Pedal
-URL: https://realaiexamples.com/blueprints/flash-sale-inventory-monitor
+URL: https://realaiexamples.com/skills/flash-sale-inventory-monitor
 Description: Stop ads when stock gets low.
 
 ---
@@ -209,7 +209,7 @@ Prevent overselling and wasted ad spend.
 ---
 
 ## Gift-with-Purchase Qualifier
-URL: https://realaiexamples.com/blueprints/gwp-qualifier
+URL: https://realaiexamples.com/skills/gwp-qualifier
 Description: Identify VIPs for surprise gifts.
 
 ---
@@ -260,7 +260,7 @@ Operationalize VIP gifting.
 ---
 
 ## Whale Hunter (High AOV)
-URL: https://realaiexamples.com/blueprints/high-aov-cluster-analysis
+URL: https://realaiexamples.com/skills/high-aov-cluster-analysis
 Description: Where do the big spenders come from?
 
 ---
@@ -313,7 +313,7 @@ Optimize spend for high-value customers.
 ---
 
 ## New Drop Teaser List
-URL: https://realaiexamples.com/blueprints/new-arrival-teaser-list
+URL: https://realaiexamples.com/skills/new-arrival-teaser-list
 Description: Notify past buyers of a brand about new arrivals.
 
 ---
@@ -364,7 +364,7 @@ Drive launch sales via affinity targeting.
 ---
 
 ## Price Drop Notifier
-URL: https://realaiexamples.com/blueprints/price-drop-notification-list
+URL: https://realaiexamples.com/skills/price-drop-notification-list
 Description: Tell browsers when price drops.
 
 ---
@@ -415,7 +415,7 @@ Drive sales via price alerts.
 ---
 
 ## Sample to Full-Size Converter
-URL: https://realaiexamples.com/blueprints/sample-pack-converter
+URL: https://realaiexamples.com/skills/sample-pack-converter
 Description: Upsell sample buyers to the real deal.
 
 ---
@@ -466,7 +466,7 @@ Convert trial users to full customers.
 ---
 
 ## Dead Stock Bundler
-URL: https://realaiexamples.com/blueprints/slow-mover-bundle-builder
+URL: https://realaiexamples.com/skills/slow-mover-bundle-builder
 Description: Clear stale inventory by bundling.
 
 ---

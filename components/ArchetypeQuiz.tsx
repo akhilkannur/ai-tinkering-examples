@@ -156,7 +156,7 @@ export default function ArchetypeQuiz() {
             <h4 className="font-bold text-xs uppercase tracking-widest text-text-secondary/50 mb-6 border-b border-navy-dark pb-4">Recommended Blueprints</h4>
             <div className="flex flex-col gap-3">
                {profile.recommendedIds.map(id => (
-                 <Link key={id} href={`/blueprints/${id}`} onClick={() => setIsOpen(false)} className="bg-secondary-bg border border-navy-dark p-4 rounded-lg shadow-sm hover:border-accent/50 transition-all text-sm font-bold text-text-color flex items-center justify-between group">
+                 <Link key={id} href={`/skills/${id}`} onClick={() => setIsOpen(false)} className="bg-secondary-bg border border-navy-dark p-4 rounded-lg shadow-sm hover:border-accent/50 transition-all text-sm font-bold text-text-color flex items-center justify-between group">
                     <span className="capitalize">{id.split('-').join(' ')}</span>
                     <ChevronRight className="w-4 h-4 text-text-secondary/30 group-hover:text-accent transition-colors" />
                  </Link>

@@ -1,7 +1,7 @@
 # Blueprints: Competitive Intel
 
 ## Ad Copy Pivot Detector
-URL: https://realaiexamples.com/blueprints/ad-copy-benchmarker
+URL: https://realaiexamples.com/skills/ad-copy-benchmarker
 Description: Did they change their value prop?
 
 ---
@@ -51,7 +51,7 @@ Monitor competitor messaging strategy.
 ---
 
 ## The Conquest Campaigner
-URL: https://realaiexamples.com/blueprints/ad-counter-strike
+URL: https://realaiexamples.com/skills/ad-counter-strike
 Description: Don't just attack their product. Attack their bad reviews.
 
 ---
@@ -111,7 +111,7 @@ Draft the Ad:
 ---
 
 ## The Ad Library Archivist
-URL: https://realaiexamples.com/blueprints/ad-library-archivist
+URL: https://realaiexamples.com/skills/ad-library-archivist
 Description: Build a structured swipe file from 100 links.
 
 ---
@@ -167,7 +167,7 @@ For each row in the CSV:
 ---
 
 ## The Case Study Decoder
-URL: https://realaiexamples.com/blueprints/case-study-reverse-engineer
+URL: https://realaiexamples.com/skills/case-study-reverse-engineer
 Description: Who are they really selling to?
 
 ---
@@ -230,7 +230,7 @@ For each competitor in the CSV:
 ---
 
 ## Competitor Site Change Detector
-URL: https://realaiexamples.com/blueprints/competitor-change-monitor
+URL: https://realaiexamples.com/skills/competitor-change-monitor
 Description: Did they change their H1? Did they raise prices?
 
 ---
@@ -293,7 +293,7 @@ sampleData
 ---
 
 ## Competitor Brain Drain
-URL: https://realaiexamples.com/blueprints/competitor-employee-churn-monitor
+URL: https://realaiexamples.com/skills/competitor-employee-churn-monitor
 Description: Did their VP of Sales just quit?
 
 ---
@@ -343,7 +343,7 @@ Spot internal turmoil at competitors.
 ---
 
 ## The Feature Gap Detective
-URL: https://realaiexamples.com/blueprints/competitor-feature-parity
+URL: https://realaiexamples.com/skills/competitor-feature-parity
 Description: Don't guess what they have. Scrape their pricing page to prove it.
 
 ---
@@ -402,7 +402,7 @@ For each Competitor:
 ---
 
 ## The Market Hiring Spy
-URL: https://realaiexamples.com/blueprints/competitor-hiring-spy
+URL: https://realaiexamples.com/skills/competitor-hiring-spy
 Description: Detect strategic pivots (PLG -> Enterprise) by analyzing job titles.
 
 ---
@@ -464,7 +464,7 @@ For each competitor in the CSV:
 ---
 
 ## The Competitor Hook Decoder
-URL: https://realaiexamples.com/blueprints/competitor-hook-decoder
+URL: https://realaiexamples.com/skills/competitor-hook-decoder
 Description: Reverse-engineer the psychology behind their ads.
 
 ---
@@ -532,7 +532,7 @@ For each ad in `competitor_ads.csv`:
 ---
 
 ## Competitor Radar
-URL: https://realaiexamples.com/blueprints/competitor-news-digest-builder
+URL: https://realaiexamples.com/skills/competitor-news-digest-builder
 Description: Turn messy news alerts into a clean executive summary.
 
 ---
@@ -591,7 +591,7 @@ sampleData
 ---
 
 ## The Onboarding Teardown Factory
-URL: https://realaiexamples.com/blueprints/competitor-onboarding-spy
+URL: https://realaiexamples.com/skills/competitor-onboarding-spy
 Description: Comparative UX audit of competitors at once.
 
 ---
@@ -652,7 +652,7 @@ For each competitor in the CSV:
 ---
 
 ## The Price Watchdog Fleet
-URL: https://realaiexamples.com/blueprints/competitor-price-watchdog
+URL: https://realaiexamples.com/skills/competitor-price-watchdog
 Description: Monitor pricing changes for 10 competitors at once.
 
 ---
@@ -711,7 +711,7 @@ For each row in the CSV:
 ---
 
 ## Price War Monitor
-URL: https://realaiexamples.com/blueprints/competitor-pricing-parity
+URL: https://realaiexamples.com/skills/competitor-pricing-parity
 Description: Don't just calculate differences. Scrape and monitor live competitor pricing.
 
 ---
@@ -775,7 +775,7 @@ For each matched price:
 ---
 
 ## Competitor Discount Tracker
-URL: https://realaiexamples.com/blueprints/competitor-promo-code-tracker
+URL: https://realaiexamples.com/skills/competitor-promo-code-tracker
 Description: Are they running a secret 20% off?
 
 ---
@@ -825,7 +825,7 @@ Monitor competitor discounting aggression.
 ---
 
 ## The Competitor UI/UX Decoder
-URL: https://realaiexamples.com/blueprints/competitor-screenshot-decoder
+URL: https://realaiexamples.com/skills/competitor-screenshot-decoder
 Description: Analyze competitor screenshots to steal their best design patterns.
 
 ---
@@ -874,7 +874,7 @@ Analyze competitor screenshots to steal their best design patterns.
 ---
 
 ## The Market Spy
-URL: https://realaiexamples.com/blueprints/competitor-spy
+URL: https://realaiexamples.com/skills/competitor-spy
 Description: Deep Competitor Analysis.
 
 ---
@@ -949,7 +949,7 @@ Start now.
 ---
 
 ## The Tech Stack Spy
-URL: https://realaiexamples.com/blueprints/competitor-tech-stack-spy
+URL: https://realaiexamples.com/skills/competitor-tech-stack-spy
 Description: Audit the tech stack of your entire market.
 
 ---
@@ -1016,7 +1016,7 @@ For each row in `competitors.csv`:
 ---
 
 ## Visual Pricing Page Monitor
-URL: https://realaiexamples.com/blueprints/competitor-visual-pricing-tracker
+URL: https://realaiexamples.com/skills/competitor-visual-pricing-tracker
 Description: Detect hidden pricing changes that text scrapers miss.
 
 ---
@@ -1064,7 +1064,7 @@ Detect hidden pricing changes that text scrapers miss.
 ---
 
 ## Competitor Event Monitor
-URL: https://realaiexamples.com/blueprints/competitor-webinar-spy
+URL: https://realaiexamples.com/skills/competitor-webinar-spy
 Description: What topics are they pitching?
 
 ---
@@ -1113,7 +1113,7 @@ Track competitor content themes.
 ---
 
 ## Competitor Win Rate Trend
-URL: https://realaiexamples.com/blueprints/competitor-win-rate-trend
+URL: https://realaiexamples.com/skills/competitor-win-rate-trend
 Description: Are we winning or losing against Competitor X?
 
 ---
@@ -1172,7 +1172,7 @@ sampleData
 ---
 
 ## Feature Parity Bot
-URL: https://realaiexamples.com/blueprints/feature-parity-matrix-builder
+URL: https://realaiexamples.com/skills/feature-parity-matrix-builder
 Description: Auto-update your comparison grid.
 
 ---
@@ -1222,7 +1222,7 @@ Maintain an up-to-date competitive feature matrix.
 ---
 
 ## The Capital Radar
-URL: https://realaiexamples.com/blueprints/funding-radar
+URL: https://realaiexamples.com/skills/funding-radar
 Description: Track $1B+ in funding across 50 industries on autopilot.
 
 ---
@@ -1281,7 +1281,7 @@ For each industry in the CSV:
 ---
 
 ## The Help Center Forensic Agent
-URL: https://realaiexamples.com/blueprints/help-center-gap-finder
+URL: https://realaiexamples.com/skills/help-center-gap-finder
 Description: Spot competitor flaws in their support docs.
 
 ---
@@ -1344,7 +1344,7 @@ For each competitor in the CSV:
 ---
 
 ## The Inbox Strategy Auditor
-URL: https://realaiexamples.com/blueprints/newsletter-frequency-analyst
+URL: https://realaiexamples.com/skills/newsletter-frequency-analyst
 Description: Know exactly when your competitors send.
 
 ---
@@ -1408,7 +1408,7 @@ For each competitor in the CSV:
 ---
 
 ## The Partner Page Scraper
-URL: https://realaiexamples.com/blueprints/partner-page-scraper
+URL: https://realaiexamples.com/skills/partner-page-scraper
 Description: Poach their agencies.
 
 ---
@@ -1471,7 +1471,7 @@ For each competitor in the CSV:
 ---
 
 ## The Pricing Historian
-URL: https://realaiexamples.com/blueprints/pricing-change-historian
+URL: https://realaiexamples.com/skills/pricing-change-historian
 Description: Track their inflation.
 
 ---
@@ -1533,7 +1533,7 @@ For each competitor in the CSV:
 ---
 
 ## Review Keyword Miner
-URL: https://realaiexamples.com/blueprints/review-keyword-extractor
+URL: https://realaiexamples.com/skills/review-keyword-extractor
 Description: What do people hate about your competitor?
 
 ---
@@ -1583,7 +1583,7 @@ Identify competitor weaknesses for battlecards.
 ---
 
 ## The Review Sentiment Factory
-URL: https://realaiexamples.com/blueprints/review-sentiment-quantifier
+URL: https://realaiexamples.com/skills/review-sentiment-quantifier
 Description: Quantify the emotion of 1000+ customer reviews.
 
 ---
@@ -1640,7 +1640,7 @@ For each review in the CSV:
 ---
 
 ## SERP Conquest Planner
-URL: https://realaiexamples.com/blueprints/serp-conquesting-planner
+URL: https://realaiexamples.com/skills/serp-conquesting-planner
 Description: Steal traffic where they are weak.
 
 ---
@@ -1689,7 +1689,7 @@ Identify vulnerable competitor keyword rankings.
 ---
 
 ## The Social Authenticity Auditor
-URL: https://realaiexamples.com/blueprints/social-follower-quality-audit
+URL: https://realaiexamples.com/skills/social-follower-quality-audit
 Description: Spot fake followers on your account or a competitor's.
 
 ---
@@ -1750,7 +1750,7 @@ Spot fake followers on your account or a competitor's.
 ---
 
 ## Technographic Prospector
-URL: https://realaiexamples.com/blueprints/technographic-prospector
+URL: https://realaiexamples.com/skills/technographic-prospector
 Description: Find leads using specific software.
 
 ---
@@ -1799,7 +1799,7 @@ Identify high-fit technical prospects.
 ---
 
 ## The Traffic Source Decoder
-URL: https://realaiexamples.com/blueprints/traffic-source-reverse-engineer
+URL: https://realaiexamples.com/skills/traffic-source-reverse-engineer
 Description: Uncover the growth engine of any competitor.
 
 ---
@@ -1860,7 +1860,7 @@ For each domain:
 ---
 
 ## Competitor Win/Loss Trend
-URL: https://realaiexamples.com/blueprints/win-loss-competitor-trends
+URL: https://realaiexamples.com/skills/win-loss-competitor-trends
 Description: Are we losing more to Comp A or B?
 
 ---

@@ -1,7 +1,7 @@
 # Blueprints: Field Marketing
 
 ## Event Lead Router
-URL: https://realaiexamples.com/blueprints/booth-scan-lead-router
+URL: https://realaiexamples.com/skills/booth-scan-lead-router
 Description: Route badge scans to the right rep.
 
 ---
@@ -52,7 +52,7 @@ Fast follow-up for event leads.
 ---
 
 ## Event Influence Calc
-URL: https://realaiexamples.com/blueprints/event-influenced-pipeline
+URL: https://realaiexamples.com/skills/event-influenced-pipeline
 Description: Total pipeline touched by this event.
 
 ---
@@ -104,7 +104,7 @@ Prove event value beyond direct leads.
 ---
 
 ## Event Meeting Auditor
-URL: https://realaiexamples.com/blueprints/event-meeting-no-show-tracker
+URL: https://realaiexamples.com/skills/event-meeting-no-show-tracker
 Description: Did they show up to the booth meeting?
 
 ---
@@ -156,7 +156,7 @@ Measure event meeting effectiveness.
 ---
 
 ## VIP Dinner Selector
-URL: https://realaiexamples.com/blueprints/field-dinner-nomination-logic
+URL: https://realaiexamples.com/skills/field-dinner-nomination-logic
 Description: Who gets the steak dinner?
 
 ---
@@ -207,7 +207,7 @@ Curate high-value event guest lists.
 ---
 
 ## Co-Marketing Lead Splitter
-URL: https://realaiexamples.com/blueprints/partner-event-lead-splitter
+URL: https://realaiexamples.com/skills/partner-event-lead-splitter
 Description: Share leads fairly with partners.
 
 ---
@@ -259,7 +259,7 @@ Operationalize lead sharing agreements.
 ---
 
 ## Event Follow-up Police
-URL: https://realaiexamples.com/blueprints/post-event-followup-sla
+URL: https://realaiexamples.com/skills/post-event-followup-sla
 Description: Did Sales call the leads within 24h?
 
 ---
@@ -310,7 +310,7 @@ Enforce event lead SLA compliance.
 ---
 
 ## Geo-Targeted Event Warmup
-URL: https://realaiexamples.com/blueprints/pre-event-warmup-builder
+URL: https://realaiexamples.com/skills/pre-event-warmup-builder
 Description: Find prospects within 50 miles.
 
 ---
@@ -362,7 +362,7 @@ Drive attendance to field events.
 ---
 
 ## Session Pipeline Attribution
-URL: https://realaiexamples.com/blueprints/speaker-session-attribution
+URL: https://realaiexamples.com/skills/speaker-session-attribution
 Description: Did the CEO's keynote generate deals?
 
 ---
@@ -413,7 +413,7 @@ Measure ROI of speaking engagements.
 ---
 
 ## Swag Demand Planner
-URL: https://realaiexamples.com/blueprints/swag-inventory-forecaster
+URL: https://realaiexamples.com/skills/swag-inventory-forecaster
 Description: How many t-shirts do we need?
 
 ---
@@ -464,7 +464,7 @@ Optimize inventory for events.
 ---
 
 ## Meetup City Selector
-URL: https://realaiexamples.com/blueprints/user-group-geo-locator
+URL: https://realaiexamples.com/skills/user-group-geo-locator
 Description: Where should we host the next dinner?
 
 ---

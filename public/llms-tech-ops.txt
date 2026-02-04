@@ -1,7 +1,7 @@
 # Blueprints: Tech Ops
 
 ## The Bulk Deliverability Auditor
-URL: https://realaiexamples.com/blueprints/email-dns-auditor
+URL: https://realaiexamples.com/skills/email-dns-auditor
 Description: Audit the sender reputation of 100 domains.
 
 ---

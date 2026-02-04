@@ -1,7 +1,7 @@
 # Blueprints: Agency
 
 ## The Client Onboarding Checklist
-URL: https://realaiexamples.com/blueprints/client-onboarding-checklist
+URL: https://realaiexamples.com/skills/client-onboarding-checklist
 Description: Impress them in Day 1.
 
 ---
@@ -67,7 +67,7 @@ For each client in the CSV:
 ---
 
 ## The Monthly Report Generator
-URL: https://realaiexamples.com/blueprints/monthly-report-generator
+URL: https://realaiexamples.com/skills/monthly-report-generator
 Description: Prove your worth.
 
 ---
@@ -135,7 +135,7 @@ For each client in the CSV:
 ---
 
 ## The High-Ticket Proposal Writer
-URL: https://realaiexamples.com/blueprints/proposal-writer
+URL: https://realaiexamples.com/skills/proposal-writer
 Description: Generate custom proposals for each lead.
 
 ---
@@ -212,7 +212,7 @@ Start now.
 ---
 
 ## The Scope Creep Defender
-URL: https://realaiexamples.com/blueprints/scope-creep-email-drafter
+URL: https://realaiexamples.com/skills/scope-creep-email-drafter
 Description: Say 'No' without losing the client.
 
 ---
@@ -278,7 +278,7 @@ For each request in the CSV:
 ---
 
 ## The White Label Dashboard Setup
-URL: https://realaiexamples.com/blueprints/white-label-dashboard-setup
+URL: https://realaiexamples.com/skills/white-label-dashboard-setup
 Description: Standardize your client reporting.
 
 ---

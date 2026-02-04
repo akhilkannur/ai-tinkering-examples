@@ -1,7 +1,7 @@
 # Blueprints: PR
 
 ## The Bulk HARO Pitcher
-URL: https://realaiexamples.com/blueprints/haro-pitcher
+URL: https://realaiexamples.com/skills/haro-pitcher
 Description: Scan 100 media queries and draft 5 winning pitches.
 
 ---
@@ -68,7 +68,7 @@ For every qualified query found:
 ---
 
 ## The Podcast Guest Pitcher
-URL: https://realaiexamples.com/blueprints/podcast-guest-pitcher
+URL: https://realaiexamples.com/skills/podcast-guest-pitcher
 Description: Get booked on niche shows.
 
 ---
@@ -136,7 +136,7 @@ For each podcast in the CSV:
 ---
 
 ## The Podcast Tour Manager
-URL: https://realaiexamples.com/blueprints/podcast-tour-manager
+URL: https://realaiexamples.com/skills/podcast-tour-manager
 Description: Book your tour from a list or a niche goal.
 
 ---

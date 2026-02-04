@@ -1,7 +1,7 @@
 # Blueprints: SEO Content
 
 ## The Featured Snippet Thief
-URL: https://realaiexamples.com/blueprints/featured-snippet-thief
+URL: https://realaiexamples.com/skills/featured-snippet-thief
 Description: Steal position zero.
 
 ---
@@ -61,7 +61,7 @@ For each Keyword in `serp_analysis.csv`:
 ---
 
 ## The Programmatic SEO Builder
-URL: https://realaiexamples.com/blueprints/programmatic-seo-builder
+URL: https://realaiexamples.com/skills/programmatic-seo-builder
 Description: Build 1,000 pages with 1 template.
 
 ---
@@ -118,7 +118,7 @@ For each Row in `industries.csv`:
 ---
 
 ## The Zero-Click Optimizer
-URL: https://realaiexamples.com/blueprints/zero-click-optimizer
+URL: https://realaiexamples.com/skills/zero-click-optimizer
 Description: Optimize for the answer engine.
 
 ---

@@ -1,7 +1,7 @@
 # Blueprints: Support
 
 ## The Review Response Bot
-URL: https://realaiexamples.com/blueprints/review-response-bot
+URL: https://realaiexamples.com/skills/review-response-bot
 Description: Turn haters into fans.
 
 ---

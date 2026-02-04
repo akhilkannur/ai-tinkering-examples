@@ -1,7 +1,7 @@
 # Blueprints: E-commerce Growth
 
 ## Bundle Profitability Tracker
-URL: https://realaiexamples.com/blueprints/bundle-efficacy-tracker
+URL: https://realaiexamples.com/skills/bundle-efficacy-tracker
 Description: Do bundles actually increase profit?
 
 ---
@@ -53,7 +53,7 @@ Validate bundling strategy.
 ---
 
 ## Category Momentum Tracker
-URL: https://realaiexamples.com/blueprints/category-growth-trends
+URL: https://realaiexamples.com/skills/category-growth-trends
 Description: What's trending up MoM?
 
 ---
@@ -108,7 +108,7 @@ Spot emerging product trends.
 ---
 
 ## Share of Wallet Estimator
-URL: https://realaiexamples.com/blueprints/customer-share-of-wallet-estimator
+URL: https://realaiexamples.com/skills/customer-share-of-wallet-estimator
 Description: How much more could they spend?
 
 ---
@@ -160,7 +160,7 @@ Identify under-penetrated accounts.
 ---
 
 ## Free Shipping Modeler
-URL: https://realaiexamples.com/blueprints/free-shipping-threshold-tester
+URL: https://realaiexamples.com/skills/free-shipping-threshold-tester
 Description: Should the bar be $50 or $75?
 
 ---
@@ -213,7 +213,7 @@ Optimize shipping policy for AOV.
 ---
 
 ## Influencer Profit Auditor
-URL: https://realaiexamples.com/blueprints/influencer-code-profitability
+URL: https://realaiexamples.com/skills/influencer-code-profitability
 Description: Revenue is vanity, profit is sanity.
 
 ---
@@ -265,7 +265,7 @@ Audit influencer profitability.
 ---
 
 ## Stockout Loss Estimator
-URL: https://realaiexamples.com/blueprints/inventory-opportunity-cost
+URL: https://realaiexamples.com/skills/inventory-opportunity-cost
 Description: How much money did we lose today?
 
 ---
@@ -316,7 +316,7 @@ Quantify the cost of stockouts.
 ---
 
 ## Loyalty Health Monitor
-URL: https://realaiexamples.com/blueprints/loyalty-program-redemption-rate
+URL: https://realaiexamples.com/skills/loyalty-program-redemption-rate
 Description: Are points being used?
 
 ---
@@ -368,7 +368,7 @@ Assess program liability and engagement.
 ---
 
 ## Review Velocity Tracker
-URL: https://realaiexamples.com/blueprints/product-review-velocity
+URL: https://realaiexamples.com/skills/product-review-velocity
 Description: Spot products going cold.
 
 ---
@@ -420,7 +420,7 @@ Maintain social proof freshness.
 ---
 
 ## Net Profit SKU Analyzer
-URL: https://realaiexamples.com/blueprints/returns-impact-on-profit
+URL: https://realaiexamples.com/skills/returns-impact-on-profit
 Description: True profit after returns.
 
 ---
@@ -473,7 +473,7 @@ Identify products that lose money due to returns.
 ---
 
 ## End-of-Season Liquidator
-URL: https://realaiexamples.com/blueprints/seasonal-inventory-liquidator
+URL: https://realaiexamples.com/skills/seasonal-inventory-liquidator
 Description: Clear shelves before the new line drops.
 
 ---

@@ -1,7 +1,7 @@
 # Blueprints: SEO Strategy
 
 ## The Keyword Cannibalization Detective
-URL: https://realaiexamples.com/blueprints/keyword-cannibalization-detective
+URL: https://realaiexamples.com/skills/keyword-cannibalization-detective
 Description: Stop competing with yourself.
 
 ---
@@ -62,7 +62,7 @@ For each Cannibalized Query:
 ---
 
 ## The Subdomain vs. Subfolder Decider
-URL: https://realaiexamples.com/blueprints/subdomain-decider
+URL: https://realaiexamples.com/skills/subdomain-decider
 Description: End the debate with logic.
 
 ---

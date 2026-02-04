@@ -1,7 +1,7 @@
 # Blueprints: SEO
 
 ## The 'Alternative To' Hub Builder
-URL: https://realaiexamples.com/blueprints/alternative-to-builder
+URL: https://realaiexamples.com/skills/alternative-to-builder
 Description: Steal traffic from all your competitors at once.
 
 ---
@@ -58,7 +58,7 @@ For each competitor in the CSV:
 ---
 
 ## The App Store Screenshot Optimizer
-URL: https://realaiexamples.com/blueprints/app-store-screenshot-optimizer
+URL: https://realaiexamples.com/skills/app-store-screenshot-optimizer
 Description: More downloads, same traffic.
 
 ---
@@ -121,7 +121,7 @@ For each app in the CSV:
 ---
 
 ## Backlink Quality Auditor
-URL: https://realaiexamples.com/blueprints/backlink-quality-scorer
+URL: https://realaiexamples.com/skills/backlink-quality-scorer
 Description: Filter the gold from the spam.
 
 --- 
@@ -178,7 +178,7 @@ sampleData
 ---
 
 ## The Backlink Toxicity Checker
-URL: https://realaiexamples.com/blueprints/backlink-toxicity-checker
+URL: https://realaiexamples.com/skills/backlink-toxicity-checker
 Description: Is that link helping or hurting?
 
 ---
@@ -236,7 +236,7 @@ For each Link in `backlinks.csv`:
 ---
 
 ## Broken Image Hunter
-URL: https://realaiexamples.com/blueprints/broken-image-finder
+URL: https://realaiexamples.com/skills/broken-image-finder
 Description: Find images returning 404 errors.
 
 ---
@@ -295,7 +295,7 @@ Generate `broken_asset_recovery.md`:
 ---
 
 ## The Technical SEO Doctor
-URL: https://realaiexamples.com/blueprints/canonical-tag-auditor
+URL: https://realaiexamples.com/skills/canonical-tag-auditor
 Description: One scan to find Canonical conflicts, NoIndex errors, and Broken Links.
 
 ---
@@ -355,7 +355,7 @@ For each URL:
 ---
 
 ## Canonical Tag Consistency
-URL: https://realaiexamples.com/blueprints/canonical-url-verifier
+URL: https://realaiexamples.com/skills/canonical-url-verifier
 Description: Prevent duplicate content issues.
 
 ---
@@ -413,7 +413,7 @@ sampleData
 ---
 
 ## The Content Decay Alerter
-URL: https://realaiexamples.com/blueprints/content-decay-alerter
+URL: https://realaiexamples.com/skills/content-decay-alerter
 Description: Save your traffic before it's gone.
 
 ---
@@ -472,7 +472,7 @@ For each URL in `traffic_data.csv`:
 ---
 
 ## Content Decay Detector
-URL: https://realaiexamples.com/blueprints/content-decay-audit
+URL: https://realaiexamples.com/skills/content-decay-audit
 Description: Find blog posts losing traffic.
 
 --- 
@@ -529,7 +529,7 @@ sampleData
 ---
 
 ## The Portfolio Refresh Engine
-URL: https://realaiexamples.com/blueprints/content-refresh-detector
+URL: https://realaiexamples.com/skills/content-refresh-detector
 Description: Revive dead content across 10 domains.
 
 ---
@@ -585,7 +585,7 @@ For each site in the CSV:
 ---
 
 ## The Indexing Strategist
-URL: https://realaiexamples.com/blueprints/crawl-budget-estimator
+URL: https://realaiexamples.com/skills/crawl-budget-estimator
 Description: Your 10k new pages won't rank if Googlebot ignores them. Predict and fix indexing lag.
 
 ---
@@ -645,7 +645,7 @@ Maximize the indexing speed of high-value pages.
 ---
 
 ## The Featured Snippet Thief
-URL: https://realaiexamples.com/blueprints/featured-snippet-thief
+URL: https://realaiexamples.com/skills/featured-snippet-thief
 Description: Steal position zero.
 
 ---
@@ -705,7 +705,7 @@ For each Keyword in `serp_analysis.csv`:
 ---
 
 ## G-Maps Photo Quality Auditor
-URL: https://realaiexamples.com/blueprints/gmaps-photo-auditor
+URL: https://realaiexamples.com/skills/gmaps-photo-auditor
 Description: Remove blurry or irrelevant user photos from your listing.
 
 --- 
@@ -753,7 +753,7 @@ Remove blurry or irrelevant user photos from your listing.
 ---
 
 ## Historical Content Updater
-URL: https://realaiexamples.com/blueprints/historical-content-updater
+URL: https://realaiexamples.com/skills/historical-content-updater
 Description: Find old blog posts that are easy wins for traffic.
 
 --- 
@@ -801,7 +801,7 @@ Find old blog posts that are easy wins for traffic.
 ---
 
 ## The Hreflang Builder
-URL: https://realaiexamples.com/blueprints/hreflang-tag-builder
+URL: https://realaiexamples.com/skills/hreflang-tag-builder
 Description: Fix international SEO.
 
 ---
@@ -864,7 +864,7 @@ For each path in the CSV:
 ---
 
 ## Accessibility Auditor
-URL: https://realaiexamples.com/blueprints/image-alt-text-auditor
+URL: https://realaiexamples.com/skills/image-alt-text-auditor
 Description: Ensure every image has descriptive text.
 
 ---
@@ -920,7 +920,7 @@ Generate `alt_text_updates.csv` (CMS Ready):
 ---
 
 ## The IndexNow Auto-Submitter
-URL: https://realaiexamples.com/blueprints/indexnow-auto-submitter
+URL: https://realaiexamples.com/skills/indexnow-auto-submitter
 Description: Ping Bing, Yandex, and 100+ other engines immediately when you publish content.
 
 ---
@@ -1041,7 +1041,7 @@ Google is slow. Bing is fast, but only if you tell it to be. By using IndexNow, 
 ---
 
 ## Anchor Text Optimizer
-URL: https://realaiexamples.com/blueprints/internal-link-anchor-auditor
+URL: https://realaiexamples.com/skills/internal-link-anchor-auditor
 Description: Stop using 'Click Here' for your internal links.
 
 ---
@@ -1100,7 +1100,7 @@ sampleData
 ---
 
 ## The Sitemap Scanner
-URL: https://realaiexamples.com/blueprints/internal-link-finder
+URL: https://realaiexamples.com/skills/internal-link-finder
 Description: Scan your live sitemap to find 'Orphan' link opportunities.
 
 ---
@@ -1159,7 +1159,7 @@ For each Page URL found:
 ---
 
 ## The Link Graph Architect
-URL: https://realaiexamples.com/blueprints/internal-link-graph-visualizer
+URL: https://realaiexamples.com/skills/internal-link-graph-visualizer
 Description: Visualize your site structure.
 
 ---
@@ -1218,7 +1218,7 @@ Visualize your site structure.
 ---
 
 ## The SERP Conflict Resolver
-URL: https://realaiexamples.com/blueprints/keyword-cannibalization-detective
+URL: https://realaiexamples.com/skills/keyword-cannibalization-detective
 Description: Don't just find duplicates. Decide the winner based on CTR and Intent.
 
 ---
@@ -1285,7 +1285,7 @@ For each Conflict:
 ---
 
 ## The Keyword Gap Analyst
-URL: https://realaiexamples.com/blueprints/keyword-gap-analyst
+URL: https://realaiexamples.com/skills/keyword-gap-analyst
 Description: Steal your competitor's traffic.
 
 ---
@@ -1348,7 +1348,7 @@ For each competitor in the CSV:
 ---
 
 ## SERP Volatility Tracker
-URL: https://realaiexamples.com/blueprints/keyword-ranking-volatility-tracker
+URL: https://realaiexamples.com/skills/keyword-ranking-volatility-tracker
 Description: Did we just lose our rankings?
 
 --- 
@@ -1406,7 +1406,7 @@ sampleData
 ---
 
 ## The Link Gap Detective
-URL: https://realaiexamples.com/blueprints/link-gap-detective
+URL: https://realaiexamples.com/skills/link-gap-detective
 Description: Find missing backlink opportunities.
 
 ---
@@ -1471,7 +1471,7 @@ For each row in the CSV:
 ---
 
 ## The Multi-Location SEO Auditor
-URL: https://realaiexamples.com/blueprints/local-seo-audit
+URL: https://realaiexamples.com/skills/local-seo-audit
 Description: Audit the map rankings for your entire franchise.
 
 ---
@@ -1528,7 +1528,7 @@ For each location in the CSV:
 ---
 
 ## The Log File Analyzer
-URL: https://realaiexamples.com/blueprints/log-file-parser-mock
+URL: https://realaiexamples.com/skills/log-file-parser-mock
 Description: What is Googlebot doing?
 
 ---
@@ -1589,7 +1589,7 @@ For each log file in the CSV:
 ---
 
 ## The Next.js Codebase Auditor
-URL: https://realaiexamples.com/blueprints/nextjs-codebase-seo-auditor
+URL: https://realaiexamples.com/skills/nextjs-codebase-seo-auditor
 Description: Scan your local React/Next.js files for SEO gaps before you deploy.
 
 ---
@@ -1816,7 +1816,7 @@ console.log('\n----------------------------------------');
 ---
 
 ## Speed Budget Enforcer
-URL: https://realaiexamples.com/blueprints/page-speed-budget-monitor
+URL: https://realaiexamples.com/skills/page-speed-budget-monitor
 Description: Don't let your site get slow.
 
 ---
@@ -1875,7 +1875,7 @@ sampleData
 ---
 
 ## The PAA Scraper
-URL: https://realaiexamples.com/blueprints/people-also-ask-scraper
+URL: https://realaiexamples.com/skills/people-also-ask-scraper
 Description: Answer what they are asking.
 
 ---
@@ -1937,7 +1937,7 @@ For each keyword in the CSV:
 ---
 
 ## The P-SEO Research Enricher
-URL: https://realaiexamples.com/blueprints/programmatic-seo-builder
+URL: https://realaiexamples.com/skills/programmatic-seo-builder
 Description: Don't write empty templates. Enrich your pages with live data (Wiki/Web).
 
 ---
@@ -2000,7 +2000,7 @@ For each enriched city:
 ---
 
 ## Redirect Chain Flattener
-URL: https://realaiexamples.com/blueprints/redirect-chain-fixer
+URL: https://realaiexamples.com/skills/redirect-chain-fixer
 Description: Fix "Redirect Hops" to improve site speed and SEO.
 
 ---
@@ -2066,7 +2066,7 @@ Start now.
 ---
 
 ## The Migration Doctor
-URL: https://realaiexamples.com/blueprints/redirect-map-generator
+URL: https://realaiexamples.com/skills/redirect-map-generator
 Description: Map 10,000 URLs without writing 10,000 lines of code.
 
 ---
@@ -2122,7 +2122,7 @@ Condense a massive redirect list into efficient pattern-match rules.
 ---
 
 ## Migration Redirect Checker
-URL: https://realaiexamples.com/blueprints/redirect-mapping-validator
+URL: https://realaiexamples.com/skills/redirect-mapping-validator
 Description: Did the migration actually work?
 
 ---
@@ -2179,7 +2179,7 @@ sampleData
 ---
 
 ## robots.txt Rules Architect
-URL: https://realaiexamples.com/blueprints/robots-txt-architect
+URL: https://realaiexamples.com/skills/robots-txt-architect
 Description: Protect your crawl budget by guiding search bots away from low-value pages.
 
 ---
@@ -2243,7 +2243,7 @@ Start now.
 ---
 
 ## Bulk Schema JSON-LD Generator
-URL: https://realaiexamples.com/blueprints/schema-markup-generator
+URL: https://realaiexamples.com/skills/schema-markup-generator
 Description: Get "Rich Snippets" on Google by generating valid Schema markup.
 
 ---
@@ -2309,7 +2309,7 @@ Start now.
 ---
 
 ## Search Intent Miner
-URL: https://realaiexamples.com/blueprints/search-query-intent-miner
+URL: https://realaiexamples.com/skills/search-query-intent-miner
 Description: Extract high-intent keywords from Search Console.
 
 --- 
@@ -2366,7 +2366,7 @@ sampleData
 ---
 
 ## The Keyword Clusterer
-URL: https://realaiexamples.com/blueprints/semantic-keyword-clusterer
+URL: https://realaiexamples.com/skills/semantic-keyword-clusterer
 Description: Group keywords in seconds.
 
 ---
@@ -2427,7 +2427,7 @@ For each keyword in the CSV:
 ---
 
 ## The SEO Cluster Architect
-URL: https://realaiexamples.com/blueprints/seo-cluster-architect
+URL: https://realaiexamples.com/skills/seo-cluster-architect
 Description: Build a content cluster that dominates search.
 
 ---
@@ -2502,7 +2502,7 @@ Start now.
 ---
 
 ## The SEO Interlinker
-URL: https://realaiexamples.com/blueprints/seo-interlinker
+URL: https://realaiexamples.com/skills/seo-interlinker
 Description: Automated internal linking for your entire blog.
 
 ---
@@ -2558,7 +2558,7 @@ Automated internal linking for your entire blog.
 ---
 
 ## SEO Cannibalization Visualizer
-URL: https://realaiexamples.com/blueprints/seo-keyword-cannibalization-mapper
+URL: https://realaiexamples.com/skills/seo-keyword-cannibalization-mapper
 Description: See which pages are fighting for the same keywords.
 
 --- 
@@ -2606,7 +2606,7 @@ See which pages are fighting for the same keywords.
 ---
 
 ## The SEO Title Factory
-URL: https://realaiexamples.com/blueprints/seo-title-tester
+URL: https://realaiexamples.com/skills/seo-title-tester
 Description: High-CTR titles for 50 keywords at once.
 
 ---
@@ -2663,7 +2663,7 @@ For each keyword in the CSV:
 ---
 
 ## The SERP Intent Decoder
-URL: https://realaiexamples.com/blueprints/serp-intent-decoder
+URL: https://realaiexamples.com/skills/serp-intent-decoder
 Description: Crack Google's psychological code.
 
 ---
@@ -2731,7 +2731,7 @@ For each keyword:
 ---
 
 ## Sitemap Health Auditor
-URL: https://realaiexamples.com/blueprints/sitemap-health-check
+URL: https://realaiexamples.com/skills/sitemap-health-check
 Description: Find broken links and non-indexable pages in your sitemap.
 
 ---
@@ -2799,7 +2799,7 @@ Start now.
 ---
 
 ## Orphan Page Detective
-URL: https://realaiexamples.com/blueprints/sitemap-orphan-page-finder
+URL: https://realaiexamples.com/skills/sitemap-orphan-page-finder
 Description: Find pages that exist but aren't in your sitemap.
 
 ---
@@ -2858,7 +2858,7 @@ sampleData
 ---
 
 ## The Content Inventory Builder
-URL: https://realaiexamples.com/blueprints/sitemap-to-csv-inventory
+URL: https://realaiexamples.com/skills/sitemap-to-csv-inventory
 Description: Map your entire site.
 
 ---
@@ -2918,7 +2918,7 @@ For each sitemap in the CSV:
 ---
 
 ## Broken Link Patroller
-URL: https://realaiexamples.com/blueprints/status-code-monitor-404
+URL: https://realaiexamples.com/skills/status-code-monitor-404
 Description: Find 404s before your users do.
 
 ---
@@ -2974,7 +2974,7 @@ Generate `redirects.csv` (Ready for upload to Vercel/WordPress):
 ---
 
 ## The Subdomain vs. Subfolder Decider
-URL: https://realaiexamples.com/blueprints/subdomain-decider
+URL: https://realaiexamples.com/skills/subdomain-decider
 Description: End the debate with logic.
 
 ---
@@ -3033,7 +3033,7 @@ For each Project in `project_specs.csv`:
 ---
 
 ## The SEO Doctor
-URL: https://realaiexamples.com/blueprints/technical-seo-doctor
+URL: https://realaiexamples.com/skills/technical-seo-doctor
 Description: Technical Site Audit at scale.
 
 ---
@@ -3097,7 +3097,7 @@ For each URL in the CSV:
 ---
 
 ## Topic Cluster Architect
-URL: https://realaiexamples.com/blueprints/topic-cluster-architect
+URL: https://realaiexamples.com/skills/topic-cluster-architect
 Description: Group keywords into pillar pages.
 
 ---
@@ -3161,7 +3161,7 @@ Architect a topical authority map.
 ---
 
 ## The Zero-Click Optimizer
-URL: https://realaiexamples.com/blueprints/zero-click-optimizer
+URL: https://realaiexamples.com/skills/zero-click-optimizer
 Description: Optimize for the answer engine.
 
 ---
@@ -3223,7 +3223,7 @@ For each Intro in `blog_intros.csv`:
 ---
 
 ## The Zero-Volume Hunter
-URL: https://realaiexamples.com/blueprints/zero-search-volume-hunter
+URL: https://realaiexamples.com/skills/zero-search-volume-hunter
 Description: Rank for keywords tools ignore.
 
 ---

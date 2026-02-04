@@ -1,7 +1,7 @@
 # Blueprints: Influencer Marketing
 
 ## The Influencer ROI Calculator
-URL: https://realaiexamples.com/blueprints/influencer-roi-calculator
+URL: https://realaiexamples.com/skills/influencer-roi-calculator
 Description: Did that shoutout actually pay off?
 
 ---

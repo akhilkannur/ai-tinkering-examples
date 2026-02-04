@@ -1,7 +1,7 @@
 # Blueprints: Biz Dev
 
 ## The Strategic Partnership Architect
-URL: https://realaiexamples.com/blueprints/partnership-mou-generator
+URL: https://realaiexamples.com/skills/partnership-mou-generator
 Description: Draft a formal MOU from your notes or a partnership goal.
 
 ---

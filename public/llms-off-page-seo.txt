@@ -1,7 +1,7 @@
 # Blueprints: Off-Page SEO
 
 ## The Backlink Toxicity Checker
-URL: https://realaiexamples.com/blueprints/backlink-toxicity-checker
+URL: https://realaiexamples.com/skills/backlink-toxicity-checker
 Description: Is that link helping or hurting?
 
 ---

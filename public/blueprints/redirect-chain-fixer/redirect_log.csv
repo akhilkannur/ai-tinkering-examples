@@ -1,4 +1,0 @@
-Source,Destination,Status
-/old-product,/temp-landing,301
-/temp-landing,/new-product,301
-/about-us,/about,301

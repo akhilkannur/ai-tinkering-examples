@@ -1,7 +1,7 @@
 # Blueprints: Competitor Intel
 
 ## The Ad Counter-Strike Factory
-URL: https://realaiexamples.com/blueprints/ad-counter-strike
+URL: https://realaiexamples.com/skills/ad-counter-strike
 Description: Steal traffic from 10 competitors at once.
 
 ---
@@ -63,7 +63,7 @@ web_fetch
 ---
 
 ## The Competitor Hook Decoder
-URL: https://realaiexamples.com/blueprints/competitor-hook-decoder
+URL: https://realaiexamples.com/skills/competitor-hook-decoder
 Description: Reverse-engineer the psychology behind their ads.
 
 ---
@@ -134,7 +134,7 @@ For each ad in `competitor_ads.csv`:
 ---
 
 ## The Onboarding Teardown Factory
-URL: https://realaiexamples.com/blueprints/competitor-onboarding-spy
+URL: https://realaiexamples.com/skills/competitor-onboarding-spy
 Description: Comparative UX audit of competitors at once.
 
 ---
@@ -200,7 +200,7 @@ For each competitor in the CSV:
 ---
 
 ## The Price Watchdog Fleet
-URL: https://realaiexamples.com/blueprints/competitor-price-watchdog
+URL: https://realaiexamples.com/skills/competitor-price-watchdog
 Description: Monitor pricing changes for 10 competitors at once.
 
 ---
@@ -264,7 +264,7 @@ For each row in the CSV:
 ---
 
 ## The Market Spy
-URL: https://realaiexamples.com/blueprints/competitor-spy
+URL: https://realaiexamples.com/skills/competitor-spy
 Description: Deep Competitor Analysis.
 
 ---
@@ -342,7 +342,7 @@ Start now.
 ---
 
 ## The Capital Radar
-URL: https://realaiexamples.com/blueprints/funding-radar
+URL: https://realaiexamples.com/skills/funding-radar
 Description: Track $1B+ in funding across 50 industries on autopilot.
 
 ---

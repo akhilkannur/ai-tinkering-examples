@@ -1,7 +1,7 @@
 # Blueprints: Ad Ops
 
 ## The Ad Copy Auditor
-URL: https://realaiexamples.com/blueprints/ad-copy-character-counter
+URL: https://realaiexamples.com/skills/ad-copy-character-counter
 Description: Audit 100 ad variants for truncation in one run.
 
 ---
@@ -64,7 +64,7 @@ For each row in the CSV:
 ---
 
 ## The Fatigue Detector
-URL: https://realaiexamples.com/blueprints/creative-refresh-alert
+URL: https://realaiexamples.com/skills/creative-refresh-alert
 Description: Know when to swap ads.
 
 ---
@@ -133,7 +133,7 @@ For each ad in the CSV:
 ---
 
 ## The Offline Conversions Factory
-URL: https://realaiexamples.com/blueprints/facebook-offline-events-csv
+URL: https://realaiexamples.com/skills/facebook-offline-events-csv
 Description: Format 10,000 sales for Facebook ROAS reporting.
 
 ---
@@ -196,7 +196,7 @@ For each row in the CSV:
 ---
 
 ## The Multi-Industry Negative Keyword Factory
-URL: https://realaiexamples.com/blueprints/google-ads-negative-keyword-factory
+URL: https://realaiexamples.com/skills/google-ads-negative-keyword-factory
 Description: Protect the budget across your entire portfolio.
 
 ---
@@ -259,7 +259,7 @@ For each industry in the CSV:
 ---
 
 ## The LP Speed Auditor
-URL: https://realaiexamples.com/blueprints/landing-page-load-speed-auditor
+URL: https://realaiexamples.com/skills/landing-page-load-speed-auditor
 Description: Slow pages kill ROAS.
 
 ---
@@ -329,7 +329,7 @@ For each URL in the CSV:
 ---
 
 ## The Insight Tag Fleet Auditor
-URL: https://realaiexamples.com/blueprints/linkedin-insight-tag-auditor
+URL: https://realaiexamples.com/skills/linkedin-insight-tag-auditor
 Description: Audit retargeting tags across your entire domain portfolio.
 
 ---
@@ -394,7 +394,7 @@ For each URL in the CSV:
 ---
 
 ## The LAL Seeder Factory
-URL: https://realaiexamples.com/blueprints/lookalike-audience-seeder
+URL: https://realaiexamples.com/skills/lookalike-audience-seeder
 Description: Standardize 10,000 customers for 'Custom Audience' upload.
 
 ---
@@ -454,7 +454,7 @@ Standardize 10,000 customers for 'Custom Audience' upload.
 ---
 
 ## The TikTok Event Validator
-URL: https://realaiexamples.com/blueprints/tiktok-pixel-helper
+URL: https://realaiexamples.com/skills/tiktok-pixel-helper
 Description: Fix your conversion tracking from a snippet or a goal.
 
 ---
@@ -515,7 +515,7 @@ Fix your conversion tracking from a snippet or a goal.
 ---
 
 ## The UTM Builder Formula
-URL: https://realaiexamples.com/blueprints/utm-builder-spreadsheet
+URL: https://realaiexamples.com/skills/utm-builder-spreadsheet
 Description: Standardize your tracking links.
 
 ---
@@ -579,7 +579,7 @@ For each row in the CSV:
 ---
 
 ## The B2B Brand Safety Guard
-URL: https://realaiexamples.com/blueprints/youtube-ad-placement-excluder
+URL: https://realaiexamples.com/skills/youtube-ad-placement-excluder
 Description: Block junk YouTube channels.
 
 ---

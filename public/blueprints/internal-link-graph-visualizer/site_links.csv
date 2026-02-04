@@ -1,6 +1,0 @@
-Source_Page,Target_Page,Link_Type
-/home,/pricing,Primary Nav
-/home,/about,Primary Nav
-/blog/post-1,/pricing,Contextual
-/blog/post-1,/home,Breadcrumb
-/services,/contact,CTA

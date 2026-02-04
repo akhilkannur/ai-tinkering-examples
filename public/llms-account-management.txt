@@ -1,7 +1,7 @@
 # Blueprints: Account Management
 
 ## The Upsell Architect
-URL: https://realaiexamples.com/blueprints/upsell-architect
+URL: https://realaiexamples.com/skills/upsell-architect
 Description: The easiest revenue is already in your DB.
 
 ---

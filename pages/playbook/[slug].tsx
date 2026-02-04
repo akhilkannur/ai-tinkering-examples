@@ -34,7 +34,7 @@ export default function PlaybookPage({ playbook, recipes }: any) {
       "itemListElement": recipes.map((recipe: any, index: number) => ({
         "@type": "ListItem",
         "position": index + 1,
-        "url": `https://realaiexamples.com/blueprints/${recipe.id}`,
+        "url": `https://realaiexamples.com/skills/${recipe.id}`,
         "name": recipe.title
       }))
     }
@@ -95,7 +95,7 @@ export default function PlaybookPage({ playbook, recipes }: any) {
             {recipes.map((recipe: any) => (
               <Link 
                 key={recipe.id} 
-                href={`/blueprints/${recipe.id}`}
+                href={`/skills/${recipe.id}`}
                 className="group flex flex-col bg-secondary-bg border border-navy-dark rounded-xl p-6 hover:border-accent/50 transition-all hover:shadow-[0_10px_30px_rgba(56,189,248,0.05)] relative overflow-hidden"
               >
                 {/* Badge for Featured/Premium */}

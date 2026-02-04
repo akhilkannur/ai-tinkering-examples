@@ -1,7 +1,7 @@
 # Blueprints: Partner Ops
 
 ## Channel Conflict Resolver
-URL: https://realaiexamples.com/blueprints/channel-conflict-arbitrator
+URL: https://realaiexamples.com/skills/channel-conflict-arbitrator
 Description: Decide who owns the lead: Partner or Direct?
 
 --- 
@@ -61,7 +61,7 @@ sampleData
 ---
 
 ## Deal Reg Conflict Finder
-URL: https://realaiexamples.com/blueprints/channel-partner-deal-registration-tracker
+URL: https://realaiexamples.com/skills/channel-partner-deal-registration-tracker
 Description: Did we already have this lead?
 
 --- 
@@ -120,7 +120,7 @@ sampleData
 ---
 
 ## Deal Reg Expiry Monitor
-URL: https://realaiexamples.com/blueprints/deal-reg-expiry-alert
+URL: https://realaiexamples.com/skills/deal-reg-expiry-alert
 Description: Flag partner deal registrations that are about to expire.
 
 --- 
@@ -179,7 +179,7 @@ sampleData
 ---
 
 ## Stock Rotation Auditor
-URL: https://realaiexamples.com/blueprints/distributor-stock-rotation-logic
+URL: https://realaiexamples.com/skills/distributor-stock-rotation-logic
 Description: Calculate eligible stock returns for distributors.
 
 --- 
@@ -238,7 +238,7 @@ sampleData
 ---
 
 ## Indirect Revenue Forecaster
-URL: https://realaiexamples.com/blueprints/indirect-revenue-forecaster
+URL: https://realaiexamples.com/skills/indirect-revenue-forecaster
 Description: Forecast revenue from partner-submitted pipeline.
 
 --- 
@@ -297,7 +297,7 @@ sampleData
 ---
 
 ## MDF Budget Reconciler
-URL: https://realaiexamples.com/blueprints/mdf-spend-auditor
+URL: https://realaiexamples.com/skills/mdf-spend-auditor
 Description: Reconcile partner receipts against approved funds.
 
 --- 
@@ -356,7 +356,7 @@ sampleData
 ---
 
 ## Partner Credential Tracker
-URL: https://realaiexamples.com/blueprints/partner-certification-monitor
+URL: https://realaiexamples.com/skills/partner-certification-monitor
 Description: Identify partners with expired training credentials.
 
 --- 
@@ -415,7 +415,7 @@ sampleData
 ---
 
 ## Partner Engagement Audit
-URL: https://realaiexamples.com/blueprints/partner-portal-inactivity-audit
+URL: https://realaiexamples.com/skills/partner-portal-inactivity-audit
 Description: Identify 'Ghost' partners who haven't logged in.
 
 --- 
@@ -474,7 +474,7 @@ sampleData
 ---
 
 ## Partner Tier Auditor
-URL: https://realaiexamples.com/blueprints/partner-tier-promotion-tracker
+URL: https://realaiexamples.com/skills/partner-tier-promotion-tracker
 Description: Check if partners qualify for Silver/Gold/Platinum.
 
 --- 
@@ -534,7 +534,7 @@ sampleData
 ---
 
 ## Complex Referral Splitter
-URL: https://realaiexamples.com/blueprints/referral-commission-splitter
+URL: https://realaiexamples.com/skills/referral-commission-splitter
 Description: Calculate 3-way commission splits for partners.
 
 --- 
@@ -591,7 +591,7 @@ sampleData
 ---
 
 ## MAP Pricing Auditor
-URL: https://realaiexamples.com/blueprints/reseller-map-compliance
+URL: https://realaiexamples.com/skills/reseller-map-compliance
 Description: Ensure resellers aren't undercutting your price.
 
 --- 
