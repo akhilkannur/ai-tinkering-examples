@@ -64,7 +64,7 @@ export default function BuildClub() {
           </h1>
           
           <p className="font-body text-xl md:text-2xl mb-6 max-w-2xl mx-auto leading-relaxed text-white">
-            An accountability group that forces you to ship one AI tool per month.<br/>
+            An accountability group that forces you to ship one AI project per week.<br/>
             <span className="bg-[#FDF498] text-black px-2 italic font-bold border-2 border-black">Or you're out.</span>
           </p>
           
@@ -84,7 +84,7 @@ export default function BuildClub() {
           <div className="grid md:grid-cols-2 gap-12 items-start max-w-4xl mx-auto text-left">
             
             {/* THE AGREEMENT (Left) */}
-            <div className="bg-[#FFFDE7] p-8 border-4 border-black shadow-[8px_8px_0px_rgba(0,0,0,1)] relative text-[#4A2C2A]">
+            <div id="rules" className="bg-[#FFFDE7] p-8 border-4 border-black shadow-[8px_8px_0px_rgba(0,0,0,1)] relative text-[#4A2C2A]">
                 {/* Paper Clip Visual */}
                 <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-24 h-12 bg-gray-300 rounded-t-lg border-4 border-black border-b-0"></div>
                 
@@ -180,7 +180,7 @@ export default function BuildClub() {
         </div>
 
         {/* WORKSHOP DETAILS */}
-        <div className="container mx-auto px-4 max-w-4xl mb-24">
+        <div className="container mx-auto px-4 max-w-4xl mb-24 mt-24">
           <div className="bg-white border-4 border-black p-10 relative text-black">
             <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black text-white px-4 py-1 font-header text-xl tracking-widest">
               WHAT COUNTS AS "BUILDING"?
@@ -218,7 +218,7 @@ export default function BuildClub() {
               <div className="space-y-6 font-body">
                 <div>
                   <h3 className="font-bold underline mb-1">WHO IS THIS FOR?</h3>
-                  <p>Founders, marketers, salespeople, ops folks. People who want to build AI tools but keep getting distracted. If you're an engineer looking for architecture talks, this isn't it.</p>
+                  <p>All non-technical, AI-curious professionals. Whether you are a founder, marketer, salesperson, or ops specialist—if you want to build AI tools but keep getting distracted, this is for you. If you're an engineer looking for architecture talks, this isn't it.</p>
                 </div>
                 <div>
                   <h3 className="font-bold underline mb-1">IS IT A COURSE?</h3>
@@ -235,6 +235,12 @@ export default function BuildClub() {
               </div>
 
             </div>
+          </div>
+
+          <div className="mt-12 text-center">
+            <a href="#rules" className="inline-block bg-[#FDF498] text-black border-4 border-black px-8 py-3 font-header text-2xl tracking-widest shadow-[4px_4px_0px_rgba(0,0,0,1)] hover:translate-y-1 hover:shadow-none transition-all transform rotate-2">
+              BACK TO RULES ➜
+            </a>
           </div>
         </div>
 

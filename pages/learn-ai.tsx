@@ -36,7 +36,7 @@ export default function LearnAIPage() {
               A Chatbot <span className="text-accent">with Hands.</span>
             </h1>
             <p className="text-xl text-text-secondary leading-relaxed font-light max-w-2xl">
-              ChatGPT can write an email, but it can't send it. AI Agents live on your computer. They can create files, run searches, and manage projects - just like a remote intern.
+              Designed for all non-technical, AI-curious professionals. ChatGPT can write an email, but it can't send it. AI Agents live on your computer. They can create files, run searches, and manage projects - just like a remote intern.
             </p>
           </div>
 

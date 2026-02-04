@@ -23,9 +23,6 @@ export default function Footer() {
               <li>
                 <Link href="/#newsletter" className="hover:text-white transition-colors">Newsletter</Link>
               </li>
-              <li>
-                <a href="https://twitter.com/realaiexamples" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Twitter / X</a>
-              </li>
             </ul>
           </div>
 
@@ -45,7 +42,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/investors" className="hover:text-white transition-colors">
-                  SaaS Exit Database
+                  Micro-PE Directory
                 </Link>
               </li>
               <li>
