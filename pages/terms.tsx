@@ -17,6 +17,7 @@ export default function Terms() {
           <div className="text-center mb-16">
             <div className="text-accent font-mono text-[10px] uppercase tracking-[0.4em] mb-4">Terms of Service</div>
             <h1 className="text-4xl md:text-6xl font-black tracking-tighter mb-6 uppercase italic text-white">Access Terms</h1>
+          </div>
           
           <div className="bg-secondary-bg/50 backdrop-blur-md border border-white/5 p-8 md:p-12 rounded-3xl relative overflow-hidden">
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none"></div>
