@@ -15,7 +15,7 @@ If you are still copy-pasting text into a browser window to "rewrite this email,
 
 In 2026, the real work is happening in the file system. Tools like **Gemini CLI**, **Claude Code**, and **Cursor** have given birth to a new kind of workflow: the **Folder Agent**.
 
-A Folder Agent doesn't just "chat." It reads your entire project context, understands your directory structure, and executes complex, multi-file tasks. It builds landing pages, audits 500 SEO keywords, and cleans massive CSVs—all without you leaving your terminal.
+A Folder Agent doesn't just "chat." It reads your entire project context, understands your directory structure, and executes complex, multi-file tasks. It builds landing pages, audits 500 SEO keywords, and cleans massive CSVs - all without you leaving your terminal.
 
 ## Why "Blueprints" Are the New Prompts
 

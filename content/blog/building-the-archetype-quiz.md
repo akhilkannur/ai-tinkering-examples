@@ -36,7 +36,7 @@ Boom. Content done.
 ## The "Coder" Trick
 
 Then I took that text and pasted it right back into the CLI.
-> *"Make me a React component for this. Make it look like Typeform—one question at a time. Smooth progress bar. At the end, tell them their Archetype."*
+> *"Make me a React component for this. Make it look like Typeform - one question at a time. Smooth progress bar. At the end, tell them their Archetype."*
 
 It spat out a file. I dropped it into my `components` folder.
 It worked on the first try. (Okay, the second try. The first time the progress bar was broken).

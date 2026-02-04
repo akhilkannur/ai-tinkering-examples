@@ -10,7 +10,7 @@ category: "Engineering"
 
 I opened my "scraped_data" folder yesterday and almost deleted the whole thing.
 
-It was a graveyard of 200 text files I’d collected over the last year—notes, copy-pasted articles, half-finished ideas. I wanted to turn them into the "Blueprints" you see on this site.
+It was a graveyard of 200 text files I’d collected over the last year - notes, copy-pasted articles, half-finished ideas. I wanted to turn them into the "Blueprints" you see on this site.
 
 But the data was garbage.
 Some files used "Goal:" headings. Others used "Objective:". Some were just random bullet points.
@@ -46,7 +46,7 @@ A rigid script would have choked on half these files. The AI just "got it."
 
 ## Why I'm Writing This
 
-I talk to a lot of founders who are sitting on piles of messy data—customer feedback, old leads, meeting notes. They think they need to hire a data scientist to clean it up.
+I talk to a lot of founders who are sitting on piles of messy data - customer feedback, old leads, meeting notes. They think they need to hire a data scientist to clean it up.
 
 You don't. You just need to write a good set of instructions.
 

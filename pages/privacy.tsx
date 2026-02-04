@@ -17,7 +17,7 @@ export default function Privacy() {
              <div className="font-mono text-[200px] font-black uppercase leading-none">SECURE</div>
           </div>
 
-          <div className="text-accent font-mono text-[10px] uppercase tracking-[0.4em] mb-4">[ DATABASE_SECURITY_PROTOCOL ]</div>
+          <div className="text-accent font-mono text-[10px] uppercase tracking-[0.4em] mb-4">Privacy & Security</div>
           <h1 className="text-4xl md:text-6xl font-extrabold mb-12 text-white tracking-tighter uppercase italic">Privacy Policy</h1>
           
           <div className="bg-secondary-bg/50 backdrop-blur-md border border-white/5 p-8 md:p-12 rounded-3xl relative overflow-hidden">

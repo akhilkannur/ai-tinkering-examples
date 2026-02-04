@@ -47,7 +47,7 @@ export default function AboutPage() {
           {/* Hero Branding */}
           <div className="text-center mb-24">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20 text-accent font-bold text-[10px] uppercase tracking-[0.3em] mb-8 font-mono">
-                <Terminal className="w-3.5 h-3.5" /> [ SYSTEM_MISSION_LOG: V2.0 ]
+                <Terminal className="w-3.5 h-3.5" /> Our Mission
             </div>
             <h1 className="text-5xl md:text-8xl font-black tracking-tighter mb-8 uppercase italic text-white">
               No Hype. <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-purple-500">Just Files.</span>
@@ -89,7 +89,7 @@ export default function AboutPage() {
                 <div className="p-8 bg-gradient-to-br from-secondary-bg to-primary-bg border border-white/5 rounded-3xl relative overflow-hidden group">
                     <div className="absolute inset-0 bg-grid-white/[0.02] pointer-events-none"></div>
                     <div className="relative z-10">
-                        <div className="text-accent font-mono text-[10px] uppercase tracking-widest mb-4">// OPERATOR_MESSAGE</div>
+                        <div className="text-accent font-mono text-[10px] uppercase tracking-widest mb-4">A message from our founder</div>
                         <p className="text-xl text-white font-medium italic leading-relaxed mb-8">
                             "I'm not a corporate engineer — I'm a builder who loves breaking things and fixing them. I build these blueprints for myself first, then I share them here."
                         </p>

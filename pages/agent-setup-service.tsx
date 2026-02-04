@@ -39,7 +39,7 @@ export default function AgentSetupService() {
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     <div className="text-center lg:text-left">
                         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20 text-accent font-bold text-[10px] uppercase tracking-[0.3em] mb-8 font-mono">
-                            <Cpu className="w-3.5 h-3.5" /> [ SYSTEM ACCESS: NON-TECHNICAL ]
+                            <Cpu className="w-3.5 h-3.5" /> For Non-Technical Tinkerers
                         </div>
                         
                         <h1 className="text-5xl md:text-7xl font-extrabold mb-8 leading-[1.1] text-white tracking-tight">
@@ -115,7 +115,7 @@ export default function AgentSetupService() {
             
             <div className="container mx-auto px-4 max-w-6xl relative z-10">
                 <div className="text-center mb-20">
-                    <div className="text-accent font-mono text-[10px] uppercase tracking-[0.4em] mb-4">[ DIAGNOSTIC: COMPARING_MODES ]</div>
+                    <div className="text-accent font-mono text-[10px] uppercase tracking-[0.4em] mb-4">How it works</div>
                     <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white tracking-tight italic">Stop Fighting Your Computer</h2>
                     <p className="text-text-secondary text-lg max-w-2xl mx-auto font-light">There are two ways to get started with AI agents. Choose wisely.</p>
                 </div>
@@ -207,7 +207,7 @@ export default function AgentSetupService() {
 
             <div className="container mx-auto px-4 max-w-6xl relative z-10">
                 <div className="text-center mb-24">
-                    <div className="text-purple-500 font-mono text-[10px] uppercase tracking-[0.5em] mb-4">[ PROTOCOL: JAM_STAGES ]</div>
+                    <div className="text-purple-500 font-mono text-[10px] uppercase tracking-[0.5em] mb-4">The Jam Process</div>
                     <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-white tracking-tight">How We'll Jam</h2>
                     <p className="text-xl text-text-secondary max-w-2xl mx-auto font-light">A 60-minute session to get you actually using AI agents.</p>
                 </div>
@@ -241,7 +241,7 @@ export default function AgentSetupService() {
         <div className="py-32 bg-primary-bg relative border-b border-white/5">
              <div className="container mx-auto px-4 max-w-5xl relative z-10">
                 <div className="text-center mb-20">
-                    <div className="text-green-500 font-mono text-[10px] uppercase tracking-[0.4em] mb-4">[ INVENTORY: ASSETS_DEPLOYED ]</div>
+                    <div className="text-green-500 font-mono text-[10px] uppercase tracking-[0.4em] mb-4">What you get</div>
                     <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white italic">The "Setup Stack"</h2>
                     <p className="text-text-secondary font-light">Everything loaded into your machine by the end of the hour.</p>
                 </div>
@@ -279,7 +279,7 @@ export default function AgentSetupService() {
                     <div className="absolute inset-0 bg-grid-white/[0.02] pointer-events-none opacity-50"></div>
                     
                     <div className="inline-block bg-accent/10 border border-accent/20 text-accent text-[10px] font-mono font-bold px-6 py-2 rounded-full uppercase tracking-[0.3em] mb-10 shadow-lg">
-                        availability: [ LIMITED_3_SLOTS_REMAINING ]
+                        availability: 3 slots remaining
                     </div>
                     
                     <h2 className="text-4xl md:text-6xl font-extrabold mb-8 text-white tracking-tighter">Kickstart Jam</h2>
@@ -287,7 +287,7 @@ export default function AgentSetupService() {
                     <div className="flex items-center justify-center gap-4 mb-12">
                        <span className="text-6xl md:text-9xl font-black text-white tracking-tighter tabular-nums">$99</span>
                        <div className="text-left">
-                          <div className="text-accent font-mono text-xs font-bold">[ ONE_TIME_FEE ]</div>
+                          <div className="text-accent font-mono text-xs font-bold">One-time fee</div>
                           <div className="text-text-secondary text-sm font-light">60 minute jam session</div>
                        </div>
                     </div>
@@ -336,13 +336,13 @@ export default function AgentSetupService() {
                   </div>
                   
                   <div className="text-center md:text-left relative z-10">
-                    <div className="text-accent font-mono text-[10px] uppercase tracking-[0.4em] mb-4">[ OPERATOR: AKHIL_MK ]</div>
+                    <div className="text-accent font-mono text-[10px] uppercase tracking-[0.4em] mb-4">Meet your host</div>
                     <p className="text-white text-lg leading-relaxed font-medium italic">
                       "I'm not a corporate engineer - I'm a builder who loves breaking things and fixing them. I build terminal AI agents for myself and friends every day. I'm not here to provide IT support; I'm here to show you how to actually use these agents to ship work. We'll jam on your ideas and get you running in an hour."
                     </p>
                     <div className="mt-6 flex flex-col md:flex-row items-center gap-6">
                       <a href="https://akhilhaving.fun" target="_blank" rel="noopener noreferrer" className="text-xs font-mono text-accent hover:underline uppercase tracking-widest border border-accent/20 px-4 py-2 rounded-full bg-accent/5">
-                        [ VISIT_LOG: akhilhaving.fun ]
+                        Visit akhilhaving.fun
                       </a>
                       <a href="mailto:akhil@realaiexamples.com" className="text-xs font-mono text-text-secondary hover:text-white transition-colors uppercase tracking-widest">
                         Email: akhil@realaiexamples.com

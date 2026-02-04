@@ -12,13 +12,11 @@ export default function Terms() {
       <Navbar />
 
       <main className="pt-40 pb-24">
-        <div className="container mx-auto px-4 max-w-4xl relative">
-          <div className="absolute top-0 right-0 p-4 opacity-[0.02] pointer-events-none">
-             <div className="font-mono text-[200px] font-black uppercase leading-none">PROTOCOL</div>
-          </div>
-
-          <div className="text-accent font-mono text-[10px] uppercase tracking-[0.4em] mb-4">[ ACCESS_CONTROL_LOG: V1.0 ]</div>
-          <h1 className="text-4xl md:text-6xl font-extrabold mb-12 text-white tracking-tighter uppercase italic">Terms of Service</h1>
+        <div className="container mx-auto px-4 max-w-4xl relative z-10">
+          
+          <div className="text-center mb-16">
+            <div className="text-accent font-mono text-[10px] uppercase tracking-[0.4em] mb-4">Terms of Service</div>
+            <h1 className="text-4xl md:text-6xl font-black tracking-tighter mb-6 uppercase italic text-white">Access Terms</h1>
           
           <div className="bg-secondary-bg/50 backdrop-blur-md border border-white/5 p-8 md:p-12 rounded-3xl relative overflow-hidden">
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none"></div>
