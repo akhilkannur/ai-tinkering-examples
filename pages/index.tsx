@@ -1,7 +1,7 @@
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import Navbar from '../components/Navbar'
-import TerminalCookbook from '../components/BuilderFlowchart'
+import dynamic from 'next/dynamic'
 import { Command, ArrowRight, Zap, Target, Search, Heart } from 'lucide-react'
 import { getAllRecipes } from '../lib/recipes'
 import { Recipe } from '../lib/cookbook-data'
@@ -13,8 +13,14 @@ import NewsletterForm from '../components/NewsletterForm'
 import FeaturedIn from '../components/FeaturedIn'
 
 import StrategicKits from '../components/StrategicKits'
-import MockTerminal from '../components/MockTerminal'
 import { generateItemListSchema } from '../lib/seo-utils'
+
+// Lazy load heavy components
+const TerminalCookbook = dynamic(() => import('../components/BuilderFlowchart'), {
+  loading: () => <div className="min-h-[400px] flex items-center justify-center text-text-secondary">Loading Blueprints...</div>
+})
+
+const MockTerminal = dynamic(() => import('../components/MockTerminal'), { ssr: false })
 
 interface HybridHomePageProps {
   recipes: Recipe[]

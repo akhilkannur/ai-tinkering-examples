@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import Navbar from '../components/Navbar'
-import { Hammer, CheckCircle2, ArrowRight, XCircle } from 'lucide-react'
+import { Hammer, CheckCircle2, ArrowRight, XCircle, Terminal } from 'lucide-react'
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 
 export default function BuildClub() {
   const title = "The Build Club | AI Execution for Non-Technical Tinkerers";
@@ -241,6 +242,33 @@ export default function BuildClub() {
             <a href="#rules" className="inline-block bg-[#FDF498] text-black border-4 border-black px-8 py-3 font-header text-2xl tracking-widest shadow-[4px_4px_0px_rgba(0,0,0,1)] hover:translate-y-1 hover:shadow-none transition-all transform rotate-2">
               BACK TO RULES ➜
             </a>
+          </div>
+        </div>
+
+        {/* MEET YOUR HOST SECTION */}
+        <div className="container mx-auto px-4 max-w-4xl mb-32">
+          <div className="bg-[#FFFDE7] border-4 border-black p-8 md:p-12 flex flex-col md:flex-row items-center gap-10 text-black shadow-[8px_8px_0px_rgba(0,0,0,1)] relative overflow-hidden group">
+            <div className="absolute top-0 right-0 p-8 opacity-5">
+              <Terminal className="w-32 h-32" />
+            </div>
+            
+            <div className="relative flex-shrink-0">
+              <div className="w-32 h-32 rounded-none overflow-hidden border-4 border-black relative grayscale group-hover:grayscale-0 transition-all duration-700 shadow-[4px_4px_0px_rgba(0,0,0,1)]">
+                <Image src="/images/akhil.jpg" alt="Akhil MK" fill className="object-cover" />
+              </div>
+            </div>
+            
+            <div className="text-center md:text-left relative z-10">
+              <div className="font-header text-xl tracking-widest mb-4 border-b-2 border-black inline-block uppercase">MEET YOUR HOST</div>
+              <p className="font-body text-lg leading-relaxed italic mb-6">
+                "Not a developer or a coder, just a builder who loves breaking AI to see what's actually possible. Twice a week, expect a direct check-in for real accountability. No bots, no gurus, just someone ensuring projects actually get shipped."
+              </p>
+              <div className="flex flex-col md:flex-row items-center gap-6">
+                <a href="mailto:akhil@realaiexamples.com" className="font-header text-lg tracking-widest bg-black text-white px-6 py-2 hover:bg-gray-800 transition-colors uppercase">
+                  Contact Support
+                </a>
+              </div>
+            </div>
           </div>
         </div>
 

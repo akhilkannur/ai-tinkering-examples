@@ -61,6 +61,7 @@ export default function Navbar() {
                     alt="AI Examples" 
                     width={40} 
                     height={40} 
+                    priority
                     className="relative object-contain" 
                     />
                 </div>

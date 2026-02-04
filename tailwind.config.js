@@ -20,10 +20,10 @@ module.exports = {
         'brand-navy': '#F8FAFC', // Replaced Navy text with Slate 50
       },
       fontFamily: {
-        sans: ['Inter', 'DM Sans', 'sans-serif'], // Added Inter
-        headline: ['DM Sans', 'sans-serif'], // Replaced Serif with Sans for modern look
-        mono: ['Space Mono', 'monospace'],
-        roboto: ['Inter', 'DM Sans', 'sans-serif'],
+        sans: ['var(--font-inter)', 'var(--font-dm-sans)', 'sans-serif'],
+        headline: ['var(--font-dm-sans)', 'sans-serif'],
+        mono: ['var(--font-space-mono)', 'monospace'],
+        roboto: ['var(--font-inter)', 'sans-serif'],
       },
       backgroundImage: {
         'modern-gradient': 'linear-gradient(135deg, #F43F5E 0%, #D946EF 100%)', // Rose to Fuchsia

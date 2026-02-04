@@ -91,7 +91,7 @@ export default function AboutPage() {
                     <div className="relative z-10">
                         <div className="text-accent font-mono text-[10px] uppercase tracking-widest mb-4">A message from our founder</div>
                         <p className="text-xl text-white font-medium italic leading-relaxed mb-8">
-                            "I'm not a corporate engineer — I'm a builder who loves breaking things and fixing them. I build these blueprints for myself first, then I share them here."
+                            "Not a developer or a coder, just a builder who loves breaking AI to see what's actually possible. These blueprints started as personal tools to solve real problems, and now they're shared here."
                         </p>
                         <div className="flex items-center gap-4">
                             <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-accent shadow-lg shadow-accent/20">

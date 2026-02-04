@@ -40,7 +40,9 @@ export default function FeaturedIn() {
               <img 
                 src="https://toptrendtools.com/assets/images/badge.png" 
                 alt="Top Trend Tools" 
-                height="54"
+                height="48"
+                width="150"
+                loading="lazy"
                 className="h-[48px] w-auto" 
               />
             </a>

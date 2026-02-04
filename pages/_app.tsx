@@ -3,21 +3,30 @@ import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import Footer from '../components/Footer'
-import NewsletterPopup from '../components/NewsletterPopup'
-import NewsletterToast from '../components/NewsletterToast'
+import { Inter, DM_Sans, Space_Mono } from 'next/font/google'
+import dynamic from 'next/dynamic'
 import Script from 'next/script'
+
+// Optimize fonts
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
+const dmSans = DM_Sans({ subsets: ['latin'], variable: '--font-dm-sans' })
+const spaceMono = Space_Mono({ 
+  subsets: ['latin'], 
+  weight: ['400', '700'],
+  variable: '--font-space-mono' 
+})
+
+// Lazy load non-critical components
+const NewsletterPopup = dynamic(() => import('../components/NewsletterPopup'), { ssr: false })
+const NewsletterToast = dynamic(() => import('../components/NewsletterToast'), { ssr: false })
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
   const title = "AI Examples You Can Copy & Try";
   const description = "Curated AI workflows and prompts for non-technical tinkerers. No fluff, just actionable examples.";
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com';
-  const ogImage = `${baseUrl}/api/og?mode=home`; // Dynamic branded OG image
+  const ogImage = `${baseUrl}/api/og?mode=home`;
   
-  // Fix canonical URL:
-  // 1. Remove query parameters
-  // 2. Treat '/index' as '/'
-  // 3. Remove trailing slashes for non-root paths (optional but cleaner)
   let cleanPath = router.asPath.split('?')[0];
   if (cleanPath === '/index') cleanPath = '/';
   
@@ -26,18 +35,11 @@ export default function App({ Component, pageProps }: AppProps) {
     : baseUrl + cleanPath.replace(/\/$/, '');
 
   return (
-    <>
-      {/* 
-        Favicon setup for Google Search:
-        - Google can take a few days to weeks to crawl and update the favicon.
-        - The favicon is linked using multiple <link> tags for different resolutions and for Apple devices.
-        - The favicon files (favicon.ico, favicon_transparent.png) are located in the /public directory.
-        - The robots.txt file allows crawling of the favicon files.
-        - For more information, see: https://developers.google.com/search/docs/appearance/favicon-in-search
-      */}
+    <div className={`${inter.variable} ${dmSans.variable} ${spaceMono.variable} font-sans`}>
       <Head>
         <title>AI Examples You Can Copy & Try</title>
         <meta name="description" content={description} key="description" />
+        {/* ... existing meta tags ... */}
         <meta property="og:title" content={title} key="og:title" />
         <meta property="og:description" content={description} key="og:description" />
         <meta property="og:url" content={canonicalUrl} key="og:url" />
@@ -63,11 +65,15 @@ export default function App({ Component, pageProps }: AppProps) {
       <Footer />
       <NewsletterPopup />
       <NewsletterToast />
-      {/* Google Analytics - Only load in production */}
+      
       {process.env.NODE_ENV === 'production' && (
         <>
-          <Script async src="https://www.googletagmanager.com/gtag/js?id=G-7V91K25TH0" strategy="afterInteractive" />
-          <Script id="google-analytics" strategy="afterInteractive">
+          <Script 
+            async 
+            src="https://www.googletagmanager.com/gtag/js?id=G-7V91K25TH0" 
+            strategy="lazyOnload" 
+          />
+          <Script id="google-analytics" strategy="lazyOnload">
             {`
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
@@ -75,12 +81,7 @@ export default function App({ Component, pageProps }: AppProps) {
               gtag('config', 'G-7V91K25TH0');
             `}
           </Script>
-        </>
-      )}
-      {/* Meta Pixel Code - Only load in production */}
-      {process.env.NODE_ENV === 'production' && (
-        <>
-          <Script id="meta-pixel" strategy="afterInteractive">
+          <Script id="meta-pixel" strategy="lazyOnload">
             {`
               !function(f,b,e,v,n,t,s)
               {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -94,16 +95,8 @@ export default function App({ Component, pageProps }: AppProps) {
               fbq('track', 'PageView');
             `}
           </Script>
-          <noscript>
-            <img
-              height="1"
-              width="1"
-              style={{ display: 'none' }}
-              src="https://www.facebook.com/tr?id=677750738702576&ev=PageView&noscript=1"
-            />
-          </noscript>
         </>
       )}
-    </>
+    </div>
   )
 }
