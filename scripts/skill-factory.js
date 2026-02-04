@@ -46,7 +46,9 @@ recipes.forEach(file => {
 
         const skillMd = `---
 name: ${skillName}
-description: ${data.description.replace(/\n/g, ' ')}
+description: "${data.description.replace(/"/g, '\\"').replace(/\n/g, ' ')}"
+version: 1.0.0
+category: ${data.category || 'Marketing'}
 ---
 
 # ${data.title}

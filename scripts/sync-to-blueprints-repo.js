@@ -6,9 +6,9 @@ const RECIPES_DIR = path.join(__dirname, '../content/recipes');
 const TARGET_REPO_DIR = path.join(__dirname, '../marketing-agent-blueprints');
 const TARGET_SKILLS_DIR = path.join(TARGET_REPO_DIR, 'skills');
 
-// 1. Clean target repo (keeping .git and README.md for now)
-console.log('🧹 Cleaning target repository...');
-const itemsToKeep = ['.git', 'README.md'];
+// 1. Clean target repo (keeping .git and README.md)
+console.log('🧹 Cleaning target repository skills...');
+const itemsToKeep = ['.git', 'README.md', 'plugin.json'];
 const items = fs.readdirSync(TARGET_REPO_DIR);
 items.forEach(item => {
     if (!itemsToKeep.includes(item)) {
@@ -39,7 +39,7 @@ recipeFiles.forEach(file => {
     const skillFolderPath = path.join(TARGET_SKILLS_DIR, skillName);
     if (!fs.existsSync(skillFolderPath)) fs.mkdirSync(skillFolderPath, { recursive: true });
 
-    // Extract logic (following skill-factory.js logic)
+    // Extract logic
     let skillLogic = '';
     if (body.includes('# Prompt')) {
         skillLogic = body.split('# Prompt')[1].trim();
@@ -49,46 +49,37 @@ recipeFiles.forEach(file => {
         skillLogic = body.trim();
     }
 
+    // Enhance logic structure for both Claude and Gemini
+    const enhancedLogic = `
+## Core Instructions
+You are a highly specialized AI agent focusing on ${data.category || 'Marketing'}. Your mission is:
+${data.description}
+
+## Implementation Workflow
+${skillLogic}
+
+---
+*Blueprint ID: ${data.id}*
+*Source: [Real AI Examples](https://realaiexamples.com)*
+`;
+
+    // Sanitized description - avoid complex regex in literal
+    let cleanDesc = data.description.split('\n').join(' ');
+    cleanDesc = cleanDesc.split('"').join("'");
+
     const skillMd = `--- 
 name: ${skillName}
-description: ${data.description.replace(/\n/g, ' ')}
+description: "${cleanDesc}"
+version: 1.0.0
+category: ${data.category || 'Marketing'}
 ---
 
 # ${data.title}
 
-${skillLogic}
+${enhancedLogic}
 `;
 
     fs.writeFileSync(path.join(skillFolderPath, 'SKILL.md'), skillMd);
 });
 
-// 3. Update README.md
-const newReadme = `# Marketing Agent Blueprints (Gemini CLI Skills)
-
-This repository contains a library of agent-ready AI workflows for Sales, Marketing, and Ops, formatted as **Gemini CLI Skills**.
-
-## Installation
-
-To install any of these blueprints as a skill in your Gemini CLI, use the following command:
-
-\`\`\`bash
-gemini skills install https://github.com/akhilkannur/marketing-agent-blueprints --path skills/<blueprint-id>
-\`\`\`
-
-Replace \`<blueprint-id>\` with the name of the folder in the \`skills/\` directory.
-
-### Example:
-To install the **Agent Context Builder**:
-\`\`\`bash
-gemini skills install https://github.com/akhilkannur/marketing-agent-blueprints --path skills/agent-context-builder
-\`\`\`
-
-## Available Blueprints
-Currently, there are **${freeCount}** free blueprints available in this repository.
-
-Browse the full list at [Real AI Examples](https://realaiexamples.com).
-`;
-
-fs.writeFileSync(path.join(TARGET_REPO_DIR, 'README.md'), newReadme);
-
-console.log(`✨ Successfully synced ${freeCount} free skills to ${TARGET_REPO_DIR}`);
+console.log(`✨ Successfully synced ${freeCount} free high-quality skills to ${TARGET_REPO_DIR}`);
