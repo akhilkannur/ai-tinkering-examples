@@ -1,10 +1,11 @@
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 import Navbar from '../../components/Navbar';
 import { aiTools, AiTool } from '../../lib/ai-tools-data';
 import AIToolCard from '../../components/AIToolCard';
 import ToolDetailModal from '../../components/ToolDetailModal';
-import { Filter, Sparkles, Command, Plus } from 'lucide-react';
+import { Filter, Sparkles, Command, Plus, Briefcase, ArrowRight } from 'lucide-react';
 
 export default function ToolsIndex() {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
@@ -152,5 +153,3 @@ export default function ToolsIndex() {
     </div>
   );
 }
-
-import { Briefcase, ArrowRight as ArrowRightIcon } from 'lucide-react';
