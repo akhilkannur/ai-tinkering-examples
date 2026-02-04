@@ -1,4 +1,4 @@
---- 
+---
 id: referral-fraud-pattern-detector
 category: Retention
 title: Referral Fraud Pattern Detector
@@ -7,12 +7,14 @@ difficulty: Intermediate
 time: Batch
 archetype: Processor
 description: >-
-  Checks referral logs for: Same IP, Sequential Emails (john+1@gmail.com), or impossible time-to-conversion (<10 seconds).
+  Checks referral logs for: Same IP, Sequential Emails (john+1@gmail.com), or
+  impossible time-to-conversion (<10 seconds).
 sampleData:
   filename: input_data.csv
   content: |
     Referrer_ID,Referred_Email,IP_Address
     User1,User1+test@gmail.com,192.168.1.1
+isPremium: true
 ---
 
 # Agent Configuration: Referral Fraud Pattern Detector

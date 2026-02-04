@@ -16,6 +16,7 @@ sampleData:
     101,250,Google Ads
     102,50,Facebook
     103,300,Google Ads
+isPremium: true
 ---
 # Agent Configuration: The Acquisition Manager
 

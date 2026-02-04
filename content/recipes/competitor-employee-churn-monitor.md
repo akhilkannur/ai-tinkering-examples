@@ -1,18 +1,21 @@
 ---
-id: "competitor-employee-churn-monitor"
-category: "Competitive Intel"
-title: "Competitor Brain Drain"
-tagline: "Did their VP of Sales just quit?"
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Tracks departures from key competitor roles (Sales VP, Product Lead) via LinkedIn signal data."
+id: competitor-employee-churn-monitor
+category: Competitive Intel
+title: Competitor Brain Drain
+tagline: Did their VP of Sales just quit?
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Tracks departures from key competitor roles (Sales VP, Product Lead) via
+  LinkedIn signal data.
 sampleData:
-  filename: "employee_signals.csv"
+  filename: employee_signals.csv
   content: |
     Competitor,Role,Name,Status
     Comp A,VP Sales,John Doe,Left
     Comp A,CTO,Jane Smith,Active
+isPremium: false
 ---
 
 # Agent Configuration: The Market Intelligence Analyst

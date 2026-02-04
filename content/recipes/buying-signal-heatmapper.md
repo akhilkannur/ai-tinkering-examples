@@ -1,19 +1,22 @@
 ---
-id: "buying-signal-heatmapper"
-category: "Sales Ops"
-title: "Account Buying Signal Heatmapper"
-tagline: "Score account timing by aggregating intent signals."
-difficulty: "Advanced"
-time: "Daily"
-archetype: "Processor"
-description: "Aggregates intent signals from job postings, news alerts, and website visits to identify accounts in an active buying window."
+id: buying-signal-heatmapper
+category: Sales Ops
+title: Account Buying Signal Heatmapper
+tagline: Score account timing by aggregating intent signals.
+difficulty: Advanced
+time: Daily
+archetype: Processor
+description: >-
+  Aggregates intent signals from job postings, news alerts, and website visits
+  to identify accounts in an active buying window.
 sampleData:
-  filename: "intent_signals.csv"
+  filename: intent_signals.csv
   content: |
     Account,Signal_Type,Date,Details
     Acme Corp,Job Posting,2023-10-01,Hiring 5 AEs
     Beta Inc,News,2023-10-02,Series B Funding
     Acme Corp,Web Visit,2023-10-03,Pricing Page
+isPremium: true
 ---
 
 # Agent Configuration: The Revenue Intelligence Agent

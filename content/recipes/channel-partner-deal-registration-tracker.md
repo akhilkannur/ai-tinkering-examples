@@ -15,6 +15,7 @@ sampleData:
     Partner,Lead_Company,Date
     Reseller A,Acme Corp,2023-10-01
     Reseller B,Gamma Inc,2023-10-02
+isPremium: true
 ---
 
 # Agent Configuration: The Channel Manager

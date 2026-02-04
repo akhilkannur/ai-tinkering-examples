@@ -1,14 +1,17 @@
 ---
-id: "blog-post-roi-calculator"
-category: "Marketing Ops"
-title: "Content Revenue Attributor"
-tagline: "Stitch CRM deals to Analytics data to find your 'Money Pages'."
-difficulty: "Intermediate"
-time: "Weekly"
-archetype: "Processor"
-description: "Takes two separate exports (Closed Deals from CRM and Traffic Logs from Analytics), stitches them together by Email, and calculates the exact revenue revenue per entry page."
+id: blog-post-roi-calculator
+category: Marketing Ops
+title: Content Revenue Attributor
+tagline: Stitch CRM deals to Analytics data to find your 'Money Pages'.
+difficulty: Intermediate
+time: Weekly
+archetype: Processor
+description: >-
+  Takes two separate exports (Closed Deals from CRM and Traffic Logs from
+  Analytics), stitches them together by Email, and calculates the exact revenue
+  revenue per entry page.
 sampleData:
-  filename: "crm_deals.csv"
+  filename: crm_deals.csv
   content: |
     Email,Deal_Stage,Amount
     alice@example.com,Closed Won,5000
@@ -16,7 +19,7 @@ sampleData:
     charlie@tech.co,Closed Won,25000
     david@startup.io,Closed Won,8000
     eve@enterprise.net,Closed Lost,50000
-  filename_2: "web_tracking.csv"
+  filename_2: web_tracking.csv
   content_2: |
     Email,First_Page_Seen,Session_Date
     alice@example.com,/blog/ultimate-guide-to-ai,2025-01-10
@@ -24,6 +27,7 @@ sampleData:
     charlie@tech.co,/blog/ultimate-guide-to-ai,2025-01-15
     david@startup.io,/case-studies/finance-corp,2025-01-20
     eve@enterprise.net,/home,2025-01-05
+isPremium: false
 ---
 
 # Agent Configuration: The Attribution Analyst

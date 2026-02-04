@@ -16,6 +16,7 @@ sampleData:
     Launch_URL
     https://www.producthunt.com/products/notion
     https://www.producthunt.com/products/linear
+isPremium: true
 ---
 
 # Agent Configuration: The Product Hunt Poacher

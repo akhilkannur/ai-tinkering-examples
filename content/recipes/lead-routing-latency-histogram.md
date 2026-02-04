@@ -15,6 +15,7 @@ sampleData:
     Lead_ID,Created_At,Assigned_At
     L-1,10:00,10:01
     L-2,10:00,10:45
+isPremium: true
 ---
 
 # Agent Configuration: The Operations Auditor Agent

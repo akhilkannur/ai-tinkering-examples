@@ -8,14 +8,15 @@ time: Batch
 archetype: Processor
 description: >-
   Data dumping causes churn. This agent transforms raw client performance CSVs
-  into a cohesive narrative arc: "The Big Win" (What went right), "The
-  Learning" (What went wrong), and "The Ask" (What you need next).
+  into a cohesive narrative arc: "The Big Win" (What went right), "The Learning"
+  (What went wrong), and "The Ask" (What you need next).
 sampleData:
   filename: client_data.csv
   content: |
     Client,Revenue_MoM,Leads_MoM,Spend,Budget_Remaining
     Acme,+20%,+5%,10000,5000
     Beta,-5%,-10%,20000,0
+isPremium: true
 ---
 
 # Agent Configuration: The Account Strategist

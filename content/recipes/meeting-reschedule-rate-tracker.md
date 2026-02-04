@@ -1,19 +1,23 @@
 ---
-id: "meeting-reschedule-rate-tracker"
-category: "Sales Ops"
-title: "The Calendar Defender"
-tagline: "Quantify the cost of flakes and enforce a 'Deposit' policy."
-difficulty: "Beginner"
-time: "Weekly"
-archetype: "Processor"
-description: "A 20% flake rate costs you 10 hours a month in wasted prep. This agent analyzes your calendar logs, calculates the 'Prep Tax', and prescribes specific policies (e.g., Double Confirmation, Deposits) to fix it."
+id: meeting-reschedule-rate-tracker
+category: Sales Ops
+title: The Calendar Defender
+tagline: Quantify the cost of flakes and enforce a 'Deposit' policy.
+difficulty: Beginner
+time: Weekly
+archetype: Processor
+description: >-
+  A 20% flake rate costs you 10 hours a month in wasted prep. This agent
+  analyzes your calendar logs, calculates the 'Prep Tax', and prescribes
+  specific policies (e.g., Double Confirmation, Deposits) to fix it.
 sampleData:
-  filename: "calendar_audit.csv"
+  filename: calendar_audit.csv
   content: |
     Prospect,Outcome,Prep_Minutes_Wasted
     Acme,Held,0
     Beta,No-Show,15
     Gamma,Rescheduled,10
+isPremium: true
 ---
 
 # Agent Configuration: The Time Guardian

@@ -1,19 +1,22 @@
 ---
-id: "customer-health-usage-correlation"
-category: "Customer Success"
-title: "Usage-to-Health Validator"
-tagline: "Does high usage actually mean high health?"
-difficulty: "Advanced"
-time: "Monthly"
-archetype: "Processor"
-description: "Verifies health score accuracy by correlating 'Product Logins' with manual 'CS Health Scores'."
+id: customer-health-usage-correlation
+category: Customer Success
+title: Usage-to-Health Validator
+tagline: Does high usage actually mean high health?
+difficulty: Advanced
+time: Monthly
+archetype: Processor
+description: >-
+  Verifies health score accuracy by correlating 'Product Logins' with manual 'CS
+  Health Scores'.
 sampleData:
-  filename: "health_validation.csv"
+  filename: health_validation.csv
   content: |
     Customer,Manual_Health_Score,Monthly_Logins
     Acme,10,500
     Beta,10,2
     Gamma,2,10
+isPremium: true
 ---
 
 # Agent Configuration: The CS Analyst Agent

@@ -1,18 +1,19 @@
 ---
-id: "sales-call-talk-ratio-auditor"
-category: "Sales Ops"
-title: "Talk/Listen Ratio Auditor"
-tagline: "Stop showing up and throwing up."
-difficulty: "Intermediate"
-time: "Weekly"
-archetype: "Processor"
-description: "Analyzes call metrics to flag calls where the rep spoke > 60% of the time."
+id: sales-call-talk-ratio-auditor
+category: Sales Ops
+title: Talk/Listen Ratio Auditor
+tagline: Stop showing up and throwing up.
+difficulty: Intermediate
+time: Weekly
+archetype: Processor
+description: Analyzes call metrics to flag calls where the rep spoke > 60% of the time.
 sampleData:
-  filename: "call_metrics.csv"
+  filename: call_metrics.csv
   content: |
     Rep,Call_ID,Talk_Ratio
     John,101,65%
     Jane,102,40%
+isPremium: true
 ---
 
 # Agent Configuration: The Conversation Intelligence Coach

@@ -1,18 +1,21 @@
 ---
-id: "campaign-cost-per-opportunity"
-category: "Marketing Ops"
-title: "Campaign Efficiency Scorer"
-tagline: "Calculate Cost-per-Opportunity (CPO)."
-difficulty: "Intermediate"
-time: "Weekly"
-archetype: "Processor"
-description: "Links campaign spend to resulting opportunities to find the most efficient pipeline drivers."
+id: campaign-cost-per-opportunity
+category: Marketing Ops
+title: Campaign Efficiency Scorer
+tagline: Calculate Cost-per-Opportunity (CPO).
+difficulty: Intermediate
+time: Weekly
+archetype: Processor
+description: >-
+  Links campaign spend to resulting opportunities to find the most efficient
+  pipeline drivers.
 sampleData:
-  filename: "marketing_efficiency.csv"
+  filename: marketing_efficiency.csv
   content: |
     Campaign,Spend,Opportunity_Count
     LinkedIn_Awareness,5000,2
     Google_Search,2000,10
+isPremium: false
 ---
 
 # Agent Configuration: The Demand Gen Agent

@@ -15,6 +15,7 @@ sampleData:
     Customer,Join_Date,Second_Order_Date
     John,2023-01-01,2023-02-01
     Jane,2023-01-01,NULL
+isPremium: true
 ---
 # Agent Configuration: The Retention Lead
 

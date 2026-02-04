@@ -21,6 +21,7 @@ sampleData:
 
     Gamma LLC,103,"This is the 3rd time it crashed. Unacceptable. Fix it or we
     leave."
+isPremium: false
 ---
 
 # Agent Configuration: The Churn Risk Detector

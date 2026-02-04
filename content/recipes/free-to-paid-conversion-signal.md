@@ -15,6 +15,7 @@ sampleData:
     User_ID,Feature_A_Usage,Limit,Plan
     101,45,50,Free
     102,10,50,Free
+isPremium: true
 ---
 # Agent Configuration: The Product Sales Specialist
 

@@ -1,19 +1,22 @@
---- 
-id: "crm-field-utilization-analyzer"
-category: "Sales Ops"
-title: "CRM Field Health Check"
-tagline: "Identify unused or garbage data fields in your CRM."
-difficulty: "Intermediate"
-time: "10 mins"
-archtype: "Processor"
-description: "Analyzes a CSV export of your CRM records to calculate fill rates for every column. Helps you decide which fields to deprecate or mandate."
+---
+id: crm-field-utilization-analyzer
+category: Sales Ops
+title: CRM Field Health Check
+tagline: Identify unused or garbage data fields in your CRM.
+difficulty: Intermediate
+time: 10 mins
+archtype: Processor
+description: >-
+  Analyzes a CSV export of your CRM records to calculate fill rates for every
+  column. Helps you decide which fields to deprecate or mandate.
 sampleData:
-  filename: "crm_export.csv"
+  filename: crm_export.csv
   content: |
     Deal_ID,Amount,Close_Date,Next_Step,Custom_Field_1,Custom_Field_2
     001,5000,2023-10-01,Call,,Old_Data
     002,12000,2023-11-15,Email,,
     003,3000,,,
+isPremium: true
 ---
 
 # Agent Configuration: The CRM Architect

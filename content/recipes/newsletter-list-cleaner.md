@@ -16,6 +16,7 @@ sampleData:
     john@acme.com
     support@tesla.com
     bill@temp-mail.org
+isPremium: true
 ---
 
 # Agent Configuration: The Email Architect

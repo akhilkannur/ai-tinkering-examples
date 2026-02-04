@@ -16,6 +16,7 @@ sampleData:
     Domain
     company-a.com
     startup-b.io
+isPremium: true
 ---
 
 # Agent Configuration: The Ghost Blog Hunter

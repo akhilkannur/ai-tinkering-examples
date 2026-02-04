@@ -1,18 +1,23 @@
 ---
-id: "ad-spend-pacer"
-category: "Paid Media"
-title: "The Ad Spend Pacer"
-tagline: "Land exactly on budget."
-difficulty: "Beginner"
-time: "Daily"
-archetype: "Processor"
-description: "Overspending gets you fired. Underspending gets you yelled at. This agent takes your Month-to-Date spend and Total Budget, calculating exactly how much you need to spend *daily* for the rest of the month to hit the target perfectly."
+id: ad-spend-pacer
+category: Paid Media
+title: The Ad Spend Pacer
+tagline: Land exactly on budget.
+difficulty: Beginner
+time: Daily
+archetype: Processor
+description: >-
+  Overspending gets you fired. Underspending gets you yelled at. This agent
+  takes your Month-to-Date spend and Total Budget, calculating exactly how much
+  you need to spend *daily* for the rest of the month to hit the target
+  perfectly.
 sampleData:
-  filename: "campaign_spend.csv"
+  filename: campaign_spend.csv
   content: |
     Campaign,Budget,Spent_MTD,Days_Left
     Retargeting,5000,2000,15
     Prospecting,10000,8000,15
+isPremium: false
 ---
 
 # Agent Configuration: The Media Buyer

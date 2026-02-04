@@ -1,19 +1,22 @@
 ---
-id: "quota-attainment-bell-curve"
-category: "Sales Ops"
-title: "Sales Performance Distro"
-tagline: "Visualize team performance distribution."
-difficulty: "Beginner"
-time: "Quarterly"
-archetype: "Processor"
-description: "Ranks the sales team by attainment and segments them into Top, Mid, and Bottom percentiles."
+id: quota-attainment-bell-curve
+category: Sales Ops
+title: Sales Performance Distro
+tagline: Visualize team performance distribution.
+difficulty: Beginner
+time: Quarterly
+archetype: Processor
+description: >-
+  Ranks the sales team by attainment and segments them into Top, Mid, and Bottom
+  percentiles.
 sampleData:
-  filename: "attainment.csv"
+  filename: attainment.csv
   content: |
     Rep,Percent_of_Quota
     John,120
     Jane,95
     Bob,40
+isPremium: true
 ---
 
 # Agent Configuration: The Sales Leadership Agent

@@ -13,6 +13,7 @@ sampleData:
     Old_URL,New_URL,Actual_Status,Actual_Location
     /old, /new, 301, /new
     /blog/old, /blog/new, 404,
+isPremium: true
 ---
 
 # Agent Configuration: The Migration Specialist

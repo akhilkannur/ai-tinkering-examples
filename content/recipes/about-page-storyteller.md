@@ -17,6 +17,7 @@ sampleData:
     Linear,https://linear.app,Karri Saarinen
     PostHog,https://posthog.com,James Hawkins
     Beehiiv,https://beehiiv.com,Tyler Denk
+isPremium: false
 ---
 
 # Agent Configuration: The About Page Storyteller

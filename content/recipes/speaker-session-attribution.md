@@ -15,6 +15,7 @@ sampleData:
     Attendee_Email,Session_Name,Opp_Created_Date
     john@acme.com,Keynote,2023-10-15
     jane@beta.com,Keynote,NULL
+isPremium: true
 ---
 # Agent Configuration: The Content Strategist
 

@@ -1,18 +1,21 @@
---- 
-id: "commission-clawback-tracker"
-category: "Sales Ops"
-title: "Clawback Risk Monitor"
-tagline: "Track revenue at risk of clawback."
-difficulty: "Intermediate"
-time: "Weekly"
-archtype: "Processor"
-description: "Identifies recently paid deals that are currently in 'High Support Volume' or 'Low Usage' to flag potential clawback risks."
+---
+id: commission-clawback-tracker
+category: Sales Ops
+title: Clawback Risk Monitor
+tagline: Track revenue at risk of clawback.
+difficulty: Intermediate
+time: Weekly
+archtype: Processor
+description: >-
+  Identifies recently paid deals that are currently in 'High Support Volume' or
+  'Low Usage' to flag potential clawback risks.
 sampleData:
-  filename: "clawback_risk.csv"
+  filename: clawback_risk.csv
   content: |
     Deal,Payout_Month,Support_Tickets,Usage_Trend
     Acme,Last Month,15,Down
     Beta,Last Month,0,Up
+isPremium: true
 ---
 
 # Agent Configuration: The Revenue Financial Analyst

@@ -15,6 +15,7 @@ sampleData:
     Customer,Ticket_Count,LTV
     John,50,100
     Jane,0,500
+isPremium: false
 ---
 # Agent Configuration: The Profitability Ops
 

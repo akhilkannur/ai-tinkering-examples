@@ -1,19 +1,22 @@
---- 
-id: "customer-segment-movement-tracker"
-category: "Customer Success"
-title: "Segment Migration Tracker"
-tagline: "Who moved from Silver to Gold?"
-difficulty: "Intermediate"
-time: "Quarterly"
-archtype: "Processor"
-description: "Compares customer tiers between two quarters to visualize upgrades and downgrades."
+---
+id: customer-segment-movement-tracker
+category: Customer Success
+title: Segment Migration Tracker
+tagline: Who moved from Silver to Gold?
+difficulty: Intermediate
+time: Quarterly
+archtype: Processor
+description: >-
+  Compares customer tiers between two quarters to visualize upgrades and
+  downgrades.
 sampleData:
-  filename: "tiers.csv"
+  filename: tiers.csv
   content: |
     Customer,Q1_Tier,Q2_Tier
     Acme,Silver,Gold
     Beta,Gold,Silver
     Gamma,Silver,Silver
+isPremium: true
 ---
 
 # Agent Configuration: The Customer Ops

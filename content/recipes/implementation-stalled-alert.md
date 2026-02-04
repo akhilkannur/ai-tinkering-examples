@@ -1,19 +1,22 @@
---- 
-id: "implementation-stalled-alert"
-category: "Customer Success"
-title: "Stalled Project Alert"
-tagline: "Flag onboarding projects stuck in 'Pending'."
-difficulty: "Beginner"
-time: "Weekly"
-archtype: "Processor"
-description: "Identifies implementation projects that haven't moved to the next phase in over 14 days."
+---
+id: implementation-stalled-alert
+category: Customer Success
+title: Stalled Project Alert
+tagline: Flag onboarding projects stuck in 'Pending'.
+difficulty: Beginner
+time: Weekly
+archtype: Processor
+description: >-
+  Identifies implementation projects that haven't moved to the next phase in
+  over 14 days.
 sampleData:
-  filename: "projects.csv"
+  filename: projects.csv
   content: |
     Customer,Phase,Days_In_Phase
     Acme,Integration,20
     Beta,Setup,2
     Gamma,Integration,15
+isPremium: true
 ---
 
 # Agent Configuration: The Implementation Manager

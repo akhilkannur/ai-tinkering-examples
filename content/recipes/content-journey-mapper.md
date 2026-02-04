@@ -1,19 +1,22 @@
---- 
-id: "content-journey-mapper"
-category: "Marketing Ops"
-title: "Customer Content Journey"
-tagline: "Trace the blog posts read by your best customers."
-difficulty: "Advanced"
-time: "Monthly"
-archtype: "Processor"
-description: "Analyzes the page path of converted leads to find the common sequence of content read before signing."
+---
+id: content-journey-mapper
+category: Marketing Ops
+title: Customer Content Journey
+tagline: Trace the blog posts read by your best customers.
+difficulty: Advanced
+time: Monthly
+archtype: Processor
+description: >-
+  Analyzes the page path of converted leads to find the common sequence of
+  content read before signing.
 sampleData:
-  filename: "web_activity.csv"
+  filename: web_activity.csv
   content: |
     User,Page_Title,Date
     John,/blog/how-to,2023-10-01
     John,/blog/pricing,2023-10-02
     John,CONVERTED,2023-10-03
+isPremium: true
 ---
 
 # Agent Configuration: The Content Strategist

@@ -16,6 +16,7 @@ sampleData:
     Jan,Comp X,Won
     Jan,Comp X,Lost
     Feb,Comp X,Lost
+isPremium: true
 ---
 
 # Agent Configuration: The Competitive Analyst

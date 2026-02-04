@@ -16,6 +16,7 @@ sampleData:
     john@ge.com,Free
     sara@ge.com,Free
     bob@ge.com,Free
+isPremium: true
 ---
 # Agent Configuration: The Enterprise SDR
 

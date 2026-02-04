@@ -16,6 +16,7 @@ sampleData:
     Acme,Austin
     Beta,Austin
     Gamma,Dallas
+isPremium: true
 ---
 # Agent Configuration: The Community Manager
 

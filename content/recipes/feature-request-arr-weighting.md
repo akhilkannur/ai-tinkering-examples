@@ -2,18 +2,21 @@
 id: feature-request-arr-weighting
 category: Strategic Ops
 title: Feature Request ARR Weighting
-tagline: Prioritize roadmap based on dollars, not noise.
+tagline: 'Prioritize roadmap based on dollars, not noise.'
 difficulty: Intermediate
 time: Batch
 archtype: Processor
 description: >-
-  Merges your "Feature Request" board with Salesforce data. Calculates the "At-Risk ARR" attached to every missing feature to tell Product what to build next.
+  Merges your "Feature Request" board with Salesforce data. Calculates the
+  "At-Risk ARR" attached to every missing feature to tell Product what to build
+  next.
 sampleData:
   filename: input_data.csv
   content: |
     Feature_Tag,Requesting_Account_IDs
     SSO,Acc1;Acc5;Acc9
     Dark_Mode,Acc2
+isPremium: true
 ---
 
 # Agent Configuration: Feature Request ARR Weighting

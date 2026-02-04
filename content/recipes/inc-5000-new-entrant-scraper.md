@@ -14,6 +14,7 @@ sampleData:
   filename: inc_5000_url.txt
   content: |
     https://www.inc.com/inc5000/2024
+isPremium: true
 ---
 
 # Agent Configuration: The Inc. 5000 Debutante

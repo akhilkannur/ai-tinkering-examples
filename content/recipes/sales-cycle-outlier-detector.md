@@ -1,19 +1,22 @@
---- 
-id: "sales-cycle-outlier-detector"
-category: "Sales Ops"
-title: "Sales Cycle Anomaly Hunter"
-tagline: "Flag deals moving suspiciously fast or slow."
-difficulty: "Intermediate"
-time: "Weekly"
-archtype: "Processor"
-description: "Identifies deals whose age significantly deviates from the historical average cycle time."
+---
+id: sales-cycle-outlier-detector
+category: Sales Ops
+title: Sales Cycle Anomaly Hunter
+tagline: Flag deals moving suspiciously fast or slow.
+difficulty: Intermediate
+time: Weekly
+archtype: Processor
+description: >-
+  Identifies deals whose age significantly deviates from the historical average
+  cycle time.
 sampleData:
-  filename: "deal_age.csv"
+  filename: deal_age.csv
   content: |
     Deal,Age_Days,Avg_Cycle_Days
     Deal A,5,45
     Deal B,120,45
     Deal C,40,45
+isPremium: true
 ---
 
 # Agent Configuration: The Forecast Manager

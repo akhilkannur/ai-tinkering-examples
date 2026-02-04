@@ -2,20 +2,22 @@
 id: b2b-marketplace-scraper
 category: Lead Gen
 title: The Ecosystem Partner Finder
-tagline: Find leads from AppExchange, Shopify, or HubSpot app stores.
+tagline: 'Find leads from AppExchange, Shopify, or HubSpot app stores.'
 difficulty: Intermediate
 time: 20 mins
 archetype: Researcher
 description: >-
   Companies listed on B2B marketplaces (Salesforce AppExchange, Shopify App
   Store, etc.) are tech-forward and often pay for other SaaS tools. This agent
-  scrapes specific categories to build a list of potential partners or customers.
+  scrapes specific categories to build a list of potential partners or
+  customers.
 sampleData:
   filename: marketplace_targets.csv
   content: |
     Marketplace_URL,Category,Min_Ratings
     https://apps.shopify.com,Marketing,50
     https://appexchange.salesforce.com,Analytics,10
+isPremium: false
 ---
 
 # Agent Configuration: The Ecosystem Partner Finder

@@ -16,6 +16,7 @@ sampleData:
     Acme Corp,bill@acme.com,Ok,50000,acme.com
     Beta Inc,finance@beta.com,Hard Bounce,120000,beta.com
     Gamma LLC,ap@gamma.com,Soft Bounce,10000,gamma.com
+isPremium: true
 ---
 
 # Agent Configuration: The Revenue Leakage Auditor

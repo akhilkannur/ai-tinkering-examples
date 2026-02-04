@@ -1,19 +1,22 @@
 ---
-id: "invalid-email-syntax-purge"
-category: "Marketing Ops"
-title: "Email Syntax Auditor"
-tagline: "Identify and remove obvious email typos."
-difficulty: "Beginner"
-time: "Weekly"
-archetype: "Processor"
-description: "Finds obvious email typos (e.g. `gamil.com`, `yhaoo.com`) to improve email deliverability and score."
+id: invalid-email-syntax-purge
+category: Marketing Ops
+title: Email Syntax Auditor
+tagline: Identify and remove obvious email typos.
+difficulty: Beginner
+time: Weekly
+archetype: Processor
+description: >-
+  Finds obvious email typos (e.g. `gamil.com`, `yhaoo.com`) to improve email
+  deliverability and score.
 sampleData:
-  filename: "emails.csv"
+  filename: emails.csv
   content: |
     Email
     john@gamil.com
     bob@yahoo..com
     sarah@test.com
+isPremium: true
 ---
 
 # Agent Configuration: The Email Hygiene Agent

@@ -1,18 +1,21 @@
 ---
-id: "seasonal-trend-spotter"
-category: "Paid Media"
-title: "Trend Timing Assistant"
-tagline: "When do people start searching for 'Winter Coats'?"
-difficulty: "Intermediate"
-time: "Yearly"
-archetype: "Processor"
-description: "Identifies the historical week where search volume for a category starts rising to time ad launches."
+id: seasonal-trend-spotter
+category: Paid Media
+title: Trend Timing Assistant
+tagline: When do people start searching for 'Winter Coats'?
+difficulty: Intermediate
+time: Yearly
+archetype: Processor
+description: >-
+  Identifies the historical week where search volume for a category starts
+  rising to time ad launches.
 sampleData:
-  filename: "search_volume.csv"
+  filename: search_volume.csv
   content: |
     Week,Category,Volume
     35,Coats,100
     36,Coats,500
+isPremium: true
 ---
 # Agent Configuration: The Planner
 

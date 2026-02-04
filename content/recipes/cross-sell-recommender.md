@@ -16,6 +16,7 @@ sampleData:
     John,Tent;Sleeping Bag
     Jane,Tent
     Bob,Tent;Footprint
+isPremium: false
 ---
 # Agent Configuration: The Email Strategist
 

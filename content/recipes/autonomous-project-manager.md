@@ -21,6 +21,7 @@ sampleData:
     E-commerce Bot,Python & FastAPI,Build a scraper for price monitoring
 
     Internal Tool,React & Supabase,Setup auth and a basic dashboard
+isPremium: false
 ---
 
 # Agent Configuration: The Autonomous Project Manager

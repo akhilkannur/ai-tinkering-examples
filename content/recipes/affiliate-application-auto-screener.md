@@ -1,4 +1,4 @@
---- 
+---
 id: affiliate-application-auto-screener
 category: Marketing Ops
 title: Affiliate Application Auto-Screener
@@ -7,12 +7,14 @@ difficulty: Intermediate
 time: Batch
 archetype: Researcher
 description: >-
-  Checks applicant URL. Flags sites that are "Coupon Farms", "Adult Content", or "Domain Parked". Approves content creators automatically.
+  Checks applicant URL. Flags sites that are "Coupon Farms", "Adult Content", or
+  "Domain Parked". Approves content creators automatically.
 sampleData:
   filename: input_data.csv
   content: |
     Applicant_Name,Website
     CouponKing,http://coupon-spam.com
+isPremium: false
 ---
 
 # Agent Configuration: Affiliate Application Auto-Screener

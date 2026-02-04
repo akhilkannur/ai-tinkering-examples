@@ -1,19 +1,22 @@
---- 
-id: "demo-conversion-audit"
-category: "Sales Ops"
-title: "Stage Conversion Auditor"
-tagline: "Measure Demo -> Proposal conversion by rep."
-difficulty: "Beginner"
-time: "Monthly"
-archtype: "Processor"
-description: "Calculates the conversion efficiency of specific sales stages to identify coaching opportunities."
+---
+id: demo-conversion-audit
+category: Sales Ops
+title: Stage Conversion Auditor
+tagline: Measure Demo -> Proposal conversion by rep.
+difficulty: Beginner
+time: Monthly
+archtype: Processor
+description: >-
+  Calculates the conversion efficiency of specific sales stages to identify
+  coaching opportunities.
 sampleData:
-  filename: "conversions.csv"
+  filename: conversions.csv
   content: |
     Rep,Stage_From,Stage_To
     John,Demo,Proposal
     John,Demo,Closed-Lost
     Jane,Demo,Proposal
+isPremium: true
 ---
 
 # Agent Configuration: The Sales Coach

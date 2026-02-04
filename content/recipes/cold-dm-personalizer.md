@@ -17,6 +17,7 @@ sampleData:
     Ryan Carson,https://x.com/ryancarson,AI Agents
     Sahil Lavingia,https://x.com/shl,Creator Economy
     Justin Welsh,https://x.com/JustinWelsh,Solopreneurship
+isPremium: true
 ---
 
 # Agent Configuration: The Cold DM Personalizer

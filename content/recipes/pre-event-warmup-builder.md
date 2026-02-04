@@ -16,6 +16,7 @@ sampleData:
     John,San Francisco,CA
     Jane,San Jose,CA
     Bob,New York,NY
+isPremium: true
 ---
 # Agent Configuration: The Field Marketer
 

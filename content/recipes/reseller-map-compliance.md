@@ -15,6 +15,7 @@ sampleData:
     Partner,Product,Advertised_Price,MAP_Threshold
     Shop A,Widget X,95,100
     Shop B,Widget X,105,100
+isPremium: true
 ---
 
 # Agent Configuration: The Compliance Officer

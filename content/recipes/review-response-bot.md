@@ -7,9 +7,9 @@ difficulty: Beginner
 time: Batch
 archetype: Processor
 description: >-
-  Don't just reply; take action. This agent categorizes public reviews and splits
-  them into two streams: Public Responses (empathetic text) and Internal Routing
-  (tickets for Engineering/Sales).
+  Don't just reply; take action. This agent categorizes public reviews and
+  splits them into two streams: Public Responses (empathetic text) and Internal
+  Routing (tickets for Engineering/Sales).
 sampleData:
   filename: reviews.csv
   content: >

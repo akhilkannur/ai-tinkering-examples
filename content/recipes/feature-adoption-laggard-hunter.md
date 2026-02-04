@@ -1,18 +1,21 @@
---- 
-id: "feature-adoption-laggard-hunter"
-category: "Customer Success"
-title: "Adoption Gap Hunter"
-tagline: "Find clients not using the features they paid for."
-difficulty: "Intermediate"
-time: "Monthly"
-archtype: "Processor"
-description: "Compares purchased features vs actual usage to find accounts needing more training."
+---
+id: feature-adoption-laggard-hunter
+category: Customer Success
+title: Adoption Gap Hunter
+tagline: Find clients not using the features they paid for.
+difficulty: Intermediate
+time: Monthly
+archtype: Processor
+description: >-
+  Compares purchased features vs actual usage to find accounts needing more
+  training.
 sampleData:
-  filename: "feature_audit.csv"
+  filename: feature_audit.csv
   content: |
     Account,Owned_Features,Used_Features
     Acme,API;SSO,SSO
     Beta,API;SSO,API;SSO
+isPremium: true
 ---
 
 # Agent Configuration: The Adoption Manager

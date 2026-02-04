@@ -7,15 +7,17 @@ difficulty: Intermediate
 time: Daily
 archetype: Processor
 description: >-
-  Stockouts cost more than just the missed sale; they cost customer loyalty. This
-  agent quantifies the bleeding and immediately generates a "Recovery Campaign"
-  (Waitlist Email + Incentive) to keep buyers engaged while you restock.
+  Stockouts cost more than just the missed sale; they cost customer loyalty.
+  This agent quantifies the bleeding and immediately generates a "Recovery
+  Campaign" (Waitlist Email + Incentive) to keep buyers engaged while you
+  restock.
 sampleData:
   filename: oos_log.csv
   content: |
     SKU,Visits_Yesterday,Hist_Conv_Rate,Price,Days_Until_Restock
     Red-Dress-S,500,0.03,80,5
     Blue-Tie,50,0.02,20,10
+isPremium: true
 ---
 
 # Agent Configuration: The Inventory Planner

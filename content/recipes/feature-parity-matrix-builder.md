@@ -1,18 +1,21 @@
 ---
-id: "feature-parity-matrix-builder"
-category: "Competitive Intel"
-title: "Feature Parity Bot"
-tagline: "Auto-update your comparison grid."
-difficulty: "Intermediate"
-time: "Quarterly"
-archetype: "Processor"
-description: "Scrapes 'Pricing' and 'Features' pages to build a binary (Yes/No) comparison grid of features."
+id: feature-parity-matrix-builder
+category: Competitive Intel
+title: Feature Parity Bot
+tagline: Auto-update your comparison grid.
+difficulty: Intermediate
+time: Quarterly
+archetype: Processor
+description: >-
+  Scrapes 'Pricing' and 'Features' pages to build a binary (Yes/No) comparison
+  grid of features.
 sampleData:
-  filename: "feature_scrape.csv"
+  filename: feature_scrape.csv
   content: |
     Competitor,Feature,Status
     Comp A,SSO,Included
     Comp B,SSO,Add-on
+isPremium: true
 ---
 
 # Agent Configuration: The Product Marketing Manager

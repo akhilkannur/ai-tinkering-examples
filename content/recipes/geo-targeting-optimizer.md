@@ -1,18 +1,21 @@
 ---
-id: "geo-targeting-optimizer"
-category: "Paid Media"
-title: "Geo-Conversion Optimizer"
-tagline: "Focus spend on cities that buy."
-difficulty: "Intermediate"
-time: "Quarterly"
-archetype: "Processor"
-description: "Identifies cities or states with the highest conversion rates to refine ad geo-targeting."
+id: geo-targeting-optimizer
+category: Paid Media
+title: Geo-Conversion Optimizer
+tagline: Focus spend on cities that buy.
+difficulty: Intermediate
+time: Quarterly
+archetype: Processor
+description: >-
+  Identifies cities or states with the highest conversion rates to refine ad
+  geo-targeting.
 sampleData:
-  filename: "geo_stats.csv"
+  filename: geo_stats.csv
   content: |
     City,Visits,Orders
     NY,1000,50
     LA,1000,10
+isPremium: true
 ---
 # Agent Configuration: The Growth Hacker
 

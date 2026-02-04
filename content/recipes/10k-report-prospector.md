@@ -7,7 +7,8 @@ difficulty: Advanced
 time: 15 mins
 archetype: Researcher
 description: >-
-  Parses a public company's 10-K (Annual Report) to extract specific 'Risk Factors' and generates a cold email positioning your product as the solution.
+  Parses a public company's 10-K (Annual Report) to extract specific 'Risk
+  Factors' and generates a cold email positioning your product as the solution.
 sampleData:
   filename: 10k_excerpt.txt
   content: |
@@ -15,6 +16,7 @@ sampleData:
     We face intense competition in the cloud storage market.
     Our data security protocols may not be sufficient to prevent breaches.
     Supply chain disruptions could delay our hardware shipments.
+isPremium: false
 ---
 
 # Agent Configuration: The 10-K Stitcher

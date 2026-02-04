@@ -15,6 +15,7 @@ sampleData:
     Asset,Views,Avg_Time_Spent
     Competitor A Battlecard,50,2m
     Objection Handling v1,2,30s
+isPremium: false
 ---
 
 # Agent Configuration: The Enablement Lead

@@ -8,14 +8,16 @@ time: Monthly
 archetype: Researcher
 description: >-
   Non-profits typically have tight budgets, EXCEPT when they win a major grant.
-  This agent monitors grant announcements (Gates Foundation, Ford Foundation, etc.)
-  to find non-profits that just got a cash injection and need to "spend it or lose it."
+  This agent monitors grant announcements (Gates Foundation, Ford Foundation,
+  etc.) to find non-profits that just got a cash injection and need to "spend it
+  or lose it."
 sampleData:
   filename: foundation_watch_list.csv
   content: |
     Foundation_Name,Website
     Bill & Melinda Gates Foundation,gatesfoundation.org
     Ford Foundation,fordfoundation.org
+isPremium: true
 ---
 
 # Agent Configuration: The Grant Money Hunter

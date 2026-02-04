@@ -15,6 +15,7 @@ sampleData:
     Order,Items
     1,Shampoo;Conditioner
     2,Shampoo;Soap
+isPremium: false
 ---
 # Agent Configuration: The Data Scientist Agent
 

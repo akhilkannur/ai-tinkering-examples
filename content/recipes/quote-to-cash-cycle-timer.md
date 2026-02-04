@@ -15,6 +15,7 @@ sampleData:
     Deal,Signed_Date,Paid_Date
     1,2023-01-01,2023-01-15
     2,2023-01-01,2023-03-01
+isPremium: true
 ---
 # Agent Configuration: The Finance Ops
 

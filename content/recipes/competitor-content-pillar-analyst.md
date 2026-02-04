@@ -16,6 +16,7 @@ sampleData:
     https://hubspot.com/blog/marketing-stats
     https://hubspot.com/blog/email-templates
     https://hubspot.com/blog/instagram-strategy
+isPremium: true
 ---
 
 # Agent Configuration: The Competitor Content Spy

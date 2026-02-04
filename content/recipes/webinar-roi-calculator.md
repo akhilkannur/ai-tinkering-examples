@@ -1,18 +1,19 @@
---- 
-id: "webinar-roi-calculator"
-category: "Marketing Ops"
-title: "Webinar ROI Analyzer"
-tagline: "Did we actually make money on that event?"
-difficulty: "Intermediate"
-time: "Batch"
-archtype: "Processor"
-description: "Calculates Cost Per Lead (CPL) and Pipeline ROI for a webinar event."
+---
+id: webinar-roi-calculator
+category: Marketing Ops
+title: Webinar ROI Analyzer
+tagline: Did we actually make money on that event?
+difficulty: Intermediate
+time: Batch
+archtype: Processor
+description: Calculates Cost Per Lead (CPL) and Pipeline ROI for a webinar event.
 sampleData:
-  filename: "event_costs.csv"
+  filename: event_costs.csv
   content: |
     Event,Total_Cost,Leads_Generated,Pipeline_Generated
     Q3 Webinar,5000,200,50000
     Q4 Summit,20000,100,10000
+isPremium: true
 ---
 
 # Agent Configuration: The Demand Gen Manager

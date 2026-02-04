@@ -16,6 +16,7 @@ sampleData:
     Vercel,Guillermo Rauch,CEO
     Zapier,Wade Foster,CEO
     Loom,Joe Thomas,Founder
+isPremium: true
 ---
 
 # Agent Configuration: The Cold Email Personalizer

@@ -13,6 +13,7 @@ sampleData:
     Industry,Asset_Type,Count
     Finance,Case Study,0
     Retail,Case Study,5
+isPremium: true
 ---
 # Agent Configuration: The Social Proof Matrix Mapper
 

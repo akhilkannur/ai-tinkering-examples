@@ -1,18 +1,21 @@
 ---
-id: "price-variance-auditor"
-category: "Sales Ops"
-title: "Price Integrity Auditor"
-tagline: "Identify deals sold below standard list price."
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Compares actual 'Sold Price' against the 'Standard List Price' to find excessive discounting."
+id: price-variance-auditor
+category: Sales Ops
+title: Price Integrity Auditor
+tagline: Identify deals sold below standard list price.
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Compares actual 'Sold Price' against the 'Standard List Price' to find
+  excessive discounting.
 sampleData:
-  filename: "pricing_audit.csv"
+  filename: pricing_audit.csv
   content: |
     Deal,List_Price,Sold_Price
     Deal 1,1000,900
     Deal 2,1000,500
+isPremium: true
 ---
 
 # Agent Configuration: The Margin Protection Agent

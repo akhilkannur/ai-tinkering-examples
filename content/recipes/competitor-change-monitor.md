@@ -19,6 +19,7 @@ sampleData:
     [After]
     Header: The Enterprise Platform for Scale.
     Price: Call Sales
+isPremium: false
 ---
 
 # Agent Configuration: The Competitive Analyst

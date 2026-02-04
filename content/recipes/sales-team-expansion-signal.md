@@ -8,8 +8,8 @@ time: 20 mins
 archetype: Researcher
 description: >-
   Hiring a "First VP of Sales" is the most critical milestone for B2B startups.
-  It means they are moving from "Founder-led Sales" to "Process-led Sales."
-  They need CRM setup, playbooks, data tools, and coaching immediately.
+  It means they are moving from "Founder-led Sales" to "Process-led Sales." They
+  need CRM setup, playbooks, data tools, and coaching immediately.
 sampleData:
   filename: startup_jobs.csv
   content: |
@@ -17,6 +17,7 @@ sampleData:
     "Founding VP of Sales"
     "First Sales Hire"
     "Head of Sales"
+isPremium: true
 ---
 
 # Agent Configuration: The VP Sales Headhunter

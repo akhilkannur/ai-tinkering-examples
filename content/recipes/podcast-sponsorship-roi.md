@@ -1,18 +1,22 @@
 ---
-id: "podcast-sponsorship-roi"
-category: "Marketing Ops"
-title: "The Brand Lift Estimator"
-tagline: "Direct clicks are only half the story. Measure the 'Halo Effect'."
-difficulty: "Intermediate"
-time: "Quarterly"
-archetype: "Processor"
-description: "Podcast ads notoriously under-report because people don't click links while driving. This agent correlates your 'Ad Drop Dates' with Direct Traffic spikes to estimate the invisible 'Brand Halo' revenue you are missing."
+id: podcast-sponsorship-roi
+category: Marketing Ops
+title: The Brand Lift Estimator
+tagline: Direct clicks are only half the story. Measure the 'Halo Effect'.
+difficulty: Intermediate
+time: Quarterly
+archetype: Processor
+description: >-
+  Podcast ads notoriously under-report because people don't click links while
+  driving. This agent correlates your 'Ad Drop Dates' with Direct Traffic spikes
+  to estimate the invisible 'Brand Halo' revenue you are missing.
 sampleData:
-  filename: "campaign_dates.csv"
+  filename: campaign_dates.csv
   content: |
     Podcast,Ad_Date,Direct_Revenue_Tracked,Baseline_Daily_Traffic,Ad_Day_Traffic
     MyFirstMillion,2024-01-15,5000,1000,1500
     TechCrunch,2024-01-20,200,1000,1050
+isPremium: true
 ---
 
 # Agent Configuration: The Attribution Scientist

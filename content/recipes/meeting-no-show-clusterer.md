@@ -1,19 +1,22 @@
 ---
-id: "meeting-no-show-clusterer"
-category: "Sales Ops"
-title: "No-Show Correlation Engine"
-tagline: "Analyze if certain sources have higher ghosting rates."
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Segments meeting outcome data by lead source and day of week to find predictors of demo no-shows."
+id: meeting-no-show-clusterer
+category: Sales Ops
+title: No-Show Correlation Engine
+tagline: Analyze if certain sources have higher ghosting rates.
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Segments meeting outcome data by lead source and day of week to find
+  predictors of demo no-shows.
 sampleData:
-  filename: "meeting_outcomes.csv"
+  filename: meeting_outcomes.csv
   content: |
     Lead_Source,Day,Outcome
     LinkedIn,Monday,Held
     Webinar,Monday,No Show
     Cold Outbound,Friday,No Show
+isPremium: true
 ---
 
 # Agent Configuration: The SDR Ops Agent

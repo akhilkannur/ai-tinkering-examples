@@ -17,6 +17,7 @@ sampleData:
     Customer,Employees,Estimated_Budget_Per_Head,Current_Spend
     BigCorp,1000,50,5000
     Startup,10,50,500
+isPremium: false
 ---
 
 # Agent Configuration: The Account Strategist

@@ -17,6 +17,7 @@ sampleData:
     booth_photos/card_1.jpg,SaaStr,2024-09-10
     booth_photos/card_stack_1.png,SaaStr,2024-09-10
     booth_photos/lunch_meeting.webp,Networking Dinner,2024-09-11
+isPremium: true
 ---
 
 # Agent Configuration: The Business Card Digitizer

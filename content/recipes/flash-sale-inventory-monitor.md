@@ -14,6 +14,7 @@ sampleData:
   content: |
     SKU,Start_Stock,Current_Stock
     Promo-Item,1000,45
+isPremium: false
 ---
 # Agent Configuration: The Campaign Ops
 

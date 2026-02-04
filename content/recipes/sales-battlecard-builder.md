@@ -16,6 +16,7 @@ sampleData:
     Vanta,https://vanta.com,Compliance Automation
     Drata,https://drata.com,Security Compliance
     Sprinto,https://sprinto.com,Compliance Software
+isPremium: true
 ---
 
 # Agent Configuration: The Sales Battlecard Builder

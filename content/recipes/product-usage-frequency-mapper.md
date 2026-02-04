@@ -14,6 +14,7 @@ sampleData:
     Alice,2023-10-01
     Alice,2023-10-02
     Bob,2023-10-01
+isPremium: true
 ---
 
 # Agent Configuration: The Community Manager

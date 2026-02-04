@@ -16,6 +16,7 @@ sampleData:
     TechGuys LLC,Reseller,2023-01-01,5
     Blog Affiliate,Referral,2023-05-01,50
     Consulting Inc,Reseller,2023-10-25,2
+isPremium: true
 ---
 
 # Agent Configuration: The Partner Activation Engine

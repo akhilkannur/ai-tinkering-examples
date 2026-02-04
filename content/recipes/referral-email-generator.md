@@ -16,6 +16,7 @@ sampleData:
     Target: Bob (CMO at BigCorp)
     Relationship: Alice and Bob worked together at Google.
     My Ask: Intro to pitch our analytics tool.
+isPremium: true
 ---
 
 # Agent Configuration: The Referral Request Writer

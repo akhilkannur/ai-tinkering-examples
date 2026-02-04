@@ -1,18 +1,22 @@
 ---
-id: "competitor-feature-parity"
-category: "Competitive Intel"
-title: "The Feature Gap Detective"
-tagline: "Don't guess what they have. Scrape their pricing page to prove it."
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Hybrid"
-description: "Manual feature matrices are always out of date. This agent visits competitor pricing and feature pages, scrapes the 'Included' lists, and organizes them into a comparison matrix to find what you are missing."
+id: competitor-feature-parity
+category: Competitive Intel
+title: The Feature Gap Detective
+tagline: Don't guess what they have. Scrape their pricing page to prove it.
+difficulty: Intermediate
+time: Monthly
+archetype: Hybrid
+description: >-
+  Manual feature matrices are always out of date. This agent visits competitor
+  pricing and feature pages, scrapes the 'Included' lists, and organizes them
+  into a comparison matrix to find what you are missing.
 sampleData:
-  filename: "competitor_urls.csv"
+  filename: competitor_urls.csv
   content: |
     Competitor,Pricing_Page_URL
     Competitor A,https://competitor-a.com/pricing
     Competitor B,https://competitor-b.com/features
+isPremium: false
 ---
 
 # Agent Configuration: The Product Spy

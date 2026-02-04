@@ -15,6 +15,7 @@ sampleData:
     Customer,Proposed_Price,Final_Price
     Acme,105,105
     Beta,105,100
+isPremium: true
 ---
 # Agent Configuration: The Pricing Manager
 

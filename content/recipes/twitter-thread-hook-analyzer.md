@@ -13,6 +13,7 @@ sampleData:
     Hook_Text,Impressions,Clicks
     I made $1M in 2 days...,10000,500
     Here is a thread about sales...,1000,10
+isPremium: true
 ---
 # Agent Configuration: The Copywriter Agent
 

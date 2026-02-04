@@ -7,15 +7,17 @@ difficulty: Advanced
 time: Weekly
 archetype: Researcher
 description: >-
-  Winning a government contract is a massive liquidity event. This agent monitors
-  USASpending.gov or similar feeds to identify companies that just won contracts
-  >$1M, signaling they have cash and massive compliance/delivery requirements.
+  Winning a government contract is a massive liquidity event. This agent
+  monitors USASpending.gov or similar feeds to identify companies that just won
+  contracts >$1M, signaling they have cash and massive compliance/delivery
+  requirements.
 sampleData:
   filename: contract_criteria.csv
   content: |
     Min_Award_Amount,Agency
     1000000,Department of Defense
     500000,NASA
+isPremium: true
 ---
 
 # Agent Configuration: The GovCon Winner

@@ -17,6 +17,7 @@ sampleData:
     Salesforce,CRM
     HubSpot,Marketing Automation
     Pipedrive,SMB CRM
+isPremium: true
 ---
 
 # Agent Configuration: The Competitor Battlecard Builder

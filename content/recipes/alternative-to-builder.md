@@ -17,6 +17,7 @@ sampleData:
     Salesforce,Enterprise CRM
     HubSpot,Marketing Automation
     Pipedrive,SMB Sales
+isPremium: false
 ---
 
 # Agent Configuration: The 'Alternative To' Hub Builder

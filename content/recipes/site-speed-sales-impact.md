@@ -1,19 +1,22 @@
 ---
-id: "site-speed-sales-impact"
-category: "CRO"
-title: "Speed vs Revenue Calc"
-tagline: "How much does a slow site cost you?"
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Correlates page load times with conversion rates to calculate revenue lost due to latency."
+id: site-speed-sales-impact
+category: CRO
+title: Speed vs Revenue Calc
+tagline: How much does a slow site cost you?
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Correlates page load times with conversion rates to calculate revenue lost due
+  to latency.
 sampleData:
-  filename: "speed_data.csv"
+  filename: speed_data.csv
   content: |
     Load_Time_Sec,Conversion_Rate,Traffic
     1,3.0,1000
     2,2.5,1000
     4,1.0,1000
+isPremium: true
 ---
 # Agent Configuration: The Technical Marketer
 

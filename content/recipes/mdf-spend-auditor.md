@@ -15,6 +15,7 @@ sampleData:
     Partner,Approved_Amt,Receipt_Amt
     Partner X,1000,950
     Partner Y,500,600
+isPremium: true
 ---
 
 # Agent Configuration: The Partner Finance

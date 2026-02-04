@@ -17,6 +17,7 @@ sampleData:
     Office_Name,Website
     Iconiq Capital,iconiqcapital.com
     Bezos Expeditions,bezosexpeditions.com
+isPremium: true
 ---
 
 # Agent Configuration: The Family Office Hunter

@@ -15,6 +15,7 @@ sampleData:
   filename: project_scan_simulation.txt
   content: |
     (No input file needed - this agent reads your actual file system)
+isPremium: false
 ---
 
 # Agent Configuration: The Project Architect

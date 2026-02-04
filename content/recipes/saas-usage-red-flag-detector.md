@@ -13,6 +13,7 @@ sampleData:
     Account,Licenses,Active_Users
     Acme,100,5
     Beta,10,9
+isPremium: true
 ---
 
 # Agent Configuration: The Churn Predictor

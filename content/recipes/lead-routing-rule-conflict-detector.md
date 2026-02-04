@@ -15,6 +15,7 @@ sampleData:
     Rule A: State=CA -> Rep 1
     Rule B: Industry=Tech -> Rep 2
     Test Lead: CA, Tech
+isPremium: true
 ---
 
 # Agent Configuration: The Systems Architect

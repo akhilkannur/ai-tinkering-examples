@@ -1,18 +1,21 @@
 ---
-id: "ad-copy-benchmarker"
-category: "Competitive Intel"
-title: "Ad Copy Pivot Detector"
-tagline: "Did they change their value prop?"
-difficulty: "Intermediate"
-time: "Weekly"
-archetype: "Processor"
-description: "Compares active competitor ad headlines week-over-week to detect strategic messaging shifts."
+id: ad-copy-benchmarker
+category: Competitive Intel
+title: Ad Copy Pivot Detector
+tagline: Did they change their value prop?
+difficulty: Intermediate
+time: Weekly
+archetype: Processor
+description: >-
+  Compares active competitor ad headlines week-over-week to detect strategic
+  messaging shifts.
 sampleData:
-  filename: "competitor_ads.csv"
+  filename: competitor_ads.csv
   content: |
     Competitor,Date,Headline
     Comp A,2023-10-01,Save time.
     Comp A,2023-10-08,Save money.
+isPremium: false
 ---
 
 # Agent Configuration: The Creative Strategist

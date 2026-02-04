@@ -8,14 +8,16 @@ time: 20 mins
 archetype: Researcher
 description: >-
   LinkedIn Groups are often dead, but the *members* are still highly qualified.
-  A user in a "Salesforce Architects" group has self-identified their skill/interest.
-  This agent scrapes the member list of a specific group to build a targeted list.
+  A user in a "Salesforce Architects" group has self-identified their
+  skill/interest. This agent scrapes the member list of a specific group to
+  build a targeted list.
 sampleData:
   filename: group_urls.csv
   content: |
     Group_URL,Niche
     https://www.linkedin.com/groups/12345/,Salesforce Admins
     https://www.linkedin.com/groups/67890/,SaaS Founders
+isPremium: true
 ---
 
 # Agent Configuration: The Niche Group Miner

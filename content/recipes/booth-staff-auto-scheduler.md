@@ -1,4 +1,4 @@
---- 
+---
 id: booth-staff-auto-scheduler
 category: Marketing Ops
 title: Booth Staff Auto-Scheduler
@@ -7,12 +7,14 @@ difficulty: Beginner
 time: Batch
 archetype: Processor
 description: >-
-  Takes team availability and conference hours. Generates a schedule ensuring senior staff are present during "Peak Traffic" hours.
+  Takes team availability and conference hours. Generates a schedule ensuring
+  senior staff are present during "Peak Traffic" hours.
 sampleData:
   filename: input_data.csv
   content: |
     Staff_Name,Role,Availability
     John,Sales,All Day
+isPremium: false
 ---
 
 # Agent Configuration: Booth Staff Auto-Scheduler

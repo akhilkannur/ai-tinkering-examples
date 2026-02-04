@@ -1,4 +1,4 @@
---- 
+---
 id: saas-seat-utilization-nudge
 category: Customer Success
 title: Seat Utilization Nudge
@@ -7,12 +7,14 @@ difficulty: Intermediate
 time: Batch
 archetype: Processor
 description: >-
-  Finds accounts with <50% seat utilization. Drafts a helpful email to the admin offering to help onboard more users (or downgrade to save churn).
+  Finds accounts with <50% seat utilization. Drafts a helpful email to the admin
+  offering to help onboard more users (or downgrade to save churn).
 sampleData:
   filename: input_data.csv
   content: |
     Account_ID,Seats_Purchased,Active_Users
     Acc1,10,2
+isPremium: true
 ---
 
 # Agent Configuration: Seat Utilization Nudge

@@ -1,4 +1,4 @@
---- 
+---
 id: gmaps-photo-auditor
 category: SEO
 title: G-Maps Photo Quality Auditor
@@ -7,12 +7,14 @@ difficulty: Intermediate
 time: Batch
 archetype: Researcher
 description: >-
-  Scans user-uploaded photos on your Google Maps listing. Flags "Blurry", "Competitor Products", or "Irrelevant" (like selfies) for removal requests.
+  Scans user-uploaded photos on your Google Maps listing. Flags "Blurry",
+  "Competitor Products", or "Irrelevant" (like selfies) for removal requests.
 sampleData:
   filename: input_data.csv
   content: |
     Location_ID,Photo_URL
     Loc1,https://lh3.../photo.jpg
+isPremium: true
 ---
 
 # Agent Configuration: G-Maps Photo Quality Auditor

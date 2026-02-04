@@ -1,18 +1,21 @@
 ---
-id: "product-page-traffic-sales"
-category: "CRO"
-title: "PDP Performance Auditor"
-tagline: "High traffic, no sales?"
-difficulty: "Intermediate"
-time: "Weekly"
-archetype: "Processor"
-description: "Compares 'Page Views' to 'Add to Carts' to find underperforming product detail pages (PDPs)."
+id: product-page-traffic-sales
+category: CRO
+title: PDP Performance Auditor
+tagline: 'High traffic, no sales?'
+difficulty: Intermediate
+time: Weekly
+archetype: Processor
+description: >-
+  Compares 'Page Views' to 'Add to Carts' to find underperforming product detail
+  pages (PDPs).
 sampleData:
-  filename: "pdp_stats.csv"
+  filename: pdp_stats.csv
   content: |
     Page,Views,ATC_Count
     /prod-a,1000,50
     /prod-b,5000,10
+isPremium: true
 ---
 # Agent Configuration: The CRO Specialist
 

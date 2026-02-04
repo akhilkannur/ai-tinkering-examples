@@ -14,6 +14,7 @@ sampleData:
   content: |
     Deal_ID,Total_Amt,Source_P,Impl_P
     Deal-1,10000,Partner A,Partner B
+isPremium: true
 ---
 
 # Agent Configuration: The Partner Analyst

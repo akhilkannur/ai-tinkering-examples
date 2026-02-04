@@ -15,6 +15,7 @@ sampleData:
     Customer,Initial_Discount_Pct,Total_LTV
     Acme,0,50000
     Beta,30,10000
+isPremium: true
 ---
 
 # Agent Configuration: The Revenue Strategy Agent

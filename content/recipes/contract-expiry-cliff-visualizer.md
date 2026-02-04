@@ -16,6 +16,7 @@ sampleData:
     Acme,100000,Jan
     Beta,50000,Jan
     Gamma,20000,Feb
+isPremium: true
 ---
 
 # Agent Configuration: The Strategic Planning Lead

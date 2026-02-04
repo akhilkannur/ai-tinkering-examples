@@ -16,6 +16,7 @@ sampleData:
     John,Running
     John,Running
     Jane,Swimming
+isPremium: false
 ---
 # Agent Configuration: The CRM Manager
 

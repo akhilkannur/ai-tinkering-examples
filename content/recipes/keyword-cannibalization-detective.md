@@ -9,7 +9,8 @@ archetype: Processor
 description: >-
   When two pages rank for the same keyword, Google gets confused. This agent
   analyzes your GSC data, finds the conflict, and uses a logic matrix (CTR vs.
-  Commercial Intent) to decide which page should stay and which should be redirected.
+  Commercial Intent) to decide which page should stay and which should be
+  redirected.
 sampleData:
   filename: gsc_query_data.csv
   content: |

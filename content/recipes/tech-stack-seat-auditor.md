@@ -16,6 +16,7 @@ sampleData:
     Dave, John, Sarah
     [Licensed Users]
     Dave, John, Sarah, Bill
+isPremium: true
 ---
 
 # Agent Configuration: The Revenue Systems Manager

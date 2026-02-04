@@ -1,19 +1,22 @@
 ---
-id: "discount-variance-by-region"
-category: "Sales Ops"
-title: "Regional Discount Auditor"
-tagline: "Find territories discounting more than the average."
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Calculates average discount rates by region to identify outliers and margin erosion."
+id: discount-variance-by-region
+category: Sales Ops
+title: Regional Discount Auditor
+tagline: Find territories discounting more than the average.
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Calculates average discount rates by region to identify outliers and margin
+  erosion.
 sampleData:
-  filename: "closed_deals.csv"
+  filename: closed_deals.csv
   content: |
     Deal,Region,Amount,Discount_Pct
     Deal 1,EMEA,10000,5
     Deal 2,EMEA,5000,25
     Deal 3,APAC,8000,10
+isPremium: true
 ---
 
 # Agent Configuration: The Pricing Auditor

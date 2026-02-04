@@ -1,4 +1,4 @@
---- 
+---
 id: commission-payout-calculator
 category: Sales Ops
 title: The Comp Plan Simulator
@@ -18,6 +18,7 @@ sampleData:
     Rep A,150000,100000
     Rep B,80000,100000
     Rep C,200000,100000
+isPremium: true
 ---
 
 # Agent Configuration: The Comp Analyst

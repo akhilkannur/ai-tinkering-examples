@@ -1,19 +1,23 @@
 ---
-id: "webinar-to-meeting-velocity"
-category: "Sales Ops"
-title: "The Event ROI Analyst"
-tagline: "Don't just count attendees. Segment them by Job Title to find the VIPs."
-difficulty: "Intermediate"
-time: "Weekly"
-archetype: "Processor"
-description: "High attendance vanity metrics can hide low revenue impact. This agent segments your attendee list by Job Title (VIP vs. User) and tracks exactly which segment is booking meetings."
+id: webinar-to-meeting-velocity
+category: Sales Ops
+title: The Event ROI Analyst
+tagline: Don't just count attendees. Segment them by Job Title to find the VIPs.
+difficulty: Intermediate
+time: Weekly
+archetype: Processor
+description: >-
+  High attendance vanity metrics can hide low revenue impact. This agent
+  segments your attendee list by Job Title (VIP vs. User) and tracks exactly
+  which segment is booking meetings.
 sampleData:
-  filename: "event_data.csv"
+  filename: event_data.csv
   content: |
     Name,Company,Job_Title,Attended,Booked_Meeting
     John Doe,Acme,VP Sales,Yes,No
     Jane Smith,Beta,Marketing Manager,Yes,Yes
     Mike Ross,Stark Ind,Director of Ops,Yes,Yes
+isPremium: true
 ---
 
 # Agent Configuration: The Event ROI Analyst

@@ -28,6 +28,7 @@ sampleData:
     Brick & Mortar Ventures,Construction Tech,Seed
 
     SaaStr Fund,B2B SaaS,Seed
+isPremium: true
 ---
 
 # Agent Configuration: The Investor Thesis Matcher

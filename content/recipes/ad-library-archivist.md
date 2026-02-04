@@ -16,6 +16,7 @@ sampleData:
     Competitor,Ad_URL,Angle
     Competitor_A,https://fb.com/ads/123,UGC
     Competitor_B,https://fb.com/ads/456,Discount
+isPremium: false
 ---
 
 # Agent Configuration: The Ad Library Archivist

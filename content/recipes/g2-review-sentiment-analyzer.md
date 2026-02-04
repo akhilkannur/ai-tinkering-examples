@@ -16,6 +16,7 @@ sampleData:
     Product: Asana
     Source: https://www.g2.com/products/asana/reviews
     Source: https://www.capterra.com/p/120537/Asana/reviews
+isPremium: true
 ---
 
 # Agent Configuration: The Voice of Customer Analyzer

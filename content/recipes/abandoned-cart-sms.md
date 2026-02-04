@@ -16,6 +16,7 @@ sampleData:
     Customer_Name,Product_URL
     John Doe,https://realaiexamples.com/tools/copywriting
     Jane Smith,https://realaiexamples.com/
+isPremium: false
 ---
 
 # Agent Configuration: The eCommerce Copywriter

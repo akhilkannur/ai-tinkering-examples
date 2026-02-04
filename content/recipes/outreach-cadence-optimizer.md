@@ -1,18 +1,21 @@
 ---
-id: "outreach-cadence-optimizer"
-category: "Sales Ops"
-title: "Outreach Cadence Tuner"
-tagline: "Find the best day to send emails."
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Analyzes email response rates by 'Day of Week' and 'Time of Day' to optimize sequence scheduling."
+id: outreach-cadence-optimizer
+category: Sales Ops
+title: Outreach Cadence Tuner
+tagline: Find the best day to send emails.
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Analyzes email response rates by 'Day of Week' and 'Time of Day' to optimize
+  sequence scheduling.
 sampleData:
-  filename: "outreach_logs.csv"
+  filename: outreach_logs.csv
   content: |
     Day,Time_Block,Sent,Replies
     Mon,AM,100,2
     Tue,PM,100,8
+isPremium: true
 ---
 
 # Agent Configuration: The SDR Manager

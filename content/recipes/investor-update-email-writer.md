@@ -19,6 +19,7 @@ sampleData:
     Wins: Hired new CTO, Closed Acme Corp.
     Lows: Lost Beta Client, Server outage.
     Needs: Intro to Series A leads.
+isPremium: true
 ---
 
 # Agent Configuration: The Investor Update Writer

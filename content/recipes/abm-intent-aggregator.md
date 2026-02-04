@@ -1,14 +1,16 @@
---- 
-id: "abm-intent-aggregator"
-category: "Marketing Ops"
-title: "Intent Signal Aggregator"
-tagline: "Combine G2, 6sense, and Website visits."
-difficulty: "Advanced"
-time: "Daily"
-archtype: "Processor"
-description: "Aggregates multiple intent data sources into a single account-level 'Heat Score'."
+---
+id: abm-intent-aggregator
+category: Marketing Ops
+title: Intent Signal Aggregator
+tagline: 'Combine G2, 6sense, and Website visits.'
+difficulty: Advanced
+time: Daily
+archtype: Processor
+description: >-
+  Aggregates multiple intent data sources into a single account-level 'Heat
+  Score'.
 sampleData:
-  filename: "intent_sources.txt"
+  filename: intent_sources.txt
   content: |
     [G2]
     acme.com, competitor comparison
@@ -16,6 +18,7 @@ sampleData:
     acme.com, pricing page
     [6sense]
     beta.io, high intent
+isPremium: false
 ---
 
 # Agent Configuration: The ABM Analyst

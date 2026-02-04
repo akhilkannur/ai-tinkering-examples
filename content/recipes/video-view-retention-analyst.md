@@ -1,19 +1,22 @@
 ---
-id: "video-view-retention-analyst"
-category: "Marketing Ops"
-title: "Video Drop-off Auditor"
-tagline: "Where do they stop watching?"
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Analyzes drop-off timestamps in product demo videos to identify boring sections."
+id: video-view-retention-analyst
+category: Marketing Ops
+title: Video Drop-off Auditor
+tagline: Where do they stop watching?
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Analyzes drop-off timestamps in product demo videos to identify boring
+  sections.
 sampleData:
-  filename: "video_stats.csv"
+  filename: video_stats.csv
   content: |
     Video,Second,Retention_Pct
     Demo_v1,0,100
     Demo_v1,30,80
     Demo_v1,60,20
+isPremium: true
 ---
 
 # Agent Configuration: The Content Producer

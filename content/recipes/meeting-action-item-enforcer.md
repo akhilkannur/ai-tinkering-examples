@@ -1,4 +1,4 @@
---- 
+---
 id: meeting-action-item-enforcer
 category: Strategic Ops
 title: Meeting Action Item Enforcer
@@ -7,12 +7,14 @@ difficulty: Intermediate
 time: Batch
 archetype: Processor
 description: >-
-  Parses meeting transcripts for "I will..." or "Let's...". Creates a checklist. If the task isn't marked done in the next meeting, it flags it.
+  Parses meeting transcripts for "I will..." or "Let's...". Creates a checklist.
+  If the task isn't marked done in the next meeting, it flags it.
 sampleData:
   filename: input_data.csv
   content: |
     Meeting_Date,Transcript_Snippet
     Oct 1,"I will fix the bug by Friday"
+isPremium: true
 ---
 
 # Agent Configuration: Meeting Action Item Enforcer

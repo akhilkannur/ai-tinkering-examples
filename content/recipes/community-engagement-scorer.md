@@ -15,6 +15,7 @@ sampleData:
     User,Posts,Replies,Likes_Received
     UserA,10,50,100
     UserB,0,0,0
+isPremium: true
 ---
 # Agent Configuration: The Community Manager
 

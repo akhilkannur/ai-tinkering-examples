@@ -16,6 +16,7 @@ sampleData:
     Reseller A,120000,Silver
     Reseller B,45000,Silver
     Reseller C,250000,Gold
+isPremium: true
 ---
 
 # Agent Configuration: The Channel Manager

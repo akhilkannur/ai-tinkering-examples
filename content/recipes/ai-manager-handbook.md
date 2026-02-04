@@ -14,6 +14,7 @@ tags:
 description: >-
   Stop repeating yourself. Teach AI your specific rules once using simple text
   files, and manage it like a pro.
+isPremium: false
 ---
 
 # Agent Configuration: The AI Manager's Handbook

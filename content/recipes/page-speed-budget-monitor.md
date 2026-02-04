@@ -16,6 +16,7 @@ sampleData:
     /home,1.2
     /blog/giant-images,4.5
     /pricing,2.0
+isPremium: true
 ---
 
 # Agent Configuration: The Performance Engineer

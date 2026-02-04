@@ -11,11 +11,16 @@ description: >-
   posts.
 sampleData:
   filename: social_posts.csv
-  content: |
+  content: >
     Post_ID,Post_Text,Likes,Comments,Shares,Followers
-    101,"Stop doing cold calls. Here is why social selling works better...",50,45,10,1000
+
+    101,"Stop doing cold calls. Here is why social selling works
+    better...",50,45,10,1000
+
     102,"Happy Monday everyone! Have a great week.",200,2,0,1000
+
     103,"Does anyone else hate Salesforce? Unpopular opinion...",30,60,15,1000
+isPremium: true
 ---
 
 # Agent Configuration: The Viral Hook Analyst

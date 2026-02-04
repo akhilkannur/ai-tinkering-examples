@@ -15,6 +15,7 @@ sampleData:
     Customer,Cart_Total,Email
     John,1200,john@acme.com
     Jane,25,jane@beta.com
+isPremium: false
 ---
 # Agent Configuration: The Conversion Specialist
 

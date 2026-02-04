@@ -17,6 +17,7 @@ sampleData:
     SaaStr Annual,10x10,San Francisco
     CES,20x20,Las Vegas
     Web Summit,10x10,Lisbon
+isPremium: true
 ---
 
 # Agent Configuration: The Event Booth Strategist

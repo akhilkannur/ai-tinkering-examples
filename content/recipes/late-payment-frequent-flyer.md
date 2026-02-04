@@ -16,6 +16,7 @@ sampleData:
     Acme,101,45
     Acme,102,30
     Beta,103,0
+isPremium: true
 ---
 # Agent Configuration: The Collections Agent
 

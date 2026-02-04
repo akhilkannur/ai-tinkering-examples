@@ -1,18 +1,21 @@
 ---
-id: "mobile-desktop-conversion-audit"
-category: "CRO"
-title: "Device Conversion Gap"
-tagline: "Is your mobile site killing sales?"
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Compares conversion rates between Mobile and Desktop traffic to identify responsive design issues."
+id: mobile-desktop-conversion-audit
+category: CRO
+title: Device Conversion Gap
+tagline: Is your mobile site killing sales?
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Compares conversion rates between Mobile and Desktop traffic to identify
+  responsive design issues.
 sampleData:
-  filename: "device_stats.csv"
+  filename: device_stats.csv
   content: |
     Page,Mobile_CR,Desktop_CR
     Home,2.0,2.5
     Product_A,0.5,3.0
+isPremium: true
 ---
 # Agent Configuration: The Mobile UX Specialist
 

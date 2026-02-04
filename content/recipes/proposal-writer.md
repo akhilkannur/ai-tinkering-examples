@@ -16,6 +16,7 @@ sampleData:
     Acme Corp,Low website conversion,Double trial signups,Enterprise
     Glow Skincare,High CAC on Meta,Sub-$20 customer acquisition,Growth
     TechFlow SaaS,Manual sales onboarding,Automate 80% of setup,Mid-Market
+isPremium: true
 ---
 
 # Agent Configuration: The High-Ticket Proposal Writer

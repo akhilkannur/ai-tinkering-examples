@@ -16,6 +16,7 @@ sampleData:
     Agency_URL
     https://pentagram.com/work
     https://clay.global/work
+isPremium: true
 ---
 
 # Agent Configuration: The Portfolio Reverse Engineer

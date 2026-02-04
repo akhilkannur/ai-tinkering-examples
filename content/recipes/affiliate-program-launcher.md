@@ -17,6 +17,7 @@ sampleData:
     SaasReviewer,Tech Reviews,https://saasreviewer.com
     MarketingWeekly,Newsletter,https://marketingweekly.io
     GrowthHackers,Community,https://growthhackers.com
+isPremium: false
 ---
 
 # Agent Configuration: The Affiliate Program Launcher

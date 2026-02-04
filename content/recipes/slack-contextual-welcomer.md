@@ -1,4 +1,4 @@
---- 
+---
 id: slack-contextual-welcomer
 category: Strategic Ops
 title: Slack Community Contextual Welcomer
@@ -7,12 +7,14 @@ difficulty: Beginner
 time: Real-time
 archetype: Processor
 description: >-
-  Reads the "Intro" channel. If they say "I'm a marketer", reply with link to #marketing channel. If "Dev", link to #api.
+  Reads the "Intro" channel. If they say "I'm a marketer", reply with link to
+  #marketing channel. If "Dev", link to #api.
 sampleData:
   filename: input_data.csv
   content: |
     User_Intro,Channels
     "Hi I am a dev...",#general
+isPremium: true
 ---
 
 # Agent Configuration: Slack Community Contextual Welcomer

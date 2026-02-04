@@ -1,19 +1,22 @@
 ---
-id: "nurture-path-performance-bot"
-category: "Marketing Ops"
-title: "Nurture Path Auditor"
-tagline: "Compare conversion rates of different nurture sequences."
-difficulty: "Advanced"
-time: "Monthly"
-archetype: "Processor"
-description: "Compares the path-to-MQL conversion rate for different automated nurture flows."
+id: nurture-path-performance-bot
+category: Marketing Ops
+title: Nurture Path Auditor
+tagline: Compare conversion rates of different nurture sequences.
+difficulty: Advanced
+time: Monthly
+archetype: Processor
+description: >-
+  Compares the path-to-MQL conversion rate for different automated nurture
+  flows.
 sampleData:
-  filename: "nurture_data.csv"
+  filename: nurture_data.csv
   content: |
     User,Sequence,Status
     1,Path A,MQL
     2,Path A,Leaking
     3,Path B,MQL
+isPremium: true
 ---
 
 # Agent Configuration: The Growth Specialist Agent

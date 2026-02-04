@@ -1,18 +1,21 @@
 ---
-id: "review-sentiment-analyzer"
-category: "CRO"
-title: "Review Sentiment Correlation"
-tagline: "Do bad reviews tank conversion?"
-difficulty: "Advanced"
-time: "Monthly"
-archetype: "Processor"
-description: "Correlates 'Negative Review Count' with 'Conversion Rate Drops' on a PDP level to quantify the cost of bad feedback."
+id: review-sentiment-analyzer
+category: CRO
+title: Review Sentiment Correlation
+tagline: Do bad reviews tank conversion?
+difficulty: Advanced
+time: Monthly
+archetype: Processor
+description: >-
+  Correlates 'Negative Review Count' with 'Conversion Rate Drops' on a PDP level
+  to quantify the cost of bad feedback.
 sampleData:
-  filename: "pdp_reviews.csv"
+  filename: pdp_reviews.csv
   content: |
     Page,Negative_Reviews,Conversion_Rate
     /prod-1,5,1.2
     /prod-2,0,3.5
+isPremium: true
 ---
 # Agent Configuration: The Reputation Manager
 

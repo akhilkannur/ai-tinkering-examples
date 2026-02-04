@@ -16,6 +16,7 @@ sampleData:
     Competitor_Name,Review_Site_URL
     Salesforce,https://www.g2.com/products/salesforce-crm/reviews
     HubSpot,https://www.capterra.com/p/152373/HubSpot-Marketing-Hub/
+isPremium: false
 ---
 
 # Agent Configuration: The Competitor Poacher

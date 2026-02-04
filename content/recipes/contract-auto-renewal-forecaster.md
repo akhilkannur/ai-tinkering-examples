@@ -15,6 +15,7 @@ sampleData:
     Account,ARR,Renewal_Type
     Acme,10000,Auto
     Beta,50000,Manual
+isPremium: true
 ---
 
 # Agent Configuration: The Revenue Defense System

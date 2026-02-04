@@ -1,18 +1,22 @@
 ---
-id: "influencer-coupon-usage-tracker"
-category: "Paid Media"
-title: "The Channel Efficiency Analyst"
-tagline: "Know exactly when to double down or cut the cord."
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "CPA is the only metric that matters. This agent compares your influencer costs against code redemptions and your 'Target CPA' to automatically flag which partners are scaling your business and which are burning cash."
+id: influencer-coupon-usage-tracker
+category: Paid Media
+title: The Channel Efficiency Analyst
+tagline: Know exactly when to double down or cut the cord.
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  CPA is the only metric that matters. This agent compares your influencer costs
+  against code redemptions and your 'Target CPA' to automatically flag which
+  partners are scaling your business and which are burning cash.
 sampleData:
-  filename: "partner_performance.csv"
+  filename: partner_performance.csv
   content: |
     Partner,Fee,Redemptions,Target_CPA
     Alice,1000,50,30
     Bob,1000,10,30
+isPremium: true
 ---
 # Agent Configuration: The Performance Marketer
 

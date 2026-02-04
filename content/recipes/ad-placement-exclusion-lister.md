@@ -1,19 +1,22 @@
---- 
-id: "ad-placement-exclusion-lister"
-category: "Paid Media"
-title: "Ad Waste Excluder"
-tagline: "Block mobile apps and kids' channels."
-difficulty: "Intermediate"
-time: "Weekly"
-archtype: "Processor"
-description: "Filters a placement report to find URLs containing 'game', 'puzzle', or 'mobile' to add to your exclusion list."
+---
+id: ad-placement-exclusion-lister
+category: Paid Media
+title: Ad Waste Excluder
+tagline: Block mobile apps and kids' channels.
+difficulty: Intermediate
+time: Weekly
+archtype: Processor
+description: >-
+  Filters a placement report to find URLs containing 'game', 'puzzle', or
+  'mobile' to add to your exclusion list.
 sampleData:
-  filename: "placements.csv"
+  filename: placements.csv
   content: |
     Placement,Impressions,Clicks
     nytimes.com,1000,10
     candycrush.saga,5000,0
     math-games.net,200,1
+isPremium: false
 ---
 
 # Agent Configuration: The PPC Optimizer

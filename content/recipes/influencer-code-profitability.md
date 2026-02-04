@@ -15,6 +15,7 @@ sampleData:
     Influencer,Rev,Comm,Disc,COGS
     Alice,1000,100,200,400
     Bob,500,100,50,400
+isPremium: true
 ---
 
 # Agent Configuration: The Partnership Manager

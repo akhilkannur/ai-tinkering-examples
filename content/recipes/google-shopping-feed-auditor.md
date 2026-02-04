@@ -1,18 +1,21 @@
 ---
-id: "google-shopping-feed-auditor"
-category: "Paid Media"
-title: "Merchant Center Auditor"
-tagline: "Find missing GTINs or images."
-difficulty: "Beginner"
-time: "Weekly"
-archetype: "Processor"
-description: "Audits your Google Shopping product feed to identify items missing critical attributes like GTIN, Image Link, or Price."
+id: google-shopping-feed-auditor
+category: Paid Media
+title: Merchant Center Auditor
+tagline: Find missing GTINs or images.
+difficulty: Beginner
+time: Weekly
+archetype: Processor
+description: >-
+  Audits your Google Shopping product feed to identify items missing critical
+  attributes like GTIN, Image Link, or Price.
 sampleData:
-  filename: "product_feed.csv"
+  filename: product_feed.csv
   content: |
     SKU,GTIN,Image_Link
     123,8888,http://img
     456,NULL,http://img
+isPremium: true
 ---
 # Agent Configuration: The Feed Specialist
 

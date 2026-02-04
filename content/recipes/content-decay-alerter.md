@@ -17,7 +17,7 @@ sampleData:
     /blog/ultimate-guide,5000,5500
     /blog/old-post,100,200
     /blog/new-post,1000,500
-isPremium: true
+isPremium: false
 ---
 
 # Agent Configuration: The Traffic Controller

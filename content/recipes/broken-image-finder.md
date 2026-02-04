@@ -13,6 +13,7 @@ sampleData:
     Image_URL,Status
     img1.jpg,200
     img2.png,404
+isPremium: false
 ---
 
 # Agent Configuration: The SEO Site Health Guardian

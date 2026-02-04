@@ -15,6 +15,7 @@ sampleData:
     Name,Company,State
     John,Acme,CA
     Jane,Beta,NY
+isPremium: true
 ---
 # Agent Configuration: The Event Ops Specialist
 

@@ -1,19 +1,22 @@
 ---
-id: "account-hierarchy-builder"
-category: "Sales Ops"
-title: "Corporate Hierarchy Builder"
-tagline: "Link subsidiaries to parents based on domain patterns."
-difficulty: "Advanced"
-time: "Monthly"
-archetype: "Processor"
-description: "Groups separate account records into a parent-child hierarchy based on shared domain and corporate suffix patterns."
+id: account-hierarchy-builder
+category: Sales Ops
+title: Corporate Hierarchy Builder
+tagline: Link subsidiaries to parents based on domain patterns.
+difficulty: Advanced
+time: Monthly
+archetype: Processor
+description: >-
+  Groups separate account records into a parent-child hierarchy based on shared
+  domain and corporate suffix patterns.
 sampleData:
-  filename: "accounts.csv"
+  filename: accounts.csv
   content: |
     Account,Domain
     Google,google.com
     Google UK,google.com
     DeepMind,deepmind.com
+isPremium: false
 ---
 
 # Agent Configuration: The Data Architect Agent

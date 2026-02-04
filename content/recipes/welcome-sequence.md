@@ -16,6 +16,7 @@ sampleData:
     Agency Owner,Sending first report,Profitable projects
     SaaS Founder,Installing the tag,Churn reduction
     E-com Manager,Adding first product,Increase AOV
+isPremium: true
 ---
 
 # Agent Configuration: The Onboarding Factory

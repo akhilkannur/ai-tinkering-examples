@@ -16,6 +16,7 @@ sampleData:
     Domain,Region
     shop-paris.com,EU
     california-tech.io,US-CA
+isPremium: true
 ---
 
 # Agent Configuration: The Compliance Cop

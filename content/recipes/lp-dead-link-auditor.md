@@ -1,18 +1,21 @@
---- 
-id: "lp-dead-link-auditor"
-category: "Marketing Ops"
-title: "LP Link Auditor"
-tagline: "Ensure your paid traffic doesn't hit 404s."
-difficulty: "Intermediate"
-time: "Weekly"
-archtype: "Processor"
-description: "Checks all button destination URLs on your landing pages to ensure they are live and correctly tagged."
+---
+id: lp-dead-link-auditor
+category: Marketing Ops
+title: LP Link Auditor
+tagline: Ensure your paid traffic doesn't hit 404s.
+difficulty: Intermediate
+time: Weekly
+archtype: Processor
+description: >-
+  Checks all button destination URLs on your landing pages to ensure they are
+  live and correctly tagged.
 sampleData:
-  filename: "lp_links.csv"
+  filename: lp_links.csv
   content: |
     Page,Button_Text,Target_URL
     /promo-1,Sign Up,https://app.com/reg
     /promo-1,Help,https://docs.com/404
+isPremium: true
 ---
 
 # Agent Configuration: The Web Ops

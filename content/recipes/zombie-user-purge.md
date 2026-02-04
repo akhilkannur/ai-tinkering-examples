@@ -15,6 +15,7 @@ sampleData:
     User,Last_Login,Plan
     John,2022-01-01,Free
     Jane,2023-10-01,Free
+isPremium: true
 ---
 # Agent Configuration: The Database Cost Optimizer
 

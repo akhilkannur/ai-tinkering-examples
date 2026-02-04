@@ -9,13 +9,15 @@ archetype: Hybrid
 description: >-
   Colors aren't just aesthetic; they are emotional triggers. This agent scans
   your logo, extracts the dominant hex codes, and maps them to psychological
-  archetypes (e.g., Blue=Trust) to generate a scientifically aligned Brand Guide.
+  archetypes (e.g., Blue=Trust) to generate a scientifically aligned Brand
+  Guide.
 sampleData:
   filename: logos.csv
   content: |
     Brand,Logo_Path
     BankCo,assets/bankco.png
     Foodie,assets/burger.png
+isPremium: true
 ---
 
 # Agent Configuration: The Brand Scientist

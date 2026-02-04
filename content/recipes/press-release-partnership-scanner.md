@@ -9,8 +9,8 @@ archetype: Researcher
 description: >-
   When Company A partners with Company B, they are both in "Growth/BD Mode."
   This agent scans PR wires (BusinessWire, PRNewswire) for headlines containing
-  "Partner," "Collaboration," or "Integration" to find companies actively building
-  their ecosystem.
+  "Partner," "Collaboration," or "Integration" to find companies actively
+  building their ecosystem.
 sampleData:
   filename: pr_keywords.csv
   content: |
@@ -18,6 +18,7 @@ sampleData:
     "strategic partnership"
     "announces integration with"
     "joins partner program"
+isPremium: true
 ---
 
 # Agent Configuration: The Partnership Announcement Alert

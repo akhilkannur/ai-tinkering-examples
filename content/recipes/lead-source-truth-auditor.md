@@ -1,18 +1,21 @@
 ---
-id: "lead-source-truth-auditor"
-category: "Marketing Ops"
-title: "Attribution Truth Checker"
-tagline: "UTM vs Self-Reported: Who is lying?"
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Compares 'Self-Reported Source' (How did you hear about us?) vs 'UTM Source' to find discrepancies (e.g. Dark Social)."
+id: lead-source-truth-auditor
+category: Marketing Ops
+title: Attribution Truth Checker
+tagline: 'UTM vs Self-Reported: Who is lying?'
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Compares 'Self-Reported Source' (How did you hear about us?) vs 'UTM Source'
+  to find discrepancies (e.g. Dark Social).
 sampleData:
-  filename: "source_audit.csv"
+  filename: source_audit.csv
   content: |
     Lead,UTM_Source,Self_Reported
     1,Google,Podcast
     2,LinkedIn,LinkedIn
+isPremium: true
 ---
 
 # Agent Configuration: The Attribution Analyst

@@ -19,6 +19,7 @@ sampleData:
     /staging
 
     Sitemap: https://example.com/sitemap.xml
+isPremium: true
 ---
 
 # Agent Configuration: The robots.txt Rules Architect

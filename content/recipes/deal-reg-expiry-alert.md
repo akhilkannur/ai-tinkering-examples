@@ -16,6 +16,7 @@ sampleData:
     Reseller A,Tesla HQ,2023-08-01,50000,2023-10-25
     Reseller B,SpaceX Mars,2023-05-01,100000,2023-06-01
     Reseller C,Startup Inc,2023-10-15,5000,2023-10-20
+isPremium: true
 ---
 
 # Agent Configuration: The Partner Revenue Defender

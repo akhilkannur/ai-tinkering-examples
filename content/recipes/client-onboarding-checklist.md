@@ -8,8 +8,8 @@ time: Weekly
 archetype: Processor
 description: >-
   New clients ghosting during setup is the #1 cause of early churn. This agent
-  analyzes your onboarding logs, calculates the "Time in Stage" for every client,
-  and flags the ones who are stalling before they ask for a refund.
+  analyzes your onboarding logs, calculates the "Time in Stage" for every
+  client, and flags the ones who are stalling before they ask for a refund.
 sampleData:
   filename: onboarding_logs.csv
   content: |
@@ -17,6 +17,7 @@ sampleData:
     Acme Corp,2024-01-01,Technical Integration,2024-01-05,3
     SlowCo,2023-12-15,User Training,2023-12-20,5
     FastBiz,2024-01-10,Go Live,2024-01-12,1
+isPremium: true
 ---
 
 # Agent Configuration: The Implementation Manager

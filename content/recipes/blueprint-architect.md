@@ -19,6 +19,7 @@ sampleData:
     Input: A CSV with Campaign Name, Spend, and Frequency.
 
     Output: A list of 'Fatigued' campaigns and a suggested budget cut.
+isPremium: true
 ---
 
 # Agent Configuration: The Blueprint Architect

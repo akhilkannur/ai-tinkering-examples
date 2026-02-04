@@ -1,18 +1,21 @@
---- 
-id: "lead-response-time-auditor"
-category: "Sales Ops"
-title: "Speed-to-Lead Auditor"
-tagline: "Calculate time to first touch for every lead."
-difficulty: "Beginner"
-time: "Daily"
-archtype: "Processor"
-description: "Measures the gap between 'Lead Created' and 'First Activity' to ensure reps are hitting 5-minute targets."
+---
+id: lead-response-time-auditor
+category: Sales Ops
+title: Speed-to-Lead Auditor
+tagline: Calculate time to first touch for every lead.
+difficulty: Beginner
+time: Daily
+archtype: Processor
+description: >-
+  Measures the gap between 'Lead Created' and 'First Activity' to ensure reps
+  are hitting 5-minute targets.
 sampleData:
-  filename: "lead_latency.csv"
+  filename: lead_latency.csv
   content: |
     Lead_ID,Created_At,First_Touch_At
     L-1,10:00,10:04
     L-2,10:00,11:30
+isPremium: true
 ---
 
 # Agent Configuration: The SDR Manager

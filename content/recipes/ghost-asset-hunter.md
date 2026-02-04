@@ -10,8 +10,8 @@ isPremium: true
 description: >-
   Generic personalization ('I saw you went to X University') is dead. This agent
   builds deep Account Intelligence dossiers by hunting for specific 'Ghost
-  Assets' - CEO podcast transcripts, 10-K risk factors, or recent webinar
-  slides - to give you a killer Point of View for Enterprise sales.
+  Assets' - CEO podcast transcripts, 10-K risk factors, or recent webinar slides
+  - to give you a killer Point of View for Enterprise sales.
 sampleData:
   filename: target_accounts.csv
   content: |

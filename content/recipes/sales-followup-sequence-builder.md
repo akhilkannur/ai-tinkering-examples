@@ -15,6 +15,7 @@ sampleData:
     Prospect: John at Acme
     Last Interaction: Demo on Tuesday.
     Stalled: No reply to proposal sent Wednesday.
+isPremium: true
 ---
 
 # Agent Configuration: The Ghost-Busting Follow-Up

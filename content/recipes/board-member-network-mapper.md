@@ -7,14 +7,16 @@ difficulty: Advanced
 time: 25 mins
 archetype: Researcher
 description: >-
-  Board members often sit on multiple boards. This agent maps the web of connections 
-  between your investors/board and target accounts, identifying high-level "side door" entry points.
+  Board members often sit on multiple boards. This agent maps the web of
+  connections  between your investors/board and target accounts, identifying
+  high-level "side door" entry points.
 sampleData:
   filename: board_connections.csv
   content: |
     Your_Board_Member,Target_Company
     Marc Andreessen,Uber
     Bill Gurley,Coinbase
+isPremium: false
 ---
 
 # Agent Configuration: The Board Room Infiltrator

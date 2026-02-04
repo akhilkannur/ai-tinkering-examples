@@ -17,6 +17,7 @@ sampleData:
     Calm,Health & Fitness,Meditation
     Duolingo,Education,Language Learning
     Notion,Productivity,Note Taking
+isPremium: false
 ---
 
 # Agent Configuration: The App Store Screenshot Optimizer

@@ -16,6 +16,7 @@ sampleData:
     Acme Corp,Manufacturing,500,Salesforce,VP Sales
     Beta Inc,SaaS,20,HubSpot,Founder
     Gamma LLC,Consulting,5,Excel,Owner
+isPremium: true
 ---
 
 # Agent Configuration: The ICP Scorer (Lead Grading)

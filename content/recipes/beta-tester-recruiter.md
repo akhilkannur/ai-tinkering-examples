@@ -17,6 +17,7 @@ sampleData:
     Alice,alice@example.com,2024-01-05,Mobile App
     Bob,bob@example.com,2024-01-08,API Access
     Charlie,charlie@example.com,2024-01-01,Dark Mode
+isPremium: true
 ---
 
 # Agent Configuration: The Beta Tester Recruiter

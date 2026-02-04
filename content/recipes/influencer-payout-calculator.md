@@ -1,19 +1,22 @@
---- 
-id: "influencer-payout-calculator"
-category: "Marketing Ops"
-title: "Influencer Payout Calc"
-tagline: "Automate monthly affiliate commissions."
-difficulty: "Intermediate"
-time: "Monthly"
-archtype: "Processor"
-description: "Calculates total commissions owed to influencers based on order logs and referral codes."
+---
+id: influencer-payout-calculator
+category: Marketing Ops
+title: Influencer Payout Calc
+tagline: Automate monthly affiliate commissions.
+difficulty: Intermediate
+time: Monthly
+archtype: Processor
+description: >-
+  Calculates total commissions owed to influencers based on order logs and
+  referral codes.
 sampleData:
-  filename: "order_logs.csv"
+  filename: order_logs.csv
   content: |
     Order_ID,Amount,Referral_Code
     ORD-1,100,INFLUENCER_A
     ORD-2,200,INFLUENCER_B
     ORD-3,50,INFLUENCER_A
+isPremium: true
 ---
 
 # Agent Configuration: The Affiliate Manager

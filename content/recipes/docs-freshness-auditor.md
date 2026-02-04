@@ -1,4 +1,4 @@
---- 
+---
 id: docs-freshness-auditor
 category: Content Ops
 title: Docs Freshness Auditor
@@ -7,12 +7,14 @@ difficulty: Intermediate
 time: Batch
 archetype: Researcher
 description: >-
-  Scans Help Center articles. Checks for dates > 1 year old or mentions of deprecated features/buttons.
+  Scans Help Center articles. Checks for dates > 1 year old or mentions of
+  deprecated features/buttons.
 sampleData:
   filename: input_data.csv
   content: |
     Article_URL,Last_Updated
     /docs/setup,2022-01-01
+isPremium: true
 ---
 
 # Agent Configuration: Docs Freshness Auditor

@@ -16,6 +16,7 @@ sampleData:
     Job_Keyword,Your_Solution
     "Data Entry",Automated Data Cleaning Tool
     "Transcribe Audio",AI Transcription API
+isPremium: true
 ---
 
 # Agent Configuration: The Outsourcing Arbitrage

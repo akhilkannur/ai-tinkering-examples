@@ -8,14 +8,15 @@ time: 25 mins
 archetype: Analyst
 description: >-
   "Headless" commerce brands (using Contentful, Sanity, Strapi with Shopify) are
-  technically sophisticated and high-budget. This agent analyzes HTTP headers and
-  JS bundles to identify these high-value targets.
+  technically sophisticated and high-budget. This agent analyzes HTTP headers
+  and JS bundles to identify these high-value targets.
 sampleData:
   filename: dTC_brands.csv
   content: |
     Domain
     allbirds.com
     koala.com
+isPremium: true
 ---
 
 # Agent Configuration: The Headless Tech Hunter

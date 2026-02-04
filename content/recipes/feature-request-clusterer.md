@@ -17,6 +17,7 @@ sampleData:
     2,Can I use this on my phone?
     3,My eyes hurt, need night mode
     4,Is there an iOS app?
+isPremium: true
 ---
 
 # Agent Configuration: The Product Ops

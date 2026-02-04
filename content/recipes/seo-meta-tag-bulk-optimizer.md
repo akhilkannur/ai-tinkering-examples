@@ -16,6 +16,7 @@ sampleData:
     /blog/cats,Cats,Cat Care Tips
     /products/shoes,,Running Shoes
     /about,About Us - Company Name,
+isPremium: true
 ---
 
 # Agent Configuration: The Bulk Meta Tag Writer

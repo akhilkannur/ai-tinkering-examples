@@ -1,18 +1,21 @@
 ---
-id: "serp-conquesting-planner"
-category: "Competitive Intel"
-title: "SERP Conquest Planner"
-tagline: "Steal traffic where they are weak."
-difficulty: "Advanced"
-time: "Monthly"
-archetype: "Processor"
-description: "Identifies keywords where competitors rank in top positions but have low page authority, signaling a takeover opportunity."
+id: serp-conquesting-planner
+category: Competitive Intel
+title: SERP Conquest Planner
+tagline: Steal traffic where they are weak.
+difficulty: Advanced
+time: Monthly
+archetype: Processor
+description: >-
+  Identifies keywords where competitors rank in top positions but have low page
+  authority, signaling a takeover opportunity.
 sampleData:
-  filename: "serp_weakness.csv"
+  filename: serp_weakness.csv
   content: |
     Keyword,Competitor_Rank,Page_Authority
     best crm,1,20
     crm pricing,3,15
+isPremium: true
 ---
 
 # Agent Configuration: The SEO Manager

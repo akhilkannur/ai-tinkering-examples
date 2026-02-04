@@ -7,13 +7,15 @@ difficulty: Advanced
 time: Batch
 archtype: Researcher
 description: >-
-  Uses Vision capabilities to analyze screenshots of competitor apps or landing pages. Identifies layout patterns, CTA placements, and color psychology usage.
+  Uses Vision capabilities to analyze screenshots of competitor apps or landing
+  pages. Identifies layout patterns, CTA placements, and color psychology usage.
 sampleData:
   filename: input_data.csv
   content: |
     Competitor,Screenshot_URL
     Slack,https://slack.com/img1.png
     Discord,https://discord.com/img2.png
+isPremium: true
 ---
 
 # Agent Configuration: The Competitor UI/UX Decoder

@@ -1,19 +1,22 @@
 ---
-id: "pipeline-push-counter"
-category: "Sales Ops"
-title: "Deal Push Frequency Tracker"
-tagline: "Count how many times a deal has slipped quarters."
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Analyzes historical field changes to count how many times each deal's 'Close Date' was moved."
+id: pipeline-push-counter
+category: Sales Ops
+title: Deal Push Frequency Tracker
+tagline: Count how many times a deal has slipped quarters.
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Analyzes historical field changes to count how many times each deal's 'Close
+  Date' was moved.
 sampleData:
-  filename: "push_history.csv"
+  filename: push_history.csv
   content: |
     Deal,Field,Old_Value,New_Value
     Deal 1,Close_Date,2023-09-01,2023-12-01
     Deal 1,Close_Date,2023-12-01,2024-03-01
     Deal 2,Amount,100,200
+isPremium: true
 ---
 
 # Agent Configuration: The Pipeline Integrity Agent

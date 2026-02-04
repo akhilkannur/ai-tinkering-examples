@@ -16,6 +16,7 @@ sampleData:
     Audience_A_Emails,Audience_B_Emails
     user1@test.com,user3@test.com
     user2@test.com,user1@test.com
+isPremium: false
 ---
 
 # Agent Configuration: The Efficiency Auditor

@@ -15,6 +15,7 @@ sampleData:
     Customer,Last_Request_Date
     Acme,2023-10-01
     Beta,2023-01-01
+isPremium: false
 ---
 # Agent Configuration: The Relationship Manager
 

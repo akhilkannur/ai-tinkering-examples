@@ -1,19 +1,22 @@
---- 
-id: "subscription-upgrade-identifier"
-category: "Sales Ops"
-title: "PQL Hunter (Product Qualified Leads)"
-tagline: "Find free users who hit their limits."
-difficulty: "Intermediate"
-time: "Daily"
-archtype: "Processor"
-description: "Filters user usage data to find accounts hitting >90% of their plan limits, signaling an upsell opportunity."
+---
+id: subscription-upgrade-identifier
+category: Sales Ops
+title: PQL Hunter (Product Qualified Leads)
+tagline: Find free users who hit their limits.
+difficulty: Intermediate
+time: Daily
+archtype: Processor
+description: >-
+  Filters user usage data to find accounts hitting >90% of their plan limits,
+  signaling an upsell opportunity.
 sampleData:
-  filename: "usage_data.csv"
+  filename: usage_data.csv
   content: |
     Account,Plan_Limit,Current_Usage
     Acme,1000,950
     Beta,1000,200
     Gamma,500,490
+isPremium: true
 ---
 
 # Agent Configuration: The Account Manager

@@ -15,6 +15,7 @@ sampleData:
     User,Product,Date
     John,Sample Kit,2023-10-01
     Jane,Full Bottle,2023-10-01
+isPremium: true
 ---
 # Agent Configuration: The Lifecycle Strategist
 

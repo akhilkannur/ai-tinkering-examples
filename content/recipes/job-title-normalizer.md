@@ -1,19 +1,22 @@
 ---
-id: "job-title-normalizer"
-category: "Marketing Ops"
-title: "Job Title Normalizer"
-tagline: "Standardize 'VP of Sales' vs 'Vice President Sales'."
-difficulty: "Beginner"
-time: "Weekly"
-archetype: "Processor"
-description: "Maps messy job titles to standard seniority levels (Executive, Director, Manager, Contributor)."
+id: job-title-normalizer
+category: Marketing Ops
+title: Job Title Normalizer
+tagline: Standardize 'VP of Sales' vs 'Vice President Sales'.
+difficulty: Beginner
+time: Weekly
+archetype: Processor
+description: >-
+  Maps messy job titles to standard seniority levels (Executive, Director,
+  Manager, Contributor).
 sampleData:
-  filename: "raw_contacts.csv"
+  filename: raw_contacts.csv
   content: |
     Name,Raw_Title
     John,VP of Ops
     Jane,Director of Growth
     Bob,Sales Associate
+isPremium: true
 ---
 
 # Agent Configuration: The Data Hygiene Agent

@@ -15,6 +15,7 @@ sampleData:
     Order_ID,Customer_LTV,Basket_Value
     101,500,50
     102,2000,150
+isPremium: true
 ---
 # Agent Configuration: The Fulfillment Manager
 

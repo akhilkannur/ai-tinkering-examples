@@ -1,18 +1,21 @@
 ---
-id: "competitor-webinar-spy"
-category: "Competitive Intel"
-title: "Competitor Event Monitor"
-tagline: "What topics are they pitching?"
-difficulty: "Beginner"
-time: "Monthly"
-archetype: "Processor"
-description: "Monitors competitor event pages to track their marketing themes and webinar topics."
+id: competitor-webinar-spy
+category: Competitive Intel
+title: Competitor Event Monitor
+tagline: What topics are they pitching?
+difficulty: Beginner
+time: Monthly
+archetype: Processor
+description: >-
+  Monitors competitor event pages to track their marketing themes and webinar
+  topics.
 sampleData:
-  filename: "event_scrape.csv"
+  filename: event_scrape.csv
   content: |
     Competitor,Event_Title,Date
     Comp A,AI for Sales,2023-11-01
     Comp B,Cloud Security,2023-11-15
+isPremium: true
 ---
 
 # Agent Configuration: The Event Marketer

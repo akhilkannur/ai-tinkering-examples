@@ -1,18 +1,21 @@
 ---
-id: "sdr-activity-to-meeting-ratio"
-category: "Sales Ops"
-title: "SDR Booking Efficiency"
-tagline: "Measure calls required to book 1 meeting."
-difficulty: "Beginner"
-time: "Weekly"
-archetype: "Processor"
-description: "Calculates the booking efficiency of SDRs to find the most effective outreach patterns."
+id: sdr-activity-to-meeting-ratio
+category: Sales Ops
+title: SDR Booking Efficiency
+tagline: Measure calls required to book 1 meeting.
+difficulty: Beginner
+time: Weekly
+archetype: Processor
+description: >-
+  Calculates the booking efficiency of SDRs to find the most effective outreach
+  patterns.
 sampleData:
-  filename: "sdr_stats.csv"
+  filename: sdr_stats.csv
   content: |
     Rep,Total_Calls,Meetings_Booked
     John,500,10
     Jane,200,10
+isPremium: true
 ---
 
 # Agent Configuration: The SDR Manager Agent

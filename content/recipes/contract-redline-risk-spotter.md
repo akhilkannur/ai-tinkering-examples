@@ -7,12 +7,14 @@ difficulty: Intermediate
 time: Real-time
 archtype: Processor
 description: >-
-  Pastes the diff of a contract. Highlights "Unlimited Liability", "IP Ownership", or "Payment Terms > 60" changes that Sales needs to push back on.
+  Pastes the diff of a contract. Highlights "Unlimited Liability", "IP
+  Ownership", or "Payment Terms > 60" changes that Sales needs to push back on.
 sampleData:
   filename: input_data.csv
   content: |
     Clause_Name,Original_Text,Redlined_Text
     Liability,Cap at 1x,Unlimited
+isPremium: true
 ---
 
 # Agent Configuration: Legal Redline Risk Spotter

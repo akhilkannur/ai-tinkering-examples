@@ -12,10 +12,14 @@ description: >-
   your expert take ("The Insight").
 sampleData:
   filename: news_jacking_targets.csv
-  content: |
+  content: >
     Topic,News_URL
-    AI in Sales,https://techcrunch.com/2024/01/01/salesforce-launches-einstein-copilot
+
+    AI in
+    Sales,https://techcrunch.com/2024/01/01/salesforce-launches-einstein-copilot
+
     Crypto Regulation,https://www.coindesk.com/policy/new-sec-rules
+isPremium: true
 ---
 
 # Agent Configuration: The News Jacker

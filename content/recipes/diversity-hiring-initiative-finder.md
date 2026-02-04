@@ -7,9 +7,9 @@ difficulty: Intermediate
 time: 20 mins
 archetype: Researcher
 description: >-
-  Companies hiring "Heads of Diversity" or publishing DEI reports have budget allocated 
-  for diverse hiring tools, inclusive culture software, and training. This agent finds 
-  those specific intent signals.
+  Companies hiring "Heads of Diversity" or publishing DEI reports have budget
+  allocated  for diverse hiring tools, inclusive culture software, and training.
+  This agent finds  those specific intent signals.
 sampleData:
   filename: dei_keywords.csv
   content: |
@@ -17,6 +17,7 @@ sampleData:
     "Head of Diversity"
     "Chief Diversity Officer"
     "DEI Annual Report"
+isPremium: true
 ---
 
 # Agent Configuration: The DEI Initiative Spotter

@@ -1,19 +1,22 @@
---- 
-id: "win-loss-reason-clusterer"
-category: "Sales Ops"
-title: "Win/Loss Reason Analyzer"
-tagline: "Turn messy CRM notes into clean win/loss insights."
-difficulty: "Advanced"
-time: "Monthly"
-archtype: "Processor"
-description: "Clusters qualitative CRM reason notes into standardized categories for executive reporting."
+---
+id: win-loss-reason-clusterer
+category: Sales Ops
+title: Win/Loss Reason Analyzer
+tagline: Turn messy CRM notes into clean win/loss insights.
+difficulty: Advanced
+time: Monthly
+archtype: Processor
+description: >-
+  Clusters qualitative CRM reason notes into standardized categories for
+  executive reporting.
 sampleData:
-  filename: "crm_notes.csv"
+  filename: crm_notes.csv
   content: |
     Outcome,Notes
     Lost,Pricing was way too high for them
     Lost,They went with Competitor X due to features
     Won,Liked our ease of use
+isPremium: true
 ---
 
 # Agent Configuration: The Product Marketer

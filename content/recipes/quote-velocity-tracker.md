@@ -7,15 +7,16 @@ difficulty: Intermediate
 time: Weekly
 archetype: Processor
 description: >-
-  Time kills all deals. This agent scans your open quotes, calculates exactly how
-  long they have been sitting with the prospect, and drafts a context-aware nudge
-  email (Gentle vs. Urgent) based on the delay.
+  Time kills all deals. This agent scans your open quotes, calculates exactly
+  how long they have been sitting with the prospect, and drafts a context-aware
+  nudge email (Gentle vs. Urgent) based on the delay.
 sampleData:
   filename: open_quotes.csv
   content: |
     Quote_ID,Customer_Email,Sent_Date,Stage
     Q101,dave@acme.com,2024-01-20,Signature
     Q102,sara@beta.com,2024-01-10,Legal Review
+isPremium: true
 ---
 # Agent Configuration: The Deal Desk Agent
 

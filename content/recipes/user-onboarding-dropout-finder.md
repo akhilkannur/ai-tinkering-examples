@@ -17,6 +17,7 @@ sampleData:
     2,Profile Photo
     3,Email Verification
     4,Payment Setup
+isPremium: true
 ---
 
 # Agent Configuration: The Growth PM

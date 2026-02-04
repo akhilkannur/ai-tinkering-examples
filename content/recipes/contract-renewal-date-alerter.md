@@ -16,6 +16,7 @@ sampleData:
     Acme Corp,50000,2024-01-01,Red
     Beta Inc,10000,2024-06-01,Green
     Gamma LLC,4000,2024-01-05,Red
+isPremium: true
 ---
 
 # Agent Configuration: The Renewal Command Center

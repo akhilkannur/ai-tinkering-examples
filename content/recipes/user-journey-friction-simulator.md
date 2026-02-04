@@ -7,7 +7,8 @@ difficulty: Advanced
 time: 30 mins
 archetype: Researcher
 description: >-
-  Simulates a specific buyer persona (e.g., 'Impatient CTO') attempting to complete a goal on your site. Flags every confusing sentence or extra click.
+  Simulates a specific buyer persona (e.g., 'Impatient CTO') attempting to
+  complete a goal on your site. Flags every confusing sentence or extra click.
 sampleData:
   filename: site_copy.md
   content: |
@@ -16,6 +17,7 @@ sampleData:
     Button: "Learn More"
     Page: Signup
     Field: "Enter your Mother's Maiden Name"
+isPremium: true
 ---
 
 # Agent Configuration: The Friction Hunter

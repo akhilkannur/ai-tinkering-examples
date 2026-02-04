@@ -7,14 +7,15 @@ difficulty: Intermediate
 time: Real-time
 archtype: Processor
 description: >-
-  Upload your pitch deck text. The agent adopts the persona of a cynical Series A investor and highlights every logic gap, weak metric, or confusing slide.
+  Upload your pitch deck text. The agent adopts the persona of a cynical Series
+  A investor and highlights every logic gap, weak metric, or confusing slide.
 sampleData:
   filename: input_data.csv
   content: |
     Slide_Number,Slide_Text
     1,"We are the Uber for Cats"
     2,"TAM is $500 Trillion"
-    
+isPremium: true
 ---
 
 # Agent Configuration: The VC Pitch Deck Roast

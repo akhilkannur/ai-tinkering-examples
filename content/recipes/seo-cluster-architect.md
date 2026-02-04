@@ -15,6 +15,7 @@ sampleData:
     Keyword,Intent
     Sales Automation,Transactional
     Lead Scoring,Informational
+isPremium: true
 ---
 
 # Agent Configuration: The SEO Cluster Architect

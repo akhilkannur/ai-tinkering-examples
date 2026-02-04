@@ -8,8 +8,9 @@ time: One-off
 archetype: Hybrid
 description: >-
   Thin content gets penalized. This agent takes a simple list of targets (e.g.,
-  Cities), researches each one on the web to extract real, unique facts (Population,
-  Landmarks), and injects them into your content template for high-quality Programmatic SEO.
+  Cities), researches each one on the web to extract real, unique facts
+  (Population, Landmarks), and injects them into your content template for
+  high-quality Programmatic SEO.
 sampleData:
   filename: locations.csv
   content: |
@@ -17,6 +18,7 @@ sampleData:
     Austin, TX
     Seattle, WA
     Denver, CO
+isPremium: true
 ---
 
 # Agent Configuration: The P-SEO Researcher

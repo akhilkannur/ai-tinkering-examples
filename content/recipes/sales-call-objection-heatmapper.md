@@ -7,13 +7,15 @@ difficulty: Intermediate
 time: Batch
 archtype: Processor
 description: >-
-  Parses 50+ Zoom transcripts. key-value pairs the "Objection" vs "Minute Mark". visualizes if you are losing people at Pricing (min 20) or Intro (min 2).
+  Parses 50+ Zoom transcripts. key-value pairs the "Objection" vs "Minute Mark".
+  visualizes if you are losing people at Pricing (min 20) or Intro (min 2).
 sampleData:
   filename: input_data.csv
   content: |
     Call_ID,Transcript_Text
     Call_A,"...too expensive..."
     Call_B,"...feature missing..."
+isPremium: true
 ---
 
 # Agent Configuration: Sales Call Objection Heatmapper

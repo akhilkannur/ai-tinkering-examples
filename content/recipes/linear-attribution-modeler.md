@@ -1,18 +1,21 @@
---- 
-id: "linear-attribution-modeler"
-category: "Marketing Ops"
-title: "Linear Attribution Modeler"
-tagline: "Split revenue credit across all marketing touches."
-difficulty: "Advanced"
-time: "Monthly"
-archtype: "Processor"
-description: "Analyzes touchpoint logs to assign equal revenue credit to every interaction in a customer journey."
+---
+id: linear-attribution-modeler
+category: Marketing Ops
+title: Linear Attribution Modeler
+tagline: Split revenue credit across all marketing touches.
+difficulty: Advanced
+time: Monthly
+archtype: Processor
+description: >-
+  Analyzes touchpoint logs to assign equal revenue credit to every interaction
+  in a customer journey.
 sampleData:
-  filename: "journeys.csv"
+  filename: journeys.csv
   content: |
     Deal_ID,Revenue,Touchpoints
     Deal-1,1000,Search;Email;Webinar
     Deal-2,500,Email;Social
+isPremium: true
 ---
 
 # Agent Configuration: The Attribution Specialist

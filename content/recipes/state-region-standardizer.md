@@ -1,19 +1,20 @@
 ---
-id: "state-region-standardizer"
-category: "Sales Ops"
-title: "State/Region Standardizer"
-tagline: "Fix 'Calif' vs 'CA' vs 'California'."
-difficulty: "Beginner"
-time: "Weekly"
-archetype: "Processor"
-description: "Converts various state naming conventions to standard 2-letter ISO codes."
+id: state-region-standardizer
+category: Sales Ops
+title: State/Region Standardizer
+tagline: Fix 'Calif' vs 'CA' vs 'California'.
+difficulty: Beginner
+time: Weekly
+archetype: Processor
+description: Converts various state naming conventions to standard 2-letter ISO codes.
 sampleData:
-  filename: "addresses.csv"
+  filename: addresses.csv
   content: |
     Account,State
     Acme,California
     Beta,Calif
     Gamma,NY
+isPremium: true
 ---
 
 # Agent Configuration: The Data Quality Agent

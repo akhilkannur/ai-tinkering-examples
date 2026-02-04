@@ -6,7 +6,9 @@ tagline: Generate a perfect XML sitemap for thousands of dynamic pages.
 difficulty: Intermediate
 time: 5 mins
 archetype: Processor
-description: Crawls your local content and database to build a comprehensive sitemap.xml for Google.
+description: >-
+  Crawls your local content and database to build a comprehensive sitemap.xml
+  for Google.
 sampleData:
   filename: content-manifest.json
   content: |
@@ -14,6 +16,7 @@ sampleData:
       { "slug": "page-1", "updated": "2023-10-01" },
       { "slug": "page-2", "updated": "2023-10-05" }
     ]
+isPremium: true
 ---
 
 # What This Does

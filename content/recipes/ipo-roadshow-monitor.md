@@ -7,9 +7,10 @@ difficulty: Intermediate
 time: Monthly
 archetype: Researcher
 description: >-
-  Companies preparing for an IPO (hiring "VP of Investor Relations", "SEC Reporting," 
-  or "SOX Compliance") have unlimited budget for compliance, security, and financial 
-  audit tools. This agent detects those specific hiring signals.
+  Companies preparing for an IPO (hiring "VP of Investor Relations", "SEC
+  Reporting,"  or "SOX Compliance") have unlimited budget for compliance,
+  security, and financial  audit tools. This agent detects those specific hiring
+  signals.
 sampleData:
   filename: unicorn_list.csv
   content: |
@@ -17,6 +18,7 @@ sampleData:
     Databricks
     Stripe
     Canva
+isPremium: true
 ---
 
 # Agent Configuration: The Pre-IPO Hawk

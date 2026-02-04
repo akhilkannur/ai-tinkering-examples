@@ -6,12 +6,15 @@ tagline: Help AI bots understand your site by generating a /llms.txt file.
 difficulty: Beginner
 time: 5 mins
 archetype: Processor
-description: Scans your documentation and key pages to create a structured text file optimized for LLM reading.
+description: >-
+  Scans your documentation and key pages to create a structured text file
+  optimized for LLM reading.
 sampleData:
   filename: docs/README.md
   content: |
     # My Documentation
     This is the main documentation file.
+isPremium: false
 ---
 
 # What This Does

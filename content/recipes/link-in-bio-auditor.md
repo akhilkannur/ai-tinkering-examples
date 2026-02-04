@@ -1,4 +1,4 @@
---- 
+---
 id: link-in-bio-auditor
 category: Content Ops
 title: Link-in-Bio Broken Link Checker
@@ -7,12 +7,14 @@ difficulty: Beginner
 time: Batch
 archetype: Researcher
 description: >-
-  Daily check of your Linktree/Bio link. Validates that it doesn't 404 and that the redirect lands on the correct promo page.
+  Daily check of your Linktree/Bio link. Validates that it doesn't 404 and that
+  the redirect lands on the correct promo page.
 sampleData:
   filename: input_data.csv
   content: |
     Instagram_Handle,Expected_Dest_URL
     @brand,https://site.com/promo
+isPremium: true
 ---
 
 # Agent Configuration: Link-in-Bio Broken Link Checker

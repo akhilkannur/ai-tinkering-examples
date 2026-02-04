@@ -1,14 +1,16 @@
---- 
-id: "sales-activity-quota-tracker"
-category: "Sales Ops"
-title: "Rep Activity Scorecard"
-tagline: "Automated daily standup report for sales activity."
-difficulty: "Beginner"
-time: "Daily"
-archtype: "Processor"
-description: "Aggregates a log of calls, emails, and meetings to see which reps are hitting their activity KPIs."
+---
+id: sales-activity-quota-tracker
+category: Sales Ops
+title: Rep Activity Scorecard
+tagline: Automated daily standup report for sales activity.
+difficulty: Beginner
+time: Daily
+archtype: Processor
+description: >-
+  Aggregates a log of calls, emails, and meetings to see which reps are hitting
+  their activity KPIs.
 sampleData:
-  filename: "activity_log.csv"
+  filename: activity_log.csv
   content: |
     Rep_Name,Activity_Type,Date
     John,Call,2023-10-01
@@ -16,6 +18,7 @@ sampleData:
     Jane,Meeting,2023-10-01
     Jane,Call,2023-10-01
     Jane,Call,2023-10-01
+isPremium: true
 ---
 
 # Agent Configuration: The Sales Manager

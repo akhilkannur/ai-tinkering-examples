@@ -16,6 +16,7 @@ sampleData:
     user@acme.com, 2023-10-01
     [Active Contracts]
     beta.com, gamma.io
+isPremium: true
 ---
 
 # Agent Configuration: The Billing Integrity Manager

@@ -16,6 +16,7 @@ sampleData:
     John,Yes
     John,Yes
     Jane,No
+isPremium: false
 ---
 # Agent Configuration: The Pricing Strategist
 

@@ -8,14 +8,15 @@ time: Monthly
 archetype: Hybrid
 description: >-
   Job boards reveal secret strategies. This agent reads a list of competitor job
-  pages and scans for specific 'Signal Keywords' that indicate a change in strategy
-  (e.g., a sudden spike in 'Enterprise' or 'Partner' roles).
+  pages and scans for specific 'Signal Keywords' that indicate a change in
+  strategy (e.g., a sudden spike in 'Enterprise' or 'Partner' roles).
 sampleData:
   filename: competitor_targets.csv
   content: |
     Company,Careers_URL
     Competitor_A,https://competitor-a.com/jobs
     Competitor_B,https://competitor-b.com/careers
+isPremium: false
 ---
 
 # Agent Configuration: The Market Hiring Spy

@@ -14,6 +14,7 @@ sampleData:
     /product-a,/product-a
     /product-a?ref=123,/product-a
     /blog/duplicate,/blog/original
+isPremium: false
 ---
 
 # Agent Configuration: The SEO Technical Auditor

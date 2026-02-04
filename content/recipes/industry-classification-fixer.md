@@ -1,19 +1,20 @@
 ---
-id: "industry-classification-fixer"
-category: "Sales Ops"
-title: "Industry Taxonomy Enforcer"
-tagline: "Map messy 'Industry' strings to a standard list."
-difficulty: "Beginner"
-time: "Weekly"
-archetype: "Processor"
-description: "Standardizes raw industry fields into a clean list of 10 parent categories."
+id: industry-classification-fixer
+category: Sales Ops
+title: Industry Taxonomy Enforcer
+tagline: Map messy 'Industry' strings to a standard list.
+difficulty: Beginner
+time: Weekly
+archetype: Processor
+description: Standardizes raw industry fields into a clean list of 10 parent categories.
 sampleData:
-  filename: "accounts.csv"
+  filename: accounts.csv
   content: |
     Account,Raw_Industry
     Acme,Software as a Service
     Beta,Manufacturing & Logistics
     Gamma,SaaS
+isPremium: true
 ---
 
 # Agent Configuration: The Data Steward Agent

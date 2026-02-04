@@ -16,6 +16,7 @@ sampleData:
     Acme,Legacy Widget,Too Expensive,200
     Beta,Old Tool v1,Missing Integrations,300
     Gamma,Standard Plan,Project Ended,100
+isPremium: true
 ---
 # Agent Configuration: The Ex-Customer Whisperer
 

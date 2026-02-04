@@ -17,6 +17,7 @@ sampleData:
     Repository_URL,Qualifying_Action
     https://github.com/vercel/next.js,Star
     https://github.com/supabase/supabase,Fork
+isPremium: true
 ---
 
 # Agent Configuration: The Open Source Stalker

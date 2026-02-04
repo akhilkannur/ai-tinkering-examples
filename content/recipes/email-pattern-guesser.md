@@ -16,6 +16,7 @@ sampleData:
     John,Doe,acme.com
     Jane,Smith,globex.io
     Mike,Ross,pearsonhardman.com
+isPremium: true
 ---
 
 # Agent Configuration: The Email Permutator

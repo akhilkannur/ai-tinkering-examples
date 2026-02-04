@@ -15,6 +15,7 @@ sampleData:
     User,Expiry_Date,Usage_Score,Company_Size
     John,2023-10-05,High,500
     Jane,2023-10-05,Low,1
+isPremium: true
 ---
 # Agent Configuration: The Inside Sales Agent
 

@@ -16,6 +16,7 @@ sampleData:
     /blog/a,/pricing,Click Here
     /blog/b,/pricing,See Pricing
     /home,/about,Read More
+isPremium: true
 ---
 
 # Agent Configuration: The On-Page SEO

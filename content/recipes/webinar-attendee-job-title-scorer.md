@@ -1,12 +1,14 @@
 ---
-id: "webinar-attendee-job-title-scorer"
-category: "Marketing Ops"
-title: "Webinar Audience Quality"
-tagline: "Did VPs show up, or just interns?"
-difficulty: "Beginner"
-time: "Batch"
-archetype: "Processor"
-description: "Scores webinar success by the seniority of attendees based on job title keywords."
+id: webinar-attendee-job-title-scorer
+category: Marketing Ops
+title: Webinar Audience Quality
+tagline: 'Did VPs show up, or just interns?'
+difficulty: Beginner
+time: Batch
+archetype: Processor
+description: >-
+  Scores webinar success by the seniority of attendees based on job title
+  keywords.
 sampleData:
   filename: attendees.csv
   content: |
@@ -15,6 +17,7 @@ sampleData:
     Jane Smith,jane@startup.io,Marketing Intern,Startup Inc
     Mike Jones,mike@gmail.com,Student,University
     Sarah Lee,sarah@target-account.com,Director of Ops,Target Account Ltd
+isPremium: true
 ---
 
 # Agent Configuration: The High-Ticket Demand Gen Lead

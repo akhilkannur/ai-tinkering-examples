@@ -15,6 +15,7 @@ sampleData:
     Customer,Current_Price,Market_Price
     Acme,500,1000
     Beta,1000,1000
+isPremium: true
 ---
 # Agent Configuration: The Pricing Strategist
 

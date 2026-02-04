@@ -16,6 +16,7 @@ sampleData:
     Alice,"I can't find the logout button."
     Bob,"It would be cool if this integrated with Slack."
     Charlie,"The app crashes when I upload a PDF."
+isPremium: true
 ---
 
 # Agent Configuration: The Feedback Auto-Tagger

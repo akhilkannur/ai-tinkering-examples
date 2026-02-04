@@ -15,6 +15,7 @@ sampleData:
     SKU,Velocity_Score,Stock_Level
     Cool-Jacket,High,50
     Ugly-Hat,Low,500
+isPremium: true
 ---
 # Agent Configuration: The Inventory Planner
 

@@ -1,19 +1,22 @@
---- 
-id: "email-fatigue-monitor"
-category: "Marketing Ops"
-title: "Email Fatigue Monitor"
-tagline: "Prevent unsubscribes by monitoring send frequency."
-difficulty: "Intermediate"
-time: "Weekly"
-archtype: "Processor"
-description: "Calculates how many emails each contact received in the last 30 days to flag 'at-risk' contacts."
+---
+id: email-fatigue-monitor
+category: Marketing Ops
+title: Email Fatigue Monitor
+tagline: Prevent unsubscribes by monitoring send frequency.
+difficulty: Intermediate
+time: Weekly
+archtype: Processor
+description: >-
+  Calculates how many emails each contact received in the last 30 days to flag
+  'at-risk' contacts.
 sampleData:
-  filename: "send_logs.csv"
+  filename: send_logs.csv
   content: |
     Email,Date,Campaign
     john@acme.com,2023-10-01,Newsletter
     john@acme.com,2023-10-02,Promo A
     john@acme.com,2023-10-03,Promo B
+isPremium: true
 ---
 
 # Agent Configuration: The Deliverability Manager

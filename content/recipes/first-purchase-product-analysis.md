@@ -1,18 +1,21 @@
 ---
-id: "first-purchase-product-analysis"
-category: "Paid Media"
-title: "Gateway Product Analyzer"
-tagline: "Which product acquires the best customers?"
-difficulty: "Intermediate"
-time: "Quarterly"
-archetype: "Processor"
-description: "Identifies the 'Gateway Drug' products that appear most frequently in the first order of high-LTV customers."
+id: first-purchase-product-analysis
+category: Paid Media
+title: Gateway Product Analyzer
+tagline: Which product acquires the best customers?
+difficulty: Intermediate
+time: Quarterly
+archetype: Processor
+description: >-
+  Identifies the 'Gateway Drug' products that appear most frequently in the
+  first order of high-LTV customers.
 sampleData:
-  filename: "first_orders.csv"
+  filename: first_orders.csv
   content: |
     Customer,First_Product,Current_LTV
     John,Socks,500
     Jane,Hat,50
+isPremium: true
 ---
 # Agent Configuration: The Merchandising Analyst
 

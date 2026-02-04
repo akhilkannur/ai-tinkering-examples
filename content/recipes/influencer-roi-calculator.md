@@ -7,15 +7,16 @@ difficulty: Beginner
 time: Campaign End
 archetype: Processor
 description: >-
-  Vanity metrics (Likes) rarely correlate with Wallet metrics (Sales). This agent
-  analyzes your influencer roster to classify them into "Brand Awareness Plays"
-  vs "Sales Drivers," helping you cut the dead weight.
+  Vanity metrics (Likes) rarely correlate with Wallet metrics (Sales). This
+  agent analyzes your influencer roster to classify them into "Brand Awareness
+  Plays" vs "Sales Drivers," helping you cut the dead weight.
 sampleData:
   filename: influencer_performance.csv
   content: |
     Influencer,Cost,Sales,Engagement_Rate,Impressions
     TikTokStar,5000,200,0.15,1000000
     NicheBlogger,500,2000,0.05,5000
+isPremium: true
 ---
 
 # Agent Configuration: The CFO

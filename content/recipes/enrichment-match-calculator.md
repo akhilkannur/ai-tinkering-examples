@@ -17,6 +17,7 @@ sampleData:
     a@test.com,,555-0100,HubSpot
     b@test.com,,,
     c@test.com,555-0200,,Salesforce
+isPremium: true
 ---
 
 # Agent Configuration: The Data Architect

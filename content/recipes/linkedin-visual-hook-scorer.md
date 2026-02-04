@@ -7,13 +7,16 @@ difficulty: Intermediate
 time: Real-time
 archtype: Processor
 description: >-
-  Uploads your proposed thumbnails to a Vision model. Scores them on text readability, face prominence, and contrast against the LinkedIn UI gray background.
+  Uploads your proposed thumbnails to a Vision model. Scores them on text
+  readability, face prominence, and contrast against the LinkedIn UI gray
+  background.
 sampleData:
   filename: input_data.csv
   content: |
     Image_Name,Local_Path
     Chart_V1,./images/chart1.png
     Selfie_V2,./images/selfie.png
+isPremium: true
 ---
 
 # Agent Configuration: LinkedIn Visual Hook Scorer

@@ -15,6 +15,7 @@ sampleData:
     Order_ID,Delivered_Date,Email
     101,2023-10-01,john@acme.com
     102,2023-10-05,jane@beta.com
+isPremium: true
 ---
 # Agent Configuration: The CX Marketer
 

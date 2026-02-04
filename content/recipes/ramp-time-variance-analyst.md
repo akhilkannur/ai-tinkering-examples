@@ -1,18 +1,21 @@
 ---
-id: "ramp-time-variance-analyst"
-category: "Sales Ops"
-title: "Ramp Time Cohort Analyst"
-tagline: "Are Q1 hires faster than Q3 hires?"
-difficulty: "Intermediate"
-time: "Quarterly"
-archetype: "Processor"
-description: "Compares the 'Time to Productivity' of sales rep cohorts to evaluate onboarding program changes."
+id: ramp-time-variance-analyst
+category: Sales Ops
+title: Ramp Time Cohort Analyst
+tagline: Are Q1 hires faster than Q3 hires?
+difficulty: Intermediate
+time: Quarterly
+archetype: Processor
+description: >-
+  Compares the 'Time to Productivity' of sales rep cohorts to evaluate
+  onboarding program changes.
 sampleData:
-  filename: "ramp_cohorts.csv"
+  filename: ramp_cohorts.csv
   content: |
     Cohort,Avg_Days_To_Quota
     Q1_Hires,90
     Q2_Hires,120
+isPremium: true
 ---
 
 # Agent Configuration: The Sales Trainer

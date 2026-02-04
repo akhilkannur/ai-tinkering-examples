@@ -16,6 +16,7 @@ sampleData:
     Signup,1000,1000
     Connect_Data,1000,500
     Invite_Team,500,100
+isPremium: true
 ---
 # Agent Configuration: The Product Growth Agent
 

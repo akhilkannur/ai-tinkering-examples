@@ -15,6 +15,7 @@ sampleData:
     Employee,Shares,Clicks,Reactions
     John,5,50,10
     Jane,10,200,50
+isPremium: true
 ---
 # Agent Configuration: The Social Media Manager
 

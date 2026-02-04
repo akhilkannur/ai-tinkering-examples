@@ -17,6 +17,7 @@ sampleData:
     [00:00:45] Guest: Thanks for having me.
     [00:04:12] Host: So tell us about the 'Index' strategy.
     [00:04:15] Guest: Well, it starts with...
+isPremium: true
 ---
 
 # Agent Configuration: The Podcast Architect

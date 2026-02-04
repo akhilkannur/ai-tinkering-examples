@@ -16,6 +16,7 @@ sampleData:
     Freelance Designers,Scope Creep,Reddit
     SaaS Ops Managers,Data Silos,LinkedIn
     E-com Store Owners,Ad Costs,Twitter
+isPremium: true
 ---
 
 # Agent Configuration: The AI Persona Researcher

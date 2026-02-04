@@ -16,6 +16,7 @@ sampleData:
     Platform,Seed_Headline,Key_Benefit
     Google,"Best CRM for small biz",Save time
     Facebook,"Launch faster with AI",Speed to market
+isPremium: false
 ---
 
 # Agent Configuration: The Ad Variant Factory

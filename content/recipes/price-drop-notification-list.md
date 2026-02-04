@@ -15,6 +15,7 @@ sampleData:
     User,Product_Viewed,View_Date,Current_Price,Old_Price
     John,TV,2023-10-01,400,500
     Jane,Radio,2023-10-01,50,50
+isPremium: true
 ---
 # Agent Configuration: The Email Marketer
 

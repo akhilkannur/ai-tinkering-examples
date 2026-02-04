@@ -17,6 +17,7 @@ sampleData:
     John Doe,Student,University of AZ
     Jane Smith,VP of Engineering,Netflix
     Bob Jones,Consultant,Self-Employed
+isPremium: true
 ---
 
 # Agent Configuration: The Conference Networking Strategist

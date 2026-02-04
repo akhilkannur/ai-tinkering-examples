@@ -1,19 +1,22 @@
---- 
-id: "backlink-quality-scorer"
-category: "SEO"
-title: "Backlink Quality Auditor"
-tagline: "Filter the gold from the spam."
-difficulty: "Intermediate"
-time: "Monthly"
-archtype: "Processor"
-description: "Scores a list of backlinks based on Domain Authority (DA) and Spam Score assumptions."
+---
+id: backlink-quality-scorer
+category: SEO
+title: Backlink Quality Auditor
+tagline: Filter the gold from the spam.
+difficulty: Intermediate
+time: Monthly
+archtype: Processor
+description: >-
+  Scores a list of backlinks based on Domain Authority (DA) and Spam Score
+  assumptions.
 sampleData:
-  filename: "backlinks.csv"
+  filename: backlinks.csv
   content: |
     URL,DA,Spam_Score
     goodsite.com,80,1
     spammy.xyz,10,60
     medium.com,90,5
+isPremium: false
 ---
 
 # Agent Configuration: The Link Builder

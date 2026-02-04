@@ -17,6 +17,7 @@ sampleData:
     Stripe,Secret Key,Production
     AWS,IAM Access Key,Staging
     SendGrid,API Key,Production
+isPremium: false
 ---
 
 # Agent Configuration: The API Key Rotator

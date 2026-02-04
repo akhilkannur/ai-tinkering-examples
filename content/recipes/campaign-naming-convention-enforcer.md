@@ -1,19 +1,22 @@
---- 
-id: "campaign-naming-convention-enforcer"
-category: "Marketing Ops"
-title: "Campaign Taxonomist"
-tagline: "Stop messy data from breaking your reports."
-difficulty: "Beginner"
-time: "Weekly"
-archtype: "Processor"
-description: "Audits campaign names to ensure they follow the pattern: `Region_Channel_Date_Name`."
+---
+id: campaign-naming-convention-enforcer
+category: Marketing Ops
+title: Campaign Taxonomist
+tagline: Stop messy data from breaking your reports.
+difficulty: Beginner
+time: Weekly
+archtype: Processor
+description: >-
+  Audits campaign names to ensure they follow the pattern:
+  `Region_Channel_Date_Name`.
 sampleData:
-  filename: "campaigns.csv"
+  filename: campaigns.csv
   content: |
     Campaign_Name
     US_Email_2023_Q4_Promo
     Webinar_Oct_2023
     EU_Social_2023_Launch
+isPremium: false
 ---
 
 # Agent Configuration: The Marketing Ops Manager

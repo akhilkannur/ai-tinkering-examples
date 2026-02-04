@@ -17,6 +17,7 @@ sampleData:
     CustA,1,2,1
     CustB,1,10,5
     CustC,2,12,8
+isPremium: true
 ---
 
 # Agent Configuration: The UX Researcher

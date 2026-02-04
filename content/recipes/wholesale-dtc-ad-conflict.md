@@ -1,18 +1,21 @@
 ---
-id: "wholesale-dtc-ad-conflict"
-category: "Paid Media"
-title: "Channel Conflict Monitor"
-tagline: "Are we bidding against our retailers?"
-difficulty: "Advanced"
-time: "Monthly"
-archetype: "Processor"
-description: "Checks if you are bidding on keywords where your wholesale partners (e.g. Nordstrom, Sephora) already dominate the SERP."
+id: wholesale-dtc-ad-conflict
+category: Paid Media
+title: Channel Conflict Monitor
+tagline: Are we bidding against our retailers?
+difficulty: Advanced
+time: Monthly
+archetype: Processor
+description: >-
+  Checks if you are bidding on keywords where your wholesale partners (e.g.
+  Nordstrom, Sephora) already dominate the SERP.
 sampleData:
-  filename: "serp_data.csv"
+  filename: serp_data.csv
   content: |
     Keyword,My_Rank,Partner_Rank
     Lipstick,1,5
     Mascara,5,1
+isPremium: true
 ---
 # Agent Configuration: The Channel Marketing Manager
 

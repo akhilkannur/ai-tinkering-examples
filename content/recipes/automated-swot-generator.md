@@ -7,12 +7,14 @@ difficulty: Beginner
 time: Real-time
 archtype: Researcher
 description: >-
-  Uses web search to find recent news, earnings calls, and reviews. Compiles a Strength, Weakness, Opportunity, Threat matrix for your quarterly review.
+  Uses web search to find recent news, earnings calls, and reviews. Compiles a
+  Strength, Weakness, Opportunity, Threat matrix for your quarterly review.
 sampleData:
   filename: input_data.csv
   content: |
     Company_Name,Website
     CompetitorX,https://comp-x.com
+isPremium: false
 ---
 
 # Agent Configuration: Automated SWOT Generator

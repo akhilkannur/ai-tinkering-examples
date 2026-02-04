@@ -8,8 +8,8 @@ time: Weekly
 archetype: Processor
 description: >-
   Products die when they stop getting reviewed. This agent tracks the "Review
-  Velocity" of your catalog, flagging bestsellers that have gone quiet so you can
-  re-ignite the social proof engine before sales drop.
+  Velocity" of your catalog, flagging bestsellers that have gone quiet so you
+  can re-ignite the social proof engine before sales drop.
 sampleData:
   filename: product_metrics.csv
   content: |
@@ -17,6 +17,7 @@ sampleData:
     101,Leather Bag,10,2
     102,Wool Hat,5,5
     103,Belt,2,0
+isPremium: true
 ---
 
 # Agent Configuration: The E-commerce Merchandiser

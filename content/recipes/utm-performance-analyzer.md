@@ -1,18 +1,21 @@
---- 
-id: "utm-performance-analyzer"
-category: "Marketing Ops"
-title: "UTM Traffic Grader"
-tagline: "Which campaign source drives the most traffic?"
-difficulty: "Beginner"
-time: "Weekly"
-archtype: "Processor"
-description: "Aggregates traffic logs by UTM Source and Medium to identify top performing channels."
+---
+id: utm-performance-analyzer
+category: Marketing Ops
+title: UTM Traffic Grader
+tagline: Which campaign source drives the most traffic?
+difficulty: Beginner
+time: Weekly
+archtype: Processor
+description: >-
+  Aggregates traffic logs by UTM Source and Medium to identify top performing
+  channels.
 sampleData:
-  filename: "traffic_logs.csv"
+  filename: traffic_logs.csv
   content: |
     URL,Visits
     /landing?utm_source=google&utm_medium=cpc,500
     /landing?utm_source=newsletter,100
+isPremium: true
 ---
 
 # Agent Configuration: The Traffic Analyst

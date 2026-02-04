@@ -7,9 +7,9 @@ difficulty: Intermediate
 time: 20 mins
 archetype: Researcher
 description: >-
-  Challenger brands are aggressive, well-funded, and willing to take risks on new
-  tech to beat incumbents. This agent identifies companies positioning themselves
-  as "The [Incumbent] Killer" (e.g., "The Salesforce Alternative").
+  Challenger brands are aggressive, well-funded, and willing to take risks on
+  new tech to beat incumbents. This agent identifies companies positioning
+  themselves as "The [Incumbent] Killer" (e.g., "The Salesforce Alternative").
 sampleData:
   filename: incumbent_list.csv
   content: |
@@ -17,6 +17,7 @@ sampleData:
     Salesforce,CRM
     Zoom,Video Conferencing
     Slack,Communication
+isPremium: true
 ---
 
 # Agent Configuration: The Challenger Brand Hunter

@@ -7,15 +7,16 @@ difficulty: Beginner
 time: Monthly
 archetype: Processor
 description: >-
-  Don't just track ratings; engineer them. This agent calculates the exact number
-  of 5-star reviews required to lift your average rating (e.g., 4.2 -> 4.5) or
-  overtake a competitor.
+  Don't just track ratings; engineer them. This agent calculates the exact
+  number of 5-star reviews required to lift your average rating (e.g., 4.2 ->
+  4.5) or overtake a competitor.
 sampleData:
   filename: ratings.csv
   content: |
     Entity,Total_Reviews,Average_Rating
     Us,100,4.2
     Competitor,500,4.5
+isPremium: true
 ---
 
 # Agent Configuration: The Reputation Engineer

@@ -8,14 +8,16 @@ time: Weekly
 archetype: Hybrid
 description: >-
   When a decision-maker changes jobs, it creates TWO opportunities: one at their
-  new company (where they already like you), and one at the old company (where the
-  new hire wants to make changes). This agent tracks job changes for key contacts.
+  new company (where they already like you), and one at the old company (where
+  the new hire wants to make changes). This agent tracks job changes for key
+  contacts.
 sampleData:
   filename: champions_list.csv
   content: |
     Name,Old_Company,LinkedIn_URL
     Jane Doe,Acme Corp,linkedin.com/in/janedoe
     John Smith,Globex,linkedin.com/in/johnsmith
+isPremium: true
 ---
 
 # Agent Configuration: The Champion Tracker

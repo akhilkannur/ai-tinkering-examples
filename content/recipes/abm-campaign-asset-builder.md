@@ -17,6 +17,7 @@ sampleData:
     Nike,nike.com,VP of E-commerce
     Delta Airlines,delta.com,Chief Digital Officer
     Spotify,spotify.com,Head of Ad Sales
+isPremium: false
 ---
 
 # Agent Configuration: The ABM Campaign Asset Builder

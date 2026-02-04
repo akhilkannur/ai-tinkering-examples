@@ -16,6 +16,7 @@ sampleData:
     Customer,Plan_Limit,Calls_Made
     CustA,1000,500
     CustB,1000,1500
+isPremium: false
 ---
 
 # Agent Configuration: The Accountant

@@ -17,6 +17,7 @@ sampleData:
     HS_Code,Product_Name
     854231,Processors/Chips
     850760,Lithium Batteries
+isPremium: true
 ---
 
 # Agent Configuration: The Supply Chain Risk Mapper

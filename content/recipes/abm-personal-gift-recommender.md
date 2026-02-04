@@ -1,18 +1,20 @@
---- 
+---
 id: abm-personal-gift-recommender
 category: Marketing Ops
 title: ABM Personal Gift Recommender
-tagline: Send gifts they actually keep, not just swag.
+tagline: 'Send gifts they actually keep, not just swag.'
 difficulty: Researcher
 time: Batch
 archetype: Hybrid
 description: >-
-  Researches a prospect's Twitter/LinkedIn interests (e.g., "Coffee", "Golf", "Sci-Fi"). Suggests a $50 gift that matches their hobby.
+  Researches a prospect's Twitter/LinkedIn interests (e.g., "Coffee", "Golf",
+  "Sci-Fi"). Suggests a $50 gift that matches their hobby.
 sampleData:
   filename: input_data.csv
   content: |
     Prospect_Name,Social_Handle
     Jane Doe,@janedoe
+isPremium: false
 ---
 
 # Agent Configuration: ABM Personal Gift Recommender

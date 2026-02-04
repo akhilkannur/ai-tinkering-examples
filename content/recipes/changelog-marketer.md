@@ -22,6 +22,7 @@ sampleData:
     users
 
     Zapier v2,Added 5 new triggers for automation,Easier workflow integration
+isPremium: true
 ---
 
 # Agent Configuration: The Changelog Marketer

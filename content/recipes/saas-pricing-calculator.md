@@ -15,6 +15,7 @@ sampleData:
   content: |
     Product,Base_Cost,Target_Margin,Key_Feature_1,Key_Feature_2,Key_Feature_3
     CloudApp,10,0.80,Basic Storage,API Access,SSO
+isPremium: true
 ---
 
 # Agent Configuration: The Pricing Psychologist

@@ -1,19 +1,20 @@
---- 
-id: "demo-no-show-analyzer"
-category: "Sales Ops"
-title: "No-Show Rate Analyzer"
-tagline: "Why are prospects ghosting demos?"
-difficulty: "Intermediate"
-time: "Monthly"
-archtype: "Processor"
-description: "Analyzes demo logs to calculate no-show rates by Lead Source and Rep."
+---
+id: demo-no-show-analyzer
+category: Sales Ops
+title: No-Show Rate Analyzer
+tagline: Why are prospects ghosting demos?
+difficulty: Intermediate
+time: Monthly
+archtype: Processor
+description: Analyzes demo logs to calculate no-show rates by Lead Source and Rep.
 sampleData:
-  filename: "demo_logs.csv"
+  filename: demo_logs.csv
   content: |
     Rep,Source,Outcome
     John,LinkedIn,Held
     Jane,Cold Call,No Show
     John,Cold Call,No Show
+isPremium: true
 ---
 
 # Agent Configuration: The SDR Manager

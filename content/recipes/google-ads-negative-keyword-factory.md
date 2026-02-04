@@ -2,15 +2,17 @@
 id: google-ads-negative-keyword-factory
 category: Paid Media
 title: The Semantic Negative Keyword Factory
-tagline: Block entire intent clusters (Jobs, Research, Competitors) before they drain your budget.
+tagline: >-
+  Block entire intent clusters (Jobs, Research, Competitors) before they drain
+  your budget.
 difficulty: Intermediate
 time: One-off
 archetype: Processor
 description: >-
   Don't just block "free" and "cheap." This agent builds comprehensive negative
-  keyword lists grouped by 'Intent Categories' (Employment, Educational, Comparison). 
-  It cross-checks your target keywords to prevent accidental blocks and outputs 
-  a CSV ready for direct import into Google Ads Editor.
+  keyword lists grouped by 'Intent Categories' (Employment, Educational,
+  Comparison).  It cross-checks your target keywords to prevent accidental
+  blocks and outputs  a CSV ready for direct import into Google Ads Editor.
 sampleData:
   filename: campaign_profile.csv
   content: |

@@ -15,6 +15,7 @@ sampleData:
     Customer,First_Product,Channel
     John,Sock_Bundle,TikTok
     Jane,Hat,SEO
+isPremium: true
 ---
 # Agent Configuration: The Churn Analyst
 

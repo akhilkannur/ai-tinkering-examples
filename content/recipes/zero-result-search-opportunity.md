@@ -1,18 +1,21 @@
 ---
-id: "zero-result-search-opportunity"
-category: "CRO"
-title: "Zero-Result Search Auditor"
-tagline: "What are people searching for that you don't have?"
-difficulty: "Intermediate"
-time: "Weekly"
-archetype: "Processor"
-description: "Identifies site search terms that yield 0 products to guide merchandising or SEO redirect strategy."
+id: zero-result-search-opportunity
+category: CRO
+title: Zero-Result Search Auditor
+tagline: What are people searching for that you don't have?
+difficulty: Intermediate
+time: Weekly
+archetype: Processor
+description: >-
+  Identifies site search terms that yield 0 products to guide merchandising or
+  SEO redirect strategy.
 sampleData:
-  filename: "search_logs.csv"
+  filename: search_logs.csv
   content: |
     Query,Result_Count
     red shoes,50
     blue suede boots,0
+isPremium: true
 ---
 # Agent Configuration: The Site Merchandiser
 

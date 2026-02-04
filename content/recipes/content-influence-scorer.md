@@ -1,19 +1,22 @@
 ---
-id: "content-influence-scorer"
-category: "Marketing Ops"
-title: "Content Asset Influencer"
-tagline: "Rank assets by how much pipeline they touched."
-difficulty: "Advanced"
-time: "Monthly"
-archetype: "Processor"
-description: "Analyzes content download history against closed deals to find assets with high 'Pipeline Influence'."
+id: content-influence-scorer
+category: Marketing Ops
+title: Content Asset Influencer
+tagline: Rank assets by how much pipeline they touched.
+difficulty: Advanced
+time: Monthly
+archetype: Processor
+description: >-
+  Analyzes content download history against closed deals to find assets with
+  high 'Pipeline Influence'.
 sampleData:
-  filename: "content_deals.csv"
+  filename: content_deals.csv
   content: |
     Deal_ID,Revenue,Asset_Downloaded
     Deal-1,10000,Whitepaper_A
     Deal-1,10000,Guide_B
     Deal-2,5000,Whitepaper_A
+isPremium: true
 ---
 
 # Agent Configuration: The Content Analyst Agent

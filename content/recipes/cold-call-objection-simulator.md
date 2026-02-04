@@ -15,6 +15,7 @@ sampleData:
   content: >
     Hi, this is John from Acme. We help companies save 20% on cloud bills. Is
     this a bad time?
+isPremium: true
 ---
 
 # Agent Configuration: The Cold Call Simulator (Grumpy Prospect)

@@ -1,20 +1,23 @@
---- 
-id: "sales-velocity-trend-monitor"
-category: "Sales Ops"
-title: "Pipeline Velocity Trend"
-tagline: "Is your sales cycle getting longer or shorter?"
-difficulty: "Intermediate"
-time: "Monthly"
-archtype: "Processor"
-description: "Compares average sales cycle time this month vs the trailing 6-month average to spot trends."
+---
+id: sales-velocity-trend-monitor
+category: Sales Ops
+title: Pipeline Velocity Trend
+tagline: Is your sales cycle getting longer or shorter?
+difficulty: Intermediate
+time: Monthly
+archtype: Processor
+description: >-
+  Compares average sales cycle time this month vs the trailing 6-month average
+  to spot trends.
 sampleData:
-  filename: "velocity_trends.csv"
+  filename: velocity_trends.csv
   content: |
     Month,Avg_Cycle_Days
     May,45
     June,46
     July,52
     August,55
+isPremium: true
 ---
 
 # Agent Configuration: The Sales Analyst

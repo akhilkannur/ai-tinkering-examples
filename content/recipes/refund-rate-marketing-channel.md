@@ -15,6 +15,7 @@ sampleData:
     Order,Channel,Status
     1,TikTok,Returned
     2,SEO,Kept
+isPremium: true
 ---
 # Agent Configuration: The Marketing Analyst
 

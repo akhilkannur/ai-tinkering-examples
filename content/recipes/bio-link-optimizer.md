@@ -16,6 +16,7 @@ sampleData:
     1. Check out my blog.
     2. My favorite gear.
     3. Buy my course.
+isPremium: false
 ---
 
 # Agent Configuration: The Bio Link Architect

@@ -2,14 +2,17 @@
 id: crawl-budget-estimator
 category: SEO
 title: The Indexing Strategist
-tagline: Your 10k new pages won't rank if Googlebot ignores them. Predict and fix indexing lag.
+tagline: >-
+  Your 10k new pages won't rank if Googlebot ignores them. Predict and fix
+  indexing lag.
 difficulty: Advanced
 time: Monthly
 archetype: Processor
 description: >-
   Programmatic SEO projects often fail because they flood Googlebot. This agent
-  analyzes your log files to determine your "Daily Crawl Capacity" and recommends
-  specific `robots.txt` blocks to free up budget for your new money pages.
+  analyzes your log files to determine your "Daily Crawl Capacity" and
+  recommends specific `robots.txt` blocks to free up budget for your new money
+  pages.
 sampleData:
   filename: server_logs.csv
   content: |
@@ -17,6 +20,7 @@ sampleData:
     2024-01-01,Googlebot,/product/1,200
     2024-01-01,Googlebot,/search?q=red,200
     2024-01-01,Googlebot,/product/2,200
+isPremium: true
 ---
 
 # Agent Configuration: The Technical SEO

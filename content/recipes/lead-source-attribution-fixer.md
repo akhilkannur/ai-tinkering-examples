@@ -1,14 +1,16 @@
---- 
-id: "lead-source-attribution-fixer"
-category: "Sales Ops"
-title: "Lead Source Normalizer"
-tagline: "Fix messy 'Referral' vs 'referral' vs 'Friend' tags."
-difficulty: "Beginner"
-time: "Weekly"
-archtype: "Processor"
-description: "Standardizes messy lead source data into clean categories (e.g., maps 'fb_ads', 'facebook', 'IG' all to 'Paid Social')."
+---
+id: lead-source-attribution-fixer
+category: Sales Ops
+title: Lead Source Normalizer
+tagline: Fix messy 'Referral' vs 'referral' vs 'Friend' tags.
+difficulty: Beginner
+time: Weekly
+archtype: Processor
+description: >-
+  Standardizes messy lead source data into clean categories (e.g., maps
+  'fb_ads', 'facebook', 'IG' all to 'Paid Social').
 sampleData:
-  filename: "raw_leads.csv"
+  filename: raw_leads.csv
   content: |
     Lead_ID,Source_Raw
     101,google_cpc
@@ -16,6 +18,7 @@ sampleData:
     103,search
     104,fb
     105,Friend
+isPremium: true
 ---
 
 # Agent Configuration: The Data Steward

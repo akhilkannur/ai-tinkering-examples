@@ -16,6 +16,7 @@ sampleData:
     Title: CTO
     Industry: Fintech
     Company Size: 500 employees
+isPremium: true
 ---
 
 # Agent Configuration: The Discovery Call Scripter

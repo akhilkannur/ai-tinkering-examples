@@ -7,13 +7,16 @@ difficulty: Advanced
 time: Batch
 archtype: Processor
 description: >-
-  If you ask cancelled users for a video feedback, this agent watches them. It notes "Anger" vs "Disappointment" and extracts the specific feature request mentioned.
+  If you ask cancelled users for a video feedback, this agent watches them. It
+  notes "Anger" vs "Disappointment" and extracts the specific feature request
+  mentioned.
 sampleData:
   filename: input_data.csv
   content: |
     User_ID,Video_URL
     U101,https://loom.com/share/...
     U102,https://loom.com/share/...
+isPremium: false
 ---
 
 # Agent Configuration: Churn Exit Video Analyzer

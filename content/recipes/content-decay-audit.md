@@ -1,18 +1,21 @@
---- 
-id: "content-decay-audit"
-category: "SEO"
-title: "Content Decay Detector"
-tagline: "Find blog posts losing traffic."
-difficulty: "Intermediate"
-time: "Monthly"
-archtype: "Processor"
-description: "Compares organic traffic from 6 months ago vs today to identify pages needing a refresh."
+---
+id: content-decay-audit
+category: SEO
+title: Content Decay Detector
+tagline: Find blog posts losing traffic.
+difficulty: Intermediate
+time: Monthly
+archtype: Processor
+description: >-
+  Compares organic traffic from 6 months ago vs today to identify pages needing
+  a refresh.
 sampleData:
-  filename: "traffic_stats.csv"
+  filename: traffic_stats.csv
   content: |
     Page,Traffic_6m_Ago,Traffic_Last_Month
     /blog/guide-1,1000,200
     /blog/guide-2,500,550
+isPremium: true
 ---
 
 # Agent Configuration: The Content Strategist

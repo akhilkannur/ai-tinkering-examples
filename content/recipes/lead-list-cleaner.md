@@ -22,6 +22,7 @@ sampleData:
     Stripe,https://stripe.com,Patrick,patrick@stripe.com
 
     Broken Link,https://httpstat.us/404,Test User,test@broken.com
+isPremium: true
 ---
 
 # Agent Configuration: The Lead List Cleaner

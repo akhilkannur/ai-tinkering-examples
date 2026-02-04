@@ -15,6 +15,7 @@ sampleData:
     User,Feature_Clicked,Count
     Acme,API Access,5
     Beta,SSO,1
+isPremium: true
 ---
 # Agent Configuration: The Sales Assist Agent
 

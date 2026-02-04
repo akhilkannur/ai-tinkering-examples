@@ -15,6 +15,7 @@ sampleData:
     User,Brand_Bought
     John,Nike
     Jane,Adidas
+isPremium: true
 ---
 # Agent Configuration: The Merchandising Marketer
 

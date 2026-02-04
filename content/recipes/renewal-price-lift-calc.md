@@ -15,6 +15,7 @@ sampleData:
     Account,Current_Price
     Acme,10000
     Beta,5000
+isPremium: true
 ---
 
 # Agent Configuration: The Expansion Revenue Architect

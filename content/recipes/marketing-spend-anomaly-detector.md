@@ -1,19 +1,22 @@
---- 
-id: "marketing-spend-anomaly-detector"
-category: "Marketing Ops"
-title: "Ad Spend Spike Alert"
-tagline: "Catch runaway budgets before they burn 10k."
-difficulty: "Intermediate"
-time: "Daily"
-archtype: "Processor"
-description: "Compares yesterday's ad spend against a moving average. Flags deviations > 20%."
+---
+id: marketing-spend-anomaly-detector
+category: Marketing Ops
+title: Ad Spend Spike Alert
+tagline: Catch runaway budgets before they burn 10k.
+difficulty: Intermediate
+time: Daily
+archtype: Processor
+description: >-
+  Compares yesterday's ad spend against a moving average. Flags deviations >
+  20%.
 sampleData:
-  filename: "daily_spend.csv"
+  filename: daily_spend.csv
   content: |
     Date,Platform,Spend
     2023-10-01,Facebook,500
     2023-10-02,Facebook,520
     2023-10-03,Facebook,2000
+isPremium: true
 ---
 
 # Agent Configuration: The Budget Controller

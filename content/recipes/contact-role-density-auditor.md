@@ -1,18 +1,21 @@
 ---
-id: "contact-role-density-auditor"
-category: "Sales Ops"
-title: "Account Stakeholder Density"
-tagline: "Ensure top accounts have >3 contacts."
-difficulty: "Beginner"
-time: "Weekly"
-archetype: "Processor"
-description: "Audits high-value accounts to flag those with insufficient contact coverage (under-mapped accounts)."
+id: contact-role-density-auditor
+category: Sales Ops
+title: Account Stakeholder Density
+tagline: Ensure top accounts have >3 contacts.
+difficulty: Beginner
+time: Weekly
+archetype: Processor
+description: >-
+  Audits high-value accounts to flag those with insufficient contact coverage
+  (under-mapped accounts).
 sampleData:
-  filename: "account_coverage.csv"
+  filename: account_coverage.csv
   content: |
     Account,Annual_Revenue,Contact_Count
     Acme Corp,1M,5
     Beta Inc,500k,1
+isPremium: true
 ---
 
 # Agent Configuration: The Account Mapping Agent

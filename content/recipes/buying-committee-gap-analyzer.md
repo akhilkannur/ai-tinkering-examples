@@ -1,19 +1,22 @@
---- 
-id: "buying-committee-gap-analyzer"
-category: "Sales Ops"
-title: "Buying Committee Auditor"
-tagline: "Find missing key roles in your target accounts."
-difficulty: "Intermediate"
-time: "Weekly"
-archtype: "Processor"
-description: "Checks target accounts to see if you have contacts for required roles like CTO, Finance, or User Lead."
+---
+id: buying-committee-gap-analyzer
+category: Sales Ops
+title: Buying Committee Auditor
+tagline: Find missing key roles in your target accounts.
+difficulty: Intermediate
+time: Weekly
+archtype: Processor
+description: >-
+  Checks target accounts to see if you have contacts for required roles like
+  CTO, Finance, or User Lead.
 sampleData:
-  filename: "account_contacts.csv"
+  filename: account_contacts.csv
   content: |
     Account,Contact_Name,Role
     Acme Corp,John Doe,CEO
     Acme Corp,Jane Smith,VP Sales
     Beta Inc,Bob Hill,CTO
+isPremium: true
 ---
 
 # Agent Configuration: The Sales Ops Analyst

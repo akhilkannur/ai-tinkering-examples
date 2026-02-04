@@ -1,19 +1,22 @@
 ---
-id: "opportunity-stage-age-histogram"
-category: "Sales Ops"
-title: "Stage Aging Histogram"
-tagline: "Visualize the distribution of deal age in each stage."
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Aggregates open deals by stage and age to create a distribution report of pipeline freshness."
+id: opportunity-stage-age-histogram
+category: Sales Ops
+title: Stage Aging Histogram
+tagline: Visualize the distribution of deal age in each stage.
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Aggregates open deals by stage and age to create a distribution report of
+  pipeline freshness.
 sampleData:
-  filename: "stage_age.csv"
+  filename: stage_age.csv
   content: |
     Deal,Stage,Days_In_Stage
     Deal A,Discovery,5
     Deal B,Discovery,40
     Deal C,Demo,10
+isPremium: true
 ---
 
 # Agent Configuration: The Pipeline Hygiene Agent

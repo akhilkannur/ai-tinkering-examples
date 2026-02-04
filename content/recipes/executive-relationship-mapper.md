@@ -1,18 +1,21 @@
 ---
-id: "executive-relationship-mapper"
-category: "Sales Ops"
-title: "Executive Network Mapper"
-tagline: "Map executive relationships via calendar data."
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Analyzes meeting logs to visualize which executives are already engaged with your team."
+id: executive-relationship-mapper
+category: Sales Ops
+title: Executive Network Mapper
+tagline: Map executive relationships via calendar data.
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Analyzes meeting logs to visualize which executives are already engaged with
+  your team.
 sampleData:
-  filename: "meetings.csv"
+  filename: meetings.csv
   content: |
     Team_Member,Prospect_Name,Prospect_Title,Account
     CEO,Big Boss,CEO,Acme Corp
     AE,John Manager,Director,Acme Corp
+isPremium: true
 ---
 
 # Agent Configuration: The Strategic Account Agent

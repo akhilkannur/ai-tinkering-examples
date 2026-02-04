@@ -7,9 +7,9 @@ difficulty: Intermediate
 time: 20 mins
 archetype: Researcher
 description: >-
-  Niche newsletters are the most undervalued ad channel. This agent searches directories 
-  (Reletter, Paved, Substack) and Google to find newsletters in your industry that 
-  actively accept sponsorships.
+  Niche newsletters are the most undervalued ad channel. This agent searches
+  directories  (Reletter, Paved, Substack) and Google to find newsletters in
+  your industry that  actively accept sponsorships.
 sampleData:
   filename: newsletter_niche.csv
   content: |
@@ -17,6 +17,7 @@ sampleData:
     "SaaS Marketing"
     "React Developers"
     "Crypto News"
+isPremium: true
 ---
 
 # Agent Configuration: The Newsletter Sponsor Finder

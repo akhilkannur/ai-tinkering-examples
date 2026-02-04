@@ -20,6 +20,7 @@ sampleData:
     Sales Rep: Who else needs to sign off?
 
     Prospect: Just me and the CTO. We want to be live by October.
+isPremium: true
 ---
 
 # Agent Configuration: The BANT Transcript Analyzer

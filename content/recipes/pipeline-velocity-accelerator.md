@@ -1,18 +1,21 @@
 ---
-id: "pipeline-velocity-accelerator"
-category: "Sales Ops"
-title: "Slow Deal Accelerator"
-tagline: "Wake up deals moving slower than average."
-difficulty: "Intermediate"
-time: "Weekly"
-archetype: "Processor"
-description: "Identifies deals that are currently moving slower than the historical average for their stage and flags them for action."
+id: pipeline-velocity-accelerator
+category: Sales Ops
+title: Slow Deal Accelerator
+tagline: Wake up deals moving slower than average.
+difficulty: Intermediate
+time: Weekly
+archetype: Processor
+description: >-
+  Identifies deals that are currently moving slower than the historical average
+  for their stage and flags them for action.
 sampleData:
-  filename: "deal_velocity.csv"
+  filename: deal_velocity.csv
   content: |
     Deal,Stage,Days_Current,Avg_Days_Allowed
     1,Demo,15,10
     2,Demo,5,10
+isPremium: true
 ---
 
 # Agent Configuration: The Sales Manager

@@ -16,6 +16,7 @@ sampleData:
     /home,Yes
     /landing-old,No
     /pricing,Yes
+isPremium: true
 ---
 
 # Agent Configuration: The Technical SEO

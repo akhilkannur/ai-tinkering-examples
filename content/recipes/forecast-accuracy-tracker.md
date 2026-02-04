@@ -1,18 +1,21 @@
---- 
-id: "forecast-accuracy-tracker"
-category: "Sales Ops"
-title: "Forecast vs Actuals Tracker"
-tagline: "Which rep is sandbagging?"
-difficulty: "Intermediate"
-time: "Monthly"
-archtype: "Processor"
-description: "Compares the 'Committed' forecast from the start of the month against actual closed revenue."
+---
+id: forecast-accuracy-tracker
+category: Sales Ops
+title: Forecast vs Actuals Tracker
+tagline: Which rep is sandbagging?
+difficulty: Intermediate
+time: Monthly
+archtype: Processor
+description: >-
+  Compares the 'Committed' forecast from the start of the month against actual
+  closed revenue.
 sampleData:
-  filename: "forecasts.csv"
+  filename: forecasts.csv
   content: |
     Rep,Forecast_Commit,Actual_Closed
     John,50000,45000
     Jane,20000,40000
+isPremium: true
 ---
 
 # Agent Configuration: The Sales Ops Manager

@@ -1,4 +1,4 @@
---- 
+---
 id: twitter-space-scribe
 category: Content Ops
 title: Twitter Space Scribe
@@ -7,12 +7,14 @@ difficulty: Intermediate
 time: Batch
 archetype: Processor
 description: >-
-  Takes a transcript of a Twitter Space/Clubhouse. Extracts the "Golden Nuggets" and formats them into a viral thread style.
+  Takes a transcript of a Twitter Space/Clubhouse. Extracts the "Golden Nuggets"
+  and formats them into a viral thread style.
 sampleData:
   filename: input_data.csv
   content: |
     Transcript_Text,Speakers
     "So the key is consistency...",@naval
+isPremium: true
 ---
 
 # Agent Configuration: Twitter Space Scribe

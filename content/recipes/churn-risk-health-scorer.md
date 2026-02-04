@@ -7,8 +7,9 @@ difficulty: Advanced
 time: Weekly
 archetype: Processor
 description: >-
-  Most health scores are static snapshots. This agent analyzes the *change* in behavior
-  (Usage Velocity) to flag customers who are silently disengaging, even if their total numbers look fine.
+  Most health scores are static snapshots. This agent analyzes the *change* in
+  behavior (Usage Velocity) to flag customers who are silently disengaging, even
+  if their total numbers look fine.
 sampleData:
   filename: health_trends.csv
   content: |
@@ -16,6 +17,7 @@ sampleData:
     Acme Corp,100,70,5
     Globex,50,55,0
     Stark Ind,200,10,2
+isPremium: true
 ---
 
 # Agent Configuration: The Retention Analyst

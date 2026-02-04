@@ -15,6 +15,7 @@ sampleData:
     Customer,Score,Date
     Acme,10,2023-10-01
     Beta,5,2023-10-01
+isPremium: true
 ---
 # Agent Configuration: The Review Manager
 

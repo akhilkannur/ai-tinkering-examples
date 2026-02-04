@@ -1,20 +1,24 @@
 ---
-id: "renewal-save-rate-tracker"
-category: "Customer Success"
-title: "The Save Playbook Auditor"
-tagline: "Which retention tactic actually works? (Discount vs Roadmap)."
-difficulty: "Beginner"
-time: "Monthly"
-archetype: "Processor"
-description: "Not all 'Saves' are created equal. This agent analyzes your churn save attempts to determine which tactic (Discount, Executive Call, Roadmap Promise) actually convinces customers to stay."
+id: renewal-save-rate-tracker
+category: Customer Success
+title: The Save Playbook Auditor
+tagline: Which retention tactic actually works? (Discount vs Roadmap).
+difficulty: Beginner
+time: Monthly
+archetype: Processor
+description: >-
+  Not all 'Saves' are created equal. This agent analyzes your churn save
+  attempts to determine which tactic (Discount, Executive Call, Roadmap Promise)
+  actually convinces customers to stay.
 sampleData:
-  filename: "save_attempts.csv"
+  filename: save_attempts.csv
   content: |
     Customer,Tactic_Used,Outcome
     Acme,Discount 10%,Churned
     Beta,Executive Call,Renewed
     Gamma,Roadmap Promise,Renewed
     Delta,Discount 10%,Churned
+isPremium: true
 ---
 
 # Agent Configuration: The CS Enablement Lead

@@ -16,6 +16,7 @@ sampleData:
     Domain
     brand-a.com
     brand-b.com
+isPremium: true
 ---
 
 # Agent Configuration: The Ad-Pixel Arbitrage

@@ -17,6 +17,7 @@ sampleData:
     Vanta,https://vanta.com,Compliance
     Mercury,https://mercury.com,Banking
     Loom,https://loom.com,Video Messaging
+isPremium: false
 ---
 
 # Agent Configuration: The Case Study Decoder

@@ -12,9 +12,12 @@ description: >-
   keyword (e.g., "AI Sales") but forgot to link to your new Guide.
 sampleData:
   filename: link_targets.csv
-  content: |
+  content: >
     Sitemap_URL,Target_Keyword,Target_Dest_URL
-    https://realaiexamples.com/sitemap.xml,AI Blueprints,https://realaiexamples.com/blueprints
+
+    https://realaiexamples.com/sitemap.xml,AI
+    Blueprints,https://realaiexamples.com/blueprints
+isPremium: true
 ---
 
 # Agent Configuration: The Networker

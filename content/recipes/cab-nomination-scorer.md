@@ -15,6 +15,7 @@ sampleData:
     Customer,Spend,Tenure_Yrs,Strategic_Fit
     Acme,1M,5,High
     Beta,10k,1,Low
+isPremium: false
 ---
 # Agent Configuration: The Executive Sponsor
 

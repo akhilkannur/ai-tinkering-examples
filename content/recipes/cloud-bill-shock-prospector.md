@@ -16,6 +16,7 @@ sampleData:
     Company_Domain,Cloud_Provider
     acme-corp.com,AWS
     globex-tech.io,Azure
+isPremium: true
 ---
 
 # Agent Configuration: The Cloud Bill Shock Hunter

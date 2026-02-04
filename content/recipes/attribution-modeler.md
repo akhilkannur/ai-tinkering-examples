@@ -16,6 +16,7 @@ sampleData:
     Path_ID,Touchpoints,Conversion_Value
     1,Facebook > Google > Direct,100
     2,Google > Direct,50
+isPremium: false
 ---
 
 # Agent Configuration: The Data Scientist

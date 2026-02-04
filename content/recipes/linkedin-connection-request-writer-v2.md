@@ -21,6 +21,7 @@ sampleData:
     National Park.
 
     Recent Post: "Big news! TechFlow just raised our Series B."
+isPremium: true
 ---
 
 # Agent Configuration: The Non-Cringe LinkedIn Connector

@@ -16,6 +16,7 @@ sampleData:
     Tech_Name,ICP_Revenue_Min
     Marketo,10000000
     HubSpot,1000000
+isPremium: true
 ---
 
 # Agent Configuration: The Tech Displacement Factory

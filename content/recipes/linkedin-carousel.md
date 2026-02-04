@@ -2,13 +2,13 @@
 id: linkedin-carousel
 category: Content Ops
 title: The Carousel Architect
-tagline: Convert blog posts into high-retention slides (Hooks, Lists, CTAs).
+tagline: 'Convert blog posts into high-retention slides (Hooks, Lists, CTAs).'
 difficulty: Beginner
 time: 10 mins
 archetype: Hybrid
 description: >-
-  Don't just copy-paste text. This agent reads your blog post URL, identifies the
-  core "Listicle" structure (H2 headers), and rewrites it into a viral-style
+  Don't just copy-paste text. This agent reads your blog post URL, identifies
+  the core "Listicle" structure (H2 headers), and rewrites it into a viral-style
   PDF carousel script with strong hooks and clear visual cues.
 sampleData:
   filename: posts_to_convert.csv
@@ -16,6 +16,7 @@ sampleData:
     URL
     https://realaiexamples.com/blog/ai-sales-agents
     https://realaiexamples.com/blog/seo-is-dead
+isPremium: true
 ---
 
 # Agent Configuration: The Carousel Architect

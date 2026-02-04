@@ -16,6 +16,7 @@ sampleData:
     john@gmail.com,2022-01-01,Webinar
     sarah@enterprise.com,2022-05-01,Trade Show
     mike@startup.io,2023-10-01,Inbound
+isPremium: true
 ---
 
 # Agent Configuration: The CRM Data Hygienist

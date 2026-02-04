@@ -1,19 +1,23 @@
 ---
-id: "paid-search-quality-score-auditor"
-category: "Marketing Ops"
-title: "The CPC Savings Calculator"
-tagline: "Calculate exactly how much money you save by improving ad relevance."
-difficulty: "Intermediate"
-time: "Weekly"
-archetype: "Processor"
-description: "Quality Score (QS) isn't just a vanity metric; it's a discount code. This agent analyzes your keyword data to calculate the exact dollar amount you are overpaying due to low QS, and prioritizes fixes by 'Potential Savings'."
+id: paid-search-quality-score-auditor
+category: Marketing Ops
+title: The CPC Savings Calculator
+tagline: Calculate exactly how much money you save by improving ad relevance.
+difficulty: Intermediate
+time: Weekly
+archetype: Processor
+description: >-
+  Quality Score (QS) isn't just a vanity metric; it's a discount code. This
+  agent analyzes your keyword data to calculate the exact dollar amount you are
+  overpaying due to low QS, and prioritizes fixes by 'Potential Savings'.
 sampleData:
-  filename: "qs_metrics.csv"
+  filename: qs_metrics.csv
   content: |
     Keyword,Quality_Score,Avg_CPC,Clicks,Monthly_Spend
     "best crm",5,12.00,100,1200
     "sales software",9,8.00,500,4000
     "cheap crm",3,15.00,50,750
+isPremium: true
 ---
 
 # Agent Configuration: The PPC Economist

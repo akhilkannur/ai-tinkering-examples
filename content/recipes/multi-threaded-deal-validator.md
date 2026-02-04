@@ -1,19 +1,22 @@
 ---
-id: "multi-threaded-deal-validator"
-category: "Sales Ops"
-title: "Single-Thread Risk Detector"
-tagline: "Flag deals that only have one active contact."
-difficulty: "Beginner"
-time: "Weekly"
-archetype: "Processor"
-description: "Checks open opportunities to ensure they are 'multi-threaded' (having more than 1 active stakeholder)."
+id: multi-threaded-deal-validator
+category: Sales Ops
+title: Single-Thread Risk Detector
+tagline: Flag deals that only have one active contact.
+difficulty: Beginner
+time: Weekly
+archetype: Processor
+description: >-
+  Checks open opportunities to ensure they are 'multi-threaded' (having more
+  than 1 active stakeholder).
 sampleData:
-  filename: "opportunities.csv"
+  filename: opportunities.csv
   content: |
     Opportunity,Contact_Count
     Deal A,1
     Deal B,4
     Deal C,1
+isPremium: true
 ---
 
 # Agent Configuration: The Pipeline Integrity Agent

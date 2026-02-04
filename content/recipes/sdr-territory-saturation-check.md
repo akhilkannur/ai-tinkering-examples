@@ -1,19 +1,22 @@
---- 
-id: "sdr-territory-saturation-check"
-category: "Sales Ops"
-title: "Territory Saturation Auditor"
-tagline: "Are your SDRs actually touching all their Tier 1s?"
-difficulty: "Intermediate"
-time: "Weekly"
-archtype: "Processor"
-description: "Calculates the % of Tier 1 accounts in a territory that have received at least one activity in the last 30 days."
+---
+id: sdr-territory-saturation-check
+category: Sales Ops
+title: Territory Saturation Auditor
+tagline: Are your SDRs actually touching all their Tier 1s?
+difficulty: Intermediate
+time: Weekly
+archtype: Processor
+description: >-
+  Calculates the % of Tier 1 accounts in a territory that have received at least
+  one activity in the last 30 days.
 sampleData:
-  filename: "saturation.csv"
+  filename: saturation.csv
   content: |
     Account,Tier,Last_Activity
     Acme,1,2023-10-01
     Beta,1,2022-01-01
     Gamma,2,2023-10-05
+isPremium: true
 ---
 
 # Agent Configuration: The SDR Director

@@ -15,6 +15,7 @@ sampleData:
     Comment_Text,User
     Love this!,User A
     Too expensive compared to [Us],User B
+isPremium: true
 ---
 # Agent Configuration: The Social Prospector
 

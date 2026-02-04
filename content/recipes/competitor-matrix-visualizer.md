@@ -27,6 +27,7 @@ sampleOutput: |
   24/7 Support,Yes,No,Yes
   Free Tier,No,Yes,Yes
   API Access,Yes,Add-on ($),No
+isPremium: true
 ---
 
 # Agent Configuration: The Feature Parity Matrix

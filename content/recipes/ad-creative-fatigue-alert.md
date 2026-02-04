@@ -1,18 +1,21 @@
 ---
-id: "ad-creative-fatigue-alert"
-category: "Paid Media"
-title: "Creative Fatigue Watchdog"
-tagline: "Know when your ads stop working."
-difficulty: "Intermediate"
-time: "Weekly"
-archetype: "Processor"
-description: "Flags ad creatives where the Click-Through Rate (CTR) has dropped by 50% week-over-week, indicating fatigue."
+id: ad-creative-fatigue-alert
+category: Paid Media
+title: Creative Fatigue Watchdog
+tagline: Know when your ads stop working.
+difficulty: Intermediate
+time: Weekly
+archetype: Processor
+description: >-
+  Flags ad creatives where the Click-Through Rate (CTR) has dropped by 50%
+  week-over-week, indicating fatigue.
 sampleData:
-  filename: "ad_performance.csv"
+  filename: ad_performance.csv
   content: |
     Ad_ID,Week_1_CTR,Week_2_CTR
     Ad_A,2.0,1.9
     Ad_B,2.0,0.8
+isPremium: false
 ---
 # Agent Configuration: The Creative Strategist
 

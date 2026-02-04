@@ -1,22 +1,25 @@
---- 
-id: "lead-to-account-matcher"
-category: "Sales Ops"
-title: "Lead-to-Account Matcher"
-tagline: "Auto-associate leads with existing accounts via domain."
-difficulty: "Intermediate"
-time: "Daily"
-archtype: "Processor"
-description: "Fuzzy matches incoming leads to existing account records to prevent duplicate outreach and improve routing."
+---
+id: lead-to-account-matcher
+category: Sales Ops
+title: Lead-to-Account Matcher
+tagline: Auto-associate leads with existing accounts via domain.
+difficulty: Intermediate
+time: Daily
+archtype: Processor
+description: >-
+  Fuzzy matches incoming leads to existing account records to prevent duplicate
+  outreach and improve routing.
 sampleData:
-  filename: "matching_task.txt"
+  filename: matching_task.txt
   content: |
     [New Leads]
     john@acme.com
     bob@tesla.com
-    
+
     [Accounts]
     Acme Corporation, acme.com
     Tesla Inc, tesla.com
+isPremium: true
 ---
 
 # Agent Configuration: The Sales Architect

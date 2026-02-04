@@ -17,6 +17,7 @@ sampleData:
     Basic Plan,29,https://competitor.com/pricing
     Pro Plan,99,https://competitor.com/pricing
     Enterprise,299,https://competitor.com/enterprise
+isPremium: true
 ---
 
 # Agent Configuration: The Pricing Strategist

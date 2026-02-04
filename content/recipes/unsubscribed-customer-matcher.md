@@ -14,6 +14,7 @@ sampleData:
   content: |
     Email,Phone,Name
     john@acme.com,555-1234,John Doe
+isPremium: true
 ---
 # Agent Configuration: The Ad Ops Specialist
 

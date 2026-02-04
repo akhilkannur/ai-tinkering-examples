@@ -1,18 +1,21 @@
 ---
-id: "paid-social-frequency-cap-auditor"
-category: "Marketing Ops"
-title: "Ad Fatigue Auditor"
-tagline: "Identify campaigns with dangerously high frequency."
-difficulty: "Beginner"
-time: "Daily"
-archetype: "Processor"
-description: "Checks ad delivery logs to flag campaigns where average frequency exceeds healthy limits (e.g. > 4.0)."
+id: paid-social-frequency-cap-auditor
+category: Marketing Ops
+title: Ad Fatigue Auditor
+tagline: Identify campaigns with dangerously high frequency.
+difficulty: Beginner
+time: Daily
+archetype: Processor
+description: >-
+  Checks ad delivery logs to flag campaigns where average frequency exceeds
+  healthy limits (e.g. > 4.0).
 sampleData:
-  filename: "ad_stats.csv"
+  filename: ad_stats.csv
   content: |
     Campaign,Reach,Impressions
     Retargeting_US,1000,8000
     Prospecting_US,10000,12000
+isPremium: true
 ---
 
 # Agent Configuration: The Paid Media Agent

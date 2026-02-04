@@ -16,6 +16,7 @@ sampleData:
     Website: www.hubspot.com
     Audience: Marketing Managers, Sales Leaders
     Goal: Capture leads for CRM software.
+isPremium: true
 ---
 
 # Agent Configuration: The Lead Magnet Factory

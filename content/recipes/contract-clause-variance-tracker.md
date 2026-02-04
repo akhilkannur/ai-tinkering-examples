@@ -7,9 +7,10 @@ difficulty: Advanced
 time: Monthly
 archetype: Processor
 description: >-
-  Legal teams hate "Redlines," but CFOs hate "Hidden Risk." This agent scans your
-  contract text for dangerous non-standard clauses (e.g., "Termination for
-  Convenience") and sums up the total Revenue At Risk to prioritize legal review.
+  Legal teams hate "Redlines," but CFOs hate "Hidden Risk." This agent scans
+  your contract text for dangerous non-standard clauses (e.g., "Termination for
+  Convenience") and sums up the total Revenue At Risk to prioritize legal
+  review.
 sampleData:
   filename: contract_text.csv
   content: |
@@ -17,6 +18,7 @@ sampleData:
     Acme,50000,"Standard terms apply."
     Beta,100000,"Customer may terminate for convenience with 30 days notice."
     Gamma,20000,"Payment terms: Net 90."
+isPremium: true
 ---
 # Agent Configuration: The Risk Officer
 

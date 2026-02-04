@@ -16,6 +16,7 @@ sampleData:
     Alice,alice@example.com,Attended,45
     Bob,bob@example.com,No Show,0
     Charlie,charlie@example.com,Attended,5
+isPremium: false
 ---
 
 # Agent Configuration: The Webinar Follow-Up Architect

@@ -7,8 +7,8 @@ difficulty: Intermediate
 time: Daily
 archetype: Hybrid
 description: >-
-  Hiring is the strongest signal of budget. This agent monitors the careers pages
-  of target accounts for specific job titles (e.g., "VP of Sales," "React
+  Hiring is the strongest signal of budget. This agent monitors the careers
+  pages of target accounts for specific job titles (e.g., "VP of Sales," "React
   Developer") and alerts you immediately so you can pitch your tool as part of
   their new stack.
 sampleData:
@@ -17,6 +17,7 @@ sampleData:
     Company_Domain,Job_Keyword
     airbnb.com,"Sales Operations"
     notion.so,"Head of Marketing"
+isPremium: true
 ---
 
 # Agent Configuration: The Hiring Intent Trigger

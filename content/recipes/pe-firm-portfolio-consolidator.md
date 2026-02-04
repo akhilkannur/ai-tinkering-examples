@@ -9,7 +9,8 @@ archetype: Researcher
 description: >-
   Private Equity (PE) firms love to consolidate vendors across their portfolio.
   If you sell to one Vista Equity company, you can likely sell to *all* of them.
-  This agent maps the full portfolio of a target PE firm to enable a "Land and Expand" strategy.
+  This agent maps the full portfolio of a target PE firm to enable a "Land and
+  Expand" strategy.
 sampleData:
   filename: pe_firms.csv
   content: |
@@ -17,6 +18,7 @@ sampleData:
     Vista Equity Partners
     Thoma Bravo
     Insight Partners
+isPremium: true
 ---
 
 # Agent Configuration: The PE Rollup Hunter

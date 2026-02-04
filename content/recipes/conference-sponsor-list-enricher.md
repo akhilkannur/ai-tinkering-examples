@@ -8,13 +8,14 @@ time: 15 mins
 archetype: Researcher
 description: >-
   Companies sponsoring conferences have marketing budget. This agent takes a
-  conference "Sponsors" page URL, scrapes the logos/names, and enriches them with
-  CMO contact info to pitch booth services, event tech, or lead gen.
+  conference "Sponsors" page URL, scrapes the logos/names, and enriches them
+  with CMO contact info to pitch booth services, event tech, or lead gen.
 sampleData:
   filename: conference_url.txt
   content: |
     https://saastrannual2024.com/sponsors
     https://dreamforce.com/sponsors
+isPremium: true
 ---
 
 # Agent Configuration: The Sponsor List Enricher

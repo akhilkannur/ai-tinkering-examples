@@ -7,13 +7,15 @@ difficulty: Intermediate
 time: Batch
 archtype: Processor
 description: >-
-  Analyzes call logs from Vapi/Bland AI. Identifies the specific script line that causes the most "Hangups" or "Confusion" and rewrites it for better flow.
+  Analyzes call logs from Vapi/Bland AI. Identifies the specific script line
+  that causes the most "Hangups" or "Confusion" and rewrites it for better flow.
 sampleData:
   filename: input_data.csv
   content: |
     Call_ID,Transcript_Snippet,Outcome
     101,"Hello I am calling from...",Hangup
     102,"I can help with...",Success
+isPremium: true
 ---
 
 # Agent Configuration: Voice Agent Script Improver

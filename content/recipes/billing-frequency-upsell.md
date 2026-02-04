@@ -15,6 +15,7 @@ sampleData:
     Customer,Plan_Type,Tenure_Months
     Acme,Monthly,12
     Beta,Monthly,1
+isPremium: true
 ---
 # Agent Configuration: The Growth Marketer
 

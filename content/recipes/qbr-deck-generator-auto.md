@@ -1,4 +1,4 @@
---- 
+---
 id: qbr-deck-generator-auto
 category: Customer Success
 title: QBR Deck Generator
@@ -7,12 +7,14 @@ difficulty: Intermediate
 time: Batch
 archetype: Processor
 description: >-
-  Ingests usage data and ROI metrics. Generates the text for a 5-slide QBR: "Executive Summary", "Usage Trends", "ROI Achieved", "Next Quarter Goals".
+  Ingests usage data and ROI metrics. Generates the text for a 5-slide QBR:
+  "Executive Summary", "Usage Trends", "ROI Achieved", "Next Quarter Goals".
 sampleData:
   filename: input_data.csv
   content: |
     Account_Name,ROI_Metric
     Acme Corp,$50k Saved
+isPremium: true
 ---
 
 # Agent Configuration: QBR Deck Generator

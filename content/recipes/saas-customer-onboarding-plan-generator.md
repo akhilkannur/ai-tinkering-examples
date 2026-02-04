@@ -18,6 +18,7 @@ sampleData:
     lonely@client.com,TRUE,FALSE,FALSE
     stuck@client.com,TRUE,TRUE,FALSE
     power@client.com,TRUE,TRUE,TRUE
+isPremium: true
 ---
 
 # Agent Configuration: The Behavioral Psychologist

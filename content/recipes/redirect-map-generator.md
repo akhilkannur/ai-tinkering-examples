@@ -2,14 +2,15 @@
 id: redirect-map-generator
 category: SEO
 title: The Migration Doctor
-tagline: Map 10,000 URLs without writing 10,000 lines of code.
+tagline: 'Map 10,000 URLs without writing 10,000 lines of code.'
 difficulty: Advanced
 time: Batch
 archetype: Processor
 description: >-
   Mapping redirects one-by-one is slow and slows down your server. This agent
   analyzes your URL list to find common patterns (e.g., folder changes) and
-  generates optimized Regex rules for Nginx/Apache instead of 1,000 individual lines.
+  generates optimized Regex rules for Nginx/Apache instead of 1,000 individual
+  lines.
 sampleData:
   filename: legacy_urls.csv
   content: |
@@ -17,6 +18,7 @@ sampleData:
     /blog/2023/post-1,/blog/post-1
     /blog/2023/post-2,/blog/post-2
     /shop/category/shoes,/collections/shoes
+isPremium: true
 ---
 
 # Agent Configuration: The DevOps Engineer

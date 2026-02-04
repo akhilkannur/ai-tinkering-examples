@@ -1,18 +1,21 @@
 ---
-id: "pipeline-stagnation-by-product"
-category: "Sales Ops"
-title: "Product Stagnation Analyzer"
-tagline: "Does Product A stall deals?"
-difficulty: "Advanced"
-time: "Monthly"
-archetype: "Processor"
-description: "Correlates 'Days in Stage' with the 'Product Line' attached to the deal to see if complex products slow down cycles."
+id: pipeline-stagnation-by-product
+category: Sales Ops
+title: Product Stagnation Analyzer
+tagline: Does Product A stall deals?
+difficulty: Advanced
+time: Monthly
+archetype: Processor
+description: >-
+  Correlates 'Days in Stage' with the 'Product Line' attached to the deal to see
+  if complex products slow down cycles.
 sampleData:
-  filename: "deal_products.csv"
+  filename: deal_products.csv
   content: |
     Deal,Product,Days_To_Close
     1,Basic,30
     2,Enterprise,90
+isPremium: true
 ---
 
 # Agent Configuration: The Product Sales Lead

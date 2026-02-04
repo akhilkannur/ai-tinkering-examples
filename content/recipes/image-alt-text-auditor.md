@@ -16,6 +16,7 @@ sampleData:
     nike-running-shoe-v2.jpg,,Running Shoes
     logo.png,Company Logo,Brand
     img_5592.jpg,,Office Culture
+isPremium: true
 ---
 
 # Agent Configuration: The SEO Accessibility Fixer

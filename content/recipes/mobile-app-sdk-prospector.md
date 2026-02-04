@@ -7,15 +7,16 @@ difficulty: Advanced
 time: 20 mins
 archetype: Analyst
 description: >-
-  Mobile apps run on SDKs (Stripe for payments, Twilio for chat, Mapbox for maps).
-  This agent analyzes Android/iOS app packages (conceptually via data providers
-  like AppBrain or Mixrank) to find apps installing *competitor* SDKs.
+  Mobile apps run on SDKs (Stripe for payments, Twilio for chat, Mapbox for
+  maps). This agent analyzes Android/iOS app packages (conceptually via data
+  providers like AppBrain or Mixrank) to find apps installing *competitor* SDKs.
 sampleData:
   filename: sdk_competitors.csv
   content: |
     Competitor_SDK
     com.stripe.android
     io.intercom.android
+isPremium: true
 ---
 
 # Agent Configuration: The SDK Sniper

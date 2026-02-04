@@ -7,9 +7,9 @@ difficulty: Intermediate
 time: Monthly
 archetype: Processor
 description: >-
-  Blind price increases cause churn. This agent reviews customer utilization rates
-  before generating the renewal quote. High users get an upsell; low users get a
-  "retention offer" to prevent them from shopping around.
+  Blind price increases cause churn. This agent reviews customer utilization
+  rates before generating the renewal quote. High users get an upsell; low users
+  get a "retention offer" to prevent them from shopping around.
 sampleData:
   filename: renewal_data.csv
   content: |
@@ -17,6 +17,7 @@ sampleData:
     PowerUsers Inc,10000,0.95,50
     GhostTown LLC,10000,0.30,50
     AverageJoes,5000,0.70,10
+isPremium: true
 ---
 
 # Agent Configuration: The Renewal Negotiator

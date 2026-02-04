@@ -16,6 +16,7 @@ sampleData:
     Lead to Meeting,1000,50,5%
     Meeting to Opp,50,40,80%
     Opp to Close,40,10,25%
+isPremium: true
 ---
 
 # Agent Configuration: The Pipeline Leak Detector

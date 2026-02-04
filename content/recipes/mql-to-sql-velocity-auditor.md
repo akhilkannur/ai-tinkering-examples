@@ -1,18 +1,21 @@
 ---
-id: "mql-to-sql-velocity-auditor"
-category: "Sales Ops"
-title: "MQL Follow-up Velocity"
-tagline: "Measure how fast Sales accepts Marketing leads."
-difficulty: "Beginner"
-time: "Weekly"
-archetype: "Processor"
-description: "Measures the time gap between 'Lead Status = MQL' and 'Lead Status = Accepted' to identify routing or follow-up lags."
+id: mql-to-sql-velocity-auditor
+category: Sales Ops
+title: MQL Follow-up Velocity
+tagline: Measure how fast Sales accepts Marketing leads.
+difficulty: Beginner
+time: Weekly
+archetype: Processor
+description: >-
+  Measures the time gap between 'Lead Status = MQL' and 'Lead Status = Accepted'
+  to identify routing or follow-up lags.
 sampleData:
-  filename: "lead_status_history.csv"
+  filename: lead_status_history.csv
   content: |
     Lead_ID,MQL_Timestamp,Accepted_Timestamp
     L-1,2023-10-01 10:00,2023-10-01 10:30
     L-2,2023-10-01 10:00,2023-10-02 14:00
+isPremium: true
 ---
 
 # Agent Configuration: The Sales Process Agent

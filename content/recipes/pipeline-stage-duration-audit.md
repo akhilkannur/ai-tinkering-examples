@@ -1,20 +1,23 @@
---- 
-id: "pipeline-stage-duration-audit"
-category: "Sales Ops"
-title: "Pipeline Bottleneck Finder"
-tagline: "Pinpoint exactly where deals are getting stuck."
-difficulty: "Intermediate"
-time: "15 mins"
-archtype: "Processor"
-description: "Calculates the average days deals spend in each stage of your funnel to identify process bottlenecks."
+---
+id: pipeline-stage-duration-audit
+category: Sales Ops
+title: Pipeline Bottleneck Finder
+tagline: Pinpoint exactly where deals are getting stuck.
+difficulty: Intermediate
+time: 15 mins
+archtype: Processor
+description: >-
+  Calculates the average days deals spend in each stage of your funnel to
+  identify process bottlenecks.
 sampleData:
-  filename: "stage_history.csv"
+  filename: stage_history.csv
   content: |
     Deal_Name,Stage,Date_Entered,Date_Exited
     Acme Corp,Discovery,2023-01-01,2023-01-05
     Acme Corp,Demo,2023-01-05,2023-01-20
     Acme Corp,Negotiation,2023-01-20,2023-02-15
     Beta Ltd,Discovery,2023-02-01,2023-02-02
+isPremium: true
 ---
 
 # Agent Configuration: The RevOps Analyst

@@ -17,6 +17,7 @@ sampleData:
     B2,Loss_Leader_Pack,Bundle,40,35
     B2,Socks,Single,10,2
     B2,Hat,Single,35,10
+isPremium: false
 ---
 
 # Agent Configuration: The Pricing Strategist

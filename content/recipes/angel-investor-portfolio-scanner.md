@@ -17,6 +17,7 @@ sampleData:
     Angel_Name,AngelList_URL,Focus_Sector
     Jason Calacanis,https://angel.co/jason,SaaS
     Naval Ravikant,https://angel.co/naval,Crypto/Web3
+isPremium: false
 ---
 
 # Agent Configuration: The Angel Portfolio Scanner

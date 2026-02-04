@@ -1,19 +1,22 @@
---- 
-id: "weighted-pipeline-forecaster"
-category: "Sales Ops"
-title: "Weighted Revenue Forecaster"
-tagline: "Predict revenue using stage-based probabilities."
-difficulty: "Intermediate"
-time: "Weekly"
-archtype: "Processor"
-description: "Calculates expected revenue by multiplying deal amounts by the historical win probability of their current stage."
+---
+id: weighted-pipeline-forecaster
+category: Sales Ops
+title: Weighted Revenue Forecaster
+tagline: Predict revenue using stage-based probabilities.
+difficulty: Intermediate
+time: Weekly
+archtype: Processor
+description: >-
+  Calculates expected revenue by multiplying deal amounts by the historical win
+  probability of their current stage.
 sampleData:
-  filename: "pipeline.csv"
+  filename: pipeline.csv
   content: |
     Deal,Amount,Stage
     Deal A,10000,Discovery
     Deal B,50000,Proposal
     Deal C,20000,Negotiation
+isPremium: true
 ---
 
 # Agent Configuration: The Sales Analyst

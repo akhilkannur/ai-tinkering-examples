@@ -1,4 +1,4 @@
---- 
+---
 id: historical-content-updater
 category: SEO
 title: Historical Content Updater
@@ -7,12 +7,14 @@ difficulty: Beginner
 time: Batch
 archetype: Researcher
 description: >-
-  Identifies posts older than 1 year with declining traffic but high impressions. Suggests specific sections to update with 2024 data.
+  Identifies posts older than 1 year with declining traffic but high
+  impressions. Suggests specific sections to update with 2024 data.
 sampleData:
   filename: input_data.csv
   content: |
     URL,Publish_Date,Traffic_Trend
     /blog/2020-guide,2020-01-01,-20%
+isPremium: true
 ---
 
 # Agent Configuration: Historical Content Updater

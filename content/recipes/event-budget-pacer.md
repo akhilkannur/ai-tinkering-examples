@@ -1,19 +1,20 @@
---- 
-id: "event-budget-pacer"
-category: "Marketing Ops"
-title: "Event Spend Pacer"
-tagline: "Track trade show spend against approved budget."
-difficulty: "Beginner"
-time: "Batch"
-archtype: "Processor"
-description: "Reconciles event expenses against a master budget to ensure no overspending."
+---
+id: event-budget-pacer
+category: Marketing Ops
+title: Event Spend Pacer
+tagline: Track trade show spend against approved budget.
+difficulty: Beginner
+time: Batch
+archtype: Processor
+description: Reconciles event expenses against a master budget to ensure no overspending.
 sampleData:
-  filename: "event_finance.csv"
+  filename: event_finance.csv
   content: |
     Category,Budget,Actual_Spend
     Booth,10000,12000
     Travel,5000,4500
     Swag,2000,2000
+isPremium: true
 ---
 
 # Agent Configuration: The Event Manager

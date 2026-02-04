@@ -14,6 +14,7 @@ sampleData:
   content: |
     Name,Old_Company,New_Company,New_Role
     John Doe,HappyClient Inc,Prospect Corp,VP Sales
+isPremium: true
 ---
 # Agent Configuration: The SDR
 

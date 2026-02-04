@@ -15,6 +15,7 @@ sampleData:
     Customer,Points_Balance,Expiry_Date
     John,500,2023-11-01
     Jane,10,2024-01-01
+isPremium: false
 ---
 # Agent Configuration: The Loyalty Marketer
 

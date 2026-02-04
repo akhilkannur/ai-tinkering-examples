@@ -16,6 +16,7 @@ sampleData:
       <url><loc>https://example.com/page1</loc></url>
       <url><loc>https://example.com/broken-page</loc></url>
     </urlset>
+isPremium: true
 ---
 
 # Agent Configuration: The Sitemap Health Auditor

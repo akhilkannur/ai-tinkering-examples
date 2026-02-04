@@ -7,15 +7,16 @@ difficulty: Intermediate
 time: 5 mins
 archetype: Hybrid
 description: >-
-  Generic "Just checking in" DMs get ignored. This agent scans the recent content
-  of your "Stalled" influencer deals and drafts a hyper-relevant follow-up that
-  proves you are actually paying attention.
+  Generic "Just checking in" DMs get ignored. This agent scans the recent
+  content of your "Stalled" influencer deals and drafts a hyper-relevant
+  follow-up that proves you are actually paying attention.
 sampleData:
   filename: influencer_pipeline.csv
   content: |
     Handle,Status,Profile_URL
     @tech_guru,Negotiating,https://x.com/tech_guru
     @marketing_maven,Ghosted,https://x.com/marketing_maven
+isPremium: true
 ---
 
 # Agent Configuration: The Relationship Builder

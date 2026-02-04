@@ -16,6 +16,7 @@ sampleData:
     Intercom,https://intercom.com,Customer Service
     Zendesk,https://zendesk.com,Help Desk
     Drift,https://drift.com,Conversational Marketing
+isPremium: true
 ---
 
 # Agent Configuration: The Market Spy

@@ -17,6 +17,7 @@ sampleData:
     AI Productivity,Alex,Save 10 hours a week
     Sustainable Fashion,Maya,Ethically sourced materials
     Remote Work Tips,Chris,Better work-life balance
+isPremium: false
 ---
 
 # Agent Configuration: The AI Avatar Scriptwriter

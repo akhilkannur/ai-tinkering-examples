@@ -7,13 +7,15 @@ difficulty: Intermediate
 time: Batch
 archtype: Processor
 description: >-
-  Scrapes posts tagged with your brand. Scores them on "Lighting", "Product Visibility", and "Authenticity" to surface the best ones for paid ads.
+  Scrapes posts tagged with your brand. Scores them on "Lighting", "Product
+  Visibility", and "Authenticity" to surface the best ones for paid ads.
 sampleData:
   filename: input_data.csv
   content: |
     Post_URL,Caption
     https://insta.../1,"Love this!"
     https://insta.../2,"Meh."
+isPremium: true
 ---
 
 # Agent Configuration: UGC Ad Potential Scorer

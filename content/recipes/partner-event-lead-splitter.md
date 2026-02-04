@@ -16,6 +16,7 @@ sampleData:
     John,UK
     Jane,US
     Bob,US
+isPremium: true
 ---
 # Agent Configuration: The Partner Marketing Manager
 

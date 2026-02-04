@@ -1,18 +1,21 @@
 ---
-id: "sales-rep-ramp-velocity"
-category: "Sales Ops"
-title: "New Rep Ramp Tracker"
-tagline: "Measure 'Time to First Deal' for new hires."
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Tracks the number of days from 'Start Date' to 'First Deal Closed' for new sales reps."
+id: sales-rep-ramp-velocity
+category: Sales Ops
+title: New Rep Ramp Tracker
+tagline: Measure 'Time to First Deal' for new hires.
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Tracks the number of days from 'Start Date' to 'First Deal Closed' for new
+  sales reps.
 sampleData:
-  filename: "ramp_data.csv"
+  filename: ramp_data.csv
   content: |
     Rep,Start_Date,First_Deal_Date
     John,2023-01-01,2023-03-15
     Jane,2023-01-01,2023-02-10
+isPremium: true
 ---
 
 # Agent Configuration: The Enablement Auditor Agent

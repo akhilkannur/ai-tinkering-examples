@@ -1,18 +1,21 @@
 ---
-id: "vertical-penetration-analyzer"
-category: "Sales Ops"
-title: "Vertical Market Penetration"
-tagline: "How much of the Finance market do we own?"
-difficulty: "Advanced"
-time: "Quarterly"
-archetype: "Processor"
-description: "Calculates market share by comparing 'Customers' vs 'Total Addressable Market' per industry."
+id: vertical-penetration-analyzer
+category: Sales Ops
+title: Vertical Market Penetration
+tagline: How much of the Finance market do we own?
+difficulty: Advanced
+time: Quarterly
+archetype: Processor
+description: >-
+  Calculates market share by comparing 'Customers' vs 'Total Addressable Market'
+  per industry.
 sampleData:
-  filename: "market_data.csv"
+  filename: market_data.csv
   content: |
     Industry,Our_Customers,Total_Companies
     Finance,50,5000
     Retail,200,10000
+isPremium: true
 ---
 
 # Agent Configuration: The Strategy Lead

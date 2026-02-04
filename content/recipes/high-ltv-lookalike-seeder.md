@@ -1,18 +1,21 @@
 ---
-id: "high-ltv-lookalike-seeder"
-category: "Paid Media"
-title: "LTV Lookalike Seeder"
-tagline: "Find more customers like your best ones."
-difficulty: "Beginner"
-time: "Monthly"
-archetype: "Processor"
-description: "Exports the Top 1% of customers by Lifetime Value (LTV) to create a high-quality seed audience for ad platforms."
+id: high-ltv-lookalike-seeder
+category: Paid Media
+title: LTV Lookalike Seeder
+tagline: Find more customers like your best ones.
+difficulty: Beginner
+time: Monthly
+archetype: Processor
+description: >-
+  Exports the Top 1% of customers by Lifetime Value (LTV) to create a
+  high-quality seed audience for ad platforms.
 sampleData:
-  filename: "customers.csv"
+  filename: customers.csv
   content: |
     Email,LTV
     a@test.com,5000
     b@test.com,100
+isPremium: true
 ---
 # Agent Configuration: The Paid Social Lead
 

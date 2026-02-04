@@ -7,15 +7,16 @@ difficulty: Intermediate
 time: 20 mins
 archetype: Researcher
 description: >-
-  Hiring 10+ support agents at once indicates a scaling crisis. This agent scans job boards 
-  for bulk listings of "Customer Support Representative" to find companies that need 
-  AI support agents, helpdesk software, or outsourcing.
+  Hiring 10+ support agents at once indicates a scaling crisis. This agent scans
+  job boards  for bulk listings of "Customer Support Representative" to find
+  companies that need  AI support agents, helpdesk software, or outsourcing.
 sampleData:
   filename: job_boards.csv
   content: |
     Job_Title,Location
     "Customer Support Representative",Remote
     "Customer Success Associate",United States
+isPremium: true
 ---
 
 # Agent Configuration: The Support Scaler

@@ -1,19 +1,22 @@
 ---
-id: "inbound-vs-outbound-win-rate"
-category: "Sales Ops"
-title: "Win Rate by Origin"
-tagline: "Compare win rates for Inbound vs Outbound leads."
-difficulty: "Beginner"
-time: "Monthly"
-archetype: "Processor"
-description: "Calculates distinct win rates for leads originating from marketing (Inbound) vs sales prospecting (Outbound)."
+id: inbound-vs-outbound-win-rate
+category: Sales Ops
+title: Win Rate by Origin
+tagline: Compare win rates for Inbound vs Outbound leads.
+difficulty: Beginner
+time: Monthly
+archetype: Processor
+description: >-
+  Calculates distinct win rates for leads originating from marketing (Inbound)
+  vs sales prospecting (Outbound).
 sampleData:
-  filename: "win_rates.csv"
+  filename: win_rates.csv
   content: |
     Lead_Origin,Outcome
     Inbound,Won
     Inbound,Lost
     Outbound,Won
+isPremium: true
 ---
 
 # Agent Configuration: The Revenue Insights Agent

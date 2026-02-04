@@ -16,6 +16,7 @@ sampleData:
     Software_Ecosystem,Target_Role
     Asana,Workflow Consultant
     Shopify,CRO Agency
+isPremium: true
 ---
 
 # Agent Configuration: The Channel Partner Scout

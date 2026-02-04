@@ -1,12 +1,12 @@
---- 
-id: "podcast-download-growth-tracker"
-category: "Marketing Ops"
-title: "Podcast Growth Rate"
-tagline: "Are we growing month over month?"
-difficulty: "Beginner"
-time: "Monthly"
-archtype: "Processor"
-description: "Calculates MoM growth percentage for podcast downloads."
+---
+id: podcast-download-growth-tracker
+category: Marketing Ops
+title: Podcast Growth Rate
+tagline: Are we growing month over month?
+difficulty: Beginner
+time: Monthly
+archtype: Processor
+description: Calculates MoM growth percentage for podcast downloads.
 sampleData:
   filename: podcast_stats.csv
   content: |
@@ -15,6 +15,7 @@ sampleData:
     102,Cold Calling Tips,520,2023-10-08
     103,AI for Marketing (Viral),1200,2023-10-15
     104,Hiring Guide,510,2023-10-22
+isPremium: true
 ---
 
 # Agent Configuration: The Podcast Growth Hacker

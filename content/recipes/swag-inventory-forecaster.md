@@ -15,6 +15,7 @@ sampleData:
     Event,Expected_Attendees,Hist_Swag_Rate
     TechConf,5000,0.2
     LocalMeetup,100,0.5
+isPremium: true
 ---
 # Agent Configuration: The Event Logistics Lead
 

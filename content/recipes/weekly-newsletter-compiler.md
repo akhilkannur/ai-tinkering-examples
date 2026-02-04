@@ -15,6 +15,7 @@ sampleData:
     https://techcrunch.com/apps/
     https://www.theverge.com/tech
     https://news.ycombinator.com/
+isPremium: true
 ---
 
 # Agent Configuration: The Newsletter Content Curator

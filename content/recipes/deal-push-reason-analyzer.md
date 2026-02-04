@@ -17,6 +17,7 @@ sampleData:
     Globex Enterprise,Sarah,Ghosting,4
     Soylent Corp,John,Budget,2
     Initech Deal,Mike,Competitor,1
+isPremium: true
 ---
 
 # Agent Configuration: The Pipeline Integrity Consultant

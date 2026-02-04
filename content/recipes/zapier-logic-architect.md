@@ -6,9 +6,9 @@ tagline: Standardize your no-code workflows.
 difficulty: Intermediate
 time: Batch
 description: >-
-  Automation fails at edge cases. This agent designs robust Zapier
-  workflows - including filters, formatters, and error handlers - for your entire
-  automation roadmap.
+  Automation fails at edge cases. This agent designs robust Zapier workflows -
+  including filters, formatters, and error handlers - for your entire automation
+  roadmap.
 sampleData:
   filename: automations.csv
   content: |

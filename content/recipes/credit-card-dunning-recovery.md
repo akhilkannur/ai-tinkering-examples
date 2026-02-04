@@ -16,6 +16,7 @@ sampleData:
     Acme Corp,Amex,Sunday,Generic Decline,1000
     Startup Inc,Visa,Monday,Insufficient Funds,500
     Individual User,Debit,Tuesday,Lost Card,20
+isPremium: true
 ---
 # Agent Configuration: The Involuntary Churn Rescuer
 

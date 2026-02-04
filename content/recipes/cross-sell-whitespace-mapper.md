@@ -17,6 +17,7 @@ sampleData:
     Acme,Add-on A
     Beta,Platform
     Gamma,Add-on B
+isPremium: true
 ---
 
 # Agent Configuration: The RevOps Strategist

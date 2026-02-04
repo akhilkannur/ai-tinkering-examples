@@ -15,6 +15,7 @@ sampleData:
     Account,Seats_Owned,Seats_Used
     Acme,10,9
     Beta,100,20
+isPremium: true
 ---
 # Agent Configuration: The Account Manager
 

@@ -1,20 +1,23 @@
---- 
-id: "lead-score-threshold-simulator"
-category: "Marketing Ops"
-title: "Lead Threshold Simulator"
-tagline: "See how threshold changes impact MQL volume."
-difficulty: "Advanced"
-time: "Batch"
-archtype: "Processor"
-description: "Backtests lead data against different scoring thresholds to predict how many MQLs would be generated."
+---
+id: lead-score-threshold-simulator
+category: Marketing Ops
+title: Lead Threshold Simulator
+tagline: See how threshold changes impact MQL volume.
+difficulty: Advanced
+time: Batch
+archtype: Processor
+description: >-
+  Backtests lead data against different scoring thresholds to predict how many
+  MQLs would be generated.
 sampleData:
-  filename: "lead_scores.csv"
+  filename: lead_scores.csv
   content: |
     Lead_ID,Score
     1,45
     2,55
     3,65
     4,75
+isPremium: true
 ---
 
 # Agent Configuration: The Growth Analyst

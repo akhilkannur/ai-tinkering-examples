@@ -1,19 +1,22 @@
---- 
-id: "unsubscribe-reason-classifier"
-category: "Marketing Ops"
-title: "Unsub Analysis Bot"
-tagline: "Why are they leaving?"
-difficulty: "Intermediate"
-time: "Monthly"
-archtype: "Processor"
-description: "Categorizes free-text 'Reason for Unsubscribing' feedback into buckets like 'Too Frequent', 'Content Irrelevant', or 'Budget'."
+---
+id: unsubscribe-reason-classifier
+category: Marketing Ops
+title: Unsub Analysis Bot
+tagline: Why are they leaving?
+difficulty: Intermediate
+time: Monthly
+archtype: Processor
+description: >-
+  Categorizes free-text 'Reason for Unsubscribing' feedback into buckets like
+  'Too Frequent', 'Content Irrelevant', or 'Budget'.
 sampleData:
-  filename: "unsubscribes.csv"
+  filename: unsubscribes.csv
   content: |
     User,Comment
     1,Too many emails!
     2,I don't need this anymore
     3,Sent daily, wanted weekly
+isPremium: true
 ---
 
 # Agent Configuration: The Retention Analyst

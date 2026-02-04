@@ -1,4 +1,4 @@
---- 
+---
 id: partner-account-overlap-mapper
 category: Sales Ops
 title: Partner Account Overlap Mapper
@@ -7,12 +7,14 @@ difficulty: Intermediate
 time: Batch
 archetype: Processor
 description: >-
-  Compares your target account list with a partner's shared list (hashed). Identifies overlaps for Co-Selling opportunities.
+  Compares your target account list with a partner's shared list (hashed).
+  Identifies overlaps for Co-Selling opportunities.
 sampleData:
   filename: input_data.csv
   content: |
     Account_Domain,Partner_Status
     acme.com,Customer
+isPremium: true
 ---
 
 # Agent Configuration: Partner Account Overlap Mapper

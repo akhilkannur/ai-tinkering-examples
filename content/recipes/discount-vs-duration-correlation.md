@@ -16,6 +16,7 @@ sampleData:
     1,20,12
     2,20,36
     3,0,12
+isPremium: true
 ---
 # Agent Configuration: The Deal Desk Lead
 

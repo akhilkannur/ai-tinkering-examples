@@ -1,4 +1,4 @@
---- 
+---
 id: interview-answer-rubric-scorer
 category: Strategic Ops
 title: Interview Answer Rubric Scorer
@@ -7,12 +7,14 @@ difficulty: Intermediate
 time: Batch
 archetype: Processor
 description: >-
-  Takes raw interview notes or transcripts. Scores the candidate's answer to "Tell me about a conflict" against a pre-set rubric (STAR method).
+  Takes raw interview notes or transcripts. Scores the candidate's answer to
+  "Tell me about a conflict" against a pre-set rubric (STAR method).
 sampleData:
   filename: input_data.csv
   content: |
     Candidate,Question,Answer_Text
     John,"Conflict","I just avoided it."
+isPremium: true
 ---
 
 # Agent Configuration: Interview Answer Rubric Scorer

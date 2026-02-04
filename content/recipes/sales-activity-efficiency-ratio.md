@@ -1,18 +1,21 @@
 ---
-id: "sales-activity-efficiency-ratio"
-category: "Sales Ops"
-title: "Activity-to-Revenue Efficiency"
-tagline: "Calculate 'Activities required per Closed Deal'."
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Calculates how many calls, emails, and meetings it takes for each rep to close a single deal."
+id: sales-activity-efficiency-ratio
+category: Sales Ops
+title: Activity-to-Revenue Efficiency
+tagline: Calculate 'Activities required per Closed Deal'.
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Calculates how many calls, emails, and meetings it takes for each rep to close
+  a single deal.
 sampleData:
-  filename: "efficiency_data.csv"
+  filename: efficiency_data.csv
   content: |
     Rep,Total_Activities,Deals_Closed
     John,1000,5
     Jane,500,5
+isPremium: true
 ---
 
 # Agent Configuration: The Efficiency Auditor

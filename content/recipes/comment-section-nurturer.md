@@ -12,6 +12,7 @@ description: >-
 sampleData:
   filename: comments.csv
   content: "Username,Comment_Text,Platform\njason_dev,\U0001F525 great post as always!,Twitter\nsara_founder,Does this integrate with Slack?,LinkedIn\nmike_marketer,I tried this but it was too expensive for my team.,LinkedIn\n"
+isPremium: false
 ---
 
 # Agent Configuration: The Comment Section Nurturer

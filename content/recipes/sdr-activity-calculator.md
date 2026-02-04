@@ -7,15 +7,17 @@ difficulty: Beginner
 time: Monthly
 archetype: Processor
 description: >-
-  Setting generic "50 dials a day" goals burns out SDRs. This agent reverse-engineers
-  a personalized activity plan for each rep based on their unique conversion rates,
-  showing them exactly how to hit quota through Volume OR Skill.
+  Setting generic "50 dials a day" goals burns out SDRs. This agent
+  reverse-engineers a personalized activity plan for each rep based on their
+  unique conversion rates, showing them exactly how to hit quota through Volume
+  OR Skill.
 sampleData:
   filename: sdr_funnel.csv
   content: |
     Rep,Quota_Meetings,Calls_Per_Week,Connect_Rate,Booking_Rate
     Alice,10,200,0.05,0.20
     Bob,10,400,0.02,0.10
+isPremium: true
 ---
 
 # Agent Configuration: The Performance Coach

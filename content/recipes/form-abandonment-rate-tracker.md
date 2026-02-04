@@ -1,18 +1,21 @@
 ---
-id: "form-abandonment-rate-tracker"
-category: "Marketing Ops"
-title: "Form Friction Hunter"
-tagline: "Is your form too long?"
-difficulty: "Beginner"
-time: "Monthly"
-archetype: "Processor"
-description: "Calculates drop-off rates for different form lengths to find the optimal field count."
+id: form-abandonment-rate-tracker
+category: Marketing Ops
+title: Form Friction Hunter
+tagline: Is your form too long?
+difficulty: Beginner
+time: Monthly
+archetype: Processor
+description: >-
+  Calculates drop-off rates for different form lengths to find the optimal field
+  count.
 sampleData:
-  filename: "form_stats.csv"
+  filename: form_stats.csv
   content: |
     Form_Name,Fields,Views,Submits
     Long_Demo,10,1000,10
     Short_Demo,3,1000,50
+isPremium: true
 ---
 
 # Agent Configuration: The Form Conversion Psychologist

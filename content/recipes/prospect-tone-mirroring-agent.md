@@ -7,13 +7,15 @@ difficulty: Beginner
 time: Real-time
 archtype: Processor
 description: >-
-  Pastes in the prospect's last 3 emails. Detects if they are "Direct/Brief", "Chatty/Warm", or "Formal". Rewrites your draft to match their vibe.
+  Pastes in the prospect's last 3 emails. Detects if they are "Direct/Brief",
+  "Chatty/Warm", or "Formal". Rewrites your draft to match their vibe.
 sampleData:
   filename: input_data.csv
   content: |
     Prospect_Name,Email_Sample
     CTO_John,"Need pricing. Now."
     Marketer_Mary,"Hey! Loved the demo..."
+isPremium: true
 ---
 
 # Agent Configuration: Sales Email Tone Mirror

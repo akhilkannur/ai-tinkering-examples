@@ -1,19 +1,22 @@
 ---
-id: "trust-badge-tester"
-category: "CRO"
-title: "Trust Badge A/B Analyzer"
-tagline: "Does 'Secure Checkout' actually help?"
-difficulty: "Beginner"
-time: "Batch"
-archetype: "Processor"
-description: "Analyzes A/B test results for different trust badges (Free Shipping vs Secure Checkout) to determine the winner."
+id: trust-badge-tester
+category: CRO
+title: Trust Badge A/B Analyzer
+tagline: Does 'Secure Checkout' actually help?
+difficulty: Beginner
+time: Batch
+archetype: Processor
+description: >-
+  Analyzes A/B test results for different trust badges (Free Shipping vs Secure
+  Checkout) to determine the winner.
 sampleData:
-  filename: "ab_results.csv"
+  filename: ab_results.csv
   content: |
     Variant,Visits,Sales
     Control,1000,20
     Badge_A,1000,25
     Badge_B,1000,18
+isPremium: true
 ---
 # Agent Configuration: The Optimization Lead
 

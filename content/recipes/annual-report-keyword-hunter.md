@@ -17,6 +17,7 @@ sampleData:
     Ticker,Company_Name,Keywords
     F,Ford Motor Company,"autonomous, electrification, software"
     WMT,Walmart,"supply chain, omnichannel, logistics"
+isPremium: false
 ---
 
 # Agent Configuration: The 10-K Strategic Hunter

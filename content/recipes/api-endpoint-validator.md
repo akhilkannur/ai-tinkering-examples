@@ -16,6 +16,7 @@ sampleData:
     Endpoint_Name,URL,Expected_Key
     Auth,/api/v1/login,token
     Data,/api/v1/stats,reports
+isPremium: false
 ---
 
 # Agent Configuration: The API Fleet Monitor

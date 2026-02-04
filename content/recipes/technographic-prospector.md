@@ -1,18 +1,21 @@
 ---
-id: "technographic-prospector"
-category: "Competitive Intel"
-title: "Technographic Prospector"
-tagline: "Find leads using specific software."
-difficulty: "Advanced"
-time: "Monthly"
-archetype: "Processor"
-description: "Analyzes job descriptions or source code signatures to identify companies using specific competitors' tech stacks."
+id: technographic-prospector
+category: Competitive Intel
+title: Technographic Prospector
+tagline: Find leads using specific software.
+difficulty: Advanced
+time: Monthly
+archetype: Processor
+description: >-
+  Analyzes job descriptions or source code signatures to identify companies
+  using specific competitors' tech stacks.
 sampleData:
-  filename: "tech_signals.csv"
+  filename: tech_signals.csv
   content: |
     Company,Signal_Source,Technology_Detected
     Acme,Job Post,Salesforce
     Beta,Source Code,HubSpot
+isPremium: true
 ---
 
 # Agent Configuration: The Sales Engineer

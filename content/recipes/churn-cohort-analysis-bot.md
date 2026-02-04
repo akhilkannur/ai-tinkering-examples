@@ -16,6 +16,7 @@ sampleData:
     Jan-23,Active,NULL
     Jan-23,Churned,2023-05-01
     Mar-23,Active,NULL
+isPremium: true
 ---
 
 # Agent Configuration: The Retention Analyst Agent

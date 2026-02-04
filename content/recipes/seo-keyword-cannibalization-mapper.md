@@ -1,4 +1,4 @@
---- 
+---
 id: seo-keyword-cannibalization-mapper
 category: SEO
 title: SEO Cannibalization Visualizer
@@ -7,12 +7,14 @@ difficulty: Intermediate
 time: Batch
 archetype: Researcher
 description: >-
-  Ingests GSC data. Identifies keywords where 2+ pages swap positions frequently. Suggests which page should be canonical or merged.
+  Ingests GSC data. Identifies keywords where 2+ pages swap positions
+  frequently. Suggests which page should be canonical or merged.
 sampleData:
   filename: input_data.csv
   content: |
     Keyword,Page_A_Rank,Page_B_Rank
     "AI Tools",5,6
+isPremium: true
 ---
 
 # Agent Configuration: SEO Cannibalization Visualizer

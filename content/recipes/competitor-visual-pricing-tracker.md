@@ -7,12 +7,14 @@ difficulty: Advanced
 time: Batch
 archtype: Researcher
 description: >-
-  Text scrapers miss "per user" badges or layout shifts. This agent visually compares screenshots of pricing pages over time to highlight strategic shifts.
+  Text scrapers miss "per user" badges or layout shifts. This agent visually
+  compares screenshots of pricing pages over time to highlight strategic shifts.
 sampleData:
   filename: input_data.csv
   content: |
     Competitor,URL,Last_Screenshot_Path
     CompetitorA,https://comp-a.com/pricing,./screens/date1.png
+isPremium: true
 ---
 
 # Agent Configuration: Visual Pricing Page Monitor

@@ -7,14 +7,16 @@ difficulty: Intermediate
 time: 20 mins
 archetype: Researcher
 description: >-
-  Your company's former employees are your secret weapon. They know your product.
-  This agent finds ex-employees of *your* company (or your client's company) who
-  now work at target prospect accounts, creating a friendly "Trojan Horse."
+  Your company's former employees are your secret weapon. They know your
+  product. This agent finds ex-employees of *your* company (or your client's
+  company) who now work at target prospect accounts, creating a friendly "Trojan
+  Horse."
 sampleData:
   filename: my_company_alumni.csv
   content: |
     My_Company_Name,Target_Account_List
     "Acme Corp","Globex, Stark Industries, Wayne Enterprises"
+isPremium: true
 ---
 
 # Agent Configuration: The Alumni Boomerang

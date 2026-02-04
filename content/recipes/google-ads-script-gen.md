@@ -8,8 +8,9 @@ time: One-off
 archetype: Processor
 description: >-
   Don't rely on manual checks. This agent generates robust Google Ads Scripts
-  (JavaScript) that run hourly to police your account: Pausing bleeding keywords,
-  alerting you to zero-impression ads, and capping over-spending campaigns.
+  (JavaScript) that run hourly to police your account: Pausing bleeding
+  keywords, alerting you to zero-impression ads, and capping over-spending
+  campaigns.
 sampleData:
   filename: safety_rules.csv
   content: |
@@ -17,6 +18,7 @@ sampleData:
     Kill Bleeders,CPA > 100 AND Conversions > 0,Pause Keyword
     Zero Impressions,Impressions == 0 AND Spend > 50,Label 'Review'
     Budget Cap,Cost > 500,Email Alert
+isPremium: true
 ---
 
 # Agent Configuration: The Ad Engineer

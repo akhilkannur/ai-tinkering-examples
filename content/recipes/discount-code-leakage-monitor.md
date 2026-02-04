@@ -15,6 +15,7 @@ sampleData:
     Code,Uses_Last_Hour,Avg_Uses
     WELCOME20,5,5
     VIP_SECRET,500,2
+isPremium: false
 ---
 # Agent Configuration: The Margin Guardian
 

@@ -1,18 +1,21 @@
 ---
-id: "champion-movement-tracker"
-category: "Sales Ops"
-title: "Champion Job Change Tracker"
-tagline: "Detect when previous buyers move to new companies."
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Compares a list of known 'Champions' (previous buyers) against a new contact export to identify previous fans in new target accounts."
+id: champion-movement-tracker
+category: Sales Ops
+title: Champion Job Change Tracker
+tagline: Detect when previous buyers move to new companies.
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Compares a list of known 'Champions' (previous buyers) against a new contact
+  export to identify previous fans in new target accounts.
 sampleData:
-  filename: "champions_master.csv"
+  filename: champions_master.csv
   content: |
     Name,Previous_Account,Email
     John Doe,Acme Corp,john@acme.com
     Jane Smith,Beta Inc,jane@beta.com
+isPremium: true
 ---
 
 # Agent Configuration: The Customer Advocacy Agent

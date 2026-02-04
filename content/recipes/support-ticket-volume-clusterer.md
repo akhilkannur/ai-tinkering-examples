@@ -1,20 +1,23 @@
 ---
-id: "support-ticket-volume-clusterer"
-category: "Customer Success"
-title: "Ticket Volume Clusterer"
-tagline: "Group ticket subjects into feature themes."
-difficulty: "Intermediate"
-time: "Weekly"
-archetype: "Processor"
-description: "Groups support ticket subject lines into logical feature buckets to find the 'Noisiest' parts of the product."
+id: support-ticket-volume-clusterer
+category: Customer Success
+title: Ticket Volume Clusterer
+tagline: Group ticket subjects into feature themes.
+difficulty: Intermediate
+time: Weekly
+archetype: Processor
+description: >-
+  Groups support ticket subject lines into logical feature buckets to find the
+  'Noisiest' parts of the product.
 sampleData:
-  filename: "ticket_subjects.csv"
+  filename: ticket_subjects.csv
   content: |
     Subject
     Login error
     Password reset not working
     Slow dashboard
     Login stuck
+isPremium: true
 ---
 
 # Agent Configuration: The Product Insights Agent

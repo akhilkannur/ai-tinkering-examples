@@ -1,18 +1,21 @@
 ---
-id: "email-deliverability-heatmap"
-category: "Marketing Ops"
-title: "ISP Deliverability Heatmap"
-tagline: "Are we blocked by Outlook?"
-difficulty: "Intermediate"
-time: "Weekly"
-archetype: "Processor"
-description: "Tracks open rates segmented by ISP (Gmail vs Outlook vs Corporate) to find delivery issues."
+id: email-deliverability-heatmap
+category: Marketing Ops
+title: ISP Deliverability Heatmap
+tagline: Are we blocked by Outlook?
+difficulty: Intermediate
+time: Weekly
+archetype: Processor
+description: >-
+  Tracks open rates segmented by ISP (Gmail vs Outlook vs Corporate) to find
+  delivery issues.
 sampleData:
-  filename: "sends_by_domain.csv"
+  filename: sends_by_domain.csv
   content: |
     Domain,Sent,Opened
     gmail.com,1000,200
     corporate,500,10
+isPremium: true
 ---
 
 # Agent Configuration: The Email Ops

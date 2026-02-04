@@ -15,6 +15,7 @@ sampleData:
     Campaign,Rev_1Day,Rev_7Day
     FB_Promo,1000,5000
     Google_Brand,2000,2100
+isPremium: false
 ---
 # Agent Configuration: The Attribution Specialist
 

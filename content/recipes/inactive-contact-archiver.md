@@ -1,19 +1,22 @@
---- 
-id: "inactive-contact-archiver"
-category: "Sales Ops"
-title: "CRM Hygiene: The Reaper"
-tagline: "Identify contacts who haven't engaged in 365+ days."
-difficulty: "Beginner"
-time: "Monthly"
-archtype: "Processor"
-description: "Flags contacts for archival based on 'Last Activity Date' to keep your CRM storage costs low."
+---
+id: inactive-contact-archiver
+category: Sales Ops
+title: 'CRM Hygiene: The Reaper'
+tagline: Identify contacts who haven't engaged in 365+ days.
+difficulty: Beginner
+time: Monthly
+archtype: Processor
+description: >-
+  Flags contacts for archival based on 'Last Activity Date' to keep your CRM
+  storage costs low.
 sampleData:
-  filename: "contacts.csv"
+  filename: contacts.csv
   content: |
     Contact_ID,Name,Last_Activity_Date
     1,Old Lead,2021-05-12
     2,New Lead,2023-10-01
     3,Stale Lead,2022-01-01
+isPremium: true
 ---
 
 # Agent Configuration: The Database Admin

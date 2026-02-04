@@ -1,20 +1,23 @@
---- 
-id: "nps-trend-analyzer"
-category: "Customer Success"
-title: "NPS Trend Spotter"
-tagline: "Is customer sentiment trending up or down?"
-difficulty: "Intermediate"
-time: "Monthly"
-archtype: "Processor"
-description: "Calculates the Net Promoter Score (Promoters - Detractors) for different cohorts (e.g., Monthly)."
+---
+id: nps-trend-analyzer
+category: Customer Success
+title: NPS Trend Spotter
+tagline: Is customer sentiment trending up or down?
+difficulty: Intermediate
+time: Monthly
+archtype: Processor
+description: >-
+  Calculates the Net Promoter Score (Promoters - Detractors) for different
+  cohorts (e.g., Monthly).
 sampleData:
-  filename: "nps_responses.csv"
+  filename: nps_responses.csv
   content: |
     Date,Score
     2023-09-01,10
     2023-09-05,9
     2023-09-10,2
     2023-10-01,5
+isPremium: true
 ---
 
 # Agent Configuration: The CX Analyst

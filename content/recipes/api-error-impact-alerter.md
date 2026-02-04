@@ -1,4 +1,4 @@
---- 
+---
 id: api-error-impact-alerter
 category: Strategic Ops
 title: API Error Impact Alerter
@@ -7,12 +7,14 @@ difficulty: Advanced
 time: Real-time
 archetype: Processor
 description: >-
-  Correlates server logs (500 errors) with Customer Lists. Alerts the CSM immediately if a >$50k ARR customer hits an error.
+  Correlates server logs (500 errors) with Customer Lists. Alerts the CSM
+  immediately if a >$50k ARR customer hits an error.
 sampleData:
   filename: input_data.csv
   content: |
     Error_Log,Customer_IP
     500 Internal Error,192.168.1.5
+isPremium: false
 ---
 
 # Agent Configuration: API Error Impact Alerter

@@ -1,18 +1,21 @@
 ---
-id: "orphaned-contact-rehomer"
-category: "Sales Ops"
-title: "Orphaned Contact Re-Homer"
-tagline: "Assign contacts to account owners via domain."
-difficulty: "Intermediate"
-time: "Daily"
-archetype: "Processor"
-description: "Identifies contacts not associated with an account and finds their correct home based on email domain matching."
+id: orphaned-contact-rehomer
+category: Sales Ops
+title: Orphaned Contact Re-Homer
+tagline: Assign contacts to account owners via domain.
+difficulty: Intermediate
+time: Daily
+archetype: Processor
+description: >-
+  Identifies contacts not associated with an account and finds their correct
+  home based on email domain matching.
 sampleData:
-  filename: "orphans.csv"
+  filename: orphans.csv
   content: |
     Email,Account_Name
     john@tesla.com,NULL
     jane@spacex.com,NULL
+isPremium: true
 ---
 
 # Agent Configuration: The CRM Architect Agent

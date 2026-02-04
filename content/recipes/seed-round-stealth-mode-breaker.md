@@ -7,10 +7,10 @@ difficulty: Advanced
 time: 20 mins
 archetype: Researcher
 description: >-
-  Stealth startups don't have websites, but they DO have job postings. This agent
-  finds job listings from companies named "Stealth Startup" or "Confidential"
-  and uses the *recruiter's profile* or the *job description tech stack* to identify
-  who they actually are.
+  Stealth startups don't have websites, but they DO have job postings. This
+  agent finds job listings from companies named "Stealth Startup" or
+  "Confidential" and uses the *recruiter's profile* or the *job description tech
+  stack* to identify who they actually are.
 sampleData:
   filename: stealth_keywords.csv
   content: |
@@ -18,6 +18,7 @@ sampleData:
     "Stealth Mode"
     "Unannounced Startup"
     "Ex-Stripe Founder"
+isPremium: true
 ---
 
 # Agent Configuration: The Stealth Mode Breaker

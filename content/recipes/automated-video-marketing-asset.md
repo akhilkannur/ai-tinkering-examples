@@ -20,6 +20,7 @@ sampleData:
       "primary_color": "#3b82f6",
       "style": "muted" 
     }
+isPremium: false
 ---
 
 # Agent Configuration: The Automated Video Producer

@@ -1,4 +1,4 @@
---- 
+---
 id: voicemail-ab-tester
 category: Sales Ops
 title: Cold Call Voicemail A/B Tester
@@ -7,13 +7,15 @@ difficulty: Intermediate
 time: Batch
 archetype: Processor
 description: >-
-  Generates 3 variant scripts for voicemails: "The Mystery", "The Value Prop", "The Referral". Tracks callback rates to declare a winner.
+  Generates 3 variant scripts for voicemails: "The Mystery", "The Value Prop",
+  "The Referral". Tracks callback rates to declare a winner.
 sampleData:
   filename: input_data.csv
   content: |
     Script_Variant,Callback_Rate
     Mystery,12%
     Value,5%
+isPremium: true
 ---
 
 # Agent Configuration: Cold Call Voicemail A/B Tester

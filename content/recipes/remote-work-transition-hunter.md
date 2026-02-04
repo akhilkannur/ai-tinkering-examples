@@ -9,7 +9,8 @@ archetype: Researcher
 description: >-
   Companies switching to "Remote First" need a whole new stack: Async tools,
   security VPNs, HR compliance (Deel/Remote), and offsite planning. This agent
-  finds companies explicitly stating "Remote First" in job posts or "About" pages.
+  finds companies explicitly stating "Remote First" in job posts or "About"
+  pages.
 sampleData:
   filename: tech_hubs.csv
   content: |
@@ -17,6 +18,7 @@ sampleData:
     San Francisco
     New York
     Austin
+isPremium: true
 ---
 
 # Agent Configuration: The Remote First Hunter

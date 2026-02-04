@@ -15,6 +15,7 @@ sampleData:
     Rep,Month,Amount
     John,Jan,5000
     John,Feb,15000
+isPremium: true
 ---
 
 # Agent Configuration: The Comp Plan Auditor

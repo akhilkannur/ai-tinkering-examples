@@ -2,7 +2,9 @@
 id: return-adjusted-roas
 category: Paid Media
 title: The Profit-First ROAS Adjuster
-tagline: Don't get blinded by 'Gross' numbers. Calculate marketing impact on bottom-line profit.
+tagline: >-
+  Don't get blinded by 'Gross' numbers. Calculate marketing impact on
+  bottom-line profit.
 difficulty: Advanced
 time: Monthly
 archetype: Processor
@@ -16,6 +18,7 @@ sampleData:
     Campaign,Spend,Gross_Revenue,Return_Value,Avg_Margin,Shipping_Total
     Search_Brand,1000,8000,500,0.60,200
     Social_Prospecting,5000,12000,2000,0.50,1000
+isPremium: true
 ---
 
 # Agent Configuration: The Profitability Analyst

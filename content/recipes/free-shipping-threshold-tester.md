@@ -16,6 +16,7 @@ sampleData:
     1,45
     2,60
     3,40
+isPremium: false
 ---
 
 # Agent Configuration: The AOV Maximizer

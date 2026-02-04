@@ -7,12 +7,15 @@ difficulty: Intermediate
 time: Real-time
 archtype: Processor
 description: >-
-  Uses Vision AI to look at your landing page hero section. It outputs the top 3 elements that draw attention and guesses the value prop. If it guesses wrong, you need to redesign.
+  Uses Vision AI to look at your landing page hero section. It outputs the top 3
+  elements that draw attention and guesses the value prop. If it guesses wrong,
+  you need to redesign.
 sampleData:
   filename: input_data.csv
   content: |
     Page_Name,Screenshot_Path
     Home_V1,./screens/home_v1.png
+isPremium: true
 ---
 
 # Agent Configuration: The "5-Second Test" Simulator

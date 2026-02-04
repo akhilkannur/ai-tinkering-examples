@@ -16,6 +16,7 @@ sampleData:
     John,2023-01-01,101
     John,2023-02-01,102
     Jane,2023-01-15,103
+isPremium: true
 ---
 # Agent Configuration: The Retention Marketer
 

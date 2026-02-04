@@ -16,6 +16,7 @@ sampleData:
     Acme,Base
     Acme,API
     Beta,Base
+isPremium: true
 ---
 
 # Agent Configuration: The Expansion Agent

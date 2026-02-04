@@ -7,14 +7,15 @@ difficulty: Beginner
 time: Batch
 archtype: Processor
 description: >-
-  Reads the #standup channel. Ignores "What I did yesterday". Extracts only items listed under "Blockers" and groups them by department.
+  Reads the #standup channel. Ignores "What I did yesterday". Extracts only
+  items listed under "Blockers" and groups them by department.
 sampleData:
   filename: input_data.csv
   content: |
     User,Message_Text
     Dev1,"...Blocker: API is down"
     Dev2,"...Blocker: Waiting on Design"
-    
+isPremium: true
 ---
 
 # Agent Configuration: Standup Blocker Extractor

@@ -1,20 +1,23 @@
---- 
-id: "duplicate-account-consolidator"
-category: "Sales Ops"
-title: "Account Dupe Smasher"
-tagline: "Find duplicate companies using fuzzy matching."
-difficulty: "Advanced"
-time: "Monthly"
-archtype: "Processor"
-description: "Identifies duplicate account records by comparing names (e.g., 'Acme Inc.' vs 'Acme Incorporated') and domains."
+---
+id: duplicate-account-consolidator
+category: Sales Ops
+title: Account Dupe Smasher
+tagline: Find duplicate companies using fuzzy matching.
+difficulty: Advanced
+time: Monthly
+archtype: Processor
+description: >-
+  Identifies duplicate account records by comparing names (e.g., 'Acme Inc.' vs
+  'Acme Incorporated') and domains.
 sampleData:
-  filename: "accounts.csv"
+  filename: accounts.csv
   content: |
     Account_ID,Name,Domain
     1,Acme Inc,acme.com
     2,Beta LLC,beta.io
     3,Acme Incorporated,acme.com
     4,The Beta Group,beta.io
+isPremium: true
 ---
 
 # Agent Configuration: The Data Quality Engineer

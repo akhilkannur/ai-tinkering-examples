@@ -1,19 +1,22 @@
 ---
-id: "objection-handling-gap-analysis"
-category: "Sales Ops"
-title: "Objection Gap Analyzer"
-tagline: "Identify objections where win rates are lowest."
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Analyzes deal notes and outcome codes to find which specific objections (e.g. 'Price', 'Competitor X') lead to the most losses."
+id: objection-handling-gap-analysis
+category: Sales Ops
+title: Objection Gap Analyzer
+tagline: Identify objections where win rates are lowest.
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Analyzes deal notes and outcome codes to find which specific objections (e.g.
+  'Price', 'Competitor X') lead to the most losses.
 sampleData:
-  filename: "objections.csv"
+  filename: objections.csv
   content: |
     Deal,Outcome,Primary_Objection
     Deal A,Lost,Price
     Deal B,Won,None
     Deal C,Lost,Feature Gap
+isPremium: true
 ---
 
 # Agent Configuration: The Sales Enablement Agent

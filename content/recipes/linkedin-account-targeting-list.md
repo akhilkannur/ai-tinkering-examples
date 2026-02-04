@@ -18,6 +18,7 @@ sampleData:
     notion.so
     figma.com
     linear.app
+isPremium: true
 ---
 
 # Agent Configuration: The LinkedIn Account Targeting Builder

@@ -1,18 +1,21 @@
 ---
-id: "forecast-sandbag-detector"
-category: "Sales Ops"
-title: "Forecast Integrity Auditor"
-tagline: "Identify reps who consistently beat their commits by 50%+."
-difficulty: "Intermediate"
-time: "Quarterly"
-archetype: "Processor"
-description: "Compares historical forecast 'commits' against actual results to identify reps with inaccurate forecasting habits."
+id: forecast-sandbag-detector
+category: Sales Ops
+title: Forecast Integrity Auditor
+tagline: Identify reps who consistently beat their commits by 50%+.
+difficulty: Intermediate
+time: Quarterly
+archetype: Processor
+description: >-
+  Compares historical forecast 'commits' against actual results to identify reps
+  with inaccurate forecasting habits.
 sampleData:
-  filename: "rep_forecasts.csv"
+  filename: rep_forecasts.csv
   content: |
     Rep,Quarter,Commit,Actual
     John,Q1,100000,160000
     Jane,Q1,100000,105000
+isPremium: true
 ---
 
 # Agent Configuration: The Forecast Auditor

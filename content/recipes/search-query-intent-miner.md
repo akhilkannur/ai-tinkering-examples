@@ -1,19 +1,22 @@
---- 
-id: "search-query-intent-miner"
-category: "SEO"
-title: "Search Intent Miner"
-tagline: "Extract high-intent keywords from Search Console."
-difficulty: "Intermediate"
-time: "Weekly"
-archtype: "Processor"
-description: "Filters search query reports for 'buy', 'price', or 'alternative' keywords to find immediate revenue opportunities."
+---
+id: search-query-intent-miner
+category: SEO
+title: Search Intent Miner
+tagline: Extract high-intent keywords from Search Console.
+difficulty: Intermediate
+time: Weekly
+archtype: Processor
+description: >-
+  Filters search query reports for 'buy', 'price', or 'alternative' keywords to
+  find immediate revenue opportunities.
 sampleData:
-  filename: "queries.csv"
+  filename: queries.csv
   content: |
     Query,Clicks,Impressions
     how to cook,10,1000
     best crm price,50,500
     salesforce alternative,30,300
+isPremium: true
 ---
 
 # Agent Configuration: The SEO Manager

@@ -1,19 +1,22 @@
 ---
-id: "phone-number-formatter-e164"
-category: "Sales Ops"
-title: "Global Phone Formatter"
-tagline: "Standardize all numbers to E.164 format."
-difficulty: "Beginner"
-time: "Batch"
-archetype: "Processor"
-description: "Cleans and formats phone numbers to the global E.164 standard (+1555...) for dialer compatibility."
+id: phone-number-formatter-e164
+category: Sales Ops
+title: Global Phone Formatter
+tagline: Standardize all numbers to E.164 format.
+difficulty: Beginner
+time: Batch
+archetype: Processor
+description: >-
+  Cleans and formats phone numbers to the global E.164 standard (+1555...) for
+  dialer compatibility.
 sampleData:
-  filename: "raw_phones.csv"
+  filename: raw_phones.csv
   content: |
     Contact,Phone
     John,(555) 123-4567
     Jane,555.123.4567
     Bob,1-555-123-4567
+isPremium: true
 ---
 
 # Agent Configuration: The Systems Integration Agent

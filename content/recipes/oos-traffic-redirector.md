@@ -1,18 +1,21 @@
 ---
-id: "oos-traffic-redirector"
-category: "CRO"
-title: "OOS Traffic Preserver"
-tagline: "Don't let Out-of-Stock traffic bounce."
-difficulty: "Intermediate"
-time: "Weekly"
-archetype: "Processor"
-description: "Identifies high-traffic Out-of-Stock pages to set up temporary redirects to similar available items."
+id: oos-traffic-redirector
+category: CRO
+title: OOS Traffic Preserver
+tagline: Don't let Out-of-Stock traffic bounce.
+difficulty: Intermediate
+time: Weekly
+archetype: Processor
+description: >-
+  Identifies high-traffic Out-of-Stock pages to set up temporary redirects to
+  similar available items.
 sampleData:
-  filename: "oos_pages.csv"
+  filename: oos_pages.csv
   content: |
     Page,Traffic,Stock_Status
     /blue-shirt,500,OOS
     /red-shirt,10,OOS
+isPremium: true
 ---
 # Agent Configuration: The SEO Manager
 

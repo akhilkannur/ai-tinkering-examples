@@ -14,6 +14,7 @@ sampleData:
   content: |
     Rep: Hi, are you compliant with SOC2? Prospect: Yes.
     Rep: Great, let's move to pricing.
+isPremium: true
 ---
 
 # Agent Configuration: The QA Specialist

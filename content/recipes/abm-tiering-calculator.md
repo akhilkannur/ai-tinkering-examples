@@ -1,19 +1,22 @@
---- 
-id: "abm-tiering-calculator"
-category: "Sales Ops"
-title: "ABM Account Tiering Calc"
-tagline: "Auto-assign Tier 1/2/3 based on ICP fit and intent."
-difficulty: "Advanced"
-time: "Quarterly"
-archtype: "Processor"
-description: "Analyzes firmographic data and intent signals to categorize target accounts into priority tiers."
+---
+id: abm-tiering-calculator
+category: Sales Ops
+title: ABM Account Tiering Calc
+tagline: Auto-assign Tier 1/2/3 based on ICP fit and intent.
+difficulty: Advanced
+time: Quarterly
+archtype: Processor
+description: >-
+  Analyzes firmographic data and intent signals to categorize target accounts
+  into priority tiers.
 sampleData:
-  filename: "accounts_data.csv"
+  filename: accounts_data.csv
   content: |
     Account,Industry,Revenue,Employee_Count,Intent_Score
     Acme Corp,Software,500M,1000,95
     Beta Inc,Manufacturing,10M,50,20
     Gamma LLC,Software,100M,200,60
+isPremium: false
 ---
 
 # Agent Configuration: The ABM Strategist

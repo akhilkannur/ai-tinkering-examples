@@ -16,6 +16,7 @@ sampleData:
     Account Executive,50000,1000000
     SDR,5000,200000
     Customer Success,15000,500000
+isPremium: true
 ---
 
 # Agent Configuration: The Sales Comp Designer

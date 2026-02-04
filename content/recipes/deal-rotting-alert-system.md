@@ -1,19 +1,22 @@
---- 
-id: "deal-rotting-alert-system"
-category: "Sales Ops"
-title: "Deal Rotting Monitor"
-tagline: "Flag deals that haven't moved in 14 days."
-difficulty: "Beginner"
-time: "Weekly"
-archtype: "Processor"
-description: "Highlights opportunities that are 'rotting' in the pipeline so managers can intervene."
+---
+id: deal-rotting-alert-system
+category: Sales Ops
+title: Deal Rotting Monitor
+tagline: Flag deals that haven't moved in 14 days.
+difficulty: Beginner
+time: Weekly
+archtype: Processor
+description: >-
+  Highlights opportunities that are 'rotting' in the pipeline so managers can
+  intervene.
 sampleData:
-  filename: "open_deals.csv"
+  filename: open_deals.csv
   content: |
     Deal,Stage,Last_Stage_Change
     Deal A,Negotiation,2023-10-01
     Deal B,Discovery,2023-09-01
     Deal C,Demo,2023-10-15
+isPremium: true
 ---
 
 # Agent Configuration: The Pipeline Manager

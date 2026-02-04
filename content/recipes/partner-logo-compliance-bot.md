@@ -7,12 +7,14 @@ difficulty: Intermediate
 time: Batch
 archtype: Researcher
 description: >-
-  Visits partner websites listed in your CRM. Checks if the logo image matches your current brand kit URL. Flags outdated or stretched logos.
+  Visits partner websites listed in your CRM. Checks if the logo image matches
+  your current brand kit URL. Flags outdated or stretched logos.
 sampleData:
   filename: input_data.csv
   content: |
     Partner_Name,URL
     Agency_A,https://agency-a.com/partners
+isPremium: true
 ---
 
 # Agent Configuration: Partner Logo Compliance Bot

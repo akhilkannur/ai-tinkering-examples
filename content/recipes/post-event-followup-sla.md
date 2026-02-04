@@ -15,6 +15,7 @@ sampleData:
     Lead,Upload_Time,First_Call_Time
     L1,2023-10-01 09:00,2023-10-01 14:00
     L2,2023-10-01 09:00,NULL
+isPremium: true
 ---
 # Agent Configuration: The Lead Gen Ops
 

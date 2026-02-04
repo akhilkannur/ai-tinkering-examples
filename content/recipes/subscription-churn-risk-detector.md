@@ -16,6 +16,7 @@ sampleData:
     John,Jan,Active
     John,Feb,Skipped
     John,Mar,Skipped
+isPremium: true
 ---
 # Agent Configuration: The Subscription Manager
 

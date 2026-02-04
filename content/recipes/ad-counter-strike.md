@@ -17,6 +17,7 @@ sampleData:
     Name,Review_URL
     Competitor_A,https://g2.com/competitor-a
     Competitor_B,https://capterra.com/competitor-b
+isPremium: false
 ---
 
 # Agent Configuration: The Attack Dog

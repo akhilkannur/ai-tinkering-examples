@@ -16,6 +16,7 @@ sampleData:
   content: |
     Keywords
     ai, labs, tech, health, finance, ventures
+isPremium: true
 ---
 
 # Agent Configuration: The New Domain Watcher

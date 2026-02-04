@@ -1,18 +1,21 @@
---- 
-id: "pipeline-coverage-ratio-monitor"
-category: "Sales Ops"
-title: "Pipeline Coverage Monitor"
-tagline: "Do you have 3x your quota in pipeline?"
-difficulty: "Beginner"
-time: "Weekly"
-archtype: "Processor"
-description: "Calculates the coverage ratio (Pipeline / Remaining Quota) per rep to identify hiring or coaching needs."
+---
+id: pipeline-coverage-ratio-monitor
+category: Sales Ops
+title: Pipeline Coverage Monitor
+tagline: Do you have 3x your quota in pipeline?
+difficulty: Beginner
+time: Weekly
+archtype: Processor
+description: >-
+  Calculates the coverage ratio (Pipeline / Remaining Quota) per rep to identify
+  hiring or coaching needs.
 sampleData:
-  filename: "coverage_data.csv"
+  filename: coverage_data.csv
   content: |
     Rep,Current_Pipeline,Remaining_Quota
     John,300000,100000
     Jane,50000,100000
+isPremium: true
 ---
 
 # Agent Configuration: The Sales Ops

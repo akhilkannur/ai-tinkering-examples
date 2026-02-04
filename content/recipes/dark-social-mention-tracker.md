@@ -14,6 +14,7 @@ sampleData:
   content: |
     User: Has anyone tried [Brand]?
     User: Yeah it's great.
+isPremium: true
 ---
 # Agent Configuration: The Community Lead
 

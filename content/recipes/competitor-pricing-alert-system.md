@@ -16,6 +16,7 @@ sampleData:
     ClickUp,https://clickup.com/pricing
     Monday,https://monday.com/pricing
     Asana,https://asana.com/pricing
+isPremium: true
 ---
 
 # Agent Configuration: The Competitor Pricing Watchdog

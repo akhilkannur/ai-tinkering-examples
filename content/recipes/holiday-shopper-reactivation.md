@@ -16,6 +16,7 @@ sampleData:
     John,2022-12-15,Toys,TRUE
     Sarah,2022-11-25,Electronics,FALSE
     Mike,2023-03-01,Clothing,FALSE
+isPremium: false
 ---
 # Agent Configuration: The Q4 Early Bird Strategist
 

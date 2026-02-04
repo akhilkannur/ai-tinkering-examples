@@ -1,18 +1,21 @@
 ---
-id: "first-vs-last-touch-comparison"
-category: "Marketing Ops"
-title: "Attribution Model Comparer"
-tagline: "Compare channel performance across different models."
-difficulty: "Advanced"
-time: "Monthly"
-archetype: "Processor"
-description: "Calculates ROI for marketing channels using both First-Touch and Last-Touch models to find top awareness vs conversion drivers."
+id: first-vs-last-touch-comparison
+category: Marketing Ops
+title: Attribution Model Comparer
+tagline: Compare channel performance across different models.
+difficulty: Advanced
+time: Monthly
+archetype: Processor
+description: >-
+  Calculates ROI for marketing channels using both First-Touch and Last-Touch
+  models to find top awareness vs conversion drivers.
 sampleData:
-  filename: "attribution_raw.csv"
+  filename: attribution_raw.csv
   content: |
     Deal_ID,Revenue,First_Touch,Last_Touch
     1,1000,Search,Webinar
     2,500,Social,Search
+isPremium: true
 ---
 
 # Agent Configuration: The Marketing ROI Agent

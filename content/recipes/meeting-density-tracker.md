@@ -1,19 +1,22 @@
---- 
-id: "meeting-density-tracker"
-category: "Sales Ops"
-title: "Rep Focus Time Tracker"
-tagline: "Audit calendar data to protect 'Selling Time'."
-difficulty: "Intermediate"
-time: "Weekly"
-archtype: "Processor"
-description: "Analyzes rep calendar data to calculate % of day spent in internal vs external meetings."
+---
+id: meeting-density-tracker
+category: Sales Ops
+title: Rep Focus Time Tracker
+tagline: Audit calendar data to protect 'Selling Time'.
+difficulty: Intermediate
+time: Weekly
+archtype: Processor
+description: >-
+  Analyzes rep calendar data to calculate % of day spent in internal vs external
+  meetings.
 sampleData:
-  filename: "calendar.csv"
+  filename: calendar.csv
   content: |
     Rep,Meeting_Type,Duration_Mins
     John,Internal,60
     John,External,30
     John,Internal,30
+isPremium: true
 ---
 
 # Agent Configuration: The Sales Enablement

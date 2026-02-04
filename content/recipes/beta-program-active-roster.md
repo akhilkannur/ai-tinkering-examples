@@ -15,6 +15,7 @@ sampleData:
     User,Beta_Feature_Usage
     John,0
     Jane,50
+isPremium: false
 ---
 # Agent Configuration: The Product Feedback Loop Manager
 

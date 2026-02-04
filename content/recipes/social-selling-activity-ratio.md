@@ -16,6 +16,7 @@ sampleData:
     John (Dialer),100,5,2
     Jane (Social),20,50,5
     Mike (Lazy),10,0,0
+isPremium: true
 ---
 # Agent Configuration: The Social Selling Behavior Coach
 

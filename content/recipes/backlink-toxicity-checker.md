@@ -16,6 +16,7 @@ sampleData:
     Referring_Page,Domain_Auth,Spam_Score,Anchor_Text,TLD
     baddomain.xyz/links,5,60,Buy Viagar,.xyz
     goodblog.com/post,45,2,Marketing Tips,.com
+isPremium: false
 ---
 
 # Agent Configuration: The Bodyguard

@@ -15,6 +15,7 @@ sampleData:
     Campaign,Opp_Value,Member_Date,Opp_Date
     Event_X,50000,2023-01-01,2023-02-01
     Event_X,10000,2023-03-01,2023-01-01
+isPremium: true
 ---
 # Agent Configuration: The Marketing Analyst
 

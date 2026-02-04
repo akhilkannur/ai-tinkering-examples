@@ -1,18 +1,21 @@
 ---
-id: "utm-parameter-gap-filler"
-category: "Marketing Ops"
-title: "UTM Referrer Inference Bot"
-tagline: "Infer missing sources based on Referrer URL."
-difficulty: "Intermediate"
-time: "Daily"
-archetype: "Processor"
-description: "Scans traffic logs for missing UTM parameters and infers the likely source based on the Referrer field."
+id: utm-parameter-gap-filler
+category: Marketing Ops
+title: UTM Referrer Inference Bot
+tagline: Infer missing sources based on Referrer URL.
+difficulty: Intermediate
+time: Daily
+archetype: Processor
+description: >-
+  Scans traffic logs for missing UTM parameters and infers the likely source
+  based on the Referrer field.
 sampleData:
-  filename: "traffic_logs.csv"
+  filename: traffic_logs.csv
   content: |
     URL,Referrer,Source_UTM
     /page,linkedin.com,NULL
     /page,google.com,NULL
+isPremium: true
 ---
 
 # Agent Configuration: The Marketing Ops Agent

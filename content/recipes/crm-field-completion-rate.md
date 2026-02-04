@@ -15,6 +15,7 @@ sampleData:
     Rep,Opp,Next_Step
     John,O-1,Call
     Jane,O-2,NULL
+isPremium: true
 ---
 
 # Agent Configuration: The Sales Process Enforcer

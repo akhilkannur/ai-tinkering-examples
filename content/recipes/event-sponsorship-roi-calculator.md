@@ -2,20 +2,24 @@
 id: event-sponsorship-roi-calculator
 category: Strategic Ops
 title: The Booth ROI Predictor
-tagline: Don't just guess. Model the 'Break-Even' scenario before you sign the contract.
+tagline: >-
+  Don't just guess. Model the 'Break-Even' scenario before you sign the
+  contract.
 difficulty: Intermediate
 time: 5 mins
 archetype: Processor
 description: >-
   Trade shows are money pits if you don't do the math. This agent takes the
-  sponsorship cost and your average deal size to calculate exactly how many scans/leads
-  you need to capture just to break even, helping you negotiate better booth placements.
+  sponsorship cost and your average deal size to calculate exactly how many
+  scans/leads you need to capture just to break even, helping you negotiate
+  better booth placements.
 sampleData:
   filename: event_costs.csv
   content: |
     Event_Name,Total_Cost,Attendees,Avg_Deal_Size,Hist_Close_Rate
     SaaStr,50000,10000,15000,0.02
     Local_Meetup,500,100,5000,0.05
+isPremium: true
 ---
 
 # Agent Configuration: The Event CFO

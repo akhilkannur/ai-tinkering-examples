@@ -1,18 +1,21 @@
---- 
-id: "lead-recycling-automation"
-category: "Marketing Ops"
-title: "The Recycler"
-tagline: "Move 'Closed-Lost' leads back to nurture."
-difficulty: "Intermediate"
-time: "Monthly"
-archtype: "Processor"
-description: "Identifies leads marked 'Closed-Lost' more than 90 days ago to re-enroll them in a 'Wake Up' nurture sequence."
+---
+id: lead-recycling-automation
+category: Marketing Ops
+title: The Recycler
+tagline: Move 'Closed-Lost' leads back to nurture.
+difficulty: Intermediate
+time: Monthly
+archtype: Processor
+description: >-
+  Identifies leads marked 'Closed-Lost' more than 90 days ago to re-enroll them
+  in a 'Wake Up' nurture sequence.
 sampleData:
-  filename: "closed_leads.csv"
+  filename: closed_leads.csv
   content: |
     Lead_Email,Status,Lost_Date
     john@acme.com,Closed-Lost,2023-01-01
     jane@beta.com,Closed-Lost,2023-10-01
+isPremium: true
 ---
 
 # Agent Configuration: The Lifecycle Marketer

@@ -1,18 +1,21 @@
---- 
-id: "churn-risk-red-flag-report"
-category: "Customer Success"
-title: "Churn Red Flag Report"
-tagline: "Daily digest of customers with sudden usage drops."
-difficulty: "Advanced"
-time: "Daily"
-archtype: "Processor"
-description: "Compares yesterday's usage to the 7-day average to flag sudden drops that indicate churn risk."
+---
+id: churn-risk-red-flag-report
+category: Customer Success
+title: Churn Red Flag Report
+tagline: Daily digest of customers with sudden usage drops.
+difficulty: Advanced
+time: Daily
+archtype: Processor
+description: >-
+  Compares yesterday's usage to the 7-day average to flag sudden drops that
+  indicate churn risk.
 sampleData:
-  filename: "usage_log.csv"
+  filename: usage_log.csv
   content: |
     Customer,Avg_Daily_Logins,Yesterday_Logins
     Acme,50,2
     Beta,10,12
+isPremium: false
 ---
 
 # Agent Configuration: The CS Ops Specialist

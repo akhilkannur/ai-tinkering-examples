@@ -15,6 +15,7 @@ sampleData:
     SKU,Class,Old_Stock,New_Stock
     Shirt-Blue,A,0,500
     Sock-White,C,0,50
+isPremium: false
 ---
 # Agent Configuration: The Merchandiser
 

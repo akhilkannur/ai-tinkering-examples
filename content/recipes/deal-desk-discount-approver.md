@@ -15,6 +15,7 @@ sampleData:
     Quote_ID,Product,List_Price,Net_Price,Discount_Percent
     Q-101,SaaS Pro,100,80,20
     Q-102,SaaS Ent,1000,600,40
+isPremium: true
 ---
 
 # Agent Configuration: The Deal Desk Analyst

@@ -16,6 +16,7 @@ sampleData:
     Contact,Title,Access_to_EB,Shared_Pain,Met_Timeline
     John Doe,Director,Yes,Yes,No
     Jane Smith,Intern,No,Yes,Yes
+isPremium: true
 ---
 
 # Agent Configuration: The MEDDIC Master

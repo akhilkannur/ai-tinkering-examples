@@ -1,18 +1,21 @@
---- 
-id: "lead-routing-error-checker"
-category: "Sales Ops"
-title: "Routing Rule Validator"
-tagline: "Did the Enterprise lead go to the SMB rep?"
-difficulty: "Intermediate"
-time: "Weekly"
-archtype: "Processor"
-description: "Audits lead assignments to ensure they match territory rules (e.g., Company Size > 1000 goes to Enterprise Team)."
+---
+id: lead-routing-error-checker
+category: Sales Ops
+title: Routing Rule Validator
+tagline: Did the Enterprise lead go to the SMB rep?
+difficulty: Intermediate
+time: Weekly
+archtype: Processor
+description: >-
+  Audits lead assignments to ensure they match territory rules (e.g., Company
+  Size > 1000 goes to Enterprise Team).
 sampleData:
-  filename: "assignments.csv"
+  filename: assignments.csv
   content: |
     Lead,Company_Size,Assigned_Rep,Team
     Lead A,5000,John,SMB
     Lead B,50,Jane,SMB
+isPremium: true
 ---
 
 # Agent Configuration: The Territory Manager

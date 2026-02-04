@@ -1,18 +1,21 @@
 ---
-id: "checkout-funnel-dropoff"
-category: "CRO"
-title: "Checkout Flow Analyzer"
-tagline: "Do they drop off at Shipping or Payment?"
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Identifies the specific step (Shipping Info vs Payment Method) where users abandon the checkout flow."
+id: checkout-funnel-dropoff
+category: CRO
+title: Checkout Flow Analyzer
+tagline: Do they drop off at Shipping or Payment?
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Identifies the specific step (Shipping Info vs Payment Method) where users
+  abandon the checkout flow.
 sampleData:
-  filename: "checkout_steps.csv"
+  filename: checkout_steps.csv
   content: |
     Step,Users_Entered,Users_Completed
     Shipping,1000,900
     Payment,900,500
+isPremium: false
 ---
 # Agent Configuration: The UX Researcher
 

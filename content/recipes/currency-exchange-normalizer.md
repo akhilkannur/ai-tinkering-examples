@@ -16,6 +16,7 @@ sampleData:
     Deal A,1000,EUR
     Deal B,500,GBP
     Deal C,1000,USD
+isPremium: true
 ---
 
 # Agent Configuration: The Revenue Controller

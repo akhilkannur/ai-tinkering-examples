@@ -15,6 +15,7 @@ sampleData:
     Influencer,Required_Date,Actual_Post_Date
     Alice,2023-10-01,2023-10-01
     Bob,2023-10-01,NULL
+isPremium: true
 ---
 # Agent Configuration: The Influencer Manager
 

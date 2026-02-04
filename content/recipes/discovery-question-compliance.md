@@ -1,19 +1,23 @@
 ---
-id: "discovery-question-compliance"
-category: "Sales Ops"
-title: "The Sales Coach"
-tagline: "Don't just grade the call. Fix the deal."
-difficulty: "Advanced"
-time: "Batch"
-archetype: "Processor"
-description: "Reviewing calls is useless if you don't act. This agent scans transcripts for missing MEDDIC criteria (Budget, Authority, etc.) and immediately drafts a 'Clean-Up Email' for the rep to send to the prospect to fill the gaps."
+id: discovery-question-compliance
+category: Sales Ops
+title: The Sales Coach
+tagline: Don't just grade the call. Fix the deal.
+difficulty: Advanced
+time: Batch
+archetype: Processor
+description: >-
+  Reviewing calls is useless if you don't act. This agent scans transcripts for
+  missing MEDDIC criteria (Budget, Authority, etc.) and immediately drafts a
+  'Clean-Up Email' for the rep to send to the prospect to fill the gaps.
 sampleData:
-  filename: "transcripts.txt"
+  filename: transcripts.txt
   content: |
     Rep: "Does this feature work for you?"
     Prospect: "Yes."
     Rep: "Great."
     (Note: No budget or timeline discussion).
+isPremium: true
 ---
 
 # Agent Configuration: The Sales Coach

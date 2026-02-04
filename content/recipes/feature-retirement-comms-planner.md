@@ -1,4 +1,4 @@
---- 
+---
 id: feature-retirement-comms-planner
 category: Product Ops
 title: Feature Sunsetting Comms Planner
@@ -7,12 +7,14 @@ difficulty: Intermediate
 time: Batch
 archetype: Processor
 description: >-
-  Identifies users dependent on a feature being removed. Drafts a timeline of 3 emails: "Heads up", "Alternative Workflows", and "Final Reminder".
+  Identifies users dependent on a feature being removed. Drafts a timeline of 3
+  emails: "Heads up", "Alternative Workflows", and "Final Reminder".
 sampleData:
   filename: input_data.csv
   content: |
     Feature_Name,Retirement_Date
     Legacy_API,2024-12-31
+isPremium: false
 ---
 
 # Agent Configuration: Feature Sunsetting Comms Planner

@@ -1,18 +1,21 @@
 ---
-id: "win-loss-competitor-trends"
-category: "Competitive Intel"
-title: "Competitor Win/Loss Trend"
-tagline: "Are we losing more to Comp A or B?"
-difficulty: "Intermediate"
-time: "Quarterly"
-archetype: "Processor"
-description: "Analyzes CRM data to visualize win rate trends against specific competitors over time."
+id: win-loss-competitor-trends
+category: Competitive Intel
+title: Competitor Win/Loss Trend
+tagline: Are we losing more to Comp A or B?
+difficulty: Intermediate
+time: Quarterly
+archetype: Processor
+description: >-
+  Analyzes CRM data to visualize win rate trends against specific competitors
+  over time.
 sampleData:
-  filename: "competitor_outcomes.csv"
+  filename: competitor_outcomes.csv
   content: |
     Quarter,Competitor,Win_Rate
     Q1,Comp A,40%
     Q2,Comp A,30%
+isPremium: true
 ---
 
 # Agent Configuration: The Sales Analyst

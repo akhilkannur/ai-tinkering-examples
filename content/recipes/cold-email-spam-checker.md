@@ -22,6 +22,7 @@ sampleData:
 
     Quick question,"Hey, I wanted to follow up on our previous conversation
     about growth."
+isPremium: true
 ---
 
 # Agent Configuration: The Spam Word Hunter

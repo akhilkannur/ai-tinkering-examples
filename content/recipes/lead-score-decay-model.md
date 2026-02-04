@@ -1,19 +1,20 @@
---- 
-id: "lead-score-decay-model"
-category: "Sales Ops"
-title: "Lead Score Decay Calc"
-tagline: "Lower the score if they haven't visited in 30 days."
-difficulty: "Advanced"
-time: "Weekly"
-archtype: "Processor"
-description: "Applies a decay factor to lead scores based on recency of engagement."
+---
+id: lead-score-decay-model
+category: Sales Ops
+title: Lead Score Decay Calc
+tagline: Lower the score if they haven't visited in 30 days.
+difficulty: Advanced
+time: Weekly
+archtype: Processor
+description: Applies a decay factor to lead scores based on recency of engagement.
 sampleData:
-  filename: "lead_scores.csv"
+  filename: lead_scores.csv
   content: |
     Lead,Current_Score,Days_Since_Last_Visit
     Alice,90,2
     Bob,85,45
     Charlie,50,10
+isPremium: true
 ---
 
 # Agent Configuration: The Scoring Modeler

@@ -15,6 +15,7 @@ sampleData:
     Company,URL
     Competitor_A,https://competitor-a.com/pricing
     Competitor_B,https://competitor-b.com/plans
+isPremium: true
 ---
 
 # Agent Configuration: The Price Watchdog Fleet

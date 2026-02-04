@@ -15,6 +15,7 @@ sampleData:
     Account,Current_Owner,New_Territory
     Acme,John,West
     Beta,John,East
+isPremium: true
 ---
 
 # Agent Configuration: The Sales Ops Admin

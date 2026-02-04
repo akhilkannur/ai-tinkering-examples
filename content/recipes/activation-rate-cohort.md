@@ -15,6 +15,7 @@ sampleData:
     Signup_Month,Total_Signups,Activated_Within_7d
     Jan,1000,200
     Feb,1200,300
+isPremium: false
 ---
 # Agent Configuration: The Growth Analyst
 

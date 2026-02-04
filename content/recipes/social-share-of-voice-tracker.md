@@ -1,20 +1,24 @@
 ---
-id: "social-share-of-voice-tracker"
-category: "Marketing Ops"
-title: "The Competitive Noise Canceler"
-tagline: "Identify where competitors are loud so you can be louder (or go elsewhere)."
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Don't shout into the void. This agent analyzes competitor mention volume by channel (LinkedIn vs. X) to help you decide whether to 'Attack' (compete head-on) or 'Flank' (own the quiet channel)."
+id: social-share-of-voice-tracker
+category: Marketing Ops
+title: The Competitive Noise Canceler
+tagline: Identify where competitors are loud so you can be louder (or go elsewhere).
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Don't shout into the void. This agent analyzes competitor mention volume by
+  channel (LinkedIn vs. X) to help you decide whether to 'Attack' (compete
+  head-on) or 'Flank' (own the quiet channel).
 sampleData:
-  filename: "sov_data.csv"
+  filename: sov_data.csv
   content: |
     Brand,Channel,Mentions
     Us,LinkedIn,100
     CompA,LinkedIn,500
     Us,Twitter,50
     CompA,Twitter,20
+isPremium: true
 ---
 
 # Agent Configuration: The Social Strategist

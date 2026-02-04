@@ -17,6 +17,7 @@ sampleData:
     Acme,10000,"Too expensive for what it does."
     Beta,50000,"Missing the SSO feature."
     Gamma,5000,"Found a cheaper alternative."
+isPremium: false
 ---
 
 # Agent Configuration: The Churn Autopsy

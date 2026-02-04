@@ -7,13 +7,15 @@ difficulty: Advanced
 time: Researcher
 archtype: Hybrid
 description: >-
-  Identifies top trending audio on TikTok. Suggests which of your product clips (e.g., "Unboxing", "Slow Mo") would sync best with the beat drop.
+  Identifies top trending audio on TikTok. Suggests which of your product clips
+  (e.g., "Unboxing", "Slow Mo") would sync best with the beat drop.
 sampleData:
   filename: input_data.csv
   content: |
     Product_Clip_Type,Duration
     Unboxing,5s
     Demo,15s
+isPremium: true
 ---
 
 # Agent Configuration: TikTok Audio Trend Matcher

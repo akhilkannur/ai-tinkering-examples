@@ -17,6 +17,7 @@ sampleData:
     Intercom,https://www.intercom.com
     HubSpot,https://www.hubspot.com
     Drift,https://www.drift.com
+isPremium: true
 ---
 
 # Agent Configuration: The Tech Stack Spy

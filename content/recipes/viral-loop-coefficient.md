@@ -16,6 +16,7 @@ sampleData:
     Cohort,Users,Invites_Sent,Invites_Accepted
     Jan,1000,200,50
     Feb,1200,100,80
+isPremium: true
 ---
 
 # Agent Configuration: The Growth Engineer

@@ -16,7 +16,7 @@ sampleData:
     Homepage,Sign Up,Create an account
     Pricing,Buy Now,Purchase Pro Plan
     Ebook Landing,Download,Get the PDF guide
-isPremium: true
+isPremium: false
 ---
 
 # Agent Configuration: The CTA Button Optimizer

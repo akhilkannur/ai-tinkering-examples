@@ -13,6 +13,7 @@ description: >-
 sampleData:
   filename: competitor_gallery/ad_01.png
   content: ''
+isPremium: false
 ---
 
 # Agent Configuration: The Ad Visual Intelligence Factory

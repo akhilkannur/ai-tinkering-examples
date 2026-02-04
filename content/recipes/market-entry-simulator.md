@@ -7,13 +7,16 @@ difficulty: Advanced
 time: Real-time
 archtype: Hybrid
 description: >-
-  Simulates the regulatory, cultural, and competitive friction of entering a new market (e.g., "SaaS in Germany"). Lists specific GDPR and localization blockers.
+  Simulates the regulatory, cultural, and competitive friction of entering a new
+  market (e.g., "SaaS in Germany"). Lists specific GDPR and localization
+  blockers.
 sampleData:
   filename: input_data.csv
   content: |
     Target_Market,Product_Type
     Germany,HR_SaaS
     Japan,Social_App
+isPremium: true
 ---
 
 # Agent Configuration: New Market Entry Simulator

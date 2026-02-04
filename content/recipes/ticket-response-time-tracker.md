@@ -7,9 +7,9 @@ difficulty: Intermediate
 time: Weekly
 archetype: Processor
 description: >-
-  Missing SLAs isn't always about lazy agents; usually, it's about bad scheduling.
-  This agent analyzes your ticket timestamps to find "Heat Zones" where volume
-  exceeds capacity, recommending specific shift adjustments.
+  Missing SLAs isn't always about lazy agents; usually, it's about bad
+  scheduling. This agent analyzes your ticket timestamps to find "Heat Zones"
+  where volume exceeds capacity, recommending specific shift adjustments.
 sampleData:
   filename: ticket_log.csv
   content: |
@@ -18,6 +18,7 @@ sampleData:
     102,09,180,Yes
     103,14,5,No
     104,09,200,Yes
+isPremium: true
 ---
 
 # Agent Configuration: The Workforce Planner

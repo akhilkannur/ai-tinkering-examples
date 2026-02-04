@@ -15,6 +15,7 @@ sampleData:
     Name,Price,Currency,Availability,Description
     Blue Widget,29.99,USD,InStock,The best widget for your home.
     Red Gear,45.00,USD,OutOfStock,High-durability gear.
+isPremium: true
 ---
 
 # Agent Configuration: The Bulk Schema JSON-LD Generator

@@ -1,18 +1,21 @@
 ---
-id: "customer-support-sentiment-trend"
-category: "Customer Success"
-title: "Support Sentiment Tracker"
-tagline: "Monitor ticket sentiment trends over time."
-difficulty: "Intermediate"
-time: "Weekly"
-archetype: "Processor"
-description: "Analyzes the text of recent support tickets to track if customer frustration is increasing."
+id: customer-support-sentiment-trend
+category: Customer Success
+title: Support Sentiment Tracker
+tagline: Monitor ticket sentiment trends over time.
+difficulty: Intermediate
+time: Weekly
+archetype: Processor
+description: >-
+  Analyzes the text of recent support tickets to track if customer frustration
+  is increasing.
 sampleData:
-  filename: "tickets.csv"
+  filename: tickets.csv
   content: |
     Date,Text
     2023-10-01,Love the tool!
     2023-10-02,Broken UI, very annoyed
+isPremium: true
 ---
 
 # Agent Configuration: The CS Insights Agent

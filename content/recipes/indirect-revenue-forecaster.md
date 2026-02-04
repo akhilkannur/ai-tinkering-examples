@@ -15,6 +15,7 @@ sampleData:
     Partner,Deal_Amount,Partner_Confidence
     Reseller X,100000,High
     Reseller Y,50000,Medium
+isPremium: true
 ---
 
 # Agent Configuration: The Channel Revenue Lead

@@ -7,11 +7,14 @@ difficulty: Intermediate
 time: 10 mins
 archetype: Processor
 description: >-
-  Takes one winning ad (yours or a competitor's) and generates 10 high-quality variations using proven psychological frameworks like PAS, AIDA, and BAB.
+  Takes one winning ad (yours or a competitor's) and generates 10 high-quality
+  variations using proven psychological frameworks like PAS, AIDA, and BAB.
 sampleData:
   filename: winning_ad.txt
-  content: |
-    Stop wasting time on spreadsheets. Our CRM automates data entry so you can focus on selling. Try it free for 14 days.
+  content: >
+    Stop wasting time on spreadsheets. Our CRM automates data entry so you can
+    focus on selling. Try it free for 14 days.
+isPremium: false
 ---
 
 # Agent Configuration: The Ad Variation Engine

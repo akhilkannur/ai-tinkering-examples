@@ -16,6 +16,7 @@ sampleData:
     Category,Sales_Month_1,Sales_Month_2,Sales_Month_3
     Pickleball,100,120,150
     FidgetSpinners,1000,800,400
+isPremium: false
 ---
 
 # Agent Configuration: The Trend Forecaster

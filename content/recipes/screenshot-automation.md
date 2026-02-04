@@ -2,11 +2,13 @@
 id: screenshot-automation
 category: Dev Tools
 title: Automated Screenshot Capture System
-tagline: Capture beautiful, consistent screenshots from any URL programmatically.
+tagline: 'Capture beautiful, consistent screenshots from any URL programmatically.'
 difficulty: Intermediate
 time: 10 mins
 archetype: Processor
-description: Automatically captures, crops, and beautifies screenshots from URLs for your portfolio or docs.
+description: >-
+  Automatically captures, crops, and beautifies screenshots from URLs for your
+  portfolio or docs.
 sampleData:
   filename: urls.csv
   content: |
@@ -14,6 +16,7 @@ sampleData:
     https://x.com/user/status/12345,twitter
     https://github.com/user/repo,github
     https://example.com,default
+isPremium: false
 ---
 
 # What This Does

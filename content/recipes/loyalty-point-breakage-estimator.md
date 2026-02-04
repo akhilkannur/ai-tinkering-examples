@@ -1,4 +1,4 @@
---- 
+---
 id: loyalty-point-breakage-estimator
 category: Retention
 title: Loyalty Point Breakage Estimator
@@ -7,12 +7,14 @@ difficulty: Intermediate
 time: Batch
 archetype: Processor
 description: >-
-  Analyzes point accrual vs redemption rates. Predicts the liability reduction from expiring points this quarter.
+  Analyzes point accrual vs redemption rates. Predicts the liability reduction
+  from expiring points this quarter.
 sampleData:
   filename: input_data.csv
   content: |
     User_ID,Points_Balance,Expiry_Date
     UserA,500,2023-12-31
+isPremium: false
 ---
 
 # Agent Configuration: Loyalty Point Breakage Estimator

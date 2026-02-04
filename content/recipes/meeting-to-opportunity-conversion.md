@@ -1,19 +1,22 @@
 ---
-id: "meeting-to-opportunity-conversion"
-category: "Sales Ops"
-title: "Meeting-to-Opp Converter"
-tagline: "Track % of first meetings that become deals."
-difficulty: "Beginner"
-time: "Monthly"
-archetype: "Processor"
-description: "Calculates the conversion rate between 'First Meeting' activity and 'Opportunity Created' status."
+id: meeting-to-opportunity-conversion
+category: Sales Ops
+title: Meeting-to-Opp Converter
+tagline: Track % of first meetings that become deals.
+difficulty: Beginner
+time: Monthly
+archetype: Processor
+description: >-
+  Calculates the conversion rate between 'First Meeting' activity and
+  'Opportunity Created' status.
 sampleData:
-  filename: "meetings_to_opps.csv"
+  filename: meetings_to_opps.csv
   content: |
     Lead_ID,Meeting_Held,Opp_Created
     L-1,Yes,Yes
     L-2,Yes,No
     L-3,No,No
+isPremium: true
 ---
 
 # Agent Configuration: The Lead Quality Agent

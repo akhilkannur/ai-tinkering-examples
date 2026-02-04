@@ -15,6 +15,7 @@ sampleData:
   content: >
     User: "The workflow automation was a game changer. We saved 20 hours a week
     across the team."
+isPremium: true
 ---
 
 # Agent Configuration: The Case Study Factory

@@ -1,4 +1,4 @@
---- 
+---
 id: onboarding-milestone-celebrator
 category: Customer Success
 title: Onboarding Milestone Celebrator
@@ -7,12 +7,14 @@ difficulty: Beginner
 time: Real-time
 archetype: Processor
 description: >-
-  When a user hits "First Project Created", draft a personalized congrats email from the founder. Not a generic notification, a real feeling email.
+  When a user hits "First Project Created", draft a personalized congrats email
+  from the founder. Not a generic notification, a real feeling email.
 sampleData:
   filename: input_data.csv
   content: |
     User_Email,Milestone_Hit
     john@co.com,First_Export
+isPremium: true
 ---
 
 # Agent Configuration: Onboarding Milestone Celebrator

@@ -16,6 +16,7 @@ sampleData:
     Customer_ID,Ticket_Text,Usage_Drop
     Cust_101,"The app is too slow today",-20%
     Cust_102,"I need to export my data",-50%
+isPremium: true
 ---
 
 # Agent Configuration: The Churn Sentinel

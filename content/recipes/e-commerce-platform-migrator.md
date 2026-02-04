@@ -16,6 +16,7 @@ sampleData:
     Store_URL
     gymshark.com
     colourpop.com
+isPremium: true
 ---
 
 # Agent Configuration: The Re-Platform Scout

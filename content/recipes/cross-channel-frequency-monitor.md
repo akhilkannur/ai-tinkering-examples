@@ -1,18 +1,21 @@
 ---
-id: "cross-channel-frequency-monitor"
-category: "Paid Media"
-title: "Omnichannel Frequency Cap"
-tagline: "Total ad touches across FB + Google + Email."
-difficulty: "Advanced"
-time: "Monthly"
-archetype: "Processor"
-description: "Estimates total ad touches per user across multiple channels to prevent global bombardment."
+id: cross-channel-frequency-monitor
+category: Paid Media
+title: Omnichannel Frequency Cap
+tagline: Total ad touches across FB + Google + Email.
+difficulty: Advanced
+time: Monthly
+archetype: Processor
+description: >-
+  Estimates total ad touches per user across multiple channels to prevent global
+  bombardment.
 sampleData:
-  filename: "channel_freq.csv"
+  filename: channel_freq.csv
   content: |
     User,FB_Imps,Google_Imps,Emails
     John,10,5,2
     Jane,50,50,10
+isPremium: true
 ---
 # Agent Configuration: The Media Planner
 

@@ -15,6 +15,7 @@ sampleData:
     Email,Status,Lists
     john@acme.com,Customer,Prospect_Nurture;Newsletter
     jane@beta.com,Prospect,Prospect_Nurture
+isPremium: true
 ---
 
 # Agent Configuration: The Marketing Automation Ops

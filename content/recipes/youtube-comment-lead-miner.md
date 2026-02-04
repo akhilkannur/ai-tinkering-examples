@@ -1,4 +1,4 @@
---- 
+---
 id: youtube-comment-lead-miner
 category: Lead Gen
 title: YouTube Comment Lead Miner
@@ -7,12 +7,14 @@ difficulty: Intermediate
 time: Batch
 archetype: Researcher
 description: >-
-  Scrapes comments on your viral video. Filters for intent keywords like "Pricing?", "How do I buy?", "Is this available in...?",
+  Scrapes comments on your viral video. Filters for intent keywords like
+  "Pricing?", "How do I buy?", "Is this available in...?",
 sampleData:
   filename: input_data.csv
   content: |
     Video_ID,Comment_Text
     Vid1,"How much is this?"
+isPremium: true
 ---
 
 # Agent Configuration: YouTube Comment Lead Miner

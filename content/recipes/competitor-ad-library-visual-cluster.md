@@ -7,13 +7,16 @@ difficulty: Advanced
 time: Batch
 archtype: Researcher
 description: >-
-  Downloads images from Ad Library, then uses embeddings to cluster them (e.g., "UGC Style", "Studio Shot", "Meme"). Helps you spot their creative strategy distribution.
+  Downloads images from Ad Library, then uses embeddings to cluster them (e.g.,
+  "UGC Style", "Studio Shot", "Meme"). Helps you spot their creative strategy
+  distribution.
 sampleData:
   filename: input_data.csv
   content: |
     Ad_ID,Image_URL
     101,https://fb-ads.com/1.jpg
     102,https://fb-ads.com/2.jpg
+isPremium: true
 ---
 
 # Agent Configuration: Competitor Ad Style Clusterer

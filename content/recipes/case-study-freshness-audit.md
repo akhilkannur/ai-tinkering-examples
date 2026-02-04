@@ -16,6 +16,7 @@ sampleData:
     Acme Corp,Manufacturing,2019-06-15,Enterprise
     TechStart,SaaS,2023-01-20,SMB
     GlobalBank,Fintech,2018-11-01,Enterprise
+isPremium: false
 ---
 # Agent Configuration: The Social Proof Strategist
 

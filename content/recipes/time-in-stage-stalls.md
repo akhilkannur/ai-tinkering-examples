@@ -1,19 +1,22 @@
 ---
-id: "time-in-stage-stalls"
-category: "Sales Ops"
-title: "Pipeline Stage Stall Monitor"
-tagline: "Identify deals stuck in Legal or Security Review."
-difficulty: "Intermediate"
-time: "Weekly"
-archetype: "Processor"
-description: "Analyzes how long deals sit in specific 'Slow Stages' like Legal to identify process friction."
+id: time-in-stage-stalls
+category: Sales Ops
+title: Pipeline Stage Stall Monitor
+tagline: Identify deals stuck in Legal or Security Review.
+difficulty: Intermediate
+time: Weekly
+archetype: Processor
+description: >-
+  Analyzes how long deals sit in specific 'Slow Stages' like Legal to identify
+  process friction.
 sampleData:
-  filename: "stage_durations.csv"
+  filename: stage_durations.csv
   content: |
     Deal,Stage,Days_In_Stage
     Deal A,Legal,25
     Deal B,Security,5
     Deal C,Legal,2
+isPremium: true
 ---
 
 # Agent Configuration: The Process Improvement Agent

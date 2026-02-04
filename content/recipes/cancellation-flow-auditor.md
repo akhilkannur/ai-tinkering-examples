@@ -17,6 +17,7 @@ sampleData:
     DesignStream,https://designstream.io,Too Expensive
     CodeCheck,https://codecheck.app,Missing Features
     HealthSync,https://healthsync.com,Not Using It
+isPremium: true
 ---
 
 # Agent Configuration: The Cancellation Flow Auditor

@@ -14,6 +14,7 @@ sampleData:
   filename: topic.txt
   content: |
     Remote Work vs. Office Return
+isPremium: true
 ---
 
 # Agent Configuration: The Viral Poll Builder

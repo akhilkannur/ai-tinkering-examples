@@ -16,6 +16,7 @@ sampleData:
     Acme Corp, 2023-10-01
     [Partner Reg]
     Acme Corp, 2023-10-02
+isPremium: true
 ---
 
 # Agent Configuration: The Channel Arbitrator

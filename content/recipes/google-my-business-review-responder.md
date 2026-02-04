@@ -16,6 +16,7 @@ sampleData:
     Reviewer,Stars,Comment
     John Doe,5,Best pizza in Chicago!
     Jane Smith,1,Cold pizza and rude service.
+isPremium: true
 ---
 
 # Agent Configuration: The Local Review Responder

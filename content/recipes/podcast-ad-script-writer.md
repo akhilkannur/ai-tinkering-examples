@@ -15,6 +15,7 @@ sampleData:
     Product: Athletic Greens
     Benefit: 75 vitamins in one scoop. Gut health.
     Offer: Free travel packs.
+isPremium: true
 ---
 
 # Agent Configuration: The Podcast Ad Script Writer

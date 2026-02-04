@@ -7,16 +7,17 @@ difficulty: Intermediate
 time: 15 mins
 archetype: Researcher
 description: >-
-  Warm introductions convert 5x better than cold outreach. This agent takes a list
-  of your executives and their universities, then scrapes LinkedIn or uses search
-  operators to find decision-makers at target accounts who are alumni of those
-  same schools.
+  Warm introductions convert 5x better than cold outreach. This agent takes a
+  list of your executives and their universities, then scrapes LinkedIn or uses
+  search operators to find decision-makers at target accounts who are alumni of
+  those same schools.
 sampleData:
   filename: executive_universities.csv
   content: |
     Exec_Name,University,Target_Accounts
     Sarah Jones,Stanford University,"Stripe, Plaid, Square"
     Mike Ross,University of Michigan,"Ford, GM, Rivian"
+isPremium: false
 ---
 
 # Agent Configuration: The Alumni Network Miner

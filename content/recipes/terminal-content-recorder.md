@@ -18,6 +18,7 @@ sampleData:
     OUTPUT_DIR="~/recordings"
     THEME="monokai"
     FONT_SIZE=20
+isPremium: true
 ---
 
 # Agent Configuration: The Terminal Streamer

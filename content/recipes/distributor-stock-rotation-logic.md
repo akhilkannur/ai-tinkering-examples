@@ -15,6 +15,7 @@ sampleData:
     Distributor,Trailing_Sales,Return_Request_Amt
     Disti A,1000000,50000
     Disti B,500000,100000
+isPremium: true
 ---
 
 # Agent Configuration: The Distribution Manager

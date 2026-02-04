@@ -1,19 +1,22 @@
 ---
-id: "landing-page-conversion-drift"
-category: "Marketing Ops"
-title: "LP Conversion Drift Monitor"
-tagline: "Catch sudden drops in landing page conversion rates."
-difficulty: "Intermediate"
-time: "Daily"
-archetype: "Processor"
-description: "Compares daily landing page conversion rates against a 7-day rolling average to detect technical issues or traffic quality drops."
+id: landing-page-conversion-drift
+category: Marketing Ops
+title: LP Conversion Drift Monitor
+tagline: Catch sudden drops in landing page conversion rates.
+difficulty: Intermediate
+time: Daily
+archetype: Processor
+description: >-
+  Compares daily landing page conversion rates against a 7-day rolling average
+  to detect technical issues or traffic quality drops.
 sampleData:
-  filename: "lp_conversions.csv"
+  filename: lp_conversions.csv
   content: |
     Page,Date,Visits,Conversions
     /promo,2023-10-01,100,5
     /promo,2023-10-02,100,6
     /promo,2023-10-03,100,1
+isPremium: true
 ---
 
 # Agent Configuration: The Web Analytics Agent

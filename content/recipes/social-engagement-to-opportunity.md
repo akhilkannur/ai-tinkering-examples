@@ -15,6 +15,7 @@ sampleData:
     Prospect,Engagement_Date,Deal_Created_Date
     John,2023-10-01,2023-10-05
     Jane,2023-10-01,NULL
+isPremium: true
 ---
 # Agent Configuration: The Attribution Specialist
 

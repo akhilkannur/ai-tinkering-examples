@@ -7,9 +7,10 @@ difficulty: Intermediate
 time: Quarterly
 archetype: Hybrid
 description: >-
-  Most QBRs are boring. This agent analyzes raw Usage Logs and Support Tickets to
-  calculate a "Health Score" for the account. It then generates one of two
-  decks: A "Growth Pitch" (for healthy accounts) or a "Recovery Plan" (for risky ones).
+  Most QBRs are boring. This agent analyzes raw Usage Logs and Support Tickets
+  to calculate a "Health Score" for the account. It then generates one of two
+  decks: A "Growth Pitch" (for healthy accounts) or a "Recovery Plan" (for risky
+  ones).
 sampleData:
   filename: usage_logs.csv
   content: |
@@ -23,6 +24,7 @@ sampleData:
     admin@client.com,API Error 500,Resolved
     admin@client.com,How to export PDF?,Resolved
     ceo@client.com,Login failed,Open
+isPremium: true
 ---
 
 # Agent Configuration: The QBR Strategist

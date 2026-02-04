@@ -1,19 +1,22 @@
---- 
-id: "qbr-data-prepper"
-category: "Customer Success"
-title: "QBR Data Aggregator"
-tagline: "Prepare usage and support data for reviews."
-difficulty: "Intermediate"
-time: "Quarterly"
-archtype: "Processor"
-description: "Combines usage logs and ticket history into a single view for Quarterly Business Reviews."
+---
+id: qbr-data-prepper
+category: Customer Success
+title: QBR Data Aggregator
+tagline: Prepare usage and support data for reviews.
+difficulty: Intermediate
+time: Quarterly
+archtype: Processor
+description: >-
+  Combines usage logs and ticket history into a single view for Quarterly
+  Business Reviews.
 sampleData:
-  filename: "qbr_task.txt"
+  filename: qbr_task.txt
   content: |
     [Usage]
     Acme,500 logins
     [Tickets]
     Acme,2 critical
+isPremium: true
 ---
 
 # Agent Configuration: The Account Manager

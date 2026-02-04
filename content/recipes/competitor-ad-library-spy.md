@@ -15,6 +15,7 @@ sampleData:
     Ad 1: "Stop wasting time on spreadsheets. Automate your CRM today."
     Ad 2: "The #1 rated CRM for small business. Try it free."
     Ad 3: "Drowning in data? See why 5,000+ teams switched to Us."
+isPremium: true
 ---
 
 # Agent Configuration: The Ad Library Decoder

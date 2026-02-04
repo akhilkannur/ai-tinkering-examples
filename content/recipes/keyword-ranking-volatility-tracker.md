@@ -1,19 +1,22 @@
---- 
-id: "keyword-ranking-volatility-tracker"
-category: "SEO"
-title: "SERP Volatility Tracker"
-tagline: "Did we just lose our rankings?"
-difficulty: "Intermediate"
-time: "Weekly"
-archtype: "Processor"
-description: "Compares ranking positions from two dates to identify big movers (gainers and losers)."
+---
+id: keyword-ranking-volatility-tracker
+category: SEO
+title: SERP Volatility Tracker
+tagline: Did we just lose our rankings?
+difficulty: Intermediate
+time: Weekly
+archtype: Processor
+description: >-
+  Compares ranking positions from two dates to identify big movers (gainers and
+  losers).
 sampleData:
-  filename: "rankings.csv"
+  filename: rankings.csv
   content: |
     Keyword,Rank_Last_Week,Rank_This_Week
     seo tools,5,5
     ai writer,10,3
     marketing,3,20
+isPremium: true
 ---
 
 # Agent Configuration: The SEO Strategist

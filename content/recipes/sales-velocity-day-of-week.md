@@ -15,6 +15,7 @@ sampleData:
     Date,Day,Revenue
     2023-10-01,Sunday,5000
     2023-10-02,Monday,2000
+isPremium: true
 ---
 # Agent Configuration: The Sales Timing Optimizer
 

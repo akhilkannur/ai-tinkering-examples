@@ -16,6 +16,7 @@ sampleData:
     Hi [Name],
     We help companies save money. Want a demo?
     Best, Me.
+isPremium: true
 ---
 
 # Agent Configuration: The A/B Test Architect

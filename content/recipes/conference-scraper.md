@@ -16,6 +16,7 @@ sampleData:
     SaaStr 2024,https://www.saastr.com/speakers
     Web Summit,https://websummit.com/speakers
     Collision,https://collisionconf.com/speakers
+isPremium: true
 ---
 
 # Agent Configuration: The Conference Batch Scraper

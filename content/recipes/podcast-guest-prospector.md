@@ -16,6 +16,7 @@ sampleData:
     B2B Sales
     SaaS Marketing
     Artificial Intelligence
+isPremium: true
 ---
 
 # Agent Configuration: The Podcast Guest Prospector

@@ -1,20 +1,24 @@
 ---
-id: "ad-frequency-capper"
-category: "Paid Media"
-title: "The Ad Frequency Capper"
-tagline: "Stop annoying your prospects."
-difficulty: "Intermediate"
-time: "Weekly"
-archetype: "Processor"
-description: "Ad fatigue kills ROI. This agent tracks the relationship between 'Frequency' (Avg times seen) and 'CTR' or 'CPA' in your campaign data, identifying the exact tipping point where performance degrades so you can set a cap."
+id: ad-frequency-capper
+category: Paid Media
+title: The Ad Frequency Capper
+tagline: Stop annoying your prospects.
+difficulty: Intermediate
+time: Weekly
+archetype: Processor
+description: >-
+  Ad fatigue kills ROI. This agent tracks the relationship between 'Frequency'
+  (Avg times seen) and 'CTR' or 'CPA' in your campaign data, identifying the
+  exact tipping point where performance degrades so you can set a cap.
 sampleData:
-  filename: "frequency_data.csv"
+  filename: frequency_data.csv
   content: |
     Frequency_Bucket,CTR,CPA
     1,1.5%,10
     2,1.8%,8
     3,1.2%,12
     4,0.5%,25
+isPremium: false
 ---
 
 # Agent Configuration: The Data Analyst

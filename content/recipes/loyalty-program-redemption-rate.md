@@ -15,6 +15,7 @@ sampleData:
     Month,Points_Issued,Points_Redeemed
     Jan,10000,500
     Feb,10000,5000
+isPremium: true
 ---
 
 # Agent Configuration: The Loyalty Manager

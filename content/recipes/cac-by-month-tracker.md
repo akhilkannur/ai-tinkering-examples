@@ -16,6 +16,7 @@ sampleData:
     Month,Total_Spend,New_Customers,Traffic,Conv_Rate
     Jan,5000,50,1000,0.05
     Feb,8000,40,2000,0.02
+isPremium: false
 ---
 # Agent Configuration: The FP&A Analyst
 

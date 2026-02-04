@@ -7,13 +7,14 @@ difficulty: Beginner
 time: Real-time
 archtype: Processor
 description: >-
-  Analyzes your draft newsletter. Counts "Fear/Urgency" words vs "Hope/Value" words. Ensures you aren't burning out your list with constant alarmism.
+  Analyzes your draft newsletter. Counts "Fear/Urgency" words vs "Hope/Value"
+  words. Ensures you aren't burning out your list with constant alarmism.
 sampleData:
   filename: input_data.csv
   content: |
     Subject_Line,Body_Text
     "Last Chance!","Everything is ending..."
-    
+isPremium: true
 ---
 
 # Agent Configuration: Newsletter Vibe Check

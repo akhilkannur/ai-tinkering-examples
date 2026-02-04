@@ -15,6 +15,7 @@ sampleData:
     Opp,Opp_Owner,Acc_Owner
     O-1,John,John
     O-2,Jane,Bob
+isPremium: true
 ---
 
 # Agent Configuration: The Admin

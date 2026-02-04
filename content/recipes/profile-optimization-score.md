@@ -15,6 +15,7 @@ sampleData:
     Rep,Has_Headshot,Headline_Length
     John,Yes,5
     Jane,Yes,50
+isPremium: true
 ---
 # Agent Configuration: The Brand Compliance Agent
 

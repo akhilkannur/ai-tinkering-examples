@@ -15,6 +15,7 @@ sampleData:
     Referrer_IP,Referee_IP
     1.1.1.1,1.1.1.1
     2.2.2.2,3.3.3.3
+isPremium: true
 ---
 # Agent Configuration: The Growth Quality Guard
 

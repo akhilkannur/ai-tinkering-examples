@@ -15,6 +15,7 @@ sampleData:
     SKU,Season,Stock
     Winter-Coat,Winter,500
     Summer-Tee,Summer,10
+isPremium: true
 ---
 
 # Agent Configuration: The Planner

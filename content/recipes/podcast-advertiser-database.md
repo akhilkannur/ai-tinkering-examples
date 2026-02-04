@@ -7,15 +7,17 @@ difficulty: Intermediate
 time: Weekly
 archetype: Researcher
 description: >-
-  Companies advertising on podcasts have high CAC tolerance and marketing budget.
-  This agent listens to (or reads transcripts of) popular industry podcasts to
-  log the sponsors, creating a list of companies aggressively spending on brand awareness.
+  Companies advertising on podcasts have high CAC tolerance and marketing
+  budget. This agent listens to (or reads transcripts of) popular industry
+  podcasts to log the sponsors, creating a list of companies aggressively
+  spending on brand awareness.
 sampleData:
   filename: podcast_rss_feeds.csv
   content: |
     Podcast_Name,RSS_Feed
     My First Million,https://feeds.megaphone.fm/myfirstmillion
     Lenny's Podcast,https://api.substack.com/feed/podcast/10845.rss
+isPremium: true
 ---
 
 # Agent Configuration: The Podcast Ad Spender

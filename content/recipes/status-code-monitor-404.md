@@ -14,6 +14,7 @@ sampleData:
     /home,200
     /old-page,404
     /server-error,500
+isPremium: true
 ---
 
 # Agent Configuration: The Link Rot Surgeon

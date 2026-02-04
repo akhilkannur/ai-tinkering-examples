@@ -15,6 +15,7 @@ sampleData:
     Customer,Emp_Growth_Pct,Usage_Growth_Pct
     Acme,20,50
     Beta,-5,0
+isPremium: true
 ---
 # Agent Configuration: The Account Management Ops
 

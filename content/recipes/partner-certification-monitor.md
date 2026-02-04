@@ -8,14 +8,15 @@ time: Monthly
 archetype: Processor
 description: >-
   Don't track certs in spreadsheets. This agent scans your partner database,
-  identifies certifications expiring in the next 30/60/90 days, and drafts personalized
-  "Renewal Nudge" emails to keep them compliant.
+  identifies certifications expiring in the next 30/60/90 days, and drafts
+  personalized "Renewal Nudge" emails to keep them compliant.
 sampleData:
   filename: cert_log.csv
   content: |
     Partner,Contact_Email,Cert_Name,Expiry_Date
     Acme Resellers,john@acme.com,Solutions Architect,2024-02-01
     Beta Systems,jane@beta.com,Sales Pro,2023-12-01
+isPremium: true
 ---
 
 # Agent Configuration: The Enablement Manager

@@ -15,6 +15,7 @@ sampleData:
     Customer,Days_To_Renew,Health
     Acme,85,Red
     Beta,85,Green
+isPremium: true
 ---
 # Agent Configuration: The Renewals Manager
 

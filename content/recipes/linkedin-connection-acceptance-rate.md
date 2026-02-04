@@ -13,6 +13,7 @@ sampleData:
     Template_ID,Sent,Accepted
     A (Generic),100,20
     B (Personalized),100,45
+isPremium: true
 ---
 # Agent Configuration: The Social Selling Coach
 

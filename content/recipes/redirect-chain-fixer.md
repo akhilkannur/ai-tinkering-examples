@@ -17,6 +17,7 @@ sampleData:
     /old-page,/new-page
     /new-page,/final-page
     /blog/old-post,/blog/new-post
+isPremium: true
 ---
 
 # Agent Configuration: The Redirect Chain Flattener

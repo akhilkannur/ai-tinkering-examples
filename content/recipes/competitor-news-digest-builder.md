@@ -15,6 +15,7 @@ sampleData:
     CompetitorA
     CompetitorB
     CompetitorC
+isPremium: true
 ---
 
 # Agent Configuration: The Intel Analyst

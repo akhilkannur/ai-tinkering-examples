@@ -7,15 +7,17 @@ difficulty: Intermediate
 time: 30 mins
 archetype: Researcher
 description: >-
-  Executives go on podcast tours to promote something (a book, a round of funding, a launch). 
-  This agent finds recent podcast guest appearances by CEOs in your niche, giving you 
-  perfect context for outreach ("Heard you on [Podcast] talking about X...").
+  Executives go on podcast tours to promote something (a book, a round of
+  funding, a launch).  This agent finds recent podcast guest appearances by CEOs
+  in your niche, giving you  perfect context for outreach ("Heard you on
+  [Podcast] talking about X...").
 sampleData:
   filename: target_ceos.csv
   content: |
     CEO_Name,Company
     Brian Chesky,Airbnb
     Tobi Lutke,Shopify
+isPremium: true
 ---
 
 # Agent Configuration: The Podcast Tour Stalker

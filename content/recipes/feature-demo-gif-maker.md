@@ -7,12 +7,14 @@ difficulty: Beginner
 time: Real-time
 archtype: Processor
 description: >-
-  Reads your "Release Notes". Outputs a script for a 5-second screen recording (GIF) that best demonstrates the value (e.g., "Zoom in on the new button").
+  Reads your "Release Notes". Outputs a script for a 5-second screen recording
+  (GIF) that best demonstrates the value (e.g., "Zoom in on the new button").
 sampleData:
   filename: input_data.csv
   content: |
     Feature_Name,Description
     Dark Mode,Added a toggle in settings.
+isPremium: true
 ---
 
 # Agent Configuration: Changelog GIF Concept Maker

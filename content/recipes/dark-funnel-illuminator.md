@@ -1,19 +1,22 @@
 ---
-id: "dark-funnel-illuminator"
-category: "Marketing Ops"
-title: "Dark Funnel Correlation Bot"
-tagline: "Correlate direct traffic spikes with outbound activity."
-difficulty: "Advanced"
-time: "Weekly"
-archetype: "Processor"
-description: "Matches spikes in 'Direct' website traffic with regional outbound email blasts to measure indirect marketing impact."
+id: dark-funnel-illuminator
+category: Marketing Ops
+title: Dark Funnel Correlation Bot
+tagline: Correlate direct traffic spikes with outbound activity.
+difficulty: Advanced
+time: Weekly
+archetype: Processor
+description: >-
+  Matches spikes in 'Direct' website traffic with regional outbound email blasts
+  to measure indirect marketing impact.
 sampleData:
-  filename: "traffic_vs_outbound.csv"
+  filename: traffic_vs_outbound.csv
   content: |
     Date,Region,Direct_Visits,Outbound_Emails_Sent
     2023-10-01,US-East,100,5000
     2023-10-02,US-East,250,0
     2023-10-03,US-West,50,1000
+isPremium: true
 ---
 
 # Agent Configuration: The Marketing Analyst

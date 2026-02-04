@@ -1,19 +1,22 @@
---- 
-id: "sales-territory-balancer"
-category: "Sales Ops"
-title: "Territory Fairness Balancer"
-tagline: "Ensure every rep has equal revenue potential."
-difficulty: "Advanced"
-time: "Quarterly"
-archtype: "Processor"
-description: "Analyzes a list of accounts and their estimated revenue to balance territories so no rep is starved or overwhelmed."
+---
+id: sales-territory-balancer
+category: Sales Ops
+title: Territory Fairness Balancer
+tagline: Ensure every rep has equal revenue potential.
+difficulty: Advanced
+time: Quarterly
+archtype: Processor
+description: >-
+  Analyzes a list of accounts and their estimated revenue to balance territories
+  so no rep is starved or overwhelmed.
 sampleData:
-  filename: "territories.csv"
+  filename: territories.csv
   content: |
     Account,State,Est_Revenue,Current_Rep
     Acme,CA,100000,Rep A
     Beta,NY,500000,Rep B
     Gamma,CA,50000,Rep A
+isPremium: true
 ---
 
 # Agent Configuration: The Territory Planner

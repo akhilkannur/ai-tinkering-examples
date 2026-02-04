@@ -2,18 +2,22 @@
 id: sales-quota-calculator
 category: Sales Ops
 title: Quota Scenario Planner
-tagline: Don't just calculate one path. Compare 'High Volume' vs 'High Skill' strategies.
+tagline: >-
+  Don't just calculate one path. Compare 'High Volume' vs 'High Skill'
+  strategies.
 difficulty: Intermediate
 time: 5 mins
 archetype: Processor
 description: >-
-  Most calculators just tell you to "make more calls." This agent models three distinct paths to hitting your number: 
-  The Grinder (Volume), The Sniper (Conversion), and The Balanced approach.
+  Most calculators just tell you to "make more calls." This agent models three
+  distinct paths to hitting your number:  The Grinder (Volume), The Sniper
+  (Conversion), and The Balanced approach.
 sampleData:
   filename: my_stats.csv
   content: |
     Quota,Average_Deal_Size,Close_Rate,Meeting_Book_Rate,Current_Daily_Dials
     50000,10000,0.20,0.05,40
+isPremium: true
 ---
 
 # Agent Configuration: The Sales Director

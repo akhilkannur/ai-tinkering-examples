@@ -18,6 +18,7 @@ sampleData:
     2,I moved to a competitor because they have an Android app.
     3,Support never replied to my ticket.
     4,Found a cheaper tool.
+isPremium: false
 ---
 
 # Agent Configuration: The Churn Survey Analyzer

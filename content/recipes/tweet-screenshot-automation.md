@@ -2,7 +2,7 @@
 id: tweet-screenshot-automation
 category: Marketing Ops
 title: Tweet Screenshot Automation
-tagline: Capture perfect, sidebar-free tweet cards.
+tagline: 'Capture perfect, sidebar-free tweet cards.'
 difficulty: Advanced
 time: Automated
 archetype: Processor
@@ -18,6 +18,7 @@ sampleData:
     ID,URL
     example-1,https://x.com/MehtabKarta/status/2014392743204999396
     example-2,https://x.com/buccocapital/status/1995310794339176558
+isPremium: true
 ---
 
 # Agent Configuration: The Media Specialist

@@ -17,6 +17,7 @@ sampleData:
     https://site.com/?utm_source=LinkedIn&utm_medium=Social
     https://site.com/?utm_source=google&utm_medium=cpc
     https://site.com/?utm_source=fb%20ads&utm_medium=paid
+isPremium: true
 ---
 
 # Agent Configuration: The UTM Taxonomy Auditor

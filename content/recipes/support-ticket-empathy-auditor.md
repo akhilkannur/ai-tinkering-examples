@@ -7,14 +7,15 @@ difficulty: Intermediate
 time: Batch
 archtype: Processor
 description: >-
-  Reviews closed tickets. Scores responses on "Warmth", "Acknowledgment", and "Solution Clarity". Flags agents who are too copy-paste heavy.
+  Reviews closed tickets. Scores responses on "Warmth", "Acknowledgment", and
+  "Solution Clarity". Flags agents who are too copy-paste heavy.
 sampleData:
   filename: input_data.csv
   content: |
     Ticket_ID,Agent_Response
     #101,"Please clear cache."
     #102,"I understand that is frustrating..."
-    
+isPremium: true
 ---
 
 # Agent Configuration: Support Ticket Empathy Auditor

@@ -1,18 +1,21 @@
 ---
-id: "review-keyword-extractor"
-category: "Competitive Intel"
-title: "Review Keyword Miner"
-tagline: "What do people hate about your competitor?"
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Extracts common 2-word and 3-word phrases from competitor G2/Capterra reviews to find product weaknesses."
+id: review-keyword-extractor
+category: Competitive Intel
+title: Review Keyword Miner
+tagline: What do people hate about your competitor?
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Extracts common 2-word and 3-word phrases from competitor G2/Capterra reviews
+  to find product weaknesses.
 sampleData:
-  filename: "competitor_reviews.csv"
+  filename: competitor_reviews.csv
   content: |
     Competitor,Review_Text
     Comp A,The UI is so slow and buggy.
     Comp A,Support never replies.
+isPremium: true
 ---
 
 # Agent Configuration: The Product Marketer

@@ -6,7 +6,7 @@ tagline: Write complex Sales Nav queries without the headache.
 difficulty: Beginner
 time: One-off
 archetype: Processor
-isPremium: true
+isPremium: false
 description: >-
   Sales Navigator is powerful, but only if you speak 'Boolean'. This agent takes
   a plain English description of your ideal customer profile (ICP) and

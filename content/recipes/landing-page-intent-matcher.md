@@ -1,18 +1,21 @@
 ---
-id: "landing-page-intent-matcher"
-category: "CRO"
-title: "Ad-to-Page Matcher"
-tagline: "Does the Landing Page match the Ad?"
-difficulty: "Advanced"
-time: "Monthly"
-archetype: "Processor"
-description: "Matches ad keywords to landing page H1 tags to ensure message consistency (Message Match)."
+id: landing-page-intent-matcher
+category: CRO
+title: Ad-to-Page Matcher
+tagline: Does the Landing Page match the Ad?
+difficulty: Advanced
+time: Monthly
+archetype: Processor
+description: >-
+  Matches ad keywords to landing page H1 tags to ensure message consistency
+  (Message Match).
 sampleData:
-  filename: "ad_map.csv"
+  filename: ad_map.csv
   content: |
     Ad_Keyword,LP_H1
     Cheap Shoes,Luxury Boots
     Running Gear,Best Running Gear
+isPremium: true
 ---
 # Agent Configuration: The PPC Manager
 

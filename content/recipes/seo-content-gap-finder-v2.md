@@ -14,6 +14,7 @@ sampleData:
   content: |
     My_Sitemap: https://mywebsite.com/sitemap.xml
     Competitor_Sitemap: https://competitor.com/sitemap.xml
+isPremium: true
 ---
 
 # Agent Configuration: The SEO Content Gap Mapper

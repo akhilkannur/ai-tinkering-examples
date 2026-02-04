@@ -1,19 +1,22 @@
 ---
-id: "last-activity-date-auditor"
-category: "Sales Ops"
-title: "Account Activity Sync"
-tagline: "Sync 'Last Activity' from contacts up to the account level."
-difficulty: "Intermediate"
-time: "Daily"
-archetype: "Processor"
-description: "Rolls up the latest activity date from various contacts to update the 'Master Last Touched' field at the Account level."
+id: last-activity-date-auditor
+category: Sales Ops
+title: Account Activity Sync
+tagline: Sync 'Last Activity' from contacts up to the account level.
+difficulty: Intermediate
+time: Daily
+archetype: Processor
+description: >-
+  Rolls up the latest activity date from various contacts to update the 'Master
+  Last Touched' field at the Account level.
 sampleData:
-  filename: "activity_logs.csv"
+  filename: activity_logs.csv
   content: |
     Account,Contact,Activity_Date
     Acme Corp,John,2023-10-01
     Acme Corp,Jane,2023-10-05
     Beta Inc,Bob,2023-09-01
+isPremium: true
 ---
 
 # Agent Configuration: The RevOps Analyst Agent

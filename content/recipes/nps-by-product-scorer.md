@@ -16,6 +16,7 @@ sampleData:
     BigBank,Enterprise_Plan,2,150000,"UI is too slow and support is ghosting us"
     SmallBiz,Starter_Plan,10,500,"Love it, works great"
     MedCorp,Pro_Plan,5,25000,"Too expensive for what it does"
+isPremium: true
 ---
 # Agent Configuration: The Customer Sentiment Architect
 

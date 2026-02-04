@@ -8,10 +8,10 @@ time: Weekly
 archetype: Processor
 isPremium: true
 description: >-
-  Don't just copy competitor ads - understand WHY they work. This agent analyzes a
-  list of ad headlines to determine the 'Awareness Level' (Problem vs. Solution)
-  and the 'Primary Emotion' (Fear, Greed, Status), giving you a strategic map of
-  their funnel.
+  Don't just copy competitor ads - understand WHY they work. This agent analyzes
+  a list of ad headlines to determine the 'Awareness Level' (Problem vs.
+  Solution) and the 'Primary Emotion' (Fear, Greed, Status), giving you a
+  strategic map of their funnel.
 sampleData:
   filename: competitor_ads.csv
   content: >

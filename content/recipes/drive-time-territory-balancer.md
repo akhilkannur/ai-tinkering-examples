@@ -1,4 +1,4 @@
---- 
+---
 id: drive-time-territory-balancer
 category: Sales Ops
 title: Drive-Time Territory Balancer
@@ -7,13 +7,15 @@ difficulty: Advanced
 time: Batch
 archetype: Processor
 description: >-
-  Calculates the center of gravity for a territory. uses Maps API logic to ensure Rep A isn't spending 4 hours driving while Rep B spends 1.
+  Calculates the center of gravity for a territory. uses Maps API logic to
+  ensure Rep A isn't spending 4 hours driving while Rep B spends 1.
 sampleData:
   filename: input_data.csv
   content: |
     Rep_Name,Account_Address
     RepA,"123 Main St, Austin"
     RepB,"456 Oak St, Dallas"
+isPremium: true
 ---
 
 # Agent Configuration: Drive-Time Territory Balancer

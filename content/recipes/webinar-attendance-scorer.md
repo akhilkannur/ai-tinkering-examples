@@ -1,19 +1,22 @@
---- 
-id: "webinar-attendance-scorer"
-category: "Marketing Ops"
-title: "Webinar Engagement Scorer"
-tagline: "Identify hot leads based on minutes watched."
-difficulty: "Intermediate"
-time: "Batch"
-archtype: "Processor"
-description: "Scores webinar attendees based on how long they stayed and if they asked questions."
+---
+id: webinar-attendance-scorer
+category: Marketing Ops
+title: Webinar Engagement Scorer
+tagline: Identify hot leads based on minutes watched.
+difficulty: Intermediate
+time: Batch
+archtype: Processor
+description: >-
+  Scores webinar attendees based on how long they stayed and if they asked
+  questions.
 sampleData:
-  filename: "webinar_report.csv"
+  filename: webinar_report.csv
   content: |
     Name,Minutes_Watched,Questions_Asked
     Alice,55,2
     Bob,5,0
     Charlie,30,0
+isPremium: true
 ---
 
 # Agent Configuration: The Lead Scorer

@@ -15,6 +15,7 @@ sampleData:
     Industry: Supply Chain Logistics
     Target: Enterprise COOs
     Product: AI Route Optimization
+isPremium: true
 ---
 
 # Agent Configuration: The White Paper Ideator

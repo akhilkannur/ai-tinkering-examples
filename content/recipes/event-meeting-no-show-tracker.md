@@ -16,6 +16,7 @@ sampleData:
     1,Held
     2,No Show
     3,Held
+isPremium: true
 ---
 # Agent Configuration: The Sales Events Lead
 

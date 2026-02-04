@@ -1,18 +1,21 @@
 ---
-id: "popup-engagement-tracker"
-category: "CRO"
-title: "Pop-up Efficiency Tracker"
-tagline: "Which pop-up captures the most emails?"
-difficulty: "Beginner"
-time: "Weekly"
-archetype: "Processor"
-description: "Measures the 'Email Capture Rate' of different exit-intent or time-delayed pop-ups."
+id: popup-engagement-tracker
+category: CRO
+title: Pop-up Efficiency Tracker
+tagline: Which pop-up captures the most emails?
+difficulty: Beginner
+time: Weekly
+archetype: Processor
+description: >-
+  Measures the 'Email Capture Rate' of different exit-intent or time-delayed
+  pop-ups.
 sampleData:
-  filename: "popup_stats.csv"
+  filename: popup_stats.csv
   content: |
     Popup_Type,Impressions,Emails_Captured
     Exit_Intent,5000,100
     Time_Delay,5000,50
+isPremium: true
 ---
 # Agent Configuration: The List Growth Manager
 

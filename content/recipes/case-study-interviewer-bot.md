@@ -16,6 +16,7 @@ sampleData:
     Client: ZoomInfo
     Win: They saved 20 hours a week on data entry.
     Champion: Sarah, Sales Ops.
+isPremium: true
 ---
 
 # Agent Configuration: The Case Study Interviewer

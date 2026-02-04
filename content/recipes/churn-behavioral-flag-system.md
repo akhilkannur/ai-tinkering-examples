@@ -7,13 +7,15 @@ difficulty: Advanced
 time: Batch
 archtype: Processor
 description: >-
-  Looking for the "Death Spiral". Flags users who have: Low Login Frequency + High Support Ticket Volume + No Feature Usage in 30 days.
+  Looking for the "Death Spiral". Flags users who have: Low Login Frequency +
+  High Support Ticket Volume + No Feature Usage in 30 days.
 sampleData:
   filename: input_data.csv
   content: |
     User_ID,Last_Login_Days_Ago,Open_Tickets
     UserA,45,3
     UserB,2,0
+isPremium: false
 ---
 
 # Agent Configuration: Heuristic Churn Predictor

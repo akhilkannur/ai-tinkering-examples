@@ -16,6 +16,7 @@ sampleData:
     Linear,onboarding_vault/linear/,Speed and Keyboard Shortcuts
     PostHog,onboarding_vault/posthog/,Data Ingestion
     Beehiiv,onboarding_vault/beehiiv/,Newsletter Setup
+isPremium: true
 ---
 
 # Agent Configuration: The Onboarding Teardown Factory

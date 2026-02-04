@@ -14,6 +14,7 @@ sampleData:
   filename: audit-script.js
   content: |
     // Paste the audit script here
+isPremium: true
 ---
 
 # Agent Configuration: The Codebase Auditor

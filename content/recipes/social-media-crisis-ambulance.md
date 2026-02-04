@@ -7,9 +7,9 @@ difficulty: Intermediate
 time: Daily
 archetype: Researcher
 description: >-
-  When a brand gets "cancelled" or trends negatively on Twitter, they immediately
-  hire PR firms and reputation management software. This agent monitors Twitter
-  trends and sentiment spikes to find brands in trouble.
+  When a brand gets "cancelled" or trends negatively on Twitter, they
+  immediately hire PR firms and reputation management software. This agent
+  monitors Twitter trends and sentiment spikes to find brands in trouble.
 sampleData:
   filename: brand_watch_list.csv
   content: |
@@ -17,6 +17,7 @@ sampleData:
     @airlines
     @fastfood
     @fashionbrand
+isPremium: true
 ---
 
 # Agent Configuration: The PR Crisis Ambulance

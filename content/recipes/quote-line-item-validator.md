@@ -15,6 +15,7 @@ sampleData:
     Quote_ID,SKU_List
     Q-1,'STARTER';'ENT_ADDON'
     Q-2,'PRO';'PRO_ADDON'
+isPremium: true
 ---
 
 # Agent Configuration: The Deal Desk

@@ -1,19 +1,22 @@
---- 
-id: "lead-enrichment-auditor"
-category: "Sales Ops"
-title: "Enrichment Match Rate Auditor"
-tagline: "Are we paying for empty data?"
-difficulty: "Intermediate"
-time: "Monthly"
-archtype: "Processor"
-description: "Analyzes your enriched lead data to see what percentage of fields (Phone, LinkedIn, Revenue) are actually being populated by your vendor."
+---
+id: lead-enrichment-auditor
+category: Sales Ops
+title: Enrichment Match Rate Auditor
+tagline: Are we paying for empty data?
+difficulty: Intermediate
+time: Monthly
+archtype: Processor
+description: >-
+  Analyzes your enriched lead data to see what percentage of fields (Phone,
+  LinkedIn, Revenue) are actually being populated by your vendor.
 sampleData:
-  filename: "enriched_leads.csv"
+  filename: enriched_leads.csv
   content: |
     Lead,Vendor_Phone,Vendor_LinkedIn,Vendor_Rev
     1,+1234,,$1M
     2,,in/jane,
     3,,,,
+isPremium: true
 ---
 
 # Agent Configuration: The Data Procurement Manager

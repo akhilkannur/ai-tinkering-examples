@@ -1,4 +1,4 @@
---- 
+---
 id: linkedin-voice-note-scripter
 category: Sales Ops
 title: LinkedIn Voice DM Scripter
@@ -7,12 +7,14 @@ difficulty: Beginner
 time: Batch
 archetype: Processor
 description: >-
-  Reads prospect profile. Writes a 45-second script for you to record as a voice note. Personal, casual, and relevant.
+  Reads prospect profile. Writes a 45-second script for you to record as a voice
+  note. Personal, casual, and relevant.
 sampleData:
   filename: input_data.csv
   content: |
     Prospect_Name,Highlight
     John,Ran a marathon
+isPremium: true
 ---
 
 # Agent Configuration: LinkedIn Voice DM Scripter

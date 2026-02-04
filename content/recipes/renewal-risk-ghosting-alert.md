@@ -18,6 +18,7 @@ sampleData:
     [Last Email Response]
     Acme, 2023-10-01
     Beta, 2023-01-01
+isPremium: true
 ---
 
 # Agent Configuration: The Churn Prevention Agent

@@ -9,13 +9,15 @@ archetype: Researcher
 description: >-
   Mergers create chaos. Systems need to be integrated, redundant staff are cut,
   and new budgets are formed. This agent finds companies that recently completed
-  a merger or acquisition (M&A) to pitch integration services or cost-saving tools.
+  a merger or acquisition (M&A) to pitch integration services or cost-saving
+  tools.
 sampleData:
   filename: ma_targets.csv
   content: |
     Company,Acquired_By,Date
     Figma,Tableau,2024-01-01
     Slack,Salesforce,2021-01-01
+isPremium: true
 ---
 
 # Agent Configuration: The M&A Chaos Hunter

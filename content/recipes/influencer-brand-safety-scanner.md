@@ -7,13 +7,15 @@ difficulty: Intermediate
 time: Batch
 archtype: Researcher
 description: >-
-  Scans the last 50 posts of a potential influencer. Flags keywords related to controversy, politics, or competitor brands.
+  Scans the last 50 posts of a potential influencer. Flags keywords related to
+  controversy, politics, or competitor brands.
 sampleData:
   filename: input_data.csv
   content: |
     Influencer_Handle,Platform
     @user1,Twitter
     @user2,Instagram
+isPremium: true
 ---
 
 # Agent Configuration: Influencer Brand Safety Scanner

@@ -15,6 +15,7 @@ sampleData:
     Customer,Word_Count,Sentiment
     Acme,150,Positive
     Beta,10,Neutral
+isPremium: true
 ---
 # Agent Configuration: The Video Producer
 

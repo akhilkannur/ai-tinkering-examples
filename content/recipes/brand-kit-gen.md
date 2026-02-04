@@ -17,6 +17,7 @@ sampleData:
     NeoCloud,Cloud storage for AI researchers,Minimalist and Secure
     VelvetBloom,Luxury organic skincare,Elegant and Botanical
     PixelPounce,A speed-focused gaming mouse,Aggressive and Tech-forward
+isPremium: false
 ---
 
 # Agent Configuration: The Instant Brand Architect

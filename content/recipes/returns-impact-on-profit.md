@@ -11,11 +11,15 @@ description: >-
   rates.
 sampleData:
   filename: sku_finance.csv
-  content: |
+  content: >
     SKU,Gross_Revenue,COGS,Return_Rate_%,Avg_Shipping_Cost,Restock_Labor_Cost,Total_Orders
+
     T-Shirt,10000,3000,0.25,5,2,1000
+
     Jeans,50000,15000,0.40,8,3,500
+
     Socks,2000,500,0.05,3,1,200
+isPremium: true
 ---
 
 # Agent Configuration: The E-commerce Profit Architect

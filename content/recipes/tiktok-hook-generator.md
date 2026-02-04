@@ -8,8 +8,8 @@ time: Daily
 archetype: Processor
 description: >-
   TikTok is 50% audio, 50% visual. This agent generates scripts that include not
-  just what you *say*, but what you *do* (Visual Actions), ensuring your retention
-  rate stays high through the first 3 seconds.
+  just what you *say*, but what you *do* (Visual Actions), ensuring your
+  retention rate stays high through the first 3 seconds.
 sampleData:
   filename: content_topic.txt
   content: 'Topic: Learning Python for Data Science'

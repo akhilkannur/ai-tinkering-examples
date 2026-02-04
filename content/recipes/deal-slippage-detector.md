@@ -2,13 +2,16 @@
 id: deal-slippage-detector
 category: Sales Ops
 title: The Deal Slippage Healer
-tagline: Don't just flag the slip. Diagnose the root cause with Rep-specific coaching questions.
+tagline: >-
+  Don't just flag the slip. Diagnose the root cause with Rep-specific coaching
+  questions.
 difficulty: Intermediate
 time: Weekly
 archetype: Processor
 description: >-
-  Deals that push 3+ times are 90% likely to be lost. This agent analyzes your pipeline history, 
-  calculates a 'Slippage Score' for every deal, and generates the exact question you need to ask the Rep to uncover the truth.
+  Deals that push 3+ times are 90% likely to be lost. This agent analyzes your
+  pipeline history,  calculates a 'Slippage Score' for every deal, and generates
+  the exact question you need to ask the Rep to uncover the truth.
 sampleData:
   filename: pipeline_snapshots.csv
   content: |
@@ -18,6 +21,7 @@ sampleData:
     1,Week3,2023-12-31,Negotiation,50000
     2,Week1,2023-10-31,Discovery,10000
     2,Week2,2023-10-31,Demo,10000
+isPremium: true
 ---
 
 # Agent Configuration: The Forecast Healer

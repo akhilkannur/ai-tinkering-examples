@@ -11,10 +11,13 @@ description: >-
   'Top Up' campaign.
 sampleData:
   filename: loyalty_data.csv
-  content: |
+  content: >
     Customer,Email,Current_Spend,Next_Tier_Name,Next_Tier_Threshold,Tier_Benefits
+
     John,john@gmail.com,950,Gold,1000,Free Shipping
+
     Jane,jane@yahoo.com,200,Gold,1000,Free Shipping
+isPremium: true
 ---
 # Agent Configuration: The Gamification Revenue Driver
 

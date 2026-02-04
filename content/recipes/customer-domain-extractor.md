@@ -1,19 +1,22 @@
---- 
-id: "customer-domain-extractor"
-category: "Sales Ops"
-title: "Domain from Email Extractor"
-tagline: "Get company websites from a list of emails."
-difficulty: "Beginner"
-time: "Batch"
-archtype: "Processor"
-description: "Parses a list of email addresses to extract the domain portion, filtering out generic providers (gmail, yahoo)."
+---
+id: customer-domain-extractor
+category: Sales Ops
+title: Domain from Email Extractor
+tagline: Get company websites from a list of emails.
+difficulty: Beginner
+time: Batch
+archtype: Processor
+description: >-
+  Parses a list of email addresses to extract the domain portion, filtering out
+  generic providers (gmail, yahoo).
 sampleData:
-  filename: "emails.csv"
+  filename: emails.csv
   content: |
     Email
     john@acme.com
     jane@gmail.com
     bill@beta.io
+isPremium: true
 ---
 
 # Agent Configuration: The Data Enricher

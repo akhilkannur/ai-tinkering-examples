@@ -7,13 +7,16 @@ difficulty: Beginner
 time: Real-time
 archtype: Researcher
 description: >-
-  Ingests a potential guest's previous interviews. Scores them on "Energy Level", "Talk-to-Listen Ratio", and "Jargon Usage" to see if they fit your audience.
+  Ingests a potential guest's previous interviews. Scores them on "Energy
+  Level", "Talk-to-Listen Ratio", and "Jargon Usage" to see if they fit your
+  audience.
 sampleData:
   filename: input_data.csv
   content: |
     Guest_Name,Podcast_Episode_Transcript_URL
     Sam Altman,https://youtube.com/watch?v=...
     Elon Musk,https://youtube.com/watch?v=...
+isPremium: true
 ---
 
 # Agent Configuration: Podcast Guest Matchmaker

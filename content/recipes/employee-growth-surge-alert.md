@@ -16,6 +16,7 @@ sampleData:
     Company,LinkedIn_ID
     Rippling,123456
     Deel,654321
+isPremium: true
 ---
 
 # Agent Configuration: The Hyper-Growth Radar

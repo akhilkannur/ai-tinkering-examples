@@ -7,15 +7,17 @@ difficulty: Beginner
 time: 15 mins
 archetype: Researcher
 description: >-
-  Local businesses live and die by Google Reviews. This agent searches a specific
-  area (e.g., "Plumbers in Dallas") and filters for businesses with low review
-  counts or 4.0 ratings, creating a hit list for reputation management agencies.
+  Local businesses live and die by Google Reviews. This agent searches a
+  specific area (e.g., "Plumbers in Dallas") and filters for businesses with low
+  review counts or 4.0 ratings, creating a hit list for reputation management
+  agencies.
 sampleData:
   filename: local_search_params.csv
   content: |
     Niche,City
     Dentist,Chicago
     HVAC,Miami
+isPremium: true
 ---
 
 # Agent Configuration: The Local Review Rescuer

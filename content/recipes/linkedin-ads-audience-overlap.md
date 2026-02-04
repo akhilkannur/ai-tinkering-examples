@@ -1,19 +1,22 @@
---- 
-id: "linkedin-ads-audience-overlap"
-category: "Paid Media"
-title: "Audience Overlap Checker"
-tagline: "Stop bidding against yourself."
-difficulty: "Intermediate"
-time: "Monthly"
-archtype: "Processor"
-description: "Analyzes exported target lists from different ad campaigns to find duplicate companies."
+---
+id: linkedin-ads-audience-overlap
+category: Paid Media
+title: Audience Overlap Checker
+tagline: Stop bidding against yourself.
+difficulty: Intermediate
+time: Monthly
+archtype: Processor
+description: >-
+  Analyzes exported target lists from different ad campaigns to find duplicate
+  companies.
 sampleData:
-  filename: "campaign_targets.csv"
+  filename: campaign_targets.csv
   content: |
     Campaign,Company_Domain
     Awareness,acme.com
     Conversion,acme.com
     Awareness,beta.io
+isPremium: true
 ---
 
 # Agent Configuration: The Paid Social Specialist

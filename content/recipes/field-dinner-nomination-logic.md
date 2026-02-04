@@ -15,6 +15,7 @@ sampleData:
     Name,Title,Account_Tier
     John,CEO,Tier 1
     Jane,Manager,Tier 3
+isPremium: true
 ---
 # Agent Configuration: The ABM Field Marketer
 

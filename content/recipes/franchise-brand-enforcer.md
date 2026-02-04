@@ -2,10 +2,18 @@
 id: franchise-brand-enforcer
 title: The Franchise Brand Guardian
 tagline: Stop local franchisees from going rogue with assets or copy.
-description: "Franchise consistency is a two-front war: Visuals and Voice. This agent audits local social posts or webpages, using Vision to flag stretched/outdated logos and Text Analysis to rewrite off-brand copy into your Headquarters voice."
+description: >-
+  Franchise consistency is a two-front war: Visuals and Voice. This agent audits
+  local social posts or webpages, using Vision to flag stretched/outdated logos
+  and Text Analysis to rewrite off-brand copy into your Headquarters voice.
 category: Brand
 archetype: processor
-tools: ['read_file', 'write_file', 'generate_text', 'vision']
+tools:
+  - read_file
+  - write_file
+  - generate_text
+  - vision
+isPremium: false
 ---
 
 # Agent Configuration: The Franchise Brand Guardian

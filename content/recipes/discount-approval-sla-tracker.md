@@ -1,18 +1,21 @@
 ---
-id: "discount-approval-sla-tracker"
-category: "Sales Ops"
-title: "Deal Desk SLA Monitor"
-tagline: "How fast are quotes approved?"
-difficulty: "Intermediate"
-time: "Weekly"
-archetype: "Processor"
-description: "Measures the time between 'Quote Submitted' and 'Quote Approved' to identify Deal Desk bottlenecks."
+id: discount-approval-sla-tracker
+category: Sales Ops
+title: Deal Desk SLA Monitor
+tagline: How fast are quotes approved?
+difficulty: Intermediate
+time: Weekly
+archetype: Processor
+description: >-
+  Measures the time between 'Quote Submitted' and 'Quote Approved' to identify
+  Deal Desk bottlenecks.
 sampleData:
-  filename: "approval_logs.csv"
+  filename: approval_logs.csv
   content: |
     Quote_ID,Submit_Time,Approve_Time
     Q1,10:00,10:30
     Q2,10:00,18:00
+isPremium: true
 ---
 
 # Agent Configuration: The Deal Desk Manager

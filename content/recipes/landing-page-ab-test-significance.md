@@ -1,18 +1,21 @@
---- 
-id: "landing-page-ab-test-significance"
-category: "Marketing Ops"
-title: "A/B Test Referee"
-tagline: "Is Variant B actually better?"
-difficulty: "Intermediate"
-time: "Weekly"
-archtype: "Processor"
-description: "Calculates statistical significance for conversion rate differences between two landing page variants."
+---
+id: landing-page-ab-test-significance
+category: Marketing Ops
+title: A/B Test Referee
+tagline: Is Variant B actually better?
+difficulty: Intermediate
+time: Weekly
+archtype: Processor
+description: >-
+  Calculates statistical significance for conversion rate differences between
+  two landing page variants.
 sampleData:
-  filename: "ab_results.csv"
+  filename: ab_results.csv
   content: |
     Variant,Visitors,Conversions
     A,500,20
     B,510,35
+isPremium: true
 ---
 
 # Agent Configuration: The CRO Specialist

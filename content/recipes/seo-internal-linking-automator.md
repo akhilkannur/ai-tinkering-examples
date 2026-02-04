@@ -30,6 +30,7 @@ sampleData:
     /blog/catchy-subject-lines,Subject Lines
 
     /blog/list-building-101,List Building
+isPremium: true
 ---
 
 # Agent Configuration: The Internal Link Graph Builder

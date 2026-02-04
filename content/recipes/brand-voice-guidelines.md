@@ -17,6 +17,7 @@ sampleData:
     Apple,https://apple.com,Homepage
     Nike,https://nike.com,Instagram
     Mailchimp,https://mailchimp.com,Blog
+isPremium: false
 ---
 
 # Agent Configuration: The Brand Voice Architect

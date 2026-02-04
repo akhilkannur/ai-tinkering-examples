@@ -1,4 +1,4 @@
---- 
+---
 id: pr-crisis-severity-scorer
 category: Strategic Ops
 title: PR Crisis Severity Scorer
@@ -7,12 +7,15 @@ difficulty: Intermediate
 time: Real-time
 archetype: Processor
 description: >-
-  Ingests a negative press mention. Scores it based on "Outlet Reach", "Sentiment", and "Factuality". Outputs: "Ignore", "Monitor", or "Crisis Response Needed".
+  Ingests a negative press mention. Scores it based on "Outlet Reach",
+  "Sentiment", and "Factuality". Outputs: "Ignore", "Monitor", or "Crisis
+  Response Needed".
 sampleData:
   filename: input_data.csv
   content: |
     Article_URL,Outlet_Tier
     nytimes.com,Tier1
+isPremium: true
 ---
 
 # Agent Configuration: PR Crisis Severity Scorer

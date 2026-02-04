@@ -16,6 +16,7 @@ sampleData:
     Company
     TechCorp
     StartupInc
+isPremium: true
 ---
 
 # Agent Configuration: The Freeze Thaw Detector

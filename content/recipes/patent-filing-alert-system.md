@@ -7,16 +7,17 @@ difficulty: Advanced
 time: Monthly
 archetype: Researcher
 description: >-
-  Companies filing patents are investing heavily in innovation. This agent monitors 
-  Google Patents/USPTO for new filings in specific categories (e.g., "Generative AI," 
-  "Battery Tech") to find companies building *new* products who need engineering 
-  support or specialized components.
+  Companies filing patents are investing heavily in innovation. This agent
+  monitors  Google Patents/USPTO for new filings in specific categories (e.g.,
+  "Generative AI,"  "Battery Tech") to find companies building *new* products
+  who need engineering  support or specialized components.
 sampleData:
   filename: patent_keywords.csv
   content: |
     Keyword,Industry
     "Solid State Battery",Automotive
     "Large Language Model",Software
+isPremium: true
 ---
 
 # Agent Configuration: The R&D Spy

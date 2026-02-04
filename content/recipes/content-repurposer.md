@@ -16,6 +16,7 @@ sampleData:
     The Future of AI Agents,https://blog.com/ai-agents,Automation
     10 Tips for Remote Work,https://blog.com/remote-tips,Culture
     SaaS Pricing Strategies,https://blog.com/pricing,Finance
+isPremium: false
 ---
 
 # Agent Configuration: The Viral Editor

@@ -7,13 +7,15 @@ difficulty: Intermediate
 time: Batch
 archtype: Processor
 description: >-
-  Ingests the last 1000 messages from your community general channel. Clusters sentiments. Flags rising "Admin Hate" or "Feature Frustration" topics.
+  Ingests the last 1000 messages from your community general channel. Clusters
+  sentiments. Flags rising "Admin Hate" or "Feature Frustration" topics.
 sampleData:
   filename: input_data.csv
   content: |
     Message_ID,Text,User
     101,"Mods suck",UserA
     102,"Help me",UserB
+isPremium: true
 ---
 
 # Agent Configuration: Community Toxicity Monitor

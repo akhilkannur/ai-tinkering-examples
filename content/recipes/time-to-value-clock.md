@@ -1,18 +1,21 @@
---- 
-id: "time-to-value-clock"
-category: "Customer Success"
-title: "Time-to-Value Clock"
-tagline: "Measure speed from signature to setup."
-difficulty: "Intermediate"
-time: "Monthly"
-archtype: "Processor"
-description: "Calculates the average days it takes for a new customer to complete their first key action."
+---
+id: time-to-value-clock
+category: Customer Success
+title: Time-to-Value Clock
+tagline: Measure speed from signature to setup.
+difficulty: Intermediate
+time: Monthly
+archtype: Processor
+description: >-
+  Calculates the average days it takes for a new customer to complete their
+  first key action.
 sampleData:
-  filename: "onboarding_dates.csv"
+  filename: onboarding_dates.csv
   content: |
     Customer,Closed_Date,Activation_Date
     Acme,2023-10-01,2023-10-05
     Beta,2023-10-01,2023-10-25
+isPremium: true
 ---
 
 # Agent Configuration: The CS Ops

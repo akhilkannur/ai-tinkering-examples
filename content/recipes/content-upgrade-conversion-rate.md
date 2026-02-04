@@ -1,18 +1,21 @@
 ---
-id: "content-upgrade-conversion-rate"
-category: "Marketing Ops"
-title: "Lead Magnet Converter"
-tagline: "How many readers download the PDF?"
-difficulty: "Beginner"
-time: "Monthly"
-archetype: "Processor"
-description: "Measures download rates of in-post lead magnets (Content Upgrades) relative to page views."
+id: content-upgrade-conversion-rate
+category: Marketing Ops
+title: Lead Magnet Converter
+tagline: How many readers download the PDF?
+difficulty: Beginner
+time: Monthly
+archetype: Processor
+description: >-
+  Measures download rates of in-post lead magnets (Content Upgrades) relative to
+  page views.
 sampleData:
-  filename: "upgrade_stats.csv"
+  filename: upgrade_stats.csv
   content: |
     Page,Views,Downloads
     /post-1,1000,50
     /post-2,2000,10
+isPremium: true
 ---
 
 # Agent Configuration: The CRO Lead

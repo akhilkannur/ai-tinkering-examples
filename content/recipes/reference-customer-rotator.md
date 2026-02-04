@@ -1,19 +1,22 @@
---- 
-id: "reference-customer-rotator"
-category: "Sales Ops"
-title: "Sales Reference Rotator"
-tagline: "Prevent reference burnout by rotating happy customers."
-difficulty: "Beginner"
-time: "Monthly"
-archtype: "Processor"
-description: "Tracks how many times a customer has been used as a reference to ensure even distribution of requests."
+---
+id: reference-customer-rotator
+category: Sales Ops
+title: Sales Reference Rotator
+tagline: Prevent reference burnout by rotating happy customers.
+difficulty: Beginner
+time: Monthly
+archtype: Processor
+description: >-
+  Tracks how many times a customer has been used as a reference to ensure even
+  distribution of requests.
 sampleData:
-  filename: "reference_usage.csv"
+  filename: reference_usage.csv
   content: |
     Customer,Times_Used,Last_Used
     Acme,5,2023-10-01
     Beta,1,2023-09-01
     Gamma,0,None
+isPremium: true
 ---
 
 # Agent Configuration: The Customer Reference Manager

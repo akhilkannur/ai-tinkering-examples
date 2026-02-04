@@ -18,6 +18,7 @@ sampleData:
     Quote: CEO Jane Doe says "It's like spellcheck for reality."
     Date: Oct 12, 2026
     Location: San Francisco
+isPremium: true
 ---
 
 # Agent Configuration: The Press Release Architect

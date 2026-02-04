@@ -7,9 +7,9 @@ difficulty: Intermediate
 time: 25 mins
 archetype: Researcher
 description: >-
-  Selling to individual Subway locations is hard. Selling to the owner who owns 50
-  Subways is scalable. This agent specifically hunts for "Franchise Groups" or
-  "Management LLCs" that own multiple units of big brands.
+  Selling to individual Subway locations is hard. Selling to the owner who owns
+  50 Subways is scalable. This agent specifically hunts for "Franchise Groups"
+  or "Management LLCs" that own multiple units of big brands.
 sampleData:
   filename: franchise_brands.csv
   content: |
@@ -17,6 +17,7 @@ sampleData:
     McDonald's
     Orangetheory Fitness
     Massage Envy
+isPremium: true
 ---
 
 # Agent Configuration: The Franchise Empire Mapper

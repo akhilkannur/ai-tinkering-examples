@@ -16,6 +16,7 @@ sampleData:
     1,Yes,Won
     2,No,Lost
     3,Yes,Won
+isPremium: true
 ---
 # Agent Configuration: The Reference Manager
 

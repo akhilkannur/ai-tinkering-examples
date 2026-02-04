@@ -8,14 +8,16 @@ time: Weekly
 archetype: Analyst
 description: >-
   When a SaaS company raises prices, their customers get annoyed and look for
-  alternatives. This agent monitors the `/pricing` pages of your competitors
-  and alerts you if the numbers change, so you can run a "Price Hike Refugee" campaign.
+  alternatives. This agent monitors the `/pricing` pages of your competitors and
+  alerts you if the numbers change, so you can run a "Price Hike Refugee"
+  campaign.
 sampleData:
   filename: competitor_pricing_urls.csv
   content: |
     Competitor,Pricing_URL
     Salesforce,https://www.salesforce.com/editions-pricing/
     HubSpot,https://www.hubspot.com/pricing/marketing
+isPremium: true
 ---
 
 # Agent Configuration: The Price Hike Monitor
