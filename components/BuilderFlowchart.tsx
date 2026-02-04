@@ -5,7 +5,6 @@ import {
   Terminal, Copy, Check, FileText, Search, X, Download, Lock, Crown, ArrowRight, ExternalLink, Key, Zap, MousePointer2, Cpu
 } from 'lucide-react';
 import { categoryIcons, Category, Recipe } from '../lib/cookbook-data';
-import HowToUseGuide from './HowToUseGuide';
 
 interface TerminalCookbookProps {
   recipes: Recipe[];
@@ -281,11 +280,6 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
           {part1.map((recipe, index) => (
              <RecipeCard key={recipe.id} recipe={recipe} index={index} />
           ))}
-        </div>
-
-        {/* Interjected How-To Guide */}
-        <div className="col-span-full py-8">
-            <HowToUseGuide />
         </div>
 
         {/* Part 2: Remaining items */}

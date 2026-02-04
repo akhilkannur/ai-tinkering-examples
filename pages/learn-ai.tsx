@@ -115,7 +115,7 @@ export default function LearnAIPage() {
                   <Command className="text-accent" /> Step 3: Run the Agent
                </h2>
                <p className="text-text-secondary mb-8 leading-relaxed">
-                  Open your terminal, paste the logic, and watch the agent execute the play. No more manual grunt work.
+                  Open your terminal, type <code className="bg-secondary-bg px-1 py-0.5 rounded text-accent border border-white/5">claude</code> or <code className="bg-secondary-bg px-1 py-0.5 rounded text-accent border border-white/5">gemini</code>, paste the logic, and watch the agent execute the play. No more manual grunt work.
                </p>
                <div className="bg-black rounded-2xl border border-navy-dark p-6 shadow-2xl font-mono text-sm">
                   <div className="flex gap-2 mb-4">
