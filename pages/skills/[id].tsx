@@ -184,7 +184,7 @@ Downloaded from RealAIExamples.com`;
       
       <Navbar />
 
-      <main className="flex-grow container mx-auto px-4 py-12">
+      <main className="flex-grow container mx-auto px-4 pt-32 pb-12">
         <div className="max-w-4xl mx-auto">
           {/* Breadcrumbs */}
           <nav className="flex items-center gap-2 text-sm font-medium text-gray-500 mb-8">

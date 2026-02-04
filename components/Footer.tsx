@@ -34,13 +34,18 @@ export default function Footer() {
             <h4 className="font-mono text-[10px] font-bold text-accent uppercase tracking-[0.3em] mb-6">[ DISCOVER ]</h4>
             <ul className="space-y-3 text-sm text-text-secondary font-light">
               <li>
-                <Link href="/500-ways-to-use-llms-for-work" className="hover:text-white transition-colors">
-                  700+ Blueprints
+                <Link href="/skills" className="hover:text-white transition-colors text-white font-bold">
+                  700+ AI Skills
+                </Link>
+              </li>
+              <li>
+                <Link href="/prompt-bundle" className="hover:text-accent transition-colors">
+                  AI Prompt Bundle
                 </Link>
               </li>
               <li>
                 <Link href="/investors" className="hover:text-white transition-colors">
-                  Investor Database
+                  SaaS Exit Database
                 </Link>
               </li>
               <li>

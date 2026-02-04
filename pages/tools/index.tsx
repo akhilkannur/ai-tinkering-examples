@@ -136,7 +136,21 @@ export default function ToolsIndex() {
           />
         )}
 
+        {/* Exit Strategy CTA */}
+        <div className="mt-24 pt-12 border-t border-slate-200 text-center max-w-2xl mx-auto">
+           <Briefcase className="w-8 h-8 text-slate-300 mx-auto mb-4" />
+           <h3 className="text-xl font-bold text-slate-900 mb-3 uppercase tracking-tight">Built something profitable?</h3>
+           <p className="text-slate-600 mb-6 font-sans">
+             If you've built an AI tool or SaaS and are looking for an exit, browse our curated list of 150+ micro-PE firms and acquisition partners.
+           </p>
+           <Link href="/investors" className="inline-flex items-center gap-2 text-accent font-bold uppercase tracking-widest text-xs hover:text-accent-hover transition-colors">
+             View SaaS Exit Database <ArrowRight className="w-4 h-4" />
+           </Link>
+        </div>
+
       </main>
     </div>
   );
 }
+
+import { Briefcase, ArrowRight as ArrowRightIcon } from 'lucide-react';

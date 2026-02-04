@@ -204,12 +204,12 @@ export default function ArchetypeQuiz() {
               <button
                 key={i}
                 onClick={() => handleAnswer(opt.weight)}
-                className="group flex items-center justify-between p-5 text-left bg-primary-bg border border-navy-dark rounded-xl hover:border-accent/50 hover:shadow-[0_0_20px_rgba(244,63,94,0.05)] transition-all duration-300"
+                className="group flex items-center justify-between p-5 text-left bg-secondary-bg border border-navy-dark rounded-xl hover:border-accent/50 hover:bg-primary-bg transition-all duration-300"
               >
-                <span className="font-sans font-bold text-text-color/80 group-hover:text-text-color transition-colors">
+                <span className="font-sans font-bold text-white group-hover:text-accent transition-colors">
                   {opt.text}
                 </span>
-                <ChevronRight className="w-5 h-5 text-text-secondary/20 group-hover:text-accent transition-all transform group-hover:translate-x-1" />
+                <ChevronRight className="w-5 h-5 text-text-secondary/40 group-hover:text-accent transition-all transform group-hover:translate-x-1" />
               </button>
             ))}
           </div>

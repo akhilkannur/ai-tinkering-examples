@@ -214,10 +214,10 @@ export default function AgentSetupService() {
 
                 <div className="grid md:grid-cols-4 gap-6">
                     {[
+                        { title: "Scheduling", desc: "After payment, I'll reach out within 48 hours to fix a time that works for you." },
                         { title: "Quick Setup", desc: "We'll get the terminal stuff out of the way first. 15 mins max." },
                         { title: "Ideation", desc: "We jam on your actual business problems. What should we automate today?" },
                         { title: "First Play", desc: "We run a real agent workflow together to solve a specific problem." },
-                        { title: "Handover", desc: "You get your blueprint files and 7 days of follow-up access." }
                     ].map((step, i) => (
                         <div key={i} className={`relative p-8 rounded-2xl border transition-all duration-700 group overflow-hidden ${activeStep === i ? 'bg-secondary-bg border-accent/40 shadow-2xl scale-105 z-10' : 'bg-[#0F172A]/30 border-white/5 opacity-60'}`}>
                             {/* Glass background */}

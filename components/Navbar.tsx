@@ -23,8 +23,10 @@ export default function Navbar() {
     { href: '/agent-setup-service', label: 'SETUP', mono: true },
     { href: '/build-club', label: 'BUILD CLUB', mono: true },
     { href: '/tools', label: 'TOOLS', mono: true },
-    { href: '/about', label: 'MISSION', mono: true },
+    { href: '/investors', label: 'SaaS EXIT', mono: true },
   ]
+
+  const isHomePage = router.pathname === '/'
 
   return (
     <>
@@ -45,7 +47,7 @@ export default function Navbar() {
         />
       </Head>
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-primary-bg/90 backdrop-blur-lg border-b border-white/5 py-2' : 'bg-transparent py-4'
+        scrolled || !isHomePage ? 'bg-primary-bg/95 backdrop-blur-lg border-b border-white/5 py-2' : 'bg-transparent py-4'
       }`}>
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="flex justify-between items-center h-16">

@@ -17,7 +17,7 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedRecipe, setSelectedRecipe] = useState<Recipe | null>(null);
   const [copied, setCopied] = useState(false);
-  const [visibleCount, setVisibleCount] = useState(100);
+  const [visibleCount, setVisibleCount] = useState(24);
   
   // Paywall State
   const [isUnlocked, setIsUnlocked] = useState(false);
@@ -105,7 +105,7 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
   }, [selectedCategory, searchQuery, recipes]);
 
   const handleLoadMore = () => {
-    setVisibleCount(prev => prev + 100);
+    setVisibleCount(prev => prev + 24);
   };
 
   const recipesToRender = filteredRecipes.slice(0, visibleCount);

@@ -96,14 +96,14 @@ export default function InvestorsPage({ initialInvestors }: InvestorsPageProps) 
   return (
     <>
       <Head>
-        <title>Micro-PE Match | Find Buyers for Your SaaS - Real AI Examples</title>
-        <meta name="description" content="A curated directory of 150+ active micro-private equity firms, search funds, and aggregators looking to acquire AI and SaaS businesses." key="description" />
-        <meta property="og:title" content="Micro-PE Match | Find Buyers for Your SaaS" key="og:title" />
+        <title>SaaS Exit Database | 150+ PE Firms & Acquisition Partners - Real AI Examples</title>
+        <meta name="description" content="A curated directory of 150+ active micro-private equity firms, search funds, and aggregators looking to acquire AI and SaaS businesses. Find your exit partner today." key="description" />
+        <meta property="og:title" content="SaaS Exit Database | Find Buyers for Your Software Business" key="og:title" />
         <meta property="og:description" content="A curated directory of 150+ active micro-private equity firms, search funds, and aggregators looking to acquire AI and SaaS businesses." key="og:description" />
         <meta property="og:image" content={`${process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com'}/api/og?mode=home`} key="og:image" />
         <meta property="og:type" content="website" key="og:type" />
         <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
-        <meta name="twitter:title" content="Micro-PE Match | Find Buyers for Your SaaS" key="twitter:title" />
+        <meta name="twitter:title" content="SaaS Exit Database | Find Buyers for Your SaaS" key="twitter:title" />
         <meta name="twitter:description" content="A curated directory of 150+ active micro-private equity firms, search funds, and aggregators looking to acquire AI and SaaS businesses." key="twitter:description" />
         <meta name="twitter:image" content={`${process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com'}/api/og?mode=home`} key="twitter:image" />
       </Head>
@@ -112,18 +112,21 @@ export default function InvestorsPage({ initialInvestors }: InvestorsPageProps) 
         <Navbar />
         
         <header className="max-w-6xl mx-auto px-4 py-12 md:py-20 text-center">
-          <h1 className="text-4xl md:text-5xl font-headline font-bold text-text-color mb-6 tracking-tight leading-tight uppercase">
-            Exit Your <span className="text-accent">Micro-SaaS</span>
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 border border-accent/20 text-accent font-bold text-[10px] uppercase tracking-[0.2em] mb-6 font-mono">
+              <Briefcase className="w-3 h-3" /> Acquisition Roadmap
+          </div>
+          <h1 className="text-4xl md:text-6xl font-black text-text-color mb-6 tracking-tighter leading-tight uppercase italic">
+            The SaaS <span className="text-accent">Exit Database</span>
           </h1>
-          <p className="text-lg text-text-color/80 max-w-2xl mx-auto mb-8 leading-relaxed">
+          <p className="text-lg text-text-color/80 max-w-2xl mx-auto mb-8 leading-relaxed font-light">
             {isUnlocked ? (
                 <span className="text-accent font-bold flex items-center justify-center gap-2">
-                    <Check className="w-5 h-5" /> Premium Access Active
+                    <Check className="w-5 h-5" /> Verified Exit Partners Unlocked
                 </span>
             ) : (
-                `A list of 150+ buyers who like small, boring software companies. No pitch decks, just cash for code.`
+                `A curated list of 150+ micro-PE firms and acquisition partners looking for small, high-growth software companies. Sell your code, keep your freedom.`
             )}
-            <br className="hidden md:block"/> Filter by check size, deal type, and geography to find your perfect exit partner.
+            <br className="hidden md:block"/> Filter by check size, niche, and acquisition thesis to find your perfect buyer.
           </p>
           
           {/* Search Bar */}
@@ -133,8 +136,8 @@ export default function InvestorsPage({ initialInvestors }: InvestorsPageProps) 
             </div>
             <input
               type="text"
-              className="block w-full pl-11 pr-4 py-4 bg-secondary-bg border border-border-color rounded-xl text-text-color placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent shadow-lg transition-all"
-              placeholder="Search by firm name, thesis, or portfolio companies..."
+              className="block w-full pl-11 pr-4 py-4 bg-secondary-bg border border-navy-dark rounded-xl text-text-color placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent shadow-2xl transition-all"
+              placeholder="Search by firm name, acquisition thesis, or portfolio..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
@@ -145,10 +148,10 @@ export default function InvestorsPage({ initialInvestors }: InvestorsPageProps) 
           
           {/* Sidebar Filters */}
           <aside className="lg:w-1/4 space-y-6">
-            <div className="bg-secondary-bg border border-border-color rounded-lg p-6 shadow-sm sticky top-24">
+            <div className="bg-secondary-bg border border-navy-dark rounded-xl p-6 shadow-sm sticky top-24">
               <div className="flex items-center gap-2 mb-6 text-accent">
                 <Filter className="h-5 w-5" />
-                <h3 className="font-bold text-lg">Filter Investors</h3>
+                <h3 className="font-bold text-lg uppercase tracking-tight italic">Find Buyers</h3>
               </div>
 
               {/* Filter Group: Deal Type */}
