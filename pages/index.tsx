@@ -138,6 +138,55 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
             </div>
         </div>
 
+        {/* NEW TO AGENTS SECTION */}
+        <div className="bg-secondary-bg py-16 border-b border-navy-dark">
+            <div className="container mx-auto px-4 max-w-6xl">
+                <div className="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <div className="inline-block bg-accent/10 border border-accent/20 rounded-full px-3 py-1 mb-4">
+                            <span className="text-[10px] font-bold text-accent tracking-wide uppercase">
+                                New to Agents? Start Here.
+                            </span>
+                        </div>
+                        <h2 className="text-3xl md:text-5xl font-black text-text-color mb-6 tracking-tight">
+                            A Chatbot <span className="text-accent">with Hands.</span>
+                        </h2>
+                        <p className="text-lg text-text-secondary mb-8 leading-relaxed">
+                            ChatGPT can write an email, but it can't send it. <br/>
+                            <strong>Agentic Tools</strong> live on your computer. They can create files, run searches, and manage projects - just like a remote intern.
+                        </p>
+                        
+                        <div className="flex flex-col gap-4">
+                             <a href="/learn-ai" className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-primary-bg font-bold rounded-lg hover:bg-gray-100 transition-all">
+                                How to Install (5 Min Guide) <ArrowRight className="w-4 h-4" />
+                             </a>
+                        </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        {/* Step 1 */}
+                        <div className="bg-primary-bg border border-navy-dark p-6 rounded-xl relative">
+                            <div className="absolute -top-3 -left-3 w-8 h-8 bg-accent text-white font-bold rounded-full flex items-center justify-center text-sm shadow-lg">1</div>
+                            <h3 className="font-bold text-text-color mb-2">Install Agent</h3>
+                            <p className="text-xs text-text-secondary">Get Claude Code or Gemini CLI running in your terminal.</p>
+                        </div>
+                        {/* Step 2 */}
+                        <div className="bg-primary-bg border border-navy-dark p-6 rounded-xl relative">
+                            <div className="absolute -top-3 -left-3 w-8 h-8 bg-accent text-white font-bold rounded-full flex items-center justify-center text-sm shadow-lg">2</div>
+                            <h3 className="font-bold text-text-color mb-2">Paste Skill</h3>
+                            <p className="text-xs text-text-secondary">Copy a blueprint from our library (e.g., "Lead Finder").</p>
+                        </div>
+                        {/* Step 3 */}
+                        <div className="bg-primary-bg border border-navy-dark p-6 rounded-xl relative">
+                            <div className="absolute -top-3 -left-3 w-8 h-8 bg-accent text-white font-bold rounded-full flex items-center justify-center text-sm shadow-lg">3</div>
+                            <h3 className="font-bold text-text-color mb-2">Run It</h3>
+                            <p className="text-xs text-text-secondary">Watch it work. It creates files, searches web, and executes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <FeaturedIn />
 
         {/* COOKBOOK GRID */}
