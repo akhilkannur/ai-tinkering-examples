@@ -33,8 +33,8 @@ export function getAllPosts(): BlogPost[] {
       return {
         slug,
         title: data.title,
-        excerpt: data.excerpt,
-        coverImage: data.coverImage || null,
+        excerpt: data.excerpt || data.summary || '',
+        coverImage: data.coverImage || data.image || null,
         date: data.date,
         author: data.author,
         relatedRecipes: data.relatedRecipes || [],
@@ -55,8 +55,8 @@ export function getPostBySlug(slug: string): BlogPost | null {
     return {
       slug,
       title: data.title,
-      excerpt: data.excerpt,
-      coverImage: data.coverImage || null,
+      excerpt: data.excerpt || data.summary || '',
+      coverImage: data.coverImage || data.image || null,
       date: data.date,
       author: data.author,
       relatedRecipes: data.relatedRecipes || [],
