@@ -101,7 +101,19 @@ ALREADY_SENT = {
     "info@scenelab.ai",
     "jake@multic.com",
     "hi@thrive.fi",
-    "support@pressbeat.io"
+    "support@pressbeat.io",
+    "linkedgrow.ai@gmail.com",
+    "prasadaprabhu762@gmail.com",
+    "support@podcept.com",
+    "roomstageai@gmail.com",
+    "murmur.directories@gmail.com",
+    "StartupSubmit@trytails.com",
+    "info@neonchainx.com",
+    "angcarlgrimes@gmail.com",
+    "hello@flowly.tools",
+    "tryremote87@gmail.com",
+    "jeremy@userjam.com",
+    "medshots_startupsubmit@hacx.org"
 }
 
 def get_api_key():

@@ -5,7 +5,6 @@ import time
 import re
 import requests
 from datetime import datetime
-
 import os
 
 # Try to load from .env.local if not in environment
@@ -26,6 +25,116 @@ if not API_KEY:
 
 # Audience: "Tool submissions"
 AUDIENCE_ID = "7d20626b-66a6-4dfc-86db-6231d8a06e2b"
+
+ALREADY_SENT = {
+    "silverioguate581@gmail.com", 
+    "rokas@overvisual.com",
+    "info@popjam.io",
+    "support@localbiz.ai",
+    "robert@getargus.ai",
+    "marcel.mueller@jadenx.com",
+    "info@ultimatetools.eu",
+    "support@snaptowindow.com",
+    "blktwuj@gmail.com",
+    "sergey@nicegram.app",
+    "team@aye.international",
+    "hello@mapyourvoyage.com",
+    "hi@beatable.co",
+    "admin@sanamujer.com",
+    "andreaalexander212@gmail.com",
+    "oleg@pentestmate.com",
+    "hi@aithumbnail.com",
+    "admin@feynn.ai",
+    "talk@qeeebo.com",
+    "d.pastore@markeplay.com",
+    "nicsequenzy@gmail.com",
+    "info@suburbstack.com",
+    "admin@cryptonewsnavigator.com",
+    "hello@3dsynth.app",
+    "info@slidescockpit.com",
+    "andrew@bookswift.app",
+    "info@airankpilot.com",
+    "ankushorav@gmail.com",
+    "support@stride-fuel.com",
+    "michel@19volt.com",
+    "contact@kataloop.com",
+    "jouni.flemming.macecraft@gmail.com",
+    "hypnotype.sparked@gmail.com",
+    "support@agentgatepay.com",
+    "directory@emailferret.io",
+    "admin@imejis.io",
+    "support@slidewhisper.com",
+    "contact@chatty.fit",
+    "info@xn--festklnning-q8a.se",
+    "info@xn--gglossning-p5a.se",
+    "izoyeqofoyuy56@gmail.com",
+    "yttranscripts.org@gmail.com",
+    "generatemetadata@gmail.com",
+    "contact@makebestmusic.com",
+    "wangava498@gmail.com",
+    "seo@reasonyx.com",
+    "seomode.co@gmail.com",
+    "dharmendraramkkumar@gmail.com",
+    "actionagentsseo@gmail.com",
+    "sales@reachfast.ai",
+    "statedaoteam@gmail.com",
+    "helpful@thebuildermarket.com",
+    "rizwan@websparks.ai",
+    "sarma.bkp@acta.ai",
+    "steve@bypassgpt.org",
+    "mohanishp1@gmail.com",
+    "usefulaihub@gmail.com",
+    "contact@jobsaicopilot.com",
+    "ula@vidnoz.com",
+    "lightroompresetgeneratorcom@gmail.com",
+    "thatsmyai608@gmail.com",
+    "cognexocom@gmail.com",
+    "lvloomystery@gmail.com",
+    "hello@aichatbot.support",
+    "autopilotshortscom@gmail.com",
+    "jobbuddytechcom@gmail.com",
+    "roastmylandingpageio@gmail.com",
+    "tweetfastcom@gmail.com",
+    "contact@libretto.fm",
+    "submitsaascom@gmail.com",
+    "goodaitoolsmkt@gmail.com",
+    "mosborn@skail.ai",
+    "seoaibotcom@gmail.com",
+    "adam.barta404@gmail.com",
+    "a.h.s.arbeit@gmail.com",
+    "akhilnairmk@gmail.com",
+    "ad.tekadio@outlook.com",
+    "support@allscreenshots.com",
+    "zack@kairaweb.com",
+    "julianbornemo1@gmail.com",
+    "info@menubartime.com",
+    "support@geminiwatermarkremover.net",
+    "hello@archrender.ai",
+    "y.milyutin@moduledge.com",
+    "daniel@indiethinkers.com",
+    "support+dirs@bankpdfconverter.com",
+    "admin@sqrdaway.com",
+    "contact@logostream.dev",
+    "getarchivist@gmail.com",
+    "support@bitvoiper.com",
+    "support@vitelnk.com",
+    "info@scenelab.ai",
+    "jake@multic.com",
+    "hi@thrive.fi",
+    "support@pressbeat.io",
+    "linkedgrow.ai@gmail.com",
+    "prasadaprabhu762@gmail.com",
+    "support@podcept.com",
+    "roomstageai@gmail.com",
+    "murmur.directories@gmail.com",
+    "StartupSubmit@trytails.com",
+    "info@neonchainx.com",
+    "angcarlgrimes@gmail.com",
+    "hello@flowly.tools",
+    "tryremote87@gmail.com",
+    "jeremy@userjam.com",
+    "medshots_startupsubmit@hacx.org"
+}
 
 def slugify(text):
     """Mirror of the frontend slugify logic."""
@@ -133,41 +242,47 @@ def process_and_send(limit=None):
         print(f"Error fetching Google Sheet: {e}")
         return
 
+    cutoff_date = datetime.strptime("31/01/2026 04:44:37", "%d/%m/%Y %H:%M:%S")
     tools_to_send = []
+    seen_emails = set()
 
-        for row in reader:
-            timestamp_str = row.get('Timestamp', '').strip()
+    for row in reader:
+        timestamp_str = row.get('Timestamp', '').strip()
+        if not timestamp_str:
+            continue
+        try:
+            # Common formats: dd/mm/yyyy HH:MM:SS or m/d/yyyy HH:MM:SS
             try:
                 submission_date = datetime.strptime(timestamp_str, "%d/%m/%Y %H:%M:%S")
             except ValueError:
-                continue
-            if submission_date < cutoff_date:
-                continue
+                submission_date = datetime.strptime(timestamp_str, "%m/%d/%Y %H:%M:%S")
+        except ValueError:
+            continue
 
-            email = row.get('Please enter your contact email', '').strip()
-            if not email:
-                email = row.get('Email address', '').strip()
-            email_lower = email.lower()
+        if submission_date <= cutoff_date:
+            continue
 
-            tool_name = row.get('What is the name of your tool', '').strip()
-            clean_name = tool_name
-            if "vidmix.ai" in tool_name.lower():
-                clean_name = "Vidmix.ai"
-            if "cursor for marketing emails" in tool_name.lower():
-                clean_name = "Sequenzy"
+        email = row.get('Please enter your contact email', '').strip()
+        if not email:
+            email = row.get('Email address', '').strip()
+        email_lower = email.lower()
 
-            # SAFETY CHECK: Must be in live directory
-            if clean_name.lower().strip() not in live_names:
-                # print(f"Skipping {clean_name} - not in live directory")
-                continue
+        tool_name = row.get('What is the name of your tool', '').strip()
+        clean_name = tool_name
+        # Apply name mappings if needed
+        if "shortsai" in tool_name.lower():
+            clean_name = "ShortsAi"
 
-            # DEDUP & ALREADY SENT CHECK
-            if email_lower in seen_emails or email_lower in ALREADY_SENT:
-                # print(f"Skipping {clean_name} - already sent to {email_lower}")
-                continue
-            
-            seen_emails.add(email_lower)
-            tools_to_send.append({'email': email, 'tool_name': clean_name})
+        # SAFETY CHECK: Must be in live directory
+        if clean_name.lower().strip() not in live_names:
+            continue
+
+        # DEDUP & ALREADY SENT CHECK
+        if email_lower in seen_emails or email_lower in ALREADY_SENT:
+            continue
+        
+        seen_emails.add(email_lower)
+        tools_to_send.append({'email': email, 'tool_name': clean_name})
 
     print(f"Found {len(tools_to_send)} tools to email.")
     
@@ -181,5 +296,4 @@ def process_and_send(limit=None):
             time.sleep(2)
 
 if __name__ == "__main__":
-    # Set limit=None to process all new tools found
     process_and_send(limit=None)
