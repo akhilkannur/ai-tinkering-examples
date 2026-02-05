@@ -83,7 +83,12 @@ async function generateSitemap() {
       const rawContent = fs.readFileSync(path.join(RECIPES_DIR, file), 'utf8');
       const { data } = matter(rawContent);
       if (data.category) blueprintCategories.add(data.category);
-      return { id };
+      return { 
+        id, 
+        title: data.title || id, 
+        category: data.category || 'Automation', 
+        tagline: data.tagline || ''
+      };
     });
 
     // 4. Define Static Pages
@@ -139,7 +144,7 @@ async function generateSitemap() {
 
     const currentDate = new Date().toISOString();
     let xml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">`;
 
     // Static Pages (Priority 1.0 - 0.8)
     staticPages.forEach(page => {
@@ -163,10 +168,29 @@ async function generateSitemap() {
 
     // Recipes (How-To & Skill - Priority 0.8/0.7)
     recipes.forEach(r => {
+      const ogImageUrl = `${SITE_URL}/api/og?title=${encodeURIComponent(r.title)}&category=${encodeURIComponent(r.category)}&tagline=${encodeURIComponent(r.tagline || '')}`;
+      const imageBlock = `
+    <image:image>
+      <image:loc>${ogImageUrl.replace(/&/g, '&amp;')}</image:loc>
+      <image:title>${r.title} AI Agent Blueprint</image:title>
+      <image:caption>${r.tagline || r.title}</image:caption>
+    </image:image>`;
+
       // "How To" Page (High Intent)
-      xml += `\n  <url><loc>${SITE_URL}/how-to/automate-${r.id}</loc><lastmod>${currentDate}</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>`;
+      xml += `\n  <url>
+    <loc>${SITE_URL}/how-to/automate-${r.id}</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>${imageBlock}
+  </url>`;
+      
       // Technical Skill Page
-      xml += `\n  <url><loc>${SITE_URL}/skills/${r.id}</loc><lastmod>${currentDate}</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>`;
+      xml += `\n  <url>
+    <loc>${SITE_URL}/skills/${r.id}</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>${imageBlock}
+  </url>`;
     });
 
     // Blog Posts (Priority 0.8)

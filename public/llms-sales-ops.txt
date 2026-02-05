@@ -13,7 +13,8 @@ difficulty: Advanced
 time: 15 mins
 archetype: Researcher
 description: >-
-  Parses a public company's 10-K (Annual Report) to extract specific 'Risk Factors' and generates a cold email positioning your product as the solution.
+  Parses a public company's 10-K (Annual Report) to extract specific 'Risk
+  Factors' and generates a cold email positioning your product as the solution.
 sampleData:
   filename: 10k_excerpt.txt
   content: |
@@ -21,6 +22,7 @@ sampleData:
     We face intense competition in the cloud storage market.
     Our data security protocols may not be sufficient to prevent breaches.
     Supply chain disruptions could delay our hardware shipments.
+isPremium: false
 ---
 
 # Agent Configuration: The 10-K Stitcher
@@ -77,6 +79,7 @@ sampleData:
     Customer_Name,Product_URL
     John Doe,https://realaiexamples.com/tools/copywriting
     Jane Smith,https://realaiexamples.com/
+isPremium: false
 ---
 
 # Agent Configuration: The eCommerce Copywriter
@@ -126,22 +129,25 @@ For each product found:
 URL: https://realaiexamples.com/skills/abm-tiering-calculator
 Description: Auto-assign Tier 1/2/3 based on ICP fit and intent.
 
---- 
-id: "abm-tiering-calculator"
-category: "Sales Ops"
-title: "ABM Account Tiering Calc"
-tagline: "Auto-assign Tier 1/2/3 based on ICP fit and intent."
-difficulty: "Advanced"
-time: "Quarterly"
-archtype: "Processor"
-description: "Analyzes firmographic data and intent signals to categorize target accounts into priority tiers."
+---
+id: abm-tiering-calculator
+category: Sales Ops
+title: ABM Account Tiering Calc
+tagline: Auto-assign Tier 1/2/3 based on ICP fit and intent.
+difficulty: Advanced
+time: Quarterly
+archtype: Processor
+description: >-
+  Analyzes firmographic data and intent signals to categorize target accounts
+  into priority tiers.
 sampleData:
-  filename: "accounts_data.csv"
+  filename: accounts_data.csv
   content: |
     Account,Industry,Revenue,Employee_Count,Intent_Score
     Acme Corp,Software,500M,1000,95
     Beta Inc,Manufacturing,10M,50,20
     Gamma LLC,Software,100M,200,60
+isPremium: false
 ---
 
 # Agent Configuration: The ABM Strategist
@@ -184,21 +190,24 @@ URL: https://realaiexamples.com/skills/account-hierarchy-builder
 Description: Link subsidiaries to parents based on domain patterns.
 
 ---
-id: "account-hierarchy-builder"
-category: "Sales Ops"
-title: "Corporate Hierarchy Builder"
-tagline: "Link subsidiaries to parents based on domain patterns."
-difficulty: "Advanced"
-time: "Monthly"
-archetype: "Processor"
-description: "Groups separate account records into a parent-child hierarchy based on shared domain and corporate suffix patterns."
+id: account-hierarchy-builder
+category: Sales Ops
+title: Corporate Hierarchy Builder
+tagline: Link subsidiaries to parents based on domain patterns.
+difficulty: Advanced
+time: Monthly
+archetype: Processor
+description: >-
+  Groups separate account records into a parent-child hierarchy based on shared
+  domain and corporate suffix patterns.
 sampleData:
-  filename: "accounts.csv"
+  filename: accounts.csv
   content: |
     Account,Domain
     Google,google.com
     Google UK,google.com
     DeepMind,deepmind.com
+isPremium: false
 ---
 
 # Agent Configuration: The Data Architect Agent
@@ -251,6 +260,7 @@ sampleData:
     Signup_Month,Total_Signups,Activated_Within_7d
     Jan,1000,200
     Feb,1200,300
+isPremium: false
 ---
 # Agent Configuration: The Growth Analyst
 
@@ -303,6 +313,7 @@ sampleData:
     Endpoint_Name,URL,Expected_Key
     Auth,/api/v1/login,token
     Data,/api/v1/stats,reports
+isPremium: false
 ---
 
 # Agent Configuration: The API Fleet Monitor
@@ -360,6 +371,7 @@ sampleData:
     Customer,Plan_Limit,Calls_Made
     CustA,1000,500
     CustB,1000,1500
+isPremium: false
 ---
 
 # Agent Configuration: The Accountant
@@ -417,6 +429,7 @@ sampleData:
     Asset,Views,Avg_Time_Spent
     Competitor A Battlecard,50,2m
     Objection Handling v1,2,30s
+isPremium: false
 ---
 
 # Agent Configuration: The Enablement Lead
@@ -476,6 +489,7 @@ sampleData:
     Acme Corp,bill@acme.com,Ok,50000,acme.com
     Beta Inc,finance@beta.com,Hard Bounce,120000,beta.com
     Gamma LLC,ap@gamma.com,Soft Bounce,10000,gamma.com
+isPremium: true
 ---
 
 # Agent Configuration: The Revenue Leakage Auditor
@@ -531,6 +545,7 @@ sampleData:
     Customer,Plan_Type,Tenure_Months
     Acme,Monthly,12
     Beta,Monthly,1
+isPremium: true
 ---
 # Agent Configuration: The Growth Marketer
 
@@ -582,6 +597,7 @@ sampleData:
     Tech_Name,ICP_Revenue_Min
     Marketo,10000000
     HubSpot,1000000
+isPremium: true
 ---
 
 # Agent Configuration: The Tech Displacement Factory
@@ -640,6 +656,7 @@ sampleData:
     booth_photos/card_1.jpg,SaaStr,2024-09-10
     booth_photos/card_stack_1.png,SaaStr,2024-09-10
     booth_photos/lunch_meeting.webp,Networking Dinner,2024-09-11
+isPremium: true
 ---
 
 # Agent Configuration: The Business Card Digitizer
@@ -680,22 +697,25 @@ For each image in the CSV:
 URL: https://realaiexamples.com/skills/buying-committee-gap-analyzer
 Description: Find missing key roles in your target accounts.
 
---- 
-id: "buying-committee-gap-analyzer"
-category: "Sales Ops"
-title: "Buying Committee Auditor"
-tagline: "Find missing key roles in your target accounts."
-difficulty: "Intermediate"
-time: "Weekly"
-archtype: "Processor"
-description: "Checks target accounts to see if you have contacts for required roles like CTO, Finance, or User Lead."
+---
+id: buying-committee-gap-analyzer
+category: Sales Ops
+title: Buying Committee Auditor
+tagline: Find missing key roles in your target accounts.
+difficulty: Intermediate
+time: Weekly
+archtype: Processor
+description: >-
+  Checks target accounts to see if you have contacts for required roles like
+  CTO, Finance, or User Lead.
 sampleData:
-  filename: "account_contacts.csv"
+  filename: account_contacts.csv
   content: |
     Account,Contact_Name,Role
     Acme Corp,John Doe,CEO
     Acme Corp,Jane Smith,VP Sales
     Beta Inc,Bob Hill,CTO
+isPremium: true
 ---
 
 # Agent Configuration: The Sales Ops Analyst
@@ -739,21 +759,24 @@ URL: https://realaiexamples.com/skills/buying-signal-heatmapper
 Description: Score account timing by aggregating intent signals.
 
 ---
-id: "buying-signal-heatmapper"
-category: "Sales Ops"
-title: "Account Buying Signal Heatmapper"
-tagline: "Score account timing by aggregating intent signals."
-difficulty: "Advanced"
-time: "Daily"
-archetype: "Processor"
-description: "Aggregates intent signals from job postings, news alerts, and website visits to identify accounts in an active buying window."
+id: buying-signal-heatmapper
+category: Sales Ops
+title: Account Buying Signal Heatmapper
+tagline: Score account timing by aggregating intent signals.
+difficulty: Advanced
+time: Daily
+archetype: Processor
+description: >-
+  Aggregates intent signals from job postings, news alerts, and website visits
+  to identify accounts in an active buying window.
 sampleData:
-  filename: "intent_signals.csv"
+  filename: intent_signals.csv
   content: |
     Account,Signal_Type,Date,Details
     Acme Corp,Job Posting,2023-10-01,Hiring 5 AEs
     Beta Inc,News,2023-10-02,Series B Funding
     Acme Corp,Web Visit,2023-10-03,Pricing Page
+isPremium: true
 ---
 
 # Agent Configuration: The Revenue Intelligence Agent
@@ -790,21 +813,24 @@ URL: https://realaiexamples.com/skills/call-sentiment-win-correlation
 Description: Correlate 'Positive Sentiment' scores with win rates.
 
 ---
-id: "call-sentiment-win-correlation"
-category: "Sales Ops"
-title: "Call Sentiment Optimizer"
-tagline: "Correlate 'Positive Sentiment' scores with win rates."
-difficulty: "Advanced"
-time: "Quarterly"
-archetype: "Processor"
-description: "Cross-references call sentiment scores from transcripts with actual deal outcomes to find the 'Winning Tone'."
+id: call-sentiment-win-correlation
+category: Sales Ops
+title: Call Sentiment Optimizer
+tagline: Correlate 'Positive Sentiment' scores with win rates.
+difficulty: Advanced
+time: Quarterly
+archetype: Processor
+description: >-
+  Cross-references call sentiment scores from transcripts with actual deal
+  outcomes to find the 'Winning Tone'.
 sampleData:
-  filename: "sentiment_results.csv"
+  filename: sentiment_results.csv
   content: |
     Deal_ID,Outcome,Avg_Sentiment_Score
     Deal-1,Won,0.85
     Deal-2,Lost,0.40
     Deal-3,Won,0.70
+isPremium: true
 ---
 
 # Agent Configuration: The Sales Coaching Agent
@@ -857,6 +883,7 @@ sampleData:
   content: >
     User: "The workflow automation was a game changer. We saved 20 hours a week
     across the team."
+isPremium: true
 ---
 
 # Agent Configuration: The Case Study Factory
@@ -898,20 +925,23 @@ URL: https://realaiexamples.com/skills/champion-movement-tracker
 Description: Detect when previous buyers move to new companies.
 
 ---
-id: "champion-movement-tracker"
-category: "Sales Ops"
-title: "Champion Job Change Tracker"
-tagline: "Detect when previous buyers move to new companies."
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Compares a list of known 'Champions' (previous buyers) against a new contact export to identify previous fans in new target accounts."
+id: champion-movement-tracker
+category: Sales Ops
+title: Champion Job Change Tracker
+tagline: Detect when previous buyers move to new companies.
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Compares a list of known 'Champions' (previous buyers) against a new contact
+  export to identify previous fans in new target accounts.
 sampleData:
-  filename: "champions_master.csv"
+  filename: champions_master.csv
   content: |
     Name,Previous_Account,Email
     John Doe,Acme Corp,john@acme.com
     Jane Smith,Beta Inc,jane@beta.com
+isPremium: true
 ---
 
 # Agent Configuration: The Customer Advocacy Agent
@@ -965,6 +995,7 @@ sampleData:
     Contact,Title,Access_to_EB,Shared_Pain,Met_Timeline
     John Doe,Director,Yes,Yes,No
     Jane Smith,Intern,No,Yes,Yes
+isPremium: true
 ---
 
 # Agent Configuration: The MEDDIC Master
@@ -1029,6 +1060,7 @@ sampleData:
     Jan-23,Active,NULL
     Jan-23,Churned,2023-05-01
     Mar-23,Active,NULL
+isPremium: true
 ---
 
 # Agent Configuration: The Retention Analyst Agent
@@ -1082,6 +1114,7 @@ sampleData:
     Customer_ID,Ticket_Text,Usage_Drop
     Cust_101,"The app is too slow today",-20%
     Cust_102,"I need to export my data",-50%
+isPremium: true
 ---
 
 # Agent Configuration: The Churn Sentinel
@@ -1126,8 +1159,9 @@ difficulty: Advanced
 time: Weekly
 archetype: Processor
 description: >-
-  Most health scores are static snapshots. This agent analyzes the *change* in behavior
-  (Usage Velocity) to flag customers who are silently disengaging, even if their total numbers look fine.
+  Most health scores are static snapshots. This agent analyzes the *change* in
+  behavior (Usage Velocity) to flag customers who are silently disengaging, even
+  if their total numbers look fine.
 sampleData:
   filename: health_trends.csv
   content: |
@@ -1135,6 +1169,7 @@ sampleData:
     Acme Corp,100,70,5
     Globex,50,55,0
     Stark Ind,200,10,2
+isPremium: true
 ---
 
 # Agent Configuration: The Retention Analyst
@@ -1174,21 +1209,24 @@ For each customer:
 URL: https://realaiexamples.com/skills/clawback-calculator
 Description: Identify commissions paid on deals that churned early.
 
---- 
-id: "clawback-calculator"
-category: "Sales Ops"
-title: "Commission Clawback Audit"
-tagline: "Identify commissions paid on deals that churned early."
-difficulty: "Intermediate"
-time: "Monthly"
-archtype: "Processor"
-description: "Compares recent churn events against payout logs to flag commissions that need to be recouped."
+---
+id: clawback-calculator
+category: Sales Ops
+title: Commission Clawback Audit
+tagline: Identify commissions paid on deals that churned early.
+difficulty: Intermediate
+time: Monthly
+archtype: Processor
+description: >-
+  Compares recent churn events against payout logs to flag commissions that need
+  to be recouped.
 sampleData:
-  filename: "churn_vs_payouts.csv"
+  filename: churn_vs_payouts.csv
   content: |
     Deal_ID,Rep,Payout_Amount,Churn_Date,Contract_Start
     Deal-1,John,1000,2023-10-01,2023-09-01
     Deal-2,Jane,500,2023-12-01,2023-01-01
+isPremium: true
 ---
 
 # Agent Configuration: The Commission Manager
@@ -1247,6 +1285,7 @@ sampleData:
   content: >
     Hi, this is John from Acme. We help companies save 20% on cloud bills. Is
     this a bad time?
+isPremium: true
 ---
 
 # Agent Configuration: The Cold Call Simulator (Grumpy Prospect)
@@ -1314,6 +1353,7 @@ sampleData:
     Vercel,Guillermo Rauch,CEO
     Zapier,Wade Foster,CEO
     Loom,Joe Thomas,Founder
+isPremium: true
 ---
 
 # Agent Configuration: The Cold Email Personalizer
@@ -1387,6 +1427,7 @@ sampleData:
 
     Quick question,"Hey, I wanted to follow up on our previous conversation
     about growth."
+isPremium: true
 ---
 
 # Agent Configuration: The Spam Word Hunter
@@ -1441,21 +1482,24 @@ Start now.
 URL: https://realaiexamples.com/skills/commission-clawback-tracker
 Description: Track revenue at risk of clawback.
 
---- 
-id: "commission-clawback-tracker"
-category: "Sales Ops"
-title: "Clawback Risk Monitor"
-tagline: "Track revenue at risk of clawback."
-difficulty: "Intermediate"
-time: "Weekly"
-archtype: "Processor"
-description: "Identifies recently paid deals that are currently in 'High Support Volume' or 'Low Usage' to flag potential clawback risks."
+---
+id: commission-clawback-tracker
+category: Sales Ops
+title: Clawback Risk Monitor
+tagline: Track revenue at risk of clawback.
+difficulty: Intermediate
+time: Weekly
+archtype: Processor
+description: >-
+  Identifies recently paid deals that are currently in 'High Support Volume' or
+  'Low Usage' to flag potential clawback risks.
 sampleData:
-  filename: "clawback_risk.csv"
+  filename: clawback_risk.csv
   content: |
     Deal,Payout_Month,Support_Tickets,Usage_Trend
     Acme,Last Month,15,Down
     Beta,Last Month,0,Up
+isPremium: true
 ---
 
 # Agent Configuration: The Revenue Financial Analyst
@@ -1496,7 +1540,7 @@ sampleData
 URL: https://realaiexamples.com/skills/commission-payout-calculator
 Description: Model the impact of 'Accelerators' and 'Spiffs' before you roll them out.
 
---- 
+---
 id: commission-payout-calculator
 category: Sales Ops
 title: The Comp Plan Simulator
@@ -1516,6 +1560,7 @@ sampleData:
     Rep A,150000,100000
     Rep B,80000,100000
     Rep C,200000,100000
+isPremium: true
 ---
 
 # Agent Configuration: The Comp Analyst
@@ -1578,6 +1623,7 @@ sampleData:
     Rep,Month,Amount
     John,Jan,5000
     John,Feb,15000
+isPremium: true
 ---
 
 # Agent Configuration: The Comp Plan Auditor
@@ -1638,6 +1684,7 @@ sampleData:
     John Doe,Student,University of AZ
     Jane Smith,VP of Engineering,Netflix
     Bob Jones,Consultant,Self-Employed
+isPremium: true
 ---
 
 # Agent Configuration: The Conference Networking Strategist
@@ -1702,6 +1749,7 @@ sampleData:
     john@gmail.com,2022-01-01,Webinar
     sarah@enterprise.com,2022-05-01,Trade Show
     mike@startup.io,2023-10-01,Inbound
+isPremium: true
 ---
 
 # Agent Configuration: The CRM Data Hygienist
@@ -1742,20 +1790,23 @@ URL: https://realaiexamples.com/skills/contact-role-density-auditor
 Description: Ensure top accounts have >3 contacts.
 
 ---
-id: "contact-role-density-auditor"
-category: "Sales Ops"
-title: "Account Stakeholder Density"
-tagline: "Ensure top accounts have >3 contacts."
-difficulty: "Beginner"
-time: "Weekly"
-archetype: "Processor"
-description: "Audits high-value accounts to flag those with insufficient contact coverage (under-mapped accounts)."
+id: contact-role-density-auditor
+category: Sales Ops
+title: Account Stakeholder Density
+tagline: Ensure top accounts have >3 contacts.
+difficulty: Beginner
+time: Weekly
+archetype: Processor
+description: >-
+  Audits high-value accounts to flag those with insufficient contact coverage
+  (under-mapped accounts).
 sampleData:
-  filename: "account_coverage.csv"
+  filename: account_coverage.csv
   content: |
     Account,Annual_Revenue,Contact_Count
     Acme Corp,1M,5
     Beta Inc,500k,1
+isPremium: true
 ---
 
 # Agent Configuration: The Account Mapping Agent
@@ -1808,6 +1859,7 @@ sampleData:
     Account,ARR,Renewal_Type
     Acme,10000,Auto
     Beta,50000,Manual
+isPremium: true
 ---
 
 # Agent Configuration: The Revenue Defense System
@@ -1855,9 +1907,10 @@ difficulty: Advanced
 time: Monthly
 archetype: Processor
 description: >-
-  Legal teams hate "Redlines," but CFOs hate "Hidden Risk." This agent scans your
-  contract text for dangerous non-standard clauses (e.g., "Termination for
-  Convenience") and sums up the total Revenue At Risk to prioritize legal review.
+  Legal teams hate "Redlines," but CFOs hate "Hidden Risk." This agent scans
+  your contract text for dangerous non-standard clauses (e.g., "Termination for
+  Convenience") and sums up the total Revenue At Risk to prioritize legal
+  review.
 sampleData:
   filename: contract_text.csv
   content: |
@@ -1865,6 +1918,7 @@ sampleData:
     Acme,50000,"Standard terms apply."
     Beta,100000,"Customer may terminate for convenience with 30 days notice."
     Gamma,20000,"Payment terms: Net 90."
+isPremium: true
 ---
 # Agent Configuration: The Risk Officer
 
@@ -1922,6 +1976,7 @@ sampleData:
     Acme,100000,Jan
     Beta,50000,Jan
     Gamma,20000,Feb
+isPremium: true
 ---
 
 # Agent Configuration: The Strategic Planning Lead
@@ -1973,12 +2028,14 @@ difficulty: Intermediate
 time: Real-time
 archtype: Processor
 description: >-
-  Pastes the diff of a contract. Highlights "Unlimited Liability", "IP Ownership", or "Payment Terms > 60" changes that Sales needs to push back on.
+  Pastes the diff of a contract. Highlights "Unlimited Liability", "IP
+  Ownership", or "Payment Terms > 60" changes that Sales needs to push back on.
 sampleData:
   filename: input_data.csv
   content: |
     Clause_Name,Original_Text,Redlined_Text
     Liability,Cap at 1x,Unlimited
+isPremium: true
 ---
 
 # Agent Configuration: Legal Redline Risk Spotter
@@ -2021,9 +2078,9 @@ difficulty: Intermediate
 time: Monthly
 archetype: Processor
 description: >-
-  Blind price increases cause churn. This agent reviews customer utilization rates
-  before generating the renewal quote. High users get an upsell; low users get a
-  "retention offer" to prevent them from shopping around.
+  Blind price increases cause churn. This agent reviews customer utilization
+  rates before generating the renewal quote. High users get an upsell; low users
+  get a "retention offer" to prevent them from shopping around.
 sampleData:
   filename: renewal_data.csv
   content: |
@@ -2031,6 +2088,7 @@ sampleData:
     PowerUsers Inc,10000,0.95,50
     GhostTown LLC,10000,0.30,50
     AverageJoes,5000,0.70,10
+isPremium: true
 ---
 
 # Agent Configuration: The Renewal Negotiator
@@ -2093,6 +2151,7 @@ sampleData:
     Acme Corp,50000,2024-01-01,Red
     Beta Inc,10000,2024-06-01,Green
     Gamma LLC,4000,2024-01-05,Red
+isPremium: true
 ---
 
 # Agent Configuration: The Renewal Command Center
@@ -2152,6 +2211,7 @@ sampleData:
     Customer,Days_To_Renew,Health
     Acme,85,Red
     Beta,85,Green
+isPremium: true
 ---
 # Agent Configuration: The Renewals Manager
 
@@ -2203,6 +2263,7 @@ sampleData:
     Acme Corp,Amex,Sunday,Generic Decline,1000
     Startup Inc,Visa,Monday,Insufficient Funds,500
     Individual User,Debit,Tuesday,Lost Card,20
+isPremium: true
 ---
 # Agent Configuration: The Involuntary Churn Rescuer
 
@@ -2259,6 +2320,7 @@ sampleData:
     Rep,Opp,Next_Step
     John,O-1,Call
     Jane,O-2,NULL
+isPremium: true
 ---
 
 # Agent Configuration: The Sales Process Enforcer
@@ -2296,22 +2358,25 @@ Generate `process_violations.csv`:
 URL: https://realaiexamples.com/skills/crm-field-utilization-analyzer
 Description: Identify unused or garbage data fields in your CRM.
 
---- 
-id: "crm-field-utilization-analyzer"
-category: "Sales Ops"
-title: "CRM Field Health Check"
-tagline: "Identify unused or garbage data fields in your CRM."
-difficulty: "Intermediate"
-time: "10 mins"
-archtype: "Processor"
-description: "Analyzes a CSV export of your CRM records to calculate fill rates for every column. Helps you decide which fields to deprecate or mandate."
+---
+id: crm-field-utilization-analyzer
+category: Sales Ops
+title: CRM Field Health Check
+tagline: Identify unused or garbage data fields in your CRM.
+difficulty: Intermediate
+time: 10 mins
+archtype: Processor
+description: >-
+  Analyzes a CSV export of your CRM records to calculate fill rates for every
+  column. Helps you decide which fields to deprecate or mandate.
 sampleData:
-  filename: "crm_export.csv"
+  filename: crm_export.csv
   content: |
     Deal_ID,Amount,Close_Date,Next_Step,Custom_Field_1,Custom_Field_2
     001,5000,2023-10-01,Call,,Old_Data
     002,12000,2023-11-15,Email,,
     003,3000,,,
+isPremium: true
 ---
 
 # Agent Configuration: The CRM Architect
@@ -2372,6 +2437,7 @@ sampleData:
     Acme,Base
     Acme,API
     Beta,Base
+isPremium: true
 ---
 
 # Agent Configuration: The Expansion Agent
@@ -2426,6 +2492,7 @@ sampleData:
     Acme,Add-on A
     Beta,Platform
     Gamma,Add-on B
+isPremium: true
 ---
 
 # Agent Configuration: The RevOps Strategist
@@ -2485,6 +2552,7 @@ sampleData:
     Deal A,1000,EUR
     Deal B,500,GBP
     Deal C,1000,USD
+isPremium: true
 ---
 
 # Agent Configuration: The Revenue Controller
@@ -2526,22 +2594,25 @@ sampleData
 URL: https://realaiexamples.com/skills/customer-domain-extractor
 Description: Get company websites from a list of emails.
 
---- 
-id: "customer-domain-extractor"
-category: "Sales Ops"
-title: "Domain from Email Extractor"
-tagline: "Get company websites from a list of emails."
-difficulty: "Beginner"
-time: "Batch"
-archtype: "Processor"
-description: "Parses a list of email addresses to extract the domain portion, filtering out generic providers (gmail, yahoo)."
+---
+id: customer-domain-extractor
+category: Sales Ops
+title: Domain from Email Extractor
+tagline: Get company websites from a list of emails.
+difficulty: Beginner
+time: Batch
+archtype: Processor
+description: >-
+  Parses a list of email addresses to extract the domain portion, filtering out
+  generic providers (gmail, yahoo).
 sampleData:
-  filename: "emails.csv"
+  filename: emails.csv
   content: |
     Email
     john@acme.com
     jane@gmail.com
     bill@beta.io
+isPremium: true
 ---
 
 # Agent Configuration: The Data Enricher
@@ -2601,6 +2672,7 @@ sampleData:
     Quote_ID,Product,List_Price,Net_Price,Discount_Percent
     Q-101,SaaS Pro,100,80,20
     Q-102,SaaS Ent,1000,600,40
+isPremium: true
 ---
 
 # Agent Configuration: The Deal Desk Analyst
@@ -2661,6 +2733,7 @@ sampleData:
     Globex Enterprise,Sarah,Ghosting,4
     Soylent Corp,John,Budget,2
     Initech Deal,Mike,Competitor,1
+isPremium: true
 ---
 
 # Agent Configuration: The Pipeline Integrity Consultant
@@ -2698,22 +2771,25 @@ Generate `pipeline_sanity_check.md`:
 URL: https://realaiexamples.com/skills/deal-rotting-alert-system
 Description: Flag deals that haven't moved in 14 days.
 
---- 
-id: "deal-rotting-alert-system"
-category: "Sales Ops"
-title: "Deal Rotting Monitor"
-tagline: "Flag deals that haven't moved in 14 days."
-difficulty: "Beginner"
-time: "Weekly"
-archtype: "Processor"
-description: "Highlights opportunities that are 'rotting' in the pipeline so managers can intervene."
+---
+id: deal-rotting-alert-system
+category: Sales Ops
+title: Deal Rotting Monitor
+tagline: Flag deals that haven't moved in 14 days.
+difficulty: Beginner
+time: Weekly
+archtype: Processor
+description: >-
+  Highlights opportunities that are 'rotting' in the pipeline so managers can
+  intervene.
 sampleData:
-  filename: "open_deals.csv"
+  filename: open_deals.csv
   content: |
     Deal,Stage,Last_Stage_Change
     Deal A,Negotiation,2023-10-01
     Deal B,Discovery,2023-09-01
     Deal C,Demo,2023-10-15
+isPremium: true
 ---
 
 # Agent Configuration: The Pipeline Manager
@@ -2760,13 +2836,16 @@ Description: Don't just flag the slip. Diagnose the root cause with Rep-specific
 id: deal-slippage-detector
 category: Sales Ops
 title: The Deal Slippage Healer
-tagline: Don't just flag the slip. Diagnose the root cause with Rep-specific coaching questions.
+tagline: >-
+  Don't just flag the slip. Diagnose the root cause with Rep-specific coaching
+  questions.
 difficulty: Intermediate
 time: Weekly
 archetype: Processor
 description: >-
-  Deals that push 3+ times are 90% likely to be lost. This agent analyzes your pipeline history, 
-  calculates a 'Slippage Score' for every deal, and generates the exact question you need to ask the Rep to uncover the truth.
+  Deals that push 3+ times are 90% likely to be lost. This agent analyzes your
+  pipeline history,  calculates a 'Slippage Score' for every deal, and generates
+  the exact question you need to ask the Rep to uncover the truth.
 sampleData:
   filename: pipeline_snapshots.csv
   content: |
@@ -2776,6 +2855,7 @@ sampleData:
     1,Week3,2023-12-31,Negotiation,50000
     2,Week1,2023-10-31,Discovery,10000
     2,Week2,2023-10-31,Demo,10000
+isPremium: true
 ---
 
 # Agent Configuration: The Forecast Healer
@@ -2878,22 +2958,25 @@ For each industry in the CSV:
 URL: https://realaiexamples.com/skills/demo-conversion-audit
 Description: Measure Demo -> Proposal conversion by rep.
 
---- 
-id: "demo-conversion-audit"
-category: "Sales Ops"
-title: "Stage Conversion Auditor"
-tagline: "Measure Demo -> Proposal conversion by rep."
-difficulty: "Beginner"
-time: "Monthly"
-archtype: "Processor"
-description: "Calculates the conversion efficiency of specific sales stages to identify coaching opportunities."
+---
+id: demo-conversion-audit
+category: Sales Ops
+title: Stage Conversion Auditor
+tagline: Measure Demo -> Proposal conversion by rep.
+difficulty: Beginner
+time: Monthly
+archtype: Processor
+description: >-
+  Calculates the conversion efficiency of specific sales stages to identify
+  coaching opportunities.
 sampleData:
-  filename: "conversions.csv"
+  filename: conversions.csv
   content: |
     Rep,Stage_From,Stage_To
     John,Demo,Proposal
     John,Demo,Closed-Lost
     Jane,Demo,Proposal
+isPremium: true
 ---
 
 # Agent Configuration: The Sales Coach
@@ -2936,22 +3019,23 @@ sampleData
 URL: https://realaiexamples.com/skills/demo-no-show-analyzer
 Description: Why are prospects ghosting demos?
 
---- 
-id: "demo-no-show-analyzer"
-category: "Sales Ops"
-title: "No-Show Rate Analyzer"
-tagline: "Why are prospects ghosting demos?"
-difficulty: "Intermediate"
-time: "Monthly"
-archtype: "Processor"
-description: "Analyzes demo logs to calculate no-show rates by Lead Source and Rep."
+---
+id: demo-no-show-analyzer
+category: Sales Ops
+title: No-Show Rate Analyzer
+tagline: Why are prospects ghosting demos?
+difficulty: Intermediate
+time: Monthly
+archtype: Processor
+description: Analyzes demo logs to calculate no-show rates by Lead Source and Rep.
 sampleData:
-  filename: "demo_logs.csv"
+  filename: demo_logs.csv
   content: |
     Rep,Source,Outcome
     John,LinkedIn,Held
     Jane,Cold Call,No Show
     John,Cold Call,No Show
+isPremium: true
 ---
 
 # Agent Configuration: The SDR Manager
@@ -2995,14 +3079,14 @@ URL: https://realaiexamples.com/skills/demo-to-trial-conversion
 Description: Are demos actually working?
 
 ---
-id: "demo-to-trial-conversion"
-category: "Sales Ops"
-title: "Demo-to-Trial Converter"
-tagline: "Are demos actually working?"
-difficulty: "Beginner"
-time: "Monthly"
-archetype: "Processor"
-description: "Measures the success rate of converting Sales Demos into Product Trials."
+id: demo-to-trial-conversion
+category: Sales Ops
+title: Demo-to-Trial Converter
+tagline: Are demos actually working?
+difficulty: Beginner
+time: Monthly
+archetype: Processor
+description: Measures the success rate of converting Sales Demos into Product Trials.
 sampleData:
   filename: demo_log.csv
   content: |
@@ -3011,6 +3095,7 @@ sampleData:
     Sarah,Facebook_Ads,2023-10-01,FALSE
     John,Facebook_Ads,2023-10-02,FALSE
     Mike,Referral,2023-10-03,TRUE
+isPremium: true
 ---
 
 # Agent Configuration: The Sales Funnel Physician
@@ -3049,20 +3134,23 @@ URL: https://realaiexamples.com/skills/discount-approval-sla-tracker
 Description: How fast are quotes approved?
 
 ---
-id: "discount-approval-sla-tracker"
-category: "Sales Ops"
-title: "Deal Desk SLA Monitor"
-tagline: "How fast are quotes approved?"
-difficulty: "Intermediate"
-time: "Weekly"
-archetype: "Processor"
-description: "Measures the time between 'Quote Submitted' and 'Quote Approved' to identify Deal Desk bottlenecks."
+id: discount-approval-sla-tracker
+category: Sales Ops
+title: Deal Desk SLA Monitor
+tagline: How fast are quotes approved?
+difficulty: Intermediate
+time: Weekly
+archetype: Processor
+description: >-
+  Measures the time between 'Quote Submitted' and 'Quote Approved' to identify
+  Deal Desk bottlenecks.
 sampleData:
-  filename: "approval_logs.csv"
+  filename: approval_logs.csv
   content: |
     Quote_ID,Submit_Time,Approve_Time
     Q1,10:00,10:30
     Q2,10:00,18:00
+isPremium: true
 ---
 
 # Agent Configuration: The Deal Desk Manager
@@ -3115,6 +3203,7 @@ sampleData:
     Customer,Initial_Discount_Pct,Total_LTV
     Acme,0,50000
     Beta,30,10000
+isPremium: true
 ---
 
 # Agent Configuration: The Revenue Strategy Agent
@@ -3151,21 +3240,24 @@ URL: https://realaiexamples.com/skills/discount-variance-by-region
 Description: Find territories discounting more than the average.
 
 ---
-id: "discount-variance-by-region"
-category: "Sales Ops"
-title: "Regional Discount Auditor"
-tagline: "Find territories discounting more than the average."
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Calculates average discount rates by region to identify outliers and margin erosion."
+id: discount-variance-by-region
+category: Sales Ops
+title: Regional Discount Auditor
+tagline: Find territories discounting more than the average.
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Calculates average discount rates by region to identify outliers and margin
+  erosion.
 sampleData:
-  filename: "closed_deals.csv"
+  filename: closed_deals.csv
   content: |
     Deal,Region,Amount,Discount_Pct
     Deal 1,EMEA,10000,5
     Deal 2,EMEA,5000,25
     Deal 3,APAC,8000,10
+isPremium: true
 ---
 
 # Agent Configuration: The Pricing Auditor
@@ -3220,6 +3312,7 @@ sampleData:
     1,20,12
     2,20,36
     3,0,12
+isPremium: true
 ---
 # Agent Configuration: The Deal Desk Lead
 
@@ -3254,21 +3347,25 @@ URL: https://realaiexamples.com/skills/discovery-question-compliance
 Description: Don't just grade the call. Fix the deal.
 
 ---
-id: "discovery-question-compliance"
-category: "Sales Ops"
-title: "The Sales Coach"
-tagline: "Don't just grade the call. Fix the deal."
-difficulty: "Advanced"
-time: "Batch"
-archetype: "Processor"
-description: "Reviewing calls is useless if you don't act. This agent scans transcripts for missing MEDDIC criteria (Budget, Authority, etc.) and immediately drafts a 'Clean-Up Email' for the rep to send to the prospect to fill the gaps."
+id: discovery-question-compliance
+category: Sales Ops
+title: The Sales Coach
+tagline: Don't just grade the call. Fix the deal.
+difficulty: Advanced
+time: Batch
+archetype: Processor
+description: >-
+  Reviewing calls is useless if you don't act. This agent scans transcripts for
+  missing MEDDIC criteria (Budget, Authority, etc.) and immediately drafts a
+  'Clean-Up Email' for the rep to send to the prospect to fill the gaps.
 sampleData:
-  filename: "transcripts.txt"
+  filename: transcripts.txt
   content: |
     Rep: "Does this feature work for you?"
     Prospect: "Yes."
     Rep: "Great."
     (Note: No budget or timeline discussion).
+isPremium: true
 ---
 
 # Agent Configuration: The Sales Coach
@@ -3311,7 +3408,7 @@ For every Missing item, draft a "P.S." email blurb:
 URL: https://realaiexamples.com/skills/drive-time-territory-balancer
 Description: Balance field sales territories by actual drive time.
 
---- 
+---
 id: drive-time-territory-balancer
 category: Sales Ops
 title: Drive-Time Territory Balancer
@@ -3320,13 +3417,15 @@ difficulty: Advanced
 time: Batch
 archetype: Processor
 description: >-
-  Calculates the center of gravity for a territory. uses Maps API logic to ensure Rep A isn't spending 4 hours driving while Rep B spends 1.
+  Calculates the center of gravity for a territory. uses Maps API logic to
+  ensure Rep A isn't spending 4 hours driving while Rep B spends 1.
 sampleData:
   filename: input_data.csv
   content: |
     Rep_Name,Account_Address
     RepA,"123 Main St, Austin"
     RepB,"456 Oak St, Dallas"
+isPremium: true
 ---
 
 # Agent Configuration: Drive-Time Territory Balancer
@@ -3360,23 +3459,26 @@ Balance field sales territories by actual drive time.
 URL: https://realaiexamples.com/skills/duplicate-account-consolidator
 Description: Find duplicate companies using fuzzy matching.
 
---- 
-id: "duplicate-account-consolidator"
-category: "Sales Ops"
-title: "Account Dupe Smasher"
-tagline: "Find duplicate companies using fuzzy matching."
-difficulty: "Advanced"
-time: "Monthly"
-archtype: "Processor"
-description: "Identifies duplicate account records by comparing names (e.g., 'Acme Inc.' vs 'Acme Incorporated') and domains."
+---
+id: duplicate-account-consolidator
+category: Sales Ops
+title: Account Dupe Smasher
+tagline: Find duplicate companies using fuzzy matching.
+difficulty: Advanced
+time: Monthly
+archtype: Processor
+description: >-
+  Identifies duplicate account records by comparing names (e.g., 'Acme Inc.' vs
+  'Acme Incorporated') and domains.
 sampleData:
-  filename: "accounts.csv"
+  filename: accounts.csv
   content: |
     Account_ID,Name,Domain
     1,Acme Inc,acme.com
     2,Beta LLC,beta.io
     3,Acme Incorporated,acme.com
     4,The Beta Group,beta.io
+isPremium: true
 ---
 
 # Agent Configuration: The Data Quality Engineer
@@ -3498,6 +3600,7 @@ sampleData:
     John,Doe,acme.com
     Jane,Smith,globex.io
     Mike,Ross,pearsonhardman.com
+isPremium: true
 ---
 
 # Agent Configuration: The Email Permutator
@@ -3571,6 +3674,7 @@ sampleData:
     a@test.com,,555-0100,HubSpot
     b@test.com,,,
     c@test.com,555-0200,,Salesforce
+isPremium: true
 ---
 
 # Agent Configuration: The Data Architect
@@ -3614,20 +3718,23 @@ URL: https://realaiexamples.com/skills/executive-relationship-mapper
 Description: Map executive relationships via calendar data.
 
 ---
-id: "executive-relationship-mapper"
-category: "Sales Ops"
-title: "Executive Network Mapper"
-tagline: "Map executive relationships via calendar data."
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Analyzes meeting logs to visualize which executives are already engaged with your team."
+id: executive-relationship-mapper
+category: Sales Ops
+title: Executive Network Mapper
+tagline: Map executive relationships via calendar data.
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Analyzes meeting logs to visualize which executives are already engaged with
+  your team.
 sampleData:
-  filename: "meetings.csv"
+  filename: meetings.csv
   content: |
     Team_Member,Prospect_Name,Prospect_Title,Account
     CEO,Big Boss,CEO,Acme Corp
     AE,John Manager,Director,Acme Corp
+isPremium: true
 ---
 
 # Agent Configuration: The Strategic Account Agent
@@ -3680,6 +3787,7 @@ sampleData:
     Customer,Emp_Growth_Pct,Usage_Growth_Pct
     Acme,20,50
     Beta,-5,0
+isPremium: true
 ---
 # Agent Configuration: The Account Management Ops
 
@@ -3731,6 +3839,7 @@ sampleData:
     User,Feature_Clicked,Count
     Acme,API Access,5
     Beta,SSO,1
+isPremium: true
 ---
 # Agent Configuration: The Sales Assist Agent
 
@@ -3764,21 +3873,24 @@ Identify high-intent free users.
 URL: https://realaiexamples.com/skills/forecast-accuracy-tracker
 Description: Which rep is sandbagging?
 
---- 
-id: "forecast-accuracy-tracker"
-category: "Sales Ops"
-title: "Forecast vs Actuals Tracker"
-tagline: "Which rep is sandbagging?"
-difficulty: "Intermediate"
-time: "Monthly"
-archtype: "Processor"
-description: "Compares the 'Committed' forecast from the start of the month against actual closed revenue."
+---
+id: forecast-accuracy-tracker
+category: Sales Ops
+title: Forecast vs Actuals Tracker
+tagline: Which rep is sandbagging?
+difficulty: Intermediate
+time: Monthly
+archtype: Processor
+description: >-
+  Compares the 'Committed' forecast from the start of the month against actual
+  closed revenue.
 sampleData:
-  filename: "forecasts.csv"
+  filename: forecasts.csv
   content: |
     Rep,Forecast_Commit,Actual_Closed
     John,50000,45000
     Jane,20000,40000
+isPremium: true
 ---
 
 # Agent Configuration: The Sales Ops Manager
@@ -3822,20 +3934,23 @@ URL: https://realaiexamples.com/skills/forecast-sandbag-detector
 Description: Identify reps who consistently beat their commits by 50%+.
 
 ---
-id: "forecast-sandbag-detector"
-category: "Sales Ops"
-title: "Forecast Integrity Auditor"
-tagline: "Identify reps who consistently beat their commits by 50%+."
-difficulty: "Intermediate"
-time: "Quarterly"
-archetype: "Processor"
-description: "Compares historical forecast 'commits' against actual results to identify reps with inaccurate forecasting habits."
+id: forecast-sandbag-detector
+category: Sales Ops
+title: Forecast Integrity Auditor
+tagline: Identify reps who consistently beat their commits by 50%+.
+difficulty: Intermediate
+time: Quarterly
+archetype: Processor
+description: >-
+  Compares historical forecast 'commits' against actual results to identify reps
+  with inaccurate forecasting habits.
 sampleData:
-  filename: "rep_forecasts.csv"
+  filename: rep_forecasts.csv
   content: |
     Rep,Quarter,Commit,Actual
     John,Q1,100000,160000
     Jane,Q1,100000,105000
+isPremium: true
 ---
 
 # Agent Configuration: The Forecast Auditor
@@ -3888,6 +4003,7 @@ sampleData:
     User_ID,Feature_A_Usage,Limit,Plan
     101,45,50,Free
     102,10,50,Free
+isPremium: true
 ---
 # Agent Configuration: The Product Sales Specialist
 
@@ -4003,6 +4119,7 @@ sampleData:
     Customer,Current_Price,Market_Price
     Acme,500,1000
     Beta,1000,1000
+isPremium: true
 ---
 # Agent Configuration: The Pricing Strategist
 
@@ -4055,6 +4172,7 @@ sampleData:
     Acme Corp,Manufacturing,500,Salesforce,VP Sales
     Beta Inc,SaaS,20,HubSpot,Founder
     Gamma LLC,Consulting,5,Excel,Owner
+isPremium: true
 ---
 
 # Agent Configuration: The ICP Scorer (Lead Grading)
@@ -4105,22 +4223,25 @@ Start now.
 URL: https://realaiexamples.com/skills/inactive-contact-archiver
 Description: Identify contacts who haven't engaged in 365+ days.
 
---- 
-id: "inactive-contact-archiver"
-category: "Sales Ops"
-title: "CRM Hygiene: The Reaper"
-tagline: "Identify contacts who haven't engaged in 365+ days."
-difficulty: "Beginner"
-time: "Monthly"
-archtype: "Processor"
-description: "Flags contacts for archival based on 'Last Activity Date' to keep your CRM storage costs low."
+---
+id: inactive-contact-archiver
+category: Sales Ops
+title: 'CRM Hygiene: The Reaper'
+tagline: Identify contacts who haven't engaged in 365+ days.
+difficulty: Beginner
+time: Monthly
+archtype: Processor
+description: >-
+  Flags contacts for archival based on 'Last Activity Date' to keep your CRM
+  storage costs low.
 sampleData:
-  filename: "contacts.csv"
+  filename: contacts.csv
   content: |
     Contact_ID,Name,Last_Activity_Date
     1,Old Lead,2021-05-12
     2,New Lead,2023-10-01
     3,Stale Lead,2022-01-01
+isPremium: true
 ---
 
 # Agent Configuration: The Database Admin
@@ -4164,21 +4285,24 @@ URL: https://realaiexamples.com/skills/inbound-vs-outbound-win-rate
 Description: Compare win rates for Inbound vs Outbound leads.
 
 ---
-id: "inbound-vs-outbound-win-rate"
-category: "Sales Ops"
-title: "Win Rate by Origin"
-tagline: "Compare win rates for Inbound vs Outbound leads."
-difficulty: "Beginner"
-time: "Monthly"
-archetype: "Processor"
-description: "Calculates distinct win rates for leads originating from marketing (Inbound) vs sales prospecting (Outbound)."
+id: inbound-vs-outbound-win-rate
+category: Sales Ops
+title: Win Rate by Origin
+tagline: Compare win rates for Inbound vs Outbound leads.
+difficulty: Beginner
+time: Monthly
+archetype: Processor
+description: >-
+  Calculates distinct win rates for leads originating from marketing (Inbound)
+  vs sales prospecting (Outbound).
 sampleData:
-  filename: "win_rates.csv"
+  filename: win_rates.csv
   content: |
     Lead_Origin,Outcome
     Inbound,Won
     Inbound,Lost
     Outbound,Won
+isPremium: true
 ---
 
 # Agent Configuration: The Revenue Insights Agent
@@ -4215,21 +4339,22 @@ URL: https://realaiexamples.com/skills/industry-classification-fixer
 Description: Map messy 'Industry' strings to a standard list.
 
 ---
-id: "industry-classification-fixer"
-category: "Sales Ops"
-title: "Industry Taxonomy Enforcer"
-tagline: "Map messy 'Industry' strings to a standard list."
-difficulty: "Beginner"
-time: "Weekly"
-archetype: "Processor"
-description: "Standardizes raw industry fields into a clean list of 10 parent categories."
+id: industry-classification-fixer
+category: Sales Ops
+title: Industry Taxonomy Enforcer
+tagline: Map messy 'Industry' strings to a standard list.
+difficulty: Beginner
+time: Weekly
+archetype: Processor
+description: Standardizes raw industry fields into a clean list of 10 parent categories.
 sampleData:
-  filename: "accounts.csv"
+  filename: accounts.csv
   content: |
     Account,Raw_Industry
     Acme,Software as a Service
     Beta,Manufacturing & Logistics
     Gamma,SaaS
+isPremium: true
 ---
 
 # Agent Configuration: The Data Steward Agent
@@ -4266,21 +4391,24 @@ URL: https://realaiexamples.com/skills/last-activity-date-auditor
 Description: Sync 'Last Activity' from contacts up to the account level.
 
 ---
-id: "last-activity-date-auditor"
-category: "Sales Ops"
-title: "Account Activity Sync"
-tagline: "Sync 'Last Activity' from contacts up to the account level."
-difficulty: "Intermediate"
-time: "Daily"
-archetype: "Processor"
-description: "Rolls up the latest activity date from various contacts to update the 'Master Last Touched' field at the Account level."
+id: last-activity-date-auditor
+category: Sales Ops
+title: Account Activity Sync
+tagline: Sync 'Last Activity' from contacts up to the account level.
+difficulty: Intermediate
+time: Daily
+archetype: Processor
+description: >-
+  Rolls up the latest activity date from various contacts to update the 'Master
+  Last Touched' field at the Account level.
 sampleData:
-  filename: "activity_logs.csv"
+  filename: activity_logs.csv
   content: |
     Account,Contact,Activity_Date
     Acme Corp,John,2023-10-01
     Acme Corp,Jane,2023-10-05
     Beta Inc,Bob,2023-09-01
+isPremium: true
 ---
 
 # Agent Configuration: The RevOps Analyst Agent
@@ -4334,6 +4462,7 @@ sampleData:
     Acme,101,45
     Acme,102,30
     Beta,103,0
+isPremium: true
 ---
 # Agent Configuration: The Collections Agent
 
@@ -4427,22 +4556,25 @@ For each Lead in `new_leads.csv`:
 URL: https://realaiexamples.com/skills/lead-enrichment-auditor
 Description: Are we paying for empty data?
 
---- 
-id: "lead-enrichment-auditor"
-category: "Sales Ops"
-title: "Enrichment Match Rate Auditor"
-tagline: "Are we paying for empty data?"
-difficulty: "Intermediate"
-time: "Monthly"
-archtype: "Processor"
-description: "Analyzes your enriched lead data to see what percentage of fields (Phone, LinkedIn, Revenue) are actually being populated by your vendor."
+---
+id: lead-enrichment-auditor
+category: Sales Ops
+title: Enrichment Match Rate Auditor
+tagline: Are we paying for empty data?
+difficulty: Intermediate
+time: Monthly
+archtype: Processor
+description: >-
+  Analyzes your enriched lead data to see what percentage of fields (Phone,
+  LinkedIn, Revenue) are actually being populated by your vendor.
 sampleData:
-  filename: "enriched_leads.csv"
+  filename: enriched_leads.csv
   content: |
     Lead,Vendor_Phone,Vendor_LinkedIn,Vendor_Rev
     1,+1234,,$1M
     2,,in/jane,
     3,,,,
+isPremium: true
 ---
 
 # Agent Configuration: The Data Procurement Manager
@@ -4508,6 +4640,7 @@ sampleData:
     Stripe,https://stripe.com,Patrick,patrick@stripe.com
 
     Broken Link,https://httpstat.us/404,Test User,test@broken.com
+isPremium: true
 ---
 
 # Agent Configuration: The Lead List Cleaner
@@ -4558,21 +4691,24 @@ Start now.
 URL: https://realaiexamples.com/skills/lead-response-time-auditor
 Description: Calculate time to first touch for every lead.
 
---- 
-id: "lead-response-time-auditor"
-category: "Sales Ops"
-title: "Speed-to-Lead Auditor"
-tagline: "Calculate time to first touch for every lead."
-difficulty: "Beginner"
-time: "Daily"
-archtype: "Processor"
-description: "Measures the gap between 'Lead Created' and 'First Activity' to ensure reps are hitting 5-minute targets."
+---
+id: lead-response-time-auditor
+category: Sales Ops
+title: Speed-to-Lead Auditor
+tagline: Calculate time to first touch for every lead.
+difficulty: Beginner
+time: Daily
+archtype: Processor
+description: >-
+  Measures the gap between 'Lead Created' and 'First Activity' to ensure reps
+  are hitting 5-minute targets.
 sampleData:
-  filename: "lead_latency.csv"
+  filename: lead_latency.csv
   content: |
     Lead_ID,Created_At,First_Touch_At
     L-1,10:00,10:04
     L-2,10:00,11:30
+isPremium: true
 ---
 
 # Agent Configuration: The SDR Manager
@@ -4614,21 +4750,24 @@ sampleData
 URL: https://realaiexamples.com/skills/lead-routing-error-checker
 Description: Did the Enterprise lead go to the SMB rep?
 
---- 
-id: "lead-routing-error-checker"
-category: "Sales Ops"
-title: "Routing Rule Validator"
-tagline: "Did the Enterprise lead go to the SMB rep?"
-difficulty: "Intermediate"
-time: "Weekly"
-archtype: "Processor"
-description: "Audits lead assignments to ensure they match territory rules (e.g., Company Size > 1000 goes to Enterprise Team)."
+---
+id: lead-routing-error-checker
+category: Sales Ops
+title: Routing Rule Validator
+tagline: Did the Enterprise lead go to the SMB rep?
+difficulty: Intermediate
+time: Weekly
+archtype: Processor
+description: >-
+  Audits lead assignments to ensure they match territory rules (e.g., Company
+  Size > 1000 goes to Enterprise Team).
 sampleData:
-  filename: "assignments.csv"
+  filename: assignments.csv
   content: |
     Lead,Company_Size,Assigned_Rep,Team
     Lead A,5000,John,SMB
     Lead B,50,Jane,SMB
+isPremium: true
 ---
 
 # Agent Configuration: The Territory Manager
@@ -4688,6 +4827,7 @@ sampleData:
     Rule A: State=CA -> Rep 1
     Rule B: Industry=Tech -> Rep 2
     Test Lead: CA, Tech
+isPremium: true
 ---
 
 # Agent Configuration: The Systems Architect
@@ -4785,22 +4925,23 @@ For each row in `recent_leads.csv`:
 URL: https://realaiexamples.com/skills/lead-score-decay-model
 Description: Lower the score if they haven't visited in 30 days.
 
---- 
-id: "lead-score-decay-model"
-category: "Sales Ops"
-title: "Lead Score Decay Calc"
-tagline: "Lower the score if they haven't visited in 30 days."
-difficulty: "Advanced"
-time: "Weekly"
-archtype: "Processor"
-description: "Applies a decay factor to lead scores based on recency of engagement."
+---
+id: lead-score-decay-model
+category: Sales Ops
+title: Lead Score Decay Calc
+tagline: Lower the score if they haven't visited in 30 days.
+difficulty: Advanced
+time: Weekly
+archtype: Processor
+description: Applies a decay factor to lead scores based on recency of engagement.
 sampleData:
-  filename: "lead_scores.csv"
+  filename: lead_scores.csv
   content: |
     Lead,Current_Score,Days_Since_Last_Visit
     Alice,90,2
     Bob,85,45
     Charlie,50,10
+isPremium: true
 ---
 
 # Agent Configuration: The Scoring Modeler
@@ -4901,17 +5042,19 @@ Prioritize leads from your CRM or build a model from scratch.
 URL: https://realaiexamples.com/skills/lead-source-attribution-fixer
 Description: Fix messy 'Referral' vs 'referral' vs 'Friend' tags.
 
---- 
-id: "lead-source-attribution-fixer"
-category: "Sales Ops"
-title: "Lead Source Normalizer"
-tagline: "Fix messy 'Referral' vs 'referral' vs 'Friend' tags."
-difficulty: "Beginner"
-time: "Weekly"
-archtype: "Processor"
-description: "Standardizes messy lead source data into clean categories (e.g., maps 'fb_ads', 'facebook', 'IG' all to 'Paid Social')."
+---
+id: lead-source-attribution-fixer
+category: Sales Ops
+title: Lead Source Normalizer
+tagline: Fix messy 'Referral' vs 'referral' vs 'Friend' tags.
+difficulty: Beginner
+time: Weekly
+archtype: Processor
+description: >-
+  Standardizes messy lead source data into clean categories (e.g., maps
+  'fb_ads', 'facebook', 'IG' all to 'Paid Social').
 sampleData:
-  filename: "raw_leads.csv"
+  filename: raw_leads.csv
   content: |
     Lead_ID,Source_Raw
     101,google_cpc
@@ -4919,6 +5062,7 @@ sampleData:
     103,search
     104,fb
     105,Friend
+isPremium: true
 ---
 
 # Agent Configuration: The Data Steward
@@ -4961,25 +5105,28 @@ sampleData
 URL: https://realaiexamples.com/skills/lead-to-account-matcher
 Description: Auto-associate leads with existing accounts via domain.
 
---- 
-id: "lead-to-account-matcher"
-category: "Sales Ops"
-title: "Lead-to-Account Matcher"
-tagline: "Auto-associate leads with existing accounts via domain."
-difficulty: "Intermediate"
-time: "Daily"
-archtype: "Processor"
-description: "Fuzzy matches incoming leads to existing account records to prevent duplicate outreach and improve routing."
+---
+id: lead-to-account-matcher
+category: Sales Ops
+title: Lead-to-Account Matcher
+tagline: Auto-associate leads with existing accounts via domain.
+difficulty: Intermediate
+time: Daily
+archtype: Processor
+description: >-
+  Fuzzy matches incoming leads to existing account records to prevent duplicate
+  outreach and improve routing.
 sampleData:
-  filename: "matching_task.txt"
+  filename: matching_task.txt
   content: |
     [New Leads]
     john@acme.com
     bob@tesla.com
-    
+
     [Accounts]
     Acme Corporation, acme.com
     Tesla Inc, tesla.com
+isPremium: true
 ---
 
 # Agent Configuration: The Sales Architect
@@ -5041,6 +5188,7 @@ sampleData:
     notion.so
     figma.com
     linear.app
+isPremium: true
 ---
 
 # Agent Configuration: The LinkedIn Account Targeting Builder
@@ -5116,6 +5264,7 @@ sampleData:
     National Park.
 
     Recent Post: "Big news! TechFlow just raised our Series B."
+isPremium: true
 ---
 
 # Agent Configuration: The Non-Cringe LinkedIn Connector
@@ -5165,7 +5314,7 @@ Start now.
 URL: https://realaiexamples.com/skills/linkedin-voice-note-scripter
 Description: Scripts for those 30-second voice notes that actually convert.
 
---- 
+---
 id: linkedin-voice-note-scripter
 category: Sales Ops
 title: LinkedIn Voice DM Scripter
@@ -5174,12 +5323,14 @@ difficulty: Beginner
 time: Batch
 archetype: Processor
 description: >-
-  Reads prospect profile. Writes a 45-second script for you to record as a voice note. Personal, casual, and relevant.
+  Reads prospect profile. Writes a 45-second script for you to record as a voice
+  note. Personal, casual, and relevant.
 sampleData:
   filename: input_data.csv
   content: |
     Prospect_Name,Highlight
     John,Ran a marathon
+isPremium: true
 ---
 
 # Agent Configuration: LinkedIn Voice DM Scripter
@@ -5271,22 +5422,25 @@ For each lead in the CSV:
 URL: https://realaiexamples.com/skills/meeting-density-tracker
 Description: Audit calendar data to protect 'Selling Time'.
 
---- 
-id: "meeting-density-tracker"
-category: "Sales Ops"
-title: "Rep Focus Time Tracker"
-tagline: "Audit calendar data to protect 'Selling Time'."
-difficulty: "Intermediate"
-time: "Weekly"
-archtype: "Processor"
-description: "Analyzes rep calendar data to calculate % of day spent in internal vs external meetings."
+---
+id: meeting-density-tracker
+category: Sales Ops
+title: Rep Focus Time Tracker
+tagline: Audit calendar data to protect 'Selling Time'.
+difficulty: Intermediate
+time: Weekly
+archtype: Processor
+description: >-
+  Analyzes rep calendar data to calculate % of day spent in internal vs external
+  meetings.
 sampleData:
-  filename: "calendar.csv"
+  filename: calendar.csv
   content: |
     Rep,Meeting_Type,Duration_Mins
     John,Internal,60
     John,External,30
     John,Internal,30
+isPremium: true
 ---
 
 # Agent Configuration: The Sales Enablement
@@ -5389,21 +5543,24 @@ URL: https://realaiexamples.com/skills/meeting-no-show-clusterer
 Description: Analyze if certain sources have higher ghosting rates.
 
 ---
-id: "meeting-no-show-clusterer"
-category: "Sales Ops"
-title: "No-Show Correlation Engine"
-tagline: "Analyze if certain sources have higher ghosting rates."
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Segments meeting outcome data by lead source and day of week to find predictors of demo no-shows."
+id: meeting-no-show-clusterer
+category: Sales Ops
+title: No-Show Correlation Engine
+tagline: Analyze if certain sources have higher ghosting rates.
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Segments meeting outcome data by lead source and day of week to find
+  predictors of demo no-shows.
 sampleData:
-  filename: "meeting_outcomes.csv"
+  filename: meeting_outcomes.csv
   content: |
     Lead_Source,Day,Outcome
     LinkedIn,Monday,Held
     Webinar,Monday,No Show
     Cold Outbound,Friday,No Show
+isPremium: true
 ---
 
 # Agent Configuration: The SDR Ops Agent
@@ -5440,21 +5597,25 @@ URL: https://realaiexamples.com/skills/meeting-reschedule-rate-tracker
 Description: Quantify the cost of flakes and enforce a 'Deposit' policy.
 
 ---
-id: "meeting-reschedule-rate-tracker"
-category: "Sales Ops"
-title: "The Calendar Defender"
-tagline: "Quantify the cost of flakes and enforce a 'Deposit' policy."
-difficulty: "Beginner"
-time: "Weekly"
-archetype: "Processor"
-description: "A 20% flake rate costs you 10 hours a month in wasted prep. This agent analyzes your calendar logs, calculates the 'Prep Tax', and prescribes specific policies (e.g., Double Confirmation, Deposits) to fix it."
+id: meeting-reschedule-rate-tracker
+category: Sales Ops
+title: The Calendar Defender
+tagline: Quantify the cost of flakes and enforce a 'Deposit' policy.
+difficulty: Beginner
+time: Weekly
+archetype: Processor
+description: >-
+  A 20% flake rate costs you 10 hours a month in wasted prep. This agent
+  analyzes your calendar logs, calculates the 'Prep Tax', and prescribes
+  specific policies (e.g., Double Confirmation, Deposits) to fix it.
 sampleData:
-  filename: "calendar_audit.csv"
+  filename: calendar_audit.csv
   content: |
     Prospect,Outcome,Prep_Minutes_Wasted
     Acme,Held,0
     Beta,No-Show,15
     Gamma,Rescheduled,10
+isPremium: true
 ---
 
 # Agent Configuration: The Time Guardian
@@ -5494,21 +5655,24 @@ URL: https://realaiexamples.com/skills/meeting-to-opportunity-conversion
 Description: Track % of first meetings that become deals.
 
 ---
-id: "meeting-to-opportunity-conversion"
-category: "Sales Ops"
-title: "Meeting-to-Opp Converter"
-tagline: "Track % of first meetings that become deals."
-difficulty: "Beginner"
-time: "Monthly"
-archetype: "Processor"
-description: "Calculates the conversion rate between 'First Meeting' activity and 'Opportunity Created' status."
+id: meeting-to-opportunity-conversion
+category: Sales Ops
+title: Meeting-to-Opp Converter
+tagline: Track % of first meetings that become deals.
+difficulty: Beginner
+time: Monthly
+archetype: Processor
+description: >-
+  Calculates the conversion rate between 'First Meeting' activity and
+  'Opportunity Created' status.
 sampleData:
-  filename: "meetings_to_opps.csv"
+  filename: meetings_to_opps.csv
   content: |
     Lead_ID,Meeting_Held,Opp_Created
     L-1,Yes,Yes
     L-2,Yes,No
     L-3,No,No
+isPremium: true
 ---
 
 # Agent Configuration: The Lead Quality Agent
@@ -5545,20 +5709,23 @@ URL: https://realaiexamples.com/skills/mql-to-sql-velocity-auditor
 Description: Measure how fast Sales accepts Marketing leads.
 
 ---
-id: "mql-to-sql-velocity-auditor"
-category: "Sales Ops"
-title: "MQL Follow-up Velocity"
-tagline: "Measure how fast Sales accepts Marketing leads."
-difficulty: "Beginner"
-time: "Weekly"
-archetype: "Processor"
-description: "Measures the time gap between 'Lead Status = MQL' and 'Lead Status = Accepted' to identify routing or follow-up lags."
+id: mql-to-sql-velocity-auditor
+category: Sales Ops
+title: MQL Follow-up Velocity
+tagline: Measure how fast Sales accepts Marketing leads.
+difficulty: Beginner
+time: Weekly
+archetype: Processor
+description: >-
+  Measures the time gap between 'Lead Status = MQL' and 'Lead Status = Accepted'
+  to identify routing or follow-up lags.
 sampleData:
-  filename: "lead_status_history.csv"
+  filename: lead_status_history.csv
   content: |
     Lead_ID,MQL_Timestamp,Accepted_Timestamp
     L-1,2023-10-01 10:00,2023-10-01 10:30
     L-2,2023-10-01 10:00,2023-10-02 14:00
+isPremium: true
 ---
 
 # Agent Configuration: The Sales Process Agent
@@ -5595,21 +5762,24 @@ URL: https://realaiexamples.com/skills/multi-threaded-deal-validator
 Description: Flag deals that only have one active contact.
 
 ---
-id: "multi-threaded-deal-validator"
-category: "Sales Ops"
-title: "Single-Thread Risk Detector"
-tagline: "Flag deals that only have one active contact."
-difficulty: "Beginner"
-time: "Weekly"
-archetype: "Processor"
-description: "Checks open opportunities to ensure they are 'multi-threaded' (having more than 1 active stakeholder)."
+id: multi-threaded-deal-validator
+category: Sales Ops
+title: Single-Thread Risk Detector
+tagline: Flag deals that only have one active contact.
+difficulty: Beginner
+time: Weekly
+archetype: Processor
+description: >-
+  Checks open opportunities to ensure they are 'multi-threaded' (having more
+  than 1 active stakeholder).
 sampleData:
-  filename: "opportunities.csv"
+  filename: opportunities.csv
   content: |
     Opportunity,Contact_Count
     Deal A,1
     Deal B,4
     Deal C,1
+isPremium: true
 ---
 
 # Agent Configuration: The Pipeline Integrity Agent
@@ -5705,21 +5875,24 @@ URL: https://realaiexamples.com/skills/objection-handling-gap-analysis
 Description: Identify objections where win rates are lowest.
 
 ---
-id: "objection-handling-gap-analysis"
-category: "Sales Ops"
-title: "Objection Gap Analyzer"
-tagline: "Identify objections where win rates are lowest."
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Analyzes deal notes and outcome codes to find which specific objections (e.g. 'Price', 'Competitor X') lead to the most losses."
+id: objection-handling-gap-analysis
+category: Sales Ops
+title: Objection Gap Analyzer
+tagline: Identify objections where win rates are lowest.
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Analyzes deal notes and outcome codes to find which specific objections (e.g.
+  'Price', 'Competitor X') lead to the most losses.
 sampleData:
-  filename: "objections.csv"
+  filename: objections.csv
   content: |
     Deal,Outcome,Primary_Objection
     Deal A,Lost,Price
     Deal B,Won,None
     Deal C,Lost,Feature Gap
+isPremium: true
 ---
 
 # Agent Configuration: The Sales Enablement Agent
@@ -5774,6 +5947,7 @@ sampleData:
     Signup,1000,1000
     Connect_Data,1000,500
     Invite_Team,500,100
+isPremium: true
 ---
 # Agent Configuration: The Product Growth Agent
 
@@ -5825,6 +5999,7 @@ sampleData:
     Opp,Opp_Owner,Acc_Owner
     O-1,John,John
     O-2,Jane,Bob
+isPremium: true
 ---
 
 # Agent Configuration: The Admin
@@ -5860,21 +6035,24 @@ URL: https://realaiexamples.com/skills/opportunity-stage-age-histogram
 Description: Visualize the distribution of deal age in each stage.
 
 ---
-id: "opportunity-stage-age-histogram"
-category: "Sales Ops"
-title: "Stage Aging Histogram"
-tagline: "Visualize the distribution of deal age in each stage."
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Aggregates open deals by stage and age to create a distribution report of pipeline freshness."
+id: opportunity-stage-age-histogram
+category: Sales Ops
+title: Stage Aging Histogram
+tagline: Visualize the distribution of deal age in each stage.
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Aggregates open deals by stage and age to create a distribution report of
+  pipeline freshness.
 sampleData:
-  filename: "stage_age.csv"
+  filename: stage_age.csv
   content: |
     Deal,Stage,Days_In_Stage
     Deal A,Discovery,5
     Deal B,Discovery,40
     Deal C,Demo,10
+isPremium: true
 ---
 
 # Agent Configuration: The Pipeline Hygiene Agent
@@ -5911,20 +6089,23 @@ URL: https://realaiexamples.com/skills/orphaned-contact-rehomer
 Description: Assign contacts to account owners via domain.
 
 ---
-id: "orphaned-contact-rehomer"
-category: "Sales Ops"
-title: "Orphaned Contact Re-Homer"
-tagline: "Assign contacts to account owners via domain."
-difficulty: "Intermediate"
-time: "Daily"
-archetype: "Processor"
-description: "Identifies contacts not associated with an account and finds their correct home based on email domain matching."
+id: orphaned-contact-rehomer
+category: Sales Ops
+title: Orphaned Contact Re-Homer
+tagline: Assign contacts to account owners via domain.
+difficulty: Intermediate
+time: Daily
+archetype: Processor
+description: >-
+  Identifies contacts not associated with an account and finds their correct
+  home based on email domain matching.
 sampleData:
-  filename: "orphans.csv"
+  filename: orphans.csv
   content: |
     Email,Account_Name
     john@tesla.com,NULL
     jane@spacex.com,NULL
+isPremium: true
 ---
 
 # Agent Configuration: The CRM Architect Agent
@@ -5961,20 +6142,23 @@ URL: https://realaiexamples.com/skills/outreach-cadence-optimizer
 Description: Find the best day to send emails.
 
 ---
-id: "outreach-cadence-optimizer"
-category: "Sales Ops"
-title: "Outreach Cadence Tuner"
-tagline: "Find the best day to send emails."
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Analyzes email response rates by 'Day of Week' and 'Time of Day' to optimize sequence scheduling."
+id: outreach-cadence-optimizer
+category: Sales Ops
+title: Outreach Cadence Tuner
+tagline: Find the best day to send emails.
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Analyzes email response rates by 'Day of Week' and 'Time of Day' to optimize
+  sequence scheduling.
 sampleData:
-  filename: "outreach_logs.csv"
+  filename: outreach_logs.csv
   content: |
     Day,Time_Block,Sent,Replies
     Mon,AM,100,2
     Tue,PM,100,8
+isPremium: true
 ---
 
 # Agent Configuration: The SDR Manager
@@ -6010,7 +6194,7 @@ Optimize sales outreach timing.
 URL: https://realaiexamples.com/skills/partner-account-overlap-mapper
 Description: Find which accounts you and a partner both target.
 
---- 
+---
 id: partner-account-overlap-mapper
 category: Sales Ops
 title: Partner Account Overlap Mapper
@@ -6019,12 +6203,14 @@ difficulty: Intermediate
 time: Batch
 archetype: Processor
 description: >-
-  Compares your target account list with a partner's shared list (hashed). Identifies overlaps for Co-Selling opportunities.
+  Compares your target account list with a partner's shared list (hashed).
+  Identifies overlaps for Co-Selling opportunities.
 sampleData:
   filename: input_data.csv
   content: |
     Account_Domain,Partner_Status
     acme.com,Customer
+isPremium: true
 ---
 
 # Agent Configuration: Partner Account Overlap Mapper
@@ -6059,21 +6245,24 @@ URL: https://realaiexamples.com/skills/phone-number-formatter-e164
 Description: Standardize all numbers to E.164 format.
 
 ---
-id: "phone-number-formatter-e164"
-category: "Sales Ops"
-title: "Global Phone Formatter"
-tagline: "Standardize all numbers to E.164 format."
-difficulty: "Beginner"
-time: "Batch"
-archetype: "Processor"
-description: "Cleans and formats phone numbers to the global E.164 standard (+1555...) for dialer compatibility."
+id: phone-number-formatter-e164
+category: Sales Ops
+title: Global Phone Formatter
+tagline: Standardize all numbers to E.164 format.
+difficulty: Beginner
+time: Batch
+archetype: Processor
+description: >-
+  Cleans and formats phone numbers to the global E.164 standard (+1555...) for
+  dialer compatibility.
 sampleData:
-  filename: "raw_phones.csv"
+  filename: raw_phones.csv
   content: |
     Contact,Phone
     John,(555) 123-4567
     Jane,555.123.4567
     Bob,1-555-123-4567
+isPremium: true
 ---
 
 # Agent Configuration: The Systems Integration Agent
@@ -6109,21 +6298,24 @@ Format phone numbers for automated dialers.
 URL: https://realaiexamples.com/skills/pipeline-coverage-ratio-monitor
 Description: Do you have 3x your quota in pipeline?
 
---- 
-id: "pipeline-coverage-ratio-monitor"
-category: "Sales Ops"
-title: "Pipeline Coverage Monitor"
-tagline: "Do you have 3x your quota in pipeline?"
-difficulty: "Beginner"
-time: "Weekly"
-archtype: "Processor"
-description: "Calculates the coverage ratio (Pipeline / Remaining Quota) per rep to identify hiring or coaching needs."
+---
+id: pipeline-coverage-ratio-monitor
+category: Sales Ops
+title: Pipeline Coverage Monitor
+tagline: Do you have 3x your quota in pipeline?
+difficulty: Beginner
+time: Weekly
+archtype: Processor
+description: >-
+  Calculates the coverage ratio (Pipeline / Remaining Quota) per rep to identify
+  hiring or coaching needs.
 sampleData:
-  filename: "coverage_data.csv"
+  filename: coverage_data.csv
   content: |
     Rep,Current_Pipeline,Remaining_Quota
     John,300000,100000
     Jane,50000,100000
+isPremium: true
 ---
 
 # Agent Configuration: The Sales Ops
@@ -6225,21 +6417,24 @@ URL: https://realaiexamples.com/skills/pipeline-push-counter
 Description: Count how many times a deal has slipped quarters.
 
 ---
-id: "pipeline-push-counter"
-category: "Sales Ops"
-title: "Deal Push Frequency Tracker"
-tagline: "Count how many times a deal has slipped quarters."
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Analyzes historical field changes to count how many times each deal's 'Close Date' was moved."
+id: pipeline-push-counter
+category: Sales Ops
+title: Deal Push Frequency Tracker
+tagline: Count how many times a deal has slipped quarters.
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Analyzes historical field changes to count how many times each deal's 'Close
+  Date' was moved.
 sampleData:
-  filename: "push_history.csv"
+  filename: push_history.csv
   content: |
     Deal,Field,Old_Value,New_Value
     Deal 1,Close_Date,2023-09-01,2023-12-01
     Deal 1,Close_Date,2023-12-01,2024-03-01
     Deal 2,Amount,100,200
+isPremium: true
 ---
 
 # Agent Configuration: The Pipeline Integrity Agent
@@ -6276,23 +6471,26 @@ Identify 'slippery' deals with unstable close dates.
 URL: https://realaiexamples.com/skills/pipeline-stage-duration-audit
 Description: Pinpoint exactly where deals are getting stuck.
 
---- 
-id: "pipeline-stage-duration-audit"
-category: "Sales Ops"
-title: "Pipeline Bottleneck Finder"
-tagline: "Pinpoint exactly where deals are getting stuck."
-difficulty: "Intermediate"
-time: "15 mins"
-archtype: "Processor"
-description: "Calculates the average days deals spend in each stage of your funnel to identify process bottlenecks."
+---
+id: pipeline-stage-duration-audit
+category: Sales Ops
+title: Pipeline Bottleneck Finder
+tagline: Pinpoint exactly where deals are getting stuck.
+difficulty: Intermediate
+time: 15 mins
+archtype: Processor
+description: >-
+  Calculates the average days deals spend in each stage of your funnel to
+  identify process bottlenecks.
 sampleData:
-  filename: "stage_history.csv"
+  filename: stage_history.csv
   content: |
     Deal_Name,Stage,Date_Entered,Date_Exited
     Acme Corp,Discovery,2023-01-01,2023-01-05
     Acme Corp,Demo,2023-01-05,2023-01-20
     Acme Corp,Negotiation,2023-01-20,2023-02-15
     Beta Ltd,Discovery,2023-02-01,2023-02-02
+isPremium: true
 ---
 
 # Agent Configuration: The RevOps Analyst
@@ -6337,20 +6535,23 @@ URL: https://realaiexamples.com/skills/pipeline-stagnation-by-product
 Description: Does Product A stall deals?
 
 ---
-id: "pipeline-stagnation-by-product"
-category: "Sales Ops"
-title: "Product Stagnation Analyzer"
-tagline: "Does Product A stall deals?"
-difficulty: "Advanced"
-time: "Monthly"
-archetype: "Processor"
-description: "Correlates 'Days in Stage' with the 'Product Line' attached to the deal to see if complex products slow down cycles."
+id: pipeline-stagnation-by-product
+category: Sales Ops
+title: Product Stagnation Analyzer
+tagline: Does Product A stall deals?
+difficulty: Advanced
+time: Monthly
+archetype: Processor
+description: >-
+  Correlates 'Days in Stage' with the 'Product Line' attached to the deal to see
+  if complex products slow down cycles.
 sampleData:
-  filename: "deal_products.csv"
+  filename: deal_products.csv
   content: |
     Deal,Product,Days_To_Close
     1,Basic,30
     2,Enterprise,90
+isPremium: true
 ---
 
 # Agent Configuration: The Product Sales Lead
@@ -6387,20 +6588,23 @@ URL: https://realaiexamples.com/skills/pipeline-velocity-accelerator
 Description: Wake up deals moving slower than average.
 
 ---
-id: "pipeline-velocity-accelerator"
-category: "Sales Ops"
-title: "Slow Deal Accelerator"
-tagline: "Wake up deals moving slower than average."
-difficulty: "Intermediate"
-time: "Weekly"
-archetype: "Processor"
-description: "Identifies deals that are currently moving slower than the historical average for their stage and flags them for action."
+id: pipeline-velocity-accelerator
+category: Sales Ops
+title: Slow Deal Accelerator
+tagline: Wake up deals moving slower than average.
+difficulty: Intermediate
+time: Weekly
+archetype: Processor
+description: >-
+  Identifies deals that are currently moving slower than the historical average
+  for their stage and flags them for action.
 sampleData:
-  filename: "deal_velocity.csv"
+  filename: deal_velocity.csv
   content: |
     Deal,Stage,Days_Current,Avg_Days_Allowed
     1,Demo,15,10
     2,Demo,5,10
+isPremium: true
 ---
 
 # Agent Configuration: The Sales Manager
@@ -6558,20 +6762,23 @@ URL: https://realaiexamples.com/skills/price-variance-auditor
 Description: Identify deals sold below standard list price.
 
 ---
-id: "price-variance-auditor"
-category: "Sales Ops"
-title: "Price Integrity Auditor"
-tagline: "Identify deals sold below standard list price."
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Compares actual 'Sold Price' against the 'Standard List Price' to find excessive discounting."
+id: price-variance-auditor
+category: Sales Ops
+title: Price Integrity Auditor
+tagline: Identify deals sold below standard list price.
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Compares actual 'Sold Price' against the 'Standard List Price' to find
+  excessive discounting.
 sampleData:
-  filename: "pricing_audit.csv"
+  filename: pricing_audit.csv
   content: |
     Deal,List_Price,Sold_Price
     Deal 1,1000,900
     Deal 2,1000,500
+isPremium: true
 ---
 
 # Agent Configuration: The Margin Protection Agent
@@ -6675,13 +6882,15 @@ difficulty: Beginner
 time: Real-time
 archtype: Processor
 description: >-
-  Pastes in the prospect's last 3 emails. Detects if they are "Direct/Brief", "Chatty/Warm", or "Formal". Rewrites your draft to match their vibe.
+  Pastes in the prospect's last 3 emails. Detects if they are "Direct/Brief",
+  "Chatty/Warm", or "Formal". Rewrites your draft to match their vibe.
 sampleData:
   filename: input_data.csv
   content: |
     Prospect_Name,Email_Sample
     CTO_John,"Need pricing. Now."
     Marketer_Mary,"Hey! Loved the demo..."
+isPremium: true
 ---
 
 # Agent Configuration: Sales Email Tone Mirror
@@ -6782,21 +6991,24 @@ URL: https://realaiexamples.com/skills/quota-attainment-bell-curve
 Description: Visualize team performance distribution.
 
 ---
-id: "quota-attainment-bell-curve"
-category: "Sales Ops"
-title: "Sales Performance Distro"
-tagline: "Visualize team performance distribution."
-difficulty: "Beginner"
-time: "Quarterly"
-archetype: "Processor"
-description: "Ranks the sales team by attainment and segments them into Top, Mid, and Bottom percentiles."
+id: quota-attainment-bell-curve
+category: Sales Ops
+title: Sales Performance Distro
+tagline: Visualize team performance distribution.
+difficulty: Beginner
+time: Quarterly
+archetype: Processor
+description: >-
+  Ranks the sales team by attainment and segments them into Top, Mid, and Bottom
+  percentiles.
 sampleData:
-  filename: "attainment.csv"
+  filename: attainment.csv
   content: |
     Rep,Percent_of_Quota
     John,120
     Jane,95
     Bob,40
+isPremium: true
 ---
 
 # Agent Configuration: The Sales Leadership Agent
@@ -6910,6 +7122,7 @@ sampleData:
     Quote_ID,SKU_List
     Q-1,'STARTER';'ENT_ADDON'
     Q-2,'PRO';'PRO_ADDON'
+isPremium: true
 ---
 
 # Agent Configuration: The Deal Desk
@@ -6968,6 +7181,7 @@ sampleData:
     Deal,Signed_Date,Paid_Date
     1,2023-01-01,2023-01-15
     2,2023-01-01,2023-03-01
+isPremium: true
 ---
 # Agent Configuration: The Finance Ops
 
@@ -7011,15 +7225,16 @@ difficulty: Intermediate
 time: Weekly
 archetype: Processor
 description: >-
-  Time kills all deals. This agent scans your open quotes, calculates exactly how
-  long they have been sitting with the prospect, and drafts a context-aware nudge
-  email (Gentle vs. Urgent) based on the delay.
+  Time kills all deals. This agent scans your open quotes, calculates exactly
+  how long they have been sitting with the prospect, and drafts a context-aware
+  nudge email (Gentle vs. Urgent) based on the delay.
 sampleData:
   filename: open_quotes.csv
   content: |
     Quote_ID,Customer_Email,Sent_Date,Stage
     Q101,dave@acme.com,2024-01-20,Signature
     Q102,sara@beta.com,2024-01-10,Legal Review
+isPremium: true
 ---
 # Agent Configuration: The Deal Desk Agent
 
@@ -7061,20 +7276,23 @@ URL: https://realaiexamples.com/skills/ramp-time-variance-analyst
 Description: Are Q1 hires faster than Q3 hires?
 
 ---
-id: "ramp-time-variance-analyst"
-category: "Sales Ops"
-title: "Ramp Time Cohort Analyst"
-tagline: "Are Q1 hires faster than Q3 hires?"
-difficulty: "Intermediate"
-time: "Quarterly"
-archetype: "Processor"
-description: "Compares the 'Time to Productivity' of sales rep cohorts to evaluate onboarding program changes."
+id: ramp-time-variance-analyst
+category: Sales Ops
+title: Ramp Time Cohort Analyst
+tagline: Are Q1 hires faster than Q3 hires?
+difficulty: Intermediate
+time: Quarterly
+archetype: Processor
+description: >-
+  Compares the 'Time to Productivity' of sales rep cohorts to evaluate
+  onboarding program changes.
 sampleData:
-  filename: "ramp_cohorts.csv"
+  filename: ramp_cohorts.csv
   content: |
     Cohort,Avg_Days_To_Quota
     Q1_Hires,90
     Q2_Hires,120
+isPremium: true
 ---
 
 # Agent Configuration: The Sales Trainer
@@ -7110,22 +7328,25 @@ Evaluate impact of onboarding changes.
 URL: https://realaiexamples.com/skills/reference-customer-rotator
 Description: Prevent reference burnout by rotating happy customers.
 
---- 
-id: "reference-customer-rotator"
-category: "Sales Ops"
-title: "Sales Reference Rotator"
-tagline: "Prevent reference burnout by rotating happy customers."
-difficulty: "Beginner"
-time: "Monthly"
-archtype: "Processor"
-description: "Tracks how many times a customer has been used as a reference to ensure even distribution of requests."
+---
+id: reference-customer-rotator
+category: Sales Ops
+title: Sales Reference Rotator
+tagline: Prevent reference burnout by rotating happy customers.
+difficulty: Beginner
+time: Monthly
+archtype: Processor
+description: >-
+  Tracks how many times a customer has been used as a reference to ensure even
+  distribution of requests.
 sampleData:
-  filename: "reference_usage.csv"
+  filename: reference_usage.csv
   content: |
     Customer,Times_Used,Last_Used
     Acme,5,2023-10-01
     Beta,1,2023-09-01
     Gamma,0,None
+isPremium: true
 ---
 
 # Agent Configuration: The Customer Reference Manager
@@ -7185,6 +7406,7 @@ sampleData:
     Target: Bob (CMO at BigCorp)
     Relationship: Alice and Bob worked together at Google.
     My Ask: Intro to pitch our analytics tool.
+isPremium: true
 ---
 
 # Agent Configuration: The Referral Request Writer
@@ -7246,6 +7468,7 @@ sampleData:
     Account,Current_Price
     Acme,10000
     Beta,5000
+isPremium: true
 ---
 
 # Agent Configuration: The Expansion Revenue Architect
@@ -7307,6 +7530,7 @@ sampleData:
     [Last Email Response]
     Acme, 2023-10-01
     Beta, 2023-01-01
+isPremium: true
 ---
 
 # Agent Configuration: The Churn Prevention Agent
@@ -7360,6 +7584,7 @@ sampleData:
     user@acme.com, 2023-10-01
     [Active Contracts]
     beta.com, gamma.io
+isPremium: true
 ---
 
 # Agent Configuration: The Billing Integrity Manager
@@ -7476,6 +7701,7 @@ sampleData:
     Account,Licenses,Active_Users
     Acme,100,5
     Beta,10,9
+isPremium: true
 ---
 
 # Agent Configuration: The Churn Predictor
@@ -7511,20 +7737,23 @@ URL: https://realaiexamples.com/skills/sales-activity-efficiency-ratio
 Description: Calculate 'Activities required per Closed Deal'.
 
 ---
-id: "sales-activity-efficiency-ratio"
-category: "Sales Ops"
-title: "Activity-to-Revenue Efficiency"
-tagline: "Calculate 'Activities required per Closed Deal'."
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Calculates how many calls, emails, and meetings it takes for each rep to close a single deal."
+id: sales-activity-efficiency-ratio
+category: Sales Ops
+title: Activity-to-Revenue Efficiency
+tagline: Calculate 'Activities required per Closed Deal'.
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Calculates how many calls, emails, and meetings it takes for each rep to close
+  a single deal.
 sampleData:
-  filename: "efficiency_data.csv"
+  filename: efficiency_data.csv
   content: |
     Rep,Total_Activities,Deals_Closed
     John,1000,5
     Jane,500,5
+isPremium: true
 ---
 
 # Agent Configuration: The Efficiency Auditor
@@ -7560,17 +7789,19 @@ Find the most efficient reps, not just the loudest.
 URL: https://realaiexamples.com/skills/sales-activity-quota-tracker
 Description: Automated daily standup report for sales activity.
 
---- 
-id: "sales-activity-quota-tracker"
-category: "Sales Ops"
-title: "Rep Activity Scorecard"
-tagline: "Automated daily standup report for sales activity."
-difficulty: "Beginner"
-time: "Daily"
-archtype: "Processor"
-description: "Aggregates a log of calls, emails, and meetings to see which reps are hitting their activity KPIs."
+---
+id: sales-activity-quota-tracker
+category: Sales Ops
+title: Rep Activity Scorecard
+tagline: Automated daily standup report for sales activity.
+difficulty: Beginner
+time: Daily
+archtype: Processor
+description: >-
+  Aggregates a log of calls, emails, and meetings to see which reps are hitting
+  their activity KPIs.
 sampleData:
-  filename: "activity_log.csv"
+  filename: activity_log.csv
   content: |
     Rep_Name,Activity_Type,Date
     John,Call,2023-10-01
@@ -7578,6 +7809,7 @@ sampleData:
     Jane,Meeting,2023-10-01
     Jane,Call,2023-10-01
     Jane,Call,2023-10-01
+isPremium: true
 ---
 
 # Agent Configuration: The Sales Manager
@@ -7639,6 +7871,7 @@ sampleData:
     Vanta,https://vanta.com,Compliance Automation
     Drata,https://drata.com,Security Compliance
     Sprinto,https://sprinto.com,Compliance Software
+isPremium: true
 ---
 
 # Agent Configuration: The Sales Battlecard Builder
@@ -7709,6 +7942,7 @@ sampleData:
   content: |
     Rep: Hi, are you compliant with SOC2? Prospect: Yes.
     Rep: Great, let's move to pricing.
+isPremium: true
 ---
 
 # Agent Configuration: The QA Specialist
@@ -7760,13 +7994,15 @@ difficulty: Intermediate
 time: Batch
 archtype: Processor
 description: >-
-  Parses 50+ Zoom transcripts. key-value pairs the "Objection" vs "Minute Mark". visualizes if you are losing people at Pricing (min 20) or Intro (min 2).
+  Parses 50+ Zoom transcripts. key-value pairs the "Objection" vs "Minute Mark".
+  visualizes if you are losing people at Pricing (min 20) or Intro (min 2).
 sampleData:
   filename: input_data.csv
   content: |
     Call_ID,Transcript_Text
     Call_A,"...too expensive..."
     Call_B,"...feature missing..."
+isPremium: true
 ---
 
 # Agent Configuration: Sales Call Objection Heatmapper
@@ -7859,20 +8095,21 @@ URL: https://realaiexamples.com/skills/sales-call-talk-ratio-auditor
 Description: Stop showing up and throwing up.
 
 ---
-id: "sales-call-talk-ratio-auditor"
-category: "Sales Ops"
-title: "Talk/Listen Ratio Auditor"
-tagline: "Stop showing up and throwing up."
-difficulty: "Intermediate"
-time: "Weekly"
-archetype: "Processor"
-description: "Analyzes call metrics to flag calls where the rep spoke > 60% of the time."
+id: sales-call-talk-ratio-auditor
+category: Sales Ops
+title: Talk/Listen Ratio Auditor
+tagline: Stop showing up and throwing up.
+difficulty: Intermediate
+time: Weekly
+archetype: Processor
+description: Analyzes call metrics to flag calls where the rep spoke > 60% of the time.
 sampleData:
-  filename: "call_metrics.csv"
+  filename: call_metrics.csv
   content: |
     Rep,Call_ID,Talk_Ratio
     John,101,65%
     Jane,102,40%
+isPremium: true
 ---
 
 # Agent Configuration: The Conversation Intelligence Coach
@@ -7931,6 +8168,7 @@ sampleData:
     Sales Rep: Who else needs to sign off?
 
     Prospect: Just me and the CTO. We want to be live by October.
+isPremium: true
 ---
 
 # Agent Configuration: The BANT Transcript Analyzer
@@ -7977,22 +8215,25 @@ Start now.
 URL: https://realaiexamples.com/skills/sales-cycle-outlier-detector
 Description: Flag deals moving suspiciously fast or slow.
 
---- 
-id: "sales-cycle-outlier-detector"
-category: "Sales Ops"
-title: "Sales Cycle Anomaly Hunter"
-tagline: "Flag deals moving suspiciously fast or slow."
-difficulty: "Intermediate"
-time: "Weekly"
-archtype: "Processor"
-description: "Identifies deals whose age significantly deviates from the historical average cycle time."
+---
+id: sales-cycle-outlier-detector
+category: Sales Ops
+title: Sales Cycle Anomaly Hunter
+tagline: Flag deals moving suspiciously fast or slow.
+difficulty: Intermediate
+time: Weekly
+archtype: Processor
+description: >-
+  Identifies deals whose age significantly deviates from the historical average
+  cycle time.
 sampleData:
-  filename: "deal_age.csv"
+  filename: deal_age.csv
   content: |
     Deal,Age_Days,Avg_Cycle_Days
     Deal A,5,45
     Deal B,120,45
     Deal C,40,45
+isPremium: true
 ---
 
 # Agent Configuration: The Forecast Manager
@@ -8052,6 +8293,7 @@ sampleData:
     Title: CTO
     Industry: Fintech
     Company Size: 500 employees
+isPremium: true
 ---
 
 # Agent Configuration: The Discovery Call Scripter
@@ -8115,6 +8357,7 @@ sampleData:
     Hi [Name],
     We help companies save money. Want a demo?
     Best, Me.
+isPremium: true
 ---
 
 # Agent Configuration: The A/B Test Architect
@@ -8179,6 +8422,7 @@ sampleData:
     Prospect: John at Acme
     Last Interaction: Demo on Tuesday.
     Stalled: No reply to proposal sent Wednesday.
+isPremium: true
 ---
 
 # Agent Configuration: The Ghost-Busting Follow-Up
@@ -8224,21 +8468,24 @@ URL: https://realaiexamples.com/skills/sales-forecast-scenario-modeler
 Description: Calculate 'Best Case' vs 'Commit' pipelines.
 
 ---
-id: "sales-forecast-scenario-modeler"
-category: "Sales Ops"
-title: "Forecast Scenario Modeler"
-tagline: "Calculate 'Best Case' vs 'Commit' pipelines."
-difficulty: "Advanced"
-time: "Weekly"
-archetype: "Processor"
-description: "Simulates three revenue scenarios (Conservative, Realistic, Aggressive) based on adjusted win rates."
+id: sales-forecast-scenario-modeler
+category: Sales Ops
+title: Forecast Scenario Modeler
+tagline: Calculate 'Best Case' vs 'Commit' pipelines.
+difficulty: Advanced
+time: Weekly
+archetype: Processor
+description: >-
+  Simulates three revenue scenarios (Conservative, Realistic, Aggressive) based
+  on adjusted win rates.
 sampleData:
-  filename: "pipeline_totals.csv"
+  filename: pipeline_totals.csv
   content: |
     Stage,Total_Amt
     Discovery,500000
     Proposal,200000
     Negotiation,100000
+isPremium: true
 ---
 
 # Agent Configuration: The RevOps Modeler
@@ -8292,6 +8539,7 @@ sampleData:
     Lead to Meeting,1000,50,5%
     Meeting to Opp,50,40,80%
     Opp to Close,40,10,25%
+isPremium: true
 ---
 
 # Agent Configuration: The Pipeline Leak Detector
@@ -8357,6 +8605,7 @@ sampleData:
     Deal Size: $50k
     Objection: "We love it, but CFO says budget is frozen until Q1."
     Leverage: They have a compliance audit next month that we solve.
+isPremium: true
 ---
 
 # Agent Configuration: The Closer's Script
@@ -8422,6 +8671,7 @@ sampleData:
     Salesforce,CRM
     HubSpot,Marketing Automation
     Pipedrive,SMB CRM
+isPremium: true
 ---
 
 # Agent Configuration: The Competitor Battlecard Builder
@@ -8474,18 +8724,22 @@ Description: Don't just calculate one path. Compare 'High Volume' vs 'High Skill
 id: sales-quota-calculator
 category: Sales Ops
 title: Quota Scenario Planner
-tagline: Don't just calculate one path. Compare 'High Volume' vs 'High Skill' strategies.
+tagline: >-
+  Don't just calculate one path. Compare 'High Volume' vs 'High Skill'
+  strategies.
 difficulty: Intermediate
 time: 5 mins
 archetype: Processor
 description: >-
-  Most calculators just tell you to "make more calls." This agent models three distinct paths to hitting your number: 
-  The Grinder (Volume), The Sniper (Conversion), and The Balanced approach.
+  Most calculators just tell you to "make more calls." This agent models three
+  distinct paths to hitting your number:  The Grinder (Volume), The Sniper
+  (Conversion), and The Balanced approach.
 sampleData:
   filename: my_stats.csv
   content: |
     Quota,Average_Deal_Size,Close_Rate,Meeting_Book_Rate,Current_Daily_Dials
     50000,10000,0.20,0.05,40
+isPremium: true
 ---
 
 # Agent Configuration: The Sales Director
@@ -8538,20 +8792,23 @@ URL: https://realaiexamples.com/skills/sales-rep-ramp-velocity
 Description: Measure 'Time to First Deal' for new hires.
 
 ---
-id: "sales-rep-ramp-velocity"
-category: "Sales Ops"
-title: "New Rep Ramp Tracker"
-tagline: "Measure 'Time to First Deal' for new hires."
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Tracks the number of days from 'Start Date' to 'First Deal Closed' for new sales reps."
+id: sales-rep-ramp-velocity
+category: Sales Ops
+title: New Rep Ramp Tracker
+tagline: Measure 'Time to First Deal' for new hires.
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Tracks the number of days from 'Start Date' to 'First Deal Closed' for new
+  sales reps.
 sampleData:
-  filename: "ramp_data.csv"
+  filename: ramp_data.csv
   content: |
     Rep,Start_Date,First_Deal_Date
     John,2023-01-01,2023-03-15
     Jane,2023-01-01,2023-02-10
+isPremium: true
 ---
 
 # Agent Configuration: The Enablement Auditor Agent
@@ -8646,22 +8903,25 @@ For each scenario in the CSV:
 URL: https://realaiexamples.com/skills/sales-territory-balancer
 Description: Ensure every rep has equal revenue potential.
 
---- 
-id: "sales-territory-balancer"
-category: "Sales Ops"
-title: "Territory Fairness Balancer"
-tagline: "Ensure every rep has equal revenue potential."
-difficulty: "Advanced"
-time: "Quarterly"
-archtype: "Processor"
-description: "Analyzes a list of accounts and their estimated revenue to balance territories so no rep is starved or overwhelmed."
+---
+id: sales-territory-balancer
+category: Sales Ops
+title: Territory Fairness Balancer
+tagline: Ensure every rep has equal revenue potential.
+difficulty: Advanced
+time: Quarterly
+archtype: Processor
+description: >-
+  Analyzes a list of accounts and their estimated revenue to balance territories
+  so no rep is starved or overwhelmed.
 sampleData:
-  filename: "territories.csv"
+  filename: territories.csv
   content: |
     Account,State,Est_Revenue,Current_Rep
     Acme,CA,100000,Rep A
     Beta,NY,500000,Rep B
     Gamma,CA,50000,Rep A
+isPremium: true
 ---
 
 # Agent Configuration: The Territory Planner
@@ -8761,23 +9021,26 @@ Group zip codes into balanced territories (East/West or Named Reps).
 URL: https://realaiexamples.com/skills/sales-velocity-trend-monitor
 Description: Is your sales cycle getting longer or shorter?
 
---- 
-id: "sales-velocity-trend-monitor"
-category: "Sales Ops"
-title: "Pipeline Velocity Trend"
-tagline: "Is your sales cycle getting longer or shorter?"
-difficulty: "Intermediate"
-time: "Monthly"
-archtype: "Processor"
-description: "Compares average sales cycle time this month vs the trailing 6-month average to spot trends."
+---
+id: sales-velocity-trend-monitor
+category: Sales Ops
+title: Pipeline Velocity Trend
+tagline: Is your sales cycle getting longer or shorter?
+difficulty: Intermediate
+time: Monthly
+archtype: Processor
+description: >-
+  Compares average sales cycle time this month vs the trailing 6-month average
+  to spot trends.
 sampleData:
-  filename: "velocity_trends.csv"
+  filename: velocity_trends.csv
   content: |
     Month,Avg_Cycle_Days
     May,45
     June,46
     July,52
     August,55
+isPremium: true
 ---
 
 # Agent Configuration: The Sales Analyst
@@ -8828,15 +9091,17 @@ difficulty: Beginner
 time: Monthly
 archetype: Processor
 description: >-
-  Setting generic "50 dials a day" goals burns out SDRs. This agent reverse-engineers
-  a personalized activity plan for each rep based on their unique conversion rates,
-  showing them exactly how to hit quota through Volume OR Skill.
+  Setting generic "50 dials a day" goals burns out SDRs. This agent
+  reverse-engineers a personalized activity plan for each rep based on their
+  unique conversion rates, showing them exactly how to hit quota through Volume
+  OR Skill.
 sampleData:
   filename: sdr_funnel.csv
   content: |
     Rep,Quota_Meetings,Calls_Per_Week,Connect_Rate,Booking_Rate
     Alice,10,200,0.05,0.20
     Bob,10,400,0.02,0.10
+isPremium: true
 ---
 
 # Agent Configuration: The Performance Coach
@@ -8877,20 +9142,23 @@ URL: https://realaiexamples.com/skills/sdr-activity-to-meeting-ratio
 Description: Measure calls required to book 1 meeting.
 
 ---
-id: "sdr-activity-to-meeting-ratio"
-category: "Sales Ops"
-title: "SDR Booking Efficiency"
-tagline: "Measure calls required to book 1 meeting."
-difficulty: "Beginner"
-time: "Weekly"
-archetype: "Processor"
-description: "Calculates the booking efficiency of SDRs to find the most effective outreach patterns."
+id: sdr-activity-to-meeting-ratio
+category: Sales Ops
+title: SDR Booking Efficiency
+tagline: Measure calls required to book 1 meeting.
+difficulty: Beginner
+time: Weekly
+archetype: Processor
+description: >-
+  Calculates the booking efficiency of SDRs to find the most effective outreach
+  patterns.
 sampleData:
-  filename: "sdr_stats.csv"
+  filename: sdr_stats.csv
   content: |
     Rep,Total_Calls,Meetings_Booked
     John,500,10
     Jane,200,10
+isPremium: true
 ---
 
 # Agent Configuration: The SDR Manager Agent
@@ -8926,22 +9194,25 @@ Identify outreach efficiency outliers.
 URL: https://realaiexamples.com/skills/sdr-territory-saturation-check
 Description: Are your SDRs actually touching all their Tier 1s?
 
---- 
-id: "sdr-territory-saturation-check"
-category: "Sales Ops"
-title: "Territory Saturation Auditor"
-tagline: "Are your SDRs actually touching all their Tier 1s?"
-difficulty: "Intermediate"
-time: "Weekly"
-archtype: "Processor"
-description: "Calculates the % of Tier 1 accounts in a territory that have received at least one activity in the last 30 days."
+---
+id: sdr-territory-saturation-check
+category: Sales Ops
+title: Territory Saturation Auditor
+tagline: Are your SDRs actually touching all their Tier 1s?
+difficulty: Intermediate
+time: Weekly
+archtype: Processor
+description: >-
+  Calculates the % of Tier 1 accounts in a territory that have received at least
+  one activity in the last 30 days.
 sampleData:
-  filename: "saturation.csv"
+  filename: saturation.csv
   content: |
     Account,Tier,Last_Activity
     Acme,1,2023-10-01
     Beta,1,2022-01-01
     Gamma,2,2023-10-05
+isPremium: true
 ---
 
 # Agent Configuration: The SDR Director
@@ -9001,6 +9272,7 @@ sampleData:
     Account,Seats_Owned,Seats_Used
     Acme,10,9
     Beta,100,20
+isPremium: true
 ---
 # Agent Configuration: The Account Manager
 
@@ -9125,6 +9397,7 @@ sampleData:
     Brick & Mortar Ventures,Construction Tech,Seed
 
     SaaStr Fund,B2B SaaS,Seed
+isPremium: true
 ---
 
 # Agent Configuration: The Investor Thesis Matcher
@@ -9176,21 +9449,22 @@ URL: https://realaiexamples.com/skills/state-region-standardizer
 Description: Fix 'Calif' vs 'CA' vs 'California'.
 
 ---
-id: "state-region-standardizer"
-category: "Sales Ops"
-title: "State/Region Standardizer"
-tagline: "Fix 'Calif' vs 'CA' vs 'California'."
-difficulty: "Beginner"
-time: "Weekly"
-archetype: "Processor"
-description: "Converts various state naming conventions to standard 2-letter ISO codes."
+id: state-region-standardizer
+category: Sales Ops
+title: State/Region Standardizer
+tagline: Fix 'Calif' vs 'CA' vs 'California'.
+difficulty: Beginner
+time: Weekly
+archetype: Processor
+description: Converts various state naming conventions to standard 2-letter ISO codes.
 sampleData:
-  filename: "addresses.csv"
+  filename: addresses.csv
   content: |
     Account,State
     Acme,California
     Beta,Calif
     Gamma,NY
+isPremium: true
 ---
 
 # Agent Configuration: The Data Quality Agent
@@ -9226,22 +9500,25 @@ Cleanse geographical data for territory accuracy.
 URL: https://realaiexamples.com/skills/subscription-upgrade-identifier
 Description: Find free users who hit their limits.
 
---- 
-id: "subscription-upgrade-identifier"
-category: "Sales Ops"
-title: "PQL Hunter (Product Qualified Leads)"
-tagline: "Find free users who hit their limits."
-difficulty: "Intermediate"
-time: "Daily"
-archtype: "Processor"
-description: "Filters user usage data to find accounts hitting >90% of their plan limits, signaling an upsell opportunity."
+---
+id: subscription-upgrade-identifier
+category: Sales Ops
+title: PQL Hunter (Product Qualified Leads)
+tagline: Find free users who hit their limits.
+difficulty: Intermediate
+time: Daily
+archtype: Processor
+description: >-
+  Filters user usage data to find accounts hitting >90% of their plan limits,
+  signaling an upsell opportunity.
 sampleData:
-  filename: "usage_data.csv"
+  filename: usage_data.csv
   content: |
     Account,Plan_Limit,Current_Usage
     Acme,1000,950
     Beta,1000,200
     Gamma,500,490
+isPremium: true
 ---
 
 # Agent Configuration: The Account Manager
@@ -9372,6 +9649,7 @@ sampleData:
     Dave, John, Sarah
     [Licensed Users]
     Dave, John, Sarah, Bill
+isPremium: true
 ---
 
 # Agent Configuration: The Revenue Systems Manager
@@ -9430,6 +9708,7 @@ sampleData:
     Account,Current_Owner,New_Territory
     Acme,John,West
     Beta,John,East
+isPremium: true
 ---
 
 # Agent Configuration: The Sales Ops Admin
@@ -9465,21 +9744,24 @@ URL: https://realaiexamples.com/skills/time-in-stage-stalls
 Description: Identify deals stuck in Legal or Security Review.
 
 ---
-id: "time-in-stage-stalls"
-category: "Sales Ops"
-title: "Pipeline Stage Stall Monitor"
-tagline: "Identify deals stuck in Legal or Security Review."
-difficulty: "Intermediate"
-time: "Weekly"
-archetype: "Processor"
-description: "Analyzes how long deals sit in specific 'Slow Stages' like Legal to identify process friction."
+id: time-in-stage-stalls
+category: Sales Ops
+title: Pipeline Stage Stall Monitor
+tagline: Identify deals stuck in Legal or Security Review.
+difficulty: Intermediate
+time: Weekly
+archetype: Processor
+description: >-
+  Analyzes how long deals sit in specific 'Slow Stages' like Legal to identify
+  process friction.
 sampleData:
-  filename: "stage_durations.csv"
+  filename: stage_durations.csv
   content: |
     Deal,Stage,Days_In_Stage
     Deal A,Legal,25
     Deal B,Security,5
     Deal C,Legal,2
+isPremium: true
 ---
 
 # Agent Configuration: The Process Improvement Agent
@@ -9532,6 +9814,7 @@ sampleData:
     User,Expiry_Date,Usage_Score,Company_Size
     John,2023-10-05,High,500
     Jane,2023-10-05,Low,1
+isPremium: true
 ---
 # Agent Configuration: The Inside Sales Agent
 
@@ -9583,6 +9866,7 @@ sampleData:
     Customer,Proposed_Price,Final_Price
     Acme,105,105
     Beta,105,100
+isPremium: true
 ---
 # Agent Configuration: The Pricing Manager
 
@@ -9688,20 +9972,23 @@ URL: https://realaiexamples.com/skills/vertical-penetration-analyzer
 Description: How much of the Finance market do we own?
 
 ---
-id: "vertical-penetration-analyzer"
-category: "Sales Ops"
-title: "Vertical Market Penetration"
-tagline: "How much of the Finance market do we own?"
-difficulty: "Advanced"
-time: "Quarterly"
-archetype: "Processor"
-description: "Calculates market share by comparing 'Customers' vs 'Total Addressable Market' per industry."
+id: vertical-penetration-analyzer
+category: Sales Ops
+title: Vertical Market Penetration
+tagline: How much of the Finance market do we own?
+difficulty: Advanced
+time: Quarterly
+archetype: Processor
+description: >-
+  Calculates market share by comparing 'Customers' vs 'Total Addressable Market'
+  per industry.
 sampleData:
-  filename: "market_data.csv"
+  filename: market_data.csv
   content: |
     Industry,Our_Customers,Total_Companies
     Finance,50,5000
     Retail,200,10000
+isPremium: true
 ---
 
 # Agent Configuration: The Strategy Lead
@@ -9755,6 +10042,7 @@ sampleData:
     Cohort,Users,Invites_Sent,Invites_Accepted
     Jan,1000,200,50
     Feb,1200,100,80
+isPremium: true
 ---
 
 # Agent Configuration: The Growth Engineer
@@ -9807,13 +10095,15 @@ difficulty: Intermediate
 time: Batch
 archtype: Processor
 description: >-
-  Analyzes call logs from Vapi/Bland AI. Identifies the specific script line that causes the most "Hangups" or "Confusion" and rewrites it for better flow.
+  Analyzes call logs from Vapi/Bland AI. Identifies the specific script line
+  that causes the most "Hangups" or "Confusion" and rewrites it for better flow.
 sampleData:
   filename: input_data.csv
   content: |
     Call_ID,Transcript_Snippet,Outcome
     101,"Hello I am calling from...",Hangup
     102,"I can help with...",Success
+isPremium: true
 ---
 
 # Agent Configuration: Voice Agent Script Improver
@@ -9847,7 +10137,7 @@ Fix the exact moment users hang up on your AI voice agent.
 URL: https://realaiexamples.com/skills/voicemail-ab-tester
 Description: Systematically test which voicemail gets a callback.
 
---- 
+---
 id: voicemail-ab-tester
 category: Sales Ops
 title: Cold Call Voicemail A/B Tester
@@ -9856,13 +10146,15 @@ difficulty: Intermediate
 time: Batch
 archetype: Processor
 description: >-
-  Generates 3 variant scripts for voicemails: "The Mystery", "The Value Prop", "The Referral". Tracks callback rates to declare a winner.
+  Generates 3 variant scripts for voicemails: "The Mystery", "The Value Prop",
+  "The Referral". Tracks callback rates to declare a winner.
 sampleData:
   filename: input_data.csv
   content: |
     Script_Variant,Callback_Rate
     Mystery,12%
     Value,5%
+isPremium: true
 ---
 
 # Agent Configuration: Cold Call Voicemail A/B Tester
@@ -9957,21 +10249,25 @@ URL: https://realaiexamples.com/skills/webinar-to-meeting-velocity
 Description: Don't just count attendees. Segment them by Job Title to find the VIPs.
 
 ---
-id: "webinar-to-meeting-velocity"
-category: "Sales Ops"
-title: "The Event ROI Analyst"
-tagline: "Don't just count attendees. Segment them by Job Title to find the VIPs."
-difficulty: "Intermediate"
-time: "Weekly"
-archetype: "Processor"
-description: "High attendance vanity metrics can hide low revenue impact. This agent segments your attendee list by Job Title (VIP vs. User) and tracks exactly which segment is booking meetings."
+id: webinar-to-meeting-velocity
+category: Sales Ops
+title: The Event ROI Analyst
+tagline: Don't just count attendees. Segment them by Job Title to find the VIPs.
+difficulty: Intermediate
+time: Weekly
+archetype: Processor
+description: >-
+  High attendance vanity metrics can hide low revenue impact. This agent
+  segments your attendee list by Job Title (VIP vs. User) and tracks exactly
+  which segment is booking meetings.
 sampleData:
-  filename: "event_data.csv"
+  filename: event_data.csv
   content: |
     Name,Company,Job_Title,Attended,Booked_Meeting
     John Doe,Acme,VP Sales,Yes,No
     Jane Smith,Beta,Marketing Manager,Yes,Yes
     Mike Ross,Stark Ind,Director of Ops,Yes,Yes
+isPremium: true
 ---
 
 # Agent Configuration: The Event ROI Analyst
@@ -10015,22 +10311,25 @@ For each attendee:
 URL: https://realaiexamples.com/skills/weighted-pipeline-forecaster
 Description: Predict revenue using stage-based probabilities.
 
---- 
-id: "weighted-pipeline-forecaster"
-category: "Sales Ops"
-title: "Weighted Revenue Forecaster"
-tagline: "Predict revenue using stage-based probabilities."
-difficulty: "Intermediate"
-time: "Weekly"
-archtype: "Processor"
-description: "Calculates expected revenue by multiplying deal amounts by the historical win probability of their current stage."
+---
+id: weighted-pipeline-forecaster
+category: Sales Ops
+title: Weighted Revenue Forecaster
+tagline: Predict revenue using stage-based probabilities.
+difficulty: Intermediate
+time: Weekly
+archtype: Processor
+description: >-
+  Calculates expected revenue by multiplying deal amounts by the historical win
+  probability of their current stage.
 sampleData:
-  filename: "pipeline.csv"
+  filename: pipeline.csv
   content: |
     Deal,Amount,Stage
     Deal A,10000,Discovery
     Deal B,50000,Proposal
     Deal C,20000,Negotiation
+isPremium: true
 ---
 
 # Agent Configuration: The Sales Analyst
@@ -10134,22 +10433,25 @@ For each deal in the CSV:
 URL: https://realaiexamples.com/skills/win-loss-reason-clusterer
 Description: Turn messy CRM notes into clean win/loss insights.
 
---- 
-id: "win-loss-reason-clusterer"
-category: "Sales Ops"
-title: "Win/Loss Reason Analyzer"
-tagline: "Turn messy CRM notes into clean win/loss insights."
-difficulty: "Advanced"
-time: "Monthly"
-archtype: "Processor"
-description: "Clusters qualitative CRM reason notes into standardized categories for executive reporting."
+---
+id: win-loss-reason-clusterer
+category: Sales Ops
+title: Win/Loss Reason Analyzer
+tagline: Turn messy CRM notes into clean win/loss insights.
+difficulty: Advanced
+time: Monthly
+archtype: Processor
+description: >-
+  Clusters qualitative CRM reason notes into standardized categories for
+  executive reporting.
 sampleData:
-  filename: "crm_notes.csv"
+  filename: crm_notes.csv
   content: |
     Outcome,Notes
     Lost,Pricing was way too high for them
     Lost,They went with Competitor X due to features
     Won,Liked our ease of use
+isPremium: true
 ---
 
 # Agent Configuration: The Product Marketer
@@ -10209,6 +10511,7 @@ sampleData:
     john@ge.com,Free
     sara@ge.com,Free
     bob@ge.com,Free
+isPremium: true
 ---
 # Agent Configuration: The Enterprise SDR
 
@@ -10261,6 +10564,7 @@ sampleData:
     User,Last_Login,Plan
     John,2022-01-01,Free
     Jane,2023-10-01,Free
+isPremium: true
 ---
 # Agent Configuration: The Database Cost Optimizer
 

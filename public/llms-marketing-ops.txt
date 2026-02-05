@@ -4,17 +4,19 @@
 URL: https://realaiexamples.com/skills/abm-intent-aggregator
 Description: Combine G2, 6sense, and Website visits.
 
---- 
-id: "abm-intent-aggregator"
-category: "Marketing Ops"
-title: "Intent Signal Aggregator"
-tagline: "Combine G2, 6sense, and Website visits."
-difficulty: "Advanced"
-time: "Daily"
-archtype: "Processor"
-description: "Aggregates multiple intent data sources into a single account-level 'Heat Score'."
+---
+id: abm-intent-aggregator
+category: Marketing Ops
+title: Intent Signal Aggregator
+tagline: 'Combine G2, 6sense, and Website visits.'
+difficulty: Advanced
+time: Daily
+archtype: Processor
+description: >-
+  Aggregates multiple intent data sources into a single account-level 'Heat
+  Score'.
 sampleData:
-  filename: "intent_sources.txt"
+  filename: intent_sources.txt
   content: |
     [G2]
     acme.com, competitor comparison
@@ -22,6 +24,7 @@ sampleData:
     acme.com, pricing page
     [6sense]
     beta.io, high intent
+isPremium: false
 ---
 
 # Agent Configuration: The ABM Analyst
@@ -63,21 +66,23 @@ sampleData
 URL: https://realaiexamples.com/skills/abm-personal-gift-recommender
 Description: Send gifts they actually keep, not just swag.
 
---- 
+---
 id: abm-personal-gift-recommender
 category: Marketing Ops
 title: ABM Personal Gift Recommender
-tagline: Send gifts they actually keep, not just swag.
+tagline: 'Send gifts they actually keep, not just swag.'
 difficulty: Researcher
 time: Batch
 archetype: Hybrid
 description: >-
-  Researches a prospect's Twitter/LinkedIn interests (e.g., "Coffee", "Golf", "Sci-Fi"). Suggests a $50 gift that matches their hobby.
+  Researches a prospect's Twitter/LinkedIn interests (e.g., "Coffee", "Golf",
+  "Sci-Fi"). Suggests a $50 gift that matches their hobby.
 sampleData:
   filename: input_data.csv
   content: |
     Prospect_Name,Social_Handle
     Jane Doe,@janedoe
+isPremium: false
 ---
 
 # Agent Configuration: ABM Personal Gift Recommender
@@ -111,7 +116,7 @@ Send gifts they actually keep, not just swag.
 URL: https://realaiexamples.com/skills/affiliate-application-auto-screener
 Description: Filter out spammy affiliate applications instantly.
 
---- 
+---
 id: affiliate-application-auto-screener
 category: Marketing Ops
 title: Affiliate Application Auto-Screener
@@ -120,12 +125,14 @@ difficulty: Intermediate
 time: Batch
 archetype: Researcher
 description: >-
-  Checks applicant URL. Flags sites that are "Coupon Farms", "Adult Content", or "Domain Parked". Approves content creators automatically.
+  Checks applicant URL. Flags sites that are "Coupon Farms", "Adult Content", or
+  "Domain Parked". Approves content creators automatically.
 sampleData:
   filename: input_data.csv
   content: |
     Applicant_Name,Website
     CouponKing,http://coupon-spam.com
+isPremium: false
 ---
 
 # Agent Configuration: Affiliate Application Auto-Screener
@@ -178,6 +185,7 @@ sampleData:
     Stripe,Secret Key,Production
     AWS,IAM Access Key,Staging
     SendGrid,API Key,Production
+isPremium: false
 ---
 
 # Agent Configuration: The API Key Rotator
@@ -221,16 +229,19 @@ URL: https://realaiexamples.com/skills/blog-post-roi-calculator
 Description: Stitch CRM deals to Analytics data to find your 'Money Pages'.
 
 ---
-id: "blog-post-roi-calculator"
-category: "Marketing Ops"
-title: "Content Revenue Attributor"
-tagline: "Stitch CRM deals to Analytics data to find your 'Money Pages'."
-difficulty: "Intermediate"
-time: "Weekly"
-archetype: "Processor"
-description: "Takes two separate exports (Closed Deals from CRM and Traffic Logs from Analytics), stitches them together by Email, and calculates the exact revenue revenue per entry page."
+id: blog-post-roi-calculator
+category: Marketing Ops
+title: Content Revenue Attributor
+tagline: Stitch CRM deals to Analytics data to find your 'Money Pages'.
+difficulty: Intermediate
+time: Weekly
+archetype: Processor
+description: >-
+  Takes two separate exports (Closed Deals from CRM and Traffic Logs from
+  Analytics), stitches them together by Email, and calculates the exact revenue
+  revenue per entry page.
 sampleData:
-  filename: "crm_deals.csv"
+  filename: crm_deals.csv
   content: |
     Email,Deal_Stage,Amount
     alice@example.com,Closed Won,5000
@@ -238,7 +249,7 @@ sampleData:
     charlie@tech.co,Closed Won,25000
     david@startup.io,Closed Won,8000
     eve@enterprise.net,Closed Lost,50000
-  filename_2: "web_tracking.csv"
+  filename_2: web_tracking.csv
   content_2: |
     Email,First_Page_Seen,Session_Date
     alice@example.com,/blog/ultimate-guide-to-ai,2025-01-10
@@ -246,6 +257,7 @@ sampleData:
     charlie@tech.co,/blog/ultimate-guide-to-ai,2025-01-15
     david@startup.io,/case-studies/finance-corp,2025-01-20
     eve@enterprise.net,/home,2025-01-05
+isPremium: false
 ---
 
 # Agent Configuration: The Attribution Analyst
@@ -289,13 +301,14 @@ Identify which website entry points (First Page Seen) are actually driving **Clo
 ---
 *Run this recipe to see which blog posts are actually paying the bills.*
 
+
 ---
 
 ## Booth Staff Auto-Scheduler
 URL: https://realaiexamples.com/skills/booth-staff-auto-scheduler
 Description: Fairly rotate booth duty during conferences.
 
---- 
+---
 id: booth-staff-auto-scheduler
 category: Marketing Ops
 title: Booth Staff Auto-Scheduler
@@ -304,12 +317,14 @@ difficulty: Beginner
 time: Batch
 archetype: Processor
 description: >-
-  Takes team availability and conference hours. Generates a schedule ensuring senior staff are present during "Peak Traffic" hours.
+  Takes team availability and conference hours. Generates a schedule ensuring
+  senior staff are present during "Peak Traffic" hours.
 sampleData:
   filename: input_data.csv
   content: |
     Staff_Name,Role,Availability
     John,Sales,All Day
+isPremium: false
 ---
 
 # Agent Configuration: Booth Staff Auto-Scheduler
@@ -344,20 +359,23 @@ URL: https://realaiexamples.com/skills/campaign-cost-per-opportunity
 Description: Calculate Cost-per-Opportunity (CPO).
 
 ---
-id: "campaign-cost-per-opportunity"
-category: "Marketing Ops"
-title: "Campaign Efficiency Scorer"
-tagline: "Calculate Cost-per-Opportunity (CPO)."
-difficulty: "Intermediate"
-time: "Weekly"
-archetype: "Processor"
-description: "Links campaign spend to resulting opportunities to find the most efficient pipeline drivers."
+id: campaign-cost-per-opportunity
+category: Marketing Ops
+title: Campaign Efficiency Scorer
+tagline: Calculate Cost-per-Opportunity (CPO).
+difficulty: Intermediate
+time: Weekly
+archetype: Processor
+description: >-
+  Links campaign spend to resulting opportunities to find the most efficient
+  pipeline drivers.
 sampleData:
-  filename: "marketing_efficiency.csv"
+  filename: marketing_efficiency.csv
   content: |
     Campaign,Spend,Opportunity_Count
     LinkedIn_Awareness,5000,2
     Google_Search,2000,10
+isPremium: false
 ---
 
 # Agent Configuration: The Demand Gen Agent
@@ -393,22 +411,25 @@ Calculate actual pipeline efficiency.
 URL: https://realaiexamples.com/skills/campaign-naming-convention-enforcer
 Description: Stop messy data from breaking your reports.
 
---- 
-id: "campaign-naming-convention-enforcer"
-category: "Marketing Ops"
-title: "Campaign Taxonomist"
-tagline: "Stop messy data from breaking your reports."
-difficulty: "Beginner"
-time: "Weekly"
-archtype: "Processor"
-description: "Audits campaign names to ensure they follow the pattern: `Region_Channel_Date_Name`."
+---
+id: campaign-naming-convention-enforcer
+category: Marketing Ops
+title: Campaign Taxonomist
+tagline: Stop messy data from breaking your reports.
+difficulty: Beginner
+time: Weekly
+archtype: Processor
+description: >-
+  Audits campaign names to ensure they follow the pattern:
+  `Region_Channel_Date_Name`.
 sampleData:
-  filename: "campaigns.csv"
+  filename: campaigns.csv
   content: |
     Campaign_Name
     US_Email_2023_Q4_Promo
     Webinar_Oct_2023
     EU_Social_2023_Launch
+isPremium: false
 ---
 
 # Agent Configuration: The Marketing Ops Manager
@@ -451,22 +472,25 @@ sampleData
 URL: https://realaiexamples.com/skills/content-download-tracker
 Description: Which PDF is actually generating leads?
 
---- 
-id: "content-download-tracker"
-category: "Marketing Ops"
-title: "Lead Magnet Auditor"
-tagline: "Which PDF is actually generating leads?"
-difficulty: "Beginner"
-time: "Monthly"
-archtype: "Processor"
-description: "Aggregates download counts for all your gated assets to rank them by popularity."
+---
+id: content-download-tracker
+category: Marketing Ops
+title: Lead Magnet Auditor
+tagline: Which PDF is actually generating leads?
+difficulty: Beginner
+time: Monthly
+archtype: Processor
+description: >-
+  Aggregates download counts for all your gated assets to rank them by
+  popularity.
 sampleData:
-  filename: "downloads_log.csv"
+  filename: downloads_log.csv
   content: |
     Asset_Name,Date,User_Email
     Ebook A,2023-10-01,user1@test.com
     Ebook B,2023-10-01,user2@test.com
     Ebook A,2023-10-02,user3@test.com
+isPremium: true
 ---
 
 # Agent Configuration: The Content Analyst
@@ -510,21 +534,24 @@ URL: https://realaiexamples.com/skills/content-influence-scorer
 Description: Rank assets by how much pipeline they touched.
 
 ---
-id: "content-influence-scorer"
-category: "Marketing Ops"
-title: "Content Asset Influencer"
-tagline: "Rank assets by how much pipeline they touched."
-difficulty: "Advanced"
-time: "Monthly"
-archetype: "Processor"
-description: "Analyzes content download history against closed deals to find assets with high 'Pipeline Influence'."
+id: content-influence-scorer
+category: Marketing Ops
+title: Content Asset Influencer
+tagline: Rank assets by how much pipeline they touched.
+difficulty: Advanced
+time: Monthly
+archetype: Processor
+description: >-
+  Analyzes content download history against closed deals to find assets with
+  high 'Pipeline Influence'.
 sampleData:
-  filename: "content_deals.csv"
+  filename: content_deals.csv
   content: |
     Deal_ID,Revenue,Asset_Downloaded
     Deal-1,10000,Whitepaper_A
     Deal-1,10000,Guide_B
     Deal-2,5000,Whitepaper_A
+isPremium: true
 ---
 
 # Agent Configuration: The Content Analyst Agent
@@ -560,22 +587,25 @@ Identify the commercial value of specific content assets.
 URL: https://realaiexamples.com/skills/content-journey-mapper
 Description: Trace the blog posts read by your best customers.
 
---- 
-id: "content-journey-mapper"
-category: "Marketing Ops"
-title: "Customer Content Journey"
-tagline: "Trace the blog posts read by your best customers."
-difficulty: "Advanced"
-time: "Monthly"
-archtype: "Processor"
-description: "Analyzes the page path of converted leads to find the common sequence of content read before signing."
+---
+id: content-journey-mapper
+category: Marketing Ops
+title: Customer Content Journey
+tagline: Trace the blog posts read by your best customers.
+difficulty: Advanced
+time: Monthly
+archtype: Processor
+description: >-
+  Analyzes the page path of converted leads to find the common sequence of
+  content read before signing.
 sampleData:
-  filename: "web_activity.csv"
+  filename: web_activity.csv
   content: |
     User,Page_Title,Date
     John,/blog/how-to,2023-10-01
     John,/blog/pricing,2023-10-02
     John,CONVERTED,2023-10-03
+isPremium: true
 ---
 
 # Agent Configuration: The Content Strategist
@@ -618,20 +648,23 @@ URL: https://realaiexamples.com/skills/content-upgrade-conversion-rate
 Description: How many readers download the PDF?
 
 ---
-id: "content-upgrade-conversion-rate"
-category: "Marketing Ops"
-title: "Lead Magnet Converter"
-tagline: "How many readers download the PDF?"
-difficulty: "Beginner"
-time: "Monthly"
-archetype: "Processor"
-description: "Measures download rates of in-post lead magnets (Content Upgrades) relative to page views."
+id: content-upgrade-conversion-rate
+category: Marketing Ops
+title: Lead Magnet Converter
+tagline: How many readers download the PDF?
+difficulty: Beginner
+time: Monthly
+archetype: Processor
+description: >-
+  Measures download rates of in-post lead magnets (Content Upgrades) relative to
+  page views.
 sampleData:
-  filename: "upgrade_stats.csv"
+  filename: upgrade_stats.csv
   content: |
     Page,Views,Downloads
     /post-1,1000,50
     /post-2,2000,10
+isPremium: true
 ---
 
 # Agent Configuration: The CRO Lead
@@ -727,21 +760,24 @@ URL: https://realaiexamples.com/skills/dark-funnel-illuminator
 Description: Correlate direct traffic spikes with outbound activity.
 
 ---
-id: "dark-funnel-illuminator"
-category: "Marketing Ops"
-title: "Dark Funnel Correlation Bot"
-tagline: "Correlate direct traffic spikes with outbound activity."
-difficulty: "Advanced"
-time: "Weekly"
-archetype: "Processor"
-description: "Matches spikes in 'Direct' website traffic with regional outbound email blasts to measure indirect marketing impact."
+id: dark-funnel-illuminator
+category: Marketing Ops
+title: Dark Funnel Correlation Bot
+tagline: Correlate direct traffic spikes with outbound activity.
+difficulty: Advanced
+time: Weekly
+archetype: Processor
+description: >-
+  Matches spikes in 'Direct' website traffic with regional outbound email blasts
+  to measure indirect marketing impact.
 sampleData:
-  filename: "traffic_vs_outbound.csv"
+  filename: traffic_vs_outbound.csv
   content: |
     Date,Region,Direct_Visits,Outbound_Emails_Sent
     2023-10-01,US-East,100,5000
     2023-10-02,US-East,250,0
     2023-10-03,US-West,50,1000
+isPremium: true
 ---
 
 # Agent Configuration: The Marketing Analyst
@@ -777,22 +813,25 @@ Attribute direct traffic to specific outbound campaigns.
 URL: https://realaiexamples.com/skills/email-bounce-rate-monitor
 Description: Monitor bounce rates to prevent blacklisting.
 
---- 
-id: "email-bounce-rate-monitor"
-category: "Marketing Ops"
-title: "Domain Health Watchdog"
-tagline: "Monitor bounce rates to prevent blacklisting."
-difficulty: "Beginner"
-time: "Weekly"
-archtype: "Processor"
-description: "Calculates the hard bounce rate per campaign. If it exceeds 2%, it recommends pausing sending to protect domain reputation."
+---
+id: email-bounce-rate-monitor
+category: Marketing Ops
+title: Domain Health Watchdog
+tagline: Monitor bounce rates to prevent blacklisting.
+difficulty: Beginner
+time: Weekly
+archtype: Processor
+description: >-
+  Calculates the hard bounce rate per campaign. If it exceeds 2%, it recommends
+  pausing sending to protect domain reputation.
 sampleData:
-  filename: "campaign_stats.csv"
+  filename: campaign_stats.csv
   content: |
     Campaign,Sent,Hard_Bounces
     Welcome Series,1000,5
     Cold Outreach A,500,40
     Newsletter,5000,10
+isPremium: true
 ---
 
 # Agent Configuration: The Deliverability Specialist
@@ -836,20 +875,23 @@ URL: https://realaiexamples.com/skills/email-deliverability-heatmap
 Description: Are we blocked by Outlook?
 
 ---
-id: "email-deliverability-heatmap"
-category: "Marketing Ops"
-title: "ISP Deliverability Heatmap"
-tagline: "Are we blocked by Outlook?"
-difficulty: "Intermediate"
-time: "Weekly"
-archetype: "Processor"
-description: "Tracks open rates segmented by ISP (Gmail vs Outlook vs Corporate) to find delivery issues."
+id: email-deliverability-heatmap
+category: Marketing Ops
+title: ISP Deliverability Heatmap
+tagline: Are we blocked by Outlook?
+difficulty: Intermediate
+time: Weekly
+archetype: Processor
+description: >-
+  Tracks open rates segmented by ISP (Gmail vs Outlook vs Corporate) to find
+  delivery issues.
 sampleData:
-  filename: "sends_by_domain.csv"
+  filename: sends_by_domain.csv
   content: |
     Domain,Sent,Opened
     gmail.com,1000,200
     corporate,500,10
+isPremium: true
 ---
 
 # Agent Configuration: The Email Ops
@@ -945,22 +987,25 @@ For each domain in the CSV:
 URL: https://realaiexamples.com/skills/email-fatigue-monitor
 Description: Prevent unsubscribes by monitoring send frequency.
 
---- 
-id: "email-fatigue-monitor"
-category: "Marketing Ops"
-title: "Email Fatigue Monitor"
-tagline: "Prevent unsubscribes by monitoring send frequency."
-difficulty: "Intermediate"
-time: "Weekly"
-archtype: "Processor"
-description: "Calculates how many emails each contact received in the last 30 days to flag 'at-risk' contacts."
+---
+id: email-fatigue-monitor
+category: Marketing Ops
+title: Email Fatigue Monitor
+tagline: Prevent unsubscribes by monitoring send frequency.
+difficulty: Intermediate
+time: Weekly
+archtype: Processor
+description: >-
+  Calculates how many emails each contact received in the last 30 days to flag
+  'at-risk' contacts.
 sampleData:
-  filename: "send_logs.csv"
+  filename: send_logs.csv
   content: |
     Email,Date,Campaign
     john@acme.com,2023-10-01,Newsletter
     john@acme.com,2023-10-02,Promo A
     john@acme.com,2023-10-03,Promo B
+isPremium: true
 ---
 
 # Agent Configuration: The Deliverability Manager
@@ -1059,22 +1104,23 @@ For each Row in `bounce_report.csv`:
 URL: https://realaiexamples.com/skills/event-budget-pacer
 Description: Track trade show spend against approved budget.
 
---- 
-id: "event-budget-pacer"
-category: "Marketing Ops"
-title: "Event Spend Pacer"
-tagline: "Track trade show spend against approved budget."
-difficulty: "Beginner"
-time: "Batch"
-archtype: "Processor"
-description: "Reconciles event expenses against a master budget to ensure no overspending."
+---
+id: event-budget-pacer
+category: Marketing Ops
+title: Event Spend Pacer
+tagline: Track trade show spend against approved budget.
+difficulty: Beginner
+time: Batch
+archtype: Processor
+description: Reconciles event expenses against a master budget to ensure no overspending.
 sampleData:
-  filename: "event_finance.csv"
+  filename: event_finance.csv
   content: |
     Category,Budget,Actual_Spend
     Booth,10000,12000
     Travel,5000,4500
     Swag,2000,2000
+isPremium: true
 ---
 
 # Agent Configuration: The Event Manager
@@ -1116,21 +1162,24 @@ sampleData
 URL: https://realaiexamples.com/skills/event-lead-uploader
 Description: Format messy badge scans for CRM import.
 
---- 
-id: "event-lead-uploader"
-category: "Marketing Ops"
-title: "Conference Scan Cleaner"
-tagline: "Format messy badge scans for CRM import."
-difficulty: "Beginner"
-time: "Ad-hoc"
-archtype: "Processor"
-description: "Cleans up a CSV from a badge scanner (splitting names, formatting phones) for easy upload."
+---
+id: event-lead-uploader
+category: Marketing Ops
+title: Conference Scan Cleaner
+tagline: Format messy badge scans for CRM import.
+difficulty: Beginner
+time: Ad-hoc
+archtype: Processor
+description: >-
+  Cleans up a CSV from a badge scanner (splitting names, formatting phones) for
+  easy upload.
 sampleData:
-  filename: "scans.csv"
+  filename: scans.csv
   content: |
     Full Name,Phone,Email
     Doe, John,123.456.7890,j@d.com
     Smith; Jane,(555) 123-4567,j@s.com
+isPremium: true
 ---
 
 # Agent Configuration: The Event Ops Specialist
@@ -1173,20 +1222,23 @@ URL: https://realaiexamples.com/skills/first-vs-last-touch-comparison
 Description: Compare channel performance across different models.
 
 ---
-id: "first-vs-last-touch-comparison"
-category: "Marketing Ops"
-title: "Attribution Model Comparer"
-tagline: "Compare channel performance across different models."
-difficulty: "Advanced"
-time: "Monthly"
-archetype: "Processor"
-description: "Calculates ROI for marketing channels using both First-Touch and Last-Touch models to find top awareness vs conversion drivers."
+id: first-vs-last-touch-comparison
+category: Marketing Ops
+title: Attribution Model Comparer
+tagline: Compare channel performance across different models.
+difficulty: Advanced
+time: Monthly
+archetype: Processor
+description: >-
+  Calculates ROI for marketing channels using both First-Touch and Last-Touch
+  models to find top awareness vs conversion drivers.
 sampleData:
-  filename: "attribution_raw.csv"
+  filename: attribution_raw.csv
   content: |
     Deal_ID,Revenue,First_Touch,Last_Touch
     1,1000,Search,Webinar
     2,500,Social,Search
+isPremium: true
 ---
 
 # Agent Configuration: The Marketing ROI Agent
@@ -1223,20 +1275,23 @@ URL: https://realaiexamples.com/skills/form-abandonment-rate-tracker
 Description: Is your form too long?
 
 ---
-id: "form-abandonment-rate-tracker"
-category: "Marketing Ops"
-title: "Form Friction Hunter"
-tagline: "Is your form too long?"
-difficulty: "Beginner"
-time: "Monthly"
-archetype: "Processor"
-description: "Calculates drop-off rates for different form lengths to find the optimal field count."
+id: form-abandonment-rate-tracker
+category: Marketing Ops
+title: Form Friction Hunter
+tagline: Is your form too long?
+difficulty: Beginner
+time: Monthly
+archetype: Processor
+description: >-
+  Calculates drop-off rates for different form lengths to find the optimal field
+  count.
 sampleData:
-  filename: "form_stats.csv"
+  filename: form_stats.csv
   content: |
     Form_Name,Fields,Views,Submits
     Long_Demo,10,1000,10
     Short_Demo,3,1000,50
+isPremium: true
 ---
 
 # Agent Configuration: The Form Conversion Psychologist
@@ -1334,22 +1389,25 @@ For each property in the CSV:
 URL: https://realaiexamples.com/skills/influencer-payout-calculator
 Description: Automate monthly affiliate commissions.
 
---- 
-id: "influencer-payout-calculator"
-category: "Marketing Ops"
-title: "Influencer Payout Calc"
-tagline: "Automate monthly affiliate commissions."
-difficulty: "Intermediate"
-time: "Monthly"
-archtype: "Processor"
-description: "Calculates total commissions owed to influencers based on order logs and referral codes."
+---
+id: influencer-payout-calculator
+category: Marketing Ops
+title: Influencer Payout Calc
+tagline: Automate monthly affiliate commissions.
+difficulty: Intermediate
+time: Monthly
+archtype: Processor
+description: >-
+  Calculates total commissions owed to influencers based on order logs and
+  referral codes.
 sampleData:
-  filename: "order_logs.csv"
+  filename: order_logs.csv
   content: |
     Order_ID,Amount,Referral_Code
     ORD-1,100,INFLUENCER_A
     ORD-2,200,INFLUENCER_B
     ORD-3,50,INFLUENCER_A
+isPremium: true
 ---
 
 # Agent Configuration: The Affiliate Manager
@@ -1392,21 +1450,24 @@ URL: https://realaiexamples.com/skills/invalid-email-syntax-purge
 Description: Identify and remove obvious email typos.
 
 ---
-id: "invalid-email-syntax-purge"
-category: "Marketing Ops"
-title: "Email Syntax Auditor"
-tagline: "Identify and remove obvious email typos."
-difficulty: "Beginner"
-time: "Weekly"
-archetype: "Processor"
-description: "Finds obvious email typos (e.g. `gamil.com`, `yhaoo.com`) to improve email deliverability and score."
+id: invalid-email-syntax-purge
+category: Marketing Ops
+title: Email Syntax Auditor
+tagline: Identify and remove obvious email typos.
+difficulty: Beginner
+time: Weekly
+archetype: Processor
+description: >-
+  Finds obvious email typos (e.g. `gamil.com`, `yhaoo.com`) to improve email
+  deliverability and score.
 sampleData:
-  filename: "emails.csv"
+  filename: emails.csv
   content: |
     Email
     john@gamil.com
     bob@yahoo..com
     sarah@test.com
+isPremium: true
 ---
 
 # Agent Configuration: The Email Hygiene Agent
@@ -1443,21 +1504,24 @@ URL: https://realaiexamples.com/skills/job-title-normalizer
 Description: Standardize 'VP of Sales' vs 'Vice President Sales'.
 
 ---
-id: "job-title-normalizer"
-category: "Marketing Ops"
-title: "Job Title Normalizer"
-tagline: "Standardize 'VP of Sales' vs 'Vice President Sales'."
-difficulty: "Beginner"
-time: "Weekly"
-archetype: "Processor"
-description: "Maps messy job titles to standard seniority levels (Executive, Director, Manager, Contributor)."
+id: job-title-normalizer
+category: Marketing Ops
+title: Job Title Normalizer
+tagline: Standardize 'VP of Sales' vs 'Vice President Sales'.
+difficulty: Beginner
+time: Weekly
+archetype: Processor
+description: >-
+  Maps messy job titles to standard seniority levels (Executive, Director,
+  Manager, Contributor).
 sampleData:
-  filename: "raw_contacts.csv"
+  filename: raw_contacts.csv
   content: |
     Name,Raw_Title
     John,VP of Ops
     Jane,Director of Growth
     Bob,Sales Associate
+isPremium: true
 ---
 
 # Agent Configuration: The Data Hygiene Agent
@@ -1493,21 +1557,24 @@ Cleanse job title data for better segmentation.
 URL: https://realaiexamples.com/skills/landing-page-ab-test-significance
 Description: Is Variant B actually better?
 
---- 
-id: "landing-page-ab-test-significance"
-category: "Marketing Ops"
-title: "A/B Test Referee"
-tagline: "Is Variant B actually better?"
-difficulty: "Intermediate"
-time: "Weekly"
-archtype: "Processor"
-description: "Calculates statistical significance for conversion rate differences between two landing page variants."
+---
+id: landing-page-ab-test-significance
+category: Marketing Ops
+title: A/B Test Referee
+tagline: Is Variant B actually better?
+difficulty: Intermediate
+time: Weekly
+archtype: Processor
+description: >-
+  Calculates statistical significance for conversion rate differences between
+  two landing page variants.
 sampleData:
-  filename: "ab_results.csv"
+  filename: ab_results.csv
   content: |
     Variant,Visitors,Conversions
     A,500,20
     B,510,35
+isPremium: true
 ---
 
 # Agent Configuration: The CRO Specialist
@@ -1551,21 +1618,24 @@ URL: https://realaiexamples.com/skills/landing-page-conversion-drift
 Description: Catch sudden drops in landing page conversion rates.
 
 ---
-id: "landing-page-conversion-drift"
-category: "Marketing Ops"
-title: "LP Conversion Drift Monitor"
-tagline: "Catch sudden drops in landing page conversion rates."
-difficulty: "Intermediate"
-time: "Daily"
-archetype: "Processor"
-description: "Compares daily landing page conversion rates against a 7-day rolling average to detect technical issues or traffic quality drops."
+id: landing-page-conversion-drift
+category: Marketing Ops
+title: LP Conversion Drift Monitor
+tagline: Catch sudden drops in landing page conversion rates.
+difficulty: Intermediate
+time: Daily
+archetype: Processor
+description: >-
+  Compares daily landing page conversion rates against a 7-day rolling average
+  to detect technical issues or traffic quality drops.
 sampleData:
-  filename: "lp_conversions.csv"
+  filename: lp_conversions.csv
   content: |
     Page,Date,Visits,Conversions
     /promo,2023-10-01,100,5
     /promo,2023-10-02,100,6
     /promo,2023-10-03,100,1
+isPremium: true
 ---
 
 # Agent Configuration: The Web Analytics Agent
@@ -1602,21 +1672,24 @@ Detect performance anomalies on high-traffic pages.
 URL: https://realaiexamples.com/skills/lead-recycling-automation
 Description: Move 'Closed-Lost' leads back to nurture.
 
---- 
-id: "lead-recycling-automation"
-category: "Marketing Ops"
-title: "The Recycler"
-tagline: "Move 'Closed-Lost' leads back to nurture."
-difficulty: "Intermediate"
-time: "Monthly"
-archtype: "Processor"
-description: "Identifies leads marked 'Closed-Lost' more than 90 days ago to re-enroll them in a 'Wake Up' nurture sequence."
+---
+id: lead-recycling-automation
+category: Marketing Ops
+title: The Recycler
+tagline: Move 'Closed-Lost' leads back to nurture.
+difficulty: Intermediate
+time: Monthly
+archtype: Processor
+description: >-
+  Identifies leads marked 'Closed-Lost' more than 90 days ago to re-enroll them
+  in a 'Wake Up' nurture sequence.
 sampleData:
-  filename: "closed_leads.csv"
+  filename: closed_leads.csv
   content: |
     Lead_Email,Status,Lost_Date
     john@acme.com,Closed-Lost,2023-01-01
     jane@beta.com,Closed-Lost,2023-10-01
+isPremium: true
 ---
 
 # Agent Configuration: The Lifecycle Marketer
@@ -1675,6 +1748,7 @@ sampleData:
     Lead_ID,Created_At,Assigned_At
     L-1,10:00,10:01
     L-2,10:00,10:45
+isPremium: true
 ---
 
 # Agent Configuration: The Operations Auditor Agent
@@ -1710,23 +1784,26 @@ Ensure leads are assigned to reps without delay.
 URL: https://realaiexamples.com/skills/lead-score-threshold-simulator
 Description: See how threshold changes impact MQL volume.
 
---- 
-id: "lead-score-threshold-simulator"
-category: "Marketing Ops"
-title: "Lead Threshold Simulator"
-tagline: "See how threshold changes impact MQL volume."
-difficulty: "Advanced"
-time: "Batch"
-archtype: "Processor"
-description: "Backtests lead data against different scoring thresholds to predict how many MQLs would be generated."
+---
+id: lead-score-threshold-simulator
+category: Marketing Ops
+title: Lead Threshold Simulator
+tagline: See how threshold changes impact MQL volume.
+difficulty: Advanced
+time: Batch
+archtype: Processor
+description: >-
+  Backtests lead data against different scoring thresholds to predict how many
+  MQLs would be generated.
 sampleData:
-  filename: "lead_scores.csv"
+  filename: lead_scores.csv
   content: |
     Lead_ID,Score
     1,45
     2,55
     3,65
     4,75
+isPremium: true
 ---
 
 # Agent Configuration: The Growth Analyst
@@ -1830,20 +1907,23 @@ URL: https://realaiexamples.com/skills/lead-source-truth-auditor
 Description: UTM vs Self-Reported: Who is lying?
 
 ---
-id: "lead-source-truth-auditor"
-category: "Marketing Ops"
-title: "Attribution Truth Checker"
-tagline: "UTM vs Self-Reported: Who is lying?"
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Compares 'Self-Reported Source' (How did you hear about us?) vs 'UTM Source' to find discrepancies (e.g. Dark Social)."
+id: lead-source-truth-auditor
+category: Marketing Ops
+title: Attribution Truth Checker
+tagline: 'UTM vs Self-Reported: Who is lying?'
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Compares 'Self-Reported Source' (How did you hear about us?) vs 'UTM Source'
+  to find discrepancies (e.g. Dark Social).
 sampleData:
-  filename: "source_audit.csv"
+  filename: source_audit.csv
   content: |
     Lead,UTM_Source,Self_Reported
     1,Google,Podcast
     2,LinkedIn,LinkedIn
+isPremium: true
 ---
 
 # Agent Configuration: The Attribution Analyst
@@ -1879,21 +1959,24 @@ Uncover dark social impact.
 URL: https://realaiexamples.com/skills/linear-attribution-modeler
 Description: Split revenue credit across all marketing touches.
 
---- 
-id: "linear-attribution-modeler"
-category: "Marketing Ops"
-title: "Linear Attribution Modeler"
-tagline: "Split revenue credit across all marketing touches."
-difficulty: "Advanced"
-time: "Monthly"
-archtype: "Processor"
-description: "Analyzes touchpoint logs to assign equal revenue credit to every interaction in a customer journey."
+---
+id: linear-attribution-modeler
+category: Marketing Ops
+title: Linear Attribution Modeler
+tagline: Split revenue credit across all marketing touches.
+difficulty: Advanced
+time: Monthly
+archtype: Processor
+description: >-
+  Analyzes touchpoint logs to assign equal revenue credit to every interaction
+  in a customer journey.
 sampleData:
-  filename: "journeys.csv"
+  filename: journeys.csv
   content: |
     Deal_ID,Revenue,Touchpoints
     Deal-1,1000,Search;Email;Webinar
     Deal-2,500,Email;Social
+isPremium: true
 ---
 
 # Agent Configuration: The Attribution Specialist
@@ -1936,21 +2019,24 @@ sampleData
 URL: https://realaiexamples.com/skills/lp-dead-link-auditor
 Description: Ensure your paid traffic doesn't hit 404s.
 
---- 
-id: "lp-dead-link-auditor"
-category: "Marketing Ops"
-title: "LP Link Auditor"
-tagline: "Ensure your paid traffic doesn't hit 404s."
-difficulty: "Intermediate"
-time: "Weekly"
-archtype: "Processor"
-description: "Checks all button destination URLs on your landing pages to ensure they are live and correctly tagged."
+---
+id: lp-dead-link-auditor
+category: Marketing Ops
+title: LP Link Auditor
+tagline: Ensure your paid traffic doesn't hit 404s.
+difficulty: Intermediate
+time: Weekly
+archtype: Processor
+description: >-
+  Checks all button destination URLs on your landing pages to ensure they are
+  live and correctly tagged.
 sampleData:
-  filename: "lp_links.csv"
+  filename: lp_links.csv
   content: |
     Page,Button_Text,Target_URL
     /promo-1,Sign Up,https://app.com/reg
     /promo-1,Help,https://docs.com/404
+isPremium: true
 ---
 
 # Agent Configuration: The Web Ops
@@ -1993,20 +2079,21 @@ URL: https://realaiexamples.com/skills/marketing-channel-velocity-tracker
 Description: Measure avg days to close by channel.
 
 ---
-id: "marketing-channel-velocity-tracker"
-category: "Marketing Ops"
-title: "Lead Source Velocity"
-tagline: "Measure avg days to close by channel."
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Compares the 'Lead to Close' cycle time across different marketing channels."
+id: marketing-channel-velocity-tracker
+category: Marketing Ops
+title: Lead Source Velocity
+tagline: Measure avg days to close by channel.
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: Compares the 'Lead to Close' cycle time across different marketing channels.
 sampleData:
-  filename: "channel_velocity.csv"
+  filename: channel_velocity.csv
   content: |
     Lead_Source,Lead_Date,Close_Date
     Google,2023-01-01,2023-02-01
     LinkedIn,2023-01-01,2023-04-01
+isPremium: true
 ---
 
 # Agent Configuration: The Marketing Analyst Agent
@@ -2042,22 +2129,25 @@ Identify which channels drive the fastest deals.
 URL: https://realaiexamples.com/skills/marketing-spend-anomaly-detector
 Description: Catch runaway budgets before they burn 10k.
 
---- 
-id: "marketing-spend-anomaly-detector"
-category: "Marketing Ops"
-title: "Ad Spend Spike Alert"
-tagline: "Catch runaway budgets before they burn 10k."
-difficulty: "Intermediate"
-time: "Daily"
-archtype: "Processor"
-description: "Compares yesterday's ad spend against a moving average. Flags deviations > 20%."
+---
+id: marketing-spend-anomaly-detector
+category: Marketing Ops
+title: Ad Spend Spike Alert
+tagline: Catch runaway budgets before they burn 10k.
+difficulty: Intermediate
+time: Daily
+archtype: Processor
+description: >-
+  Compares yesterday's ad spend against a moving average. Flags deviations >
+  20%.
 sampleData:
-  filename: "daily_spend.csv"
+  filename: daily_spend.csv
   content: |
     Date,Platform,Spend
     2023-10-01,Facebook,500
     2023-10-02,Facebook,520
     2023-10-03,Facebook,2000
+isPremium: true
 ---
 
 # Agent Configuration: The Budget Controller
@@ -2102,21 +2192,24 @@ URL: https://realaiexamples.com/skills/nurture-path-performance-bot
 Description: Compare conversion rates of different nurture sequences.
 
 ---
-id: "nurture-path-performance-bot"
-category: "Marketing Ops"
-title: "Nurture Path Auditor"
-tagline: "Compare conversion rates of different nurture sequences."
-difficulty: "Advanced"
-time: "Monthly"
-archetype: "Processor"
-description: "Compares the path-to-MQL conversion rate for different automated nurture flows."
+id: nurture-path-performance-bot
+category: Marketing Ops
+title: Nurture Path Auditor
+tagline: Compare conversion rates of different nurture sequences.
+difficulty: Advanced
+time: Monthly
+archetype: Processor
+description: >-
+  Compares the path-to-MQL conversion rate for different automated nurture
+  flows.
 sampleData:
-  filename: "nurture_data.csv"
+  filename: nurture_data.csv
   content: |
     User,Sequence,Status
     1,Path A,MQL
     2,Path A,Leaking
     3,Path B,MQL
+isPremium: true
 ---
 
 # Agent Configuration: The Growth Specialist Agent
@@ -2153,21 +2246,25 @@ URL: https://realaiexamples.com/skills/paid-search-quality-score-auditor
 Description: Calculate exactly how much money you save by improving ad relevance.
 
 ---
-id: "paid-search-quality-score-auditor"
-category: "Marketing Ops"
-title: "The CPC Savings Calculator"
-tagline: "Calculate exactly how much money you save by improving ad relevance."
-difficulty: "Intermediate"
-time: "Weekly"
-archetype: "Processor"
-description: "Quality Score (QS) isn't just a vanity metric; it's a discount code. This agent analyzes your keyword data to calculate the exact dollar amount you are overpaying due to low QS, and prioritizes fixes by 'Potential Savings'."
+id: paid-search-quality-score-auditor
+category: Marketing Ops
+title: The CPC Savings Calculator
+tagline: Calculate exactly how much money you save by improving ad relevance.
+difficulty: Intermediate
+time: Weekly
+archetype: Processor
+description: >-
+  Quality Score (QS) isn't just a vanity metric; it's a discount code. This
+  agent analyzes your keyword data to calculate the exact dollar amount you are
+  overpaying due to low QS, and prioritizes fixes by 'Potential Savings'.
 sampleData:
-  filename: "qs_metrics.csv"
+  filename: qs_metrics.csv
   content: |
     Keyword,Quality_Score,Avg_CPC,Clicks,Monthly_Spend
     "best crm",5,12.00,100,1200
     "sales software",9,8.00,500,4000
     "cheap crm",3,15.00,50,750
+isPremium: true
 ---
 
 # Agent Configuration: The PPC Economist
@@ -2213,20 +2310,23 @@ URL: https://realaiexamples.com/skills/paid-social-frequency-cap-auditor
 Description: Identify campaigns with dangerously high frequency.
 
 ---
-id: "paid-social-frequency-cap-auditor"
-category: "Marketing Ops"
-title: "Ad Fatigue Auditor"
-tagline: "Identify campaigns with dangerously high frequency."
-difficulty: "Beginner"
-time: "Daily"
-archetype: "Processor"
-description: "Checks ad delivery logs to flag campaigns where average frequency exceeds healthy limits (e.g. > 4.0)."
+id: paid-social-frequency-cap-auditor
+category: Marketing Ops
+title: Ad Fatigue Auditor
+tagline: Identify campaigns with dangerously high frequency.
+difficulty: Beginner
+time: Daily
+archetype: Processor
+description: >-
+  Checks ad delivery logs to flag campaigns where average frequency exceeds
+  healthy limits (e.g. > 4.0).
 sampleData:
-  filename: "ad_stats.csv"
+  filename: ad_stats.csv
   content: |
     Campaign,Reach,Impressions
     Retargeting_US,1000,8000
     Prospecting_US,10000,12000
+isPremium: true
 ---
 
 # Agent Configuration: The Paid Media Agent
@@ -2271,12 +2371,14 @@ difficulty: Intermediate
 time: Batch
 archtype: Researcher
 description: >-
-  Visits partner websites listed in your CRM. Checks if the logo image matches your current brand kit URL. Flags outdated or stretched logos.
+  Visits partner websites listed in your CRM. Checks if the logo image matches
+  your current brand kit URL. Flags outdated or stretched logos.
 sampleData:
   filename: input_data.csv
   content: |
     Partner_Name,URL
     Agency_A,https://agency-a.com/partners
+isPremium: true
 ---
 
 # Agent Configuration: Partner Logo Compliance Bot
@@ -2310,15 +2412,15 @@ Ensure partners aren't using your old ugly logo.
 URL: https://realaiexamples.com/skills/podcast-download-growth-tracker
 Description: Are we growing month over month?
 
---- 
-id: "podcast-download-growth-tracker"
-category: "Marketing Ops"
-title: "Podcast Growth Rate"
-tagline: "Are we growing month over month?"
-difficulty: "Beginner"
-time: "Monthly"
-archtype: "Processor"
-description: "Calculates MoM growth percentage for podcast downloads."
+---
+id: podcast-download-growth-tracker
+category: Marketing Ops
+title: Podcast Growth Rate
+tagline: Are we growing month over month?
+difficulty: Beginner
+time: Monthly
+archtype: Processor
+description: Calculates MoM growth percentage for podcast downloads.
 sampleData:
   filename: podcast_stats.csv
   content: |
@@ -2327,6 +2429,7 @@ sampleData:
     102,Cold Calling Tips,520,2023-10-08
     103,AI for Marketing (Viral),1200,2023-10-15
     104,Hiring Guide,510,2023-10-22
+isPremium: true
 ---
 
 # Agent Configuration: The Podcast Growth Hacker
@@ -2364,20 +2467,24 @@ URL: https://realaiexamples.com/skills/podcast-sponsorship-roi
 Description: Direct clicks are only half the story. Measure the 'Halo Effect'.
 
 ---
-id: "podcast-sponsorship-roi"
-category: "Marketing Ops"
-title: "The Brand Lift Estimator"
-tagline: "Direct clicks are only half the story. Measure the 'Halo Effect'."
-difficulty: "Intermediate"
-time: "Quarterly"
-archetype: "Processor"
-description: "Podcast ads notoriously under-report because people don't click links while driving. This agent correlates your 'Ad Drop Dates' with Direct Traffic spikes to estimate the invisible 'Brand Halo' revenue you are missing."
+id: podcast-sponsorship-roi
+category: Marketing Ops
+title: The Brand Lift Estimator
+tagline: Direct clicks are only half the story. Measure the 'Halo Effect'.
+difficulty: Intermediate
+time: Quarterly
+archetype: Processor
+description: >-
+  Podcast ads notoriously under-report because people don't click links while
+  driving. This agent correlates your 'Ad Drop Dates' with Direct Traffic spikes
+  to estimate the invisible 'Brand Halo' revenue you are missing.
 sampleData:
-  filename: "campaign_dates.csv"
+  filename: campaign_dates.csv
   content: |
     Podcast,Ad_Date,Direct_Revenue_Tracked,Baseline_Daily_Traffic,Ad_Day_Traffic
     MyFirstMillion,2024-01-15,5000,1000,1500
     TechCrunch,2024-01-20,200,1000,1050
+isPremium: true
 ---
 
 # Agent Configuration: The Attribution Scientist
@@ -2482,22 +2589,26 @@ URL: https://realaiexamples.com/skills/social-share-of-voice-tracker
 Description: Identify where competitors are loud so you can be louder (or go elsewhere).
 
 ---
-id: "social-share-of-voice-tracker"
-category: "Marketing Ops"
-title: "The Competitive Noise Canceler"
-tagline: "Identify where competitors are loud so you can be louder (or go elsewhere)."
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Don't shout into the void. This agent analyzes competitor mention volume by channel (LinkedIn vs. X) to help you decide whether to 'Attack' (compete head-on) or 'Flank' (own the quiet channel)."
+id: social-share-of-voice-tracker
+category: Marketing Ops
+title: The Competitive Noise Canceler
+tagline: Identify where competitors are loud so you can be louder (or go elsewhere).
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Don't shout into the void. This agent analyzes competitor mention volume by
+  channel (LinkedIn vs. X) to help you decide whether to 'Attack' (compete
+  head-on) or 'Flank' (own the quiet channel).
 sampleData:
-  filename: "sov_data.csv"
+  filename: sov_data.csv
   content: |
     Brand,Channel,Mentions
     Us,LinkedIn,100
     CompA,LinkedIn,500
     Us,Twitter,50
     CompA,Twitter,20
+isPremium: true
 ---
 
 # Agent Configuration: The Social Strategist
@@ -2542,7 +2653,7 @@ Description: Capture perfect, sidebar-free tweet cards.
 id: tweet-screenshot-automation
 category: Marketing Ops
 title: Tweet Screenshot Automation
-tagline: Capture perfect, sidebar-free tweet cards.
+tagline: 'Capture perfect, sidebar-free tweet cards.'
 difficulty: Advanced
 time: Automated
 archetype: Processor
@@ -2558,6 +2669,7 @@ sampleData:
     ID,URL
     example-1,https://x.com/MehtabKarta/status/2014392743204999396
     example-2,https://x.com/buccocapital/status/1995310794339176558
+isPremium: true
 ---
 
 # Agent Configuration: The Media Specialist
@@ -2664,22 +2776,25 @@ For each account in the CSV:
 URL: https://realaiexamples.com/skills/unsubscribe-reason-classifier
 Description: Why are they leaving?
 
---- 
-id: "unsubscribe-reason-classifier"
-category: "Marketing Ops"
-title: "Unsub Analysis Bot"
-tagline: "Why are they leaving?"
-difficulty: "Intermediate"
-time: "Monthly"
-archtype: "Processor"
-description: "Categorizes free-text 'Reason for Unsubscribing' feedback into buckets like 'Too Frequent', 'Content Irrelevant', or 'Budget'."
+---
+id: unsubscribe-reason-classifier
+category: Marketing Ops
+title: Unsub Analysis Bot
+tagline: Why are they leaving?
+difficulty: Intermediate
+time: Monthly
+archtype: Processor
+description: >-
+  Categorizes free-text 'Reason for Unsubscribing' feedback into buckets like
+  'Too Frequent', 'Content Irrelevant', or 'Budget'.
 sampleData:
-  filename: "unsubscribes.csv"
+  filename: unsubscribes.csv
   content: |
     User,Comment
     1,Too many emails!
     2,I don't need this anymore
     3,Sent daily, wanted weekly
+isPremium: true
 ---
 
 # Agent Configuration: The Retention Analyst
@@ -2723,20 +2838,23 @@ URL: https://realaiexamples.com/skills/utm-parameter-gap-filler
 Description: Infer missing sources based on Referrer URL.
 
 ---
-id: "utm-parameter-gap-filler"
-category: "Marketing Ops"
-title: "UTM Referrer Inference Bot"
-tagline: "Infer missing sources based on Referrer URL."
-difficulty: "Intermediate"
-time: "Daily"
-archetype: "Processor"
-description: "Scans traffic logs for missing UTM parameters and infers the likely source based on the Referrer field."
+id: utm-parameter-gap-filler
+category: Marketing Ops
+title: UTM Referrer Inference Bot
+tagline: Infer missing sources based on Referrer URL.
+difficulty: Intermediate
+time: Daily
+archetype: Processor
+description: >-
+  Scans traffic logs for missing UTM parameters and infers the likely source
+  based on the Referrer field.
 sampleData:
-  filename: "traffic_logs.csv"
+  filename: traffic_logs.csv
   content: |
     URL,Referrer,Source_UTM
     /page,linkedin.com,NULL
     /page,google.com,NULL
+isPremium: true
 ---
 
 # Agent Configuration: The Marketing Ops Agent
@@ -2771,21 +2889,24 @@ Fill data gaps in lead attribution.
 URL: https://realaiexamples.com/skills/utm-performance-analyzer
 Description: Which campaign source drives the most traffic?
 
---- 
-id: "utm-performance-analyzer"
-category: "Marketing Ops"
-title: "UTM Traffic Grader"
-tagline: "Which campaign source drives the most traffic?"
-difficulty: "Beginner"
-time: "Weekly"
-archtype: "Processor"
-description: "Aggregates traffic logs by UTM Source and Medium to identify top performing channels."
+---
+id: utm-performance-analyzer
+category: Marketing Ops
+title: UTM Traffic Grader
+tagline: Which campaign source drives the most traffic?
+difficulty: Beginner
+time: Weekly
+archtype: Processor
+description: >-
+  Aggregates traffic logs by UTM Source and Medium to identify top performing
+  channels.
 sampleData:
-  filename: "traffic_logs.csv"
+  filename: traffic_logs.csv
   content: |
     URL,Visits
     /landing?utm_source=google&utm_medium=cpc,500
     /landing?utm_source=newsletter,100
+isPremium: true
 ---
 
 # Agent Configuration: The Traffic Analyst
@@ -2847,6 +2968,7 @@ sampleData:
     https://site.com/?utm_source=LinkedIn&utm_medium=Social
     https://site.com/?utm_source=google&utm_medium=cpc
     https://site.com/?utm_source=fb%20ads&utm_medium=paid
+isPremium: true
 ---
 
 # Agent Configuration: The UTM Taxonomy Auditor
@@ -2895,21 +3017,24 @@ URL: https://realaiexamples.com/skills/video-view-retention-analyst
 Description: Where do they stop watching?
 
 ---
-id: "video-view-retention-analyst"
-category: "Marketing Ops"
-title: "Video Drop-off Auditor"
-tagline: "Where do they stop watching?"
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Analyzes drop-off timestamps in product demo videos to identify boring sections."
+id: video-view-retention-analyst
+category: Marketing Ops
+title: Video Drop-off Auditor
+tagline: Where do they stop watching?
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Analyzes drop-off timestamps in product demo videos to identify boring
+  sections.
 sampleData:
-  filename: "video_stats.csv"
+  filename: video_stats.csv
   content: |
     Video,Second,Retention_Pct
     Demo_v1,0,100
     Demo_v1,30,80
     Demo_v1,60,20
+isPremium: true
 ---
 
 # Agent Configuration: The Content Producer
@@ -2944,22 +3069,25 @@ Optimize video content for engagement.
 URL: https://realaiexamples.com/skills/webinar-attendance-scorer
 Description: Identify hot leads based on minutes watched.
 
---- 
-id: "webinar-attendance-scorer"
-category: "Marketing Ops"
-title: "Webinar Engagement Scorer"
-tagline: "Identify hot leads based on minutes watched."
-difficulty: "Intermediate"
-time: "Batch"
-archtype: "Processor"
-description: "Scores webinar attendees based on how long they stayed and if they asked questions."
+---
+id: webinar-attendance-scorer
+category: Marketing Ops
+title: Webinar Engagement Scorer
+tagline: Identify hot leads based on minutes watched.
+difficulty: Intermediate
+time: Batch
+archtype: Processor
+description: >-
+  Scores webinar attendees based on how long they stayed and if they asked
+  questions.
 sampleData:
-  filename: "webinar_report.csv"
+  filename: webinar_report.csv
   content: |
     Name,Minutes_Watched,Questions_Asked
     Alice,55,2
     Bob,5,0
     Charlie,30,0
+isPremium: true
 ---
 
 # Agent Configuration: The Lead Scorer
@@ -3003,14 +3131,16 @@ URL: https://realaiexamples.com/skills/webinar-attendee-job-title-scorer
 Description: Did VPs show up, or just interns?
 
 ---
-id: "webinar-attendee-job-title-scorer"
-category: "Marketing Ops"
-title: "Webinar Audience Quality"
-tagline: "Did VPs show up, or just interns?"
-difficulty: "Beginner"
-time: "Batch"
-archetype: "Processor"
-description: "Scores webinar success by the seniority of attendees based on job title keywords."
+id: webinar-attendee-job-title-scorer
+category: Marketing Ops
+title: Webinar Audience Quality
+tagline: 'Did VPs show up, or just interns?'
+difficulty: Beginner
+time: Batch
+archetype: Processor
+description: >-
+  Scores webinar success by the seniority of attendees based on job title
+  keywords.
 sampleData:
   filename: attendees.csv
   content: |
@@ -3019,6 +3149,7 @@ sampleData:
     Jane Smith,jane@startup.io,Marketing Intern,Startup Inc
     Mike Jones,mike@gmail.com,Student,University
     Sarah Lee,sarah@target-account.com,Director of Ops,Target Account Ltd
+isPremium: true
 ---
 
 # Agent Configuration: The High-Ticket Demand Gen Lead
@@ -3057,21 +3188,22 @@ Generate `priority_sales_leads.md`:
 URL: https://realaiexamples.com/skills/webinar-roi-calculator
 Description: Did we actually make money on that event?
 
---- 
-id: "webinar-roi-calculator"
-category: "Marketing Ops"
-title: "Webinar ROI Analyzer"
-tagline: "Did we actually make money on that event?"
-difficulty: "Intermediate"
-time: "Batch"
-archtype: "Processor"
-description: "Calculates Cost Per Lead (CPL) and Pipeline ROI for a webinar event."
+---
+id: webinar-roi-calculator
+category: Marketing Ops
+title: Webinar ROI Analyzer
+tagline: Did we actually make money on that event?
+difficulty: Intermediate
+time: Batch
+archtype: Processor
+description: Calculates Cost Per Lead (CPL) and Pipeline ROI for a webinar event.
 sampleData:
-  filename: "event_costs.csv"
+  filename: event_costs.csv
   content: |
     Event,Total_Cost,Leads_Generated,Pipeline_Generated
     Q3 Webinar,5000,200,50000
     Q4 Summit,20000,100,10000
+isPremium: true
 ---
 
 # Agent Configuration: The Demand Gen Manager
@@ -3180,9 +3312,9 @@ tagline: Standardize your no-code workflows.
 difficulty: Intermediate
 time: Batch
 description: >-
-  Automation fails at edge cases. This agent designs robust Zapier
-  workflows - including filters, formatters, and error handlers - for your entire
-  automation roadmap.
+  Automation fails at edge cases. This agent designs robust Zapier workflows -
+  including filters, formatters, and error handlers - for your entire automation
+  roadmap.
 sampleData:
   filename: automations.csv
   content: |

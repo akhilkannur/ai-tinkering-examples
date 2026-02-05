@@ -21,6 +21,7 @@ sampleData:
     Customer,Cart_Total,Email
     John,1200,john@acme.com
     Jane,25,jane@beta.com
+isPremium: false
 ---
 # Agent Configuration: The Conversion Specialist
 
@@ -63,13 +64,15 @@ difficulty: Advanced
 time: Batch
 archtype: Processor
 description: >-
-  Looking for the "Death Spiral". Flags users who have: Low Login Frequency + High Support Ticket Volume + No Feature Usage in 30 days.
+  Looking for the "Death Spiral". Flags users who have: Low Login Frequency +
+  High Support Ticket Volume + No Feature Usage in 30 days.
 sampleData:
   filename: input_data.csv
   content: |
     User_ID,Last_Login_Days_Ago,Open_Tickets
     UserA,45,3
     UserB,2,0
+isPremium: false
 ---
 
 # Agent Configuration: Heuristic Churn Predictor
@@ -123,6 +126,7 @@ sampleData:
     2,I moved to a competitor because they have an Android app.
     3,Support never replied to my ticket.
     4,Found a cheaper tool.
+isPremium: false
 ---
 
 # Agent Configuration: The Churn Survey Analyzer
@@ -172,13 +176,16 @@ difficulty: Advanced
 time: Batch
 archtype: Processor
 description: >-
-  If you ask cancelled users for a video feedback, this agent watches them. It notes "Anger" vs "Disappointment" and extracts the specific feature request mentioned.
+  If you ask cancelled users for a video feedback, this agent watches them. It
+  notes "Anger" vs "Disappointment" and extracts the specific feature request
+  mentioned.
 sampleData:
   filename: input_data.csv
   content: |
     User_ID,Video_URL
     U101,https://loom.com/share/...
     U102,https://loom.com/share/...
+isPremium: false
 ---
 
 # Agent Configuration: Churn Exit Video Analyzer
@@ -230,6 +237,7 @@ sampleData:
     John,Tent;Sleeping Bag
     Jane,Tent
     Bob,Tent;Footprint
+isPremium: false
 ---
 # Agent Configuration: The Email Strategist
 
@@ -281,6 +289,7 @@ sampleData:
     John,2022-12-15,Toys,TRUE
     Sarah,2022-11-25,Electronics,FALSE
     Mike,2023-03-01,Clothing,FALSE
+isPremium: false
 ---
 # Agent Configuration: The Q4 Early Bird Strategist
 
@@ -316,7 +325,7 @@ Generate `q4_warmup.csv`:
 URL: https://realaiexamples.com/skills/loyalty-point-breakage-estimator
 Description: Forecast how many points will expire unused.
 
---- 
+---
 id: loyalty-point-breakage-estimator
 category: Retention
 title: Loyalty Point Breakage Estimator
@@ -325,12 +334,14 @@ difficulty: Intermediate
 time: Batch
 archetype: Processor
 description: >-
-  Analyzes point accrual vs redemption rates. Predicts the liability reduction from expiring points this quarter.
+  Analyzes point accrual vs redemption rates. Predicts the liability reduction
+  from expiring points this quarter.
 sampleData:
   filename: input_data.csv
   content: |
     User_ID,Points_Balance,Expiry_Date
     UserA,500,2023-12-31
+isPremium: false
 ---
 
 # Agent Configuration: Loyalty Point Breakage Estimator
@@ -381,6 +392,7 @@ sampleData:
     Customer,Points_Balance,Expiry_Date
     John,500,2023-11-01
     Jane,10,2024-01-01
+isPremium: false
 ---
 # Agent Configuration: The Loyalty Marketer
 
@@ -414,7 +426,7 @@ Reduce point liability and drive sales.
 URL: https://realaiexamples.com/skills/referral-fraud-pattern-detector
 Description: Catch users referring themselves for credits.
 
---- 
+---
 id: referral-fraud-pattern-detector
 category: Retention
 title: Referral Fraud Pattern Detector
@@ -423,12 +435,14 @@ difficulty: Intermediate
 time: Batch
 archetype: Processor
 description: >-
-  Checks referral logs for: Same IP, Sequential Emails (john+1@gmail.com), or impossible time-to-conversion (<10 seconds).
+  Checks referral logs for: Same IP, Sequential Emails (john+1@gmail.com), or
+  impossible time-to-conversion (<10 seconds).
 sampleData:
   filename: input_data.csv
   content: |
     Referrer_ID,Referred_Email,IP_Address
     User1,User1+test@gmail.com,192.168.1.1
+isPremium: true
 ---
 
 # Agent Configuration: Referral Fraud Pattern Detector
@@ -479,6 +493,7 @@ sampleData:
     Order_ID,Delivered_Date,Email
     101,2023-10-01,john@acme.com
     102,2023-10-05,jane@beta.com
+isPremium: true
 ---
 # Agent Configuration: The CX Marketer
 
@@ -530,6 +545,7 @@ sampleData:
     John,2023-01-01,101
     John,2023-02-01,102
     Jane,2023-01-15,103
+isPremium: true
 ---
 # Agent Configuration: The Retention Marketer
 
@@ -583,6 +599,7 @@ sampleData:
     John,Jan,Active
     John,Feb,Skipped
     John,Mar,Skipped
+isPremium: true
 ---
 # Agent Configuration: The Subscription Manager
 
@@ -632,6 +649,7 @@ sampleData:
   content: |
     Email,Phone,Name
     john@acme.com,555-1234,John Doe
+isPremium: true
 ---
 # Agent Configuration: The Ad Ops Specialist
 
@@ -678,10 +696,13 @@ description: >-
   'Top Up' campaign.
 sampleData:
   filename: loyalty_data.csv
-  content: |
+  content: >
     Customer,Email,Current_Spend,Next_Tier_Name,Next_Tier_Threshold,Tier_Benefits
+
     John,john@gmail.com,950,Gold,1000,Free Shipping
+
     Jane,jane@yahoo.com,200,Gold,1000,Free Shipping
+isPremium: true
 ---
 # Agent Configuration: The Gamification Revenue Driver
 
@@ -736,6 +757,7 @@ sampleData:
     Agency Owner,Sending first report,Profitable projects
     SaaS Founder,Installing the tag,Churn reduction
     E-com Manager,Adding first product,Increase AOV
+isPremium: true
 ---
 
 # Agent Configuration: The Onboarding Factory
@@ -810,6 +832,7 @@ sampleData:
     Acme,Legacy Widget,Too Expensive,200
     Beta,Old Tool v1,Missing Integrations,300
     Gamma,Standard Plan,Project Ended,100
+isPremium: true
 ---
 # Agent Configuration: The Ex-Customer Whisperer
 

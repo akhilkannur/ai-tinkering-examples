@@ -1,709 +1,79 @@
 [
   {
-    "subreddit": "OpenAI",
-    "score": 142,
-    "title": "📢 OpenAI is sunsetting GPT-4o — even for paid ChatGPT Plus users. Would you support keeping it?",
-    "url": "https://reddit.com/r/OpenAI/comments/1qqmjnu/openai_is_sunsetting_gpt4o_even_for_paid_chatgpt/",
-    "created": "2026-01-29"
-  },
-  {
-    "subreddit": "PromptEngineering",
-    "score": 78,
-    "title": "What are your best resources to “learn” ai? Or just resources involving ai in general",
-    "url": "https://reddit.com/r/PromptEngineering/comments/1qqjqmw/what_are_your_best_resources_to_learn_ai_or_just/",
-    "created": "2026-01-29"
-  },
-  {
-    "subreddit": "ArtificialInteligence",
-    "score": 74,
-    "title": "Amazon in talks to invest (up to) $50b in Open Ai (via WSJ) - do they see something we don’t?",
-    "url": "https://reddit.com/r/ArtificialInteligence/comments/1qql66n/amazon_in_talks_to_invest_up_to_50b_in_open_ai/",
-    "created": "2026-01-29"
-  },
-  {
-    "subreddit": "ChatGPT",
-    "score": 54,
-    "title": "Is there anything ChatGPT won’t “gently push back” or “pump the brakes” on now?",
-    "url": "https://reddit.com/r/ChatGPT/comments/1qrent0/is_there_anything_chatgpt_wont_gently_push_back/",
-    "created": "2026-01-30"
-  },
-  {
-    "subreddit": "coldemail",
-    "score": 51,
-    "title": "What’s the best multichannel outreach tool you’ve used?",
-    "url": "https://reddit.com/r/coldemail/comments/1qr948o/whats_the_best_multichannel_outreach_tool_youve/",
-    "created": "2026-01-30"
-  },
-  {
-    "subreddit": "Entrepreneur",
-    "score": 48,
-    "title": "How I made $1,000,000 from 100 outbound emails",
-    "url": "https://reddit.com/r/Entrepreneur/comments/1qrjprr/how_i_made_1000000_from_100_outbound_emails/",
-    "created": "2026-01-30"
-  },
-  {
-    "subreddit": "ArtificialInteligence",
-    "score": 43,
-    "title": "Can AI make better connections than humans?",
-    "url": "https://reddit.com/r/ArtificialInteligence/comments/1qrc348/can_ai_make_better_connections_than_humans/",
-    "created": "2026-01-30"
-  },
-  {
-    "subreddit": "excel",
-    "score": 42,
-    "title": "Anyone actually using Excel AI tools at work?",
-    "url": "https://reddit.com/r/excel/comments/1qq59c6/anyone_actually_using_excel_ai_tools_at_work/",
-    "created": "2026-01-29"
-  },
-  {
     "subreddit": "ClaudeAI",
-    "score": 38,
-    "title": "Everyone talks about Claude Sonnet &amp; Opus, let's also appreciate what Haiku can actually do :) ?",
-    "url": "https://reddit.com/r/ClaudeAI/comments/1qr56t7/everyone_talks_about_claude_sonnet_opus_lets_also/",
-    "created": "2026-01-30"
-  },
-  {
-    "subreddit": "GeminiAI",
-    "score": 36,
-    "title": "Gemini nerf over ?",
-    "url": "https://reddit.com/r/GeminiAI/comments/1qr9gyy/gemini_nerf_over/",
-    "created": "2026-01-30"
-  },
-  {
-    "subreddit": "PromptEngineering",
-    "score": 34,
-    "title": "Is \"Meta-Prompting\" (asking AI to write your prompt) actually killing your reasoning results? A real-world A/B test.",
-    "url": "https://reddit.com/r/PromptEngineering/comments/1qr011z/is_metaprompting_asking_ai_to_write_your_prompt/",
-    "created": "2026-01-30"
-  },
-  {
-    "subreddit": "excel",
-    "score": 29,
-    "title": "Can Power Query handle daily new files without reprocessing old ones?",
-    "url": "https://reddit.com/r/excel/comments/1qqusoa/can_power_query_handle_daily_new_files_without/",
-    "created": "2026-01-30"
-  },
-  {
-    "subreddit": "GeminiAI",
-    "score": 29,
-    "title": "NanoBananaPro: Daily limit dropped from 100 to 10?",
-    "url": "https://reddit.com/r/GeminiAI/comments/1qraliu/nanobananapro_daily_limit_dropped_from_100_to_10/",
-    "created": "2026-01-30"
-  },
-  {
-    "subreddit": "LocalLLaMA",
-    "score": 28,
-    "title": "[Rant] Why does no chat tool get the basic UX of not auto scrolling to the bottom of the message response?",
-    "url": "https://reddit.com/r/LocalLLaMA/comments/1qrg1fk/rant_why_does_no_chat_tool_get_the_basic_ux_of/",
-    "created": "2026-01-30"
+    "score": 90,
+    "title": "Claude Going At OpenAI In New Commercial - \"Can I get a six pack quickly?\"",
+    "url": "https://reddit.com/r/ClaudeAI/comments/1qvqjz1/claude_going_at_openai_in_new_commercial_can_i/",
+    "created": "2026-02-04"
   },
   {
     "subreddit": "SaaS",
-    "score": 23,
-    "title": "Anyone else tired of the fake founder posts + AI slop here?",
-    "url": "https://reddit.com/r/SaaS/comments/1qr2sow/anyone_else_tired_of_the_fake_founder_posts_ai/",
-    "created": "2026-01-30"
-  },
-  {
-    "subreddit": "ArtificialInteligence",
-    "score": 22,
-    "title": "At what quality threshold does AI make human services economically obsolete?",
-    "url": "https://reddit.com/r/ArtificialInteligence/comments/1qqxfk1/at_what_quality_threshold_does_ai_make_human/",
-    "created": "2026-01-30"
-  },
-  {
-    "subreddit": "SEO",
-    "score": 20,
-    "title": "My competitor gets 5× our traffic while failing every SEO metric — what am I missing?",
-    "url": "https://reddit.com/r/SEO/comments/1qr512b/my_competitor_gets_5_our_traffic_while_failing/",
-    "created": "2026-01-30"
-  },
-  {
-    "subreddit": "coldemail",
-    "score": 17,
-    "title": "Apollo, MillionVerifier, Instantly. Top tier stack?",
-    "url": "https://reddit.com/r/coldemail/comments/1qpz1zp/apollo_millionverifier_instantly_top_tier_stack/",
-    "created": "2026-01-29"
-  },
-  {
-    "subreddit": "ArtificialInteligence",
-    "score": 17,
-    "title": "People saying that every AI-prompt has a dramatic and direct environmental impact. Is it true?",
-    "url": "https://reddit.com/r/ArtificialInteligence/comments/1qr4uuq/people_saying_that_every_aiprompt_has_a_dramatic/",
-    "created": "2026-01-30"
-  },
-  {
-    "subreddit": "OpenAI",
-    "score": 13,
-    "title": "Amazon could invest up to $50B in OpenAI. Thoughts? 🤔",
-    "url": "https://reddit.com/r/OpenAI/comments/1qqlmi8/amazon_could_invest_up_to_50b_in_openai_thoughts/",
-    "created": "2026-01-29"
-  },
-  {
-    "subreddit": "PromptEngineering",
-    "score": 13,
-    "title": "Helpful tools for YouTube script writer?",
-    "url": "https://reddit.com/r/PromptEngineering/comments/1qqh25a/helpful_tools_for_youtube_script_writer/",
-    "created": "2026-01-29"
-  },
-  {
-    "subreddit": "ArtificialInteligence",
-    "score": 13,
-    "title": "What's your favorite day-to-day LLM?",
-    "url": "https://reddit.com/r/ArtificialInteligence/comments/1qqqh28/whats_your_favorite_daytoday_llm/",
-    "created": "2026-01-30"
-  },
-  {
-    "subreddit": "PPC",
-    "score": 10,
-    "title": "Anyone doing anything interesting with AI in PPC that *is not* editing creative?",
-    "url": "https://reddit.com/r/PPC/comments/1qr1yoz/anyone_doing_anything_interesting_with_ai_in_ppc/",
-    "created": "2026-01-30"
-  },
-  {
-    "subreddit": "ArtificialInteligence",
-    "score": 10,
-    "title": "Are these the top AI companies in Ohio, or am I missing better ones?",
-    "url": "https://reddit.com/r/ArtificialInteligence/comments/1qqxz2u/are_these_the_top_ai_companies_in_ohio_or_am_i/",
-    "created": "2026-01-30"
-  },
-  {
-    "subreddit": "ChatGPT",
-    "score": 9,
-    "title": "I love ChatGPT, why is there a lot of hate? Can folk give positive examples of their interactions?",
-    "url": "https://reddit.com/r/ChatGPT/comments/1qroeya/i_love_chatgpt_why_is_there_a_lot_of_hate_can/",
-    "created": "2026-01-31"
-  },
-  {
-    "subreddit": "ArtificialInteligence",
-    "score": 9,
-    "title": "Does Anthropic believe its AI is conscious, or is that just what it wants Claude to think?",
-    "url": "https://reddit.com/r/ArtificialInteligence/comments/1qrbf9c/does_anthropic_believe_its_ai_is_conscious_or_is/",
-    "created": "2026-01-30"
-  },
-  {
-    "subreddit": "coldemail",
-    "score": 8,
-    "title": "Should I Focus on Warm Calling/Email or Cold Calling/email in 2026?",
-    "url": "https://reddit.com/r/coldemail/comments/1qqcefw/should_i_focus_on_warm_callingemail_or_cold/",
-    "created": "2026-01-29"
-  },
-  {
-    "subreddit": "ChatGPT",
-    "score": 8,
-    "title": "Best subscription to switch from ChatGPT?",
-    "url": "https://reddit.com/r/ChatGPT/comments/1qrn5ak/best_subscription_to_switch_from_chatgpt/",
-    "created": "2026-01-31"
-  },
-  {
-    "subreddit": "ChatGPT",
-    "score": 8,
-    "title": "Legitimately asking: How hard is it actually to make an LLM? With 4o leaving in feb. And everyone freaking out. How hard would it be to make and have it be like 4o.",
-    "url": "https://reddit.com/r/ChatGPT/comments/1qrk9o2/legitimately_asking_how_hard_is_it_actually_to/",
-    "created": "2026-01-30"
-  },
-  {
-    "subreddit": "LocalLLaMA",
-    "score": 7,
-    "title": "Best local-first, tool-integrated Cursor-like app?",
-    "url": "https://reddit.com/r/LocalLLaMA/comments/1qrp66p/best_localfirst_toolintegrated_cursorlike_app/",
-    "created": "2026-01-31"
-  },
-  {
-    "subreddit": "coldemail",
-    "score": 6,
-    "title": "Do you think combination of cold mail and cold call and cold sms can give better result in outreach?",
-    "url": "https://reddit.com/r/coldemail/comments/1qqy170/do_you_think_combination_of_cold_mail_and_cold/",
-    "created": "2026-01-30"
-  },
-  {
-    "subreddit": "excel",
-    "score": 6,
-    "title": "power query help needed - how to update a list automatically from a master file?",
-    "url": "https://reddit.com/r/excel/comments/1qqyawf/power_query_help_needed_how_to_update_a_list/",
-    "created": "2026-01-30"
-  },
-  {
-    "subreddit": "ChatGPT",
-    "score": 6,
-    "title": "Is ChatGPT forgetting things that you just told it earlier in the thread?",
-    "url": "https://reddit.com/r/ChatGPT/comments/1qron3b/is_chatgpt_forgetting_things_that_you_just_told/",
-    "created": "2026-01-31"
-  },
-  {
-    "subreddit": "ArtificialInteligence",
-    "score": 6,
-    "title": "Best AI guardrails for content moderation in 2026... for UGC and GenAI. Thoughts?",
-    "url": "https://reddit.com/r/ArtificialInteligence/comments/1qqymty/best_ai_guardrails_for_content_moderation_in_2026/",
-    "created": "2026-01-30"
-  },
-  {
-    "subreddit": "SaaS",
-    "score": 5,
-    "title": "Has anyone else noticed AI moving from tools to more human‑aware software?",
-    "url": "https://reddit.com/r/SaaS/comments/1qrffly/has_anyone_else_noticed_ai_moving_from_tools_to/",
-    "created": "2026-01-30"
-  },
-  {
-    "subreddit": "OpenAI",
-    "score": 5,
-    "title": "How AI mastered 2,500 years of Go strategy in 40 Days",
-    "url": "https://reddit.com/r/OpenAI/comments/1qr32d2/how_ai_mastered_2500_years_of_go_strategy_in_40/",
-    "created": "2026-01-30"
-  },
-  {
-    "subreddit": "GeminiAI",
-    "score": 5,
-    "title": "Is Gemini a good option for me? What does it excel at in comparison to ChatGPT? Considering swapping after OpenAI concerns",
-    "url": "https://reddit.com/r/GeminiAI/comments/1qrm7nz/is_gemini_a_good_option_for_me_what_does_it_excel/",
-    "created": "2026-01-30"
-  },
-  {
-    "subreddit": "coldemail",
-    "score": 3,
-    "title": "Cold email isn’t dead… but are we all doing it wrong?",
-    "url": "https://reddit.com/r/coldemail/comments/1qr3dvq/cold_email_isnt_dead_but_are_we_all_doing_it_wrong/",
-    "created": "2026-01-30"
-  },
-  {
-    "subreddit": "coldemail",
-    "score": 3,
-    "title": "Using Apollo for Email Warming?",
-    "url": "https://reddit.com/r/coldemail/comments/1qqunjj/using_apollo_for_email_warming/",
-    "created": "2026-01-30"
-  },
-  {
-    "subreddit": "coldemail",
-    "score": 3,
-    "title": "Can I start my cold email campaign yet?",
-    "url": "https://reddit.com/r/coldemail/comments/1qq5yqm/can_i_start_my_cold_email_campaign_yet/",
-    "created": "2026-01-29"
-  },
-  {
-    "subreddit": "PPC",
-    "score": 3,
-    "title": "Google Ad Grants – What are the must-have requirements to get a second domain approved?",
-    "url": "https://reddit.com/r/PPC/comments/1qqdtgr/google_ad_grants_what_are_the_musthave/",
-    "created": "2026-01-29"
-  },
-  {
-    "subreddit": "SaaS",
-    "score": 3,
-    "title": "Feels like iteration kills AI coding teams?",
-    "url": "https://reddit.com/r/SaaS/comments/1qrl54b/feels_like_iteration_kills_ai_coding_teams/",
-    "created": "2026-01-30"
-  },
-  {
-    "subreddit": "startups",
-    "score": 3,
-    "title": "How do you handle cash flow issues to maintain your personal expenses, as an entrepreneur? [I will not promote]",
-    "url": "https://reddit.com/r/startups/comments/1qqr0b9/how_do_you_handle_cash_flow_issues_to_maintain/",
-    "created": "2026-01-30"
-  },
-  {
-    "subreddit": "OpenAI",
-    "score": 3,
-    "title": "What is the difference between OpenAI’s reported ~$60B in funding and the ~$400B infrastructure figures mentioned in media?",
-    "url": "https://reddit.com/r/OpenAI/comments/1qrmr1o/what_is_the_difference_between_openais_reported/",
-    "created": "2026-01-31"
-  },
-  {
-    "subreddit": "OpenAI",
-    "score": 3,
-    "title": "Anyone doing Research on Shadow AI or AI security?",
-    "url": "https://reddit.com/r/OpenAI/comments/1qr5y0n/anyone_doing_research_on_shadow_ai_or_ai_security/",
-    "created": "2026-01-30"
-  },
-  {
-    "subreddit": "GeminiAI",
-    "score": 3,
-    "title": "Is It Just Me Or Is The Ai Performing Worse Today?",
-    "url": "https://reddit.com/r/GeminiAI/comments/1qro0p6/is_it_just_me_or_is_the_ai_performing_worse_today/",
-    "created": "2026-01-31"
-  },
-  {
-    "subreddit": "LocalLLaMA",
-    "score": 3,
-    "title": "Kimi K2.5 on llama.cpp: What exactly happens in the \"warming up the model with an empty run - please wait\" phase?",
-    "url": "https://reddit.com/r/LocalLLaMA/comments/1qrd4xb/kimi_k25_on_llamacpp_what_exactly_happens_in_the/",
-    "created": "2026-01-30"
-  },
-  {
-    "subreddit": "ArtificialInteligence",
-    "score": 3,
-    "title": "What are the main AI models called?",
-    "url": "https://reddit.com/r/ArtificialInteligence/comments/1qrpir6/what_are_the_main_ai_models_called/",
-    "created": "2026-01-31"
-  },
-  {
-    "subreddit": "ArtificialInteligence",
-    "score": 3,
-    "title": "Is OpenClaw hard to use, expensive, and unsafe? memU bot solves these problems.",
-    "url": "https://reddit.com/r/ArtificialInteligence/comments/1qr87hj/is_openclaw_hard_to_use_expensive_and_unsafe_memu/",
-    "created": "2026-01-30"
-  },
-  {
-    "subreddit": "coldemail",
     "score": 2,
-    "title": "If you could automate ONE thing in cold email, what would it be?",
-    "url": "https://reddit.com/r/coldemail/comments/1qqm4j2/if_you_could_automate_one_thing_in_cold_email/",
-    "created": "2026-01-29"
+    "title": "Is extracting tasks from meetings still mostly manual in SaaS teams?",
+    "url": "https://reddit.com/r/SaaS/comments/1qvnljh/is_extracting_tasks_from_meetings_still_mostly/",
+    "created": "2026-02-04"
   },
   {
-    "subreddit": "coldemail",
+    "subreddit": "smallbusiness",
     "score": 2,
-    "title": "Do you even do cold email for living?",
-    "url": "https://reddit.com/r/coldemail/comments/1qqgw75/do_you_even_do_cold_email_for_living/",
-    "created": "2026-01-29"
-  },
-  {
-    "subreddit": "coldemail",
-    "score": 2,
-    "title": "Does a sub domain protect your root domain from spam flags?",
-    "url": "https://reddit.com/r/coldemail/comments/1qqgclj/does_a_sub_domain_protect_your_root_domain_from/",
-    "created": "2026-01-29"
-  },
-  {
-    "subreddit": "coldemail",
-    "score": 2,
-    "title": "70% open rate on cold email  is that just absurdly high?",
-    "url": "https://reddit.com/r/coldemail/comments/1qqd9qc/70_open_rate_on_cold_email_is_that_just_absurdly/",
-    "created": "2026-01-29"
-  },
-  {
-    "subreddit": "SEO",
-    "score": 2,
-    "title": "How do you find expiring domains worth grabbing?",
-    "url": "https://reddit.com/r/SEO/comments/1qr9r07/how_do_you_find_expiring_domains_worth_grabbing/",
-    "created": "2026-01-30"
-  },
-  {
-    "subreddit": "Entrepreneur",
-    "score": 2,
-    "title": "Have you managed to allow your company to become a tool as opposed to an identity?",
-    "url": "https://reddit.com/r/Entrepreneur/comments/1qrovkl/have_you_managed_to_allow_your_company_to_become/",
-    "created": "2026-01-31"
-  },
-  {
-    "subreddit": "Entrepreneur",
-    "score": 2,
-    "title": "Mentorship/help before your first employee/contractor?",
-    "url": "https://reddit.com/r/Entrepreneur/comments/1qr8p21/mentorshiphelp_before_your_first/",
-    "created": "2026-01-30"
-  },
-  {
-    "subreddit": "Entrepreneur",
-    "score": 2,
-    "title": "how to find clients for ai voice agents?",
-    "url": "https://reddit.com/r/Entrepreneur/comments/1qr8isi/how_to_find_clients_for_ai_voice_agents/",
-    "created": "2026-01-30"
-  },
-  {
-    "subreddit": "ChatGPT",
-    "score": 2,
-    "title": "Is it just me or is ChatGPT having issues working with files?",
-    "url": "https://reddit.com/r/ChatGPT/comments/1qrr5fh/is_it_just_me_or_is_chatgpt_having_issues_working/",
-    "created": "2026-01-31"
-  },
-  {
-    "subreddit": "ChatGPT",
-    "score": 2,
-    "title": "Ever wanted to play chess with ChatGPT? Here's how you do it.",
-    "url": "https://reddit.com/r/ChatGPT/comments/1qrpcg7/ever_wanted_to_play_chess_with_chatgpt_heres_how/",
-    "created": "2026-01-31"
+    "title": "How do you scale a vintage shop when everything is one of a kind?",
+    "url": "https://reddit.com/r/smallbusiness/comments/1qvruwf/how_do_you_scale_a_vintage_shop_when_everything/",
+    "created": "2026-02-04"
   },
   {
     "subreddit": "ClaudeAI",
     "score": 2,
-    "title": "Inherited a massive lead gen project, how would you automate the \"manual\" research part?",
-    "url": "https://reddit.com/r/ClaudeAI/comments/1qrq7zr/inherited_a_massive_lead_gen_project_how_would/",
-    "created": "2026-01-31"
-  },
-  {
-    "subreddit": "ClaudeAI",
-    "score": 2,
-    "title": "Claude Skills not auto-triggering? Found a fix",
-    "url": "https://reddit.com/r/ClaudeAI/comments/1qrnd4n/claude_skills_not_autotriggering_found_a_fix/",
-    "created": "2026-01-31"
-  },
-  {
-    "subreddit": "ClaudeAI",
-    "score": 2,
-    "title": "How do I work with VS Code Workspaces + Claude Code",
-    "url": "https://reddit.com/r/ClaudeAI/comments/1qreig6/how_do_i_work_with_vs_code_workspaces_claude_code/",
-    "created": "2026-01-30"
-  },
-  {
-    "subreddit": "ClaudeAI",
-    "score": 2,
-    "title": "Is there any plan for a Claude.ai student discount or education plan?",
-    "url": "https://reddit.com/r/ClaudeAI/comments/1qre3nm/is_there_any_plan_for_a_claudeai_student_discount/",
-    "created": "2026-01-30"
-  },
-  {
-    "subreddit": "OpenAI",
-    "score": 2,
-    "title": "Ever wanted to play chess with ChatGPT? Here's how you do it.",
-    "url": "https://reddit.com/r/OpenAI/comments/1qrpg7s/ever_wanted_to_play_chess_with_chatgpt_heres_how/",
-    "created": "2026-01-31"
+    "title": "Does Claude Code keep code files in some cache?",
+    "url": "https://reddit.com/r/ClaudeAI/comments/1qvoyq9/does_claude_code_keep_code_files_in_some_cache/",
+    "created": "2026-02-04"
   },
   {
     "subreddit": "GeminiAI",
     "score": 2,
-    "title": "Voice feature like ChatGPT?",
-    "url": "https://reddit.com/r/GeminiAI/comments/1qrr1xp/voice_feature_like_chatgpt/",
-    "created": "2026-01-31"
+    "title": "How are you guys productionizing your systems with depreciating gemini models?",
+    "url": "https://reddit.com/r/GeminiAI/comments/1qvra76/how_are_you_guys_productionizing_your_systems/",
+    "created": "2026-02-04"
   },
   {
     "subreddit": "GeminiAI",
     "score": 2,
-    "title": "ChatGPT rewrites my text exactly as requested, but Gemini keeps adding extra content. What am I doing wrong?",
-    "url": "https://reddit.com/r/GeminiAI/comments/1qrij8h/chatgpt_rewrites_my_text_exactly_as_requested_but/",
-    "created": "2026-01-30"
+    "title": "Gemini + NotebookLM: shared agent can’t read files from another account?",
+    "url": "https://reddit.com/r/GeminiAI/comments/1qvogt4/gemini_notebooklm_shared_agent_cant_read_files/",
+    "created": "2026-02-04"
   },
   {
     "subreddit": "coldemail",
     "score": 1,
-    "title": "How to get free cold emails",
-    "url": "https://reddit.com/r/coldemail/comments/1qrpx8t/how_to_get_free_cold_emails/",
-    "created": "2026-01-31"
-  },
-  {
-    "subreddit": "coldemail",
-    "score": 1,
-    "title": "Built a tool that scrapes Google Maps and finds owner emails (not info@) - what niches work best for you?",
-    "url": "https://reddit.com/r/coldemail/comments/1qrosjc/built_a_tool_that_scrapes_google_maps_and_finds/",
-    "created": "2026-01-31"
-  },
-  {
-    "subreddit": "coldemail",
-    "score": 1,
-    "title": "How to cold email for shadowing doctors as HS",
-    "url": "https://reddit.com/r/coldemail/comments/1qrgp54/how_to_cold_email_for_shadowing_doctors_as_hs/",
-    "created": "2026-01-30"
-  },
-  {
-    "subreddit": "coldemail",
-    "score": 1,
-    "title": "Notre IP Mailgun a été bloqué par Microsoft et yahoo... Un situation similaire vous est deja arrivé et comment vous etes vous sorti, voir eviter que ca se reproduise? Merci",
-    "url": "https://reddit.com/r/coldemail/comments/1qr7lrf/notre_ip_mailgun_a_été_bloqué_par_microsoft_et/",
-    "created": "2026-01-30"
-  },
-  {
-    "subreddit": "coldemail",
-    "score": 1,
-    "title": "Do you include full name / link to Linkedin when doing cold email outreach pre-launch?",
-    "url": "https://reddit.com/r/coldemail/comments/1qqycad/do_you_include_full_name_link_to_linkedin_when/",
-    "created": "2026-01-30"
-  },
-  {
-    "subreddit": "hubspot",
-    "score": 1,
-    "title": "What tools you wish hubspot integrated with ?",
-    "url": "https://reddit.com/r/hubspot/comments/1qrnlen/what_tools_you_wish_hubspot_integrated_with/",
-    "created": "2026-01-31"
-  },
-  {
-    "subreddit": "PPC",
-    "score": 1,
-    "title": "Opinion | Brand Campaign | Several stores | One ad set?",
-    "url": "https://reddit.com/r/PPC/comments/1qr1k11/opinion_brand_campaign_several_stores_one_ad_set/",
-    "created": "2026-01-30"
-  },
-  {
-    "subreddit": "PPC",
-    "score": 1,
-    "title": "Google Ads - Redirect product page to another, retain attribution to original product?",
-    "url": "https://reddit.com/r/PPC/comments/1qqd9ks/google_ads_redirect_product_page_to_another/",
-    "created": "2026-01-29"
-  },
-  {
-    "subreddit": "SEO",
-    "score": 1,
-    "title": "Has anyone had success with long form content using AI writers?",
-    "url": "https://reddit.com/r/SEO/comments/1qqi0xd/has_anyone_had_success_with_long_form_content/",
-    "created": "2026-01-29"
-  },
-  {
-    "subreddit": "excel",
-    "score": 1,
-    "title": "How to compare a company share price against the the S&amp;P 500 on excel?",
-    "url": "https://reddit.com/r/excel/comments/1qrh9ld/how_to_compare_a_company_share_price_against_the/",
-    "created": "2026-01-30"
+    "title": "Learning n8n for cold email what should I automate first to actually boost productivity?",
+    "url": "https://reddit.com/r/coldemail/comments/1qvp3ag/learning_n8n_for_cold_email_what_should_i/",
+    "created": "2026-02-04"
   },
   {
     "subreddit": "SaaS",
     "score": 1,
-    "title": "Why arent anyone even using my free tool?",
-    "url": "https://reddit.com/r/SaaS/comments/1qrr7a2/why_arent_anyone_even_using_my_free_tool/",
-    "created": "2026-01-31"
-  },
-  {
-    "subreddit": "SaaS",
-    "score": 1,
-    "title": "It is 2:35 AM here and I just thought about to create a NO AI Platform. Who is in?",
-    "url": "https://reddit.com/r/SaaS/comments/1qrotzu/it_is_235_am_here_and_i_just_thought_about_to/",
-    "created": "2026-01-31"
-  },
-  {
-    "subreddit": "SaaS",
-    "score": 1,
-    "title": "Does this AI context seem accurate to you? Testing a new overlay on BBC.",
-    "url": "https://reddit.com/r/SaaS/comments/1qro251/does_this_ai_context_seem_accurate_to_you_testing/",
-    "created": "2026-01-31"
-  },
-  {
-    "subreddit": "SaaS",
-    "score": 1,
-    "title": "Where to acquire tool?, I've tried acquire.com but no success",
-    "url": "https://reddit.com/r/SaaS/comments/1qrn5hm/where_to_acquire_tool_ive_tried_acquirecom_but_no/",
-    "created": "2026-01-31"
-  },
-  {
-    "subreddit": "SaaS",
-    "score": 1,
-    "title": "HELP, should I find a new developer?",
-    "url": "https://reddit.com/r/SaaS/comments/1qrmvnw/help_should_i_find_a_new_developer/",
-    "created": "2026-01-31"
-  },
-  {
-    "subreddit": "SaaS",
-    "score": 1,
-    "title": "How I created an AI assistant that transforms a company's knowledge base into a chatbot",
-    "url": "https://reddit.com/r/SaaS/comments/1qrmm8y/how_i_created_an_ai_assistant_that_transforms_a/",
-    "created": "2026-01-31"
+    "title": "For UK founders / sales leaders: Can't find your ICP with Sales Nav/Apollo filters? Looking for people to interview",
+    "url": "https://reddit.com/r/SaaS/comments/1qvrfk3/for_uk_founders_sales_leaders_cant_find_your_icp/",
+    "created": "2026-02-04"
   },
   {
     "subreddit": "smallbusiness",
     "score": 1,
-    "title": "Which domain platform would be best for my business needs?",
-    "url": "https://reddit.com/r/smallbusiness/comments/1qrfjz9/which_domain_platform_would_be_best_for_my/",
-    "created": "2026-01-30"
-  },
-  {
-    "subreddit": "Entrepreneur",
-    "score": 1,
-    "title": "SME owners in Europe: what’s ONE operational problem you’d actually pay to automate?",
-    "url": "https://reddit.com/r/Entrepreneur/comments/1qrkv7c/sme_owners_in_europe_whats_one_operational/",
-    "created": "2026-01-30"
-  },
-  {
-    "subreddit": "Entrepreneur",
-    "score": 1,
-    "title": "How are you handling ai content creation lately? Saw this workflow guide ...",
-    "url": "https://reddit.com/r/Entrepreneur/comments/1qrk18l/how_are_you_handling_ai_content_creation_lately/",
-    "created": "2026-01-30"
-  },
-  {
-    "subreddit": "Entrepreneur",
-    "score": 1,
-    "title": "Creating an AirBNB-like revenue stream with my business' wifi? Whut.",
-    "url": "https://reddit.com/r/Entrepreneur/comments/1qrjd4f/creating_an_airbnblike_revenue_stream_with_my/",
-    "created": "2026-01-30"
-  },
-  {
-    "subreddit": "Entrepreneur",
-    "score": 1,
-    "title": "Is there another “learning OS” style platform that puts all the study tools you use in your workflow into one app?",
-    "url": "https://reddit.com/r/Entrepreneur/comments/1qrj2xw/is_there_another_learning_os_style_platform_that/",
-    "created": "2026-01-30"
-  },
-  {
-    "subreddit": "ChatGPT",
-    "score": 1,
-    "title": "Waiting for response after deep research - research completed - 30 minutes later no response- suggested prompt?",
-    "url": "https://reddit.com/r/ChatGPT/comments/1qrnymi/waiting_for_response_after_deep_research_research/",
-    "created": "2026-01-31"
+    "title": "Does anyone have an Excel or Power BI template for tracking small business",
+    "url": "https://reddit.com/r/smallbusiness/comments/1qvra5q/does_anyone_have_an_excel_or_power_bi_template/",
+    "created": "2026-02-04"
   },
   {
     "subreddit": "ClaudeAI",
     "score": 1,
-    "title": "Why Claude won't work on Reddit o do Reddit web searches?🥲",
-    "url": "https://reddit.com/r/ClaudeAI/comments/1qrqp6f/why_claude_wont_work_on_reddit_o_do_reddit_web/",
-    "created": "2026-01-31"
-  },
-  {
-    "subreddit": "ClaudeAI",
-    "score": 1,
-    "title": "Frustrated with Claude Pro / Cursor limits: 50% weekly quota gone in 48h. Any way to optimize?",
-    "url": "https://reddit.com/r/ClaudeAI/comments/1qrlbg5/frustrated_with_claude_pro_cursor_limits_50/",
-    "created": "2026-01-30"
+    "title": "Claude Code /ide shows “No available IDEs detected” in Cursor / VS Code terminal? Here’s the fix.",
+    "url": "https://reddit.com/r/ClaudeAI/comments/1qvo2ei/claude_code_ide_shows_no_available_ides_detected/",
+    "created": "2026-02-04"
   },
   {
     "subreddit": "GeminiAI",
     "score": 1,
-    "title": "How to remove Gemini watermarks (free &amp; private)",
-    "url": "https://reddit.com/r/GeminiAI/comments/1qrq8nt/how_to_remove_gemini_watermarks_free_private/",
-    "created": "2026-01-31"
-  },
-  {
-    "subreddit": "GeminiAI",
-    "score": 1,
-    "title": "Is the side panel a new feature that is not available to everyone right now?",
-    "url": "https://reddit.com/r/GeminiAI/comments/1qrm31m/is_the_side_panel_a_new_feature_that_is_not/",
-    "created": "2026-01-30"
-  },
-  {
-    "subreddit": "GeminiAI",
-    "score": 1,
-    "title": "Gemini CLI Saved chat checkpoints aren’t persistent across sessions anyone know why?",
-    "url": "https://reddit.com/r/GeminiAI/comments/1qrhmtk/gemini_cli_saved_chat_checkpoints_arent/",
-    "created": "2026-01-30"
-  },
-  {
-    "subreddit": "LocalLLaMA",
-    "score": 1,
-    "title": "How do you choose a model and estimate hardware specs for a LangChain app ?",
-    "url": "https://reddit.com/r/LocalLLaMA/comments/1qrh25j/how_do_you_choose_a_model_and_estimate_hardware/",
-    "created": "2026-01-30"
-  },
-  {
-    "subreddit": "PromptEngineering",
-    "score": 1,
-    "title": "How I designed a schema-generation skill for Claude to map out academic methodology",
-    "url": "https://reddit.com/r/PromptEngineering/comments/1qrr0yi/how_i_designed_a_schemageneration_skill_for/",
-    "created": "2026-01-31"
-  },
-  {
-    "subreddit": "PromptEngineering",
-    "score": 1,
-    "title": "Is there a way to batch insert products into a single background using AI?",
-    "url": "https://reddit.com/r/PromptEngineering/comments/1qrlc72/is_there_a_way_to_batch_insert_products_into_a/",
-    "created": "2026-01-30"
-  },
-  {
-    "subreddit": "PromptEngineering",
-    "score": 1,
-    "title": "how to use AI to write better emails in 2026",
-    "url": "https://reddit.com/r/PromptEngineering/comments/1qr8f9l/how_to_use_ai_to_write_better_emails_in_2026/",
-    "created": "2026-01-30"
-  },
-  {
-    "subreddit": "PromptEngineering",
-    "score": 1,
-    "title": "Community experiment: does delaying convergence improve LLM outputs?",
-    "url": "https://reddit.com/r/PromptEngineering/comments/1qr6gh0/community_experiment_does_delaying_convergence/",
-    "created": "2026-01-30"
-  },
-  {
-    "subreddit": "PromptEngineering",
-    "score": 1,
-    "title": "AI models for RPG dialogues that actually respect provided info (no hallucinations)?",
-    "url": "https://reddit.com/r/PromptEngineering/comments/1qr3cdd/ai_models_for_rpg_dialogues_that_actually_respect/",
-    "created": "2026-01-30"
-  },
-  {
-    "subreddit": "ArtificialInteligence",
-    "score": 1,
-    "title": "Can AI Learn Its Own Rules? We Tested It",
-    "url": "https://reddit.com/r/ArtificialInteligence/comments/1qrgfhj/can_ai_learn_its_own_rules_we_tested_it/",
-    "created": "2026-01-30"
-  },
-  {
-    "subreddit": "ArtificialInteligence",
-    "score": 1,
-    "title": "Can AI write complex code that talks directly with the silicon, like the Linux kernel?",
-    "url": "https://reddit.com/r/ArtificialInteligence/comments/1qqzt2d/can_ai_write_complex_code_that_talks_directly/",
-    "created": "2026-01-30"
+    "title": "How can you get Gemini to make photos of yourself? For instance...",
+    "url": "https://reddit.com/r/GeminiAI/comments/1qvq6qt/how_can_you_get_gemini_to_make_photos_of_yourself/",
+    "created": "2026-02-04"
   }
 ]

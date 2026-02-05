@@ -160,7 +160,7 @@ export default function ToolLandingPage({ toolName, toolSlug, recipes, categorie
                     {groupedRecipes[category].map(recipe => (
                       <Link 
                         key={recipe.id} 
-                        href={`/ai-examples/${recipe.id}`}
+                        href={`/skills/${recipe.id}`}
                         className="group flex flex-col bg-secondary-bg border border-navy-dark rounded-xl p-6 hover:border-accent/50 transition-all hover:shadow-[0_10px_30px_rgba(56,189,248,0.05)] relative overflow-hidden"
                       >
                         <h3 className="text-lg font-bold text-text-color mb-3 group-hover:text-accent transition-colors line-clamp-2 leading-snug">

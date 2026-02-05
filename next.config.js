@@ -68,6 +68,34 @@ const nextConfig = {
         destination: '/',
         permanent: true,
       },
+      // 1. Legacy Blueprint Migration (/ai-examples -> /skills)
+      {
+        source: '/ai-examples/:id',
+        destination: '/skills/:id',
+        permanent: true,
+      },
+      // 2. Catch literal code leaks (Google crawling raw dynamic filenames)
+      {
+        source: '/tools/[slug]',
+        destination: '/tools',
+        permanent: true,
+      },
+      {
+        source: '/role/[slug]',
+        destination: '/skills',
+        permanent: true,
+      },
+      {
+        source: '/blueprints/[id]',
+        destination: '/skills',
+        permanent: true,
+      },
+      {
+        source: '/ai-examples/:path*',
+        destination: '/skills',
+        permanent: true,
+      },
+      // 3. Old directory structure cleanup
       {
         source: '/blueprints',
         destination: '/skills',

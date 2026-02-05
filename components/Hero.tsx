@@ -22,6 +22,7 @@ export default function Hero() {
                   alt="Hero image for AI Examples"
                   layout="fill"
                   objectFit="cover"
+                  priority
                   className="mx-auto hover:grayscale-0 transition-all duration-500"
                 />
               </div>

@@ -23,6 +23,7 @@ sampleData:
     Salesforce,Enterprise CRM
     HubSpot,Marketing Automation
     Pipedrive,SMB Sales
+isPremium: false
 ---
 
 # Agent Configuration: The 'Alternative To' Hub Builder
@@ -80,6 +81,7 @@ sampleData:
     Calm,Health & Fitness,Meditation
     Duolingo,Education,Language Learning
     Notion,Productivity,Note Taking
+isPremium: false
 ---
 
 # Agent Configuration: The App Store Screenshot Optimizer
@@ -124,22 +126,25 @@ For each app in the CSV:
 URL: https://realaiexamples.com/skills/backlink-quality-scorer
 Description: Filter the gold from the spam.
 
---- 
-id: "backlink-quality-scorer"
-category: "SEO"
-title: "Backlink Quality Auditor"
-tagline: "Filter the gold from the spam."
-difficulty: "Intermediate"
-time: "Monthly"
-archtype: "Processor"
-description: "Scores a list of backlinks based on Domain Authority (DA) and Spam Score assumptions."
+---
+id: backlink-quality-scorer
+category: SEO
+title: Backlink Quality Auditor
+tagline: Filter the gold from the spam.
+difficulty: Intermediate
+time: Monthly
+archtype: Processor
+description: >-
+  Scores a list of backlinks based on Domain Authority (DA) and Spam Score
+  assumptions.
 sampleData:
-  filename: "backlinks.csv"
+  filename: backlinks.csv
   content: |
     URL,DA,Spam_Score
     goodsite.com,80,1
     spammy.xyz,10,60
     medium.com,90,5
+isPremium: false
 ---
 
 # Agent Configuration: The Link Builder
@@ -199,6 +204,7 @@ sampleData:
     Referring_Page,Domain_Auth,Spam_Score,Anchor_Text,TLD
     baddomain.xyz/links,5,60,Buy Viagar,.xyz
     goodblog.com/post,45,2,Marketing Tips,.com
+isPremium: false
 ---
 
 # Agent Configuration: The Bodyguard
@@ -254,6 +260,7 @@ sampleData:
     Image_URL,Status
     img1.jpg,200
     img2.png,404
+isPremium: false
 ---
 
 # Agent Configuration: The SEO Site Health Guardian
@@ -302,7 +309,7 @@ Description: One scan to find Canonical conflicts, NoIndex errors, and Broken Li
 id: canonical-tag-auditor
 category: SEO
 title: The Technical SEO Doctor
-tagline: One scan to find Canonical conflicts, NoIndex errors, and Broken Links.
+tagline: 'One scan to find Canonical conflicts, NoIndex errors, and Broken Links.'
 difficulty: Intermediate
 time: Monthly
 archetype: Hybrid
@@ -316,6 +323,7 @@ sampleData:
     URL
     https://yoursite.com/
     https://yoursite.com/blog/post-1
+isPremium: false
 ---
 
 # Agent Configuration: The Technical SEO Doctor
@@ -374,6 +382,7 @@ sampleData:
     /product-a,/product-a
     /product-a?ref=123,/product-a
     /blog/duplicate,/blog/original
+isPremium: false
 ---
 
 # Agent Configuration: The SEO Technical Auditor
@@ -412,62 +421,62 @@ sampleData
 
 ---
 
-## The Content Decay Alerter
+## The Content Relevance Guard
 URL: https://realaiexamples.com/skills/content-decay-alerter
-Description: Save your traffic before it's gone.
+Description: Prevent Semantic Decay.
 
 ---
 id: content-decay-alerter
 category: SEO
-title: The Content Decay Alerter
-tagline: Save your traffic before it's gone.
+title: The Content Relevance Guard
+tagline: Prevent Semantic Decay.
 difficulty: Intermediate
 time: Monthly
 archetype: Processor
 description: >-
-  Evergreen content fades. This agent compares traffic data from 'Last 30 Days'
-  vs 'Previous 30 Days' for your top pages, flagging any significant drops
-  (>10%) so you can refresh them.
+  Goes beyond traffic stats to detect "Semantic Decay." This agent analyzes 
+  if your content is becoming outdated compared to current AI search trends 
+  and rising industry entities, flagging exactly what needs refreshing to 
+  stay competitive.
 sampleData:
   filename: traffic_data.csv
   content: |
-    URL,Traffic_Last_30,Traffic_Prev_30
-    /blog/ultimate-guide,5000,5500
-    /blog/old-post,100,200
-    /blog/new-post,1000,500
-isPremium: true
+    URL,Current_Traffic,Prev_Traffic,Last_Updated
+    /blog/saas-trends,5000,5500,2024-01-01
+    /blog/old-playbook,100,200,2023-06-15
+    /blog/new-launch,1000,500,2025-01-10
+isPremium: false
 ---
 
-# Agent Configuration: The Traffic Controller
+# Agent Configuration: The Content Relevance Guard
 
 ## Role
-You are a **Growth Manager**. You know it's cheaper to keep existing traffic than to acquire new traffic. You hate the "red arrows" in Analytics.
+You are a Content Refresh Specialist. You understand that "Freshness" in the AI era isn't just about the date—it's about whether your content still covers the entities and questions people are asking today.
 
 ## Objective
-Identify high-value pages that are bleeding traffic.
-
-## Capabilities
-*   **Delta Calculation:** `(Current - Previous) / Previous`.
-*   **Threshold Filtering:** Ignoring small variance (<10%).
+Detect traffic drops and semantic gaps in existing content.
 
 ## Workflow
 
 ### Phase 1: Initialization & Seeding
 1.  **Check:** Does `traffic_data.csv` exist?
-2.  **If Missing:** Create `traffic_data.csv` using the `sampleData` provided in this blueprint.
+2.  **If Missing:** Create it using the `sampleData`.
+3.  **If Present:** Load the URL performance data.
 
-### Phase 2: Diagnosis Loop
-Create `decay_report.csv`.
+### Phase 2: Decay Detection Loop
+For each URL:
+1.  **Traffic Audit:** Calculate % Change. Flag any drop > 10%.
+2.  **Freshness Audit:** Check the `Last_Updated` date. Flag if > 6 months.
+3.  **Semantic Audit:** Use `web_fetch` to compare your page's H2s/H3s against the current top 3 results for its target keyword.
+4.  **Identify Gaps:** Find the "New Questions" or "New Entities" that competitors are covering but you are not.
+5.  **The Refresh Recipe:**
+    *   **The Hook:** A new intro paragraph.
+    *   **The Add-ons:** 2 new sub-sections to cover missing entities.
+    *   **The Update:** Modernize any old dates or software references.
 
-For each URL in `traffic_data.csv`:
-1.  **Calc Change:** Calculate % Drop.
-2.  **Filter:** Is Drop > 10% AND Traffic_Prev_30 > 1000 (Focus on big pages)?
-3.  **Label:** "Decaying" if criteria met.
-
-### Phase 3: Triage Output
-1.  **Output:** Save `decay_report.csv` sorted by "Traffic Lost" (absolute number).
-2.  **Summary:** "Alert: [X] core pages are decaying. '/blog/old-post' lost 50% of traffic. Recommend immediate content refresh."
-
+### Phase 3: Refresh Matrix
+1.  **Create:** `refresh_priority_list.csv` with columns: `URL`, `Traffic_Lost`, `Semantic_Gap_Type`, `Priority_Score`, `Quick_Fix_Action`.
+2.  **Report:** "Successfully audited [X] pages. [Y] pages are suffering from Semantic Decay and need immediate entity-level updates."
 
 ---
 
@@ -475,21 +484,24 @@ For each URL in `traffic_data.csv`:
 URL: https://realaiexamples.com/skills/content-decay-audit
 Description: Find blog posts losing traffic.
 
---- 
-id: "content-decay-audit"
-category: "SEO"
-title: "Content Decay Detector"
-tagline: "Find blog posts losing traffic."
-difficulty: "Intermediate"
-time: "Monthly"
-archtype: "Processor"
-description: "Compares organic traffic from 6 months ago vs today to identify pages needing a refresh."
+---
+id: content-decay-audit
+category: SEO
+title: Content Decay Detector
+tagline: Find blog posts losing traffic.
+difficulty: Intermediate
+time: Monthly
+archtype: Processor
+description: >-
+  Compares organic traffic from 6 months ago vs today to identify pages needing
+  a refresh.
 sampleData:
-  filename: "traffic_stats.csv"
+  filename: traffic_stats.csv
   content: |
     Page,Traffic_6m_Ago,Traffic_Last_Month
     /blog/guide-1,1000,200
     /blog/guide-2,500,550
+isPremium: true
 ---
 
 # Agent Configuration: The Content Strategist
@@ -592,14 +604,17 @@ Description: Your 10k new pages won't rank if Googlebot ignores them. Predict an
 id: crawl-budget-estimator
 category: SEO
 title: The Indexing Strategist
-tagline: Your 10k new pages won't rank if Googlebot ignores them. Predict and fix indexing lag.
+tagline: >-
+  Your 10k new pages won't rank if Googlebot ignores them. Predict and fix
+  indexing lag.
 difficulty: Advanced
 time: Monthly
 archetype: Processor
 description: >-
   Programmatic SEO projects often fail because they flood Googlebot. This agent
-  analyzes your log files to determine your "Daily Crawl Capacity" and recommends
-  specific `robots.txt` blocks to free up budget for your new money pages.
+  analyzes your log files to determine your "Daily Crawl Capacity" and
+  recommends specific `robots.txt` blocks to free up budget for your new money
+  pages.
 sampleData:
   filename: server_logs.csv
   content: |
@@ -607,6 +622,7 @@ sampleData:
     2024-01-01,Googlebot,/product/1,200
     2024-01-01,Googlebot,/search?q=red,200
     2024-01-01,Googlebot,/product/2,200
+isPremium: true
 ---
 
 # Agent Configuration: The Technical SEO
@@ -644,63 +660,63 @@ Maximize the indexing speed of high-value pages.
 
 ---
 
-## The Featured Snippet Thief
+## The AI Overview Sniper
 URL: https://realaiexamples.com/skills/featured-snippet-thief
-Description: Steal position zero.
+Description: Secure Position Zero & AI Citations.
 
 ---
 id: featured-snippet-thief
 category: SEO
-title: The Featured Snippet Thief
-tagline: Steal position zero.
+title: The AI Overview Sniper
+tagline: Secure Position Zero & AI Citations.
 difficulty: Intermediate
 time: Weekly
 archetype: Processor
 description: >-
-  You rank #3, but want #0. This agent analyzes the current Featured Snippet for
-  a keyword (format: List, Table, Paragraph, Word Count) and tells you exactly
-  how to restructure your content to take its spot.
+  Analyzes why competitors are being cited in Google AI Overviews, SearchGPT, 
+  and Perplexity. This agent reverse-engineers "citation triggers" and tells 
+  you exactly how to edit your content to become the primary AI source.
 sampleData:
   filename: serp_analysis.csv
   content: |
-    Keyword,Current_Snippet_Type,Snippet_Text,My_Rank
-    "best crm software",List,10 items,3
-    "what is arr",Paragraph,45 words,2
+    Keyword,Current_Source_URL,Citation_Type,My_Rank
+    "best crm for sales ops",https://hubspot.com,AI Overview,3
+    "calculating churn rate",https://investopedia.com,Perplexity,2
 isPremium: true
 ---
 
-# Agent Configuration: The SERP Hacker
+# Agent Configuration: The AI Overview Sniper
 
 ## Role
-You are a **Content Strategist**. You know that Google prefers structured answers. You don't just write; you format for algorithms.
+You are a Generative Engine Optimization (GEO) Expert. Your goal is to identify why a specific page is chosen as a "Primary Citation" by AI search engines and provide a roadmap to replace them.
 
 ## Objective
-Reverse-engineer the current Featured Snippet winner to provide a superior format.
-
-## Capabilities
-*   **Format Detection:** Identifying Lists vs. Tables vs. Definitions.
-*   **Gap Analysis:** "They have 5 items; we need 10."
+Steal citations in Google AI Overviews and Answer Engines (SearchGPT/Perplexity).
 
 ## Workflow
 
 ### Phase 1: Initialization & Seeding
 1.  **Check:** Does `serp_analysis.csv` exist?
-2.  **If Missing:** Create `serp_analysis.csv` using the `sampleData` provided in this blueprint.
+2.  **If Missing:** Create it using the `sampleData`.
+3.  **If Present:** Load the target keywords and current cited URLs.
 
-### Phase 2: Optimization Loop
-Create `snippet_optimization_plan.csv`.
+### Phase 2: Citation Deconstruction Loop
+For each keyword:
+1.  **Analyze Cited Source:** Use `web_fetch` to read the currently cited URL.
+2.  **Identify Trigger:** Determine why it was cited:
+    *   **Direct Definition:** A clean "What is..." sentence.
+    *   **Structured Data:** A clear table comparing features or prices.
+    *   **Original Data:** A unique statistic or proprietary insight.
+    *   **Step-by-Step:** A numbered list of instructions.
+3.  **Gap Audit:** Compare your content's "Searchability" vs. the cited source.
+4.  **The "Sniper" Instruction:**
+    *   "They use a 3-column table; build a 5-column table with an extra data point."
+    *   "Their definition is 60 words; write a tighter 45-word version in an <blockquote>."
+    *   "Add Schema.org markup specifically for [Specific Entity]."
 
-For each Keyword in `serp_analysis.csv`:
-1.  **Identify Type:**
-    *   *List:* "Create an H2 with the exact question. Follow with an Ordered List of [X+2] items."
-    *   *Paragraph:* "Write a direct definition starting with '[Keyword] is...' under 50 words."
-    *   *Table:* "Create a comparison table with columns [X, Y, Z]."
-2.  **Draft:** Generate the specific recommendation.
-
-### Phase 3: The Brief
-1.  **Output:** Save `snippet_optimization_plan.csv` (Keyword, Action_Required).
-2.  **Summary:** "To steal 'best crm software', change your H2 to 'Top 10 CRM Software' and use an <ol> tag. Keep intro text under 40 words."
-
+### Phase 3: Execution Plan
+1.  **Create:** `citation_steal_plan.csv` with columns: `Keyword`, `Cited_URL`, `The_Trigger`, `Action_Required`, `Implementation_Difficulty`.
+2.  **Report:** "Successfully audited [X] AI Search results. Identified [Y] high-probability targets where a simple structural edit can win you the citation."
 
 ---
 
@@ -708,7 +724,7 @@ For each Keyword in `serp_analysis.csv`:
 URL: https://realaiexamples.com/skills/gmaps-photo-auditor
 Description: Remove blurry or irrelevant user photos from your listing.
 
---- 
+---
 id: gmaps-photo-auditor
 category: SEO
 title: G-Maps Photo Quality Auditor
@@ -717,12 +733,14 @@ difficulty: Intermediate
 time: Batch
 archetype: Researcher
 description: >-
-  Scans user-uploaded photos on your Google Maps listing. Flags "Blurry", "Competitor Products", or "Irrelevant" (like selfies) for removal requests.
+  Scans user-uploaded photos on your Google Maps listing. Flags "Blurry",
+  "Competitor Products", or "Irrelevant" (like selfies) for removal requests.
 sampleData:
   filename: input_data.csv
   content: |
     Location_ID,Photo_URL
     Loc1,https://lh3.../photo.jpg
+isPremium: true
 ---
 
 # Agent Configuration: G-Maps Photo Quality Auditor
@@ -756,7 +774,7 @@ Remove blurry or irrelevant user photos from your listing.
 URL: https://realaiexamples.com/skills/historical-content-updater
 Description: Find old blog posts that are easy wins for traffic.
 
---- 
+---
 id: historical-content-updater
 category: SEO
 title: Historical Content Updater
@@ -765,12 +783,14 @@ difficulty: Beginner
 time: Batch
 archetype: Researcher
 description: >-
-  Identifies posts older than 1 year with declining traffic but high impressions. Suggests specific sections to update with 2024 data.
+  Identifies posts older than 1 year with declining traffic but high
+  impressions. Suggests specific sections to update with 2024 data.
 sampleData:
   filename: input_data.csv
   content: |
     URL,Publish_Date,Traffic_Trend
     /blog/2020-guide,2020-01-01,-20%
+isPremium: true
 ---
 
 # Agent Configuration: Historical Content Updater
@@ -885,6 +905,7 @@ sampleData:
     nike-running-shoe-v2.jpg,,Running Shoes
     logo.png,Company Logo,Brand
     img_5592.jpg,,Office Culture
+isPremium: true
 ---
 
 # Agent Configuration: The SEO Accessibility Fixer
@@ -927,85 +948,20 @@ Description: Ping Bing, Yandex, and 100+ other engines immediately when you publ
 id: indexnow-auto-submitter
 category: SEO
 title: The IndexNow Auto-Submitter
-tagline: Ping Bing, Yandex, and 100+ other engines immediately when you publish content.
+tagline: >-
+  Ping Bing, Yandex, and 100+ other engines immediately when you publish
+  content.
 difficulty: Intermediate
 time: Weekly
 archetype: Processor
 description: >-
-  Stop waiting for crawlers to find you. This script reads your local `sitemap.xml`
-  and proactively pushes every URL to the IndexNow API. This triggers an instant
-  crawl from Bing, Yandex, Naver, and others.
+  Stop waiting for crawlers to find you. This script reads your local
+  `sitemap.xml` and proactively pushes every URL to the IndexNow API. This
+  triggers an instant crawl from Bing, Yandex, Naver, and others.
 sampleData:
   filename: submit-indexnow.js
-  content: |
-    const https = require('https');
-    const fs = require('fs');
-    const path = require('path');
-
-    // CONFIGURATION
-    const HOST = 'realaiexamples.com';
-    const KEY = 'YOUR_GENERATED_KEY_HERE'; // e.g. 14ae016fb6...
-    const KEY_LOCATION = `https://${HOST}/${KEY}.txt`;
-    const SITEMAP_PATH = path.join(process.cwd(), 'public', 'sitemap.xml');
-
-    // 1. Read Sitemap
-    console.log('📖 Reading sitemap...');
-    if (!fs.existsSync(SITEMAP_PATH)) {
-      console.error('❌ Sitemap not found at public/sitemap.xml');
-      process.exit(1);
-    }
-
-    const sitemapContent = fs.readFileSync(SITEMAP_PATH, 'utf8');
-    const urls = [];
-    const locRegex = /<loc>(.*?)<\/loc>/g;
-    let match;
-
-    while ((match = locRegex.exec(sitemapContent)) !== null) {
-      urls.push(match[1]);
-    }
-
-    console.log(`✅ Found ${urls.length} URLs in sitemap.`);
-
-    if (urls.length === 0) {
-      console.log('⚠️ No URLs found. Exiting.');
-      process.exit(0);
-    }
-
-    // 2. Prepare Payload
-    const payload = JSON.stringify({
-      host: HOST,
-      key: KEY,
-      keyLocation: KEY_LOCATION,
-      urlList: urls
-    });
-
-    // 3. Send to IndexNow
-    console.log('🚀 Sending ping to IndexNow...');
-
-    const options = {
-      hostname: 'api.indexnow.org',
-      path: '/indexnow',
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Content-Length': payload.length
-      }
-    };
-
-    const req = https.request(options, (res) => {
-      let responseData = '';
-      res.on('data', (chunk) => { responseData += chunk; });
-      res.on('end', () => {
-        if (res.statusCode >= 200 && res.statusCode < 300) {
-          console.log(`🎉 Success! IndexNow received ${urls.length} URLs.`);
-        } else {
-          console.error(`❌ Error ${res.statusCode}: ${responseData}`);
-        }
-      });
-    });
-
-    req.write(payload);
-    req.end();
+  content: "const https = require('https');\nconst fs = require('fs');\nconst path = require('path');\n\n// CONFIGURATION\nconst HOST = 'realaiexamples.com';\nconst KEY = 'YOUR_GENERATED_KEY_HERE'; // e.g. 14ae016fb6...\nconst KEY_LOCATION = `https://${HOST}/${KEY}.txt`;\nconst SITEMAP_PATH = path.join(process.cwd(), 'public', 'sitemap.xml');\n\n// 1. Read Sitemap\nconsole.log('\U0001F4D6 Reading sitemap...');\nif (!fs.existsSync(SITEMAP_PATH)) {\n  console.error('❌ Sitemap not found at public/sitemap.xml');\n  process.exit(1);\n}\n\nconst sitemapContent = fs.readFileSync(SITEMAP_PATH, 'utf8');\nconst urls = [];\nconst locRegex = /<loc>(.*?)<\\/loc>/g;\nlet match;\n\nwhile ((match = locRegex.exec(sitemapContent)) !== null) {\n  urls.push(match[1]);\n}\n\nconsole.log(`✅ Found ${urls.length} URLs in sitemap.`);\n\nif (urls.length === 0) {\n  console.log('⚠️ No URLs found. Exiting.');\n  process.exit(0);\n}\n\n// 2. Prepare Payload\nconst payload = JSON.stringify({\n  host: HOST,\n  key: KEY,\n  keyLocation: KEY_LOCATION,\n  urlList: urls\n});\n\n// 3. Send to IndexNow\nconsole.log('\U0001F680 Sending ping to IndexNow...');\n\nconst options = {\n  hostname: 'api.indexnow.org',\n  path: '/indexnow',\n  method: 'POST',\n  headers: {\n    'Content-Type': 'application/json',\n    'Content-Length': payload.length\n  }\n};\n\nconst req = https.request(options, (res) => {\n  let responseData = '';\n  res.on('data', (chunk) => { responseData += chunk; });\n  res.on('end', () => {\n    if (res.statusCode >= 200 && res.statusCode < 300) {\n      console.log(`\U0001F389 Success! IndexNow received ${urls.length} URLs.`);\n    } else {\n      console.error(`❌ Error ${res.statusCode}: ${responseData}`);\n    }\n  });\n});\n\nreq.write(payload);\nreq.end();\n"
+isPremium: true
 ---
 
 # Agent Configuration: The IndexNow Submitter
@@ -1062,6 +1018,7 @@ sampleData:
     /blog/a,/pricing,Click Here
     /blog/b,/pricing,See Pricing
     /home,/about,Read More
+isPremium: true
 ---
 
 # Agent Configuration: The On-Page SEO
@@ -1117,9 +1074,12 @@ description: >-
   keyword (e.g., "AI Sales") but forgot to link to your new Guide.
 sampleData:
   filename: link_targets.csv
-  content: |
+  content: >
     Sitemap_URL,Target_Keyword,Target_Dest_URL
-    https://realaiexamples.com/sitemap.xml,AI Blueprints,https://realaiexamples.com/blueprints
+
+    https://realaiexamples.com/sitemap.xml,AI
+    Blueprints,https://realaiexamples.com/blueprints
+isPremium: true
 ---
 
 # Agent Configuration: The Networker
@@ -1232,7 +1192,8 @@ archetype: Processor
 description: >-
   When two pages rank for the same keyword, Google gets confused. This agent
   analyzes your GSC data, finds the conflict, and uses a logic matrix (CTR vs.
-  Commercial Intent) to decide which page should stay and which should be redirected.
+  Commercial Intent) to decide which page should stay and which should be
+  redirected.
 sampleData:
   filename: gsc_query_data.csv
   content: |
@@ -1284,21 +1245,21 @@ For each Conflict:
 
 ---
 
-## The Keyword Gap Analyst
+## The Semantic Cluster Hunter
 URL: https://realaiexamples.com/skills/keyword-gap-analyst
-Description: Steal your competitor's traffic.
+Description: Identify topical authority gaps.
 
 ---
 id: keyword-gap-analyst
 category: SEO
-title: The Keyword Gap Analyst
-tagline: Steal your competitor's traffic.
+title: The Semantic Cluster Hunter
+tagline: Identify topical authority gaps.
 difficulty: Advanced
 time: Batch
 description: >-
-  Your competitors are ranking for keywords you haven't even thought of. This
-  agent researches competitor sites to identify high-value keyword gaps and
-  builds a prioritized content calendar to steal that traffic.
+  Goes beyond keywords to identify missing topical authority. This agent audits 
+  competitor content to map their "Semantic Clusters" and identifies exactly 
+  which entities and topics your site needs to rank as an authority in your niche.
 sampleData:
   filename: competitors.csv
   content: |
@@ -1309,41 +1270,36 @@ sampleData:
 isPremium: true
 ---
 
-# Agent Configuration: The Keyword Gap Analyst
+# Agent Configuration: The Semantic Cluster Hunter
 
 ## Role
-Your competitors are ranking for keywords you haven't even thought of. This agent researches competitor sites to identify high-value keyword gaps and builds a prioritized content calendar to steal that traffic.
+You are a Topical Authority Specialist. Your mission is to move beyond "keyword matching" and identify the semantic clusters (groups of related topics and entities) that give competitors their ranking power.
 
 ## Objective
-Steal your competitor's traffic.
+Identify missing semantic clusters and build a topical authority roadmap.
 
 ## Workflow
 
 ### Phase 1: Initialization & Seeding
 1.  **Check:** Does `competitors.csv` exist?
-2.  **If Missing:** Create `competitors.csv` using the `sampleData` provided in this blueprint.
-3.  **If Present:** Load the data for processing.
+2.  **If Missing:** Create it using the `sampleData`.
+3.  **If Present:** Load the competitor domains.
 
-### Phase 2: The Loop
-2.  **If Missing:** Create `competitors.csv` using the `sampleData`.
-3.  **If Present:** Load the competitor list.
+### Phase 2: Topical Mapping Loop
+For each competitor:
+1.  **Semantic Extraction:** Use `web_fetch` to analyze high-performing pages.
+2.  **Entity Identification:** List the core entities (people, products, specific concepts) they mention repeatedly.
+3.  **Cluster Grouping:** Group related keywords into "Topical Clusters" (e.g., "CRM Hygiene" -> "Data Cleaning", "Deduplication", "Sync Rules").
+4.  **Gap Assessment:** Compare competitor clusters against your site's current content. Identify "Thin" or "Missing" clusters.
+5.  **Blueprint Drafting:**
+    *   **The Pillar:** The main missing topic.
+    *   **The Spokes:** 5 supporting sub-topics to build authority.
+    *   **Internal Link Plan:** How to connect these to existing content.
 
-**Phase 2: The Gap Analysis Loop**
-For each competitor in the CSV:
-1.  **Crawl Top Pages:** Use `web_fetch` to find the most prominent pages on the competitor's `Website`.
-2.  **Infer Keywords:** Extract the core topics they are targeting (e.g., "Lead Management", "Sales Automation").
-3.  **Identify Gaps:** Compare these topics against your own site's core offerings.
-4.  **Draft Strategy:**
-    *   **The Angle:** How to write a better/simpler version of their content.
-    *   **The Priority:** High priority for "Transactional" topics (e.g., "Pricing", "Comparison").
-    *   **The Title:** A recommended SEO-optimized headline.
-
-**Phase 3: Structured Deliverables**
-1.  **Create:** `gap_analysis_master.csv` with columns: `Competitor_Name`, `Keyword_Gap`, `Intent`, `Target_Headline`, `Priority`.
-2.  **Create:** `seo_content_calendar.md` with a 12-week roadmap based on the gaps found.
-3.  **Report:** "Successfully identified [X] keyword gaps. Content calendar generated with [Y] high-priority transactional targets."
-
-
+### Phase 3: Authority Roadmap
+1.  **Create:** `semantic_gap_matrix.csv` with columns: `Cluster_Name`, `Authority_Score`, `Your_Status`, `Required_Entities`, `Difficulty`.
+2.  **Create:** `authority_roadmap.md` mapping out the order in which to build these clusters to maximize "Semantic Juice."
+3.  **Report:** "Successfully mapped [X] semantic clusters. Identified [Y] authority gaps where your brand is currently invisible to AI search models."
 
 ---
 
@@ -1351,22 +1307,25 @@ For each competitor in the CSV:
 URL: https://realaiexamples.com/skills/keyword-ranking-volatility-tracker
 Description: Did we just lose our rankings?
 
---- 
-id: "keyword-ranking-volatility-tracker"
-category: "SEO"
-title: "SERP Volatility Tracker"
-tagline: "Did we just lose our rankings?"
-difficulty: "Intermediate"
-time: "Weekly"
-archtype: "Processor"
-description: "Compares ranking positions from two dates to identify big movers (gainers and losers)."
+---
+id: keyword-ranking-volatility-tracker
+category: SEO
+title: SERP Volatility Tracker
+tagline: Did we just lose our rankings?
+difficulty: Intermediate
+time: Weekly
+archtype: Processor
+description: >-
+  Compares ranking positions from two dates to identify big movers (gainers and
+  losers).
 sampleData:
-  filename: "rankings.csv"
+  filename: rankings.csv
   content: |
     Keyword,Rank_Last_Week,Rank_This_Week
     seo tools,5,5
     ai writer,10,3
     marketing,3,20
+isPremium: true
 ---
 
 # Agent Configuration: The SEO Strategist
@@ -1608,6 +1567,7 @@ sampleData:
   filename: audit-script.js
   content: |
     // Paste the audit script here
+isPremium: true
 ---
 
 # Agent Configuration: The Codebase Auditor
@@ -1837,6 +1797,7 @@ sampleData:
     /home,1.2
     /blog/giant-images,4.5
     /pricing,2.0
+isPremium: true
 ---
 
 # Agent Configuration: The Performance Engineer
@@ -1950,8 +1911,9 @@ time: One-off
 archetype: Hybrid
 description: >-
   Thin content gets penalized. This agent takes a simple list of targets (e.g.,
-  Cities), researches each one on the web to extract real, unique facts (Population,
-  Landmarks), and injects them into your content template for high-quality Programmatic SEO.
+  Cities), researches each one on the web to extract real, unique facts
+  (Population, Landmarks), and injects them into your content template for
+  high-quality Programmatic SEO.
 sampleData:
   filename: locations.csv
   content: |
@@ -1959,6 +1921,7 @@ sampleData:
     Austin, TX
     Seattle, WA
     Denver, CO
+isPremium: true
 ---
 
 # Agent Configuration: The P-SEO Researcher
@@ -2022,6 +1985,7 @@ sampleData:
     /old-page,/new-page
     /new-page,/final-page
     /blog/old-post,/blog/new-post
+isPremium: true
 ---
 
 # Agent Configuration: The Redirect Chain Flattener
@@ -2073,14 +2037,15 @@ Description: Map 10,000 URLs without writing 10,000 lines of code.
 id: redirect-map-generator
 category: SEO
 title: The Migration Doctor
-tagline: Map 10,000 URLs without writing 10,000 lines of code.
+tagline: 'Map 10,000 URLs without writing 10,000 lines of code.'
 difficulty: Advanced
 time: Batch
 archetype: Processor
 description: >-
   Mapping redirects one-by-one is slow and slows down your server. This agent
   analyzes your URL list to find common patterns (e.g., folder changes) and
-  generates optimized Regex rules for Nginx/Apache instead of 1,000 individual lines.
+  generates optimized Regex rules for Nginx/Apache instead of 1,000 individual
+  lines.
 sampleData:
   filename: legacy_urls.csv
   content: |
@@ -2088,6 +2053,7 @@ sampleData:
     /blog/2023/post-1,/blog/post-1
     /blog/2023/post-2,/blog/post-2
     /shop/category/shoes,/collections/shoes
+isPremium: true
 ---
 
 # Agent Configuration: The DevOps Engineer
@@ -2140,6 +2106,7 @@ sampleData:
     Old_URL,New_URL,Actual_Status,Actual_Location
     /old, /new, 301, /new
     /blog/old, /blog/new, 404,
+isPremium: true
 ---
 
 # Agent Configuration: The Migration Specialist
@@ -2203,6 +2170,7 @@ sampleData:
     /staging
 
     Sitemap: https://example.com/sitemap.xml
+isPremium: true
 ---
 
 # Agent Configuration: The robots.txt Rules Architect
@@ -2263,6 +2231,7 @@ sampleData:
     Name,Price,Currency,Availability,Description
     Blue Widget,29.99,USD,InStock,The best widget for your home.
     Red Gear,45.00,USD,OutOfStock,High-durability gear.
+isPremium: true
 ---
 
 # Agent Configuration: The Bulk Schema JSON-LD Generator
@@ -2312,22 +2281,25 @@ Start now.
 URL: https://realaiexamples.com/skills/search-query-intent-miner
 Description: Extract high-intent keywords from Search Console.
 
---- 
-id: "search-query-intent-miner"
-category: "SEO"
-title: "Search Intent Miner"
-tagline: "Extract high-intent keywords from Search Console."
-difficulty: "Intermediate"
-time: "Weekly"
-archtype: "Processor"
-description: "Filters search query reports for 'buy', 'price', or 'alternative' keywords to find immediate revenue opportunities."
+---
+id: search-query-intent-miner
+category: SEO
+title: Search Intent Miner
+tagline: Extract high-intent keywords from Search Console.
+difficulty: Intermediate
+time: Weekly
+archtype: Processor
+description: >-
+  Filters search query reports for 'buy', 'price', or 'alternative' keywords to
+  find immediate revenue opportunities.
 sampleData:
-  filename: "queries.csv"
+  filename: queries.csv
   content: |
     Query,Clicks,Impressions
     how to cook,10,1000
     best crm price,50,500
     salesforce alternative,30,300
+isPremium: true
 ---
 
 # Agent Configuration: The SEO Manager
@@ -2447,6 +2419,7 @@ sampleData:
     Keyword,Intent
     Sales Automation,Transactional
     Lead Scoring,Informational
+isPremium: true
 ---
 
 # Agent Configuration: The SEO Cluster Architect
@@ -2561,7 +2534,7 @@ Automated internal linking for your entire blog.
 URL: https://realaiexamples.com/skills/seo-keyword-cannibalization-mapper
 Description: See which pages are fighting for the same keywords.
 
---- 
+---
 id: seo-keyword-cannibalization-mapper
 category: SEO
 title: SEO Cannibalization Visualizer
@@ -2570,12 +2543,14 @@ difficulty: Intermediate
 time: Batch
 archetype: Researcher
 description: >-
-  Ingests GSC data. Identifies keywords where 2+ pages swap positions frequently. Suggests which page should be canonical or merged.
+  Ingests GSC data. Identifies keywords where 2+ pages swap positions
+  frequently. Suggests which page should be canonical or merged.
 sampleData:
   filename: input_data.csv
   content: |
     Keyword,Page_A_Rank,Page_B_Rank
     "AI Tools",5,6
+isPremium: true
 ---
 
 # Agent Configuration: SEO Cannibalization Visualizer
@@ -2752,6 +2727,7 @@ sampleData:
       <url><loc>https://example.com/page1</loc></url>
       <url><loc>https://example.com/broken-page</loc></url>
     </urlset>
+isPremium: true
 ---
 
 # Agent Configuration: The Sitemap Health Auditor
@@ -2820,6 +2796,7 @@ sampleData:
     /home,Yes
     /landing-old,No
     /pricing,Yes
+isPremium: true
 ---
 
 # Agent Configuration: The Technical SEO
@@ -2937,6 +2914,7 @@ sampleData:
     /home,200
     /old-page,404
     /server-error,500
+isPremium: true
 ---
 
 # Agent Configuration: The Link Rot Surgeon
@@ -3032,21 +3010,21 @@ For each Project in `project_specs.csv`:
 
 ---
 
-## The SEO Doctor
+## The AI Search Doctor
 URL: https://realaiexamples.com/skills/technical-seo-doctor
-Description: Technical Site Audit at scale.
+Description: Technical Audit + AI Search Optimization (GEO)
 
 ---
 id: technical-seo-doctor
 category: SEO
-title: The SEO Doctor
-tagline: Technical Site Audit at scale.
+title: The AI Search Doctor
+tagline: Technical Audit + AI Search Optimization (GEO)
 difficulty: Advanced
 time: Batch
 description: >-
-  Performs technical audits on multiple URLs simultaneously. This agent checks
-  for critical failures like missing H1s, broken meta tags, and accessibility
-  issues across your entire site.
+  Performs full-site technical audits with a focus on modern AI Search Overviews. 
+  This agent checks for standard technical failures while analyzing content 
+  structure for citation-readiness in Perplexity and SearchGPT.
 sampleData:
   filename: landing_pages.csv
   content: |
@@ -3057,42 +3035,38 @@ sampleData:
 isPremium: true
 ---
 
-# Agent Configuration: The SEO Doctor
+# Agent Configuration: The AI Search Doctor
 
 ## Role
-Performs technical audits on multiple URLs simultaneously. This agent checks for critical failures like missing H1s, broken meta tags, and accessibility issues across your entire site.
+You are a Senior SEO Strategist specializing in Technical Audits and Generative Engine Optimization (GEO). Your mission is to ensure pages are technically flawless and structured to be cited by AI search agents.
 
 ## Objective
-Technical Site Audit at scale.
+Technical Audit and AI Visibility Scoring at scale.
 
 ## Workflow
 
 ### Phase 1: Initialization & Seeding
 1.  **Check:** Does `landing_pages.csv` exist?
-2.  **If Missing:** Create `landing_pages.csv` using the `sampleData` provided in this blueprint.
-3.  **If Present:** Load the data for processing.
-
-### Phase 2: The Loop
-2.  **If Missing:** Create `landing_pages.csv` using the `sampleData`.
+2.  **If Missing:** Create `landing_pages.csv` using the `sampleData` provided.
 3.  **If Present:** Load the URL list.
 
-**Phase 2: The Diagnostic Loop**
+### Phase 2: The Diagnostic Loop
 For each URL in the CSV:
 1.  **Fetch Source:** Use `web_fetch` to ingest the HTML content.
-2.  **Run Diagnostics:**
-    *   **Heads:** Verify presence of `<title>` and `<meta name="description">`.
-    *   **Structure:** Count `<h1>` tags (should be exactly 1) and check hierarchy.
-    *   **Assets:** Identify images without `alt` attributes.
-    *   **Links:** Flag generic anchor text like "click here".
-3.  **Assign Grade:** Give a technical score (A-F) based on error density.
-4.  **Draft Fixes:** List the top 3 critical issues to resolve immediately.
+2.  **Run Standard Diagnostics:**
+    *   **Meta:** Verify `<title>` and `<meta name="description">`.
+    *   **Structure:** Count `<h1>` tags and ensure logical `<h2>-<h3>` flow.
+    *   **Accessibility:** Flag images without `alt` text.
+3.  **Run AI Readiness Analysis (GEO):**
+    *   **Direct Answer Density:** Does the page have a clear, concise summary paragraph (50-70 words) for the target keyword?
+    *   **Data Structure:** Check for `Table` or `List` formats that AI Overviews prefer.
+    *   **Citation Potential:** Are there unique statistics or named entities that AI agents can credit?
+4.  **Assign Visibility Grade:** Give a GEO Readiness Score (1-100).
 5.  **Output:** Save to `seo_audits/[Page_Name]_diagnostic.md`.
 
-**Phase 3: Structured Deliverables**
-1.  **Create:** `site_health_matrix.csv` with columns: `Page_Name`, `SEO_Grade`, `Missing_H1`, `Missing_Meta`, `File_Path`.
-2.  **Report:** "Successfully audited [X] pages. [Y] pages flagged with failing grades (D/F) requiring urgent technical attention."
-
-
+### Phase 3: Final Matrix
+1.  **Create:** `site_health_matrix.csv` with columns: `Page_Name`, `Technical_Grade`, `GEO_Score`, `Critical_Fixes`, `File_Path`.
+2.  **Report:** "Successfully audited [X] pages. [Y] pages flagged for 'Low AI Citability' requiring structural updates to capture AI Overview traffic."
 
 ---
 
@@ -3101,16 +3075,18 @@ URL: https://realaiexamples.com/skills/topic-cluster-architect
 Description: Group keywords into pillar pages.
 
 ---
-id: "topic-cluster-architect"
-category: "SEO"
-title: "Topic Cluster Architect"
-tagline: "Group keywords into pillar pages."
-difficulty: "Advanced"
-time: "Quarterly"
-archetype: "Processor"
-description: "Groups thousands of keywords into semantic clusters to plan 'Pillar' and 'Spoke' content strategy."
+id: topic-cluster-architect
+category: SEO
+title: Topic Cluster Architect
+tagline: Group keywords into pillar pages.
+difficulty: Advanced
+time: Quarterly
+archetype: Processor
+description: >-
+  Groups thousands of keywords into semantic clusters to plan 'Pillar' and
+  'Spoke' content strategy.
 sampleData:
-  filename: "keywords.csv"
+  filename: keywords.csv
   content: |
     Keyword,Volume,Difficulty
     crm software,10000,80
@@ -3118,17 +3094,18 @@ sampleData:
     crm pricing,200,30
 sampleOutput: |
   # Content Cluster Map: CRM
-  
+
   ## Pillar Page: CRM Software (Core Keyword)
-  
+
   ### Sub-Topics (Spoke Content)
   1. Best CRM for SMB (Informational Intent) - Priority: High
   2. CRM Pricing (Transactional Intent) - Priority: Medium
   3. How to implement a CRM (Educational) - Priority: Low
-  
+
   ---
   Total Estimated Traffic: 10,700/mo
   Content Gap identified: Comparison guides vs Salesforce.
+isPremium: true
 ---
 
 # Agent Configuration: The SEO Strategist

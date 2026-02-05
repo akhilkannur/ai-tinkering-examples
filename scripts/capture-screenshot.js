@@ -77,8 +77,14 @@ module.exports = async function captureScreenshot(url, filename) {
     }
     
     const outputPath = path.join(outputDir, filename);
+    const type = filename.endsWith('.webp') ? 'webp' : (filename.endsWith('.jpg') || filename.endsWith('.jpeg') ? 'jpeg' : 'png');
 
-    await page.screenshot({ path: outputPath, clip: config.clip });
+    await page.screenshot({ 
+      path: outputPath, 
+      clip: config.clip,
+      type: type,
+      quality: type === 'png' ? undefined : 85
+    });
     console.log(`✅ Screenshot saved to ${outputPath}`);
     
   } catch (error) {

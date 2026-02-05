@@ -21,6 +21,7 @@ sampleData:
     SKU,Class,Old_Stock,New_Stock
     Shirt-Blue,A,0,500
     Sock-White,C,0,50
+isPremium: false
 ---
 # Agent Configuration: The Merchandiser
 
@@ -73,6 +74,7 @@ sampleData:
     B2,Loss_Leader_Pack,Bundle,40,35
     B2,Socks,Single,10,2
     B2,Hat,Single,35,10
+isPremium: false
 ---
 
 # Agent Configuration: The Pricing Strategist
@@ -131,6 +133,7 @@ sampleData:
     Category,Sales_Month_1,Sales_Month_2,Sales_Month_3
     Pickleball,100,120,150
     FidgetSpinners,1000,800,400
+isPremium: false
 ---
 
 # Agent Configuration: The Trend Forecaster
@@ -187,6 +190,7 @@ sampleData:
     John,Running
     John,Running
     Jane,Swimming
+isPremium: false
 ---
 # Agent Configuration: The CRM Manager
 
@@ -240,6 +244,7 @@ sampleData:
     Customer,Employees,Estimated_Budget_Per_Head,Current_Spend
     BigCorp,1000,50,5000
     Startup,10,50,500
+isPremium: false
 ---
 
 # Agent Configuration: The Account Strategist
@@ -300,6 +305,7 @@ sampleData:
     John,Yes
     John,Yes
     Jane,No
+isPremium: false
 ---
 # Agent Configuration: The Pricing Strategist
 
@@ -350,6 +356,7 @@ sampleData:
   content: |
     SKU,Start_Stock,Current_Stock
     Promo-Item,1000,45
+isPremium: false
 ---
 # Agent Configuration: The Campaign Ops
 
@@ -402,6 +409,7 @@ sampleData:
     1,45
     2,60
     3,40
+isPremium: false
 ---
 
 # Agent Configuration: The AOV Maximizer
@@ -458,6 +466,7 @@ sampleData:
     Order_ID,Customer_LTV,Basket_Value
     101,500,50
     102,2000,150
+isPremium: true
 ---
 # Agent Configuration: The Fulfillment Manager
 
@@ -509,6 +518,7 @@ sampleData:
     101,250,Google Ads
     102,50,Facebook
     103,300,Google Ads
+isPremium: true
 ---
 # Agent Configuration: The Acquisition Manager
 
@@ -560,6 +570,7 @@ sampleData:
     Influencer,Rev,Comm,Disc,COGS
     Alice,1000,100,200,400
     Bob,500,100,50,400
+isPremium: true
 ---
 
 # Agent Configuration: The Partnership Manager
@@ -719,15 +730,17 @@ difficulty: Intermediate
 time: Daily
 archetype: Processor
 description: >-
-  Stockouts cost more than just the missed sale; they cost customer loyalty. This
-  agent quantifies the bleeding and immediately generates a "Recovery Campaign"
-  (Waitlist Email + Incentive) to keep buyers engaged while you restock.
+  Stockouts cost more than just the missed sale; they cost customer loyalty.
+  This agent quantifies the bleeding and immediately generates a "Recovery
+  Campaign" (Waitlist Email + Incentive) to keep buyers engaged while you
+  restock.
 sampleData:
   filename: oos_log.csv
   content: |
     SKU,Visits_Yesterday,Hist_Conv_Rate,Price,Days_Until_Restock
     Red-Dress-S,500,0.03,80,5
     Blue-Tie,50,0.02,20,10
+isPremium: true
 ---
 
 # Agent Configuration: The Inventory Planner
@@ -783,6 +796,7 @@ sampleData:
     Month,Points_Issued,Points_Redeemed
     Jan,10000,500
     Feb,10000,5000
+isPremium: true
 ---
 
 # Agent Configuration: The Loyalty Manager
@@ -834,6 +848,7 @@ sampleData:
     User,Brand_Bought
     John,Nike
     Jane,Adidas
+isPremium: true
 ---
 # Agent Configuration: The Merchandising Marketer
 
@@ -884,6 +899,7 @@ sampleData:
     User,Product_Viewed,View_Date,Current_Price,Old_Price
     John,TV,2023-10-01,400,500
     Jane,Radio,2023-10-01,50,50
+isPremium: true
 ---
 # Agent Configuration: The Email Marketer
 
@@ -988,8 +1004,8 @@ time: Weekly
 archetype: Processor
 description: >-
   Products die when they stop getting reviewed. This agent tracks the "Review
-  Velocity" of your catalog, flagging bestsellers that have gone quiet so you can
-  re-ignite the social proof engine before sales drop.
+  Velocity" of your catalog, flagging bestsellers that have gone quiet so you
+  can re-ignite the social proof engine before sales drop.
 sampleData:
   filename: product_metrics.csv
   content: |
@@ -997,6 +1013,7 @@ sampleData:
     101,Leather Bag,10,2
     102,Wool Hat,5,5
     103,Belt,2,0
+isPremium: true
 ---
 
 # Agent Configuration: The E-commerce Merchandiser
@@ -1051,11 +1068,15 @@ description: >-
   rates.
 sampleData:
   filename: sku_finance.csv
-  content: |
+  content: >
     SKU,Gross_Revenue,COGS,Return_Rate_%,Avg_Shipping_Cost,Restock_Labor_Cost,Total_Orders
+
     T-Shirt,10000,3000,0.25,5,2,1000
+
     Jeans,50000,15000,0.40,8,3,500
+
     Socks,2000,500,0.05,3,1,200
+isPremium: true
 ---
 
 # Agent Configuration: The E-commerce Profit Architect
@@ -1111,6 +1132,7 @@ sampleData:
     User,Product,Date
     John,Sample Kit,2023-10-01
     Jane,Full Bottle,2023-10-01
+isPremium: true
 ---
 # Agent Configuration: The Lifecycle Strategist
 
@@ -1161,6 +1183,7 @@ sampleData:
     SKU,Season,Stock
     Winter-Coat,Winter,500
     Summer-Tee,Summer,10
+isPremium: true
 ---
 
 # Agent Configuration: The Planner
@@ -1272,6 +1295,7 @@ sampleData:
     SKU,Velocity_Score,Stock_Level
     Cool-Jacket,High,50
     Ugly-Hat,Low,500
+isPremium: true
 ---
 # Agent Configuration: The Inventory Planner
 

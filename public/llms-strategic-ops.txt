@@ -23,6 +23,7 @@ sampleData:
     Nike,nike.com,VP of E-commerce
     Delta Airlines,delta.com,Chief Digital Officer
     Spotify,spotify.com,Head of Ad Sales
+isPremium: false
 ---
 
 # Agent Configuration: The ABM Campaign Asset Builder
@@ -90,6 +91,7 @@ sampleData:
     SaasReviewer,Tech Reviews,https://saasreviewer.com
     MarketingWeekly,Newsletter,https://marketingweekly.io
     GrowthHackers,Community,https://growthhackers.com
+isPremium: false
 ---
 
 # Agent Configuration: The Affiliate Program Launcher
@@ -149,6 +151,7 @@ sampleData:
   filename: project_scan_simulation.txt
   content: |
     (No input file needed - this agent reads your actual file system)
+isPremium: false
 ---
 
 # Agent Configuration: The Project Architect
@@ -232,6 +235,7 @@ tags:
 description: >-
   Stop repeating yourself. Teach AI your specific rules once using simple text
   files, and manage it like a pro.
+isPremium: false
 ---
 
 # Agent Configuration: The AI Manager's Handbook
@@ -296,7 +300,7 @@ Think of it as **equipping a toolbelt**. You don't carry a hammer, a drill, and 
 URL: https://realaiexamples.com/skills/api-error-impact-alerter
 Description: Know exactly which VIP customers are seeing 500 errors.
 
---- 
+---
 id: api-error-impact-alerter
 category: Strategic Ops
 title: API Error Impact Alerter
@@ -305,12 +309,14 @@ difficulty: Advanced
 time: Real-time
 archetype: Processor
 description: >-
-  Correlates server logs (500 errors) with Customer Lists. Alerts the CSM immediately if a >$50k ARR customer hits an error.
+  Correlates server logs (500 errors) with Customer Lists. Alerts the CSM
+  immediately if a >$50k ARR customer hits an error.
 sampleData:
   filename: input_data.csv
   content: |
     Error_Log,Customer_IP
     500 Internal Error,192.168.1.5
+isPremium: false
 ---
 
 # Agent Configuration: API Error Impact Alerter
@@ -353,12 +359,14 @@ difficulty: Beginner
 time: Real-time
 archtype: Researcher
 description: >-
-  Uses web search to find recent news, earnings calls, and reviews. Compiles a Strength, Weakness, Opportunity, Threat matrix for your quarterly review.
+  Uses web search to find recent news, earnings calls, and reviews. Compiles a
+  Strength, Weakness, Opportunity, Threat matrix for your quarterly review.
 sampleData:
   filename: input_data.csv
   content: |
     Company_Name,Website
     CompetitorX,https://comp-x.com
+isPremium: false
 ---
 
 # Agent Configuration: Automated SWOT Generator
@@ -410,6 +418,7 @@ sampleData:
     Alice,alice@example.com,Attended,45
     Bob,bob@example.com,No Show,0
     Charlie,charlie@example.com,Attended,5
+isPremium: false
 ---
 
 # Agent Configuration: The Webinar Follow-Up Architect
@@ -487,6 +496,7 @@ sampleData:
     E-commerce Bot,Python & FastAPI,Build a scraper for price monitoring
 
     Internal Tool,React & Supabase,Setup auth and a basic dashboard
+isPremium: false
 ---
 
 # Agent Configuration: The Autonomous Project Manager
@@ -553,6 +563,7 @@ sampleData:
     Alice,alice@example.com,2024-01-05,Mobile App
     Bob,bob@example.com,2024-01-08,API Access
     Charlie,charlie@example.com,2024-01-01,Dark Mode
+isPremium: true
 ---
 
 # Agent Configuration: The Beta Tester Recruiter
@@ -616,6 +627,7 @@ sampleData:
     Input: A CSV with Campaign Name, Spend, and Frequency.
 
     Output: A list of 'Fatigued' campaigns and a suggested budget cut.
+isPremium: true
 ---
 
 # Agent Configuration: The Blueprint Architect
@@ -677,6 +689,7 @@ sampleData:
     SaaStr Annual,10x10,San Francisco
     CES,20x20,Las Vegas
     Web Summit,10x10,Lisbon
+isPremium: true
 ---
 
 # Agent Configuration: The Event Booth Strategist
@@ -735,6 +748,7 @@ sampleData:
     Name,Company,State
     John,Acme,CA
     Jane,Beta,NY
+isPremium: true
 ---
 # Agent Configuration: The Event Ops Specialist
 
@@ -785,6 +799,7 @@ sampleData:
   content: >
     Our software is good because it helps you organize files. It is very secure
     and has 2FA. You can save time.
+isPremium: true
 ---
 
 # Agent Configuration: The Brand Voice Chameleon
@@ -853,6 +868,7 @@ sampleData:
     DesignStream,https://designstream.io,Too Expensive
     CodeCheck,https://codecheck.app,Missing Features
     HealthSync,https://healthsync.com,Not Using It
+isPremium: true
 ---
 
 # Agent Configuration: The Cancellation Flow Auditor
@@ -914,6 +930,7 @@ sampleData:
     Client: ZoomInfo
     Win: They saved 20 hours a week on data entry.
     Champion: Sarah, Sales Ops.
+isPremium: true
 ---
 
 # Agent Configuration: The Case Study Interviewer
@@ -986,6 +1003,7 @@ sampleData:
     users
 
     Zapier v2,Added 5 new triggers for automation,Easier workflow integration
+isPremium: true
 ---
 
 # Agent Configuration: The Changelog Marketer
@@ -1047,6 +1065,7 @@ sampleData:
     Acme Corp, 2023-10-01
     [Partner Reg]
     Acme Corp, 2023-10-02
+isPremium: true
 ---
 
 # Agent Configuration: The Channel Arbitrator
@@ -1105,6 +1124,7 @@ sampleData:
     Partner,Lead_Company,Date
     Reseller A,Acme Corp,2023-10-01
     Reseller B,Gamma Inc,2023-10-02
+isPremium: true
 ---
 
 # Agent Configuration: The Channel Manager
@@ -1156,8 +1176,8 @@ time: Weekly
 archetype: Processor
 description: >-
   New clients ghosting during setup is the #1 cause of early churn. This agent
-  analyzes your onboarding logs, calculates the "Time in Stage" for every client,
-  and flags the ones who are stalling before they ask for a refund.
+  analyzes your onboarding logs, calculates the "Time in Stage" for every
+  client, and flags the ones who are stalling before they ask for a refund.
 sampleData:
   filename: onboarding_logs.csv
   content: |
@@ -1165,6 +1185,7 @@ sampleData:
     Acme Corp,2024-01-01,Technical Integration,2024-01-05,3
     SlowCo,2023-12-15,User Training,2023-12-20,5
     FastBiz,2024-01-10,Go Live,2024-01-12,1
+isPremium: true
 ---
 
 # Agent Configuration: The Implementation Manager
@@ -1226,6 +1247,7 @@ sampleData:
     Comment_Text,User
     Love this!,User A
     Too expensive compared to [Us],User B
+isPremium: true
 ---
 # Agent Configuration: The Social Prospector
 
@@ -1276,6 +1298,7 @@ sampleData:
     Ad 1: "Stop wasting time on spreadsheets. Automate your CRM today."
     Ad 2: "The #1 rated CRM for small business. Try it free."
     Ad 3: "Drowning in data? See why 5,000+ teams switched to Us."
+isPremium: true
 ---
 
 # Agent Configuration: The Ad Library Decoder
@@ -1342,6 +1365,7 @@ sampleData:
     https://hubspot.com/blog/marketing-stats
     https://hubspot.com/blog/email-templates
     https://hubspot.com/blog/instagram-strategy
+isPremium: true
 ---
 
 # Agent Configuration: The Competitor Content Spy
@@ -1416,6 +1440,7 @@ sampleOutput: |
   24/7 Support,Yes,No,Yes
   Free Tier,No,Yes,Yes
   API Access,Yes,Add-on ($),No
+isPremium: true
 ---
 
 # Agent Configuration: The Feature Parity Matrix
@@ -1481,6 +1506,7 @@ sampleData:
     ClickUp,https://clickup.com/pricing
     Monday,https://monday.com/pricing
     Asana,https://asana.com/pricing
+isPremium: true
 ---
 
 # Agent Configuration: The Competitor Pricing Watchdog
@@ -1614,6 +1640,7 @@ sampleData:
     Alice,"I can't find the logout button."
     Bob,"It would be cool if this integrated with Slack."
     Charlie,"The app crashes when I upload a PDF."
+isPremium: true
 ---
 
 # Agent Configuration: The Feedback Auto-Tagger
@@ -1732,6 +1759,7 @@ sampleData:
   content: |
     User: Has anyone tried [Brand]?
     User: Yeah it's great.
+isPremium: true
 ---
 # Agent Configuration: The Community Lead
 
@@ -1783,6 +1811,7 @@ sampleData:
     Reseller A,Tesla HQ,2023-08-01,50000,2023-10-25
     Reseller B,SpaceX Mars,2023-05-01,100000,2023-06-01
     Reseller C,Startup Inc,2023-10-15,5000,2023-10-20
+isPremium: true
 ---
 
 # Agent Configuration: The Partner Revenue Defender
@@ -1956,6 +1985,7 @@ sampleData:
     Distributor,Trailing_Sales,Return_Request_Amt
     Disti A,1000000,50000
     Disti B,500000,100000
+isPremium: true
 ---
 
 # Agent Configuration: The Distribution Manager
@@ -2072,6 +2102,7 @@ sampleData:
     Employee,Shares,Clicks,Reactions
     John,5,50,10
     Jane,10,200,50
+isPremium: true
 ---
 # Agent Configuration: The Social Media Manager
 
@@ -2123,6 +2154,7 @@ sampleData:
     Campaign,Opp_Value,Member_Date,Opp_Date
     Event_X,50000,2023-01-01,2023-02-01
     Event_X,10000,2023-03-01,2023-01-01
+isPremium: true
 ---
 # Agent Configuration: The Marketing Analyst
 
@@ -2175,6 +2207,7 @@ sampleData:
     1,Held
     2,No Show
     3,Held
+isPremium: true
 ---
 # Agent Configuration: The Sales Events Lead
 
@@ -2212,20 +2245,24 @@ Description: Don't just guess. Model the 'Break-Even' scenario before you sign t
 id: event-sponsorship-roi-calculator
 category: Strategic Ops
 title: The Booth ROI Predictor
-tagline: Don't just guess. Model the 'Break-Even' scenario before you sign the contract.
+tagline: >-
+  Don't just guess. Model the 'Break-Even' scenario before you sign the
+  contract.
 difficulty: Intermediate
 time: 5 mins
 archetype: Processor
 description: >-
   Trade shows are money pits if you don't do the math. This agent takes the
-  sponsorship cost and your average deal size to calculate exactly how many scans/leads
-  you need to capture just to break even, helping you negotiate better booth placements.
+  sponsorship cost and your average deal size to calculate exactly how many
+  scans/leads you need to capture just to break even, helping you negotiate
+  better booth placements.
 sampleData:
   filename: event_costs.csv
   content: |
     Event_Name,Total_Cost,Attendees,Avg_Deal_Size,Hist_Close_Rate
     SaaStr,50000,10000,15000,0.02
     Local_Meetup,500,100,5000,0.05
+isPremium: true
 ---
 
 # Agent Configuration: The Event CFO
@@ -2390,18 +2427,21 @@ Description: Prioritize roadmap based on dollars, not noise.
 id: feature-request-arr-weighting
 category: Strategic Ops
 title: Feature Request ARR Weighting
-tagline: Prioritize roadmap based on dollars, not noise.
+tagline: 'Prioritize roadmap based on dollars, not noise.'
 difficulty: Intermediate
 time: Batch
 archtype: Processor
 description: >-
-  Merges your "Feature Request" board with Salesforce data. Calculates the "At-Risk ARR" attached to every missing feature to tell Product what to build next.
+  Merges your "Feature Request" board with Salesforce data. Calculates the
+  "At-Risk ARR" attached to every missing feature to tell Product what to build
+  next.
 sampleData:
   filename: input_data.csv
   content: |
     Feature_Tag,Requesting_Account_IDs
     SSO,Acc1;Acc5;Acc9
     Dark_Mode,Acc2
+isPremium: true
 ---
 
 # Agent Configuration: Feature Request ARR Weighting
@@ -2454,6 +2494,7 @@ sampleData:
     2,Can I use this on my phone?
     3,My eyes hurt, need night mode
     4,Is there an iOS app?
+isPremium: true
 ---
 
 # Agent Configuration: The Product Ops
@@ -2513,6 +2554,7 @@ sampleData:
     Name,Title,Account_Tier
     John,CEO,Tier 1
     Jane,Manager,Tier 3
+isPremium: true
 ---
 # Agent Configuration: The ABM Field Marketer
 
@@ -2564,6 +2606,7 @@ sampleData:
     Product: Asana
     Source: https://www.g2.com/products/asana/reviews
     Source: https://www.capterra.com/p/120537/Asana/reviews
+isPremium: true
 ---
 
 # Agent Configuration: The Voice of Customer Analyzer
@@ -2814,6 +2857,7 @@ sampleData:
     Reviewer,Stars,Comment
     John Doe,5,Best pizza in Chicago!
     Jane Smith,1,Cold pizza and rude service.
+isPremium: true
 ---
 
 # Agent Configuration: The Local Review Responder
@@ -2939,6 +2983,7 @@ sampleData:
     Partner,Deal_Amount,Partner_Confidence
     Reseller X,100000,High
     Reseller Y,50000,Medium
+isPremium: true
 ---
 
 # Agent Configuration: The Channel Revenue Lead
@@ -3103,15 +3148,16 @@ difficulty: Intermediate
 time: 5 mins
 archetype: Hybrid
 description: >-
-  Generic "Just checking in" DMs get ignored. This agent scans the recent content
-  of your "Stalled" influencer deals and drafts a hyper-relevant follow-up that
-  proves you are actually paying attention.
+  Generic "Just checking in" DMs get ignored. This agent scans the recent
+  content of your "Stalled" influencer deals and drafts a hyper-relevant
+  follow-up that proves you are actually paying attention.
 sampleData:
   filename: influencer_pipeline.csv
   content: |
     Handle,Status,Profile_URL
     @tech_guru,Negotiating,https://x.com/tech_guru
     @marketing_maven,Ghosted,https://x.com/marketing_maven
+isPremium: true
 ---
 
 # Agent Configuration: The Relationship Builder
@@ -3161,15 +3207,16 @@ difficulty: Beginner
 time: Campaign End
 archetype: Processor
 description: >-
-  Vanity metrics (Likes) rarely correlate with Wallet metrics (Sales). This agent
-  analyzes your influencer roster to classify them into "Brand Awareness Plays"
-  vs "Sales Drivers," helping you cut the dead weight.
+  Vanity metrics (Likes) rarely correlate with Wallet metrics (Sales). This
+  agent analyzes your influencer roster to classify them into "Brand Awareness
+  Plays" vs "Sales Drivers," helping you cut the dead weight.
 sampleData:
   filename: influencer_performance.csv
   content: |
     Influencer,Cost,Sales,Engagement_Rate,Impressions
     TikTokStar,5000,200,0.15,1000000
     NicheBlogger,500,2000,0.05,5000
+isPremium: true
 ---
 
 # Agent Configuration: The CFO
@@ -3226,6 +3273,7 @@ sampleData:
     Influencer,Required_Date,Actual_Post_Date
     Alice,2023-10-01,2023-10-01
     Bob,2023-10-01,NULL
+isPremium: true
 ---
 # Agent Configuration: The Influencer Manager
 
@@ -3316,7 +3364,7 @@ For each niche in the CSV:
 URL: https://realaiexamples.com/skills/interview-answer-rubric-scorer
 Description: Remove bias from your hiring process.
 
---- 
+---
 id: interview-answer-rubric-scorer
 category: Strategic Ops
 title: Interview Answer Rubric Scorer
@@ -3325,12 +3373,14 @@ difficulty: Intermediate
 time: Batch
 archetype: Processor
 description: >-
-  Takes raw interview notes or transcripts. Scores the candidate's answer to "Tell me about a conflict" against a pre-set rubric (STAR method).
+  Takes raw interview notes or transcripts. Scores the candidate's answer to
+  "Tell me about a conflict" against a pre-set rubric (STAR method).
 sampleData:
   filename: input_data.csv
   content: |
     Candidate,Question,Answer_Text
     John,"Conflict","I just avoided it."
+isPremium: true
 ---
 
 # Agent Configuration: Interview Answer Rubric Scorer
@@ -3439,6 +3489,7 @@ sampleData:
     Website: www.hubspot.com
     Audience: Marketing Managers, Sales Leaders
     Goal: Capture leads for CRM software.
+isPremium: true
 ---
 
 # Agent Configuration: The Lead Magnet Factory
@@ -3644,6 +3695,7 @@ sampleData:
     Template_ID,Sent,Accepted
     A (Generic),100,20
     B (Personalized),100,45
+isPremium: true
 ---
 # Agent Configuration: The Social Selling Coach
 
@@ -3753,6 +3805,7 @@ sampleData:
   filename: topic.txt
   content: |
     Remote Work vs. Office Return
+isPremium: true
 ---
 
 # Agent Configuration: The Viral Poll Builder
@@ -3817,6 +3870,7 @@ sampleData:
     Email,Status,Lists
     john@acme.com,Customer,Prospect_Nurture;Newsletter
     jane@beta.com,Prospect,Prospect_Nurture
+isPremium: true
 ---
 
 # Agent Configuration: The Marketing Automation Ops
@@ -3867,13 +3921,16 @@ difficulty: Advanced
 time: Real-time
 archtype: Hybrid
 description: >-
-  Simulates the regulatory, cultural, and competitive friction of entering a new market (e.g., "SaaS in Germany"). Lists specific GDPR and localization blockers.
+  Simulates the regulatory, cultural, and competitive friction of entering a new
+  market (e.g., "SaaS in Germany"). Lists specific GDPR and localization
+  blockers.
 sampleData:
   filename: input_data.csv
   content: |
     Target_Market,Product_Type
     Germany,HR_SaaS
     Japan,Social_App
+isPremium: true
 ---
 
 # Agent Configuration: New Market Entry Simulator
@@ -3924,6 +3981,7 @@ sampleData:
     Partner,Approved_Amt,Receipt_Amt
     Partner X,1000,950
     Partner Y,500,600
+isPremium: true
 ---
 
 # Agent Configuration: The Partner Finance
@@ -3965,7 +4023,7 @@ sampleData
 URL: https://realaiexamples.com/skills/meeting-action-item-enforcer
 Description: The AI project manager that nags you about tasks.
 
---- 
+---
 id: meeting-action-item-enforcer
 category: Strategic Ops
 title: Meeting Action Item Enforcer
@@ -3974,12 +4032,14 @@ difficulty: Intermediate
 time: Batch
 archetype: Processor
 description: >-
-  Parses meeting transcripts for "I will..." or "Let's...". Creates a checklist. If the task isn't marked done in the next meeting, it flags it.
+  Parses meeting transcripts for "I will..." or "Let's...". Creates a checklist.
+  If the task isn't marked done in the next meeting, it flags it.
 sampleData:
   filename: input_data.csv
   content: |
     Meeting_Date,Transcript_Snippet
     Oct 1,"I will fix the bug by Friday"
+isPremium: true
 ---
 
 # Agent Configuration: Meeting Action Item Enforcer
@@ -4023,14 +4083,15 @@ time: Batch
 archetype: Processor
 description: >-
   Data dumping causes churn. This agent transforms raw client performance CSVs
-  into a cohesive narrative arc: "The Big Win" (What went right), "The
-  Learning" (What went wrong), and "The Ask" (What you need next).
+  into a cohesive narrative arc: "The Big Win" (What went right), "The Learning"
+  (What went wrong), and "The Ask" (What you need next).
 sampleData:
   filename: client_data.csv
   content: |
     Client,Revenue_MoM,Leads_MoM,Spend,Budget_Remaining
     Acme,+20%,+5%,10000,5000
     Beta,-5%,-10%,20000,0
+isPremium: true
 ---
 
 # Agent Configuration: The Account Strategist
@@ -4148,6 +4209,7 @@ sampleData:
     john@acme.com
     support@tesla.com
     bill@temp-mail.org
+isPremium: true
 ---
 
 # Agent Configuration: The Email Architect
@@ -4319,14 +4381,15 @@ time: Monthly
 archetype: Processor
 description: >-
   Don't track certs in spreadsheets. This agent scans your partner database,
-  identifies certifications expiring in the next 30/60/90 days, and drafts personalized
-  "Renewal Nudge" emails to keep them compliant.
+  identifies certifications expiring in the next 30/60/90 days, and drafts
+  personalized "Renewal Nudge" emails to keep them compliant.
 sampleData:
   filename: cert_log.csv
   content: |
     Partner,Contact_Email,Cert_Name,Expiry_Date
     Acme Resellers,john@acme.com,Solutions Architect,2024-02-01
     Beta Systems,jane@beta.com,Sales Pro,2023-12-01
+isPremium: true
 ---
 
 # Agent Configuration: The Enablement Manager
@@ -4386,6 +4449,7 @@ sampleData:
     John,UK
     Jane,US
     Bob,US
+isPremium: true
 ---
 # Agent Configuration: The Partner Marketing Manager
 
@@ -4495,6 +4559,7 @@ sampleData:
     TechGuys LLC,Reseller,2023-01-01,5
     Blog Affiliate,Referral,2023-05-01,50
     Consulting Inc,Reseller,2023-10-25,2
+isPremium: true
 ---
 
 # Agent Configuration: The Partner Activation Engine
@@ -4549,6 +4614,7 @@ sampleData:
     Reseller A,120000,Silver
     Reseller B,45000,Silver
     Reseller C,250000,Gold
+isPremium: true
 ---
 
 # Agent Configuration: The Channel Manager
@@ -4724,6 +4790,7 @@ sampleData:
     Freelance Designers,Scope Creep,Reddit
     SaaS Ops Managers,Data Silos,LinkedIn
     E-com Store Owners,Ad Costs,Twitter
+isPremium: true
 ---
 
 # Agent Configuration: The AI Persona Researcher
@@ -4790,14 +4857,15 @@ difficulty: Intermediate
 time: Real-time
 archtype: Processor
 description: >-
-  Upload your pitch deck text. The agent adopts the persona of a cynical Series A investor and highlights every logic gap, weak metric, or confusing slide.
+  Upload your pitch deck text. The agent adopts the persona of a cynical Series
+  A investor and highlights every logic gap, weak metric, or confusing slide.
 sampleData:
   filename: input_data.csv
   content: |
     Slide_Number,Slide_Text
     1,"We are the Uber for Cats"
     2,"TAM is $500 Trillion"
-    
+isPremium: true
 ---
 
 # Agent Configuration: The VC Pitch Deck Roast
@@ -4912,6 +4980,7 @@ sampleData:
     Product: Athletic Greens
     Benefit: 75 vitamins in one scoop. Gut health.
     Offer: Free travel packs.
+isPremium: true
 ---
 
 # Agent Configuration: The Podcast Ad Script Writer
@@ -4980,6 +5049,7 @@ sampleData:
     B2B Sales
     SaaS Marketing
     Artificial Intelligence
+isPremium: true
 ---
 
 # Agent Configuration: The Podcast Guest Prospector
@@ -5107,6 +5177,7 @@ sampleData:
     Lead,Upload_Time,First_Call_Time
     L1,2023-10-01 09:00,2023-10-01 14:00
     L2,2023-10-01 09:00,NULL
+isPremium: true
 ---
 # Agent Configuration: The Lead Gen Ops
 
@@ -5140,7 +5211,7 @@ Enforce event lead SLA compliance.
 URL: https://realaiexamples.com/skills/pr-crisis-severity-scorer
 Description: Decide if you need to wake up the CEO.
 
---- 
+---
 id: pr-crisis-severity-scorer
 category: Strategic Ops
 title: PR Crisis Severity Scorer
@@ -5149,12 +5220,15 @@ difficulty: Intermediate
 time: Real-time
 archetype: Processor
 description: >-
-  Ingests a negative press mention. Scores it based on "Outlet Reach", "Sentiment", and "Factuality". Outputs: "Ignore", "Monitor", or "Crisis Response Needed".
+  Ingests a negative press mention. Scores it based on "Outlet Reach",
+  "Sentiment", and "Factuality". Outputs: "Ignore", "Monitor", or "Crisis
+  Response Needed".
 sampleData:
   filename: input_data.csv
   content: |
     Article_URL,Outlet_Tier
     nytimes.com,Tier1
+isPremium: true
 ---
 
 # Agent Configuration: PR Crisis Severity Scorer
@@ -5206,6 +5280,7 @@ sampleData:
     John,San Francisco,CA
     Jane,San Jose,CA
     Bob,New York,NY
+isPremium: true
 ---
 # Agent Configuration: The Field Marketer
 
@@ -5259,6 +5334,7 @@ sampleData:
     Quote: CEO Jane Doe says "It's like spellcheck for reality."
     Date: Oct 12, 2026
     Location: San Francisco
+isPremium: true
 ---
 
 # Agent Configuration: The Press Release Architect
@@ -5392,6 +5468,7 @@ sampleData:
     Rep,Has_Headshot,Headline_Length
     John,Yes,5
     Jane,Yes,50
+isPremium: true
 ---
 # Agent Configuration: The Brand Compliance Agent
 
@@ -5444,6 +5521,7 @@ sampleData:
     Acme Corp,Low website conversion,Double trial signups,Enterprise
     Glow Skincare,High CAC on Meta,Sub-$20 customer acquisition,Growth
     TechFlow SaaS,Manual sales onboarding,Automate 80% of setup,Mid-Market
+isPremium: true
 ---
 
 # Agent Configuration: The High-Ticket Proposal Writer
@@ -5578,6 +5656,7 @@ sampleData:
   content: |
     Deal_ID,Total_Amt,Source_P,Impl_P
     Deal-1,10000,Partner A,Partner B
+isPremium: true
 ---
 
 # Agent Configuration: The Partner Analyst
@@ -5757,6 +5836,7 @@ sampleData:
     Partner,Product,Advertised_Price,MAP_Threshold
     Shop A,Widget X,95,100
     Shop B,Widget X,105,100
+isPremium: true
 ---
 
 # Agent Configuration: The Compliance Officer
@@ -5933,6 +6013,7 @@ sampleData:
   content: |
     Product,Base_Cost,Target_Margin,Key_Feature_1,Key_Feature_2,Key_Feature_3
     CloudApp,10,0.80,Basic Storage,API Access,SSO
+isPremium: true
 ---
 
 # Agent Configuration: The Pricing Psychologist
@@ -6051,6 +6132,7 @@ sampleData:
   content: |
     My_Sitemap: https://mywebsite.com/sitemap.xml
     Competitor_Sitemap: https://competitor.com/sitemap.xml
+isPremium: true
 ---
 
 # Agent Configuration: The SEO Content Gap Mapper
@@ -6133,6 +6215,7 @@ sampleData:
     /blog/catchy-subject-lines,Subject Lines
 
     /blog/list-building-101,List Building
+isPremium: true
 ---
 
 # Agent Configuration: The Internal Link Graph Builder
@@ -6198,6 +6281,7 @@ sampleData:
     /blog/cats,Cats,Cat Care Tips
     /products/shoes,,Running Shoes
     /about,About Us - Company Name,
+isPremium: true
 ---
 
 # Agent Configuration: The Bulk Meta Tag Writer
@@ -6242,7 +6326,7 @@ Start now.
 URL: https://realaiexamples.com/skills/slack-contextual-welcomer
 Description: Welcome new members based on their bio.
 
---- 
+---
 id: slack-contextual-welcomer
 category: Strategic Ops
 title: Slack Community Contextual Welcomer
@@ -6251,12 +6335,14 @@ difficulty: Beginner
 time: Real-time
 archetype: Processor
 description: >-
-  Reads the "Intro" channel. If they say "I'm a marketer", reply with link to #marketing channel. If "Dev", link to #api.
+  Reads the "Intro" channel. If they say "I'm a marketer", reply with link to
+  #marketing channel. If "Dev", link to #api.
 sampleData:
   filename: input_data.csv
   content: |
     User_Intro,Channels
     "Hi I am a dev...",#general
+isPremium: true
 ---
 
 # Agent Configuration: Slack Community Contextual Welcomer
@@ -6307,6 +6393,7 @@ sampleData:
     Prospect,Engagement_Date,Deal_Created_Date
     John,2023-10-01,2023-10-05
     Jane,2023-10-01,NULL
+isPremium: true
 ---
 # Agent Configuration: The Attribution Specialist
 
@@ -6359,6 +6446,7 @@ sampleData:
     John (Dialer),100,5,2
     Jane (Social),20,50,5
     Mike (Lazy),10,0,0
+isPremium: true
 ---
 # Agent Configuration: The Social Selling Behavior Coach
 
@@ -6411,6 +6499,7 @@ sampleData:
   content: |
     Name,Old_Company,New_Company,New_Role
     John Doe,HappyClient Inc,Prospect Corp,VP Sales
+isPremium: true
 ---
 # Agent Configuration: The SDR
 
@@ -6461,6 +6550,7 @@ sampleData:
     Attendee_Email,Session_Name,Opp_Created_Date
     john@acme.com,Keynote,2023-10-15
     jane@beta.com,Keynote,NULL
+isPremium: true
 ---
 # Agent Configuration: The Content Strategist
 
@@ -6503,14 +6593,15 @@ difficulty: Beginner
 time: Batch
 archtype: Processor
 description: >-
-  Reads the #standup channel. Ignores "What I did yesterday". Extracts only items listed under "Blockers" and groups them by department.
+  Reads the #standup channel. Ignores "What I did yesterday". Extracts only
+  items listed under "Blockers" and groups them by department.
 sampleData:
   filename: input_data.csv
   content: |
     User,Message_Text
     Dev1,"...Blocker: API is down"
     Dev2,"...Blocker: Waiting on Design"
-    
+isPremium: true
 ---
 
 # Agent Configuration: Standup Blocker Extractor
@@ -6561,6 +6652,7 @@ sampleData:
     Event,Expected_Attendees,Hist_Swag_Rate
     TechConf,5000,0.2
     LocalMeetup,100,0.5
+isPremium: true
 ---
 # Agent Configuration: The Event Logistics Lead
 
@@ -6905,6 +6997,7 @@ sampleData:
     Hook_Text,Impressions,Clicks
     I made $1M in 2 days...,10000,500
     Here is a thread about sales...,1000,10
+isPremium: true
 ---
 # Agent Configuration: The Copywriter Agent
 
@@ -7020,6 +7113,7 @@ sampleData:
     Acme,Austin
     Beta,Austin
     Gamma,Dallas
+isPremium: true
 ---
 # Agent Configuration: The Community Manager
 
@@ -7197,6 +7291,7 @@ sampleData:
     https://techcrunch.com/apps/
     https://www.theverge.com/tech
     https://news.ycombinator.com/
+isPremium: true
 ---
 
 # Agent Configuration: The Newsletter Content Curator
@@ -7326,6 +7421,7 @@ sampleData:
     Industry: Supply Chain Logistics
     Target: Enterprise COOs
     Product: AI Route Optimization
+isPremium: true
 ---
 
 # Agent Configuration: The White Paper Ideator

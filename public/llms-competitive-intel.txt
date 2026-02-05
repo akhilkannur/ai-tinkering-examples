@@ -5,20 +5,23 @@ URL: https://realaiexamples.com/skills/ad-copy-benchmarker
 Description: Did they change their value prop?
 
 ---
-id: "ad-copy-benchmarker"
-category: "Competitive Intel"
-title: "Ad Copy Pivot Detector"
-tagline: "Did they change their value prop?"
-difficulty: "Intermediate"
-time: "Weekly"
-archetype: "Processor"
-description: "Compares active competitor ad headlines week-over-week to detect strategic messaging shifts."
+id: ad-copy-benchmarker
+category: Competitive Intel
+title: Ad Copy Pivot Detector
+tagline: Did they change their value prop?
+difficulty: Intermediate
+time: Weekly
+archetype: Processor
+description: >-
+  Compares active competitor ad headlines week-over-week to detect strategic
+  messaging shifts.
 sampleData:
-  filename: "competitor_ads.csv"
+  filename: competitor_ads.csv
   content: |
     Competitor,Date,Headline
     Comp A,2023-10-01,Save time.
     Comp A,2023-10-08,Save money.
+isPremium: false
 ---
 
 # Agent Configuration: The Creative Strategist
@@ -73,6 +76,7 @@ sampleData:
     Name,Review_URL
     Competitor_A,https://g2.com/competitor-a
     Competitor_B,https://capterra.com/competitor-b
+isPremium: false
 ---
 
 # Agent Configuration: The Attack Dog
@@ -132,6 +136,7 @@ sampleData:
     Competitor,Ad_URL,Angle
     Competitor_A,https://fb.com/ads/123,UGC
     Competitor_B,https://fb.com/ads/456,Discount
+isPremium: false
 ---
 
 # Agent Configuration: The Ad Library Archivist
@@ -189,6 +194,7 @@ sampleData:
     Vanta,https://vanta.com,Compliance
     Mercury,https://mercury.com,Banking
     Loom,https://loom.com,Video Messaging
+isPremium: false
 ---
 
 # Agent Configuration: The Case Study Decoder
@@ -254,6 +260,7 @@ sampleData:
     [After]
     Header: The Enterprise Platform for Scale.
     Price: Call Sales
+isPremium: false
 ---
 
 # Agent Configuration: The Competitive Analyst
@@ -297,20 +304,23 @@ URL: https://realaiexamples.com/skills/competitor-employee-churn-monitor
 Description: Did their VP of Sales just quit?
 
 ---
-id: "competitor-employee-churn-monitor"
-category: "Competitive Intel"
-title: "Competitor Brain Drain"
-tagline: "Did their VP of Sales just quit?"
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Tracks departures from key competitor roles (Sales VP, Product Lead) via LinkedIn signal data."
+id: competitor-employee-churn-monitor
+category: Competitive Intel
+title: Competitor Brain Drain
+tagline: Did their VP of Sales just quit?
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Tracks departures from key competitor roles (Sales VP, Product Lead) via
+  LinkedIn signal data.
 sampleData:
-  filename: "employee_signals.csv"
+  filename: employee_signals.csv
   content: |
     Competitor,Role,Name,Status
     Comp A,VP Sales,John Doe,Left
     Comp A,CTO,Jane Smith,Active
+isPremium: false
 ---
 
 # Agent Configuration: The Market Intelligence Analyst
@@ -347,20 +357,24 @@ URL: https://realaiexamples.com/skills/competitor-feature-parity
 Description: Don't guess what they have. Scrape their pricing page to prove it.
 
 ---
-id: "competitor-feature-parity"
-category: "Competitive Intel"
-title: "The Feature Gap Detective"
-tagline: "Don't guess what they have. Scrape their pricing page to prove it."
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Hybrid"
-description: "Manual feature matrices are always out of date. This agent visits competitor pricing and feature pages, scrapes the 'Included' lists, and organizes them into a comparison matrix to find what you are missing."
+id: competitor-feature-parity
+category: Competitive Intel
+title: The Feature Gap Detective
+tagline: Don't guess what they have. Scrape their pricing page to prove it.
+difficulty: Intermediate
+time: Monthly
+archetype: Hybrid
+description: >-
+  Manual feature matrices are always out of date. This agent visits competitor
+  pricing and feature pages, scrapes the 'Included' lists, and organizes them
+  into a comparison matrix to find what you are missing.
 sampleData:
-  filename: "competitor_urls.csv"
+  filename: competitor_urls.csv
   content: |
     Competitor,Pricing_Page_URL
     Competitor A,https://competitor-a.com/pricing
     Competitor B,https://competitor-b.com/features
+isPremium: false
 ---
 
 # Agent Configuration: The Product Spy
@@ -399,6 +413,7 @@ For each Competitor:
 2.  **Columns:** `Competitor`, `Feature_Found`, `Status` (Gap/Parity).
 3.  **Summary:** "Scraped [X] features. Identified [Y] potential gaps in our offering."
 
+
 ---
 
 ## The Market Hiring Spy
@@ -415,14 +430,15 @@ time: Monthly
 archetype: Hybrid
 description: >-
   Job boards reveal secret strategies. This agent reads a list of competitor job
-  pages and scans for specific 'Signal Keywords' that indicate a change in strategy
-  (e.g., a sudden spike in 'Enterprise' or 'Partner' roles).
+  pages and scans for specific 'Signal Keywords' that indicate a change in
+  strategy (e.g., a sudden spike in 'Enterprise' or 'Partner' roles).
 sampleData:
   filename: competitor_targets.csv
   content: |
     Company,Careers_URL
     Competitor_A,https://competitor-a.com/jobs
     Competitor_B,https://competitor-b.com/careers
+isPremium: false
 ---
 
 # Agent Configuration: The Market Hiring Spy
@@ -477,10 +493,10 @@ time: Weekly
 archetype: Processor
 isPremium: true
 description: >-
-  Don't just copy competitor ads - understand WHY they work. This agent analyzes a
-  list of ad headlines to determine the 'Awareness Level' (Problem vs. Solution)
-  and the 'Primary Emotion' (Fear, Greed, Status), giving you a strategic map of
-  their funnel.
+  Don't just copy competitor ads - understand WHY they work. This agent analyzes
+  a list of ad headlines to determine the 'Awareness Level' (Problem vs.
+  Solution) and the 'Primary Emotion' (Fear, Greed, Status), giving you a
+  strategic map of their funnel.
 sampleData:
   filename: competitor_ads.csv
   content: >
@@ -552,6 +568,7 @@ sampleData:
     CompetitorA
     CompetitorB
     CompetitorC
+isPremium: true
 ---
 
 # Agent Configuration: The Intel Analyst
@@ -612,6 +629,7 @@ sampleData:
     Linear,onboarding_vault/linear/,Speed and Keyboard Shortcuts
     PostHog,onboarding_vault/posthog/,Data Ingestion
     Beehiiv,onboarding_vault/beehiiv/,Newsletter Setup
+isPremium: true
 ---
 
 # Agent Configuration: The Onboarding Teardown Factory
@@ -672,6 +690,7 @@ sampleData:
     Company,URL
     Competitor_A,https://competitor-a.com/pricing
     Competitor_B,https://competitor-b.com/plans
+isPremium: true
 ---
 
 # Agent Configuration: The Price Watchdog Fleet
@@ -733,6 +752,7 @@ sampleData:
     Basic Plan,29,https://competitor.com/pricing
     Pro Plan,99,https://competitor.com/pricing
     Enterprise,299,https://competitor.com/enterprise
+isPremium: true
 ---
 
 # Agent Configuration: The Pricing Strategist
@@ -779,20 +799,23 @@ URL: https://realaiexamples.com/skills/competitor-promo-code-tracker
 Description: Are they running a secret 20% off?
 
 ---
-id: "competitor-promo-code-tracker"
-category: "Competitive Intel"
-title: "Competitor Discount Tracker"
-tagline: "Are they running a secret 20% off?"
-difficulty: "Intermediate"
-time: "Weekly"
-archetype: "Processor"
-description: "Scrapes competitor checkout pages or email newsletters to log active promo codes and discount depths."
+id: competitor-promo-code-tracker
+category: Competitive Intel
+title: Competitor Discount Tracker
+tagline: Are they running a secret 20% off?
+difficulty: Intermediate
+time: Weekly
+archetype: Processor
+description: >-
+  Scrapes competitor checkout pages or email newsletters to log active promo
+  codes and discount depths.
 sampleData:
-  filename: "promo_logs.csv"
+  filename: promo_logs.csv
   content: |
     Competitor,Code,Discount,Date_Found
     Comp A,WELCOME20,20%,2023-10-01
     Comp B,FREESHIP,Shipping,2023-10-02
+isPremium: true
 ---
 
 # Agent Configuration: The Pricing Analyst
@@ -837,13 +860,15 @@ difficulty: Advanced
 time: Batch
 archtype: Researcher
 description: >-
-  Uses Vision capabilities to analyze screenshots of competitor apps or landing pages. Identifies layout patterns, CTA placements, and color psychology usage.
+  Uses Vision capabilities to analyze screenshots of competitor apps or landing
+  pages. Identifies layout patterns, CTA placements, and color psychology usage.
 sampleData:
   filename: input_data.csv
   content: |
     Competitor,Screenshot_URL
     Slack,https://slack.com/img1.png
     Discord,https://discord.com/img2.png
+isPremium: true
 ---
 
 # Agent Configuration: The Competitor UI/UX Decoder
@@ -895,6 +920,7 @@ sampleData:
     Intercom,https://intercom.com,Customer Service
     Zendesk,https://zendesk.com,Help Desk
     Drift,https://drift.com,Conversational Marketing
+isPremium: true
 ---
 
 # Agent Configuration: The Market Spy
@@ -971,6 +997,7 @@ sampleData:
     Intercom,https://www.intercom.com
     HubSpot,https://www.hubspot.com
     Drift,https://www.drift.com
+isPremium: true
 ---
 
 # Agent Configuration: The Tech Stack Spy
@@ -1028,12 +1055,14 @@ difficulty: Advanced
 time: Batch
 archtype: Researcher
 description: >-
-  Text scrapers miss "per user" badges or layout shifts. This agent visually compares screenshots of pricing pages over time to highlight strategic shifts.
+  Text scrapers miss "per user" badges or layout shifts. This agent visually
+  compares screenshots of pricing pages over time to highlight strategic shifts.
 sampleData:
   filename: input_data.csv
   content: |
     Competitor,URL,Last_Screenshot_Path
     CompetitorA,https://comp-a.com/pricing,./screens/date1.png
+isPremium: true
 ---
 
 # Agent Configuration: Visual Pricing Page Monitor
@@ -1068,20 +1097,23 @@ URL: https://realaiexamples.com/skills/competitor-webinar-spy
 Description: What topics are they pitching?
 
 ---
-id: "competitor-webinar-spy"
-category: "Competitive Intel"
-title: "Competitor Event Monitor"
-tagline: "What topics are they pitching?"
-difficulty: "Beginner"
-time: "Monthly"
-archetype: "Processor"
-description: "Monitors competitor event pages to track their marketing themes and webinar topics."
+id: competitor-webinar-spy
+category: Competitive Intel
+title: Competitor Event Monitor
+tagline: What topics are they pitching?
+difficulty: Beginner
+time: Monthly
+archetype: Processor
+description: >-
+  Monitors competitor event pages to track their marketing themes and webinar
+  topics.
 sampleData:
-  filename: "event_scrape.csv"
+  filename: event_scrape.csv
   content: |
     Competitor,Event_Title,Date
     Comp A,AI for Sales,2023-11-01
     Comp B,Cloud Security,2023-11-15
+isPremium: true
 ---
 
 # Agent Configuration: The Event Marketer
@@ -1134,6 +1166,7 @@ sampleData:
     Jan,Comp X,Won
     Jan,Comp X,Lost
     Feb,Comp X,Lost
+isPremium: true
 ---
 
 # Agent Configuration: The Competitive Analyst
@@ -1176,20 +1209,23 @@ URL: https://realaiexamples.com/skills/feature-parity-matrix-builder
 Description: Auto-update your comparison grid.
 
 ---
-id: "feature-parity-matrix-builder"
-category: "Competitive Intel"
-title: "Feature Parity Bot"
-tagline: "Auto-update your comparison grid."
-difficulty: "Intermediate"
-time: "Quarterly"
-archetype: "Processor"
-description: "Scrapes 'Pricing' and 'Features' pages to build a binary (Yes/No) comparison grid of features."
+id: feature-parity-matrix-builder
+category: Competitive Intel
+title: Feature Parity Bot
+tagline: Auto-update your comparison grid.
+difficulty: Intermediate
+time: Quarterly
+archetype: Processor
+description: >-
+  Scrapes 'Pricing' and 'Features' pages to build a binary (Yes/No) comparison
+  grid of features.
 sampleData:
-  filename: "feature_scrape.csv"
+  filename: feature_scrape.csv
   content: |
     Competitor,Feature,Status
     Comp A,SSO,Included
     Comp B,SSO,Add-on
+isPremium: true
 ---
 
 # Agent Configuration: The Product Marketing Manager
@@ -1537,20 +1573,23 @@ URL: https://realaiexamples.com/skills/review-keyword-extractor
 Description: What do people hate about your competitor?
 
 ---
-id: "review-keyword-extractor"
-category: "Competitive Intel"
-title: "Review Keyword Miner"
-tagline: "What do people hate about your competitor?"
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Extracts common 2-word and 3-word phrases from competitor G2/Capterra reviews to find product weaknesses."
+id: review-keyword-extractor
+category: Competitive Intel
+title: Review Keyword Miner
+tagline: What do people hate about your competitor?
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Extracts common 2-word and 3-word phrases from competitor G2/Capterra reviews
+  to find product weaknesses.
 sampleData:
-  filename: "competitor_reviews.csv"
+  filename: competitor_reviews.csv
   content: |
     Competitor,Review_Text
     Comp A,The UI is so slow and buggy.
     Comp A,Support never replies.
+isPremium: true
 ---
 
 # Agent Configuration: The Product Marketer
@@ -1644,20 +1683,23 @@ URL: https://realaiexamples.com/skills/serp-conquesting-planner
 Description: Steal traffic where they are weak.
 
 ---
-id: "serp-conquesting-planner"
-category: "Competitive Intel"
-title: "SERP Conquest Planner"
-tagline: "Steal traffic where they are weak."
-difficulty: "Advanced"
-time: "Monthly"
-archetype: "Processor"
-description: "Identifies keywords where competitors rank in top positions but have low page authority, signaling a takeover opportunity."
+id: serp-conquesting-planner
+category: Competitive Intel
+title: SERP Conquest Planner
+tagline: Steal traffic where they are weak.
+difficulty: Advanced
+time: Monthly
+archetype: Processor
+description: >-
+  Identifies keywords where competitors rank in top positions but have low page
+  authority, signaling a takeover opportunity.
 sampleData:
-  filename: "serp_weakness.csv"
+  filename: serp_weakness.csv
   content: |
     Keyword,Competitor_Rank,Page_Authority
     best crm,1,20
     crm pricing,3,15
+isPremium: true
 ---
 
 # Agent Configuration: The SEO Manager
@@ -1754,20 +1796,23 @@ URL: https://realaiexamples.com/skills/technographic-prospector
 Description: Find leads using specific software.
 
 ---
-id: "technographic-prospector"
-category: "Competitive Intel"
-title: "Technographic Prospector"
-tagline: "Find leads using specific software."
-difficulty: "Advanced"
-time: "Monthly"
-archetype: "Processor"
-description: "Analyzes job descriptions or source code signatures to identify companies using specific competitors' tech stacks."
+id: technographic-prospector
+category: Competitive Intel
+title: Technographic Prospector
+tagline: Find leads using specific software.
+difficulty: Advanced
+time: Monthly
+archetype: Processor
+description: >-
+  Analyzes job descriptions or source code signatures to identify companies
+  using specific competitors' tech stacks.
 sampleData:
-  filename: "tech_signals.csv"
+  filename: tech_signals.csv
   content: |
     Company,Signal_Source,Technology_Detected
     Acme,Job Post,Salesforce
     Beta,Source Code,HubSpot
+isPremium: true
 ---
 
 # Agent Configuration: The Sales Engineer
@@ -1864,20 +1909,23 @@ URL: https://realaiexamples.com/skills/win-loss-competitor-trends
 Description: Are we losing more to Comp A or B?
 
 ---
-id: "win-loss-competitor-trends"
-category: "Competitive Intel"
-title: "Competitor Win/Loss Trend"
-tagline: "Are we losing more to Comp A or B?"
-difficulty: "Intermediate"
-time: "Quarterly"
-archetype: "Processor"
-description: "Analyzes CRM data to visualize win rate trends against specific competitors over time."
+id: win-loss-competitor-trends
+category: Competitive Intel
+title: Competitor Win/Loss Trend
+tagline: Are we losing more to Comp A or B?
+difficulty: Intermediate
+time: Quarterly
+archetype: Processor
+description: >-
+  Analyzes CRM data to visualize win rate trends against specific competitors
+  over time.
 sampleData:
-  filename: "competitor_outcomes.csv"
+  filename: competitor_outcomes.csv
   content: |
     Quarter,Competitor,Win_Rate
     Q1,Comp A,40%
     Q2,Comp A,30%
+isPremium: true
 ---
 
 # Agent Configuration: The Sales Analyst

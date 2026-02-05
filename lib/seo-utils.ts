@@ -67,7 +67,12 @@ export function generateHowToSchema(recipe: Recipe, siteUrl: string, imageUrl?: 
   };
 
   if (imageUrl) {
-    schema.image = imageUrl;
+    schema.image = {
+      "@type": "ImageObject",
+      "url": imageUrl,
+      "width": "1200",
+      "height": "630"
+    };
   }
 
   return schema;

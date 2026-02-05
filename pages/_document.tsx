@@ -4,6 +4,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
+        <meta name="p:domain_verify" content="294492faf62c3b7471fc55216504d47a"/>
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://connect.facebook.net" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />

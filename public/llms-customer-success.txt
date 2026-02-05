@@ -21,6 +21,7 @@ sampleData:
     Customer,Last_Request_Date
     Acme,2023-10-01
     Beta,2023-01-01
+isPremium: false
 ---
 # Agent Configuration: The Relationship Manager
 
@@ -72,6 +73,7 @@ sampleData:
     User,Beta_Feature_Usage
     John,0
     Jane,50
+isPremium: false
 ---
 # Agent Configuration: The Product Feedback Loop Manager
 
@@ -126,6 +128,7 @@ sampleData:
     Customer,Spend,Tenure_Yrs,Strategic_Fit
     Acme,1M,5,High
     Beta,10k,1,Low
+isPremium: false
 ---
 # Agent Configuration: The Executive Sponsor
 
@@ -178,6 +181,7 @@ sampleData:
     Acme Corp,Manufacturing,2019-06-15,Enterprise
     TechStart,SaaS,2023-01-20,SMB
     GlobalBank,Fintech,2018-11-01,Enterprise
+isPremium: false
 ---
 # Agent Configuration: The Social Proof Strategist
 
@@ -213,22 +217,25 @@ Generate `sales_enablement_alert.md`:
 URL: https://realaiexamples.com/skills/churn-exit-interview-analyzer
 Description: Quantify why customers leave.
 
---- 
-id: "churn-exit-interview-analyzer"
-category: "Customer Success"
-title: "Churn Reason Aggregator"
-tagline: "Quantify why customers leave."
-difficulty: "Intermediate"
-time: "Monthly"
-archtype: "Processor"
-description: "Aggregates structured exit survey data to find the top 3 reasons for cancellation."
+---
+id: churn-exit-interview-analyzer
+category: Customer Success
+title: Churn Reason Aggregator
+tagline: Quantify why customers leave.
+difficulty: Intermediate
+time: Monthly
+archtype: Processor
+description: >-
+  Aggregates structured exit survey data to find the top 3 reasons for
+  cancellation.
 sampleData:
-  filename: "exit_surveys.csv"
+  filename: exit_surveys.csv
   content: |
     User,Reason_Code
     1,Too Expensive
     2,Missing Feature X
     3,Too Expensive
+isPremium: false
 ---
 
 # Agent Configuration: The Voice of Customer Lead
@@ -293,6 +300,7 @@ sampleData:
 
     Gamma LLC,103,"This is the 3rd time it crashed. Unacceptable. Fix it or we
     leave."
+isPremium: false
 ---
 
 # Agent Configuration: The Churn Risk Detector
@@ -341,21 +349,24 @@ Start now.
 URL: https://realaiexamples.com/skills/churn-risk-red-flag-report
 Description: Daily digest of customers with sudden usage drops.
 
---- 
-id: "churn-risk-red-flag-report"
-category: "Customer Success"
-title: "Churn Red Flag Report"
-tagline: "Daily digest of customers with sudden usage drops."
-difficulty: "Advanced"
-time: "Daily"
-archtype: "Processor"
-description: "Compares yesterday's usage to the 7-day average to flag sudden drops that indicate churn risk."
+---
+id: churn-risk-red-flag-report
+category: Customer Success
+title: Churn Red Flag Report
+tagline: Daily digest of customers with sudden usage drops.
+difficulty: Advanced
+time: Daily
+archtype: Processor
+description: >-
+  Compares yesterday's usage to the 7-day average to flag sudden drops that
+  indicate churn risk.
 sampleData:
-  filename: "usage_log.csv"
+  filename: usage_log.csv
   content: |
     Customer,Avg_Daily_Logins,Yesterday_Logins
     Acme,50,2
     Beta,10,12
+isPremium: false
 ---
 
 # Agent Configuration: The CS Ops Specialist
@@ -416,6 +427,7 @@ sampleData:
     Acme,10000,"Too expensive for what it does."
     Beta,50000,"Missing the SSO feature."
     Gamma,5000,"Found a cheaper alternative."
+isPremium: false
 ---
 
 # Agent Configuration: The Churn Autopsy
@@ -481,6 +493,7 @@ sampleData:
     User,Posts,Replies,Likes_Received
     UserA,10,50,100
     UserB,0,0,0
+isPremium: true
 ---
 # Agent Configuration: The Community Manager
 
@@ -524,13 +537,15 @@ difficulty: Intermediate
 time: Batch
 archtype: Processor
 description: >-
-  Ingests the last 1000 messages from your community general channel. Clusters sentiments. Flags rising "Admin Hate" or "Feature Frustration" topics.
+  Ingests the last 1000 messages from your community general channel. Clusters
+  sentiments. Flags rising "Admin Hate" or "Feature Frustration" topics.
 sampleData:
   filename: input_data.csv
   content: |
     Message_ID,Text,User
     101,"Mods suck",UserA
     102,"Help me",UserB
+isPremium: true
 ---
 
 # Agent Configuration: Community Toxicity Monitor
@@ -623,21 +638,24 @@ URL: https://realaiexamples.com/skills/customer-health-usage-correlation
 Description: Does high usage actually mean high health?
 
 ---
-id: "customer-health-usage-correlation"
-category: "Customer Success"
-title: "Usage-to-Health Validator"
-tagline: "Does high usage actually mean high health?"
-difficulty: "Advanced"
-time: "Monthly"
-archetype: "Processor"
-description: "Verifies health score accuracy by correlating 'Product Logins' with manual 'CS Health Scores'."
+id: customer-health-usage-correlation
+category: Customer Success
+title: Usage-to-Health Validator
+tagline: Does high usage actually mean high health?
+difficulty: Advanced
+time: Monthly
+archetype: Processor
+description: >-
+  Verifies health score accuracy by correlating 'Product Logins' with manual 'CS
+  Health Scores'.
 sampleData:
-  filename: "health_validation.csv"
+  filename: health_validation.csv
   content: |
     Customer,Manual_Health_Score,Monthly_Logins
     Acme,10,500
     Beta,10,2
     Gamma,2,10
+isPremium: true
 ---
 
 # Agent Configuration: The CS Analyst Agent
@@ -673,22 +691,25 @@ Validate the predictive power of health scores.
 URL: https://realaiexamples.com/skills/customer-segment-movement-tracker
 Description: Who moved from Silver to Gold?
 
---- 
-id: "customer-segment-movement-tracker"
-category: "Customer Success"
-title: "Segment Migration Tracker"
-tagline: "Who moved from Silver to Gold?"
-difficulty: "Intermediate"
-time: "Quarterly"
-archtype: "Processor"
-description: "Compares customer tiers between two quarters to visualize upgrades and downgrades."
+---
+id: customer-segment-movement-tracker
+category: Customer Success
+title: Segment Migration Tracker
+tagline: Who moved from Silver to Gold?
+difficulty: Intermediate
+time: Quarterly
+archtype: Processor
+description: >-
+  Compares customer tiers between two quarters to visualize upgrades and
+  downgrades.
 sampleData:
-  filename: "tiers.csv"
+  filename: tiers.csv
   content: |
     Customer,Q1_Tier,Q2_Tier
     Acme,Silver,Gold
     Beta,Gold,Silver
     Gamma,Silver,Silver
+isPremium: true
 ---
 
 # Agent Configuration: The Customer Ops
@@ -789,20 +810,23 @@ URL: https://realaiexamples.com/skills/customer-support-sentiment-trend
 Description: Monitor ticket sentiment trends over time.
 
 ---
-id: "customer-support-sentiment-trend"
-category: "Customer Success"
-title: "Support Sentiment Tracker"
-tagline: "Monitor ticket sentiment trends over time."
-difficulty: "Intermediate"
-time: "Weekly"
-archetype: "Processor"
-description: "Analyzes the text of recent support tickets to track if customer frustration is increasing."
+id: customer-support-sentiment-trend
+category: Customer Success
+title: Support Sentiment Tracker
+tagline: Monitor ticket sentiment trends over time.
+difficulty: Intermediate
+time: Weekly
+archetype: Processor
+description: >-
+  Analyzes the text of recent support tickets to track if customer frustration
+  is increasing.
 sampleData:
-  filename: "tickets.csv"
+  filename: tickets.csv
   content: |
     Date,Text
     2023-10-01,Love the tool!
     2023-10-02,Broken UI, very annoyed
+isPremium: true
 ---
 
 # Agent Configuration: The CS Insights Agent
@@ -838,21 +862,24 @@ Detect rising frustration in the customer base.
 URL: https://realaiexamples.com/skills/feature-adoption-laggard-hunter
 Description: Find clients not using the features they paid for.
 
---- 
-id: "feature-adoption-laggard-hunter"
-category: "Customer Success"
-title: "Adoption Gap Hunter"
-tagline: "Find clients not using the features they paid for."
-difficulty: "Intermediate"
-time: "Monthly"
-archtype: "Processor"
-description: "Compares purchased features vs actual usage to find accounts needing more training."
+---
+id: feature-adoption-laggard-hunter
+category: Customer Success
+title: Adoption Gap Hunter
+tagline: Find clients not using the features they paid for.
+difficulty: Intermediate
+time: Monthly
+archtype: Processor
+description: >-
+  Compares purchased features vs actual usage to find accounts needing more
+  training.
 sampleData:
-  filename: "feature_audit.csv"
+  filename: feature_audit.csv
   content: |
     Account,Owned_Features,Used_Features
     Acme,API;SSO,SSO
     Beta,API;SSO,API;SSO
+isPremium: true
 ---
 
 # Agent Configuration: The Adoption Manager
@@ -894,22 +921,25 @@ URL: https://realaiexamples.com/skills/feature-usage-trend-monitor
 Description: Monitor monthly growth in feature usage.
 
 ---
-id: "feature-usage-trend-monitor"
-category: "Customer Success"
-title: "Feature Adoption Trends"
-tagline: "Monitor monthly growth in feature usage."
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "Tracks usage counts for key product features month-over-month to detect adoption momentum or decline."
+id: feature-usage-trend-monitor
+category: Customer Success
+title: Feature Adoption Trends
+tagline: Monitor monthly growth in feature usage.
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  Tracks usage counts for key product features month-over-month to detect
+  adoption momentum or decline.
 sampleData:
-  filename: "feature_trends.csv"
+  filename: feature_trends.csv
   content: |
     Month,Feature,Usage_Count
     Jan,API,1000
     Feb,API,1200
     Jan,Export,500
     Feb,Export,400
+isPremium: true
 ---
 
 # Agent Configuration: The Adoption Insights Agent
@@ -962,6 +992,7 @@ sampleData:
     Customer,Score,Date
     Acme,10,2023-10-01
     Beta,5,2023-10-01
+isPremium: true
 ---
 # Agent Configuration: The Review Manager
 
@@ -996,22 +1027,25 @@ Maximize 5-star review generation.
 URL: https://realaiexamples.com/skills/implementation-stalled-alert
 Description: Flag onboarding projects stuck in 'Pending'.
 
---- 
-id: "implementation-stalled-alert"
-category: "Customer Success"
-title: "Stalled Project Alert"
-tagline: "Flag onboarding projects stuck in 'Pending'."
-difficulty: "Beginner"
-time: "Weekly"
-archtype: "Processor"
-description: "Identifies implementation projects that haven't moved to the next phase in over 14 days."
+---
+id: implementation-stalled-alert
+category: Customer Success
+title: Stalled Project Alert
+tagline: Flag onboarding projects stuck in 'Pending'.
+difficulty: Beginner
+time: Weekly
+archtype: Processor
+description: >-
+  Identifies implementation projects that haven't moved to the next phase in
+  over 14 days.
 sampleData:
-  filename: "projects.csv"
+  filename: projects.csv
   content: |
     Customer,Phase,Days_In_Phase
     Acme,Integration,20
     Beta,Setup,2
     Gamma,Integration,15
+isPremium: true
 ---
 
 # Agent Configuration: The Implementation Manager
@@ -1112,21 +1146,24 @@ For each Row:
 URL: https://realaiexamples.com/skills/nps-detractor-recovery-list
 Description: Automate outreach lists for low NPS scorers.
 
---- 
-id: "nps-detractor-recovery-list"
-category: "Customer Success"
-title: "NPS Detractor Recovery List"
-tagline: "Automate outreach lists for low NPS scorers."
-difficulty: "Beginner"
-time: "Daily"
-archtype: "Processor"
-description: "Identifies new NPS detractors (0-6) and generates a prioritized outreach list for Customer Success."
+---
+id: nps-detractor-recovery-list
+category: Customer Success
+title: NPS Detractor Recovery List
+tagline: Automate outreach lists for low NPS scorers.
+difficulty: Beginner
+time: Daily
+archtype: Processor
+description: >-
+  Identifies new NPS detractors (0-6) and generates a prioritized outreach list
+  for Customer Success.
 sampleData:
-  filename: "nps_raw.csv"
+  filename: nps_raw.csv
   content: |
     Customer,Score,Comment
     Acme,2,Bad support
     Beta,10,Love it
+isPremium: true
 ---
 
 # Agent Configuration: The Customer Experience Lead
@@ -1168,23 +1205,26 @@ sampleData
 URL: https://realaiexamples.com/skills/nps-trend-analyzer
 Description: Is customer sentiment trending up or down?
 
---- 
-id: "nps-trend-analyzer"
-category: "Customer Success"
-title: "NPS Trend Spotter"
-tagline: "Is customer sentiment trending up or down?"
-difficulty: "Intermediate"
-time: "Monthly"
-archtype: "Processor"
-description: "Calculates the Net Promoter Score (Promoters - Detractors) for different cohorts (e.g., Monthly)."
+---
+id: nps-trend-analyzer
+category: Customer Success
+title: NPS Trend Spotter
+tagline: Is customer sentiment trending up or down?
+difficulty: Intermediate
+time: Monthly
+archtype: Processor
+description: >-
+  Calculates the Net Promoter Score (Promoters - Detractors) for different
+  cohorts (e.g., Monthly).
 sampleData:
-  filename: "nps_responses.csv"
+  filename: nps_responses.csv
   content: |
     Date,Score
     2023-09-01,10
     2023-09-05,9
     2023-09-10,2
     2023-10-01,5
+isPremium: true
 ---
 
 # Agent Configuration: The CX Analyst
@@ -1227,7 +1267,7 @@ sampleData
 URL: https://realaiexamples.com/skills/onboarding-milestone-celebrator
 Description: Automate high-fives for new users.
 
---- 
+---
 id: onboarding-milestone-celebrator
 category: Customer Success
 title: Onboarding Milestone Celebrator
@@ -1236,12 +1276,14 @@ difficulty: Beginner
 time: Real-time
 archetype: Processor
 description: >-
-  When a user hits "First Project Created", draft a personalized congrats email from the founder. Not a generic notification, a real feeling email.
+  When a user hits "First Project Created", draft a personalized congrats email
+  from the founder. Not a generic notification, a real feeling email.
 sampleData:
   filename: input_data.csv
   content: |
     User_Email,Milestone_Hit
     john@co.com,First_Export
+isPremium: true
 ---
 
 # Agent Configuration: Onboarding Milestone Celebrator
@@ -1284,22 +1326,25 @@ Generate a JSON or Markdown list of drafts:
 URL: https://realaiexamples.com/skills/qbr-data-prepper
 Description: Prepare usage and support data for reviews.
 
---- 
-id: "qbr-data-prepper"
-category: "Customer Success"
-title: "QBR Data Aggregator"
-tagline: "Prepare usage and support data for reviews."
-difficulty: "Intermediate"
-time: "Quarterly"
-archtype: "Processor"
-description: "Combines usage logs and ticket history into a single view for Quarterly Business Reviews."
+---
+id: qbr-data-prepper
+category: Customer Success
+title: QBR Data Aggregator
+tagline: Prepare usage and support data for reviews.
+difficulty: Intermediate
+time: Quarterly
+archtype: Processor
+description: >-
+  Combines usage logs and ticket history into a single view for Quarterly
+  Business Reviews.
 sampleData:
-  filename: "qbr_task.txt"
+  filename: qbr_task.txt
   content: |
     [Usage]
     Acme,500 logins
     [Tickets]
     Acme,2 critical
+isPremium: true
 ---
 
 # Agent Configuration: The Account Manager
@@ -1341,7 +1386,7 @@ sampleData
 URL: https://realaiexamples.com/skills/qbr-deck-generator-auto
 Description: Build a Quarterly Business Review deck in minutes.
 
---- 
+---
 id: qbr-deck-generator-auto
 category: Customer Success
 title: QBR Deck Generator
@@ -1350,12 +1395,14 @@ difficulty: Intermediate
 time: Batch
 archetype: Processor
 description: >-
-  Ingests usage data and ROI metrics. Generates the text for a 5-slide QBR: "Executive Summary", "Usage Trends", "ROI Achieved", "Next Quarter Goals".
+  Ingests usage data and ROI metrics. Generates the text for a 5-slide QBR:
+  "Executive Summary", "Usage Trends", "ROI Achieved", "Next Quarter Goals".
 sampleData:
   filename: input_data.csv
   content: |
     Account_Name,ROI_Metric
     Acme Corp,$50k Saved
+isPremium: true
 ---
 
 # Agent Configuration: QBR Deck Generator
@@ -1398,9 +1445,10 @@ difficulty: Intermediate
 time: Quarterly
 archetype: Hybrid
 description: >-
-  Most QBRs are boring. This agent analyzes raw Usage Logs and Support Tickets to
-  calculate a "Health Score" for the account. It then generates one of two
-  decks: A "Growth Pitch" (for healthy accounts) or a "Recovery Plan" (for risky ones).
+  Most QBRs are boring. This agent analyzes raw Usage Logs and Support Tickets
+  to calculate a "Health Score" for the account. It then generates one of two
+  decks: A "Growth Pitch" (for healthy accounts) or a "Recovery Plan" (for risky
+  ones).
 sampleData:
   filename: usage_logs.csv
   content: |
@@ -1414,6 +1462,7 @@ sampleData:
     admin@client.com,API Error 500,Resolved
     admin@client.com,How to export PDF?,Resolved
     ceo@client.com,Login failed,Open
+isPremium: true
 ---
 
 # Agent Configuration: The QBR Strategist
@@ -1479,6 +1528,7 @@ sampleData:
     1,Yes,Won
     2,No,Lost
     3,Yes,Won
+isPremium: true
 ---
 # Agent Configuration: The Reference Manager
 
@@ -1530,6 +1580,7 @@ sampleData:
     Referrer_IP,Referee_IP
     1.1.1.1,1.1.1.1
     2.2.2.2,3.3.3.3
+isPremium: true
 ---
 # Agent Configuration: The Growth Quality Guard
 
@@ -1688,22 +1739,26 @@ URL: https://realaiexamples.com/skills/renewal-save-rate-tracker
 Description: Which retention tactic actually works? (Discount vs Roadmap).
 
 ---
-id: "renewal-save-rate-tracker"
-category: "Customer Success"
-title: "The Save Playbook Auditor"
-tagline: "Which retention tactic actually works? (Discount vs Roadmap)."
-difficulty: "Beginner"
-time: "Monthly"
-archetype: "Processor"
-description: "Not all 'Saves' are created equal. This agent analyzes your churn save attempts to determine which tactic (Discount, Executive Call, Roadmap Promise) actually convinces customers to stay."
+id: renewal-save-rate-tracker
+category: Customer Success
+title: The Save Playbook Auditor
+tagline: Which retention tactic actually works? (Discount vs Roadmap).
+difficulty: Beginner
+time: Monthly
+archetype: Processor
+description: >-
+  Not all 'Saves' are created equal. This agent analyzes your churn save
+  attempts to determine which tactic (Discount, Executive Call, Roadmap Promise)
+  actually convinces customers to stay.
 sampleData:
-  filename: "save_attempts.csv"
+  filename: save_attempts.csv
   content: |
     Customer,Tactic_Used,Outcome
     Acme,Discount 10%,Churned
     Beta,Executive Call,Renewed
     Gamma,Roadmap Promise,Renewed
     Delta,Discount 10%,Churned
+isPremium: true
 ---
 
 # Agent Configuration: The CS Enablement Lead
@@ -1749,9 +1804,9 @@ difficulty: Beginner
 time: Batch
 archetype: Processor
 description: >-
-  Don't just reply; take action. This agent categorizes public reviews and splits
-  them into two streams: Public Responses (empathetic text) and Internal Routing
-  (tickets for Engineering/Sales).
+  Don't just reply; take action. This agent categorizes public reviews and
+  splits them into two streams: Public Responses (empathetic text) and Internal
+  Routing (tickets for Engineering/Sales).
 sampleData:
   filename: reviews.csv
   content: >
@@ -1816,15 +1871,16 @@ difficulty: Beginner
 time: Monthly
 archetype: Processor
 description: >-
-  Don't just track ratings; engineer them. This agent calculates the exact number
-  of 5-star reviews required to lift your average rating (e.g., 4.2 -> 4.5) or
-  overtake a competitor.
+  Don't just track ratings; engineer them. This agent calculates the exact
+  number of 5-star reviews required to lift your average rating (e.g., 4.2 ->
+  4.5) or overtake a competitor.
 sampleData:
   filename: ratings.csv
   content: |
     Entity,Total_Reviews,Average_Rating
     Us,100,4.2
     Competitor,500,4.5
+isPremium: true
 ---
 
 # Agent Configuration: The Reputation Engineer
@@ -1886,6 +1942,7 @@ sampleData:
     lonely@client.com,TRUE,FALSE,FALSE
     stuck@client.com,TRUE,TRUE,FALSE
     power@client.com,TRUE,TRUE,TRUE
+isPremium: true
 ---
 
 # Agent Configuration: The Behavioral Psychologist
@@ -1931,7 +1988,7 @@ For each trigger, assign a Subject Line:
 URL: https://realaiexamples.com/skills/saas-seat-utilization-nudge
 Description: Remind admins they are paying for empty seats.
 
---- 
+---
 id: saas-seat-utilization-nudge
 category: Customer Success
 title: Seat Utilization Nudge
@@ -1940,12 +1997,14 @@ difficulty: Intermediate
 time: Batch
 archetype: Processor
 description: >-
-  Finds accounts with <50% seat utilization. Drafts a helpful email to the admin offering to help onboard more users (or downgrade to save churn).
+  Finds accounts with <50% seat utilization. Drafts a helpful email to the admin
+  offering to help onboard more users (or downgrade to save churn).
 sampleData:
   filename: input_data.csv
   content: |
     Account_ID,Seats_Purchased,Active_Users
     Acc1,10,2
+isPremium: true
 ---
 
 # Agent Configuration: Seat Utilization Nudge
@@ -1988,14 +2047,15 @@ difficulty: Intermediate
 time: Batch
 archtype: Processor
 description: >-
-  Reviews closed tickets. Scores responses on "Warmth", "Acknowledgment", and "Solution Clarity". Flags agents who are too copy-paste heavy.
+  Reviews closed tickets. Scores responses on "Warmth", "Acknowledgment", and
+  "Solution Clarity". Flags agents who are too copy-paste heavy.
 sampleData:
   filename: input_data.csv
   content: |
     Ticket_ID,Agent_Response
     #101,"Please clear cache."
     #102,"I understand that is frustrating..."
-    
+isPremium: true
 ---
 
 # Agent Configuration: Support Ticket Empathy Auditor
@@ -2030,22 +2090,25 @@ URL: https://realaiexamples.com/skills/support-ticket-volume-clusterer
 Description: Group ticket subjects into feature themes.
 
 ---
-id: "support-ticket-volume-clusterer"
-category: "Customer Success"
-title: "Ticket Volume Clusterer"
-tagline: "Group ticket subjects into feature themes."
-difficulty: "Intermediate"
-time: "Weekly"
-archetype: "Processor"
-description: "Groups support ticket subject lines into logical feature buckets to find the 'Noisiest' parts of the product."
+id: support-ticket-volume-clusterer
+category: Customer Success
+title: Ticket Volume Clusterer
+tagline: Group ticket subjects into feature themes.
+difficulty: Intermediate
+time: Weekly
+archetype: Processor
+description: >-
+  Groups support ticket subject lines into logical feature buckets to find the
+  'Noisiest' parts of the product.
 sampleData:
-  filename: "ticket_subjects.csv"
+  filename: ticket_subjects.csv
   content: |
     Subject
     Login error
     Password reset not working
     Slow dashboard
     Login stuck
+isPremium: true
 ---
 
 # Agent Configuration: The Product Insights Agent
@@ -2096,6 +2159,7 @@ sampleData:
     Industry,Asset_Type,Count
     Finance,Case Study,0
     Retail,Case Study,5
+isPremium: true
 ---
 # Agent Configuration: The Social Proof Matrix Mapper
 
@@ -2138,9 +2202,9 @@ difficulty: Intermediate
 time: Weekly
 archetype: Processor
 description: >-
-  Missing SLAs isn't always about lazy agents; usually, it's about bad scheduling.
-  This agent analyzes your ticket timestamps to find "Heat Zones" where volume
-  exceeds capacity, recommending specific shift adjustments.
+  Missing SLAs isn't always about lazy agents; usually, it's about bad
+  scheduling. This agent analyzes your ticket timestamps to find "Heat Zones"
+  where volume exceeds capacity, recommending specific shift adjustments.
 sampleData:
   filename: ticket_log.csv
   content: |
@@ -2149,6 +2213,7 @@ sampleData:
     102,09,180,Yes
     103,14,5,No
     104,09,200,Yes
+isPremium: true
 ---
 
 # Agent Configuration: The Workforce Planner
@@ -2187,21 +2252,24 @@ Eliminate SLA breaches by optimizing the shift schedule.
 URL: https://realaiexamples.com/skills/time-to-value-clock
 Description: Measure speed from signature to setup.
 
---- 
-id: "time-to-value-clock"
-category: "Customer Success"
-title: "Time-to-Value Clock"
-tagline: "Measure speed from signature to setup."
-difficulty: "Intermediate"
-time: "Monthly"
-archtype: "Processor"
-description: "Calculates the average days it takes for a new customer to complete their first key action."
+---
+id: time-to-value-clock
+category: Customer Success
+title: Time-to-Value Clock
+tagline: Measure speed from signature to setup.
+difficulty: Intermediate
+time: Monthly
+archtype: Processor
+description: >-
+  Calculates the average days it takes for a new customer to complete their
+  first key action.
 sampleData:
-  filename: "onboarding_dates.csv"
+  filename: onboarding_dates.csv
   content: |
     Customer,Closed_Date,Activation_Date
     Acme,2023-10-01,2023-10-05
     Beta,2023-10-01,2023-10-25
+isPremium: true
 ---
 
 # Agent Configuration: The CS Ops
@@ -2262,6 +2330,7 @@ sampleData:
     CustA,1,2,1
     CustB,1,10,5
     CustC,2,12,8
+isPremium: true
 ---
 
 # Agent Configuration: The UX Researcher
@@ -2320,6 +2389,7 @@ sampleData:
     Customer,Word_Count,Sentiment
     Acme,150,Positive
     Beta,10,Neutral
+isPremium: true
 ---
 # Agent Configuration: The Video Producer
 

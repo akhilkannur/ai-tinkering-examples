@@ -22,6 +22,7 @@ sampleData:
     Platform,Seed_Headline,Key_Benefit
     Google,"Best CRM for small biz",Save time
     Facebook,"Launch faster with AI",Speed to market
+isPremium: false
 ---
 
 # Agent Configuration: The Ad Variant Factory
@@ -64,20 +65,23 @@ URL: https://realaiexamples.com/skills/ad-creative-fatigue-alert
 Description: Know when your ads stop working.
 
 ---
-id: "ad-creative-fatigue-alert"
-category: "Paid Media"
-title: "Creative Fatigue Watchdog"
-tagline: "Know when your ads stop working."
-difficulty: "Intermediate"
-time: "Weekly"
-archetype: "Processor"
-description: "Flags ad creatives where the Click-Through Rate (CTR) has dropped by 50% week-over-week, indicating fatigue."
+id: ad-creative-fatigue-alert
+category: Paid Media
+title: Creative Fatigue Watchdog
+tagline: Know when your ads stop working.
+difficulty: Intermediate
+time: Weekly
+archetype: Processor
+description: >-
+  Flags ad creatives where the Click-Through Rate (CTR) has dropped by 50%
+  week-over-week, indicating fatigue.
 sampleData:
-  filename: "ad_performance.csv"
+  filename: ad_performance.csv
   content: |
     Ad_ID,Week_1_CTR,Week_2_CTR
     Ad_A,2.0,1.9
     Ad_B,2.0,0.8
+isPremium: false
 ---
 # Agent Configuration: The Creative Strategist
 
@@ -113,22 +117,26 @@ URL: https://realaiexamples.com/skills/ad-frequency-capper
 Description: Stop annoying your prospects.
 
 ---
-id: "ad-frequency-capper"
-category: "Paid Media"
-title: "The Ad Frequency Capper"
-tagline: "Stop annoying your prospects."
-difficulty: "Intermediate"
-time: "Weekly"
-archetype: "Processor"
-description: "Ad fatigue kills ROI. This agent tracks the relationship between 'Frequency' (Avg times seen) and 'CTR' or 'CPA' in your campaign data, identifying the exact tipping point where performance degrades so you can set a cap."
+id: ad-frequency-capper
+category: Paid Media
+title: The Ad Frequency Capper
+tagline: Stop annoying your prospects.
+difficulty: Intermediate
+time: Weekly
+archetype: Processor
+description: >-
+  Ad fatigue kills ROI. This agent tracks the relationship between 'Frequency'
+  (Avg times seen) and 'CTR' or 'CPA' in your campaign data, identifying the
+  exact tipping point where performance degrades so you can set a cap.
 sampleData:
-  filename: "frequency_data.csv"
+  filename: frequency_data.csv
   content: |
     Frequency_Bucket,CTR,CPA
     1,1.5%,10
     2,1.8%,8
     3,1.2%,12
     4,0.5%,25
+isPremium: false
 ---
 
 # Agent Configuration: The Data Analyst
@@ -159,28 +167,32 @@ Determine the optimal Frequency Cap.
 2.  **Output:** Save `frequency_recommendation.txt`.
 3.  **Summary:** "Performance degrades after 2.5 views. Set Frequency Cap to 3 per week to save budget."
 
+
 ---
 
 ## Ad Waste Excluder
 URL: https://realaiexamples.com/skills/ad-placement-exclusion-lister
 Description: Block mobile apps and kids' channels.
 
---- 
-id: "ad-placement-exclusion-lister"
-category: "Paid Media"
-title: "Ad Waste Excluder"
-tagline: "Block mobile apps and kids' channels."
-difficulty: "Intermediate"
-time: "Weekly"
-archtype: "Processor"
-description: "Filters a placement report to find URLs containing 'game', 'puzzle', or 'mobile' to add to your exclusion list."
+---
+id: ad-placement-exclusion-lister
+category: Paid Media
+title: Ad Waste Excluder
+tagline: Block mobile apps and kids' channels.
+difficulty: Intermediate
+time: Weekly
+archtype: Processor
+description: >-
+  Filters a placement report to find URLs containing 'game', 'puzzle', or
+  'mobile' to add to your exclusion list.
 sampleData:
-  filename: "placements.csv"
+  filename: placements.csv
   content: |
     Placement,Impressions,Clicks
     nytimes.com,1000,10
     candycrush.saga,5000,0
     math-games.net,200,1
+isPremium: false
 ---
 
 # Agent Configuration: The PPC Optimizer
@@ -223,20 +235,25 @@ URL: https://realaiexamples.com/skills/ad-spend-pacer
 Description: Land exactly on budget.
 
 ---
-id: "ad-spend-pacer"
-category: "Paid Media"
-title: "The Ad Spend Pacer"
-tagline: "Land exactly on budget."
-difficulty: "Beginner"
-time: "Daily"
-archetype: "Processor"
-description: "Overspending gets you fired. Underspending gets you yelled at. This agent takes your Month-to-Date spend and Total Budget, calculating exactly how much you need to spend *daily* for the rest of the month to hit the target perfectly."
+id: ad-spend-pacer
+category: Paid Media
+title: The Ad Spend Pacer
+tagline: Land exactly on budget.
+difficulty: Beginner
+time: Daily
+archetype: Processor
+description: >-
+  Overspending gets you fired. Underspending gets you yelled at. This agent
+  takes your Month-to-Date spend and Total Budget, calculating exactly how much
+  you need to spend *daily* for the rest of the month to hit the target
+  perfectly.
 sampleData:
-  filename: "campaign_spend.csv"
+  filename: campaign_spend.csv
   content: |
     Campaign,Budget,Spent_MTD,Days_Left
     Retargeting,5000,2000,15
     Prospecting,10000,8000,15
+isPremium: false
 ---
 
 # Agent Configuration: The Media Buyer
@@ -271,6 +288,7 @@ For each Campaign in `campaign_spend.csv`:
 1.  **Output:** Save `daily_budget_adjustments.csv` (Campaign, New_Daily_Cap).
 2.  **Summary:** "Retargeting needs $[X]/day. Prospecting is hot - cut budget to $[Y]/day to avoid overspend."
 
+
 ---
 
 ## The Ad Variation Engine
@@ -286,11 +304,14 @@ difficulty: Intermediate
 time: 10 mins
 archetype: Processor
 description: >-
-  Takes one winning ad (yours or a competitor's) and generates 10 high-quality variations using proven psychological frameworks like PAS, AIDA, and BAB.
+  Takes one winning ad (yours or a competitor's) and generates 10 high-quality
+  variations using proven psychological frameworks like PAS, AIDA, and BAB.
 sampleData:
   filename: winning_ad.txt
-  content: |
-    Stop wasting time on spreadsheets. Our CRM automates data entry so you can focus on selling. Try it free for 14 days.
+  content: >
+    Stop wasting time on spreadsheets. Our CRM automates data entry so you can
+    focus on selling. Try it free for 14 days.
+isPremium: false
 ---
 
 # Agent Configuration: The Ad Variation Engine
@@ -352,6 +373,7 @@ description: >-
 sampleData:
   filename: competitor_gallery/ad_01.png
   content: ''
+isPremium: false
 ---
 
 # Agent Configuration: The Ad Visual Intelligence Factory
@@ -410,6 +432,7 @@ sampleData:
     Audience_A_Emails,Audience_B_Emails
     user1@test.com,user3@test.com
     user2@test.com,user1@test.com
+isPremium: false
 ---
 
 # Agent Configuration: The Efficiency Auditor
@@ -455,13 +478,16 @@ difficulty: Advanced
 time: Batch
 archtype: Researcher
 description: >-
-  Downloads images from Ad Library, then uses embeddings to cluster them (e.g., "UGC Style", "Studio Shot", "Meme"). Helps you spot their creative strategy distribution.
+  Downloads images from Ad Library, then uses embeddings to cluster them (e.g.,
+  "UGC Style", "Studio Shot", "Meme"). Helps you spot their creative strategy
+  distribution.
 sampleData:
   filename: input_data.csv
   content: |
     Ad_ID,Image_URL
     101,https://fb-ads.com/1.jpg
     102,https://fb-ads.com/2.jpg
+isPremium: true
 ---
 
 # Agent Configuration: Competitor Ad Style Clusterer
@@ -560,20 +586,23 @@ URL: https://realaiexamples.com/skills/cross-channel-frequency-monitor
 Description: Total ad touches across FB + Google + Email.
 
 ---
-id: "cross-channel-frequency-monitor"
-category: "Paid Media"
-title: "Omnichannel Frequency Cap"
-tagline: "Total ad touches across FB + Google + Email."
-difficulty: "Advanced"
-time: "Monthly"
-archetype: "Processor"
-description: "Estimates total ad touches per user across multiple channels to prevent global bombardment."
+id: cross-channel-frequency-monitor
+category: Paid Media
+title: Omnichannel Frequency Cap
+tagline: Total ad touches across FB + Google + Email.
+difficulty: Advanced
+time: Monthly
+archetype: Processor
+description: >-
+  Estimates total ad touches per user across multiple channels to prevent global
+  bombardment.
 sampleData:
-  filename: "channel_freq.csv"
+  filename: channel_freq.csv
   content: |
     User,FB_Imps,Google_Imps,Emails
     John,10,5,2
     Jane,50,50,10
+isPremium: true
 ---
 # Agent Configuration: The Media Planner
 
@@ -726,20 +755,23 @@ URL: https://realaiexamples.com/skills/first-purchase-product-analysis
 Description: Which product acquires the best customers?
 
 ---
-id: "first-purchase-product-analysis"
-category: "Paid Media"
-title: "Gateway Product Analyzer"
-tagline: "Which product acquires the best customers?"
-difficulty: "Intermediate"
-time: "Quarterly"
-archetype: "Processor"
-description: "Identifies the 'Gateway Drug' products that appear most frequently in the first order of high-LTV customers."
+id: first-purchase-product-analysis
+category: Paid Media
+title: Gateway Product Analyzer
+tagline: Which product acquires the best customers?
+difficulty: Intermediate
+time: Quarterly
+archetype: Processor
+description: >-
+  Identifies the 'Gateway Drug' products that appear most frequently in the
+  first order of high-LTV customers.
 sampleData:
-  filename: "first_orders.csv"
+  filename: first_orders.csv
   content: |
     Customer,First_Product,Current_LTV
     John,Socks,500
     Jane,Hat,50
+isPremium: true
 ---
 # Agent Configuration: The Merchandising Analyst
 
@@ -775,20 +807,23 @@ URL: https://realaiexamples.com/skills/geo-targeting-optimizer
 Description: Focus spend on cities that buy.
 
 ---
-id: "geo-targeting-optimizer"
-category: "Paid Media"
-title: "Geo-Conversion Optimizer"
-tagline: "Focus spend on cities that buy."
-difficulty: "Intermediate"
-time: "Quarterly"
-archetype: "Processor"
-description: "Identifies cities or states with the highest conversion rates to refine ad geo-targeting."
+id: geo-targeting-optimizer
+category: Paid Media
+title: Geo-Conversion Optimizer
+tagline: Focus spend on cities that buy.
+difficulty: Intermediate
+time: Quarterly
+archetype: Processor
+description: >-
+  Identifies cities or states with the highest conversion rates to refine ad
+  geo-targeting.
 sampleData:
-  filename: "geo_stats.csv"
+  filename: geo_stats.csv
   content: |
     City,Visits,Orders
     NY,1000,50
     LA,1000,10
+isPremium: true
 ---
 # Agent Configuration: The Growth Hacker
 
@@ -827,15 +862,17 @@ Description: Block entire intent clusters (Jobs, Research, Competitors) before t
 id: google-ads-negative-keyword-factory
 category: Paid Media
 title: The Semantic Negative Keyword Factory
-tagline: Block entire intent clusters (Jobs, Research, Competitors) before they drain your budget.
+tagline: >-
+  Block entire intent clusters (Jobs, Research, Competitors) before they drain
+  your budget.
 difficulty: Intermediate
 time: One-off
 archetype: Processor
 description: >-
   Don't just block "free" and "cheap." This agent builds comprehensive negative
-  keyword lists grouped by 'Intent Categories' (Employment, Educational, Comparison). 
-  It cross-checks your target keywords to prevent accidental blocks and outputs 
-  a CSV ready for direct import into Google Ads Editor.
+  keyword lists grouped by 'Intent Categories' (Employment, Educational,
+  Comparison).  It cross-checks your target keywords to prevent accidental
+  blocks and outputs  a CSV ready for direct import into Google Ads Editor.
 sampleData:
   filename: campaign_profile.csv
   content: |
@@ -880,6 +917,7 @@ For each industry/product in the CSV:
 ### Phase 4: Final Report
 1.  **Summary:** "Generated [X] negative keywords across 5 intent clusters. [Y] potential conflicts were automatically resolved to protect your target traffic."
 
+
 ---
 
 ## The PPC Automator
@@ -896,8 +934,9 @@ time: One-off
 archetype: Processor
 description: >-
   Don't rely on manual checks. This agent generates robust Google Ads Scripts
-  (JavaScript) that run hourly to police your account: Pausing bleeding keywords,
-  alerting you to zero-impression ads, and capping over-spending campaigns.
+  (JavaScript) that run hourly to police your account: Pausing bleeding
+  keywords, alerting you to zero-impression ads, and capping over-spending
+  campaigns.
 sampleData:
   filename: safety_rules.csv
   content: |
@@ -905,6 +944,7 @@ sampleData:
     Kill Bleeders,CPA > 100 AND Conversions > 0,Pause Keyword
     Zero Impressions,Impressions == 0 AND Spend > 50,Label 'Review'
     Budget Cap,Cost > 500,Email Alert
+isPremium: true
 ---
 
 # Agent Configuration: The Ad Engineer
@@ -947,20 +987,23 @@ URL: https://realaiexamples.com/skills/google-shopping-feed-auditor
 Description: Find missing GTINs or images.
 
 ---
-id: "google-shopping-feed-auditor"
-category: "Paid Media"
-title: "Merchant Center Auditor"
-tagline: "Find missing GTINs or images."
-difficulty: "Beginner"
-time: "Weekly"
-archetype: "Processor"
-description: "Audits your Google Shopping product feed to identify items missing critical attributes like GTIN, Image Link, or Price."
+id: google-shopping-feed-auditor
+category: Paid Media
+title: Merchant Center Auditor
+tagline: Find missing GTINs or images.
+difficulty: Beginner
+time: Weekly
+archetype: Processor
+description: >-
+  Audits your Google Shopping product feed to identify items missing critical
+  attributes like GTIN, Image Link, or Price.
 sampleData:
-  filename: "product_feed.csv"
+  filename: product_feed.csv
   content: |
     SKU,GTIN,Image_Link
     123,8888,http://img
     456,NULL,http://img
+isPremium: true
 ---
 # Agent Configuration: The Feed Specialist
 
@@ -1011,20 +1054,23 @@ URL: https://realaiexamples.com/skills/high-ltv-lookalike-seeder
 Description: Find more customers like your best ones.
 
 ---
-id: "high-ltv-lookalike-seeder"
-category: "Paid Media"
-title: "LTV Lookalike Seeder"
-tagline: "Find more customers like your best ones."
-difficulty: "Beginner"
-time: "Monthly"
-archetype: "Processor"
-description: "Exports the Top 1% of customers by Lifetime Value (LTV) to create a high-quality seed audience for ad platforms."
+id: high-ltv-lookalike-seeder
+category: Paid Media
+title: LTV Lookalike Seeder
+tagline: Find more customers like your best ones.
+difficulty: Beginner
+time: Monthly
+archetype: Processor
+description: >-
+  Exports the Top 1% of customers by Lifetime Value (LTV) to create a
+  high-quality seed audience for ad platforms.
 sampleData:
-  filename: "customers.csv"
+  filename: customers.csv
   content: |
     Email,LTV
     a@test.com,5000
     b@test.com,100
+isPremium: true
 ---
 # Agent Configuration: The Paid Social Lead
 
@@ -1121,20 +1167,24 @@ URL: https://realaiexamples.com/skills/influencer-coupon-usage-tracker
 Description: Know exactly when to double down or cut the cord.
 
 ---
-id: "influencer-coupon-usage-tracker"
-category: "Paid Media"
-title: "The Channel Efficiency Analyst"
-tagline: "Know exactly when to double down or cut the cord."
-difficulty: "Intermediate"
-time: "Monthly"
-archetype: "Processor"
-description: "CPA is the only metric that matters. This agent compares your influencer costs against code redemptions and your 'Target CPA' to automatically flag which partners are scaling your business and which are burning cash."
+id: influencer-coupon-usage-tracker
+category: Paid Media
+title: The Channel Efficiency Analyst
+tagline: Know exactly when to double down or cut the cord.
+difficulty: Intermediate
+time: Monthly
+archetype: Processor
+description: >-
+  CPA is the only metric that matters. This agent compares your influencer costs
+  against code redemptions and your 'Target CPA' to automatically flag which
+  partners are scaling your business and which are burning cash.
 sampleData:
-  filename: "partner_performance.csv"
+  filename: partner_performance.csv
   content: |
     Partner,Fee,Redemptions,Target_CPA
     Alice,1000,50,30
     Bob,1000,10,30
+isPremium: true
 ---
 # Agent Configuration: The Performance Marketer
 
@@ -1239,22 +1289,25 @@ For each URL in the CSV:
 URL: https://realaiexamples.com/skills/linkedin-ads-audience-overlap
 Description: Stop bidding against yourself.
 
---- 
-id: "linkedin-ads-audience-overlap"
-category: "Paid Media"
-title: "Audience Overlap Checker"
-tagline: "Stop bidding against yourself."
-difficulty: "Intermediate"
-time: "Monthly"
-archtype: "Processor"
-description: "Analyzes exported target lists from different ad campaigns to find duplicate companies."
+---
+id: linkedin-ads-audience-overlap
+category: Paid Media
+title: Audience Overlap Checker
+tagline: Stop bidding against yourself.
+difficulty: Intermediate
+time: Monthly
+archtype: Processor
+description: >-
+  Analyzes exported target lists from different ad campaigns to find duplicate
+  companies.
 sampleData:
-  filename: "campaign_targets.csv"
+  filename: campaign_targets.csv
   content: |
     Campaign,Company_Domain
     Awareness,acme.com
     Conversion,acme.com
     Awareness,beta.io
+isPremium: true
 ---
 
 # Agent Configuration: The Paid Social Specialist
@@ -1648,7 +1701,9 @@ Description: Don't get blinded by 'Gross' numbers. Calculate marketing impact on
 id: return-adjusted-roas
 category: Paid Media
 title: The Profit-First ROAS Adjuster
-tagline: Don't get blinded by 'Gross' numbers. Calculate marketing impact on bottom-line profit.
+tagline: >-
+  Don't get blinded by 'Gross' numbers. Calculate marketing impact on
+  bottom-line profit.
 difficulty: Advanced
 time: Monthly
 archetype: Processor
@@ -1662,6 +1717,7 @@ sampleData:
     Campaign,Spend,Gross_Revenue,Return_Value,Avg_Margin,Shipping_Total
     Search_Brand,1000,8000,500,0.60,200
     Social_Prospecting,5000,12000,2000,0.50,1000
+isPremium: true
 ---
 
 # Agent Configuration: The Profitability Analyst
@@ -1706,20 +1762,23 @@ URL: https://realaiexamples.com/skills/seasonal-trend-spotter
 Description: When do people start searching for 'Winter Coats'?
 
 ---
-id: "seasonal-trend-spotter"
-category: "Paid Media"
-title: "Trend Timing Assistant"
-tagline: "When do people start searching for 'Winter Coats'?"
-difficulty: "Intermediate"
-time: "Yearly"
-archetype: "Processor"
-description: "Identifies the historical week where search volume for a category starts rising to time ad launches."
+id: seasonal-trend-spotter
+category: Paid Media
+title: Trend Timing Assistant
+tagline: When do people start searching for 'Winter Coats'?
+difficulty: Intermediate
+time: Yearly
+archetype: Processor
+description: >-
+  Identifies the historical week where search volume for a category starts
+  rising to time ad launches.
 sampleData:
-  filename: "search_volume.csv"
+  filename: search_volume.csv
   content: |
     Week,Category,Volume
     35,Coats,100
     36,Coats,500
+isPremium: true
 ---
 # Agent Configuration: The Planner
 
@@ -1871,20 +1930,23 @@ URL: https://realaiexamples.com/skills/wholesale-dtc-ad-conflict
 Description: Are we bidding against our retailers?
 
 ---
-id: "wholesale-dtc-ad-conflict"
-category: "Paid Media"
-title: "Channel Conflict Monitor"
-tagline: "Are we bidding against our retailers?"
-difficulty: "Advanced"
-time: "Monthly"
-archetype: "Processor"
-description: "Checks if you are bidding on keywords where your wholesale partners (e.g. Nordstrom, Sephora) already dominate the SERP."
+id: wholesale-dtc-ad-conflict
+category: Paid Media
+title: Channel Conflict Monitor
+tagline: Are we bidding against our retailers?
+difficulty: Advanced
+time: Monthly
+archetype: Processor
+description: >-
+  Checks if you are bidding on keywords where your wholesale partners (e.g.
+  Nordstrom, Sephora) already dominate the SERP.
 sampleData:
-  filename: "serp_data.csv"
+  filename: serp_data.csv
   content: |
     Keyword,My_Rank,Partner_Rank
     Lipstick,1,5
     Mascara,5,1
+isPremium: true
 ---
 # Agent Configuration: The Channel Marketing Manager
 

@@ -66,7 +66,7 @@ export default function RolePage({ roleName, recipes }: RolePageProps) {
             {recipes.map(recipe => (
               <Link 
                 key={recipe.id} 
-                href={`/ai-examples/${recipe.id}`}
+                href={`/skills/${recipe.id}`}
                 className="group flex flex-col bg-secondary-bg border border-navy-dark rounded-xl p-8 hover:border-accent/50 transition-all hover:shadow-[0_15px_40px_rgba(56,189,248,0.05)] relative"
               >
                 <div className="flex items-center gap-3 mb-6">

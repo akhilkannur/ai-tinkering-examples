@@ -1,9 +1,3 @@
-# Blueprints: Social Media
-
-## The Instagram Blueprint Auto-Poster
-URL: https://realaiexamples.com/skills/instagram-blueprint-poster
-Description: Turn your documentation into viral social cards.
-
 ---
 id: instagram-blueprint-poster
 category: Social Media
@@ -51,7 +45,3 @@ Automatically convert technical blueprints into 1080x1080 Instagram cards and pu
 1. **Log:** Create `instagram_audit.log` with the Post ID and Timestamp.
 2. **Cleanup:** Delete temporary local screenshots.
 3. **Report:** "Successfully published [X] blueprints to Instagram. Audit log updated."
-
-
----
-

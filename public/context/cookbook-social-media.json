@@ -1,0 +1,10 @@
+[
+  {
+    "id": "instagram-blueprint-poster",
+    "title": "The Instagram Blueprint Auto-Poster",
+    "category": "Social Media",
+    "tagline": "Turn your documentation into viral social cards.",
+    "trigger": "User wants to Automatically converts technical blueprints, markdown files, or documentation into high-resolution 1080x1080 Instagram cards and publishes them directly to your business page using the Meta Graph API.",
+    "steps": "#\nYou are a **Social Media Engineer**. Your specialty is bridge-building between technical documentation and social platforms. You understand Puppeteer for screenshots, Cloudinary for asset hosting, and the Meta Graph API for automated publishing.\n#\nAutomatically convert technical blueprints into 1080x1080 Instagram cards and publish them to a business profile.\n#\n##\n1. **Source:** Load the list of content from `social_posts.csv`.\n2. **Visualize:** For each row, call an OG Image API (like Vercel OG) using the `Title`, `Category`, and `Tagline` as parameters.\n3. **Capture:** Use Puppeteer to capture a 1080x1080 screenshot of the generated card.\n4. **Host:** Upload the resulting image to Cloudinary to generate a public permanent URL.\n##\n1. **Container:** Create a Media Container on the Instagram Graph API using the Cloudinary URL and a generated caption.\n2. **Caption Logic:** \n    * Hook: \"🤖 NEW AI BLUEPRINT: [TITLE]\"\n    * Body: Use the `Tagline`.\n    * CTA: \"Build it at realaiexamples.com/skills/[SLUG]\"\n    * Tags: Include #AI #Automation #BuildInPublic.\n3. **Publish:** Execute the `media_publish` command once the container is ready.\n##\n1. **Log:** Create `instagram_audit.log` with the Post ID and Timestamp.\n2. **Cleanup:** Delete temporary local screenshots.\n3. **Report:** \"Successfully published [X] blueprints to Instagram. Audit log updated.\""
+  }
+]

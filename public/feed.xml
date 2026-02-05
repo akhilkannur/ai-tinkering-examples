@@ -5,15 +5,33 @@
     <link>https://realaiexamples.com</link>
     <description>Practical AI Blueprints, Recipes, and Guides for Operations, Marketing, and Sales.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 03 Feb 2026 10:07:10 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 05 Feb 2026 05:38:00 GMT</lastBuildDate>
     <atom:link href="https://realaiexamples.com/feed.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title><![CDATA[Moltbot (formerly Clawdbot) 101: What It Is and How to Install It (Updated Guide)]]></title>
+      <title><![CDATA[How I Automated Instagram Direct Publishing (Without Paying for a Scheduler)]]></title>
+      <link>https://realaiexamples.com/blog/automating-instagram-direct-publishing</link>
+      <guid>https://realaiexamples.com/blog/automating-instagram-direct-publishing</guid>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[]]></description>
+      <author>Real AI Examples</author>
+    </item>
+  
+    <item>
+      <title><![CDATA[Clawdbot (now OpenClaw) 101: What It Is and How to Install It (Updated Guide)]]></title>
       <link>https://realaiexamples.com/blog/clawdbot-beginners-guide</link>
       <guid>https://realaiexamples.com/blog/clawdbot-beginners-guide</guid>
-      <pubDate>Mon, 02 Feb 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Moltbot (previously Clawdbot) is trending everywhere. But what is it? Do you need a Mac Mini? Is it free? This updated guide covers the rename, Cloudflare hosting, and setup.]]></description>
+      <pubDate>Tue, 03 Feb 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Clawdbot (also known as Moltbot or OpenClaw) is trending everywhere. From Name Change drama to critical safety fixes, Cloudflare edge hosting, and new $249 hardware.]]></description>
+      <author>Akhil from Real Examples</author>
+    </item>
+  
+    <item>
+      <title><![CDATA[The Marketer’s Guide to Professional Markdown: From Notes to Logic]]></title>
+      <link>https://realaiexamples.com/blog/markdown-for-marketers</link>
+      <guid>https://realaiexamples.com/blog/markdown-for-marketers</guid>
+      <pubDate>Tue, 03 Feb 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Stop using Markdown as a basic notepad. Learn how to architect .md files that both humans and AI agents can execute with 100% accuracy.]]></description>
       <author>Akhil from Real Examples</author>
     </item>
   

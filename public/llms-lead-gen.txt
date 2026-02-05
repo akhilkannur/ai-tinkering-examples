@@ -13,16 +13,17 @@ difficulty: Intermediate
 time: 15 mins
 archetype: Researcher
 description: >-
-  Warm introductions convert 5x better than cold outreach. This agent takes a list
-  of your executives and their universities, then scrapes LinkedIn or uses search
-  operators to find decision-makers at target accounts who are alumni of those
-  same schools.
+  Warm introductions convert 5x better than cold outreach. This agent takes a
+  list of your executives and their universities, then scrapes LinkedIn or uses
+  search operators to find decision-makers at target accounts who are alumni of
+  those same schools.
 sampleData:
   filename: executive_universities.csv
   content: |
     Exec_Name,University,Target_Accounts
     Sarah Jones,Stanford University,"Stripe, Plaid, Square"
     Mike Ross,University of Michigan,"Ford, GM, Rivian"
+isPremium: false
 ---
 
 # Agent Configuration: The Alumni Network Miner
@@ -82,6 +83,7 @@ sampleData:
     Angel_Name,AngelList_URL,Focus_Sector
     Jason Calacanis,https://angel.co/jason,SaaS
     Naval Ravikant,https://angel.co/naval,Crypto/Web3
+isPremium: false
 ---
 
 # Agent Configuration: The Angel Portfolio Scanner
@@ -143,6 +145,7 @@ sampleData:
     Ticker,Company_Name,Keywords
     F,Ford Motor Company,"autonomous, electrification, software"
     WMT,Walmart,"supply chain, omnichannel, logistics"
+isPremium: false
 ---
 
 # Agent Configuration: The 10-K Strategic Hunter
@@ -198,6 +201,7 @@ sampleData:
     Fintech,Los Angeles,Series A-C only
     EdTech,Austin,Must have mobile app
     PropTech,New York,B2B only
+isPremium: false
 ---
 
 # Agent Configuration: The Sales Sniper
@@ -256,20 +260,22 @@ Description: Find leads from AppExchange, Shopify, or HubSpot app stores.
 id: b2b-marketplace-scraper
 category: Lead Gen
 title: The Ecosystem Partner Finder
-tagline: Find leads from AppExchange, Shopify, or HubSpot app stores.
+tagline: 'Find leads from AppExchange, Shopify, or HubSpot app stores.'
 difficulty: Intermediate
 time: 20 mins
 archetype: Researcher
 description: >-
   Companies listed on B2B marketplaces (Salesforce AppExchange, Shopify App
   Store, etc.) are tech-forward and often pay for other SaaS tools. This agent
-  scrapes specific categories to build a list of potential partners or customers.
+  scrapes specific categories to build a list of potential partners or
+  customers.
 sampleData:
   filename: marketplace_targets.csv
   content: |
     Marketplace_URL,Category,Min_Ratings
     https://apps.shopify.com,Marketing,50
     https://appexchange.salesforce.com,Analytics,10
+isPremium: false
 ---
 
 # Agent Configuration: The Ecosystem Partner Finder
@@ -328,6 +334,7 @@ sampleData:
     Competitor_Name,Review_Site_URL
     Salesforce,https://www.g2.com/products/salesforce-crm/reviews
     HubSpot,https://www.capterra.com/p/152373/HubSpot-Marketing-Hub/
+isPremium: false
 ---
 
 # Agent Configuration: The Competitor Poacher
@@ -376,14 +383,16 @@ difficulty: Advanced
 time: 25 mins
 archetype: Researcher
 description: >-
-  Board members often sit on multiple boards. This agent maps the web of connections 
-  between your investors/board and target accounts, identifying high-level "side door" entry points.
+  Board members often sit on multiple boards. This agent maps the web of
+  connections  between your investors/board and target accounts, identifying
+  high-level "side door" entry points.
 sampleData:
   filename: board_connections.csv
   content: |
     Your_Board_Member,Target_Company
     Marc Andreessen,Uber
     Bill Gurley,Coinbase
+isPremium: false
 ---
 
 # Agent Configuration: The Board Room Infiltrator
@@ -429,7 +438,7 @@ tagline: Write complex Sales Nav queries without the headache.
 difficulty: Beginner
 time: One-off
 archetype: Processor
-isPremium: true
+isPremium: false
 description: >-
   Sales Navigator is powerful, but only if you speak 'Boolean'. This agent takes
   a plain English description of your ideal customer profile (ICP) and
@@ -496,8 +505,8 @@ difficulty: Intermediate
 time: Daily
 archetype: Hybrid
 description: >-
-  Hiring is the strongest signal of budget. This agent monitors the careers pages
-  of target accounts for specific job titles (e.g., "VP of Sales," "React
+  Hiring is the strongest signal of budget. This agent monitors the careers
+  pages of target accounts for specific job titles (e.g., "VP of Sales," "React
   Developer") and alerts you immediately so you can pitch your tool as part of
   their new stack.
 sampleData:
@@ -506,6 +515,7 @@ sampleData:
     Company_Domain,Job_Keyword
     airbnb.com,"Sales Operations"
     notion.so,"Head of Marketing"
+isPremium: true
 ---
 
 # Agent Configuration: The Hiring Intent Trigger
@@ -552,15 +562,17 @@ difficulty: Intermediate
 time: 30 mins
 archetype: Researcher
 description: >-
-  Executives go on podcast tours to promote something (a book, a round of funding, a launch). 
-  This agent finds recent podcast guest appearances by CEOs in your niche, giving you 
-  perfect context for outreach ("Heard you on [Podcast] talking about X...").
+  Executives go on podcast tours to promote something (a book, a round of
+  funding, a launch).  This agent finds recent podcast guest appearances by CEOs
+  in your niche, giving you  perfect context for outreach ("Heard you on
+  [Podcast] talking about X...").
 sampleData:
   filename: target_ceos.csv
   content: |
     CEO_Name,Company
     Brian Chesky,Airbnb
     Tobi Lutke,Shopify
+isPremium: true
 ---
 
 # Agent Configuration: The Podcast Tour Stalker
@@ -609,9 +621,9 @@ difficulty: Intermediate
 time: 20 mins
 archetype: Researcher
 description: >-
-  Challenger brands are aggressive, well-funded, and willing to take risks on new
-  tech to beat incumbents. This agent identifies companies positioning themselves
-  as "The [Incumbent] Killer" (e.g., "The Salesforce Alternative").
+  Challenger brands are aggressive, well-funded, and willing to take risks on
+  new tech to beat incumbents. This agent identifies companies positioning
+  themselves as "The [Incumbent] Killer" (e.g., "The Salesforce Alternative").
 sampleData:
   filename: incumbent_list.csv
   content: |
@@ -619,6 +631,7 @@ sampleData:
     Salesforce,CRM
     Zoom,Video Conferencing
     Slack,Communication
+isPremium: true
 ---
 
 # Agent Configuration: The Challenger Brand Hunter
@@ -678,6 +691,7 @@ sampleData:
     Company_Domain,Cloud_Provider
     acme-corp.com,AWS
     globex-tech.io,Azure
+isPremium: true
 ---
 
 # Agent Configuration: The Cloud Bill Shock Hunter
@@ -733,6 +747,7 @@ sampleData:
     Ryan Carson,https://x.com/ryancarson,AI Agents
     Sahil Lavingia,https://x.com/shl,Creator Economy
     Justin Welsh,https://x.com/JustinWelsh,Solopreneurship
+isPremium: true
 ---
 
 # Agent Configuration: The Cold DM Personalizer
@@ -792,6 +807,7 @@ sampleData:
     Account Executive,50000,1000000
     SDR,5000,200000
     Customer Success,15000,500000
+isPremium: true
 ---
 
 # Agent Configuration: The Sales Comp Designer
@@ -853,6 +869,7 @@ sampleData:
     SaaStr 2024,https://www.saastr.com/speakers
     Web Summit,https://websummit.com/speakers
     Collision,https://collisionconf.com/speakers
+isPremium: true
 ---
 
 # Agent Configuration: The Conference Batch Scraper
@@ -901,13 +918,14 @@ time: 15 mins
 archetype: Researcher
 description: >-
   Companies sponsoring conferences have marketing budget. This agent takes a
-  conference "Sponsors" page URL, scrapes the logos/names, and enriches them with
-  CMO contact info to pitch booth services, event tech, or lead gen.
+  conference "Sponsors" page URL, scrapes the logos/names, and enriches them
+  with CMO contact info to pitch booth services, event tech, or lead gen.
 sampleData:
   filename: conference_url.txt
   content: |
     https://saastrannual2024.com/sponsors
     https://dreamforce.com/sponsors
+isPremium: true
 ---
 
 # Agent Configuration: The Sponsor List Enricher
@@ -963,6 +981,7 @@ sampleData:
     Software_Ecosystem,Target_Role
     Asana,Workflow Consultant
     Shopify,CRO Agency
+isPremium: true
 ---
 
 # Agent Configuration: The Channel Partner Scout
@@ -1019,6 +1038,7 @@ sampleData:
     Domain
     company-a.com
     startup-b.io
+isPremium: true
 ---
 
 # Agent Configuration: The Ghost Blog Hunter
@@ -1075,6 +1095,7 @@ sampleData:
     Repository_URL,Qualifying_Action
     https://github.com/vercel/next.js,Star
     https://github.com/supabase/supabase,Fork
+isPremium: true
 ---
 
 # Agent Configuration: The Open Source Stalker
@@ -1121,15 +1142,16 @@ difficulty: Intermediate
 time: 20 mins
 archetype: Researcher
 description: >-
-  Hiring 10+ support agents at once indicates a scaling crisis. This agent scans job boards 
-  for bulk listings of "Customer Support Representative" to find companies that need 
-  AI support agents, helpdesk software, or outsourcing.
+  Hiring 10+ support agents at once indicates a scaling crisis. This agent scans
+  job boards  for bulk listings of "Customer Support Representative" to find
+  companies that need  AI support agents, helpdesk software, or outsourcing.
 sampleData:
   filename: job_boards.csv
   content: |
     Job_Title,Location
     "Customer Support Representative",Remote
     "Customer Success Associate",United States
+isPremium: true
 ---
 
 # Agent Configuration: The Support Scaler
@@ -1175,14 +1197,16 @@ time: Weekly
 archetype: Hybrid
 description: >-
   When a decision-maker changes jobs, it creates TWO opportunities: one at their
-  new company (where they already like you), and one at the old company (where the
-  new hire wants to make changes). This agent tracks job changes for key contacts.
+  new company (where they already like you), and one at the old company (where
+  the new hire wants to make changes). This agent tracks job changes for key
+  contacts.
 sampleData:
   filename: champions_list.csv
   content: |
     Name,Old_Company,LinkedIn_URL
     Jane Doe,Acme Corp,linkedin.com/in/janedoe
     John Smith,Globex,linkedin.com/in/johnsmith
+isPremium: true
 ---
 
 # Agent Configuration: The Champion Tracker
@@ -1230,9 +1254,9 @@ difficulty: Intermediate
 time: 20 mins
 archetype: Researcher
 description: >-
-  Companies hiring "Heads of Diversity" or publishing DEI reports have budget allocated 
-  for diverse hiring tools, inclusive culture software, and training. This agent finds 
-  those specific intent signals.
+  Companies hiring "Heads of Diversity" or publishing DEI reports have budget
+  allocated  for diverse hiring tools, inclusive culture software, and training.
+  This agent finds  those specific intent signals.
 sampleData:
   filename: dei_keywords.csv
   content: |
@@ -1240,6 +1264,7 @@ sampleData:
     "Head of Diversity"
     "Chief Diversity Officer"
     "DEI Annual Report"
+isPremium: true
 ---
 
 # Agent Configuration: The DEI Initiative Spotter
@@ -1292,6 +1317,7 @@ sampleData:
   content: |
     Keywords
     ai, labs, tech, health, finance, ventures
+isPremium: true
 ---
 
 # Agent Configuration: The New Domain Watcher
@@ -1346,6 +1372,7 @@ sampleData:
     Store_URL
     gymshark.com
     colourpop.com
+isPremium: true
 ---
 
 # Agent Configuration: The Re-Platform Scout
@@ -1401,6 +1428,7 @@ sampleData:
     Launch_URL
     https://www.producthunt.com/products/notion
     https://www.producthunt.com/products/linear
+isPremium: true
 ---
 
 # Agent Configuration: The Product Hunt Poacher
@@ -1457,6 +1485,7 @@ sampleData:
     Company,LinkedIn_ID
     Rippling,123456
     Deel,654321
+isPremium: true
 ---
 
 # Agent Configuration: The Hyper-Growth Radar
@@ -1560,14 +1589,16 @@ difficulty: Intermediate
 time: 20 mins
 archetype: Researcher
 description: >-
-  Your company's former employees are your secret weapon. They know your product.
-  This agent finds ex-employees of *your* company (or your client's company) who
-  now work at target prospect accounts, creating a friendly "Trojan Horse."
+  Your company's former employees are your secret weapon. They know your
+  product. This agent finds ex-employees of *your* company (or your client's
+  company) who now work at target prospect accounts, creating a friendly "Trojan
+  Horse."
 sampleData:
   filename: my_company_alumni.csv
   content: |
     My_Company_Name,Target_Account_List
     "Acme Corp","Globex, Stark Industries, Wayne Enterprises"
+isPremium: true
 ---
 
 # Agent Configuration: The Alumni Boomerang
@@ -1623,6 +1654,7 @@ sampleData:
     Office_Name,Website
     Iconiq Capital,iconiqcapital.com
     Bezos Expeditions,bezosexpeditions.com
+isPremium: true
 ---
 
 # Agent Configuration: The Family Office Hunter
@@ -1667,9 +1699,9 @@ difficulty: Intermediate
 time: 25 mins
 archetype: Researcher
 description: >-
-  Selling to individual Subway locations is hard. Selling to the owner who owns 50
-  Subways is scalable. This agent specifically hunts for "Franchise Groups" or
-  "Management LLCs" that own multiple units of big brands.
+  Selling to individual Subway locations is hard. Selling to the owner who owns
+  50 Subways is scalable. This agent specifically hunts for "Franchise Groups"
+  or "Management LLCs" that own multiple units of big brands.
 sampleData:
   filename: franchise_brands.csv
   content: |
@@ -1677,6 +1709,7 @@ sampleData:
     McDonald's
     Orangetheory Fitness
     Massage Envy
+isPremium: true
 ---
 
 # Agent Configuration: The Franchise Empire Mapper
@@ -1733,6 +1766,7 @@ sampleData:
     Job_Keyword,Your_Solution
     "Data Entry",Automated Data Cleaning Tool
     "Transcribe Audio",AI Transcription API
+isPremium: true
 ---
 
 # Agent Configuration: The Outsourcing Arbitrage
@@ -1786,6 +1820,7 @@ sampleData:
     Domain,Region
     shop-paris.com,EU
     california-tech.io,US-CA
+isPremium: true
 ---
 
 # Agent Configuration: The Compliance Cop
@@ -1836,8 +1871,8 @@ isPremium: true
 description: >-
   Generic personalization ('I saw you went to X University') is dead. This agent
   builds deep Account Intelligence dossiers by hunting for specific 'Ghost
-  Assets' - CEO podcast transcripts, 10-K risk factors, or recent webinar
-  slides - to give you a killer Point of View for Enterprise sales.
+  Assets' - CEO podcast transcripts, 10-K risk factors, or recent webinar slides
+  - to give you a killer Point of View for Enterprise sales.
 sampleData:
   filename: target_accounts.csv
   content: |
@@ -2015,15 +2050,17 @@ difficulty: Beginner
 time: 15 mins
 archetype: Researcher
 description: >-
-  Local businesses live and die by Google Reviews. This agent searches a specific
-  area (e.g., "Plumbers in Dallas") and filters for businesses with low review
-  counts or 4.0 ratings, creating a hit list for reputation management agencies.
+  Local businesses live and die by Google Reviews. This agent searches a
+  specific area (e.g., "Plumbers in Dallas") and filters for businesses with low
+  review counts or 4.0 ratings, creating a hit list for reputation management
+  agencies.
 sampleData:
   filename: local_search_params.csv
   content: |
     Niche,City
     Dentist,Chicago
     HVAC,Miami
+isPremium: true
 ---
 
 # Agent Configuration: The Local Review Rescuer
@@ -2073,15 +2110,17 @@ difficulty: Advanced
 time: Weekly
 archetype: Researcher
 description: >-
-  Winning a government contract is a massive liquidity event. This agent monitors
-  USASpending.gov or similar feeds to identify companies that just won contracts
-  >$1M, signaling they have cash and massive compliance/delivery requirements.
+  Winning a government contract is a massive liquidity event. This agent
+  monitors USASpending.gov or similar feeds to identify companies that just won
+  contracts >$1M, signaling they have cash and massive compliance/delivery
+  requirements.
 sampleData:
   filename: contract_criteria.csv
   content: |
     Min_Award_Amount,Agency
     1000000,Department of Defense
     500000,NASA
+isPremium: true
 ---
 
 # Agent Configuration: The GovCon Winner
@@ -2129,14 +2168,15 @@ time: 25 mins
 archetype: Analyst
 description: >-
   "Headless" commerce brands (using Contentful, Sanity, Strapi with Shopify) are
-  technically sophisticated and high-budget. This agent analyzes HTTP headers and
-  JS bundles to identify these high-value targets.
+  technically sophisticated and high-budget. This agent analyzes HTTP headers
+  and JS bundles to identify these high-value targets.
 sampleData:
   filename: dTC_brands.csv
   content: |
     Domain
     allbirds.com
     koala.com
+isPremium: true
 ---
 
 # Agent Configuration: The Headless Tech Hunter
@@ -2194,6 +2234,7 @@ sampleData:
     Company
     TechCorp
     StartupInc
+isPremium: true
 ---
 
 # Agent Configuration: The Freeze Thaw Detector
@@ -2246,6 +2287,7 @@ sampleData:
   filename: inc_5000_url.txt
   content: |
     https://www.inc.com/inc5000/2024
+isPremium: true
 ---
 
 # Agent Configuration: The Inc. 5000 Debutante
@@ -2291,13 +2333,15 @@ difficulty: Intermediate
 time: Batch
 archtype: Researcher
 description: >-
-  Scans the last 50 posts of a potential influencer. Flags keywords related to controversy, politics, or competitor brands.
+  Scans the last 50 posts of a potential influencer. Flags keywords related to
+  controversy, politics, or competitor brands.
 sampleData:
   filename: input_data.csv
   content: |
     Influencer_Handle,Platform
     @user1,Twitter
     @user2,Instagram
+isPremium: true
 ---
 
 # Agent Configuration: Influencer Brand Safety Scanner
@@ -2349,6 +2393,7 @@ sampleData:
     Domain
     brand-a.com
     brand-b.com
+isPremium: true
 ---
 
 # Agent Configuration: The Ad-Pixel Arbitrage
@@ -2409,6 +2454,7 @@ sampleData:
     Wins: Hired new CTO, Closed Acme Corp.
     Lows: Lost Beta Client, Server outage.
     Needs: Intro to Series A leads.
+isPremium: true
 ---
 
 # Agent Configuration: The Investor Update Writer
@@ -2465,9 +2511,10 @@ difficulty: Intermediate
 time: Monthly
 archetype: Researcher
 description: >-
-  Companies preparing for an IPO (hiring "VP of Investor Relations", "SEC Reporting," 
-  or "SOX Compliance") have unlimited budget for compliance, security, and financial 
-  audit tools. This agent detects those specific hiring signals.
+  Companies preparing for an IPO (hiring "VP of Investor Relations", "SEC
+  Reporting,"  or "SOX Compliance") have unlimited budget for compliance,
+  security, and financial  audit tools. This agent detects those specific hiring
+  signals.
 sampleData:
   filename: unicorn_list.csv
   content: |
@@ -2475,6 +2522,7 @@ sampleData:
     Databricks
     Stripe
     Canva
+isPremium: true
 ---
 
 # Agent Configuration: The Pre-IPO Hawk
@@ -2641,14 +2689,16 @@ time: 20 mins
 archetype: Researcher
 description: >-
   LinkedIn Groups are often dead, but the *members* are still highly qualified.
-  A user in a "Salesforce Architects" group has self-identified their skill/interest.
-  This agent scrapes the member list of a specific group to build a targeted list.
+  A user in a "Salesforce Architects" group has self-identified their
+  skill/interest. This agent scrapes the member list of a specific group to
+  build a targeted list.
 sampleData:
   filename: group_urls.csv
   content: |
     Group_URL,Niche
     https://www.linkedin.com/groups/12345/,Salesforce Admins
     https://www.linkedin.com/groups/67890/,SaaS Founders
+isPremium: true
 ---
 
 # Agent Configuration: The Niche Group Miner
@@ -2818,13 +2868,15 @@ archetype: Researcher
 description: >-
   Mergers create chaos. Systems need to be integrated, redundant staff are cut,
   and new budgets are formed. This agent finds companies that recently completed
-  a merger or acquisition (M&A) to pitch integration services or cost-saving tools.
+  a merger or acquisition (M&A) to pitch integration services or cost-saving
+  tools.
 sampleData:
   filename: ma_targets.csv
   content: |
     Company,Acquired_By,Date
     Figma,Tableau,2024-01-01
     Slack,Salesforce,2021-01-01
+isPremium: true
 ---
 
 # Agent Configuration: The M&A Chaos Hunter
@@ -2882,6 +2934,7 @@ sampleData:
     Agency_URL
     https://pentagram.com/work
     https://clay.global/work
+isPremium: true
 ---
 
 # Agent Configuration: The Portfolio Reverse Engineer
@@ -2928,15 +2981,16 @@ difficulty: Advanced
 time: 20 mins
 archetype: Analyst
 description: >-
-  Mobile apps run on SDKs (Stripe for payments, Twilio for chat, Mapbox for maps).
-  This agent analyzes Android/iOS app packages (conceptually via data providers
-  like AppBrain or Mixrank) to find apps installing *competitor* SDKs.
+  Mobile apps run on SDKs (Stripe for payments, Twilio for chat, Mapbox for
+  maps). This agent analyzes Android/iOS app packages (conceptually via data
+  providers like AppBrain or Mixrank) to find apps installing *competitor* SDKs.
 sampleData:
   filename: sdk_competitors.csv
   content: |
     Competitor_SDK
     com.stripe.android
     io.intercom.android
+isPremium: true
 ---
 
 # Agent Configuration: The SDK Sniper
@@ -2982,9 +3036,9 @@ difficulty: Intermediate
 time: 20 mins
 archetype: Researcher
 description: >-
-  Niche newsletters are the most undervalued ad channel. This agent searches directories 
-  (Reletter, Paved, Substack) and Google to find newsletters in your industry that 
-  actively accept sponsorships.
+  Niche newsletters are the most undervalued ad channel. This agent searches
+  directories  (Reletter, Paved, Substack) and Google to find newsletters in
+  your industry that  actively accept sponsorships.
 sampleData:
   filename: newsletter_niche.csv
   content: |
@@ -2992,6 +3046,7 @@ sampleData:
     "SaaS Marketing"
     "React Developers"
     "Crypto News"
+isPremium: true
 ---
 
 # Agent Configuration: The Newsletter Sponsor Finder
@@ -3043,14 +3098,16 @@ time: Monthly
 archetype: Researcher
 description: >-
   Non-profits typically have tight budgets, EXCEPT when they win a major grant.
-  This agent monitors grant announcements (Gates Foundation, Ford Foundation, etc.)
-  to find non-profits that just got a cash injection and need to "spend it or lose it."
+  This agent monitors grant announcements (Gates Foundation, Ford Foundation,
+  etc.) to find non-profits that just got a cash injection and need to "spend it
+  or lose it."
 sampleData:
   filename: foundation_watch_list.csv
   content: |
     Foundation_Name,Website
     Bill & Melinda Gates Foundation,gatesfoundation.org
     Ford Foundation,fordfoundation.org
+isPremium: true
 ---
 
 # Agent Configuration: The Grant Money Hunter
@@ -3098,16 +3155,17 @@ difficulty: Advanced
 time: Monthly
 archetype: Researcher
 description: >-
-  Companies filing patents are investing heavily in innovation. This agent monitors 
-  Google Patents/USPTO for new filings in specific categories (e.g., "Generative AI," 
-  "Battery Tech") to find companies building *new* products who need engineering 
-  support or specialized components.
+  Companies filing patents are investing heavily in innovation. This agent
+  monitors  Google Patents/USPTO for new filings in specific categories (e.g.,
+  "Generative AI,"  "Battery Tech") to find companies building *new* products
+  who need engineering  support or specialized components.
 sampleData:
   filename: patent_keywords.csv
   content: |
     Keyword,Industry
     "Solid State Battery",Automotive
     "Large Language Model",Software
+isPremium: true
 ---
 
 # Agent Configuration: The R&D Spy
@@ -3157,7 +3215,8 @@ archetype: Researcher
 description: >-
   Private Equity (PE) firms love to consolidate vendors across their portfolio.
   If you sell to one Vista Equity company, you can likely sell to *all* of them.
-  This agent maps the full portfolio of a target PE firm to enable a "Land and Expand" strategy.
+  This agent maps the full portfolio of a target PE firm to enable a "Land and
+  Expand" strategy.
 sampleData:
   filename: pe_firms.csv
   content: |
@@ -3165,6 +3224,7 @@ sampleData:
     Vista Equity Partners
     Thoma Bravo
     Insight Partners
+isPremium: true
 ---
 
 # Agent Configuration: The PE Rollup Hunter
@@ -3212,15 +3272,17 @@ difficulty: Intermediate
 time: Weekly
 archetype: Researcher
 description: >-
-  Companies advertising on podcasts have high CAC tolerance and marketing budget.
-  This agent listens to (or reads transcripts of) popular industry podcasts to
-  log the sponsors, creating a list of companies aggressively spending on brand awareness.
+  Companies advertising on podcasts have high CAC tolerance and marketing
+  budget. This agent listens to (or reads transcripts of) popular industry
+  podcasts to log the sponsors, creating a list of companies aggressively
+  spending on brand awareness.
 sampleData:
   filename: podcast_rss_feeds.csv
   content: |
     Podcast_Name,RSS_Feed
     My First Million,https://feeds.megaphone.fm/myfirstmillion
     Lenny's Podcast,https://api.substack.com/feed/podcast/10845.rss
+isPremium: true
 ---
 
 # Agent Configuration: The Podcast Ad Spender
@@ -3271,8 +3333,8 @@ archetype: Researcher
 description: >-
   When Company A partners with Company B, they are both in "Growth/BD Mode."
   This agent scans PR wires (BusinessWire, PRNewswire) for headlines containing
-  "Partner," "Collaboration," or "Integration" to find companies actively building
-  their ecosystem.
+  "Partner," "Collaboration," or "Integration" to find companies actively
+  building their ecosystem.
 sampleData:
   filename: pr_keywords.csv
   content: |
@@ -3280,6 +3342,7 @@ sampleData:
     "strategic partnership"
     "announces integration with"
     "joins partner program"
+isPremium: true
 ---
 
 # Agent Configuration: The Partnership Announcement Alert
@@ -3450,7 +3513,8 @@ archetype: Researcher
 description: >-
   Companies switching to "Remote First" need a whole new stack: Async tools,
   security VPNs, HR compliance (Deel/Remote), and offsite planning. This agent
-  finds companies explicitly stating "Remote First" in job posts or "About" pages.
+  finds companies explicitly stating "Remote First" in job posts or "About"
+  pages.
 sampleData:
   filename: tech_hubs.csv
   content: |
@@ -3458,6 +3522,7 @@ sampleData:
     San Francisco
     New York
     Austin
+isPremium: true
 ---
 
 # Agent Configuration: The Remote First Hunter
@@ -3573,14 +3638,16 @@ time: Weekly
 archetype: Analyst
 description: >-
   When a SaaS company raises prices, their customers get annoyed and look for
-  alternatives. This agent monitors the `/pricing` pages of your competitors
-  and alerts you if the numbers change, so you can run a "Price Hike Refugee" campaign.
+  alternatives. This agent monitors the `/pricing` pages of your competitors and
+  alerts you if the numbers change, so you can run a "Price Hike Refugee"
+  campaign.
 sampleData:
   filename: competitor_pricing_urls.csv
   content: |
     Competitor,Pricing_URL
     Salesforce,https://www.salesforce.com/editions-pricing/
     HubSpot,https://www.hubspot.com/pricing/marketing
+isPremium: true
 ---
 
 # Agent Configuration: The Price Hike Monitor
@@ -3689,8 +3756,8 @@ time: 20 mins
 archetype: Researcher
 description: >-
   Hiring a "First VP of Sales" is the most critical milestone for B2B startups.
-  It means they are moving from "Founder-led Sales" to "Process-led Sales."
-  They need CRM setup, playbooks, data tools, and coaching immediately.
+  It means they are moving from "Founder-led Sales" to "Process-led Sales." They
+  need CRM setup, playbooks, data tools, and coaching immediately.
 sampleData:
   filename: startup_jobs.csv
   content: |
@@ -3698,6 +3765,7 @@ sampleData:
     "Founding VP of Sales"
     "First Sales Hire"
     "Head of Sales"
+isPremium: true
 ---
 
 # Agent Configuration: The VP Sales Headhunter
@@ -3804,10 +3872,10 @@ difficulty: Advanced
 time: 20 mins
 archetype: Researcher
 description: >-
-  Stealth startups don't have websites, but they DO have job postings. This agent
-  finds job listings from companies named "Stealth Startup" or "Confidential"
-  and uses the *recruiter's profile* or the *job description tech stack* to identify
-  who they actually are.
+  Stealth startups don't have websites, but they DO have job postings. This
+  agent finds job listings from companies named "Stealth Startup" or
+  "Confidential" and uses the *recruiter's profile* or the *job description tech
+  stack* to identify who they actually are.
 sampleData:
   filename: stealth_keywords.csv
   content: |
@@ -3815,6 +3883,7 @@ sampleData:
     "Stealth Mode"
     "Unannounced Startup"
     "Ex-Stripe Founder"
+isPremium: true
 ---
 
 # Agent Configuration: The Stealth Mode Breaker
@@ -3973,9 +4042,9 @@ difficulty: Intermediate
 time: Daily
 archetype: Researcher
 description: >-
-  When a brand gets "cancelled" or trends negatively on Twitter, they immediately
-  hire PR firms and reputation management software. This agent monitors Twitter
-  trends and sentiment spikes to find brands in trouble.
+  When a brand gets "cancelled" or trends negatively on Twitter, they
+  immediately hire PR firms and reputation management software. This agent
+  monitors Twitter trends and sentiment spikes to find brands in trouble.
 sampleData:
   filename: brand_watch_list.csv
   content: |
@@ -3983,6 +4052,7 @@ sampleData:
     @airlines
     @fastfood
     @fashionbrand
+isPremium: true
 ---
 
 # Agent Configuration: The PR Crisis Ambulance
@@ -4038,6 +4108,7 @@ sampleData:
     HS_Code,Product_Name
     854231,Processors/Chips
     850760,Lithium Batteries
+isPremium: true
 ---
 
 # Agent Configuration: The Supply Chain Risk Mapper
@@ -4084,13 +4155,15 @@ archetype: Researcher
 description: >-
   TikTok Shop is exploding. Many top sellers are just influencers with a product
   but NO real website or email marketing. This agent finds trending products on
-  TikTok Shop and checks if they have a Shopify store - if not, you pitch "Own your audience."
+  TikTok Shop and checks if they have a Shopify store - if not, you pitch "Own
+  your audience."
 sampleData:
   filename: tiktok_categories.csv
   content: |
     Category
     Beauty & Personal Care
     Womenswear
+isPremium: true
 ---
 
 # Agent Configuration: The TikTok Shop Scout
@@ -4129,7 +4202,7 @@ For each category:
 URL: https://realaiexamples.com/skills/youtube-comment-lead-miner
 Description: Turn video comments into qualified leads.
 
---- 
+---
 id: youtube-comment-lead-miner
 category: Lead Gen
 title: YouTube Comment Lead Miner
@@ -4138,12 +4211,14 @@ difficulty: Intermediate
 time: Batch
 archetype: Researcher
 description: >-
-  Scrapes comments on your viral video. Filters for intent keywords like "Pricing?", "How do I buy?", "Is this available in...?",
+  Scrapes comments on your viral video. Filters for intent keywords like
+  "Pricing?", "How do I buy?", "Is this available in...?",
 sampleData:
   filename: input_data.csv
   content: |
     Video_ID,Comment_Text
     Vid1,"How much is this?"
+isPremium: true
 ---
 
 # Agent Configuration: YouTube Comment Lead Miner

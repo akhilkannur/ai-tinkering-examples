@@ -23,6 +23,7 @@ sampleData:
     Linear,https://linear.app,Karri Saarinen
     PostHog,https://posthog.com,James Hawkins
     Beehiiv,https://beehiiv.com,Tyler Denk
+isPremium: false
 ---
 
 # Agent Configuration: The About Page Storyteller
@@ -89,6 +90,7 @@ sampleData:
       "primary_color": "#3b82f6",
       "style": "muted" 
     }
+isPremium: false
 ---
 
 # Agent Configuration: The Automated Video Producer
@@ -159,6 +161,7 @@ sampleData:
     AI Productivity,Alex,Save 10 hours a week
     Sustainable Fashion,Maya,Ethically sourced materials
     Remote Work Tips,Chris,Better work-life balance
+isPremium: false
 ---
 
 # Agent Configuration: The AI Avatar Scriptwriter
@@ -216,6 +219,7 @@ sampleData:
     1. Check out my blog.
     2. My favorite gear.
     3. Buy my course.
+isPremium: false
 ---
 
 # Agent Configuration: The Bio Link Architect
@@ -280,6 +284,7 @@ sampleData:
     NeoCloud,Cloud storage for AI researchers,Minimalist and Secure
     VelvetBloom,Luxury organic skincare,Elegant and Botanical
     PixelPounce,A speed-focused gaming mouse,Aggressive and Tech-forward
+isPremium: false
 ---
 
 # Agent Configuration: The Instant Brand Architect
@@ -343,6 +348,7 @@ sampleData:
     Apple,https://apple.com,Homepage
     Nike,https://nike.com,Instagram
     Mailchimp,https://mailchimp.com,Blog
+isPremium: false
 ---
 
 # Agent Configuration: The Brand Voice Architect
@@ -402,6 +408,7 @@ description: >-
 sampleData:
   filename: comments.csv
   content: "Username,Comment_Text,Platform\njason_dev,\U0001F525 great post as always!,Twitter\nsara_founder,Does this integrate with Slack?,LinkedIn\nmike_marketer,I tried this but it was too expensive for my team.,LinkedIn\n"
+isPremium: false
 ---
 
 # Agent Configuration: The Comment Section Nurturer
@@ -464,6 +471,7 @@ sampleData:
     The Future of AI Agents,https://blog.com/ai-agents,Automation
     10 Tips for Remote Work,https://blog.com/remote-tips,Culture
     SaaS Pricing Strategies,https://blog.com/pricing,Finance
+isPremium: false
 ---
 
 # Agent Configuration: The Viral Editor
@@ -523,7 +531,7 @@ Start now.
 URL: https://realaiexamples.com/skills/docs-freshness-auditor
 Description: Flag help articles that reference old UI.
 
---- 
+---
 id: docs-freshness-auditor
 category: Content Ops
 title: Docs Freshness Auditor
@@ -532,12 +540,14 @@ difficulty: Intermediate
 time: Batch
 archetype: Researcher
 description: >-
-  Scans Help Center articles. Checks for dates > 1 year old or mentions of deprecated features/buttons.
+  Scans Help Center articles. Checks for dates > 1 year old or mentions of
+  deprecated features/buttons.
 sampleData:
   filename: input_data.csv
   content: |
     Article_URL,Last_Updated
     /docs/setup,2022-01-01
+isPremium: true
 ---
 
 # Agent Configuration: Docs Freshness Auditor
@@ -580,12 +590,14 @@ difficulty: Beginner
 time: Real-time
 archtype: Processor
 description: >-
-  Reads your "Release Notes". Outputs a script for a 5-second screen recording (GIF) that best demonstrates the value (e.g., "Zoom in on the new button").
+  Reads your "Release Notes". Outputs a script for a 5-second screen recording
+  (GIF) that best demonstrates the value (e.g., "Zoom in on the new button").
 sampleData:
   filename: input_data.csv
   content: |
     Feature_Name,Description
     Dark Mode,Added a toggle in settings.
+isPremium: true
 ---
 
 # Agent Configuration: Changelog GIF Concept Maker
@@ -869,7 +881,7 @@ For each row in the CSV:
 URL: https://realaiexamples.com/skills/link-in-bio-auditor
 Description: Ensure your most valuable link actually works.
 
---- 
+---
 id: link-in-bio-auditor
 category: Content Ops
 title: Link-in-Bio Broken Link Checker
@@ -878,12 +890,14 @@ difficulty: Beginner
 time: Batch
 archetype: Researcher
 description: >-
-  Daily check of your Linktree/Bio link. Validates that it doesn't 404 and that the redirect lands on the correct promo page.
+  Daily check of your Linktree/Bio link. Validates that it doesn't 404 and that
+  the redirect lands on the correct promo page.
 sampleData:
   filename: input_data.csv
   content: |
     Instagram_Handle,Expected_Dest_URL
     @brand,https://site.com/promo
+isPremium: true
 ---
 
 # Agent Configuration: Link-in-Bio Broken Link Checker
@@ -981,13 +995,13 @@ Description: Convert blog posts into high-retention slides (Hooks, Lists, CTAs).
 id: linkedin-carousel
 category: Content Ops
 title: The Carousel Architect
-tagline: Convert blog posts into high-retention slides (Hooks, Lists, CTAs).
+tagline: 'Convert blog posts into high-retention slides (Hooks, Lists, CTAs).'
 difficulty: Beginner
 time: 10 mins
 archetype: Hybrid
 description: >-
-  Don't just copy-paste text. This agent reads your blog post URL, identifies the
-  core "Listicle" structure (H2 headers), and rewrites it into a viral-style
+  Don't just copy-paste text. This agent reads your blog post URL, identifies
+  the core "Listicle" structure (H2 headers), and rewrites it into a viral-style
   PDF carousel script with strong hooks and clear visual cues.
 sampleData:
   filename: posts_to_convert.csv
@@ -995,6 +1009,7 @@ sampleData:
     URL
     https://realaiexamples.com/blog/ai-sales-agents
     https://realaiexamples.com/blog/seo-is-dead
+isPremium: true
 ---
 
 # Agent Configuration: The Carousel Architect
@@ -1247,13 +1262,16 @@ difficulty: Intermediate
 time: Real-time
 archtype: Processor
 description: >-
-  Uploads your proposed thumbnails to a Vision model. Scores them on text readability, face prominence, and contrast against the LinkedIn UI gray background.
+  Uploads your proposed thumbnails to a Vision model. Scores them on text
+  readability, face prominence, and contrast against the LinkedIn UI gray
+  background.
 sampleData:
   filename: input_data.csv
   content: |
     Image_Name,Local_Path
     Chart_V1,./images/chart1.png
     Selfie_V2,./images/selfie.png
+isPremium: true
 ---
 
 # Agent Configuration: LinkedIn Visual Hook Scorer
@@ -1298,13 +1316,15 @@ archetype: Hybrid
 description: >-
   Colors aren't just aesthetic; they are emotional triggers. This agent scans
   your logo, extracts the dominant hex codes, and maps them to psychological
-  archetypes (e.g., Blue=Trust) to generate a scientifically aligned Brand Guide.
+  archetypes (e.g., Blue=Trust) to generate a scientifically aligned Brand
+  Guide.
 sampleData:
   filename: logos.csv
   content: |
     Brand,Logo_Path
     BankCo,assets/bankco.png
     Foodie,assets/burger.png
+isPremium: true
 ---
 
 # Agent Configuration: The Brand Scientist
@@ -1418,10 +1438,14 @@ description: >-
   your expert take ("The Insight").
 sampleData:
   filename: news_jacking_targets.csv
-  content: |
+  content: >
     Topic,News_URL
-    AI in Sales,https://techcrunch.com/2024/01/01/salesforce-launches-einstein-copilot
+
+    AI in
+    Sales,https://techcrunch.com/2024/01/01/salesforce-launches-einstein-copilot
+
     Crypto Regulation,https://www.coindesk.com/policy/new-sec-rules
+isPremium: true
 ---
 
 # Agent Configuration: The News Jacker
@@ -1475,13 +1499,14 @@ difficulty: Beginner
 time: Real-time
 archtype: Processor
 description: >-
-  Analyzes your draft newsletter. Counts "Fear/Urgency" words vs "Hope/Value" words. Ensures you aren't burning out your list with constant alarmism.
+  Analyzes your draft newsletter. Counts "Fear/Urgency" words vs "Hope/Value"
+  words. Ensures you aren't burning out your list with constant alarmism.
 sampleData:
   filename: input_data.csv
   content: |
     Subject_Line,Body_Text
     "Last Chance!","Everything is ending..."
-    
+isPremium: true
 ---
 
 # Agent Configuration: Newsletter Vibe Check
@@ -1580,13 +1605,16 @@ difficulty: Beginner
 time: Real-time
 archtype: Researcher
 description: >-
-  Ingests a potential guest's previous interviews. Scores them on "Energy Level", "Talk-to-Listen Ratio", and "Jargon Usage" to see if they fit your audience.
+  Ingests a potential guest's previous interviews. Scores them on "Energy
+  Level", "Talk-to-Listen Ratio", and "Jargon Usage" to see if they fit your
+  audience.
 sampleData:
   filename: input_data.csv
   content: |
     Guest_Name,Podcast_Episode_Transcript_URL
     Sam Altman,https://youtube.com/watch?v=...
     Elon Musk,https://youtube.com/watch?v=...
+isPremium: true
 ---
 
 # Agent Configuration: Podcast Guest Matchmaker
@@ -1702,6 +1730,7 @@ sampleData:
     [00:00:45] Guest: Thanks for having me.
     [00:04:12] Host: So tell us about the 'Index' strategy.
     [00:04:15] Guest: Well, it starts with...
+isPremium: true
 ---
 
 # Agent Configuration: The Podcast Architect
@@ -1995,11 +2024,16 @@ description: >-
   posts.
 sampleData:
   filename: social_posts.csv
-  content: |
+  content: >
     Post_ID,Post_Text,Likes,Comments,Shares,Followers
-    101,"Stop doing cold calls. Here is why social selling works better...",50,45,10,1000
+
+    101,"Stop doing cold calls. Here is why social selling works
+    better...",50,45,10,1000
+
     102,"Happy Monday everyone! Have a great week.",200,2,0,1000
+
     103,"Does anyone else hate Salesforce? Unpopular opinion...",30,60,15,1000
+isPremium: true
 ---
 
 # Agent Configuration: The Viral Hook Analyst
@@ -2058,6 +2092,7 @@ sampleData:
     OUTPUT_DIR="~/recordings"
     THEME="monokai"
     FONT_SIZE=20
+isPremium: true
 ---
 
 # Agent Configuration: The Terminal Streamer
@@ -2130,13 +2165,15 @@ difficulty: Advanced
 time: Researcher
 archtype: Hybrid
 description: >-
-  Identifies top trending audio on TikTok. Suggests which of your product clips (e.g., "Unboxing", "Slow Mo") would sync best with the beat drop.
+  Identifies top trending audio on TikTok. Suggests which of your product clips
+  (e.g., "Unboxing", "Slow Mo") would sync best with the beat drop.
 sampleData:
   filename: input_data.csv
   content: |
     Product_Clip_Type,Duration
     Unboxing,5s
     Demo,15s
+isPremium: true
 ---
 
 # Agent Configuration: TikTok Audio Trend Matcher
@@ -2180,8 +2217,8 @@ time: Daily
 archetype: Processor
 description: >-
   TikTok is 50% audio, 50% visual. This agent generates scripts that include not
-  just what you *say*, but what you *do* (Visual Actions), ensuring your retention
-  rate stays high through the first 3 seconds.
+  just what you *say*, but what you *do* (Visual Actions), ensuring your
+  retention rate stays high through the first 3 seconds.
 sampleData:
   filename: content_topic.txt
   content: 'Topic: Learning Python for Data Science'
@@ -2411,7 +2448,7 @@ For each keyword in the CSV:
 URL: https://realaiexamples.com/skills/twitter-space-scribe
 Description: Turn audio conversations into tweet threads.
 
---- 
+---
 id: twitter-space-scribe
 category: Content Ops
 title: Twitter Space Scribe
@@ -2420,12 +2457,14 @@ difficulty: Intermediate
 time: Batch
 archetype: Processor
 description: >-
-  Takes a transcript of a Twitter Space/Clubhouse. Extracts the "Golden Nuggets" and formats them into a viral thread style.
+  Takes a transcript of a Twitter Space/Clubhouse. Extracts the "Golden Nuggets"
+  and formats them into a viral thread style.
 sampleData:
   filename: input_data.csv
   content: |
     Transcript_Text,Speakers
     "So the key is consistency...",@naval
+isPremium: true
 ---
 
 # Agent Configuration: Twitter Space Scribe
@@ -2528,13 +2567,15 @@ difficulty: Intermediate
 time: Batch
 archtype: Processor
 description: >-
-  Scrapes posts tagged with your brand. Scores them on "Lighting", "Product Visibility", and "Authenticity" to surface the best ones for paid ads.
+  Scrapes posts tagged with your brand. Scores them on "Lighting", "Product
+  Visibility", and "Authenticity" to surface the best ones for paid ads.
 sampleData:
   filename: input_data.csv
   content: |
     Post_URL,Caption
     https://insta.../1,"Love this!"
     https://insta.../2,"Meh."
+isPremium: true
 ---
 
 # Agent Configuration: UGC Ad Potential Scorer
@@ -2883,8 +2924,8 @@ tagline: Keep subscribers alive between uploads.
 difficulty: Beginner
 time: Batch
 description: >-
-  Don't just post videos. This agent plans high-engagement 'Community Tab'
-  posts - Polls, Behind-the-Scenes, and Teasers - for your entire YouTube channel
+  Don't just post videos. This agent plans high-engagement 'Community Tab' posts
+  - Polls, Behind-the-Scenes, and Teasers - for your entire YouTube channel
   portfolio to keep the algorithm active.
 sampleData:
   filename: channels.csv

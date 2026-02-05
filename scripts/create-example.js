@@ -346,7 +346,7 @@ async function createSocialExample() {
     const date = new Date().toISOString().split('T')[0];
     const slug = generateSlug(title);
     const id = `${authorHandle.toLowerCase()}-${slug}`;
-    const imageFilename = `${date}-${id}.jpg`;
+    const imageFilename = `ai-automation-example-${slug}.webp`;
 
     if (useLocalCapture) {
       console.log(`📸 Capturing screenshot locally...`);
