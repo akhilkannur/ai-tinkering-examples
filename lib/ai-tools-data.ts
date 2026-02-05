@@ -733,4 +733,148 @@ export const aiTools: AiTool[] = [
     },
     image: "https://www.google.com/s2/favicons?domain=shortsai.com&sz=128"
   },
+  {
+    name: "LinkedGrow",
+    description: "AI-powered LinkedIn content creation tool designed to generate high-converting posts and boost professional engagement.",
+    url: "https://linkedgrow.ai/beta",
+    category: "Marketing",
+    tags: {
+      useCase: ["Business"],
+      price: "Freemium",
+      skill: "Beginner"
+    },
+    image: "https://www.google.com/s2/favicons?domain=linkedgrow.ai&sz=128"
+  },
+  {
+    name: "Credops",
+    description: "Monitors credential expiry timelines for production environments, tracking metadata and dates without requiring secret values.",
+    url: "https://www.credops.io/",
+    category: "Productivity",
+    tags: {
+      useCase: ["Business"],
+      price: "Freemium",
+      skill: "Intermediate"
+    },
+    image: "https://www.google.com/s2/favicons?domain=www.credops.io&sz=128"
+  },
+  {
+    name: "Podcept",
+    description: "AI-driven platform to find perfect guests for your show or get booked on top-tier podcasts to grow your reach.",
+    url: "https://www.podcept.com",
+    category: "Marketing",
+    tags: {
+      useCase: ["Creative"],
+      price: "Freemium",
+      skill: "Beginner"
+    },
+    image: "https://www.google.com/s2/favicons?domain=www.podcept.com&sz=128"
+  },
+  {
+    name: "Roomstage AI",
+    description: "AI virtual staging for real estate that transforms empty room photos into beautifully staged spaces in 30 seconds.",
+    url: "https://roomstage.ai",
+    category: "Image Generation",
+    tags: {
+      useCase: ["Business"],
+      price: "Freemium",
+      skill: "Beginner"
+    },
+    image: "https://www.google.com/s2/favicons?domain=roomstage.ai&sz=128"
+  },
+  {
+    name: "Murmur",
+    description: "Private, offline speech-to-text dictation for Windows powered by OpenAI Whisper for high-security environments.",
+    url: "https://murmurvt.com",
+    category: "Video & Audio",
+    tags: {
+      useCase: ["Business"],
+      price: "Paid",
+      skill: "Intermediate"
+    },
+    image: "https://www.google.com/s2/favicons?domain=murmurvt.com&sz=128"
+  },
+  {
+    name: "Tails, Co.",
+    description: "AI-powered matching service that finds the right dog walkers and sitters based on proven success in specific pet scenarios.",
+    url: "https://trytails.com/",
+    category: "Productivity",
+    tags: {
+      useCase: ["Personal"],
+      price: "Free",
+      skill: "Beginner"
+    },
+    image: "https://www.google.com/s2/favicons?domain=trytails.com&sz=128"
+  },
+  {
+    name: "NeonChainX",
+    description: "High-speed options trading platform with direct Interactive Brokers integration for real-time execution and simplicity.",
+    url: "https://neonchainx.com/",
+    category: "Productivity",
+    tags: {
+      useCase: ["Business"],
+      price: "Paid",
+      skill: "Advanced"
+    },
+    image: "https://www.google.com/s2/favicons?domain=neonchainx.com&sz=128"
+  },
+  {
+    name: "Roampads",
+    description: "Curated apartment search for digital nomads featuring verified WiFi and dedicated workspace setups for remote work.",
+    url: "https://www.roampads.com/",
+    category: "Productivity",
+    tags: {
+      useCase: ["Business"],
+      price: "Free",
+      skill: "Beginner"
+    },
+    image: "https://www.google.com/s2/favicons?domain=www.roampads.com&sz=128"
+  },
+  {
+    name: "Flowly Indicators",
+    description: "Orderflow indicators for TradingView to spot whale activity, liquidity pools, and unusual volume with backtesting support.",
+    url: "https://www.flowly.tools/",
+    category: "Productivity",
+    tags: {
+      useCase: ["Business"],
+      price: "Paid",
+      skill: "Advanced"
+    },
+    image: "https://www.google.com/s2/favicons?domain=www.flowly.tools&sz=128"
+  },
+  {
+    name: "TRYremote",
+    description: "Remote tech job board that allows searching by specific tech stacks and organizing listings by global regions.",
+    url: "https://tryremote.com",
+    category: "Productivity",
+    tags: {
+      useCase: ["Business"],
+      price: "Free",
+      skill: "Beginner"
+    },
+    image: "https://www.google.com/s2/favicons?domain=tryremote.com&sz=128"
+  },
+  {
+    name: "Userjam",
+    description: "AI platform that transforms real-time user activity into actionable narratives rather than static dashboards.",
+    url: "https://userjam.com",
+    category: "Marketing",
+    tags: {
+      useCase: ["Business"],
+      price: "Paid",
+      skill: "Intermediate"
+    },
+    image: "https://www.google.com/s2/favicons?domain=userjam.com&sz=128"
+  },
+  {
+    name: "MedShotsAI",
+    description: "AI-powered professional headshots and marketing imagery specifically tailored for medical professionals.",
+    url: "https://medshotsai.com",
+    category: "Image Generation",
+    tags: {
+      useCase: ["Business"],
+      price: "Paid",
+      skill: "Beginner"
+    },
+    image: "https://www.google.com/s2/favicons?domain=medshotsai.com&sz=128"
+  },
 ];
