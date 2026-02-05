@@ -80,8 +80,7 @@ async function postToPinterest() {
     const boardId = process.env.PINTEREST_BOARD_ID;
 
     if (!accessToken || !boardId) {
-      console.log('
-⚠️ Pinterest API credentials missing (PINTEREST_ACCESS_TOKEN, PINTEREST_BOARD_ID).');
+      console.log('⚠️ Pinterest API credentials missing (PINTEREST_ACCESS_TOKEN, PINTEREST_BOARD_ID).');
       console.log('Public Image URL:', publicImageUrl);
       console.log('Target Link:', targetLink);
       console.log('Skipping actual post.');
