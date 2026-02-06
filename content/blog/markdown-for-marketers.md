@@ -2,7 +2,7 @@
 title: "The Marketer’s Guide to Professional Markdown: From Notes to Logic"
 date: "2026-02-03"
 excerpt: "Stop using Markdown as a basic notepad. Learn how to architect .md files that both humans and AI agents can execute with 100% accuracy."
-coverImage: "/images/blog/markdown-guide.png"
+coverImage: "/images/blog/folder-agents.png"
 author:
   name: "Akhil from Real Examples"
 category: "Best Practices"

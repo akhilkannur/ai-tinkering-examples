@@ -1,9 +1,10 @@
 ---
 title: "How I Automated Instagram Direct Publishing (Without Paying for a Scheduler)"
 date: "2026-02-05"
-summary: "A step-by-step technical guide to building a custom Instagram auto-poster using Puppeteer, Cloudinary, and the Meta Graph API."
-image: "/blog/instagram-automation.png"
-author: "Akhil Nair"
+excerpt: "A step-by-step technical guide to building a custom Instagram auto-poster using Puppeteer, Cloudinary, and the Meta Graph API."
+coverImage: "/images/blog/automated-video-with-remotion.png"
+author:
+  name: "Akhil Nair"
 category: "Engineering"
 ---
 

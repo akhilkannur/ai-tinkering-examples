@@ -17,9 +17,10 @@ export default function BlogPostPage({ post, relatedRecipes }: BlogPostPageProps
   // Simple Markdown Renderer
   const renderContent = (content: string) => {
     return content.split('\n').map((line, index) => {
+      const trimmedLine = line.trim();
+
       // Headers
       if (line.startsWith('# ')) {
-        // Demote to H2 to ensure single H1 (Title) per page
         return <h2 key={index} className="text-3xl font-bold mt-8 mb-4 text-text-color">{line.replace('# ', '')}</h2>;
       }
       if (line.startsWith('## ')) {
@@ -29,8 +30,18 @@ export default function BlogPostPage({ post, relatedRecipes }: BlogPostPageProps
         return <h3 key={index} className="text-xl font-bold mt-6 mb-3 text-text-color">{line.replace('### ', '')}</h3>;
       }
 
+      // Images ![alt](url)
+      const imageMatch = trimmedLine.match(/^!\[(.*?)\]\s?\((.*?)\)$/);
+      if (imageMatch) {
+        return (
+          <div key={index} className="my-8 rounded-xl overflow-hidden border border-navy-dark shadow-lg">
+            <img src={imageMatch[2]} alt={imageMatch[1]} className="w-full h-auto" />
+          </div>
+        );
+      }
+
       // Lists
-      if (line.trim().startsWith('* ')) {
+      if (trimmedLine.startsWith('* ')) {
         return (
           <li key={index} className="ml-6 list-disc text-text-secondary mb-2 pl-2">
             <span dangerouslySetInnerHTML={{ __html: parseInline(line.replace('* ', '')) }} />
@@ -39,12 +50,12 @@ export default function BlogPostPage({ post, relatedRecipes }: BlogPostPageProps
       }
 
       // Empty lines
-      if (line.trim() === '') {
+      if (trimmedLine === '') {
         return <div key={index} className="h-4"></div>;
       }
 
       // Raw HTML (Video tags, Twitter embeds)
-      if (line.trim().startsWith('<') && line.trim().endsWith('>')) {
+      if (trimmedLine.startsWith('<') && trimmedLine.endsWith('>')) {
          return <div key={index} className="my-6" dangerouslySetInnerHTML={{ __html: line }} />;
       }
 
@@ -62,6 +73,8 @@ export default function BlogPostPage({ post, relatedRecipes }: BlogPostPageProps
     let parsed = text.replace(/\*\*(.*?)\*\*/g, '<strong class="text-text-color">$1</strong>');
     // Code
     parsed = parsed.replace(/`([^`]+)`/g, '<code class="bg-navy-dark px-1.5 py-0.5 rounded text-accent font-mono text-sm">$1</code>');
+    // Images inside text (less common but possible)
+    parsed = parsed.replace(/!\[(.*?)\]\((.*?)\)/g, '<img src="$2" alt="$1" class="inline-block max-w-full h-auto rounded my-2" />');
     // Links (Simple)
     parsed = parsed.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" class="text-accent hover:underline">$1</a>');
     return parsed;
