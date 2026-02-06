@@ -40,7 +40,7 @@ Now, every time I update the site, this script runs and generates a fresh `llms.
 You can try it right now.
 Go to any AI model and ask it: *"Read https://realaiexamples.com/llms.txt and tell me the best blueprint for sales."*
 
-It answers instantly. It doesn't hallucinate. It cites my content perfectly.
+It answers instantly. It sticks to the facts and cites my content perfectly.
 
 This is "SEO" for 2026.
 We used to optimize for keywords. Now we have to optimize for *agents*.

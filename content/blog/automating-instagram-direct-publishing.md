@@ -42,7 +42,7 @@ To get API access, you need an "App."
 ---
 
 ## Step 3: The "System User" Workaround
-Standard "User Tokens" expire in 60 days. To make this truly automated, you need a **System User Token** which never expires.
+Standard "User Tokens" expire in 60 days. To make this truly automated, you need a **System User Token** which doesn't expire automatically like standard user tokens.
 1. Go to **[Business Settings](https://business.facebook.com/settings/)**.
 2. **Users > System Users:** Create a new user called "Insta Bot" with **Admin** access.
 3. **Add Assets:** Assign your **App**, your **Facebook Page**, and your **Instagram Account** to this system user.

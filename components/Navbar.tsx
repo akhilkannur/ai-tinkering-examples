@@ -23,7 +23,7 @@ export default function Navbar() {
     { href: '/agent-setup-service', label: 'SETUP', mono: true },
     { href: '/build-club', label: 'BUILD CLUB', mono: true },
     { href: '/tools', label: 'TOOLS', mono: true },
-    { href: '/blog', label: 'LOGS', mono: true },
+    { href: '/blog', label: 'BLOG', mono: true },
     { href: '/about', label: 'MISSION', mono: true },
   ]
 
