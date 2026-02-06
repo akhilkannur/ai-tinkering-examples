@@ -184,182 +184,115 @@ Downloaded from RealAIExamples.com`;
       
       <Navbar />
 
-      <main className="flex-grow container mx-auto px-4 pt-32 pb-12">
+      <main className="flex-grow container mx-auto px-4 pt-24 md:pt-32 pb-12">
         <div className="max-w-4xl mx-auto">
           {/* Breadcrumbs */}
-          <nav className="flex items-center gap-2 text-sm font-medium text-gray-500 mb-8">
-            <Link href="/" className="hover:text-blue-600 flex items-center gap-1">
-              <ArrowLeft className="w-4 h-4" /> Back to Skills
+          <nav className="flex items-center gap-2 text-sm font-medium text-gray-500 mb-8 overflow-hidden">
+            <Link href="/" className="hover:text-blue-600 flex items-center gap-1 shrink-0">
+              <ArrowLeft className="w-4 h-4" /> <span className="hidden sm:inline">Back to Skills</span><span className="sm:hidden text-xs">Back</span>
             </Link>
             <span className="text-gray-300">/</span>
-            <span className="text-gray-900 truncate">{recipe.title}</span>
+            <span className="text-gray-900 truncate text-xs sm:text-sm">{recipe.title}</span>
           </nav>
 
           {/* Header */}
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12">
-            <div className="flex items-center gap-6">
-              <div className={`p-4 rounded-2xl shadow-sm border ${isLocked ? 'bg-yellow-50 text-yellow-600 border-yellow-100' : 'bg-blue-50 text-blue-600 border-blue-100'}`}>
-                {isLocked ? <Crown className="w-10 h-10" /> : <CatIcon className="w-10 h-10" />}
+          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-8">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5">
+              <div className={`p-3 rounded-xl shadow-sm border shrink-0 ${isLocked ? 'bg-yellow-50 text-yellow-600 border-yellow-100' : 'bg-blue-50 text-blue-600 border-blue-100'}`}>
+                {isLocked ? <Crown className="w-8 h-8" /> : <CatIcon className="w-8 h-8" />}
               </div>
-              <div>
-                <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-2 flex items-center gap-3">
+              <div className="min-w-0">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 mb-2 flex flex-wrap items-center gap-2 leading-tight">
                     {recipe.title}
-                    {isLocked && <Lock className="w-6 h-6 text-yellow-500" />}
+                    {isLocked && <Lock className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-500 shrink-0" />}
                 </h1>
-                <div className="flex flex-wrap items-center gap-3">
-                  <span className={`px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider ${isLocked ? 'bg-yellow-500 text-white' : 'bg-gray-100 text-gray-600'}`}>
-                    {isLocked ? 'Premium Blueprint' : recipe.category}
+                <div className="flex flex-wrap items-center gap-2">
+                  <span className={`px-2 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider ${isLocked ? 'bg-yellow-500 text-white' : 'bg-gray-100 text-gray-600'}`}>
+                    {isLocked ? 'Premium' : recipe.category}
                   </span>
-                  <span className={`px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider ${
-                    recipe.difficulty === 'Beginner' ? 'bg-green-50 text-green-600' : 
-                    recipe.difficulty === 'Intermediate' ? 'bg-yellow-50 text-yellow-600' : 
-                    'bg-red-50 text-red-600'
-                  }`}>
+                  <span className="px-2 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider bg-gray-50 text-gray-500 border border-gray-200">
                     {recipe.difficulty}
                   </span>
-                  <span className="text-gray-400 text-sm flex items-center gap-1 font-mono">
+                  <span className="text-gray-400 text-xs flex items-center gap-1 font-mono ml-1">
                     <Terminal className="w-3 h-3" /> {recipe.time}
                   </span>
                 </div>
               </div>
             </div>
-            {/* New Main Download Action */}
-            {!isLocked && (
-                <button
-                    onClick={handleDownloadZip}
-                    className="hidden md:flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl shadow-lg shadow-blue-600/20 transition-all transform hover:-translate-y-1"
-                >
-                    <Package className="w-5 h-5" />
-                    Download Bundle
-                </button>
-            )}
           </div>
 
-          {/* Mission Overview */}
-          <div className="bg-gray-50 rounded-3xl p-8 mb-8 border border-gray-100">
-            <h2 className="text-xl font-bold text-gray-900 mb-4">Mission Overview</h2>
-            <p className="text-gray-600 text-lg leading-relaxed">
+          {/* Mission Overview - More compact */}
+          <div className="bg-white rounded-xl p-0 mb-10">
+            <p className="text-gray-600 text-base md:text-lg leading-relaxed">
               <SimpleMarkdown text={linkedDescription || recipe.description} />
             </p>
           </div>
 
-          {/* POWER USER SECTION: DOWNLOAD SKILLS */}
-          {!isLocked && (
-            <div className="bg-blue-950 rounded-3xl p-8 mb-12 border border-blue-900/50 shadow-xl relative overflow-hidden group">
-                {/* Background Grid */}
-                <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:20px_24px] opacity-20"></div>
-                
-                <div className="relative z-10">
-                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
-                        <div>
-                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 font-bold text-[10px] uppercase tracking-[0.2em] mb-4 font-mono">
-                                <Cpu className="w-3 h-3" /> Agent-Ready Tools
-                            </div>
-                            <h3 className="text-2xl font-bold text-white mb-2 tracking-tight">Run this as a Native Skill</h3>
-                            <p className="text-blue-200/70 text-sm max-w-md leading-relaxed">
-                                Don't copy-paste. Download the pre-packaged skill to run this workflow directly in your terminal agent.
-                            </p>
-                        </div>
-                        
-                        <div className="flex flex-col sm:flex-row gap-3">
-                            <a 
-                                href={`/downloads/skills/${recipe.id}.skill`}
-                                download
-                                className="flex items-center justify-center gap-2 bg-white text-blue-950 px-6 py-3 rounded-xl font-bold text-sm hover:bg-blue-50 transition-all shadow-lg"
-                            >
-                                <Zap className="w-4 h-4 fill-current" /> Gemini CLI
-                            </a>
-                            <a 
-                                href={`/downloads/skills/${recipe.id}-claude.md`}
-                                download
-                                className="flex items-center justify-center gap-2 bg-blue-800 text-white px-6 py-3 rounded-xl font-bold text-sm hover:bg-blue-700 transition-all border border-blue-700 shadow-lg"
-                            >
-                                <Terminal className="w-4 h-4" /> Claude Code
-                            </a>
-                            <a 
-                                href={`/downloads/skills/${recipe.id}.cursorrules`}
-                                download
-                                className="flex items-center justify-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-xl font-bold text-sm hover:bg-blue-500 transition-all border border-blue-500 shadow-lg"
-                            >
-                                <MousePointer2 className="w-4 h-4" /> Cursor Rule
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div className="mt-6 pt-6 border-t border-white/5 flex flex-wrap gap-6">
-                        <div className="flex items-center gap-2 text-[10px] font-mono text-blue-400/60 uppercase tracking-widest">
-                            <ShieldCheck className="w-3 h-3" /> 100% Malware-Free
-                        </div>
-                        <div className="flex items-center gap-2 text-[10px] font-mono text-blue-400/60 uppercase tracking-widest">
-                            <Package className="w-3 h-3" /> Includes Archetype Logic
-                        </div>
-                        <div className="flex items-center gap-2 text-[10px] font-mono text-blue-400/60 uppercase tracking-widest">
-                            <Cpu className="w-3 h-3" /> Optimized for Gemini 2.0
-                        </div>
-                    </div>
-                </div>
-            </div>
-          )}
-
           {/* Locked or Unlocked Content */}
-          <div className="bg-gray-900 rounded-2xl overflow-hidden border border-gray-800 shadow-2xl mb-12">
-              <div className="bg-gray-800 px-6 py-4 flex flex-col md:flex-row items-center justify-between border-b border-gray-700 gap-4">
-              <div className="flex items-center gap-3 self-start md:self-auto">
-                  <div className="flex gap-1.5">
-                  <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
-                  <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
-                  <div className="w-3 h-3 rounded-full bg-green-500/80"></div>
-                  </div>
-                  <span className="text-gray-400 font-mono text-xs ml-2 flex items-center gap-2">
-                  <FileText className="w-3 h-3" /> BLUEPRINT.md {isLocked && "(Preview Mode)"}
-                  </span>
-              </div>
-              {!isLocked && (
-                    <div className="flex flex-wrap items-center gap-3 w-full md:w-auto">
-                        <div className="flex flex-col items-end gap-1">
-                          <button
-                              onClick={handleDownloadZip}
-                              className="flex-1 md:flex-none text-sm font-bold px-4 py-2 rounded-xl flex items-center justify-center gap-2 transition-all bg-blue-600 text-white hover:bg-blue-500 shadow-lg shadow-blue-600/20"
-                          >
-                              <Package className="w-4 h-4" />
-                              Download Zip
-                          </button>
-                          <span className="text-[10px] text-gray-500 font-mono flex items-center gap-1 uppercase tracking-tighter">
-                            <ShieldCheck className="w-3 h-3 text-green-500" /> 100% Text-Only (.md, .csv)
-                          </span>
-                        </div>
-                        <button
-                        onClick={handleCopy}
-                        className={`flex-1 md:flex-none text-sm font-bold px-4 py-2 rounded-xl flex items-center justify-center gap-2 transition-all active:scale-95 shadow-lg ${
-                            copied 
-                            ? 'bg-green-500 text-white shadow-green-500/20' 
-                            : 'bg-gray-700 text-gray-200 hover:bg-gray-600 shadow-gray-900/20'
-                        }`}
-                        >
-                        {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
-                        {copied ? 'Copied!' : 'Copy'}
-                        </button>
-                    </div>
-              )}
-              </div>
-              <div className="bg-gray-800/50 px-6 py-2 border-b border-gray-700">
-                  <span className="text-[10px] text-gray-400 uppercase tracking-widest font-bold">Bundle Contents:</span>
-                  <div className="flex gap-4 mt-1">
-                    <span className="text-xs text-blue-400 font-mono flex items-center gap-1">
-                      <FileText className="w-3 h-3" /> {recipe.id}.md
-                    </span>
-                    {recipe.sampleData && (
-                      <span className="text-xs text-blue-400 font-mono flex items-center gap-1">
-                        <Package className="w-3 h-3" /> {recipe.sampleData.filename}
+          <div className="bg-[#0d1117] rounded-xl overflow-hidden border border-gray-800 shadow-2xl mb-12 flex flex-col">
+              {/* Toolbar */}
+              <div className="bg-[#161b22] px-4 py-3 border-b border-gray-800 flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+                  {/* Left: Window Controls & File Name */}
+                  <div className="flex items-center gap-4">
+                      <div className="flex gap-1.5 shrink-0 opacity-75">
+                        <div className="w-2.5 h-2.5 rounded-full bg-red-500"></div>
+                        <div className="w-2.5 h-2.5 rounded-full bg-yellow-500"></div>
+                        <div className="w-2.5 h-2.5 rounded-full bg-green-500"></div>
+                      </div>
+                      <span className="text-gray-400 font-mono text-xs flex items-center gap-2 truncate opacity-80">
+                        <FileText className="w-3 h-3" /> {recipe.id}.md
                       </span>
-                    )}
-                    <span className="text-xs text-blue-400 font-mono flex items-center gap-1">
-                      <FileText className="w-3 h-3" /> README.txt
-                    </span>
                   </div>
+
+                  {!isLocked && (
+                    <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
+                        {/* Agent Skills Group */}
+                        <div className="flex items-center bg-[#0d1117] rounded-lg border border-gray-800 p-1">
+                            <span className="text-[9px] text-gray-500 font-bold uppercase tracking-wider px-2 hidden xl:block">Run as Agent:</span>
+                            <div className="flex gap-1">
+                                <a href={`/downloads/skills/${recipe.id}.skill`} download title="Download for Gemini CLI" className="p-1.5 text-gray-400 hover:text-white hover:bg-white/10 rounded transition-colors flex items-center gap-1">
+                                    <Zap className="w-3 h-3" /> <span className="text-[10px] font-bold lg:hidden xl:inline">Gemini</span>
+                                </a>
+                                <div className="w-px h-4 bg-gray-800 my-auto"></div>
+                                <a href={`/downloads/skills/${recipe.id}-claude.md`} download title="Download for Claude Code" className="p-1.5 text-gray-400 hover:text-white hover:bg-white/10 rounded transition-colors flex items-center gap-1">
+                                    <Terminal className="w-3 h-3" /> <span className="text-[10px] font-bold lg:hidden xl:inline">Claude</span>
+                                </a>
+                                <div className="w-px h-4 bg-gray-800 my-auto"></div>
+                                <a href={`/downloads/skills/${recipe.id}.cursorrules`} download title="Download for Cursor" className="p-1.5 text-gray-400 hover:text-white hover:bg-white/10 rounded transition-colors flex items-center gap-1">
+                                    <MousePointer2 className="w-3 h-3" /> <span className="text-[10px] font-bold lg:hidden xl:inline">Cursor</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        {/* Standard Files Group */}
+                        <div className="flex items-center gap-2 w-full sm:w-auto">
+                            <button
+                                onClick={handleDownloadZip}
+                                className="flex-1 sm:flex-none text-xs font-bold px-3 py-1.5 rounded-lg flex items-center justify-center gap-2 transition-all bg-blue-600 text-white hover:bg-blue-500 shadow-lg shadow-blue-600/10"
+                            >
+                                <Package className="w-3.5 h-3.5" />
+                                <span className="hidden sm:inline">Bundle</span>
+                                <span className="sm:hidden">Zip</span>
+                            </button>
+                            <button
+                                onClick={handleCopy}
+                                className={`flex-1 sm:flex-none text-xs font-bold px-3 py-1.5 rounded-lg flex items-center justify-center gap-2 transition-all border ${
+                                    copied 
+                                    ? 'bg-green-500/10 text-green-400 border-green-500/50' 
+                                    : 'bg-gray-800 text-gray-300 border-gray-700 hover:bg-gray-700'
+                                }`}
+                            >
+                                {copied ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
+                                {copied ? 'Copied' : 'Copy'}
+                            </button>
+                        </div>
+                    </div>
+                  )}
               </div>
-              <div className="p-8">
-                <pre className="font-mono text-base text-blue-300 whitespace-pre-wrap leading-relaxed">
+
+              {/* Code Content */}
+              <div className="p-4 sm:p-6 md:p-8 overflow-x-auto">
+                <pre className="font-mono text-xs sm:text-sm text-blue-200/90 whitespace-pre-wrap leading-relaxed">
                     {publicBlueprint}
                     {!isLocked && privateBlueprint}
                 </pre>
@@ -367,65 +300,58 @@ Downloaded from RealAIExamples.com`;
           </div>
 
           {isLocked && (
-              /* PREMIUM PAYWALL */
-              <div className="bg-gray-900 rounded-3xl p-12 text-center border-4 border-yellow-500/30 shadow-2xl relative overflow-hidden mb-16">
+              /* PREMIUM PAYWALL - Compact Version */
+              <div className="bg-gray-900 rounded-2xl p-8 md:p-12 text-center border border-gray-800 shadow-2xl relative overflow-hidden mb-16">
                  <div className="relative z-10">
-                    <div className="w-24 h-24 bg-yellow-500/10 rounded-full flex items-center justify-center mx-auto mb-8 border border-yellow-500/20">
-                      <Lock className="w-12 h-12 text-yellow-500" />
+                    <div className="w-16 h-16 bg-yellow-500/10 rounded-full flex items-center justify-center mx-auto mb-6 border border-yellow-500/20">
+                      <Lock className="w-8 h-8 text-yellow-500" />
                     </div>
-                    <h2 className="text-4xl font-bold text-white mb-4">The Logic is Locked</h2>
-                    <p className="text-gray-400 text-xl mb-10 max-w-xl mx-auto leading-relaxed">
-                      Phase 2 (Processing) and Phase 3 (Output) are reserved for Pro members. Unlock 500+ premium automation blueprints instantly.
+                    <h2 className="text-2xl font-bold text-white mb-3">Logic Locked</h2>
+                    <p className="text-gray-400 text-sm md:text-base mb-8 max-w-lg mx-auto">
+                      Phase 2 (Processing) and Phase 3 (Output) are available to Pro members.
                     </p>
                     
                     {!showLicenseInput ? (
-                        <div className="flex flex-col items-center gap-6">
+                        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                             <a 
                               href="https://checkout.dodopayments.com/buy/pdt_0NW6p0szmXPS6jXW05hIP?session=sess_GCYotd6plh"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="inline-flex items-center gap-3 bg-yellow-500 hover:bg-yellow-400 text-gray-900 px-10 py-5 rounded-2xl font-bold text-xl transition-all transform hover:scale-105 active:scale-95 shadow-2xl shadow-yellow-500/20"
+                              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-gray-900 px-6 py-3 rounded-lg font-bold text-sm transition-all"
                             >
-                              Unlock All Blueprints <ArrowRight className="w-6 h-6" />
+                              Unlock Access <ArrowRight className="w-4 h-4" />
                             </a>
                             <button 
                               onClick={() => setShowLicenseInput(true)}
-                              className="text-gray-500 hover:text-white underline decoration-gray-700 underline-offset-4 font-medium transition-colors"
+                              className="text-gray-500 hover:text-white text-sm font-medium underline decoration-gray-700 underline-offset-4"
                             >
-                              I already have a license key
+                              Enter Key
                             </button>
                         </div>
                     ) : (
-                        <form onSubmit={handleLicenseSubmit} className="max-w-md mx-auto bg-gray-800/50 p-8 rounded-2xl border border-gray-700 animate-fade-in">
-                            <div className="flex items-center justify-between mb-6">
-                                <h3 className="text-white font-bold text-lg">Activate License</h3>
+                        <form onSubmit={handleLicenseSubmit} className="max-w-sm mx-auto bg-gray-800 p-6 rounded-xl border border-gray-700">
+                            <div className="flex items-center justify-between mb-4">
+                                <h3 className="text-white font-bold text-sm">Activate License</h3>
                                 <button type="button" onClick={() => setShowLicenseInput(false)} className="text-gray-400 hover:text-white">
-                                    <X className="w-5 h-5" />
+                                    <X className="w-4 h-4" />
                                 </button>
                             </div>
-                            <div className="mb-6">
-                                <input 
-                                    type="text" 
-                                    value={licenseKeyInput}
-                                    onChange={(e) => setLicenseKeyInput(e.target.value)}
-                                    placeholder="TK-XXXX-XXXX-XXXX"
-                                    className="w-full bg-gray-900 border border-gray-700 text-white px-5 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-500 font-mono text-center uppercase tracking-widest placeholder-gray-600 text-lg"
-                                />
-                                {unlockError && <p className="text-red-400 text-sm mt-3 text-left">{unlockError}</p>}
-                            </div>
+                            <input 
+                                type="text" 
+                                value={licenseKeyInput}
+                                onChange={(e) => setLicenseKeyInput(e.target.value)}
+                                placeholder="TK-XXXX-XXXX-XXXX"
+                                className="w-full bg-gray-900 border border-gray-700 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-1 focus:ring-yellow-500 font-mono text-center uppercase tracking-widest text-sm mb-4"
+                            />
                             <button 
                                 type="submit"
-                                className="w-full bg-yellow-500 text-gray-900 font-bold py-4 rounded-xl hover:bg-yellow-400 transition-colors shadow-lg flex items-center justify-center gap-3 text-lg"
+                                className="w-full bg-yellow-500 text-gray-900 font-bold py-3 rounded-lg hover:bg-yellow-400 transition-colors flex items-center justify-center gap-2 text-sm"
                             >
-                                <Key className="w-5 h-5" /> Activate Premium
+                                <Key className="w-4 h-4" /> Activate
                             </button>
                         </form>
                     )}
                  </div>
-                 
-                 {/* Decorative background elements */}
-                 <div className="absolute top-0 right-0 w-64 h-64 bg-yellow-500/5 rounded-full -mr-32 -mt-32 blur-3xl"></div>
-                 <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-500/5 rounded-full -ml-32 -mb-32 blur-3xl"></div>
               </div>
           )}
 
@@ -433,71 +359,35 @@ Downloaded from RealAIExamples.com`;
               <>
                 {/* Output Snapshot */}
                 {recipe.sampleOutput && (
-                  <div className="mb-12">
-                    <h2 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-                      <Terminal className="w-5 h-5 text-accent" />
-                      Phase 3 Sample Output
+                  <div className="mb-12 border-l-2 border-gray-200 pl-6 ml-2">
+                    <h2 className="text-sm font-bold text-gray-500 uppercase tracking-widest mb-4 flex items-center gap-2">
+                      Sample Output
                     </h2>
-                    <div className="bg-gray-50 rounded-2xl p-8 border border-gray-100 shadow-inner">
-                      <div className="prose prose-sm max-w-none text-gray-600 font-mono whitespace-pre-wrap">
-                        {recipe.sampleOutput}
-                      </div>
+                    <div className="prose prose-sm max-w-none text-gray-600 font-mono whitespace-pre-wrap text-xs bg-gray-50 p-4 rounded-lg border border-gray-100">
+                      {recipe.sampleOutput}
                     </div>
                   </div>
                 )}
 
-                {/* Instructions Grid */}
-                <div className="grid md:grid-cols-2 gap-8 mb-16">
-                    <div className="bg-yellow-50 border border-yellow-100 p-8 rounded-3xl">
-                    <div className="bg-yellow-500 text-white w-10 h-10 rounded-2xl flex items-center justify-center font-bold text-xl mb-6 shadow-lg shadow-yellow-500/20">!</div>
-                    <h3 className="text-xl font-bold text-yellow-900 mb-6">How to Run This</h3>
-                    
-                    <div className="space-y-6">
-                        <div>
-                        <h4 className="font-bold text-yellow-900 mb-2 flex items-center gap-2">
-                            <span className="w-6 h-6 rounded-full bg-yellow-200 text-yellow-800 flex items-center justify-center text-sm">1</span>
-                            Get the files
-                        </h4>
-                        <p className="text-yellow-800 text-sm mb-2 ml-8">
-                            Download the <span className="font-mono font-bold">Bundle ZIP</span> above. It contains the blueprint and any required files.
-                        </p>
-                        </div>
-
-                        <div>
-                        <h4 className="font-bold text-yellow-900 mb-3 flex items-center gap-2">
-                            <span className="w-6 h-6 rounded-full bg-yellow-200 text-yellow-800 flex items-center justify-center text-sm">2</span>
-                            Run in Terminal
-                        </h4>
-                        <p className="text-yellow-800 text-xs mb-4 ml-8 italic opacity-80">
-                            Universal: These blueprints work with any agentic CLI.
-                        </p>
-                        
-                        <div className="ml-8 space-y-4">
-                            <div className="bg-white rounded-xl border border-yellow-200 overflow-hidden">
-                            <div className="px-4 py-2 bg-yellow-100/50 border-b border-yellow-100 flex justify-between items-center">
-                                <span className="text-xs font-bold text-yellow-800 uppercase tracking-wider">Gemini CLI</span>
-                                <button 
-                                onClick={() => navigator.clipboard.writeText(`gemini "Read @${recipe.id}.md and execute the workflow"`)}
-                                className="text-xs text-yellow-700 hover:text-yellow-900 font-medium"
-                                >
-                                Copy
-                                </button>
+                {/* Simplified Instructions */}
+                <div className="mb-16">
+                    <div className="bg-gray-50 border border-gray-200 rounded-xl p-6">
+                        <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
+                            <Terminal className="w-5 h-5 text-gray-400" />
+                            How to run this
+                        </h3>
+                        <div className="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <span className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2 block">Option 1: The Easy Way</span>
+                                <p className="text-sm text-gray-600 mb-3">Download the <span className="font-bold text-gray-900">Bundle Zip</span> above. It contains all necessary files.</p>
                             </div>
-                            <div className="p-4 font-mono text-sm text-gray-700 overflow-x-auto whitespace-nowrap">
-                                gemini "Read @{recipe.id}.md {recipe.sampleData ? "and use the sample file " : ""}to execute the workflow"
-                            </div>
+                            <div>
+                                <span className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2 block">Option 2: Terminal</span>
+                                <div className="bg-white border border-gray-200 rounded-lg p-3 font-mono text-xs text-gray-600 overflow-x-auto">
+                                    gemini "Read @{recipe.id}.md execute"
+                                </div>
                             </div>
                         </div>
-                        </div>
-                    </div>
-                    </div>
-
-                    <div className="bg-blue-50 border border-blue-100 p-8 rounded-3xl">
-                    <div className="bg-blue-600 text-white w-10 h-10 rounded-2xl flex items-center justify-center font-bold text-xl mb-6 shadow-lg shadow-blue-600/20">?</div>
-                    <h3 className="text-xl font-bold text-blue-900 mb-4">Why use blueprints?</h3>
-                    <p className="text-blue-800 leading-relaxed">
-                        Blueprints act as a "Mission File". Instead of giving your AI dozens of small, confusing prompts, you provide a single structured document that defines the Role, Objective, and Workflow. 
-                    </p>
                     </div>
                 </div>
               </>

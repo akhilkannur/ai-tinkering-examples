@@ -53,34 +53,34 @@ export default function CategoryPage({ category, recipes }: CategoryPageProps) {
 
       <Navbar />
 
-      <main className="container mx-auto px-4 py-16">
-        <Link href="/" className="inline-flex items-center gap-2 text-sm font-bold text-gray-500 hover:text-blue-600 mb-12 transition-colors">
+      <main className="container mx-auto px-4 pt-24 md:pt-32 pb-16">
+        <Link href="/" className="inline-flex items-center gap-2 text-sm font-bold text-gray-500 hover:text-blue-600 mb-8 md:mb-12 transition-colors">
           <ArrowLeft className="w-4 h-4" /> Back to All Blueprints
         </Link>
 
-        <div className="max-w-4xl mb-16">
-          <div className="inline-flex items-center justify-center p-4 bg-white rounded-2xl border border-gray-100 shadow-sm mb-6">
-            <CatIcon className="w-10 h-10 text-accent" />
+        <div className="max-w-4xl mb-12 md:mb-16">
+          <div className="inline-flex items-center justify-center p-3 md:p-4 bg-white rounded-xl md:rounded-2xl border border-gray-100 shadow-sm mb-6">
+            <CatIcon className="w-8 h-8 md:w-10 md:h-10 text-accent" />
           </div>
-          <h1 className="text-4xl md:text-6xl font-headline font-bold mb-6 tracking-tight">{meta.title}</h1>
-          <p className="text-xl text-brand-navy/60 leading-relaxed max-w-2xl">{meta.description}</p>
+          <h1 className="text-3xl md:text-6xl font-headline font-bold mb-4 md:mb-6 tracking-tight leading-tight">{meta.title}</h1>
+          <p className="text-base md:text-xl text-brand-navy/60 leading-relaxed max-w-2xl">{meta.description}</p>
         </div>
 
         {/* Search within category */}
-        <div className="relative max-w-md mb-12">
+        <div className="relative max-w-md mb-8 md:mb-12">
           <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
             <Search className="h-5 w-5 text-gray-400" />
           </div>
           <input
             type="text"
-            className="block w-full pl-10 pr-3 py-3 border border-gray-200 rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="block w-full pl-10 pr-3 py-3 border border-gray-200 rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm md:text-base"
             placeholder={`Search ${recipes.length} ${category} blueprints...`}
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {filteredRecipes.map((recipe) => (
             <Link key={recipe.id} href={`/skills/${recipe.id}`}>
               <div className="group bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all h-full flex flex-col">
