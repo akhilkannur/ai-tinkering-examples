@@ -28,3 +28,4 @@ venv/
 video/out/
 *.mp4
 scripts/test-puppeteer.js
+shared-inbox/
