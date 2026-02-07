@@ -4,8 +4,8 @@ date: "2026-02-05"
 excerpt: "A step-by-step technical guide to building a custom Instagram auto-poster using Puppeteer, Cloudinary, and the Meta Graph API."
 coverImage: "/images/blog/automated-video-with-remotion.png"
 author:
-  name: "Akhil Nair"
-category: "Engineering"
+  name: "Akhil from Real Examples"
+category: "Automation"
 ---
 
 # How I Automated Instagram Direct Publishing

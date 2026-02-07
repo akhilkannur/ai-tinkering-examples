@@ -2,7 +2,7 @@
 title: "The 'Lazy' Way to Build Your Own Google Analytics Reporter"
 date: "2026-02-06"
 excerpt: "Stop logging into Google Analytics. Here is the exact script I use to fetch my website's top pages directly in my terminal, without opening a single dashboard."
-coverImage: "/images/blog/screenshot-engine.png"
+coverImage: "/images/blog/google-analytics-guide.png"
 author:
   name: "Akhil from Real Examples"
 category: "Automation"

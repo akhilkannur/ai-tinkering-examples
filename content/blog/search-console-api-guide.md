@@ -2,7 +2,7 @@
 title: "The 'Smart' Way to Find High-Intent Keywords with Search Console"
 date: "2026-02-07"
 excerpt: "Stop manually checking keyword rankings. Here is how to use automation to pull your top-performing queries directly from Search Console into your own tools."
-coverImage: "/images/blog/screenshot-engine.png"
+coverImage: "/images/blog/search-console-guide.png"
 author:
   name: "Akhil from Real Examples"
 category: "Automation"

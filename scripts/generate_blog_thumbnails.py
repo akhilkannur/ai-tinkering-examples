@@ -24,6 +24,8 @@ IMAGES_TO_GENERATE = [
     ("clawdbot-guide.png", "Moltbot Guide"),
     ("refactoring-with-ai.png", "Refactoring with AI"),
     ("automated-video-with-remotion.png", "Automated Video"),
+    ("google-analytics-guide.png", "GA4 Traffic Reporter"),
+    ("search-console-guide.png", "GSC Keyword Finder"),
 ]
 
 def ensure_dir(path):
