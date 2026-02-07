@@ -12,6 +12,8 @@ category: "AI Tools"
 
 Everyone's talking about **Clawdbot** (now OpenClaw). Mac Minis are selling out because people want to run this at home. Twitter is flooded with screenshots of people chatting with their "personal AI assistant" on WhatsApp.
 
+> **TL;DR:** OpenClaw is a free AI assistant you run on your own computer. It connects to your files and apps (like WhatsApp). If you don't want to use the terminal to install it, you can now buy a $249 pre-loaded box from Pamir.ai that just works out of the box.
+
 But if you're not a developer, you're probably confused. What even *is* it? Do you really need to buy hardware? And how hard is it to set up?
 
 I'm going to answer every question I've seen trending about Clawdbot, Moltbot, and OpenClaw, then walk you through the setup - even if you've never touched a terminal.

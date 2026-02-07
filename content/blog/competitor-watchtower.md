@@ -13,6 +13,8 @@ coverImage: '/images/blog/competitor-watchtower.png'
 Last quarter, I lost a deal I thought was in the bag. The prospect ghosted me.
 Three weeks later, I found out why: My main competitor had quietly launched a "Lite" tier that was 50% cheaper than my entry price.
 
+> **TL;DR:** I was tired of manually checking competitor websites. So I set up an automated "Watchtower." Now, an AI agent visits their pricing pages every morning and Slacks me if anything changes. I sleep better knowing I won't miss a beat.
+
 They didn't announce it in a press release. They just changed a div on their pricing page.
 
 I felt stupid. I should have known. But who has time to F5 refresh five different competitor websites every morning?

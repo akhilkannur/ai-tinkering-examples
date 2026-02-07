@@ -12,6 +12,8 @@ coverImage: '/images/blog/content-repurposing.png'
 
 We spent 3 hours recording a podcast. It was good. We edited it, posted it on YouTube, and got... 412 views.
 
+> **TL;DR:** Creating content is hard. Repurposing it is boring. We built a "Waterfall" system where we drop one video file into a folder, and an AI agent automatically writes a Twitter thread, a LinkedIn carousel, and a newsletter section based on that video.
+
 Then, silence. The algorithm moved on.
 
 That felt like a massive waste of ROI. The insights in that video were valuable, but we were asking people to commit 45 minutes to watch it. Most people just scroll Twitter or LinkedIn.

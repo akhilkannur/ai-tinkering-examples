@@ -10,6 +10,8 @@ category: "Best Practices"
 
 As a marketer in 2026, you aren’t just writing for humans anymore. You are writing for **Context**. 
 
+> **TL;DR:** If you want AI agents to do good work for you, you need to speak their language. That language is **Markdown**. This guide shows you the 4 simple formatting tricks (like using Headers and Code Blocks) that make your instructions crystal clear to a robot.
+
 When you write a campaign brief, a brand guide, or a list of ad hooks, your audience is now 50/50: half human teammates and half AI agents (like Claude, Gemini, or OpenClaw).
 
 Markdown is the best format that both groups understand clearly. But most marketers use it like a mess. Here is how to write .md files that look professional, stay organized, and are "Agent-Ready."

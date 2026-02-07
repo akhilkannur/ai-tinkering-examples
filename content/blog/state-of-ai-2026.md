@@ -13,6 +13,8 @@ ogImage:
 
 If you are still copy-pasting text into a browser window to "rewrite this email," you are living in 2023.
 
+> **TL;DR:** The new way to use AI isn't chatting with a bot on a website. It's using a "Folder Agent" that lives on your computer, reads your files, and does actual work (like analyzing data or building pages) for you.
+
 In 2026, the real work is happening in the file system. Tools like **Gemini CLI**, **Claude Code**, and **Cursor** have given birth to a new kind of workflow: the **Folder Agent**.
 
 A Folder Agent doesn't just "chat." It reads your entire project context, understands your directory structure, and executes complex, multi-file tasks. It builds landing pages, audits 500 SEO keywords, and cleans massive CSVs - all without you leaving your terminal.

@@ -12,6 +12,8 @@ I hit a wall with this project last week.
 
 When I started, manually taking screenshots of 50 AI tools was fine. I’d visit the site, hit Command+Shift+4, crop it, save it. Whatever.
 
+> **TL;DR:** I have 500+ links on this site. Taking screenshots of them manually would take weeks. So I asked my AI terminal to "write a script that visits a list of URLs and takes a picture of them." Now a robot does the boring work for me.
+
 But then the list grew to 500+.
 Links started rotting. Designs changed. My beautiful grid of cards started looking like a mess of broken images and 404 errors.
 

@@ -12,6 +12,8 @@ relatedRecipes: ['automated-video-marketing-asset']
 
 If you hang out in developer circles, you've probably heard the hype about **Remotion**.
 
+> **UPDATE (Feb 2026):** After testing Remotion extensively and talking to other creators, I’ve found that while it’s incredible for creating motion graphics with text and data, it isn't quite there yet for anything that is "visually great" in a cinematic sense. However, I’ll be experimenting with it more to see if there are more interesting or creative ways to push its limits.
+
 But if you're a Founder, a Marketer, or an Ops pro, you might be wondering: *"Why should I care about a React library?"*
 
 Here is the answer: **Remotion is the engine that turns "Video Editing" into "Data Processing."**

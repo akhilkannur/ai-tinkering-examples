@@ -12,6 +12,8 @@ I opened my "scraped_data" folder yesterday and almost deleted the whole thing.
 
 It was a graveyard of 200 text files I’d collected over the last year - notes, copy-pasted articles, half-finished ideas. I wanted to turn them into the "Blueprints" you see on this site.
 
+> **TL;DR:** I had 200 messy files that needed to be cleaned up. Instead of writing a complex code script, I just wrote a simple "Memo" in English telling the AI what I wanted. It read the memo and fixed all 200 files in minutes. English is the new coding language.
+
 But the data was garbage.
 Some files used "Goal:" headings. Others used "Objective:". Some were just random bullet points.
 

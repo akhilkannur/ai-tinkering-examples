@@ -13,6 +13,8 @@ Let's be real: I want traffic.
 I spend hours trying to rank on Google. But lately, I’ve noticed I’m doing fewer Google searches myself.
 I’m just asking Claude or Gemini.
 
+> **TL;DR:** Robots are the new users. If an AI (like ChatGPT or Claude) can't easily read your website, it won't recommend you to people. I added a simple text file called `llms.txt` that gives these robots a "cheat sheet" of my content, so they can cite me accurately.
+
 > *"What's the best tool for cold email?"*
 > *"Give me a checklist for a product launch."*
 

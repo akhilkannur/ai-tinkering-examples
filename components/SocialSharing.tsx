@@ -2,6 +2,7 @@ import { Facebook, X, Linkedin, Link2, Copy, Check } from 'lucide-react'
 import { useState } from 'react'
 import type { ExampleRecord } from '../lib/airtable'
 import { getSocialShareUrls } from '../utils/urlHelpers'
+import { trackEvent } from '../utils/analytics'
 
 interface SocialSharingProps {
   // Support both direct URL or example record
@@ -44,14 +45,11 @@ export default function SocialSharing({
   }
 
   const handleShare = (platform: string) => {
-    // Track sharing analytics if you have analytics setup
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'share', {
-        method: platform,
-        content_type: 'example',
-        item_id: example?.slug || title
-      })
-    }
+    trackEvent('share', {
+      method: platform,
+      content_type: 'example',
+      item_id: example?.slug || title
+    })
   }
 
   if (compact) {
