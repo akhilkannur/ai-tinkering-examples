@@ -35,7 +35,7 @@ export default function BlogIndex({ posts }: BlogIndexProps) {
 
       <Navbar />
 
-      <main className="flex-grow">
+      <main className="flex-grow pt-24">
         <div className="bg-secondary-bg border-b border-navy-dark py-20 relative overflow-hidden">
            <div className="absolute inset-0 bg-hero-gradient opacity-10 pointer-events-none"></div>
            <div className="container mx-auto px-4 text-center relative z-10">
