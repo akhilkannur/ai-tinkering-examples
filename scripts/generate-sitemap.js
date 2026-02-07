@@ -79,9 +79,9 @@ async function generateSitemap() {
     const recipeFiles = fs.readdirSync(RECIPES_DIR).filter(f => f.endsWith('.md'));
     const blueprintCategories = new Set();
     const recipes = recipeFiles.map(file => {
-      const id = file.replace('.md', '');
       const rawContent = fs.readFileSync(path.join(RECIPES_DIR, file), 'utf8');
       const { data } = matter(rawContent);
+      const id = data.id || file.replace('.md', '');
       if (data.category) blueprintCategories.add(data.category);
       return { 
         id, 
