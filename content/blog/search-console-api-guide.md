@@ -1,7 +1,7 @@
 ---
-title: "The 'Smart' Way to Track Keywords (Search Console API + Node.js)"
+title: "The 'Smart' Way to Find High-Intent Keywords with Search Console"
 date: "2026-02-07"
-excerpt: "Stop manually checking keyword rankings. Here is how to use the Search Console API to pull your top-performing queries directly into your own tools and scripts."
+excerpt: "Stop manually checking keyword rankings. Here is how to use automation to pull your top-performing queries directly from Search Console into your own tools."
 coverImage: "/images/blog/screenshot-engine.png"
 author:
   name: "Akhil from Real Examples"
