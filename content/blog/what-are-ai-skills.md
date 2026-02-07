@@ -20,7 +20,7 @@ I didn't start today knowing exactly how to automate my SEO or my Instagram post
 
 I asked the Gemini CLI: *"Hey, can you figure out how to pull my Search Console data into this folder? I have the credentials, but I don't know the API commands."*
 
-We went back and forth. It suggested a library, I installed it, the code crashed, it fixed the code. After 10 minutes of "tinkering," we had a script that worked. 
+The agent and I went back and forth. It suggested a library, I installed it, the code crashed, it fixed the code. After 10 minutes of "tinkering," we had a script that worked. 
 
 In a normal chatbot, that's where the story ends. I’d have to save that script somewhere and remember how to run it next week. 
 
@@ -40,7 +40,7 @@ The AI then did something amazing:
 
 Now, when I open my terminal next week, I don't have to find that script. I don't even have to remember the filename. 
 
-I just say: **"How are we ranking for 'AI Blueprints'?"**
+I just say: **"How am I ranking for 'AI Blueprints'?"**
 
 My AI agent looks at its new skill book, sees a match for "Google Search," and executes the logic we discovered during our tinkering session. It turned a "one-off conversation" into a **permanent capability.**
 

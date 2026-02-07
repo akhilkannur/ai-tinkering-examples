@@ -36,7 +36,7 @@ Paragraphs are great for humans, but they are "noisy" for AI. When you have spec
 **Why this matters:** Using a colon (:) creates a clear "Key" and "Value." It makes it easy for an AI to pull that specific number into a tracking sheet or for a developer to see the constraint instantly.
 
 ## 3. Isolating Your Creative (The "Safe Box")
-In marketing, we often mix **Instructions** (e.g., "Write a tweet") with the **Actual Content** (the tweet itself). If you don't separate them, an AI might accidentally include your instructions in the final draft.
+In marketing, I often mix **Instructions** (e.g., "Write a tweet") with the **Actual Content** (the tweet itself). If you don't separate them, an AI might accidentally include your instructions in the final draft.
 
 *   **Use Code Blocks (```):** Wrap your final copy in triple backticks. It tells the reader (and the AI): "Everything inside this box is the finished product - don't change it."
 *   **Use Blockquotes (>):** Use these for the "Strategic Why." It visually separates the theory from the execution.
@@ -70,7 +70,7 @@ priority: High
 # Campaign: OpenClaw Hardware Launch
 
 ## 1. The Strategy
-> We are positioning the new Pamir.ai mini-computer as the easiest way for non-technical people to own their own AI.
+> I am positioning the new Pamir.ai mini-computer as the easiest way for non-technical people to own their own AI.
 
 ## 2. Core Constraints
 - **Target KPI:** 500 Pre-orders

@@ -103,7 +103,7 @@ export default function PromptBundlePage() {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4 uppercase tracking-tight">Data-Driven Logic</h3>
                 <p className="text-text-secondary font-light leading-relaxed">
-                    Standard prompts fail on complex data. Our workflows are built to handle massive CSVs, deep audits, and multi-step research.
+                    Standard prompts fail on complex data. My workflows are built to handle massive CSVs, deep audits, and multi-step research.
                 </p>
              </div>
              <div className="bg-secondary-bg/50 border border-white/5 p-8 rounded-3xl backdrop-blur-sm">
@@ -237,7 +237,7 @@ export default function PromptBundlePage() {
                 </div>
                 <div>
                     <h4 className="text-xl font-bold text-white mb-2 italic">What makes these different?</h4>
-                    <p className="text-text-secondary font-light">Most prompt bundles are fluffy. Ours are **Boring**. We focus on high-reliability business logic—cleaning data, auditing competitors, and building content machines that actually work in production.</p>
+                    <p className="text-text-secondary font-light">Most prompt bundles are fluffy. Mine are **Boring**. I focus on high-reliability business logic—cleaning data, auditing competitors, and building content machines that actually work in production.</p>
                 </div>
              </div>
           </div>

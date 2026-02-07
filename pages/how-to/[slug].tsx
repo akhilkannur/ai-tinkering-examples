@@ -160,9 +160,8 @@ export default function HowToPage({ recipe, problemTitle, relatedRecipes }: HowT
           <div className="mt-24 text-center p-12 bg-navy-dark/30 rounded-2xl border border-navy-dark">
              <h3 className="text-2xl font-bold text-text-color mb-4">Want the Full Library?</h3>
              <p className="text-text-secondary mb-8 max-w-lg mx-auto">
-                We have over 500+ blueprints just like this one for every part of your Sales & Marketing stack.
-             </p>
-             <Link href="/500-ways-to-use-llms-for-work" className="inline-block bg-white text-navy-dark font-bold py-3 px-8 rounded-lg hover:bg-slate-200 transition-colors shadow-xl">
+                                I have over 500+ blueprints just like this one for every part of your Sales & Marketing stack.
+                              </p>             <Link href="/500-ways-to-use-llms-for-work" className="inline-block bg-white text-navy-dark font-bold py-3 px-8 rounded-lg hover:bg-slate-200 transition-colors shadow-xl">
                 Browse All 500 Blueprints
              </Link>
                     </div>

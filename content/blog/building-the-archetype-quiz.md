@@ -14,7 +14,7 @@ I’ll admit it: I love personality quizzes.
 
 > **TL;DR:** I don't know how to code complex React apps. But I wanted a viral quiz. So I asked an AI agent to "act as a psychologist" to write the questions, and then "act as a developer" to write the code. It worked in 3 hours.
 
-It’s narcissism. We love hearing about ourselves.
+It’s narcissism. People love hearing about themselves.
 I realized if I wanted people to actually care about "AI Workflows," I couldn't just give them a boring list. I had to make it about *them*.
 
 I wanted to build a "Which AI Archetype Are You?" quiz.

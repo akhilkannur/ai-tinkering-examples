@@ -189,7 +189,7 @@ export default function ClaudeSetup() {
                         <div className="p-6">
                             <h4 className="font-bold text-white mb-2 text-sm">Installation Error?</h4>
                             <p className="text-xs text-text-secondary mb-6 leading-relaxed">
-                                Terminal environments vary wildly. If you're stuck on "PATH not found" or permission errors, we can fix it for you.
+                                Terminal environments vary wildly. If you're stuck on "PATH not found" or permission errors, I can fix it for you.
                             </p>
                             <Link href="/agent-setup-service" className="flex items-center justify-center gap-2 w-full py-3 bg-primary-bg hover:bg-[#0f172a] text-white font-bold rounded-lg transition-all text-xs border border-white/10 group">
                                 <span className="w-1.5 h-1.5 rounded-full bg-red-500 group-hover:bg-green-500 transition-colors"></span>

@@ -29,11 +29,11 @@ A blueprint is a structured set of instructions (usually a Markdown file) that t
 2.  **The Context:** What files to look at (e.g., "Read `leads.csv` and `pricing_tier.json`").
 3.  **The Workflow:** Step-by-step logic (e.g., "If lead score > 50, draft email A; else, draft email B").
 
-We have spent the last year building and testing over **500 of these blueprints**.
+I have spent the last year building and testing over **500 of these blueprints**.
 
 ## The Top AI Workflows for 2026
 
-We've categorized our library into specific roles. Stop looking for generic "AI tips" and start building systems for your actual job.
+I've categorized my library into specific roles. Stop looking for generic "AI tips" and start building systems for your actual job.
 
 ### 1. For Sales Operations
 Sales Ops is the perfect playground for Folder Agents. You deal with structured data (CSVs), repeated logic (commission calc), and high-volume text (outreach).

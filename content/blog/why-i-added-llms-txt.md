@@ -45,6 +45,6 @@ Go to any AI model and ask it: *"Read https://realaiexamples.com/llms.txt and te
 It answers instantly. It sticks to the facts and cites my content perfectly.
 
 This is "SEO" for 2026.
-We used to optimize for keywords. Now we have to optimize for *agents*.
+I used to optimize for keywords. Now I have to optimize for *agents*.
 
 I don't know exactly how the algorithms work. But I know that making my data easy to read is never a bad strategy. It cost me $0 and an hour of tinkering. Worth it.

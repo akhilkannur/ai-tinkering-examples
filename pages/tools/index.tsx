@@ -65,7 +65,7 @@ export default function ToolsIndex() {
           </h1>
           
           <p className="text-lg text-slate-600 leading-relaxed font-sans max-w-2xl mx-auto mb-8">
-            People send us their AI tools every day. We delete the spam and list the ones that look real.
+            People send me their AI tools every day. I delete the spam and list the ones that look real.
           </p>
 
           <div className="flex flex-col items-center gap-4">

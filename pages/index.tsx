@@ -180,7 +180,7 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
                         <div className="bg-primary-bg border border-navy-dark p-6 rounded-xl relative">
                             <div className="absolute -top-3 -left-3 w-8 h-8 bg-accent text-white font-bold rounded-full flex items-center justify-center text-sm shadow-lg">2</div>
                             <h3 className="font-bold text-text-color mb-2">Paste Skill</h3>
-                            <p className="text-xs text-text-secondary">Copy a blueprint from our library (e.g., "Lead Finder").</p>
+                            <p className="text-xs text-text-secondary">Copy a blueprint from my library (e.g., "Lead Finder").</p>
                         </div>
                         {/* Step 3 */}
                         <div className="bg-primary-bg border border-navy-dark p-6 rounded-xl relative">
@@ -220,14 +220,14 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
               <div className="bg-secondary-bg p-6 rounded-xl border border-navy-dark">
                 <h3 className="text-base font-bold mb-2 text-text-color">What if one breaks?</h3>
                 <p className="text-text-secondary text-sm leading-relaxed">
-                  Email us. We fix it. We'd rather update the play than have you annoyed.
+                  Email me. I'll fix it. I'd rather update the play than have you annoyed.
                 </p>
               </div>
 
               <div className="bg-secondary-bg p-6 rounded-xl border border-navy-dark">
                 <h3 className="text-base font-bold mb-2 text-text-color">Is it safe?</h3>
                 <p className="text-text-secondary text-sm leading-relaxed">
-                  Plain text files (.md, .csv). No executables. We manually audit every file to prevent prompt injection and ensure zero malicious logic.
+                  Plain text files (.md, .csv). No executables. I manually audit every file to prevent prompt injection and ensure zero malicious logic.
                 </p>
               </div>
             </div>
@@ -241,7 +241,7 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
               Terminal giving you a headache?
             </h2>
             <p className="text-xl mb-8 opacity-90 font-sans max-w-2xl mx-auto leading-relaxed">
-              Skip the technical setup. We'll remotely install and configure Gemini CLI and Claude Code on your machine. First 10 setups for $99.
+              Skip the technical setup. I'll remotely install and configure Gemini CLI and Claude Code on your machine. First 10 setups for $99.
             </p>
             <a 
               href="/agent-setup-service" 
@@ -259,7 +259,7 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
               📬 Don't Miss Out!
             </h2>
             <p className="text-xl mb-10 font-sans text-text-secondary max-w-2xl mx-auto">
-              Free blueprints starter pack and occasional updates on actionable AI tactics. If they suck, unsubscribe. We won't be offended.
+              Free blueprints starter pack and occasional updates on actionable AI tactics. If they suck, unsubscribe. I won't be offended.
             </p>
             
             <div className="max-w-[500px] mx-auto">

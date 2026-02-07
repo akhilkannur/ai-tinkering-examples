@@ -219,8 +219,8 @@ export default function FiveHundredWays({ recipes, categories }: MegaListiclePro
           <div className="container mx-auto px-4 text-center max-w-3xl">
               <h2 className="text-3xl md:text-5xl font-bold mb-6 text-text-color tracking-tight">Need a custom blueprint?</h2>
               <p className="text-lg text-text-secondary mb-10 leading-relaxed">
-                  We add new Sales & Marketing workflows every week. If you have a specific bottleneck, 
-                  let us know and we'll build the blueprint for you.
+                  I add new Sales & Marketing workflows every week. If you have a specific bottleneck, 
+                  let me know and I'll build the blueprint for you.
               </p>
               <Link href="/" className="inline-flex items-center gap-2 bg-white text-navy-dark px-8 py-4 rounded-lg font-bold hover:bg-slate-200 transition-all shadow-xl">
                   Back to Homepage <ArrowRight className="w-4 h-4" />

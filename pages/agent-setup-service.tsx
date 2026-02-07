@@ -7,7 +7,7 @@ import Link from 'next/link'
 
 export default function AgentSetupService() {
   const title = "AI Agent Kickstart Jam | Strategic Setup for Non-Technical Builders";
-  const description = "We'll install Gemini CLI & Claude Code together, then jam on 3 custom workflows you can run the same day. No technical setup hassle - just strategy and shipping.";
+  const description = "I'll install Gemini CLI & Claude Code with you, then jam on 3 custom workflows you can run the same day. No technical setup hassle - just strategy and shipping.";
 
   const [accepted, setAccepted] = useState(false);
   const [activeStep, setActiveStep] = useState(0);
@@ -48,7 +48,7 @@ export default function AgentSetupService() {
                         </h1>
                         
                         <p className="text-xl text-text-secondary mb-10 leading-relaxed max-w-lg mx-auto lg:mx-0 font-light italic">
-                            Skip the manual. We'll install Gemini CLI & Claude Code together, then <strong className="text-white font-medium not-italic">jam on 3 custom workflows</strong> you can run the same day.
+                            Skip the manual. I'll install Gemini CLI & Claude Code with you, then <strong className="text-white font-medium not-italic">jam on 3 custom workflows</strong> you can run the same day.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -100,7 +100,7 @@ export default function AgentSetupService() {
                             {/* Overlaid Badge */}
                             <div className="absolute -bottom-6 -right-6 bg-white text-primary-bg px-6 py-4 rounded-xl font-bold shadow-2xl border-4 border-primary-bg transform rotate-3 flex items-center gap-3">
                                 <CheckCircle2 className="w-6 h-6 text-green-600" />
-                                <span className="uppercase tracking-tighter italic">We handle the mess.</span>
+                                <span className="uppercase tracking-tighter italic">I handle the mess.</span>
                             </div>
                         </div>
                     </div>
@@ -176,13 +176,13 @@ export default function AgentSetupService() {
                                     <div className="w-5 h-5 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0 mt-0.5 border border-accent/30">
                                         <Check className="w-3 h-3 text-accent" />
                                     </div>
-                                    <span className="text-lg font-medium text-white italic">We brainstorm custom use-cases live.</span>
+                                    <span className="text-lg font-medium text-white italic">I'll brainstorm custom use-cases with you live.</span>
                                 </li>
                                 <li className="flex items-start gap-4">
                                     <div className="w-5 h-5 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0 mt-0.5 border border-accent/30">
                                         <Check className="w-3 h-3 text-accent" />
                                     </div>
-                                    <span className="text-lg font-medium text-white italic">We build your first 'Agent Play' together.</span>
+                                    <span className="text-lg font-medium text-white italic">I'll build your first 'Agent Play' with you.</span>
                                 </li>
                                 <li className="flex items-start gap-4">
                                     <div className="w-5 h-5 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0 mt-0.5 border border-accent/30">
@@ -215,9 +215,9 @@ export default function AgentSetupService() {
                 <div className="grid md:grid-cols-4 gap-6">
                     {[
                         { title: "Scheduling", desc: "After payment, I'll reach out within 48 hours to fix a time that works for you." },
-                        { title: "Quick Setup", desc: "We'll get the terminal stuff out of the way first. 15 mins max." },
-                        { title: "Ideation", desc: "We jam on your actual business problems. What should we automate today?" },
-                        { title: "First Play", desc: "We run a real agent workflow together to solve a specific problem." },
+                        { title: "Quick Setup", desc: "I'll get the terminal stuff out of the way first. 15 mins max." },
+                        { title: "Ideation", desc: "I'll jam with you on your actual business problems. What should we automate today?" },
+                        { title: "First Play", desc: "I'll run a real agent workflow with you to solve a specific problem." },
                     ].map((step, i) => (
                         <div key={i} className={`relative p-8 rounded-2xl border transition-all duration-700 group overflow-hidden ${activeStep === i ? 'bg-secondary-bg border-accent/40 shadow-2xl scale-105 z-10' : 'bg-[#0F172A]/30 border-white/5 opacity-60'}`}>
                             {/* Glass background */}
@@ -250,7 +250,7 @@ export default function AgentSetupService() {
                     {[
                         { icon: <Terminal className="w-5 h-5" />, title: "The Setup", desc: "Node.js, Gemini, Claude installed correctly." },
                         { icon: <ShieldCheck className="w-5 h-5" />, title: "Best Practices", desc: "How to store API keys safely and avoid common pitfalls." },
-                        { icon: <Lightbulb className="w-5 h-5" />, title: "3 Custom Ideas", desc: "We'll brainstorm 3 custom blueprints for your specific business." },
+                        { icon: <Lightbulb className="w-5 h-5" />, title: "3 Custom Ideas", desc: "I'll brainstorm 3 custom blueprints for your specific business." },
                         { icon: <Gift className="w-5 h-5" />, title: "Blueprint Pack", desc: "Instant access to 700+ ready-to-run agents." },
                         { icon: <MessageCircle className="w-5 h-5" />, title: "Ideation Support", desc: "7 days of DM access to jam on more ideas." },
                         { icon: <Video className="w-5 h-5" />, title: "Call Recording", desc: "Re-watch our jam session and setup steps anytime." }
@@ -314,7 +314,7 @@ export default function AgentSetupService() {
                     </a>
                     
                     <p className="text-[10px] font-mono text-text-secondary/40 mt-10 uppercase tracking-[0.2em]">
-                      // 100% refund_protocol if we don't ship your first play
+                      // 100% refund_protocol if I don't help you ship your first play
                     </p>
                 </div>
             </div>

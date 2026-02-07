@@ -39,7 +39,7 @@ export default function NewsletterSignup() {
       <div className="absolute top-0 right-0 -mt-10 -mr-10 w-32 h-32 bg-accent/5 rounded-full blur-2xl pointer-events-none"></div>
       
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-headline font-extrabold tracking-tight text-text-color uppercase leading-tight">Join the <span className="text-accent">Lab</span></h2>
-      <p className="text-xs sm:text-sm text-text-secondary mt-2 font-sans leading-relaxed">Free blueprints starter pack and occasional updates on actionable AI tactics. If they suck, unsubscribe. We won't be offended.</p>
+      <p className="text-xs sm:text-sm text-text-secondary mt-2 font-sans leading-relaxed">Free blueprints starter pack and occasional updates on actionable AI tactics. If they suck, unsubscribe. I won't be offended.</p>
       
       <form onSubmit={handleSubmit} className="mt-6 flex flex-col sm:flex-row gap-3 relative z-10">
         <input 

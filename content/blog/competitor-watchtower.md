@@ -38,7 +38,8 @@ It compares the text snapshot. If "Starting at $99" changes to "Starting at $49"
 
 Data is useless without synthesis. Once a month, I feed these updates into the SWOT agent.
 It tells me: "Competitor X is pivoting to the low end. Their weakness is now *Enterprise Support*."
-This gives me my counter-pitch: "We aren't the cheapest. We are the ones who actually pick up the phone."
+This gives me my counter-pitch: "I'm not the cheapest. I'm the one who actually picks up the phone."
+---
 
 ## Value
 I stopped reacting to the market and started anticipating it. Now, when a prospect says "They are cheaper," I already have the battlecard ready.

@@ -210,7 +210,7 @@ export default function StateOfAI() {
               Data is useless <br />without <span className="italic">Deployment.</span>
             </h2>
             <p className="text-xl mb-12 opacity-90 max-w-2xl mx-auto leading-relaxed">
-              We don't just report on the state of AI. We build the blueprints that let you exploit it. Join 5,000+ operators getting tactical updates.
+              I don't just report on the state of AI. I build the blueprints that let you exploit it. Join 5,000+ operators getting tactical updates.
             </p>
             <div className="max-w-md mx-auto">
               <NewsletterForm />

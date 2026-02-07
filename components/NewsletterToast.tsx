@@ -41,7 +41,7 @@ const NewsletterToast: React.FC = () => {
 
   return (
     <div 
-      className={`fixed bottom-4 right-4 z-40 max-w-sm w-full bg-white border border-slate-200 shadow-xl rounded-xl p-4 flex items-start gap-4 transition-all duration-500 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
+      className={`fixed bottom-4 left-4 z-40 max-w-sm w-full bg-white border border-slate-200 shadow-xl rounded-xl p-4 flex items-start gap-4 transition-all duration-500 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
     >
       <div className="bg-accent/10 p-2 rounded-lg text-accent">
         <Mail size={20} />

@@ -92,7 +92,7 @@ export default function ExamplesPage({ examples, categories, itemListSchema }: E
             AI That <span className="text-accent">Actually Works</span>
           </h1>
           <p className="text-lg text-text-color/80 max-w-2xl mx-auto mb-8 leading-relaxed">
-            We cut through the Twitter hype to find workflows you can actually use. No magic, just better prompts.
+            I cut through the Twitter hype to find workflows you can actually use. No magic, just better prompts.
           </p>
         </header>
 

@@ -60,7 +60,7 @@ export default function StrategicKits() {
             <span className="text-transparent bg-clip-text bg-modern-gradient">Not Just a Task.</span>
           </h2>
           <p className="text-lg text-text-secondary font-normal">
-            Generic prompts solve one problem. Our Strategic Kits combine multiple blueprints to help you dominate a specific business goal.
+            Generic prompts solve one problem. My Strategic Kits combine multiple blueprints to help you dominate a specific business goal.
           </p>
         </div>
 

@@ -21,7 +21,7 @@ Here is the exact step-by-step guide so you can do it too—even if you aren't a
 
 ## The Strategy: No Scraping, Just API
 
-We aren't going to do anything messy like scraping the dashboard. We are going to use the **Google Analytics Data API**. Think of it as a direct "pipe" to your data. It's free, it's fast, and it lets you pull *exactly* what you need without the fluff.
+I'm not going to do anything messy like scraping the dashboard. I'm going to use the **Google Analytics Data API**. Think of it as a direct "pipe" to your data. It's free, it's fast, and it lets you pull *exactly* what you need without the fluff.
 
 ## Step 1: Create a "Digital Assistant" (Service Account)
 
@@ -47,7 +47,7 @@ Right now, your robot has a key, but it doesn't have permission to enter your Go
 
 ## Step 3: The Script
 
-Now, we write a few lines of code to ask the robot for data.
+Now, I'll write a few lines of code to ask the robot for data.
 First, install the helper library:
 
 ```bash

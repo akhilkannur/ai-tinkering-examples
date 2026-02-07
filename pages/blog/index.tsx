@@ -10,7 +10,7 @@ interface BlogIndexProps {
 
 export default function BlogIndex({ posts }: BlogIndexProps) {
   const title = "Tinker Logs | Real AI Examples";
-  const description = "We document the exact steps we take to automate work with AI. Read how we built our scrapers, sales bots, and data tools.";
+  const description = "I document the exact steps I take to automate work with AI. Read how I built my scrapers, sales bots, and data tools.";
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com';
   const ogImage = `${baseUrl}/api/og?mode=home`;
 
@@ -43,8 +43,8 @@ export default function BlogIndex({ posts }: BlogIndexProps) {
                 Tinker <span className="text-accent">Logs</span>
               </h1>
               <p className="text-xl text-text-secondary max-w-2xl mx-auto leading-relaxed">
-                We document the exact steps we take to automate work with AI. <br/>
-                Read how we built our scrapers, sales bots, and data tools, explained step-by-step.
+                I document the exact steps I take to automate work with AI. <br/>
+                Read how I built my scrapers, sales bots, and data tools, explained step-by-step.
               </p>
            </div>
         </div>

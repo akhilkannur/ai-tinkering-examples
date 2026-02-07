@@ -20,7 +20,7 @@ Here is the "non-technical" breakdown of how I hooked my site up to the **Search
 
 ## The Logic: Hiring a Digital Robot
 
-We aren't doing anything complex here. We are basically creating a **Service Account**—think of it as a specialized "robot user" that you add to your team. You give this robot a key (a JSON file), invite it to your Search Console property just like a regular person, and then tell it to go fetch your data.
+I'm not doing anything complex here. I'm basically creating a **Service Account**—think of it as a specialized "robot user" that you add to your team. You give this robot a key (a JSON file), invite it to your Search Console property just like a regular person, and then tell it to go fetch your data.
 
 ## Step 1: Create the "Robot" (Service Account)
 
@@ -45,7 +45,7 @@ Now, you need to tell Google that this robot is allowed to see your data.
 
 ## Step 3: The Script
 
-We’ll use a simple script to talk to the API. Don't worry about the code—you can just copy/paste this into a file named `fetch-search.js`.
+I’ll use a simple script to talk to the API. Don't worry about the code—you can just copy/paste this into a file named `fetch-search.js`.
 
 ```bash
 npm install googleapis
