@@ -217,16 +217,6 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
            <span className="font-mono">{recipe.time}</span>
         </div>
       </div>
-           <span className={`px-2 py-0.5 rounded ${
-              recipe.difficulty === 'Beginner' ? 'text-green-400 bg-green-400/10' : 
-              recipe.difficulty === 'Intermediate' ? 'text-yellow-400 bg-yellow-400/10' : 
-              'text-red-400 bg-red-400/10'
-           }`}>
-             {recipe.difficulty}
-           </span>
-           <span className="font-mono">{recipe.time}</span>
-        </div>
-      </div>
     );
   };
 
