@@ -60,19 +60,19 @@ export default function ExamplesPage({ examples, categories, itemListSchema }: E
   return (
     <>
       <Head>
-        <title>700+ Real AI Examples | Browse AI Workflows & Prompts</title>
-        <meta name="description" content={`Browse ${examples.length} real AI examples with step-by-step guides, prompts, and automation workflows for non-technical tinkerers.`} key="description" />
+        <title>Real AI Examples | Curated AI Workflows & Prompts</title>
+        <meta name="description" content={`Browse real AI examples with step-by-step guides, prompts, and automation workflows for non-technical tinkerers.`} key="description" />
         <meta name="keywords" content="AI examples, real AI examples, AI workflows, automation, prompts, artificial intelligence, guides" />
         <link rel="canonical" href={`${process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com'}/ai-examples`} />
         
-        <meta property="og:title" content="700+ Real AI Examples | Browse AI Workflows & Prompts" key="og:title" />
-        <meta property="og:description" content={`Browse ${examples.length} real AI examples with step-by-step guides, prompts, and automation workflows for non-technical tinkerers.`} key="og:description" />
+        <meta property="og:title" content="Real AI Examples | Curated AI Workflows & Prompts" key="og:title" />
+        <meta property="og:description" content={`Browse real AI examples with step-by-step guides, prompts, and automation workflows for non-technical tinkerers.`} key="og:description" />
         <meta property="og:image" content={`${process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com'}/api/og?mode=home`} key="og:image" />
         <meta property="og:type" content="website" key="og:type" />
 
         <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
-        <meta name="twitter:title" content="700+ Real AI Examples | Browse AI Workflows & Prompts" key="twitter:title" />
-        <meta name="twitter:description" content={`Browse ${examples.length} real AI examples with step-by-step guides, prompts, and automation workflows for non-technical tinkerers.`} key="twitter:description" />
+        <meta name="twitter:title" content="Real AI Examples | Curated AI Workflows & Prompts" key="twitter:title" />
+        <meta name="twitter:description" content={`Browse real AI examples with step-by-step guides, prompts, and automation workflows for non-technical tinkerers.`} key="twitter:description" />
         <meta name="twitter:image" content={`${process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com'}/api/og?mode=home`} key="twitter:image" />
 
         {/* Structured Data */}
@@ -89,7 +89,7 @@ export default function ExamplesPage({ examples, categories, itemListSchema }: E
         
         <header className="max-w-6xl mx-auto px-4 pt-32 pb-16 text-center">
           <h1 className="text-4xl md:text-5xl font-headline font-bold text-text-color mb-6 tracking-tight leading-tight uppercase">
-            700+ <span className="text-accent">Real AI Examples</span>
+            Curated <span className="text-accent">Real AI Examples</span>
           </h1>
           <p className="text-lg text-text-color/80 max-w-2xl mx-auto mb-8 leading-relaxed">
             I cut through the Twitter hype to find AI examples you can actually use. No magic, just better prompts.

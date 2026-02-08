@@ -30,8 +30,8 @@ interface HybridHomePageProps {
 }
 
 export default function HybridHomePage({ recipes, featuredJobs, featuredTools, siteSettings }: HybridHomePageProps) {
-  const homepageTitle = "Real AI Examples: 500+ AI Workflows That Actually Work";
-  const homepageDescription = "Stop chatting and start building. A library of reliable, copy-paste AI workflows and recipes for salespeople, marketers, and founders. Works with Gemini, Claude, and all major AI LLMs.";
+  const homepageTitle = "700+ Real AI Examples: Agent-Ready Workflows & Blueprints";
+  const homepageDescription = "Stop chatting and start building. A library of 700+ reliable, copy-paste Real AI Examples and blueprints for sales, marketing, and founders. Works with Gemini CLI and Claude Code.";
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com';
 
   const itemListSchema = generateItemListSchema(recipes.slice(0, 12), baseUrl);
