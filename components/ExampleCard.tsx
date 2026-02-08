@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import type { ExampleRecord, SponsorRecord } from "../lib/airtable";
 import Image from "next/image";
-import { Clock } from "lucide-react";
+import { Clock, ArrowRight } from "lucide-react";
 import { optimizeImageUrl } from "../utils/cloudinary";
 
 interface ExampleCardProps {
