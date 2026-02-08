@@ -70,43 +70,40 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
       </Head>
 
-      <div className="min-h-screen bg-primary-bg font-sans text-text-color fade-in selection:bg-accent selection:text-white">
+      <div className="min-h-screen bg-primary-bg font-mono text-text-color fade-in selection:bg-accent selection:text-black">
         <Navbar />
 
         {/* HERO SECTION */}
-        <div className="bg-primary-bg pt-32 pb-20 relative overflow-hidden">
-            {/* Background Gradient */}
-            <div className="absolute inset-0 bg-hero-gradient opacity-20 pointer-events-none"></div>
-
+        <div className="bg-primary-bg pt-40 pb-24 relative overflow-hidden border-b-8 border-black">
             <div className="container mx-auto px-4 max-w-6xl relative z-10">
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
                     <div className="text-left">
                         
-                        <h1 className="text-5xl md:text-7xl font-sans font-extrabold text-text-color mb-6 tracking-tight leading-[1.1]">
+                        <h1 className="text-6xl md:text-8xl font-headline font-bold text-text-color mb-6 tracking-tight leading-[0.9] uppercase drop-shadow-[4px_4px_0px_rgba(0,0,0,1)]">
                             Stop Arguing <br />
                             <span className="text-accent">with Chatbots.</span>
                         </h1>
                         
-                        <p className="text-lg text-text-secondary mb-10 leading-relaxed max-w-lg font-normal">
+                        <p className="text-xl text-text-color mb-10 leading-relaxed max-w-lg font-mono">
                             A library of 700+ agent-ready blueprints for Sales, Marketing, and Ops. Built for Gemini CLI, Claude Code, and all major LLM agents.
                         </p>
 
-                        <div className="inline-block bg-accent/10 border border-accent/20 rounded-full px-3 py-1 mb-4">
-                            <span className="text-xs font-bold text-accent tracking-wide uppercase flex items-center gap-2">
-                                <Zap className="w-3 h-3 fill-current" /> 700+ Files. 1 Year Access.
+                        <div className="inline-block bg-black text-accent border-2 border-accent px-4 py-1 mb-8">
+                            <span className="text-sm font-bold tracking-widest uppercase flex items-center gap-2">
+                                <Zap className="w-4 h-4 fill-current" /> 700+ Files. 1 Year Access.
                             </span>
                         </div>
 
-                        <div className="flex flex-col sm:flex-row items-center gap-4 mb-8">
+                        <div className="flex flex-col sm:flex-row items-center gap-6 mb-8">
                             <a 
                                 href="https://checkout.dodopayments.com/buy/pdt_0NW6p0szmXPS6jXW05hIP"
-                                className="w-full sm:w-auto px-8 py-4 bg-accent hover:bg-accent-hover text-white font-bold rounded-lg transition-all shadow-[0_0_20px_rgba(236,72,153,0.3)] hover:shadow-[0_0_30px_rgba(236,72,153,0.5)] text-sm flex items-center justify-center gap-2 transform hover:-translate-y-1"
+                                className="w-full sm:w-auto px-10 py-5 bg-accent hover:bg-accent-hover text-black font-black border-4 border-black shadow-[6px_6px_0px_rgba(0,0,0,1)] transition-all text-lg flex items-center justify-center gap-2 transform hover:-translate-y-1 hover:shadow-none"
                             >
-                                Get 1 Year Access ($39) <ArrowRight className="w-4 h-4" />
+                                Get 1 Year Access ($39) <ArrowRight className="w-5 h-5" />
                             </a>
                             <a 
                                 href="#skills" 
-                                className="w-full sm:w-auto px-8 py-4 bg-white/5 border border-navy-dark hover:bg-white/10 text-text-color font-bold rounded-lg transition-all text-sm flex items-center justify-center gap-2"
+                                className="w-full sm:w-auto px-10 py-5 bg-white/10 border-4 border-black text-text-color font-black transition-all text-lg flex items-center justify-center gap-2 hover:bg-white/20"
                             >
                                 See What's Inside
                             </a>
@@ -145,48 +142,48 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
         </div>
 
         {/* NEW TO AGENTS SECTION */}
-        <div className="bg-secondary-bg py-16 border-b border-navy-dark">
+        <div className="bg-secondary-bg py-24 border-b-8 border-black text-black">
             <div className="container mx-auto px-4 max-w-6xl">
-                <div className="grid lg:grid-cols-2 gap-12 items-center">
+                <div className="grid lg:grid-cols-2 gap-16 items-center">
                     <div>
-                        <div className="inline-block bg-accent/10 border border-accent/20 rounded-full px-3 py-1 mb-4">
-                            <span className="text-[10px] font-bold text-accent tracking-wide uppercase">
+                        <div className="inline-block bg-black text-accent border-2 border-black px-4 py-1 mb-6">
+                            <span className="text-xs font-bold tracking-widest uppercase">
                                 New to Agents? Start Here.
                             </span>
                         </div>
-                        <h2 className="text-3xl md:text-5xl font-black text-text-color mb-6 tracking-tight">
-                            A Chatbot <span className="text-accent">with Hands.</span>
+                        <h2 className="text-4xl md:text-6xl font-headline font-black text-black mb-8 tracking-tight uppercase">
+                            A Chatbot <span className="text-primary-bg">with Hands.</span>
                         </h2>
-                        <p className="text-lg text-text-secondary mb-8 leading-relaxed">
+                        <p className="text-xl text-black/80 mb-10 leading-relaxed font-mono">
                             ChatGPT can write an email, but it can't send it. <br/>
                             <strong>Agentic Tools</strong> live on your computer. They can create files, run searches, and manage projects - just like a remote intern.
                         </p>
                         
                         <div className="flex flex-col gap-4">
-                             <a href="/learn-ai" className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-primary-bg font-bold rounded-lg hover:bg-gray-100 transition-all">
-                                How to Install (5 Min Guide) <ArrowRight className="w-4 h-4" />
+                             <a href="/learn-ai" className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-black text-white font-bold border-4 border-black shadow-[4px_4px_0px_rgba(255,255,255,0.2)] hover:shadow-none hover:translate-y-1 transition-all uppercase tracking-widest">
+                                How to Install (5 Min Guide) <ArrowRight className="w-5 h-5" />
                              </a>
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                         {/* Step 1 */}
-                        <div className="bg-primary-bg border border-navy-dark p-6 rounded-xl relative">
-                            <div className="absolute -top-3 -left-3 w-8 h-8 bg-accent text-white font-bold rounded-full flex items-center justify-center text-sm shadow-lg">1</div>
-                            <h3 className="font-bold text-text-color mb-2">Install Agent</h3>
-                            <p className="text-xs text-text-secondary">Get Claude Code or Gemini CLI running in your terminal.</p>
+                        <div className="bg-white border-4 border-black p-6 rounded-none relative shadow-[4px_4px_0px_rgba(0,0,0,1)]">
+                            <div className="absolute -top-4 -left-4 w-10 h-10 bg-primary-bg text-white font-bold border-4 border-black flex items-center justify-center text-lg shadow-lg">1</div>
+                            <h3 className="font-bold text-black mb-2 uppercase font-headline text-xl">Install Agent</h3>
+                            <p className="text-sm text-black/70 font-mono">Get Claude Code or Gemini CLI running in your terminal.</p>
                         </div>
                         {/* Step 2 */}
-                        <div className="bg-primary-bg border border-navy-dark p-6 rounded-xl relative">
-                            <div className="absolute -top-3 -left-3 w-8 h-8 bg-accent text-white font-bold rounded-full flex items-center justify-center text-sm shadow-lg">2</div>
-                            <h3 className="font-bold text-text-color mb-2">Paste Skill</h3>
-                            <p className="text-xs text-text-secondary">Copy a blueprint from my library (e.g., "Lead Finder").</p>
+                        <div className="bg-white border-4 border-black p-6 rounded-none relative shadow-[4px_4px_0px_rgba(0,0,0,1)]">
+                            <div className="absolute -top-4 -left-4 w-10 h-10 bg-primary-bg text-white font-bold border-4 border-black flex items-center justify-center text-lg shadow-lg">2</div>
+                            <h3 className="font-bold text-black mb-2 uppercase font-headline text-xl">Paste Skill</h3>
+                            <p className="text-sm text-black/70 font-mono">Copy a blueprint from my library (e.g., "Lead Finder").</p>
                         </div>
                         {/* Step 3 */}
-                        <div className="bg-primary-bg border border-navy-dark p-6 rounded-xl relative">
-                            <div className="absolute -top-3 -left-3 w-8 h-8 bg-accent text-white font-bold rounded-full flex items-center justify-center text-sm shadow-lg">3</div>
-                            <h3 className="font-bold text-text-color mb-2">Run It</h3>
-                            <p className="text-xs text-text-secondary">Watch it work. It creates files, searches web, and executes.</p>
+                        <div className="bg-white border-4 border-black p-6 rounded-none relative shadow-[4px_4px_0px_rgba(0,0,0,1)]">
+                            <div className="absolute -top-4 -left-4 w-10 h-10 bg-primary-bg text-white font-bold border-4 border-black flex items-center justify-center text-lg shadow-lg">3</div>
+                            <h3 className="font-bold text-black mb-2 uppercase font-headline text-xl">Run It</h3>
+                            <p className="text-sm text-black/70 font-mono">Watch it work. It creates files, searches web, and executes.</p>
                         </div>
                     </div>
                 </div>
@@ -235,19 +232,19 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
         </div>
 
         {/* SETUP SERVICE CTA */}
-        <div className="bg-accent text-white py-16">
+        <div className="bg-secondary-bg text-black py-20 border-y-8 border-black">
           <div className="container mx-auto px-4 max-w-4xl text-center">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight uppercase">
+            <h2 className="text-4xl md:text-6xl font-headline font-bold mb-6 tracking-tight uppercase">
               Terminal giving you a headache?
             </h2>
-            <p className="text-xl mb-8 opacity-90 font-sans max-w-2xl mx-auto leading-relaxed">
+            <p className="text-xl mb-10 font-mono max-w-2xl mx-auto leading-relaxed">
               Skip the technical setup. I'll remotely install and configure Gemini CLI and Claude Code on your machine. First 10 setups for $99.
             </p>
             <a 
               href="/agent-setup-service" 
-              className="inline-block bg-white text-accent hover:bg-gray-100 font-extrabold px-10 py-4 rounded-lg transition-all text-xl uppercase tracking-widest shadow-xl transform hover:-translate-y-1"
+              className="inline-block bg-accent text-black hover:bg-accent-hover font-black px-12 py-5 border-4 border-black shadow-[6px_6px_0px_rgba(0,0,0,1)] transition-all text-2xl uppercase tracking-widest transform hover:-translate-y-1 hover:shadow-none"
             >
-              Book Remote Setup <ArrowRight className="inline-block w-6 h-6 ml-2" />
+              Book Remote Setup <ArrowRight className="inline-block w-8 h-8 ml-2" />
             </a>
           </div>
         </div>

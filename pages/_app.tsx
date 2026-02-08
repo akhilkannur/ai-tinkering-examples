@@ -56,6 +56,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <div className={`${inter.variable} ${dmSans.variable} ${spaceMono.variable} font-sans`}>
+      <div className="texture-overlay"></div>
       <Head>
         <title>AI Examples You Can Copy & Try</title>
         <meta name="description" content={description} key="description" />

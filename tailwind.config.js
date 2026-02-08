@@ -9,27 +9,27 @@ module.exports = {
         'accent-hover': '#F0D060', // Darker Yellow
         'accent-light': '#FEF9C3', // Light Yellow
         'text-color': '#FFFDE7', // Paper White (Text on Red)
-        'text-secondary': '#FDF498', // Yellow (Secondary text)
-        'text-inverse': '#1F2937', // Dark Gray (Text on Paper)
-        'light-purple': '#3B4E59', // Slate Blue (Build Club Palette)
-        'bright-pink': '#88A096', // Sage Green (Build Club Palette)
-        'electric-blue': '#1F2937', // Dark Text on accent
-        'navy-dark': '#3B4E59', // Slate Blue
-        'navy-light': '#556B78', // Lighter Slate Blue
-        'section-bg-example-card': '#FFFDE7', // Paper White
+        'text-secondary': '#FFFDE7', // Use Paper White for secondary on Red for legibility
+        'text-inverse': '#000000', // Black text on light backgrounds
+        'light-purple': '#3B4E59', // Slate Blue
+        'bright-pink': '#88A096', // Sage Green
+        'electric-blue': '#000000', 
+        'navy-dark': '#000000', // Set to Black for Build Club style
+        'navy-light': '#000000', 
+        'section-bg-example-card': '#FFFDE7', 
         'brand-beige': '#FFFDE7',
         'brand-navy': '#C0392B',
       },
       fontFamily: {
-        sans: ['var(--font-inter)', 'var(--font-dm-sans)', 'sans-serif'],
-        headline: ['var(--font-dm-sans)', 'sans-serif'],
-        mono: ['var(--font-space-mono)', 'monospace'],
+        sans: ['Bebas Neue', 'var(--font-inter)', 'sans-serif'],
+        headline: ['Bebas Neue', 'sans-serif'],
+        mono: ['Courier Prime', 'var(--font-space-mono)', 'monospace'],
         roboto: ['var(--font-inter)', 'sans-serif'],
       },
       backgroundImage: {
-        'modern-gradient': 'linear-gradient(135deg, #F43F5E 0%, #D946EF 100%)', // Rose to Fuchsia
-        'subtle-gradient': 'linear-gradient(to bottom, #020617, #0F172A)',
-        'hero-gradient': 'radial-gradient(ellipse at top right, rgba(244, 63, 94, 0.15) 0%, transparent 50%), radial-gradient(ellipse at bottom left, rgba(14, 165, 233, 0.1) 0%, transparent 50%)',
+        'modern-gradient': 'none', 
+        'subtle-gradient': 'none',
+        'hero-gradient': 'none',
       },
       boxShadow: {
         'custom-light': 'none',

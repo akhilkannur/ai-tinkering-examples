@@ -48,7 +48,7 @@ export default function Navbar() {
         />
       </Head>
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled || !isHomePage ? 'bg-primary-bg/95 backdrop-blur-lg border-b border-white/5 py-2' : 'bg-transparent py-4'
+        scrolled || !isHomePage ? 'bg-primary-bg border-b-4 border-black py-2' : 'bg-transparent py-4'
       }`}>
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="flex justify-between items-center h-16">
@@ -56,7 +56,6 @@ export default function Navbar() {
             <div className="flex-shrink-0">
               <Link href="/" className="flex items-center gap-3 group">
                 <div className="relative">
-                    <div className="absolute -inset-1 bg-accent rounded-full blur-md opacity-0 group-hover:opacity-40 transition-opacity"></div>
                     <Image 
                     src="/favicon_transparent.png?v=2" 
                     alt="AI Examples" 
@@ -66,7 +65,7 @@ export default function Navbar() {
                     className="relative object-contain" 
                     />
                 </div>
-                <span className="text-lg font-black font-sans tracking-tighter text-text-color group-hover:text-accent transition-colors uppercase italic">Real AI Examples</span>
+                <span className="text-2xl font-black font-headline tracking-tighter text-text-color group-hover:text-accent transition-colors uppercase italic">Real AI Examples</span>
               </Link>
             </div>
             
@@ -76,10 +75,10 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`px-4 py-2 text-sm font-mono font-bold tracking-[0.2em] transition-all duration-200 border border-transparent rounded-lg ${
+                  className={`px-4 py-2 text-sm font-mono font-bold tracking-[0.2em] transition-all duration-200 border-2 border-transparent rounded-none ${
                     router.pathname === link.href
-                      ? 'text-accent bg-accent/5 border-accent/10'
-                      : 'text-text-secondary hover:text-white hover:bg-white/5'
+                      ? 'text-accent bg-black border-black'
+                      : 'text-text-color hover:text-accent hover:bg-black/10'
                   }`}
                 >
                   {link.label}
