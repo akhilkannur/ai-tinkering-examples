@@ -90,15 +90,15 @@ const nextConfig = {
         destination: '/skills',
         permanent: true,
       },
-      {
-        source: '/ai-examples/:path*',
-        destination: '/skills',
-        permanent: true,
-      },
       // 3. Old directory structure cleanup
       {
         source: '/blueprints',
-        destination: '/skills',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/skills',
+        destination: '/',
         permanent: true,
       },
       {
