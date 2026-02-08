@@ -57,7 +57,7 @@ h2 {
 
 /* Card component with enhanced performance */
 .card { 
-  @apply border border-navy-dark rounded-2xl p-4 bg-secondary-bg shadow-custom-light; /* Updated for dark theme */
+  @apply border border-navy-dark rounded-2xl p-4 bg-secondary-bg text-text-inverse shadow-custom-light; /* Updated for dark theme */
   /* Use transform3d for better performance */
   transform: translate3d(0, 0, 0);
   /* Optimize repaints */

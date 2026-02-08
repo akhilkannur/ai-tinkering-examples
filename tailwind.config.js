@@ -3,21 +3,22 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'primary-bg': '#020617', // Slate 950 - Deep Background
-        'secondary-bg': '#0F172A', // Slate 900 - Card Background
-        'accent': '#F43F5E', // Rose 500 - Vibrant Pink/Red
-        'accent-hover': '#E11D48', // Rose 600
-        'accent-light': '#FB7185', // Rose 400
-        'text-color': '#F8FAFC', // Slate 50 - Main Text
-        'text-secondary': '#94A3B8', // Slate 400 - Secondary Text
-        'light-purple': '#0EA5E9', // Sky 500
-        'bright-pink': '#D946EF', // Fuchsia 500
-        'electric-blue': '#F8FAFC', // Text on accent
-        'navy-dark': '#1E293B', // Slate 800 - Borders
-        'navy-light': '#334155', // Slate 700
-        'section-bg-example-card': '#0F172A', // Matches secondary-bg
-        'brand-beige': '#020617', // Replaced Beige with Slate 950
-        'brand-navy': '#F8FAFC', // Replaced Navy text with Slate 50
+        'primary-bg': '#C0392B', // Brick Red (Build Club BG)
+        'secondary-bg': '#FFFDE7', // Paper White (Build Club Card)
+        'accent': '#FDF498', // Yellow (Build Club Accent)
+        'accent-hover': '#F0D060', // Darker Yellow
+        'accent-light': '#FEF9C3', // Light Yellow
+        'text-color': '#FFFDE7', // Paper White (Text on Red)
+        'text-secondary': '#FDF498', // Yellow (Secondary text)
+        'text-inverse': '#1F2937', // Dark Gray (Text on Paper)
+        'light-purple': '#3B4E59', // Slate Blue (Build Club Palette)
+        'bright-pink': '#88A096', // Sage Green (Build Club Palette)
+        'electric-blue': '#1F2937', // Dark Text on accent
+        'navy-dark': '#3B4E59', // Slate Blue
+        'navy-light': '#556B78', // Lighter Slate Blue
+        'section-bg-example-card': '#FFFDE7', // Paper White
+        'brand-beige': '#FFFDE7',
+        'brand-navy': '#C0392B',
       },
       fontFamily: {
         sans: ['var(--font-inter)', 'var(--font-dm-sans)', 'sans-serif'],

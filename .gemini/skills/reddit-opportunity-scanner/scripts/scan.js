@@ -1,12 +1,18 @@
 const https = require('https');
 
 const SUBREDDITS = [
-  'salesops', 'RevenueOperations', 'marketingops', 'coldemail', 'leadgeneration', 
-  'emailmarketing', 'googlesheets', 'SaaS', 'startups', 'smallbusiness', 
-  'Entrepreneur', 'SalesDevelopment', 'growthhacking'
+  'salesops', 'RevenueOperations', 'marketingops', 'coldemail', 'SalesDevelopment',
+  'SaaS', 'growthhacking', 'startups', 'Solopreneur', 'googlesheets', 
+  'Airtable', 'Zapier', 'MakeCom', 'ClaudeAI', 'PPC', 'adops', 
+  'ecommerce', 'Shopify', 'SEO', 'nichewebsites'
 ];
 
-const AI_KEYWORDS = ['apollo', 'clay', 'instantly', 'sheets', 'excel', 'automate', 'automation', 'workflow', 'script', 'claude', 'gemini', 'llm', 'agent'];
+const AI_KEYWORDS = [
+  'apollo', 'clay', 'instantly', 'sheets', 'excel', 'automate', 'automation', 
+  'workflow', 'script', 'claude', 'gemini', 'llm', 'agent', 'pseo', 
+  'programmatic', 'competitor', 'ad library', 'enrichment', 'outreach', 
+  'scraping', 'cleaning', 'hygiene', 'duplicate', 'airtable', 'zapier', 'make.com'
+];
 
 function fetchSubreddit(subreddit) {
   return new Promise((resolve) => {
@@ -33,7 +39,8 @@ async function scan() {
     const filtered = posts.filter(post => {
       const title = post.title.toLowerCase();
       const hasAI = AI_KEYWORDS.some(k => title.includes(k));
-      const isQuestion = title.includes('?') || title.startsWith('how');
+      const questionWords = ['how', 'why', 'what', 'where', 'help', 'any way', 'anyone', 'is there', 'can i', 'looking for'];
+      const isQuestion = title.includes('?') || questionWords.some(w => title.startsWith(w)) || questionWords.some(w => title.includes(w + ' '));
       return hasAI && isQuestion;
     });
     

@@ -66,7 +66,7 @@ export default function Navbar() {
                     className="relative object-contain" 
                     />
                 </div>
-                <span className="text-lg font-black font-sans tracking-tighter text-slate-100 group-hover:text-accent transition-colors uppercase italic">Real AI Examples</span>
+                <span className="text-lg font-black font-sans tracking-tighter text-text-color group-hover:text-accent transition-colors uppercase italic">Real AI Examples</span>
               </Link>
             </div>
             

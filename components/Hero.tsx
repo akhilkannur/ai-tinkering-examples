@@ -29,7 +29,7 @@ export default function Hero() {
             </div>
             
             <h1 className="text-4xl sm:text-6xl font-headline font-bold tracking-tight mb-4 text-brand-navy max-w-4xl uppercase">
-              AI Workflows You Can <span className="text-accent bg-clip-text">Copy.</span>
+              AI Workflows You Can <span className="text-navy-dark bg-clip-text">Copy.</span>
             </h1>
 
             <p className="text-lg sm:text-xl text-brand-navy/70 max-w-2xl mx-auto mb-8 leading-relaxed font-sans">

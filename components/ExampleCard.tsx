@@ -102,21 +102,21 @@ export default function ExampleCard({
 
         <div className="p-5 flex flex-col gap-3 relative">
           <div className="flex justify-between items-start gap-4">
-            <h3 className="text-lg font-bold leading-tight text-text-color line-clamp-2 group-hover:text-accent transition-colors duration-200">
+            <h3 className="text-lg font-bold leading-tight text-gray-900 line-clamp-2 group-hover:text-accent-hover transition-colors duration-200">
               {example.title}
             </h3>
-            <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-accent transform translate-x-[-10px] group-hover:translate-x-0 transition-transform">
+            <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-accent-hover transform translate-x-[-10px] group-hover:translate-x-0 transition-transform">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </span>
           </div>
 
           {example.summary && (
-            <p className="text-sm text-text-secondary line-clamp-2 leading-relaxed font-sans">
+            <p className="text-sm text-gray-700 line-clamp-2 leading-relaxed font-sans">
               {example.summary}
             </p>
           )}
 
-          <div className="pt-2 flex items-center gap-4 text-xs font-mono text-text-secondary/60">
+          <div className="pt-2 flex items-center gap-4 text-xs font-mono text-gray-500">
              {example.read_time && (
               <span className="flex items-center gap-1">
                 <Clock size={12} />

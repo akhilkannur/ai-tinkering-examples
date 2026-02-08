@@ -101,7 +101,7 @@ export default function Footer() {
 
         <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex items-center gap-4 group">
-             <div className="w-8 h-8 rounded-lg bg-secondary-bg border border-white/10 flex items-center justify-center text-accent group-hover:border-accent/30 transition-colors">
+             <div className="w-8 h-8 rounded-lg bg-secondary-bg border border-white/10 flex items-center justify-center text-primary-bg group-hover:border-accent/30 transition-colors">
                 <Terminal className="w-4 h-4" />
              </div>
              <p className="text-text-secondary text-[10px] font-mono uppercase tracking-[0.2em] opacity-40">

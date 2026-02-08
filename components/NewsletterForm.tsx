@@ -35,7 +35,7 @@ export default function NewsletterForm() {
   if (status === 'success') {
     return (
       <div className="py-4 text-center">
-        <p className="text-accent font-bold">✓ Welcome to the Lab! Check your inbox.</p>
+        <p className="text-navy-dark font-bold">✓ Welcome to the Lab! Check your inbox.</p>
       </div>
     );
   }
@@ -54,7 +54,7 @@ export default function NewsletterForm() {
         />
         <button 
           type="submit"
-          className="px-6 py-3 bg-accent text-white font-bold uppercase tracking-widest text-xs hover:bg-accent-hover transition-colors disabled:bg-gray-600"
+          className="px-6 py-3 bg-accent text-navy-dark font-bold uppercase tracking-widest text-xs hover:bg-accent-hover transition-colors disabled:bg-gray-600"
           disabled={status === 'loading'}
         >
           {status === 'loading' ? 'Joining...' : 'Join'}
