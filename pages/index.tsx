@@ -114,19 +114,19 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
                         </p>
 
                         {/* Playbooks Bar */}
-                        <div className="pt-8 border-t border-navy-dark">
-                            <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-text-secondary/40 mb-4">Popular Role-Based Plays:</p>
-                            <div className="flex flex-wrap gap-3">
-                                <a href="/playbook/vp-sales" className="flex items-center gap-2 text-xs font-bold text-text-color bg-secondary-bg border border-navy-dark px-3 py-1.5 rounded-full hover:border-accent hover:text-accent transition-all">
+                        <div className="pt-8 border-t-4 border-black">
+                            <p className="text-xs uppercase tracking-[0.2em] font-black text-text-color mb-4">Popular Role-Based Plays:</p>
+                            <div className="flex flex-wrap gap-4">
+                                <a href="/playbook/vp-sales" className="flex items-center gap-2 text-xs font-bold text-black bg-secondary-bg border-2 border-black px-4 py-2 hover:bg-accent transition-all shadow-[2px_2px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-0.5 hover:translate-y-0.5">
                                   <Target className="w-3 h-3" /> VP Sales
                                 </a>
-                                <a href="/playbook/seo-manager" className="flex items-center gap-2 text-xs font-bold text-text-color bg-secondary-bg border border-navy-dark px-3 py-1.5 rounded-full hover:border-accent hover:text-accent transition-all">
+                                <a href="/playbook/seo-manager" className="flex items-center gap-2 text-xs font-bold text-black bg-secondary-bg border-2 border-black px-4 py-2 hover:bg-accent transition-all shadow-[2px_2px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-0.5 hover:translate-y-0.5">
                                   <Search className="w-3 h-3" /> SEO Manager
                                 </a>
-                                <a href="/playbook/demand-gen" className="flex items-center gap-2 text-xs font-bold text-text-color bg-secondary-bg border border-navy-dark px-3 py-1.5 rounded-full hover:border-accent hover:text-accent transition-all">
+                                <a href="/playbook/demand-gen" className="flex items-center gap-2 text-xs font-bold text-black bg-secondary-bg border-2 border-black px-4 py-2 hover:bg-accent transition-all shadow-[2px_2px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-0.5 hover:translate-y-0.5">
                                   <Zap className="w-3 h-3" /> Demand Gen
                                 </a>
-                                <a href="/playbook/customer-success" className="flex items-center gap-2 text-xs font-bold text-text-color bg-secondary-bg border border-navy-dark px-3 py-1.5 rounded-full hover:border-accent hover:text-accent transition-all">
+                                <a href="/playbook/customer-success" className="flex items-center gap-2 text-xs font-bold text-black bg-secondary-bg border-2 border-black px-4 py-2 hover:bg-accent transition-all shadow-[2px_2px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-0.5 hover:translate-y-0.5">
                                   <Heart className="w-3 h-3" /> Customer Success
                                 </a>
                             </div>

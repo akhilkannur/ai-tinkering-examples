@@ -145,68 +145,78 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
 
     return (
       <div
-        className={`group text-left bg-secondary-bg p-6 rounded-xl border transition-all duration-300 flex flex-col h-full relative overflow-hidden cursor-pointer ${
+        className={`group text-left bg-secondary-bg p-6 rounded-none border-4 transition-all duration-300 flex flex-col h-full relative overflow-hidden cursor-pointer ${
             isLocked 
-            ? 'border-yellow-900/30 hover:border-yellow-500/50 hover:shadow-[0_0_20px_rgba(234,179,8,0.1)] opacity-80 hover:opacity-100' 
-            : 'border-navy-dark hover:shadow-[0_0_30px_rgba(244,63,94,0.1)] hover:border-accent/50 hover:-translate-y-1'
+            ? 'border-black/50 opacity-80 hover:opacity-100 shadow-[4px_4px_0px_rgba(0,0,0,0.2)]' 
+            : 'border-black shadow-[4px_4px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_rgba(0,0,0,1)] hover:-translate-y-1'
         }`}
         onClick={() => setSelectedRecipe(recipe)}
       >
         {/* Visual indicator bar */}
-        <div className={`absolute top-0 left-0 w-1 h-full opacity-60 group-hover:opacity-100 transition-opacity ${
-          isLocked ? 'bg-yellow-500' :
-          recipe.category === 'Lead Gen' ? 'bg-blue-500' :
-          recipe.category === 'Sales Ops' ? 'bg-indigo-500' :
-          recipe.category === 'Marketing Ops' ? 'bg-orange-500' :
-          recipe.category === 'Content Ops' ? 'bg-pink-500' :
-          recipe.category === 'SEO' ? 'bg-green-500' :
-          recipe.category === 'Competitive Intel' ? 'bg-red-500' :
-          recipe.category === 'CRO' ? 'bg-cyan-500' :
-          recipe.category === 'Paid Media' ? 'bg-purple-500' :
-          recipe.category === 'Customer Success' ? 'bg-teal-500' :
-          recipe.category === 'Retention' ? 'bg-rose-500' :
-          recipe.category === 'E-commerce' ? 'bg-amber-500' :
-          'bg-gray-500'
+        <div className={`absolute top-0 left-0 w-2 h-full opacity-60 group-hover:opacity-100 transition-opacity ${
+          isLocked ? 'bg-black' :
+          recipe.category === 'Lead Gen' ? 'bg-blue-600' :
+          recipe.category === 'Sales Ops' ? 'bg-indigo-600' :
+          recipe.category === 'Marketing Ops' ? 'bg-orange-600' :
+          recipe.category === 'Content Ops' ? 'bg-pink-600' :
+          recipe.category === 'SEO' ? 'bg-green-600' :
+          recipe.category === 'Competitive Intel' ? 'bg-red-600' :
+          recipe.category === 'CRO' ? 'bg-cyan-600' :
+          recipe.category === 'Paid Media' ? 'bg-purple-600' :
+          recipe.category === 'Customer Success' ? 'bg-teal-600' :
+          recipe.category === 'Retention' ? 'bg-rose-600' :
+          recipe.category === 'E-commerce' ? 'bg-amber-600' :
+          'bg-gray-600'
         }`} />
 
         <div className="flex justify-between items-start mb-4 pl-3">
-          <div className={`p-3 rounded-lg transition-colors shadow-sm ${
+          <div className={`p-3 rounded-none transition-colors shadow-sm ${
               isLocked 
-              ? 'bg-yellow-900/20 text-yellow-500 border border-yellow-500/20' 
-              : 'bg-primary-bg text-text-secondary group-hover:text-accent border border-navy-dark group-hover:border-accent/30'
+              ? 'bg-black/10 text-black border-2 border-black/20' 
+              : 'bg-black text-accent border-2 border-black group-hover:bg-accent group-hover:text-black'
           }`}>
             {isLocked ? <Lock className="w-5 h-5" /> : <CatIcon className="w-5 h-5" />}
           </div>
           <div className="flex flex-col items-end gap-2">
             {isNew && (
-              <span className="bg-accent text-white text-[9px] font-black px-2 py-0.5 rounded-sm uppercase tracking-tighter shadow-[0_0_10px_rgba(244,63,94,0.5)] animate-pulse">
+              <span className="bg-primary-bg text-white text-[9px] font-black px-2 py-0.5 border-2 border-black uppercase tracking-tighter animate-pulse">
                 NEW
               </span>
             )}
             {isLocked && (
-                <span className="bg-yellow-500/20 text-yellow-400 border border-yellow-500/30 text-[10px] font-bold px-2 py-1 rounded-sm uppercase tracking-wider shadow-sm flex items-center gap-1">
+                <span className="bg-black text-yellow-400 border-2 border-black text-[10px] font-bold px-2 py-1 uppercase tracking-wider shadow-sm flex items-center gap-1">
                 <Lock className="w-3 h-3" /> Premium
                 </span>
             )}
             {recipe.id === 'agent-context-builder' && (
-              <span className="text-[10px] uppercase tracking-wider font-bold px-2 py-1 rounded-sm bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">
+              <span className="text-[10px] uppercase tracking-wider font-bold px-2 py-1 bg-indigo-600 text-white border-2 border-black">
                  Start Here
               </span>
             )}
-            <span className={`text-[10px] uppercase tracking-wider font-bold px-2 py-1 rounded-sm bg-primary-bg text-text-secondary border border-navy-dark`}>
+            <span className={`text-[10px] uppercase tracking-wider font-bold px-2 py-1 bg-black text-white border-2 border-black`}>
               {recipe.category}
             </span>
           </div>
         </div>
         
-        <h3 className={`text-lg font-bold mb-2 leading-tight pl-3 transition-colors ${isLocked ? 'text-text-color group-hover:text-yellow-400' : 'text-text-color group-hover:text-accent'}`}>
+        <h3 className={`text-xl font-headline font-bold mb-2 leading-tight pl-3 transition-colors text-black uppercase`}>
             {recipe.title}
         </h3>
-        <p className="text-text-secondary text-sm font-medium mb-4 min-h-[40px] pl-3 line-clamp-2 leading-relaxed opacity-80">
+        <p className="text-black/80 text-sm font-mono mb-4 min-h-[40px] pl-3 line-clamp-2 leading-relaxed">
           {recipe.tagline}
         </p>
         
-        <div className="mt-auto pt-4 border-t border-navy-dark flex items-center justify-between text-xs text-text-secondary/50 pl-3">
+        <div className="mt-auto pt-4 border-t-2 border-black border-dashed flex items-center justify-between text-xs font-bold font-mono text-black/60 pl-3">
+           <span className={`px-2 py-0.5 border-2 border-black ${
+              recipe.difficulty === 'Beginner' ? 'text-green-700 bg-green-100' : 
+              recipe.difficulty === 'Intermediate' ? 'text-orange-700 bg-orange-100' : 
+              'text-red-700 bg-red-100'
+           }`}>
+             {recipe.difficulty}
+           </span>
+           <span className="font-mono">{recipe.time}</span>
+        </div>
+      </div>
            <span className={`px-2 py-0.5 rounded ${
               recipe.difficulty === 'Beginner' ? 'text-green-400 bg-green-400/10' : 
               recipe.difficulty === 'Intermediate' ? 'text-yellow-400 bg-yellow-400/10' : 
@@ -224,29 +234,29 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
     <div className="max-w-7xl mx-auto">
       
       {/* Controls: Search & Filter */}
-      <div className="flex flex-col md:flex-row gap-6 mb-10 items-center justify-between bg-secondary-bg p-4 rounded-xl border border-navy-dark sticky top-24 z-30 shadow-xl shadow-black/20">
+      <div className="flex flex-col md:flex-row gap-6 mb-10 items-center justify-between bg-black p-6 rounded-none border-4 border-black sticky top-24 z-30 shadow-[8px_8px_0px_rgba(0,0,0,1)]">
         <div className="relative w-full md:w-96">
-          <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-            <Search className="h-5 w-5 text-text-secondary" />
+          <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+            <Search className="h-5 w-5 text-accent" />
           </div>
           <input
             type="text"
-            className="block w-full pl-10 pr-3 py-3 border border-navy-dark rounded-lg leading-5 bg-primary-bg text-text-color placeholder-text-secondary/50 focus:outline-none focus:bg-primary-bg focus:ring-1 focus:ring-accent focus:border-accent transition duration-150 ease-in-out font-sans"
+            className="block w-full pl-12 pr-4 py-4 border-2 border-accent rounded-none leading-5 bg-black text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent transition duration-150 ease-in-out font-mono text-sm"
             placeholder="Search 700+ blueprints..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
         </div>
 
-        <div className="flex overflow-x-auto gap-2 w-full md:w-auto pb-2 md:pb-0 scrollbar-hide">
+        <div className="flex overflow-x-auto gap-3 w-full md:w-auto pb-2 md:pb-0 scrollbar-hide">
           {categories.map(cat => (
             <button
               key={cat}
               onClick={() => setSelectedCategory(cat)}
-              className={`px-4 py-2 rounded-lg text-xs font-bold whitespace-nowrap transition-all border ${
+              className={`px-5 py-3 rounded-none text-xs font-black whitespace-nowrap transition-all border-2 uppercase tracking-widest ${
                 selectedCategory === cat 
-                  ? 'bg-accent text-white border-accent shadow-lg shadow-accent/20' 
-                  : 'bg-primary-bg text-text-secondary border-navy-dark hover:border-text-secondary hover:text-text-color'
+                  ? 'bg-accent text-black border-accent shadow-[4px_4px_0px_rgba(255,255,255,0.1)]' 
+                  : 'bg-black text-white border-white/20 hover:border-accent hover:text-accent'
               }`}
             >
               {cat}
@@ -293,7 +303,7 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
             <div className="text-center mb-12">
                 <button 
                     onClick={handleLoadMore}
-                    className="bg-secondary-bg hover:bg-navy-light text-text-color font-bold py-3 px-8 rounded-lg transition-colors border border-navy-dark hover:border-text-secondary"
+                    className="bg-accent hover:bg-accent-hover text-black font-black py-4 px-10 border-4 border-black shadow-[4px_4px_0px_rgba(0,0,0,1)] transition-all uppercase tracking-widest text-sm hover:shadow-none hover:translate-y-1"
                 >
                     Load More Recipes ({filteredRecipes.length - visibleCount} remaining)
                 </button>
@@ -303,14 +313,14 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
         {showPaywallOverlay && (
             <div className="relative mt-12 mb-20 text-center">
                 <div className="absolute inset-0 flex items-center justify-center -top-32 bg-gradient-to-t from-primary-bg via-primary-bg/95 to-transparent z-10 pointer-events-none h-[400px]"></div>
-                <div className="relative z-20 bg-secondary-bg text-text-color p-10 rounded-2xl shadow-2xl max-w-2xl mx-auto border border-navy-dark transform hover:scale-[1.01] transition-transform">
+                <div className="relative z-20 bg-secondary-bg text-black p-10 rounded-none shadow-[12px_12px_0px_rgba(0,0,0,1)] max-w-2xl mx-auto border-4 border-black transform hover:scale-[1.01] transition-transform">
                    {!showLicenseInput ? (
                       <>
-                        <div className="w-20 h-20 bg-gradient-to-br from-yellow-500 to-amber-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-[0_0_30px_rgba(245,158,11,0.3)] border-4 border-secondary-bg">
-                            <Lock className="w-10 h-10 text-white" />
+                        <div className="w-20 h-20 bg-black text-accent rounded-none flex items-center justify-center mx-auto mb-6 border-4 border-black">
+                            <Lock className="w-10 h-10" />
                         </div>
-                        <h3 className="text-3xl font-bold mb-3 font-headline">Unlock All 700+ Specialized Blueprints</h3>
-                        <p className="text-text-secondary mb-8 leading-relaxed text-lg max-w-lg mx-auto">
+                        <h3 className="text-4xl font-bold mb-3 font-headline uppercase">Unlock All 700+ Specialized Blueprints</h3>
+                        <p className="text-black/70 mb-8 leading-relaxed text-lg max-w-lg mx-auto font-mono">
                             You've seen the list. Now get the full library. <br/>
                             Instant access to our growing database - plus the <strong>Master Cookbook (JSON)</strong> to load all 700+ as context in one file.
                         </p>
@@ -318,14 +328,14 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
                           href="https://checkout.dodopayments.com/buy/pdt_0NW6p0szmXPS6jXW05hIP?session=sess_GCYotd6plh"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="w-full sm:w-auto px-12 bg-white text-black font-bold py-4 rounded-xl hover:bg-gray-200 transition-colors shadow-[0_0_20px_rgba(255,255,255,0.2)] inline-flex items-center justify-center gap-2 group mb-6"
+                          className="w-full sm:w-auto px-12 bg-black text-white font-black py-4 border-4 border-black hover:bg-gray-900 transition-colors shadow-[6px_6px_0px_rgba(0,0,0,0.2)] inline-flex items-center justify-center gap-2 group mb-6 uppercase tracking-widest"
                         >
-                            Get Full Access <ArrowRight className="w-5 h-5 text-black group-hover:translate-x-1 transition-transform" />
+                            Get Full Access <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                         </a>
                         <br/>
                         <button 
                           onClick={() => setShowLicenseInput(true)}
-                          className="text-sm text-text-secondary hover:text-white underline decoration-text-secondary/50 underline-offset-4 transition-colors"
+                          className="text-sm text-black/50 hover:text-black underline underline-offset-4 transition-colors font-mono"
                         >
                           I have a license key
                         </button>
@@ -373,103 +383,102 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
       {/* Recipe Modal */}
       {selectedRecipe && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm" onClick={() => setSelectedRecipe(null)}>
-          <div className="bg-primary-bg rounded-xl shadow-2xl w-full max-w-3xl max-h-[90vh] overflow-hidden flex flex-col border border-navy-dark" onClick={e => e.stopPropagation()}>
-            <div className={`p-6 border-b border-navy-dark flex justify-between items-center ${selectedRecipe.isPremium && !isUnlocked ? 'bg-yellow-900/10' : 'bg-secondary-bg'}`}>
-              <div className="flex items-center gap-4">
-                <div className={`p-3 rounded-lg shadow-sm border ${selectedRecipe.isPremium && !isUnlocked ? 'bg-yellow-900/20 border-yellow-500/20 text-yellow-500' : 'bg-primary-bg border-navy-dark text-accent'}`}>
-                   {selectedRecipe.isPremium && !isUnlocked ? <Crown className="w-6 h-6" /> : React.createElement(categoryIcons[selectedRecipe.category] || Terminal, { className: "w-6 h-6" })}
+          <div className="bg-primary-bg rounded-none shadow-[20px_20px_0px_rgba(0,0,0,0.5)] w-full max-w-3xl max-h-[90vh] overflow-hidden flex flex-col border-8 border-black" onClick={e => e.stopPropagation()}>
+            <div className={`p-8 border-b-4 border-black flex justify-between items-center ${selectedRecipe.isPremium && !isUnlocked ? 'bg-black text-yellow-400' : 'bg-secondary-bg text-black'}`}>
+              <div className="flex items-center gap-6">
+                <div className={`p-4 rounded-none shadow-sm border-4 ${selectedRecipe.isPremium && !isUnlocked ? 'bg-black border-yellow-400 text-yellow-400' : 'bg-black border-black text-accent'}`}>
+                   {selectedRecipe.isPremium && !isUnlocked ? <Crown className="w-8 h-8" /> : React.createElement(categoryIcons[selectedRecipe.category] || Terminal, { className: "w-8 h-8" })}
                 </div>
                 <div>
-                  <h2 className="text-2xl font-bold text-text-color flex items-center gap-2 font-headline">
+                  <h2 className="text-3xl font-black flex items-center gap-3 font-headline uppercase">
                     {selectedRecipe.title}
-                    {selectedRecipe.isPremium && !isUnlocked && <Lock className="w-5 h-5 text-yellow-500" />}
+                    {selectedRecipe.isPremium && !isUnlocked && <Lock className="w-6 h-6 text-yellow-400" />}
                   </h2>
-                  <div className="flex items-center gap-4 mt-1">
-                    <span className="text-accent text-xs font-bold hover:underline flex items-center gap-1">
+                  <div className="flex items-center gap-4 mt-2">
+                    <span className="text-primary-bg text-sm font-black hover:underline flex items-center gap-2">
                       <Link href={`/skills/${selectedRecipe.id}`} onClick={() => setSelectedRecipe(null)} className="flex items-center gap-1">
-                        <ExternalLink className="w-3 h-3" /> Full Page
+                        <ExternalLink className="w-4 h-4" /> Full Page
                       </Link>
                     </span>
                   </div>
                 </div>
               </div>
-              <button onClick={() => setSelectedRecipe(null)} className="p-2 hover:bg-navy-light rounded-full transition-colors text-text-secondary"><X className="w-6 h-6" /></button>
+              <button onClick={() => setSelectedRecipe(null)} className="p-3 hover:bg-black hover:text-white transition-colors border-4 border-black"><X className="w-8 h-8" /></button>
             </div>
 
-            <div className="p-6 overflow-y-auto scrollbar-thin scrollbar-thumb-navy-light scrollbar-track-primary-bg">
-              <div className="mb-8">
-                <p className="text-text-secondary leading-relaxed text-lg font-sans">{selectedRecipe.description}</p>
+            <div className="p-8 overflow-y-auto bg-white text-black font-mono">
+              <div className="mb-10">
+                <p className="text-black/80 leading-relaxed text-xl">{selectedRecipe.description}</p>
               </div>
 
               {(!isUnlocked && (selectedRecipe.isPremium || recipes.indexOf(selectedRecipe) >= 200)) ? (
-                <div className="bg-secondary-bg rounded-xl p-8 text-center border-2 border-yellow-500/50 shadow-[0_0_30px_rgba(234,179,8,0.1)] relative overflow-hidden">
+                <div className="bg-black text-white p-10 text-center border-4 border-black shadow-[8px_8px_0px_rgba(0,0,0,0.2)] relative overflow-hidden">
                   <div className="relative z-10">
-                    <div className="w-16 h-16 bg-yellow-500/10 rounded-full flex items-center justify-center mx-auto mb-6 border border-yellow-500/20">
-                      <Lock className="w-8 h-8 text-yellow-500" />
+                    <div className="w-20 h-20 bg-yellow-400/10 rounded-none flex items-center justify-center mx-auto mb-8 border-4 border-yellow-400">
+                      <Lock className="w-10 h-10 text-yellow-400" />
                     </div>
-                    <h3 className="text-2xl font-bold text-white mb-2">Unlock this Blueprint</h3>
-                    <p className="text-text-secondary mb-8 max-w-md mx-auto">Get access to this workflow and 500+ others by joining Pro.</p>
-                    <a href="https://checkout.dodopayments.com/buy/pdt_0NW6p0szmXPS6jXW05hIP?session=sess_GCYotd6plh" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-black px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-xl">Unlock Now <ArrowRight className="w-5 h-5" /></a>
+                    <h3 className="text-4xl font-black mb-4 font-headline uppercase">Unlock this Blueprint</h3>
+                    <p className="text-white/70 mb-10 max-w-md mx-auto font-mono">Get access to this workflow and 500+ others by joining Pro.</p>
+                    <a href="https://checkout.dodopayments.com/buy/pdt_0NW6p0szmXPS6jXW05hIP?session=sess_GCYotd6plh" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 bg-yellow-400 hover:bg-yellow-300 text-black px-10 py-5 border-4 border-black font-black text-xl uppercase tracking-widest shadow-[6px_6px_0px_rgba(255,255,255,0.1)] transition-all">Unlock Now <ArrowRight className="w-6 h-6" /></a>
                   </div>
                 </div>
               ) : (
                 <>
                   {/* POWER USER SECTION: DOWNLOAD SKILLS */}
-                  <div className="bg-blue-950/50 rounded-xl p-6 mb-8 border border-blue-900/50 relative overflow-hidden group">
-                      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:20px_24px] opacity-10"></div>
+                  <div className="bg-black text-white p-8 mb-10 border-4 border-black relative overflow-hidden group">
                       <div className="relative z-10">
-                          <div className="flex flex-col gap-4">
+                          <div className="flex flex-col gap-6">
                               <div className="flex items-center justify-between">
-                                  <div className="inline-flex items-center gap-2 px-2 py-0.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 font-bold text-[9px] uppercase tracking-widest font-mono">
-                                      <Cpu className="w-3 h-3" /> Agent-Ready
+                                  <div className="inline-flex items-center gap-2 px-3 py-1 bg-accent/20 border-2 border-accent text-accent font-black text-xs uppercase tracking-widest font-mono">
+                                      <Cpu className="w-4 h-4" /> Agent-Ready
                                   </div>
-                                  <span className="text-[9px] font-mono text-blue-400/40 uppercase tracking-widest">v2.0 Optimized</span>
+                                  <span className="text-xs font-mono text-white/40 uppercase tracking-widest">v2.0 Optimized</span>
                               </div>
                               
-                              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                                   <a 
                                       href={`/downloads/skills/${selectedRecipe.id}.skill`}
                                       download
-                                      className="flex items-center justify-center gap-2 bg-white text-blue-950 px-3 py-2 rounded-lg font-bold text-xs hover:bg-blue-50 transition-all shadow-md"
+                                      className="flex items-center justify-center gap-3 bg-accent text-black px-4 py-3 border-4 border-black font-black text-sm hover:translate-y-1 hover:shadow-none transition-all shadow-[4px_4px_0px_rgba(255,255,255,0.1)] uppercase tracking-widest"
                                   >
-                                      <Zap className="w-3 h-3 fill-current" /> Gemini
+                                      <Zap className="w-4 h-4 fill-current" /> Gemini
                                   </a>
                                   <a 
                                       href={`/downloads/skills/${selectedRecipe.id}-claude.md`}
                                       download
-                                      className="flex items-center justify-center gap-2 bg-blue-800 text-white px-3 py-2 rounded-lg font-bold text-xs hover:bg-blue-700 transition-all border border-blue-700 shadow-md"
+                                      className="flex items-center justify-center gap-3 bg-white text-black px-4 py-3 border-4 border-black font-black text-sm hover:translate-y-1 hover:shadow-none transition-all shadow-[4px_4px_0px_rgba(0,0,0,0.2)] uppercase tracking-widest"
                                   >
-                                      <Terminal className="w-3 h-3" /> Claude
+                                      <Terminal className="w-4 h-4" /> Claude
                                   </a>
                                   <a 
                                       href={`/downloads/skills/${selectedRecipe.id}.cursorrules`}
                                       download
-                                      className="flex items-center justify-center gap-2 bg-blue-600 text-white px-3 py-2 rounded-lg font-bold text-xs hover:bg-blue-500 transition-all border border-blue-500 shadow-md"
+                                      className="flex items-center justify-center gap-3 bg-black text-white px-4 py-3 border-4 border-white font-black text-sm hover:translate-y-1 hover:shadow-none transition-all shadow-[4px_4px_0px_rgba(255,255,255,0.1)] uppercase tracking-widest"
                                   >
-                                      <MousePointer2 className="w-3 h-3" /> Cursor
+                                      <MousePointer2 className="w-4 h-4" /> Cursor
                                   </a>
                               </div>
                           </div>
                       </div>
                   </div>
 
-                  <div className="bg-[#0D1117] rounded-lg overflow-hidden border border-navy-dark shadow-inner">
-                    <div className="bg-[#161B22] px-4 py-2 flex items-center justify-between border-b border-navy-dark">
-                      <span className="text-text-secondary font-mono text-xs flex items-center gap-2"><FileText className="w-3 h-3" /> BLUEPRINT.md</span>
-                      <div className="flex items-center gap-2">
+                  <div className="bg-black text-blue-300 border-4 border-black shadow-inner">
+                    <div className="bg-black px-6 py-3 flex items-center justify-between border-b-4 border-black">
+                      <span className="text-white/60 font-mono text-xs flex items-center gap-2 uppercase tracking-widest font-black"><FileText className="w-4 h-4" /> BLUEPRINT.md</span>
+                      <div className="flex items-center gap-3">
                         {selectedRecipe.sampleData && (
-                          <button onClick={handleDownload} className="text-xs font-bold px-3 py-1.5 rounded flex items-center gap-2 bg-yellow-500/10 text-yellow-500 border border-yellow-500/20 hover:bg-yellow-500/20"><Download className="w-3 h-3" /> Sample</button>
+                          <button onClick={handleDownload} className="text-xs font-black px-4 py-2 border-2 border-accent text-accent bg-black hover:bg-accent hover:text-black transition-all uppercase tracking-widest">Sample</button>
                         )}
-                        <button onClick={handleCopy} className={`text-xs font-bold px-3 py-1.5 rounded flex items-center gap-2 transition-colors ${copied ? 'bg-green-500 text-white' : 'bg-accent/10 text-accent border border-accent/20 hover:bg-accent/20'}`}>{copied ? <Check className="w-3 h-3" /> : <Copy className="w-3 h-3" />} {copied ? 'Copied!' : 'Copy'}</button>
+                        <button onClick={handleCopy} className={`text-xs font-black px-4 py-2 border-2 transition-all uppercase tracking-widest ${copied ? 'bg-green-600 text-white border-green-600' : 'bg-white text-black border-white hover:bg-gray-200'}`}>{copied ? 'Copied!' : 'Copy'}</button>
                       </div>
                     </div>
-                    <div className="p-6 max-h-[350px] overflow-y-auto custom-scrollbar">
-                      <pre className="font-mono text-sm text-blue-300 whitespace-pre-wrap leading-relaxed">{selectedRecipe.blueprint}</pre>
+                    <div className="p-8 max-h-[400px] overflow-y-auto">
+                      <pre className="font-mono text-sm whitespace-pre-wrap leading-relaxed">{selectedRecipe.blueprint}</pre>
                     </div>
                   </div>
-                  <div className="mt-6 p-4 rounded-lg flex gap-3 items-start border bg-yellow-900/10 border-yellow-500/20">
-                     <div className="bg-yellow-500 text-black w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 font-bold text-xs mt-0.5">!</div>
-                     <p className="text-sm text-yellow-200/80 font-sans">1. Copy the blueprint. {selectedRecipe.sampleData ? `2. Download ${selectedRecipe.sampleData.filename}.` : ""} 3. Tell AI: "Read the blueprint {selectedRecipe.sampleData ? "and use the sample file " : ""}to build this."</p>
+                  <div className="mt-8 p-6 flex gap-4 items-start border-4 border-black bg-accent/10">
+                     <div className="bg-black text-accent w-8 h-8 flex items-center justify-center flex-shrink-0 font-black text-lg border-2 border-black">!</div>
+                     <p className="text-base text-black font-mono font-bold">1. Copy the blueprint. {selectedRecipe.sampleData ? `2. Download ${selectedRecipe.sampleData.filename}.` : ""} 3. Tell AI: "Read the blueprint {selectedRecipe.sampleData ? "and use the sample file " : ""}to build this."</p>
                   </div>
                 </>
               )}
