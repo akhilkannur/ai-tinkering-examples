@@ -172,8 +172,8 @@ async function generateSitemap() {
       const imageBlock = `
     <image:image>
       <image:loc>${ogImageUrl.replace(/&/g, '&amp;')}</image:loc>
-      <image:title>${r.title} AI Agent Blueprint</image:title>
-      <image:caption>${r.tagline || r.title}</image:caption>
+      <image:title>${r.title.replace(/&/g, '&amp;')} AI Agent Blueprint</image:title>
+      <image:caption>${(r.tagline || r.title).replace(/&/g, '&amp;')}</image:caption>
     </image:image>`;
 
       // "How To" Page (High Intent)
