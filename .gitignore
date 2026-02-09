@@ -30,3 +30,4 @@ video/out/
 scripts/test-puppeteer.js
 shared-inbox/
 ga-credentials.json
+public/images/recipes/*-card.png

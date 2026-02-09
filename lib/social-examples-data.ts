@@ -465,4 +465,29 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     Sponsored: false,
     sponsor: null
   },
+  {
+    id: "steipete-openclaw-soul-personality",
+    title: "Injecting Personality into OpenClaw with SOUL.md",
+    slug: "steipete-openclaw-soul-personality",
+    summary: "Peter Steinberger shares a technique to spice up OpenClaw agents by using a SOUL.md file to define their personality and rewrite their core instructions with more character.",
+    screenshots: [
+      {
+        url: "/images/examples/steipete-openclaw-soul-personality.webp",
+        filename: "steipete-openclaw-soul-personality.webp",
+        thumbnails: {
+          small: { url: "/images/examples/steipete-openclaw-soul-personality.webp" },
+          large: { url: "/images/examples/steipete-openclaw-soul-personality.webp" }
+        }
+      }
+    ],
+    category: "Agent Documentation",
+    publish_date: "2026-02-09",
+    original_link: "https://x.com/steipete/status/2020704611640705485",
+    author_name: "Peter Steinberger",
+    author_link: "https://x.com/steipete",
+    tags: ["OpenClaw", "Agents", "Persona", "SOUL.md"],
+    workflow_steps: "1. Create a SOUL.md file defining your agent's unique personality and constraints\n2. Use the prompt: 'Read your SOUL.md. Now rewrite your core instructions using this personality'\n3. Observe your agent transition from robotic to character-rich interactions",
+    Sponsored: false,
+    sponsor: null
+  },
 ];
