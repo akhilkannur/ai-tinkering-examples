@@ -133,7 +133,15 @@ ALREADY_SENT = {
     "hello@flowly.tools",
     "tryremote87@gmail.com",
     "jeremy@userjam.com",
-    "medshots_startupsubmit@hacx.org"
+    "medshots_startupsubmit@hacx.org",
+    "gmail@mixels.ai",
+    "he@emailverify.ai",
+    "contact@stageflow.ai",
+    "jason@getoneprofile.com",
+    "jaredcoffman54@gmail.com",
+    "eleidonapp@gmail.com",
+    "champsignalofficial@gmail.com",
+    "great@greatcompany.ai"
 }
 
 def slugify(text):
@@ -179,29 +187,29 @@ def send_email(recipient, tool_name):
     subject = f"{tool_name} is live on Real AI Examples"
     slug = slugify(tool_name)
     # Add tracking parameters
-    tool_url = f"https://realaiexamples.com/tools/{slug}?utm_source=email&utm_medium=acceptance_notification&utm_campaign=tool_directory_launch"
+    tool_url = f"https://realaiexamples.com/tools/{slug}?utm_source=email&utm_medium=acceptance_notification&utm_campaign=tool_directory_update"
     clean_url = f"realaiexamples.com/tools/{slug}"
     
-    text_body = f"""Hey there!
+    text_body = f"""Hey,
 
-I wanted to reach out because you submitted {tool_name} to the Tooling Around directory recently.
+I'm reaching out because you submitted {tool_name} to the directory recently.
 
-Since Tooling Around is no longer being maintained, I have created a directory section in my new project, Real AI Examples, this week, which focuses on practical AI use cases. I hand-picked a few submissions that stood out, and yours made the cut.
+I've added it to the tool section on Real AI Examples. The site is a curated library of practical AI blueprints, and I've built out this directory to feature handpicked tools that help people get practical work done.
 
-Your tool is now live at: {tool_url}
+Your tool is live here: {tool_url}
 
-You don't need to do anything, but if you want to update any details or have questions, just reply to this email.
+If you want to update any details, just hit reply.
 
-Thanks,
+Best,
 Akhil"""
 
     html_body = f"""<div style="font-family: sans-serif; line-height: 1.5; color: #333;">
-<p>Hey there!</p>
-<p>I wanted to reach out because you submitted <strong>{tool_name}</strong> to the Tooling Around directory recently.</p>
-<p>Since Tooling Around is no longer being maintained, I have created a directory section in my new project, <strong>Real AI Examples</strong>, this week, which focuses on practical AI use cases. I hand-picked a few submissions that stood out, and yours made the cut.</p>
-<p>Your tool is now live at: <a href="{tool_url}" style="color: #007bff; text-decoration: none;">{clean_url}</a></p>
-<p>You don't need to do anything, but if you want to update any details or have questions, just reply to this email.</p>
-<p>Thanks,<br>
+<p>Hey,</p>
+<p>I'm reaching out because you submitted <strong>{tool_name}</strong> to the directory recently.</p>
+<p>I've added it to the tool section on <strong>Real AI Examples</strong>. The site is a curated library of practical AI blueprints, and I've built out this directory to feature handpicked tools that help people get practical work done.</p>
+<p>Your tool is live here: <a href="{tool_url}" style="color: #007bff; text-decoration: none;">{clean_url}</a></p>
+<p>If you want to update any details, just hit reply.</p>
+<p>Best,<br>
 <strong>Akhil</strong></p>
 </div>"""
 
@@ -242,7 +250,7 @@ def process_and_send(limit=None):
         print(f"Error fetching Google Sheet: {e}")
         return
 
-    cutoff_date = datetime.strptime("31/01/2026 04:44:37", "%d/%m/%Y %H:%M:%S")
+    cutoff_date = datetime.strptime("05/02/2026 06:57:26", "%d/%m/%Y %H:%M:%S")
     tools_to_send = []
     seen_emails = set()
 
