@@ -29,11 +29,47 @@ node scripts/capture-screenshot.js "https://tool-url.com" "tool-slug.png"
 *   **Output**: Saved to `public/screenshots/`.
 
 ### 3. Merge & Update
+
 If the user approves adding them to the database:
+
 ```bash
+
 python3 scripts/merge_tools_csv.py
+
 ```
 
+
+
+### 4. Notify Submitters
+
+After merging, notify the submitters that their tool is live.
+
+
+
+```bash
+
+RESEND_API_KEY=$(grep RESEND_API_KEY .env.local | cut -d'=' -f2 | tr -d '"') python3 docs/tool-directory-ops/send_emails.py
+
+```
+
+
+
+*   **Email Copy Policy**: Use a direct, conversational, and "human" tone. Acknowledge that the tool was submitted and that it has been handpicked for the directory section of Real AI Examples.
+
+*   **Approval**: You MUST show the exact email copy to the user for approval before running the script.
+
+*   **Verification**: Always confirm exactly which emails the script will send to before execution.
+
+*   **Cleanup**: After a successful run, update the `ALREADY_SENT` list in `docs/tool-directory-ops/send_emails.py` with the new emails and push to `main`.
+
+
+
 ## Tips
+
 *   Always check the `latest_submissions.csv` timestamp to find tools submitted after the last update.
+
+*   The site is primarily a library of practical AI blueprints; the directory is a section to feature handpicked tools that help people get practical work done.
+
 *   If a tool name contains titles like "Dr" or "Coach," or if it's a University/Mega-Corp, flag it for the user as per the project's QC rules.
+
+*   Never use "AI slop" or overhyped marketing language in communications.
