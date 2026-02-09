@@ -877,4 +877,100 @@ export const aiTools: AiTool[] = [
     },
     image: "https://www.google.com/s2/favicons?domain=medshotsai.com&sz=128"
   },
+  {
+    name: "Mixels.ai",
+    description: "Free AI pixel art generator and pixel art editor — convert photos to pixel art, generate game-ready characters, items, and backgrounds with perfect grid alignment. Sign up and get 5 free credits instantly.",
+    url: "https://mixels.ai/",
+    category: "Image Generation",
+    tags: {
+        useCase: ["Business"],
+        price: "Free",
+        skill: "Beginner"
+    },
+    image: "https://www.google.com/s2/favicons?domain=mixels.ai&sz=128"
+},
+  {
+    name: "EmailVerify.ai",
+    description: "Verify emails in real-time with 99.9% accuracy.",
+    url: "https://emailverify.ai",
+    category: "Copywriting",
+    tags: {
+        useCase: ["Business"],
+        price: "Free",
+        skill: "Beginner"
+    },
+    image: "https://www.google.com/s2/favicons?domain=emailverify.ai&sz=128"
+},
+  {
+    name: "Stageflow.ai",
+    description: "Stageflow: AI-Powered Product Photography for Online Sellers Creating product photos for online marketplaces is one of those tasks that sits in an awkward middle ground. Professional photography shoots are expensive—often hundreds of dollars per session. DIY photography with your phone can work, but it's time-consuming and the results are inconsistent. For sellers managing multiple products or frequent launches, neither option scales well. Stageflow is a tool that uses AI to generate product lifestyle photos. You upload your product design (a logo, packaging artwork, or product image), select a scene style, and the system generates photorealistic images placing your product in various settings. The platform lets you choose the environment type (studio setup, lifestyle scene, outdoor setting, or minimalist composition) and framing angle (full shot, hero angle, close-up, or flatlay). You can also provide reference images to define the aesthetic style you're looking for—color palettes, lighting moods, textures, and overall visual direction. After selecting these parameters, you describe your vision in a text prompt. The AI combines your inputs with its trained understanding of professional product photography to generate images. All outputs are automatically upscaled to meet marketplace requirements—typically 2000+ pixels for platforms like Etsy. The editing system lets you refine images iteratively. If the first generation isn't quite right, you can give new instructions: adjust the lighting, change the background material, shift the composition. You can also upload a new design variant to see it in the same scene. Selection tools let you isolate specific areas of an image for targeted edits—useful when you want to change just the background or adjust only part of the composition. There's an undo history if you want to revert changes. Generated images can be downloaded in standard resolution or upscaled to HD quality using 4k enhancement. You can organize your work in projects, keeping related product photos grouped together. The interface shows you all your generated variations in one place, making it easy to compare different approaches and choose the shots that work best for your listings. The platform is built for Etsy sellers, Shopify store owners, print-on-demand creators, and anyone else who needs product mockups regularly but doesn't",
+    url: "https://Stageflow.ai",
+    category: "Image Generation",
+    tags: {
+        useCase: ["Business"],
+        price: "Free",
+        skill: "Beginner"
+    },
+    image: "https://www.google.com/s2/favicons?domain=Stageflow.ai&sz=128"
+},
+  {
+    name: "Oneprofile",
+    description: "Sync customer profiles and events between tools",
+    url: "https://getoneprofile.com",
+    category: "Productivity",
+    tags: {
+        useCase: ["Business"],
+        price: "Free",
+        skill: "Beginner"
+    },
+    image: "https://www.google.com/s2/favicons?domain=getoneprofile.com&sz=128"
+},
+  {
+    name: "XIMA DIGITAL",
+    description: "PDFSeek is an AI-powered platform that enables users to chat with PDFs, generate summaries, search content, and translate documents across multiple languages.",
+    url: "https://www.pdfseek.com",
+    category: "Productivity",
+    tags: {
+        useCase: ["Business"],
+        price: "Free",
+        skill: "Beginner"
+    },
+    image: "https://www.google.com/s2/favicons?domain=www.pdfseek.com&sz=128"
+},
+  {
+    name: "Eleidon",
+    description: "Secure external messaging. The inbox that can't be phished.",
+    url: "https://eleidon.com",
+    category: "Productivity",
+    tags: {
+        useCase: ["Business"],
+        price: "Free",
+        skill: "Beginner"
+    },
+    image: "https://www.google.com/s2/favicons?domain=eleidon.com&sz=128"
+},
+  {
+    name: "ChampSignal",
+    description: "ChampSignal tracks your competitors 24/7 across websites, news, Reddit, ads, and SEO. When something important changes, you know the same day.  Most alerts are noise. ChampSignal uses AI to filter them so you only get notified when it actually matters. A price drop. A new feature launch. A shift in messaging. A Reddit thread gaining traction.  Set up in under two minutes. Enter your website and we find your competitors for you. You get your first insights right away.  What you get:  Website changes like pricing, features, and messaging. News and Reddit mentions. Google and Meta ad tracking. SEO rankings and backlinks. Email and Slack alerts on your schedule.  Need deeper analysis? Ask Champ, your AI competitive intelligence analyst. It knows everything we've tracked and gives you instant answers, battlecards, trend analysis, and positioning advice. No manual research needed.  A competitive intelligence analyst costs $80K+ a year. ChampSignal gives you the same coverage for $39/month.  Try it free for 14 days.",
+    url: "https://champsignal.com",
+    category: "Copywriting",
+    tags: {
+        useCase: ["Business"],
+        price: "Free",
+        skill: "Beginner"
+    },
+    image: "https://www.google.com/s2/favicons?domain=champsignal.com&sz=128"
+},
+  {
+    name: "GreatCompany.ai",
+    description: "Track and optimize visibility in ChatGPT, Gemini and other AI Search engines to drive traffic to your website that converts.",
+    url: "https://GreatCompany.ai",
+    category: "Code Assistance",
+    tags: {
+        useCase: ["Business"],
+        price: "Free",
+        skill: "Beginner"
+    },
+    image: "https://www.google.com/s2/favicons?domain=GreatCompany.ai&sz=128"
+}
 ];

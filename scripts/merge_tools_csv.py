@@ -4,15 +4,16 @@ import json
 import os
 from datetime import datetime
 
-# Define the cutoff timestamp (Tekadio's submission time)
-CUTOFF_TIMESTAMP_STR = "19/01/2026 10:53:25"
+# Define the cutoff timestamp (MedShotsAI's submission time)
+CUTOFF_TIMESTAMP_STR = "05/02/2026 06:57:26"
 CUTOFF_TIMESTAMP = datetime.strptime(CUTOFF_TIMESTAMP_STR, "%d/%m/%Y %H:%M:%S")
 
 # BLACKLIST: Tools to explicitly exclude
 BLACKLIST = [
     "Ai Angels", 
     "Binarium", 
-    "Bitsafve"
+    "Bitsafve",
+    "The Gold Calculator"
 ]
 
 # Define the category mapping based on keywords
@@ -62,7 +63,7 @@ new_tools = []
 print(f"Filtering for tools submitted AFTER {CUTOFF_TIMESTAMP_STR}...")
 
 # Read the CSV
-with open('tools_export.csv', 'r', encoding='utf-8') as f:
+with open('latest_submissions.csv', 'r', encoding='utf-8') as f:
     reader = csv.DictReader(f)
     for row in reader:
         timestamp_str = row.get('Timestamp', '').strip()
