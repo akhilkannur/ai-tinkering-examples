@@ -29,10 +29,10 @@ export default function AgentSetupService() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="text-left">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 text-accent font-bold text-[10px] uppercase tracking-widest mb-8 border border-accent/20">
-                <Zap className="w-3 h-3 fill-current" /> 90-Minute Sprint
+                <Zap className="w-3 h-3 fill-current" /> 90-Minute Setup Sprint
               </div>
               
-              <h1 className="text-6xl md:text-8xl font-bold mb-8 tracking-tighter leading-[0.9] uppercase font-header">
+              <h1 className="text-6xl md:text-8xl font-bold mb-8 tracking-normal leading-tight uppercase font-header">
                 3 Plays. <br />
                 90 Minutes. <br />
                 <span className="text-accent drop-shadow-[0_0_15px_rgba(244,63,94,0.5)]">Zero Slop.</span>
@@ -82,33 +82,24 @@ export default function AgentSetupService() {
         <div className="container mx-auto px-4 max-w-4xl">
           {/* HOW THIS WORKS */}
           <section className="mb-32">
-            <h2 className="text-3xl md:text-5xl font-bold mb-12 tracking-tight uppercase text-center font-header">Here's the difference</h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-12 tracking-normal uppercase text-center font-header">Here's the difference</h2>
             <div className="grid md:grid-cols-2 gap-12 text-lg text-text-secondary leading-relaxed">
               <p>
-                Most people use AI through a website. They type questions, copy answers, paste them into emails or docs. It works, but it gets tedious fast when you're doing the same thing over and over.
+                Most people treat AI like a better Google. Type a question, copy the answer, paste it somewhere else. Fine for one-offs. Painful when you're doing it 10 times a day.
               </p>
               <p>
-                In this session, we set up command-line AI tools on your computer. Then we build 3 workflows that handle your repetitive tasks automatically. <strong>You type one command. It does the work. That's it.</strong>
+                In this session, we set up command-line AI tools on your computer (like Claude Code, Gemini CLI, etc). Then we build 3 workflows that handle your repetitive tasks automatically. <strong>You type one command. It does the work. That's it.</strong>
               </p>
             </div>
           </section>
 
           {/* WHY NOT JUST DO IT YOURSELF? */}
           <section className="mb-32">
-            <h2 className="text-2xl md:text-4xl font-bold mb-12 uppercase text-center font-header">Why not just do it yourself?</h2>
-            <div className="grid md:grid-cols-3 gap-8 text-center">
-              <div className="space-y-4">
-                <div className="text-accent font-bold text-xl uppercase font-header">Speed</div>
-                <p className="text-sm text-text-secondary">What takes weeks of watching tutorials and trying things will take us 90 minutes.</p>
-              </div>
-              <div className="space-y-4">
-                <div className="text-accent font-bold text-xl uppercase font-header">Local Control</div>
-                <p className="text-sm text-text-secondary">Everything runs from your computer. No browser tabs, no copy-pasting between windows.</p>
-              </div>
-              <div className="space-y-4">
-                <div className="text-accent font-bold text-xl uppercase font-header">No Headaches</div>
-                <p className="text-sm text-text-secondary">I've dealt with plenty of weird errors. If something breaks, I'll work through it with you.</p>
-              </div>
+            <h2 className="text-2xl md:text-4xl font-bold mb-12 tracking-normal uppercase text-center font-header">Why not just do it yourself?</h2>
+            <div className="max-w-3xl mx-auto text-lg text-text-secondary leading-relaxed space-y-6">
+              <p>You could figure this out yourself. People do it all the time. But here's what that actually looks like:</p>
+              <p>You'll spend 2-3 weeks watching tutorials, hitting cryptic errors, and Googling things like "zsh command not found fix." You'll get it working eventually. Maybe.</p>
+              <p className="text-white font-bold italic">Or we can do it together in 90 minutes. Your call.</p>
             </div>
           </section>
 
@@ -117,7 +108,7 @@ export default function AgentSetupService() {
             <div className="absolute top-0 right-0 p-12 opacity-5 pointer-events-none">
                <Clock className="w-64 h-64" />
             </div>
-            <h2 className="text-3xl md:text-5xl font-bold mb-16 uppercase font-header">
+            <h2 className="text-3xl md:text-5xl font-bold mb-16 uppercase tracking-normal font-header">
               What happens in 90 minutes
             </h2>
             <div className="space-y-12 relative z-10">
@@ -149,17 +140,17 @@ export default function AgentSetupService() {
           <section className="mb-32 grid md:grid-cols-3 gap-8">
             <div className="p-8 bg-navy-dark/20 border border-white/5 rounded-2xl hover:border-accent/30 transition-colors">
               <ShieldCheck className="w-8 h-8 text-accent mb-6" />
-              <h3 className="font-bold text-white mb-3 uppercase tracking-tighter">Tools That Actually Work</h3>
+              <h3 className="font-bold text-white mb-3 uppercase tracking-normal">Tools That Actually Work</h3>
               <p className="text-sm text-text-secondary font-light">The right AI tools set up on your computer based on what you need. No more error messages or "something went wrong."</p>
             </div>
             <div className="p-8 bg-navy-dark/20 border border-white/5 rounded-2xl hover:border-accent/30 transition-colors">
               <Terminal className="w-8 h-8 text-accent mb-6" />
-              <h3 className="font-bold text-white mb-3 uppercase tracking-tighter">3 Workflows Built for You</h3>
+              <h3 className="font-bold text-white mb-3 uppercase tracking-normal">3 Workflows Built for You</h3>
               <p className="text-sm text-text-secondary font-light">Not generic templates. Actual automation for your specific tasks. Ready to use Monday morning.</p>
             </div>
             <div className="p-8 bg-navy-dark/20 border border-white/5 rounded-2xl hover:border-accent/30 transition-colors">
               <FileText className="w-8 h-8 text-accent mb-6" />
-              <h3 className="font-bold text-white mb-3 uppercase tracking-tighter">Everything Documented</h3>
+              <h3 className="font-bold text-white mb-3 uppercase tracking-normal">Everything Documented</h3>
               <p className="text-sm text-text-secondary font-light">Every step we took and every command we used, so you can tweak things or build more later.</p>
             </div>
           </section>
@@ -174,7 +165,7 @@ export default function AgentSetupService() {
               Limited Spots
             </div>
             
-            <h2 className="text-4xl md:text-6xl font-extrabold mb-4 tracking-tight leading-none uppercase font-header">
+            <h2 className="text-4xl md:text-6xl font-extrabold mb-4 tracking-normal leading-none uppercase font-header">
               The Agent Kickstart Jam
             </h2>
             
@@ -189,12 +180,12 @@ export default function AgentSetupService() {
             <div className="mb-12">
               <div className="inline-flex flex-col items-center gap-3">
                 <div className="flex items-center gap-2 text-[10px] font-bold text-accent uppercase tracking-widest bg-accent/5 px-4 py-1.5 rounded-full border border-accent/10 font-mono">
-                  Only 4 spots taken this week
+                  6 of 10 spots available this week
                 </div>
                 <div className="w-64 h-2 bg-slate-100 rounded-full overflow-hidden border border-slate-200">
-                  <div className="w-[40%] h-full bg-accent rounded-full shadow-[0_0_10px_rgba(244,63,94,0.5)]"></div>
+                  <div className="w-[60%] h-full bg-accent rounded-full shadow-[0_0_10px_rgba(244,63,94,0.5)]"></div>
                 </div>
-                <span className="text-[10px] text-slate-400 font-mono uppercase tracking-widest font-bold">6 / 10 Sessions Available</span>
+                <span className="text-[10px] text-slate-400 font-mono uppercase tracking-widest font-bold">First Come, First Served</span>
               </div>
             </div>
 
@@ -221,15 +212,14 @@ export default function AgentSetupService() {
 
           {/* WHO'S RUNNING THIS? SECTION */}
           <div className="text-center pt-24 border-t border-navy-dark mb-24">
-            <h2 className="text-3xl md:text-5xl font-bold mb-12 uppercase font-header">Who am I?</h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-12 uppercase tracking-normal font-header">Who am I?</h2>
             <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-8 grayscale border-4 border-navy-dark shadow-2xl">
               <Image src="/images/akhil.jpg" alt="Akhil" width={96} height={96} className="object-cover" />
             </div>
             <div className="text-xl md:text-2xl text-text-color italic mb-10 font-light leading-relaxed max-w-3xl mx-auto space-y-6">
-              <p>"I'm not a programmer or a data scientist. I'm someone who runs a business and got tired of doing the same tasks over and over. I started tinkering with AI tools to see if they could actually help."</p>
-              <p>"Turns out, most of them don't work out of the box. The setup is confusing. The tutorials skip important steps. And when something breaks, good luck finding an answer that actually helps."</p>
-              <p>"So I spent a few hundred hours figuring it out. Breaking things, fixing them, testing what actually saves time vs. what's just hype. Now I help other business owners skip all that and go straight to workflows that work."</p>
-              <p>"Not because I'm some technical genius. Just because I've already done the frustrating part and can show you the shortcuts."</p>
+              <p>
+                "I'm <strong>Akhil MK</strong>. I run a marketing agency. I got tired of copy-pasting between browser tabs, so I started learning command-line AI tools. The setup was a nightmare. Tutorials skip steps. Things break randomly. I spent months figuring it out. Now I help other business owners skip that mess and get straight to working automation. You can see what I'm building at <a href="https://akhilhaving.fun" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline not-italic">akhilhaving.fun</a>."
+              </p>
             </div>
             <div className="flex justify-center gap-12 text-[10px] font-bold text-text-secondary uppercase tracking-[0.3em]">
               <a href="mailto:akhil@realaiexamples.com" className="hover:text-accent transition-colors">Direct Support</a>
