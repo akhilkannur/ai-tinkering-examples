@@ -24,6 +24,7 @@ module.exports = {
         headline: ['var(--font-dm-sans)', 'sans-serif'],
         mono: ['var(--font-space-mono)', 'monospace'],
         roboto: ['var(--font-inter)', 'sans-serif'],
+        header: ['"Bebas Neue"', 'sans-serif'],
       },
       backgroundImage: {
         'modern-gradient': 'linear-gradient(135deg, #F43F5E 0%, #D946EF 100%)', // Rose to Fuchsia

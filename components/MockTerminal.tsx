@@ -23,8 +23,11 @@ export default function MockTerminal() {
   }, [visibleLines]);
 
   return (
-    <div className="bg-[#0D1117] rounded-xl border border-white/10 shadow-2xl overflow-hidden font-mono text-sm w-full max-w-2xl mx-auto">
-      <div className="bg-white/5 px-4 py-2 flex items-center gap-2 border-b border-white/5">
+    <div className="bg-[#0D1117] rounded-xl border border-white/10 shadow-2xl overflow-hidden font-mono text-sm w-full max-w-2xl mx-auto relative">
+      {/* CRT Scanline Effect */}
+      <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.1)_50%),linear-gradient(90deg,rgba(255,0,0,0.02),rgba(0,255,0,0.01),rgba(0,0,255,0.02))] bg-[length:100%_2px,3px_100%] z-20"></div>
+      
+      <div className="bg-white/5 px-4 py-2 flex items-center gap-2 border-b border-white/5 relative z-10">
         <div className="flex gap-1.5">
           <div className="w-2.5 h-2.5 rounded-full bg-red-500/50"></div>
           <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/50"></div>

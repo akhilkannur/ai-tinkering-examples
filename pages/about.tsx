@@ -82,7 +82,7 @@ export default function AboutPage() {
                         <h2 className="text-2xl font-bold text-white uppercase tracking-tight">The "Mission File" Solution</h2>
                     </div>
                     <p className="text-lg text-text-secondary font-light leading-relaxed">
-                        Every blueprint in my library is designed to be a "Mission File" — a single document that tells an agent exactly who to be, what constraints to follow, and exactly what to produce. No fluff. No theory. Just boring, reliable text files that make AI useful for once.
+                        Every blueprint in my library is designed to be a "Mission File" - a single document that tells an agent exactly who to be, what constraints to follow, and exactly what to produce. No fluff. No theory. Just boring, reliable text files that make AI useful for once.
                     </p>
                 </section>
 
@@ -91,7 +91,7 @@ export default function AboutPage() {
                     <div className="relative z-10">
                         <div className="text-accent font-mono text-[10px] uppercase tracking-widest mb-4">A message from the founder</div>
                         <p className="text-xl text-white font-medium italic leading-relaxed mb-8">
-                            "Not a developer or a coder, just a builder who loves breaking AI to see what's actually possible. These blueprints started as personal tools to solve real problems, and now they're shared here."
+                            "I'm not a developer - I'm a tinkerer who got obsessed with making AI actually work for real businesses. I've spent hundreds of hours breaking things, fixing them, and figuring out which workflows actually save time (and which ones are just hype). Now I help non-technical founders skip the trial-and-error and get straight to results."
                         </p>
                         <div className="flex items-center gap-4">
                             <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-accent shadow-lg shadow-accent/20">

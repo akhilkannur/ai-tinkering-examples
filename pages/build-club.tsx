@@ -219,7 +219,7 @@ export default function BuildClub() {
               <div className="space-y-6 font-body">
                 <div>
                   <h3 className="font-bold underline mb-1">WHO IS THIS FOR?</h3>
-                  <p>All non-technical, AI-curious professionals. Whether you are a founder, marketer, salesperson, or ops specialist—if you want to build AI tools but keep getting distracted, this is for you. If you're an engineer looking for architecture talks, this isn't it.</p>
+                  <p>All non-technical, AI-curious professionals. Whether you are a founder, marketer, salesperson, or ops specialist - if you want to build AI tools but keep getting distracted, this is for you. If you're an engineer looking for architecture talks, this isn't it.</p>
                 </div>
                 <div>
                   <h3 className="font-bold underline mb-1">IS IT A COURSE?</h3>
@@ -261,7 +261,7 @@ export default function BuildClub() {
             <div className="text-center md:text-left relative z-10">
               <div className="font-header text-xl tracking-widest mb-4 border-b-2 border-black inline-block uppercase">MEET YOUR HOST</div>
               <p className="font-body text-lg leading-relaxed italic mb-6">
-                "Not a developer or a coder, just a builder who loves breaking AI to see what's actually possible. Twice a week, expect a direct check-in for real accountability. No bots, no gurus, just someone ensuring projects actually get shipped."
+                "I'm not a developer - I'm a tinkerer who got obsessed with making AI actually work for real businesses. I've spent hundreds of hours breaking things, fixing them, and figuring out which workflows actually save time (and which ones are just hype). Now I help non-technical founders skip the trial-and-error and get straight to results."
               </p>
               <div className="flex flex-col md:flex-row items-center gap-6">
                 <a href="mailto:akhil@realaiexamples.com" className="font-header text-lg tracking-widest bg-black text-white px-6 py-2 hover:bg-gray-800 transition-colors uppercase">
