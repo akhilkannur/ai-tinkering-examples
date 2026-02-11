@@ -68,6 +68,41 @@ const nextConfig = {
         destination: '/',
         permanent: true,
       },
+      {
+        source: '/setup',
+        destination: '/agent-setup-service',
+        permanent: true,
+      },
+      {
+        source: '/build',
+        destination: '/build-club',
+        permanent: true,
+      },
+      {
+        source: '/example/:path*',
+        destination: '/ai-examples',
+        permanent: true,
+      },
+      {
+        source: '/skills/partner-program-hunter',
+        destination: '/skills/integration-partner-finder',
+        permanent: true,
+      },
+      {
+        source: '/how-to/automate-partner-program-hunter',
+        destination: '/how-to/automate-integration-partner-finder',
+        permanent: true,
+      },
+      {
+        source: '/skills/review-to-ad-machine',
+        destination: '/skills/review-to-ad',
+        permanent: true,
+      },
+      {
+        source: '/how-to/automate-review-to-ad-machine',
+        destination: '/how-to/automate-review-to-ad',
+        permanent: true,
+      },
       // 1. Legacy Blueprint Migration (/ai-examples -> /skills)
       {
         source: '/ai-examples/:id',
@@ -90,6 +125,21 @@ const nextConfig = {
         destination: '/skills',
         permanent: true,
       },
+      {
+        source: '/playbook',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/generators',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/tools/for',
+        destination: '/tools',
+        permanent: true,
+      },
       // 3. Old directory structure cleanup
       {
         source: '/blueprints',
@@ -98,7 +148,7 @@ const nextConfig = {
       },
       {
         source: '/skills',
-        destination: '/',
+        destination: '/#skills',
         permanent: true,
       },
       {

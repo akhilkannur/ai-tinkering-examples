@@ -95,7 +95,11 @@ async function postCarousel(instaId, accessToken, imagePaths, caption) {
   if (data.error) throw new Error(`Carousel Container Error: ${data.error.message}`);
   const creationId = data.id;
 
-  // 3. Publish
+  // 3. Wait for processing (Carousel containers take time)
+  console.log('⏳ Waiting 30 seconds for Instagram to process the carousel...');
+  await new Promise(resolve => setTimeout(resolve, 30000));
+
+  // 4. Publish
   console.log(`🚀 Publishing Carousel (ID: ${creationId})...`);
   const publishId = await publishMedia(instaId, accessToken, creationId);
   console.log(`✅ SUCCESS! Carousel published. Post ID: ${publishId}`);

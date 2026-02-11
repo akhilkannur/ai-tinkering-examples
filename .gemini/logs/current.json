@@ -1,0 +1,70 @@
+{
+  "id": "session_1770547731041",
+  "agent": "Lead Scraper Pro",
+  "status": "completed",
+  "startTime": "2026-02-08T10:48:51.041Z",
+  "logs": [
+    {
+      "timestamp": "2026-02-08T10:48:51.107Z",
+      "message": "Initializing Agentic Environment...",
+      "type": "system"
+    },
+    {
+      "timestamp": "2026-02-08T10:48:52.117Z",
+      "message": "Loading blueprint: Lead Scraper Pro",
+      "type": "system"
+    },
+    {
+      "timestamp": "2026-02-08T10:48:52.920Z",
+      "message": "Searching Google for high-intent B2B leads in SaaS...",
+      "type": "action"
+    },
+    {
+      "timestamp": "2026-02-08T10:48:54.923Z",
+      "message": "Found 42 potential targets on LinkedIn and Twitter.",
+      "type": "system"
+    },
+    {
+      "timestamp": "2026-02-08T10:48:56.426Z",
+      "message": "Extracting contact data for 'Founder' roles...",
+      "type": "action"
+    },
+    {
+      "timestamp": "2026-02-08T10:48:58.930Z",
+      "message": "Writing results to CSV...",
+      "type": "action"
+    },
+    {
+      "timestamp": "2026-02-08T10:49:00.137Z",
+      "message": "SUCCESS: Lead list generated.",
+      "type": "success"
+    },
+    {
+      "timestamp": "2026-02-08T10:49:00.641Z",
+      "message": "Analyzing lead quality using LLM...",
+      "type": "action"
+    },
+    {
+      "timestamp": "2026-02-08T10:49:02.646Z",
+      "message": "Generated summary report.",
+      "type": "success"
+    },
+    {
+      "timestamp": "2026-02-08T10:49:03.148Z",
+      "message": "Session Complete. Total Runtime: 14.5s",
+      "type": "system"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "leads.csv",
+      "type": "csv",
+      "url": "/outputs/leads.csv"
+    },
+    {
+      "name": "summary.md",
+      "type": "markdown",
+      "url": "/outputs/summary.md"
+    }
+  ]
+}
