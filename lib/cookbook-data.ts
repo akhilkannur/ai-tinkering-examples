@@ -81,4 +81,14 @@ export interface Recipe {
     content: string;
   };
   sampleOutput?: string;
+  verifiedRun?: {
+    date: string;
+    agent: string;
+    log: { text: string; type: 'input' | 'system' | 'success' | 'report' }[];
+    outputFile?: {
+      name: string;
+      url: string;
+      preview: string;
+    };
+  };
 }

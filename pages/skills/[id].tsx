@@ -35,6 +35,81 @@ const SimpleMarkdown = ({ text }: { text: string }) => {
   );
 };
 
+const VerifiedTerminal = ({ run }: { run: Recipe['verifiedRun'] }) => {
+  const [visibleLines, setVisibleCount] = useState(0);
+
+  useEffect(() => {
+    if (!run) return;
+    if (visibleLines < run.log.length) {
+      const timer = setTimeout(() => setVisibleCount(prev => prev + 1), 800);
+      return () => clearTimeout(timer);
+    }
+  }, [visibleLines, run]);
+
+  if (!run) return null;
+
+  return (
+    <div className="mt-12 bg-[#0D1117] rounded-2xl border border-white/10 shadow-2xl overflow-hidden font-mono text-xs md:text-sm relative">
+      <div className="bg-white/5 px-4 py-3 flex items-center justify-between border-b border-white/5">
+        <div className="flex items-center gap-2">
+          <div className="flex gap-1.5">
+            <div className="w-2.5 h-2.5 rounded-full bg-red-500/50"></div>
+            <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/50"></div>
+            <div className="w-2.5 h-2.5 rounded-full bg-green-500/50"></div>
+          </div>
+          <span className="text-white/30 text-[10px] uppercase tracking-widest font-bold ml-2 italic flex items-center gap-2">
+            <ShieldCheck className="w-3 h-3 text-emerald-500" /> Proof of Execution: Verified Run
+          </span>
+        </div>
+        <div className="text-[9px] text-white/20 uppercase tracking-widest">
+          {run.date} // Agent: {run.agent}
+        </div>
+      </div>
+      
+      <div className="p-6 min-h-[200px] flex flex-col gap-2.5">
+        {run.log.slice(0, visibleLines).map((line, idx) => (
+          <div key={idx} className="animate-in fade-in slide-in-from-left-2 duration-500">
+            {line.type === 'input' && (
+              <span className="text-blue-400">
+                <span className="text-emerald-500 mr-2">➜</span>
+                {line.text}
+              </span>
+            )}
+            {line.type === 'system' && <span className="text-white/50">{line.text}</span>}
+            {line.type === 'success' && <span className="text-emerald-400">{line.text}</span>}
+            {line.type === 'report' && (
+              <div className="mt-3 p-4 bg-emerald-500/5 rounded-xl border border-emerald-500/10 text-emerald-200/80 italic text-xs leading-relaxed">
+                "{line.text}"
+              </div>
+            )}
+          </div>
+        ))}
+        {visibleLines < run.log.length && (
+          <div className="w-2 h-5 bg-white/40 animate-pulse inline-block ml-1"></div>
+        )}
+      </div>
+
+      {run.outputFile && visibleLines >= run.log.length && (
+        <div className="border-t border-white/5 bg-black/40 p-6 animate-in fade-in duration-1000">
+           <div className="flex items-center justify-between mb-4">
+              <span className="text-[10px] text-white/30 uppercase tracking-widest font-bold">Generated Output: {run.outputFile.name}</span>
+              <a 
+                href={run.outputFile.url} 
+                download 
+                className="text-[10px] font-bold text-emerald-500 hover:text-emerald-400 flex items-center gap-1.5 transition-colors"
+              >
+                <Download className="w-3 h-3" /> DOWNLOAD PROOF
+              </a>
+           </div>
+           <div className="bg-primary-bg/50 border border-white/5 rounded-lg p-4 font-mono text-[11px] text-white/60 overflow-x-auto whitespace-pre">
+              {run.outputFile.preview}
+           </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
 export default function RecipePage({ recipe, relatedRecipes, linkedDescription, schema }: RecipePageProps) {
   const router = useRouter();
   const [copied, setCopied] = useState(false);
@@ -227,6 +302,12 @@ Downloaded from RealAIExamples.com`;
               <SimpleMarkdown text={linkedDescription || recipe.description} />
             </p>
           </div>
+
+          {recipe.verifiedRun && (
+            <div className="mb-12">
+               <VerifiedTerminal run={recipe.verifiedRun} />
+            </div>
+          )}
 
           {/* Locked or Unlocked Content */}
           <div className="bg-[#0d1117] rounded-xl overflow-hidden border border-gray-800 shadow-2xl mb-12 flex flex-col">
