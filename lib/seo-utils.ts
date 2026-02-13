@@ -152,6 +152,23 @@ export function generateFAQSchema(recipe: Recipe) {
   };
 }
 
+export function generateSoftwareAppSchema(recipe: Recipe, siteUrl: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": recipe.title,
+    "description": recipe.description,
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Any (Gemini CLI, Claude Code, Cursor, Terminal)",
+    "offers": {
+      "@type": "Offer",
+      "price": "0.00",
+      "priceCurrency": "USD"
+    },
+    "url": `${siteUrl}/skills/${recipe.id}`
+  };
+}
+
 export function injectInternalLinks(text: string, recipes: Recipe[]): string {
   if (!text) return '';
   

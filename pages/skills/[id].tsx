@@ -6,7 +6,7 @@ import { ArrowLeft, Terminal, Copy, Check, Download, FileText, Cpu, BookOpen, Lo
 import Navbar from '../../components/Navbar';
 import { getAllRecipes, getRelatedRecipes } from '../../lib/recipes';
 import { Recipe, categoryIcons } from '../../lib/cookbook-data';
-import { generateHowToSchema, generateFAQSchema, injectInternalLinks } from '../../lib/seo-utils';
+import { generateHowToSchema, generateFAQSchema, injectInternalLinks, generateSoftwareAppSchema } from '../../lib/seo-utils';
 import React, { useState, useEffect } from 'react';
 import JSZip from 'jszip';
 import NewsletterSignup from '../../components/NewsletterSignup';
@@ -471,7 +471,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   
   const howTo = generateHowToSchema(recipe, SITE_URL, ogImageUrl);
   const faq = generateFAQSchema(recipe);
-  const schema = [howTo, faq].filter(Boolean);
+  const software = generateSoftwareAppSchema(recipe, SITE_URL);
+  const schema = [howTo, faq, software].filter(Boolean);
 
   return {
     props: {
