@@ -218,7 +218,10 @@ export default function AgentSetupService() {
             </div>
             <div className="text-xl md:text-2xl text-text-color italic mb-10 font-light leading-relaxed max-w-3xl mx-auto space-y-6">
               <p>
-                "I'm <strong>Akhil MK</strong>. I run a marketing agency. I got tired of copy-pasting between browser tabs, so I started learning command-line AI tools. The setup was a nightmare. Tutorials skip steps. Things break randomly. I spent months figuring it out. Now I help other business owners skip that mess and get straight to working automation. You can see what I'm building at <a href="https://akhilhaving.fun" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline not-italic">akhilhaving.fun</a>."
+                "I'm <strong>Akhil MK</strong>. I run a marketing agency. I got tired of copy-pasting between browser tabs, so I started learning command-line AI tools. The setup was a nightmare. Tutorials skip steps. Things break randomly. I spent months figuring it out. Now I help other business owners skip that mess and get straight to working automation."
+              </p>
+              <p className="text-right not-italic font-header text-accent tracking-widest uppercase text-xl">
+                Akhil, <a href="https://akhilhaving.fun" target="_blank" rel="noopener noreferrer" className="hover:underline">akhilhaving.fun</a>
               </p>
             </div>
             <div className="flex justify-center gap-12 text-[10px] font-bold text-text-secondary uppercase tracking-[0.3em]">

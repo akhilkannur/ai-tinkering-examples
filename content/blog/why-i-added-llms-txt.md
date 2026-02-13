@@ -29,7 +29,7 @@ If it can't read your site easily, it moves on.
 I found out about a standard called `/llms.txt`.
 Basically, it's a text file you put on your site that says: *"Hey Robot, ignore the design. Here is just the raw facts."*
 
-I wanted one. But I have 700+ pages. I wasn't going to copy-paste them manually.
+I wanted one. But I have 500+ pages. I wasn't going to copy-paste them manually.
 
 So, I did my usual trick. I asked the CLI:
 > *"Write a script that scans all my content and mashes it into one giant text file. Strip out the formatting. Just keep the good stuff."*

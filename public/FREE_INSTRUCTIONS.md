@@ -7,7 +7,7 @@ You have unlocked 50 of our favorite AI Blueprints. These are designed to give y
 2. **Copy the Blueprint:** Paste the logic into ChatGPT, Claude, or (for best results) a terminal agent like **Claude Code**.
 3. **Run it.**
 
-## Want the full 700+ Database?
+## Want the full 500+ Database?
 You currently have the **Starter Pack (50 Recipes)**. 
 
 To get the full **Master Database** (725+ Recipes covering Sales Ops, Advanced SEO, and Revenue Architecture), check out the full version here:

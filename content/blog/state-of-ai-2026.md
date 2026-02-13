@@ -38,17 +38,17 @@ I've categorized my library into specific roles. Stop looking for generic "AI ti
 ### 1. For Sales Operations
 Sales Ops is the perfect playground for Folder Agents. You deal with structured data (CSVs), repeated logic (commission calc), and high-volume text (outreach).
 *   **[Browse Sales Ops Blueprints](/role/sales-ops)**
-*   *Top Pick:* The **[Lead Scoring Logic Builder](/ai-examples/lead-scoring-logic-builder)** automatically grades your CSV leads based on ideal customer profile (ICP) criteria.
+*   *Top Pick:* The **[Lead Scoring Logic Builder](/skills/lead-scoring-logic-builder)** automatically grades your CSV leads based on ideal customer profile (ICP) criteria.
 
 ### 2. For SEOs & Content Managers
 SEO isn't about writing one article anymore; it's about programmatic architecture.
 *   **[Browse SEO Blueprints](/role/seo)**
-*   *Top Pick:* The **[Programmatic SEO Builder](/ai-examples/programmatic-seo-builder)** takes a keyword list and generates thousands of interlinked, schema-rich pages.
+*   *Top Pick:* The **[Programmatic SEO Builder](/skills/programmatic-seo-builder)** takes a keyword list and generates thousands of interlinked, schema-rich pages.
 
 ### 3. For Marketing Operations
 Connect your tools without Zapier. Let the agent parse your logs and automate the glue code.
 *   **[Browse Marketing Ops Blueprints](/role/marketing-ops)**
-*   *Top Pick:* The **[UTM Taxonomy Enforcer](/ai-examples/utm-taxonomy-enforcer)** scans all your marketing URLs to ensure they match your tracking standards.
+*   *Top Pick:* The **[UTM Taxonomy Enforcer](/skills/utm-taxonomy-enforcer)** scans all your marketing URLs to ensure they match your tracking standards.
 
 ### 4. For Growth Engineers
  bridging the gap between code and marketing.

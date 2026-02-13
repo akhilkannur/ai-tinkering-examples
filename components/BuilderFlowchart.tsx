@@ -408,7 +408,7 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
                       <Lock className="w-8 h-8 text-yellow-500" />
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-2">Unlock this Blueprint</h3>
-                    <p className="text-text-secondary mb-8 max-w-md mx-auto">Get access to this workflow and 500+ others by joining Pro.</p>
+                    <p className="text-text-secondary mb-8 max-w-md mx-auto">Get access to this workflow and 700+ others by joining Pro.</p>
                     <a href="https://checkout.dodopayments.com/buy/pdt_0NW6p0szmXPS6jXW05hIP?session=sess_GCYotd6plh" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-black px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-xl">Unlock Now <ArrowRight className="w-5 h-5" /></a>
                   </div>
                 </div>

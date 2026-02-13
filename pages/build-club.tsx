@@ -106,7 +106,7 @@ export default function BuildClub() {
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="font-bold text-red-700">04.</span>
-                    <span>Build your own idea or pick from 700+ blueprints on this site. Your call.</span>
+                    <span>Build your own idea or pick from 500+ blueprints on this site. Your call.</span>
                   </li>
                 </ul>
 
@@ -145,7 +145,7 @@ export default function BuildClub() {
                 <div className="text-xs text-gray-500 mb-4 pl-4">
                   - 2x Weekly Check-ins (me, not a bot)<br/>
                   - Private group chat<br/>
-                  - Access to 700+ blueprints
+                  - Access to 500+ blueprints
                 </div>
 
                 <div className="border-b-2 border-dashed border-gray-300 mb-4"></div>

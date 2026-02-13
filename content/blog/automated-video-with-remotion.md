@@ -109,4 +109,4 @@ You don't need to learn React. You just need to know how to instruct your Agent.
 
 I have created a **"Work-Ready" Blueprint** that contains all the instructions your AI needs to set this up for you. You just copy the blueprint, paste it into Gemini or Claude, and watch it build your video factory.
 
-**[Get the Automated Video Producer Blueprint](/blueprints/automated-video-marketing-asset)**
+**[Get the Automated Video Producer Blueprint](/skills/automated-video-marketing-asset)**

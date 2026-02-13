@@ -69,7 +69,7 @@ export default function HowToDictionary({ problems }: HowToDictionaryProps) {
             How to <span className="text-accent">Automate Everything</span>
           </h1>
           <p className="text-xl text-text-secondary leading-relaxed mb-10">
-            Browse 700+ practical solutions. Search for the problem you have right now.
+            Browse 500+ practical solutions. Search for the problem you have right now.
           </p>
 
           <div className="relative max-w-2xl mx-auto">

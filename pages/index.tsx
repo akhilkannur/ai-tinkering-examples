@@ -30,8 +30,8 @@ interface HybridHomePageProps {
 }
 
 export default function HybridHomePage({ recipes, featuredJobs, featuredTools, siteSettings }: HybridHomePageProps) {
-  const homepageTitle = "700+ Real AI Examples: Agent-Ready Workflows & Blueprints";
-  const homepageDescription = "Stop chatting and start building. A library of 700+ reliable, copy-paste Real AI Examples and blueprints for sales, marketing, and founders. Works with Gemini CLI and Claude Code.";
+  const homepageTitle = "500+ Real AI Examples: Agent-Ready Workflows & Blueprints";
+  const homepageDescription = "Stop chatting and start building. A library of 500+ reliable, copy-paste Real AI Examples and blueprints for sales, marketing, and founders. Works with Gemini CLI and Claude Code.";
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com';
 
   const itemListSchema = generateItemListSchema(recipes.slice(0, 12), baseUrl);
@@ -88,12 +88,12 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
                         </h1>
                         
                         <p className="text-lg text-text-secondary mb-10 leading-relaxed max-w-lg font-normal">
-                            A library of 700+ agent-ready blueprints for Sales, Marketing, and Ops. Built for Gemini CLI, Claude Code, and all major LLM agents.
+                            A library of 500+ agent-ready blueprints for Sales, Marketing, and Ops. Built for Gemini CLI, Claude Code, and all major LLM agents.
                         </p>
 
                         <div className="inline-block bg-accent/10 border border-accent/20 rounded-full px-3 py-1 mb-4">
                             <span className="text-xs font-bold text-accent tracking-wide uppercase flex items-center gap-2">
-                                <Zap className="w-3 h-3 fill-current" /> 700+ Files. 1 Year Access.
+                                <Zap className="w-3 h-3 fill-current" /> 500+ Files. 1 Year Access.
                             </span>
                         </div>
 

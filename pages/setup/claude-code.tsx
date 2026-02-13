@@ -291,7 +291,7 @@ export default function ClaudeSetup() {
                 <div className="bg-primary-bg px-10 py-12 rounded-[calc(1rem-1px)]">
                     <h3 className="text-3xl font-bold mb-4">Master Agentic Coding</h3>
                     <p className="text-text-secondary mb-10 max-w-lg mx-auto">
-                        Don't guess the prompts. Use our library of 700+ verified workflows for Sales and Marketing.
+                        Don't guess the prompts. Use our library of 500+ verified workflows for Sales and Marketing.
                     </p>
                     <Link href="/#blueprints" className="inline-flex items-center gap-3 bg-bright-pink hover:bg-bright-pink/80 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg shadow-bright-pink/20">
                         <BookOpen className="w-5 h-5" /> BROWSE ALL BLUEPRINTS

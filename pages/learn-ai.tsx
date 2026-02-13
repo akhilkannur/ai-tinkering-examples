@@ -85,7 +85,7 @@ export default function LearnAIPage() {
                   <Download className="text-accent" /> Step 2: Copy a Skill
                </h2>
                <p className="text-text-secondary mb-8 leading-relaxed">
-                  Browse my library of **700+ AI Skills**. Each skill is a rigid set of instructions that tells the agent exactly how to perform a business task.
+                  Browse my library of **500+ AI Skills**. Each skill is a rigid set of instructions that tells the agent exactly how to perform a business task.
                </p>
                <div className="bg-secondary-bg border border-navy-dark p-8 rounded-3xl relative overflow-hidden group">
                   <div className="flex items-center gap-4 mb-6">

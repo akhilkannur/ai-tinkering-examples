@@ -10,7 +10,7 @@ category: "Automation"
 
 Internal linking is the "dark matter" of SEO. You can't see it on the page, but it's what holds your domain authority together. 
 
-But as my library grew to 700+ blueprints, I hit a massive wall. Every time I published a new "Tinker Log," I had to spend 30 minutes opening old posts, hitting Command+F, and trying to find a natural spot to link to the new one. 
+But as my library grew to 500+ blueprints, I hit a massive wall. Every time I published a new "Tinker Log," I had to spend 30 minutes opening old posts, hitting Command+F, and trying to find a natural spot to link to the new one. 
 
 I was acting like a human search engine. It was a waste of time. 
 
@@ -59,6 +59,6 @@ If you're building a content library, don't wait until you have 500 posts to wor
 
 When you have a manifest, your AI agent has a "map." Without a map, it's just guessing. 
 
-I’ve added the [AI Internal Linking Blueprint](/ai-examples/ai-internal-linking-agent) to the vault. You can use it to map your own site today. 
+I’ve added the [AI Internal Linking Blueprint](/skills/ai-internal-linking-agent) to the vault. You can use it to map your own site today. 
 
 Stop hunting for keywords. Start building a map.

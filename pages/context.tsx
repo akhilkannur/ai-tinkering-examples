@@ -4,7 +4,7 @@ import { Download, FileJson, Brain, Zap, CheckCircle } from 'lucide-react';
 
 export default function ContextLibrary() {
   const cookbooks = [
-    { name: "Master Brain (All 700+)", file: "/cookbook-full.json", count: 723, color: "text-accent" },
+    { name: "Master Brain (All 500+)", file: "/cookbook-full.json", count: 723, color: "text-accent" },
     { name: "Sales Ops Specialist", file: "/context/cookbook-sales-ops.json", count: 181, color: "text-blue-400" },
     { name: "Strategic Ops Specialist", file: "/context/cookbook-strategic-ops.json", count: 124, color: "text-purple-400" },
     { name: "Lead Gen Specialist", file: "/context/cookbook-lead-gen.json", count: 73, color: "text-green-400" },
@@ -31,7 +31,7 @@ export default function ContextLibrary() {
           </h1>
           <p className="text-xl text-text-secondary leading-relaxed">
             Stop copying prompts one by one. Download these <strong>Context Files</strong> and drop them into your project. 
-            Your agent will instantly know 700+ workflows.
+            Your agent will instantly know 500+ workflows.
           </p>
         </div>
 

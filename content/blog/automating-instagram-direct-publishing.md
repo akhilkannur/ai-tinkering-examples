@@ -14,7 +14,7 @@ Manually posting screenshots to Instagram is the biggest bottleneck for any "bui
 
 > **TL;DR:** Posting to Instagram from code is notoriously annoying because of expiring tokens. This guide shows you how to set up a "System User" (a permanent robot account) so you can run a single command to post images forever, without logging in.
 
-I wanted to take the 700+ AI blueprints on this site and post them daily as high-resolution 1:1 cards. Here is the workflow I used to bypass the "Invalid Platform" errors and finally get a reliable auto-poster running.
+I wanted to take the 500+ AI blueprints on this site and post them daily as high-resolution 1:1 cards. Here is the workflow I used to bypass the "Invalid Platform" errors and finally get a reliable auto-poster running.
 
 ---
 

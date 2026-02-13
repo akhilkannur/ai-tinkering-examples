@@ -57,7 +57,7 @@ export default function FiveHundredWays({ recipes, categories }: MegaListiclePro
       "position": index + 1,
       "name": recipe.title,
       "description": recipe.description,
-      "url": `https://realaiexamples.com/ai-examples/${recipe.id}`
+      "url": `https://realaiexamples.com/skills/${recipe.id}`
     }))
   };
 
@@ -179,7 +179,7 @@ export default function FiveHundredWays({ recipes, categories }: MegaListiclePro
                     {groupedRecipes[category].map(recipe => (
                       <Link 
                         key={recipe.id} 
-                        href={`/ai-examples/${recipe.id}`}
+                        href={`/skills/${recipe.id}`}
                         className="group flex flex-col bg-secondary-bg border border-navy-dark rounded-xl p-6 hover:border-accent/50 transition-all hover:shadow-[0_10px_30px_rgba(56,189,248,0.05)] relative overflow-hidden"
                       >
                         <div className="absolute top-0 right-0 p-3 opacity-10 group-hover:opacity-30 transition-opacity">

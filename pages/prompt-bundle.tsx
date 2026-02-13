@@ -12,7 +12,7 @@ export default function PromptBundlePage() {
   const [copied, setCopied] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('All');
 
-  const pageTitle = "The Master AI Workflow Vault | 700+ Copy-Paste Prompts for Business";
+  const pageTitle = "The Master AI Workflow Vault | 500+ Copy-Paste Prompts for Business";
   const pageDescription = "Professional AI workflows for Sales, Marketing, and Ops. No technical setup. Just copy and paste into ChatGPT, Claude, or Gemini to automate your business.";
 
   const categories = [
@@ -75,7 +75,7 @@ export default function PromptBundlePage() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-purple-500">Prompt Vault</span>
             </h1>
             <p className="text-xl text-text-secondary max-w-2xl mx-auto font-light leading-relaxed mb-12">
-              700+ professional-grade AI prompts and workflows for high-growth Sales, Marketing, and Ops teams. <br className="hidden md:block" /> 
+              500+ professional-grade AI prompts and workflows for high-growth Sales, Marketing, and Ops teams. <br className="hidden md:block" /> 
               Stop guessing. Just <strong className="text-white">copy, paste, and win.</strong>
             </p>
 
@@ -204,7 +204,7 @@ export default function PromptBundlePage() {
                              <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter italic mb-8">Stop writing from scratch. <br/> Start executing.</h2>
                              <div className="space-y-6 mb-12">
                                  {[
-                                     "700+ Field-tested workflows for every business role.",
+                                     "500+ Field-tested workflows for every business role.",
                                      "Get 1 year of access to the complete vault.",
                                      "Direct copy-paste format. No technical knowledge required.",
                                      "Weekly updates with the latest 'Boring AI' plays."
@@ -229,7 +229,7 @@ export default function PromptBundlePage() {
              <div className="space-y-8">
                 <div>
                     <h4 className="text-xl font-bold text-white mb-2 italic">How do I get the prompts?</h4>
-                    <p className="text-text-secondary font-light">Immediately after purchase, you'll receive access to our Private Vault page. It's a searchable, categorized dashboard where you can copy the full logic for all 700+ workflows with one click.</p>
+                    <p className="text-text-secondary font-light">Immediately after purchase, you'll receive access to our Private Vault page. It's a searchable, categorized dashboard where you can copy the full logic for all 500+ workflows with one click.</p>
                 </div>
                 <div>
                     <h4 className="text-xl font-bold text-white mb-2 italic">Do I need to be a developer?</h4>

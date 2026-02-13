@@ -164,7 +164,7 @@ export default function ZeroBudgetMarketing() {
             <h2 className="text-4xl font-bold text-white mb-6">Steal This Entire Stack.</h2>
             <p className="text-xl text-text-secondary mb-10 max-w-2xl mx-auto leading-relaxed">
               These aren't just blog post ideas. These are actual <strong>Blueprint Files</strong> (.md and .json) that you can run in your terminal today. <br/><br/>
-              Get the <strong>Competitor Spy</strong>, the <strong>Repurposer</strong>, the <strong>Signal Hunter</strong>, plus 700+ other workflows.
+              Get the <strong>Competitor Spy</strong>, the <strong>Repurposer</strong>, the <strong>Signal Hunter</strong>, plus 500+ other workflows.
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -175,7 +175,7 @@ export default function ZeroBudgetMarketing() {
                 Get 1 Year Access ($39) <ArrowRight className="w-5 h-5" />
               </a>
               <Link href="/#blueprints" className="w-full sm:w-auto px-10 py-5 bg-white/5 border border-navy-dark hover:bg-white/10 text-white font-bold rounded-xl text-lg transition-all flex items-center justify-center gap-2">
-                See All 700+ Blueprints
+                See All 500+ Blueprints
               </Link>
             </div>
             <p className="mt-6 text-sm text-text-secondary/60 font-mono flex items-center justify-center gap-2">

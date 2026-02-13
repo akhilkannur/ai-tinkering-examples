@@ -104,7 +104,7 @@ export default function HowToPage({ recipe, problemTitle, relatedRecipes }: HowT
                    </div>
                    <span className="text-sm text-text-secondary font-mono">Blueprint ID: {recipe.id}</span>
                 </div>
-                <Link href={`/ai-examples/${recipe.id}`} className="text-xs text-accent hover:underline">
+                <Link href={`/skills/${recipe.id}`} className="text-xs text-accent hover:underline">
                    View Documentation &rarr;
                 </Link>
              </div>
