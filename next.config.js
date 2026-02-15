@@ -94,13 +94,33 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/skills/review-to-ad-machine',
-        destination: '/skills/review-to-ad',
+        source: '/how-to/automate-partner-hunter',
+        destination: '/how-to/automate-integration-partner-finder',
         permanent: true,
       },
       {
-        source: '/how-to/automate-review-to-ad-machine',
-        destination: '/how-to/automate-review-to-ad',
+        source: '/blueprints/partner-hunter',
+        destination: '/skills/integration-partner-finder',
+        permanent: true,
+      },
+      {
+        source: '/how-to/automate-comp-plan-simulator',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/skills/review-to-ad',
+        destination: '/skills/review-to-ad-machine',
+        permanent: true,
+      },
+      {
+        source: '/how-to/automate-review-to-ad',
+        destination: '/how-to/automate-review-to-ad-machine',
+        permanent: true,
+      },
+      {
+        source: '/blueprints/review-to-ad',
+        destination: '/skills/review-to-ad-machine',
         permanent: true,
       },
       // 1. Legacy Blueprint Migration (/ai-examples -> /skills)
