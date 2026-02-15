@@ -1296,6 +1296,57 @@ The next time you open your terminal and say *"Analyze the data,"* the AI reads 
 
 ---
 
+## AI Internal Linking Agent
+---
+title: "AI Internal Linking Agent"
+id: ai-internal-linking-agent
+category: SEO
+tagline: "Stop manually hunting for anchor text. Let AI map your internal linking strategy."
+description: "A specialized agent that reads your entire content library and identifies the exact spots where you should link to other pages to boost your domain authority."
+---
+
+# The Internal Link Bottleneck
+
+Internal linking is the highest-ROI SEO task, but it’s the most boring. You finish a new blog post, and then you have to manually search through 100 old posts to find places to link *to* it.
+
+This agent automates the "discovery" phase of internal linking.
+
+### The Agent Blueprint
+
+```markdown
+Role: Senior SEO Content Architect
+Context: 
+- I have a list of all my website's pages (Titles + Slugs) in `content-manifest.json`.
+- I have the raw text of my newest blog post in `new-post.md`.
+
+Objective: Identify 5-10 "Contextual Link" opportunities where my old posts should link to the new post, and 3-5 spots where the new post should link to existing content.
+
+Workflow:
+1. **Analyze Target:** Read `new-post.md` and identify its 3 core topics.
+2. **Context Map:** Scan `content-manifest.json`. Find existing pages that share these topics.
+3. **Anchor Text Hunt:** For each matching existing page, find specific sentences where the topic is mentioned but not currently linked.
+4. **Output Report:** Provide a list in this format:
+   - Source File: [filename]
+   - Existing Sentence: "...exact sentence here..."
+   - Suggested Anchor: [keyword]
+   - Target Link: [slug]
+```
+
+### Why this works
+
+Unlike a basic WordPress plugin that just links keywords (and creates "link spam"), this agent understands the **context**. It won't suggest a link unless it actually adds value to the reader.
+
+### How to run it
+
+1.  **Generate a Manifest:** Create a quick CSV or JSON list of your page titles and URLs.
+2.  **Point the Agent:** Give it the manifest and your new draft.
+3.  **Execute:** Run the blueprint in Gemini CLI or Claude Code.
+
+"I found 12 spots to link your new 'Cold Email' guide. Here is the exact line in your 'Lead Gen' post to update."
+
+
+---
+
 ## The AI Manager's Handbook
 ---
 id: ai-manager-handbook
@@ -15790,6 +15841,94 @@ Identify revenue uplift opportunities.
 
 ---
 
+## GSC Index Coverage Auditor
+---
+id: gsc-index-coverage-auditor
+category: SEO
+title: GSC Index Coverage Auditor
+tagline: Find "Ghost Pages" (Indexed 404s) and Sitemap errors.
+difficulty: Intermediate
+time: 15 mins
+archetype: Processor
+description: Compares your Google Search Console "Index Coverage" report against your live Sitemap to find "Ghost Pages" (URLs Google thinks exist but are actually 404s) and "Zombie Links" (Sitemap URLs that redirect).
+sampleData:
+  filename: gsc_coverage.csv
+  content: |
+    URL,Status,Reason
+    https://example.com/page1,Indexed,Submitted and indexed
+    https://example.com/old-page,Error,Submitted URL not found (404)
+    https://example.com/ghost-page,Indexed,Submitted and indexed
+sampleOutput: |
+  **Audit Report**
+  1. **Ghost Pages (Urgent):** 1 found.
+     - `https://example.com/ghost-page` is Indexed by Google, but returns 404 Live. 
+     - *Action:* 301 Redirect or "Validate Fix" in GSC.
+  2. **Sitemap Rot:** 0 found.
+     - All sitemap URLs return 200 OK.
+---
+
+# What This Does
+Google Search Console (GSC) often gets out of sync with your real website. It might think a deleted page (`/old-page`) is still "Indexed", or it might claim a fixed 404 is still broken.
+
+This agent cross-references your **GSC Coverage Report** with your **Live Site Status** to give you a definitive "Fix List".
+
+# What You Need
+1.  **GSC Export:** Go to GSC > Pages > Export > CSV. Save the main table as `gsc_coverage.csv`.
+2.  **Sitemap:** Your `sitemap.xml` file.
+
+# What You Get
+-   `ghost_pages.csv`: URLs Google lists as "Indexed" but are actually broken (404) or redirects (301) on your live site.
+-   `sitemap_errors.csv`: URLs in your sitemap that aren't actually live (200 OK).
+-   `action_plan.md`: A summary of which GSC issues are "Real" vs "False Positives" (so you can click "Validate Fix").
+
+# How to Use
+1.  Export your coverage report from Google Search Console.
+2.  Save it as `gsc_coverage.csv` in your folder.
+3.  Ensure your `sitemap.xml` is also in the folder.
+4.  Run this blueprint.
+
+---
+
+# Prompt
+
+You are a **Technical SEO Auditor**. Your goal is to reconcile the difference between "What Google Thinks" (GSC Data) and "What Is Real" (Live Site Status).
+
+**Phase 1: Ingest Data**
+1.  Read `gsc_coverage.csv`. (Key columns: `URL`, `Status`).
+2.  Read `sitemap.xml`. (Extract all `<loc>` URLs).
+
+**Phase 2: Live Diagnostics**
+For every URL found in EITHER file, perform a **Live Status Check**:
+-   **Fetch:** Curl/Get the URL.
+-   **Record:** HTTP Status Code (200, 301, 404, 500).
+-   **Record:** Final Destination (if redirected).
+
+**Phase 3: Analysis Logic**
+Categorize every URL into one of these buckets:
+1.  **👻 Ghost Page (High Priority):**
+    -   *Condition:* GSC Status = "Indexed" AND Live Status = 404/5xx.
+    -   *Meaning:* Google is sending traffic to a dead page.
+    -   *Action:* "Immediate 301 Redirect".
+2.  **🧟 Zombie Redirect:**
+    -   *Condition:* Sitemap = Yes AND Live Status = 301/308.
+    -   *Meaning:* Your sitemap is dirty. It points to a redirect, not the final page.
+    -   *Action:* "Update Sitemap to point to [Final Destination]".
+3.  **✅ False Alarm (Validate Fix):**
+    -   *Condition:* GSC Status = "Error/404" AND Live Status = 301 (Redirected) OR 200 (Fixed).
+    -   *Meaning:* You fixed it, but Google hasn't updated.
+    -   *Action:* "Click 'Validate Fix' in GSC".
+
+**Phase 4: Output**
+1.  Save `audit_results.csv` with columns: `URL`, `GSC_Status`, `Live_Status`, `Sitemap_Present`, `Category`, `Recommended_Action`.
+2.  Generate a summary `action_plan.md`:
+    -   List top 5 "Ghost Pages" to fix immediately.
+    -   Count of "False Alarms" where the user should just click "Validate Fix".
+
+Start now.
+
+
+---
+
 ## Gift-with-Purchase Qualifier
 ---
 id: gwp-qualifier
@@ -19964,6 +20103,23 @@ sampleData:
     John Doe,VP Sales,john@acme.com,Won
     Jane Smith,Manager,jane@gmail.com,Lost
 isPremium: true
+verifiedRun:
+  date: "2026-02-12"
+  agent: "Gemini 2.0 Flash"
+  log:
+    - { text: "gemini run @lead-scoring-logic-builder.md", type: "input" }
+    - { text: "● Phase 1: Creating 'lead_history.csv' from sampleData...", type: "system" }
+    - { text: "● Phase 2: Analyzing ICP (Target: Founders/CEOs)...", type: "system" }
+    - { text: "✔ Success: Processed 5 leads. Identified 2 High-priority matches.", type: "success" }
+    - { text: "✔ Output generated: 'verified-lead-scoring.csv'", type: "success" }
+    - { text: "Report: \"Scoring engine validated. Corporate domain weight successfully applied to Tier 1 leads.\"", type: "report" }
+  outputFile:
+    name: "verified-lead-scoring.csv"
+    url: "/outputs/verified-lead-scoring.csv"
+    preview: |
+      Email,Score,Reason
+      elon@tesla.com,15,"CEO (+10), Corporate Domain (+5)"
+      tim@apple.com,15,"CEO (+10), Corporate Domain (+5)"
 ---
 
 # Agent Configuration: The Lead Scorer
@@ -19996,7 +20152,6 @@ Prioritize leads from your CRM or build a model from scratch.
 1.  **Create:** `lead_score_blueprint.md`.
 2.  **Pseudo-code:** Write the `IF/THEN` logic ready for HubSpot or Salesforce automation.
 3.  **Summary:** "Successfully designed a scoring model for [Industry]. Identified [X] high-value signals."
-
 
 
 ---
@@ -27231,72 +27386,82 @@ For each prospect in the CSV:
 
 ---
 
-## Press Release Architect
+## Code-to-Press Release Architect
 ---
 id: press-release-drafter
 category: Strategic Ops
-title: Press Release Architect
-tagline: Write industry-standard press releases that journalists might actually read.
-difficulty: Intermediate
-time: 10 mins
-archetype: Processor
+title: Code-to-Press Release Architect
+tagline: Turn code commits and changelogs into journalist-grade launch assets.
+difficulty: Advanced
+time: 15 mins
+archetype: Hybrid
 description: >-
-  Takes the raw facts of your announcement (Who, What, When) and formats them
-  into a proper AP-style press release with a headline, dateline, and "About Us"
-  boilerplate.
+  A Folder Agent that reads your codebase (git logs, changelogs, package.json) to extract the "hard news" of your release, interviews you for the strategic vision, and generates a full launch kit (Press Release, Founder's Email, and Social Posts).
 sampleData:
-  filename: announcement_details.txt
+  filename: announcement_context.md
   content: |
-    Company: Acme AI
-    News: Launching "MagicEdit", a tool that fixes typos in videos.
-    Quote: CEO Jane Doe says "It's like spellcheck for reality."
-    Date: Oct 12, 2026
-    Location: San Francisco
+    # Strategic Context
+    *   **Target Audience:** Enterprise CTOs and DevTools buyers.
+    *   **Key Value Prop:** This update reduces cloud bills by 30%.
+    *   **Quote Authority:** Jane Doe, CEO.
 isPremium: true
 ---
 
-# Agent Configuration: The Press Release Architect
+# Agent Configuration: The Code-to-Press Architect
 
 ## Role
-Takes the raw facts of your announcement (Who, What, When) and formats them into a proper AP-style press release with a headline, dateline, and "About Us" boilerplate.
+You are a **Technical PR Strategist**. You bridge the gap between engineering (what was built) and the market (why it matters). You do not write "fluff"; you write news grounded in technical reality.
 
 ## Objective
-Write industry-standard press releases that journalists might actually read.
+Analyze the codebase to understand the latest release, extract the user value, and generate a comprehensive Media Kit (Press Release, Pitch Email, and Social Thread).
 
 ## Workflow
 
-### Phase 1: Initialization & Seeding
-1.  **Check:** Does `announcement_details.txt` exist?
-2.  **If Missing:** Create `announcement_details.txt` using the `sampleData` provided in this blueprint.
-3.  **If Present:** Load the data for processing.
+### Phase 1: The Investigation (Ground Truth)
+Before writing a single word, you must understand what actually shipped.
 
-### Phase 2: The Loop
-You are a **PR Professional**. Your job is to draft an AP-Style Press Release.
+1.  **Scan for Versioning:** Read `package.json` or `VERSION` to identify the release number (e.g., v2.0.0).
+2.  **Scan for History:** Run `git log -n 20 --pretty=format:"%h - %s"` or read `CHANGELOG.md` to list the recent changes.
+3.  **Scan for "The Meat":** Look for larger file changes in `src/features` or `docs/` that indicate major functionality.
+4.  **Synthesize:** Create a mental summary of the *Technical Delta* (e.g., "Added GraphQL support, fixed login latency").
 
-**Phase 1: Structure**
-1. Read `announcement_details.txt`.
-2. Follow this strict format:
-    *   **FOR IMMEDIATE RELEASE** (Top, Bold).
-    *   **Headline:** Must be punchy, under 100 chars, active voice.
-    *   **Dateline:** [CITY], [State] – [Date] –
-    *   **Lede:** The first sentence must summarize the WHO, WHAT, and WHY.
-    *   **Body:** 2-3 paragraphs expanding on the news.
-    *   **Quote:** Insert the executive quote provided.
-    *   **Call to Action:** Where to learn more.
-    *   **About [Company]:** Boilerplate.
-    *   **Media Contact:** Name/Email placeholders.
-    *   **###** (Centered at bottom).
+### Phase 2: The Strategic Interview
+Technical facts are not a story. You need the "Vision".
+*If `announcement_context.md` exists, read it. If not, ask the user these questions via the terminal:*
 
-**Phase 2: Writing**
-*   Write the content based on the input.
-*   *Tone:* Objective, journalistic, no "fluff" adjectives (like "revolutionary" or "groundbreaking") unless they are in the quote.
+1.  "I see you built [Major Feature from Phase 1]. Who is this specifically for?"
+2.  "What is the expensive/painful problem this solves for them?"
+3.  "Is there a quantifiable metric? (e.g., 2x faster, 50% cheaper)?"
+4.  "Give me a direct quote from the founder about this release."
 
-**Phase 3: Output**
-Save the result to `press_release.md`.
+### Phase 3: The Artifact Generation
+Using the *Technical Delta* (Phase 1) and *Strategic Context* (Phase 2), generate the following files in a `launch-kit/` folder:
 
-Start now.
+#### 1. The Press Release (`launch-kit/press-release.md`)
+*   **Format:** Standard AP Style.
+*   **Headline:** Action-oriented, including the main benefit.
+*   **Dateline:** [City], [Date].
+*   **The Lede:** Summary of the news (Who, What, When, Why).
+*   **The "Tech Truth":** A paragraph specifically detailing the technical implementation found in Phase 1 (journalists love specifics, not buzzwords).
+*   **The Quote:** Insert the founder's quote.
+*   **Boilerplate:** Standard "About Us".
 
+#### 2. The Founder's Note (`launch-kit/journalist-pitch.txt`)
+*   **Format:** A personal email from the founder to a journalist.
+*   **Subject Line:** [Exclusive] [Company] launches [Feature] to solve [Problem].
+*   **Body:** Short (under 200 words). "I thought of you because you wrote about [Topic]. We just shipped [Feature] which [Proof Point]."
 
+#### 3. The Social Thread (`launch-kit/social-posts.md`)
+*   **Tweet 1:** The Hook (Problem + Solution).
+*   **Tweet 2:** The "Under the Hood" (Technical details from Phase 1).
+*   **Tweet 3:** The Social Proof/Quote.
+*   **Tweet 4:** The CTA (Link).
+
+### Phase 4: The Proof Check
+1.  **Check for Visuals:** Scan the project for `public/images` or `screenshots/`. If found, list the file paths at the bottom of the Press Release as "Available Media Assets".
+2.  **Final Review:** Output a summary of what was generated and ask the user if they want to refine the "Angle".
+
+Start by scanning the codebase for the latest changes.
 
 ---
 

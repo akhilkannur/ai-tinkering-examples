@@ -18,8 +18,8 @@ export default function FiveHundredWays({ recipes, categories }: MegaListiclePro
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   
-  const title = "500 Ways to Use LLMs | AI Workflow Generator for Sales & Marketing";
-  const description = "Stop prompting, start automating. 500 curated AI blueprints for Sales Ops, SEOs, and Growth Marketers to build autonomous agentic workflows.";
+  const title = "500+ AI Agent Blueprints for Sales & Marketing (2026) | Copy-Paste Workflows";
+  const description = "The largest free library of ready-to-run AI agent prompts. Automate prospecting, SEO, content, and RevOps in minutes. No coding required.";
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com';
   const ogImage = `${baseUrl}/api/og?mode=home`;
 

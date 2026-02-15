@@ -5,16 +5,61 @@
     <link>https://realaiexamples.com</link>
     <description>Practical AI Blueprints, Recipes, and Guides for Operations, Marketing, and Sales.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 05 Feb 2026 05:38:00 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 15 Feb 2026 12:55:26 GMT</lastBuildDate>
     <atom:link href="https://realaiexamples.com/feed.xml" rel="self" type="application/rss+xml" />
     
+    <item>
+      <title><![CDATA[Practical AI Automation: 50 Ideas from the Real Examples Library]]></title>
+      <link>https://realaiexamples.com/blog/50-things-to-automate</link>
+      <guid>https://realaiexamples.com/blog/50-things-to-automate</guid>
+      <pubDate>Mon, 09 Feb 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Looking for high-impact automation opportunities? Here are 50 practical ideas pulled directly from our recipe library that you can implement today.]]></description>
+      <author>Akhil from Real Examples</author>
+    </item>
+  
+    <item>
+      <title><![CDATA[The 'Invisible' SEO Hack: Building an AI Internal Linking Agent]]></title>
+      <link>https://realaiexamples.com/blog/how-i-built-an-internal-linking-agent</link>
+      <guid>https://realaiexamples.com/blog/how-i-built-an-internal-linking-agent</guid>
+      <pubDate>Sat, 07 Feb 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Manual internal linking is a soul-crushing chore. Here is how I built a Folder Agent to map my links automatically, so I never have to search for anchor text again.]]></description>
+      <author>Akhil from Real Examples</author>
+    </item>
+  
+    <item>
+      <title><![CDATA[The 'Smart' Way to Find High-Intent Keywords with Search Console]]></title>
+      <link>https://realaiexamples.com/blog/search-console-api-guide</link>
+      <guid>https://realaiexamples.com/blog/search-console-api-guide</guid>
+      <pubDate>Sat, 07 Feb 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Stop manually checking keyword rankings. Here is how to use automation to pull your top-performing queries directly from Search Console into your own tools.]]></description>
+      <author>Akhil from Real Examples</author>
+    </item>
+  
+    <item>
+      <title><![CDATA[The 'Harden' Loop: How I Turn AI Experiments into Permanent Skills]]></title>
+      <link>https://realaiexamples.com/blog/what-are-ai-skills</link>
+      <guid>https://realaiexamples.com/blog/what-are-ai-skills</guid>
+      <pubDate>Sat, 07 Feb 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Stop treating AI like a one-off chatbot. Here is the exact 'Discovery to Automation' loop I use to turn messy experiments into permanent skills that never fail.]]></description>
+      <author>Akhil from Real Examples</author>
+    </item>
+  
+    <item>
+      <title><![CDATA[The 'Lazy' Way to Build Your Own Google Analytics Reporter]]></title>
+      <link>https://realaiexamples.com/blog/google-analytics-api-guide</link>
+      <guid>https://realaiexamples.com/blog/google-analytics-api-guide</guid>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Stop logging into Google Analytics. Here is the exact script I use to fetch my website's top pages directly in my terminal, without opening a single dashboard.]]></description>
+      <author>Akhil from Real Examples</author>
+    </item>
+  
     <item>
       <title><![CDATA[How I Automated Instagram Direct Publishing (Without Paying for a Scheduler)]]></title>
       <link>https://realaiexamples.com/blog/automating-instagram-direct-publishing</link>
       <guid>https://realaiexamples.com/blog/automating-instagram-direct-publishing</guid>
       <pubDate>Thu, 05 Feb 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[]]></description>
-      <author>Real AI Examples</author>
+      <description><![CDATA[A step-by-step technical guide to building a custom Instagram auto-poster using Puppeteer, Cloudinary, and the Meta Graph API.]]></description>
+      <author>Akhil from Real Examples</author>
     </item>
   
     <item>
@@ -31,16 +76,16 @@
       <link>https://realaiexamples.com/blog/markdown-for-marketers</link>
       <guid>https://realaiexamples.com/blog/markdown-for-marketers</guid>
       <pubDate>Tue, 03 Feb 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Stop using Markdown as a basic notepad. Learn how to architect .md files that both humans and AI agents can execute with 100% accuracy.]]></description>
+      <description><![CDATA[Stop using Markdown as a basic notepad. Learn how to architect .md files that both humans and AI agents can execute with high accuracy.]]></description>
       <author>Akhil from Real Examples</author>
     </item>
   
     <item>
-      <title><![CDATA[The Tinkerer's Guide to Remotion: Building a Video Factory with AI]]></title>
+      <title><![CDATA[The Tinkerer's Guide to Remotion: Building an Automated Video Factory]]></title>
       <link>https://realaiexamples.com/blog/automated-video-with-remotion</link>
       <guid>https://realaiexamples.com/blog/automated-video-with-remotion</guid>
       <pubDate>Sun, 25 Jan 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[What is Remotion? Why is everyone talking about it? And how can you use AI to build a programmatic video pipeline without writing React code?]]></description>
+      <description><![CDATA[How can you use AI to build a programmatic video pipeline without writing code? A guide to turning your data into high-quality marketing assets.]]></description>
       <author>Akhil from Real Examples</author>
     </item>
   
@@ -94,7 +139,7 @@
       <link>https://realaiexamples.com/blog/content-repurposing-engine</link>
       <guid>https://realaiexamples.com/blog/content-repurposing-engine</guid>
       <pubDate>Sun, 18 Jan 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[We recorded a great podcast, got 500 views, and then it died. That felt like a waste. So we built a machine to force-feed that content into every other channel.]]></description>
+      <description><![CDATA[I recorded a great podcast, got 500 views, and then it died. That felt like a waste. So I built a machine to force-feed that content into every other channel.]]></description>
       <author>Akhil from Real Examples</author>
     </item>
   

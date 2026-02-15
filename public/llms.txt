@@ -9,7 +9,7 @@
 - [llms-competitive-intel.txt](https://realaiexamples.com/llms-competitive-intel.txt) - 33 recipes
 - [llms-paid-media.txt](https://realaiexamples.com/llms-paid-media.txt) - 35 recipes
 - [llms-customer-success.txt](https://realaiexamples.com/llms-customer-success.txt) - 42 recipes
-- [llms-seo.txt](https://realaiexamples.com/llms-seo.txt) - 51 recipes
+- [llms-seo.txt](https://realaiexamples.com/llms-seo.txt) - 53 recipes
 - [llms-lead-gen.txt](https://realaiexamples.com/llms-lead-gen.txt) - 73 recipes
 - [llms-cro.txt](https://realaiexamples.com/llms-cro.txt) - 33 recipes
 - [llms-e-commerce.txt](https://realaiexamples.com/llms-e-commerce.txt) - 25 recipes
@@ -49,6 +49,7 @@
 - [Affiliate Application Auto-Screener](https://realaiexamples.com/skills/affiliate-application-auto-screener): Filter out spammy affiliate applications instantly.
 - [The Affiliate Program Launcher](https://realaiexamples.com/skills/affiliate-program-launcher): Build a commission-only sales team.
 - [The Project Architect](https://realaiexamples.com/skills/agent-context-builder): Make any folder AI-ready instantly.
+- [AI Internal Linking Agent](https://realaiexamples.com/skills/ai-internal-linking-agent): Stop manually hunting for anchor text. Let AI map your internal linking strategy.
 - [The AI Manager's Handbook](https://realaiexamples.com/skills/ai-manager-handbook): Teach AI your specific rules once.
 - [The 'Alternative To' Hub Builder](https://realaiexamples.com/skills/alternative-to-builder): Steal traffic from all your competitors at once.
 - [The Alumni Network Miner](https://realaiexamples.com/skills/alumni-network-miner): Find prospects who went to the same university as your executives.
@@ -75,4 +76,3 @@
 - [Basket Correlation Engine](https://realaiexamples.com/skills/basket-analysis-market-basket): People who buy A also buy B.
 - [Content Usage Tracker](https://realaiexamples.com/skills/battlecard-usage-tracker): Which battlecards do reps actually use?
 - [Back-in-Stock Campaigner](https://realaiexamples.com/skills/bestseller-restock-alert): Launch ads when bestsellers return.
-- [Beta Tester Verifier](https://realaiexamples.com/skills/beta-program-active-roster): Are they actually testing?
