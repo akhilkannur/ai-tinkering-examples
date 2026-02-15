@@ -47,8 +47,7 @@ async function runReport() {
       });
     }
   } catch (error) {
-    console.error('
-ERROR fetching data:');
+    console.error('\nERROR fetching data:');
     console.error(error.message);
   }
 }
