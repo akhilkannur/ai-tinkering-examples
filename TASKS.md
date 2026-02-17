@@ -1,3 +1,7 @@
+## Infrastructure Maintenance
+- [ ] **CRITICAL:** Refresh Instagram Page Access Token (Expires ~April 17, 2026).
+- [ ] Review Carousel Generator skill performance.
+
 # Current Task: Website Screenshot Integration for AI Examples
 
 **Goal:** Capture actual screenshots of URLs for the `ai-examples` page instead of generating placeholder AI images.
