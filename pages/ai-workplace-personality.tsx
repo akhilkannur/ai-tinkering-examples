@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 import ArchetypeQuiz from '../components/ArchetypeQuiz';
 import { Activity } from 'lucide-react';
 
@@ -59,8 +58,6 @@ export default function AIWorkplacePersonalityPage() {
           </div>
         </div>
       </main>
-
-      <Footer />
     </div>
   );
 }

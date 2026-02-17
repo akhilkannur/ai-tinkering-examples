@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 import { Terminal, Cpu, Zap, ArrowRight, CheckCircle2, MessageSquare, Download, Command, MousePointer2 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -50,7 +49,7 @@ export default function LearnAIPage() {
                   <Cpu className="text-accent" /> Step 1: Pick Your Tool
                </h2>
                <p className="text-text-secondary mb-8 leading-relaxed">
-                  I recommend **Claude Code** or **Gemini CLI**. These are professional-grade tools that run inside your computer's terminal.
+                  I recommend <strong className="text-white">Claude Code</strong> or <strong className="text-white">Gemini CLI</strong>. These are professional-grade tools that run inside your computer's terminal.
                </p>
 
                <div className="grid md:grid-cols-2 gap-6">
@@ -85,7 +84,7 @@ export default function LearnAIPage() {
                   <Download className="text-accent" /> Step 2: Copy a Skill
                </h2>
                <p className="text-text-secondary mb-8 leading-relaxed">
-                  Browse my library of **500+ AI Skills**. Each skill is a rigid set of instructions that tells the agent exactly how to perform a business task.
+                  Browse my library of <strong className="text-white">500+ AI Skills</strong>. Each skill is a rigid set of instructions that tells the agent exactly how to perform a business task.
                </p>
                <div className="bg-secondary-bg border border-navy-dark p-8 rounded-3xl relative overflow-hidden group">
                   <div className="flex items-center gap-4 mb-6">
@@ -142,7 +141,7 @@ export default function LearnAIPage() {
             <section className="bg-white text-primary-bg rounded-[40px] p-12 md:p-16 text-center">
                <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter italic mb-6">Stuck? I'll do it for you.</h2>
                <p className="text-lg mb-10 max-w-xl mx-auto font-medium">
-                  If the terminal scares you, book an **AI Agent Kickstart Jam**. I'll setup everything via screen share and build your first 3 plays with you.
+                  If the terminal scares you, book an <strong className="text-primary-bg font-bold">AI Agent Kickstart Jam</strong>. I'll setup everything via screen share and build your first 3 plays with you.
                </p>
                <Link href="/agent-setup-service" className="inline-flex items-center gap-3 bg-accent text-white px-10 py-5 rounded-2xl font-black text-xl hover:bg-accent-hover transition-all shadow-2xl">
                   BOOK A SETUP JAM <ArrowRight className="w-5 h-5" />
@@ -153,7 +152,6 @@ export default function LearnAIPage() {
         </div>
       </main>
 
-      <Footer />
     </div>
   );
 }

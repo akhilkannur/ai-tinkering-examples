@@ -471,7 +471,7 @@ export const aiTools: AiTool[] = [
 },
   {
     name: "CleanMark",
-    description: "**Dual Functionality:**   - Remove text watermarks from NotebookLM PDFs (bottom-right corner)   - Remove watermarks from Gemini AI-generated images    🔬 **Advanced Technology:**   - Powered by OpenCV inpainting algorithms for seamless removal   - Directly processes embedded PDF images to maintain resolution   - Smart watermark detection that works on both light and dark backgrounds   - Supports large files up to 100MB    ✨ **User-Friendly Experience:**   - One-click upload and process   - Preview results before downloading   - No software installation required   - Batch processing support   - Fast processing (typically under 30 seconds)",
+    description: "Dual Functionality: - Remove text watermarks from NotebookLM PDFs (bottom-right corner) - Remove watermarks from Gemini AI-generated images. Advanced Technology: - Powered by OpenCV inpainting algorithms for seamless removal - Directly processes embedded PDF images to maintain resolution - Smart watermark detection that works on both light and dark backgrounds - Supports large files up to 100MB. User-Friendly Experience: - One-click upload and process - Preview results before downloading - No software installation required - Batch processing support - Fast processing (typically under 30 seconds)",
     url: "https://geminiwatermarkremover.net/",
     category: "Image Generation",
     tags: {

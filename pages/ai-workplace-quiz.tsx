@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
 import AiQuiz from '../components/AiQuiz'
 import { Terminal, Activity } from 'lucide-react'
 
@@ -36,8 +35,6 @@ export default function AiWorkplaceQuizPage() {
           </div>
         </div>
       </main>
-
-      <Footer />
     </div>
   )
 }

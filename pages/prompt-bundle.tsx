@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 import { 
   Zap, Copy, CheckCircle2, ArrowRight, ShieldCheck, 
   Search, Filter, Sparkles, MessageSquare, Layout, 
@@ -237,15 +236,13 @@ export default function PromptBundlePage() {
                 </div>
                 <div>
                     <h4 className="text-xl font-bold text-white mb-2 italic">What makes these different?</h4>
-                    <p className="text-text-secondary font-light">Most prompt bundles are fluffy. Mine are **Boring**. I focus on high-reliability business logic—cleaning data, auditing competitors, and building content machines that actually work in production.</p>
+                    <p className="text-text-secondary font-light">Most prompt bundles are fluffy. Mine are <strong className="text-white">Boring</strong>. I focus on high-reliability business logic—cleaning data, auditing competitors, and building content machines that actually work in production.</p>
                 </div>
              </div>
           </div>
 
         </div>
       </main>
-
-      <Footer />
     </div>
   );
 }

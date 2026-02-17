@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
 import { Check, ArrowRight, Clock, Star, XCircle, Terminal, Zap, ShieldCheck, FileText, MousePointer2 } from 'lucide-react'
 import { useState } from 'react'
 import dynamic from 'next/dynamic'
@@ -203,7 +202,7 @@ export default function AgentSetupService() {
                   <div>
                      <h4 className="font-bold text-slate-900 text-sm uppercase tracking-tight mb-1">The 48-Hour Guarantee</h4>
                      <p className="text-[11px] text-slate-500 leading-relaxed">
-                        If this doesn't save you at least 10 hours of headache, email me within 48 hours and I'll refund your $99. **No hassle, no questions.**
+                        If this doesn't save you at least 10 hours of headache, email me within 48 hours and I'll refund your $99. <strong className="text-slate-900">No hassle, no questions.</strong>
                      </p>
                   </div>
                </div>
@@ -231,8 +230,6 @@ export default function AgentSetupService() {
           </div>
         </div>
       </main>
-
-      <Footer />
     </div>
   )
 }
