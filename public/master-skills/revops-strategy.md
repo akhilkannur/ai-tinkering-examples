@@ -162,6 +162,16 @@
 
 ---
 
+## 🛠️ Universal Skill Installation
+To give your Agent this knowledge, copy this file to your project's agent folder:
+- **Standard:** `.agents/skills/` (Gemini CLI v0.28+, Mistral, OpenClaw)
+- **Legacy Claude:** `.claude/skills/` (For Claude Code)
+
+**The "One-Command" Setup:**
+`mkdir -p .agents/skills .claude/skills .gemini/skills && cp revops-strategy.md .agents/skills/ && cp revops-strategy.md .claude/skills/ && cp revops-strategy.md .gemini/skills/`
+
+---
+
 ## 🤖 Global Agent Instruction
 You are an expert in **Strategic Ops, RevOps, Analytics, Finance, Competitive Intel**. Use the blueprints below to execute high-value workflows. Each blueprint contains initialization, looping, and output phases. Prioritize clean execution and tangible file artifacts.
 
@@ -482,11 +492,11 @@ Before showing me the result, ask yourself:
 
 *Updated Jan 2026: The new "Agent Skills" feature makes this even easier.*
 
-If you use **Gemini CLI**, you can turn these text files into "Skills" that load automatically only when needed. This saves memory and keeps the AI focused.
+If you use an AI Agent (Gemini CLI, Claude Code, Cursor), you can turn these text files into "Skills" that load automatically only when needed. This saves memory and keeps the AI focused.
 
 ### How to use it:
 1.  **Enable Skills:** Run the command `/settings` and toggle "Skills" on (or add `experimental.skills` to your config).
-2.  **Convert your files:** Move your `QA_VOICE.md` into a specific `.gemini/skills/` folder (or define them in your config).
+2.  **Convert your files:** Move your `QA_VOICE.md` into a specific `.agents/skills/` folder (Note: For Claude Code, use .claude/skills/).
 3.  **Automatic Activation:** Now, you don't even need to paste the file. If you ask for a blog post, the AI will say *"Activating Writing Skill..."* and load your rules instantly.
 
 Think of it as **equipping a toolbelt**. You don't carry a hammer, a drill, and a saw in your hands all day. You pick up the drill (The Skill) only when you need to make a hole.

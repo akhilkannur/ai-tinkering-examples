@@ -61,11 +61,11 @@ Before showing me the result, ask yourself:
 
 *Updated Jan 2026: The new "Agent Skills" feature makes this even easier.*
 
-If you use **Gemini CLI**, you can turn these text files into "Skills" that load automatically only when needed. This saves memory and keeps the AI focused.
+If you use an AI Agent (Gemini CLI, Claude Code, Cursor), you can turn these text files into "Skills" that load automatically only when needed. This saves memory and keeps the AI focused.
 
 ### How to use it:
 1.  **Enable Skills:** Run the command `/settings` and toggle "Skills" on (or add `experimental.skills` to your config).
-2.  **Convert your files:** Move your `QA_VOICE.md` into a specific `.gemini/skills/` folder (or define them in your config).
+2.  **Convert your files:** Move your `QA_VOICE.md` into a specific `.agents/skills/` folder (Note: For Claude Code, use .claude/skills/).
 3.  **Automatic Activation:** Now, you don't even need to paste the file. If you ask for a blog post, the AI will say *"Activating Writing Skill..."* and load your rules instantly.
 
 Think of it as **equipping a toolbelt**. You don't carry a hammer, a drill, and a saw in your hands all day. You pick up the drill (The Skill) only when you need to make a hole.

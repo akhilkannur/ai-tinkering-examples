@@ -1,8 +1,9 @@
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
+import Link from 'next/link'
 import Navbar from '../components/Navbar'
 import dynamic from 'next/dynamic'
-import { Command, ArrowRight, Zap, Target, Search, Heart } from 'lucide-react'
+import { Command, ArrowRight, Zap, Target, Search, Heart, Brain, Cpu, FileText } from 'lucide-react'
 import { getAllRecipes } from '../lib/recipes'
 import { Recipe } from '../lib/cookbook-data'
 import { fetchFeaturedJobs, fetchFeaturedTools, fetchSiteSettings, JobRecord, ToolRecord } from '../lib/airtable'
@@ -195,7 +196,65 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
 
         <FeaturedIn />
 
+        {/* CONTEXT HUB: THE AGENT'S BRAIN */}
+        <div className="bg-primary-bg py-24 border-y border-navy-dark relative overflow-hidden">
+          <div className="absolute top-0 left-0 w-64 h-64 bg-accent/5 blur-[100px] rounded-full pointer-events-none"></div>
+          <div className="container mx-auto px-4 max-w-6xl relative z-10">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-accent/10 border border-accent/20 rounded-full text-accent font-mono text-[10px] uppercase tracking-widest mb-4">
+                <Brain className="w-3 h-3" /> Agent Context Library
+              </div>
+              <h2 className="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight uppercase italic">
+                Give Your Agent a <span className="text-accent italic">PhD.</span>
+              </h2>
+              <p className="text-xl text-text-secondary max-w-2xl mx-auto leading-relaxed">
+                Feeding your agent 500 individual files is "context slop." Use our <strong>Consolidated Master Skills</strong> to give them departmental intelligence in one file.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+              {/* Option 1: Master Skills */}
+              <div className="bg-secondary-bg border border-navy-dark p-8 rounded-3xl hover:border-accent/30 transition-all group">
+                <div className="bg-accent/10 w-12 h-12 rounded-xl flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-white transition-all text-accent">
+                  <Cpu className="w-6 h-6" />
+                </div>
+                <h3 className="text-2xl font-bold mb-4 uppercase">Master Skills (Consolidated)</h3>
+                <p className="text-text-secondary text-sm mb-8 leading-relaxed">
+                  We've grouped 500+ blueprints into 5 departmental context files (Sales, Marketing, RevOps). Perfect for: <br/>
+                  <span className="italic">"From the marketing standpoint, review our GTM plan."</span>
+                </p>
+                <div className="flex items-center gap-4">
+                  <Link href="/context" className="flex-1 bg-white text-black text-center py-3 rounded-xl font-bold hover:bg-slate-200 transition-all flex items-center justify-center gap-2">
+                    Browse Master Skills <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
+              </div>
+
+              {/* Option 2: Docs-to-Context */}
+              <div className="bg-secondary-bg border border-navy-dark p-8 rounded-3xl hover:border-orange-500/30 transition-all group">
+                <div className="bg-orange-500/10 w-12 h-12 rounded-xl flex items-center justify-center mb-6 group-hover:bg-orange-500 group-hover:text-white transition-all text-orange-500">
+                  <FileText className="w-6 h-6" />
+                </div>
+                <h3 className="text-2xl font-bold mb-4 uppercase italic">Docs to Context</h3>
+                <p className="text-text-secondary text-sm mb-8 leading-relaxed">
+                  Turn any SaaS documentation (Apollo, HubSpot, Clay) into a single LLM-optimized Markdown file. Stop copy-pasting docs one by one.
+                </p>
+                <div className="flex items-center gap-4">
+                  <Link href="/generators/docs-to-context" className="flex-1 bg-orange-500 text-white text-center py-3 rounded-xl font-bold hover:bg-orange-600 transition-all flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(249,115,22,0.2)]">
+                    Generate Context <Zap className="w-4 h-4 fill-current" />
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-16 text-center text-xs font-mono text-text-secondary/40">
+              Compatible with <strong>Gemini CLI</strong>, <strong>Claude Code</strong>, <strong>Cursor</strong>, and <strong>Windsurf</strong>.
+            </div>
+          </div>
+        </div>
+
         {/* COOKBOOK GRID */}
+
         <div className="bg-primary-bg pb-24" id="skills">
             <div className="container mx-auto px-4">
                <TerminalCookbook recipes={recipes} />

@@ -84,6 +84,17 @@ async function buildMasterSkills() {
 ---
 
 `;
+    masterContent += `## 🛠️ Universal Skill Installation
+To give your Agent this knowledge, copy this file to your project's agent folder:
+- **Standard:** \`.agents/skills/\` (Gemini CLI v0.28+, Mistral, OpenClaw)
+- **Legacy Claude:** \`.claude/skills/\` (For Claude Code)
+
+**The "One-Command" Setup:**
+\`mkdir -p .agents/skills .claude/skills .gemini/skills && cp ${groupId}.md .agents/skills/ && cp ${groupId}.md .claude/skills/ && cp ${groupId}.md .gemini/skills/\`
+
+---
+
+`;
     masterContent += `## 🤖 Global Agent Instruction
 `;
     masterContent += `You are an expert in **${group.categories.join(', ')}**. Use the blueprints below to execute high-value workflows. Each blueprint contains initialization, looping, and output phases. Prioritize clean execution and tangible file artifacts.

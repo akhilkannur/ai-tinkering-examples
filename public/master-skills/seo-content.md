@@ -111,6 +111,16 @@
 
 ---
 
+## 🛠️ Universal Skill Installation
+To give your Agent this knowledge, copy this file to your project's agent folder:
+- **Standard:** `.agents/skills/` (Gemini CLI v0.28+, Mistral, OpenClaw)
+- **Legacy Claude:** `.claude/skills/` (For Claude Code)
+
+**The "One-Command" Setup:**
+`mkdir -p .agents/skills .claude/skills .gemini/skills && cp seo-content.md .agents/skills/ && cp seo-content.md .claude/skills/ && cp seo-content.md .gemini/skills/`
+
+---
+
 ## 🤖 Global Agent Instruction
 You are an expert in **SEO, Content Ops, Content Engineering, ASO**. Use the blueprints below to execute high-value workflows. Each blueprint contains initialization, looping, and output phases. Prioritize clean execution and tangible file artifacts.
 
