@@ -142,6 +142,17 @@ async function generateSitemap() {
     // 9. Task Generators (New)
     const taskGenerators = ['audit', 'lead-gen', 'competitor-intel', 'pricing', 'sales-automation', 'docs-to-context'];
 
+    // 10. Helper to escape XML characters
+    const escapeXml = (unsafe) => {
+      if (!unsafe) return '';
+      return unsafe.toString()
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&apos;');
+    };
+
     const currentDate = new Date().toISOString();
     let xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">`;
@@ -171,9 +182,9 @@ async function generateSitemap() {
       const ogImageUrl = `${SITE_URL}/api/og?title=${encodeURIComponent(r.title)}&category=${encodeURIComponent(r.category)}&tagline=${encodeURIComponent(r.tagline || '')}`;
       const imageBlock = `
     <image:image>
-      <image:loc>${ogImageUrl.replace(/&/g, '&amp;')}</image:loc>
-      <image:title>${r.title.replace(/&/g, '&amp;')} AI Agent Blueprint</image:title>
-      <image:caption>${(r.tagline || r.title).replace(/&/g, '&amp;')}</image:caption>
+      <image:loc>${escapeXml(ogImageUrl)}</image:loc>
+      <image:title>${escapeXml(r.title)} AI Agent Blueprint</image:title>
+      <image:caption>${escapeXml(r.tagline || r.title)}</image:caption>
     </image:image>`;
 
       // "How To" Page (High Intent)
