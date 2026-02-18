@@ -270,23 +270,23 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
             
             <div className="grid md:grid-cols-3 gap-6">
               <div className="bg-secondary-bg p-6 rounded-xl border border-navy-dark">
-                <h3 className="text-base font-bold mb-2 text-text-color">Which tools work?</h3>
+                <h3 className="text-base font-bold mb-2 text-text-color uppercase italic">Where do I put them?</h3>
                 <p className="text-text-secondary text-sm leading-relaxed">
-                  Claude Code, Gemini CLI, Cursor, Windsurf. They're text files - any agent can read them.
+                  Drop files into <code className="text-accent">.agents/skills/</code>. Most modern agents (Gemini, Mistral) now auto-detect this folder. Use <code className="text-accent">.claude/skills/</code> for Claude Code.
                 </p>
               </div>
 
               <div className="bg-secondary-bg p-6 rounded-xl border border-navy-dark">
-                <h3 className="text-base font-bold mb-2 text-text-color">What if one breaks?</h3>
+                <h3 className="text-base font-bold mb-2 text-text-color uppercase italic">What are Master Skills?</h3>
                 <p className="text-text-secondary text-sm leading-relaxed">
-                  Email me. I'll fix it. I'd rather update the play than have you annoyed.
+                  Instead of 500 small files, we've grouped them into 5 departmental "Master Skills." One file gives your agent the complete knowledge of an entire department.
                 </p>
               </div>
 
               <div className="bg-secondary-bg p-6 rounded-xl border border-navy-dark">
-                <h3 className="text-base font-bold mb-2 text-text-color">Is it safe?</h3>
+                <h3 className="text-base font-bold mb-2 text-text-color uppercase italic">Is it safe?</h3>
                 <p className="text-text-secondary text-sm leading-relaxed">
-                  Plain text files (.md, .csv). No executables. I manually audit every file to prevent prompt injection and ensure zero malicious logic.
+                  100% plain text (.md). No executables or hidden scripts. You can audit every line before giving it to your agent. No data leaves your machine.
                 </p>
               </div>
             </div>
