@@ -972,5 +972,137 @@ export const aiTools: AiTool[] = [
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=GreatCompany.ai&sz=128"
+},
+  {
+    name: "Reply Champion",
+    description: "Reply Champion is an automated Google review management tool built for small business owners who don't have time to respond to every review manually. Google reviews pile up. Customers expect replies. But between running your business and everything else on your plate, responding ...",
+    url: "https://www.replychampion.com",
+    category: "Productivity",
+    tags: {
+        useCase: ["Business"],
+        price: "Free",
+        skill: "Beginner"
+    },
+    image: "/screenshots/reply-champion.png"
+},
+  {
+    name: "Encamera",
+    description: "Encamera is the world's first truly encrypted camera app designed for those who understand that some moments are meant to stay private. Our mission is to give you complete control over your photos and videos with military-grade security that even we or Apple can't access. Store y...",
+    url: "https://encamera.app",
+    category: "Video & Audio",
+    tags: {
+        useCase: ["Business"],
+        price: "Free",
+        skill: "Beginner"
+    },
+    image: "/screenshots/encamera.png"
+},
+  {
+    name: "Resideline",
+    description: "Resideline is an AI powered real estate analysis platform that helps investors quickly identify profitable residential opportunities. Using advanced AVMs, automated valuation models, Resideline estimates after repair value, market rent, and deal level returns so you can underwrit...",
+    url: "https://Resideline.com",
+    category: "Productivity",
+    tags: {
+        useCase: ["Business"],
+        price: "Free",
+        skill: "Beginner"
+    },
+    image: "/screenshots/resideline.png"
+},
+  {
+    name: "Applytrackr",
+    description: "ApplyTrackr is an all-in-one AI-powered job search management platform built to help job seekers stay organized, competitive, and confident throughout their job hunt. Searching for a job today is fragmented and overwhelming - candidates juggle spreadsheets, multiple resume versio...",
+    url: "https://www.applytrackr.com/",
+    category: "Code Assistance",
+    tags: {
+        useCase: ["Business"],
+        price: "Free",
+        skill: "Beginner"
+    },
+    image: "/screenshots/applytrackr.png"
+},
+  {
+    name: "LINO",
+    description: "LINO is a missed call recovery platform built for local service businesses plumbers, HVAC technicians, electricians, salons, dental practices, and other appointment-based businesses that lose revenue every time a call goes unanswered. Here's the problem: when a potential customer...",
+    url: "https://uselino.com/",
+    category: "Code Assistance",
+    tags: {
+        useCase: ["Business"],
+        price: "Free",
+        skill: "Beginner"
+    },
+    image: "/screenshots/lino.png"
+},
+  {
+    name: "HighReach",
+    description: "HighReach helps you create video ads and social content with AI in seconds. Paste your product link generate multiple ready-to-use video and image ads without cameras, editors, or agencies. Built for founders, marketers, and small teams who want to test more creatives faster and ...",
+    url: "https://highreach.ai",
+    category: "Video & Audio",
+    tags: {
+        useCase: ["Business"],
+        price: "Free",
+        skill: "Beginner"
+    },
+    image: "/screenshots/highreach.png"
+},
+  {
+    name: "Ayudo",
+    description: "",
+    url: "https://www.ayudo.ai",
+    category: "Productivity",
+    tags: {
+        useCase: ["Business"],
+        price: "Freemium",
+        skill: "Beginner"
+    },
+    image: "/screenshots/ayudo.png"
+},
+  {
+    name: "LinkPilot",
+    description: "",
+    url: "https://link-pilot.com",
+    category: "Productivity",
+    tags: {
+        useCase: ["Business"],
+        price: "Freemium",
+        skill: "Beginner"
+    },
+    image: "/screenshots/linkpilot.png"
+},
+  {
+    name: "Stick Audio",
+    description: "",
+    url: "https://stick.audio",
+    category: "Productivity",
+    tags: {
+        useCase: ["Business"],
+        price: "Freemium",
+        skill: "Beginner"
+    },
+    image: "/screenshots/stick-audio.png"
+},
+  {
+    name: "DensOps",
+    description: "",
+    url: "https://densops.com",
+    category: "Productivity",
+    tags: {
+        useCase: ["Business"],
+        price: "Freemium",
+        skill: "Beginner"
+    },
+    image: "/screenshots/densops.png"
+},
+  {
+    name: "PNGtoSTL",
+    description: "",
+    url: "https://pngtostl.xyz",
+    category: "Productivity",
+    tags: {
+        useCase: ["Business"],
+        price: "Freemium",
+        skill: "Beginner"
+    },
+    image: "/screenshots/pngtostl.png"
 }
 ];
