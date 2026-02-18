@@ -140,7 +140,7 @@ async function generateSitemap() {
     const toolCollections = ['claude-code', 'gemini-cli', 'chatgpt', 'cursor'];
 
     // 9. Task Generators (New)
-    const taskGenerators = ['audit', 'lead-gen', 'competitor-intel', 'pricing', 'sales-automation'];
+    const taskGenerators = ['audit', 'lead-gen', 'competitor-intel', 'pricing', 'sales-automation', 'docs-to-context'];
 
     const currentDate = new Date().toISOString();
     let xml = `<?xml version="1.0" encoding="UTF-8"?>
