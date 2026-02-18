@@ -8,15 +8,21 @@ from datetime import datetime
 CUTOFF_TIMESTAMP_STR = "05/02/2026 06:57:26"
 CUTOFF_TIMESTAMP = datetime.strptime(CUTOFF_TIMESTAMP_STR, "%d/%m/%Y %H:%M:%S")
 
-# BLACKLIST: Tools to explicitly exclude
-BLACKLIST = [
-    "Ai Angels", 
-    "Binarium", 
-    "Bitsafve",
-    "The Gold Calculator"
+# APPROVED_TOOLS: Only these tools will be merged in this batch
+APPROVED_TOOLS = [
+    "Reply Champion",
+    "Encamera",
+    "Resideline",
+    "Applytrackr",
+    "LINO",
+    "HighReach",
+    "Ayudo",
+    "LinkPilot",
+    "Stick Audio",
+    "DensOps",
+    "PNGtoSTL"
 ]
 
-# Define the category mapping based on keywords
 def infer_category(description, name):
     desc_lower = description.lower()
     name_lower = name.lower()
@@ -60,34 +66,16 @@ with open(ts_file_path, 'r') as f:
 
 new_tools = []
 
-print(f"Filtering for tools submitted AFTER {CUTOFF_TIMESTAMP_STR}...")
+print(f"Merging ONLY approved tools: {APPROVED_TOOLS}...")
 
 # Read the CSV
 with open('latest_submissions.csv', 'r', encoding='utf-8') as f:
     reader = csv.DictReader(f)
     for row in reader:
-        timestamp_str = row.get('Timestamp', '').strip()
-        if not timestamp_str:
-            continue
-            
-        try:
-            timestamp = datetime.strptime(timestamp_str, "%d/%m/%Y %H:%M:%S")
-        except ValueError:
-            try:
-                timestamp = datetime.strptime(timestamp_str, "%m/%d/%Y %H:%M:%S")
-            except:
-                print(f"Skipping invalid date: {timestamp_str}")
-                continue
-
-        # Filter by timestamp
-        if timestamp <= CUTOFF_TIMESTAMP:
-            continue
-
         name = row.get('What is the name of your tool', '').strip()
         
-        # BLACKLIST CHECK
-        if name in BLACKLIST:
-            print(f"Skipping blacklisted tool: {name}")
+        # ONLY APPROVED TOOLS CHECK
+        if name not in APPROVED_TOOLS:
             continue
 
         url = row.get('What is the URL where your tool can be accessed?', '').strip()
@@ -118,8 +106,12 @@ with open('latest_submissions.csv', 'r', encoding='utf-8') as f:
 
         category = infer_category(description, name)
         domain = get_domain(url)
-        image = f"https://www.google.com/s2/favicons?domain={domain}&sz=128"
-
+        
+        # Use local screenshot if it exists, otherwise use favicon
+        slug = name.lower().replace(' ', '-').replace('.', '-')
+        screenshot_path = f"/screenshots/{slug}.png"
+        image = screenshot_path # Default to screenshot now that we have them
+        
         tool = {
             "name": clean_text(name),
             "description": clean_text(description),

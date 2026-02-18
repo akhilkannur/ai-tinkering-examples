@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import Navbar from '../../components/Navbar'
-import Footer from '../../components/Footer'
 import { FileText, Download, Zap, Link as LinkIcon, CheckCircle, Search, Cpu, Brain } from 'lucide-react'
 import { useState } from 'react'
 
@@ -202,7 +201,6 @@ export default function DocContext() {
           </div>
         </div>
 
-        <Footer />
       </div>
     </>
   )
