@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import Navbar from '../../components/Navbar'
-import { FileText, Download, Zap, Link as LinkIcon, CheckCircle, Search, Cpu, Brain } from 'lucide-react'
+import { FileText, Download, Zap, Link as LinkIcon, CheckCircle, Search, Cpu, Brain, ArrowRight } from 'lucide-react'
 import { useState } from 'react'
 
 export default function DocContext() {
@@ -55,41 +55,42 @@ export default function DocContext() {
     <>
       <Head>
         <title>DocContext | Convert Documentation to LLM Context</title>
-        <meta name="description" content="Turn any documentation site into a single Markdown file for Gemini CLI, Claude Code, and Cursor." />
+        <meta name="description" content="Turn any documentation site into a single Markdown file for Gemini CLI, Claude Code, and all major AI agents." />
       </Head>
 
-      <div className="min-h-screen bg-[#0B0F1A] text-white font-sans">
+      <div className="min-h-screen bg-primary-bg text-text-color font-sans selection:bg-accent/30">
         <Navbar />
 
-        {/* HERO SECTION */}
-        <div className="pt-32 pb-16 border-b border-white/5 relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-orange-500/10 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
-          <div className="container mx-auto px-4 max-w-5xl relative z-10">
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-orange-500/10 border border-orange-500/20 text-orange-500 font-mono text-xs uppercase tracking-widest mb-6">
-              <Zap className="w-3 h-3" /> Tool for Operators & Engineers
+        {/* HERO SECTION: BRANDED & PREMIUM */}
+        <div className="pt-32 pb-20 relative overflow-hidden border-b border-white/5">
+          <div className="absolute inset-0 bg-hero-gradient opacity-10 pointer-events-none"></div>
+          <div className="container mx-auto px-4 max-w-5xl relative z-10 text-center">
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-accent/10 border border-accent/20 rounded-full text-accent font-mono text-[10px] uppercase tracking-widest mb-6">
+              <Zap className="w-3 h-3 fill-current" /> Branded Utility Tool
             </div>
-            <h1 className="text-4xl md:text-6xl font-header mb-6 leading-tight tracking-tight uppercase">
-              DOCS TO <span className="text-orange-500">CONTEXT</span>
+            <h1 className="text-5xl md:text-7xl font-black text-white mb-6 tracking-tighter uppercase italic leading-[0.9]">
+              DOCS TO <span className="text-accent italic">CONTEXT</span>
             </h1>
-            <p className="text-xl text-slate-400 font-body max-w-2xl leading-relaxed">
-              Don't manually copy-paste documentation. Enter a URL and get a single, 
-              LLM-optimized <strong>Context File</strong> for your AI Agent in seconds.
+            <p className="text-xl text-text-secondary font-light max-w-2xl mx-auto leading-relaxed">
+              Stop copy-pasting documentation. Enter a domain and get a single, 
+              LLM-optimized <strong className="text-white">Context File</strong> for your AI Agent in seconds.
             </p>
           </div>
         </div>
 
-        {/* TOOL SECTION */}
-        <div className="container mx-auto px-4 max-w-5xl py-16">
-          <div className="bg-slate-900/50 border border-white/10 rounded-3xl p-8 md:p-12 mb-20 shadow-2xl">
-            <form onSubmit={handleGenerate} className="max-w-3xl mx-auto text-center">
-              <h2 className="text-2xl font-bold mb-8 uppercase tracking-wide">Generate Custom Context</h2>
+        {/* TOOL SECTION: MINIMALIST & PROFESSIONAL */}
+        <div className="container mx-auto px-4 max-w-4xl py-20">
+          <div className="bg-secondary-bg border border-navy-dark rounded-[40px] p-8 md:p-16 shadow-2xl relative overflow-hidden group transition-all hover:border-accent/20">
+            <div className="absolute -top-24 -right-24 w-64 h-64 bg-accent/5 blur-[80px] rounded-full pointer-events-none group-hover:bg-accent/10 transition-colors"></div>
+            
+            <form onSubmit={handleGenerate} className="relative z-10">
               <div className="flex flex-col md:flex-row gap-4">
                 <div className="relative flex-1">
-                  <LinkIcon className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500 w-5 h-5" />
+                  <LinkIcon className="absolute left-5 top-1/2 -translate-y-1/2 text-text-secondary/40 w-5 h-5" />
                   <input 
                     type="text" 
-                    placeholder="Enter domain or docs URL (e.g. apollo.io)" 
-                    className="w-full bg-black/50 border border-white/10 rounded-xl py-4 pl-12 pr-4 focus:border-orange-500 outline-none transition-all font-mono text-sm"
+                    placeholder="Enter domain (e.g. apollo.io)" 
+                    className="w-full bg-primary-bg border border-navy-dark rounded-2xl py-5 pl-14 pr-6 focus:border-accent outline-none transition-all font-mono text-sm text-white placeholder:text-text-secondary/30"
                     value={url}
                     onChange={(e) => setUrl(e.target.value)}
                     required
@@ -98,109 +99,115 @@ export default function DocContext() {
                 <button 
                   type="submit"
                   disabled={isGenerating}
-                  className={`bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-xl font-bold transition-all flex items-center justify-center gap-2 whitespace-nowrap ${isGenerating ? 'opacity-50 cursor-not-allowed' : ''}`}
+                  className={`bg-white text-black hover:bg-accent hover:text-white px-10 py-5 rounded-2xl font-black uppercase tracking-tighter transition-all flex items-center justify-center gap-3 transform hover:-translate-y-1 shadow-xl ${isGenerating ? 'opacity-50 cursor-not-allowed' : ''}`}
                 >
                   {isGenerating ? (
                     <>
-                      <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
-                      Crawling Docs...
+                      <div className="w-5 h-5 border-3 border-black/30 border-t-black rounded-full animate-spin"></div>
+                      Crawling...
                     </>
                   ) : (
                     <>
-                      <FileText className="w-5 h-5" />
-                      Generate .md
+                      Generate .md <ArrowRight className="w-5 h-5" />
                     </>
                   )}
                 </button>
               </div>
               
               {error && (
-                <div className="mt-8 p-4 bg-red-500/10 border border-red-500/20 rounded-xl text-red-500 text-sm font-mono">
+                <div className="mt-8 p-4 bg-red-500/5 border border-red-500/20 rounded-xl text-red-500 text-xs font-mono text-center">
                   ⚠️ {error}
                 </div>
               )}
 
               {isFinished && result && (
-                <div className="mt-8 p-6 bg-emerald-500/10 border border-emerald-500/20 rounded-xl animate-in fade-in slide-in-from-bottom-2">
-                  <div className="flex items-center justify-center gap-3 text-emerald-500 font-bold mb-4">
-                    <CheckCircle className="w-6 h-6" /> Generation Complete!
+                <div className="mt-8 p-8 bg-emerald-500/5 border border-emerald-500/20 rounded-[32px] animate-in fade-in slide-in-from-bottom-4">
+                  <div className="flex items-center justify-center gap-3 text-emerald-400 font-bold mb-6 text-sm uppercase tracking-widest">
+                    <CheckCircle className="w-5 h-5" /> Context File Ready
                   </div>
                   <a 
                     href={result.file}
                     download={result.fileName}
-                    className="bg-white text-black px-8 py-3 rounded-lg font-bold hover:bg-slate-200 transition-colors flex items-center justify-center gap-2 mx-auto inline-flex"
+                    className="bg-white text-black px-12 py-4 rounded-xl font-black uppercase tracking-tighter hover:bg-emerald-500 hover:text-white transition-all flex items-center justify-center gap-2 mx-auto inline-flex shadow-xl"
                   >
                     <Download className="w-5 h-5" /> Download {result.fileName}
                   </a>
                 </div>
               )}
               
-              <p className="mt-6 text-slate-500 text-xs font-mono">
-                Supports GitBook, Docusaurus, and most REST API documentation.
+              <p className="mt-8 text-text-secondary/30 text-[10px] font-mono uppercase tracking-[0.2em] text-center">
+                Optimized for Gemini CLI, Claude Code & Cursor
               </p>
             </form>
           </div>
 
-          {/* PRE-MADE LIBRARY */}
-          <div className="mb-20">
-            <div className="flex items-center justify-between mb-8 border-b border-white/5 pb-4">
-              <div className="flex items-center gap-3">
-                <Search className="text-orange-500 w-6 h-6" />
-                <h2 className="text-2xl font-header uppercase">Pre-Baked Library</h2>
+          {/* PRE-MADE LIBRARY: SLEEK GRID */}
+          <div className="mt-32">
+            <div className="flex items-center justify-between mb-12 border-b border-white/5 pb-6">
+              <div className="flex items-center gap-4">
+                <Search className="text-accent w-6 h-6" />
+                <h2 className="text-2xl font-black uppercase italic tracking-tight text-white">Pre-Baked Library</h2>
               </div>
-              <div className="text-xs text-slate-500 font-mono hidden md:block">Updated Weekly</div>
+              <div className="text-[10px] text-text-secondary/40 font-mono uppercase tracking-widest hidden md:block italic">Verified Contexts</div>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {preMadeContexts.map((ctx, i) => (
-                <div key={i} className="bg-slate-900 border border-white/10 p-6 rounded-2xl hover:border-orange-500/30 transition-all group">
-                  <div className="flex justify-between items-start mb-4">
-                    <div className="bg-orange-500/10 text-orange-500 px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider">
-                      {ctx.category}
+                <div key={i} className="bg-secondary-bg border border-navy-dark p-6 rounded-[32px] hover:border-accent/30 transition-all group flex flex-col justify-between h-full">
+                  <div>
+                    <div className="flex justify-between items-start mb-6">
+                      <div className="bg-accent/10 text-accent px-2 py-0.5 rounded font-mono text-[9px] font-bold uppercase tracking-wider">
+                        {ctx.category}
+                      </div>
+                      <div className="text-text-secondary/30 text-[9px] font-mono">{ctx.size}</div>
                     </div>
-                    <div className="text-slate-500 text-[10px] font-mono">{ctx.size}</div>
+                    <h3 className="text-lg font-bold mb-8 text-white group-hover:text-accent transition-colors leading-tight uppercase italic">
+                      {ctx.name}
+                    </h3>
                   </div>
-                  <h3 className="text-lg font-bold mb-6 text-white group-hover:text-orange-500 transition-colors">
-                    {ctx.name}
-                  </h3>
                   <a 
                     href={ctx.file}
-                    className="w-full bg-white/5 border border-white/10 text-white text-center py-3 rounded-lg font-bold text-sm flex items-center justify-center gap-2 hover:bg-white hover:text-black transition-all"
+                    className="w-full bg-primary-bg border border-navy-dark text-text-secondary text-center py-3 rounded-xl font-bold text-xs flex items-center justify-center gap-2 hover:bg-white hover:text-black transition-all uppercase tracking-widest"
                     download
                   >
-                    <Download className="w-4 h-4" /> Download Context
+                    <Download className="w-4 h-4" /> Get Context
                   </a>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* WHY IT WORKS */}
-          <div className="grid md:grid-cols-3 gap-12 border-t border-white/5 pt-20">
-            <div>
-              <Cpu className="text-orange-500 w-8 h-8 mb-4" />
-              <h3 className="text-xl font-header uppercase mb-4">Agent Optimized</h3>
-              <p className="text-slate-400 font-body text-sm leading-relaxed">
-                Markdown format is the "native tongue" of LLMs. It preserves hierarchical structures like headers and lists that "Raw Text" destroys.
+          {/* VALUE PROP GRID */}
+          <div className="grid md:grid-cols-3 gap-12 mt-32 border-t border-white/5 pt-20">
+            <div className="text-center md:text-left">
+              <div className="bg-accent/10 w-10 h-10 rounded-lg flex items-center justify-center mb-6 text-accent mx-auto md:mx-0">
+                <Cpu className="w-5 h-5" />
+              </div>
+              <h3 className="text-lg font-black uppercase italic mb-4 text-white tracking-tight">Agent Optimized</h3>
+              <p className="text-text-secondary text-sm leading-relaxed font-light">
+                Markdown is the native tongue of LLMs. We preserve hierarchy and structure that raw text copy-pastes destroy.
               </p>
             </div>
-            <div>
-              <Brain className="text-orange-500 w-8 h-8 mb-4" />
-              <h3 className="text-xl font-header uppercase mb-4">Full Context Memory</h3>
-              <p className="text-slate-400 font-body text-sm leading-relaxed">
-                Search/RAG only gives the AI snippets. Context files give the AI the "Big Picture" of the entire API architecture.
+            <div className="text-center md:text-left">
+              <div className="bg-accent/10 w-10 h-10 rounded-lg flex items-center justify-center mb-6 text-accent mx-auto md:mx-0">
+                <Brain className="w-5 h-5" />
+              </div>
+              <h3 className="text-lg font-black uppercase italic mb-4 text-white tracking-tight">Full Context</h3>
+              <p className="text-text-secondary text-sm leading-relaxed font-light">
+                Avoid RAG snippet failures. Give your agent the "Big Picture" architecture of any API or SaaS tool.
               </p>
             </div>
-            <div>
-              <Zap className="text-orange-500 w-8 h-8 mb-4" />
-              <h3 className="text-xl font-header uppercase mb-4">Zero Friction</h3>
-              <p className="text-slate-400 font-body text-sm leading-relaxed">
-                Instead of 50 browser tabs, give your agent one file. Perfect for Gemini CLI, Claude Code, and Cursor.
+            <div className="text-center md:text-left">
+              <div className="bg-accent/10 w-10 h-10 rounded-lg flex items-center justify-center mb-6 text-accent mx-auto md:mx-0">
+                <Zap className="w-5 h-5" />
+              </div>
+              <h3 className="text-lg font-black uppercase italic mb-4 text-white tracking-tight">Zero Friction</h3>
+              <p className="text-text-secondary text-sm leading-relaxed font-light">
+                One file vs 50 browser tabs. The professional choice for Gemini CLI, Claude Code, and Cursor workflows.
               </p>
             </div>
           </div>
         </div>
-
       </div>
     </>
   )
