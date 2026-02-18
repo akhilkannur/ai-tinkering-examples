@@ -269,24 +269,6 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
           </div>
         </div>
 
-        {/* SETUP SERVICE CTA */}
-        <div className="bg-accent text-white py-16">
-          <div className="container mx-auto px-4 max-w-4xl text-center">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight uppercase">
-              Terminal giving you a headache?
-            </h2>
-            <p className="text-xl mb-8 opacity-90 font-sans max-w-2xl mx-auto leading-relaxed">
-              Skip the technical setup. I'll remotely install and configure Gemini CLI and Claude Code on your machine. First 10 setups for $99.
-            </p>
-            <a 
-              href="/agent-setup-service" 
-              className="inline-block bg-white text-accent hover:bg-gray-100 font-extrabold px-10 py-4 rounded-lg transition-all text-xl uppercase tracking-widest shadow-xl transform hover:-translate-y-1"
-            >
-              Book Remote Setup <ArrowRight className="inline-block w-6 h-6 ml-2" />
-            </a>
-          </div>
-        </div>
-
         {/* NEWSLETTER */}
         <div className="bg-secondary-bg text-text-color py-24 border-t border-navy-dark" id="newsletter">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
