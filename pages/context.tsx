@@ -121,13 +121,3 @@ export default function ContextLibrary() {
     </div>
   );
 }
-          
-          <div className="mt-8 text-center text-sm text-text-secondary bg-navy-light/30 p-4 rounded-lg">
-            <CheckCircle className="w-4 h-4 inline mr-2 text-green-500" />
-            Compatible with <strong>Gemini CLI</strong>, <strong>Claude Code</strong>, and <strong>Cursor</strong>.
-          </div>
-        </div>
-      </main>
-    </div>
-  );
-}
