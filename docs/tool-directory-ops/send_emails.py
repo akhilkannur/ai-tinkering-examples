@@ -141,7 +141,18 @@ ALREADY_SENT = {
     "jaredcoffman54@gmail.com",
     "eleidonapp@gmail.com",
     "champsignalofficial@gmail.com",
-    "great@greatcompany.ai"
+    "great@greatcompany.ai",
+    "ReplyChampion@gmail.com",
+    "mihaiencamera@gmail.com",
+    "jeffreybatista867@gmail.com",
+    "jerryopande27@gmail.com",
+    "contact@uselino.com",
+    "nikhil.highreach@gmail.com",
+    "shashwat@ayudo.ai",
+    "linkpilot30@gmail.com",
+    "stickaudiovideo@gmail.com",
+    "launch@densops.com",
+    "daniel1398.santos@gmail.com"
 }
 
 def slugify(text):
