@@ -119,11 +119,11 @@ export default function Footer() {
                 <Cpu className="w-3 h-3 text-accent" /> Optimized_for:
             </div>
             <div className="flex items-center gap-4 text-[9px] font-mono font-bold text-white uppercase tracking-widest opacity-60">
-                <span>Gemini_2.0</span>
-                <span className="text-accent">/</span>
                 <span>Claude_Code</span>
                 <span className="text-accent">/</span>
-                <span>Cursor</span>
+                <span>Gemini_CLI</span>
+                <span className="text-accent">/</span>
+                <span>All_Major_Agentic_Tools</span>
             </div>
           </div>
         </div>
