@@ -490,4 +490,52 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     Sponsored: false,
     sponsor: null
   },
+  {
+    id: "austen-ai-design-secrets",
+    title: "How to Force AI to Design Beautifully",
+    slug: "austen-ai-design-secrets",
+    summary: "Austen Allred asked for everyone's secrets on how to force AI to design something actually beautiful. There are some interesting responses in the thread that won't blow your mind, but they're simple and effective.",
+    screenshots: [
+      {
+        url: "/images/examples/ai-automation-example-ai-tool-usage-tip.webp",
+        filename: "ai-automation-example-ai-tool-usage-tip.webp",
+        thumbnails: {
+          small: { url: "/images/examples/ai-automation-example-ai-tool-usage-tip.webp" },
+          large: { url: "/images/examples/ai-automation-example-ai-tool-usage-tip.webp" }
+        }
+      }
+    ],
+    category: "Design Ops",
+    publish_date: "2026-02-17",
+    original_link: "https://x.com/Austen/status/2023629287350309251",
+    author_name: "Austen Allred",
+    author_link: "https://x.com/Austen",
+    tags: ["Design", "Prompt Engineering", "UI/UX"],
+    Sponsored: false,
+    sponsor: null
+  },
+  {
+    id: "oliverhenry-openclaw-content-creation-workflow",
+    title: "OpenClaw Content Creation Workflow",
+    slug: "oliverhenry-openclaw-content-creation-workflow",
+    summary: "A highly effective content creation workflow designed for OpenClaw, but adaptable to any platform. This blueprint streamlines high-volume output while maintaining quality across social channels.",
+    screenshots: [
+      {
+        url: "/images/examples/ai-automation-example-openclaw-content-creation-workflow.webp",
+        filename: "ai-automation-example-openclaw-content-creation-workflow.webp",
+        thumbnails: {
+          small: { url: "/images/examples/ai-automation-example-openclaw-content-creation-workflow.webp" },
+          large: { url: "/images/examples/ai-automation-example-openclaw-content-creation-workflow.webp" }
+        }
+      }
+    ],
+    category: "Content Ops",
+    publish_date: "2026-02-18",
+    original_link: "https://x.com/oliverhenry/status/2022011925903667547",
+    author_name: "Nathan Flurry",
+    author_link: "https://x.com/oliverhenry",
+    tags: ["Automation"],
+    Sponsored: false,
+    sponsor: null
+  },
 ];

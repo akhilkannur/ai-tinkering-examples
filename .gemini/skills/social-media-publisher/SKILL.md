@@ -40,3 +40,4 @@ node scripts/post-to-pinterest.js [recipe-id]
 ## Policy
 *   **Preview First**: Always show the user the generated caption and the Cloudinary image URL (if available) before confirming the final API push.
 *   **Batching**: If the user wants a "Batch Post," pick 3-5 random recipes and loop the commands.
+*   **Human Style**: Avoid "AI slop" phrases (e.g., "highly effective", "goldmine", "game-changer"). Use a direct, conversational tone that sounds like a human sharing a tip. (e.g., "There are some interesting responses which won't blow your mind but are simple and effective.")
