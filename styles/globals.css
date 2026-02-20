@@ -1,299 +1,112 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Performance optimizations */
-html {
-  /* Enable font display swap for better performance */
-  font-display: swap;
-  /* Smooth scrolling */
-  scroll-behavior: smooth;
+@layer base {
+  body {
+    @apply bg-primary-bg text-black antialiased font-sans;
+    background-image: radial-gradient(#000 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display uppercase;
+  }
 }
 
-html, body, #__next { 
-  height: 100%; 
-}
-
-body { 
-  @apply bg-primary-bg text-text-color antialiased; 
-  /* Digital Workshop Grid Pattern */
-  background-image: 
-    linear-gradient(to right, rgba(242, 241, 236, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(242, 241, 236, 0.05) 1px, transparent 1px);
-  background-size: 40px 40px;
+@layer components {
+  .brutalist-shadow {
+    box-shadow: 6px 6px 0px 0px #000;
+  }
   
-  /* Optimize font rendering */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-}
-
-/* Improve text legibility */
-* {
-  box-sizing: border-box;
-}
-
-/* Optimize image loading */
-img {
-  /* Prevent layout shift during image loading */
-  height: auto;
-  /* Optimize image rendering */
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
-}
-
-/* Typography optimizations */
-h1 { 
-  @apply text-3xl font-extrabold;
-  /* Prevent font flash */
-  font-display: block;
-}
-
-h2 { 
-  @apply text-xl font-semibold;
-  font-display: block;
-}
-
-/* Card component with enhanced performance */
-.card { 
-  @apply border border-navy-dark rounded-2xl p-4 bg-secondary-bg shadow-custom-light; /* Updated for dark theme */
-  /* Use transform3d for better performance */
-  transform: translate3d(0, 0, 0);
-  /* Optimize repaints */
-  will-change: transform, box-shadow;
-  /* Smooth transitions */
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.card:hover {
-  @apply shadow-xl shadow-accent/20; /* Updated for dark theme */
-  /* Use GPU acceleration */
-  transform: translate3d(0, -2px, 0) scale(1.02);
-}
-
-/* Line clamp utilities with better performance */
-.line-clamp-2 {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.line-clamp-3 {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-/* Modal optimizations */
-.modal-backdrop {
-  /* Use backdrop-filter for better performance */
-  backdrop-filter: blur(8px);
-  /* Optimize compositing */
-  will-change: opacity;
-}
-
-/* Skeleton loading animation */
-@keyframes shimmer {
-  0% {
-    background-position: -200px 0;
+  .brutalist-shadow-sm {
+    box-shadow: 3px 3px 0px 0px #000;
   }
-  100% {
-    background-position: calc(200px + 100%) 0;
+
+  .brutalist-shadow-hover {
+    @apply transition-all duration-200;
+  }
+
+  .brutalist-shadow-hover:hover {
+    box-shadow: 2px 2px 0px 0px #000;
+    transform: translate(4px, 4px);
+  }
+
+  .brutalist-card {
+    @apply bg-white border-4 border-black p-6 brutalist-shadow;
+  }
+
+  .marquee-container {
+    @apply overflow-hidden white-space-nowrap bg-punk-lime border-y-4 border-black py-4;
+  }
+
+  .marquee-content {
+    @apply inline-block font-display text-2xl uppercase tracking-widest animate-marquee;
   }
 }
 
-.skeleton {
-  background: linear-gradient(90deg, #1e293b 25%, #0f172a 37%, #1e293b 63%); /* Updated for dark theme */
-  background-size: 400px 100%;
-  animation: shimmer 1.5s ease-in-out infinite;
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
-/* Loading states */
-.loading-pulse {
-  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+.animate-marquee {
+  animation: marquee 20s linear infinite;
 }
 
-@keyframes pulse {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-}
-
-/* Focus styles for accessibility */
-button:focus-visible,
-input:focus-visible,
-select:focus-visible {
-  outline: 2px solid #6366f1; /* Updated to accent color */
-  outline-offset: 2px;
-}
-
-/* Optimize scrollbar on webkit browsers */
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-
-::-webkit-scrollbar-track {
-  background: #0f172a; /* Dark track */
-}
-
-::-webkit-scrollbar-thumb {
-  background: #334155; /* Darker thumb */
-  border-radius: 3px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #475569; /* Darker thumb hover */
-}
-
-/* Modal enter/exit animations */
-.modal-enter {
-  opacity: 0;
-  transform: scale(0.95) translateY(20px);
-}
-
-.modal-enter-active {
-  opacity: 1;
-  transform: scale(1) translateY(0);
-  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal-exit {
-  opacity: 1;
-  transform: scale(1) translateY(0);
-}
-
-.modal-exit-active {
-  opacity: 0;
-  transform: scale(0.95) translateY(20px);
-  transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Grid layout optimizations */
-.examples-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  /* Optimize grid performance */
-  contain: layout style paint;
-}
-
-/* Image container optimizations */
-.image-container {
-  /* Prevent layout shift */
-  aspect-ratio: 16 / 9;
+.glitch-text {
   position: relative;
-  overflow: hidden;
-  /* Optimize rendering */
-  contain: layout style paint;
 }
 
-/* Reduced motion preferences */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
+.glitch-text::before, .glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
-/* High contrast mode support */
-@media (prefers-contrast: high) {
-  .card {
-    border-width: 2px;
-    border-color: #e2e8f0; /* Light border in high contrast */
-  }
-  
-  button {
-    border: 2px solid currentColor;
-  }
+.glitch-text::before {
+  left: 2px;
+  text-shadow: -1px 0 #ff00c1;
+  clip: rect(44px, 450px, 56px, 0);
+  animation: glitch-anim 5s infinite linear alternate-reverse;
 }
 
-/* Dark mode optimizations (if implementing) */
-@media (prefers-color-scheme: dark) {
-  /* This block can be adjusted if full dark mode toggle is implemented */
+.glitch-text::after {
+  left: -2px;
+  text-shadow: -1px 0 #00fff9;
+  clip: rect(44px, 450px, 56px, 0);
+  animation: glitch-anim2 5s infinite linear alternate-reverse;
 }
 
-.custom-shadow {
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Re-evaluate if this is still needed */
+@keyframes glitch-anim {
+  0% { clip: rect(14px, 9999px, 12px, 0); }
+  5% { clip: rect(84px, 9999px, 4px, 0); }
+  10% { clip: rect(2px, 9999px, 86px, 0); }
+  15% { clip: rect(6px, 9999px, 20px, 0); }
+  20% { clip: rect(54px, 9999px, 27px, 0); }
+  100% { clip: rect(32px, 9999px, 66px, 0); }
 }
 
-.grid-dots-pattern {
-  background-image: radial-gradient(#1e293b 10%, transparent 10%); /* Updated for dark theme */
-  background-size: 10px 10px;
-  background-position: 0 0;
-  opacity: 0.4;
+@keyframes glitch-anim2 {
+  0% { clip: rect(84px, 9999px, 12px, 0); }
+  5% { clip: rect(14px, 9999px, 4px, 0); }
+  10% { clip: rect(6px, 9999px, 86px, 0); }
+  15% { clip: rect(2px, 9999px, 20px, 0); }
+  20% { clip: rect(32px, 9999px, 27px, 0); }
+  100% { clip: rect(54px, 9999px, 66px, 0); }
 }
 
-.gradient-border {
-  border: 1px solid transparent;
-  border-image: linear-gradient(90deg, #6366f1, #8b5cf6) 1;
+::-webkit-scrollbar {
+  width: 12px;
 }
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+::-webkit-scrollbar-track {
+  background: #fff;
+  border-left: 2px solid #000;
 }
-.fade-in {
-  animation: fadeIn 0.5s ease-in-out;
-}
-@keyframes blob {
-  0% { transform: translate(0px, 0px) scale(1); }
-  33% { transform: translate(30px, -50px) scale(1.1); }
-  66% { transform: translate(-20px, 20px) scale(0.9); }
-  100% { transform: translate(0px, 0px) scale(1); }
-}
-.animate-blob { animation: blob 7s infinite; }
-.animation-delay-2000 { animation-delay: 2s; }
-.animation-delay-4000 { animation: delay 4s; }
-.hero-container {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-  gap: 2rem !important;
-}
-
-.hero-text {
-  flex: 1 !important;
-  max-width: 50% !important;
-}
-
-.hero-image {
-  flex: 1 !important;
-  max-width: 50% !important;
-  display: flex !important;
-  justify-content: center !important;
-}
-
-/* Build Club Theme Overrides */
-.build-club-theme nav {
-  background-color: rgba(192, 57, 43, 0.95) !important;
-  backdrop-blur: 10px;
-}
-
-.build-club-theme nav .text-text-secondary {
-  color: rgba(255, 253, 231, 0.7) !important;
-}
-
-.build-club-theme nav .text-text-secondary:hover {
-  color: #FFFDE7 !important;
-}
-
-.build-club-theme nav .text-slate-100 {
-  color: #FFFDE7 !important;
-}
-
-.build-club-theme nav .border-white\/5 {
-  border-color: rgba(0, 0, 0, 0.1) !important;
+::-webkit-scrollbar-thumb {
+  background: #000;
+  border: 2px solid #fff;
 }

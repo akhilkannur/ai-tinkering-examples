@@ -8,6 +8,7 @@ import ExampleModal from '../../components/ExampleModal'
 import { fetchEnrichedExamples, EnrichedExampleRecord } from '../../lib/airtable'
 import { localSocialExamples } from '../../lib/social-examples-data'
 import { generateItemListSchema } from '../../lib/seo-utils'
+import { Zap, Search, ArrowRight } from 'lucide-react'
 
 const INITIAL_DISPLAY_COUNT = 12; // Define initial display count
 
@@ -84,39 +85,103 @@ export default function ExamplesPage({ examples, categories, itemListSchema }: E
         )}
       </Head>
 
-      <div className="min-h-screen bg-primary-bg font-sans text-text-color">
+      <style jsx global>{`
+        body {
+            font-family: 'Space Mono', monospace;
+            background-color: #f0f0f0;
+            background-image: radial-gradient(#000 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .font-display {
+            font-family: 'Archivo Black', sans-serif;
+        }
+        .brutalist-shadow {
+            box-shadow: 6px 6px 0px 0px #000;
+        }
+        .brutalist-shadow-sm {
+            box-shadow: 3px 3px 0px 0px #000;
+        }
+        .glitch-text {
+            position: relative;
+        }
+        .glitch-text::before, .glitch-text::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .glitch-text::before {
+            left: 2px;
+            text-shadow: -1px 0 #ff00c1;
+            clip: rect(44px, 450px, 56px, 0);
+            animation: glitch-anim 5s infinite linear alternate-reverse;
+        }
+        .glitch-text::after {
+            left: -2px;
+            text-shadow: -1px 0 #00fff9;
+            clip: rect(44px, 450px, 56px, 0);
+            animation: glitch-anim2 5s infinite linear alternate-reverse;
+        }
+        @keyframes glitch-anim {
+            0% { clip: rect(14px, 9999px, 12px, 0); }
+            5% { clip: rect(84px, 9999px, 4px, 0); }
+            10% { clip: rect(2px, 9999px, 86px, 0); }
+            15% { clip: rect(6px, 9999px, 20px, 0); }
+            20% { clip: rect(54px, 9999px, 27px, 0); }
+            100% { clip: rect(32px, 9999px, 66px, 0); }
+        }
+      `}</style>
+
+      <div className="min-h-screen font-mono text-black selection:bg-[#ff00ff] selection:text-white">
         <Navbar />
         
-        <header className="max-w-6xl mx-auto px-4 pt-32 pb-16 text-center">
-          <h1 className="text-4xl md:text-5xl font-headline font-bold text-text-color mb-6 tracking-tight leading-tight uppercase">
-            Curated <span className="text-accent">Real AI Examples</span>
+        <header className="max-w-6xl mx-auto px-4 pt-32 pb-16 text-center border-b-4 border-black bg-white mb-12 relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-32 h-32 bg-[#ff00ff] opacity-10 blur-xl"></div>
+          <div className="absolute bottom-0 left-0 w-32 h-32 bg-[#ccff00] opacity-10 blur-xl"></div>
+          
+          <div className="inline-block bg-black text-white px-3 py-1 text-xs font-bold uppercase tracking-[0.2em] mb-6 transform -rotate-1">
+            Real-World Implementations
+          </div>
+          
+          <h1 className="font-display text-4xl md:text-6xl text-black mb-6 uppercase tracking-tight leading-tight glitch-text" data-text="CURATED REAL AI EXAMPLES">
+            Curated <span className="text-[#ff00ff]">Real AI Examples</span>
           </h1>
-          <p className="text-lg text-text-color/80 max-w-2xl mx-auto mb-8 leading-relaxed">
+          <p className="text-xl font-bold max-w-2xl mx-auto mb-8 leading-relaxed border-l-4 border-[#ccff00] pl-6 py-2 bg-gray-50">
             I cut through the Twitter hype to find AI examples you can actually use. No magic, just better prompts.
           </p>
         </header>
 
         {/* Category Filter */}
-        <section className="max-w-6xl mx-auto px-4">
-          <CategoryFilter
-            categories={categories}
-            selectedCategory={selectedCategory}
-            onSelect={setSelectedCategory}
-          />
+        <section className="max-w-6xl mx-auto px-4 mb-12">
+          <div className="bg-white border-4 border-black p-6 brutalist-shadow relative">
+            <div className="absolute -top-4 -left-4 bg-black text-[#ccff00] px-3 py-1 font-display text-xs uppercase border-2 border-black">Filter by</div>
+            <CategoryFilter
+              categories={categories}
+              selectedCategory={selectedCategory}
+              onSelect={setSelectedCategory}
+            />
 
-          {/* Results Count */}
-          <div className="mt-4 mb-6">
-            <p className="text-sm text-text-color/80">
-              {filteredByCategory.length} example{filteredByCategory.length !== 1 ? 's' : ''}
-              {selectedCategory !== 'All' && ` in ${selectedCategory}`}
-            </p>
+            {/* Results Count */}
+            <div className="mt-6 flex items-center justify-between border-t-2 border-black pt-4">
+              <p className="text-sm font-black uppercase tracking-widest">
+                <span className="bg-black text-white px-2 py-0.5 mr-2">{filteredByCategory.length}</span>
+                Matches {selectedCategory !== 'All' && ` in ${selectedCategory}`}
+              </p>
+              <div className="flex gap-2">
+                <div className="w-3 h-3 bg-black"></div>
+                <div className="w-3 h-3 bg-[#ff00ff]"></div>
+                <div className="w-3 h-3 bg-[#ccff00]"></div>
+              </div>
+            </div>
           </div>
         </section>
 
         {/* Examples Grid */}
-        <main className="max-w-6xl mx-auto px-4 pb-12">
+        <main className="max-w-6xl mx-auto px-4 pb-24">
           {examplesToDisplay.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {examplesToDisplay.map((example, index) => (
                 <ExampleCard
                   key={example.id}
@@ -127,29 +192,30 @@ export default function ExamplesPage({ examples, categories, itemListSchema }: E
               ))}
             </div>
           ) : (
-            <div className="text-center py-12">
-              <p className="text-text-secondary mb-2">No examples found</p>
-              <p className="text-sm text-text-secondary mb-4">
+            <div className="text-center py-20 bg-white border-4 border-black brutalist-shadow">
+              <Search className="w-16 h-16 mx-auto mb-6 text-gray-300" />
+              <p className="font-display text-2xl text-black mb-4 uppercase">No examples found</p>
+              <p className="font-bold text-gray-600 mb-8 uppercase tracking-widest text-sm">
                 Try adjusting your search or category filter
               </p>
               <button
                 onClick={() => {
                   setSelectedCategory('All')
                 }}
-                className="text-accent hover:text-accent underline"
+                className="bg-[#ccff00] border-2 border-black px-8 py-3 font-display uppercase brutalist-shadow-sm hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all"
               >
-                Clear filters
+                Clear all filters
               </button>
             </div>
           )}
 
           {hasMoreExamples && (
-            <div className="text-center mt-8">
+            <div className="text-center mt-16">
               <button
                 onClick={handleLoadMore}
-                className="bg-accent text-white px-6 py-3 rounded-full font-bold text-lg shadow-lg hover:bg-pink-600 transition-all duration-300 transform hover:scale-105"
+                className="bg-[#ff00ff] text-white border-4 border-black px-12 py-6 font-display text-2xl uppercase brutalist-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all flex items-center justify-center gap-4 mx-auto"
               >
-                Show More Stuff
+                Show More Stuff <Zap className="w-6 h-6 fill-current" />
               </button>
             </div>
           )}
@@ -212,7 +278,7 @@ export const getStaticProps: GetStaticProps<ExamplesPageProps> = async () => {
     }
 
     // 4. Split and Interleave
-    // We put the picked "Free" items first, then interleave with Premium
+    // We put the picked \"Free\" items first, then interleave with Premium
     const freePool = dateSorted.filter(ex => freeSet.has(ex.id));
     const premiumPool = dateSorted.filter(ex => !freeSet.has(ex.id));
 

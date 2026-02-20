@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import type { ExampleRecord, SponsorRecord } from "../lib/airtable";
 import Image from "next/image";
-import { Clock } from "lucide-react";
+import { Clock, ArrowRight } from "lucide-react";
 import { optimizeImageUrl } from "../utils/cloudinary";
 
 interface ExampleCardProps {
@@ -49,43 +49,51 @@ export default function ExampleCard({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
       transition={{ duration: 0.5 }}
-      className={`card group cursor-pointer relative flex flex-col bg-secondary-bg rounded-xl overflow-hidden border border-navy-dark transition-all duration-300 ${
-        isPremium ? 'opacity-90' : 'hover:border-accent/50 hover:shadow-[0_0_30px_rgba(244,63,94,0.15)]'
+      className={`card group cursor-pointer relative flex flex-col bg-white border-4 border-black transition-all duration-300 brutalist-shadow hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none ${
+        isPremium ? 'opacity-90' : ''
       }`}
+      onClick={handleCardClick}
     >
+      {/* Category Badge */}
+      {example.category && (
+        <div className="absolute top-4 left-4 z-30 bg-black text-[#ccff00] px-2 py-0.5 text-[10px] font-display uppercase border-2 border-black">
+          {example.category}
+        </div>
+      )}
+
       {/* Premium Lock Overlay */}
       {isPremium && (
-        <div className="absolute inset-0 z-20 flex flex-col items-center justify-center bg-primary-bg/60 backdrop-blur-[2px] text-center p-4">
-          <div className="bg-navy-dark/90 p-4 rounded-full mb-3 shadow-lg border border-accent/20">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-accent">
+        <div className="absolute inset-0 z-20 flex flex-col items-center justify-center bg-black/80 backdrop-blur-[1px] text-center p-4">
+          <div className="bg-white p-4 border-4 border-black mb-3 shadow-lg">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="text-black">
               <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
               <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
             </svg>
           </div>
-          <span className="text-accent font-bold tracking-widest uppercase text-sm bg-primary-bg px-3 py-1 rounded border border-accent/20">Premium Example</span>
+          <span className="text-[#ff00ff] font-display tracking-widest uppercase text-xs bg-white px-3 py-1 border-2 border-black">Premium Example</span>
         </div>
       )}
 
-      <div className="relative z-10 flex-grow" onClick={handleCardClick}>
-        <div className="relative w-full h-48 sm:h-56 overflow-hidden bg-primary-bg border-b border-navy-dark">
+      <div className="relative z-10 flex-grow">
+        <div className="relative w-full h-48 sm:h-56 overflow-hidden bg-gray-100 border-b-4 border-black">
           {!imageUrl || imageStatus === 'error' ? (
-            <div className="absolute inset-0 bg-secondary-bg flex flex-col items-center justify-center gap-2 opacity-50">
-              <svg className="w-12 h-12 text-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            <div className="absolute inset-0 bg-gray-50 flex flex-col items-center justify-center gap-2 opacity-50">
+              <svg className="w-12 h-12 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
             </div>
           ) : (
             <>
               {imageStatus === 'loading' && !blurImageUrl && (
-                <div className="absolute inset-0 bg-secondary-bg flex items-center justify-center">
-                  <div className="text-text-secondary text-xs font-mono">Loading...</div>
+                <div className="absolute inset-0 bg-gray-50 flex items-center justify-center">
+                  <div className="text-black text-xs font-mono font-bold animate-pulse uppercase tracking-widest">Loading...</div>
                 </div>
               )}
               <Image
                 src={imageUrl}
                 alt={example.title}
                 fill
-                className="object-cover object-top opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 ease-out"
+                className="object-cover object-top opacity-90 group-hover:opacity-100 transition-all duration-500 ease-out grayscale-[50%] group-hover:grayscale-0"
                 sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                 priority={priority}
                 quality={80}
@@ -102,29 +110,28 @@ export default function ExampleCard({
 
         <div className="p-5 flex flex-col gap-3 relative">
           <div className="flex justify-between items-start gap-4">
-            <h3 className="text-lg font-bold leading-tight text-text-color line-clamp-2 group-hover:text-accent transition-colors duration-200">
+            <h3 className="font-display text-lg leading-tight text-black line-clamp-2 group-hover:text-[#ff00ff] transition-colors duration-200 uppercase">
               {example.title}
             </h3>
-            <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-accent transform translate-x-[-10px] group-hover:translate-x-0 transition-transform">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </span>
           </div>
 
           {example.summary && (
-            <p className="text-sm text-text-secondary line-clamp-2 leading-relaxed font-sans">
-              {example.summary}
+            <p className="text-sm text-gray-700 line-clamp-2 leading-relaxed font-bold font-mono">
+              // {example.summary}
             </p>
           )}
 
-          <div className="pt-2 flex items-center gap-4 text-xs font-mono text-text-secondary/60">
-             {example.read_time && (
-              <span className="flex items-center gap-1">
-                <Clock size={12} />
-                {example.read_time}m
-              </span>
-            )}
-            {/* Tag placeholder if available */}
-            <span className="font-bold text-xs tracking-wider group-hover:text-accent transition-colors">OPEN GENERATOR</span>
+          <div className="pt-4 mt-auto flex items-center justify-between border-t-2 border-black/10">
+             <div className="flex items-center gap-4 text-[10px] font-black font-mono text-gray-500 uppercase tracking-tighter">
+                {example.read_time && (
+                  <span className="flex items-center gap-1 bg-gray-100 px-1 border border-black">
+                    <Clock size={10} />
+                    {example.read_time}m
+                  </span>
+                )}
+                <span className="font-bold border border-black px-1 group-hover:bg-[#ccff00] group-hover:text-black transition-colors">Details</span>
+             </div>
+             <ArrowRight className="w-4 h-4 text-black group-hover:translate-x-1 transition-transform" strokeWidth={3} />
           </div>
         </div>
       </div>

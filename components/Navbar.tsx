@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { Menu, X, Terminal, Cpu } from 'lucide-react'
+import { Menu, X, Terminal, Cpu, Bolt } from 'lucide-react'
 import Head from 'next/head'
 import Image from 'next/image'
 
@@ -48,26 +48,16 @@ export default function Navbar() {
           }}
         />
       </Head>
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled || !isHomePage ? 'bg-primary-bg/95 backdrop-blur-lg border-b border-white/5 py-2' : 'bg-transparent py-4'
+      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b-4 border-black ${
+        scrolled || !isHomePage ? 'bg-white py-2' : 'bg-white/90 py-4'
       }`}>
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="flex justify-between items-center h-16">
-          <div className="flex items-center gap-12">
+          <div className="flex items-center gap-8">
             <div className="flex-shrink-0">
-              <Link href="/" className="flex items-center gap-3 group">
-                <div className="relative">
-                    <div className="absolute -inset-1 bg-accent rounded-full blur-md opacity-0 group-hover:opacity-40 transition-opacity"></div>
-                    <Image 
-                    src="/favicon_transparent.png?v=2" 
-                    alt="AI Examples" 
-                    width={40} 
-                    height={40} 
-                    priority
-                    className="relative object-contain" 
-                    />
-                </div>
-                <span className="text-lg font-black font-sans tracking-tighter text-slate-100 group-hover:text-accent transition-colors uppercase italic">Real AI Examples</span>
+              <Link href="/" className="flex items-center gap-2 group">
+                <div className="w-10 h-10 bg-black flex items-center justify-center text-punk-lime font-display text-2xl transform -rotate-6 transition-transform group-hover:rotate-0">R</div>
+                <span className="font-display text-xl tracking-tighter uppercase text-black">Real<span className="text-punk-magenta">AI</span>Examples</span>
               </Link>
             </div>
             
@@ -77,10 +67,10 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`px-4 py-2 text-sm font-mono font-bold tracking-[0.2em] transition-all duration-200 border border-transparent rounded-lg ${
+                  className={`px-3 py-1 text-xs font-black tracking-widest transition-all duration-200 border-b-2 uppercase ${
                     router.pathname === link.href
-                      ? 'text-accent bg-accent/5 border-accent/10'
-                      : 'text-text-secondary hover:text-white hover:bg-white/5'
+                      ? 'bg-punk-lime border-black text-black'
+                      : 'border-transparent text-black hover:bg-punk-lime hover:border-black'
                   }`}
                 >
                   {link.label}
@@ -89,14 +79,19 @@ export default function Navbar() {
             </div>
           </div>
 
-          <div className="hidden lg:flex items-center gap-6">
+          <div className="hidden lg:flex items-center gap-4">
+            <button className="px-4 py-2 bg-white border-2 border-black font-black uppercase text-xs hover:bg-black hover:text-white transition-all brutalist-shadow-sm">Log In</button>
+            <button className="px-4 py-2 bg-punk-lime border-2 border-black font-black uppercase text-xs hover:translate-x-0.5 hover:translate-y-0.5 transition-all brutalist-shadow-sm flex items-center gap-2">
+                <span>Get Pro</span>
+                <Bolt size={14} fill="currentColor" />
+            </button>
           </div>
 
           {/* Mobile menu button */}
           <div className="lg:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2 text-text-secondary hover:text-white transition-colors"
+              className="p-2 text-black hover:bg-punk-lime border-2 border-transparent hover:border-black transition-all"
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -106,22 +101,28 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden absolute top-full left-0 right-0 bg-primary-bg border-b border-white/5 p-4 animate-in slide-in-from-top-4 duration-300">
+        <div className="lg:hidden absolute top-full left-0 right-0 bg-white border-b-4 border-black p-4 animate-in slide-in-from-top-4 duration-300">
           <div className="space-y-2">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`block px-4 py-4 text-xs font-mono font-bold tracking-widest rounded-xl ${
+                className={`block px-4 py-3 text-sm font-black tracking-widest uppercase border-2 border-transparent ${
                   router.pathname === link.href
-                    ? 'bg-accent text-white'
-                    : 'text-text-secondary hover:bg-white/5'
+                    ? 'bg-punk-lime border-black text-black'
+                    : 'text-black hover:bg-punk-lime hover:border-black'
                 }`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.label}
               </Link>
             ))}
+            <div className="pt-4 flex flex-col gap-2">
+                <button className="w-full py-3 bg-white border-2 border-black font-black uppercase text-sm brutalist-shadow-sm">Log In</button>
+                <button className="w-full py-3 bg-punk-lime border-2 border-black font-black uppercase text-sm brutalist-shadow-sm flex items-center justify-center gap-2">
+                    Get Pro <Bolt size={16} fill="currentColor" />
+                </button>
+            </div>
           </div>
         </div>
       )}
