@@ -23,6 +23,7 @@ export default function ExamplesPage({ examples, categories, itemListSchema }: E
   const [visibleExamplesCount, setVisibleExamplesCount] = useState(INITIAL_DISPLAY_COUNT) // New state for visible count
   const [modalExample, setModalExample] = useState<EnrichedExampleRecord | null>(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const [isFilterExpanded, setIsFilterExpanded] = useState(false)
 
   // Filter examples based on category
   const filteredByCategory = useMemo(() => {
@@ -155,21 +156,40 @@ export default function ExamplesPage({ examples, categories, itemListSchema }: E
 
         {/* Category Filter */}
         <section className="max-w-6xl mx-auto px-4 mb-12">
-          <div className="bg-white border-4 border-black p-6 brutalist-shadow relative">
-            <div className="absolute -top-4 -left-4 bg-black text-[#ccff00] px-3 py-1 font-display text-xs uppercase border-2 border-black">Filter by</div>
-            <CategoryFilter
-              categories={categories}
-              selectedCategory={selectedCategory}
-              onSelect={setSelectedCategory}
-            />
+          <div className="bg-white border-4 border-black brutalist-shadow relative">
+            <button 
+              onClick={() => setIsFilterExpanded(!isFilterExpanded)}
+              className="absolute -top-4 -left-4 bg-black text-[#ccff00] px-4 py-2 font-display text-xs uppercase border-2 border-black hover:translate-x-0.5 hover:translate-y-0.5 transition-all brutalist-shadow-sm flex items-center gap-2"
+            >
+              Filter by {isFilterExpanded ? '−' : '+'}
+            </button>
+            
+            <div className={`p-6 ${isFilterExpanded ? 'block' : 'hidden'}`}>
+              <CategoryFilter
+                categories={categories}
+                selectedCategory={selectedCategory}
+                onSelect={(cat) => {
+                  setSelectedCategory(cat);
+                  setIsFilterExpanded(false);
+                }}
+              />
+            </div>
 
-            {/* Results Count */}
-            <div className="mt-6 flex items-center justify-between border-t-2 border-black pt-4">
+            {/* Results Count / Status Bar */}
+            <div className={`px-6 py-4 flex items-center justify-between ${isFilterExpanded ? 'border-t-2 border-black' : ''}`}>
               <p className="text-sm font-black uppercase tracking-widest">
                 <span className="bg-black text-white px-2 py-0.5 mr-2">{filteredByCategory.length}</span>
-                Matches {selectedCategory !== 'All' && ` in ${selectedCategory}`}
+                {selectedCategory === 'All' ? 'Total Examples' : `Matches in ${selectedCategory}`}
               </p>
               <div className="flex gap-2">
+                {selectedCategory !== 'All' && (
+                  <button 
+                    onClick={() => setSelectedCategory('All')}
+                    className="text-[10px] font-black uppercase underline decoration-punk-magenta mr-4 hover:text-punk-magenta"
+                  >
+                    Clear Filter
+                  </button>
+                )}
                 <div className="w-3 h-3 bg-black"></div>
                 <div className="w-3 h-3 bg-[#ff00ff]"></div>
                 <div className="w-3 h-3 bg-[#ccff00]"></div>

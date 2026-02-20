@@ -320,7 +320,7 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
               <div className="bg-white border-4 border-black p-6 brutalist-shadow relative">
                 <div className="absolute -left-3 -top-3 bg-black text-white px-2 py-1 font-mono text-xs">Q.01</div>
                 <h3 className="font-display text-xl mb-3 text-black uppercase leading-tight">Where do I put them?</h3>
-                <p className="font-bold text-gray-700 text-sm leading-relaxed">
+                <p className="font-bold text-black text-sm leading-relaxed">
                   Drop files into <code className="bg-gray-100 px-1 border border-black text-black">.agents/skills/</code>. Most modern agents (Gemini, Mistral) now auto-detect this folder. Use <code className="bg-gray-100 px-1 border border-black text-black">.claude/skills/</code> for Claude Code.
                 </p>
               </div>
@@ -328,7 +328,7 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
               <div className="bg-white border-4 border-black p-6 brutalist-shadow relative">
                 <div className="absolute -left-3 -top-3 bg-black text-white px-2 py-1 font-mono text-xs">Q.02</div>
                 <h3 className="font-display text-xl mb-3 text-black uppercase leading-tight">What are Master Skills?</h3>
-                <p className="font-bold text-gray-700 text-sm leading-relaxed">
+                <p className="font-bold text-black text-sm leading-relaxed">
                   Instead of 500 small files, we've grouped them into 5 departmental "Master Skills." One file gives your agent the complete knowledge of an entire department.
                 </p>
               </div>
@@ -336,7 +336,7 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
               <div className="bg-white border-4 border-black p-6 brutalist-shadow relative">
                 <div className="absolute -left-3 -top-3 bg-black text-white px-2 py-1 font-mono text-xs">Q.03</div>
                 <h3 className="font-display text-xl mb-3 text-black uppercase leading-tight">Is it safe?</h3>
-                <p className="font-bold text-gray-700 text-sm leading-relaxed">
+                <p className="font-bold text-black text-sm leading-relaxed">
                   100% plain text (.md). No executables or hidden scripts. You can audit every line before giving it to your agent. No data leaves your machine.
                 </p>
               </div>

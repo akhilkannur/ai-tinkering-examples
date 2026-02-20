@@ -10,7 +10,7 @@ module.exports = {
         'punk-magenta': '#ff00ff',
         'punk-cyan': '#00ffff',
         'text-color': '#000000',
-        'text-secondary': '#4b5563',
+        'text-secondary': '#1f2937', // Gray 800 for better contrast
         'navy-dark': '#000000',
       },
       fontFamily: {

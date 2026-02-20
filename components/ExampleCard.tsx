@@ -116,15 +116,15 @@ export default function ExampleCard({
           </div>
 
           {example.summary && (
-            <p className="text-sm text-gray-700 line-clamp-2 leading-relaxed font-bold font-mono">
+            <p className="text-sm text-black line-clamp-2 leading-relaxed font-bold font-mono">
               // {example.summary}
             </p>
           )}
 
           <div className="pt-4 mt-auto flex items-center justify-between border-t-2 border-black/10">
-             <div className="flex items-center gap-4 text-[10px] font-black font-mono text-gray-500 uppercase tracking-tighter">
+             <div className="flex items-center gap-4 text-[10px] font-black font-mono text-black uppercase tracking-tighter">
                 {example.read_time && (
-                  <span className="flex items-center gap-1 bg-gray-100 px-1 border border-black">
+                  <span className="flex items-center gap-1 bg-punk-lime px-1 border border-black">
                     <Clock size={10} />
                     {example.read_time}m
                   </span>
