@@ -67,22 +67,31 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
       return matchesCategory && matchesSearch;
     });
 
-    // 2. Sort by Date first (to prepare for mixing)
-    const sortedByDate = filtered.sort((a, b) => {
-      if (a.id === 'agent-context-builder') return -1;
-      if (b.id === 'agent-context-builder') return 1;
+    // 2. Editor's Picks (Actual project skills we use)
+    const EDITORS_PICKS = [
+      'recipe-upgrader',          // Premium
+      'tool-directory-manager',   // Premium
+      'blog-thumbnail-generator', // Free
+      'social-media-publisher',   // Free
+      'google-analytics-reporter' // Premium
+    ];
+
+    const picks = filtered.filter(r => EDITORS_PICKS.includes(r.id))
+      .sort((a, b) => EDITORS_PICKS.indexOf(a.id) - EDITORS_PICKS.indexOf(b.id));
+    
+    const others = filtered.filter(r => !EDITORS_PICKS.includes(r.id));
+
+    // 3. Sort by Date
+    const sortedOthers = others.sort((a, b) => {
       if (a.publish_date && b.publish_date) {
         return new Date(b.publish_date).getTime() - new Date(a.publish_date).getTime();
       }
       return 0;
     });
 
-    // 3. Separate & Mix
-    const priority = sortedByDate.filter(r => r.id === 'agent-context-builder');
-    const others = sortedByDate.filter(r => r.id !== 'agent-context-builder');
-
-    const premium = others.filter(r => r.isPremium);
-    const free = others.filter(r => !r.isPremium);
+    // 4. Interleave others: 2 Free : 1 Premium
+    const premium = sortedOthers.filter(r => r.isPremium);
+    const free = sortedOthers.filter(r => !r.isPremium);
 
     const mixed: Recipe[] = [];
     let pIndex = 0;
@@ -94,7 +103,7 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
        if (pIndex < premium.length) mixed.push(premium[pIndex++]);
     }
 
-    return [...priority, ...mixed];
+    return [...picks, ...mixed];
   }, [selectedCategory, searchQuery, recipes]);
 
   const handleLoadMore = () => {
@@ -246,10 +255,32 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
 
       <div className="relative">
         
-        {/* Part 1: First 12 items */}
+        {/* Daily Drivers / Editor's Picks */}
+        <div className="mb-16">
+          <div className="flex items-center gap-4 mb-8">
+            <div className="bg-black text-[#ccff00] border-2 border-black px-4 py-1 font-display text-lg uppercase transform -rotate-1 brutalist-shadow-sm">
+              My Daily Drivers
+            </div>
+            <div className="flex-grow h-1 bg-black/10"></div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            {part1.slice(0, 5).map((recipe, index) => (
+               <RecipeCard key={recipe.id} recipe={recipe} index={index} />
+            ))}
+          </div>
+        </div>
+
+        {/* The rest of the library */}
+        <div className="flex items-center gap-4 mb-8">
+          <div className="bg-black text-white border-2 border-black px-4 py-1 font-display text-lg uppercase transform rotate-1 brutalist-shadow-sm">
+            The Library
+          </div>
+          <div className="flex-grow h-1 bg-black/10"></div>
+        </div>
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-12">
-          {part1.map((recipe, index) => (
-             <RecipeCard key={recipe.id} recipe={recipe} index={index} />
+          {part1.slice(5).map((recipe, index) => (
+             <RecipeCard key={recipe.id} recipe={recipe} index={index + 5} />
           ))}
         </div>
 

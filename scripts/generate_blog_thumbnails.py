@@ -31,6 +31,7 @@ IMAGES_TO_GENERATE = [
     ("internal-linking-guide.png", "Internal Linking Agent"),
     ("ai-native-websites.png", "AI Native Websites"),
     ("building-technical-directories.png", "Building API Directories"),
+    ("anti-slop-rebrand.png", "The Anti-Slop Rebrand"),
 ]
 
 def ensure_dir(path):

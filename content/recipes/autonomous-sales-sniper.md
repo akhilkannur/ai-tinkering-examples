@@ -9,6 +9,7 @@ archetype: Hybrid
 description: >-
   Searches for companies in your target segments, filters out agencies, and
   builds a qualified prospect list.
+isPremium: true
 sampleData:
   filename: target_segments.csv
   content: |

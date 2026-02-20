@@ -4,6 +4,7 @@ id: ai-internal-linking-agent
 category: SEO
 tagline: "Stop manually hunting for anchor text. Let AI map your internal linking strategy."
 description: "A specialized agent that reads your entire content library and identifies the exact spots where you should link to other pages to boost your domain authority."
+isPremium: true
 ---
 
 # The Internal Link Bottleneck

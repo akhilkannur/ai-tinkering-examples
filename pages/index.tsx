@@ -12,6 +12,7 @@ import JobCard from '../components/JobCard'
 import AIToolCard from '../components/AIToolCard'
 import NewsletterForm from '../components/NewsletterForm'
 import FeaturedIn from '../components/FeaturedIn'
+import HeroForm from '../components/HeroForm'
 
 import StrategicKits from '../components/StrategicKits'
 import { generateItemListSchema } from '../lib/seo-utils'
@@ -163,19 +164,17 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
                             </span>
                         </div>
 
-                        <div className="flex flex-col sm:flex-row items-center gap-6 mb-8">
-                            <a 
-                                href="https://checkout.dodopayments.com/buy/pdt_0NW6p0szmXPS6jXW05hIP"
-                                className="w-full sm:w-auto px-8 py-4 bg-[#ff00ff] border-4 border-black font-display text-xl uppercase brutalist-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all flex items-center justify-center gap-2"
-                            >
-                                Get 1 Year Access ($39) <ArrowRight className="w-5 h-5" />
-                            </a>
-                            <a 
-                                href="#skills" 
-                                className="w-full sm:w-auto px-8 py-4 bg-white border-4 border-black font-display text-xl uppercase brutalist-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all flex items-center justify-center gap-2"
-                            >
-                                See What's Inside
-                            </a>
+                        <div className="flex flex-col gap-8 mb-12">
+                            <div className="flex flex-col sm:flex-row items-center gap-6">
+                                <a 
+                                    href="https://checkout.dodopayments.com/buy/pdt_0NW6p0szmXPS6jXW05hIP"
+                                    className="w-full sm:w-auto px-10 py-5 bg-[#ff00ff] border-4 border-black font-display text-xl uppercase brutalist-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all flex items-center justify-center gap-3 text-white"
+                                >
+                                    Get 1 Year Access ($39) <ArrowRight className="w-6 h-6 stroke-[3px]" />
+                                </a>
+                                <div className="text-black font-display text-sm uppercase opacity-40 hidden sm:block">OR</div>
+                                <HeroForm />
+                            </div>
                         </div>
                         <p className="text-xs font-bold text-gray-600 mb-12 flex items-center gap-2 uppercase tracking-widest">
                           <span className="text-emerald-600 font-black">✓</span>
@@ -250,7 +249,7 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
               Quick Questions
             </h2>
             
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-white border-4 border-black p-6 brutalist-shadow relative">
                 <div className="absolute -left-3 -top-3 bg-black text-white px-2 py-1 font-mono text-xs">Q.01</div>
                 <h3 className="font-display text-xl mb-3 text-black uppercase leading-tight">Where do I put them?</h3>
@@ -263,15 +262,23 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
                 <div className="absolute -left-3 -top-3 bg-black text-white px-2 py-1 font-mono text-xs">Q.02</div>
                 <h3 className="font-display text-xl mb-3 text-black uppercase leading-tight">What are Master Skills?</h3>
                 <p className="font-bold text-black text-sm leading-relaxed">
-                  Instead of 500 small files, we've grouped them into 5 departmental "Master Skills." One file gives your agent the complete knowledge of an entire department.
+                  Instead of 500 small files, we've grouped them into  department-level "Master Skills." One file gives your agent the complete knowledge of an entire department.
                 </p>
               </div>
 
               <div className="bg-white border-4 border-black p-6 brutalist-shadow relative">
                 <div className="absolute -left-3 -top-3 bg-black text-white px-2 py-1 font-mono text-xs">Q.03</div>
+                <h3 className="font-display text-xl mb-3 text-black uppercase leading-tight">How are these generated?</h3>
+                <p className="font-bold text-black text-sm leading-relaxed">
+                  This site is a meta-experiment. When a workflow works for my business, I immediately turn it into a skill and publish it. For general use cases, I take feedback from users and experts to refine the logic. Any questions? Reach out at <a href="mailto:akhil@realaiexamples.com" className="text-[#ff00ff] hover:underline">akhil@realaiexamples.com</a>.
+                </p>
+              </div>
+
+              <div className="bg-white border-4 border-black p-6 brutalist-shadow relative">
+                <div className="absolute -left-3 -top-3 bg-black text-white px-2 py-1 font-mono text-xs">Q.04</div>
                 <h3 className="font-display text-xl mb-3 text-black uppercase leading-tight">Is it safe?</h3>
                 <p className="font-bold text-black text-sm leading-relaxed">
-                  100% plain text (.md). No executables or hidden scripts. You can audit every line before giving it to your agent. No data leaves your machine.
+                  100% plain text (.md). No executables or hidden scripts. You can audit every line before giving it to your agent. If you use open-source models (like Llama), no data leaves your machine.
                 </p>
               </div>
             </div>
