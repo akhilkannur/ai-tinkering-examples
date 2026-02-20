@@ -35,20 +35,20 @@ export default function ZeroBudgetMarketing() {
             <Terminal className="w-3.5 h-3.5" /> Asymmetric Warfare
           </div>
           <h1 className="text-5xl md:text-8xl font-display tracking-tight mb-8 uppercase leading-[0.9] text-black glitch-text" data-text="CLONE A TEAM WITH TEXT FILES">
-            Clone a Team <br/>
-            <span className="text-[#ff00ff]">With 5 Files.</span>
+            How to Clone a Marketing Team <br/>
+            <span className="text-[#ff00ff]">With 5 Text Files.</span>
           </h1>
           <p className="text-xl md:text-2xl text-black font-bold leading-relaxed border-l-8 border-[#ccff00] pl-6 py-2 bg-white border-2 border-black brutalist-shadow-sm text-left">
             Your competitor raised $81M. You have $0. <br/>
-            You can't out-spend them. But you can <span className="bg-black text-[#ccff00] px-1 uppercase italic">out-automate</span> them. <br/><br/>
-            You need "Boring Agents" - simple scripts that run locally on your computer and do the grunt work of a 10-person marketing department.
+            You can't out-spend them. But you can <span className="bg-black text-[#ccff00] px-1 uppercase italic font-bold border-2 border-black">out-automate</span> them. <br/><br/>
+            Most founders think they need to hire an agency to grow. You don't. You need "Boring Agents" - simple scripts that run locally on your computer and do the grunt work of a 10-person marketing department.
           </p>
         </div>
 
         {/* THE MATH */}
         <div className="bg-white border-4 border-black p-8 brutalist-shadow mb-20">
           <h3 className="text-2xl font-display text-black mb-8 flex items-center gap-3 uppercase decoration-wavy underline decoration-[#ff00ff]">
-            <BarChart className="w-8 h-8 text-black stroke-[3px]" /> The Arbitrage
+            <BarChart className="w-8 h-8 text-black stroke-[3px]" /> The Arbitrage Opportunity
           </h3>
           <div className="overflow-x-auto font-mono">
             <table className="w-full text-left text-sm">
@@ -64,7 +64,7 @@ export default function ZeroBudgetMarketing() {
                   <tr key={i} className="border-b-2 border-black/10 hover:bg-[#ccff00]/10 transition-colors uppercase font-black text-[10px]">
                     <td className="py-4 px-2 font-display text-base">{row.role}</td>
                     <td className="py-4 px-2 text-black/60">{row.human}</td>
-                    <td className="py-4 px-2 text-emerald-600 text-sm bg-[#ccff00]/5">{row.agent}</td>
+                    <td className="py-4 px-2 text-emerald-600 text-sm bg-[#ccff00]/5 font-bold">{row.agent}</td>
                   </tr>
                 ))}
               </tbody>
@@ -80,9 +80,12 @@ export default function ZeroBudgetMarketing() {
             </div>
             <h2 className="text-3xl font-display text-black uppercase">1. The "Intel" Agent</h2>
           </div>
-          <p className="text-lg text-black font-bold mb-8 leading-relaxed font-mono italic">
-            // Your competitors are leaking data. Public sitemaps, public ad libraries, public tech stacks. 
+          <p className="text-lg text-black font-bold mb-6 leading-relaxed font-mono italic">
+            // Your competitors are leaking data. They have public sitemaps, public ad libraries, and public tech stacks. 
             An agency would charge you $5,000 to "audit" this.
+          </p>
+          <p className="text-lg text-black font-bold mb-8 leading-relaxed font-mono italic">
+            // Our <strong>Competitor Tech Stack Spy</strong> blueprint does it for free. It crawls their site, identifies every tool they use, and checks their `sitemap.xml` to see what content they are prioritizing.
           </p>
           
           <div className="bg-black border-4 border-black p-6 font-mono text-xs text-[#00ffff] mb-0 relative shadow-2xl">
@@ -105,23 +108,54 @@ export default function ZeroBudgetMarketing() {
             </div>
             <h2 className="text-3xl font-display text-black uppercase">2. The "Content" Waterfall</h2>
           </div>
-          <p className="text-lg text-black font-bold mb-12 leading-relaxed">
-            Record <strong>one video</strong>. The <strong>Content Repurposer</strong> agent takes a raw transcript and applies "Waterfall" logic.
+          <p className="text-lg text-black font-bold mb-8 leading-relaxed font-mono italic">
+            // You can't afford a social media manager. But you can record <strong>one video</strong>.
+            The <strong>Content Repurposer</strong> agent takes a raw transcript and applies a "Waterfall" logic.
           </p>
           <ul className="space-y-6 mb-8 font-mono font-black uppercase text-xs">
             <li className="flex items-start gap-4">
               <div className="bg-[#ff00ff] text-white p-1 border-2 border-black rotate-3">01</div>
-              <span className="pt-1">Extracts "Core Insight" (removes fluff).</span>
+              <span className="pt-1"><strong>Step 1:</strong> Extracts the "Core Insight" (removes fluff).</span>
             </li>
             <li className="flex items-start gap-4">
               <div className="bg-[#ccff00] text-black p-1 border-2 border-black -rotate-3">02</div>
-              <span className="pt-1">Writes long-form LinkedIn essay (Hook + Story + Lesson).</span>
+              <span className="pt-1"><strong>Step 2:</strong> Writes a long-form LinkedIn essay (Hook + Story + Lesson).</span>
             </li>
             <li className="flex items-start gap-4">
               <div className="bg-[#00ffff] text-black p-1 border-2 border-black rotate-6">03</div>
-              <span className="pt-1">Writes 5 tweet variations (Contrarian, Listicle, Question).</span>
+              <span className="pt-1"><strong>Step 3:</strong> Writes 5 tweet variations (Contrarian, Listicle, Question).</span>
             </li>
           </ul>
+          <p className="text-lg text-black font-bold font-mono italic">
+            // It doesn't just "summarize." It <strong>rewrites</strong> based on the platform's algorithm.
+          </p>
+        </div>
+
+        {/* STEP 3: OUTBOUND */}
+        <div className="bg-white border-4 border-black p-8 brutalist-shadow mb-20 rotate-1">
+          <div className="flex items-center gap-4 mb-8">
+            <div className="w-12 h-12 bg-black flex items-center justify-center text-[#ccff00] border-2 border-black brutalist-shadow-sm shadow-[#ccff00]">
+              <Zap className="w-6 h-6 stroke-[3px] fill-current" />
+            </div>
+            <h2 className="text-3xl font-display text-black uppercase">3. The "Signal" Hunter</h2>
+          </div>
+          <p className="text-lg text-black font-bold mb-8 leading-relaxed font-mono italic">
+            // Cold outreach fails when it's generic. It works when it's relevant.
+            The <strong>Signal Scraper</strong> agent monitors 100 target accounts for specific triggers:
+          </p>
+          <div className="grid md:grid-cols-2 gap-8 mb-8 font-mono font-black uppercase text-xs">
+             <div className="bg-gray-50 p-6 border-4 border-black brutalist-shadow-sm">
+               <span className="text-[#ff00ff] font-black block mb-4 border-b-2 border-black pb-2">Trigger A: Hiring</span>
+               <span className="text-black leading-relaxed">"They just posted a job for 'Head of Sales'. They need our CRM tool."</span>
+             </div>
+             <div className="bg-gray-50 p-6 border-4 border-black brutalist-shadow-sm">
+               <span className="text-[#ccff00] bg-black px-1 font-black block mb-4 border-b-2 border-black pb-2">Trigger B: Tech Change</span>
+               <span className="text-black leading-relaxed">"They just removed 'Intercom' from their site. They are looking for a replacement."</span>
+             </div>
+          </div>
+          <p className="text-lg text-black font-bold font-mono italic">
+            // The agent alerts you <strong>only</strong> when a trigger fires. You spend 0 minutes prospecting.
+          </p>
         </div>
 
         {/* FINAL CTA */}
@@ -138,12 +172,15 @@ export default function ZeroBudgetMarketing() {
                 href="https://checkout.dodopayments.com/buy/pdt_0NW6p0szmXPS6jXW05hIP"
                 className="w-full sm:w-auto px-12 py-6 bg-[#ccff00] text-black border-4 border-white font-display text-2xl uppercase transition-all brutalist-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none"
               >
-                Unlock All ($39)
+                Unlock All ($39) <ArrowRight className="w-8 h-8 stroke-[3px] inline-block ml-2" />
               </a>
-              <Link href="/ai-examples" className="text-white font-display text-xl uppercase underline decoration-wavy decoration-[#ff00ff] hover:text-[#ccff00] transition-colors">
-                Browse Examples
+              <Link href="/#blueprints" className="text-white font-display text-xl uppercase underline decoration-wavy decoration-[#ff00ff] hover:text-[#ccff00] transition-colors">
+                See All Blueprints
               </Link>
             </div>
+            <p className="mt-8 text-xs text-white/40 font-black font-mono uppercase tracking-[0.3em] flex items-center justify-center gap-2">
+              <Lock className="w-4 h-4" /> One-time payment. No recurring fees.
+            </p>
           </div>
         </div>
 

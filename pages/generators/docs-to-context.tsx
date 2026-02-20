@@ -9,7 +9,7 @@ export default function DocContext() {
   const [isGenerating, setIsGenerating] = useState(false);
   const [isFinished, setIsFinished] = useState(false);
   const [error, setError] = useState('');
-  const [result, setResult] = useState<{ file: string, fileName: string } | null>(null);
+  const [result, setResult] = useState<{ content: string, fileName: string } | null>(null);
 
   const preMadeContexts = [
     { name: "Apollo.io API Reference", size: "142 KB", category: "Sales Tech", file: "/context/docs-apollo-io.md" },
@@ -39,7 +39,7 @@ export default function DocContext() {
       const data = await response.json();
       
       if (data.success) {
-        setResult({ file: data.file, fileName: data.fileName });
+        setResult({ content: data.content, fileName: data.fileName });
         setIsFinished(true);
       } else {
         setError(data.error || 'Failed to generate context. Please try a different URL.');
@@ -49,6 +49,17 @@ export default function DocContext() {
     } finally {
       setIsGenerating(false);
     }
+  };
+
+  const handleDownload = () => {
+    if (!result) return;
+    const blob = new Blob([result.content], { type: 'text/markdown' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = result.fileName;
+    a.click();
+    window.URL.revokeObjectURL(url);
   };
 
   return (
@@ -66,15 +77,15 @@ export default function DocContext() {
           <div className="absolute top-0 right-0 w-32 h-32 bg-[#ff00ff] opacity-10 blur-xl"></div>
           <div className="absolute bottom-0 left-0 w-32 h-32 bg-[#ccff00] opacity-10 blur-xl"></div>
           <div className="container mx-auto px-4 max-w-5xl relative z-10 text-center">
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-black text-[#ccff00] border-2 border-black text-accent font-mono text-[10px] uppercase tracking-widest mb-6 transform -rotate-1">
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-black text-[#ccff00] border-2 border-black font-black text-[10px] uppercase tracking-widest mb-6 transform -rotate-1">
               <Zap className="w-3 h-3 fill-current" /> Branded Utility Tool
             </div>
             <h1 className="text-5xl md:text-7xl font-display text-black mb-6 tracking-tighter uppercase leading-[0.9] glitch-text" data-text="DOCS TO CONTEXT">
               DOCS TO <span className="text-[#ff00ff]">CONTEXT</span>
             </h1>
-            <p className="text-xl text-black font-bold max-w-2xl mx-auto leading-relaxed border-l-4 border-[#ccff00] pl-6 py-2 bg-gray-50">
+            <p className="text-xl md:text-2xl text-black font-bold max-w-2xl mx-auto leading-relaxed border-l-8 border-[#ccff00] pl-6 py-2 bg-gray-50">
               Stop copy-pasting documentation. Enter a domain and get a single, 
-              LLM-optimized <strong className="bg-black text-[#ccff00] px-1">Context File</strong> for your AI Agent in seconds.
+              LLM-optimized <strong className="bg-black text-[#ccff00] px-1 uppercase">Context File</strong> for your AI Agent in seconds.
             </p>
           </div>
         </div>
@@ -107,7 +118,7 @@ export default function DocContext() {
                   {isGenerating ? (
                     <>
                       <div className="w-5 h-5 border-3 border-[#ccff00]/30 border-t-[#ccff00] rounded-full animate-spin"></div>
-                      Crawling...
+                      Processing...
                     </>
                   ) : (
                     <>
@@ -128,13 +139,12 @@ export default function DocContext() {
                   <div className="flex items-center justify-center gap-3 text-green-700 font-display mb-6 text-xl uppercase tracking-widest">
                     <CheckCircle className="w-6 h-6" /> Context File Ready
                   </div>
-                  <a 
-                    href={result.file}
-                    download={result.fileName}
+                  <button 
+                    onClick={handleDownload}
                     className="bg-[#ff00ff] text-white px-12 py-4 border-4 border-black font-display text-xl uppercase transition-all flex items-center justify-center gap-2 mx-auto inline-flex brutalist-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none"
                   >
                     <Download className="w-6 h-6" /> Download {result.fileName}
-                  </a>
+                  </button>
                 </div>
               )}
               
@@ -173,7 +183,7 @@ export default function DocContext() {
                     className="w-full bg-white border-2 border-black text-black text-center py-3 font-display text-xs flex items-center justify-center gap-2 hover:bg-[#ccff00] transition-all uppercase tracking-widest"
                     download
                   >
-                    <Download className="w-4 h-4" /> Get Context
+                    <Download className="w-4 h-4 stroke-[3px]" /> Get Context
                   </a>
                 </div>
               ))}
@@ -184,29 +194,29 @@ export default function DocContext() {
           <div className="grid md:grid-cols-3 gap-12 mt-32 border-t-4 border-black pt-20">
             <div className="text-center md:text-left">
               <div className="bg-black w-12 h-12 flex items-center justify-center mb-6 text-[#ccff00] mx-auto md:mx-0 border-2 border-black brutalist-shadow-sm">
-                <Cpu className="w-6 h-6" />
+                <Cpu className="w-6 h-6 stroke-[3px]" />
               </div>
               <h3 className="text-xl font-display uppercase mb-4 text-black tracking-tight">Agent Optimized</h3>
               <p className="text-black text-sm leading-relaxed font-bold font-mono">
-                // Markdown is the native tongue of LLMs. We preserve hierarchy and structure.
+                // Markdown is the native tongue of LLMs. We preserve hierarchy and structure that raw text copy-pastes destroy.
               </p>
             </div>
             <div className="text-center md:text-left">
               <div className="bg-black w-12 h-12 flex items-center justify-center mb-6 text-[#ff00ff] mx-auto md:mx-0 border-2 border-black brutalist-shadow-sm">
-                <Brain className="w-6 h-6" />
+                <Brain className="w-6 h-6 stroke-[3px]" />
               </div>
               <h3 className="text-xl font-display uppercase mb-4 text-black tracking-tight">Full Context</h3>
               <p className="text-black text-sm leading-relaxed font-bold font-mono">
-                // Avoid RAG snippet failures. Give your agent the "Big Picture" architecture.
+                // Avoid RAG snippet failures. Give your agent the "Big Picture" architecture of any API or SaaS tool.
               </p>
             </div>
             <div className="text-center md:text-left">
               <div className="bg-black w-12 h-12 flex items-center justify-center mb-6 text-white mx-auto md:mx-0 border-2 border-black brutalist-shadow-sm">
-                <Zap className="w-6 h-6" />
+                <Zap className="w-6 h-6 stroke-[3px] fill-current" />
               </div>
               <h3 className="text-xl font-display uppercase mb-4 text-black tracking-tight">Zero Friction</h3>
               <p className="text-black text-sm leading-relaxed font-bold font-mono">
-                // One file vs 50 browser tabs. The professional choice for agentic workflows.
+                // One file vs 50 browser tabs. The professional choice for Gemini CLI, Claude Code, and Cursor workflows.
               </p>
             </div>
           </div>
