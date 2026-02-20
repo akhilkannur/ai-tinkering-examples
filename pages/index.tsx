@@ -181,25 +181,6 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
                           <span className="text-emerald-600 font-black">✓</span>
                           1 Year Access. No recurring auto-charge.
                         </p>
-
-                        {/* Playbooks Bar */}
-                        <div className="pt-8 border-t-4 border-black">
-                            <p className="text-[10px] uppercase tracking-[0.2em] font-black text-black mb-4">Popular Role-Based Plays:</p>
-                            <div className="flex flex-wrap gap-3">
-                                <a href="/playbook/vp-sales" className="flex items-center gap-2 text-xs font-bold text-black bg-white border-2 border-black px-3 py-1.5 hover:bg-[#ccff00] transition-all brutalist-shadow-sm">
-                                  <Target className="w-3 h-3" /> VP Sales
-                                </a>
-                                <a href="/playbook/seo-manager" className="flex items-center gap-2 text-xs font-bold text-black bg-white border-2 border-black px-3 py-1.5 hover:bg-[#ccff00] transition-all brutalist-shadow-sm">
-                                  <Search className="w-3 h-3" /> SEO Manager
-                                </a>
-                                <a href="/playbook/demand-gen" className="flex items-center gap-2 text-xs font-bold text-black bg-white border-2 border-black px-3 py-1.5 hover:bg-[#ccff00] transition-all brutalist-shadow-sm">
-                                  <Zap className="w-3 h-3" /> Demand Gen
-                                </a>
-                                <a href="/playbook/customer-success" className="flex items-center gap-2 text-xs font-bold text-black bg-white border-2 border-black px-3 py-1.5 hover:bg-[#ccff00] transition-all brutalist-shadow-sm">
-                                  <Heart className="w-3 h-3" /> Customer Success
-                                </a>
-                            </div>
-                        </div>
                     </div>
 
                     <div className="hidden lg:block relative">
@@ -217,53 +198,6 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
             <div className="marquee-container font-display text-2xl uppercase tracking-widest">
                 <div className="marquee-content">
                     Real AI Examples // Agent Ready Workflows // 500+ Blueprints // Stop Chatting Start Building // Real AI Examples // Agent Ready Workflows // 500+ Blueprints // Stop Chatting Start Building //
-                </div>
-            </div>
-        </div>
-
-        {/* NEW TO AGENTS SECTION */}
-        <div className="bg-white py-16 border-b-4 border-black">
-            <div className="container mx-auto px-4 max-w-6xl">
-                <div className="grid lg:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <div className="inline-block bg-[#ff00ff] text-white px-3 py-1 mb-4 border-2 border-black font-bold uppercase text-xs transform -rotate-1">
-                            New to Agents? Start Here.
-                        </div>
-                        <h2 className="font-display text-4xl md:text-5xl text-black mb-6 uppercase">
-                            A Chatbot <span className="bg-black text-white px-3 transform rotate-2 inline-block">with Hands.</span>
-                        </h2>
-                        <p className="text-xl font-bold mb-8 leading-relaxed">
-                            ChatGPT can write an email, but it can't send it. <br/>
-                            <span className="bg-[#ccff00] px-1">Agentic Tools</span> live on your computer. They can create files, run searches, and manage projects - just like a remote intern.
-                        </p>
-                        
-                        <div className="flex flex-col gap-4">
-                             <a href="/learn-ai" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-black text-[#ccff00] font-display text-xl uppercase brutalist-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all">
-                                How to Install (5 Min Guide) <ArrowRight className="w-6 h-6" />
-                             </a>
-                        </div>
-                    </div>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                        {/* Step 1 */}
-                        <div className="bg-white border-4 border-black p-6 brutalist-shadow relative rotate-1">
-                            <div className="absolute -top-4 -left-4 w-10 h-10 bg-black text-[#ccff00] font-display text-xl border-2 border-black flex items-center justify-center shadow-lg">1</div>
-                            <h3 className="font-display text-xl text-black mb-2 uppercase leading-tight">Install Agent</h3>
-                            <p className="text-sm font-bold text-gray-600">Get Claude Code or Gemini CLI running in your terminal.</p>
-                        </div>
-                        {/* Step 2 */}
-                        <div className="bg-white border-4 border-black p-6 brutalist-shadow relative -rotate-1">
-                            <div className="absolute -top-4 -left-4 w-10 h-10 bg-black text-[#ff00ff] font-display text-xl border-2 border-black flex items-center justify-center shadow-lg">2</div>
-                            <h3 className="font-display text-xl text-black mb-2 uppercase leading-tight">Paste Skill</h3>
-                            <p className="text-sm font-bold text-gray-600">Copy a blueprint from my library (e.g., "Lead Finder").</p>
-                        </div>
-                        {/* Step 3 */}
-                        <div className="bg-white border-4 border-black p-6 brutalist-shadow relative rotate-1">
-                            <div className="absolute -top-4 -left-4 w-10 h-10 bg-black text-[#00ffff] font-display text-xl border-2 border-black flex items-center justify-center shadow-lg">3</div>
-                            <h3 className="font-display text-xl text-black mb-2 uppercase leading-tight">Run It</h3>
-                            <p className="text-sm font-bold text-gray-600">Watch it work. It creates files, searches web, and executes.</p>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

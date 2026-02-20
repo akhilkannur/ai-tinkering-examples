@@ -195,7 +195,7 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
     <div className="max-w-7xl mx-auto">
       
       {/* Controls: Search & Filter */}
-      <div className="flex flex-col md:flex-row gap-6 mb-12 items-center justify-between bg-white border-4 border-black p-6 brutalist-shadow sticky top-24 z-30">
+      <div className="flex flex-col md:flex-row gap-6 mb-12 items-center justify-between bg-white border-4 border-black p-6 brutalist-shadow md:sticky md:top-24 z-30">
         <div className="relative w-full md:w-96">
           <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
             <Search className="h-5 w-5 text-black stroke-[3px]" />

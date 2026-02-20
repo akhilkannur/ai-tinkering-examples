@@ -75,9 +75,9 @@ export default function ExampleCard({
       )}
 
       <div className="relative z-10 flex-grow">
-        <div className="relative w-full h-48 sm:h-56 overflow-hidden bg-gray-100 border-b-4 border-black">
+        <div className="relative w-full h-48 sm:h-56 overflow-hidden bg-gray-50 border-b-4 border-black">
           {!imageUrl || imageStatus === 'error' ? (
-            <div className="absolute inset-0 bg-gray-50 flex flex-col items-center justify-center gap-2 opacity-50">
+            <div className="absolute inset-0 bg-gray-100 flex flex-col items-center justify-center gap-2 opacity-50">
               <svg className="w-12 h-12 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
@@ -85,7 +85,7 @@ export default function ExampleCard({
           ) : (
             <>
               {imageStatus === 'loading' && !blurImageUrl && (
-                <div className="absolute inset-0 bg-gray-50 flex items-center justify-center">
+                <div className="absolute inset-0 bg-gray-100 flex items-center justify-center">
                   <div className="text-black text-xs font-mono font-bold animate-pulse uppercase tracking-widest">Loading...</div>
                 </div>
               )}
@@ -93,7 +93,7 @@ export default function ExampleCard({
                 src={imageUrl}
                 alt={example.title}
                 fill
-                className="object-cover object-top opacity-90 group-hover:opacity-100 transition-all duration-500 ease-out grayscale-[50%] group-hover:grayscale-0"
+                className="object-cover object-top opacity-95 group-hover:opacity-100 transition-all duration-500 ease-out grayscale-[15%] brightness-[0.98] group-hover:grayscale-0 group-hover:brightness-100"
                 sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                 priority={priority}
                 quality={80}
@@ -104,6 +104,8 @@ export default function ExampleCard({
                   blurDataURL: blurImageUrl,
                 })}
               />
+              {/* Subtle Overlay to separate white screenshots from white background */}
+              <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300 pointer-events-none" />
             </>
           )}
         </div>
