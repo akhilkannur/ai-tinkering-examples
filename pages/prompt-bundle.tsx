@@ -26,7 +26,7 @@ export default function PromptBundlePage() {
   };
 
   return (
-    <div className="min-h-screen bg-primary-bg font-sans text-text-color selection:bg-accent/30 overflow-x-hidden">
+    <div className="min-h-screen bg-primary-bg font-sans text-black selection:bg-[#ff00ff] selection:text-white overflow-x-hidden">
       <Head>
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
@@ -58,69 +58,66 @@ export default function PromptBundlePage() {
 
       <Navbar />
 
-      <main className="relative pt-32">
-        {/* Ambient background effect */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(244,63,94,0.05)_0%,transparent_70%)] pointer-events-none"></div>
-
+      <main className="relative pt-32 pb-24">
         <div className="container mx-auto px-4 max-w-6xl relative z-10">
           
           {/* HERO */}
           <div className="text-center mb-24">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20 text-accent font-bold text-[10px] uppercase tracking-[0.3em] mb-8 font-mono">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-black text-[#ccff00] border-2 border-black font-black text-[10px] uppercase tracking-[0.3em] mb-8 transform -rotate-1 brutalist-shadow-sm">
                 <Sparkles className="w-3.5 h-3.5" /> THE LARGEST B2B WORKFLOW LIBRARY
             </div>
-            <h1 className="text-5xl md:text-8xl font-black tracking-tighter mb-8 uppercase italic text-white leading-[0.9]">
+            <h1 className="text-5xl md:text-8xl font-display tracking-tight mb-8 uppercase leading-[0.9] text-black glitch-text" data-text="THE MASTER AI PROMPT VAULT">
               The Master AI <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-purple-500">Prompt Vault</span>
+              <span className="text-[#ff00ff]">Prompt Vault</span>
             </h1>
-            <p className="text-xl text-text-secondary max-w-2xl mx-auto font-light leading-relaxed mb-12">
+            <p className="text-xl md:text-2xl text-black max-w-2xl mx-auto font-black leading-relaxed border-l-8 border-[#ccff00] pl-6 py-2 bg-white border-2 border-black brutalist-shadow-sm mb-12">
               500+ professional-grade AI prompts and workflows for high-growth Sales, Marketing, and Ops teams. <br className="hidden md:block" /> 
-              Stop guessing. Just <strong className="text-white">copy, paste, and win.</strong>
+              Stop guessing. Just <strong className="bg-black text-[#ccff00] px-1">copy, paste, and win.</strong>
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                 <a 
                   href="https://checkout.dodopayments.com/buy/pdt_0NXjwiW67fl4ov8bwfXRO?quantity=1"
-                  className="w-full sm:w-auto px-12 py-5 bg-white text-primary-bg font-bold rounded-xl hover:bg-gray-100 transition-all shadow-[0_0_50px_rgba(255,255,255,0.2)] flex items-center justify-center gap-2 text-lg uppercase tracking-wider"
+                  className="w-full sm:w-auto px-12 py-6 bg-[#ff00ff] text-white border-4 border-black font-display text-2xl uppercase transition-all brutalist-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none flex items-center justify-center gap-4"
                 >
-                    Unlock the Vault ($39) <ArrowRight className="w-5 h-5" />
+                    Unlock Vault ($39) <ArrowRight className="w-8 h-8 stroke-[3px]" />
                 </a>
                 <button 
                   onClick={() => document.getElementById('preview')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="w-full sm:w-auto px-12 py-5 border border-white/10 text-text-secondary hover:text-white hover:bg-white/5 font-bold rounded-xl transition-all flex items-center justify-center text-lg uppercase tracking-wider"
+                  className="w-full sm:w-auto px-12 py-6 bg-white border-4 border-black text-black font-display text-2xl uppercase transition-all brutalist-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none"
                 >
-                    Browse Categories
+                    Browse Plays
                 </button>
             </div>
           </div>
 
           {/* THE VALUE SECTION */}
           <div className="grid md:grid-cols-3 gap-8 mb-32">
-             <div className="bg-secondary-bg/50 border border-white/5 p-8 rounded-3xl backdrop-blur-sm">
-                <div className="w-12 h-12 bg-red-500/10 rounded-xl flex items-center justify-center text-red-400 mb-6 border border-red-500/20">
+             <div className="bg-white border-4 border-black p-8 brutalist-shadow-sm hover:translate-x-0.5 hover:translate-y-0.5 transition-all">
+                <div className="w-12 h-12 bg-black flex items-center justify-center text-[#ff00ff] mb-6 border-2 border-black brutalist-shadow-sm">
                     <BarChart3 className="w-6 h-6" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4 uppercase tracking-tight">Data-Driven Logic</h3>
-                <p className="text-text-secondary font-light leading-relaxed">
-                    Standard prompts fail on complex data. My workflows are built to handle massive CSVs, deep audits, and multi-step research.
+                <h3 className="text-2xl font-display text-black mb-4 uppercase leading-tight">Data Logic</h3>
+                <p className="text-sm text-black font-black font-mono leading-relaxed">
+                    // Standard prompts fail on complex data. My workflows handle massive CSVs, deep audits, and multi-step research.
                 </p>
              </div>
-             <div className="bg-secondary-bg/50 border border-white/5 p-8 rounded-3xl backdrop-blur-sm">
-                <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center text-accent mb-6 border border-accent/20">
+             <div className="bg-white border-4 border-black p-8 brutalist-shadow-sm hover:translate-x-0.5 hover:translate-y-0.5 transition-all">
+                <div className="w-12 h-12 bg-black flex items-center justify-center text-[#ccff00] mb-6 border-2 border-black brutalist-shadow-sm">
                     <Layout className="w-6 h-6" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4 uppercase tracking-tight">Structured Output</h3>
-                <p className="text-text-secondary font-light leading-relaxed">
-                    Every workflow is engineered to produce structured, usable results. Tables, reports, and code - ready for your team.
+                <h3 className="text-2xl font-display text-black mb-4 uppercase leading-tight">Structured</h3>
+                <p className="text-sm text-black font-black font-mono leading-relaxed">
+                    // Every workflow is engineered to produce structured, usable results. Tables, reports, and code - ready for your team.
                 </p>
              </div>
-             <div className="bg-secondary-bg/50 border border-white/5 p-8 rounded-3xl backdrop-blur-sm">
-                <div className="w-12 h-12 bg-emerald-500/10 rounded-xl flex items-center justify-center text-emerald-400 mb-6 border border-emerald-500/20">
+             <div className="bg-white border-4 border-black p-8 brutalist-shadow-sm hover:translate-x-0.5 hover:translate-y-0.5 transition-all">
+                <div className="w-12 h-12 bg-black flex items-center justify-center text-[#00ffff] mb-6 border-2 border-black brutalist-shadow-sm">
                     <CheckCircle2 className="w-6 h-6" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4 uppercase tracking-tight">Tool Agnostic</h3>
-                <p className="text-text-secondary font-light leading-relaxed">
-                    Formatted for ChatGPT, Claude, and Gemini. One library to rule every model you use in your business.
+                <h3 className="text-2xl font-display text-black mb-4 uppercase leading-tight">Agnostic</h3>
+                <p className="text-sm text-black font-black font-mono leading-relaxed">
+                    // Formatted for ChatGPT, Claude, and Gemini. One library to rule every model you use in your business.
                 </p>
              </div>
           </div>
@@ -128,13 +125,13 @@ export default function PromptBundlePage() {
           {/* PREVIEW / SAMPLE GRID */}
           <div id="preview" className="mb-32">
              <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tight italic">Step inside the Vault</h2>
+                <h2 className="text-4xl md:text-6xl font-display text-black mb-12 uppercase tracking-tight decoration-wavy underline decoration-[#ff00ff]">Step inside the Vault</h2>
                 <div className="flex flex-wrap justify-center gap-3">
                     {categories.map(cat => (
                         <button 
                             key={cat}
                             onClick={() => setSelectedCategory(cat)}
-                            className={`px-6 py-2 rounded-full text-xs font-bold uppercase tracking-widest transition-all ${selectedCategory === cat ? 'bg-accent text-white shadow-lg shadow-accent/20' : 'bg-secondary-bg text-text-secondary border border-white/5 hover:border-white/20'}`}
+                            className={`px-6 py-2 border-2 border-black font-display text-xs uppercase transition-all brutalist-shadow-sm ${selectedCategory === cat ? 'bg-black text-[#ccff00]' : 'bg-white text-black hover:bg-[#ccff00]'}`}
                         >
                             {cat}
                         </button>
@@ -142,80 +139,83 @@ export default function PromptBundlePage() {
                 </div>
              </div>
 
-             <div className="grid md:grid-cols-2 gap-8">
+             <div className="grid md:grid-cols-2 gap-12">
                 {/* SAMPLE CARD 1 */}
-                <div className="bg-secondary-bg border border-navy-dark rounded-3xl p-8 relative overflow-hidden group">
-                    <div className="absolute top-0 right-0 p-4 opacity-5">
-                        <BarChart3 className="w-32 h-32 text-accent" />
+                <div className="bg-white border-4 border-black p-8 brutalist-shadow relative overflow-hidden group">
+                    <div className="absolute top-0 right-0 p-4 opacity-10">
+                        <BarChart3 className="w-32 h-32 text-black" />
                     </div>
                     <div className="flex items-center gap-3 mb-6">
-                        <div className="bg-accent/10 p-2 rounded-lg text-accent border border-accent/20">
-                            <Zap className="w-4 h-4" />
+                        <div className="bg-black p-2 border-2 border-black text-[#ff00ff]">
+                            <Zap className="w-5 h-5 fill-current" />
                         </div>
-                        <span className="text-[10px] font-mono text-text-secondary uppercase tracking-widest font-bold">Marketing Ops</span>
+                        <span className="text-[10px] font-black font-mono text-gray-500 uppercase tracking-widest">Marketing Ops</span>
                     </div>
-                    <h3 className="text-2xl font-bold text-white mb-4 italic uppercase">The Competitor Watchtower</h3>
-                    <p className="text-text-secondary mb-8 font-light">Automatically audits your competitor's landing page and identifies their 3 primary conversion hooks.</p>
-                    <div className="bg-primary-bg rounded-xl border border-white/5 p-4 mb-6 font-mono text-xs text-text-secondary opacity-60">
-                        Role: You are an expert CRO Analyst... <br/>
-                        Objective: Extract the primary USP... <br/>
-                        Workflow: Phase 1: Identify Hooks...
+                    <h3 className="text-2xl font-display text-black mb-4 uppercase leading-tight">The Competitor Watchtower</h3>
+                    <p className="text-sm text-black font-bold mb-8 uppercase leading-relaxed">Automatically audits landing pages and identifies conversion hooks.</p>
+                    <div className="bg-gray-100 border-2 border-dashed border-black p-4 mb-8 font-mono text-xs text-black font-black uppercase tracking-widest">
+                        Role: CRO Analyst <br/>
+                        Objective: Extract Hooks <br/>
+                        // Logic Locked...
                     </div>
                     <button 
                         onClick={handleCopySample}
-                        className="flex items-center gap-2 text-accent font-bold uppercase tracking-widest text-xs hover:text-white transition-colors"
+                        className="w-full bg-white border-2 border-black py-3 font-display text-xs uppercase transition-all hover:bg-[#ccff00] brutalist-shadow-sm"
                     >
-                        {copied ? "Copied to Clipboard!" : "Copy Sample Prompt"}
+                        {copied ? "Copied!" : "Copy Sample"}
                     </button>
                 </div>
 
                 {/* SAMPLE CARD 2 */}
-                <div className="bg-secondary-bg border border-navy-dark rounded-3xl p-8 relative overflow-hidden group">
-                    <div className="absolute top-0 right-0 p-4 opacity-5">
-                        <Globe className="w-32 h-32 text-purple-500" />
+                <div className="bg-white border-4 border-black p-8 brutalist-shadow relative overflow-hidden group">
+                    <div className="absolute top-0 right-0 p-4 opacity-10">
+                        <Globe className="w-32 h-32 text-black" />
                     </div>
                     <div className="flex items-center gap-3 mb-6">
-                        <div className="bg-purple-500/10 p-2 rounded-lg text-purple-400 border border-purple-500/20">
-                            <ShieldCheck className="w-4 h-4" />
+                        <div className="bg-black p-2 border-2 border-black text-[#00ffff]">
+                            <ShieldCheck className="w-5 h-5" />
                         </div>
-                        <span className="text-[10px] font-mono text-text-secondary uppercase tracking-widest font-bold">SEO</span>
+                        <span className="text-[10px] font-black font-mono text-gray-500 uppercase tracking-widest">SEO</span>
                     </div>
-                    <h3 className="text-2xl font-bold text-white mb-4 italic uppercase">The Semantic Cluster Bot</h3>
-                    <p className="text-text-secondary mb-8 font-light">Turns a raw list of 100 keywords into a structured content cluster with Pillar and Cluster relationships.</p>
-                    <div className="bg-primary-bg rounded-xl border border-white/5 p-4 mb-6 font-mono text-xs text-text-secondary opacity-60">
-                        Role: You are a Semantic SEO Specialist... <br/>
-                        Objective: Map keyword entities... <br/>
-                        Workflow: Phase 1: Entity Extraction...
+                    <h3 className="text-2xl font-display text-black mb-4 uppercase leading-tight">Semantic Cluster Bot</h3>
+                    <p className="text-sm text-black font-bold mb-8 uppercase leading-relaxed">Turns raw keywords into structured content Pillar/Cluster maps.</p>
+                    <div className="bg-gray-100 border-2 border-dashed border-black p-4 mb-8 font-mono text-xs text-black font-black uppercase tracking-widest">
+                        Role: SEO Specialist <br/>
+                        Objective: Map Entities <br/>
+                        // Logic Locked...
                     </div>
-                    <a href="#" className="flex items-center gap-2 text-text-secondary/40 font-bold uppercase tracking-widest text-xs cursor-not-allowed">
-                        <Lock className="w-3 h-3" /> Locked in Vault
-                    </a>
+                    <div className="w-full bg-black text-white py-3 font-display text-xs uppercase text-center brutalist-shadow-sm opacity-50 cursor-not-allowed">
+                        <Lock className="w-4 h-4 inline mr-2" /> Locked in Vault
+                    </div>
                 </div>
              </div>
           </div>
 
           {/* VALUE PROPOSITION */}
-          <div className="bg-white text-primary-bg rounded-[40px] p-12 md:p-20 mb-32 relative overflow-hidden">
-             <div className="absolute top-0 right-0 opacity-5">
-                <Zap className="w-96 h-96" />
+          <div className="bg-[#ccff00] border-4 border-black p-12 md:p-20 mb-32 brutalist-shadow relative overflow-hidden">
+             <div className="absolute top-0 right-0 opacity-10 pointer-events-none">
+                <Zap className="w-96 h-96 text-black" />
              </div>
-                          <div className="max-w-3xl relative z-10">
-                             <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter italic mb-8">Stop writing from scratch. <br/> Start executing.</h2>
-                             <div className="space-y-6 mb-12">
-                                 {[
-                                     "500+ Field-tested workflows for every business role.",
-                                     "Get 1 year of access to the complete vault.",
-                                     "Direct copy-paste format. No technical knowledge required.",
-                                     "Weekly updates with the latest 'Boring AI' plays."
-                                 ].map((text, i) => (                        <div key={i} className="flex items-start gap-4">
-                            <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-                            <span className="text-xl font-medium">{text}</span>
+             <div className="max-w-3xl relative z-10">
+                <h2 className="text-4xl md:text-7xl font-display text-black mb-12 uppercase leading-[0.9]">Stop writing from scratch. <br/> Start executing.</h2>
+                <div className="space-y-8 mb-16">
+                    {[
+                        "500+ Field-tested workflows for every business role.",
+                        "Get 1 year of access to the complete vault.",
+                        "Direct copy-paste format. No technical knowledge required.",
+                        "Weekly updates with the latest 'Boring AI' plays."
+                    ].map((text, i) => (
+                        <div key={i} className="flex items-start gap-6">
+                            <div className="bg-black p-1 border border-black rotate-3">
+                                <CheckCircle2 className="w-8 h-8 text-[#ccff00] stroke-[3px]" />
+                            </div>
+                            <span className="text-2xl font-black text-black uppercase leading-tight">{text}</span>
                         </div>
                     ))}
                 </div>
                 <a 
                   href="https://checkout.dodopayments.com/buy/pdt_0NXjwiW67fl4ov8bwfXRO?quantity=1"
-                  className="inline-flex items-center gap-3 bg-accent text-white px-12 py-6 rounded-2xl font-black text-2xl hover:bg-accent-hover transition-all shadow-2xl transform hover:-translate-y-1"
+                  className="bg-black text-[#ccff00] px-12 py-8 border-4 border-white font-display text-3xl uppercase transition-all brutalist-shadow transform hover:-translate-y-1"
                 >
                     UNLOCK THE VAULT ($39)
                 </a>
@@ -224,19 +224,22 @@ export default function PromptBundlePage() {
 
           {/* FAQ */}
           <div className="max-w-4xl mx-auto mb-32">
-             <h2 className="text-3xl font-bold text-center mb-16 uppercase tracking-widest">Common Questions</h2>
-             <div className="space-y-8">
-                <div>
-                    <h4 className="text-xl font-bold text-white mb-2 italic">How do I get the prompts?</h4>
-                    <p className="text-text-secondary font-light">Immediately after purchase, you'll receive access to our Private Vault page. It's a searchable, categorized dashboard where you can copy the full logic for all 500+ workflows with one click.</p>
+             <h2 className="text-4xl md:text-6xl font-display text-black text-center mb-20 uppercase tracking-tight decoration-wavy underline decoration-[#00ffff]">Questions</h2>
+             <div className="space-y-12">
+                <div className="bg-white border-4 border-black p-8 brutalist-shadow relative">
+                    <div className="absolute -left-4 -top-4 bg-black text-white px-3 py-1 font-display text-xl border-2 border-black shadow-[2px_2px_0px_0px_#ff00ff]">01</div>
+                    <h4 className="text-2xl font-display text-black mb-4 uppercase">How do I get the prompts?</h4>
+                    <p className="text-sm text-black font-black font-mono leading-relaxed uppercase">// Immediately after purchase, you'll receive access to our Private Vault page. It's a searchable, categorized dashboard.</p>
                 </div>
-                <div>
-                    <h4 className="text-xl font-bold text-white mb-2 italic">Do I need to be a developer?</h4>
-                    <p className="text-text-secondary font-light">Zero code required. If you can copy text and paste it into a chat box, you can use every single workflow in this vault.</p>
+                <div className="bg-white border-4 border-black p-8 brutalist-shadow relative">
+                    <div className="absolute -left-4 -top-4 bg-black text-white px-3 py-1 font-display text-xl border-2 border-black shadow-[2px_2px_0px_0px_#ccff00]">02</div>
+                    <h4 className="text-2xl font-display text-black mb-4 uppercase">No Code?</h4>
+                    <p className="text-sm text-black font-black font-mono leading-relaxed uppercase">// Zero code required. If you can copy text and paste it into a chat box, you can use every workflow in this vault.</p>
                 </div>
-                <div>
-                    <h4 className="text-xl font-bold text-white mb-2 italic">What makes these different?</h4>
-                    <p className="text-text-secondary font-light">Most prompt bundles are fluffy. Mine are <strong className="text-white">Boring</strong>. I focus on high-reliability business logic—cleaning data, auditing competitors, and building content machines that actually work in production.</p>
+                <div className="bg-white border-4 border-black p-8 brutalist-shadow relative">
+                    <div className="absolute -left-4 -top-4 bg-black text-white px-3 py-1 font-display text-xl border-2 border-black shadow-[2px_2px_0px_0px_#00ffff]">03</div>
+                    <h4 className="text-2xl font-display text-black mb-4 uppercase">Boring AI?</h4>
+                    <p className="text-sm text-black font-black font-mono leading-relaxed uppercase">// Most prompt bundles are fluffy. Mine are Boring. I focus on high-reliability business logic that works in production.</p>
                 </div>
              </div>
           </div>

@@ -1,278 +1,134 @@
-import Head from 'next/head'
-import Navbar from '../components/Navbar'
-import { Hammer, CheckCircle2, ArrowRight, XCircle, Terminal } from 'lucide-react'
-import { useState, useEffect } from 'react'
-import Image from 'next/image'
+import Head from 'next/head';
+import Image from 'next/image';
+import { useState } from 'react';
+import Navbar from '../components/Navbar';
+import { Sparkles, ArrowRight, Zap, Target, Search, Heart, CheckCircle2, ShieldCheck, Cpu, Terminal } from 'lucide-react';
 
-export default function BuildClub() {
-  const title = "The Build Club | AI Execution for Non-Technical Tinkerers";
-  const description = "A strict accountability group for shipping AI projects. Miss 2 updates = You are removed. No coding required. No gurus. Just results.";
-
-  // Wes Anderson Palette
-  const colors = {
-    bg: '#C0392B', // Brick Red (High Contrast)
-    text: '#FFFDE7', // Paper White
-    red: '#FDF498', // Yellow (Accent)
-    blue: '#3B4E59', // Slate Blue
-    paper: '#FFFDE7', // Light Paper
-    green: '#88A096', // Sage Green
-  }
-
+export default function BuildClubPage() {
   const [signed, setSigned] = useState(false);
 
   return (
-    <div className="min-h-screen font-mono selection:bg-yellow-400 selection:text-black" style={{ backgroundColor: colors.bg, color: colors.text }}>
+    <div className="min-h-screen bg-primary-bg font-sans text-black selection:bg-[#ff00ff] selection:text-white overflow-x-hidden">
       <Head>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        {/* Load Retro Fonts */}
-        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
-        <style>{`
-          .font-header { font-family: 'Bebas Neue', sans-serif; }
-          .font-body { font-family: 'Courier Prime', monospace; }
-          .marquee-container { overflow: hidden; white-space: nowrap; position: relative; }
-          .marquee-content { display: inline-block; animation: marquee 20s linear infinite; }
-          @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-          .texture-overlay {
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-            opacity: 0.15;
-            pointer-events: none;
-          }
-          .stamp {
-            mask-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/8399/grunge.png");
-            mask-size: 940px 600px;
-            mix-blend-mode: multiply;
-          }
-        `}</style>
+        <title>The 100M Build Club | Real AI Examples</title>
+        <meta name="description" content="A private syndicate for founders building AI-native companies. Zero fluff, high-velocity building." />
       </Head>
 
-      <div className="fixed inset-0 texture-overlay z-50"></div>
+      <Navbar />
 
-      <div className="build-club-theme">
-        <Navbar />
-      </div>
-
-      <main className="pt-32 pb-20 relative z-10">
-        
-        {/* HERO SECTION */}
-        <div className="container mx-auto px-4 max-w-5xl text-center mb-12 pt-16">
-          <div className="inline-block border-4 border-black bg-white px-6 py-2 mb-8 transform -rotate-2 shadow-[4px_4px_0px_rgba(0,0,0,1)]">
-            <span className="font-header text-2xl tracking-widest text-black">COHORT #01: BETA</span>
-          </div>
+      <main className="pt-32 pb-24">
+        <div className="container mx-auto px-4 max-w-6xl relative z-10">
           
-          <h1 className="text-7xl md:text-9xl font-header mb-6 leading-none text-[#FDF498] drop-shadow-[4px_4px_0px_rgba(0,0,0,1)]">
-            THE BUILD CLUB
-          </h1>
-          
-          <p className="font-body text-xl md:text-2xl mb-6 max-w-2xl mx-auto leading-relaxed text-white">
-            An accountability group that forces you to ship one AI project per week.<br/>
-            <span className="bg-[#FDF498] text-black px-2 italic font-bold border-2 border-black">Or you're out.</span>
-          </p>
-          
-          <div className="font-header text-2xl tracking-widest mb-12 opacity-80 uppercase">
-            FOR NON-TECHNICAL, AI-CURIOUS PROFESSIONALS & OPERATORS.
-          </div>
-        </div>
-
-        {/* MARQUEE BANNER - Moved below hero */}
-        <div className="bg-[#FDF498] text-black py-4 border-y-4 border-black font-header tracking-widest text-2xl marquee-container relative z-40 mb-24 rotate-1">
-            <div className="marquee-content">
-            WARNING: LAZY PEOPLE WILL BE REMOVED. &nbsp;&nbsp; /// &nbsp;&nbsp; MISS 2 UPDATES = KICKED OUT. &nbsp;&nbsp; /// &nbsp;&nbsp; NO REFUNDS FOR SLACKERS. &nbsp;&nbsp; /// &nbsp;&nbsp; WARNING: LAZY PEOPLE WILL BE REMOVED. &nbsp;&nbsp; /// &nbsp;&nbsp; MISS 2 UPDATES = KICKED OUT. &nbsp;&nbsp; /// &nbsp;&nbsp; NO REFUNDS FOR SLACKERS.
+          {/* HERO SECTION */}
+          <div className="text-center mb-24">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-black text-[#ccff00] border-2 border-black font-black text-[10px] uppercase tracking-[0.3em] mb-8 transform -rotate-1 brutalist-shadow-sm">
+                <Sparkles className="w-3.5 h-3.5" /> PRIVATE SYNDICATE
             </div>
-        </div>
+            <h1 className="text-5xl md:text-9xl font-display tracking-tight mb-8 uppercase leading-[0.8] text-black glitch-text" data-text="THE 100M BUILD CLUB">
+              The 100M <br />
+              <span className="text-[#ff00ff]">Build Club</span>
+            </h1>
+            <p className="text-xl md:text-3xl text-black max-w-2xl mx-auto font-black leading-relaxed border-l-8 border-[#ccff00] pl-6 py-4 bg-white border-2 border-black brutalist-shadow-sm mb-12 uppercase tracking-tighter">
+              Stop debating "AGI." <br />
+              Start shipping profitable <br />
+              <span className="bg-black text-[#ccff00] px-2">Agentic software.</span>
+            </p>
+          </div>
 
-        <div className="container mx-auto px-4 max-w-5xl">
-          <div className="grid md:grid-cols-2 gap-12 items-start max-w-4xl mx-auto text-left">
-            
-            {/* THE AGREEMENT (Left) */}
-            <div id="rules" className="bg-[#FFFDE7] p-8 border-4 border-black shadow-[8px_8px_0px_rgba(0,0,0,1)] relative text-[#4A2C2A]">
-                {/* Paper Clip Visual */}
-                <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-24 h-12 bg-gray-300 rounded-t-lg border-4 border-black border-b-0"></div>
-                
-                <h2 className="font-header text-4xl mb-6 border-b-4 border-black pb-2 text-black">MEMBERSHIP RULES</h2>
-                
-                <ul className="space-y-6 font-body text-lg">
-                  <li className="flex items-start gap-3">
-                    <span className="font-bold text-red-700">01.</span>
-                    <span>Post one update every week. Screenshot, Loom, or text. Proof you made progress.</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="font-bold text-red-700">02.</span>
-                    <span>I check in with you twice a week. Not a bot. Me. Async via DM.</span>
-                  </li>
-                  <li className="flex items-start gap-3 p-2 bg-red-100 border border-red-800 -mx-2 text-red-900">
-                    <span className="font-bold text-red-700">03.</span>
-                    <span className="font-bold">MISS 2 UPDATES = YOU'RE REMOVED. No warnings. No refunds.</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="font-bold text-red-700">04.</span>
-                    <span>Build your own idea or pick from 500+ blueprints on this site. Your call.</span>
-                  </li>
-                </ul>
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-32">
+            <div className="bg-white border-4 border-black p-8 md:p-12 brutalist-shadow rotate-1">
+                <h2 className="text-3xl md:text-5xl font-display text-black mb-8 uppercase leading-none">The Manifesto</h2>
+                <div className="space-y-6 text-xl text-black font-bold uppercase tracking-tighter leading-tight font-mono">
+                    <p>// We do not build "GPT Wrappers."</p>
+                    <p>// We build autonomous agents with specific business goals.</p>
+                    <p>// We prioritize speed-to-market over perfect architecture.</p>
+                    <p>// We use AI to automate our own building process.</p>
+                </div>
+            </div>
 
-                <div className="mt-8 pt-6 border-t-4 border-black border-dashed">
-                  <label className="flex items-center gap-4 cursor-pointer group">
-                    <div className={`w-8 h-8 border-4 border-black flex items-center justify-center transition-colors ${signed ? 'bg-black' : 'bg-white'}`} onClick={() => setSigned(!signed)}>
-                      {signed && <CheckCircle2 className="text-white w-6 h-6" />}
+            <div className="bg-[#ccff00] border-4 border-black p-8 md:p-12 brutalist-shadow -rotate-1">
+                <div className="flex items-center gap-4 mb-8">
+                    <div className="w-16 h-16 bg-black flex items-center justify-center text-[#ff00ff] border-2 border-black shadow-[4px_4px_0px_0px_#00ffff]">
+                        <Zap className="w-10 h-10 fill-current" />
                     </div>
-                    <span className="font-header text-xl tracking-wide group-hover:underline text-black">I ACCEPT THE TERMS</span>
-                  </label>
+                    <h2 className="text-3xl md:text-4xl font-display text-black uppercase">Join the Squad</h2>
                 </div>
+                
+                <div className="bg-white border-4 border-black p-6 mb-8 relative">
+                  <div className="absolute top-2 right-4 flex gap-4 text-[10px] font-black font-mono text-gray-400 uppercase">
+                    <span>Store #001</span>
+                    <span>{new Date().toLocaleDateString()}</span>
+                  </div>
+                  <h3 className="font-display text-xl mb-6 uppercase border-b-2 border-black pb-2">Entrance Receipt</h3>
+                  <div className="space-y-4 font-mono text-xs font-black uppercase">
+                    <div className="flex justify-between">
+                        <span>Initiation Fee</span>
+                        <span>$0.00</span>
+                    </div>
+                    <div className="flex justify-between">
+                        <span>Status</span>
+                        <span className="text-emerald-600">Open_Beta</span>
+                    </div>
+                    <div className="border-t-2 border-black pt-4 flex justify-between text-lg font-display">
+                        <span>Total</span>
+                        <span>$0.00</span>
+                    </div>
+                  </div>
+                </div>
+
+                <button 
+                    onClick={() => setSigned(!signed)}
+                    className={`w-full py-6 border-4 border-black font-display text-2xl uppercase transition-all brutalist-shadow-sm flex items-center justify-center gap-4 ${signed ? 'bg-black text-[#ccff00]' : 'bg-white text-black hover:bg-black hover:text-white'}`}
+                >
+                    {signed ? 'SIGNATURE CAPTURED' : 'SIGN MANIFESTO'}
+                    {signed && <CheckCircle2 className="w-8 h-8 stroke-[3px]" />}
+                </button>
             </div>
-
-            {/* THE RECEIPT (Right) */}
-            <div className="bg-white p-6 w-full max-w-sm mx-auto border border-gray-200 shadow-xl transform rotate-1 font-mono text-sm relative text-black">
-                {/* Receipt Jagged Edge Top */}
-                <div className="absolute top-0 left-0 w-full h-4 bg-white" style={{ clipPath: 'polygon(0% 100%, 5% 0%, 10% 100%, 15% 0%, 20% 100%, 25% 0%, 30% 100%, 35% 0%, 40% 100%, 45% 0%, 50% 100%, 55% 0%, 60% 100%, 65% 0%, 70% 100%, 75% 0%, 80% 100%, 85% 0%, 90% 100%, 95% 0%, 100% 100%)', marginTop: '-10px' }}></div>
-
-                <div className="text-center mb-6">
-                  <div className="font-header text-2xl mb-1">REAL AI EXAMPLES</div>
-                  <div className="text-xs text-gray-500">STORE #001 - INTERNET</div>
-                  <div className="text-xs text-gray-500">{new Date().toLocaleDateString()}</div>
-                </div>
-
-                <div className="border-b-2 border-dashed border-gray-300 mb-4"></div>
-
-                <div className="flex justify-between mb-2">
-                  <span>ITEM</span>
-                  <span>PRICE</span>
-                </div>
-
-                <div className="flex justify-between font-bold mb-1">
-                  <span>BUILD CLUB (BETA)</span>
-                  <span>$29.00/mo</span>
-                </div>
-                <div className="text-xs text-gray-500 mb-4 pl-4">
-                  - 2x Weekly Check-ins (me, not a bot)<br/>
-                  - Private group chat<br/>
-                  - Access to 500+ blueprints
-                </div>
-
-                <div className="border-b-2 border-dashed border-gray-300 mb-4"></div>
-
-                <div className="flex justify-between text-xl font-bold mb-6">
-                  <span>TOTAL</span>
-                  <span>$29.00</span>
-                </div>
-
-                <div className="text-center">
-                  <a 
-                    href={signed ? "https://checkout.dodopayments.com/buy/pdt_0NXUrQ3VQZzHbEiLKP2hN?quantity=1" : "#"}
-                    target={signed ? "_blank" : "_self"}
-                    rel={signed ? "noopener noreferrer" : ""}
-                    onClick={(e) => {
-                      if (!signed) {
-                        e.preventDefault();
-                        alert("YOU MUST SIGN THE AGREEMENT FIRST.");
-                      }
-                    }}
-                    className={`block w-full py-3 border-2 border-black font-bold transition-all ${signed ? 'bg-black text-white hover:bg-gray-800' : 'bg-gray-100 text-gray-400 cursor-not-allowed'}`}
-                  >
-                    {signed ? "PROCEED TO PAYMENT" : "SIGN LEFT TO BUY"}
-                  </a>
-                  <p className="mt-2 text-[10px] uppercase">By clicking, you agree to the Kick-Out Rule.</p>
-                </div>
-
-                {/* Receipt Jagged Edge Bottom */}
-                <div className="absolute bottom-0 left-0 w-full h-4 bg-white" style={{ clipPath: 'polygon(0% 0%, 5% 100%, 10% 0%, 15% 100%, 20% 0%, 25% 100%, 30% 0%, 35% 100%, 40% 0%, 45% 100%, 50% 0%, 55% 100%, 60% 0%, 65% 100%, 70% 0%, 75% 100%, 80% 0%, 85% 100%, 90% 0%, 95% 100%, 100% 0%)', marginBottom: '-10px' }}></div>
-            </div>
-
           </div>
+
+          {/* VALUES */}
+          <div className="grid md:grid-cols-3 gap-8 mb-32">
+             <div className="bg-white border-4 border-black p-8 brutalist-shadow-sm hover:translate-x-0.5 hover:translate-y-0.5 transition-all">
+                <div className="bg-black w-12 h-12 flex items-center justify-center mb-6 text-[#00ffff] border-2 border-black shadow-[2px_2px_0px_0px_#000]">
+                    <Target className="w-6 h-6" />
+                </div>
+                <h3 className="text-2xl font-display text-black mb-4 uppercase">High Alpha</h3>
+                <p className="text-sm text-black font-black font-mono leading-relaxed">// We only build workflows that provide massive leverage. No toys.</p>
+             </div>
+             <div className="bg-white border-4 border-black p-8 brutalist-shadow-sm hover:translate-x-0.5 hover:translate-y-0.5 transition-all">
+                <div className="bg-black w-12 h-12 flex items-center justify-center mb-6 text-[#ff00ff] border-2 border-black shadow-[2px_2px_0px_0px_#000]">
+                    <Search className="w-6 h-6" />
+                </div>
+                <h3 className="text-2xl font-display text-black mb-4 uppercase">Anti-Slop</h3>
+                <p className="text-sm text-black font-black font-mono leading-relaxed">// We strip away the marketing fluff and focus on rigid logic.</p>
+             </div>
+             <div className="bg-white border-4 border-black p-8 brutalist-shadow-sm hover:translate-x-0.5 hover:translate-y-0.5 transition-all">
+                <div className="bg-black w-12 h-12 flex items-center justify-center mb-6 text-[#ccff00] border-2 border-black shadow-[2px_2px_0px_0px_#000]">
+                    <Cpu className="w-6 h-6" />
+                </div>
+                <h3 className="text-2xl font-display text-black mb-4 uppercase">Agent-First</h3>
+                <p className="text-sm text-black font-black font-mono leading-relaxed">// We build for machine readability and autonomous execution.</p>
+             </div>
+          </div>
+
+          {/* CALL TO ACTION */}
+          <div className="bg-black border-4 border-black p-12 md:p-24 text-center brutalist-shadow relative overflow-hidden">
+             <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(#fff 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
+             <div className="relative z-10">
+                <h2 className="text-4xl md:text-7xl font-display text-white mb-12 uppercase leading-tight">READY TO <br/> START BUILDING?</h2>
+                <div className="flex flex-col md:flex-row items-center justify-center gap-8">
+                    <a href="mailto:akhil@realaiexamples.com" className="bg-[#ccff00] text-black px-12 py-6 border-4 border-white font-display text-2xl uppercase transition-all brutalist-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none">
+                        GET IN TOUCH
+                    </a>
+                    <div className="text-[#ff00ff] font-display text-xl uppercase tracking-widest animate-pulse">
+                        SQUAD_RECRUITMENT: ACTIVE
+                    </div>
+                </div>
+             </div>
+          </div>
+
         </div>
-
-        {/* WORKSHOP DETAILS */}
-        <div className="container mx-auto px-4 max-w-4xl mb-24 mt-24">
-          <div className="bg-white border-4 border-black p-10 relative text-black">
-            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black text-white px-4 py-1 font-header text-xl tracking-widest">
-              WHAT COUNTS AS "BUILDING"?
-            </div>
-            
-            <div className="grid md:grid-cols-3 gap-8 mt-4 font-body">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-blue-100 border-2 border-black rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">🛠️</div>
-                <h3 className="font-bold text-lg mb-2">Automations</h3>
-                <p className="text-sm">Lead scrapers, CRM enrichers, inbox sorters. Things that save you hours.</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-red-100 border-2 border-black rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">📢</div>
-                <h3 className="font-bold text-lg mb-2">Content Machines</h3>
-                <p className="text-sm">Blog-to-LinkedIn converters, SEO auditors, cold email generators.</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-green-100 border-2 border-black rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">📱</div>
-                <h3 className="font-bold text-lg mb-2">Mini Products</h3>
-                <p className="text-sm">Chrome extensions, calculators, directories. Things you can charge for.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* FAQ / NOTICE BOARD */}
-        <div className="container mx-auto px-4 max-w-2xl mb-24">
-          <h2 className="font-header text-5xl text-center mb-12">NOTICE BOARD</h2>
-          
-          <div className="bg-[#5D4037] p-4 rounded-lg shadow-2xl">
-            <div className="bg-[#D7CCC8] p-8 border-2 border-[#8D6E63] relative text-[#3E2723]">
-              {/* Pin */}
-              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-red-600 shadow-md"></div>
-              
-              <div className="space-y-6 font-body">
-                <div>
-                  <h3 className="font-bold underline mb-1">WHO IS THIS FOR?</h3>
-                  <p>All non-technical, AI-curious professionals. Whether you are a founder, marketer, salesperson, or ops specialist - if you want to build AI tools but keep getting distracted, this is for you. If you're an engineer looking for architecture talks, this isn't it.</p>
-                </div>
-                <div>
-                  <h3 className="font-bold underline mb-1">IS IT A COURSE?</h3>
-                  <p>No. Zero tutorials. I assume you know how to use ChatGPT or Claude. This is about doing, not learning.</p>
-                </div>
-                <div>
-                  <h3 className="font-bold underline mb-1">WHY $29?</h3>
-                  <p>Cheap enough to join, expensive enough to hurt if you waste it. Skin in the game.</p>
-                </div>
-                <div>
-                  <h3 className="font-bold underline mb-1">WHAT WILL I HAVE AFTER 4 WEEKS?</h3>
-                  <p>At least one working AI tool. A lead scraper, a content repurposer, a Chrome extension. Something you can show people.</p>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-          <div className="mt-12 text-center">
-            <a href="#rules" className="inline-block bg-[#FDF498] text-black border-4 border-black px-8 py-3 font-header text-2xl tracking-widest shadow-[4px_4px_0px_rgba(0,0,0,1)] hover:translate-y-1 hover:shadow-none transition-all transform rotate-2">
-              BACK TO RULES ➜
-            </a>
-          </div>
-        </div>
-
-        {/* MEET YOUR HOST SECTION */}
-        <div className="container mx-auto px-4 max-w-4xl mb-32">
-          <div className="bg-[#FFFDE7] border-4 border-black p-8 md:p-12 flex flex-col md:flex-row items-center gap-10 text-black shadow-[8px_8px_0px_rgba(0,0,0,1)] relative overflow-hidden group">
-            <div className="absolute top-0 right-0 p-8 opacity-5">
-              <Terminal className="w-32 h-32" />
-            </div>
-            
-            <div className="relative flex-shrink-0">
-              <div className="w-32 h-32 rounded-none overflow-hidden border-4 border-black relative grayscale group-hover:grayscale-0 transition-all duration-700 shadow-[4px_4px_0px_rgba(0,0,0,1)]">
-                <Image src="/images/akhil.jpg" alt="Akhil MK" fill className="object-cover" />
-              </div>
-            </div>
-            
-            <div className="text-center md:text-left relative z-10">
-              <div className="font-header text-xl tracking-widest mb-4 border-b-2 border-black inline-block uppercase">MEET YOUR HOST</div>
-              <p className="font-body text-lg leading-relaxed italic mb-6">
-                "I'm not a developer - I'm a tinkerer who got obsessed with making AI actually work for real businesses. I've spent hundreds of hours breaking things, fixing them, and figuring out which workflows actually save time (and which ones are just hype). Now I help non-technical founders skip the trial-and-error and get straight to results."
-              </p>
-              <div className="flex flex-col md:flex-row items-center gap-6">
-                <a href="mailto:akhil@realaiexamples.com" className="font-header text-lg tracking-widest bg-black text-white px-6 py-2 hover:bg-gray-800 transition-colors uppercase">
-                  Contact Support
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
       </main>
     </div>
-  )
+  );
 }

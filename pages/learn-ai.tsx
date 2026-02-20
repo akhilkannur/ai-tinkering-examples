@@ -4,154 +4,112 @@ import { Terminal, Cpu, Zap, ArrowRight, CheckCircle2, MessageSquare, Download, 
 import Link from 'next/link';
 
 export default function LearnAIPage() {
-  const pageTitle = "How to Setup AI Agents | Claude Code & Gemini CLI Guide";
-  const pageDescription = "Learn how to install and run AI agents on your machine. A complete guide to setting up Claude Code, Gemini CLI, and using Agentic Blueprints.";
-
   return (
-    <div className="flex flex-col min-h-screen bg-primary-bg font-sans text-text-color selection:bg-accent/30 overflow-x-hidden">
+    <div className="min-h-screen bg-primary-bg font-sans text-black selection:bg-[#ff00ff] selection:text-white">
       <Head>
-        <title>{pageTitle}</title>
-        <meta name="description" content={pageDescription} />
-        
-        {/* SEO Meta Tags */}
-        <meta property="og:title" content={pageTitle} />
-        <meta property="og:description" content={pageDescription} />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://realaiexamples.com/api/og?mode=home" />
-        <meta name="twitter:card" content="summary_large_image" />
+        <title>Learn AI Implementation | Real AI Examples</title>
+        <meta name="description" content="A beginner's guide to setting up and using agentic AI tools for your business. No fluff, just technical setup." />
       </Head>
 
       <Navbar />
 
-      <main className="flex-grow pt-32 pb-24">
-        <div className="container mx-auto px-4 max-w-4xl">
+      <main className="pt-32 pb-24 relative">
+        <div className="container mx-auto px-4 max-w-4xl relative z-10">
           
-          {/* Header */}
-          <div className="mb-16">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 border border-accent/20 text-accent font-bold text-[10px] uppercase tracking-[0.2em] mb-6 font-mono">
-                <Terminal className="w-3 h-3" /> The Quickstart Guide
+          <div className="text-center mb-24">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-black text-[#ccff00] border-2 border-black font-black text-[10px] uppercase tracking-[0.3em] mb-8 transform -rotate-1 brutalist-shadow-sm">
+                <Terminal className="w-3.5 h-3.5" /> Getting Started
             </div>
-            <h1 className="text-4xl md:text-6xl font-black text-white mb-6 tracking-tighter leading-tight uppercase italic">
-              A Chatbot <span className="text-accent">with Hands.</span>
+            <h1 className="text-5xl md:text-8xl font-display tracking-tight mb-8 uppercase leading-[0.9] text-black glitch-text" data-text="STOP CHATTING. START BUILDING.">
+              Stop Chatting. <br />
+              <span className="text-[#ff00ff]">Start Building.</span>
             </h1>
-            <p className="text-xl text-text-secondary leading-relaxed font-light max-w-2xl">
-              Designed for all non-technical, AI-curious professionals. ChatGPT can write an email, but it can't send it. AI Agents live on your computer. They can create files, run searches, and manage projects - just like a remote intern.
+            <p className="text-xl md:text-2xl text-black max-w-2xl mx-auto font-black leading-relaxed border-l-8 border-[#ccff00] pl-6 py-2 bg-white border-2 border-black brutalist-shadow-sm">
+              The professional way to use AI isn't through a browser. It's through your terminal.
             </p>
           </div>
 
-          {/* Setup Steps */}
-          <div className="space-y-24">
-            
-            {/* Step 1: Tool Selection */}
-            <section className="relative">
-               <div className="absolute -left-12 top-0 text-6xl font-black text-white/5 font-mono hidden md:block">01</div>
-               <h2 className="text-2xl font-bold text-white mb-8 flex items-center gap-3">
-                  <Cpu className="text-accent" /> Step 1: Pick Your Tool
+          <div className="space-y-20">
+            {/* Step 1 */}
+            <section className="bg-white border-4 border-black p-8 md:p-12 brutalist-shadow relative">
+               <div className="absolute -left-6 -top-6 bg-black text-white w-16 h-16 flex items-center justify-center font-display text-4xl border-4 border-black shadow-[4px_4px_0px_0px_#ff00ff]">01</div>
+               <h2 className="text-3xl md:text-4xl font-display text-black mb-8 flex items-center gap-4 uppercase">
+                  <Terminal className="w-8 h-8 text-[#ccff00] stroke-[3px]" /> Install the Tools
                </h2>
-               <p className="text-text-secondary mb-8 leading-relaxed">
-                  I recommend <strong className="text-white">Claude Code</strong> or <strong className="text-white">Gemini CLI</strong>. These are professional-grade tools that run inside your computer's terminal.
+               <p className="text-lg text-black font-bold mb-8 uppercase leading-tight">
+                  I recommend <strong className="bg-black text-[#ccff00] px-1">Claude Code</strong> or <strong className="bg-black text-[#ccff00] px-1">Gemini CLI</strong>. These run inside your computer's terminal.
                </p>
-
-               <div className="grid md:grid-cols-2 gap-6">
-                  <div className="bg-secondary-bg border border-navy-dark p-8 rounded-2xl group hover:border-accent/30 transition-all">
-                     <h3 className="text-xl font-bold text-white mb-4">Claude Code</h3>
-                     <p className="text-sm text-text-secondary mb-6 leading-relaxed">Best for complex coding, file manipulation, and deep reasoning.</p>
-                     <div className="bg-primary-bg p-4 rounded-xl font-mono text-xs text-accent border border-white/5 mb-6">
-                        npm install -g @anthropic-ai/claude-code
-                     </div>
-                     <a href="https://github.com/anthropics/claude-code" target="_blank" rel="noopener noreferrer" className="text-[10px] font-bold uppercase tracking-widest text-text-secondary hover:text-white flex items-center gap-2">
-                        View Docs <ArrowRight className="w-3 h-3" />
+               
+               <div className="grid md:grid-cols-2 gap-8">
+                  <div className="bg-gray-50 border-2 border-black p-6 hover:bg-[#ccff00] transition-colors group">
+                     <h3 className="text-2xl font-display text-black mb-4 uppercase">Claude Code</h3>
+                     <p className="text-sm text-black font-black font-mono mb-6 uppercase tracking-widest leading-relaxed">// Anthropic's official CLI tool for complex multi-file engineering.</p>
+                     <a href="https://github.com/anthropics/claude-code" target="_blank" rel="noopener noreferrer" className="inline-block bg-black text-white px-4 py-2 font-display text-xs uppercase brutalist-shadow-sm group-hover:bg-white group-hover:text-black transition-colors">
+                        View Docs
                      </a>
                   </div>
-
-                  <div className="bg-secondary-bg border border-navy-dark p-8 rounded-2xl group hover:border-accent/30 transition-all">
-                     <h3 className="text-xl font-bold text-white mb-4">Gemini CLI</h3>
-                     <p className="text-sm text-text-secondary mb-6 leading-relaxed">Best for rapid data processing and massive context windows.</p>
-                     <div className="bg-primary-bg p-4 rounded-xl font-mono text-xs text-accent border border-white/5 mb-6">
-                        npm install -g @google/gemini-cli
-                     </div>
-                     <a href="https://github.com/google/gemini-cli" target="_blank" rel="noopener noreferrer" className="text-[10px] font-bold uppercase tracking-widest text-text-secondary hover:text-white flex items-center gap-2">
-                        View Docs <ArrowRight className="w-3 h-3" />
+                  <div className="bg-gray-50 border-2 border-black p-6 hover:bg-[#ff00ff] transition-colors group">
+                     <h3 className="text-2xl font-display text-black mb-4 uppercase">Gemini CLI</h3>
+                     <p className="text-sm text-black font-black font-mono mb-6 uppercase tracking-widest leading-relaxed">// High-speed agentic CLI for Google's Gemini models.</p>
+                     <a href="https://github.com/google/gemini-cli" target="_blank" rel="noopener noreferrer" className="inline-block bg-black text-white px-4 py-2 font-display text-xs uppercase brutalist-shadow-sm group-hover:bg-white group-hover:text-black transition-colors">
+                        View Docs
                      </a>
                   </div>
                </div>
             </section>
 
-            {/* Step 2: Blueprints */}
-            <section className="relative">
-               <div className="absolute -left-12 top-0 text-6xl font-black text-white/5 font-mono hidden md:block">02</div>
-               <h2 className="text-2xl font-bold text-white mb-8 flex items-center gap-3">
-                  <Download className="text-accent" /> Step 2: Copy a Skill
+            {/* Step 2 */}
+            <section className="bg-white border-4 border-black p-8 md:p-12 brutalist-shadow relative">
+               <div className="absolute -left-6 -top-6 bg-black text-white w-16 h-16 flex items-center justify-center font-display text-4xl border-4 border-black shadow-[4px_4px_0px_0px_#ccff00]">02</div>
+               <h2 className="text-3xl md:text-4xl font-display text-black mb-8 flex items-center gap-4 uppercase">
+                  <Download className="w-8 h-8 text-[#ff00ff] stroke-[3px]" /> Pick a Skill
                </h2>
-               <p className="text-text-secondary mb-8 leading-relaxed">
-                  Browse my library of <strong className="text-white">500+ AI Skills</strong>. Each skill is a rigid set of instructions that tells the agent exactly how to perform a business task.
+               <p className="text-lg text-black font-bold mb-8 uppercase leading-tight">
+                  Browse my library of <strong className="bg-black text-[#ff00ff] px-1">500+ AI Skills</strong>. Each is a rigid set of instructions for a business task.
                </p>
-               <div className="bg-secondary-bg border border-navy-dark p-8 rounded-3xl relative overflow-hidden group">
-                  <div className="flex items-center gap-4 mb-6">
-                     <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center text-accent">
-                        <Zap className="w-6 h-6" />
-                     </div>
-                     <div>
-                        <h4 className="font-bold text-white uppercase">The Sales Sniper</h4>
-                        <p className="text-xs text-text-secondary">Ready to copy</p>
-                     </div>
+               
+               <div className="bg-[#ccff00] border-4 border-black p-6 rotate-1 brutalist-shadow-sm">
+                  <div className="flex items-center gap-4 mb-4">
+                        <div className="bg-black p-2 border-2 border-black text-white">
+                            <Zap className="w-6 h-6 fill-current" />
+                        </div>
+                        <h4 className="font-display text-2xl text-black uppercase">The Sales Sniper</h4>
                   </div>
-                  <div className="bg-primary-bg p-6 rounded-xl border border-white/5 font-mono text-xs text-text-secondary mb-6 opacity-60">
-                     Role: You are an expert lead researcher... <br/>
-                     Objective: Find 50 prospects in the SaaS niche... <br/>
-                     Workflow: Phase 1: Scrape LinkedIn...
-                  </div>
-                  <Link href="/skills" className="bg-white text-primary-bg px-8 py-3 rounded-xl font-bold text-sm hover:bg-gray-100 transition-all inline-block">
-                     Browse the Library
-                  </Link>
+                  <p className="text-sm text-black font-black uppercase tracking-widest leading-relaxed">
+                     Example: Download the "Outbound Research" skill and place it in your project folder.
+                  </p>
                </div>
             </section>
 
-            {/* Step 3: Running */}
-            <section className="relative">
-               <div className="absolute -left-12 top-0 text-6xl font-black text-white/5 font-mono hidden md:block">03</div>
-               <h2 className="text-2xl font-bold text-white mb-8 flex items-center gap-3">
-                  <Command className="text-accent" /> Step 3: Run the Agent
+            {/* Step 3 */}
+            <section className="bg-white border-4 border-black p-8 md:p-12 brutalist-shadow relative">
+               <div className="absolute -left-6 -top-6 bg-black text-white w-16 h-16 flex items-center justify-center font-display text-4xl border-4 border-black shadow-[4px_4px_0px_0px_#00ffff]">03</div>
+               <h2 className="text-3xl md:text-4xl font-display text-black mb-8 flex items-center gap-4 uppercase">
+                  <Command className="w-8 h-8 text-[#00ffff] stroke-[3px]" /> Run the Command
                </h2>
-               <p className="text-text-secondary mb-8 leading-relaxed">
-                  Open your terminal, type <code className="bg-secondary-bg px-1 py-0.5 rounded text-accent border border-white/5">claude</code> or <code className="bg-secondary-bg px-1 py-0.5 rounded text-accent border border-white/5">gemini</code>, paste the logic, and watch the agent execute the play. No more manual grunt work.
+               <p className="text-lg text-black font-bold mb-8 uppercase leading-tight">
+                  Tell your terminal agent to use the skill. It will read your files and do the work.
                </p>
-               <div className="bg-black rounded-2xl border border-navy-dark p-6 shadow-2xl font-mono text-sm">
-                  <div className="flex gap-2 mb-4">
-                     <div className="w-3 h-3 rounded-full bg-red-500/20" />
-                     <div className="w-3 h-3 rounded-full bg-yellow-500/20" />
-                     <div className="w-3 h-3 rounded-full bg-emerald-500/20" />
-                  </div>
-                  <div className="text-text-secondary space-y-2">
-                     <div className="flex gap-2">
-                        <span className="text-accent italic">➜</span>
-                        <span className="text-white">claude "Run the Lead Finder Logic"</span>
-                     </div>
-                     <div className="text-blue-400">Scanning... Found 50 prospects.</div>
-                     <div className="text-emerald-400">✓ Created leads.csv</div>
-                     <div className="flex gap-2">
-                        <span className="text-accent italic">➜</span>
-                        <span className="animate-pulse">_</span>
-                     </div>
-                  </div>
+               
+               <div className="bg-black p-8 border-4 border-black brutalist-shadow-sm text-white font-mono text-lg mb-8 relative">
+                  <div className="absolute top-2 right-4 text-[10px] uppercase font-black tracking-widest text-[#ccff00]">Terminal</div>
+                  <span className="text-[#ff00ff]">➜</span> <span className="text-[#ccff00]">claude</span> "Run the Outbound Research Skill"
                </div>
             </section>
 
             {/* Help Section */}
-            <section className="bg-white text-primary-bg rounded-[40px] p-12 md:p-16 text-center">
-               <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter italic mb-6">Stuck? I'll do it for you.</h2>
-               <p className="text-lg mb-10 max-w-xl mx-auto font-medium">
-                  If the terminal scares you, book an <strong className="text-primary-bg font-bold">AI Agent Kickstart Jam</strong>. I'll setup everything via screen share and build your first 3 plays with you.
+            <div className="bg-[#ff00ff] border-4 border-black p-8 md:p-12 brutalist-shadow text-center">
+               <h2 className="text-3xl md:text-5xl font-display text-white mb-8 uppercase tracking-tight">Need a Hand?</h2>
+               <p className="text-xl text-white font-black mb-12 uppercase leading-tight">
+                  I can jump on a 90-minute call and set everything up for you.
                </p>
-               <Link href="/agent-setup-service" className="inline-flex items-center gap-3 bg-accent text-white px-10 py-5 rounded-2xl font-black text-xl hover:bg-accent-hover transition-all shadow-2xl">
-                  BOOK A SETUP JAM <ArrowRight className="w-5 h-5" />
+               <Link href="/agent-setup-service" className="inline-flex items-center gap-4 bg-white text-black px-12 py-6 border-4 border-black font-display text-2xl uppercase transition-all brutalist-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none mx-auto">
+                  Book Setup Sprint <ArrowRight className="w-8 h-8 stroke-[3px]" />
                </Link>
-            </section>
-
+            </div>
           </div>
         </div>
       </main>
-
     </div>
   );
 }
