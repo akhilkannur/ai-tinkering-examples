@@ -41,7 +41,7 @@ export default function HeroForm() {
       <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-0 w-full sm:w-[450px] brutalist-shadow">
         <input 
           type="email" 
-          placeholder="GET_FREE_STARTER_PACK" 
+          placeholder="FREE_STARTER_SKILLS" 
           required
           className="flex-1 px-4 py-4 bg-white border-4 border-black text-black font-display text-sm uppercase focus:bg-[#ccff00] outline-none transition-all placeholder:text-gray-400 min-w-0" 
           value={email}
@@ -63,7 +63,7 @@ export default function HeroForm() {
       <div className="flex items-center gap-2 px-2">
         <Zap className="w-3 h-3 text-[#ff00ff] fill-current" />
         <span className="text-[9px] font-black font-mono uppercase tracking-widest text-black/40 italic">
-          Join 45,000+ builders
+          INSTANT ACCESS
         </span>
       </div>
     </div>

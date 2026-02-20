@@ -32,12 +32,12 @@ export default function Footer() {
             <ul className="space-y-3 text-sm font-black uppercase tracking-widest">
               <li>
                 <Link href="/generators/docs-to-context" className="hover:text-punk-magenta transition-colors hover:underline decoration-wavy">
-                  Docs to Context
+                  Website to Markdown Generator
                 </Link>
               </li>
               <li>
-                <Link href="/skills" className="hover:text-punk-magenta transition-colors hover:underline decoration-wavy">
-                  700+ AI Skills
+                <Link href="/ai-workplace-quiz" className="hover:text-punk-magenta transition-colors hover:underline decoration-wavy">
+                  AI Readiness Quiz
                 </Link>
               </li>
               <li>
@@ -56,14 +56,9 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/ai-workplace-quiz" className="hover:text-punk-magenta transition-colors hover:underline decoration-wavy">
-                  AI Readiness Quiz
-                </Link>
-              </li>
-              <li>
-                <Link href="/blog" className="hover:text-punk-magenta transition-colors hover:underline decoration-wavy">
-                  AI Case Studies
-                </Link>
+                <a href="https://salestools.club/" target="_blank" rel="noopener noreferrer" className="hover:text-punk-magenta transition-colors hover:underline decoration-wavy uppercase">
+                  Salestools club
+                </a>
               </li>
             </ul>
           </div>
