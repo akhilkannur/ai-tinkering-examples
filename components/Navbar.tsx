@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { Menu, X, Terminal, Cpu, Bolt } from 'lucide-react'
+import { Menu, X, Terminal, Cpu, Zap } from 'lucide-react'
 import Head from 'next/head'
 import Image from 'next/image'
 
@@ -83,7 +83,7 @@ export default function Navbar() {
             <button className="px-4 py-2 bg-white border-2 border-black font-black uppercase text-xs hover:bg-black hover:text-white transition-all brutalist-shadow-sm">Log In</button>
             <button className="px-4 py-2 bg-punk-lime border-2 border-black font-black uppercase text-xs hover:translate-x-0.5 hover:translate-y-0.5 transition-all brutalist-shadow-sm flex items-center gap-2">
                 <span>Get Pro</span>
-                <Bolt size={14} fill="currentColor" />
+                <Zap size={14} fill="currentColor" />
             </button>
           </div>
 
@@ -120,7 +120,7 @@ export default function Navbar() {
             <div className="pt-4 flex flex-col gap-2">
                 <button className="w-full py-3 bg-white border-2 border-black font-black uppercase text-sm brutalist-shadow-sm">Log In</button>
                 <button className="w-full py-3 bg-punk-lime border-2 border-black font-black uppercase text-sm brutalist-shadow-sm flex items-center justify-center gap-2">
-                    Get Pro <Bolt size={16} fill="currentColor" />
+                    Get Pro <Zap size={16} fill="currentColor" />
                 </button>
             </div>
           </div>
