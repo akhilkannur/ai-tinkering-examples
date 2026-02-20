@@ -5,13 +5,12 @@ import { getSocialShareUrls } from '../utils/urlHelpers'
 import { trackEvent } from '../utils/analytics'
 
 interface SocialSharingProps {
-  // Support both direct URL or example record
   example?: ExampleRecord
   url?: string
   title: string
   description?: string
   className?: string
-  compact?: boolean // For card view
+  compact?: boolean
 }
 
 export default function SocialSharing({ 
@@ -24,7 +23,6 @@ export default function SocialSharing({
 }: SocialSharingProps) {
   const [copied, setCopied] = useState(false)
 
-  // Get share URLs - prefer example record for consistency
   const shareData = example 
     ? getSocialShareUrls(example)
     : {
@@ -33,16 +31,6 @@ export default function SocialSharing({
         linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url!)}&title=${encodeURIComponent(title)}&summary=${encodeURIComponent(description || title)}`,
         url: url!
       }
-
-  const copyToClipboard = async () => {
-    try {
-      await navigator.clipboard.writeText(shareData.url)
-      setCopied(true)
-      setTimeout(() => setCopied(false), 2000)
-    } catch (err) {
-      console.error('Failed to copy URL:', err)
-    }
-  }
 
   const handleShare = (platform: string) => {
     trackEvent('share', {
@@ -53,29 +41,17 @@ export default function SocialSharing({
   }
 
   if (compact) {
-    // Compact version for cards - just share icons
     return (
-      <div className={`flex items-center justify-center gap-2 ${className}`}>
-        <a
-          href={shareData.facebook}
-          target="_blank"
-          rel="noopener noreferrer"
-          onClick={() => handleShare('facebook')}
-          className="p-2 border-2 rounded-full text-slate-400 hover:text-[#1877F2] hover:border-[#1877F2] transition-colors"
-          aria-label="Share on Facebook"
-        >
-          <Facebook size={20} />
-        </a>
-
+      <div className={`flex items-center justify-center gap-3 ${className}`}>
         <a
           href={shareData.twitter}
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => handleShare('twitter')}
-          className="p-2 border-2 rounded-full text-slate-400 hover:text-black hover:border-black transition-colors"
+          className="p-2 border-2 border-black bg-white hover:bg-[#ccff00] transition-all brutalist-shadow-sm"
           aria-label="Share on X"
         >
-          <X size={20} />
+          <X size={16} strokeWidth={3} />
         </a>
 
         <a
@@ -83,51 +59,48 @@ export default function SocialSharing({
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => handleShare('linkedin')}
-          className="p-2 border-2 rounded-full text-slate-400 hover:text-[#0A66C2] hover:border-[#0A66C2] transition-colors"
+          className="p-2 border-2 border-black bg-white hover:bg-[#00ffff] transition-all brutalist-shadow-sm"
           aria-label="Share on LinkedIn"
         >
-          <Linkedin size={20} />
+          <Linkedin size={16} strokeWidth={3} />
         </a>
-
-        
       </div>
     )
   }
 
-  // Full version for detail pages
   return (
-    <div className={`flex items-center gap-4 ${className}`}>
-      <span className="text-sm font-sans font-bold text-text-secondary">SHARE</span>
-      <div className="flex items-center gap-2">
+    <div className={`flex items-center gap-6 ${className}`}>
+      <span className="font-display text-xs text-black uppercase tracking-widest bg-[#ccff00] px-2 py-0.5 border-2 border-black transform rotate-2">SHARE</span>
+      <div className="flex items-center gap-4">
         <a
           href={shareData.twitter}
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => handleShare('twitter')}
-          className="text-text-secondary hover:text-text-color transition-colors"
+          className="w-10 h-10 flex items-center justify-center border-2 border-black bg-white hover:bg-[#00ffff] transition-all brutalist-shadow-sm"
           aria-label="Share on X"
         >
-          <X size={20} />
+          <X size={20} strokeWidth={3} />
         </a>
         <a
           href={shareData.facebook}
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => handleShare('facebook')}
-          className="text-text-secondary hover:text-accent transition-colors"
+          className="w-10 h-10 flex items-center justify-center border-2 border-black bg-white hover:bg-[#ff00ff] hover:text-white transition-all brutalist-shadow-sm"
           aria-label="Share on Facebook"
         >
-          <Facebook size={20} />
+          <Facebook size={20} strokeWidth={3} />
         </a>
         <a
           href={shareData.linkedin}
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => handleShare('linkedin')}
-          className="text-text-secondary hover:text-accent-light transition-colors"
+          className="w-10 h-10 flex items-center justify-center border-2 border-black bg-white hover:bg-[#ccff00] transition-all brutalist-shadow-sm"
           aria-label="Share on LinkedIn"
         >
-          <Linkedin size={20} />
+          <Linkedin size={20} strokeWidth={3} />
         </a>
       </div>
     </div>

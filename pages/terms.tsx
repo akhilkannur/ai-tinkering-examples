@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar'
 
 export default function Terms() {
   return (
-    <div className="min-h-screen bg-primary-bg font-sans text-text-color selection:bg-accent/30 overflow-x-hidden">
+    <div className="min-h-screen bg-primary-bg font-sans text-black selection:bg-[#ff00ff] selection:text-white overflow-x-hidden">
       <Head>
         <title>Terms of Service | Real AI Examples</title>
         <meta name="description" content="Read our terms of service to understand the rules and guidelines for using our blueprints and skills." key="description" />
@@ -11,53 +11,49 @@ export default function Terms() {
 
       <Navbar />
 
-      <main className="pt-40 pb-24">
-        <div className="container mx-auto px-4 max-w-4xl relative z-10">
+      <main className="pt-32 pb-24 relative z-10">
+        <div className="container mx-auto px-4 max-w-4xl">
           
-          <div className="text-center mb-16">
-            <div className="text-accent font-mono text-[10px] uppercase tracking-[0.4em] mb-4">Terms of Service</div>
-            <h1 className="text-4xl md:text-6xl font-black tracking-tighter mb-6 uppercase italic text-white">Access Terms</h1>
+          <div className="text-center mb-24">
+            <div className="inline-flex items-center gap-2 bg-black text-[#ccff00] border-2 border-black px-4 py-1.5 font-black text-xs uppercase mb-8 transform rotate-1 brutalist-shadow-sm">
+              Usage Protocol
+            </div>
+            <h1 className="text-5xl md:text-8xl font-display mb-12 text-black uppercase leading-[0.9] glitch-text" data-text="ACCESS TERMS">Access Terms</h1>
           </div>
           
-          <div className="bg-secondary-bg/50 backdrop-blur-md border border-white/5 p-8 md:p-12 rounded-3xl relative overflow-hidden">
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none"></div>
+          <div className="bg-white border-4 border-black p-8 md:p-12 brutalist-shadow relative overflow-hidden">
+            <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'radial-gradient(#000 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
             
-            <div className="prose prose-invert max-w-none prose-sm md:prose-base text-text-secondary font-light leading-relaxed space-y-8 relative z-10">
-                <p className="font-mono text-xs text-accent">Last Updated: January 17, 2026</p>
+            <div className="max-w-none space-y-10 relative z-10">
+                <p className="font-black font-mono text-xs uppercase tracking-widest bg-black text-[#ff00ff] inline-block px-2 py-1">Last Updated: January 17, 2026</p>
                 
                 <section>
-                    <h2 className="text-xl font-bold text-white uppercase tracking-tight mb-4">1. Agreement to Terms</h2>
-                    <p>By accessing or using Real AI Examples, you agree to be bound by these Terms of Service. If you do not agree, do not access our repository or download our assets.</p>
+                    <h2 className="text-2xl md:text-3xl font-display text-black uppercase mb-4 decoration-wavy underline decoration-[#ccff00]">1. Agreement</h2>
+                    <p className="font-bold leading-relaxed text-lg uppercase tracking-tight font-mono">// By accessing Real AI Examples, you agree to these Terms. If you do not agree, do not access our repository.</p>
                 </section>
 
                 <section>
-                    <h2 className="text-xl font-bold text-white uppercase tracking-tight mb-4">2. Intellectual Property</h2>
-                    <p>All blueprints, code snippets, and skills provided on this site are the intellectual property of Real AI Examples. You are granted a non-exclusive license to use them for personal or professional workflows, but you may not resell them as standalone products.</p>
+                    <h2 className="text-2xl md:text-3xl font-display text-black uppercase mb-4 decoration-wavy underline decoration-[#ff00ff]">2. Intellectual Property</h2>
+                    <p className="font-bold leading-relaxed uppercase tracking-tight font-mono">// All blueprints and code provided are the property of Real AI Examples. You are granted a non-exclusive license for personal or professional workflows. <span className="bg-black text-[#ccff00] px-1">Reselling is strictly prohibited.</span></p>
                 </section>
 
                 <section>
-                    <h2 className="text-xl font-bold text-white uppercase tracking-tight mb-4">3. Limitation of Liability</h2>
-                    <p>AI models can be unpredictable. We provide these blueprints "as is" and are not responsible for any data loss, system errors, or financial damages resulting from the execution of our instructions.</p>
+                    <h2 className="text-2xl md:text-3xl font-display text-black uppercase mb-4 decoration-wavy underline decoration-[#00ffff]">3. Liability</h2>
+                    <p className="font-bold leading-relaxed uppercase tracking-tight font-mono">// AI is unpredictable. We provide assets "as is" and are not responsible for any data loss, system errors, or damages resulting from execution.</p>
                 </section>
 
                 <section>
-                    <h2 className="text-xl font-bold text-white uppercase tracking-tight mb-4">4. Usage Guidelines</h2>
-                    <p>You agree not to use our blueprints for generating illegal content, spam, or malicious software. Violation of these rules will result in immediate termination of your access.</p>
+                    <h2 className="text-2xl md:text-3xl font-display text-black uppercase mb-4 decoration-wavy underline decoration-[#ccff00]">4. Guidelines</h2>
+                    <p className="font-bold leading-relaxed uppercase tracking-tight font-mono">// Do not use our assets for illegal content, spam, or malicious software. Violation results in immediate termination of access.</p>
                 </section>
 
-                <section className="pt-8 border-t border-white/5">
-                    <p>System questions? Contact terminal support: <code className="text-accent">akhil@realaiexamples.com</code></p>
+                <section className="pt-12 border-t-4 border-black border-dashed">
+                    <p className="font-display text-xl uppercase text-black">Questions? Contact support: <code className="bg-black text-[#ccff00] px-2 py-1 ml-2">akhil@realaiexamples.com</code></p>
                 </section>
             </div>
           </div>
         </div>
       </main>
-
-      <footer className="border-t border-white/5 py-12 text-center text-text-secondary text-[10px] bg-[#0B1120] font-mono uppercase tracking-[0.3em] opacity-40">
-        <div className="container mx-auto px-4">
-            <p>&copy; {new Date().getFullYear()} REAL_AI_EXAMPLES_DPT. ALL_RIGHTS_RESERVED.</p>
-        </div>
-      </footer>
     </div>
   )
 }

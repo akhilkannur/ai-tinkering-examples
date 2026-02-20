@@ -2,7 +2,6 @@ import { useEffect, useRef } from 'react'
 import { X, ExternalLink } from 'lucide-react'
 import type { EnrichedExampleRecord } from '../lib/airtable'
 import ExampleBody from './ExampleBody'
-// SocialSharing is no longer directly imported here as it's moved to ExampleBody
 
 interface ExampleModalProps {
   example: EnrichedExampleRecord | null
@@ -56,39 +55,39 @@ export default function ExampleModal({ example, isOpen, onClose }: ExampleModalP
   return (
     <div 
       ref={modalRef}
-      className={`fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm transition-opacity duration-300 ${
+      className={`fixed inset-0 z-[100] flex items-center justify-center bg-black/95 backdrop-blur-md transition-opacity duration-300 ${
         isOpen ? 'opacity-100' : 'opacity-0'
       }`}
     >
       <div
         ref={contentRef}
-        className={`relative bg-primary-bg sm:rounded-none border border-navy-dark shadow-2xl sm:max-w-4xl max-h-full sm:max-h-[90vh] w-full h-full sm:h-auto transform transition-all duration-300 flex flex-col ${
+        className={`relative bg-white border-4 border-black brutalist-shadow sm:max-w-4xl max-h-full sm:max-h-[90vh] w-full h-full sm:h-auto transform transition-all duration-300 flex flex-col ${
           isOpen ? 'scale-100 translate-y-0' : 'scale-95 translate-y-4'
         }`}
       >
-        <div className="absolute top-0 right-0 pt-4 pr-4 z-10">
+        <div className="absolute top-4 right-4 z-[110]">
           <button
             onClick={onClose}
-            className="p-2 text-text-secondary hover:text-accent hover:bg-secondary-bg rounded-none transition-colors"
+            className="p-2 bg-black text-white hover:bg-[#ff00ff] border-2 border-black transition-colors brutalist-shadow-sm"
             aria-label="Close modal"
           >
-            <X size={20} />
+            <X size={24} strokeWidth={3} />
           </button>
         </div>
 
-        <div className="overflow-y-auto flex-grow pt-6 scrollbar-thin scrollbar-thumb-navy-light scrollbar-track-primary-bg"> {/* Removed max-h, added flex-grow */}
+        <div className="overflow-y-auto flex-grow pt-12 pb-8 scrollbar-hide">
           <ExampleBody example={example} />
         </div>
 
-        {example.original_link && ( // Only render this div if original_link exists
-          <div className="border-t border-navy-dark p-4 bg-secondary-bg rounded-none shadow-none flex justify-center"> {/* Removed sticky bottom-0, added flex justify-center */}
+        {example.original_link && (
+          <div className="border-t-4 border-black p-6 bg-gray-50 flex justify-center">
             <a
               href={example.original_link}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-4 sm:px-6 py-2 text-base font-sans font-bold border border-accent rounded-none shadow-none text-accent bg-transparent hover:bg-accent hover:text-electric-blue transition-all duration-300"
+              className="inline-flex items-center justify-center gap-3 px-10 py-4 bg-black text-[#ccff00] font-display text-xl border-4 border-black brutalist-shadow-sm hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all uppercase"
             >
-              <ExternalLink size={16} />
+              <ExternalLink size={20} strokeWidth={3} />
               View Original
             </a>
           </div>

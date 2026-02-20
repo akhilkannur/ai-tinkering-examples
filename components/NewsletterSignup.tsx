@@ -34,18 +34,19 @@ export default function NewsletterSignup() {
   }
   
   return (
-    <div id="newsletter" className="max-w-2xl mx-auto p-6 sm:p-8 my-8 border border-navy-dark bg-secondary-bg shadow-2xl relative overflow-hidden rounded-xl">
-      {/* Background Glow */}
-      <div className="absolute top-0 right-0 -mt-10 -mr-10 w-32 h-32 bg-accent/5 rounded-full blur-2xl pointer-events-none"></div>
+    <div id="newsletter" className="max-w-2xl mx-auto p-8 md:p-12 my-12 border-4 border-black bg-white brutalist-shadow relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-32 h-32 bg-[#ccff00] opacity-10 blur-xl"></div>
       
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-headline font-extrabold tracking-tight text-text-color uppercase leading-tight">Join the <span className="text-accent">Lab</span></h2>
-      <p className="text-xs sm:text-sm text-text-secondary mt-2 font-sans leading-relaxed">Free blueprints starter pack and occasional updates on actionable AI tactics. If they suck, unsubscribe. I won't be offended.</p>
+      <h2 className="text-3xl md:text-5xl font-display text-black uppercase leading-[0.9] glitch-text" data-text="JOIN THE LAB">Join the <span className="text-[#ff00ff]">Lab</span></h2>
+      <p className="text-sm text-black font-black font-mono mt-4 leading-relaxed uppercase tracking-tighter italic border-l-4 border-[#ccff00] pl-4">
+        // Free blueprints starter pack and occasional updates on AI tactics.
+      </p>
       
-      <form onSubmit={handleSubmit} className="mt-6 flex flex-col sm:flex-row gap-3 relative z-10">
+      <form onSubmit={handleSubmit} className="mt-8 flex flex-col sm:flex-row gap-4 relative z-10">
         <input 
           aria-label="email" 
-          placeholder="your@email.com" 
-          className="flex-1 px-4 py-3 bg-primary-bg border border-navy-dark text-text-color focus:ring-2 focus:ring-accent outline-none font-sans text-sm sm:text-base" 
+          placeholder="ENTER_EMAIL_FOR_ACCESS" 
+          className="flex-1 px-6 py-4 bg-gray-50 border-2 border-black text-black focus:bg-[#ccff00] outline-none font-display text-base uppercase placeholder:text-gray-300" 
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
@@ -54,17 +55,17 @@ export default function NewsletterSignup() {
         />
         <button 
           type="submit"
-          className="px-8 py-3 bg-accent text-white font-bold uppercase tracking-widest text-xs sm:text-sm hover:bg-accent-hover transition-all disabled:bg-gray-600 shadow-lg hover:shadow-accent/20 rounded-md sm:rounded-none"
+          className="px-10 py-4 bg-black text-[#ccff00] font-display uppercase text-xl transition-all brutalist-shadow-sm hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none disabled:bg-gray-400"
           disabled={status === 'loading' || status === 'success'}
         >
-          {status === 'loading' ? 'Subscribing...' : 'Subscribe'}
+          {status === 'loading' ? 'WAITING...' : 'Join_Now'}
         </button>
       </form>
       
       {message && (
-        <p className={`mt-4 text-sm font-bold ${status === 'success' ? 'text-accent' : 'text-red-500'}`}>
+        <div className={`mt-6 p-4 border-2 border-black font-black font-mono text-xs uppercase tracking-widest ${status === 'success' ? 'bg-[#ccff00]/20 text-emerald-700' : 'bg-red-50 text-red-600'}`}>
           {message}
-        </p>
+        </div>
       )}
     </div>
   )

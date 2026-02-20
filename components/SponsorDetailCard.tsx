@@ -15,16 +15,16 @@ export default function SponsorDetailCard({ sponsor }: SponsorDetailCardProps) {
       href={sponsor.website || '#'}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex py-1 px-2 border border-navy-dark rounded-none bg-secondary-bg shadow-none transform hover:-translate-y-1 hover:border-accent transition-all duration-300" 
+      className="group inline-flex py-2 px-4 border-2 border-black bg-white brutalist-shadow-sm transform hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all duration-300 items-center gap-4" 
     >
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-4">
         {sponsor.logo?.[0]?.url && (
-          <div className="relative w-8 h-8 flex-shrink-0 rounded-none overflow-hidden bg-white"> 
+          <div className="relative w-10 h-10 flex-shrink-0 rounded-none overflow-hidden bg-white border border-black shadow-inner rotate-3 group-hover:rotate-0 transition-transform"> 
             <Image 
               src={sponsor.logo[0].thumbnails?.large?.url || sponsor.logo[0].url}
               alt={`${sponsor.name} logo`}
               fill
-              className="object-contain"
+              className="object-contain p-1"
               {...(blurDataURL && {
                 placeholder: 'blur',
                 blurDataURL: blurDataURL,
@@ -32,11 +32,11 @@ export default function SponsorDetailCard({ sponsor }: SponsorDetailCardProps) {
             />
           </div>
         )}
-        <div className="flex items-baseline gap-2">
-          <h3 className="text-sm font-sans font-semibold text-text-color">{sponsor.name}</h3> 
+        <div className="flex flex-col">
+          <h3 className="text-sm font-display text-black uppercase leading-tight group-hover:text-[#ff00ff] transition-colors">{sponsor.name}</h3> 
           {sponsor.description && (
-            <p className="text-xs text-text-secondary leading-relaxed font-sans"> 
-              {sponsor.description}
+            <p className="text-[10px] font-black font-mono text-gray-500 uppercase tracking-widest leading-none mt-1"> 
+              // {sponsor.description}
             </p>
           )}
         </div>

@@ -38,33 +38,30 @@ export default function ToolDetailModal({ tool, onClose }: ToolDetailModalProps)
 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
-      {/* Translucent Backdrop */}
+      {/* Backdrop */}
       <div 
-        className="absolute inset-0 bg-slate-900/60 backdrop-blur-md cursor-pointer" 
+        className="absolute inset-0 bg-black/95 backdrop-blur-md cursor-pointer" 
         onClick={onClose}
       />
 
       {/* Modal Card */}
-      <div className="bg-white border border-slate-200 shadow-2xl rounded-sm overflow-hidden relative w-full max-w-4xl z-[110] animate-in fade-in zoom-in duration-200">
+      <div className="bg-white border-4 border-black brutalist-shadow relative w-full max-w-4xl z-[110] animate-in fade-in zoom-in duration-200 overflow-hidden flex flex-col sm:h-auto max-h-[90vh]">
         
         {/* Close Button */}
         <button 
           onClick={onClose}
-          className="absolute top-4 right-4 text-slate-400 hover:text-slate-600 p-2 z-30"
+          className="absolute top-4 right-4 bg-black text-white hover:bg-[#ff00ff] p-2 z-30 border-2 border-black brutalist-shadow-sm transition-colors"
           aria-label="Close modal"
         >
-          <X className="w-6 h-6" />
+          <X className="w-6 h-6 stroke-[3px]" />
         </button>
 
-        {/* Top "Featured" Strip */}
-        <div className="h-1 bg-accent w-full"></div>
-
-        <div className="p-8 md:p-12">
-          <div className="flex flex-col md:flex-row gap-8 items-start">
+        <div className="p-8 md:p-12 overflow-y-auto scrollbar-hide">
+          <div className="flex flex-col md:flex-row gap-10 items-start">
             
             {/* Logo Section */}
             <div className="flex-shrink-0">
-              <div className="w-24 h-24 md:w-32 md:h-32 relative rounded-sm overflow-hidden border border-slate-100 bg-slate-50 shadow-inner">
+              <div className="w-24 h-24 md:w-40 md:h-40 relative rounded-none overflow-hidden border-4 border-black bg-white brutalist-shadow-sm rotate-3">
                  <Image
                     src={imgSrc}
                     alt={`${tool.name} logo`}
@@ -78,79 +75,72 @@ export default function ToolDetailModal({ tool, onClose }: ToolDetailModalProps)
 
             {/* Content Section */}
             <div className="flex-grow">
-              <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
-                <h1 className="text-3xl md:text-4xl font-headline font-bold text-slate-900 tracking-tight pr-8">
+              <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8">
+                <h1 className="text-3xl md:text-5xl font-display text-black uppercase leading-none glitch-text" data-text={tool.name.toUpperCase()}>
                   {tool.name}
                 </h1>
                 
                 {/* Social Sharing */}
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-4">
                   <a 
                     href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(currentUrl)}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-slate-400 hover:text-black transition-colors"
+                    className="w-10 h-10 bg-black text-white flex items-center justify-center border-2 border-black hover:bg-[#00ffff] hover:text-black transition-all brutalist-shadow-sm"
                   >
-                    <Twitter className="w-4 h-4" />
-                  </a>
-                  <a 
-                    href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(currentUrl)}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-slate-400 hover:text-[#0077b5] transition-colors"
-                  >
-                    <Linkedin className="w-4 h-4" />
+                    <Twitter className="w-5 h-5 fill-current" />
                   </a>
                   <button 
                     onClick={handleShare}
-                    className="inline-flex items-center gap-2 text-xs font-mono font-bold text-slate-400 hover:text-accent transition-colors uppercase tracking-wider border-l border-slate-200 pl-3 ml-1"
+                    className="bg-white text-black border-2 border-black px-4 py-2 font-display text-[10px] uppercase transition-all brutalist-shadow-sm hover:bg-[#ccff00]"
                   >
-                    {copied ? <Check className="w-4 h-4" /> : <Share2 className="w-4 h-4" />}
-                    {copied ? 'Copied' : 'Copy'}
+                    {copied ? <Check className="w-4 h-4 stroke-[3px] inline mr-2" /> : <Share2 className="w-4 h-4 stroke-[3px] inline mr-2" />}
+                    {copied ? 'Copied' : 'Link'}
                   </button>
                 </div>
               </div>
 
               {/* Metadata Pills */}
-              <div className="flex flex-wrap gap-2 mb-6">
-                <span className="bg-slate-100 text-slate-600 px-3 py-1 text-xs font-mono font-bold uppercase tracking-wider rounded-sm">
+              <div className="flex flex-wrap gap-3 mb-10">
+                <span className="bg-[#ccff00] text-black px-3 py-1 text-[10px] font-black font-mono uppercase border-2 border-black tracking-widest">
                   {tool.category}
                 </span>
                 {tool.tags.price && (
-                  <span className="border border-slate-200 text-slate-500 px-3 py-1 text-xs font-mono font-bold uppercase tracking-wider rounded-sm">
+                  <span className="bg-black text-white px-3 py-1 text-[10px] font-black font-mono uppercase border-2 border-black tracking-widest transform rotate-1">
                     {tool.tags.price}
                   </span>
                 )}
                 {tool.tags.skill && (
-                  <span className="border border-slate-200 text-slate-500 px-3 py-1 text-xs font-mono font-bold uppercase tracking-wider rounded-sm">
+                  <span className="bg-[#ff00ff] text-white px-3 py-1 text-[10px] font-black font-mono uppercase border-2 border-black tracking-widest transform -rotate-1">
                     {tool.tags.skill}
                   </span>
                 )}
               </div>
 
               {/* Description */}
-              <p className="text-lg text-slate-600 leading-relaxed mb-8">
+              <p className="text-xl text-black font-bold uppercase leading-tight border-l-8 border-[#ccff00] pl-6 py-4 bg-gray-50 mb-10">
                 {tool.description}
               </p>
 
               {/* Action Row */}
-              <div className="flex flex-wrap items-center gap-4">
+              <div className="flex flex-wrap items-center gap-6">
                 <a
                   href={tool.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-slate-900 hover:bg-accent text-white px-6 py-3 rounded-sm font-bold transition-all shadow-sm hover:shadow-md transform hover:-translate-y-0.5 group"
+                  className="bg-black text-[#ccff00] px-10 py-4 border-4 border-black font-display text-xl uppercase transition-all brutalist-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none inline-flex items-center gap-3"
                 >
                   Visit Website
-                  <ExternalLink className="w-4 h-4 group-hover:rotate-45 transition-transform" />
+                  <ExternalLink className="w-6 h-6 stroke-[3px]" />
                 </a>
 
                 {/* Direct Page Link */}
                 <Link 
                   href={`/tools/${tool.name.toLowerCase().trim().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '').replace(/\-\-+/g, '-')}`}
-                  className="inline-flex items-center gap-2 text-slate-500 hover:text-accent font-mono text-xs font-bold uppercase tracking-widest border-b border-transparent hover:border-accent transition-all pb-1"
+                  className="text-black font-black font-mono text-xs uppercase tracking-[0.2em] underline decoration-4 decoration-[#ff00ff] underline-offset-8 hover:text-[#ff00ff] transition-colors"
+                  onClick={onClose}
                 >
-                  Permalink <ArrowRight className="w-3 h-3" />
+                  Permalink <ArrowRight className="w-4 h-4 inline-block ml-1" />
                 </Link>
               </div>
 
@@ -159,12 +149,12 @@ export default function ToolDetailModal({ tool, onClose }: ToolDetailModalProps)
         </div>
 
         {/* Footer */}
-        <div className="bg-slate-50 border-t border-slate-100 px-8 py-4 flex items-center justify-between">
-           <span className="text-xs font-mono text-slate-400 uppercase tracking-widest">
-             Verified Listing
+        <div className="bg-gray-100 border-t-4 border-black px-8 py-4 flex items-center justify-between font-mono font-black text-[10px] uppercase tracking-widest">
+           <span className="text-gray-500">
+             // Verified Listing #00{Math.floor(Math.random() * 99)}
            </span>
-           <span className="text-xs font-sans font-bold text-accent">
-             Real AI Examples
+           <span className="text-[#ff00ff]">
+             Real AI Examples Dept.
            </span>
         </div>
       </div>

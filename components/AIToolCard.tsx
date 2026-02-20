@@ -45,48 +45,45 @@ export default function AIToolCard({ name, description, url, imageUrl, category,
   const CardContent = () => (
     <>
       {featured && (
-        <div className="absolute top-0 right-0 bg-accent text-white text-[8px] font-bold px-2 py-0.5 z-20 uppercase tracking-tighter">
+        <div className="absolute top-0 right-0 bg-[#ff00ff] text-white text-[8px] font-black px-2 py-0.5 z-20 uppercase tracking-widest border-b-2 border-l-2 border-black">
           Featured
         </div>
       )}
       {/* Top Bar: Icon + Action */}
-      <div className="flex items-center justify-between p-4 border-b border-slate-100 bg-slate-50">
-        <div className="relative w-10 h-10 rounded-sm overflow-hidden border border-slate-200 bg-white">
+      <div className="flex items-center justify-between p-4 border-b-2 border-black bg-gray-50">
+        <div className="relative w-12 h-12 rounded-none overflow-hidden border-2 border-black bg-white brutalist-shadow-sm shadow-black/10">
           <Image
             src={imgSrc}
             alt={`${name} logo`}
             fill
             className="object-cover bg-white" 
             onError={() => setImgSrc(fallbackLogo)}
-            unoptimized={true} // Needed for external URLs like Google Favicons often
+            unoptimized={true}
           />
         </div>
         
-        <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-x-2 group-hover:translate-x-0">
-           <span className="text-[10px] font-sans font-bold text-accent border border-accent/30 px-2 py-1 bg-accent/5 uppercase tracking-wider flex items-center gap-1">
-             {slug ? 'View' : 'Open'} <ArrowRight className="w-3 h-3" />
+        <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0">
+           <span className="text-[10px] font-black text-black border-2 border-black px-2 py-1 bg-[#ccff00] uppercase tracking-widest flex items-center gap-2 brutalist-shadow-sm">
+             {slug ? 'View' : 'Open'} <ArrowRight className="w-3 h-3 stroke-[3px]" />
            </span>
         </div>
       </div>
       
       {/* Content Body */}
-      <div className="p-4 flex-grow flex flex-col relative">
-         {/* Subtle Grid Background Effect */}
-         <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-[0.03] pointer-events-none" />
-
-         <h3 className="text-base font-headline font-bold text-slate-900 group-hover:text-accent transition-colors mb-2 tracking-tight">
+      <div className="p-5 flex-grow flex flex-col relative bg-white">
+         <h3 className="text-lg font-display text-black group-hover:text-[#ff00ff] transition-colors mb-2 uppercase leading-tight">
            {name}
          </h3>
          
-         <p className="text-sm text-slate-600 leading-relaxed line-clamp-3 font-sans opacity-90 group-hover:opacity-100 transition-opacity">
-           {description}
+         <p className="text-xs text-black font-black font-mono leading-relaxed line-clamp-3 uppercase tracking-tighter">
+           // {description}
          </p>
       </div>
 
       {/* Footer / Meta (Optional) */}
       {category && (
-        <div className="px-4 py-2 border-t border-slate-100 bg-slate-50">
-          <span className="text-[10px] font-sans text-slate-500 uppercase tracking-widest">
+        <div className="px-4 py-2 border-t-2 border-black bg-gray-100">
+          <span className="text-[10px] font-black font-mono text-gray-500 uppercase tracking-[0.2em]">
             {category}
           </span>
         </div>
@@ -94,7 +91,7 @@ export default function AIToolCard({ name, description, url, imageUrl, category,
     </>
   );
 
-  const cardClasses = `group flex flex-col h-full bg-white border ${featured ? 'border-accent/50 shadow-[0_0_20px_-5px_rgba(238,94,62,0.2)]' : 'border-slate-200 hover:border-accent/50 hover:shadow-[0_0_20px_-5px_rgba(238,94,62,0.15)]'} transition-all duration-300 relative overflow-hidden rounded-sm cursor-pointer`;
+  const cardClasses = `group flex flex-col h-full bg-white border-4 border-black brutalist-shadow hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all duration-300 relative overflow-hidden cursor-pointer`;
 
   if (slug) {
     return (

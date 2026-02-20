@@ -20,7 +20,7 @@ export default function RolePage({ roleName, recipes }: RolePageProps) {
   const ogImage = `${baseUrl}/api/og?title=${encodeURIComponent(roleName)}&mode=role`;
 
   return (
-    <div className="min-h-screen bg-primary-bg font-sans text-text-color selection:bg-accent selection:text-white">
+    <div className="min-h-screen bg-primary-bg font-sans text-black selection:bg-[#ff00ff] selection:text-white">
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} key="description" />
@@ -40,58 +40,59 @@ export default function RolePage({ roleName, recipes }: RolePageProps) {
 
       <Navbar />
 
-      <main className="pt-32 pb-20">
+      <main className="pt-32 pb-24 relative z-10">
         <div className="container mx-auto px-4 max-w-6xl">
-          <Link href="/500-ways-to-use-llms-for-work" className="inline-flex items-center gap-2 text-text-secondary hover:text-accent transition-colors mb-12 text-sm font-mono uppercase tracking-widest">
-            <ArrowLeft className="w-4 h-4" /> All 500 Blueprints
+          <Link href="/500-ways-to-use-llms-for-work" className="inline-flex items-center gap-2 text-black font-black uppercase tracking-widest hover:bg-[#ccff00] px-2 py-1 border border-black mb-12 text-[10px] transition-all">
+            <ArrowLeft className="w-4 h-4 stroke-[3px]" /> All 500 Blueprints
           </Link>
 
           {/* Header */}
-          <div className="max-w-4xl mb-20">
-            <div className="inline-flex items-center gap-2 bg-secondary-bg border border-navy-dark px-4 py-1.5 rounded-full text-xs font-mono text-accent mb-6 shadow-sm">
-              <Terminal className="w-3 h-3" />
-              <span className="tracking-widest uppercase font-bold">Field-Ready: {roleName}</span>
+          <div className="max-w-4xl mb-24 relative">
+            <div className="absolute -top-10 -right-10 w-32 h-32 bg-[#ff00ff] opacity-10 blur-xl"></div>
+            
+            <div className="inline-flex items-center gap-2 bg-black text-[#ccff00] border-2 border-black px-4 py-1.5 font-black text-xs uppercase mb-8 transform -rotate-1 brutalist-shadow-sm">
+              <Terminal className="w-4 h-4" />
+              <span className="tracking-widest uppercase font-black">Field-Ready: {roleName}</span>
             </div>
-            <h1 className="text-4xl md:text-6xl font-extrabold text-text-color mb-6 tracking-tight leading-tight">
-              AI Workflows for <br/><span className="text-accent">{roleName}</span>
+            <h1 className="text-5xl md:text-7xl font-display text-black mb-8 uppercase leading-[0.9] glitch-text" data-text={roleName.toUpperCase() + " AI WORKFLOWS"}>
+              AI Workflows for <br/><span className="text-[#ff00ff]">{roleName}</span>
             </h1>
-            <p className="text-xl text-text-secondary leading-relaxed max-w-2xl font-normal">
-              Stop guessing how to prompt. These are <strong>{recipes.length} structured blueprints</strong> designed specifically for {roleName} workflows. 
-              Optimized for agentic execution.
+            <p className="text-xl md:text-2xl text-black font-black leading-relaxed border-l-8 border-[#ccff00] pl-6 py-2 bg-white border-2 border-black brutalist-shadow-sm">
+              Stop guessing how to prompt. These are <strong>{recipes.length} structured blueprints</strong> designed specifically for {roleName} workflows.
             </p>
           </div>
 
           {/* Recipe Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {recipes.map(recipe => (
               <Link 
                 key={recipe.id} 
                 href={`/skills/${recipe.id}`}
-                className="group flex flex-col bg-secondary-bg border border-navy-dark rounded-xl p-8 hover:border-accent/50 transition-all hover:shadow-[0_15px_40px_rgba(56,189,248,0.05)] relative"
+                className="group flex flex-col bg-white border-4 border-black p-8 hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all duration-300 relative brutalist-shadow h-full"
               >
-                <div className="flex items-center gap-3 mb-6">
-                  <span className="p-2.5 bg-primary-bg rounded-lg border border-navy-dark text-accent group-hover:scale-110 transition-transform">
-                    <Zap className="w-5 h-5" />
+                <div className="flex items-center gap-4 mb-8">
+                  <span className="w-12 h-12 bg-black flex items-center justify-center text-[#ccff00] border-2 border-black brutalist-shadow-sm group-hover:rotate-6 transition-transform">
+                    <Zap className="w-6 h-6 fill-current stroke-[3px]" />
                   </span>
                   <div className="flex flex-col">
-                    <span className="text-[10px] font-mono text-text-secondary/50 uppercase tracking-widest font-bold">Complexity</span>
-                    <span className="text-xs font-bold text-text-color uppercase tracking-wider">{recipe.difficulty}</span>
+                    <span className="text-[10px] font-black font-mono text-gray-500 uppercase tracking-widest leading-none mb-1">Complexity</span>
+                    <span className="text-xs font-black text-black uppercase tracking-wider bg-[#ccff00]/20 px-1 border border-black/10 inline-block">{recipe.difficulty}</span>
                   </div>
                 </div>
                 
-                <h3 className="text-xl font-bold text-text-color mb-4 group-hover:text-accent transition-colors line-clamp-2 leading-snug">
+                <h3 className="text-2xl font-display text-black mb-4 group-hover:text-[#ff00ff] transition-colors leading-tight uppercase">
                   {recipe.title}
                 </h3>
-                <p className="text-text-secondary text-sm mb-8 line-clamp-3 flex-grow leading-relaxed">
-                  {recipe.description}
+                <p className="text-black font-black font-mono text-xs mb-8 line-clamp-3 leading-relaxed uppercase tracking-tighter">
+                  // {recipe.description}
                 </p>
                 
-                <div className="flex items-center justify-between mt-auto pt-6 border-t border-navy-dark/30">
-                  <div className="flex items-center gap-2 text-xs font-mono text-text-secondary/70">
-                    <Clock className="w-3.5 h-3.5" /> {recipe.time}
+                <div className="flex items-center justify-between mt-auto pt-6 border-t-2 border-black/10 text-black font-display text-[10px] uppercase tracking-widest">
+                  <div className="flex items-center gap-2 bg-gray-100 px-2 py-1 border border-black">
+                    <Clock className="w-4 h-4 stroke-[3px]" /> {recipe.time}
                   </div>
-                  <span className="text-xs font-bold text-accent group-hover:translate-x-1 transition-transform uppercase tracking-widest flex items-center gap-2">
-                    Open <ArrowLeft className="w-3 h-3 rotate-180" />
+                  <span className="group-hover:bg-[#ccff00] transition-colors px-1 border border-black flex items-center gap-2">
+                    Open <ArrowLeft className="w-4 h-4 rotate-180 stroke-[3px]" />
                   </span>
                 </div>
               </Link>
@@ -99,30 +100,34 @@ export default function RolePage({ roleName, recipes }: RolePageProps) {
           </div>
           
           {recipes.length === 0 && (
-             <div className="p-20 text-center border-2 border-dashed border-navy-dark rounded-2xl bg-secondary-bg/50">
-               <Briefcase className="w-12 h-12 text-text-secondary mx-auto mb-4 opacity-20" />
-               <p className="text-text-secondary text-lg">No blueprints found for this role yet.</p>
-               <Link href="/500-ways-to-use-llms-for-work" className="text-accent mt-4 inline-block font-bold hover:underline">Browse all blueprints &rarr;</Link>
+             <div className="p-24 text-center border-4 border-black border-dashed bg-white brutalist-shadow">
+               <Briefcase className="w-16 h-16 text-gray-200 mx-auto mb-8 stroke-[3px]" />
+               <p className="text-black font-display text-2xl uppercase mb-8">No blueprints found for this role yet.</p>
+               <Link href="/500-ways-to-use-llms-for-work" className="bg-[#ccff00] border-2 border-black px-10 py-4 font-display uppercase brutalist-shadow-sm hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all">Browse all blueprints ➜</Link>
              </div>
           )}
 
           {/* Social Proof / Trust */}
-          <div className="mt-24 p-8 md:p-12 rounded-2xl bg-gradient-to-br from-secondary-bg to-primary-bg border border-navy-dark flex flex-col md:flex-row items-center gap-8 justify-between">
-             <div className="max-w-md">
-                <h3 className="text-2xl font-bold mb-4 text-text-color">Production-Ready Logic</h3>
-                <p className="text-text-secondary leading-relaxed">
-                  Every blueprint in the <strong>{roleName}</strong> library has been tested against real-world data schemas. No "Hallucination" risks - just structured logic.
+          <div className="mt-32 p-10 md:p-16 border-4 border-black bg-white brutalist-shadow flex flex-col md:flex-row items-center gap-12 justify-between relative overflow-hidden">
+             <div className="absolute top-0 right-0 w-32 h-32 bg-[#00ffff] opacity-10 blur-xl"></div>
+             <div className="max-w-xl">
+                <h3 className="text-3xl md:text-4xl font-display text-black mb-6 uppercase decoration-wavy underline decoration-[#ff00ff]">Production-Ready Logic</h3>
+                <p className="text-black font-black font-mono text-sm leading-relaxed uppercase">
+                  // Every blueprint in the <strong>{roleName}</strong> library has been tested against real-world data schemas. No "Hallucination" risks - just rigid logic.
                 </p>
              </div>
-             <div className="flex items-center gap-6">
+             <div className="flex flex-wrap items-center gap-10">
                 <div className="flex flex-col items-center">
-                   <ShieldCheck className="w-10 h-10 text-emerald-500 mb-2" />
-                   <span className="text-[10px] font-mono text-text-secondary uppercase">Verified</span>
+                   <div className="bg-black p-3 border-2 border-black brutalist-shadow-sm transform -rotate-3 mb-4">
+                      <ShieldCheck className="w-10 h-10 text-emerald-400 stroke-[3px]" />
+                   </div>
+                   <span className="text-[10px] font-black font-mono text-black uppercase tracking-widest">Verified</span>
                 </div>
-                <div className="h-10 w-[1px] bg-navy-dark hidden md:block"></div>
                 <div className="flex flex-col items-center">
-                   <Zap className="w-10 h-10 text-accent mb-2" />
-                   <span className="text-[10px] font-mono text-text-secondary uppercase">Automated</span>
+                   <div className="bg-black p-3 border-2 border-black brutalist-shadow-sm transform rotate-3 mb-4">
+                      <Zap className="w-10 h-10 text-[#ccff00] stroke-[3px] fill-current" />
+                   </div>
+                   <span className="text-[10px] font-black font-mono text-black uppercase tracking-widest">Automated</span>
                 </div>
              </div>
           </div>
@@ -134,14 +139,12 @@ export default function RolePage({ roleName, recipes }: RolePageProps) {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const allRecipes = getAllRecipes();
-  // distinct categories
   const categories = Array.from(new Set(allRecipes.map(r => r.category).filter(Boolean)));
   
   const paths = categories.map(cat => ({
     params: { slug: slugify(cat) }
   }));
 
-  // Add virtual "growth" role
   paths.push({ params: { slug: 'growth' } });
 
   return {
@@ -162,7 +165,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     const growthCategories = ['Lead Gen', 'Paid Media', 'CRO'];
     matchedRecipes = allRecipes.filter(r => growthCategories.includes(r.category));
   } else {
-    // Find category name that matches this slug
     matchedRecipes = allRecipes.filter(r => r.category && slugify(r.category) === slug);
     if (matchedRecipes.length > 0) {
       roleName = matchedRecipes[0].category;

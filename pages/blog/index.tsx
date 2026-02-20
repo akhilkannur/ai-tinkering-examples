@@ -15,7 +15,7 @@ export default function BlogIndex({ posts }: BlogIndexProps) {
   const ogImage = `${baseUrl}/api/og?mode=home`;
 
   return (
-    <div className="min-h-screen bg-primary-bg text-text-color font-sans selection:bg-accent selection:text-white flex flex-col">
+    <div className="min-h-screen bg-primary-bg text-black font-sans selection:bg-[#ff00ff] selection:text-white flex flex-col">
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} key="description" />
@@ -35,59 +35,58 @@ export default function BlogIndex({ posts }: BlogIndexProps) {
 
       <Navbar />
 
-      <main className="flex-grow pt-24">
-        <div className="bg-secondary-bg border-b border-navy-dark py-20 relative overflow-hidden">
-           <div className="absolute inset-0 bg-hero-gradient opacity-10 pointer-events-none"></div>
+      <main className="flex-grow pt-32">
+        <div className="bg-white border-b-4 border-black py-20 relative overflow-hidden mb-12">
+           <div className="absolute top-0 right-0 w-32 h-32 bg-[#ff00ff] opacity-10 blur-xl"></div>
+           <div className="absolute bottom-0 left-0 w-32 h-32 bg-[#ccff00] opacity-10 blur-xl"></div>
+           
            <div className="container mx-auto px-4 text-center relative z-10">
-              <h1 className="text-4xl md:text-5xl font-bold font-headline mb-6 tracking-tight">
-                Tinker <span className="text-accent">Logs</span>
+              <div className="inline-block bg-black text-[#ccff00] px-3 py-1 text-xs font-black uppercase tracking-[0.2em] mb-6 transform -rotate-1 border-2 border-black brutalist-shadow-sm">
+                Technical Case Studies
+              </div>
+              <h1 className="text-5xl md:text-7xl font-display mb-6 tracking-tight uppercase glitch-text" data-text="TINKER LOGS">
+                Tinker <span className="text-[#ff00ff]">Logs</span>
               </h1>
-              <p className="text-xl text-text-secondary max-w-2xl mx-auto leading-relaxed">
+              <p className="text-xl md:text-2xl text-black font-black max-w-2xl mx-auto leading-relaxed border-l-8 border-[#ccff00] pl-6 py-2 bg-gray-50 text-left">
                 I document the exact steps I take to automate work with AI. <br/>
-                Read how I built my scrapers, sales bots, and data tools, explained step-by-step.
+                Read how I built my scrapers, sales bots, and data tools.
               </p>
            </div>
         </div>
 
         <div className="container mx-auto px-4 py-16 max-w-6xl">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {posts.map((post) => (
-              <Link key={post.slug} href={`/blog/${post.slug}`} className="group">
-                <article className="bg-secondary-bg border border-navy-dark rounded-xl overflow-hidden hover:border-accent/50 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 h-full flex flex-col">
+              <Link key={post.slug} href={`/blog/${post.slug}`} className="group h-full">
+                <article className="bg-white border-4 border-black brutalist-shadow hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all duration-300 h-full flex flex-col">
                   {/* Cover Image */}
-                  {post.coverImage ? (
-                    <div className="h-48 overflow-hidden relative border-b border-navy-dark">
+                  {post.coverImage && (
+                    <div className="h-48 overflow-hidden relative border-b-4 border-black">
                       <img 
                         src={post.coverImage} 
                         alt={post.title} 
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        className="w-full h-full object-cover grayscale-[50%] group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105"
                       />
-                    </div>
-                  ) : (
-                    <div className="h-48 bg-gradient-to-br from-gray-800 to-gray-900 relative">
-                       <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:16px_16px]"></div>
-                       <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-secondary-bg to-transparent">
-                       </div>
                     </div>
                   )}
                   
                   <div className="p-6 flex flex-col flex-grow">
-                    <div className="flex items-center gap-4 text-xs text-text-secondary mb-4 font-mono">
-                      <span className="flex items-center gap-1"><Calendar className="w-3 h-3" /> {post.date}</span>
-                      <span className="flex items-center gap-1"><User className="w-3 h-3" /> {post.author.name}</span>
+                    <div className="flex items-center gap-4 text-[10px] text-gray-500 mb-4 font-mono font-black uppercase tracking-widest">
+                      <span className="flex items-center gap-1 bg-gray-100 px-1 border border-black"><Calendar className="w-3 h-3" /> {post.date}</span>
+                      <span className="flex items-center gap-1 bg-gray-100 px-1 border border-black"><User className="w-3 h-3" /> {post.author.name}</span>
                     </div>
                     
-                    <h2 className="text-xl font-bold mb-3 text-text-color group-hover:text-accent transition-colors leading-tight">
+                    <h2 className="text-2xl font-display mb-4 text-black group-hover:text-[#ff00ff] transition-colors leading-tight uppercase">
                       {post.title}
                     </h2>
                     
-                    <p className="text-text-secondary text-sm leading-relaxed mb-6 line-clamp-3">
-                      {post.excerpt}
+                    <p className="text-black text-sm font-black font-mono leading-relaxed mb-8 line-clamp-3 uppercase">
+                      // {post.excerpt}
                     </p>
                     
-                    <div className="mt-auto pt-4 border-t border-navy-dark flex items-center justify-between text-accent font-bold text-sm">
-                      <span>Read Guide</span>
-                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    <div className="mt-auto pt-4 border-t-2 border-black/10 flex items-center justify-between text-black font-display text-xs uppercase tracking-widest">
+                      <span className="group-hover:bg-[#ccff00] transition-colors px-1 border border-black">Read Guide</span>
+                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform stroke-[3px]" />
                     </div>
                   </div>
                 </article>

@@ -34,34 +34,34 @@ export default function NewsletterForm() {
 
   if (status === 'success') {
     return (
-      <div className="py-4 text-center">
-        <p className="text-accent font-bold">✓ Welcome to the Lab! Check your inbox.</p>
+      <div className="py-6 px-10 bg-[#ccff00]/20 border-4 border-black brutalist-shadow-sm text-center">
+        <p className="text-black font-display uppercase">✓ Welcome to the Lab! Check your inbox.</p>
       </div>
     );
   }
 
   return (
-    <div className="w-full max-w-md mx-auto">
-      <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-2">
+    <div className="w-full max-w-xl mx-auto">
+      <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4">
         <input 
           type="email" 
-          placeholder="your@email.com" 
+          placeholder="ENTER_EMAIL_FOR_ACCESS" 
           required
-          className="flex-1 px-4 py-3 bg-primary-bg border border-navy-dark text-text-color focus:ring-2 focus:ring-accent outline-none font-sans text-sm" 
+          className="flex-1 px-6 py-4 bg-white border-2 border-black text-black font-display text-base uppercase focus:bg-[#ccff00] outline-none transition-all placeholder:text-gray-300" 
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           disabled={status === 'loading'}
         />
         <button 
           type="submit"
-          className="px-6 py-3 bg-accent text-white font-bold uppercase tracking-widest text-xs hover:bg-accent-hover transition-colors disabled:bg-gray-600"
+          className="px-10 py-4 bg-black text-[#ccff00] font-display uppercase text-xl transition-all brutalist-shadow-sm hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none disabled:bg-gray-400"
           disabled={status === 'loading'}
         >
-          {status === 'loading' ? 'Joining...' : 'Join'}
+          {status === 'loading' ? 'WAITING...' : 'Join'}
         </button>
       </form>
       {status === 'error' && (
-        <p className="text-red-500 text-xs mt-2 text-center">{errorMessage}</p>
+        <p className="text-red-600 font-black font-mono text-xs mt-4 uppercase text-center tracking-tighter animate-pulse">⚠️ {errorMessage}</p>
       )}
     </div>
   );

@@ -44,7 +44,7 @@ export default function PlaybookPage({ playbook, recipes }: any) {
   const ogImage = `${baseUrl}/api/og?title=${encodeURIComponent(playbook.title)}&mode=role`;
 
   return (
-    <div className="min-h-screen bg-primary-bg font-sans text-text-color selection:bg-accent selection:text-white">
+    <div className="min-h-screen bg-primary-bg font-sans text-black selection:bg-[#ff00ff] selection:text-white">
       <Head>
         <title>{playbook.title} | AI Blueprints | Real AI Examples</title>
         <meta name="description" content={playbook.description} key="description" />
@@ -69,63 +69,66 @@ export default function PlaybookPage({ playbook, recipes }: any) {
 
       <Navbar />
 
-      <main className="pt-24 pb-20">
+      <main className="pt-32 pb-24">
         {/* Hero Section */}
-        <div className="container mx-auto px-4 mb-20 text-center max-w-4xl">
-          <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/20 px-4 py-1.5 rounded-full text-xs font-mono text-accent mb-8">
-            <Icon className="w-3 h-3" />
-            <span className="tracking-widest uppercase font-bold text-[10px]">Role-Based Playbook</span>
+        <div className="container mx-auto px-4 mb-24 text-center max-w-4xl relative z-10">
+          <div className="absolute top-0 right-0 w-32 h-32 bg-[#ff00ff] opacity-10 blur-xl"></div>
+          <div className="absolute bottom-0 left-0 w-32 h-32 bg-[#ccff00] opacity-10 blur-xl"></div>
+          
+          <div className="inline-flex items-center gap-2 bg-black text-[#ccff00] border-2 border-black px-4 py-1.5 font-black text-xs uppercase mb-8 transform -rotate-1 brutalist-shadow-sm">
+            <Icon className="w-4 h-4" />
+            <span className="tracking-widest uppercase font-black text-[10px]">Role-Based Playbook</span>
           </div>
-          <h1 className="text-4xl md:text-6xl font-extrabold text-text-color mb-6 tracking-tight">
+          <h1 className="text-5xl md:text-7xl font-display text-black mb-8 uppercase leading-[0.9] glitch-text" data-text={playbook.title.toUpperCase()}>
             {playbook.title}
           </h1>
-          <p className="text-xl text-text-secondary leading-relaxed mb-10 max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl text-black font-black leading-relaxed mb-12 border-l-8 border-[#ccff00] pl-6 py-2 bg-gray-50 text-left mx-auto max-w-2xl">
             {playbook.description}
           </p>
-          <div className="flex justify-center gap-4">
-            <Link href="#blueprints" className="bg-accent text-white px-8 py-3 rounded-lg font-bold hover:bg-accent-hover transition-all flex items-center gap-2">
-              Explore {recipes.length} Blueprints <ArrowRight className="w-4 h-4" />
+          <div className="flex justify-center">
+            <Link href="#blueprints" className="bg-[#ff00ff] text-white px-10 py-5 border-4 border-black font-display text-xl uppercase transition-all brutalist-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none flex items-center gap-3">
+              Explore {recipes.length} Blueprints <ArrowRight className="w-6 h-6 stroke-[3px]" />
             </Link>
           </div>
         </div>
 
         {/* Blueprint Grid */}
         <div id="blueprints" className="container mx-auto px-4 max-w-6xl">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {recipes.map((recipe: any) => (
               <Link 
                 key={recipe.id} 
                 href={`/skills/${recipe.id}`}
-                className="group flex flex-col bg-secondary-bg border border-navy-dark rounded-xl p-6 hover:border-accent/50 transition-all hover:shadow-[0_10px_30px_rgba(56,189,248,0.05)] relative overflow-hidden"
+                className="group flex flex-col bg-white border-4 border-black p-8 hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all duration-300 relative brutalist-shadow h-full"
               >
                 {/* Badge for Featured/Premium */}
                 {recipe.isPremium && (
-                  <div className="absolute top-0 right-0 bg-accent text-white text-[10px] font-bold px-2 py-1 rounded-bl-lg z-10 flex items-center gap-1">
-                    <Lock className="w-2 h-2" /> PREMIUM
+                  <div className="absolute top-0 right-0 bg-black text-[#ccff00] text-[8px] font-black px-2 py-0.5 z-20 uppercase tracking-widest border-b-2 border-l-2 border-black">
+                    PREMIUM
                   </div>
                 )}
                 
-                <div className="mb-4">
-                  <div className="inline-flex items-center gap-2 text-[10px] font-mono uppercase tracking-wider text-accent border border-accent/20 bg-accent/5 px-2 py-1 rounded">
-                    <Terminal className="w-3 h-3" />
+                <div className="mb-6">
+                  <div className="inline-flex items-center gap-2 text-[10px] font-black font-mono uppercase tracking-widest text-black bg-gray-100 border border-black px-2 py-1">
+                    <Terminal className="w-3 h-3 stroke-[3px]" />
                     {recipe.category || 'Automation'}
                   </div>
                 </div>
 
-                <h3 className="text-lg font-bold text-text-color mb-3 group-hover:text-accent transition-colors line-clamp-2 leading-snug">
+                <h3 className="text-2xl font-display text-black mb-4 group-hover:text-[#ff00ff] transition-colors leading-tight uppercase">
                   {recipe.title}
                 </h3>
                 
-                <p className="text-text-secondary text-sm mb-6 line-clamp-3 flex-grow leading-relaxed font-normal">
-                  {recipe.description}
+                <p className="text-black font-black font-mono text-xs mb-8 line-clamp-3 leading-relaxed uppercase tracking-tighter">
+                  // {recipe.description}
                 </p>
                 
-                <div className="flex items-center justify-between mt-auto pt-4 border-t border-navy-dark/30">
+                <div className="flex items-center justify-between mt-auto pt-4 border-t-2 border-black/10 text-black font-display text-[10px] uppercase tracking-widest">
                   <div className="flex items-center gap-2">
-                    <CheckCircle className="w-3 h-3 text-emerald-400" />
-                    <span className="text-xs text-text-secondary">Work-Ready</span>
+                    <CheckCircle className="w-4 h-4 text-emerald-600 stroke-[3px]" />
+                    <span className="group-hover:bg-[#ccff00] transition-colors px-1 border border-black">Work-Ready</span>
                   </div>
-                  <ArrowRight className="w-4 h-4 text-text-secondary group-hover:text-accent transition-all group-hover:translate-x-1" />
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-all stroke-[3px]" />
                 </div>
               </Link>
             ))}

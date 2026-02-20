@@ -27,7 +27,7 @@ const SimpleMarkdown = ({ text }: { text: string }) => {
       {parts.map((part, i) => {
         const linkMatch = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
         if (linkMatch) {
-          return <Link key={i} href={linkMatch[2]} className="text-blue-600 hover:underline font-medium">{linkMatch[1]}</Link>;
+          return <Link key={i} href={linkMatch[2]} className="text-[#ff00ff] hover:bg-[#ccff00] hover:text-black transition-colors font-black underline decoration-2">{linkMatch[1]}</Link>;
         }
         return part;
       })}
@@ -49,59 +49,59 @@ const VerifiedTerminal = ({ run }: { run: Recipe['verifiedRun'] }) => {
   if (!run) return null;
 
   return (
-    <div className="mt-12 bg-[#0D1117] rounded-2xl border border-white/10 shadow-2xl overflow-hidden font-mono text-xs md:text-sm relative">
-      <div className="bg-white/5 px-4 py-3 flex items-center justify-between border-b border-white/5">
+    <div className="mt-12 bg-black border-4 border-black brutalist-shadow-sm overflow-hidden font-mono text-xs md:text-sm relative">
+      <div className="bg-white px-4 py-3 flex items-center justify-between border-b-4 border-black">
         <div className="flex items-center gap-2">
           <div className="flex gap-1.5">
-            <div className="w-2.5 h-2.5 rounded-full bg-red-500/50"></div>
-            <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/50"></div>
-            <div className="w-2.5 h-2.5 rounded-full bg-green-500/50"></div>
+            <div className="w-2.5 h-2.5 rounded-full bg-black"></div>
+            <div className="w-2.5 h-2.5 rounded-full bg-black"></div>
+            <div className="w-2.5 h-2.5 rounded-full bg-black"></div>
           </div>
-          <span className="text-white/30 text-[10px] uppercase tracking-widest font-bold ml-2 italic flex items-center gap-2">
-            <ShieldCheck className="w-3 h-3 text-emerald-500" /> Proof of Execution: Verified Run
+          <span className="text-black text-[10px] uppercase tracking-widest font-black ml-2 italic flex items-center gap-2">
+            <ShieldCheck className="w-3 h-3 text-emerald-600 stroke-[3px]" /> Proof of Execution
           </span>
         </div>
-        <div className="text-[9px] text-white/20 uppercase tracking-widest">
+        <div className="text-[9px] text-black font-black uppercase tracking-widest">
           {run.date} // Agent: {run.agent}
         </div>
       </div>
       
-      <div className="p-6 min-h-[200px] flex flex-col gap-2.5">
+      <div className="p-6 min-h-[200px] flex flex-col gap-2.5 bg-black">
         {run.log.slice(0, visibleLines).map((line, idx) => (
           <div key={idx} className="animate-in fade-in slide-in-from-left-2 duration-500">
             {line.type === 'input' && (
-              <span className="text-blue-400">
-                <span className="text-emerald-500 mr-2">➜</span>
+              <span className="text-[#00ffff]">
+                <span className="text-[#ccff00] mr-2">➜</span>
                 {line.text}
               </span>
             )}
-            {line.type === 'system' && <span className="text-white/50">{line.text}</span>}
-            {line.type === 'success' && <span className="text-emerald-400">{line.text}</span>}
+            {line.type === 'system' && <span className="text-white/40">{line.text}</span>}
+            {line.type === 'success' && <span className="text-[#ccff00] font-black">{line.text}</span>}
             {line.type === 'report' && (
-              <div className="mt-3 p-4 bg-emerald-500/5 rounded-xl border border-emerald-500/10 text-emerald-200/80 italic text-xs leading-relaxed">
+              <div className="mt-3 p-4 bg-[#ccff00]/10 rounded-none border-2 border-[#ccff00]/30 text-[#ccff00] italic text-xs leading-relaxed uppercase font-black">
                 "{line.text}"
               </div>
             )}
           </div>
         ))}
         {visibleLines < run.log.length && (
-          <div className="w-2 h-5 bg-white/40 animate-pulse inline-block ml-1"></div>
+          <div className="w-2 h-5 bg-[#ccff00] animate-pulse inline-block ml-1"></div>
         )}
       </div>
 
       {run.outputFile && visibleLines >= run.log.length && (
-        <div className="border-t border-white/5 bg-black/40 p-6 animate-in fade-in duration-1000">
+        <div className="border-t-2 border-white/10 bg-white/5 p-6 animate-in fade-in duration-1000">
            <div className="flex items-center justify-between mb-4">
-              <span className="text-[10px] text-white/30 uppercase tracking-widest font-bold">Generated Output: {run.outputFile.name}</span>
+              <span className="text-[10px] text-white/40 uppercase tracking-widest font-black font-mono">Generated: {run.outputFile.name}</span>
               <a 
                 href={run.outputFile.url} 
                 download 
-                className="text-[10px] font-bold text-emerald-500 hover:text-emerald-400 flex items-center gap-1.5 transition-colors"
+                className="text-[10px] font-black text-[#ccff00] hover:bg-[#ccff00] hover:text-black px-2 py-1 border border-[#ccff00] flex items-center gap-1.5 transition-all uppercase"
               >
-                <Download className="w-3 h-3" /> DOWNLOAD PROOF
+                <Download className="w-3 h-3 stroke-[3px]" /> Download Proof
               </a>
            </div>
-           <div className="bg-primary-bg/50 border border-white/5 rounded-lg p-4 font-mono text-[11px] text-white/60 overflow-x-auto whitespace-pre">
+           <div className="bg-black/50 border border-white/10 rounded-none p-4 font-mono text-[11px] text-white/60 overflow-x-auto whitespace-pre">
               {run.outputFile.preview}
            </div>
         </div>
@@ -197,13 +197,12 @@ Downloaded from RealAIExamples.com`;
   const SITE_URL = 'https://realaiexamples.com';
   const ogImageUrl = `${SITE_URL}/api/og?title=${encodeURIComponent(recipe.title)}&category=${encodeURIComponent(recipe.category)}&tagline=${encodeURIComponent(recipe.tagline)}`;
 
-  // For SEO: Split blueprint into public/private parts
   const blueprintParts = recipe.blueprint.split('### Phase 2:');
   const publicBlueprint = blueprintParts[0];
   const privateBlueprint = blueprintParts.length > 1 ? `### Phase 2:${blueprintParts[1]}` : '';
 
   return (
-    <div className="flex flex-col min-h-screen bg-white">
+    <div className="flex flex-col min-h-screen bg-primary-bg text-black selection:bg-[#ff00ff] selection:text-white">
       <Head>
         <title>{recipe.title} | AI Agent Blueprint | Real AI Examples</title>
         <meta name="description" content={recipe.description} key="description" />
@@ -223,147 +222,118 @@ Downloaded from RealAIExamples.com`;
         <meta name="twitter:image" content={ogImageUrl} key="twitter:image" />
 
         <link rel="canonical" href={`${SITE_URL}/skills/${recipe.id}`} key="canonical" />
-        
-        {/* Breadcrumb Schema */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": SITE_URL
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Skills",
-              "item": `${SITE_URL}/#skills`
-            },
-            {
-              "@type": "ListItem",
-              "position": 3,
-              "name": recipe.category,
-              "item": `${SITE_URL}/skills/category/${recipe.category.toLowerCase().replace(/\s+/g, '-')}`
-            },
-            {
-              "@type": "ListItem",
-              "position": 4,
-              "name": recipe.title,
-              "item": `${SITE_URL}/skills/${recipe.id}`
-            }
-          ]
-        })}} />
       </Head>
       
       <Navbar />
 
-      <main className="flex-grow container mx-auto px-4 pt-24 md:pt-32 pb-12">
+      <main className="flex-grow container mx-auto px-4 pt-32 pb-24 max-w-4xl relative z-10">
+        <div className="absolute top-0 right-0 w-32 h-32 bg-[#ff00ff] opacity-10 blur-xl"></div>
+        
         <div className="max-w-4xl mx-auto">
           {/* Breadcrumbs */}
-          <nav className="flex items-center gap-2 text-sm font-medium text-gray-500 mb-8 overflow-hidden">
-            <Link href="/" className="hover:text-blue-600 flex items-center gap-1 shrink-0">
-              <ArrowLeft className="w-4 h-4" /> <span className="hidden sm:inline">Back to Skills</span><span className="sm:hidden text-xs">Back</span>
+          <nav className="flex items-center gap-3 text-xs font-black font-mono uppercase tracking-widest text-black/40 mb-12">
+            <Link href="/" className="hover:text-black flex items-center gap-1 shrink-0 bg-white px-2 py-1 border border-black">
+              <ArrowLeft className="w-3 h-3 stroke-[3px]" /> Hub
             </Link>
-            <span className="text-gray-300">/</span>
-            <span className="text-gray-900 truncate text-xs sm:text-sm">{recipe.title}</span>
+            <span className="text-black">/</span>
+            <span className="text-black truncate">{recipe.title}</span>
           </nav>
 
           {/* Header */}
-          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-8">
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5">
-              <div className={`p-3 rounded-xl shadow-sm border shrink-0 ${isLocked ? 'bg-yellow-50 text-yellow-600 border-yellow-100' : 'bg-blue-50 text-blue-600 border-blue-100'}`}>
-                {isLocked ? <Crown className="w-8 h-8" /> : <CatIcon className="w-8 h-8" />}
-              </div>
-              <div className="min-w-0">
-                <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 mb-2 flex flex-wrap items-center gap-2 leading-tight">
-                    {recipe.title}
-                    {isLocked && <Lock className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-500 shrink-0" />}
-                </h1>
-                <div className="flex flex-wrap items-center gap-2">
-                  <span className={`px-2 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider ${isLocked ? 'bg-yellow-500 text-white' : 'bg-gray-100 text-gray-600'}`}>
-                    {isLocked ? 'Premium' : recipe.category}
-                  </span>
-                  <span className="px-2 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider bg-gray-50 text-gray-500 border border-gray-200">
-                    {recipe.difficulty}
-                  </span>
-                  <span className="text-gray-400 text-xs flex items-center gap-1 font-mono ml-1">
-                    <Terminal className="w-3 h-3" /> {recipe.time}
-                  </span>
+          <div className="mb-12">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8 mb-10">
+              <div className="flex items-center gap-6">
+                <div className={`w-16 h-16 bg-black flex items-center justify-center border-4 border-black brutalist-shadow-sm ${isLocked ? 'text-[#ccff00]' : 'text-[#ff00ff]'}`}>
+                  {isLocked ? <Crown className="w-10 h-10 stroke-[3px]" /> : <CatIcon className="w-10 h-10 stroke-[3px]" />}
+                </div>
+                <div>
+                  <h1 className="text-3xl md:text-5xl font-display text-black uppercase leading-[0.9] glitch-text" data-text={recipe.title.toUpperCase()}>
+                      {recipe.title}
+                  </h1>
+                  <div className="flex flex-wrap items-center gap-3 mt-4">
+                    <span className={`px-2 py-0.5 border-2 border-black text-[10px] font-black uppercase tracking-widest ${isLocked ? 'bg-black text-[#ccff00]' : 'bg-[#ccff00] text-black'}`}>
+                      {isLocked ? 'Premium' : recipe.category}
+                    </span>
+                    <span className="px-2 py-0.5 border-2 border-black text-[10px] font-black uppercase tracking-widest bg-white text-black">
+                      {recipe.difficulty}
+                    </span>
+                    <span className="text-black font-black font-mono text-[10px] flex items-center gap-2 uppercase bg-gray-100 px-2 py-0.5 border border-black ml-2">
+                      <Terminal className="w-3 h-3 stroke-[3px]" /> {recipe.time}
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          {/* Mission Overview - More compact */}
-          <div className="bg-white rounded-xl p-0 mb-10">
-            <p className="text-gray-600 text-base md:text-lg leading-relaxed">
-              <SimpleMarkdown text={linkedDescription || recipe.description} />
-            </p>
+            {/* Mission Overview */}
+            <div className="border-l-8 border-[#ff00ff] pl-8 py-4 bg-white border-4 border-black brutalist-shadow">
+              <p className="text-black text-xl font-bold uppercase leading-tight font-sans">
+                <SimpleMarkdown text={linkedDescription || recipe.description} />
+              </p>
+            </div>
           </div>
 
           {recipe.verifiedRun && (
-            <div className="mb-12">
+            <div className="mb-16">
                <VerifiedTerminal run={recipe.verifiedRun} />
             </div>
           )}
 
           {/* Locked or Unlocked Content */}
-          <div className="bg-[#0d1117] rounded-xl overflow-hidden border border-gray-800 shadow-2xl mb-12 flex flex-col">
+          <div className="bg-black border-4 border-black brutalist-shadow mb-16 flex flex-col relative overflow-hidden">
+              <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(#fff 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
+              
               {/* Toolbar */}
-              <div className="bg-[#161b22] px-4 py-3 border-b border-gray-800 flex flex-col lg:flex-row lg:items-center justify-between gap-4">
-                  {/* Left: Window Controls & File Name */}
+              <div className="bg-white px-6 py-4 border-b-4 border-black flex flex-col lg:flex-row lg:items-center justify-between gap-6 relative z-10">
                   <div className="flex items-center gap-4">
-                      <div className="flex gap-1.5 shrink-0 opacity-75">
-                        <div className="w-2.5 h-2.5 rounded-full bg-red-500"></div>
-                        <div className="w-2.5 h-2.5 rounded-full bg-yellow-500"></div>
-                        <div className="w-2.5 h-2.5 rounded-full bg-green-500"></div>
+                      <div className="flex gap-2">
+                        <div className="w-3 h-3 bg-black"></div>
+                        <div className="w-3 h-3 bg-black"></div>
+                        <div className="w-3 h-3 bg-black"></div>
                       </div>
-                      <span className="text-gray-400 font-mono text-xs flex items-center gap-2 truncate opacity-80">
-                        <FileText className="w-3 h-3" /> {recipe.id}.md
+                      <span className="text-black font-black font-mono text-xs flex items-center gap-3 uppercase tracking-widest">
+                        <FileText className="w-4 h-4" /> {recipe.id}.md
                       </span>
                   </div>
 
                   {!isLocked && (
-                    <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
+                    <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
                         {/* Agent Skills Group */}
-                        <div className="flex items-center bg-[#0d1117] rounded-lg border border-gray-800 p-1">
-                            <span className="text-[9px] text-gray-500 font-bold uppercase tracking-wider px-2 hidden xl:block">Run as Agent:</span>
+                        <div className="flex items-center bg-gray-100 border-2 border-black p-1 brutalist-shadow-sm">
+                            <span className="text-[9px] font-black uppercase tracking-widest px-3 hidden xl:block">Run:</span>
                             <div className="flex gap-1">
-                                <a href={`/downloads/skills/${recipe.id}.skill`} download title="Download for Gemini CLI" className="p-1.5 text-gray-400 hover:text-white hover:bg-white/10 rounded transition-colors flex items-center gap-1">
-                                    <Zap className="w-3 h-3" /> <span className="text-[10px] font-bold lg:hidden xl:inline">Gemini</span>
+                                <a href={`/downloads/skills/${recipe.id}.skill`} download title="Download for Gemini" className="p-2 text-black hover:bg-[#ccff00] transition-all flex items-center gap-2 border border-transparent hover:border-black font-black text-[10px] uppercase">
+                                    <Zap className="w-4 h-4 fill-current" /> Gemini
                                 </a>
-                                <div className="w-px h-4 bg-gray-800 my-auto"></div>
-                                <a href={`/downloads/skills/${recipe.id}-claude.md`} download title="Download for Claude Code" className="p-1.5 text-gray-400 hover:text-white hover:bg-white/10 rounded transition-colors flex items-center gap-1">
-                                    <Terminal className="w-3 h-3" /> <span className="text-[10px] font-bold lg:hidden xl:inline">Claude</span>
+                                <div className="w-1 bg-black my-1"></div>
+                                <a href={`/downloads/skills/${recipe.id}-claude.md`} download title="Download for Claude" className="p-2 text-black hover:bg-[#ff00ff] hover:text-white transition-all flex items-center gap-2 border border-transparent hover:border-black font-black text-[10px] uppercase">
+                                    <Terminal className="w-4 h-4 stroke-[3px]" /> Claude
                                 </a>
-                                <div className="w-px h-4 bg-gray-800 my-auto"></div>
-                                <a href={`/downloads/skills/${recipe.id}.cursorrules`} download title="Download for Cursor" className="p-1.5 text-gray-400 hover:text-white hover:bg-white/10 rounded transition-colors flex items-center gap-1">
-                                    <MousePointer2 className="w-3 h-3" /> <span className="text-[10px] font-bold lg:hidden xl:inline">Cursor</span>
+                                <div className="w-1 bg-black my-1"></div>
+                                <a href={`/downloads/skills/${recipe.id}.cursorrules`} download title="Download for Cursor" className="p-2 text-black hover:bg-[#00ffff] transition-all flex items-center gap-2 border border-transparent hover:border-black font-black text-[10px] uppercase">
+                                    <MousePointer2 className="w-4 h-4 stroke-[3px]" /> Cursor
                                 </a>
                             </div>
                         </div>
 
                         {/* Standard Files Group */}
-                        <div className="flex items-center gap-2 w-full sm:w-auto">
+                        <div className="flex items-center gap-3">
                             <button
                                 onClick={handleDownloadZip}
-                                className="flex-1 sm:flex-none text-xs font-bold px-3 py-1.5 rounded-lg flex items-center justify-center gap-2 transition-all bg-blue-600 text-white hover:bg-blue-500 shadow-lg shadow-blue-600/10"
+                                className="bg-black text-[#ccff00] px-4 py-2 border-2 border-black font-display text-[10px] uppercase transition-all brutalist-shadow-sm hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none"
                             >
-                                <Package className="w-3.5 h-3.5" />
-                                <span className="hidden sm:inline">Bundle</span>
-                                <span className="sm:hidden">Zip</span>
+                                <Package className="w-4 h-4 inline mr-2 stroke-[3px]" />
+                                Bundle
                             </button>
                             <button
                                 onClick={handleCopy}
-                                className={`flex-1 sm:flex-none text-xs font-bold px-3 py-1.5 rounded-lg flex items-center justify-center gap-2 transition-all border ${
+                                className={`px-4 py-2 border-2 border-black font-display text-[10px] uppercase transition-all brutalist-shadow-sm hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none ${
                                     copied 
-                                    ? 'bg-green-500/10 text-green-400 border-green-500/50' 
-                                    : 'bg-gray-800 text-gray-300 border-gray-700 hover:bg-gray-700'
+                                    ? 'bg-emerald-400 text-black' 
+                                    : 'bg-white text-black hover:bg-[#ff00ff] hover:text-white'
                                 }`}
                             >
-                                {copied ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
+                                {copied ? <Check className="w-4 h-4 stroke-[3px]" /> : <Copy className="w-4 h-4 stroke-[3px]" />}
                                 {copied ? 'Copied' : 'Copy'}
                             </button>
                         </div>
@@ -372,8 +342,8 @@ Downloaded from RealAIExamples.com`;
               </div>
 
               {/* Code Content */}
-              <div className="p-4 sm:p-6 md:p-8 overflow-x-auto">
-                <pre className="font-mono text-xs sm:text-sm text-blue-200/90 whitespace-pre-wrap leading-relaxed">
+              <div className="p-8 relative z-10 bg-black/40">
+                <pre className="font-mono text-sm text-[#00ffff] whitespace-pre-wrap leading-relaxed uppercase font-black">
                     {publicBlueprint}
                     {!isLocked && privateBlueprint}
                 </pre>
@@ -381,40 +351,39 @@ Downloaded from RealAIExamples.com`;
           </div>
 
           {isLocked && (
-              /* PREMIUM PAYWALL - Compact Version */
-              <div className="bg-gray-900 rounded-2xl p-8 md:p-12 text-center border border-gray-800 shadow-2xl relative overflow-hidden mb-16">
+              <div className="bg-[#ccff00] border-4 border-black p-12 text-center brutalist-shadow relative overflow-hidden mb-24">
                  <div className="relative z-10">
-                    <div className="w-16 h-16 bg-yellow-500/10 rounded-full flex items-center justify-center mx-auto mb-6 border border-yellow-500/20">
-                      <Lock className="w-8 h-8 text-yellow-500" />
+                    <div className="w-24 h-24 bg-black flex items-center justify-center mx-auto mb-10 border-4 border-black brutalist-shadow-sm shadow-[#ff00ff] rotate-3 text-white">
+                      <Lock className="w-12 h-12 stroke-[4px]" />
                     </div>
-                    <h2 className="text-2xl font-bold text-white mb-3">Logic Locked</h2>
-                    <p className="text-gray-400 text-sm md:text-base mb-8 max-w-lg mx-auto">
-                      Phase 2 (Processing) and Phase 3 (Output) are available to Pro members.
+                    <h2 className="text-4xl md:text-6xl font-display text-black mb-6 uppercase leading-tight">Logic Locked</h2>
+                    <p className="text-black font-black font-mono text-sm mb-12 uppercase tracking-[0.2em] max-w-lg mx-auto leading-relaxed">
+                      // Processing and Output phases are available to Pro members.
                     </p>
                     
                     {!showLicenseInput ? (
-                        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
                             <a 
                               href="https://checkout.dodopayments.com/buy/pdt_0NW6p0szmXPS6jXW05hIP?session=sess_GCYotd6plh"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-gray-900 px-6 py-3 rounded-lg font-bold text-sm transition-all"
+                              className="bg-black text-white px-12 py-6 border-4 border-white font-display text-2xl uppercase transition-all brutalist-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none"
                             >
-                              Unlock Access <ArrowRight className="w-4 h-4" />
+                              Unlock All ($39) <ArrowRight className="w-8 h-8 stroke-[4px] inline-block ml-2" />
                             </a>
                             <button 
                               onClick={() => setShowLicenseInput(true)}
-                              className="text-gray-500 hover:text-white text-sm font-medium underline decoration-gray-700 underline-offset-4"
+                              className="text-black font-black font-mono text-sm uppercase underline decoration-4 decoration-black underline-offset-8 hover:text-white transition-colors"
                             >
-                              Enter Key
+                              Enter License Key
                             </button>
                         </div>
                     ) : (
-                        <form onSubmit={handleLicenseSubmit} className="max-w-sm mx-auto bg-gray-800 p-6 rounded-xl border border-gray-700">
-                            <div className="flex items-center justify-between mb-4">
-                                <h3 className="text-white font-bold text-sm">Activate License</h3>
-                                <button type="button" onClick={() => setShowLicenseInput(false)} className="text-gray-400 hover:text-white">
-                                    <X className="w-4 h-4" />
+                        <form onSubmit={handleLicenseSubmit} className="max-w-md mx-auto bg-white border-4 border-black p-10 brutalist-shadow-sm">
+                            <div className="flex items-center justify-between mb-8 border-b-4 border-black pb-4">
+                                <h3 className="text-2xl font-display text-black uppercase">Enter Key</h3>
+                                <button type="button" onClick={() => setShowLicenseInput(false)} className="p-2 hover:bg-gray-100 border-2 border-transparent hover:border-black transition-all">
+                                    <X className="w-8 h-8 text-black stroke-[3px]" />
                                 </button>
                             </div>
                             <input 
@@ -422,13 +391,13 @@ Downloaded from RealAIExamples.com`;
                                 value={licenseKeyInput}
                                 onChange={(e) => setLicenseKeyInput(e.target.value)}
                                 placeholder="TK-XXXX-XXXX-XXXX"
-                                className="w-full bg-gray-900 border border-gray-700 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-1 focus:ring-yellow-500 font-mono text-center uppercase tracking-widest text-sm mb-4"
+                                className="w-full bg-gray-50 border-4 border-black text-black font-display text-xl px-6 py-5 focus:bg-[#ccff00] outline-none text-center uppercase tracking-widest placeholder-gray-300 mb-8"
                             />
                             <button 
                                 type="submit"
-                                className="w-full bg-yellow-500 text-gray-900 font-bold py-3 rounded-lg hover:bg-yellow-400 transition-colors flex items-center justify-center gap-2 text-sm"
+                                className="w-full bg-black text-white font-display py-6 border-4 border-black hover:bg-[#ff00ff] transition-all brutalist-shadow-sm uppercase text-xl"
                             >
-                                <Key className="w-4 h-4" /> Activate
+                                <Key className="w-8 h-8 stroke-[3px] inline mr-4" /> Activate
                             </button>
                         </form>
                     )}
@@ -438,33 +407,32 @@ Downloaded from RealAIExamples.com`;
 
           {!isLocked && (
               <>
-                {/* Output Snapshot */}
                 {recipe.sampleOutput && (
-                  <div className="mb-12 border-l-2 border-gray-200 pl-6 ml-2">
-                    <h2 className="text-sm font-bold text-gray-500 uppercase tracking-widest mb-4 flex items-center gap-2">
+                  <div className="mb-24 border-l-8 border-black pl-10">
+                    <h2 className="text-xl font-display text-black uppercase tracking-widest mb-8 decoration-wavy underline decoration-[#00ffff]">
                       Sample Output
                     </h2>
-                    <div className="prose prose-sm max-w-none text-gray-600 font-mono whitespace-pre-wrap text-xs bg-gray-50 p-4 rounded-lg border border-gray-100">
+                    <div className="bg-white border-4 border-black p-8 brutalist-shadow-sm font-mono text-sm text-black font-black uppercase leading-relaxed max-h-[400px] overflow-y-auto">
                       {recipe.sampleOutput}
                     </div>
                   </div>
                 )}
 
                 {/* Simplified Instructions */}
-                <div className="mb-16">
-                    <div className="bg-gray-50 border border-gray-200 rounded-xl p-6">
-                        <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
-                            <Terminal className="w-5 h-5 text-gray-400" />
-                            How to run this
+                <div className="mb-24">
+                    <div className="bg-white border-4 border-black p-10 brutalist-shadow">
+                        <h3 className="text-3xl font-display text-black mb-10 uppercase flex items-center gap-4">
+                            <Terminal className="w-10 h-10 stroke-[3px]" />
+                            Execution
                         </h3>
-                        <div className="grid md:grid-cols-2 gap-6">
-                            <div>
-                                <span className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2 block">Option 1: The Easy Way</span>
-                                <p className="text-sm text-gray-600 mb-3">Download the <span className="font-bold text-gray-900">Bundle Zip</span> above. It contains all necessary files.</p>
+                        <div className="grid md:grid-cols-2 gap-12">
+                            <div className="border-l-4 border-[#ff00ff] pl-6">
+                                <span className="text-[10px] font-black font-mono text-gray-400 uppercase tracking-widest mb-4 block">Option 1: The Easy Way</span>
+                                <p className="text-lg text-black font-bold uppercase leading-tight">Download the <span className="bg-[#ff00ff] text-white px-1">Bundle Zip</span> above. It contains everything.</p>
                             </div>
-                            <div>
-                                <span className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2 block">Option 2: Terminal</span>
-                                <div className="bg-white border border-gray-200 rounded-lg p-3 font-mono text-xs text-gray-600 overflow-x-auto">
+                            <div className="border-l-4 border-[#ccff00] pl-6">
+                                <span className="text-[10px] font-black font-mono text-gray-400 uppercase tracking-widest mb-4 block">Option 2: Terminal</span>
+                                <div className="bg-black border-2 border-black p-4 font-mono text-xs text-[#ccff00] uppercase font-black">
                                     gemini "Read @{recipe.id}.md execute"
                                 </div>
                             </div>
@@ -476,29 +444,29 @@ Downloaded from RealAIExamples.com`;
 
           {/* Related Blueprints */}
           {relatedRecipes && relatedRecipes.length > 0 && (
-            <div className="border-t border-gray-200 pt-16 mt-16">
-              <h3 className="text-2xl font-bold text-gray-900 mb-8 flex items-center gap-2">
-                <BookOpen className="w-6 h-6 text-gray-400" />
-                Related {recipe.category} Blueprints
+            <div className="border-t-4 border-black pt-20 mt-20">
+              <h3 className="text-4xl font-display text-black mb-12 uppercase decoration-wavy underline decoration-[#ff00ff]">
+                <BookOpen className="w-10 h-10 text-black stroke-[3px] inline mr-4" />
+                Related Blueprints
               </h3>
-              <div className="grid md:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {relatedRecipes.map(related => (
-                  <Link key={related.id} href={`/skills/${related.id}`} className="group block bg-white border border-gray-200 rounded-2xl p-6 hover:border-blue-300 hover:shadow-lg transition-all">
-                    <div className="flex items-center justify-between mb-4">
-                      <span className="bg-gray-100 text-gray-600 text-xs font-bold px-2 py-1 rounded-full uppercase tracking-wide group-hover:bg-blue-50 group-hover:text-blue-600 transition-colors">
+                  <Link key={related.id} href={`/skills/${related.id}`} className="group flex flex-col bg-white border-4 border-black p-6 brutalist-shadow-sm hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all h-full">
+                    <div className="flex items-center justify-between mb-6">
+                      <span className="bg-black text-[#ccff00] text-[10px] font-black px-2 py-0.5 border-2 border-black uppercase tracking-widest">
                         {related.difficulty}
                       </span>
-                      <Terminal className="w-4 h-4 text-gray-400 group-hover:text-blue-500 transition-colors" />
+                      <Terminal className="w-5 h-5 text-black group-hover:text-[#ff00ff] transition-colors stroke-[3px]" />
                     </div>
-                    <h4 className="font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-blue-600 transition-colors">
+                    <h4 className="text-xl font-display text-black mb-4 line-clamp-2 uppercase leading-tight group-hover:text-[#ff00ff] transition-colors">
                       {related.title}
                     </h4>
-                    <p className="text-sm text-gray-500 line-clamp-3 mb-4">
-                      {related.tagline}
+                    <p className="text-xs font-black font-mono text-black/60 mb-8 line-clamp-3 uppercase tracking-tighter">
+                      // {related.tagline}
                     </p>
-                    <div className="flex items-center text-xs text-gray-400 font-mono">
-                      <span className="flex items-center gap-1">
-                        <Terminal className="w-3 h-3" /> {related.time}
+                    <div className="mt-auto pt-4 border-t-2 border-black/10 text-black font-display text-[10px] uppercase">
+                      <span className="flex items-center gap-2">
+                        <Clock className="w-4 h-4 stroke-[3px]" /> {related.time}
                       </span>
                     </div>
                   </Link>
@@ -508,7 +476,7 @@ Downloaded from RealAIExamples.com`;
           )}
 
           {/* Newsletter Signup */}
-          <div className="mt-20 border-t border-gray-100 pt-16">
+          <div className="mt-32 border-t-4 border-black border-dotted pt-24">
             <NewsletterSignup />
           </div>
 
@@ -537,16 +505,12 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     return { notFound: true };
   }
 
-  // 1. Get Related Recipes
   const relatedRecipes = recipes
     .filter(r => r.category === recipe.category && r.id !== recipe.id)
     .slice(0, 3);
 
-  // 2. Generate Internal Links for Description
-  // Pass all recipes as the "glossary"
   const linkedDescription = injectInternalLinks(recipe.description, recipes);
 
-  // 3. Generate Schema
   const SITE_URL = 'https://realaiexamples.com';
   const ogImageUrl = `${SITE_URL}/api/og?title=${encodeURIComponent(recipe.title)}&category=${encodeURIComponent(recipe.category)}&tagline=${encodeURIComponent(recipe.tagline)}`;
   

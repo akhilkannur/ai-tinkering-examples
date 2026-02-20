@@ -30,7 +30,7 @@ export default function ToolsIndex() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-slate-50 font-sans text-slate-900 fade-in">
+    <div className="flex flex-col min-h-screen bg-primary-bg font-sans text-black selection:bg-[#ff00ff] selection:text-white">
       <Head>
         <title>AI Tools Directory | Curated List | Real AI Examples</title>
         <meta name="description" content="A curated database of the latest AI tools for business and productivity. Hand-picked for Sales, Marketing, and Ops tinkerers." key="description" />
@@ -50,44 +50,44 @@ export default function ToolsIndex() {
 
       <Navbar />
 
-      <main className="container mx-auto px-4 pt-32 pb-16 max-w-7xl">
+      <main className="container mx-auto px-4 pt-32 pb-24 max-w-7xl relative z-10">
         
         {/* Header */}
-        <div className="text-center mb-16 max-w-3xl mx-auto relative">
+        <div className="text-center mb-24 max-w-3xl mx-auto relative border-b-4 border-black pb-16">
+          <div className="absolute top-0 right-0 w-32 h-32 bg-[#ff00ff] opacity-10 blur-xl"></div>
+          <div className="absolute bottom-0 left-0 w-32 h-32 bg-[#ccff00] opacity-10 blur-xl"></div>
           
-          <div className="inline-flex items-center gap-2 bg-white border border-slate-200 shadow-sm text-accent px-4 py-1.5 rounded-sm text-xs font-mono font-bold mb-6 uppercase tracking-wider">
-            <Command className="w-3 h-3" />
-            <span>The Inbox</span>
+          <div className="inline-flex items-center gap-2 bg-black text-[#ccff00] border-2 border-black px-4 py-1.5 font-black text-xs uppercase mb-8 transform -rotate-1 brutalist-shadow-sm">
+            <Command className="w-4 h-4" />
+            <span>The Submission Inbox</span>
           </div>
           
-          <h1 className="text-4xl md:text-5xl font-headline font-bold text-slate-900 mb-6 tracking-tight leading-tight uppercase">
-            What the Community is <span className="text-accent">Building</span>
+          <h1 className="text-5xl md:text-7xl font-display text-black mb-8 uppercase leading-[0.9] glitch-text" data-text="THE TOOL DIRECTORY">
+            The Tool <span className="text-[#ff00ff]">Directory</span>
           </h1>
           
-          <p className="text-lg text-slate-600 leading-relaxed font-sans max-w-2xl mx-auto mb-8">
-            People send me their AI tools every day. I delete the spam and list the ones that look real.
+          <p className="text-xl md:text-2xl text-black font-black leading-relaxed font-mono uppercase bg-[#ccff00] px-4 py-2 border-2 border-black rotate-1 inline-block mb-10">
+            // No spam. Just real AI tools for real work.
           </p>
 
           <div className="flex flex-col items-center gap-4">
-            <p className="text-sm text-slate-500 font-sans">
-              Building something? <a href="https://forms.gle/KqN82GGdCohshtVx8" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline font-bold">Pitch it here.</a>
+            <p className="text-sm text-black font-black uppercase tracking-widest">
+              Building something? <a href="https://forms.gle/KqN82GGdCohshtVx8" target="_blank" rel="noopener noreferrer" className="text-[#ff00ff] hover:bg-black hover:text-white px-1 transition-colors underline decoration-2 decoration-black underline-offset-4">Pitch it here.</a>
             </p>
           </div>
         </div>
 
         {/* Controls */}
-        <div className="flex flex-col md:flex-row justify-center gap-6 mb-12 sticky top-24 z-30 bg-slate-50/95 backdrop-blur-sm py-4 border-b border-slate-200">
-          
-          {/* Category Filter */}
-          <div className="flex gap-2 overflow-x-auto pb-2 md:pb-0 scrollbar-hide">
+        <div className="mb-16 sticky top-24 z-30 flex justify-center">
+          <div className="bg-white border-4 border-black p-4 brutalist-shadow-sm flex overflow-x-auto gap-3 max-w-full scrollbar-hide">
             {categories.map(cat => (
               <button
                 key={cat}
                 onClick={() => setSelectedCategory(cat)}
-                className={`px-4 py-2 text-xs font-mono font-bold border transition-all whitespace-nowrap uppercase tracking-wider ${
+                className={`px-6 py-2 font-display text-xs uppercase border-2 border-black transition-all ${
                   selectedCategory === cat 
-                    ? 'bg-accent text-white border-accent' 
-                    : 'bg-white text-slate-600 border-slate-200 hover:border-accent hover:text-accent'
+                    ? 'bg-black text-[#ccff00]' 
+                    : 'bg-white text-black hover:bg-[#ccff00]'
                 }`}
               >
                 {cat}
@@ -98,31 +98,30 @@ export default function ToolsIndex() {
 
         {/* The Grid */}
         {filteredTools.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {filteredTools.map((tool, idx) => (
-              <div key={idx} className="h-64">
-                <AIToolCard
-                  name={tool.name}
-                  description={tool.description}
-                  url={tool.url}
-                  imageUrl={tool.image}
-                  category={tool.category}
-                  featured={tool.featured}
-                  slug={slugify(tool.name)}
-                  onClick={() => setSelectedTool(tool)}
-                />
-              </div>
+              <AIToolCard
+                key={idx}
+                name={tool.name}
+                description={tool.description}
+                url={tool.url}
+                imageUrl={tool.image}
+                category={tool.category}
+                featured={tool.featured}
+                slug={slugify(tool.name)}
+                onClick={() => setSelectedTool(tool)}
+              />
             ))}
           </div>
         ) : (
           /* Empty State */
-          <div className="text-center py-24 bg-white border border-slate-200 border-dashed rounded-sm mt-8">
-            <Filter className="w-12 h-12 text-slate-300 mx-auto mb-4" />
-            <h3 className="text-xl font-headline font-bold text-slate-900 mb-2">No tools found</h3>
-            <p className="text-slate-500 font-mono text-sm mb-6">Try adjusting your category filter.</p>
+          <div className="text-center py-24 bg-white border-4 border-black brutalist-shadow">
+            <Filter className="w-16 h-16 text-gray-200 mx-auto mb-6 stroke-[3px]" />
+            <h3 className="text-3xl font-display text-black mb-4 uppercase">No tools found</h3>
+            <p className="text-black font-black font-mono uppercase text-sm mb-10 tracking-widest">// Try a different category.</p>
             <button 
               onClick={() => {setSelectedCategory('All')}}
-              className="text-accent hover:text-accent-hover font-mono text-xs font-bold uppercase tracking-widest border-b border-accent hover:border-accent-hover transition-all pb-1"
+              className="bg-[#ccff00] border-2 border-black px-8 py-3 font-display uppercase brutalist-shadow-sm hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all"
             >
               Clear filters
             </button>
@@ -138,14 +137,14 @@ export default function ToolsIndex() {
         )}
 
         {/* Exit Strategy CTA */}
-        <div className="mt-24 pt-12 border-t border-slate-200 text-center max-w-2xl mx-auto">
-           <Briefcase className="w-8 h-8 text-slate-300 mx-auto mb-4" />
-           <h3 className="text-xl font-bold text-slate-900 mb-3 uppercase tracking-tight">Built something profitable?</h3>
-           <p className="text-slate-600 mb-6 font-sans">
-             If you've built an AI tool or SaaS and are looking for an exit, browse our curated list of 150+ micro-PE firms and acquisition partners.
+        <div className="mt-32 pt-16 border-t-4 border-black text-center max-w-3xl mx-auto">
+           <Briefcase className="w-12 h-12 text-black mx-auto mb-8 stroke-[3px]" />
+           <h2 className="text-3xl md:text-4xl font-display text-black mb-6 uppercase">Built something profitable?</h2>
+           <p className="text-lg text-black font-bold mb-10 font-mono uppercase leading-tight">
+             // If you're looking for an exit, browse our curated list of 150+ micro-PE firms and acquisition partners.
            </p>
-           <Link href="/investors" className="inline-flex items-center gap-2 text-accent font-bold uppercase tracking-widest text-xs hover:text-accent-hover transition-colors">
-             View SaaS Exit Database <ArrowRight className="w-4 h-4" />
+           <Link href="/investors" className="inline-flex items-center gap-4 bg-black text-[#00ffff] px-8 py-4 border-4 border-black font-display text-lg uppercase transition-all brutalist-shadow-sm hover:translate-x-1 hover:translate-y-1 hover:shadow-none">
+             View Exit Database <ArrowRight className="w-6 h-6 stroke-[3px]" />
            </Link>
         </div>
 

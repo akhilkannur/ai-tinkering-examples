@@ -78,8 +78,6 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
     });
 
     // 3. Separate & Mix
-    // We want to interleave Free and Premium to show variety.
-    // Strategy: 2 Free : 1 Premium
     const priority = sortedByDate.filter(r => r.id === 'agent-context-builder');
     const others = sortedByDate.filter(r => r.id !== 'agent-context-builder');
 
@@ -90,13 +88,9 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
     let pIndex = 0;
     let fIndex = 0;
 
-    // While we have items in either list
     while (fIndex < free.length || pIndex < premium.length) {
-       // Add 2 Free
        if (fIndex < free.length) mixed.push(free[fIndex++]);
        if (fIndex < free.length) mixed.push(free[fIndex++]);
-       
-       // Add 1 Premium
        if (pIndex < premium.length) mixed.push(premium[pIndex++]);
     }
 
@@ -112,7 +106,6 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
   const part2 = recipesToRender.slice(12);
 
   const hasMore = visibleCount < filteredRecipes.length;
-  // Always show the paywall/upsell at the bottom for non-pro users, regardless of list size
   const showPaywallOverlay = !isUnlocked;
 
   const handleCopy = () => {
@@ -137,84 +130,62 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
   
   const RecipeCard = ({ recipe, index }: { recipe: Recipe, index: number }) => {
     const CatIcon = categoryIcons[recipe.category] || Terminal;
-    // Calculate global index for locking logic based on original filtered list, or just check isPremium
-    // NOTE: Index-based locking (>= 200) might be slightly offset by mixing, but 200 is deep enough it doesn't matter much.
-    // We'll trust isPremium flag primarily.
     const isLocked = !isUnlocked && (recipe.isPremium || index >= 200);
     const isNew = recipe.publish_date && (new Date().getTime() - new Date(recipe.publish_date).getTime() < 7 * 24 * 60 * 60 * 1000);
 
     return (
       <div
-        className={`group text-left bg-secondary-bg p-6 rounded-xl border transition-all duration-300 flex flex-col h-full relative overflow-hidden cursor-pointer ${
-            isLocked 
-            ? 'border-yellow-900/30 hover:border-yellow-500/50 hover:shadow-[0_0_20px_rgba(234,179,8,0.1)] opacity-80 hover:opacity-100' 
-            : 'border-navy-dark hover:shadow-[0_0_30px_rgba(244,63,94,0.1)] hover:border-accent/50 hover:-translate-y-1'
+        className={`group text-left bg-white p-6 border-4 border-black brutalist-shadow transition-all duration-300 flex flex-col h-full relative overflow-hidden cursor-pointer hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none ${
+            isLocked ? 'opacity-90' : ''
         }`}
         onClick={() => setSelectedRecipe(recipe)}
       >
-        {/* Visual indicator bar */}
-        <div className={`absolute top-0 left-0 w-1 h-full opacity-60 group-hover:opacity-100 transition-opacity ${
-          isLocked ? 'bg-yellow-500' :
-          recipe.category === 'Lead Gen' ? 'bg-blue-500' :
-          recipe.category === 'Sales Ops' ? 'bg-indigo-500' :
-          recipe.category === 'Marketing Ops' ? 'bg-orange-500' :
-          recipe.category === 'Content Ops' ? 'bg-pink-500' :
-          recipe.category === 'SEO' ? 'bg-green-500' :
-          recipe.category === 'Competitive Intel' ? 'bg-red-500' :
-          recipe.category === 'CRO' ? 'bg-cyan-500' :
-          recipe.category === 'Paid Media' ? 'bg-purple-500' :
-          recipe.category === 'Customer Success' ? 'bg-teal-500' :
-          recipe.category === 'Retention' ? 'bg-rose-500' :
-          recipe.category === 'E-commerce' ? 'bg-amber-500' :
-          'bg-gray-500'
-        }`} />
-
-        <div className="flex justify-between items-start mb-4 pl-3">
-          <div className={`p-3 rounded-lg transition-colors shadow-sm ${
+        <div className="flex justify-between items-start mb-6">
+          <div className={`w-12 h-12 bg-black border-2 border-black flex items-center justify-center transition-colors brutalist-shadow-sm ${
               isLocked 
-              ? 'bg-yellow-900/20 text-yellow-500 border border-yellow-500/20' 
-              : 'bg-primary-bg text-text-secondary group-hover:text-accent border border-navy-dark group-hover:border-accent/30'
+              ? 'text-[#ccff00]' 
+              : 'text-[#ff00ff] group-hover:text-[#ccff00]'
           }`}>
-            {isLocked ? <Lock className="w-5 h-5" /> : <CatIcon className="w-5 h-5" />}
+            {isLocked ? <Lock className="w-6 h-6 stroke-[3px]" /> : <CatIcon className="w-6 h-6 stroke-[3px]" />}
           </div>
           <div className="flex flex-col items-end gap-2">
             {isNew && (
-              <span className="bg-accent text-white text-[9px] font-black px-2 py-0.5 rounded-sm uppercase tracking-tighter shadow-[0_0_10px_rgba(244,63,94,0.5)] animate-pulse">
+              <span className="bg-black text-white text-[10px] font-black px-2 py-0.5 border-2 border-black uppercase tracking-tighter transform -rotate-3">
                 NEW
               </span>
             )}
             {isLocked && (
-                <span className="bg-yellow-500/20 text-yellow-400 border border-yellow-500/30 text-[10px] font-bold px-2 py-1 rounded-sm uppercase tracking-wider shadow-sm flex items-center gap-1">
-                <Lock className="w-3 h-3" /> Premium
+                <span className="bg-[#ccff00] text-black border-2 border-black text-[10px] font-black px-2 py-1 uppercase tracking-wider flex items-center gap-1 shadow-[2px_2px_0px_0px_#000]">
+                <Lock className="w-3 h-3 stroke-[3px]" /> Premium
                 </span>
             )}
             {recipe.id === 'agent-context-builder' && (
-              <span className="text-[10px] uppercase tracking-wider font-bold px-2 py-1 rounded-sm bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">
+              <span className="text-[10px] uppercase tracking-wider font-black px-2 py-1 bg-black text-[#ccff00] border-2 border-black transform rotate-2">
                  Start Here
               </span>
             )}
-            <span className={`text-[10px] uppercase tracking-wider font-bold px-2 py-1 rounded-sm bg-primary-bg text-text-secondary border border-navy-dark`}>
+            <span className={`text-[10px] uppercase tracking-wider font-black px-2 py-1 bg-gray-100 text-black border-2 border-black`}>
               {recipe.category}
             </span>
           </div>
         </div>
         
-        <h3 className={`text-lg font-bold mb-2 leading-tight pl-3 transition-colors ${isLocked ? 'text-text-color group-hover:text-yellow-400' : 'text-text-color group-hover:text-accent'}`}>
+        <h3 className={`font-display text-xl mb-4 leading-tight transition-colors ${isLocked ? 'text-black' : 'text-black group-hover:text-[#ff00ff]'}`}>
             {recipe.title}
         </h3>
-        <p className="text-text-secondary text-sm font-medium mb-4 min-h-[40px] pl-3 line-clamp-2 leading-relaxed opacity-80">
-          {recipe.tagline}
+        <p className="text-black font-black font-mono text-xs mb-6 min-h-[40px] leading-relaxed uppercase">
+          // {recipe.tagline}
         </p>
         
-        <div className="mt-auto pt-4 border-t border-navy-dark flex items-center justify-between text-xs text-text-secondary/50 pl-3">
-           <span className={`px-2 py-0.5 rounded ${
-              recipe.difficulty === 'Beginner' ? 'text-green-400 bg-green-400/10' : 
-              recipe.difficulty === 'Intermediate' ? 'text-yellow-400 bg-yellow-400/10' : 
-              'text-red-400 bg-red-400/10'
+        <div className="mt-auto pt-4 border-t-2 border-black/10 flex items-center justify-between text-[10px] font-black font-mono uppercase tracking-widest">
+           <span className={`px-2 py-1 border-2 border-black ${
+              recipe.difficulty === 'Beginner' ? 'text-black bg-emerald-400' : 
+              recipe.difficulty === 'Intermediate' ? 'text-black bg-amber-400' : 
+              'text-white bg-red-600'
            }`}>
              {recipe.difficulty}
            </span>
-           <span className="font-mono">{recipe.time}</span>
+           <span className="text-black">{recipe.time}</span>
         </div>
       </div>
     );
@@ -224,29 +195,29 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
     <div className="max-w-7xl mx-auto">
       
       {/* Controls: Search & Filter */}
-      <div className="flex flex-col md:flex-row gap-6 mb-10 items-center justify-between bg-secondary-bg p-4 rounded-xl border border-navy-dark sticky top-24 z-30 shadow-xl shadow-black/20">
+      <div className="flex flex-col md:flex-row gap-6 mb-12 items-center justify-between bg-white border-4 border-black p-6 brutalist-shadow sticky top-24 z-30">
         <div className="relative w-full md:w-96">
-          <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-            <Search className="h-5 w-5 text-text-secondary" />
+          <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+            <Search className="h-5 w-5 text-black stroke-[3px]" />
           </div>
           <input
             type="text"
-            className="block w-full pl-10 pr-3 py-3 border border-navy-dark rounded-lg leading-5 bg-primary-bg text-text-color placeholder-text-secondary/50 focus:outline-none focus:bg-primary-bg focus:ring-1 focus:ring-accent focus:border-accent transition duration-150 ease-in-out font-sans"
+            className="block w-full pl-12 pr-4 py-4 border-2 border-black bg-gray-50 text-black font-black uppercase text-sm placeholder-gray-400 focus:outline-none focus:bg-[#ccff00] transition-all"
             placeholder="Search 700+ blueprints..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
         </div>
 
-        <div className="flex overflow-x-auto gap-2 w-full md:w-auto pb-2 md:pb-0 scrollbar-hide">
+        <div className="flex overflow-x-auto gap-3 w-full md:w-auto pb-2 md:pb-0 scrollbar-hide">
           {categories.map(cat => (
             <button
               key={cat}
               onClick={() => setSelectedCategory(cat)}
-              className={`px-4 py-2 rounded-lg text-xs font-bold whitespace-nowrap transition-all border ${
+              className={`px-6 py-2 border-2 border-black font-display text-xs uppercase transition-all brutalist-shadow-sm ${
                 selectedCategory === cat 
-                  ? 'bg-accent text-white border-accent shadow-lg shadow-accent/20' 
-                  : 'bg-primary-bg text-text-secondary border-navy-dark hover:border-text-secondary hover:text-text-color'
+                  ? 'bg-black text-[#ccff00]' 
+                  : 'bg-white text-black hover:bg-[#ccff00]'
               }`}
             >
               {cat}
@@ -255,20 +226,20 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
         </div>
       </div>
 
-      <div className="mb-6 text-text-secondary text-sm font-medium pl-2 flex items-center justify-between">
-        <div className="flex items-center gap-4">
+      <div className="mb-8 text-black text-xs font-black uppercase tracking-[0.2em] pl-2 flex items-center justify-between">
+        <div className="flex items-center gap-6">
           <span>Showing {recipesToRender.length} of {filteredRecipes.length} recipes</span>
           {!isUnlocked && (
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-yellow-500 animate-pulse"></span>
-              <span className="text-xs font-bold text-yellow-500 uppercase tracking-widest">Premium Available</span>
+            <div className="flex items-center gap-2 bg-black text-[#ccff00] px-3 py-1 border-2 border-black transform -rotate-1">
+              <span className="w-2 h-2 rounded-full bg-[#ccff00] animate-pulse"></span>
+              <span className="text-[10px]">Premium Available</span>
             </div>
           )}
         </div>
         {isUnlocked && (
-           <div className="flex items-center gap-2 px-3 py-1 bg-green-900/20 text-green-400 rounded-full border border-green-500/20 animate-pulse">
-             <Crown className="w-4 h-4" />
-             <span className="text-xs font-bold uppercase tracking-wider">Premium Active</span>
+           <div className="flex items-center gap-2 px-4 py-1.5 bg-black text-[#ccff00] border-2 border-black transform rotate-1 animate-pulse">
+             <Crown className="w-4 h-4 stroke-[3px]" />
+             <span className="text-[10px]">Premium Active</span>
            </div>
         )}
       </div>
@@ -276,83 +247,83 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
       <div className="relative">
         
         {/* Part 1: First 12 items */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-12">
           {part1.map((recipe, index) => (
              <RecipeCard key={recipe.id} recipe={recipe} index={index} />
           ))}
         </div>
 
         {/* Part 2: Remaining items */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-12">
           {part2.map((recipe, index) => (
              <RecipeCard key={recipe.id} recipe={recipe} index={index + 12} />
           ))}
         </div>
 
         {hasMore && (
-            <div className="text-center mb-12">
+            <div className="text-center mb-20">
                 <button 
                     onClick={handleLoadMore}
-                    className="bg-secondary-bg hover:bg-navy-light text-text-color font-bold py-3 px-8 rounded-lg transition-colors border border-navy-dark hover:border-text-secondary"
+                    className="bg-black text-[#ccff00] font-display text-xl uppercase py-6 px-12 border-4 border-black brutalist-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all"
                 >
-                    Load More Recipes ({filteredRecipes.length - visibleCount} remaining)
+                    Load More ({filteredRecipes.length - visibleCount} remaining)
                 </button>
             </div>
         )}
         
         {showPaywallOverlay && (
-            <div className="relative mt-12 mb-20 text-center">
+            <div className="relative mt-12 mb-32 text-center">
                 <div className="absolute inset-0 flex items-center justify-center -top-32 bg-gradient-to-t from-primary-bg via-primary-bg/95 to-transparent z-10 pointer-events-none h-[400px]"></div>
-                <div className="relative z-20 bg-secondary-bg text-text-color p-10 rounded-2xl shadow-2xl max-w-2xl mx-auto border border-navy-dark transform hover:scale-[1.01] transition-transform">
+                <div className="relative z-20 bg-white border-4 border-black p-12 brutalist-shadow max-w-2xl mx-auto transform hover:scale-[1.01] transition-all">
                    {!showLicenseInput ? (
                       <>
-                        <div className="w-20 h-20 bg-gradient-to-br from-yellow-500 to-amber-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-[0_0_30px_rgba(245,158,11,0.3)] border-4 border-secondary-bg">
-                            <Lock className="w-10 h-10 text-white" />
+                        <div className="w-24 h-24 bg-black border-4 border-black flex items-center justify-center mx-auto mb-8 brutalist-shadow-sm shadow-[#ccff00] rotate-3">
+                            <Lock className="w-12 h-12 text-[#ccff00] stroke-[3px]" />
                         </div>
-                        <h3 className="text-3xl font-bold mb-3 font-headline">Unlock All 700+ Specialized Blueprints</h3>
-                        <p className="text-text-secondary mb-8 leading-relaxed text-lg max-w-lg mx-auto">
-                            You've seen the list. Now get the full library. <br/>
-                            Instant access to our growing database - plus the <strong>Master Cookbook (JSON)</strong> to load all 700+ as context in one file.
+                        <h3 className="text-4xl font-display text-black mb-6 uppercase leading-none">Unlock All 700+ Specialized Blueprints</h3>
+                        <p className="text-black font-bold uppercase text-sm mb-12 leading-relaxed font-mono">
+                            // You've seen the list. Now get the full library. <br/>
+                            // Instant access plus the Master Cookbook (JSON) to load all 700+ as context in one file.
                         </p>
                         <a 
                           href="https://checkout.dodopayments.com/buy/pdt_0NW6p0szmXPS6jXW05hIP?session=sess_GCYotd6plh"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="w-full sm:w-auto px-12 bg-white text-black font-bold py-4 rounded-xl hover:bg-gray-200 transition-colors shadow-[0_0_20px_rgba(255,255,255,0.2)] inline-flex items-center justify-center gap-2 group mb-6"
+                          className="w-full bg-[#ff00ff] text-white border-4 border-black font-display text-2xl uppercase py-6 rounded-none brutalist-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all inline-flex items-center justify-center gap-4 group mb-10"
                         >
-                            Get Full Access <ArrowRight className="w-5 h-5 text-black group-hover:translate-x-1 transition-transform" />
+                            Get Full Access <ArrowRight className="w-8 h-8 stroke-[4px] group-hover:translate-x-2 transition-transform" />
                         </a>
                         <br/>
                         <button 
                           onClick={() => setShowLicenseInput(true)}
-                          className="text-sm text-text-secondary hover:text-white underline decoration-text-secondary/50 underline-offset-4 transition-colors"
+                          className="text-xs font-black font-mono text-black uppercase underline decoration-punk-lime decoration-4 underline-offset-4 hover:text-[#ff00ff] transition-colors"
                         >
                           I have a license key
                         </button>
                       </>
                    ) : (
                       <form onSubmit={handleLicenseSubmit} className="animate-fade-in max-w-sm mx-auto">
-                        <div className="flex items-center justify-between mb-6">
-                           <h3 className="text-xl font-bold">Enter License Key</h3>
-                           <button type="button" onClick={() => setShowLicenseInput(false)} className="text-text-secondary hover:text-white">
-                             <X className="w-6 h-6" />
+                        <div className="flex items-center justify-between mb-8 border-b-4 border-black pb-4">
+                           <h3 className="text-2xl font-display uppercase tracking-tight">Enter License</h3>
+                           <button type="button" onClick={() => setShowLicenseInput(false)} className="p-2 hover:bg-gray-100 border-2 border-transparent hover:border-black transition-all">
+                             <X className="w-8 h-8 text-black stroke-[3px]" />
                            </button>
                         </div>
-                        <div className="mb-6">
+                        <div className="mb-8">
                            <input 
                              type="text" 
                              value={licenseKeyInput}
                              onChange={(e) => setLicenseKeyInput(e.target.value)}
                              placeholder="TK-XXXX-XXXX-XXXX"
-                             className="w-full bg-primary-bg border border-navy-dark text-white px-5 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-500 font-sans text-center uppercase tracking-widest placeholder-text-secondary/30 text-lg"
+                             className="w-full bg-gray-50 border-4 border-black text-black font-display text-xl px-6 py-5 focus:outline-none focus:bg-[#ccff00] text-center uppercase tracking-widest placeholder-gray-300"
                            />
-                           {unlockError && <p className="text-red-400 text-sm mt-3">{unlockError}</p>}
+                           {unlockError && <p className="text-red-600 font-black font-mono text-xs mt-4 uppercase animate-pulse tracking-tighter">⚠️ {unlockError}</p>}
                         </div>
                         <button 
                           type="submit"
-                          className="w-full bg-yellow-500 text-black font-bold py-4 rounded-xl hover:bg-yellow-400 transition-colors shadow-lg flex items-center justify-center gap-2 text-lg"
+                          className="w-full bg-black text-[#ccff00] border-4 border-black font-display text-2xl uppercase py-6 brutalist-shadow-sm hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all flex items-center justify-center gap-4"
                         >
-                          <Key className="w-5 h-5" /> Activate License
+                          <Key className="w-8 h-8 stroke-[3px]" /> Activate
                         </button>
                       </form>
                    )}
@@ -362,114 +333,118 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
       </div>
 
       {filteredRecipes.length === 0 && (
-        <div className="text-center py-20 bg-secondary-bg rounded-2xl border border-navy-dark">
-          <Search className="w-12 h-12 text-text-secondary mx-auto mb-4 opacity-50" />
-          <h3 className="text-xl font-bold text-text-color mb-2">No recipes found</h3>
-          <p className="text-text-secondary">Try searching for "PDF", "Excel", or "Scrape".</p>
-          <button onClick={() => {setSearchQuery(''); setSelectedCategory('All');}} className="mt-6 text-accent font-bold hover:underline">Clear Filters</button>
+        <div className="text-center py-24 bg-white border-4 border-black brutalist-shadow">
+          <Search className="w-20 h-20 text-gray-200 mx-auto mb-8 stroke-[3px]" />
+          <h3 className="text-3xl font-display text-black mb-4 uppercase">No blueprints found</h3>
+          <p className="text-black font-black font-mono uppercase text-sm tracking-widest">// Try searching for "PDF", "Excel", or "Scrape".</p>
+          <button onClick={() => {setSearchQuery(''); setSelectedCategory('All');}} className="mt-10 bg-[#ccff00] border-2 border-black px-8 py-3 font-display uppercase brutalist-shadow-sm hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all">Clear Filters</button>
         </div>
       )}
 
       {/* Recipe Modal */}
       {selectedRecipe && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm" onClick={() => setSelectedRecipe(null)}>
-          <div className="bg-primary-bg rounded-xl shadow-2xl w-full max-w-3xl max-h-[90vh] overflow-hidden flex flex-col border border-navy-dark" onClick={e => e.stopPropagation()}>
-            <div className={`p-6 border-b border-navy-dark flex justify-between items-center ${selectedRecipe.isPremium && !isUnlocked ? 'bg-yellow-900/10' : 'bg-secondary-bg'}`}>
-              <div className="flex items-center gap-4">
-                <div className={`p-3 rounded-lg shadow-sm border ${selectedRecipe.isPremium && !isUnlocked ? 'bg-yellow-900/20 border-yellow-500/20 text-yellow-500' : 'bg-primary-bg border-navy-dark text-accent'}`}>
-                   {selectedRecipe.isPremium && !isUnlocked ? <Crown className="w-6 h-6" /> : React.createElement(categoryIcons[selectedRecipe.category] || Terminal, { className: "w-6 h-6" })}
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/90 backdrop-blur-md" onClick={() => setSelectedRecipe(null)}>
+          <div className="bg-white border-4 border-black brutalist-shadow w-full max-w-3xl max-h-[90vh] overflow-hidden flex flex-col relative" onClick={e => e.stopPropagation()}>
+            <div className={`p-8 border-b-4 border-black flex justify-between items-center ${selectedRecipe.isPremium && !isUnlocked ? 'bg-[#ccff00]/10' : 'bg-white'}`}>
+              <div className="flex items-center gap-6">
+                <div className={`w-16 h-16 bg-black flex items-center justify-center border-2 border-black brutalist-shadow-sm ${selectedRecipe.isPremium && !isUnlocked ? 'text-[#ccff00] shadow-[#ccff00]' : 'text-[#ff00ff] shadow-[#ff00ff]'}`}>
+                   {selectedRecipe.isPremium && !isUnlocked ? <Crown className="w-10 h-10 stroke-[3px]" /> : React.createElement(categoryIcons[selectedRecipe.category] || Terminal, { className: "w-10 h-10 stroke-[3px]" })}
                 </div>
                 <div>
-                  <h2 className="text-2xl font-bold text-text-color flex items-center gap-2 font-headline">
+                  <h2 className="text-3xl font-display text-black flex items-center gap-4 uppercase leading-none">
                     {selectedRecipe.title}
-                    {selectedRecipe.isPremium && !isUnlocked && <Lock className="w-5 h-5 text-yellow-500" />}
+                    {selectedRecipe.isPremium && !isUnlocked && <Lock className="w-6 h-6 text-black stroke-[3px]" />}
                   </h2>
-                  <div className="flex items-center gap-4 mt-1">
-                    <span className="text-accent text-xs font-bold hover:underline flex items-center gap-1">
-                      <Link href={`/skills/${selectedRecipe.id}`} onClick={() => setSelectedRecipe(null)} className="flex items-center gap-1">
-                        <ExternalLink className="w-3 h-3" /> Full Page
-                      </Link>
-                    </span>
+                  <div className="flex items-center gap-6 mt-3 font-black font-mono text-[10px] uppercase tracking-widest text-gray-500">
+                    <Link href={`/skills/${selectedRecipe.id}`} onClick={() => setSelectedRecipe(null)} className="flex items-center gap-2 hover:text-[#ff00ff] transition-colors bg-gray-100 px-2 py-1 border border-black">
+                      <ExternalLink className="w-3 h-3" /> Full Page
+                    </Link>
+                    <span>ID: {selectedRecipe.id.slice(0, 8).toUpperCase()}</span>
                   </div>
                 </div>
               </div>
-              <button onClick={() => setSelectedRecipe(null)} className="p-2 hover:bg-navy-light rounded-full transition-colors text-text-secondary"><X className="w-6 h-6" /></button>
+              <button onClick={() => setSelectedRecipe(null)} className="p-2 hover:bg-gray-100 border-2 border-transparent hover:border-black transition-all"><X className="w-10 h-10 text-black stroke-[3px]" /></button>
             </div>
 
-            <div className="p-6 overflow-y-auto scrollbar-thin scrollbar-thumb-navy-light scrollbar-track-primary-bg">
-              <div className="mb-8">
-                <p className="text-text-secondary leading-relaxed text-lg font-sans">{selectedRecipe.description}</p>
+            <div className="p-8 overflow-y-auto custom-scrollbar bg-white">
+              <div className="mb-10">
+                <p className="text-xl text-black font-bold uppercase leading-tight border-l-8 border-[#ccff00] pl-6 py-2 bg-gray-50">{selectedRecipe.description}</p>
               </div>
 
               {(!isUnlocked && (selectedRecipe.isPremium || recipes.indexOf(selectedRecipe) >= 200)) ? (
-                <div className="bg-secondary-bg rounded-xl p-8 text-center border-2 border-yellow-500/50 shadow-[0_0_30px_rgba(234,179,8,0.1)] relative overflow-hidden">
+                <div className="bg-black text-white border-4 border-black p-12 text-center brutalist-shadow-sm relative overflow-hidden">
+                  <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(#fff 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
                   <div className="relative z-10">
-                    <div className="w-16 h-16 bg-yellow-500/10 rounded-full flex items-center justify-center mx-auto mb-6 border border-yellow-500/20">
-                      <Lock className="w-8 h-8 text-yellow-500" />
+                    <div className="w-20 h-20 bg-white flex items-center justify-center mx-auto mb-8 border-4 border-black rotate-3 brutalist-shadow-sm">
+                      <Lock className="w-10 h-10 text-black stroke-[3px]" />
                     </div>
-                    <h3 className="text-2xl font-bold text-white mb-2">Unlock this Blueprint</h3>
-                    <p className="text-text-secondary mb-8 max-w-md mx-auto">Get access to this workflow and 700+ others by joining Pro.</p>
-                    <a href="https://checkout.dodopayments.com/buy/pdt_0NW6p0szmXPS6jXW05hIP?session=sess_GCYotd6plh" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-black px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-xl">Unlock Now <ArrowRight className="w-5 h-5" /></a>
+                    <h3 className="text-4xl font-display text-white mb-4 uppercase leading-none">Access Denied</h3>
+                    <p className="text-white/60 font-black font-mono text-xs mb-10 uppercase tracking-widest">// This blueprint is reserved for Pro members.</p>
+                    <a href="https://checkout.dodopayments.com/buy/pdt_0NW6p0szmXPS6jXW05hIP?session=sess_GCYotd6plh" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-4 bg-[#ccff00] text-black px-10 py-5 border-4 border-white font-display text-2xl uppercase transition-all brutalist-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none">Unlock Now <ArrowRight className="w-8 h-8 stroke-[3px]" /></a>
                   </div>
                 </div>
               ) : (
                 <>
-                  {/* POWER USER SECTION: DOWNLOAD SKILLS */}
-                  <div className="bg-blue-950/50 rounded-xl p-6 mb-8 border border-blue-900/50 relative overflow-hidden group">
-                      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:20px_24px] opacity-10"></div>
+                  {/* POWER USER SECTION */}
+                  <div className="bg-black text-white border-4 border-black p-8 mb-10 brutalist-shadow-sm relative overflow-hidden group">
+                      <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(#fff 1px, transparent 1px)', backgroundSize: '10px 10px' }}></div>
                       <div className="relative z-10">
-                          <div className="flex flex-col gap-4">
-                              <div className="flex items-center justify-between">
-                                  <div className="inline-flex items-center gap-2 px-2 py-0.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 font-bold text-[9px] uppercase tracking-widest font-mono">
-                                      <Cpu className="w-3 h-3" /> Agent-Ready
+                          <div className="flex flex-col gap-6">
+                              <div className="flex items-center justify-between border-b-2 border-white/10 pb-4">
+                                  <div className="inline-flex items-center gap-3 px-3 py-1 bg-[#00ffff] text-black border-2 border-black font-black text-xs uppercase tracking-widest transform -rotate-1">
+                                      <Cpu className="w-4 h-4 stroke-[3px]" /> Agent-Ready
                                   </div>
-                                  <span className="text-[9px] font-mono text-blue-400/40 uppercase tracking-widest">v2.0 Optimized</span>
+                                  <span className="text-[10px] font-black font-mono text-white/40 uppercase tracking-[0.2em]">v2.0 Optimized</span>
                               </div>
                               
-                              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                                   <a 
                                       href={`/downloads/skills/${selectedRecipe.id}.skill`}
                                       download
-                                      className="flex items-center justify-center gap-2 bg-white text-blue-950 px-3 py-2 rounded-lg font-bold text-xs hover:bg-blue-50 transition-all shadow-md"
+                                      className="flex items-center justify-center gap-3 bg-white text-black border-2 border-black py-3 font-display text-xs uppercase hover:bg-[#ccff00] transition-all brutalist-shadow-sm"
                                   >
-                                      <Zap className="w-3 h-3 fill-current" /> Gemini
+                                      <Zap className="w-4 h-4 fill-current" /> Gemini
                                   </a>
                                   <a 
                                       href={`/downloads/skills/${selectedRecipe.id}-claude.md`}
                                       download
-                                      className="flex items-center justify-center gap-2 bg-blue-800 text-white px-3 py-2 rounded-lg font-bold text-xs hover:bg-blue-700 transition-all border border-blue-700 shadow-md"
+                                      className="flex items-center justify-center gap-3 bg-white text-black border-2 border-black py-3 font-display text-xs uppercase hover:bg-[#ff00ff] transition-all brutalist-shadow-sm"
                                   >
-                                      <Terminal className="w-3 h-3" /> Claude
+                                      <Terminal className="w-4 h-4 stroke-[3px]" /> Claude
                                   </a>
                                   <a 
                                       href={`/downloads/skills/${selectedRecipe.id}.cursorrules`}
                                       download
-                                      className="flex items-center justify-center gap-2 bg-blue-600 text-white px-3 py-2 rounded-lg font-bold text-xs hover:bg-blue-500 transition-all border border-blue-500 shadow-md"
+                                      className="flex items-center justify-center gap-3 bg-white text-black border-2 border-black py-3 font-display text-xs uppercase hover:bg-[#00ffff] transition-all brutalist-shadow-sm"
                                   >
-                                      <MousePointer2 className="w-3 h-3" /> Cursor
+                                      <MousePointer2 className="w-4 h-4 stroke-[3px]" /> Cursor
                                   </a>
                               </div>
                           </div>
                       </div>
                   </div>
 
-                  <div className="bg-[#0D1117] rounded-lg overflow-hidden border border-navy-dark shadow-inner">
-                    <div className="bg-[#161B22] px-4 py-2 flex items-center justify-between border-b border-navy-dark">
-                      <span className="text-text-secondary font-mono text-xs flex items-center gap-2"><FileText className="w-3 h-3" /> BLUEPRINT.md</span>
-                      <div className="flex items-center gap-2">
+                  <div className="bg-black border-4 border-black overflow-hidden brutalist-shadow-sm">
+                    <div className="bg-white px-6 py-3 flex items-center justify-between border-b-4 border-black">
+                      <span className="text-black font-black font-mono text-xs flex items-center gap-3 uppercase tracking-widest"><FileText className="w-4 h-4" /> BLUEPRINT.md</span>
+                      <div className="flex items-center gap-4">
                         {selectedRecipe.sampleData && (
-                          <button onClick={handleDownload} className="text-xs font-bold px-3 py-1.5 rounded flex items-center gap-2 bg-yellow-500/10 text-yellow-500 border border-yellow-500/20 hover:bg-yellow-500/20"><Download className="w-3 h-3" /> Sample</button>
+                          <button onClick={handleDownload} className="text-[10px] font-black uppercase px-3 py-1.5 border-2 border-black bg-[#ccff00] text-black hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all brutalist-shadow-sm"><Download className="w-3 h-3 stroke-[3px]" /> Sample</button>
                         )}
-                        <button onClick={handleCopy} className={`text-xs font-bold px-3 py-1.5 rounded flex items-center gap-2 transition-colors ${copied ? 'bg-green-500 text-white' : 'bg-accent/10 text-accent border border-accent/20 hover:bg-accent/20'}`}>{copied ? <Check className="w-3 h-3" /> : <Copy className="w-3 h-3" />} {copied ? 'Copied!' : 'Copy'}</button>
+                        <button onClick={handleCopy} className={`text-[10px] font-black uppercase px-3 py-1.5 border-2 border-black transition-all brutalist-shadow-sm ${copied ? 'bg-emerald-400 text-black' : 'bg-white text-black hover:bg-[#ff00ff] hover:text-white'}`}>{copied ? <Check className="w-3 h-3 stroke-[3px]" /> : <Copy className="w-3 h-3 stroke-[3px]" />} {copied ? 'Copied!' : 'Copy Logic'}</button>
                       </div>
                     </div>
-                    <div className="p-6 max-h-[350px] overflow-y-auto custom-scrollbar">
-                      <pre className="font-mono text-sm text-blue-300 whitespace-pre-wrap leading-relaxed">{selectedRecipe.blueprint}</pre>
+                    <div className="p-8 max-h-[350px] overflow-y-auto custom-scrollbar bg-black">
+                      <pre className="font-mono text-sm text-[#00ffff] whitespace-pre-wrap leading-relaxed">{selectedRecipe.blueprint}</pre>
                     </div>
                   </div>
-                  <div className="mt-6 p-4 rounded-lg flex gap-3 items-start border bg-yellow-900/10 border-yellow-500/20">
-                     <div className="bg-yellow-500 text-black w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 font-bold text-xs mt-0.5">!</div>
-                     <p className="text-sm text-yellow-200/80 font-sans">1. Copy the blueprint. {selectedRecipe.sampleData ? `2. Download ${selectedRecipe.sampleData.filename}.` : ""} 3. Tell AI: "Read the blueprint {selectedRecipe.sampleData ? "and use the sample file " : ""}to build this."</p>
+                  <div className="mt-8 p-6 bg-[#ccff00]/10 border-4 border-black border-dashed flex gap-4 items-start">
+                     <div className="bg-black text-[#ccff00] w-8 h-8 flex items-center justify-center flex-shrink-0 font-display text-xl border-2 border-black transform rotate-12">!</div>
+                     <p className="text-xs text-black font-black font-mono uppercase leading-relaxed tracking-tighter">
+                        1. Copy the blueprint. <br/>
+                        {selectedRecipe.sampleData ? `2. Download ${selectedRecipe.sampleData.filename}.` : ""} <br/>
+                        3. Tell AI: "Read the blueprint to build this."
+                     </p>
                   </div>
                 </>
               )}

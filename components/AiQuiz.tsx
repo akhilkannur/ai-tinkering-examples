@@ -191,21 +191,21 @@ export default function AiQuiz() {
   };
 
   const getTimerColor = () => {
-    if (timeLeft > 10) return 'bg-accent';
-    if (timeLeft > 5) return 'bg-yellow-500';
-    return 'bg-red-500';
+    if (timeLeft > 10) return 'bg-[#ccff00]';
+    if (timeLeft > 5) return 'bg-amber-400';
+    return 'bg-red-600';
   };
 
   return (
-    <div className="bg-primary-bg p-1 md:p-2 rounded-3xl relative overflow-hidden font-sans">
+    <div className="bg-white border-4 border-black p-6 md:p-10 brutalist-shadow relative overflow-hidden font-sans">
       
       {/* Top Bar: Score & High Score */}
       {!showResult && (
-        <div className="flex justify-between items-center mb-10 px-4">
-          <div className="font-mono text-[10px] uppercase tracking-widest text-text-secondary">
-            [ SCORE: <span className="text-accent font-bold">{points}</span> ]
+        <div className="flex justify-between items-center mb-12 border-b-2 border-black pb-4">
+          <div className="font-mono text-xs uppercase font-black tracking-widest text-black">
+            [ SCORE: <span className="text-[#ff00ff]">{points}</span> ]
           </div>
-          <div className="font-mono text-[10px] uppercase tracking-widest text-text-secondary opacity-40">
+          <div className="font-mono text-xs uppercase font-black tracking-widest text-gray-400">
             [ HIGH_SCORE: {Math.max(points, highScore)} ]
           </div>
         </div>
@@ -213,20 +213,21 @@ export default function AiQuiz() {
 
       {showResult ? (
         <div className="text-center animate-in fade-in zoom-in duration-500 py-8">
-          <div className="mb-8 relative inline-block">
-             <div className="absolute -inset-4 bg-accent/20 rounded-full blur-2xl animate-pulse"></div>
-             <Trophy className="w-20 h-20 text-accent relative z-10" />
-          </div>
-          <h2 className="text-2xl md:text-4xl font-black mb-4 uppercase tracking-tighter italic text-white">{getResultMessage()}</h2>
-          
-          <div className="grid grid-cols-2 gap-4 max-w-sm mx-auto mb-12 mt-10">
-             <div className="bg-secondary-bg border border-white/5 p-6 rounded-2xl">
-                <div className="text-text-secondary text-[10px] font-mono uppercase tracking-widest mb-2">ACCURACY</div>
-                <div className="text-3xl font-black text-white">{score}/{questions.length}</div>
+          <div className="mb-10 relative inline-block">
+             <div className="bg-black p-6 border-4 border-black brutalist-shadow-sm rotate-3 text-[#ccff00]">
+                <Trophy className="w-20 h-20" strokeWidth={3} />
              </div>
-             <div className="bg-secondary-bg border border-white/5 p-6 rounded-2xl">
-                <div className="text-text-secondary text-[10px] font-mono uppercase tracking-widest mb-2">POINTS</div>
-                <div className="text-3xl font-black text-accent tabular-nums">{points}</div>
+          </div>
+          <h2 className="text-3xl md:text-5xl font-display mb-8 uppercase text-black italic bg-[#ccff00] border-2 border-black inline-block px-4 py-2">{getResultMessage()}</h2>
+          
+          <div className="grid grid-cols-2 gap-8 max-w-sm mx-auto mb-16 mt-10">
+             <div className="bg-white border-4 border-black p-6 brutalist-shadow-sm">
+                <div className="text-black text-[10px] font-black font-mono uppercase tracking-widest mb-2">ACCURACY</div>
+                <div className="text-4xl font-display text-black">{score}/{questions.length}</div>
+             </div>
+             <div className="bg-white border-4 border-black p-6 brutalist-shadow-sm">
+                <div className="text-black text-[10px] font-black font-mono uppercase tracking-widest mb-2">POINTS</div>
+                <div className="text-4xl font-display text-[#ff00ff] tabular-nums">{points}</div>
              </div>
           </div>
 
@@ -235,21 +236,22 @@ export default function AiQuiz() {
                 <QuizCertificate score={score} totalQuestions={questions.length} userName={userName} quizUrl={quizUrl} />
             </div>
           ) : (
-            <div className="max-w-md mx-auto mb-12">
-                <form onSubmit={generateCertificate} className="bg-secondary-bg/50 border border-white/10 p-8 rounded-3xl backdrop-blur-xl">
-                    <h3 className="text-lg font-bold mb-6 uppercase tracking-tight text-white flex items-center justify-center gap-2">
-                        <ShieldCheck className="w-5 h-5 text-accent" /> Validate Identity
+            <div className="max-w-md mx-auto mb-16">
+                <form onSubmit={generateCertificate} className="bg-gray-50 border-4 border-black p-10 brutalist-shadow relative">
+                    <div className="absolute -top-4 left-6 bg-black text-white px-3 py-1 font-display text-xs uppercase">Identity Check</div>
+                    <h3 className="text-2xl font-display mb-8 uppercase tracking-tight text-black flex items-center justify-center gap-3">
+                        <ShieldCheck className="w-8 h-8 text-[#00ffff] stroke-[3px]" /> Validate Name
                     </h3>
                     <input
                         type="text"
-                        placeholder="Enter full name for record..."
+                        placeholder="Enter full name..."
                         value={userName}
                         onChange={(e) => setUserName(e.target.value)}
-                        className="w-full px-5 py-4 bg-primary-bg border border-white/10 rounded-xl mb-6 text-white focus:border-accent focus:outline-none transition-all font-mono text-sm uppercase tracking-wider placeholder:text-text-secondary/20"
+                        className="w-full px-6 py-4 bg-white border-4 border-black mb-8 text-black focus:bg-[#ccff00] focus:outline-none transition-all font-display text-xl uppercase placeholder:text-gray-300"
                     />
                     <button
                         type="submit"
-                        className="w-full bg-white text-primary-bg font-bold py-4 rounded-xl hover:bg-accent hover:text-white transition-all transform active:scale-95 shadow-xl uppercase text-xs tracking-[0.2em]"
+                        className="w-full bg-black text-white font-display py-6 border-4 border-black hover:bg-[#ff00ff] transition-all brutalist-shadow-sm uppercase text-xl"
                     >
                         Issue_Certificate
                     </button>
@@ -257,15 +259,15 @@ export default function AiQuiz() {
             </div>
           )}
 
-          <div className="my-16 border-t border-white/5 pt-16">
+          <div className="my-20 border-t-4 border-black border-dotted pt-20">
             <NewsletterSignup />
           </div>
 
           <button
             onClick={restartQuiz}
-            className="inline-flex items-center gap-2 text-text-secondary font-mono text-[10px] uppercase tracking-widest hover:text-accent transition-colors"
+            className="inline-flex items-center gap-3 bg-white border-2 border-black px-6 py-2 text-black font-display text-xs uppercase hover:bg-black hover:text-white transition-all brutalist-shadow-sm"
           >
-            <RotateCcw className="w-3 h-3" /> Re-initialize_System
+            <RotateCcw className="w-4 h-4 stroke-[3px]" /> Re-initialize_System
           </button>
         </div>
       ) : (
@@ -274,41 +276,41 @@ export default function AiQuiz() {
             <div className={`transition-all duration-500 ${showAnimation ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
               
               {/* Timer Bar */}
-              <div className="w-full bg-secondary-bg border border-white/5 rounded-full h-2 mb-12 relative overflow-hidden">
+              <div className="w-full bg-gray-100 border-4 border-black h-6 mb-16 relative overflow-hidden">
                  <div 
-                   className={`h-full transition-all duration-1000 ease-linear ${getTimerColor()} shadow-[0_0_15px_rgba(244,63,94,0.5)]`}
+                   className={`h-full transition-all duration-1000 ease-linear ${getTimerColor()} border-r-4 border-black`}
                    style={{ width: `${(timeLeft / TIMER_DURATION) * 100}%` }}
                  ></div>
               </div>
 
               {/* Streak Indicator */}
               {streak > 1 && (
-                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent text-white px-4 py-1 rounded-full text-[10px] font-mono font-black uppercase tracking-[0.2em] shadow-lg animate-bounce z-20">
-                    <Flame className="w-3 h-3 inline-block mr-1 mb-0.5 fill-white" /> {streak}_STREAK
+                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#ff00ff] text-white px-6 py-2 border-2 border-black font-display text-sm uppercase tracking-widest shadow-lg animate-bounce z-20">
+                    <Flame className="w-5 h-5 inline-block mr-2 mb-1 fill-white" /> {streak}_STREAK
                  </div>
               )}
 
               {/* Question UI */}
-              <div className="mb-12">
-                <div className="text-[10px] font-mono text-accent/60 font-bold uppercase tracking-[0.3em] mb-4 flex items-center gap-2">
-                    <Timer className="w-3 h-3" /> 0{currentQuestion + 1} / 0{questions.length}
+              <div className="mb-16 border-l-8 border-[#ccff00] pl-8 py-2 bg-gray-50">
+                <div className="text-xs font-black font-mono text-gray-400 uppercase tracking-[0.3em] mb-4 flex items-center gap-3">
+                    <Timer className="w-4 h-4" /> 0{currentQuestion + 1} / 0{questions.length}
                 </div>
-                <h2 className="text-2xl sm:text-4xl font-extrabold text-white leading-tight tracking-tight italic">
+                <h2 className="text-3xl sm:text-5xl font-display text-black leading-tight uppercase italic">
                     {questions[currentQuestion].question}
                 </h2>
               </div>
               
-              <div className="grid grid-cols-1 gap-4">
+              <div className="grid grid-cols-1 gap-6">
                 {questions[currentQuestion].options.map((option, index) => {
-                  let btnStyle = "bg-secondary-bg/40 border border-white/5 hover:border-accent/30 hover:bg-secondary-bg/60 text-text-secondary";
+                  let btnStyle = "bg-white border-4 border-black hover:bg-gray-50 text-black brutalist-shadow-sm";
                   
                   if (selectedAnswer) {
                     if (option === questions[currentQuestion].answer) {
-                      btnStyle = "bg-accent/20 border-accent text-white shadow-[0_0_20px_rgba(244,63,94,0.2)]";
+                      btnStyle = "bg-[#ccff00] border-4 border-black text-black scale-[1.02]";
                     } else if (option === selectedAnswer) {
-                      btnStyle = "bg-red-500/20 border-red-500 text-red-400";
+                      btnStyle = "bg-red-600 border-4 border-black text-white";
                     } else {
-                      btnStyle = "bg-primary-bg border-white/5 text-text-secondary/20 opacity-40";
+                      btnStyle = "bg-gray-100 border-2 border-black text-gray-300 opacity-50";
                     }
                   }
 
@@ -317,18 +319,18 @@ export default function AiQuiz() {
                       key={index}
                       onClick={() => handleAnswer(option)}
                       disabled={selectedAnswer !== null}
-                      className={`p-6 rounded-2xl text-left font-medium transition-all duration-300 relative group overflow-hidden ${btnStyle}`}
+                      className={`p-8 text-left font-black transition-all duration-300 relative group overflow-hidden ${btnStyle}`}
                     >
                       <div className="flex items-center relative z-10">
-                        <div className={`w-10 h-10 rounded-xl flex items-center justify-center mr-6 text-xs font-mono font-bold border transition-colors ${selectedAnswer && option === questions[currentQuestion].answer ? 'bg-accent border-accent text-white' : 'bg-primary-bg border-white/10 text-text-secondary group-hover:text-white group-hover:border-accent/30'}`}>
+                        <div className={`w-12 h-12 flex items-center justify-center mr-8 text-xl font-display border-4 border-black transition-colors ${selectedAnswer && option === questions[currentQuestion].answer ? 'bg-black text-[#ccff00]' : 'bg-black text-white group-hover:bg-[#ff00ff]'}`}>
                            {String.fromCharCode(65 + index)}
                         </div>
-                        <span className="text-lg tracking-tight font-light">{option}</span>
+                        <span className="text-xl font-display uppercase tracking-tight">{option}</span>
                         {selectedAnswer && option === questions[currentQuestion].answer && (
-                            <Check className="w-5 h-5 text-accent ml-auto" />
+                            <Check className="w-8 h-8 text-black ml-auto stroke-[4px]" />
                         )}
                         {selectedAnswer && option === selectedAnswer && option !== questions[currentQuestion].answer && (
-                            <X className="w-5 h-5 text-red-500 ml-auto" />
+                            <X className="w-8 h-8 text-white ml-auto stroke-[4px]" />
                         )}
                       </div>
                     </button>
@@ -337,7 +339,7 @@ export default function AiQuiz() {
               </div>
             </div>
           ) : (
-            <div className="text-center py-20 font-mono text-xs text-text-secondary animate-pulse">BOOTING_DIAGNOSTIC_DATA...</div>
+            <div className="text-center py-24 font-display text-xl text-black animate-pulse uppercase tracking-widest border-4 border-black border-dashed">BOOTING_DIAGNOSTIC_DATA...</div>
           )}
         </>
       )}

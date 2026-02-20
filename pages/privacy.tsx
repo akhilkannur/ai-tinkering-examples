@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar'
 
 export default function Privacy() {
   return (
-    <div className="min-h-screen bg-primary-bg font-sans text-text-color selection:bg-accent/30 overflow-x-hidden">
+    <div className="min-h-screen bg-primary-bg font-sans text-black selection:bg-[#ff00ff] selection:text-white overflow-x-hidden">
       <Head>
         <title>Privacy Policy | Real AI Examples</title>
         <meta name="description" content="Read our privacy policy to understand how we collect and protect your personal data." key="description" />
@@ -11,59 +11,50 @@ export default function Privacy() {
 
       <Navbar />
 
-      <main className="pt-40 pb-24">
+      <main className="pt-32 pb-24 relative z-10">
         <div className="container mx-auto px-4 max-w-4xl relative">
-          <div className="absolute top-0 right-0 p-4 opacity-[0.02] pointer-events-none">
-             <div className="font-mono text-[200px] font-black uppercase leading-none">SECURE</div>
+          <div className="absolute top-0 right-0 p-4 opacity-5 pointer-events-none">
+             <div className="font-display text-[120px] font-black uppercase leading-none text-black rotate-12">SECURE</div>
           </div>
 
-          <div className="text-accent font-mono text-[10px] uppercase tracking-[0.4em] mb-4">Privacy & Security</div>
-          <h1 className="text-4xl md:text-6xl font-extrabold mb-12 text-white tracking-tighter uppercase italic">Privacy Policy</h1>
+          <div className="inline-flex items-center gap-2 bg-black text-[#00ffff] border-2 border-black px-4 py-1.5 font-black text-xs uppercase mb-8 transform -rotate-1 brutalist-shadow-sm">
+            Privacy & Security Protocol
+          </div>
+          <h1 className="text-5xl md:text-7xl font-display mb-12 text-black uppercase leading-[0.9] glitch-text" data-text="PRIVACY POLICY">Privacy Policy</h1>
           
-          <div className="bg-secondary-bg/50 backdrop-blur-md border border-white/5 p-8 md:p-12 rounded-3xl relative overflow-hidden">
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none"></div>
+          <div className="bg-white border-4 border-black p-8 md:p-12 brutalist-shadow relative overflow-hidden">
+            <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'radial-gradient(#000 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
             
-            <div className="prose prose-invert max-w-none prose-sm md:prose-base text-text-secondary font-light leading-relaxed space-y-8 relative z-10">
-                <p className="font-mono text-xs text-accent">Last Updated: January 17, 2026</p>
+            <div className="max-w-none space-y-10 relative z-10">
+                <p className="font-black font-mono text-xs uppercase tracking-widest bg-black text-[#ccff00] inline-block px-2 py-1">Last Updated: January 17, 2026</p>
                 
                 <section>
-                    <h2 className="text-xl font-bold text-white uppercase tracking-tight mb-4">1. Introduction</h2>
-                    <p>Welcome to Real AI Examples ("we," "our," or "us"). We respect your privacy and are committed to protecting your personal data. This privacy policy will inform you about how we look after your personal data when you visit our website.</p>
+                    <h2 className="text-2xl md:text-3xl font-display text-black uppercase mb-4 decoration-wavy underline decoration-[#ff00ff]">1. Introduction</h2>
+                    <p className="font-bold leading-relaxed text-lg uppercase tracking-tight font-mono">// Welcome to Real AI Examples. We respect your privacy and are committed to protecting your personal data.</p>
                 </section>
 
                 <section>
-                    <h2 className="text-xl font-bold text-white uppercase tracking-tight mb-4">2. Data We Collect</h2>
-                    <p>We may collect, use, store and transfer different kinds of personal data about you, including:</p>
-                    <ul className="list-disc ml-6 space-y-2 font-mono text-xs">
-                        <li><strong className="text-white">Identity Data:</strong> Email address (if you subscribe to our newsletter).</li>
-                        <li><strong className="text-white">Technical Data:</strong> IP address, browser type, and system fingerprint.</li>
-                        <li><strong className="text-white">Usage Data:</strong> Information about how you interact with our blueprints.</li>
+                    <h2 className="text-2xl md:text-3xl font-display text-black uppercase mb-4 decoration-wavy underline decoration-[#ccff00]">2. Data We Collect</h2>
+                    <p className="font-bold leading-relaxed mb-6 uppercase tracking-tight font-mono">// We may collect, use, and store different kinds of data:</p>
+                    <ul className="space-y-4 font-black font-mono text-xs uppercase">
+                        <li className="flex items-start gap-3"><span className="bg-[#ff00ff] text-white px-1">IDENTITY:</span> Email address (if you subscribe).</li>
+                        <li className="flex items-start gap-3"><span className="bg-[#ccff00] text-black px-1">TECHNICAL:</span> IP address, browser type, system fingerprint.</li>
+                        <li className="flex items-start gap-3"><span className="bg-[#00ffff] text-black px-1">USAGE:</span> Information about how you interact with blueprints.</li>
                     </ul>
                 </section>
 
                 <section>
-                    <h2 className="text-xl font-bold text-white uppercase tracking-tight mb-4">3. How We Use Your Data</h2>
-                    <p>We use your data to provide our services, including sending newsletters if you have opted in, and to improve our repository through anonymous usage analytics.</p>
+                    <h2 className="text-2xl md:text-3xl font-display text-black uppercase mb-4 decoration-wavy underline decoration-[#00ffff]">3. Usage</h2>
+                    <p className="font-bold leading-relaxed uppercase tracking-tight font-mono">// We use your data to provide services, including newsletters, and to improve our repository through anonymous usage analytics.</p>
                 </section>
 
-                <section>
-                    <h2 className="text-xl font-bold text-white uppercase tracking-tight mb-4">4. Third-Party Services</h2>
-                    <p>We use third-party services like Google Analytics and Meta Pixel to help us understand how our site is used. These services may collect information sent by your browser as part of a web page request.</p>
-                </section>
-
-                <section className="pt-8 border-t border-white/5">
-                    <p>If you have any questions about this privacy protocol, please contact us at: <code className="text-accent">akhil@realaiexamples.com</code></p>
+                <section className="pt-12 border-t-4 border-black border-dashed">
+                    <p className="font-display text-xl uppercase">Questions? Contact us at: <code className="bg-black text-[#ccff00] px-2 py-1 ml-2">akhil@realaiexamples.com</code></p>
                 </section>
             </div>
           </div>
         </div>
       </main>
-
-      <footer className="border-t border-white/5 py-12 text-center text-text-secondary text-[10px] bg-[#0B1120] font-mono uppercase tracking-[0.3em] opacity-40">
-        <div className="container mx-auto px-4">
-            <p>&copy; {new Date().getFullYear()} REAL_AI_EXAMPLES_DPT. ALL_RIGHTS_RESERVED.</p>
-        </div>
-      </footer>
     </div>
   )
 }
