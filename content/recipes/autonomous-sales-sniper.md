@@ -17,7 +17,6 @@ sampleData:
     Fintech,Los Angeles,Series A-C only
     EdTech,Austin,Must have mobile app
     PropTech,New York,B2B only
-isPremium: false
 ---
 
 # Agent Configuration: The Sales Sniper
