@@ -71,123 +71,197 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
       </Head>
 
-      <div className="min-h-screen bg-primary-bg font-sans text-text-color fade-in selection:bg-accent selection:text-white">
+      <style jsx global>{`
+        body {
+            font-family: 'Space Mono', monospace;
+            background-color: #f0f0f0;
+            background-image: radial-gradient(#000 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .font-display {
+            font-family: 'Archivo Black', sans-serif;
+        }
+        .brutalist-shadow {
+            box-shadow: 6px 6px 0px 0px #000;
+        }
+        .brutalist-shadow-sm {
+            box-shadow: 3px 3px 0px 0px #000;
+        }
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 20s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .glitch-text {
+            position: relative;
+        }
+        .glitch-text::before, .glitch-text::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .glitch-text::before {
+            left: 2px;
+            text-shadow: -1px 0 #ff00c1;
+            clip: rect(44px, 450px, 56px, 0);
+            animation: glitch-anim 5s infinite linear alternate-reverse;
+        }
+        .glitch-text::after {
+            left: -2px;
+            text-shadow: -1px 0 #00fff9;
+            clip: rect(44px, 450px, 56px, 0);
+            animation: glitch-anim2 5s infinite linear alternate-reverse;
+        }
+        @keyframes glitch-anim {
+            0% { clip: rect(14px, 9999px, 12px, 0); }
+            5% { clip: rect(84px, 9999px, 4px, 0); }
+            10% { clip: rect(2px, 9999px, 86px, 0); }
+            15% { clip: rect(6px, 9999px, 20px, 0); }
+            20% { clip: rect(54px, 9999px, 27px, 0); }
+            100% { clip: rect(32px, 9999px, 66px, 0); }
+        }
+      `}</style>
+
+      <div className="min-h-screen font-mono text-black selection:bg-[#ff00ff] selection:text-white">
         <Navbar />
 
         {/* HERO SECTION */}
-        <div className="bg-primary-bg pt-32 pb-20 relative overflow-hidden">
-            {/* Background Gradient */}
-            <div className="absolute inset-0 bg-hero-gradient opacity-20 pointer-events-none"></div>
+        <div className="bg-white pt-32 pb-20 relative overflow-hidden border-b-4 border-black">
+            {/* Background Decorations */}
+            <div className="absolute top-10 right-10 w-32 h-32 bg-[#ff00ff] rounded-full mix-blend-multiply opacity-30 blur-xl pointer-events-none"></div>
+            <div className="absolute bottom-10 left-10 w-48 h-48 bg-[#ccff00] rounded-full mix-blend-multiply opacity-30 blur-xl pointer-events-none"></div>
 
             <div className="container mx-auto px-4 max-w-6xl relative z-10">
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
                     <div className="text-left">
+                        <div className="inline-block bg-black text-white px-3 py-1 text-xs font-bold uppercase tracking-[0.2em] mb-6 transform -rotate-2">
+                            Start Building Real Agents
+                        </div>
                         
-                        <h1 className="text-5xl md:text-7xl font-sans font-extrabold text-text-color mb-6 tracking-tight leading-[1.1]">
+                        <h1 className="font-display text-5xl md:text-7xl mb-8 uppercase leading-[0.9] break-words">
                             Stop Arguing <br />
-                            <span className="text-accent">with Chatbots.</span>
+                            <span className="bg-[#ccff00] px-2 text-black">with Chatbots.</span>
                         </h1>
                         
-                        <p className="text-lg text-text-secondary mb-10 leading-relaxed max-w-lg font-normal">
+                        <p className="text-xl font-bold mb-10 border-l-8 border-[#ff00ff] pl-6 py-2 bg-gray-50 leading-relaxed max-w-lg">
                             A library of 500+ agent-ready blueprints for Sales, Marketing, and Ops. Built for Gemini CLI, Claude Code, and all major LLM agents.
                         </p>
 
-                        <div className="inline-block bg-accent/10 border border-accent/20 rounded-full px-3 py-1 mb-4">
-                            <span className="text-xs font-bold text-accent tracking-wide uppercase flex items-center gap-2">
+                        <div className="inline-block bg-black text-[#ccff00] border-2 border-black px-3 py-1 mb-6 brutalist-shadow-sm transform rotate-1">
+                            <span className="text-xs font-bold tracking-wide uppercase flex items-center gap-2">
                                 <Zap className="w-3 h-3 fill-current" /> 500+ Files. 1 Year Access.
                             </span>
                         </div>
 
-                        <div className="flex flex-col sm:flex-row items-center gap-4 mb-8">
+                        <div className="flex flex-col sm:flex-row items-center gap-6 mb-8">
                             <a 
                                 href="https://checkout.dodopayments.com/buy/pdt_0NW6p0szmXPS6jXW05hIP"
-                                className="w-full sm:w-auto px-8 py-4 bg-accent hover:bg-accent-hover text-white font-bold rounded-lg transition-all shadow-[0_0_20px_rgba(236,72,153,0.3)] hover:shadow-[0_0_30px_rgba(236,72,153,0.5)] text-sm flex items-center justify-center gap-2 transform hover:-translate-y-1"
+                                className="w-full sm:w-auto px-8 py-4 bg-[#ff00ff] border-4 border-black font-display text-xl uppercase brutalist-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all flex items-center justify-center gap-2"
                             >
-                                Get 1 Year Access ($39) <ArrowRight className="w-4 h-4" />
+                                Get 1 Year Access ($39) <ArrowRight className="w-5 h-5" />
                             </a>
                             <a 
                                 href="#skills" 
-                                className="w-full sm:w-auto px-8 py-4 bg-white/5 border border-navy-dark hover:bg-white/10 text-text-color font-bold rounded-lg transition-all text-sm flex items-center justify-center gap-2"
+                                className="w-full sm:w-auto px-8 py-4 bg-white border-4 border-black font-display text-xl uppercase brutalist-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all flex items-center justify-center gap-2"
                             >
                                 See What's Inside
                             </a>
                         </div>
-                        <p className="text-xs font-mono text-text-secondary/60 mb-12 flex items-center gap-2">
-                          <span className="text-emerald-500 font-bold">✓</span>
+                        <p className="text-xs font-bold text-gray-600 mb-12 flex items-center gap-2 uppercase tracking-widest">
+                          <span className="text-emerald-600 font-black">✓</span>
                           1 Year Access. No recurring auto-charge.
                         </p>
 
                         {/* Playbooks Bar */}
-                        <div className="pt-8 border-t border-navy-dark">
-                            <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-text-secondary/40 mb-4">Popular Role-Based Plays:</p>
+                        <div className="pt-8 border-t-4 border-black">
+                            <p className="text-[10px] uppercase tracking-[0.2em] font-black text-black mb-4">Popular Role-Based Plays:</p>
                             <div className="flex flex-wrap gap-3">
-                                <a href="/playbook/vp-sales" className="flex items-center gap-2 text-xs font-bold text-text-color bg-secondary-bg border border-navy-dark px-3 py-1.5 rounded-full hover:border-accent hover:text-accent transition-all">
+                                <a href="/playbook/vp-sales" className="flex items-center gap-2 text-xs font-bold text-black bg-white border-2 border-black px-3 py-1.5 hover:bg-[#ccff00] transition-all brutalist-shadow-sm">
                                   <Target className="w-3 h-3" /> VP Sales
                                 </a>
-                                <a href="/playbook/seo-manager" className="flex items-center gap-2 text-xs font-bold text-text-color bg-secondary-bg border border-navy-dark px-3 py-1.5 rounded-full hover:border-accent hover:text-accent transition-all">
+                                <a href="/playbook/seo-manager" className="flex items-center gap-2 text-xs font-bold text-black bg-white border-2 border-black px-3 py-1.5 hover:bg-[#ccff00] transition-all brutalist-shadow-sm">
                                   <Search className="w-3 h-3" /> SEO Manager
                                 </a>
-                                <a href="/playbook/demand-gen" className="flex items-center gap-2 text-xs font-bold text-text-color bg-secondary-bg border border-navy-dark px-3 py-1.5 rounded-full hover:border-accent hover:text-accent transition-all">
+                                <a href="/playbook/demand-gen" className="flex items-center gap-2 text-xs font-bold text-black bg-white border-2 border-black px-3 py-1.5 hover:bg-[#ccff00] transition-all brutalist-shadow-sm">
                                   <Zap className="w-3 h-3" /> Demand Gen
                                 </a>
-                                <a href="/playbook/customer-success" className="flex items-center gap-2 text-xs font-bold text-text-color bg-secondary-bg border border-navy-dark px-3 py-1.5 rounded-full hover:border-accent hover:text-accent transition-all">
+                                <a href="/playbook/customer-success" className="flex items-center gap-2 text-xs font-bold text-black bg-white border-2 border-black px-3 py-1.5 hover:bg-[#ccff00] transition-all brutalist-shadow-sm">
                                   <Heart className="w-3 h-3" /> Customer Success
                                 </a>
                             </div>
                         </div>
                     </div>
 
-                    <div className="hidden lg:block relative group perspective-1000">
-                        <div className="absolute -inset-1 bg-gradient-to-r from-accent to-purple-600 rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
-                        <MockTerminal />
+                    <div className="hidden lg:block relative">
+                        <div className="absolute -top-6 -right-6 bg-[#ccff00] w-full h-full border-4 border-black z-0"></div>
+                        <div className="relative z-10 border-4 border-black brutalist-shadow">
+                          <MockTerminal />
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
+        {/* MARQUEE SECTION (NEW REBRAND ELEMENT) */}
+        <div className="bg-[#ccff00] border-b-4 border-black py-4 overflow-hidden">
+            <div className="marquee-container font-display text-2xl uppercase tracking-widest">
+                <div className="marquee-content">
+                    Real AI Examples // Agent Ready Workflows // 500+ Blueprints // Stop Chatting Start Building // Real AI Examples // Agent Ready Workflows // 500+ Blueprints // Stop Chatting Start Building //
+                </div>
+            </div>
+        </div>
+
         {/* NEW TO AGENTS SECTION */}
-        <div className="bg-secondary-bg py-16 border-b border-navy-dark">
+        <div className="bg-white py-16 border-b-4 border-black">
             <div className="container mx-auto px-4 max-w-6xl">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     <div>
-                        <div className="inline-block bg-accent/10 border border-accent/20 rounded-full px-3 py-1 mb-4">
-                            <span className="text-[10px] font-bold text-accent tracking-wide uppercase">
-                                New to Agents? Start Here.
-                            </span>
+                        <div className="inline-block bg-[#ff00ff] text-white px-3 py-1 mb-4 border-2 border-black font-bold uppercase text-xs transform -rotate-1">
+                            New to Agents? Start Here.
                         </div>
-                        <h2 className="text-3xl md:text-5xl font-black text-text-color mb-6 tracking-tight">
-                            A Chatbot <span className="text-accent">with Hands.</span>
+                        <h2 className="font-display text-4xl md:text-5xl text-black mb-6 uppercase">
+                            A Chatbot <span className="bg-black text-white px-3 transform rotate-2 inline-block">with Hands.</span>
                         </h2>
-                        <p className="text-lg text-text-secondary mb-8 leading-relaxed">
+                        <p className="text-xl font-bold mb-8 leading-relaxed">
                             ChatGPT can write an email, but it can't send it. <br/>
-                            <strong>Agentic Tools</strong> live on your computer. They can create files, run searches, and manage projects - just like a remote intern.
+                            <span className="bg-[#ccff00] px-1">Agentic Tools</span> live on your computer. They can create files, run searches, and manage projects - just like a remote intern.
                         </p>
                         
                         <div className="flex flex-col gap-4">
-                             <a href="/learn-ai" className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-primary-bg font-bold rounded-lg hover:bg-gray-100 transition-all">
-                                How to Install (5 Min Guide) <ArrowRight className="w-4 h-4" />
+                             <a href="/learn-ai" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-black text-[#ccff00] font-display text-xl uppercase brutalist-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all">
+                                How to Install (5 Min Guide) <ArrowRight className="w-6 h-6" />
                              </a>
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                         {/* Step 1 */}
-                        <div className="bg-primary-bg border border-navy-dark p-6 rounded-xl relative">
-                            <div className="absolute -top-3 -left-3 w-8 h-8 bg-accent text-white font-bold rounded-full flex items-center justify-center text-sm shadow-lg">1</div>
-                            <h3 className="font-bold text-text-color mb-2">Install Agent</h3>
-                            <p className="text-xs text-text-secondary">Get Claude Code or Gemini CLI running in your terminal.</p>
+                        <div className="bg-white border-4 border-black p-6 brutalist-shadow relative rotate-1">
+                            <div className="absolute -top-4 -left-4 w-10 h-10 bg-black text-[#ccff00] font-display text-xl border-2 border-black flex items-center justify-center shadow-lg">1</div>
+                            <h3 className="font-display text-xl text-black mb-2 uppercase leading-tight">Install Agent</h3>
+                            <p className="text-sm font-bold text-gray-600">Get Claude Code or Gemini CLI running in your terminal.</p>
                         </div>
                         {/* Step 2 */}
-                        <div className="bg-primary-bg border border-navy-dark p-6 rounded-xl relative">
-                            <div className="absolute -top-3 -left-3 w-8 h-8 bg-accent text-white font-bold rounded-full flex items-center justify-center text-sm shadow-lg">2</div>
-                            <h3 className="font-bold text-text-color mb-2">Paste Skill</h3>
-                            <p className="text-xs text-text-secondary">Copy a blueprint from my library (e.g., "Lead Finder").</p>
+                        <div className="bg-white border-4 border-black p-6 brutalist-shadow relative -rotate-1">
+                            <div className="absolute -top-4 -left-4 w-10 h-10 bg-black text-[#ff00ff] font-display text-xl border-2 border-black flex items-center justify-center shadow-lg">2</div>
+                            <h3 className="font-display text-xl text-black mb-2 uppercase leading-tight">Paste Skill</h3>
+                            <p className="text-sm font-bold text-gray-600">Copy a blueprint from my library (e.g., "Lead Finder").</p>
                         </div>
                         {/* Step 3 */}
-                        <div className="bg-primary-bg border border-navy-dark p-6 rounded-xl relative">
-                            <div className="absolute -top-3 -left-3 w-8 h-8 bg-accent text-white font-bold rounded-full flex items-center justify-center text-sm shadow-lg">3</div>
-                            <h3 className="font-bold text-text-color mb-2">Run It</h3>
-                            <p className="text-xs text-text-secondary">Watch it work. It creates files, searches web, and executes.</p>
+                        <div className="bg-white border-4 border-black p-6 brutalist-shadow relative rotate-1">
+                            <div className="absolute -top-4 -left-4 w-10 h-10 bg-black text-[#00ffff] font-display text-xl border-2 border-black flex items-center justify-center shadow-lg">3</div>
+                            <h3 className="font-display text-xl text-black mb-2 uppercase leading-tight">Run It</h3>
+                            <p className="text-sm font-bold text-gray-600">Watch it work. It creates files, searches web, and executes.</p>
                         </div>
                     </div>
                 </div>
@@ -197,32 +271,30 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
         <FeaturedIn />
 
         {/* COMPACT MASTER SKILLS BANNER */}
-        <div className="bg-primary-bg py-16 border-y border-navy-dark relative overflow-hidden">
-          <div className="absolute top-0 left-0 w-64 h-64 bg-accent/5 blur-[100px] rounded-full pointer-events-none"></div>
+        <div className="bg-white py-16 border-y-4 border-black relative overflow-hidden">
           <div className="container mx-auto px-4 max-w-6xl relative z-10">
-            <div className="bg-secondary-bg border border-navy-dark p-8 md:p-12 rounded-[40px] hover:border-accent/30 transition-all group relative overflow-hidden">
-              {/* Subtle Gradient Glow */}
-              <div className="absolute -top-24 -right-24 w-64 h-64 bg-accent/10 blur-[80px] rounded-full pointer-events-none group-hover:bg-accent/20 transition-all"></div>
+            <div className="bg-white border-4 border-black p-8 md:p-12 brutalist-shadow group relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-[#ccff00] opacity-10 font-display text-9xl leading-none select-none pointer-events-none">PHD</div>
               
               <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
                 <div className="flex-1 text-center lg:text-left">
-                  <div className="inline-flex items-center gap-2 px-3 py-1 bg-accent/10 border border-accent/20 rounded-full text-accent font-mono text-[10px] uppercase tracking-widest mb-6">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 bg-black text-white font-mono text-[10px] uppercase tracking-widest mb-6 transform -rotate-1">
                     <Brain className="w-3 h-3" /> Master Skill Library
                   </div>
-                  <h2 className="text-4xl md:text-5xl font-black text-white mb-6 tracking-tight uppercase italic leading-[0.9]">
-                    Give Your Agent a <span className="text-accent italic">PhD.</span>
+                  <h2 className="font-display text-4xl md:text-5xl text-black mb-6 tracking-tight uppercase glitch-text" data-text="GIVE YOUR AGENT A PHD.">
+                    Give Your Agent a <span className="text-[#ff00ff] italic">PhD.</span>
                   </h2>
-                  <p className="text-lg text-text-secondary max-w-2xl leading-relaxed">
+                  <p className="text-xl font-bold max-w-2xl leading-relaxed">
                     Stop feeding your agent 500 individual files. Use our <strong>Consolidated Master Skills</strong> to give them departmental intelligence in one single file.
                   </p>
-                  <div className="mt-4 text-xs font-mono text-text-secondary/40 italic">
+                  <div className="mt-4 text-sm font-mono text-gray-500 italic border-l-4 border-black pl-4 py-1">
                     "From the marketing standpoint, review our GTM plan."
                   </div>
                 </div>
                 
                 <div className="flex-shrink-0 w-full lg:w-auto">
-                  <Link href="/context" className="block w-full lg:w-auto bg-white text-black text-center px-12 py-5 rounded-2xl font-black text-lg uppercase tracking-tighter hover:bg-accent hover:text-white transition-all transform hover:-translate-y-1 shadow-2xl">
-                    Browse Master Skills <ArrowRight className="inline-block w-6 h-6 ml-2" />
+                  <Link href="/context" className="block w-full lg:w-auto bg-[#ccff00] text-black text-center px-12 py-6 border-4 border-black font-display text-xl uppercase brutalist-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all">
+                    Browse Master Skills <ArrowRight className="inline-block w-8 h-8 ml-2" />
                   </Link>
                 </div>
               </div>
@@ -231,37 +303,40 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
         </div>
 
         {/* COOKBOOK GRID */}
-        <div className="bg-primary-bg pb-24" id="skills">
+        <div className="bg-white pb-24" id="skills">
             <div className="container mx-auto px-4">
                <TerminalCookbook recipes={recipes} />
             </div>
         </div>
 
         {/* FAQ SECTION */}
-        <div className="bg-primary-bg py-16 border-t border-navy-dark">
+        <div className="bg-[#f0f0f0] py-20 border-t-4 border-black">
           <div className="max-w-4xl mx-auto px-4 sm:px-6">
-            <h2 className="text-2xl md:text-3xl font-bold text-text-color mb-10 text-center tracking-tight">
+            <h2 className="font-display text-4xl text-black mb-12 text-center uppercase decoration-wavy underline decoration-[#ff00ff]">
               Quick Questions
             </h2>
             
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-secondary-bg p-6 rounded-xl border border-navy-dark">
-                <h3 className="text-base font-bold mb-2 text-text-color uppercase italic">Where do I put them?</h3>
-                <p className="text-text-secondary text-sm leading-relaxed">
-                  Drop files into <code className="text-accent">.agents/skills/</code>. Most modern agents (Gemini, Mistral) now auto-detect this folder. Use <code className="text-accent">.claude/skills/</code> for Claude Code.
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="bg-white border-4 border-black p-6 brutalist-shadow relative">
+                <div className="absolute -left-3 -top-3 bg-black text-white px-2 py-1 font-mono text-xs">Q.01</div>
+                <h3 className="font-display text-xl mb-3 text-black uppercase leading-tight">Where do I put them?</h3>
+                <p className="font-bold text-gray-700 text-sm leading-relaxed">
+                  Drop files into <code className="bg-gray-100 px-1 border border-black text-black">.agents/skills/</code>. Most modern agents (Gemini, Mistral) now auto-detect this folder. Use <code className="bg-gray-100 px-1 border border-black text-black">.claude/skills/</code> for Claude Code.
                 </p>
               </div>
 
-              <div className="bg-secondary-bg p-6 rounded-xl border border-navy-dark">
-                <h3 className="text-base font-bold mb-2 text-text-color uppercase italic">What are Master Skills?</h3>
-                <p className="text-text-secondary text-sm leading-relaxed">
+              <div className="bg-white border-4 border-black p-6 brutalist-shadow relative">
+                <div className="absolute -left-3 -top-3 bg-black text-white px-2 py-1 font-mono text-xs">Q.02</div>
+                <h3 className="font-display text-xl mb-3 text-black uppercase leading-tight">What are Master Skills?</h3>
+                <p className="font-bold text-gray-700 text-sm leading-relaxed">
                   Instead of 500 small files, we've grouped them into 5 departmental "Master Skills." One file gives your agent the complete knowledge of an entire department.
                 </p>
               </div>
 
-              <div className="bg-secondary-bg p-6 rounded-xl border border-navy-dark">
-                <h3 className="text-base font-bold mb-2 text-text-color uppercase italic">Is it safe?</h3>
-                <p className="text-text-secondary text-sm leading-relaxed">
+              <div className="bg-white border-4 border-black p-6 brutalist-shadow relative">
+                <div className="absolute -left-3 -top-3 bg-black text-white px-2 py-1 font-mono text-xs">Q.03</div>
+                <h3 className="font-display text-xl mb-3 text-black uppercase leading-tight">Is it safe?</h3>
+                <p className="font-bold text-gray-700 text-sm leading-relaxed">
                   100% plain text (.md). No executables or hidden scripts. You can audit every line before giving it to your agent. No data leaves your machine.
                 </p>
               </div>
@@ -270,16 +345,16 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
         </div>
 
         {/* NEWSLETTER */}
-        <div className="bg-secondary-bg text-text-color py-24 border-t border-navy-dark" id="newsletter">
+        <div className="bg-[#ccff00] text-black py-24 border-t-4 border-black" id="newsletter">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-            <h2 className="text-4xl sm:text-5xl font-bold mb-6 tracking-tight">
+            <h2 className="font-display text-5xl md:text-6xl mb-6 uppercase">
               📬 Don't Miss Out!
             </h2>
-            <p className="text-xl mb-10 font-sans text-text-secondary max-w-2xl mx-auto">
+            <p className="text-xl mb-10 font-bold max-w-2xl mx-auto">
               Free blueprints starter pack and occasional updates on actionable AI tactics. If they suck, unsubscribe. I won't be offended.
             </p>
             
-            <div className="max-w-[500px] mx-auto">
+            <div className="max-w-[600px] mx-auto">
               <NewsletterForm />
             </div>
           </div>
