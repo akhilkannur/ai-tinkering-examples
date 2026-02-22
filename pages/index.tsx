@@ -147,7 +147,7 @@ export default function HomePage({ recipes }: HomePageProps) {
                         </h1>
                         
                         <p className="text-xl font-bold mb-10 border-l-8 border-[#ff00ff] pl-6 py-2 bg-gray-50 leading-relaxed max-w-lg">
-                            A library of 500+ agent-ready blueprints for Sales, Marketing, and Ops. Built for Gemini CLI, Claude Code, and all major LLM agents.
+                            Copy-paste workflows that turn AI agents into specialized employees. Drop a .md file in your project, and suddenly you have a Sales Ops analyst, CRO expert, or SEO strategist on demand.
                         </p>
 
                         <div className="inline-block bg-black text-[#ccff00] border-2 border-black px-3 py-1 mb-6 brutalist-shadow-sm transform rotate-1">
@@ -195,34 +195,76 @@ export default function HomePage({ recipes }: HomePageProps) {
 
         <FeaturedIn />
 
-        {/* COMPACT MASTER SKILLS BANNER */}
+        {/* THE 5-FILE SETUP */}
         <div className="bg-white py-16 border-y-4 border-black relative overflow-hidden">
           <div className="container mx-auto px-4 max-w-6xl relative z-10">
             <div className="bg-white border-4 border-black p-8 md:p-12 brutalist-shadow group relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-[#ccff00] opacity-10 font-display text-9xl leading-none select-none pointer-events-none">PHD</div>
-              
+              <div className="absolute top-0 right-0 w-32 h-32 bg-[#ccff00] opacity-10 font-display text-9xl leading-none select-none pointer-events-none">5 FILES</div>
+
               <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
                 <div className="flex-1 text-center lg:text-left">
                   <div className="inline-flex items-center gap-2 px-3 py-1 bg-black text-white font-mono text-[10px] uppercase tracking-widest mb-6 transform -rotate-1">
-                    <Brain className="w-3 h-3" /> Master Skill Library
+                    <Brain className="w-3 h-3" /> The 5-File Setup
                   </div>
-                  <h2 className="font-display text-4xl md:text-5xl text-black mb-6 tracking-tight uppercase glitch-text" data-text="GIVE YOUR AGENT A PHD.">
-                    Give Your Agent a <span className="text-[#ff00ff] italic">PhD.</span>
+                  <h2 className="font-display text-4xl md:text-5xl text-black mb-6 tracking-tight uppercase">
+                    One File Per Department.<br />
+                    <span className="text-[#ff00ff]">500+ Workflows Total.</span>
                   </h2>
                   <p className="text-xl font-bold max-w-2xl leading-relaxed">
-                    Stop feeding your agent 500 individual files. Use our <strong>Consolidated Master Skills</strong> to give them departmental intelligence in one single file.
+                    Instead of downloading blueprints one by one, get 5 consolidated files. Drop them in your .claude/skills/ folder. Your agent reads them automatically.
                   </p>
-                  <div className="mt-4 text-sm font-mono text-gray-500 italic border-l-4 border-black pl-4 py-1">
-                    "From the marketing standpoint, review our GTM plan."
+                  <div className="mt-6 grid grid-cols-2 gap-4 text-left">
+                    <div className="bg-gray-50 border-2 border-black p-4">
+                      <div className="text-xs font-black text-gray-500 uppercase tracking-widest mb-1">Sales Ops</div>
+                      <div className="text-2xl font-display text-black">254</div>
+                    </div>
+                    <div className="bg-gray-50 border-2 border-black p-4">
+                      <div className="text-xs font-black text-gray-500 uppercase tracking-widest mb-1">Marketing Ops</div>
+                      <div className="text-2xl font-display text-black">118</div>
+                    </div>
+                    <div className="bg-gray-50 border-2 border-black p-4">
+                      <div className="text-xs font-black text-gray-500 uppercase tracking-widest mb-1">SEO & Content</div>
+                      <div className="text-2xl font-display text-black">106</div>
+                    </div>
+                    <div className="bg-gray-50 border-2 border-black p-4">
+                      <div className="text-xs font-black text-gray-500 uppercase tracking-widest mb-1">RevOps</div>
+                      <div className="text-2xl font-display text-black">157</div>
+                    </div>
                   </div>
                 </div>
-                
+
                 <div className="flex-shrink-0 w-full lg:w-auto">
                   <Link href="/context" className="block w-full lg:w-auto bg-[#ccff00] text-black text-center px-12 py-6 border-4 border-black font-display text-xl uppercase brutalist-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all">
-                    Browse Master Skills <ArrowRight className="inline-block w-8 h-8 ml-2" />
+                    See the 5 Files <ArrowRight className="inline-block w-8 h-8 ml-2" />
                   </Link>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+
+        {/* FRAMING: Individual vs Master Skills */}
+        <div className="bg-white border-b-4 border-black py-12">
+          <div className="container mx-auto px-4 max-w-6xl text-center">
+            <h2 className="font-display text-3xl mb-4 uppercase">
+              Browse Individual Blueprints
+            </h2>
+            <p className="text-lg font-bold mb-8 max-w-2xl mx-auto">
+              See what's possible. Download what you need. Or skip the browsing and get all 500+ as 5 consolidated Master Skills.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                href="/context" 
+                className="bg-[#ff00ff] text-white px-8 py-4 border-4 border-black font-display text-lg uppercase brutalist-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all"
+              >
+                Get Master Skills ($39)
+              </Link>
+              <a 
+                href="#skills" 
+                className="bg-white text-black px-8 py-4 border-4 border-black font-display text-lg uppercase brutalist-shadow-sm hover:bg-[#ccff00] transition-all"
+              >
+                Browse All 500+ ↓
+              </a>
             </div>
           </div>
         </div>
@@ -252,9 +294,9 @@ export default function HomePage({ recipes }: HomePageProps) {
 
               <div className="bg-white border-4 border-black p-6 brutalist-shadow relative">
                 <div className="absolute -left-3 -top-3 bg-black text-white px-2 py-1 font-mono text-xs">Q.02</div>
-                <h3 className="font-display text-xl mb-3 text-black uppercase leading-tight">What are Master Skills?</h3>
+                <h3 className="font-display text-xl mb-3 text-black uppercase leading-tight">What are the 5 Files?</h3>
                 <p className="font-bold text-black text-sm leading-relaxed">
-                  Instead of 500 small files, we've grouped them into  department-level "Master Skills." One file gives your agent the complete knowledge of an entire department.
+                  Instead of 500 small files, we've grouped blueprints into 5 department-level files: Sales Ops, Marketing Ops, SEO & Content, RevOps, and Automation & Dev. One file gives your agent an entire department's playbooks.
                 </p>
               </div>
 
