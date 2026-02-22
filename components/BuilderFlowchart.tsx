@@ -306,21 +306,19 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
                         <div className="w-24 h-24 bg-black border-4 border-black flex items-center justify-center mx-auto mb-8 brutalist-shadow-sm shadow-[#ccff00] rotate-3">
                             <Lock className="w-12 h-12 text-[#ccff00] stroke-[3px]" />
                         </div>
-                        <h3 className="text-4xl font-display text-black mb-6 uppercase leading-none">Unlock All 700+ Specialized Blueprints</h3>
+                        <h3 className="text-4xl font-display text-black mb-6 uppercase leading-none">You've Browsed 20+ Blueprints</h3>
                         <p className="text-black font-bold uppercase text-sm mb-12 leading-relaxed font-mono">
-                            // You've seen the list. Now get the full library. <br/>
-                            // Instant access plus the Master Cookbook (JSON) to load all 700+ as context in one file.
+                            // Get all 500+ as 5 consolidated files. <br/>
+                            // One-time payment. Works with Claude Code, Gemini CLI, Cursor.
                         </p>
-                        <a 
-                          href="https://checkout.dodopayments.com/buy/pdt_0NW6p0szmXPS6jXW05hIP?session=sess_GCYotd6plh"
-                          target="_blank"
-                          rel="noopener noreferrer"
+                        <Link
+                          href="/context"
                           className="w-full bg-[#ff00ff] text-white border-4 border-black font-display text-2xl uppercase py-6 rounded-none brutalist-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all inline-flex items-center justify-center gap-4 group mb-10"
                         >
-                            Get Full Access <ArrowRight className="w-8 h-8 stroke-[4px] group-hover:translate-x-2 transition-transform" />
-                        </a>
+                            Get the 5 Files ($39) <ArrowRight className="w-8 h-8 stroke-[4px] group-hover:translate-x-2 transition-transform" />
+                        </Link>
                         <br/>
-                        <button 
+                        <button
                           onClick={() => setShowLicenseInput(true)}
                           className="text-xs font-black font-mono text-black uppercase underline decoration-punk-lime decoration-4 underline-offset-4 hover:text-[#ff00ff] transition-colors"
                         >
@@ -336,8 +334,8 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
                            </button>
                         </div>
                         <div className="mb-8">
-                           <input 
-                             type="text" 
+                           <input
+                             type="text"
                              value={licenseKeyInput}
                              onChange={(e) => setLicenseKeyInput(e.target.value)}
                              placeholder="TK-XXXX-XXXX-XXXX"
@@ -345,7 +343,7 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
                            />
                            {unlockError && <p className="text-red-600 font-black font-mono text-xs mt-4 uppercase animate-pulse tracking-tighter">⚠️ {unlockError}</p>}
                         </div>
-                        <button 
+                        <button
                           type="submit"
                           className="w-full bg-black text-[#ccff00] border-4 border-black font-display text-2xl uppercase py-6 brutalist-shadow-sm hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all flex items-center justify-center gap-4"
                         >

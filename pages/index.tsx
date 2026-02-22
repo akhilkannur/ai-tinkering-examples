@@ -158,9 +158,9 @@ export default function HomePage({ recipes }: HomePageProps) {
 
                         <div className="flex flex-col gap-8 mb-12">
                             <div className="flex flex-col sm:flex-row items-center gap-6">
-                                <a 
+                                <a
                                     href="https://checkout.dodopayments.com/buy/pdt_0NW6p0szmXPS6jXW05hIP"
-                                    className="w-full sm:w-auto px-10 py-5 bg-[#ff00ff] border-4 border-black font-display text-xl uppercase brutalist-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all flex items-center justify-center gap-3 text-white"
+                                    className="w-full sm:w-auto px-8 py-3 bg-[#ff00ff] border-4 border-black font-display text-lg uppercase brutalist-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all flex items-center justify-center gap-3 text-white"
                                 >
                                     Get 1 Year Access ($39) <ArrowRight className="w-6 h-6 stroke-[3px]" />
                                 </a>
@@ -250,21 +250,15 @@ export default function HomePage({ recipes }: HomePageProps) {
               Browse Individual Blueprints
             </h2>
             <p className="text-lg font-bold mb-8 max-w-2xl mx-auto">
-              See what's possible. Download what you need. Or skip the browsing and get all 500+ as 5 consolidated Master Skills.
+              Browse 500+ individual blueprints below. Each one is a copy-paste workflow. When you're ready, get all 500+ as 5 consolidated files for $39.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/context" 
-                className="bg-[#ff00ff] text-white px-8 py-4 border-4 border-black font-display text-lg uppercase brutalist-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all"
+                className="bg-black text-white px-8 py-4 border-4 border-black font-display text-lg uppercase brutalist-shadow-sm hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all"
               >
-                Get Master Skills ($39)
+                See the 5 Files →
               </Link>
-              <a 
-                href="#skills" 
-                className="bg-white text-black px-8 py-4 border-4 border-black font-display text-lg uppercase brutalist-shadow-sm hover:bg-[#ccff00] transition-all"
-              >
-                Browse All 500+ ↓
-              </a>
             </div>
           </div>
         </div>
