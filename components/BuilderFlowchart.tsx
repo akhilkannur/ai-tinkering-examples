@@ -300,54 +300,50 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
         {showPaywallOverlay && (
             <div className="relative mt-12 mb-32 text-center">
                 <div className="absolute inset-0 flex items-center justify-center -top-32 bg-gradient-to-t from-primary-bg via-primary-bg/95 to-transparent z-10 pointer-events-none h-[400px]"></div>
-                <div className="relative z-20 bg-white border-4 border-black p-12 brutalist-shadow max-w-2xl mx-auto transform hover:scale-[1.01] transition-all">
+                <div className="relative z-20 bg-white border-4 border-black p-8 brutalist-shadow max-w-lg mx-auto">
                    {!showLicenseInput ? (
                       <>
-                        <div className="w-24 h-24 bg-black border-4 border-black flex items-center justify-center mx-auto mb-8 brutalist-shadow-sm shadow-[#ccff00] rotate-3">
-                            <Lock className="w-12 h-12 text-[#ccff00] stroke-[3px]" />
-                        </div>
-                        <h3 className="text-4xl font-display text-black mb-6 uppercase leading-none">You've Browsed 20+ Blueprints</h3>
-                        <p className="text-black font-bold uppercase text-sm mb-12 leading-relaxed font-mono">
-                            // Get all 500+ as 5 consolidated files. <br/>
+                        <h3 className="text-2xl font-display text-black mb-4 uppercase leading-none">You've Browsed 20+ Blueprints</h3>
+                        <p className="text-black font-bold uppercase text-xs mb-6 leading-relaxed font-mono">
+                            // Get all 500+ as 5 consolidated files.<br/>
                             // One-time payment. Works with Claude Code, Gemini CLI, Cursor.
                         </p>
                         <Link
-                          href="/context"
-                          className="w-full bg-[#ff00ff] text-white border-4 border-black font-display text-2xl uppercase py-6 rounded-none brutalist-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all inline-flex items-center justify-center gap-4 group mb-10"
+                          href="https://checkout.dodopayments.com/buy/pdt_0NW6p0szmXPS6jXW05hIP"
+                          className="w-full bg-[#ff00ff] text-white border-4 border-black font-display text-lg uppercase py-4 brutalist-shadow hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all inline-flex items-center justify-center gap-2 mb-4"
                         >
-                            Get the 5 Files ($39) <ArrowRight className="w-8 h-8 stroke-[4px] group-hover:translate-x-2 transition-transform" />
+                            Get the 5 Files ($39) <ArrowRight className="w-5 h-5 stroke-[3px]" />
                         </Link>
-                        <br/>
                         <button
                           onClick={() => setShowLicenseInput(true)}
-                          className="text-xs font-black font-mono text-black uppercase underline decoration-punk-lime decoration-4 underline-offset-4 hover:text-[#ff00ff] transition-colors"
+                          className="text-xs font-black font-mono text-black uppercase underline decoration-2 underline-offset-4 hover:text-[#ff00ff] transition-colors"
                         >
                           I have a license key
                         </button>
                       </>
                    ) : (
                       <form onSubmit={handleLicenseSubmit} className="animate-fade-in max-w-sm mx-auto">
-                        <div className="flex items-center justify-between mb-8 border-b-4 border-black pb-4">
-                           <h3 className="text-2xl font-display uppercase tracking-tight">Enter License</h3>
-                           <button type="button" onClick={() => setShowLicenseInput(false)} className="p-2 hover:bg-gray-100 border-2 border-transparent hover:border-black transition-all">
-                             <X className="w-8 h-8 text-black stroke-[3px]" />
+                        <div className="flex items-center justify-between mb-6 border-b-2 border-black pb-3">
+                           <h3 className="text-lg font-display uppercase tracking-tight">Enter License</h3>
+                           <button type="button" onClick={() => setShowLicenseInput(false)} className="p-1 hover:bg-gray-100 transition-all">
+                             <X className="w-6 h-6 text-black stroke-[3px]" />
                            </button>
                         </div>
-                        <div className="mb-8">
+                        <div className="mb-6">
                            <input
                              type="text"
                              value={licenseKeyInput}
                              onChange={(e) => setLicenseKeyInput(e.target.value)}
                              placeholder="TK-XXXX-XXXX-XXXX"
-                             className="w-full bg-gray-50 border-4 border-black text-black font-display text-xl px-6 py-5 focus:outline-none focus:bg-[#ccff00] text-center uppercase tracking-widest placeholder-gray-300"
+                             className="w-full bg-gray-50 border-2 border-black text-black font-display text-lg px-4 py-3 focus:outline-none focus:bg-[#ccff00] text-center uppercase tracking-widest placeholder-gray-300"
                            />
-                           {unlockError && <p className="text-red-600 font-black font-mono text-xs mt-4 uppercase animate-pulse tracking-tighter">⚠️ {unlockError}</p>}
+                           {unlockError && <p className="text-red-600 font-black font-mono text-xs mt-3 uppercase animate-pulse tracking-tighter">⚠️ {unlockError}</p>}
                         </div>
                         <button
                           type="submit"
-                          className="w-full bg-black text-[#ccff00] border-4 border-black font-display text-2xl uppercase py-6 brutalist-shadow-sm hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all flex items-center justify-center gap-4"
+                          className="w-full bg-black text-[#ccff00] border-2 border-black font-display text-lg uppercase py-3 brutalist-shadow-sm hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all flex items-center justify-center gap-2"
                         >
-                          <Key className="w-8 h-8 stroke-[3px]" /> Activate
+                          <Key className="w-5 h-5 stroke-[3px]" /> Activate
                         </button>
                       </form>
                    )}

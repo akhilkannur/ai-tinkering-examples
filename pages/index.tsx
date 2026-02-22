@@ -243,26 +243,6 @@ export default function HomePage({ recipes }: HomePageProps) {
           </div>
         </div>
 
-        {/* FRAMING: Individual vs Master Skills */}
-        <div className="bg-white border-b-4 border-black py-12">
-          <div className="container mx-auto px-4 max-w-6xl text-center">
-            <h2 className="font-display text-3xl mb-4 uppercase">
-              Browse Individual Blueprints
-            </h2>
-            <p className="text-lg font-bold mb-8 max-w-2xl mx-auto">
-              Browse 500+ individual blueprints below. Each one is a copy-paste workflow. When you're ready, get all 500+ as 5 consolidated files for $39.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/context" 
-                className="bg-black text-white px-8 py-4 border-4 border-black font-display text-lg uppercase brutalist-shadow-sm hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all"
-              >
-                See the 5 Files →
-              </Link>
-            </div>
-          </div>
-        </div>
-
         {/* COOKBOOK GRID */}
         <div className="bg-white pb-24" id="skills">
             <div className="container mx-auto px-4">
