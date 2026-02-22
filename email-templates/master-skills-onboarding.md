@@ -34,7 +34,7 @@ Your **5 Master Skills** are ready. These 5 files contain 500+ blueprints consol
 
 ### Step 1: Download
 
-[**Download Your Master Skills (ZIP)**](https://realaiexamples.com/api/download-skills?order=ORDER_ID)
+[**Download Your Master Skills (ZIP)**](https://realaiexamples.com/api/download-skills?order={{checkout.order_id}})
 
 *(Link is unique to your order)*
 

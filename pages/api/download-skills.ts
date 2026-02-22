@@ -84,50 +84,69 @@ export default async function handler(
 }
 
 /**
- * Validate order or license token
+ * Validate order with Dodo Payments
  * 
- * In production, connect to your payment processor (Dopple, Gumroad, etc.)
- * or check against a database of valid orders
+ * Uses Dodo API to verify the order exists and is paid
  */
 async function validateAccess(order?: string, token?: string): Promise<boolean> {
   // If neither provided, invalid
-  if (!order && !token) {
-    return false;
-  }
-
   const accessValue = order || token;
 
-  if (!accessValue) {
+  if (!accessValue || accessValue.length < 5) {
     return false;
   }
 
-  // TODO: Connect to your payment processor API
-  // For now, accept any non-empty value (REMOVE IN PRODUCTION)
+  // Check if Dodo API key is configured
+  const dodoApiKey = process.env.DODO_PAYMENTS_API_KEY;
   
-  // Example integration (pseudo-code):
-  /*
+  if (!dodoApiKey) {
+    // No API key - allow all for testing
+    // REMOVE THIS IN PRODUCTION
+    console.warn('DODO_PAYMENTS_API_KEY not set. Allowing all downloads for testing.');
+    return true;
+  }
+
   try {
-    // Check Dopple/Gumroad/Stripe for valid order
-    const orderData = await fetch(`https://api.dopple.com/orders/${accessValue}`, {
-      headers: { 'Authorization': `Bearer ${process.env.DOPPLE_API_KEY}` }
-    });
-    
-    if (!orderData.ok) return false;
-    
-    const orderInfo = await orderData.json();
-    
+    // Validate with Dodo Payments API
+    const response = await fetch(
+      `https://api.dopayments.com/orders/${accessValue}`,
+      {
+        method: 'GET',
+        headers: {
+          'Authorization': `Bearer ${dodoApiKey}`,
+          'Content-Type': 'application/json',
+        },
+      }
+    );
+
+    if (!response.ok) {
+      console.error('Dodo API validation failed:', response.status);
+      return false;
+    }
+
+    const orderData = await response.json();
+
     // Check if order is for the right product and is paid
-    return orderInfo.product_id === 'pdt_0NW6p0szmXPS6jXW05hIP' 
-      && orderInfo.status === 'paid';
+    const isPaid = orderData.status === 'paid' || orderData.status === 'completed';
+    const isCorrectProduct = orderData.product_id === 'H8Dq5SsZez55ciRh.oQxh6KivD4IKCwg0ZNa00En53kQDKIPfxuyRu3izJ5p_qwoT';
+
+    if (!isPaid) {
+      console.warn('Order not paid:', accessValue, orderData.status);
+      return false;
+    }
+
+    if (!isCorrectProduct) {
+      console.warn('Wrong product:', accessValue, orderData.product_id);
+      return false;
+    }
+
+    console.log('Order validated successfully:', accessValue);
+    return true;
+
   } catch (error) {
     console.error('Order validation error:', error);
     return false;
   }
-  */
-
-  // TEMPORARY: Accept any value (REMOVE BEFORE LAUNCH)
-  // This lets you test the download flow now
-  return accessValue.length > 5;
 }
 
 // Disable body parsing (we're streaming a file)
