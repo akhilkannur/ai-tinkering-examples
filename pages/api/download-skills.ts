@@ -64,8 +64,10 @@ export default async function handler(
     res.status(500).json({ error: 'Failed to create download' });
   });
 
-  // Set response headers
-  res.attachment('real-ai-examples-master-skills.zip');
+  // Set response headers for file download
+  res.setHeader('Content-Type', 'application/zip');
+  res.setHeader('Content-Disposition', 'attachment; filename=real-ai-examples-master-skills.zip');
+  res.setHeader('Cache-Control', 'no-cache');
 
   // Pipe archive to response
   archive.pipe(res);
@@ -101,8 +103,13 @@ async function validateAccess(order?: string, token?: string): Promise<boolean> 
   
   if (!dodoApiKey) {
     // No API key - allow all for testing
-    // REMOVE THIS IN PRODUCTION
     console.warn('DODO_PAYMENTS_API_KEY not set. Allowing all downloads for testing.');
+    return true;
+  }
+
+  // Development mode: Allow test orders starting with "test_"
+  if (process.env.NODE_ENV === 'development' && accessValue.startsWith('test_')) {
+    console.log('Dev mode: Allowing test order:', accessValue);
     return true;
   }
 
