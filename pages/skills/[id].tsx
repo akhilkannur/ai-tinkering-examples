@@ -297,41 +297,43 @@ Downloaded from RealAIExamples.com`;
                   </div>
 
                   {!isLocked && (
-                    <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-                        {/* Download Button */}
-                        <a
-                            href={`/downloads/skills/${recipe.id}-claude.md`}
-                            download
-                            className="flex-1 sm:flex-none flex items-center justify-center gap-3 bg-black text-white px-6 py-3 border-2 border-black font-display text-sm uppercase transition-all brutalist-shadow-sm hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none"
-                        >
-                            <FileText className="w-5 h-5 stroke-[3px]" /> Download Blueprint (.md)
-                        </a>
+                    <>
+                      <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+                          {/* Download Button */}
+                          <a
+                              href={`/downloads/skills/${recipe.id}-claude.md`}
+                              download
+                              className="flex-1 sm:flex-none flex items-center justify-center gap-3 bg-black text-white px-6 py-3 border-2 border-black font-display text-sm uppercase transition-all brutalist-shadow-sm hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none"
+                          >
+                              <FileText className="w-5 h-5 stroke-[3px]" /> Download Blueprint (.md)
+                          </a>
 
-                        {/* Standard Actions */}
-                        <div className="flex items-center gap-3">
-                            <button
-                                onClick={handleDownloadZip}
-                                className="bg-[#ccff00] text-black px-4 py-2 border-2 border-black font-display text-[10px] uppercase transition-all brutalist-shadow-sm hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none"
-                            >
-                                <Package className="w-4 h-4 inline mr-2 stroke-[3px]" />
-                                Bundle
-                            </button>
-                            <button
-                                onClick={handleCopy}
-                                className={`px-4 py-2 border-2 border-black font-display text-[10px] uppercase transition-all brutalist-shadow-sm hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none ${
-                                    copied
-                                    ? 'bg-emerald-400 text-black'
-                                    : 'bg-white text-black hover:bg-[#ff00ff] hover:text-white'
-                                }`}
-                            >
-                                {copied ? <Check className="w-4 h-4 stroke-[3px]" /> : <Copy className="w-4 h-4 stroke-[3px]" />}
-                                {copied ? 'Copied' : 'Copy'}
-                            </button>
-                        </div>
-                    </div>
-                    <p className="text-[9px] font-mono text-gray-500 uppercase tracking-widest mt-2">
-                        Works with Claude Code, Gemini CLI, Cursor, and all major agent tools
-                    </p>
+                          {/* Standard Actions */}
+                          <div className="flex items-center gap-3">
+                              <button
+                                  onClick={handleDownloadZip}
+                                  className="bg-[#ccff00] text-black px-4 py-2 border-2 border-black font-display text-[10px] uppercase transition-all brutalist-shadow-sm hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none"
+                              >
+                                  <Package className="w-4 h-4 inline mr-2 stroke-[3px]" />
+                                  Bundle
+                              </button>
+                              <button
+                                  onClick={handleCopy}
+                                  className={`px-4 py-2 border-2 border-black font-display text-[10px] uppercase transition-all brutalist-shadow-sm hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none ${
+                                      copied
+                                      ? 'bg-emerald-400 text-black'
+                                      : 'bg-white text-black hover:bg-[#ff00ff] hover:text-white'
+                                  }`}
+                              >
+                                  {copied ? <Check className="w-4 h-4 stroke-[3px]" /> : <Copy className="w-4 h-4 stroke-[3px]" />}
+                                  {copied ? 'Copied' : 'Copy'}
+                              </button>
+                          </div>
+                      </div>
+                      <p className="text-[9px] font-mono text-gray-500 uppercase tracking-widest mt-2">
+                          Works with Claude Code, Gemini CLI, Cursor, and all major agent tools
+                      </p>
+                    </>
                   )}
               </div>
 
