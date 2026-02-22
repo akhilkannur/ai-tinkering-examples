@@ -136,6 +136,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       category: recipes[0].category,
       recipes
     },
-    revalidate: 300
+    revalidate: 86400
   };
 };

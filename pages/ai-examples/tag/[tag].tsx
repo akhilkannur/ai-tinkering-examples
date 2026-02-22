@@ -212,7 +212,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         tag: tagSlug,
         tagDisplayName,
       },
-      revalidate: 300,
+      revalidate: 86400,
     }
   } catch (error) {
     console.error('Failed to fetch tag examples:', error)

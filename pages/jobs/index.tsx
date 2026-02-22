@@ -83,13 +83,13 @@ export const getStaticProps: GetStaticProps<JobsPageProps> = async () => {
     const jobs = await fetchAllJobs()
     return {
       props: { jobs },
-      revalidate: 300, // Revalidate every 5 minutes
+      revalidate: 86400, // Revalidate every 24 hours
     }
   } catch (error) {
     console.error('Failed to fetch jobs:', error)
     return {
       props: { jobs: [] },
-      revalidate: 60, // Retry more frequently on error
+      revalidate: 3600, // Retry less frequently on error
     }
   }
 }

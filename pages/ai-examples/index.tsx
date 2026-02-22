@@ -330,7 +330,7 @@ export const getStaticProps: GetStaticProps<ExamplesPageProps> = async () => {
         categories: uniqueCategories,
         itemListSchema,
       },
-      revalidate: 300 // Revalidate every 5 minutes
+      revalidate: 86400 // Revalidate every 24 hours
     }
   } catch (error) {
     console.error('Failed to fetch data for examples page:', error)
@@ -341,7 +341,7 @@ export const getStaticProps: GetStaticProps<ExamplesPageProps> = async () => {
         categories: [...new Set(localSocialExamples.map(e => e.category).filter(Boolean) as string[])],
         itemListSchema: generateItemListSchema(localSocialExamples, SITE_URL),
       },
-      revalidate: 60 // Retry more frequently on error
+      revalidate: 3600 // Retry less frequently on error
     }
   }
 }

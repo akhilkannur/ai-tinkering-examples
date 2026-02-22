@@ -3,18 +3,13 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Navbar from '../components/Navbar'
 import dynamic from 'next/dynamic'
-import { Command, ArrowRight, Zap, Target, Search, Heart, Brain, Cpu, FileText } from 'lucide-react'
+import { ArrowRight, Zap, Brain } from 'lucide-react'
 import { getAllRecipes } from '../lib/recipes'
 import { Recipe } from '../lib/cookbook-data'
-import { fetchFeaturedJobs, fetchFeaturedTools, fetchSiteSettings, JobRecord, ToolRecord } from '../lib/airtable'
-import HorizontalStrip from '../components/HorizontalStrip'
-import JobCard from '../components/JobCard'
-import AIToolCard from '../components/AIToolCard'
 import NewsletterForm from '../components/NewsletterForm'
+import NewsletterPopup from '../components/NewsletterPopup'
 import FeaturedIn from '../components/FeaturedIn'
 import HeroForm from '../components/HeroForm'
-
-import StrategicKits from '../components/StrategicKits'
 import { generateItemListSchema } from '../lib/seo-utils'
 
 // Lazy load heavy components
@@ -24,14 +19,11 @@ const TerminalCookbook = dynamic(() => import('../components/BuilderFlowchart'),
 
 const MockTerminal = dynamic(() => import('../components/MockTerminal'), { ssr: false })
 
-interface HybridHomePageProps {
+interface HomePageProps {
   recipes: Recipe[]
-  featuredJobs: JobRecord[]
-  featuredTools: ToolRecord[]
-  siteSettings: Record<string, boolean>;
 }
 
-export default function HybridHomePage({ recipes, featuredJobs, featuredTools, siteSettings }: HybridHomePageProps) {
+export default function HomePage({ recipes }: HomePageProps) {
   const homepageTitle = "500+ Real AI Examples: Agent-Ready Workflows & Blueprints";
   const homepageDescription = "Stop chatting and start building. A library of 500+ reliable, copy-paste Real AI Examples and blueprints for sales, marketing, and founders. Works with Gemini CLI and Claude Code.";
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com';
@@ -254,7 +246,7 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
                 <div className="absolute -left-3 -top-3 bg-black text-white px-2 py-1 font-mono text-xs">Q.01</div>
                 <h3 className="font-display text-xl mb-3 text-black uppercase leading-tight">Where do I put them?</h3>
                 <p className="font-bold text-black text-sm leading-relaxed">
-                  Drop files into <code className="bg-gray-100 px-1 border border-black text-black">.agents/skills/</code>. Most modern agents (Gemini, Mistral) now auto-detect this folder. Use <code className="bg-gray-100 px-1 border border-black text-black">.claude/skills/</code> for Claude Code.
+                  Download the blueprint (.md) and drop it into <code className="bg-gray-100 px-1 border border-black text-black">.agents/skills/</code> or <code className="bg-gray-100 px-1 border border-black text-black">.claude/skills/</code>. The same file works with Claude Code, Gemini CLI, Cursor, and all major agent tools.
                 </p>
               </div>
 
@@ -294,41 +286,34 @@ export default function HybridHomePage({ recipes, featuredJobs, featuredTools, s
             <p className="text-xl mb-10 font-bold max-w-2xl mx-auto">
               Free blueprints starter pack and occasional updates on actionable AI tactics. If they suck, unsubscribe. I won't be offended.
             </p>
-            
+
             <div className="max-w-[600px] mx-auto">
               <NewsletterForm />
             </div>
           </div>
         </div>
 
+        {/* EXIT INTENT POPUP */}
+        <NewsletterPopup delay={30} />
+
       </div>
     </>
   )
 }
 
-export const getStaticProps: GetStaticProps<HybridHomePageProps> = async () => {
+export const getStaticProps: GetStaticProps<HomePageProps> = async () => {
   try {
-    const [recipes, featuredJobs, featuredTools, siteSettingsData] = await Promise.all([
-      Promise.resolve(getAllRecipes()),
-      fetchFeaturedJobs(),
-      fetchFeaturedTools(),
-      fetchSiteSettings(),
-    ]);
-
-    const siteSettings: Record<string, boolean> = {};
-    siteSettingsData.forEach(setting => {
-      siteSettings[setting.settingName] = setting.enabled;
-    });
+    const recipes = await getAllRecipes();
 
     return {
-      props: { recipes, featuredJobs, featuredTools, siteSettings },
-      revalidate: 300,
+      props: { recipes },
+      revalidate: 86400,
     }
   } catch (error) {
-    console.error('Failed to fetch data for homepage:', error)
+    console.error('Failed to fetch recipes for homepage:', error)
     return {
-      props: { recipes: [], featuredJobs: [], featuredTools: [], siteSettings: {} },
-      revalidate: 60,
+      props: { recipes: [] },
+      revalidate: 3600,
     }
   }
 }

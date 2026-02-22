@@ -142,7 +142,7 @@ export const getStaticProps: GetStaticProps<CategoryPageProps> = async ({ params
         examples,
         category: categoryName
       },
-      revalidate: 300,
+      revalidate: 86400,
     }
   } catch (error) {
     console.error('Error fetching examples:', error)

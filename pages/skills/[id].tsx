@@ -2,7 +2,7 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { ArrowLeft, Terminal, Copy, Check, Download, FileText, Cpu, BookOpen, Lock, Crown, Key, ArrowRight, X, Package, ShieldCheck, Zap, MousePointer2, Clock } from 'lucide-react';
+import { ArrowLeft, Terminal, Copy, Check, Download, FileText, Cpu, BookOpen, Lock, Crown, Key, ArrowRight, X, Package, ShieldCheck, Clock } from 'lucide-react';
 import Navbar from '../../components/Navbar';
 import { getAllRecipes, getRelatedRecipes } from '../../lib/recipes';
 import { Recipe, categoryIcons } from '../../lib/cookbook-data';
@@ -298,29 +298,20 @@ Downloaded from RealAIExamples.com`;
 
                   {!isLocked && (
                     <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-                        {/* Agent Skills Group */}
-                        <div className="flex items-center bg-gray-100 border-2 border-black p-1 brutalist-shadow-sm">
-                            <span className="text-[9px] font-black uppercase tracking-widest px-3 hidden xl:block">Run:</span>
-                            <div className="flex gap-1">
-                                <a href={`/downloads/skills/${recipe.id}.skill`} download title="Download for Gemini" className="p-2 text-black hover:bg-[#ccff00] transition-all flex items-center gap-2 border border-transparent hover:border-black font-black text-[10px] uppercase">
-                                    <Zap className="w-4 h-4 fill-current" /> Gemini
-                                </a>
-                                <div className="w-1 bg-black my-1"></div>
-                                <a href={`/downloads/skills/${recipe.id}-claude.md`} download title="Download for Claude" className="p-2 text-black hover:bg-[#ff00ff] hover:text-white transition-all flex items-center gap-2 border border-transparent hover:border-black font-black text-[10px] uppercase">
-                                    <Terminal className="w-4 h-4 stroke-[3px]" /> Claude
-                                </a>
-                                <div className="w-1 bg-black my-1"></div>
-                                <a href={`/downloads/skills/${recipe.id}.cursorrules`} download title="Download for Cursor" className="p-2 text-black hover:bg-[#00ffff] transition-all flex items-center gap-2 border border-transparent hover:border-black font-black text-[10px] uppercase">
-                                    <MousePointer2 className="w-4 h-4 stroke-[3px]" /> Cursor
-                                </a>
-                            </div>
-                        </div>
+                        {/* Download Button */}
+                        <a
+                            href={`/downloads/skills/${recipe.id}-claude.md`}
+                            download
+                            className="flex-1 sm:flex-none flex items-center justify-center gap-3 bg-black text-white px-6 py-3 border-2 border-black font-display text-sm uppercase transition-all brutalist-shadow-sm hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none"
+                        >
+                            <FileText className="w-5 h-5 stroke-[3px]" /> Download Blueprint (.md)
+                        </a>
 
-                        {/* Standard Files Group */}
+                        {/* Standard Actions */}
                         <div className="flex items-center gap-3">
                             <button
                                 onClick={handleDownloadZip}
-                                className="bg-black text-[#ccff00] px-4 py-2 border-2 border-black font-display text-[10px] uppercase transition-all brutalist-shadow-sm hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none"
+                                className="bg-[#ccff00] text-black px-4 py-2 border-2 border-black font-display text-[10px] uppercase transition-all brutalist-shadow-sm hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none"
                             >
                                 <Package className="w-4 h-4 inline mr-2 stroke-[3px]" />
                                 Bundle
@@ -328,8 +319,8 @@ Downloaded from RealAIExamples.com`;
                             <button
                                 onClick={handleCopy}
                                 className={`px-4 py-2 border-2 border-black font-display text-[10px] uppercase transition-all brutalist-shadow-sm hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none ${
-                                    copied 
-                                    ? 'bg-emerald-400 text-black' 
+                                    copied
+                                    ? 'bg-emerald-400 text-black'
                                     : 'bg-white text-black hover:bg-[#ff00ff] hover:text-white'
                                 }`}
                             >
@@ -338,6 +329,9 @@ Downloaded from RealAIExamples.com`;
                             </button>
                         </div>
                     </div>
+                    <p className="text-[9px] font-mono text-gray-500 uppercase tracking-widest mt-2">
+                        Works with Claude Code, Gemini CLI, Cursor, and all major agent tools
+                    </p>
                   )}
               </div>
 

@@ -1,8 +1,8 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { 
-  Terminal, Copy, Check, FileText, Search, X, Download, Lock, Crown, ArrowRight, ExternalLink, Key, Zap, MousePointer2, Cpu
+import {
+  Copy, Check, FileText, Search, X, Download, Lock, Crown, ArrowRight, ExternalLink, Key, Cpu
 } from 'lucide-react';
 import { categoryIcons, Category, Recipe } from '../lib/cookbook-data';
 
@@ -186,15 +186,10 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
           // {recipe.tagline}
         </p>
         
-        <div className="mt-auto pt-4 border-t-2 border-black/10 flex items-center justify-between text-[10px] font-black font-mono uppercase tracking-widest">
-           <span className={`px-2 py-1 border-2 border-black ${
-              recipe.difficulty === 'Beginner' ? 'text-black bg-emerald-400' : 
-              recipe.difficulty === 'Intermediate' ? 'text-black bg-amber-400' : 
-              'text-white bg-red-600'
-           }`}>
+        <div className="mt-auto pt-4 border-t-2 border-black/10 text-[10px] font-black font-mono uppercase tracking-widest">
+           <span className={`px-2 py-1 border-2 border-black bg-gray-100 text-black`}>
              {recipe.difficulty}
            </span>
-           <span className="text-black">{recipe.time}</span>
         </div>
       </div>
     );
@@ -255,11 +250,11 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
 
       <div className="relative">
         
-        {/* Daily Drivers / Editor's Picks */}
+        {/* Editor's Picks / Go-To Skills */}
         <div className="mb-16">
           <div className="flex items-center gap-4 mb-8">
             <div className="bg-black text-[#ccff00] border-2 border-black px-4 py-1 font-display text-lg uppercase transform -rotate-1 brutalist-shadow-sm">
-              My Daily Drivers
+              My Go-To Skills
             </div>
             <div className="flex-grow h-1 bg-black/10"></div>
           </div>
@@ -428,29 +423,18 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
                                   <span className="text-[10px] font-black font-mono text-white/40 uppercase tracking-[0.2em]">v2.0 Optimized</span>
                               </div>
                               
-                              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                                  <a 
-                                      href={`/downloads/skills/${selectedRecipe.id}.skill`}
-                                      download
-                                      className="flex items-center justify-center gap-3 bg-white text-black border-2 border-black py-3 font-display text-xs uppercase hover:bg-[#ccff00] transition-all brutalist-shadow-sm"
-                                  >
-                                      <Zap className="w-4 h-4 fill-current" /> Gemini
-                                  </a>
-                                  <a 
+                              <div className="flex flex-col sm:flex-row gap-4">
+                                  <a
                                       href={`/downloads/skills/${selectedRecipe.id}-claude.md`}
                                       download
-                                      className="flex items-center justify-center gap-3 bg-white text-black border-2 border-black py-3 font-display text-xs uppercase hover:bg-[#ff00ff] transition-all brutalist-shadow-sm"
+                                      className="flex-1 flex items-center justify-center gap-3 bg-white text-black border-2 border-black py-4 font-display text-sm uppercase hover:bg-[#ccff00] transition-all brutalist-shadow-sm"
                                   >
-                                      <Terminal className="w-4 h-4 stroke-[3px]" /> Claude
-                                  </a>
-                                  <a 
-                                      href={`/downloads/skills/${selectedRecipe.id}.cursorrules`}
-                                      download
-                                      className="flex items-center justify-center gap-3 bg-white text-black border-2 border-black py-3 font-display text-xs uppercase hover:bg-[#00ffff] transition-all brutalist-shadow-sm"
-                                  >
-                                      <MousePointer2 className="w-4 h-4 stroke-[3px]" /> Cursor
+                                      <FileText className="w-5 h-5 stroke-[3px]" /> Download Blueprint (.md)
                                   </a>
                               </div>
+                              <p className="text-[10px] font-mono text-white/60 uppercase tracking-widest mt-3 text-center">
+                                  Works with Claude Code, Gemini CLI, Cursor, and all major agent tools
+                              </p>
                           </div>
                       </div>
                   </div>
