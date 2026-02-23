@@ -1115,7 +1115,7 @@ export const aiTools: AiTool[] = [
         price: "Freemium",
         skill: "Beginner"
     },
-    image: "/screenshots/octopost.png"
+    image: "https://www.google.com/s2/favicons?domain=octopost.ai&sz=128"
 },
 {
     name: "Bridgecall",
@@ -1127,7 +1127,7 @@ export const aiTools: AiTool[] = [
         price: "Freemium",
         skill: "Beginner"
     },
-    image: "/screenshots/bridgecall.png"
+    image: "https://www.google.com/s2/favicons?domain=bridgecall.app&sz=128"
 },
 {
     name: "Levl",
@@ -1139,7 +1139,7 @@ export const aiTools: AiTool[] = [
         price: "Freemium",
         skill: "Beginner"
     },
-    image: "/screenshots/levl.png"
+    image: "https://www.google.com/s2/favicons?domain=getlevl.ai&sz=128"
 },
 {
     name: "GreenPT",
@@ -1151,7 +1151,7 @@ export const aiTools: AiTool[] = [
         price: "Free",
         skill: "Beginner"
     },
-    image: "/screenshots/greenpt.png"
+    image: "https://www.google.com/s2/favicons?domain=greenpt.nl&sz=128"
 },
 {
     name: "iMeett",
@@ -1163,7 +1163,7 @@ export const aiTools: AiTool[] = [
         price: "Free",
         skill: "Beginner"
     },
-    image: "/screenshots/imeett.png"
+    image: "https://www.google.com/s2/favicons?domain=app.imeett.ai&sz=128"
 },
 {
     name: "Webcomparis",
@@ -1175,7 +1175,7 @@ export const aiTools: AiTool[] = [
         price: "Freemium",
         skill: "Beginner"
     },
-    image: "/screenshots/webcomparis.png"
+    image: "https://www.google.com/s2/favicons?domain=www.webcomparis.com&sz=128"
 },
 {
     name: "PathwiseAI",
@@ -1187,7 +1187,7 @@ export const aiTools: AiTool[] = [
         price: "Freemium",
         skill: "Beginner"
     },
-    image: "/screenshots/pathwiseai.png"
+    image: "https://www.google.com/s2/favicons?domain=www.pathwiseai.io&sz=128"
 },
 {
     name: "TransGull",
@@ -1199,7 +1199,7 @@ export const aiTools: AiTool[] = [
         price: "Freemium",
         skill: "Beginner"
     },
-    image: "/screenshots/transgull.png"
+    image: "https://www.google.com/s2/favicons?domain=transgull.com&sz=128"
 },
 {
     name: "Watchflow",
