@@ -152,7 +152,17 @@ ALREADY_SENT = {
     "linkpilot30@gmail.com",
     "stickaudiovideo@gmail.com",
     "launch@densops.com",
-    "daniel1398.santos@gmail.com"
+    "daniel1398.santos@gmail.com",
+    "ReplyChampion@gmail.com",
+    "hello@octopost.ai",
+    "support@bridgecall.app",
+    "williamawake43@gmail.com",
+    "mail@greenpt.ai",
+    "adityaravindra848@gmail.com",
+    "marketingcomparis@gmail.com",
+    "pathwiseai9@gmail.com",
+    "rakeshvarma209080@gmail.com",
+    "marketing@technologycircle.io"
 }
 
 def slugify(text):
