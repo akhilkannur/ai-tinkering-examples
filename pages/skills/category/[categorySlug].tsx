@@ -5,7 +5,7 @@ import { ArrowLeft, BookOpen, Terminal, Clock } from 'lucide-react';
 import Navbar from '../../../components/Navbar';
 import { getAllRecipes } from '../../../lib/recipes';
 import { Recipe, categoryIcons } from '../../../lib/cookbook-data';
-import { slugify } from '../../../utils/slugify';
+import slugify from '../../../utils/slugify';
 
 interface CategoryPageProps {
   category: string;

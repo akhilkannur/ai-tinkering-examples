@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const https = require('https');
 const matter = require('gray-matter');
-const slugify = require('../utils/slugify').default;
+const slugify = require('../utils/slugify');
 
 const SITE_URL = 'https://realaiexamples.com';
 const RECIPES_DIR = path.join(process.cwd(), 'content', 'recipes');
