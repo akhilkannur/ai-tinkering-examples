@@ -1047,7 +1047,7 @@ export const aiTools: AiTool[] = [
 },
   {
     name: "Ayudo",
-    description: "",
+    description: "AI-native customer support platform that automates customer queries, resolutions, and follow-ups using a built-in workforce of AI agents.",
     url: "https://www.ayudo.ai",
     category: "Productivity",
     tags: {
@@ -1059,7 +1059,7 @@ export const aiTools: AiTool[] = [
 },
   {
     name: "LinkPilot",
-    description: "",
+    description: "AI-powered LinkedIn growth platform that assists with strategy, analysis, and execution. It helps generate viral content, analyze competitors, and schedule posts.",
     url: "https://link-pilot.com",
     category: "Productivity",
     tags: {
@@ -1071,7 +1071,7 @@ export const aiTools: AiTool[] = [
 },
   {
     name: "Stick Audio",
-    description: "",
+    description: "AI Text-to-Speech Generator that allows users to convert text into natural-sounding speech using AI-powered voices, with features like voice cloning and API access.",
     url: "https://stick.audio",
     category: "Productivity",
     tags: {
@@ -1083,7 +1083,7 @@ export const aiTools: AiTool[] = [
 },
   {
     name: "DensOps",
-    description: "",
+    description: "A modern prospecting and go-to-market platform designed for businesses that sell to brick-and-mortar locations, helping users build local business lists with pinpoint accuracy.",
     url: "https://densops.com",
     category: "Productivity",
     tags: {
@@ -1095,7 +1095,7 @@ export const aiTools: AiTool[] = [
 },
   {
     name: "PNGtoSTL",
-    description: "",
+    description: "A free online converter that turns 2D PNG images into 3D-printable STL files. Upload your image, and the tool automatically generates a 3D model suitable for printing.",
     url: "https://pngtostl.xyz",
     category: "Productivity",
     tags: {

@@ -142,7 +142,14 @@ async function generateSitemap() {
     // 9. Task Generators (New)
     const taskGenerators = ['audit', 'lead-gen', 'competitor-intel', 'pricing', 'sales-automation', 'docs-to-context'];
 
-    // 10. Helper to escape XML characters
+    // 10. Define manual redirects to exclude from the sitemap
+    const manualRedirects = [
+      'partner-program-hunter',
+      'partner-hunter',
+      'review-to-ad'
+    ];
+
+    // 11. Helper to escape XML characters
     const escapeXml = (unsafe) => {
       if (!unsafe) return '';
       return unsafe.toString()
@@ -178,25 +185,27 @@ async function generateSitemap() {
     });
 
     // Recipes (How-To & Skill - Priority 0.8/0.7)
-    recipes.forEach(r => {
-      const ogImageUrl = `${SITE_URL}/api/og?title=${encodeURIComponent(r.title)}&category=${encodeURIComponent(r.category)}&tagline=${encodeURIComponent(r.tagline || '')}`;
-      const imageBlock = `
+    recipes
+      .filter(r => !manualRedirects.includes(r.id))
+      .forEach(r => {
+        const ogImageUrl = `${SITE_URL}/api/og?title=${encodeURIComponent(r.title)}&category=${encodeURIComponent(r.category)}&tagline=${encodeURIComponent(r.tagline || '')}`;
+        const imageBlock = `
     <image:image>
       <image:loc>${escapeXml(ogImageUrl)}</image:loc>
       <image:title>${escapeXml(r.title)} AI Agent Blueprint</image:title>
       <image:caption>${escapeXml(r.tagline || r.title)}</image:caption>
     </image:image>`;
 
-      // "How To" Page (High Intent)
-      xml += `\n  <url>
+        // "How To" Page (High Intent)
+        xml += `\n  <url>
     <loc>${SITE_URL}/how-to/automate-${r.id}</loc>
     <lastmod>${currentDate}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>${imageBlock}
   </url>`;
       
-      // Technical Skill Page
-      xml += `\n  <url>
+        // Technical Skill Page
+        xml += `\n  <url>
     <loc>${SITE_URL}/skills/${r.id}</loc>
     <lastmod>${currentDate}</lastmod>
     <changefreq>weekly</changefreq>
@@ -230,12 +239,6 @@ async function generateSitemap() {
         
       xml += `\n  <url><loc>${SITE_URL}/role/${catSlug}</loc><lastmod>${currentDate}</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>`;
       xml += `\n  <url><loc>${SITE_URL}/skills/category/${catSlug}</loc><lastmod>${currentDate}</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>`;
-    });
-
-    // Legacy Category Pages (Airtable)
-    Object.values(airtableCategoryMap).forEach(catName => {
-      const catSlug = catName.toLowerCase().replace(/\s+/g, '-');
-      xml += `\n  <url><loc>${SITE_URL}/ai-examples/category/${catSlug}</loc><lastmod>${currentDate}</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>`;
     });
 
     xml += `\n</urlset>`;
