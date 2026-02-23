@@ -45,20 +45,24 @@ export const categoryIcons: Record<Category, any> = {
 
 export const categoryDescriptions: Record<string, { title: string, description: string }> = {
   'sales-ops': {
-    title: 'Sales Operations AI Blueprints',
-    description: 'Automate lead routing, quota tracking, and sales performance audits. These blueprints turn AI agents into your primary Sales Ops analysts.'
+    title: 'Sales Ops on Steroids',
+    description: 'Stop wasting your best reps on manual lead routing and boring CRM audits. These blueprints turn AI agents into your primary Sales Ops team so you can focus on closing deals.'
   },
   'marketing-ops': {
-    title: 'Marketing Operations Automation',
-    description: 'Scale your marketing infrastructure with automated attribution, campaign audits, and data hygiene workflows.'
+    title: 'Marketing Ops for Builders',
+    description: 'Scale your marketing infrastructure without the massive headcount. Automated attribution, campaign audits, and data hygiene workflows that actually work while you sleep.'
   },
   'seo': {
-    title: 'AI SEO Blueprints & Workflows',
-    description: 'Move beyond keyword research. Automate internal linking, technical audits, and content clustering with agentic SEO blueprints.'
+    title: 'Agentic SEO (The Good Stuff)',
+    description: 'Move beyond basic keyword research. We’re talking automated internal linking, technical audits, and content clustering that would take a human weeks to finish.'
   },
   'lead-gen': {
-    title: 'AI Lead Generation Workflows',
-    description: 'Stop manual prospecting. Use AI to build boolean searches, personalized DMs, and high-intent lead magnets.'
+    title: 'High-Intent Lead Gen',
+    description: 'Stop manual prospecting. It’s a waste of time. Use AI to build boolean searches, personalized DMs, and high-intent lead magnets that actually convert.'
+  },
+  'content-ops': {
+    title: 'Content Ops for People Who Hate Fluff',
+    description: 'Turn one piece of content into fifty. Automate the boring parts of editing, distribution, and formatting so you can get back to the creative work.'
   }
 };
 

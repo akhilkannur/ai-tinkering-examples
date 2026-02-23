@@ -1,33 +1,42 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-import { ArrowLeft, BookOpen, Terminal, Clock } from 'lucide-react';
+import { ArrowLeft, BookOpen, Terminal, Clock, ShieldCheck } from 'lucide-react';
 import Navbar from '../../../components/Navbar';
 import { getAllRecipes } from '../../../lib/recipes';
-import { Recipe, categoryIcons } from '../../../lib/cookbook-data';
+import { Recipe, categoryIcons, categoryDescriptions, Category } from '../../../lib/cookbook-data';
+import { generateItemListSchema } from '../../../lib/seo-utils';
 import slugify from '../../../utils/slugify';
 
 interface CategoryPageProps {
   category: string;
   recipes: Recipe[];
+  meta: { title: string, description: string };
 }
 
-export default function CategoryPage({ category, recipes }: CategoryPageProps) {
+export default function CategoryPage({ category, recipes, meta }: CategoryPageProps) {
   const SITE_URL = 'https://realaiexamples.com';
   const categorySlug = slugify(category);
-  const title = `${category} AI Agent Blueprints | Real AI Examples`;
-  const description = `Discover high-impact AI agent blueprints for ${category.toLowerCase()}, designed to automate tasks and boost efficiency.`;
+  const CatIcon = categoryIcons[category as Category] || Terminal;
+
+  const itemListSchema = generateItemListSchema(recipes, SITE_URL);
 
   return (
     <div className="flex flex-col min-h-screen bg-primary-bg text-black selection:bg-[#ff00ff] selection:text-white">
       <Head>
-        <title>{title}</title>
-        <meta name="description" content={description} key="description" />
-        <meta property="og:title" content={title} key="og:title" />
-        <meta property="og:description" content={description} key="og:description" />
+        <title>{meta.title} | Real AI Examples</title>
+        <meta name="description" content={meta.description} key="description" />
+        <meta property="og:title" content={meta.title} key="og:title" />
+        <meta property="og:description" content={meta.description} key="og:description" />
         <meta property="og:url" content={`${SITE_URL}/skills/category/${categorySlug}`} key="og:url" />
         <meta property="og:type" content="website" key="og:type" />
         <link rel="canonical" href={`${SITE_URL}/skills/category/${categorySlug}`} key="canonical" />
+        
+        {/* Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+        />
       </Head>
       
       <Navbar />
@@ -44,13 +53,26 @@ export default function CategoryPage({ category, recipes }: CategoryPageProps) {
           </nav>
 
           {/* Header */}
-          <div className="mb-12">
-            <h1 className="text-3xl md:text-5xl font-display text-black uppercase leading-[0.9] glitch-text" data-text={`${category} Blueprints`.toUpperCase()}>
-                {category} Blueprints
-            </h1>
-            <p className="text-xl font-bold uppercase leading-tight font-sans border-l-8 border-[#ff00ff] pl-8 py-4 bg-white border-4 border-black brutalist-shadow mt-8">
-              Discover high-impact AI agent blueprints for {category.toLowerCase()}, designed to automate tasks and boost efficiency across your operations.
-            </p>
+          <div className="mb-16">
+            <div className="flex items-center gap-6 mb-8">
+              <div className="w-16 h-16 bg-black flex items-center justify-center border-4 border-black brutalist-shadow-sm text-[#ff00ff]">
+                <CatIcon className="w-10 h-10 stroke-[3px]" />
+              </div>
+              <h1 className="text-3xl md:text-6xl font-display text-black uppercase leading-[0.9] glitch-text" data-text={`The ${category} Stack`.toUpperCase()}>
+                  The {category} Stack
+              </h1>
+            </div>
+            
+            <div className="border-l-8 border-[#ff00ff] pl-8 py-6 bg-white border-4 border-black brutalist-shadow">
+              <p className="text-xl md:text-2xl font-bold uppercase leading-tight font-sans">
+                {meta.description}
+              </p>
+              <div className="mt-6 flex items-center gap-4 text-[10px] font-black font-mono uppercase tracking-tighter text-black/40">
+                <span className="flex items-center gap-1.5"><ShieldCheck className="w-3 h-3 text-emerald-600" /> Battle-Tested Logic</span>
+                <span>•</span>
+                <span>{recipes.length} Ways to Automate</span>
+              </div>
+            </div>
           </div>
 
           {/* List of Recipes in Category */}
@@ -98,7 +120,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const allRecipes = getAllRecipes();
   const categorySlug = params?.categorySlug as string;
-  const category = allRecipes.find(recipe => slugify(recipe.category) === categorySlug)?.category || '';
+  const categoryMatch = allRecipes.find(recipe => slugify(recipe.category) === categorySlug);
+  const category = categoryMatch?.category || '';
 
   const recipes = allRecipes.filter(recipe => slugify(recipe.category) === categorySlug);
 
@@ -106,10 +129,16 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     return { notFound: true };
   }
 
+  const meta = categoryDescriptions[categorySlug] || {
+    title: `${category} Game-Changers`,
+    description: `Stop doing the boring parts of ${category.toLowerCase()} manually. These AI blueprints are built to automate the heavy lifting so you can scale without the headcount.`
+  };
+
   return {
     props: {
       category,
       recipes,
+      meta
     },
   };
 };
