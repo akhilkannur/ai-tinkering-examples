@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const https = require('https');
 const matter = require('gray-matter');
+const slugify = require('../utils/slugify').default;
 
 const SITE_URL = 'https://realaiexamples.com';
 const RECIPES_DIR = path.join(process.cwd(), 'content', 'recipes');
@@ -184,34 +185,32 @@ async function generateSitemap() {
       xml += `\n  <url><loc>${SITE_URL}/ai-examples/${ex.category}/${ex.slug}</loc><lastmod>${ex.lastmod}</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>`;
     });
 
-    // Recipes (How-To & Skill - Priority 0.8/0.7)
-    recipes
-      .filter(r => !manualRedirects.includes(r.id))
-      .forEach(r => {
-        const ogImageUrl = `${SITE_URL}/api/og?title=${encodeURIComponent(r.title)}&category=${encodeURIComponent(r.category)}&tagline=${encodeURIComponent(r.tagline || '')}`;
-        const imageBlock = `
-    <image:image>
-      <image:loc>${escapeXml(ogImageUrl)}</image:loc>
-      <image:title>${escapeXml(r.title)} AI Agent Blueprint</image:title>
-      <image:caption>${escapeXml(r.tagline || r.title)}</image:caption>
-    </image:image>`;
-
-        // "How To" Page (High Intent)
-        xml += `\n  <url>
-    <loc>${SITE_URL}/how-to/automate-${r.id}</loc>
-    <lastmod>${currentDate}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>${imageBlock}
-  </url>`;
-      
-        // Technical Skill Page
-        xml += `\n  <url>
-    <loc>${SITE_URL}/skills/${r.id}</loc>
-    <lastmod>${currentDate}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>${imageBlock}
-  </url>`;
-    });
+    // Recipes (How-To pages are now 301 to Skills, and Skills are noindexed. No longer in sitemap)
+    // recipes
+    //   .filter(r => !manualRedirects.includes(r.id))
+    //   .forEach(r => {
+    //     const ogImageUrl = `${SITE_URL}/api/og?title=${encodeURIComponent(r.title)}&category=${encodeURIComponent(r.category)}&tagline=${encodeURIComponent(r.tagline || '')}`;
+    //     const imageBlock = `
+    // <image:image>
+    //   <image:loc>${escapeXml(ogImageUrl)}</image:loc>
+    //   <image:title>${escapeXml(r.title)} AI Agent Blueprint</image:title>
+    //   <image:caption>${escapeXml(r.tagline || r.title)}</image:caption>
+    // </image:image>`;
+    //     // "How To" Page (High Intent)
+    //     xml += `\n  <url>
+    // <loc>${SITE_URL}/how-to/automate-${r.id}</loc>
+    // <lastmod>${currentDate}</lastmod>
+    // <changefreq>weekly</changefreq>
+    // <priority>0.8</priority>${imageBlock}
+    // </url>`;
+    //     // Technical Skill Page
+    //     xml += `\n  <url>
+    // <loc>${SITE_URL}/skills/${r.id}</loc>
+    // <lastmod>${currentDate}</lastmod>
+    // <changefreq>weekly</changefreq>
+    // <priority>0.7</priority>${imageBlock}
+    // </url>`;
+    //   });
 
     // Blog Posts (Priority 0.8)
     blogPosts.forEach(slug => {
@@ -231,11 +230,7 @@ async function generateSitemap() {
 
     // Role & Category Hub Pages (Priority 0.9 - High Value)
     blueprintCategories.forEach(cat => {
-      // Slugify logic matching utils/slugify.ts
-      const catSlug = cat.toLowerCase()
-        .replace(/[^a-z0-9\s-]/g, "")
-        .trim()
-        .replace(/\s+/g, "-");
+      const catSlug = slugify(cat);
         
       xml += `\n  <url><loc>${SITE_URL}/role/${catSlug}</loc><lastmod>${currentDate}</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>`;
       xml += `\n  <url><loc>${SITE_URL}/skills/category/${catSlug}</loc><lastmod>${currentDate}</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>`;
@@ -244,9 +239,9 @@ async function generateSitemap() {
     xml += `\n</urlset>`;
 
     fs.writeFileSync(path.join(process.cwd(), 'public', 'sitemap.xml'), xml);
-    const totalCount = staticPages.length + examples.length + (recipes.length * 2) + 
+    const totalCount = staticPages.length + examples.length + 
                        blogPosts.length + toolNames.length + playbookSlugs.length + 
-                       (blueprintCategories.size * 2) + Object.keys(airtableCategoryMap).length;
+                       (blueprintCategories.size * 2);
     console.log(`✅ Sitemap perfect! Total URLs: ${totalCount}`);
 
   } catch (error) {

@@ -2,7 +2,8 @@ import csv
 from datetime import datetime
 
 def find_new_submissions():
-    cutoff_date = datetime(2026, 1, 11)
+    # Last tool processed today (Watchflow) was submitted Feb 22, 2026 11:51:01
+    cutoff_date = datetime(2026, 2, 22, 11, 51, 1)
     new_entries = []
 
     print(f"Checking for submissions after {cutoff_date}...")

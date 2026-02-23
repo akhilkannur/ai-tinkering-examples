@@ -15,3 +15,4 @@ This file tracks mistakes, constraints, and optimization patterns to ensure the 
 - **Tool Directory**: Always fetch the live CSV from Google Sheets before processing.
 - **Tool Logos**: Do NOT take screenshots of tool homepages. Use the Google Favicon API instead for tool logos: `https://www.google.com/s2/favicons?domain=TOOL_DOMAIN&sz=128`.
 - **Summarization**: Provide a table-based summary of new tools for user verification before adding to the codebase.
+- **Timestamp Cutoff**: After adding a batch of tools, manually update the `cutoff_date` in `scripts/check_new_submissions.py` and `docs/tool-directory-ops/send_emails.py` to the timestamp of the last tool added. This prevents duplicates in the next run.

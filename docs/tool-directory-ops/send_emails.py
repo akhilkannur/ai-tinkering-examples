@@ -271,7 +271,7 @@ def process_and_send(limit=None):
         print(f"Error fetching Google Sheet: {e}")
         return
 
-    cutoff_date = datetime.strptime("05/02/2026 06:57:26", "%d/%m/%Y %H:%M:%S")
+    cutoff_date = datetime.strptime("22/02/2026 11:51:01", "%d/%m/%Y %H:%M:%S")
     tools_to_send = []
     seen_emails = set()
 

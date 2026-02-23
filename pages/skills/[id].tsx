@@ -222,6 +222,7 @@ Downloaded from RealAIExamples.com`;
         <meta name="twitter:image" content={ogImageUrl} key="twitter:image" />
 
         <link rel="canonical" href={`${SITE_URL}/skills/${recipe.id}`} key="canonical" />
+        <meta name="robots" content="noindex" />
       </Head>
       
       <Navbar />
