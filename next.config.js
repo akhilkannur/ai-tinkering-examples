@@ -177,8 +177,8 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/blueprints/category/:slug',
-        destination: '/skills/category/:slug',
+        source: '/blueprints/category/:categorySlug',
+        destination: '/skills/category/:categorySlug',
         permanent: true,
       },
       {
