@@ -232,7 +232,6 @@ async function generateSitemap() {
     blueprintCategories.forEach(cat => {
       const catSlug = slugify(cat);
         
-      xml += `\n  <url><loc>${SITE_URL}/role/${catSlug}</loc><lastmod>${currentDate}</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>`;
       xml += `\n  <url><loc>${SITE_URL}/skills/category/${catSlug}</loc><lastmod>${currentDate}</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>`;
     });
 
@@ -241,7 +240,7 @@ async function generateSitemap() {
     fs.writeFileSync(path.join(process.cwd(), 'public', 'sitemap.xml'), xml);
     const totalCount = staticPages.length + examples.length + 
                        blogPosts.length + toolNames.length + playbookSlugs.length + 
-                       (blueprintCategories.size * 2);
+                       blueprintCategories.size;
     console.log(`✅ Sitemap perfect! Total URLs: ${totalCount}`);
 
   } catch (error) {

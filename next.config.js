@@ -182,6 +182,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/role/:categorySlug',
+        destination: '/skills/category/:categorySlug',
+        permanent: true,
+      },
+      {
         source: '/ai-examples/category/building-apps',
         destination: '/tools/for-developers',
         permanent: true,

@@ -20,22 +20,22 @@ interface ToolLandingPageProps {
 const TOOL_CONFIG: Record<string, { name: string, description: string, icon: any }> = {
   'claude-code': {
     name: 'Claude Code',
-    description: 'Anthropic\'s agentic CLI tool. Best for coding, refactoring, and complex analysis.',
+    description: 'Stop typing and start shipping. Claude Code is for the builders who want to automate refactoring, debugging, and terminal-heavy lifting without the context switching.',
     icon: Terminal
   },
   'gemini-cli': {
     name: 'Gemini CLI',
-    description: 'Google\'s powerhouse for multimodal tasks and rapid prototyping in the terminal.',
+    description: 'Google’s multimodal engine, right in your terminal. Perfect for handling massive data dumps and building prototype agents that move at 10x speed.',
     icon: Zap
   },
   'chatgpt': {
     name: 'ChatGPT',
-    description: 'The universal interface. Best for copywriting, ideation, and quick strategy.',
+    description: 'The universal leverage tool. We’re moving beyond simple prompts to full-blown strategy, copywriting machines, and decision-making logic.',
     icon: Command
   },
   'cursor': {
-    name: 'Cursor Editor',
-    description: 'The AI-native code editor. Best for building features and automating dev workflows.',
+    name: 'Cursor',
+    description: 'The definitive editor for the AI-native dev. Build features while you sleep and automate the boring parts of your codebase with zero friction.',
     icon: Code
   }
 };
