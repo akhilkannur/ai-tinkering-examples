@@ -1104,5 +1104,113 @@ export const aiTools: AiTool[] = [
         skill: "Beginner"
     },
     image: "/screenshots/pngtostl.png"
+},
+{
+    name: "Octopost.ai",
+    description: "AI-powered social media scheduling platform that centralizes workflows across Facebook, Instagram, LinkedIn, TikTok, and YouTube. It simplifies content distribution for creators and startups with a focused, intuitive dashboard.",
+    url: "https://octopost.ai",
+    category: "Marketing",
+    tags: {
+        useCase: ["Business"],
+        price: "Freemium",
+        skill: "Beginner"
+    },
+    image: "/screenshots/octopost.png"
+},
+{
+    name: "Bridgecall",
+    description: "Real-time voice translation tool that enables multilingual calls through a simple browser link. Each participant speaks naturally and hears translated speech instantly, facilitating seamless cross-border communication.",
+    url: "https://bridgecall.app",
+    category: "Productivity",
+    tags: {
+        useCase: ["Business"],
+        price: "Freemium",
+        skill: "Beginner"
+    },
+    image: "/screenshots/bridgecall.png"
+},
+{
+    name: "Levl",
+    description: "Engagement and reward platform for course builders and community leaders. It uses AI-generated challenges and consistency rewards to transform passive content consumption into active, motivated participation.",
+    url: "https://getlevl.ai",
+    category: "Marketing",
+    tags: {
+        useCase: ["Business"],
+        price: "Freemium",
+        skill: "Beginner"
+    },
+    image: "/screenshots/levl.png"
+},
+{
+    name: "GreenPT",
+    description: "A green, privacy-focused AI assistant (Frida) designed with a minimal carbon footprint. It prioritizes user data protection while delivering smart, efficient AI interactions.",
+    url: "https://greenpt.nl/frida",
+    category: "Productivity",
+    tags: {
+        useCase: ["Business"],
+        price: "Free",
+        skill: "Beginner"
+    },
+    image: "/screenshots/greenpt.png"
+},
+{
+    name: "iMeett",
+    description: "Private AI meeting assistant that transcribes, summarizes, and organizes conversations directly into your Google Drive. It ensures data ownership by processing audio securely without third-party server storage.",
+    url: "https://app.imeett.ai",
+    category: "Productivity",
+    tags: {
+        useCase: ["Business"],
+        price: "Free",
+        skill: "Beginner"
+    },
+    image: "/screenshots/imeett.png"
+},
+{
+    name: "Webcomparis",
+    description: "Competitive analysis tool that uses AI to audit and compare up to five websites simultaneously. It provides technical, SEO, and design insights through professional PDF reports to identify market gaps.",
+    url: "https://www.webcomparis.com",
+    category: "Marketing",
+    tags: {
+        useCase: ["Business"],
+        price: "Freemium",
+        skill: "Beginner"
+    },
+    image: "/screenshots/webcomparis.png"
+},
+{
+    name: "PathwiseAI",
+    description: "AI-driven career platform that automates job searching and application preparation. It generates tailored cover letters, resumes, and interview prep materials by simply providing a company name and role.",
+    url: "https://www.pathwiseai.io/",
+    category: "Productivity",
+    tags: {
+        useCase: ["Business"],
+        price: "Freemium",
+        skill: "Beginner"
+    },
+    image: "/screenshots/pathwiseai.png"
+},
+{
+    name: "TransGull",
+    description: "Multilingual translation platform that uses contextual AI for real-world conversations, videos, and meetings. It moves beyond simple text conversion to provide natural, accurate translations in real-time.",
+    url: "https://transgull.com",
+    category: "Productivity",
+    tags: {
+        useCase: ["Business"],
+        price: "Freemium",
+        skill: "Beginner"
+    },
+    image: "/screenshots/transgull.png"
+},
+{
+    name: "Watchflow",
+    description: "Infrastructure monitoring suite for SSL certificates, scheduled jobs, and APIs. It delivers instant alerts via Slack and Teams to ensure critical services remain uptime and security certificates stay valid.",
+    url: "https://watchflow.io",
+    category: "Productivity",
+    tags: {
+        useCase: ["Business"],
+        price: "Freemium",
+        skill: "Beginner"
+    },
+    image: "https://www.google.com/s2/favicons?domain=watchflow.io&sz=128"
 }
 ];
