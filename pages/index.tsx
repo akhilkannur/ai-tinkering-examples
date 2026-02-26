@@ -187,7 +187,6 @@ export default function HomePage({ recipes }: HomePageProps) {
 
         {/* MARQUEE SECTION (NEW REBRAND ELEMENT) */}
         <div className="bg-[#ccff00] border-b-4 border-black py-4 overflow-hidden">
-            <div className="bg-[#ccff00] border-b-4 border-black py-4 overflow-hidden">
             <div className="marquee-container font-display text-2xl uppercase tracking-widest">
                 <div className="marquee-content">
                     Real AI Examples // Prompts for Chat // Agent Ready Skills // 500+ Blueprints // Workflows for Operators // Real AI Examples // Prompts for Chat // Agent Ready Skills // 500+ Blueprints // Workflows for Operators //
