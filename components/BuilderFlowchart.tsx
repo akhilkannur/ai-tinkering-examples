@@ -15,7 +15,8 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
   const [selectedCategory, setSelectedCategory] = useState<Category | 'All'>('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedRecipe, setSelectedRecipe] = useState<Recipe | null>(null);
-  const [copied, setCopied] = useState(false);
+  const [copiedBrowser, setCopiedBrowser] = useState(false);
+  const [copiedAgent, setCopiedAgent] = useState(false);
   const [visibleCount, setVisibleCount] = useState(24);
   
   // Paywall State
@@ -117,13 +118,6 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
   const hasMore = visibleCount < filteredRecipes.length;
   const showPaywallOverlay = !isUnlocked;
 
-  const handleCopy = () => {
-    if (!selectedRecipe || (selectedRecipe.isPremium && !isUnlocked)) return;
-    navigator.clipboard.writeText(selectedRecipe.blueprint);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
-  
   const handleDownload = () => {
     if (!selectedRecipe || !selectedRecipe.sampleData || (selectedRecipe.isPremium && !isUnlocked)) return;
     const blob = new Blob([selectedRecipe.sampleData.content], { type: 'text/plain' });
@@ -453,12 +447,12 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
                         onClick={() => {
                           const chatPreamble = `I am providing you with a rigid logic protocol. I will provide the data directly in this chat. IMPORTANT: Ignore all instructions to 'read' or 'save' local files. Instead, perform the analysis and output the results directly here. \n\n--- LOGIC ---\n\n`;
                           navigator.clipboard.writeText(chatPreamble + selectedRecipe.blueprint);
-                          setCopied(true);
-                          setTimeout(() => setCopied(false), 2000);
+                          setCopiedBrowser(true);
+                          setTimeout(() => setCopiedBrowser(false), 2000);
                         }}
-                        className={`w-full py-4 border-2 border-black font-display text-sm uppercase transition-all ${copied ? 'bg-emerald-400' : 'bg-black text-[#ccff00] hover:bg-emerald-500 hover:text-white'}`}
+                        className={`w-full py-4 border-2 border-black font-display text-sm uppercase transition-all ${copiedBrowser ? 'bg-emerald-400' : 'bg-black text-[#ccff00] hover:bg-emerald-500 hover:text-white'}`}
                       >
-                        {copied ? 'Copied!' : 'Copy for Chat'}
+                        {copiedBrowser ? 'Copied!' : 'Copy for Chat'}
                       </button>
                     </div>
 
@@ -475,12 +469,12 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
                         onClick={() => {
                           const fullBlueprint = `---\nid: ${selectedRecipe.id}\ncategory: ${selectedRecipe.category}\n---\n\n${selectedRecipe.blueprint}`;
                           navigator.clipboard.writeText(fullBlueprint);
-                          setCopied(true);
-                          setTimeout(() => setCopied(false), 2000);
+                          setCopiedAgent(true);
+                          setTimeout(() => setCopiedAgent(false), 2000);
                         }}
-                        className={`w-full py-4 border-2 border-black font-display text-sm uppercase transition-all ${copied ? 'bg-blue-400' : 'bg-black text-[#ccff00] hover:bg-blue-500 hover:text-white'}`}
+                        className={`w-full py-4 border-2 border-black font-display text-sm uppercase transition-all ${copiedAgent ? 'bg-blue-400' : 'bg-black text-[#ccff00] hover:bg-blue-500 hover:text-white'}`}
                       >
-                        {copied ? 'Copied!' : 'Copy as Agent Skill'}
+                        {copiedAgent ? 'Copied!' : 'Copy as Agent Skill'}
                       </button>
                     </div>
                   </div>
