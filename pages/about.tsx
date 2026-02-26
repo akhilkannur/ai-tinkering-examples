@@ -115,13 +115,13 @@ export default function AboutPage() {
                         </div>
                         <div className="h-1 bg-black"></div>
                         <div>
-                            <div className="text-6xl font-display text-black mb-1 tracking-tighter">1,400+</div>
-                            <div className="text-xs font-black font-mono text-[#ccff00] uppercase tracking-widest bg-black px-1 inline-block">Packaged_Skills</div>
+                            <div className="text-6xl font-display text-black mb-1 tracking-tighter">500+</div>
+                            <div className="text-xs font-black font-mono text-[#ccff00] uppercase tracking-widest bg-black px-1 inline-block">Consolidated_Files</div>
                         </div>
                         <div className="h-1 bg-black"></div>
                         <div>
                             <div className="text-6xl font-display text-black mb-1 tracking-tighter">100%</div>
-                            <div className="text-xs font-black font-mono text-[#00ffff] uppercase tracking-widest bg-black px-1 inline-block">Human_Tested</div>
+                            <div className="text-xs font-black font-mono text-[#00ffff] uppercase tracking-widest bg-black px-1 inline-block">Operator_Verified</div>
                         </div>
                     </div>
                 </div>

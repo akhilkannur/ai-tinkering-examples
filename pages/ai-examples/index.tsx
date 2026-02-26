@@ -90,8 +90,6 @@ export default function ExamplesPage({ examples, categories, itemListSchema }: E
         body {
             font-family: 'Space Mono', monospace;
             background-color: #f0f0f0;
-            background-image: radial-gradient(#000 1px, transparent 1px);
-            background-size: 20px 20px;
         }
         .font-display {
             font-family: 'Archivo Black', sans-serif;
