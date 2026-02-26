@@ -57,11 +57,6 @@ export default function ToolsIndex() {
           <div className="absolute top-0 right-0 w-32 h-32 bg-[#ff00ff] opacity-10 blur-xl"></div>
           <div className="absolute bottom-0 left-0 w-32 h-32 bg-[#ccff00] opacity-10 blur-xl"></div>
           
-          <div className="inline-flex items-center gap-2 bg-black text-[#ccff00] border-2 border-black px-4 py-1.5 font-black text-xs uppercase mb-8 transform -rotate-1 brutalist-shadow-sm">
-            <Command className="w-4 h-4" />
-            <span>The Submission Inbox</span>
-          </div>
-          
           <h1 className="text-5xl md:text-7xl font-display text-black mb-8 uppercase leading-[0.9] glitch-text" data-text="THE TOOL DIRECTORY">
             The Tool <span className="text-[#ff00ff]">Directory</span>
           </h1>

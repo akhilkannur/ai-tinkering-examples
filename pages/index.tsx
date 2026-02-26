@@ -156,17 +156,24 @@ export default function HomePage({ recipes }: HomePageProps) {
                             </span>
                         </div>
 
-                        <div className="flex flex-col gap-8 mb-12">
-                            <div className="flex flex-col sm:flex-row items-center gap-6">
-                                <a
-                                    href="https://checkout.dodopayments.com/buy/pdt_0NW6p0szmXPS6jXW05hIP"
-                                    className="w-full sm:w-auto px-8 py-3 bg-[#ff00ff] border-4 border-black font-display text-lg uppercase brutalist-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all flex items-center justify-center gap-3 text-white"
-                                >
-                                    Get 1 Year Access ($39) <ArrowRight className="w-6 h-6 stroke-[3px]" />
-                                </a>
-                                <div className="text-black font-display text-sm uppercase opacity-40 hidden sm:block">OR</div>
-                                <HeroForm />
+                        <div className="flex flex-col gap-6 max-w-lg mb-12">
+                            <a
+                                href="https://checkout.dodopayments.com/buy/pdt_0NW6p0szmXPS6jXW05hIP"
+                                className="group w-full sm:w-auto px-8 py-5 bg-[#ff00ff] border-4 border-black font-display text-xl uppercase brutalist-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all flex items-center justify-center gap-3 text-white relative"
+                            >
+                                Get 1 Year Access ($39) 
+                                <ArrowRight className="w-6 h-6 stroke-[4px] group-hover:translate-x-1 transition-transform" />
+                            </a>
+                            
+                            <div className="flex items-center gap-4 py-1">
+                                <div className="h-px bg-black/10 flex-1"></div>
+                                <span className="text-[10px] font-black uppercase tracking-[0.2em] text-black/30">
+                                    or grab the free pack
+                                </span>
+                                <div className="h-px bg-black/10 flex-1"></div>
                             </div>
+
+                            <HeroForm />
                         </div>
                         <p className="text-xs font-bold text-gray-600 mb-12 flex items-center gap-2 uppercase tracking-widest">
                           <span className="text-emerald-600 font-black">✓</span>

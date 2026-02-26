@@ -303,10 +303,10 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
                 <div className="relative z-20 bg-white border-4 border-black p-8 brutalist-shadow max-w-lg mx-auto">
                    {!showLicenseInput ? (
                       <>
-                        <h3 className="text-2xl font-display text-black mb-4 uppercase leading-none">You've Browsed 20+ Blueprints</h3>
+                        <h3 className="text-2xl font-display text-black mb-4 uppercase leading-none">Unlock the Full Library</h3>
                         <p className="text-black font-bold uppercase text-xs mb-6 leading-relaxed font-mono">
-                            // Get all 500+ as 5 consolidated files.<br/>
-                            // One-time payment. Works with Claude Code, Gemini CLI, Cursor.
+                            // Get all 500+ as 5 consolidated files for non-technical builders.<br/>
+                            // One-time payment. Works with Claude Code, Gemini CLI, and all major agentic tools.
                         </p>
                         <Link
                           href="https://checkout.dodopayments.com/buy/pdt_0NW6p0szmXPS6jXW05hIP"

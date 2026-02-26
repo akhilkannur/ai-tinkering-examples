@@ -9,8 +9,8 @@ interface BlogIndexProps {
 }
 
 export default function BlogIndex({ posts }: BlogIndexProps) {
-  const title = "Tinker Logs | Real AI Examples";
-  const description = "I document the exact steps I take to automate work with AI. Read how I built my scrapers, sales bots, and data tools.";
+  const title = "The Operator Logbook | Real AI Examples";
+  const description = "I document the exact steps I take to automate work as a non-technical builder. Read how I use AI to build scrapers, sales bots, and data tools without writing code from scratch.";
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com';
   const ogImage = `${baseUrl}/api/og?mode=home`;
 
@@ -42,14 +42,14 @@ export default function BlogIndex({ posts }: BlogIndexProps) {
            
            <div className="container mx-auto px-4 text-center relative z-10">
               <div className="inline-block bg-black text-[#ccff00] px-3 py-1 text-xs font-black uppercase tracking-[0.2em] mb-6 transform -rotate-1 border-2 border-black brutalist-shadow-sm">
-                Technical Case Studies
+                Non-Technical Automation
               </div>
-              <h1 className="text-5xl md:text-7xl font-display mb-6 tracking-tight uppercase glitch-text" data-text="TINKER LOGS">
-                Tinker <span className="text-[#ff00ff]">Logs</span>
+              <h1 className="text-5xl md:text-7xl font-display mb-6 tracking-tight uppercase glitch-text" data-text="THE OPERATOR LOGS">
+                The Operator <span className="text-[#ff00ff]">Logs</span>
               </h1>
               <p className="text-xl md:text-2xl text-black font-black max-w-2xl mx-auto leading-relaxed border-l-8 border-[#ccff00] pl-6 py-2 bg-gray-50 text-left">
-                I document the exact steps I take to automate work with AI. <br/>
-                Read how I built my scrapers, sales bots, and data tools.
+                I document the exact steps I take to automate work as a non-technical builder. <br/>
+                Read how I build scrapers, sales bots, and data tools from an AI-Native perspective.
               </p>
            </div>
         </div>
