@@ -3,7 +3,6 @@ id: avatar-video-producer
 category: Content Ops
 title: The AI Avatar Scriptwriter
 tagline: Scripts for HeyGen & Synthesia.
-difficulty: Intermediate
 time: Batch
 archetype: Processor
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     Sustainable Fashion,Maya,Ethically sourced materials
     Remote Work Tips,Chris,Better work-life balance
 isPremium: false
+inputs:
+  - Source Draft
+  - Local File (CSV/MD)
+outputs:
+  - Repurposed Assets
+  - Cleaned Data
 ---
 
 # Agent Configuration: The AI Avatar Scriptwriter

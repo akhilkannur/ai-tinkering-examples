@@ -3,7 +3,6 @@ id: content-upgrade-conversion-rate
 category: Marketing Ops
 title: Lead Magnet Converter
 tagline: How many readers download the PDF?
-difficulty: Beginner
 time: Monthly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     /post-1,1000,50
     /post-2,2000,10
 isPremium: true
+inputs:
+  - Campaign Data
+  - Local File (CSV/MD)
+outputs:
+  - Optimization Plan
+  - Cleaned Data
 ---
 
 # Agent Configuration: The CRO Lead

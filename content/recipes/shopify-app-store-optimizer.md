@@ -3,7 +3,6 @@ id: shopify-app-store-optimizer
 category: E-commerce
 title: The Shopify App Store Optimizer
 tagline: Get found by merchants.
-difficulty: Advanced
 time: Batch
 description: >-
   The Shopify App Store is a search engine. This agent researches top-ranking
@@ -17,6 +16,10 @@ sampleData:
     Order Printer Pro,https://apps.shopify.com/printer-pro,PDF Invoices
     Loyalty Loop,https://apps.shopify.com/loyalty-loop,Loyalty Program
 isPremium: true
+inputs:
+  - Product Data
+outputs:
+  - Shopify-Ready Update
 ---
 
 # Agent Configuration: The Shopify App Store Optimizer

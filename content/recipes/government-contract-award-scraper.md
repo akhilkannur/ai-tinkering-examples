@@ -3,7 +3,6 @@ id: government-contract-award-scraper
 category: Lead Gen
 title: The GovCon Winner
 tagline: Find companies who just won federal contracts.
-difficulty: Advanced
 time: Weekly
 archetype: Researcher
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     1000000,Department of Defense
     500000,NASA
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The GovCon Winner

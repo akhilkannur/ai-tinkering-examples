@@ -3,7 +3,6 @@ id: seo-title-tester
 category: SEO
 title: The SEO Title Factory
 tagline: High-CTR titles for 50 keywords at once.
-difficulty: Beginner
 time: 5 mins
 description: >-
   Ranking #1 doesn't matter if no one clicks. This agent reads a list of target
@@ -17,6 +16,10 @@ sampleData:
     How to scale ads,Guide
     AI Agent tutorial,Educational
 isPremium: true
+inputs:
+  - Target URL
+outputs:
+  - SEO Audit / Fixes
 ---
 
 # Agent Configuration: The SEO Title Factory

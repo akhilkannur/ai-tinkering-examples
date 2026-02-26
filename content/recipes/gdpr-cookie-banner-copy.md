@@ -3,7 +3,6 @@ id: gdpr-cookie-banner-copy
 category: Strategic Ops
 title: The Converting Cookie Banner
 tagline: Compliance that doesn't kill data.
-difficulty: Beginner
 time: Batch
 description: >-
   Cookie banners annoy users and kill data collection. This agent writes 'Human'
@@ -17,6 +16,10 @@ sampleData:
     FinGuard,Cybersecurity,Professional & Trustworthy
     BrewBase,Coffee subscription,Casual & Direct
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Converting Cookie Banner

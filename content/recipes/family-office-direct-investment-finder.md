@@ -3,7 +3,6 @@ id: family-office-direct-investment-finder
 category: Lead Gen
 title: The Family Office Hunter
 tagline: Target family offices making direct tech bets.
-difficulty: Advanced
 time: 30 mins
 archetype: Researcher
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     Iconiq Capital,iconiqcapital.com
     Bezos Expeditions,bezosexpeditions.com
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Family Office Hunter

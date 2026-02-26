@@ -3,7 +3,6 @@ id: sales-call-sentiment-tracker
 category: Sales Ops
 title: The Call Sentiment Tracker
 tagline: Analyze the mood of your sales calls.
-difficulty: Advanced
 time: Post-Call
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     1,Alice,Won,"I love this feature, exactly what we need."
     2,Bob,Lost,"This is too expensive and doesn't work."
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Conversation Coach

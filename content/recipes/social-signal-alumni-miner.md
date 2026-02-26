@@ -3,7 +3,6 @@ id: social-signal-alumni-miner
 category: Strategic Ops
 title: Alumni Champion Finder
 tagline: Track where your happy users moved.
-difficulty: Advanced
 time: Monthly
 archetype: Processor
 description: >-
@@ -15,6 +14,12 @@ sampleData:
     Name,Old_Company,New_Company,New_Role
     John Doe,HappyClient Inc,Prospect Corp,VP Sales
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 # Agent Configuration: The SDR
 

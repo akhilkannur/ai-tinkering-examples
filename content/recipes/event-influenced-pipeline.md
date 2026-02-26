@@ -3,7 +3,6 @@ id: event-influenced-pipeline
 category: Strategic Ops
 title: Event Influence Calc
 tagline: Total pipeline touched by this event.
-difficulty: Intermediate
 time: Monthly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     Event_X,50000,2023-01-01,2023-02-01
     Event_X,10000,2023-03-01,2023-01-01
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 # Agent Configuration: The Marketing Analyst
 

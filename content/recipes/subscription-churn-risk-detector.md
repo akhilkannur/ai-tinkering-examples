@@ -3,7 +3,6 @@ id: subscription-churn-risk-detector
 category: Retention
 title: Subscription Churn Risk
 tagline: Flag subscribers who paused or skipped.
-difficulty: Intermediate
 time: Weekly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     John,Feb,Skipped
     John,Mar,Skipped
 isPremium: true
+inputs:
+  - Customer List
+  - Local File (CSV/MD)
+outputs:
+  - Re-engagement Script
+  - Cleaned Data
 ---
 # Agent Configuration: The Subscription Manager
 

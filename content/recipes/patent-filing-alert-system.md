@@ -3,7 +3,6 @@ id: patent-filing-alert-system
 category: Lead Gen
 title: The R&D Spy
 tagline: Monitor new patent filings for R&D budget signals.
-difficulty: Advanced
 time: Monthly
 archetype: Researcher
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     "Solid State Battery",Automotive
     "Large Language Model",Software
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The R&D Spy

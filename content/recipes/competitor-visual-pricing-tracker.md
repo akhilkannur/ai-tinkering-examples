@@ -3,7 +3,6 @@ id: competitor-visual-pricing-tracker
 category: Competitive Intel
 title: Visual Pricing Page Monitor
 tagline: Detect hidden pricing changes that text scrapers miss.
-difficulty: Advanced
 time: Batch
 archtype: Researcher
 description: >-
@@ -15,6 +14,10 @@ sampleData:
     Competitor,URL,Last_Screenshot_Path
     CompetitorA,https://comp-a.com/pricing,./screens/date1.png
 isPremium: true
+inputs:
+  - Competitor URL
+outputs:
+  - Intel Dashboard
 ---
 
 # Agent Configuration: Visual Pricing Page Monitor

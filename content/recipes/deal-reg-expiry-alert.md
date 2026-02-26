@@ -3,7 +3,6 @@ id: deal-reg-expiry-alert
 category: Strategic Ops
 title: Deal Reg Expiry Monitor
 tagline: Flag partner deal registrations that are about to expire.
-difficulty: Beginner
 time: Weekly
 archtype: Processor
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     Reseller B,SpaceX Mars,2023-05-01,100000,2023-06-01
     Reseller C,Startup Inc,2023-10-15,5000,2023-10-20
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Partner Revenue Defender

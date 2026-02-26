@@ -3,7 +3,6 @@ id: revenue-leakage-hunter
 category: Sales Ops
 title: Revenue Leakage Audit
 tagline: Find users active on the platform without a contract.
-difficulty: Advanced
 time: Monthly
 archtype: Processor
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     [Active Contracts]
     beta.com, gamma.io
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Billing Integrity Manager

@@ -3,7 +3,6 @@ id: landing-page-conversion-drift
 category: Marketing Ops
 title: LP Conversion Drift Monitor
 tagline: Catch sudden drops in landing page conversion rates.
-difficulty: Intermediate
 time: Daily
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     /promo,2023-10-02,100,6
     /promo,2023-10-03,100,1
 isPremium: true
+inputs:
+  - Campaign Data
+  - Local File (CSV/MD)
+outputs:
+  - Optimization Plan
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Web Analytics Agent

@@ -3,7 +3,6 @@ id: ai-manager-handbook
 title: The AI Manager's Handbook
 category: Strategic Ops
 tagline: Teach AI your specific rules once.
-difficulty: Beginner
 time: 15 min
 archetype: Processor
 publish_date: '2026-01-13'
@@ -15,6 +14,12 @@ description: >-
   Stop repeating yourself. Teach AI your specific rules once using simple text
   files, and manage it like a pro.
 isPremium: false
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 
 # Agent Configuration: The AI Manager's Handbook

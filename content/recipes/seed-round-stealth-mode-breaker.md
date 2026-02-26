@@ -3,7 +3,6 @@ id: seed-round-stealth-mode-breaker
 category: Lead Gen
 title: The Stealth Mode Breaker
 tagline: Find "Stealth" startups hiring their first engineers.
-difficulty: Advanced
 time: 20 mins
 archetype: Researcher
 description: >-
@@ -19,6 +18,12 @@ sampleData:
     "Unannounced Startup"
     "Ex-Stripe Founder"
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Stealth Mode Breaker

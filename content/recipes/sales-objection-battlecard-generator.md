@@ -3,7 +3,6 @@ id: sales-objection-battlecard-generator
 category: Sales Ops
 title: Competitor Battlecard Builder
 tagline: Arm your sales team with scripts to beat specific competitors.
-difficulty: Intermediate
 time: 15 mins
 archetype: Hybrid
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     HubSpot,Marketing Automation
     Pipedrive,SMB CRM
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File + Search
+outputs:
+  - CRM-Ready Export
+  - Enriched Document
 ---
 
 # Agent Configuration: The Competitor Battlecard Builder

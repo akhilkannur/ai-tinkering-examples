@@ -3,7 +3,6 @@ id: github-headhunter
 category: Lead Gen
 title: The Code Headhunter
 tagline: Recruit from a specific repo or a tech niche.
-difficulty: Advanced
 time: 25 mins
 description: >-
   Top engineers don't have resumes; they have PRs. This agent reads a list of
@@ -16,6 +15,10 @@ sampleData:
     vercel/next.js
     shadcn-ui/ui
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+outputs:
+  - Enriched Leads
 ---
 
 # Agent Configuration: The Code Headhunter

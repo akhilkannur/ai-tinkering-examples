@@ -3,7 +3,6 @@ id: linkedin-connection-acceptance-rate
 category: Strategic Ops
 title: Connection Request A/B Tester
 tagline: Which note gets more connects?
-difficulty: Intermediate
 time: Monthly
 archetype: Processor
 description: Tracks the acceptance rate of different LinkedIn connection request templates.
@@ -14,6 +13,12 @@ sampleData:
     A (Generic),100,20
     B (Personalized),100,45
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 # Agent Configuration: The Social Selling Coach
 

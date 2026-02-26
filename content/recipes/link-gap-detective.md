@@ -3,7 +3,6 @@ id: link-gap-detective
 category: SEO
 title: The Link Gap Detective
 tagline: Find missing backlink opportunities.
-difficulty: Intermediate
 time: Batch
 description: >-
   Why do they rank and you don't? Links. This agent identifies websites that
@@ -17,6 +16,10 @@ sampleData:
     CompetitorB,"top sales tools for startups"
     CompetitorC,"CompetitorC reviews"
 isPremium: true
+inputs:
+  - Target URL
+outputs:
+  - SEO Audit / Fixes
 ---
 
 # Agent Configuration: The Link Gap Detective

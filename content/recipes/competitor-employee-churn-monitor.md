@@ -3,7 +3,6 @@ id: competitor-employee-churn-monitor
 category: Competitive Intel
 title: Competitor Brain Drain
 tagline: Did their VP of Sales just quit?
-difficulty: Intermediate
 time: Monthly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     Comp A,VP Sales,John Doe,Left
     Comp A,CTO,Jane Smith,Active
 isPremium: false
+inputs:
+  - Competitor URL
+  - Local File (CSV/MD)
+outputs:
+  - Intel Dashboard
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Market Intelligence Analyst

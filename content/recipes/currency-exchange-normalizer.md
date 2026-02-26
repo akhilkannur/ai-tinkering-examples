@@ -3,7 +3,6 @@ id: currency-exchange-normalizer
 category: Sales Ops
 title: Global Pipeline Normalizer
 tagline: Convert global deals into a single master currency.
-difficulty: Beginner
 time: Weekly
 archtype: Processor
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     Deal B,500,GBP
     Deal C,1000,USD
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Revenue Controller

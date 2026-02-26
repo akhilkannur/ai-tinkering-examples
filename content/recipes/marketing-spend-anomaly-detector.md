@@ -3,7 +3,6 @@ id: marketing-spend-anomaly-detector
 category: Marketing Ops
 title: Ad Spend Spike Alert
 tagline: Catch runaway budgets before they burn 10k.
-difficulty: Intermediate
 time: Daily
 archtype: Processor
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     2023-10-02,Facebook,520
     2023-10-03,Facebook,2000
 isPremium: true
+inputs:
+  - Campaign Data
+outputs:
+  - Optimization Plan
 ---
 
 # Agent Configuration: The Budget Controller

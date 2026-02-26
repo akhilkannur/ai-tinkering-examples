@@ -3,7 +3,6 @@ id: abm-tiering-calculator
 category: Sales Ops
 title: ABM Account Tiering Calc
 tagline: Auto-assign Tier 1/2/3 based on ICP fit and intent.
-difficulty: Advanced
 time: Quarterly
 archtype: Processor
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     Beta Inc,Manufacturing,10M,50,20
     Gamma LLC,Software,100M,200,60
 isPremium: false
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The ABM Strategist

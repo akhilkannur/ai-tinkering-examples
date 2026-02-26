@@ -3,7 +3,6 @@ id: clawback-calculator
 category: Sales Ops
 title: Commission Clawback Audit
 tagline: Identify commissions paid on deals that churned early.
-difficulty: Intermediate
 time: Monthly
 archtype: Processor
 description: >-
@@ -16,6 +15,10 @@ sampleData:
     Deal-1,John,1000,2023-10-01,2023-09-01
     Deal-2,Jane,500,2023-12-01,2023-01-01
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Commission Manager

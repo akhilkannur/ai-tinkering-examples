@@ -3,7 +3,6 @@ id: instagram-ads-library-spy
 category: Lead Gen
 title: The Ad-Pixel Arbitrage
 tagline: Find D2C brands running ads but missing pixel tracking.
-difficulty: Advanced
 time: 25 mins
 archetype: Analyst
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     brand-a.com
     brand-b.com
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+outputs:
+  - Enriched Leads
 ---
 
 # Agent Configuration: The Ad-Pixel Arbitrage

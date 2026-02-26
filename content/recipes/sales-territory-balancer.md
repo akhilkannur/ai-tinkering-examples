@@ -3,7 +3,6 @@ id: sales-territory-balancer
 category: Sales Ops
 title: Territory Fairness Balancer
 tagline: Ensure every rep has equal revenue potential.
-difficulty: Advanced
 time: Quarterly
 archtype: Processor
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     Beta,NY,500000,Rep B
     Gamma,CA,50000,Rep A
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Territory Planner

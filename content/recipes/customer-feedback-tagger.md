@@ -3,7 +3,6 @@ id: customer-feedback-tagger
 category: Strategic Ops
 title: Feedback Auto-Tagger
 tagline: Organize messy user feedback into a clean product roadmap.
-difficulty: Intermediate
 time: 5 mins
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Bob,"It would be cool if this integrated with Slack."
     Charlie,"The app crashes when I upload a PDF."
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Feedback Auto-Tagger

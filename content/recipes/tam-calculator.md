@@ -3,7 +3,6 @@ id: tam-calculator
 category: Strategic Ops
 title: The AI TAM Researcher
 tagline: Calculate your market size using real-world data.
-difficulty: Intermediate
 time: Batch
 description: >-
   Investors need to see the math. This agent researches industry sizes, pricing
@@ -17,6 +16,10 @@ sampleData:
     Global AI Startups,Seed stage tech companies,500
     UK Law Firms,Mid-market legal practices,2000
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The AI TAM Researcher

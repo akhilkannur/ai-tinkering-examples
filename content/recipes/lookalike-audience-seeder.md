@@ -3,7 +3,6 @@ id: lookalike-audience-seeder
 category: Paid Media
 title: The LAL Seeder Factory
 tagline: 'Standardize 10,000 customers for ''Custom Audience'' upload.'
-difficulty: Intermediate
 time: Monthly
 description: >-
   High-quality lookalikes need high-quality seeds. This agent reads your massive
@@ -16,6 +15,10 @@ sampleData:
     John Doe,john@acme.com,5000,12
     Jane Smith,jane@globex.com,1200,3
 isPremium: true
+inputs:
+  - Ad Account Data
+outputs:
+  - Performance Report
 ---
 
 # Agent Configuration: The LAL Seeder Factory

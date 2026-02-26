@@ -3,7 +3,6 @@ id: inventory-opportunity-cost
 category: E-commerce
 title: The Stockout Alarm
 tagline: Don't just count the loss. Recover it.
-difficulty: Intermediate
 time: Daily
 archetype: Processor
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     Red-Dress-S,500,0.03,80,5
     Blue-Tie,50,0.02,20,10
 isPremium: true
+inputs:
+  - Product Data
+  - Local File (CSV/MD)
+outputs:
+  - Shopify-Ready Update
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Inventory Planner

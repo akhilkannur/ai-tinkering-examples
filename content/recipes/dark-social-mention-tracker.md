@@ -3,7 +3,6 @@ id: dark-social-mention-tracker
 category: Strategic Ops
 title: Community Mention Alert
 tagline: Who is talking about us in Slack?
-difficulty: Advanced
 time: Daily
 archetype: Processor
 description: >-
@@ -15,6 +14,12 @@ sampleData:
     User: Has anyone tried [Brand]?
     User: Yeah it's great.
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 # Agent Configuration: The Community Lead
 

@@ -3,7 +3,6 @@ id: backlink-toxicity-checker
 category: SEO
 title: The Backlink Toxicity Checker
 tagline: Is that link helping or hurting?
-difficulty: Intermediate
 time: Monthly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     baddomain.xyz/links,5,60,Buy Viagar,.xyz
     goodblog.com/post,45,2,Marketing Tips,.com
 isPremium: false
+inputs:
+  - Target URL
+  - Local File (CSV/MD)
+outputs:
+  - SEO Audit / Fixes
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Bodyguard

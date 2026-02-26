@@ -3,7 +3,6 @@ id: g2-review-solicitation-timer
 category: Customer Success
 title: Perfect Review Timer
 tagline: Ask when they are happiest.
-difficulty: Intermediate
 time: Daily
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     Acme,10,2023-10-01
     Beta,5,2023-10-01
 isPremium: true
+inputs:
+  - Usage Logs
+  - Local File (CSV/MD)
+outputs:
+  - Churn Risk Report
+  - Cleaned Data
 ---
 # Agent Configuration: The Review Manager
 

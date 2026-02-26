@@ -3,7 +3,6 @@ id: lead-routing-latency-histogram
 category: Marketing Ops
 title: Routing Latency Auditor
 tagline: Measure delays in lead assignment.
-difficulty: Intermediate
 time: Weekly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     L-1,10:00,10:01
     L-2,10:00,10:45
 isPremium: true
+inputs:
+  - Campaign Data
+  - Local File (CSV/MD)
+outputs:
+  - Optimization Plan
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Operations Auditor Agent

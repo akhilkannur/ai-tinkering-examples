@@ -3,7 +3,6 @@ id: haro-pitcher
 category: Content Ops
 title: The Bulk HARO Pitcher
 tagline: Scan 100 media queries and draft 5 winning pitches.
-difficulty: Advanced
 time: Daily
 description: >-
   Journalists move fast. This agent scans a large text file of media queries
@@ -15,6 +14,10 @@ sampleData:
     Query: Looking for expert on AI in Sales. Outlet: Forbes. Deadline: 2pm.
     Query: Tips for small business taxes. Outlet: WSJ. Deadline: Tomorrow.
 isPremium: true
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: The Bulk HARO Pitcher

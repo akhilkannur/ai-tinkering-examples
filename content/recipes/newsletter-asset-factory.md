@@ -3,7 +3,6 @@ id: newsletter-asset-factory
 category: Content Ops
 title: The News Jacker
 tagline: Don't just write generic content. Ride the wave of breaking news.
-difficulty: Intermediate
 time: 20 mins
 archetype: Hybrid
 description: >-
@@ -20,6 +19,12 @@ sampleData:
 
     Crypto Regulation,https://www.coindesk.com/policy/new-sec-rules
 isPremium: true
+inputs:
+  - Source Draft
+  - Local File + Search
+outputs:
+  - Repurposed Assets
+  - Enriched Document
 ---
 
 # Agent Configuration: The News Jacker

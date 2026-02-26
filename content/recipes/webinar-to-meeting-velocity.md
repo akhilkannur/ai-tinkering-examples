@@ -3,7 +3,6 @@ id: webinar-to-meeting-velocity
 category: Sales Ops
 title: The Event ROI Analyst
 tagline: Don't just count attendees. Segment them by Job Title to find the VIPs.
-difficulty: Intermediate
 time: Weekly
 archetype: Processor
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     Jane Smith,Beta,Marketing Manager,Yes,Yes
     Mike Ross,Stark Ind,Director of Ops,Yes,Yes
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Event ROI Analyst

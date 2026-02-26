@@ -3,7 +3,6 @@ id: schema-markup-generator
 category: SEO
 title: Bulk Schema JSON-LD Generator
 tagline: Get "Rich Snippets" on Google by generating valid Schema markup.
-difficulty: Intermediate
 time: 10 mins
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     Blue Widget,29.99,USD,InStock,The best widget for your home.
     Red Gear,45.00,USD,OutOfStock,High-durability gear.
 isPremium: true
+inputs:
+  - Target URL
+  - Local File (CSV/MD)
+outputs:
+  - SEO Audit / Fixes
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Bulk Schema JSON-LD Generator

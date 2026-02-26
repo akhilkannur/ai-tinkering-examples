@@ -3,7 +3,6 @@ id: implementation-stalled-alert
 category: Customer Success
 title: Stalled Project Alert
 tagline: Flag onboarding projects stuck in 'Pending'.
-difficulty: Beginner
 time: Weekly
 archtype: Processor
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     Beta,Setup,2
     Gamma,Integration,15
 isPremium: true
+inputs:
+  - Usage Logs
+outputs:
+  - Churn Risk Report
 ---
 
 # Agent Configuration: The Implementation Manager

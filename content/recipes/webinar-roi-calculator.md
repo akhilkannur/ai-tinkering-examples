@@ -3,7 +3,6 @@ id: webinar-roi-calculator
 category: Marketing Ops
 title: Webinar ROI Analyzer
 tagline: Did we actually make money on that event?
-difficulty: Intermediate
 time: Batch
 archtype: Processor
 description: Calculates Cost Per Lead (CPL) and Pipeline ROI for a webinar event.
@@ -14,6 +13,10 @@ sampleData:
     Q3 Webinar,5000,200,50000
     Q4 Summit,20000,100,10000
 isPremium: true
+inputs:
+  - Campaign Data
+outputs:
+  - Optimization Plan
 ---
 
 # Agent Configuration: The Demand Gen Manager

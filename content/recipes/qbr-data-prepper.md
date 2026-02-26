@@ -3,7 +3,6 @@ id: qbr-data-prepper
 category: Customer Success
 title: QBR Data Aggregator
 tagline: Prepare usage and support data for reviews.
-difficulty: Intermediate
 time: Quarterly
 archtype: Processor
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     [Tickets]
     Acme,2 critical
 isPremium: true
+inputs:
+  - Usage Logs
+outputs:
+  - Churn Risk Report
 ---
 
 # Agent Configuration: The Account Manager

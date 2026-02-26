@@ -3,7 +3,6 @@ id: sales-negotiation-script-writer
 category: Sales Ops
 title: The Closer's Script
 tagline: Handle "It's too expensive" like a pro.
-difficulty: Intermediate
 time: 5 mins
 archetype: Hybrid
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     Objection: "We love it, but CFO says budget is frozen until Q1."
     Leverage: They have a compliance audit next month that we solve.
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File + Search
+outputs:
+  - CRM-Ready Export
+  - Enriched Document
 ---
 
 # Agent Configuration: The Closer's Script

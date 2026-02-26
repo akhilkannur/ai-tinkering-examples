@@ -3,7 +3,6 @@ id: challenger-brand-identifier
 category: Lead Gen
 title: The Challenger Brand Hunter
 tagline: Find Series B companies competing with Fortune 500 giants.
-difficulty: Intermediate
 time: 20 mins
 archetype: Researcher
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     Zoom,Video Conferencing
     Slack,Communication
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Challenger Brand Hunter

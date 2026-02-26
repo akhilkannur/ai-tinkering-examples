@@ -3,7 +3,6 @@ id: diversity-hiring-initiative-finder
 category: Lead Gen
 title: The DEI Initiative Spotter
 tagline: Target companies posting DEI-specific roles or reports.
-difficulty: Intermediate
 time: 20 mins
 archetype: Researcher
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     "Chief Diversity Officer"
     "DEI Annual Report"
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The DEI Initiative Spotter

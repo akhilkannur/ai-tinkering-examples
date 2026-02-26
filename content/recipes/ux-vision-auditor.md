@@ -3,7 +3,6 @@ id: ux-vision-auditor
 category: CRO
 title: The UX Vision Auditor
 tagline: An eye-tracking lab in your terminal.
-difficulty: Experimental
 time: Batch
 description: >-
   Why aren't they converting? This agent uses Vision capabilities to audit
@@ -17,6 +16,10 @@ sampleData:
     Pricing,assets/ux/pricing_mobile.png,Mobile
     Signup,assets/ux/signup_form.webp,Desktop
 isPremium: true
+inputs:
+  - Conversion Data
+outputs:
+  - A/B Experiment Ideas
 ---
 
 # Agent Configuration: The UX Vision Auditor

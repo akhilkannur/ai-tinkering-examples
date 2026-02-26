@@ -3,7 +3,6 @@ id: deal-rotting-alert-system
 category: Sales Ops
 title: Deal Rotting Monitor
 tagline: Flag deals that haven't moved in 14 days.
-difficulty: Beginner
 time: Weekly
 archtype: Processor
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     Deal B,Discovery,2023-09-01
     Deal C,Demo,2023-10-15
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Pipeline Manager

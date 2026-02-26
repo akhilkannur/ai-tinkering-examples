@@ -3,7 +3,6 @@ id: demo-call-scripter
 category: Sales Ops
 title: The Demo Playbook Factory
 tagline: Custom demo scripts for every industry you sell to.
-difficulty: Beginner
 time: 20 mins
 description: >-
   Most demos are boring feature tours. This agent reads a list of target
@@ -16,6 +15,10 @@ sampleData:
     Fintech,Security Compliance,Auto-Audit Logs
     E-com,Cart Abandonment,SMS Recovery
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Demo Playbook Factory

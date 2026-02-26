@@ -3,7 +3,6 @@ id: startup-investor-matchmaker
 category: Sales Ops
 title: Investor Thesis Matcher
 tagline: Find the right VCs for your startup based on their investment thesis.
-difficulty: Advanced
 time: 15 mins
 archetype: Processor
 description: >-
@@ -29,6 +28,12 @@ sampleData:
 
     SaaStr Fund,B2B SaaS,Seed
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Investor Thesis Matcher

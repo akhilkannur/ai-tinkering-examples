@@ -3,7 +3,6 @@ id: sales-roleplay-simulator
 category: Sales Ops
 title: The Difficult Prospect Simulator
 tagline: Practice your pitch against AI.
-difficulty: Advanced
 time: Batch
 description: >-
   Sales training is expensive. This agent generates custom 'Persona' briefs and
@@ -17,6 +16,10 @@ sampleData:
     The CFO Cut,Budget-Conscious CFO,ROI and Payback Period
     The User Pivot,Busy End-User,Time to learn a new tool
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Difficult Prospect Simulator

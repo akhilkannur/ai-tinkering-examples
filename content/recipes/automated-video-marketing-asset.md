@@ -3,7 +3,6 @@ id: automated-video-marketing-asset
 category: Content Ops
 title: The Automated Video Producer
 tagline: Turn any landing page into a 30s TikTok/Reels promo video.
-difficulty: Advanced
 time: 5 mins
 archetype: Processor
 description: >-
@@ -21,6 +20,12 @@ sampleData:
       "style": "muted" 
     }
 isPremium: false
+inputs:
+  - Source Draft
+  - Local File (CSV/MD)
+outputs:
+  - Repurposed Assets
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Automated Video Producer

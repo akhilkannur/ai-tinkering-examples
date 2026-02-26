@@ -3,7 +3,6 @@ id: internal-link-graph-visualizer
 category: SEO
 title: The Link Graph Architect
 tagline: Visualize your site structure.
-difficulty: Advanced
 time: Batch
 description: >-
   Orphaned pages don't rank. This agent processes complex internal link data and
@@ -19,6 +18,10 @@ sampleData:
     /blog/post-1,/home,Breadcrumb
     /services,/contact,CTA
 isPremium: true
+inputs:
+  - Target URL
+outputs:
+  - SEO Audit / Fixes
 ---
 
 # Agent Configuration: The Link Graph Architect

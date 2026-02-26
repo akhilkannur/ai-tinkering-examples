@@ -3,7 +3,6 @@ id: reddit-scout
 category: Lead Gen
 title: The Reddit Signal Scout
 tagline: Monitor 50 subreddits for buying signals.
-difficulty: Intermediate
 time: Daily
 description: >-
   Reddit is full of people asking 'What's the best tool for X?'. This agent
@@ -17,6 +16,10 @@ sampleData:
     r/Marketing,Automate email,Process pain
     r/Entrepreneur,Alternative to HubSpot,Switching intent
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+outputs:
+  - Enriched Leads
 ---
 
 # Agent Configuration: The Reddit Signal Scout

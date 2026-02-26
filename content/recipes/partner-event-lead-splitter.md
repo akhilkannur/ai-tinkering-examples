@@ -3,7 +3,6 @@ id: partner-event-lead-splitter
 category: Strategic Ops
 title: Co-Marketing Lead Splitter
 tagline: Share leads fairly with partners.
-difficulty: Intermediate
 time: Batch
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Jane,US
     Bob,US
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 # Agent Configuration: The Partner Marketing Manager
 

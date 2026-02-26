@@ -3,7 +3,6 @@ id: competitor-ad-comment-scraper
 category: Strategic Ops
 title: Competitor Dissatisfaction Miner
 tagline: Find unhappy people on their ads.
-difficulty: Intermediate
 time: Weekly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     Love this!,User A
     Too expensive compared to [Us],User B
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 # Agent Configuration: The Social Prospector
 

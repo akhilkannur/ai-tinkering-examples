@@ -3,7 +3,6 @@ id: user-journey-friction-simulator
 category: Product Ops
 title: The Friction Hunter Simulation
 tagline: Roleplay your angriest customer.
-difficulty: Advanced
 time: 30 mins
 archetype: Researcher
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     Page: Signup
     Field: "Enter your Mother's Maiden Name"
 isPremium: true
+inputs:
+  - Feature Backlog
+  - Web Search Target
+outputs:
+  - Priority Matrix
+  - Curated Intel
 ---
 
 # Agent Configuration: The Friction Hunter

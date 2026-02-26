@@ -14,6 +14,10 @@ tools:
   - generate_text
   - vision
 isPremium: false
+inputs:
+  - Instruction File
+outputs:
+  - Done Result
 ---
 
 # Agent Configuration: The Franchise Brand Guardian

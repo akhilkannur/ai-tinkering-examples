@@ -3,7 +3,6 @@ id: opportunity-stage-age-histogram
 category: Sales Ops
 title: Stage Aging Histogram
 tagline: Visualize the distribution of deal age in each stage.
-difficulty: Intermediate
 time: Monthly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Deal B,Discovery,40
     Deal C,Demo,10
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Pipeline Hygiene Agent

@@ -3,7 +3,6 @@ id: beta-program-active-roster
 category: Customer Success
 title: Beta Tester Verifier
 tagline: Are they actually testing?
-difficulty: Beginner
 time: Weekly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     John,0
     Jane,50
 isPremium: false
+inputs:
+  - Usage Logs
+  - Local File (CSV/MD)
+outputs:
+  - Churn Risk Report
+  - Cleaned Data
 ---
 # Agent Configuration: The Product Feedback Loop Manager
 

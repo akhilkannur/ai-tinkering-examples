@@ -3,7 +3,6 @@ id: angel-investor-portfolio-scanner
 category: Lead Gen
 title: The Angel Portfolio Scanner
 tagline: Prospect companies backed by friendly Angel Investors.
-difficulty: Intermediate
 time: 20 mins
 archetype: Researcher
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     Jason Calacanis,https://angel.co/jason,SaaS
     Naval Ravikant,https://angel.co/naval,Crypto/Web3
 isPremium: false
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Angel Portfolio Scanner

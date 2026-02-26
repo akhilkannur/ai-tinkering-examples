@@ -3,7 +3,6 @@ id: email-dns-auditor
 category: Marketing Ops
 title: The Bulk Deliverability Auditor
 tagline: Audit the sender reputation of 100 domains.
-difficulty: Advanced
 time: 10 mins
 description: >-
   Content doesn't matter if your email bounces. This agent reads a list of
@@ -17,6 +16,10 @@ sampleData:
     stripe.com
     my-broken-startup.com
 isPremium: true
+inputs:
+  - Campaign Data
+outputs:
+  - Optimization Plan
 ---
 
 # Agent Configuration: The Bulk Deliverability Auditor

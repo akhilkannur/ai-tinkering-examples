@@ -3,7 +3,6 @@ id: expansion-propensity-scorer
 category: Sales Ops
 title: Upsell Propensity Scorer
 tagline: Who is ready to buy more?
-difficulty: Advanced
 time: Monthly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     Acme,20,50
     Beta,-5,0
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 # Agent Configuration: The Account Management Ops
 

@@ -3,7 +3,6 @@ id: booth-staff-auto-scheduler
 category: Marketing Ops
 title: Booth Staff Auto-Scheduler
 tagline: Fairly rotate booth duty during conferences.
-difficulty: Beginner
 time: Batch
 archetype: Processor
 description: >-
@@ -15,6 +14,12 @@ sampleData:
     Staff_Name,Role,Availability
     John,Sales,All Day
 isPremium: false
+inputs:
+  - Campaign Data
+  - Local File (CSV/MD)
+outputs:
+  - Optimization Plan
+  - Cleaned Data
 ---
 
 # Agent Configuration: Booth Staff Auto-Scheduler

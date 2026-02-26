@@ -3,7 +3,6 @@ id: sales-funnel-bottleneck-finder
 category: Sales Ops
 title: Pipeline Leak Detector
 tagline: Find exactly where your deals are dying.
-difficulty: Intermediate
 time: 5 mins
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Meeting to Opp,50,40,80%
     Opp to Close,40,10,25%
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Pipeline Leak Detector

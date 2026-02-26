@@ -3,7 +3,6 @@ id: api-error-impact-alerter
 category: Strategic Ops
 title: API Error Impact Alerter
 tagline: Know exactly which VIP customers are seeing 500 errors.
-difficulty: Advanced
 time: Real-time
 archetype: Processor
 description: >-
@@ -15,6 +14,12 @@ sampleData:
     Error_Log,Customer_IP
     500 Internal Error,192.168.1.5
 isPremium: false
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 
 # Agent Configuration: API Error Impact Alerter

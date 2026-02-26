@@ -3,7 +3,6 @@ id: cold-email-personalization-at-scale
 category: Sales Ops
 title: Cold Email Personalizer
 tagline: Merges company news with lead lists to generate custom icebreakers.
-difficulty: Advanced
 time: 20 mins
 archetype: Hybrid
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Zapier,Wade Foster,CEO
     Loom,Joe Thomas,Founder
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File + Search
+outputs:
+  - CRM-Ready Export
+  - Enriched Document
 ---
 
 # Agent Configuration: The Cold Email Personalizer

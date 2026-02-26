@@ -3,7 +3,6 @@ id: utm-taxonomy-enforcer
 category: Marketing Ops
 title: UTM Taxonomy Auditor
 tagline: Standardize your tracking URLs and fix messy analytics data.
-difficulty: Intermediate
 time: 5 mins
 archetype: Processor
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     https://site.com/?utm_source=google&utm_medium=cpc
     https://site.com/?utm_source=fb%20ads&utm_medium=paid
 isPremium: true
+inputs:
+  - Campaign Data
+  - Local File (CSV/MD)
+outputs:
+  - Optimization Plan
+  - Cleaned Data
 ---
 
 # Agent Configuration: The UTM Taxonomy Auditor

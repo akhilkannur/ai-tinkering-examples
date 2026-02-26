@@ -3,7 +3,6 @@ id: employee-advocacy-leaderboard
 category: Strategic Ops
 title: Social Advocacy Leaderboard
 tagline: Who is the loudest brand champion?
-difficulty: Beginner
 time: Weekly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     John,5,50,10
     Jane,10,200,50
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 # Agent Configuration: The Social Media Manager
 

@@ -3,7 +3,6 @@ id: sales-discovery-question-generator
 category: Sales Ops
 title: Discovery Call Scripter
 tagline: 'Generate deep, probing questions specific to your prospect''s role.'
-difficulty: Beginner
 time: 5 mins
 archetype: Hybrid
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Industry: Fintech
     Company Size: 500 employees
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File + Search
+outputs:
+  - CRM-Ready Export
+  - Enriched Document
 ---
 
 # Agent Configuration: The Discovery Call Scripter

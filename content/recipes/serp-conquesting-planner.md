@@ -3,7 +3,6 @@ id: serp-conquesting-planner
 category: Competitive Intel
 title: SERP Conquest Planner
 tagline: Steal traffic where they are weak.
-difficulty: Advanced
 time: Monthly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     best crm,1,20
     crm pricing,3,15
 isPremium: true
+inputs:
+  - Competitor URL
+  - Local File (CSV/MD)
+outputs:
+  - Intel Dashboard
+  - Cleaned Data
 ---
 
 # Agent Configuration: The SEO Manager

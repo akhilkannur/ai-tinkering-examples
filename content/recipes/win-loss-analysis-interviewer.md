@@ -3,7 +3,6 @@ id: win-loss-analysis-interviewer
 category: Sales Ops
 title: The Win/Loss Forensics Agent
 tagline: Uncover the real reasons you lost.
-difficulty: Intermediate
 time: Batch
 description: >-
   Sales reps rarely hear the full truth. This agent processes your internal
@@ -17,6 +16,10 @@ sampleData:
     StartupInc,Chose an alternative with better API docs,Vanta
     TechFlow,No response after pricing proposal,Pipedrive
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Win/Loss Forensics Agent

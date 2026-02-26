@@ -3,7 +3,6 @@ id: review-sentiment-quantifier
 category: Competitive Intel
 title: The Review Sentiment Factory
 tagline: Quantify the emotion of 1000+ customer reviews.
-difficulty: Advanced
 time: Monthly
 description: >-
   Star ratings lie. This agent reads a massive CSV of customer reviews (yours or
@@ -16,6 +15,10 @@ sampleData:
     "Great tool but the export is so slow",4
     "Support never replied to my ticket",1
 isPremium: true
+inputs:
+  - Competitor URL
+outputs:
+  - Intel Dashboard
 ---
 
 # Agent Configuration: The Review Sentiment Factory

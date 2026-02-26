@@ -3,7 +3,6 @@ id: content-influence-scorer
 category: Marketing Ops
 title: Content Asset Influencer
 tagline: Rank assets by how much pipeline they touched.
-difficulty: Advanced
 time: Monthly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Deal-1,10000,Guide_B
     Deal-2,5000,Whitepaper_A
 isPremium: true
+inputs:
+  - Campaign Data
+  - Local File (CSV/MD)
+outputs:
+  - Optimization Plan
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Content Analyst Agent

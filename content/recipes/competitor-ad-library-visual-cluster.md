@@ -3,7 +3,6 @@ id: competitor-ad-library-visual-cluster
 category: Paid Media
 title: Competitor Ad Style Clusterer
 tagline: Group 100s of competitor ads by visual theme automatically.
-difficulty: Advanced
 time: Batch
 archtype: Researcher
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     101,https://fb-ads.com/1.jpg
     102,https://fb-ads.com/2.jpg
 isPremium: true
+inputs:
+  - Ad Account Data
+outputs:
+  - Performance Report
 ---
 
 # Agent Configuration: Competitor Ad Style Clusterer

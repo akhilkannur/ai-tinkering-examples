@@ -3,7 +3,6 @@ id: ma-integration-pain-prospector
 category: Lead Gen
 title: The M&A Chaos Hunter
 tagline: Target companies recently acquired or merged.
-difficulty: Advanced
 time: 30 mins
 archetype: Researcher
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     Figma,Tableau,2024-01-01
     Slack,Salesforce,2021-01-01
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The M&A Chaos Hunter

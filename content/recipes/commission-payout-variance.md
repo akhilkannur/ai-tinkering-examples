@@ -3,7 +3,6 @@ id: commission-payout-variance
 category: Sales Ops
 title: Commission Variance Alert
 tagline: Did John's check double MoM?
-difficulty: Intermediate
 time: Monthly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     John,Jan,5000
     John,Feb,15000
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Comp Plan Auditor

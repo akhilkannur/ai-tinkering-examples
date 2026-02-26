@@ -3,7 +3,6 @@ id: duplicate-lead-merger
 category: Sales Ops
 title: The Duplicate Lead Merger
 tagline: 'One person, one record.'
-difficulty: Intermediate
 time: Weekly
 archetype: Processor
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     1,john@acme.com,,2023-01-01
     2,john@acme.com,555-0199,2023-10-01
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Librarian

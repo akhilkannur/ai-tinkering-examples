@@ -3,7 +3,6 @@ id: sales-territory-mapper
 category: Sales Ops
 title: The Territory Mapper
 tagline: Balance your sales map instantly.
-difficulty: Advanced
 time: Quarterly
 archetype: Processor
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     CustB,10002,10000
     CustC,90210,75000
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Territory Architect

@@ -3,7 +3,6 @@ id: topic-cluster-architect
 category: SEO
 title: Topic Cluster Architect
 tagline: Group keywords into pillar pages.
-difficulty: Advanced
 time: Quarterly
 archetype: Processor
 description: >-
@@ -30,6 +29,12 @@ sampleOutput: |
   Total Estimated Traffic: 10,700/mo
   Content Gap identified: Comparison guides vs Salesforce.
 isPremium: true
+inputs:
+  - Target URL
+  - Local File (CSV/MD)
+outputs:
+  - SEO Audit / Fixes
+  - Cleaned Data
 ---
 
 # Agent Configuration: The SEO Strategist

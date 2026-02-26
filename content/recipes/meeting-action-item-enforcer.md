@@ -3,7 +3,6 @@ id: meeting-action-item-enforcer
 category: Strategic Ops
 title: Meeting Action Item Enforcer
 tagline: The AI project manager that nags you about tasks.
-difficulty: Intermediate
 time: Batch
 archetype: Processor
 description: >-
@@ -15,6 +14,12 @@ sampleData:
     Meeting_Date,Transcript_Snippet
     Oct 1,"I will fix the bug by Friday"
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 
 # Agent Configuration: Meeting Action Item Enforcer

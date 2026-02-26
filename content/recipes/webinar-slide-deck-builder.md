@@ -3,7 +3,6 @@ id: webinar-slide-deck-builder
 category: Content Ops
 title: The Webinar Deck Builder
 tagline: Presentations that don't suck.
-difficulty: Intermediate
 time: Batch
 description: >-
   Most webinars are 'Death by Powerpoint'. This agent outlines high-energy slide
@@ -17,6 +16,10 @@ sampleData:
     SEO for E-com Founders,Increase organic traffic by 50%,Store Owners
     AI-Powered Content,Build a content factory in 1 hour,Marketing Directors
 isPremium: true
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: The Webinar Deck Builder

@@ -3,7 +3,6 @@ id: job-description-optimizer
 category: Lead Gen
 title: The Sales Job Description Optimizer
 tagline: 'Attract ''A-Players'', repel tourists.'
-difficulty: Intermediate
 time: Batch
 description: >-
   Generic JDs attract generic candidates. This agent rewrites your job
@@ -17,6 +16,10 @@ sampleData:
     SDR,80k OTE,High-volume cold outreach
     Sales Manager,250k OTE,Scaled a team from 5 to 20
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+outputs:
+  - Enriched Leads
 ---
 
 # Agent Configuration: The Sales Job Description Optimizer

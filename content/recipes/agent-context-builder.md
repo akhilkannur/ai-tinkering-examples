@@ -3,7 +3,6 @@ id: agent-context-builder
 category: Strategic Ops
 title: The Project Architect
 tagline: Make any folder AI-ready instantly.
-difficulty: Beginner
 time: One-off
 archetype: Researcher
 description: >-
@@ -16,6 +15,12 @@ sampleData:
   content: |
     (No input file needed - this agent reads your actual file system)
 isPremium: false
+inputs:
+  - Business Goal
+  - Web Search Target
+outputs:
+  - Operating Manual
+  - Curated Intel
 ---
 
 # Agent Configuration: The Project Architect

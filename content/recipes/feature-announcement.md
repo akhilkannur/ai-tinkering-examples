@@ -3,7 +3,6 @@ id: feature-announcement
 category: Strategic Ops
 title: The Product Marketing Engine
 tagline: Turn technical updates into sales momentum.
-difficulty: Beginner
 time: 20 mins
 description: >-
   Don't just ship code; ship value. This agent reads a list of technical updates
@@ -16,6 +15,10 @@ sampleData:
     Smart Filter,Added regex support to lead table,2024-01-10
     Zapier v2,Added 5 new actions for CRM,2024-01-12
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Product Marketing Engine

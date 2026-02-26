@@ -3,7 +3,6 @@ id: marketing-agency-client-list-miner
 category: Lead Gen
 title: The Portfolio Reverse Engineer
 tagline: Reverse engineer agency portfolios for leads.
-difficulty: Intermediate
 time: 20 mins
 archetype: Researcher
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     https://pentagram.com/work
     https://clay.global/work
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Portfolio Reverse Engineer

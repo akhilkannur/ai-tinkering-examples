@@ -3,7 +3,6 @@ id: discount-approval-sla-tracker
 category: Sales Ops
 title: Deal Desk SLA Monitor
 tagline: How fast are quotes approved?
-difficulty: Intermediate
 time: Weekly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     Q1,10:00,10:30
     Q2,10:00,18:00
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Deal Desk Manager

@@ -3,7 +3,6 @@ id: qbr-deck-generator-auto
 category: Customer Success
 title: QBR Deck Generator
 tagline: Build a Quarterly Business Review deck in minutes.
-difficulty: Intermediate
 time: Batch
 archetype: Processor
 description: >-
@@ -15,6 +14,12 @@ sampleData:
     Account_Name,ROI_Metric
     Acme Corp,$50k Saved
 isPremium: true
+inputs:
+  - Usage Logs
+  - Local File (CSV/MD)
+outputs:
+  - Churn Risk Report
+  - Cleaned Data
 ---
 
 # Agent Configuration: QBR Deck Generator

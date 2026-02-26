@@ -3,7 +3,6 @@ id: competitor-win-rate-trend
 category: Competitive Intel
 title: Competitor Win Rate Trend
 tagline: Are we winning or losing against Competitor X?
-difficulty: Intermediate
 time: Monthly
 archtype: Processor
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     Jan,Comp X,Lost
     Feb,Comp X,Lost
 isPremium: true
+inputs:
+  - Competitor URL
+outputs:
+  - Intel Dashboard
 ---
 
 # Agent Configuration: The Competitive Analyst

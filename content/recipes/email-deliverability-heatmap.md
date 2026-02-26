@@ -3,7 +3,6 @@ id: email-deliverability-heatmap
 category: Marketing Ops
 title: ISP Deliverability Heatmap
 tagline: Are we blocked by Outlook?
-difficulty: Intermediate
 time: Weekly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     gmail.com,1000,200
     corporate,500,10
 isPremium: true
+inputs:
+  - Campaign Data
+  - Local File (CSV/MD)
+outputs:
+  - Optimization Plan
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Email Ops

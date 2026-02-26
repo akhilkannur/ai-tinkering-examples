@@ -3,7 +3,6 @@ id: feature-adoption-laggard-hunter
 category: Customer Success
 title: Adoption Gap Hunter
 tagline: Find clients not using the features they paid for.
-difficulty: Intermediate
 time: Monthly
 archtype: Processor
 description: >-
@@ -16,6 +15,10 @@ sampleData:
     Acme,API;SSO,SSO
     Beta,API;SSO,API;SSO
 isPremium: true
+inputs:
+  - Usage Logs
+outputs:
+  - Churn Risk Report
 ---
 
 # Agent Configuration: The Adoption Manager

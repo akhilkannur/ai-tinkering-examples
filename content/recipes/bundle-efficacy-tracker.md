@@ -3,7 +3,6 @@ id: bundle-efficacy-tracker
 category: E-commerce
 title: Bundle Profitability Tracker
 tagline: Do bundles actually increase profit?
-difficulty: Intermediate
 time: Monthly
 archetype: Processor
 description: Compares Average Order Value (AOV) and Margin of bundled vs a la carte orders.
@@ -18,6 +17,12 @@ sampleData:
     B2,Socks,Single,10,2
     B2,Hat,Single,35,10
 isPremium: false
+inputs:
+  - Product Data
+  - Local File (CSV/MD)
+outputs:
+  - Shopify-Ready Update
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Pricing Strategist

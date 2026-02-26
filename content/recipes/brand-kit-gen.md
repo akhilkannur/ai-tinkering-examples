@@ -3,7 +3,6 @@ id: brand-kit-gen
 category: Content Ops
 title: The Instant Brand Architect
 tagline: Logo + Pattern + Vibe.
-difficulty: Intermediate
 time: Batch
 archetype: Processor
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     VelvetBloom,Luxury organic skincare,Elegant and Botanical
     PixelPounce,A speed-focused gaming mouse,Aggressive and Tech-forward
 isPremium: false
+inputs:
+  - Source Draft
+  - Local File (CSV/MD)
+outputs:
+  - Repurposed Assets
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Instant Brand Architect

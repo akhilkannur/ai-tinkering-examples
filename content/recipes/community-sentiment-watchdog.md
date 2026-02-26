@@ -3,7 +3,6 @@ id: community-sentiment-watchdog
 category: Customer Success
 title: Community Toxicity Monitor
 tagline: Spot toxic trends in Discord/Slack before they explode.
-difficulty: Intermediate
 time: Batch
 archtype: Processor
 description: >-
@@ -16,6 +15,10 @@ sampleData:
     101,"Mods suck",UserA
     102,"Help me",UserB
 isPremium: true
+inputs:
+  - Usage Logs
+outputs:
+  - Churn Risk Report
 ---
 
 # Agent Configuration: Community Toxicity Monitor

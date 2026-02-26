@@ -3,7 +3,6 @@ id: quality-score-doctor
 category: Paid Media
 title: The Quality Score Doctor
 tagline: Diagnose why your CPC is high.
-difficulty: Intermediate
 time: Weekly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     "buy shoes",3,Below Average,Average,Average
     "red sneakers",9,Above Average,Above Average,Above Average
 isPremium: true
+inputs:
+  - Ad Account Data
+  - Local File (CSV/MD)
+outputs:
+  - Performance Report
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Google Ads Expert

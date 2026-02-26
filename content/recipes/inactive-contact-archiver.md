@@ -3,7 +3,6 @@ id: inactive-contact-archiver
 category: Sales Ops
 title: 'CRM Hygiene: The Reaper'
 tagline: Identify contacts who haven't engaged in 365+ days.
-difficulty: Beginner
 time: Monthly
 archtype: Processor
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     2,New Lead,2023-10-01
     3,Stale Lead,2022-01-01
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Database Admin

@@ -3,7 +3,6 @@ id: google-ads-script-gen
 category: Paid Media
 title: The PPC Automator
 tagline: Deploy 'Set and Forget' rules that protect your budget while you sleep.
-difficulty: Advanced
 time: One-off
 archetype: Processor
 description: >-
@@ -19,6 +18,12 @@ sampleData:
     Zero Impressions,Impressions == 0 AND Spend > 50,Label 'Review'
     Budget Cap,Cost > 500,Email Alert
 isPremium: true
+inputs:
+  - Ad Account Data
+  - Local File (CSV/MD)
+outputs:
+  - Performance Report
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Ad Engineer

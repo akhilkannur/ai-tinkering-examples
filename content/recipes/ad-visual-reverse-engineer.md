@@ -3,7 +3,6 @@ id: ad-visual-reverse-engineer
 category: Paid Media
 title: The Ad Visual Intelligence Factory
 tagline: Reverse-engineer 10 winning ads into design briefs.
-difficulty: Experimental
 time: 5 mins
 archetype: Processor
 description: >-
@@ -14,6 +13,12 @@ sampleData:
   filename: competitor_gallery/ad_01.png
   content: ''
 isPremium: false
+inputs:
+  - Ad Account Data
+  - Local File (CSV/MD)
+outputs:
+  - Performance Report
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Ad Visual Intelligence Factory

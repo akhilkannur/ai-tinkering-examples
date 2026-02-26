@@ -3,7 +3,6 @@ id: tiktok-hook-generator
 category: Content Ops
 title: The Viral Scripter
 tagline: Don't just write hooks. Script the 'Visuals' too.
-difficulty: Beginner
 time: Daily
 archetype: Processor
 description: >-
@@ -14,6 +13,12 @@ sampleData:
   filename: content_topic.txt
   content: 'Topic: Learning Python for Data Science'
 isPremium: true
+inputs:
+  - Source Draft
+  - Local File (CSV/MD)
+outputs:
+  - Repurposed Assets
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Viral Scripter

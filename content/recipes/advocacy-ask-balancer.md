@@ -3,7 +3,6 @@ id: advocacy-ask-balancer
 category: Customer Success
 title: Advocacy Fatigue Saver
 tagline: Don't ask twice in one month.
-difficulty: Intermediate
 time: Weekly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     Acme,2023-10-01
     Beta,2023-01-01
 isPremium: false
+inputs:
+  - Usage Logs
+  - Local File (CSV/MD)
+outputs:
+  - Churn Risk Report
+  - Cleaned Data
 ---
 # Agent Configuration: The Relationship Manager
 

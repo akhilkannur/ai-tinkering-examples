@@ -3,7 +3,6 @@ id: contract-redline-risk-spotter
 category: Sales Ops
 title: Legal Redline Risk Spotter
 tagline: Spot deal-killing clauses in legal redlines instantly.
-difficulty: Intermediate
 time: Real-time
 archtype: Processor
 description: >-
@@ -15,6 +14,10 @@ sampleData:
     Clause_Name,Original_Text,Redlined_Text
     Liability,Cap at 1x,Unlimited
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: Legal Redline Risk Spotter

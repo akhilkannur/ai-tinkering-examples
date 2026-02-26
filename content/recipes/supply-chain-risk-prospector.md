@@ -3,7 +3,6 @@ id: supply-chain-risk-prospector
 category: Lead Gen
 title: The Supply Chain Risk Mapper
 tagline: Find manufacturing companies with single-source risks.
-difficulty: Advanced
 time: 30 mins
 archetype: Analyst
 description: >-
@@ -18,6 +17,10 @@ sampleData:
     854231,Processors/Chips
     850760,Lithium Batteries
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+outputs:
+  - Enriched Leads
 ---
 
 # Agent Configuration: The Supply Chain Risk Mapper

@@ -3,7 +3,6 @@ id: abm-campaign-asset-builder
 category: Strategic Ops
 title: ABM Campaign Asset Builder
 tagline: Generate personalized landing page copy for target accounts.
-difficulty: Advanced
 time: 20 mins
 archetype: Hybrid
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     Delta Airlines,delta.com,Chief Digital Officer
     Spotify,spotify.com,Head of Ad Sales
 isPremium: false
+inputs:
+  - Business Goal
+  - Local File + Search
+outputs:
+  - Operating Manual
+  - Enriched Document
 ---
 
 # Agent Configuration: The ABM Campaign Asset Builder

@@ -3,7 +3,6 @@ id: partner-program-hunter
 category: Strategic Ops
 title: The Partner Hunter Fleet
 tagline: Find 100 non-competing partners at once.
-difficulty: Advanced
 time: Continuous
 description: >-
   Why sell 1-to-1 when you can sell 1-to-many? This agent reads a list of
@@ -16,6 +15,10 @@ sampleData:
     Email Marketing,Increase deliverability
     CRM,Manage leads faster
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Partner Hunter Fleet

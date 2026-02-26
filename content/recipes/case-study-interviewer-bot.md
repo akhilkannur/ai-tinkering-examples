@@ -3,7 +3,6 @@ id: case-study-interviewer-bot
 category: Strategic Ops
 title: Case Study Interviewer
 tagline: The perfect script for extracting testimonials from happy clients.
-difficulty: Beginner
 time: 5 mins
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Win: They saved 20 hours a week on data entry.
     Champion: Sarah, Sales Ops.
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Case Study Interviewer

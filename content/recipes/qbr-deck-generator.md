@@ -3,7 +3,6 @@ id: qbr-deck-generator
 category: Customer Success
 title: The QBR Strategist
 tagline: Don't just report numbers. Tell a story of Value vs. Friction.
-difficulty: Intermediate
 time: Quarterly
 archetype: Hybrid
 description: >-
@@ -25,6 +24,12 @@ sampleData:
     admin@client.com,How to export PDF?,Resolved
     ceo@client.com,Login failed,Open
 isPremium: true
+inputs:
+  - Usage Logs
+  - Local File + Search
+outputs:
+  - Churn Risk Report
+  - Enriched Document
 ---
 
 # Agent Configuration: The QBR Strategist

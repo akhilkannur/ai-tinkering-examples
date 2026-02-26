@@ -3,7 +3,6 @@ id: case-study-factory
 category: Sales Ops
 title: The Case Study Factory
 tagline: Turn 10 transcripts into 10 closed deals.
-difficulty: Beginner
 time: 10 mins
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     User: "The workflow automation was a game changer. We saved 20 hours a week
     across the team."
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Case Study Factory

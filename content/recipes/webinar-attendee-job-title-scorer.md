@@ -3,7 +3,6 @@ id: webinar-attendee-job-title-scorer
 category: Marketing Ops
 title: Webinar Audience Quality
 tagline: 'Did VPs show up, or just interns?'
-difficulty: Beginner
 time: Batch
 archetype: Processor
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     Mike Jones,mike@gmail.com,Student,University
     Sarah Lee,sarah@target-account.com,Director of Ops,Target Account Ltd
 isPremium: true
+inputs:
+  - Campaign Data
+  - Local File (CSV/MD)
+outputs:
+  - Optimization Plan
+  - Cleaned Data
 ---
 
 # Agent Configuration: The High-Ticket Demand Gen Lead

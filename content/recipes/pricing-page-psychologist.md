@@ -3,7 +3,6 @@ id: pricing-page-psychologist
 category: CRO
 title: The Pricing Auditor
 tagline: Audit 10 pricing pages for conversion leaks.
-difficulty: Intermediate
 time: 10 mins
 description: >-
   Audit your own pricing and your competitors' simultaneously. This agent
@@ -16,6 +15,10 @@ sampleData:
     Our Site,https://yoursite.com/pricing
     Competitor A,https://competitor.com/plans
 isPremium: true
+inputs:
+  - Conversion Data
+outputs:
+  - A/B Experiment Ideas
 ---
 
 # Agent Configuration: The Pricing Auditor

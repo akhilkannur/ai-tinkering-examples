@@ -3,7 +3,6 @@ id: demo-conversion-audit
 category: Sales Ops
 title: Stage Conversion Auditor
 tagline: Measure Demo -> Proposal conversion by rep.
-difficulty: Beginner
 time: Monthly
 archtype: Processor
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     John,Demo,Closed-Lost
     Jane,Demo,Proposal
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Sales Coach

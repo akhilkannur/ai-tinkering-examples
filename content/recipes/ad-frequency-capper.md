@@ -3,7 +3,6 @@ id: ad-frequency-capper
 category: Paid Media
 title: The Ad Frequency Capper
 tagline: Stop annoying your prospects.
-difficulty: Intermediate
 time: Weekly
 archetype: Processor
 description: >-
@@ -19,6 +18,12 @@ sampleData:
     3,1.2%,12
     4,0.5%,25
 isPremium: false
+inputs:
+  - Ad Account Data
+  - Local File (CSV/MD)
+outputs:
+  - Performance Report
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Data Analyst

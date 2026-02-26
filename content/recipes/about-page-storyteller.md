@@ -3,7 +3,6 @@ id: about-page-storyteller
 category: Content Ops
 title: The About Page Storyteller
 tagline: Build trust with a data-backed brand story.
-difficulty: Intermediate
 time: Batch
 archetype: Hybrid
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     PostHog,https://posthog.com,James Hawkins
     Beehiiv,https://beehiiv.com,Tyler Denk
 isPremium: false
+inputs:
+  - Source Draft
+  - Local File + Search
+outputs:
+  - Repurposed Assets
+  - Enriched Document
 ---
 
 # Agent Configuration: The About Page Storyteller

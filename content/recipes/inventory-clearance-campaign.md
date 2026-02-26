@@ -3,7 +3,6 @@ id: inventory-clearance-campaign
 category: E-commerce
 title: The Inventory Clearance Campaign
 tagline: Turn dead stock into cash.
-difficulty: Intermediate
 time: Batch
 description: >-
   Dead stock kills cash flow. This agent plans 'Mystery Box' or 'Bundle'
@@ -17,6 +16,10 @@ sampleData:
     HAT-22,Wool Beanie Blue,85,35
     BAG-99,Mini Duffel Bag,199,85
 isPremium: true
+inputs:
+  - Product Data
+outputs:
+  - Shopify-Ready Update
 ---
 
 # Agent Configuration: The Inventory Clearance Campaign

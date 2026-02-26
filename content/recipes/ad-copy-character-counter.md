@@ -3,7 +3,6 @@ id: ad-copy-character-counter
 category: Paid Media
 title: The Ad Variant Factory
 tagline: Don't just count characters. Generate 10 high-CTR variants that fit perfectly.
-difficulty: Beginner
 time: Daily
 archetype: Hybrid
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Google,"Best CRM for small biz",Save time
     Facebook,"Launch faster with AI",Speed to market
 isPremium: false
+inputs:
+  - Ad Account Data
+  - Local File + Search
+outputs:
+  - Performance Report
+  - Enriched Document
 ---
 
 # Agent Configuration: The Ad Variant Factory

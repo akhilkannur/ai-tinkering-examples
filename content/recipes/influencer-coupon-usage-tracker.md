@@ -3,7 +3,6 @@ id: influencer-coupon-usage-tracker
 category: Paid Media
 title: The Channel Efficiency Analyst
 tagline: Know exactly when to double down or cut the cord.
-difficulty: Intermediate
 time: Monthly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Alice,1000,50,30
     Bob,1000,10,30
 isPremium: true
+inputs:
+  - Ad Account Data
+  - Local File (CSV/MD)
+outputs:
+  - Performance Report
+  - Cleaned Data
 ---
 # Agent Configuration: The Performance Marketer
 

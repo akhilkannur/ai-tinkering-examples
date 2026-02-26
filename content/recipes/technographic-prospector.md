@@ -3,7 +3,6 @@ id: technographic-prospector
 category: Competitive Intel
 title: Technographic Prospector
 tagline: Find leads using specific software.
-difficulty: Advanced
 time: Monthly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     Acme,Job Post,Salesforce
     Beta,Source Code,HubSpot
 isPremium: true
+inputs:
+  - Competitor URL
+  - Local File (CSV/MD)
+outputs:
+  - Intel Dashboard
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Sales Engineer

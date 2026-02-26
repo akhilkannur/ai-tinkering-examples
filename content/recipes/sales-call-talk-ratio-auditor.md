@@ -3,7 +3,6 @@ id: sales-call-talk-ratio-auditor
 category: Sales Ops
 title: Talk/Listen Ratio Auditor
 tagline: Stop showing up and throwing up.
-difficulty: Intermediate
 time: Weekly
 archetype: Processor
 description: Analyzes call metrics to flag calls where the rep spoke > 60% of the time.
@@ -14,6 +13,12 @@ sampleData:
     John,101,65%
     Jane,102,40%
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Conversation Intelligence Coach

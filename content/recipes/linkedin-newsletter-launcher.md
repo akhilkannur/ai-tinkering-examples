@@ -3,7 +3,6 @@ id: linkedin-newsletter-launcher
 category: Content Ops
 title: The LinkedIn Newsletter Launcher
 tagline: Own your audience on-platform.
-difficulty: Intermediate
 time: Batch
 description: >-
   LinkedIn Newsletters notify every connection. This agent helps you launch one
@@ -21,6 +20,10 @@ sampleData:
 
     GTM Labs,Go-to-market strategies,The latest in PLG and enterprise sales
 isPremium: true
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: The LinkedIn Newsletter Launcher

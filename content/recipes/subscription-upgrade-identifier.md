@@ -3,7 +3,6 @@ id: subscription-upgrade-identifier
 category: Sales Ops
 title: PQL Hunter (Product Qualified Leads)
 tagline: Find free users who hit their limits.
-difficulty: Intermediate
 time: Daily
 archtype: Processor
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     Beta,1000,200
     Gamma,500,490
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Account Manager

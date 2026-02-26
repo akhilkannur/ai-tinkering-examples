@@ -3,7 +3,6 @@ id: renewal-price-lift-calc
 category: Sales Ops
 title: Renewal Price Lift Calc
 tagline: Apply 5% CPI increases to upcoming renewals.
-difficulty: Beginner
 time: Monthly
 archtype: Processor
 description: >-
@@ -16,6 +15,10 @@ sampleData:
     Acme,10000
     Beta,5000
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Expansion Revenue Architect

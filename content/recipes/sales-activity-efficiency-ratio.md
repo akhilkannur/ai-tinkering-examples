@@ -3,7 +3,6 @@ id: sales-activity-efficiency-ratio
 category: Sales Ops
 title: Activity-to-Revenue Efficiency
 tagline: Calculate 'Activities required per Closed Deal'.
-difficulty: Intermediate
 time: Monthly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     John,1000,5
     Jane,500,5
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Efficiency Auditor

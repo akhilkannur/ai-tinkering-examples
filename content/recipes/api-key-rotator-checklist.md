@@ -3,7 +3,6 @@ id: api-key-rotator-checklist
 category: Marketing Ops
 title: The API Key Rotator
 tagline: Don't get hacked.
-difficulty: Intermediate
 time: Batch
 archetype: Processor
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     AWS,IAM Access Key,Staging
     SendGrid,API Key,Production
 isPremium: false
+inputs:
+  - Campaign Data
+  - Local File (CSV/MD)
+outputs:
+  - Optimization Plan
+  - Cleaned Data
 ---
 
 # Agent Configuration: The API Key Rotator

@@ -3,7 +3,6 @@ id: form-abandonment-rate-tracker
 category: Marketing Ops
 title: Form Friction Hunter
 tagline: Is your form too long?
-difficulty: Beginner
 time: Monthly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     Long_Demo,10,1000,10
     Short_Demo,3,1000,50
 isPremium: true
+inputs:
+  - Campaign Data
+  - Local File (CSV/MD)
+outputs:
+  - Optimization Plan
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Form Conversion Psychologist

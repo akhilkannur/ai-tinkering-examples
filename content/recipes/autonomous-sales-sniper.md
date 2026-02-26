@@ -3,7 +3,6 @@ id: autonomous-sales-sniper
 category: Lead Gen
 title: The Sales Sniper
 tagline: Find and qualify B2B leads automatically.
-difficulty: Advanced
 time: 20 mins
 archetype: Hybrid
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Fintech,Los Angeles,Series A-C only
     EdTech,Austin,Must have mobile app
     PropTech,New York,B2B only
+inputs:
+  - Target Accounts (CSV)
+  - Local File + Search
+outputs:
+  - Enriched Leads
+  - Enriched Document
 ---
 
 # Agent Configuration: The Sales Sniper

@@ -3,7 +3,6 @@ id: standup-blocker-extractor
 category: Strategic Ops
 title: Standup Blocker Extractor
 tagline: Auto-summarize what is actually blocking your team.
-difficulty: Beginner
 time: Batch
 archtype: Processor
 description: >-
@@ -16,6 +15,10 @@ sampleData:
     Dev1,"...Blocker: API is down"
     Dev2,"...Blocker: Waiting on Design"
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: Standup Blocker Extractor

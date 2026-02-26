@@ -3,7 +3,6 @@ id: testimonial-coverage-matrix
 category: Customer Success
 title: Case Study Gap Finder
 tagline: Do we have a 'Finance' case study?
-difficulty: Intermediate
 time: Quarterly
 archetype: Processor
 description: Identifies industries or use-cases where you lack a case study or testimonial.
@@ -14,6 +13,12 @@ sampleData:
     Finance,Case Study,0
     Retail,Case Study,5
 isPremium: true
+inputs:
+  - Usage Logs
+  - Local File (CSV/MD)
+outputs:
+  - Churn Risk Report
+  - Cleaned Data
 ---
 # Agent Configuration: The Social Proof Matrix Mapper
 

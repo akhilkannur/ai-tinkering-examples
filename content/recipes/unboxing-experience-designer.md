@@ -3,7 +3,6 @@ id: unboxing-experience-designer
 category: E-commerce
 title: The Unboxing Experience Designer
 tagline: Make them post it on Instagram.
-difficulty: Intermediate
 time: Batch
 description: >-
   The product isn't finished until the customer opens the box. This agent
@@ -17,6 +16,10 @@ sampleData:
     PixelPounce,Electric Blue,Tech-forward and High-energy
     BrewBase,Warm Brown,Minimalist and Artisanal
 isPremium: true
+inputs:
+  - Product Data
+outputs:
+  - Shopify-Ready Update
 ---
 
 # Agent Configuration: The Unboxing Experience Designer

@@ -3,7 +3,6 @@ id: unsubscribed-customer-matcher
 category: Retention
 title: Unsub Retargeter
 tagline: Reach unsubscribed users via ads.
-difficulty: Intermediate
 time: Monthly
 archetype: Processor
 description: >-
@@ -15,6 +14,12 @@ sampleData:
     Email,Phone,Name
     john@acme.com,555-1234,John Doe
 isPremium: true
+inputs:
+  - Customer List
+  - Local File (CSV/MD)
+outputs:
+  - Re-engagement Script
+  - Cleaned Data
 ---
 # Agent Configuration: The Ad Ops Specialist
 

@@ -3,7 +3,6 @@ id: customer-journey-mapper
 category: Strategic Ops
 title: The Customer Journey Factory
 tagline: Map the broken road for every persona.
-difficulty: Intermediate
 time: Annual
 description: >-
   Users drop off where you least expect. This agent reads a list of customer
@@ -16,6 +15,10 @@ sampleData:
     Tech Founder,CTO,Scale infrastructure
     Marketing Lead,VP Growth,Lower CAC
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Customer Journey Factory

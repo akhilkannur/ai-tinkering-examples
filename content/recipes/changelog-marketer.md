@@ -3,7 +3,6 @@ id: changelog-marketer
 category: Strategic Ops
 title: The Changelog Marketer
 tagline: Your updates are marketing assets.
-difficulty: Beginner
 time: Batch
 archetype: Processor
 description: >-
@@ -23,6 +22,12 @@ sampleData:
 
     Zapier v2,Added 5 new triggers for automation,Easier workflow integration
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Changelog Marketer

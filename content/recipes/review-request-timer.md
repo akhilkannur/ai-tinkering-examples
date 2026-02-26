@@ -3,7 +3,6 @@ id: review-request-timer
 category: Retention
 title: Review Request Timer
 tagline: Ask for reviews when they actually get the product.
-difficulty: Intermediate
 time: Daily
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     101,2023-10-01,john@acme.com
     102,2023-10-05,jane@beta.com
 isPremium: true
+inputs:
+  - Customer List
+  - Local File (CSV/MD)
+outputs:
+  - Re-engagement Script
+  - Cleaned Data
 ---
 # Agent Configuration: The CX Marketer
 

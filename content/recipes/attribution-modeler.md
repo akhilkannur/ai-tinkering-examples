@@ -3,7 +3,6 @@ id: attribution-modeler
 category: CRO
 title: The Attribution Modeler
 tagline: Who actually deserves credit?
-difficulty: Advanced
 time: Monthly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     1,Facebook > Google > Direct,100
     2,Google > Direct,50
 isPremium: false
+inputs:
+  - Conversion Data
+  - Local File (CSV/MD)
+outputs:
+  - A/B Experiment Ideas
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Data Scientist

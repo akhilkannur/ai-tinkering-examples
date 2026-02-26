@@ -3,7 +3,6 @@ id: meeting-reschedule-rate-tracker
 category: Sales Ops
 title: The Calendar Defender
 tagline: Quantify the cost of flakes and enforce a 'Deposit' policy.
-difficulty: Beginner
 time: Weekly
 archetype: Processor
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     Beta,No-Show,15
     Gamma,Rescheduled,10
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Time Guardian

@@ -3,7 +3,6 @@ id: commission-clawback-tracker
 category: Sales Ops
 title: Clawback Risk Monitor
 tagline: Track revenue at risk of clawback.
-difficulty: Intermediate
 time: Weekly
 archtype: Processor
 description: >-
@@ -16,6 +15,10 @@ sampleData:
     Acme,Last Month,15,Down
     Beta,Last Month,0,Up
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Revenue Financial Analyst

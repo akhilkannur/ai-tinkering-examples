@@ -3,7 +3,6 @@ id: pipeline-stagnation-by-product
 category: Sales Ops
 title: Product Stagnation Analyzer
 tagline: Does Product A stall deals?
-difficulty: Advanced
 time: Monthly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     1,Basic,30
     2,Enterprise,90
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Product Sales Lead

@@ -3,7 +3,6 @@ id: serp-intent-decoder
 category: SEO
 title: The SERP Intent Decoder
 tagline: Crack Google's psychological code.
-difficulty: Advanced
 time: Real-time
 description: >-
   Stop guessing what content to write. This agent analyzes the top ranking pages
@@ -17,6 +16,10 @@ sampleData:
     "how to train a sales agent",Medium
     "best crm for micro pe",High
 isPremium: true
+inputs:
+  - Target URL
+outputs:
+  - SEO Audit / Fixes
 ---
 
 # Agent Configuration: The SERP Intent Decoder

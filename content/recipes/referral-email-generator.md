@@ -3,7 +3,6 @@ id: referral-email-generator
 category: Sales Ops
 title: Referral Request Writer
 tagline: Ask for introductions without making it awkward.
-difficulty: Beginner
 time: 5 mins
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Relationship: Alice and Bob worked together at Google.
     My Ask: Intro to pitch our analytics tool.
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Referral Request Writer

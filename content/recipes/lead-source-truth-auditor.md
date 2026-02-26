@@ -3,7 +3,6 @@ id: lead-source-truth-auditor
 category: Marketing Ops
 title: Attribution Truth Checker
 tagline: 'UTM vs Self-Reported: Who is lying?'
-difficulty: Intermediate
 time: Monthly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     1,Google,Podcast
     2,LinkedIn,LinkedIn
 isPremium: true
+inputs:
+  - Campaign Data
+  - Local File (CSV/MD)
+outputs:
+  - Optimization Plan
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Attribution Analyst

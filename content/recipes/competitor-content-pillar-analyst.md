@@ -3,7 +3,6 @@ id: competitor-content-pillar-analyst
 category: Strategic Ops
 title: Competitor Content Spy
 tagline: Steal the content strategy that is working for your rivals.
-difficulty: Intermediate
 time: 15 mins
 archetype: Hybrid
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     https://hubspot.com/blog/email-templates
     https://hubspot.com/blog/instagram-strategy
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File + Search
+outputs:
+  - Operating Manual
+  - Enriched Document
 ---
 
 # Agent Configuration: The Competitor Content Spy

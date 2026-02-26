@@ -3,7 +3,6 @@ id: people-also-ask-scraper
 category: SEO
 title: The PAA Scraper
 tagline: Answer what they are asking.
-difficulty: Intermediate
 time: Batch
 description: >-
   Google's 'People Also Ask' box is a content goldmine. This agent takes a list
@@ -17,6 +16,10 @@ sampleData:
     How to start a garden,Home & Garden
     Remote work security,Cybersecurity
 isPremium: true
+inputs:
+  - Target URL
+outputs:
+  - SEO Audit / Fixes
 ---
 
 # Agent Configuration: The PAA Scraper

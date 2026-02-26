@@ -3,7 +3,6 @@ id: conference-networking-planner
 category: Sales Ops
 title: Conference Networking Strategist
 tagline: Prioritize who to meet at your next event.
-difficulty: Intermediate
 time: 5 mins
 archetype: Processor
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     Jane Smith,VP of Engineering,Netflix
     Bob Jones,Consultant,Self-Employed
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Conference Networking Strategist

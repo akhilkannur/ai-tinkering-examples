@@ -3,7 +3,6 @@ id: sql-cohort-analyzer
 category: CRO
 title: The SQL Cohort Builder
 tagline: Standardize your retention metrics.
-difficulty: Advanced
 time: Batch
 description: >-
   Retention is the lifeblood of SaaS. This agent generates the complex SQL
@@ -17,6 +16,10 @@ sampleData:
     Staging,test_users,test_events,registered_on
     Legacy,member_db,activity_log,join_date
 isPremium: true
+inputs:
+  - Conversion Data
+outputs:
+  - A/B Experiment Ideas
 ---
 
 # Agent Configuration: The SQL Cohort Builder

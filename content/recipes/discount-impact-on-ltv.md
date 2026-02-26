@@ -3,7 +3,6 @@ id: discount-impact-on-ltv
 category: Sales Ops
 title: Discount vs LTV Auditor
 tagline: Does high discounting lead to low LTV?
-difficulty: Advanced
 time: Quarterly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     Acme,0,50000
     Beta,30,10000
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Revenue Strategy Agent

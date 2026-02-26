@@ -3,7 +3,6 @@ id: swag-inventory-forecaster
 category: Strategic Ops
 title: Swag Demand Planner
 tagline: How many t-shirts do we need?
-difficulty: Beginner
 time: Batch
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     TechConf,5000,0.2
     LocalMeetup,100,0.5
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 # Agent Configuration: The Event Logistics Lead
 

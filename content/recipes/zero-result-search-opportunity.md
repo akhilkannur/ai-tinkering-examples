@@ -3,7 +3,6 @@ id: zero-result-search-opportunity
 category: CRO
 title: Zero-Result Search Auditor
 tagline: What are people searching for that you don't have?
-difficulty: Intermediate
 time: Weekly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     red shoes,50
     blue suede boots,0
 isPremium: true
+inputs:
+  - Conversion Data
+  - Local File (CSV/MD)
+outputs:
+  - A/B Experiment Ideas
+  - Cleaned Data
 ---
 # Agent Configuration: The Site Merchandiser
 

@@ -3,7 +3,6 @@ id: lead-source-normalizer
 category: Marketing Ops
 title: The Lead Source Normalizer
 tagline: Fix your attribution buckets.
-difficulty: Beginner
 time: Weekly
 archetype: Processor
 description: >-
@@ -19,6 +18,12 @@ sampleData:
     3,Referral - Bob
     4,Conf: SaaStr
 isPremium: true
+inputs:
+  - Campaign Data
+  - Local File (CSV/MD)
+outputs:
+  - Optimization Plan
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Taxonomist

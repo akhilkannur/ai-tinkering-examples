@@ -3,7 +3,6 @@ id: churn-exit-survey-analyzer
 category: Retention
 title: The Churn Survey Analyzer
 tagline: Find out why they really left.
-difficulty: Intermediate
 time: Monthly
 archetype: Processor
 description: >-
@@ -19,6 +18,12 @@ sampleData:
     3,Support never replied to my ticket.
     4,Found a cheaper tool.
 isPremium: false
+inputs:
+  - Customer List
+  - Local File (CSV/MD)
+outputs:
+  - Re-engagement Script
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Churn Survey Analyzer

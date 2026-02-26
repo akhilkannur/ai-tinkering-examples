@@ -3,7 +3,6 @@ id: psychological-meeting-profiler
 category: Sales Ops
 title: The Psychological Buyer Profiler
 tagline: Know how to close them.
-difficulty: Advanced
 time: Batch
 description: >-
   Deeper than a summary. This agent processes a list of sales transcripts to
@@ -17,6 +16,10 @@ sampleData:
     Sarah Driver,transcripts/call_2.txt,Speed to implementation
     Mike Amiable,transcripts/call_3.txt,Team collaboration and support
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Psychological Buyer Profiler

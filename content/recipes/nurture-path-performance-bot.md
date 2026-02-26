@@ -3,7 +3,6 @@ id: nurture-path-performance-bot
 category: Marketing Ops
 title: Nurture Path Auditor
 tagline: Compare conversion rates of different nurture sequences.
-difficulty: Advanced
 time: Monthly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     2,Path A,Leaking
     3,Path B,MQL
 isPremium: true
+inputs:
+  - Campaign Data
+  - Local File (CSV/MD)
+outputs:
+  - Optimization Plan
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Growth Specialist Agent

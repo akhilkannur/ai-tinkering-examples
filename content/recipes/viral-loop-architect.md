@@ -3,7 +3,6 @@ id: viral-loop-architect
 category: CRO
 title: The Growth Loop Architect
 tagline: Design referral engines for every user segment.
-difficulty: Advanced
 time: 30 mins
 isPremium: true
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     Power Users,Bulk exporting,Credits
     Managers,Team reporting,Seats
     Creators,Publishing,Reach
+inputs:
+  - Conversion Data
+outputs:
+  - A/B Experiment Ideas
 ---
 
 # Agent Configuration: The Growth Loop Architect

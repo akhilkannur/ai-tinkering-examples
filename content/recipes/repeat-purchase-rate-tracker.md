@@ -3,7 +3,6 @@ id: repeat-purchase-rate-tracker
 category: CRO
 title: Repurchase Rate Monitor
 tagline: '% of new customers who buy again.'
-difficulty: Intermediate
 time: Monthly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     John,2023-01-01,2023-02-01
     Jane,2023-01-01,NULL
 isPremium: true
+inputs:
+  - Conversion Data
+  - Local File (CSV/MD)
+outputs:
+  - A/B Experiment Ideas
+  - Cleaned Data
 ---
 # Agent Configuration: The Retention Lead
 

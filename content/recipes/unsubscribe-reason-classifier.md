@@ -3,7 +3,6 @@ id: unsubscribe-reason-classifier
 category: Marketing Ops
 title: Unsub Analysis Bot
 tagline: Why are they leaving?
-difficulty: Intermediate
 time: Monthly
 archtype: Processor
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     2,I don't need this anymore
     3,Sent daily, wanted weekly
 isPremium: true
+inputs:
+  - Campaign Data
+outputs:
+  - Optimization Plan
 ---
 
 # Agent Configuration: The Retention Analyst

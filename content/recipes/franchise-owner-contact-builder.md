@@ -3,7 +3,6 @@ id: franchise-owner-contact-builder
 category: Lead Gen
 title: The Franchise Empire Mapper
 tagline: Find owners of multi-location franchises.
-difficulty: Intermediate
 time: 25 mins
 archetype: Researcher
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     Orangetheory Fitness
     Massage Envy
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Franchise Empire Mapper

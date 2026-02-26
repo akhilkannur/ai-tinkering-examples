@@ -3,7 +3,6 @@ id: cold-dm-personalizer
 category: Lead Gen
 title: The Cold DM Personalizer
 tagline: Personalized outreach for 100 prospects at once.
-difficulty: Beginner
 time: Continuous
 archetype: Hybrid
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     Sahil Lavingia,https://x.com/shl,Creator Economy
     Justin Welsh,https://x.com/JustinWelsh,Solopreneurship
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Local File + Search
+outputs:
+  - Enriched Leads
+  - Enriched Document
 ---
 
 # Agent Configuration: The Cold DM Personalizer

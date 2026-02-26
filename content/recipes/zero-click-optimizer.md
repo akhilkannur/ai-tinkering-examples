@@ -3,7 +3,6 @@ id: zero-click-optimizer
 category: SEO
 title: The Zero-Click Optimizer
 tagline: Optimize for the answer engine.
-difficulty: Intermediate
 time: Weekly
 archetype: Processor
 description: >-
@@ -20,6 +19,12 @@ sampleData:
 
     /how-to-solder,"Soldering is an art form that takes years..."
 isPremium: true
+inputs:
+  - Target URL
+  - Local File (CSV/MD)
+outputs:
+  - SEO Audit / Fixes
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Editor

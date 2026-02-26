@@ -3,7 +3,6 @@ id: automated-swot-generator
 category: Strategic Ops
 title: Automated SWOT Generator
 tagline: Generate a SWOT analysis for any company in seconds.
-difficulty: Beginner
 time: Real-time
 archtype: Researcher
 description: >-
@@ -15,6 +14,10 @@ sampleData:
     Company_Name,Website
     CompetitorX,https://comp-x.com
 isPremium: false
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: Automated SWOT Generator

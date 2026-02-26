@@ -3,7 +3,6 @@ id: podcast-show-notes-generator
 category: Content Ops
 title: The Chapter & Timestamp Architect
 tagline: Don't just summarize. Create clickable 'YouTube Chapters' automatically.
-difficulty: Intermediate
 time: 10 mins
 archetype: Processor
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     [00:04:12] Host: So tell us about the 'Index' strategy.
     [00:04:15] Guest: Well, it starts with...
 isPremium: true
+inputs:
+  - Source Draft
+  - Local File (CSV/MD)
+outputs:
+  - Repurposed Assets
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Podcast Architect

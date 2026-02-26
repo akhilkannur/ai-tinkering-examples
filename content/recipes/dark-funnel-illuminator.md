@@ -3,7 +3,6 @@ id: dark-funnel-illuminator
 category: Marketing Ops
 title: Dark Funnel Correlation Bot
 tagline: Correlate direct traffic spikes with outbound activity.
-difficulty: Advanced
 time: Weekly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     2023-10-02,US-East,250,0
     2023-10-03,US-West,50,1000
 isPremium: true
+inputs:
+  - Campaign Data
+  - Local File (CSV/MD)
+outputs:
+  - Optimization Plan
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Marketing Analyst

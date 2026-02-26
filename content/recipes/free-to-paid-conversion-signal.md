@@ -3,7 +3,6 @@ id: free-to-paid-conversion-signal
 category: Sales Ops
 title: PQL Usage Trigger
 tagline: Flag users who hit 90% of their free limits.
-difficulty: Intermediate
 time: Daily
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     101,45,50,Free
     102,10,50,Free
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 # Agent Configuration: The Product Sales Specialist
 

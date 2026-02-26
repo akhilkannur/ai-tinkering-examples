@@ -3,7 +3,6 @@ id: infinite-content-repurposer
 category: Content Ops
 title: The Infinite Repurposer Chain
 tagline: 'One URL, 20+ assets.'
-difficulty: Advanced
 time: Batch
 description: >-
   Why repurpose manually? This mega-chain takes a list of sources (YouTube URLs
@@ -17,6 +16,10 @@ sampleData:
     Remote Work Mastery,https://blog.com/remote,HR Managers
     Zero to One Summary,https://medium.com/summary,First-time Founders
 isPremium: true
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: The Infinite Repurposer Chain

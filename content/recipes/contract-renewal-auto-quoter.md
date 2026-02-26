@@ -3,7 +3,6 @@ id: contract-renewal-auto-quoter
 category: Sales Ops
 title: The Renewal Negotiator
 tagline: Don't send flat renewals. Adjust the offer based on actual utilization.
-difficulty: Intermediate
 time: Monthly
 archetype: Processor
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     GhostTown LLC,10000,0.30,50
     AverageJoes,5000,0.70,10
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Renewal Negotiator

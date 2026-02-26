@@ -3,7 +3,6 @@ id: headless-commerce-identifier
 category: Lead Gen
 title: The Headless Tech Hunter
 tagline: Target brands using specific headless CMS architectures.
-difficulty: Advanced
 time: 25 mins
 archetype: Analyst
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     allbirds.com
     koala.com
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+outputs:
+  - Enriched Leads
 ---
 
 # Agent Configuration: The Headless Tech Hunter

@@ -3,7 +3,6 @@ id: category-growth-trends
 category: E-commerce
 title: The Market Surfer
 tagline: Buy inventory *before* the trend peaks.
-difficulty: Intermediate
 time: Monthly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Pickleball,100,120,150
     FidgetSpinners,1000,800,400
 isPremium: false
+inputs:
+  - Product Data
+  - Local File (CSV/MD)
+outputs:
+  - Shopify-Ready Update
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Trend Forecaster

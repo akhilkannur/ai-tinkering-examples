@@ -3,7 +3,6 @@ id: user-generated-content-campaign
 category: Content Ops
 title: The UGC Campaign Planner
 tagline: High-ROI content from your users.
-difficulty: Intermediate
 time: Batch
 description: >-
   Social proof is your best sales tool. This agent designs viral UGC contests
@@ -17,6 +16,10 @@ sampleData:
     PixelPounce,Gaming Peripherals,X/Twitter
     BrewBase,Coffee Equipment,Instagram
 isPremium: true
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: The UGC Campaign Planner

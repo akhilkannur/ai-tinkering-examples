@@ -3,7 +3,6 @@ id: stalled-deal-wakeup
 category: Sales Ops
 title: The Stalled Deal Wake-Up Script
 tagline: Revive the 'Checking in' emails.
-difficulty: Beginner
 time: Weekly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     Deal,Stage,Days_Stuck,Industry
     Acme Deal,Discovery,45,Retail
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Copywriter

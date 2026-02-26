@@ -3,7 +3,6 @@ id: partner-logo-compliance-bot
 category: Marketing Ops
 title: Partner Logo Compliance Bot
 tagline: Ensure partners aren't using your old ugly logo.
-difficulty: Intermediate
 time: Batch
 archtype: Researcher
 description: >-
@@ -15,6 +14,10 @@ sampleData:
     Partner_Name,URL
     Agency_A,https://agency-a.com/partners
 isPremium: true
+inputs:
+  - Campaign Data
+outputs:
+  - Optimization Plan
 ---
 
 # Agent Configuration: Partner Logo Compliance Bot

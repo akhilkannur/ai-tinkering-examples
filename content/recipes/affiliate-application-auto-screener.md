@@ -3,7 +3,6 @@ id: affiliate-application-auto-screener
 category: Marketing Ops
 title: Affiliate Application Auto-Screener
 tagline: Filter out spammy affiliate applications instantly.
-difficulty: Intermediate
 time: Batch
 archetype: Researcher
 description: >-
@@ -15,6 +14,12 @@ sampleData:
     Applicant_Name,Website
     CouponKing,http://coupon-spam.com
 isPremium: false
+inputs:
+  - Campaign Data
+  - Web Search Target
+outputs:
+  - Optimization Plan
+  - Curated Intel
 ---
 
 # Agent Configuration: Affiliate Application Auto-Screener

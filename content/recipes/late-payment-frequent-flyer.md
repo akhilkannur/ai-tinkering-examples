@@ -3,7 +3,6 @@ id: late-payment-frequent-flyer
 category: Sales Ops
 title: Bad Payer List
 tagline: Stop selling to people who don't pay.
-difficulty: Beginner
 time: Monthly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Acme,102,30
     Beta,103,0
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 # Agent Configuration: The Collections Agent
 

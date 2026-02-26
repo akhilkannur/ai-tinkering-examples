@@ -3,7 +3,6 @@ id: partnership-mou-generator
 category: Strategic Ops
 title: The Strategic Partnership Architect
 tagline: Draft a formal MOU from your notes or a partnership goal.
-difficulty: Advanced
 time: One-off
 description: >-
   Alignment prevents disputes. This agent reads your partnership notes (if
@@ -15,6 +14,10 @@ sampleData:
     Goal: We want to swap 2 emails with Company X. They host the webinar, we
     provide the slides.
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Strategic Partnership Architect

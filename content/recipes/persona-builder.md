@@ -3,7 +3,6 @@ id: persona-builder
 category: Strategic Ops
 title: The AI Persona Researcher
 tagline: Build detailed customer personas.
-difficulty: Intermediate
 time: 15 mins
 archetype: Researcher
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     SaaS Ops Managers,Data Silos,LinkedIn
     E-com Store Owners,Ad Costs,Twitter
 isPremium: true
+inputs:
+  - Business Goal
+  - Web Search Target
+outputs:
+  - Operating Manual
+  - Curated Intel
 ---
 
 # Agent Configuration: The AI Persona Researcher

@@ -3,7 +3,6 @@ id: lead-source-attribution-fixer
 category: Sales Ops
 title: Lead Source Normalizer
 tagline: Fix messy 'Referral' vs 'referral' vs 'Friend' tags.
-difficulty: Beginner
 time: Weekly
 archtype: Processor
 description: >-
@@ -19,6 +18,10 @@ sampleData:
     104,fb
     105,Friend
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Data Steward

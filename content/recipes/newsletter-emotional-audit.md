@@ -3,7 +3,6 @@ id: newsletter-emotional-audit
 category: Content Ops
 title: Newsletter Vibe Check
 tagline: Make sure your weekly email isn't too depressing.
-difficulty: Beginner
 time: Real-time
 archtype: Processor
 description: >-
@@ -15,6 +14,10 @@ sampleData:
     Subject_Line,Body_Text
     "Last Chance!","Everything is ending..."
 isPremium: true
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: Newsletter Vibe Check

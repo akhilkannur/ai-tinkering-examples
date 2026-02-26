@@ -3,7 +3,6 @@ id: programmatic-seo-builder
 category: SEO
 title: The P-SEO Research Enricher
 tagline: Don't write empty templates. Enrich your pages with live data (Wiki/Web).
-difficulty: Advanced
 time: One-off
 archetype: Hybrid
 description: >-
@@ -19,6 +18,12 @@ sampleData:
     Seattle, WA
     Denver, CO
 isPremium: true
+inputs:
+  - Target URL
+  - Local File + Search
+outputs:
+  - SEO Audit / Fixes
+  - Enriched Document
 ---
 
 # Agent Configuration: The P-SEO Researcher

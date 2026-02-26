@@ -3,7 +3,6 @@ id: influencer-code-profitability
 category: E-commerce
 title: Influencer Profit Auditor
 tagline: 'Revenue is vanity, profit is sanity.'
-difficulty: Intermediate
 time: Monthly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     Alice,1000,100,200,400
     Bob,500,100,50,400
 isPremium: true
+inputs:
+  - Product Data
+  - Local File (CSV/MD)
+outputs:
+  - Shopify-Ready Update
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Partnership Manager

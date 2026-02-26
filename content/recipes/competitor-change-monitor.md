@@ -3,7 +3,6 @@ id: competitor-change-monitor
 category: Competitive Intel
 title: Competitor Site Change Detector
 tagline: Did they change their H1? Did they raise prices?
-difficulty: Intermediate
 time: Weekly
 archtype: Processor
 description: >-
@@ -20,6 +19,10 @@ sampleData:
     Header: The Enterprise Platform for Scale.
     Price: Call Sales
 isPremium: false
+inputs:
+  - Competitor URL
+outputs:
+  - Intel Dashboard
 ---
 
 # Agent Configuration: The Competitive Analyst

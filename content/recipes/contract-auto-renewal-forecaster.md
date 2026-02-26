@@ -3,7 +3,6 @@ id: contract-auto-renewal-forecaster
 category: Sales Ops
 title: Auto-Renew Forecaster
 tagline: Predict passive revenue.
-difficulty: Intermediate
 time: Monthly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     Acme,10000,Auto
     Beta,50000,Manual
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Revenue Defense System

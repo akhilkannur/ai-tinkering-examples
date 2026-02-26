@@ -3,7 +3,6 @@ id: user-onboarding-dropout-finder
 category: CRO
 title: Onboarding Leak Detector
 tagline: Where do users quit during setup?
-difficulty: Intermediate
 time: Weekly
 archtype: Processor
 description: >-
@@ -18,6 +17,10 @@ sampleData:
     3,Email Verification
     4,Payment Setup
 isPremium: true
+inputs:
+  - Conversion Data
+outputs:
+  - A/B Experiment Ideas
 ---
 
 # Agent Configuration: The Growth PM

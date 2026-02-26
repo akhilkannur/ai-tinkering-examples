@@ -3,7 +3,6 @@ id: trial-expiry-prioritizer
 category: Sales Ops
 title: Trial Closing Prioritizer
 tagline: Who gets a call 3 days before expiry?
-difficulty: Intermediate
 time: Daily
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     John,2023-10-05,High,500
     Jane,2023-10-05,Low,1
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 # Agent Configuration: The Inside Sales Agent
 

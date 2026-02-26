@@ -3,7 +3,6 @@ id: builtwith-tech-pivot
 category: Sales Ops
 title: The Tech Displacement Factory
 tagline: Find every user of 10 competitors in one run.
-difficulty: Intermediate
 time: Weekly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Marketo,10000000
     HubSpot,1000000
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Tech Displacement Factory

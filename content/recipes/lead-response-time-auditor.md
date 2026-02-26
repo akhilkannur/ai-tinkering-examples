@@ -3,7 +3,6 @@ id: lead-response-time-auditor
 category: Sales Ops
 title: Speed-to-Lead Auditor
 tagline: Calculate time to first touch for every lead.
-difficulty: Beginner
 time: Daily
 archtype: Processor
 description: >-
@@ -16,6 +15,10 @@ sampleData:
     L-1,10:00,10:04
     L-2,10:00,11:30
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The SDR Manager

@@ -3,7 +3,6 @@ id: drive-time-territory-balancer
 category: Sales Ops
 title: Drive-Time Territory Balancer
 tagline: Balance field sales territories by actual drive time.
-difficulty: Advanced
 time: Batch
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     RepA,"123 Main St, Austin"
     RepB,"456 Oak St, Dallas"
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: Drive-Time Territory Balancer

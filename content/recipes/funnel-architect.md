@@ -3,7 +3,6 @@ id: funnel-architect
 category: Sales Ops
 title: The Funnel Visualizer
 tagline: Map & Fix Sales Flows.
-difficulty: Advanced
 time: Batch
 isPremium: true
 description: >-
@@ -21,6 +20,10 @@ sampleData:
 
     Enterprise Sales,Lead -> SDR Call -> AE Demo -> Legal -> PO,Sales Cycle
     Length
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Funnel Visualizer

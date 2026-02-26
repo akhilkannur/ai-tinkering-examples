@@ -3,7 +3,6 @@ id: landing-page-optimizer
 category: CRO
 title: The LP Optimizer
 tagline: A/B test ideas at scale.
-difficulty: Intermediate
 time: Batch
 description: >-
   Analyzes landing pages against top competitors and suggests psychological A/B
@@ -16,6 +15,10 @@ sampleData:
     Pricing,https://mysite.com/pricing,Pro Plan Purchase
     Demo,https://mysite.com/demo,Book a Demo
 isPremium: true
+inputs:
+  - Conversion Data
+outputs:
+  - A/B Experiment Ideas
 ---
 
 # Agent Configuration: The LP Optimizer

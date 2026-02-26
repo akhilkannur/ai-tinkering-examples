@@ -3,7 +3,6 @@ id: second-purchase-nudge-timer
 category: Retention
 title: Replenishment Timer
 tagline: Time your re-order emails perfectly.
-difficulty: Intermediate
 time: Monthly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     John,2023-02-01,102
     Jane,2023-01-15,103
 isPremium: true
+inputs:
+  - Customer List
+  - Local File (CSV/MD)
+outputs:
+  - Re-engagement Script
+  - Cleaned Data
 ---
 # Agent Configuration: The Retention Marketer
 

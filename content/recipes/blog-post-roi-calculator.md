@@ -3,7 +3,6 @@ id: blog-post-roi-calculator
 category: Marketing Ops
 title: Content Revenue Attributor
 tagline: Stitch CRM deals to Analytics data to find your 'Money Pages'.
-difficulty: Intermediate
 time: Weekly
 archetype: Processor
 description: >-
@@ -28,6 +27,12 @@ sampleData:
     david@startup.io,/case-studies/finance-corp,2025-01-20
     eve@enterprise.net,/home,2025-01-05
 isPremium: false
+inputs:
+  - Campaign Data
+  - Local File (CSV/MD)
+outputs:
+  - Optimization Plan
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Attribution Analyst

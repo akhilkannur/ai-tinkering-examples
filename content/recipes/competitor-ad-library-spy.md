@@ -3,7 +3,6 @@ id: competitor-ad-library-spy
 category: Strategic Ops
 title: Ad Library Decoder
 tagline: Reverse-engineer your competitor's ad strategy.
-difficulty: Intermediate
 time: 15 mins
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     Ad 2: "The #1 rated CRM for small business. Try it free."
     Ad 3: "Drowning in data? See why 5,000+ teams switched to Us."
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Ad Library Decoder

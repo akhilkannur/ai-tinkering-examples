@@ -3,7 +3,6 @@ id: nps-detractor-recovery-list
 category: Customer Success
 title: NPS Detractor Recovery List
 tagline: Automate outreach lists for low NPS scorers.
-difficulty: Beginner
 time: Daily
 archtype: Processor
 description: >-
@@ -16,6 +15,10 @@ sampleData:
     Acme,2,Bad support
     Beta,10,Love it
 isPremium: true
+inputs:
+  - Usage Logs
+outputs:
+  - Churn Risk Report
 ---
 
 # Agent Configuration: The Customer Experience Lead

@@ -3,7 +3,6 @@ id: landing-page-ab-test-significance
 category: Marketing Ops
 title: A/B Test Referee
 tagline: Is Variant B actually better?
-difficulty: Intermediate
 time: Weekly
 archtype: Processor
 description: >-
@@ -16,6 +15,10 @@ sampleData:
     A,500,20
     B,510,35
 isPremium: true
+inputs:
+  - Campaign Data
+outputs:
+  - Optimization Plan
 ---
 
 # Agent Configuration: The CRO Specialist

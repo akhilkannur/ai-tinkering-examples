@@ -3,7 +3,6 @@ id: competitor-hiring-spy
 category: Competitive Intel
 title: The Market Hiring Spy
 tagline: Detect strategic pivots (PLG -> Enterprise) by analyzing job titles.
-difficulty: Intermediate
 time: Monthly
 archetype: Hybrid
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Competitor_A,https://competitor-a.com/jobs
     Competitor_B,https://competitor-b.com/careers
 isPremium: false
+inputs:
+  - Competitor URL
+  - Local File + Search
+outputs:
+  - Intel Dashboard
+  - Enriched Document
 ---
 
 # Agent Configuration: The Market Hiring Spy

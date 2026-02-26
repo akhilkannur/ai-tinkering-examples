@@ -3,7 +3,6 @@ id: customer-domain-extractor
 category: Sales Ops
 title: Domain from Email Extractor
 tagline: Get company websites from a list of emails.
-difficulty: Beginner
 time: Batch
 archtype: Processor
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     jane@gmail.com
     bill@beta.io
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Data Enricher

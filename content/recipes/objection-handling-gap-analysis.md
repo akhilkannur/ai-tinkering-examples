@@ -3,7 +3,6 @@ id: objection-handling-gap-analysis
 category: Sales Ops
 title: Objection Gap Analyzer
 tagline: Identify objections where win rates are lowest.
-difficulty: Intermediate
 time: Monthly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Deal B,Won,None
     Deal C,Lost,Feature Gap
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Sales Enablement Agent

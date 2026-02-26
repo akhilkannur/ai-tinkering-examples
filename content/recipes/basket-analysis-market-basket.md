@@ -3,7 +3,6 @@ id: basket-analysis-market-basket
 category: CRO
 title: Basket Correlation Engine
 tagline: People who buy A also buy B.
-difficulty: Advanced
 time: Monthly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     1,Shampoo;Conditioner
     2,Shampoo;Soap
 isPremium: false
+inputs:
+  - Conversion Data
+  - Local File (CSV/MD)
+outputs:
+  - A/B Experiment Ideas
+  - Cleaned Data
 ---
 # Agent Configuration: The Data Scientist Agent
 

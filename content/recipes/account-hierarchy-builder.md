@@ -3,7 +3,6 @@ id: account-hierarchy-builder
 category: Sales Ops
 title: Corporate Hierarchy Builder
 tagline: Link subsidiaries to parents based on domain patterns.
-difficulty: Advanced
 time: Monthly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Google UK,google.com
     DeepMind,deepmind.com
 isPremium: false
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Data Architect Agent

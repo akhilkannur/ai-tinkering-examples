@@ -3,7 +3,6 @@ id: sales-call-transcript-analyzer
 category: Sales Ops
 title: BANT Transcript Analyzer
 tagline: 'Extract Budget, Authority, Need, and Timeline from call transcripts.'
-difficulty: Intermediate
 time: 5 mins
 archetype: Processor
 description: >-
@@ -21,6 +20,12 @@ sampleData:
 
     Prospect: Just me and the CTO. We want to be live by October.
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The BANT Transcript Analyzer

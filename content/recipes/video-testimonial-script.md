@@ -3,7 +3,6 @@ id: video-testimonial-script
 category: Strategic Ops
 title: The Video Testimonial Director
 tagline: Help your clients help you.
-difficulty: Beginner
 time: Batch
 description: >-
   Clients freeze up on camera. This agent generates personalized 'Interview
@@ -17,6 +16,10 @@ sampleData:
     John Smith,Glow Serum,Cleared skin in 14 days
     Mike Ross,SEO Course,Ranked #1 for 'B2B Sales'
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Video Testimonial Director

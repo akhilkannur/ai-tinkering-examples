@@ -3,7 +3,6 @@ id: youtube-thumbnail-ab-tester
 category: Content Ops
 title: The Thumbnail Strategy Factory
 tagline: High-CTR concepts from your ideas or viral competitors.
-difficulty: Beginner
 time: Weekly
 description: >-
   CTR determines your video's fate. This agent audits your thumbnail ideas (if
@@ -15,6 +14,10 @@ sampleData:
     Idea 1: Me pointing at a graph.
     Idea 2: A screenshot of the code.
 isPremium: true
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: The Thumbnail Strategy Factory

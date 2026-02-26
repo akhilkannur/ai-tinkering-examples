@@ -3,7 +3,6 @@ id: abandoned-cart-sms
 category: Sales Ops
 title: The Abandoned Cart SMS Writer
 tagline: Generate high-converting SMS hooks by analyzing your product page.
-difficulty: Intermediate
 time: Batch
 archetype: Hybrid
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     John Doe,https://realaiexamples.com/tools/copywriting
     Jane Smith,https://realaiexamples.com/
 isPremium: false
+inputs:
+  - Lead Data (CSV)
+  - Local File + Search
+outputs:
+  - CRM-Ready Export
+  - Enriched Document
 ---
 
 # Agent Configuration: The eCommerce Copywriter

@@ -3,7 +3,6 @@ id: price-drop-notification-list
 category: E-commerce
 title: Price Drop Notifier
 tagline: Tell browsers when price drops.
-difficulty: Intermediate
 time: Weekly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     John,TV,2023-10-01,400,500
     Jane,Radio,2023-10-01,50,50
 isPremium: true
+inputs:
+  - Product Data
+  - Local File (CSV/MD)
+outputs:
+  - Shopify-Ready Update
+  - Cleaned Data
 ---
 # Agent Configuration: The Email Marketer
 

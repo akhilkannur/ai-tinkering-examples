@@ -3,7 +3,6 @@ id: content-repurposer
 category: Content Ops
 title: The Viral Editor
 tagline: Turn one blog post into 3 social posts.
-difficulty: Beginner
 time: 10 mins
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     10 Tips for Remote Work,https://blog.com/remote-tips,Culture
     SaaS Pricing Strategies,https://blog.com/pricing,Finance
 isPremium: false
+inputs:
+  - Source Draft
+  - Local File (CSV/MD)
+outputs:
+  - Repurposed Assets
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Viral Editor

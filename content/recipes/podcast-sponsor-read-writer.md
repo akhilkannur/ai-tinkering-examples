@@ -3,7 +3,6 @@ id: podcast-sponsor-read-writer
 category: Content Ops
 title: The Conversational Ad Read Factory
 tagline: Native ad reads that don't get skipped.
-difficulty: Intermediate
 time: One-off
 description: >-
   Host-read ads convert best. This agent takes a sponsor's talking points (if
@@ -15,6 +14,10 @@ sampleData:
     Brand: BlueBottle Coffee. Points: Fresh beans, subscription model, 20% off
     with code GROW.
 isPremium: true
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: The Conversational Ad Read Factory

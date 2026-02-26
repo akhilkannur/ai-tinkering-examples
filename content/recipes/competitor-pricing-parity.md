@@ -3,7 +3,6 @@ id: competitor-pricing-parity
 category: Competitive Intel
 title: Price War Monitor
 tagline: Don't just calculate differences. Scrape and monitor live competitor pricing.
-difficulty: Intermediate
 time: Monthly
 archetype: Hybrid
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     Pro Plan,99,https://competitor.com/pricing
     Enterprise,299,https://competitor.com/enterprise
 isPremium: true
+inputs:
+  - Competitor URL
+  - Local File + Search
+outputs:
+  - Intel Dashboard
+  - Enriched Document
 ---
 
 # Agent Configuration: The Pricing Strategist

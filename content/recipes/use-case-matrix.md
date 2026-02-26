@@ -3,7 +3,6 @@ id: use-case-matrix
 category: Strategic Ops
 title: The Use Case Matrix Builder
 tagline: Map features to pain points.
-difficulty: Intermediate
 time: One-off
 archetype: Processor
 description: >-
@@ -21,6 +20,12 @@ sampleData:
     CTO,Too much manual work
     Field Rep,Can't access laptop
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 
 

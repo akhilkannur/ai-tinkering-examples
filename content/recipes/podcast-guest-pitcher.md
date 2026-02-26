@@ -3,7 +3,6 @@ id: podcast-guest-pitcher
 category: Content Ops
 title: The Podcast Guest Pitcher
 tagline: Get booked on niche shows.
-difficulty: Intermediate
 time: Batch
 description: >-
   Podcasts are high-trust channels. This agent researches target podcasts,
@@ -17,6 +16,10 @@ sampleData:
     The Growth Lab,Sarah Chen,Marketing Experiments
     Founder Wisdom,Mike Ross,Early Stage Startups
 isPremium: true
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: The Podcast Guest Pitcher

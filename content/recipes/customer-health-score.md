@@ -3,7 +3,6 @@ id: customer-health-score
 category: Customer Success
 title: The Customer Health Score Builder
 tagline: 'Red, Yellow, or Green?'
-difficulty: Beginner
 time: Weekly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     CustA,20,9,Paid
     CustB,0,6,Overdue
 isPremium: true
+inputs:
+  - Usage Logs
+  - Local File (CSV/MD)
+outputs:
+  - Churn Risk Report
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Doctor

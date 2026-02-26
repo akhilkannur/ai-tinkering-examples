@@ -3,7 +3,6 @@ id: workspace-consolidation-hunter
 category: Sales Ops
 title: Enterprise Consolidation Hunter
 tagline: Find 50 free users with the same email domain.
-difficulty: Intermediate
 time: Monthly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     sara@ge.com,Free
     bob@ge.com,Free
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 # Agent Configuration: The Enterprise SDR
 

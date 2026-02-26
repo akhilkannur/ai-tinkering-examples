@@ -3,7 +3,6 @@ id: booth-scan-lead-router
 category: Strategic Ops
 title: Event Lead Router
 tagline: Route badge scans to the right rep.
-difficulty: Intermediate
 time: Batch
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     John,Acme,CA
     Jane,Beta,NY
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 # Agent Configuration: The Event Ops Specialist
 

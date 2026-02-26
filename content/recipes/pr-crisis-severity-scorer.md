@@ -3,7 +3,6 @@ id: pr-crisis-severity-scorer
 category: Strategic Ops
 title: PR Crisis Severity Scorer
 tagline: Decide if you need to wake up the CEO.
-difficulty: Intermediate
 time: Real-time
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     Article_URL,Outlet_Tier
     nytimes.com,Tier1
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 
 # Agent Configuration: PR Crisis Severity Scorer

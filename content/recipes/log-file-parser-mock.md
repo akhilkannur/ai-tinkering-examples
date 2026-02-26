@@ -3,7 +3,6 @@ id: log-file-parser-mock
 category: SEO
 title: The Log File Analyzer
 tagline: What is Googlebot doing?
-difficulty: Advanced
 time: Batch
 description: >-
   Server logs reveal the truth. This agent processes raw server logs to count
@@ -17,6 +16,10 @@ sampleData:
     logs/server_2.log,Production,2024-10-01
     logs/staging.log,Staging,2024-10-01
 isPremium: true
+inputs:
+  - Target URL
+outputs:
+  - SEO Audit / Fixes
 ---
 
 # Agent Configuration: The Log File Analyzer

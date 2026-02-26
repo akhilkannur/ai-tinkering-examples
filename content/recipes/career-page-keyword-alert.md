@@ -3,7 +3,6 @@ id: career-page-keyword-alert
 category: Lead Gen
 title: The Hiring Intent Trigger
 tagline: Trigger outreach when a prospect posts a specific job role.
-difficulty: Intermediate
 time: Daily
 archetype: Hybrid
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     airbnb.com,"Sales Operations"
     notion.so,"Head of Marketing"
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Local File + Search
+outputs:
+  - Enriched Leads
+  - Enriched Document
 ---
 
 # Agent Configuration: The Hiring Intent Trigger

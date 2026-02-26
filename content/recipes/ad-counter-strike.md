@@ -3,7 +3,6 @@ id: ad-counter-strike
 category: Competitive Intel
 title: The Conquest Campaigner
 tagline: Don't just attack their product. Attack their bad reviews.
-difficulty: Advanced
 time: 25 mins
 archetype: Hybrid
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     Competitor_A,https://g2.com/competitor-a
     Competitor_B,https://capterra.com/competitor-b
 isPremium: false
+inputs:
+  - Competitor URL
+  - Local File + Search
+outputs:
+  - Intel Dashboard
+  - Enriched Document
 ---
 
 # Agent Configuration: The Attack Dog

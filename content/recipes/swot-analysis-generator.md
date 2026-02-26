@@ -3,7 +3,6 @@ id: swot-analysis-generator
 category: Strategic Ops
 title: The Strategic SWOT Generator
 tagline: Build a SWOT matrix from your notes or market research.
-difficulty: Intermediate
 time: Quarterly
 description: >-
   Strategic planning requires honesty. This agent reads your internal brainstorm
@@ -15,6 +14,10 @@ sampleData:
     Strength: Our engineering team is elite.
     Weakness: Our sales cycle is too slow (6 months).
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Strategic SWOT Generator

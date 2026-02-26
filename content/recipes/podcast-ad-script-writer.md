@@ -3,7 +3,6 @@ id: podcast-ad-script-writer
 category: Strategic Ops
 title: Podcast Ad Script Writer
 tagline: 'Write 60-second audio ads that sound natural, not robotic.'
-difficulty: Beginner
 time: 5 mins
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     Benefit: 75 vitamins in one scoop. Gut health.
     Offer: Free travel packs.
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Podcast Ad Script Writer

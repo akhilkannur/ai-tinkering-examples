@@ -3,7 +3,6 @@ id: refund-rate-marketing-channel
 category: CRO
 title: Quality of Traffic Audit
 tagline: Which ads drive returns?
-difficulty: Advanced
 time: Monthly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     1,TikTok,Returned
     2,SEO,Kept
 isPremium: true
+inputs:
+  - Conversion Data
+  - Local File (CSV/MD)
+outputs:
+  - A/B Experiment Ideas
+  - Cleaned Data
 ---
 # Agent Configuration: The Marketing Analyst
 

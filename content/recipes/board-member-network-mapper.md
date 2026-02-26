@@ -3,7 +3,6 @@ id: board-member-network-mapper
 category: Lead Gen
 title: The Board Room Infiltrator
 tagline: Map potential intros via board member connections.
-difficulty: Advanced
 time: 25 mins
 archetype: Researcher
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Marc Andreessen,Uber
     Bill Gurley,Coinbase
 isPremium: false
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Board Room Infiltrator

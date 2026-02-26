@@ -3,7 +3,6 @@ id: youtube-chapter-maker
 category: Content Ops
 title: The Chapter Maker
 tagline: Rank for key moments.
-difficulty: Intermediate
 time: Batch
 description: >-
   Google indexes video chapters directly in search results. This agent processes
@@ -17,6 +16,10 @@ sampleData:
     Sales Cold Call,transcripts/cold_call.txt,Sales objection handling
     Growth Hacking 101,transcripts/growth.txt,Scalable growth strategies
 isPremium: true
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: The Chapter Maker

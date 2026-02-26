@@ -3,7 +3,6 @@ id: redirect-map-generator
 category: SEO
 title: The Migration Doctor
 tagline: 'Map 10,000 URLs without writing 10,000 lines of code.'
-difficulty: Advanced
 time: Batch
 archetype: Processor
 description: >-
@@ -19,6 +18,12 @@ sampleData:
     /blog/2023/post-2,/blog/post-2
     /shop/category/shoes,/collections/shoes
 isPremium: true
+inputs:
+  - Target URL
+  - Local File (CSV/MD)
+outputs:
+  - SEO Audit / Fixes
+  - Cleaned Data
 ---
 
 # Agent Configuration: The DevOps Engineer

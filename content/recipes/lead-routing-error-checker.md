@@ -3,7 +3,6 @@ id: lead-routing-error-checker
 category: Sales Ops
 title: Routing Rule Validator
 tagline: Did the Enterprise lead go to the SMB rep?
-difficulty: Intermediate
 time: Weekly
 archtype: Processor
 description: >-
@@ -16,6 +15,10 @@ sampleData:
     Lead A,5000,John,SMB
     Lead B,50,Jane,SMB
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Territory Manager

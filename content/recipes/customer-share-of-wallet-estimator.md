@@ -3,7 +3,6 @@ id: customer-share-of-wallet-estimator
 category: E-commerce
 title: The Upsell Hunter
 tagline: Find the 'Sleeping Giants' in your customer base.
-difficulty: Advanced
 time: Yearly
 archetype: Processor
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     BigCorp,1000,50,5000
     Startup,10,50,500
 isPremium: false
+inputs:
+  - Product Data
+  - Local File (CSV/MD)
+outputs:
+  - Shopify-Ready Update
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Account Strategist

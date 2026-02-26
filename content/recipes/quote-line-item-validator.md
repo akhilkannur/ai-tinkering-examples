@@ -3,7 +3,6 @@ id: quote-line-item-validator
 category: Sales Ops
 title: Product SKU Integrity Checker
 tagline: Ensure reps don't quote incompatible SKUs.
-difficulty: Intermediate
 time: Daily
 archtype: Processor
 description: >-
@@ -16,6 +15,10 @@ sampleData:
     Q-1,'STARTER';'ENT_ADDON'
     Q-2,'PRO';'PRO_ADDON'
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Deal Desk

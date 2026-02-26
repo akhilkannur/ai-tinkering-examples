@@ -3,7 +3,6 @@ id: case-study-reverse-engineer
 category: Competitive Intel
 title: The Case Study Decoder
 tagline: Who are they really selling to?
-difficulty: Intermediate
 time: Batch
 archetype: Hybrid
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     Mercury,https://mercury.com,Banking
     Loom,https://loom.com,Video Messaging
 isPremium: false
+inputs:
+  - Competitor URL
+  - Local File + Search
+outputs:
+  - Intel Dashboard
+  - Enriched Document
 ---
 
 # Agent Configuration: The Case Study Decoder

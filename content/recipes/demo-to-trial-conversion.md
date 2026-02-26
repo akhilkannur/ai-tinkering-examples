@@ -3,7 +3,6 @@ id: demo-to-trial-conversion
 category: Sales Ops
 title: Demo-to-Trial Converter
 tagline: Are demos actually working?
-difficulty: Beginner
 time: Monthly
 archetype: Processor
 description: Measures the success rate of converting Sales Demos into Product Trials.
@@ -16,6 +15,12 @@ sampleData:
     John,Facebook_Ads,2023-10-02,FALSE
     Mike,Referral,2023-10-03,TRUE
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Sales Funnel Physician

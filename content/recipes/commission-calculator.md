@@ -3,7 +3,6 @@ id: commission-calculator
 category: Lead Gen
 title: The Sales Comp Designer
 tagline: Design a commission plan that drives growth.
-difficulty: Advanced
 time: Hybrid
 description: >-
   Bad incentives kill sales performance. This agent researches industry
@@ -17,6 +16,10 @@ sampleData:
     SDR,5000,200000
     Customer Success,15000,500000
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+outputs:
+  - Enriched Leads
 ---
 
 # Agent Configuration: The Sales Comp Designer

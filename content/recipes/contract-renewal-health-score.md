@@ -3,7 +3,6 @@ id: contract-renewal-health-score
 category: Sales Ops
 title: Pre-Renewal Health Check
 tagline: 90-day warning system.
-difficulty: Intermediate
 time: Weekly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     Acme,85,Red
     Beta,85,Green
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 # Agent Configuration: The Renewals Manager
 

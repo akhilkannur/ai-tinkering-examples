@@ -3,7 +3,6 @@ id: phone-number-formatter-e164
 category: Sales Ops
 title: Global Phone Formatter
 tagline: Standardize all numbers to E.164 format.
-difficulty: Beginner
 time: Batch
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Jane,555.123.4567
     Bob,1-555-123-4567
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Systems Integration Agent

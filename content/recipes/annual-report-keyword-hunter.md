@@ -3,7 +3,6 @@ id: annual-report-keyword-hunter
 category: Lead Gen
 title: The 10-K Strategic Hunter
 tagline: Scan annual reports for specific strategic initiative keywords.
-difficulty: Advanced
 time: 45 mins
 archetype: Analyst
 description: >-
@@ -18,6 +17,10 @@ sampleData:
     F,Ford Motor Company,"autonomous, electrification, software"
     WMT,Walmart,"supply chain, omnichannel, logistics"
 isPremium: false
+inputs:
+  - Target Accounts (CSV)
+outputs:
+  - Enriched Leads
 ---
 
 # Agent Configuration: The 10-K Strategic Hunter

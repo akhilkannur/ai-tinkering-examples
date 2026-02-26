@@ -3,7 +3,6 @@ id: ad-library-archivist
 category: Competitive Intel
 title: The Ad Library Archivist
 tagline: Build a structured swipe file from 100 links.
-difficulty: Beginner
 time: Weekly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Competitor_A,https://fb.com/ads/123,UGC
     Competitor_B,https://fb.com/ads/456,Discount
 isPremium: false
+inputs:
+  - Competitor URL
+  - Local File (CSV/MD)
+outputs:
+  - Intel Dashboard
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Ad Library Archivist

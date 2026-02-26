@@ -3,7 +3,6 @@ id: social-selling-activity-ratio
 category: Strategic Ops
 title: Social Activity Mix
 tagline: Are we doing enough social touches?
-difficulty: Beginner
 time: Weekly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Jane (Social),20,50,5
     Mike (Lazy),10,0,0
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 # Agent Configuration: The Social Selling Behavior Coach
 

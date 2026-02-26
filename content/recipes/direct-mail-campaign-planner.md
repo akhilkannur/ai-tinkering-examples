@@ -3,7 +3,6 @@ id: direct-mail-campaign-planner
 category: Strategic Ops
 title: The ABM Direct Mail Engine
 tagline: High-impact mailers for your top 100 accounts.
-difficulty: Advanced
 time: One-off
 description: >-
   Direct mail breaks through the noise. This agent reads a list of target
@@ -16,6 +15,10 @@ sampleData:
     MegaCorp,Tier 1,Infrastructure scale
     TinyStart,Tier 3,Fast setup
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The ABM Direct Mail Engine

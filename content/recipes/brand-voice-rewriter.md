@@ -3,7 +3,6 @@ id: brand-voice-rewriter
 category: Strategic Ops
 title: Brand Voice Chameleon
 tagline: Rewrite any text to match your specific brand personality.
-difficulty: Intermediate
 time: 5 mins
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     Our software is good because it helps you organize files. It is very secure
     and has 2FA. You can save time.
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Brand Voice Chameleon

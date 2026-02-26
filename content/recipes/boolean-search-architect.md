@@ -3,7 +3,6 @@ id: boolean-search-architect
 category: Lead Gen
 title: The Boolean Search Architect
 tagline: Write complex Sales Nav queries without the headache.
-difficulty: Beginner
 time: One-off
 archetype: Processor
 isPremium: false
@@ -22,6 +21,12 @@ sampleData:
 
     US_Marketing_VPs,VP of Marketing or CMO at Series B healthcare startups in
     the US.
+inputs:
+  - Target Accounts (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - Enriched Leads
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Boolean Search Architect

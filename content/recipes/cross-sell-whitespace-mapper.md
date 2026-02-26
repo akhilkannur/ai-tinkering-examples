@@ -3,7 +3,6 @@ id: cross-sell-whitespace-mapper
 category: Sales Ops
 title: Cross-Sell Whitespace Matrix
 tagline: Find exactly what your customers haven't bought yet.
-difficulty: Intermediate
 time: Monthly
 archtype: Processor
 description: >-
@@ -18,6 +17,10 @@ sampleData:
     Beta,Platform
     Gamma,Add-on B
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The RevOps Strategist

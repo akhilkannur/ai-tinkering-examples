@@ -3,7 +3,6 @@ id: billing-frequency-upsell
 category: Sales Ops
 title: Annual Pre-Pay Upsell
 tagline: Move monthly users to annual plans.
-difficulty: Beginner
 time: Quarterly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     Acme,Monthly,12
     Beta,Monthly,1
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 # Agent Configuration: The Growth Marketer
 

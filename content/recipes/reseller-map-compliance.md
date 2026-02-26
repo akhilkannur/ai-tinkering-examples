@@ -3,7 +3,6 @@ id: reseller-map-compliance
 category: Strategic Ops
 title: MAP Pricing Auditor
 tagline: Ensure resellers aren't undercutting your price.
-difficulty: Intermediate
 time: Weekly
 archtype: Processor
 description: >-
@@ -16,6 +15,10 @@ sampleData:
     Shop A,Widget X,95,100
     Shop B,Widget X,105,100
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Compliance Officer

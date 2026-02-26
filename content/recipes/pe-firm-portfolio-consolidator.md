@@ -3,7 +3,6 @@ id: pe-firm-portfolio-consolidator
 category: Lead Gen
 title: The PE Rollup Hunter
 tagline: Map all portfolio companies of a specific PE firm.
-difficulty: Intermediate
 time: 20 mins
 archetype: Researcher
 description: >-
@@ -19,6 +18,12 @@ sampleData:
     Thoma Bravo
     Insight Partners
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The PE Rollup Hunter

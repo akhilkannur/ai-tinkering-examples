@@ -3,7 +3,6 @@ id: competitor-hook-decoder
 category: Competitive Intel
 title: The Competitor Hook Decoder
 tagline: Reverse-engineer the psychology behind their ads.
-difficulty: Intermediate
 time: Weekly
 archetype: Processor
 isPremium: true
@@ -23,6 +22,12 @@ sampleData:
     Copy.ai,The end of writer's block.,Generate high-converting copy in seconds.
 
     ClickUp,Save one day every week.,The all-in-one app to replace them all.
+inputs:
+  - Competitor URL
+  - Local File (CSV/MD)
+outputs:
+  - Intel Dashboard
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Competitor Hook Decoder

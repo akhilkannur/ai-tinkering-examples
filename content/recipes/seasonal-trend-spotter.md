@@ -3,7 +3,6 @@ id: seasonal-trend-spotter
 category: Paid Media
 title: Trend Timing Assistant
 tagline: When do people start searching for 'Winter Coats'?
-difficulty: Intermediate
 time: Yearly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     35,Coats,100
     36,Coats,500
 isPremium: true
+inputs:
+  - Ad Account Data
+  - Local File (CSV/MD)
+outputs:
+  - Performance Report
+  - Cleaned Data
 ---
 # Agent Configuration: The Planner
 

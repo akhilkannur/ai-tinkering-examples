@@ -3,7 +3,6 @@ id: activation-rate-cohort
 category: Sales Ops
 title: Activation Rate by Cohort
 tagline: Are new users activating faster?
-difficulty: Advanced
 time: Monthly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     Jan,1000,200
     Feb,1200,300
 isPremium: false
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 # Agent Configuration: The Growth Analyst
 

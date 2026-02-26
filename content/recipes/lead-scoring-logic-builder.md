@@ -3,7 +3,6 @@ id: lead-scoring-logic-builder
 category: Sales Ops
 title: The Lead Scorer
 tagline: Prioritize leads from your CRM or build a model from scratch.
-difficulty: Intermediate
 time: One-off
 description: >-
   Stop wasting time on low-value leads. This agent reads your lead history CSV
@@ -17,22 +16,34 @@ sampleData:
     Jane Smith,Manager,jane@gmail.com,Lost
 isPremium: true
 verifiedRun:
-  date: "2026-02-12"
-  agent: "Gemini 2.0 Flash"
+  date: '2026-02-12'
+  agent: Gemini 2.0 Flash
   log:
-    - { text: "gemini run @lead-scoring-logic-builder.md", type: "input" }
-    - { text: "● Phase 1: Creating 'lead_history.csv' from sampleData...", type: "system" }
-    - { text: "● Phase 2: Analyzing ICP (Target: Founders/CEOs)...", type: "system" }
-    - { text: "✔ Success: Processed 5 leads. Identified 2 High-priority matches.", type: "success" }
-    - { text: "✔ Output generated: 'verified-lead-scoring.csv'", type: "success" }
-    - { text: "Report: \"Scoring engine validated. Corporate domain weight successfully applied to Tier 1 leads.\"", type: "report" }
+    - text: gemini run @lead-scoring-logic-builder.md
+      type: input
+    - text: '● Phase 1: Creating ''lead_history.csv'' from sampleData...'
+      type: system
+    - text: '● Phase 2: Analyzing ICP (Target: Founders/CEOs)...'
+      type: system
+    - text: '✔ Success: Processed 5 leads. Identified 2 High-priority matches.'
+      type: success
+    - text: '✔ Output generated: ''verified-lead-scoring.csv'''
+      type: success
+    - text: >-
+        Report: "Scoring engine validated. Corporate domain weight successfully
+        applied to Tier 1 leads."
+      type: report
   outputFile:
-    name: "verified-lead-scoring.csv"
-    url: "/outputs/verified-lead-scoring.csv"
+    name: verified-lead-scoring.csv
+    url: /outputs/verified-lead-scoring.csv
     preview: |
       Email,Score,Reason
       elon@tesla.com,15,"CEO (+10), Corporate Domain (+5)"
       tim@apple.com,15,"CEO (+10), Corporate Domain (+5)"
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Lead Scorer

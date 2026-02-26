@@ -3,7 +3,6 @@ id: visual-storyteller
 category: Content Ops
 title: The Visual Storyteller
 tagline: Blog -> Comic Strip.
-difficulty: Advanced
 time: Batch
 isPremium: true
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     The Data Breach,https://blog.com/security-fail,Dark and Dramatic
     The Growth Hack,https://blog.com/growth,High-energy and Tech
     The Customer Win,https://blog.com/case-study,Minimalist and Clean
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: The Visual Storyteller

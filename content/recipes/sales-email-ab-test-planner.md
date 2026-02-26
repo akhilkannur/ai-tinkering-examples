@@ -3,7 +3,6 @@ id: sales-email-ab-test-planner
 category: Sales Ops
 title: A/B Test Architect
 tagline: Design scientifically valid experiments for your cold emails.
-difficulty: Intermediate
 time: 10 mins
 archetype: Hybrid
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     We help companies save money. Want a demo?
     Best, Me.
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File + Search
+outputs:
+  - CRM-Ready Export
+  - Enriched Document
 ---
 
 # Agent Configuration: The A/B Test Architect

@@ -3,7 +3,6 @@ id: lead-routing-validator
 category: Sales Ops
 title: The Lead Routing Validator
 tagline: Ensure no lead is left behind.
-difficulty: Intermediate
 time: Weekly
 archetype: Processor
 description: >-
@@ -19,6 +18,12 @@ sampleData:
     102,Globex,10001,5000,Unassigned
     103,Soylent,10001,50,Jane Smith
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Router Police

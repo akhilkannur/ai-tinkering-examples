@@ -3,7 +3,6 @@ id: contract-expiry-cliff-visualizer
 category: Sales Ops
 title: Revenue Cliff Visualizer
 tagline: Identify months with dangerous renewal concentration.
-difficulty: Intermediate
 time: Monthly
 archtype: Processor
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     Beta,50000,Jan
     Gamma,20000,Feb
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Strategic Planning Lead

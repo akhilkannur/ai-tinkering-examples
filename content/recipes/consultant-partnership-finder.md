@@ -3,7 +3,6 @@ id: consultant-partnership-finder
 category: Lead Gen
 title: The Channel Partner Scout
 tagline: Find implementation partners for specific software.
-difficulty: Intermediate
 time: 20 mins
 archetype: Researcher
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Asana,Workflow Consultant
     Shopify,CRO Agency
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Channel Partner Scout

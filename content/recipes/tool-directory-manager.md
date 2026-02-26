@@ -1,18 +1,20 @@
 ---
-title: "Tool Directory Manager"
+title: Tool Directory Manager
 id: tool-directory-manager
 category: Strategic Ops
-tagline: "Automated database maintenance for high-volume niche directories."
-difficulty: Intermediate
+tagline: Automated database maintenance for high-volume niche directories.
 time: 5 mins
 archetype: Processor
-description: "The automation we use to keep our 'Tool Directory' fresh. It fetches live CSV data from our public Google Sheet, filters for 'Pure Salestech' using Gemini intelligence, and automatically updates the site with new submissions."
+description: >-
+  The automation we use to keep our 'Tool Directory' fresh. It fetches live CSV
+  data from our public Google Sheet, filters for 'Pure Salestech' using Gemini
+  intelligence, and automatically updates the site with new submissions.
 inputs:
-  - "Google Sheet CSV Export URL"
-  - "Custom 'Pure Sales' filter logic"
+  - Google Sheet CSV Export URL
+  - Custom 'Pure Sales' filter logic
 outputs:
-  - "Updated lib/ai-tools-data.ts"
-  - "Slack status notification"
+  - Updated lib/ai-tools-data.ts
+  - Slack status notification
 isPremium: true
 ---
 

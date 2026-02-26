@@ -3,7 +3,6 @@ id: content-journey-mapper
 category: Marketing Ops
 title: Customer Content Journey
 tagline: Trace the blog posts read by your best customers.
-difficulty: Advanced
 time: Monthly
 archtype: Processor
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     John,/blog/pricing,2023-10-02
     John,CONVERTED,2023-10-03
 isPremium: true
+inputs:
+  - Campaign Data
+outputs:
+  - Optimization Plan
 ---
 
 # Agent Configuration: The Content Strategist

@@ -3,7 +3,6 @@ id: api-usage-biller
 category: Sales Ops
 title: The API Usage Biller
 tagline: Don't leave money on the table.
-difficulty: Intermediate
 time: Monthly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     CustA,1000,500
     CustB,1000,1500
 isPremium: false
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Accountant

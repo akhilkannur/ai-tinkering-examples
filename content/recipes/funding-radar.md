@@ -3,7 +3,6 @@ id: funding-radar
 category: Competitive Intel
 title: The Capital Radar
 tagline: Track $1B+ in funding across 50 industries on autopilot.
-difficulty: Intermediate
 time: 10 mins
 description: >-
   Capital is intent. This agent monitors a list of industries from a CSV and
@@ -17,6 +16,10 @@ sampleData:
     ClimateTech
     Logistics
 isPremium: true
+inputs:
+  - Competitor URL
+outputs:
+  - Intel Dashboard
 ---
 
 # Agent Configuration: The Capital Radar

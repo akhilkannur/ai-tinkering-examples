@@ -3,7 +3,6 @@ id: industry-classification-fixer
 category: Sales Ops
 title: Industry Taxonomy Enforcer
 tagline: Map messy 'Industry' strings to a standard list.
-difficulty: Beginner
 time: Weekly
 archetype: Processor
 description: Standardizes raw industry fields into a clean list of 10 parent categories.
@@ -15,6 +14,12 @@ sampleData:
     Beta,Manufacturing & Logistics
     Gamma,SaaS
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Data Steward Agent

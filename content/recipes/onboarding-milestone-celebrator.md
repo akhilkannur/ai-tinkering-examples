@@ -3,7 +3,6 @@ id: onboarding-milestone-celebrator
 category: Customer Success
 title: Onboarding Milestone Celebrator
 tagline: Automate high-fives for new users.
-difficulty: Beginner
 time: Real-time
 archetype: Processor
 description: >-
@@ -15,6 +14,12 @@ sampleData:
     User_Email,Milestone_Hit
     john@co.com,First_Export
 isPremium: true
+inputs:
+  - Usage Logs
+  - Local File (CSV/MD)
+outputs:
+  - Churn Risk Report
+  - Cleaned Data
 ---
 
 # Agent Configuration: Onboarding Milestone Celebrator

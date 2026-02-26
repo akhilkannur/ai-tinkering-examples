@@ -3,7 +3,6 @@ id: product-page-traffic-sales
 category: CRO
 title: PDP Performance Auditor
 tagline: 'High traffic, no sales?'
-difficulty: Intermediate
 time: Weekly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     /prod-a,1000,50
     /prod-b,5000,10
 isPremium: true
+inputs:
+  - Conversion Data
+  - Local File (CSV/MD)
+outputs:
+  - A/B Experiment Ideas
+  - Cleaned Data
 ---
 # Agent Configuration: The CRO Specialist
 

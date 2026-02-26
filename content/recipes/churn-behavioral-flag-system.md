@@ -3,7 +3,6 @@ id: churn-behavioral-flag-system
 category: Retention
 title: Heuristic Churn Predictor
 tagline: Predict churn based on login gaps and ticket volume.
-difficulty: Advanced
 time: Batch
 archtype: Processor
 description: >-
@@ -16,6 +15,10 @@ sampleData:
     UserA,45,3
     UserB,2,0
 isPremium: false
+inputs:
+  - Customer List
+outputs:
+  - Re-engagement Script
 ---
 
 # Agent Configuration: Heuristic Churn Predictor

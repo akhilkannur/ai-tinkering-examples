@@ -3,7 +3,6 @@ id: indirect-revenue-forecaster
 category: Strategic Ops
 title: Indirect Revenue Forecaster
 tagline: Forecast revenue from partner-submitted pipeline.
-difficulty: Intermediate
 time: Monthly
 archtype: Processor
 description: >-
@@ -16,6 +15,10 @@ sampleData:
     Reseller X,100000,High
     Reseller Y,50000,Medium
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Channel Revenue Lead

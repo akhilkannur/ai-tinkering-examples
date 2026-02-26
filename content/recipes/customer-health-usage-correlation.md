@@ -3,7 +3,6 @@ id: customer-health-usage-correlation
 category: Customer Success
 title: Usage-to-Health Validator
 tagline: Does high usage actually mean high health?
-difficulty: Advanced
 time: Monthly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Beta,10,2
     Gamma,2,10
 isPremium: true
+inputs:
+  - Usage Logs
+  - Local File (CSV/MD)
+outputs:
+  - Churn Risk Report
+  - Cleaned Data
 ---
 
 # Agent Configuration: The CS Analyst Agent

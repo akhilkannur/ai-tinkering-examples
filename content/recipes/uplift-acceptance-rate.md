@@ -3,7 +3,6 @@ id: uplift-acceptance-rate
 category: Sales Ops
 title: Price Increase Success Rate
 tagline: Did they accept the +5%?
-difficulty: Intermediate
 time: Yearly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     Acme,105,105
     Beta,105,100
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 # Agent Configuration: The Pricing Manager
 

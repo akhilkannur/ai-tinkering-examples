@@ -3,7 +3,6 @@ id: profile-optimization-score
 category: Strategic Ops
 title: LinkedIn Profile Auditor
 tagline: Does your rep look professional?
-difficulty: Intermediate
 time: Quarterly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     John,Yes,5
     Jane,Yes,50
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 # Agent Configuration: The Brand Compliance Agent
 

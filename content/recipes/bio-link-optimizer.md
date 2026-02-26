@@ -3,7 +3,6 @@ id: bio-link-optimizer
 category: Content Ops
 title: The Bio Link Architect
 tagline: Optimize your 'Link in Bio' from a URL or a goal.
-difficulty: Beginner
 time: One-off
 archetype: Hybrid
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     2. My favorite gear.
     3. Buy my course.
 isPremium: false
+inputs:
+  - Source Draft
+  - Local File + Search
+outputs:
+  - Repurposed Assets
+  - Enriched Document
 ---
 
 # Agent Configuration: The Bio Link Architect

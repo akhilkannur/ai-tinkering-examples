@@ -3,7 +3,6 @@ id: roadmap-prioritizer
 category: Strategic Ops
 title: The Roadmap Prioritizer (RICE)
 tagline: Build what matters.
-difficulty: Intermediate
 time: Batch
 description: >-
   You have 50 feature requests and 2 developers. This agent uses the RICE
@@ -18,6 +17,10 @@ sampleData:
     AI Search,2000,3,0.5,4
     Mobile App,10000,2,0.7,6
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Roadmap Prioritizer (RICE)

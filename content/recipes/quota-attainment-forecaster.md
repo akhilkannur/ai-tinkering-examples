@@ -3,7 +3,6 @@ id: quota-attainment-forecaster
 category: Sales Ops
 title: The Quota Forecaster
 tagline: Predict end-of-month landing spots.
-difficulty: Beginner
 time: Daily
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Alice,100000,40000,30000,10
     Bob,100000,85000,5000,10
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The FP&A Analyst

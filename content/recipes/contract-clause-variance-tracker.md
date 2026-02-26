@@ -3,7 +3,6 @@ id: contract-clause-variance-tracker
 category: Sales Ops
 title: The Legal Risk Scanner
 tagline: Quantify your legal exposure in dollars.
-difficulty: Advanced
 time: Monthly
 archetype: Processor
 description: >-
@@ -19,6 +18,12 @@ sampleData:
     Beta,100000,"Customer may terminate for convenience with 30 days notice."
     Gamma,20000,"Payment terms: Net 90."
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 # Agent Configuration: The Risk Officer
 

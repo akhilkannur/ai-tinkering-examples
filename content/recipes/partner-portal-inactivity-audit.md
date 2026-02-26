@@ -3,7 +3,6 @@ id: partner-portal-inactivity-audit
 category: Strategic Ops
 title: Partner Engagement Audit
 tagline: Identify 'Ghost' partners who haven't logged in.
-difficulty: Beginner
 time: Quarterly
 archtype: Processor
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     Blog Affiliate,Referral,2023-05-01,50
     Consulting Inc,Reseller,2023-10-25,2
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Partner Activation Engine

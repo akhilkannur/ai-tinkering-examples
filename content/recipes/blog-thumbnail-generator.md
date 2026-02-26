@@ -1,18 +1,20 @@
 ---
-title: "Blog Thumbnail Generator"
+title: Blog Thumbnail Generator
 id: blog-thumbnail-generator
 category: Content Ops
-tagline: "Programmatically generate branded OG images and blog thumbnails."
-difficulty: Intermediate
+tagline: Programmatically generate branded OG images and blog thumbnails.
 time: 2 mins
 archetype: Processor
-description: "The automation we use to create the very thumbnails you see on this site. Uses Python and Pillow to take a title and generate a high-contrast, brutalist-style image with custom gradients and typography."
+description: >-
+  The automation we use to create the very thumbnails you see on this site. Uses
+  Python and Pillow to take a title and generate a high-contrast,
+  brutalist-style image with custom gradients and typography.
 inputs:
-  - "Blog Title"
-  - "Output filename (slug)"
+  - Blog Title
+  - Output filename (slug)
 outputs:
-  - "750x500 PNG thumbnail"
-  - "Optimized WebP version"
+  - 750x500 PNG thumbnail
+  - Optimized WebP version
 isPremium: false
 ---
 

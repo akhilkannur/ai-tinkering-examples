@@ -3,7 +3,6 @@ id: discount-vs-duration-correlation
 category: Sales Ops
 title: Discount Efficiency Auditor
 tagline: Are we getting longer terms for lower prices?
-difficulty: Intermediate
 time: Quarterly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     2,20,36
     3,0,12
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 # Agent Configuration: The Deal Desk Lead
 

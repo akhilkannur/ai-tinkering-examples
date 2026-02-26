@@ -3,7 +3,6 @@ id: trend-hunter
 category: Content Ops
 title: The Trend Hunter
 tagline: Find the next viral topic before it peaks.
-difficulty: Intermediate
 time: 15 mins
 description: >-
   Data-driven content beats 'creative' content. This agent monitors a list of
@@ -16,6 +15,10 @@ sampleData:
     Generative AI,Product ideas
     Sustainable Fashion,Competitor moves
 isPremium: true
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: The Trend Hunter

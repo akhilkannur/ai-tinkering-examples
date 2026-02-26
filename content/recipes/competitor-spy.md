@@ -3,7 +3,6 @@ id: competitor-spy
 category: Competitive Intel
 title: The Market Spy
 tagline: Deep Competitor Analysis.
-difficulty: Intermediate
 time: 15 mins
 archetype: Researcher
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Zendesk,https://zendesk.com,Help Desk
     Drift,https://drift.com,Conversational Marketing
 isPremium: true
+inputs:
+  - Competitor URL
+  - Web Search Target
+outputs:
+  - Intel Dashboard
+  - Curated Intel
 ---
 
 # Agent Configuration: The Market Spy

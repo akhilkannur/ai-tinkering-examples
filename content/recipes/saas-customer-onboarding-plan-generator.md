@@ -3,7 +3,6 @@ id: saas-customer-onboarding-plan-generator
 category: Customer Success
 title: The Usage-Based Nudge
 tagline: Send the right email at the right time based on user behavior.
-difficulty: Intermediate
 time: Daily
 archetype: Processor
 description: >-
@@ -19,6 +18,12 @@ sampleData:
     stuck@client.com,TRUE,TRUE,FALSE
     power@client.com,TRUE,TRUE,TRUE
 isPremium: true
+inputs:
+  - Usage Logs
+  - Local File (CSV/MD)
+outputs:
+  - Churn Risk Report
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Behavioral Psychologist

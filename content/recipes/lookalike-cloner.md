@@ -3,7 +3,6 @@ id: lookalike-cloner
 category: Lead Gen
 title: The Golden Lead Cloner
 tagline: Clone your best customers or competitors.
-difficulty: Advanced
 time: Hybrid
 description: >-
   Why prospect randomly? This agent takes a list of 'Golden Customers' or
@@ -17,6 +16,10 @@ sampleData:
     PostHog,https://posthog.com,Product Analytics
     Beehiiv,https://beehiiv.com,Email Marketing
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+outputs:
+  - Enriched Leads
 ---
 
 # Agent Configuration: The Golden Lead Cloner

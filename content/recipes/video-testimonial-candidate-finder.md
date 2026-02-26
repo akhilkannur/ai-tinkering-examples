@@ -3,7 +3,6 @@ id: video-testimonial-candidate-finder
 category: Customer Success
 title: Video Testimonial Scout
 tagline: Turn text reviews into video gold.
-difficulty: Intermediate
 time: Monthly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     Acme,150,Positive
     Beta,10,Neutral
 isPremium: true
+inputs:
+  - Usage Logs
+  - Local File (CSV/MD)
+outputs:
+  - Churn Risk Report
+  - Cleaned Data
 ---
 # Agent Configuration: The Video Producer
 

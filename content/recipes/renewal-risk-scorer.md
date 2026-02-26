@@ -3,7 +3,6 @@ id: renewal-risk-scorer
 category: Customer Success
 title: The Renewal Risk Scorer
 tagline: Predict churn before it happens.
-difficulty: Advanced
 time: Monthly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     CustA,No,0,No
     CustB,Yes,5,Yes
 isPremium: true
+inputs:
+  - Usage Logs
+  - Local File (CSV/MD)
+outputs:
+  - Churn Risk Report
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Soothsayer

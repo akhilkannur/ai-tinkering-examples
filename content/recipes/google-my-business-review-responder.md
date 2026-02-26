@@ -3,7 +3,6 @@ id: google-my-business-review-responder
 category: Strategic Ops
 title: Local Review Responder
 tagline: Write SEO-friendly replies to Google Reviews in seconds.
-difficulty: Beginner
 time: 5 mins
 archetype: Hybrid
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     John Doe,5,Best pizza in Chicago!
     Jane Smith,1,Cold pizza and rude service.
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File + Search
+outputs:
+  - Operating Manual
+  - Enriched Document
 ---
 
 # Agent Configuration: The Local Review Responder

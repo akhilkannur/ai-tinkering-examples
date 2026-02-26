@@ -1,18 +1,20 @@
 ---
-title: "Programmatic Social Publisher"
+title: Programmatic Social Publisher
 id: social-media-publisher
 category: Marketing Ops
-tagline: "Bulk-publish content to Instagram and Pinterest via API."
-difficulty: Advanced
+tagline: Bulk-publish content to Instagram and Pinterest via API.
 time: 15 mins
 archetype: Processor
-description: "The automation we use to distribute these blueprints across social media. It hooks into the Instagram Business API and Pinterest API to generate static image cards and motion videos, then publishes them automatically."
+description: >-
+  The automation we use to distribute these blueprints across social media. It
+  hooks into the Instagram Business API and Pinterest API to generate static
+  image cards and motion videos, then publishes them automatically.
 inputs:
-  - "Recipe .md file"
-  - "Instagram API Token"
+  - Recipe .md file
+  - Instagram API Token
 outputs:
-  - "Automated Social Post"
-  - "Published Link Log"
+  - Automated Social Post
+  - Published Link Log
 isPremium: false
 ---
 

@@ -3,7 +3,6 @@ id: pre-event-warmup-builder
 category: Strategic Ops
 title: Geo-Targeted Event Warmup
 tagline: Find prospects within 50 miles.
-difficulty: Intermediate
 time: Batch
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Jane,San Jose,CA
     Bob,New York,NY
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 # Agent Configuration: The Field Marketer
 

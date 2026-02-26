@@ -3,7 +3,6 @@ id: domain-age-startup-spotter
 category: Lead Gen
 title: The New Domain Watcher
 tagline: Find newly registered domains with stealth signals.
-difficulty: Advanced
 time: Daily
 archetype: Researcher
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Keywords
     ai, labs, tech, health, finance, ventures
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The New Domain Watcher

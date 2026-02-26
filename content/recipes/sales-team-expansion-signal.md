@@ -3,7 +3,6 @@ id: sales-team-expansion-signal
 category: Lead Gen
 title: The VP Sales Headhunter
 tagline: Identify companies hiring their first VP of Sales.
-difficulty: Intermediate
 time: 20 mins
 archetype: Researcher
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     "First Sales Hire"
     "Head of Sales"
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The VP Sales Headhunter

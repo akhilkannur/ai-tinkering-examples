@@ -3,7 +3,6 @@ id: podcast-sponsorship-roi
 category: Marketing Ops
 title: The Brand Lift Estimator
 tagline: Direct clicks are only half the story. Measure the 'Halo Effect'.
-difficulty: Intermediate
 time: Quarterly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     MyFirstMillion,2024-01-15,5000,1000,1500
     TechCrunch,2024-01-20,200,1000,1050
 isPremium: true
+inputs:
+  - Campaign Data
+  - Local File (CSV/MD)
+outputs:
+  - Optimization Plan
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Attribution Scientist

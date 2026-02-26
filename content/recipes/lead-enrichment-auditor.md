@@ -3,7 +3,6 @@ id: lead-enrichment-auditor
 category: Sales Ops
 title: Enrichment Match Rate Auditor
 tagline: Are we paying for empty data?
-difficulty: Intermediate
 time: Monthly
 archtype: Processor
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     2,,in/jane,
     3,,,,
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Data Procurement Manager

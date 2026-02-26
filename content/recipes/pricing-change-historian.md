@@ -3,7 +3,6 @@ id: pricing-change-historian
 category: Competitive Intel
 title: The Pricing Historian
 tagline: Track their inflation.
-difficulty: Intermediate
 time: Batch
 description: >-
   Companies raise prices slowly. This agent researches competitor pricing
@@ -17,6 +16,10 @@ sampleData:
     Zendesk,https://www.zendesk.com/pricing
     Salesforce,https://www.salesforce.com/editions-pricing/sales-cloud/
 isPremium: true
+inputs:
+  - Competitor URL
+outputs:
+  - Intel Dashboard
 ---
 
 # Agent Configuration: The Pricing Historian

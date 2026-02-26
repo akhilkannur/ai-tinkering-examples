@@ -3,7 +3,6 @@ id: billing-contact-verification
 category: Sales Ops
 title: Billing Contact Verifier
 tagline: Will the invoice bounce?
-difficulty: Beginner
 time: Monthly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Beta Inc,finance@beta.com,Hard Bounce,120000,beta.com
     Gamma LLC,ap@gamma.com,Soft Bounce,10000,gamma.com
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Revenue Leakage Auditor

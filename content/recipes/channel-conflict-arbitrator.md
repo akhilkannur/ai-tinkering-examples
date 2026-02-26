@@ -3,7 +3,6 @@ id: channel-conflict-arbitrator
 category: Strategic Ops
 title: Channel Conflict Resolver
 tagline: 'Decide who owns the lead: Partner or Direct?'
-difficulty: Intermediate
 time: Daily
 archtype: Processor
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     [Partner Reg]
     Acme Corp, 2023-10-02
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Channel Arbitrator

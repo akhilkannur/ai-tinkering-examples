@@ -3,7 +3,6 @@ id: featured-snippet-thief
 category: SEO
 title: The AI Overview Sniper
 tagline: Secure Position Zero & AI Citations.
-difficulty: Intermediate
 time: Weekly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     "best crm for sales ops",https://hubspot.com,AI Overview,3
     "calculating churn rate",https://investopedia.com,Perplexity,2
 isPremium: true
+inputs:
+  - Target URL
+  - Local File (CSV/MD)
+outputs:
+  - SEO Audit / Fixes
+  - Cleaned Data
 ---
 
 # Agent Configuration: The AI Overview Sniper

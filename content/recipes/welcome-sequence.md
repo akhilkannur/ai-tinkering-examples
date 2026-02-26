@@ -3,7 +3,6 @@ id: welcome-sequence
 category: Retention
 title: The Onboarding Factory
 tagline: Create welcome email sequences.
-difficulty: Beginner
 time: 10 mins
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     SaaS Founder,Installing the tag,Churn reduction
     E-com Manager,Adding first product,Increase AOV
 isPremium: true
+inputs:
+  - Customer List
+  - Local File (CSV/MD)
+outputs:
+  - Re-engagement Script
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Onboarding Factory

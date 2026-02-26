@@ -3,7 +3,6 @@ id: gmaps-photo-auditor
 category: SEO
 title: G-Maps Photo Quality Auditor
 tagline: Remove blurry or irrelevant user photos from your listing.
-difficulty: Intermediate
 time: Batch
 archetype: Researcher
 description: >-
@@ -15,6 +14,12 @@ sampleData:
     Location_ID,Photo_URL
     Loc1,https://lh3.../photo.jpg
 isPremium: true
+inputs:
+  - Target URL
+  - Web Search Target
+outputs:
+  - SEO Audit / Fixes
+  - Curated Intel
 ---
 
 # Agent Configuration: G-Maps Photo Quality Auditor

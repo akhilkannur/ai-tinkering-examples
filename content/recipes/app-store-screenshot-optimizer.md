@@ -3,7 +3,6 @@ id: app-store-screenshot-optimizer
 category: SEO
 title: The App Store Screenshot Optimizer
 tagline: 'More downloads, same traffic.'
-difficulty: Intermediate
 time: Batch
 archetype: Hybrid
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     Duolingo,Education,Language Learning
     Notion,Productivity,Note Taking
 isPremium: false
+inputs:
+  - Target URL
+  - Local File + Search
+outputs:
+  - SEO Audit / Fixes
+  - Enriched Document
 ---
 
 # Agent Configuration: The App Store Screenshot Optimizer

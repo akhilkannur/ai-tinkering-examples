@@ -3,7 +3,6 @@ id: link-in-bio-auditor
 category: Content Ops
 title: Link-in-Bio Broken Link Checker
 tagline: Ensure your most valuable link actually works.
-difficulty: Beginner
 time: Batch
 archetype: Researcher
 description: >-
@@ -15,6 +14,12 @@ sampleData:
     Instagram_Handle,Expected_Dest_URL
     @brand,https://site.com/promo
 isPremium: true
+inputs:
+  - Source Draft
+  - Web Search Target
+outputs:
+  - Repurposed Assets
+  - Curated Intel
 ---
 
 # Agent Configuration: Link-in-Bio Broken Link Checker

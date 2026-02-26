@@ -3,7 +3,6 @@ id: weighted-pipeline-forecaster
 category: Sales Ops
 title: Weighted Revenue Forecaster
 tagline: Predict revenue using stage-based probabilities.
-difficulty: Intermediate
 time: Weekly
 archtype: Processor
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     Deal B,50000,Proposal
     Deal C,20000,Negotiation
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Sales Analyst

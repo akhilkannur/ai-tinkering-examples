@@ -3,7 +3,6 @@ id: churn-risk-red-flag-report
 category: Customer Success
 title: Churn Red Flag Report
 tagline: Daily digest of customers with sudden usage drops.
-difficulty: Advanced
 time: Daily
 archtype: Processor
 description: >-
@@ -16,6 +15,10 @@ sampleData:
     Acme,50,2
     Beta,10,12
 isPremium: false
+inputs:
+  - Usage Logs
+outputs:
+  - Churn Risk Report
 ---
 
 # Agent Configuration: The CS Ops Specialist

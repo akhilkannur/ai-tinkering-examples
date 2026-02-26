@@ -3,7 +3,6 @@ id: redirect-chain-fixer
 category: SEO
 title: Redirect Chain Flattener
 tagline: Fix "Redirect Hops" to improve site speed and SEO.
-difficulty: Intermediate
 time: 5 mins
 archetype: Processor
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     /new-page,/final-page
     /blog/old-post,/blog/new-post
 isPremium: true
+inputs:
+  - Target URL
+  - Local File (CSV/MD)
+outputs:
+  - SEO Audit / Fixes
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Redirect Chain Flattener

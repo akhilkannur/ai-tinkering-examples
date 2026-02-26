@@ -3,7 +3,6 @@ id: review-miner-pm
 category: CRO
 title: The Competitive Review Miner
 tagline: Audit the entire market's weaknesses.
-difficulty: Advanced
 time: 30 mins
 description: >-
   Scrapes negative reviews for a list of competitors, identifies missing
@@ -16,6 +15,10 @@ sampleData:
     Salesforce,https://www.g2.com/products/salesforce-sales-cloud/reviews
     HubSpot,https://www.g2.com/products/hubspot-sales-hub/reviews
 isPremium: true
+inputs:
+  - Conversion Data
+outputs:
+  - A/B Experiment Ideas
 ---
 
 # Agent Configuration: The Competitive Review Miner

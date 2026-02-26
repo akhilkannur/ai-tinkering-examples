@@ -3,10 +3,12 @@ id: gsc-index-coverage-auditor
 category: SEO
 title: GSC Index Coverage Auditor
 tagline: Find "Ghost Pages" (Indexed 404s) and Sitemap errors.
-difficulty: Intermediate
 time: 15 mins
 archetype: Processor
-description: Compares your Google Search Console "Index Coverage" report against your live Sitemap to find "Ghost Pages" (URLs Google thinks exist but are actually 404s) and "Zombie Links" (Sitemap URLs that redirect).
+description: >-
+  Compares your Google Search Console "Index Coverage" report against your live
+  Sitemap to find "Ghost Pages" (URLs Google thinks exist but are actually 404s)
+  and "Zombie Links" (Sitemap URLs that redirect).
 sampleData:
   filename: gsc_coverage.csv
   content: |
@@ -21,6 +23,12 @@ sampleOutput: |
      - *Action:* 301 Redirect or "Validate Fix" in GSC.
   2. **Sitemap Rot:** 0 found.
      - All sitemap URLs return 200 OK.
+inputs:
+  - Target URL
+  - Local File (CSV/MD)
+outputs:
+  - SEO Audit / Fixes
+  - Cleaned Data
 ---
 
 # What This Does

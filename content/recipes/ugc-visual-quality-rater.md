@@ -3,7 +3,6 @@ id: ugc-visual-quality-rater
 category: Content Ops
 title: UGC Ad Potential Scorer
 tagline: Find the hidden gems in your tagged photos/videos.
-difficulty: Intermediate
 time: Batch
 archtype: Processor
 description: >-
@@ -16,6 +15,10 @@ sampleData:
     https://insta.../1,"Love this!"
     https://insta.../2,"Meh."
 isPremium: true
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: UGC Ad Potential Scorer

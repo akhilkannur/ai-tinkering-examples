@@ -3,7 +3,6 @@ id: ad-creative-fatigue-alert
 category: Paid Media
 title: Creative Fatigue Watchdog
 tagline: Know when your ads stop working.
-difficulty: Intermediate
 time: Weekly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     Ad_A,2.0,1.9
     Ad_B,2.0,0.8
 isPremium: false
+inputs:
+  - Ad Account Data
+  - Local File (CSV/MD)
+outputs:
+  - Performance Report
+  - Cleaned Data
 ---
 # Agent Configuration: The Creative Strategist
 

@@ -3,7 +3,6 @@ id: lead-recycling-automation
 category: Marketing Ops
 title: The Recycler
 tagline: Move 'Closed-Lost' leads back to nurture.
-difficulty: Intermediate
 time: Monthly
 archtype: Processor
 description: >-
@@ -16,6 +15,10 @@ sampleData:
     john@acme.com,Closed-Lost,2023-01-01
     jane@beta.com,Closed-Lost,2023-10-01
 isPremium: true
+inputs:
+  - Campaign Data
+outputs:
+  - Optimization Plan
 ---
 
 # Agent Configuration: The Lifecycle Marketer

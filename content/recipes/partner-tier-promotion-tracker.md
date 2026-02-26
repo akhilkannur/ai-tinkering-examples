@@ -3,7 +3,6 @@ id: partner-tier-promotion-tracker
 category: Strategic Ops
 title: Partner Tier Auditor
 tagline: Check if partners qualify for Silver/Gold/Platinum.
-difficulty: Intermediate
 time: Quarterly
 archtype: Processor
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     Reseller B,45000,Silver
     Reseller C,250000,Gold
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Channel Manager

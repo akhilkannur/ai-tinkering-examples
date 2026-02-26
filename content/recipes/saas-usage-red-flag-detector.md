@@ -3,7 +3,6 @@ id: saas-usage-red-flag-detector
 category: Sales Ops
 title: Zombie Account Hunter
 tagline: Paying but not logging in?
-difficulty: Intermediate
 time: Monthly
 archetype: Processor
 description: Flags accounts with active contracts but <10% active users (high churn risk).
@@ -14,6 +13,12 @@ sampleData:
     Acme,100,5
     Beta,10,9
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Churn Predictor

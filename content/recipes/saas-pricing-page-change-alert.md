@@ -3,7 +3,6 @@ id: saas-pricing-page-change-alert
 category: Lead Gen
 title: The Price Hike Monitor
 tagline: Trigger when a prospect raises prices.
-difficulty: Advanced
 time: Weekly
 archetype: Analyst
 description: >-
@@ -18,6 +17,10 @@ sampleData:
     Salesforce,https://www.salesforce.com/editions-pricing/
     HubSpot,https://www.hubspot.com/pricing/marketing
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+outputs:
+  - Enriched Leads
 ---
 
 # Agent Configuration: The Price Hike Monitor

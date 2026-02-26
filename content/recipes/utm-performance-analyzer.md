@@ -3,7 +3,6 @@ id: utm-performance-analyzer
 category: Marketing Ops
 title: UTM Traffic Grader
 tagline: Which campaign source drives the most traffic?
-difficulty: Beginner
 time: Weekly
 archtype: Processor
 description: >-
@@ -16,6 +15,10 @@ sampleData:
     /landing?utm_source=google&utm_medium=cpc,500
     /landing?utm_source=newsletter,100
 isPremium: true
+inputs:
+  - Campaign Data
+outputs:
+  - Optimization Plan
 ---
 
 # Agent Configuration: The Traffic Analyst

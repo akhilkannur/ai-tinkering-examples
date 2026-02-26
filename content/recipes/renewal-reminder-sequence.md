@@ -3,7 +3,6 @@ id: renewal-reminder-sequence
 category: Customer Success
 title: The Renewal Reminder
 tagline: No surprise cancellations.
-difficulty: Beginner
 time: Batch
 description: >-
   Contracts expire. This agent automates the renewal cadence for your entire
@@ -17,6 +16,10 @@ sampleData:
     TechFlow,2024-11-15,1200,6.5
     Urban Design,2024-12-01,3000,4.2
 isPremium: true
+inputs:
+  - Usage Logs
+outputs:
+  - Churn Risk Report
 ---
 
 # Agent Configuration: The Renewal Reminder

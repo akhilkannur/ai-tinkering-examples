@@ -3,7 +3,6 @@ id: churn-risk-health-scorer
 category: Sales Ops
 title: The Trend-Based Churn Predictor
 tagline: Static scores lie. Detect negative trends (velocity) before it's too late.
-difficulty: Advanced
 time: Weekly
 archetype: Processor
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     Globex,50,55,0
     Stark Ind,200,10,2
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Retention Analyst

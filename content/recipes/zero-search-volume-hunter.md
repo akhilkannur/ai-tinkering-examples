@@ -3,7 +3,6 @@ id: zero-search-volume-hunter
 category: SEO
 title: The Zero-Volume Hunter
 tagline: Rank for keywords tools ignore.
-difficulty: Advanced
 time: Batch
 description: >-
   SEO tools are often wrong about volume. This agent identifies 'Zero Volume'
@@ -17,6 +16,10 @@ sampleData:
     Stripe,Payments,SaaS Developers
     PostHog,Analytics,Product Managers
 isPremium: true
+inputs:
+  - Target URL
+outputs:
+  - SEO Audit / Fixes
 ---
 
 # Agent Configuration: The Zero-Volume Hunter

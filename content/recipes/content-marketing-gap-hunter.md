@@ -3,7 +3,6 @@ id: content-marketing-gap-hunter
 category: Lead Gen
 title: The Ghost Blog Hunter
 tagline: Find companies with blogs but no recent posts.
-difficulty: Intermediate
 time: 20 mins
 archetype: Researcher
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     company-a.com
     startup-b.io
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Ghost Blog Hunter

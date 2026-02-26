@@ -3,7 +3,6 @@ id: hiring-freeze-thaw-detector
 category: Lead Gen
 title: The Freeze Thaw Detector
 tagline: Identify companies that just resumed hiring after a freeze.
-difficulty: Intermediate
 time: Weekly
 archetype: Researcher
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     TechCorp
     StartupInc
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Freeze Thaw Detector

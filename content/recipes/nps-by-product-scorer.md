@@ -3,7 +3,6 @@ id: nps-by-product-scorer
 category: CRO
 title: Product Satisfaction Score
 tagline: Which product makes people happiest?
-difficulty: Intermediate
 time: Quarterly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     SmallBiz,Starter_Plan,10,500,"Love it, works great"
     MedCorp,Pro_Plan,5,25000,"Too expensive for what it does"
 isPremium: true
+inputs:
+  - Conversion Data
+  - Local File (CSV/MD)
+outputs:
+  - A/B Experiment Ideas
+  - Cleaned Data
 ---
 # Agent Configuration: The Customer Sentiment Architect
 

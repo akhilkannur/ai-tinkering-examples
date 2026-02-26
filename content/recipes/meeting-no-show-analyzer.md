@@ -3,7 +3,6 @@ id: meeting-no-show-analyzer
 category: Sales Ops
 title: The No-Show Detective
 tagline: Why are prospects ghosting demos?
-difficulty: Intermediate
 time: Weekly
 archetype: Processor
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     2,Bob,Cold Call,Fri,4pm,No-Show
     3,Alice,Webinar,Mon,9am,No-Show
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Efficiency Expert

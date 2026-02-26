@@ -3,7 +3,6 @@ id: employee-growth-surge-alert
 category: Lead Gen
 title: The Hyper-Growth Radar
 tagline: Alert when headcount grows >20% in a quarter.
-difficulty: Intermediate
 time: Monthly
 archetype: Researcher
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Rippling,123456
     Deel,654321
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Hyper-Growth Radar

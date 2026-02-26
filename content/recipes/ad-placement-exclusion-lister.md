@@ -3,7 +3,6 @@ id: ad-placement-exclusion-lister
 category: Paid Media
 title: Ad Waste Excluder
 tagline: Block mobile apps and kids' channels.
-difficulty: Intermediate
 time: Weekly
 archtype: Processor
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     candycrush.saga,5000,0
     math-games.net,200,1
 isPremium: false
+inputs:
+  - Ad Account Data
+outputs:
+  - Performance Report
 ---
 
 # Agent Configuration: The PPC Optimizer

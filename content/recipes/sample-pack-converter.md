@@ -3,7 +3,6 @@ id: sample-pack-converter
 category: E-commerce
 title: Sample to Full-Size Converter
 tagline: Upsell sample buyers to the real deal.
-difficulty: Beginner
 time: Weekly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     John,Sample Kit,2023-10-01
     Jane,Full Bottle,2023-10-01
 isPremium: true
+inputs:
+  - Product Data
+  - Local File (CSV/MD)
+outputs:
+  - Shopify-Ready Update
+  - Cleaned Data
 ---
 # Agent Configuration: The Lifecycle Strategist
 

@@ -3,7 +3,6 @@ id: paid-search-quality-score-auditor
 category: Marketing Ops
 title: The CPC Savings Calculator
 tagline: Calculate exactly how much money you save by improving ad relevance.
-difficulty: Intermediate
 time: Weekly
 archetype: Processor
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     "sales software",9,8.00,500,4000
     "cheap crm",3,15.00,50,750
 isPremium: true
+inputs:
+  - Campaign Data
+  - Local File (CSV/MD)
+outputs:
+  - Optimization Plan
+  - Cleaned Data
 ---
 
 # Agent Configuration: The PPC Economist

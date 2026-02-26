@@ -3,7 +3,6 @@ id: business-card-digitizer
 category: Sales Ops
 title: The Business Card Digitizer
 tagline: From pocket to CRM in seconds.
-difficulty: Experimental
 time: Batch
 archetype: Processor
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     booth_photos/card_stack_1.png,SaaStr,2024-09-10
     booth_photos/lunch_meeting.webp,Networking Dinner,2024-09-11
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Business Card Digitizer

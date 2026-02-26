@@ -3,7 +3,6 @@ id: product-hunt-manager
 category: Strategic Ops
 title: The Product Hunt Launch Manager
 tagline: 'Get #1 Product of the Day.'
-difficulty: Advanced
 time: Batch
 description: >-
   A launch is a project, not just a post. This agent creates complete 'Launch
@@ -17,6 +16,10 @@ sampleData:
     FileVault,Sensitive files are easily leaked in Slack,Sarah,2024-11-19
     GameGuild,Finding pro teammates for casual play is hard,Mike,2024-11-26
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Product Hunt Launch Manager

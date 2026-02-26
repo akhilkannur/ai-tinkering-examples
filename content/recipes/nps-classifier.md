@@ -3,7 +3,6 @@ id: nps-classifier
 category: Customer Success
 title: The NPS Comment Classifier
 tagline: Turn 'Detractors' into data.
-difficulty: Intermediate
 time: Monthly
 archetype: Processor
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     9,"Love the support team!"
     4,"The app crashes on login."
 isPremium: true
+inputs:
+  - Usage Logs
+  - Local File (CSV/MD)
+outputs:
+  - Churn Risk Report
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Voice of Customer

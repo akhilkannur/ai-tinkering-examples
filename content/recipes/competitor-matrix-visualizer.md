@@ -3,7 +3,6 @@ id: competitor-matrix-visualizer
 category: Strategic Ops
 title: Feature Parity Matrix
 tagline: Build the "Us vs Them" comparison grid for your pricing page.
-difficulty: Intermediate
 time: 15 mins
 archetype: Hybrid
 description: >-
@@ -28,6 +27,12 @@ sampleOutput: |
   Free Tier,No,Yes,Yes
   API Access,Yes,Add-on ($),No
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File + Search
+outputs:
+  - Operating Manual
+  - Enriched Document
 ---
 
 # Agent Configuration: The Feature Parity Matrix

@@ -3,7 +3,6 @@ id: csv-crm-normalizer
 category: Marketing Ops
 title: The Bulk CRM Data Normalizer
 tagline: 'Standardize 10,000 lead records for import.'
-difficulty: Intermediate
 time: One-off
 description: >-
   Salespeople upload garbage data. This agent takes a massive CSV with
@@ -17,6 +16,10 @@ sampleData:
     JOHN DOE,555-0199, JOHN@acme.com
     jane smith,(555) 012-3456,jane@globex.com
 isPremium: true
+inputs:
+  - Campaign Data
+outputs:
+  - Optimization Plan
 ---
 
 # Agent Configuration: The Bulk CRM Data Normalizer

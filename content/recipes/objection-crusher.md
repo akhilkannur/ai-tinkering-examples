@@ -3,7 +3,6 @@ id: objection-crusher
 category: Sales Ops
 title: The Objection Crusher
 tagline: Create battle cards from your notes or competitor reviews.
-difficulty: Intermediate
 time: 15 mins
 description: >-
   Sales reps freeze when hit with a tough question. This agent reads your call
@@ -15,6 +14,10 @@ sampleData:
     "Your pricing is twice as high as Competitor X."
     "We don't have the dev resources to implement this."
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Objection Crusher

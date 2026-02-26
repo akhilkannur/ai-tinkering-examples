@@ -3,7 +3,6 @@ id: attribution-window-comparator
 category: CRO
 title: Attribution Window Comparer
 tagline: 1-day vs 7-day click impact.
-difficulty: Advanced
 time: Monthly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     FB_Promo,1000,5000
     Google_Brand,2000,2100
 isPremium: false
+inputs:
+  - Conversion Data
+  - Local File (CSV/MD)
+outputs:
+  - A/B Experiment Ideas
+  - Cleaned Data
 ---
 # Agent Configuration: The Attribution Specialist
 

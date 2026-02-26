@@ -3,7 +3,6 @@ id: sales-interview-questions
 category: Lead Gen
 title: The Sales Interview Architect
 tagline: Custom assessments for any sales role.
-difficulty: Intermediate
 time: Batch
 description: >-
   Resumes lie; behavioral interviews don't. This agent generates custom scripts
@@ -17,6 +16,10 @@ sampleData:
     Inbound SDR,500,High-volume qualification and speed-to-lead
     Channel Manager,15000,Managing indirect revenue through partners
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+outputs:
+  - Enriched Leads
 ---
 
 # Agent Configuration: The Sales Interview Architect

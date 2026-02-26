@@ -3,7 +3,6 @@ id: multi-threaded-deal-validator
 category: Sales Ops
 title: Single-Thread Risk Detector
 tagline: Flag deals that only have one active contact.
-difficulty: Beginner
 time: Weekly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Deal B,4
     Deal C,1
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Pipeline Integrity Agent

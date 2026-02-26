@@ -3,7 +3,6 @@ id: social-engagement-to-opportunity
 category: Strategic Ops
 title: Social-to-Deal Correlator
 tagline: Do likes lead to deals?
-difficulty: Advanced
 time: Quarterly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     John,2023-10-01,2023-10-05
     Jane,2023-10-01,NULL
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 # Agent Configuration: The Attribution Specialist
 

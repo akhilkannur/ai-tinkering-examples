@@ -3,7 +3,6 @@ id: sdr-activity-calculator
 category: Sales Ops
 title: The Quota Reverse-Engineer
 tagline: Don't just count dials. Build a balanced path to quota.
-difficulty: Beginner
 time: Monthly
 archetype: Processor
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     Alice,10,200,0.05,0.20
     Bob,10,400,0.02,0.10
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Performance Coach

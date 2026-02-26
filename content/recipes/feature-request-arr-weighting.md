@@ -3,7 +3,6 @@ id: feature-request-arr-weighting
 category: Strategic Ops
 title: Feature Request ARR Weighting
 tagline: 'Prioritize roadmap based on dollars, not noise.'
-difficulty: Intermediate
 time: Batch
 archtype: Processor
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     SSO,Acc1;Acc5;Acc9
     Dark_Mode,Acc2
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: Feature Request ARR Weighting

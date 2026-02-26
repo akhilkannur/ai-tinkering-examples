@@ -5,7 +5,6 @@ title: The Indexing Strategist
 tagline: >-
   Your 10k new pages won't rank if Googlebot ignores them. Predict and fix
   indexing lag.
-difficulty: Advanced
 time: Monthly
 archetype: Processor
 description: >-
@@ -21,6 +20,12 @@ sampleData:
     2024-01-01,Googlebot,/search?q=red,200
     2024-01-01,Googlebot,/product/2,200
 isPremium: true
+inputs:
+  - Target URL
+  - Local File (CSV/MD)
+outputs:
+  - SEO Audit / Fixes
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Technical SEO

@@ -3,7 +3,6 @@ id: webinar-converter
 category: Sales Ops
 title: The Webinar Sequence Factory
 tagline: Process 10 event transcripts into 50 follow-up emails.
-difficulty: Intermediate
 time: 10 mins
 description: >-
   Don't let your event leads go cold. This agent reads a folder of webinar/call
@@ -15,6 +14,10 @@ sampleData:
     Attendee: "Is this secure?"
     Host: "Yes, we use 256-bit encryption."
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Webinar Sequence Factory

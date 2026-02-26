@@ -3,7 +3,6 @@ id: feature-demo-gif-maker
 category: Content Ops
 title: Changelog GIF Concept Maker
 tagline: Turn dry changelogs into viral GIF concepts.
-difficulty: Beginner
 time: Real-time
 archtype: Processor
 description: >-
@@ -15,6 +14,10 @@ sampleData:
     Feature_Name,Description
     Dark Mode,Added a toggle in settings.
 isPremium: true
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: Changelog GIF Concept Maker

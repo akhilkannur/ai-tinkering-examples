@@ -3,7 +3,6 @@ id: customer-segment-movement-tracker
 category: Customer Success
 title: Segment Migration Tracker
 tagline: Who moved from Silver to Gold?
-difficulty: Intermediate
 time: Quarterly
 archtype: Processor
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     Beta,Gold,Silver
     Gamma,Silver,Silver
 isPremium: true
+inputs:
+  - Usage Logs
+outputs:
+  - Churn Risk Report
 ---
 
 # Agent Configuration: The Customer Ops

@@ -3,7 +3,6 @@ id: churn-detective
 category: Sales Ops
 title: The Churn Sentinel
 tagline: Predict at-risk customers across 500 accounts.
-difficulty: Advanced
 time: 25 mins
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Cust_101,"The app is too slow today",-20%
     Cust_102,"I need to export my data",-50%
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Churn Sentinel

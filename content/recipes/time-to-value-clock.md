@@ -3,7 +3,6 @@ id: time-to-value-clock
 category: Customer Success
 title: Time-to-Value Clock
 tagline: Measure speed from signature to setup.
-difficulty: Intermediate
 time: Monthly
 archtype: Processor
 description: >-
@@ -16,6 +15,10 @@ sampleData:
     Acme,2023-10-01,2023-10-05
     Beta,2023-10-01,2023-10-25
 isPremium: true
+inputs:
+  - Usage Logs
+outputs:
+  - Churn Risk Report
 ---
 
 # Agent Configuration: The CS Ops

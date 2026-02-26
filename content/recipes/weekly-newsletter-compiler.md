@@ -3,7 +3,6 @@ id: weekly-newsletter-compiler
 category: Strategic Ops
 title: Newsletter Content Curator
 tagline: Automate the research for your "Weekly Round-Up" email.
-difficulty: Intermediate
 time: 15 mins
 archetype: Hybrid
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     https://www.theverge.com/tech
     https://news.ycombinator.com/
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File + Search
+outputs:
+  - Operating Manual
+  - Enriched Document
 ---
 
 # Agent Configuration: The Newsletter Content Curator

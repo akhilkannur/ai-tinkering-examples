@@ -3,7 +3,6 @@ id: linkedin-insight-tag-auditor
 category: Paid Media
 title: The Insight Tag Fleet Auditor
 tagline: Audit retargeting tags across your entire domain portfolio.
-difficulty: Beginner
 time: Monthly
 description: >-
   The LinkedIn Insight Tag is often missing on critical pages. This agent reads
@@ -17,6 +16,10 @@ sampleData:
     Blog,https://yoursite.com/blog
     Landing_Page,https://promo.yoursite.com
 isPremium: true
+inputs:
+  - Ad Account Data
+outputs:
+  - Performance Report
 ---
 
 # Agent Configuration: The Insight Tag Fleet Auditor

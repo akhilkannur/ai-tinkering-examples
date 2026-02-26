@@ -3,7 +3,6 @@ id: proposal-writer
 category: Strategic Ops
 title: The High-Ticket Proposal Writer
 tagline: Generate custom proposals for each lead.
-difficulty: Intermediate
 time: 15 mins
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Glow Skincare,High CAC on Meta,Sub-$20 customer acquisition,Growth
     TechFlow SaaS,Manual sales onboarding,Automate 80% of setup,Mid-Market
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 
 # Agent Configuration: The High-Ticket Proposal Writer

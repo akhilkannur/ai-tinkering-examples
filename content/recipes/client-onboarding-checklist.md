@@ -3,7 +3,6 @@ id: client-onboarding-checklist
 category: Strategic Ops
 title: The Onboarding Velocity Scanner
 tagline: Don't just send emails. Measure how fast clients are actually moving.
-difficulty: Intermediate
 time: Weekly
 archetype: Processor
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     SlowCo,2023-12-15,User Training,2023-12-20,5
     FastBiz,2024-01-10,Go Live,2024-01-12,1
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Implementation Manager

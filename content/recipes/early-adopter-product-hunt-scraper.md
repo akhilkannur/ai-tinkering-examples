@@ -3,7 +3,6 @@ id: early-adopter-product-hunt-scraper
 category: Lead Gen
 title: The Product Hunt Poacher
 tagline: Find leads who upvoted similar tools on Product Hunt.
-difficulty: Intermediate
 time: 15 mins
 archetype: Researcher
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     https://www.producthunt.com/products/notion
     https://www.producthunt.com/products/linear
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Product Hunt Poacher

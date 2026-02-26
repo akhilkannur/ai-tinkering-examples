@@ -3,7 +3,6 @@ id: alumni-network-miner
 category: Lead Gen
 title: The Alumni Network Miner
 tagline: Find prospects who went to the same university as your executives.
-difficulty: Intermediate
 time: 15 mins
 archetype: Researcher
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     Sarah Jones,Stanford University,"Stripe, Plaid, Square"
     Mike Ross,University of Michigan,"Ford, GM, Rivian"
 isPremium: false
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Alumni Network Miner

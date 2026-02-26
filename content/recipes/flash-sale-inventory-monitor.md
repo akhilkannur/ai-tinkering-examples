@@ -3,7 +3,6 @@ id: flash-sale-inventory-monitor
 category: E-commerce
 title: Flash Sale Brake Pedal
 tagline: Stop ads when stock gets low.
-difficulty: Intermediate
 time: Hourly (Simulated)
 archetype: Processor
 description: >-
@@ -15,6 +14,12 @@ sampleData:
     SKU,Start_Stock,Current_Stock
     Promo-Item,1000,45
 isPremium: false
+inputs:
+  - Product Data
+  - Local File (CSV/MD)
+outputs:
+  - Shopify-Ready Update
+  - Cleaned Data
 ---
 # Agent Configuration: The Campaign Ops
 

@@ -3,7 +3,6 @@ id: integration-partner-finder
 category: Strategic Ops
 title: The Strategic Integration Factory
 tagline: Find 50 potential partners across 10 niches.
-difficulty: Advanced
 time: One-off
 description: >-
   Why build one integration? This agent reads a list of adjacent tool categories
@@ -16,6 +15,10 @@ sampleData:
     E-com CRM,Merchants,Cart abandonment
     HR Tech,VPs of HR,Employee churn
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Strategic Integration Factory

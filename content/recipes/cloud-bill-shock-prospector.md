@@ -3,7 +3,6 @@ id: cloud-bill-shock-prospector
 category: Lead Gen
 title: The Cloud Bill Shock Hunter
 tagline: Target companies likely overspending on AWS/Azure based on growth signals.
-difficulty: Advanced
 time: 25 mins
 archetype: Analyst
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     acme-corp.com,AWS
     globex-tech.io,Azure
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+outputs:
+  - Enriched Leads
 ---
 
 # Agent Configuration: The Cloud Bill Shock Hunter

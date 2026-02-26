@@ -3,7 +3,6 @@ id: sales-velocity-day-of-week
 category: CRO
 title: Peak Sales Timer
 tagline: Best day to send emails?
-difficulty: Beginner
 time: Quarterly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     2023-10-01,Sunday,5000
     2023-10-02,Monday,2000
 isPremium: true
+inputs:
+  - Conversion Data
+  - Local File (CSV/MD)
+outputs:
+  - A/B Experiment Ideas
+  - Cleaned Data
 ---
 # Agent Configuration: The Sales Timing Optimizer
 

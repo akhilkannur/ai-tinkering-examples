@@ -3,7 +3,6 @@ id: win-loss-competitor-trends
 category: Competitive Intel
 title: Competitor Win/Loss Trend
 tagline: Are we losing more to Comp A or B?
-difficulty: Intermediate
 time: Quarterly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     Q1,Comp A,40%
     Q2,Comp A,30%
 isPremium: true
+inputs:
+  - Competitor URL
+  - Local File (CSV/MD)
+outputs:
+  - Intel Dashboard
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Sales Analyst

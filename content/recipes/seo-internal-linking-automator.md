@@ -3,7 +3,6 @@ id: seo-internal-linking-automator
 category: Strategic Ops
 title: Internal Link Graph Builder
 tagline: Boost SEO by finding internal linking opportunities automatically.
-difficulty: Intermediate
 time: 10 mins
 archetype: Processor
 description: >-
@@ -31,6 +30,12 @@ sampleData:
 
     /blog/list-building-101,List Building
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Internal Link Graph Builder

@@ -3,7 +3,6 @@ id: internal-link-finder
 category: SEO
 title: The Sitemap Scanner
 tagline: Scan your live sitemap to find 'Orphan' link opportunities.
-difficulty: Intermediate
 time: Weekly
 archetype: Hybrid
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     https://realaiexamples.com/sitemap.xml,AI
     Blueprints,https://realaiexamples.com/blueprints
 isPremium: true
+inputs:
+  - Target URL
+  - Local File + Search
+outputs:
+  - SEO Audit / Fixes
+  - Enriched Document
 ---
 
 # Agent Configuration: The Networker

@@ -3,7 +3,6 @@ id: cto-github-activity-tracker
 category: Lead Gen
 title: The Open Source Stalker
 tagline: Identify technical founders active in specific repos.
-difficulty: Advanced
 time: 20 mins
 archetype: Researcher
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     https://github.com/vercel/next.js,Star
     https://github.com/supabase/supabase,Fork
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Open Source Stalker

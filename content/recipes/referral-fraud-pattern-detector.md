@@ -3,7 +3,6 @@ id: referral-fraud-pattern-detector
 category: Retention
 title: Referral Fraud Pattern Detector
 tagline: Catch users referring themselves for credits.
-difficulty: Intermediate
 time: Batch
 archetype: Processor
 description: >-
@@ -15,6 +14,12 @@ sampleData:
     Referrer_ID,Referred_Email,IP_Address
     User1,User1+test@gmail.com,192.168.1.1
 isPremium: true
+inputs:
+  - Customer List
+  - Local File (CSV/MD)
+outputs:
+  - Re-engagement Script
+  - Cleaned Data
 ---
 
 # Agent Configuration: Referral Fraud Pattern Detector

@@ -3,7 +3,6 @@ id: ipo-roadshow-monitor
 category: Lead Gen
 title: The Pre-IPO Hawk
 tagline: Target late-stage companies preparing for public listing.
-difficulty: Intermediate
 time: Monthly
 archetype: Researcher
 description: >-
@@ -19,6 +18,12 @@ sampleData:
     Stripe
     Canva
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Pre-IPO Hawk

@@ -3,7 +3,6 @@ id: sales-battlecard-builder
 category: Sales Ops
 title: The Sales Battlecard Builder
 tagline: Win against competitors.
-difficulty: Intermediate
 time: 15 mins
 archetype: Researcher
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Drata,https://drata.com,Security Compliance
     Sprinto,https://sprinto.com,Compliance Software
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Web Search Target
+outputs:
+  - CRM-Ready Export
+  - Curated Intel
 ---
 
 # Agent Configuration: The Sales Battlecard Builder

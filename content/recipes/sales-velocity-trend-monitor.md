@@ -3,7 +3,6 @@ id: sales-velocity-trend-monitor
 category: Sales Ops
 title: Pipeline Velocity Trend
 tagline: Is your sales cycle getting longer or shorter?
-difficulty: Intermediate
 time: Monthly
 archtype: Processor
 description: >-
@@ -18,6 +17,10 @@ sampleData:
     July,52
     August,55
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Sales Analyst

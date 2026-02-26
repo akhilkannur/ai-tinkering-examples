@@ -3,7 +3,6 @@ id: search-query-intent-miner
 category: SEO
 title: Search Intent Miner
 tagline: Extract high-intent keywords from Search Console.
-difficulty: Intermediate
 time: Weekly
 archtype: Processor
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     best crm price,50,500
     salesforce alternative,30,300
 isPremium: true
+inputs:
+  - Target URL
+outputs:
+  - SEO Audit / Fixes
 ---
 
 # Agent Configuration: The SEO Manager

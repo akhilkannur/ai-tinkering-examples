@@ -3,7 +3,6 @@ id: landing-page-clarity-score-vision
 category: CRO
 title: The "5-Second Test" Simulator
 tagline: Simulate a user's first 5 seconds on your landing page.
-difficulty: Intermediate
 time: Real-time
 archtype: Processor
 description: >-
@@ -16,6 +15,10 @@ sampleData:
     Page_Name,Screenshot_Path
     Home_V1,./screens/home_v1.png
 isPremium: true
+inputs:
+  - Conversion Data
+outputs:
+  - A/B Experiment Ideas
 ---
 
 # Agent Configuration: The "5-Second Test" Simulator

@@ -3,7 +3,6 @@ id: renewal-risk-ghosting-alert
 category: Sales Ops
 title: Renewal Ghosting Detector
 tagline: Flag accounts in renewal that haven't replied lately.
-difficulty: Intermediate
 time: Weekly
 archetype: Processor
 description: >-
@@ -19,6 +18,12 @@ sampleData:
     Acme, 2023-10-01
     Beta, 2023-01-01
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Churn Prevention Agent

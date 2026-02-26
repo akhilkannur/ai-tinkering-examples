@@ -3,7 +3,6 @@ id: linkedin-audio-event-planner
 category: Content Ops
 title: The Audio Event Planner
 tagline: Live radio for B2B.
-difficulty: Intermediate
 time: Batch
 description: >-
   LinkedIn Audio Events are low-friction webinars. This agent scripts 30-minute
@@ -17,6 +16,10 @@ sampleData:
     Scaling SaaS Sales,Sarah Chen,2024-10-22
     Retention Strategies,Mike Ross,2024-10-29
 isPremium: true
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: The Audio Event Planner

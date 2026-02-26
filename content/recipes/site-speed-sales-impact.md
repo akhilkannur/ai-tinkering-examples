@@ -3,7 +3,6 @@ id: site-speed-sales-impact
 category: CRO
 title: Speed vs Revenue Calc
 tagline: How much does a slow site cost you?
-difficulty: Intermediate
 time: Monthly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     2,2.5,1000
     4,1.0,1000
 isPremium: true
+inputs:
+  - Conversion Data
+  - Local File (CSV/MD)
+outputs:
+  - A/B Experiment Ideas
+  - Cleaned Data
 ---
 # Agent Configuration: The Technical Marketer
 

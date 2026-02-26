@@ -3,7 +3,6 @@ id: contact-enrichment-freshness
 category: Sales Ops
 title: Enrichment Freshness Audit
 tagline: Is your data stale?
-difficulty: Beginner
 time: Quarterly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     sarah@enterprise.com,2022-05-01,Trade Show
     mike@startup.io,2023-10-01,Inbound
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The CRM Data Hygienist

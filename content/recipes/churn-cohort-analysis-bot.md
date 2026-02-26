@@ -3,7 +3,6 @@ id: churn-cohort-analysis-bot
 category: Sales Ops
 title: Churn Cohort Analyzer
 tagline: Measure churn rate by customer vintage.
-difficulty: Advanced
 time: Monthly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Jan-23,Churned,2023-05-01
     Mar-23,Active,NULL
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Retention Analyst Agent

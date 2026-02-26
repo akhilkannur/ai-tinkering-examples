@@ -3,7 +3,6 @@ id: win-back-segmenter
 category: Retention
 title: Win-Back Segmenter
 tagline: Identify lapsed VIPs for recovery.
-difficulty: Beginner
 time: Weekly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Beta,Old Tool v1,Missing Integrations,300
     Gamma,Standard Plan,Project Ended,100
 isPremium: true
+inputs:
+  - Customer List
+  - Local File (CSV/MD)
+outputs:
+  - Re-engagement Script
+  - Cleaned Data
 ---
 # Agent Configuration: The Ex-Customer Whisperer
 

@@ -3,7 +3,6 @@ id: lead-list-cleaner
 category: Sales Ops
 title: The Lead List Cleaner
 tagline: Never bounce an email again.
-difficulty: Beginner
 time: 5 mins
 archetype: Processor
 description: >-
@@ -23,6 +22,12 @@ sampleData:
 
     Broken Link,https://httpstat.us/404,Test User,test@broken.com
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Lead List Cleaner

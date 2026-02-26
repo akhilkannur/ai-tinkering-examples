@@ -3,7 +3,6 @@ id: affiliate-program-launcher
 category: Strategic Ops
 title: The Affiliate Program Launcher
 tagline: Build a commission-only sales team.
-difficulty: Advanced
 time: Hybrid
 archetype: Hybrid
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     MarketingWeekly,Newsletter,https://marketingweekly.io
     GrowthHackers,Community,https://growthhackers.com
 isPremium: false
+inputs:
+  - Business Goal
+  - Local File + Search
+outputs:
+  - Operating Manual
+  - Enriched Document
 ---
 
 # Agent Configuration: The Affiliate Program Launcher

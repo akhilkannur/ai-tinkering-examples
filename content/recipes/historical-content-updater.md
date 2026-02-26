@@ -3,7 +3,6 @@ id: historical-content-updater
 category: SEO
 title: Historical Content Updater
 tagline: Find old blog posts that are easy wins for traffic.
-difficulty: Beginner
 time: Batch
 archetype: Researcher
 description: >-
@@ -15,6 +14,12 @@ sampleData:
     URL,Publish_Date,Traffic_Trend
     /blog/2020-guide,2020-01-01,-20%
 isPremium: true
+inputs:
+  - Target URL
+  - Web Search Target
+outputs:
+  - SEO Audit / Fixes
+  - Curated Intel
 ---
 
 # Agent Configuration: Historical Content Updater

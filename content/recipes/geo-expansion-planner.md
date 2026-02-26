@@ -3,7 +3,6 @@ id: geo-expansion-planner
 category: Strategic Ops
 title: The Geographic Expansion Planner
 tagline: Where should we launch next?
-difficulty: Advanced
 time: One-off
 archetype: Processor
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     UK,5000,200,5
     Germany,4000,10,1
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 
 # Agent Configuration: The VP of International

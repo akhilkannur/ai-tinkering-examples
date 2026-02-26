@@ -3,7 +3,6 @@ id: utm-parameter-gap-filler
 category: Marketing Ops
 title: UTM Referrer Inference Bot
 tagline: Infer missing sources based on Referrer URL.
-difficulty: Intermediate
 time: Daily
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     /page,linkedin.com,NULL
     /page,google.com,NULL
 isPremium: true
+inputs:
+  - Campaign Data
+  - Local File (CSV/MD)
+outputs:
+  - Optimization Plan
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Marketing Ops Agent

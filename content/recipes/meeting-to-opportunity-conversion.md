@@ -3,7 +3,6 @@ id: meeting-to-opportunity-conversion
 category: Sales Ops
 title: Meeting-to-Opp Converter
 tagline: Track % of first meetings that become deals.
-difficulty: Beginner
 time: Monthly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     L-2,Yes,No
     L-3,No,No
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Lead Quality Agent

@@ -3,7 +3,6 @@ id: remote-work-transition-hunter
 category: Lead Gen
 title: The Remote First Hunter
 tagline: Find companies switching to "Remote First" policies.
-difficulty: Intermediate
 time: 20 mins
 archetype: Researcher
 description: >-
@@ -19,6 +18,12 @@ sampleData:
     New York
     Austin
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Remote First Hunter

@@ -3,7 +3,6 @@ id: customer-support-expansion-lead
 category: Lead Gen
 title: The Support Scaler
 tagline: Identify companies hiring mass support agents.
-difficulty: Intermediate
 time: 20 mins
 archetype: Researcher
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     "Customer Support Representative",Remote
     "Customer Success Associate",United States
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Support Scaler

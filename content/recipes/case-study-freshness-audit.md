@@ -3,7 +3,6 @@ id: case-study-freshness-audit
 category: Customer Success
 title: Case Study Expiry Audit
 tagline: Retire assets older than 2 years.
-difficulty: Beginner
 time: Yearly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     TechStart,SaaS,2023-01-20,SMB
     GlobalBank,Fintech,2018-11-01,Enterprise
 isPremium: false
+inputs:
+  - Usage Logs
+  - Local File (CSV/MD)
+outputs:
+  - Churn Risk Report
+  - Cleaned Data
 ---
 # Agent Configuration: The Social Proof Strategist
 

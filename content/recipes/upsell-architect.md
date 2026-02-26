@@ -3,7 +3,6 @@ id: upsell-architect
 category: Sales Ops
 title: The Upsell Architect
 tagline: The easiest revenue is already in your DB.
-difficulty: Advanced
 time: Monthly
 description: >-
   Don't just hunt for new business; grow what you have. This agent analyzes your
@@ -18,6 +17,10 @@ sampleData:
     Solo Dev,Free,100,20,2023-12-01
     Growth AI,Basic,1000,1050,2024-01-08
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Upsell Architect

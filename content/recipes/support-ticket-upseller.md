@@ -3,7 +3,6 @@ id: support-ticket-upseller
 category: Sales Ops
 title: The Support Upseller
 tagline: Turn complaints into cash.
-difficulty: Intermediate
 time: Weekly
 description: >-
   Your support tickets are full of people asking for features they don't have.
@@ -25,6 +24,10 @@ sampleData:
 
     104,mike@agency.com,Is there a way to white-label the reports?
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Support Upseller

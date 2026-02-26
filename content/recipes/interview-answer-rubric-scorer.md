@@ -3,7 +3,6 @@ id: interview-answer-rubric-scorer
 category: Strategic Ops
 title: Interview Answer Rubric Scorer
 tagline: Remove bias from your hiring process.
-difficulty: Intermediate
 time: Batch
 archetype: Processor
 description: >-
@@ -15,6 +14,12 @@ sampleData:
     Candidate,Question,Answer_Text
     John,"Conflict","I just avoided it."
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 
 # Agent Configuration: Interview Answer Rubric Scorer

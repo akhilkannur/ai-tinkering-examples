@@ -3,7 +3,6 @@ id: rfp-responder
 category: Lead Gen
 title: The RFP Responder
 tagline: Draft complex proposals instantly.
-difficulty: Advanced
 time: Batch
 description: >-
   Responding to RFPs is a time-sink. This agent processes a list of RFP
@@ -23,6 +22,10 @@ sampleData:
     GovNet Audit,Must have on-premise deployment option and 24/7 support,Public
     Sector
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+outputs:
+  - Enriched Leads
 ---
 
 # Agent Configuration: The RFP Responder

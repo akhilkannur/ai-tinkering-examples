@@ -3,7 +3,6 @@ id: 10k-report-prospector
 category: Sales Ops
 title: The 10-K Stitcher
 tagline: Turn 'Risk Factors' into 'Sales Pitches'.
-difficulty: Advanced
 time: 15 mins
 archetype: Researcher
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Our data security protocols may not be sufficient to prevent breaches.
     Supply chain disruptions could delay our hardware shipments.
 isPremium: false
+inputs:
+  - Lead Data (CSV)
+  - Web Search Target
+outputs:
+  - CRM-Ready Export
+  - Curated Intel
 ---
 
 # Agent Configuration: The 10-K Stitcher

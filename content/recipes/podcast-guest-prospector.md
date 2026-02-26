@@ -3,7 +3,6 @@ id: podcast-guest-prospector
 category: Strategic Ops
 title: Podcast Guest Prospector
 tagline: Find the perfect podcasts to pitch your founder to.
-difficulty: Intermediate
 time: 10 mins
 archetype: Researcher
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     SaaS Marketing
     Artificial Intelligence
 isPremium: true
+inputs:
+  - Business Goal
+  - Web Search Target
+outputs:
+  - Operating Manual
+  - Curated Intel
 ---
 
 # Agent Configuration: The Podcast Guest Prospector

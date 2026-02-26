@@ -3,7 +3,6 @@ id: competitor-price-watchdog
 category: Competitive Intel
 title: The Price Watchdog Fleet
 tagline: Monitor pricing changes for 10 competitors at once.
-difficulty: Intermediate
 time: Weekly
 description: >-
   Competitors change pricing quietly. This agent reads a list of competitor URLs
@@ -16,6 +15,10 @@ sampleData:
     Competitor_A,https://competitor-a.com/pricing
     Competitor_B,https://competitor-b.com/plans
 isPremium: true
+inputs:
+  - Competitor URL
+outputs:
+  - Intel Dashboard
 ---
 
 # Agent Configuration: The Price Watchdog Fleet

@@ -3,7 +3,6 @@ id: g2-review-sentiment-analyzer
 category: Strategic Ops
 title: Voice of Customer Analyzer
 tagline: Mine G2 & Capterra reviews to find product gaps and marketing hooks.
-difficulty: Intermediate
 time: 15 mins
 archetype: Hybrid
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Source: https://www.g2.com/products/asana/reviews
     Source: https://www.capterra.com/p/120537/Asana/reviews
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File + Search
+outputs:
+  - Operating Manual
+  - Enriched Document
 ---
 
 # Agent Configuration: The Voice of Customer Analyzer

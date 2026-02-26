@@ -3,7 +3,6 @@ id: influencer-outreach-manager
 category: Strategic Ops
 title: The Relationship Builder
 tagline: Don't send generic follow-ups. Contextualize every DM.
-difficulty: Intermediate
 time: 5 mins
 archetype: Hybrid
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     @tech_guru,Negotiating,https://x.com/tech_guru
     @marketing_maven,Ghosted,https://x.com/marketing_maven
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File + Search
+outputs:
+  - Operating Manual
+  - Enriched Document
 ---
 
 # Agent Configuration: The Relationship Builder

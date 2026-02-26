@@ -3,7 +3,6 @@ id: twitter-space-scribe
 category: Content Ops
 title: Twitter Space Scribe
 tagline: Turn audio conversations into tweet threads.
-difficulty: Intermediate
 time: Batch
 archetype: Processor
 description: >-
@@ -15,6 +14,12 @@ sampleData:
     Transcript_Text,Speakers
     "So the key is consistency...",@naval
 isPremium: true
+inputs:
+  - Source Draft
+  - Local File (CSV/MD)
+outputs:
+  - Repurposed Assets
+  - Cleaned Data
 ---
 
 # Agent Configuration: Twitter Space Scribe

@@ -3,7 +3,6 @@ id: sdr-territory-saturation-check
 category: Sales Ops
 title: Territory Saturation Auditor
 tagline: Are your SDRs actually touching all their Tier 1s?
-difficulty: Intermediate
 time: Weekly
 archtype: Processor
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     Beta,1,2022-01-01
     Gamma,2,2023-10-05
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The SDR Director

@@ -3,7 +3,6 @@ id: competitor-tech-stack-spy
 category: Competitive Intel
 title: The Tech Stack Spy
 tagline: Audit the tech stack of your entire market.
-difficulty: Intermediate
 time: 10 mins
 archetype: Hybrid
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     HubSpot,https://www.hubspot.com
     Drift,https://www.drift.com
 isPremium: true
+inputs:
+  - Competitor URL
+  - Local File + Search
+outputs:
+  - Intel Dashboard
+  - Enriched Document
 ---
 
 # Agent Configuration: The Tech Stack Spy

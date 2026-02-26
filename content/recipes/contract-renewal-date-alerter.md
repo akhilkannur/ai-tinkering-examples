@@ -3,7 +3,6 @@ id: contract-renewal-date-alerter
 category: Sales Ops
 title: Renewal Radar
 tagline: Never miss an expiration date.
-difficulty: Beginner
 time: Monthly
 archtype: Processor
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     Beta Inc,10000,2024-06-01,Green
     Gamma LLC,4000,2024-01-05,Red
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Renewal Command Center

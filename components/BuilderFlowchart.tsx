@@ -213,8 +213,8 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
         )}
         
         <div className="mt-auto pt-4 border-t-2 border-black/10 text-[10px] font-black font-mono uppercase tracking-widest">
-           <span className={`px-2 py-1 border-2 border-black bg-gray-100 text-black`}>
-             {recipe.difficulty}
+           <span className={`px-2 py-1 border-2 border-black bg-gray-100 text-black flex items-center gap-2 w-fit`}>
+             <Clock className="w-3 h-3" /> {recipe.time || '5 mins'}
            </span>
         </div>
       </div>

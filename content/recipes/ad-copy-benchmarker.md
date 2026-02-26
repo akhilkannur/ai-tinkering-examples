@@ -3,7 +3,6 @@ id: ad-copy-benchmarker
 category: Competitive Intel
 title: Ad Copy Pivot Detector
 tagline: Did they change their value prop?
-difficulty: Intermediate
 time: Weekly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     Comp A,2023-10-01,Save time.
     Comp A,2023-10-08,Save money.
 isPremium: false
+inputs:
+  - Competitor URL
+  - Local File (CSV/MD)
+outputs:
+  - Intel Dashboard
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Creative Strategist

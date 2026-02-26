@@ -3,7 +3,6 @@ id: saas-metric-dashboarder
 category: Sales Ops
 title: The SaaS Metric Dashboarder
 tagline: 'Your board deck, automated.'
-difficulty: Advanced
 time: Monthly
 archetype: Processor
 description: >-
@@ -20,6 +19,12 @@ sampleData:
     Churn_Rate,0.05
     Gross_Margin,0.80
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The VC Analyst

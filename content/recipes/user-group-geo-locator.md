@@ -3,7 +3,6 @@ id: user-group-geo-locator
 category: Strategic Ops
 title: Meetup City Selector
 tagline: Where should we host the next dinner?
-difficulty: Intermediate
 time: Quarterly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Beta,Austin
     Gamma,Dallas
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 # Agent Configuration: The Community Manager
 

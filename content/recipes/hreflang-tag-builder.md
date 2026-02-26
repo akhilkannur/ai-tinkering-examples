@@ -3,7 +3,6 @@ id: hreflang-tag-builder
 category: SEO
 title: The Hreflang Builder
 tagline: Fix international SEO.
-difficulty: Intermediate
 time: Batch
 description: >-
   Multi-language sites confuse Google without Hreflang. This agent generates the
@@ -20,6 +19,10 @@ sampleData:
 
     /about,https://site.com/about,https://site.com/es/sobre-nosotros,https://site.com/de/uber-uns
 isPremium: true
+inputs:
+  - Target URL
+outputs:
+  - SEO Audit / Fixes
 ---
 
 # Agent Configuration: The Hreflang Builder

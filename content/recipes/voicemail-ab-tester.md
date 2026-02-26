@@ -3,7 +3,6 @@ id: voicemail-ab-tester
 category: Sales Ops
 title: Cold Call Voicemail A/B Tester
 tagline: Systematically test which voicemail gets a callback.
-difficulty: Intermediate
 time: Batch
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     Mystery,12%
     Value,5%
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: Cold Call Voicemail A/B Tester

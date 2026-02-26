@@ -3,7 +3,6 @@ id: influencer-share-verification
 category: Strategic Ops
 title: Influencer Compliance Check
 tagline: Did they actually post it?
-difficulty: Intermediate
 time: Weekly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     Alice,2023-10-01,2023-10-01
     Bob,2023-10-01,NULL
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 # Agent Configuration: The Influencer Manager
 

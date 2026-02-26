@@ -3,7 +3,6 @@ id: competitor-webinar-spy
 category: Competitive Intel
 title: Competitor Event Monitor
 tagline: What topics are they pitching?
-difficulty: Beginner
 time: Monthly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     Comp A,AI for Sales,2023-11-01
     Comp B,Cloud Security,2023-11-15
 isPremium: true
+inputs:
+  - Competitor URL
+  - Local File (CSV/MD)
+outputs:
+  - Intel Dashboard
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Event Marketer

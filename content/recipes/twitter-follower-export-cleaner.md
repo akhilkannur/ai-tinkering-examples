@@ -3,7 +3,6 @@ id: twitter-follower-export-cleaner
 category: Marketing Ops
 title: The Twitter Follower Cleaner
 tagline: Analyze your audience.
-difficulty: Intermediate
 time: Batch
 description: >-
   Raw Twitter data is messy. This agent converts JSON exports of followers into
@@ -17,6 +16,10 @@ sampleData:
     Personal_Acct,data/followers_personal.json,CEO
     Side_Project,data/followers_side.json,Developer
 isPremium: true
+inputs:
+  - Campaign Data
+outputs:
+  - Optimization Plan
 ---
 
 # Agent Configuration: The Twitter Follower Cleaner

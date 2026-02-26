@@ -3,7 +3,6 @@ id: cab-nomination-scorer
 category: Customer Success
 title: Advisory Board Scout
 tagline: Who should be on our CAB?
-difficulty: Intermediate
 time: Yearly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     Acme,1M,5,High
     Beta,10k,1,Low
 isPremium: false
+inputs:
+  - Usage Logs
+  - Local File (CSV/MD)
+outputs:
+  - Churn Risk Report
+  - Cleaned Data
 ---
 # Agent Configuration: The Executive Sponsor
 

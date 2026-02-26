@@ -3,7 +3,6 @@ id: returns-impact-on-profit
 category: E-commerce
 title: Net Profit SKU Analyzer
 tagline: True profit after returns.
-difficulty: Advanced
 time: Monthly
 archetype: Processor
 description: >-
@@ -20,6 +19,12 @@ sampleData:
 
     Socks,2000,500,0.05,3,1,200
 isPremium: true
+inputs:
+  - Product Data
+  - Local File (CSV/MD)
+outputs:
+  - Shopify-Ready Update
+  - Cleaned Data
 ---
 
 # Agent Configuration: The E-commerce Profit Architect

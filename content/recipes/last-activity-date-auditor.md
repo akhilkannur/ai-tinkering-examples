@@ -3,7 +3,6 @@ id: last-activity-date-auditor
 category: Sales Ops
 title: Account Activity Sync
 tagline: Sync 'Last Activity' from contacts up to the account level.
-difficulty: Intermediate
 time: Daily
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Acme Corp,Jane,2023-10-05
     Beta Inc,Bob,2023-09-01
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The RevOps Analyst Agent

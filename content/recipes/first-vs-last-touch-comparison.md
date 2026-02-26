@@ -3,7 +3,6 @@ id: first-vs-last-touch-comparison
 category: Marketing Ops
 title: Attribution Model Comparer
 tagline: Compare channel performance across different models.
-difficulty: Advanced
 time: Monthly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     1,1000,Search,Webinar
     2,500,Social,Search
 isPremium: true
+inputs:
+  - Campaign Data
+  - Local File (CSV/MD)
+outputs:
+  - Optimization Plan
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Marketing ROI Agent

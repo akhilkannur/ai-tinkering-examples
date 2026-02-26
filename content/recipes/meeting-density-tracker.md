@@ -3,7 +3,6 @@ id: meeting-density-tracker
 category: Sales Ops
 title: Rep Focus Time Tracker
 tagline: Audit calendar data to protect 'Selling Time'.
-difficulty: Intermediate
 time: Weekly
 archtype: Processor
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     John,External,30
     John,Internal,30
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Sales Enablement

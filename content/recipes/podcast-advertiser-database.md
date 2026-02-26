@@ -3,7 +3,6 @@ id: podcast-advertiser-database
 category: Lead Gen
 title: The Podcast Ad Spender
 tagline: Log companies spending money on podcast ads.
-difficulty: Intermediate
 time: Weekly
 archetype: Researcher
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     My First Million,https://feeds.megaphone.fm/myfirstmillion
     Lenny's Podcast,https://api.substack.com/feed/podcast/10845.rss
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Podcast Ad Spender

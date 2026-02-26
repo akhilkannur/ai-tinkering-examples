@@ -3,7 +3,6 @@ id: holiday-shopper-reactivation
 category: Retention
 title: Holiday Shopper Wake-Up
 tagline: Re-engage Black Friday-only buyers.
-difficulty: Beginner
 time: Yearly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Sarah,2022-11-25,Electronics,FALSE
     Mike,2023-03-01,Clothing,FALSE
 isPremium: false
+inputs:
+  - Customer List
+  - Local File (CSV/MD)
+outputs:
+  - Re-engagement Script
+  - Cleaned Data
 ---
 # Agent Configuration: The Q4 Early Bird Strategist
 

@@ -3,7 +3,6 @@ id: feature-request-clusterer
 category: Strategic Ops
 title: Feedback Cluster Engine
 tagline: 'Group 1,000 feedback tickets into 5 features.'
-difficulty: Intermediate
 time: Weekly
 archtype: Processor
 description: >-
@@ -18,6 +17,10 @@ sampleData:
     3,My eyes hurt, need night mode
     4,Is there an iOS app?
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Product Ops

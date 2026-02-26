@@ -3,7 +3,6 @@ id: sales-cycle-outlier-detector
 category: Sales Ops
 title: Sales Cycle Anomaly Hunter
 tagline: Flag deals moving suspiciously fast or slow.
-difficulty: Intermediate
 time: Weekly
 archtype: Processor
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     Deal B,120,45
     Deal C,40,45
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Forecast Manager

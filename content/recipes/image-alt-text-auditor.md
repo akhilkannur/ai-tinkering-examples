@@ -3,7 +3,6 @@ id: image-alt-text-auditor
 category: SEO
 title: Accessibility Auditor
 tagline: Ensure every image has descriptive text.
-difficulty: Beginner
 time: Batch
 archtype: Processor
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     logo.png,Company Logo,Brand
     img_5592.jpg,,Office Culture
 isPremium: true
+inputs:
+  - Target URL
+outputs:
+  - SEO Audit / Fixes
 ---
 
 # Agent Configuration: The SEO Accessibility Fixer

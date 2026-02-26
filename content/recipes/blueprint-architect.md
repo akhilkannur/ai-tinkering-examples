@@ -3,7 +3,6 @@ id: blueprint-architect
 category: Strategic Ops
 title: The Blueprint Architect
 tagline: Create your own Work-Ready blueprints.
-difficulty: Advanced
 time: Batch
 archetype: Processor
 description: >-
@@ -20,6 +19,12 @@ sampleData:
 
     Output: A list of 'Fatigued' campaigns and a suggested budget cut.
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Blueprint Architect

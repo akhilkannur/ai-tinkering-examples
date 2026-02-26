@@ -3,7 +3,6 @@ id: partner-account-overlap-mapper
 category: Sales Ops
 title: Partner Account Overlap Mapper
 tagline: Find which accounts you and a partner both target.
-difficulty: Intermediate
 time: Batch
 archetype: Processor
 description: >-
@@ -15,6 +14,12 @@ sampleData:
     Account_Domain,Partner_Status
     acme.com,Customer
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: Partner Account Overlap Mapper

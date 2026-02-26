@@ -3,7 +3,6 @@ id: persona-anti-targeting
 category: Strategic Ops
 title: The Anti-Targeting List Builder
 tagline: Who should you NOT sell to?
-difficulty: Beginner
 time: Quarterly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     CustA,Churned,Real Estate,gmail.com
     CustB,Lost,Consultant,yahoo.com
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Gatekeeper

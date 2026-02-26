@@ -3,7 +3,6 @@ id: investor-update-email-writer
 category: Lead Gen
 title: Investor Update Writer
 tagline: Write the monthly email that keeps your VCs happy (and helpful).
-difficulty: Beginner
 time: 5 mins
 archetype: Processor
 description: >-
@@ -20,6 +19,12 @@ sampleData:
     Lows: Lost Beta Client, Server outage.
     Needs: Intro to Series A leads.
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - Enriched Leads
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Investor Update Writer

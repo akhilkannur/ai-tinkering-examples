@@ -3,7 +3,6 @@ id: reference-win-rate-impact
 category: Customer Success
 title: Reference ROI Calculator
 tagline: Does using a reference help?
-difficulty: Intermediate
 time: Quarterly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     2,No,Lost
     3,Yes,Won
 isPremium: true
+inputs:
+  - Usage Logs
+  - Local File (CSV/MD)
+outputs:
+  - Churn Risk Report
+  - Cleaned Data
 ---
 # Agent Configuration: The Reference Manager
 

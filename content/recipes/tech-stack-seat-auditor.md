@@ -3,7 +3,6 @@ id: tech-stack-seat-auditor
 category: Sales Ops
 title: SaaS Seat Auditor
 tagline: Find unused licenses in your sales tech stack.
-difficulty: Intermediate
 time: Monthly
 archtype: Processor
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     [Licensed Users]
     Dave, John, Sarah, Bill
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Revenue Systems Manager

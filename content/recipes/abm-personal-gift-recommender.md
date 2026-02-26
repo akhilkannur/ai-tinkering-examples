@@ -3,7 +3,6 @@ id: abm-personal-gift-recommender
 category: Marketing Ops
 title: ABM Personal Gift Recommender
 tagline: 'Send gifts they actually keep, not just swag.'
-difficulty: Researcher
 time: Batch
 archetype: Hybrid
 description: >-
@@ -15,6 +14,12 @@ sampleData:
     Prospect_Name,Social_Handle
     Jane Doe,@janedoe
 isPremium: false
+inputs:
+  - Campaign Data
+  - Local File + Search
+outputs:
+  - Optimization Plan
+  - Enriched Document
 ---
 
 # Agent Configuration: ABM Personal Gift Recommender

@@ -3,7 +3,6 @@ id: feature-retirement-comms-planner
 category: Product Ops
 title: Feature Sunsetting Comms Planner
 tagline: Kill a feature without killing customer trust.
-difficulty: Intermediate
 time: Batch
 archetype: Processor
 description: >-
@@ -15,6 +14,12 @@ sampleData:
     Feature_Name,Retirement_Date
     Legacy_API,2024-12-31
 isPremium: false
+inputs:
+  - Feature Backlog
+  - Local File (CSV/MD)
+outputs:
+  - Priority Matrix
+  - Cleaned Data
 ---
 
 # Agent Configuration: Feature Sunsetting Comms Planner

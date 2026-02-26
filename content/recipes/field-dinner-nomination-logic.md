@@ -3,7 +3,6 @@ id: field-dinner-nomination-logic
 category: Strategic Ops
 title: VIP Dinner Selector
 tagline: Who gets the steak dinner?
-difficulty: Intermediate
 time: Batch
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     John,CEO,Tier 1
     Jane,Manager,Tier 3
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 # Agent Configuration: The ABM Field Marketer
 

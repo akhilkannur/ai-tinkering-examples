@@ -3,7 +3,6 @@ id: cancellation-flow-auditor
 category: Strategic Ops
 title: The Cancellation Flow Auditor
 tagline: Save them before they go.
-difficulty: Intermediate
 time: Batch
 archetype: Hybrid
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     CodeCheck,https://codecheck.app,Missing Features
     HealthSync,https://healthsync.com,Not Using It
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File + Search
+outputs:
+  - Operating Manual
+  - Enriched Document
 ---
 
 # Agent Configuration: The Cancellation Flow Auditor

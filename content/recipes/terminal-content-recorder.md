@@ -3,7 +3,6 @@ id: terminal-content-recorder
 category: Content Ops
 title: The Terminal Streamer
 tagline: Record pixel-perfect terminal sessions for YouTube.
-difficulty: Beginner
 time: 5 mins
 archetype: Processor
 description: >-
@@ -19,6 +18,12 @@ sampleData:
     THEME="monokai"
     FONT_SIZE=20
 isPremium: true
+inputs:
+  - Source Draft
+  - Local File (CSV/MD)
+outputs:
+  - Repurposed Assets
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Terminal Streamer

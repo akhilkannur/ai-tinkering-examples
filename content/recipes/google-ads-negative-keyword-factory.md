@@ -5,7 +5,6 @@ title: The Semantic Negative Keyword Factory
 tagline: >-
   Block entire intent clusters (Jobs, Research, Competitors) before they drain
   your budget.
-difficulty: Intermediate
 time: One-off
 archetype: Processor
 description: >-
@@ -20,6 +19,12 @@ sampleData:
     SaaS,CRM Software,"crm software, business crm, sales automation"
     E-com,Luxury Watches,"luxury watches, buy rolex, premium timepieces"
 isPremium: true
+inputs:
+  - Ad Account Data
+  - Local File (CSV/MD)
+outputs:
+  - Performance Report
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Semantic Negative Keyword Factory

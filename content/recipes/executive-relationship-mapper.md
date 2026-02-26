@@ -3,7 +3,6 @@ id: executive-relationship-mapper
 category: Sales Ops
 title: Executive Network Mapper
 tagline: Map executive relationships via calendar data.
-difficulty: Intermediate
 time: Monthly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     CEO,Big Boss,CEO,Acme Corp
     AE,John Manager,Director,Acme Corp
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Strategic Account Agent

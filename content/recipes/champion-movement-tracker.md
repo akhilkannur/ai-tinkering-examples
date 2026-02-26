@@ -3,7 +3,6 @@ id: champion-movement-tracker
 category: Sales Ops
 title: Champion Job Change Tracker
 tagline: Detect when previous buyers move to new companies.
-difficulty: Intermediate
 time: Monthly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     John Doe,Acme Corp,john@acme.com
     Jane Smith,Beta Inc,jane@beta.com
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Customer Advocacy Agent

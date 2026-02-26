@@ -3,7 +3,6 @@ id: feature-usage-trend-monitor
 category: Customer Success
 title: Feature Adoption Trends
 tagline: Monitor monthly growth in feature usage.
-difficulty: Intermediate
 time: Monthly
 archetype: Processor
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     Jan,Export,500
     Feb,Export,400
 isPremium: true
+inputs:
+  - Usage Logs
+  - Local File (CSV/MD)
+outputs:
+  - Churn Risk Report
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Adoption Insights Agent

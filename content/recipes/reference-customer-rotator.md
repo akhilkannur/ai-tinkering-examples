@@ -3,7 +3,6 @@ id: reference-customer-rotator
 category: Sales Ops
 title: Sales Reference Rotator
 tagline: Prevent reference burnout by rotating happy customers.
-difficulty: Beginner
 time: Monthly
 archtype: Processor
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     Beta,1,2023-09-01
     Gamma,0,None
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Customer Reference Manager

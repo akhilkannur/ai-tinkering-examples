@@ -3,7 +3,6 @@ id: cold-call-objection-simulator
 category: Sales Ops
 title: Cold Call Simulator (The Grumpy Prospect)
 tagline: Practice handling "I'm not interested" before you pick up the phone.
-difficulty: Intermediate
 time: 5 mins
 archetype: Hybrid
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     Hi, this is John from Acme. We help companies save 20% on cloud bills. Is
     this a bad time?
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File + Search
+outputs:
+  - CRM-Ready Export
+  - Enriched Document
 ---
 
 # Agent Configuration: The Cold Call Simulator (Grumpy Prospect)

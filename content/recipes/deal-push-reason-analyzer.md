@@ -3,7 +3,6 @@ id: deal-push-reason-analyzer
 category: Sales Ops
 title: Deal Push Diagnostics
 tagline: Why did they delay... again?
-difficulty: Intermediate
 time: Monthly
 archetype: Processor
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     Soylent Corp,John,Budget,2
     Initech Deal,Mike,Competitor,1
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Pipeline Integrity Consultant

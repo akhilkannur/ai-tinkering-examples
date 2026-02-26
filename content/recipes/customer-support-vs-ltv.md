@@ -3,7 +3,6 @@ id: customer-support-vs-ltv
 category: CRO
 title: Support Cost vs LTV
 tagline: Are needy customers worth it?
-difficulty: Advanced
 time: Yearly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     John,50,100
     Jane,0,500
 isPremium: false
+inputs:
+  - Conversion Data
+  - Local File (CSV/MD)
+outputs:
+  - A/B Experiment Ideas
+  - Cleaned Data
 ---
 # Agent Configuration: The Profitability Ops
 

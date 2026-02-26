@@ -3,7 +3,6 @@ id: ticket-response-time-tracker
 category: Customer Success
 title: The Support Capacity Planner
 tagline: Match your staffing schedule to your ticket volume spikes.
-difficulty: Intermediate
 time: Weekly
 archetype: Processor
 description: >-
@@ -19,6 +18,12 @@ sampleData:
     103,14,5,No
     104,09,200,Yes
 isPremium: true
+inputs:
+  - Usage Logs
+  - Local File (CSV/MD)
+outputs:
+  - Churn Risk Report
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Workforce Planner

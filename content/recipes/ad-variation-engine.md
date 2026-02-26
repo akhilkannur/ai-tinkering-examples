@@ -3,7 +3,6 @@ id: ad-variation-engine
 category: Paid Media
 title: The Ad Variation Engine
 tagline: Turn 1 winner into 10 tests.
-difficulty: Intermediate
 time: 10 mins
 archetype: Processor
 description: >-
@@ -15,6 +14,12 @@ sampleData:
     Stop wasting time on spreadsheets. Our CRM automates data entry so you can
     focus on selling. Try it free for 14 days.
 isPremium: false
+inputs:
+  - Ad Account Data
+  - Local File (CSV/MD)
+outputs:
+  - Performance Report
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Ad Variation Engine

@@ -3,7 +3,6 @@ id: content-decay-audit
 category: SEO
 title: Content Decay Detector
 tagline: Find blog posts losing traffic.
-difficulty: Intermediate
 time: Monthly
 archtype: Processor
 description: >-
@@ -16,6 +15,10 @@ sampleData:
     /blog/guide-1,1000,200
     /blog/guide-2,500,550
 isPremium: true
+inputs:
+  - Target URL
+outputs:
+  - SEO Audit / Fixes
 ---
 
 # Agent Configuration: The Content Strategist

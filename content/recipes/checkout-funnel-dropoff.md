@@ -3,7 +3,6 @@ id: checkout-funnel-dropoff
 category: CRO
 title: Checkout Flow Analyzer
 tagline: Do they drop off at Shipping or Payment?
-difficulty: Intermediate
 time: Monthly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     Shipping,1000,900
     Payment,900,500
 isPremium: false
+inputs:
+  - Conversion Data
+  - Local File (CSV/MD)
+outputs:
+  - A/B Experiment Ideas
+  - Cleaned Data
 ---
 # Agent Configuration: The UX Researcher
 

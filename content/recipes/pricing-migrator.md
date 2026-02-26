@@ -3,7 +3,6 @@ id: pricing-migrator
 category: Sales Ops
 title: The Pricing Tier Migrator
 tagline: Move them up or move them out.
-difficulty: Advanced
 time: One-off
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Acme,100,5,10
     Globex,500,50,500
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Pricing Strategist

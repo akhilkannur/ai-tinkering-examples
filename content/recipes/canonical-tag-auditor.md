@@ -3,7 +3,6 @@ id: canonical-tag-auditor
 category: SEO
 title: The Technical SEO Doctor
 tagline: 'One scan to find Canonical conflicts, NoIndex errors, and Broken Links.'
-difficulty: Intermediate
 time: Monthly
 archetype: Hybrid
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     https://yoursite.com/
     https://yoursite.com/blog/post-1
 isPremium: false
+inputs:
+  - Target URL
+  - Local File + Search
+outputs:
+  - SEO Audit / Fixes
+  - Enriched Document
 ---
 
 # Agent Configuration: The Technical SEO Doctor

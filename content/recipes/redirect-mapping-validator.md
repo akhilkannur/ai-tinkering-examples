@@ -3,7 +3,6 @@ id: redirect-mapping-validator
 category: SEO
 title: Migration Redirect Checker
 tagline: Did the migration actually work?
-difficulty: Intermediate
 time: One-off
 archtype: Processor
 description: Verifies a list of expected redirects against the actual response codes.
@@ -14,6 +13,10 @@ sampleData:
     /old, /new, 301, /new
     /blog/old, /blog/new, 404,
 isPremium: true
+inputs:
+  - Target URL
+outputs:
+  - SEO Audit / Fixes
 ---
 
 # Agent Configuration: The Migration Specialist

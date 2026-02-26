@@ -3,7 +3,6 @@ id: bad-review-poacher
 category: Lead Gen
 title: The Competitor Poacher
 tagline: Identify users complaining about competitors on G2/Capterra.
-difficulty: Advanced
 time: 30 mins
 archetype: Researcher
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Salesforce,https://www.g2.com/products/salesforce-crm/reviews
     HubSpot,https://www.capterra.com/p/152373/HubSpot-Marketing-Hub/
 isPremium: false
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Competitor Poacher

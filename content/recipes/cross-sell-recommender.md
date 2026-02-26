@@ -3,7 +3,6 @@ id: cross-sell-recommender
 category: Retention
 title: Cross-Sell Recommender
 tagline: 'If they bought X, sell them Y.'
-difficulty: Intermediate
 time: Monthly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Jane,Tent
     Bob,Tent;Footprint
 isPremium: false
+inputs:
+  - Customer List
+  - Local File (CSV/MD)
+outputs:
+  - Re-engagement Script
+  - Cleaned Data
 ---
 # Agent Configuration: The Email Strategist
 

@@ -3,7 +3,6 @@ id: vendor-negotiation-script
 category: Strategic Ops
 title: The Vendor Negotiator
 tagline: Save 20% on your software stack from a bill or a name.
-difficulty: Intermediate
 time: Annual
 description: >-
   Everything is negotiable. This agent reads your current vendor bill (if
@@ -14,6 +13,10 @@ sampleData:
   content: |
     Service: HubSpot Pro. Monthly: $800. Renewing in 30 days.
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Vendor Negotiator

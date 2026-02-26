@@ -3,7 +3,6 @@ id: product-description-seo
 category: E-commerce
 title: The SKU SEO Factory
 tagline: Rewrite 100 product descriptions for search in minutes.
-difficulty: Beginner
 time: 10 mins
 description: >-
   Copy-pasted manufacturer descriptions hurt your SEO. This agent reads a CSV of
@@ -19,6 +18,10 @@ sampleData:
 
     TENT-02,Alpine Tent,2-person, 4-season, ultralight,Lightweight camping tent
 isPremium: true
+inputs:
+  - Product Data
+outputs:
+  - Shopify-Ready Update
 ---
 
 # Agent Configuration: The SKU SEO Factory

@@ -3,7 +3,6 @@ id: pipeline-velocity-accelerator
 category: Sales Ops
 title: Slow Deal Accelerator
 tagline: Wake up deals moving slower than average.
-difficulty: Intermediate
 time: Weekly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     1,Demo,15,10
     2,Demo,5,10
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Sales Manager

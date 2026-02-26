@@ -3,7 +3,6 @@ id: robots-txt-architect
 category: SEO
 title: robots.txt Rules Architect
 tagline: Protect your crawl budget by guiding search bots away from low-value pages.
-difficulty: Intermediate
 time: 5 mins
 archetype: Processor
 description: >-
@@ -20,6 +19,12 @@ sampleData:
 
     Sitemap: https://example.com/sitemap.xml
 isPremium: true
+inputs:
+  - Target URL
+  - Local File (CSV/MD)
+outputs:
+  - SEO Audit / Fixes
+  - Cleaned Data
 ---
 
 # Agent Configuration: The robots.txt Rules Architect

@@ -3,7 +3,6 @@ id: webinar-attendance-scorer
 category: Marketing Ops
 title: Webinar Engagement Scorer
 tagline: Identify hot leads based on minutes watched.
-difficulty: Intermediate
 time: Batch
 archtype: Processor
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     Bob,5,0
     Charlie,30,0
 isPremium: true
+inputs:
+  - Campaign Data
+outputs:
+  - Optimization Plan
 ---
 
 # Agent Configuration: The Lead Scorer

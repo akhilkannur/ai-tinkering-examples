@@ -3,7 +3,6 @@ id: competitor-pricing-alert-system
 category: Strategic Ops
 title: Competitor Pricing Watchdog
 tagline: Detects hidden pricing changes on competitor websites.
-difficulty: Intermediate
 time: 15 mins
 archetype: Hybrid
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Monday,https://monday.com/pricing
     Asana,https://asana.com/pricing
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File + Search
+outputs:
+  - Operating Manual
+  - Enriched Document
 ---
 
 # Agent Configuration: The Competitor Pricing Watchdog

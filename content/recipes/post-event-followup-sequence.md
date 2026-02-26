@@ -3,7 +3,6 @@ id: post-event-followup-sequence
 category: Strategic Ops
 title: The Post-Event Follow-up
 tagline: The money is in the follow-up.
-difficulty: Intermediate
 time: Batch
 description: >-
   You scanned the badges, now what? This agent drafts personalized 3-step email
@@ -17,6 +16,10 @@ sampleData:
     Bob Smith,bob@startup.io,Web Summit,Interested in our pricing tiers
     Charlie Brown,charlie@enterprise.co,CES,Met at the networking dinner
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Post-Event Follow-up

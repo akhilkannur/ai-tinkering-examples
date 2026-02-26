@@ -3,7 +3,6 @@ id: lead-aging-alerts
 category: Sales Ops
 title: The Lead Aging Alert System
 tagline: Fresh leads taste better.
-difficulty: Intermediate
 time: Daily
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     LeadA,Alice,2023-10-10 09:00,New
     LeadB,Bob,2023-10-08 09:00,New
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Alarm Clock

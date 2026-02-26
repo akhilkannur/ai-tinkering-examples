@@ -3,7 +3,6 @@ id: sitemap-to-csv-inventory
 category: SEO
 title: The Content Inventory Builder
 tagline: Map your entire site.
-difficulty: Intermediate
 time: Batch
 description: >-
   You can't optimize what you can't see. This agent processes multiple
@@ -17,6 +16,10 @@ sampleData:
     blog.io,https://blog.io/sitemap_index.xml,Production
     staging.net,https://staging.net/sitemap.xml,Staging
 isPremium: true
+inputs:
+  - Target URL
+outputs:
+  - SEO Audit / Fixes
 ---
 
 # Agent Configuration: The Content Inventory Builder

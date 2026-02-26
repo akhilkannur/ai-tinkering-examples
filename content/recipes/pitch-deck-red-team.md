@@ -3,7 +3,6 @@ id: pitch-deck-red-team
 category: Strategic Ops
 title: The VC Pitch Deck Roast
 tagline: Simulate a ruthless VC tearing apart your slide deck.
-difficulty: Intermediate
 time: Real-time
 archtype: Processor
 description: >-
@@ -16,6 +15,10 @@ sampleData:
     1,"We are the Uber for Cats"
     2,"TAM is $500 Trillion"
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The VC Pitch Deck Roast

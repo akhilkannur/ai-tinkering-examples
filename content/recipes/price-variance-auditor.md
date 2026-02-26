@@ -3,7 +3,6 @@ id: price-variance-auditor
 category: Sales Ops
 title: Price Integrity Auditor
 tagline: Identify deals sold below standard list price.
-difficulty: Intermediate
 time: Monthly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     Deal 1,1000,900
     Deal 2,1000,500
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Margin Protection Agent

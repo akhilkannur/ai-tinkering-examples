@@ -3,7 +3,6 @@ id: freelance-marketplace-arbitrage
 category: Lead Gen
 title: The Outsourcing Arbitrage
 tagline: Find companies hiring freelancers for roles you automate.
-difficulty: Intermediate
 time: 20 mins
 archetype: Researcher
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     "Data Entry",Automated Data Cleaning Tool
     "Transcribe Audio",AI Transcription API
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Outsourcing Arbitrage

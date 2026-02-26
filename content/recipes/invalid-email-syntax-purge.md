@@ -3,7 +3,6 @@ id: invalid-email-syntax-purge
 category: Marketing Ops
 title: Email Syntax Auditor
 tagline: Identify and remove obvious email typos.
-difficulty: Beginner
 time: Weekly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     bob@yahoo..com
     sarah@test.com
 isPremium: true
+inputs:
+  - Campaign Data
+  - Local File (CSV/MD)
+outputs:
+  - Optimization Plan
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Email Hygiene Agent

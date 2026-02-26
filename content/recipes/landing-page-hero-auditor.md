@@ -3,7 +3,6 @@ id: landing-page-hero-auditor
 category: CRO
 title: The Landing Page Hero Auditor
 tagline: Fix your site's first 5 seconds.
-difficulty: Beginner
 time: Batch
 description: >-
   50% of users bounce in 5 seconds. This agent audits your Hero Sections (H1,
@@ -23,6 +22,10 @@ sampleData:
     Ebook,Master your productivity today,Download our free guide to get more
     done,Freelancers
 isPremium: true
+inputs:
+  - Conversion Data
+outputs:
+  - A/B Experiment Ideas
 ---
 
 # Agent Configuration: The Landing Page Hero Auditor

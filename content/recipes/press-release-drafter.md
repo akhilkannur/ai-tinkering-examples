@@ -3,11 +3,13 @@ id: press-release-drafter
 category: Strategic Ops
 title: Code-to-Press Release Architect
 tagline: Turn code commits and changelogs into journalist-grade launch assets.
-difficulty: Advanced
 time: 15 mins
 archetype: Hybrid
 description: >-
-  A Folder Agent that reads your codebase (git logs, changelogs, package.json) to extract the "hard news" of your release, interviews you for the strategic vision, and generates a full launch kit (Press Release, Founder's Email, and Social Posts).
+  A Folder Agent that reads your codebase (git logs, changelogs, package.json)
+  to extract the "hard news" of your release, interviews you for the strategic
+  vision, and generates a full launch kit (Press Release, Founder's Email, and
+  Social Posts).
 sampleData:
   filename: announcement_context.md
   content: |
@@ -16,6 +18,12 @@ sampleData:
     *   **Key Value Prop:** This update reduces cloud bills by 30%.
     *   **Quote Authority:** Jane Doe, CEO.
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File + Search
+outputs:
+  - Operating Manual
+  - Enriched Document
 ---
 
 # Agent Configuration: The Code-to-Press Architect

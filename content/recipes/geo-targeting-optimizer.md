@@ -3,7 +3,6 @@ id: geo-targeting-optimizer
 category: Paid Media
 title: Geo-Conversion Optimizer
 tagline: Focus spend on cities that buy.
-difficulty: Intermediate
 time: Quarterly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     NY,1000,50
     LA,1000,10
 isPremium: true
+inputs:
+  - Ad Account Data
+  - Local File (CSV/MD)
+outputs:
+  - Performance Report
+  - Cleaned Data
 ---
 # Agent Configuration: The Growth Hacker
 

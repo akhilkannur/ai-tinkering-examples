@@ -3,7 +3,6 @@ id: sitemap-orphan-page-finder
 category: SEO
 title: Orphan Page Detective
 tagline: Find pages that exist but aren't in your sitemap.
-difficulty: Advanced
 time: Monthly
 archtype: Processor
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     /landing-old,No
     /pricing,Yes
 isPremium: true
+inputs:
+  - Target URL
+outputs:
+  - SEO Audit / Fixes
 ---
 
 # Agent Configuration: The Technical SEO

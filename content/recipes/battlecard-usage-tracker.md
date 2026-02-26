@@ -3,7 +3,6 @@ id: battlecard-usage-tracker
 category: Sales Ops
 title: Content Usage Tracker
 tagline: Which battlecards do reps actually use?
-difficulty: Beginner
 time: Monthly
 archtype: Processor
 description: >-
@@ -16,6 +15,10 @@ sampleData:
     Competitor A Battlecard,50,2m
     Objection Handling v1,2,30s
 isPremium: false
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Enablement Lead

@@ -3,7 +3,6 @@ id: mobile-desktop-conversion-audit
 category: CRO
 title: Device Conversion Gap
 tagline: Is your mobile site killing sales?
-difficulty: Intermediate
 time: Monthly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     Home,2.0,2.5
     Product_A,0.5,3.0
 isPremium: true
+inputs:
+  - Conversion Data
+  - Local File (CSV/MD)
+outputs:
+  - A/B Experiment Ideas
+  - Cleaned Data
 ---
 # Agent Configuration: The Mobile UX Specialist
 

@@ -3,7 +3,6 @@ id: contract-risk-detector
 category: Strategic Ops
 title: The Contract Risk Detector
 tagline: Find the 'gotchas' in the PDF.
-difficulty: Experimental
 time: Batch
 description: >-
   Sales contracts often hide 3-year lock-ins or auto-renewals in the fine print.
@@ -17,6 +16,10 @@ sampleData:
     AdsManager,contracts/ads_terms.pdf,Medium
     SaaSPro,contracts/saaspro_agreement.png,High
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Contract Risk Detector

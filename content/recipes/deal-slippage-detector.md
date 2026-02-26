@@ -5,7 +5,6 @@ title: The Deal Slippage Healer
 tagline: >-
   Don't just flag the slip. Diagnose the root cause with Rep-specific coaching
   questions.
-difficulty: Intermediate
 time: Weekly
 archetype: Processor
 description: >-
@@ -22,6 +21,12 @@ sampleData:
     2,Week1,2023-10-31,Discovery,10000
     2,Week2,2023-10-31,Demo,10000
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Forecast Healer

@@ -3,7 +3,6 @@ id: seo-meta-tag-bulk-optimizer
 category: Strategic Ops
 title: Bulk Meta Tag Writer
 tagline: Fix missing or duplicate SEO titles and descriptions in seconds.
-difficulty: Intermediate
 time: 5 mins
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     /products/shoes,,Running Shoes
     /about,About Us - Company Name,
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Bulk Meta Tag Writer

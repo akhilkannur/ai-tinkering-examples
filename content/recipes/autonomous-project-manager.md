@@ -3,7 +3,6 @@ id: autonomous-project-manager
 category: Strategic Ops
 title: The Autonomous Project Manager
 tagline: The 'Ralph Wiggum' Loop.
-difficulty: Advanced
 time: Batch
 archetype: Processor
 description: >-
@@ -22,6 +21,12 @@ sampleData:
 
     Internal Tool,React & Supabase,Setup auth and a basic dashboard
 isPremium: false
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Autonomous Project Manager

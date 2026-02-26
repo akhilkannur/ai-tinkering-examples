@@ -3,7 +3,6 @@ id: cross-sell-penetration-matrix
 category: Sales Ops
 title: Product Penetration Matrix
 tagline: Map customers against the full product catalog.
-difficulty: Intermediate
 time: Monthly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Acme,API
     Beta,Base
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Expansion Agent

@@ -3,7 +3,6 @@ id: distributor-stock-rotation-logic
 category: Strategic Ops
 title: Stock Rotation Auditor
 tagline: Calculate eligible stock returns for distributors.
-difficulty: Advanced
 time: Quarterly
 archtype: Processor
 description: >-
@@ -16,6 +15,10 @@ sampleData:
     Disti A,1000000,50000
     Disti B,500000,100000
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Distribution Manager

@@ -3,7 +3,6 @@ id: api-endpoint-validator
 category: Sales Ops
 title: The API Fleet Monitor
 tagline: Health check 50 endpoints in one run.
-difficulty: Advanced
 time: Daily
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Auth,/api/v1/login,token
     Data,/api/v1/stats,reports
 isPremium: false
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The API Fleet Monitor

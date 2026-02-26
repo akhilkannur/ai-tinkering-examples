@@ -3,7 +3,6 @@ id: lead-magnet-generator
 category: Lead Gen
 title: The Lead Magnet Factory
 tagline: Build a library of assets from customer pains.
-difficulty: Beginner
 time: 20 mins
 description: >-
   Why build one lead magnet? This agent reads a list of customer 'Pains' and
@@ -17,6 +16,10 @@ sampleData:
     SaaS Founders,Churn,High LTV
     Solo Creators,Time Management,Consistent Content
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+outputs:
+  - Enriched Leads
 ---
 
 # Agent Configuration: The Lead Magnet Factory

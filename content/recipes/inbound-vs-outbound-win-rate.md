@@ -3,7 +3,6 @@ id: inbound-vs-outbound-win-rate
 category: Sales Ops
 title: Win Rate by Origin
 tagline: Compare win rates for Inbound vs Outbound leads.
-difficulty: Beginner
 time: Monthly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Inbound,Lost
     Outbound,Won
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Revenue Insights Agent

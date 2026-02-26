@@ -3,7 +3,6 @@ id: influencer-payout-calculator
 category: Marketing Ops
 title: Influencer Payout Calc
 tagline: Automate monthly affiliate commissions.
-difficulty: Intermediate
 time: Monthly
 archtype: Processor
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     ORD-2,200,INFLUENCER_B
     ORD-3,50,INFLUENCER_A
 isPremium: true
+inputs:
+  - Campaign Data
+outputs:
+  - Optimization Plan
 ---
 
 # Agent Configuration: The Affiliate Manager

@@ -3,7 +3,6 @@ id: customer-support-sentiment-trend
 category: Customer Success
 title: Support Sentiment Tracker
 tagline: Monitor ticket sentiment trends over time.
-difficulty: Intermediate
 time: Weekly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     2023-10-01,Love the tool!
     2023-10-02,Broken UI, very annoyed
 isPremium: true
+inputs:
+  - Usage Logs
+  - Local File (CSV/MD)
+outputs:
+  - Churn Risk Report
+  - Cleaned Data
 ---
 
 # Agent Configuration: The CS Insights Agent

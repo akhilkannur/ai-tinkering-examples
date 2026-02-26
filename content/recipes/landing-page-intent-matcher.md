@@ -3,7 +3,6 @@ id: landing-page-intent-matcher
 category: CRO
 title: Ad-to-Page Matcher
 tagline: Does the Landing Page match the Ad?
-difficulty: Advanced
 time: Monthly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     Cheap Shoes,Luxury Boots
     Running Gear,Best Running Gear
 isPremium: true
+inputs:
+  - Conversion Data
+  - Local File (CSV/MD)
+outputs:
+  - A/B Experiment Ideas
+  - Cleaned Data
 ---
 # Agent Configuration: The PPC Manager
 

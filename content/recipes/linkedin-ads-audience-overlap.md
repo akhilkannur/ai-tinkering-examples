@@ -3,7 +3,6 @@ id: linkedin-ads-audience-overlap
 category: Paid Media
 title: Audience Overlap Checker
 tagline: Stop bidding against yourself.
-difficulty: Intermediate
 time: Monthly
 archtype: Processor
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     Conversion,acme.com
     Awareness,beta.io
 isPremium: true
+inputs:
+  - Ad Account Data
+outputs:
+  - Performance Report
 ---
 
 # Agent Configuration: The Paid Social Specialist

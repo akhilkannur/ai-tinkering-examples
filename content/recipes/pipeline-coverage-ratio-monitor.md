@@ -3,7 +3,6 @@ id: pipeline-coverage-ratio-monitor
 category: Sales Ops
 title: Pipeline Coverage Monitor
 tagline: Do you have 3x your quota in pipeline?
-difficulty: Beginner
 time: Weekly
 archtype: Processor
 description: >-
@@ -16,6 +15,10 @@ sampleData:
     John,300000,100000
     Jane,50000,100000
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Sales Ops

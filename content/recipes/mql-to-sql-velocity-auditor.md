@@ -3,7 +3,6 @@ id: mql-to-sql-velocity-auditor
 category: Sales Ops
 title: MQL Follow-up Velocity
 tagline: Measure how fast Sales accepts Marketing leads.
-difficulty: Beginner
 time: Weekly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     L-1,2023-10-01 10:00,2023-10-01 10:30
     L-2,2023-10-01 10:00,2023-10-02 14:00
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Sales Process Agent

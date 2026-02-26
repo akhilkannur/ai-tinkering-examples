@@ -3,7 +3,6 @@ id: invoice-chaser-sequence
 category: Strategic Ops
 title: The Invoice Chaser Engine
 tagline: Recover $10k+ in overdue payments without being awkward.
-difficulty: Beginner
 time: Weekly
 description: >-
   Unpaid invoices kill cash flow. This agent reads a CSV of overdue accounts,
@@ -16,6 +15,10 @@ sampleData:
     MegaCorp,billing@megacorp.com,5000,5
     SmallStart,founder@small.com,1200,35
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Invoice Chaser Engine

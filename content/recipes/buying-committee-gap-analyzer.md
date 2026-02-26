@@ -3,7 +3,6 @@ id: buying-committee-gap-analyzer
 category: Sales Ops
 title: Buying Committee Auditor
 tagline: Find missing key roles in your target accounts.
-difficulty: Intermediate
 time: Weekly
 archtype: Processor
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     Acme Corp,Jane Smith,VP Sales
     Beta Inc,Bob Hill,CTO
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Sales Ops Analyst

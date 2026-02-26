@@ -3,7 +3,6 @@ id: seasonal-inventory-liquidator
 category: E-commerce
 title: End-of-Season Liquidator
 tagline: Clear shelves before the new line drops.
-difficulty: Intermediate
 time: Seasonal
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     Winter-Coat,Winter,500
     Summer-Tee,Summer,10
 isPremium: true
+inputs:
+  - Product Data
+  - Local File (CSV/MD)
+outputs:
+  - Shopify-Ready Update
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Planner

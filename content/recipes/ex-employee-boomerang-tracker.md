@@ -3,7 +3,6 @@ id: ex-employee-boomerang-tracker
 category: Lead Gen
 title: The Alumni Boomerang
 tagline: Find former employees who joined target accounts.
-difficulty: Intermediate
 time: 20 mins
 archetype: Researcher
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     My_Company_Name,Target_Account_List
     "Acme Corp","Globex, Stark Industries, Wayne Enterprises"
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Alumni Boomerang

@@ -3,7 +3,6 @@ id: partner-certification-monitor
 category: Strategic Ops
 title: The Partner Enablement Automator
 tagline: Automatically nag partners 30 days before their certifications expire.
-difficulty: Beginner
 time: Monthly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Acme Resellers,john@acme.com,Solutions Architect,2024-02-01
     Beta Systems,jane@beta.com,Sales Pro,2023-12-01
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Enablement Manager

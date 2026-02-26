@@ -3,7 +3,6 @@ id: influencer-roi-calculator
 category: Strategic Ops
 title: The Creator Economy Auditor
 tagline: Separate the 'Performers' from the 'Posers'.
-difficulty: Beginner
 time: Campaign End
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     TikTokStar,5000,200,0.15,1000000
     NicheBlogger,500,2000,0.05,5000
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 
 # Agent Configuration: The CFO

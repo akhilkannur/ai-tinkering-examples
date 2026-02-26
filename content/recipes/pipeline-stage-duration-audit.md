@@ -3,7 +3,6 @@ id: pipeline-stage-duration-audit
 category: Sales Ops
 title: Pipeline Bottleneck Finder
 tagline: Pinpoint exactly where deals are getting stuck.
-difficulty: Intermediate
 time: 15 mins
 archtype: Processor
 description: >-
@@ -18,6 +17,10 @@ sampleData:
     Acme Corp,Negotiation,2023-01-20,2023-02-15
     Beta Ltd,Discovery,2023-02-01,2023-02-02
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The RevOps Analyst

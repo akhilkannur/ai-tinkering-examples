@@ -3,7 +3,6 @@ id: help-center-gap-finder
 category: Competitive Intel
 title: The Help Center Forensic Agent
 tagline: Spot competitor flaws in their support docs.
-difficulty: Advanced
 time: Batch
 description: >-
   Support documentation reveals the truth. This agent researches competitor Help
@@ -17,6 +16,10 @@ sampleData:
     Intercom,https://www.intercom.com/help
     Zendesk,https://support.zendesk.com
 isPremium: true
+inputs:
+  - Competitor URL
+outputs:
+  - Intel Dashboard
 ---
 
 # Agent Configuration: The Help Center Forensic Agent

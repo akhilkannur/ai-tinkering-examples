@@ -3,7 +3,6 @@ id: time-in-stage-stalls
 category: Sales Ops
 title: Pipeline Stage Stall Monitor
 tagline: Identify deals stuck in Legal or Security Review.
-difficulty: Intermediate
 time: Weekly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Deal B,Security,5
     Deal C,Legal,2
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Process Improvement Agent

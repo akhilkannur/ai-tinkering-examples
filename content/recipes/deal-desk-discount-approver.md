@@ -3,7 +3,6 @@ id: deal-desk-discount-approver
 category: Sales Ops
 title: Discount Guardrails Bot
 tagline: Auto-flag quotes with excessive discounts.
-difficulty: Intermediate
 time: Daily
 archtype: Processor
 description: >-
@@ -16,6 +15,10 @@ sampleData:
     Q-101,SaaS Pro,100,80,20
     Q-102,SaaS Ent,1000,600,40
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Deal Desk Analyst

@@ -3,7 +3,6 @@ id: competitor-promo-code-tracker
 category: Competitive Intel
 title: Competitor Discount Tracker
 tagline: Are they running a secret 20% off?
-difficulty: Intermediate
 time: Weekly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     Comp A,WELCOME20,20%,2023-10-01
     Comp B,FREESHIP,Shipping,2023-10-02
 isPremium: true
+inputs:
+  - Competitor URL
+  - Local File (CSV/MD)
+outputs:
+  - Intel Dashboard
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Pricing Analyst

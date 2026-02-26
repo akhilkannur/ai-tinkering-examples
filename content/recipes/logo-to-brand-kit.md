@@ -3,7 +3,6 @@ id: logo-to-brand-kit
 category: Content Ops
 title: The Brand Scientist
 tagline: Decode the psychology of your logo colors.
-difficulty: Experimental
 time: Batch
 archetype: Hybrid
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     BankCo,assets/bankco.png
     Foodie,assets/burger.png
 isPremium: true
+inputs:
+  - Source Draft
+  - Local File + Search
+outputs:
+  - Repurposed Assets
+  - Enriched Document
 ---
 
 # Agent Configuration: The Brand Scientist

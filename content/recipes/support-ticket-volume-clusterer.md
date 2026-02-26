@@ -3,7 +3,6 @@ id: support-ticket-volume-clusterer
 category: Customer Success
 title: Ticket Volume Clusterer
 tagline: Group ticket subjects into feature themes.
-difficulty: Intermediate
 time: Weekly
 archetype: Processor
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     Slow dashboard
     Login stuck
 isPremium: true
+inputs:
+  - Usage Logs
+  - Local File (CSV/MD)
+outputs:
+  - Churn Risk Report
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Product Insights Agent

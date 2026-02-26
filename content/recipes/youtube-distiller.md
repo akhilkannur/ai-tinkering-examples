@@ -3,7 +3,6 @@ id: youtube-distiller
 category: Content Ops
 title: The Video Distiller
 tagline: YouTube -> Study Notes.
-difficulty: Beginner
 time: Batch
 description: >-
   Watches long YouTube videos and extracts key arguments, unique insights, and
@@ -16,6 +15,10 @@ sampleData:
     Cold Calling Masterclass,https://youtube.com/watch?v=456,Sales
     SEO in 2024,https://youtube.com/watch?v=789,Marketing
 isPremium: true
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: The Video Distiller

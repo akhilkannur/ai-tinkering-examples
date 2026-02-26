@@ -3,7 +3,6 @@ id: social-intent-scout
 category: Lead Gen
 title: The Social Signal Engine
 tagline: Find 100 leads asking for help across Reddit & LinkedIn.
-difficulty: Advanced
 time: 20 mins
 description: >-
   Leads with intent convert 10x better. This agent reads a list of 'Pain Point
@@ -16,6 +15,10 @@ sampleData:
     "need a crm",Reddit
     "email deliverability issues",LinkedIn
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+outputs:
+  - Enriched Leads
 ---
 
 # Agent Configuration: The Social Signal Engine

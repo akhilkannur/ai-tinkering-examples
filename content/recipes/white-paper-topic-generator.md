@@ -3,7 +3,6 @@ id: white-paper-topic-generator
 category: Strategic Ops
 title: White Paper Ideator
 tagline: Brainstorm high-authority content that enterprise buyers actually read.
-difficulty: Intermediate
 time: 10 mins
 archetype: Hybrid
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     Target: Enterprise COOs
     Product: AI Route Optimization
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File + Search
+outputs:
+  - Operating Manual
+  - Enriched Document
 ---
 
 # Agent Configuration: The White Paper Ideator

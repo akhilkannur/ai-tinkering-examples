@@ -3,7 +3,6 @@ id: quote-velocity-tracker
 category: Sales Ops
 title: The Deal Friction Hunter
 tagline: Automatically nudge deals that are stuck in 'Legal' or 'Signature'.
-difficulty: Intermediate
 time: Weekly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Q101,dave@acme.com,2024-01-20,Signature
     Q102,sara@beta.com,2024-01-10,Legal Review
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 # Agent Configuration: The Deal Desk Agent
 

@@ -3,7 +3,6 @@ id: market-entry-simulator
 category: Strategic Ops
 title: New Market Entry Simulator
 tagline: Roleplay a launch in a new country or vertical.
-difficulty: Advanced
 time: Real-time
 archtype: Hybrid
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     Germany,HR_SaaS
     Japan,Social_App
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: New Market Entry Simulator

@@ -3,7 +3,6 @@ id: linkedin-account-targeting-list
 category: Sales Ops
 title: LinkedIn Account Targeting Builder
 tagline: Turn a list of domains into a matched audience for LinkedIn Ads.
-difficulty: Intermediate
 time: 10 mins
 archetype: Researcher
 description: >-
@@ -19,6 +18,12 @@ sampleData:
     figma.com
     linear.app
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Web Search Target
+outputs:
+  - CRM-Ready Export
+  - Curated Intel
 ---
 
 # Agent Configuration: The LinkedIn Account Targeting Builder

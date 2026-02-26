@@ -3,7 +3,6 @@ id: podcast-clip-selector
 category: Content Ops
 title: The Viral Clip Factory
 tagline: Identify viral social clips for your entire season.
-difficulty: Intermediate
 time: 10 mins
 description: >-
   Editing a 1-hour show is hard. This agent scans a folder of transcripts for
@@ -14,6 +13,10 @@ sampleData:
   content: |
     [05:20] Sarah: "And that's why most people are completely wrong about SEO."
 isPremium: true
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: The Viral Clip Factory

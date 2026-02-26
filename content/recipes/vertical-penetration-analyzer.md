@@ -3,7 +3,6 @@ id: vertical-penetration-analyzer
 category: Sales Ops
 title: Vertical Market Penetration
 tagline: How much of the Finance market do we own?
-difficulty: Advanced
 time: Quarterly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     Finance,50,5000
     Retail,200,10000
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Strategy Lead

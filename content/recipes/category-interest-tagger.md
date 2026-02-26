@@ -3,7 +3,6 @@ id: category-interest-tagger
 category: E-commerce
 title: Category Affinity Tagger
 tagline: Tag users as 'Runners' or 'Swimmers'.
-difficulty: Intermediate
 time: Monthly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     John,Running
     Jane,Swimming
 isPremium: false
+inputs:
+  - Product Data
+  - Local File (CSV/MD)
+outputs:
+  - Shopify-Ready Update
+  - Cleaned Data
 ---
 # Agent Configuration: The CRM Manager
 

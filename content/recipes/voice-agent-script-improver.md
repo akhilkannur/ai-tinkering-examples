@@ -3,7 +3,6 @@ id: voice-agent-script-improver
 category: Sales Ops
 title: Voice Agent Script Improver
 tagline: Fix the exact moment users hang up on your AI voice agent.
-difficulty: Intermediate
 time: Batch
 archtype: Processor
 description: >-
@@ -16,6 +15,10 @@ sampleData:
     101,"Hello I am calling from...",Hangup
     102,"I can help with...",Success
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: Voice Agent Script Improver

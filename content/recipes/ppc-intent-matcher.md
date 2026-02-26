@@ -3,7 +3,6 @@ id: ppc-intent-matcher
 category: Paid Media
 title: The PPC Intent Engine
 tagline: High-intent ad keywords for your entire product line.
-difficulty: Advanced
 time: Monthly
 description: >-
   Stop bidding on generic terms. This agent reads a list of product categories
@@ -16,6 +15,10 @@ sampleData:
     CRM Software,"Salesforce, HubSpot"
     Email Marketing,"Mailchimp, ConvertKit"
 isPremium: true
+inputs:
+  - Ad Account Data
+outputs:
+  - Performance Report
 ---
 
 # Agent Configuration: The PPC Intent Engine

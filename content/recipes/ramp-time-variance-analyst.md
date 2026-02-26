@@ -3,7 +3,6 @@ id: ramp-time-variance-analyst
 category: Sales Ops
 title: Ramp Time Cohort Analyst
 tagline: Are Q1 hires faster than Q3 hires?
-difficulty: Intermediate
 time: Quarterly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     Q1_Hires,90
     Q2_Hires,120
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Sales Trainer

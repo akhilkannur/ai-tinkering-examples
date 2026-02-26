@@ -3,7 +3,6 @@ id: discount-code-leakage-monitor
 category: CRO
 title: Coupon Leak Detector
 tagline: Did Honey scrape your exclusive code?
-difficulty: Intermediate
 time: Weekly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     WELCOME20,5,5
     VIP_SECRET,500,2
 isPremium: false
+inputs:
+  - Conversion Data
+  - Local File (CSV/MD)
+outputs:
+  - A/B Experiment Ideas
+  - Cleaned Data
 ---
 # Agent Configuration: The Margin Guardian
 

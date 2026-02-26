@@ -3,7 +3,6 @@ id: news-curator
 category: Content Ops
 title: The Multi-Niche News Curator
 tagline: Draft 5 weekly newsletters in one run.
-difficulty: Intermediate
 time: Weekly
 description: >-
   Curating news for different audiences takes hours. This agent reads a list of
@@ -16,6 +15,10 @@ sampleData:
     AI Tools,"techcrunch.com, ycombinator.com","agents, automation, llm"
     Fintech,"finextra.com, bloomberg.com","crypto, banking, payments"
 isPremium: true
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: The Multi-Niche News Curator

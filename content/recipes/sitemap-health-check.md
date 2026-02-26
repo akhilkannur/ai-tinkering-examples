@@ -3,7 +3,6 @@ id: sitemap-health-check
 category: SEO
 title: Sitemap Health Auditor
 tagline: Find broken links and non-indexable pages in your sitemap.
-difficulty: Intermediate
 time: 10 mins
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
       <url><loc>https://example.com/broken-page</loc></url>
     </urlset>
 isPremium: true
+inputs:
+  - Target URL
+  - Local File (CSV/MD)
+outputs:
+  - SEO Audit / Fixes
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Sitemap Health Auditor

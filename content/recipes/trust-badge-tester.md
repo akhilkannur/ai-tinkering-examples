@@ -3,7 +3,6 @@ id: trust-badge-tester
 category: CRO
 title: Trust Badge A/B Analyzer
 tagline: Does 'Secure Checkout' actually help?
-difficulty: Beginner
 time: Batch
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Badge_A,1000,25
     Badge_B,1000,18
 isPremium: true
+inputs:
+  - Conversion Data
+  - Local File (CSV/MD)
+outputs:
+  - A/B Experiment Ideas
+  - Cleaned Data
 ---
 # Agent Configuration: The Optimization Lead
 

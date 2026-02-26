@@ -3,7 +3,6 @@ id: newsletter-list-cleaner
 category: Strategic Ops
 title: List Hygiene Scrub
 tagline: Remove role-based and disposable emails.
-difficulty: Beginner
 time: Weekly
 archtype: Processor
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     support@tesla.com
     bill@temp-mail.org
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Email Architect

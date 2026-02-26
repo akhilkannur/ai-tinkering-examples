@@ -3,7 +3,6 @@ id: discount-variance-by-region
 category: Sales Ops
 title: Regional Discount Auditor
 tagline: Find territories discounting more than the average.
-difficulty: Intermediate
 time: Monthly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Deal 2,EMEA,5000,25
     Deal 3,APAC,8000,10
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Pricing Auditor

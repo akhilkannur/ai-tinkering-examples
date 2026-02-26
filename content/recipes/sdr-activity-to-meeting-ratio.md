@@ -3,7 +3,6 @@ id: sdr-activity-to-meeting-ratio
 category: Sales Ops
 title: SDR Booking Efficiency
 tagline: Measure calls required to book 1 meeting.
-difficulty: Beginner
 time: Weekly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     John,500,10
     Jane,200,10
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The SDR Manager Agent

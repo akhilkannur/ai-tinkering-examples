@@ -3,7 +3,6 @@ id: gwp-qualifier
 category: E-commerce
 title: Gift-with-Purchase Qualifier
 tagline: Identify VIPs for surprise gifts.
-difficulty: Beginner
 time: Batch
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     101,500,50
     102,2000,150
 isPremium: true
+inputs:
+  - Product Data
+  - Local File (CSV/MD)
+outputs:
+  - Shopify-Ready Update
+  - Cleaned Data
 ---
 # Agent Configuration: The Fulfillment Manager
 

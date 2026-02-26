@@ -3,7 +3,6 @@ id: job-title-normalizer
 category: Marketing Ops
 title: Job Title Normalizer
 tagline: Standardize 'VP of Sales' vs 'Vice President Sales'.
-difficulty: Beginner
 time: Weekly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Jane,Director of Growth
     Bob,Sales Associate
 isPremium: true
+inputs:
+  - Campaign Data
+  - Local File (CSV/MD)
+outputs:
+  - Optimization Plan
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Data Hygiene Agent

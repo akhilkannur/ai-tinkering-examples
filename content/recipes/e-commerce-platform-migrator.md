@@ -3,7 +3,6 @@ id: e-commerce-platform-migrator
 category: Lead Gen
 title: The Re-Platform Scout
 tagline: Identify online stores that recently switched platforms.
-difficulty: Advanced
 time: 20 mins
 archetype: Researcher
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     gymshark.com
     colourpop.com
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Re-Platform Scout

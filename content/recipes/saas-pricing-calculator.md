@@ -3,7 +3,6 @@ id: saas-pricing-calculator
 category: Strategic Ops
 title: The Packaging Strategist
 tagline: Price is just a number. Packaging is psychology.
-difficulty: Intermediate
 time: Batch
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     Product,Base_Cost,Target_Margin,Key_Feature_1,Key_Feature_2,Key_Feature_3
     CloudApp,10,0.80,Basic Storage,API Access,SSO
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Pricing Psychologist

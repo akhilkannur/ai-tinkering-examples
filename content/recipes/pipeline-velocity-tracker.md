@@ -3,7 +3,6 @@ id: pipeline-velocity-tracker
 category: Sales Ops
 title: The Pipeline Velocity Tracker
 tagline: Find the bottleneck in your sales process.
-difficulty: Advanced
 time: Monthly
 description: >-
   Why is revenue unpredictable? Usually, deals stick in one stage (e.g.,
@@ -17,6 +16,10 @@ sampleData:
     Beta Inc,Discovery,2,5000,Sarah
     Gamma LLC,Negotiation,120,50000,John
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Pipeline Velocity Tracker

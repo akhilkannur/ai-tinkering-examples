@@ -3,7 +3,6 @@ id: quiz-funnel-builder
 category: Lead Gen
 title: The Quiz Funnel Builder
 tagline: Cheaper leads than a PDF.
-difficulty: Intermediate
 time: Batch
 description: >-
   Quizzes have 40% conversion rates. This agent designs 'Diagnosis Quizzes' for
@@ -17,6 +16,10 @@ sampleData:
     VelvetBloom,Organic Skincare,Beauty Enthusiasts
     PixelPounce,Gaming Gear,Competitive Gamers
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+outputs:
+  - Enriched Leads
 ---
 
 # Agent Configuration: The Quiz Funnel Builder

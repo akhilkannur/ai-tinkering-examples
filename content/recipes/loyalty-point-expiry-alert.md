@@ -3,7 +3,6 @@ id: loyalty-point-expiry-alert
 category: Retention
 title: Point Expiry Nudge
 tagline: Create urgency with expiring points.
-difficulty: Beginner
 time: Monthly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     John,500,2023-11-01
     Jane,10,2024-01-01
 isPremium: false
+inputs:
+  - Customer List
+  - Local File (CSV/MD)
+outputs:
+  - Re-engagement Script
+  - Cleaned Data
 ---
 # Agent Configuration: The Loyalty Marketer
 

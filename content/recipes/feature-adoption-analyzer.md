@@ -3,7 +3,6 @@ id: feature-adoption-analyzer
 category: Strategic Ops
 title: The Feature Adoption Analyzer
 tagline: Who is actually using your new tool?
-difficulty: Intermediate
 time: Monthly
 archetype: Processor
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     2,SMB,False,10
     3,Enterprise,False,40
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 
 # Agent Configuration: The PMM

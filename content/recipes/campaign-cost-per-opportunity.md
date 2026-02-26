@@ -3,7 +3,6 @@ id: campaign-cost-per-opportunity
 category: Marketing Ops
 title: Campaign Efficiency Scorer
 tagline: Calculate Cost-per-Opportunity (CPO).
-difficulty: Intermediate
 time: Weekly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     LinkedIn_Awareness,5000,2
     Google_Search,2000,10
 isPremium: false
+inputs:
+  - Campaign Data
+  - Local File (CSV/MD)
+outputs:
+  - Optimization Plan
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Demand Gen Agent

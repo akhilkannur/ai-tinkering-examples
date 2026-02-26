@@ -3,7 +3,6 @@ id: booth-design-checklist
 category: Strategic Ops
 title: The Event Booth Strategist
 tagline: Custom booth checklists for your event portfolio.
-difficulty: Intermediate
 time: Batch
 archetype: Hybrid
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     CES,20x20,Las Vegas
     Web Summit,10x10,Lisbon
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File + Search
+outputs:
+  - Operating Manual
+  - Enriched Document
 ---
 
 # Agent Configuration: The Event Booth Strategist

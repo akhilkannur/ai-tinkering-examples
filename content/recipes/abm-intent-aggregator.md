@@ -3,7 +3,6 @@ id: abm-intent-aggregator
 category: Marketing Ops
 title: Intent Signal Aggregator
 tagline: 'Combine G2, 6sense, and Website visits.'
-difficulty: Advanced
 time: Daily
 archtype: Processor
 description: >-
@@ -19,6 +18,10 @@ sampleData:
     [6sense]
     beta.io, high intent
 isPremium: false
+inputs:
+  - Campaign Data
+outputs:
+  - Optimization Plan
 ---
 
 # Agent Configuration: The ABM Analyst

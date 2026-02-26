@@ -3,7 +3,6 @@ id: page-speed-budget-monitor
 category: SEO
 title: Speed Budget Enforcer
 tagline: Don't let your site get slow.
-difficulty: Intermediate
 time: Weekly
 archtype: Processor
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     /blog/giant-images,4.5
     /pricing,2.0
 isPremium: true
+inputs:
+  - Target URL
+outputs:
+  - SEO Audit / Fixes
 ---
 
 # Agent Configuration: The Performance Engineer

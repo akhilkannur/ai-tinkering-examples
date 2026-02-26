@@ -3,7 +3,6 @@ id: ad-spend-pacer
 category: Paid Media
 title: The Ad Spend Pacer
 tagline: Land exactly on budget.
-difficulty: Beginner
 time: Daily
 archetype: Processor
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     Retargeting,5000,2000,15
     Prospecting,10000,8000,15
 isPremium: false
+inputs:
+  - Ad Account Data
+  - Local File (CSV/MD)
+outputs:
+  - Performance Report
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Media Buyer

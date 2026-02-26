@@ -3,7 +3,6 @@ id: buying-signal-heatmapper
 category: Sales Ops
 title: Account Buying Signal Heatmapper
 tagline: Score account timing by aggregating intent signals.
-difficulty: Advanced
 time: Daily
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Beta Inc,News,2023-10-02,Series B Funding
     Acme Corp,Web Visit,2023-10-03,Pricing Page
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Revenue Intelligence Agent

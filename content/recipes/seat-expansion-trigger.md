@@ -3,7 +3,6 @@ id: seat-expansion-trigger
 category: Sales Ops
 title: License Utilization Alert
 tagline: They just hit 9/10 seats.
-difficulty: Intermediate
 time: Weekly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     Acme,10,9
     Beta,100,20
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 # Agent Configuration: The Account Manager
 

@@ -3,7 +3,6 @@ id: win-back-campaign
 category: Marketing Ops
 title: The Win-Back Campaign Architect
 tagline: It's easier to sell to an ex.
-difficulty: Intermediate
 time: Quarterly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     CustA,2023-01-01,Pro,5000
     CustB,2023-09-01,Starter,200
 isPremium: true
+inputs:
+  - Campaign Data
+  - Local File (CSV/MD)
+outputs:
+  - Optimization Plan
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Lifecycle Marketer

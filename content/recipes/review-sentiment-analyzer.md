@@ -3,7 +3,6 @@ id: review-sentiment-analyzer
 category: CRO
 title: Review Sentiment Correlation
 tagline: Do bad reviews tank conversion?
-difficulty: Advanced
 time: Monthly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     /prod-1,5,1.2
     /prod-2,0,3.5
 isPremium: true
+inputs:
+  - Conversion Data
+  - Local File (CSV/MD)
+outputs:
+  - A/B Experiment Ideas
+  - Cleaned Data
 ---
 # Agent Configuration: The Reputation Manager
 

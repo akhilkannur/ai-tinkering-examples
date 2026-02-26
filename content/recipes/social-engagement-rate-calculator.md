@@ -3,7 +3,6 @@ id: social-engagement-rate-calculator
 category: Content Ops
 title: Engagement Truth Teller
 tagline: Vanity metrics vs Real engagement.
-difficulty: Beginner
 time: Weekly
 archtype: Processor
 description: >-
@@ -21,6 +20,10 @@ sampleData:
 
     103,"Does anyone else hate Salesforce? Unpopular opinion...",30,60,15,1000
 isPremium: true
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: The Viral Hook Analyst

@@ -3,7 +3,6 @@ id: okr-drafter
 category: Strategic Ops
 title: The OKR Architect
 tagline: Draft team goals from your vision or industry benchmarks.
-difficulty: Intermediate
 time: Quarterly
 description: >-
   Objectives and Key Results (OKRs) drive growth. This agent takes your
@@ -15,6 +14,10 @@ sampleData:
   content: |
     Goal: We want to become the #1 tool for E-com marketing teams in 2024.
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The OKR Architect

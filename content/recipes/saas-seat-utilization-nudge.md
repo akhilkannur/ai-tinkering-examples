@@ -3,7 +3,6 @@ id: saas-seat-utilization-nudge
 category: Customer Success
 title: Seat Utilization Nudge
 tagline: Remind admins they are paying for empty seats.
-difficulty: Intermediate
 time: Batch
 archetype: Processor
 description: >-
@@ -15,6 +14,12 @@ sampleData:
     Account_ID,Seats_Purchased,Active_Users
     Acc1,10,2
 isPremium: true
+inputs:
+  - Usage Logs
+  - Local File (CSV/MD)
+outputs:
+  - Churn Risk Report
+  - Cleaned Data
 ---
 
 # Agent Configuration: Seat Utilization Nudge

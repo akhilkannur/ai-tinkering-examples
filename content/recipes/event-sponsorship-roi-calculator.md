@@ -5,7 +5,6 @@ title: The Booth ROI Predictor
 tagline: >-
   Don't just guess. Model the 'Break-Even' scenario before you sign the
   contract.
-difficulty: Intermediate
 time: 5 mins
 archetype: Processor
 description: >-
@@ -20,6 +19,12 @@ sampleData:
     SaaStr,50000,10000,15000,0.02
     Local_Meetup,500,100,5000,0.05
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Event CFO

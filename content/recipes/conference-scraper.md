@@ -3,7 +3,6 @@ id: conference-scraper
 category: Lead Gen
 title: The Conference Batch Scraper
 tagline: Turn multiple speaker lists into one lead list.
-difficulty: Advanced
 time: 10 mins
 description: >-
   Events are goldmines. This agent reads a list of event URLs (Speakers page,
@@ -17,6 +16,10 @@ sampleData:
     Web Summit,https://websummit.com/speakers
     Collision,https://collisionconf.com/speakers
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+outputs:
+  - Enriched Leads
 ---
 
 # Agent Configuration: The Conference Batch Scraper

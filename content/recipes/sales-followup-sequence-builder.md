@@ -3,7 +3,6 @@ id: sales-followup-sequence-builder
 category: Sales Ops
 title: Ghost-Busting Follow-Up
 tagline: A 4-step email sequence for leads who stopped replying.
-difficulty: Beginner
 time: 5 mins
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     Last Interaction: Demo on Tuesday.
     Stalled: No reply to proposal sent Wednesday.
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Ghost-Busting Follow-Up

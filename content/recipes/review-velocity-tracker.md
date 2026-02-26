@@ -3,7 +3,6 @@ id: review-velocity-tracker
 category: Customer Success
 title: The Social Proof Pacer
 tagline: Calculate exactly how many 5-star reviews you need to beat your competitor.
-difficulty: Beginner
 time: Monthly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Us,100,4.2
     Competitor,500,4.5
 isPremium: true
+inputs:
+  - Usage Logs
+  - Local File (CSV/MD)
+outputs:
+  - Churn Risk Report
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Reputation Engineer

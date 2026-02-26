@@ -3,7 +3,6 @@ id: ideal-customer-profile-scorer
 category: Sales Ops
 title: ICP Scorer (Lead Grading)
 tagline: 'Automatically grade leads A, B, or C based on your criteria.'
-difficulty: Intermediate
 time: 5 mins
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Beta Inc,SaaS,20,HubSpot,Founder
     Gamma LLC,Consulting,5,Excel,Owner
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The ICP Scorer (Lead Grading)

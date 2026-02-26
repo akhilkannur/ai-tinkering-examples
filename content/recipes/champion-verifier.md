@@ -3,7 +3,6 @@ id: champion-verifier
 category: Sales Ops
 title: The Champion Verifier
 tagline: Is your champion actually a champion?
-difficulty: Beginner
 time: Deal Review
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     John Doe,Director,Yes,Yes,No
     Jane Smith,Intern,No,Yes,Yes
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The MEDDIC Master

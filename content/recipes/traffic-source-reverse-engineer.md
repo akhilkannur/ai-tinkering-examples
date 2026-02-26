@@ -3,7 +3,6 @@ id: traffic-source-reverse-engineer
 category: Competitive Intel
 title: The Traffic Source Decoder
 tagline: Uncover the growth engine of any competitor.
-difficulty: Intermediate
 time: One-off
 description: >-
   SimilarWeb gives numbers, but no strategy. This agent analyzes traffic
@@ -15,6 +14,10 @@ sampleData:
     Domain,Direct,Organic,Social,Referral
     competitor.com,20%,50%,10%,20%
 isPremium: true
+inputs:
+  - Competitor URL
+outputs:
+  - Intel Dashboard
 ---
 
 # Agent Configuration: The Traffic Source Decoder

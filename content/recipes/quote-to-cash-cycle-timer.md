@@ -3,7 +3,6 @@ id: quote-to-cash-cycle-timer
 category: Sales Ops
 title: Quote-to-Cash Speedometer
 tagline: Measure the speed of closing.
-difficulty: Intermediate
 time: Monthly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     1,2023-01-01,2023-01-15
     2,2023-01-01,2023-03-01
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 # Agent Configuration: The Finance Ops
 

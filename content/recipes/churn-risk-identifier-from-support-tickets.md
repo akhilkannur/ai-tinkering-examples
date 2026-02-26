@@ -3,7 +3,6 @@ id: churn-risk-identifier-from-support-tickets
 category: Customer Success
 title: Churn Risk Detector
 tagline: Flag at-risk customers by analyzing their support ticket tone.
-difficulty: Intermediate
 time: 5 mins
 archetype: Processor
 description: >-
@@ -22,6 +21,12 @@ sampleData:
     Gamma LLC,103,"This is the 3rd time it crashed. Unacceptable. Fix it or we
     leave."
 isPremium: false
+inputs:
+  - Usage Logs
+  - Local File (CSV/MD)
+outputs:
+  - Churn Risk Report
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Churn Risk Detector

@@ -3,7 +3,6 @@ id: vip-tier-graduation-alert
 category: Retention
 title: VIP Graduation Alert
 tagline: Nudge customers close to the next tier.
-difficulty: Beginner
 time: Weekly
 archetype: Processor
 description: >-
@@ -18,6 +17,12 @@ sampleData:
 
     Jane,jane@yahoo.com,200,Gold,1000,Free Shipping
 isPremium: true
+inputs:
+  - Customer List
+  - Local File (CSV/MD)
+outputs:
+  - Re-engagement Script
+  - Cleaned Data
 ---
 # Agent Configuration: The Gamification Revenue Driver
 

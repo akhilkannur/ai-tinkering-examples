@@ -3,7 +3,6 @@ id: pitch-deck-storyboard
 category: Strategic Ops
 title: The Pitch Deck Storyboard
 tagline: Build narratives that raise money.
-difficulty: Advanced
 time: Batch
 description: >-
   Investors scan decks in 30 seconds. This agent researches your product and
@@ -17,6 +16,10 @@ sampleData:
     DataArmor,https://dataarmor.ai,Series A
     HealthHive,https://healthhive.com,Pre-seed
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Pitch Deck Storyboard

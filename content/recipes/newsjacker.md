@@ -3,7 +3,6 @@ id: newsjacker
 category: Strategic Ops
 title: The Newsjacker
 tagline: Find trending news and draft social posts on autopilot.
-difficulty: Intermediate
 time: 15 mins
 description: >-
   Content is about timing. This agent monitors a list of niches from a CSV,
@@ -16,6 +15,10 @@ sampleData:
     AI Agents,SaaS Founders
     MarTech,Growth Managers
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Newsjacker

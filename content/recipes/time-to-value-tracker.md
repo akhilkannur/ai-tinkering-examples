@@ -3,7 +3,6 @@ id: time-to-value-tracker
 category: Customer Success
 title: The Onboarding Bottleneck Finder
 tagline: Pinpoint the exact step where users get stuck.
-difficulty: Intermediate
 time: Monthly
 archetype: Processor
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     CustB,1,10,5
     CustC,2,12,8
 isPremium: true
+inputs:
+  - Usage Logs
+  - Local File (CSV/MD)
+outputs:
+  - Churn Risk Report
+  - Cleaned Data
 ---
 
 # Agent Configuration: The UX Researcher

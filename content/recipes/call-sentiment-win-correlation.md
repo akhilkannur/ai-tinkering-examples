@@ -3,7 +3,6 @@ id: call-sentiment-win-correlation
 category: Sales Ops
 title: Call Sentiment Optimizer
 tagline: Correlate 'Positive Sentiment' scores with win rates.
-difficulty: Advanced
 time: Quarterly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Deal-2,Lost,0.40
     Deal-3,Won,0.70
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Sales Coaching Agent

@@ -3,7 +3,6 @@ id: newsletter-sponsorship-lead-gen
 category: Lead Gen
 title: The Newsletter Sponsor Finder
 tagline: Find newsletters accepting sponsors in your niche.
-difficulty: Intermediate
 time: 20 mins
 archetype: Researcher
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     "React Developers"
     "Crypto News"
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Newsletter Sponsor Finder

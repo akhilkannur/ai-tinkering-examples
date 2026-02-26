@@ -3,7 +3,6 @@ id: podcast-tour-manager
 category: Content Ops
 title: The Podcast Tour Manager
 tagline: Book your tour from a list or a niche goal.
-difficulty: Intermediate
 time: Weekly
 description: >-
   Podcasts are high-trust channels. This agent reads your target show list (if
@@ -16,6 +15,10 @@ sampleData:
     The Growth Show,SaaS Marketing
     Founder Stories,Bootstrap businesses
 isPremium: true
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: The Podcast Tour Manager

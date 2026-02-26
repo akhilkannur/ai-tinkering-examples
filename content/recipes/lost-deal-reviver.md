@@ -3,7 +3,6 @@ id: lost-deal-reviver
 category: Sales Ops
 title: The Lost Deal Reviver
 tagline: Re-engage 100 cold leads with 'New News'.
-difficulty: Intermediate
 time: Weekly
 description: >-
   A 'No' 6 months ago might be a 'Yes' today. This agent takes a CSV of leads
@@ -16,6 +15,10 @@ sampleData:
     John Doe,john@acme.com,Missing API,January
     Jane Smith,jane@globex.com,Too expensive,March
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Lost Deal Reviver

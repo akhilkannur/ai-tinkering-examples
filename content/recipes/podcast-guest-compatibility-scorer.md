@@ -3,7 +3,6 @@ id: podcast-guest-compatibility-scorer
 category: Content Ops
 title: Podcast Guest Matchmaker
 tagline: Ensure your next guest matches your show's vibe.
-difficulty: Beginner
 time: Real-time
 archtype: Researcher
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     Sam Altman,https://youtube.com/watch?v=...
     Elon Musk,https://youtube.com/watch?v=...
 isPremium: true
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: Podcast Guest Matchmaker

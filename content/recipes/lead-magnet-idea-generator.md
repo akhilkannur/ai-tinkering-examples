@@ -3,7 +3,6 @@ id: lead-magnet-idea-generator
 category: Strategic Ops
 title: Lead Magnet Factory
 tagline: 'Generate ideas for high-converting tools, templates, and PDFs.'
-difficulty: Intermediate
 time: 10 mins
 archetype: Hybrid
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Audience: Marketing Managers, Sales Leaders
     Goal: Capture leads for CRM software.
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File + Search
+outputs:
+  - Operating Manual
+  - Enriched Document
 ---
 
 # Agent Configuration: The Lead Magnet Factory

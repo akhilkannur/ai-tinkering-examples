@@ -3,7 +3,6 @@ id: onboarding-checklist-completion
 category: Sales Ops
 title: Onboarding Drop-off Audit
 tagline: Where do users get stuck?
-difficulty: Intermediate
 time: Monthly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Connect_Data,1000,500
     Invite_Team,500,100
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 # Agent Configuration: The Product Growth Agent
 

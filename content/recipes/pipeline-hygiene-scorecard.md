@@ -3,7 +3,6 @@ id: pipeline-hygiene-scorecard
 category: Sales Ops
 title: The Pipeline Hygiene Scorer
 tagline: Grade your CRM data quality.
-difficulty: Intermediate
 time: Weekly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     1,Alice,2023-01-01,5,Call on Monday
     2,Bob,2022-12-01,90,
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The CRM Warden

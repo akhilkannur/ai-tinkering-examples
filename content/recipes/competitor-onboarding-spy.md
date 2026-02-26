@@ -3,7 +3,6 @@ id: competitor-onboarding-spy
 category: Competitive Intel
 title: The Onboarding Teardown Factory
 tagline: Comparative UX audit of competitors at once.
-difficulty: Beginner
 time: Batch
 description: >-
   How does your signup flow stack up? This agent processes screenshots and
@@ -17,6 +16,10 @@ sampleData:
     PostHog,onboarding_vault/posthog/,Data Ingestion
     Beehiiv,onboarding_vault/beehiiv/,Newsletter Setup
 isPremium: true
+inputs:
+  - Competitor URL
+outputs:
+  - Intel Dashboard
 ---
 
 # Agent Configuration: The Onboarding Teardown Factory

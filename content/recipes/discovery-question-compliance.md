@@ -3,7 +3,6 @@ id: discovery-question-compliance
 category: Sales Ops
 title: The Sales Coach
 tagline: Don't just grade the call. Fix the deal.
-difficulty: Advanced
 time: Batch
 archetype: Processor
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     Rep: "Great."
     (Note: No budget or timeline discussion).
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Sales Coach

@@ -3,7 +3,6 @@ id: product-review-velocity
 category: E-commerce
 title: The Merchandising Alert System
 tagline: Detect when a bestseller is losing social proof momentum.
-difficulty: Intermediate
 time: Weekly
 archetype: Processor
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     102,Wool Hat,5,5
     103,Belt,2,0
 isPremium: true
+inputs:
+  - Product Data
+  - Local File (CSV/MD)
+outputs:
+  - Shopify-Ready Update
+  - Cleaned Data
 ---
 
 # Agent Configuration: The E-commerce Merchandiser

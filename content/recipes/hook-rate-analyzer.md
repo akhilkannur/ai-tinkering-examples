@@ -3,7 +3,6 @@ id: hook-rate-analyzer
 category: Paid Media
 title: The Hook Rate Analyzer
 tagline: Fix the first 3 seconds.
-difficulty: Intermediate
 time: Weekly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     UGC_Testimonial,1000,400,100
     Founder_Story,1000,100,80
 isPremium: true
+inputs:
+  - Ad Account Data
+  - Local File (CSV/MD)
+outputs:
+  - Performance Report
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Creative Strategist

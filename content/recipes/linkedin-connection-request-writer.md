@@ -3,7 +3,6 @@ id: linkedin-connection-request-writer
 category: Content Ops
 title: The Connection Request Writer
 tagline: Get accepted by VIPs.
-difficulty: Beginner
 time: Batch
 description: >-
   Generic requests get ignored. This agent writes personalized 'Notes' for a
@@ -22,6 +21,10 @@ sampleData:
 
     Andrew Chen,https://linkedin.com/in/andrewchen,Marketplace growth frameworks
 isPremium: true
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: The Connection Request Writer

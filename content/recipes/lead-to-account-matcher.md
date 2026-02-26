@@ -3,7 +3,6 @@ id: lead-to-account-matcher
 category: Sales Ops
 title: Lead-to-Account Matcher
 tagline: Auto-associate leads with existing accounts via domain.
-difficulty: Intermediate
 time: Daily
 archtype: Processor
 description: >-
@@ -20,6 +19,10 @@ sampleData:
     Acme Corporation, acme.com
     Tesla Inc, tesla.com
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Sales Architect

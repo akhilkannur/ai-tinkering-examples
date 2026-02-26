@@ -3,7 +3,6 @@ id: email-bounce-rate-monitor
 category: Marketing Ops
 title: Domain Health Watchdog
 tagline: Monitor bounce rates to prevent blacklisting.
-difficulty: Beginner
 time: Weekly
 archtype: Processor
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     Cold Outreach A,500,40
     Newsletter,5000,10
 isPremium: true
+inputs:
+  - Campaign Data
+outputs:
+  - Optimization Plan
 ---
 
 # Agent Configuration: The Deliverability Specialist

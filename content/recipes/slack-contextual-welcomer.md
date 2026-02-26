@@ -3,7 +3,6 @@ id: slack-contextual-welcomer
 category: Strategic Ops
 title: Slack Community Contextual Welcomer
 tagline: Welcome new members based on their bio.
-difficulty: Beginner
 time: Real-time
 archetype: Processor
 description: >-
@@ -15,6 +14,12 @@ sampleData:
     User_Intro,Channels
     "Hi I am a dev...",#general
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 
 # Agent Configuration: Slack Community Contextual Welcomer

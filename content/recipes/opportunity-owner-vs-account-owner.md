@@ -3,7 +3,6 @@ id: opportunity-owner-vs-account-owner
 category: Sales Ops
 title: Ownership Mismatch Finder
 tagline: Is the Opp owner different from the Account owner?
-difficulty: Beginner
 time: Weekly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     O-1,John,John
     O-2,Jane,Bob
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Admin

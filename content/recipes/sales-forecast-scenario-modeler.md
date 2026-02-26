@@ -3,7 +3,6 @@ id: sales-forecast-scenario-modeler
 category: Sales Ops
 title: Forecast Scenario Modeler
 tagline: Calculate 'Best Case' vs 'Commit' pipelines.
-difficulty: Advanced
 time: Weekly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Proposal,200000
     Negotiation,100000
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The RevOps Modeler

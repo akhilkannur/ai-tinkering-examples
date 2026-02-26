@@ -3,7 +3,6 @@ id: enrichment-match-calculator
 category: Sales Ops
 title: The Data Health Auditor
 tagline: Don't pay for empty cells. Audit vendor performance.
-difficulty: Intermediate
 time: One-off
 archetype: Processor
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     b@test.com,,,
     c@test.com,555-0200,,Salesforce
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Data Architect

@@ -3,7 +3,6 @@ id: wholesale-dtc-ad-conflict
 category: Paid Media
 title: Channel Conflict Monitor
 tagline: Are we bidding against our retailers?
-difficulty: Advanced
 time: Monthly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     Lipstick,1,5
     Mascara,5,1
 isPremium: true
+inputs:
+  - Ad Account Data
+  - Local File (CSV/MD)
+outputs:
+  - Performance Report
+  - Cleaned Data
 ---
 # Agent Configuration: The Channel Marketing Manager
 

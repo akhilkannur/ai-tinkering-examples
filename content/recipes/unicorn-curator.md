@@ -3,7 +3,6 @@ id: unicorn-curator
 category: Content Ops
 title: The Unicorn Content Curator
 tagline: Identify viral outliers across 100 channels.
-difficulty: Advanced
 time: 20 mins
 description: >-
   Why compete on views? This agent reads a list of YouTube niches from a CSV,
@@ -17,6 +16,10 @@ sampleData:
     Real Estate Investing
     Solo Travel
 isPremium: true
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: The Unicorn Content Curator

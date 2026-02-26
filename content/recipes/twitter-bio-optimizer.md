@@ -3,7 +3,6 @@ id: twitter-bio-optimizer
 category: Strategic Ops
 title: The Twitter Bio Optimizer
 tagline: Get followed at a glance.
-difficulty: Beginner
 time: Batch
 description: >-
   Your bio is your personal landing page. This agent rewrites your Twitter bios
@@ -17,6 +16,10 @@ sampleData:
     Sarah Chen,Head of Design,Glow,Ex-Airbnb,UX for SaaS
     Mike Ross,SEO Lead,GrowthLabs,Ranked #1 for 'AI Tools',Search Strategy
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Twitter Bio Optimizer

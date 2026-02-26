@@ -3,7 +3,6 @@ id: pre-meeting-dossier
 category: Sales Ops
 title: The Pre-Meeting Dossier
 tagline: Never go into a call blind.
-difficulty: Beginner
 time: Batch
 description: >-
   5 minutes before a call, you need to know everything. This agent researches
@@ -17,6 +16,10 @@ sampleData:
     Jane Smith,Globex,https://linkedin.com/in/janesmith
     Mike Ross,Pearson Hardman,https://linkedin.com/in/mikeross
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Pre-Meeting Dossier

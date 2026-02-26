@@ -3,7 +3,6 @@ id: ceo-podcast-tour-tracker
 category: Lead Gen
 title: The Podcast Tour Stalker
 tagline: Find CEOs appearing on podcasts to pitch PR or related services.
-difficulty: Intermediate
 time: 30 mins
 archetype: Researcher
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     Brian Chesky,Airbnb
     Tobi Lutke,Shopify
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Podcast Tour Stalker

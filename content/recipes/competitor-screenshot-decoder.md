@@ -3,7 +3,6 @@ id: competitor-screenshot-decoder
 category: Competitive Intel
 title: The Competitor UI/UX Decoder
 tagline: Analyze competitor screenshots to steal their best design patterns.
-difficulty: Advanced
 time: Batch
 archtype: Researcher
 description: >-
@@ -16,6 +15,10 @@ sampleData:
     Slack,https://slack.com/img1.png
     Discord,https://discord.com/img2.png
 isPremium: true
+inputs:
+  - Competitor URL
+outputs:
+  - Intel Dashboard
 ---
 
 # Agent Configuration: The Competitor UI/UX Decoder

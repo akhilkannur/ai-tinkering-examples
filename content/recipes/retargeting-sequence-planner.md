@@ -3,7 +3,6 @@ id: retargeting-sequence-planner
 category: Paid Media
 title: The Retargeting Sequence Planner
 tagline: The 'Stalker' ad strategy.
-difficulty: Advanced
 time: Batch
 description: >-
   98% of visitors don't buy on the first visit. This agent maps out 30-day
@@ -17,6 +16,10 @@ sampleData:
     VelvetBloom,Organic Ingredients,Expensive compared to drugstore
     PixelPounce,1ms Latency,Is it worth the premium price?
 isPremium: true
+inputs:
+  - Ad Account Data
+outputs:
+  - Performance Report
 ---
 
 # Agent Configuration: The Retargeting Sequence Planner

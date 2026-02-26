@@ -3,7 +3,6 @@ id: crm-field-utilization-analyzer
 category: Sales Ops
 title: CRM Field Health Check
 tagline: Identify unused or garbage data fields in your CRM.
-difficulty: Intermediate
 time: 10 mins
 archtype: Processor
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     002,12000,2023-11-15,Email,,
     003,3000,,,
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The CRM Architect

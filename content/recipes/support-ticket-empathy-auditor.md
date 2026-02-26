@@ -3,7 +3,6 @@ id: support-ticket-empathy-auditor
 category: Customer Success
 title: Support Ticket Empathy Auditor
 tagline: Stop your support team from sounding like robots.
-difficulty: Intermediate
 time: Batch
 archtype: Processor
 description: >-
@@ -16,6 +15,10 @@ sampleData:
     #101,"Please clear cache."
     #102,"I understand that is frustrating..."
 isPremium: true
+inputs:
+  - Usage Logs
+outputs:
+  - Churn Risk Report
 ---
 
 # Agent Configuration: Support Ticket Empathy Auditor

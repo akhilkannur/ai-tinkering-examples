@@ -3,14 +3,13 @@ id: content-decay-alerter
 category: SEO
 title: The Content Relevance Guard
 tagline: Prevent Semantic Decay.
-difficulty: Intermediate
 time: Monthly
 archetype: Processor
 description: >-
-  Goes beyond traffic stats to detect "Semantic Decay." This agent analyzes 
-  if your content is becoming outdated compared to current AI search trends 
-  and rising industry entities, flagging exactly what needs refreshing to 
-  stay competitive.
+  Goes beyond traffic stats to detect "Semantic Decay." This agent analyzes  if
+  your content is becoming outdated compared to current AI search trends  and
+  rising industry entities, flagging exactly what needs refreshing to  stay
+  competitive.
 sampleData:
   filename: traffic_data.csv
   content: |
@@ -19,6 +18,12 @@ sampleData:
     /blog/old-playbook,100,200,2023-06-15
     /blog/new-launch,1000,500,2025-01-10
 isPremium: false
+inputs:
+  - Target URL
+  - Local File (CSV/MD)
+outputs:
+  - SEO Audit / Fixes
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Content Relevance Guard

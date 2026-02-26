@@ -3,7 +3,6 @@ id: decision-maker-change-tracker
 category: Lead Gen
 title: The Champion Tracker
 tagline: Track when a Champion leaves a target account.
-difficulty: Intermediate
 time: Weekly
 archetype: Hybrid
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     Jane Doe,Acme Corp,linkedin.com/in/janedoe
     John Smith,Globex,linkedin.com/in/johnsmith
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Local File + Search
+outputs:
+  - Enriched Leads
+  - Enriched Document
 ---
 
 # Agent Configuration: The Champion Tracker

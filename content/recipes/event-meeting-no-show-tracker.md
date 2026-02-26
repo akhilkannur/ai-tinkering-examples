@@ -3,7 +3,6 @@ id: event-meeting-no-show-tracker
 category: Strategic Ops
 title: Event Meeting Auditor
 tagline: Did they show up to the booth meeting?
-difficulty: Beginner
 time: Batch
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     2,No Show
     3,Held
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 # Agent Configuration: The Sales Events Lead
 

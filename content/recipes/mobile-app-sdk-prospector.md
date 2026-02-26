@@ -3,7 +3,6 @@ id: mobile-app-sdk-prospector
 category: Lead Gen
 title: The SDK Sniper
 tagline: Find mobile apps using a competitor's SDK.
-difficulty: Advanced
 time: 20 mins
 archetype: Analyst
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     com.stripe.android
     io.intercom.android
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+outputs:
+  - Enriched Leads
 ---
 
 # Agent Configuration: The SDK Sniper

@@ -3,7 +3,6 @@ id: sales-call-objection-heatmapper
 category: Sales Ops
 title: Sales Call Objection Heatmapper
 tagline: Visualize exactly when and why your deals are dying.
-difficulty: Intermediate
 time: Batch
 archtype: Processor
 description: >-
@@ -16,6 +15,10 @@ sampleData:
     Call_A,"...too expensive..."
     Call_B,"...feature missing..."
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: Sales Call Objection Heatmapper

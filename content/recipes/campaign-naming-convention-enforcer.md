@@ -3,7 +3,6 @@ id: campaign-naming-convention-enforcer
 category: Marketing Ops
 title: Campaign Taxonomist
 tagline: Stop messy data from breaking your reports.
-difficulty: Beginner
 time: Weekly
 archtype: Processor
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     Webinar_Oct_2023
     EU_Social_2023_Launch
 isPremium: false
+inputs:
+  - Campaign Data
+outputs:
+  - Optimization Plan
 ---
 
 # Agent Configuration: The Marketing Ops Manager

@@ -3,7 +3,6 @@ id: event-lead-uploader
 category: Marketing Ops
 title: Conference Scan Cleaner
 tagline: Format messy badge scans for CRM import.
-difficulty: Beginner
 time: Ad-hoc
 archtype: Processor
 description: >-
@@ -16,6 +15,10 @@ sampleData:
     Doe, John,123.456.7890,j@d.com
     Smith; Jane,(555) 123-4567,j@s.com
 isPremium: true
+inputs:
+  - Campaign Data
+outputs:
+  - Optimization Plan
 ---
 
 # Agent Configuration: The Event Ops Specialist

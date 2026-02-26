@@ -3,7 +3,6 @@ id: churn-survey-analyzer
 category: Customer Success
 title: Churn Autopsy
 tagline: Find out the real reason customers are leaving.
-difficulty: Intermediate
 time: 5 mins
 archetype: Processor
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     Beta,50000,"Missing the SSO feature."
     Gamma,5000,"Found a cheaper alternative."
 isPremium: false
+inputs:
+  - Usage Logs
+  - Local File (CSV/MD)
+outputs:
+  - Churn Risk Report
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Churn Autopsy

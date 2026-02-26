@@ -3,7 +3,6 @@ id: prospect-tone-mirroring-agent
 category: Sales Ops
 title: Sales Email Tone Mirror
 tagline: Match your prospect's communication style instantly.
-difficulty: Beginner
 time: Real-time
 archtype: Processor
 description: >-
@@ -16,6 +15,10 @@ sampleData:
     CTO_John,"Need pricing. Now."
     Marketer_Mary,"Hey! Loved the demo..."
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: Sales Email Tone Mirror

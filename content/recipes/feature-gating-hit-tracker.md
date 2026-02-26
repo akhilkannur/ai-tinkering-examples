@@ -3,7 +3,6 @@ id: feature-gating-hit-tracker
 category: Sales Ops
 title: Paywall Hit Detector
 tagline: Who keeps clicking the 'Upgrade' button?
-difficulty: Intermediate
 time: Weekly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     Acme,API Access,5
     Beta,SSO,1
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 # Agent Configuration: The Sales Assist Agent
 

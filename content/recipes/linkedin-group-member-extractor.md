@@ -3,7 +3,6 @@ id: linkedin-group-member-extractor
 category: Lead Gen
 title: The Niche Group Miner
 tagline: Extract and qualify members of niche professional groups.
-difficulty: Intermediate
 time: 20 mins
 archetype: Researcher
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     https://www.linkedin.com/groups/12345/,Salesforce Admins
     https://www.linkedin.com/groups/67890/,SaaS Founders
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Niche Group Miner

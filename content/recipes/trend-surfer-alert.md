@@ -3,7 +3,6 @@ id: trend-surfer-alert
 category: Content Ops
 title: The Trend Surfer
 tagline: Be first to the story.
-difficulty: Advanced
 time: Batch
 description: >-
   Content is a timing game. This agent monitors your entire target keyword list
@@ -17,6 +16,10 @@ sampleData:
     Remote Work,HR,30
     Sustainable Fashion,Lifestyle,40
 isPremium: true
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: The Trend Surfer

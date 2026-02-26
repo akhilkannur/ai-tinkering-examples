@@ -3,7 +3,6 @@ id: oos-traffic-redirector
 category: CRO
 title: OOS Traffic Preserver
 tagline: Don't let Out-of-Stock traffic bounce.
-difficulty: Intermediate
 time: Weekly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     /blue-shirt,500,OOS
     /red-shirt,10,OOS
 isPremium: true
+inputs:
+  - Conversion Data
+  - Local File (CSV/MD)
+outputs:
+  - A/B Experiment Ideas
+  - Cleaned Data
 ---
 # Agent Configuration: The SEO Manager
 

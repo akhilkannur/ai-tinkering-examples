@@ -3,7 +3,6 @@ id: paid-social-frequency-cap-auditor
 category: Marketing Ops
 title: Ad Fatigue Auditor
 tagline: Identify campaigns with dangerously high frequency.
-difficulty: Beginner
 time: Daily
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     Retargeting_US,1000,8000
     Prospecting_US,10000,12000
 isPremium: true
+inputs:
+  - Campaign Data
+  - Local File (CSV/MD)
+outputs:
+  - Optimization Plan
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Paid Media Agent

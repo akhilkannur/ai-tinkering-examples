@@ -3,7 +3,6 @@ id: backlink-quality-scorer
 category: SEO
 title: Backlink Quality Auditor
 tagline: Filter the gold from the spam.
-difficulty: Intermediate
 time: Monthly
 archtype: Processor
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     spammy.xyz,10,60
     medium.com,90,5
 isPremium: false
+inputs:
+  - Target URL
+outputs:
+  - SEO Audit / Fixes
 ---
 
 # Agent Configuration: The Link Builder

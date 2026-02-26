@@ -3,7 +3,6 @@ id: cart-abandonment-value-segmentation
 category: Retention
 title: High-Value Cart Recovery
 tagline: Treat $1k carts differently than $10 carts.
-difficulty: Intermediate
 time: Daily
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     John,1200,john@acme.com
     Jane,25,jane@beta.com
 isPremium: false
+inputs:
+  - Customer List
+  - Local File (CSV/MD)
+outputs:
+  - Re-engagement Script
+  - Cleaned Data
 ---
 # Agent Configuration: The Conversion Specialist
 

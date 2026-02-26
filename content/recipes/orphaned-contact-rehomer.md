@@ -3,7 +3,6 @@ id: orphaned-contact-rehomer
 category: Sales Ops
 title: Orphaned Contact Re-Homer
 tagline: Assign contacts to account owners via domain.
-difficulty: Intermediate
 time: Daily
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     john@tesla.com,NULL
     jane@spacex.com,NULL
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The CRM Architect Agent

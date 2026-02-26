@@ -3,12 +3,12 @@ id: keyword-gap-analyst
 category: SEO
 title: The Semantic Cluster Hunter
 tagline: Identify topical authority gaps.
-difficulty: Advanced
 time: Batch
 description: >-
   Goes beyond keywords to identify missing topical authority. This agent audits 
   competitor content to map their "Semantic Clusters" and identifies exactly 
-  which entities and topics your site needs to rank as an authority in your niche.
+  which entities and topics your site needs to rank as an authority in your
+  niche.
 sampleData:
   filename: competitors.csv
   content: |
@@ -17,6 +17,10 @@ sampleData:
     Salesforce,https://salesforce.com,Enterprise CRM
     Pipedrive,https://pipedrive.com,Sales CRM
 isPremium: true
+inputs:
+  - Target URL
+outputs:
+  - SEO Audit / Fixes
 ---
 
 # Agent Configuration: The Semantic Cluster Hunter

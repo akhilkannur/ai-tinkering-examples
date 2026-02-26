@@ -3,7 +3,6 @@ id: duplicate-account-consolidator
 category: Sales Ops
 title: Account Dupe Smasher
 tagline: Find duplicate companies using fuzzy matching.
-difficulty: Advanced
 time: Monthly
 archtype: Processor
 description: >-
@@ -18,6 +17,10 @@ sampleData:
     3,Acme Incorporated,acme.com
     4,The Beta Group,beta.io
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Data Quality Engineer

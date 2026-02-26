@@ -3,7 +3,6 @@ id: linkedin-voice-note-scripter
 category: Sales Ops
 title: LinkedIn Voice DM Scripter
 tagline: Scripts for those 30-second voice notes that actually convert.
-difficulty: Beginner
 time: Batch
 archetype: Processor
 description: >-
@@ -15,6 +14,12 @@ sampleData:
     Prospect_Name,Highlight
     John,Ran a marathon
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: LinkedIn Voice DM Scripter

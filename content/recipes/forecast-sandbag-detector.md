@@ -3,7 +3,6 @@ id: forecast-sandbag-detector
 category: Sales Ops
 title: Forecast Integrity Auditor
 tagline: Identify reps who consistently beat their commits by 50%+.
-difficulty: Intermediate
 time: Quarterly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     John,Q1,100000,160000
     Jane,Q1,100000,105000
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Forecast Auditor

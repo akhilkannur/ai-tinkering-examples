@@ -3,7 +3,6 @@ id: speaker-session-attribution
 category: Strategic Ops
 title: Session Pipeline Attribution
 tagline: Did the CEO's keynote generate deals?
-difficulty: Advanced
 time: Quarterly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     john@acme.com,Keynote,2023-10-15
     jane@beta.com,Keynote,NULL
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 # Agent Configuration: The Content Strategist
 

@@ -3,7 +3,6 @@ id: email-pattern-guesser
 category: Sales Ops
 title: The Email Permutator
 tagline: Guess email addresses from names.
-difficulty: Beginner
 time: 5 mins
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Jane,Smith,globex.io
     Mike,Ross,pearsonhardman.com
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Email Permutator

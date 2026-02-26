@@ -3,7 +3,6 @@ id: social-media-crisis-ambulance
 category: Lead Gen
 title: The PR Crisis Ambulance
 tagline: Identify brands facing a PR crisis for reputation management.
-difficulty: Intermediate
 time: Daily
 archetype: Researcher
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     @fastfood
     @fashionbrand
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The PR Crisis Ambulance

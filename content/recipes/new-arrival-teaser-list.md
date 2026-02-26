@@ -3,7 +3,6 @@ id: new-arrival-teaser-list
 category: E-commerce
 title: New Drop Teaser List
 tagline: Notify past buyers of a brand about new arrivals.
-difficulty: Beginner
 time: Weekly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     John,Nike
     Jane,Adidas
 isPremium: true
+inputs:
+  - Product Data
+  - Local File (CSV/MD)
+outputs:
+  - Shopify-Ready Update
+  - Cleaned Data
 ---
 # Agent Configuration: The Merchandising Marketer
 

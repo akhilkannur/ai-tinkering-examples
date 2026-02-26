@@ -3,7 +3,6 @@ id: linkedin-connection-request-writer-v2
 category: Sales Ops
 title: Non-Cringe LinkedIn Connector
 tagline: Writes connection requests that actually get accepted.
-difficulty: Intermediate
 time: 5 mins
 archetype: Hybrid
 description: >-
@@ -22,6 +21,12 @@ sampleData:
 
     Recent Post: "Big news! TechFlow just raised our Series B."
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File + Search
+outputs:
+  - CRM-Ready Export
+  - Enriched Document
 ---
 
 # Agent Configuration: The Non-Cringe LinkedIn Connector

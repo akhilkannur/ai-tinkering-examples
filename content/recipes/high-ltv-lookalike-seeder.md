@@ -3,7 +3,6 @@ id: high-ltv-lookalike-seeder
 category: Paid Media
 title: LTV Lookalike Seeder
 tagline: Find more customers like your best ones.
-difficulty: Beginner
 time: Monthly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     a@test.com,5000
     b@test.com,100
 isPremium: true
+inputs:
+  - Ad Account Data
+  - Local File (CSV/MD)
+outputs:
+  - Performance Report
+  - Cleaned Data
 ---
 # Agent Configuration: The Paid Social Lead
 

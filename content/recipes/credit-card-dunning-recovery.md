@@ -3,7 +3,6 @@ id: credit-card-dunning-recovery
 category: Sales Ops
 title: High-Value Dunning Prioritizer
 tagline: Save the big accounts first.
-difficulty: Beginner
 time: Daily
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Startup Inc,Visa,Monday,Insufficient Funds,500
     Individual User,Debit,Tuesday,Lost Card,20
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 # Agent Configuration: The Involuntary Churn Rescuer
 

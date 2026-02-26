@@ -3,7 +3,6 @@ id: partner-page-scraper
 category: Competitive Intel
 title: The Partner Page Scraper
 tagline: Poach their agencies.
-difficulty: Advanced
 time: Batch
 description: >-
   Agency partners drive massive distribution. This agent researches competitor
@@ -17,6 +16,10 @@ sampleData:
     Shopify,https://experts.shopify.com
     HubSpot,https://www.hubspot.com/solutions-directory
 isPremium: true
+inputs:
+  - Competitor URL
+outputs:
+  - Intel Dashboard
 ---
 
 # Agent Configuration: The Partner Page Scraper

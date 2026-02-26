@@ -3,7 +3,6 @@ id: competitor-feature-parity
 category: Competitive Intel
 title: The Feature Gap Detective
 tagline: Don't guess what they have. Scrape their pricing page to prove it.
-difficulty: Intermediate
 time: Monthly
 archetype: Hybrid
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Competitor A,https://competitor-a.com/pricing
     Competitor B,https://competitor-b.com/features
 isPremium: false
+inputs:
+  - Competitor URL
+  - Local File + Search
+outputs:
+  - Intel Dashboard
+  - Enriched Document
 ---
 
 # Agent Configuration: The Product Spy

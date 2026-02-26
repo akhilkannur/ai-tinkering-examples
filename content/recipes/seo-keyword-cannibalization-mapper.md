@@ -3,7 +3,6 @@ id: seo-keyword-cannibalization-mapper
 category: SEO
 title: SEO Cannibalization Visualizer
 tagline: See which pages are fighting for the same keywords.
-difficulty: Intermediate
 time: Batch
 archetype: Researcher
 description: >-
@@ -15,6 +14,12 @@ sampleData:
     Keyword,Page_A_Rank,Page_B_Rank
     "AI Tools",5,6
 isPremium: true
+inputs:
+  - Target URL
+  - Web Search Target
+outputs:
+  - SEO Audit / Fixes
+  - Curated Intel
 ---
 
 # Agent Configuration: SEO Cannibalization Visualizer

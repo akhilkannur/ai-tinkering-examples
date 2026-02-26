@@ -3,7 +3,6 @@ id: sdr-onboarding-schedule
 category: Lead Gen
 title: The SDR Ramp Architect
 tagline: Build custom 30-day onboarding plans.
-difficulty: Intermediate
 time: Batch
 description: >-
   New SDRs fail without structure. This agent researches your tech stack and
@@ -17,6 +16,10 @@ sampleData:
     Bob,Outbound SDR,Salesforce & Outreach,25 meetings/mo
     Charlie,Enterprise SDR,SalesLoft & Lusha,10 meetings/mo
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+outputs:
+  - Enriched Leads
 ---
 
 # Agent Configuration: The SDR Ramp Architect

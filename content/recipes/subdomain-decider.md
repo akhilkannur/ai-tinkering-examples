@@ -3,7 +3,6 @@ id: subdomain-decider
 category: SEO
 title: The Subdomain vs. Subfolder Decider
 tagline: End the debate with logic.
-difficulty: Beginner
 time: One-off
 archetype: Processor
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     Help Center,Zendesk,Same,Supportive
     France_Site,Same,French,Localized
 isPremium: true
+inputs:
+  - Target URL
+  - Local File (CSV/MD)
+outputs:
+  - SEO Audit / Fixes
+  - Cleaned Data
 ---
 
 # Agent Configuration: The SEO Architect

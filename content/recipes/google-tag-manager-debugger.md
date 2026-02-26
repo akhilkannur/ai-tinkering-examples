@@ -3,7 +3,6 @@ id: google-tag-manager-debugger
 category: Marketing Ops
 title: The GTM Fleet Debugger
 tagline: Fix the dataLayer across all your properties.
-difficulty: Advanced
 time: 10 mins
 description: >-
   Tracking is broken? This agent reads a list of GTM container IDs and dataLayer
@@ -16,6 +15,10 @@ sampleData:
     Marketing_Site,GTM-1234,"dataLayer.push({'event': 'purchase', 'val': 100})"
     Blog,GTM-5678,"dataLayer.push({'event': 'NewsletterSignup'})"
 isPremium: true
+inputs:
+  - Campaign Data
+outputs:
+  - Optimization Plan
 ---
 
 # Agent Configuration: The GTM Fleet Debugger

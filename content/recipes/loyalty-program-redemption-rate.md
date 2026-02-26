@@ -3,7 +3,6 @@ id: loyalty-program-redemption-rate
 category: E-commerce
 title: Loyalty Health Monitor
 tagline: Are points being used?
-difficulty: Intermediate
 time: Quarterly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     Jan,10000,500
     Feb,10000,5000
 isPremium: true
+inputs:
+  - Product Data
+  - Local File (CSV/MD)
+outputs:
+  - Shopify-Ready Update
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Loyalty Manager

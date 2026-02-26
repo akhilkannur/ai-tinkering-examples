@@ -3,7 +3,6 @@ id: review-response-bot
 category: Customer Success
 title: The Brand Guardian
 tagline: Reply to reviews AND route the feedback to the right internal team.
-difficulty: Beginner
 time: Batch
 archetype: Processor
 description: >-
@@ -22,6 +21,12 @@ sampleData:
 
     TrollMaster99,1,Worst company ever. Stay away!!
 isPremium: true
+inputs:
+  - Usage Logs
+  - Local File (CSV/MD)
+outputs:
+  - Churn Risk Report
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Brand Guardian

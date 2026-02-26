@@ -3,7 +3,6 @@ id: social-share-of-voice-tracker
 category: Marketing Ops
 title: The Competitive Noise Canceler
 tagline: Identify where competitors are loud so you can be louder (or go elsewhere).
-difficulty: Intermediate
 time: Monthly
 archetype: Processor
 description: >-
@@ -19,6 +18,12 @@ sampleData:
     Us,Twitter,50
     CompA,Twitter,20
 isPremium: true
+inputs:
+  - Campaign Data
+  - Local File (CSV/MD)
+outputs:
+  - Optimization Plan
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Social Strategist

@@ -3,7 +3,6 @@ id: competitor-news-digest-builder
 category: Competitive Intel
 title: Competitor Radar
 tagline: Turn messy news alerts into a clean executive summary.
-difficulty: Intermediate
 time: Weekly
 archtype: Hybrid
 description: >-
@@ -16,6 +15,10 @@ sampleData:
     CompetitorB
     CompetitorC
 isPremium: true
+inputs:
+  - Competitor URL
+outputs:
+  - Intel Dashboard
 ---
 
 # Agent Configuration: The Intel Analyst

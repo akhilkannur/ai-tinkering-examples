@@ -3,7 +3,6 @@ id: press-release-partnership-scanner
 category: Lead Gen
 title: The Partnership Announcement Alert
 tagline: Find companies announcing new strategic partnerships.
-difficulty: Intermediate
 time: Daily
 archetype: Researcher
 description: >-
@@ -19,6 +18,12 @@ sampleData:
     "announces integration with"
     "joins partner program"
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Partnership Announcement Alert

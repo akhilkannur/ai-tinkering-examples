@@ -3,7 +3,6 @@ id: inc-5000-new-entrant-scraper
 category: Lead Gen
 title: The Inc. 5000 Debutante
 tagline: Target companies making the Inc. 5000 list for the first time.
-difficulty: Intermediate
 time: Annual/Quarterly
 archetype: Researcher
 description: >-
@@ -15,6 +14,12 @@ sampleData:
   content: |
     https://www.inc.com/inc5000/2024
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Inc. 5000 Debutante

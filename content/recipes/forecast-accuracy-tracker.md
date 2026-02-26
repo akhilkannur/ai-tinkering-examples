@@ -3,7 +3,6 @@ id: forecast-accuracy-tracker
 category: Sales Ops
 title: Forecast vs Actuals Tracker
 tagline: Which rep is sandbagging?
-difficulty: Intermediate
 time: Monthly
 archtype: Processor
 description: >-
@@ -16,6 +15,10 @@ sampleData:
     John,50000,45000
     Jane,20000,40000
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Sales Ops Manager

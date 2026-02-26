@@ -3,7 +3,6 @@ id: local-seo-audit
 category: SEO
 title: The Multi-Location SEO Auditor
 tagline: Audit the map rankings for your entire franchise.
-difficulty: Advanced
 time: 15 mins
 description: >-
   Managing SEO for multiple locations is hard. This agent reads a list of
@@ -17,6 +16,10 @@ sampleData:
     Downtown Cafe,Austin,555-0199
     Eastside Bistro,Austin,555-0122
 isPremium: true
+inputs:
+  - Target URL
+outputs:
+  - SEO Audit / Fixes
 ---
 
 # Agent Configuration: The Multi-Location SEO Auditor

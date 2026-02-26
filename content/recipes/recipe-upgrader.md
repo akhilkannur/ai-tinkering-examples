@@ -1,18 +1,20 @@
 ---
-title: "Project Recipe Upgrader"
+title: Project Recipe Upgrader
 id: recipe-upgrader
 category: Content Ops
-tagline: "Batch-update your recipe library with AI-optimized formatting and sample data."
-difficulty: Advanced
+tagline: Batch-update your recipe library with AI-optimized formatting and sample data.
 time: 5 mins
 archetype: Processor
-description: "The exact script we use to maintain this website. It reads existing recipe files, categorizes them, and automatically adds batch processing loops, sample data templates, and structured output artifacts."
+description: >-
+  The exact script we use to maintain this website. It reads existing recipe
+  files, categorizes them, and automatically adds batch processing loops, sample
+  data templates, and structured output artifacts.
 inputs:
-  - "Raw .md recipe files"
-  - "Category list"
+  - Raw .md recipe files
+  - Category list
 outputs:
-  - "Optimized .md files"
-  - "Verification CSV"
+  - Optimized .md files
+  - Verification CSV
 isPremium: true
 ---
 

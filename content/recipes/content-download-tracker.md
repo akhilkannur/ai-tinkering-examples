@@ -3,7 +3,6 @@ id: content-download-tracker
 category: Marketing Ops
 title: Lead Magnet Auditor
 tagline: Which PDF is actually generating leads?
-difficulty: Beginner
 time: Monthly
 archtype: Processor
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     Ebook B,2023-10-01,user2@test.com
     Ebook A,2023-10-02,user3@test.com
 isPremium: true
+inputs:
+  - Campaign Data
+outputs:
+  - Optimization Plan
 ---
 
 # Agent Configuration: The Content Analyst

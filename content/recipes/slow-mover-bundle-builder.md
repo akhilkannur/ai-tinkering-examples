@@ -3,7 +3,6 @@ id: slow-mover-bundle-builder
 category: E-commerce
 title: Dead Stock Bundler
 tagline: Clear stale inventory by bundling.
-difficulty: Advanced
 time: Quarterly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     Cool-Jacket,High,50
     Ugly-Hat,Low,500
 isPremium: true
+inputs:
+  - Product Data
+  - Local File (CSV/MD)
+outputs:
+  - Shopify-Ready Update
+  - Cleaned Data
 ---
 # Agent Configuration: The Inventory Planner
 

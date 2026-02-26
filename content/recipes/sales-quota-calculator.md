@@ -5,7 +5,6 @@ title: Quota Scenario Planner
 tagline: >-
   Don't just calculate one path. Compare 'High Volume' vs 'High Skill'
   strategies.
-difficulty: Intermediate
 time: 5 mins
 archetype: Processor
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     Quota,Average_Deal_Size,Close_Rate,Meeting_Book_Rate,Current_Daily_Dials
     50000,10000,0.20,0.05,40
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Sales Director

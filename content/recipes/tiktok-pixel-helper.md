@@ -3,7 +3,6 @@ id: tiktok-pixel-helper
 category: Paid Media
 title: The TikTok Event Validator
 tagline: Fix your conversion tracking from a snippet or a goal.
-difficulty: Intermediate
 time: Weekly
 description: >-
   TikTok pixels are finicky. This agent audits your existing event code (if
@@ -14,6 +13,10 @@ sampleData:
   content: |
     ttq.track('CompletePayment', { value: 100, currency: 'USD' });
 isPremium: true
+inputs:
+  - Ad Account Data
+outputs:
+  - Performance Report
 ---
 
 # Agent Configuration: The TikTok Event Validator

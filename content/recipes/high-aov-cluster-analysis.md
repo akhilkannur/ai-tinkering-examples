@@ -3,7 +3,6 @@ id: high-aov-cluster-analysis
 category: E-commerce
 title: Whale Hunter (High AOV)
 tagline: Where do the big spenders come from?
-difficulty: Advanced
 time: Monthly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     102,50,Facebook
     103,300,Google Ads
 isPremium: true
+inputs:
+  - Product Data
+  - Local File (CSV/MD)
+outputs:
+  - Shopify-Ready Update
+  - Cleaned Data
 ---
 # Agent Configuration: The Acquisition Manager
 

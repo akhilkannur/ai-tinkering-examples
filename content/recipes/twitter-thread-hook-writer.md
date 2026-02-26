@@ -3,7 +3,6 @@ id: twitter-thread-hook-writer
 category: Content Ops
 title: The Twitter Thread Architect
 tagline: Generate viral thread hooks from your story or trending news.
-difficulty: Beginner
 time: Daily
 description: >-
   The first tweet makes or breaks the thread. This agent reads your specific
@@ -14,6 +13,10 @@ sampleData:
   content: |
     I spent 48 hours building an AI tool that makes $1k a month. I used no code.
 isPremium: true
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: The Twitter Thread Architect

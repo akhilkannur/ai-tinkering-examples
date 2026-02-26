@@ -3,7 +3,6 @@ id: poll-strategy-generator
 category: Content Ops
 title: The Poll Strategy Generator
 tagline: Engagement farming with a purpose.
-difficulty: Beginner
 time: Batch
 description: >-
   Polls get high reach, but often zero value. This agent generates 'Market
@@ -17,6 +16,10 @@ sampleData:
     Sales Coaching,SDR Managers,3-Day Training Intensive
     App Launch,Product Leads,AI-powered task manager
 isPremium: true
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: The Poll Strategy Generator

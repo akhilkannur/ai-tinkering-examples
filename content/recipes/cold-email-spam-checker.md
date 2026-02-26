@@ -3,7 +3,6 @@ id: cold-email-spam-checker
 category: Sales Ops
 title: The Spam Word Hunter
 tagline: Don't trigger the filters.
-difficulty: Beginner
 time: 5 mins
 archetype: Processor
 description: >-
@@ -23,6 +22,12 @@ sampleData:
     Quick question,"Hey, I wanted to follow up on our previous conversation
     about growth."
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Spam Word Hunter

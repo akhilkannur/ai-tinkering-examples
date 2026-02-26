@@ -3,7 +3,6 @@ id: comment-section-nurturer
 category: Content Ops
 title: The Comment Section Nurturer
 tagline: Turn 'Great post' into a lead.
-difficulty: Beginner
 time: Batch
 description: >-
   Comments are the highest signal of interest. This agent analyzes a list of
@@ -13,6 +12,10 @@ sampleData:
   filename: comments.csv
   content: "Username,Comment_Text,Platform\njason_dev,\U0001F525 great post as always!,Twitter\nsara_founder,Does this integrate with Slack?,LinkedIn\nmike_marketer,I tried this but it was too expensive for my team.,LinkedIn\n"
 isPremium: false
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: The Comment Section Nurturer

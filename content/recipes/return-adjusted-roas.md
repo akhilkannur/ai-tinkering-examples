@@ -5,7 +5,6 @@ title: The Profit-First ROAS Adjuster
 tagline: >-
   Don't get blinded by 'Gross' numbers. Calculate marketing impact on
   bottom-line profit.
-difficulty: Advanced
 time: Monthly
 archetype: Processor
 description: >-
@@ -19,6 +18,12 @@ sampleData:
     Search_Brand,1000,8000,500,0.60,200
     Social_Prospecting,5000,12000,2000,0.50,1000
 isPremium: true
+inputs:
+  - Ad Account Data
+  - Local File (CSV/MD)
+outputs:
+  - Performance Report
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Profitability Analyst

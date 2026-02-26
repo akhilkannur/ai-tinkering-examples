@@ -3,7 +3,6 @@ id: automated-webinar-followup-sequence
 category: Strategic Ops
 title: Webinar Follow-Up Architect
 tagline: Segment attendees vs. no-shows and write targeted nurture sequences.
-difficulty: Intermediate
 time: 10 mins
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Bob,bob@example.com,No Show,0
     Charlie,charlie@example.com,Attended,5
 isPremium: false
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Webinar Follow-Up Architect

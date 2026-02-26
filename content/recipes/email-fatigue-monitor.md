@@ -3,7 +3,6 @@ id: email-fatigue-monitor
 category: Marketing Ops
 title: Email Fatigue Monitor
 tagline: Prevent unsubscribes by monitoring send frequency.
-difficulty: Intermediate
 time: Weekly
 archtype: Processor
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     john@acme.com,2023-10-02,Promo A
     john@acme.com,2023-10-03,Promo B
 isPremium: true
+inputs:
+  - Campaign Data
+outputs:
+  - Optimization Plan
 ---
 
 # Agent Configuration: The Deliverability Manager

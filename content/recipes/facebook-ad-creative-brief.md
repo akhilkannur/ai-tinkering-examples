@@ -3,7 +3,6 @@ id: facebook-ad-creative-brief
 category: Paid Media
 title: The Facebook Ad Creative Brief
 tagline: High-converting visual concepts at scale.
-difficulty: Intermediate
 time: Batch
 description: >-
   The creative is the most important targeting lever. This agent takes a list of
@@ -17,6 +16,10 @@ sampleData:
     VelvetBloom,Busy Moms,Instant skin hydration
     PixelPounce,Pro Gamers,Zero lag performance
 isPremium: true
+inputs:
+  - Ad Account Data
+outputs:
+  - Performance Report
 ---
 
 # Agent Configuration: The Facebook Ad Creative Brief

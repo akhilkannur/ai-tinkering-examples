@@ -3,7 +3,6 @@ id: conference-sponsor-list-enricher
 category: Lead Gen
 title: The Sponsor List Enricher
 tagline: Enrich a list of sponsors from a conference URL.
-difficulty: Intermediate
 time: 15 mins
 archetype: Researcher
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     https://saastrannual2024.com/sponsors
     https://dreamforce.com/sponsors
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Sponsor List Enricher

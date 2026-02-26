@@ -3,7 +3,6 @@ id: semantic-keyword-clusterer
 category: SEO
 title: The Keyword Clusterer
 tagline: Group keywords in seconds.
-difficulty: Advanced
 time: Batch
 description: >-
   Keyword stuffing is dead. This agent takes a raw list of keywords and groups
@@ -19,6 +18,10 @@ sampleData:
     top startup crms,800
     what is a crm,20000
 isPremium: true
+inputs:
+  - Target URL
+outputs:
+  - SEO Audit / Fixes
 ---
 
 # Agent Configuration: The Keyword Clusterer

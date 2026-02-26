@@ -3,7 +3,6 @@ id: meeting-no-show-clusterer
 category: Sales Ops
 title: No-Show Correlation Engine
 tagline: Analyze if certain sources have higher ghosting rates.
-difficulty: Intermediate
 time: Monthly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Webinar,Monday,No Show
     Cold Outbound,Friday,No Show
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The SDR Ops Agent

@@ -3,7 +3,6 @@ id: alternative-to-builder
 category: SEO
 title: The 'Alternative To' Hub Builder
 tagline: Steal traffic from all your competitors at once.
-difficulty: Advanced
 time: 30 mins
 archetype: Hybrid
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     HubSpot,Marketing Automation
     Pipedrive,SMB Sales
 isPremium: false
+inputs:
+  - Target URL
+  - Local File + Search
+outputs:
+  - SEO Audit / Fixes
+  - Enriched Document
 ---
 
 # Agent Configuration: The 'Alternative To' Hub Builder

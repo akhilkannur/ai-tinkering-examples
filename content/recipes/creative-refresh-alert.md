@@ -3,7 +3,6 @@ id: creative-refresh-alert
 category: Paid Media
 title: The Fatigue Detector
 tagline: Know when to swap ads.
-difficulty: Intermediate
 time: Batch
 description: >-
   Ad fatigue raises CPA. This agent analyzes your ad performance reports,
@@ -18,6 +17,10 @@ sampleData:
     AD_003,Retargeting,5.2,0.4,300
     AD_004,Prospecting,1.5,3.2,2000
 isPremium: true
+inputs:
+  - Ad Account Data
+outputs:
+  - Performance Report
 ---
 
 # Agent Configuration: The Fatigue Detector

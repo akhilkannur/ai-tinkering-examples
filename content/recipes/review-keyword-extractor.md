@@ -3,7 +3,6 @@ id: review-keyword-extractor
 category: Competitive Intel
 title: Review Keyword Miner
 tagline: What do people hate about your competitor?
-difficulty: Intermediate
 time: Monthly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     Comp A,The UI is so slow and buggy.
     Comp A,Support never replies.
 isPremium: true
+inputs:
+  - Competitor URL
+  - Local File (CSV/MD)
+outputs:
+  - Intel Dashboard
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Product Marketer

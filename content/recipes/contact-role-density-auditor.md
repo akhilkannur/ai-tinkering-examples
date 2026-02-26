@@ -3,7 +3,6 @@ id: contact-role-density-auditor
 category: Sales Ops
 title: Account Stakeholder Density
 tagline: Ensure top accounts have >3 contacts.
-difficulty: Beginner
 time: Weekly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     Acme Corp,1M,5
     Beta Inc,500k,1
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Account Mapping Agent

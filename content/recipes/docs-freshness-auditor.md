@@ -3,7 +3,6 @@ id: docs-freshness-auditor
 category: Content Ops
 title: Docs Freshness Auditor
 tagline: Flag help articles that reference old UI.
-difficulty: Intermediate
 time: Batch
 archetype: Researcher
 description: >-
@@ -15,6 +14,12 @@ sampleData:
     Article_URL,Last_Updated
     /docs/setup,2022-01-01
 isPremium: true
+inputs:
+  - Source Draft
+  - Web Search Target
+outputs:
+  - Repurposed Assets
+  - Curated Intel
 ---
 
 # Agent Configuration: Docs Freshness Auditor

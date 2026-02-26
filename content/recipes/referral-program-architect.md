@@ -3,7 +3,6 @@ id: referral-program-architect
 category: Strategic Ops
 title: The Referral Program Architect
 tagline: Turn users into salespeople.
-difficulty: Intermediate
 time: Batch
 description: >-
   Referrals have the lowest CAC. This agent designs 'Double-Sided' referral
@@ -17,6 +16,10 @@ sampleData:
     FinGuard,SaaS (B2B),5000
     BrewBase,Subscription,250
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Referral Program Architect

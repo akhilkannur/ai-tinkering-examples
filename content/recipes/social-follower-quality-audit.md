@@ -3,7 +3,6 @@ id: social-follower-quality-audit
 category: Competitive Intel
 title: The Social Authenticity Auditor
 tagline: Spot fake followers on your account or a competitor's.
-difficulty: Intermediate
 time: One-off
 description: >-
   Follower count is a vanity metric. This agent audits your own follower list
@@ -16,6 +15,10 @@ sampleData:
     RealHuman1,"Product Manager @Google",2024-01-08
     BotAccount1,"Buy crypto now",None
 isPremium: true
+inputs:
+  - Competitor URL
+outputs:
+  - Intel Dashboard
 ---
 
 # Agent Configuration: The Social Authenticity Auditor

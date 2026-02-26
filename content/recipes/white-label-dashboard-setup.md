@@ -3,7 +3,6 @@ id: white-label-dashboard-setup
 category: Strategic Ops
 title: The White Label Dashboard Setup
 tagline: Standardize your client reporting.
-difficulty: Beginner
 time: Batch
 description: >-
   Agencies need to look professional and automate transparency. This agent
@@ -17,6 +16,10 @@ sampleData:
     TechFlow SaaS,Demo Bookings,HubSpot & Google Ads
     Urban Coffee,In-store Traffic,Google Maps & Square
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The White Label Dashboard Setup

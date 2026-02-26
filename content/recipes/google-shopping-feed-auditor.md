@@ -3,7 +3,6 @@ id: google-shopping-feed-auditor
 category: Paid Media
 title: Merchant Center Auditor
 tagline: Find missing GTINs or images.
-difficulty: Beginner
 time: Weekly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     123,8888,http://img
     456,NULL,http://img
 isPremium: true
+inputs:
+  - Ad Account Data
+  - Local File (CSV/MD)
+outputs:
+  - Performance Report
+  - Cleaned Data
 ---
 # Agent Configuration: The Feed Specialist
 

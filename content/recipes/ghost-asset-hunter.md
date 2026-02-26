@@ -3,7 +3,6 @@ id: ghost-asset-hunter
 category: Lead Gen
 title: The Ghost Asset Hunter
 tagline: 'Find the 10-K, Podcast, or Tweet that opens the door.'
-difficulty: Advanced
 time: One-off
 archetype: Researcher
 isPremium: true
@@ -19,6 +18,12 @@ sampleData:
     Snowflake,SNOW,Frank Slootman
     HubSpot,HUBS,Yamini Rangan
     Datadog,DDOG,Olivier Pomel
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Ghost Asset Hunter

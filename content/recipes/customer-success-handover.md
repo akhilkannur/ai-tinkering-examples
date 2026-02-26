@@ -3,7 +3,6 @@ id: customer-success-handover
 category: Customer Success
 title: The CS Handover Factory
 tagline: Standardize 50 client handovers in one run.
-difficulty: Intermediate
 time: Weekly
 description: >-
   The worst customer experience is repeating yourself. This agent reads a CSV of
@@ -16,6 +15,10 @@ sampleData:
     MegaCorp,John,SSO Setup,Strict legal team
     TinyStart,Sarah,Fast Launch,Limited bandwidth
 isPremium: true
+inputs:
+  - Usage Logs
+outputs:
+  - Churn Risk Report
 ---
 
 # Agent Configuration: The CS Handover Factory

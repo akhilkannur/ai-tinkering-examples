@@ -3,7 +3,6 @@ id: screenshot-automation
 category: Dev Tools
 title: Automated Screenshot Capture System
 tagline: 'Capture beautiful, consistent screenshots from any URL programmatically.'
-difficulty: Intermediate
 time: 10 mins
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     https://github.com/user/repo,github
     https://example.com,default
 isPremium: false
+inputs:
+  - Codebase / CLI
+  - Local File (CSV/MD)
+outputs:
+  - Automated Workflow
+  - Cleaned Data
 ---
 
 # What This Does

@@ -3,7 +3,6 @@ id: influencer-contract-drafter
 category: Strategic Ops
 title: The Influencer Contract Factory
 tagline: Generate 50 creator agreements in one run.
-difficulty: Advanced
 time: One-off
 description: >-
   Protect your brand at scale. This agent reads a list of influencers and their
@@ -16,6 +15,10 @@ sampleData:
     @tech_sam,1 TikTok, 2 Stories,$500,2024-02-01
     @growth_grace,1 YouTube integration,$2000,2024-02-15
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Influencer Contract Factory

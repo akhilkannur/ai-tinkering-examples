@@ -3,7 +3,6 @@ id: cac-by-month-tracker
 category: CRO
 title: The Efficiency Hawk
 tagline: Detect when your acquisition engine is breaking.
-difficulty: Intermediate
 time: Monthly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Jan,5000,50,1000,0.05
     Feb,8000,40,2000,0.02
 isPremium: false
+inputs:
+  - Conversion Data
+  - Local File (CSV/MD)
+outputs:
+  - A/B Experiment Ideas
+  - Cleaned Data
 ---
 # Agent Configuration: The FP&A Analyst
 

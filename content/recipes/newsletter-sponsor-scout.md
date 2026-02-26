@@ -3,7 +3,6 @@ id: newsletter-sponsor-scout
 category: Strategic Ops
 title: The Sponsor Scout Engine
 tagline: Fill your ad slots for the next 6 months.
-difficulty: Intermediate
 time: Weekly
 description: >-
   Why wait for sponsors? This agent reads a list of competitor newsletters from
@@ -16,6 +15,10 @@ sampleData:
     The AI Digest,https://aidigest.com,Engineers
     Growth Daily,https://growth.com,Marketers
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Sponsor Scout Engine

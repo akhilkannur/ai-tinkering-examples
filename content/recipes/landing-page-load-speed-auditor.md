@@ -3,7 +3,6 @@ id: landing-page-load-speed-auditor
 category: Paid Media
 title: The LP Speed Auditor
 tagline: Slow pages kill ROAS.
-difficulty: Advanced
 time: Batch
 description: >-
   If your landing page takes 3s to load, you lose 50% of your paid traffic. This
@@ -17,6 +16,10 @@ sampleData:
     Summer Sale,https://mysite.com/sale,Meta Ads
     Demo,https://mysite.com/demo,Google Ads
 isPremium: true
+inputs:
+  - Ad Account Data
+outputs:
+  - Performance Report
 ---
 
 # Agent Configuration: The LP Speed Auditor

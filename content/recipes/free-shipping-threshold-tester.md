@@ -3,7 +3,6 @@ id: free-shipping-threshold-tester
 category: E-commerce
 title: Free Shipping Modeler
 tagline: Should the bar be $50 or $75?
-difficulty: Advanced
 time: Ad-hoc
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     2,60
     3,40
 isPremium: false
+inputs:
+  - Product Data
+  - Local File (CSV/MD)
+outputs:
+  - Shopify-Ready Update
+  - Cleaned Data
 ---
 
 # Agent Configuration: The AOV Maximizer

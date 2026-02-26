@@ -3,7 +3,6 @@ id: holiday-promo-planner
 category: Strategic Ops
 title: The Holiday Campaign Factory
 tagline: Crush Black Friday across 5 products at once.
-difficulty: Advanced
 time: Seasonal
 description: >-
   Q4 is war. This agent reads a list of products and their primary 'Deal' from a
@@ -16,6 +15,10 @@ sampleData:
     CRM_Pro,50% off annual,$100k
     Automation_Lite,$1 first month,$20k
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Holiday Campaign Factory

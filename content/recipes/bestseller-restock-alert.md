@@ -3,7 +3,6 @@ id: bestseller-restock-alert
 category: E-commerce
 title: Back-in-Stock Campaigner
 tagline: Launch ads when bestsellers return.
-difficulty: Intermediate
 time: Weekly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     Shirt-Blue,A,0,500
     Sock-White,C,0,50
 isPremium: false
+inputs:
+  - Product Data
+  - Local File (CSV/MD)
+outputs:
+  - Shopify-Ready Update
+  - Cleaned Data
 ---
 # Agent Configuration: The Merchandiser
 

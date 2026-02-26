@@ -3,7 +3,6 @@ id: sales-call-keyword-tracker
 category: Sales Ops
 title: Sales Script Compliance
 tagline: Did they say the pricing disclaimer?
-difficulty: Intermediate
 time: Batch
 archtype: Processor
 description: >-
@@ -15,6 +14,10 @@ sampleData:
     Rep: Hi, are you compliant with SOC2? Prospect: Yes.
     Rep: Great, let's move to pricing.
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The QA Specialist

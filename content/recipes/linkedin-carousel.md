@@ -3,7 +3,6 @@ id: linkedin-carousel
 category: Content Ops
 title: The Carousel Architect
 tagline: 'Convert blog posts into high-retention slides (Hooks, Lists, CTAs).'
-difficulty: Beginner
 time: 10 mins
 archetype: Hybrid
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     https://realaiexamples.com/blog/ai-sales-agents
     https://realaiexamples.com/blog/seo-is-dead
 isPremium: true
+inputs:
+  - Source Draft
+  - Local File + Search
+outputs:
+  - Repurposed Assets
+  - Enriched Document
 ---
 
 # Agent Configuration: The Carousel Architect

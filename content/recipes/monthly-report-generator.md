@@ -3,7 +3,6 @@ id: monthly-report-generator
 category: Strategic Ops
 title: The Narrative Builder
 tagline: Clients don't read spreadsheets. They read stories.
-difficulty: Intermediate
 time: Batch
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Acme,+20%,+5%,10000,5000
     Beta,-5%,-10%,20000,0
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Account Strategist

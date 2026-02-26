@@ -3,7 +3,6 @@ id: viral-loop-coefficient
 category: Sales Ops
 title: The Viral Loop Doctor
 tagline: Diagnose *why* your K-factor is low (Invites vs Acceptance).
-difficulty: Intermediate
 time: Monthly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Jan,1000,200,50
     Feb,1200,100,80
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Growth Engineer

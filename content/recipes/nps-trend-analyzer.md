@@ -3,7 +3,6 @@ id: nps-trend-analyzer
 category: Customer Success
 title: NPS Trend Spotter
 tagline: Is customer sentiment trending up or down?
-difficulty: Intermediate
 time: Monthly
 archtype: Processor
 description: >-
@@ -18,6 +17,10 @@ sampleData:
     2023-09-10,2
     2023-10-01,5
 isPremium: true
+inputs:
+  - Usage Logs
+outputs:
+  - Churn Risk Report
 ---
 
 # Agent Configuration: The CX Analyst

@@ -3,7 +3,6 @@ id: event-networker
 category: Lead Gen
 title: The Multi-Event Networking Planner
 tagline: High-value hit lists for your entire conference calendar.
-difficulty: Intermediate
 time: 1 hour
 description: >-
   Don't wander the conference hall aimlessly. This agent reads a list of events
@@ -16,6 +15,10 @@ sampleData:
     SaaStr Annual,saastr_list.txt
     Web Summit,websummit_list.txt
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+outputs:
+  - Enriched Leads
 ---
 
 # Agent Configuration: The Multi-Event Networking Planner

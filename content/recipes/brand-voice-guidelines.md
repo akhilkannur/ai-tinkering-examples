@@ -3,7 +3,6 @@ id: brand-voice-guidelines
 category: Content Ops
 title: The Brand Voice Architect
 tagline: Stop sounding schizophrenic.
-difficulty: Intermediate
 time: Batch
 archetype: Hybrid
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     Nike,https://nike.com,Instagram
     Mailchimp,https://mailchimp.com,Blog
 isPremium: false
+inputs:
+  - Source Draft
+  - Local File + Search
+outputs:
+  - Repurposed Assets
+  - Enriched Document
 ---
 
 # Agent Configuration: The Brand Voice Architect

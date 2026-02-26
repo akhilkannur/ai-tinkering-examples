@@ -3,7 +3,6 @@ id: list-segmentation-logic-validator
 category: Strategic Ops
 title: Segment Logic Checker
 tagline: Ensure customers aren't in 'Prospect' lists.
-difficulty: Intermediate
 time: Weekly
 archtype: Processor
 description: >-
@@ -16,6 +15,10 @@ sampleData:
     john@acme.com,Customer,Prospect_Nurture;Newsletter
     jane@beta.com,Prospect,Prospect_Nurture
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Marketing Automation Ops

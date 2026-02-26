@@ -3,7 +3,6 @@ id: non-profit-grant-recipient-tracker
 category: Lead Gen
 title: The Grant Money Hunter
 tagline: Target non-profits that recently received funding.
-difficulty: Intermediate
 time: Monthly
 archetype: Researcher
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     Bill & Melinda Gates Foundation,gatesfoundation.org
     Ford Foundation,fordfoundation.org
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Grant Money Hunter

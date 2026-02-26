@@ -3,7 +3,6 @@ id: sales-rep-ramp-velocity
 category: Sales Ops
 title: New Rep Ramp Tracker
 tagline: Measure 'Time to First Deal' for new hires.
-difficulty: Intermediate
 time: Monthly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     John,2023-01-01,2023-03-15
     Jane,2023-01-01,2023-02-10
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Enablement Auditor Agent

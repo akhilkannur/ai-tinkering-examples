@@ -3,7 +3,6 @@ id: keyword-cannibalization-detective
 category: SEO
 title: The SERP Conflict Resolver
 tagline: Don't just find duplicates. Decide the winner based on CTR and Intent.
-difficulty: Intermediate
 time: Monthly
 archetype: Processor
 description: >-
@@ -19,6 +18,12 @@ sampleData:
     blue widgets,/blog/top-widgets,800,50,8,Blog
     red widgets,/products/red-widget,500,10,1,Product
 isPremium: true
+inputs:
+  - Target URL
+  - Local File (CSV/MD)
+outputs:
+  - SEO Audit / Fixes
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Conflict Mediator

@@ -3,7 +3,6 @@ id: first-purchase-product-analysis
 category: Paid Media
 title: Gateway Product Analyzer
 tagline: Which product acquires the best customers?
-difficulty: Intermediate
 time: Quarterly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     John,Socks,500
     Jane,Hat,50
 isPremium: true
+inputs:
+  - Ad Account Data
+  - Local File (CSV/MD)
+outputs:
+  - Performance Report
+  - Cleaned Data
 ---
 # Agent Configuration: The Merchandising Analyst
 

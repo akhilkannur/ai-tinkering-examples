@@ -3,7 +3,6 @@ id: video-view-retention-analyst
 category: Marketing Ops
 title: Video Drop-off Auditor
 tagline: Where do they stop watching?
-difficulty: Intermediate
 time: Monthly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Demo_v1,30,80
     Demo_v1,60,20
 isPremium: true
+inputs:
+  - Campaign Data
+  - Local File (CSV/MD)
+outputs:
+  - Optimization Plan
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Content Producer

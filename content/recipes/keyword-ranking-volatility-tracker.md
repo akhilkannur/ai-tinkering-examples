@@ -3,7 +3,6 @@ id: keyword-ranking-volatility-tracker
 category: SEO
 title: SERP Volatility Tracker
 tagline: Did we just lose our rankings?
-difficulty: Intermediate
 time: Weekly
 archtype: Processor
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     ai writer,10,3
     marketing,3,20
 isPremium: true
+inputs:
+  - Target URL
+outputs:
+  - SEO Audit / Fixes
 ---
 
 # Agent Configuration: The SEO Strategist

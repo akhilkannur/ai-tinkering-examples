@@ -1,18 +1,20 @@
 ---
-title: "GA4 Traffic Reporter"
+title: GA4 Traffic Reporter
 id: google-analytics-reporter
 category: Marketing Ops
-tagline: "Automated traffic analytics and insight generation via the GA4 API."
-difficulty: Advanced
+tagline: Automated traffic analytics and insight generation via the GA4 API.
 time: 10 mins
 archetype: Researcher
-description: "The automation we use to track performance on this site. It authenticates with Google Cloud via a Service Account, pulls top pages, user trends, and conversion data, and generates a plain-text briefing for the team."
+description: >-
+  The automation we use to track performance on this site. It authenticates with
+  Google Cloud via a Service Account, pulls top pages, user trends, and
+  conversion data, and generates a plain-text briefing for the team.
 inputs:
-  - "Google Service Account JSON"
-  - "GA4 Property ID"
+  - Google Service Account JSON
+  - GA4 Property ID
 outputs:
-  - "Plain-text traffic briefing"
-  - "Growth velocity metrics"
+  - Plain-text traffic briefing
+  - Growth velocity metrics
 isPremium: true
 ---
 

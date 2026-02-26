@@ -3,7 +3,6 @@ id: outreach-cadence-optimizer
 category: Sales Ops
 title: Outreach Cadence Tuner
 tagline: Find the best day to send emails.
-difficulty: Intermediate
 time: Monthly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     Mon,AM,100,2
     Tue,PM,100,8
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The SDR Manager

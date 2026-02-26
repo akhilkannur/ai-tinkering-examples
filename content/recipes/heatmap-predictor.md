@@ -3,7 +3,6 @@ id: heatmap-predictor
 category: CRO
 title: The Heatmap Predictor
 tagline: See where they look before you launch.
-difficulty: Beginner
 time: Design Phase
 archetype: Processor
 description: >-
@@ -19,6 +18,12 @@ sampleData:
     Hero Image,Blue,Huge,Center,Yes
     Footer Link,Gray,Small,Bottom,No
 isPremium: true
+inputs:
+  - Conversion Data
+  - Local File (CSV/MD)
+outputs:
+  - A/B Experiment Ideas
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Neuro-Marketer

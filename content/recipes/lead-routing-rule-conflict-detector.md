@@ -3,7 +3,6 @@ id: lead-routing-rule-conflict-detector
 category: Sales Ops
 title: Routing Conflict Detector
 tagline: Does this lead match two reps?
-difficulty: Advanced
 time: Weekly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     Rule B: Industry=Tech -> Rep 2
     Test Lead: CA, Tech
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Systems Architect

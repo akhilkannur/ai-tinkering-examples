@@ -3,7 +3,6 @@ id: commission-payout-calculator
 category: Sales Ops
 title: The Comp Plan Simulator
 tagline: Model the impact of 'Accelerators' and 'Spiffs' before you roll them out.
-difficulty: Intermediate
 time: Monthly
 archetype: Processor
 description: >-
@@ -19,6 +18,12 @@ sampleData:
     Rep B,80000,100000
     Rep C,200000,100000
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Comp Analyst

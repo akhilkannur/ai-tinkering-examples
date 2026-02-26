@@ -3,7 +3,6 @@ id: churn-exit-interview-analyzer
 category: Customer Success
 title: Churn Reason Aggregator
 tagline: Quantify why customers leave.
-difficulty: Intermediate
 time: Monthly
 archtype: Processor
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     2,Missing Feature X
     3,Too Expensive
 isPremium: false
+inputs:
+  - Usage Logs
+outputs:
+  - Churn Risk Report
 ---
 
 # Agent Configuration: The Voice of Customer Lead

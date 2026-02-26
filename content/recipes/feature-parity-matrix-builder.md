@@ -3,7 +3,6 @@ id: feature-parity-matrix-builder
 category: Competitive Intel
 title: Feature Parity Bot
 tagline: Auto-update your comparison grid.
-difficulty: Intermediate
 time: Quarterly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     Comp A,SSO,Included
     Comp B,SSO,Add-on
 isPremium: true
+inputs:
+  - Competitor URL
+  - Local File (CSV/MD)
+outputs:
+  - Intel Dashboard
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Product Marketing Manager

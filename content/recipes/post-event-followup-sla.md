@@ -3,7 +3,6 @@ id: post-event-followup-sla
 category: Strategic Ops
 title: Event Follow-up Police
 tagline: Did Sales call the leads within 24h?
-difficulty: Intermediate
 time: Daily
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     L1,2023-10-01 09:00,2023-10-01 14:00
     L2,2023-10-01 09:00,NULL
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 # Agent Configuration: The Lead Gen Ops
 

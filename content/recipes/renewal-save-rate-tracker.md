@@ -3,7 +3,6 @@ id: renewal-save-rate-tracker
 category: Customer Success
 title: The Save Playbook Auditor
 tagline: Which retention tactic actually works? (Discount vs Roadmap).
-difficulty: Beginner
 time: Monthly
 archetype: Processor
 description: >-
@@ -19,6 +18,12 @@ sampleData:
     Gamma,Roadmap Promise,Renewed
     Delta,Discount 10%,Churned
 isPremium: true
+inputs:
+  - Usage Logs
+  - Local File (CSV/MD)
+outputs:
+  - Churn Risk Report
+  - Cleaned Data
 ---
 
 # Agent Configuration: The CS Enablement Lead

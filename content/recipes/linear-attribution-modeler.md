@@ -3,7 +3,6 @@ id: linear-attribution-modeler
 category: Marketing Ops
 title: Linear Attribution Modeler
 tagline: Split revenue credit across all marketing touches.
-difficulty: Advanced
 time: Monthly
 archtype: Processor
 description: >-
@@ -16,6 +15,10 @@ sampleData:
     Deal-1,1000,Search;Email;Webinar
     Deal-2,500,Email;Social
 isPremium: true
+inputs:
+  - Campaign Data
+outputs:
+  - Optimization Plan
 ---
 
 # Agent Configuration: The Attribution Specialist

@@ -3,7 +3,6 @@ id: influencer-brand-safety-scanner
 category: Lead Gen
 title: Influencer Brand Safety Scanner
 tagline: Don't sponsor someone who will get you cancelled.
-difficulty: Intermediate
 time: Batch
 archtype: Researcher
 description: >-
@@ -16,6 +15,10 @@ sampleData:
     @user1,Twitter
     @user2,Instagram
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+outputs:
+  - Enriched Leads
 ---
 
 # Agent Configuration: Influencer Brand Safety Scanner

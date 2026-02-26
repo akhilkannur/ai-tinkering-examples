@@ -3,7 +3,6 @@ id: discount-affinity-profiler
 category: E-commerce
 title: Discount Hunter Profiler
 tagline: Who only buys when it's on sale?
-difficulty: Intermediate
 time: Quarterly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     John,Yes
     Jane,No
 isPremium: false
+inputs:
+  - Product Data
+  - Local File (CSV/MD)
+outputs:
+  - Shopify-Ready Update
+  - Cleaned Data
 ---
 # Agent Configuration: The Pricing Strategist
 

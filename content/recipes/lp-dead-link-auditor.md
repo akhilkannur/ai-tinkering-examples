@@ -3,7 +3,6 @@ id: lp-dead-link-auditor
 category: Marketing Ops
 title: LP Link Auditor
 tagline: Ensure your paid traffic doesn't hit 404s.
-difficulty: Intermediate
 time: Weekly
 archtype: Processor
 description: >-
@@ -16,6 +15,10 @@ sampleData:
     /promo-1,Sign Up,https://app.com/reg
     /promo-1,Help,https://docs.com/404
 isPremium: true
+inputs:
+  - Campaign Data
+outputs:
+  - Optimization Plan
 ---
 
 # Agent Configuration: The Web Ops

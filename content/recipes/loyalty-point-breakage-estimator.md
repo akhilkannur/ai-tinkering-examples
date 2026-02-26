@@ -3,7 +3,6 @@ id: loyalty-point-breakage-estimator
 category: Retention
 title: Loyalty Point Breakage Estimator
 tagline: Forecast how many points will expire unused.
-difficulty: Intermediate
 time: Batch
 archetype: Processor
 description: >-
@@ -15,6 +14,12 @@ sampleData:
     User_ID,Points_Balance,Expiry_Date
     UserA,500,2023-12-31
 isPremium: false
+inputs:
+  - Customer List
+  - Local File (CSV/MD)
+outputs:
+  - Re-engagement Script
+  - Cleaned Data
 ---
 
 # Agent Configuration: Loyalty Point Breakage Estimator

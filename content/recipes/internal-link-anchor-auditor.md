@@ -3,7 +3,6 @@ id: internal-link-anchor-auditor
 category: SEO
 title: Anchor Text Optimizer
 tagline: Stop using 'Click Here' for your internal links.
-difficulty: Intermediate
 time: Quarterly
 archtype: Processor
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     /blog/b,/pricing,See Pricing
     /home,/about,Read More
 isPremium: true
+inputs:
+  - Target URL
+outputs:
+  - SEO Audit / Fixes
 ---
 
 # Agent Configuration: The On-Page SEO

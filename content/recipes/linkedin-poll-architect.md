@@ -3,7 +3,6 @@ id: linkedin-poll-architect
 category: Strategic Ops
 title: Viral Poll Builder
 tagline: Create LinkedIn polls that drive engagement and uncover leads.
-difficulty: Beginner
 time: 5 mins
 archetype: Hybrid
 description: >-
@@ -15,6 +14,12 @@ sampleData:
   content: |
     Remote Work vs. Office Return
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File + Search
+outputs:
+  - Operating Manual
+  - Enriched Document
 ---
 
 # Agent Configuration: The Viral Poll Builder

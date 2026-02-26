@@ -3,7 +3,6 @@ id: crm-field-completion-rate
 category: Sales Ops
 title: CRM Hygiene Scorecard
 tagline: Who isn't filling out 'Next Step'?
-difficulty: Beginner
 time: Weekly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     John,O-1,Call
     Jane,O-2,NULL
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Sales Process Enforcer

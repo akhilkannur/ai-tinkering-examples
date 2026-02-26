@@ -3,7 +3,6 @@ id: zombie-user-purge
 category: Sales Ops
 title: Inactive Free User Purge
 tagline: Clean up database costs.
-difficulty: Beginner
 time: Quarterly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     John,2022-01-01,Free
     Jane,2023-10-01,Free
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 # Agent Configuration: The Database Cost Optimizer
 

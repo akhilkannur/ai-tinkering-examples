@@ -3,7 +3,6 @@ id: grandfathered-revenue-risk
 category: Sales Ops
 title: Legacy Pricing Audit
 tagline: How much are we losing on old plans?
-difficulty: Intermediate
 time: Quarterly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     Acme,500,1000
     Beta,1000,1000
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 # Agent Configuration: The Pricing Strategist
 

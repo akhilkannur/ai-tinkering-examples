@@ -3,7 +3,6 @@ id: win-loss-reason-clusterer
 category: Sales Ops
 title: Win/Loss Reason Analyzer
 tagline: Turn messy CRM notes into clean win/loss insights.
-difficulty: Advanced
 time: Monthly
 archtype: Processor
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     Lost,They went with Competitor X due to features
     Won,Liked our ease of use
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Product Marketer

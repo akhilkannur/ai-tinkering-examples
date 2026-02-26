@@ -3,7 +3,6 @@ id: discount-code-strategist
 category: Strategic Ops
 title: The Annual Promo Strategist
 tagline: 'Your entire year of sales, without brand damage.'
-difficulty: Intermediate
 time: Seasonal
 description: >-
   Don't slash prices; drive value. This agent reads your annual holiday list
@@ -17,6 +16,10 @@ sampleData:
     New Year,January,Annual retention
     Summer Sale,July,Move old inventory
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Annual Promo Strategist

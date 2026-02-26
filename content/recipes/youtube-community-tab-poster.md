@@ -3,7 +3,6 @@ id: youtube-community-tab-poster
 category: Content Ops
 title: The Community Tab Poster
 tagline: Keep subscribers alive between uploads.
-difficulty: Beginner
 time: Batch
 description: >-
   Don't just post videos. This agent plans high-engagement 'Community Tab' posts
@@ -17,6 +16,10 @@ sampleData:
     SDR Lab,Sales Cold Calling,Handle the 'I have no budget' objection
     Glow Design,UX & Brand,Redesigning the Apple Homepage
 isPremium: true
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: The Community Tab Poster

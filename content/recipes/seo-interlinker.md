@@ -3,7 +3,6 @@ id: seo-interlinker
 category: SEO
 title: The SEO Interlinker
 tagline: Automated internal linking for your entire blog.
-difficulty: Intermediate
 time: Monthly
 description: >-
   Boost your 'Money Pages' by linking to them from your blog. This agent reads a
@@ -16,6 +15,10 @@ sampleData:
     /features/automation,"workflow automation, save time, efficiency"
     /pricing,"subscription, cost, enterprise plan"
 isPremium: true
+inputs:
+  - Target URL
+outputs:
+  - SEO Audit / Fixes
 ---
 
 # Agent Configuration: The SEO Interlinker

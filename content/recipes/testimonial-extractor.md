@@ -3,7 +3,6 @@ id: testimonial-extractor
 category: Strategic Ops
 title: The Testimonial Factory
 tagline: Process 50 calls into a website-ready library.
-difficulty: Intermediate
 time: 10 mins
 description: >-
   Your customers say amazing things on Zoom, but it gets lost. This agent scans
@@ -15,6 +14,10 @@ sampleData:
     User: "I really loved how easy the automation setup was. Before this, I was
     spending 10 hours a week on it. Now it takes 2 minutes."
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Testimonial Factory

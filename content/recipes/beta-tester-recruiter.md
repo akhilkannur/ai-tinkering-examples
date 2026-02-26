@@ -3,7 +3,6 @@ id: beta-tester-recruiter
 category: Strategic Ops
 title: The Beta Tester Recruiter
 tagline: Find your first 50 users.
-difficulty: Beginner
 time: Batch
 archetype: Processor
 description: >-
@@ -18,6 +17,12 @@ sampleData:
     Bob,bob@example.com,2024-01-08,API Access
     Charlie,charlie@example.com,2024-01-01,Dark Mode
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Beta Tester Recruiter

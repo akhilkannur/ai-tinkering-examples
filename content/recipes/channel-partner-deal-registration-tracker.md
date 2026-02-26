@@ -3,7 +3,6 @@ id: channel-partner-deal-registration-tracker
 category: Strategic Ops
 title: Deal Reg Conflict Finder
 tagline: Did we already have this lead?
-difficulty: Intermediate
 time: Weekly
 archtype: Processor
 description: >-
@@ -16,6 +15,10 @@ sampleData:
     Reseller A,Acme Corp,2023-10-01
     Reseller B,Gamma Inc,2023-10-02
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Channel Manager

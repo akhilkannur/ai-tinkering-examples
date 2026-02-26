@@ -3,7 +3,6 @@ id: seo-cluster-architect
 category: SEO
 title: The SEO Cluster Architect
 tagline: Build a content cluster that dominates search.
-difficulty: Intermediate
 time: 15 mins
 archetype: Hybrid
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     Sales Automation,Transactional
     Lead Scoring,Informational
 isPremium: true
+inputs:
+  - Target URL
+  - Local File + Search
+outputs:
+  - SEO Audit / Fixes
+  - Enriched Document
 ---
 
 # Agent Configuration: The SEO Cluster Architect

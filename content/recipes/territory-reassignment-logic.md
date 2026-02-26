@@ -3,7 +3,6 @@ id: territory-reassignment-logic
 category: Sales Ops
 title: Bulk Territory Reassigner
 tagline: Move accounts from Rep A to Rep B.
-difficulty: Intermediate
 time: Ad-hoc
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     Acme,John,West
     Beta,John,East
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Sales Ops Admin

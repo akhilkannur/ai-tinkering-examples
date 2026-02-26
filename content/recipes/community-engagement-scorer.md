@@ -3,7 +3,6 @@ id: community-engagement-scorer
 category: Customer Success
 title: Community Champion Scorer
 tagline: Who answers the most questions?
-difficulty: Intermediate
 time: Monthly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     UserA,10,50,100
     UserB,0,0,0
 isPremium: true
+inputs:
+  - Usage Logs
+  - Local File (CSV/MD)
+outputs:
+  - Churn Risk Report
+  - Cleaned Data
 ---
 # Agent Configuration: The Community Manager
 

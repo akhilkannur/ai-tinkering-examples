@@ -3,7 +3,6 @@ id: email-hard-bounce-cleaner
 category: Marketing Ops
 title: The Hard Bounce Cleaner
 tagline: Protect your sender reputation.
-difficulty: Beginner
 time: Post-Campaign
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     a@test.com,Hard,550
     b@test.com,Soft,421
 isPremium: true
+inputs:
+  - Campaign Data
+  - Local File (CSV/MD)
+outputs:
+  - Optimization Plan
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Deliverability Expert

@@ -3,7 +3,6 @@ id: one-time-buyer-analysis
 category: CRO
 title: One-and-Done Profiler
 tagline: Why do they leave after 1 buy?
-difficulty: Intermediate
 time: Quarterly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     John,Sock_Bundle,TikTok
     Jane,Hat,SEO
 isPremium: true
+inputs:
+  - Conversion Data
+  - Local File (CSV/MD)
+outputs:
+  - A/B Experiment Ideas
+  - Cleaned Data
 ---
 # Agent Configuration: The Churn Analyst
 

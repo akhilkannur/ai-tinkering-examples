@@ -3,7 +3,6 @@ id: sales-activity-quota-tracker
 category: Sales Ops
 title: Rep Activity Scorecard
 tagline: Automated daily standup report for sales activity.
-difficulty: Beginner
 time: Daily
 archtype: Processor
 description: >-
@@ -19,6 +18,10 @@ sampleData:
     Jane,Call,2023-10-01
     Jane,Call,2023-10-01
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Sales Manager

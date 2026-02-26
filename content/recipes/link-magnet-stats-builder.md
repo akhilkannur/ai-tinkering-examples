@@ -3,7 +3,6 @@ id: link-magnet-stats-builder
 category: Strategic Ops
 title: The Full-Stack Link Magnet
 tagline: Research data & build the UI.
-difficulty: Expert
 time: Batch
 description: >-
   Don't just write a blog post; build a 'State of the Industry' landing page.
@@ -16,6 +15,10 @@ sampleData:
     "AI in Sales 2026",state-of-ai-sales,Sales Leaders
     "Remote Work 2026",remote-work-trends,HR Managers
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Full-Stack Link Magnet

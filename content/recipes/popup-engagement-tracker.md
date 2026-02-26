@@ -3,7 +3,6 @@ id: popup-engagement-tracker
 category: CRO
 title: Pop-up Efficiency Tracker
 tagline: Which pop-up captures the most emails?
-difficulty: Beginner
 time: Weekly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     Exit_Intent,5000,100
     Time_Delay,5000,50
 isPremium: true
+inputs:
+  - Conversion Data
+  - Local File (CSV/MD)
+outputs:
+  - A/B Experiment Ideas
+  - Cleaned Data
 ---
 # Agent Configuration: The List Growth Manager
 

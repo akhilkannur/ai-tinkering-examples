@@ -3,7 +3,6 @@ id: audience-overlap-checker
 category: Paid Media
 title: The Audience Overlap Checker
 tagline: Stop bidding against yourself.
-difficulty: Intermediate
 time: Monthly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     user1@test.com,user3@test.com
     user2@test.com,user1@test.com
 isPremium: false
+inputs:
+  - Ad Account Data
+  - Local File (CSV/MD)
+outputs:
+  - Performance Report
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Efficiency Auditor

@@ -3,7 +3,6 @@ id: referral-program-fraud-check
 category: Customer Success
 title: Referral Fraud Detector
 tagline: Did they refer themselves?
-difficulty: Intermediate
 time: Weekly
 archetype: Processor
 description: >-
@@ -16,6 +15,12 @@ sampleData:
     1.1.1.1,1.1.1.1
     2.2.2.2,3.3.3.3
 isPremium: true
+inputs:
+  - Usage Logs
+  - Local File (CSV/MD)
+outputs:
+  - Churn Risk Report
+  - Cleaned Data
 ---
 # Agent Configuration: The Growth Quality Guard
 

@@ -3,7 +3,6 @@ id: churn-exit-video-analyzer
 category: Retention
 title: Churn Exit Video Analyzer
 tagline: Analyze emotional sentiment in Loom/Video exit surveys.
-difficulty: Advanced
 time: Batch
 archtype: Processor
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     U101,https://loom.com/share/...
     U102,https://loom.com/share/...
 isPremium: false
+inputs:
+  - Customer List
+outputs:
+  - Re-engagement Script
 ---
 
 # Agent Configuration: Churn Exit Video Analyzer

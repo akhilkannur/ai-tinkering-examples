@@ -3,7 +3,6 @@ id: pipeline-push-counter
 category: Sales Ops
 title: Deal Push Frequency Tracker
 tagline: Count how many times a deal has slipped quarters.
-difficulty: Intermediate
 time: Monthly
 archetype: Processor
 description: >-
@@ -17,6 +16,12 @@ sampleData:
     Deal 1,Close_Date,2023-12-01,2024-03-01
     Deal 2,Amount,100,200
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Pipeline Integrity Agent

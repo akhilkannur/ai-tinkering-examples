@@ -3,7 +3,6 @@ id: gdpr-compliance-gap-hunter
 category: Lead Gen
 title: The Compliance Cop
 tagline: Find sites missing cookie banners or privacy policies.
-difficulty: Intermediate
 time: 20 mins
 archetype: Analyst
 description: >-
@@ -17,6 +16,10 @@ sampleData:
     shop-paris.com,EU
     california-tech.io,US-CA
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+outputs:
+  - Enriched Leads
 ---
 
 # Agent Configuration: The Compliance Cop

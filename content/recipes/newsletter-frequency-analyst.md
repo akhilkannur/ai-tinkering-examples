@@ -3,7 +3,6 @@ id: newsletter-frequency-analyst
 category: Competitive Intel
 title: The Inbox Strategy Auditor
 tagline: Know exactly when your competitors send.
-difficulty: Beginner
 time: Batch
 description: >-
   Email attention is a zero-sum game. This agent researches the send history of
@@ -17,6 +16,10 @@ sampleData:
     The Hustle,https://trends.co/blog/
     Milk Road,https://milkroad.com/daily/
 isPremium: true
+inputs:
+  - Competitor URL
+outputs:
+  - Intel Dashboard
 ---
 
 # Agent Configuration: The Inbox Strategy Auditor

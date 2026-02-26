@@ -3,7 +3,6 @@ id: youtube-comment-lead-miner
 category: Lead Gen
 title: YouTube Comment Lead Miner
 tagline: Turn video comments into qualified leads.
-difficulty: Intermediate
 time: Batch
 archetype: Researcher
 description: >-
@@ -15,6 +14,12 @@ sampleData:
     Video_ID,Comment_Text
     Vid1,"How much is this?"
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: YouTube Comment Lead Miner

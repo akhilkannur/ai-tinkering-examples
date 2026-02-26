@@ -3,7 +3,6 @@ id: review-to-ad-machine
 category: Strategic Ops
 title: The Review-to-Ad Factory
 tagline: Turn 100 reviews into 100 ad variations.
-difficulty: Intermediate
 time: 15 mins
 description: >-
   Stop guessing what to write in your ads. This agent reads a CSV of customer
@@ -16,6 +15,10 @@ sampleData:
     John,CRM,It saved me 5 hours a week on manual entry.
     Sarah,Email tool,I finally stopped hitting spam filters.
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Review-to-Ad Factory
