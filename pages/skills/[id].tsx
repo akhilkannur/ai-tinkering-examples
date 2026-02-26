@@ -310,7 +310,7 @@ Downloaded from RealAIExamples.com`;
                                   className="bg-[#ccff00] text-black px-4 py-2 border-2 border-black font-display text-[10px] uppercase transition-all brutalist-shadow-sm hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none"
                               >
                                   <Package className="w-4 h-4 inline mr-2 stroke-[3px]" />
-                                  Bundle
+                                  TEMPLATE
                               </button>
                               <button
                                   onClick={handleCopy}

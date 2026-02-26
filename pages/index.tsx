@@ -136,21 +136,21 @@ export default function HomePage({ recipes }: HomePageProps) {
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
                     <div className="text-left">
                         <div className="inline-block bg-black text-white px-3 py-1 text-xs font-bold uppercase tracking-[0.2em] mb-6 transform -rotate-2">
-                            Start Building Real Agents
+                            For Non-Technical Tinkerers & Founders
                         </div>
                         
                         <h1 className="font-display text-5xl md:text-7xl mb-8 uppercase leading-[0.9] break-words">
-                            Stop Arguing <br />
-                            <span className="bg-[#ccff00] px-2 text-black">with Chatbots.</span>
+                            Workflows for <br />
+                            <span className="bg-[#ccff00] px-2 text-black">Chat & Agents.</span>
                         </h1>
                         
                         <p className="text-xl font-bold mb-10 border-l-8 border-[#ff00ff] pl-6 py-2 bg-gray-50 leading-relaxed max-w-lg">
-                            Copy-paste workflows that turn AI agents into specialized employees. Drop a .md file in your project, and suddenly you have a Sales Ops analyst, CRO expert, or SEO strategist on demand.
+                            500+ hardened instruction sets. Use them as <strong>high-reliability prompts</strong> in ChatGPT, or deploy them as <strong>automated skills</strong> in your terminal. 
                         </p>
 
                         <div className="inline-block bg-black text-[#ccff00] border-2 border-black px-3 py-1 mb-6 brutalist-shadow-sm transform rotate-1">
                             <span className="text-xs font-bold tracking-wide uppercase flex items-center gap-2">
-                                <Zap className="w-3 h-3 fill-current" /> 500+ Files. 1 Year Access.
+                                <Zap className="w-3 h-3 fill-current" /> Optimized for Claude.ai, Gemini CLI, and Claude Code
                             </span>
                         </div>
 
@@ -187,9 +187,10 @@ export default function HomePage({ recipes }: HomePageProps) {
 
         {/* MARQUEE SECTION (NEW REBRAND ELEMENT) */}
         <div className="bg-[#ccff00] border-b-4 border-black py-4 overflow-hidden">
+            <div className="bg-[#ccff00] border-b-4 border-black py-4 overflow-hidden">
             <div className="marquee-container font-display text-2xl uppercase tracking-widest">
                 <div className="marquee-content">
-                    Real AI Examples // Agent Ready Workflows // 500+ Blueprints // Stop Chatting Start Building // Real AI Examples // Agent Ready Workflows // 500+ Blueprints // Stop Chatting Start Building //
+                    Real AI Examples // Prompts for Chat // Agent Ready Skills // 500+ Blueprints // Workflows for Operators // Real AI Examples // Prompts for Chat // Agent Ready Skills // 500+ Blueprints // Workflows for Operators //
                 </div>
             </div>
         </div>

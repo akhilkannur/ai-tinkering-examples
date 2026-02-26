@@ -156,11 +156,6 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
                 <Lock className="w-3 h-3 stroke-[3px]" /> Premium
                 </span>
             )}
-            {recipe.id === 'agent-context-builder' && (
-              <span className="text-[10px] uppercase tracking-wider font-black px-2 py-1 bg-black text-[#ccff00] border-2 border-black transform rotate-2">
-                 Start Here
-              </span>
-            )}
             <span className={`text-[10px] uppercase tracking-wider font-black px-2 py-1 bg-gray-100 text-black border-2 border-black`}>
               {recipe.category}
             </span>
@@ -170,31 +165,23 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
         <h3 className={`font-display text-xl mb-4 leading-tight transition-colors ${isLocked ? 'text-black' : 'text-black group-hover:text-[#ff00ff]'}`}>
             {recipe.title}
         </h3>
-        <p className="text-black font-black font-mono text-xs mb-6 min-h-[40px] leading-relaxed uppercase">
+        <p className="text-black font-black font-mono text-[10px] mb-6 min-h-[30px] leading-relaxed uppercase opacity-60">
           // {recipe.tagline}
         </p>
 
-        {/* INGREDIENTS LIST (NEEDS / GETS) */}
+        {/* COMPACT INGREDIENTS */}
         {(recipe.inputs || recipe.outputs) && (
-          <div className="mb-6 space-y-3 bg-gray-50 p-3 border-2 border-black border-dashed">
+          <div className="mb-6 py-3 border-t border-black/5 flex flex-col gap-2">
             {recipe.inputs && (
-              <div className="flex flex-col gap-1">
-                <span className="text-[9px] font-black text-black/40 uppercase tracking-widest">Needs (Ingredients):</span>
-                <div className="flex flex-wrap gap-1">
-                  {recipe.inputs.map(input => (
-                    <span key={input} className="text-[10px] font-bold bg-white px-1.5 py-0.5 border border-black">{input}</span>
-                  ))}
-                </div>
+              <div className="flex items-baseline gap-2">
+                <span className="text-[8px] font-black text-black/30 uppercase tracking-widest flex-shrink-0">Needs:</span>
+                <span className="text-[10px] font-bold text-black truncate">{recipe.inputs.join(', ')}</span>
               </div>
             )}
             {recipe.outputs && (
-              <div className="flex flex-col gap-1">
-                <span className="text-[9px] font-black text-black/40 uppercase tracking-widest">Gets (Result):</span>
-                <div className="flex flex-wrap gap-1">
-                  {recipe.outputs.map(output => (
-                    <span key={output} className="text-[10px] font-bold bg-white px-1.5 py-0.5 border border-black text-[#ff00ff]">{output}</span>
-                  ))}
-                </div>
+              <div className="flex items-baseline gap-2">
+                <span className="text-[8px] font-black text-black/30 uppercase tracking-widest flex-shrink-0">Gets:</span>
+                <span className="text-[10px] font-bold text-[#ff00ff] truncate">{recipe.outputs.join(', ')}</span>
               </div>
             )}
           </div>
@@ -241,16 +228,13 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
         </div>
       </div>
 
-      <div className="mb-8 text-black text-xs font-black uppercase tracking-[0.2em] pl-2 flex items-center justify-between">
-        <div className="flex items-center gap-6">
-          <span>Showing {recipesToRender.length} of {filteredRecipes.length} recipes</span>
-          {!isUnlocked && (
-            <div className="flex items-center gap-2 bg-black text-[#ccff00] px-3 py-1 border-2 border-black transform -rotate-1">
-              <span className="w-2 h-2 rounded-full bg-[#ccff00] animate-pulse"></span>
-              <span className="text-[10px]">Premium Available</span>
-            </div>
-          )}
-        </div>
+      <div className="mb-8 text-black text-xs font-black uppercase tracking-[0.2em] pl-2 flex items-center justify-end">
+        {!isUnlocked && (
+          <div className="flex items-center gap-2 bg-black text-[#ccff00] px-3 py-1 border-2 border-black transform -rotate-1">
+            <span className="w-2 h-2 rounded-full bg-[#ccff00] animate-pulse"></span>
+            <span className="text-[10px]">Premium Available</span>
+          </div>
+        )}
         {isUnlocked && (
            <div className="flex items-center gap-2 px-4 py-1.5 bg-black text-[#ccff00] border-2 border-black transform rotate-1 animate-pulse">
              <Crown className="w-4 h-4 stroke-[3px]" />
@@ -298,7 +282,8 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
         </div>
 
         {hasMore && (
-            <div className="text-center mb-20">
+            <div className="text-center mb-20 flex flex-col items-center gap-6">
+                <span className="text-[10px] font-black font-mono text-black/40 uppercase tracking-[0.2em]">Showing {recipesToRender.length} of {filteredRecipes.length} workflows</span>
                 <button 
                     onClick={handleLoadMore}
                     className="bg-black text-[#ccff00] font-display text-xl uppercase py-6 px-12 border-4 border-black brutalist-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all"
@@ -467,7 +452,7 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
                       <span className="text-black font-black font-mono text-xs flex items-center gap-3 uppercase tracking-widest"><FileText className="w-4 h-4" /> INSTRUCTION_LOGIC.md</span>
                       <div className="flex items-center gap-4">
                         {selectedRecipe.sampleData && (
-                          <button onClick={handleDownload} className="text-[10px] font-black uppercase px-3 py-1.5 border-2 border-black bg-[#ccff00] text-black hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all brutalist-shadow-sm"><Download className="w-3 h-3 stroke-[3px]" /> Sample</button>
+                          <button onClick={handleDownload} className="text-[10px] font-black uppercase px-3 py-1.5 border-2 border-black bg-[#ccff00] text-black hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all brutalist-shadow-sm"><Download className="w-3 h-3 stroke-[3px]" /> GET TEMPLATE</button>
                         )}
                       </div>
                     </div>
