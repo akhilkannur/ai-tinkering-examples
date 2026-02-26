@@ -159,21 +159,21 @@ export default function HomePage({ recipes }: HomePageProps) {
                         <div className="flex flex-col gap-6 max-w-lg mb-12">
                             <a
                                 href="https://checkout.dodopayments.com/buy/pdt_0NW6p0szmXPS6jXW05hIP"
-                                className="group w-full sm:w-auto px-8 py-5 bg-[#ff00ff] border-4 border-black font-display text-xl uppercase brutalist-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all flex items-center justify-center gap-3 text-white relative"
+                                className="group w-full sm:w-auto px-8 py-5 bg-[#ff00ff] border-4 border-black font-display text-2xl uppercase brutalist-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all flex items-center justify-center gap-3 text-white relative"
                             >
                                 Get 1 Year Access ($39) 
-                                <ArrowRight className="w-6 h-6 stroke-[4px] group-hover:translate-x-1 transition-transform" />
+                                <ArrowRight className="w-8 h-8 stroke-[4px] group-hover:translate-x-1 transition-transform" />
                             </a>
                             
-                            <div className="flex items-center gap-4 py-1">
-                                <div className="h-px bg-black/10 flex-1"></div>
-                                <span className="text-[10px] font-black uppercase tracking-[0.2em] text-black/30">
-                                    or grab the free pack
+                            <div className="flex items-center gap-2 px-1">
+                                <span className="text-xs font-bold text-black/60 uppercase tracking-tight">
+                                    Not ready? <button onClick={() => {
+                                        const form = document.getElementById('free-pack-form');
+                                        form?.scrollIntoView({ behavior: 'smooth' });
+                                        (document.querySelector('#free-pack-form input') as HTMLInputElement)?.focus();
+                                    }} className="text-black underline decoration-2 underline-offset-4 hover:text-[#ff00ff] transition-colors">Grab 5 starter blueprints for free</button>
                                 </span>
-                                <div className="h-px bg-black/10 flex-1"></div>
                             </div>
-
-                            <HeroForm />
                         </div>
                         <p className="text-xs font-bold text-gray-600 mb-12 flex items-center gap-2 uppercase tracking-widest">
                           <span className="text-emerald-600 font-black">✓</span>
@@ -300,19 +300,23 @@ export default function HomePage({ recipes }: HomePageProps) {
           </div>
         </div>
 
-        {/* NEWSLETTER */}
-        <div className="bg-[#ccff00] text-black py-24 border-t-4 border-black" id="newsletter">
+        {/* NEWSLETTER / FREE PACK */}
+        <div className="bg-[#ccff00] text-black py-24 border-t-4 border-black" id="free-pack-form">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
             <h2 className="font-display text-5xl md:text-6xl mb-6 uppercase">
-              📬 Don't Miss Out!
+              🎁 Grab the Free Pack
             </h2>
-            <p className="text-xl mb-10 font-bold max-w-2xl mx-auto">
-              Free blueprints starter pack and occasional updates on actionable AI tactics. If they suck, unsubscribe. I won't be offended.
+            <p className="text-xl mb-10 font-bold max-w-2xl mx-auto uppercase leading-tight font-mono">
+              // Not ready for 500+ files? <br/>
+              Get my top 5 high-impact starter blueprints for free. 
             </p>
 
             <div className="max-w-[600px] mx-auto">
               <NewsletterForm />
             </div>
+            <p className="text-[10px] font-black font-mono text-black/40 uppercase mt-8 tracking-[0.2em]">
+              Instant Access. No Spam. No BS.
+            </p>
           </div>
         </div>
 
