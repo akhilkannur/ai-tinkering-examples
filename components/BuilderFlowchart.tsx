@@ -451,7 +451,8 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
                       </p>
                       <button 
                         onClick={() => {
-                          navigator.clipboard.writeText(selectedRecipe.blueprint);
+                          const chatPreamble = `I am providing you with a rigid logic protocol. I will provide the data directly in this chat. IMPORTANT: Ignore all instructions to 'read' or 'save' local files. Instead, perform the analysis and output the results directly here. \n\n--- LOGIC ---\n\n`;
+                          navigator.clipboard.writeText(chatPreamble + selectedRecipe.blueprint);
                           setCopied(true);
                           setTimeout(() => setCopied(false), 2000);
                         }}
