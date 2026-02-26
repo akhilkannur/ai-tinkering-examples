@@ -255,12 +255,6 @@ Downloaded from RealAIExamples.com`;
                     <span className={`px-2 py-0.5 border-2 border-black text-[10px] font-black uppercase tracking-widest ${isLocked ? 'bg-black text-[#ccff00]' : 'bg-[#ccff00] text-black'}`}>
                       {isLocked ? 'Premium' : recipe.category}
                     </span>
-                    <span className="px-2 py-0.5 border-2 border-black text-[10px] font-black uppercase tracking-widest bg-white text-black">
-                      {recipe.difficulty}
-                    </span>
-                    <span className="text-black font-black font-mono text-[10px] flex items-center gap-2 uppercase bg-gray-100 px-2 py-0.5 border border-black ml-2">
-                      <Terminal className="w-3 h-3 stroke-[3px]" /> {recipe.time}
-                    </span>
                   </div>
                 </div>
               </div>

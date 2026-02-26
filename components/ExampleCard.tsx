@@ -123,10 +123,7 @@ export default function ExampleCard({
             </p>
           )}
 
-          <div className="pt-4 mt-auto flex items-center justify-between border-t-2 border-black/10">
-             <div className="flex items-center gap-4 text-[10px] font-black font-mono text-black uppercase tracking-tighter">
-                <span className="font-bold border border-black px-1 group-hover:bg-[#ccff00] group-hover:text-black transition-colors">Details</span>
-             </div>
+          <div className="pt-4 mt-auto flex items-center justify-end border-t-2 border-black/10">
              <ArrowRight className="w-4 h-4 text-black group-hover:translate-x-1 transition-transform" strokeWidth={3} />
           </div>
         </div>

@@ -134,7 +134,6 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
   const RecipeCard = ({ recipe, index }: { recipe: Recipe, index: number }) => {
     const CatIcon = categoryIcons[recipe.category] || Terminal;
     const isLocked = !isUnlocked && (recipe.isPremium || index >= 200);
-    const isNew = recipe.publish_date && (new Date().getTime() - new Date(recipe.publish_date).getTime() < 7 * 24 * 60 * 60 * 1000);
 
     return (
       <div
@@ -152,11 +151,6 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
             {isLocked ? <Lock className="w-6 h-6 stroke-[3px]" /> : <CatIcon className="w-6 h-6 stroke-[3px]" />}
           </div>
           <div className="flex flex-col items-end gap-2">
-            {isNew && (
-              <span className="bg-black text-white text-[10px] font-black px-2 py-0.5 border-2 border-black uppercase tracking-tighter transform -rotate-3">
-                NEW
-              </span>
-            )}
             {isLocked && (
                 <span className="bg-[#ccff00] text-black border-2 border-black text-[10px] font-black px-2 py-1 uppercase tracking-wider flex items-center gap-1 shadow-[2px_2px_0px_0px_#000]">
                 <Lock className="w-3 h-3 stroke-[3px]" /> Premium
@@ -396,7 +390,6 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
                     <Link href={`/skills/${selectedRecipe.id}`} onClick={() => setSelectedRecipe(null)} className="flex items-center gap-2 hover:text-[#ff00ff] transition-colors bg-gray-100 px-2 py-1 border border-black">
                       <ExternalLink className="w-3 h-3" /> Full Page
                     </Link>
-                    <span>ID: {selectedRecipe.id.slice(0, 8).toUpperCase()}</span>
                   </div>
                 </div>
               </div>
@@ -406,16 +399,6 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
             <div className="p-8 overflow-y-auto custom-scrollbar bg-white">
               <div className="mb-10">
                 <p className="text-xl text-black font-bold uppercase leading-tight border-l-8 border-[#ccff00] pl-6 py-2 bg-gray-50">{selectedRecipe.description}</p>
-                <div className="flex gap-4 mt-6">
-                  <div className="flex items-center gap-2 px-2 py-1 bg-gray-100 border border-black text-[10px] font-black uppercase tracking-widest">
-                    <div className="w-2 h-2 rounded-full bg-emerald-500"></div>
-                    Web UI / Chat
-                  </div>
-                  <div className="flex items-center gap-2 px-2 py-1 bg-gray-100 border border-black text-[10px] font-black uppercase tracking-widest">
-                    <div className="w-2 h-2 rounded-full bg-blue-500"></div>
-                    CLI / Agents
-                  </div>
-                </div>
               </div>
 
               {(!isUnlocked && (selectedRecipe.isPremium || recipes.indexOf(selectedRecipe) >= 200)) ? (

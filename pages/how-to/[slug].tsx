@@ -102,7 +102,6 @@ export default function HowToPage({ recipe, problemTitle, relatedRecipes }: HowT
                       <CheckCircle className="w-3 h-3" />
                       <span>The Solution</span>
                    </div>
-                   <span className="text-sm text-text-secondary font-mono">Blueprint ID: {recipe.id}</span>
                 </div>
                 <Link href={`/skills/${recipe.id}`} className="text-xs text-accent hover:underline">
                    View Documentation &rarr;
