@@ -7,6 +7,12 @@ difficulty: Advanced
 time: 10 mins
 archetype: Researcher
 description: "The automation we use to track performance on this site. It authenticates with Google Cloud via a Service Account, pulls top pages, user trends, and conversion data, and generates a plain-text briefing for the team."
+inputs:
+  - "Google Service Account JSON"
+  - "GA4 Property ID"
+outputs:
+  - "Plain-text traffic briefing"
+  - "Growth velocity metrics"
 isPremium: true
 ---
 

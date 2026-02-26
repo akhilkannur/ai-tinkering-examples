@@ -7,6 +7,12 @@ difficulty: Advanced
 time: 5 mins
 archetype: Processor
 description: "The exact script we use to maintain this website. It reads existing recipe files, categorizes them, and automatically adds batch processing loops, sample data templates, and structured output artifacts."
+inputs:
+  - "Raw .md recipe files"
+  - "Category list"
+outputs:
+  - "Optimized .md files"
+  - "Verification CSV"
 isPremium: true
 ---
 

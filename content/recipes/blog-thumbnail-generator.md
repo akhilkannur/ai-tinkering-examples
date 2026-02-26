@@ -7,6 +7,12 @@ difficulty: Intermediate
 time: 2 mins
 archetype: Processor
 description: "The automation we use to create the very thumbnails you see on this site. Uses Python and Pillow to take a title and generate a high-contrast, brutalist-style image with custom gradients and typography."
+inputs:
+  - "Blog Title"
+  - "Output filename (slug)"
+outputs:
+  - "750x500 PNG thumbnail"
+  - "Optimized WebP version"
 isPremium: false
 ---
 

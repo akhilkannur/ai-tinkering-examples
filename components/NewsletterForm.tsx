@@ -47,7 +47,7 @@ export default function NewsletterForm() {
           type="email" 
           placeholder="ENTER_EMAIL_FOR_ACCESS" 
           required
-          className="flex-1 px-6 py-4 bg-white border-2 border-black text-black font-display text-base uppercase focus:bg-[#ccff00] outline-none transition-all placeholder:text-gray-300" 
+          className="flex-1 px-6 py-4 bg-white border-2 border-black text-black font-display text-base uppercase focus:bg-[#ccff00] outline-none transition-all placeholder:text-gray-500" 
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           disabled={status === 'loading'}

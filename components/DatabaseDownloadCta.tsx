@@ -63,7 +63,7 @@ export default function DatabaseDownloadCta() {
               type="email" 
               placeholder="ENTER_EMAIL_ADDRESS" 
               required
-              className="flex-grow bg-gray-50 border-2 border-black px-6 py-4 text-black font-display text-sm uppercase focus:bg-[#ccff00] outline-none transition-all placeholder:text-gray-300"
+              className="flex-grow bg-gray-50 border-2 border-black px-6 py-4 text-black font-display text-sm uppercase focus:bg-[#ccff00] outline-none transition-all placeholder:text-gray-500"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               disabled={status === 'loading'}

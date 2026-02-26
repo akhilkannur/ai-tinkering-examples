@@ -185,6 +185,32 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
         <p className="text-black font-black font-mono text-xs mb-6 min-h-[40px] leading-relaxed uppercase">
           // {recipe.tagline}
         </p>
+
+        {/* INGREDIENTS LIST (NEEDS / GETS) */}
+        {(recipe.inputs || recipe.outputs) && (
+          <div className="mb-6 space-y-3 bg-gray-50 p-3 border-2 border-black border-dashed">
+            {recipe.inputs && (
+              <div className="flex flex-col gap-1">
+                <span className="text-[9px] font-black text-black/40 uppercase tracking-widest">Needs (Ingredients):</span>
+                <div className="flex flex-wrap gap-1">
+                  {recipe.inputs.map(input => (
+                    <span key={input} className="text-[10px] font-bold bg-white px-1.5 py-0.5 border border-black">{input}</span>
+                  ))}
+                </div>
+              </div>
+            )}
+            {recipe.outputs && (
+              <div className="flex flex-col gap-1">
+                <span className="text-[9px] font-black text-black/40 uppercase tracking-widest">Gets (Result):</span>
+                <div className="flex flex-wrap gap-1">
+                  {recipe.outputs.map(output => (
+                    <span key={output} className="text-[10px] font-bold bg-white px-1.5 py-0.5 border border-black text-[#ff00ff]">{output}</span>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        )}
         
         <div className="mt-auto pt-4 border-t-2 border-black/10 text-[10px] font-black font-mono uppercase tracking-widest">
            <span className={`px-2 py-1 border-2 border-black bg-gray-100 text-black`}>
@@ -447,13 +473,31 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
                       <pre className="font-mono text-sm text-[#00ffff] whitespace-pre-wrap leading-relaxed">{selectedRecipe.blueprint}</pre>
                     </div>
                   </div>
-                  <div className="mt-8 p-6 bg-[#ccff00]/10 border-4 border-black border-dashed flex gap-4 items-start">
-                     <div className="bg-black text-[#ccff00] w-8 h-8 flex items-center justify-center flex-shrink-0 font-display text-xl border-2 border-black transform rotate-12">!</div>
-                     <p className="text-xs text-black font-black font-mono uppercase leading-relaxed tracking-tighter">
-                        1. Copy the blueprint. <br/>
-                        {selectedRecipe.sampleData ? `2. Download ${selectedRecipe.sampleData.filename}.` : ""} <br/>
-                        3. Tell AI: "Read the blueprint to build this."
-                     </p>
+                  <div className="mt-8 p-6 bg-[#ccff00]/10 border-4 border-black border-dashed">
+                     <div className="flex gap-4 items-start mb-6">
+                        <div className="bg-black text-[#ccff00] w-8 h-8 flex items-center justify-center flex-shrink-0 font-display text-xl border-2 border-black transform rotate-12">!</div>
+                        <div>
+                          <h4 className="font-display text-lg uppercase mb-1">How to Run</h4>
+                          <p className="text-xs text-black font-black font-mono uppercase leading-relaxed tracking-tighter">
+                             1. Click "Copy Logic" above. <br/>
+                             2. Open Claude Code or Gemini CLI. <br/>
+                             3. Paste the logic and run the command below:
+                          </p>
+                        </div>
+                     </div>
+                     
+                     <div className="bg-black p-4 border-2 border-black flex items-center justify-between group">
+                        <code className="text-[#00ffff] font-mono text-xs">"Use the logic in my clipboard to run this."</code>
+                        <button 
+                          onClick={() => {
+                            navigator.clipboard.writeText(`"Use the logic in my clipboard to run this on my local files."`);
+                            alert("Command copied! Paste this into your terminal after the logic.");
+                          }}
+                          className="bg-white text-black p-1 hover:bg-[#ccff00] border border-black transition-all"
+                        >
+                          <Copy className="w-4 h-4" />
+                        </button>
+                     </div>
                   </div>
                 </>
               )}

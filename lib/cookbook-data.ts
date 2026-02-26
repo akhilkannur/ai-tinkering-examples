@@ -85,6 +85,8 @@ export interface Recipe {
     content: string;
   };
   sampleOutput?: string;
+  inputs?: string[];
+  outputs?: string[];
   verifiedRun?: {
     date: string;
     agent: string;

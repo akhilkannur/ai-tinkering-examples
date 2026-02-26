@@ -43,7 +43,7 @@ export default function HeroForm() {
           type="email" 
           placeholder="Enter your email for the free pack..." 
           required
-          className="flex-1 px-4 py-4 bg-white border-4 border-black text-black font-display text-sm uppercase focus:bg-[#ccff00] outline-none transition-all placeholder:text-gray-400 min-w-0" 
+          className="flex-1 px-4 py-4 bg-white border-4 border-black text-black font-display text-sm uppercase focus:bg-[#ccff00] outline-none transition-all placeholder:text-gray-600 min-w-0" 
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           disabled={status === 'loading'}

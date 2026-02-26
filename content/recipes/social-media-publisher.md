@@ -7,6 +7,12 @@ difficulty: Advanced
 time: 15 mins
 archetype: Processor
 description: "The automation we use to distribute these blueprints across social media. It hooks into the Instagram Business API and Pinterest API to generate static image cards and motion videos, then publishes them automatically."
+inputs:
+  - "Recipe .md file"
+  - "Instagram API Token"
+outputs:
+  - "Automated Social Post"
+  - "Published Link Log"
 isPremium: false
 ---
 
