@@ -408,96 +408,110 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
               <button onClick={() => setSelectedRecipe(null)} className="p-2 hover:bg-gray-100 border-2 border-transparent hover:border-black transition-all"><X className="w-10 h-10 text-black stroke-[3px]" /></button>
             </div>
 
-            <div className="p-8 overflow-y-auto custom-scrollbar bg-white">
-              <div className="mb-10">
-                <p className="text-xl text-black font-bold uppercase leading-tight border-l-8 border-[#ccff00] pl-6 py-2 bg-gray-50">{selectedRecipe.description}</p>
-              </div>
-
-              {(!isUnlocked && (selectedRecipe.isPremium || recipes.indexOf(selectedRecipe) >= 200)) ? (
-                <div className="bg-black text-white border-4 border-black p-12 text-center brutalist-shadow-sm relative overflow-hidden">
-                  <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(#fff 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
-                  <div className="relative z-10">
-                    <div className="w-20 h-20 bg-white flex items-center justify-center mx-auto mb-8 border-4 border-black rotate-3 brutalist-shadow-sm">
-                      <Lock className="w-10 h-10 text-black stroke-[3px]" />
-                    </div>
-                    <h3 className="text-4xl font-display text-white mb-4 uppercase leading-none">Access Denied</h3>
-                    <p className="text-white/60 font-black font-mono text-xs mb-10 uppercase tracking-widest">// This blueprint is reserved for Pro members.</p>
-                    <a href="https://checkout.dodopayments.com/buy/pdt_0NW6p0szmXPS6jXW05hIP?session=sess_GCYotd6plh" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-4 bg-[#ccff00] text-black px-10 py-5 border-4 border-white font-display text-2xl uppercase transition-all brutalist-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none">Unlock Now <ArrowRight className="w-8 h-8 stroke-[3px]" /></a>
-                  </div>
-                </div>
-              ) : (
-                <>
-                  {/* POWER USER SECTION */}
-                  <div className="bg-black text-white border-4 border-black p-8 mb-10 brutalist-shadow-sm relative overflow-hidden group">
-                      <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(#fff 1px, transparent 1px)', backgroundSize: '10px 10px' }}></div>
-                      <div className="relative z-10">
-                          <div className="flex flex-col gap-6">
-                              <div className="flex items-center justify-between border-b-2 border-white/10 pb-4">
-                                  <div className="inline-flex items-center gap-3 px-3 py-1 bg-[#00ffff] text-black border-2 border-black font-black text-xs uppercase tracking-widest transform -rotate-1">
-                                      <Cpu className="w-4 h-4 stroke-[3px]" /> Agent-Ready
-                                  </div>
-                                  <span className="text-[10px] font-black font-mono text-white/40 uppercase tracking-[0.2em]">v2.0 Optimized</span>
+                        <div className="p-8 overflow-y-auto custom-scrollbar bg-white">
+                          <div className="mb-10">
+                            <p className="text-xl text-black font-bold uppercase leading-tight border-l-8 border-[#ccff00] pl-6 py-2 bg-gray-50">{selectedRecipe.description}</p>
+                            <div className="flex gap-4 mt-6">
+                              <div className="flex items-center gap-2 px-2 py-1 bg-gray-100 border border-black text-[10px] font-black uppercase tracking-widest">
+                                <div className="w-2 h-2 rounded-full bg-emerald-500"></div>
+                                Web UI / Chat
                               </div>
-                              
-                              <div className="flex flex-col sm:flex-row gap-4">
-                                  <a
-                                      href={`/downloads/skills/${selectedRecipe.id}-claude.md`}
-                                      download
-                                      className="flex-1 flex items-center justify-center gap-3 bg-white text-black border-2 border-black py-4 font-display text-sm uppercase hover:bg-[#ccff00] transition-all brutalist-shadow-sm"
-                                  >
-                                      <FileText className="w-5 h-5 stroke-[3px]" /> Download Blueprint (.md)
-                                  </a>
+                              <div className="flex items-center gap-2 px-2 py-1 bg-gray-100 border border-black text-[10px] font-black uppercase tracking-widest">
+                                <div className="w-2 h-2 rounded-full bg-blue-500"></div>
+                                CLI / Agents
                               </div>
-                              <p className="text-[10px] font-mono text-white/60 uppercase tracking-widest mt-3 text-center">
-                                  Works with Claude Code, Gemini CLI, Cursor, and all major agent tools
-                              </p>
+                            </div>
                           </div>
-                      </div>
-                  </div>
-
-                  <div className="bg-black border-4 border-black overflow-hidden brutalist-shadow-sm">
-                    <div className="bg-white px-6 py-3 flex items-center justify-between border-b-4 border-black">
-                      <span className="text-black font-black font-mono text-xs flex items-center gap-3 uppercase tracking-widest"><FileText className="w-4 h-4" /> BLUEPRINT.md</span>
-                      <div className="flex items-center gap-4">
-                        {selectedRecipe.sampleData && (
-                          <button onClick={handleDownload} className="text-[10px] font-black uppercase px-3 py-1.5 border-2 border-black bg-[#ccff00] text-black hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all brutalist-shadow-sm"><Download className="w-3 h-3 stroke-[3px]" /> Sample</button>
-                        )}
-                        <button onClick={handleCopy} className={`text-[10px] font-black uppercase px-3 py-1.5 border-2 border-black transition-all brutalist-shadow-sm ${copied ? 'bg-emerald-400 text-black' : 'bg-white text-black hover:bg-[#ff00ff] hover:text-white'}`}>{copied ? <Check className="w-3 h-3 stroke-[3px]" /> : <Copy className="w-3 h-3 stroke-[3px]" />} {copied ? 'Copied!' : 'Copy Logic'}</button>
-                      </div>
-                    </div>
-                    <div className="p-8 max-h-[350px] overflow-y-auto custom-scrollbar bg-black">
-                      <pre className="font-mono text-sm text-[#00ffff] whitespace-pre-wrap leading-relaxed">{selectedRecipe.blueprint}</pre>
-                    </div>
-                  </div>
-                  <div className="mt-8 p-6 bg-[#ccff00]/10 border-4 border-black border-dashed">
-                     <div className="flex gap-4 items-start mb-6">
-                        <div className="bg-black text-[#ccff00] w-8 h-8 flex items-center justify-center flex-shrink-0 font-display text-xl border-2 border-black transform rotate-12">!</div>
-                        <div>
-                          <h4 className="font-display text-lg uppercase mb-1">How to Run</h4>
-                          <p className="text-xs text-black font-black font-mono uppercase leading-relaxed tracking-tighter">
-                             1. Click "Copy Logic" above. <br/>
-                             2. Open Claude Code or Gemini CLI. <br/>
-                             3. Paste the logic and run the command below:
-                          </p>
+            
+                          {(!isUnlocked && (selectedRecipe.isPremium || recipes.indexOf(selectedRecipe) >= 200)) ? (
+                            <div className="bg-black text-white border-4 border-black p-12 text-center brutalist-shadow-sm relative overflow-hidden">
+                              <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(#fff 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
+                              <div className="relative z-10">
+                                <div className="w-20 h-20 bg-white flex items-center justify-center mx-auto mb-8 border-4 border-black rotate-3 brutalist-shadow-sm">
+                                  <Lock className="w-10 h-10 text-black stroke-[3px]" />
+                                </div>
+                                <h3 className="text-4xl font-display text-white mb-4 uppercase leading-none">Access Denied</h3>
+                                <p className="text-white/60 font-black font-mono text-xs mb-10 uppercase tracking-widest">// This blueprint is reserved for Pro members.</p>
+                                <a href="https://checkout.dodopayments.com/buy/pdt_0NW6p0szmXPS6jXW05hIP?session=sess_GCYotd6plh" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-4 bg-[#ccff00] text-black px-10 py-5 border-4 border-white font-display text-2xl uppercase transition-all brutalist-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none">Unlock Now <ArrowRight className="w-8 h-8 stroke-[3px]" /></a>
+                              </div>
+                            </div>
+                          ) : (
+                            <>
+                              {/* TWO PATHS SECTOR */}
+                              <div className="grid md:grid-cols-2 gap-6 mb-10">
+                                {/* Path 1: Browser */}
+                                <div className="border-4 border-black p-6 bg-white brutalist-shadow-sm flex flex-col hover:bg-emerald-50 transition-colors">
+                                  <div className="flex items-center gap-3 mb-4">
+                                    <MessageSquare className="w-6 h-6 text-emerald-600" />
+                                    <h4 className="font-display text-lg uppercase">Browser Mode</h4>
+                                  </div>
+                                  <p className="text-[10px] font-black font-mono uppercase text-gray-500 mb-6 leading-relaxed">
+                                    // Best for ChatGPT, Claude.ai, or Gemini web apps. Just paste and go.
+                                  </p>
+                                  <button 
+                                    onClick={() => {
+                                      navigator.clipboard.writeText(selectedRecipe.blueprint);
+                                      setCopied(true);
+                                      setTimeout(() => setCopied(false), 2000);
+                                    }}
+                                    className={`w-full py-4 border-2 border-black font-display text-sm uppercase transition-all ${copied ? 'bg-emerald-400' : 'bg-black text-[#ccff00] hover:bg-emerald-500 hover:text-white'}`}
+                                  >
+                                    {copied ? 'Copied!' : 'Copy for Chat'}
+                                  </button>
+                                </div>
+            
+                                {/* Path 2: Agent */}
+                                <div className="border-4 border-black p-6 bg-white brutalist-shadow-sm flex flex-col hover:bg-blue-50 transition-colors">
+                                  <div className="flex items-center gap-3 mb-4">
+                                    <Terminal className="w-6 h-6 text-blue-600" />
+                                    <h4 className="font-display text-lg uppercase">Agent Mode</h4>
+                                  </div>
+                                  <p className="text-[10px] font-black font-mono uppercase text-gray-500 mb-6 leading-relaxed">
+                                    // Best for Claude Code, Gemini CLI, or Cursor. Optimized for local files.
+                                  </p>
+                                  <button 
+                                    onClick={() => {
+                                      const fullBlueprint = `---\nid: ${selectedRecipe.id}\ncategory: ${selectedRecipe.category}\n---\n\n${selectedRecipe.blueprint}`;
+                                      navigator.clipboard.writeText(fullBlueprint);
+                                      setCopied(true);
+                                      setTimeout(() => setCopied(false), 2000);
+                                    }}
+                                    className={`w-full py-4 border-2 border-black font-display text-sm uppercase transition-all ${copied ? 'bg-blue-400' : 'bg-black text-[#ccff00] hover:bg-blue-500 hover:text-white'}`}
+                                  >
+                                    {copied ? 'Copied!' : 'Copy as Agent Skill'}
+                                  </button>
+                                </div>
+                              </div>
+            
+                              <div className="bg-black border-4 border-black overflow-hidden brutalist-shadow-sm">
+                                <div className="bg-white px-6 py-3 flex items-center justify-between border-b-4 border-black">
+                                  <span className="text-black font-black font-mono text-xs flex items-center gap-3 uppercase tracking-widest"><FileText className="w-4 h-4" /> INSTRUCTION_LOGIC.md</span>
+                                  <div className="flex items-center gap-4">
+                                    {selectedRecipe.sampleData && (
+                                      <button onClick={handleDownload} className="text-[10px] font-black uppercase px-3 py-1.5 border-2 border-black bg-[#ccff00] text-black hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all brutalist-shadow-sm"><Download className="w-3 h-3 stroke-[3px]" /> Sample</button>
+                                    )}
+                                  </div>
+                                </div>
+                                <div className="p-8 max-h-[250px] overflow-y-auto custom-scrollbar bg-black">
+                                  <pre className="font-mono text-sm text-[#00ffff] whitespace-pre-wrap leading-relaxed">{selectedRecipe.blueprint}</pre>
+                                </div>
+                              </div>
+            
+                              <div className="mt-8 p-6 bg-[#ccff00]/10 border-4 border-black border-dashed">
+                                 <div className="flex gap-4 items-start mb-6">
+                                    <div className="bg-black text-[#ccff00] w-8 h-8 flex items-center justify-center flex-shrink-0 font-display text-xl border-2 border-black transform rotate-12">!</div>
+                                    <div>
+                                      <h4 className="font-display text-lg uppercase mb-1">Execution Path</h4>
+                                      <p className="text-xs text-black font-black font-mono uppercase leading-relaxed tracking-tighter">
+                                         Browser: Paste into chat. <br/>
+                                         Agent: Save as .md in your project and tell AI to use it.
+                                      </p>
+                                    </div>
+                                 </div>
+                              </div>
+                            </>
+                          )}
                         </div>
-                     </div>
-                     
-                     <div className="bg-black p-4 border-2 border-black flex items-center justify-between group">
-                        <code className="text-[#00ffff] font-mono text-xs">"Use the logic in my clipboard to run this."</code>
-                        <button 
-                          onClick={() => {
-                            navigator.clipboard.writeText(`"Use the logic in my clipboard to run this on my local files."`);
-                            alert("Command copied! Paste this into your terminal after the logic.");
-                          }}
-                          className="bg-white text-black p-1 hover:bg-[#ccff00] border border-black transition-all"
-                        >
-                          <Copy className="w-4 h-4" />
-                        </button>
-                     </div>
-                  </div>
-                </>
-              )}
-            </div>
           </div>
         </div>
       )}
