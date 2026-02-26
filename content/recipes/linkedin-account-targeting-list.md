@@ -3,7 +3,6 @@ id: linkedin-account-targeting-list
 category: Sales Ops
 title: LinkedIn Account Targeting Builder
 tagline: Turn a list of domains into a matched audience for LinkedIn Ads.
-time: 10 mins
 archetype: Researcher
 description: >-
   Takes a list of company domains, finds their official LinkedIn Company Page

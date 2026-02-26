@@ -3,7 +3,6 @@ id: seasonal-trend-spotter
 category: Paid Media
 title: Trend Timing Assistant
 tagline: When do people start searching for 'Winter Coats'?
-time: Yearly
 archetype: Processor
 description: >-
   Identifies the historical week where search volume for a category starts

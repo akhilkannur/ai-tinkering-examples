@@ -3,7 +3,6 @@ id: abm-campaign-asset-builder
 category: Strategic Ops
 title: ABM Campaign Asset Builder
 tagline: Generate personalized landing page copy for target accounts.
-time: 20 mins
 archetype: Hybrid
 description: >-
   Takes a high-value target account (e.g., "Nike"), researches their 10-k or

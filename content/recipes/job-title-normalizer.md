@@ -3,7 +3,6 @@ id: job-title-normalizer
 category: Marketing Ops
 title: Job Title Normalizer
 tagline: Standardize 'VP of Sales' vs 'Vice President Sales'.
-time: Weekly
 archetype: Processor
 description: >-
   Maps messy job titles to standard seniority levels (Executive, Director,

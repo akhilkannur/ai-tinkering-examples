@@ -3,7 +3,6 @@ id: pre-meeting-dossier
 category: Sales Ops
 title: The Pre-Meeting Dossier
 tagline: Never go into a call blind.
-time: Batch
 description: >-
   5 minutes before a call, you need to know everything. This agent researches
   multiple prospects simultaneously, scraping LinkedIn, company news, and tech

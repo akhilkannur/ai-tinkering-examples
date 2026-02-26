@@ -3,7 +3,6 @@ id: image-alt-text-auditor
 category: SEO
 title: Accessibility Auditor
 tagline: Ensure every image has descriptive text.
-time: Batch
 archtype: Processor
 description: >-
   Scans a list of image tags and checks if the `alt` attribute is present and

@@ -3,7 +3,6 @@ id: hook-rate-analyzer
 category: Paid Media
 title: The Hook Rate Analyzer
 tagline: Fix the first 3 seconds.
-time: Weekly
 archetype: Processor
 description: >-
   If they don't watch past 3 seconds, your creative failed. This agent

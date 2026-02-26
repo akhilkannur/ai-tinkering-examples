@@ -3,7 +3,6 @@ id: bestseller-restock-alert
 category: E-commerce
 title: Back-in-Stock Campaigner
 tagline: Launch ads when bestsellers return.
-time: Weekly
 archetype: Processor
 description: >-
   Monitors inventory levels of 'A-Class' SKUs and triggers a marketing alert

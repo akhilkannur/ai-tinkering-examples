@@ -3,7 +3,6 @@ id: social-engagement-to-opportunity
 category: Strategic Ops
 title: Social-to-Deal Correlator
 tagline: Do likes lead to deals?
-time: Quarterly
 archetype: Processor
 description: >-
   Correlates 'Likes/Comments' from prospects with subsequent Deal Creation

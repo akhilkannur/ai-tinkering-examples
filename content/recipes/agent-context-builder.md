@@ -3,7 +3,6 @@ id: agent-context-builder
 category: Strategic Ops
 title: The Project Architect
 tagline: Make any folder AI-ready instantly.
-time: One-off
 archetype: Researcher
 description: >-
   AI agents struggle when they don't know your project's structure. This agent

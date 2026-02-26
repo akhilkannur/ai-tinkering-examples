@@ -3,7 +3,6 @@ id: twitter-auto-plug-writer
 category: Strategic Ops
 title: The Auto-Plug Writer
 tagline: Drive traffic from viral tweets.
-time: Batch
 description: >-
   When a tweet goes viral, you need to plug your offer. This agent drafts
   high-converting 'If you enjoyed this...' tweets for your entire suite of

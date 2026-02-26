@@ -3,7 +3,6 @@ id: campaign-naming-convention-enforcer
 category: Marketing Ops
 title: Campaign Taxonomist
 tagline: Stop messy data from breaking your reports.
-time: Weekly
 archtype: Processor
 description: >-
   Audits campaign names to ensure they follow the pattern:

@@ -3,7 +3,6 @@ id: testimonial-extractor
 category: Strategic Ops
 title: The Testimonial Factory
 tagline: Process 50 calls into a website-ready library.
-time: 10 mins
 description: >-
   Your customers say amazing things on Zoom, but it gets lost. This agent scans
   a folder of call transcripts, extracts the 'Aha! Moments', and generates a

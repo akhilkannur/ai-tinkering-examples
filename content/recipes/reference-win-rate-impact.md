@@ -3,7 +3,6 @@ id: reference-win-rate-impact
 category: Customer Success
 title: Reference ROI Calculator
 tagline: Does using a reference help?
-time: Quarterly
 archetype: Processor
 description: >-
   Calculates the win rate of deals where a specific Reference was used vs deals

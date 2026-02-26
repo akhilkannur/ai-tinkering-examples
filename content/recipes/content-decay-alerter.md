@@ -3,7 +3,6 @@ id: content-decay-alerter
 category: SEO
 title: The Content Relevance Guard
 tagline: Prevent Semantic Decay.
-time: Monthly
 archetype: Processor
 description: >-
   Goes beyond traffic stats to detect "Semantic Decay." This agent analyzes  if

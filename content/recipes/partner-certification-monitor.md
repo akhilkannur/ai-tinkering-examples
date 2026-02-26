@@ -3,7 +3,6 @@ id: partner-certification-monitor
 category: Strategic Ops
 title: The Partner Enablement Automator
 tagline: Automatically nag partners 30 days before their certifications expire.
-time: Monthly
 archetype: Processor
 description: >-
   Don't track certs in spreadsheets. This agent scans your partner database,

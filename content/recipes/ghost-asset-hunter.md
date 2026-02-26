@@ -3,7 +3,6 @@ id: ghost-asset-hunter
 category: Lead Gen
 title: The Ghost Asset Hunter
 tagline: 'Find the 10-K, Podcast, or Tweet that opens the door.'
-time: One-off
 archetype: Researcher
 isPremium: true
 description: >-

@@ -3,7 +3,6 @@ id: challenger-brand-identifier
 category: Lead Gen
 title: The Challenger Brand Hunter
 tagline: Find Series B companies competing with Fortune 500 giants.
-time: 20 mins
 archetype: Researcher
 description: >-
   Challenger brands are aggressive, well-funded, and willing to take risks on

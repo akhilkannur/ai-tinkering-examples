@@ -3,7 +3,6 @@ id: sales-rep-ramp-velocity
 category: Sales Ops
 title: New Rep Ramp Tracker
 tagline: Measure 'Time to First Deal' for new hires.
-time: Monthly
 archetype: Processor
 description: >-
   Tracks the number of days from 'Start Date' to 'First Deal Closed' for new

@@ -3,7 +3,6 @@ id: free-to-paid-conversion-signal
 category: Sales Ops
 title: PQL Usage Trigger
 tagline: Flag users who hit 90% of their free limits.
-time: Daily
 archetype: Processor
 description: >-
   Monitors free user usage logs to trigger a sales alert when a user hits

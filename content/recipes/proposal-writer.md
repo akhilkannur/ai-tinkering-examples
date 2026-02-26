@@ -3,7 +3,6 @@ id: proposal-writer
 category: Strategic Ops
 title: The High-Ticket Proposal Writer
 tagline: Generate custom proposals for each lead.
-time: 15 mins
 archetype: Processor
 description: >-
   Creates personalized proposals for each prospect, focused on their specific

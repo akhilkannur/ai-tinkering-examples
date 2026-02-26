@@ -3,7 +3,6 @@ id: webinar-attendee-job-title-scorer
 category: Marketing Ops
 title: Webinar Audience Quality
 tagline: 'Did VPs show up, or just interns?'
-time: Batch
 archetype: Processor
 description: >-
   Scores webinar success by the seniority of attendees based on job title

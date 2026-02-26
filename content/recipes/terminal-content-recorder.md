@@ -3,7 +3,6 @@ id: terminal-content-recorder
 category: Content Ops
 title: The Terminal Streamer
 tagline: Record pixel-perfect terminal sessions for YouTube.
-time: 5 mins
 archetype: Processor
 description: >-
   Stop using blurry screen recorders. This agent sets up a professional-grade

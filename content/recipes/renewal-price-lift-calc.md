@@ -3,7 +3,6 @@ id: renewal-price-lift-calc
 category: Sales Ops
 title: Renewal Price Lift Calc
 tagline: Apply 5% CPI increases to upcoming renewals.
-time: Monthly
 archtype: Processor
 description: >-
   Calculates new contract values for upcoming renewals assuming a standard price

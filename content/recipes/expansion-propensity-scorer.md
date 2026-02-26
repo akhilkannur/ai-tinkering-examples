@@ -3,7 +3,6 @@ id: expansion-propensity-scorer
 category: Sales Ops
 title: Upsell Propensity Scorer
 tagline: Who is ready to buy more?
-time: Monthly
 archetype: Processor
 description: >-
   Matches historical upsell data to current customer profiles (Employee Growth +

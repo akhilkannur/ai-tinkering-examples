@@ -3,7 +3,6 @@ id: billing-frequency-upsell
 category: Sales Ops
 title: Annual Pre-Pay Upsell
 tagline: Move monthly users to annual plans.
-time: Quarterly
 archetype: Processor
 description: >-
   Identifies stable 'Monthly' customers ideal for 'Annual' conversion campaigns

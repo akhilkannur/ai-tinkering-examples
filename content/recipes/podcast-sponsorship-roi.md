@@ -3,7 +3,6 @@ id: podcast-sponsorship-roi
 category: Marketing Ops
 title: The Brand Lift Estimator
 tagline: Direct clicks are only half the story. Measure the 'Halo Effect'.
-time: Quarterly
 archetype: Processor
 description: >-
   Podcast ads notoriously under-report because people don't click links while

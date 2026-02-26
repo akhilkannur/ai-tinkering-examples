@@ -3,7 +3,6 @@ id: churn-survey-analyzer
 category: Customer Success
 title: Churn Autopsy
 tagline: Find out the real reason customers are leaving.
-time: 5 mins
 archetype: Processor
 description: >-
   Reads unstructured "Why did you cancel?" survey responses, groups them into

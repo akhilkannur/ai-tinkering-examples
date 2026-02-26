@@ -3,7 +3,6 @@ id: landing-page-intent-matcher
 category: CRO
 title: Ad-to-Page Matcher
 tagline: Does the Landing Page match the Ad?
-time: Monthly
 archetype: Processor
 description: >-
   Matches ad keywords to landing page H1 tags to ensure message consistency

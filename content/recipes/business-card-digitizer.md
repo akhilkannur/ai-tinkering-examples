@@ -3,7 +3,6 @@ id: business-card-digitizer
 category: Sales Ops
 title: The Business Card Digitizer
 tagline: From pocket to CRM in seconds.
-time: Batch
 archetype: Processor
 description: >-
   Don't type business cards manually. This agent takes a list of image files,

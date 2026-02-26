@@ -3,7 +3,6 @@ id: news-curator
 category: Content Ops
 title: The Multi-Niche News Curator
 tagline: Draft 5 weekly newsletters in one run.
-time: Weekly
 description: >-
   Curating news for different audiences takes hours. This agent reads a list of
   niches and source URLs from a CSV, picks the top stories for each, and drafts

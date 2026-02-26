@@ -3,7 +3,6 @@ id: win-back-segmenter
 category: Retention
 title: Win-Back Segmenter
 tagline: Identify lapsed VIPs for recovery.
-time: Weekly
 archetype: Processor
 description: >-
   Identifies high-value customers who haven't purchased in 180 days to trigger a

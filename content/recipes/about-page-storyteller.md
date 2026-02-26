@@ -3,7 +3,6 @@ id: about-page-storyteller
 category: Content Ops
 title: The About Page Storyteller
 tagline: Build trust with a data-backed brand story.
-time: Batch
 archetype: Hybrid
 description: >-
   Faceless brands are dead. This agent researches company histories and founder

@@ -3,7 +3,6 @@ id: competitor-visual-pricing-tracker
 category: Competitive Intel
 title: Visual Pricing Page Monitor
 tagline: Detect hidden pricing changes that text scrapers miss.
-time: Batch
 archtype: Researcher
 description: >-
   Text scrapers miss "per user" badges or layout shifts. This agent visually

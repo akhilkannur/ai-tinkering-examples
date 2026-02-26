@@ -3,7 +3,6 @@ id: lead-source-normalizer
 category: Marketing Ops
 title: The Lead Source Normalizer
 tagline: Fix your attribution buckets.
-time: Weekly
 archetype: Processor
 description: >-
   Reps type whatever they want into 'Lead Source.' This agent takes a messy list

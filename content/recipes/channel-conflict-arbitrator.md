@@ -3,7 +3,6 @@ id: channel-conflict-arbitrator
 category: Strategic Ops
 title: Channel Conflict Resolver
 tagline: 'Decide who owns the lead: Partner or Direct?'
-time: Daily
 archtype: Processor
 description: >-
   Compares partner registration dates against internal lead timestamps to

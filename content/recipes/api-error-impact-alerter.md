@@ -3,7 +3,6 @@ id: api-error-impact-alerter
 category: Strategic Ops
 title: API Error Impact Alerter
 tagline: Know exactly which VIP customers are seeing 500 errors.
-time: Real-time
 archetype: Processor
 description: >-
   Correlates server logs (500 errors) with Customer Lists. Alerts the CSM

@@ -3,7 +3,6 @@ id: lead-response-time-auditor
 category: Sales Ops
 title: Speed-to-Lead Auditor
 tagline: Calculate time to first touch for every lead.
-time: Daily
 archtype: Processor
 description: >-
   Measures the gap between 'Lead Created' and 'First Activity' to ensure reps

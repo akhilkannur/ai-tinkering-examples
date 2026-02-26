@@ -3,7 +3,6 @@ id: cold-email-spam-checker
 category: Sales Ops
 title: The Spam Word Hunter
 tagline: Don't trigger the filters.
-time: 5 mins
 archetype: Processor
 description: >-
   Scans your cold emails for spam trigger words and rewrites them to land in

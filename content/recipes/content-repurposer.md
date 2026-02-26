@@ -3,7 +3,6 @@ id: content-repurposer
 category: Content Ops
 title: The Viral Editor
 tagline: Turn one blog post into 3 social posts.
-time: 10 mins
 archetype: Processor
 description: >-
   Turns your blog posts into ready-to-post content for Twitter/X, LinkedIn, and

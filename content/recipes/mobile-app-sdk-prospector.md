@@ -3,7 +3,6 @@ id: mobile-app-sdk-prospector
 category: Lead Gen
 title: The SDK Sniper
 tagline: Find mobile apps using a competitor's SDK.
-time: 20 mins
 archetype: Analyst
 description: >-
   Mobile apps run on SDKs (Stripe for payments, Twilio for chat, Mapbox for

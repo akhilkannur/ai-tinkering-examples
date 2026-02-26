@@ -3,7 +3,6 @@ id: sales-forecast-scenario-modeler
 category: Sales Ops
 title: Forecast Scenario Modeler
 tagline: Calculate 'Best Case' vs 'Commit' pipelines.
-time: Weekly
 archetype: Processor
 description: >-
   Simulates three revenue scenarios (Conservative, Realistic, Aggressive) based

@@ -3,7 +3,6 @@ id: freelance-marketplace-arbitrage
 category: Lead Gen
 title: The Outsourcing Arbitrage
 tagline: Find companies hiring freelancers for roles you automate.
-time: 20 mins
 archetype: Researcher
 description: >-
   If a company is hiring a freelancer to "clean data" or "write SEO blogs," they

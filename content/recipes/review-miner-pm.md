@@ -3,7 +3,6 @@ id: review-miner-pm
 category: CRO
 title: The Competitive Review Miner
 tagline: Audit the entire market's weaknesses.
-time: 30 mins
 description: >-
   Scrapes negative reviews for a list of competitors, identifies missing
   features across the market, and ranks them by revenue impact to build a

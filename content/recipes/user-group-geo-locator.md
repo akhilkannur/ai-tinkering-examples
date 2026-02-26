@@ -3,7 +3,6 @@ id: user-group-geo-locator
 category: Strategic Ops
 title: Meetup City Selector
 tagline: Where should we host the next dinner?
-time: Quarterly
 archetype: Processor
 description: >-
   Analyzes customer address data to find geographic clusters with the highest

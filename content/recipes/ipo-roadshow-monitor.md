@@ -3,7 +3,6 @@ id: ipo-roadshow-monitor
 category: Lead Gen
 title: The Pre-IPO Hawk
 tagline: Target late-stage companies preparing for public listing.
-time: Monthly
 archetype: Researcher
 description: >-
   Companies preparing for an IPO (hiring "VP of Investor Relations", "SEC

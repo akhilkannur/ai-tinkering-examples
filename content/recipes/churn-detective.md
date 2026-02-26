@@ -3,7 +3,6 @@ id: churn-detective
 category: Sales Ops
 title: The Churn Sentinel
 tagline: Predict at-risk customers across 500 accounts.
-time: 25 mins
 archetype: Processor
 description: >-
   Prevention is better than recovery. This agent reads a CSV of recent support

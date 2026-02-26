@@ -3,7 +3,6 @@ id: user-generated-content-campaign
 category: Content Ops
 title: The UGC Campaign Planner
 tagline: High-ROI content from your users.
-time: Batch
 description: >-
   Social proof is your best sales tool. This agent designs viral UGC contests
   and campaigns for your entire product line, incentivizing users to create

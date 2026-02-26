@@ -3,7 +3,6 @@ id: time-in-stage-stalls
 category: Sales Ops
 title: Pipeline Stage Stall Monitor
 tagline: Identify deals stuck in Legal or Security Review.
-time: Weekly
 archetype: Processor
 description: >-
   Analyzes how long deals sit in specific 'Slow Stages' like Legal to identify

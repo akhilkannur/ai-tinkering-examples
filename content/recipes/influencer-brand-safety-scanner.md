@@ -3,7 +3,6 @@ id: influencer-brand-safety-scanner
 category: Lead Gen
 title: Influencer Brand Safety Scanner
 tagline: Don't sponsor someone who will get you cancelled.
-time: Batch
 archtype: Researcher
 description: >-
   Scans the last 50 posts of a potential influencer. Flags keywords related to

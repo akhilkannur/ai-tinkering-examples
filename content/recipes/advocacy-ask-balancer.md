@@ -3,7 +3,6 @@ id: advocacy-ask-balancer
 category: Customer Success
 title: Advocacy Fatigue Saver
 tagline: Don't ask twice in one month.
-time: Weekly
 archetype: Processor
 description: >-
   Ensures you don't ask the same customer for a Case Study, Reference, and Quote

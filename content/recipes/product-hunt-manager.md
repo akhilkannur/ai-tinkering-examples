@@ -3,7 +3,6 @@ id: product-hunt-manager
 category: Strategic Ops
 title: The Product Hunt Launch Manager
 tagline: 'Get #1 Product of the Day.'
-time: Batch
 description: >-
   A launch is a project, not just a post. This agent creates complete 'Launch
   Day' schedules, writes the crucial 'Maker's Comment', and drafts community

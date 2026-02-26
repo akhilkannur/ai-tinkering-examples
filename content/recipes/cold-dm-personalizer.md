@@ -3,7 +3,6 @@ id: cold-dm-personalizer
 category: Lead Gen
 title: The Cold DM Personalizer
 tagline: Personalized outreach for 100 prospects at once.
-time: Continuous
 archetype: Hybrid
 description: >-
   Slide into DMs without looking like a bot. This agent takes a list of

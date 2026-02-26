@@ -3,7 +3,6 @@ id: referral-commission-splitter
 category: Strategic Ops
 title: Complex Referral Splitter
 tagline: Calculate 3-way commission splits for partners.
-time: Batch
 archtype: Processor
 description: >-
   Calculates revenue shares for multi-party deals involving a source partner, an

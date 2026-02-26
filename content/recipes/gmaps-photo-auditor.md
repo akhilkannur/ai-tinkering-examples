@@ -3,7 +3,6 @@ id: gmaps-photo-auditor
 category: SEO
 title: G-Maps Photo Quality Auditor
 tagline: Remove blurry or irrelevant user photos from your listing.
-time: Batch
 archetype: Researcher
 description: >-
   Scans user-uploaded photos on your Google Maps listing. Flags "Blurry",

@@ -3,7 +3,6 @@ id: franchise-owner-contact-builder
 category: Lead Gen
 title: The Franchise Empire Mapper
 tagline: Find owners of multi-location franchises.
-time: 25 mins
 archetype: Researcher
 description: >-
   Selling to individual Subway locations is hard. Selling to the owner who owns

@@ -3,7 +3,6 @@ id: community-engagement-scorer
 category: Customer Success
 title: Community Champion Scorer
 tagline: Who answers the most questions?
-time: Monthly
 archetype: Processor
 description: >-
   Scores users based on forum posts, replies, and likes to identify potential

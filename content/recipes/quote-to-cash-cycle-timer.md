@@ -3,7 +3,6 @@ id: quote-to-cash-cycle-timer
 category: Sales Ops
 title: Quote-to-Cash Speedometer
 tagline: Measure the speed of closing.
-time: Monthly
 archetype: Processor
 description: >-
   Measures the average days from 'Contract Signed' to 'Invoice Paid' to optimize

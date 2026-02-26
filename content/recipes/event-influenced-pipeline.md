@@ -3,7 +3,6 @@ id: event-influenced-pipeline
 category: Strategic Ops
 title: Event Influence Calc
 tagline: Total pipeline touched by this event.
-time: Monthly
 archetype: Processor
 description: >-
   Calculates total pipeline value where an 'Event Attendance' campaign member

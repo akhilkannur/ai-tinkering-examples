@@ -3,7 +3,6 @@ id: influencer-audit
 category: Strategic Ops
 title: The Influencer Auditor
 tagline: Audit 50 creators in one run.
-time: 5 mins
 description: >-
   Protect your ad budget. This agent reads a list of influencer handles from a
   CSV, calculates their real engagement rates, detects bot behavior, and

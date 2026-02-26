@@ -3,7 +3,6 @@ id: win-back-campaign
 category: Marketing Ops
 title: The Win-Back Campaign Architect
 tagline: It's easier to sell to an ex.
-time: Quarterly
 archetype: Processor
 description: >-
   Customers leave, but they might come back. This agent identifies customers who

@@ -3,7 +3,6 @@ id: buying-signal-heatmapper
 category: Sales Ops
 title: Account Buying Signal Heatmapper
 tagline: Score account timing by aggregating intent signals.
-time: Daily
 archetype: Processor
 description: >-
   Aggregates intent signals from job postings, news alerts, and website visits

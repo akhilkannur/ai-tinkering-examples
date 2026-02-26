@@ -5,7 +5,6 @@ title: The IndexNow Auto-Submitter
 tagline: >-
   Ping Bing, Yandex, and 100+ other engines immediately when you publish
   content.
-time: Weekly
 archetype: Processor
 description: >-
   Stop waiting for crawlers to find you. This script reads your local

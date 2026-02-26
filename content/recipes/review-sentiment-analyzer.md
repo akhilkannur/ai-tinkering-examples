@@ -3,7 +3,6 @@ id: review-sentiment-analyzer
 category: CRO
 title: Review Sentiment Correlation
 tagline: Do bad reviews tank conversion?
-time: Monthly
 archetype: Processor
 description: >-
   Correlates 'Negative Review Count' with 'Conversion Rate Drops' on a PDP level

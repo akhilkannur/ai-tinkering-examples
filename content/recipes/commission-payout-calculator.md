@@ -3,7 +3,6 @@ id: commission-payout-calculator
 category: Sales Ops
 title: The Comp Plan Simulator
 tagline: Model the impact of 'Accelerators' and 'Spiffs' before you roll them out.
-time: Monthly
 archetype: Processor
 description: >-
   Changing commission plans is risky. This agent takes your historical deal data

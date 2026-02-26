@@ -3,7 +3,6 @@ id: ad-library-archivist
 category: Competitive Intel
 title: The Ad Library Archivist
 tagline: Build a structured swipe file from 100 links.
-time: Weekly
 archetype: Processor
 description: >-
   Ads disappear. This agent reads a CSV of FB Ad Library or LinkedIn Ad links

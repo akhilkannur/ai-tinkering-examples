@@ -3,7 +3,6 @@ id: seo-keyword-cannibalization-mapper
 category: SEO
 title: SEO Cannibalization Visualizer
 tagline: See which pages are fighting for the same keywords.
-time: Batch
 archetype: Researcher
 description: >-
   Ingests GSC data. Identifies keywords where 2+ pages swap positions

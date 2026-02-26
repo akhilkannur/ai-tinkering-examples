@@ -3,7 +3,6 @@ id: linkedin-comment-scraper
 category: Strategic Ops
 title: The LinkedIn Comment Miner
 tagline: Turn engagement into a CSV.
-time: Batch
 description: >-
   A viral post is a lead magnet. This agent processes raw HTML pastes of
   LinkedIn comment sections to extract Names, Headlines, and Profile URLs of

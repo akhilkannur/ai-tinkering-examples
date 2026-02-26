@@ -3,7 +3,6 @@ id: phone-number-formatter-e164
 category: Sales Ops
 title: Global Phone Formatter
 tagline: Standardize all numbers to E.164 format.
-time: Batch
 archetype: Processor
 description: >-
   Cleans and formats phone numbers to the global E.164 standard (+1555...) for

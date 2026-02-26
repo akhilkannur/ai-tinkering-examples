@@ -3,7 +3,6 @@ id: persona-builder
 category: Strategic Ops
 title: The AI Persona Researcher
 tagline: Build detailed customer personas.
-time: 15 mins
 archetype: Researcher
 description: >-
   Researches your target niches and creates detailed persona cards with their

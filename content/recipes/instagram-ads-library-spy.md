@@ -3,7 +3,6 @@ id: instagram-ads-library-spy
 category: Lead Gen
 title: The Ad-Pixel Arbitrage
 tagline: Find D2C brands running ads but missing pixel tracking.
-time: 25 mins
 archetype: Analyst
 description: >-
   Brands spending money on Meta Ads *without* proper tracking (CAPI, TikTok

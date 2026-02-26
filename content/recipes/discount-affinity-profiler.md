@@ -3,7 +3,6 @@ id: discount-affinity-profiler
 category: E-commerce
 title: Discount Hunter Profiler
 tagline: Who only buys when it's on sale?
-time: Quarterly
 archetype: Processor
 description: >-
   Segments users who *only* buy items on discount vs those who buy full price,

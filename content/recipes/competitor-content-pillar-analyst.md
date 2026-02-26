@@ -3,7 +3,6 @@ id: competitor-content-pillar-analyst
 category: Strategic Ops
 title: Competitor Content Spy
 tagline: Steal the content strategy that is working for your rivals.
-time: 15 mins
 archetype: Hybrid
 description: >-
   Analyzes the titles of a competitor's top 10 blog posts or videos to identify

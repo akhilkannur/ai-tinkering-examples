@@ -3,7 +3,6 @@ id: commission-calculator
 category: Lead Gen
 title: The Sales Comp Designer
 tagline: Design a commission plan that drives growth.
-time: Hybrid
 description: >-
   Bad incentives kill sales performance. This agent researches industry
   standards and designs tiered commission plans (Base + OTE + Accelerators) for

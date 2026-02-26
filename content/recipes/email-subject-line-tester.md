@@ -3,7 +3,6 @@ id: email-subject-line-tester
 category: Strategic Ops
 title: The Subject Line Factory
 tagline: Generate A/B test variations for 10 campaigns in one run.
-time: 5 mins
 description: >-
   The subject line is 80% of the battle. This agent reads a list of email
   campaign goals from a CSV and generates 10 high-converting subject line

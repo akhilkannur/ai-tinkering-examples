@@ -3,7 +3,6 @@ id: new-arrival-teaser-list
 category: E-commerce
 title: New Drop Teaser List
 tagline: Notify past buyers of a brand about new arrivals.
-time: Weekly
 archetype: Processor
 description: >-
   Segments buyers who previously bought 'Brand X' to notify them of 'Brand X New

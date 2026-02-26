@@ -3,7 +3,6 @@ id: podcast-advertiser-database
 category: Lead Gen
 title: The Podcast Ad Spender
 tagline: Log companies spending money on podcast ads.
-time: Weekly
 archetype: Researcher
 description: >-
   Companies advertising on podcasts have high CAC tolerance and marketing

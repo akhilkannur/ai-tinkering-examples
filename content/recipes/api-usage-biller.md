@@ -3,7 +3,6 @@ id: api-usage-biller
 category: Sales Ops
 title: The API Usage Biller
 tagline: Don't leave money on the table.
-time: Monthly
 archetype: Processor
 description: >-
   Usage-based pricing is hard to track. This agent processes a raw log of API

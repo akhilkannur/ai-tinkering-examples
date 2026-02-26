@@ -3,7 +3,6 @@ id: champion-verifier
 category: Sales Ops
 title: The Champion Verifier
 tagline: Is your champion actually a champion?
-time: Deal Review
 archetype: Processor
 description: >-
   False champions lose deals. This agent evaluates a specific contact based on a

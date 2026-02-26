@@ -3,7 +3,6 @@ id: churn-risk-health-scorer
 category: Sales Ops
 title: The Trend-Based Churn Predictor
 tagline: Static scores lie. Detect negative trends (velocity) before it's too late.
-time: Weekly
 archetype: Processor
 description: >-
   Most health scores are static snapshots. This agent analyzes the *change* in

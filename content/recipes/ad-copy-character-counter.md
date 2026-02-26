@@ -3,7 +3,6 @@ id: ad-copy-character-counter
 category: Paid Media
 title: The Ad Variant Factory
 tagline: Don't just count characters. Generate 10 high-CTR variants that fit perfectly.
-time: Daily
 archetype: Hybrid
 description: >-
   Counting characters is boring. This agent takes your rough draft headlines and

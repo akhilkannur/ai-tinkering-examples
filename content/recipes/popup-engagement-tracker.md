@@ -3,7 +3,6 @@ id: popup-engagement-tracker
 category: CRO
 title: Pop-up Efficiency Tracker
 tagline: Which pop-up captures the most emails?
-time: Weekly
 archetype: Processor
 description: >-
   Measures the 'Email Capture Rate' of different exit-intent or time-delayed

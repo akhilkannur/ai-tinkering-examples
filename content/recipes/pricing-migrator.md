@@ -3,7 +3,6 @@ id: pricing-migrator
 category: Sales Ops
 title: The Pricing Tier Migrator
 tagline: Move them up or move them out.
-time: One-off
 archetype: Processor
 description: >-
   Changing pricing is scary. This agent analyzes your current customer base,

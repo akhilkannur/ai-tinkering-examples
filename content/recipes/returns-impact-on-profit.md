@@ -3,7 +3,6 @@ id: returns-impact-on-profit
 category: E-commerce
 title: Net Profit SKU Analyzer
 tagline: True profit after returns.
-time: Monthly
 archetype: Processor
 description: >-
   Calculates 'Net Profit' per SKU after factoring in return costs and refund

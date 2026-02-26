@@ -3,7 +3,6 @@ id: cta-button-optimizer
 category: CRO
 title: The CTA Button Optimizer
 tagline: Make them click.
-time: Batch
 description: >-
   Generic buttons like 'Submit' kill conversion. This agent rewrites your
   Call-to-Action (CTA) buttons to be value-driven and suggests color/placement

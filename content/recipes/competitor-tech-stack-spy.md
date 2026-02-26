@@ -3,7 +3,6 @@ id: competitor-tech-stack-spy
 category: Competitive Intel
 title: The Tech Stack Spy
 tagline: Audit the tech stack of your entire market.
-time: 10 mins
 archetype: Hybrid
 description: >-
   Why check one site when you can check them all? This agent reads a list of

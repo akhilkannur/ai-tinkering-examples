@@ -3,7 +3,6 @@ id: customer-support-vs-ltv
 category: CRO
 title: Support Cost vs LTV
 tagline: Are needy customers worth it?
-time: Yearly
 archetype: Processor
 description: >-
   Checks if customers with high support ticket volume actually have higher or

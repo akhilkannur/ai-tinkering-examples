@@ -3,7 +3,6 @@ id: saas-pricing-page-change-alert
 category: Lead Gen
 title: The Price Hike Monitor
 tagline: Trigger when a prospect raises prices.
-time: Weekly
 archetype: Analyst
 description: >-
   When a SaaS company raises prices, their customers get annoyed and look for

@@ -3,7 +3,6 @@ id: partner-tier-promotion-tracker
 category: Strategic Ops
 title: Partner Tier Auditor
 tagline: Check if partners qualify for Silver/Gold/Platinum.
-time: Quarterly
 archtype: Processor
 description: >-
   Analyzes partner revenue against thresholds to recommend tier upgrades or

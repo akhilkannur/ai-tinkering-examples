@@ -3,7 +3,6 @@ title: Blog Thumbnail Generator
 id: blog-thumbnail-generator
 category: Content Ops
 tagline: Programmatically generate branded OG images and blog thumbnails.
-time: 2 mins
 archetype: Processor
 description: >-
   The automation we use to create the very thumbnails you see on this site. Uses

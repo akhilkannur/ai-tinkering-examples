@@ -3,7 +3,6 @@ id: domain-age-startup-spotter
 category: Lead Gen
 title: The New Domain Watcher
 tagline: Find newly registered domains with stealth signals.
-time: Daily
 archetype: Researcher
 description: >-
   New domains often mean new businesses. This agent filters newly registered

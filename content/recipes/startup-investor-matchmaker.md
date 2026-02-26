@@ -3,7 +3,6 @@ id: startup-investor-matchmaker
 category: Sales Ops
 title: Investor Thesis Matcher
 tagline: Find the right VCs for your startup based on their investment thesis.
-time: 15 mins
 archetype: Processor
 description: >-
   Reads your startup's "Blurb" and a CSV of Investor Profiles (including their

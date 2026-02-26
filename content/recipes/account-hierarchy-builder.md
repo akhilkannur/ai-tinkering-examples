@@ -3,7 +3,6 @@ id: account-hierarchy-builder
 category: Sales Ops
 title: Corporate Hierarchy Builder
 tagline: Link subsidiaries to parents based on domain patterns.
-time: Monthly
 archetype: Processor
 description: >-
   Groups separate account records into a parent-child hierarchy based on shared

@@ -3,7 +3,6 @@ id: renewal-reminder-sequence
 category: Customer Success
 title: The Renewal Reminder
 tagline: No surprise cancellations.
-time: Batch
 description: >-
   Contracts expire. This agent automates the renewal cadence for your entire
   customer base, ensuring you have time to negotiate upsells or save at-risk

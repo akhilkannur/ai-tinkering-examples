@@ -3,7 +3,6 @@ id: lead-source-attribution-fixer
 category: Sales Ops
 title: Lead Source Normalizer
 tagline: Fix messy 'Referral' vs 'referral' vs 'Friend' tags.
-time: Weekly
 archtype: Processor
 description: >-
   Standardizes messy lead source data into clean categories (e.g., maps

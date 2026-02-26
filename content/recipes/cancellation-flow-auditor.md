@@ -3,7 +3,6 @@ id: cancellation-flow-auditor
 category: Strategic Ops
 title: The Cancellation Flow Auditor
 tagline: Save them before they go.
-time: Batch
 archetype: Hybrid
 description: >-
   The 'Cancel' button is your last line of defense. This agent researches

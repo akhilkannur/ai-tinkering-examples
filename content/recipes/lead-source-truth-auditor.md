@@ -3,7 +3,6 @@ id: lead-source-truth-auditor
 category: Marketing Ops
 title: Attribution Truth Checker
 tagline: 'UTM vs Self-Reported: Who is lying?'
-time: Monthly
 archetype: Processor
 description: >-
   Compares 'Self-Reported Source' (How did you hear about us?) vs 'UTM Source'

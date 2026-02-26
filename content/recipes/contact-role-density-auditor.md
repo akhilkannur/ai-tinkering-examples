@@ -3,7 +3,6 @@ id: contact-role-density-auditor
 category: Sales Ops
 title: Account Stakeholder Density
 tagline: Ensure top accounts have >3 contacts.
-time: Weekly
 archetype: Processor
 description: >-
   Audits high-value accounts to flag those with insufficient contact coverage

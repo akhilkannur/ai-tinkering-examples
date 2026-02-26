@@ -3,7 +3,6 @@ title: GA4 Traffic Reporter
 id: google-analytics-reporter
 category: Marketing Ops
 tagline: Automated traffic analytics and insight generation via the GA4 API.
-time: 10 mins
 archetype: Researcher
 description: >-
   The automation we use to track performance on this site. It authenticates with

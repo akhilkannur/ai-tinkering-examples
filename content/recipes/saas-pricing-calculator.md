@@ -3,7 +3,6 @@ id: saas-pricing-calculator
 category: Strategic Ops
 title: The Packaging Strategist
 tagline: Price is just a number. Packaging is psychology.
-time: Batch
 archetype: Processor
 description: >-
   Don't just pick a number. This agent analyzes your cost structure and models a

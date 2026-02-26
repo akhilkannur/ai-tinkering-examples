@@ -3,7 +3,6 @@ id: contract-redline-risk-spotter
 category: Sales Ops
 title: Legal Redline Risk Spotter
 tagline: Spot deal-killing clauses in legal redlines instantly.
-time: Real-time
 archtype: Processor
 description: >-
   Pastes the diff of a contract. Highlights "Unlimited Liability", "IP

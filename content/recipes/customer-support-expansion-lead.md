@@ -3,7 +3,6 @@ id: customer-support-expansion-lead
 category: Lead Gen
 title: The Support Scaler
 tagline: Identify companies hiring mass support agents.
-time: 20 mins
 archetype: Researcher
 description: >-
   Hiring 10+ support agents at once indicates a scaling crisis. This agent scans

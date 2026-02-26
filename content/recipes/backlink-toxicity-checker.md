@@ -3,7 +3,6 @@ id: backlink-toxicity-checker
 category: SEO
 title: The Backlink Toxicity Checker
 tagline: Is that link helping or hurting?
-time: Monthly
 archetype: Processor
 description: >-
   Not all links are good. This agent audits a list of backlinks for 'Risk

@@ -3,7 +3,6 @@ id: seo-interlinker
 category: SEO
 title: The SEO Interlinker
 tagline: Automated internal linking for your entire blog.
-time: Monthly
 description: >-
   Boost your 'Money Pages' by linking to them from your blog. This agent reads a
   strategy CSV (Target URL + Keywords), scans your entire `content/` folder, and

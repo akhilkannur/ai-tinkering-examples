@@ -3,7 +3,6 @@ id: nps-detractor-recovery-list
 category: Customer Success
 title: NPS Detractor Recovery List
 tagline: Automate outreach lists for low NPS scorers.
-time: Daily
 archtype: Processor
 description: >-
   Identifies new NPS detractors (0-6) and generates a prioritized outreach list

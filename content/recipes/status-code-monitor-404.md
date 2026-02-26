@@ -3,7 +3,6 @@ id: status-code-monitor-404
 category: SEO
 title: Broken Link Patroller
 tagline: Find 404s before your users do.
-time: Weekly
 archtype: Processor
 description: Filters a server log or crawl list for 4xx and 5xx status codes.
 sampleData:

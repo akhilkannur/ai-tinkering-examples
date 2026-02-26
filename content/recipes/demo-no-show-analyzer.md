@@ -3,7 +3,6 @@ id: demo-no-show-analyzer
 category: Sales Ops
 title: No-Show Rate Analyzer
 tagline: Why are prospects ghosting demos?
-time: Monthly
 archtype: Processor
 description: Analyzes demo logs to calculate no-show rates by Lead Source and Rep.
 sampleData:

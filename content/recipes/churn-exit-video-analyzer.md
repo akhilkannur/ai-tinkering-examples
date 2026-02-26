@@ -3,7 +3,6 @@ id: churn-exit-video-analyzer
 category: Retention
 title: Churn Exit Video Analyzer
 tagline: Analyze emotional sentiment in Loom/Video exit surveys.
-time: Batch
 archtype: Processor
 description: >-
   If you ask cancelled users for a video feedback, this agent watches them. It

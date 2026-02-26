@@ -3,7 +3,6 @@ id: geo-targeting-optimizer
 category: Paid Media
 title: Geo-Conversion Optimizer
 tagline: Focus spend on cities that buy.
-time: Quarterly
 archetype: Processor
 description: >-
   Identifies cities or states with the highest conversion rates to refine ad

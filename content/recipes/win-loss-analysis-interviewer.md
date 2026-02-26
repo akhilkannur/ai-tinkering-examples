@@ -3,7 +3,6 @@ id: win-loss-analysis-interviewer
 category: Sales Ops
 title: The Win/Loss Forensics Agent
 tagline: Uncover the real reasons you lost.
-time: Batch
 description: >-
   Sales reps rarely hear the full truth. This agent processes your internal
   'Closed-Lost' notes or researches competitor G2 reviews to uncover the real

@@ -3,7 +3,6 @@ id: email-bounce-rate-monitor
 category: Marketing Ops
 title: Domain Health Watchdog
 tagline: Monitor bounce rates to prevent blacklisting.
-time: Weekly
 archtype: Processor
 description: >-
   Calculates the hard bounce rate per campaign. If it exceeds 2%, it recommends

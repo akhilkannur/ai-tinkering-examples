@@ -3,7 +3,6 @@ id: webinar-attendance-scorer
 category: Marketing Ops
 title: Webinar Engagement Scorer
 tagline: Identify hot leads based on minutes watched.
-time: Batch
 archtype: Processor
 description: >-
   Scores webinar attendees based on how long they stayed and if they asked

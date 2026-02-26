@@ -3,7 +3,6 @@ id: sitemap-health-check
 category: SEO
 title: Sitemap Health Auditor
 tagline: Find broken links and non-indexable pages in your sitemap.
-time: 10 mins
 archetype: Processor
 description: >-
   Parses an XML sitemap file, checks the HTTP status code of every URL, and

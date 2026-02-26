@@ -3,7 +3,6 @@ id: seo-cluster-architect
 category: SEO
 title: The SEO Cluster Architect
 tagline: Build a content cluster that dominates search.
-time: 15 mins
 archetype: Hybrid
 description: >-
   Creates a complete content cluster plan: 1 pillar page + 5 supporting articles

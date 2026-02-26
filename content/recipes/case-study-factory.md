@@ -3,7 +3,6 @@ id: case-study-factory
 category: Sales Ops
 title: The Case Study Factory
 tagline: Turn 10 transcripts into 10 closed deals.
-time: 10 mins
 archetype: Processor
 description: >-
   Sales teams need social proof. This agent reads a folder of interview

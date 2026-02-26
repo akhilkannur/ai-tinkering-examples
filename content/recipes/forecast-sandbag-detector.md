@@ -3,7 +3,6 @@ id: forecast-sandbag-detector
 category: Sales Ops
 title: Forecast Integrity Auditor
 tagline: Identify reps who consistently beat their commits by 50%+.
-time: Quarterly
 archetype: Processor
 description: >-
   Compares historical forecast 'commits' against actual results to identify reps

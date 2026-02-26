@@ -3,7 +3,6 @@ id: internal-link-anchor-auditor
 category: SEO
 title: Anchor Text Optimizer
 tagline: Stop using 'Click Here' for your internal links.
-time: Quarterly
 archtype: Processor
 description: >-
   Analyzes internal links to ensure anchor text contains target keywords rather

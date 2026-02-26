@@ -3,7 +3,6 @@ id: meeting-no-show-clusterer
 category: Sales Ops
 title: No-Show Correlation Engine
 tagline: Analyze if certain sources have higher ghosting rates.
-time: Monthly
 archetype: Processor
 description: >-
   Segments meeting outcome data by lead source and day of week to find

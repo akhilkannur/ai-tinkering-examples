@@ -3,7 +3,6 @@ id: referral-program-fraud-check
 category: Customer Success
 title: Referral Fraud Detector
 tagline: Did they refer themselves?
-time: Weekly
 archetype: Processor
 description: >-
   Identifies self-referrals (same IP/Address) or circular referral loops in your

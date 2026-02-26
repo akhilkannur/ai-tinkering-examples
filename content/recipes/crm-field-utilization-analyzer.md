@@ -3,7 +3,6 @@ id: crm-field-utilization-analyzer
 category: Sales Ops
 title: CRM Field Health Check
 tagline: Identify unused or garbage data fields in your CRM.
-time: 10 mins
 archtype: Processor
 description: >-
   Analyzes a CSV export of your CRM records to calculate fill rates for every

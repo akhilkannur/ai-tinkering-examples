@@ -3,7 +3,6 @@ id: keyword-gap-analyst
 category: SEO
 title: The Semantic Cluster Hunter
 tagline: Identify topical authority gaps.
-time: Batch
 description: >-
   Goes beyond keywords to identify missing topical authority. This agent audits 
   competitor content to map their "Semantic Clusters" and identifies exactly 

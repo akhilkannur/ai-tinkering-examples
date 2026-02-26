@@ -3,7 +3,6 @@ id: sales-territory-balancer
 category: Sales Ops
 title: Territory Fairness Balancer
 tagline: Ensure every rep has equal revenue potential.
-time: Quarterly
 archtype: Processor
 description: >-
   Analyzes a list of accounts and their estimated revenue to balance territories

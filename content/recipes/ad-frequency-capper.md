@@ -3,7 +3,6 @@ id: ad-frequency-capper
 category: Paid Media
 title: The Ad Frequency Capper
 tagline: Stop annoying your prospects.
-time: Weekly
 archetype: Processor
 description: >-
   Ad fatigue kills ROI. This agent tracks the relationship between 'Frequency'

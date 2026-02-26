@@ -3,7 +3,6 @@ id: rfp-responder
 category: Lead Gen
 title: The RFP Responder
 tagline: Draft complex proposals instantly.
-time: Batch
 description: >-
   Responding to RFPs is a time-sink. This agent processes a list of RFP
   requirements and auto-drafts structured responses based on your standard

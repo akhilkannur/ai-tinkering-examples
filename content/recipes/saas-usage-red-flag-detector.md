@@ -3,7 +3,6 @@ id: saas-usage-red-flag-detector
 category: Sales Ops
 title: Zombie Account Hunter
 tagline: Paying but not logging in?
-time: Monthly
 archetype: Processor
 description: Flags accounts with active contracts but <10% active users (high churn risk).
 sampleData:

@@ -3,7 +3,6 @@ id: builtwith-tech-pivot
 category: Sales Ops
 title: The Tech Displacement Factory
 tagline: Find every user of 10 competitors in one run.
-time: Weekly
 archetype: Processor
 description: >-
   BuiltWith reports are noisy. This agent reads a list of target technologies

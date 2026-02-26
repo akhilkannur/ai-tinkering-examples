@@ -3,7 +3,6 @@ id: campaign-cost-per-opportunity
 category: Marketing Ops
 title: Campaign Efficiency Scorer
 tagline: Calculate Cost-per-Opportunity (CPO).
-time: Weekly
 archetype: Processor
 description: >-
   Links campaign spend to resulting opportunities to find the most efficient

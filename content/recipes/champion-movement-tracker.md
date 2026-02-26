@@ -3,7 +3,6 @@ id: champion-movement-tracker
 category: Sales Ops
 title: Champion Job Change Tracker
 tagline: Detect when previous buyers move to new companies.
-time: Monthly
 archetype: Processor
 description: >-
   Compares a list of known 'Champions' (previous buyers) against a new contact

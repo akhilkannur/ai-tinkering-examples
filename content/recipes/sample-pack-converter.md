@@ -3,7 +3,6 @@ id: sample-pack-converter
 category: E-commerce
 title: Sample to Full-Size Converter
 tagline: Upsell sample buyers to the real deal.
-time: Weekly
 archetype: Processor
 description: >-
   Tracks users who bought a 'Sample Pack' 14 days ago and flags them for a

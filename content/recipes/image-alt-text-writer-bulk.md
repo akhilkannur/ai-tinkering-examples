@@ -3,7 +3,6 @@ id: image-alt-text-writer-bulk
 category: Content Ops
 title: The Bulk Alt Text Writer
 tagline: Accessibility at scale.
-time: Batch
 description: >-
   Missing alt text hurts SEO and accessibility. This agent takes a list of image
   filenames and context to generate descriptive, keyword-rich alt text for

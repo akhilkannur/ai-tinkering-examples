@@ -3,7 +3,6 @@ id: price-variance-auditor
 category: Sales Ops
 title: Price Integrity Auditor
 tagline: Identify deals sold below standard list price.
-time: Monthly
 archetype: Processor
 description: >-
   Compares actual 'Sold Price' against the 'Standard List Price' to find

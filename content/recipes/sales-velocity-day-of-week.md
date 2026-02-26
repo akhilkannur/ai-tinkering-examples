@@ -3,7 +3,6 @@ id: sales-velocity-day-of-week
 category: CRO
 title: Peak Sales Timer
 tagline: Best day to send emails?
-time: Quarterly
 archetype: Processor
 description: >-
   Identifies the day of the week with the highest average sales velocity to

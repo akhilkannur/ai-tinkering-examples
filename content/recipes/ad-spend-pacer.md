@@ -3,7 +3,6 @@ id: ad-spend-pacer
 category: Paid Media
 title: The Ad Spend Pacer
 tagline: Land exactly on budget.
-time: Daily
 archetype: Processor
 description: >-
   Overspending gets you fired. Underspending gets you yelled at. This agent

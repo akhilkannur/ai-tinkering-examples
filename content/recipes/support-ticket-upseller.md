@@ -3,7 +3,6 @@ id: support-ticket-upseller
 category: Sales Ops
 title: The Support Upseller
 tagline: Turn complaints into cash.
-time: Weekly
 description: >-
   Your support tickets are full of people asking for features they don't have.
   This agent scans ticket history for keywords like 'limit', 'upgrade', or

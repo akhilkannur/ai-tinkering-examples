@@ -3,7 +3,6 @@ id: feature-parity-matrix-builder
 category: Competitive Intel
 title: Feature Parity Bot
 tagline: Auto-update your comparison grid.
-time: Quarterly
 archetype: Processor
 description: >-
   Scrapes 'Pricing' and 'Features' pages to build a binary (Yes/No) comparison

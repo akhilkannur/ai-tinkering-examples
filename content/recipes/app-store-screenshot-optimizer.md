@@ -3,7 +3,6 @@ id: app-store-screenshot-optimizer
 category: SEO
 title: The App Store Screenshot Optimizer
 tagline: 'More downloads, same traffic.'
-time: Batch
 archetype: Hybrid
 description: >-
   Screenshots are your app's billboard. This agent researches top-ranking

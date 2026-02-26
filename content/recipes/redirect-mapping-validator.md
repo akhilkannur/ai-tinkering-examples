@@ -3,7 +3,6 @@ id: redirect-mapping-validator
 category: SEO
 title: Migration Redirect Checker
 tagline: Did the migration actually work?
-time: One-off
 archtype: Processor
 description: Verifies a list of expected redirects against the actual response codes.
 sampleData:

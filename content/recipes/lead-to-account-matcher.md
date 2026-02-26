@@ -3,7 +3,6 @@ id: lead-to-account-matcher
 category: Sales Ops
 title: Lead-to-Account Matcher
 tagline: Auto-associate leads with existing accounts via domain.
-time: Daily
 archtype: Processor
 description: >-
   Fuzzy matches incoming leads to existing account records to prevent duplicate

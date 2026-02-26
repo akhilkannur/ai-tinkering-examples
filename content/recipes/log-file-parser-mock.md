@@ -3,7 +3,6 @@ id: log-file-parser-mock
 category: SEO
 title: The Log File Analyzer
 tagline: What is Googlebot doing?
-time: Batch
 description: >-
   Server logs reveal the truth. This agent processes raw server logs to count
   how many times Googlebot hit specific pages, identifying 'Crawl Waste' and

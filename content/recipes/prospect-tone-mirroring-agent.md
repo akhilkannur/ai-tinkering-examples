@@ -3,7 +3,6 @@ id: prospect-tone-mirroring-agent
 category: Sales Ops
 title: Sales Email Tone Mirror
 tagline: Match your prospect's communication style instantly.
-time: Real-time
 archtype: Processor
 description: >-
   Pastes in the prospect's last 3 emails. Detects if they are "Direct/Brief",

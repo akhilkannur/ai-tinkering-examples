@@ -3,7 +3,6 @@ id: viral-loop-architect
 category: CRO
 title: The Growth Loop Architect
 tagline: Design referral engines for every user segment.
-time: 30 mins
 isPremium: true
 description: >-
   A single referral program isn't enough. This agent reads a list of user

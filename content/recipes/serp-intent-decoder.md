@@ -3,7 +3,6 @@ id: serp-intent-decoder
 category: SEO
 title: The SERP Intent Decoder
 tagline: Crack Google's psychological code.
-time: Real-time
 description: >-
   Stop guessing what content to write. This agent analyzes the top ranking pages
   for your target keyword to decode exactly what format, length, and angle

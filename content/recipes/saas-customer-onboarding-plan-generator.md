@@ -3,7 +3,6 @@ id: saas-customer-onboarding-plan-generator
 category: Customer Success
 title: The Usage-Based Nudge
 tagline: Send the right email at the right time based on user behavior.
-time: Daily
 archetype: Processor
 description: >-
   Static onboarding sequences fail because they don't know what the user has

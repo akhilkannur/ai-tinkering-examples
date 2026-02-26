@@ -3,7 +3,6 @@ id: lead-routing-rule-conflict-detector
 category: Sales Ops
 title: Routing Conflict Detector
 tagline: Does this lead match two reps?
-time: Weekly
 archetype: Processor
 description: >-
   Simulates lead routing rules to find scenarios where a single lead matches

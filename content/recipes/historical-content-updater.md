@@ -3,7 +3,6 @@ id: historical-content-updater
 category: SEO
 title: Historical Content Updater
 tagline: Find old blog posts that are easy wins for traffic.
-time: Batch
 archetype: Researcher
 description: >-
   Identifies posts older than 1 year with declining traffic but high

@@ -3,7 +3,6 @@ id: enrichment-match-calculator
 category: Sales Ops
 title: The Data Health Auditor
 tagline: Don't pay for empty cells. Audit vendor performance.
-time: One-off
 archetype: Processor
 description: >-
   Data vendors over-promise and under-deliver. This agent audits your enriched

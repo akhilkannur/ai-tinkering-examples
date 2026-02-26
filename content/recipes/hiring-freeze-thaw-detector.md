@@ -3,7 +3,6 @@ id: hiring-freeze-thaw-detector
 category: Lead Gen
 title: The Freeze Thaw Detector
 tagline: Identify companies that just resumed hiring after a freeze.
-time: Weekly
 archetype: Researcher
 description: >-
   Companies that stop hiring freeze budgets. Companies that *resume* hiring just

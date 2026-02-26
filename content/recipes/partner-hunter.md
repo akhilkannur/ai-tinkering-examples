@@ -3,7 +3,6 @@ id: partner-program-hunter
 category: Strategic Ops
 title: The Partner Hunter Fleet
 tagline: Find 100 non-competing partners at once.
-time: Continuous
 description: >-
   Why sell 1-to-1 when you can sell 1-to-many? This agent reads a list of
   adjacent tool categories from a CSV, identifies the top 5 players in each, and

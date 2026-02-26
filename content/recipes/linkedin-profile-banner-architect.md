@@ -3,7 +3,6 @@ id: linkedin-profile-banner-architect
 category: Content Ops
 title: The LinkedIn Banner Architect
 tagline: Build a high-converting profile banner.
-time: Batch
 description: >-
   Your banner is prime real estate. This agent researches your niche and target
   audience to design text-based visual briefs for banners that state your value

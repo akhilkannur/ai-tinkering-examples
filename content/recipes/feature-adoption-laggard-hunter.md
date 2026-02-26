@@ -3,7 +3,6 @@ id: feature-adoption-laggard-hunter
 category: Customer Success
 title: Adoption Gap Hunter
 tagline: Find clients not using the features they paid for.
-time: Monthly
 archtype: Processor
 description: >-
   Compares purchased features vs actual usage to find accounts needing more

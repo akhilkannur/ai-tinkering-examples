@@ -3,7 +3,6 @@ id: help-center-gap-finder
 category: Competitive Intel
 title: The Help Center Forensic Agent
 tagline: Spot competitor flaws in their support docs.
-time: Batch
 description: >-
   Support documentation reveals the truth. This agent researches competitor Help
   Centers to identify which features require the most 'Troubleshooting' guides,

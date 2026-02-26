@@ -3,7 +3,6 @@ id: field-dinner-nomination-logic
 category: Strategic Ops
 title: VIP Dinner Selector
 tagline: Who gets the steak dinner?
-time: Batch
 archetype: Processor
 description: >-
   Scores prospects in a city based on Title (CXO) and Account Tier to nominate

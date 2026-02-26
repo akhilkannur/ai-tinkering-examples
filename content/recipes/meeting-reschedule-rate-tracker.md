@@ -3,7 +3,6 @@ id: meeting-reschedule-rate-tracker
 category: Sales Ops
 title: The Calendar Defender
 tagline: Quantify the cost of flakes and enforce a 'Deposit' policy.
-time: Weekly
 archetype: Processor
 description: >-
   A 20% flake rate costs you 10 hours a month in wasted prep. This agent

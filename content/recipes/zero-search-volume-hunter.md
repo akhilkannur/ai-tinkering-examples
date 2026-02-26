@@ -3,7 +3,6 @@ id: zero-search-volume-hunter
 category: SEO
 title: The Zero-Volume Hunter
 tagline: Rank for keywords tools ignore.
-time: Batch
 description: >-
   SEO tools are often wrong about volume. This agent identifies 'Zero Volume'
   keywords that actually have high intent and low competition, perfect for

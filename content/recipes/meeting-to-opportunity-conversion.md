@@ -3,7 +3,6 @@ id: meeting-to-opportunity-conversion
 category: Sales Ops
 title: Meeting-to-Opp Converter
 tagline: Track % of first meetings that become deals.
-time: Monthly
 archetype: Processor
 description: >-
   Calculates the conversion rate between 'First Meeting' activity and

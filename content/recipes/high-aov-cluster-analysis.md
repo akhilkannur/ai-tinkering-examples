@@ -3,7 +3,6 @@ id: high-aov-cluster-analysis
 category: E-commerce
 title: Whale Hunter (High AOV)
 tagline: Where do the big spenders come from?
-time: Monthly
 archetype: Processor
 description: >-
   Finds the common acquisition channels for customers with Order Value > $200

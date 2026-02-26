@@ -3,7 +3,6 @@ id: ceo-podcast-tour-tracker
 category: Lead Gen
 title: The Podcast Tour Stalker
 tagline: Find CEOs appearing on podcasts to pitch PR or related services.
-time: 30 mins
 archetype: Researcher
 description: >-
   Executives go on podcast tours to promote something (a book, a round of

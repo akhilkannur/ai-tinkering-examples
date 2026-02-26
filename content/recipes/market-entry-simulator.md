@@ -3,7 +3,6 @@ id: market-entry-simulator
 category: Strategic Ops
 title: New Market Entry Simulator
 tagline: Roleplay a launch in a new country or vertical.
-time: Real-time
 archtype: Hybrid
 description: >-
   Simulates the regulatory, cultural, and competitive friction of entering a new

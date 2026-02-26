@@ -3,7 +3,6 @@ id: event-lead-uploader
 category: Marketing Ops
 title: Conference Scan Cleaner
 tagline: Format messy badge scans for CRM import.
-time: Ad-hoc
 archtype: Processor
 description: >-
   Cleans up a CSV from a badge scanner (splitting names, formatting phones) for

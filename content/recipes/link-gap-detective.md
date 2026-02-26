@@ -3,7 +3,6 @@ id: link-gap-detective
 category: SEO
 title: The Link Gap Detective
 tagline: Find missing backlink opportunities.
-time: Batch
 description: >-
   Why do they rank and you don't? Links. This agent identifies websites that
   link to your competitors (or list 'Best Tools') but haven't linked to you yet,

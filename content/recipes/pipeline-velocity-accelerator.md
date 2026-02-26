@@ -3,7 +3,6 @@ id: pipeline-velocity-accelerator
 category: Sales Ops
 title: Slow Deal Accelerator
 tagline: Wake up deals moving slower than average.
-time: Weekly
 archetype: Processor
 description: >-
   Identifies deals that are currently moving slower than the historical average

@@ -3,7 +3,6 @@ id: time-to-value-tracker
 category: Customer Success
 title: The Onboarding Bottleneck Finder
 tagline: Pinpoint the exact step where users get stuck.
-time: Monthly
 archetype: Processor
 description: >-
   Total "Time to Value" is a lagging indicator. This agent breaks down your

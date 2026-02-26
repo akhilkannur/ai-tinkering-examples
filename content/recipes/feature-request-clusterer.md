@@ -3,7 +3,6 @@ id: feature-request-clusterer
 category: Strategic Ops
 title: Feedback Cluster Engine
 tagline: 'Group 1,000 feedback tickets into 5 features.'
-time: Weekly
 archtype: Processor
 description: >-
   Uses keyword matching to group loose user feedback into feature buckets (e.g.,

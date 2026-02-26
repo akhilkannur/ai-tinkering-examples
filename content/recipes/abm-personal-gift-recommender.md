@@ -3,7 +3,6 @@ id: abm-personal-gift-recommender
 category: Marketing Ops
 title: ABM Personal Gift Recommender
 tagline: 'Send gifts they actually keep, not just swag.'
-time: Batch
 archetype: Hybrid
 description: >-
   Researches a prospect's Twitter/LinkedIn interests (e.g., "Coffee", "Golf",

@@ -3,7 +3,6 @@ id: newsletter-list-cleaner
 category: Strategic Ops
 title: List Hygiene Scrub
 tagline: Remove role-based and disposable emails.
-time: Weekly
 archtype: Processor
 description: >-
   Audits your subscriber list to remove invalid emails like `support@` or

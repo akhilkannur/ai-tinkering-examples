@@ -3,7 +3,6 @@ id: use-case-matrix
 category: Strategic Ops
 title: The Use Case Matrix Builder
 tagline: Map features to pain points.
-time: One-off
 archetype: Processor
 description: >-
   Sales reps pitch features; they should pitch solutions. This agent takes a

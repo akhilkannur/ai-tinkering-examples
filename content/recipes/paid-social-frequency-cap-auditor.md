@@ -3,7 +3,6 @@ id: paid-social-frequency-cap-auditor
 category: Marketing Ops
 title: Ad Fatigue Auditor
 tagline: Identify campaigns with dangerously high frequency.
-time: Daily
 archetype: Processor
 description: >-
   Checks ad delivery logs to flag campaigns where average frequency exceeds

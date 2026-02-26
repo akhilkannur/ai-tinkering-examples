@@ -3,7 +3,6 @@ id: discount-vs-duration-correlation
 category: Sales Ops
 title: Discount Efficiency Auditor
 tagline: Are we getting longer terms for lower prices?
-time: Quarterly
 archetype: Processor
 description: >-
   Checks if deals with high discounts actually result in longer contract

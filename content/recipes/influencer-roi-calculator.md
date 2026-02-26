@@ -3,7 +3,6 @@ id: influencer-roi-calculator
 category: Strategic Ops
 title: The Creator Economy Auditor
 tagline: Separate the 'Performers' from the 'Posers'.
-time: Campaign End
 archetype: Processor
 description: >-
   Vanity metrics (Likes) rarely correlate with Wallet metrics (Sales). This

@@ -3,7 +3,6 @@ id: qbr-deck-generator-auto
 category: Customer Success
 title: QBR Deck Generator
 tagline: Build a Quarterly Business Review deck in minutes.
-time: Batch
 archetype: Processor
 description: >-
   Ingests usage data and ROI metrics. Generates the text for a 5-slide QBR:

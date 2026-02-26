@@ -3,7 +3,6 @@ id: lead-routing-latency-histogram
 category: Marketing Ops
 title: Routing Latency Auditor
 tagline: Measure delays in lead assignment.
-time: Weekly
 archetype: Processor
 description: >-
   Analyzes the time gap between 'Lead Created' and 'Owner Assigned' to find

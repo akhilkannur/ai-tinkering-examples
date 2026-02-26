@@ -3,7 +3,6 @@ id: social-engagement-rate-calculator
 category: Content Ops
 title: Engagement Truth Teller
 tagline: Vanity metrics vs Real engagement.
-time: Weekly
 archtype: Processor
 description: >-
   Calculates the engagement rate (Likes + Comments / Followers) for a set of

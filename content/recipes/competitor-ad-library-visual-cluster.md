@@ -3,7 +3,6 @@ id: competitor-ad-library-visual-cluster
 category: Paid Media
 title: Competitor Ad Style Clusterer
 tagline: Group 100s of competitor ads by visual theme automatically.
-time: Batch
 archtype: Researcher
 description: >-
   Downloads images from Ad Library, then uses embeddings to cluster them (e.g.,

@@ -3,7 +3,6 @@ id: currency-exchange-normalizer
 category: Sales Ops
 title: Global Pipeline Normalizer
 tagline: Convert global deals into a single master currency.
-time: Weekly
 archtype: Processor
 description: >-
   Converts a multi-currency pipeline CSV into a standard USD report for

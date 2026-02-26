@@ -3,7 +3,6 @@ id: pitch-deck-red-team
 category: Strategic Ops
 title: The VC Pitch Deck Roast
 tagline: Simulate a ruthless VC tearing apart your slide deck.
-time: Real-time
 archtype: Processor
 description: >-
   Upload your pitch deck text. The agent adopts the persona of a cynical Series

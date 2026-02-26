@@ -3,7 +3,6 @@ id: first-vs-last-touch-comparison
 category: Marketing Ops
 title: Attribution Model Comparer
 tagline: Compare channel performance across different models.
-time: Monthly
 archetype: Processor
 description: >-
   Calculates ROI for marketing channels using both First-Touch and Last-Touch

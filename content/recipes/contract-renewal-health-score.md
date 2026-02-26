@@ -3,7 +3,6 @@ id: contract-renewal-health-score
 category: Sales Ops
 title: Pre-Renewal Health Check
 tagline: 90-day warning system.
-time: Weekly
 archetype: Processor
 description: >-
   Calculates a specific health score that only triggers 90 days before renewal

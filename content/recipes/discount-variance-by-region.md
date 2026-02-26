@@ -3,7 +3,6 @@ id: discount-variance-by-region
 category: Sales Ops
 title: Regional Discount Auditor
 tagline: Find territories discounting more than the average.
-time: Monthly
 archetype: Processor
 description: >-
   Calculates average discount rates by region to identify outliers and margin

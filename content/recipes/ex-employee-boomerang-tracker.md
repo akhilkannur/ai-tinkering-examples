@@ -3,7 +3,6 @@ id: ex-employee-boomerang-tracker
 category: Lead Gen
 title: The Alumni Boomerang
 tagline: Find former employees who joined target accounts.
-time: 20 mins
 archetype: Researcher
 description: >-
   Your company's former employees are your secret weapon. They know your

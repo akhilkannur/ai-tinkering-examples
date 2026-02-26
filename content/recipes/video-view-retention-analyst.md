@@ -3,7 +3,6 @@ id: video-view-retention-analyst
 category: Marketing Ops
 title: Video Drop-off Auditor
 tagline: Where do they stop watching?
-time: Monthly
 archetype: Processor
 description: >-
   Analyzes drop-off timestamps in product demo videos to identify boring

@@ -3,7 +3,6 @@ id: competitor-spy
 category: Competitive Intel
 title: The Market Spy
 tagline: Deep Competitor Analysis.
-time: 15 mins
 archetype: Researcher
 description: >-
   Researches your competitors and builds battle cards with their pricing,

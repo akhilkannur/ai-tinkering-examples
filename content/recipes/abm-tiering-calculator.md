@@ -3,7 +3,6 @@ id: abm-tiering-calculator
 category: Sales Ops
 title: ABM Account Tiering Calc
 tagline: Auto-assign Tier 1/2/3 based on ICP fit and intent.
-time: Quarterly
 archtype: Processor
 description: >-
   Analyzes firmographic data and intent signals to categorize target accounts

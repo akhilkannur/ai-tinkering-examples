@@ -3,7 +3,6 @@ id: seasonal-inventory-liquidator
 category: E-commerce
 title: End-of-Season Liquidator
 tagline: Clear shelves before the new line drops.
-time: Seasonal
 archetype: Processor
 description: >-
   Identifies seasonal SKUs with high remaining stock to schedule for aggressive

@@ -3,7 +3,6 @@ id: meeting-density-tracker
 category: Sales Ops
 title: Rep Focus Time Tracker
 tagline: Audit calendar data to protect 'Selling Time'.
-time: Weekly
 archtype: Processor
 description: >-
   Analyzes rep calendar data to calculate % of day spent in internal vs external

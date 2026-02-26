@@ -3,7 +3,6 @@ id: onboarding-checklist-completion
 category: Sales Ops
 title: Onboarding Drop-off Audit
 tagline: Where do users get stuck?
-time: Monthly
 archetype: Processor
 description: >-
   Measures the completion rate of each step in the 'Getting Started' checklist

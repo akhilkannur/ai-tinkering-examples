@@ -3,7 +3,6 @@ id: gwp-qualifier
 category: E-commerce
 title: Gift-with-Purchase Qualifier
 tagline: Identify VIPs for surprise gifts.
-time: Batch
 archetype: Processor
 description: >-
   Checks order history or basket value to identify customers eligible for a

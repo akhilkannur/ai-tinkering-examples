@@ -3,7 +3,6 @@ id: win-loss-reason-clusterer
 category: Sales Ops
 title: Win/Loss Reason Analyzer
 tagline: Turn messy CRM notes into clean win/loss insights.
-time: Monthly
 archtype: Processor
 description: >-
   Clusters qualitative CRM reason notes into standardized categories for

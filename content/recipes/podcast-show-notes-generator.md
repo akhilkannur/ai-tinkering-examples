@@ -3,7 +3,6 @@ id: podcast-show-notes-generator
 category: Content Ops
 title: The Chapter & Timestamp Architect
 tagline: Don't just summarize. Create clickable 'YouTube Chapters' automatically.
-time: 10 mins
 archetype: Processor
 description: >-
   Podcasts without timestamps lose 40% of listeners. This agent scans your

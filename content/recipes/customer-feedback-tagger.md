@@ -3,7 +3,6 @@ id: customer-feedback-tagger
 category: Strategic Ops
 title: Feedback Auto-Tagger
 tagline: Organize messy user feedback into a clean product roadmap.
-time: 5 mins
 archetype: Processor
 description: >-
   Reads a CSV of random user comments (from emails, surveys, or Slack) and tags

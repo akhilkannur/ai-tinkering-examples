@@ -3,7 +3,6 @@ id: video-testimonial-script
 category: Strategic Ops
 title: The Video Testimonial Director
 tagline: Help your clients help you.
-time: Batch
 description: >-
   Clients freeze up on camera. This agent generates personalized 'Interview
   Guides' for your happy customers, giving them simple questions to answer so

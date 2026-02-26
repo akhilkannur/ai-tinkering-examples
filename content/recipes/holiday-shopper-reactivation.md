@@ -3,7 +3,6 @@ id: holiday-shopper-reactivation
 category: Retention
 title: Holiday Shopper Wake-Up
 tagline: Re-engage Black Friday-only buyers.
-time: Yearly
 archetype: Processor
 description: >-
   Segments users who *only* purchase during Q4 (Black Friday/Cyber Monday) for

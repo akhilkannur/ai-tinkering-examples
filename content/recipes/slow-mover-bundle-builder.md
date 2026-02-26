@@ -3,7 +3,6 @@ id: slow-mover-bundle-builder
 category: E-commerce
 title: Dead Stock Bundler
 tagline: Clear stale inventory by bundling.
-time: Quarterly
 archetype: Processor
 description: >-
   Identifies low-velocity items (Dead Stock) and pairs them with high-velocity

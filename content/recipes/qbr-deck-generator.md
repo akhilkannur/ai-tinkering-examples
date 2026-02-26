@@ -3,7 +3,6 @@ id: qbr-deck-generator
 category: Customer Success
 title: The QBR Strategist
 tagline: Don't just report numbers. Tell a story of Value vs. Friction.
-time: Quarterly
 archetype: Hybrid
 description: >-
   Most QBRs are boring. This agent analyzes raw Usage Logs and Support Tickets

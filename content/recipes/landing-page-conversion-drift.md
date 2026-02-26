@@ -3,7 +3,6 @@ id: landing-page-conversion-drift
 category: Marketing Ops
 title: LP Conversion Drift Monitor
 tagline: Catch sudden drops in landing page conversion rates.
-time: Daily
 archetype: Processor
 description: >-
   Compares daily landing page conversion rates against a 7-day rolling average

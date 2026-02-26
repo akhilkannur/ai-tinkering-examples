@@ -3,7 +3,6 @@ id: press-release-partnership-scanner
 category: Lead Gen
 title: The Partnership Announcement Alert
 tagline: Find companies announcing new strategic partnerships.
-time: Daily
 archetype: Researcher
 description: >-
   When Company A partners with Company B, they are both in "Growth/BD Mode."

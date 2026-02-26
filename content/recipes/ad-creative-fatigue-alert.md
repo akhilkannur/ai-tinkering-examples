@@ -3,7 +3,6 @@ id: ad-creative-fatigue-alert
 category: Paid Media
 title: Creative Fatigue Watchdog
 tagline: Know when your ads stop working.
-time: Weekly
 archetype: Processor
 description: >-
   Flags ad creatives where the Click-Through Rate (CTR) has dropped by 50%

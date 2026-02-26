@@ -3,7 +3,6 @@ id: angel-investor-portfolio-scanner
 category: Lead Gen
 title: The Angel Portfolio Scanner
 tagline: Prospect companies backed by friendly Angel Investors.
-time: 20 mins
 archetype: Researcher
 description: >-
   Angel investors often influence the tech stack of their portfolio companies.

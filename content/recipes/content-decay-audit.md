@@ -3,7 +3,6 @@ id: content-decay-audit
 category: SEO
 title: Content Decay Detector
 tagline: Find blog posts losing traffic.
-time: Monthly
 archtype: Processor
 description: >-
   Compares organic traffic from 6 months ago vs today to identify pages needing

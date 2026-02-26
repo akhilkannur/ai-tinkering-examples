@@ -3,7 +3,6 @@ id: tweet-screenshot-automation
 category: Marketing Ops
 title: Tweet Screenshot Automation
 tagline: 'Capture perfect, sidebar-free tweet cards.'
-time: Automated
 archetype: Processor
 description: >-
   Stop manually cropping screenshots. This is the exact production workflow we

@@ -3,7 +3,6 @@ id: youtube-chapter-maker
 category: Content Ops
 title: The Chapter Maker
 tagline: Rank for key moments.
-time: Batch
 description: >-
   Google indexes video chapters directly in search results. This agent processes
   your video transcripts, identifies topic shifts, and generates SEO-optimized

@@ -3,7 +3,6 @@ id: competitor-hook-decoder
 category: Competitive Intel
 title: The Competitor Hook Decoder
 tagline: Reverse-engineer the psychology behind their ads.
-time: Weekly
 archetype: Processor
 isPremium: true
 description: >-

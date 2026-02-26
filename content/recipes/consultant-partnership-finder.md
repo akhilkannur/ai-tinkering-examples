@@ -3,7 +3,6 @@ id: consultant-partnership-finder
 category: Lead Gen
 title: The Channel Partner Scout
 tagline: Find implementation partners for specific software.
-time: 20 mins
 archetype: Researcher
 description: >-
   Agencies and consultants are excellent channel partners. This agent finds

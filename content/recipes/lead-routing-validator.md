@@ -3,7 +3,6 @@ id: lead-routing-validator
 category: Sales Ops
 title: The Lead Routing Validator
 tagline: Ensure no lead is left behind.
-time: Weekly
 archetype: Processor
 description: >-
   Leads often fall into 'black holes' due to broken territory logic. This agent

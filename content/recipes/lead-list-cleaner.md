@@ -3,7 +3,6 @@ id: lead-list-cleaner
 category: Sales Ops
 title: The Lead List Cleaner
 tagline: Never bounce an email again.
-time: 5 mins
 archetype: Processor
 description: >-
   30% of purchased leads have dead websites. This checks each company's website

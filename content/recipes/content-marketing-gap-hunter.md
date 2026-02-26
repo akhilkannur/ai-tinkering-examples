@@ -3,7 +3,6 @@ id: content-marketing-gap-hunter
 category: Lead Gen
 title: The Ghost Blog Hunter
 tagline: Find companies with blogs but no recent posts.
-time: 20 mins
 archetype: Researcher
 description: >-
   Companies with abandoned blogs have "content intent" but lack execution. This

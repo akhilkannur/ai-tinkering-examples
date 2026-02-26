@@ -3,7 +3,6 @@ id: churn-exit-interview-analyzer
 category: Customer Success
 title: Churn Reason Aggregator
 tagline: Quantify why customers leave.
-time: Monthly
 archtype: Processor
 description: >-
   Aggregates structured exit survey data to find the top 3 reasons for

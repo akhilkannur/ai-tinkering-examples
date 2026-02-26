@@ -3,7 +3,6 @@ id: oos-traffic-redirector
 category: CRO
 title: OOS Traffic Preserver
 tagline: Don't let Out-of-Stock traffic bounce.
-time: Weekly
 archetype: Processor
 description: >-
   Identifies high-traffic Out-of-Stock pages to set up temporary redirects to

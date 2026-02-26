@@ -3,7 +3,6 @@ id: influencer-code-profitability
 category: E-commerce
 title: Influencer Profit Auditor
 tagline: 'Revenue is vanity, profit is sanity.'
-time: Monthly
 archetype: Processor
 description: >-
   Calculates net profit margin per influencer campaign (Revenue - Commission -

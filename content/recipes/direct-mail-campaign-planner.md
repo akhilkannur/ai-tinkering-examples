@@ -3,7 +3,6 @@ id: direct-mail-campaign-planner
 category: Strategic Ops
 title: The ABM Direct Mail Engine
 tagline: High-impact mailers for your top 100 accounts.
-time: One-off
 description: >-
   Direct mail breaks through the noise. This agent reads a list of target
   accounts and their 'Tier' from a CSV and plans a customized physical mailer

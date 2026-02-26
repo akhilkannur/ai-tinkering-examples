@@ -3,7 +3,6 @@ id: voice-agent-script-improver
 category: Sales Ops
 title: Voice Agent Script Improver
 tagline: Fix the exact moment users hang up on your AI voice agent.
-time: Batch
 archtype: Processor
 description: >-
   Analyzes call logs from Vapi/Bland AI. Identifies the specific script line

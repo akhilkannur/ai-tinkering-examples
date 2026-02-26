@@ -3,7 +3,6 @@ id: trust-badge-tester
 category: CRO
 title: Trust Badge A/B Analyzer
 tagline: Does 'Secure Checkout' actually help?
-time: Batch
 archetype: Processor
 description: >-
   Analyzes A/B test results for different trust badges (Free Shipping vs Secure

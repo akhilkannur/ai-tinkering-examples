@@ -3,7 +3,6 @@ id: linkedin-ghostwriter
 category: Strategic Ops
 title: The LinkedIn Ghostwriter
 tagline: Brain Dump -> Viral Post.
-time: Batch
 description: >-
   Dry ideas don't get reach. This agent transforms your raw brain dumps into
   structured, high-performing LinkedIn posts using viral templates and hook

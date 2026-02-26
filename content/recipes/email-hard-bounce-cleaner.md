@@ -3,7 +3,6 @@ id: email-hard-bounce-cleaner
 category: Marketing Ops
 title: The Hard Bounce Cleaner
 tagline: Protect your sender reputation.
-time: Post-Campaign
 archetype: Processor
 description: >-
   Sending to dead emails kills your deliverability. This agent processes a

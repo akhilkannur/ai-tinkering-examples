@@ -3,7 +3,6 @@ id: content-refresh-detector
 category: SEO
 title: The Portfolio Refresh Engine
 tagline: Revive dead content across 10 domains.
-time: Monthly
 description: >-
   Google punishes stale sites. This agent reads a list of domains from a CSV,
   crawls their sitemaps to find posts older than 12 months, and generates a

@@ -3,7 +3,6 @@ id: linkedin-voice-note-scripter
 category: Sales Ops
 title: LinkedIn Voice DM Scripter
 tagline: Scripts for those 30-second voice notes that actually convert.
-time: Batch
 archetype: Processor
 description: >-
   Reads prospect profile. Writes a 45-second script for you to record as a voice

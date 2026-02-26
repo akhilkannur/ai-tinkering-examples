@@ -3,7 +3,6 @@ id: deal-reg-expiry-alert
 category: Strategic Ops
 title: Deal Reg Expiry Monitor
 tagline: Flag partner deal registrations that are about to expire.
-time: Weekly
 archtype: Processor
 description: >-
   Monitors the 90-day protection window for partner deals and alerts when

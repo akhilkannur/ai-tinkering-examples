@@ -3,7 +3,6 @@ id: churn-cohort-analysis-bot
 category: Sales Ops
 title: Churn Cohort Analyzer
 tagline: Measure churn rate by customer vintage.
-time: Monthly
 archetype: Processor
 description: >-
   Segments churn data by the customer's 'Join Date' to see if newer cohorts are

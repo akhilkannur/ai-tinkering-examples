@@ -3,7 +3,6 @@ id: basket-analysis-market-basket
 category: CRO
 title: Basket Correlation Engine
 tagline: People who buy A also buy B.
-time: Monthly
 archetype: Processor
 description: >-
   Finds correlations between products in the same order to power 'Frequently

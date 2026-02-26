@@ -3,7 +3,6 @@ id: lost-deal-reviver
 category: Sales Ops
 title: The Lost Deal Reviver
 tagline: Re-engage 100 cold leads with 'New News'.
-time: Weekly
 description: >-
   A 'No' 6 months ago might be a 'Yes' today. This agent takes a CSV of leads
   lost due to specific reasons (e.g., 'Missing Feature X') and drafts a

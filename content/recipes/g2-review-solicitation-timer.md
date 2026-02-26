@@ -3,7 +3,6 @@ id: g2-review-solicitation-timer
 category: Customer Success
 title: Perfect Review Timer
 tagline: Ask when they are happiest.
-time: Daily
 archetype: Processor
 description: >-
   Times G2/Capterra review requests for exactly 3 days after a customer gives a

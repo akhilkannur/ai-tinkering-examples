@@ -3,7 +3,6 @@ id: cross-channel-frequency-monitor
 category: Paid Media
 title: Omnichannel Frequency Cap
 tagline: Total ad touches across FB + Google + Email.
-time: Monthly
 archetype: Processor
 description: >-
   Estimates total ad touches per user across multiple channels to prevent global

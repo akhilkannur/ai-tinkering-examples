@@ -3,7 +3,6 @@ id: influencer-coupon-usage-tracker
 category: Paid Media
 title: The Channel Efficiency Analyst
 tagline: Know exactly when to double down or cut the cord.
-time: Monthly
 archetype: Processor
 description: >-
   CPA is the only metric that matters. This agent compares your influencer costs

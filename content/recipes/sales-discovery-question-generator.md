@@ -3,7 +3,6 @@ id: sales-discovery-question-generator
 category: Sales Ops
 title: Discovery Call Scripter
 tagline: 'Generate deep, probing questions specific to your prospect''s role.'
-time: 5 mins
 archetype: Hybrid
 description: >-
   Analyzes a prospect's job title and industry to generate a list of "Discovery

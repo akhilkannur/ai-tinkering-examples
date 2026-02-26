@@ -3,7 +3,6 @@ id: booth-design-checklist
 category: Strategic Ops
 title: The Event Booth Strategist
 tagline: Custom booth checklists for your event portfolio.
-time: Batch
 archetype: Hybrid
 description: >-
   Most trade show booths are invisible. This agent researches your target events

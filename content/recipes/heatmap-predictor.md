@@ -3,7 +3,6 @@ id: heatmap-predictor
 category: CRO
 title: The Heatmap Predictor
 tagline: See where they look before you launch.
-time: Design Phase
 archetype: Processor
 description: >-
   Heatmaps usually require traffic. This agent analyzes a screenshot of your

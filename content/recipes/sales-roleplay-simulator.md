@@ -3,7 +3,6 @@ id: sales-roleplay-simulator
 category: Sales Ops
 title: The Difficult Prospect Simulator
 tagline: Practice your pitch against AI.
-time: Batch
 description: >-
   Sales training is expensive. This agent generates custom 'Persona' briefs and
   grading rubrics for a list of common sales scenarios, allowing your team to

@@ -3,7 +3,6 @@ id: instagram-caption-spacer
 category: Content Ops
 title: The Caption Formatting Factory
 tagline: Format 30 days of social captions in seconds.
-time: Daily
 description: >-
   Instagram destroys formatting. This agent reads a CSV of raw post copy, adds
   invisible line breaks, formats lists with emojis, and organizes hashtags into

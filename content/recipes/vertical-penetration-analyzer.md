@@ -3,7 +3,6 @@ id: vertical-penetration-analyzer
 category: Sales Ops
 title: Vertical Market Penetration
 tagline: How much of the Finance market do we own?
-time: Quarterly
 archetype: Processor
 description: >-
   Calculates market share by comparing 'Customers' vs 'Total Addressable Market'

@@ -3,7 +3,6 @@ id: pricing-change-historian
 category: Competitive Intel
 title: The Pricing Historian
 tagline: Track their inflation.
-time: Batch
 description: >-
   Companies raise prices slowly. This agent researches competitor pricing
   history using web archives to calculate inflation and identify 'Shrinkflation'

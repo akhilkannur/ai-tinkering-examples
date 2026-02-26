@@ -3,7 +3,6 @@ id: internal-link-finder
 category: SEO
 title: The Sitemap Scanner
 tagline: Scan your live sitemap to find 'Orphan' link opportunities.
-time: Weekly
 archetype: Hybrid
 description: >-
   Don't maintain a manual content inventory. This agent crawls your live

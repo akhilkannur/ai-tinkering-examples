@@ -3,7 +3,6 @@ id: email-dns-auditor
 category: Marketing Ops
 title: The Bulk Deliverability Auditor
 tagline: Audit the sender reputation of 100 domains.
-time: 10 mins
 description: >-
   Content doesn't matter if your email bounces. This agent reads a list of
   domains from a CSV and uses the `dig` command to verify that SPF, DKIM, and

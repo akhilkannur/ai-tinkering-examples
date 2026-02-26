@@ -3,7 +3,6 @@ id: lp-dead-link-auditor
 category: Marketing Ops
 title: LP Link Auditor
 tagline: Ensure your paid traffic doesn't hit 404s.
-time: Weekly
 archtype: Processor
 description: >-
   Checks all button destination URLs on your landing pages to ensure they are

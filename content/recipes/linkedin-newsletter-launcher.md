@@ -3,7 +3,6 @@ id: linkedin-newsletter-launcher
 category: Content Ops
 title: The LinkedIn Newsletter Launcher
 tagline: Own your audience on-platform.
-time: Batch
 description: >-
   LinkedIn Newsletters notify every connection. This agent helps you launch one
   by defining your niche, naming it, and writing the high-converting launch post

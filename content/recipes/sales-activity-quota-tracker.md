@@ -3,7 +3,6 @@ id: sales-activity-quota-tracker
 category: Sales Ops
 title: Rep Activity Scorecard
 tagline: Automated daily standup report for sales activity.
-time: Daily
 archtype: Processor
 description: >-
   Aggregates a log of calls, emails, and meetings to see which reps are hitting

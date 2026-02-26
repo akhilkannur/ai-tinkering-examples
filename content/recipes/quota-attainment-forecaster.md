@@ -3,7 +3,6 @@ id: quota-attainment-forecaster
 category: Sales Ops
 title: The Quota Forecaster
 tagline: Predict end-of-month landing spots.
-time: Daily
 archetype: Processor
 description: >-
   Don't wait until the 31st to know you missed. This agent calculates 'Run Rate'

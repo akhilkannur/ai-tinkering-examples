@@ -3,7 +3,6 @@ id: sales-team-expansion-signal
 category: Lead Gen
 title: The VP Sales Headhunter
 tagline: Identify companies hiring their first VP of Sales.
-time: 20 mins
 archetype: Researcher
 description: >-
   Hiring a "First VP of Sales" is the most critical milestone for B2B startups.

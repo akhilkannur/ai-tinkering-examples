@@ -3,7 +3,6 @@ id: nps-classifier
 category: Customer Success
 title: The NPS Comment Classifier
 tagline: Turn 'Detractors' into data.
-time: Monthly
 archetype: Processor
 description: >-
   NPS scores are useless without context. This agent reads open-ended NPS

@@ -3,7 +3,6 @@ id: renewal-save-rate-tracker
 category: Customer Success
 title: The Save Playbook Auditor
 tagline: Which retention tactic actually works? (Discount vs Roadmap).
-time: Monthly
 archetype: Processor
 description: >-
   Not all 'Saves' are created equal. This agent analyzes your churn save

@@ -3,7 +3,6 @@ id: orphaned-contact-rehomer
 category: Sales Ops
 title: Orphaned Contact Re-Homer
 tagline: Assign contacts to account owners via domain.
-time: Daily
 archetype: Processor
 description: >-
   Identifies contacts not associated with an account and finds their correct

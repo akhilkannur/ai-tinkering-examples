@@ -3,7 +3,6 @@ title: Tool Directory Manager
 id: tool-directory-manager
 category: Strategic Ops
 tagline: Automated database maintenance for high-volume niche directories.
-time: 5 mins
 archetype: Processor
 description: >-
   The automation we use to keep our 'Tool Directory' fresh. It fetches live CSV

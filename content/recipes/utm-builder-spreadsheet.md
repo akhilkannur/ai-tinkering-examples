@@ -3,7 +3,6 @@ id: utm-builder-spreadsheet
 category: Paid Media
 title: The UTM Builder Formula
 tagline: Standardize your tracking links.
-time: Batch
 description: >-
   Manual tagging causes errors and messy data. This agent processes your entire
   campaign list and generates perfectly formatted, encoded UTM links for every

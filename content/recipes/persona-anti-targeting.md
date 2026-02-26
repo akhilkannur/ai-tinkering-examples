@@ -3,7 +3,6 @@ id: persona-anti-targeting
 category: Strategic Ops
 title: The Anti-Targeting List Builder
 tagline: Who should you NOT sell to?
-time: Quarterly
 archetype: Processor
 description: >-
   Bad leads clog pipelines. This agent analyzes your 'Closed-Lost' and 'High

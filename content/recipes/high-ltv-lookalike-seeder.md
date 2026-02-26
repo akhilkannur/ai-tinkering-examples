@@ -3,7 +3,6 @@ id: high-ltv-lookalike-seeder
 category: Paid Media
 title: LTV Lookalike Seeder
 tagline: Find more customers like your best ones.
-time: Monthly
 archetype: Processor
 description: >-
   Exports the Top 1% of customers by Lifetime Value (LTV) to create a

@@ -3,7 +3,6 @@ id: booth-scan-lead-router
 category: Strategic Ops
 title: Event Lead Router
 tagline: Route badge scans to the right rep.
-time: Batch
 archetype: Processor
 description: >-
   Routes CSV exports from event badge scanners to sales reps based on territory

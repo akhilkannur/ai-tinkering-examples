@@ -3,7 +3,6 @@ id: sales-objection-battlecard-generator
 category: Sales Ops
 title: Competitor Battlecard Builder
 tagline: Arm your sales team with scripts to beat specific competitors.
-time: 15 mins
 archetype: Hybrid
 description: >-
   Researches a competitor's weaknesses (via G2/Capterra reviews) and writes

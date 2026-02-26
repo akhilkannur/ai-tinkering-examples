@@ -3,7 +3,6 @@ id: comment-section-nurturer
 category: Content Ops
 title: The Comment Section Nurturer
 tagline: Turn 'Great post' into a lead.
-time: Batch
 description: >-
   Comments are the highest signal of interest. This agent analyzes a list of
   comments, categorizes them by intent (Fan vs Lead), and drafts replies that

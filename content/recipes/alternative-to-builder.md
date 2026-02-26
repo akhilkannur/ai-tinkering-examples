@@ -3,7 +3,6 @@ id: alternative-to-builder
 category: SEO
 title: The 'Alternative To' Hub Builder
 tagline: Steal traffic from all your competitors at once.
-time: 30 mins
 archetype: Hybrid
 description: >-
   High-intent buyers search for 'Alternatives to [Competitor]'. This agent reads

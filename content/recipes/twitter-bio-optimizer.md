@@ -3,7 +3,6 @@ id: twitter-bio-optimizer
 category: Strategic Ops
 title: The Twitter Bio Optimizer
 tagline: Get followed at a glance.
-time: Batch
 description: >-
   Your bio is your personal landing page. This agent rewrites your Twitter bios
   to include the 'Who', 'What', and 'Proof' elements, ensuring new visitors hit

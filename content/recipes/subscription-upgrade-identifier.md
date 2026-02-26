@@ -3,7 +3,6 @@ id: subscription-upgrade-identifier
 category: Sales Ops
 title: PQL Hunter (Product Qualified Leads)
 tagline: Find free users who hit their limits.
-time: Daily
 archtype: Processor
 description: >-
   Filters user usage data to find accounts hitting >90% of their plan limits,

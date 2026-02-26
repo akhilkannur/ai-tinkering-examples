@@ -3,7 +3,6 @@ id: podcast-guest-pitcher
 category: Content Ops
 title: The Podcast Guest Pitcher
 tagline: Get booked on niche shows.
-time: Batch
 description: >-
   Podcasts are high-trust channels. This agent researches target podcasts,
   analyzes their recent content, and drafts 'Value-First' pitches to hosts for

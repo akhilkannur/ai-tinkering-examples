@@ -3,7 +3,6 @@ id: youtube-comment-lead-miner
 category: Lead Gen
 title: YouTube Comment Lead Miner
 tagline: Turn video comments into qualified leads.
-time: Batch
 archetype: Researcher
 description: >-
   Scrapes comments on your viral video. Filters for intent keywords like

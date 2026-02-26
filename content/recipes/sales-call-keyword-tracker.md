@@ -3,7 +3,6 @@ id: sales-call-keyword-tracker
 category: Sales Ops
 title: Sales Script Compliance
 tagline: Did they say the pricing disclaimer?
-time: Batch
 archtype: Processor
 description: >-
   Scans call transcripts to check if reps mentioned mandatory keywords (e.g.,

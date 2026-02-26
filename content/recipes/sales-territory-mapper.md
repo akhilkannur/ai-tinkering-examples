@@ -3,7 +3,6 @@ id: sales-territory-mapper
 category: Sales Ops
 title: The Territory Mapper
 tagline: Balance your sales map instantly.
-time: Quarterly
 archetype: Processor
 description: >-
   Redistributing territories is a headache. This agent reads a list of customer

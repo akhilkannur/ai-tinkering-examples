@@ -3,7 +3,6 @@ id: influencer-contract-drafter
 category: Strategic Ops
 title: The Influencer Contract Factory
 tagline: Generate 50 creator agreements in one run.
-time: One-off
 description: >-
   Protect your brand at scale. This agent reads a list of influencers and their
   specific deal terms from a CSV and drafts a unique, plain-English agreement

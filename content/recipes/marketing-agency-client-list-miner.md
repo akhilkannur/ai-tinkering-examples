@@ -3,7 +3,6 @@ id: marketing-agency-client-list-miner
 category: Lead Gen
 title: The Portfolio Reverse Engineer
 tagline: Reverse engineer agency portfolios for leads.
-time: 20 mins
 archetype: Researcher
 description: >-
   If a company hires a "Luxury Branding Agency," they have budget for luxury

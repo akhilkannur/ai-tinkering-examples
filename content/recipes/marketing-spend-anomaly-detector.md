@@ -3,7 +3,6 @@ id: marketing-spend-anomaly-detector
 category: Marketing Ops
 title: Ad Spend Spike Alert
 tagline: Catch runaway budgets before they burn 10k.
-time: Daily
 archtype: Processor
 description: >-
   Compares yesterday's ad spend against a moving average. Flags deviations >

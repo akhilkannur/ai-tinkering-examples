@@ -3,7 +3,6 @@ id: technical-seo-doctor
 category: SEO
 title: The AI Search Doctor
 tagline: Technical Audit + AI Search Optimization (GEO)
-time: Batch
 description: >-
   Performs full-site technical audits with a focus on modern AI Search
   Overviews.  This agent checks for standard technical failures while analyzing

@@ -3,7 +3,6 @@ id: state-region-standardizer
 category: Sales Ops
 title: State/Region Standardizer
 tagline: Fix 'Calif' vs 'CA' vs 'California'.
-time: Weekly
 archetype: Processor
 description: Converts various state naming conventions to standard 2-letter ISO codes.
 sampleData:

@@ -3,7 +3,6 @@ id: implementation-stalled-alert
 category: Customer Success
 title: Stalled Project Alert
 tagline: Flag onboarding projects stuck in 'Pending'.
-time: Weekly
 archtype: Processor
 description: >-
   Identifies implementation projects that haven't moved to the next phase in

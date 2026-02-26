@@ -3,7 +3,6 @@ id: topic-cluster-architect
 category: SEO
 title: Topic Cluster Architect
 tagline: Group keywords into pillar pages.
-time: Quarterly
 archetype: Processor
 description: >-
   Groups thousands of keywords into semantic clusters to plan 'Pillar' and

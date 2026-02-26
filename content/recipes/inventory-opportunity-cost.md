@@ -3,7 +3,6 @@ id: inventory-opportunity-cost
 category: E-commerce
 title: The Stockout Alarm
 tagline: Don't just count the loss. Recover it.
-time: Daily
 archetype: Processor
 description: >-
   Stockouts cost more than just the missed sale; they cost customer loyalty.

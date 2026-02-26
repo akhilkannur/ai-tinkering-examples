@@ -3,7 +3,6 @@ id: brand-voice-guidelines
 category: Content Ops
 title: The Brand Voice Architect
 tagline: Stop sounding schizophrenic.
-time: Batch
 archetype: Hybrid
 description: >-
   Different employees write differently. This agent researches your existing

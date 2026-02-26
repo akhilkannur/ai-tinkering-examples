@@ -3,7 +3,6 @@ id: vip-tier-graduation-alert
 category: Retention
 title: VIP Graduation Alert
 tagline: Nudge customers close to the next tier.
-time: Weekly
 archetype: Processor
 description: >-
   Identifies customers who are within $50 of the next loyalty tier to trigger a

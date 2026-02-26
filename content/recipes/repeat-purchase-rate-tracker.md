@@ -3,7 +3,6 @@ id: repeat-purchase-rate-tracker
 category: CRO
 title: Repurchase Rate Monitor
 tagline: '% of new customers who buy again.'
-time: Monthly
 archetype: Processor
 description: >-
   Monitors the percentage of new customers who make a second purchase within a

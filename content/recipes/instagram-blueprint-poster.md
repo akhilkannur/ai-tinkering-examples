@@ -3,7 +3,6 @@ id: instagram-blueprint-poster
 category: Social Media
 title: The Instagram Blueprint Auto-Poster
 tagline: Turn your documentation into viral social cards.
-time: Automatic
 description: >-
   Automatically converts technical blueprints, markdown files, or documentation
   into high-resolution 1080x1080 Instagram cards and publishes them directly to

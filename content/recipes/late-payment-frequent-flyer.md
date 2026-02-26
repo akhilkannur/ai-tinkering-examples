@@ -3,7 +3,6 @@ id: late-payment-frequent-flyer
 category: Sales Ops
 title: Bad Payer List
 tagline: Stop selling to people who don't pay.
-time: Monthly
 archetype: Processor
 description: >-
   Identifies customers who are chronically late on invoices to prevent Sales

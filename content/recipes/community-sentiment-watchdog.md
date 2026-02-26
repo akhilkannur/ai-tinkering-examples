@@ -3,7 +3,6 @@ id: community-sentiment-watchdog
 category: Customer Success
 title: Community Toxicity Monitor
 tagline: Spot toxic trends in Discord/Slack before they explode.
-time: Batch
 archtype: Processor
 description: >-
   Ingests the last 1000 messages from your community general channel. Clusters

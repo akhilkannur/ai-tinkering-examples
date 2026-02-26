@@ -3,7 +3,6 @@ id: ad-counter-strike
 category: Competitive Intel
 title: The Conquest Campaigner
 tagline: Don't just attack their product. Attack their bad reviews.
-time: 25 mins
 archetype: Hybrid
 description: >-
   The best ad hook isn't what you say about yourself; it's what their customers

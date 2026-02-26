@@ -3,7 +3,6 @@ id: loyalty-program-redemption-rate
 category: E-commerce
 title: Loyalty Health Monitor
 tagline: Are points being used?
-time: Quarterly
 archetype: Processor
 description: >-
   Tracks percentage of issued points that are actually redeemed to measure

@@ -3,7 +3,6 @@ id: first-purchase-product-analysis
 category: Paid Media
 title: Gateway Product Analyzer
 tagline: Which product acquires the best customers?
-time: Quarterly
 archetype: Processor
 description: >-
   Identifies the 'Gateway Drug' products that appear most frequently in the

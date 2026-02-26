@@ -3,7 +3,6 @@ id: revenue-leakage-hunter
 category: Sales Ops
 title: Revenue Leakage Audit
 tagline: Find users active on the platform without a contract.
-time: Monthly
 archtype: Processor
 description: >-
   Cross-references platform login logs against active CRM contracts to find

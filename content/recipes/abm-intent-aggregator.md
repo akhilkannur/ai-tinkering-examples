@@ -3,7 +3,6 @@ id: abm-intent-aggregator
 category: Marketing Ops
 title: Intent Signal Aggregator
 tagline: 'Combine G2, 6sense, and Website visits.'
-time: Daily
 archtype: Processor
 description: >-
   Aggregates multiple intent data sources into a single account-level 'Heat

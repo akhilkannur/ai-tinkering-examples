@@ -3,7 +3,6 @@ id: programmatic-seo-builder
 category: SEO
 title: The P-SEO Research Enricher
 tagline: Don't write empty templates. Enrich your pages with live data (Wiki/Web).
-time: One-off
 archetype: Hybrid
 description: >-
   Thin content gets penalized. This agent takes a simple list of targets (e.g.,

@@ -5,7 +5,6 @@ title: Quota Scenario Planner
 tagline: >-
   Don't just calculate one path. Compare 'High Volume' vs 'High Skill'
   strategies.
-time: 5 mins
 archetype: Processor
 description: >-
   Most calculators just tell you to "make more calls." This agent models three

@@ -3,7 +3,6 @@ id: utm-taxonomy-enforcer
 category: Marketing Ops
 title: UTM Taxonomy Auditor
 tagline: Standardize your tracking URLs and fix messy analytics data.
-time: 5 mins
 archetype: Processor
 description: >-
   Reads a list of campaign URLs and validates them against strict naming

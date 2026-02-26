@@ -3,7 +3,6 @@ id: influencer-share-verification
 category: Strategic Ops
 title: Influencer Compliance Check
 tagline: Did they actually post it?
-time: Weekly
 archetype: Processor
 description: >-
   Verifies if a paid influencer actually posted the agreed content by checking

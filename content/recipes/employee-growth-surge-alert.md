@@ -3,7 +3,6 @@ id: employee-growth-surge-alert
 category: Lead Gen
 title: The Hyper-Growth Radar
 tagline: Alert when headcount grows >20% in a quarter.
-time: Monthly
 archetype: Researcher
 description: >-
   Headcount growth is the #1 proxy for revenue growth and budget availability.

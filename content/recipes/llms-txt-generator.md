@@ -3,7 +3,6 @@ id: llms-txt-generator
 category: SEO Ops
 title: LLMS.txt Generator for AI Agents
 tagline: Help AI bots understand your site by generating a /llms.txt file.
-time: 5 mins
 archetype: Processor
 description: >-
   Scans your documentation and key pages to create a structured text file

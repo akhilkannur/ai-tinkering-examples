@@ -3,7 +3,6 @@ id: quote-line-item-validator
 category: Sales Ops
 title: Product SKU Integrity Checker
 tagline: Ensure reps don't quote incompatible SKUs.
-time: Daily
 archtype: Processor
 description: >-
   Audits draft quotes to ensure they don't contain incompatible product

@@ -125,12 +125,6 @@ export default function ExampleCard({
 
           <div className="pt-4 mt-auto flex items-center justify-between border-t-2 border-black/10">
              <div className="flex items-center gap-4 text-[10px] font-black font-mono text-black uppercase tracking-tighter">
-                {example.read_time && (
-                  <span className="flex items-center gap-1 bg-punk-lime px-1 border border-black">
-                    <Clock size={10} />
-                    {example.read_time}m
-                  </span>
-                )}
                 <span className="font-bold border border-black px-1 group-hover:bg-[#ccff00] group-hover:text-black transition-colors">Details</span>
              </div>
              <ArrowRight className="w-4 h-4 text-black group-hover:translate-x-1 transition-transform" strokeWidth={3} />

@@ -3,7 +3,6 @@ id: discount-impact-on-ltv
 category: Sales Ops
 title: Discount vs LTV Auditor
 tagline: Does high discounting lead to low LTV?
-time: Quarterly
 archetype: Processor
 description: >-
   Correlates initial contract discounts with long-term customer lifetime value

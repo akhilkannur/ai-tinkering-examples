@@ -3,7 +3,6 @@ id: cto-github-activity-tracker
 category: Lead Gen
 title: The Open Source Stalker
 tagline: Identify technical founders active in specific repos.
-time: 20 mins
 archetype: Researcher
 description: >-
   Developers reveal their tech stack via GitHub stars and forks. This agent

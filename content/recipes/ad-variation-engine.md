@@ -3,7 +3,6 @@ id: ad-variation-engine
 category: Paid Media
 title: The Ad Variation Engine
 tagline: Turn 1 winner into 10 tests.
-time: 10 mins
 archetype: Processor
 description: >-
   Takes one winning ad (yours or a competitor's) and generates 10 high-quality

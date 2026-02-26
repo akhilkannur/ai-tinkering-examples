@@ -3,7 +3,6 @@ id: inactive-contact-archiver
 category: Sales Ops
 title: 'CRM Hygiene: The Reaper'
 tagline: Identify contacts who haven't engaged in 365+ days.
-time: Monthly
 archtype: Processor
 description: >-
   Flags contacts for archival based on 'Last Activity Date' to keep your CRM

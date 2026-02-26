@@ -3,7 +3,6 @@ id: review-request-timer
 category: Retention
 title: Review Request Timer
 tagline: Ask for reviews when they actually get the product.
-time: Daily
 archetype: Processor
 description: >-
   Calculates the optimal review request date by adding 2 days to the actual

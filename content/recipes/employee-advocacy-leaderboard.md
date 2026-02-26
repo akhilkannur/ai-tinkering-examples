@@ -3,7 +3,6 @@ id: employee-advocacy-leaderboard
 category: Strategic Ops
 title: Social Advocacy Leaderboard
 tagline: Who is the loudest brand champion?
-time: Weekly
 archetype: Processor
 description: >-
   Ranks employees by the reach and engagement of their company-related social

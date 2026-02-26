@@ -3,7 +3,6 @@ id: investor-update-email-writer
 category: Lead Gen
 title: Investor Update Writer
 tagline: Write the monthly email that keeps your VCs happy (and helpful).
-time: 5 mins
 archetype: Processor
 description: >-
   Takes your raw monthly metrics (Revenue, Cash, Headcount) and bullet points

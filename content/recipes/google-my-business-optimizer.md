@@ -3,7 +3,6 @@ id: google-my-business-optimizer
 category: Strategic Ops
 title: The GMB Fleet Optimizer
 tagline: Own the map pack for all 50 branches.
-time: Monthly
 description: >-
   Local businesses live or die by Google Maps. This agent reads a list of
   branches from a CSV, audits their Google Business Profiles against local

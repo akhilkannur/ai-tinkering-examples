@@ -3,7 +3,6 @@ id: automated-video-marketing-asset
 category: Content Ops
 title: The Automated Video Producer
 tagline: Turn any landing page into a 30s TikTok/Reels promo video.
-time: 5 mins
 archetype: Processor
 description: >-
   Stop editing videos manually. This agent takes a landing page URL, captures

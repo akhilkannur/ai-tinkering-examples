@@ -3,7 +3,6 @@ id: referral-fraud-detector
 category: Strategic Ops
 title: The Referral Fraud Hunter
 tagline: Stop paying for fake invites.
-time: Batch
 description: >-
   Self-referrals and bot farms kill your program's ROI. This agent analyzes your
   referral logs to flag suspicious behavior - including IP collisions and

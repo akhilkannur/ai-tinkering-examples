@@ -3,7 +3,6 @@ id: swag-inventory-forecaster
 category: Strategic Ops
 title: Swag Demand Planner
 tagline: How many t-shirts do we need?
-time: Batch
 archetype: Processor
 description: >-
   Predicts merchandise needs for an event based on estimated attendee count and

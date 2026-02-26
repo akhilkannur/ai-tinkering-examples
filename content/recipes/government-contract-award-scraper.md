@@ -3,7 +3,6 @@ id: government-contract-award-scraper
 category: Lead Gen
 title: The GovCon Winner
 tagline: Find companies who just won federal contracts.
-time: Weekly
 archetype: Researcher
 description: >-
   Winning a government contract is a massive liquidity event. This agent

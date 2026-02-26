@@ -3,7 +3,6 @@ id: remote-work-transition-hunter
 category: Lead Gen
 title: The Remote First Hunter
 tagline: Find companies switching to "Remote First" policies.
-time: 20 mins
 archetype: Researcher
 description: >-
   Companies switching to "Remote First" need a whole new stack: Async tools,

@@ -3,7 +3,6 @@ id: partner-account-overlap-mapper
 category: Sales Ops
 title: Partner Account Overlap Mapper
 tagline: Find which accounts you and a partner both target.
-time: Batch
 archetype: Processor
 description: >-
   Compares your target account list with a partner's shared list (hashed).

@@ -3,7 +3,6 @@ id: content-download-tracker
 category: Marketing Ops
 title: Lead Magnet Auditor
 tagline: Which PDF is actually generating leads?
-time: Monthly
 archtype: Processor
 description: >-
   Aggregates download counts for all your gated assets to rank them by

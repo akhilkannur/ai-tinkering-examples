@@ -3,7 +3,6 @@ id: tiktok-trend-adapter
 category: Content Ops
 title: The Trend Adapter
 tagline: Adapt TikTok trends to your B2B niche.
-time: Batch
 description: >-
   Trending sounds get views, but how do you use them for SaaS? This agent
   researches current TikTok trends and brainstorms specific ways to adapt them

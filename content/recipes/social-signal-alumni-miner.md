@@ -3,7 +3,6 @@ id: social-signal-alumni-miner
 category: Strategic Ops
 title: Alumni Champion Finder
 tagline: Track where your happy users moved.
-time: Monthly
 archetype: Processor
 description: >-
   Compares a list of 'Former Customer Contacts' against 'Current Employment'

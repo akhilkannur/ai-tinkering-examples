@@ -3,7 +3,6 @@ id: contract-auto-renewal-forecaster
 category: Sales Ops
 title: Auto-Renew Forecaster
 tagline: Predict passive revenue.
-time: Monthly
 archetype: Processor
 description: >-
   Predicts revenue from contracts marked 'Auto-Renew' vs those requiring manual

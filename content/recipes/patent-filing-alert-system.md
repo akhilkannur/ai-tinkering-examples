@@ -3,7 +3,6 @@ id: patent-filing-alert-system
 category: Lead Gen
 title: The R&D Spy
 tagline: Monitor new patent filings for R&D budget signals.
-time: Monthly
 archetype: Researcher
 description: >-
   Companies filing patents are investing heavily in innovation. This agent

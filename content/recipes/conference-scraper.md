@@ -3,7 +3,6 @@ id: conference-scraper
 category: Lead Gen
 title: The Conference Batch Scraper
 tagline: Turn multiple speaker lists into one lead list.
-time: 10 mins
 description: >-
   Events are goldmines. This agent reads a list of event URLs (Speakers page,
   Agenda), extracts every name and company, and consolidates them into one

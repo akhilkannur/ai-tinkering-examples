@@ -3,7 +3,6 @@ id: cold-call-objection-simulator
 category: Sales Ops
 title: Cold Call Simulator (The Grumpy Prospect)
 tagline: Practice handling "I'm not interested" before you pick up the phone.
-time: 5 mins
 archetype: Hybrid
 description: >-
   A roleplay agent that acts as a difficult prospect. It throws common

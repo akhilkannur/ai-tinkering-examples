@@ -3,7 +3,6 @@ id: landing-page-ab-test-significance
 category: Marketing Ops
 title: A/B Test Referee
 tagline: Is Variant B actually better?
-time: Weekly
 archtype: Processor
 description: >-
   Calculates statistical significance for conversion rate differences between

@@ -3,7 +3,6 @@ id: linear-attribution-modeler
 category: Marketing Ops
 title: Linear Attribution Modeler
 tagline: Split revenue credit across all marketing touches.
-time: Monthly
 archtype: Processor
 description: >-
   Analyzes touchpoint logs to assign equal revenue credit to every interaction

@@ -3,7 +3,6 @@ id: pr-crisis-severity-scorer
 category: Strategic Ops
 title: PR Crisis Severity Scorer
 tagline: Decide if you need to wake up the CEO.
-time: Real-time
 archetype: Processor
 description: >-
   Ingests a negative press mention. Scores it based on "Outlet Reach",

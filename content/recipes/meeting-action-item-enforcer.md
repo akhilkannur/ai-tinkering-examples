@@ -3,7 +3,6 @@ id: meeting-action-item-enforcer
 category: Strategic Ops
 title: Meeting Action Item Enforcer
 tagline: The AI project manager that nags you about tasks.
-time: Batch
 archetype: Processor
 description: >-
   Parses meeting transcripts for "I will..." or "Let's...". Creates a checklist.

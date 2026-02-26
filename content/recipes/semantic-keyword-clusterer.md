@@ -3,7 +3,6 @@ id: semantic-keyword-clusterer
 category: SEO
 title: The Keyword Clusterer
 tagline: Group keywords in seconds.
-time: Batch
 description: >-
   Keyword stuffing is dead. This agent takes a raw list of keywords and groups
   them into 'Semantic Clusters' to help you plan Hub & Spoke content strategies

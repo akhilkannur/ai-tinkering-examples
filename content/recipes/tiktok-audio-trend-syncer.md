@@ -3,7 +3,6 @@ id: tiktok-audio-trend-syncer
 category: Content Ops
 title: TikTok Audio Trend Matcher
 tagline: Match your product B-roll to today's trending audio.
-time: Researcher
 archtype: Hybrid
 description: >-
   Identifies top trending audio on TikTok. Suggests which of your product clips

@@ -3,7 +3,6 @@ id: inventory-clearance-campaign
 category: E-commerce
 title: The Inventory Clearance Campaign
 tagline: Turn dead stock into cash.
-time: Batch
 description: >-
   Dead stock kills cash flow. This agent plans 'Mystery Box' or 'Bundle'
   campaigns to move slow-moving SKUs without explicitly devaluing the brand with

@@ -3,7 +3,6 @@ id: inbound-vs-outbound-win-rate
 category: Sales Ops
 title: Win Rate by Origin
 tagline: Compare win rates for Inbound vs Outbound leads.
-time: Monthly
 archetype: Processor
 description: >-
   Calculates distinct win rates for leads originating from marketing (Inbound)

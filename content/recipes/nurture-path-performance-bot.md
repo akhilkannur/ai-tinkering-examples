@@ -3,7 +3,6 @@ id: nurture-path-performance-bot
 category: Marketing Ops
 title: Nurture Path Auditor
 tagline: Compare conversion rates of different nurture sequences.
-time: Monthly
 archetype: Processor
 description: >-
   Compares the path-to-MQL conversion rate for different automated nurture

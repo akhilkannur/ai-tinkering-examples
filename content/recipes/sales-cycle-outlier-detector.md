@@ -3,7 +3,6 @@ id: sales-cycle-outlier-detector
 category: Sales Ops
 title: Sales Cycle Anomaly Hunter
 tagline: Flag deals moving suspiciously fast or slow.
-time: Weekly
 archtype: Processor
 description: >-
   Identifies deals whose age significantly deviates from the historical average

@@ -3,7 +3,6 @@ id: distributor-stock-rotation-logic
 category: Strategic Ops
 title: Stock Rotation Auditor
 tagline: Calculate eligible stock returns for distributors.
-time: Quarterly
 archtype: Processor
 description: >-
   Calculates the maximum eligible dollar amount for stock rotation based on

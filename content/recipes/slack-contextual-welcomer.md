@@ -3,7 +3,6 @@ id: slack-contextual-welcomer
 category: Strategic Ops
 title: Slack Community Contextual Welcomer
 tagline: Welcome new members based on their bio.
-time: Real-time
 archetype: Processor
 description: >-
   Reads the "Intro" channel. If they say "I'm a marketer", reply with link to

@@ -3,7 +3,6 @@ id: lead-aging-alerts
 category: Sales Ops
 title: The Lead Aging Alert System
 tagline: Fresh leads taste better.
-time: Daily
 archetype: Processor
 description: >-
   Leads go cold in 48 hours. This agent scans your 'New' lead queue, identifies

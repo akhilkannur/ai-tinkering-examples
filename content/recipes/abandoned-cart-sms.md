@@ -3,7 +3,6 @@ id: abandoned-cart-sms
 category: Sales Ops
 title: The Abandoned Cart SMS Writer
 tagline: Generate high-converting SMS hooks by analyzing your product page.
-time: Batch
 archetype: Hybrid
 description: >-
   Don't just say "You forgot this." This agent scrapes your product page to find

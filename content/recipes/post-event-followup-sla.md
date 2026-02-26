@@ -3,7 +3,6 @@ id: post-event-followup-sla
 category: Strategic Ops
 title: Event Follow-up Police
 tagline: Did Sales call the leads within 24h?
-time: Daily
 archetype: Processor
 description: >-
   Audits if reps have logged an activity for event leads within 24 hours of the

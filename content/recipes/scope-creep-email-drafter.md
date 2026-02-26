@@ -3,7 +3,6 @@ id: scope-creep-email-drafter
 category: Strategic Ops
 title: The Scope Creep Defender
 tagline: Say 'No' without losing the client.
-time: Batch
 description: >-
   Clients always ask for 'just one small change'. This agent drafts polite but
   firm responses that either decline requests or pivot them into paid 'Change

@@ -3,7 +3,6 @@ id: zapier-logic-architect
 category: Marketing Ops
 title: The Zapier Logic Architect
 tagline: Standardize your no-code workflows.
-time: Batch
 description: >-
   Automation fails at edge cases. This agent designs robust Zapier workflows -
   including filters, formatters, and error handlers - for your entire automation

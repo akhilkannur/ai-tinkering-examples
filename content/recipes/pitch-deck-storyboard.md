@@ -3,7 +3,6 @@ id: pitch-deck-storyboard
 category: Strategic Ops
 title: The Pitch Deck Storyboard
 tagline: Build narratives that raise money.
-time: Batch
 description: >-
   Investors scan decks in 30 seconds. This agent researches your product and
   industry to outline 12-slide storyboards following the 'Sequoia' framework for

@@ -3,7 +3,6 @@ id: retargeting-sequence-planner
 category: Paid Media
 title: The Retargeting Sequence Planner
 tagline: The 'Stalker' ad strategy.
-time: Batch
 description: >-
   98% of visitors don't buy on the first visit. This agent maps out 30-day
   retargeting ad sequences for your entire product catalog, ensuring you stay

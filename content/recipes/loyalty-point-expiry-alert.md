@@ -3,7 +3,6 @@ id: loyalty-point-expiry-alert
 category: Retention
 title: Point Expiry Nudge
 tagline: Create urgency with expiring points.
-time: Monthly
 archetype: Processor
 description: >-
   Flags customers with loyalty points expiring in the next 30 days to drive

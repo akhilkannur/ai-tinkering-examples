@@ -3,7 +3,6 @@ id: ideal-customer-profile-scorer
 category: Sales Ops
 title: ICP Scorer (Lead Grading)
 tagline: 'Automatically grade leads A, B, or C based on your criteria.'
-time: 5 mins
 archetype: Processor
 description: >-
   Reads a CSV of leads and scores them (0-100) based on specific "Ideal Customer

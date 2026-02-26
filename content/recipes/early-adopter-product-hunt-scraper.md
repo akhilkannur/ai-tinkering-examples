@@ -3,7 +3,6 @@ id: early-adopter-product-hunt-scraper
 category: Lead Gen
 title: The Product Hunt Poacher
 tagline: Find leads who upvoted similar tools on Product Hunt.
-time: 15 mins
 archetype: Researcher
 description: >-
   People who upvote "CRM for Freelancers" on Product Hunt are the exact target

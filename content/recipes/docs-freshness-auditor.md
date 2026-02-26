@@ -3,7 +3,6 @@ id: docs-freshness-auditor
 category: Content Ops
 title: Docs Freshness Auditor
 tagline: Flag help articles that reference old UI.
-time: Batch
 archetype: Researcher
 description: >-
   Scans Help Center articles. Checks for dates > 1 year old or mentions of

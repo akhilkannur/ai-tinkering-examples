@@ -3,7 +3,6 @@ id: influencer-payout-calculator
 category: Marketing Ops
 title: Influencer Payout Calc
 tagline: Automate monthly affiliate commissions.
-time: Monthly
 archtype: Processor
 description: >-
   Calculates total commissions owed to influencers based on order logs and

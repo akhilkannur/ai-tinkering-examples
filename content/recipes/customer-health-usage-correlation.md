@@ -3,7 +3,6 @@ id: customer-health-usage-correlation
 category: Customer Success
 title: Usage-to-Health Validator
 tagline: Does high usage actually mean high health?
-time: Monthly
 archetype: Processor
 description: >-
   Verifies health score accuracy by correlating 'Product Logins' with manual 'CS

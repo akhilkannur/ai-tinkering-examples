@@ -3,7 +3,6 @@ id: unboxing-experience-designer
 category: E-commerce
 title: The Unboxing Experience Designer
 tagline: Make them post it on Instagram.
-time: Batch
 description: >-
   The product isn't finished until the customer opens the box. This agent
   designs memorable unboxing experiences for your entire product line to

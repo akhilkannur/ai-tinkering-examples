@@ -3,7 +3,6 @@ id: screenshot-automation
 category: Dev Tools
 title: Automated Screenshot Capture System
 tagline: 'Capture beautiful, consistent screenshots from any URL programmatically.'
-time: 10 mins
 archetype: Processor
 description: >-
   Automatically captures, crops, and beautifies screenshots from URLs for your

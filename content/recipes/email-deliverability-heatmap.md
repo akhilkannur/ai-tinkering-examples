@@ -3,7 +3,6 @@ id: email-deliverability-heatmap
 category: Marketing Ops
 title: ISP Deliverability Heatmap
 tagline: Are we blocked by Outlook?
-time: Weekly
 archetype: Processor
 description: >-
   Tracks open rates segmented by ISP (Gmail vs Outlook vs Corporate) to find

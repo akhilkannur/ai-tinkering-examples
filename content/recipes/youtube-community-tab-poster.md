@@ -3,7 +3,6 @@ id: youtube-community-tab-poster
 category: Content Ops
 title: The Community Tab Poster
 tagline: Keep subscribers alive between uploads.
-time: Batch
 description: >-
   Don't just post videos. This agent plans high-engagement 'Community Tab' posts
   - Polls, Behind-the-Scenes, and Teasers - for your entire YouTube channel

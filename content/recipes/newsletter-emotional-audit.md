@@ -3,7 +3,6 @@ id: newsletter-emotional-audit
 category: Content Ops
 title: Newsletter Vibe Check
 tagline: Make sure your weekly email isn't too depressing.
-time: Real-time
 archtype: Processor
 description: >-
   Analyzes your draft newsletter. Counts "Fear/Urgency" words vs "Hope/Value"

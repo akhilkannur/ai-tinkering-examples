@@ -3,7 +3,6 @@ id: deal-desk-discount-approver
 category: Sales Ops
 title: Discount Guardrails Bot
 tagline: Auto-flag quotes with excessive discounts.
-time: Daily
 archtype: Processor
 description: >-
   Checks a CSV of draft quotes to flag any line items with discounts > 20% for

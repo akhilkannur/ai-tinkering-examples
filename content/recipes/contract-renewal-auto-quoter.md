@@ -3,7 +3,6 @@ id: contract-renewal-auto-quoter
 category: Sales Ops
 title: The Renewal Negotiator
 tagline: Don't send flat renewals. Adjust the offer based on actual utilization.
-time: Monthly
 archetype: Processor
 description: >-
   Blind price increases cause churn. This agent reviews customer utilization

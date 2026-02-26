@@ -3,7 +3,6 @@ id: cac-by-month-tracker
 category: CRO
 title: The Efficiency Hawk
 tagline: Detect when your acquisition engine is breaking.
-time: Monthly
 archetype: Processor
 description: >-
   CAC creeps up slowly, then all at once. This agent monitors your Blended CAC

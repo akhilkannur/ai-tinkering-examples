@@ -3,7 +3,6 @@ id: workspace-consolidation-hunter
 category: Sales Ops
 title: Enterprise Consolidation Hunter
 tagline: Find 50 free users with the same email domain.
-time: Monthly
 archetype: Processor
 description: >-
   Groups individual free users by their email domain to identify shadow IT usage

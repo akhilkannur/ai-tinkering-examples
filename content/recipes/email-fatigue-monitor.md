@@ -3,7 +3,6 @@ id: email-fatigue-monitor
 category: Marketing Ops
 title: Email Fatigue Monitor
 tagline: Prevent unsubscribes by monitoring send frequency.
-time: Weekly
 archtype: Processor
 description: >-
   Calculates how many emails each contact received in the last 30 days to flag

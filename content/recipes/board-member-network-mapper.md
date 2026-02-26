@@ -3,7 +3,6 @@ id: board-member-network-mapper
 category: Lead Gen
 title: The Board Room Infiltrator
 tagline: Map potential intros via board member connections.
-time: 25 mins
 archetype: Researcher
 description: >-
   Board members often sit on multiple boards. This agent maps the web of

@@ -3,7 +3,6 @@ id: twitter-space-scribe
 category: Content Ops
 title: Twitter Space Scribe
 tagline: Turn audio conversations into tweet threads.
-time: Batch
 archetype: Processor
 description: >-
   Takes a transcript of a Twitter Space/Clubhouse. Extracts the "Golden Nuggets"

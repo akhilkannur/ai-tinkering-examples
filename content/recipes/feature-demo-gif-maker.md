@@ -3,7 +3,6 @@ id: feature-demo-gif-maker
 category: Content Ops
 title: Changelog GIF Concept Maker
 tagline: Turn dry changelogs into viral GIF concepts.
-time: Real-time
 archtype: Processor
 description: >-
   Reads your "Release Notes". Outputs a script for a 5-second screen recording

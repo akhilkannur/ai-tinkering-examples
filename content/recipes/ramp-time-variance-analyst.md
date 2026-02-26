@@ -3,7 +3,6 @@ id: ramp-time-variance-analyst
 category: Sales Ops
 title: Ramp Time Cohort Analyst
 tagline: Are Q1 hires faster than Q3 hires?
-time: Quarterly
 archetype: Processor
 description: >-
   Compares the 'Time to Productivity' of sales rep cohorts to evaluate

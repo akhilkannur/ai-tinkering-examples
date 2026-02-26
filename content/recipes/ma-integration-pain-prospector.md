@@ -3,7 +3,6 @@ id: ma-integration-pain-prospector
 category: Lead Gen
 title: The M&A Chaos Hunter
 tagline: Target companies recently acquired or merged.
-time: 30 mins
 archetype: Researcher
 description: >-
   Mergers create chaos. Systems need to be integrated, redundant staff are cut,

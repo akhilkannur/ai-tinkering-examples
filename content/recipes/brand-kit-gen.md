@@ -3,7 +3,6 @@ id: brand-kit-gen
 category: Content Ops
 title: The Instant Brand Architect
 tagline: Logo + Pattern + Vibe.
-time: Batch
 archetype: Processor
 description: >-
   Instantly create cohesive visual identity starter kits for multiple projects.

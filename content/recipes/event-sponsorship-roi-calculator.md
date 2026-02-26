@@ -5,7 +5,6 @@ title: The Booth ROI Predictor
 tagline: >-
   Don't just guess. Model the 'Break-Even' scenario before you sign the
   contract.
-time: 5 mins
 archetype: Processor
 description: >-
   Trade shows are money pits if you don't do the math. This agent takes the

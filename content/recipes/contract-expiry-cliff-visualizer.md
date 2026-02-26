@@ -3,7 +3,6 @@ id: contract-expiry-cliff-visualizer
 category: Sales Ops
 title: Revenue Cliff Visualizer
 tagline: Identify months with dangerous renewal concentration.
-time: Monthly
 archtype: Processor
 description: >-
   Aggregates contract values by expiry month to identify 'cliffs' where a single

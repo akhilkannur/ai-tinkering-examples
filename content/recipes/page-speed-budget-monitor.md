@@ -3,7 +3,6 @@ id: page-speed-budget-monitor
 category: SEO
 title: Speed Budget Enforcer
 tagline: Don't let your site get slow.
-time: Weekly
 archtype: Processor
 description: >-
   Checks a list of page load times against a 'budget' (e.g., 2.5s LCP). Flags

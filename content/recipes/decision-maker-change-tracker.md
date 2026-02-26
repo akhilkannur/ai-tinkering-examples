@@ -3,7 +3,6 @@ id: decision-maker-change-tracker
 category: Lead Gen
 title: The Champion Tracker
 tagline: Track when a Champion leaves a target account.
-time: Weekly
 archetype: Hybrid
 description: >-
   When a decision-maker changes jobs, it creates TWO opportunities: one at their

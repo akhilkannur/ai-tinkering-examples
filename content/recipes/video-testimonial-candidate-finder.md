@@ -3,7 +3,6 @@ id: video-testimonial-candidate-finder
 category: Customer Success
 title: Video Testimonial Scout
 tagline: Turn text reviews into video gold.
-time: Monthly
 archetype: Processor
 description: >-
   Flags customers who left high-sentiment text reviews (>100 words) as prime

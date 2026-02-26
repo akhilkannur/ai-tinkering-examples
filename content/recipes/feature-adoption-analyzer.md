@@ -3,7 +3,6 @@ id: feature-adoption-analyzer
 category: Strategic Ops
 title: The Feature Adoption Analyzer
 tagline: Who is actually using your new tool?
-time: Monthly
 archetype: Processor
 description: >-
   You launched a feature, but did it land? This agent analyzes product usage

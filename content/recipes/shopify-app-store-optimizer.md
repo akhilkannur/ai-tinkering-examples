@@ -3,7 +3,6 @@ id: shopify-app-store-optimizer
 category: E-commerce
 title: The Shopify App Store Optimizer
 tagline: Get found by merchants.
-time: Batch
 description: >-
   The Shopify App Store is a search engine. This agent researches top-ranking
   competitors and audits your app listings to ensure you rank for high-intent

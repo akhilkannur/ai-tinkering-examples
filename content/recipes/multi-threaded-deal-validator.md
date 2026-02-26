@@ -3,7 +3,6 @@ id: multi-threaded-deal-validator
 category: Sales Ops
 title: Single-Thread Risk Detector
 tagline: Flag deals that only have one active contact.
-time: Weekly
 archetype: Processor
 description: >-
   Checks open opportunities to ensure they are 'multi-threaded' (having more

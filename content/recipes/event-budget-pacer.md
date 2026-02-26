@@ -3,7 +3,6 @@ id: event-budget-pacer
 category: Marketing Ops
 title: Event Spend Pacer
 tagline: Track trade show spend against approved budget.
-time: Batch
 archtype: Processor
 description: Reconciles event expenses against a master budget to ensure no overspending.
 sampleData:

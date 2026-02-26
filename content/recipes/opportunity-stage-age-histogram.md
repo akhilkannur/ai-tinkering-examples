@@ -3,7 +3,6 @@ id: opportunity-stage-age-histogram
 category: Sales Ops
 title: Stage Aging Histogram
 tagline: Visualize the distribution of deal age in each stage.
-time: Monthly
 archetype: Processor
 description: >-
   Aggregates open deals by stage and age to create a distribution report of

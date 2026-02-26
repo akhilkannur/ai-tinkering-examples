@@ -5,7 +5,6 @@ title: The Deal Slippage Healer
 tagline: >-
   Don't just flag the slip. Diagnose the root cause with Rep-specific coaching
   questions.
-time: Weekly
 archetype: Processor
 description: >-
   Deals that push 3+ times are 90% likely to be lost. This agent analyzes your

@@ -3,7 +3,6 @@ id: sdr-activity-to-meeting-ratio
 category: Sales Ops
 title: SDR Booking Efficiency
 tagline: Measure calls required to book 1 meeting.
-time: Weekly
 archetype: Processor
 description: >-
   Calculates the booking efficiency of SDRs to find the most effective outreach

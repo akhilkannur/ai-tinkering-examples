@@ -3,7 +3,6 @@ id: okr-drafter
 category: Strategic Ops
 title: The OKR Architect
 tagline: Draft team goals from your vision or industry benchmarks.
-time: Quarterly
 description: >-
   Objectives and Key Results (OKRs) drive growth. This agent takes your
   high-level vision (if provided) or researches your business stage (Seed,

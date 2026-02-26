@@ -3,7 +3,6 @@ id: case-study-interviewer-bot
 category: Strategic Ops
 title: Case Study Interviewer
 tagline: The perfect script for extracting testimonials from happy clients.
-time: 5 mins
 archetype: Processor
 description: >-
   Generates a list of interview questions tailored to the specific "Win" a

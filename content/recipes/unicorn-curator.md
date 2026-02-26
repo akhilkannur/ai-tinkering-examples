@@ -3,7 +3,6 @@ id: unicorn-curator
 category: Content Ops
 title: The Unicorn Content Curator
 tagline: Identify viral outliers across 100 channels.
-time: 20 mins
 description: >-
   Why compete on views? This agent reads a list of YouTube niches from a CSV,
   scans the top 10 channels in each, and identifies 'Unicorn Videos' - outliers

@@ -3,7 +3,6 @@ id: serp-conquesting-planner
 category: Competitive Intel
 title: SERP Conquest Planner
 tagline: Steal traffic where they are weak.
-time: Monthly
 archetype: Processor
 description: >-
   Identifies keywords where competitors rank in top positions but have low page

@@ -3,7 +3,6 @@ id: user-journey-friction-simulator
 category: Product Ops
 title: The Friction Hunter Simulation
 tagline: Roleplay your angriest customer.
-time: 30 mins
 archetype: Researcher
 description: >-
   Simulates a specific buyer persona (e.g., 'Impatient CTO') attempting to

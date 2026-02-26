@@ -3,7 +3,6 @@ id: utm-parameter-gap-filler
 category: Marketing Ops
 title: UTM Referrer Inference Bot
 tagline: Infer missing sources based on Referrer URL.
-time: Daily
 archetype: Processor
 description: >-
   Scans traffic logs for missing UTM parameters and infers the likely source

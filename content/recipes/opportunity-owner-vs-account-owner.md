@@ -3,7 +3,6 @@ id: opportunity-owner-vs-account-owner
 category: Sales Ops
 title: Ownership Mismatch Finder
 tagline: Is the Opp owner different from the Account owner?
-time: Weekly
 archetype: Processor
 description: >-
   Flags discrepancies where the Opportunity Owner does not match the Account

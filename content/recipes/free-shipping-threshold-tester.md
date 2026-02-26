@@ -3,7 +3,6 @@ id: free-shipping-threshold-tester
 category: E-commerce
 title: Free Shipping Modeler
 tagline: Should the bar be $50 or $75?
-time: Ad-hoc
 archetype: Processor
 description: >-
   Simulates margin impact of moving free shipping thresholds based on current

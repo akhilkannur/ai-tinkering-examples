@@ -3,7 +3,6 @@ id: duplicate-account-consolidator
 category: Sales Ops
 title: Account Dupe Smasher
 tagline: Find duplicate companies using fuzzy matching.
-time: Monthly
 archtype: Processor
 description: >-
   Identifies duplicate account records by comparing names (e.g., 'Acme Inc.' vs

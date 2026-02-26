@@ -3,7 +3,6 @@ id: audience-overlap-checker
 category: Paid Media
 title: The Audience Overlap Checker
 tagline: Stop bidding against yourself.
-time: Monthly
 archetype: Processor
 description: >-
   Are your showing the same ad to the same person in two different ad sets? This

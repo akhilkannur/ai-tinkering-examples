@@ -3,7 +3,6 @@ id: sdr-territory-saturation-check
 category: Sales Ops
 title: Territory Saturation Auditor
 tagline: Are your SDRs actually touching all their Tier 1s?
-time: Weekly
 archtype: Processor
 description: >-
   Calculates the % of Tier 1 accounts in a territory that have received at least

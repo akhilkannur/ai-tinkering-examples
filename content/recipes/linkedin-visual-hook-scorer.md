@@ -3,7 +3,6 @@ id: linkedin-visual-hook-scorer
 category: Content Ops
 title: LinkedIn Visual Hook Scorer
 tagline: Predict the viral potential of your image/video thumbnails.
-time: Real-time
 archtype: Processor
 description: >-
   Uploads your proposed thumbnails to a Vision model. Scores them on text

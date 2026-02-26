@@ -3,7 +3,6 @@ id: customer-health-score
 category: Customer Success
 title: The Customer Health Score Builder
 tagline: 'Red, Yellow, or Green?'
-time: Weekly
 archetype: Processor
 description: >-
   A simple traffic light system for your customer base. This agent aggregates

@@ -3,7 +3,6 @@ id: podcast-guest-compatibility-scorer
 category: Content Ops
 title: Podcast Guest Matchmaker
 tagline: Ensure your next guest matches your show's vibe.
-time: Real-time
 archtype: Researcher
 description: >-
   Ingests a potential guest's previous interviews. Scores them on "Energy

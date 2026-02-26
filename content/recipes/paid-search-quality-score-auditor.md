@@ -3,7 +3,6 @@ id: paid-search-quality-score-auditor
 category: Marketing Ops
 title: The CPC Savings Calculator
 tagline: Calculate exactly how much money you save by improving ad relevance.
-time: Weekly
 archetype: Processor
 description: >-
   Quality Score (QS) isn't just a vanity metric; it's a discount code. This

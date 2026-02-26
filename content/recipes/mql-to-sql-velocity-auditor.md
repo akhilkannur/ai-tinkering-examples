@@ -3,7 +3,6 @@ id: mql-to-sql-velocity-auditor
 category: Sales Ops
 title: MQL Follow-up Velocity
 tagline: Measure how fast Sales accepts Marketing leads.
-time: Weekly
 archetype: Processor
 description: >-
   Measures the time gap between 'Lead Status = MQL' and 'Lead Status = Accepted'

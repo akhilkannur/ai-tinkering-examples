@@ -3,7 +3,6 @@ id: seo-content-gap-finder-v2
 category: Strategic Ops
 title: SEO Content Gap Mapper
 tagline: Find high-value pages your competitors have but you don't.
-time: 10 mins
 archetype: Processor
 description: >-
   Compares your sitemap against a competitor's sitemap to identify "Content

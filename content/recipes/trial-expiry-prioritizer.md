@@ -3,7 +3,6 @@ id: trial-expiry-prioritizer
 category: Sales Ops
 title: Trial Closing Prioritizer
 tagline: Who gets a call 3 days before expiry?
-time: Daily
 archetype: Processor
 description: >-
   Scores active trials based on usage and company size to determine who gets a

@@ -3,7 +3,6 @@ id: seo-meta-tag-bulk-optimizer
 category: Strategic Ops
 title: Bulk Meta Tag Writer
 tagline: Fix missing or duplicate SEO titles and descriptions in seconds.
-time: 5 mins
 archetype: Processor
 description: >-
   Reads a CSV of URLs (from a site audit), identifies missing or poor meta tags,

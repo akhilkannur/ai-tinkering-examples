@@ -3,7 +3,6 @@ id: webinar-to-meeting-velocity
 category: Sales Ops
 title: The Event ROI Analyst
 tagline: Don't just count attendees. Segment them by Job Title to find the VIPs.
-time: Weekly
 archetype: Processor
 description: >-
   High attendance vanity metrics can hide low revenue impact. This agent

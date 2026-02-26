@@ -3,7 +3,6 @@ id: ad-copy-benchmarker
 category: Competitive Intel
 title: Ad Copy Pivot Detector
 tagline: Did they change their value prop?
-time: Weekly
 archetype: Processor
 description: >-
   Compares active competitor ad headlines week-over-week to detect strategic

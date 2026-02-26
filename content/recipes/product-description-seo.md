@@ -3,7 +3,6 @@ id: product-description-seo
 category: E-commerce
 title: The SKU SEO Factory
 tagline: Rewrite 100 product descriptions for search in minutes.
-time: 10 mins
 description: >-
   Copy-pasted manufacturer descriptions hurt your SEO. This agent reads a CSV of
   your product catalog and rewrites every description to include long-tail

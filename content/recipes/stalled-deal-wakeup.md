@@ -3,7 +3,6 @@ id: stalled-deal-wakeup
 category: Sales Ops
 title: The Stalled Deal Wake-Up Script
 tagline: Revive the 'Checking in' emails.
-time: Weekly
 archetype: Processor
 description: >-
   Sales reps love to send 'Just checking in.' That's weak. This agent identifies

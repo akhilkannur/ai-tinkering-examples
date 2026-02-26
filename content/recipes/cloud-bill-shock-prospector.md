@@ -3,7 +3,6 @@ id: cloud-bill-shock-prospector
 category: Lead Gen
 title: The Cloud Bill Shock Hunter
 tagline: Target companies likely overspending on AWS/Azure based on growth signals.
-time: 25 mins
 archetype: Analyst
 description: >-
   Rapid hiring in engineering often correlates with exploding cloud costs. This

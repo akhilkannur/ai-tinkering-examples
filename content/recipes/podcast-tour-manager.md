@@ -3,7 +3,6 @@ id: podcast-tour-manager
 category: Content Ops
 title: The Podcast Tour Manager
 tagline: Book your tour from a list or a niche goal.
-time: Weekly
 description: >-
   Podcasts are high-trust channels. This agent reads your target show list (if
   provided) or researches the top 10 podcasts in your niche to draft

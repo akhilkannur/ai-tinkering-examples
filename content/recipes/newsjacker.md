@@ -3,7 +3,6 @@ id: newsjacker
 category: Strategic Ops
 title: The Newsjacker
 tagline: Find trending news and draft social posts on autopilot.
-time: 15 mins
 description: >-
   Content is about timing. This agent monitors a list of niches from a CSV,
   discovers the latest high-impact news stories for each, and drafts contrarian

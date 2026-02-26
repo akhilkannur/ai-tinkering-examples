@@ -3,7 +3,6 @@ id: speaker-session-attribution
 category: Strategic Ops
 title: Session Pipeline Attribution
 tagline: Did the CEO's keynote generate deals?
-time: Quarterly
 archetype: Processor
 description: >-
   Matches session attendee scans to subsequent pipeline creation to measure the

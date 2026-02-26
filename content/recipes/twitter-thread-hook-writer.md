@@ -3,7 +3,6 @@ id: twitter-thread-hook-writer
 category: Content Ops
 title: The Twitter Thread Architect
 tagline: Generate viral thread hooks from your story or trending news.
-time: Daily
 description: >-
   The first tweet makes or breaks the thread. This agent reads your specific
   story (if provided) or researches trending topics in your niche to generate 5

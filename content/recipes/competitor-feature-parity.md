@@ -3,7 +3,6 @@ id: competitor-feature-parity
 category: Competitive Intel
 title: The Feature Gap Detective
 tagline: Don't guess what they have. Scrape their pricing page to prove it.
-time: Monthly
 archetype: Hybrid
 description: >-
   Manual feature matrices are always out of date. This agent visits competitor

@@ -3,7 +3,6 @@ id: executive-relationship-mapper
 category: Sales Ops
 title: Executive Network Mapper
 tagline: Map executive relationships via calendar data.
-time: Monthly
 archetype: Processor
 description: >-
   Analyzes meeting logs to visualize which executives are already engaged with

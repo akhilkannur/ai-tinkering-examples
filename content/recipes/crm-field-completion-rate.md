@@ -3,7 +3,6 @@ id: crm-field-completion-rate
 category: Sales Ops
 title: CRM Hygiene Scorecard
 tagline: Who isn't filling out 'Next Step'?
-time: Weekly
 archetype: Processor
 description: >-
   Scores reps based on the completion rate of mandatory fields (Next Step,

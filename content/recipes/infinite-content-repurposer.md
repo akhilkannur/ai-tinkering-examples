@@ -3,7 +3,6 @@ id: infinite-content-repurposer
 category: Content Ops
 title: The Infinite Repurposer Chain
 tagline: 'One URL, 20+ assets.'
-time: Batch
 description: >-
   Why repurpose manually? This mega-chain takes a list of sources (YouTube URLs
   or Blog Posts) and generates complete content ecosystems: Blogs, Newsletters,

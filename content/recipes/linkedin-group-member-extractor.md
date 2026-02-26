@@ -3,7 +3,6 @@ id: linkedin-group-member-extractor
 category: Lead Gen
 title: The Niche Group Miner
 tagline: Extract and qualify members of niche professional groups.
-time: 20 mins
 archetype: Researcher
 description: >-
   LinkedIn Groups are often dead, but the *members* are still highly qualified.

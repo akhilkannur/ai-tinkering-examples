@@ -3,7 +3,6 @@ id: tiktok-shop-seller-scraper
 category: Lead Gen
 title: The TikTok Shop Scout
 tagline: Find top sellers on TikTok Shop without a standalone site.
-time: 20 mins
 archetype: Researcher
 description: >-
   TikTok Shop is exploding. Many top sellers are just influencers with a product

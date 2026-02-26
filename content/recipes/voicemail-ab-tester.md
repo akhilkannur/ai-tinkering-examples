@@ -3,7 +3,6 @@ id: voicemail-ab-tester
 category: Sales Ops
 title: Cold Call Voicemail A/B Tester
 tagline: Systematically test which voicemail gets a callback.
-time: Batch
 archetype: Processor
 description: >-
   Generates 3 variant scripts for voicemails: "The Mystery", "The Value Prop",

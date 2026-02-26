@@ -3,7 +3,6 @@ id: beta-tester-recruiter
 category: Strategic Ops
 title: The Beta Tester Recruiter
 tagline: Find your first 50 users.
-time: Batch
 archetype: Processor
 description: >-
   Launching a new feature? This agent takes a list of users and drafts

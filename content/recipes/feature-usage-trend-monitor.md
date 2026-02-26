@@ -3,7 +3,6 @@ id: feature-usage-trend-monitor
 category: Customer Success
 title: Feature Adoption Trends
 tagline: Monitor monthly growth in feature usage.
-time: Monthly
 archetype: Processor
 description: >-
   Tracks usage counts for key product features month-over-month to detect

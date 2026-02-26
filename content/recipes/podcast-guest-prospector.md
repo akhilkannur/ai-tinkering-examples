@@ -3,7 +3,6 @@ id: podcast-guest-prospector
 category: Strategic Ops
 title: Podcast Guest Prospector
 tagline: Find the perfect podcasts to pitch your founder to.
-time: 10 mins
 archetype: Researcher
 description: >-
   Searches for podcasts in a specific niche, validates they accept guests, and

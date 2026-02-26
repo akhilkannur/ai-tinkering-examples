@@ -3,7 +3,6 @@ id: competitor-screenshot-decoder
 category: Competitive Intel
 title: The Competitor UI/UX Decoder
 tagline: Analyze competitor screenshots to steal their best design patterns.
-time: Batch
 archtype: Researcher
 description: >-
   Uses Vision capabilities to analyze screenshots of competitor apps or landing

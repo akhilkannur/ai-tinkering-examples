@@ -3,7 +3,6 @@ id: competitor-price-watchdog
 category: Competitive Intel
 title: The Price Watchdog Fleet
 tagline: Monitor pricing changes for 10 competitors at once.
-time: Weekly
 description: >-
   Competitors change pricing quietly. This agent reads a list of competitor URLs
   from a CSV, compares their current pricing pages against previous snapshots,

@@ -3,7 +3,6 @@ id: keyword-ranking-volatility-tracker
 category: SEO
 title: SERP Volatility Tracker
 tagline: Did we just lose our rankings?
-time: Weekly
 archtype: Processor
 description: >-
   Compares ranking positions from two dates to identify big movers (gainers and

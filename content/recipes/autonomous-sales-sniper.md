@@ -3,7 +3,6 @@ id: autonomous-sales-sniper
 category: Lead Gen
 title: The Sales Sniper
 tagline: Find and qualify B2B leads automatically.
-time: 20 mins
 archetype: Hybrid
 description: >-
   Searches for companies in your target segments, filters out agencies, and

@@ -3,7 +3,6 @@ id: poll-strategy-generator
 category: Content Ops
 title: The Poll Strategy Generator
 tagline: Engagement farming with a purpose.
-time: Batch
 description: >-
   Polls get high reach, but often zero value. This agent generates 'Market
   Research' polls that double as lead qualification, allowing you to segment and

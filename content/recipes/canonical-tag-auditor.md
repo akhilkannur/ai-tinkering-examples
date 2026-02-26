@@ -3,7 +3,6 @@ id: canonical-tag-auditor
 category: SEO
 title: The Technical SEO Doctor
 tagline: 'One scan to find Canonical conflicts, NoIndex errors, and Broken Links.'
-time: Monthly
 archetype: Hybrid
 description: >-
   Technical debt is invisible until traffic drops. This agent crawls a list of

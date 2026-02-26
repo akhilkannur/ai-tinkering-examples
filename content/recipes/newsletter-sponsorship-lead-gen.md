@@ -3,7 +3,6 @@ id: newsletter-sponsorship-lead-gen
 category: Lead Gen
 title: The Newsletter Sponsor Finder
 tagline: Find newsletters accepting sponsors in your niche.
-time: 20 mins
 archetype: Researcher
 description: >-
   Niche newsletters are the most undervalued ad channel. This agent searches

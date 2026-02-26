@@ -3,7 +3,6 @@ id: geo-expansion-planner
 category: Strategic Ops
 title: The Geographic Expansion Planner
 tagline: Where should we launch next?
-time: One-off
 archetype: Processor
 description: >-
   You're big in the US, but what about Europe? This agent analyzes your current

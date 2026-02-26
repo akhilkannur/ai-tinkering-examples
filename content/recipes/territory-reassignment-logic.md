@@ -3,7 +3,6 @@ id: territory-reassignment-logic
 category: Sales Ops
 title: Bulk Territory Reassigner
 tagline: Move accounts from Rep A to Rep B.
-time: Ad-hoc
 archetype: Processor
 description: >-
   Generates a bulk upload file to move accounts and open opportunities when a

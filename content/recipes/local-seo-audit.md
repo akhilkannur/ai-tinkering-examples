@@ -3,7 +3,6 @@ id: local-seo-audit
 category: SEO
 title: The Multi-Location SEO Auditor
 tagline: Audit the map rankings for your entire franchise.
-time: 15 mins
 description: >-
   Managing SEO for multiple locations is hard. This agent reads a list of
   locations from a CSV, audits their Google Maps profiles, checks NAP

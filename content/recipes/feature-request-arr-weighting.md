@@ -3,7 +3,6 @@ id: feature-request-arr-weighting
 category: Strategic Ops
 title: Feature Request ARR Weighting
 tagline: 'Prioritize roadmap based on dollars, not noise.'
-time: Batch
 archtype: Processor
 description: >-
   Merges your "Feature Request" board with Salesforce data. Calculates the

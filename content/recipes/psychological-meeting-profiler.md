@@ -3,7 +3,6 @@ id: psychological-meeting-profiler
 category: Sales Ops
 title: The Psychological Buyer Profiler
 tagline: Know how to close them.
-time: Batch
 description: >-
   Deeper than a summary. This agent processes a list of sales transcripts to
   identify each buyer's personality type and recommends specific negotiation

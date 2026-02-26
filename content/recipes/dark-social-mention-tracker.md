@@ -3,7 +3,6 @@ id: dark-social-mention-tracker
 category: Strategic Ops
 title: Community Mention Alert
 tagline: Who is talking about us in Slack?
-time: Daily
 archetype: Processor
 description: >-
   Scrapes (simulated) Slack/Discord community exports for brand keywords to

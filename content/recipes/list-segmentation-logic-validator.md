@@ -3,7 +3,6 @@ id: list-segmentation-logic-validator
 category: Strategic Ops
 title: Segment Logic Checker
 tagline: Ensure customers aren't in 'Prospect' lists.
-time: Weekly
 archtype: Processor
 description: >-
   Checks a list of contacts to ensure no one has both 'Status=Customer' and

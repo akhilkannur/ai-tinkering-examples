@@ -5,7 +5,6 @@ title: The Profit-First ROAS Adjuster
 tagline: >-
   Don't get blinded by 'Gross' numbers. Calculate marketing impact on
   bottom-line profit.
-time: Monthly
 archetype: Processor
 description: >-
   Standard ROAS is a vanity metric. This agent adjusts your ad performance data

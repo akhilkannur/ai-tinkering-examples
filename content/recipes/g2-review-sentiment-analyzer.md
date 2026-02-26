@@ -3,7 +3,6 @@ id: g2-review-sentiment-analyzer
 category: Strategic Ops
 title: Voice of Customer Analyzer
 tagline: Mine G2 & Capterra reviews to find product gaps and marketing hooks.
-time: 15 mins
 archetype: Hybrid
 description: >-
   Scrapes or reads reviews of a product (yours or a competitor's), categorizes

@@ -3,7 +3,6 @@ id: contract-clause-variance-tracker
 category: Sales Ops
 title: The Legal Risk Scanner
 tagline: Quantify your legal exposure in dollars.
-time: Monthly
 archetype: Processor
 description: >-
   Legal teams hate "Redlines," but CFOs hate "Hidden Risk." This agent scans

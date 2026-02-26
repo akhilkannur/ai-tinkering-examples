@@ -3,7 +3,6 @@ id: objection-crusher
 category: Sales Ops
 title: The Objection Crusher
 tagline: Create battle cards from your notes or competitor reviews.
-time: 15 mins
 description: >-
   Sales reps freeze when hit with a tough question. This agent reads your call
   notes (if provided) or researches a competitor's negative reviews to identify

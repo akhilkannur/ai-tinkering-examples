@@ -3,7 +3,6 @@ id: schema-markup-generator
 category: SEO
 title: Bulk Schema JSON-LD Generator
 tagline: Get "Rich Snippets" on Google by generating valid Schema markup.
-time: 10 mins
 archetype: Processor
 description: >-
   Converts a CSV of product or event data into valid JSON-LD Schema markup

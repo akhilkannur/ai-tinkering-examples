@@ -3,7 +3,6 @@ id: diversity-hiring-initiative-finder
 category: Lead Gen
 title: The DEI Initiative Spotter
 tagline: Target companies posting DEI-specific roles or reports.
-time: 20 mins
 archetype: Researcher
 description: >-
   Companies hiring "Heads of Diversity" or publishing DEI reports have budget

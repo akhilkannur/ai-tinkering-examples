@@ -3,7 +3,6 @@ id: partner-event-lead-splitter
 category: Strategic Ops
 title: Co-Marketing Lead Splitter
 tagline: Share leads fairly with partners.
-time: Batch
 archetype: Processor
 description: >-
   Splits a master lead list from a co-hosted event according to the agreed

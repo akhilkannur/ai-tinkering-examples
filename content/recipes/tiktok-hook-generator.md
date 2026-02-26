@@ -3,7 +3,6 @@ id: tiktok-hook-generator
 category: Content Ops
 title: The Viral Scripter
 tagline: Don't just write hooks. Script the 'Visuals' too.
-time: Daily
 archetype: Processor
 description: >-
   TikTok is 50% audio, 50% visual. This agent generates scripts that include not

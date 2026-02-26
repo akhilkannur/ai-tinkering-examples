@@ -3,7 +3,6 @@ id: review-response-bot
 category: Customer Success
 title: The Brand Guardian
 tagline: Reply to reviews AND route the feedback to the right internal team.
-time: Batch
 archetype: Processor
 description: >-
   Don't just reply; take action. This agent categorizes public reviews and

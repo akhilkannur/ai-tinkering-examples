@@ -3,7 +3,6 @@ id: pre-event-warmup-builder
 category: Strategic Ops
 title: Geo-Targeted Event Warmup
 tagline: Find prospects within 50 miles.
-time: Batch
 archetype: Processor
 description: >-
   Filters your CRM for prospects located within a specific radius of an upcoming

@@ -3,7 +3,6 @@ id: traffic-source-reverse-engineer
 category: Competitive Intel
 title: The Traffic Source Decoder
 tagline: Uncover the growth engine of any competitor.
-time: One-off
 description: >-
   SimilarWeb gives numbers, but no strategy. This agent analyzes traffic
   percentages (if provided) or researches a competitor's domain to identify

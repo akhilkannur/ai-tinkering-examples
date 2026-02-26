@@ -3,7 +3,6 @@ id: sales-call-transcript-analyzer
 category: Sales Ops
 title: BANT Transcript Analyzer
 tagline: 'Extract Budget, Authority, Need, and Timeline from call transcripts.'
-time: 5 mins
 archetype: Processor
 description: >-
   Reads a text transcript of a sales call, identifies the key BANT criteria, and

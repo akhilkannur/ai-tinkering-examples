@@ -3,7 +3,6 @@ id: discount-approval-sla-tracker
 category: Sales Ops
 title: Deal Desk SLA Monitor
 tagline: How fast are quotes approved?
-time: Weekly
 archetype: Processor
 description: >-
   Measures the time between 'Quote Submitted' and 'Quote Approved' to identify

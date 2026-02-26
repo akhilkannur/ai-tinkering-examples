@@ -3,7 +3,6 @@ id: referral-email-generator
 category: Sales Ops
 title: Referral Request Writer
 tagline: Ask for introductions without making it awkward.
-time: 5 mins
 archetype: Processor
 description: >-
   Writes a "Double Opt-In" email that your happy client can easily forward to

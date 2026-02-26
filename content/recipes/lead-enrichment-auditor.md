@@ -3,7 +3,6 @@ id: lead-enrichment-auditor
 category: Sales Ops
 title: Enrichment Match Rate Auditor
 tagline: Are we paying for empty data?
-time: Monthly
 archtype: Processor
 description: >-
   Analyzes your enriched lead data to see what percentage of fields (Phone,

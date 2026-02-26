@@ -3,7 +3,6 @@ id: linkedin-ads-audience-overlap
 category: Paid Media
 title: Audience Overlap Checker
 tagline: Stop bidding against yourself.
-time: Monthly
 archtype: Processor
 description: >-
   Analyzes exported target lists from different ad campaigns to find duplicate

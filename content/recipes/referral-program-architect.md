@@ -3,7 +3,6 @@ id: referral-program-architect
 category: Strategic Ops
 title: The Referral Program Architect
 tagline: Turn users into salespeople.
-time: Batch
 description: >-
   Referrals have the lowest CAC. This agent designs 'Double-Sided' referral
   programs tailored to your specific unit economics and business model for an

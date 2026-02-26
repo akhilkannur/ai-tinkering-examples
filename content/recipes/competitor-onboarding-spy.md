@@ -3,7 +3,6 @@ id: competitor-onboarding-spy
 category: Competitive Intel
 title: The Onboarding Teardown Factory
 tagline: Comparative UX audit of competitors at once.
-time: Batch
 description: >-
   How does your signup flow stack up? This agent processes screenshots and
   emails from multiple competitor signup flows and reverse-engineers their

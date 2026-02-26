@@ -3,7 +3,6 @@ id: attribution-window-comparator
 category: CRO
 title: Attribution Window Comparer
 tagline: 1-day vs 7-day click impact.
-time: Monthly
 archetype: Processor
 description: >-
   Compares revenue attributed under a 1-day click vs 7-day click window to

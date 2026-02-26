@@ -3,7 +3,6 @@ id: influencer-outreach-manager
 category: Strategic Ops
 title: The Relationship Builder
 tagline: Don't send generic follow-ups. Contextualize every DM.
-time: 5 mins
 archetype: Hybrid
 description: >-
   Generic "Just checking in" DMs get ignored. This agent scans the recent

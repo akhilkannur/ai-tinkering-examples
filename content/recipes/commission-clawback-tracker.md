@@ -3,7 +3,6 @@ id: commission-clawback-tracker
 category: Sales Ops
 title: Clawback Risk Monitor
 tagline: Track revenue at risk of clawback.
-time: Weekly
 archtype: Processor
 description: >-
   Identifies recently paid deals that are currently in 'High Support Volume' or

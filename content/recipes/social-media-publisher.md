@@ -3,7 +3,6 @@ title: Programmatic Social Publisher
 id: social-media-publisher
 category: Marketing Ops
 tagline: Bulk-publish content to Instagram and Pinterest via API.
-time: 15 mins
 archetype: Processor
 description: >-
   The automation we use to distribute these blueprints across social media. It

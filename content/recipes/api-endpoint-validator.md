@@ -3,7 +3,6 @@ id: api-endpoint-validator
 category: Sales Ops
 title: The API Fleet Monitor
 tagline: Health check 50 endpoints in one run.
-time: Daily
 archetype: Processor
 description: >-
   Ensure the demo never breaks. This agent reads a list of API endpoints from a

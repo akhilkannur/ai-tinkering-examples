@@ -3,7 +3,6 @@ id: zombie-user-purge
 category: Sales Ops
 title: Inactive Free User Purge
 tagline: Clean up database costs.
-time: Quarterly
 archetype: Processor
 description: >-
   Identifies free tier accounts with no login activity in 12 months for deletion

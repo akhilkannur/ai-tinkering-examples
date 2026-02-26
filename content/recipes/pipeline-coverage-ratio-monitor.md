@@ -3,7 +3,6 @@ id: pipeline-coverage-ratio-monitor
 category: Sales Ops
 title: Pipeline Coverage Monitor
 tagline: Do you have 3x your quota in pipeline?
-time: Weekly
 archtype: Processor
 description: >-
   Calculates the coverage ratio (Pipeline / Remaining Quota) per rep to identify

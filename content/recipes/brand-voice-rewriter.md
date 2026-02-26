@@ -3,7 +3,6 @@ id: brand-voice-rewriter
 category: Strategic Ops
 title: Brand Voice Chameleon
 tagline: Rewrite any text to match your specific brand personality.
-time: 5 mins
 archetype: Processor
 description: >-
   Takes a boring paragraph of text (e.g., technical documentation or a rough

@@ -3,7 +3,6 @@ id: competitor-employee-churn-monitor
 category: Competitive Intel
 title: Competitor Brain Drain
 tagline: Did their VP of Sales just quit?
-time: Monthly
 archetype: Processor
 description: >-
   Tracks departures from key competitor roles (Sales VP, Product Lead) via

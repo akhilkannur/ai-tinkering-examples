@@ -3,7 +3,6 @@ id: sitemap-generator
 category: SEO Ops
 title: High-Coverage Sitemap Generator
 tagline: Generate a perfect XML sitemap for thousands of dynamic pages.
-time: 5 mins
 archetype: Processor
 description: >-
   Crawls your local content and database to build a comprehensive sitemap.xml

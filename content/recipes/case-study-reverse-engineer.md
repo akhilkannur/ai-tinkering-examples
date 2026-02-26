@@ -3,7 +3,6 @@ id: case-study-reverse-engineer
 category: Competitive Intel
 title: The Case Study Decoder
 tagline: Who are they really selling to?
-time: Batch
 archetype: Hybrid
 description: >-
   Logos reveal strategy. This agent researches the logos and case studies on a

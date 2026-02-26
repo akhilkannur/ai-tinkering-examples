@@ -3,7 +3,6 @@ id: github-headhunter
 category: Lead Gen
 title: The Code Headhunter
 tagline: Recruit from a specific repo or a tech niche.
-time: 25 mins
 description: >-
   Top engineers don't have resumes; they have PRs. This agent reads a list of
   repos from a CSV (if provided) or researches a tech niche (e.g., 'React

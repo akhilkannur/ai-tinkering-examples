@@ -3,7 +3,6 @@ id: social-share-of-voice-tracker
 category: Marketing Ops
 title: The Competitive Noise Canceler
 tagline: Identify where competitors are loud so you can be louder (or go elsewhere).
-time: Monthly
 archetype: Processor
 description: >-
   Don't shout into the void. This agent analyzes competitor mention volume by

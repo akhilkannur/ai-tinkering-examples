@@ -3,7 +3,6 @@ id: ugc-visual-quality-rater
 category: Content Ops
 title: UGC Ad Potential Scorer
 tagline: Find the hidden gems in your tagged photos/videos.
-time: Batch
 archtype: Processor
 description: >-
   Scrapes posts tagged with your brand. Scores them on "Lighting", "Product

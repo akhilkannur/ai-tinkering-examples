@@ -3,7 +3,6 @@ id: lead-score-threshold-simulator
 category: Marketing Ops
 title: Lead Threshold Simulator
 tagline: See how threshold changes impact MQL volume.
-time: Batch
 archtype: Processor
 description: >-
   Backtests lead data against different scoring thresholds to predict how many

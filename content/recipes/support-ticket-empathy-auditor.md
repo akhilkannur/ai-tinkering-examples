@@ -3,7 +3,6 @@ id: support-ticket-empathy-auditor
 category: Customer Success
 title: Support Ticket Empathy Auditor
 tagline: Stop your support team from sounding like robots.
-time: Batch
 archtype: Processor
 description: >-
   Reviews closed tickets. Scores responses on "Warmth", "Acknowledgment", and

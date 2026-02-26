@@ -3,7 +3,6 @@ id: zero-click-optimizer
 category: SEO
 title: The Zero-Click Optimizer
 tagline: Optimize for the answer engine.
-time: Weekly
 archetype: Processor
 description: >-
   Users want answers, not clicks. This agent reviews your informational content

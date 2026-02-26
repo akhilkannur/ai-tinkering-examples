@@ -3,7 +3,6 @@ id: review-keyword-extractor
 category: Competitive Intel
 title: Review Keyword Miner
 tagline: What do people hate about your competitor?
-time: Monthly
 archetype: Processor
 description: >-
   Extracts common 2-word and 3-word phrases from competitor G2/Capterra reviews

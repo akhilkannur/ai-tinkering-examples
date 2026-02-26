@@ -3,7 +3,6 @@ id: utm-performance-analyzer
 category: Marketing Ops
 title: UTM Traffic Grader
 tagline: Which campaign source drives the most traffic?
-time: Weekly
 archtype: Processor
 description: >-
   Aggregates traffic logs by UTM Source and Medium to identify top performing

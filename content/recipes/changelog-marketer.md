@@ -3,7 +3,6 @@ id: changelog-marketer
 category: Strategic Ops
 title: The Changelog Marketer
 tagline: Your updates are marketing assets.
-time: Batch
 archetype: Processor
 description: >-
   Don't hide your hard work. This agent takes technical commit messages or Jira

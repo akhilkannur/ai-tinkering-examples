@@ -3,7 +3,6 @@ id: ad-placement-exclusion-lister
 category: Paid Media
 title: Ad Waste Excluder
 tagline: Block mobile apps and kids' channels.
-time: Weekly
 archtype: Processor
 description: >-
   Filters a placement report to find URLs containing 'game', 'puzzle', or

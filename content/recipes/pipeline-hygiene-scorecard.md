@@ -3,7 +3,6 @@ id: pipeline-hygiene-scorecard
 category: Sales Ops
 title: The Pipeline Hygiene Scorer
 tagline: Grade your CRM data quality.
-time: Weekly
 archetype: Processor
 description: >-
   Messy CRMs kill forecasts. This agent audits your open opportunities for 'Rot'

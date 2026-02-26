@@ -3,7 +3,6 @@ id: funnel-architect
 category: Sales Ops
 title: The Funnel Visualizer
 tagline: Map & Fix Sales Flows.
-time: Batch
 isPremium: true
 description: >-
   Process flows often hide massive revenue leaks. This agent takes descriptions

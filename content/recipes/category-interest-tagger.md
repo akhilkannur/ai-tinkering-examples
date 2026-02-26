@@ -3,7 +3,6 @@ id: category-interest-tagger
 category: E-commerce
 title: Category Affinity Tagger
 tagline: Tag users as 'Runners' or 'Swimmers'.
-time: Monthly
 archetype: Processor
 description: >-
   Tags users based on their dominant browsing history category for personalized

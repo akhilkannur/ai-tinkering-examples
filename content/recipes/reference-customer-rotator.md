@@ -3,7 +3,6 @@ id: reference-customer-rotator
 category: Sales Ops
 title: Sales Reference Rotator
 tagline: Prevent reference burnout by rotating happy customers.
-time: Monthly
 archtype: Processor
 description: >-
   Tracks how many times a customer has been used as a reference to ensure even

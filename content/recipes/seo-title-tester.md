@@ -3,7 +3,6 @@ id: seo-title-tester
 category: SEO
 title: The SEO Title Factory
 tagline: High-CTR titles for 50 keywords at once.
-time: 5 mins
 description: >-
   Ranking #1 doesn't matter if no one clicks. This agent reads a list of target
   keywords from a CSV and generates 10 variations of SEO Titles and Meta

@@ -3,7 +3,6 @@ id: sitemap-to-csv-inventory
 category: SEO
 title: The Content Inventory Builder
 tagline: Map your entire site.
-time: Batch
 description: >-
   You can't optimize what you can't see. This agent processes multiple
   `sitemap.xml` files and converts them into clean CSV inventories, adding

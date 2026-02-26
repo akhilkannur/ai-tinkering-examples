@@ -3,7 +3,6 @@ id: review-sentiment-quantifier
 category: Competitive Intel
 title: The Review Sentiment Factory
 tagline: Quantify the emotion of 1000+ customer reviews.
-time: Monthly
 description: >-
   Star ratings lie. This agent reads a massive CSV of customer reviews (yours or
   competitors'), scores every one for specific attributes (Speed, Support,

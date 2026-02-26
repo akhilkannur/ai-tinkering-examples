@@ -3,7 +3,6 @@ id: user-onboarding-dropout-finder
 category: CRO
 title: Onboarding Leak Detector
 tagline: Where do users quit during setup?
-time: Weekly
 archtype: Processor
 description: >-
   Analyzes the last completed step for incomplete onboarding flows to identify

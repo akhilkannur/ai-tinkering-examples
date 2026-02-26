@@ -3,7 +3,6 @@ id: nps-by-product-scorer
 category: CRO
 title: Product Satisfaction Score
 tagline: Which product makes people happiest?
-time: Quarterly
 archetype: Processor
 description: >-
   Scores products based on the Net Promoter Score (NPS) of customers who bought

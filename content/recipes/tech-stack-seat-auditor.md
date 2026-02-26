@@ -3,7 +3,6 @@ id: tech-stack-seat-auditor
 category: Sales Ops
 title: SaaS Seat Auditor
 tagline: Find unused licenses in your sales tech stack.
-time: Monthly
 archtype: Processor
 description: >-
   Compares active employees against licensed users in tools like Salesforce or

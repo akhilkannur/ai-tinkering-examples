@@ -3,7 +3,6 @@ id: review-to-ad-machine
 category: Strategic Ops
 title: The Review-to-Ad Factory
 tagline: Turn 100 reviews into 100 ad variations.
-time: 15 mins
 description: >-
   Stop guessing what to write in your ads. This agent reads a CSV of customer
   reviews, extracts the exact 'emotional trigger words', and generates

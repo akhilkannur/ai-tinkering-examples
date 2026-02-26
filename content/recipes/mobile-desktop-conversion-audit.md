@@ -3,7 +3,6 @@ id: mobile-desktop-conversion-audit
 category: CRO
 title: Device Conversion Gap
 tagline: Is your mobile site killing sales?
-time: Monthly
 archetype: Processor
 description: >-
   Compares conversion rates between Mobile and Desktop traffic to identify

@@ -3,7 +3,6 @@ id: linkedin-connection-request-writer
 category: Content Ops
 title: The Connection Request Writer
 tagline: Get accepted by VIPs.
-time: Batch
 description: >-
   Generic requests get ignored. This agent writes personalized 'Notes' for a
   list of prospects, focusing on relevance and low-friction connection hooks to

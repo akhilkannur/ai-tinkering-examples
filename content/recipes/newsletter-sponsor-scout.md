@@ -3,7 +3,6 @@ id: newsletter-sponsor-scout
 category: Strategic Ops
 title: The Sponsor Scout Engine
 tagline: Fill your ad slots for the next 6 months.
-time: Weekly
 description: >-
   Why wait for sponsors? This agent reads a list of competitor newsletters from
   a CSV, identifies who is *already* spending money in your niche, and drafts a

@@ -3,7 +3,6 @@ id: newsletter-frequency-analyst
 category: Competitive Intel
 title: The Inbox Strategy Auditor
 tagline: Know exactly when your competitors send.
-time: Batch
 description: >-
   Email attention is a zero-sum game. This agent researches the send history of
   your top competitors to identify their primary send times, helping you find

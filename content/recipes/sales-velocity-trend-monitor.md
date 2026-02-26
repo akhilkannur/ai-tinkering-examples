@@ -3,7 +3,6 @@ id: sales-velocity-trend-monitor
 category: Sales Ops
 title: Pipeline Velocity Trend
 tagline: Is your sales cycle getting longer or shorter?
-time: Monthly
 archtype: Processor
 description: >-
   Compares average sales cycle time this month vs the trailing 6-month average

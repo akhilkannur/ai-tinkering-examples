@@ -3,7 +3,6 @@ id: linkedin-poll-architect
 category: Strategic Ops
 title: Viral Poll Builder
 tagline: Create LinkedIn polls that drive engagement and uncover leads.
-time: 5 mins
 archetype: Hybrid
 description: >-
   Brainstorms polarizing or insightful poll questions related to your industry

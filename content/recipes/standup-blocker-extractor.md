@@ -3,7 +3,6 @@ id: standup-blocker-extractor
 category: Strategic Ops
 title: Standup Blocker Extractor
 tagline: Auto-summarize what is actually blocking your team.
-time: Batch
 archtype: Processor
 description: >-
   Reads the #standup channel. Ignores "What I did yesterday". Extracts only

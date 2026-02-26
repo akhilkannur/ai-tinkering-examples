@@ -3,7 +3,6 @@ id: customer-share-of-wallet-estimator
 category: E-commerce
 title: The Upsell Hunter
 tagline: Find the 'Sleeping Giants' in your customer base.
-time: Yearly
 archetype: Processor
 description: >-
   Just because a customer spends little doesn't mean they are small. This agent

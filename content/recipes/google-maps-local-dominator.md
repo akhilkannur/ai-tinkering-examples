@@ -3,7 +3,6 @@ id: google-maps-local-dominator
 category: Lead Gen
 title: The Local Review Rescuer
 tagline: Find local businesses with <10 reviews to sell reputation management.
-time: 15 mins
 archetype: Researcher
 description: >-
   Local businesses live and die by Google Reviews. This agent searches a

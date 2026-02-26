@@ -3,7 +3,6 @@ id: saas-seat-utilization-nudge
 category: Customer Success
 title: Seat Utilization Nudge
 tagline: Remind admins they are paying for empty seats.
-time: Batch
 archetype: Processor
 description: >-
   Finds accounts with <50% seat utilization. Drafts a helpful email to the admin

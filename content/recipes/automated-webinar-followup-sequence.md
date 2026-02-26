@@ -3,7 +3,6 @@ id: automated-webinar-followup-sequence
 category: Strategic Ops
 title: Webinar Follow-Up Architect
 tagline: Segment attendees vs. no-shows and write targeted nurture sequences.
-time: 10 mins
 archetype: Processor
 description: >-
   Reads a webinar participant list, splits them into "Attended" and "Missed",

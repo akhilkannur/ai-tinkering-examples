@@ -3,7 +3,6 @@ id: lead-recycling-automation
 category: Marketing Ops
 title: The Recycler
 tagline: Move 'Closed-Lost' leads back to nurture.
-time: Monthly
 archtype: Processor
 description: >-
   Identifies leads marked 'Closed-Lost' more than 90 days ago to re-enroll them

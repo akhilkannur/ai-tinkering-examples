@@ -3,7 +3,6 @@ id: podcast-ad-script-writer
 category: Strategic Ops
 title: Podcast Ad Script Writer
 tagline: 'Write 60-second audio ads that sound natural, not robotic.'
-time: 5 mins
 archetype: Processor
 description: >-
   Converts your product's value proposition into a "Host-Read" style script,

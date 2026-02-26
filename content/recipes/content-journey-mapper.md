@@ -3,7 +3,6 @@ id: content-journey-mapper
 category: Marketing Ops
 title: Customer Content Journey
 tagline: Trace the blog posts read by your best customers.
-time: Monthly
 archtype: Processor
 description: >-
   Analyzes the page path of converted leads to find the common sequence of

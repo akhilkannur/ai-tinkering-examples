@@ -3,7 +3,6 @@ id: affiliate-application-auto-screener
 category: Marketing Ops
 title: Affiliate Application Auto-Screener
 tagline: Filter out spammy affiliate applications instantly.
-time: Batch
 archetype: Researcher
 description: >-
   Checks applicant URL. Flags sites that are "Coupon Farms", "Adult Content", or

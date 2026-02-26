@@ -3,7 +3,6 @@ id: backlink-quality-scorer
 category: SEO
 title: Backlink Quality Auditor
 tagline: Filter the gold from the spam.
-time: Monthly
 archtype: Processor
 description: >-
   Scores a list of backlinks based on Domain Authority (DA) and Spam Score

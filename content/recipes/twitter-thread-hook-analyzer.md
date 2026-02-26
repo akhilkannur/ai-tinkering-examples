@@ -3,7 +3,6 @@ id: twitter-thread-hook-analyzer
 category: Strategic Ops
 title: Viral Hook Analyzer
 tagline: Which first line gets the click?
-time: Monthly
 archetype: Processor
 description: Analyzes the click-through rate of different Twitter/X thread opening lines.
 sampleData:

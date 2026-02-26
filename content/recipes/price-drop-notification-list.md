@@ -3,7 +3,6 @@ id: price-drop-notification-list
 category: E-commerce
 title: Price Drop Notifier
 tagline: Tell browsers when price drops.
-time: Weekly
 archetype: Processor
 description: >-
   Identifies customers who viewed a specific product in the last 30 days that

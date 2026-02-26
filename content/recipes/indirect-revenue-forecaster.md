@@ -3,7 +3,6 @@ id: indirect-revenue-forecaster
 category: Strategic Ops
 title: Indirect Revenue Forecaster
 tagline: Forecast revenue from partner-submitted pipeline.
-time: Monthly
 archtype: Processor
 description: >-
   Applies a 'Channel Discount' to partner forecasts to create a more realistic

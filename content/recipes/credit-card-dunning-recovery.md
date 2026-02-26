@@ -3,7 +3,6 @@ id: credit-card-dunning-recovery
 category: Sales Ops
 title: High-Value Dunning Prioritizer
 tagline: Save the big accounts first.
-time: Daily
 archetype: Processor
 description: >-
   Prioritizes failed payment outreach based on the Monthly Recurring Revenue

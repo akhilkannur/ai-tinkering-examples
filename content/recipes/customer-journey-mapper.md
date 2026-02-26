@@ -3,7 +3,6 @@ id: customer-journey-mapper
 category: Strategic Ops
 title: The Customer Journey Factory
 tagline: Map the broken road for every persona.
-time: Annual
 description: >-
   Users drop off where you least expect. This agent reads a list of customer
   personas from a CSV and maps their unique 5-stage journeys (Awareness to

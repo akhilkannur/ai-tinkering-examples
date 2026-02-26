@@ -3,7 +3,6 @@ id: ux-vision-auditor
 category: CRO
 title: The UX Vision Auditor
 tagline: An eye-tracking lab in your terminal.
-time: Batch
 description: >-
   Why aren't they converting? This agent uses Vision capabilities to audit
   multiple landing page screenshots, identifying visual clutter, low-contrast

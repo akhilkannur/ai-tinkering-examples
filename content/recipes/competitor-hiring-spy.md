@@ -3,7 +3,6 @@ id: competitor-hiring-spy
 category: Competitive Intel
 title: The Market Hiring Spy
 tagline: Detect strategic pivots (PLG -> Enterprise) by analyzing job titles.
-time: Monthly
 archetype: Hybrid
 description: >-
   Job boards reveal secret strategies. This agent reads a list of competitor job

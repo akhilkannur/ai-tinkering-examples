@@ -3,7 +3,6 @@ id: b2b-marketplace-scraper
 category: Lead Gen
 title: The Ecosystem Partner Finder
 tagline: 'Find leads from AppExchange, Shopify, or HubSpot app stores.'
-time: 20 mins
 archetype: Researcher
 description: >-
   Companies listed on B2B marketplaces (Salesforce AppExchange, Shopify App

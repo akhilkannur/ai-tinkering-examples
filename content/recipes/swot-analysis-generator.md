@@ -3,7 +3,6 @@ id: swot-analysis-generator
 category: Strategic Ops
 title: The Strategic SWOT Generator
 tagline: Build a SWOT matrix from your notes or market research.
-time: Quarterly
 description: >-
   Strategic planning requires honesty. This agent reads your internal brainstorm
   notes (if provided) or performs deep market research on your niche to build a

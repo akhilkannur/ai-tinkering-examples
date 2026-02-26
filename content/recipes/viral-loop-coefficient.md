@@ -3,7 +3,6 @@ id: viral-loop-coefficient
 category: Sales Ops
 title: The Viral Loop Doctor
 tagline: Diagnose *why* your K-factor is low (Invites vs Acceptance).
-time: Monthly
 archetype: Processor
 description: >-
   Knowing your Viral Coefficient (K-factor) is meaningless if you don't know how

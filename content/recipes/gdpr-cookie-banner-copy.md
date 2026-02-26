@@ -3,7 +3,6 @@ id: gdpr-cookie-banner-copy
 category: Strategic Ops
 title: The Converting Cookie Banner
 tagline: Compliance that doesn't kill data.
-time: Batch
 description: >-
   Cookie banners annoy users and kill data collection. This agent writes 'Human'
   copy for your consent manager that explains *why* you track, increasing your

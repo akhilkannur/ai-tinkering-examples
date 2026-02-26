@@ -3,7 +3,6 @@ id: churn-exit-survey-analyzer
 category: Retention
 title: The Churn Survey Analyzer
 tagline: Find out why they really left.
-time: Monthly
 archetype: Processor
 description: >-
   Exit surveys are often ignored. This agent analyzes open-ended 'Why did you

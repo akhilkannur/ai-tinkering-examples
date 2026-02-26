@@ -3,7 +3,6 @@ id: competitor-change-monitor
 category: Competitive Intel
 title: Competitor Site Change Detector
 tagline: Did they change their H1? Did they raise prices?
-time: Weekly
 archtype: Processor
 description: >-
   Compares the text content of a competitor's homepage from 'Before' and 'After'

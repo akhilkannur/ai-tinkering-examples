@@ -3,7 +3,6 @@ id: lookalike-audience-seeder
 category: Paid Media
 title: The LAL Seeder Factory
 tagline: 'Standardize 10,000 customers for ''Custom Audience'' upload.'
-time: Monthly
 description: >-
   High-quality lookalikes need high-quality seeds. This agent reads your massive
   customer database, filters for the 'Top 10%' by LTV or Frequency, and formats

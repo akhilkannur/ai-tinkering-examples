@@ -3,7 +3,6 @@ id: sdr-onboarding-schedule
 category: Lead Gen
 title: The SDR Ramp Architect
 tagline: Build custom 30-day onboarding plans.
-time: Batch
 description: >-
   New SDRs fail without structure. This agent researches your tech stack and
   product complexity to build 4-week ramp schedules that get your new hires

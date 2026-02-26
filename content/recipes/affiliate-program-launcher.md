@@ -3,7 +3,6 @@ id: affiliate-program-launcher
 category: Strategic Ops
 title: The Affiliate Program Launcher
 tagline: Build a commission-only sales team.
-time: Hybrid
 archetype: Hybrid
 description: >-
   Affiliates drive 30% of revenue for SaaS. This agent outlines your commission

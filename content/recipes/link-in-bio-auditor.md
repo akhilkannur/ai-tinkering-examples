@@ -3,7 +3,6 @@ id: link-in-bio-auditor
 category: Content Ops
 title: Link-in-Bio Broken Link Checker
 tagline: Ensure your most valuable link actually works.
-time: Batch
 archetype: Researcher
 description: >-
   Daily check of your Linktree/Bio link. Validates that it doesn't 404 and that

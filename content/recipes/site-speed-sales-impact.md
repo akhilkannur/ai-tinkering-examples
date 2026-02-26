@@ -3,7 +3,6 @@ id: site-speed-sales-impact
 category: CRO
 title: Speed vs Revenue Calc
 tagline: How much does a slow site cost you?
-time: Monthly
 archetype: Processor
 description: >-
   Correlates page load times with conversion rates to calculate revenue lost due

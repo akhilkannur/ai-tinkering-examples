@@ -3,7 +3,6 @@ id: integration-partner-finder
 category: Strategic Ops
 title: The Strategic Integration Factory
 tagline: Find 50 potential partners across 10 niches.
-time: One-off
 description: >-
   Why build one integration? This agent reads a list of adjacent tool categories
   from a CSV and identifies the top 5 high-leverage partners in each, drafting a

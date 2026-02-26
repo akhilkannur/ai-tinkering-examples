@@ -3,7 +3,6 @@ id: monthly-report-generator
 category: Strategic Ops
 title: The Narrative Builder
 tagline: Clients don't read spreadsheets. They read stories.
-time: Batch
 archetype: Processor
 description: >-
   Data dumping causes churn. This agent transforms raw client performance CSVs

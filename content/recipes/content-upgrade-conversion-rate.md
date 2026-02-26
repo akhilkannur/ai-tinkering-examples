@@ -3,7 +3,6 @@ id: content-upgrade-conversion-rate
 category: Marketing Ops
 title: Lead Magnet Converter
 tagline: How many readers download the PDF?
-time: Monthly
 archetype: Processor
 description: >-
   Measures download rates of in-post lead magnets (Content Upgrades) relative to

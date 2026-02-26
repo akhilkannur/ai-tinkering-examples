@@ -3,7 +3,6 @@ id: upsell-architect
 category: Sales Ops
 title: The Upsell Architect
 tagline: The easiest revenue is already in your DB.
-time: Monthly
 description: >-
   Don't just hunt for new business; grow what you have. This agent analyzes your
   current customer list, identifies 'Power Users' hitting usage limits, and

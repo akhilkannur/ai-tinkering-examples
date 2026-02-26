@@ -3,7 +3,6 @@ id: grandfathered-revenue-risk
 category: Sales Ops
 title: Legacy Pricing Audit
 tagline: How much are we losing on old plans?
-time: Quarterly
 archetype: Processor
 description: >-
   Calculates the revenue gap between legacy pricing and current market rates for

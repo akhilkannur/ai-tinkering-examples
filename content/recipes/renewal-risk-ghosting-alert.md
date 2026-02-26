@@ -3,7 +3,6 @@ id: renewal-risk-ghosting-alert
 category: Sales Ops
 title: Renewal Ghosting Detector
 tagline: Flag accounts in renewal that haven't replied lately.
-time: Weekly
 archetype: Processor
 description: >-
   Cross-references upcoming renewals with email logs to find customers who have

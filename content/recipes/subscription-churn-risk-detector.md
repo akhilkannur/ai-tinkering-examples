@@ -3,7 +3,6 @@ id: subscription-churn-risk-detector
 category: Retention
 title: Subscription Churn Risk
 tagline: Flag subscribers who paused or skipped.
-time: Weekly
 archetype: Processor
 description: >-
   Flags subscribers who have paused or skipped 2 consecutive months as high-risk

@@ -3,7 +3,6 @@ id: partner-logo-compliance-bot
 category: Marketing Ops
 title: Partner Logo Compliance Bot
 tagline: Ensure partners aren't using your old ugly logo.
-time: Batch
 archtype: Researcher
 description: >-
   Visits partner websites listed in your CRM. Checks if the logo image matches

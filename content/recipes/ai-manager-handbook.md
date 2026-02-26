@@ -3,7 +3,6 @@ id: ai-manager-handbook
 title: The AI Manager's Handbook
 category: Strategic Ops
 tagline: Teach AI your specific rules once.
-time: 15 min
 archetype: Processor
 publish_date: '2026-01-13'
 tags:

@@ -3,7 +3,6 @@ id: api-key-rotator-checklist
 category: Marketing Ops
 title: The API Key Rotator
 tagline: Don't get hacked.
-time: Batch
 archetype: Processor
 description: >-
   Stale keys are a security risk. This agent generates safety-first checklists

@@ -3,7 +3,6 @@ id: gsc-index-coverage-auditor
 category: SEO
 title: GSC Index Coverage Auditor
 tagline: Find "Ghost Pages" (Indexed 404s) and Sitemap errors.
-time: 15 mins
 archetype: Processor
 description: >-
   Compares your Google Search Console "Index Coverage" report against your live

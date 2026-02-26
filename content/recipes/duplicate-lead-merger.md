@@ -3,7 +3,6 @@ id: duplicate-lead-merger
 category: Sales Ops
 title: The Duplicate Lead Merger
 tagline: 'One person, one record.'
-time: Weekly
 archetype: Processor
 description: >-
   Duplicates split history and confuse reps. This agent identifies duplicate

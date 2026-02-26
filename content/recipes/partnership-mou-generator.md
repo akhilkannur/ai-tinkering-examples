@@ -3,7 +3,6 @@ id: partnership-mou-generator
 category: Strategic Ops
 title: The Strategic Partnership Architect
 tagline: Draft a formal MOU from your notes or a partnership goal.
-time: One-off
 description: >-
   Alignment prevents disputes. This agent reads your partnership notes (if
   provided) or researches industry standards for your partnership type

@@ -3,7 +3,6 @@ title: Project Recipe Upgrader
 id: recipe-upgrader
 category: Content Ops
 tagline: Batch-update your recipe library with AI-optimized formatting and sample data.
-time: 5 mins
 archetype: Processor
 description: >-
   The exact script we use to maintain this website. It reads existing recipe

@@ -3,7 +3,6 @@ id: category-growth-trends
 category: E-commerce
 title: The Market Surfer
 tagline: Buy inventory *before* the trend peaks.
-time: Monthly
 archetype: Processor
 description: >-
   Don't buy based on last month's sales; buy based on next month's demand. This

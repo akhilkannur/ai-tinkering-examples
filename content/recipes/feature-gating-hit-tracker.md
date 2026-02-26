@@ -3,7 +3,6 @@ id: feature-gating-hit-tracker
 category: Sales Ops
 title: Paywall Hit Detector
 tagline: Who keeps clicking the 'Upgrade' button?
-time: Weekly
 archetype: Processor
 description: >-
   Tracks how often specific free users hit 'Upgrade to use this' paywalls to

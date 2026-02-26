@@ -3,7 +3,6 @@ id: white-label-dashboard-setup
 category: Strategic Ops
 title: The White Label Dashboard Setup
 tagline: Standardize your client reporting.
-time: Batch
 description: >-
   Agencies need to look professional and automate transparency. This agent
   designs standardized client-facing portals for your entire roster, ensuring

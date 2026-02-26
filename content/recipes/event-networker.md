@@ -3,7 +3,6 @@ id: event-networker
 category: Lead Gen
 title: The Multi-Event Networking Planner
 tagline: High-value hit lists for your entire conference calendar.
-time: 1 hour
 description: >-
   Don't wander the conference hall aimlessly. This agent reads a list of events
   and their attendee/speaker files, cross-references them with your ICP, and

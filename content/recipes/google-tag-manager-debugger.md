@@ -3,7 +3,6 @@ id: google-tag-manager-debugger
 category: Marketing Ops
 title: The GTM Fleet Debugger
 tagline: Fix the dataLayer across all your properties.
-time: 10 mins
 description: >-
   Tracking is broken? This agent reads a list of GTM container IDs and dataLayer
   snippets from a CSV and identifies why tags aren't firing across your entire

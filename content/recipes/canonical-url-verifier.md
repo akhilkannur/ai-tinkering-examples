@@ -3,7 +3,6 @@ id: canonical-url-verifier
 category: SEO
 title: Canonical Tag Consistency
 tagline: Prevent duplicate content issues.
-time: Monthly
 archtype: Processor
 description: Checks if the page URL matches the Canonical URL tag. Flags mismatches.
 sampleData:

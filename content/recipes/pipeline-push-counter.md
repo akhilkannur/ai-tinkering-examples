@@ -3,7 +3,6 @@ id: pipeline-push-counter
 category: Sales Ops
 title: Deal Push Frequency Tracker
 tagline: Count how many times a deal has slipped quarters.
-time: Monthly
 archetype: Processor
 description: >-
   Analyzes historical field changes to count how many times each deal's 'Close

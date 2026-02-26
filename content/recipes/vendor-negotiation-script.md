@@ -3,7 +3,6 @@ id: vendor-negotiation-script
 category: Strategic Ops
 title: The Vendor Negotiator
 tagline: Save 20% on your software stack from a bill or a name.
-time: Annual
 description: >-
   Everything is negotiable. This agent reads your current vendor bill (if
   provided) or researches a specific tool to find competitor deals and parity

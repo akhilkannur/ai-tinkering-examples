@@ -3,7 +3,6 @@ id: boolean-search-architect
 category: Lead Gen
 title: The Boolean Search Architect
 tagline: Write complex Sales Nav queries without the headache.
-time: One-off
 archetype: Processor
 isPremium: false
 description: >-

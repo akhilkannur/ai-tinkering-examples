@@ -3,7 +3,6 @@ id: cart-abandonment-value-segmentation
 category: Retention
 title: High-Value Cart Recovery
 tagline: Treat $1k carts differently than $10 carts.
-time: Daily
 archetype: Processor
 description: >-
   Splits cart abandoners into 'High Value' (for personal outreach) and 'Low

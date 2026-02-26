@@ -3,7 +3,6 @@ id: commission-payout-variance
 category: Sales Ops
 title: Commission Variance Alert
 tagline: Did John's check double MoM?
-time: Monthly
 archetype: Processor
 description: >-
   Checks for large Month-over-Month swings in rep commission checks to catch

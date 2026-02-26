@@ -3,7 +3,6 @@ id: churn-risk-red-flag-report
 category: Customer Success
 title: Churn Red Flag Report
 tagline: Daily digest of customers with sudden usage drops.
-time: Daily
 archtype: Processor
 description: >-
   Compares yesterday's usage to the 7-day average to flag sudden drops that

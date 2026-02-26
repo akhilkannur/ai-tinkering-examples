@@ -3,7 +3,6 @@ id: family-office-direct-investment-finder
 category: Lead Gen
 title: The Family Office Hunter
 tagline: Target family offices making direct tech bets.
-time: 30 mins
 archetype: Researcher
 description: >-
   Family Offices are opaque but hold massive capital. This agent searches for

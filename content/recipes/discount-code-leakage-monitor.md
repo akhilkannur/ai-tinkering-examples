@@ -3,7 +3,6 @@ id: discount-code-leakage-monitor
 category: CRO
 title: Coupon Leak Detector
 tagline: Did Honey scrape your exclusive code?
-time: Weekly
 archetype: Processor
 description: >-
   Finds discount codes with suspicious usage spikes (e.g. 1000 uses in 1 hour)

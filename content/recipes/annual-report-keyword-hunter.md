@@ -3,7 +3,6 @@ id: annual-report-keyword-hunter
 category: Lead Gen
 title: The 10-K Strategic Hunter
 tagline: Scan annual reports for specific strategic initiative keywords.
-time: 45 mins
 archetype: Analyst
 description: >-
   Public companies reveal their buying intent in 10-K reports. This agent scans

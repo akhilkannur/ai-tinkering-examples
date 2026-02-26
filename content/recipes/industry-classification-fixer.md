@@ -3,7 +3,6 @@ id: industry-classification-fixer
 category: Sales Ops
 title: Industry Taxonomy Enforcer
 tagline: Map messy 'Industry' strings to a standard list.
-time: Weekly
 archetype: Processor
 description: Standardizes raw industry fields into a clean list of 10 parent categories.
 sampleData:

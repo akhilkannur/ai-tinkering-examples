@@ -3,7 +3,6 @@ id: lead-routing-error-checker
 category: Sales Ops
 title: Routing Rule Validator
 tagline: Did the Enterprise lead go to the SMB rep?
-time: Weekly
 archtype: Processor
 description: >-
   Audits lead assignments to ensure they match territory rules (e.g., Company

@@ -3,7 +3,6 @@ id: booth-staff-auto-scheduler
 category: Marketing Ops
 title: Booth Staff Auto-Scheduler
 tagline: Fairly rotate booth duty during conferences.
-time: Batch
 archetype: Processor
 description: >-
   Takes team availability and conference hours. Generates a schedule ensuring

@@ -3,7 +3,6 @@ id: drive-time-territory-balancer
 category: Sales Ops
 title: Drive-Time Territory Balancer
 tagline: Balance field sales territories by actual drive time.
-time: Batch
 archetype: Processor
 description: >-
   Calculates the center of gravity for a territory. uses Maps API logic to

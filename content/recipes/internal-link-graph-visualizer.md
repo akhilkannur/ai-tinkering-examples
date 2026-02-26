@@ -3,7 +3,6 @@ id: internal-link-graph-visualizer
 category: SEO
 title: The Link Graph Architect
 tagline: Visualize your site structure.
-time: Batch
 description: >-
   Orphaned pages don't rank. This agent processes complex internal link data and
   generates Mermaid.js diagram code to visualize your site's architecture and

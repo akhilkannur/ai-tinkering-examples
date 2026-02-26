@@ -3,7 +3,6 @@ id: haro-pitcher
 category: Content Ops
 title: The Bulk HARO Pitcher
 tagline: Scan 100 media queries and draft 5 winning pitches.
-time: Daily
 description: >-
   Journalists move fast. This agent scans a large text file of media queries
   (from HARO or Connectively), identifies the ones you are actually qualified

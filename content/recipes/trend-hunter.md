@@ -3,7 +3,6 @@ id: trend-hunter
 category: Content Ops
 title: The Trend Hunter
 tagline: Find the next viral topic before it peaks.
-time: 15 mins
 description: >-
   Data-driven content beats 'creative' content. This agent monitors a list of
   niche keywords from a CSV, detects 'Breakout' search queries, and suggests 3

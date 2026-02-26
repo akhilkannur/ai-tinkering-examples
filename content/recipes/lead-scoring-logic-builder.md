@@ -3,7 +3,6 @@ id: lead-scoring-logic-builder
 category: Sales Ops
 title: The Lead Scorer
 tagline: Prioritize leads from your CRM or build a model from scratch.
-time: One-off
 description: >-
   Stop wasting time on low-value leads. This agent reads your lead history CSV
   (if provided) or researches your industry to design a points-based logic

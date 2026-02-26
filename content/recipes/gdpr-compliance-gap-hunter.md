@@ -3,7 +3,6 @@ id: gdpr-compliance-gap-hunter
 category: Lead Gen
 title: The Compliance Cop
 tagline: Find sites missing cookie banners or privacy policies.
-time: 20 mins
 archetype: Analyst
 description: >-
   Compliance fines are expensive. This agent visits a list of domains (from

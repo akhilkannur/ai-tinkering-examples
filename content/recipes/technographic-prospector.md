@@ -3,7 +3,6 @@ id: technographic-prospector
 category: Competitive Intel
 title: Technographic Prospector
 tagline: Find leads using specific software.
-time: Monthly
 archetype: Processor
 description: >-
   Analyzes job descriptions or source code signatures to identify companies

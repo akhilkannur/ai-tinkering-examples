@@ -3,7 +3,6 @@ id: newsletter-asset-factory
 category: Content Ops
 title: The News Jacker
 tagline: Don't just write generic content. Ride the wave of breaking news.
-time: 20 mins
 archetype: Hybrid
 description: >-
   Generic newsletters get unsubscribed. This agent takes a list of topics and

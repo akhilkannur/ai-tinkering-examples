@@ -3,7 +3,6 @@ id: pe-firm-portfolio-consolidator
 category: Lead Gen
 title: The PE Rollup Hunter
 tagline: Map all portfolio companies of a specific PE firm.
-time: 20 mins
 archetype: Researcher
 description: >-
   Private Equity (PE) firms love to consolidate vendors across their portfolio.

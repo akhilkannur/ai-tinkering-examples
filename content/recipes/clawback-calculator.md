@@ -3,7 +3,6 @@ id: clawback-calculator
 category: Sales Ops
 title: Commission Clawback Audit
 tagline: Identify commissions paid on deals that churned early.
-time: Monthly
 archtype: Processor
 description: >-
   Compares recent churn events against payout logs to flag commissions that need

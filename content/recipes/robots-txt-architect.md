@@ -3,7 +3,6 @@ id: robots-txt-architect
 category: SEO
 title: robots.txt Rules Architect
 tagline: Protect your crawl budget by guiding search bots away from low-value pages.
-time: 5 mins
 archetype: Processor
 description: >-
   Generates a standard robots.txt file based on your site structure,

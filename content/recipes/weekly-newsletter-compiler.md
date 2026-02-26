@@ -3,7 +3,6 @@ id: weekly-newsletter-compiler
 category: Strategic Ops
 title: Newsletter Content Curator
 tagline: Automate the research for your "Weekly Round-Up" email.
-time: 15 mins
 archetype: Hybrid
 description: >-
   Visits 3-5 specific industry news sites or blogs, summarizes the top headlines

@@ -3,7 +3,6 @@ id: quota-attainment-bell-curve
 category: Sales Ops
 title: Sales Performance Distro
 tagline: Visualize team performance distribution.
-time: Quarterly
 archetype: Processor
 description: >-
   Ranks the sales team by attainment and segments them into Top, Mid, and Bottom

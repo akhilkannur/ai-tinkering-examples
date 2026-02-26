@@ -3,7 +3,6 @@ id: outreach-cadence-optimizer
 category: Sales Ops
 title: Outreach Cadence Tuner
 tagline: Find the best day to send emails.
-time: Monthly
 archetype: Processor
 description: >-
   Analyzes email response rates by 'Day of Week' and 'Time of Day' to optimize

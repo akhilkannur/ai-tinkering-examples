@@ -3,7 +3,6 @@ id: visual-storyteller
 category: Content Ops
 title: The Visual Storyteller
 tagline: Blog -> Comic Strip.
-time: Batch
 isPremium: true
 description: >-
   Dry text doesn't get shared. This agent transforms a list of blog posts or

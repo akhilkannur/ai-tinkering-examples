@@ -3,7 +3,6 @@ id: one-time-buyer-analysis
 category: CRO
 title: One-and-Done Profiler
 tagline: Why do they leave after 1 buy?
-time: Quarterly
 archetype: Processor
 description: >-
   Profiles customers who bought once and never returned to find commonalities

@@ -3,7 +3,6 @@ id: wholesale-dtc-ad-conflict
 category: Paid Media
 title: Channel Conflict Monitor
 tagline: Are we bidding against our retailers?
-time: Monthly
 archetype: Processor
 description: >-
   Checks if you are bidding on keywords where your wholesale partners (e.g.

@@ -3,7 +3,6 @@ id: demo-to-trial-conversion
 category: Sales Ops
 title: Demo-to-Trial Converter
 tagline: Are demos actually working?
-time: Monthly
 archetype: Processor
 description: Measures the success rate of converting Sales Demos into Product Trials.
 sampleData:

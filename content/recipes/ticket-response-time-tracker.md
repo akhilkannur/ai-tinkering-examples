@@ -3,7 +3,6 @@ id: ticket-response-time-tracker
 category: Customer Success
 title: The Support Capacity Planner
 tagline: Match your staffing schedule to your ticket volume spikes.
-time: Weekly
 archetype: Processor
 description: >-
   Missing SLAs isn't always about lazy agents; usually, it's about bad

@@ -3,7 +3,6 @@ id: call-sentiment-win-correlation
 category: Sales Ops
 title: Call Sentiment Optimizer
 tagline: Correlate 'Positive Sentiment' scores with win rates.
-time: Quarterly
 archetype: Processor
 description: >-
   Cross-references call sentiment scores from transcripts with actual deal

@@ -3,7 +3,6 @@ id: deal-push-reason-analyzer
 category: Sales Ops
 title: Deal Push Diagnostics
 tagline: Why did they delay... again?
-time: Monthly
 archetype: Processor
 description: >-
   Aggregates reasons for pushing close dates (e.g. 'Budget', 'Ghosting') to

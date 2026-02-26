@@ -3,7 +3,6 @@ id: product-usage-frequency-mapper
 category: CRO
 title: Power User Identifier
 tagline: Who logs in every single day?
-time: Monthly
 archtype: Processor
 description: Segments users based on login frequency (DAU/MAU) to find your champions.
 sampleData:

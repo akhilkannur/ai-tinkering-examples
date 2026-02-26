@@ -3,7 +3,6 @@ id: welcome-sequence
 category: Retention
 title: The Onboarding Factory
 tagline: Create welcome email sequences.
-time: 10 mins
 archetype: Processor
 description: >-
   Creates a 5-email welcome sequence for each user persona, designed to get them

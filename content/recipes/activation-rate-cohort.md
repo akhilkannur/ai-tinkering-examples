@@ -3,7 +3,6 @@ id: activation-rate-cohort
 category: Sales Ops
 title: Activation Rate by Cohort
 tagline: Are new users activating faster?
-time: Monthly
 archetype: Processor
 description: >-
   Tracks the percentage of users who reach 'Activation' within 7 days, grouped

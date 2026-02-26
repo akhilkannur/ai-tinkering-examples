@@ -3,7 +3,6 @@ id: beta-program-active-roster
 category: Customer Success
 title: Beta Tester Verifier
 tagline: Are they actually testing?
-time: Weekly
 archetype: Processor
 description: >-
   Identifies users in the Beta program who haven't logged in since the feature

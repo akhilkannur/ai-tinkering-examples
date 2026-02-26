@@ -3,7 +3,6 @@ id: supply-chain-risk-prospector
 category: Lead Gen
 title: The Supply Chain Risk Mapper
 tagline: Find manufacturing companies with single-source risks.
-time: 30 mins
 archetype: Analyst
 description: >-
   Manufacturers relying on a single supplier in a risky region are vulnerable.

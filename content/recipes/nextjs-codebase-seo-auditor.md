@@ -3,7 +3,6 @@ id: nextjs-codebase-seo-auditor
 category: SEO
 title: The Next.js Codebase Auditor
 tagline: Scan your local React/Next.js files for SEO gaps before you deploy.
-time: Weekly
 archetype: Processor
 description: >-
   Don't wait for a crawler to tell you your tags are missing. This agent scans

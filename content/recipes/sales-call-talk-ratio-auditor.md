@@ -3,7 +3,6 @@ id: sales-call-talk-ratio-auditor
 category: Sales Ops
 title: Talk/Listen Ratio Auditor
 tagline: Stop showing up and throwing up.
-time: Weekly
 archetype: Processor
 description: Analyzes call metrics to flag calls where the rep spoke > 60% of the time.
 sampleData:

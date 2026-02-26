@@ -3,7 +3,6 @@ id: social-media-crisis-ambulance
 category: Lead Gen
 title: The PR Crisis Ambulance
 tagline: Identify brands facing a PR crisis for reputation management.
-time: Daily
 archetype: Researcher
 description: >-
   When a brand gets "cancelled" or trends negatively on Twitter, they

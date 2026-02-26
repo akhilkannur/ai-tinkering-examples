@@ -3,7 +3,6 @@ id: non-profit-grant-recipient-tracker
 category: Lead Gen
 title: The Grant Money Hunter
 tagline: Target non-profits that recently received funding.
-time: Monthly
 archetype: Researcher
 description: >-
   Non-profits typically have tight budgets, EXCEPT when they win a major grant.

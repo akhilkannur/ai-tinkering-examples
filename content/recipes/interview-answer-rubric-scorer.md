@@ -3,7 +3,6 @@ id: interview-answer-rubric-scorer
 category: Strategic Ops
 title: Interview Answer Rubric Scorer
 tagline: Remove bias from your hiring process.
-time: Batch
 archetype: Processor
 description: >-
   Takes raw interview notes or transcripts. Scores the candidate's answer to

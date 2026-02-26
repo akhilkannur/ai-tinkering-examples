@@ -3,7 +3,6 @@ id: contact-enrichment-freshness
 category: Sales Ops
 title: Enrichment Freshness Audit
 tagline: Is your data stale?
-time: Quarterly
 archetype: Processor
 description: >-
   Checks when contacts were last enriched to trigger updates for records older

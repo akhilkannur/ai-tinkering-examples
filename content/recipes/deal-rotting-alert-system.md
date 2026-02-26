@@ -3,7 +3,6 @@ id: deal-rotting-alert-system
 category: Sales Ops
 title: Deal Rotting Monitor
 tagline: Flag deals that haven't moved in 14 days.
-time: Weekly
 archtype: Processor
 description: >-
   Highlights opportunities that are 'rotting' in the pipeline so managers can

@@ -3,7 +3,6 @@ id: quote-velocity-tracker
 category: Sales Ops
 title: The Deal Friction Hunter
 tagline: Automatically nudge deals that are stuck in 'Legal' or 'Signature'.
-time: Weekly
 archetype: Processor
 description: >-
   Time kills all deals. This agent scans your open quotes, calculates exactly

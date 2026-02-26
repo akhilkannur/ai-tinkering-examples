@@ -3,7 +3,6 @@ id: career-page-keyword-alert
 category: Lead Gen
 title: The Hiring Intent Trigger
 tagline: Trigger outreach when a prospect posts a specific job role.
-time: Daily
 archetype: Hybrid
 description: >-
   Hiring is the strongest signal of budget. This agent monitors the careers

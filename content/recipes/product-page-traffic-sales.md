@@ -3,7 +3,6 @@ id: product-page-traffic-sales
 category: CRO
 title: PDP Performance Auditor
 tagline: 'High traffic, no sales?'
-time: Weekly
 archetype: Processor
 description: >-
   Compares 'Page Views' to 'Add to Carts' to find underperforming product detail

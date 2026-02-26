@@ -3,7 +3,6 @@ id: white-paper-topic-generator
 category: Strategic Ops
 title: White Paper Ideator
 tagline: Brainstorm high-authority content that enterprise buyers actually read.
-time: 10 mins
 archetype: Hybrid
 description: >-
   Researches current industry trends and "boring" but expensive problems to

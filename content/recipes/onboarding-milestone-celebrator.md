@@ -3,7 +3,6 @@ id: onboarding-milestone-celebrator
 category: Customer Success
 title: Onboarding Milestone Celebrator
 tagline: Automate high-fives for new users.
-time: Real-time
 archetype: Processor
 description: >-
   When a user hits "First Project Created", draft a personalized congrats email

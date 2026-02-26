@@ -3,7 +3,6 @@ id: meeting-no-show-analyzer
 category: Sales Ops
 title: The No-Show Detective
 tagline: Why are prospects ghosting demos?
-time: Weekly
 archetype: Processor
 description: >-
   High demo volume means nothing if nobody shows up. This agent analyzes a CSV

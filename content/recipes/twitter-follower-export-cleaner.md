@@ -3,7 +3,6 @@ id: twitter-follower-export-cleaner
 category: Marketing Ops
 title: The Twitter Follower Cleaner
 tagline: Analyze your audience.
-time: Batch
 description: >-
   Raw Twitter data is messy. This agent converts JSON exports of followers into
   clean, actionable CSVs, separating bios and locations for easy filtering and

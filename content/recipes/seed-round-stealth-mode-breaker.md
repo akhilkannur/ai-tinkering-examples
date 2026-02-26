@@ -3,7 +3,6 @@ id: seed-round-stealth-mode-breaker
 category: Lead Gen
 title: The Stealth Mode Breaker
 tagline: Find "Stealth" startups hiring their first engineers.
-time: 20 mins
 archetype: Researcher
 description: >-
   Stealth startups don't have websites, but they DO have job postings. This

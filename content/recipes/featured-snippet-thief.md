@@ -3,7 +3,6 @@ id: featured-snippet-thief
 category: SEO
 title: The AI Overview Sniper
 tagline: Secure Position Zero & AI Citations.
-time: Weekly
 archetype: Processor
 description: >-
   Analyzes why competitors are being cited in Google AI Overviews, SearchGPT, 

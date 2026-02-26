@@ -3,7 +3,6 @@ id: buying-committee-gap-analyzer
 category: Sales Ops
 title: Buying Committee Auditor
 tagline: Find missing key roles in your target accounts.
-time: Weekly
 archtype: Processor
 description: >-
   Checks target accounts to see if you have contacts for required roles like

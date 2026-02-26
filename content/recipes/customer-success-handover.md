@@ -3,7 +3,6 @@ id: customer-success-handover
 category: Customer Success
 title: The CS Handover Factory
 tagline: Standardize 50 client handovers in one run.
-time: Weekly
 description: >-
   The worst customer experience is repeating yourself. This agent reads a CSV of
   recent wins from the sales team and generates a standardized 'Handover Brief'

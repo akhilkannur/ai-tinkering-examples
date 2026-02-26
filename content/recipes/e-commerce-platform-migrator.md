@@ -3,7 +3,6 @@ id: e-commerce-platform-migrator
 category: Lead Gen
 title: The Re-Platform Scout
 tagline: Identify online stores that recently switched platforms.
-time: 20 mins
 archetype: Researcher
 description: >-
   Switching from WooCommerce to Shopify (or vice versa) is a massive project.

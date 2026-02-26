@@ -3,7 +3,6 @@ id: tam-calculator
 category: Strategic Ops
 title: The AI TAM Researcher
 tagline: Calculate your market size using real-world data.
-time: Batch
 description: >-
   Investors need to see the math. This agent researches industry sizes, pricing
   benchmarks, and customer counts to calculate your TAM, SAM, and SOM using

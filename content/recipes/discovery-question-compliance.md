@@ -3,7 +3,6 @@ id: discovery-question-compliance
 category: Sales Ops
 title: The Sales Coach
 tagline: Don't just grade the call. Fix the deal.
-time: Batch
 archetype: Processor
 description: >-
   Reviewing calls is useless if you don't act. This agent scans transcripts for

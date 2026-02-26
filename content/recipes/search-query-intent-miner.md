@@ -3,7 +3,6 @@ id: search-query-intent-miner
 category: SEO
 title: Search Intent Miner
 tagline: Extract high-intent keywords from Search Console.
-time: Weekly
 archtype: Processor
 description: >-
   Filters search query reports for 'buy', 'price', or 'alternative' keywords to

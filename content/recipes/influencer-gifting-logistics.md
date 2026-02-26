@@ -3,7 +3,6 @@ id: influencer-gifting-logistics
 category: E-commerce
 title: The Gifting Fulfillment Engine
 tagline: Ship product to 100 creators without errors.
-time: Weekly
 description: >-
   Manual gifting is slow and error-prone. This agent reads a list of influencer
   addresses and their chosen product variant from a CSV, cleans the data for

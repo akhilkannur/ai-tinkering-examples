@@ -3,7 +3,6 @@ id: refund-rate-marketing-channel
 category: CRO
 title: Quality of Traffic Audit
 tagline: Which ads drive returns?
-time: Monthly
 archetype: Processor
 description: >-
   Checks if certain marketing channels drive 'Bad Quality' customers who return

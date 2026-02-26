@@ -3,7 +3,6 @@ id: blog-post-roi-calculator
 category: Marketing Ops
 title: Content Revenue Attributor
 tagline: Stitch CRM deals to Analytics data to find your 'Money Pages'.
-time: Weekly
 archetype: Processor
 description: >-
   Takes two separate exports (Closed Deals from CRM and Traffic Logs from

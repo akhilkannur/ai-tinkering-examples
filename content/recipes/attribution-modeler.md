@@ -3,7 +3,6 @@ id: attribution-modeler
 category: CRO
 title: The Attribution Modeler
 tagline: Who actually deserves credit?
-time: Monthly
 archetype: Processor
 description: >-
   Facebook says they drove the sale. Google says they did. This agent compares

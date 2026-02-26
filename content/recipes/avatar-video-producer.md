@@ -3,7 +3,6 @@ id: avatar-video-producer
 category: Content Ops
 title: The AI Avatar Scriptwriter
 tagline: Scripts for HeyGen & Synthesia.
-time: Batch
 archetype: Processor
 description: >-
   AI Avatars need more than just text; they need gestures and timing. This agent

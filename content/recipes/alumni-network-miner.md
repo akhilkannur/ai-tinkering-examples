@@ -3,7 +3,6 @@ id: alumni-network-miner
 category: Lead Gen
 title: The Alumni Network Miner
 tagline: Find prospects who went to the same university as your executives.
-time: 15 mins
 archetype: Researcher
 description: >-
   Warm introductions convert 5x better than cold outreach. This agent takes a

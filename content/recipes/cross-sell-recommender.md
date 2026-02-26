@@ -3,7 +3,6 @@ id: cross-sell-recommender
 category: Retention
 title: Cross-Sell Recommender
 tagline: 'If they bought X, sell them Y.'
-time: Monthly
 archetype: Processor
 description: >-
   Identifies customers who bought a specific primary product (e.g., Tent) but

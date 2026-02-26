@@ -3,7 +3,6 @@ id: customer-domain-extractor
 category: Sales Ops
 title: Domain from Email Extractor
 tagline: Get company websites from a list of emails.
-time: Batch
 archtype: Processor
 description: >-
   Parses a list of email addresses to extract the domain portion, filtering out

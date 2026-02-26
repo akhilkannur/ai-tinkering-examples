@@ -3,7 +3,6 @@ id: sales-call-sentiment-tracker
 category: Sales Ops
 title: The Call Sentiment Tracker
 tagline: Analyze the mood of your sales calls.
-time: Post-Call
 archetype: Processor
 description: >-
   Are your prospects angry or excited? This agent reads a CSV of call

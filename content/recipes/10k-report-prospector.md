@@ -3,7 +3,6 @@ id: 10k-report-prospector
 category: Sales Ops
 title: The 10-K Stitcher
 tagline: Turn 'Risk Factors' into 'Sales Pitches'.
-time: 15 mins
 archetype: Researcher
 description: >-
   Parses a public company's 10-K (Annual Report) to extract specific 'Risk

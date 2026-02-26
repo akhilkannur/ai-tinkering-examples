@@ -3,7 +3,6 @@ id: qbr-data-prepper
 category: Customer Success
 title: QBR Data Aggregator
 tagline: Prepare usage and support data for reviews.
-time: Quarterly
 archtype: Processor
 description: >-
   Combines usage logs and ticket history into a single view for Quarterly

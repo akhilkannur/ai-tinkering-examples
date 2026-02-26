@@ -3,7 +3,6 @@ id: landing-page-clarity-score-vision
 category: CRO
 title: The "5-Second Test" Simulator
 tagline: Simulate a user's first 5 seconds on your landing page.
-time: Real-time
 archtype: Processor
 description: >-
   Uses Vision AI to look at your landing page hero section. It outputs the top 3

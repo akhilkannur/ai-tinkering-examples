@@ -3,7 +3,6 @@ id: content-influence-scorer
 category: Marketing Ops
 title: Content Asset Influencer
 tagline: Rank assets by how much pipeline they touched.
-time: Monthly
 archetype: Processor
 description: >-
   Analyzes content download history against closed deals to find assets with

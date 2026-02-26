@@ -3,7 +3,6 @@ id: billing-contact-verification
 category: Sales Ops
 title: Billing Contact Verifier
 tagline: Will the invoice bounce?
-time: Monthly
 archetype: Processor
 description: >-
   Checks if the email listed as 'Billing Contact' is valid or has recently

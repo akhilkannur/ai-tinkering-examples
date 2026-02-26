@@ -3,7 +3,6 @@ id: uplift-acceptance-rate
 category: Sales Ops
 title: Price Increase Success Rate
 tagline: Did they accept the +5%?
-time: Yearly
 archetype: Processor
 description: >-
   Tracks how many customers accept the standard renewal price uplift vs

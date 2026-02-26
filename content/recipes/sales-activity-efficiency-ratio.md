@@ -3,7 +3,6 @@ id: sales-activity-efficiency-ratio
 category: Sales Ops
 title: Activity-to-Revenue Efficiency
 tagline: Calculate 'Activities required per Closed Deal'.
-time: Monthly
 archetype: Processor
 description: >-
   Calculates how many calls, emails, and meetings it takes for each rep to close

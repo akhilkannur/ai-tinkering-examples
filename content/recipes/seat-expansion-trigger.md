@@ -3,7 +3,6 @@ id: seat-expansion-trigger
 category: Sales Ops
 title: License Utilization Alert
 tagline: They just hit 9/10 seats.
-time: Weekly
 archetype: Processor
 description: >-
   Alerts Sales when an account reaches >80% license utilization, signaling an

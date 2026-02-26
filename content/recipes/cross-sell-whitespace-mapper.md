@@ -3,7 +3,6 @@ id: cross-sell-whitespace-mapper
 category: Sales Ops
 title: Cross-Sell Whitespace Matrix
 tagline: Find exactly what your customers haven't bought yet.
-time: Monthly
 archtype: Processor
 description: >-
   Generates a matrix of customers vs products to identify upsell and cross-sell

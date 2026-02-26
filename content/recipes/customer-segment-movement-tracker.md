@@ -3,7 +3,6 @@ id: customer-segment-movement-tracker
 category: Customer Success
 title: Segment Migration Tracker
 tagline: Who moved from Silver to Gold?
-time: Quarterly
 archtype: Processor
 description: >-
   Compares customer tiers between two quarters to visualize upgrades and

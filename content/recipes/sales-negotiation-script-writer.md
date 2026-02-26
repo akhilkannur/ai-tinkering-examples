@@ -3,7 +3,6 @@ id: sales-negotiation-script-writer
 category: Sales Ops
 title: The Closer's Script
 tagline: Handle "It's too expensive" like a pro.
-time: 5 mins
 archetype: Hybrid
 description: >-
   Generates specific negotiation scripts to handle common late-stage objections

@@ -3,7 +3,6 @@ id: blueprint-architect
 category: Strategic Ops
 title: The Blueprint Architect
 tagline: Create your own Work-Ready blueprints.
-time: Batch
 archetype: Processor
 description: >-
   The meta-agent. Use this blueprint to turn any manual business process into a

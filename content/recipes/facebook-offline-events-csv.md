@@ -3,7 +3,6 @@ id: facebook-offline-events-csv
 category: Paid Media
 title: The Offline Conversions Factory
 tagline: 'Format 10,000 sales for Facebook ROAS reporting.'
-time: Weekly
 description: >-
   Ads drive store visits and phone sales. This agent reads a massive CSV of
   in-store transactions, cleans the PII (Name, Email, Phone), and formats it

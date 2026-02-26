@@ -3,7 +3,6 @@ id: profile-optimization-score
 category: Strategic Ops
 title: LinkedIn Profile Auditor
 tagline: Does your rep look professional?
-time: Quarterly
 archetype: Processor
 description: >-
   Audits rep LinkedIn profile data for key elements (Headshot presence, Headline

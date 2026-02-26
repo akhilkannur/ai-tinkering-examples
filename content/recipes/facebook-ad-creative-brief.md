@@ -3,7 +3,6 @@ id: facebook-ad-creative-brief
 category: Paid Media
 title: The Facebook Ad Creative Brief
 tagline: High-converting visual concepts at scale.
-time: Batch
 description: >-
   The creative is the most important targeting lever. This agent takes a list of
   products and generates distinct visual concepts (UGC, Static, Carousel) with

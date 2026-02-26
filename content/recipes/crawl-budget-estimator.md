@@ -5,7 +5,6 @@ title: The Indexing Strategist
 tagline: >-
   Your 10k new pages won't rank if Googlebot ignores them. Predict and fix
   indexing lag.
-time: Monthly
 archetype: Processor
 description: >-
   Programmatic SEO projects often fail because they flood Googlebot. This agent

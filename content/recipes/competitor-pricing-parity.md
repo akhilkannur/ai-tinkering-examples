@@ -3,7 +3,6 @@ id: competitor-pricing-parity
 category: Competitive Intel
 title: Price War Monitor
 tagline: Don't just calculate differences. Scrape and monitor live competitor pricing.
-time: Monthly
 archetype: Hybrid
 description: >-
   Manual price checking is tedious. This agent takes a list of your products and

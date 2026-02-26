@@ -3,7 +3,6 @@ id: reseller-map-compliance
 category: Strategic Ops
 title: MAP Pricing Auditor
 tagline: Ensure resellers aren't undercutting your price.
-time: Weekly
 archtype: Processor
 description: >-
   Audits reseller pricing data to ensure compliance with Minimum Advertised

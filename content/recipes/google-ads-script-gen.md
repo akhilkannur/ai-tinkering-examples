@@ -3,7 +3,6 @@ id: google-ads-script-gen
 category: Paid Media
 title: The PPC Automator
 tagline: Deploy 'Set and Forget' rules that protect your budget while you sleep.
-time: One-off
 archetype: Processor
 description: >-
   Don't rely on manual checks. This agent generates robust Google Ads Scripts

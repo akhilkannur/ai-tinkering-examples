@@ -3,7 +3,6 @@ id: form-abandonment-rate-tracker
 category: Marketing Ops
 title: Form Friction Hunter
 tagline: Is your form too long?
-time: Monthly
 archetype: Processor
 description: >-
   Calculates drop-off rates for different form lengths to find the optimal field

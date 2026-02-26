@@ -3,7 +3,6 @@ id: bio-link-optimizer
 category: Content Ops
 title: The Bio Link Architect
 tagline: Optimize your 'Link in Bio' from a URL or a goal.
-time: One-off
 archetype: Hybrid
 description: >-
   Choice paralysis kills sales. This agent audits your current 'Link in Bio'

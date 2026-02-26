@@ -3,7 +3,6 @@ id: headless-commerce-identifier
 category: Lead Gen
 title: The Headless Tech Hunter
 tagline: Target brands using specific headless CMS architectures.
-time: 25 mins
 archetype: Analyst
 description: >-
   "Headless" commerce brands (using Contentful, Sanity, Strapi with Shopify) are

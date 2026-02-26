@@ -3,7 +3,6 @@ id: sales-funnel-bottleneck-finder
 category: Sales Ops
 title: Pipeline Leak Detector
 tagline: Find exactly where your deals are dying.
-time: 5 mins
 archetype: Processor
 description: >-
   Reads a CSV of deal stages and conversion rates, identifies the stage with the

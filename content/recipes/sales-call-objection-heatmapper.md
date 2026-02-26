@@ -3,7 +3,6 @@ id: sales-call-objection-heatmapper
 category: Sales Ops
 title: Sales Call Objection Heatmapper
 tagline: Visualize exactly when and why your deals are dying.
-time: Batch
 archtype: Processor
 description: >-
   Parses 50+ Zoom transcripts. key-value pairs the "Objection" vs "Minute Mark".

@@ -3,7 +3,6 @@ id: autonomous-project-manager
 category: Strategic Ops
 title: The Autonomous Project Manager
 tagline: The 'Ralph Wiggum' Loop.
-time: Batch
 archetype: Processor
 description: >-
   This is the 'Master Blueprint' for long-running autonomous tasks. Modeled

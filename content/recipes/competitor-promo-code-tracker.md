@@ -3,7 +3,6 @@ id: competitor-promo-code-tracker
 category: Competitive Intel
 title: Competitor Discount Tracker
 tagline: Are they running a secret 20% off?
-time: Weekly
 archetype: Processor
 description: >-
   Scrapes competitor checkout pages or email newsletters to log active promo

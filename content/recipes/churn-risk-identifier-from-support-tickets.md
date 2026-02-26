@@ -3,7 +3,6 @@ id: churn-risk-identifier-from-support-tickets
 category: Customer Success
 title: Churn Risk Detector
 tagline: Flag at-risk customers by analyzing their support ticket tone.
-time: 5 mins
 archetype: Processor
 description: >-
   Reads a CSV of recent support tickets, analyzes the sentiment and urgency of

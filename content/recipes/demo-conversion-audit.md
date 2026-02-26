@@ -3,7 +3,6 @@ id: demo-conversion-audit
 category: Sales Ops
 title: Stage Conversion Auditor
 tagline: Measure Demo -> Proposal conversion by rep.
-time: Monthly
 archtype: Processor
 description: >-
   Calculates the conversion efficiency of specific sales stages to identify

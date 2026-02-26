@@ -3,7 +3,6 @@ id: pipeline-stage-duration-audit
 category: Sales Ops
 title: Pipeline Bottleneck Finder
 tagline: Pinpoint exactly where deals are getting stuck.
-time: 15 mins
 archtype: Processor
 description: >-
   Calculates the average days deals spend in each stage of your funnel to

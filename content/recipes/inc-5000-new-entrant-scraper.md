@@ -3,7 +3,6 @@ id: inc-5000-new-entrant-scraper
 category: Lead Gen
 title: The Inc. 5000 Debutante
 tagline: Target companies making the Inc. 5000 list for the first time.
-time: Annual/Quarterly
 archetype: Researcher
 description: >-
   Making the Inc. 5000 list is a massive validation event. It means revenue is

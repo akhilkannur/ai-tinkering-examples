@@ -3,7 +3,6 @@ id: sleeping-giant-hunter
 category: Lead Gen
 title: The Sleeping Giant Hunter
 tagline: Find 50 enterprise companies using legacy tech.
-time: 25 mins
 description: >-
   Legacy tech is a buying signal. This agent reads a list of 'Old Tech' markers
   from a CSV, hunts for enterprise companies still running that software, and

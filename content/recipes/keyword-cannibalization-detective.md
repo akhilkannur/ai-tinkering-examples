@@ -3,7 +3,6 @@ id: keyword-cannibalization-detective
 category: SEO
 title: The SERP Conflict Resolver
 tagline: Don't just find duplicates. Decide the winner based on CTR and Intent.
-time: Monthly
 archetype: Processor
 description: >-
   When two pages rank for the same keyword, Google gets confused. This agent

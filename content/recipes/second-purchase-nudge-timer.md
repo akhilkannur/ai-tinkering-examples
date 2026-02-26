@@ -3,7 +3,6 @@ id: second-purchase-nudge-timer
 category: Retention
 title: Replenishment Timer
 tagline: Time your re-order emails perfectly.
-time: Monthly
 archetype: Processor
 description: >-
   Calculates the average days between 1st and 2nd purchase to identify the

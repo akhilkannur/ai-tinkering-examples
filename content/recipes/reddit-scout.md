@@ -3,7 +3,6 @@ id: reddit-scout
 category: Lead Gen
 title: The Reddit Signal Scout
 tagline: Monitor 50 subreddits for buying signals.
-time: Daily
 description: >-
   Reddit is full of people asking 'What's the best tool for X?'. This agent
   reads a list of keywords and subreddits from a CSV, identifies high-intent

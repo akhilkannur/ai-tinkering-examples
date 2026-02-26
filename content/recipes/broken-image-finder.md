@@ -3,7 +3,6 @@ id: broken-image-finder
 category: SEO
 title: Broken Image Hunter
 tagline: Find images returning 404 errors.
-time: Monthly
 archtype: Processor
 description: Parses a list of image URLs and their status codes to identify broken assets.
 sampleData:

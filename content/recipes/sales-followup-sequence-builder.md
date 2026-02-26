@@ -3,7 +3,6 @@ id: sales-followup-sequence-builder
 category: Sales Ops
 title: Ghost-Busting Follow-Up
 tagline: A 4-step email sequence for leads who stopped replying.
-time: 5 mins
 archetype: Processor
 description: >-
   Writes a persistent but polite sequence of emails designed to get a "Yes" or

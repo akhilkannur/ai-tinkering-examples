@@ -3,7 +3,6 @@ id: youtube-distiller
 category: Content Ops
 title: The Video Distiller
 tagline: YouTube -> Study Notes.
-time: Batch
 description: >-
   Watches long YouTube videos and extracts key arguments, unique insights, and
   implementation checklists for your entire learning queue.

@@ -3,7 +3,6 @@ id: linkedin-connection-request-writer-v2
 category: Sales Ops
 title: Non-Cringe LinkedIn Connector
 tagline: Writes connection requests that actually get accepted.
-time: 5 mins
 archetype: Hybrid
 description: >-
   Reads a prospect's LinkedIn profile (bio/posts), identifies a specific mutual

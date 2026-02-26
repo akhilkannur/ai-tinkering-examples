@@ -3,7 +3,6 @@ id: trend-surfer-alert
 category: Content Ops
 title: The Trend Surfer
 tagline: Be first to the story.
-time: Batch
 description: >-
   Content is a timing game. This agent monitors your entire target keyword list
   for search volume spikes and auto-drafts 'Newsjacking' posts whenever a trend

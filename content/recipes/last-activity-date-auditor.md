@@ -3,7 +3,6 @@ id: last-activity-date-auditor
 category: Sales Ops
 title: Account Activity Sync
 tagline: Sync 'Last Activity' from contacts up to the account level.
-time: Daily
 archetype: Processor
 description: >-
   Rolls up the latest activity date from various contacts to update the 'Master

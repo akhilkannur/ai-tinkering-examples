@@ -3,7 +3,6 @@ id: competitor-ad-comment-scraper
 category: Strategic Ops
 title: Competitor Dissatisfaction Miner
 tagline: Find unhappy people on their ads.
-time: Weekly
 archetype: Processor
 description: >-
   Filters comments on competitor ads for negative sentiment keywords (e.g.

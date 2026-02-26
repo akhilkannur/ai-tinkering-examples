@@ -3,7 +3,6 @@ id: linkedin-connection-acceptance-rate
 category: Strategic Ops
 title: Connection Request A/B Tester
 tagline: Which note gets more connects?
-time: Monthly
 archetype: Processor
 description: Tracks the acceptance rate of different LinkedIn connection request templates.
 sampleData:

@@ -3,7 +3,6 @@ id: cold-email-personalization-at-scale
 category: Sales Ops
 title: Cold Email Personalizer
 tagline: Merges company news with lead lists to generate custom icebreakers.
-time: 20 mins
 archetype: Hybrid
 description: >-
   Takes a CSV of leads, researches recent news for each company, and writes a

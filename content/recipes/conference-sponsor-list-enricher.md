@@ -3,7 +3,6 @@ id: conference-sponsor-list-enricher
 category: Lead Gen
 title: The Sponsor List Enricher
 tagline: Enrich a list of sponsors from a conference URL.
-time: 15 mins
 archetype: Researcher
 description: >-
   Companies sponsoring conferences have marketing budget. This agent takes a

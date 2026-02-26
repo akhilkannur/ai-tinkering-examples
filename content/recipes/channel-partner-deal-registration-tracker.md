@@ -3,7 +3,6 @@ id: channel-partner-deal-registration-tracker
 category: Strategic Ops
 title: Deal Reg Conflict Finder
 tagline: Did we already have this lead?
-time: Weekly
 archtype: Processor
 description: >-
   Compares new Partner Deal Registrations against existing CRM Opportunities to

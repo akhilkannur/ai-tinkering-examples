@@ -3,7 +3,6 @@ id: redirect-map-generator
 category: SEO
 title: The Migration Doctor
 tagline: 'Map 10,000 URLs without writing 10,000 lines of code.'
-time: Batch
 archetype: Processor
 description: >-
   Mapping redirects one-by-one is slow and slows down your server. This agent

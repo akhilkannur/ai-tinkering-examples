@@ -3,7 +3,6 @@ id: checkout-funnel-dropoff
 category: CRO
 title: Checkout Flow Analyzer
 tagline: Do they drop off at Shipping or Payment?
-time: Monthly
 archetype: Processor
 description: >-
   Identifies the specific step (Shipping Info vs Payment Method) where users

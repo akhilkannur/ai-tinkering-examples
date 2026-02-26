@@ -3,7 +3,6 @@ id: renewal-risk-scorer
 category: Customer Success
 title: The Renewal Risk Scorer
 tagline: Predict churn before it happens.
-time: Monthly
 archetype: Processor
 description: >-
   Who is going to cancel? This agent calculates a 'Risk Score' (0-100) based on

@@ -3,7 +3,6 @@ id: quality-score-doctor
 category: Paid Media
 title: The Quality Score Doctor
 tagline: Diagnose why your CPC is high.
-time: Weekly
 archetype: Processor
 description: >-
   Quality Score (QS) determines your cost. This agent audits your keywords,

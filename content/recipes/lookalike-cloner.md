@@ -3,7 +3,6 @@ id: lookalike-cloner
 category: Lead Gen
 title: The Golden Lead Cloner
 tagline: Clone your best customers or competitors.
-time: Hybrid
 description: >-
   Why prospect randomly? This agent takes a list of 'Golden Customers' or
   researches your competitors to find high-precision lookalike leads that mirror

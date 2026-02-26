@@ -3,7 +3,6 @@ id: ppc-intent-matcher
 category: Paid Media
 title: The PPC Intent Engine
 tagline: High-intent ad keywords for your entire product line.
-time: Monthly
 description: >-
   Stop bidding on generic terms. This agent reads a list of product categories
   from a CSV and generates a complete Google Ads keyword set (Exact Match,

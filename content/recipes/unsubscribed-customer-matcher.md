@@ -3,7 +3,6 @@ id: unsubscribed-customer-matcher
 category: Retention
 title: Unsub Retargeter
 tagline: Reach unsubscribed users via ads.
-time: Monthly
 archetype: Processor
 description: >-
   Matches unsubscribed email users to a format suitable for Facebook/Instagram

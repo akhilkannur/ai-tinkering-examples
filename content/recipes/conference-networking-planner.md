@@ -3,7 +3,6 @@ id: conference-networking-planner
 category: Sales Ops
 title: Conference Networking Strategist
 tagline: Prioritize who to meet at your next event.
-time: 5 mins
 archetype: Processor
 description: >-
   Reads a list of conference attendees, filters them by your "Ideal Customer

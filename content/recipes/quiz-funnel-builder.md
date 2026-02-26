@@ -3,7 +3,6 @@ id: quiz-funnel-builder
 category: Lead Gen
 title: The Quiz Funnel Builder
 tagline: Cheaper leads than a PDF.
-time: Batch
 description: >-
   Quizzes have 40% conversion rates. This agent designs 'Diagnosis Quizzes' for
   your entire product catalog, segmenting users based on their answers and

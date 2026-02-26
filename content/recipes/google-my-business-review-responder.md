@@ -3,7 +3,6 @@ id: google-my-business-review-responder
 category: Strategic Ops
 title: Local Review Responder
 tagline: Write SEO-friendly replies to Google Reviews in seconds.
-time: 5 mins
 archetype: Hybrid
 description: >-
   Reads new Google Maps reviews for your business, identifies the sentiment

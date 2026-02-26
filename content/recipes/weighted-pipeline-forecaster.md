@@ -3,7 +3,6 @@ id: weighted-pipeline-forecaster
 category: Sales Ops
 title: Weighted Revenue Forecaster
 tagline: Predict revenue using stage-based probabilities.
-time: Weekly
 archtype: Processor
 description: >-
   Calculates expected revenue by multiplying deal amounts by the historical win

@@ -3,7 +3,6 @@ id: nps-trend-analyzer
 category: Customer Success
 title: NPS Trend Spotter
 tagline: Is customer sentiment trending up or down?
-time: Monthly
 archtype: Processor
 description: >-
   Calculates the Net Promoter Score (Promoters - Detractors) for different

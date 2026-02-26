@@ -3,7 +3,6 @@ id: email-pattern-guesser
 category: Sales Ops
 title: The Email Permutator
 tagline: Guess email addresses from names.
-time: 5 mins
 archetype: Processor
 description: >-
   Generates possible email addresses for your leads based on common corporate

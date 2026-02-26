@@ -3,7 +3,6 @@ id: job-description-optimizer
 category: Lead Gen
 title: The Sales Job Description Optimizer
 tagline: 'Attract ''A-Players'', repel tourists.'
-time: Batch
 description: >-
   Generic JDs attract generic candidates. This agent rewrites your job
   descriptions to focus on 'Outcomes' rather than 'Requirements', increasing the

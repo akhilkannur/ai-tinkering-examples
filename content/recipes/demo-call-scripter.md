@@ -3,7 +3,6 @@ id: demo-call-scripter
 category: Sales Ops
 title: The Demo Playbook Factory
 tagline: Custom demo scripts for every industry you sell to.
-time: 20 mins
 description: >-
   Most demos are boring feature tours. This agent reads a list of target
   industries and their top pains from a CSV and generates a library of

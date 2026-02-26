@@ -3,7 +3,6 @@ id: cross-sell-penetration-matrix
 category: Sales Ops
 title: Product Penetration Matrix
 tagline: Map customers against the full product catalog.
-time: Monthly
 archetype: Processor
 description: >-
   Generates a grid showing which products every customer owns to highlight

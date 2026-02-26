@@ -3,7 +3,6 @@ id: ghost-job-hunter
 category: Lead Gen
 title: The Ghost Job Engine
 tagline: Uncover 50 hidden openings across 10 niches.
-time: 20 mins
 description: >-
   High-growth startups often have budget to hire before they have the time to
   post a job. This agent reads a list of niches from a CSV, finds recently

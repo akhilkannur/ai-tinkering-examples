@@ -3,7 +3,6 @@ id: pricing-page-psychologist
 category: CRO
 title: The Pricing Auditor
 tagline: Audit 10 pricing pages for conversion leaks.
-time: 10 mins
 description: >-
   Audit your own pricing and your competitors' simultaneously. This agent
   analyzes a list of URLs against behavioral psychology principles and suggests

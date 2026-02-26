@@ -3,7 +3,6 @@ id: social-selling-activity-ratio
 category: Strategic Ops
 title: Social Activity Mix
 tagline: Are we doing enough social touches?
-time: Weekly
 archetype: Processor
 description: >-
   Measures the mix of 'Social Touches' vs 'Traditional Touches' (Call/Email) in

@@ -3,7 +3,6 @@ id: referral-fraud-pattern-detector
 category: Retention
 title: Referral Fraud Pattern Detector
 tagline: Catch users referring themselves for credits.
-time: Batch
 archetype: Processor
 description: >-
   Checks referral logs for: Same IP, Sequential Emails (john+1@gmail.com), or

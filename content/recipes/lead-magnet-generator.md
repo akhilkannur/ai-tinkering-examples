@@ -3,7 +3,6 @@ id: lead-magnet-generator
 category: Lead Gen
 title: The Lead Magnet Factory
 tagline: Build a library of assets from customer pains.
-time: 20 mins
 description: >-
   Why build one lead magnet? This agent reads a list of customer 'Pains' and
   'Desires' from a CSV and generates a complete asset brief (Outline, Title,

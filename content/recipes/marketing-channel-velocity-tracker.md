@@ -3,7 +3,6 @@ id: marketing-channel-velocity-tracker
 category: Marketing Ops
 title: Lead Source Velocity
 tagline: Measure avg days to close by channel.
-time: Monthly
 archetype: Processor
 description: Compares the 'Lead to Close' cycle time across different marketing channels.
 sampleData:

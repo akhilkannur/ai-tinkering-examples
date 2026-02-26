@@ -3,7 +3,6 @@ id: competitor-pricing-alert-system
 category: Strategic Ops
 title: Competitor Pricing Watchdog
 tagline: Detects hidden pricing changes on competitor websites.
-time: 15 mins
 archetype: Hybrid
 description: >-
   Monitors competitor pricing pages, detects changes in numbers (prices) or

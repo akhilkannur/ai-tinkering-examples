@@ -3,7 +3,6 @@ id: logo-to-brand-kit
 category: Content Ops
 title: The Brand Scientist
 tagline: Decode the psychology of your logo colors.
-time: Batch
 archetype: Hybrid
 description: >-
   Colors aren't just aesthetic; they are emotional triggers. This agent scans

@@ -3,7 +3,6 @@ id: short-form-scriptwriter
 category: Content Ops
 title: The Short-Form Script Factory
 tagline: Turn your entire blog into 100 vertical scripts.
-time: 15 mins
 description: >-
   Batching is the secret to content creation. This agent reads a list of URLs
   (or a folder of markdown files), extracts the viral hooks, and generates a

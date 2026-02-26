@@ -3,7 +3,6 @@ id: forecast-accuracy-tracker
 category: Sales Ops
 title: Forecast vs Actuals Tracker
 tagline: Which rep is sandbagging?
-time: Monthly
 archtype: Processor
 description: >-
   Compares the 'Committed' forecast from the start of the month against actual

@@ -5,7 +5,6 @@ title: The Semantic Negative Keyword Factory
 tagline: >-
   Block entire intent clusters (Jobs, Research, Competitors) before they drain
   your budget.
-time: One-off
 archetype: Processor
 description: >-
   Don't just block "free" and "cheap." This agent builds comprehensive negative

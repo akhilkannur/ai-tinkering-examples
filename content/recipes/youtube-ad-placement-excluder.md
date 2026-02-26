@@ -3,7 +3,6 @@ id: youtube-ad-placement-excluder
 category: Paid Media
 title: The B2B Brand Safety Guard
 tagline: Block junk YouTube channels.
-time: Batch
 description: >-
   YouTube B2B ads often run on 'Cocomelon' because kids use parents' devices.
   This agent researches trending kids and gaming channels to build massive

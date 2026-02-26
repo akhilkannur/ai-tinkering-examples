@@ -3,7 +3,6 @@ id: press-release-drafter
 category: Strategic Ops
 title: Code-to-Press Release Architect
 tagline: Turn code commits and changelogs into journalist-grade launch assets.
-time: 15 mins
 archetype: Hybrid
 description: >-
   A Folder Agent that reads your codebase (git logs, changelogs, package.json)

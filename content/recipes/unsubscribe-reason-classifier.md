@@ -3,7 +3,6 @@ id: unsubscribe-reason-classifier
 category: Marketing Ops
 title: Unsub Analysis Bot
 tagline: Why are they leaving?
-time: Monthly
 archtype: Processor
 description: >-
   Categorizes free-text 'Reason for Unsubscribing' feedback into buckets like

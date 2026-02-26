@@ -3,7 +3,6 @@ id: pricing-parity-checker
 category: Marketing Ops
 title: The Pricing Parity Architect
 tagline: Audit your international pricing or research competitor PPP.
-time: Monthly
 description: >-
   Charging $99 in every country kills growth. This agent audits your internal
   pricing table (if provided) or researches your top competitors to suggest

@@ -3,7 +3,6 @@ id: podcast-download-growth-tracker
 category: Marketing Ops
 title: Podcast Growth Rate
 tagline: Are we growing month over month?
-time: Monthly
 archtype: Processor
 description: Calculates MoM growth percentage for podcast downloads.
 sampleData:

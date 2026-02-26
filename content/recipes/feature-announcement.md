@@ -3,7 +3,6 @@ id: feature-announcement
 category: Strategic Ops
 title: The Product Marketing Engine
 tagline: Turn technical updates into sales momentum.
-time: 20 mins
 description: >-
   Don't just ship code; ship value. This agent reads a list of technical updates
   from a CSV and generates a complete marketing bundle (Email, Tweet, Changelog)

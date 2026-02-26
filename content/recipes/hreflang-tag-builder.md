@@ -3,7 +3,6 @@ id: hreflang-tag-builder
 category: SEO
 title: The Hreflang Builder
 tagline: Fix international SEO.
-time: Batch
 description: >-
   Multi-language sites confuse Google without Hreflang. This agent generates the
   correct HTML tags mapping your English, Spanish, and German pages to prevent

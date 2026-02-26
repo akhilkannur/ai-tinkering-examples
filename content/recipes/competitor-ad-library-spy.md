@@ -3,7 +3,6 @@ id: competitor-ad-library-spy
 category: Strategic Ops
 title: Ad Library Decoder
 tagline: Reverse-engineer your competitor's ad strategy.
-time: 15 mins
 archetype: Processor
 description: >-
   Analyzes a list of ad copy text (scraped from Facebook/LinkedIn Ad Library),

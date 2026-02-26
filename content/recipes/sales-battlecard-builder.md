@@ -3,7 +3,6 @@ id: sales-battlecard-builder
 category: Sales Ops
 title: The Sales Battlecard Builder
 tagline: Win against competitors.
-time: 15 mins
 archetype: Researcher
 description: >-
   Creates 1-page battlecards for each competitor with their weaknesses, trap

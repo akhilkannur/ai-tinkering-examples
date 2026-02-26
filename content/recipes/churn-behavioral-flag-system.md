@@ -3,7 +3,6 @@ id: churn-behavioral-flag-system
 category: Retention
 title: Heuristic Churn Predictor
 tagline: Predict churn based on login gaps and ticket volume.
-time: Batch
 archtype: Processor
 description: >-
   Looking for the "Death Spiral". Flags users who have: Low Login Frequency +

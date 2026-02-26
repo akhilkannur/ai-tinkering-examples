@@ -3,7 +3,6 @@ id: pipeline-stagnation-by-product
 category: Sales Ops
 title: Product Stagnation Analyzer
 tagline: Does Product A stall deals?
-time: Monthly
 archetype: Processor
 description: >-
   Correlates 'Days in Stage' with the 'Product Line' attached to the deal to see

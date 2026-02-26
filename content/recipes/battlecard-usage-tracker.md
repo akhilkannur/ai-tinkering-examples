@@ -3,7 +3,6 @@ id: battlecard-usage-tracker
 category: Sales Ops
 title: Content Usage Tracker
 tagline: Which battlecards do reps actually use?
-time: Monthly
 archtype: Processor
 description: >-
   Analyzes CMS view logs to see which sales assets (battlecards, case studies)

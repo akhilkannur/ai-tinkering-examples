@@ -3,7 +3,6 @@ id: customer-support-sentiment-trend
 category: Customer Success
 title: Support Sentiment Tracker
 tagline: Monitor ticket sentiment trends over time.
-time: Weekly
 archetype: Processor
 description: >-
   Analyzes the text of recent support tickets to track if customer frustration

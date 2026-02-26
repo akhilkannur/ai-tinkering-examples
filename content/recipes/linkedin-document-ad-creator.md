@@ -3,7 +3,6 @@ id: linkedin-document-ad-creator
 category: Paid Media
 title: The LinkedIn Document Ad Creator
 tagline: Stop the scroll with a PDF.
-time: Batch
 description: >-
   Document Ads (Carousels) get 3x the clicks of image ads on LinkedIn. This
   agent takes your whitepapers or guides and chunks them into 5-page 'Teaser

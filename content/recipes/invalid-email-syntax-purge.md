@@ -3,7 +3,6 @@ id: invalid-email-syntax-purge
 category: Marketing Ops
 title: Email Syntax Auditor
 tagline: Identify and remove obvious email typos.
-time: Weekly
 archetype: Processor
 description: >-
   Finds obvious email typos (e.g. `gamil.com`, `yhaoo.com`) to improve email

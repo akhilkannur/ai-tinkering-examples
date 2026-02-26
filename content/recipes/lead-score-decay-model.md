@@ -3,7 +3,6 @@ id: lead-score-decay-model
 category: Sales Ops
 title: Lead Score Decay Calc
 tagline: Lower the score if they haven't visited in 30 days.
-time: Weekly
 archtype: Processor
 description: Applies a decay factor to lead scores based on recency of engagement.
 sampleData:

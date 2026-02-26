@@ -3,7 +3,6 @@ id: competitor-webinar-spy
 category: Competitive Intel
 title: Competitor Event Monitor
 tagline: What topics are they pitching?
-time: Monthly
 archetype: Processor
 description: >-
   Monitors competitor event pages to track their marketing themes and webinar

@@ -3,7 +3,6 @@ id: testimonial-coverage-matrix
 category: Customer Success
 title: Case Study Gap Finder
 tagline: Do we have a 'Finance' case study?
-time: Quarterly
 archetype: Processor
 description: Identifies industries or use-cases where you lack a case study or testimonial.
 sampleData:

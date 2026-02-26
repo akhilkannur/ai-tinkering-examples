@@ -3,7 +3,6 @@ id: subdomain-decider
 category: SEO
 title: The Subdomain vs. Subfolder Decider
 tagline: End the debate with logic.
-time: One-off
 archetype: Processor
 description: >-
   Developers love subdomains. SEOs love subfolders. This agent runs a logic tree

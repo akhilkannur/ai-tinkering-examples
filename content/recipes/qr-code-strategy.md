@@ -3,7 +3,6 @@ id: qr-code-strategy
 category: Strategic Ops
 title: The QR Code Strategist
 tagline: Bridge offline to online.
-time: Batch
 description: >-
   QR codes are often wasted on homepages. This agent processes your entire
   offline footprint and suggests high-value destinations for your QR codes to

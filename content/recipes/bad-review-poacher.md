@@ -3,7 +3,6 @@ id: bad-review-poacher
 category: Lead Gen
 title: The Competitor Poacher
 tagline: Identify users complaining about competitors on G2/Capterra.
-time: 30 mins
 archetype: Researcher
 description: >-
   Unhappy customers are the easiest leads to close. This agent monitors review

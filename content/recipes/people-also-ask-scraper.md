@@ -3,7 +3,6 @@ id: people-also-ask-scraper
 category: SEO
 title: The PAA Scraper
 tagline: Answer what they are asking.
-time: Batch
 description: >-
   Google's 'People Also Ask' box is a content goldmine. This agent takes a list
   of keywords and researches the exact questions users are asking on Google,

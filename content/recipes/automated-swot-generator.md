@@ -3,7 +3,6 @@ id: automated-swot-generator
 category: Strategic Ops
 title: Automated SWOT Generator
 tagline: Generate a SWOT analysis for any company in seconds.
-time: Real-time
 archtype: Researcher
 description: >-
   Uses web search to find recent news, earnings calls, and reviews. Compiles a

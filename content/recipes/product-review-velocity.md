@@ -3,7 +3,6 @@ id: product-review-velocity
 category: E-commerce
 title: The Merchandising Alert System
 tagline: Detect when a bestseller is losing social proof momentum.
-time: Weekly
 archetype: Processor
 description: >-
   Products die when they stop getting reviewed. This agent tracks the "Review

@@ -3,7 +3,6 @@ id: competitor-matrix-visualizer
 category: Strategic Ops
 title: Feature Parity Matrix
 tagline: Build the "Us vs Them" comparison grid for your pricing page.
-time: 15 mins
 archetype: Hybrid
 description: >-
   Researches 3 competitors to see if they have specific features (SSO, API, Dark

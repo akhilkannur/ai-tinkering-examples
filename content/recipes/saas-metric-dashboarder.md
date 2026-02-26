@@ -3,7 +3,6 @@ id: saas-metric-dashboarder
 category: Sales Ops
 title: The SaaS Metric Dashboarder
 tagline: 'Your board deck, automated.'
-time: Monthly
 archetype: Processor
 description: >-
   Investors want the 'Magic Number.' This agent takes raw inputs (New ARR, Sales

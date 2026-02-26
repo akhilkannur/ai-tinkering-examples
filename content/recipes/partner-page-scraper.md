@@ -3,7 +3,6 @@ id: partner-page-scraper
 category: Competitive Intel
 title: The Partner Page Scraper
 tagline: Poach their agencies.
-time: Batch
 description: >-
   Agency partners drive massive distribution. This agent researches competitor
   partner directories to identify high-value service partners you can recruit to

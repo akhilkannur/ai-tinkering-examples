@@ -3,7 +3,6 @@ id: event-meeting-no-show-tracker
 category: Strategic Ops
 title: Event Meeting Auditor
 tagline: Did they show up to the booth meeting?
-time: Batch
 archetype: Processor
 description: >-
   Tracks attendance of pre-booked meetings at trade shows to calculate the 'Show

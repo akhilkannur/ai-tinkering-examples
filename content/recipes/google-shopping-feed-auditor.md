@@ -3,7 +3,6 @@ id: google-shopping-feed-auditor
 category: Paid Media
 title: Merchant Center Auditor
 tagline: Find missing GTINs or images.
-time: Weekly
 archetype: Processor
 description: >-
   Audits your Google Shopping product feed to identify items missing critical

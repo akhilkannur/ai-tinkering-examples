@@ -3,7 +3,6 @@ id: support-ticket-volume-clusterer
 category: Customer Success
 title: Ticket Volume Clusterer
 tagline: Group ticket subjects into feature themes.
-time: Weekly
 archetype: Processor
 description: >-
   Groups support ticket subject lines into logical feature buckets to find the

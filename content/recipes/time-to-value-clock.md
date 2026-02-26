@@ -3,7 +3,6 @@ id: time-to-value-clock
 category: Customer Success
 title: Time-to-Value Clock
 tagline: Measure speed from signature to setup.
-time: Monthly
 archtype: Processor
 description: >-
   Calculates the average days it takes for a new customer to complete their

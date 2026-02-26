@@ -3,7 +3,6 @@ id: webinar-slide-deck-builder
 category: Content Ops
 title: The Webinar Deck Builder
 tagline: Presentations that don't suck.
-time: Batch
 description: >-
   Most webinars are 'Death by Powerpoint'. This agent outlines high-energy slide
   deck structures for your entire webinar series, ensuring your narrative flows

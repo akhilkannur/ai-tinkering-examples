@@ -3,7 +3,6 @@ id: zero-result-search-opportunity
 category: CRO
 title: Zero-Result Search Auditor
 tagline: What are people searching for that you don't have?
-time: Weekly
 archetype: Processor
 description: >-
   Identifies site search terms that yield 0 products to guide merchandising or

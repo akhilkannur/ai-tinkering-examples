@@ -3,7 +3,6 @@ id: contract-renewal-date-alerter
 category: Sales Ops
 title: Renewal Radar
 tagline: Never miss an expiration date.
-time: Monthly
 archtype: Processor
 description: >-
   Scans customer contracts to flag those expiring in the next 90 days for the

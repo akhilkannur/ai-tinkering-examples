@@ -3,7 +3,6 @@ id: cab-nomination-scorer
 category: Customer Success
 title: Advisory Board Scout
 tagline: Who should be on our CAB?
-time: Yearly
 archetype: Processor
 description: >-
   Scores customers based on spend, tenure, and strategic value to find ideal

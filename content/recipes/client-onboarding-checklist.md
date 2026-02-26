@@ -3,7 +3,6 @@ id: client-onboarding-checklist
 category: Strategic Ops
 title: The Onboarding Velocity Scanner
 tagline: Don't just send emails. Measure how fast clients are actually moving.
-time: Weekly
 archetype: Processor
 description: >-
   New clients ghosting during setup is the #1 cause of early churn. This agent

@@ -3,7 +3,6 @@ id: lead-magnet-idea-generator
 category: Strategic Ops
 title: Lead Magnet Factory
 tagline: 'Generate ideas for high-converting tools, templates, and PDFs.'
-time: 10 mins
 archetype: Hybrid
 description: >-
   Analyzes your website or a competitor's site to understand the audience, then

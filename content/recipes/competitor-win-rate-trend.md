@@ -3,7 +3,6 @@ id: competitor-win-rate-trend
 category: Competitive Intel
 title: Competitor Win Rate Trend
 tagline: Are we winning or losing against Competitor X?
-time: Monthly
 archtype: Processor
 description: >-
   Tracks the win/loss rate against a specific competitor over time to detect

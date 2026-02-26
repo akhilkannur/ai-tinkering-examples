@@ -3,7 +3,6 @@ id: sdr-activity-calculator
 category: Sales Ops
 title: The Quota Reverse-Engineer
 tagline: Don't just count dials. Build a balanced path to quota.
-time: Monthly
 archetype: Processor
 description: >-
   Setting generic "50 dials a day" goals burns out SDRs. This agent

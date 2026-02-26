@@ -3,7 +3,6 @@ id: win-loss-competitor-trends
 category: Competitive Intel
 title: Competitor Win/Loss Trend
 tagline: Are we losing more to Comp A or B?
-time: Quarterly
 archetype: Processor
 description: >-
   Analyzes CRM data to visualize win rate trends against specific competitors

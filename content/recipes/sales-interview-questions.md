@@ -3,7 +3,6 @@ id: sales-interview-questions
 category: Lead Gen
 title: The Sales Interview Architect
 tagline: Custom assessments for any sales role.
-time: Batch
 description: >-
   Resumes lie; behavioral interviews don't. This agent generates custom scripts
   of behavioral questions and weighted scorecards for all the open roles in your

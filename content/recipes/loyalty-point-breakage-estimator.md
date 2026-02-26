@@ -3,7 +3,6 @@ id: loyalty-point-breakage-estimator
 category: Retention
 title: Loyalty Point Breakage Estimator
 tagline: Forecast how many points will expire unused.
-time: Batch
 archetype: Processor
 description: >-
   Analyzes point accrual vs redemption rates. Predicts the liability reduction
