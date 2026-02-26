@@ -145,7 +145,7 @@ export default function HomePage({ recipes }: HomePageProps) {
                         </h1>
                         
                         <p className="text-xl font-bold mb-10 border-l-8 border-[#ff00ff] pl-6 py-2 bg-gray-50 leading-relaxed max-w-lg">
-                            500+ hardened instruction sets. Use them as <strong>high-reliability prompts</strong> in ChatGPT, or deploy them as <strong>automated skills</strong> in your terminal. 
+                            500+ <strong>Ready-to-Use Workflows</strong>. Use them as high-reliability prompts in ChatGPT, or deploy them as automated skills in your terminal. 
                         </p>
 
                         <div className="inline-block bg-black text-[#ccff00] border-2 border-black px-3 py-1 mb-6 brutalist-shadow-sm transform rotate-1">

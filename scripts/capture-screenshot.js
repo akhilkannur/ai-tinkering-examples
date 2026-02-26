@@ -6,16 +6,18 @@ module.exports = async function captureScreenshot(url, filename) {
   const isGithub = url.includes('github.com');
   
   // Platform-specific config
-  const config = isGithub ? {
-    clip: { x: 0, y: 0, width: 1280, height: 800 },
-    waitFor: '.application-main',
-    viewport: { width: 1280, height: 800, deviceScaleFactor: 2 }
-  } : {
-    // Default / Twitter config
-    clip: { x: 340, y: 50, width: 600, height: 600 },
-    waitFor: 'article[data-testid="tweet"]',
+  let config = {
     viewport: { width: 1280, height: 1024, deviceScaleFactor: 2 }
   };
+
+  if (isGithub) {
+    config.clip = { x: 0, y: 0, width: 1280, height: 800 };
+    config.waitFor = '.application-main';
+    config.viewport = { width: 1280, height: 800, deviceScaleFactor: 2 };
+  } else if (url.includes('x.com') || url.includes('twitter.com')) {
+    config.clip = { x: 340, y: 50, width: 600, height: 600 };
+    config.waitFor = 'article[data-testid="tweet"]';
+  }
 
   const browser = await puppeteer.launch({
     headless: "new",
@@ -34,11 +36,14 @@ module.exports = async function captureScreenshot(url, filename) {
     // Use 'domcontentloaded' as X can take a long time to 'networkidle2'
     await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 90000 });
     
-    // Wait for the main content to appear
-    try {
-        await page.waitForSelector(config.waitFor, { timeout: 30000 });
-    } catch (e) {
-        console.log(`⚠️ Selector ${config.waitFor} not found, waiting 10s anyway...`);
+    // Wait for the main content to appear if specified
+    if (config.waitFor) {
+      try {
+          await page.waitForSelector(config.waitFor, { timeout: 30000 });
+      } catch (e) {
+          console.log(`⚠️ Selector ${config.waitFor} not found, waiting 10s anyway...`);
+          await new Promise(resolve => setTimeout(resolve, 10000));
+      }
     }
     
     // Wait for content to stabilize
@@ -81,7 +86,7 @@ module.exports = async function captureScreenshot(url, filename) {
 
     await page.screenshot({ 
       path: outputPath, 
-      clip: config.clip,
+      clip: config.clip || undefined,
       type: type,
       quality: type === 'png' ? undefined : 85
     });

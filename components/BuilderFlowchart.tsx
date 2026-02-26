@@ -165,8 +165,8 @@ const TerminalCookbook = ({ recipes }: TerminalCookbookProps) => {
         <h3 className={`font-display text-xl mb-4 leading-tight transition-colors ${isLocked ? 'text-black' : 'text-black group-hover:text-[#ff00ff]'}`}>
             {recipe.title}
         </h3>
-        <p className="text-black font-black font-mono text-[10px] mb-6 min-h-[30px] leading-relaxed uppercase opacity-60">
-          // {recipe.tagline}
+        <p className="text-black font-bold text-xs mb-6 min-h-[30px] leading-relaxed uppercase font-sans">
+          {recipe.tagline}
         </p>
 
         {/* COMPACT INGREDIENTS */}
