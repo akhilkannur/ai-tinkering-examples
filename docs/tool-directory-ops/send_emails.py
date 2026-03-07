@@ -163,6 +163,22 @@ ALREADY_SENT = {
     "pathwiseai9@gmail.com",
     "rakeshvarma209080@gmail.com",
     "marketing@technologycircle.io"
+    'aiartiststartup@gmail.com',
+    'info@ticketsdata.com',
+    'ilyadavodoich@gmail.com',
+    'privatclaw@gmail.com',
+    'support@korops.com',
+    'hi@christianek.io',
+    'korlalaim@gmail.com',
+    'miromiro.app@gmail.com',
+    'contact@traidies.com',
+    'ameliawright7562@gmail.com',
+    'jamesandre9393@gmail.com',
+    'info@matrics.io',
+    'pruntykelsie@gmail.com',
+    'mudit@xmit.sh',
+    'alialsayond@gmail.com',
+    'signup@getalignmint.org',
 }
 
 def slugify(text):
@@ -204,7 +220,7 @@ def add_contact_to_audience(email):
         print(f"   [Audience] Error adding {email}: {str(e)}")
         return False
 
-def send_email(recipient, tool_name):
+def send_email(recipient, tool_name, category="Productivity"):
     subject = f"{tool_name} is live on Real AI Examples"
     slug = slugify(tool_name)
     # Add tracking parameters
@@ -213,34 +229,42 @@ def send_email(recipient, tool_name):
     
     text_body = f"""Hey,
 
-I'm reaching out because you submitted {tool_name} to the directory recently.
+Just letting you know I’ve added {tool_name} to the directory on Real AI Examples.
 
-I've added it to the tool section on Real AI Examples. The site is a curated library of practical AI blueprints, and I've built out this directory to feature handpicked tools that help people get practical work done.
+I handpick tools that fit the "practical work" focus of the site, and yours is a great fit for the {category} section.
 
-Your tool is live here: {tool_url}
+You can see the listing here: {tool_url}
 
-If you want to update any details, just hit reply.
+If you want to tweak the description or any of the details, just hit reply and I’ll get it updated for you.
 
 Best,
-Akhil"""
+Akhil
+
+P.S. If you’re manually submitting to directories one by one, check out aidirectori.es. They handle bulk submissions to 100+ sites at once, saves a lot of copy-pasting. https://www.aidirectori.es/?via=akhil"""
 
     html_body = f"""<div style="font-family: sans-serif; line-height: 1.5; color: #333;">
 <p>Hey,</p>
-<p>I'm reaching out because you submitted <strong>{tool_name}</strong> to the directory recently.</p>
-<p>I've added it to the tool section on <strong>Real AI Examples</strong>. The site is a curated library of practical AI blueprints, and I've built out this directory to feature handpicked tools that help people get practical work done.</p>
-<p>Your tool is live here: <a href="{tool_url}" style="color: #007bff; text-decoration: none;">{clean_url}</a></p>
-<p>If you want to update any details, just hit reply.</p>
+<p>Just letting you know I’ve added <strong>{tool_name}</strong> to the directory on <strong>Real AI Examples</strong>.</p>
+<p>I handpick tools that fit the "practical work" focus of the site, and yours is a great fit for the {category} section.</p>
+<p>You can see the listing here: <a href="{tool_url}" style="color: #007bff; text-decoration: none;">{clean_url}</a></p>
+<p>If you want to tweak the description or any of the details, just hit reply and I’ll get it updated for you.</p>
+<p style="margin-top: 20px; padding: 12px 16px; background-color: #f8f9fa; border-left: 3px solid #007bff; font-size: 13px; color: #555;">
+<strong>P.S.</strong> If you’re manually submitting to directories one by one, check out <a href="https://www.aidirectori.es/?via=akhil" style="color: #007bff; text-decoration: none; font-weight: bold;">aidirectori.es</a>. They handle bulk submissions to 100+ sites at once, saves a lot of copy-pasting.</p>
 <p>Best,<br>
 <strong>Akhil</strong></p>
 </div>"""
 
+    # Schedule for Saturday, March 7, 2026 at 10:00 AM EST (15:00 UTC)
+    scheduled_at = "2026-03-07T15:00:00Z"
+    
     payload = {
         "from": "akhil@mail.realaiexamples.com",
         "to": [recipient],
         "reply_to": "akhil@realaiexamples.com",
         "subject": subject,
         "text": text_body,
-        "html": html_body
+        "html": html_body,
+        "scheduled_at": scheduled_at
     }
     
     json_payload = json.dumps(payload)
@@ -271,7 +295,7 @@ def process_and_send(limit=None):
         print(f"Error fetching Google Sheet: {e}")
         return
 
-    cutoff_date = datetime.strptime("22/02/2026 11:51:01", "%d/%m/%Y %H:%M:%S")
+    cutoff_date = datetime.strptime("05/03/2026 09:02:19", "%d/%m/%Y %H:%M:%S")
     tools_to_send = []
     seen_emails = set()
 
@@ -310,8 +334,12 @@ def process_and_send(limit=None):
         if email_lower in seen_emails or email_lower in ALREADY_SENT:
             continue
         
+        # Get category if available
+        category = row.get('How would you like your submission to be processed?', 'Productivity') # Placeholder logic
+        # Better: match against live_names to get the actual category from our data
+        
         seen_emails.add(email_lower)
-        tools_to_send.append({'email': email, 'tool_name': clean_name})
+        tools_to_send.append({'email': email, 'tool_name': clean_name, 'category': 'Productivity'})
 
     print(f"Found {len(tools_to_send)} tools to email.")
     
@@ -319,7 +347,16 @@ def process_and_send(limit=None):
     for tool in tools_to_send:
         if limit and count >= limit:
             break
-        if send_email(tool['email'], tool['tool_name']):
+        # Try to find actual category from data
+        actual_category = "Productivity"
+        with open('lib/ai-tools-data.ts', 'r') as f:
+            content = f.read()
+            # Find the entry for this tool and extract category
+            tool_block = re.search(f'name:\\s*"{re.escape(tool["tool_name"])}".*?category:\\s*"(.*?)"', content, re.DOTALL | re.IGNORECASE)
+            if tool_block:
+                actual_category = tool_block.group(1)
+
+        if send_email(tool['email'], tool['tool_name'], actual_category):
             add_contact_to_audience(tool['email'])
             count += 1
             time.sleep(2)

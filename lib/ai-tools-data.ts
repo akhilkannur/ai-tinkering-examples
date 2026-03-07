@@ -1212,5 +1212,197 @@ export const aiTools: AiTool[] = [
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=watchflow.io&sz=128"
+},
+  {
+    name: "AiArtist",
+    description: "AI motion graphics generator for Social Media and Ads",
+    url: "https://www.aiartist.io",
+    category: "Marketing",
+    tags: {
+        useCase: ["Business"],
+        price: "Free",
+        skill: "Beginner"
+    },
+    image: "https://www.google.com/s2/favicons?domain=www.aiartist.io&sz=128"
+},
+  {
+    name: "TicketsData",
+    description: "TicketsData is a unified API for real time ticket inventory and pricing across major marketplaces. Get normalized JSON for events, listings, and availability in seconds.",
+    url: "https://ticketsdata.com",
+    category: "Productivity",
+    tags: {
+        useCase: ["Business"],
+        price: "Free",
+        skill: "Beginner"
+    },
+    image: "https://www.google.com/s2/favicons?domain=ticketsdata.com&sz=128"
+},
+  {
+    name: "71vote",
+    description: "71vote is an AI-powered thinking tool where multiple AI agents discuss your work or personal dilemmas in real time — including health, therapy, nutrition, and pet care — helping you see every angle before you decide.",
+    url: "https://www.71vote.com",
+    category: "Productivity",
+    tags: {
+        useCase: ["Business"],
+        price: "Free",
+        skill: "Beginner"
+    },
+    image: "https://www.google.com/s2/favicons?domain=www.71vote.com&sz=128"
+},
+  {
+    name: "privatclaw",
+    description: "PrivatClaw is a fully managed OpenClaw hosting service that gives you a dedicated, private virtual server with OpenClaw pre-installed and ready to use. No Docker, no terminal commands, no DevOps — just sign up and start chatting with your personal AI assistant. Every PrivatClaw instance runs on its own isolated VPS, meaning your data, conversations, and configurations belong entirely to you. Unlike shared hosting solutions, there is no shared infrastructure between users — your server is yours alone. We handle everything behind the scenes: initial deployment, OpenClaw configuration, security hardening, software updates, backups, and ongoing server maintenance. If something breaks at 2 AM, that's our problem, not yours. You focus on using your AI assistant — we keep it running. PrivatClaw connects to the messaging platforms you already use — Telegram, WhatsApp, Discord, Slack, and more. Your OpenClaw instance works 24/7 as a proactive AI agent that can browse the web, manage files, run automations, and remember your preferences across conversations. It's not just a chatbot — it's a personal AI teammate that actually gets things done. Whether you want a personal productivity assistant, a team-facing support bot, or an automation engine for your business workflows, PrivatClaw delivers the full power of OpenClaw without the technical overhead. Our support team is available to help with setup, configuration, custom skills, and any issues that come up along the way. Skip the self-hosting headaches. Get a production-ready OpenClaw instance that just works.",
+    url: "https://privatclaw.com",
+    category: "Image Generation",
+    tags: {
+        useCase: ["Business"],
+        price: "Free",
+        skill: "Beginner"
+    },
+    image: "https://www.google.com/s2/favicons?domain=privatclaw.com&sz=128"
+},
+  {
+    name: "PagerSync",
+    description: "Bring Your On-Call Roster into Slack for Seamless Communication",
+    url: "https://www.pagersync.com",
+    category: "Productivity",
+    tags: {
+        useCase: ["Business"],
+        price: "Free",
+        skill: "Beginner"
+    },
+    image: "https://www.google.com/s2/favicons?domain=www.pagersync.com&sz=128"
+},
+  {
+    name: "Polyform",
+    description: "Build beautiful forms in seconds. Polyform combines AI-powered form generation with advanced theming, conditional logic, and real-time analytics, so you never start from scratch",
+    url: "https://polyform.to",
+    category: "Image Generation",
+    tags: {
+        useCase: ["Business"],
+        price: "Free",
+        skill: "Beginner"
+    },
+    image: "https://www.google.com/s2/favicons?domain=polyform.to&sz=128"
+},
+  {
+    name: "Status Central",
+    description: "Monitor All Your Services In One Place. Get real-time status updates from all your critical services. Stay informed about outages and maintenance windows.",
+    url: "https://www.statuscentral.io/",
+    category: "Productivity",
+    tags: {
+        useCase: ["Business"],
+        price: "Free",
+        skill: "Beginner"
+    },
+    image: "https://www.google.com/s2/favicons?domain=www.statuscentral.io&sz=128"
+},
+  {
+    name: "MiroMiro",
+    description: "Extract colors, fonts, styles and ready-to-use code from any website in one click.",
+    url: "https://miromiro.app",
+    category: "Code Assistance",
+    tags: {
+        useCase: ["Business"],
+        price: "Free",
+        skill: "Beginner"
+    },
+    image: "https://www.google.com/s2/favicons?domain=miromiro.app&sz=128"
+},
+  {
+    name: "Traidies",
+    description: "Traidies is an AI-powered platform that turns plain-English trading ideas into fully functional automated trading bots — complete with code generation, cloud compilation, and backtesting tools.",
+    url: "https://www.traidies.com",
+    category: "Code Assistance",
+    tags: {
+        useCase: ["Business"],
+        price: "Free",
+        skill: "Beginner"
+    },
+    image: "https://www.google.com/s2/favicons?domain=www.traidies.com&sz=128"
+},
+  {
+    name: "Glad AI",
+    description: "Most founders and marketers are sitting on a goldmine of expertise trapped in docs, old blogs, and messy notes. The current state of marketing is a manual grind: you spend hours trying to turn one idea into a post for LinkedIn, then realize you have to rewrite it for X, then figure out how to join the conversation on Reddit without getting banned for being \"spammy.\"  Glad AI changes this. It acts as your dedicated assistant that ingests your raw data and transforms it into a multi-platform presence.   Voice Cloning: The platform uses a Voice Consistency Engine to map your vocabulary and professional tone. Your output sounds like you, not a generic robot.  Smart Extraction: Point the AI at your website or blogs. It finds the hooks and pillar topics that position you as an industry leader.  Auto-Pilot Growth: From formatting for dwell time to predictive scheduling, your social presence is handled while you sleep.  Visual Identity: On-brand graphics are generated for every post, ensuring your feed looks as good as it reads.",
+    url: "https://iamglad.ai",
+    category: "Video & Audio",
+    tags: {
+        useCase: ["Business"],
+        price: "Free",
+        skill: "Beginner"
+    },
+    image: "https://www.google.com/s2/favicons?domain=iamglad.ai&sz=128"
+},
+  {
+    name: "Organic Pilot",
+    description: "With OrganicPilot, grow your organic traffic on auto pilot. Instead of juggling keywords, spreadsheets, and scattered drafts, OrganicPilot builds your entire content engine:  • Generates topic clusters based on search demand • Creates a 30-day content plan with briefs • Scores content quality before publishing • Publishes directly to WordPress or your CMS  It’s built for agencies and SaaS teams who want to scale organic traffic without hiring a full SEO department.  No fluff. No random AI content. Just structured organic growth.",
+    url: "https://www.organicpilot.ai",
+    category: "Image Generation",
+    tags: {
+        useCase: ["Business"],
+        price: "Free",
+        skill: "Beginner"
+    },
+    image: "https://www.google.com/s2/favicons?domain=www.organicpilot.ai&sz=128"
+},
+  {
+    name: "maptrics",
+    description: "SEO monitoring, SEO health score, automated SEO audit, continuous SEO monitoring, deploy SEO check, site crawling, SEO regression detection, meta tag checker, OG tag validator, structured data validation, broken link checker, canonical tag monitor, robots meta checker, sitemap crawler, SEO issue tracker, page health score, SEO traffic drop, broken deploy SEO, SEO regression, post-deploy SEO check, SEO monitoring after deploy, catch SEO issues early, SEO change detection, SEO audit tool, SEO history tracking, continuous SEO vs one-time audit, real-time SEO monitoring, SEO score over time, SEO trend tracking, Vercel SEO monitoring, deploy webhook SEO, Google Search Console integration, SEO CI/CD, automated SEO testing, SEO monitoring for developers, SEO health check after deploy, track SEO changes over time, SEO audit with history, automatic SEO regression testing, SEO score dashboard, seo-monitoring, site-crawl, meta-tags, og-tags, structured-data, deploy-checks, health-score, link-checker, alt-text, canonical, seo-history, issue-tracking, vercel, sitemap",
+    url: "https://www.maptrics.io",
+    category: "Copywriting",
+    tags: {
+        useCase: ["Business"],
+        price: "Free",
+        skill: "Beginner"
+    },
+    image: "https://www.google.com/s2/favicons?domain=www.maptrics.io&sz=128"
+},
+  {
+    name: "LLMWISE",
+    description: "LLMWise is the fastest way to compare, blend, and evaluate leading AI models — all from a single interface. Instead of juggling multiple AI subscriptions and browser   tabs, LLMWise lets you send one prompt and see how GPT-5.2, Claude Sonnet 4.5, Gemini 3 Flash, DeepSeek R1, Grok 3, and more respond side-by-side in real time.    Most professionals already use AI daily but remain locked into a single provider with no way to know if they're getting the best output. LLMWise solves this with five   powerful modes:    Chat — Talk to any model instantly. Built-in smart routing automatically picks the best model for your query — code questions go to GPT, creative writing to Claude,   translation to Gemini — so you always get optimal results without thinking about it.    Compare — Send one prompt to 2-4 models simultaneously and see responses stream in side-by-side. Perfect for evaluating which model handles your specific use case best,   whether that's drafting emails, analyzing data, or writing code.    Blend — Combines outputs from multiple models into a single, superior response. Uses Mixture-of-Agents architecture to synthesize the best reasoning from each model. The    result consistently outperforms any individual model.    Judge — Pit models against each other in a blind evaluation judged by a third AI model. Get an objective verdict on which model produces better output for your exact   prompt, complete with scoring and reasoning.    Mesh — Intelligent failover routing that automatically retries with backup models if your primary choice fails or is overloaded. Circuit-breaker protection ensures you   always get a response.    LLMWise is built for professionals who need reliable AI output without the overhead of managing multiple subscriptions. Key features include:",
+    url: "https://llmwise.ai",
+    category: "Image Generation",
+    tags: {
+        useCase: ["Business"],
+        price: "Free",
+        skill: "Beginner"
+    },
+    image: "https://www.google.com/s2/favicons?domain=llmwise.ai&sz=128"
+},
+  {
+    name: "Transmit",
+    description: "Your emails, your reputation. Isolated sending from $2/mo.",
+    url: "https://xmit.sh",
+    category: "Copywriting",
+    tags: {
+        useCase: ["Business"],
+        price: "Free",
+        skill: "Beginner"
+    },
+    image: "https://www.google.com/s2/favicons?domain=xmit.sh&sz=128"
+},
+  {
+    name: "SecVibe",
+    description: "SecVibe is an AI-powered security copilot built for vibe coding, helping developers automatically detect and fix security risks in AI-generated code. It analyzes prompts and outputs in tools like Cursor and VS Code to enforce secure-by-design development from the first line of code.",
+    url: "https://secvibe.ai",
+    category: "Image Generation",
+    tags: {
+        useCase: ["Business"],
+        price: "Free",
+        skill: "Beginner"
+    },
+    image: "https://www.google.com/s2/favicons?domain=secvibe.ai&sz=128"
+},
+  {
+    name: "Alignmint",
+    description: "Alignmint is an all-in-one nonprofit accounting and management platform built by nonprofit directors for nonprofit directors. It serves general nonprofits, churches, private schools, and fiscal sponsors with a single platform that replaces fragmented software stacks. The company is based in the United States and is committed to making professional-grade nonprofit tools accessible to organizations of every size.",
+    url: "https://www.getalignmint.org",
+    category: "Productivity",
+    tags: {
+        useCase: ["Business"],
+        price: "Free",
+        skill: "Beginner"
+    },
+    image: "https://www.google.com/s2/favicons?domain=www.getalignmint.org&sz=128"
 }
 ];
