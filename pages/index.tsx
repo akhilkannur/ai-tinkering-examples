@@ -2,25 +2,18 @@ import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
 import Navbar from '../components/Navbar'
-import { Terminal, Database, Sparkles, Folder, ArrowRight, Search, FileCode } from 'lucide-react'
+import { Terminal, Database, Sparkles, Folder, ArrowRight, Zap, Target, Search } from 'lucide-react'
 import { getAllRecipes } from '../lib/recipes'
 import { Recipe } from '../lib/cookbook-data'
+import FeaturedIn from '../components/FeaturedIn'
 
 interface HomePageProps {
   recipes: Recipe[]
 }
 
-export default function OutreachOperatorPage({ recipes }: HomePageProps) {
+export default function OutreachOperatorLaunchPage({ recipes }: HomePageProps) {
   const homepageTitle = "The Outreach Operator | Data-First Sales Blueprints";
-  const homepageDescription = "Terminal-ready workflows for data hunting, angle discovery, and outreach automation. Built for Claude Code and Gemini CLI.";
-
-  // Filter recipes for Outreach/Sales only
-  const outreachRecipes = recipes.filter(r => 
-    r.category === 'Sales Ops' || 
-    r.category === 'Lead Gen' || 
-    r.category === 'Paid Media' ||
-    r.category === 'Competitive Intel'
-  );
+  const homepageDescription = "A system of experiments, data hunting, and angle discovery for normal people who need to get replies. Built for Claude Code.";
 
   return (
     <>
@@ -29,132 +22,184 @@ export default function OutreachOperatorPage({ recipes }: HomePageProps) {
         <meta name="description" content={homepageDescription} />
       </Head>
 
-      <div className="min-h-screen bg-white font-mono text-black selection:bg-black selection:text-white">
+      <style jsx global>{`
+        body {
+            font-family: 'Space Mono', monospace;
+            background-color: #000;
+            color: #fff;
+        }
+        .font-display {
+            font-family: 'Archivo Black', sans-serif;
+        }
+        .text-lime {
+            color: #ccff00;
+        }
+        .bg-lime {
+            background-color: #ccff00;
+        }
+        .border-lime {
+            border-color: #ccff00;
+        }
+        .brutalist-shadow {
+            box-shadow: 8px 8px 0px 0px #ccff00;
+        }
+        .brutalist-shadow-white {
+            box-shadow: 8px 8px 0px 0px #fff;
+        }
+      `}</style>
+
+      <div className="min-h-screen selection:bg-[#ccff00] selection:text-black">
         <Navbar />
 
-        <main className="container mx-auto px-4 pt-32 pb-24 max-w-5xl">
-          
-          {/* TECHNICAL HEADER */}
-          <div className="border-b-2 border-black pb-12 mb-16">
-            <div className="flex items-center gap-2 text-xs font-black uppercase tracking-widest mb-4 opacity-50">
-              <Terminal className="w-4 h-4" /> root / outreach-operator / blueprints
+        {/* HERO: THE VIBE MARKETER STYLE */}
+        <section className="pt-40 pb-24 px-4 border-b border-white/10">
+          <div className="container mx-auto max-w-6xl">
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-white text-black text-[10px] font-black uppercase tracking-widest mb-8">
+              <Terminal className="w-3 h-3" /> Terminal-Ready Workflows
             </div>
             
-            <h1 className="text-4xl md:text-6xl font-bold uppercase tracking-tighter mb-6 leading-none">
-              The Outreach Operator.
+            <h1 className="font-display text-6xl md:text-9xl uppercase leading-[0.8] tracking-tighter mb-12">
+              The Outreach <br />
+              <span className="text-lime">Operator.</span>
             </h1>
-            
-            <p className="text-lg font-bold max-w-2xl leading-relaxed mb-8">
-              A system of <strong>Data Hunting</strong> and <strong>Angle Discovery</strong> blueprints. Stop blasting generic lists. Use terminal-native agents to find non-obvious data and craft better hooks.
-            </p>
 
-            <div className="flex flex-wrap gap-4">
-              <a
-                href="https://checkout.dodopayments.com/buy/pdt_0NW6p0szmXPS6jXW05hIP"
-                className="bg-black text-white px-8 py-4 font-bold uppercase text-sm hover:bg-gray-800 transition-colors flex items-center gap-3"
-              >
-                Download The Operator Kit ($39) <ArrowRight className="w-4 h-4" />
-              </a>
-              <Link href="#library" className="border-2 border-black px-8 py-4 font-bold uppercase text-sm hover:bg-gray-100 transition-colors">
-                Browse Library
+            <div className="grid md:grid-cols-2 gap-16 items-start">
+              <div className="space-y-8">
+                <p className="text-xl md:text-2xl font-bold leading-tight text-white/80">
+                  Stop blasting generic lists. I build systems of <strong>Data Hunting</strong> and <strong>Angle Discovery</strong> for people who need to get replies.
+                </p>
+                <p className="text-lg text-white/50 font-medium max-w-md">
+                  This isn't a system that promises millions. It's a technical toolkit to find unique data sources and non-obvious hooks using Claude Code.
+                </p>
+                
+                <div className="pt-4">
+                  <a
+                    href="https://checkout.dodopayments.com/buy/pdt_0NW6p0szmXPSPS6jXW05hIP"
+                    className="inline-flex items-center gap-4 bg-lime text-black px-10 py-6 font-display text-2xl uppercase hover:translate-x-1 hover:translate-y-1 transition-transform brutalist-shadow-white"
+                  >
+                    Get The Operator Kit ($39) <ArrowRight className="w-8 h-8" strokeWidth={3} />
+                  </a>
+                </div>
+              </div>
+
+              <div className="bg-white/5 border border-white/10 p-8 rounded-lg">
+                <div className="flex items-center gap-2 mb-6">
+                   <div className="w-3 h-3 rounded-full bg-red-500/50"></div>
+                   <div className="w-3 h-3 rounded-full bg-yellow-500/50"></div>
+                   <div className="w-3 h-3 rounded-full bg-green-500/50"></div>
+                   <span className="text-[10px] text-white/30 font-mono ml-2 uppercase tracking-widest">outreach_operator --init</span>
+                </div>
+                <div className="space-y-4 font-mono text-sm">
+                  <div className="text-lime"> {'>'} Running Data_Hunter_v2.1...</div>
+                  <div className="text-white/60"> [SCANNING] G2_Competitor_Reviews</div>
+                  <div className="text-white/60"> [EXTRACTING] Pain_Points_Array[42]</div>
+                  <div className="text-white/60"> [MAPPING] Internal_Feature_Solution</div>
+                  <div className="text-lime"> {'>'} 3 Unique Outreach Angles Generated.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <FeaturedIn />
+
+        {/* THE SYSTEM: COREY HAINES STYLE REPO FOCUS */}
+        <section className="py-32 px-4 bg-white text-black" id="system">
+          <div className="container mx-auto max-w-6xl">
+            <div className="mb-24 text-center max-w-3xl mx-auto">
+              <h2 className="font-display text-5xl md:text-6xl uppercase leading-none mb-8">
+                A System of <br />Experiments.
+              </h2>
+              <p className="text-xl font-bold opacity-60 uppercase">
+                Stop looking for "The One" template. Start operating a library of technical experiments.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-12">
+              <div className="space-y-6">
+                <div className="w-16 h-16 bg-black flex items-center justify-center text-lime">
+                  <Database className="w-8 h-8" />
+                </div>
+                <h3 className="font-display text-2xl uppercase">Data Hunting</h3>
+                <p className="font-bold text-sm leading-relaxed opacity-60">
+                  Find where your prospects actually hang out. Blueprints for scraping job boards, Twitter intent signals, and G2 complaints.
+                </p>
+              </div>
+
+              <div className="space-y-6">
+                <div className="w-16 h-16 bg-black flex items-center justify-center text-lime">
+                  <Target className="w-8 h-8" />
+                </div>
+                <h3 className="font-display text-2xl uppercase">Angle Research</h3>
+                <p className="font-bold text-sm leading-relaxed opacity-60">
+                  Non-obvious hooks found by AI analyzing prospect data. Move beyond the "congrats on the funding" slop.
+                </p>
+              </div>
+
+              <div className="space-y-6">
+                <div className="w-16 h-16 bg-black flex items-center justify-center text-lime">
+                  <Terminal className="w-8 h-8" />
+                </div>
+                <h3 className="font-display text-2xl uppercase">Terminal Ops</h3>
+                <p className="font-bold text-sm leading-relaxed opacity-60">
+                  Automated workflows for Claude Code. Direct reading/writing to your local CSV and CRM files.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* THE BLUEPRINT ARCHIVE: THE "SWIPE" ELEMENT */}
+        <section className="py-32 px-4 border-t border-white/10" id="blueprints">
+          <div className="container mx-auto max-w-6xl">
+            <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-8">
+              <div>
+                <div className="text-lime font-black uppercase text-xs tracking-widest mb-4">Blueprints Library</div>
+                <h2 className="font-display text-5xl uppercase leading-none">The Outreach <br /> Repository.</h2>
+              </div>
+              <Link href="/ai-examples" className="group flex items-center gap-4 text-white font-black uppercase text-sm tracking-widest hover:text-lime transition-colors">
+                View All 500+ Skills <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
-          </div>
 
-          {/* THE THREE MODES */}
-          <div className="grid md:grid-cols-3 gap-0 border-2 border-black mb-24">
-            <div className="p-8 border-b-2 md:border-b-0 md:border-r-2 border-black">
-              <div className="flex items-center gap-2 font-black uppercase text-xs mb-4">
-                <Database className="w-4 h-4" /> Mode: Data_Hunter
-              </div>
-              <p className="text-sm font-bold leading-relaxed opacity-70">
-                Find leads where they actually hang out. Job boards, Twitter intent, G2 complaints, and niche directories.
-              </p>
-            </div>
-            <div className="p-8 border-b-2 md:border-b-0 md:border-r-2 border-black">
-              <div className="flex items-center gap-2 font-black uppercase text-xs mb-4">
-                <Sparkles className="w-4 h-4" /> Mode: Angle_Research
-              </div>
-              <p className="text-sm font-bold leading-relaxed opacity-70">
-                AI that reads prospect data to find non-obvious hooks. No more generic "congrats on the funding" emails.
-              </p>
-            </div>
-            <div className="p-8">
-              <div className="flex items-center gap-2 font-black uppercase text-xs mb-4">
-                <FileCode className="w-4 h-4" /> Mode: Terminal_Ops
-              </div>
-              <p className="text-sm font-bold leading-relaxed opacity-70">
-                Deploy .md blueprints directly into Claude Code. Automation that reads and writes your local CRM files.
-              </p>
-            </div>
-          </div>
-
-          {/* BLUEPRINT REPO */}
-          <div id="library" className="mb-24">
-            <div className="flex flex-col md:flex-row items-end justify-between mb-8 gap-4">
-              <h2 className="text-2xl font-bold uppercase tracking-tight">
-                Operational Library <span className="text-gray-400">({outreachRecipes.length})</span>
-              </h2>
-              <div className="w-full md:w-64 relative">
-                <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
-                <input 
-                  type="text" 
-                  placeholder="Filter skills..." 
-                  className="w-full border-2 border-black p-2 pl-10 text-xs font-bold focus:outline-none focus:bg-gray-50 uppercase"
-                />
-              </div>
-            </div>
-
-            <div className="grid gap-4">
-              {outreachRecipes.map((recipe) => (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-1">
+              {recipes.filter(r => r.category === 'Sales Ops' || r.category === 'Lead Gen').slice(0, 6).map((recipe) => (
                 <Link 
                   key={recipe.id}
                   href={`/skills/${recipe.id}`}
-                  className="group border-2 border-black p-6 hover:bg-black hover:text-white transition-all flex flex-col md:flex-row md:items-center justify-between gap-4"
+                  className="bg-white/5 border border-white/10 p-8 hover:bg-white hover:text-black transition-all group"
                 >
-                  <div>
-                    <div className="flex items-center gap-2 mb-1">
-                      <span className="text-[10px] font-black uppercase tracking-widest px-2 py-0.5 border border-current opacity-60">
-                        {recipe.category}
-                      </span>
-                      <span className="text-[10px] font-black uppercase tracking-widest text-gray-400 group-hover:text-gray-500">
-                        {recipe.archetype || 'Skill'}
-                      </span>
-                    </div>
-                    <h3 className="text-lg font-bold uppercase">{recipe.title}</h3>
-                    <p className="text-xs font-bold opacity-60 group-hover:opacity-100">{recipe.tagline}</p>
-                  </div>
-                  <div className="flex items-center gap-4 text-xs font-black uppercase">
-                    <span className="opacity-40 group-hover:opacity-100">{recipe.time}</span>
-                    <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
-                  </div>
+                  <div className="text-[10px] font-black uppercase tracking-widest opacity-50 mb-4 group-hover:opacity-100">{recipe.archetype || 'Operator'}</div>
+                  <h4 className="font-display text-xl uppercase mb-2 leading-tight">{recipe.title}</h4>
+                  <p className="text-xs font-bold opacity-40 group-hover:opacity-100">{recipe.tagline}</p>
                 </Link>
               ))}
             </div>
           </div>
+        </section>
 
-          {/* THE ARCHIVE LINK */}
-          <div className="border-t-2 border-black pt-12 text-center">
-            <div className="inline-flex items-center gap-4 mb-4">
-              <Folder className="w-6 h-6" />
-              <h4 className="text-xl font-bold uppercase">The Vault</h4>
-            </div>
-            <p className="text-sm font-bold text-gray-500 max-w-md mx-auto mb-8 uppercase">
-              Looking for something else? I have 250+ additional operational skills for Dev, Amazon, and Marketing in the archive.
+        {/* FINAL CALL: THE KIT */}
+        <section className="py-40 px-4 bg-lime text-black text-center border-t-4 border-black">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="font-display text-6xl md:text-8xl uppercase leading-[0.8] mb-12">
+              Install the <br />Department.
+            </h2>
+            <p className="text-xl md:text-2xl font-bold uppercase mb-16 max-w-2xl mx-auto leading-tight">
+              One pre-configured folder for Claude Code. <br /> All 254 Outreach Operator skills included.
             </p>
-            <Link href="/ai-examples" className="inline-block border-2 border-black px-8 py-3 font-bold uppercase text-xs hover:bg-black hover:text-white transition-all">
-              Open Full Archive
-            </Link>
+            <a
+              href="https://checkout.dodopayments.com/buy/pdt_0NW6p0szmXPS6jXW05hIP"
+              className="inline-flex items-center gap-6 bg-black text-white px-12 py-8 font-display text-3xl uppercase hover:scale-105 transition-transform brutalist-shadow-white"
+            >
+              Get The Kit ($39) <ArrowRight className="w-10 h-10" strokeWidth={4} />
+            </a>
           </div>
+        </section>
 
-        </main>
-
-        <footer className="bg-black text-white py-12 border-t-2 border-black">
-          <div className="container mx-auto px-4 max-w-5xl text-center">
-            <p className="text-[10px] font-black uppercase tracking-widest opacity-40">
-              Built by the Outreach Operator // Powered by Claude Code
-            </p>
-          </div>
+        <footer className="py-12 px-4 text-center border-t border-white/10">
+          <p className="text-[10px] font-black uppercase tracking-widest opacity-30">
+            Real AI Examples // The Outreach Operator // Built for Builders
+          </p>
         </footer>
       </div>
     </>
