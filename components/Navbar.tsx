@@ -55,8 +55,8 @@ export default function Navbar() {
           <div className="flex items-center gap-8">
             <div className="flex-shrink-0">
               <Link href="/" className="flex items-center gap-2 group">
-                <div className="w-10 h-10 bg-black flex items-center justify-center text-punk-lime font-display text-2xl transform -rotate-6 transition-transform group-hover:rotate-0">R</div>
-                <span className="font-display text-xl tracking-tighter uppercase text-black">Real<span className="text-punk-magenta">AI</span>Examples</span>
+                <div className="w-10 h-10 bg-black flex items-center justify-center text-[#ccff00] font-display text-2xl transform -rotate-6 transition-transform group-hover:rotate-0">O</div>
+                <span className="font-display text-xl tracking-tighter uppercase text-black">Outreach<span className="text-[#ccff00] bg-black px-1 ml-1">Operator</span></span>
               </Link>
             </div>
             
@@ -68,11 +68,11 @@ export default function Navbar() {
                   href={link.href}
                   className={`px-3 py-1 text-xs font-black tracking-widest transition-all duration-200 border-b-2 uppercase ${
                     router.pathname === link.href
-                      ? 'bg-punk-lime border-black text-black'
-                      : 'border-transparent text-black hover:bg-punk-lime hover:border-black'
+                      ? 'bg-[#ccff00] border-black text-black'
+                      : 'border-transparent text-black hover:bg-[#ccff00] hover:border-black'
                   }`}
                 >
-                  {link.label}
+                  {link.label === 'EXAMPLES' ? 'LIBRARY' : link.label}
                 </Link>
               ))}
             </div>
@@ -83,10 +83,10 @@ export default function Navbar() {
               href="https://checkout.dodopayments.com/buy/pdt_0NW6p0szmXPS6jXW05hIP"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 bg-[#ccff00] border-2 border-black font-black uppercase text-xs hover:translate-x-0.5 hover:translate-y-0.5 transition-all brutalist-shadow-sm flex items-center gap-2"
+              className="px-4 py-2 bg-black text-[#ccff00] border-2 border-black font-black uppercase text-xs hover:translate-x-0.5 hover:translate-y-0.5 transition-all brutalist-shadow-sm flex items-center gap-2"
             >
-                <span>Get Pro</span>
-                <Zap size={14} fill="currentColor" />
+                <span>The Kit</span>
+                <Terminal size={14} fill="currentColor" />
             </a>
           </div>
 
