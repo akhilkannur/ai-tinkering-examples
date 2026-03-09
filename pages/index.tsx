@@ -29,8 +29,8 @@ export default function OutreachOperatorPage({ recipes }: HomePageProps) {
   const outreachRecipes = recipes.filter(r => 
     r.category === 'Sales Ops' || 
     r.category === 'Lead Gen' || 
-    r.category === 'Outreach' ||
-    r.category === 'LinkedIn'
+    r.category === 'Paid Media' ||
+    r.category === 'Competitive Intel'
   );
 
   return (
