@@ -1,5 +1,8 @@
 [
   {
+    "id": "10k-report-prospector",
+    "name": "The 10-K Stitcher",
+    "vertical": "Sales",
     "problem": "Sales reps waste hours reading 100-page financial reports to find a relevant hook for enterprise prospects.",
     "what_ai_does": "It scans 10-K \"Risk Factors\" to find specific threats your product solves, then drafts an email citing their own report as the reason for reaching out.",
     "howToDoIt": [
@@ -8,9 +11,15 @@
       "Use the generated \"Risk-to-Solution\" bridge to draft a hyper-relevant outreach email."
     ],
     "bestTool": "Claude",
-    "whyThisTool": "Better for long financial docs"
+    "whyThisTool": "Better for long financial docs",
+    "time_saved": "2-5 hours saved / week",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
+    "id": "abandoned-cart-sms",
+    "name": "The Abandoned Cart SMS Writer",
+    "vertical": "Sales",
     "problem": "Generic recovery texts (\"You forgot something!\") are annoying and convert poorly because they lack specific product value.",
     "what_ai_does": "It scrapes your live product page to find unique benefits (like \"Lifetime Warranty\" or \"Organic Cotton\") and weaves them into a persuasive 3-part SMS sequence.",
     "howToDoIt": [
@@ -19,9 +28,15 @@
       "Review the drafts for character limits before sending."
     ],
     "bestTool": "ChatGPT",
-    "whyThisTool": "Fast drafting and character counting"
+    "whyThisTool": "Fast drafting and character counting",
+    "time_saved": "2-5 hours saved / week",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
+    "id": "abm-campaign-asset-builder",
+    "name": "ABM Campaign Asset Builder",
+    "vertical": "Ops",
     "problem": "Marketing teams struggle to scale personalized landing pages for high-value accounts, resulting in generic copy that misses the mark.",
     "what_ai_does": "It researches a target company's current strategic goals from news and annual reports to write landing page headlines using their specific internal language.",
     "howToDoIt": [
@@ -30,9 +45,15 @@
       "Draft a \"Why Now\" section for the page citing a recent news event or milestone you found."
     ],
     "bestTool": "Claude",
-    "whyThisTool": "Sophisticated research capabilities"
+    "whyThisTool": "Sophisticated research capabilities",
+    "time_saved": "2-5 hours saved / week",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
+    "id": "abm-personal-gift-recommender",
+    "name": "ABM Personal Gift Recommender",
+    "vertical": "Marketing",
     "problem": "Sending generic corporate swag (like cheap mugs) results in low ROI and budget waste because it doesn't build a real connection.",
     "what_ai_does": "It researches a prospect's social media interests to suggest a personalized $50 gift that actually matches their hobbies or personal brand.",
     "howToDoIt": [
@@ -41,9 +62,15 @@
       "Review the curated list of 3 specific gift ideas under $50 that match those interests."
     ],
     "bestTool": "ChatGPT",
-    "whyThisTool": "Creative personal research"
+    "whyThisTool": "Creative personal research",
+    "time_saved": "2-5 hours saved / week",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
+    "id": "about-page-storyteller",
+    "name": "The About Page Storyteller",
+    "vertical": "Marketing",
     "problem": "Faceless \"corporate\" about pages fail to build trust with customers who want to know the people and mission behind the brand.",
     "what_ai_does": "It transforms boring company facts and founder bios into a compelling \"Hero's Journey\" story that highlights the \"Aha!\" moment and the mission.",
     "howToDoIt": [
@@ -52,9 +79,15 @@
       "Review the draft to ensure the tone sounds human and mission-driven, not corporate."
     ],
     "bestTool": "Claude",
-    "whyThisTool": "Better narrative flow and \"voice\""
+    "whyThisTool": "Better narrative flow and \"voice\"",
+    "time_saved": "2-5 hours saved / week",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
+    "id": "ad-copy-character-counter",
+    "name": "The Ad Variant Factory",
+    "vertical": "Marketing",
     "problem": "Marketers waste hours manually trying to fit their value props into the strict, varying character limits of Google, FB, and LinkedIn.",
     "what_ai_does": "It takes a single headline and automatically generates 10 platform-perfect variants that maximize CTR while strictly adhering to character limits.",
     "howToDoIt": [
@@ -63,9 +96,15 @@
       "Select the highest-converting angle for each platform."
     ],
     "bestTool": "ChatGPT",
-    "whyThisTool": "Fast drafting and character counting"
+    "whyThisTool": "Fast drafting and character counting",
+    "time_saved": "2-5 hours saved / week",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
+    "id": "ad-counter-strike",
+    "name": "The Conquest Campaigner",
+    "vertical": "Sales",
     "problem": "Blindly attacking competitors is less effective than targeting the specific pain points their customers are already complaining about.",
     "what_ai_does": "It scans competitor review sites (G2/Capterra) to find recurring complaints and writes \"Switching\" ads that highlight your strength in those exact areas.",
     "howToDoIt": [
@@ -74,9 +113,15 @@
       "Draft a direct-attack ad that positions you as the transparent or reliable alternative."
     ],
     "bestTool": "Claude",
-    "whyThisTool": "Pattern recognition"
+    "whyThisTool": "Pattern recognition",
+    "time_saved": "2-5 hours saved / week",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
+    "id": "affiliate-application-auto-screener",
+    "name": "Affiliate Application Auto-Screener",
+    "vertical": "Marketing",
     "problem": "Manual screening of affiliate applications is slow and prone to approving spammy \"coupon farm\" websites that hurt your brand.",
     "what_ai_does": "It automatically audits an applicant's website to flag low-quality content, adult content, or parked domains, approving only real content creators.",
     "howToDoIt": [
@@ -85,9 +130,15 @@
       "Review the \"Approve\" list for legitimate influencers and creators."
     ],
     "bestTool": "ChatGPT",
-    "whyThisTool": "Quick classification"
+    "whyThisTool": "Quick classification",
+    "time_saved": "2-5 hours saved / week",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
+    "id": "affiliate-program-launcher",
+    "name": "The Affiliate Program Launcher",
+    "vertical": "Ops",
     "problem": "Building a commission-only sales team is daunting without a structured recruitment and commission strategy.",
     "what_ai_does": "It benchmarks competitor affiliate programs and drafts personalized recruitment pitches for potential industry partners.",
     "howToDoIt": [
@@ -96,9 +147,15 @@
       "Draft 5 personalized outreach emails for potential partners found via LinkedIn."
     ],
     "bestTool": "Claude",
-    "whyThisTool": "Market benchmarking"
+    "whyThisTool": "Market benchmarking",
+    "time_saved": "2-5 hours saved / week",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
+    "id": "agent-context-builder",
+    "name": "The Project Architect",
+    "vertical": "Ops",
     "problem": "AI tools give generic or bad answers when they don't understand your specific project structure and file rules.",
     "what_ai_does": "It scans your project directory to create a \"ReadMe for Robots\" that makes every future AI interaction 10x faster and more accurate.",
     "howToDoIt": [
@@ -107,9 +164,15 @@
       "Review the file to ensure your coding conventions and file locations are clearly documented for the AI."
     ],
     "bestTool": "Claude Code",
-    "whyThisTool": "Local file access"
+    "whyThisTool": "Local file access",
+    "time_saved": "2-5 hours saved / week",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
+    "id": "ai-internal-linking-agent",
+    "name": "AI Internal Linking Agent",
+    "vertical": "Marketing",
     "problem": "Manual internal linking is the highest-ROI SEO task but is incredibly tedious to do across 100+ blog posts.",
     "what_ai_does": "It maps your entire content library to find the exact spots where old posts should link to new content to boost your domain authority.",
     "howToDoIt": [
@@ -118,9 +181,15 @@
       "Ask the tool to identify semantic gaps in your blog posts where a link to a \"Money Page\" would be natural and helpful."
     ],
     "bestTool": "Claude Code",
-    "whyThisTool": "File system access and semantic analysis"
+    "whyThisTool": "File system access and semantic analysis",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
+    "id": "alternative-to-builder",
+    "name": "The 'Alternative To' Hub Builder",
+    "vertical": "Marketing",
     "problem": "Most brands miss out on high-intent \"Alternative to [Competitor]\" search traffic because they don't have comparison pages.",
     "what_ai_does": "It researches competitor weaknesses to generate a library of comparison landing pages that position your product as the better choice.",
     "howToDoIt": [
@@ -129,9 +198,15 @@
       "Draft a comparison matrix for each competitor highlighting your unique strengths."
     ],
     "bestTool": "Claude",
-    "whyThisTool": "In-depth competitor analysis and content generation"
+    "whyThisTool": "In-depth competitor analysis and content generation",
+    "time_saved": "2-5 hours saved / week",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
+    "id": "alumni-network-miner",
+    "name": "The Alumni Network Miner",
+    "vertical": "Sales",
     "problem": "Cold outreach is often ignored; the warmest paths to decision-makers are often hidden in shared university backgrounds.",
     "what_ai_does": "It matches your executive team's university alumni networks with decision-makers at target accounts to facilitate warm introductions.",
     "howToDoIt": [
@@ -140,9 +215,15 @@
       "Identify the strongest overlap and draft a \"fellow alum\" intro email."
     ],
     "bestTool": "ChatGPT",
-    "whyThisTool": "Generating targeted search queries and outreach copy"
+    "whyThisTool": "Generating targeted search queries and outreach copy",
+    "time_saved": "2-5 hours saved / week",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
+    "id": "angel-investor-portfolio-scanner",
+    "name": "The Angel Portfolio Scanner",
+    "vertical": "Sales",
     "problem": "It's hard to find early-stage leads who are backed by investors you already have a relationship with.",
     "what_ai_does": "It scans the public portfolios of specific Angel Investors to find growing startups that fit your ICP, leveraging the \"friendly investor\" angle.",
     "howToDoIt": [
@@ -151,9 +232,15 @@
       "Draft an outreach email mentioning the shared investor connection."
     ],
     "bestTool": "ChatGPT",
-    "whyThisTool": "Extracting and filtering data from web pages"
+    "whyThisTool": "Extracting and filtering data from web pages",
+    "time_saved": "2-5 hours saved / week",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
+    "id": "annual-report-keyword-hunter",
+    "name": "The 10-K Strategic Hunter",
+    "vertical": "Sales",
     "problem": "Public companies reveal their buying intent in 10-K reports, but manually hunting for budget signals across 100 companies is slow.",
     "what_ai_does": "It scans annual reports for keywords like \"Digital Transformation\" or \"AI Adoption\" to pinpoint accounts with budget for your solution.",
     "howToDoIt": [
@@ -162,9 +249,15 @@
       "Review the \"Budget Signal\" report to prioritize your outreach."
     ],
     "bestTool": "Claude",
-    "whyThisTool": "Analyzing large text documents for specific signals"
+    "whyThisTool": "Analyzing large text documents for specific signals",
+    "time_saved": "2-5 hours saved / week",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
+    "id": "app-store-screenshot-optimizer",
+    "name": "The App Store Screenshot Optimizer",
+    "vertical": "Marketing",
     "problem": "App screenshots are your billboard, but most are unoptimized and fail to address the core \"search intent\" of the user.",
     "what_ai_does": "It researches top-ranking competitors in your category to draft optimized \"Caption Text\" for your first 5 screenshots to maximize conversion.",
     "howToDoIt": [
@@ -173,9 +266,15 @@
       "Draft a 5-slide narrative for your own screenshots that addresses the #1 pain point found."
     ],
     "bestTool": "ChatGPT",
-    "whyThisTool": "Comparative analysis and creative content generation"
+    "whyThisTool": "Comparative analysis and creative content generation",
+    "time_saved": "2-5 hours saved / week",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
+    "id": "autonomous-sales-sniper",
+    "name": "The Sales Sniper",
+    "vertical": "Sales",
     "problem": "Sales pipelines are often clogged with low-quality service leads (like agencies) that will never buy your SaaS product.",
     "what_ai_does": "It automatically searches your target segments and filters out service providers to build a highly qualified, SaaS-only prospect list.",
     "howToDoIt": [
@@ -184,9 +283,15 @@
       "Ask the tool to \"disqualify anyone who sells hours or services\" based on their website copy."
     ],
     "bestTool": "ChatGPT",
-    "whyThisTool": "Lead filtering and qualification based on rules"
+    "whyThisTool": "Lead filtering and qualification based on rules",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
+    "id": "b2b-marketplace-scraper",
+    "name": "The Ecosystem Partner Finder",
+    "vertical": "Sales",
     "problem": "Identifying tech-forward companies in specific software ecosystems (like Shopify or HubSpot) is a manual research task.",
     "what_ai_does": "It scrapes B2B app stores to find companies that are active players in specific ecosystems, providing a list of tech-savvy prospects.",
     "howToDoIt": [
@@ -195,9 +300,15 @@
       "Export the list of developer companies to target as potential partners."
     ],
     "bestTool": "ChatGPT",
-    "whyThisTool": "Extracting and categorizing data from web pages"
+    "whyThisTool": "Extracting and categorizing data from web pages",
+    "time_saved": "2-5 hours saved / week",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
+    "id": "bad-review-poacher",
+    "name": "The Competitor Poacher",
+    "vertical": "Sales",
     "problem": "The easiest leads to close are users who are actively unhappy with your competitors, but finding them in real-time is hard.",
     "what_ai_does": "It monitors review sites for 1-3 star reviews of your competitors and prepares a \"solution\" pitch based on their specific complaint.",
     "howToDoIt": [
@@ -206,9 +317,15 @@
       "Draft a personalized outreach message offering to solve that specific frustration."
     ],
     "bestTool": "Claude",
-    "whyThisTool": "Analyzing sentiment and extracting pain points from reviews"
+    "whyThisTool": "Analyzing sentiment and extracting pain points from reviews",
+    "time_saved": "2-5 hours saved / week",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
+    "id": "beta-tester-recruiter",
+    "name": "The Beta Tester Recruiter",
+    "vertical": "Ops",
     "problem": "New features often fail because companies get low-quality feedback from the \"wrong\" users instead of their power users.",
     "what_ai_does": "It identifies your most active users and drafts exclusive, high-urgency invites for your beta program to ensure quality feedback.",
     "howToDoIt": [
@@ -217,9 +334,15 @@
       "Review the drafts for a tone of exclusivity and high urgency."
     ],
     "bestTool": "ChatGPT",
-    "whyThisTool": "Identifying active users and drafting persuasive copy"
+    "whyThisTool": "Identifying active users and drafting persuasive copy",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
+    "id": "billing-contact-verification",
+    "name": "Billing Contact Verifier",
+    "vertical": "Sales",
     "problem": "Bounced invoices are the fastest way to lose paying customers, but most companies don't audit their billing contacts until it's too late.",
     "what_ai_does": "It audits your billing database to identify \"dead\" contacts and suggests fallback finance emails (like finance@company.com) to rescue revenue.",
     "howToDoIt": [
@@ -228,9 +351,15 @@
       "Update your CRM with the new finance department contacts."
     ],
     "bestTool": "ChatGPT",
-    "whyThisTool": "Identifying bounced contacts and generating recovery options"
+    "whyThisTool": "Identifying bounced contacts and generating recovery options",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
+    "id": "billing-frequency-upsell",
+    "name": "Annual Pre-Pay Upsell",
+    "vertical": "Sales",
     "problem": "Many monthly users are stable enough for Annual plans, but companies miss the cash flow boost by not identifying them.",
     "what_ai_does": "It filters your stable monthly customers (>6 months tenure) to create a prioritized target list for Annual pre-pay conversion campaigns.",
     "howToDoIt": [
@@ -239,9 +368,15 @@
       "Draft an \"Annual Plan Discount\" email targeting this specific stable segment."
     ],
     "bestTool": "ChatGPT",
-    "whyThisTool": "Customer segmentation and campaign drafting"
+    "whyThisTool": "Customer segmentation and campaign drafting",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
+    "id": "bio-link-optimizer",
+    "name": "The Bio Link Architect",
+    "vertical": "Marketing",
     "problem": "Most \"Link in Bio\" pages suffer from choice paralysis, leading to low click-through rates on the primary offer.",
     "what_ai_does": "It audits your current link structure to suggest a prioritized layout that drives users toward your most profitable business goal.",
     "howToDoIt": [
@@ -250,9 +385,15 @@
       "Select the top 3 links and rewrite their headlines to be more benefit-driven."
     ],
     "bestTool": "ChatGPT",
-    "whyThisTool": "Auditing and optimizing call-to-action placement"
+    "whyThisTool": "Auditing and optimizing call-to-action placement",
+    "time_saved": "2-5 hours saved / week",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
+    "id": "blueprint-architect",
+    "name": "The Blueprint Architect",
+    "vertical": "Ops",
     "problem": "High-value manual processes are hard to standardize and scale across a team without a structured workflow document.",
     "what_ai_does": "It turns any messy manual process description into a standardized, 3-Phase AI Blueprint that anyone on your team can follow.",
     "howToDoIt": [
@@ -261,9 +402,15 @@
       "Review the structured workflow for clarity and tool-agnostic logic."
     ],
     "bestTool": "Claude",
-    "whyThisTool": "Structuring complex information into actionable steps"
+    "whyThisTool": "Structuring complex information into actionable steps",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
+    "id": "board-member-network-mapper",
+    "name": "The Board Room Infiltrator",
+    "vertical": "Sales",
     "problem": "Bypassing the standard sales process requires high-level intros, but most teams don't know who their board members are connected to.",
     "what_ai_does": "It maps shared board memberships between your investors and target accounts to find \"side door\" entry points into the C-suite.",
     "howToDoIt": [
@@ -272,9 +419,15 @@
       "Identify any direct or 2nd-degree board connections to your target accounts."
     ],
     "bestTool": "ChatGPT",
-    "whyThisTool": "Mapping professional networks and identifying warm introductions"
+    "whyThisTool": "Mapping professional networks and identifying warm introductions",
+    "time_saved": "2-5 hours saved / week",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
+    "id": "booth-design-checklist",
+    "name": "The Event Booth Strategist",
+    "vertical": "Ops",
     "problem": "Trade show booths are often generic and fail to attract the right audience, leading to low booth traffic and wasted event budget.",
     "what_ai_does": "It researches the specific attendee profile of your target events to design custom booth layouts, catchy slogans (\"hooks\"), and relevant swag strategies for each show.",
     "howToDoIt": [
@@ -283,9 +436,15 @@
       "Generate a \"Big Statement\" for your booth's back wall and a \"Demo Flow\" optimized for your specific booth footprint."
     ],
     "bestTool": "Claude",
-    "whyThisTool": "Better at creative design and audience research"
+    "whyThisTool": "Better at creative design and audience research",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
+    "id": "booth-scan-lead-router",
+    "name": "Event Lead Router",
+    "vertical": "Ops",
     "problem": "Event leads often sit in a CSV for days or weeks because manual routing to the correct regional or industry sales rep is slow and error-prone.",
     "what_ai_does": "It automatically processes bulk badge scan exports and instantly routes leads to the correct sales rep based on your custom territory logic (e.g., State or Industry).",
     "howToDoIt": [
@@ -294,9 +453,15 @@
       "Let AI categorize every lead and output a \"Cleaned & Routed\" file ready for your CRM."
     ],
     "bestTool": "ChatGPT",
-    "whyThisTool": "Fast data processing and mapping"
+    "whyThisTool": "Fast data processing and mapping",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
+    "id": "brand-voice-guidelines",
+    "name": "The Brand Voice Architect",
+    "vertical": "Marketing",
     "problem": "As a team grows, the company's \"voice\" becomes inconsistent across social media, emails, and blogs, making the brand feel unprofessional or \"schizophrenic.\"",
     "what_ai_does": "It audits your existing website and top-performing content to create a standardized \"Brand Voice Bible\" with specific Do's/Don'ts and a unique vocabulary.",
     "howToDoIt": [
@@ -305,9 +470,15 @@
       "Save the resulting \"Voice Bible\" as a PDF for all employees and new hires."
     ],
     "bestTool": "Claude",
-    "whyThisTool": "Superior at capturing and codifying subtle tone nuances"
+    "whyThisTool": "Superior at capturing and codifying subtle tone nuances",
+    "time_saved": "2-5 hours saved / week",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
+    "id": "brand-voice-rewriter",
+    "name": "Brand Voice Chameleon",
+    "vertical": "Ops",
     "problem": "Technical documentation or rough drafts often sound boring and \"robotic,\" failing to engage the target audience or match your brand's personality.",
     "what_ai_does": "It takes any rough draft and instantly rewrites it into multiple distinct styles—like \"Enterprise Trust,\" \"Witty Startup,\" or \"Direct Minimalist\"—while keeping the core facts intact.",
     "howToDoIt": [
@@ -316,9 +487,15 @@
       "Review the rewritten variations and pick the one that matches your specific campaign goal."
     ],
     "bestTool": "ChatGPT",
-    "whyThisTool": "Excellent for fast style-switching and creative drafting"
+    "whyThisTool": "Excellent for fast style-switching and creative drafting",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
+    "id": "builtwith-tech-pivot",
+    "name": "The Tech Displacement Factory",
+    "vertical": "Sales",
     "problem": "Raw BuiltWith reports are massive and \"noisy,\" making it hard for sales teams to find the specific high-revenue companies using a competitor's product.",
     "what_ai_does": "It filters raw technology reports against your specific ICP (Ideal Customer Profile) to pinpoint the most valuable \"displacement\" opportunities.",
     "howToDoIt": [
@@ -327,9 +504,15 @@
       "Generate a \"Displacement Angle\" for each account (e.g., \"Company X is likely overpaying for Tech Y at this scale\")."
     ],
     "bestTool": "ChatGPT",
-    "whyThisTool": "Handles CSV data filtering and logical grouping quickly"
+    "whyThisTool": "Handles CSV data filtering and logical grouping quickly",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
+    "id": "business-card-digitizer",
+    "name": "The Business Card Digitizer",
+    "vertical": "Sales",
     "problem": "Collecting business cards at events is great, but manually typing them into a CRM is a slow, mind-numbing task that often results in lost leads.",
     "what_ai_does": "It scans stacks of business card photos, extracts contact info via OCR, and maps them into a clean, CRM-ready CSV file in seconds.",
     "howToDoIt": [
@@ -338,9 +521,15 @@
       "Ask it to \"Extract Name, Company, Email, and Title into a CSV table\" and download the result."
     ],
     "bestTool": "ChatGPT",
-    "whyThisTool": "Best-in-class image analysis and data extraction"
+    "whyThisTool": "Best-in-class image analysis and data extraction",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
+    "id": "buying-committee-gap-analyzer",
+    "name": "Buying Committee Auditor",
+    "vertical": "Sales",
     "problem": "Deals often stall or die because sales reps haven't identified or engaged the full \"Buying Committee\" (e.g., Finance, IT, or Security), leaving invisible blockers to kill the deal late in the cycle.",
     "what_ai_does": "It audits your current CRM contact list for target accounts to instantly flag missing key roles like CTO, Finance, or User Lead, ensuring you have a complete map of decision-makers.",
     "howToDoIt": [
@@ -349,9 +538,15 @@
       "Review the generated \"Gap Report\" to see exactly which accounts need more prospecting to find the missing stakeholders."
     ],
     "bestTool": "ChatGPT",
-    "whyThisTool": "Fast data processing and logical gap analysis"
+    "whyThisTool": "Fast data processing and logical gap analysis",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
+    "id": "buying-signal-heatmapper",
+    "name": "Account Buying Signal Heatmapper",
+    "vertical": "Sales",
     "problem": "Sales teams waste time cold-calling accounts that aren't ready to buy, while missing \"hot\" accounts that are actively hiring for roles related to their product.",
     "what_ai_does": "It aggregates disparate intent signals—like new job postings, recent funding news, and website visits—into a single \"Heat Score\" to tell you exactly which accounts to prioritize today.",
     "howToDoIt": [
@@ -360,9 +555,15 @@
       "Let AI sum the scores per account and output a prioritized \"Hot List\" for your sales team."
     ],
     "bestTool": "ChatGPT",
-    "whyThisTool": "Excellent for scoring logic and data aggregation"
+    "whyThisTool": "Excellent for scoring logic and data aggregation",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
+    "id": "call-sentiment-win-correlation",
+    "name": "Call Sentiment Optimizer",
+    "vertical": "Sales",
     "problem": "Sales managers know some calls go better than others, but they can't manually listen to 1,000 recordings to find the specific \"Winning Tone\" or phrases that actually lead to closed deals.",
     "what_ai_does": "It cross-references sentiment scores from thousands of call transcripts with actual deal outcomes (Won/Lost) to identify the linguistic predictors of sales success.",
     "howToDoIt": [
@@ -371,9 +572,15 @@
       "Review the \"Winning Tone\" report to train your team on the specific conversational styles that drive revenue."
     ],
     "bestTool": "Claude",
-    "whyThisTool": "Superior at identifying subtle patterns and correlations in large text datasets"
+    "whyThisTool": "Superior at identifying subtle patterns and correlations in large text datasets",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
+    "id": "cancellation-flow-auditor",
+    "name": "The Cancellation Flow Auditor",
+    "vertical": "Ops",
     "problem": "Most SaaS companies have a generic \"Are you sure?\" cancellation button that does nothing to prevent churn, missing one last chance to save a customer.",
     "what_ai_does": "It researches industry-leading retention tactics and audits your offboarding flow to design custom \"Deflection Pages\" that offer tailored alternatives based on the customer's specific reason for leaving.",
     "howToDoIt": [
@@ -382,9 +589,15 @@
       "Implement the drafted copy and UI flow to start \"saving\" customers before they finalize their cancellation."
     ],
     "bestTool": "Claude",
-    "whyThisTool": "Better at strategic design and empathetic, persuasive copywriting"
+    "whyThisTool": "Better at strategic design and empathetic, persuasive copywriting",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
+    "id": "canonical-tag-auditor",
+    "name": "The Technical SEO Doctor",
+    "vertical": "Marketing",
     "problem": "Technical SEO errors like \"Self-referencing Canonical\" conflicts or accidental \"NoIndex\" tags are invisible to the naked eye but can wipe your site's traffic off Google overnight.",
     "what_ai_does": "It crawls your live pages to find the \"Big 3\" silent killers of SEO—canonical mismatches, accidental NoIndex tags, and broken internal links—before they impact your rankings.",
     "howToDoIt": [
@@ -393,7 +606,10 @@
       "Review the \"SEO Triage Report\" and hand it to your developers to fix critical indexing blockers."
     ],
     "bestTool": "Claude Code",
-    "whyThisTool": "Can directly crawl URLs and analyze technical HTML structure with high precision"
+    "whyThisTool": "Can directly crawl URLs and analyze technical HTML structure with high precision",
+    "time_saved": "2-5 hours saved / week",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
     "id": "career-page-keyword-alert",
@@ -413,6 +629,9 @@
     "tools": "Practical Tool"
   },
   {
+    "id": "case-study-factory",
+    "name": "The Case Study Factory",
+    "vertical": "Sales",
     "problem": "Sales teams desperately need social proof, but turning raw client interview transcripts into polished, persuasive case studies takes hours of manual writing and editing.",
     "what_ai_does": "It reads through a folder of raw interview notes or transcripts and instantly transforms them into structured \"Success Stories\" using the STAR method (Situation, Task, Action, Result).",
     "howToDoIt": [
@@ -421,9 +640,15 @@
       "Generate a polished case study, a LinkedIn post, and a sales email snippet for every success story."
     ],
     "bestTool": "ChatGPT",
-    "whyThisTool": "Fast drafting and excellent at following structured formats like the STAR method"
+    "whyThisTool": "Fast drafting and excellent at following structured formats like the STAR method",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
+    "id": "case-study-interviewer-bot",
+    "name": "Case Study Interviewer",
+    "vertical": "Ops",
     "problem": "Most case study interviews are shallow because the interviewer forgets to ask for the specific \"Before vs. After\" metrics that actually close deals.",
     "what_ai_does": "It generates a custom interview script tailored to the specific \"Win\" your customer experienced, ensuring you extract high-impact \"Hero's Journey\" soundbites and ROI data.",
     "howToDoIt": [
@@ -432,7 +657,10 @@
       "Use the script during your next client call to capture the specific data points needed for a world-class case study."
     ],
     "bestTool": "Claude",
-    "whyThisTool": "Superior at conversational design and narrative structure"
+    "whyThisTool": "Superior at conversational design and narrative structure",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
     "id": "case-study-reverse-engineer",
@@ -452,6 +680,9 @@
     "tools": "Practical Tool"
   },
   {
+    "id": "ceo-podcast-tour-tracker",
+    "name": "The Podcast Tour Stalker",
+    "vertical": "Sales",
     "problem": "Identifying the perfect \"icebreaker\" for a high-value CEO is hard, yet many executives reveal their current priorities and \"intent signals\" during recent podcast interviews.",
     "what_ai_does": "It monitors recent podcast guest appearances by CEOs in your niche, providing you with time-sensitive context (e.g., \"Heard you on [Podcast] talking about X\") for hyper-personalized outreach.",
     "howToDoIt": [
@@ -460,9 +691,15 @@
       "Use the generated \"Topic Hooks\" to draft outreach emails that prove you've done your homework."
     ],
     "bestTool": "Claude",
-    "whyThisTool": "Better at summarizing long audio transcripts and drafting sophisticated outreach hooks"
+    "whyThisTool": "Better at summarizing long audio transcripts and drafting sophisticated outreach hooks",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
+    "id": "challenger-brand-identifier",
+    "name": "The Challenger Brand Hunter",
+    "vertical": "Sales",
     "problem": "Selling to Fortune 500 giants is slow; the most aggressive buyers are often \"Challenger Brands\" (Series B/C) that are actively trying to unseat market leaders.",
     "what_ai_does": "It identifies high-growth competitors that are explicitly positioning themselves as \"The [Incumbent] Killer,\" giving you a list of tech-forward prospects with high buying intent.",
     "howToDoIt": [
@@ -471,9 +708,15 @@
       "Filter the list by funding stage and target these \"aggressive buyers\" who are willing to take risks on new technology."
     ],
     "bestTool": "Claude",
-    "whyThisTool": "Superior at market landscape analysis and identifying strategic positioning"
+    "whyThisTool": "Superior at market landscape analysis and identifying strategic positioning",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
+    "id": "champion-movement-tracker",
+    "name": "Champion Job Change Tracker",
+    "vertical": "Sales",
     "problem": "Your best sales leads are previous happy customers who just changed jobs, but manually tracking \"Champion\" movements across LinkedIn for thousands of contacts is impossible.",
     "what_ai_does": "It compares your list of known \"Champions\" (previous buyers) against new market contact exports to flag when a fan has moved into a new target account.",
     "howToDoIt": [
@@ -482,7 +725,10 @@
       "Prioritize these \"Warm Leads\" as your #1 outreach target for the quarter."
     ],
     "bestTool": "ChatGPT",
-    "whyThisTool": "Fast data matching and identity verification across large lists"
+    "whyThisTool": "Fast data matching and identity verification across large lists",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
     "id": "champion-verifier",
@@ -502,6 +748,9 @@
     "tools": "Practical Tool"
   },
   {
+    "id": "changelog-marketer",
+    "name": "The Changelog Marketer",
+    "vertical": "Ops",
     "problem": "Product teams work hard on new features, but they often \"hide\" their work in boring, technical changelogs that users never read, missing a massive marketing opportunity.",
     "what_ai_does": "It transforms technical commit messages or Jira tickets into high-energy, benefit-driven \"New & Improved\" marketing assets, including social media threads and customer emails.",
     "howToDoIt": [
@@ -510,7 +759,10 @@
       "Use the generated assets for your next product newsletter or X/Twitter announcement."
     ],
     "bestTool": "ChatGPT",
-    "whyThisTool": "Excellent for style transformation and high-volume copywriting"
+    "whyThisTool": "Excellent for style transformation and high-volume copywriting",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
     "id": "channel-conflict-arbitrator",
@@ -598,6 +850,9 @@
     "tools": "Practical Tool"
   },
   {
+    "id": "clawback-calculator",
+    "name": "Commission Clawback Audit",
+    "vertical": "Sales",
     "problem": "Sales teams often pay out commissions on deals that churn within the first 90 days, leading to \"phantom revenue\" and significant financial loss if not manually tracked and recouped.",
     "what_ai_does": "It automatically cross-references your recent churn events against your commission payout logs to flag any deals that qualify for a \"Clawback\" based on your company's clawback window.",
     "howToDoIt": [
@@ -606,9 +861,15 @@
       "Generate a \"Clawback Report\" to hand to finance for payroll adjustments."
     ],
     "bestTool": "ChatGPT",
-    "whyThisTool": "Fast data processing and logical reconciliation between disparate lists"
+    "whyThisTool": "Fast data processing and logical reconciliation between disparate lists",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
+    "id": "client-onboarding-checklist",
+    "name": "The Onboarding Velocity Scanner",
+    "vertical": "Ops",
     "problem": "New clients often \"ghost\" during the technical setup phase, which is the #1 predictor of early churn, but manual tracking of onboarding velocity across 100+ clients is impossible.",
     "what_ai_does": "It analyzes your onboarding logs to calculate the \"Time in Stage\" for every client and automatically flags any accounts that have stalled beyond your expected benchmarks.",
     "howToDoIt": [
@@ -617,9 +878,15 @@
       "Generate a specific \"Unblock Email\" for every stalled client to offer technical help and restart the momentum."
     ],
     "bestTool": "ChatGPT",
-    "whyThisTool": "Excellent for velocity calculation and drafting empathetic intervention emails"
+    "whyThisTool": "Excellent for velocity calculation and drafting empathetic intervention emails",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
+    "id": "cloud-bill-shock-prospector",
+    "name": "The Cloud Bill Shock Hunter",
+    "vertical": "Sales",
     "problem": "Companies scaling rapidly often experience \"Cloud Bill Shock\" from unoptimized AWS or Azure costs, making them high-intent leads for FinOps services if you can find them at the right time.",
     "what_ai_does": "It correlates \"Engineering Hiring Sprees\" (DevOps/SRE roles) with recent funding rounds to pinpoint companies likely struggling with exploding cloud infrastructure costs.",
     "howToDoIt": [
@@ -628,9 +895,15 @@
       "Draft a hyper-relevant outreach email focused on \"Cloud Cost Efficiency\" for their specific tech stack."
     ],
     "bestTool": "Claude",
-    "whyThisTool": "Superior at complex web research and correlating disparate signals (hiring + funding + tech stack)"
+    "whyThisTool": "Superior at complex web research and correlating disparate signals (hiring + funding + tech stack)",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
+    "id": "cold-call-objection-simulator",
+    "name": "Cold Call Simulator (The Grumpy Prospect)",
+    "vertical": "Sales",
     "problem": "Sales reps often fumble difficult objections like \"Just send me an email\" or \"We have no budget\" on live calls because they haven't practiced their responses in a low-stakes environment.",
     "what_ai_does": "It acts as a \"Grumpy Prospect\" (e.g., a busy VP of Engineering) that throws common objections at you and grades your ability to handle them with empathy and professional pivots.",
     "howToDoIt": [
@@ -639,9 +912,15 @@
       "Review the \"Coaching Report\" at the end to see your grade and get specific tips on how to improve your objection-handling logic."
     ],
     "bestTool": "Claude",
-    "whyThisTool": "Better at nuanced, role-specific personas and providing detailed coaching feedback"
+    "whyThisTool": "Better at nuanced, role-specific personas and providing detailed coaching feedback",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
+    "id": "cold-dm-personalizer",
+    "name": "The Cold DM Personalizer",
+    "vertical": "Sales",
     "problem": "Sliding into DMs with a generic message looks like a bot and results in zero replies; the only way to get a response is to mention a specific \"emotional hook\" from their recent content.",
     "what_ai_does": "It analyzes the latest posts from a list of LinkedIn or X (Twitter) profiles to find specific sentences or ideas that relate to your target topic, drafting custom opening lines for every prospect.",
     "howToDoIt": [
@@ -650,9 +929,15 @@
       "Use the generated \"Observational\" or \"Value-Add\" lines to launch a personalized DM campaign that actually gets replies."
     ],
     "bestTool": "Claude",
-    "whyThisTool": "Superior at web-fetching social content and drafting authentic, conversational opening lines"
+    "whyThisTool": "Superior at web-fetching social content and drafting authentic, conversational opening lines",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
+    "id": "cold-email-personalization-at-scale",
+    "name": "Cold Email Personalizer",
+    "vertical": "Sales",
     "problem": "Generic cold emails are instantly deleted; the only way to get a 20%+ open rate is through hyper-personalization, which is impossible to do manually for 1,000 leads.",
     "what_ai_does": "It researches recent news, podcasts, or blog posts for every company in your lead list and automatically drafts a unique, authentic \"icebreaker\" line for every single contact.",
     "howToDoIt": [
@@ -661,9 +946,15 @@
       "Export the enriched CSV and import it into your email tool (like Instantly or Apollo) to launch a hyper-personalized campaign."
     ],
     "bestTool": "Claude",
-    "whyThisTool": "Superior at web research and drafting authentic, non-salesy opening lines"
+    "whyThisTool": "Superior at web research and drafting authentic, non-salesy opening lines",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
+    "id": "cold-email-spam-checker",
+    "name": "The Spam Word Hunter",
+    "vertical": "Sales",
     "problem": "Using words like \"Free,\" \"Guaranteed,\" or \"100%\" in your cold emails can trigger spam filters and ruin your domain's deliverability, even if your offer is legitimate.",
     "what_ai_does": "It scans your email drafts for common spam trigger words and automatically rewrites them using \"safer\" alternatives that are more likely to land in the primary inbox.",
     "howToDoIt": [
@@ -672,7 +963,10 @@
       "Review the \"Sanitized Versions\" to replace high-risk words with proven, deliverability-friendly alternatives like \"Complimentary\" or \"Proven.\""
     ],
     "bestTool": "ChatGPT",
-    "whyThisTool": "Excellent for fast text transformation and keyword-based risk analysis"
+    "whyThisTool": "Excellent for fast text transformation and keyword-based risk analysis",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
     "id": "commission-calculator",
@@ -709,6 +1003,9 @@
     "tools": "Practical Tool"
   },
   {
+    "id": "commission-payout-calculator",
+    "name": "The Comp Plan Simulator",
+    "vertical": "Sales",
     "problem": "Changing a sales commission plan is a massive financial risk; if you set the \"accelerators\" too high, you could accidentally wipe out your company's entire profit margin on a single good quarter.",
     "what_ai_does": "It uses your historical deal data to simulate exactly how much you would have paid out under three different payout models (e.g., \"Aggressive Hunter\" vs. \"Stable Base\"), helping you find the perfect balance before rolling it out.",
     "howToDoIt": [
@@ -717,7 +1014,10 @@
       "Review the \"Comp Plan Simulation\" to see which model incentivizes your top performers without exceeding your total budget."
     ],
     "bestTool": "ChatGPT",
-    "whyThisTool": "Fast data processing and logical simulation of complex financial models"
+    "whyThisTool": "Fast data processing and logical simulation of complex financial models",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
     "id": "commission-payout-variance",
@@ -754,6 +1054,9 @@
     "tools": "Practical Tool"
   },
   {
+    "id": "community-sentiment-watchdog",
+    "name": "Community Toxicity Monitor",
+    "vertical": "Customer Success",
     "problem": "In large Discord or Slack communities, toxic trends or \"Admin Hate\" can bubble up and explode before a human moderator even notices, leading to mass departures or brand damage.",
     "what_ai_does": "It ingests the last 1,000 messages from your community's general channel to cluster sentiments and instantly flag rising \"Feature Frustration\" or \"Toxicity\" topics that require immediate intervention.",
     "howToDoIt": [
@@ -762,7 +1065,10 @@
       "Review the \"Community Health Report\" to decide where to jump in for a 1-on-1 or an official announcement."
     ],
     "bestTool": "Claude",
-    "whyThisTool": "Superior at detecting subtle emotional nuances and clustering complex conversational themes"
+    "whyThisTool": "Superior at detecting subtle emotional nuances and clustering complex conversational themes",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
     "id": "competitor-ad-comment-scraper",
@@ -782,6 +1088,9 @@
     "tools": "Practical Tool"
   },
   {
+    "id": "competitor-ad-library-spy",
+    "name": "Ad Library Decoder",
+    "vertical": "Ops",
     "problem": "It's hard to know which ad angles are working for your competitors without spending thousands of dollars on your own testing.",
     "what_ai_does": "It reverse-engineers your competitor's ad strategy by analyzing their live ad library, grouping their ads by \"Hook Type\" (e.g., Pain Point vs. Social Proof), and identifying their winning value propositions.",
     "howToDoIt": [
@@ -790,7 +1099,10 @@
       "Review the \"Ad Strategy Analysis\" to find the gaps in their strategy and write \"Counter-Hooks\" that attack their weak spots."
     ],
     "bestTool": "Claude",
-    "whyThisTool": "Superior at pattern recognition and strategic marketing analysis"
+    "whyThisTool": "Superior at pattern recognition and strategic marketing analysis",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
     "id": "competitor-ad-library-visual-cluster",
@@ -827,6 +1139,9 @@
     "tools": "Practical Tool"
   },
   {
+    "id": "competitor-feature-parity",
+    "name": "The Feature Gap Detective",
+    "vertical": "Sales",
     "problem": "Manual feature comparison matrices are always out of date, leading your sales team to get blindsided by a prospect saying, \"But your competitor just added Feature X last week.\"",
     "what_ai_does": "It automatically scrapes competitor pricing and feature pages to build a live \"Feature Gap Matrix,\" identifying what they have that you're missing (and where you still have a massive advantage).",
     "howToDoIt": [
@@ -835,7 +1150,10 @@
       "Compare the results against your own product roadmap to identify your next 3 highest-priority feature releases."
     ],
     "bestTool": "Claude Code",
-    "whyThisTool": "Can directly crawl complex pages and perform high-accuracy semantic grouping of feature lists"
+    "whyThisTool": "Can directly crawl complex pages and perform high-accuracy semantic grouping of feature lists",
+    "time_saved": "2-5 hours saved / week",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
     "id": "competitor-hiring-spy",
@@ -889,6 +1207,9 @@
     "tools": "Practical Tool"
   },
   {
+    "id": "competitor-news-digest-builder",
+    "name": "Competitor Radar",
+    "vertical": "Sales",
     "problem": "Marketing and sales teams need to stay on top of competitor moves, but manually reading dozens of press releases and blog posts every week is a \"time-sink\" that often gets ignored.",
     "what_ai_does": "It automatically searches for the latest press releases, funding news, or major blog posts from your competitors and summarizes them into a clean, executive-level \"Weekly Intel Brief.\"",
     "howToDoIt": [
@@ -897,9 +1218,15 @@
       "Review the summarized \"Intel Brief\" to identify strategic shifts you need to respond to in your own marketing."
     ],
     "bestTool": "Claude",
-    "whyThisTool": "Superior at summarizing long-form news and identifying strategic business signals"
+    "whyThisTool": "Superior at summarizing long-form news and identifying strategic business signals",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
+    "id": "competitor-onboarding-spy",
+    "name": "The Onboarding Teardown Factory",
+    "vertical": "Sales",
     "problem": "You want to improve your product's \"Aha!\" moment but don't have the time to sign up for and manually audit 10 different competitor onboarding flows.",
     "what_ai_does": "It processes screenshots and emails from multiple competitor signup flows to reverse-engineers their activation strategies into a single, side-by-side comparison report.",
     "howToDoIt": [
@@ -908,9 +1235,15 @@
       "Review the \"Onboarding Landscape Analysis\" to identify 3 high-impact \"steals\" for your own product roadmap."
     ],
     "bestTool": "ChatGPT (Vision)",
-    "whyThisTool": "Best-in-class image and email analysis for UX benchmarking"
+    "whyThisTool": "Best-in-class image and email analysis for UX benchmarking",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
+    "id": "competitor-price-watchdog",
+    "name": "The Price Watchdog Fleet",
+    "vertical": "Sales",
     "problem": "Competitors often change their pricing or launch new tiers quietly, leaving you \"blind\" to their latest market moves until you've already lost a deal.",
     "what_ai_does": "It automatically monitors your competitor's pricing pages and generates a unified alert report the second any price, currency, or feature name changes are detected.",
     "howToDoIt": [
@@ -919,9 +1252,15 @@
       "Review the \"Pricing Alerts\" report to adjust your own pricing strategy or prepare your sales team for new competitor objections."
     ],
     "bestTool": "Claude Code",
-    "whyThisTool": "Can directly crawl URLs and perform high-precision text comparisons"
+    "whyThisTool": "Can directly crawl URLs and perform high-precision text comparisons",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
+    "id": "competitor-pricing-alert-system",
+    "name": "Competitor Pricing Watchdog",
+    "vertical": "Ops",
     "problem": "Competitors often test new pricing tiers or \"hidden\" discounts that can steal your deals before you even know their pricing has changed.",
     "what_ai_does": "It monitors competitor pricing pages and uses high-precision text-diffing to detect even minor changes in dollar amounts, currency, or feature bullet points.",
     "howToDoIt": [
@@ -930,7 +1269,10 @@
       "Run a weekly check to \"Flag any changes in numbers or features\" and append them to a permanent change log."
     ],
     "bestTool": "Claude Code",
-    "whyThisTool": "Can directly crawl URLs and perform high-accuracy text comparison while ignoring minor UI changes"
+    "whyThisTool": "Can directly crawl URLs and perform high-accuracy text comparison while ignoring minor UI changes",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
     "id": "competitor-pricing-parity",
@@ -950,6 +1292,9 @@
     "tools": "Practical Tool"
   },
   {
+    "id": "competitor-promo-code-tracker",
+    "name": "Competitor Discount Tracker",
+    "vertical": "Sales",
     "problem": "Knowing a competitor's \"discount aggression\" (e.g., are they running a secret 20% off?) is crucial for your own pricing strategy, but these codes are often hidden in newsletters or checkout pages.",
     "what_ai_does": "It monitors competitor checkout pages and public deal sites to log active promo codes and their \"discount depth,\" helping you understand their current customer acquisition strategy.",
     "howToDoIt": [
@@ -958,7 +1303,10 @@
       "Review the \"Discount War Report\" to decide if you need to launch your own promotion to stay competitive."
     ],
     "bestTool": "Claude",
-    "whyThisTool": "Superior at navigating complex web pages and extracting specific data points like promo codes"
+    "whyThisTool": "Superior at navigating complex web pages and extracting specific data points like promo codes",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
     "id": "competitor-screenshot-decoder",
@@ -995,6 +1343,9 @@
     "tools": "Practical Tool"
   },
   {
+    "id": "competitor-tech-stack-spy",
+    "name": "The Tech Stack Spy",
+    "vertical": "Sales",
     "problem": "You can tell a lot about a competitor's strategy by the tools they use; for example, if they install an ABM tool like 6sense, they are likely moving upmarket to target enterprise accounts.",
     "what_ai_does": "It audits the tech stacks of your entire market in bulk, identifying hidden scripts for Intent, ABM, CRM, and Analytics to score each competitor's \"Marketing Maturity.\"",
     "howToDoIt": [
@@ -1003,7 +1354,10 @@
       "Review the \"Tech Landscape Report\" to see which competitors are becoming more sophisticated in their targeting."
     ],
     "bestTool": "Claude Code",
-    "whyThisTool": "Can directly fetch and analyze raw HTML source code for specific software signatures"
+    "whyThisTool": "Can directly fetch and analyze raw HTML source code for specific software signatures",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
     "id": "competitor-visual-pricing-tracker",
@@ -1057,6 +1411,9 @@
     "tools": "Practical Tool"
   },
   {
+    "id": "conference-networking-planner",
+    "name": "Conference Networking Strategist",
+    "vertical": "Sales",
     "problem": "Conference attendee lists are massive and full of noise (students, consultants, recruiters), making it hard for your sales team to prioritize who they should actually meet.",
     "what_ai_does": "It filters raw conference attendee lists against your ICP (Ideal Customer Profile) to create a prioritized \"Hit List\" of VPs and C-Level executives, including custom icebreakers for each.",
     "howToDoIt": [
@@ -1065,7 +1422,10 @@
       "Generate a specific \"Icebreaker Question\" for your top 5 targets to use at the event."
     ],
     "bestTool": "ChatGPT",
-    "whyThisTool": "Fast data processing and excellent at following inclusion/exclusion logic"
+    "whyThisTool": "Fast data processing and excellent at following inclusion/exclusion logic",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
     "id": "conference-scraper",
@@ -1102,6 +1462,9 @@
     "tools": "Practical Tool"
   },
   {
+    "id": "consultant-partnership-finder",
+    "name": "The Channel Partner Scout",
+    "vertical": "Sales",
     "problem": "Finding the right agencies or consultants to resell your product is a slow research task, but these \"Channel Partners\" are the fastest way to scale your sales without hiring more reps.",
     "what_ai_does": "It identifies service businesses (agencies, SIs) that are already implementing solutions adjacent to yours—like \"Asana Experts\" or \"Shopify CRO Agencies\"—making them ideal candidates for a referral program.",
     "howToDoIt": [
@@ -1110,7 +1473,10 @@
       "Review the \"Potential Partners\" list and pitch them on a co-marketing or reseller agreement."
     ],
     "bestTool": "Claude",
-    "whyThisTool": "Superior at complex web research and identifying niche service providers in software ecosystems"
+    "whyThisTool": "Superior at complex web research and identifying niche service providers in software ecosystems",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
     "id": "contact-enrichment-freshness",
@@ -1266,6 +1632,9 @@
     "tools": "Practical Tool"
   },
   {
+    "id": "contract-auto-renewal-forecaster",
+    "name": "Auto-Renew Forecaster",
+    "vertical": "Sales",
     "problem": "Relying on \"Auto-Renew\" contracts is a complacency trap; if a customer hasn't logged in for 60 days, their auto-renewal will likely lead to an angry cancellation or a chargeback.",
     "what_ai_does": "It cross-references your contract renewal dates with actual product usage data to identify \"Silent Churn\" risks and prioritize manual intervention for your high-value accounts.",
     "howToDoIt": [
@@ -1274,7 +1643,10 @@
       "Generate a \"Value Realization Email\" for at-risk accounts to restart engagement before the renewal date hits."
     ],
     "bestTool": "ChatGPT",
-    "whyThisTool": "Excellent for risk-scoring logic and drafting empathetic customer success emails"
+    "whyThisTool": "Excellent for risk-scoring logic and drafting empathetic customer success emails",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
     "id": "contract-clause-variance-tracker",
@@ -1379,6 +1751,9 @@
     "tools": "Practical Tool"
   },
   {
+    "id": "contract-risk-detector",
+    "name": "The Contract Risk Detector",
+    "vertical": "Ops",
     "problem": "Sales contracts often hide 3-year lock-ins, 90-day cancellation windows, or annual price escalators in the fine print that can wreck your department's budget.",
     "what_ai_does": "It scans your vendor agreements (PDFs or images) to instantly highlight high-risk clauses and suggest specific \"red-line\" language to protect your company's interests.",
     "howToDoIt": [
@@ -1387,9 +1762,15 @@
       "Review the \"Risk Assessment\" report and use the suggested red-lines during your next negotiation."
     ],
     "bestTool": "Claude",
-    "whyThisTool": "Superior at legal document analysis and drafting nuanced, protective contract language"
+    "whyThisTool": "Superior at legal document analysis and drafting nuanced, protective contract language",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
+    "id": "crawl-budget-estimator",
+    "name": "The Indexing Strategist",
+    "vertical": "Marketing",
     "problem": "Programmatic SEO projects often fail because they flood Googlebot with too many low-value pages, causing it to ignore your \"money pages\" and delay your rankings by months.",
     "what_ai_does": "It analyzes your server logs to identify \"Crawl Waste\" (e.g., hits to search parameters or filters) and generates specific robots.txt rules to redirect Googlebot's energy toward your most important content.",
     "howToDoIt": [
@@ -1398,9 +1779,15 @@
       "Review the \"Crawl Optimization Plan\" and implement the suggested robots.txt blocks to speed up indexing of your new pages."
     ],
     "bestTool": "Claude Code",
-    "whyThisTool": "Superior at analyzing large server logs and generating precise technical SEO configuration rules"
+    "whyThisTool": "Superior at analyzing large server logs and generating precise technical SEO configuration rules",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
+    "id": "creative-refresh-alert",
+    "name": "The Fatigue Detector",
+    "vertical": "Marketing",
     "problem": "Ad creative fatigue quietly raises your CPA; when users see the same ad too many times (High Frequency), your CTR drops and you start wasting thousands of dollars on ineffective impressions.",
     "what_ai_does": "It monitors your ad performance reports to identify \"Critical Fatigue\" in real-time, signaling exactly when you need to pause and replace specific creatives across all your campaigns.",
     "howToDoIt": [
@@ -1409,9 +1796,15 @@
       "Review the \"Creative Refresh List\" to prioritize which ads to swap out based on their total at-risk spend."
     ],
     "bestTool": "ChatGPT",
-    "whyThisTool": "Fast data processing and excellent at applying conditional logic to performance metrics"
+    "whyThisTool": "Fast data processing and excellent at applying conditional logic to performance metrics",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
+    "id": "credit-card-dunning-recovery",
+    "name": "High-Value Dunning Prioritizer",
+    "vertical": "Sales",
     "problem": "Up to 50% of SaaS churn is actually \"Involuntary\" (failed credit cards), but generic retry schedules often fail because they don't account for bank fraud filters or payday timing.",
     "what_ai_does": "It optimizes your payment retry schedule based on the failure reason and card type, like rescheduling Amex corporate card retries to avoid weekend blocks or aligning retries with common paydays.",
     "howToDoIt": [
@@ -1420,7 +1813,10 @@
       "Import the \"Retry Queue\" into your billing tool (like Stripe or ProfitWell) to rescue at-risk revenue."
     ],
     "bestTool": "ChatGPT",
-    "whyThisTool": "Excellent for logical scheduling and identifying patterns in payment failure data"
+    "whyThisTool": "Excellent for logical scheduling and identifying patterns in payment failure data",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
     "id": "crm-field-completion-rate",
@@ -1440,6 +1836,9 @@
     "tools": "Practical Tool"
   },
   {
+    "id": "crm-field-utilization-analyzer",
+    "name": "CRM Field Health Check",
+    "vertical": "Sales",
     "problem": "CRMs become \"data graveyards\" when they have hundreds of custom fields that nobody fills out, making it impossible for managers to get clean reporting on the health of the business.",
     "what_ai_does": "It analyzes a raw export of your CRM data to calculate the \"Fill Rate\" for every single column, identifying exactly which fields should be deprecated or made mandatory.",
     "howToDoIt": [
@@ -1448,7 +1847,10 @@
       "Review the \"Field Health Report\" to clean up your CRM and simplify the data entry process for your sales team."
     ],
     "bestTool": "ChatGPT",
-    "whyThisTool": "Fast data profiling and logical identification of \"garbage\" data fields"
+    "whyThisTool": "Fast data profiling and logical identification of \"garbage\" data fields",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
     "id": "cross-channel-frequency-monitor",
@@ -1485,6 +1887,9 @@
     "tools": "Practical Tool"
   },
   {
+    "id": "cross-sell-whitespace-mapper",
+    "name": "Cross-Sell Whitespace Matrix",
+    "vertical": "Sales",
     "problem": "Sales teams often miss easy \"Cross-Sell\" revenue because they don't have a clear visual of which existing customers haven't bought their other products yet.",
     "what_ai_does": "It transforms your raw customer/product list into a \"Whitespace Matrix,\" a grid that highlights exactly where the gaps are in your product penetration across your entire client base.",
     "howToDoIt": [
@@ -1493,7 +1898,10 @@
       "Identify the \"0\" cells (Whitespace) and use them to launch a targeted cross-sell campaign for those specific accounts."
     ],
     "bestTool": "ChatGPT",
-    "whyThisTool": "Excellent for data manipulation and transforming lists into structured matrices"
+    "whyThisTool": "Excellent for data manipulation and transforming lists into structured matrices",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
     "id": "csv-crm-normalizer",
@@ -1513,6 +1921,9 @@
     "tools": "Practical Tool"
   },
   {
+    "id": "cto-github-activity-tracker",
+    "name": "The Open Source Stalker",
+    "vertical": "Sales",
     "problem": "Technical decision-makers (CTOs, VP Eng) are notoriously hard to reach via traditional cold email, but they reveal their current \"tech stack intent\" every time they star or fork a repository on GitHub.",
     "what_ai_does": "It monitors specific open-source repositories (e.g., \"Next.js\" or \"Supabase\") to identify technical leaders who are actively exploring that tech, providing you with a high-intent lead list for developer tools.",
     "howToDoIt": [
@@ -1521,7 +1932,10 @@
       "Review the \"GitHub Leads\" list to find CTOs at real companies who are signaling intent to use your specific tech stack."
     ],
     "bestTool": "Claude",
-    "whyThisTool": "Superior at researching technical profiles and correlating GitHub activity with professional identities"
+    "whyThisTool": "Superior at researching technical profiles and correlating GitHub activity with professional identities",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
     "id": "currency-exchange-normalizer",
@@ -1541,6 +1955,9 @@
     "tools": "Practical Tool"
   },
   {
+    "id": "customer-domain-extractor",
+    "name": "Domain from Email Extractor",
+    "vertical": "Sales",
     "problem": "Lead lists often come with personal emails (gmail, yahoo) or messy data that makes it impossible to find the official company website for technographic research or outreach.",
     "what_ai_does": "It automatically parses bulk email lists to extract the corporate domain while filtering out generic providers, giving you a clean list of company websites in seconds.",
     "howToDoIt": [
@@ -1549,9 +1966,15 @@
       "Export the resulting \"Domain List\" to use for website scraping or CRM enrichment."
     ],
     "bestTool": "ChatGPT",
-    "whyThisTool": "Fast string parsing and excellent at following simple exclusion/inclusion rules"
+    "whyThisTool": "Fast string parsing and excellent at following simple exclusion/inclusion rules",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
+    "id": "customer-feedback-tagger",
+    "name": "Feedback Auto-Tagger",
+    "vertical": "Ops",
     "problem": "User feedback from surveys, emails, and Slack is often a \"messy pile\" of text that takes hours to manually categorize into actionable product insights.",
     "what_ai_does": "It automatically triages raw user comments into structured categories like \"Bug,\" \"Feature Request,\" \"UX Issue,\" or \"Praise,\" helping you build a data-driven product roadmap.",
     "howToDoIt": [
@@ -1560,9 +1983,15 @@
       "Review the \"Tagged Feedback\" CSV to see which feature requests or bugs are appearing most frequently."
     ],
     "bestTool": "ChatGPT",
-    "whyThisTool": "Excellent at semantic classification and following structured tagging rules"
+    "whyThisTool": "Excellent at semantic classification and following structured tagging rules",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
+    "id": "customer-health-score",
+    "name": "The Customer Health Score Builder",
+    "vertical": "Customer Success",
     "problem": "Customer Success managers often wait for a \"Cancellation Email\" before they realize an account is at risk, missing the chance to save the customer earlier in the journey.",
     "what_ai_does": "It aggregates three key metrics—Login Frequency, NPS, and Payment Status—into a simple \"Traffic Light\" health score (Red/Yellow/Green) for every account in your portfolio.",
     "howToDoIt": [
@@ -1571,7 +2000,10 @@
       "Prioritize your outreach to the \"Red\" and \"Yellow\" accounts to prevent churn before it happens."
     ],
     "bestTool": "ChatGPT",
-    "whyThisTool": "Fast data aggregation and logical scoring based on multiple disparate signals"
+    "whyThisTool": "Fast data aggregation and logical scoring based on multiple disparate signals",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
     "id": "customer-health-usage-correlation",
@@ -1591,6 +2023,9 @@
     "tools": "Practical Tool"
   },
   {
+    "id": "customer-journey-mapper",
+    "name": "The Customer Journey Factory",
+    "vertical": "Ops",
     "problem": "Every customer persona (e.g., \"Tech Founder\" vs. \"Marketing Lead\") has a different path to purchase, but most brands use a generic \"one-size-fits-all\" journey that ignores specific friction points.",
     "what_ai_does": "It reads your target persona descriptions and maps their unique 5-stage journeys (Awareness to Advocacy), identifying the #1 \"Friction Point\" that stops each group from converting.",
     "howToDoIt": [
@@ -1599,7 +2034,10 @@
       "Review the \"Journey Maps\" to identify the specific content (e.g., a case study or a technical doc) needed to unblock each persona."
     ],
     "bestTool": "Claude",
-    "whyThisTool": "Superior at empathetic persona mapping and understanding psychological friction points"
+    "whyThisTool": "Superior at empathetic persona mapping and understanding psychological friction points",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
     "id": "customer-segment-movement-tracker",
@@ -1670,6 +2108,9 @@
     "tools": "Practical Tool"
   },
   {
+    "id": "dark-funnel-illuminator",
+    "name": "Dark Funnel Correlation Bot",
+    "vertical": "Marketing",
     "problem": "Marketing teams struggle to justify \"Direct\" website traffic spikes, often missing the correlation between their outbound email blasts and the indirect visits they generate.",
     "what_ai_does": "It correlates spikes in your \"Direct\" traffic with your regional outbound activity (e.g., email blasts or cold calls), providing a clearer picture of the indirect impact of your marketing efforts.",
     "howToDoIt": [
@@ -1678,9 +2119,15 @@
       "Review the \"Dark Funnel Impact Report\" to attribute your direct traffic to specific top-of-funnel campaigns."
     ],
     "bestTool": "ChatGPT",
-    "whyThisTool": "Excellent for correlation analysis and finding statistical links between two disparate data sets"
+    "whyThisTool": "Excellent for correlation analysis and finding statistical links between two disparate data sets",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
+    "id": "dark-social-mention-tracker",
+    "name": "Community Mention Alert",
+    "vertical": "Ops",
     "problem": "Potential customers are often talking about your brand in \"Dark Social\" channels like Slack or Discord communities, but these leads are invisible to traditional marketing tools.",
     "what_ai_does": "It scans community exports or simulated chat logs for brand keywords and specific \"intent questions,\" identifying high-value leads that are currently hiding in private social conversations.",
     "howToDoIt": [
@@ -1689,7 +2136,10 @@
       "Review the \"Community Mentions\" report to identify warm entry points for a non-salesy, helpful intervention."
     ],
     "bestTool": "Claude",
-    "whyThisTool": "Superior at conversational analysis and extracting specific intent from informal chat logs"
+    "whyThisTool": "Superior at conversational analysis and extracting specific intent from informal chat logs",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
     "id": "deal-desk-discount-approver",
@@ -1743,6 +2193,9 @@
     "tools": "Practical Tool"
   },
   {
+    "id": "deal-rotting-alert-system",
+    "name": "Deal Rotting Monitor",
+    "vertical": "Sales",
     "problem": "Sales pipelines are often clogged with \"rotting\" deals that haven't moved in weeks, but managers don't have the time to manually audit every single opportunity for stagnation.",
     "what_ai_does": "It automatically identifies deals that have been stuck in the same stage for more than 14 days, flagging them for immediate manager intervention to unblock or disqualify them.",
     "howToDoIt": [
@@ -1751,7 +2204,10 @@
       "Review the \"Rotting Deals\" report to decide whether to nudge the prospect, offer a discount, or close the deal as lost."
     ],
     "bestTool": "ChatGPT",
-    "whyThisTool": "Fast data processing and excellent at performing date-based calculations for pipeline management"
+    "whyThisTool": "Fast data processing and excellent at performing date-based calculations for pipeline management",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
     "id": "deal-slippage-detector",
@@ -1771,6 +2227,9 @@
     "tools": "Practical Tool"
   },
   {
+    "id": "decision-maker-change-tracker",
+    "name": "The Champion Tracker",
+    "vertical": "Sales",
     "problem": "When a key decision-maker changes jobs, it creates TWO massive risks: one at their new company (where they might bring in your competitor), and one at the old company (where the new hire wants to cut costs).",
     "what_ai_does": "It monitors the LinkedIn profiles of your past \"Champions\" to detect job changes, instantly triggering a dual outreach plan to secure both the new and old accounts.",
     "howToDoIt": [
@@ -1779,9 +2238,15 @@
       "Review the \"Job Change Alerts\" and send a \"Congrats & Expansion\" email to the new company and a \"Continuity\" email to the old one."
     ],
     "bestTool": "Claude",
-    "whyThisTool": "Superior at researching professional networks and identifying strategic \"trigger events\" from job changes"
+    "whyThisTool": "Superior at researching professional networks and identifying strategic \"trigger events\" from job changes",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
+    "id": "demo-call-scripter",
+    "name": "The Demo Playbook Factory",
+    "vertical": "Sales",
     "problem": "Most sales demos are boring \"feature tours\" that fail to address the specific pain points of different industries, leading to low conversion rates from demo to trial.",
     "what_ai_does": "It reads a list of your target industries and their top pains to generate a library of \"Narrative Demo\" scripts that only show the 3 features most relevant to that specific audience.",
     "howToDoIt": [
@@ -1790,7 +2255,10 @@
       "Use the customized scripts to ensure every demo feels hyper-relevant to the prospect's day-to-day struggle."
     ],
     "bestTool": "ChatGPT",
-    "whyThisTool": "Excellent for high-volume creative drafting and following structured narrative formats"
+    "whyThisTool": "Excellent for high-volume creative drafting and following structured narrative formats",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
     "id": "demo-conversion-audit",
@@ -1810,6 +2278,9 @@
     "tools": "Practical Tool"
   },
   {
+    "id": "demo-no-show-analyzer",
+    "name": "No-Show Rate Analyzer",
+    "vertical": "Sales",
     "problem": "High \"No-Show\" rates are a silent killer of sales productivity, but managers often don't know if the problem is a specific lead source (e.g., LinkedIn Ads) or a specific rep's follow-up style.",
     "what_ai_does": "It analyzes your raw demo logs to calculate no-show rates by Lead Source and Rep, identifying exactly where your scheduling and reminder process is breaking down.",
     "howToDoIt": [
@@ -1818,7 +2289,10 @@
       "Review the \"No-Show Analysis\" to decide if you need to adjust your ad targeting or implement a more aggressive reminder sequence."
     ],
     "bestTool": "ChatGPT",
-    "whyThisTool": "Fast data processing and excellent at identifying correlations between source and outcome"
+    "whyThisTool": "Fast data processing and excellent at identifying correlations between source and outcome",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
     "id": "demo-to-trial-conversion",
@@ -1872,6 +2346,9 @@
     "tools": "Practical Tool"
   },
   {
+    "id": "discount-code-strategist",
+    "name": "The Annual Promo Strategist",
+    "vertical": "Ops",
     "problem": "Slashing prices with generic discount codes (like \"SUMMER20\") can devalue your brand and train customers to never pay full price again, leading to long-term margin erosion.",
     "what_ai_does": "It designs a \"Smart Promo\" strategy for every event on your holiday calendar, using targeted mechanisms like \"Upgrade to Annual\" or \"Mystery Bundles\" to drive volume without brand damage.",
     "howToDoIt": [
@@ -1880,7 +2357,10 @@
       "Review the \"Annual Promo Plan\" and use the generated \"Value-Driven\" email scripts for your next campaign."
     ],
     "bestTool": "Claude",
-    "whyThisTool": "Superior at strategic campaign design and drafting sophisticated, persuasive promotional copy"
+    "whyThisTool": "Superior at strategic campaign design and drafting sophisticated, persuasive promotional copy",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
     "id": "discount-impact-on-ltv",
@@ -1934,6 +2414,9 @@
     "tools": "Practical Tool"
   },
   {
+    "id": "discovery-question-compliance",
+    "name": "The Sales Coach",
+    "vertical": "Sales",
     "problem": "Sales calls are often wasted when a rep forgets to ask critical \"MEDDIC\" questions (like Budget or Timeline), but managers can't manually audit 100 transcripts every week to catch these gaps.",
     "what_ai_does": "It scans your call transcripts for the specific *absence* of key discovery criteria and immediately drafts a \"Deal Rescue Email\" for the rep to send to the prospect to fill the gaps.",
     "howToDoIt": [
@@ -1942,7 +2425,10 @@
       "Use the generated \"P.S. Email Blurbs\" to follow up with prospects and get the missing information before the deal stalls."
     ],
     "bestTool": "Claude",
-    "whyThisTool": "Superior at detecting the absence of concepts in complex conversations and drafting professional follow-ups"
+    "whyThisTool": "Superior at detecting the absence of concepts in complex conversations and drafting professional follow-ups",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
     "id": "distributor-stock-rotation-logic",
@@ -1979,6 +2465,9 @@
     "tools": "Practical Tool"
   },
   {
+    "id": "docs-freshness-auditor",
+    "name": "Docs Freshness Auditor",
+    "vertical": "Marketing",
     "problem": "Outdated help articles that reference old UI or deprecated features are a major source of customer frustration and unnecessary support tickets.",
     "what_ai_does": "It crawls your help center to identify articles that haven't been updated in over a year or contain mentions of old features, flagging exactly what needs a refresh to stay accurate.",
     "howToDoIt": [
@@ -1987,7 +2476,10 @@
       "Review the \"Freshness Audit\" and prioritize your content refresh based on the most-visited articles."
     ],
     "bestTool": "Claude Code",
-    "whyThisTool": "Can directly crawl your documentation and perform high-accuracy semantic checks for outdated UI references"
+    "whyThisTool": "Can directly crawl your documentation and perform high-accuracy semantic checks for outdated UI references",
+    "time_saved": "10+ hours saved / month",
+    "difficulty": "Strategic",
+    "tools": "Practical Tool"
   },
   {
     "id": "domain-age-startup-spotter",

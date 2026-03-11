@@ -1157,34 +1157,33 @@ function generateIdeas() {
 
     if (passes && !isUtility) {
       const id = data.id || file.replace('.md', '');
-      let ideaData = {};
+      
+      const toolInfo = determineBestTool(data.title, data.tagline, body);
+      const steps = generateActionSteps(data.title, data.tagline, toolInfo.tool);
+      const desc = cleanDescription(data.description);
 
-      // If already manually processed, use the override
+      let roi = data.isPremium ? '10+ hours saved / month' : '2-5 hours saved / week';
+      if (data.title.toLowerCase().includes('negotiator') || data.title.toLowerCase().includes('savings')) roi = "$5k+ saved / year";
+      
+      let ideaData = {
+        id: id,
+        name: data.title,
+        vertical: verticalMap[data.category] || 'Ops',
+        problem: data.tagline || 'Stop wasting time on repetitive manual tasks.',
+        what_ai_does: desc,
+        howToDoIt: steps,
+        bestTool: toolInfo.tool,
+        whyThisTool: toolInfo.why,
+        time_saved: roi,
+        difficulty: data.difficulty === 'Beginner' ? 'Simple to Start' : data.difficulty === 'Intermediate' ? 'Practical' : 'Strategic',
+        tools: "Practical Tool"
+      };
+
+      // If manually processed, override specific fields but keep the rest
       if (manualOverrides[id]) {
-        ideaData = manualOverrides[id];
-      } else {
-        // Fallback to previous "smart" logic for non-manual entries
-        const toolInfo = determineBestTool(data.title, data.tagline, body);
-        const steps = generateActionSteps(data.title, data.tagline, toolInfo.tool);
-        const desc = cleanDescription(data.description);
-
-        let roi = data.isPremium ? '10+ hours saved / month' : '2-5 hours saved / week';
-        if (data.title.toLowerCase().includes('negotiator') || data.title.toLowerCase().includes('savings')) roi = "$5k+ saved / year";
-        
-        ideaData = {
-          id: id,
-          name: data.title,
-          vertical: verticalMap[data.category] || 'Ops',
-          problem: data.tagline || 'Stop wasting time on repetitive manual tasks.',
-          what_ai_does: desc,
-          howToDoIt: steps,
-          bestTool: toolInfo.tool,
-          whyThisTool: toolInfo.why,
-          time_saved: roi,
-          difficulty: data.difficulty === 'Beginner' ? 'Simple to Start' : data.difficulty === 'Intermediate' ? 'Practical' : 'Strategic',
-          tools: "Practical Tool"
-        };
+        ideaData = { ...ideaData, ...manualOverrides[id] };
       }
+      
       ideas.push(ideaData);
     }
   });
