@@ -869,6 +869,72 @@ const manualOverrides = {
     "bestTool": "Claude Code",
     "whyThisTool": "Can directly crawl your site and your competitors' sites to perform deep semantic gap analysis"
   },
+  "cto-github-activity-tracker": {
+    "problem": "Technical decision-makers (CTOs, VP Eng) are notoriously hard to reach via traditional cold email, but they reveal their current \"tech stack intent\" every time they star or fork a repository on GitHub.",
+    "what_ai_does": "It monitors specific open-source repositories (e.g., \"Next.js\" or \"Supabase\") to identify technical leaders who are actively exploring that tech, providing you with a high-intent lead list for developer tools.",
+    "howToDoIt": [
+      "List your target GitHub repositories in a CSV.",
+      "Use the AI to fetch recent \"Stargazers\" or \"Forks\" and enrich their profiles to find their company and job title.",
+      "Review the \"GitHub Leads\" list to find CTOs at real companies who are signaling intent to use your specific tech stack."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at researching technical profiles and correlating GitHub activity with professional identities"
+  },
+  "customer-domain-extractor": {
+    "problem": "Lead lists often come with personal emails (gmail, yahoo) or messy data that makes it impossible to find the official company website for technographic research or outreach.",
+    "what_ai_does": "It automatically parses bulk email lists to extract the corporate domain while filtering out generic providers, giving you a clean list of company websites in seconds.",
+    "howToDoIt": [
+      "Upload a CSV of your leads' email addresses to the AI.",
+      "Ask it to \"Extract the corporate domains and filter out all generic providers like Gmail or Outlook.\"",
+      "Export the resulting \"Domain List\" to use for website scraping or CRM enrichment."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast string parsing and excellent at following simple exclusion/inclusion rules"
+  },
+  "customer-feedback-tagger": {
+    "problem": "User feedback from surveys, emails, and Slack is often a \"messy pile\" of text that takes hours to manually categorize into actionable product insights.",
+    "what_ai_does": "It automatically triages raw user comments into structured categories like \"Bug,\" \"Feature Request,\" \"UX Issue,\" or \"Praise,\" helping you build a data-driven product roadmap.",
+    "howToDoIt": [
+      "Upload a CSV of raw user feedback to the AI.",
+      "Define your taxonomy (e.g., \"Bug = something is broken\") and ask the AI to tag every comment.",
+      "Review the \"Tagged Feedback\" CSV to see which feature requests or bugs are appearing most frequently."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Excellent at semantic classification and following structured tagging rules"
+  },
+  "customer-health-score": {
+    "problem": "Customer Success managers often wait for a \"Cancellation Email\" before they realize an account is at risk, missing the chance to save the customer earlier in the journey.",
+    "what_ai_does": "It aggregates three key metrics—Login Frequency, NPS, and Payment Status—into a simple \"Traffic Light\" health score (Red/Yellow/Green) for every account in your portfolio.",
+    "howToDoIt": [
+      "Upload your customer metrics (Last Login, NPS Score, Payment Status) to the AI.",
+      "Ask it to assign a health status based on specific rules (e.g., \"Red = 0 logins OR Overdue payment\").",
+      "Prioritize your outreach to the \"Red\" and \"Yellow\" accounts to prevent churn before it happens."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast data aggregation and logical scoring based on multiple disparate signals"
+  },
+  "customer-journey-mapper": {
+    "problem": "Every customer persona (e.g., \"Tech Founder\" vs. \"Marketing Lead\") has a different path to purchase, but most brands use a generic \"one-size-fits-all\" journey that ignores specific friction points.",
+    "what_ai_does": "It reads your target persona descriptions and maps their unique 5-stage journeys (Awareness to Advocacy), identifying the #1 \"Friction Point\" that stops each group from converting.",
+    "howToDoIt": [
+      "Provide your target persona descriptions and their main goals to the AI.",
+      "Ask it to \"Map the 5-stage journey\" for each persona, including the specific questions they ask at each stage.",
+      "Review the \"Journey Maps\" to identify the specific content (e.g., a case study or a technical doc) needed to unblock each persona."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at empathetic persona mapping and understanding psychological friction points"
+  },
+  "customer-share-of-wallet-estimator": {
+    "problem": "Just because a customer spends $500/mo doesn't mean they are a \"small\" account; they could be a \"Sleeping Giant\" with a $50k/mo budget that you haven't captured yet.",
+    "what_ai_does": "It estimates the \"Total Addressable Spend\" of your accounts based on their employee count and industry benchmarks, flagging \"Low Penetration\" accounts that are ripe for 10x expansion.",
+    "howToDoIt": [
+      "Upload a CSV of your customers (with Employee Count and Current Spend) to the AI.",
+      "Ask it to \"Calculate the potential budget per head\" and identify accounts with <15% penetration.",
+      "Prioritize your \"Sleeping Giants\" for an Executive Alignment pitch to consolidate their entire spend onto your platform."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast data processing and excellent at performing benchmark-based calculations"
+  },
   "consultant-partnership-finder": {
     "problem": "Finding the right agencies or consultants to resell your product is a slow research task, but these \"Channel Partners\" are the fastest way to scale your sales without hiring more reps.",
     "what_ai_does": "It identifies service businesses (agencies, SIs) that are already implementing solutions adjacent to yours—like \"Asana Experts\" or \"Shopify CRO Agencies\"—making them ideal candidates for a referral program.",

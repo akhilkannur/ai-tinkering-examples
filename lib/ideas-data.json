@@ -1531,21 +1531,15 @@
     "tools": "Practical Tool"
   },
   {
-    "id": "cto-github-activity-tracker",
-    "name": "The Open Source Stalker",
-    "vertical": "Sales",
-    "problem": "Identify technical founders active in specific repos.",
-    "what_ai_does": "Developers reveal their tech stack via GitHub stars and forks. monitors specific repositories (e.g., \"Next.js,\" \"Supabase\") to find CTOs/Devs who are actively exploring or using that tech, qualifying them for developer tools.",
+    "problem": "Technical decision-makers (CTOs, VP Eng) are notoriously hard to reach via traditional cold email, but they reveal their current \"tech stack intent\" every time they star or fork a repository on GitHub.",
+    "what_ai_does": "It monitors specific open-source repositories (e.g., \"Next.js\" or \"Supabase\") to identify technical leaders who are actively exploring that tech, providing you with a high-intent lead list for developer tools.",
     "howToDoIt": [
-      "Choose a source where your target audience or data lives (e.g., a website, job board, or LinkedIn).",
-      "Supply the URL or raw data to ChatGPT and ask it to filter for high-value signals.",
-      "Take the cleaned list and move it directly into your outreach process or CRM."
+      "List your target GitHub repositories in a CSV.",
+      "Use the AI to fetch recent \"Stargazers\" or \"Forks\" and enrich their profiles to find their company and job title.",
+      "Review the \"GitHub Leads\" list to find CTOs at real companies who are signaling intent to use your specific tech stack."
     ],
-    "bestTool": "ChatGPT",
-    "whyThisTool": "It is the most accessible tool for quick drafting, brainstorming, and general business research.",
-    "time_saved": "10+ hours saved / month",
-    "difficulty": "Strategic",
-    "tools": "Practical Tool"
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at researching technical profiles and correlating GitHub activity with professional identities"
   },
   {
     "id": "currency-exchange-normalizer",
@@ -1565,55 +1559,37 @@
     "tools": "Practical Tool"
   },
   {
-    "id": "customer-domain-extractor",
-    "name": "Domain from Email Extractor",
-    "vertical": "Sales",
-    "problem": "Get company websites from a list of emails.",
-    "what_ai_does": "Scan a list of email addresses to extract the domain portion, filtering out generic providers (gmail, yahoo).",
+    "problem": "Lead lists often come with personal emails (gmail, yahoo) or messy data that makes it impossible to find the official company website for technographic research or outreach.",
+    "what_ai_does": "It automatically parses bulk email lists to extract the corporate domain while filtering out generic providers, giving you a clean list of company websites in seconds.",
     "howToDoIt": [
-      "Identify the manual process you want to simplify.",
-      "Paste your raw notes or data into ChatGPT and ask for a strategic plan.",
-      "Execute the top 3 recommendations to reclaim your time."
+      "Upload a CSV of your leads' email addresses to the AI.",
+      "Ask it to \"Extract the corporate domains and filter out all generic providers like Gmail or Outlook.\"",
+      "Export the resulting \"Domain List\" to use for website scraping or CRM enrichment."
     ],
     "bestTool": "ChatGPT",
-    "whyThisTool": "It is the most accessible tool for quick drafting, brainstorming, and general business research.",
-    "time_saved": "10+ hours saved / month",
-    "difficulty": "Strategic",
-    "tools": "Practical Tool"
+    "whyThisTool": "Fast string parsing and excellent at following simple exclusion/inclusion rules"
   },
   {
-    "id": "customer-feedback-tagger",
-    "name": "Feedback Auto-Tagger",
-    "vertical": "Ops",
-    "problem": "Organize messy user feedback into a clean product roadmap.",
-    "what_ai_does": "Reads a CSV of random user comments (from emails, surveys, or Slack) and tags them as \"Bug,\" \"Feature Request,\" \"UX Issue,\" or \"Praise.\"",
+    "problem": "User feedback from surveys, emails, and Slack is often a \"messy pile\" of text that takes hours to manually categorize into actionable product insights.",
+    "what_ai_does": "It automatically triages raw user comments into structured categories like \"Bug,\" \"Feature Request,\" \"UX Issue,\" or \"Praise,\" helping you build a data-driven product roadmap.",
     "howToDoIt": [
-      "Identify the manual process you want to simplify.",
-      "Paste your raw notes or data into Claude and ask for a strategic plan.",
-      "Execute the top 3 recommendations to reclaim your time."
-    ],
-    "bestTool": "Claude",
-    "whyThisTool": "Claude handles long documents and complex instructions with more nuance and accuracy than other tools.",
-    "time_saved": "10+ hours saved / month",
-    "difficulty": "Strategic",
-    "tools": "Practical Tool"
-  },
-  {
-    "id": "customer-health-score",
-    "name": "The Customer Health Score Builder",
-    "vertical": "Customer Success",
-    "problem": "Red, Yellow, or Green?",
-    "what_ai_does": "A simple traffic light system for your customer base. aggregates three metrics (Login Frequency, NPS, Payment Status) to assign a holistic 'Health Status' to every account.",
-    "howToDoIt": [
-      "Define the core goal of what you're trying to build or launch (e.g., a new internal linking strategy or onboarding flow).",
-      "Use ChatGPT to generate a structured framework or initial draft based on industry best practices.",
-      "Refine the output and deploy it as a new standard process for your team."
+      "Upload a CSV of raw user feedback to the AI.",
+      "Define your taxonomy (e.g., \"Bug = something is broken\") and ask the AI to tag every comment.",
+      "Review the \"Tagged Feedback\" CSV to see which feature requests or bugs are appearing most frequently."
     ],
     "bestTool": "ChatGPT",
-    "whyThisTool": "It is the most accessible tool for quick drafting, brainstorming, and general business research.",
-    "time_saved": "10+ hours saved / month",
-    "difficulty": "Strategic",
-    "tools": "Practical Tool"
+    "whyThisTool": "Excellent at semantic classification and following structured tagging rules"
+  },
+  {
+    "problem": "Customer Success managers often wait for a \"Cancellation Email\" before they realize an account is at risk, missing the chance to save the customer earlier in the journey.",
+    "what_ai_does": "It aggregates three key metrics—Login Frequency, NPS, and Payment Status—into a simple \"Traffic Light\" health score (Red/Yellow/Green) for every account in your portfolio.",
+    "howToDoIt": [
+      "Upload your customer metrics (Last Login, NPS Score, Payment Status) to the AI.",
+      "Ask it to assign a health status based on specific rules (e.g., \"Red = 0 logins OR Overdue payment\").",
+      "Prioritize your outreach to the \"Red\" and \"Yellow\" accounts to prevent churn before it happens."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast data aggregation and logical scoring based on multiple disparate signals"
   },
   {
     "id": "customer-health-usage-correlation",
@@ -1633,21 +1609,15 @@
     "tools": "Practical Tool"
   },
   {
-    "id": "customer-journey-mapper",
-    "name": "The Customer Journey Factory",
-    "vertical": "Ops",
-    "problem": "Map the broken road for every persona.",
-    "what_ai_does": "Users drop off where you least expect. reads a list of customer personas from a CSV and maps their unique 5-stage journeys (Awareness to Advocacy), identifying the specific 'Friction Point' for each group.",
+    "problem": "Every customer persona (e.g., \"Tech Founder\" vs. \"Marketing Lead\") has a different path to purchase, but most brands use a generic \"one-size-fits-all\" journey that ignores specific friction points.",
+    "what_ai_does": "It reads your target persona descriptions and maps their unique 5-stage journeys (Awareness to Advocacy), identifying the #1 \"Friction Point\" that stops each group from converting.",
     "howToDoIt": [
-      "Define the core goal of what you're trying to build or launch (e.g., a new internal linking strategy or onboarding flow).",
-      "Use ChatGPT to generate a structured framework or initial draft based on industry best practices.",
-      "Refine the output and deploy it as a new standard process for your team."
+      "Provide your target persona descriptions and their main goals to the AI.",
+      "Ask it to \"Map the 5-stage journey\" for each persona, including the specific questions they ask at each stage.",
+      "Review the \"Journey Maps\" to identify the specific content (e.g., a case study or a technical doc) needed to unblock each persona."
     ],
-    "bestTool": "ChatGPT",
-    "whyThisTool": "It is the most accessible tool for quick drafting, brainstorming, and general business research.",
-    "time_saved": "10+ hours saved / month",
-    "difficulty": "Strategic",
-    "tools": "Practical Tool"
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at empathetic persona mapping and understanding psychological friction points"
   },
   {
     "id": "customer-segment-movement-tracker",
