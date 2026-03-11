@@ -802,6 +802,72 @@ const manualOverrides = {
     ],
     "bestTool": "Claude Code",
     "whyThisTool": "Can directly crawl complex pages and perform high-accuracy semantic grouping of feature lists"
+  },
+  "competitor-news-digest-builder": {
+    "problem": "Marketing and sales teams need to stay on top of competitor moves, but manually reading dozens of press releases and blog posts every week is a \"time-sink\" that often gets ignored.",
+    "what_ai_does": "It automatically searches for the latest press releases, funding news, or major blog posts from your competitors and summarizes them into a clean, executive-level \"Weekly Intel Brief.\"",
+    "howToDoIt": [
+      "Provide a list of your top competitors to the AI.",
+      "Ask it to \"Search for news, launches, and hires from the last 7 days\" for each company.",
+      "Review the summarized \"Intel Brief\" to identify strategic shifts you need to respond to in your own marketing."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at summarizing long-form news and identifying strategic business signals"
+  },
+  "competitor-pricing-alert-system": {
+    "problem": "Competitors often test new pricing tiers or \"hidden\" discounts that can steal your deals before you even know their pricing has changed.",
+    "what_ai_does": "It monitors competitor pricing pages and uses high-precision text-diffing to detect even minor changes in dollar amounts, currency, or feature bullet points.",
+    "howToDoIt": [
+      "List your competitor's pricing URLs in a CSV.",
+      "Establish a \"Baseline Snapshot\" of their current pricing text using the AI.",
+      "Run a weekly check to \"Flag any changes in numbers or features\" and append them to a permanent change log."
+    ],
+    "bestTool": "Claude Code",
+    "whyThisTool": "Can directly crawl URLs and perform high-accuracy text comparison while ignoring minor UI changes"
+  },
+  "competitor-promo-code-tracker": {
+    "problem": "Knowing a competitor's \"discount aggression\" (e.g., are they running a secret 20% off?) is crucial for your own pricing strategy, but these codes are often hidden in newsletters or checkout pages.",
+    "what_ai_does": "It monitors competitor checkout pages and public deal sites to log active promo codes and their \"discount depth,\" helping you understand their current customer acquisition strategy.",
+    "howToDoIt": [
+      "Provide the AI with a list of competitor checkout or \"deals\" URLs.",
+      "Ask it to \"Identify active promo codes and calculate the average discount percentage\" found.",
+      "Review the \"Discount War Report\" to decide if you need to launch your own promotion to stay competitive."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at navigating complex web pages and extracting specific data points like promo codes"
+  },
+  "competitor-tech-stack-spy": {
+    "problem": "You can tell a lot about a competitor's strategy by the tools they use; for example, if they install an ABM tool like 6sense, they are likely moving upmarket to target enterprise accounts.",
+    "what_ai_does": "It audits the tech stacks of your entire market in bulk, identifying hidden scripts for Intent, ABM, CRM, and Analytics to score each competitor's \"Marketing Maturity.\"",
+    "howToDoIt": [
+      "Upload a CSV of competitor URLs to the AI.",
+      "Ask it to \"Identify signatures for Intent, CRM, and Ads tools\" (e.g., 6sense, HubSpot, Facebook Pixel) in their HTML source.",
+      "Review the \"Tech Landscape Report\" to see which competitors are becoming more sophisticated in their targeting."
+    ],
+    "bestTool": "Claude Code",
+    "whyThisTool": "Can directly fetch and analyze raw HTML source code for specific software signatures"
+  },
+  "conference-networking-planner": {
+    "problem": "Conference attendee lists are massive and full of noise (students, consultants, recruiters), making it hard for your sales team to prioritize who they should actually meet.",
+    "what_ai_does": "It filters raw conference attendee lists against your ICP (Ideal Customer Profile) to create a prioritized \"Hit List\" of VPs and C-Level executives, including custom icebreakers for each.",
+    "howToDoIt": [
+      "Upload a CSV of conference attendees (Name, Title, Company) to the AI.",
+      "Ask it to \"Exclude non-ICP roles\" and tier the remaining leads into \"Must Meet\" (Tier 1) vs. \"Nice to Meet\" (Tier 2).",
+      "Generate a specific \"Icebreaker Question\" for your top 5 targets to use at the event."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast data processing and excellent at following inclusion/exclusion logic"
+  },
+  "content-decay-alerter": {
+    "problem": "Informational blog posts often lose their \"Semantic Relevance\" over time as competitors start covering new entities or questions that you aren't, leading to a slow but steady drop in traffic.",
+    "what_ai_does": "It analyzes your content performance and compares it against the current top-ranking pages to identify \"Semantic Gaps\" and specific sections that need a refresh to stay competitive.",
+    "howToDoIt": [
+      "Export your blog traffic data (URL, Traffic, Last Updated) into a CSV.",
+      "Ask the AI to \"Identify pages with a >10% traffic drop\" and compare them against current top competitors for their target keyword.",
+      "Review the \"Refresh Recipe\" for each decaying page, including new sub-sections and updated entity coverage."
+    ],
+    "bestTool": "Claude Code",
+    "whyThisTool": "Can directly crawl your site and your competitors' sites to perform deep semantic gap analysis"
   }
 };
 
