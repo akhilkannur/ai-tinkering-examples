@@ -681,6 +681,127 @@ const manualOverrides = {
     ],
     "bestTool": "ChatGPT (Vision)",
     "whyThisTool": "Best-in-class image and email analysis for UX benchmarking"
+  },
+  "clawback-calculator": {
+    "problem": "Sales teams often pay out commissions on deals that churn within the first 90 days, leading to \"phantom revenue\" and significant financial loss if not manually tracked and recouped.",
+    "what_ai_does": "It automatically cross-references your recent churn events against your commission payout logs to flag any deals that qualify for a \"Clawback\" based on your company's clawback window.",
+    "howToDoIt": [
+      "Export a list of recent churned customers and your commission payout history into a CSV.",
+      "Provide the data to the AI and define your clawback rule (e.g., \"If churned < 90 days from start\").",
+      "Generate a \"Clawback Report\" to hand to finance for payroll adjustments."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast data processing and logical reconciliation between disparate lists"
+  },
+  "client-onboarding-checklist": {
+    "problem": "New clients often \"ghost\" during the technical setup phase, which is the #1 predictor of early churn, but manual tracking of onboarding velocity across 100+ clients is impossible.",
+    "what_ai_does": "It analyzes your onboarding logs to calculate the \"Time in Stage\" for every client and automatically flags any accounts that have stalled beyond your expected benchmarks.",
+    "howToDoIt": [
+      "Upload your onboarding progress logs (Client, Current Step, Date Entered) to the AI.",
+      "Ask it to \"Identify Red Flags\" for any client taking 2x longer than the expected benchmark for their current stage.",
+      "Generate a specific \"Unblock Email\" for every stalled client to offer technical help and restart the momentum."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Excellent for velocity calculation and drafting empathetic intervention emails"
+  },
+  "cloud-bill-shock-prospector": {
+    "problem": "Companies scaling rapidly often experience \"Cloud Bill Shock\" from unoptimized AWS or Azure costs, making them high-intent leads for FinOps services if you can find them at the right time.",
+    "what_ai_does": "It correlates \"Engineering Hiring Sprees\" (DevOps/SRE roles) with recent funding rounds to pinpoint companies likely struggling with exploding cloud infrastructure costs.",
+    "howToDoIt": [
+      "Use the AI to search for companies that have recently raised Series B+ funding and are currently hiring for 3+ DevOps or FinOps roles.",
+      "Ask it to verify their primary Cloud Provider (AWS/Azure/GCP) using technographic search.",
+      "Draft a hyper-relevant outreach email focused on \"Cloud Cost Efficiency\" for their specific tech stack."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at complex web research and correlating disparate signals (hiring + funding + tech stack)"
+  },
+  "cold-call-objection-simulator": {
+    "problem": "Sales reps often fumble difficult objections like \"Just send me an email\" or \"We have no budget\" on live calls because they haven't practiced their responses in a low-stakes environment.",
+    "what_ai_does": "It acts as a \"Grumpy Prospect\" (e.g., a busy VP of Engineering) that throws common objections at you and grades your ability to handle them with empathy and professional pivots.",
+    "howToDoIt": [
+      "Provide your standard sales pitch to the AI and start the \"Roleplay Mode.\"",
+      "Respond to the AI's objections in real-time, attempting to build rapport and book a meeting.",
+      "Review the \"Coaching Report\" at the end to see your grade and get specific tips on how to improve your objection-handling logic."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Better at nuanced, role-specific personas and providing detailed coaching feedback"
+  },
+  "cold-dm-personalizer": {
+    "problem": "Sliding into DMs with a generic message looks like a bot and results in zero replies; the only way to get a response is to mention a specific \"emotional hook\" from their recent content.",
+    "what_ai_does": "It analyzes the latest posts from a list of LinkedIn or X (Twitter) profiles to find specific sentences or ideas that relate to your target topic, drafting custom opening lines for every prospect.",
+    "howToDoIt": [
+      "Upload a CSV of your target prospects and their profile URLs to the AI.",
+      "Ask it to \"Analyze their last 3 posts for emotional hooks related to [Target Topic]\" and draft 2 distinct opening lines for each.",
+      "Use the generated \"Observational\" or \"Value-Add\" lines to launch a personalized DM campaign that actually gets replies."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at web-fetching social content and drafting authentic, conversational opening lines"
+  },
+  "cold-email-spam-checker": {
+    "problem": "Using words like \"Free,\" \"Guaranteed,\" or \"100%\" in your cold emails can trigger spam filters and ruin your domain's deliverability, even if your offer is legitimate.",
+    "what_ai_does": "It scans your email drafts for common spam trigger words and automatically rewrites them using \"safer\" alternatives that are more likely to land in the primary inbox.",
+    "howToDoIt": [
+      "Paste your email subject lines and body drafts into the AI.",
+      "Ask it to \"Flag spam triggers and assign a Risk Score (1-10)\" for each draft.",
+      "Review the \"Sanitized Versions\" to replace high-risk words with proven, deliverability-friendly alternatives like \"Complimentary\" or \"Proven.\""
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Excellent for fast text transformation and keyword-based risk analysis"
+  },
+  "commission-payout-calculator": {
+    "problem": "Changing a sales commission plan is a massive financial risk; if you set the \"accelerators\" too high, you could accidentally wipe out your company's entire profit margin on a single good quarter.",
+    "what_ai_does": "It uses your historical deal data to simulate exactly how much you would have paid out under three different payout models (e.g., \"Aggressive Hunter\" vs. \"Stable Base\"), helping you find the perfect balance before rolling it out.",
+    "howToDoIt": [
+      "Export your last 12 months of deal data (Rep, Revenue, Quota) into a CSV.",
+      "Provide the data to the AI and define your 3 proposed payout models (e.g., \"Model A: 10% flat; Model B: 5% base + 20% over quota\").",
+      "Review the \"Comp Plan Simulation\" to see which model incentivizes your top performers without exceeding your total budget."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast data processing and logical simulation of complex financial models"
+  },
+  "community-sentiment-watchdog": {
+    "problem": "In large Discord or Slack communities, toxic trends or \"Admin Hate\" can bubble up and explode before a human moderator even notices, leading to mass departures or brand damage.",
+    "what_ai_does": "It ingests the last 1,000 messages from your community's general channel to cluster sentiments and instantly flag rising \"Feature Frustration\" or \"Toxicity\" topics that require immediate intervention.",
+    "howToDoIt": [
+      "Export the last 24 hours of message data from your public community channels.",
+      "Ask the AI to \"Identify rising sentiment clusters\" and flag any patterns of frustration or anger.",
+      "Review the \"Community Health Report\" to decide where to jump in for a 1-on-1 or an official announcement."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at detecting subtle emotional nuances and clustering complex conversational themes"
+  },
+  "competitor-change-monitor": {
+    "problem": "Competitors change their website messaging or raise their prices quietly, but manually checking their homepages every week is a tedious task that most marketing teams eventually stop doing.",
+    "what_ai_does": "It compares \"Before\" and \"After\" snapshots of a competitor's homepage to instantly highlight strategic messaging shifts—like a pivot from \"SMB\" to \"Enterprise\" or a new pricing tier.",
+    "howToDoIt": [
+      "Provide a competitor's URL to the AI to establish a baseline snapshot.",
+      "Run a weekly check to \"Compare the current text content against the baseline.\"",
+      "Review the \"Messaging Shift Alert\" to see exactly which headlines, feature lists, or prices were updated."
+    ],
+    "bestTool": "Claude Code",
+    "whyThisTool": "Can directly crawl URLs and perform high-precision text-diffing of HTML content"
+  },
+  "competitor-employee-churn-monitor": {
+    "problem": "Internal turmoil at a competitor (like a VP of Sales or Product Lead quitting) is the ultimate \"Buy Signal\" for their customers, but these departures are often hard to spot in real-time.",
+    "what_ai_does": "It monitors LinkedIn signal data for key leadership roles at your competitors, flagging \"Executive Churn\" as an opportunity for your sales team to move in on their accounts.",
+    "howToDoIt": [
+      "Provide a list of key roles (e.g., \"VP Sales\", \"CTO\") and target competitor companies to the AI.",
+      "Ask it to \"Identify any recent departures or status changes\" for those specific roles.",
+      "Review the \"Brain Drain Alert\" and prioritize outreach to that competitor's biggest accounts while their leadership is in flux."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at researching professional networks and identifying high-impact leadership changes"
+  },
+  "competitor-feature-parity": {
+    "problem": "Manual feature comparison matrices are always out of date, leading your sales team to get blindsided by a prospect saying, \"But your competitor just added Feature X last week.\"",
+    "what_ai_does": "It automatically scrapes competitor pricing and feature pages to build a live \"Feature Gap Matrix,\" identifying what they have that you're missing (and where you still have a massive advantage).",
+    "howToDoIt": [
+      "List your top 5 competitor pricing or feature URLs in a CSV.",
+      "Ask the AI to \"Scrape the 'Included' lists and categorize every feature\" found on those pages.",
+      "Compare the results against your own product roadmap to identify your next 3 highest-priority feature releases."
+    ],
+    "bestTool": "Claude Code",
+    "whyThisTool": "Can directly crawl complex pages and perform high-accuracy semantic grouping of feature lists"
   }
 };
 
