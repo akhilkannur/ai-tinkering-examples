@@ -935,6 +935,72 @@ const manualOverrides = {
     "bestTool": "ChatGPT",
     "whyThisTool": "Fast data processing and excellent at performing benchmark-based calculations"
   },
+  "decision-maker-change-tracker": {
+    "problem": "When a key decision-maker changes jobs, it creates TWO massive risks: one at their new company (where they might bring in your competitor), and one at the old company (where the new hire wants to cut costs).",
+    "what_ai_does": "It monitors the LinkedIn profiles of your past \"Champions\" to detect job changes, instantly triggering a dual outreach plan to secure both the new and old accounts.",
+    "howToDoIt": [
+      "Upload a CSV of your past buyers and their LinkedIn URLs to the AI.",
+      "Ask it to \"Verify current employment\" and flag anyone who has moved to a new company.",
+      "Review the \"Job Change Alerts\" and send a \"Congrats & Expansion\" email to the new company and a \"Continuity\" email to the old one."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at researching professional networks and identifying strategic \"trigger events\" from job changes"
+  },
+  "demo-call-scripter": {
+    "problem": "Most sales demos are boring \"feature tours\" that fail to address the specific pain points of different industries, leading to low conversion rates from demo to trial.",
+    "what_ai_does": "It reads a list of your target industries and their top pains to generate a library of \"Narrative Demo\" scripts that only show the 3 features most relevant to that specific audience.",
+    "howToDoIt": [
+      "Provide a CSV of your target industries (e.g., \"Fintech,\" \"E-commerce\") and their biggest bottlenecks to the AI.",
+      "Ask it to \"Draft a 15-minute narrative demo script\" for each, including a specific \"Old Way\" vs. \"New Way\" story.",
+      "Use the customized scripts to ensure every demo feels hyper-relevant to the prospect's day-to-day struggle."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Excellent for high-volume creative drafting and following structured narrative formats"
+  },
+  "demo-no-show-analyzer": {
+    "problem": "High \"No-Show\" rates are a silent killer of sales productivity, but managers often don't know if the problem is a specific lead source (e.g., LinkedIn Ads) or a specific rep's follow-up style.",
+    "what_ai_does": "It analyzes your raw demo logs to calculate no-show rates by Lead Source and Rep, identifying exactly where your scheduling and reminder process is breaking down.",
+    "howToDoIt": [
+      "Export your demo logs (Rep, Source, Outcome) from your CRM or booking tool into a CSV.",
+      "Ask the AI to \"Calculate the no-show percentage per source\" and identify the biggest outliers.",
+      "Review the \"No-Show Analysis\" to decide if you need to adjust your ad targeting or implement a more aggressive reminder sequence."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast data processing and excellent at identifying correlations between source and outcome"
+  },
+  "discount-code-strategist": {
+    "problem": "Slashing prices with generic discount codes (like \"SUMMER20\") can devalue your brand and train customers to never pay full price again, leading to long-term margin erosion.",
+    "what_ai_does": "It designs a \"Smart Promo\" strategy for every event on your holiday calendar, using targeted mechanisms like \"Upgrade to Annual\" or \"Mystery Bundles\" to drive volume without brand damage.",
+    "howToDoIt": [
+      "Provide your annual holiday list and revenue goals to the AI.",
+      "Ask it to \"Design a unique promotion logic\" for each event that protects your margins while maximizing urgency.",
+      "Review the \"Annual Promo Plan\" and use the generated \"Value-Driven\" email scripts for your next campaign."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at strategic campaign design and drafting sophisticated, persuasive promotional copy"
+  },
+  "discovery-question-compliance": {
+    "problem": "Sales calls are often wasted when a rep forgets to ask critical \"MEDDIC\" questions (like Budget or Timeline), but managers can't manually audit 100 transcripts every week to catch these gaps.",
+    "what_ai_does": "It scans your call transcripts for the specific *absence* of key discovery criteria and immediately drafts a \"Deal Rescue Email\" for the rep to send to the prospect to fill the gaps.",
+    "howToDoIt": [
+      "Upload your recent call transcripts or Zoom AI summaries to the AI.",
+      "Ask it to \"Identify missing Budget, Authority, or Timeline discussions\" for every call.",
+      "Use the generated \"P.S. Email Blurbs\" to follow up with prospects and get the missing information before the deal stalls."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at detecting the absence of concepts in complex conversations and drafting professional follow-ups"
+  },
+  "docs-freshness-auditor": {
+    "problem": "Outdated help articles that reference old UI or deprecated features are a major source of customer frustration and unnecessary support tickets.",
+    "what_ai_does": "It crawls your help center to identify articles that haven't been updated in over a year or contain mentions of old features, flagging exactly what needs a refresh to stay accurate.",
+    "howToDoIt": [
+      "Provide the URL of your help center or a CSV of article update dates to the AI.",
+      "Ask it to \"Flag articles referencing deprecated features\" (e.g., \"Old Dashboard\") or those older than 12 months.",
+      "Review the \"Freshness Audit\" and prioritize your content refresh based on the most-visited articles."
+    ],
+    "bestTool": "Claude Code",
+    "whyThisTool": "Can directly crawl your documentation and perform high-accuracy semantic checks for outdated UI references"
+  },
   "crawl-budget-estimator": {
     "problem": "Programmatic SEO projects often fail because they flood Googlebot with too many low-value pages, causing it to ignore your \"money pages\" and delay your rankings by months.",
     "what_ai_does": "It analyzes your server logs to identify \"Crawl Waste\" (e.g., hits to search parameters or filters) and generates specific robots.txt rules to redirect Googlebot's energy toward your most important content.",
