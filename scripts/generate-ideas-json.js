@@ -40,7 +40,7 @@ function determineBestTool(title, tagline, body) {
   if (c.includes('claude code') || c.includes('terminal') || c.includes('local file')) return { tool: "Claude Code", why: "It can directly read and write files on your computer, making it 10x faster for technical tasks." };
   if (c.includes('pdf') || c.includes('10-k') || c.includes('transcript') || c.includes('long report') || c.includes('analyze')) return { tool: "Claude", why: "Claude handles long documents and complex instructions with more nuance and accuracy than other tools." };
   if (c.includes('make.com') || c.includes('zapier') || c.includes('automation') || c.includes('api')) return { tool: "Make.com", why: "This works best as a recurring system that connects your different business tools automatically." };
-  if (c.includes('image') || c.includes('visual') || c.includes('screenshot')) return { tool: "Midjourney", why: "It generates professional, high-quality visuals that match your brand's aesthetic perfectly." };
+  if (c.includes('image') || c.includes('visual') || c.includes('design') || c.includes('screenshot')) return { tool: "Midjourney", why: "It generates professional, high-quality visuals that match your brand's aesthetic perfectly." };
   return { tool: "ChatGPT", why: "It is the most accessible tool for quick drafting, brainstorming, and general research." };
 }
 
@@ -88,9 +88,34 @@ function generateIdeas() {
       const toolInfo = determineBestTool(data.title, data.tagline, body);
       const steps = generateActionSteps(data.title, data.tagline, toolInfo.tool);
 
-      // NO TRUNCATION LOGIC: Use the full description from frontmatter
       let desc = data.description || 'Automates repetitive manual tasks.';
-      desc = desc.replace(/agent/gi, 'tool').replace(/workflow/gi, 'process').replace(/automation/gi, 'system').replace(/\n/g, ' ').trim();
+      
+      // Pivot to 'Idea' language: remove 'This tool', 'This agent', 'It scans', etc.
+      desc = desc
+        .replace(/This tool/gi, 'Idea:')
+        .replace(/This agent/gi, 'Idea:')
+        .replace(/This automation/gi, 'Idea:')
+        .replace(/This workflow/gi, 'Idea:')
+        .replace(/It scans/gi, 'Scan')
+        .replace(/It finds/gi, 'Find')
+        .replace(/It researches/gi, 'Research')
+        .replace(/It drafts/gi, 'Draft')
+        .replace(/It identifies/gi, 'Identify')
+        .replace(/It analyzes/gi, 'Analyze')
+        .replace(/It parses/gi, 'Parse')
+        .replace(/It takes/gi, 'Take')
+        .replace(/It checks/gi, 'Check')
+        .replace(/Parses /g, 'Scan ')
+        .replace(/Takes /g, 'Use ')
+        .replace(/Checks /g, 'Scan ')
+        .replace(/agent/gi, 'process')
+        .replace(/workflow/gi, 'process')
+        .replace(/automation/gi, 'process')
+        .replace(/\n/g, ' ')
+        .trim();
+      
+      // Clean up "Idea: " prefixes if they look weird
+      desc = desc.replace(/^Idea: /i, '').replace(/Idea: /g, '');
 
       let roi = data.isPremium ? '10+ hours saved / month' : '2-5 hours saved / week';
       if (data.title.toLowerCase().includes('negotiator') || data.title.toLowerCase().includes('savings')) roi = "$5k+ saved / year";
@@ -117,7 +142,7 @@ function generateIdeas() {
       "name": "Identify team burnout before someone quits",
       "vertical": "HR",
       "problem": "Burnout and 'Quiet Quitting' are invisible until a resignation letter hits the desk, costing 1.5x salary to replace.",
-      "what_ai_does": "It notices when team frustration or 'quiet quitting' starts to happen in Slack so you can talk to them before they leave.",
+      "what_ai_does": "Detect team frustration or 'quiet quitting' in Slack to identify burnout before it happens.",
       "howToDoIt": [
         "Export anonymized message data from your public Slack channels.",
         "Paste the data into Claude (or ChatGPT) and ask it to identify sentiment shifts—rising frustration, disengagement patterns, or mood changes.",
@@ -134,7 +159,7 @@ function generateIdeas() {
       "name": "Lower your monthly software bills by 20%",
       "vertical": "Finance",
       "problem": "Companies overpay for software because they don't have time to research competitor deals or parity pricing.",
-      "what_ai_does": "It researches competitor prices and writes a polite but firm script for you to use to get a better deal on your software.",
+      "what_ai_does": "Lower monthly software bills by 20% by researching competitor prices and drafting negotiation scripts.",
       "howToDoIt": [
         "Enter the name of the software tool you are currently paying for into ChatGPT.",
         "Ask the tool to research current competitor pricing and 'switching promotions' for that specific product.",

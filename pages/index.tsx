@@ -11,49 +11,49 @@ const featuredIdeas = [
     "id": "10k-report-prospector",
     "vertical": "Sales",
     "problem": "Stop manually reading 100-page financial reports.",
-    "what_ai_does": "This tool scans annual reports for you, pulls out the 'Risk Factors', and writes a personalized email showing how you can help."
+    "what_ai_does": "Scan annual reports to pull out 'Risk Factors' and write personalized emails showing how you can help."
   },
   {
     "id": "employee-flight-risk-detector",
     "vertical": "HR",
     "problem": "Identify team burnout before someone quits.",
-    "what_ai_does": "It notices when team frustration or 'quiet quitting' starts to happen in Slack so you can talk to them before they leave."
+    "what_ai_does": "Detect team frustration or 'quiet quitting' in Slack to identify burnout before it happens."
   },
   {
     "id": "canonical-tag-auditor",
     "vertical": "Marketing",
     "problem": "Fix the hidden errors hurting your Google rankings.",
-    "what_ai_does": "It finds the silent technical errors on your website that prevent your pages from showing up in search results."
+    "what_ai_does": "Find the silent technical errors on your website that prevent your pages from showing up in search results."
   },
   {
     "id": "vendor-negotiation-script",
     "vertical": "Executive",
     "problem": "Lower your monthly software bills by 20%.",
-    "what_ai_does": "It researches competitor prices and writes a polite but firm script for you to use to get a better deal on your software."
+    "what_ai_does": "Lower monthly software bills by 20% by researching competitor prices and drafting negotiation scripts."
   },
   {
     "id": "contract-redline-risk-spotter",
     "vertical": "Legal",
     "problem": "Spot the 'gotchas' in your contracts instantly.",
-    "what_ai_does": "It scans new legal documents and highlights the risky clauses (like liability or payment terms) that you might miss."
+    "what_ai_does": "Scan new legal documents to highlight risky clauses like liability or payment terms."
   },
   {
     "id": "qbr-deck-generator",
     "vertical": "Customer Success",
     "problem": "Send better client reports in half the time.",
-    "what_ai_does": "It turns your raw customer data into a clear story that shows exactly how much value you've delivered this month."
+    "what_ai_does": "Turn raw customer data into a clear story that shows exactly how much value you've delivered."
   },
   {
     "id": "career-page-keyword-alert",
     "vertical": "Sales",
     "problem": "Know exactly when a lead starts hiring.",
-    "what_ai_does": "Hiring is a sign of budget. This notifies you the second a target company posts a job for a role that needs your product."
+    "what_ai_does": "Get notified the second a target company posts a job for a role that needs your product."
   },
   {
     "id": "board-deck-narrative-factory",
     "vertical": "Executive",
     "problem": "Stop sending messy spreadsheets to your board.",
-    "what_ai_does": "It looks at your numbers and helps you write a clear story about what's working and what needs to change for your directors."
+    "what_ai_does": "Analyze your numbers to write a clear story about what's working for your board."
   }
 ];
 
