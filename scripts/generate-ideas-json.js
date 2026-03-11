@@ -34,6 +34,62 @@ const verticalMap = {
   'CEO Ops': 'Executive'
 };
 
+function determineBestTool(title, body) {
+  const c = (title + ' ' + body).toLowerCase();
+  if (c.includes('claude code') || c.includes('terminal') || c.includes('local file')) {
+    return { tool: "Claude Code", why: "It can directly read and write files on your computer, making it 10x faster for technical tasks." };
+  }
+  if (c.includes('pdf') || c.includes('10-k') || c.includes('transcript') || c.includes('long report') || c.includes('analyze')) {
+    return { tool: "Claude", why: "Claude handles long documents and complex instructions with more accuracy and nuance than other tools." };
+  }
+  if (c.includes('make.com') || c.includes('zapier') || c.includes('automation') || c.includes('recurring')) {
+    return { tool: "Make.com", why: "This works best as a set-it-and-forget-it system that connects your different business tools automatically." };
+  }
+  if (c.includes('image') || c.includes('visual') || c.includes('screenshot') || c.includes('design') || c.includes('thumbnail')) {
+    return { tool: "Midjourney", why: "It generates professional, high-quality visuals that match your brand's aesthetic perfectly." };
+  }
+  return { tool: "ChatGPT", why: "It is the most accessible tool for quick drafting, brainstorming, and general business research." };
+}
+
+function refineSteps(body, bestTool) {
+  const steps = [];
+  const lines = body.split('\n');
+  let inWorkflow = false;
+  
+  for (const line of lines) {
+    if (line.includes('## Workflow')) inWorkflow = true;
+    if (inWorkflow && (line.match(/^\d+\.\s+\*\*.*\*\*/) || line.match(/^\d+\.\s+/))) {
+      let stepText = line.replace(/^\d+\.\s+/, '').replace(/\*\*/g, '').trim();
+      
+      stepText = stepText
+        .replace(/Check:? /gi, '')
+        .replace(/If Missing:? /gi, '')
+        .replace(/Run script/gi, 'Paste your data')
+        .replace(/Execute/gi, 'Ask the tool to')
+        .replace(/Open file/gi, 'Export your data')
+        .replace(/CSV/g, 'data')
+        .split('.')[0] + '.';
+
+      if (stepText.length < 5) continue;
+      steps.push(stepText);
+    }
+    if (steps.length >= 3) break;
+  }
+  
+  if (steps.length > 0 && !steps[0].includes(bestTool)) {
+    steps[0] = `Paste your data into ${bestTool}.`;
+  }
+
+  if (steps.length < 3) {
+    return [
+      `Export your relevant data and paste it into ${bestTool}.`,
+      `Ask ${bestTool} to identify patterns or specific opportunities based on your goal.`,
+      "Review the results and apply the suggestions to your workflow."
+    ];
+  }
+  return steps;
+}
+
 const syntheticIdeas = [
   {
     "id": "employee-flight-risk-detector",
@@ -43,80 +99,16 @@ const syntheticIdeas = [
     "what_ai_does": "It notices when team frustration or 'quiet quitting' starts to happen in Slack so you can talk to them before they leave.",
     "howToDoIt": [
       "Export anonymized message data from your public Slack channels.",
-      "Upload the data to a private AI tool to scan for sentiment shifts (e.g., rising frustration or disengagement).",
-      "Review the 'Friction Report' to identify which departments or teams need a 1-on-1 check-in."
+      "Paste the data into Claude (or ChatGPT) and ask it to identify sentiment shifts—rising frustration, disengagement patterns, or mood changes.",
+      "Review the results to identify which teams or departments need a 1-on-1 check-in."
     ],
     "bestTool": "Claude",
-    "whyThisTool": "Claude is excellent at detecting subtle emotional nuances and 'reading between the lines' in long transcripts.",
-    "time_saved": "$50k+ (Per Hire)",
+    "whyThisTool": "It's better at detecting subtle emotional nuances and reading between the lines in long transcripts than ChatGPT.",
+    "time_saved": "$50k+ saved per prevented resignation",
     "difficulty": "Practical",
-    "tools": "Practical Tool"
-  },
-  {
-    "id": "market-comp-benchmarker",
-    "name": "Market Comp Benchmarker",
-    "vertical": "HR",
-    "problem": "Lower your monthly software bills by 20%.",
-    "what_ai_does": "It researches competitor prices and writes a polite but firm script for you to use to get a better deal on your software.",
-    "howToDoIt": [
-      "Enter the name of the software tool you are currently paying for.",
-      "The tool researches current competitor pricing and 'switching promotions'.",
-      "It drafts a high-leverage negotiation script based on the cheaper alternatives it found."
-    ],
-    "bestTool": "ChatGPT",
-    "whyThisTool": "ChatGPT is great for quickly drafting persuasive, professional emails and researching list prices.",
-    "time_saved": "$20k (Consultant Fee)",
-    "difficulty": "Simple to Start",
-    "tools": "Practical Tool"
-  },
-  {
-    "id": "board-deck-narrative-factory",
-    "name": "Stop sending messy spreadsheets to your board",
-    "vertical": "Executive",
-    "problem": "Founders send raw metrics to the Board; directors get confused because the story behind the numbers is missing.",
-    "what_ai_does": "It looks at your numbers and helps you write a clear story about what's working and what needs to change for your directors.",
-    "howToDoIt": [
-      "Upload your P&L or Sales metrics CSV for the quarter.",
-      "Identify the 'Top 3 Wins' and 'Top 3 Bottlenecks' using AI analysis.",
-      "Generate the narrative text for a 5-slide strategic update (The Win, The Gap, The Pivot)."
-    ],
-    "bestTool": "Claude",
-    "whyThisTool": "Claude handles complex data analysis and narrative structure better than most tools, keeping the 'CEO voice' consistent.",
-    "time_saved": "15 hours / quarter",
-    "difficulty": "Strategic",
     "tools": "Practical Tool"
   }
 ];
-
-function extractSteps(content) {
-  const steps = [];
-  const lines = content.split('\n');
-  let inWorkflow = false;
-  
-  for (const line of lines) {
-    if (line.includes('## Workflow')) inWorkflow = true;
-    if (inWorkflow && line.match(/^\d+\.\s+\*\*.*\*\*/)) {
-      steps.push(line.replace(/^\d+\.\s+\*\*(.*)\*\*.*$/, '$1').trim());
-    } else if (inWorkflow && line.match(/^\d+\.\s+/)) {
-      steps.push(line.replace(/^\d+\.\s+/, '').trim());
-    }
-    if (steps.length >= 5) break;
-  }
-  
-  if (steps.length === 0) {
-    return ["Upload your data to the AI tool.", "Analyze the results for patterns.", "Export the final report."];
-  }
-  return steps;
-}
-
-function determineBestTool(id, title, content) {
-  const c = (title + ' ' + content).toLowerCase();
-  if (c.includes('claude code') || c.includes('terminal') || c.includes('local file')) return { tool: "Claude Code", why: "This task requires direct interaction with your local files and terminal for maximum speed." };
-  if (c.includes('pdf') || c.includes('10-k') || c.includes('transcript') || c.includes('long report')) return { tool: "Claude", why: "Claude has a larger 'memory' (context window) and handles long, complex documents with high accuracy." };
-  if (c.includes('make.com') || c.includes('zapier') || c.includes('automation') || c.includes('api')) return { tool: "Make.com", why: "This idea works best as a recurring automation that connects different software tools together." };
-  if (c.includes('image') || c.includes('visual') || c.includes('screenshot') || c.includes('design')) return { tool: "Midjourney", why: "Midjourney is currently the gold standard for high-quality, branded business visuals." };
-  return { tool: "ChatGPT", why: "ChatGPT is the most accessible tool for quick brainstorming, drafting, and general research." };
-}
 
 function generateIdeas() {
   const files = fs.readdirSync(recipesDir);
@@ -137,10 +129,17 @@ function generateIdeas() {
                    data.isPremium === true;
 
     if (passes && !isUtility) {
-      let desc = data.description ? data.description.split('.')[0] + '.' : 'Automates repetitive manual tasks.';
+      let fullDesc = data.description || 'Automates repetitive manual tasks.';
+      // Get the first two sentences for a complete, robust description
+      let sentences = fullDesc.match(/[^\.!\?]+[\.!\?]+/g) || [fullDesc];
+      let desc = sentences.slice(0, 2).join(' ').trim();
+      
       desc = desc.replace(/agent/gi, 'tool').replace(/workflow/gi, 'process').replace(/automation/gi, 'system');
 
-      const toolInfo = determineBestTool(data.id, data.title, body);
+      const toolInfo = determineBestTool(data.title, body);
+
+      let roi = data.isPremium ? '10+ hours saved / month' : '2-5 hours saved / week';
+      if (data.title.toLowerCase().includes('negotiator') || data.title.toLowerCase().includes('savings')) roi = '$5k+ saved / year';
 
       ideas.push({
         id: data.id || file.replace('.md', ''),
@@ -148,20 +147,21 @@ function generateIdeas() {
         vertical: verticalMap[data.category] || 'Ops',
         problem: data.tagline || 'Stop wasting time on repetitive manual tasks.',
         what_ai_does: desc,
-        howToDoIt: extractSteps(body),
+        howToDoIt: refineSteps(body, toolInfo.tool),
         bestTool: toolInfo.tool,
         whyThisTool: toolInfo.why,
-        time_saved: data.isPremium ? '10+ hours / month' : '2-5 hours / week',
+        time_saved: roi,
         difficulty: data.difficulty === 'Beginner' ? 'Simple to Start' : data.difficulty === 'Intermediate' ? 'Practical' : 'Strategic',
         tools: "Practical Tool"
       });
     }
   });
 
-  const finalDatabase = [...ideas, ...syntheticIdeas];
+  const synthIds = new Set(syntheticIdeas.map(s => s.id));
+  const finalDatabase = [...ideas.filter(i => !synthIds.has(i.id)), ...syntheticIdeas];
 
   fs.writeFileSync(outputFilePath, JSON.stringify(finalDatabase, null, 2));
-  console.log(`Successfully generated ${finalDatabase.length} ideas with detailed steps in lib/ideas-data.json`);
+  console.log(`Successfully generated ${finalDatabase.length} refined ideas.`);
 }
 
 generateIdeas();
