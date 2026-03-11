@@ -5,6 +5,7 @@ const matter = require('gray-matter');
 const recipesDir = path.join(process.cwd(), 'content/recipes');
 const outputFilePath = path.join(process.cwd(), 'lib/ideas-data.json');
 
+// Better mapping: High-density sub-verticals
 const verticalMap = {
   'Marketing': 'Marketing',
   'Marketing Ops': 'Marketing',
@@ -31,62 +32,43 @@ const verticalMap = {
   'Legal': 'Legal',
   'Legal Ops': 'Legal',
   'Executive Ops': 'Executive',
-  'CEO Ops': 'Executive'
+  'CEO Ops': 'Executive',
+  'Strategic': 'Executive'
 };
 
-function determineIntelligence(title, tagline, body) {
+function determineBestTool(title, tagline, body) {
   const c = (title + ' ' + tagline + ' ' + body).toLowerCase();
+  if (c.includes('claude code') || c.includes('terminal') || c.includes('local file')) return { tool: "Claude Code", why: "It can directly read and write files on your computer, making it 10x faster for technical tasks." };
+  if (c.includes('pdf') || c.includes('10-k') || c.includes('transcript') || c.includes('long report') || c.includes('analyze')) return { tool: "Claude", why: "Claude handles long documents and complex instructions with more nuance and accuracy than other tools." };
+  if (c.includes('make.com') || c.includes('zapier') || c.includes('automation') || c.includes('api')) return { tool: "Make.com", why: "This works best as a recurring system that connects your different business tools automatically." };
+  if (c.includes('image') || c.includes('visual') || c.includes('design') || c.includes('screenshot')) return { tool: "Midjourney", why: "It generates professional, high-quality visuals that match your brand's aesthetic perfectly." };
+  return { tool: "ChatGPT", why: "It is the most accessible tool for quick drafting, brainstorming, and general research." };
+}
+
+function generateActionSteps(title, tagline, tool) {
+  // Action-First Logic: Human -> AI -> Business
+  const t = title.toLowerCase();
+  const tg = tagline.toLowerCase();
   
-  // 1. Tool Logic
-  let tool = "ChatGPT";
-  let why = "It is the most accessible tool for quick drafting, brainstorming, and research.";
-  
-  if (c.includes('claude code') || c.includes('terminal') || c.includes('local file') || c.includes('file system')) {
-    tool = "Claude Code";
-    why = "It can directly read and write files on your computer, making it 10x faster for technical or repetitive tasks.";
-  } else if (c.includes('pdf') || c.includes('10-k') || c.includes('transcript') || c.includes('long report') || c.includes('report') || c.includes('complex')) {
-    tool = "Claude";
-    why = "Claude handles long documents and complex instructions with more nuance and accuracy than other tools.";
-  } else if (c.includes('make.com') || c.includes('zapier') || c.includes('automation') || c.includes('api') || c.includes('connect')) {
-    tool = "Make.com";
-    why = "This works best as a set-it-and-forget-it system that connects your different business tools automatically.";
-  } else if (c.includes('image') || c.includes('visual') || c.includes('design') || c.includes('screenshot') || c.includes('thumbnail')) {
-    tool = "Midjourney";
-    why = "It generates professional, high-quality visuals that match your brand's aesthetic perfectly.";
+  let step1 = `Find your relevant data (like a CSV, report, or list of notes) related to ${t}.`;
+  let step2 = `Paste that data into ${tool} and ask it to find the most important patterns or "low-hanging fruit".`;
+  let step3 = `Apply the results to your next project or share the summary report with your team.`;
+
+  if (t.includes('negotiator') || t.includes('script') || t.includes('writer')) {
+    step1 = `Find the original text or bill you want to rewrite (e.g., a software invoice or a boring email).`;
+    step2 = `Paste the text into ${tool} and ask it to draft 3 high-leverage variations based on your goal.`;
+    step3 = `Send the best version to your contact and track the response.`;
+  } else if (t.includes('hunter') || t.includes('detective') || t.includes('miner') || t.includes('scout')) {
+    step1 = `Identify the source you want to research (e.g., a LinkedIn search, a competitor website, or a job board).`;
+    step2 = `Paste the URL or raw text into ${tool} and ask it to extract specific leads that fit your ICP.`;
+    step3 = `Import the list into your CRM and trigger a personalized outreach campaign.`;
+  } else if (t.includes('auditor') || t.includes('analyzer') || t.includes('calculator')) {
+    step1 = `Export your raw performance data (e.g., a week of ad stats or a month of sales calls).`;
+    step2 = `Paste the data into ${tool} and ask it to pinpoint exactly where you are losing time or money.`;
+    step3 = `Use the audit to adjust your budget or change your team's workflow for the following week.`;
   }
 
-  // 2. ROI Logic
-  let roi = "2-5 hours saved / week";
-  if (c.includes('revenue') || c.includes('billing') || c.includes('savings') || c.includes('negotiat') || c.includes('cost')) {
-    roi = "$5k+ saved / year";
-  } else if (c.includes('premium') || c.includes('strategic')) {
-    roi = "10+ hours saved / month";
-  }
-
-  // 3. Step Logic
-  let steps = [
-    `Export your data and paste it into ${tool}.`,
-    `Ask ${tool} to identify the core patterns or specific business problems in the data.`,
-    "Review the final report and apply the suggestions to your business."
-  ];
-
-  const workflowLines = body.split('\n').filter(l => l.match(/^\d+\.\s+/) || l.includes('Step') || l.includes('Phase'));
-  if (workflowLines.length > 2) {
-    steps = workflowLines.slice(0, 3).map(l => {
-      let text = l.replace(/^\d+\.\s+/, '').replace(/\*\*/g, '').trim();
-      text = text.replace(/agent/gi, 'tool').replace(/workflow/gi, 'process').replace(/execute/gi, 'run');
-      if (!text.endsWith('.')) text += '.';
-      return text;
-    });
-    // Inject tool into first step
-    if (!steps[0].includes(tool)) steps[0] = `Paste your data into ${tool} and ${steps[0].toLowerCase()}`;
-  }
-
-  // 4. Strategic Problem Logic (Anti-Slop)
-  let problem = tagline || "Stop wasting time on repetitive manual tasks.";
-  if (problem.length < 15) problem = `Reclaim your time by automating ${title.toLowerCase()}.`;
-
-  return { tool, why, roi, steps, problem };
+  return [step1, step2, step3];
 }
 
 function generateIdeas() {
@@ -108,31 +90,34 @@ function generateIdeas() {
                    data.isPremium === true;
 
     if (passes && !isUtility) {
-      const intel = determineIntelligence(data.title, data.tagline, body);
+      const toolInfo = determineBestTool(data.title, data.tagline, body);
+      const steps = generateActionSteps(data.title, data.tagline, toolInfo.tool);
 
-      // Description logic (Full sentences only)
       let fullDesc = data.description || 'Automates repetitive manual tasks.';
       let sentences = fullDesc.match(/[^\.!\?]+[\.!\?]+/g) || [fullDesc];
       let desc = sentences.slice(0, 2).join(' ').trim();
-      desc = desc.replace(/agent/gi, 'tool').replace(/workflow/gi, 'process').replace(/automation/gi, 'system');
+      desc = desc.replace(/agent/gi, 'tool').replace(/workflow/gi, 'process').replace(/automation/gi, 'system').replace(/###.*?\n/g, '');
+
+      let roi = data.isPremium ? '10+ hours saved / month' : '2-5 hours saved / week';
+      if (data.title.toLowerCase().includes('negotiator') || data.title.toLowerCase().includes('savings')) roi = "$5k+ saved / year";
 
       ideas.push({
         id: data.id || file.replace('.md', ''),
         name: data.title,
         vertical: verticalMap[data.category] || 'Ops',
-        problem: intel.problem,
+        problem: data.tagline || 'Stop wasting time on repetitive manual tasks.',
         what_ai_does: desc,
-        howToDoIt: intel.steps,
-        bestTool: intel.tool,
-        whyThisTool: intel.why,
-        time_saved: intel.roi,
+        howToDoIt: steps,
+        bestTool: toolInfo.tool,
+        whyThisTool: toolInfo.why,
+        time_saved: roi,
         difficulty: data.difficulty === 'Beginner' ? 'Simple to Start' : data.difficulty === 'Intermediate' ? 'Practical' : 'Strategic',
         tools: "Practical Tool"
       });
     }
   });
 
-  // Re-inject Synthetic Ideas (Highest Quality)
+  // Re-inject Synthetic Ideas (Manual Polish - The Gold Standard)
   const syntheticIdeas = [
     {
       "id": "employee-flight-risk-detector",
