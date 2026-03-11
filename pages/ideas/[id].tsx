@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import Navbar from '../../components/Navbar';
-import { ArrowLeft, Zap, Clock, CheckCircle, Info, Lightbulb, Coffee, ExternalLink } from 'lucide-react';
+import { ArrowLeft, Zap, Clock, CheckCircle, Info, Lightbulb, Coffee } from 'lucide-react';
 import ideasData from '../../lib/ideas-data.json';
 
 export default function IdeaDetailPage() {
@@ -104,14 +104,9 @@ export default function IdeaDetailPage() {
                 <p className="text-3xl font-display uppercase mb-4 leading-none">
                   {idea.bestTool}
                 </p>
-                <p className="text-xs font-bold leading-relaxed opacity-80 mb-6">
+                <p className="text-xs font-bold leading-relaxed opacity-80">
                   {idea.whyThisTool}
                 </p>
-                <div className="pt-4 border-t border-black/10">
-                   <div className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-widest bg-black text-[#ccff00] px-3 py-1">
-                     Recommended
-                   </div>
-                </div>
               </div>
 
               {/* ROI & Difficulty */}
@@ -129,14 +124,6 @@ export default function IdeaDetailPage() {
                   </div>
                 </div>
               </div>
-
-              {/* CTA */}
-              <Link
-                href="/build-club"
-                className="block text-center bg-white text-black p-6 font-display text-xl uppercase hover:translate-x-1 hover:translate-y-1 transition-transform brutalist-shadow-white"
-              >
-                Build this with us
-              </Link>
             </div>
           </div>
         </div>
