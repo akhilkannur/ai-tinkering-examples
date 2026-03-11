@@ -2485,15 +2485,15 @@
     "id": "domain-age-startup-spotter",
     "name": "The New Domain Watcher",
     "vertical": "Sales",
-    "problem": "Find newly registered domains with stealth signals.",
-    "what_ai_does": "New domains often mean new businesses. filters newly registered domains (via Whois/DNS data) for keywords like \"labs,\" \"tech,\" or \"ai,\" and checks if they have set up email records (MX records), signaling a real business launch.",
+    "problem": "Generic lead lists are full of stale data; your best prospects for foundational services (legal, cloud, HR) are brand-new startups that haven't even launched a website yet.",
+    "what_ai_does": "It filters daily new domain registrations for high-growth keywords (like \"Labs\" or \"AI\") and checks if they have already set up corporate email (MX records), pinpointing legitimate startups in stealth mode.",
     "howToDoIt": [
-      "Identify the manual process you want to simplify.",
-      "Paste your raw notes or data into ChatGPT and ask for a strategic plan.",
-      "Execute the top 3 recommendations to reclaim your time."
+      "Use the AI to monitor a feed of newly registered domains containing keywords like \"Tech\" or \"Fintech.\"",
+      "Ask it to \"Verify MX records\" to confirm they've set up professional email via Google or Microsoft.",
+      "Identify the likely founder via LinkedIn and pitch your foundational services as a 'Day Zero' partner."
     ],
-    "bestTool": "ChatGPT",
-    "whyThisTool": "It is the most accessible tool for quick drafting, brainstorming, and general business research.",
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at technical research and correlating DNS signals with professional profiles",
     "time_saved": "10+ hours saved / month",
     "difficulty": "Strategic",
     "tools": "Practical Tool"
@@ -2502,15 +2502,15 @@
     "id": "drive-time-territory-balancer",
     "name": "Drive-Time Territory Balancer",
     "vertical": "Sales",
-    "problem": "Balance field sales territories by actual drive time.",
-    "what_ai_does": "Calculates the center of gravity for a territory. uses Maps API logic to ensure Rep A isn't spending 4 hours driving while Rep B spends 1.",
+    "problem": "Field sales territories are often assigned by \"Zip Code\" or radius, leading to unfair workloads where Rep A spends 4 hours driving in traffic while Rep B spends only 1.",
+    "what_ai_does": "It calculates the true \"Center of Gravity\" for each territory using real-time Maps API data, ensuring that sales territories are balanced by actual drive-time rather than just distance.",
     "howToDoIt": [
-      "Identify the manual process you want to simplify.",
-      "Paste your raw notes or data into Claude and ask for a strategic plan.",
-      "Execute the top 3 recommendations to reclaim your time."
+      "Upload a CSV of your sales reps and their assigned account addresses to the AI.",
+      "Ask it to \"Calculate the total weekly drive-time per rep\" using a traffic-aware mapping heuristic.",
+      "Redistribute accounts to ensure no rep is spending >20% more time on the road than the team average."
     ],
-    "bestTool": "Claude",
-    "whyThisTool": "Claude handles long documents and complex instructions with more nuance and accuracy than other tools.",
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Excellent for logical data manipulation and performing coordinate-based calculations",
     "time_saved": "10+ hours saved / month",
     "difficulty": "Strategic",
     "tools": "Practical Tool"
@@ -2519,15 +2519,15 @@
     "id": "duplicate-account-consolidator",
     "name": "Account Dupe Smasher",
     "vertical": "Sales",
-    "problem": "Find duplicate companies using fuzzy matching.",
-    "what_ai_does": "Identifies duplicate account records by comparing names (e.g., 'Acme Inc.' vs 'Acme Incorporated') and domains.",
+    "problem": "CRMs get cluttered with duplicate records like \"Acme Inc\" and \"Acme Incorporated,\" leading to fragmented account history and multiple reps accidentally calling the same company.",
+    "what_ai_does": "It performs deep fuzzy matching on your account list to identify duplicates that traditional CRM filters miss, providing a clean list of records that need to be merged.",
     "howToDoIt": [
-      "Identify the manual process you want to simplify.",
-      "Paste your raw notes or data into ChatGPT and ask for a strategic plan.",
-      "Execute the top 3 recommendations to reclaim your time."
+      "Export your full list of Account Names and Domains from your CRM into a CSV.",
+      "Ask the AI to \"Identify potential duplicates using fuzzy string matching\" (e.g., matching variants of the same name).",
+      "Review the \"Dupe Report\" and use it to consolidate your records and restore a 'Single Source of Truth' for every account."
     ],
     "bestTool": "ChatGPT",
-    "whyThisTool": "It is the most accessible tool for quick drafting, brainstorming, and general business research.",
+    "whyThisTool": "Fast data processing and excellent at performing complex string comparisons and grouping",
     "time_saved": "10+ hours saved / month",
     "difficulty": "Strategic",
     "tools": "Practical Tool"
@@ -2536,15 +2536,15 @@
     "id": "duplicate-lead-merger",
     "name": "The Duplicate Lead Merger",
     "vertical": "Sales",
-    "problem": "One person, one record.",
-    "what_ai_does": "Duplicates split history and confuse reps. identifies duplicate emails in a CSV, applies 'Survivorship Rules' (e.g., 'Keep the one with the most recent activity' or 'Keep the one with a phone number'), and merges data into a master record.",
+    "problem": "Merging duplicate leads is risky; if you pick the wrong \"Master Record,\" you could lose critical activity history, original source data, or custom notes.",
+    "what_ai_does": "It analyzes pairs of duplicate leads to determine which record has the most \"Engagement History\" and automatically suggests which fields to preserve during the merge.",
     "howToDoIt": [
-      "Identify the manual process you want to simplify.",
-      "Paste your raw notes or data into ChatGPT and ask for a strategic plan.",
-      "Execute the top 3 recommendations to reclaim your time."
+      "Upload a CSV of duplicate lead pairs including their 'Created Date' and 'Last Activity' timestamps.",
+      "Ask the AI to \"Select the best Master Record\" based on data completeness and recent activity.",
+      "Follow the suggested \"Merge Plan\" to consolidate your leads without losing valuable sales context."
     ],
     "bestTool": "ChatGPT",
-    "whyThisTool": "It is the most accessible tool for quick drafting, brainstorming, and general business research.",
+    "whyThisTool": "Excellent for logical decision-making and prioritizing data based on completeness",
     "time_saved": "10+ hours saved / month",
     "difficulty": "Strategic",
     "tools": "Practical Tool"
@@ -2553,15 +2553,15 @@
     "id": "e-commerce-platform-migrator",
     "name": "The Re-Platform Scout",
     "vertical": "Sales",
-    "problem": "Identify online stores that recently switched platforms.",
-    "what_ai_does": "Switching from WooCommerce to Shopify (or vice versa) is a massive project. Stores that just migrated are in \"setup mode\" and need new apps, SEO audits, and design work. detects tech stack changes.",
+    "problem": "Migrating from one e-commerce platform to another (e.g., WooCommerce to Shopify) is a technical nightmare that often leads to broken URLs, lost SEO rankings, and missing order history.",
+    "what_ai_does": "It generates a comprehensive technical migration checklist—including URL mapping, SEO redirection rules, and data formatting steps—to ensure a zero-downtime transition.",
     "howToDoIt": [
-      "Choose a source where your target audience or data lives (e.g., a website, job board, or LinkedIn).",
-      "Supply the URL or raw data to ChatGPT and ask it to filter for high-value signals.",
-      "Take the cleaned list and move it directly into your outreach process or CRM."
+      "Provide the AI with your source and destination platform names (e.g., \"Magento to BigCommerce\").",
+      "Ask it to \"Generate a 5-phase migration checklist\" including a specific URL redirection strategy.",
+      "Review the \"Migration Blueprint\" to ensure your developers don't miss critical data mappings or SEO configurations."
     ],
-    "bestTool": "ChatGPT",
-    "whyThisTool": "It is the most accessible tool for quick drafting, brainstorming, and general business research.",
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at generating complex technical workflows and understanding platform-specific data structures",
     "time_saved": "10+ hours saved / month",
     "difficulty": "Strategic",
     "tools": "Practical Tool"
@@ -2570,15 +2570,15 @@
     "id": "early-adopter-product-hunt-scraper",
     "name": "The Product Hunt Poacher",
     "vertical": "Sales",
-    "problem": "Find leads who upvoted similar tools on Product Hunt.",
-    "what_ai_does": "People who upvote \"CRM for Freelancers\" on Product Hunt are the exact target audience for *your* CRM for freelancers. scrapes upvoters of competitor launches to build a list of early adopters.",
+    "problem": "Finding \"Early Adopters\" who are willing to pay for new tech is hard; your best leads are often the people already upvoting and commenting on your competitors' Product Hunt launches.",
+    "what_ai_does": "It identifies high-intent leads by monitoring the comments and upvotes on specific Product Hunt launches, qualifying them based on their profile bio and previous activity history.",
     "howToDoIt": [
-      "Identify the manual process you want to simplify.",
-      "Paste your raw notes or data into ChatGPT and ask for a strategic plan.",
-      "Execute the top 3 recommendations to reclaim your time."
+      "Provide the URLs of 3 recent Product Hunt launches in your category to the AI.",
+      "Ask it to \"Extract the names and bios of active commenters\" who mention specific pain points.",
+      "Draft a personalized outreach message for these early adopters focused on the specific gaps they mentioned in their comments."
     ],
-    "bestTool": "ChatGPT",
-    "whyThisTool": "It is the most accessible tool for quick drafting, brainstorming, and general business research.",
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at extracting specific intent from informal social commentary and research",
     "time_saved": "10+ hours saved / month",
     "difficulty": "Strategic",
     "tools": "Practical Tool"

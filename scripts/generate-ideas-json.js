@@ -1067,6 +1067,72 @@ const manualOverrides = {
     "bestTool": "ChatGPT",
     "whyThisTool": "Fast data processing and excellent at performing date-based calculations for pipeline management"
   },
+  "domain-age-startup-spotter": {
+    "problem": "Generic lead lists are full of stale data; your best prospects for foundational services (legal, cloud, HR) are brand-new startups that haven't even launched a website yet.",
+    "what_ai_does": "It filters daily new domain registrations for high-growth keywords (like \"Labs\" or \"AI\") and checks if they have already set up corporate email (MX records), pinpointing legitimate startups in stealth mode.",
+    "howToDoIt": [
+      "Use the AI to monitor a feed of newly registered domains containing keywords like \"Tech\" or \"Fintech.\"",
+      "Ask it to \"Verify MX records\" to confirm they've set up professional email via Google or Microsoft.",
+      "Identify the likely founder via LinkedIn and pitch your foundational services as a 'Day Zero' partner."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at technical research and correlating DNS signals with professional profiles"
+  },
+  "drive-time-territory-balancer": {
+    "problem": "Field sales territories are often assigned by \"Zip Code\" or radius, leading to unfair workloads where Rep A spends 4 hours driving in traffic while Rep B spends only 1.",
+    "what_ai_does": "It calculates the true \"Center of Gravity\" for each territory using real-time Maps API data, ensuring that sales territories are balanced by actual drive-time rather than just distance.",
+    "howToDoIt": [
+      "Upload a CSV of your sales reps and their assigned account addresses to the AI.",
+      "Ask it to \"Calculate the total weekly drive-time per rep\" using a traffic-aware mapping heuristic.",
+      "Redistribute accounts to ensure no rep is spending >20% more time on the road than the team average."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Excellent for logical data manipulation and performing coordinate-based calculations"
+  },
+  "duplicate-account-consolidator": {
+    "problem": "CRMs get cluttered with duplicate records like \"Acme Inc\" and \"Acme Incorporated,\" leading to fragmented account history and multiple reps accidentally calling the same company.",
+    "what_ai_does": "It performs deep fuzzy matching on your account list to identify duplicates that traditional CRM filters miss, providing a clean list of records that need to be merged.",
+    "howToDoIt": [
+      "Export your full list of Account Names and Domains from your CRM into a CSV.",
+      "Ask the AI to \"Identify potential duplicates using fuzzy string matching\" (e.g., matching variants of the same name).",
+      "Review the \"Dupe Report\" and use it to consolidate your records and restore a 'Single Source of Truth' for every account."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast data processing and excellent at performing complex string comparisons and grouping"
+  },
+  "duplicate-lead-merger": {
+    "problem": "Merging duplicate leads is risky; if you pick the wrong \"Master Record,\" you could lose critical activity history, original source data, or custom notes.",
+    "what_ai_does": "It analyzes pairs of duplicate leads to determine which record has the most \"Engagement History\" and automatically suggests which fields to preserve during the merge.",
+    "howToDoIt": [
+      "Upload a CSV of duplicate lead pairs including their 'Created Date' and 'Last Activity' timestamps.",
+      "Ask the AI to \"Select the best Master Record\" based on data completeness and recent activity.",
+      "Follow the suggested \"Merge Plan\" to consolidate your leads without losing valuable sales context."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Excellent for logical decision-making and prioritizing data based on completeness"
+  },
+  "early-adopter-product-hunt-scraper": {
+    "problem": "Finding \"Early Adopters\" who are willing to pay for new tech is hard; your best leads are often the people already upvoting and commenting on your competitors' Product Hunt launches.",
+    "what_ai_does": "It identifies high-intent leads by monitoring the comments and upvotes on specific Product Hunt launches, qualifying them based on their profile bio and previous activity history.",
+    "howToDoIt": [
+      "Provide the URLs of 3 recent Product Hunt launches in your category to the AI.",
+      "Ask it to \"Extract the names and bios of active commenters\" who mention specific pain points.",
+      "Draft a personalized outreach message for these early adopters focused on the specific gaps they mentioned in their comments."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at extracting specific intent from informal social commentary and research"
+  },
+  "e-commerce-platform-migrator": {
+    "problem": "Migrating from one e-commerce platform to another (e.g., WooCommerce to Shopify) is a technical nightmare that often leads to broken URLs, lost SEO rankings, and missing order history.",
+    "what_ai_does": "It generates a comprehensive technical migration checklist—including URL mapping, SEO redirection rules, and data formatting steps—to ensure a zero-downtime transition.",
+    "howToDoIt": [
+      "Provide the AI with your source and destination platform names (e.g., \"Magento to BigCommerce\").",
+      "Ask it to \"Generate a 5-phase migration checklist\" including a specific URL redirection strategy.",
+      "Review the \"Migration Blueprint\" to ensure your developers don't miss critical data mappings or SEO configurations."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at generating complex technical workflows and understanding platform-specific data structures"
+  },
   "consultant-partnership-finder": {
     "problem": "Finding the right agencies or consultants to resell your product is a slow research task, but these \"Channel Partners\" are the fastest way to scale your sales without hiring more reps.",
     "what_ai_does": "It identifies service businesses (agencies, SIs) that are already implementing solutions adjacent to yours—like \"Asana Experts\" or \"Shopify CRO Agencies\"—making them ideal candidates for a referral program.",
