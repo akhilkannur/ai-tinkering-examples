@@ -1102,21 +1102,15 @@
     "tools": "Practical Tool"
   },
   {
-    "id": "consultant-partnership-finder",
-    "name": "The Channel Partner Scout",
-    "vertical": "Sales",
-    "problem": "Find implementation partners for specific software.",
-    "what_ai_does": "Agencies and consultants are excellent channel partners. finds consultants who specialize in specific tools (e.g., \"Asana Experts,\" \"Salesforce Consultants\") so you can pitch them on reselling your solution.",
+    "problem": "Finding the right agencies or consultants to resell your product is a slow research task, but these \"Channel Partners\" are the fastest way to scale your sales without hiring more reps.",
+    "what_ai_does": "It identifies service businesses (agencies, SIs) that are already implementing solutions adjacent to yours—like \"Asana Experts\" or \"Shopify CRO Agencies\"—making them ideal candidates for a referral program.",
     "howToDoIt": [
-      "Choose a source where your target audience or data lives (e.g., a website, job board, or LinkedIn).",
-      "Supply the URL or raw data to ChatGPT and ask it to filter for high-value signals.",
-      "Take the cleaned list and move it directly into your outreach process or CRM."
+      "Define your target software ecosystem (e.g., \"HubSpot\") and partner type in a CSV.",
+      "Use the AI to search official partner directories and LinkedIn for agencies with 1-50 employees specializing in that tool.",
+      "Review the \"Potential Partners\" list and pitch them on a co-marketing or reseller agreement."
     ],
-    "bestTool": "ChatGPT",
-    "whyThisTool": "It is the most accessible tool for quick drafting, brainstorming, and general business research.",
-    "time_saved": "10+ hours saved / month",
-    "difficulty": "Strategic",
-    "tools": "Practical Tool"
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at complex web research and identifying niche service providers in software ecosystems"
   },
   {
     "id": "contact-enrichment-freshness",
@@ -1272,21 +1266,15 @@
     "tools": "Practical Tool"
   },
   {
-    "id": "contract-auto-renewal-forecaster",
-    "name": "Auto-Renew Forecaster",
-    "vertical": "Sales",
-    "problem": "Predict passive revenue.",
-    "what_ai_does": "Predicts revenue from contracts marked 'Auto-Renew' vs those requiring manual intervention.",
+    "problem": "Relying on \"Auto-Renew\" contracts is a complacency trap; if a customer hasn't logged in for 60 days, their auto-renewal will likely lead to an angry cancellation or a chargeback.",
+    "what_ai_does": "It cross-references your contract renewal dates with actual product usage data to identify \"Silent Churn\" risks and prioritize manual intervention for your high-value accounts.",
     "howToDoIt": [
-      "Identify the manual process you want to simplify.",
-      "Paste your raw notes or data into ChatGPT and ask for a strategic plan.",
-      "Execute the top 3 recommendations to reclaim your time."
+      "Upload a CSV of your active contracts and their last login dates to the AI.",
+      "Ask it to assign a \"Defense Level\" (e.g., \"Code Red\" for inactive auto-renews) to every account.",
+      "Generate a \"Value Realization Email\" for at-risk accounts to restart engagement before the renewal date hits."
     ],
     "bestTool": "ChatGPT",
-    "whyThisTool": "It is the most accessible tool for quick drafting, brainstorming, and general business research.",
-    "time_saved": "10+ hours saved / month",
-    "difficulty": "Strategic",
-    "tools": "Practical Tool"
+    "whyThisTool": "Excellent for risk-scoring logic and drafting empathetic customer success emails"
   },
   {
     "id": "contract-clause-variance-tracker",
@@ -1391,21 +1379,15 @@
     "tools": "Practical Tool"
   },
   {
-    "id": "contract-risk-detector",
-    "name": "The Contract Risk Detector",
-    "vertical": "Ops",
-    "problem": "Find the 'gotchas' in the PDF.",
-    "what_ai_does": "Sales contracts often hide 3-year lock-ins or auto-renewals in the fine print. scans multiple PDF agreements, highlights high-risk clauses, and suggests red-lines to protect your budget.",
+    "problem": "Sales contracts often hide 3-year lock-ins, 90-day cancellation windows, or annual price escalators in the fine print that can wreck your department's budget.",
+    "what_ai_does": "It scans your vendor agreements (PDFs or images) to instantly highlight high-risk clauses and suggest specific \"red-line\" language to protect your company's interests.",
     "howToDoIt": [
-      "Identify the manual process you want to simplify.",
-      "Paste your raw notes or data into Claude and ask for a strategic plan.",
-      "Execute the top 3 recommendations to reclaim your time."
+      "Upload your vendor contracts or MSA documents to an AI with vision/document analysis capabilities.",
+      "Ask it to \"Scan for Term & Renewal, Price Escalators, and Termination for Convenience\" clauses.",
+      "Review the \"Risk Assessment\" report and use the suggested red-lines during your next negotiation."
     ],
     "bestTool": "Claude",
-    "whyThisTool": "Claude handles long documents and complex instructions with more nuance and accuracy than other tools.",
-    "time_saved": "10+ hours saved / month",
-    "difficulty": "Strategic",
-    "tools": "Practical Tool"
+    "whyThisTool": "Superior at legal document analysis and drafting nuanced, protective contract language"
   },
   {
     "id": "crawl-budget-estimator",
@@ -1476,21 +1458,15 @@
     "tools": "Practical Tool"
   },
   {
-    "id": "crm-field-utilization-analyzer",
-    "name": "CRM Field Health Check",
-    "vertical": "Sales",
-    "problem": "Identify unused or garbage data fields in your CRM.",
-    "what_ai_does": "Analyzes a CSV export of your CRM records to calculate fill rates for every column. Use this to you decide which fields to deprecate or mandate.",
+    "problem": "CRMs become \"data graveyards\" when they have hundreds of custom fields that nobody fills out, making it impossible for managers to get clean reporting on the health of the business.",
+    "what_ai_does": "It analyzes a raw export of your CRM data to calculate the \"Fill Rate\" for every single column, identifying exactly which fields should be deprecated or made mandatory.",
     "howToDoIt": [
-      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
-      "Upload the file to Claude and ask it to highlight the top 3 bottlenecks where you're losing money.",
-      "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
+      "Export a full CSV of your CRM records (Contacts or Deals) including all custom fields.",
+      "Provide the CSV to the AI and ask it to \"Calculate the percentage of non-empty values for every column.\"",
+      "Review the \"Field Health Report\" to clean up your CRM and simplify the data entry process for your sales team."
     ],
-    "bestTool": "Claude",
-    "whyThisTool": "Claude handles long documents and complex instructions with more nuance and accuracy than other tools.",
-    "time_saved": "10+ hours saved / month",
-    "difficulty": "Strategic",
-    "tools": "Practical Tool"
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast data profiling and logical identification of \"garbage\" data fields"
   },
   {
     "id": "cross-channel-frequency-monitor",
@@ -1527,21 +1503,15 @@
     "tools": "Practical Tool"
   },
   {
-    "id": "cross-sell-whitespace-mapper",
-    "name": "Cross-Sell Whitespace Matrix",
-    "vertical": "Sales",
-    "problem": "Find exactly what your customers haven't bought yet.",
-    "what_ai_does": "Generates a matrix of customers vs products to identify upsell and cross-sell opportunities.",
+    "problem": "Sales teams often miss easy \"Cross-Sell\" revenue because they don't have a clear visual of which existing customers haven't bought their other products yet.",
+    "what_ai_does": "It transforms your raw customer/product list into a \"Whitespace Matrix,\" a grid that highlights exactly where the gaps are in your product penetration across your entire client base.",
     "howToDoIt": [
-      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
-      "Upload the file to Midjourney and ask it to highlight the top 3 bottlenecks where you're losing money.",
-      "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
+      "Upload a CSV of your customers and the products they currently own to the AI.",
+      "Ask it to \"Pivot the data into a grid\" with Customers as rows and Products as columns.",
+      "Identify the \"0\" cells (Whitespace) and use them to launch a targeted cross-sell campaign for those specific accounts."
     ],
-    "bestTool": "Midjourney",
-    "whyThisTool": "It generates professional, high-quality visuals that match your brand's aesthetic perfectly.",
-    "time_saved": "10+ hours saved / month",
-    "difficulty": "Strategic",
-    "tools": "Practical Tool"
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Excellent for data manipulation and transforming lists into structured matrices"
   },
   {
     "id": "csv-crm-normalizer",

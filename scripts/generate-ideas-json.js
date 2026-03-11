@@ -868,6 +868,72 @@ const manualOverrides = {
     ],
     "bestTool": "Claude Code",
     "whyThisTool": "Can directly crawl your site and your competitors' sites to perform deep semantic gap analysis"
+  },
+  "consultant-partnership-finder": {
+    "problem": "Finding the right agencies or consultants to resell your product is a slow research task, but these \"Channel Partners\" are the fastest way to scale your sales without hiring more reps.",
+    "what_ai_does": "It identifies service businesses (agencies, SIs) that are already implementing solutions adjacent to yours—like \"Asana Experts\" or \"Shopify CRO Agencies\"—making them ideal candidates for a referral program.",
+    "howToDoIt": [
+      "Define your target software ecosystem (e.g., \"HubSpot\") and partner type in a CSV.",
+      "Use the AI to search official partner directories and LinkedIn for agencies with 1-50 employees specializing in that tool.",
+      "Review the \"Potential Partners\" list and pitch them on a co-marketing or reseller agreement."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at complex web research and identifying niche service providers in software ecosystems"
+  },
+  "contract-auto-renewal-forecaster": {
+    "problem": "Relying on \"Auto-Renew\" contracts is a complacency trap; if a customer hasn't logged in for 60 days, their auto-renewal will likely lead to an angry cancellation or a chargeback.",
+    "what_ai_does": "It cross-references your contract renewal dates with actual product usage data to identify \"Silent Churn\" risks and prioritize manual intervention for your high-value accounts.",
+    "howToDoIt": [
+      "Upload a CSV of your active contracts and their last login dates to the AI.",
+      "Ask it to assign a \"Defense Level\" (e.g., \"Code Red\" for inactive auto-renews) to every account.",
+      "Generate a \"Value Realization Email\" for at-risk accounts to restart engagement before the renewal date hits."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Excellent for risk-scoring logic and drafting empathetic customer success emails"
+  },
+  "contract-risk-detector": {
+    "problem": "Sales contracts often hide 3-year lock-ins, 90-day cancellation windows, or annual price escalators in the fine print that can wreck your department's budget.",
+    "what_ai_does": "It scans your vendor agreements (PDFs or images) to instantly highlight high-risk clauses and suggest specific \"red-line\" language to protect your company's interests.",
+    "howToDoIt": [
+      "Upload your vendor contracts or MSA documents to an AI with vision/document analysis capabilities.",
+      "Ask it to \"Scan for Term & Renewal, Price Escalators, and Termination for Convenience\" clauses.",
+      "Review the \"Risk Assessment\" report and use the suggested red-lines during your next negotiation."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at legal document analysis and drafting nuanced, protective contract language"
+  },
+  "crm-field-utilization-analyzer": {
+    "problem": "CRMs become \"data graveyards\" when they have hundreds of custom fields that nobody fills out, making it impossible for managers to get clean reporting on the health of the business.",
+    "what_ai_does": "It analyzes a raw export of your CRM data to calculate the \"Fill Rate\" for every single column, identifying exactly which fields should be deprecated or made mandatory.",
+    "howToDoIt": [
+      "Export a full CSV of your CRM records (Contacts or Deals) including all custom fields.",
+      "Provide the CSV to the AI and ask it to \"Calculate the percentage of non-empty values for every column.\"",
+      "Review the \"Field Health Report\" to clean up your CRM and simplify the data entry process for your sales team."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast data profiling and logical identification of \"garbage\" data fields"
+  },
+  "cross-sell-whitespace-mapper": {
+    "problem": "Sales teams often miss easy \"Cross-Sell\" revenue because they don't have a clear visual of which existing customers haven't bought their other products yet.",
+    "what_ai_does": "It transforms your raw customer/product list into a \"Whitespace Matrix,\" a grid that highlights exactly where the gaps are in your product penetration across your entire client base.",
+    "howToDoIt": [
+      "Upload a CSV of your customers and the products they currently own to the AI.",
+      "Ask it to \"Pivot the data into a grid\" with Customers as rows and Products as columns.",
+      "Identify the \"0\" cells (Whitespace) and use them to launch a targeted cross-sell campaign for those specific accounts."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Excellent for data manipulation and transforming lists into structured matrices"
+  },
+  "cta-button-optimizer": {
+    "problem": "Generic button text like \"Submit\" or \"Buy Now\" increases psychological friction and kills conversion rates on high-traffic landing pages.",
+    "what_ai_does": "It rewrites your Call-to-Action (CTA) buttons to be benefit-driven and zero-risk (e.g., \"Start My Free Trial\") while suggesting visual tweaks to make them stand out.",
+    "howToDoIt": [
+      "Provide a list of your landing page names and their current CTA text to the AI.",
+      "Ask it to \"Draft 3 variations: Benefit-Led, Action-Led, and Zero-Risk\" for every button.",
+      "Implement the top-rated variation and add a suggested \"visual tweak\" (like a contrast color or icon) to boost CTR."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at persuasive copywriting and understanding micro-conversion psychology"
   }
 };
 
