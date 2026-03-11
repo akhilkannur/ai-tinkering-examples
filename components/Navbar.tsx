@@ -19,7 +19,8 @@ export default function Navbar() {
   }, [])
 
   const navLinks = [
-    { href: '/ai-examples', label: 'EXAMPLES', mono: true },
+    { href: '/', label: 'HOME', mono: true },
+    { href: '/ai-examples', label: 'LIBRARY', mono: true },
     { href: '/ideas-database', label: 'IDEAS DATABASE', mono: true },
     { href: '/agent-setup-service', label: 'SETUP', mono: true },
     { href: '/build-club', label: 'BUILD CLUB', mono: true },
@@ -73,7 +74,7 @@ export default function Navbar() {
                       : 'border-transparent text-black hover:bg-[#ccff00] hover:border-black'
                   }`}
                 >
-                  {link.label === 'EXAMPLES' ? 'LIBRARY' : link.label}
+                  {link.label}
                 </Link>
               ))}
             </div>

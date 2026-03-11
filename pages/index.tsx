@@ -1,101 +1,131 @@
-import { GetStaticProps } from 'next'
-import Head from 'next/head'
-import Link from 'next/link'
-import Navbar from '../components/Navbar'
-import { Terminal, Database, Sparkles, Folder, ArrowRight, Zap, Target, Search, Code, Cpu } from 'lucide-react'
-import { getAllRecipes } from '../lib/recipes'
-import { Recipe } from '../lib/cookbook-data'
-import FeaturedIn from '../components/FeaturedIn'
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import { Lightbulb, ArrowRight, Zap, Clock, Shield, TrendingUp, Users, Brain, Code, Target, Sparkles } from 'lucide-react';
+import FeaturedIn from '../components/FeaturedIn';
 
-interface HomePageProps {
-  recipes: Recipe[]
-}
+// Hand-picked "Featured Ideas" from lib/ideas-data.json
+const featuredIdeas = [
+  {
+    "id": "10k-report-prospector",
+    "vertical": "Sales",
+    "problem": "Turn 'Risk Factors' into 'Sales Pitches'.",
+    "what_ai_does": "Parses a public company's 10-K (Annual Report) to extract specific 'Risk Factors' and generates a cold email positioning your product as the solution.",
+    "time_saved": "2-5 hours / week",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": "employee-flight-risk-detector",
+    "vertical": "HR",
+    "problem": "Burnout and 'Quiet Quitting' are invisible until a resignation letter hits the desk.",
+    "what_ai_does": "Analyzes anonymized sentiment trends in Slack/Public channels to flag rising friction or 'disengagement clusters'.",
+    "time_saved": "$50k+ (Per Hire)",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": "canonical-tag-auditor",
+    "vertical": "Marketing",
+    "problem": "One scan to find Canonical conflicts, NoIndex errors, and Broken Links.",
+    "what_ai_does": "Technical debt is invisible until traffic drops. This agent crawls your site to identify 'silent killers' before they kill your rankings.",
+    "time_saved": "2-5 hours / week",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": "vendor-negotiation-script",
+    "vertical": "Executive",
+    "problem": "Save 20% on your software stack from a bill or a name.",
+    "what_ai_does": "Researches competitor deals and parity pricing to find leverage, then drafts a high-pressure negotiation script for your specific vendor.",
+    "time_saved": "$5k - $50k / year",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": "contract-redline-risk-spotter",
+    "vertical": "Legal",
+    "problem": "Spot deal-killing clauses in legal redlines instantly.",
+    "what_ai_does": "Analyzes the diff of a contract and highlights high-risk changes (Liability, IP, Payment terms) that Sales needs to push back on.",
+    "time_saved": "2 hours / contract",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": "qbr-deck-generator",
+    "vertical": "Customer Success",
+    "problem": "Don't just report numbers. Tell a story of Value vs. Friction.",
+    "what_ai_does": "Analyzes raw Usage Logs and Support Tickets to calculate an account 'Health Score' and generates a 5-slide strategic growth deck.",
+    "time_saved": "10 hours / client",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": "career-page-keyword-alert",
+    "vertical": "Sales",
+    "problem": "Trigger outreach when a prospect posts a specific job role.",
+    "what_ai_does": "Hiring is the strongest signal of budget. This agent monitors 100+ careers pages and alerts you when a 'Target Role' is posted.",
+    "time_saved": "10+ hours / month",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": "board-deck-narrative-factory",
+    "vertical": "Executive",
+    "problem": "Founders send raw metrics to the Board; directors get confused.",
+    "what_ai_does": "Ingests P&L and Sales data to draft the core narrative slides: The Win, The Bottleneck, and The Strategic Pivot.",
+    "time_saved": "15 hours / quarter",
+    "difficulty": "Intermediate"
+  }
+];
 
-export default function OutreachOperatorLaunchPage({ recipes }: HomePageProps) {
-  const homepageTitle = "The Outreach Operator | Data-First Sales Blueprints";
-  const homepageDescription = "Most outreach is generic noise. I build the technical workflows to find data others miss and craft angles they can't ignore. Built for Claude Code.";
-
+export default function IdeasHomepage() {
   return (
-    <>
+    <div className="min-h-screen bg-black text-white selection:bg-[#ccff00] selection:text-black font-mono">
       <Head>
-        <title>{homepageTitle}</title>
-        <meta name="description" content={homepageDescription} />
+        <title>What can you actually do with AI agents? | Real AI Examples</title>
+        <meta name="description" content="Browse 660+ AI automation ideas across every department. Find what fits your workflow." />
       </Head>
 
-      <style jsx global>{`
-        body {
-            font-family: 'Space Mono', monospace;
-            background-color: #000;
-            color: #fff;
-        }
-        .font-display {
-            font-family: 'Archivo Black', sans-serif;
-        }
-        .text-lime {
-            color: #ccff00;
-        }
-        .bg-lime {
-            background-color: #ccff00;
-        }
-        .border-lime {
-            border-color: #ccff00;
-        }
-        .brutalist-shadow-white {
-            box-shadow: 6px 6px 0px 0px #fff;
-        }
-      `}</style>
+      <Navbar />
 
-      <div className="min-h-screen selection:bg-[#ccff00] selection:text-black">
-        <Navbar />
-
-        {/* HERO: OPERATOR STYLE */}
+      <main>
+        {/* HERO: IDEA-FIRST */}
         <section className="pt-40 pb-24 px-4 border-b border-white/10">
           <div className="container mx-auto max-w-6xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-white text-black text-[10px] font-black uppercase tracking-widest mb-8">
-              <Code className="w-3 h-3" /> Outreach as Code
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#ccff00] text-black text-[10px] font-black uppercase tracking-widest mb-8">
+              <Sparkles className="w-3 h-3" /> Inspiration Layer v2.0
             </div>
             
             <h1 className="font-display text-6xl md:text-9xl uppercase leading-[0.8] tracking-tighter mb-12">
-              The Outreach <br />
-              <span className="text-lime">Operator.</span>
+              What can you <br />
+              actually <span className="text-[#ccff00]">do?</span>
             </h1>
 
             <div className="grid lg:grid-cols-2 gap-16 items-start">
               <div className="space-y-8">
-                <p className="text-xl md:text-2xl font-bold leading-tight text-white/90">
-                  Most outreach is just generic noise. I build the technical workflows to find <strong>data sources others miss</strong> and craft <strong>angles they can't ignore.</strong>
-                </p>
-                <p className="text-lg text-white/50 font-medium max-w-lg leading-relaxed">
-                  No guru promises. No "1,000 meetings" hype. Just boringly effective outreach architecture for the AI-Native Operator. Built specifically for Claude Code and the terminal.
+                <p className="text-xl md:text-3xl font-bold leading-tight text-white/90">
+                  Browse 668 AI automation ideas across every department. <br />
+                  <span className="text-white/40">Find the specific pattern that fits your workflow.</span>
                 </p>
                 
                 <div className="pt-6">
-                  <a
-                    href="https://checkout.dodopayments.com/buy/pdt_0NW6p0szmXPS6jXW05hIP"
-                    className="inline-flex items-center gap-4 bg-lime text-black px-10 py-6 font-display text-2xl uppercase hover:translate-x-1 hover:translate-y-1 transition-transform brutalist-shadow-white"
+                  <Link
+                    href="/ideas-database"
+                    className="inline-flex items-center gap-4 bg-[#ccff00] text-black px-10 py-6 font-display text-2xl uppercase hover:translate-x-1 hover:translate-y-1 transition-transform brutalist-shadow-white"
                   >
-                    Get The Kit ($39) <ArrowRight className="w-8 h-8" strokeWidth={3} />
-                  </a>
-                  <p className="mt-4 text-[10px] font-black text-white/30 uppercase tracking-[0.2em]">
-                    Includes 254 blueprints + .claude/skills configuration
-                  </p>
+                    Explore Ideas <ArrowRight className="w-8 h-8" strokeWidth={3} />
+                  </Link>
                 </div>
               </div>
 
-              <div className="bg-white/5 border border-white/10 p-8">
-                <div className="flex items-center gap-2 mb-6 border-b border-white/10 pb-4">
-                   <div className="w-3 h-3 bg-red-500/30 rounded-full"></div>
-                   <div className="w-3 h-3 bg-yellow-500/30 rounded-full"></div>
-                   <div className="w-3 h-3 bg-green-500/30 rounded-full"></div>
-                   <span className="text-[10px] text-white/20 font-mono ml-2 tracking-widest uppercase">system / outreach-operator / research</span>
+              <div className="bg-white/5 border border-white/10 p-8 hidden lg:block">
+                 <div className="flex items-center gap-2 mb-6 border-b border-white/10 pb-4">
+                   <div className="w-3 h-3 bg-[#ccff00] rounded-full"></div>
+                   <span className="text-[10px] text-white/40 font-black tracking-widest uppercase">system / idea-engine / random_sample</span>
                 </div>
-                <div className="space-y-4 font-mono text-sm">
-                  <div className="text-lime"> {'>'} Running Data_Hunter.vsh</div>
-                  <div className="text-white/40"> [1/3] Scraping G2 competitor complaints...</div>
-                  <div className="text-white/40"> [2/3] Mapping pain points to internal features...</div>
-                  <div className="text-white/40"> [3/3] Cross-referencing LinkedIn intent...</div>
-                  <div className="text-white/80"> [SUCCESS] 3 unique angles found.</div>
-                  <div className="text-lime"> {'>'} Outreach dossier saved to /output/prospects.md</div>
+                <div className="space-y-4 text-sm font-bold">
+                  <div className="text-[#ccff00]"> {'>'} Pattern: The 10-K Stitcher</div>
+                  <div className="text-white/40 italic">// Turn public risk factors into sales pitches.</div>
+                  <div className="text-[#ccff00] pt-4"> {'>'} Pattern: Employee Flight Risk</div>
+                  <div className="text-white/40 italic">// Detect churn signals before they resign.</div>
+                  <div className="text-[#ccff00] pt-4"> {'>'} Pattern: Vendor Negotiator</div>
+                  <div className="text-white/40 italic">// Save 20% on software stacks via AI scripts.</div>
                 </div>
               </div>
             </div>
@@ -104,129 +134,82 @@ export default function OutreachOperatorLaunchPage({ recipes }: HomePageProps) {
 
         <FeaturedIn />
 
-        {/* COREY HAINES STYLE: THE SYSTEMATIC REPO */}
-        <section className="py-32 px-4 bg-white text-black" id="framework">
+        {/* SAMPLE IDEAS GRID */}
+        <section className="py-24 px-4 bg-white/5">
           <div className="container mx-auto max-w-6xl">
-            <div className="grid md:grid-cols-2 gap-16 items-end mb-24">
-              <h2 className="font-display text-5xl md:text-7xl uppercase leading-[0.85] tracking-tighter">
-                Boringly <br />Effective <br />Outreach.
+            <div className="flex justify-between items-end mb-12">
+              <h2 className="font-display text-4xl uppercase leading-[0.9] tracking-tighter">
+                Sample <br />
+                <span className="text-[#ccff00]">Patterns.</span>
               </h2>
-              <p className="text-lg font-bold opacity-60 uppercase leading-relaxed">
-                Stop looking for "The One" template. Start operating a systematic library of technical experiments. Data is the only moat.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-12 border-t-4 border-black pt-16">
-              <div className="space-y-6">
-                <div className="w-12 h-12 bg-black flex items-center justify-center text-lime">
-                  <Database className="w-6 h-6" />
-                </div>
-                <h3 className="font-display text-2xl uppercase">01 / Data_Hunting</h3>
-                <p className="font-bold text-sm leading-relaxed opacity-60">
-                  Data is the moat. Stop fighting over the same Apollo exports. Use terminal scripts to scrape intent signals, job boards, and competitor reviews.
-                </p>
-              </div>
-
-              <div className="space-y-6">
-                <div className="w-12 h-12 bg-black flex items-center justify-center text-lime">
-                  <Target className="w-6 h-6" />
-                </div>
-                <h3 className="font-display text-2xl uppercase">02 / Angle_Research</h3>
-                <p className="font-bold text-sm leading-relaxed opacity-60">
-                  Kill the AI slop. AI-driven research that finds a real reason to talk. No more "I saw your latest post"—provide actual value from the first sentence.
-                </p>
-              </div>
-
-              <div className="space-y-6">
-                <div className="w-12 h-12 bg-black flex items-center justify-center text-lime">
-                  <Terminal className="w-6 h-6" />
-                </div>
-                <h3 className="font-display text-2xl uppercase">03 / Terminal_Ops</h3>
-                <p className="font-bold text-sm leading-relaxed opacity-60">
-                  Stop chatting. Start operating. Deploy .md blueprints that read, write, and enrich your local files. Your outreach department, version-controlled.
-                </p>
+              <div className="text-[10px] font-black uppercase tracking-[0.2em] text-white/40 hidden md:block">
+                Curated samples from 668 ideas
               </div>
             </div>
-          </div>
-        </section>
 
-        {/* THE REPOSITORY SHOWCASE */}
-        <section className="py-32 px-4 border-t border-white/10" id="blueprints">
-          <div className="container mx-auto max-w-6xl">
-            <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-8">
-              <div>
-                <div className="text-lime font-black uppercase text-xs tracking-[0.3em] mb-4">Functional Blueprints</div>
-                <h2 className="font-display text-5xl uppercase leading-none tracking-tighter">The Outreach Repo.</h2>
-              </div>
-              <Link href="/ai-examples" className="group flex items-center gap-4 text-white font-black uppercase text-sm tracking-widest hover:text-lime transition-colors border-b-2 border-transparent hover:border-lime pb-1">
-                View All 500+ Skills <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {featuredIdeas.map((idea) => (
+                <div key={idea.id} className="bg-black border-2 border-white/10 p-6 flex flex-col hover:border-[#ccff00] transition-colors group">
+                  <div className="flex justify-between items-start mb-6">
+                    <span className="bg-[#ccff00] text-black px-2 py-0.5 text-[10px] font-black uppercase tracking-widest">
+                      {idea.vertical}
+                    </span>
+                    <div className="text-[10px] font-black uppercase tracking-widest text-white/40">
+                      {idea.difficulty}
+                    </div>
+                  </div>
+                  
+                  <h3 className="text-lg font-black uppercase leading-tight mb-4 group-hover:text-[#ccff00] transition-colors">
+                    {idea.problem}
+                  </h3>
+                  
+                  <p className="text-xs text-white/50 mb-8 flex-grow leading-relaxed font-bold">
+                    // {idea.what_ai_does}
+                  </p>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/10 border border-white/10">
-              {recipes.filter(r => r.category === 'Sales Ops' || r.category === 'Lead Gen').slice(0, 6).map((recipe) => (
-                <Link 
-                  key={recipe.id}
-                  href={`/skills/${recipe.id}`}
-                  className="bg-black p-8 hover:bg-lime hover:text-black transition-all group"
-                >
-                  <div className="text-[10px] font-black uppercase tracking-widest opacity-30 mb-6 group-hover:opacity-100">{recipe.archetype || 'Skill'} // {recipe.id}</div>
-                  <h4 className="font-display text-xl uppercase mb-3 leading-tight tracking-tight">{recipe.title}</h4>
-                  <p className="text-xs font-bold opacity-40 group-hover:opacity-100 leading-relaxed">{recipe.tagline}</p>
-                </Link>
+                  <div className="mt-auto pt-4 border-t border-white/10 flex items-center gap-2 text-[#ccff00] text-[10px] font-black uppercase tracking-widest">
+                    <Zap className="w-3 h-3" /> {idea.time_saved}
+                  </div>
+                </div>
               ))}
             </div>
-          </div>
-        </section>
 
-        {/* THE FINAL CALL: NO BS */}
-        <section className="py-40 px-4 bg-lime text-black border-t-4 border-black overflow-hidden relative">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-display text-[20vw] leading-none opacity-5 select-none pointer-events-none uppercase">OPERATOR</div>
-          
-          <div className="max-w-4xl mx-auto text-center relative z-10">
-            <h2 className="font-display text-6xl md:text-9xl uppercase leading-[0.8] mb-12 tracking-tighter">
-              Get the <br />Toolkit.
-            </h2>
-            <p className="text-xl md:text-2xl font-bold uppercase mb-16 max-w-2xl mx-auto leading-tight">
-              One pre-configured folder for Claude Code. <br /> A system of 254 outreach experiments.
-            </p>
-            <div className="flex flex-col items-center gap-6">
-              <a
-                href="https://checkout.dodopayments.com/buy/pdt_0NW6p0szmXPS6jXW05hIP"
-                className="inline-flex items-center gap-6 bg-black text-white px-12 py-8 font-display text-3xl uppercase hover:scale-[1.02] transition-transform brutalist-shadow-white"
+            <div className="mt-16 text-center">
+              <Link
+                href="/ideas-database"
+                className="inline-flex items-center gap-2 border-2 border-[#ccff00] text-[#ccff00] px-8 py-4 font-black uppercase tracking-widest hover:bg-[#ccff00] hover:text-black transition-colors"
               >
-                Download Now ($39) <ArrowRight className="w-10 h-10" strokeWidth={4} />
-              </a>
-              <p className="text-[10px] font-black uppercase tracking-widest opacity-60">
-                Instant Download. Markdown format. Plain English.
-              </p>
+                Explore All 668 Patterns <ArrowRight className="w-4 h-4" />
+              </Link>
             </div>
           </div>
         </section>
 
-        <footer className="py-12 px-4 border-t border-white/10">
-          <div className="container mx-auto max-w-6xl flex justify-between items-center text-[10px] font-black uppercase tracking-widest opacity-30">
-            <div>Real AI Examples // The Outreach Operator</div>
-            <div>© 2026 // Built for AI-Native Operators</div>
+        {/* SECONDARY INFO */}
+        <section className="py-24 px-4 border-t border-white/10">
+          <div className="container mx-auto max-w-6xl text-center">
+            <p className="text-white/40 font-black uppercase tracking-[0.3em] text-xs mb-8">Proof of Work</p>
+            <h2 className="text-2xl md:text-4xl font-bold max-w-3xl mx-auto leading-tight">
+              Every idea in this database is backed by a <span className="text-[#ccff00]">functional technical blueprint</span> we use ourselves.
+            </h2>
+            <div className="mt-12 flex flex-wrap justify-center gap-12 opacity-30">
+               <div className="flex items-center gap-2"><Target className="w-5 h-5" /> ROI-FOCUSED</div>
+               <div className="flex items-center gap-2"><Users className="w-5 h-5" /> OPERATOR-GRADE</div>
+               <div className="flex items-center gap-2"><Brain className="w-5 h-5" /> TOOL-AGNOSTIC</div>
+            </div>
           </div>
-        </footer>
-      </div>
-    </>
-  )
-}
+        </section>
+      </main>
 
-export const getStaticProps: GetStaticProps<HomePageProps> = async () => {
-  try {
-    const recipes = await getAllRecipes();
-    return {
-      props: { recipes },
-      revalidate: 86400,
-    }
-  } catch (error) {
-    console.error('Failed to fetch recipes:', error)
-    return {
-      props: { recipes: [] },
-      revalidate: 3600,
-    }
-  }
+      <Footer />
+
+      <style jsx global>{`
+        @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Mono:wght@400;700&display=swap');
+        
+        .font-display {
+          font-family: 'Archivo Black', sans-serif;
+        }
+      `}</style>
+    </div>
+  );
 }
