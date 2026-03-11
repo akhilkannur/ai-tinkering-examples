@@ -2,7 +2,6 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 import { Lightbulb, ArrowRight, Zap, Clock, Shield, TrendingUp, Users, Brain, Code, Target, Sparkles, Coffee } from 'lucide-react';
 import FeaturedIn from '../components/FeaturedIn';
 
@@ -93,14 +92,14 @@ export default function IdeasHomepage() {
             </div>
             
             <h1 className="font-display text-6xl md:text-9xl uppercase leading-[0.8] tracking-tighter mb-12">
-              Get your <br />
-              time <span className="text-[#ccff00]">back.</span>
+              What Can AI <br />
+              Actually <span className="text-[#ccff00]">Do?</span>
             </h1>
 
             <div className="grid lg:grid-cols-2 gap-16 items-start">
               <div className="space-y-8">
                 <p className="text-xl md:text-3xl font-bold leading-tight text-white/90">
-                  Stop wasting hours on repetitive tasks. Browse 668 practical ideas to reclaim your schedule and focus on what actually grows your business.
+                  Stop wasting hours on repetitive tasks. Browse 500+ ideas that save 2-10 hours per week.
                 </p>
                 
                 <div className="pt-6">
@@ -148,28 +147,30 @@ export default function IdeasHomepage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {featuredIdeas.map((idea) => (
-                <div key={idea.id} className="bg-black border-2 border-white/10 p-6 flex flex-col hover:border-[#ccff00] transition-colors group">
-                  <div className="flex justify-between items-start mb-6">
-                    <span className="bg-[#ccff00] text-black px-2 py-0.5 text-[10px] font-black uppercase tracking-widest">
-                      {idea.vertical}
-                    </span>
-                    <div className="text-[10px] font-black uppercase tracking-widest text-white/40">
-                      Simple to Start
+                <Link key={idea.id} href={`/ideas/${idea.id}`}>
+                  <div className="h-full bg-black border-2 border-white/10 p-6 flex flex-col hover:border-[#ccff00] transition-colors group cursor-pointer relative">
+                    <div className="flex justify-between items-start mb-6">
+                      <span className="bg-[#ccff00] text-black px-2 py-0.5 text-[10px] font-black uppercase tracking-widest">
+                        {idea.vertical}
+                      </span>
+                      <div className="text-[10px] font-black uppercase tracking-widest text-white/40">
+                        {idea.difficulty === 'Beginner' ? 'Simple to Start' : idea.difficulty === 'Intermediate' ? 'Practical' : 'Strategic'}
+                      </div>
+                    </div>
+                    
+                    <h3 className="text-lg font-black uppercase leading-tight mb-4 group-hover:text-[#ccff00] transition-colors">
+                      {idea.problem}
+                    </h3>
+                    
+                    <p className="text-xs text-white/50 mb-8 flex-grow leading-relaxed font-bold">
+                      // {idea.what_ai_does}
+                    </p>
+
+                    <div className="mt-auto pt-4 border-t border-white/10 flex items-center gap-2 text-[#ccff00] text-[10px] font-black uppercase tracking-widest">
+                      <Zap className="w-3 h-3" /> {idea.time_saved}
                     </div>
                   </div>
-                  
-                  <h3 className="text-lg font-black uppercase leading-tight mb-4 group-hover:text-[#ccff00] transition-colors">
-                    {idea.problem}
-                  </h3>
-                  
-                  <p className="text-xs text-white/50 mb-8 flex-grow leading-relaxed font-bold">
-                    // {idea.what_ai_does}
-                  </p>
-
-                  <div className="mt-auto pt-4 border-t border-white/10 flex items-center gap-2 text-[#ccff00] text-[10px] font-black uppercase tracking-widest">
-                    <Zap className="w-3 h-3" /> {idea.time_saved}
-                  </div>
-                </div>
+                </Link>
               ))}
             </div>
 
@@ -199,8 +200,6 @@ export default function IdeasHomepage() {
           </div>
         </section>
       </main>
-
-      <Footer />
 
       <style jsx global>{`
         @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Mono:wght@400;700&display=swap');

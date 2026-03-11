@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 import { Search, Filter, Clock, Zap, ArrowRight, Lightbulb, ChevronDown, CheckCircle, Coffee } from 'lucide-react';
 import ideasData from '../lib/ideas-data.json';
 
@@ -108,36 +108,35 @@ export default function IdeasDatabase() {
           {/* Ideas Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {filteredIdeas.map((idea, idx) => (
-              <div 
-                key={idea.id + idx} 
-                className="group relative bg-white/5 border-2 border-white/10 p-8 hover:border-[#ccff00] transition-all duration-300 flex flex-col"
-              >
-                <div className="flex justify-between items-start mb-6">
-                  <span className="bg-[#ccff00] text-black px-2 py-0.5 text-[10px] font-black uppercase tracking-widest">
-                    {idea.vertical}
-                  </span>
-                  <div className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-white/40">
-                    <Clock className="w-3 h-3" /> {idea.difficulty === 'Beginner' ? 'Simple to Start' : idea.difficulty === 'Intermediate' ? 'Practical' : 'Strategic'}
+              <Link key={idea.id + idx} href={`/ideas/${idea.id}`}>
+                <div className="group relative bg-white/5 border-2 border-white/10 p-8 hover:border-[#ccff00] transition-all duration-300 flex flex-col h-full cursor-pointer">
+                  <div className="flex justify-between items-start mb-6">
+                    <span className="bg-[#ccff00] text-black px-2 py-0.5 text-[10px] font-black uppercase tracking-widest">
+                      {idea.vertical}
+                    </span>
+                    <div className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-white/40">
+                      <Clock className="w-3 h-3" /> {idea.difficulty === 'Beginner' ? 'Simple to Start' : idea.difficulty === 'Intermediate' ? 'Practical' : 'Strategic'}
+                    </div>
+                  </div>
+
+                  <h3 className="text-2xl font-black uppercase leading-tight mb-4 group-hover:text-[#ccff00] transition-colors">
+                    {idea.problem}
+                  </h3>
+
+                  <p className="text-white/60 mb-8 flex-grow leading-relaxed font-bold">
+                    // {idea.what_ai_does}
+                  </p>
+
+                  <div className="mt-auto pt-6 border-t border-white/10 flex items-center justify-between">
+                    <div className="flex items-center gap-2 text-[#ccff00] text-[10px] font-black uppercase tracking-widest">
+                      <Zap className="w-3 h-3" /> {idea.time_saved}
+                    </div>
+                    <div className="text-white/20 text-[10px] font-black uppercase tracking-widest italic">
+                      Practical Tool
+                    </div>
                   </div>
                 </div>
-
-                <h3 className="text-2xl font-black uppercase leading-tight mb-4 group-hover:text-[#ccff00] transition-colors">
-                  {idea.problem}
-                </h3>
-
-                <p className="text-white/60 mb-8 flex-grow leading-relaxed font-bold">
-                  // {idea.what_ai_does}
-                </p>
-
-                <div className="mt-auto pt-6 border-t border-white/10 flex items-center justify-between">
-                  <div className="flex items-center gap-2 text-[#ccff00] text-[10px] font-black uppercase tracking-widest">
-                    <Zap className="w-3 h-3" /> {idea.time_saved}
-                  </div>
-                  <div className="text-white/20 text-[10px] font-black uppercase tracking-widest italic">
-                    Practical Tool
-                  </div>
-                </div>
-              </div>
+              </Link>
             ))}
           </div>
 
@@ -154,8 +153,6 @@ export default function IdeasDatabase() {
           )}
         </div>
       </main>
-
-      <Footer />
 
       <style jsx global>{`
         @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Mono:wght@400;700&display=swap');
