@@ -108,6 +108,7 @@ export default function IdeaDetailPage() {
                   {idea.whyThisTool}
                 </p>
               </div>
+            </div>
           </div>
         </div>
       </main>
