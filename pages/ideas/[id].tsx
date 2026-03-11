@@ -142,8 +142,6 @@ export default function IdeaDetailPage() {
         </div>
       </main>
 
-      <Footer />
-
       <style jsx global>{`
         @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Mono:wght@400;700&display=swap');
         
