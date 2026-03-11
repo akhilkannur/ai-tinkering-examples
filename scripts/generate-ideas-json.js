@@ -935,6 +935,72 @@ const manualOverrides = {
     "bestTool": "ChatGPT",
     "whyThisTool": "Fast data processing and excellent at performing benchmark-based calculations"
   },
+  "crawl-budget-estimator": {
+    "problem": "Programmatic SEO projects often fail because they flood Googlebot with too many low-value pages, causing it to ignore your \"money pages\" and delay your rankings by months.",
+    "what_ai_does": "It analyzes your server logs to identify \"Crawl Waste\" (e.g., hits to search parameters or filters) and generates specific robots.txt rules to redirect Googlebot's energy toward your most important content.",
+    "howToDoIt": [
+      "Upload your recent server logs (CSV) to the AI.",
+      "Ask it to \"Calculate the percentage of hits to low-value URLs\" and identify your daily crawl capacity.",
+      "Review the \"Crawl Optimization Plan\" and implement the suggested robots.txt blocks to speed up indexing of your new pages."
+    ],
+    "bestTool": "Claude Code",
+    "whyThisTool": "Superior at analyzing large server logs and generating precise technical SEO configuration rules"
+  },
+  "creative-refresh-alert": {
+    "problem": "Ad creative fatigue quietly raises your CPA; when users see the same ad too many times (High Frequency), your CTR drops and you start wasting thousands of dollars on ineffective impressions.",
+    "what_ai_does": "It monitors your ad performance reports to identify \"Critical Fatigue\" in real-time, signaling exactly when you need to pause and replace specific creatives across all your campaigns.",
+    "howToDoIt": [
+      "Export your ad performance data (Frequency, CTR, Spend) from Facebook or Google Ads into a CSV.",
+      "Ask the AI to \"Flag any ads with Frequency > 4.5 and CTR < 1.0%\" as critical refreshes.",
+      "Review the \"Creative Refresh List\" to prioritize which ads to swap out based on their total at-risk spend."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast data processing and excellent at applying conditional logic to performance metrics"
+  },
+  "credit-card-dunning-recovery": {
+    "problem": "Up to 50% of SaaS churn is actually \"Involuntary\" (failed credit cards), but generic retry schedules often fail because they don't account for bank fraud filters or payday timing.",
+    "what_ai_does": "It optimizes your payment retry schedule based on the failure reason and card type, like rescheduling Amex corporate card retries to avoid weekend blocks or aligning retries with common paydays.",
+    "howToDoIt": [
+      "Upload a CSV of your failed payments (Card Type, Failure Reason, Last Attempt) to the AI.",
+      "Ask it to \"Generate a smart retry schedule\" that avoids weekend blocks for corporate cards and targets the 1st/15th of the month for insufficient funds errors.",
+      "Import the \"Retry Queue\" into your billing tool (like Stripe or ProfitWell) to rescue at-risk revenue."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Excellent for logical scheduling and identifying patterns in payment failure data"
+  },
+  "dark-funnel-illuminator": {
+    "problem": "Marketing teams struggle to justify \"Direct\" website traffic spikes, often missing the correlation between their outbound email blasts and the indirect visits they generate.",
+    "what_ai_does": "It correlates spikes in your \"Direct\" traffic with your regional outbound activity (e.g., email blasts or cold calls), providing a clearer picture of the indirect impact of your marketing efforts.",
+    "howToDoIt": [
+      "Upload a CSV of your daily direct traffic visits and your outbound activity (by region/date) to the AI.",
+      "Ask it to \"Find dates where visits spiked >50% above baseline\" within 48 hours of an outbound blast.",
+      "Review the \"Dark Funnel Impact Report\" to attribute your direct traffic to specific top-of-funnel campaigns."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Excellent for correlation analysis and finding statistical links between two disparate data sets"
+  },
+  "dark-social-mention-tracker": {
+    "problem": "Potential customers are often talking about your brand in \"Dark Social\" channels like Slack or Discord communities, but these leads are invisible to traditional marketing tools.",
+    "what_ai_does": "It scans community exports or simulated chat logs for brand keywords and specific \"intent questions,\" identifying high-value leads that are currently hiding in private social conversations.",
+    "howToDoIt": [
+      "Upload a CSV or text export from your target Slack or Discord communities to the AI.",
+      "Ask it to \"Find mentions of [BrandName] or questions about [Niche]\" and extract the user's context.",
+      "Review the \"Community Mentions\" report to identify warm entry points for a non-salesy, helpful intervention."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at conversational analysis and extracting specific intent from informal chat logs"
+  },
+  "deal-rotting-alert-system": {
+    "problem": "Sales pipelines are often clogged with \"rotting\" deals that haven't moved in weeks, but managers don't have the time to manually audit every single opportunity for stagnation.",
+    "what_ai_does": "It automatically identifies deals that have been stuck in the same stage for more than 14 days, flagging them for immediate manager intervention to unblock or disqualify them.",
+    "howToDoIt": [
+      "Export your open opportunities (Deal Name, Stage, Last Stage Change) from your CRM into a CSV.",
+      "Ask the AI to \"Calculate the days since last change\" and flag any deal that has been stagnant for >14 days.",
+      "Review the \"Rotting Deals\" report to decide whether to nudge the prospect, offer a discount, or close the deal as lost."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast data processing and excellent at performing date-based calculations for pipeline management"
+  },
   "consultant-partnership-finder": {
     "problem": "Finding the right agencies or consultants to resell your product is a slow research task, but these \"Channel Partners\" are the fastest way to scale your sales without hiring more reps.",
     "what_ai_does": "It identifies service businesses (agencies, SIs) that are already implementing solutions adjacent to yours—like \"Asana Experts\" or \"Shopify CRO Agencies\"—making them ideal candidates for a referral program.",
