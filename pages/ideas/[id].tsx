@@ -1,29 +1,30 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import Navbar from '../../components/Navbar';
-import { ArrowLeft, Zap, CheckCircle, Info, Lightbulb, Coffee } from 'lucide-react';
+import { ArrowLeft, Zap, CheckCircle, Info, Lightbulb } from 'lucide-react';
 import ideasData from '../../lib/ideas-data.json';
 
-export default function IdeaDetailPage() {
-  const router = useRouter();
-  const { id } = router.query;
+export async function getStaticPaths() {
+  const paths = ideasData.map((idea) => ({
+    params: { id: idea.id },
+  }));
 
-  const idea = ideasData.find(i => i.id === id);
+  return { paths, fallback: false };
+}
 
-  if (!idea) {
-    return (
-      <div className="min-h-screen bg-black text-white flex items-center justify-center font-mono">
-        <div className="text-center">
-          <h1 className="text-4xl font-black uppercase mb-4">Idea Not Found</h1>
-          <Link href="/ideas-database" className="text-[#ccff00] uppercase font-black hover:underline">
-            Back to Database
-          </Link>
-        </div>
-      </div>
-    );
-  }
+export async function getStaticProps({ params }) {
+  const idea = ideasData.find((i) => i.id === params.id);
+
+  return {
+    props: {
+      idea,
+    },
+  };
+}
+
+export default function IdeaDetailPage({ idea }) {
+  if (!idea) return null;
 
   return (
     <div className="min-h-screen bg-black text-white selection:bg-[#ccff00] selection:text-black font-mono">

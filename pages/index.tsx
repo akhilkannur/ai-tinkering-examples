@@ -14,7 +14,7 @@ const featuredIdeas = [
     "what_ai_does": "Scan annual reports to pull out 'Risk Factors' and write personalized emails showing how you can help."
   },
   {
-    "id": "employee-flight-risk-detector",
+    "id": "churn-detective",
     "vertical": "HR",
     "problem": "Identify team burnout before someone quits.",
     "what_ai_does": "Detect team frustration or 'quiet quitting' in Slack to identify burnout before it happens."
@@ -50,7 +50,7 @@ const featuredIdeas = [
     "what_ai_does": "Get notified the second a target company posts a job for a role that needs your product."
   },
   {
-    "id": "board-deck-narrative-factory",
+    "id": "monthly-report-generator",
     "vertical": "Executive",
     "problem": "Stop sending messy spreadsheets to your board.",
     "what_ai_does": "Analyze your numbers to write a clear story about what's working for your board."
