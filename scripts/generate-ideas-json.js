@@ -5,7 +5,6 @@ const matter = require('gray-matter');
 const recipesDir = path.join(process.cwd(), 'content/recipes');
 const outputFilePath = path.join(process.cwd(), 'lib/ideas-data.json');
 
-// Better mapping: High-density sub-verticals
 const verticalMap = {
   'Marketing': 'Marketing',
   'Marketing Ops': 'Marketing',
@@ -41,15 +40,12 @@ function determineBestTool(title, tagline, body) {
   if (c.includes('claude code') || c.includes('terminal') || c.includes('local file')) return { tool: "Claude Code", why: "It can directly read and write files on your computer, making it 10x faster for technical tasks." };
   if (c.includes('pdf') || c.includes('10-k') || c.includes('transcript') || c.includes('long report') || c.includes('analyze')) return { tool: "Claude", why: "Claude handles long documents and complex instructions with more nuance and accuracy than other tools." };
   if (c.includes('make.com') || c.includes('zapier') || c.includes('automation') || c.includes('api')) return { tool: "Make.com", why: "This works best as a recurring system that connects your different business tools automatically." };
-  if (c.includes('image') || c.includes('visual') || c.includes('design') || c.includes('screenshot')) return { tool: "Midjourney", why: "It generates professional, high-quality visuals that match your brand's aesthetic perfectly." };
+  if (c.includes('image') || c.includes('visual') || c.includes('screenshot')) return { tool: "Midjourney", why: "It generates professional, high-quality visuals that match your brand's aesthetic perfectly." };
   return { tool: "ChatGPT", why: "It is the most accessible tool for quick drafting, brainstorming, and general research." };
 }
 
 function generateActionSteps(title, tagline, tool) {
-  // Action-First Logic: Human -> AI -> Business
   const t = title.toLowerCase();
-  const tg = tagline.toLowerCase();
-  
   let step1 = `Find your relevant data (like a CSV, report, or list of notes) related to ${t}.`;
   let step2 = `Paste that data into ${tool} and ask it to find the most important patterns or "low-hanging fruit".`;
   let step3 = `Apply the results to your next project or share the summary report with your team.`;
@@ -67,7 +63,6 @@ function generateActionSteps(title, tagline, tool) {
     step2 = `Paste the data into ${tool} and ask it to pinpoint exactly where you are losing time or money.`;
     step3 = `Use the audit to adjust your budget or change your team's workflow for the following week.`;
   }
-
   return [step1, step2, step3];
 }
 
@@ -93,10 +88,9 @@ function generateIdeas() {
       const toolInfo = determineBestTool(data.title, data.tagline, body);
       const steps = generateActionSteps(data.title, data.tagline, toolInfo.tool);
 
-      let fullDesc = data.description || 'Automates repetitive manual tasks.';
-      let sentences = fullDesc.match(/[^\.!\?]+[\.!\?]+/g) || [fullDesc];
-      let desc = sentences.slice(0, 2).join(' ').trim();
-      desc = desc.replace(/agent/gi, 'tool').replace(/workflow/gi, 'process').replace(/automation/gi, 'system').replace(/###.*?\n/g, '');
+      // NO TRUNCATION LOGIC: Use the full description from frontmatter
+      let desc = data.description || 'Automates repetitive manual tasks.';
+      desc = desc.replace(/agent/gi, 'tool').replace(/workflow/gi, 'process').replace(/automation/gi, 'system').replace(/\n/g, ' ').trim();
 
       let roi = data.isPremium ? '10+ hours saved / month' : '2-5 hours saved / week';
       if (data.title.toLowerCase().includes('negotiator') || data.title.toLowerCase().includes('savings')) roi = "$5k+ saved / year";
@@ -117,7 +111,6 @@ function generateIdeas() {
     }
   });
 
-  // Re-inject Synthetic Ideas (Manual Polish - The Gold Standard)
   const syntheticIdeas = [
     {
       "id": "employee-flight-risk-detector",
