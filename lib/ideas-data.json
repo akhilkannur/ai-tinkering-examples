@@ -1,615 +1,399 @@
 [
   {
-    "id": "10k-report-prospector",
-    "name": "The 10-K Stitcher",
-    "vertical": "Sales",
-    "problem": "Turn 'Risk Factors' into 'Sales Pitches'.",
-    "what_ai_does": "Scan a public company's 10-K (Annual Report) to extract specific 'Risk Factors' and generates a cold email positioning your product as the solution.",
+    "problem": "Sales reps waste hours reading 100-page financial reports to find a relevant hook for enterprise prospects.",
+    "what_ai_does": "It scans 10-K \"Risk Factors\" to find specific threats your product solves, then drafts an email citing their own report as the reason for reaching out.",
     "howToDoIt": [
-      "Identify the manual process you want to simplify.",
-      "Paste your raw notes or data into Claude and ask for a strategic plan.",
-      "Execute the top 3 recommendations to reclaim your time."
+      "Find the **Item 1A (Risk Factors)** section of a prospect's latest 10-K.",
+      "Paste that text into Claude and ask it to list 3 threats related to your product's niche.",
+      "Use the generated \"Risk-to-Solution\" bridge to draft a hyper-relevant outreach email."
     ],
     "bestTool": "Claude",
-    "whyThisTool": "Claude handles long documents and complex instructions with more nuance and accuracy than other tools.",
-    "time_saved": "2-5 hours saved / week",
-    "difficulty": "Strategic",
-    "tools": "Practical Tool"
+    "whyThisTool": "Better for long financial docs"
   },
   {
-    "id": "abandoned-cart-sms",
-    "name": "The Abandoned Cart SMS Writer",
-    "vertical": "Sales",
-    "problem": "Generate high-converting SMS hooks by analyzing your product page.",
-    "what_ai_does": "Don't just say \"You forgot this.\" scrapes your product page to find the specific key benefit (e.g., \"Full Grain Leather\") and uses it to write a persuasive, 3-part SMS recovery sequence automatically.",
+    "problem": "Generic recovery texts (\"You forgot something!\") are annoying and convert poorly because they lack specific product value.",
+    "what_ai_does": "It scrapes your live product page to find unique benefits (like \"Lifetime Warranty\" or \"Organic Cotton\") and weaves them into a persuasive 3-part SMS sequence.",
     "howToDoIt": [
-      "Identify the specific document, email, or script you want to refine.",
-      "Paste the raw text into ChatGPT and describe the tone you want to achieve.",
-      "Review the generated variations and pick the one that feels most natural for your brand."
+      "Paste your product URL into ChatGPT and ask for the #1 unique selling point mentioned on the page.",
+      "Have the tool draft a 3-part SMS sequence: a gentle nudge, a value-based reminder (the \"Hook\"), and a scarcity-driven final call.",
+      "Review the drafts for character limits before sending."
     ],
     "bestTool": "ChatGPT",
-    "whyThisTool": "It is the most accessible tool for quick drafting, brainstorming, and general business research.",
-    "time_saved": "2-5 hours saved / week",
-    "difficulty": "Strategic",
-    "tools": "Practical Tool"
+    "whyThisTool": "Fast drafting and character counting"
   },
   {
-    "id": "abm-campaign-asset-builder",
-    "name": "ABM Campaign Asset Builder",
-    "vertical": "Ops",
-    "problem": "Generate personalized landing page copy for target accounts.",
-    "what_ai_does": "Use a high-value target account (e.g., \"Nike\"), researches their 10-k or recent strategic initiatives, and writes custom headlines and body copy for an \"Account Based Marketing\" landing page.",
+    "problem": "Marketing teams struggle to scale personalized landing pages for high-value accounts, resulting in generic copy that misses the mark.",
+    "what_ai_does": "It researches a target company's current strategic goals from news and annual reports to write landing page headlines using their specific internal language.",
     "howToDoIt": [
-      "Define the core goal of what you're trying to build or launch (e.g., a new internal linking strategy or onboarding flow).",
-      "Use Claude to generate a structured framework or initial draft based on industry best practices.",
-      "Refine the output and deploy it as a new standard process for your team."
+      "Enter your target company name into Claude and ask for their \"top 3 strategic priorities for this fiscal year.\"",
+      "Use those priorities to write 3 variations of a landing page headline that positions your product as a catalyst for those specific goals.",
+      "Draft a \"Why Now\" section for the page citing a recent news event or milestone you found."
     ],
     "bestTool": "Claude",
-    "whyThisTool": "Claude handles long documents and complex instructions with more nuance and accuracy than other tools.",
-    "time_saved": "2-5 hours saved / week",
-    "difficulty": "Strategic",
-    "tools": "Practical Tool"
+    "whyThisTool": "Sophisticated research capabilities"
   },
   {
-    "id": "abm-personal-gift-recommender",
-    "name": "ABM Personal Gift Recommender",
-    "vertical": "Marketing",
-    "problem": "Send gifts they actually keep, not just swag.",
-    "what_ai_does": "Researches a prospect's Twitter/LinkedIn interests (e.g., \"Coffee\", \"Golf\", \"Sci-Fi\"). Suggests a $50 gift that matches their hobby.",
+    "problem": "Sending generic corporate swag (like cheap mugs) results in low ROI and budget waste because it doesn't build a real connection.",
+    "what_ai_does": "It researches a prospect's social media interests to suggest a personalized $50 gift that actually matches their hobbies or personal brand.",
     "howToDoIt": [
-      "Identify the manual process you want to simplify.",
-      "Paste your raw notes or data into Claude and ask for a strategic plan.",
-      "Execute the top 3 recommendations to reclaim your time."
-    ],
-    "bestTool": "Claude",
-    "whyThisTool": "Claude handles long documents and complex instructions with more nuance and accuracy than other tools.",
-    "time_saved": "2-5 hours saved / week",
-    "difficulty": "Strategic",
-    "tools": "Practical Tool"
-  },
-  {
-    "id": "about-page-storyteller",
-    "name": "The About Page Storyteller",
-    "vertical": "Marketing",
-    "problem": "Build trust with a data-backed brand story.",
-    "what_ai_does": "Faceless brands are dead. researches company histories and founder profiles to transform boring About pages into compelling 'Hero's Journey' narratives for an entire list of companies.",
-    "howToDoIt": [
-      "Identify the manual process you want to simplify.",
-      "Paste your raw notes or data into Claude and ask for a strategic plan.",
-      "Execute the top 3 recommendations to reclaim your time."
-    ],
-    "bestTool": "Claude",
-    "whyThisTool": "Claude handles long documents and complex instructions with more nuance and accuracy than other tools.",
-    "time_saved": "2-5 hours saved / week",
-    "difficulty": "Strategic",
-    "tools": "Practical Tool"
-  },
-  {
-    "id": "ad-copy-character-counter",
-    "name": "The Ad Variant Factory",
-    "vertical": "Marketing",
-    "problem": "Don't just count characters. Generate 10 high-CTR variants that fit perfectly.",
-    "what_ai_does": "Counting characters is boring. takes your rough draft headlines and automatically generates platform-perfect variants (Google, FB, LinkedIn) that fit the strict character limits while maximizing click-through rate.",
-    "howToDoIt": [
-      "Define the core goal of what you're trying to build or launch (e.g., a new internal linking strategy or onboarding flow).",
-      "Use Claude to generate a structured framework or initial draft based on industry best practices.",
-      "Refine the output and deploy it as a new standard process for your team."
-    ],
-    "bestTool": "Claude",
-    "whyThisTool": "Claude handles long documents and complex instructions with more nuance and accuracy than other tools.",
-    "time_saved": "2-5 hours saved / week",
-    "difficulty": "Strategic",
-    "tools": "Practical Tool"
-  },
-  {
-    "id": "ad-counter-strike",
-    "name": "The Conquest Campaigner",
-    "vertical": "Sales",
-    "problem": "Don't just attack their product. Attack their bad reviews.",
-    "what_ai_does": "The best ad hook isn't what you say about yourself; it's what their customers hate about them. scrapes competitor review pages (G2/Capterra), finds the recurring \"Cons\" (e.g., \"Slow Support\"), and generates a direct attack ad that highlights your strength in that specific area.",
-    "howToDoIt": [
-      "Identify the manual process you want to simplify.",
-      "Paste your raw notes or data into ChatGPT and ask for a strategic plan.",
-      "Execute the top 3 recommendations to reclaim your time."
+      "Paste a prospect's public LinkedIn or X profile handle into ChatGPT.",
+      "Ask it to identify 3 distinct personal interests (e.g., \"Enthusiastic Golfer\", \"Sci-Fi Fan\").",
+      "Review the curated list of 3 specific gift ideas under $50 that match those interests."
     ],
     "bestTool": "ChatGPT",
-    "whyThisTool": "It is the most accessible tool for quick drafting, brainstorming, and general business research.",
-    "time_saved": "2-5 hours saved / week",
-    "difficulty": "Strategic",
-    "tools": "Practical Tool"
+    "whyThisTool": "Creative personal research"
   },
   {
-    "id": "affiliate-application-auto-screener",
-    "name": "Affiliate Application Auto-Screener",
-    "vertical": "Marketing",
-    "problem": "Filter out spammy affiliate applications instantly.",
-    "what_ai_does": "Scan applicant URL. Flags sites that are \"Coupon Farms\", \"Adult Content\", or \"Domain Parked\". Approves content creators automatically.",
+    "problem": "Faceless \"corporate\" about pages fail to build trust with customers who want to know the people and mission behind the brand.",
+    "what_ai_does": "It transforms boring company facts and founder bios into a compelling \"Hero's Journey\" story that highlights the \"Aha!\" moment and the mission.",
     "howToDoIt": [
-      "Identify the manual process you want to simplify.",
-      "Paste your raw notes or data into Claude and ask for a strategic plan.",
-      "Execute the top 3 recommendations to reclaim your time."
+      "Paste your current \"About\" text and a founder's bio into Claude.",
+      "Ask it to structure the story into 4 phases: The Problem (Status Quo), The Epiphany (The Prototype), The Mission, and The Proof.",
+      "Review the draft to ensure the tone sounds human and mission-driven, not corporate."
     ],
     "bestTool": "Claude",
-    "whyThisTool": "Claude handles long documents and complex instructions with more nuance and accuracy than other tools.",
-    "time_saved": "2-5 hours saved / week",
-    "difficulty": "Strategic",
-    "tools": "Practical Tool"
+    "whyThisTool": "Better narrative flow and \"voice\""
   },
   {
-    "id": "affiliate-program-launcher",
-    "name": "The Affiliate Program Launcher",
-    "vertical": "Ops",
-    "problem": "Build a commission-only sales team.",
-    "what_ai_does": "Affiliates drive 30% of revenue for SaaS. outlines your commission structure, researches potential partners, and drafts recruitment assets for an entire affiliate network.",
+    "problem": "Marketers waste hours manually trying to fit their value props into the strict, varying character limits of Google, FB, and LinkedIn.",
+    "what_ai_does": "It takes a single headline and automatically generates 10 platform-perfect variants that maximize CTR while strictly adhering to character limits.",
     "howToDoIt": [
-      "Define the core goal of what you're trying to build or launch (e.g., a new internal linking strategy or onboarding flow).",
-      "Use Make.com to generate a structured framework or initial draft based on industry best practices.",
-      "Refine the output and deploy it as a new standard process for your team."
+      "Paste your rough headline into ChatGPT.",
+      "Specify your target platforms (e.g., \"Google 30 char, FB 40 char\").",
+      "Select the highest-converting angle for each platform."
     ],
-    "bestTool": "Make.com",
-    "whyThisTool": "This works best as a set-it-and-forget-it system that connects your different business tools automatically.",
-    "time_saved": "2-5 hours saved / week",
-    "difficulty": "Strategic",
-    "tools": "Practical Tool"
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast drafting and character counting"
   },
   {
-    "id": "agent-context-builder",
-    "name": "The Project Architect",
-    "vertical": "Ops",
-    "problem": "Make any folder AI-ready instantly.",
-    "what_ai_does": "AI processs struggle when they don't know your project's structure. scans your current directory, identifies key files/stacks, and generates an `processS.md` file. This file acts as a 'ReadMe for Robots,' ensuring every future process knows exactly how to work with your code.",
+    "problem": "Blindly attacking competitors is less effective than targeting the specific pain points their customers are already complaining about.",
+    "what_ai_does": "It scans competitor review sites (G2/Capterra) to find recurring complaints and writes \"Switching\" ads that highlight your strength in those exact areas.",
     "howToDoIt": [
-      "Define the core goal of what you're trying to build or launch (e.g., a new internal linking strategy or onboarding flow).",
-      "Use Claude Code to generate a structured framework or initial draft based on industry best practices.",
-      "Refine the output and deploy it as a new standard process for your team."
+      "Paste 10 recent negative reviews of a competitor into Claude.",
+      "Ask it to find the #1 recurring complaint (e.g., \"Hidden Fees\" or \"Bad Support\").",
+      "Draft a direct-attack ad that positions you as the transparent or reliable alternative."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Pattern recognition"
+  },
+  {
+    "problem": "Manual screening of affiliate applications is slow and prone to approving spammy \"coupon farm\" websites that hurt your brand.",
+    "what_ai_does": "It automatically audits an applicant's website to flag low-quality content, adult content, or parked domains, approving only real content creators.",
+    "howToDoIt": [
+      "Export your list of affiliate applicant URLs.",
+      "Paste them into ChatGPT and ask it to categorize each site type (e.g., \"Coupon Farm,\" \"Blog,\" \"Review Site\").",
+      "Review the \"Approve\" list for legitimate influencers and creators."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Quick classification"
+  },
+  {
+    "problem": "Building a commission-only sales team is daunting without a structured recruitment and commission strategy.",
+    "what_ai_does": "It benchmarks competitor affiliate programs and drafts personalized recruitment pitches for potential industry partners.",
+    "howToDoIt": [
+      "Paste 3 competitor affiliate program URLs into Claude.",
+      "Ask it to outline a competitive commission structure for your niche.",
+      "Draft 5 personalized outreach emails for potential partners found via LinkedIn."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Market benchmarking"
+  },
+  {
+    "problem": "AI tools give generic or bad answers when they don't understand your specific project structure and file rules.",
+    "what_ai_does": "It scans your project directory to create a \"ReadMe for Robots\" that makes every future AI interaction 10x faster and more accurate.",
+    "howToDoIt": [
+      "Open your project folder in Claude Code (Terminal).",
+      "Ask the tool to \"Generate an AGENTS.md project map\".",
+      "Review the file to ensure your coding conventions and file locations are clearly documented for the AI."
     ],
     "bestTool": "Claude Code",
-    "whyThisTool": "It can directly read and write files on your computer, making it 10x faster for technical tasks.",
-    "time_saved": "2-5 hours saved / week",
-    "difficulty": "Strategic",
-    "tools": "Practical Tool"
+    "whyThisTool": "Local file access"
   },
   {
-    "id": "ai-internal-linking-agent",
-    "name": "AI Internal Linking Agent",
-    "vertical": "Marketing",
-    "problem": "Stop manually hunting for anchor text. Let AI map your internal linking strategy.",
-    "what_ai_does": "A specialized process that reads your entire content library and identifies the exact spots where you should link to other pages to boost your domain authority.",
+    "problem": "Manual internal linking is the highest-ROI SEO task but is incredibly tedious to do across 100+ blog posts.",
+    "what_ai_does": "It maps your entire content library to find the exact spots where old posts should link to new content to boost your domain authority.",
     "howToDoIt": [
-      "Define the core goal of what you're trying to build or launch (e.g., a new internal linking strategy or onboarding flow).",
-      "Use Claude Code to generate a structured framework or initial draft based on industry best practices.",
-      "Refine the output and deploy it as a new standard process for your team."
+      "Crawl your sitemap to get a list of all informational blog post URLs.",
+      "Provide your top 5 \"Money Pages\" (high-conversion products) to Claude Code.",
+      "Ask the tool to identify semantic gaps in your blog posts where a link to a \"Money Page\" would be natural and helpful."
     ],
     "bestTool": "Claude Code",
-    "whyThisTool": "It can directly read and write files on your computer, making it 10x faster for technical tasks.",
-    "time_saved": "10+ hours saved / month",
-    "difficulty": "Strategic",
-    "tools": "Practical Tool"
+    "whyThisTool": "File system access and semantic analysis"
   },
   {
-    "id": "alternative-to-builder",
-    "name": "The 'Alternative To' Hub Builder",
-    "vertical": "Marketing",
-    "problem": "Steal traffic from all your competitors at once.",
-    "what_ai_does": "High-intent buyers search for 'Alternatives to [Competitor]'. reads a list of competitors from a CSV, researches their weaknesses, and generates a library of comparison landing pages that position YOUR product as the winner.",
+    "problem": "Most brands miss out on high-intent \"Alternative to [Competitor]\" search traffic because they don't have comparison pages.",
+    "what_ai_does": "It researches competitor weaknesses to generate a library of comparison landing pages that position your product as the better choice.",
     "howToDoIt": [
-      "Define the core goal of what you're trying to build or launch (e.g., a new internal linking strategy or onboarding flow).",
-      "Use Make.com to generate a structured framework or initial draft based on industry best practices.",
-      "Refine the output and deploy it as a new standard process for your team."
-    ],
-    "bestTool": "Make.com",
-    "whyThisTool": "This works best as a set-it-and-forget-it system that connects your different business tools automatically.",
-    "time_saved": "2-5 hours saved / week",
-    "difficulty": "Strategic",
-    "tools": "Practical Tool"
-  },
-  {
-    "id": "alumni-network-miner",
-    "name": "The Alumni Network Miner",
-    "vertical": "Sales",
-    "problem": "Find prospects who went to the same university as your executives.",
-    "what_ai_does": "Warm introductions convert 5x better than cold outreach. takes a list of your executives and their universities, then scrapes LinkedIn or uses search operators to find decision-makers at target accounts who are alumni of those same schools.",
-    "howToDoIt": [
-      "Choose a source where your target audience or data lives (e.g., a website, job board, or LinkedIn).",
-      "Supply the URL or raw data to ChatGPT and ask it to filter for high-value signals.",
-      "Take the cleaned list and move it directly into your outreach process or CRM."
-    ],
-    "bestTool": "ChatGPT",
-    "whyThisTool": "It is the most accessible tool for quick drafting, brainstorming, and general business research.",
-    "time_saved": "2-5 hours saved / week",
-    "difficulty": "Strategic",
-    "tools": "Practical Tool"
-  },
-  {
-    "id": "angel-investor-portfolio-scanner",
-    "name": "The Angel Portfolio Scanner",
-    "vertical": "Sales",
-    "problem": "Prospect companies backed by friendly Angel Investors.",
-    "what_ai_does": "Angel investors often influence the tech stack of their portfolio companies. scans the portfolios of specific Angels (via Crunchbase or LinkedIn) to find early-stage startups that fit your ICP, leveraging the \"friendly investor\" angle.",
-    "howToDoIt": [
-      "Identify the manual process you want to simplify.",
-      "Paste your raw notes or data into ChatGPT and ask for a strategic plan.",
-      "Execute the top 3 recommendations to reclaim your time."
-    ],
-    "bestTool": "ChatGPT",
-    "whyThisTool": "It is the most accessible tool for quick drafting, brainstorming, and general business research.",
-    "time_saved": "2-5 hours saved / week",
-    "difficulty": "Strategic",
-    "tools": "Practical Tool"
-  },
-  {
-    "id": "annual-report-keyword-hunter",
-    "name": "The 10-K Strategic Hunter",
-    "vertical": "Sales",
-    "problem": "Scan annual reports for specific strategic initiative keywords.",
-    "what_ai_does": "Public companies reveal their buying intent in 10-K reports. scans annual reports for keywords like \"Digital Transformation,\" \"AI Adoption,\" or \"Cost Reduction\" to pinpoint enterprise accounts with budget allocated to your solution.",
-    "howToDoIt": [
-      "Choose a source where your target audience or data lives (e.g., a website, job board, or LinkedIn).",
-      "Supply the URL or raw data to Claude and ask it to filter for high-value signals.",
-      "Take the cleaned list and move it directly into your outreach process or CRM."
+      "List your top 3 competitors in a text file.",
+      "Paste the list into Claude and ask for the top 3 recurring complaints for each from public forums.",
+      "Draft a comparison matrix for each competitor highlighting your unique strengths."
     ],
     "bestTool": "Claude",
-    "whyThisTool": "Claude handles long documents and complex instructions with more nuance and accuracy than other tools.",
-    "time_saved": "2-5 hours saved / week",
-    "difficulty": "Strategic",
-    "tools": "Practical Tool"
+    "whyThisTool": "In-depth competitor analysis and content generation"
   },
   {
-    "id": "app-store-screenshot-optimizer",
-    "name": "The App Store Screenshot Optimizer",
-    "vertical": "Marketing",
-    "problem": "More downloads, same traffic.",
-    "what_ai_does": "Screenshots are your app's billboard. researches top-ranking competitors in your category and drafts optimized 'Caption Text' for your first 5 screenshots to maximize conversion.",
+    "problem": "Cold outreach is often ignored; the warmest paths to decision-makers are often hidden in shared university backgrounds.",
+    "what_ai_does": "It matches your executive team's university alumni networks with decision-makers at target accounts to facilitate warm introductions.",
     "howToDoIt": [
-      "Define the core goal of what you're trying to build or launch (e.g., a new internal linking strategy or onboarding flow).",
-      "Use Midjourney to generate a structured framework or initial draft based on industry best practices.",
-      "Refine the output and deploy it as a new standard process for your team."
-    ],
-    "bestTool": "Midjourney",
-    "whyThisTool": "It generates professional, high-quality visuals that match your brand's aesthetic perfectly.",
-    "time_saved": "2-5 hours saved / week",
-    "difficulty": "Strategic",
-    "tools": "Practical Tool"
-  },
-  {
-    "id": "autonomous-sales-sniper",
-    "name": "The Sales Sniper",
-    "vertical": "Sales",
-    "problem": "Find and qualify B2B leads automatically.",
-    "what_ai_does": "Searches for companies in your target segments, filters out agencies, and builds a qualified prospect list.",
-    "howToDoIt": [
-      "Identify the manual process you want to simplify.",
-      "Paste your raw notes or data into ChatGPT and ask for a strategic plan.",
-      "Execute the top 3 recommendations to reclaim your time."
+      "List your executive team's universities in a CSV.",
+      "Use ChatGPT to generate LinkedIn search operators for \"Alumni at [Target Company] in [Role]\".",
+      "Identify the strongest overlap and draft a \"fellow alum\" intro email."
     ],
     "bestTool": "ChatGPT",
-    "whyThisTool": "It is the most accessible tool for quick drafting, brainstorming, and general business research.",
-    "time_saved": "10+ hours saved / month",
-    "difficulty": "Strategic",
-    "tools": "Practical Tool"
+    "whyThisTool": "Generating targeted search queries and outreach copy"
   },
   {
-    "id": "b2b-marketplace-scraper",
-    "name": "The Ecosystem Partner Finder",
-    "vertical": "Sales",
-    "problem": "Find leads from AppExchange, Shopify, or HubSpot app stores.",
-    "what_ai_does": "Companies listed on B2B marketplaces (Salesforce AppExchange, Shopify App Store, etc.) are tech-forward and often pay for other SaaS tools. scrapes specific categories to build a list of potential partners or customers.",
+    "problem": "It's hard to find early-stage leads who are backed by investors you already have a relationship with.",
+    "what_ai_does": "It scans the public portfolios of specific Angel Investors to find growing startups that fit your ICP, leveraging the \"friendly investor\" angle.",
     "howToDoIt": [
-      "Choose a source where your target audience or data lives (e.g., a website, job board, or LinkedIn).",
-      "Supply the URL or raw data to ChatGPT and ask it to filter for high-value signals.",
-      "Take the cleaned list and move it directly into your outreach process or CRM."
+      "Paste an Angel Investor's portfolio URL into ChatGPT.",
+      "Ask it to filter the companies by industry and size to match your ICP.",
+      "Draft an outreach email mentioning the shared investor connection."
     ],
     "bestTool": "ChatGPT",
-    "whyThisTool": "It is the most accessible tool for quick drafting, brainstorming, and general business research.",
-    "time_saved": "2-5 hours saved / week",
-    "difficulty": "Strategic",
-    "tools": "Practical Tool"
+    "whyThisTool": "Extracting and filtering data from web pages"
   },
   {
-    "id": "bad-review-poacher",
-    "name": "The Competitor Poacher",
-    "vertical": "Sales",
-    "problem": "Identify users complaining about competitors on G2/Capterra.",
-    "what_ai_does": "Unhappy customers are the easiest leads to close. monitors review sites for 1-3 star reviews of your competitors, extracts the reviewer's pain points, and prepares a \"solution\" pitch.",
+    "problem": "Public companies reveal their buying intent in 10-K reports, but manually hunting for budget signals across 100 companies is slow.",
+    "what_ai_does": "It scans annual reports for keywords like \"Digital Transformation\" or \"AI Adoption\" to pinpoint accounts with budget for your solution.",
     "howToDoIt": [
-      "Identify the manual process you want to simplify.",
-      "Paste your raw notes or data into ChatGPT and ask for a strategic plan.",
-      "Execute the top 3 recommendations to reclaim your time."
-    ],
-    "bestTool": "ChatGPT",
-    "whyThisTool": "It is the most accessible tool for quick drafting, brainstorming, and general business research.",
-    "time_saved": "2-5 hours saved / week",
-    "difficulty": "Strategic",
-    "tools": "Practical Tool"
-  },
-  {
-    "id": "beta-tester-recruiter",
-    "name": "The Beta Tester Recruiter",
-    "vertical": "Ops",
-    "problem": "Find your first 50 users.",
-    "what_ai_does": "Launching a new feature? takes a list of users and drafts exclusive, personalized invites for your beta program to ensure high engagement and quality feedback.",
-    "howToDoIt": [
-      "Identify the manual process you want to simplify.",
-      "Paste your raw notes or data into ChatGPT and ask for a strategic plan.",
-      "Execute the top 3 recommendations to reclaim your time."
-    ],
-    "bestTool": "ChatGPT",
-    "whyThisTool": "It is the most accessible tool for quick drafting, brainstorming, and general business research.",
-    "time_saved": "10+ hours saved / month",
-    "difficulty": "Strategic",
-    "tools": "Practical Tool"
-  },
-  {
-    "id": "billing-contact-verification",
-    "name": "Billing Contact Verifier",
-    "vertical": "Sales",
-    "problem": "Will the invoice bounce?",
-    "what_ai_does": "Scan if the email listed as 'Billing Contact' is valid or has recently bounced.",
-    "howToDoIt": [
-      "Identify the manual process you want to simplify.",
-      "Paste your raw notes or data into ChatGPT and ask for a strategic plan.",
-      "Execute the top 3 recommendations to reclaim your time."
-    ],
-    "bestTool": "ChatGPT",
-    "whyThisTool": "It is the most accessible tool for quick drafting, brainstorming, and general business research.",
-    "time_saved": "10+ hours saved / month",
-    "difficulty": "Strategic",
-    "tools": "Practical Tool"
-  },
-  {
-    "id": "billing-frequency-upsell",
-    "name": "Annual Pre-Pay Upsell",
-    "vertical": "Sales",
-    "problem": "Move monthly users to annual plans.",
-    "what_ai_does": "Identifies stable 'Monthly' customers ideal for 'Annual' conversion campaigns to improve cash flow.",
-    "howToDoIt": [
-      "Identify the manual process you want to simplify.",
-      "Paste your raw notes or data into ChatGPT and ask for a strategic plan.",
-      "Execute the top 3 recommendations to reclaim your time."
-    ],
-    "bestTool": "ChatGPT",
-    "whyThisTool": "It is the most accessible tool for quick drafting, brainstorming, and general business research.",
-    "time_saved": "10+ hours saved / month",
-    "difficulty": "Strategic",
-    "tools": "Practical Tool"
-  },
-  {
-    "id": "bio-link-optimizer",
-    "name": "The Bio Link Architect",
-    "vertical": "Marketing",
-    "problem": "Optimize your 'Link in Bio' from a URL or a goal.",
-    "what_ai_does": "Choice paralysis kills sales. audits your current 'Link in Bio' page (if provided) or researches high-converting layouts for your niche to suggest a prioritized structure that drives users toward your primary offer.",
-    "howToDoIt": [
-      "Define the core goal of what you're trying to build or launch (e.g., a new internal linking strategy or onboarding flow).",
-      "Use Midjourney to generate a structured framework or initial draft based on industry best practices.",
-      "Refine the output and deploy it as a new standard process for your team."
-    ],
-    "bestTool": "Midjourney",
-    "whyThisTool": "It generates professional, high-quality visuals that match your brand's aesthetic perfectly.",
-    "time_saved": "2-5 hours saved / week",
-    "difficulty": "Strategic",
-    "tools": "Practical Tool"
-  },
-  {
-    "id": "blueprint-architect",
-    "name": "The Blueprint Architect",
-    "vertical": "Ops",
-    "problem": "Create your own Work-Ready blueprints.",
-    "what_ai_does": "The meta-process. Use this blueprint to turn any manual business process into a standardized, 3-Phase AI process Blueprint that follows the Terminal Cookbook standard.",
-    "howToDoIt": [
-      "Define the core goal of what you're trying to build or launch (e.g., a new internal linking strategy or onboarding flow).",
-      "Use Midjourney to generate a structured framework or initial draft based on industry best practices.",
-      "Refine the output and deploy it as a new standard process for your team."
-    ],
-    "bestTool": "Midjourney",
-    "whyThisTool": "It generates professional, high-quality visuals that match your brand's aesthetic perfectly.",
-    "time_saved": "10+ hours saved / month",
-    "difficulty": "Strategic",
-    "tools": "Practical Tool"
-  },
-  {
-    "id": "board-member-network-mapper",
-    "name": "The Board Room Infiltrator",
-    "vertical": "Sales",
-    "problem": "Map potential intros via board member connections.",
-    "what_ai_does": "Board members often sit on multiple boards. maps the web of connections between your investors/board and target accounts, identifying high-level \"side door\" entry points.",
-    "howToDoIt": [
-      "Identify the manual process you want to simplify.",
-      "Paste your raw notes or data into Claude and ask for a strategic plan.",
-      "Execute the top 3 recommendations to reclaim your time."
+      "Export a list of 10-K or 10-Q filings for your target accounts.",
+      "Paste the text into Claude and ask it to find any mention of \"budget allocation\" for your specific category.",
+      "Review the \"Budget Signal\" report to prioritize your outreach."
     ],
     "bestTool": "Claude",
-    "whyThisTool": "Claude handles long documents and complex instructions with more nuance and accuracy than other tools.",
-    "time_saved": "2-5 hours saved / week",
-    "difficulty": "Strategic",
-    "tools": "Practical Tool"
+    "whyThisTool": "Analyzing large text documents for specific signals"
   },
   {
-    "id": "booth-design-checklist",
-    "name": "The Event Booth Strategist",
-    "vertical": "Ops",
-    "problem": "Custom booth checklists for your event portfolio.",
-    "what_ai_does": "Most trade show booths are invisible. researches your target events and designs custom booth layouts, swag strategies, and elevator pitches tailored to the specific audience of each show.",
+    "problem": "App screenshots are your billboard, but most are unoptimized and fail to address the core \"search intent\" of the user.",
+    "what_ai_does": "It researches top-ranking competitors in your category to draft optimized \"Caption Text\" for your first 5 screenshots to maximize conversion.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
-      "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
+      "Paste your App Store URL and your top competitor's URL into ChatGPT.",
+      "Ask it to compare the value propositions in the first 3 screenshots.",
+      "Draft a 5-slide narrative for your own screenshots that addresses the #1 pain point found."
     ],
     "bestTool": "ChatGPT",
-    "whyThisTool": "It is the most accessible tool for quick drafting, brainstorming, and general business research.",
-    "time_saved": "10+ hours saved / month",
-    "difficulty": "Strategic",
-    "tools": "Practical Tool"
+    "whyThisTool": "Comparative analysis and creative content generation"
   },
   {
-    "id": "booth-scan-lead-router",
-    "name": "Event Lead Router",
-    "vertical": "Ops",
-    "problem": "Route badge scans to the right rep.",
-    "what_ai_does": "Routes CSV exports from event badge scanners to sales reps based on territory logic (State/Industry).",
+    "problem": "Sales pipelines are often clogged with low-quality service leads (like agencies) that will never buy your SaaS product.",
+    "what_ai_does": "It automatically searches your target segments and filters out service providers to build a highly qualified, SaaS-only prospect list.",
     "howToDoIt": [
-      "Identify the manual process you want to simplify.",
-      "Paste your raw notes or data into ChatGPT and ask for a strategic plan.",
-      "Execute the top 3 recommendations to reclaim your time."
+      "Define your target industry and location.",
+      "Use ChatGPT to find a list of companies in that niche.",
+      "Ask the tool to \"disqualify anyone who sells hours or services\" based on their website copy."
     ],
     "bestTool": "ChatGPT",
-    "whyThisTool": "It is the most accessible tool for quick drafting, brainstorming, and general business research.",
-    "time_saved": "10+ hours saved / month",
-    "difficulty": "Strategic",
-    "tools": "Practical Tool"
+    "whyThisTool": "Lead filtering and qualification based on rules"
   },
   {
-    "id": "brand-voice-guidelines",
-    "name": "The Brand Voice Architect",
-    "vertical": "Marketing",
-    "problem": "Stop sounding schizophrenic.",
-    "what_ai_does": "Different employees write differently. researches your existing digital presence and creates a 'Brand Voice Bible' (Tone, Do's/Don'ts, Vocabulary) to ensure perfect consistency across every touchpoint.",
+    "problem": "Identifying tech-forward companies in specific software ecosystems (like Shopify or HubSpot) is a manual research task.",
+    "what_ai_does": "It scrapes B2B app stores to find companies that are active players in specific ecosystems, providing a list of tech-savvy prospects.",
     "howToDoIt": [
-      "Define the core goal of what you're trying to build or launch (e.g., a new internal linking strategy or onboarding flow).",
-      "Use Claude to generate a structured framework or initial draft based on industry best practices.",
-      "Refine the output and deploy it as a new standard process for your team."
+      "Choose a marketplace (e.g., Salesforce AppExchange).",
+      "Use ChatGPT to identify the top 20 apps in a specific category (e.g., \"Analytics\").",
+      "Export the list of developer companies to target as potential partners."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Extracting and categorizing data from web pages"
+  },
+  {
+    "problem": "The easiest leads to close are users who are actively unhappy with your competitors, but finding them in real-time is hard.",
+    "what_ai_does": "It monitors review sites for 1-3 star reviews of your competitors and prepares a \"solution\" pitch based on their specific complaint.",
+    "howToDoIt": [
+      "Paste 5 recent negative reviews of a competitor into Claude.",
+      "Ask it to extract the specific \"unresolved frustration\" from each reviewer.",
+      "Draft a personalized outreach message offering to solve that specific frustration."
     ],
     "bestTool": "Claude",
-    "whyThisTool": "Claude handles long documents and complex instructions with more nuance and accuracy than other tools.",
-    "time_saved": "2-5 hours saved / week",
-    "difficulty": "Strategic",
-    "tools": "Practical Tool"
+    "whyThisTool": "Analyzing sentiment and extracting pain points from reviews"
   },
   {
-    "id": "brand-voice-rewriter",
-    "name": "Brand Voice Chameleon",
-    "vertical": "Ops",
-    "problem": "Rewrite any text to match your specific brand personality.",
-    "what_ai_does": "Use a boring paragraph of text (e.g., technical documentation or a rough draft) and rewrites it into 3 distinct styles: \"Professional Enterprise,\" \"Witty/Startup,\" and \"Direct/No-Nonsense.\"",
+    "problem": "New features often fail because companies get low-quality feedback from the \"wrong\" users instead of their power users.",
+    "what_ai_does": "It identifies your most active users and drafts exclusive, high-urgency invites for your beta program to ensure quality feedback.",
     "howToDoIt": [
-      "Identify the specific document, email, or script you want to refine.",
-      "Paste the raw text into ChatGPT and describe the tone you want to achieve.",
-      "Review the generated variations and pick the one that feels most natural for your brand."
+      "Export a list of users who logged in >5 times this week.",
+      "Paste the list into ChatGPT and ask it to draft a \"Secret Beta\" invite email.",
+      "Review the drafts for a tone of exclusivity and high urgency."
     ],
     "bestTool": "ChatGPT",
-    "whyThisTool": "It is the most accessible tool for quick drafting, brainstorming, and general business research.",
-    "time_saved": "10+ hours saved / month",
-    "difficulty": "Strategic",
-    "tools": "Practical Tool"
+    "whyThisTool": "Identifying active users and drafting persuasive copy"
   },
   {
-    "id": "builtwith-tech-pivot",
-    "name": "The Tech Displacement Factory",
-    "vertical": "Sales",
-    "problem": "Find every user of 10 competitors in one run.",
-    "what_ai_does": "BuiltWith reports are noisy. reads a list of target technologies (competitors) from a CSV and filters a raw technology report to find high-value displacement opportunities matching your ICP.",
+    "problem": "Bounced invoices are the fastest way to lose paying customers, but most companies don't audit their billing contacts until it's too late.",
+    "what_ai_does": "It audits your billing database to identify \"dead\" contacts and suggests fallback finance emails (like finance@company.com) to rescue revenue.",
     "howToDoIt": [
-      "Define the core goal of what you're trying to build or launch (e.g., a new internal linking strategy or onboarding flow).",
-      "Use ChatGPT to generate a structured framework or initial draft based on industry best practices.",
-      "Refine the output and deploy it as a new standard process for your team."
+      "Export your billing contact list with \"Bounce Status\" from your email tool.",
+      "Paste the list into ChatGPT and ask it to generate fallback emails for any \"Hard Bounce\".",
+      "Update your CRM with the new finance department contacts."
     ],
     "bestTool": "ChatGPT",
-    "whyThisTool": "It is the most accessible tool for quick drafting, brainstorming, and general business research.",
-    "time_saved": "10+ hours saved / month",
-    "difficulty": "Strategic",
-    "tools": "Practical Tool"
+    "whyThisTool": "Identifying bounced contacts and generating recovery options"
   },
   {
-    "id": "business-card-digitizer",
-    "name": "The Business Card Digitizer",
-    "vertical": "Sales",
-    "problem": "From pocket to CRM in seconds.",
-    "what_ai_does": "Don't type business cards manually. takes a list of image files, OCRs the text, maps fields to 'Name/Email/Phone', and creates a consolidated CRM-ready CSV for your entire stack.",
+    "problem": "Many monthly users are stable enough for Annual plans, but companies miss the cash flow boost by not identifying them.",
+    "what_ai_does": "It filters your stable monthly customers (>6 months tenure) to create a prioritized target list for Annual pre-pay conversion campaigns.",
     "howToDoIt": [
-      "Identify the manual process you want to simplify.",
-      "Paste your raw notes or data into Midjourney and ask for a strategic plan.",
-      "Execute the top 3 recommendations to reclaim your time."
-    ],
-    "bestTool": "Midjourney",
-    "whyThisTool": "It generates professional, high-quality visuals that match your brand's aesthetic perfectly.",
-    "time_saved": "10+ hours saved / month",
-    "difficulty": "Strategic",
-    "tools": "Practical Tool"
-  },
-  {
-    "id": "buying-committee-gap-analyzer",
-    "name": "Buying Committee Auditor",
-    "vertical": "Sales",
-    "problem": "Find missing key roles in your target accounts.",
-    "what_ai_does": "Scan target accounts to see if you have contacts for required roles like CTO, Finance, or User Lead.",
-    "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
-      "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
+      "Export your customer list with \"Signup Date\" and \"Plan Type\".",
+      "Use ChatGPT to filter for monthly users with a tenure over 6 months.",
+      "Draft an \"Annual Plan Discount\" email targeting this specific stable segment."
     ],
     "bestTool": "ChatGPT",
-    "whyThisTool": "It is the most accessible tool for quick drafting, brainstorming, and general business research.",
-    "time_saved": "10+ hours saved / month",
-    "difficulty": "Strategic",
-    "tools": "Practical Tool"
+    "whyThisTool": "Customer segmentation and campaign drafting"
   },
   {
-    "id": "buying-signal-heatmapper",
-    "name": "Account Buying Signal Heatmapper",
-    "vertical": "Sales",
-    "problem": "Score account timing by aggregating intent signals.",
-    "what_ai_does": "Aggregates intent signals from job postings, news alerts, and website visits to identify accounts in an active buying window.",
+    "problem": "Most \"Link in Bio\" pages suffer from choice paralysis, leading to low click-through rates on the primary offer.",
+    "what_ai_does": "It audits your current link structure to suggest a prioritized layout that drives users toward your most profitable business goal.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
-      "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
+      "Paste your current \"Link in Bio\" URL into ChatGPT.",
+      "Ask it to identify the \"conversion bottleneck\" based on the number of links.",
+      "Select the top 3 links and rewrite their headlines to be more benefit-driven."
     ],
     "bestTool": "ChatGPT",
-    "whyThisTool": "It is the most accessible tool for quick drafting, brainstorming, and general business research.",
-    "time_saved": "10+ hours saved / month",
-    "difficulty": "Strategic",
-    "tools": "Practical Tool"
+    "whyThisTool": "Auditing and optimizing call-to-action placement"
   },
   {
-    "id": "call-sentiment-win-correlation",
-    "name": "Call Sentiment Optimizer",
-    "vertical": "Sales",
-    "problem": "Correlate 'Positive Sentiment' scores with win rates.",
-    "what_ai_does": "Cross-references call sentiment scores from transcripts with actual deal outcomes to find the 'Winning Tone'.",
+    "problem": "High-value manual processes are hard to standardize and scale across a team without a structured workflow document.",
+    "what_ai_does": "It turns any messy manual process description into a standardized, 3-Phase AI Blueprint that anyone on your team can follow.",
     "howToDoIt": [
-      "Define the core goal of what you're trying to build or launch (e.g., a new internal linking strategy or onboarding flow).",
-      "Use Claude to generate a structured framework or initial draft based on industry best practices.",
-      "Refine the output and deploy it as a new standard process for your team."
+      "Record a quick voice note or write a paragraph explaining a manual task you do.",
+      "Paste the text into Claude and ask it to \"Generate a 3-Phase Blueprint\".",
+      "Review the structured workflow for clarity and tool-agnostic logic."
     ],
     "bestTool": "Claude",
-    "whyThisTool": "Claude handles long documents and complex instructions with more nuance and accuracy than other tools.",
-    "time_saved": "10+ hours saved / month",
-    "difficulty": "Strategic",
-    "tools": "Practical Tool"
+    "whyThisTool": "Structuring complex information into actionable steps"
   },
   {
-    "id": "cancellation-flow-auditor",
-    "name": "The Cancellation Flow Auditor",
-    "vertical": "Ops",
-    "problem": "Save them before they go.",
-    "what_ai_does": "The 'Cancel' button is your last line of defense. researches industry-leading retention strategies and audits your offboarding flow to design high-converting 'Deflection Pages' for multiple SaaS products.",
+    "problem": "Bypassing the standard sales process requires high-level intros, but most teams don't know who their board members are connected to.",
+    "what_ai_does": "It maps shared board memberships between your investors and target accounts to find \"side door\" entry points into the C-suite.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to Midjourney to spot the hidden trends that a manual review would miss.",
-      "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
-    ],
-    "bestTool": "Midjourney",
-    "whyThisTool": "It generates professional, high-quality visuals that match your brand's aesthetic perfectly.",
-    "time_saved": "10+ hours saved / month",
-    "difficulty": "Strategic",
-    "tools": "Practical Tool"
-  },
-  {
-    "id": "canonical-tag-auditor",
-    "name": "The Technical SEO Doctor",
-    "vertical": "Marketing",
-    "problem": "One scan to find Canonical conflicts, NoIndex errors, and Broken Links.",
-    "what_ai_does": "Technical debt is invisible until traffic drops. crawls a list of URLs (or your sitemap) to audit the \"Big 3\" silent killers: Self-referencing Canonicals, accidental NoIndex tags, and broken internal links.",
-    "howToDoIt": [
-      "Define the core goal of what you're trying to build or launch (e.g., a new internal linking strategy or onboarding flow).",
-      "Use ChatGPT to generate a structured framework or initial draft based on industry best practices.",
-      "Refine the output and deploy it as a new standard process for your team."
+      "List your board members and your top 10 target companies.",
+      "Use ChatGPT to research which other boards your members sit on.",
+      "Identify any direct or 2nd-degree board connections to your target accounts."
     ],
     "bestTool": "ChatGPT",
-    "whyThisTool": "It is the most accessible tool for quick drafting, brainstorming, and general business research.",
-    "time_saved": "2-5 hours saved / week",
-    "difficulty": "Strategic",
-    "tools": "Practical Tool"
+    "whyThisTool": "Mapping professional networks and identifying warm introductions"
+  },
+  {
+    "problem": "Trade show booths are often generic and fail to attract the right audience, leading to low booth traffic and wasted event budget.",
+    "what_ai_does": "It researches the specific attendee profile of your target events to design custom booth layouts, catchy slogans (\"hooks\"), and relevant swag strategies for each show.",
+    "howToDoIt": [
+      "List your upcoming events and booth sizes in a CSV.",
+      "Use AI to research the \"Attendee Persona\" and \"Major Sponsors\" for each event URL.",
+      "Generate a \"Big Statement\" for your booth's back wall and a \"Demo Flow\" optimized for your specific booth footprint."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Better at creative design and audience research"
+  },
+  {
+    "problem": "Event leads often sit in a CSV for days or weeks because manual routing to the correct regional or industry sales rep is slow and error-prone.",
+    "what_ai_does": "It automatically processes bulk badge scan exports and instantly routes leads to the correct sales rep based on your custom territory logic (e.g., State or Industry).",
+    "howToDoIt": [
+      "Export your raw badge scan CSV from the event app.",
+      "Define your territory mapping (e.g., \"CA/NY -> Team West\", \"Finance -> Team A\") in a prompt.",
+      "Let AI categorize every lead and output a \"Cleaned & Routed\" file ready for your CRM."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast data processing and mapping"
+  },
+  {
+    "problem": "As a team grows, the company's \"voice\" becomes inconsistent across social media, emails, and blogs, making the brand feel unprofessional or \"schizophrenic.\"",
+    "what_ai_does": "It audits your existing website and top-performing content to create a standardized \"Brand Voice Bible\" with specific Do's/Don'ts and a unique vocabulary.",
+    "howToDoIt": [
+      "Paste links to your homepage and 3 best-performing blog posts or social threads into the AI.",
+      "Ask it to identify 3 core adjectives (e.g., \"Minimalist, Direct, Empathetic\") and create a \"This, Not That\" word list.",
+      "Save the resulting \"Voice Bible\" as a PDF for all employees and new hires."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at capturing and codifying subtle tone nuances"
+  },
+  {
+    "problem": "Technical documentation or rough drafts often sound boring and \"robotic,\" failing to engage the target audience or match your brand's personality.",
+    "what_ai_does": "It takes any rough draft and instantly rewrites it into multiple distinct styles—like \"Enterprise Trust,\" \"Witty Startup,\" or \"Direct Minimalist\"—while keeping the core facts intact.",
+    "howToDoIt": [
+      "Paste your rough text or technical notes into the AI.",
+      "Provide a sample of your ideal \"Brand Voice\" or choose a preset style (e.g., \"Challenger Brand\").",
+      "Review the rewritten variations and pick the one that matches your specific campaign goal."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Excellent for fast style-switching and creative drafting"
+  },
+  {
+    "problem": "Raw BuiltWith reports are massive and \"noisy,\" making it hard for sales teams to find the specific high-revenue companies using a competitor's product.",
+    "what_ai_does": "It filters raw technology reports against your specific ICP (Ideal Customer Profile) to pinpoint the most valuable \"displacement\" opportunities.",
+    "howToDoIt": [
+      "Download a raw \"Technology Report\" (CSV) for a specific competitor.",
+      "Use AI to filter the list based on revenue, industry, or company size.",
+      "Generate a \"Displacement Angle\" for each account (e.g., \"Company X is likely overpaying for Tech Y at this scale\")."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Handles CSV data filtering and logical grouping quickly"
+  },
+  {
+    "problem": "Collecting business cards at events is great, but manually typing them into a CRM is a slow, mind-numbing task that often results in lost leads.",
+    "what_ai_does": "It scans stacks of business card photos, extracts contact info via OCR, and maps them into a clean, CRM-ready CSV file in seconds.",
+    "howToDoIt": [
+      "Take photos of your collected business cards in batches (even multiple cards per photo).",
+      "Upload the images to an AI with vision capabilities.",
+      "Ask it to \"Extract Name, Company, Email, and Title into a CSV table\" and download the result."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Best-in-class image analysis and data extraction"
+  },
+  {
+    "problem": "Deals often stall or die because sales reps haven't identified or engaged the full \"Buying Committee\" (e.g., Finance, IT, or Security), leaving invisible blockers to kill the deal late in the cycle.",
+    "what_ai_does": "It audits your current CRM contact list for target accounts to instantly flag missing key roles like CTO, Finance, or User Lead, ensuring you have a complete map of decision-makers.",
+    "howToDoIt": [
+      "Export a list of your open opportunities and associated contacts from your CRM.",
+      "Provide the list to AI and define your \"Required Roles\" (e.g., \"Must have 1 Executive and 1 Technical contact\").",
+      "Review the generated \"Gap Report\" to see exactly which accounts need more prospecting to find the missing stakeholders."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast data processing and logical gap analysis"
+  },
+  {
+    "problem": "Sales teams waste time cold-calling accounts that aren't ready to buy, while missing \"hot\" accounts that are actively hiring for roles related to their product.",
+    "what_ai_does": "It aggregates disparate intent signals—like new job postings, recent funding news, and website visits—into a single \"Heat Score\" to tell you exactly which accounts to prioritize today.",
+    "howToDoIt": [
+      "Feed a CSV of recent \"signals\" (e.g., from LinkedIn or Google Alerts) into the AI.",
+      "Assign weighted points to different signals (e.g., \"Hiring = 20 pts\", \"Pricing Page Visit = 50 pts\").",
+      "Let AI sum the scores per account and output a prioritized \"Hot List\" for your sales team."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Excellent for scoring logic and data aggregation"
+  },
+  {
+    "problem": "Sales managers know some calls go better than others, but they can't manually listen to 1,000 recordings to find the specific \"Winning Tone\" or phrases that actually lead to closed deals.",
+    "what_ai_does": "It cross-references sentiment scores from thousands of call transcripts with actual deal outcomes (Won/Lost) to identify the linguistic predictors of sales success.",
+    "howToDoIt": [
+      "Export your call sentiment scores (from a tool like Gong or Chorus) and your deal outcomes from your CRM.",
+      "Provide the two lists to AI and ask it to \"Find the correlation between average sentiment and win rate.\"",
+      "Review the \"Winning Tone\" report to train your team on the specific conversational styles that drive revenue."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at identifying subtle patterns and correlations in large text datasets"
+  },
+  {
+    "problem": "Most SaaS companies have a generic \"Are you sure?\" cancellation button that does nothing to prevent churn, missing one last chance to save a customer.",
+    "what_ai_does": "It researches industry-leading retention tactics and audits your offboarding flow to design custom \"Deflection Pages\" that offer tailored alternatives based on the customer's specific reason for leaving.",
+    "howToDoIt": [
+      "Paste your current \"Cancel\" button copy and common churn reasons into the AI.",
+      "Ask it to design a 3-step deflection logic (e.g., \"If [Price], offer a 2-month discount; If [No Use], offer a free expert training session\").",
+      "Implement the drafted copy and UI flow to start \"saving\" customers before they finalize their cancellation."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Better at strategic design and empathetic, persuasive copywriting"
+  },
+  {
+    "problem": "Technical SEO errors like \"Self-referencing Canonical\" conflicts or accidental \"NoIndex\" tags are invisible to the naked eye but can wipe your site's traffic off Google overnight.",
+    "what_ai_does": "It crawls your live pages to find the \"Big 3\" silent killers of SEO—canonical mismatches, accidental NoIndex tags, and broken internal links—before they impact your rankings.",
+    "howToDoIt": [
+      "Paste a list of your top 20 URLs or your XML sitemap into the AI.",
+      "Ask it to \"Check for Canonical vs. URL mismatches and NoIndex tags\" on each page.",
+      "Review the \"SEO Triage Report\" and hand it to your developers to fix critical indexing blockers."
+    ],
+    "bestTool": "Claude Code",
+    "whyThisTool": "Can directly crawl URLs and analyze technical HTML structure with high precision"
   },
   {
     "id": "career-page-keyword-alert",
@@ -629,38 +413,26 @@
     "tools": "Practical Tool"
   },
   {
-    "id": "case-study-factory",
-    "name": "The Case Study Factory",
-    "vertical": "Sales",
-    "problem": "Turn 10 transcripts into 10 closed deals.",
-    "what_ai_does": "Sales teams need social proof. reads a folder of interview transcripts or raw notes and transforms every single one into a polished, structured 'Success Story' ready for your sales deck.",
+    "problem": "Sales teams desperately need social proof, but turning raw client interview transcripts into polished, persuasive case studies takes hours of manual writing and editing.",
+    "what_ai_does": "It reads through a folder of raw interview notes or transcripts and instantly transforms them into structured \"Success Stories\" using the STAR method (Situation, Task, Action, Result).",
     "howToDoIt": [
-      "Identify the specific document, email, or script you want to refine.",
-      "Paste the raw text into Claude and describe the tone you want to achieve.",
-      "Review the generated variations and pick the one that feels most natural for your brand."
-    ],
-    "bestTool": "Claude",
-    "whyThisTool": "Claude handles long documents and complex instructions with more nuance and accuracy than other tools.",
-    "time_saved": "10+ hours saved / month",
-    "difficulty": "Strategic",
-    "tools": "Practical Tool"
-  },
-  {
-    "id": "case-study-interviewer-bot",
-    "name": "Case Study Interviewer",
-    "vertical": "Ops",
-    "problem": "The perfect script for extracting testimonials from happy clients.",
-    "what_ai_does": "Generates a list of interview questions tailored to the specific \"Win\" a customer experienced, designed to extract the \"Before vs. After\" metrics needed for a case study.",
-    "howToDoIt": [
-      "Identify the specific document, email, or script you want to refine.",
-      "Paste the raw text into ChatGPT and describe the tone you want to achieve.",
-      "Review the generated variations and pick the one that feels most natural for your brand."
+      "Upload your raw client interview transcripts or Zoom call notes to the AI.",
+      "Ask it to \"Identify the Villain (Pain), the Hero (Product), and the Victory (ROI)\" for each client.",
+      "Generate a polished case study, a LinkedIn post, and a sales email snippet for every success story."
     ],
     "bestTool": "ChatGPT",
-    "whyThisTool": "It is the most accessible tool for quick drafting, brainstorming, and general business research.",
-    "time_saved": "10+ hours saved / month",
-    "difficulty": "Strategic",
-    "tools": "Practical Tool"
+    "whyThisTool": "Fast drafting and excellent at following structured formats like the STAR method"
+  },
+  {
+    "problem": "Most case study interviews are shallow because the interviewer forgets to ask for the specific \"Before vs. After\" metrics that actually close deals.",
+    "what_ai_does": "It generates a custom interview script tailored to the specific \"Win\" your customer experienced, ensuring you extract high-impact \"Hero's Journey\" soundbites and ROI data.",
+    "howToDoIt": [
+      "Provide the AI with brief notes about a client's success (e.g., \"Company X saved 20 hours/week using our automation\").",
+      "Ask it to generate a 5-question interview guide focused on the \"Breaking Point,\" the \"After Metric,\" and the \"Soundbite.\"",
+      "Use the script during your next client call to capture the specific data points needed for a world-class case study."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at conversational design and narrative structure"
   },
   {
     "id": "case-study-reverse-engineer",
@@ -680,55 +452,37 @@
     "tools": "Practical Tool"
   },
   {
-    "id": "ceo-podcast-tour-tracker",
-    "name": "The Podcast Tour Stalker",
-    "vertical": "Sales",
-    "problem": "Find CEOs appearing on podcasts to pitch PR or related services.",
-    "what_ai_does": "Executives go on podcast tours to promote something (a book, a round of funding, a launch). finds recent podcast guest appearances by CEOs in your niche, giving you perfect context for outreach (\"Heard you on [Podcast] talking about X...\").",
+    "problem": "Identifying the perfect \"icebreaker\" for a high-value CEO is hard, yet many executives reveal their current priorities and \"intent signals\" during recent podcast interviews.",
+    "what_ai_does": "It monitors recent podcast guest appearances by CEOs in your niche, providing you with time-sensitive context (e.g., \"Heard you on [Podcast] talking about X\") for hyper-personalized outreach.",
     "howToDoIt": [
-      "Identify the manual process you want to simplify.",
-      "Paste your raw notes or data into ChatGPT and ask for a strategic plan.",
-      "Execute the top 3 recommendations to reclaim your time."
+      "List your target CEOs and their companies in a CSV.",
+      "Ask the AI to search for recent podcast interviews (after a specific date) and summarize the core topics discussed.",
+      "Use the generated \"Topic Hooks\" to draft outreach emails that prove you've done your homework."
     ],
-    "bestTool": "ChatGPT",
-    "whyThisTool": "It is the most accessible tool for quick drafting, brainstorming, and general business research.",
-    "time_saved": "10+ hours saved / month",
-    "difficulty": "Strategic",
-    "tools": "Practical Tool"
+    "bestTool": "Claude",
+    "whyThisTool": "Better at summarizing long audio transcripts and drafting sophisticated outreach hooks"
   },
   {
-    "id": "challenger-brand-identifier",
-    "name": "The Challenger Brand Hunter",
-    "vertical": "Sales",
-    "problem": "Find Series B companies competing with Fortune 500 giants.",
-    "what_ai_does": "Challenger brands are aggressive, well-funded, and willing to take risks on new tech to beat incumbents. identifies companies positioning themselves as \"The [Incumbent] Killer\" (e.g., \"The Salesforce Alternative\").",
+    "problem": "Selling to Fortune 500 giants is slow; the most aggressive buyers are often \"Challenger Brands\" (Series B/C) that are actively trying to unseat market leaders.",
+    "what_ai_does": "It identifies high-growth competitors that are explicitly positioning themselves as \"The [Incumbent] Killer,\" giving you a list of tech-forward prospects with high buying intent.",
     "howToDoIt": [
-      "Choose a source where your target audience or data lives (e.g., a website, job board, or LinkedIn).",
-      "Supply the URL or raw data to ChatGPT and ask it to filter for high-value signals.",
-      "Take the cleaned list and move it directly into your outreach process or CRM."
+      "Provide a list of market leaders (e.g., \"Salesforce\", \"Zoom\") to the AI.",
+      "Ask it to search for \"Challenger Brands\" appearing in \"Top 10 Alternatives\" lists and comparison pages (e.g., `domain.com/vs-competitor`).",
+      "Filter the list by funding stage and target these \"aggressive buyers\" who are willing to take risks on new technology."
     ],
-    "bestTool": "ChatGPT",
-    "whyThisTool": "It is the most accessible tool for quick drafting, brainstorming, and general business research.",
-    "time_saved": "10+ hours saved / month",
-    "difficulty": "Strategic",
-    "tools": "Practical Tool"
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at market landscape analysis and identifying strategic positioning"
   },
   {
-    "id": "champion-movement-tracker",
-    "name": "Champion Job Change Tracker",
-    "vertical": "Sales",
-    "problem": "Detect when previous buyers move to new companies.",
-    "what_ai_does": "Compares a list of known 'Champions' (previous buyers) against a new contact export to identify previous fans in new target accounts.",
+    "problem": "Your best sales leads are previous happy customers who just changed jobs, but manually tracking \"Champion\" movements across LinkedIn for thousands of contacts is impossible.",
+    "what_ai_does": "It compares your list of known \"Champions\" (previous buyers) against new market contact exports to flag when a fan has moved into a new target account.",
     "howToDoIt": [
-      "Identify the manual process you want to simplify.",
-      "Paste your raw notes or data into ChatGPT and ask for a strategic plan.",
-      "Execute the top 3 recommendations to reclaim your time."
+      "Export a list of your previous buyers (Champions) and a new market lead export.",
+      "Ask the AI to perform a \"Fuzzy Match\" on names to identify anyone who has changed their company domain.",
+      "Prioritize these \"Warm Leads\" as your #1 outreach target for the quarter."
     ],
     "bestTool": "ChatGPT",
-    "whyThisTool": "It is the most accessible tool for quick drafting, brainstorming, and general business research.",
-    "time_saved": "10+ hours saved / month",
-    "difficulty": "Strategic",
-    "tools": "Practical Tool"
+    "whyThisTool": "Fast data matching and identity verification across large lists"
   },
   {
     "id": "champion-verifier",
@@ -748,21 +502,15 @@
     "tools": "Practical Tool"
   },
   {
-    "id": "changelog-marketer",
-    "name": "The Changelog Marketer",
-    "vertical": "Ops",
-    "problem": "Your updates are marketing assets.",
-    "what_ai_does": "Don't hide your hard work. takes technical commit messages or Jira tickets and transforms them into high-energy 'New & Improved' Changelog posts for an entire release cycle.",
+    "problem": "Product teams work hard on new features, but they often \"hide\" their work in boring, technical changelogs that users never read, missing a massive marketing opportunity.",
+    "what_ai_does": "It transforms technical commit messages or Jira tickets into high-energy, benefit-driven \"New & Improved\" marketing assets, including social media threads and customer emails.",
     "howToDoIt": [
-      "Identify the manual process you want to simplify.",
-      "Paste your raw notes or data into ChatGPT and ask for a strategic plan.",
-      "Execute the top 3 recommendations to reclaim your time."
+      "Provide a CSV of recent technical release notes or Jira tickets to the AI.",
+      "Ask it to rewrite each update into 3 paragraphs: The Why (Problem), The What (Update), and The Victory (Benefit).",
+      "Use the generated assets for your next product newsletter or X/Twitter announcement."
     ],
     "bestTool": "ChatGPT",
-    "whyThisTool": "It is the most accessible tool for quick drafting, brainstorming, and general business research.",
-    "time_saved": "10+ hours saved / month",
-    "difficulty": "Strategic",
-    "tools": "Practical Tool"
+    "whyThisTool": "Excellent for style transformation and high-volume copywriting"
   },
   {
     "id": "channel-conflict-arbitrator",
@@ -805,8 +553,8 @@
     "problem": "Measure churn rate by customer vintage.",
     "what_ai_does": "Segments churn data by the customer's 'Join Date' to see if newer cohorts are churning faster.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to Claude to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to Claude and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "Claude",
@@ -856,8 +604,8 @@
     "problem": "Identify commissions paid on deals that churned early.",
     "what_ai_does": "Compares recent churn events against payout logs to flag commissions that need to be recouped.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -935,21 +683,15 @@
     "tools": "Practical Tool"
   },
   {
-    "id": "cold-email-personalization-at-scale",
-    "name": "Cold Email Personalizer",
-    "vertical": "Sales",
-    "problem": "Merges company news with lead lists to generate custom icebreakers.",
-    "what_ai_does": "Use a CSV of leads, researches recent news for each company, and writes a personalized \"first line\" (icebreaker) for cold emails.",
+    "problem": "Generic cold emails are instantly deleted; the only way to get a 20%+ open rate is through hyper-personalization, which is impossible to do manually for 1,000 leads.",
+    "what_ai_does": "It researches recent news, podcasts, or blog posts for every company in your lead list and automatically drafts a unique, authentic \"icebreaker\" line for every single contact.",
     "howToDoIt": [
-      "Identify the manual process you want to simplify.",
-      "Paste your raw notes or data into ChatGPT and ask for a strategic plan.",
-      "Execute the top 3 recommendations to reclaim your time."
+      "Upload a CSV of your target leads (Company and Contact Name) to the AI.",
+      "Ask it to \"Search for recent news or interviews from the last 90 days\" and draft a 1-sentence opening line for each.",
+      "Export the enriched CSV and import it into your email tool (like Instantly or Apollo) to launch a hyper-personalized campaign."
     ],
-    "bestTool": "ChatGPT",
-    "whyThisTool": "It is the most accessible tool for quick drafting, brainstorming, and general business research.",
-    "time_saved": "10+ hours saved / month",
-    "difficulty": "Strategic",
-    "tools": "Practical Tool"
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at web research and drafting authentic, non-salesy opening lines"
   },
   {
     "id": "cold-email-spam-checker",
@@ -992,8 +734,8 @@
     "problem": "Track revenue at risk of clawback.",
     "what_ai_does": "Identifies recently paid deals that are currently in 'High Support Volume' or 'Low Usage' to flag potential clawback risks.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -1026,8 +768,8 @@
     "problem": "Did John's check double MoM?",
     "what_ai_does": "Scan for large Month-over-Month swings in rep commission checks to catch calculation errors.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -1043,8 +785,8 @@
     "problem": "Who answers the most questions?",
     "what_ai_does": "Scores users based on forum posts, replies, and likes to identify potential 'Community Champions'.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -1060,8 +802,8 @@
     "problem": "Spot toxic trends in Discord/Slack before they explode.",
     "what_ai_does": "Ingests the last 1000 messages from your community general channel. Clusters sentiments. Flags rising \"Admin Hate\" or \"Feature Frustration\" topics.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to Claude to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to Claude and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "Claude",
@@ -1088,21 +830,15 @@
     "tools": "Practical Tool"
   },
   {
-    "id": "competitor-ad-library-spy",
-    "name": "Ad Library Decoder",
-    "vertical": "Ops",
-    "problem": "Reverse-engineer your competitor's ad strategy.",
-    "what_ai_does": "Analyzes a list of ad copy text (scraped from Facebook/LinkedIn Ad Library), groups them by \"Hook Type,\" and identifies their winning value propositions.",
+    "problem": "It's hard to know which ad angles are working for your competitors without spending thousands of dollars on your own testing.",
+    "what_ai_does": "It reverse-engineers your competitor's ad strategy by analyzing their live ad library, grouping their ads by \"Hook Type\" (e.g., Pain Point vs. Social Proof), and identifying their winning value propositions.",
     "howToDoIt": [
-      "Identify the manual process you want to simplify.",
-      "Paste your raw notes or data into Claude and ask for a strategic plan.",
-      "Execute the top 3 recommendations to reclaim your time."
+      "Copy-paste the ad copy text from your competitor's Facebook or LinkedIn Ad Library into a text file.",
+      "Ask the AI to \"Tag the Hook Type and identify the primary Value Prop\" for every ad.",
+      "Review the \"Ad Strategy Analysis\" to find the gaps in their strategy and write \"Counter-Hooks\" that attack their weak spots."
     ],
     "bestTool": "Claude",
-    "whyThisTool": "Claude handles long documents and complex instructions with more nuance and accuracy than other tools.",
-    "time_saved": "10+ hours saved / month",
-    "difficulty": "Strategic",
-    "tools": "Practical Tool"
+    "whyThisTool": "Superior at pattern recognition and strategic marketing analysis"
   },
   {
     "id": "competitor-ad-library-visual-cluster",
@@ -1196,8 +932,8 @@
     "problem": "Build the \"Us vs Them\" comparison grid for your pricing page.",
     "what_ai_does": "Researches 3 competitors to see if they have specific features (SSO, API, Dark Mode, etc.) and generates a CSV that can be turned into a checkmark grid.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -1224,38 +960,26 @@
     "tools": "Practical Tool"
   },
   {
-    "id": "competitor-onboarding-spy",
-    "name": "The Onboarding Teardown Factory",
-    "vertical": "Sales",
-    "problem": "Comparative UX audit of competitors at once.",
-    "what_ai_does": "How does your signup flow stack up? processes screenshots and emails from multiple competitor signup flows and reverse-engineers their activation strategies into a single comparison report.",
+    "problem": "You want to improve your product's \"Aha!\" moment but don't have the time to sign up for and manually audit 10 different competitor onboarding flows.",
+    "what_ai_does": "It processes screenshots and emails from multiple competitor signup flows to reverse-engineers their activation strategies into a single, side-by-side comparison report.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to Midjourney to spot the hidden trends that a manual review would miss.",
-      "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
+      "Upload screenshots and emails from your competitor's onboarding flows to a folder.",
+      "Ask the AI to \"Identify the 'Aha!' moment and calculate a 'Friction Score' for each competitor.\"",
+      "Review the \"Onboarding Landscape Analysis\" to identify 3 high-impact \"steals\" for your own product roadmap."
     ],
-    "bestTool": "Midjourney",
-    "whyThisTool": "It generates professional, high-quality visuals that match your brand's aesthetic perfectly.",
-    "time_saved": "10+ hours saved / month",
-    "difficulty": "Strategic",
-    "tools": "Practical Tool"
+    "bestTool": "ChatGPT (Vision)",
+    "whyThisTool": "Best-in-class image and email analysis for UX benchmarking"
   },
   {
-    "id": "competitor-price-watchdog",
-    "name": "The Price Watchdog Fleet",
-    "vertical": "Sales",
-    "problem": "Monitor pricing changes for 10 competitors at once.",
-    "what_ai_does": "Competitors change pricing quietly. reads a list of competitor URLs from a CSV, compares their current pricing pages against previous snapshots, and generates a unified alert report if any changes are detected.",
+    "problem": "Competitors often change their pricing or launch new tiers quietly, leaving you \"blind\" to their latest market moves until you've already lost a deal.",
+    "what_ai_does": "It automatically monitors your competitor's pricing pages and generates a unified alert report the second any price, currency, or feature name changes are detected.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
-      "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
+      "List your competitor's pricing page URLs in a CSV.",
+      "Use the AI to \"Fetch the current page text and compare it against a previous snapshot.\"",
+      "Review the \"Pricing Alerts\" report to adjust your own pricing strategy or prepare your sales team for new competitor objections."
     ],
-    "bestTool": "ChatGPT",
-    "whyThisTool": "It is the most accessible tool for quick drafting, brainstorming, and general business research.",
-    "time_saved": "10+ hours saved / month",
-    "difficulty": "Strategic",
-    "tools": "Practical Tool"
+    "bestTool": "Claude Code",
+    "whyThisTool": "Can directly crawl URLs and perform high-precision text comparisons"
   },
   {
     "id": "competitor-pricing-alert-system",
@@ -1281,8 +1005,8 @@
     "problem": "Don't just calculate differences. Scrape and monitor live competitor pricing.",
     "what_ai_does": "Manual price checking is tedious. takes a list of your products and competitor URLs, scrapes their live pricing pages, and flags exactly where you are being undercut.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -1349,8 +1073,8 @@
     "problem": "Audit the tech stack of your entire market.",
     "what_ai_does": "Why check one site when you can check them all? reads a list of competitor URLs from a CSV, identifies their marketing and analytics tools (including hidden Intent/ABM scripts), and scores their marketing maturity.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -1383,8 +1107,8 @@
     "problem": "What topics are they pitching?",
     "what_ai_does": "Monitors competitor event pages to track their marketing themes and webinar topics.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to Midjourney to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to Midjourney and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "Midjourney",
@@ -1485,8 +1209,8 @@
     "problem": "Is your data stale?",
     "what_ai_does": "Scan when contacts were last enriched to trigger updates for records older than 6 months.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -1536,8 +1260,8 @@
     "problem": "Which PDF is actually generating leads?",
     "what_ai_does": "Aggregates download counts for all your gated assets to rank them by popularity.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to Claude to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to Claude and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "Claude",
@@ -1740,8 +1464,8 @@
     "problem": "90-day warning system.",
     "what_ai_does": "Calculates a specific health score that only triggers 90 days before renewal to prioritize CS focus.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -1842,8 +1566,8 @@
     "problem": "Identify unused or garbage data fields in your CRM.",
     "what_ai_does": "Analyzes a CSV export of your CRM records to calculate fill rates for every column. Use this to you decide which fields to deprecate or mandate.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to Claude to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to Claude and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "Claude",
@@ -1876,8 +1600,8 @@
     "problem": "Map customers against the full product catalog.",
     "what_ai_does": "Generates a grid showing which products every customer owns to highlight upsell gaps.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -1893,8 +1617,8 @@
     "problem": "Find exactly what your customers haven't bought yet.",
     "what_ai_does": "Generates a matrix of customers vs products to identify upsell and cross-sell opportunities.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to Midjourney to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to Midjourney and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "Midjourney",
@@ -2097,8 +1821,8 @@
     "problem": "Monitor ticket sentiment trends over time.",
     "what_ai_does": "Analyzes the text of recent support tickets to track if customer frustration is increasing.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to Claude to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to Claude and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "Claude",
@@ -2182,8 +1906,8 @@
     "problem": "Flag partner deal registrations that are about to expire.",
     "what_ai_does": "Monitors the 90-day protection window for partner deals and alerts when coverage is ending.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -2199,8 +1923,8 @@
     "problem": "Flag deals that haven't moved in 14 days.",
     "what_ai_does": "Highlights opportunities that are 'rotting' in the pipeline so managers can intervene.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -2267,8 +1991,8 @@
     "problem": "Measure Demo -> Proposal conversion by rep.",
     "what_ai_does": "Calculates the conversion efficiency of specific sales stages to identify coaching opportunities.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -2284,8 +2008,8 @@
     "problem": "Why are prospects ghosting demos?",
     "what_ai_does": "Analyzes demo logs to calculate no-show rates by Lead Source and Rep.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to Claude to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to Claude and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "Claude",
@@ -2335,8 +2059,8 @@
     "problem": "How fast are quotes approved?",
     "what_ai_does": "Measures the time between 'Quote Submitted' and 'Quote Approved' to identify Deal Desk bottlenecks.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -2369,8 +2093,8 @@
     "problem": "Does high discounting lead to low LTV?",
     "what_ai_does": "Correlates initial contract discounts with long-term customer lifetime value to find healthy discount limits.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -2386,8 +2110,8 @@
     "problem": "Find territories discounting more than the average.",
     "what_ai_does": "Calculates average discount rates by region to identify outliers and margin erosion.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -2403,8 +2127,8 @@
     "problem": "Are we getting longer terms for lower prices?",
     "what_ai_does": "Scan if deals with high discounts actually result in longer contract durations (as they should).",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -2437,8 +2161,8 @@
     "problem": "Calculate eligible stock returns for distributors.",
     "what_ai_does": "Calculates the maximum eligible dollar amount for stock rotation based on trailing sales volume.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -2471,8 +2195,8 @@
     "problem": "Flag help articles that reference old UI.",
     "what_ai_does": "Scans Help Center articles. Scan for dates > 1 year old or mentions of deprecated features/buttons.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to Claude to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to Claude and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "Claude",
@@ -2590,8 +2314,8 @@
     "problem": "Monitor bounce rates to prevent blacklisting.",
     "what_ai_does": "Calculates the hard bounce rate per campaign. If it exceeds 2%, it recommends pausing sending to protect domain reputation.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -2624,8 +2348,8 @@
     "problem": "Audit the sender reputation of 100 domains.",
     "what_ai_does": "Content doesn't matter if your email bounces. reads a list of domains from a CSV and uses the `dig` command to verify that SPF, DKIM, and DMARC are correctly configured for every single one.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -2641,8 +2365,8 @@
     "problem": "Prevent unsubscribes by monitoring send frequency.",
     "what_ai_does": "Calculates how many emails each contact received in the last 30 days to flag 'at-risk' contacts.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -2743,8 +2467,8 @@
     "problem": "Don't pay for empty cells. Audit vendor performance.",
     "what_ai_does": "Data vendors over-promise and under-deliver. audits your enriched lists to calculate the exact \"Fill Rate\" for critical fields (Phone, Email, Title) and recommends specific alternative vendors for the missing data types.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -2811,8 +2535,8 @@
     "problem": "Did they show up to the booth meeting?",
     "what_ai_does": "Tracks attendance of pre-booked meetings at trade shows to calculate the 'Show Rate' and flag no-shows for follow-up.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -2896,8 +2620,8 @@
     "problem": "Who is ready to buy more?",
     "what_ai_does": "Matches historical upsell data to current customer profiles (Employee Growth + Usage) to predict expansion.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -2964,8 +2688,8 @@
     "problem": "Who is actually using your new tool?",
     "what_ai_does": "You launched a feature, but did it land? analyzes product usage logs to calculate 'Adoption Rate' by customer segment (e.g., Enterprise vs. SMB), telling you which cohort needs more education.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to Claude to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to Claude and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "Claude",
@@ -3100,8 +2824,8 @@
     "problem": "Monitor monthly growth in feature usage.",
     "what_ai_does": "Tracks usage counts for key product features month-over-month to detect adoption momentum or decline.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -3151,8 +2875,8 @@
     "problem": "Which product acquires the best customers?",
     "what_ai_does": "Identifies the 'Gateway Drug' products that appear most frequently in the first order of high-LTV customers.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to Claude to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to Claude and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "Claude",
@@ -3202,8 +2926,8 @@
     "problem": "Identify reps who consistently beat their commits by 50%+.",
     "what_ai_does": "Compares historical forecast 'commits' against actual results to identify reps with inaccurate forecasting habits.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -3321,8 +3045,8 @@
     "problem": "Mine G2 & Capterra reviews to find product gaps and marketing hooks.",
     "what_ai_does": "Scrapes or reads reviews of a product (yours or a competitor's), categorizes the feedback into \"Features,\" \"Pricing,\" and \"Support,\" and creates a word cloud of common pain points.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to Claude to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to Claude and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "Claude",
@@ -3474,8 +3198,8 @@
     "problem": "Remove blurry or irrelevant user photos from your listing.",
     "what_ai_does": "Scans user-uploaded photos on your Google Maps listing. Flags \"Blurry\", \"Competitor Products\", or \"Irrelevant\" (like selfies) for removal requests.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to Claude to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to Claude and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "Claude",
@@ -3593,8 +3317,8 @@
     "problem": "Find missing GTINs or images.",
     "what_ai_does": "Audits your Google Shopping product feed to identify items missing critical attributes like GTIN, Image Link, or Price.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to Midjourney to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to Midjourney and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "Midjourney",
@@ -3644,8 +3368,8 @@
     "problem": "How much are we losing on old plans?",
     "what_ai_does": "Calculates the revenue gap between legacy pricing and current market rates for existing customers.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -3831,8 +3555,8 @@
     "problem": "Fix the first 3 seconds.",
     "what_ai_does": "If they don't watch past 3 seconds, your creative failed. calculates 'Hook Rate' (3-Sec Views / Impressions) and 'Hold Rate' (ThruPlay / 3-Sec) for your video ads, ranking them to find the winning scroll-stoppers.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to Claude to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to Claude and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "Claude",
@@ -3865,8 +3589,8 @@
     "problem": "Automatically grade leads A, B, or C based on your criteria.",
     "what_ai_does": "Reads a CSV of leads and scores them (0-100) based on specific \"Ideal Customer Profile\" rules you define (e.g., Industry, Tech Stack, Title).",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -4052,8 +3776,8 @@
     "problem": "Audit 50 creators in one run.",
     "what_ai_does": "Protect your ad budget. reads a list of influencer handles from a CSV, calculates their real engagement rates, detects bot behavior, and generates a 'Value Scorecard' to help you negotiate pricing.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -4086,8 +3810,8 @@
     "problem": "Revenue is vanity, profit is sanity.",
     "what_ai_does": "Calculates net profit margin per influencer campaign (Revenue - Commission - Discount - COGS).",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -4188,8 +3912,8 @@
     "problem": "Separate the 'Performers' from the 'Posers'.",
     "what_ai_does": "Vanity metrics (Likes) rarely correlate with Wallet metrics (Sales). analyzes your influencer roster to classify them into \"Brand Awareness Plays\" vs \"Sales Drivers,\" helping you cut the dead weight.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -4205,8 +3929,8 @@
     "problem": "Did they actually post it?",
     "what_ai_does": "Verifies if a paid influencer actually posted the agreed content by checking post logs.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -4341,8 +4065,8 @@
     "problem": "Remove bias from your hiring process.",
     "what_ai_does": "Use raw interview notes or transcripts. Scores the candidate's answer to \"Tell me about a conflict\" against a pre-set rubric (STAR method).",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to Claude to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to Claude and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "Claude",
@@ -4358,8 +4082,8 @@
     "problem": "Identify and remove obvious email typos.",
     "what_ai_does": "Finds obvious email typos (e.g. `gamil.com`, `yhaoo.com`) to improve email deliverability and score.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -4579,8 +4303,8 @@
     "problem": "Catch sudden drops in landing page conversion rates.",
     "what_ai_does": "Compares daily landing page conversion rates against a 7-day rolling average to detect technical issues or traffic quality drops.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -4596,8 +4320,8 @@
     "problem": "Fix your site's first 5 seconds.",
     "what_ai_does": "50% of users bounce in 5 seconds. audits your Hero Sections (H1, Subhead, CTA) against the 'Grunt Test' for an entire portfolio of landing pages, ensuring clarity beats cleverness every time.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -4630,8 +4354,8 @@
     "problem": "Slow pages kill ROAS.",
     "what_ai_does": "If your landing page takes 3s to load, you lose 50% of your paid traffic. uses `curl` to measure TTFB and Total Load Time across your entire campaign portfolio, flagging pages that are too slow.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -4715,8 +4439,8 @@
     "problem": "Are we paying for empty data?",
     "what_ai_does": "Analyzes your enriched lead data to see what percentage of fields (Phone, LinkedIn, Revenue) are actually being populated by your vendor.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to Claude to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to Claude and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "Claude",
@@ -4800,8 +4524,8 @@
     "problem": "Calculate time to first touch for every lead.",
     "what_ai_does": "Measures the gap between 'Lead Created' and 'First Activity' to ensure reps are hitting 5-minute targets.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -4834,8 +4558,8 @@
     "problem": "Measure delays in lead assignment.",
     "what_ai_does": "Analyzes the time gap between 'Lead Created' and 'Owner Assigned' to find routing bottlenecks.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to Claude to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to Claude and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "Claude",
@@ -4919,8 +4643,8 @@
     "problem": "Prioritize leads from your CRM or build a model from scratch.",
     "what_ai_does": "Stop wasting time on low-value leads. reads your lead history CSV (if provided) or researches your industry to design a points-based logic (Title=CEO +10pts, Gmail -5pts) and writes the pseudo-code for implementation.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to Make.com to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to Make.com and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "Make.com",
@@ -4970,8 +4694,8 @@
     "problem": "UTM vs Self-Reported: Who is lying?",
     "what_ai_does": "Compares 'Self-Reported Source' (How did you hear about us?) vs 'UTM Source' to find discrepancies (e.g. Dark Social).",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -5038,8 +4762,8 @@
     "problem": "Ensure your most valuable link actually works.",
     "what_ai_does": "Daily check of your Linktree/Bio link. Validates that it doesn't 404 and that the redirect lands on the correct promo page.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to Claude to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to Claude and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "Claude",
@@ -5089,8 +4813,8 @@
     "problem": "Stop bidding against yourself.",
     "what_ai_does": "Analyzes exported target lists from different ad campaigns to find duplicate companies.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to Claude to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to Claude and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "Claude",
@@ -5259,8 +4983,8 @@
     "problem": "Audit retargeting tags across your entire domain portfolio.",
     "what_ai_does": "The LinkedIn Insight Tag is often missing on critical pages. reads a list of URLs from a CSV, crawls every page to verify your Partner ID is present, and flags every 'Untagged' page for an immediate fix.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -5327,8 +5051,8 @@
     "problem": "Predict the viral potential of your image/video thumbnails.",
     "what_ai_does": "Uploads your proposed thumbnails to a Vision model. Scores them on text readability, face prominence, and contrast against the LinkedIn UI gray background.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to Claude to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to Claude and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "Claude",
@@ -5361,8 +5085,8 @@
     "problem": "Ensure customers aren't in 'Prospect' lists.",
     "what_ai_does": "Scan a list of contacts to ensure no one has both 'Status=Customer' and 'List=Prospect_Nurture'.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to Make.com to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to Make.com and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "Make.com",
@@ -5395,8 +5119,8 @@
     "problem": "Audit the map rankings for your entire franchise.",
     "what_ai_does": "Managing SEO for multiple locations is hard. reads a list of locations from a CSV, audits their Google Maps profiles, checks NAP consistency across the web, and generates a prioritized 'Fix List' for every branch.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -5412,8 +5136,8 @@
     "problem": "What is Googlebot doing?",
     "what_ai_does": "Server logs reveal the truth. processes raw server logs to count how many times Googlebot hit specific pages, identifying 'Crawl Waste' and indexing issues across your entire server.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to Claude to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to Claude and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "Claude",
@@ -5497,8 +5221,8 @@
     "problem": "Are points being used?",
     "what_ai_does": "Tracks percentage of issued points that are actually redeemed to measure program engagement.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -5514,8 +5238,8 @@
     "problem": "Ensure your paid traffic doesn't hit 404s.",
     "what_ai_does": "Scan all button destination URLs on your landing pages to ensure they are live and correctly tagged.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -5650,8 +5374,8 @@
     "problem": "Audit calendar data to protect 'Selling Time'.",
     "what_ai_does": "Analyzes rep calendar data to calculate % of day spent in internal vs external meetings.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to Claude to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to Claude and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "Claude",
@@ -5888,8 +5612,8 @@
     "problem": "Make sure your weekly email isn't too depressing.",
     "what_ai_does": "Analyzes your draft newsletter. Counts \"Fear/Urgency\" words vs \"Hope/Value\" words. Ensures you aren't burning out your list with constant alarmism.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to Claude to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to Claude and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "Claude",
@@ -5905,8 +5629,8 @@
     "problem": "Know exactly when your competitors send.",
     "what_ai_does": "Email attention is a zero-sum game. researches the send history of your top competitors to identify their primary send times, helping you find the 'White Space' in your audience's inbox.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to Make.com to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to Make.com and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "Make.com",
@@ -5973,8 +5697,8 @@
     "problem": "Scan your local React/Next.js files for SEO gaps before you deploy.",
     "what_ai_does": "Don't wait for a crawler to tell you your tags are missing. scans your local Next.js/React codebase to verify Titles, Descriptions, H1s, and Schema presence directly in the source files.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to Claude Code to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to Claude Code and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "Claude Code",
@@ -6041,8 +5765,8 @@
     "problem": "Automate outreach lists for low NPS scorers.",
     "what_ai_does": "Identifies new NPS detractors (0-6) and generates a prioritized outreach list for Customer Success.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -6075,8 +5799,8 @@
     "problem": "Compare conversion rates of different nurture sequences.",
     "what_ai_does": "Compares the path-to-MQL conversion rate for different automated nurture flows.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -6109,8 +5833,8 @@
     "problem": "Identify objections where win rates are lowest.",
     "what_ai_does": "Analyzes deal notes and outcome codes to find which specific objections (e.g. 'Price', 'Competitor X') lead to the most losses.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to Claude to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to Claude and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "Claude",
@@ -6143,8 +5867,8 @@
     "problem": "Where do users get stuck?",
     "what_ai_does": "Measures the completion rate of each step in the 'Getting Started' checklist to identify friction.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -6313,8 +6037,8 @@
     "problem": "Identify campaigns with dangerously high frequency.",
     "what_ai_does": "Scan ad delivery logs to flag campaigns where average frequency exceeds healthy limits (e.g. > 4.0).",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -6432,8 +6156,8 @@
     "problem": "Identify 'Ghost' partners who haven't logged in.",
     "what_ai_does": "Finds inactive partners to prioritize for re-engagement campaigns or program removal.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -6449,8 +6173,8 @@
     "problem": "Check if partners qualify for Silver/Gold/Platinum.",
     "what_ai_does": "Analyzes partner revenue against thresholds to recommend tier upgrades or downgrades.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to Claude to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to Claude and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "Claude",
@@ -6483,8 +6207,8 @@
     "problem": "Monitor new patent filings for R&D budget signals.",
     "what_ai_does": "Companies filing patents are investing heavily in innovation. monitors Google Patents/USPTO for new filings in specific categories (e.g., \"Generative AI,\" \"Battery Tech\") to find companies building *new* products who need engineering support or specialized components.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -6585,8 +6309,8 @@
     "problem": "Do you have 3x your quota in pipeline?",
     "what_ai_does": "Calculates the coverage ratio (Pipeline / Remaining Quota) per rep to identify hiring or coaching needs.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -6602,8 +6326,8 @@
     "problem": "Grade your CRM data quality.",
     "what_ai_does": "Messy CRMs kill forecasts. audits your open opportunities for 'Rot' (Past Close Date, No Next Step, Stagnant Stage) and assigns a 'Hygiene Score' to each rep.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -6653,8 +6377,8 @@
     "problem": "Does Product A stall deals?",
     "what_ai_does": "Correlates 'Days in Stage' with the 'Product Line' attached to the deal to see if complex products slow down cycles.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to Claude to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to Claude and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "Claude",
@@ -7010,8 +6734,8 @@
     "problem": "Decide if you need to wake up the CEO.",
     "what_ai_does": "Ingests a negative press mention. Scores it based on \"Outlet Reach\", \"Sentiment\", and \"Factuality\". Outputs: \"Ignore\", \"Monitor\", or \"Crisis Response Needed\".",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to Claude to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to Claude and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "Claude",
@@ -7112,8 +6836,8 @@
     "problem": "Identify deals sold below standard list price.",
     "what_ai_does": "Compares actual 'Sold Price' against the 'Standard List Price' to find excessive discounting.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -7163,8 +6887,8 @@
     "problem": "Audit 10 pricing pages for conversion leaks.",
     "what_ai_does": "Audit your own pricing and your competitors' simultaneously. analyzes a list of URLs against behavioral psychology principles and suggests specific changes to increase Revenue Per User.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to Claude to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to Claude and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "Claude",
@@ -7180,8 +6904,8 @@
     "problem": "Audit your international pricing or research competitor PPP.",
     "what_ai_does": "Charging $99 in every country kills growth. audits your internal pricing table (if provided) or researches your top competitors to suggest 3-tier 'Purchasing Power Parity' (PPP) adjustments for India, Brazil, and the UK.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -7231,8 +6955,8 @@
     "problem": "High traffic, no sales?",
     "what_ai_does": "Compares 'Page Views' to 'Add to Carts' to find underperforming product detail pages (PDPs).",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -7282,8 +7006,8 @@
     "problem": "Does your rep look professional?",
     "what_ai_does": "Audits rep LinkedIn profile data for key elements (Headshot presence, Headline quality, About section length).",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -7503,8 +7227,8 @@
     "problem": "Ensure reps don't quote incompatible SKUs.",
     "what_ai_does": "Audits draft quotes to ensure they don't contain incompatible product combinations (e.g., 'Starter Plan' + 'Enterprise Add-on').",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -7639,8 +7363,8 @@
     "problem": "Did the migration actually work?",
     "what_ai_does": "Verifies a list of expected redirects against the actual response codes.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -7792,8 +7516,8 @@
     "problem": "Which ads drive returns?",
     "what_ai_does": "Scan if certain marketing channels drive 'Bad Quality' customers who return items at a higher rate.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -7877,8 +7601,8 @@
     "problem": "Predict churn before it happens.",
     "what_ai_does": "Who is going to cancel? calculates a 'Risk Score' (0-100) based on weighted variables: Low Usage (40%), Support Ticket Volume (20%), and Executive Sponsor Turnover (40%).",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -7894,8 +7618,8 @@
     "problem": "Which retention tactic actually works? (Discount vs Roadmap).",
     "what_ai_does": "Not all 'Saves' are created equal. analyzes your churn save attempts to determine which tactic (Discount, Executive Call, Roadmap Promise) actually convinces customers to stay.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -7911,8 +7635,8 @@
     "problem": "% of new customers who buy again.",
     "what_ai_does": "Monitors the percentage of new customers who make a second purchase within a 90-day window.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -7928,8 +7652,8 @@
     "problem": "Ensure resellers aren't undercutting your price.",
     "what_ai_does": "Audits reseller pricing data to ensure compliance with Minimum Advertised Price (MAP) policies.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -7979,8 +7703,8 @@
     "problem": "True profit after returns.",
     "what_ai_does": "Calculates 'Net Profit' per SKU after factoring in return costs and refund rates.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to Claude to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to Claude and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "Claude",
@@ -7996,8 +7720,8 @@
     "problem": "Find users active on the platform without a contract.",
     "what_ai_does": "Cross-references platform login logs against active CRM contracts to find zombie users or expired accounts still using the product.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -8251,8 +7975,8 @@
     "problem": "Trigger when a prospect raises prices.",
     "what_ai_does": "When a SaaS company raises prices, their customers get annoyed and look for alternatives. monitors the `/pricing` pages of your competitors and alerts you if the numbers change, so you can run a \"Price Hike Refugee\" campaign.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -8370,8 +8094,8 @@
     "problem": "Visualize exactly when and why your deals are dying.",
     "what_ai_does": "Scan 50+ Zoom transcripts. key-value pairs the \"Objection\" vs \"Minute Mark\". visualizes if you are losing people at Pricing (min 20) or Intro (min 2).",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to Claude to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to Claude and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "Claude",
@@ -8404,8 +8128,8 @@
     "problem": "Stop showing up and throwing up.",
     "what_ai_does": "Analyzes call metrics to flag calls where the rep spoke > 60% of the time.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to Claude to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to Claude and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "Claude",
@@ -8829,8 +8553,8 @@
     "problem": "Are your SDRs actually touching all their Tier 1s?",
     "what_ai_does": "Calculates the % of Tier 1 accounts in a territory that have received at least one activity in the last 30 days.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -9186,8 +8910,8 @@
     "problem": "Find broken links and non-indexable pages in your sitemap.",
     "what_ai_does": "Scan an XML sitemap file, checks the HTTP status code of every URL, and flags any that are broken (404), redirected (301), or server errors (500).",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -9322,8 +9046,8 @@
     "problem": "Spot fake followers on your account or a competitor's.",
     "what_ai_does": "Follower count is a vanity metric. audits your own follower list (if provided) or researches a competitor's engagement to detect 'Bot Signals' like low engagement-to-follower ratios or repetitive comment patterns.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -9611,8 +9335,8 @@
     "problem": "Stop your support team from sounding like robots.",
     "what_ai_does": "Reviews closed tickets. Scores responses on \"Warmth\", \"Acknowledgment\", and \"Solution Clarity\". Flags processs who are too copy-paste heavy.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to Claude to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to Claude and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "Claude",
@@ -9679,8 +9403,8 @@
     "problem": "Build a SWOT matrix from your notes or market research.",
     "what_ai_does": "Strategic planning requires honesty. reads your internal brainstorm notes (if provided) or performs deep market research on your niche to build a comprehensive matrix of Strengths, Weaknesses, Opportunities, and Threats.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to Claude to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to Claude and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "Claude",
@@ -9713,8 +9437,8 @@
     "problem": "Find unused licenses in your sales tech stack.",
     "what_ai_does": "Compares active employees against licensed users in tools like Salesforce or ZoomInfo to find waste.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -9730,8 +9454,8 @@
     "problem": "Technical Audit + AI Search Optimization (GEO)",
     "what_ai_does": "Performs full-site technical audits with a focus on modern AI Search Overviews. checks for standard technical failures while analyzing content structure for citation-readiness in Perplexity and SearchGPT.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to Midjourney to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to Midjourney and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "Midjourney",
@@ -9934,8 +9658,8 @@
     "problem": "Identify deals stuck in Legal or Security Review.",
     "what_ai_does": "Analyzes how long deals sit in specific 'Slow Stages' like Legal to identify process friction.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to Claude to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to Claude and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "Claude",
@@ -10087,8 +9811,8 @@
     "problem": "Does 'Secure Checkout' actually help?",
     "what_ai_does": "Analyzes A/B test results for different trust badges (Free Shipping vs Secure Checkout) to determine the winner.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to Claude to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to Claude and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "Claude",
@@ -10189,8 +9913,8 @@
     "problem": "Which first line gets the click?",
     "what_ai_does": "Analyzes the click-through rate of different Twitter/X thread opening lines.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to Claude to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to Claude and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "Claude",
@@ -10223,8 +9947,8 @@
     "problem": "Find the hidden gems in your tagged photos/videos.",
     "what_ai_does": "Scrapes posts tagged with your brand. Scores them on \"Lighting\", \"Product Visibility\", and \"Authenticity\" to surface the best ones for paid ads.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to Claude to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to Claude and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "Claude",
@@ -10342,8 +10066,8 @@
     "problem": "Map features to pain points.",
     "what_ai_does": "Sales reps pitch features; they should pitch solutions. takes a list of your features and a list of buyer personas, generating a matrix of 'How Feature X Use this to Persona Y', used for battlecards.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -10478,8 +10202,8 @@
     "problem": "Standardize your tracking URLs and fix messy analytics data.",
     "what_ai_does": "Reads a list of campaign URLs and validates them against strict naming conventions (e.g., lowercase only, no spaces, specific allowed sources), flagging \"illegal\" tags.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to Claude to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to Claude and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "Claude",
@@ -10495,8 +10219,8 @@
     "problem": "An eye-tracking lab in your terminal.",
     "what_ai_does": "Why aren't they converting? uses Vision capabilities to audit multiple landing page screenshots, identifying visual clutter, low-contrast buttons, and confusing layouts that text-only audits miss.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to Claude Code to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to Claude Code and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "Claude Code",
@@ -10580,8 +10304,8 @@
     "problem": "Where do they stop watching?",
     "what_ai_does": "Analyzes drop-off timestamps in product demo videos to identify boring sections.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to Claude to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to Claude and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "Claude",
@@ -10699,8 +10423,8 @@
     "problem": "Identify hot leads based on minutes watched.",
     "what_ai_does": "Scores webinar attendees based on how long they stayed and if they asked questions.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -10750,8 +10474,8 @@
     "problem": "Did we actually make money on that event?",
     "what_ai_does": "Calculates Cost Per Lead (CPL) and Pipeline ROI for a webinar event.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to Claude to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to Claude and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "Claude",
@@ -10886,8 +10610,8 @@
     "problem": "Are we bidding against our retailers?",
     "what_ai_does": "Scan if you are bidding on keywords where your wholesale partners (e.g. Nordstrom, Sephora) already dominate the SERP.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -10971,8 +10695,8 @@
     "problem": "Turn messy CRM notes into clean win/loss insights.",
     "what_ai_does": "Clusters qualitative CRM reason notes into standardized categories for executive reporting.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to Claude to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to Claude and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "Claude",
@@ -11141,8 +10865,8 @@
     "problem": "What are people searching for that you don't have?",
     "what_ai_does": "Identifies site search terms that yield 0 products to guide merchandising or SEO redirect strategy.",
     "howToDoIt": [
-      "Export a report of your current activity, like ad performance or support ticket logs.",
-      "Upload the data to ChatGPT to spot the hidden trends that a manual review would miss.",
+      "Pull a report of your latest performance metrics—like ad spend, sales call logs, or website visits.",
+      "Upload the file to ChatGPT and ask it to highlight the top 3 bottlenecks where you're losing money.",
       "Implement the suggested optimizations to stop wasting time or budget on what isn't working."
     ],
     "bestTool": "ChatGPT",
@@ -11183,40 +10907,6 @@
     "whyThisTool": "It is the most accessible tool for quick drafting, brainstorming, and general business research.",
     "time_saved": "10+ hours saved / month",
     "difficulty": "Strategic",
-    "tools": "Practical Tool"
-  },
-  {
-    "id": "employee-flight-risk-detector",
-    "name": "Identify team burnout before someone quits",
-    "vertical": "HR",
-    "problem": "Burnout and 'Quiet Quitting' are invisible until a resignation letter hits the desk, costing 1.5x salary to replace.",
-    "what_ai_does": "Detect team frustration or 'quiet quitting' in Slack to identify burnout before it happens.",
-    "howToDoIt": [
-      "Export anonymized message data from your public Slack channels.",
-      "Paste the data into Claude (or ChatGPT) and ask it to identify sentiment shifts—rising frustration, disengagement patterns, or mood changes.",
-      "Review the results to identify which teams or departments need a 1-on-1 check-in."
-    ],
-    "bestTool": "Claude",
-    "whyThisTool": "It's better at detecting subtle emotional nuances and reading between the lines in long transcripts than ChatGPT.",
-    "time_saved": "$50k+ saved per prevented resignation",
-    "difficulty": "Practical",
-    "tools": "Practical Tool"
-  },
-  {
-    "id": "market-comp-benchmarker",
-    "name": "Lower your monthly software bills by 20%",
-    "vertical": "Finance",
-    "problem": "Companies overpay for software because they don't have time to research competitor deals or parity pricing.",
-    "what_ai_does": "Lower monthly software bills by 20% by researching competitor prices and drafting negotiation scripts.",
-    "howToDoIt": [
-      "Enter the name of the software tool you are currently paying for into ChatGPT.",
-      "Ask the tool to research current competitor pricing and 'switching promotions' for that specific product.",
-      "Use the generated script to email your account manager and ask for a price match or discount."
-    ],
-    "bestTool": "ChatGPT",
-    "whyThisTool": "ChatGPT is the fastest tool for drafting professional emails and quickly researching public list prices.",
-    "time_saved": "20% saved on annual software spend",
-    "difficulty": "Simple to Start",
     "tools": "Practical Tool"
   }
 ]
