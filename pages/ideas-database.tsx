@@ -1,0 +1,166 @@
+import React, { useState, useMemo } from 'react';
+import Head from 'next/head';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import { Search, Filter, Clock, Zap, ArrowRight, Lightbulb, ChevronDown, CheckCircle } from 'lucide-react';
+import ideasData from '../lib/ideas-data.json';
+
+export default function IdeasDatabase() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedVertical, setSelectedVertical] = useState('All');
+  const [selectedDifficulty, setSelectedDifficulty] = useState('All');
+
+  const verticals = useMemo(() => {
+    const v = new Set(ideasData.map(i => i.vertical));
+    return ['All', ...Array.from(v).sort()];
+  }, []);
+
+  const difficulties = ['All', 'Beginner', 'Intermediate', 'Advanced'];
+
+  const filteredIdeas = useMemo(() => {
+    return ideasData.filter(idea => {
+      const matchesSearch = idea.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
+                           idea.problem.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           idea.what_ai_does.toLowerCase().includes(searchTerm.toLowerCase());
+      const matchesVertical = selectedVertical === 'All' || idea.vertical === selectedVertical;
+      const matchesDifficulty = selectedDifficulty === 'All' || idea.difficulty === selectedDifficulty;
+      return matchesSearch && matchesVertical && matchesDifficulty;
+    });
+  }, [searchTerm, selectedVertical, selectedDifficulty]);
+
+  return (
+    <div className="min-h-screen bg-black text-white selection:bg-[#ccff00] selection:text-black font-mono">
+      <Head>
+        <title>AI Ideas Database | Real AI Examples</title>
+        <meta name="description" content="Browse 600+ AI automation ideas across every department. Find what fits your workflow." />
+      </Head>
+
+      <Navbar />
+
+      <main className="pt-32 pb-24 px-4">
+        <div className="container mx-auto max-w-6xl">
+          {/* Hero Section */}
+          <header className="mb-16 border-l-8 border-[#ccff00] pl-8 py-4">
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#ccff00] text-black text-[10px] font-black uppercase tracking-widest mb-6">
+              <Lightbulb className="w-3 h-3" /> Idea Engine v1.0
+            </div>
+            <h1 className="font-display text-5xl md:text-7xl lg:text-8xl uppercase leading-[0.9] tracking-tighter mb-6">
+              What can you <br />
+              actually <span className="text-[#ccff00]">do?</span>
+            </h1>
+            <p className="text-xl md:text-2xl font-bold text-white/70 max-w-2xl leading-tight">
+              Browse {ideasData.length} automation ideas across every department. <br className="hidden md:block" />
+              Find what fits your workflow.
+            </p>
+          </header>
+
+          {/* Search & Filters */}
+          <div className="sticky top-20 z-40 bg-black/80 backdrop-blur-md py-6 border-y border-white/10 mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+              <div className="md:col-span-2 relative">
+                <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-white/30" />
+                <input 
+                  type="text" 
+                  placeholder="SEARCH BY PROBLEM OR KEYWORD..."
+                  className="w-full bg-white/5 border-2 border-white/10 px-12 py-4 font-black uppercase tracking-widest focus:border-[#ccff00] focus:outline-none transition-colors"
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                />
+              </div>
+              
+              <div className="relative">
+                <select 
+                  className="w-full bg-white/5 border-2 border-white/10 px-4 py-4 font-black uppercase tracking-widest appearance-none focus:border-[#ccff00] focus:outline-none cursor-pointer"
+                  value={selectedVertical}
+                  onChange={(e) => setSelectedVertical(e.target.value)}
+                >
+                  {verticals.map(v => <option key={v} value={v} className="bg-black">{v.toUpperCase()}</option>)}
+                </select>
+                <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-white/30 pointer-events-none" />
+              </div>
+
+              <div className="relative">
+                <select 
+                  className="w-full bg-white/5 border-2 border-white/10 px-4 py-4 font-black uppercase tracking-widest appearance-none focus:border-[#ccff00] focus:outline-none cursor-pointer"
+                  value={selectedDifficulty}
+                  onChange={(e) => setSelectedDifficulty(e.target.value)}
+                >
+                  {difficulties.map(d => <option key={d} value={d} className="bg-black">{d.toUpperCase()}</option>)}
+                </select>
+                <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-white/30 pointer-events-none" />
+              </div>
+            </div>
+          </div>
+
+          {/* Results Info */}
+          <div className="mb-8 flex justify-between items-end border-b border-white/10 pb-4">
+             <div className="text-[10px] font-black uppercase tracking-[0.2em] text-white/40">
+               Showing {filteredIdeas.length} / {ideasData.length} strategic patterns
+             </div>
+             <div className="text-[10px] font-black uppercase tracking-[0.2em] text-[#ccff00]">
+               Status: Systems Operational
+             </div>
+          </div>
+
+          {/* Ideas Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {filteredIdeas.map((idea, idx) => (
+              <div 
+                key={idea.id + idx} 
+                className="group relative bg-white/5 border-2 border-white/10 p-8 hover:border-[#ccff00] transition-all duration-300 flex flex-col"
+              >
+                <div className="flex justify-between items-start mb-6">
+                  <span className="bg-[#ccff00] text-black px-2 py-0.5 text-[10px] font-black uppercase tracking-widest">
+                    {idea.vertical}
+                  </span>
+                  <div className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-white/40">
+                    <Clock className="w-3 h-3" /> {idea.difficulty}
+                  </div>
+                </div>
+
+                <h3 className="text-2xl font-black uppercase leading-tight mb-4 group-hover:text-[#ccff00] transition-colors">
+                  {idea.problem}
+                </h3>
+
+                <p className="text-white/60 mb-8 flex-grow leading-relaxed font-bold">
+                  // {idea.what_ai_does}
+                </p>
+
+                <div className="mt-auto pt-6 border-t border-white/10 flex items-center justify-between">
+                  <div className="flex items-center gap-2 text-[#ccff00] text-[10px] font-black uppercase tracking-widest">
+                    <Zap className="w-3 h-3" /> {idea.time_saved}
+                  </div>
+                  <div className="text-white/20 text-[10px] font-black uppercase tracking-widest italic">
+                    Tool-Agnostic
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {filteredIdeas.length === 0 && (
+            <div className="py-24 text-center border-2 border-dashed border-white/10">
+              <p className="text-2xl font-black uppercase text-white/30">No patterns matched your search parameters.</p>
+              <button 
+                onClick={() => {setSearchTerm(''); setSelectedVertical('All'); setSelectedDifficulty('All');}}
+                className="mt-6 text-[#ccff00] font-black uppercase tracking-widest hover:underline"
+              >
+                Reset System Filters
+              </button>
+            </div>
+          )}
+        </div>
+      </main>
+
+      <Footer />
+
+      <style jsx global>{`
+        @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Mono:wght@400;700&display=swap');
+        
+        .font-display {
+          font-family: 'Archivo Black', sans-serif;
+        }
+      `}</style>
+    </div>
+  );
+}

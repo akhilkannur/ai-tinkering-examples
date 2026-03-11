@@ -20,6 +20,7 @@ export default function Navbar() {
 
   const navLinks = [
     { href: '/ai-examples', label: 'EXAMPLES', mono: true },
+    { href: '/ideas-database', label: 'IDEAS DATABASE', mono: true },
     { href: '/agent-setup-service', label: 'SETUP', mono: true },
     { href: '/build-club', label: 'BUILD CLUB', mono: true },
     { href: '/tools', label: 'TOOL DIRECTORY', mono: true },
