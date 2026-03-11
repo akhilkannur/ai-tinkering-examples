@@ -21,6 +21,9 @@ export default function Footer() {
                 <Link href="/agent-setup-service" className="text-punk-magenta hover:text-white transition-colors">Setup Service</Link>
               </li>
               <li>
+                <Link href="/build-club" className="hover:text-punk-magenta transition-colors hover:underline decoration-wavy text-punk-lime">Build Club</Link>
+              </li>
+              <li>
                 <Link href="/#newsletter" className="hover:text-punk-magenta transition-colors hover:underline decoration-wavy">Newsletter</Link>
               </li>
             </ul>
@@ -105,20 +108,22 @@ export default function Footer() {
                 <Terminal className="w-5 h-5" />
              </div>
              <p className="text-gray-500 text-[10px] font-mono uppercase tracking-[0.2em]">
-               &copy; {new Date().getFullYear()} REAL_AI_EXAMPLES_DPT. MISSION_COMPLETE.
+               &copy; {new Date().getFullYear()} Real AI Examples. Handcrafted for business professionals and AI tinkerers.
              </p>
           </div>
           
           <div className="flex items-center gap-6 px-6 py-3 bg-gray-900 border-2 border-white/20">
             <div className="flex items-center gap-2 text-[9px] font-mono text-gray-400 uppercase tracking-widest">
-                <Cpu className="w-3 h-3 text-punk-lime" /> Optimized_for:
+                <Cpu className="w-3 h-3 text-punk-lime" /> Works with:
             </div>
             <div className="flex flex-wrap items-center gap-4 text-[9px] font-mono font-bold text-white uppercase tracking-widest opacity-80">
-                <span>Claude_Code</span>
+                <span>Claude</span>
                 <span className="text-punk-magenta">/</span>
-                <span>Gemini_CLI</span>
+                <span>ChatGPT</span>
                 <span className="text-punk-magenta">/</span>
-                <span>All_Major_Agentic_Tools</span>
+                <span>Gemini</span>
+                <span className="text-punk-magenta">/</span>
+                <span>All Major Tools</span>
             </div>
           </div>
         </div>

@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Navbar from '../components/Navbar'
-import { Terminal, Cpu, ShieldCheck, Zap, Mail, ArrowRight } from 'lucide-react'
+import { Terminal, Cpu, ShieldCheck, Zap, Mail, ArrowRight, Coffee, Clock } from 'lucide-react'
 
 export default function AboutPage() {
   const SITE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com';
@@ -17,7 +17,7 @@ export default function AboutPage() {
       "@type": "Person",
       "name": "Akhil MK"
     },
-    "description": "A specialized library of agent-ready AI workflows and blueprints for Sales, Marketing, and Ops professionals.",
+    "description": "A database of 600+ practical AI ideas for business professionals and AI tinkerers.",
     "sameAs": [
       "https://twitter.com/realaiexamples",
       "https://linkedin.com/company/realaiexamples"
@@ -28,7 +28,7 @@ export default function AboutPage() {
     <div className="min-h-screen bg-primary-bg font-sans text-black selection:bg-[#ff00ff] selection:text-white overflow-x-hidden">
       <Head>
         <title>My Mission | Real AI Examples</title>
-        <meta name="description" content="Why I built the world's most actionable library of AI blueprints. No hype, just reliable mission files for Gemini and Claude." key="description" />
+        <meta name="description" content="Why I built a database of 600+ practical AI ideas for business professionals and AI tinkerers. No hype, just real ways to get your time back." key="description" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(brandSchema) }}
@@ -43,13 +43,13 @@ export default function AboutPage() {
           {/* Hero Branding */}
           <div className="text-center mb-24">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-black text-[#ccff00] border-2 border-black font-black text-[10px] uppercase tracking-[0.3em] mb-8 transform -rotate-1 brutalist-shadow-sm">
-                <Terminal className="w-3.5 h-3.5" /> My Mission
+                <Coffee className="w-3.5 h-3.5" /> My Mission
             </div>
-            <h1 className="text-5xl md:text-8xl font-display tracking-tight mb-8 uppercase leading-[0.9] text-black glitch-text" data-text="NO HYPE. JUST FILES.">
-              No Hype. <span className="text-[#ff00ff]">Just Files.</span>
+            <h1 className="text-5xl md:text-8xl font-display tracking-tight mb-8 uppercase leading-[0.9] text-black" data-text="REAL IDEAS. REAL RESULTS.">
+              Real Ideas. <span className="text-[#ff00ff]">Real Results.</span>
             </h1>
             <p className="text-xl md:text-2xl text-black max-w-2xl mx-auto font-black leading-relaxed border-l-8 border-[#ccff00] pl-6 py-2 bg-white border-2 border-black brutalist-shadow-sm">
-              I'm replacing "AI Thought Leadership" with high-reliability execution logic.
+              Helping business professionals and AI tinkerers get their time back.
             </p>
           </div>
 
@@ -60,13 +60,13 @@ export default function AboutPage() {
                 <section className="bg-white border-4 border-black p-8 brutalist-shadow">
                     <div className="flex items-center gap-4 mb-6">
                         <div className="w-12 h-12 bg-black flex items-center justify-center text-[#ccff00] border-2 border-black brutalist-shadow-sm">
-                            <Zap className="w-6 h-6" />
+                            <Clock className="w-6 h-6" />
                         </div>
-                        <h2 className="text-2xl md:text-3xl font-display text-black uppercase">The "Arguing" Problem</h2>
+                        <h2 className="text-2xl md:text-3xl font-display text-black uppercase">The "Time" Problem</h2>
                     </div>
-                    <div className="space-y-6 text-lg text-black font-bold leading-relaxed font-mono">
-                        <p>// Most AI content is a waste of time. You spend three hours reading about "the future of work" and end up with zero useful files on your computer.</p>
-                        <p>// I built this because I spent too much time arguing with chatbots and not enough time doing work. I found that if you give Claude or Gemini a very specific, rigid instruction file, it actually does the job.</p>
+                    <div className="space-y-6 text-lg text-black font-bold leading-relaxed">
+                        <p>Most AI content is a waste of time. You spend hours reading about "the future of work" and end up with nothing you can actually use in your workflow tomorrow morning.</p>
+                        <p>I built this because I saw too many professionals and tinkerers struggling to figure out where AI actually fits into their daily tasks. You don't need a PhD in machine learning; you just need to know which repetitive tasks can be handled by a computer so you can focus on the work that matters.</p>
                     </div>
                 </section>
 
@@ -75,10 +75,10 @@ export default function AboutPage() {
                         <div className="w-12 h-12 bg-black flex items-center justify-center text-[#ff00ff] border-2 border-black brutalist-shadow-sm">
                             <ShieldCheck className="w-6 h-6" />
                         </div>
-                        <h2 className="text-2xl md:text-3xl font-display text-black uppercase">The "Mission File" Solution</h2>
+                        <h2 className="text-2xl md:text-3xl font-display text-black uppercase">The Practical Solution</h2>
                     </div>
-                    <p className="text-lg text-black font-bold leading-relaxed font-mono">
-                        // Every blueprint in my library is designed to be a "Mission File" - a single document that tells an agent exactly who to be, what constraints to follow, and exactly what to produce. No fluff. No theory. Just boring, reliable text files that make AI useful for once.
+                    <p className="text-lg text-black font-bold leading-relaxed">
+                        Every idea in this database is designed to be practical and easy to start. We cut through the hype to find real-world ways to save 2-10 hours every week. Whether you're in sales, marketing, or ops, these are the patterns that actually move the needle for individuals who want to work smarter.
                     </p>
                 </section>
 
@@ -86,7 +86,7 @@ export default function AboutPage() {
                     <div className="relative z-10">
                         <div className="bg-black text-white px-2 py-0.5 inline-block font-mono text-[10px] uppercase tracking-widest mb-4">A message from the founder</div>
                         <p className="text-xl text-black font-black italic leading-relaxed mb-8 uppercase">
-                            "I'm not a developer - I'm a tinkerer who got obsessed with making AI actually work for real businesses. I've spent hundreds of hours breaking things, fixing them, and figuring out which workflows actually save time. Now I help founders skip the trial-and-error."
+                            "I'm not a corporate developer—I'm a tinkerer who got tired of seeing AI used for parlor tricks instead of real work. I've spent thousands of hours figuring out which workflows actually save time. My goal is to help you skip the trial-and-error."
                         </p>
                         <div className="flex items-center gap-4 pt-6 border-t-2 border-black/20">
                             <div className="w-16 h-16 rounded-none border-4 border-black brutalist-shadow-sm overflow-hidden rotate-3">
@@ -107,21 +107,21 @@ export default function AboutPage() {
                     <div className="absolute top-0 right-0 p-4 opacity-10">
                         <Cpu className="w-32 h-32 text-black" />
                     </div>
-                    <h3 className="font-display text-xl text-black uppercase tracking-widest mb-12 decoration-wavy underline decoration-[#ff00ff]">System_Stats</h3>
+                    <h3 className="font-display text-xl text-black uppercase tracking-widest mb-12 decoration-wavy underline decoration-[#ff00ff]">The Numbers</h3>
                     <div className="space-y-10">
                         <div>
-                            <div className="text-6xl font-display text-black mb-1 tracking-tighter">700+</div>
-                            <div className="text-xs font-black font-mono text-[#ff00ff] uppercase tracking-widest">Agent_Blueprints</div>
-                        </div>
-                        <div className="h-1 bg-black"></div>
-                        <div>
-                            <div className="text-6xl font-display text-black mb-1 tracking-tighter">500+</div>
-                            <div className="text-xs font-black font-mono text-[#ccff00] uppercase tracking-widest bg-black px-1 inline-block">Consolidated_Files</div>
+                            <div className="text-6xl font-display text-black mb-1 tracking-tighter">600+</div>
+                            <div className="text-xs font-black font-mono text-[#ff00ff] uppercase tracking-widest">Practical Ideas</div>
                         </div>
                         <div className="h-1 bg-black"></div>
                         <div>
                             <div className="text-6xl font-display text-black mb-1 tracking-tighter">100%</div>
-                            <div className="text-xs font-black font-mono text-[#00ffff] uppercase tracking-widest bg-black px-1 inline-block">Operator_Verified</div>
+                            <div className="text-xs font-black font-mono text-[#ccff00] uppercase tracking-widest bg-black px-1 inline-block">Hand-Verified</div>
+                        </div>
+                        <div className="h-1 bg-black"></div>
+                        <div>
+                            <div className="text-6xl font-display text-black mb-1 tracking-tighter">50+</div>
+                            <div className="text-xs font-black font-mono text-[#00ffff] uppercase tracking-widest bg-black px-1 inline-block">Hours Saved Weekly</div>
                         </div>
                     </div>
                 </div>
@@ -132,7 +132,7 @@ export default function AboutPage() {
                         <h3 className="font-display text-2xl text-white uppercase tracking-tight">Get in Touch</h3>
                     </div>
                     <p className="text-sm text-white font-black uppercase mb-8 leading-relaxed">
-                        Have a specific workflow you need built? Found a bug? Shoot me a message.
+                        Have a question about an idea? Want to share how you're using AI? I'd love to hear from you.
                     </p>
                     <a href="mailto:akhil@realaiexamples.com" className="flex items-center justify-between p-4 bg-white border-4 border-black hover:translate-x-1 hover:translate-y-1 transition-all group brutalist-shadow-sm">
                         <span className="text-xs font-black font-mono text-black uppercase tracking-widest">akhil@realaiexamples.com</span>

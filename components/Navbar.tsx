@@ -23,7 +23,6 @@ export default function Navbar() {
     { href: '/ai-examples', label: 'LIBRARY', mono: true },
     { href: '/ideas-database', label: 'IDEAS DATABASE', mono: true },
     { href: '/agent-setup-service', label: 'SETUP', mono: true },
-    { href: '/build-club', label: 'BUILD CLUB', mono: true },
     { href: '/tools', label: 'TOOL DIRECTORY', mono: true },
     { href: '/blog', label: 'BLOG', mono: true },
     { href: '/about', label: 'ABOUT', mono: true },
