@@ -2,7 +2,7 @@ import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { Search, Filter, Clock, Zap, ArrowRight, Lightbulb, ChevronDown, CheckCircle } from 'lucide-react';
+import { Search, Filter, Clock, Zap, ArrowRight, Lightbulb, ChevronDown, CheckCircle, Coffee } from 'lucide-react';
 import ideasData from '../lib/ideas-data.json';
 
 export default function IdeasDatabase() {
@@ -31,8 +31,8 @@ export default function IdeasDatabase() {
   return (
     <div className="min-h-screen bg-black text-white selection:bg-[#ccff00] selection:text-black font-mono">
       <Head>
-        <title>AI Ideas Database | Real AI Examples</title>
-        <meta name="description" content="Browse 600+ AI automation ideas across every department. Find what fits your workflow." />
+        <title>668 Practical Ideas to Save Time | Real AI Examples</title>
+        <meta name="description" content="Browse 668 simple ideas to get your time back. From sales to marketing, find exactly what works for your business." />
       </Head>
 
       <Navbar />
@@ -42,15 +42,15 @@ export default function IdeasDatabase() {
           {/* Hero Section */}
           <header className="mb-16 border-l-8 border-[#ccff00] pl-8 py-4">
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#ccff00] text-black text-[10px] font-black uppercase tracking-widest mb-6">
-              <Lightbulb className="w-3 h-3" /> Idea Engine v1.0
+              <Coffee className="w-3 h-3" /> Practical Business Tools
             </div>
             <h1 className="font-display text-5xl md:text-7xl lg:text-8xl uppercase leading-[0.9] tracking-tighter mb-6">
-              What can you <br />
-              actually <span className="text-[#ccff00]">do?</span>
+              Get your <br />
+              time <span className="text-[#ccff00]">back.</span>
             </h1>
             <p className="text-xl md:text-2xl font-bold text-white/70 max-w-2xl leading-tight">
-              Browse {ideasData.length} automation ideas across every department. <br className="hidden md:block" />
-              Find what fits your workflow.
+              Browse 668 simple ideas to reclaim your schedule. <br className="hidden md:block" />
+              Find what saves you time this week.
             </p>
           </header>
 
@@ -61,7 +61,7 @@ export default function IdeasDatabase() {
                 <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-white/30" />
                 <input 
                   type="text" 
-                  placeholder="SEARCH BY PROBLEM OR KEYWORD..."
+                  placeholder="WHAT PROBLEM ARE YOU SOLVING?..."
                   className="w-full bg-white/5 border-2 border-white/10 px-12 py-4 font-black uppercase tracking-widest focus:border-[#ccff00] focus:outline-none transition-colors"
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
@@ -85,7 +85,10 @@ export default function IdeasDatabase() {
                   value={selectedDifficulty}
                   onChange={(e) => setSelectedDifficulty(e.target.value)}
                 >
-                  {difficulties.map(d => <option key={d} value={d} className="bg-black">{d.toUpperCase()}</option>)}
+                  <option value="All" className="bg-black">ANY DIFFICULTY</option>
+                  <option value="Beginner" className="bg-black">SIMPLE TO START</option>
+                  <option value="Intermediate" className="bg-black">PRACTICAL</option>
+                  <option value="Advanced" className="bg-black">STRATEGIC</option>
                 </select>
                 <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-white/30 pointer-events-none" />
               </div>
@@ -95,10 +98,10 @@ export default function IdeasDatabase() {
           {/* Results Info */}
           <div className="mb-8 flex justify-between items-end border-b border-white/10 pb-4">
              <div className="text-[10px] font-black uppercase tracking-[0.2em] text-white/40">
-               Showing {filteredIdeas.length} / {ideasData.length} strategic patterns
+               Showing {filteredIdeas.length} / {ideasData.length} practical ideas
              </div>
              <div className="text-[10px] font-black uppercase tracking-[0.2em] text-[#ccff00]">
-               Status: Systems Operational
+               Status: Ready to use
              </div>
           </div>
 
@@ -114,7 +117,7 @@ export default function IdeasDatabase() {
                     {idea.vertical}
                   </span>
                   <div className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-white/40">
-                    <Clock className="w-3 h-3" /> {idea.difficulty}
+                    <Clock className="w-3 h-3" /> {idea.difficulty === 'Beginner' ? 'Simple to Start' : idea.difficulty === 'Intermediate' ? 'Practical' : 'Strategic'}
                   </div>
                 </div>
 
@@ -131,7 +134,7 @@ export default function IdeasDatabase() {
                     <Zap className="w-3 h-3" /> {idea.time_saved}
                   </div>
                   <div className="text-white/20 text-[10px] font-black uppercase tracking-widest italic">
-                    Tool-Agnostic
+                    Practical Tool
                   </div>
                 </div>
               </div>
@@ -140,12 +143,12 @@ export default function IdeasDatabase() {
 
           {filteredIdeas.length === 0 && (
             <div className="py-24 text-center border-2 border-dashed border-white/10">
-              <p className="text-2xl font-black uppercase text-white/30">No patterns matched your search parameters.</p>
+              <p className="text-2xl font-black uppercase text-white/30">No ideas matched your search.</p>
               <button 
                 onClick={() => {setSearchTerm(''); setSelectedVertical('All'); setSelectedDifficulty('All');}}
                 className="mt-6 text-[#ccff00] font-black uppercase tracking-widest hover:underline"
               >
-                Reset System Filters
+                Reset Search Filters
               </button>
             </div>
           )}

@@ -3,74 +3,74 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { Lightbulb, ArrowRight, Zap, Clock, Shield, TrendingUp, Users, Brain, Code, Target, Sparkles } from 'lucide-react';
+import { Lightbulb, ArrowRight, Zap, Clock, Shield, TrendingUp, Users, Brain, Code, Target, Sparkles, Coffee } from 'lucide-react';
 import FeaturedIn from '../components/FeaturedIn';
 
-// Hand-picked "Featured Ideas" from lib/ideas-data.json
+// Plain-English "Featured Ideas" 
 const featuredIdeas = [
   {
     "id": "10k-report-prospector",
     "vertical": "Sales",
-    "problem": "Turn 'Risk Factors' into 'Sales Pitches'.",
-    "what_ai_does": "Parses a public company's 10-K (Annual Report) to extract specific 'Risk Factors' and generates a cold email positioning your product as the solution.",
+    "problem": "Stop manually reading 100-page financial reports.",
+    "what_ai_does": "This tool scans annual reports for you, pulls out the 'Risk Factors', and writes a personalized email showing how you can help.",
     "time_saved": "2-5 hours / week",
-    "difficulty": "Intermediate"
+    "difficulty": "Beginner"
   },
   {
     "id": "employee-flight-risk-detector",
     "vertical": "HR",
-    "problem": "Burnout and 'Quiet Quitting' are invisible until a resignation letter hits the desk.",
-    "what_ai_does": "Analyzes anonymized sentiment trends in Slack/Public channels to flag rising friction or 'disengagement clusters'.",
-    "time_saved": "$50k+ (Per Hire)",
-    "difficulty": "Intermediate"
+    "problem": "Identify team burnout before someone quits.",
+    "what_ai_does": "It notices when team frustration or 'quiet quitting' starts to happen in Slack so you can talk to them before they leave.",
+    "time_saved": "$50k+ saved / year",
+    "difficulty": "Beginner"
   },
   {
     "id": "canonical-tag-auditor",
     "vertical": "Marketing",
-    "problem": "One scan to find Canonical conflicts, NoIndex errors, and Broken Links.",
-    "what_ai_does": "Technical debt is invisible until traffic drops. This agent crawls your site to identify 'silent killers' before they kill your rankings.",
-    "time_saved": "2-5 hours / week",
-    "difficulty": "Intermediate"
+    "problem": "Fix the hidden errors hurting your Google rankings.",
+    "what_ai_does": "It finds the silent technical errors on your website that prevent your pages from showing up in search results.",
+    "time_saved": "5 hours / month",
+    "difficulty": "Beginner"
   },
   {
     "id": "vendor-negotiation-script",
     "vertical": "Executive",
-    "problem": "Save 20% on your software stack from a bill or a name.",
-    "what_ai_does": "Researches competitor deals and parity pricing to find leverage, then drafts a high-pressure negotiation script for your specific vendor.",
-    "time_saved": "$5k - $50k / year",
-    "difficulty": "Intermediate"
+    "problem": "Lower your monthly software bills by 20%.",
+    "what_ai_does": "It researches competitor prices and writes a polite but firm script for you to use to get a better deal on your software.",
+    "time_saved": "$5,000 / year",
+    "difficulty": "Beginner"
   },
   {
     "id": "contract-redline-risk-spotter",
     "vertical": "Legal",
-    "problem": "Spot deal-killing clauses in legal redlines instantly.",
-    "what_ai_does": "Analyzes the diff of a contract and highlights high-risk changes (Liability, IP, Payment terms) that Sales needs to push back on.",
+    "problem": "Spot the 'gotchas' in your contracts instantly.",
+    "what_ai_does": "It scans new legal documents and highlights the risky clauses (like liability or payment terms) that you might miss.",
     "time_saved": "2 hours / contract",
     "difficulty": "Beginner"
   },
   {
     "id": "qbr-deck-generator",
     "vertical": "Customer Success",
-    "problem": "Don't just report numbers. Tell a story of Value vs. Friction.",
-    "what_ai_does": "Analyzes raw Usage Logs and Support Tickets to calculate an account 'Health Score' and generates a 5-slide strategic growth deck.",
-    "time_saved": "10 hours / client",
-    "difficulty": "Intermediate"
+    "problem": "Send better client reports in half the time.",
+    "what_ai_does": "It turns your raw customer data into a clear story that shows exactly how much value you've delivered this month.",
+    "time_saved": "10 hours / month",
+    "difficulty": "Beginner"
   },
   {
     "id": "career-page-keyword-alert",
     "vertical": "Sales",
-    "problem": "Trigger outreach when a prospect posts a specific job role.",
-    "what_ai_does": "Hiring is the strongest signal of budget. This agent monitors 100+ careers pages and alerts you when a 'Target Role' is posted.",
-    "time_saved": "10+ hours / month",
-    "difficulty": "Intermediate"
+    "problem": "Know exactly when a lead starts hiring.",
+    "what_ai_does": "Hiring is a sign of budget. This notifies you the second a target company posts a job for a role that needs your product.",
+    "time_saved": "5 hours / week",
+    "difficulty": "Beginner"
   },
   {
     "id": "board-deck-narrative-factory",
     "vertical": "Executive",
-    "problem": "Founders send raw metrics to the Board; directors get confused.",
-    "what_ai_does": "Ingests P&L and Sales data to draft the core narrative slides: The Win, The Bottleneck, and The Strategic Pivot.",
+    "problem": "Stop sending messy spreadsheets to your board.",
+    "what_ai_does": "It looks at your numbers and helps you write a clear story about what's working and what needs to change for your directors.",
     "time_saved": "15 hours / quarter",
-    "difficulty": "Intermediate"
+    "difficulty": "Beginner"
   }
 ];
 
@@ -78,30 +78,29 @@ export default function IdeasHomepage() {
   return (
     <div className="min-h-screen bg-black text-white selection:bg-[#ccff00] selection:text-black font-mono">
       <Head>
-        <title>What can you actually do with AI agents? | Real AI Examples</title>
-        <meta name="description" content="Browse 660+ AI automation ideas across every department. Find what fits your workflow." />
+        <title>How much time can you save this week? | Real AI Examples</title>
+        <meta name="description" content="Browse 668 practical ideas to get your time back. From sales to marketing, find exactly what works for your business." />
       </Head>
 
       <Navbar />
 
       <main>
-        {/* HERO: IDEA-FIRST */}
+        {/* HERO: PRACTICAL & Conversational */}
         <section className="pt-40 pb-24 px-4 border-b border-white/10">
           <div className="container mx-auto max-w-6xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#ccff00] text-black text-[10px] font-black uppercase tracking-widest mb-8">
-              <Sparkles className="w-3 h-3" /> Inspiration Layer v2.0
+              <Coffee className="w-3 h-3" /> Practical Business Tools
             </div>
             
             <h1 className="font-display text-6xl md:text-9xl uppercase leading-[0.8] tracking-tighter mb-12">
-              What can you <br />
-              actually <span className="text-[#ccff00]">do?</span>
+              Get your <br />
+              time <span className="text-[#ccff00]">back.</span>
             </h1>
 
             <div className="grid lg:grid-cols-2 gap-16 items-start">
               <div className="space-y-8">
                 <p className="text-xl md:text-3xl font-bold leading-tight text-white/90">
-                  Browse 668 AI automation ideas across every department. <br />
-                  <span className="text-white/40">Find the specific pattern that fits your workflow.</span>
+                  Stop wasting hours on repetitive tasks. Browse 668 practical ideas to reclaim your schedule and focus on what actually grows your business.
                 </p>
                 
                 <div className="pt-6">
@@ -109,7 +108,7 @@ export default function IdeasHomepage() {
                     href="/ideas-database"
                     className="inline-flex items-center gap-4 bg-[#ccff00] text-black px-10 py-6 font-display text-2xl uppercase hover:translate-x-1 hover:translate-y-1 transition-transform brutalist-shadow-white"
                   >
-                    Explore Ideas <ArrowRight className="w-8 h-8" strokeWidth={3} />
+                    Browse 668 Ideas <ArrowRight className="w-8 h-8" strokeWidth={3} />
                   </Link>
                 </div>
               </div>
@@ -117,15 +116,15 @@ export default function IdeasHomepage() {
               <div className="bg-white/5 border border-white/10 p-8 hidden lg:block">
                  <div className="flex items-center gap-2 mb-6 border-b border-white/10 pb-4">
                    <div className="w-3 h-3 bg-[#ccff00] rounded-full"></div>
-                   <span className="text-[10px] text-white/40 font-black tracking-widest uppercase">system / idea-engine / random_sample</span>
+                   <span className="text-[10px] text-white/40 font-black tracking-widest uppercase">Quick Samples / Find Your Business Type</span>
                 </div>
                 <div className="space-y-4 text-sm font-bold">
-                  <div className="text-[#ccff00]"> {'>'} Pattern: The 10-K Stitcher</div>
-                  <div className="text-white/40 italic">// Turn public risk factors into sales pitches.</div>
-                  <div className="text-[#ccff00] pt-4"> {'>'} Pattern: Employee Flight Risk</div>
-                  <div className="text-white/40 italic">// Detect churn signals before they resign.</div>
-                  <div className="text-[#ccff00] pt-4"> {'>'} Pattern: Vendor Negotiator</div>
-                  <div className="text-white/40 italic">// Save 20% on software stacks via AI scripts.</div>
+                  <div className="text-[#ccff00]"> {'>'} Sales: Personalized Research</div>
+                  <div className="text-white/40 italic">// Stop reading 100-page reports manually.</div>
+                  <div className="text-[#ccff00] pt-4"> {'>'} HR: Identify Burnout Early</div>
+                  <div className="text-white/40 italic">// Catch team frustration before they quit.</div>
+                  <div className="text-[#ccff00] pt-4"> {'>'} Finance: Lower Your Bills</div>
+                  <div className="text-white/40 italic">// Save 20% on your monthly software costs.</div>
                 </div>
               </div>
             </div>
@@ -139,11 +138,11 @@ export default function IdeasHomepage() {
           <div className="container mx-auto max-w-6xl">
             <div className="flex justify-between items-end mb-12">
               <h2 className="font-display text-4xl uppercase leading-[0.9] tracking-tighter">
-                Sample <br />
-                <span className="text-[#ccff00]">Patterns.</span>
+                What's <br />
+                <span className="text-[#ccff00]">Possible.</span>
               </h2>
               <div className="text-[10px] font-black uppercase tracking-[0.2em] text-white/40 hidden md:block">
-                Curated samples from 668 ideas
+                Sample ideas that save 2-10 hours per week
               </div>
             </div>
 
@@ -155,7 +154,7 @@ export default function IdeasHomepage() {
                       {idea.vertical}
                     </span>
                     <div className="text-[10px] font-black uppercase tracking-widest text-white/40">
-                      {idea.difficulty}
+                      Simple to Start
                     </div>
                   </div>
                   
@@ -179,7 +178,7 @@ export default function IdeasHomepage() {
                 href="/ideas-database"
                 className="inline-flex items-center gap-2 border-2 border-[#ccff00] text-[#ccff00] px-8 py-4 font-black uppercase tracking-widest hover:bg-[#ccff00] hover:text-black transition-colors"
               >
-                Explore All 668 Patterns <ArrowRight className="w-4 h-4" />
+                Explore All 668 Ideas <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           </div>
@@ -188,14 +187,14 @@ export default function IdeasHomepage() {
         {/* SECONDARY INFO */}
         <section className="py-24 px-4 border-t border-white/10">
           <div className="container mx-auto max-w-6xl text-center">
-            <p className="text-white/40 font-black uppercase tracking-[0.3em] text-xs mb-8">Proof of Work</p>
+            <p className="text-white/40 font-black uppercase tracking-[0.3em] text-xs mb-8">Work Smarter, Not Harder</p>
             <h2 className="text-2xl md:text-4xl font-bold max-w-3xl mx-auto leading-tight">
-              Every idea in this database is backed by a <span className="text-[#ccff00]">functional technical blueprint</span> we use ourselves.
+              Every idea is practical, easy to start, and designed to save you <span className="text-[#ccff00]">real time and money.</span>
             </h2>
             <div className="mt-12 flex flex-wrap justify-center gap-12 opacity-30">
-               <div className="flex items-center gap-2"><Target className="w-5 h-5" /> ROI-FOCUSED</div>
-               <div className="flex items-center gap-2"><Users className="w-5 h-5" /> OPERATOR-GRADE</div>
-               <div className="flex items-center gap-2"><Brain className="w-5 h-5" /> TOOL-AGNOSTIC</div>
+               <div className="flex items-center gap-2"><Clock className="w-5 h-5" /> SAVES TIME</div>
+               <div className="flex items-center gap-2"><Target className="w-5 h-5" /> EASY TO START</div>
+               <div className="flex items-center gap-2"><Brain className="w-5 h-5" /> PRACTICAL</div>
             </div>
           </div>
         </section>
