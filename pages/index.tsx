@@ -72,7 +72,7 @@ export default function IdeasHomepage() {
         <section className="pt-40 pb-24 px-4 border-b border-white/10">
           <div className="container mx-auto max-w-6xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#ccff00] text-black text-[10px] font-black uppercase tracking-widest mb-8">
-              <Coffee className="w-3 h-3" /> Practical Business Tools
+              <Coffee className="w-3 h-3" /> Practical Business Ideas
             </div>
             
             <h1 className="font-display text-6xl md:text-9xl uppercase leading-[0.8] tracking-tighter mb-12">
