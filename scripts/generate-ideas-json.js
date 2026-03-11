@@ -1425,10 +1425,1110 @@ const manualOverrides = {
     "howToDoIt": [
       "Provide the URLs of your competitor's blog or social profiles to the AI.",
       "Ask it to 'Identify the top 3 rising topics' based on recent posting frequency.",
-      "Review the 'Pillar Analysis' and adjust your own content or product strategy to counter their new positioning."
+      "Receive a daily 'Link Status' report to ensure your most important traffic source is never sending users to a dead end."
+    ],
+    "bestTool": "Claude Code",
+    "whyThisTool": "Can directly crawl URLs and interpret technical HTTP redirect chains and status codes."
+  },
+  "link-magnet-stats-builder": {
+    "problem": "Generic blog posts don't earn backlinks; you need 'Original Data' or a 'State of the Industry' report to convince high-authority sites to link to you.",
+    "what_ai_does": "It researches recent industry statistics and generates the React/Tailwind code to visualize them as high-conversion Hero Cards and CSS data charts, creating an instant 'Link Magnet' landing page.",
+    "howToDoIt": [
+      "Provide a topic (e.g., 'AI in Sales 2026') to the AI.",
+      "Ask it to 'Find 3 anchor stats' and generate a Next.js page with Tailwind-styled stat cards.",
+      "Publish the 'State of the Industry' page and pitch it to journalists as a source for their upcoming stories."
+    ],
+    "bestTool": "Claude Code",
+    "whyThisTool": "Can directly search the web for data and generate production-ready React/Tailwind code in one run."
+  },
+  "list-segmentation-logic-validator": {
+    "problem": "Marketing automation 'glitches' often cause customers to receive 'New Prospect' discounts, leading to awkward support tickets and lost revenue.",
+    "what_ai_does": "It audits your contact database to identify 'Segmentation Conflicts'—like users tagged as both 'Customer' and 'Lead'—ensuring your email targeting is 100% accurate.",
+    "howToDoIt": [
+      "Upload a CSV of your contacts including their 'Status' and 'List Tags'.",
+      "Ask the AI to 'Flag any record with conflicting tags' (e.g., Status=Customer AND List=Cold_Nurture).",
+      "Clean your 'Conflict List' to prevent embarrassing email overlaps and protect your brand reputation."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing logical set-subtraction and identifying contradictions in large datasets."
+  },
+  "local-market-analyst": {
+    "problem": "Agency prospecting is slow; you need a verified list of every business in a specific niche and city, including their current reputation score, to build a high-volume sales pipeline.",
+    "what_ai_does": "It builds a local business database for any niche/city combination, identifying 'Prime Leads' with 3.5-4.2 star ratings who are the highest-intent buyers for reputation management services.",
+    "howToDoIt": [
+      "Provide a list of 10 target cities and a niche (e.g., 'Coffee Shops').",
+      "Ask the AI to 'Extract business names, ratings, and owner names' from Google Maps.",
+      "Review the 'Local Market Factory' report to prioritize your outreach to businesses that are one 5-star review away from ranking #1."
+    ],
+    "bestTool": "Claude Code",
+    "whyThisTool": "Can directly query Maps data and perform high-precision filtering based on review metrics."
+  },
+  "local-seo-audit": {
+    "problem": "Franchises often have inconsistent NAP data (Name, Address, Phone) across 50+ locations, causing Google to lower their local search rankings.",
+    "what_ai_does": "It audits your entire fleet of Google Business Profiles to identify NAP inconsistencies and unanswered negative reviews, generating a prioritized 'Fix List' for every branch manager.",
+    "howToDoIt": [
+      "Upload a CSV of your branch locations and their current GMB URLs.",
+      "Ask the AI to 'Check for address mismatches and 0% review response rates'.",
+      "Assign the 'Franchise Fix List' to your local teams to clean up your map presence and increase foot traffic."
     ],
     "bestTool": "Claude",
-    "whyThisTool": "Superior at semantic clustering and identifying strategic themes across long lists of titles."
+    "whyThisTool": "Superior at researching local search landscapes and identifying subtle data inconsistencies."
+  },
+  "log-file-parser-mock": {
+    "problem": "Waiting for 'Real Data' to test your analytics dashboard delays your launch; you need high-fidelity 'Mock Data' that mirrors your actual log structure.",
+    "what_ai_does": "It generates thousands of rows of realistic technical logs (JSON or CSV) based on your specific schema, allowing you to stress-test your monitoring tools before going live.",
+    "howToDoIt": [
+      "Provide a sample log entry or your database schema to the AI.",
+      "Ask it to 'Generate 5,000 rows of mock logs' with realistic timestamps and error codes.",
+      "Use the 'Synthetic Logs' to build and verify your analytics dashboards without using sensitive customer data."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at generating high-volume structured text and following strict formatting schemas."
+  },
+  "logo-to-brand-kit": {
+    "problem": "Small businesses have a logo but no 'Brand Identity', leading to inconsistent ads and social posts that look amateur.",
+    "what_ai_does": "It analyzes your logo to extract a dominant color palette and maps it to a 'Brand Archetype' (e.g., Blue = Trust), generating a complete creative brief for your next campaign.",
+    "howToDoIt": [
+      "Upload your logo image to an AI with vision capabilities.",
+      "Ask it to 'Extract hex codes and define our brand personality' based on color psychology.",
+      "Use the 'Brand Psychology Brief' to guide your designers or AI image generators to maintain a consistent visual style."
+    ],
+    "bestTool": "ChatGPT (Vision)",
+    "whyThisTool": "Best-in-class color extraction and ability to map visual cues to abstract brand archetypes."
+  },
+  "lookalike-audience-seeder": {
+    "problem": "Lookalike audiences are only as good as the 'Seed'; if you upload your whole customer list, you'll find 'Average' prospects rather than 'Whales'.",
+    "what_ai_does": "It filters your customer database for the 'Top 10%' by LTV and standardized the data for secure upload, ensuring your ad platform finds more of your highest-value buyers.",
+    "howToDoIt": [
+      "Export your customer list with LTV and purchase frequency into a CSV.",
+      "Ask the AI to 'Filter for the VIP segment' and format for Facebook/LinkedIn upload.",
+      "Upload the 'LAL Seed' to your ad manager to find new prospects who mirror your most successful customers."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing data cleaning and following rigid ad platform schema requirements."
+  },
+  "lookalike-cloner": {
+    "problem": "You want to find new prospects that look exactly like your best customers, but you don't know their tech stack or hiring patterns.",
+    "what_ai_does": "It reverse-engineers the 'Digital Blueprint' of your top 3 customers—identifying their tech stack and ICP—and then finds 20+ identical companies for your sales team.",
+    "howToDoIt": [
+      "Provide the URLs of your 3 best customers to the AI.",
+      "Ask it to 'Identify common tech signatures and growth triggers' across all three.",
+      "Review the 'Golden Lead List' to prioritize outreach to prospects who are pre-qualified based on their similarity to your winners."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at researching business blueprints and identifying strategic similarities across different domains."
+  },
+  "lost-deal-reviver": {
+    "problem": "Leads lost 6 months ago due to 'Missing Features' are your easiest wins today, but sales reps forget to follow up when those features finally launch.",
+    "what_ai_does": "It cross-references your 'Closed-Lost' reasons with your recent product changelog to draft hyper-relevant 'Revival' emails that prove you've solved their specific problem.",
+    "howToDoIt": [
+      "Upload a CSV of leads lost to 'Missing Feature X' and a summary of your recent launches.",
+      "Ask the AI to 'Draft a low-pressure revival email' mentioning the specific new feature.",
+      "Launch the 'Reviver Campaign' to reclaim high-intent prospects who already know your brand."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at drafting authentic, non-salesy follow-up copy that references specific past context."
+  },
+  "loyalty-program-redemption-rate": {
+    "problem": "Points programs are a financial liability on your balance sheet; if your 'Redemption Rate' is low, your loyalty program is failing to drive repeat purchases.",
+    "what_ai_does": "It tracks the ratio of issued vs. redeemed points over time, flagging periods of low engagement and suggesting 'Surprise & Delight' campaigns to clear the liability.",
+    "howToDoIt": [
+      "Upload a CSV of your monthly loyalty points issued and redeemed.",
+      "Ask the AI to 'Calculate the redemption velocity' and flag any month with <10% usage.",
+      "Launch a 'Points Expiry' or 'Bonus Reward' campaign to re-engage your inactive fans and clear the financial debt."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing financial ratio calculations and identifying trends in loyalty data."
+  },
+  "lp-dead-link-auditor": {
+    "problem": "Sending paid traffic to a '404 Page' is the fastest way to set your ad budget on fire; but manual link checks on 50 landing pages take all day.",
+    "what_ai_does": "It automatically audits every button and link on your landing pages to verify they are live and correctly tagged with UTMs, ensuring zero wasted clicks.",
+    "howToDoIt": [
+      "Upload a CSV of your landing page URLs and their primary CTA targets.",
+      "Ask the AI to 'Check for 404 status codes and missing utm_ tags'.",
+      "Fix the 'Broken LP Links' immediately to stop wasting ad spend on dead ends."
+    ],
+    "bestTool": "Claude Code",
+    "whyThisTool": "Can directly crawl live site links and interpret technical HTTP status codes."
+  },
+  "ma-integration-pain-prospector": {
+    "problem": "Companies going through a Merger or Acquisition (M&A) are in operational chaos; they have immediate budget for data migration and systems integration tools.",
+    "what_ai_does": "It identifies recently acquired companies and predicts their #1 'Tech Clash' (e.g., Salesforce vs. HubSpot), creating a high-intent lead list for integration consultants.",
+    "howToDoIt": [
+      "Provide a list of recently announced M&A deals to the AI.",
+      "Ask it to 'Predict the most likely system integration pains' based on the two companies' tech stacks.",
+      "Reach out to the VP of IT with a 'Seamless Consolidation' pitch tailored to their new parent company's stack."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at identifying strategic business signals and predicting technical friction from M&A news."
+  },
+  "market-entry-simulator": {
+    "problem": "Expanding into a new country (e.g., Germany or Japan) without understanding local regulations and cultural friction leads to expensive launch failures.",
+    "what_ai_does": "It simulates a market entry for your product—identifying specific GDPR, localization, and competitive blockers you'll face—before you spend a dollar on hiring.",
+    "howToDoIt": [
+      "Provide your product type and target country (e.g., 'HR Tech in Germany').",
+      "Ask the AI to 'Simulate the top 3 entry risks' including specific regulatory hurdles.",
+      "Review the 'Market Entry Simulator' report to adjust your product roadmap for local compliance before you launch."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at researching international business law and cultural market nuances."
+  },
+  "marketing-agency-client-list-miner": {
+    "problem": "Companies that hire 'Luxury Branding Agencies' have massive budgets; but finding their client names requires manual digging through agency portfolios.",
+    "what_ai_does": "It reverse-engineers high-end agency portfolios to extract a list of their recent clients, providing you with a list of proven high-ticket buyers in your niche.",
+    "howToDoIt": [
+      "Provide the URL of a top-tier agency's 'Work' or 'Case Studies' page.",
+      "Ask the AI to 'Extract the company names and project types' for the last 2 years.",
+      "Reach out to the CMO of those companies with a complementary service (e.g., 'Love your new Pentagram branding, we can help you scale the ads for it')."
+    ],
+    "bestTool": "Claude Code",
+    "whyThisTool": "Can directly crawl portfolio pages and extract structured business names from visual/textual case studies."
+  },
+  "marketing-channel-velocity-tracker": {
+    "problem": "You might get leads from both SEO and Ads, but you don't know which channel actually closes the FASTEST, leading to poor budget allocation.",
+    "what_ai_does": "It calculates the average 'Lead-to-Close' days per channel, identifying which sources drive 'Quick Wins' vs. 'Long Grinds' so you can optimize for cash flow.",
+    "howToDoIt": [
+      "Upload a CSV of your closed deals including 'Lead Date' and 'Source'.",
+      "Ask the AI to 'Calculate the average cycle time per channel'.",
+      "Review the 'Lead Source Velocity' report to decide if you should shift more budget to the channels that close 2x faster."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing date-based calculations and identifying efficiency patterns in sales data."
+  },
+  "marketing-spend-anomaly-detector": {
+    "problem": "Runaway ad budgets can burn $10k in a weekend due to a 'Bug' or broad match error; you need an instant alert the second spend spikes.",
+    "what_ai_does": "It compares yesterday's ad spend against a 7-day moving average, flagging any deviation >20% for an immediate safety audit.",
+    "howToDoIt": [
+      "Upload your daily spend logs from Facebook/Google Ads into a CSV.",
+      "Ask the AI to 'Flag any platform where spend spiked >1.5x the weekly average'.",
+      "Review the 'Spend Alerts' to catch technical ad errors before they deplete your entire monthly budget."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Excellent for anomaly detection and performing rolling average math across large datasets."
+  },
+  "mdf-spend-auditor": {
+    "problem": "Market Development Funds (MDF) are often wasted; partners submit receipts for 'Ads' that don't match your approved guidelines or budgets.",
+    "what_ai_does": "It automatically reconciles partner receipts against your approval logs, flagging overspends and non-compliant requests to protect your marketing budget.",
+    "howToDoIt": [
+      "Upload a CSV of partner-submitted receipts and your MDF approval log.",
+      "Ask the AI to 'Reconcile amounts and flag any receipt above the approved limit'.",
+      "Generate a 'MDF Payout Schedule' that only includes compliant, verified partner expenses."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at data reconciliation and following strict financial compliance rules."
+  },
+  "meeting-action-item-enforcer": {
+    "problem": "Valuable ideas from meetings are forgotten the second the Zoom ends; you need a project manager that never misses a 'Next Step'.",
+    "what_ai_does": "It parses your meeting transcripts for commitments (e.g., 'I will...') and creates an automated checklist, flagging any tasks that aren't marked done in the next session.",
+    "howToDoIt": [
+      "Upload your meeting transcripts or Zoom AI summaries into a CSV.",
+      "Ask the AI to 'Extract all action items and assignees'.",
+      "Review the 'Action Item Checklist' during your next sync to ensure 100% accountability for the team."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at identifying intent and extract commitments from conversational text."
+  },
+  "meeting-density-tracker": {
+    "problem": "Sales reps spend 50%+ of their day in 'Internal Syncs' rather than selling; you need to audit their calendars to protect their revenue-generating time.",
+    "what_ai_does": "It analyzes rep calendar logs to calculate the percentage of time spent in Internal vs. External meetings, flagging 'Admin Bloat' that is killing productivity.",
+    "howToDoIt": [
+      "Upload a CSV of your sales team's calendar events (Title, Duration, Type).",
+      "Ask the AI to 'Calculate the % of day spent in external vs internal meetings'.",
+      "Review the 'Rep Focus Time Tracker' to identify managers who are over-scheduling their reps and stealing their selling time."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing duration calculations and identifying efficiency patterns in schedule data."
+  },
+  "meeting-no-show-analyzer": {
+    "problem": "High demo volume is a 'Vanity Metric' if nobody shows up; you need to know if 'Cold Call' leads ghost 3x more than 'Inbound' leads.",
+    "what_ai_does": "It analyzes meeting outcome data to identify the primary correlations for no-shows (e.g., specific lead sources or Friday afternoon times), helping you fix your confirmation process.",
+    "howToDoIt": [
+      "Upload a CSV of your meeting logs including 'Source', 'Time', and 'Outcome'.",
+      "Ask the AI to 'Calculate the no-show rate per segment'.",
+      "Review the 'No-Show Detective' report to decide if you need to implement a 'Double Confirmation' SMS sequence for high-risk segments."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing multi-dimensional data pivots and identifying success/failure correlations."
+  },
+  "meeting-no-show-clusterer": {
+    "problem": "Generic no-show rates hide the truth; you need to know if certain industries or territories are 'Serial Ghosters' to adjust your SDR outreach strategy.",
+    "what_ai_does": "It segments meeting outcome data by Source and Day of Week to find the predictors of demo ghosting, recommending the 'Safe Times' to book meetings for each niche.",
+    "howToDoIt": [
+      "Upload your meeting outcomes CSV (Lead Source, Day, Result).",
+      "Ask the AI to 'Identify clusters with the highest no-show rates'.",
+      "Update your scheduling tools to block 'High-Ghosting' time slots for specific lead sources to protect rep productivity."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Excellent for multivariate analysis and identifying patterns in categorical data."
+  },
+  "meeting-reschedule-rate-tracker": {
+    "problem": "A 20% 'Reschedule Rate' costs your team 40+ hours a month in wasted prep; you need to quantify the 'Prep Tax' to justify a more aggressive deposit or confirmation policy.",
+    "what_ai_does": "It analyzes calendar logs to calculate the total hours lost per year due to flaking, prescribing specific policies (e.g., 'SMS Confirmation 1h Before') to reclaim that time.",
+    "howToDoIt": [
+      "Upload a CSV of your calendar audits (Outcome, Prep Minutes).",
+      "Ask the AI to 'Annualize the hours lost due to reschedules'.",
+      "Implement the 'Calendar Defender' policy to reduce meeting volatility and maximize your team's effective selling hours."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing math-based projections and identifying the cost of process friction."
+  },
+  "meeting-to-opportunity-conversion": {
+    "problem": "SDRs might book 100 meetings, but if only 5 become real 'Opportunities', they are wasting the AE's time with low-quality prospects.",
+    "what_ai_does": "It calculates the conversion rate from 'First Meeting Held' to 'Opportunity Created', identifying the 'High Quality' lead sources that actually drive pipeline.",
+    "howToDoIt": [
+      "Export your lead history including 'Meeting Status' and 'Opp Creation Status'.",
+      "Ask the AI to 'Calculate the Held-to-Opp % per lead source'.",
+      "Review the 'Lead Quality Report' to stop paying for channels that book meetings but never result in a real deal."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing down-funnel conversion math and identifying efficiency gaps."
+  },
+  "mobile-app-sdk-prospector": {
+    "problem": "Mobile tech sales is hard without knowing what's 'Under the Hood'; you need to find apps using a competitor's SDK to displacement them.",
+    "what_ai_does": "It identifies mobile apps that have installed specific competitor SDKs (e.g., Stripe, Intercom), creating a high-signal displacement list for your sales team.",
+    "howToDoIt": [
+      "Provide a list of competitor SDK package names (e.g., 'io.intercom.android').",
+      "Ask the AI to 'Find apps using these SDKs with >50k downloads'.",
+      "Reach out to the Mobile Product Manager with a 'Lighter & Faster' SDK pitch tailored to their current stack."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at researching technical app binaries and identifying publishers from package signatures."
+  },
+  "mobile-desktop-conversion-audit": {
+    "problem": "You might have a 3% overall conversion, but a hidden 0.5% mobile conversion rate is dragging you down and wasting 50% of your ad spend.",
+    "what_ai_does": "It compares conversion rates between Mobile and Desktop traffic to identify responsive design issues, flagging the specific pages where your mobile site is killing sales.",
+    "howToDoIt": [
+      "Upload your device-level performance data into a CSV.",
+      "Ask the AI to 'Calculate the conversion gap per page' and flag any >1.5% difference.",
+      "Review the 'Mobile Fix List' to prioritize your next design sprint on the pages with the highest mobile revenue leakage."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing ratio comparisons and identifying statistical gaps in performance data."
+  },
+  "monthly-report-generator": {
+    "problem": "Data-heavy client reports get ignored; clients only care about the narrative of 'The Big Win' and the plan for 'The Next Step'.",
+    "what_ai_does": "It transforms raw monthly performance metrics into a cohesive narrative arc—What went right, What we learned, and What we need next—to reduce client churn.",
+    "howToDoIt": [
+      "Upload a CSV of your client performance metrics (MoM Revenue, Spend, Leads).",
+      "Ask the AI to 'Identify the win and draft a story-driven summary'.",
+      "Send the 'Polished Narrative' to your clients to prove your strategic value beyond just raw reporting."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at synthesizing data into professional, executive-level story-telling and summaries."
+  },
+  "mql-to-sql-velocity-auditor": {
+    "problem": "Leads get 'Stale' when they sit in MQL status for 24+ hours before being accepted by Sales; you need to identify the routing bottlenecks.",
+    "what_ai_does": "It measures the time gap between 'Marketing Qualified' and 'Sales Accepted' status, flagging the specific SDRs or territories with the highest handoff lag.",
+    "howToDoIt": [
+      "Export your lead status history timestamps into a CSV.",
+      "Ask the AI to 'Calculate the average handoff velocity in hours'.",
+      "Review the 'SLA Lag Report' to adjust your routing rules or SDR shifts for faster lead acceptance."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing duration calculations and identifying process bottlenecks in log data."
+  },
+  "multi-threaded-deal-validator": {
+    "problem": "Deals with only ONE contact (Single-Threaded) are 80% more likely to be lost if that person leaves or says 'No'.",
+    "what_ai_does": "It audits your open opportunities to flag any high-value deal with fewer than 3 active contacts, ensuring your sales team is multi-threaded in every major account.",
+    "howToDoIt": [
+      "Export your open deal list including 'Contact Count' per opportunity.",
+      "Ask the AI to 'Filter for high-value deals with <2 contacts'.",
+      "Assign your reps to find and engage at least 2 more stakeholders (e.g., IT, Security) for every flagged deal."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing threshold filtering and identifying structural risks in deal data."
+  },
+  "new-arrival-teaser-list": {
+    "problem": "Generic 'New Arrival' emails have low open rates; you need to notify past buyers of a specific brand to drive a high-conversion launch spike.",
+    "what_ai_does": "It segments your buyer history to identify 'Brand Superfans', automatically generating a prioritized teaser list for every new drop based on affinity.",
+    "howToDoIt": [
+      "Upload your purchase history CSV including 'Brand' and 'Customer Email'.",
+      "Ask the AI to 'Filter for buyers of [Brand Name] in the last 12 months'.",
+      "Upload the 'Affinity Segment' to your email tool to launch a hyper-targeted 'Early Access' teaser campaign."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing set-based filtering and identifying customer affinity in large datasets."
+  },
+  "news-curator": {
+    "problem": "Curating industry news for 5 different customer segments takes all day; you need a way to draft unique, high-value newsletters in minutes.",
+    "what_ai_does": "It reads a list of source URLs and keywords to automatically pick the top 3 stories for every niche, drafting a complete newsletter intro and summary for each.",
+    "howToDoIt": [
+      "Provide a list of 5 industry URLs and target keywords (e.g., 'AI', 'Fintech').",
+      "Ask the AI to 'Summarize the top 3 stories' and draft a 200-word intro for each niche.",
+      "Review the 'Newsletter Drafts' folder to schedule your weekly digests across all your target segments."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at synthesizing long-form news and identifying the most relevant 'Hooks' for specific audiences."
+  },
+  "newsjacker": {
+    "problem": "Trending news stories are the fastest way to get viral social reach, but knowing exactly 'How' to tie your product to a news headline is a creative challenge.",
+    "what_ai_does": "It scans current trending headlines in your niche and drafts 3 distinct social posts that bridge the news to your product's value proposition.",
+    "howToDoIt": [
+      "Provide a trending news headline or URL to the AI.",
+      "Ask it to 'Draft a contrarian, educational, and humorous bridge' to our product.",
+      "Publish the 'Newsjacker' posts while the topic is still peaking to capture 5x more organic impressions."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at creative bridge-building and identifying non-obvious links between disparate topics."
+  },
+  "newsletter-asset-factory": {
+    "problem": "Writing a weekly newsletter from scratch is a 'Blank Page' nightmare; you need a way to turn your recent wins into structured content instantly.",
+    "what_ai_does": "It takes your recent technical updates or customer wins and transforms them into a structured 3-section newsletter: The Big Idea, The Tactical How-To, and The Weekly Ask.",
+    "howToDoIt": [
+      "Paste your recent project notes or technical changelogs into the AI.",
+      "Ask it to 'Draft a newsletter in the [Standard Format]'.",
+      "Send the 'Polished Draft' to your audience to maintain a high-value relationship with zero writing friction."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at capturing personal voice and following complex content-structuring frameworks."
+  },
+  "newsletter-emotional-audit": {
+    "problem": "If your newsletter sounds 'Corporate' or boring, your open rates will slowly decay; you need to ensure your copy triggers specific human emotions (Curiosity, FOMO, or Greed).",
+    "what_ai_does": "It audits your email drafts to identify the 'Dominant Emotion' and scores your 'Human vs. AI' vibe, suggesting specific edits to sound more like a peer and less like a bot.",
+    "howToDoIt": [
+      "Paste your email subject line and body into the AI.",
+      "Ask it to 'Map the emotional triggers' and suggest 2 edits to increase curiosity.",
+      "Review the 'Emotional Audit' to ensure your content actually 'Hooks' the reader's attention in a crowded inbox."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at nuanced linguistic analysis and understanding the psychological triggers of persuasive copy."
+  },
+  "newsletter-frequency-analyst": {
+    "problem": "You don't know if you should send 1 email a week or 3; you need to find the 'Saturation Point' where higher frequency starts increasing unsubscribes.",
+    "what_ai_does": "It correlates your send frequency with unsubscribe rates and CTR over time, identifying the 'Golden Frequency' that maximizes revenue without burning your list.",
+    "howToDoIt": [
+      "Upload a CSV of your weekly send counts and resulting performance (Opens, Unsubs).",
+      "Ask the AI to 'Find the correlation between frequency and unsubscribe velocity'.",
+      "Set your 'Send Limit' based on the 'Golden Frequency' report to protect your long-term list health."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Excellent for correlation analysis and identifying statistical 'tipping points' in engagement data."
+  },
+  "newsletter-list-cleaner": {
+    "problem": "Inactive subscribers and 'Invalid' emails (e.g., support@) hurt your deliverability and increase your ESP costs.",
+    "what_ai_does": "It audits your subscriber list to identify and remove poor-quality addresses (temp-mail, generic prefixes), keeping your sender reputation high and your costs low.",
+    "howToDoIt": [
+      "Export your subscriber list into a CSV.",
+      "Ask the AI to 'Flag any email with a generic prefix or disposable domain'.",
+      "Bulk-remove the 'Clean List' candidates to instantly improve your open rates and inbox placement."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing keyword-based filtering and identifying patterns in large email lists."
+  },
+  "newsletter-sponsor-scout": {
+    "problem": "Finding sponsors for your newsletter is a manual grind; you need to know who is ALREADY spending money in your niche to build a high-conversion pitch list.",
+    "what_ai_does": "It identifies advertisers in competitor newsletters and drafts a 'Warm Pitch' demonstrating why your audience is a better or complementary fit for their brand.",
+    "howToDoIt": [
+      "Provide a list of 3 competitor newsletter URLs to the AI.",
+      "Ask it to 'Identify recent sponsors and their CMO names'.",
+      "Use the 'Warm Pitch' drafts to reach out to proven advertisers who already understand the value of your channel."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at researching business spend patterns and drafting sophisticated B2B sales proposals."
+  },
+  "newsletter-sponsorship-lead-gen": {
+    "problem": "Niche newsletters are the most undervalued ad channel; you need to find independent publications that reach your audience but aren't on major ad networks.",
+    "what_ai_does": "It searches Substack, Reletter, and Paved to find active newsletters in your industry that accept sponsorships, building a prioritized media buying list.",
+    "howToDoIt": [
+      "Provide a niche (e.g., 'React Developers') to the AI.",
+      "Ask it to 'Find newsletters with 1k-10k subscribers accepting ads'.",
+      "Review the 'Newsletter Opportunities' list to scale your paid acquisition on high-trust, independent channels."
+    ],
+    "bestTool": "Claude Code",
+    "whyThisTool": "Can directly query multiple directories and search engines to synthesize a comprehensive market map."
+  },
+  "nextjs-codebase-seo-auditor": {
+    "problem": "Accidental 'NoIndex' tags or missing schema in your code can wipe your traffic off Google; but checking every React file manually is a developer's nightmare.",
+    "what_ai_does": "It scans your local Next.js project to verify Titles, Descriptions, and H1s directly in the source files, catching SEO 'Silent Killers' before you deploy.",
+    "howToDoIt": [
+      "Point the AI to your /pages or /app directory.",
+      "Ask it to 'Run a Technical SEO Audit' checking for duplicates and missing schema.",
+      "Fix the 'Critical SEO Gaps' in your code to ensure your site is 100% search-ready from the moment you hit deploy."
+    ],
+    "bestTool": "Claude Code",
+    "whyThisTool": "Can directly read and perform static analysis on production codebases with high technical precision."
+  },
+  "non-profit-grant-recipient-tracker": {
+    "problem": "Non-profits have tight budgets UNLESS they win a major grant; you need to find them exactly when they get a cash injection and need to 'Spend it or Lose it'.",
+    "what_ai_does": "It monitors grant announcements from major foundations to identify non-profits that just received $100k+, signaling an immediate budget for new tools or consulting.",
+    "howToDoIt": [
+      "Provide a list of 5 major foundations (e.g., Gates Foundation) to the AI.",
+      "Ask it to 'Identify recent grant winners' and extract the project purpose.",
+      "Reach out to the Executive Director with a pitch focused on helping them fulfill their new grant obligations."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at researching public funding news and identifying strategic business intent."
+  },
+  "nps-by-product-scorer": {
+    "problem": "An overall 'Good' NPS hides the truth that your 'Enterprise Plan' users are miserable and about to churn.",
+    "what_ai_does": "It correlates NPS scores with specific product plans and revenue, identifying high-risk 'Churn Clusters' where unhappy users represent the most at-risk ARR.",
+    "howToDoIt": [
+      "Upload a CSV of NPS scores including 'Product Plan' and 'Revenue'.",
+      "Ask the AI to 'Calculate the weighted NPS per product'.",
+      "Prioritize your engineering roadmap on the features that are causing the most friction for your highest-paying detractors."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing financial-weighting and identifying success/failure patterns in feedback data."
+  },
+  "nps-classifier": {
+    "problem": "NPS numbers (e.g., 42) are useless without knowing WHY users are unhappy; but manually reading 1,000 comments is a CX bottleneck.",
+    "what_ai_does": "It automatically categorizes qualitative NPS feedback into 'Bug', 'Price', or 'Support' tags, quantifying the top drivers of customer dissatisfaction.",
+    "howToDoIt": [
+      "Upload a CSV of raw NPS comments.",
+      "Ask the AI to 'Tag each comment by theme' and count detractors vs. promoters per tag.",
+      "Review the 'NPS Drivers' report to see exactly which friction point is hurting your score the most."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Excellent for semantic classification and performing high-volume text grouping."
+  },
+  "nps-detractor-recovery-list": {
+    "problem": "Unhappy customers (Detractors) are 5x more likely to churn; you need an immediate 'Save' process the second a 0-6 score is submitted.",
+    "what_ai_does": "It monitors your NPS logs to generate a prioritized 'Recovery Queue', flagging the highest-value detractors for immediate 1-on-1 outreach from your CS team.",
+    "howToDoIt": [
+      "Upload your raw NPS scores including 'Customer Name' and 'Score'.",
+      "Ask the AI to 'Filter for detractors (0-6)' and sort by total account revenue.",
+      "Hand the 'Detractor Queue' to your CS team to call and 'Save' the accounts before they hit the cancellation button."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing threshold-based filtering and prioritizing task lists based on revenue impact."
+  },
+  "nps-trend-analyzer": {
+    "problem": "Static NPS scores don't tell the whole story; you need to know if sentiment is 'Trending Up' after a major product launch or 'Decaying' due to a bug.",
+    "what_ai_does": "It calculates rolling NPS scores for different cohorts (Monthly or Quarterly), identifying shifts in sentiment before they impact your renewal rates.",
+    "howToDoIt": [
+      "Upload a CSV of your NPS responses with 'Date' and 'Score'.",
+      "Ask the AI to 'Calculate the monthly NPS trend for the last 12 months'.",
+      "Review the 'Sentiment Trend' report to measure the true emotional impact of your recent product or pricing changes."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing time-series calculations and identifying momentum in engagement data."
+  },
+  "nurture-path-performance-bot": {
+    "problem": "You have 5 different email sequences but don't know which 'Path' actually results in the most MQLs, leading to wasted lead flow.",
+    "what_ai_does": "It compares the path-to-conversion rates for different automated nurture flows, identifying the 'Winner' sequence that turns leads into deals fastest.",
+    "howToDoIt": [
+      "Upload your lead path logs including 'Sequence Name' and 'Final Status'.",
+      "Ask the AI to 'Calculate the conversion rate per nurture path'.",
+      "Shift 100% of your lead flow to the 'Winning Path' to maximize your sales pipeline efficiency."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Excellent for comparative data analysis and identifying the most efficient 'Path' in large logs."
+  },
+  "objection-crusher": {
+    "problem": "Sales reps freeze when hit with tough questions like 'Why are you so expensive?'; you need a battle-tested rebuttal for every possible objection.",
+    "what_ai_does": "It reads your call notes or competitor reviews to identify the most common objections and drafts a 2-paragraph 'Kill Shot' rebuttal for each, including a specific pivot question.",
+    "howToDoIt": [
+      "Paste your recent sales call objections or a competitor's 1-star reviews into the AI.",
+      "Ask it to 'Categorize objections into Price, Technical, and Status Quo'.",
+      "Review the 'Sales Battle Cards' to arm your reps with data-driven rebuttals that close more deals."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at drafting professional, persuasive, and non-confrontational sales talk-tracks."
+  },
+  "objection-handling-gap-analysis": {
+    "problem": "You don't know which specific objection (e.g., 'Competitor X' or 'No Budget') is causing the most 'Closed-Lost' deals for your team.",
+    "what_ai_does": "It analyzes your outcome codes and deal notes to identify the 'Loss Leaders'—the specific objections where your win rate is lowest—prioritizing them for new sales training.",
+    "howToDoIt": [
+      "Upload a CSV of deal outcomes and the primary objection recorded.",
+      "Ask the AI to 'Identify objections with <20% win rate'.",
+      "Use the 'Objection Gap' report to focus your next sales training session on the specific hurdles that are losing you the most revenue."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing categorical win-rate analysis and identifying high-priority training gaps."
+  },
+  "okr-drafter": {
+    "problem": "Drafting measurable team goals (OKRs) is a strategic headache; generic goals like 'Increase Sales' lead to misaligned efforts and poor execution.",
+    "what_ai_does": "It takes your high-level vision and researches industry benchmarks to suggest 3 measurable Objectives, each with 3 quantified Key Results (e.g., 'Achieve $50k in New ARR').",
+    "howToDoIt": [
+      "Provide your primary business goal for the next quarter to the AI.",
+      "Ask it to 'Draft 3 OKRs based on [SaaS/Agency] benchmarks'.",
+      "Review the 'OKR Blueprint' to ensure your team is focused on the leading indicators that actually drive growth."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at strategic planning and translating vague vision into quantified, actionable metrics."
+  },
+  "onboarding-checklist-completion": {
+    "problem": "You don't know where in the 'Getting Started' checklist users are getting stuck, leading to poor activation and early churn.",
+    "what_ai_does": "It measures the completion rate of every onboarding step to pinpoint the 'Friction Point' (e.g., 'Invite Team' or 'Connect API'), allowing you to simplify the bottleneck.",
+    "howToDoIt": [
+      "Upload a CSV of user onboarding progress (Step Started vs. Step Completed).",
+      "Ask the AI to 'Identify the highest-dropoff step in the activation funnel'.",
+      "Redesign the 'High-Friction Step' or add a specialized in-app guide to ensure 100% user activation."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing step-by-step funnel analysis and identifying efficiency gaps."
+  },
+  "onboarding-milestone-celebrator": {
+    "problem": "Generic 'Milestone' notifications look like spam; you need a personal congratulatory note that feels like it was typed by the founder to build early loyalty.",
+    "what_ai_does": "It monitors user activity logs and drafts hyper-personalized emails (no fancy HTML) the second a user ships their first project or hits a major usage win.",
+    "howToDoIt": [
+      "Upload a CSV of recent user milestones (Email, Action, Project Name).",
+      "Ask the AI to 'Draft a casual congrats email from the founder' mentioning the specific project.",
+      "Send the 'Founder's Nod' emails to your newest power users to turn them into life-long brand advocates."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at capturing a casual, authentic personal voice and avoiding 'Corporate' marketing language."
+  },
+  "one-time-buyer-analysis": {
+    "problem": "Acquiring a customer only to have them never buy again is a recipe for a negative ROAS; you need to know WHY they are 'One-and-Done'.",
+    "what_ai_does": "It profiles customers who bought once and never returned to find commonalities (e.g., they all bought 'Product X' or came from 'TikTok'), helping you fix your retention funnel.",
+    "howToDoIt": [
+      "Upload a CSV of your single-purchase customers including 'First Product' and 'Channel'.",
+      "Ask the AI to 'Count the most frequent product and source for one-time buyers'.",
+      "Stop promoting the 'One-and-Done' products in your acquisition ads and focus on the SKUs that drive high repeat purchase rates."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing frequency analysis and identifying causes of churn in transaction data."
+  },
+  "keyword-cannibalization-detective": {
+    "problem": "When multiple pages rank for the same keyword, Google gets confused and splits your 'Ranking Power', often causing both pages to drop out of the top 5.",
+    "what_ai_does": "It analyzes your Google Search Console data to identify 'Keyword Conflicts' and uses a logic matrix (CTR vs. Intent) to recommend which page to keep and which to redirect.",
+    "howToDoIt": [
+      "Upload your GSC query export (Query, Page, Clicks, CTR) into a CSV.",
+      "Ask the AI to 'Identify queries with >1 ranking page' and find the CTR winner.",
+      "Implement 301 redirects from the 'Loser' pages to the 'Winner' to consolidate your authority and boost your primary ranking."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing bulk data comparisons and following complex conditional redirection rules."
+  },
+  "keyword-gap-analyst": {
+    "problem": "Keyword research tools only show you what people are searching for; they don't show you the 'Semantic Clusters' your competitors are using to dominate your niche.",
+    "what_ai_does": "It audits competitor sites to identify missing 'Topical Authority' clusters, providing you with a roadmap of the specific entities and sub-topics you need to cover to rank as an authority.",
+    "howToDoIt": [
+      "Provide a list of competitor URLs to the AI.",
+      "Ask it to 'Identify the semantic clusters' (e.g., 'CRM Hygiene') that they cover better than you.",
+      "Use the 'Authority Roadmap' to prioritize your next 5 content pieces to fill the highest-value semantic gaps."
+    ],
+    "bestTool": "Claude Code",
+    "whyThisTool": "Can directly crawl live competitor content and perform high-precision entity extraction and grouping."
+  },
+  "keyword-ranking-volatility-tracker": {
+    "problem": "Daily rank trackers are noisy; you need to separate 'Natural Fluctuations' from 'Strategic Emergencies' where you've suddenly lost a top 3 position.",
+    "what_ai_does": "It compares your ranking positions between two dates to identify 'Big Movers', flagging any keyword that has dropped by >5 positions for an immediate technical audit.",
+    "howToDoIt": [
+      "Upload a CSV of your keyword rankings from 'Last Week' and 'This Week'.",
+      "Ask the AI to 'Calculate the rank delta and flag drops > 5 positions'.",
+      "Prioritize your 'Volatility Alerts' to check for accidental NoIndex tags or broken internal links on your most important pages."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing date-based data comparisons and identifying statistical outliers."
+  },
+  "landing-page-ab-test-significance": {
+    "problem": "Declaring an A/B test winner based on a 'Hunch' or small sample size leads to poor long-term conversion; you need to know if the win is statistically significant.",
+    "what_ai_does": "It calculates the statistical significance and confidence intervals for your test results, telling you exactly when you have enough data to pick a winner and move on.",
+    "howToDoIt": [
+      "Upload a CSV of your A/B test results (Visitors vs. Conversions per variant).",
+      "Ask the AI to 'Calculate the p-value and confidence level' for Variant B.",
+      "Only implement the winning change if the AI confirms a >95% confidence level to ensure your conversion gains are real."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Excellent for performing complex statistical math and interpreting probability metrics."
+  },
+  "landing-page-clarity-score-vision": {
+    "problem": "You only have 5 seconds to convince a user to stay; if your hero section is confusing or buzzword-heavy, you lose the lead forever.",
+    "what_ai_does": "It uses vision analysis to simulate a user's first 5 seconds on your page, identifying the top 3 elements that draw attention and grading your 'Clarity Score' based on the Grunt Test.",
+    "howToDoIt": [
+      "Upload a screenshot of your landing page's hero section.",
+      "Ask the AI to 'Identify the 3 most visible elements' and guess the value proposition.",
+      "If the AI can't tell WHAT you do or WHO it's for in 5 seconds, rewrite your H1 to be more literal and less clever."
+    ],
+    "bestTool": "ChatGPT (Vision)",
+    "whyThisTool": "Best-in-class visual analysis and ability to interpret design hierarchy from a human perspective."
+  },
+  "landing-page-conversion-drift": {
+    "problem": "Conversion rates don't stay static; 'Drift' can happen due to ad fatigue, seasonal shifts, or technical bugs, and you need to catch it before it ruins your ROAS.",
+    "what_ai_does": "It monitors your daily conversion rates against a rolling 7-day average, flagging any 'Drift' of >30% for immediate investigation.",
+    "howToDoIt": [
+      "Upload your daily conversion data CSV (Date, Visitors, Orders).",
+      "Ask the AI to 'Calculate the 7-day rolling average and flag yesterday's outliers'.",
+      "Review the 'Performance Alerts' to catch technical checkout bugs or campaign fatigue in real-time."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Excellent for time-series trend analysis and performing rolling average calculations."
+  },
+  "landing-page-hero-auditor": {
+    "problem": "Clever headlines (e.g., 'Synergize your potential') kill conversion; you need a literal headline that a caveman could understand in 5 seconds.",
+    "what_ai_does": "It audits your hero sections against the 'Grunt Test' (What is it? Who is it for? How does it help?), scoring your current copy and suggesting 3 'No-Fluff' variations.",
+    "howToDoIt": [
+      "Upload a CSV of your landing page H1s and subheads.",
+      "Ask the AI to 'Rate each on a Literal vs. Buzzword scale' and apply the Grunt Test.",
+      "Replace your 'Buzzword Heavy' headlines with the suggested Benefit-Driven or Literal variations to lower your bounce rate."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at empathetic copywriting and identifying linguistic jargon that creates psychological friction."
+  },
+  "landing-page-intent-matcher": {
+    "problem": "Low Quality Scores in Google Ads are often caused by a 'Message Mismatch' between your ad keyword and your landing page headline.",
+    "what_ai_does": "It cross-references your ad keywords with your landing page H1 tags to ensure consistency, identifying exactly where you need to create custom landing pages for high-volume keywords.",
+    "howToDoIt": [
+      "Upload a CSV of your ad groups and their target landing page URLs.",
+      "Ask the AI to 'Compare the top keyword to the page H1' and flag low similarity.",
+      "Create keyword-specific landing pages for your 'Mismatched' ad groups to instantly boost your Quality Score and lower CPC."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing semantic string matching and identifying relevance gaps in marketing data."
+  },
+  "landing-page-load-speed-auditor": {
+    "problem": "Slow pages kill ROAS; for every 1-second delay in mobile load time, your conversion rate can drop by up to 20%.",
+    "what_ai_does": "It uses technical network queries to measure Time to First Byte (TTFB) and Total Load Time across your entire portfolio, flagging pages that are too slow for paid traffic.",
+    "howToDoIt": [
+      "Upload a CSV of your landing page URLs.",
+      "Ask the AI to 'Perform a speed audit' and categorize results into Excellent, Good, or Danger.",
+      "Focus your developer's time on the 'Danger' zone pages where slow load speeds are actively wasting your ad budget."
+    ],
+    "bestTool": "Claude Code",
+    "whyThisTool": "Can directly execute network performance commands (curl/ping) and interpret technical latency metrics."
+  },
+  "landing-page-optimizer": {
+    "problem": "Generating A/B test ideas is a creative grind; you need a systematic way to find the highest-impact psychological 'Levers' to pull on your landing pages.",
+    "what_ai_does": "It analyzes your landing pages against top competitors to suggest 3 radically different experiments—focusing on Copy, Social Proof, and Friction—to boost conversion.",
+    "howToDoIt": [
+      "Provide the URL of your primary landing page and 2 competitor URLs.",
+      "Ask the AI to 'Identify 3 psychological A/B test hypotheses' based on the competitor's positioning.",
+      "Launch the 'Test 1: Problem-Led Headline' experiment to see if a more aggressive 'Nightmare State' hook converts better."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at competitive landscape analysis and drafting nuanced, high-converting copy variations."
+  },
+  "last-activity-date-auditor": {
+    "problem": "Sales managers can't see which accounts are 'Neglected' because contact activity often doesn't roll up to the Account level, leading to stale opportunities.",
+    "what_ai_does": "It aggregates the latest activity dates from every contact at a company to update a single 'Master Last Touched' field at the Account level, giving you a true view of engagement.",
+    "howToDoIt": [
+      "Export a CSV of all contact activities (Contact, Account, Activity Date).",
+      "Ask the AI to 'Find the maximum activity date per account'.",
+      "Use the 'Account Touch Sync' report to identify your top 10 most neglected high-value accounts for immediate outreach."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing group-by calculations and identifying the 'Max' value across large datasets."
+  },
+  "late-payment-frequent-flyer": {
+    "problem": "Sales reps often try to upsell existing customers who haven't paid their last 3 invoices, leading to awkward finance disputes and bad debt.",
+    "what_ai_does": "It identifies 'Chronically Late' payers by analyzing your payment history, automatically generating a 'Credit Hold' list to prevent Sales from expanding high-risk accounts.",
+    "howToDoIt": [
+      "Upload a CSV of your customer payment history (Invoices, Days Late).",
+      "Ask the AI to 'Identify customers with >2 late payments in the last 6 months'.",
+      "Sync the 'Bad Payer List' to your CRM to alert sales to get finance approval before pitching a new deal to those accounts."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing behavioral profiling and filtering lists based on frequency thresholds."
+  },
+  "lead-aging-alerts": {
+    "problem": "Leads go cold in 48 hours; if an SDR doesn't respond within the first day, the chance of booking a meeting drops by 10x.",
+    "what_ai_does": "It scans your 'New Lead' queue to identify records that have been untouched for >24 hours, flagging SLA breaches before the leads are lost forever.",
+    "howToDoIt": [
+      "Upload a CSV of your recent 'New' leads and their 'Created At' timestamps.",
+      "Ask the AI to 'Identify any lead >24 hours old with zero activity'.",
+      "Escalate the 'SLA Breaches' to your sales manager to ensure no high-intent lead falls through the cracks."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing date-based calculations and identifying process violations."
+  },
+  "lead-enrichment-auditor": {
+    "problem": "Data vendors often charge for 'Matches' that are actually missing critical data points like Mobile Phone or LinkedIn URL.",
+    "what_ai_does": "It audits your enriched lead lists to calculate the 'Match Rate' per field, giving you a data-driven way to grade your vendor's performance and negotiate better rates.",
+    "howToDoIt": [
+      "Upload a sample of your recently enriched leads (CSV).",
+      "Ask the AI to 'Calculate the % fill rate for Phone, LinkedIn, and Revenue'.",
+      "Use the 'Vendor Quality Report' to decide if you should switch to a different data provider for specific regions or industries."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at data profiling and identifying 'null' values across thousands of records."
+  },
+  "lead-list-cleaner": {
+    "problem": "Up to 30% of purchased lead lists contain companies with 'Dead' websites, leading to high email bounce rates and wasted sales effort.",
+    "what_ai_does": "It automatically visits every domain in your lead list to verify if the site is still alive (returns 200 OK), separating valid companies from the 'Dead' leads.",
+    "howToDoIt": [
+      "Upload your raw lead CSV including the 'Website' column.",
+      "Ask the AI to 'Check if each website is currently active' and flag 404s/timeouts.",
+      "Export the 'Verified Leads' to your CRM and purge the 'Dead Leads' to maintain a high-quality prospecting database."
+    ],
+    "bestTool": "Claude Code",
+    "whyThisTool": "Can directly crawl hundreds of URLs and interpret technical HTTP status codes without manual effort."
+  },
+  "lead-magnet-generator": {
+    "problem": "A single 'Whitepaper' isn't enough; you need a library of targeted lead magnets (Calculators, Checklists) for every customer segment you target.",
+    "what_ai_does": "It takes a list of your customer pain points and automatically generates a complete asset brief for each—including a catchy title, a 5-point outline, and high-conversion landing page copy.",
+    "howToDoIt": [
+      "Upload a CSV of your target segments and their 'Main Pain' (e.g., 'Scope Creep').",
+      "Ask the AI to 'Ideate a specific utility tool' and draft an outline for each segment.",
+      "Hand the 'Lead Magnet Briefs' to your content team to build a high-conversion asset library in days."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at creative ideation and following structured, persuasive copywriting frameworks."
+  },
+  "lead-magnet-idea-generator": {
+    "problem": "Most lead magnets are boring 'Ebooks' that nobody reads; you need to find the 'Bleeding Neck Problem' your audience faces daily to offer a tool they actually want.",
+    "what_ai_does": "It analyzes your audience and brainstorms 5 high-utility 'Lead Magnet' concepts (Calculators, Templates, or Audits) that offer immediate value in exchange for an email.",
+    "howToDoIt": [
+      "Provide a brief description of your target audience and core product goal.",
+      "Ask the AI to 'Brainstorm 5 utility-based assets' (avoiding generic whitepapers).",
+      "Select the 'Top Hook' idea and use the generated landing page headline to launch a quick test offer."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at identifying psychological pain points and creative problem-solving."
+  },
+  "lead-recycling-automation": {
+    "problem": "Leads marked as 'Closed-Lost' are often ignored forever, but 20% of them will be ready to buy again in 6 months if you stay top-of-mind.",
+    "what_ai_does": "It identifies 'Old Lost' leads (90+ days since loss) and automates their return to a 'Wake Up' nurture sequence, ensuring you capture future revenue with zero manual sales effort.",
+    "howToDoIt": [
+      "Export your CRM 'Closed-Lost' list including the 'Lost Date'.",
+      "Ask the AI to 'Filter for leads lost more than 90 days ago'.",
+      "Import the 'Recycle List' into a low-friction email sequence focused on 'What's changed since we last spoke?'."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at date-based filtering and performing simple dataset segmentation."
+  },
+  "lead-response-time-auditor": {
+    "problem": "The difference between responding in 5 minutes vs. 30 minutes can be a 400% decrease in meeting booking rates.",
+    "what_ai_does": "It measures the gap between 'Lead Created' and 'First Rep Activity' for every inbound lead, identifying exactly which reps are missing the critical 5-minute window.",
+    "howToDoIt": [
+      "Upload a CSV of your inbound leads with 'Created' and 'First Touch' timestamps.",
+      "Ask the AI to 'Calculate the latency in minutes' and flag any record > 5 mins.",
+      "Review the 'SLA Violations' report to adjust your lead routing or SDR shifts to ensure instant response."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at duration calculations and identifying process outliers in structured logs."
+  },
+  "lead-routing-error-checker": {
+    "problem": "Broken CRM rules often send 'Enterprise' leads to 'SMB' reps, leading to slow follow-ups and missed six-figure opportunities.",
+    "what_ai_does": "It audits your lead assignments against your 'Territory Rules' (e.g., Company Size > 1,000), flagging every lead that ended up in the wrong bucket.",
+    "howToDoIt": [
+      "Upload your lead assignment logs and your territory definitions.",
+      "Ask the AI to 'Identify mismatches where Enterprise leads went to the SMB team'.",
+      "Fix the 'Routing Errors' and update your CRM workflow to protect your highest-value prospects."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Excellent for logic-based validation and identifying violations of data-driven rules."
+  },
+  "lead-routing-latency-histogram": {
+    "problem": "Leads often get stuck in a 'Routing Black Hole' for 30+ minutes between the form submit and the rep assignment, killing your conversion rate.",
+    "what_ai_does": "It analyzes the time gap between 'Lead Created' and 'Owner Assigned' to identify bottlenecks in your technical stack (e.g., slow Salesforce syncs).",
+    "howToDoIt": [
+      "Export your lead routing logs including both timestamps.",
+      "Ask the AI to 'Calculate the latency and bucket leads into 1m, 10m, and 30m+ groups'.",
+      "Review the 'Latency Report' to identify if your marketing automation tool or CRM sync is the bottleneck."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Excellent for aggregating time-series data and generating distribution-based insights."
+  },
+  "lead-routing-rule-conflict-detector": {
+    "problem": "Complex routing (CA + Tech -> Rep A vs. CA + Enterprise -> Rep B) often leads to 'Conflict Errors' where a single lead matches multiple reps, causing it to sit unassigned.",
+    "what_ai_does": "It simulates your routing logic against a test lead set to identify overlapping or conflicting rules that would cause assignment failures.",
+    "howToDoIt": [
+      "Paste your lead routing rules (IF/THEN statements) into the AI.",
+      "Ask it to 'Simulate a lead matching both CA and Tech' to see if a conflict exists.",
+      "Simplify your 'Conflict Rules' to ensure every lead has exactly one clear owner at all times."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Excellent for logical simulation and identifying contradictions in rule-based systems."
+  },
+  "lead-routing-validator": {
+    "problem": "Rules of Engagement (ROE) are often ignored by reps 'cherry-picking' leads from other territories, leading to internal team friction.",
+    "what_ai_does": "It audits recent lead assignments against your Zip Code or Industry territories, flagging any lead assigned to a rep who doesn't own that 'Patch'.",
+    "howToDoIt": [
+      "Upload a CSV of assigned leads and your territory master map.",
+      "Ask the AI to 'Verify that every rep owns the Zip/Industry they were assigned'.",
+      "Use the 'Routing Audit Log' to enforce territory discipline and fairly distribute commissions."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing bulk data matching across disparate lists (Leads vs. Territories)."
+  },
+  "lead-score-decay-model": {
+    "problem": "A lead who was 'Hot' 3 months ago but hasn't visited your site since is no longer a priority; but static lead scores don't reflect this 'Disengagement'.",
+    "what_ai_does": "It applies a decay factor to your lead scores based on recency, automatically lowering the priority of leads who have gone quiet to focus your reps on 'Active' intent.",
+    "howToDoIt": [
+      "Upload your lead scores and their 'Last Visit Date' into a CSV.",
+      "Ask the AI to 'Reduce the score by 10% for every 30 days of inactivity'.",
+      "Update your CRM with the 'Decayed Scores' to ensure your SDRs are calling the freshest leads first."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing math-based updates and applying time-based logic to large lists."
+  },
+  "lead-score-threshold-simulator": {
+    "problem": "Raising your lead scoring threshold (e.g., from 50 to 70) might improve lead quality, but it could also starve your sales team of MQLs.",
+    "what_ai_does": "It backtests your lead data against different scoring thresholds to predict exactly how many MQLs your team would receive under each scenario.",
+    "howToDoIt": [
+      "Upload your historical lead scores into a CSV.",
+      "Ask the AI to 'Count leads matching Score > 50, 60, and 70'.",
+      "Use the 'Threshold Impact Study' to find the perfect balance between lead quality and sales volume."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing volume estimations and 'What If' simulations on historical data."
+  },
+  "lead-scoring-logic-builder": {
+    "problem": "Sales reps waste time on 'Bad Leads' because your CRM scoring is either non-existent or based on a 'Hunch' rather than data.",
+    "what_ai_does": "It analyzes your 'Won' vs 'Lost' lead history to identify the high-converting signals (e.g., 'Job Title = CEO') and designs a points-based logic ready for implementation.",
+    "howToDoIt": [
+      "Upload a CSV of your past lead performance (Email, Title, Outcome).",
+      "Ask the AI to 'Identify the top 3 job titles and domain types associated with Won deals'.",
+      "Download the 'Scoring Blueprint' and implement the point-values in HubSpot or Salesforce to prioritize your best leads automatically."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Excellent for pattern recognition and identifying success correlations in historical sales data."
+  },
+  "lead-source-attribution-fixer": {
+    "problem": "CRM charts are messy because reps type whatever they want into the 'Source' field (e.g., 'Referral' vs 'referral' vs 'friend').",
+    "what_ai_does": "It standardizes messy raw source data into clean master categories (e.g., mapping all variants to 'Paid Social'), fixing your executive reporting forever.",
+    "howToDoIt": [
+      "Export your raw lead source list into a CSV.",
+      "Ask the AI to 'Map these variants to a clean 5-category taxonomy' (Paid, Organic, Referral, Event, Other).",
+      "Bulk-update your 'Master Source' field in the CRM to get accurate marketing ROI charts."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Excellent at fuzzy matching and grouping semantic variants of the same concept."
+  },
+  "lead-source-normalizer": {
+    "problem": "Marketing attribution is broken when 'G-Ads' and 'Google PPC' show up as two different channels in your reports.",
+    "what_ai_does": "It takes a messy list of raw sources and uses fuzzy matching logic to map them to a controlled vocabulary, ensuring your attribution slices represent true channel performance.",
+    "howToDoIt": [
+      "Upload your messy source CSV (Lead ID, Raw Source).",
+      "Ask the AI to 'Standardize into [List of Channels]' based on keyword signatures.",
+      "Download the 'Clean Sources' CSV to fix your marketing dashboards and stop double-counting channels."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing bulk string transformation and following strict taxonomy rules."
+  },
+  "lead-source-truth-auditor": {
+    "problem": "UTM tags are often 'Lies' (e.g., UTM = Google, but the user actually heard about you on a Podcast); you need to find the 'Hidden Truth' about your best leads.",
+    "what_ai_does": "It compares 'Self-Reported Source' (How did you hear about us?) vs. technical 'UTM Source' to identify the dark social channels that are actually driving your growth.",
+    "howToDoIt": [
+      "Upload a CSV of your leads including both UTM and Self-Reported source fields.",
+      "Ask the AI to 'Identify mismatches where UTM is Google/Direct but User says Podcast/Community'.",
+      "Review the 'Dark Social Analysis' to justify budget for the hard-to-track channels that are your real revenue drivers."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Excellent for identifying contradictions and performing multi-dimensional source reconciliation."
+  },
+  "lead-to-account-matcher": {
+    "problem": "Inbound leads often get assigned to a new rep even when your company already has an active deal with their co-worker at the same account.",
+    "what_ai_does": "It automatically fuzzy-matches incoming leads to existing account records via corporate domain, preventing 'Double-Dipping' and ensuring context stays with the account owner.",
+    "howToDoIt": [
+      "Upload a CSV of new leads and your current 'Active Accounts' list.",
+      "Ask the AI to 'Match leads to accounts using domain matching' (e.g., @apple.com -> Apple Inc).",
+      "Review the 'Matched Leads' and re-route them to the existing account owner to maintain a single point of contact."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at data reconciliation and performing domain-based identity matching."
+  },
+  "linear-attribution-modeler": {
+    "problem": "First-touch and last-touch both ignore the middle of the funnel; you need to see the 'Linear' impact of every touchpoint a customer had.",
+    "what_ai_does": "It divides deal revenue equally across every touchpoint in a customer's journey, giving credit to the 'Middle' assets (like webinars or case studies) that first/last touch miss.",
+    "howToDoIt": [
+      "Upload your customer journey touchpoint logs including deal revenue.",
+      "Ask the AI to 'Distribute revenue equally across all touchpoints per deal'.",
+      "Review the 'Linear ROI Report' to decide which nurture assets are actually helping to push deals across the finish line."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing mathematical redistribution and aggregating revenue across large event logs."
+  },
+  "linkedin-account-targeting-list": {
+    "problem": "LinkedIn Ad targeting is expensive; you need to build a hyper-specific 'Matched Audience' of target account domains to keep your CPMs low.",
+    "what_ai_does": "It filters your CRM accounts for your ICP (Revenue, Size, Industry) and formats them into the exact CSV template required for LinkedIn Account Targeting.",
+    "howToDoIt": [
+      "Upload your master account list into a CSV.",
+      "Ask the AI to 'Filter for Tier 1 Enterprise accounts' and format for LinkedIn upload.",
+      "Upload the 'Matched Audience' to LinkedIn Campaign Manager to target ONLY your highest-value accounts with zero waste."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing conditional filtering and following rigid ad platform file structures."
+  },
+  "linkedin-ads-audience-overlap": {
+    "problem": "Running multiple LinkedIn campaigns to the same audience leads to 'Self-Competition' and drives up your own bidding costs.",
+    "what_ai_does": "It compares the member lists of your active ad audiences to identify the percentage of overlap, flagging campaigns that are competing for the same users.",
+    "howToDoIt": [
+      "Upload two audience member CSVs (from LinkedIn or your CRM).",
+      "Ask the AI to 'Calculate the % of common members between Audience A and B'.",
+      "Consolidate your 'High Overlap' audiences into a single campaign to lower your CPC and increase reach."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Excellent for performing set-theory math and identifying overlaps in large lists of identifiers."
+  },
+  "linkedin-audio-event-planner": {
+    "problem": "LinkedIn Audio events are high-intent but planning a 30-minute structured conversation that keeps people listening is a creative challenge.",
+    "what_ai_does": "It designs a 30-minute 'Scripted Flow' for your LinkedIn Audio event—including the hook, 3 core debate topics, and 'Audience Interaction' prompts.",
+    "howToDoIt": [
+      "Provide your event topic and target audience to the AI.",
+      "Ask it to 'Draft a 30-minute run-of-show' with timestamps and specific questions for the guest.",
+      "Use the 'Event Script' to host a professional, engaging conversation that converts listeners into high-intent leads."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at conversational design and drafting natural, engaging dialogue scripts."
+  },
+  "linkedin-carousel": {
+    "problem": "LinkedIn Carousels get 5x more engagement than static images, but chunking a long article into 10 viral slides is a slow manual process.",
+    "what_ai_does": "It takes any URL or blog post and automatically scripts a 10-slide LinkedIn Carousel—including a contrarian hook, 5 key insights, and a 'Comment-to-Download' CTA.",
+    "howToDoIt": [
+      "Provide the URL of your latest blog post to the AI.",
+      "Ask it to 'Script a 10-slide carousel' following the Sam Parr/High-Value framework.",
+      "Hand the 'Carousel Script' to your designer to create a viral social asset that drives thousands of views."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at synthesizing long-form content into punchy, mobile-optimized visual hooks."
+  },
+  "linkedin-comment-scraper": {
+    "problem": "Viral LinkedIn posts are lead magnets; people who comment 'Yes please' or 'Interested' are high-intent leads, but manually copying their info is slow.",
+    "what_ai_does": "It processes raw pastes of LinkedIn comment sections to extract Names, Headlines, and Profile URLs of high-intent commenters based on specific keywords.",
+    "howToDoIt": [
+      "Paste the raw HTML or text from a viral comment section into a file.",
+      "Ask the AI to 'Extract names and LinkedIn URLs for anyone who commented [Interested]'.",
+      "Import the 'Extracted Leads' into your CRM to start immediate follow-up with your highest-intent social fans."
+    ],
+    "bestTool": "Claude Code",
+    "whyThisTool": "Can directly parse messy HTML pastes and extract structured identity data with high accuracy."
+  },
+  "linkedin-connection-acceptance-rate": {
+    "problem": "You don't know if your 'Connection Note' is actually working or if you're just burning your LinkedIn limit on low-conversion templates.",
+    "what_ai_does": "It tracks the acceptance rate of your different LinkedIn request templates, identifying the specific 'Note Angle' that gets the most connections from your ICP.",
+    "howToDoIt": [
+      "Upload a CSV of your connection request logs (Template vs. Outcome).",
+      "Ask the AI to 'Calculate the acceptance % per template' and rank them.",
+      "Stop using the 'Generic' template and double down on the 'Personalized' winner to grow your network 2x faster."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing rate-based comparisons and identifying success patterns in outreach data."
+  },
+  "linkedin-connection-request-writer": {
+    "problem": "Generic LinkedIn requests ('I want to add you to my professional network') get ignored by 90% of high-value VIPs.",
+    "what_ai_does": "It writes personalized connection notes for a list of prospects, focusing on a specific 'Learner' or 'Mutual Interest' hook to maximize your acceptance rate.",
+    "howToDoIt": [
+      "Upload a CSV of your target prospects and their recent activity context.",
+      "Ask the AI to 'Draft 3 options under 300 characters' focusing on learning from their work.",
+      "Use the 'Personalized Notes' to connect with influencers and decision-makers without sounding like a bot."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at drafting authentic, non-salesy, and professional opening lines."
+  },
+  "linkedin-connection-request-writer-v2": {
+    "problem": "Cringe LinkedIn outreach is the fastest way to get blocked; you need a note that sounds like a human peer, not a sales rep.",
+    "what_ai_does": "It reads a prospect's full profile (bio/posts) to identify a specific 'Personal Hook' or 'Professional Win', drafting a warm note that actually gets accepted.",
+    "howToDoIt": [
+      "Paste a prospect's LinkedIn profile summary into the AI.",
+      "Ask it to 'Find a non-obvious hook' (e.g., a shared hobby or a specific point from a post).",
+      "Review the 'Non-Cringe Note' variations and pick the one that sounds most natural for your personal brand."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at identifying subtle personal nuances and maintaining a natural, peer-to-peer conversational tone."
+  },
+  "linkedin-document-ad-creator": {
+    "problem": "Image ads are boring; 'Document Ads' (swipeable PDFs) get 3x more clicks on LinkedIn, but chunking your whitepaper into a PDF is a design hassle.",
+    "what_ai_does": "It takes your long-form guides and chunks them into 5-page 'Teaser PDFs' designed specifically for the LinkedIn feed, including swipe-to-read indicators.",
+    "howToDoIt": [
+      "Provide the text or URL of your latest whitepaper to the AI.",
+      "Ask it to 'Select 3 micro-insights' and draft a 5-page teaser brief.",
+      "Follow the 'Ad Production Manifest' to build a high-conversion swipeable ad that stops the scroll."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at content chunking and identifying the most 'Clickable' insights in long documents."
+  },
+  "linkedin-ghostwriter": {
+    "problem": "You have great ideas but don't have the time to format them into 'Viral' LinkedIn posts; your brain dumps stay in your notes and never reach your audience.",
+    "what_ai_does": "It transforms your raw brain dumps into structured, high-performing LinkedIn posts using hook psychology and proven viral frameworks (e.g., 'The Failure Story').",
+    "howToDoIt": [
+      "Upload a CSV of your raw ideas and the 'Vibe' you want (e.g., 'Contrarian').",
+      "Ask the AI to 'Draft 3 distinct hooks' and expand the idea into 5-8 punchy sentences.",
+      "Schedule the 'Ghostwritten Posts' to maintain a consistent authority-building presence on LinkedIn with 90% less effort."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at capturing personal voice and following sophisticated social copywriting frameworks."
+  },
+  "linkedin-group-member-extractor": {
+    "problem": "LinkedIn groups are 'Dead' for conversation, but they are 'Gold' for targeting; a member of a 'Next.js' group has already self-identified as a lead.",
+    "what_ai_does": "It scrapes the member list of niche LinkedIn groups to build a highly qualified lead list, filtering out non-ICP roles like students or interns.",
+    "howToDoIt": [
+      "Provide the URL of a niche LinkedIn group to the AI.",
+      "Ask it to 'Extract names and titles' for members in your target country.",
+      "Reach out to the 'Group Leads' with a specific hook: 'Saw we are both in the [Group Name] community...'."
+    ],
+    "bestTool": "Claude Code",
+    "whyThisTool": "Can directly interact with web pages and perform high-precision data extraction from messy membership lists."
+  },
+  "linkedin-insight-tag-auditor": {
+    "problem": "If your LinkedIn Insight Tag is missing on your 'Pricing' or 'Demo' page, you are wasting 50% of your retargeting potential.",
+    "what_ai_does": "It crawls your entire domain portfolio to verify that your LinkedIn retargeting tag is present and correctly configured, flagging every 'Untagged' page for a fix.",
+    "howToDoIt": [
+      "Upload a CSV of your domain URLs and your Partner ID.",
+      "Ask the AI to 'Crawl every page and check for the script marker'.",
+      "Hand the 'Untagged Pages' list to your developer to ensure you are capturing every visitor for future retargeting ads."
+    ],
+    "bestTool": "Claude Code",
+    "whyThisTool": "Can directly crawl live site content and identify technical script signatures in the HTML source."
+  },
+  "linkedin-newsletter-launcher": {
+    "problem": "Starting a newsletter is hard; you need a niche, a name, and a Day 1 audience. Missing the 'Launch Post' means you start with zero subscribers.",
+    "what_ai_does": "It helps you define your newsletter niche and writes a high-converting launch post designed to maximize your Day 1 subscriber count from your existing connections.",
+    "howToDoIt": [
+      "Provide your brand name and topic (e.g., 'SaaS Metrics') to the AI.",
+      "Ask it to 'Draft 3 naming options' and a launch post that explains the 'Why'.",
+      "Publish the chosen 'Launch Post' on LinkedIn to turn your connections into a permanent, owned newsletter audience."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at strategic positioning and drafting persuasive, founder-led announcement copy."
+  },
+  "linkedin-poll-architect": {
+    "problem": "Generic LinkedIn polls get ignored; you need 'Polarizing' questions that force people to vote and reveal their internal business problems.",
+    "what_ai_does": "It brainstorms insightful poll questions related to your industry and drafts the follow-up DM to send to people based on how they voted.",
+    "howToDoIt": [
+      "Paste your industry topic (e.g., 'Remote Work') into the AI.",
+      "Ask it to 'Draft 3 polarizing poll angles' with 4 specific voting options each.",
+      "Post the winner and use the 'Follow-Up DM' script to start sales conversations with everyone who voted for the 'Pain' option."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at psychological ideation and drafting nuanced, non-salesy follow-up dialogue."
+  },
+  "linkedin-profile-banner-architect": {
+    "problem": "Your LinkedIn banner is 'Prime Real Estate' that most people waste with generic stock photos; it should be your highest-converting sales billboard.",
+    "what_ai_does": "It researches your niche to design a high-converting banner brief—including a hero hook, social proof placement, and a CTA pointer tailored to your profile.",
+    "howToDoIt": [
+      "Upload your job title and target niche to the AI.",
+      "Ask it to 'Draft a hero hook' (e.g., 'I help X achieve Y') and specify the visual layout.",
+      "Hand the 'Banner Brief' to a designer or use Canva to build a profile that converts every visitor into a follower."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at strategic positioning and following visual hierarchy principles for social media."
+  },
+  "linkedin-visual-hook-scorer": {
+    "problem": "You don't know if your post thumbnail will stand out against the LinkedIn 'UI Gray' background or if your text is too small to read on mobile.",
+    "what_ai_does": "It uses vision analysis to score your thumbnails on text readability, face prominence, and contrast, predicting their 'Scroll-Stopping' potential before you post.",
+    "howToDoIt": [
+      "Upload your proposed LinkedIn post image or video thumbnail.",
+      "Ask the AI to 'Score the visual hook' on a 1-10 scale based on mobile readability.",
+      "Increase the contrast or font size if the 'Visual Hook Score' is < 7 to ensure your post gets the reach it deserves."
+    ],
+    "bestTool": "ChatGPT (Vision)",
+    "whyThisTool": "Best-in-class image analysis and ability to detect structural visual patterns like 'Contrast' and 'Readability'."
+  },
+  "linkedin-voice-note-scripter": {
+    "problem": "Typing DMs is slow; Voice Notes convert 3x better but only if they are punchy and personal. Rambling for 2 minutes is a guaranteed way to get blocked.",
+    "what_ai_does": "It reads a prospect's profile win and writes a tight 45-second script for a personalized voice note that sounds casual, relevant, and professional.",
+    "howToDoIt": [
+      "Provide a prospect's name and a recent highlight (e.g., 'Ran a marathon').",
+      "Ask the AI to 'Write a 45-second voice DM script' mentioning that win.",
+      "Record the 'Personalized Script' on your phone and send it to stand out from the 100+ text-only bots in their inbox."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at drafting natural, spoken-word dialogue that avoids formal 'salesy' language."
+  },
+  "link-gap-detective": {
+    "problem": "Competitors rank higher than you simply because they have more 'Backlinks' from niche listicles and resource pages that you aren't on yet.",
+    "what_ai_does": "It identifies websites that link to your competitors or list 'Best Tools' in your category, generating a targeted outreach list to close your backlink gap.",
+    "howToDoIt": [
+      "Provide a list of 3 competitors and your target keywords (e.g., 'Best CRM 2024').",
+      "Ask the AI to 'Find listicles where I am missing' and extract the contact context.",
+      "Use the 'Outreach Campaign' drafts to pitch the authors on why your product deserves to be added to their existing lists."
+    ],
+    "bestTool": "Claude Code",
+    "whyThisTool": "Can directly query search results and perform high-precision content analysis to identify missing link opportunities."
+  },
+  "link-in-bio-auditor": {
+    "problem": "Your most valuable link (the one in your IG/TikTok bio) is often broken or points to an outdated 'Promo' page, leading to 100% lost conversion for those clicks.",
+    "what_ai_does": "It performs a daily technical check of your Bio link to verify it doesn't 404 and that the redirect lands on the correct, active promo page.",
+    "howToDoIt": [
+      "Provide your social handle and the expected destination URL.",
+      "Ask the AI to 'Verify the bio link doesn't return a 404' and check the final landing page.",
+      "Receive a daily 'Link Status' report to ensure your most important traffic source is never sending users to a dead end."
+    ],
+    "bestTool": "Claude Code",
+    "whyThisTool": "Can directly crawl URLs and interpret technical HTTP redirect chains and status codes."
   },
   "instagram-caption-spacer": {
     "problem": "Instagram often destroys caption formatting, turning your beautiful lists into a giant wall of text that users won't read.",
@@ -3145,6 +4245,2217 @@ const manualOverrides = {
     ],
     "bestTool": "Claude",
     "whyThisTool": "Superior at persuasive copywriting and understanding micro-conversion psychology"
+  },
+  "pre-meeting-dossier": {
+    "problem": "Sales reps often go into calls 'Blind', wasting the first 10 minutes asking basic questions that they could have found online.",
+    "what_ai_does": "It researches your daily meeting list—scraping LinkedIn posts, recent company news, and tech stacks—to build a 1-page 'Cheat Sheet' for every prospect, including a specific, non-generic icebreaker.",
+    "howToDoIt": [
+      "Upload a CSV of your day's meetings (Name, Company, LinkedIn URL).",
+      "Ask the AI to 'Find 3 recent wins or posts' for each person and infer their current tech stack.",
+      "Review the 'Daily Dossiers' 5 minutes before each call to build instant rapport and lead with a high-POV opening."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at synthesizing professional research into nuanced, high-signal personality profiles."
+  },
+  "renewal-save-rate-tracker": {
+    "problem": "CS teams often default to giving discounts to 'save' a customer, but you don't know if that discount actually prevents churn or just delays it by 3 months.",
+    "what_ai_does": "It analyzes your historical churn save attempts to determine which retention tactic (Discount, Exec Call, or Roadmap Promise) has the highest long-term success rate.",
+    "howToDoIt": [
+      "Upload a CSV of your churn save attempts and their outcomes.",
+      "Ask the AI to 'Group by tactic and calculate the 6-month retention rate'.",
+      "Update your 'Save Playbook' to prioritize the high-efficacy tactics and stop giving away margin for 'False Saves'."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing categorical win-rate analysis and identifying patterns in success data."
+  },
+  "repeat-purchase-rate-tracker": {
+    "problem": "Acquiring a customer only to have them never buy again is a recipe for a dying e-commerce business; you need to know your 90-day 'Loyalty Health'.",
+    "what_ai_does": "It monitors the percentage of new customers who make a second purchase within a 90-day window, flagging cohorts that are failing to stick.",
+    "howToDoIt": [
+      "Upload a CSV of your customer join dates and subsequent order dates.",
+      "Ask the AI to 'Calculate the 90-day repurchase rate for the Q1 cohort'.",
+      "Launch a 'Win-Back' sequence for cohorts with <10% repurchase rates to improve your customer lifetime value."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing cohort-based duration calculations and identifying retention gaps."
+  },
+  "reseller-map-compliance": {
+    "problem": "Resellers undercutting your 'Minimum Advertised Price' (MAP) devalues your brand and causes price wars that hurt your direct sales.",
+    "what_ai_does": "It automatically audits reseller websites to identify price violations, flagging partners who are undercutting your MAP thresholds.",
+    "howToDoIt": [
+      "Upload a CSV of your partners and your MAP thresholds per SKU.",
+      "Ask the AI to 'Identify partners with advertised prices below the threshold'.",
+      "Send an automated 'Compliance Notice' to violators to protect your brand's premium positioning."
+    ],
+    "bestTool": "Claude Code",
+    "whyThisTool": "Can directly crawl partner sites and perform high-precision data extraction from pricing tables."
+  },
+  "retargeting-sequence-planner": {
+    "problem": "Standard 'Buy Now' retargeting ads are annoying; you need a sequence that moves from 'Education' to 'Social Proof' to 'Scarcity'.",
+    "what_ai_does": "It designs a 30-day retargeting roadmap for your products—mapping out the hooks and objections handled for 4 distinct ad stages.",
+    "howToDoIt": [
+      "Provide your product's main benefit and the #1 reason people don't buy.",
+      "Ask the AI to 'Draft a 4-stage retargeting sequence' (Reminder, Proof, Objection, Closer).",
+      "Use the 'Creative Manifest' to guide your ad production and increase your retargeting ROAS by 2x."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at creative strategy and drafting persuasive, stage-based ad copy."
+  },
+  "return-adjusted-roas": {
+    "problem": "Standard ROAS is a lie; it ignores returns, shipping, and COGS, leading you to scale campaigns that are actually losing money.",
+    "what_ai_does": "It calculates your true 'Profit on Ad Spend' (POAS) by adjusting gross revenue for returns and variable logistics costs.",
+    "howToDoIt": [
+      "Upload your ad spend and order logs including return status and shipping costs.",
+      "Ask the AI to 'Calculate the net contribution margin per campaign'.",
+      "Kill the 'Revenue Vampires' (high ROAS, negative profit) and scale the campaigns with the highest true POAS."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Excellent for multi-step financial math and identifying hidden losses in acquisition data."
+  },
+  "returns-impact-on-profit": {
+    "problem": "Some SKUs have a 40%+ return rate, meaning you lose money every time they are sold once you factor in two-way shipping and labor.",
+    "what_ai_does": "It audits your SKU catalog to identify products with a 'Negative Contribution Margin' due to return logistics.",
+    "howToDoIt": [
+      "Upload a CSV of SKU-level revenue, COGS, and return rates.",
+      "Ask the AI to 'Identify SKUs where return costs eat >50% of profit'.",
+      "Move the 'High Return' items to 'Final Sale' or discontinue them to protect your bottom line."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing financial delta calculations and identifying SKU-level profit leakage."
+  },
+  "revenue-leakage-hunter": {
+    "problem": "SaaS companies often have 'Zombie Users'—people active on the platform whose contract expired months ago but weren't automatically cut off.",
+    "what_ai_does": "It cross-references your platform login logs against active CRM contracts to identify un-contracted usage that should be billed.",
+    "howToDoIt": [
+      "Upload a CSV of recent logins and your active contract list.",
+      "Ask the AI to 'Flag any login from a domain with no active contract'.",
+      "Send the 'Leakage Alert' list to your account managers to either collect back-pay or sign a new deal."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Excellent for data reconciliation and identifying usage gaps across large datasets."
+  },
+  "review-keyword-extractor": {
+    "problem": "Competitors don't tell you their weaknesses; but their 1-star reviews on G2 reveal the exact 'Product Gaps' you can use to win.",
+    "what_ai_does": "It mines hundreds of competitor reviews to extract recurring 'Pain Phrases' (e.g., 'Slow UI', 'Bad API'), providing a list of attack angles for your sales team.",
+    "howToDoIt": [
+      "Paste a text export of your competitor's negative reviews into the AI.",
+      "Ask it to 'Extract the top 5 most frequent bi-grams related to product pain'.",
+      "Update your sales battlecards with these 'Trap Questions' to expose the competitor's known technical flaws."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at identifying semantic patterns and extracting strategic intent from unstructured text."
+  },
+  "review-miner-pm": {
+    "problem": "Product managers often build what they 'Think' the market wants; you need to build what the market is 'Complaining' about to capture users.",
+    "what_ai_does": "It audits the entire market's negative reviews to identify 'Universal Gaps', ranking missing features by their likely revenue impact.",
+    "howToDoIt": [
+      "Provide URLs for the G2/Capterra pages of 3 top competitors.",
+      "Ask the AI to 'Identify the #1 missing feature across the entire category'.",
+      "Prioritize that 'Market Gap' in your next development sprint to become the only logical alternative for frustrated users."
+    ],
+    "bestTool": "Claude Code",
+    "whyThisTool": "Can directly crawl live review sites and perform high-precision thematic clustering."
+  },
+  "review-request-timer": {
+    "problem": "Asking for a review 30 days after purchase results in 0% conversion; you need to ask at the exact moment of 'Aha!' (usually 2 days after delivery).",
+    "what_ai_does": "It monitors your shipping logs to schedule review requests for exactly 48 hours after 'Delivered' status, maximizing your social proof generation.",
+    "howToDoIt": [
+      "Upload a CSV of your shipping logs including 'Email' and 'Delivery Date'.",
+      "Ask the AI to 'Generate a request schedule for Date + 2 days'.",
+      "Import the 'Review Queue' into your email tool to capture 5-star reviews while the excitement is highest."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at date-based automation logic and following simple time-triggered sequences."
+  },
+  "review-response-bot": {
+    "problem": "Most brands either ignore reviews or reply with generic 'Thanks' copy, missing a chance to save a detractor or route a bug to engineering.",
+    "what_ai_does": "It categorizes public reviews by theme (Bug, Price, Support) and drafts empathetic responses while automatically routing issues to the right internal team.",
+    "howToDoIt": [
+      "Upload a CSV of your recent reviews (Stars and Text).",
+      "Ask the AI to 'Categorize into Triage buckets and draft professional replies'.",
+      "Hand the 'Technical' reviews to your developers and use the 'Praise' reviews for social media testimonials."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at empathetic tone-matching and identifying departmental intent from conversational text."
+  },
+  "review-sentiment-analyzer": {
+    "problem": "You don't know the 'Price Tag' of a bad review; you need to quantify how much revenue you lose for every negative comment on your product page.",
+    "what_ai_does": "It correlates negative review counts with conversion rate drops, identifying the SKUs where 'Social Damage' is most expensive.",
+    "howToDoIt": [
+      "Upload a CSV of PDP review counts and daily conversion rates.",
+      "Ask the AI to 'Calculate the correlation between 1-star count and CR decline'.",
+      "Prioritize your 'Customer Support' outreach to the reviewers on your highest-revenue, lowest-rated pages."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Excellent for correlation analysis and identifying statistical links between feedback and performance."
+  },
+  "review-sentiment-quantifier": {
+    "problem": "Star ratings lie; a 4-star review can still mention that your 'Support is terrible'. You need a true NPS score per feature.",
+    "what_ai_does": "It scores 1,000+ reviews for specific attributes (Speed, Price, UX), calculating a net sentiment score for every part of your product.",
+    "howToDoIt": [
+      "Paste a massive CSV of reviews into the AI.",
+      "Ask it to 'Assign a sentiment score (-1 to +1) for Speed, Support, and Price'.",
+      "Identify the 'Friction Winner' (the feature with the lowest net score) to focus your next UX overhaul."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at nuanced attribute extraction and following complex multi-column scoring rules."
+  },
+  "review-to-ad": {
+    "problem": "Ad copy written by 'Marketers' often sounds fake; the best ads use the exact 'Emotional Trigger Words' used by real customers in their reviews.",
+    "what_ai_does": "It takes your best customer reviews and automatically transforms them into 3 distinct ad variations—using the customer's actual phrasing to build instant trust.",
+    "howToDoIt": [
+      "Upload a CSV of your 5-star reviews.",
+      "Ask the AI to 'Identify the core Aha! moment and draft 3 ad variants' (PAS, Story, Hook).",
+      "Launch the 'Customer Voice' ads to see a 20%+ increase in click-through rates compared to corporate copy."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at capturing personal voice and identifying the 'Emotional Core' of a sentence."
+  },
+  "review-velocity-tracker": {
+    "problem": "You need to know the 'Math of Social Proof'—exactly how many 5-star reviews you need to lift your average from 4.2 to 4.5.",
+    "what_ai_does": "It calculates the exact review gap required to hit your rating target, helping you plan the budget for your next social proof campaign.",
+    "howToDoIt": [
+      "Provide your current review count and average rating.",
+      "Ask the AI to 'Solve for X: number of new 5-stars needed to hit 4.5 average'.",
+      "Review the 'Growth Plan' to decide if you need a high-volume NPS push or a dedicated CAB incentive program."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing financial math and solving algebraic equations based on business targets."
+  },
+  "rfp-responder": {
+    "problem": "Responding to a 50-page RFP is a manual grind that takes weeks; most of the answers are already in your previous proposals or security docs.",
+    "what_ai_does": "It processes complex RFP requirements and auto-drafts structured responses based on your standard service offerings and compliance standards.",
+    "howToDoIt": [
+      "Upload the RFP requirement text and your standard security/compliance docs.",
+      "Ask the AI to 'Map our capabilities to every requirement and draft a response'.",
+      "Use the 'Draft Response' to finish your RFP in 24 hours instead of 2 weeks, giving you a massive speed advantage."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at professional document analysis and synthesizing technical facts into persuasive B2B responses."
+  },
+  "roadmap-prioritizer": {
+    "problem": "Product roadmaps are often driven by 'Opinions' or the latest sales request, leading to feature creep and zero revenue growth.",
+    "what_ai_does": "It uses the RICE framework (Reach, Impact, Confidence, Effort) to objectively score every feature request, generating a prioritized roadmap for your team.",
+    "howToDoIt": [
+      "Upload a CSV of feature requests with your estimates for Reach and Impact.",
+      "Ask the AI to 'Calculate the RICE score and rank into P0, P1, P2'.",
+      "Build the 'P0' features first to ensure your engineering resources are only working on high-leverage opportunities."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing multi-column math and following strict prioritization frameworks."
+  },
+  "robots-txt-architect": {
+    "problem": "Search bots waste your 'Crawl Budget' on low-value pages like /search or /tags, causing your new product pages to stay unindexed for months.",
+    "what_ai_does": "It generates a high-efficiency robots.txt file tailored to your site structure, explicitly blocking 'Crawl Waste' to force Googlebot toward your money pages.",
+    "howToDoIt": [
+      "Provide a list of your site's high-traffic/low-value directories (e.g., /staging, /api).",
+      "Ask the AI to 'Draft a standard robots.txt following best practices for crawl budget'.",
+      "Update your robots.txt to speed up the indexing of your new SEO content by up to 5x."
+    ],
+    "bestTool": "Claude Code",
+    "whyThisTool": "Can directly analyze site structure and generate precise technical SEO configuration files."
+  },
+  "saas-customer-onboarding-plan-generator": {
+    "problem": "Static onboarding sequences (Email 1, 2, 3) fail because they don't know what the user has already done, leading to redundant and annoying content.",
+    "what_ai_does": "It reads your User Activity Log and triggers a specific, relevant nudge based on their progress (e.g., 'Tip: How to invite your team' only if they haven't done it).",
+    "howToDoIt": [
+      "Upload a CSV of your user milestones (Email, Logged_In, Feature_Used).",
+      "Ask the AI to 'Assign the next best action for every user' based on their activity gap.",
+      "Send the 'Usage-Based Nudges' to see a 30%+ increase in user activation rates."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at behavioral reasoning and matching messages to specific user states."
+  },
+  "saas-metric-dashboarder": {
+    "problem": "Calculating SaaS 'Unit Economics' like Magic Number or LTV:CAC manually is prone to spreadsheet errors that can ruin a board meeting.",
+    "what_ai_does": "It takes your raw financials (New ARR, Sales Spend, Churn) and automatically calculates your high-level health metrics for investor reporting.",
+    "howToDoIt": [
+      "Upload a CSV of your monthly revenue and spend categories.",
+      "Ask the AI to 'Calculate LTV:CAC, Magic Number, and Payback Period'.",
+      "Use the 'Metric Briefing' to walk into your next board meeting with 100% confidence in your numbers."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing multi-step financial formulas and following standard SaaS accounting logic."
+  },
+  "saas-pricing-calculator": {
+    "problem": "Most SaaS pricing is a guess; you need to know exactly how your 'Unit Margins' change if you add a seat or include a premium support tier.",
+    "what_ai_does": "It models three distinct pricing scenarios based on your target margin and COGS, recommending the tier structure that maximizes total ARPU.",
+    "howToDoIt": [
+      "Provide your average cost to serve and target revenue per account.",
+      "Ask the AI to 'Model a 3-tier structure' (Starter, Pro, Enterprise) optimized for a 80% gross margin.",
+      "Launch the 'Margin-Optimized' tiers to ensure your scaling is actually profitable."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing financial modeling and following complex margin-based constraints."
+  },
+  "saas-pricing-page-change-alert": {
+    "problem": "Your competitors are always testing new pricing tiers; if you don't notice their 'New Pro Plan' within 24 hours, you lose deals to a lower price point.",
+    "what_ai_does": "It monitors competitor pricing pages and highlights strategic shifts—like moving a feature from 'Enterprise' to 'Pro'—in a daily intel report.",
+    "howToDoIt": [
+      "List 5 competitor pricing URLs in a CSV.",
+      "Ask the AI to 'Identify any changes in pricing or feature gating' vs. the last check.",
+      "Alert your sales team to the 'Competitor Pivot' so they can adjust their talk-tracks before their next demo."
+    ],
+    "bestTool": "Claude Code",
+    "whyThisTool": "Can directly crawl URLs and perform high-precision side-by-side text comparisons."
+  },
+  "saas-seat-utilization-nudge": {
+    "problem": "Accounts with 'Empty Seats' (e.g., paid for 50, only using 5) are 10x more likely to downgrade or churn at renewal.",
+    "what_ai_does": "It identifies 'Under-Utilized' accounts and drafts a 'Value Realization' email for the admin, suggesting they invite more users to get their money's worth.",
+    "howToDoIt": [
+      "Upload a CSV of accounts with 'Paid Seats' vs. 'Active Users'.",
+      "Ask the AI to 'Flag any account with < 20% seat utilization'.",
+      "Send the 'Utilization Nudge' to help customers adopt the product fully, securing your renewal revenue."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing ratio math and drafting professional, value-driven emails."
+  },
+  "saas-usage-red-flag-detector": {
+    "problem": "Sudden drops in usage (e.g., no logins for 7 days) are the ultimate churn signal; but manual usage monitoring is impossible for 1,000+ accounts.",
+    "what_ai_does": "It compares this week's usage against a trailing 4-week average, flagging any account with a >50% drop for immediate 'Red Flag' intervention.",
+    "howToDoIt": [
+      "Upload your weekly account login counts into a CSV.",
+      "Ask the AI to 'Calculate the usage delta % and flag drops > 50%'.",
+      "Triage the 'Red Flag List' every Monday morning to save at-risk revenue before it churns."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing rolling average calculations and identifying behavioral anomalies."
+  },
+  "sales-activity-efficiency-ratio": {
+    "problem": "Reps might be 'Busy' (100 calls/day), but if none of those result in a meeting, they are just wasting time on the wrong leads.",
+    "what_ai_does": "It calculates the 'Activity-to-Meeting' ratio per rep and lead source, identifying the 'Empty Calories' in your sales process.",
+    "howToDoIt": [
+      "Upload your activity logs (Calls, Emails) and meeting outcomes.",
+      "Ask the AI to 'Calculate the number of touches required to book a meeting' per rep.",
+      "Coach your reps to focus on 'Quality' activities that have a 2x higher efficiency ratio than cold calling."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing multi-column ratio math and identifying efficiency patterns."
+  },
+  "sales-activity-quota-tracker": {
+    "problem": "Daily standups are a waste of time if you spend them asking reps 'How many calls did you make?'; you need a live daily scoreboard.",
+    "what_ai_does": "It aggregates your daily call/email logs to create an automated 'KPI Scoreboard', flagging any rep who fell below their activity quota for the day.",
+    "howToDoIt": [
+      "Upload your team's daily activity logs into a CSV.",
+      "Ask the AI to 'Rank reps by total activity volume' and compare vs. the 50/day goal.",
+      "Automate your daily Slack standup with the 'KPI Scoreboard' to maintain high energy and accountability."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing data aggregation and following simple benchmark-based ranking."
+  },
+  "sales-battlecard-builder": {
+    "problem": "New sales reps freeze when a prospect says 'But we already use Competitor X'; they need a 1-page cheat sheet to handle that objection.",
+    "what_ai_does": "It researches competitor features and positioning to build a 'Kill Sheet' for every rival—including 3 'Trap Questions' that expose their weaknesses.",
+    "howToDoIt": [
+      "Provide a list of 3 competitors and your own product tagline.",
+      "Ask the AI to 'Find their top 3 weaknesses on G2' and draft a battlecard.",
+      "Arm your reps with the 'Closer's Battlecards' to win 2x more competitive deals."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at researching competitive positioning and drafting professional, persuasive sales talk-tracks."
+  },
+  "sales-call-keyword-tracker": {
+    "problem": "Compliance and quality control: you need to know if reps are mentioning mandatory keywords (e.g., 'Pricing Disclaimer') without listening to every call.",
+    "what_ai_does": "It scans call transcripts for a list of required keywords, flagging every call that failed to meet your 'Script Compliance' standards.",
+    "howToDoIt": [
+      "Upload your call transcripts and a list of mandatory phrases.",
+      "Ask the AI to 'Check each transcript for the required keywords' and flag missing ones.",
+      "Review the 'Compliance Audit' to coach your reps on maintaining 100% professional script adherence."
+    ],
+    "bestTool": "Claude Code",
+    "whyThisTool": "Can directly read and perform high-speed text searching across hundreds of long-form transcripts."
+  },
+  "sales-call-objection-heatmapper": {
+    "problem": "You don't know if your deals are dying in the 'Intro' (min 2) or at the 'Price' reveal (min 20), making it impossible to fix your sales script.",
+    "what_ai_does": "It parses Zoom transcripts to map 'Objections' against their 'Minute Mark', identifying exactly which part of your call is the primary deal-killer.",
+    "howToDoIt": [
+      "Upload a folder of sales transcripts to the AI.",
+      "Ask it to 'Extract every objection and its timestamp'.",
+      "Review the 'Objection Heatmap' to see if 80% of your losses happen at the 20-minute mark, signaling a need to fix your pricing presentation."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at identifying semantic context and extracting specific events from conversational text."
+  },
+  "sales-call-sentiment-tracker": {
+    "problem": "A call that 'Went Great' might actually have negative sentiment markers that signal a future ghosting; you need an unbiased 'Mood' score for every call.",
+    "what_ai_does": "It reads your call transcripts to score the prospect's mood (Excited, Skeptical, or Frustrated), identifying the 'Silent Detractors' who won't sign.",
+    "howToDoIt": [
+      "Upload your daily call transcripts into a CSV.",
+      "Ask the AI to 'Calculate a sentiment score' per prospect and correlate with deal outcome.",
+      "Flag any deal where the sentiment score was < 4.0 for immediate manager intervention before the prospect goes dark."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at detecting subtle emotional nuances and conversational subtext."
+  },
+  "sales-call-talk-ratio-auditor": {
+    "problem": "Top sales reps talk less and listen more; if your reps are talking >70% of the time, they are failing to discover the prospect's real pain.",
+    "what_ai_does": "It calculates the 'Talk-to-Listen' ratio for every sales call, flagging reps who are 'Feature Dumping' rather than listening.",
+    "howToDoIt": [
+      "Upload your Zoom/Gong transcripts including speaker labels.",
+      "Ask the AI to 'Calculate the % of time spent by the Rep vs. the Prospect'.",
+      "Review the 'Talk Ratio Leaderboard' to coach your talkative reps to ask more questions and listen 2x more."
+    ],
+    "bestTool": "Claude Code",
+    "whyThisTool": "Can directly process large transcripts and perform speaker-based duration analysis."
+  },
+  "sales-call-transcript-analyzer": {
+    "problem": "Manual call coaching is slow; managers only have time to listen to 1% of calls, missing 99% of the coaching opportunities.",
+    "what_ai_does": "It analyzes 100% of your sales calls to identify 'Winning Patterns' (e.g., mentioning a specific case study), providing automated coaching feedback to every rep.",
+    "howToDoIt": [
+      "Provide a folder of call transcripts to the AI.",
+      "Ask it to 'Identify the top 3 success markers' across all 'Closed-Won' calls.",
+      "Use the 'Winning Pattern' report to train your entire team on the specific talk-tracks that actually drive revenue."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at identifying strategic content patterns and synthesizing insights from large conversational datasets."
+  },
+  "sales-cycle-outlier-detector": {
+    "problem": "One 2-year deal can skew your 'Average Sales Cycle' and lead to poor forecasting; you need to identify the 'Zombies' and 'Unicorns'.",
+    "what_ai_does": "It identifies deals that are >2x or <0.2x the team's average cycle time, flagging them for an immediate 'Process Audit' or a 'Signature Push'.",
+    "howToDoIt": [
+      "Upload your deal history CSV including 'Days to Close'.",
+      "Ask the AI to 'Identify outliers using standard deviation'.",
+      "Review the 'Cycle Outliers' list to flush out the stale deals and clone the processes of your fastest wins."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing statistical outlier detection and following benchmark-based rules."
+  },
+  "sales-discovery-question-generator": {
+    "problem": "Generic discovery questions result in shallow pain; you need deep, probing questions tailored to the prospect's specific job title and industry.",
+    "what_ai_does": "It analyzes a prospect's role and industry to generate a list of 10 'High-Impact' questions that uncover the specific pains of that persona.",
+    "howToDoIt": [
+      "Provide the prospect's job title (e.g., 'VP Engineering') and industry.",
+      "Ask the AI to 'Generate 10 deep discovery questions' focused on their daily stress points.",
+      "Paste the 'Discovery Script' into your meeting notes to sound like an industry insider from minute one."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at identifying role-specific pain points and drafting professional, inquisitive dialogue."
+  },
+  "sales-email-ab-test-planner": {
+    "problem": "Most reps test 'Vague' variables; you need a scientifically valid experiment that identifies the true winner for your next outbound blast.",
+    "what_ai_does": "It takes your current control email and proposes 3 'Challenger' variants designed to test specific levers like Subject FOMO vs. Curiosity.",
+    "howToDoIt": [
+      "Paste your current best-performing email into the AI.",
+      "Ask it to 'Draft 3 challengers changing ONLY the subject, the hook, or the CTA'.",
+      "Run the 'A/B Experiment' to find the 10% lift that scales your pipeline by $100k."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at following strict experimental design rules and drafting nuanced copy variations."
+  },
+  "sales-followup-sequence-builder": {
+    "problem": "50% of deals die because the rep stopped following up after the 2nd email; you need a persistent but polite 'Ghost-Busting' sequence.",
+    "what_ai_does": "It writes a 4-step sequence—from a 'Value-Add' to a 'Breakup' email—designed to get a definitive 'Yes' or 'No' from a prospect who has gone dark.",
+    "howToDoIt": [
+      "Provide the context of your last interaction (e.g., 'Demo on Tuesday').",
+      "Ask the AI to 'Draft a 4-step ghost-busting sequence' starting with a resource share.",
+      "Import the 'Follow-up Sequence' into your CRM to automate your persistence and revive 20% of your dead deals."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at drafting professional, socially-aware copy that avoids sounding desperate or pushy."
+  },
+  "sales-forecast-scenario-modeler": {
+    "problem": "Sales managers provide one 'Commit' number; but you need to see the range of outcomes (Conservative vs. Aggressive) to plan hiring.",
+    "what_ai_does": "It simulates three revenue scenarios based on weighted pipeline values and historical win rates, providing a range of likely EOM revenue.",
+    "howToDoIt": [
+      "Upload your total pipeline values per stage.",
+      "Ask the AI to 'Apply 10%, 30%, and 60% win rates' to calculate the scenarios.",
+      "Use the 'Scenario Matrix' to justify your hiring plans based on the 'Conservative' revenue outcome."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing financial simulations and following strict weighted-math rules."
+  },
+  "sales-funnel-bottleneck-finder": {
+    "problem": "You know you are missing revenue, but you don't know if the problem is 'Lead Quality' or 'Rep Closing Skills'.",
+    "what_ai_does": "It analyzes your conversion rates against industry benchmarks to pinpoint the 'Primary Leak' in your funnel, suggesting 1 specific tactic to fix it.",
+    "howToDoIt": [
+      "Upload a CSV of your funnel conversion metrics (Lead -> Meeting -> Opp -> Close).",
+      "Ask the AI to 'Identify the stage with the biggest negative gap vs. benchmark'.",
+      "Review the 'Prescription Report' to focus your management energy on the one bottleneck that's losing you the most revenue."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing benchmark comparisons and identifying efficiency gaps."
+  },
+  "sales-interview-questions": {
+    "problem": "Generic interviews result in 'Bad Hires'; you need behavioral questions that test the specific challenges of your price point and sales cycle.",
+    "what_ai_does": "It generates a custom behavioral interview script and weighted scorecard for your specific sales role (e.g., 'Enterprise AE').",
+    "howToDoIt": [
+      "Provide the job title and core challenge (e.g., 'Selling to CFOs').",
+      "Ask the AI to 'Draft 5 STAR-method questions' and define 'Green Flags'.",
+      "Use the 'Hiring Scorecard' to ensure your team is hiring based on objective data rather than a 'Gut Feeling'."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at professional role-based research and drafting nuanced behavioral questions."
+  },
+  "sales-negotiation-script-writer": {
+    "problem": "Reps cave on price too early; they need specific 'Closer's Scripts' to handle late-stage objections without giving away margin.",
+    "what_ai_does": "It identifies your leverage points (e.g., a looming deadline) and drafts 3 distinct negotiation options: The Trade, The Logic, or The Split.",
+    "howToDoIt": [
+      "Paste the deal context and the specific objection (e.g., 'Too expensive').",
+      "Ask the AI to 'Identify our leverage and draft 3 negotiation options'.",
+      "Use the 'Negotiation Playbook' to close the deal at a higher margin by trading value for speed."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at strategic reasoning and drafting professional, persuasive executive-level dialogue."
+  },
+  "sales-objection-battlecard-generator": {
+    "problem": "Manual battlecards are boring and outdated; you need 'Real-World' kill sheets based on actual customer complaints about your competitors.",
+    "what_ai_does": "It researches competitor weaknesses across public review sites and writes specific 'Objection Handlers' for your sales reps to use live.",
+    "howToDoIt": [
+      "Provide a competitor's name and product category.",
+      "Ask the AI to 'Extract 3 recurring weaknesses' and draft a battlecard.",
+      "Update your 'Kill Sheets' every quarter to ensure your reps are armed with the latest competitive intel."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at researching competitive positioning and identifying linguistic 'Wedges' to use in sales."
+  },
+  "sales-quota-calculator": {
+    "problem": "Telling a rep to 'Do more' is lazy; they need to know the specific path (Volume vs. Skill) to hitting their monthly revenue goal.",
+    "what_ai_does": "It models three paths to quota—The Grinder (Volume), The Sniper (Conversion), and The Balanced approach—based on their current stats.",
+    "howToDoIt": [
+      "Upload a CSV of a rep's current conversion rates and daily dials.",
+      "Ask the AI to 'Model 3 scenarios to hit a $50k quota'.",
+      "Review the 'Quota Strategy' with the rep to set realistic growth goals that don't lead to burnout."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing financial simulations and identifying behavioral patterns."
+  },
+  "sales-rep-ramp-velocity": {
+    "problem": "You don't know if your 'Ramp Time' is getting better or worse; if new hires take 6 months to close a deal, you're losing six figures in overhead.",
+    "what_ai_does": "It measures 'Time to First Deal' for your hiring cohorts, evaluation the ROI of your onboarding program speed.",
+    "howToDoIt": [
+      "Upload a CSV of rep hire dates and first-won deal dates.",
+      "Ask the AI to 'Calculate the average ramp time in days per cohort'.",
+      "Identify the 'Ramp Leaders' and use their onboarding path to speed up the productivity of the next 10 hires."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing date arithmetic and identifying efficiency patterns in team data."
+  },
+  "sales-roleplay-simulator": {
+    "problem": "Roleplay with a 'Friendly Manager' is useless; reps need to practice against a 'Skeptical Prospect' to build real mental muscle.",
+    "what_ai_does": "It generates a 3-paragraph 'Character Sheet' for the AI to adopt (e.g., 'Angry VP Ops'), including their daily pet peeves and specific 'Hard No' triggers.",
+    "howToDoIt": [
+      "Provide a sales scenario (e.g., 'CTO Grilling').",
+      "Ask the AI to 'Draft a character sheet and 5 hard objections'.",
+      "Have the rep pitch to the AI 'Prospect' to practice neutralising high-pressure objections in a safe environment."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at adopting sophisticated personas and maintaining a realistic, challenging conversational tone."
+  },
+  "sales-team-expansion-signal": {
+    "problem": "A startup hiring their 'First VP of Sales' is the highest-intent lead for CRM setup, sales data, and pipeline tools.",
+    "what_ai_does": "It identifies Seed/Series A startups searching for their first executive sales hire, signaling a company moving from 'Founder-led' to 'Process-led' growth.",
+    "howToDoIt": [
+      "Provide a list of 5 industry keywords (e.g., 'Founding Head of Sales').",
+      "Ask the AI to 'Identify startups hiring for these roles' in the last 14 days.",
+      "Reach out to the Founder with a 'While you hire...' offer to set up their CRM infrastructure before the new VP arrives."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at researches job boards and identifying strategic business pivots from hiring signals."
+  },
+  "sales-territory-balancer": {
+    "problem": "Imbalanced territories lead to 'Feast or Famine' where one rep has 100 enterprise accounts and another has 10.",
+    "what_ai_does": "It audits your sales assignments to flag reps whose revenue potential is >20% different from the team average, ensuring every 'Patch' is fair.",
+    "howToDoIt": [
+      "Upload a CSV of accounts including 'Estimated Revenue' and 'Owner'.",
+      "Ask the AI to 'Identify imbalances in total revenue potential per rep'.",
+      "Redistribute your 'Enterprise Accounts' based on the 'Balance Report' to ensure all your reps have an equal chance to hit quota."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing data aggregation and identifying imbalances across geographical/categorical patches."
+  },
+  "sales-territory-mapper": {
+    "problem": "Manually grouping 1,000+ zip codes into balanced sales 'Patches' is a multi-day administrative nightmare.",
+    "what_ai_does": "It automatically aggregates zip codes into balanced territories based on revenue potential, ensuring each rep has an identical ARR opportunity.",
+    "howToDoIt": [
+      "Upload a CSV of your customer zip codes and their annual revenue.",
+      "Ask the AI to 'Divide these into 4 balanced patches based on revenue'.",
+      "Use the 'Territory Master' CSV to instantly assign your sales team to their new high-performing patches."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Excellent for geospatial data aggregation and following strict balancing rules."
+  },
+  "sales-velocity-day-of-week": {
+    "problem": "You might be sending 1,000 emails on 'Monday' but getting 80% of your replies from the 100 emails you sent on 'Sunday Night'.",
+    "what_ai_does": "It analyzes your sales logs to identify your 'Golden Hours'—the specific time blocks where prospect engagement and revenue velocity are highest.",
+    "howToDoIt": [
+      "Upload your sales activity and outcome logs into a CSV.",
+      "Ask the AI to 'Identify the day and hour with the highest win rate %'.",
+      "Shift 50% of your outbound volume to your 'Power Hours' to see an immediate boost in meeting booking rates."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing temporal aggregation and identifying efficiency patterns in large activity logs."
+  },
+  "sales-velocity-trend-monitor": {
+    "problem": "Average sales cycles are stable; but you need to know if your cycle is 'Slowly Lengthening' over time due to a new competitor or pricing model.",
+    "what_ai_does": "It compares this month's average cycle time against a trailing 6-month average to spot trends before they impact your quarterly revenue targets.",
+    "howToDoIt": [
+      "Upload your monthly 'Days to Close' logs into a CSV.",
+      "Ask the AI to 'Identify any sustained increase in cycle time (>10% per month)'.",
+      "Review the 'Efficiency Trend' report to adjust your sales training or pricing before the bottleneck ruins your Q4."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Excellent for trend analysis and identifying statistical shifts in time-series performance data."
+  },
+  "sample-pack-converter": {
+    "problem": "Sample buyers are high-intent leads; but most brands forget to follow up with an upsell offer when the sample is about to run out.",
+    "what_ai_does": "It monitors sample pack orders and schedules an 'Upgrade to Full-Size' email for exactly 14 days after purchase, maximizing your trial-to-paid conversion.",
+    "howToDoIt": [
+      "Upload a CSV of your 'Sample Kit' order logs and dates.",
+      "Ask the AI to 'Filter for buyers from 14 days ago' and draft an upsell offer.",
+      "Launch the 'Sample Recovery' campaign to turn your $10 triallists into $100 full-size product customers."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing date-based calculations and following simple lifecycle sequences."
+  },
+  "press-release-drafter": {
+    "problem": "Turning dry technical code commits into a 'Journalist-Grade' press release takes hours of PR agency time that most startups can't afford.",
+    "what_ai_does": "It reads your git logs and changelogs to extract the 'Hard News' of your release and transforms it into a complete launch kit—including a formal press release, a founder's note, and a social thread.",
+    "howToDoIt": [
+      "Point the AI to your /content/recipes or /CHANGELOG.md directory.",
+      "Ask it to 'Identify the top 3 user benefits' and draft an AP-style press release.",
+      "Use the 'Founder's Note' to pitch your release to niche journalists with a personalized, technical hook."
+    ],
+    "bestTool": "Claude Code",
+    "whyThisTool": "Can directly read codebase history and technical files to ground the PR in factual engineering wins."
+  },
+  "press-release-partnership-scanner": {
+    "problem": "Companies that just announced a 'Strategic Partnership' are in expansion mode and have fresh budget for ecosystem tools and services.",
+    "what_ai_does": "It scans PR wires for keywords like 'Collaboration' or 'Announces Integration' to identify pairs of companies building their ecosystem, providing a high-intent lead list for business development.",
+    "howToDoIt": [
+      "Provide a list of 5 industry keywords (e.g., 'SaaS Integration') to the AI.",
+      "Ask it to 'Identify companies that just announced a new partnership' in the last 48 hours.",
+      "Reach out to the Head of Partnerships with a pitch tailored to helping them scale their new joint-offering."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at identifying strategic intent and relationship dynamics from unstructured news text."
+  },
+  "price-drop-notification-list": {
+    "problem": "Broad 'Price Drop' blasts feel like spam; you need to target the specific users who previously looked at that SKU to drive a high-conversion sales spike.",
+    "what_ai_does": "It cross-references your price-reduction list with your web browsing logs to identify 'High Intent Watchers', generating a prioritized notification list for every discounted item.",
+    "howToDoIt": [
+      "Upload a CSV of your newly discounted SKUs and your 'Viewed Product' event logs.",
+      "Ask the AI to 'Match users to discounted items they viewed in the last 30 days'.",
+      "Launch a 'Price Drop' email sequence to those specific users to reclaim lost carts with an immediate incentive."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at data reconciliation and performing set-matching across large user event logs."
+  },
+  "price-variance-auditor": {
+    "problem": "Global brands often have 'Price Leakage' where the same SKU is listed at different prices across different regions or marketplaces, hurting brand equity.",
+    "what_ai_does": "It audits your global pricing tables to identify SKUs with high variance (>10%) across regions, flagging inconsistencies that need to be normalized to protect your margins.",
+    "howToDoIt": [
+      "Upload a CSV of your global SKU list with prices in USD (adjusted for PPP).",
+      "Ask the AI to 'Identify SKUs where the max price is >10% different from the median'.",
+      "Review the 'Variance Audit' to standardize your global pricing and prevent savvy customers from 'Arbing' your regions."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing multi-dimensional variance math and identifying outliers in financial data."
+  },
+  "pricing-change-historian": {
+    "problem": "You don't know if your competitors are raising prices or 'Shrinking' their features because you only see their website as it looks today.",
+    "what_ai_does": "It researches competitor pricing history using web archives to calculate their annual 'Pricing Inflation' and identify 'Shrinkflation' (cutting features while keeping prices flat).",
+    "howToDoIt": [
+      "Provide a competitor's pricing URL to the AI.",
+      "Ask it to 'Compare current plans against archived versions from 12 months ago'.",
+      "Draft a 'Sales Wedge' document explaining how your pricing model is more stable and value-driven compared to their recent hikes."
+    ],
+    "bestTool": "Claude Code",
+    "whyThisTool": "Can directly query web archives and perform high-precision side-by-side feature comparisons over time."
+  },
+  "pricing-migrator": {
+    "problem": "Moving 1,000+ legacy customers to a new pricing tier is a 'Revenue vs. Churn' gamble that most companies avoid out of fear.",
+    "what_ai_does": "It simulates a pricing migration for your entire base—assigning every user to their new 2026 plan based on usage—to calculate the 'Total Revenue Uplift' and identify the top 5% most at-risk accounts.",
+    "howToDoIt": [
+      "Upload a CSV of your current customers with their seat/usage data and legacy price.",
+      "Define your new 2026 pricing tiers in a prompt.",
+      "Review the 'Migration Impact' report to decide which cohorts need 'Grandfathering' and which are ready for an immediate uplift."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Excellent for financial modeling and following complex, usage-based plan assignment rules."
+  },
+  "pricing-page-psychologist": {
+    "problem": "Most pricing pages suffer from 'Choice Paralysis' or lack 'Anchoring', causing users to bounce without selecting a plan.",
+    "what_ai_does": "It audits your pricing page against 10 behavioral psychology principles (Decoy Effect, Social Proof, Friction) and suggests 3 specific A/B tests to increase your Revenue Per User.",
+    "howToDoIt": [
+      "Provide the URL of your pricing page to the AI.",
+      "Ask it to 'Score the page on Anchoring, Nudges, and Simplicity' (1-10 scale).",
+      "Implement the suggested 'Decoy Plan' or 'Highlight Most Popular' tag to guide users toward your highest-margin tier."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at applying psychological frameworks to visual and textual layouts."
+  },
+  "pricing-parity-checker": {
+    "problem": "Charging a flat $99/mo globally is a growth-killer; users in India or Brazil might only have the 'Purchasing Power' for $29/mo.",
+    "what_ai_does": "It calculates 'Purchasing Power Parity' (PPP) adjustments for your product across 10 global markets, suggesting 'Natural' localized prices (e.g., ₹2999) that maximize global volume.",
+    "howToDoIt": [
+      "Upload your USD pricing table to the AI.",
+      "Ask it to 'Suggest PPP-adjusted rates for India, Brazil, and the UK' using current exchange indices.",
+      "Review the 'Global Pricing Blueprint' to launch localized checkouts and unlock 2x more international growth."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing currency conversions and applying index-based math to pricing tables."
+  },
+  "product-description-seo": {
+    "problem": "Generic manufacturer product descriptions result in 'Duplicate Content' penalties and zero organic traffic for your e-commerce store.",
+    "what_ai_does": "It rewrites your entire product catalog for search—turning raw features into user benefits using the 'PAS' (Problem-Agitate-Solve) framework—while naturally weaving in long-tail keywords.",
+    "howToDoIt": [
+      "Upload a CSV of your raw product SKUs and tech specs.",
+      "Ask the AI to 'Rewrite each into a 200-word SEO description' using benefit-driven bullets.",
+      "Download the 'Optimized Catalog' and bulk-upload it to Shopify to instantly boost your organic visibility."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at high-volume creative drafting and following strict keyword-density rules."
+  },
+  "product-hunt-manager": {
+    "problem": "Launching on Product Hunt without a 'Minute-by-Minute' schedule and high-vibe assets is a guaranteed way to land in the bottom 10.",
+    "what_ai_does": "It creates a complete 24-hour launch roadmap—including your Maker's Comment, Twitter/X threads, and community outreach messages—optimized for the Product Hunt algorithm.",
+    "howToDoIt": [
+      "Provide your product tagline and core 'Aha!' moment to the AI.",
+      "Ask it to 'Draft a 4-part Maker's Comment and a viral launch schedule'.",
+      "Follow the 'Launch Kit' to maintain high energy and engagement from 00:01 PST to midnight on your launch day."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at narrative storytelling and drafting high-energy, community-centric copy."
+  },
+  "product-page-traffic-sales": {
+    "problem": "High-traffic product pages with zero sales are a 'Revenue Leak' that most e-commerce managers miss in a busy dashboard.",
+    "what_ai_does": "It compares 'Page Views' to 'Add-to-Cart' counts across your catalog to pinpoint underperforming PDPs, flagging them for an immediate UX or copy audit.",
+    "howToDoIt": [
+      "Upload a CSV of your PDP traffic and conversion metrics.",
+      "Ask the AI to 'Flag any page where ATC rate is < 1% despite >1,000 views'.",
+      "Review the 'Leakage Report' to fix broken images, add missing reviews, or clarify pricing on your top-trafficked losers."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing ratio calculations and identifying outliers in performance data."
+  },
+  "product-review-velocity": {
+    "problem": "Bestsellers die when they stop getting fresh reviews; if a product's 'Review Velocity' drops by 50%, a sales collapse is imminent.",
+    "what_ai_does": "It monitors the rate of new reviews per SKU, flagging 'Social Stagnation' in your catalog and automatically drafting 'Review-for-Credit' emails to previous buyers.",
+    "howToDoIt": [
+      "Upload a CSV of your SKU review counts from the last 30 days.",
+      "Ask the AI to 'Identify bestsellers with a >50% drop in review frequency'.",
+      "Launch a targeted 'Incentivized Review' campaign for the flagged products to re-ignite their social proof engine."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Excellent for trend analysis and identifying momentum shifts in activity data."
+  },
+  "product-usage-frequency-mapper": {
+    "problem": "Overall 'Logins' is a vanity metric; you need to identify your 'Daily Power Users' to find the best candidates for case studies and referrals.",
+    "what_ai_does": "It segments your user base by 'DAU/MAU' (Daily vs Monthly) frequency to create behavioral tiers, flagging 'Champions' who use the product >20 days a month.",
+    "howToDoIt": [
+      "Upload a CSV of your user login timestamps for the last 30 days.",
+      "Ask the AI to 'Segment users into Power, Casual, and At-Risk' based on frequency.",
+      "Reach out to the 'Power Users' for high-value testimonials and pitch the 'At-Risk' users on a 1-on-1 training session."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing user-level event aggregation and behavioral clustering."
+  },
+  "profile-optimization-score": {
+    "problem": "Sales reps with 'Unprofessional' LinkedIn profiles (no headshot, weak headline) lower your company's outbound response rates by 50%.",
+    "what_ai_does": "It audits your sales team's LinkedIn profiles for brand compliance and quality—checking for headshots, headline length, and keyword presence—assigning an 'Optimization Score' to every rep.",
+    "howToDoIt": [
+      "Upload a CSV of your team's LinkedIn URLs and current headlines.",
+      "Ask the AI to 'Identify reps missing critical elements' or those with < 50% score.",
+      "Review the 'Brand Fix List' to ensure your team looks like a fleet of experts before your next major campaign launch."
+    ],
+    "bestTool": "Claude Code",
+    "whyThisTool": "Can directly crawl social profiles and perform high-precision heuristic audits of visual and textual elements."
+  },
+  "programmatic-seo-builder": {
+    "problem": "Google penalizes 'Thin' programmatic pages that only use one variable; you need unique, high-quality facts for every page to pass the Helpful Content test.",
+    "what_ai_does": "It researches thousands of unique data points (from Wikipedia or Public APIs) for your target keywords and injects them into a high-converting content template for high-authority P-SEO.",
+    "howToDoIt": [
+      "Provide a list of 100 target cities or niches in a CSV.",
+      "Ask the AI to 'Research 3 unique facts for each' (e.g., local population, landmarks).",
+      "Download the 'Enriched Dataset' and use it to render 100 unique Next.js pages that Google will actually rank."
+    ],
+    "bestTool": "Claude Code",
+    "whyThisTool": "Can directly search the web for facts and generate production-ready Markdown or JSON files for site generation."
+  },
+  "proposal-writer": {
+    "problem": "Sending generic 'Standard' proposals results in a 10% win rate; high-ticket deals require a proposal that mirrors the client's specific pain and ROI.",
+    "what_ai_does": "It takes your sales call notes and transforms them into a structured, 5-part 'Consultative Proposal'—including The Problem, The Workstreams, and The ROI Math.",
+    "howToDoIt": [
+      "Paste your prospect's primary pain points and target outcome into the AI.",
+      "Ask it to 'Draft a high-ticket proposal' with enterprise-grade pricing tiers.",
+      "Send the 'Polished Proposal' to show the client you were actually listening and have a specific plan to solve their $100k problem."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at persuasive, professional drafting and understanding complex business logic."
+  },
+  "prospect-tone-mirroring-agent": {
+    "problem": "If a prospect writes in 'Direct/Brief' style and you reply with a 'Chatty/Warm' novel, you immediately break rapport and signal a lack of cultural fit.",
+    "what_ai_does": "It analyzes a prospect's last 3 emails to detect their 'Communication DNA' and automatically rewrites your draft to match their vibe, increasing the psychological 'Mirroring' effect.",
+    "howToDoIt": [
+      "Paste your draft email and 3 recent replies from the prospect into the AI.",
+      "Ask it to 'Rewrite my draft to match their tone' (Direct, Formal, or Warm).",
+      "Review the 'Mirrored Version' to build instant rapport through linguistic similarity."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at detecting subtle linguistic nuances and performing high-fidelity style transformation."
+  },
+  "schema-markup-generator": {
+    "problem": "Generic search results get ignored; you need 'Rich Snippets' (stars, prices, FAQs) to stand out, but writing the JSON-LD code manually for 100 pages is a technical grind.",
+    "what_ai_does": "It transforms your raw product or event CSV into valid, Google-ready JSON-LD Schema markup blocks, ensuring your pages look premium in the search results.",
+    "howToDoIt": [
+      "Upload a CSV of your products including Price, Availability, and Description.",
+      "Ask the AI to 'Generate valid Product Schema in JSON-LD format'.",
+      "Copy-paste the generated script blocks into your website's <head> to claim your Rich Snippet real estate."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Excellent for generating structured code blocks and following rigid metadata schemas."
+  },
+  "scope-creep-email-drafter": {
+    "problem": "Clients always ask for 'just one small change'; if you say yes for free, your profit margins disappear. If you say no rudely, you lose the client.",
+    "what_ai_does": "It drafts polite but firm responses that pivot 'Scope Creep' into paid 'Change Orders', protecting your time and profit while keeping the client relationship healthy.",
+    "howToDoIt": [
+      "Paste the client's 'extra' request into the AI.",
+      "Ask it to 'Draft a Phase 2 pivot' or a 'Price Increase' notification.",
+      "Send the polished response to ensure you are paid for every hour of work you actually do."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at drafting nuanced, professional, and non-confrontational client communications."
+  },
+  "sdr-activity-calculator": {
+    "problem": "Generic '100 dials a day' goals burn out SDRs; different reps have different strengths (some close better, some connect better).",
+    "what_ai_does": "It reverse-engineers a personalized activity plan for each rep based on their unique conversion rates, showing them the exact path to hitting quota without the burnout.",
+    "howToDoIt": [
+      "Upload a CSV of rep funnel metrics (Calls, Connects, Meetings).",
+      "Ask the AI to 'Calculate the daily activity required to hit [Quota]' for each rep.",
+      "Use the 'Personalized Game Plans' to coach reps on Skill (conversion) rather than just Volume (hustle)."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing individual-level math and following strict quota formulas."
+  },
+  "sdr-activity-to-meeting-ratio": {
+    "problem": "You don't know if your SDR team is getting more efficient or just getting busier; you need to track the 'Price' of every meeting booked.",
+    "what_ai_does": "It calculates the booking efficiency ratio (Touches per Meeting) per rep and lead source, identifying your 'Efficiency Leaders' who should be training the rest of the team.",
+    "howToDoIt": [
+      "Upload your team's total activity and meeting logs into a CSV.",
+      "Ask the AI to 'Calculate the Activity-to-Meeting ratio and rank by efficiency'.",
+      "Review the 'Efficiency Report' to stop wasting leads on low-conversion outreach patterns."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing multi-column ratio calculations and identifying outliers."
+  },
+  "sdr-onboarding-schedule": {
+    "problem": "New SDRs often 'Wait for Training' for weeks, costing you thousands in wasted salary while they sit idle.",
+    "what_ai_does": "It builds a custom 30-day 'Ramp Schedule'—including tech stack training, industry lingo quizzes, and shadowing milestones—to get new hires booking meetings in 14 days.",
+    "howToDoIt": [
+      "Provide your tech stack (e.g., 'Salesforce & Outreach') and product niche.",
+      "Ask the AI to 'Draft a 4-week SDR ramp plan' with daily milestones.",
+      "Hand the 'Architect's Schedule' to your new hire on Day 1 to ensure a high-speed, structured start."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at professional role-based research and drafting structured educational curriculum."
+  },
+  "sdr-territory-saturation-check": {
+    "problem": "SDRs often focus on the 'Easy' inbound leads while neglecting the high-value 'Tier 1' accounts in their assigned patch.",
+    "what_ai_does": "It audits your Tier 1 account list to identify 'Neglected Whales'—high-value accounts with zero activity in the last 30 days—ensuring 100% territory coverage.",
+    "howToDoIt": [
+      "Export your Tier 1 accounts and their 'Last Activity Date' from your CRM.",
+      "Ask the AI to 'Identify accounts with zero touches in 30 days'.",
+      "Assign the 'Neglected List' to your SDRs for an immediate, high-priority outreach wave."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing date-based filtering and identifying process violations in account data."
+  },
+  "search-query-intent-miner": {
+    "problem": "Your Google Search Console is full of thousands of keywords; identifying the few that actually signal 'Ready to Buy' is a manual research task.",
+    "what_ai_does": "It filters your raw search queries for 'Buy', 'Pricing', or 'Alternative' modifiers, identifying the high-intent keywords that deserve their own dedicated landing pages.",
+    "howToDoIt": [
+      "Export your GSC query report into a CSV.",
+      "Ask the AI to 'Extract all keywords with Transactional or Comparison intent'.",
+      "Prioritize your 'High Intent' list for an SEO content sprint to capture more bottom-of-funnel traffic."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing keyword-based filtering and semantic intent classification."
+  },
+  "seasonal-inventory-liquidator": {
+    "problem": "Holding seasonal stock (like Winter coats in Spring) kills your cash flow; you need to clear the shelves before the next line drops.",
+    "what_ai_does": "It identifies seasonal SKUs with high remaining stock and suggests aggressive 'Liquidation' discount tiers to clear the warehouse profitably.",
+    "howToDoIt": [
+      "Upload your inventory list with 'Season' tags and 'Stock Levels'.",
+      "Ask the AI to 'Identify overstocked seasonal items and suggest a 3-step discount plan'.",
+      "Launch the 'End-of-Season Clearout' to your email list to unlock fresh capital for your next collection."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing threshold-based inventory filtering and financial discount modeling."
+  },
+  "seasonal-trend-spotter": {
+    "problem": "Launching your ads too late (or too early) for a seasonal trend wastes 20%+ of your budget on low-intent traffic.",
+    "what_ai_does": "It identifies the exact historical week where search volume for your category spikes, allowing you to time your ad launches perfectly with rising demand.",
+    "howToDoIt": [
+      "Upload a CSV of historical search volume for your primary keywords.",
+      "Ask the AI to 'Identify the inflection point week' where volume grows >200%.",
+      "Set your campaign start dates 7 days before the 'Trend Spike' to capture the cheapest clicks before your competitors wake up."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Excellent for trend analysis and identifying inflection points in time-series data."
+  },
+  "seat-expansion-trigger": {
+    "problem": "Sales reps miss easy revenue when they don't know an account has hit 9/10 seats and is ready for a bigger plan.",
+    "what_ai_does": "It monitors your user usage logs to flag accounts hitting >80% license utilization, providing sales with a perfect 'Upsell' trigger before the customer feels restricted.",
+    "howToDoIt": [
+      "Upload a CSV of accounts with 'Seats Owned' and 'Seats Active'.",
+      "Ask the AI to 'Flag all accounts above 80% utilization'.",
+      "Send a 'Scale with Us' offer to the flagged accounts to move them to the next tier with zero friction."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing ratio math and identifying sales triggers in large activity logs."
+  },
+  "second-purchase-nudge-timer": {
+    "problem": "Generic 'Buy again' emails sent too early are annoying; sent too late, the customer has already moved to a competitor.",
+    "what_ai_does": "It calculates your customer's 'Replenishment Cycle' (days between Order 1 and 2) to identify the optimal window for sending repeat-purchase reminders.",
+    "howToDoIt": [
+      "Upload a CSV of your repeat-buyer order history.",
+      "Ask the AI to 'Calculate the average days to repurchase per category'.",
+      "Update your 'Nudge Sequence' to trigger exactly 3 days before the expected 'Empty Date' to secure the repeat sale."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing cohort-based duration calculations and identifying retention patterns."
+  },
+  "seed-round-stealth-mode-breaker": {
+    "problem": "Stealth startups don't have websites, but they DO have job postings; these are the best leads because they have Sequoia money but zero vendors yet.",
+    "what_ai_does": "It de-anonymizes 'Confidential' job postings by analyzing the recruiter's profile and the job's tech stack, identifying high-potential founders before they launch publicly.",
+    "howToDoIt": [
+      "Provide a list of 5 job keywords (e.g., 'Founding Engineer @ Stealth').",
+      "Ask the AI to 'Trace the likely founder or backer' via LinkedIn activity and recent funding rounds.",
+      "Reach out to the Founder with a 'Day Zero' partner offer to secure the account before your competitors even know they exist."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at hypothesis-based reasoning and connecting disparate research signals."
+  },
+  "semantic-keyword-clusterer": {
+    "problem": "Keyword stuffing is dead; Google rewards 'Topical Authority'. You need to group 1,000 keywords into semantic hubs to dominate your niche.",
+    "what_ai_does": "It takes a raw list of keywords and automatically clusters them into 5-10 'Topic Hubs', helping you plan a Hub & Spoke content strategy in seconds.",
+    "howToDoIt": [
+      "Upload a CSV of 500+ target keywords and their search volumes.",
+      "Ask the AI to 'Group these into semantic clusters based on user intent'.",
+      "Use the 'Content Hub Map' to prioritize your production on the clusters with the highest total volume and lowest competition."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing bulk semantic grouping and following strict intent-based taxonomy."
+  },
+  "seo-cluster-architect": {
+    "problem": "Writing random blog posts doesn't rank; you need a structured 'Cluster' (1 Pillar + 5 Spokes) to prove to Google that you are an expert.",
+    "what_ai_does": "It designs a complete content cluster—including the Pillar outline, 5 supporting Spoke topics, and an internal linking map—ready for your content team.",
+    "howToDoIt": [
+      "Provide a single 'Head Keyword' (e.g., 'Sales Automation').",
+      "Ask the AI to 'Architect a 6-page SEO cluster' including Titles and Target Keywords for every page.",
+      "Publish the 'Pillar & Spokes' set to instantly build topical authority and outrank established competitors."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at structural storytelling and following sophisticated SEO architecture frameworks."
+  },
+  "seo-content-gap-finder-v2": {
+    "problem": "You don't know what high-value pages your competitors have that you are missing, leading to lost market share.",
+    "what_ai_does": "It compares your sitemap against a competitor's sitemap to identify 'Content Gaps'—the specific topics they cover that you haven't touched yet.",
+    "howToDoIt": [
+      "Provide your sitemap URL and a competitor's sitemap URL.",
+      "Ask the AI to 'Identify topics they rank for that I am missing'.",
+      "Add the 'Gap Topics' to your content calendar to reclaim the traffic that your competitor is currently stealing."
+    ],
+    "bestTool": "Claude Code",
+    "whyThisTool": "Can directly crawl and compare XML sitemaps and URLs across multiple domains."
+  },
+  "seo-interlinker": {
+    "problem": "Manually finding the best 'Older' blog posts to link to your new content is a slow task that SEOs often skip, hurting their site's link equity.",
+    "what_ai_does": "It scans your entire local content library to identify unlinked mentions of your target keywords, providing a 'Link Map' to boost your new content's authority.",
+    "howToDoIt": [
+      "Point the AI to your /content/blog or /posts directory.",
+      "Ask it to 'Find unlinked mentions of [Keyword]' across all files.",
+      "Insert the suggested links into your older posts to pass authority to your newest, high-value pages."
+    ],
+    "bestTool": "Claude Code",
+    "whyThisTool": "Can directly read and search across hundreds of local technical files with high speed."
+  },
+  "seo-internal-linking-automator": {
+    "problem": "Internal linking is the most underrated SEO lever; but manually auditing 100 pages for 'Orphan' link opportunities takes all day.",
+    "what_ai_does": "It reads your latest draft and compares it against your existing sitemap to suggest 3-5 specific 'Power Links' that will boost your site's structure.",
+    "howToDoIt": [
+      "Paste your new blog post draft and a list of your existing URLs.",
+      "Ask the AI to 'Find phrases in the draft that should link to older content'.",
+      "Apply the suggested 'SEO Links' to your draft to ensure every new post supports your site's overall ranking power."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Excellent for semantic matching and identifying relevance between two text blocks."
+  },
+  "seo-keyword-cannibalization-mapper": {
+    "problem": "When two of your pages fight for the same keyword, Google gets confused and lowers both; you need to see this 'Ranking War' visually.",
+    "what_ai_does": "It analyzes your Google Search Console data to map keywords where multiple pages are ranking, suggesting which page should be the 'Master' and which should be redirected.",
+    "howToDoIt": [
+      "Upload a CSV of your GSC queries and pages.",
+      "Ask the AI to 'Visualize keyword cannibalization' and find the CTR winner for every conflict.",
+      "Implement the 'Consolidation Plan' to merge your rankings and dominate the top of the SERP."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing bulk data comparisons and following complex redirection logic."
+  },
+  "seo-meta-tag-bulk-optimizer": {
+    "problem": "Missing or duplicate Meta Titles and Descriptions kill your search CTR; but manually rewriting 500 tags is impossible.",
+    "what_ai_does": "It audits your site crawl to identify weak meta tags and automatically rewrites them using keyword-rich 'Click Magnet' formulas.",
+    "howToDoIt": [
+      "Upload your site audit CSV (URL, Current Title, Target Keyword).",
+      "Ask the AI to 'Rewrite all missing or short titles' using the [Keyword | Benefit] format.",
+      "Bulk-update your CMS with the 'Optimized Tags' to see an immediate boost in your organic click-through rate."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at high-volume creative drafting and following strict character-count rules."
+  },
+  "seo-title-tester": {
+    "problem": "You don't know if a 'Listicle' or a 'Guide' title will get more clicks for your target keyword; you need to test multiple psychological angles.",
+    "what_ai_does": "It generates 10 high-CTR SEO title variations—including FOMO, Authority, and Curiosity angles—allowing you to pick the winner for your next campaign.",
+    "howToDoIt": [
+      "Provide your target keyword and content type (e.g., 'Best AI Tools').",
+      "Ask the AI to 'Draft 10 title variations using proven click frameworks'.",
+      "Select the 'Top Hook' variation to maximize your search traffic without needing to rank higher."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at creative copywriting and following sophisticated persuasion frameworks."
+  },
+  "serp-conquesting-planner": {
+    "problem": "Competitors often rank #1 for high-value keywords with 'Weak' content; these are the easiest rankings to steal if you can identify them.",
+    "what_ai_does": "It identifies keywords where competitors rank in top positions but have low 'Page Authority' or thin content, signaling a takeover opportunity.",
+    "howToDoIt": [
+      "Upload a CSV of competitor rankings and their Page Authority scores.",
+      "Ask the AI to 'Flag keywords where Rank <= 3 AND Authority < 20'.",
+      "Create high-authority, long-form content for these 'Conquest Targets' to steal the #1 spot in weeks, not months."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing threshold-based filtering and identifying weaknesses in large lists."
+  },
+  "serp-intent-decoder": {
+    "problem": "If you write a 'Guide' when Google is rewarding 'Listicles', you will NEVER rank #1; you need to decode what Google wants to see.",
+    "what_ai_does": "It analyzes the top 3 ranking pages for your target keyword to decode the required format, length, and specific entities Google is currently favoring.",
+    "howToDoIt": [
+      "Provide your target keyword to the AI.",
+      "Ask it to 'Research the top 3 results' and identify the dominant content type.",
+      "Follow the 'SERP Brief' to ensure your content matches Google's intent from day one, giving you a 5x higher chance of ranking."
+    ],
+    "bestTool": "Claude Code",
+    "whyThisTool": "Can directly crawl live search results and perform high-precision thematic analysis."
+  },
+  "shopify-app-store-optimizer": {
+    "problem": "Shopify apps live and die by their 'ASO' (App Store Optimization); if your keywords don't match merchant intent, you get zero installs.",
+    "what_ai_does": "It audits your app listing against the top 3 competitors to identify missing high-intent keywords and suggests H1/Bullet updates to boost your rankings.",
+    "howToDoIt": [
+      "Provide the URL of your Shopify App listing and your primary keyword.",
+      "Ask the AI to 'Compare my copy vs. the top 3 apps' and find the keyword gaps.",
+      "Update your 'Partner Dashboard' with the optimized copy to see an immediate lift in your daily install volume."
+    ],
+    "bestTool": "Claude Code",
+    "whyThisTool": "Can directly crawl the Shopify App Store and perform high-precision competitor benchmarking."
+  },
+  "short-form-scriptwriter": {
+    "problem": "Turning a long blog post into a 60-second TikTok script is a manual grind that most founders struggle to do consistently.",
+    "what_ai_does": "It takes any URL or draft and automatically generates 3 'Viral' short-form scripts—including the visual 'Action' and the audio 'Hook'—ready for recording.",
+    "howToDoIt": [
+      "Paste the URL of your latest blog post into the AI.",
+      "Ask it to 'Draft 3 TikTok scripts' (The Hack, The Skit, The Contrarian).",
+      "Follow the 'Visual Cues' to record your reels in batches, maintaining a viral social presence with zero writing time."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at synthesizing long-form content and maintaining a high-energy, relatable social tone."
+  },
+  "sitemap-generator": {
+    "problem": "Dynamic sites with thousands of pages often have 'Indexation Gaps' because Google doesn't know the new URLs exist.",
+    "what_ai_does": "It scans your local content and database to build a perfectly formatted sitemap.xml, ensuring Google indexes every corner of your site automatically.",
+    "howToDoIt": [
+      "Point the AI to your /content or /pages directory.",
+      "Ask it to 'Generate a standard sitemap.xml' following the Sitemap protocol.",
+      "Upload the 'Fresh Sitemap' to Google Search Console to force instant crawling of your entire technical footprint."
+    ],
+    "bestTool": "Claude Code",
+    "whyThisTool": "Can directly read your local file structure and generate production-ready XML files."
+  },
+  "psychological-meeting-profiler": {
+    "problem": "Sales reps treat every buyer the same; but a 'Driver' CEO needs a different closing strategy than an 'Analytic' CTO.",
+    "what_ai_does": "It processes your sales transcripts to determine each buyer's personality archetype (Driver, Analytic, Amiable, Expressive) and provides a specific 'Negotiation Playbook' for the next call.",
+    "howToDoIt": [
+      "Upload a raw transcript from your first discovery call.",
+      "Ask the AI to 'Determine the buyer's archetype' and list 3 'Do's and Don'ts' for the demo.",
+      "Follow the 'Negotiation Playbook' to avoid common personality-clash mistakes and close the deal based on the buyer's internal drivers."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at psychological profiling and identifying behavioral patterns in conversational text."
+  },
+  "qbr-data-prepper": {
+    "problem": "Preparing for a Quarterly Business Review (QBR) takes 4+ hours of manual data gathering across Usage, Support, and Finance logs.",
+    "what_ai_does": "It aggregates disparate logs into a single 'Executive Brief' for the account, highlighting the top 3 usage wins and the #1 friction point to save you hours of prep time.",
+    "howToDoIt": [
+      "Upload a CSV of an account's usage logs and their recent support tickets.",
+      "Ask the AI to 'Extract key stats and summarize the account health'.",
+      "Use the 'QBR Summary' to lead a strategic conversation about value rather than just reading a list of numbers."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at data fusion and summarizing multiple text blocks into structured executive bullets."
+  },
+  "qbr-deck-generator-auto": {
+    "problem": "Most QBR decks are dry spreadsheets; you need a story-driven deck that proves ROI and sets the goals for the next quarter in minutes.",
+    "what_ai_does": "It transforms your raw account metrics into a 5-slide QBR narrative: Executive Summary, Usage Trends, ROI Achieved, and Next Quarter Goals.",
+    "howToDoIt": [
+      "Provide the account's primary ROI metric (e.g., '$50k Saved') and usage data.",
+      "Ask the AI to 'Generate the text for a 5-slide QBR deck'.",
+      "Paste the 'Narrative Slides' into your slide tool to present a high-level strategic review with zero manual design time."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at professional executive-level story-telling and drafting structured slide outlines."
+  },
+  "qbr-deck-generator": {
+    "problem": "QBRs often feel like 'Support Interrogations' because reps focus on the bugs; you need to pivot the meeting back to 'Value vs. Friction'.",
+    "what_ai_does": "It balances 'The Good' (Adoption wins) against 'The Bad' (Support tickets) to calculate a Health Score and determines whether the deck should be a 'Growth Pitch' or a 'Recovery Plan'.",
+    "howToDoIt": [
+      "Upload your usage logs and support ticket logs into a CSV.",
+      "Ask the AI to 'Calculate the Health Score' and recommend a QBR theme.",
+      "Follow the 'QBR Strategist' outline to either pitch an expansion or present a 'Get Well Plan' to save the account."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at strategic reasoning and identifying the 'Right Narrative' based on conflicting data sets."
+  },
+  "qr-code-strategy": {
+    "problem": "QR codes on signs often lead to 'Homepages' which have a 90% bounce rate; you need a high-utility mobile destination for every offline touchpoint.",
+    "what_ai_does": "It audits your offline footprint (signs, packaging, events) and suggests 3 high-value 'Utility Destinations' (e.g., 'Scan to Re-order' or 'Scan for Setup Guide') to maximize conversion.",
+    "howToDoIt": [
+      "Provide a list of your physical touchpoints (e.g., 'Product Box').",
+      "Ask the AI to 'Ideate 3 mobile-first QR destinations' that provide immediate user value.",
+      "Update your QR codes to lead to specific 'Utility Pages' to turn offline visitors into tracked online customers."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at creative strategy and identifying mobile-first user intent."
+  },
+  "quality-score-doctor": {
+    "problem": "Google Ads managers ignore 'Quality Score' until their CPC spikes; you need an immediate plan to fix keywords with QS 1-3 before you go broke.",
+    "what_ai_does": "It audits your low-QS keywords and analyzes their landing pages to pinpoint the 'Relevance Gap', generating specific H1 and Meta tag fixes to boost your score.",
+    "howToDoIt": [
+      "Upload your 'Low QS Keywords' report and landing page text.",
+      "Ask the AI to 'Identify the missing keywords on the page' and draft a new H1.",
+      "Implement the 'QS Doctor' fixes to instantly improve your ad relevance and lower your monthly spend by 20%."
+    ],
+    "bestTool": "Claude Code",
+    "whyThisTool": "Can directly crawl landing pages and compare them against ad keywords to find technical alignment gaps."
+  },
+  "quiz-funnel-builder": {
+    "problem": "Generic lead forms have low conversion; 'Interactive Quizzes' convert 3x better but writing the questions and logic paths is a major creative lift.",
+    "what_ai_does": "It takes your product goals and target audience to design a complete 5-question 'Lead Qualification Quiz'—including the hooks, the options, and the result-based DMs.",
+    "howToDoIt": [
+      "Provide your primary product benefit and target persona.",
+      "Ask the AI to 'Draft a 5-question quiz' that segments users by pain level.",
+      "Build the quiz in a tool like Typeform or ScoreApp to capture 3x more leads with a high-trust, educational offer."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at psychological ideation and following sophisticated branching logic for interactive content."
+  },
+  "quota-attainment-bell-curve": {
+    "problem": "If only 10% of your team is hitting quota, your 'Comp Plan' is broken; you need to see the true 'Sales Performance Distribution' to fix your hiring.",
+    "what_ai_does": "It segments your sales team by attainment percentage to create a 'Bell Curve' visualization, identifying your 'Elite' vs. 'At Risk' cohorts.",
+    "howToDoIt": [
+      "Upload a CSV of rep names and their '% of Quota Attained'.",
+      "Ask the AI to 'Group reps into Top, Mid, and Bottom 20% percentiles'.",
+      "Review the 'Performance Distribution' to decide if you need to adjust quotas or launch a performance improvement plan (PIP) for the bottom tier."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing percentile calculations and identifying success/failure patterns in team data."
+  },
+  "quota-attainment-forecaster": {
+    "problem": "Waiting until the last day of the month to find out you missed quota is a 'Strategic Fail'; you need to see the 'Cliff' 10 days early.",
+    "what_ai_does": "It calculates the 'Run Rate' for every rep based on their current closed revenue and weighted pipeline, predicting their exact month-end landing spot with a high-accuracy probability.",
+    "howToDoIt": [
+      "Upload a CSV of your rep performance (Quota, Closed, Weighted Pipeline, Days Remaining).",
+      "Ask the AI to 'Calculate the projected EOM attainment %' per rep.",
+      "Focus your 'Manager Overlays' on the 'Yellow Zone' reps who are 1 deal away from hitting their number."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Excellent for financial forecasting and performing math-based projections on large datasets."
+  },
+  "quote-line-item-validator": {
+    "problem": "Sales reps often quote 'Incompatible' products (e.g., 'Small Biz Plan' + 'Enterprise Security Add-on'), leading to embarrassing billing errors and lost deals.",
+    "what_ai_does": "It audits your draft quotes against your internal 'Product Compatibility Rules', flagging every quote that contains a logic error before it reaches the customer.",
+    "howToDoIt": [
+      "Upload a CSV of your draft quotes including the SKU list.",
+      "Define your 'Incompatibility Rules' (e.g., 'X cannot be sold with Y') in a prompt.",
+      "Flag the 'Invalid Quotes' for immediate correction to maintain 100% data integrity in your billing cycle."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing logical set-matching and identifying violations of rule-based systems."
+  },
+  "quote-to-cash-cycle-timer": {
+    "problem": "Revenue is only 'Real' when it's in the bank; you need to know exactly where your 'Cash Flow Bottleneck' is (Signature vs. Payment).",
+    "what_ai_does": "It measures the average days from 'Contract Signed' to 'Invoice Paid' for every deal, identifying the slow-paying accounts that are hurting your working capital.",
+    "howToDoIt": [
+      "Export your deal logs including 'Signed Date' and 'Paid Date'.",
+      "Ask the AI to 'Calculate the average cash-cycle duration' and group by customer size.",
+      "Review the 'Cash Velocity' report to decide if you should implement 'Auto-Pay' for specific segments to speed up revenue recognition."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing duration calculations and identifying efficiency patterns in financial data."
+  },
+  "quote-velocity-tracker": {
+    "problem": "Time kills all deals; a quote sitting in 'Legal Review' for >7 days is a 50% churn risk.",
+    "what_ai_does": "It monitors your open quotes to calculate their 'Age' and automatically drafts a context-aware nudge (Gentle vs. Urgent) based on the specific delay.",
+    "howToDoIt": [
+      "Upload a CSV of your active quotes and their current stage.",
+      "Ask the AI to 'Flag any quote older than 5 days' and draft a 'Blocker Check' email.",
+      "Use the 'Friction Nudges' to proactively unblock deals that are stuck in procurement or legal signature."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at date-based calculations and drafting professional, follow-up copy."
+  },
+  "ramp-time-variance-analyst": {
+    "problem": "You don't know if your 'New Hire Training' is actually working or if your Q3 hires are ramping 2x slower than your Q1 veterans.",
+    "what_ai_does": "It compares the 'Time to First Deal' and 'Time to Quota' for different hiring cohorts, evaluates the ROI of your onboarding program changes.",
+    "howToDoIt": [
+      "Upload a CSV of rep hire dates and their performance milestones.",
+      "Ask the AI to 'Compare the ramp time of the Q1 vs. Q3 cohorts'.",
+      "Review the 'Training Effectiveness' report to identify if you need to revert your onboarding curriculum to a previous version."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing cohort-based grouping and identifying statistical shifts in performance data."
+  },
+  "recipe-upgrader": {
+    "problem": "Maintaining a library of 100+ 'Blueprints' is a formatting nightmare; inconsistency in descriptions and metadata makes your product look messy.",
+    "what_ai_does": "It is the exact engine we use to maintain this site—it reads your raw Markdown files, injects missing 'Sample Data' templates, and normalizes descriptions to avoid 'AI Slop'.",
+    "howToDoIt": [
+      "Point the AI to your /content/recipes directory.",
+      "Ask it to 'Upgrade all recipes to the [Work-Ready] standard'.",
+      "Verify the results in the 'Verification CSV' to ensure 100% consistency across your entire technical documentation library."
+    ],
+    "bestTool": "Claude Code",
+    "whyThisTool": "Can directly read, edit, and write hundreds of Markdown files while maintaining strict frontmatter schema."
+  },
+  "reddit-scout": {
+    "problem": "Reddit is a goldmine of 'Switch Intent' (e.g., 'Looking for a HubSpot alternative'), but manually monitoring 50 subreddits is a full-time job.",
+    "what_ai_does": "It monitors specific subreddits for high-intent keywords and automatically drafts non-spammy, helpful responses that position your product as the natural solution.",
+    "howToDoIt": [
+      "Provide a list of 5 subreddits (e.g., r/SaaS) and 3 target keywords.",
+      "Ask the AI to 'Find posts from the last 48 hours' and draft a 2-paragraph response.",
+      "Review the 'Reddit Opportunities' list to start 10+ high-intent conversations every morning with zero manual searching."
+    ],
+    "bestTool": "Claude Code",
+    "whyThisTool": "Can directly query multiple subreddits and identify subtle 'Buying Intent' signals from conversational text."
+  },
+  "redirect-chain-fixer": {
+    "problem": "Redirect 'Hops' (Page A -> B -> C) slow down your site and bleed your SEO authority; but finding these chains in a list of 1,000 redirects is impossible.",
+    "what_ai_does": "It analyzes your redirect map to identify multi-step chains and automatically flattens them (Page A -> C), instantly boosting your site speed and link equity flow.",
+    "howToDoIt": [
+      "Upload a CSV of your current redirects (Source vs. Destination).",
+      "Ask the AI to 'Identify chains with >1 hop and provide the flattened version'.",
+      "Bulk-update your .htaccess or Nginx config with the 'Flattened List' to optimize your site's technical SEO."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing iterative set-matching and following logical path chains."
+  },
+  "redirect-map-generator": {
+    "problem": "Writing 1,000 individual 301 redirects during a site migration is slow and will likely crash your server due to file size.",
+    "what_ai_does": "It analyzes your URL list to identify common patterns (e.g., folder changes) and generates optimized Regex rules for Nginx or Apache, condensing 1,000 lines into 5.",
+    "howToDoIt": [
+      "Upload a CSV of your 'Old Path' vs. 'New Path' URLs.",
+      "Ask the AI to 'Identify 3 Regex patterns' that cover 80% of the list.",
+      "Implement the 'Optimized Redirect Rules' to ensure a zero-downtime migration with 90% less code bloat."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Excellent at identifying string patterns and generating high-precision Regex code."
+  },
+  "redirect-mapping-validator": {
+    "problem": "Site migrations often fail because redirects are misconfigured, leading to 404s and a permanent loss of SEO rankings.",
+    "what_ai_does": "It verifies your 'Expected Redirects' against actual live response codes, flagging any URL that doesn't return a 301 to the correct target destination.",
+    "howToDoIt": [
+      "Upload a CSV of your redirect plan (Old URL vs. Target URL).",
+      "Ask the AI to 'Verify the live status code and location' for every URL.",
+      "Fix the 'Failed Redirects' immediately to protect your SEO rankings during the critical post-migration window."
+    ],
+    "bestTool": "Claude Code",
+    "whyThisTool": "Can directly crawl hundreds of live URLs and interpret technical HTTP redirect chains and headers."
+  },
+  "reference-customer-rotator": {
+    "problem": "Using the same 'Happy Customer' as a sales reference every time leads to 'Advocate Burnout' and eventually a lost champion.",
+    "what_ai_does": "It tracks how many times each customer has been used as a reference, automatically rotating your advocate pool to ensure an even and fair distribution of requests.",
+    "howToDoIt": [
+      "Upload a CSV of your customers and their 'Last Used' reference date.",
+      "Ask the AI to 'Filter for advocates untouched in >30 days' and sort by total times used.",
+      "Review the 'Available References' list to pick a fresh champion for your next high-stakes deal."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing date arithmetic and prioritizing lists based on frequency thresholds."
+  },
+  "reference-win-rate-impact": {
+    "problem": "You don't know if your 'Customer Reference Program' is actually helping close deals or if it's just a vanity project.",
+    "what_ai_does": "It calculates the win rate of deals where a reference was used vs. those without, proving the ROI of your advocacy program to leadership.",
+    "howToDoIt": [
+      "Upload a CSV of your deal outcomes and a 'Reference Used' flag.",
+      "Ask the AI to 'Compare the win rate % for Ref vs. No-Ref deals'.",
+      "Use the 'Reference Impact' report to justify more budget for gift cards or events for your top advocates."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing categorical win-rate analysis and proving statistical lift."
+  },
+  "referral-commission-splitter": {
+    "problem": "Calculating revenue shares for 3-way deals (Source + Implementation + Vendor) is a manual nightmare that leads to payroll disputes.",
+    "what_ai_does": "It automatically calculates the precise payout for every party in a complex deal based on your custom split ratios (e.g., 10/20/70), providing a clean payout schedule for finance.",
+    "howToDoIt": [
+      "Upload a CSV of closed multi-party deals and the total amount.",
+      "Define your 'Split Ratios' in a prompt.",
+      "Download the 'Payout Schedule' to ensure every partner gets paid correctly and on time."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing multi-step financial calculations and following strict allocation rules."
+  },
+  "referral-email-generator": {
+    "problem": "Asking clients for referrals feels 'Awkward'; reps avoid it because they don't want to sound desperate or pushy.",
+    "what_ai_does": "It writes a 'Double Opt-In' email that your client can easily forward to their friend, removing 100% of the friction from the referral process.",
+    "howToDoIt": [
+      "Provide your client's name and the target prospect's name.",
+      "Ask the AI to 'Draft a ghostwritten blurb' that Alice can send to Bob.",
+      "Send the 'Ghostwritten Blurb' to your client to make it 1-click easy for them to introduce you to their network."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at drafting professional, low-pressure, and socially-aware email copy."
+  },
+  "referral-fraud-detector": {
+    "problem": "Self-referrals and bot farms can drain your affiliate budget; you need to catch 'Fake Invites' before you pay them out.",
+    "what_ai_does": "It analyzes your referral logs for 'Fraud Patterns'—like IP collisions, sequential emails (john+1@), or impossible conversion speeds—to protect your marketing ROI.",
+    "howToDoIt": [
+      "Upload your raw referral signups CSV including 'IP Address' and 'Timestamp'.",
+      "Ask the AI to 'Flag suspicious patterns like multiple signups from one IP'.",
+      "Block the 'Fraudulent IDs' to ensure your referral budget is only going to real, high-quality growth."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Excellent for pattern recognition and identifying anomalies in high-volume log data."
+  },
+  "referral-fraud-pattern-detector": {
+    "problem": "Advanced fraudsters use 'Impossible Conversions' (e.g., signup to payment in <10 seconds) to game your referral system.",
+    "what_ai_does": "It performs deep technical checks on your referral logs to flag impossible user behavior and sequential email patterns that traditional filters miss.",
+    "howToDoIt": [
+      "Upload your referral logs with 'User Agent' and 'Time-to-Paid' metrics.",
+      "Ask the AI to 'Identify impossible conversion velocities' and sequential email chains.",
+      "Review the 'Risk Audit' to protect your cash flow from sophisticated bot attacks."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing duration calculations and pattern-matching across large datasets."
+  },
+  "referral-program-architect": {
+    "problem": "Referral programs fail when the 'Incentive' doesn't match the 'Unit Economics'; but calculating the right double-sided reward is a strategic headache.",
+    "what_ai_does": "It designs a custom referral program for your business model—calculating the 'Ideal Reward' (Credit vs. Cash) based on your LTV and target CAC.",
+    "howToDoIt": [
+      "Provide your average LTV and target CAC to the AI.",
+      "Ask it to 'Design a double-sided referral program' that is profitable on Day 1.",
+      "Review the 'Architect Blueprint' to launch a high-ROI growth engine that turns your users into your sales team."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at strategic reasoning and understanding the nuances of unit economics."
+  },
+  "referral-program-fraud-check": {
+    "problem": "You need a 'Final Audit' of your monthly referral payouts to ensure you aren't paying for test accounts or internal emails.",
+    "what_ai_does": "It scrubs your monthly payout list to remove internal domains and test accounts, ensuring your referral budget is spent 100% on external growth.",
+    "howToDoIt": [
+      "Upload your monthly referral payout CSV.",
+      "Ask the AI to 'Remove any email matching [Internal Domains]' and flag obvious test names.",
+      "Hand the 'Sanitized Payout List' to finance to process your monthly commissions with 100% confidence."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at keyword-based filtering and performing high-volume data scrubbing."
+  },
+  "refund-rate-marketing-channel": {
+    "problem": "A channel might drive 'High Revenue' but have a 50% refund rate, making it your most expensive acquisition source.",
+    "what_ai_does": "It correlates refunds with the original acquisition channel to find your 'Toxic Sources', identifying the channels that acquire 'Window Shoppers' who always return.",
+    "howToDoIt": [
+      "Upload a CSV of your orders (Source vs. Refund Status).",
+      "Ask the AI to 'Calculate the refund rate % per marketing channel'.",
+      "Stop spending budget on the 'Toxic Channels' and double down on the sources that acquire life-long, keep-the-product customers."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Excellent for comparative data analysis and identifying the 'True Cost' of acquisition."
+  },
+  "remote-work-transition-hunter": {
+    "problem": "Companies moving to 'Remote-First' have massive budget for collaboration and security tools; you need to find them during the transition.",
+    "what_ai_does": "It monitors job boards for 'Remote' or 'Anywhere in US' keywords in companies that were previously office-based, identifying a high-intent shift in business strategy.",
+    "howToDoIt": [
+      "Provide a list of 10 target companies currently in an office-based model.",
+      "Ask the AI to 'Check for new remote-eligible job listings' posted this week.",
+      "Reach out to the Head of IT with a 'Remote-Ready' security or collaboration pitch to help them manage their new distributed team."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at researching business history and identifying strategic pivots from job board signals."
+  },
+  "renewal-price-lift-calc": {
+    "problem": "Missing a 'Contractual Price Lift' (e.g., 5% annual increase) on 100 contracts is a six-figure mistake that most CS teams make every year.",
+    "what_ai_does": "It calculates the new contract value for upcoming renewals based on your standard price escalators, identifying the total 'Revenue Lift' opportunity.",
+    "howToDoIt": [
+      "Upload a CSV of active contracts with their 'Current Price' and 'Renewal Date'.",
+      "Define your standard uplift % (e.g., 5%) in a prompt.",
+      "Generate the 'Price Lift Report' to update your renewal quotes and secure your built-in revenue growth."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing financial math and identifying revenue uplift opportunities."
+  },
+  "renewal-reminder-sequence": {
+    "problem": "Sending a 'Your contract expires tomorrow' email is a churn-trigger; you need a strategic 90-day sequence that focuses on value.",
+    "what_ai_does": "It drafts a professional 3-email 'Renewal Defense' sequence—starting at 90 days out—that focuses on ROI achieved and 'Future Vision' to secure the signature early.",
+    "howToDoIt": [
+      "Upload your account success metrics (e.g., '$Saved') and renewal dates.",
+      "Ask the AI to 'Draft a 90-60-30 day renewal sequence' mentioning the ROI win.",
+      "Use the 'Polished Sequences' to automate your renewal defense while keeping the tone consultative and high-value."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at professional executive communication and drafting transparent, value-driven email copy."
+  },
+  "renewal-risk-ghosting-alert": {
+    "problem": "If a customer stops replying to your emails 60 days before a renewal, they are 90% likely to churn; you need an instant alert.",
+    "what_ai_does": "It identifies accounts in the 'Renewal Window' with zero activity in the last 14 days, flagging them for an immediate 'Executive-to-Executive' save call.",
+    "howToDoIt": [
+      "Upload a CSV of upcoming renewals and their last activity dates.",
+      "Ask the AI to 'Identify accounts with < 60 days to renew and no activity in 2 weeks'.",
+      "Prioritize your 'Ghosting Alerts' for immediate intervention to prevent unexpected churn."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at date-based filtering and identifying process violations in activity data."
+  },
+  "renewal-risk-scorer": {
+    "problem": "A high-usage account is still a 'Renewal Risk' if they just hired your top competitor's former VP of Engineering.",
+    "what_ai_does": "It correlates account usage with 'External Signals' (e.g., competitor hiring or new leadership) to assign a multi-dimensional risk score to your upcoming renewals.",
+    "howToDoIt": [
+      "Upload a CSV of upcoming renewals and target account domains.",
+      "Ask the AI to 'Identify recent leadership changes or competitor mentions' for those accounts.",
+      "Review the 'Renewal Risk Scorecard' to prepare your CS team for the toughest objections before they happen."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at synthesizing internal usage data with external market research to identify non-obvious risks."
+  },
+  "sitemap-health-check": {
+    "problem": "Broken links (404s) in your sitemap waste Google's 'Crawl Budget' and lower your overall site authority.",
+    "what_ai_does": "It parses your XML sitemap and checks the live HTTP status of every URL, flagging broken links or unnecessary redirects for immediate removal.",
+    "howToDoIt": [
+      "Provide your sitemap URL to the AI.",
+      "Ask it to 'Check for 404s and 301s' across all listed pages.",
+      "Remove the broken URLs from your sitemap to ensure Google only crawls your high-value, active content."
+    ],
+    "bestTool": "Claude Code",
+    "whyThisTool": "Can directly crawl hundreds of live URLs and interpret technical HTTP status codes."
+  },
+  "sitemap-orphan-page-finder": {
+    "problem": "Important landing pages often don't make it into the sitemap, meaning Google might never find or index them.",
+    "what_ai_does": "It compares a crawl of your actual site structure against your XML sitemap to identify 'Orphaned' pages that exist but aren't being promoted to search engines.",
+    "howToDoIt": [
+      "Upload a CSV of your site's URLs and your sitemap.xml.",
+      "Ask the AI to 'Find URLs that are missing from the sitemap'.",
+      "Add the 'Orphan Pages' to your sitemap to ensure they get the search visibility they deserve."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at data reconciliation and identifying missing values across two lists."
+  },
+  "sitemap-to-csv-inventory": {
+    "problem": "You can't manage a content audit if you don't have a clean list of every page on your site, but manually copying URLs from a sitemap is slow.",
+    "what_ai_does": "It converts complex XML sitemaps into clean, sortable CSV inventories, including metadata like 'Last Modified' and 'Priority' for easy auditing.",
+    "howToDoIt": [
+      "Provide the URL of your sitemap.xml.",
+      "Ask the AI to 'Convert the XML into a CSV table' including all metadata tags.",
+      "Use the 'Content Inventory' to assign team members to audit or refresh specific sections of your site."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at data transformation and following strict XML-to-CSV schema requirements."
+  },
+  "site-speed-sales-impact": {
+    "problem": "It's hard to convince a CEO to invest in 'Site Speed' when it's framed as a technical metric; you need to frame it as 'Lost Revenue'.",
+    "what_ai_does": "It correlates your page load times with your conversion rates to calculate the exact revenue lost due to latency, providing a defensible ROI case for speed optimization.",
+    "howToDoIt": [
+      "Upload a CSV of your daily load times and conversion rates.",
+      "Ask the AI to 'Calculate the revenue drop for every 1-second delay'.",
+      "Present the 'Speed ROI Case' to your leadership to unlock budget for a high-performance frontend overhaul."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Excellent for correlation analysis and performing financial projections from performance data."
+  },
+  "slack-contextual-welcomer": {
+    "problem": "Generic 'Welcome to the community' bots are ignored; you need a welcome message that actually helps the user based on their specific background.",
+    "what_ai_does": "It reads new member bios in your Slack 'Intro' channel and automatically replies with a relevant resource or channel recommendation tailored to their job title.",
+    "howToDoIt": [
+      "Provide a list of your Slack channels and their purposes.",
+      "Ask the AI to 'Draft a personalized welcome reply' based on a new user's bio (e.g., 'Since you are a designer, check out #ui-ux').",
+      "Automate your community onboarding to see a 50%+ increase in Day 1 engagement."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at empathetic reasoning and matching resources to specific user profiles."
+  },
+  "sleeping-giant-hunter": {
+    "problem": "Enterprise companies using 'Legacy Tech' are your best leads; they are currently suffering from high costs and slow speed, making them high-intent buyers for modern alternatives.",
+    "what_ai_does": "It monitors enterprise career pages and technographic logs to identify companies stuck on old software (e.g., 'SAP 2010' or 'jQuery 1.x'), signaling a high-value displacement opportunity.",
+    "howToDoIt": [
+      "Upload a CSV of 'Legacy Tech' markers and target industries.",
+      "Ask the AI to 'Identify 50 enterprise accounts still running this stack'.",
+      "Pitch the CTO on 'The Cost of Inaction', highlighting the specific security and performance gains of switching to your modern tool."
+    ],
+    "bestTool": "Claude Code",
+    "whyThisTool": "Can directly crawl job portals and identify technical signatures in HTML source code."
+  },
+  "slow-mover-bundle-builder": {
+    "problem": "Dead stock kills your e-commerce margins; but a simple 'Clearance' tag can devalue your brand.",
+    "what_ai_does": "It identifies 'Slow Mover' SKUs and pairs them with high-velocity bestsellers to create attractive 'Gift with Purchase' or 'Mystery Box' offers.",
+    "howToDoIt": [
+      "Upload a CSV of SKU-level velocity and stock levels.",
+      "Ask the AI to 'Suggest 3 bundle combinations' that pair winners with dead stock.",
+      "Launch the 'Secret Bundle' offer to your email list to clear your warehouse while maintaining premium brand equity."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Excellent for inventory grouping and following strategic merchandising logic."
+  },
+  "social-engagement-rate-calculator": {
+    "problem": "Total 'Likes' are a vanity metric; you need to know your true 'Efficiency Rate' per follower to see if your content strategy is actually working.",
+    "what_ai_does": "It calculates the Engagement Rate (Likes + Comments / Followers) for your posts, identifying the 'Winning Content Formats' that deserve more budget.",
+    "howToDoIt": [
+      "Upload a CSV of your social post stats and follower counts.",
+      "Ask the AI to 'Calculate the engagement rate % and rank by content type'.",
+      "Stop producing low-engagement content and double down on the formats that drive real audience interaction."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing ratio math and identifying patterns in performance data."
+  },
+  "social-engagement-to-opportunity": {
+    "problem": "Marketing teams struggle to prove that 'Social Presence' leads to revenue; you need to see the direct path from a LinkedIn like to a Closed deal.",
+    "what_ai_does": "It cross-references your social engagement logs with your CRM deal data to identify deals that were preceded by a social touchpoint, proving the ROI of social selling.",
+    "howToDoIt": [
+      "Upload your social engagement logs and your CRM opportunity list.",
+      "Ask the AI to 'Identify deals where the prospect engaged on social 30 days prior to creation'.",
+      "Review the 'Social Attribution Report' to justify more investment in your team's personal brands."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at data reconciliation and performing time-based correlation between disparate lists."
+  },
+  "social-follower-quality-audit": {
+    "problem": "A high follower count is useless if 50% are bots; fake followers lower your reach and make your brand look untrustworthy.",
+    "what_ai_does": "It audits your follower list for 'Bot Signals'—like missing bios, default profile pics, or repetitive comments—providing an 'Authenticity Score' for your audience.",
+    "howToDoIt": [
+      "Upload a CSV of your follower handles and bios.",
+      "Ask the AI to 'Flag suspicious bot accounts' based on bio patterns.",
+      "Purge the flagged accounts to instantly improve your engagement rates and protect your brand's authority."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at identifying linguistic patterns and 'Robotic' intent in unstructured text."
+  },
+  "social-intent-scout": {
+    "problem": "Leads explicitly asking for help on Reddit or LinkedIn convert 10x better than cold outreach, but manually monitoring these communities is impossible.",
+    "what_ai_does": "It monitors niche communities for 'Pain Keywords' (e.g., 'Help with CRM' or 'Best Email Tool') and auto-drafts helpful, non-salesy responses.",
+    "howToDoIt": [
+      "Provide a list of 5 subreddits or communities and 3 target pain points.",
+      "Ask the AI to 'Find posts from the last 24 hours' where people are asking for advice.",
+      "Review the 'Intent Leads' and jump into the conversation with a helpful tip and a subtle mention of your product."
+    ],
+    "bestTool": "Claude Code",
+    "whyThisTool": "Can directly query multiple social platforms and identify subtle 'Buying Intent' from conversational text."
+  },
+  "social-media-crisis-ambulance": {
+    "problem": "A negative viral tweet can ruin a brand's reputation in hours; you need to detect 'Crisis Spikes' before they reach the mainstream press.",
+    "what_ai_does": "It monitors brand mentions for sudden spikes in negative sentiment, providing a 1-hour warning and drafting 3 'CEO Statement' variations to de-escalate the situation.",
+    "howToDoIt": [
+      "List your brand and competitor handles in a CSV.",
+      "Ask the AI to 'Monitor for sentiment spikes >3x the daily average'.",
+      "Follow the 'Crisis Playbook' the second an alert hits to protect your brand from a viral backlash."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at nuanced sentiment analysis and drafting professional, de-escalating executive copy."
+  },
+  "social-selling-activity-ratio": {
+    "problem": "Reps who only 'Smile and Dial' are missing the high-warmth leads available through social engagement; you need to track their 'Modern Sales Mix'.",
+    "what_ai_does": "It calculates the ratio of Social Touches vs. Traditional Touches per rep, identifying the 'Digital-First' sellers who are booking meetings with 50% less effort.",
+    "howToDoIt": [
+      "Upload your team's activity logs (Calls vs. Social Comments).",
+      "Ask the AI to 'Calculate the yield per touchpoint type'.",
+      "Coach your laggards to install a 'Social Block' on their calendar to boost their outreach efficiency."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing multi-column ratio math and identifying success patterns in sales outcomes."
+  },
+  "social-share-of-voice-tracker": {
+    "problem": "You might be loud on LinkedIn but invisible on X; you need to know which 'Battlefield' your competitors are dominating to find your opening.",
+    "what_ai_does": "It analyzes competitor mention volume by channel to identify where the market is 'Quiet', recommending which channel you should 'Own' next.",
+    "howToDoIt": [
+      "Upload a CSV of brand mention counts per channel.",
+      "Ask the AI to 'Identify the channel with the lowest competitive density'.",
+      "Pivot your social budget to the 'Quiet Channel' to capture 5x more attention for every dollar spent."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing categorical data comparisons and identifying strategic gaps."
+  },
+  "social-signal-alumni-miner": {
+    "problem": "Your best leads are previous happy users who just changed jobs; but manually tracking 1,000 alumni on LinkedIn is impossible.",
+    "what_ai_does": "It cross-references your 'Past Users' list with current LinkedIn employment data to find champions who just moved to new target accounts.",
+    "howToDoIt": [
+      "Upload a CSV of your past users and a new lead export.",
+      "Ask the AI to 'Identify alumni now working at target accounts'.",
+      "Prioritize these 'Warm Introductions' as your #1 outreach target for the quarter."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at data reconciliation and performing identity matching across disparate lists."
+  },
+  "speaker-session-attribution": {
+    "problem": "Proof of ROI for speaking slots: did the CEO's keynote actually result in any deals, or was it just a vanity project?",
+    "what_ai_does": "It matches session attendee scans to your CRM deal pipeline to calculate the total 'Influenced Revenue' generated by every speaking engagement.",
+    "howToDoIt": [
+      "Upload a CSV of session scans and your opportunity list.",
+      "Ask the AI to 'Map emails to deals created 30 days post-event'.",
+      "Present the 'Speaking ROI Report' to justify your future event sponsorship and travel budgets."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at data matching and performing financial attribution math."
+  },
+  "sql-cohort-builder": {
+    "problem": "Retention math is hard; manually writing the SQL for 'Month-over-Month Retention Cohorts' often leads to errors that hide churn issues.",
+    "what_ai_does": "It generates valid, complex SQL queries for your specific database schema (Postgres, BigQuery, Snowflake) to calculate monthly retention cohorts in seconds.",
+    "howToDoIt": [
+      "Provide your table and column names (e.g., users, join_date).",
+      "Ask the AI to 'Write a cohort retention SQL query' for Postgres.",
+      "Paste the code into Metabase or Superset to get a perfect survival curve for your customer base."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Excellent for generating high-precision code and following strict database syntax."
+  },
+  "stalled-deal-wakeup": {
+    "problem": "Sales reps send weak 'Just checking in' emails to stalled deals, which prospects ignore 90% of the time.",
+    "what_ai_does": "It writes high-value 'Wake Up' emails tailored to the prospect's industry—sharing a relevant recent trend or news story instead of just a nudge.",
+    "howToDoIt": [
+      "Paste the deal context and industry into the AI.",
+      "Ask it to 'Draft a value-add re-engagement email' mentioning a specific industry win.",
+      "Use the 'Wake-Up Script' to revive 20% of your dead deals by leading with value rather than nagging."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at drafting professional, consultative, and non-confrontational outreach."
+  },
+  "standup-blocker-extractor": {
+    "problem": "Valuable 'Blockers' are buried in 100+ Slack standup messages; managers often miss the one issue that's delaying a $50k project.",
+    "what_ai_does": "It reads your daily standup channel and automatically extracts everything listed under 'Blocker', grouping them by department for immediate action.",
+    "howToDoIt": [
+      "Export your last 24 hours of Slack standup messages into a text file.",
+      "Ask the AI to 'Summarize the top 3 critical blockers'.",
+      "Focus your management energy on unblocking the flagged teams to ensure your project stays on schedule."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at identifying intent and extract commitments from conversational text."
+  },
+  "startup-investor-matchmaker": {
+    "problem": "Founders waste months pitching the wrong investors (e.g., pitching a B2B SaaS fund with a Consumer app).",
+    "what_ai_does": "It cross-references your startup's blurb against a list of VC theses to identify the 'Perfect Match' investors, including a specific 'Reason for Fit' for every one.",
+    "howToDoIt": [
+      "Upload your startup's pitch summary and a list of target VC firms.",
+      "Ask the AI to 'Score every firm on Sector, Stage, and Geography fit'.",
+      "Only pitch the 'High Fit' investors to save 100+ hours of wasted meetings and increase your funding success rate."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at strategic reasoning and identifying alignment between two complex narratives."
+  },
+  "state-region-standardizer": {
+    "problem": "Geographical reporting fails when your data is filled with 'Calif' vs 'CA' vs 'California', leading to incorrect territory planning.",
+    "what_ai_does": "It automatically standardizes inconsistent state and region naming into clean 2-letter ISO codes, fixing your territory dashboards forever.",
+    "howToDoIt": [
+      "Upload your messy address CSV.",
+      "Ask the AI to 'Map all regional variants to standard 2-letter codes'.",
+      "Download the 'Clean Regions' CSV and bulk-update your CRM to fix your geographical reporting."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at semantic normalization and grouping variants of the same concept."
+  },
+  "status-code-monitor-404": {
+    "problem": "404 errors are invisible until traffic drops; but manually checking 500 URLs every morning is impossible.",
+    "what_ai_does": "It monitors your site's response codes and automatically generates a 'Redirect Map' for any new 404s, predicting the most likely new home for the broken URL.",
+    "howToDoIt": [
+      "Upload your daily crawl log or server error report.",
+      "Ask the AI to 'Identify 404s and suggest a 301 target' based on slug similarity.",
+      "Implement the 'Redirect Fixes' to reclaim lost SEO juice and keep your users in the purchase flow."
+    ],
+    "bestTool": "Claude Code",
+    "whyThisTool": "Can directly crawl live URLs and interpret technical HTTP status codes and headers."
+  },
+  "subdomain-decider": {
+    "problem": "Architectural debates: should your new project be on `/blog` or `blog.site.com`? Picking the wrong one can kill your SEO rankings.",
+    "what_ai_does": "It runs your project specs against an SEO logic tree—assessing tech stack, audience, and link equity—to provide a definitive 'Logic-Based' recommendation.",
+    "howToDoIt": [
+      "Provide your project's tech stack and target audience to the AI.",
+      "Ask it to 'Perform a Subdomain vs. Subfolder risk assessment'.",
+      "Follow the 'Architect's Verdict' to ensure your new project supports your main domain's authority rather than splitting it."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at strategic planning and following complex technical logic trees."
+  },
+  "subscription-churn-risk-detector": {
+    "problem": "A 'Paused' subscription is a churn-trigger; if a user skips 2 consecutive months, they are 90% likely to cancel forever.",
+    "what_ai_does": "It identifies 'Skip Streaks' in your subscription logs and triggers a targeted 'Retention Offer' before the user makes their final cancellation.",
+    "howToDoIt": [
+      "Upload a CSV of your subscription status logs (Active, Paused, Skipped).",
+      "Ask the AI to 'Identify any user who has skipped >1 consecutive month'.",
+      "Launch a specific 'Save Offer' for these high-risk users to re-engage them before they churn."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing pattern recognition and identifying streaks in large datasets."
+  },
+  "subscription-upgrade-identifier": {
+    "problem": "Free users who hit 90% of their limit are your highest-intent leads; but sales often misses these 'Expansion' signals.",
+    "what_ai_does": "It monitors user activity against their plan limits to trigger 'High Intent' alerts for your sales team, providing a perfect 'Why Now' hook.",
+    "howToDoIt": [
+      "Upload a CSV of user usage vs. plan limits.",
+      "Ask the AI to 'Flag all users above 90% utilization'.",
+      "Send a 'Scale Support' offer to these leads to move them to a paid tier with zero friction."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing ratio calculations and identifying sales triggers in large logs."
+  },
+  "supply-chain-risk-prospector": {
+    "problem": "Manufacturers relying on a single supplier in a risky region are vulnerable; identifying these 'Single Source' risks is a massive sales wedge for logistics services.",
+    "what_ai_does": "It analyzes public import records (bill of lading) to identify companies reliant on a single country for critical components, creating a high-intent risk report.",
+    "howToDoIt": [
+      "Provide a list of target HS codes (component IDs) to the AI.",
+      "Ask it to 'Identify US importers with >80% supplier concentration'.",
+      "Reach out to the VP of Supply Chain with a 'Diversification Audit' focused on their specific regional exposure."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at researching technical trade data and identifying strategic business risks."
+  },
+  "support-ticket-empathy-auditor": {
+    "problem": "Generic 'Clear your cache' replies make your brand look like a robot and drive customer frustration.",
+    "what_ai_does": "It scores your support team's replies on 'Warmth', 'Acknowledgment', and 'Clarity', flagging agents who are too copy-paste heavy.",
+    "howToDoIt": [
+      "Upload a CSV of your recent support ticket replies.",
+      "Ask the AI to 'Rate every response on an Empathy scale (1-10)'.",
+      "Use the 'Empathy Scorecard' to coach your support team on sounding more human and helpful, reducing churn."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at detecting subtle emotional nuances and conversational tone."
+  },
+  "support-ticket-upseller": {
+    "problem": "Your support tickets are full of people asking for 'SSO' or 'API access'—these are high-intent upsell signals that support teams usually ignore.",
+    "what_ai_does": "It scans ticket history for 'Tier-Gate' keywords and automatically drafts a helpful sales email offering the higher-tier solution.",
+    "howToDoIt": [
+      "Upload a CSV of your recent support ticket messages.",
+      "Ask the AI to 'Flag any user asking for [Tier-Only Feature]'.",
+      "Reach out to these users with a 'Free Trial' of your Pro/Enterprise plan to turn a complaint into an expansion deal."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at identifying intent and matching user problems to product solutions."
+  },
+  "support-ticket-volume-clusterer": {
+    "problem": "You might have 1,000 tickets a week, but you don't know the 'Root Cause' of the volume; you need to know if 50% are about the same bug.",
+    "what_ai_does": "It clusters thousands of ticket subjects into 5-10 core 'Feature Themes', identifying the 'Noisiest' parts of your product for engineering to fix.",
+    "howToDoIt": [
+      "Upload a CSV of your ticket subject lines.",
+      "Ask the AI to 'Cluster these into feature themes' and count the frequency.",
+      "Fix the 'Noise Leader' in your next product sprint to instantly reduce your support volume by 20% or more."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Excellent for semantic classification and performing high-volume text grouping."
+  },
+  "swag-inventory-forecaster": {
+    "problem": "Ordering too many t-shirts for an event is a waste of budget; ordering too few results in a 'Dead' booth and lost brand impressions.",
+    "what_ai_does": "It predicts merchandise needs based on attendee count and historical 'Take Rates', providing a perfectly sized order list for your next show.",
+    "howToDoIt": [
+      "Provide your expected attendee count and historical swag usage from past events.",
+      "Ask the AI to 'Forecast swag needs for [Event]' based on a 20% take-rate.",
+      "Use the 'Demand Plan' to order exactly what you need, maximizing your event budget ROI."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing rate-based calculations and inventory projections."
+  },
+  "swot-analysis-generator": {
+    "problem": "Strategic planning requires honesty; manually building a SWOT matrix often ignores the 'External Threats' your competitors are hiding.",
+    "what_ai_does": "It takes your raw internal notes and researches your entire market to build a comprehensive matrix of Strengths, Weaknesses, Opportunities, and Threats.",
+    "howToDoIt": [
+      "Paste your internal brainstorm notes into the AI.",
+      "Ask it to 'Perform a deep market audit for O and T' based on recent news.",
+      "Review the 'Executive SWOT' to identify your #1 strategic move for the upcoming quarter."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at strategic reasoning and identifying alignment between internal and external data."
+  },
+  "tam-calculator": {
+    "problem": "Vague 'Market Sizing' slides get roasted by investors; you need a defensible 'Bottom-Up' calculation using real-world data.",
+    "what_ai_does": "It researches industry benchmarks and customer counts to calculate your TAM, SAM, and SOM using defensible logic for multiple segments.",
+    "howToDoIt": [
+      "Provide your target customer niche and average monthly price.",
+      "Ask the AI to 'Research total customer counts' and perform a bottom-up calculation.",
+      "Present the 'TAM Report' to your investors to prove your growth potential with 100% data confidence."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at researching business metrics and performing multi-step financial modeling."
+  },
+  "technical-seo-doctor": {
+    "problem": "Google's new 'AI Overviews' only cite pages with perfect technical structure; if your content isn't 'AI-Ready', you'll lose 50% of your search traffic.",
+    "what_ai_does": "It audits your top landing pages for 'AI Readiness', identifying missing entities and structural data that will help you wincitations in Perplexity and SearchGPT.",
+    "howToDoIt": [
+      "Provide a CSV of your top 10 landing page URLs.",
+      "Ask the AI to 'Score the AI Visibility Grade (GEO)' for every page.",
+      "Update your content structure using the 'GEO Fix List' to ensure you are the primary source for AI search engines."
+    ],
+    "bestTool": "Claude Code",
+    "whyThisTool": "Can directly crawl live site content and perform high-precision semantic structure audits."
+  },
+  "technographic-prospector": {
+    "problem": "Cold outreach to companies using a 'Competitor X' is 5x more effective than a generic pitch; but finding their tech stack manually is slow.",
+    "what_ai_does": "It analyzes job descriptions and source code signatures to identify companies currently using your specific competitors' tech stacks.",
+    "howToDoIt": [
+      "Upload a CSV of target domains or job board URLs.",
+      "Ask the AI to 'Identify signatures for [Competitor Tech]' in their stack.",
+      "Reach out to these prospects with a 'Switch & Save' pitch tailored to their known technical dependencies."
+    ],
+    "bestTool": "Claude Code",
+    "whyThisTool": "Can directly crawl live sites and identify technical software signatures in JavaScript bundles."
+  },
+  "tech-stack-seat-auditor": {
+    "problem": "Companies waste 30% of their software budget on 'Ghost Seats'—licenses paid for but never used by an active employee.",
+    "what_ai_does": "It cross-references your licensed user list against active employees to identify waste, flagging accounts that should be reclaimed immediately.",
+    "howToDoIt": [
+      "Upload a CSV of your licensed tool users and your active employee roster.",
+      "Ask the AI to 'Identify licenses with no matching active employee'.",
+      "Reclaim the 'Ghost Seats' to instantly lower your departmental overhead by thousands of dollars a month."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at data reconciliation and performing identity matching across disparate lists."
+  },
+  "terminal-content-recorder": {
+    "problem": "Blurry screen recordings of terminal sessions look amateur on YouTube; you need pixel-perfect, 1080p terminal videos for your developer audience.",
+    "what_ai_does": "It sets up a professional-grade recording pipeline (Asciinema + FFmpeg) to turn your terminal sessions into crisp, high-definition MP4s for social media.",
+    "howToDoIt": [
+      "Provide your shell type (Bash/Zsh) and recording theme preference.",
+      "Ask the AI to 'Generate a terminal recording script' following best practices.",
+      "Use the 'Record' command to capture your technical demos with Retina quality and zero manual editing."
+    ],
+    "bestTool": "Claude Code",
+    "whyThisTool": "Can directly interact with your local shell and generate production-ready configuration scripts."
+  },
+  "territory-reassignment-logic": {
+    "problem": "When a rep leaves, manually reassigning 100+ accounts while maintaining 'Balance' is a logistical nightmare for Sales Ops.",
+    "what_ai_does": "It automatically generates a bulk upload file to move accounts and opportunities based on your territory rules, ensuring zero downtime for your sales patch.",
+    "howToDoIt": [
+      "Upload a CSV of accounts owned by the 'Departing Rep'.",
+      "Define your 'New Owners' and territory rules in a prompt.",
+      "Download the 'Reassignment Manifest' and bulk-upload it to your CRM to keep your pipeline moving."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at data transformation and following strict bulk-upload formatting rules."
+  },
+  "testimonial-coverage-matrix": {
+    "problem": "Sales reps often get stuck on a deal because they don't have a specific case study for 'Finance' or 'Manufacturing'.",
+    "what_ai_does": "It audits your content library to identify 'Social Proof Gaps', flagging exactly which industries and personas are missing a credible win story.",
+    "howToDoIt": [
+      "Upload a CSV of your current testimonials and their target personas.",
+      "Ask the AI to 'Identify Industries with < 1 testimonial' or missing Economic Buyers.",
+      "Focus your next customer interview cycle on the 'Gap Segments' to arm your sales team with the social proof they need to close."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing categorical audits and identifying missing data entries across lists."
+  },
+  "testimonial-extractor": {
+    "problem": "Your customers say amazing things on Zoom, but those 'Aha!' moments are lost in 60-minute transcripts that nobody reads.",
+    "what_ai_does": "It scans your call transcripts to extract the specific ROI-based soundbites, automatically generating a structured testimonial database for your website.",
+    "howToDoIt": [
+      "Upload a folder of sales or success transcripts.",
+      "Ask the AI to 'Extract 3 ROI-based quotes' per transcript, focusing on time or money saved.",
+      "Add the 'Polished Quotes' to your website's social proof section to build instant authority with new visitors."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at identifying emotional intent and intensity in conversational text."
+  },
+  "ticket-response-time-tracker": {
+    "problem": "Missing SLAs isn't always about lazy agents; usually, it's about a 'Schedule Mismatch' between ticket volume spikes and online agents.",
+    "what_ai_does": "It identifies 'Heat Zones' in your support logs where volume exceeds capacity, providing a specific shift-adjustment plan to eliminate SLA breaches.",
+    "howToDoIt": [
+      "Upload a CSV of your support ticket timestamps and response times.",
+      "Ask the AI to 'Calculate the breach count per hour' and identify the bottleneck.",
+      "Update your team's shift schedule based on the 'Heatmap Report' to ensure 100% SLA compliance."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing temporal aggregation and identifying patterns in large event logs."
+  },
+  "tiktok-audio-trend-syncer": {
+    "problem": "B2B brands struggle to find the right trending sounds that don't sound 'Cringe'; you need to match your technical content to high-momentum audio.",
+    "what_ai_does": "It researches currently trending TikTok audio and suggests which of your product B-roll clips (e.g., 'Setup' or 'Demo') would sync best with the beat drop.",
+    "howToDoIt": [
+      "Provide a list of your available video clips and durations.",
+      "Ask the AI to 'Find a trending audio fit' and draft a 15-second sync brief.",
+      "Follow the 'Trend Brief' to post a professional, relevant TikTok that captures high organic reach."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at identifying strategic content patterns and maintaining a relatable social tone."
+  },
+  "tiktok-hook-generator": {
+    "problem": "Talking head videos are boring; you need to script the 'Visuals' (movement, cuts, green screens) to keep retention high in the first 3 seconds.",
+    "what_ai_does": "It takes your dry technical topic and generates production-ready scripts that include both the 'Audio' and the 'Visual Action' for every second.",
+    "howToDoIt": [
+      "Paste your latest technical tip or changelog into the AI.",
+      "Ask it to 'Draft 3 visual scripts' including green screen and skit concepts.",
+      "Record your reels in batches using the 'Viral Script' to maintain high viewer retention from start to finish."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at visual-spatial reasoning and describing clear, step-by-step recording instructions."
+  },
+  "tiktok-pixel-helper": {
+    "problem": "TikTok ads often misreport revenue due to 'Pixel Syntax Errors' like missing quotes or wrong currency codes.",
+    "what_ai_does": "It audits your current TikTok event code and generates a standardized, compliant snippet that ensures every 'Purchase' is tracked with 100% accuracy.",
+    "howToDoIt": [
+      "Paste your current TikTok pixel snippet into the AI.",
+      "Ask it to 'Verify V3 compliance' and add missing 'Value' parameters.",
+      "Update your checkout header with the 'Fixed Pixel' to stop flying blind on your TikTok ad ROAS."
+    ],
+    "bestTool": "Claude Code",
+    "whyThisTool": "Can directly read and perform technical audits of JavaScript tracking snippets."
+  },
+  "tiktok-shop-seller-scraper": {
+    "problem": "Successful TikTok sellers are 'Rental Leads'—they have revenue but NO standalone site or email list, making them high-intent leads for Shopify agencies.",
+    "what_ai_does": "It identifies top-selling products on TikTok Shop and checks if the brand has a professional standalone website, providing a high-value 'Own Your Audience' pitch list.",
+    "howToDoIt": [
+      "Provide a TikTok category (e.g., 'Womenswear') to the AI.",
+      "Ask it to 'Find sellers with >5k sales and NO standalone .com'.",
+      "Reach out to the Founder with a 'Shopify Transition' pitch, showing them how to save on 5% platform fees and build an email asset."
+    ],
+    "bestTool": "Claude Code",
+    "whyThisTool": "Can directly crawl TikTok Shop search results and perform high-precision website verification."
+  },
+  "tiktok-trend-adapter": {
+    "problem": "You want to use TikTok trends for B2B but don't want to look 'Out of Place'; you need a professional pivot for every viral sound.",
+    "what_ai_does": "It researches high-momentum TikTok trends and brainstorms 3 distinct ways to adapt them for your professional niche without losing brand authority.",
+    "howToDoIt": [
+      "Provide your industry niche and target audience.",
+      "Ask the AI to 'Find a trending sound and draft a professional skit'.",
+      "Post the 'Adapted Trend' to see a 3x higher reach than your standard educational posts."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at creative strategy and identifying subtle 'Vibe' shifts across different platforms."
+  },
+  "time-in-stage-stalls": {
+    "problem": "Deals stuck in 'Legal' or 'Security Review' for >14 days are the biggest killers of sales momentum.",
+    "what_ai_does": "It identifies deals that have exceeded your historical median for specific 'Slow Stages', flagging them for immediate executive intervention.",
+    "howToDoIt": [
+      "Upload a CSV of your active deals and their stage durations.",
+      "Ask the AI to 'Flag any deal stuck in Legal for > 10 days'.",
+      "Triage the 'Stalled Deals' every Monday to ensure your reps are proactively unblocking the procurement process."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing date-based threshold filtering and identifying stagnation in activity logs."
+  },
+  "time-to-value-clock": {
+    "problem": "You don't know if your 'Onboarding' is getting faster or slower over time; if TTV is lengthening, your churn rate will follow.",
+    "what_ai_does": "It calculates the average days from 'Closed-Won' to 'First Key Action' per cohort, identifying exactly where your activation process is breaking down.",
+    "howToDoIt": [
+      "Upload a CSV of closed dates and activation dates.",
+      "Ask the AI to 'Calculate the average TTV per month for the last year'.",
+      "Identify the 'Slow Cohorts' and fix the specific technical hurdles that were introduced during those periods."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing time-series calculations and identifying momentum in engagement data."
+  },
+  "time-to-value-tracker": {
+    "problem": "Total 'Time to Value' is a lagging indicator; you need to know WHICH specific onboarding step (Setup, Import, or Invite) is the primary bottleneck.",
+    "what_ai_does": "It breaks down your onboarding into granular phases to calculate the 'Time in Phase' for every user, identifying the step that is killing your momentum.",
+    "howToDoIt": [
+      "Upload your onboarding milestone logs into a CSV.",
+      "Ask the AI to 'Identify the step with the highest average duration'.",
+      "Simplify the 'Bottleneck Step' (e.g., offer a bulk importer) to ensure every user reaches their 'Aha!' moment in < 24 hours."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Excellent for diagnosing process friction and performing bottleneck analysis on event data."
+  },
+  "tool-directory-manager": {
+    "problem": "Manual directory maintenance is impossible at scale; inconsistency in descriptions and dead links make your site look amateur.",
+    "what_ai_does": "It is the exact engine we use to keep this site fresh—it fetches live CSV data, filters for high-quality leads using AI intelligence, and auto-updates our local JSON database.",
+    "howToDoIt": [
+      "Provide your master Google Sheet URL and target categories.",
+      "Ask the AI to 'Filter new submissions and classify into Archetypes'.",
+      "Run the sync script to ensure your directory is always updated with the latest verified technical tools."
+    ],
+    "bestTool": "Claude Code",
+    "whyThisTool": "Can directly fetch remote CSV data and write production-ready TypeScript files to your library."
+  },
+  "topic-cluster-architect": {
+    "problem": "You might rank for 100 random keywords, but you aren't an 'Authority' in any single topic, causing Google to trust you less than niche competitors.",
+    "what_ai_does": "It groups thousands of keywords into semantic clusters to plan your 'Topical Authority' map—identifying the 1 Pillar and 10 Spokes you need to own a category.",
+    "howToDoIt": [
+      "Upload a CSV of 500+ niche keywords and search volume.",
+      "Ask the AI to 'Architect 3 distinct topic clusters' including internal link maps.",
+      "Build out your 'Topic Pillars' to see a 2x higher average ranking across all related keywords."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at structural storytelling and following sophisticated SEO architecture frameworks."
+  },
+  "traffic-source-reverse-engineer": {
+    "problem": "You see a competitor's traffic growing, but you don't know the 'Fuel'—is it a secret affiliate army, a viral TikTok, or high-budget SEO?",
+    "what_ai_does": "It researches a competitor's domain to identify their primary growth lever, uncovering the strategic source of their recent traffic spikes.",
+    "howToDoIt": [
+      "Provide a competitor's URL to the AI.",
+      "Ask it to 'Identify the dominant traffic channel and hypothesize the fuel'.",
+      "Review the 'Growth Engine Analysis' to decide if you should 'Attack' their best channel or 'Flank' them on a quiet one."
+    ],
+    "bestTool": "Claude Code",
+    "whyThisTool": "Can directly query multiple research tools and identify subtle marketing patterns from unstructured public mentions."
+  },
+  "trend-hunter": {
+    "problem": "Writing content about 'Peaked' trends is a waste of time; you need to find the topics that are breakout RIGHT NOW to capture low-cost traffic.",
+    "what_ai_does": "It monitors your niche for 'Rising' search queries and drafts 3 content angles for every breakout topic before your competitors even see it.",
+    "howToDoIt": [
+      "Provide a list of 10 niche keywords to the AI.",
+      "Ask it to 'Identify breakout queries from the last 7 days' and draft a hook for each.",
+      "Publish the 'Trend Hunter' content while the topic is peaking to see a 10x boost in organic social reach."
+    ],
+    "bestTool": "Claude Code",
+    "whyThisTool": "Can directly query live trend data and identify 'Outlier' videos/posts with high-momentum signals."
+  },
+  "trend-surfer-alert": {
+    "problem": "Content is a timing game; if you don't 'Newsjack' a trend within the first 4 hours, you miss the traffic wave.",
+    "what_ai_does": "It monitors your target keyword list for volume spikes and auto-drafts high-energy social posts the second a trend is detected.",
+    "howToDoIt": [
+      "Upload a CSV of your target keywords and 'Alert Thresholds'.",
+      "Ask the AI to 'Draft a newsjacking post' for any keyword that spikes >50%.",
+      "Review the 'Spike Alerts' every morning to ensure you are the first to the story in your industry."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at creative bridge-building and identifying non-obvious links between brand value and current news."
+  },
+  "trial-expiry-prioritizer": {
+    "problem": "Sales reps call every trial user alphabetically, wasting time on 'Small Fish' while ignoring the 1,000-person company that expires in 3 days.",
+    "what_ai_does": "It scores your active trials based on usage intensity and company size to prioritize your 'Closing List' every morning.",
+    "howToDoIt": [
+      "Upload a CSV of active trials including 'Expiry Date' and 'Usage Score'.",
+      "Ask the AI to 'Flag users from >500 employee companies expiring in < 72 hours'.",
+      "Focus your 'Manager Overlay' calls on these high-value trials to maximize your month-end conversion revenue."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing multi-factor ranking and prioritizing task lists based on revenue impact."
+  },
+  "trust-badge-tester": {
+    "problem": "Adding too many 'Trust Badges' (e.g., 'Norton Secured') can actually INCREASE friction and make your site look scammy.",
+    "what_ai_does": "It analyzes your A/B test results for different badge combinations to determine the 'Efficiency Winner' that boosts conversion without devaluing the brand.",
+    "howToDoIt": [
+      "Upload a CSV of A/B test results (Badge A vs. Badge B vs. Control).",
+      "Ask the AI to 'Identify the winner with >90% statistical significance'.",
+      "Implement the 'Winning Badge' strategy across your entire catalog to maximize your checkout ROAS."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Excellent for performing complex statistical math and interpreting probability metrics."
+  },
+  "tweet-screenshot-automation": {
+    "problem": "Manually cropping social media screenshots for your blog is slow and results in inconsistent 'Sidebar Noise'.",
+    "what_ai_does": "It is the exact production workflow we use—it automates the capture of Twitter/X posts using a 'Golden Ratio' crop that removes sidebars and signup modals.",
+    "howToDoIt": [
+      "Provide a list of tweet URLs in a CSV.",
+      "Ask the AI to 'Perform high-res capture with sidebars removed'.",
+      "Review the 'Clean Asset' folder to populate your social library with professional, Retine-quality tweet cards."
+    ],
+    "bestTool": "Claude Code",
+    "whyThisTool": "Can directly interact with browser automation tools (Puppeteer) and execute precise visual cropping logic."
+  },
+  "twitter-auto-plug-writer": {
+    "problem": "When a tweet goes viral, you miss 90% of the potential revenue if you don't 'Plug' your offer in the final thread.",
+    "what_ai_does": "It drafts 3 variations of 'If you enjoyed this...' tweets for your products and newsletters, ready to be appended to any thread.",
+    "howToDoIt": [
+      "Provide your offer name and core benefit.",
+      "Ask the AI to 'Draft 3 auto-plugs under 240 characters' (Narrative, Direct, and CTA-heavy).",
+      "Schedule the 'Plug' to trigger whenever your tweet hits >100 likes to turn viral reach into owned email subscribers."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at capturing personal voice and following sophisticated social copywriting frameworks."
+  },
+  "twitter-bio-optimizer": {
+    "problem": "Your bio is your personal landing page; if it doesn't include 'Who', 'What', and 'Proof', new visitors won't hit the 'Follow' button.",
+    "what_ai_does": "It rewrites your social bios to include high-signal authority markers and a clear CTA, ensuring your profile converts every visit into a connection.",
+    "howToDoIt": [
+      "Provide your job title, niche, and #1 professional achievement.",
+      "Ask the AI to 'Draft 3 authority-driven bio variations' including relevant emojis.",
+      "Update your profile with the 'Optimized Bio' to see an immediate boost in your follower growth rate."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at strategic positioning and following visual hierarchy principles for social media."
+  },
+  "twitter-follower-export-cleaner": {
+    "problem": "Raw JSON exports of social followers are messy and impossible to use for sales targeting.",
+    "what_ai_does": "It converts raw social data into clean, sortable CSVs, automatically flagging high-value 'VIP' followers based on their bio keywords and location.",
+    "howToDoIt": [
+      "Upload your raw JSON follower export.",
+      "Ask the AI to 'Flatten the data into a CSV' and flag anyone with 'Founder' in their bio.",
+      "Reach out to your 'VIP Fans' with a personalized 'Thanks for following' offer to turn your audience into your sales pipeline."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at data transformation and following strict JSON-to-CSV schema requirements."
+  },
+  "twitter-space-scribe": {
+    "problem": "Valuable insights shared in a 60-minute Twitter Space are lost forever once the room ends; you need a way to turn audio into an evergreen asset.",
+    "what_ai_does": "It scans Space transcripts to detect topic shifts and automatically generates a 'Key Takeaways' thread and a complete blog summary.",
+    "howToDoIt": [
+      "Upload your Twitter Space audio transcript.",
+      "Ask the AI to 'Identify the top 3 debate topics and extract the winning quotes'.",
+      "Publish the 'Space Summary' thread to extend the reach of your audio content by 10x across the social feed."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at synthesizing conversational audio and summarizing complex themes into punchy headlines."
+  },
+  "twitter-thread-hook-analyzer": {
+    "problem": "You don't know if your thread failed because of the 'Topic' or just a weak 'Opening Hook'.",
+    "what_ai_does": "It scores your thread hooks against 10 viral frameworks (Contrarian, Success, Curiosity), predicting their reach and suggesting 2 'High Intensity' edits.",
+    "howToDoIt": [
+      "Paste your proposed Twitter/X thread hook into the AI.",
+      "Ask it to 'Score the hook on a 1-10 scale' based on viral psychology.",
+      "Increase your 'Hook Score' to > 8 by applying the suggested edits before you post."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at linguistic analysis and understanding the psychological triggers of social algorithms."
+  },
+  "twitter-thread-hook-writer": {
+    "problem": "Writing viral hooks is a creative grind; you need a way to generate 10 'High-Vibe' opening lines for your long-form threads in seconds.",
+    "what_ai_does": "It takes your thread's core insight and generates 10 distinct hook variations—from 'The Failure Story' to 'The Listicle Reveal'—to ensure your content gets read.",
+    "howToDoIt": [
+      "Provide the #1 insight of your upcoming thread.",
+      "Ask the AI to 'Draft 10 hooks using proven viral frameworks'.",
+      "Select the 'Hook' that best matches your personal brand to see an immediate boost in your thread engagement."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at capturing personal voice and following sophisticated social copywriting frameworks."
+  },
+  "ugc-visual-quality-rater": {
+    "problem": "Bad-quality UGC (User Generated Content) makes your brand look cheap; you need to filter for the best videos before you put ad spend behind them.",
+    "what_ai_does": "It uses vision analysis to rate UGC clips on 'Energy', 'Lighting', and 'Hook Intensity', providing an objective 'Quality Grade' for your entire creative library.",
+    "howToDoIt": [
+      "Upload a folder of UGC video clips.",
+      "Ask the AI to 'Rate every clip on Lighting and Hook Intensity' (1-10 scale).",
+      "Only put ad spend behind the 'Grade A' clips to maximize your ROAS and protect your premium brand image."
+    ],
+    "bestTool": "ChatGPT (Vision)",
+    "whyThisTool": "Best-in-class image analysis and ability to detect structural visual patterns and aesthetics."
+  },
+  "unboxing-experience-designer": {
+    "problem": "Generic packaging results in zero 'Social Shares'; you need a 'Surprise & Delight' insert that forces customers to film themselves opening your product.",
+    "what_ai_does": "It researches your brand voice to design high-engagement 'Box Inserts'—including a QR-driven scavenger hunt or a personalized 'Founder's Note'—optimized for TikTok filming.",
+    "howToDoIt": [
+      "Provide your brand personality and a photo of your current packaging.",
+      "Ask the AI to 'Ideate 3 social-friendly box inserts' that drive shares.",
+      "Include the 'Viral Insert' in your next 100 orders to see a massive spike in organic, customer-led social reach."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at empathetic design and identifying psychological triggers for social sharing."
+  },
+  "unicorn-curator": {
+    "problem": "Tracking 'Unicorn' startups manually is slow; you need a list of companies that just crossed $1B valuation to pitch your high-ticket enterprise services.",
+    "what_ai_does": "It monitors funding wires to identify new $1B+ startups, providing you with a high-intent list of newly minted enterprise giants with massive budgets.",
+    "howToDoIt": [
+      "Provide a target industry (e.g., 'Cybersecurity').",
+      "Ask the AI to 'Identify companies that reached Unicorn status this quarter'.",
+      "Reach out to the Head of Infrastructure with a 'Scale with Confidence' pitch tailored to their new funding level."
+    ],
+    "bestTool": "Claude Code",
+    "whyThisTool": "Can directly query multiple research tools and identify strategic intent from unstructured business news."
+  },
+  "unsubscribed-customer-matcher": {
+    "problem": "When a customer unsubscribes from marketing, Sales reps often miss it and keep emailing them, leading to 'Harassment' complaints and legal risk.",
+    "what_ai_does": "It cross-references your ESP 'Unsubscribe' list with your CRM 'Active Deals' to flag any prospect that should be globally suppressed from sales outreach.",
+    "howToDoIt": [
+      "Upload a CSV of your marketing unsubscribes and your sales pipeline.",
+      "Ask the AI to 'Identify any active deal contact on the unsubscribe list'.",
+      "Update your CRM 'Do Not Contact' flags to protect your brand reputation and ensure 100% legal compliance."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at data reconciliation and identifying overlaps between two lists."
+  },
+  "unsubscribe-reason-classifier": {
+    "problem": "You might have a 1% unsubscribe rate, but you don't know WHY users are leaving; is it 'Too Many Emails' or 'Bad Content'?",
+    "what_ai_does": "It categorizes qualitative 'Unsubscribe Feedback' into actionable buckets, identifying the primary cause of your audience churn.",
+    "howToDoIt": [
+      "Upload a CSV of raw unsubscribe comments.",
+      "Ask the AI to 'Tag every comment by reason' (e.g., Frequency, Relevance, Gone).",
+      "Review the 'Churn Drivers' report to adjust your content strategy and protect your remaining audience."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Excellent for semantic classification and performing high-volume text grouping."
+  },
+  "uplift-acceptance-rate": {
+    "problem": "You don't know if your 'Premium Tier' is priced too high until you see how many people actually accept the upgrade offer.",
+    "what_ai_does": "It calculates the 'Uplift Acceptance Rate' for your recent pricing change, identifying the price point that maximizes total revenue vs. volume.",
+    "howToDoIt": [
+      "Upload a CSV of upgrade offers sent vs. accepted.",
+      "Ask the AI to 'Calculate the conversion rate per price point'.",
+      "Adjust your 'Tier 2' price based on the 'Acceptance Curve' to maximize your total monthly recurring revenue."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing ratio math and identifying patterns in transaction data."
+  },
+  "upsell-architect": {
+    "problem": "Account managers miss easy revenue when they don't know which 'Add-on' product is the most logical fit for an existing customer.",
+    "what_ai_does": "It analyzes your buyer history to recommend the '#1 Next Product' for every account in your portfolio based on their current usage and industry.",
+    "howToDoIt": [
+      "Upload a CSV of customers and their current product mix.",
+      "Ask the AI to 'Identify the most common upsell path' (e.g., users of X always buy Y).",
+      "Launch a targeted 'Expansion Campaign' for the #1 recommended add-on to boost your ARPU by 20% or more."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing frequency analysis and identifying correlations between product sets."
+  },
+  "use-case-matrix": {
+    "problem": "Sales reps struggle to explain 'Why us?' for specific industries; they need a library of use cases tailored to every prospect's pain.",
+    "what_ai_does": "It transforms your raw feature list into an 'Industry Use-Case Matrix'—mapping features to specific benefits for 10 different niches (e.g., Retail, SaaS, Manufacturing).",
+    "howToDoIt": [
+      "Provide your core feature list and a list of target industries.",
+      "Ask the AI to 'Draft a benefit-led use case' for each niche.",
+      "Use the 'Sales Matrix' during discovery calls to prove you understand the prospect's specific world."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at strategic positioning and translating features into nuanced, vertical-specific benefits."
+  },
+  "user-generated-content-campaign": {
+    "problem": "Running a 'UGC Contest' often results in 100+ low-quality videos that don't match your brand voice.",
+    "what_ai_does": "It designs a complete 'UGC Campaign Brief'—including specific visual scripts and 'Must-Have' phrases—ensuring your customers produce high-converting, brand-compliant content.",
+    "howToDoIt": [
+      "Provide your campaign goal and target brand vibe.",
+      "Ask the AI to 'Draft a UGC brief for customers' including a specific 'Hook' requirement.",
+      "Send the brief to your top 100 fans to receive a library of high-quality ad creatives for the cost of a gift card."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at empathetic design and identifying psychological triggers for social sharing."
+  },
+  "user-group-geo-locator": {
+    "problem": "You want to host a 'Local User Meetup' but don't know which city has the highest density of your customers.",
+    "what_ai_does": "It analyzes your customer address list to identify 'City Clusters', recommending the top 3 cities for your next in-person event.",
+    "howToDoIt": [
+      "Upload a CSV of your customers including 'City' and 'State'.",
+      "Ask the AI to 'Rank cities by total customer count'.",
+      "Launch a 'Field Marketing' event in the #1 ranked city to build high-trust relationships with your existing base."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing geospatial data filtering and identifying high-performing clusters."
+  },
+  "user-journey-friction-simulator": {
+    "problem": "You don't know where users are getting frustrated until they churn; you need to simulate their journey to find the 'Friction Hotspots'.",
+    "what_ai_does": "It adopts the persona of a 'Frustrated New User' to audit your onboarding flow, identifying logic gaps, confusing jargon, and technical hurdles that kill activation.",
+    "howToDoIt": [
+      "Provide a step-by-step description of your signup and setup process.",
+      "Ask the AI to 'Audit the journey from the perspective of a non-technical user'.",
+      "Fix the 'Friction Points' identified in the 'User Journey Report' to instantly boost your activation rates."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at empathetic reasoning and identifying psychological friction from a human perspective."
+  },
+  "user-onboarding-dropout-finder": {
+    "problem": "You don't know WHICH specific screen in your product is causing 50% of users to stop the onboarding process.",
+    "what_ai_does": "It analyzes your onboarding step logs to pinpoint the 'Killer Screen', providing a specific fix (e.g., 'Remove this field' or 'Add a progress bar') to reclaim lost users.",
+    "howToDoIt": [
+      "Upload a CSV of onboarding steps (Started vs. Completed).",
+      "Ask the AI to 'Calculate the dropout % for every screen'.",
+      "Redesign the 'Highest Dropout' screen to ensure your new users reach their first key win with zero friction."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing ratio math and identifying efficiency gaps in large event logs."
+  },
+  "utm-builder-spreadsheet": {
+    "problem": "Marketing attribution is broken when 5 different people use 5 different naming conventions for the same ad campaign.",
+    "what_ai_does": "It creates a standardized UTM convention for your entire team—generating valid tracking URLs based on a strict 'Master Taxonomy'—ensuring your analytics are 100% clean.",
+    "howToDoIt": [
+      "Define your standard channels (e.g., 'Paid_Social') and campaign types.",
+      "Ask the AI to 'Generate a list of 50 UTM-tagged URLs' following the taxonomy.",
+      "Enforce the 'Tracking Standard' across your entire team to finally trust your marketing ROI reports."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing bulk string transformation and following strict data normalization rules."
+  },
+  "pre-event-warmup-builder": {
+    "problem": "Trade show booths are empty if you don't 'Warm Up' your prospects; you need to invite every local lead within 50 miles to a private dinner or coffee.",
+    "what_ai_does": "It filters your CRM for prospects located within a specific radius of an upcoming event city, building a hyper-local 'VIP Invite' list for your field marketing team.",
+    "howToDoIt": [
+      "Upload a CSV of your prospects including 'City' and 'State'.",
+      "Ask the AI to 'Filter for leads within 50 miles of [Event City]'.",
+      "Launch a targeted 'Local Meetup' campaign to ensure your booth is pre-booked with high-value meetings before the show starts."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast at performing geospatial data filtering and identifying high-performing clusters."
   }
 };
 
