@@ -1133,6 +1133,72 @@ const manualOverrides = {
     "bestTool": "Claude",
     "whyThisTool": "Superior at generating complex technical workflows and understanding platform-specific data structures"
   },
+  "email-bounce-rate-monitor": {
+    "problem": "High email bounce rates (anything over 2%) can permanently damage your domain's reputation, causing your legitimate emails to land in spam and destroying your cold outreach effectiveness.",
+    "what_ai_does": "It automatically monitors your campaign statistics to calculate the hard bounce rate for every blast, flagging high-risk segments and recommending an immediate pause to protect your domain health.",
+    "howToDoIt": [
+      "Export your email campaign performance data (Sent vs. Bounced) into a CSV.",
+      "Ask the AI to \"Calculate the bounce rate per campaign\" and flag any outliers above the 2% threshold.",
+      "Review the \"Risk Report\" and remove problematic lead sources before your domain gets blacklisted by major email providers."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast data processing and excellent at applying simple safety thresholds to performance data"
+  },
+  "email-fatigue-monitor": {
+    "problem": "Bombarding your customers with too many emails in a short period leads to \"Inbox Burnout,\" causing your most loyal fans to unsubscribe or mark your content as spam.",
+    "what_ai_does": "It analyzes your send logs to calculate exactly how many emails each contact has received in the last 30 days, flagging \"at-risk\" users who are reaching their frequency limit.",
+    "howToDoIt": [
+      "Upload a CSV of your recent email send logs (Email, Date, Campaign Name) to the AI.",
+      "Ask it to \"Count the number of touches per contact in the last 30 days\" and flag anyone with >10 emails.",
+      "Review the \"Fatigued Contacts\" list and exclude them from your next 3 non-essential campaigns to let their engagement recover."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Excellent for counting occurrences and grouping large data sets by unique identifiers"
+  },
+  "employee-growth-surge-alert": {
+    "problem": "Headcount growth is the #1 proxy for a company's budget expansion; if a company grows by 20% in a quarter, they are likely struggling with \"growing pains\" that your solution can fix.",
+    "what_ai_does": "It tracks workforce expansion velocity for your target accounts, flagging the exact moment they transition from \"stable\" to \"scaling\" so you can time your outreach perfectly.",
+    "howToDoIt": [
+      "List your target accounts and their LinkedIn IDs in a CSV.",
+      "Ask the AI to \"Compare current employee counts against data from 3 months ago\" to calculate growth velocity.",
+      "Review the \"Growth Surge Alerts\" and reach out to the fastest-growing departments (e.g., Sales or Eng) with a tailored scalability pitch."
+    ],
+    "bestTool": "Claude",
+    "whyThisTool": "Superior at researching growth signals and identifying departmental expansion trends"
+  },
+  "enrichment-match-calculator": {
+    "problem": "Data enrichment vendors often over-promise and under-deliver, charging you for \"successful\" matches that are actually missing critical fields like mobile phones or direct dials.",
+    "what_ai_does": "It audits your enriched lead lists to calculate the true \"Fill Rate\" for every critical field, giving your data vendor a grade (A-F) and recommending alternative providers for the missing data types.",
+    "howToDoIt": [
+      "Upload a sample of your recently enriched leads (CSV) to the AI.",
+      "Ask it to \"Calculate the percentage of non-empty values for Mobile, Direct Dial, and Tech Stack\" columns.",
+      "Review the \"Data Health Audit\" and use the findings to negotiate better rates with your current vendor or switch to a provider with better coverage."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast data profiling and excellent at identifying gaps in structured data sets"
+  },
+  "event-influenced-pipeline": {
+    "problem": "Marketing teams often fail to prove the value of events because they only look at \"Direct Leads,\" missing the massive amount of revenue that was \"touched\" by the event but closed later.",
+    "what_ai_does": "It cross-references your event attendance lists with your deal pipeline to identify any opportunity where a prospect attended your event *before* the deal was created, proving indirect ROI.",
+    "howToDoIt": [
+      "Upload a CSV of event attendees and your open/closed opportunities from your CRM.",
+      "Ask the AI to \"Filter for deals where an attendee was a campaign member prior to the Opp Close Date.\"",
+      "Review the \"Event Influence Report\" to justify your sponsorship budget based on total pipeline touched, not just new leads."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Excellent for logical data matching and time-based correlation between two lists"
+  },
+  "event-sponsorship-roi-calculator": {
+    "problem": "Trade show booths are massive investments that often fail to return a profit because teams don't model the \"Break-Even\" scenario before signing the sponsorship contract.",
+    "what_ai_does": "It uses your historical deal size and close rates to calculate exactly how many leads you need to capture to cover the cost of a booth, flagging sponsorships as \"Safe,\" \"Risky,\" or \"Impossible.\"",
+    "howToDoIt": [
+      "Provide the sponsorship cost, average deal size, and historical close rate to the AI.",
+      "Ask it to \"Calculate the capture rate required to break even\" based on the total number of event attendees.",
+      "Review the \"Booth ROI Predictor\" to decide if a 10x10 booth is a safe bet or if the required lead volume is unrealistic for the show's size."
+    ],
+    "bestTool": "ChatGPT",
+    "whyThisTool": "Fast math and excellent at performing feasibility checks based on benchmark data"
+  },
   "consultant-partnership-finder": {
     "problem": "Finding the right agencies or consultants to resell your product is a slow research task, but these \"Channel Partners\" are the fastest way to scale your sales without hiring more reps.",
     "what_ai_does": "It identifies service businesses (agencies, SIs) that are already implementing solutions adjacent to yours—like \"Asana Experts\" or \"Shopify CRO Agencies\"—making them ideal candidates for a referral program.",
