@@ -2,20 +2,17 @@ import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Navbar from '../components/Navbar';
-import { Search, Filter, Clock, Zap, ArrowRight, Lightbulb, ChevronDown, CheckCircle, Coffee } from 'lucide-react';
+import { Search, Filter, Zap, ArrowRight, Lightbulb, ChevronDown, CheckCircle, Coffee } from 'lucide-react';
 import ideasData from '../lib/ideas-data.json';
 
 export default function IdeasDatabase() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedVertical, setSelectedVertical] = useState('All');
-  const [selectedDifficulty, setSelectedDifficulty] = useState('All');
 
   const verticals = useMemo(() => {
     const v = new Set(ideasData.map(i => i.vertical));
     return ['All', ...Array.from(v).sort()];
   }, []);
-
-  const difficulties = ['All', 'Beginner', 'Intermediate', 'Advanced'];
 
   const filteredIdeas = useMemo(() => {
     return ideasData.filter(idea => {
@@ -23,10 +20,9 @@ export default function IdeasDatabase() {
                            idea.problem.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            idea.what_ai_does.toLowerCase().includes(searchTerm.toLowerCase());
       const matchesVertical = selectedVertical === 'All' || idea.vertical === selectedVertical;
-      const matchesDifficulty = selectedDifficulty === 'All' || idea.difficulty === selectedDifficulty;
-      return matchesSearch && matchesVertical && matchesDifficulty;
+      return matchesSearch && matchesVertical;
     });
-  }, [searchTerm, selectedVertical, selectedDifficulty]);
+  }, [searchTerm, selectedVertical]);
 
   return (
     <div className="min-h-screen bg-black text-white selection:bg-[#ccff00] selection:text-black font-mono">
@@ -56,7 +52,7 @@ export default function IdeasDatabase() {
 
           {/* Search & Filters */}
           <div className="sticky top-20 z-40 bg-black/80 backdrop-blur-md py-6 border-y border-white/10 mb-12">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="md:col-span-2 relative">
                 <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-white/30" />
                 <input 
@@ -75,20 +71,6 @@ export default function IdeasDatabase() {
                   onChange={(e) => setSelectedVertical(e.target.value)}
                 >
                   {verticals.map(v => <option key={v} value={v} className="bg-black">{v.toUpperCase()}</option>)}
-                </select>
-                <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-white/30 pointer-events-none" />
-              </div>
-
-              <div className="relative">
-                <select 
-                  className="w-full bg-white/5 border-2 border-white/10 px-4 py-4 font-black uppercase tracking-widest appearance-none focus:border-[#ccff00] focus:outline-none cursor-pointer"
-                  value={selectedDifficulty}
-                  onChange={(e) => setSelectedDifficulty(e.target.value)}
-                >
-                  <option value="All" className="bg-black">ANY DIFFICULTY</option>
-                  <option value="Beginner" className="bg-black">SIMPLE TO START</option>
-                  <option value="Intermediate" className="bg-black">PRACTICAL</option>
-                  <option value="Advanced" className="bg-black">STRATEGIC</option>
                 </select>
                 <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-white/30 pointer-events-none" />
               </div>
@@ -114,27 +96,15 @@ export default function IdeasDatabase() {
                     <span className="bg-[#ccff00] text-black px-2 py-0.5 text-[10px] font-black uppercase tracking-widest">
                       {idea.vertical}
                     </span>
-                    <div className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-white/40">
-                      <Clock className="w-3 h-3" /> {idea.difficulty === 'Beginner' ? 'Simple to Start' : idea.difficulty === 'Intermediate' ? 'Practical' : 'Strategic'}
-                    </div>
                   </div>
 
                   <h3 className="text-2xl font-black uppercase leading-tight mb-4 group-hover:text-[#ccff00] transition-colors">
                     {idea.problem}
                   </h3>
 
-                  <p className="text-white/60 mb-8 flex-grow leading-relaxed font-bold">
+                  <p className="text-white/60 leading-relaxed font-bold">
                     // {idea.what_ai_does}
                   </p>
-
-                  <div className="mt-auto pt-6 border-t border-white/10 flex items-center justify-between">
-                    <div className="flex items-center gap-2 text-[#ccff00] text-[10px] font-black uppercase tracking-widest">
-                      <Zap className="w-3 h-3" /> {idea.time_saved}
-                    </div>
-                    <div className="text-white/20 text-[10px] font-black uppercase tracking-widest italic">
-                      Practical Tool
-                    </div>
-                  </div>
                 </div>
               </Link>
             ))}
@@ -144,7 +114,7 @@ export default function IdeasDatabase() {
             <div className="py-24 text-center border-2 border-dashed border-white/10">
               <p className="text-2xl font-black uppercase text-white/30">No ideas matched your search.</p>
               <button 
-                onClick={() => {setSearchTerm(''); setSelectedVertical('All'); setSelectedDifficulty('All');}}
+                onClick={() => {setSearchTerm(''); setSelectedVertical('All');}}
                 className="mt-6 text-[#ccff00] font-black uppercase tracking-widest hover:underline"
               >
                 Reset Search Filters

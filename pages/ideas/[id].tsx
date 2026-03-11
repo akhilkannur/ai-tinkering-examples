@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import Navbar from '../../components/Navbar';
-import { ArrowLeft, Zap, Clock, CheckCircle, Info, Lightbulb, Coffee } from 'lucide-react';
+import { ArrowLeft, Zap, CheckCircle, Info, Lightbulb, Coffee } from 'lucide-react';
 import ideasData from '../../lib/ideas-data.json';
 
 export default function IdeaDetailPage() {
@@ -108,23 +108,6 @@ export default function IdeaDetailPage() {
                   {idea.whyThisTool}
                 </p>
               </div>
-
-              {/* ROI & Difficulty */}
-              <div className="bg-white/5 border-2 border-white/10 p-8 space-y-8">
-                <div>
-                  <h2 className="text-[10px] font-black uppercase tracking-[0.2em] text-white/40 mb-2">ROI</h2>
-                  <div className="flex items-center gap-3 text-2xl font-black text-[#ccff00] uppercase">
-                    <Zap className="w-5 h-5" /> {idea.time_saved}
-                  </div>
-                </div>
-                <div>
-                  <h2 className="text-[10px] font-black uppercase tracking-[0.2em] text-white/40 mb-2">Difficulty</h2>
-                  <div className="flex items-center gap-3 text-2xl font-black uppercase">
-                    <Clock className="w-5 h-5 text-white/40" /> {idea.difficulty}
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </main>

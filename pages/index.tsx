@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Navbar from '../components/Navbar';
-import { Lightbulb, ArrowRight, Zap, Clock, Shield, TrendingUp, Users, Brain, Code, Target, Sparkles, Coffee } from 'lucide-react';
+import { Lightbulb, ArrowRight, Zap, Shield, TrendingUp, Users, Brain, Code, Target, Sparkles, Coffee } from 'lucide-react';
 import FeaturedIn from '../components/FeaturedIn';
 
 // Plain-English "Featured Ideas" 
@@ -11,65 +11,49 @@ const featuredIdeas = [
     "id": "10k-report-prospector",
     "vertical": "Sales",
     "problem": "Stop manually reading 100-page financial reports.",
-    "what_ai_does": "This tool scans annual reports for you, pulls out the 'Risk Factors', and writes a personalized email showing how you can help.",
-    "time_saved": "2-5 hours / week",
-    "difficulty": "Beginner"
+    "what_ai_does": "This tool scans annual reports for you, pulls out the 'Risk Factors', and writes a personalized email showing how you can help."
   },
   {
     "id": "employee-flight-risk-detector",
     "vertical": "HR",
     "problem": "Identify team burnout before someone quits.",
-    "what_ai_does": "It notices when team frustration or 'quiet quitting' starts to happen in Slack so you can talk to them before they leave.",
-    "time_saved": "$50k+ saved / year",
-    "difficulty": "Beginner"
+    "what_ai_does": "It notices when team frustration or 'quiet quitting' starts to happen in Slack so you can talk to them before they leave."
   },
   {
     "id": "canonical-tag-auditor",
     "vertical": "Marketing",
     "problem": "Fix the hidden errors hurting your Google rankings.",
-    "what_ai_does": "It finds the silent technical errors on your website that prevent your pages from showing up in search results.",
-    "time_saved": "5 hours / month",
-    "difficulty": "Beginner"
+    "what_ai_does": "It finds the silent technical errors on your website that prevent your pages from showing up in search results."
   },
   {
     "id": "vendor-negotiation-script",
     "vertical": "Executive",
     "problem": "Lower your monthly software bills by 20%.",
-    "what_ai_does": "It researches competitor prices and writes a polite but firm script for you to use to get a better deal on your software.",
-    "time_saved": "$5,000 / year",
-    "difficulty": "Beginner"
+    "what_ai_does": "It researches competitor prices and writes a polite but firm script for you to use to get a better deal on your software."
   },
   {
     "id": "contract-redline-risk-spotter",
     "vertical": "Legal",
     "problem": "Spot the 'gotchas' in your contracts instantly.",
-    "what_ai_does": "It scans new legal documents and highlights the risky clauses (like liability or payment terms) that you might miss.",
-    "time_saved": "2 hours / contract",
-    "difficulty": "Beginner"
+    "what_ai_does": "It scans new legal documents and highlights the risky clauses (like liability or payment terms) that you might miss."
   },
   {
     "id": "qbr-deck-generator",
     "vertical": "Customer Success",
     "problem": "Send better client reports in half the time.",
-    "what_ai_does": "It turns your raw customer data into a clear story that shows exactly how much value you've delivered this month.",
-    "time_saved": "10 hours / month",
-    "difficulty": "Beginner"
+    "what_ai_does": "It turns your raw customer data into a clear story that shows exactly how much value you've delivered this month."
   },
   {
     "id": "career-page-keyword-alert",
     "vertical": "Sales",
     "problem": "Know exactly when a lead starts hiring.",
-    "what_ai_does": "Hiring is a sign of budget. This notifies you the second a target company posts a job for a role that needs your product.",
-    "time_saved": "5 hours / week",
-    "difficulty": "Beginner"
+    "what_ai_does": "Hiring is a sign of budget. This notifies you the second a target company posts a job for a role that needs your product."
   },
   {
     "id": "board-deck-narrative-factory",
     "vertical": "Executive",
     "problem": "Stop sending messy spreadsheets to your board.",
-    "what_ai_does": "It looks at your numbers and helps you write a clear story about what's working and what needs to change for your directors.",
-    "time_saved": "15 hours / quarter",
-    "difficulty": "Beginner"
+    "what_ai_does": "It looks at your numbers and helps you write a clear story about what's working and what needs to change for your directors."
   }
 ];
 
@@ -153,22 +137,15 @@ export default function IdeasHomepage() {
                       <span className="bg-[#ccff00] text-black px-2 py-0.5 text-[10px] font-black uppercase tracking-widest">
                         {idea.vertical}
                       </span>
-                      <div className="text-[10px] font-black uppercase tracking-widest text-white/40">
-                        {idea.difficulty === 'Beginner' ? 'Simple to Start' : idea.difficulty === 'Intermediate' ? 'Practical' : 'Strategic'}
-                      </div>
                     </div>
                     
                     <h3 className="text-lg font-black uppercase leading-tight mb-4 group-hover:text-[#ccff00] transition-colors">
                       {idea.problem}
                     </h3>
                     
-                    <p className="text-xs text-white/50 mb-8 flex-grow leading-relaxed font-bold">
+                    <p className="text-xs text-white/50 leading-relaxed font-bold">
                       // {idea.what_ai_does}
                     </p>
-
-                    <div className="mt-auto pt-4 border-t border-white/10 flex items-center gap-2 text-[#ccff00] text-[10px] font-black uppercase tracking-widest">
-                      <Zap className="w-3 h-3" /> {idea.time_saved}
-                    </div>
                   </div>
                 </Link>
               ))}
@@ -193,7 +170,6 @@ export default function IdeasHomepage() {
               Every idea is practical, easy to start, and designed to save you <span className="text-[#ccff00]">real time and money.</span>
             </h2>
             <div className="mt-12 flex flex-wrap justify-center gap-12 opacity-30">
-               <div className="flex items-center gap-2"><Clock className="w-5 h-5" /> SAVES TIME</div>
                <div className="flex items-center gap-2"><Target className="w-5 h-5" /> EASY TO START</div>
                <div className="flex items-center gap-2"><Brain className="w-5 h-5" /> PRACTICAL</div>
             </div>
