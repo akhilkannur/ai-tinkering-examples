@@ -382,11 +382,14 @@ Keep the 19 existing posts. Write new ones only when:
 - **Phase 1.1**: Recipe redirect removed from `pages/ai-examples/[...slug].tsx` — no longer imports getAllRecipes or redirects to /how-to
 - **Phase 1.3**: robots.txt updated with 17 Disallow rules for dead sections
 - **Phase 1.4**: noindex meta added to 20 pages (verified via grep)
-- **Phase 2.1**: Navbar simplified to 5 links (HOME, EXAMPLES, TOOLS, BLOG, GET SETUP)
+- **Phase 2.1**: Navbar simplified — removed "HOME" link (now 4 links: EXAMPLES, TOOLS, BLOG, GET SETUP)
 - **Phase 2.2**: Homepage rewritten with curated examples grid, tools teaser, setup CTA
 - **Phase 2.3**: Setup CTA added to ExampleBody.tsx (lines 109-121)
 - **Footer cleaned**: Removed dead links (quiz, prompt-bundle, investors, jobs, learn-ai, stacks, context)
 - **sitemap-pdfs.xml deleted**
+- **Homepage redirect**: `/` now 301 redirects to `/ai-examples` (examples is the main thing)
+- **Link audit fixed**: Updated all old references (`/`, `/#newsletter`, `/#blueprints`, `/#skills`, `/ideas-database`) to point to `/ai-examples` or `/blog`
+- **Redirects updated**: `/skills` and `/blueprints` now redirect to `/ai-examples` in next.config.js
 
 ### Issues Found ⚠️
 1. **Static sitemap.xml outdated**: Contains only 139 URLs, but build generates 181 URLs. The static file needs regeneration.
@@ -395,9 +398,16 @@ Keep the 19 existing posts. Write new ones only when:
    - Individual `/ai-examples/{category}/{slug}` pages missing
 3. **Dead pages not deleted (Phase 3)**: Still present but noindexed — waiting for Google de-index
 
+### How Dead Pages Work
+- Pages like `/skills`, `/how-to`, `/500-ways-to-use-llms-for-work` still exist as files
+- Each has `<meta name="robots" content="noindex, nofollow" />` — Google won't index them
+- robots.txt blocks crawlers: `Disallow: /skills/`, etc.
+- Old URLs redirect to `/ai-examples` via next.config.js
+- Phase 3 (deletion) planned for Week 4+ after Google de-indexes
+
 ### Next Steps
 1. [x] Regenerate sitemap.xml to match build output (181 URLs)
-2. [x] Deploy updated site
+2. [x] Deploy updated site (homepage redirect + link audit)
 3. [ ] Monitor GSC for 404 reduction
 4. [ ] Phase 3 deletion in 2-4 weeks
 
@@ -421,6 +431,12 @@ Week 1, Day 2-3:
   ✅ Clean footer — removed dead links (quiz, prompt bundle, investors, learn-ai, role pages)
   ☑ Deploy (pending sitemap fix)
 
+Week 1, Day 4 (Link Audit - March 25):
+  ✅ Homepage redirect: / → /ai-examples (301 permanent)
+  ✅ Link audit: Fixed all old references (/#newsletter, /#blueprints, /#skills, /ideas-database) → /ai-examples
+  ✅ Updated next.config.js: /skills and /blueprints now redirect to /ai-examples
+  ✅ Deployed
+
 Week 2-4:
   ☑ Monitor GSC — confirm noindexed pages dropping out
   ☐ Start adding 2-3 curated examples per week (Phase 4.1)
@@ -437,7 +453,7 @@ Week 4+:
 
 ```
 realaiexamples.com/
-├── /                          → Homepage (examples + tools teaser + setup CTA)
+├── /                          → 301 redirect to /ai-examples
 ├── /ai-examples               → Curated real-world AI examples (THE core)
 │   ├── /category/{cat}        → Category filters
 │   └── /{category}/{slug}     → Individual example pages (with setup CTA)
