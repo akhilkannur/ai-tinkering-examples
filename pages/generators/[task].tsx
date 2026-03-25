@@ -186,8 +186,8 @@ export default function TaskLandingPage({ taskName, taskSlug, recipes, categorie
       </main>
 
       <div className="border-t border-navy-dark bg-secondary-bg py-12 text-center">
-          <Link href="/500-ways-to-use-llms-for-work" className="text-text-secondary hover:text-accent underline">
-              View all 500+ AI Blueprints
+          <Link href="/ai-examples" className="text-text-secondary hover:text-accent underline">
+              View all AI Blueprints
           </Link>
       </div>
     </div>

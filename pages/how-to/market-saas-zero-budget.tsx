@@ -174,7 +174,7 @@ export default function ZeroBudgetMarketing() {
               >
                 Unlock All ($39) <ArrowRight className="w-8 h-8 stroke-[3px] inline-block ml-2" />
               </a>
-              <Link href="/#blueprints" className="text-white font-display text-xl uppercase underline decoration-wavy decoration-[#ff00ff] hover:text-[#ccff00] transition-colors">
+              <Link href="/ai-examples" className="text-white font-display text-xl uppercase underline decoration-wavy decoration-[#ff00ff] hover:text-[#ccff00] transition-colors">
                 See All Blueprints
               </Link>
             </div>

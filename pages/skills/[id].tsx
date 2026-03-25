@@ -234,7 +234,7 @@ Downloaded from RealAIExamples.com`;
         <div className="max-w-4xl mx-auto">
           {/* Breadcrumbs */}
           <nav className="flex items-center gap-3 text-xs font-black font-mono uppercase tracking-widest text-black/40 mb-12">
-            <Link href="/" className="hover:text-black flex items-center gap-1 shrink-0 bg-white px-2 py-1 border border-black">
+            <Link href="/ai-examples" className="hover:text-black flex items-center gap-1 shrink-0 bg-white px-2 py-1 border border-black">
               <ArrowLeft className="w-3 h-3 stroke-[3px]" /> Hub
             </Link>
             <span className="text-black">/</span>

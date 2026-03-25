@@ -54,7 +54,7 @@ export default function Footer() {
             <h4 className="font-display text-lg text-punk-lime uppercase tracking-widest mb-6">// CONNECT</h4>
             <ul className="space-y-3 text-sm font-black uppercase tracking-widest">
               <li>
-                <Link href="/#newsletter" className="hover:text-punk-magenta transition-colors hover:underline decoration-wavy">Newsletter</Link>
+                <Link href="/ai-examples" className="hover:text-punk-magenta transition-colors hover:underline decoration-wavy">Newsletter</Link>
               </li>
               <li>
                 <a href="https://salestools.club/" target="_blank" rel="noopener noreferrer" className="hover:text-punk-magenta transition-colors hover:underline decoration-wavy uppercase">

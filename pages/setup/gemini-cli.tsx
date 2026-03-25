@@ -309,7 +309,7 @@ export default function GeminiSetup() {
                     <p className="text-text-secondary mb-10 max-w-lg mx-auto">
                         Don't guess the prompts. Use our library of 500+ workflows for Sales and Marketing.
                     </p>
-                    <Link href="/#blueprints" className="inline-flex items-center gap-3 bg-accent hover:bg-accent-hover text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg shadow-accent/20">
+                    <Link href="/ai-examples" className="inline-flex items-center gap-3 bg-accent hover:bg-accent-hover text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg shadow-accent/20">
                         <BookOpen className="w-5 h-5" /> BROWSE ALL BLUEPRINTS
                     </Link>
                 </div>

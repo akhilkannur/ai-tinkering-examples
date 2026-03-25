@@ -293,7 +293,7 @@ export default function ClaudeSetup() {
                     <p className="text-text-secondary mb-10 max-w-lg mx-auto">
                         Don't guess the prompts. Use our library of 500+ verified workflows for Sales and Marketing.
                     </p>
-                    <Link href="/#blueprints" className="inline-flex items-center gap-3 bg-bright-pink hover:bg-bright-pink/80 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg shadow-bright-pink/20">
+                    <Link href="/ai-examples" className="inline-flex items-center gap-3 bg-bright-pink hover:bg-bright-pink/80 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg shadow-bright-pink/20">
                         <BookOpen className="w-5 h-5" /> BROWSE ALL BLUEPRINTS
                     </Link>
                 </div>

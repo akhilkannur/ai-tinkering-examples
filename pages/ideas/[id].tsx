@@ -39,7 +39,7 @@ export default function IdeaDetailPage({ idea }) {
       <main className="pt-32 pb-24 px-4">
         <div className="container mx-auto max-w-4xl">
           {/* Back Button */}
-          <Link href="/ideas-database" className="inline-flex items-center gap-2 text-white/40 hover:text-[#ccff00] transition-colors mb-12 uppercase font-black text-xs">
+          <Link href="/ai-examples" className="inline-flex items-center gap-2 text-white/40 hover:text-[#ccff00] transition-colors mb-12 uppercase font-black text-xs">
             <ArrowLeft className="w-4 h-4" /> Back to Database
           </Link>
 

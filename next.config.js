@@ -168,12 +168,12 @@ const nextConfig = {
       // 3. Old directory structure cleanup
       {
         source: '/blueprints',
-        destination: '/',
+        destination: '/ai-examples',
         permanent: true,
       },
       {
         source: '/skills',
-        destination: '/#skills',
+        destination: '/ai-examples',
         permanent: true,
       },
       {

@@ -65,7 +65,7 @@ export default function TagPage({ examples, tag, tagDisplayName }: TagPageProps)
         <nav className="max-w-4xl mx-auto px-4 py-4" aria-label="Breadcrumb">
           <ol className="flex items-center space-x-2 text-sm text-text-color">
             <li>
-              <Link href="/" className="hover:text-text-color transition-colors">Home</Link>
+              <Link href="/ai-examples" className="hover:text-text-color transition-colors">Home</Link>
             </li>
             <li className="before:content-['/'] before:mx-2">
               <Link href="/ai-examples" className="hover:text-text-color transition-colors">AI Examples</Link>

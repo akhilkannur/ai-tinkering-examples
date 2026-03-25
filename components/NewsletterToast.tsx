@@ -53,7 +53,7 @@ const NewsletterToast: React.FC = () => {
           Free blueprints starter pack and occasional updates on actionable AI tactics.
         </p>
         <Link 
-          href="/#newsletter"
+          href="/blog"
           onClick={(e) => {
              // Let it scroll to newsletter section
              // Optionally dismiss toast

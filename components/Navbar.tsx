@@ -25,7 +25,7 @@ export default function Navbar() {
     { href: '/agent-setup-service', label: 'GET SETUP', mono: true },
   ]
 
-  const isHomePage = router.pathname === '/'
+  const isHomePage = router.pathname === '/ai-examples'
 
   return (
     <>
@@ -52,7 +52,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center gap-8">
             <div className="flex-shrink-0">
-              <Link href="/" className="flex items-center gap-2 group">
+              <Link href="/ai-examples" className="flex items-center gap-2 group">
                 <div className="w-10 h-10 bg-black flex items-center justify-center text-[#ccff00] font-display text-2xl transform -rotate-6 transition-transform group-hover:rotate-0">R</div>
                 <span className="font-display text-xl tracking-tighter uppercase text-black">Real AI<span className="text-[#ccff00] bg-black px-1 ml-1">Examples</span></span>
               </Link>
