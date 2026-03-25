@@ -19,7 +19,6 @@ export default function Navbar() {
   }, [])
 
   const navLinks = [
-    { href: '/', label: 'HOME', mono: true },
     { href: '/ai-examples', label: 'EXAMPLES', mono: true },
     { href: '/tools', label: 'TOOLS', mono: true },
     { href: '/blog', label: 'BLOG', mono: true },
