@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Terminal, Cpu, ShieldCheck } from 'lucide-react';
+import { Terminal, Cpu } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -10,80 +10,56 @@ export default function Footer() {
 
       <div className="container mx-auto px-4 max-w-6xl relative z-10">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-12 mb-16">
-          {/* Column 1: Company */}
+          {/* Column 1: Site */}
           <div>
             <h4 className="font-display text-lg text-punk-lime uppercase tracking-widest mb-6">// SITE</h4>
             <ul className="space-y-3 text-sm font-black uppercase tracking-widest">
               <li>
-                <Link href="/about" className="hover:text-punk-magenta transition-colors hover:underline decoration-wavy">Our Mission</Link>
+                <Link href="/about" className="hover:text-punk-magenta transition-colors hover:underline decoration-wavy">About</Link>
               </li>
               <li>
-                <Link href="/agent-setup-service" className="text-punk-magenta hover:text-white transition-colors">Setup Service</Link>
+                <Link href="/ai-examples" className="hover:text-punk-magenta transition-colors hover:underline decoration-wavy">Examples</Link>
               </li>
               <li>
-                <Link href="/build-club" className="hover:text-punk-magenta transition-colors hover:underline decoration-wavy text-punk-lime">Build Club</Link>
+                <Link href="/tools" className="hover:text-punk-magenta transition-colors hover:underline decoration-wavy">Tool Directory</Link>
               </li>
+              <li>
+                <Link href="/blog" className="hover:text-punk-magenta transition-colors hover:underline decoration-wavy">Blog</Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 2: Get Started */}
+          <div>
+            <h4 className="font-display text-lg text-punk-cyan uppercase tracking-widest mb-6">// GET STARTED</h4>
+            <ul className="space-y-3 text-sm font-black uppercase tracking-widest">
+              <li>
+                <Link href="/agent-setup-service" className="text-punk-magenta hover:text-white transition-colors">Setup Sprint — $99</Link>
+              </li>
+              <li>
+                <Link href="/setup/claude-code" className="hover:text-punk-magenta transition-colors hover:underline decoration-wavy">
+                  Claude Code Guide
+                </Link>
+              </li>
+              <li>
+                <Link href="/setup/gemini-cli" className="hover:text-punk-magenta transition-colors hover:underline decoration-wavy">
+                  Gemini CLI Guide
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 3: Connect */}
+          <div>
+            <h4 className="font-display text-lg text-punk-lime uppercase tracking-widest mb-6">// CONNECT</h4>
+            <ul className="space-y-3 text-sm font-black uppercase tracking-widest">
               <li>
                 <Link href="/#newsletter" className="hover:text-punk-magenta transition-colors hover:underline decoration-wavy">Newsletter</Link>
               </li>
-            </ul>
-          </div>
-
-          {/* Column 2: Discover */}
-          <div>
-            <h4 className="font-display text-lg text-punk-cyan uppercase tracking-widest mb-6">// DISCOVER</h4>
-            <ul className="space-y-3 text-sm font-black uppercase tracking-widest">
-              <li>
-                <Link href="/generators/docs-to-context" className="hover:text-punk-magenta transition-colors hover:underline decoration-wavy">
-                  Website to Markdown Generator
-                </Link>
-              </li>
-              <li>
-                <Link href="/ai-workplace-quiz" className="hover:text-punk-magenta transition-colors hover:underline decoration-wavy">
-                  AI Readiness Quiz
-                </Link>
-              </li>
-              <li>
-                <Link href="/prompt-bundle" className="hover:text-punk-magenta transition-colors hover:underline decoration-wavy">
-                  AI Prompt Bundle
-                </Link>
-              </li>
-              <li>
-                <Link href="/investors" className="hover:text-punk-magenta transition-colors hover:underline decoration-wavy">
-                  Micro-PE Directory
-                </Link>
-              </li>
-              <li>
-                <Link href="/learn-ai" className="hover:text-punk-magenta transition-colors hover:underline decoration-wavy">
-                  Learn AI
-                </Link>
-              </li>
               <li>
                 <a href="https://salestools.club/" target="_blank" rel="noopener noreferrer" className="hover:text-punk-magenta transition-colors hover:underline decoration-wavy uppercase">
-                  Salestools club
+                  Salestools Club
                 </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Column 3: Playbooks */}
-          <div>
-            <h4 className="font-display text-lg text-punk-lime uppercase tracking-widest mb-6">// BY ROLE</h4>
-            <ul className="space-y-3 text-sm font-black uppercase tracking-widest">
-              <li>
-                <Link href="/role/sales-ops" className="hover:text-punk-magenta transition-colors hover:underline decoration-wavy">Sales Ops</Link>
-              </li>
-              <li>
-                <Link href="/role/marketing-ops" className="hover:text-punk-magenta transition-colors hover:underline decoration-wavy">Marketing Ops</Link>
-              </li>
-              <li>
-                <Link href="/role/seo" className="hover:text-punk-magenta transition-colors hover:underline decoration-wavy">SEO & Search</Link>
-              </li>
-              <li>
-                <Link href="/role/growth" className="hover:text-punk-magenta transition-colors hover:underline decoration-wavy">Growth</Link>
-              </li>
-              <li>
-                <Link href="/role/paid-media" className="hover:text-punk-magenta transition-colors hover:underline decoration-wavy">Paid Ads</Link>
               </li>
             </ul>
           </div>
@@ -108,7 +84,7 @@ export default function Footer() {
                 <Terminal className="w-5 h-5" />
              </div>
              <p className="text-gray-500 text-[10px] font-mono uppercase tracking-[0.2em]">
-               &copy; {new Date().getFullYear()} Real AI Examples. Handcrafted for business professionals and AI tinkerers.
+               &copy; {new Date().getFullYear()} Real AI Examples. Curated for business professionals.
              </p>
           </div>
           

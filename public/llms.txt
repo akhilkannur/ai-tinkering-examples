@@ -3,9 +3,9 @@
 
 ## Niche-Specific Indices (Recommended for Context)
 - [llms-sales-ops.txt](https://realaiexamples.com/llms-sales-ops.txt) - 181 recipes
-- [llms-strategic-ops.txt](https://realaiexamples.com/llms-strategic-ops.txt) - 124 recipes
-- [llms-marketing-ops.txt](https://realaiexamples.com/llms-marketing-ops.txt) - 58 recipes
-- [llms-content-ops.txt](https://realaiexamples.com/llms-content-ops.txt) - 51 recipes
+- [llms-strategic-ops.txt](https://realaiexamples.com/llms-strategic-ops.txt) - 125 recipes
+- [llms-marketing-ops.txt](https://realaiexamples.com/llms-marketing-ops.txt) - 60 recipes
+- [llms-content-ops.txt](https://realaiexamples.com/llms-content-ops.txt) - 53 recipes
 - [llms-competitive-intel.txt](https://realaiexamples.com/llms-competitive-intel.txt) - 33 recipes
 - [llms-paid-media.txt](https://realaiexamples.com/llms-paid-media.txt) - 35 recipes
 - [llms-customer-success.txt](https://realaiexamples.com/llms-customer-success.txt) - 42 recipes

@@ -9,8 +9,6 @@ id: alumni-network-miner
 category: Lead Gen
 title: The Alumni Network Miner
 tagline: Find prospects who went to the same university as your executives.
-difficulty: Intermediate
-time: 15 mins
 archetype: Researcher
 description: >-
   Warm introductions convert 5x better than cold outreach. This agent takes a
@@ -24,6 +22,12 @@ sampleData:
     Sarah Jones,Stanford University,"Stripe, Plaid, Square"
     Mike Ross,University of Michigan,"Ford, GM, Rivian"
 isPremium: false
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Alumni Network Miner
@@ -69,8 +73,6 @@ id: angel-investor-portfolio-scanner
 category: Lead Gen
 title: The Angel Portfolio Scanner
 tagline: Prospect companies backed by friendly Angel Investors.
-difficulty: Intermediate
-time: 20 mins
 archetype: Researcher
 description: >-
   Angel investors often influence the tech stack of their portfolio companies.
@@ -84,6 +86,12 @@ sampleData:
     Jason Calacanis,https://angel.co/jason,SaaS
     Naval Ravikant,https://angel.co/naval,Crypto/Web3
 isPremium: false
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Angel Portfolio Scanner
@@ -131,8 +139,6 @@ id: annual-report-keyword-hunter
 category: Lead Gen
 title: The 10-K Strategic Hunter
 tagline: Scan annual reports for specific strategic initiative keywords.
-difficulty: Advanced
-time: 45 mins
 archetype: Analyst
 description: >-
   Public companies reveal their buying intent in 10-K reports. This agent scans
@@ -146,6 +152,10 @@ sampleData:
     F,Ford Motor Company,"autonomous, electrification, software"
     WMT,Walmart,"supply chain, omnichannel, logistics"
 isPremium: false
+inputs:
+  - Target Accounts (CSV)
+outputs:
+  - Enriched Leads
 ---
 
 # Agent Configuration: The 10-K Strategic Hunter
@@ -188,12 +198,11 @@ id: autonomous-sales-sniper
 category: Lead Gen
 title: The Sales Sniper
 tagline: Find and qualify B2B leads automatically.
-difficulty: Advanced
-time: 20 mins
 archetype: Hybrid
 description: >-
   Searches for companies in your target segments, filters out agencies, and
   builds a qualified prospect list.
+isPremium: true
 sampleData:
   filename: target_segments.csv
   content: |
@@ -201,7 +210,12 @@ sampleData:
     Fintech,Los Angeles,Series A-C only
     EdTech,Austin,Must have mobile app
     PropTech,New York,B2B only
-isPremium: false
+inputs:
+  - Target Accounts (CSV)
+  - Local File + Search
+outputs:
+  - Enriched Leads
+  - Enriched Document
 ---
 
 # Agent Configuration: The Sales Sniper
@@ -261,8 +275,6 @@ id: b2b-marketplace-scraper
 category: Lead Gen
 title: The Ecosystem Partner Finder
 tagline: 'Find leads from AppExchange, Shopify, or HubSpot app stores.'
-difficulty: Intermediate
-time: 20 mins
 archetype: Researcher
 description: >-
   Companies listed on B2B marketplaces (Salesforce AppExchange, Shopify App
@@ -276,6 +288,12 @@ sampleData:
     https://apps.shopify.com,Marketing,50
     https://appexchange.salesforce.com,Analytics,10
 isPremium: false
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Ecosystem Partner Finder
@@ -321,8 +339,6 @@ id: bad-review-poacher
 category: Lead Gen
 title: The Competitor Poacher
 tagline: Identify users complaining about competitors on G2/Capterra.
-difficulty: Advanced
-time: 30 mins
 archetype: Researcher
 description: >-
   Unhappy customers are the easiest leads to close. This agent monitors review
@@ -335,6 +351,12 @@ sampleData:
     Salesforce,https://www.g2.com/products/salesforce-crm/reviews
     HubSpot,https://www.capterra.com/p/152373/HubSpot-Marketing-Hub/
 isPremium: false
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Competitor Poacher
@@ -379,8 +401,6 @@ id: board-member-network-mapper
 category: Lead Gen
 title: The Board Room Infiltrator
 tagline: Map potential intros via board member connections.
-difficulty: Advanced
-time: 25 mins
 archetype: Researcher
 description: >-
   Board members often sit on multiple boards. This agent maps the web of
@@ -393,6 +413,12 @@ sampleData:
     Marc Andreessen,Uber
     Bill Gurley,Coinbase
 isPremium: false
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Board Room Infiltrator
@@ -435,8 +461,6 @@ id: boolean-search-architect
 category: Lead Gen
 title: The Boolean Search Architect
 tagline: Write complex Sales Nav queries without the headache.
-difficulty: Beginner
-time: One-off
 archetype: Processor
 isPremium: false
 description: >-
@@ -454,6 +478,12 @@ sampleData:
 
     US_Marketing_VPs,VP of Marketing or CMO at Series B healthcare startups in
     the US.
+inputs:
+  - Target Accounts (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - Enriched Leads
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Boolean Search Architect
@@ -501,8 +531,6 @@ id: career-page-keyword-alert
 category: Lead Gen
 title: The Hiring Intent Trigger
 tagline: Trigger outreach when a prospect posts a specific job role.
-difficulty: Intermediate
-time: Daily
 archetype: Hybrid
 description: >-
   Hiring is the strongest signal of budget. This agent monitors the careers
@@ -516,6 +544,12 @@ sampleData:
     airbnb.com,"Sales Operations"
     notion.so,"Head of Marketing"
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Local File + Search
+outputs:
+  - Enriched Leads
+  - Enriched Document
 ---
 
 # Agent Configuration: The Hiring Intent Trigger
@@ -558,8 +592,6 @@ id: ceo-podcast-tour-tracker
 category: Lead Gen
 title: The Podcast Tour Stalker
 tagline: Find CEOs appearing on podcasts to pitch PR or related services.
-difficulty: Intermediate
-time: 30 mins
 archetype: Researcher
 description: >-
   Executives go on podcast tours to promote something (a book, a round of
@@ -573,6 +605,12 @@ sampleData:
     Brian Chesky,Airbnb
     Tobi Lutke,Shopify
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Podcast Tour Stalker
@@ -617,8 +655,6 @@ id: challenger-brand-identifier
 category: Lead Gen
 title: The Challenger Brand Hunter
 tagline: Find Series B companies competing with Fortune 500 giants.
-difficulty: Intermediate
-time: 20 mins
 archetype: Researcher
 description: >-
   Challenger brands are aggressive, well-funded, and willing to take risks on
@@ -632,6 +668,12 @@ sampleData:
     Zoom,Video Conferencing
     Slack,Communication
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Challenger Brand Hunter
@@ -678,8 +720,6 @@ id: cloud-bill-shock-prospector
 category: Lead Gen
 title: The Cloud Bill Shock Hunter
 tagline: Target companies likely overspending on AWS/Azure based on growth signals.
-difficulty: Advanced
-time: 25 mins
 archetype: Analyst
 description: >-
   Rapid hiring in engineering often correlates with exploding cloud costs. This
@@ -692,6 +732,10 @@ sampleData:
     acme-corp.com,AWS
     globex-tech.io,Azure
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+outputs:
+  - Enriched Leads
 ---
 
 # Agent Configuration: The Cloud Bill Shock Hunter
@@ -733,8 +777,6 @@ id: cold-dm-personalizer
 category: Lead Gen
 title: The Cold DM Personalizer
 tagline: Personalized outreach for 100 prospects at once.
-difficulty: Beginner
-time: Continuous
 archetype: Hybrid
 description: >-
   Slide into DMs without looking like a bot. This agent takes a list of
@@ -748,6 +790,12 @@ sampleData:
     Sahil Lavingia,https://x.com/shl,Creator Economy
     Justin Welsh,https://x.com/JustinWelsh,Solopreneurship
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Local File + Search
+outputs:
+  - Enriched Leads
+  - Enriched Document
 ---
 
 # Agent Configuration: The Cold DM Personalizer
@@ -794,8 +842,6 @@ id: commission-calculator
 category: Lead Gen
 title: The Sales Comp Designer
 tagline: Design a commission plan that drives growth.
-difficulty: Advanced
-time: Hybrid
 description: >-
   Bad incentives kill sales performance. This agent researches industry
   standards and designs tiered commission plans (Base + OTE + Accelerators) for
@@ -808,6 +854,10 @@ sampleData:
     SDR,5000,200000
     Customer Success,15000,500000
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+outputs:
+  - Enriched Leads
 ---
 
 # Agent Configuration: The Sales Comp Designer
@@ -856,8 +906,6 @@ id: conference-scraper
 category: Lead Gen
 title: The Conference Batch Scraper
 tagline: Turn multiple speaker lists into one lead list.
-difficulty: Advanced
-time: 10 mins
 description: >-
   Events are goldmines. This agent reads a list of event URLs (Speakers page,
   Agenda), extracts every name and company, and consolidates them into one
@@ -870,6 +918,10 @@ sampleData:
     Web Summit,https://websummit.com/speakers
     Collision,https://collisionconf.com/speakers
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+outputs:
+  - Enriched Leads
 ---
 
 # Agent Configuration: The Conference Batch Scraper
@@ -913,8 +965,6 @@ id: conference-sponsor-list-enricher
 category: Lead Gen
 title: The Sponsor List Enricher
 tagline: Enrich a list of sponsors from a conference URL.
-difficulty: Intermediate
-time: 15 mins
 archetype: Researcher
 description: >-
   Companies sponsoring conferences have marketing budget. This agent takes a
@@ -926,6 +976,12 @@ sampleData:
     https://saastrannual2024.com/sponsors
     https://dreamforce.com/sponsors
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Sponsor List Enricher
@@ -968,8 +1024,6 @@ id: consultant-partnership-finder
 category: Lead Gen
 title: The Channel Partner Scout
 tagline: Find implementation partners for specific software.
-difficulty: Intermediate
-time: 20 mins
 archetype: Researcher
 description: >-
   Agencies and consultants are excellent channel partners. This agent finds
@@ -982,6 +1036,12 @@ sampleData:
     Asana,Workflow Consultant
     Shopify,CRO Agency
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Channel Partner Scout
@@ -1025,8 +1085,6 @@ id: content-marketing-gap-hunter
 category: Lead Gen
 title: The Ghost Blog Hunter
 tagline: Find companies with blogs but no recent posts.
-difficulty: Intermediate
-time: 20 mins
 archetype: Researcher
 description: >-
   Companies with abandoned blogs have "content intent" but lack execution. This
@@ -1039,6 +1097,12 @@ sampleData:
     company-a.com
     startup-b.io
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Ghost Blog Hunter
@@ -1081,8 +1145,6 @@ id: cto-github-activity-tracker
 category: Lead Gen
 title: The Open Source Stalker
 tagline: Identify technical founders active in specific repos.
-difficulty: Advanced
-time: 20 mins
 archetype: Researcher
 description: >-
   Developers reveal their tech stack via GitHub stars and forks. This agent
@@ -1096,6 +1158,12 @@ sampleData:
     https://github.com/vercel/next.js,Star
     https://github.com/supabase/supabase,Fork
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Open Source Stalker
@@ -1138,8 +1206,6 @@ id: customer-support-expansion-lead
 category: Lead Gen
 title: The Support Scaler
 tagline: Identify companies hiring mass support agents.
-difficulty: Intermediate
-time: 20 mins
 archetype: Researcher
 description: >-
   Hiring 10+ support agents at once indicates a scaling crisis. This agent scans
@@ -1152,6 +1218,12 @@ sampleData:
     "Customer Support Representative",Remote
     "Customer Success Associate",United States
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Support Scaler
@@ -1192,8 +1264,6 @@ id: decision-maker-change-tracker
 category: Lead Gen
 title: The Champion Tracker
 tagline: Track when a Champion leaves a target account.
-difficulty: Intermediate
-time: Weekly
 archetype: Hybrid
 description: >-
   When a decision-maker changes jobs, it creates TWO opportunities: one at their
@@ -1207,6 +1277,12 @@ sampleData:
     Jane Doe,Acme Corp,linkedin.com/in/janedoe
     John Smith,Globex,linkedin.com/in/johnsmith
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Local File + Search
+outputs:
+  - Enriched Leads
+  - Enriched Document
 ---
 
 # Agent Configuration: The Champion Tracker
@@ -1250,8 +1326,6 @@ id: diversity-hiring-initiative-finder
 category: Lead Gen
 title: The DEI Initiative Spotter
 tagline: Target companies posting DEI-specific roles or reports.
-difficulty: Intermediate
-time: 20 mins
 archetype: Researcher
 description: >-
   Companies hiring "Heads of Diversity" or publishing DEI reports have budget
@@ -1265,6 +1339,12 @@ sampleData:
     "Chief Diversity Officer"
     "DEI Annual Report"
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The DEI Initiative Spotter
@@ -1304,8 +1384,6 @@ id: domain-age-startup-spotter
 category: Lead Gen
 title: The New Domain Watcher
 tagline: Find newly registered domains with stealth signals.
-difficulty: Advanced
-time: Daily
 archetype: Researcher
 description: >-
   New domains often mean new businesses. This agent filters newly registered
@@ -1318,6 +1396,12 @@ sampleData:
     Keywords
     ai, labs, tech, health, finance, ventures
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The New Domain Watcher
@@ -1359,8 +1443,6 @@ id: e-commerce-platform-migrator
 category: Lead Gen
 title: The Re-Platform Scout
 tagline: Identify online stores that recently switched platforms.
-difficulty: Advanced
-time: 20 mins
 archetype: Researcher
 description: >-
   Switching from WooCommerce to Shopify (or vice versa) is a massive project.
@@ -1373,6 +1455,12 @@ sampleData:
     gymshark.com
     colourpop.com
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Re-Platform Scout
@@ -1415,8 +1503,6 @@ id: early-adopter-product-hunt-scraper
 category: Lead Gen
 title: The Product Hunt Poacher
 tagline: Find leads who upvoted similar tools on Product Hunt.
-difficulty: Intermediate
-time: 15 mins
 archetype: Researcher
 description: >-
   People who upvote "CRM for Freelancers" on Product Hunt are the exact target
@@ -1429,6 +1515,12 @@ sampleData:
     https://www.producthunt.com/products/notion
     https://www.producthunt.com/products/linear
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Product Hunt Poacher
@@ -1472,8 +1564,6 @@ id: employee-growth-surge-alert
 category: Lead Gen
 title: The Hyper-Growth Radar
 tagline: Alert when headcount grows >20% in a quarter.
-difficulty: Intermediate
-time: Monthly
 archetype: Researcher
 description: >-
   Headcount growth is the #1 proxy for revenue growth and budget availability.
@@ -1486,6 +1576,12 @@ sampleData:
     Rippling,123456
     Deel,654321
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Hyper-Growth Radar
@@ -1528,8 +1624,6 @@ id: event-networker
 category: Lead Gen
 title: The Multi-Event Networking Planner
 tagline: High-value hit lists for your entire conference calendar.
-difficulty: Intermediate
-time: 1 hour
 description: >-
   Don't wander the conference hall aimlessly. This agent reads a list of events
   and their attendee/speaker files, cross-references them with your ICP, and
@@ -1541,6 +1635,10 @@ sampleData:
     SaaStr Annual,saastr_list.txt
     Web Summit,websummit_list.txt
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+outputs:
+  - Enriched Leads
 ---
 
 # Agent Configuration: The Multi-Event Networking Planner
@@ -1585,8 +1683,6 @@ id: ex-employee-boomerang-tracker
 category: Lead Gen
 title: The Alumni Boomerang
 tagline: Find former employees who joined target accounts.
-difficulty: Intermediate
-time: 20 mins
 archetype: Researcher
 description: >-
   Your company's former employees are your secret weapon. They know your
@@ -1599,6 +1695,12 @@ sampleData:
     My_Company_Name,Target_Account_List
     "Acme Corp","Globex, Stark Industries, Wayne Enterprises"
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Alumni Boomerang
@@ -1640,8 +1742,6 @@ id: family-office-direct-investment-finder
 category: Lead Gen
 title: The Family Office Hunter
 tagline: Target family offices making direct tech bets.
-difficulty: Advanced
-time: 30 mins
 archetype: Researcher
 description: >-
   Family Offices are opaque but hold massive capital. This agent searches for
@@ -1655,6 +1755,12 @@ sampleData:
     Iconiq Capital,iconiqcapital.com
     Bezos Expeditions,bezosexpeditions.com
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Family Office Hunter
@@ -1695,8 +1801,6 @@ id: franchise-owner-contact-builder
 category: Lead Gen
 title: The Franchise Empire Mapper
 tagline: Find owners of multi-location franchises.
-difficulty: Intermediate
-time: 25 mins
 archetype: Researcher
 description: >-
   Selling to individual Subway locations is hard. Selling to the owner who owns
@@ -1710,6 +1814,12 @@ sampleData:
     Orangetheory Fitness
     Massage Envy
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Franchise Empire Mapper
@@ -1753,8 +1863,6 @@ id: freelance-marketplace-arbitrage
 category: Lead Gen
 title: The Outsourcing Arbitrage
 tagline: Find companies hiring freelancers for roles you automate.
-difficulty: Intermediate
-time: 20 mins
 archetype: Researcher
 description: >-
   If a company is hiring a freelancer to "clean data" or "write SEO blogs," they
@@ -1767,6 +1875,12 @@ sampleData:
     "Data Entry",Automated Data Cleaning Tool
     "Transcribe Audio",AI Transcription API
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Outsourcing Arbitrage
@@ -1807,8 +1921,6 @@ id: gdpr-compliance-gap-hunter
 category: Lead Gen
 title: The Compliance Cop
 tagline: Find sites missing cookie banners or privacy policies.
-difficulty: Intermediate
-time: 20 mins
 archetype: Analyst
 description: >-
   Compliance fines are expensive. This agent visits a list of domains (from
@@ -1821,6 +1933,10 @@ sampleData:
     shop-paris.com,EU
     california-tech.io,US-CA
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+outputs:
+  - Enriched Leads
 ---
 
 # Agent Configuration: The Compliance Cop
@@ -1864,8 +1980,6 @@ id: ghost-asset-hunter
 category: Lead Gen
 title: The Ghost Asset Hunter
 tagline: 'Find the 10-K, Podcast, or Tweet that opens the door.'
-difficulty: Advanced
-time: One-off
 archetype: Researcher
 isPremium: true
 description: >-
@@ -1880,6 +1994,12 @@ sampleData:
     Snowflake,SNOW,Frank Slootman
     HubSpot,HUBS,Yamini Rangan
     Datadog,DDOG,Olivier Pomel
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Ghost Asset Hunter
@@ -1928,8 +2048,6 @@ id: ghost-job-hunter
 category: Lead Gen
 title: The Ghost Job Engine
 tagline: Uncover 50 hidden openings across 10 niches.
-difficulty: Advanced
-time: 20 mins
 description: >-
   High-growth startups often have budget to hire before they have the time to
   post a job. This agent reads a list of niches from a CSV, finds recently
@@ -1943,6 +2061,10 @@ sampleData:
     Cybersecurity,Founding Engineer
     Web3,Growth Marketer
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+outputs:
+  - Enriched Leads
 ---
 
 # Agent Configuration: The Ghost Job Engine
@@ -1987,8 +2109,6 @@ id: github-headhunter
 category: Lead Gen
 title: The Code Headhunter
 tagline: Recruit from a specific repo or a tech niche.
-difficulty: Advanced
-time: 25 mins
 description: >-
   Top engineers don't have resumes; they have PRs. This agent reads a list of
   repos from a CSV (if provided) or researches a tech niche (e.g., 'React
@@ -2000,6 +2120,10 @@ sampleData:
     vercel/next.js
     shadcn-ui/ui
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+outputs:
+  - Enriched Leads
 ---
 
 # Agent Configuration: The Code Headhunter
@@ -2046,8 +2170,6 @@ id: google-maps-local-dominator
 category: Lead Gen
 title: The Local Review Rescuer
 tagline: Find local businesses with <10 reviews to sell reputation management.
-difficulty: Beginner
-time: 15 mins
 archetype: Researcher
 description: >-
   Local businesses live and die by Google Reviews. This agent searches a
@@ -2061,6 +2183,12 @@ sampleData:
     Dentist,Chicago
     HVAC,Miami
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Local Review Rescuer
@@ -2106,8 +2234,6 @@ id: government-contract-award-scraper
 category: Lead Gen
 title: The GovCon Winner
 tagline: Find companies who just won federal contracts.
-difficulty: Advanced
-time: Weekly
 archetype: Researcher
 description: >-
   Winning a government contract is a massive liquidity event. This agent
@@ -2121,6 +2247,12 @@ sampleData:
     1000000,Department of Defense
     500000,NASA
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The GovCon Winner
@@ -2163,8 +2295,6 @@ id: headless-commerce-identifier
 category: Lead Gen
 title: The Headless Tech Hunter
 tagline: Target brands using specific headless CMS architectures.
-difficulty: Advanced
-time: 25 mins
 archetype: Analyst
 description: >-
   "Headless" commerce brands (using Contentful, Sanity, Strapi with Shopify) are
@@ -2177,6 +2307,10 @@ sampleData:
     allbirds.com
     koala.com
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+outputs:
+  - Enriched Leads
 ---
 
 # Agent Configuration: The Headless Tech Hunter
@@ -2221,8 +2355,6 @@ id: hiring-freeze-thaw-detector
 category: Lead Gen
 title: The Freeze Thaw Detector
 tagline: Identify companies that just resumed hiring after a freeze.
-difficulty: Intermediate
-time: Weekly
 archetype: Researcher
 description: >-
   Companies that stop hiring freeze budgets. Companies that *resume* hiring just
@@ -2235,6 +2367,12 @@ sampleData:
     TechCorp
     StartupInc
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Freeze Thaw Detector
@@ -2276,8 +2414,6 @@ id: inc-5000-new-entrant-scraper
 category: Lead Gen
 title: The Inc. 5000 Debutante
 tagline: Target companies making the Inc. 5000 list for the first time.
-difficulty: Intermediate
-time: Annual/Quarterly
 archetype: Researcher
 description: >-
   Making the Inc. 5000 list is a massive validation event. It means revenue is
@@ -2288,6 +2424,12 @@ sampleData:
   content: |
     https://www.inc.com/inc5000/2024
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Inc. 5000 Debutante
@@ -2329,8 +2471,6 @@ id: influencer-brand-safety-scanner
 category: Lead Gen
 title: Influencer Brand Safety Scanner
 tagline: Don't sponsor someone who will get you cancelled.
-difficulty: Intermediate
-time: Batch
 archtype: Researcher
 description: >-
   Scans the last 50 posts of a potential influencer. Flags keywords related to
@@ -2342,6 +2482,10 @@ sampleData:
     @user1,Twitter
     @user2,Instagram
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+outputs:
+  - Enriched Leads
 ---
 
 # Agent Configuration: Influencer Brand Safety Scanner
@@ -2380,8 +2524,6 @@ id: instagram-ads-library-spy
 category: Lead Gen
 title: The Ad-Pixel Arbitrage
 tagline: Find D2C brands running ads but missing pixel tracking.
-difficulty: Advanced
-time: 25 mins
 archetype: Analyst
 description: >-
   Brands spending money on Meta Ads *without* proper tracking (CAPI, TikTok
@@ -2394,6 +2536,10 @@ sampleData:
     brand-a.com
     brand-b.com
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+outputs:
+  - Enriched Leads
 ---
 
 # Agent Configuration: The Ad-Pixel Arbitrage
@@ -2438,8 +2584,6 @@ id: investor-update-email-writer
 category: Lead Gen
 title: Investor Update Writer
 tagline: Write the monthly email that keeps your VCs happy (and helpful).
-difficulty: Beginner
-time: 5 mins
 archetype: Processor
 description: >-
   Takes your raw monthly metrics (Revenue, Cash, Headcount) and bullet points
@@ -2455,6 +2599,12 @@ sampleData:
     Lows: Lost Beta Client, Server outage.
     Needs: Intro to Series A leads.
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - Enriched Leads
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Investor Update Writer
@@ -2507,8 +2657,6 @@ id: ipo-roadshow-monitor
 category: Lead Gen
 title: The Pre-IPO Hawk
 tagline: Target late-stage companies preparing for public listing.
-difficulty: Intermediate
-time: Monthly
 archetype: Researcher
 description: >-
   Companies preparing for an IPO (hiring "VP of Investor Relations", "SEC
@@ -2523,6 +2671,12 @@ sampleData:
     Stripe
     Canva
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Pre-IPO Hawk
@@ -2567,8 +2721,6 @@ id: job-description-optimizer
 category: Lead Gen
 title: The Sales Job Description Optimizer
 tagline: 'Attract ''A-Players'', repel tourists.'
-difficulty: Intermediate
-time: Batch
 description: >-
   Generic JDs attract generic candidates. This agent rewrites your job
   descriptions to focus on 'Outcomes' rather than 'Requirements', increasing the
@@ -2581,6 +2733,10 @@ sampleData:
     SDR,80k OTE,High-volume cold outreach
     Sales Manager,250k OTE,Scaled a team from 5 to 20
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+outputs:
+  - Enriched Leads
 ---
 
 # Agent Configuration: The Sales Job Description Optimizer
@@ -2627,8 +2783,6 @@ id: lead-magnet-generator
 category: Lead Gen
 title: The Lead Magnet Factory
 tagline: Build a library of assets from customer pains.
-difficulty: Beginner
-time: 20 mins
 description: >-
   Why build one lead magnet? This agent reads a list of customer 'Pains' and
   'Desires' from a CSV and generates a complete asset brief (Outline, Title,
@@ -2641,6 +2795,10 @@ sampleData:
     SaaS Founders,Churn,High LTV
     Solo Creators,Time Management,Consistent Content
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+outputs:
+  - Enriched Leads
 ---
 
 # Agent Configuration: The Lead Magnet Factory
@@ -2684,8 +2842,6 @@ id: linkedin-group-member-extractor
 category: Lead Gen
 title: The Niche Group Miner
 tagline: Extract and qualify members of niche professional groups.
-difficulty: Intermediate
-time: 20 mins
 archetype: Researcher
 description: >-
   LinkedIn Groups are often dead, but the *members* are still highly qualified.
@@ -2699,6 +2855,12 @@ sampleData:
     https://www.linkedin.com/groups/12345/,Salesforce Admins
     https://www.linkedin.com/groups/67890/,SaaS Founders
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Niche Group Miner
@@ -2742,8 +2904,6 @@ id: local-market-analyst
 category: Lead Gen
 title: The Local Market Factory
 tagline: Verified local leads for 50 cities in one run.
-difficulty: Intermediate
-time: 20 mins
 description: >-
   Why prospect one city? This agent reads a list of niches and locations from a
   CSV and builds a verified database of local businesses for every single one,
@@ -2756,6 +2916,10 @@ sampleData:
     HVAC,Austin
     Gyms,Miami
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+outputs:
+  - Enriched Leads
 ---
 
 # Agent Configuration: The Local Market Factory
@@ -2800,8 +2964,6 @@ id: lookalike-cloner
 category: Lead Gen
 title: The Golden Lead Cloner
 tagline: Clone your best customers or competitors.
-difficulty: Advanced
-time: Hybrid
 description: >-
   Why prospect randomly? This agent takes a list of 'Golden Customers' or
   researches your competitors to find high-precision lookalike leads that mirror
@@ -2814,6 +2976,10 @@ sampleData:
     PostHog,https://posthog.com,Product Analytics
     Beehiiv,https://beehiiv.com,Email Marketing
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+outputs:
+  - Enriched Leads
 ---
 
 # Agent Configuration: The Golden Lead Cloner
@@ -2862,8 +3028,6 @@ id: ma-integration-pain-prospector
 category: Lead Gen
 title: The M&A Chaos Hunter
 tagline: Target companies recently acquired or merged.
-difficulty: Advanced
-time: 30 mins
 archetype: Researcher
 description: >-
   Mergers create chaos. Systems need to be integrated, redundant staff are cut,
@@ -2877,6 +3041,12 @@ sampleData:
     Figma,Tableau,2024-01-01
     Slack,Salesforce,2021-01-01
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The M&A Chaos Hunter
@@ -2921,8 +3091,6 @@ id: marketing-agency-client-list-miner
 category: Lead Gen
 title: The Portfolio Reverse Engineer
 tagline: Reverse engineer agency portfolios for leads.
-difficulty: Intermediate
-time: 20 mins
 archetype: Researcher
 description: >-
   If a company hires a "Luxury Branding Agency," they have budget for luxury
@@ -2935,6 +3103,12 @@ sampleData:
     https://pentagram.com/work
     https://clay.global/work
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Portfolio Reverse Engineer
@@ -2977,8 +3151,6 @@ id: mobile-app-sdk-prospector
 category: Lead Gen
 title: The SDK Sniper
 tagline: Find mobile apps using a competitor's SDK.
-difficulty: Advanced
-time: 20 mins
 archetype: Analyst
 description: >-
   Mobile apps run on SDKs (Stripe for payments, Twilio for chat, Mapbox for
@@ -2991,6 +3163,10 @@ sampleData:
     com.stripe.android
     io.intercom.android
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+outputs:
+  - Enriched Leads
 ---
 
 # Agent Configuration: The SDK Sniper
@@ -3032,8 +3208,6 @@ id: newsletter-sponsorship-lead-gen
 category: Lead Gen
 title: The Newsletter Sponsor Finder
 tagline: Find newsletters accepting sponsors in your niche.
-difficulty: Intermediate
-time: 20 mins
 archetype: Researcher
 description: >-
   Niche newsletters are the most undervalued ad channel. This agent searches
@@ -3047,6 +3221,12 @@ sampleData:
     "React Developers"
     "Crypto News"
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Newsletter Sponsor Finder
@@ -3093,8 +3273,6 @@ id: non-profit-grant-recipient-tracker
 category: Lead Gen
 title: The Grant Money Hunter
 tagline: Target non-profits that recently received funding.
-difficulty: Intermediate
-time: Monthly
 archetype: Researcher
 description: >-
   Non-profits typically have tight budgets, EXCEPT when they win a major grant.
@@ -3108,6 +3286,12 @@ sampleData:
     Bill & Melinda Gates Foundation,gatesfoundation.org
     Ford Foundation,fordfoundation.org
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Grant Money Hunter
@@ -3151,8 +3335,6 @@ id: patent-filing-alert-system
 category: Lead Gen
 title: The R&D Spy
 tagline: Monitor new patent filings for R&D budget signals.
-difficulty: Advanced
-time: Monthly
 archetype: Researcher
 description: >-
   Companies filing patents are investing heavily in innovation. This agent
@@ -3166,6 +3348,12 @@ sampleData:
     "Solid State Battery",Automotive
     "Large Language Model",Software
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The R&D Spy
@@ -3209,8 +3397,6 @@ id: pe-firm-portfolio-consolidator
 category: Lead Gen
 title: The PE Rollup Hunter
 tagline: Map all portfolio companies of a specific PE firm.
-difficulty: Intermediate
-time: 20 mins
 archetype: Researcher
 description: >-
   Private Equity (PE) firms love to consolidate vendors across their portfolio.
@@ -3225,6 +3411,12 @@ sampleData:
     Thoma Bravo
     Insight Partners
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The PE Rollup Hunter
@@ -3268,8 +3460,6 @@ id: podcast-advertiser-database
 category: Lead Gen
 title: The Podcast Ad Spender
 tagline: Log companies spending money on podcast ads.
-difficulty: Intermediate
-time: Weekly
 archetype: Researcher
 description: >-
   Companies advertising on podcasts have high CAC tolerance and marketing
@@ -3283,6 +3473,12 @@ sampleData:
     My First Million,https://feeds.megaphone.fm/myfirstmillion
     Lenny's Podcast,https://api.substack.com/feed/podcast/10845.rss
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Podcast Ad Spender
@@ -3327,8 +3523,6 @@ id: press-release-partnership-scanner
 category: Lead Gen
 title: The Partnership Announcement Alert
 tagline: Find companies announcing new strategic partnerships.
-difficulty: Intermediate
-time: Daily
 archetype: Researcher
 description: >-
   When Company A partners with Company B, they are both in "Growth/BD Mode."
@@ -3343,6 +3537,12 @@ sampleData:
     "announces integration with"
     "joins partner program"
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Partnership Announcement Alert
@@ -3385,8 +3585,6 @@ id: quiz-funnel-builder
 category: Lead Gen
 title: The Quiz Funnel Builder
 tagline: Cheaper leads than a PDF.
-difficulty: Intermediate
-time: Batch
 description: >-
   Quizzes have 40% conversion rates. This agent designs 'Diagnosis Quizzes' for
   your entire product catalog, segmenting users based on their answers and
@@ -3399,6 +3597,10 @@ sampleData:
     VelvetBloom,Organic Skincare,Beauty Enthusiasts
     PixelPounce,Gaming Gear,Competitive Gamers
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+outputs:
+  - Enriched Leads
 ---
 
 # Agent Configuration: The Quiz Funnel Builder
@@ -3448,8 +3650,6 @@ id: reddit-scout
 category: Lead Gen
 title: The Reddit Signal Scout
 tagline: Monitor 50 subreddits for buying signals.
-difficulty: Intermediate
-time: Daily
 description: >-
   Reddit is full of people asking 'What's the best tool for X?'. This agent
   reads a list of keywords and subreddits from a CSV, identifies high-intent
@@ -3462,6 +3662,10 @@ sampleData:
     r/Marketing,Automate email,Process pain
     r/Entrepreneur,Alternative to HubSpot,Switching intent
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+outputs:
+  - Enriched Leads
 ---
 
 # Agent Configuration: The Reddit Signal Scout
@@ -3507,8 +3711,6 @@ id: remote-work-transition-hunter
 category: Lead Gen
 title: The Remote First Hunter
 tagline: Find companies switching to "Remote First" policies.
-difficulty: Intermediate
-time: 20 mins
 archetype: Researcher
 description: >-
   Companies switching to "Remote First" need a whole new stack: Async tools,
@@ -3523,6 +3725,12 @@ sampleData:
     New York
     Austin
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Remote First Hunter
@@ -3565,8 +3773,6 @@ id: rfp-responder
 category: Lead Gen
 title: The RFP Responder
 tagline: Draft complex proposals instantly.
-difficulty: Advanced
-time: Batch
 description: >-
   Responding to RFPs is a time-sink. This agent processes a list of RFP
   requirements and auto-drafts structured responses based on your standard
@@ -3585,6 +3791,10 @@ sampleData:
     GovNet Audit,Must have on-premise deployment option and 24/7 support,Public
     Sector
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+outputs:
+  - Enriched Leads
 ---
 
 # Agent Configuration: The RFP Responder
@@ -3633,8 +3843,6 @@ id: saas-pricing-page-change-alert
 category: Lead Gen
 title: The Price Hike Monitor
 tagline: Trigger when a prospect raises prices.
-difficulty: Advanced
-time: Weekly
 archetype: Analyst
 description: >-
   When a SaaS company raises prices, their customers get annoyed and look for
@@ -3648,6 +3856,10 @@ sampleData:
     Salesforce,https://www.salesforce.com/editions-pricing/
     HubSpot,https://www.hubspot.com/pricing/marketing
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+outputs:
+  - Enriched Leads
 ---
 
 # Agent Configuration: The Price Hike Monitor
@@ -3691,8 +3903,6 @@ id: sales-interview-questions
 category: Lead Gen
 title: The Sales Interview Architect
 tagline: Custom assessments for any sales role.
-difficulty: Intermediate
-time: Batch
 description: >-
   Resumes lie; behavioral interviews don't. This agent generates custom scripts
   of behavioral questions and weighted scorecards for all the open roles in your
@@ -3705,6 +3915,10 @@ sampleData:
     Inbound SDR,500,High-volume qualification and speed-to-lead
     Channel Manager,15000,Managing indirect revenue through partners
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+outputs:
+  - Enriched Leads
 ---
 
 # Agent Configuration: The Sales Interview Architect
@@ -3751,8 +3965,6 @@ id: sales-team-expansion-signal
 category: Lead Gen
 title: The VP Sales Headhunter
 tagline: Identify companies hiring their first VP of Sales.
-difficulty: Intermediate
-time: 20 mins
 archetype: Researcher
 description: >-
   Hiring a "First VP of Sales" is the most critical milestone for B2B startups.
@@ -3766,6 +3978,12 @@ sampleData:
     "First Sales Hire"
     "Head of Sales"
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The VP Sales Headhunter
@@ -3808,8 +4026,6 @@ id: sdr-onboarding-schedule
 category: Lead Gen
 title: The SDR Ramp Architect
 tagline: Build custom 30-day onboarding plans.
-difficulty: Intermediate
-time: Batch
 description: >-
   New SDRs fail without structure. This agent researches your tech stack and
   product complexity to build 4-week ramp schedules that get your new hires
@@ -3822,6 +4038,10 @@ sampleData:
     Bob,Outbound SDR,Salesforce & Outreach,25 meetings/mo
     Charlie,Enterprise SDR,SalesLoft & Lusha,10 meetings/mo
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+outputs:
+  - Enriched Leads
 ---
 
 # Agent Configuration: The SDR Ramp Architect
@@ -3868,8 +4088,6 @@ id: seed-round-stealth-mode-breaker
 category: Lead Gen
 title: The Stealth Mode Breaker
 tagline: Find "Stealth" startups hiring their first engineers.
-difficulty: Advanced
-time: 20 mins
 archetype: Researcher
 description: >-
   Stealth startups don't have websites, but they DO have job postings. This
@@ -3884,6 +4102,12 @@ sampleData:
     "Unannounced Startup"
     "Ex-Stripe Founder"
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The Stealth Mode Breaker
@@ -3926,8 +4150,6 @@ id: sleeping-giant-hunter
 category: Lead Gen
 title: The Sleeping Giant Hunter
 tagline: Find 50 enterprise companies using legacy tech.
-difficulty: Advanced
-time: 25 mins
 description: >-
   Legacy tech is a buying signal. This agent reads a list of 'Old Tech' markers
   from a CSV, hunts for enterprise companies still running that software, and
@@ -3939,6 +4161,10 @@ sampleData:
     "powered by older-crm",Manufacturing
     "jQuery v1",Finance
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+outputs:
+  - Enriched Leads
 ---
 
 # Agent Configuration: The Sleeping Giant Hunter
@@ -3982,8 +4208,6 @@ id: social-intent-scout
 category: Lead Gen
 title: The Social Signal Engine
 tagline: Find 100 leads asking for help across Reddit & LinkedIn.
-difficulty: Advanced
-time: 20 mins
 description: >-
   Leads with intent convert 10x better. This agent reads a list of 'Pain Point
   Keywords' from a CSV, scans social communities for people explicitly asking
@@ -3995,6 +4219,10 @@ sampleData:
     "need a crm",Reddit
     "email deliverability issues",LinkedIn
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+outputs:
+  - Enriched Leads
 ---
 
 # Agent Configuration: The Social Signal Engine
@@ -4038,8 +4266,6 @@ id: social-media-crisis-ambulance
 category: Lead Gen
 title: The PR Crisis Ambulance
 tagline: Identify brands facing a PR crisis for reputation management.
-difficulty: Intermediate
-time: Daily
 archetype: Researcher
 description: >-
   When a brand gets "cancelled" or trends negatively on Twitter, they
@@ -4053,6 +4279,12 @@ sampleData:
     @fastfood
     @fashionbrand
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The PR Crisis Ambulance
@@ -4094,8 +4326,6 @@ id: supply-chain-risk-prospector
 category: Lead Gen
 title: The Supply Chain Risk Mapper
 tagline: Find manufacturing companies with single-source risks.
-difficulty: Advanced
-time: 30 mins
 archetype: Analyst
 description: >-
   Manufacturers relying on a single supplier in a risky region are vulnerable.
@@ -4109,6 +4339,10 @@ sampleData:
     854231,Processors/Chips
     850760,Lithium Batteries
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+outputs:
+  - Enriched Leads
 ---
 
 # Agent Configuration: The Supply Chain Risk Mapper
@@ -4149,8 +4383,6 @@ id: tiktok-shop-seller-scraper
 category: Lead Gen
 title: The TikTok Shop Scout
 tagline: Find top sellers on TikTok Shop without a standalone site.
-difficulty: Intermediate
-time: 20 mins
 archetype: Researcher
 description: >-
   TikTok Shop is exploding. Many top sellers are just influencers with a product
@@ -4164,6 +4396,12 @@ sampleData:
     Beauty & Personal Care
     Womenswear
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: The TikTok Shop Scout
@@ -4207,8 +4445,6 @@ id: youtube-comment-lead-miner
 category: Lead Gen
 title: YouTube Comment Lead Miner
 tagline: Turn video comments into qualified leads.
-difficulty: Intermediate
-time: Batch
 archetype: Researcher
 description: >-
   Scrapes comments on your viral video. Filters for intent keywords like
@@ -4219,6 +4455,12 @@ sampleData:
     Video_ID,Comment_Text
     Vid1,"How much is this?"
 isPremium: true
+inputs:
+  - Target Accounts (CSV)
+  - Web Search Target
+outputs:
+  - Enriched Leads
+  - Curated Intel
 ---
 
 # Agent Configuration: YouTube Comment Lead Miner

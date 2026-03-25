@@ -9,8 +9,6 @@ id: abm-intent-aggregator
 category: Marketing Ops
 title: Intent Signal Aggregator
 tagline: 'Combine G2, 6sense, and Website visits.'
-difficulty: Advanced
-time: Daily
 archtype: Processor
 description: >-
   Aggregates multiple intent data sources into a single account-level 'Heat
@@ -25,6 +23,10 @@ sampleData:
     [6sense]
     beta.io, high intent
 isPremium: false
+inputs:
+  - Campaign Data
+outputs:
+  - Optimization Plan
 ---
 
 # Agent Configuration: The ABM Analyst
@@ -71,8 +73,6 @@ id: abm-personal-gift-recommender
 category: Marketing Ops
 title: ABM Personal Gift Recommender
 tagline: 'Send gifts they actually keep, not just swag.'
-difficulty: Researcher
-time: Batch
 archetype: Hybrid
 description: >-
   Researches a prospect's Twitter/LinkedIn interests (e.g., "Coffee", "Golf",
@@ -83,6 +83,12 @@ sampleData:
     Prospect_Name,Social_Handle
     Jane Doe,@janedoe
 isPremium: false
+inputs:
+  - Campaign Data
+  - Local File + Search
+outputs:
+  - Optimization Plan
+  - Enriched Document
 ---
 
 # Agent Configuration: ABM Personal Gift Recommender
@@ -121,8 +127,6 @@ id: affiliate-application-auto-screener
 category: Marketing Ops
 title: Affiliate Application Auto-Screener
 tagline: Filter out spammy affiliate applications instantly.
-difficulty: Intermediate
-time: Batch
 archetype: Researcher
 description: >-
   Checks applicant URL. Flags sites that are "Coupon Farms", "Adult Content", or
@@ -133,6 +137,12 @@ sampleData:
     Applicant_Name,Website
     CouponKing,http://coupon-spam.com
 isPremium: false
+inputs:
+  - Campaign Data
+  - Web Search Target
+outputs:
+  - Optimization Plan
+  - Curated Intel
 ---
 
 # Agent Configuration: Affiliate Application Auto-Screener
@@ -171,8 +181,6 @@ id: api-key-rotator-checklist
 category: Marketing Ops
 title: The API Key Rotator
 tagline: Don't get hacked.
-difficulty: Intermediate
-time: Batch
 archetype: Processor
 description: >-
   Stale keys are a security risk. This agent generates safety-first checklists
@@ -186,6 +194,12 @@ sampleData:
     AWS,IAM Access Key,Staging
     SendGrid,API Key,Production
 isPremium: false
+inputs:
+  - Campaign Data
+  - Local File (CSV/MD)
+outputs:
+  - Optimization Plan
+  - Cleaned Data
 ---
 
 # Agent Configuration: The API Key Rotator
@@ -233,8 +247,6 @@ id: blog-post-roi-calculator
 category: Marketing Ops
 title: Content Revenue Attributor
 tagline: Stitch CRM deals to Analytics data to find your 'Money Pages'.
-difficulty: Intermediate
-time: Weekly
 archetype: Processor
 description: >-
   Takes two separate exports (Closed Deals from CRM and Traffic Logs from
@@ -258,6 +270,12 @@ sampleData:
     david@startup.io,/case-studies/finance-corp,2025-01-20
     eve@enterprise.net,/home,2025-01-05
 isPremium: false
+inputs:
+  - Campaign Data
+  - Local File (CSV/MD)
+outputs:
+  - Optimization Plan
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Attribution Analyst
@@ -313,8 +331,6 @@ id: booth-staff-auto-scheduler
 category: Marketing Ops
 title: Booth Staff Auto-Scheduler
 tagline: Fairly rotate booth duty during conferences.
-difficulty: Beginner
-time: Batch
 archetype: Processor
 description: >-
   Takes team availability and conference hours. Generates a schedule ensuring
@@ -325,6 +341,12 @@ sampleData:
     Staff_Name,Role,Availability
     John,Sales,All Day
 isPremium: false
+inputs:
+  - Campaign Data
+  - Local File (CSV/MD)
+outputs:
+  - Optimization Plan
+  - Cleaned Data
 ---
 
 # Agent Configuration: Booth Staff Auto-Scheduler
@@ -363,8 +385,6 @@ id: campaign-cost-per-opportunity
 category: Marketing Ops
 title: Campaign Efficiency Scorer
 tagline: Calculate Cost-per-Opportunity (CPO).
-difficulty: Intermediate
-time: Weekly
 archetype: Processor
 description: >-
   Links campaign spend to resulting opportunities to find the most efficient
@@ -376,6 +396,12 @@ sampleData:
     LinkedIn_Awareness,5000,2
     Google_Search,2000,10
 isPremium: false
+inputs:
+  - Campaign Data
+  - Local File (CSV/MD)
+outputs:
+  - Optimization Plan
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Demand Gen Agent
@@ -416,8 +442,6 @@ id: campaign-naming-convention-enforcer
 category: Marketing Ops
 title: Campaign Taxonomist
 tagline: Stop messy data from breaking your reports.
-difficulty: Beginner
-time: Weekly
 archtype: Processor
 description: >-
   Audits campaign names to ensure they follow the pattern:
@@ -430,6 +454,10 @@ sampleData:
     Webinar_Oct_2023
     EU_Social_2023_Launch
 isPremium: false
+inputs:
+  - Campaign Data
+outputs:
+  - Optimization Plan
 ---
 
 # Agent Configuration: The Marketing Ops Manager
@@ -477,8 +505,6 @@ id: content-download-tracker
 category: Marketing Ops
 title: Lead Magnet Auditor
 tagline: Which PDF is actually generating leads?
-difficulty: Beginner
-time: Monthly
 archtype: Processor
 description: >-
   Aggregates download counts for all your gated assets to rank them by
@@ -491,6 +517,10 @@ sampleData:
     Ebook B,2023-10-01,user2@test.com
     Ebook A,2023-10-02,user3@test.com
 isPremium: true
+inputs:
+  - Campaign Data
+outputs:
+  - Optimization Plan
 ---
 
 # Agent Configuration: The Content Analyst
@@ -538,8 +568,6 @@ id: content-influence-scorer
 category: Marketing Ops
 title: Content Asset Influencer
 tagline: Rank assets by how much pipeline they touched.
-difficulty: Advanced
-time: Monthly
 archetype: Processor
 description: >-
   Analyzes content download history against closed deals to find assets with
@@ -552,6 +580,12 @@ sampleData:
     Deal-1,10000,Guide_B
     Deal-2,5000,Whitepaper_A
 isPremium: true
+inputs:
+  - Campaign Data
+  - Local File (CSV/MD)
+outputs:
+  - Optimization Plan
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Content Analyst Agent
@@ -592,8 +626,6 @@ id: content-journey-mapper
 category: Marketing Ops
 title: Customer Content Journey
 tagline: Trace the blog posts read by your best customers.
-difficulty: Advanced
-time: Monthly
 archtype: Processor
 description: >-
   Analyzes the page path of converted leads to find the common sequence of
@@ -606,6 +638,10 @@ sampleData:
     John,/blog/pricing,2023-10-02
     John,CONVERTED,2023-10-03
 isPremium: true
+inputs:
+  - Campaign Data
+outputs:
+  - Optimization Plan
 ---
 
 # Agent Configuration: The Content Strategist
@@ -652,8 +688,6 @@ id: content-upgrade-conversion-rate
 category: Marketing Ops
 title: Lead Magnet Converter
 tagline: How many readers download the PDF?
-difficulty: Beginner
-time: Monthly
 archetype: Processor
 description: >-
   Measures download rates of in-post lead magnets (Content Upgrades) relative to
@@ -665,6 +699,12 @@ sampleData:
     /post-1,1000,50
     /post-2,2000,10
 isPremium: true
+inputs:
+  - Campaign Data
+  - Local File (CSV/MD)
+outputs:
+  - Optimization Plan
+  - Cleaned Data
 ---
 
 # Agent Configuration: The CRO Lead
@@ -705,8 +745,6 @@ id: csv-crm-normalizer
 category: Marketing Ops
 title: The Bulk CRM Data Normalizer
 tagline: 'Standardize 10,000 lead records for import.'
-difficulty: Intermediate
-time: One-off
 description: >-
   Salespeople upload garbage data. This agent takes a massive CSV with
   inconsistent phone numbers (+1..., 555-..., (555)) and names (JOHN DOE, jane
@@ -719,6 +757,10 @@ sampleData:
     JOHN DOE,555-0199, JOHN@acme.com
     jane smith,(555) 012-3456,jane@globex.com
 isPremium: true
+inputs:
+  - Campaign Data
+outputs:
+  - Optimization Plan
 ---
 
 # Agent Configuration: The Bulk CRM Data Normalizer
@@ -764,8 +806,6 @@ id: dark-funnel-illuminator
 category: Marketing Ops
 title: Dark Funnel Correlation Bot
 tagline: Correlate direct traffic spikes with outbound activity.
-difficulty: Advanced
-time: Weekly
 archetype: Processor
 description: >-
   Matches spikes in 'Direct' website traffic with regional outbound email blasts
@@ -778,6 +818,12 @@ sampleData:
     2023-10-02,US-East,250,0
     2023-10-03,US-West,50,1000
 isPremium: true
+inputs:
+  - Campaign Data
+  - Local File (CSV/MD)
+outputs:
+  - Optimization Plan
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Marketing Analyst
@@ -818,8 +864,6 @@ id: email-bounce-rate-monitor
 category: Marketing Ops
 title: Domain Health Watchdog
 tagline: Monitor bounce rates to prevent blacklisting.
-difficulty: Beginner
-time: Weekly
 archtype: Processor
 description: >-
   Calculates the hard bounce rate per campaign. If it exceeds 2%, it recommends
@@ -832,6 +876,10 @@ sampleData:
     Cold Outreach A,500,40
     Newsletter,5000,10
 isPremium: true
+inputs:
+  - Campaign Data
+outputs:
+  - Optimization Plan
 ---
 
 # Agent Configuration: The Deliverability Specialist
@@ -879,8 +927,6 @@ id: email-deliverability-heatmap
 category: Marketing Ops
 title: ISP Deliverability Heatmap
 tagline: Are we blocked by Outlook?
-difficulty: Intermediate
-time: Weekly
 archetype: Processor
 description: >-
   Tracks open rates segmented by ISP (Gmail vs Outlook vs Corporate) to find
@@ -892,6 +938,12 @@ sampleData:
     gmail.com,1000,200
     corporate,500,10
 isPremium: true
+inputs:
+  - Campaign Data
+  - Local File (CSV/MD)
+outputs:
+  - Optimization Plan
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Email Ops
@@ -932,8 +984,6 @@ id: email-dns-auditor
 category: Marketing Ops
 title: The Bulk Deliverability Auditor
 tagline: Audit the sender reputation of 100 domains.
-difficulty: Advanced
-time: 10 mins
 description: >-
   Content doesn't matter if your email bounces. This agent reads a list of
   domains from a CSV and uses the `dig` command to verify that SPF, DKIM, and
@@ -946,6 +996,10 @@ sampleData:
     stripe.com
     my-broken-startup.com
 isPremium: true
+inputs:
+  - Campaign Data
+outputs:
+  - Optimization Plan
 ---
 
 # Agent Configuration: The Bulk Deliverability Auditor
@@ -992,8 +1046,6 @@ id: email-fatigue-monitor
 category: Marketing Ops
 title: Email Fatigue Monitor
 tagline: Prevent unsubscribes by monitoring send frequency.
-difficulty: Intermediate
-time: Weekly
 archtype: Processor
 description: >-
   Calculates how many emails each contact received in the last 30 days to flag
@@ -1006,6 +1058,10 @@ sampleData:
     john@acme.com,2023-10-02,Promo A
     john@acme.com,2023-10-03,Promo B
 isPremium: true
+inputs:
+  - Campaign Data
+outputs:
+  - Optimization Plan
 ---
 
 # Agent Configuration: The Deliverability Manager
@@ -1052,8 +1108,6 @@ id: email-hard-bounce-cleaner
 category: Marketing Ops
 title: The Hard Bounce Cleaner
 tagline: Protect your sender reputation.
-difficulty: Beginner
-time: Post-Campaign
 archetype: Processor
 description: >-
   Sending to dead emails kills your deliverability. This agent processes a
@@ -1066,6 +1120,12 @@ sampleData:
     a@test.com,Hard,550
     b@test.com,Soft,421
 isPremium: true
+inputs:
+  - Campaign Data
+  - Local File (CSV/MD)
+outputs:
+  - Optimization Plan
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Deliverability Expert
@@ -1109,8 +1169,6 @@ id: event-budget-pacer
 category: Marketing Ops
 title: Event Spend Pacer
 tagline: Track trade show spend against approved budget.
-difficulty: Beginner
-time: Batch
 archtype: Processor
 description: Reconciles event expenses against a master budget to ensure no overspending.
 sampleData:
@@ -1121,6 +1179,10 @@ sampleData:
     Travel,5000,4500
     Swag,2000,2000
 isPremium: true
+inputs:
+  - Campaign Data
+outputs:
+  - Optimization Plan
 ---
 
 # Agent Configuration: The Event Manager
@@ -1167,8 +1229,6 @@ id: event-lead-uploader
 category: Marketing Ops
 title: Conference Scan Cleaner
 tagline: Format messy badge scans for CRM import.
-difficulty: Beginner
-time: Ad-hoc
 archtype: Processor
 description: >-
   Cleans up a CSV from a badge scanner (splitting names, formatting phones) for
@@ -1180,6 +1240,10 @@ sampleData:
     Doe, John,123.456.7890,j@d.com
     Smith; Jane,(555) 123-4567,j@s.com
 isPremium: true
+inputs:
+  - Campaign Data
+outputs:
+  - Optimization Plan
 ---
 
 # Agent Configuration: The Event Ops Specialist
@@ -1226,8 +1290,6 @@ id: first-vs-last-touch-comparison
 category: Marketing Ops
 title: Attribution Model Comparer
 tagline: Compare channel performance across different models.
-difficulty: Advanced
-time: Monthly
 archetype: Processor
 description: >-
   Calculates ROI for marketing channels using both First-Touch and Last-Touch
@@ -1239,6 +1301,12 @@ sampleData:
     1,1000,Search,Webinar
     2,500,Social,Search
 isPremium: true
+inputs:
+  - Campaign Data
+  - Local File (CSV/MD)
+outputs:
+  - Optimization Plan
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Marketing ROI Agent
@@ -1279,8 +1347,6 @@ id: form-abandonment-rate-tracker
 category: Marketing Ops
 title: Form Friction Hunter
 tagline: Is your form too long?
-difficulty: Beginner
-time: Monthly
 archetype: Processor
 description: >-
   Calculates drop-off rates for different form lengths to find the optimal field
@@ -1292,6 +1358,12 @@ sampleData:
     Long_Demo,10,1000,10
     Short_Demo,3,1000,50
 isPremium: true
+inputs:
+  - Campaign Data
+  - Local File (CSV/MD)
+outputs:
+  - Optimization Plan
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Form Conversion Psychologist
@@ -1325,6 +1397,42 @@ Generate `form_fix_list.md`:
 
 ---
 
+## GA4 Traffic Reporter
+URL: https://realaiexamples.com/skills/google-analytics-reporter
+Description: Automated traffic analytics and insight generation via the GA4 API.
+
+---
+title: GA4 Traffic Reporter
+id: google-analytics-reporter
+category: Marketing Ops
+tagline: Automated traffic analytics and insight generation via the GA4 API.
+archetype: Researcher
+description: >-
+  The automation we use to track performance on this site. It authenticates with
+  Google Cloud via a Service Account, pulls top pages, user trends, and
+  conversion data, and generates a plain-text briefing for the team.
+inputs:
+  - Google Service Account JSON
+  - GA4 Property ID
+outputs:
+  - Plain-text traffic briefing
+  - Growth velocity metrics
+isPremium: true
+---
+
+# The Analytics Logic
+This skill bridges the gap between raw Google Analytics data and actionable growth insights.
+
+### Workflow:
+1. Connect to GA4 Property ID `506136292`.
+2. Fetch real-time traffic metrics for the last 30 days.
+3. Identify top-performing blueprints and blog posts.
+4. Calculate growth velocity.
+5. Deliver a structured summary of 'What to Build Next'.
+
+
+---
+
 ## The GTM Fleet Debugger
 URL: https://realaiexamples.com/skills/google-tag-manager-debugger
 Description: Fix the dataLayer across all your properties.
@@ -1334,8 +1442,6 @@ id: google-tag-manager-debugger
 category: Marketing Ops
 title: The GTM Fleet Debugger
 tagline: Fix the dataLayer across all your properties.
-difficulty: Advanced
-time: 10 mins
 description: >-
   Tracking is broken? This agent reads a list of GTM container IDs and dataLayer
   snippets from a CSV and identifies why tags aren't firing across your entire
@@ -1347,6 +1453,10 @@ sampleData:
     Marketing_Site,GTM-1234,"dataLayer.push({'event': 'purchase', 'val': 100})"
     Blog,GTM-5678,"dataLayer.push({'event': 'NewsletterSignup'})"
 isPremium: true
+inputs:
+  - Campaign Data
+outputs:
+  - Optimization Plan
 ---
 
 # Agent Configuration: The GTM Fleet Debugger
@@ -1394,8 +1504,6 @@ id: influencer-payout-calculator
 category: Marketing Ops
 title: Influencer Payout Calc
 tagline: Automate monthly affiliate commissions.
-difficulty: Intermediate
-time: Monthly
 archtype: Processor
 description: >-
   Calculates total commissions owed to influencers based on order logs and
@@ -1408,6 +1516,10 @@ sampleData:
     ORD-2,200,INFLUENCER_B
     ORD-3,50,INFLUENCER_A
 isPremium: true
+inputs:
+  - Campaign Data
+outputs:
+  - Optimization Plan
 ---
 
 # Agent Configuration: The Affiliate Manager
@@ -1454,8 +1566,6 @@ id: invalid-email-syntax-purge
 category: Marketing Ops
 title: Email Syntax Auditor
 tagline: Identify and remove obvious email typos.
-difficulty: Beginner
-time: Weekly
 archetype: Processor
 description: >-
   Finds obvious email typos (e.g. `gamil.com`, `yhaoo.com`) to improve email
@@ -1468,6 +1578,12 @@ sampleData:
     bob@yahoo..com
     sarah@test.com
 isPremium: true
+inputs:
+  - Campaign Data
+  - Local File (CSV/MD)
+outputs:
+  - Optimization Plan
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Email Hygiene Agent
@@ -1508,8 +1624,6 @@ id: job-title-normalizer
 category: Marketing Ops
 title: Job Title Normalizer
 tagline: Standardize 'VP of Sales' vs 'Vice President Sales'.
-difficulty: Beginner
-time: Weekly
 archetype: Processor
 description: >-
   Maps messy job titles to standard seniority levels (Executive, Director,
@@ -1522,6 +1636,12 @@ sampleData:
     Jane,Director of Growth
     Bob,Sales Associate
 isPremium: true
+inputs:
+  - Campaign Data
+  - Local File (CSV/MD)
+outputs:
+  - Optimization Plan
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Data Hygiene Agent
@@ -1562,8 +1682,6 @@ id: landing-page-ab-test-significance
 category: Marketing Ops
 title: A/B Test Referee
 tagline: Is Variant B actually better?
-difficulty: Intermediate
-time: Weekly
 archtype: Processor
 description: >-
   Calculates statistical significance for conversion rate differences between
@@ -1575,6 +1693,10 @@ sampleData:
     A,500,20
     B,510,35
 isPremium: true
+inputs:
+  - Campaign Data
+outputs:
+  - Optimization Plan
 ---
 
 # Agent Configuration: The CRO Specialist
@@ -1622,8 +1744,6 @@ id: landing-page-conversion-drift
 category: Marketing Ops
 title: LP Conversion Drift Monitor
 tagline: Catch sudden drops in landing page conversion rates.
-difficulty: Intermediate
-time: Daily
 archetype: Processor
 description: >-
   Compares daily landing page conversion rates against a 7-day rolling average
@@ -1636,6 +1756,12 @@ sampleData:
     /promo,2023-10-02,100,6
     /promo,2023-10-03,100,1
 isPremium: true
+inputs:
+  - Campaign Data
+  - Local File (CSV/MD)
+outputs:
+  - Optimization Plan
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Web Analytics Agent
@@ -1677,8 +1803,6 @@ id: lead-recycling-automation
 category: Marketing Ops
 title: The Recycler
 tagline: Move 'Closed-Lost' leads back to nurture.
-difficulty: Intermediate
-time: Monthly
 archtype: Processor
 description: >-
   Identifies leads marked 'Closed-Lost' more than 90 days ago to re-enroll them
@@ -1690,6 +1814,10 @@ sampleData:
     john@acme.com,Closed-Lost,2023-01-01
     jane@beta.com,Closed-Lost,2023-10-01
 isPremium: true
+inputs:
+  - Campaign Data
+outputs:
+  - Optimization Plan
 ---
 
 # Agent Configuration: The Lifecycle Marketer
@@ -1736,8 +1864,6 @@ id: lead-routing-latency-histogram
 category: Marketing Ops
 title: Routing Latency Auditor
 tagline: Measure delays in lead assignment.
-difficulty: Intermediate
-time: Weekly
 archetype: Processor
 description: >-
   Analyzes the time gap between 'Lead Created' and 'Owner Assigned' to find
@@ -1749,6 +1875,12 @@ sampleData:
     L-1,10:00,10:01
     L-2,10:00,10:45
 isPremium: true
+inputs:
+  - Campaign Data
+  - Local File (CSV/MD)
+outputs:
+  - Optimization Plan
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Operations Auditor Agent
@@ -1789,8 +1921,6 @@ id: lead-score-threshold-simulator
 category: Marketing Ops
 title: Lead Threshold Simulator
 tagline: See how threshold changes impact MQL volume.
-difficulty: Advanced
-time: Batch
 archtype: Processor
 description: >-
   Backtests lead data against different scoring thresholds to predict how many
@@ -1804,6 +1934,10 @@ sampleData:
     3,65
     4,75
 isPremium: true
+inputs:
+  - Campaign Data
+outputs:
+  - Optimization Plan
 ---
 
 # Agent Configuration: The Growth Analyst
@@ -1850,8 +1984,6 @@ id: lead-source-normalizer
 category: Marketing Ops
 title: The Lead Source Normalizer
 tagline: Fix your attribution buckets.
-difficulty: Beginner
-time: Weekly
 archetype: Processor
 description: >-
   Reps type whatever they want into 'Lead Source.' This agent takes a messy list
@@ -1866,6 +1998,12 @@ sampleData:
     3,Referral - Bob
     4,Conf: SaaStr
 isPremium: true
+inputs:
+  - Campaign Data
+  - Local File (CSV/MD)
+outputs:
+  - Optimization Plan
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Taxonomist
@@ -1911,8 +2049,6 @@ id: lead-source-truth-auditor
 category: Marketing Ops
 title: Attribution Truth Checker
 tagline: 'UTM vs Self-Reported: Who is lying?'
-difficulty: Intermediate
-time: Monthly
 archetype: Processor
 description: >-
   Compares 'Self-Reported Source' (How did you hear about us?) vs 'UTM Source'
@@ -1924,6 +2060,12 @@ sampleData:
     1,Google,Podcast
     2,LinkedIn,LinkedIn
 isPremium: true
+inputs:
+  - Campaign Data
+  - Local File (CSV/MD)
+outputs:
+  - Optimization Plan
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Attribution Analyst
@@ -1964,8 +2106,6 @@ id: linear-attribution-modeler
 category: Marketing Ops
 title: Linear Attribution Modeler
 tagline: Split revenue credit across all marketing touches.
-difficulty: Advanced
-time: Monthly
 archtype: Processor
 description: >-
   Analyzes touchpoint logs to assign equal revenue credit to every interaction
@@ -1977,6 +2117,10 @@ sampleData:
     Deal-1,1000,Search;Email;Webinar
     Deal-2,500,Email;Social
 isPremium: true
+inputs:
+  - Campaign Data
+outputs:
+  - Optimization Plan
 ---
 
 # Agent Configuration: The Attribution Specialist
@@ -2024,8 +2168,6 @@ id: lp-dead-link-auditor
 category: Marketing Ops
 title: LP Link Auditor
 tagline: Ensure your paid traffic doesn't hit 404s.
-difficulty: Intermediate
-time: Weekly
 archtype: Processor
 description: >-
   Checks all button destination URLs on your landing pages to ensure they are
@@ -2037,6 +2179,10 @@ sampleData:
     /promo-1,Sign Up,https://app.com/reg
     /promo-1,Help,https://docs.com/404
 isPremium: true
+inputs:
+  - Campaign Data
+outputs:
+  - Optimization Plan
 ---
 
 # Agent Configuration: The Web Ops
@@ -2083,8 +2229,6 @@ id: marketing-channel-velocity-tracker
 category: Marketing Ops
 title: Lead Source Velocity
 tagline: Measure avg days to close by channel.
-difficulty: Intermediate
-time: Monthly
 archetype: Processor
 description: Compares the 'Lead to Close' cycle time across different marketing channels.
 sampleData:
@@ -2094,6 +2238,12 @@ sampleData:
     Google,2023-01-01,2023-02-01
     LinkedIn,2023-01-01,2023-04-01
 isPremium: true
+inputs:
+  - Campaign Data
+  - Local File (CSV/MD)
+outputs:
+  - Optimization Plan
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Marketing Analyst Agent
@@ -2134,8 +2284,6 @@ id: marketing-spend-anomaly-detector
 category: Marketing Ops
 title: Ad Spend Spike Alert
 tagline: Catch runaway budgets before they burn 10k.
-difficulty: Intermediate
-time: Daily
 archtype: Processor
 description: >-
   Compares yesterday's ad spend against a moving average. Flags deviations >
@@ -2148,6 +2296,10 @@ sampleData:
     2023-10-02,Facebook,520
     2023-10-03,Facebook,2000
 isPremium: true
+inputs:
+  - Campaign Data
+outputs:
+  - Optimization Plan
 ---
 
 # Agent Configuration: The Budget Controller
@@ -2196,8 +2348,6 @@ id: nurture-path-performance-bot
 category: Marketing Ops
 title: Nurture Path Auditor
 tagline: Compare conversion rates of different nurture sequences.
-difficulty: Advanced
-time: Monthly
 archetype: Processor
 description: >-
   Compares the path-to-MQL conversion rate for different automated nurture
@@ -2210,6 +2360,12 @@ sampleData:
     2,Path A,Leaking
     3,Path B,MQL
 isPremium: true
+inputs:
+  - Campaign Data
+  - Local File (CSV/MD)
+outputs:
+  - Optimization Plan
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Growth Specialist Agent
@@ -2250,8 +2406,6 @@ id: paid-search-quality-score-auditor
 category: Marketing Ops
 title: The CPC Savings Calculator
 tagline: Calculate exactly how much money you save by improving ad relevance.
-difficulty: Intermediate
-time: Weekly
 archetype: Processor
 description: >-
   Quality Score (QS) isn't just a vanity metric; it's a discount code. This
@@ -2265,6 +2419,12 @@ sampleData:
     "sales software",9,8.00,500,4000
     "cheap crm",3,15.00,50,750
 isPremium: true
+inputs:
+  - Campaign Data
+  - Local File (CSV/MD)
+outputs:
+  - Optimization Plan
+  - Cleaned Data
 ---
 
 # Agent Configuration: The PPC Economist
@@ -2314,8 +2474,6 @@ id: paid-social-frequency-cap-auditor
 category: Marketing Ops
 title: Ad Fatigue Auditor
 tagline: Identify campaigns with dangerously high frequency.
-difficulty: Beginner
-time: Daily
 archetype: Processor
 description: >-
   Checks ad delivery logs to flag campaigns where average frequency exceeds
@@ -2327,6 +2485,12 @@ sampleData:
     Retargeting_US,1000,8000
     Prospecting_US,10000,12000
 isPremium: true
+inputs:
+  - Campaign Data
+  - Local File (CSV/MD)
+outputs:
+  - Optimization Plan
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Paid Media Agent
@@ -2367,8 +2531,6 @@ id: partner-logo-compliance-bot
 category: Marketing Ops
 title: Partner Logo Compliance Bot
 tagline: Ensure partners aren't using your old ugly logo.
-difficulty: Intermediate
-time: Batch
 archtype: Researcher
 description: >-
   Visits partner websites listed in your CRM. Checks if the logo image matches
@@ -2379,6 +2541,10 @@ sampleData:
     Partner_Name,URL
     Agency_A,https://agency-a.com/partners
 isPremium: true
+inputs:
+  - Campaign Data
+outputs:
+  - Optimization Plan
 ---
 
 # Agent Configuration: Partner Logo Compliance Bot
@@ -2417,8 +2583,6 @@ id: podcast-download-growth-tracker
 category: Marketing Ops
 title: Podcast Growth Rate
 tagline: Are we growing month over month?
-difficulty: Beginner
-time: Monthly
 archtype: Processor
 description: Calculates MoM growth percentage for podcast downloads.
 sampleData:
@@ -2430,6 +2594,10 @@ sampleData:
     103,AI for Marketing (Viral),1200,2023-10-15
     104,Hiring Guide,510,2023-10-22
 isPremium: true
+inputs:
+  - Campaign Data
+outputs:
+  - Optimization Plan
 ---
 
 # Agent Configuration: The Podcast Growth Hacker
@@ -2471,8 +2639,6 @@ id: podcast-sponsorship-roi
 category: Marketing Ops
 title: The Brand Lift Estimator
 tagline: Direct clicks are only half the story. Measure the 'Halo Effect'.
-difficulty: Intermediate
-time: Quarterly
 archetype: Processor
 description: >-
   Podcast ads notoriously under-report because people don't click links while
@@ -2485,6 +2651,12 @@ sampleData:
     MyFirstMillion,2024-01-15,5000,1000,1500
     TechCrunch,2024-01-20,200,1000,1050
 isPremium: true
+inputs:
+  - Campaign Data
+  - Local File (CSV/MD)
+outputs:
+  - Optimization Plan
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Attribution Scientist
@@ -2531,8 +2703,6 @@ id: pricing-parity-checker
 category: Marketing Ops
 title: The Pricing Parity Architect
 tagline: Audit your international pricing or research competitor PPP.
-difficulty: Intermediate
-time: Monthly
 description: >-
   Charging $99 in every country kills growth. This agent audits your internal
   pricing table (if provided) or researches your top competitors to suggest
@@ -2545,6 +2715,10 @@ sampleData:
     Basic,29
     Pro,99
 isPremium: true
+inputs:
+  - Campaign Data
+outputs:
+  - Optimization Plan
 ---
 
 # Agent Configuration: The Pricing Parity Architect
@@ -2584,6 +2758,42 @@ For each target market (IN, BR, UK):
 
 ---
 
+## Programmatic Social Publisher
+URL: https://realaiexamples.com/skills/social-media-publisher
+Description: Bulk-publish content to Instagram and Pinterest via API.
+
+---
+title: Programmatic Social Publisher
+id: social-media-publisher
+category: Marketing Ops
+tagline: Bulk-publish content to Instagram and Pinterest via API.
+archetype: Processor
+description: >-
+  The automation we use to distribute these blueprints across social media. It
+  hooks into the Instagram Business API and Pinterest API to generate static
+  image cards and motion videos, then publishes them automatically.
+inputs:
+  - Recipe .md file
+  - Instagram API Token
+outputs:
+  - Automated Social Post
+  - Published Link Log
+isPremium: false
+---
+
+# The Distribution Logic
+Stop manually uploading images. This skill takes your Markdown content and turns it into a high-visibility social post.
+
+### Workflow:
+1. Parse recipe content for key hooks.
+2. Generate visual asset (Image/Video).
+3. Authenticate with Instagram Business Account `17841477328159975`.
+4. Upload media and set AI-optimized captions.
+5. Publish directly without opening an app.
+
+
+---
+
 ## The Competitive Noise Canceler
 URL: https://realaiexamples.com/skills/social-share-of-voice-tracker
 Description: Identify where competitors are loud so you can be louder (or go elsewhere).
@@ -2593,8 +2803,6 @@ id: social-share-of-voice-tracker
 category: Marketing Ops
 title: The Competitive Noise Canceler
 tagline: Identify where competitors are loud so you can be louder (or go elsewhere).
-difficulty: Intermediate
-time: Monthly
 archetype: Processor
 description: >-
   Don't shout into the void. This agent analyzes competitor mention volume by
@@ -2609,6 +2817,12 @@ sampleData:
     Us,Twitter,50
     CompA,Twitter,20
 isPremium: true
+inputs:
+  - Campaign Data
+  - Local File (CSV/MD)
+outputs:
+  - Optimization Plan
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Social Strategist
@@ -2654,8 +2868,6 @@ id: tweet-screenshot-automation
 category: Marketing Ops
 title: Tweet Screenshot Automation
 tagline: 'Capture perfect, sidebar-free tweet cards.'
-difficulty: Advanced
-time: Automated
 archetype: Processor
 description: >-
   Stop manually cropping screenshots. This is the exact production workflow we
@@ -2670,6 +2882,12 @@ sampleData:
     example-1,https://x.com/MehtabKarta/status/2014392743204999396
     example-2,https://x.com/buccocapital/status/1995310794339176558
 isPremium: true
+inputs:
+  - Campaign Data
+  - Local File (CSV/MD)
+outputs:
+  - Optimization Plan
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Media Specialist
@@ -2721,8 +2939,6 @@ id: twitter-follower-export-cleaner
 category: Marketing Ops
 title: The Twitter Follower Cleaner
 tagline: Analyze your audience.
-difficulty: Intermediate
-time: Batch
 description: >-
   Raw Twitter data is messy. This agent converts JSON exports of followers into
   clean, actionable CSVs, separating bios and locations for easy filtering and
@@ -2735,6 +2951,10 @@ sampleData:
     Personal_Acct,data/followers_personal.json,CEO
     Side_Project,data/followers_side.json,Developer
 isPremium: true
+inputs:
+  - Campaign Data
+outputs:
+  - Optimization Plan
 ---
 
 # Agent Configuration: The Twitter Follower Cleaner
@@ -2781,8 +3001,6 @@ id: unsubscribe-reason-classifier
 category: Marketing Ops
 title: Unsub Analysis Bot
 tagline: Why are they leaving?
-difficulty: Intermediate
-time: Monthly
 archtype: Processor
 description: >-
   Categorizes free-text 'Reason for Unsubscribing' feedback into buckets like
@@ -2795,6 +3013,10 @@ sampleData:
     2,I don't need this anymore
     3,Sent daily, wanted weekly
 isPremium: true
+inputs:
+  - Campaign Data
+outputs:
+  - Optimization Plan
 ---
 
 # Agent Configuration: The Retention Analyst
@@ -2842,8 +3064,6 @@ id: utm-parameter-gap-filler
 category: Marketing Ops
 title: UTM Referrer Inference Bot
 tagline: Infer missing sources based on Referrer URL.
-difficulty: Intermediate
-time: Daily
 archetype: Processor
 description: >-
   Scans traffic logs for missing UTM parameters and infers the likely source
@@ -2855,6 +3075,12 @@ sampleData:
     /page,linkedin.com,NULL
     /page,google.com,NULL
 isPremium: true
+inputs:
+  - Campaign Data
+  - Local File (CSV/MD)
+outputs:
+  - Optimization Plan
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Marketing Ops Agent
@@ -2894,8 +3120,6 @@ id: utm-performance-analyzer
 category: Marketing Ops
 title: UTM Traffic Grader
 tagline: Which campaign source drives the most traffic?
-difficulty: Beginner
-time: Weekly
 archtype: Processor
 description: >-
   Aggregates traffic logs by UTM Source and Medium to identify top performing
@@ -2907,6 +3131,10 @@ sampleData:
     /landing?utm_source=google&utm_medium=cpc,500
     /landing?utm_source=newsletter,100
 isPremium: true
+inputs:
+  - Campaign Data
+outputs:
+  - Optimization Plan
 ---
 
 # Agent Configuration: The Traffic Analyst
@@ -2954,8 +3182,6 @@ id: utm-taxonomy-enforcer
 category: Marketing Ops
 title: UTM Taxonomy Auditor
 tagline: Standardize your tracking URLs and fix messy analytics data.
-difficulty: Intermediate
-time: 5 mins
 archetype: Processor
 description: >-
   Reads a list of campaign URLs and validates them against strict naming
@@ -2969,6 +3195,12 @@ sampleData:
     https://site.com/?utm_source=google&utm_medium=cpc
     https://site.com/?utm_source=fb%20ads&utm_medium=paid
 isPremium: true
+inputs:
+  - Campaign Data
+  - Local File (CSV/MD)
+outputs:
+  - Optimization Plan
+  - Cleaned Data
 ---
 
 # Agent Configuration: The UTM Taxonomy Auditor
@@ -3021,8 +3253,6 @@ id: video-view-retention-analyst
 category: Marketing Ops
 title: Video Drop-off Auditor
 tagline: Where do they stop watching?
-difficulty: Intermediate
-time: Monthly
 archetype: Processor
 description: >-
   Analyzes drop-off timestamps in product demo videos to identify boring
@@ -3035,6 +3265,12 @@ sampleData:
     Demo_v1,30,80
     Demo_v1,60,20
 isPremium: true
+inputs:
+  - Campaign Data
+  - Local File (CSV/MD)
+outputs:
+  - Optimization Plan
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Content Producer
@@ -3074,8 +3310,6 @@ id: webinar-attendance-scorer
 category: Marketing Ops
 title: Webinar Engagement Scorer
 tagline: Identify hot leads based on minutes watched.
-difficulty: Intermediate
-time: Batch
 archtype: Processor
 description: >-
   Scores webinar attendees based on how long they stayed and if they asked
@@ -3088,6 +3322,10 @@ sampleData:
     Bob,5,0
     Charlie,30,0
 isPremium: true
+inputs:
+  - Campaign Data
+outputs:
+  - Optimization Plan
 ---
 
 # Agent Configuration: The Lead Scorer
@@ -3135,8 +3373,6 @@ id: webinar-attendee-job-title-scorer
 category: Marketing Ops
 title: Webinar Audience Quality
 tagline: 'Did VPs show up, or just interns?'
-difficulty: Beginner
-time: Batch
 archetype: Processor
 description: >-
   Scores webinar success by the seniority of attendees based on job title
@@ -3150,6 +3386,12 @@ sampleData:
     Mike Jones,mike@gmail.com,Student,University
     Sarah Lee,sarah@target-account.com,Director of Ops,Target Account Ltd
 isPremium: true
+inputs:
+  - Campaign Data
+  - Local File (CSV/MD)
+outputs:
+  - Optimization Plan
+  - Cleaned Data
 ---
 
 # Agent Configuration: The High-Ticket Demand Gen Lead
@@ -3193,8 +3435,6 @@ id: webinar-roi-calculator
 category: Marketing Ops
 title: Webinar ROI Analyzer
 tagline: Did we actually make money on that event?
-difficulty: Intermediate
-time: Batch
 archtype: Processor
 description: Calculates Cost Per Lead (CPL) and Pipeline ROI for a webinar event.
 sampleData:
@@ -3204,6 +3444,10 @@ sampleData:
     Q3 Webinar,5000,200,50000
     Q4 Summit,20000,100,10000
 isPremium: true
+inputs:
+  - Campaign Data
+outputs:
+  - Optimization Plan
 ---
 
 # Agent Configuration: The Demand Gen Manager
@@ -3251,8 +3495,6 @@ id: win-back-campaign
 category: Marketing Ops
 title: The Win-Back Campaign Architect
 tagline: It's easier to sell to an ex.
-difficulty: Intermediate
-time: Quarterly
 archetype: Processor
 description: >-
   Customers leave, but they might come back. This agent identifies customers who
@@ -3265,6 +3507,12 @@ sampleData:
     CustA,2023-01-01,Pro,5000
     CustB,2023-09-01,Starter,200
 isPremium: true
+inputs:
+  - Campaign Data
+  - Local File (CSV/MD)
+outputs:
+  - Optimization Plan
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Lifecycle Marketer
@@ -3309,8 +3557,6 @@ id: zapier-logic-architect
 category: Marketing Ops
 title: The Zapier Logic Architect
 tagline: Standardize your no-code workflows.
-difficulty: Intermediate
-time: Batch
 description: >-
   Automation fails at edge cases. This agent designs robust Zapier workflows -
   including filters, formatters, and error handlers - for your entire automation
@@ -3323,6 +3569,10 @@ sampleData:
     Payment Alert,Stripe,Slack,Notify team of high-value (> $500) sales
     Content Distro,RSS Feed,LinkedIn,Cross-post blog updates with custom hooks
 isPremium: true
+inputs:
+  - Campaign Data
+outputs:
+  - Optimization Plan
 ---
 
 # Agent Configuration: The Zapier Logic Architect

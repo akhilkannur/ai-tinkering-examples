@@ -9,8 +9,6 @@ id: feature-retirement-comms-planner
 category: Product Ops
 title: Feature Sunsetting Comms Planner
 tagline: Kill a feature without killing customer trust.
-difficulty: Intermediate
-time: Batch
 archetype: Processor
 description: >-
   Identifies users dependent on a feature being removed. Drafts a timeline of 3
@@ -21,6 +19,12 @@ sampleData:
     Feature_Name,Retirement_Date
     Legacy_API,2024-12-31
 isPremium: false
+inputs:
+  - Feature Backlog
+  - Local File (CSV/MD)
+outputs:
+  - Priority Matrix
+  - Cleaned Data
 ---
 
 # Agent Configuration: Feature Sunsetting Comms Planner
@@ -59,8 +63,6 @@ id: user-journey-friction-simulator
 category: Product Ops
 title: The Friction Hunter Simulation
 tagline: Roleplay your angriest customer.
-difficulty: Advanced
-time: 30 mins
 archetype: Researcher
 description: >-
   Simulates a specific buyer persona (e.g., 'Impatient CTO') attempting to
@@ -74,6 +76,12 @@ sampleData:
     Page: Signup
     Field: "Enter your Mother's Maiden Name"
 isPremium: true
+inputs:
+  - Feature Backlog
+  - Web Search Target
+outputs:
+  - Priority Matrix
+  - Curated Intel
 ---
 
 # Agent Configuration: The Friction Hunter

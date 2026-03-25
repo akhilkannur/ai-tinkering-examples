@@ -46,6 +46,7 @@ export default function PlaybookPage({ playbook, recipes }: any) {
   return (
     <div className="min-h-screen bg-primary-bg font-sans text-black selection:bg-[#ff00ff] selection:text-white">
       <Head>
+        <meta name="robots" content="noindex, nofollow" />
         <title>{playbook.title} | AI Blueprints | Real AI Examples</title>
         <meta name="description" content={playbook.description} key="description" />
         

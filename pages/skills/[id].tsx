@@ -204,6 +204,7 @@ Downloaded from RealAIExamples.com`;
   return (
     <div className="flex flex-col min-h-screen bg-primary-bg text-black selection:bg-[#ff00ff] selection:text-white">
       <Head>
+        <meta name="robots" content="noindex, nofollow" />
         <title>{recipe.title} | AI Agent Blueprint | Real AI Examples</title>
         <meta name="description" content={recipe.description} key="description" />
         <meta property="og:title" content={`${recipe.title} | AI Agent Blueprint`} key="og:title" />

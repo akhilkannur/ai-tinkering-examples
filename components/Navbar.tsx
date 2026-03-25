@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { Menu, X, Terminal, Cpu, Zap } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import Head from 'next/head'
 import Image from 'next/image'
 
@@ -20,12 +20,10 @@ export default function Navbar() {
 
   const navLinks = [
     { href: '/', label: 'HOME', mono: true },
-    { href: '/ai-examples', label: 'LIBRARY', mono: true },
-    { href: '/ideas-database', label: 'IDEAS DATABASE', mono: true },
-    { href: '/agent-setup-service', label: 'SETUP', mono: true },
-    { href: '/tools', label: 'TOOL DIRECTORY', mono: true },
+    { href: '/ai-examples', label: 'EXAMPLES', mono: true },
+    { href: '/tools', label: 'TOOLS', mono: true },
     { href: '/blog', label: 'BLOG', mono: true },
-    { href: '/about', label: 'ABOUT', mono: true },
+    { href: '/agent-setup-service', label: 'GET SETUP', mono: true },
   ]
 
   const isHomePage = router.pathname === '/'
@@ -80,15 +78,6 @@ export default function Navbar() {
           </div>
 
           <div className="hidden lg:flex items-center gap-4">
-            <a 
-              href="https://checkout.dodopayments.com/buy/pdt_0NW6p0szmXPS6jXW05hIP"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-2 bg-black text-[#ccff00] border-2 border-black font-black uppercase text-xs hover:translate-x-0.5 hover:translate-y-0.5 transition-all brutalist-shadow-sm flex items-center gap-2"
-            >
-                <span>The Kit</span>
-                <Terminal size={14} fill="currentColor" />
-            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -122,14 +111,6 @@ export default function Navbar() {
               </Link>
             ))}
             <div className="pt-4 flex flex-col gap-2">
-                <a 
-                  href="https://checkout.dodopayments.com/buy/pdt_0NW6p0szmXPS6jXW05hIP"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full py-3 bg-punk-lime border-2 border-black font-black uppercase text-sm brutalist-shadow-sm flex items-center justify-center gap-2"
-                >
-                    Get Pro <Zap size={16} fill="currentColor" />
-                </a>
             </div>
           </div>
         </div>

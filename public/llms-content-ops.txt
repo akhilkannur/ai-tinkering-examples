@@ -9,8 +9,6 @@ id: about-page-storyteller
 category: Content Ops
 title: The About Page Storyteller
 tagline: Build trust with a data-backed brand story.
-difficulty: Intermediate
-time: Batch
 archetype: Hybrid
 description: >-
   Faceless brands are dead. This agent researches company histories and founder
@@ -24,6 +22,12 @@ sampleData:
     PostHog,https://posthog.com,James Hawkins
     Beehiiv,https://beehiiv.com,Tyler Denk
 isPremium: false
+inputs:
+  - Source Draft
+  - Local File + Search
+outputs:
+  - Repurposed Assets
+  - Enriched Document
 ---
 
 # Agent Configuration: The About Page Storyteller
@@ -73,8 +77,6 @@ id: automated-video-marketing-asset
 category: Content Ops
 title: The Automated Video Producer
 tagline: Turn any landing page into a 30s TikTok/Reels promo video.
-difficulty: Advanced
-time: 5 mins
 archetype: Processor
 description: >-
   Stop editing videos manually. This agent takes a landing page URL, captures
@@ -91,6 +93,12 @@ sampleData:
       "style": "muted" 
     }
 isPremium: false
+inputs:
+  - Source Draft
+  - Local File (CSV/MD)
+outputs:
+  - Repurposed Assets
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Automated Video Producer
@@ -147,8 +155,6 @@ id: avatar-video-producer
 category: Content Ops
 title: The AI Avatar Scriptwriter
 tagline: Scripts for HeyGen & Synthesia.
-difficulty: Intermediate
-time: Batch
 archetype: Processor
 description: >-
   AI Avatars need more than just text; they need gestures and timing. This agent
@@ -162,6 +168,12 @@ sampleData:
     Sustainable Fashion,Maya,Ethically sourced materials
     Remote Work Tips,Chris,Better work-life balance
 isPremium: false
+inputs:
+  - Source Draft
+  - Local File (CSV/MD)
+outputs:
+  - Repurposed Assets
+  - Cleaned Data
 ---
 
 # Agent Configuration: The AI Avatar Scriptwriter
@@ -206,8 +218,6 @@ id: bio-link-optimizer
 category: Content Ops
 title: The Bio Link Architect
 tagline: Optimize your 'Link in Bio' from a URL or a goal.
-difficulty: Beginner
-time: One-off
 archetype: Hybrid
 description: >-
   Choice paralysis kills sales. This agent audits your current 'Link in Bio'
@@ -220,6 +230,12 @@ sampleData:
     2. My favorite gear.
     3. Buy my course.
 isPremium: false
+inputs:
+  - Source Draft
+  - Local File + Search
+outputs:
+  - Repurposed Assets
+  - Enriched Document
 ---
 
 # Agent Configuration: The Bio Link Architect
@@ -261,6 +277,42 @@ Optimize your 'Link in Bio' from a URL or a goal.
 
 ---
 
+## Blog Thumbnail Generator
+URL: https://realaiexamples.com/skills/blog-thumbnail-generator
+Description: Programmatically generate branded OG images and blog thumbnails.
+
+---
+title: Blog Thumbnail Generator
+id: blog-thumbnail-generator
+category: Content Ops
+tagline: Programmatically generate branded OG images and blog thumbnails.
+archetype: Processor
+description: >-
+  The automation we use to create the very thumbnails you see on this site. Uses
+  Python and Pillow to take a title and generate a high-contrast,
+  brutalist-style image with custom gradients and typography.
+inputs:
+  - Blog Title
+  - Output filename (slug)
+outputs:
+  - 750x500 PNG thumbnail
+  - Optimized WebP version
+isPremium: false
+---
+
+# The Visual Engine
+Instead of manually designing covers in Canva, we use this script to maintain perfect brand consistency across 500+ pages.
+
+### Workflow:
+1. Input: Blog Title + Slug.
+2. Background: Generate a Slate-to-Deep-Slate gradient.
+3. Typography: Render title in Noto Serif (or Archivo Black).
+4. Brand: Inject the Rose-500 accent bar.
+5. Export: Save to `public/images/blog/` automatically.
+
+
+---
+
 ## The Instant Brand Architect
 URL: https://realaiexamples.com/skills/brand-kit-gen
 Description: Logo + Pattern + Vibe.
@@ -270,8 +322,6 @@ id: brand-kit-gen
 category: Content Ops
 title: The Instant Brand Architect
 tagline: Logo + Pattern + Vibe.
-difficulty: Intermediate
-time: Batch
 archetype: Processor
 description: >-
   Instantly create cohesive visual identity starter kits for multiple projects.
@@ -285,6 +335,12 @@ sampleData:
     VelvetBloom,Luxury organic skincare,Elegant and Botanical
     PixelPounce,A speed-focused gaming mouse,Aggressive and Tech-forward
 isPremium: false
+inputs:
+  - Source Draft
+  - Local File (CSV/MD)
+outputs:
+  - Repurposed Assets
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Instant Brand Architect
@@ -334,8 +390,6 @@ id: brand-voice-guidelines
 category: Content Ops
 title: The Brand Voice Architect
 tagline: Stop sounding schizophrenic.
-difficulty: Intermediate
-time: Batch
 archetype: Hybrid
 description: >-
   Different employees write differently. This agent researches your existing
@@ -349,6 +403,12 @@ sampleData:
     Nike,https://nike.com,Instagram
     Mailchimp,https://mailchimp.com,Blog
 isPremium: false
+inputs:
+  - Source Draft
+  - Local File + Search
+outputs:
+  - Repurposed Assets
+  - Enriched Document
 ---
 
 # Agent Configuration: The Brand Voice Architect
@@ -399,8 +459,6 @@ id: comment-section-nurturer
 category: Content Ops
 title: The Comment Section Nurturer
 tagline: Turn 'Great post' into a lead.
-difficulty: Beginner
-time: Batch
 description: >-
   Comments are the highest signal of interest. This agent analyzes a list of
   comments, categorizes them by intent (Fan vs Lead), and drafts replies that
@@ -409,6 +467,10 @@ sampleData:
   filename: comments.csv
   content: "Username,Comment_Text,Platform\njason_dev,\U0001F525 great post as always!,Twitter\nsara_founder,Does this integrate with Slack?,LinkedIn\nmike_marketer,I tried this but it was too expensive for my team.,LinkedIn\n"
 isPremium: false
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: The Comment Section Nurturer
@@ -458,8 +520,6 @@ id: content-repurposer
 category: Content Ops
 title: The Viral Editor
 tagline: Turn one blog post into 3 social posts.
-difficulty: Beginner
-time: 10 mins
 archetype: Processor
 description: >-
   Turns your blog posts into ready-to-post content for Twitter/X, LinkedIn, and
@@ -472,6 +532,12 @@ sampleData:
     10 Tips for Remote Work,https://blog.com/remote-tips,Culture
     SaaS Pricing Strategies,https://blog.com/pricing,Finance
 isPremium: false
+inputs:
+  - Source Draft
+  - Local File (CSV/MD)
+outputs:
+  - Repurposed Assets
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Viral Editor
@@ -536,8 +602,6 @@ id: docs-freshness-auditor
 category: Content Ops
 title: Docs Freshness Auditor
 tagline: Flag help articles that reference old UI.
-difficulty: Intermediate
-time: Batch
 archetype: Researcher
 description: >-
   Scans Help Center articles. Checks for dates > 1 year old or mentions of
@@ -548,6 +612,12 @@ sampleData:
     Article_URL,Last_Updated
     /docs/setup,2022-01-01
 isPremium: true
+inputs:
+  - Source Draft
+  - Web Search Target
+outputs:
+  - Repurposed Assets
+  - Curated Intel
 ---
 
 # Agent Configuration: Docs Freshness Auditor
@@ -586,8 +656,6 @@ id: feature-demo-gif-maker
 category: Content Ops
 title: Changelog GIF Concept Maker
 tagline: Turn dry changelogs into viral GIF concepts.
-difficulty: Beginner
-time: Real-time
 archtype: Processor
 description: >-
   Reads your "Release Notes". Outputs a script for a 5-second screen recording
@@ -598,6 +666,10 @@ sampleData:
     Feature_Name,Description
     Dark Mode,Added a toggle in settings.
 isPremium: true
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: Changelog GIF Concept Maker
@@ -636,8 +708,6 @@ id: haro-pitcher
 category: Content Ops
 title: The Bulk HARO Pitcher
 tagline: Scan 100 media queries and draft 5 winning pitches.
-difficulty: Advanced
-time: Daily
 description: >-
   Journalists move fast. This agent scans a large text file of media queries
   (from HARO or Connectively), identifies the ones you are actually qualified
@@ -648,6 +718,10 @@ sampleData:
     Query: Looking for expert on AI in Sales. Outlet: Forbes. Deadline: 2pm.
     Query: Tips for small business taxes. Outlet: WSJ. Deadline: Tomorrow.
 isPremium: true
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: The Bulk HARO Pitcher
@@ -698,8 +772,6 @@ id: image-alt-text-writer-bulk
 category: Content Ops
 title: The Bulk Alt Text Writer
 tagline: Accessibility at scale.
-difficulty: Beginner
-time: Batch
 description: >-
   Missing alt text hurts SEO and accessibility. This agent takes a list of image
   filenames and context to generate descriptive, keyword-rich alt text for
@@ -716,6 +788,10 @@ sampleData:
 
     logo_footer.svg,The company logo in monochrome,Brand Identity
 isPremium: true
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: The Bulk Alt Text Writer
@@ -763,8 +839,6 @@ id: infinite-content-repurposer
 category: Content Ops
 title: The Infinite Repurposer Chain
 tagline: 'One URL, 20+ assets.'
-difficulty: Advanced
-time: Batch
 description: >-
   Why repurpose manually? This mega-chain takes a list of sources (YouTube URLs
   or Blog Posts) and generates complete content ecosystems: Blogs, Newsletters,
@@ -777,6 +851,10 @@ sampleData:
     Remote Work Mastery,https://blog.com/remote,HR Managers
     Zero to One Summary,https://medium.com/summary,First-time Founders
 isPremium: true
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: The Infinite Repurposer Chain
@@ -826,8 +904,6 @@ id: instagram-caption-spacer
 category: Content Ops
 title: The Caption Formatting Factory
 tagline: Format 30 days of social captions in seconds.
-difficulty: Beginner
-time: Daily
 description: >-
   Instagram destroys formatting. This agent reads a CSV of raw post copy, adds
   invisible line breaks, formats lists with emojis, and organizes hashtags into
@@ -843,6 +919,10 @@ sampleData:
     2024-02-02,"How to use the new filter. 1. Click open. 2. Drag.","tutorial,
     tips"
 isPremium: true
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: The Caption Formatting Factory
@@ -886,8 +966,6 @@ id: link-in-bio-auditor
 category: Content Ops
 title: Link-in-Bio Broken Link Checker
 tagline: Ensure your most valuable link actually works.
-difficulty: Beginner
-time: Batch
 archetype: Researcher
 description: >-
   Daily check of your Linktree/Bio link. Validates that it doesn't 404 and that
@@ -898,6 +976,12 @@ sampleData:
     Instagram_Handle,Expected_Dest_URL
     @brand,https://site.com/promo
 isPremium: true
+inputs:
+  - Source Draft
+  - Web Search Target
+outputs:
+  - Repurposed Assets
+  - Curated Intel
 ---
 
 # Agent Configuration: Link-in-Bio Broken Link Checker
@@ -936,8 +1020,6 @@ id: linkedin-audio-event-planner
 category: Content Ops
 title: The Audio Event Planner
 tagline: Live radio for B2B.
-difficulty: Intermediate
-time: Batch
 description: >-
   LinkedIn Audio Events are low-friction webinars. This agent scripts 30-minute
   'Fireside Chats' for your entire event calendar, including intros, discussion
@@ -950,6 +1032,10 @@ sampleData:
     Scaling SaaS Sales,Sarah Chen,2024-10-22
     Retention Strategies,Mike Ross,2024-10-29
 isPremium: true
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: The Audio Event Planner
@@ -996,8 +1082,6 @@ id: linkedin-carousel
 category: Content Ops
 title: The Carousel Architect
 tagline: 'Convert blog posts into high-retention slides (Hooks, Lists, CTAs).'
-difficulty: Beginner
-time: 10 mins
 archetype: Hybrid
 description: >-
   Don't just copy-paste text. This agent reads your blog post URL, identifies
@@ -1010,6 +1094,12 @@ sampleData:
     https://realaiexamples.com/blog/ai-sales-agents
     https://realaiexamples.com/blog/seo-is-dead
 isPremium: true
+inputs:
+  - Source Draft
+  - Local File + Search
+outputs:
+  - Repurposed Assets
+  - Enriched Document
 ---
 
 # Agent Configuration: The Carousel Architect
@@ -1062,8 +1152,6 @@ id: linkedin-connection-request-writer
 category: Content Ops
 title: The Connection Request Writer
 tagline: Get accepted by VIPs.
-difficulty: Beginner
-time: Batch
 description: >-
   Generic requests get ignored. This agent writes personalized 'Notes' for a
   list of prospects, focusing on relevance and low-friction connection hooks to
@@ -1081,6 +1169,10 @@ sampleData:
 
     Andrew Chen,https://linkedin.com/in/andrewchen,Marketplace growth frameworks
 isPremium: true
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: The Connection Request Writer
@@ -1128,8 +1220,6 @@ id: linkedin-newsletter-launcher
 category: Content Ops
 title: The LinkedIn Newsletter Launcher
 tagline: Own your audience on-platform.
-difficulty: Intermediate
-time: Batch
 description: >-
   LinkedIn Newsletters notify every connection. This agent helps you launch one
   by defining your niche, naming it, and writing the high-converting launch post
@@ -1146,6 +1236,10 @@ sampleData:
 
     GTM Labs,Go-to-market strategies,The latest in PLG and enterprise sales
 isPremium: true
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: The LinkedIn Newsletter Launcher
@@ -1194,8 +1288,6 @@ id: linkedin-profile-banner-architect
 category: Content Ops
 title: The LinkedIn Banner Architect
 tagline: Build a high-converting profile banner.
-difficulty: Beginner
-time: Batch
 description: >-
   Your banner is prime real estate. This agent researches your niche and target
   audience to design text-based visual briefs for banners that state your value
@@ -1208,6 +1300,10 @@ sampleData:
     Sarah Chen,UX Researcher,Enterprise Design
     Mike Ross,SEO Consultant,E-commerce Growth
 isPremium: true
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: The LinkedIn Banner Architect
@@ -1258,8 +1354,6 @@ id: linkedin-visual-hook-scorer
 category: Content Ops
 title: LinkedIn Visual Hook Scorer
 tagline: Predict the viral potential of your image/video thumbnails.
-difficulty: Intermediate
-time: Real-time
 archtype: Processor
 description: >-
   Uploads your proposed thumbnails to a Vision model. Scores them on text
@@ -1272,6 +1366,10 @@ sampleData:
     Chart_V1,./images/chart1.png
     Selfie_V2,./images/selfie.png
 isPremium: true
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: LinkedIn Visual Hook Scorer
@@ -1310,8 +1408,6 @@ id: logo-to-brand-kit
 category: Content Ops
 title: The Brand Scientist
 tagline: Decode the psychology of your logo colors.
-difficulty: Experimental
-time: Batch
 archetype: Hybrid
 description: >-
   Colors aren't just aesthetic; they are emotional triggers. This agent scans
@@ -1325,6 +1421,12 @@ sampleData:
     BankCo,assets/bankco.png
     Foodie,assets/burger.png
 isPremium: true
+inputs:
+  - Source Draft
+  - Local File + Search
+outputs:
+  - Repurposed Assets
+  - Enriched Document
 ---
 
 # Agent Configuration: The Brand Scientist
@@ -1372,8 +1474,6 @@ id: news-curator
 category: Content Ops
 title: The Multi-Niche News Curator
 tagline: Draft 5 weekly newsletters in one run.
-difficulty: Intermediate
-time: Weekly
 description: >-
   Curating news for different audiences takes hours. This agent reads a list of
   niches and source URLs from a CSV, picks the top stories for each, and drafts
@@ -1385,6 +1485,10 @@ sampleData:
     AI Tools,"techcrunch.com, ycombinator.com","agents, automation, llm"
     Fintech,"finextra.com, bloomberg.com","crypto, banking, payments"
 isPremium: true
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: The Multi-Niche News Curator
@@ -1429,8 +1533,6 @@ id: newsletter-asset-factory
 category: Content Ops
 title: The News Jacker
 tagline: Don't just write generic content. Ride the wave of breaking news.
-difficulty: Intermediate
-time: 20 mins
 archetype: Hybrid
 description: >-
   Generic newsletters get unsubscribed. This agent takes a list of topics and
@@ -1446,6 +1548,12 @@ sampleData:
 
     Crypto Regulation,https://www.coindesk.com/policy/new-sec-rules
 isPremium: true
+inputs:
+  - Source Draft
+  - Local File + Search
+outputs:
+  - Repurposed Assets
+  - Enriched Document
 ---
 
 # Agent Configuration: The News Jacker
@@ -1495,8 +1603,6 @@ id: newsletter-emotional-audit
 category: Content Ops
 title: Newsletter Vibe Check
 tagline: Make sure your weekly email isn't too depressing.
-difficulty: Beginner
-time: Real-time
 archtype: Processor
 description: >-
   Analyzes your draft newsletter. Counts "Fear/Urgency" words vs "Hope/Value"
@@ -1507,6 +1613,10 @@ sampleData:
     Subject_Line,Body_Text
     "Last Chance!","Everything is ending..."
 isPremium: true
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: Newsletter Vibe Check
@@ -1545,8 +1655,6 @@ id: podcast-clip-selector
 category: Content Ops
 title: The Viral Clip Factory
 tagline: Identify viral social clips for your entire season.
-difficulty: Intermediate
-time: 10 mins
 description: >-
   Editing a 1-hour show is hard. This agent scans a folder of transcripts for
   'High Intensity' moments (laughter, debate, definitive statements) and
@@ -1556,6 +1664,10 @@ sampleData:
   content: |
     [05:20] Sarah: "And that's why most people are completely wrong about SEO."
 isPremium: true
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: The Viral Clip Factory
@@ -1601,8 +1713,6 @@ id: podcast-guest-compatibility-scorer
 category: Content Ops
 title: Podcast Guest Matchmaker
 tagline: Ensure your next guest matches your show's vibe.
-difficulty: Beginner
-time: Real-time
 archtype: Researcher
 description: >-
   Ingests a potential guest's previous interviews. Scores them on "Energy
@@ -1615,6 +1725,10 @@ sampleData:
     Sam Altman,https://youtube.com/watch?v=...
     Elon Musk,https://youtube.com/watch?v=...
 isPremium: true
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: Podcast Guest Matchmaker
@@ -1653,8 +1767,6 @@ id: podcast-guest-pitcher
 category: Content Ops
 title: The Podcast Guest Pitcher
 tagline: Get booked on niche shows.
-difficulty: Intermediate
-time: Batch
 description: >-
   Podcasts are high-trust channels. This agent researches target podcasts,
   analyzes their recent content, and drafts 'Value-First' pitches to hosts for
@@ -1667,6 +1779,10 @@ sampleData:
     The Growth Lab,Sarah Chen,Marketing Experiments
     Founder Wisdom,Mike Ross,Early Stage Startups
 isPremium: true
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: The Podcast Guest Pitcher
@@ -1716,8 +1832,6 @@ id: podcast-show-notes-generator
 category: Content Ops
 title: The Chapter & Timestamp Architect
 tagline: Don't just summarize. Create clickable 'YouTube Chapters' automatically.
-difficulty: Intermediate
-time: 10 mins
 archetype: Processor
 description: >-
   Podcasts without timestamps lose 40% of listeners. This agent scans your
@@ -1731,6 +1845,12 @@ sampleData:
     [00:04:12] Host: So tell us about the 'Index' strategy.
     [00:04:15] Guest: Well, it starts with...
 isPremium: true
+inputs:
+  - Source Draft
+  - Local File (CSV/MD)
+outputs:
+  - Repurposed Assets
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Podcast Architect
@@ -1776,8 +1896,6 @@ id: podcast-sponsor-read-writer
 category: Content Ops
 title: The Conversational Ad Read Factory
 tagline: Native ad reads that don't get skipped.
-difficulty: Intermediate
-time: One-off
 description: >-
   Host-read ads convert best. This agent takes a sponsor's talking points (if
   provided) or researches a brand to write a natural, conversational script that
@@ -1788,6 +1906,10 @@ sampleData:
     Brand: BlueBottle Coffee. Points: Fresh beans, subscription model, 20% off
     with code GROW.
 isPremium: true
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: The Conversational Ad Read Factory
@@ -1835,8 +1957,6 @@ id: podcast-tour-manager
 category: Content Ops
 title: The Podcast Tour Manager
 tagline: Book your tour from a list or a niche goal.
-difficulty: Intermediate
-time: Weekly
 description: >-
   Podcasts are high-trust channels. This agent reads your target show list (if
   provided) or researches the top 10 podcasts in your niche to draft
@@ -1848,6 +1968,10 @@ sampleData:
     The Growth Show,SaaS Marketing
     Founder Stories,Bootstrap businesses
 isPremium: true
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: The Podcast Tour Manager
@@ -1893,8 +2017,6 @@ id: poll-strategy-generator
 category: Content Ops
 title: The Poll Strategy Generator
 tagline: Engagement farming with a purpose.
-difficulty: Beginner
-time: Batch
 description: >-
   Polls get high reach, but often zero value. This agent generates 'Market
   Research' polls that double as lead qualification, allowing you to segment and
@@ -1907,6 +2029,10 @@ sampleData:
     Sales Coaching,SDR Managers,3-Day Training Intensive
     App Launch,Product Leads,AI-powered task manager
 isPremium: true
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: The Poll Strategy Generator
@@ -1947,6 +2073,42 @@ For each campaign in the CSV:
 
 ---
 
+## Project Recipe Upgrader
+URL: https://realaiexamples.com/skills/recipe-upgrader
+Description: Batch-update your recipe library with AI-optimized formatting and sample data.
+
+---
+title: Project Recipe Upgrader
+id: recipe-upgrader
+category: Content Ops
+tagline: Batch-update your recipe library with AI-optimized formatting and sample data.
+archetype: Processor
+description: >-
+  The exact script we use to maintain this website. It reads existing recipe
+  files, categorizes them, and automatically adds batch processing loops, sample
+  data templates, and structured output artifacts.
+inputs:
+  - Raw .md recipe files
+  - Category list
+outputs:
+  - Optimized .md files
+  - Verification CSV
+isPremium: true
+---
+
+# The Upgrader Logic
+This is a 'Folder Agent' skill. It lives in the root of the `ai-tinkering-examples` project and ensures every recipe follows the 'Work-Ready' standard.
+
+### Workflow:
+1. Scan `content/recipes/*.md`.
+2. Analyze existing frontmatter.
+3. Inject missing `sampleData` templates.
+4. Normalize descriptions to avoid 'AI Slop'.
+5. Export results to structured CSV.
+
+
+---
+
 ## The Short-Form Script Factory
 URL: https://realaiexamples.com/skills/short-form-scriptwriter
 Description: Turn your entire blog into 100 vertical scripts.
@@ -1956,8 +2118,6 @@ id: short-form-scriptwriter
 category: Content Ops
 title: The Short-Form Script Factory
 tagline: Turn your entire blog into 100 vertical scripts.
-difficulty: Intermediate
-time: 15 mins
 description: >-
   Batching is the secret to content creation. This agent reads a list of URLs
   (or a folder of markdown files), extracts the viral hooks, and generates a
@@ -1969,6 +2129,10 @@ sampleData:
     SEO Guide,https://yoursite.com/seo-guide,Educational
     Why AI Matters,https://yoursite.com/ai-post,Contrarian
 isPremium: true
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: The Short-Form Script Factory
@@ -2016,8 +2180,6 @@ id: social-engagement-rate-calculator
 category: Content Ops
 title: Engagement Truth Teller
 tagline: Vanity metrics vs Real engagement.
-difficulty: Beginner
-time: Weekly
 archtype: Processor
 description: >-
   Calculates the engagement rate (Likes + Comments / Followers) for a set of
@@ -2034,6 +2196,10 @@ sampleData:
 
     103,"Does anyone else hate Salesforce? Unpopular opinion...",30,60,15,1000
 isPremium: true
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: The Viral Hook Analyst
@@ -2077,8 +2243,6 @@ id: terminal-content-recorder
 category: Content Ops
 title: The Terminal Streamer
 tagline: Record pixel-perfect terminal sessions for YouTube.
-difficulty: Beginner
-time: 5 mins
 archetype: Processor
 description: >-
   Stop using blurry screen recorders. This agent sets up a professional-grade
@@ -2093,6 +2257,12 @@ sampleData:
     THEME="monokai"
     FONT_SIZE=20
 isPremium: true
+inputs:
+  - Source Draft
+  - Local File (CSV/MD)
+outputs:
+  - Repurposed Assets
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Terminal Streamer
@@ -2161,8 +2331,6 @@ id: tiktok-audio-trend-syncer
 category: Content Ops
 title: TikTok Audio Trend Matcher
 tagline: Match your product B-roll to today's trending audio.
-difficulty: Advanced
-time: Researcher
 archtype: Hybrid
 description: >-
   Identifies top trending audio on TikTok. Suggests which of your product clips
@@ -2174,6 +2342,10 @@ sampleData:
     Unboxing,5s
     Demo,15s
 isPremium: true
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: TikTok Audio Trend Matcher
@@ -2212,8 +2384,6 @@ id: tiktok-hook-generator
 category: Content Ops
 title: The Viral Scripter
 tagline: Don't just write hooks. Script the 'Visuals' too.
-difficulty: Beginner
-time: Daily
 archetype: Processor
 description: >-
   TikTok is 50% audio, 50% visual. This agent generates scripts that include not
@@ -2223,6 +2393,12 @@ sampleData:
   filename: content_topic.txt
   content: 'Topic: Learning Python for Data Science'
 isPremium: true
+inputs:
+  - Source Draft
+  - Local File (CSV/MD)
+outputs:
+  - Repurposed Assets
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Viral Scripter
@@ -2268,8 +2444,6 @@ id: tiktok-trend-adapter
 category: Content Ops
 title: The Trend Adapter
 tagline: Adapt TikTok trends to your B2B niche.
-difficulty: Intermediate
-time: Batch
 description: >-
   Trending sounds get views, but how do you use them for SaaS? This agent
   researches current TikTok trends and brainstorms specific ways to adapt them
@@ -2282,6 +2456,10 @@ sampleData:
     HR Tech,People Ops,Relatable
     Sales Training,SDRs,Aggressive & High Energy
 isPremium: true
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: The Trend Adapter
@@ -2331,8 +2509,6 @@ id: trend-hunter
 category: Content Ops
 title: The Trend Hunter
 tagline: Find the next viral topic before it peaks.
-difficulty: Intermediate
-time: 15 mins
 description: >-
   Data-driven content beats 'creative' content. This agent monitors a list of
   niche keywords from a CSV, detects 'Breakout' search queries, and suggests 3
@@ -2344,6 +2520,10 @@ sampleData:
     Generative AI,Product ideas
     Sustainable Fashion,Competitor moves
 isPremium: true
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: The Trend Hunter
@@ -2390,8 +2570,6 @@ id: trend-surfer-alert
 category: Content Ops
 title: The Trend Surfer
 tagline: Be first to the story.
-difficulty: Advanced
-time: Batch
 description: >-
   Content is a timing game. This agent monitors your entire target keyword list
   for search volume spikes and auto-drafts 'Newsjacking' posts whenever a trend
@@ -2404,6 +2582,10 @@ sampleData:
     Remote Work,HR,30
     Sustainable Fashion,Lifestyle,40
 isPremium: true
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: The Trend Surfer
@@ -2453,8 +2635,6 @@ id: twitter-space-scribe
 category: Content Ops
 title: Twitter Space Scribe
 tagline: Turn audio conversations into tweet threads.
-difficulty: Intermediate
-time: Batch
 archetype: Processor
 description: >-
   Takes a transcript of a Twitter Space/Clubhouse. Extracts the "Golden Nuggets"
@@ -2465,6 +2645,12 @@ sampleData:
     Transcript_Text,Speakers
     "So the key is consistency...",@naval
 isPremium: true
+inputs:
+  - Source Draft
+  - Local File (CSV/MD)
+outputs:
+  - Repurposed Assets
+  - Cleaned Data
 ---
 
 # Agent Configuration: Twitter Space Scribe
@@ -2503,8 +2689,6 @@ id: twitter-thread-hook-writer
 category: Content Ops
 title: The Twitter Thread Architect
 tagline: Generate viral thread hooks from your story or trending news.
-difficulty: Beginner
-time: Daily
 description: >-
   The first tweet makes or breaks the thread. This agent reads your specific
   story (if provided) or researches trending topics in your niche to generate 5
@@ -2514,6 +2698,10 @@ sampleData:
   content: |
     I spent 48 hours building an AI tool that makes $1k a month. I used no code.
 isPremium: true
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: The Twitter Thread Architect
@@ -2563,8 +2751,6 @@ id: ugc-visual-quality-rater
 category: Content Ops
 title: UGC Ad Potential Scorer
 tagline: Find the hidden gems in your tagged photos/videos.
-difficulty: Intermediate
-time: Batch
 archtype: Processor
 description: >-
   Scrapes posts tagged with your brand. Scores them on "Lighting", "Product
@@ -2576,6 +2762,10 @@ sampleData:
     https://insta.../1,"Love this!"
     https://insta.../2,"Meh."
 isPremium: true
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: UGC Ad Potential Scorer
@@ -2614,8 +2804,6 @@ id: unicorn-curator
 category: Content Ops
 title: The Unicorn Content Curator
 tagline: Identify viral outliers across 100 channels.
-difficulty: Advanced
-time: 20 mins
 description: >-
   Why compete on views? This agent reads a list of YouTube niches from a CSV,
   scans the top 10 channels in each, and identifies 'Unicorn Videos' - outliers
@@ -2628,6 +2816,10 @@ sampleData:
     Real Estate Investing
     Solo Travel
 isPremium: true
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: The Unicorn Content Curator
@@ -2671,8 +2863,6 @@ id: user-generated-content-campaign
 category: Content Ops
 title: The UGC Campaign Planner
 tagline: High-ROI content from your users.
-difficulty: Intermediate
-time: Batch
 description: >-
   Social proof is your best sales tool. This agent designs viral UGC contests
   and campaigns for your entire product line, incentivizing users to create
@@ -2685,6 +2875,10 @@ sampleData:
     PixelPounce,Gaming Peripherals,X/Twitter
     BrewBase,Coffee Equipment,Instagram
 isPremium: true
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: The UGC Campaign Planner
@@ -2734,8 +2928,6 @@ id: visual-storyteller
 category: Content Ops
 title: The Visual Storyteller
 tagline: Blog -> Comic Strip.
-difficulty: Advanced
-time: Batch
 isPremium: true
 description: >-
   Dry text doesn't get shared. This agent transforms a list of blog posts or
@@ -2748,6 +2940,10 @@ sampleData:
     The Data Breach,https://blog.com/security-fail,Dark and Dramatic
     The Growth Hack,https://blog.com/growth,High-energy and Tech
     The Customer Win,https://blog.com/case-study,Minimalist and Clean
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: The Visual Storyteller
@@ -2797,8 +2993,6 @@ id: webinar-slide-deck-builder
 category: Content Ops
 title: The Webinar Deck Builder
 tagline: Presentations that don't suck.
-difficulty: Intermediate
-time: Batch
 description: >-
   Most webinars are 'Death by Powerpoint'. This agent outlines high-energy slide
   deck structures for your entire webinar series, ensuring your narrative flows
@@ -2811,6 +3005,10 @@ sampleData:
     SEO for E-com Founders,Increase organic traffic by 50%,Store Owners
     AI-Powered Content,Build a content factory in 1 hour,Marketing Directors
 isPremium: true
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: The Webinar Deck Builder
@@ -2859,8 +3057,6 @@ id: youtube-chapter-maker
 category: Content Ops
 title: The Chapter Maker
 tagline: Rank for key moments.
-difficulty: Intermediate
-time: Batch
 description: >-
   Google indexes video chapters directly in search results. This agent processes
   your video transcripts, identifies topic shifts, and generates SEO-optimized
@@ -2873,6 +3069,10 @@ sampleData:
     Sales Cold Call,transcripts/cold_call.txt,Sales objection handling
     Growth Hacking 101,transcripts/growth.txt,Scalable growth strategies
 isPremium: true
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: The Chapter Maker
@@ -2921,8 +3121,6 @@ id: youtube-community-tab-poster
 category: Content Ops
 title: The Community Tab Poster
 tagline: Keep subscribers alive between uploads.
-difficulty: Beginner
-time: Batch
 description: >-
   Don't just post videos. This agent plans high-engagement 'Community Tab' posts
   - Polls, Behind-the-Scenes, and Teasers - for your entire YouTube channel
@@ -2935,6 +3133,10 @@ sampleData:
     SDR Lab,Sales Cold Calling,Handle the 'I have no budget' objection
     Glow Design,UX & Brand,Redesigning the Apple Homepage
 isPremium: true
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: The Community Tab Poster
@@ -2981,8 +3183,6 @@ id: youtube-distiller
 category: Content Ops
 title: The Video Distiller
 tagline: YouTube -> Study Notes.
-difficulty: Beginner
-time: Batch
 description: >-
   Watches long YouTube videos and extracts key arguments, unique insights, and
   implementation checklists for your entire learning queue.
@@ -2994,6 +3194,10 @@ sampleData:
     Cold Calling Masterclass,https://youtube.com/watch?v=456,Sales
     SEO in 2024,https://youtube.com/watch?v=789,Marketing
 isPremium: true
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: The Video Distiller
@@ -3039,8 +3243,6 @@ id: youtube-thumbnail-ab-tester
 category: Content Ops
 title: The Thumbnail Strategy Factory
 tagline: High-CTR concepts from your ideas or viral competitors.
-difficulty: Beginner
-time: Weekly
 description: >-
   CTR determines your video's fate. This agent audits your thumbnail ideas (if
   provided) or researches the top 10 viral videos in your niche to generate 3
@@ -3051,6 +3253,10 @@ sampleData:
     Idea 1: Me pointing at a graph.
     Idea 2: A screenshot of the code.
 isPremium: true
+inputs:
+  - Source Draft
+outputs:
+  - Repurposed Assets
 ---
 
 # Agent Configuration: The Thumbnail Strategy Factory

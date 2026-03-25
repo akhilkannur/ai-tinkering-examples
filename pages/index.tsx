@@ -2,96 +2,85 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Navbar from '../components/Navbar';
-import { Lightbulb, ArrowRight, Zap, Shield, TrendingUp, Users, Brain, Code, Target, Sparkles, Coffee } from 'lucide-react';
 import FeaturedIn from '../components/FeaturedIn';
+import { ArrowRight, Zap, ExternalLink, Wrench } from 'lucide-react';
 
-// Plain-English "Featured Ideas" 
-const featuredIdeas = [
+const featuredExamples = [
   {
-    "id": "10k-report-prospector",
-    "vertical": "Sales",
-    "problem": "Stop manually reading 100-page financial reports.",
-    "what_ai_does": "Scan annual reports to pull out 'Risk Factors' and write personalized emails showing how you can help."
+    slug: "marketing-ops/recap-david-claude-automation",
+    title: "Claude Cowork Automation",
+    category: "Marketing Ops",
+    author: "David Roberts",
+    summary: "Built a Claude Cowork automation to handle daily content marketing tasks, freeing up ~4 hours per week."
   },
   {
-    "id": "churn-detective",
-    "vertical": "HR",
-    "problem": "Identify team burnout before someone quits.",
-    "what_ai_does": "Detect team frustration or 'quiet quitting' in Slack to identify burnout before it happens."
+    slug: "marketing-ops/lkr-connecting-stripe-with-claude-code",
+    title: "Connecting Stripe with Claude Code",
+    category: "Marketing Ops",
+    author: "Laura Roeder",
+    summary: "How to integrate Stripe with Claude Code using read-only API keys to streamline business operations."
   },
   {
-    "id": "canonical-tag-auditor",
-    "vertical": "Marketing",
-    "problem": "Fix the hidden errors hurting your Google rankings.",
-    "what_ai_does": "Find the silent technical errors on your website that prevent your pages from showing up in search results."
+    slug: "competitive-intel/competitor-promotion-schedule-hack",
+    title: "Competitor Promotion Schedule Hack",
+    category: "Competitive Intel",
+    author: "Community",
+    summary: "Reverse-engineer when your competitors run their promotions and plan your own calendar around the gaps."
   },
   {
-    "id": "vendor-negotiation-script",
-    "vertical": "Executive",
-    "problem": "Lower your monthly software bills by 20%.",
-    "what_ai_does": "Lower monthly software bills by 20% by researching competitor prices and drafting negotiation scripts."
+    slug: "strategic-ops/deep-research-13-point-company-overview",
+    title: "Deep Research: 13-Point Company Overview",
+    category: "Strategic Ops",
+    author: "Community",
+    summary: "A structured prompt that generates a comprehensive company analysis covering financials, leadership, and strategy."
   },
   {
-    "id": "contract-redline-risk-spotter",
-    "vertical": "Legal",
-    "problem": "Spot the 'gotchas' in your contracts instantly.",
-    "what_ai_does": "Scan new legal documents to highlight risky clauses like liability or payment terms."
+    slug: "agent-documentation/how-to-write-a-great-agents-md",
+    title: "How to Write a Great agents.md",
+    category: "Agent Documentation",
+    author: "GitHub",
+    summary: "GitHub analyzed 2,500+ repos to find what makes an AI agent file effective. Focus on persona, commands, and boundaries."
   },
   {
-    "id": "qbr-deck-generator",
-    "vertical": "Customer Success",
-    "problem": "Send better client reports in half the time.",
-    "what_ai_does": "Turn raw customer data into a clear story that shows exactly how much value you've delivered."
+    slug: "competitive-intel/turning-podcasts-into-competitive-intel",
+    title: "Turning Podcasts into Competitive Intel",
+    category: "Competitive Intel",
+    author: "Jon Matzner",
+    summary: "Use NotebookLM to analyze competitor podcast appearances and identify strategic details shared by their leadership."
   },
-  {
-    "id": "career-page-keyword-alert",
-    "vertical": "Sales",
-    "problem": "Know exactly when a lead starts hiring.",
-    "what_ai_does": "Get notified the second a target company posts a job for a role that needs your product."
-  },
-  {
-    "id": "monthly-report-generator",
-    "vertical": "Executive",
-    "problem": "Stop sending messy spreadsheets to your board.",
-    "what_ai_does": "Analyze your numbers to write a clear story about what's working for your board."
-  }
 ];
 
-export default function IdeasHomepage() {
+export default function Homepage() {
   return (
     <div className="min-h-screen bg-black text-white selection:bg-[#ccff00] selection:text-black font-mono">
       <Head>
-        <title>How much time can you save this week? | Real AI Examples</title>
-        <meta name="description" content="Browse 668 practical ideas to get your time back. From sales to marketing, find exactly what works for your business." />
+        <title>Real AI Examples — See How People Actually Use AI at Work</title>
+        <meta name="description" content="Curated real-world AI workflows with screenshots. Not prompts. Not tools. Actual examples of people automating sales, marketing, and ops." />
       </Head>
 
       <Navbar />
 
       <main>
-        {/* HERO: PRACTICAL & Conversational */}
+        {/* HERO */}
         <section className="pt-40 pb-24 px-4 border-b border-white/10">
           <div className="container mx-auto max-w-6xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#ccff00] text-black text-[10px] font-black uppercase tracking-widest mb-8">
-              <Coffee className="w-3 h-3" /> Practical Business Ideas
-            </div>
-            
             <h1 className="font-display text-6xl md:text-9xl uppercase leading-[0.8] tracking-tighter mb-12">
-              What Can AI <br />
-              Actually <span className="text-[#ccff00]">Do?</span>
+              Real AI <br />
+              <span className="text-[#ccff00]">Examples.</span>
             </h1>
 
             <div className="grid lg:grid-cols-2 gap-16 items-start">
               <div className="space-y-8">
-                <p className="text-xl md:text-3xl font-bold leading-tight text-white/90">
-                  Stop wasting hours on repetitive tasks. Browse 500+ ideas that save 2-10 hours per week.
+                <p className="text-xl md:text-2xl font-bold leading-tight text-white/90">
+                  Not prompts. Not tool lists. See exactly how real people automate their work with AI — with screenshots and workflows.
                 </p>
                 
                 <div className="pt-6">
                   <Link
-                    href="/ideas-database"
+                    href="/ai-examples"
                     className="inline-flex items-center gap-4 bg-[#ccff00] text-black px-10 py-6 font-display text-2xl uppercase hover:translate-x-1 hover:translate-y-1 transition-transform brutalist-shadow-white"
                   >
-                    Browse 668 Ideas <ArrowRight className="w-8 h-8" strokeWidth={3} />
+                    Browse Examples <ArrowRight className="w-8 h-8" strokeWidth={3} />
                   </Link>
                 </div>
               </div>
@@ -99,15 +88,15 @@ export default function IdeasHomepage() {
               <div className="bg-white/5 border border-white/10 p-8 hidden lg:block">
                  <div className="flex items-center gap-2 mb-6 border-b border-white/10 pb-4">
                    <div className="w-3 h-3 bg-[#ccff00] rounded-full"></div>
-                   <span className="text-[10px] text-white/40 font-black tracking-widest uppercase">Quick Samples / Find Your Business Type</span>
+                   <span className="text-[10px] text-white/40 font-black tracking-widest uppercase">What you'll find here</span>
                 </div>
                 <div className="space-y-4 text-sm font-bold">
-                  <div className="text-[#ccff00]"> {'>'} Sales: Personalized Research</div>
-                  <div className="text-white/40 italic">// Stop reading 100-page reports manually.</div>
-                  <div className="text-[#ccff00] pt-4"> {'>'} HR: Identify Burnout Early</div>
-                  <div className="text-white/40 italic">// Catch team frustration before they quit.</div>
-                  <div className="text-[#ccff00] pt-4"> {'>'} Finance: Lower Your Bills</div>
-                  <div className="text-white/40 italic">// Save 20% on your monthly software costs.</div>
+                  <div className="text-[#ccff00]"> {'>'} Real workflows from Twitter, LinkedIn & Reddit</div>
+                  <div className="text-white/40 italic">// Curated by hand, not generated by AI.</div>
+                  <div className="text-[#ccff00] pt-4"> {'>'} Screenshots of actual results</div>
+                  <div className="text-white/40 italic">// See exactly what the output looks like.</div>
+                  <div className="text-[#ccff00] pt-4"> {'>'} Sales, Marketing, Ops & more</div>
+                  <div className="text-white/40 italic">// Business-first, not toy demos.</div>
                 </div>
               </div>
             </div>
@@ -116,36 +105,43 @@ export default function IdeasHomepage() {
 
         <FeaturedIn />
 
-        {/* SAMPLE IDEAS GRID */}
+        {/* FEATURED EXAMPLES GRID */}
         <section className="py-24 px-4 bg-white/5">
           <div className="container mx-auto max-w-6xl">
             <div className="flex justify-between items-end mb-12">
               <h2 className="font-display text-4xl uppercase leading-[0.9] tracking-tighter">
-                What's <br />
-                <span className="text-[#ccff00]">Possible.</span>
+                Latest <br />
+                <span className="text-[#ccff00]">Examples.</span>
               </h2>
               <div className="text-[10px] font-black uppercase tracking-[0.2em] text-white/40 hidden md:block">
-                Sample ideas that save 2-10 hours per week
+                Curated from real people sharing real workflows
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {featuredIdeas.map((idea) => (
-                <Link key={idea.id} href={`/ideas/${idea.id}`}>
-                  <div className="h-full bg-black border-2 border-white/10 p-6 flex flex-col hover:border-[#ccff00] transition-colors group cursor-pointer relative">
-                    <div className="flex justify-between items-start mb-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {featuredExamples.map((example) => (
+                <Link key={example.slug} href={`/ai-examples/${example.slug}`}>
+                  <div className="h-full bg-black border-2 border-white/10 p-6 flex flex-col hover:border-[#ccff00] transition-colors group cursor-pointer">
+                    <div className="flex justify-between items-start mb-4">
                       <span className="bg-[#ccff00] text-black px-2 py-0.5 text-[10px] font-black uppercase tracking-widest">
-                        {idea.vertical}
+                        {example.category}
                       </span>
+                      <ExternalLink className="w-4 h-4 text-white/20 group-hover:text-[#ccff00] transition-colors" />
                     </div>
                     
-                    <h3 className="text-lg font-black uppercase leading-tight mb-4 group-hover:text-[#ccff00] transition-colors">
-                      {idea.problem}
+                    <h3 className="text-lg font-black uppercase leading-tight mb-3 group-hover:text-[#ccff00] transition-colors">
+                      {example.title}
                     </h3>
-                    
-                    <p className="text-xs text-white/50 leading-relaxed font-bold">
-                      // {idea.what_ai_does}
+
+                    <p className="text-xs text-white/50 leading-relaxed font-bold flex-1">
+                      // {example.summary}
                     </p>
+
+                    <div className="mt-4 pt-4 border-t border-white/10">
+                      <span className="text-[10px] text-white/30 font-black uppercase tracking-widest">
+                        by {example.author}
+                      </span>
+                    </div>
                   </div>
                 </Link>
               ))}
@@ -153,26 +149,78 @@ export default function IdeasHomepage() {
 
             <div className="mt-16 text-center">
               <Link
-                href="/ideas-database"
+                href="/ai-examples"
                 className="inline-flex items-center gap-2 border-2 border-[#ccff00] text-[#ccff00] px-8 py-4 font-black uppercase tracking-widest hover:bg-[#ccff00] hover:text-black transition-colors"
               >
-                Explore All 668 Ideas <ArrowRight className="w-4 h-4" />
+                View All Examples <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           </div>
         </section>
 
-        {/* SECONDARY INFO */}
+        {/* TOOL DIRECTORY TEASER */}
         <section className="py-24 px-4 border-t border-white/10">
-          <div className="container mx-auto max-w-6xl text-center">
-            <p className="text-white/40 font-black uppercase tracking-[0.3em] text-xs mb-8">Work Smarter, Not Harder</p>
-            <h2 className="text-2xl md:text-4xl font-bold max-w-3xl mx-auto leading-tight">
-              Every idea is practical, easy to start, and designed to save you <span className="text-[#ccff00]">real time and money.</span>
-            </h2>
-            <div className="mt-12 flex flex-wrap justify-center gap-12 opacity-30">
-               <div className="flex items-center gap-2"><Target className="w-5 h-5" /> EASY TO START</div>
-               <div className="flex items-center gap-2"><Brain className="w-5 h-5" /> PRACTICAL</div>
+          <div className="container mx-auto max-w-6xl">
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              <div>
+                <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/10 text-white/60 text-[10px] font-black uppercase tracking-widest mb-6">
+                  <Zap className="w-3 h-3" /> Tool Directory
+                </div>
+                <h2 className="font-display text-4xl md:text-5xl uppercase leading-[0.9] tracking-tighter mb-6">
+                  Discover <span className="text-[#ccff00]">AI Tools</span>
+                </h2>
+                <p className="text-lg text-white/60 font-bold mb-8">
+                  Browse 100+ AI tools submitted by builders. From video generation to sales automation — find the right tool for your workflow.
+                </p>
+                <Link
+                  href="/tools"
+                  className="inline-flex items-center gap-2 border-2 border-white/30 text-white px-8 py-4 font-black uppercase tracking-widest hover:bg-white hover:text-black transition-colors"
+                >
+                  Browse Tools <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+              <div className="bg-white/5 border border-white/10 p-8 hidden lg:block">
+                <div className="space-y-3 text-sm font-bold">
+                  <div className="flex justify-between items-center py-3 border-b border-white/10">
+                    <span className="text-white/80">Video & Audio</span>
+                    <span className="text-[#ccff00] text-xs">Featured</span>
+                  </div>
+                  <div className="flex justify-between items-center py-3 border-b border-white/10">
+                    <span className="text-white/80">Marketing</span>
+                    <span className="text-white/30 text-xs">20+ tools</span>
+                  </div>
+                  <div className="flex justify-between items-center py-3 border-b border-white/10">
+                    <span className="text-white/80">Productivity</span>
+                    <span className="text-white/30 text-xs">30+ tools</span>
+                  </div>
+                  <div className="flex justify-between items-center py-3">
+                    <span className="text-white/80">Code Assistance</span>
+                    <span className="text-white/30 text-xs">15+ tools</span>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
+        </section>
+
+        {/* SETUP SERVICE CTA */}
+        <section className="py-24 px-4 bg-[#ccff00] text-black">
+          <div className="container mx-auto max-w-4xl text-center">
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-black text-[#ccff00] text-[10px] font-black uppercase tracking-widest mb-8">
+              <Wrench className="w-3 h-3" /> Done-With-You
+            </div>
+            <h2 className="font-display text-4xl md:text-6xl uppercase leading-[0.9] tracking-tighter mb-6">
+              Want Someone to<br />Set This Up For You?
+            </h2>
+            <p className="text-lg md:text-xl font-bold mb-8 max-w-2xl mx-auto opacity-80">
+              Book a 90-minute sprint. I'll install the AI tools on your machine and build 3 workflows with you. $99, money-back guarantee.
+            </p>
+            <Link
+              href="/agent-setup-service"
+              className="inline-flex items-center gap-4 bg-black text-[#ccff00] px-10 py-6 font-display text-2xl uppercase hover:translate-x-1 hover:translate-y-1 transition-transform"
+            >
+              Book My Sprint <ArrowRight className="w-8 h-8" strokeWidth={3} />
+            </Link>
           </div>
         </section>
       </main>

@@ -9,17 +9,23 @@ id: instagram-blueprint-poster
 category: Social Media
 title: The Instagram Blueprint Auto-Poster
 tagline: Turn your documentation into viral social cards.
-difficulty: Advanced
-time: Automatic
 description: >-
-  Automatically converts technical blueprints, markdown files, or documentation into high-resolution 1080x1080 Instagram cards and publishes them directly to your business page using the Meta Graph API.
+  Automatically converts technical blueprints, markdown files, or documentation
+  into high-resolution 1080x1080 Instagram cards and publishes them directly to
+  your business page using the Meta Graph API.
 sampleData:
   filename: social_posts.csv
   content: >
-    Title,Category,Tagline,Slug
-    "The Content Pillar Analyst","Strategic Ops","Steal the content strategy that is working for your rivals.","competitor-content-pillar-analyst"
-    "The Caption Formatting Factory","Content Ops","Format 30 days of social captions in seconds.","instagram-caption-spacer"
+    Title,Category,Tagline,Slug "The Content Pillar Analyst","Strategic
+    Ops","Steal the content strategy that is working for your
+    rivals.","competitor-content-pillar-analyst" "The Caption Formatting
+    Factory","Content Ops","Format 30 days of social captions in
+    seconds.","instagram-caption-spacer"
 isPremium: true
+inputs:
+  - Instruction File
+outputs:
+  - Done Result
 ---
 
 # Agent Configuration: The Instagram Blueprint Auto-Poster

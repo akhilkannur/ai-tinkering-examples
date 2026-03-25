@@ -9,8 +9,6 @@ id: attribution-modeler
 category: CRO
 title: The Attribution Modeler
 tagline: Who actually deserves credit?
-difficulty: Advanced
-time: Monthly
 archetype: Processor
 description: >-
   Facebook says they drove the sale. Google says they did. This agent compares
@@ -23,6 +21,12 @@ sampleData:
     1,Facebook > Google > Direct,100
     2,Google > Direct,50
 isPremium: false
+inputs:
+  - Conversion Data
+  - Local File (CSV/MD)
+outputs:
+  - A/B Experiment Ideas
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Data Scientist
@@ -68,8 +72,6 @@ id: attribution-window-comparator
 category: CRO
 title: Attribution Window Comparer
 tagline: 1-day vs 7-day click impact.
-difficulty: Advanced
-time: Monthly
 archetype: Processor
 description: >-
   Compares revenue attributed under a 1-day click vs 7-day click window to
@@ -81,6 +83,12 @@ sampleData:
     FB_Promo,1000,5000
     Google_Brand,2000,2100
 isPremium: false
+inputs:
+  - Conversion Data
+  - Local File (CSV/MD)
+outputs:
+  - A/B Experiment Ideas
+  - Cleaned Data
 ---
 # Agent Configuration: The Attribution Specialist
 
@@ -119,8 +127,6 @@ id: basket-analysis-market-basket
 category: CRO
 title: Basket Correlation Engine
 tagline: People who buy A also buy B.
-difficulty: Advanced
-time: Monthly
 archetype: Processor
 description: >-
   Finds correlations between products in the same order to power 'Frequently
@@ -132,6 +138,12 @@ sampleData:
     1,Shampoo;Conditioner
     2,Shampoo;Soap
 isPremium: false
+inputs:
+  - Conversion Data
+  - Local File (CSV/MD)
+outputs:
+  - A/B Experiment Ideas
+  - Cleaned Data
 ---
 # Agent Configuration: The Data Scientist Agent
 
@@ -171,8 +183,6 @@ id: cac-by-month-tracker
 category: CRO
 title: The Efficiency Hawk
 tagline: Detect when your acquisition engine is breaking.
-difficulty: Intermediate
-time: Monthly
 archetype: Processor
 description: >-
   CAC creeps up slowly, then all at once. This agent monitors your Blended CAC
@@ -185,6 +195,12 @@ sampleData:
     Jan,5000,50,1000,0.05
     Feb,8000,40,2000,0.02
 isPremium: false
+inputs:
+  - Conversion Data
+  - Local File (CSV/MD)
+outputs:
+  - A/B Experiment Ideas
+  - Cleaned Data
 ---
 # Agent Configuration: The FP&A Analyst
 
@@ -231,8 +247,6 @@ id: checkout-funnel-dropoff
 category: CRO
 title: Checkout Flow Analyzer
 tagline: Do they drop off at Shipping or Payment?
-difficulty: Intermediate
-time: Monthly
 archetype: Processor
 description: >-
   Identifies the specific step (Shipping Info vs Payment Method) where users
@@ -244,6 +258,12 @@ sampleData:
     Shipping,1000,900
     Payment,900,500
 isPremium: false
+inputs:
+  - Conversion Data
+  - Local File (CSV/MD)
+outputs:
+  - A/B Experiment Ideas
+  - Cleaned Data
 ---
 # Agent Configuration: The UX Researcher
 
@@ -283,8 +303,6 @@ id: cta-button-optimizer
 category: CRO
 title: The CTA Button Optimizer
 tagline: Make them click.
-difficulty: Beginner
-time: Batch
 description: >-
   Generic buttons like 'Submit' kill conversion. This agent rewrites your
   Call-to-Action (CTA) buttons to be value-driven and suggests color/placement
@@ -297,6 +315,10 @@ sampleData:
     Pricing,Buy Now,Purchase Pro Plan
     Ebook Landing,Download,Get the PDF guide
 isPremium: false
+inputs:
+  - Conversion Data
+outputs:
+  - A/B Experiment Ideas
 ---
 
 # Agent Configuration: The CTA Button Optimizer
@@ -344,8 +366,6 @@ id: customer-support-vs-ltv
 category: CRO
 title: Support Cost vs LTV
 tagline: Are needy customers worth it?
-difficulty: Advanced
-time: Yearly
 archetype: Processor
 description: >-
   Checks if customers with high support ticket volume actually have higher or
@@ -357,6 +377,12 @@ sampleData:
     John,50,100
     Jane,0,500
 isPremium: false
+inputs:
+  - Conversion Data
+  - Local File (CSV/MD)
+outputs:
+  - A/B Experiment Ideas
+  - Cleaned Data
 ---
 # Agent Configuration: The Profitability Ops
 
@@ -396,8 +422,6 @@ id: discount-code-leakage-monitor
 category: CRO
 title: Coupon Leak Detector
 tagline: Did Honey scrape your exclusive code?
-difficulty: Intermediate
-time: Weekly
 archetype: Processor
 description: >-
   Finds discount codes with suspicious usage spikes (e.g. 1000 uses in 1 hour)
@@ -409,6 +433,12 @@ sampleData:
     WELCOME20,5,5
     VIP_SECRET,500,2
 isPremium: false
+inputs:
+  - Conversion Data
+  - Local File (CSV/MD)
+outputs:
+  - A/B Experiment Ideas
+  - Cleaned Data
 ---
 # Agent Configuration: The Margin Guardian
 
@@ -448,8 +478,6 @@ id: heatmap-predictor
 category: CRO
 title: The Heatmap Predictor
 tagline: See where they look before you launch.
-difficulty: Beginner
-time: Design Phase
 archetype: Processor
 description: >-
   Heatmaps usually require traffic. This agent analyzes a screenshot of your
@@ -464,6 +492,12 @@ sampleData:
     Hero Image,Blue,Huge,Center,Yes
     Footer Link,Gray,Small,Bottom,No
 isPremium: true
+inputs:
+  - Conversion Data
+  - Local File (CSV/MD)
+outputs:
+  - A/B Experiment Ideas
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Neuro-Marketer
@@ -512,8 +546,6 @@ id: landing-page-clarity-score-vision
 category: CRO
 title: The "5-Second Test" Simulator
 tagline: Simulate a user's first 5 seconds on your landing page.
-difficulty: Intermediate
-time: Real-time
 archtype: Processor
 description: >-
   Uses Vision AI to look at your landing page hero section. It outputs the top 3
@@ -525,6 +557,10 @@ sampleData:
     Page_Name,Screenshot_Path
     Home_V1,./screens/home_v1.png
 isPremium: true
+inputs:
+  - Conversion Data
+outputs:
+  - A/B Experiment Ideas
 ---
 
 # Agent Configuration: The "5-Second Test" Simulator
@@ -563,8 +599,6 @@ id: landing-page-hero-auditor
 category: CRO
 title: The Landing Page Hero Auditor
 tagline: Fix your site's first 5 seconds.
-difficulty: Beginner
-time: Batch
 description: >-
   50% of users bounce in 5 seconds. This agent audits your Hero Sections (H1,
   Subhead, CTA) against the 'Grunt Test' for an entire portfolio of landing
@@ -583,6 +617,10 @@ sampleData:
     Ebook,Master your productivity today,Download our free guide to get more
     done,Freelancers
 isPremium: true
+inputs:
+  - Conversion Data
+outputs:
+  - A/B Experiment Ideas
 ---
 
 # Agent Configuration: The Landing Page Hero Auditor
@@ -634,8 +672,6 @@ id: landing-page-intent-matcher
 category: CRO
 title: Ad-to-Page Matcher
 tagline: Does the Landing Page match the Ad?
-difficulty: Advanced
-time: Monthly
 archetype: Processor
 description: >-
   Matches ad keywords to landing page H1 tags to ensure message consistency
@@ -647,6 +683,12 @@ sampleData:
     Cheap Shoes,Luxury Boots
     Running Gear,Best Running Gear
 isPremium: true
+inputs:
+  - Conversion Data
+  - Local File (CSV/MD)
+outputs:
+  - A/B Experiment Ideas
+  - Cleaned Data
 ---
 # Agent Configuration: The PPC Manager
 
@@ -686,8 +728,6 @@ id: landing-page-optimizer
 category: CRO
 title: The LP Optimizer
 tagline: A/B test ideas at scale.
-difficulty: Intermediate
-time: Batch
 description: >-
   Analyzes landing pages against top competitors and suggests psychological A/B
   tests to improve conversion rates for your entire portfolio.
@@ -699,6 +739,10 @@ sampleData:
     Pricing,https://mysite.com/pricing,Pro Plan Purchase
     Demo,https://mysite.com/demo,Book a Demo
 isPremium: true
+inputs:
+  - Conversion Data
+outputs:
+  - A/B Experiment Ideas
 ---
 
 # Agent Configuration: The LP Optimizer
@@ -748,8 +792,6 @@ id: mobile-desktop-conversion-audit
 category: CRO
 title: Device Conversion Gap
 tagline: Is your mobile site killing sales?
-difficulty: Intermediate
-time: Monthly
 archetype: Processor
 description: >-
   Compares conversion rates between Mobile and Desktop traffic to identify
@@ -761,6 +803,12 @@ sampleData:
     Home,2.0,2.5
     Product_A,0.5,3.0
 isPremium: true
+inputs:
+  - Conversion Data
+  - Local File (CSV/MD)
+outputs:
+  - A/B Experiment Ideas
+  - Cleaned Data
 ---
 # Agent Configuration: The Mobile UX Specialist
 
@@ -800,8 +848,6 @@ id: nps-by-product-scorer
 category: CRO
 title: Product Satisfaction Score
 tagline: Which product makes people happiest?
-difficulty: Intermediate
-time: Quarterly
 archetype: Processor
 description: >-
   Scores products based on the Net Promoter Score (NPS) of customers who bought
@@ -814,6 +860,12 @@ sampleData:
     SmallBiz,Starter_Plan,10,500,"Love it, works great"
     MedCorp,Pro_Plan,5,25000,"Too expensive for what it does"
 isPremium: true
+inputs:
+  - Conversion Data
+  - Local File (CSV/MD)
+outputs:
+  - A/B Experiment Ideas
+  - Cleaned Data
 ---
 # Agent Configuration: The Customer Sentiment Architect
 
@@ -855,8 +907,6 @@ id: one-time-buyer-analysis
 category: CRO
 title: One-and-Done Profiler
 tagline: Why do they leave after 1 buy?
-difficulty: Intermediate
-time: Quarterly
 archetype: Processor
 description: >-
   Profiles customers who bought once and never returned to find commonalities
@@ -868,6 +918,12 @@ sampleData:
     John,Sock_Bundle,TikTok
     Jane,Hat,SEO
 isPremium: true
+inputs:
+  - Conversion Data
+  - Local File (CSV/MD)
+outputs:
+  - A/B Experiment Ideas
+  - Cleaned Data
 ---
 # Agent Configuration: The Churn Analyst
 
@@ -906,8 +962,6 @@ id: oos-traffic-redirector
 category: CRO
 title: OOS Traffic Preserver
 tagline: Don't let Out-of-Stock traffic bounce.
-difficulty: Intermediate
-time: Weekly
 archetype: Processor
 description: >-
   Identifies high-traffic Out-of-Stock pages to set up temporary redirects to
@@ -919,6 +973,12 @@ sampleData:
     /blue-shirt,500,OOS
     /red-shirt,10,OOS
 isPremium: true
+inputs:
+  - Conversion Data
+  - Local File (CSV/MD)
+outputs:
+  - A/B Experiment Ideas
+  - Cleaned Data
 ---
 # Agent Configuration: The SEO Manager
 
@@ -957,8 +1017,6 @@ id: popup-engagement-tracker
 category: CRO
 title: Pop-up Efficiency Tracker
 tagline: Which pop-up captures the most emails?
-difficulty: Beginner
-time: Weekly
 archetype: Processor
 description: >-
   Measures the 'Email Capture Rate' of different exit-intent or time-delayed
@@ -970,6 +1028,12 @@ sampleData:
     Exit_Intent,5000,100
     Time_Delay,5000,50
 isPremium: true
+inputs:
+  - Conversion Data
+  - Local File (CSV/MD)
+outputs:
+  - A/B Experiment Ideas
+  - Cleaned Data
 ---
 # Agent Configuration: The List Growth Manager
 
@@ -1009,8 +1073,6 @@ id: pricing-page-psychologist
 category: CRO
 title: The Pricing Auditor
 tagline: Audit 10 pricing pages for conversion leaks.
-difficulty: Intermediate
-time: 10 mins
 description: >-
   Audit your own pricing and your competitors' simultaneously. This agent
   analyzes a list of URLs against behavioral psychology principles and suggests
@@ -1022,6 +1084,10 @@ sampleData:
     Our Site,https://yoursite.com/pricing
     Competitor A,https://competitor.com/plans
 isPremium: true
+inputs:
+  - Conversion Data
+outputs:
+  - A/B Experiment Ideas
 ---
 
 # Agent Configuration: The Pricing Auditor
@@ -1068,8 +1134,6 @@ id: product-page-traffic-sales
 category: CRO
 title: PDP Performance Auditor
 tagline: 'High traffic, no sales?'
-difficulty: Intermediate
-time: Weekly
 archetype: Processor
 description: >-
   Compares 'Page Views' to 'Add to Carts' to find underperforming product detail
@@ -1081,6 +1145,12 @@ sampleData:
     /prod-a,1000,50
     /prod-b,5000,10
 isPremium: true
+inputs:
+  - Conversion Data
+  - Local File (CSV/MD)
+outputs:
+  - A/B Experiment Ideas
+  - Cleaned Data
 ---
 # Agent Configuration: The CRO Specialist
 
@@ -1120,8 +1190,6 @@ id: product-usage-frequency-mapper
 category: CRO
 title: Power User Identifier
 tagline: Who logs in every single day?
-difficulty: Beginner
-time: Monthly
 archtype: Processor
 description: Segments users based on login frequency (DAU/MAU) to find your champions.
 sampleData:
@@ -1132,6 +1200,10 @@ sampleData:
     Alice,2023-10-02
     Bob,2023-10-01
 isPremium: true
+inputs:
+  - Conversion Data
+outputs:
+  - A/B Experiment Ideas
 ---
 
 # Agent Configuration: The Community Manager
@@ -1179,8 +1251,6 @@ id: refund-rate-marketing-channel
 category: CRO
 title: Quality of Traffic Audit
 tagline: Which ads drive returns?
-difficulty: Advanced
-time: Monthly
 archetype: Processor
 description: >-
   Checks if certain marketing channels drive 'Bad Quality' customers who return
@@ -1192,6 +1262,12 @@ sampleData:
     1,TikTok,Returned
     2,SEO,Kept
 isPremium: true
+inputs:
+  - Conversion Data
+  - Local File (CSV/MD)
+outputs:
+  - A/B Experiment Ideas
+  - Cleaned Data
 ---
 # Agent Configuration: The Marketing Analyst
 
@@ -1231,8 +1307,6 @@ id: repeat-purchase-rate-tracker
 category: CRO
 title: Repurchase Rate Monitor
 tagline: '% of new customers who buy again.'
-difficulty: Intermediate
-time: Monthly
 archetype: Processor
 description: >-
   Monitors the percentage of new customers who make a second purchase within a
@@ -1244,6 +1318,12 @@ sampleData:
     John,2023-01-01,2023-02-01
     Jane,2023-01-01,NULL
 isPremium: true
+inputs:
+  - Conversion Data
+  - Local File (CSV/MD)
+outputs:
+  - A/B Experiment Ideas
+  - Cleaned Data
 ---
 # Agent Configuration: The Retention Lead
 
@@ -1283,8 +1363,6 @@ id: review-miner-pm
 category: CRO
 title: The Competitive Review Miner
 tagline: Audit the entire market's weaknesses.
-difficulty: Advanced
-time: 30 mins
 description: >-
   Scrapes negative reviews for a list of competitors, identifies missing
   features across the market, and ranks them by revenue impact to build a
@@ -1296,6 +1374,10 @@ sampleData:
     Salesforce,https://www.g2.com/products/salesforce-sales-cloud/reviews
     HubSpot,https://www.g2.com/products/hubspot-sales-hub/reviews
 isPremium: true
+inputs:
+  - Conversion Data
+outputs:
+  - A/B Experiment Ideas
 ---
 
 # Agent Configuration: The Competitive Review Miner
@@ -1342,8 +1424,6 @@ id: review-sentiment-analyzer
 category: CRO
 title: Review Sentiment Correlation
 tagline: Do bad reviews tank conversion?
-difficulty: Advanced
-time: Monthly
 archetype: Processor
 description: >-
   Correlates 'Negative Review Count' with 'Conversion Rate Drops' on a PDP level
@@ -1355,6 +1435,12 @@ sampleData:
     /prod-1,5,1.2
     /prod-2,0,3.5
 isPremium: true
+inputs:
+  - Conversion Data
+  - Local File (CSV/MD)
+outputs:
+  - A/B Experiment Ideas
+  - Cleaned Data
 ---
 # Agent Configuration: The Reputation Manager
 
@@ -1394,8 +1480,6 @@ id: sales-velocity-day-of-week
 category: CRO
 title: Peak Sales Timer
 tagline: Best day to send emails?
-difficulty: Beginner
-time: Quarterly
 archetype: Processor
 description: >-
   Identifies the day of the week with the highest average sales velocity to
@@ -1407,6 +1491,12 @@ sampleData:
     2023-10-01,Sunday,5000
     2023-10-02,Monday,2000
 isPremium: true
+inputs:
+  - Conversion Data
+  - Local File (CSV/MD)
+outputs:
+  - A/B Experiment Ideas
+  - Cleaned Data
 ---
 # Agent Configuration: The Sales Timing Optimizer
 
@@ -1447,8 +1537,6 @@ id: site-speed-sales-impact
 category: CRO
 title: Speed vs Revenue Calc
 tagline: How much does a slow site cost you?
-difficulty: Intermediate
-time: Monthly
 archetype: Processor
 description: >-
   Correlates page load times with conversion rates to calculate revenue lost due
@@ -1461,6 +1549,12 @@ sampleData:
     2,2.5,1000
     4,1.0,1000
 isPremium: true
+inputs:
+  - Conversion Data
+  - Local File (CSV/MD)
+outputs:
+  - A/B Experiment Ideas
+  - Cleaned Data
 ---
 # Agent Configuration: The Technical Marketer
 
@@ -1500,8 +1594,6 @@ id: sql-cohort-analyzer
 category: CRO
 title: The SQL Cohort Builder
 tagline: Standardize your retention metrics.
-difficulty: Advanced
-time: Batch
 description: >-
   Retention is the lifeblood of SaaS. This agent generates the complex SQL
   queries needed to calculate monthly retention cohorts across all your database
@@ -1514,6 +1606,10 @@ sampleData:
     Staging,test_users,test_events,registered_on
     Legacy,member_db,activity_log,join_date
 isPremium: true
+inputs:
+  - Conversion Data
+outputs:
+  - A/B Experiment Ideas
 ---
 
 # Agent Configuration: The SQL Cohort Builder
@@ -1560,8 +1656,6 @@ id: trust-badge-tester
 category: CRO
 title: Trust Badge A/B Analyzer
 tagline: Does 'Secure Checkout' actually help?
-difficulty: Beginner
-time: Batch
 archetype: Processor
 description: >-
   Analyzes A/B test results for different trust badges (Free Shipping vs Secure
@@ -1574,6 +1668,12 @@ sampleData:
     Badge_A,1000,25
     Badge_B,1000,18
 isPremium: true
+inputs:
+  - Conversion Data
+  - Local File (CSV/MD)
+outputs:
+  - A/B Experiment Ideas
+  - Cleaned Data
 ---
 # Agent Configuration: The Optimization Lead
 
@@ -1613,8 +1713,6 @@ id: user-onboarding-dropout-finder
 category: CRO
 title: Onboarding Leak Detector
 tagline: Where do users quit during setup?
-difficulty: Intermediate
-time: Weekly
 archtype: Processor
 description: >-
   Analyzes the last completed step for incomplete onboarding flows to identify
@@ -1628,6 +1726,10 @@ sampleData:
     3,Email Verification
     4,Payment Setup
 isPremium: true
+inputs:
+  - Conversion Data
+outputs:
+  - A/B Experiment Ideas
 ---
 
 # Agent Configuration: The Growth PM
@@ -1675,8 +1777,6 @@ id: ux-vision-auditor
 category: CRO
 title: The UX Vision Auditor
 tagline: An eye-tracking lab in your terminal.
-difficulty: Experimental
-time: Batch
 description: >-
   Why aren't they converting? This agent uses Vision capabilities to audit
   multiple landing page screenshots, identifying visual clutter, low-contrast
@@ -1689,6 +1789,10 @@ sampleData:
     Pricing,assets/ux/pricing_mobile.png,Mobile
     Signup,assets/ux/signup_form.webp,Desktop
 isPremium: true
+inputs:
+  - Conversion Data
+outputs:
+  - A/B Experiment Ideas
 ---
 
 # Agent Configuration: The UX Vision Auditor
@@ -1739,8 +1843,6 @@ id: viral-loop-architect
 category: CRO
 title: The Growth Loop Architect
 tagline: Design referral engines for every user segment.
-difficulty: Advanced
-time: 30 mins
 isPremium: true
 description: >-
   A single referral program isn't enough. This agent reads a list of user
@@ -1753,6 +1855,10 @@ sampleData:
     Power Users,Bulk exporting,Credits
     Managers,Team reporting,Seats
     Creators,Publishing,Reach
+inputs:
+  - Conversion Data
+outputs:
+  - A/B Experiment Ideas
 ---
 
 # Agent Configuration: The Growth Loop Architect
@@ -1796,8 +1902,6 @@ id: zero-result-search-opportunity
 category: CRO
 title: Zero-Result Search Auditor
 tagline: What are people searching for that you don't have?
-difficulty: Intermediate
-time: Weekly
 archetype: Processor
 description: >-
   Identifies site search terms that yield 0 products to guide merchandising or
@@ -1809,6 +1913,12 @@ sampleData:
     red shoes,50
     blue suede boots,0
 isPremium: true
+inputs:
+  - Conversion Data
+  - Local File (CSV/MD)
+outputs:
+  - A/B Experiment Ideas
+  - Cleaned Data
 ---
 # Agent Configuration: The Site Merchandiser
 

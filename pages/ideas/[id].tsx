@@ -29,6 +29,7 @@ export default function IdeaDetailPage({ idea }) {
   return (
     <div className="min-h-screen bg-black text-white selection:bg-[#ccff00] selection:text-black font-mono">
       <Head>
+        <meta name="robots" content="noindex, nofollow" />
         <title>{idea.name} | Real AI Examples</title>
         <meta name="description" content={idea.problem} />
       </Head>

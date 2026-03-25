@@ -47,6 +47,7 @@ export default function HowToPage({ recipe, problemTitle, relatedRecipes }: HowT
   return (
     <div className="min-h-screen bg-primary-bg font-sans text-text-color selection:bg-accent selection:text-white">
       <Head>
+        <meta name="robots" content="noindex, nofollow" />
         <title>{pageTitle}</title>
         <meta name="description" content={description} key="description" />
         <link rel="canonical" href={pageUrl} key="canonical" />

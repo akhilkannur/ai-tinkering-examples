@@ -1,4 +1,4 @@
-# AI Tinkering Examples - Robots.txt
+# Real AI Examples - Robots.txt
 
 User-agent: *
 Allow: /
@@ -11,10 +11,31 @@ Disallow: /debug
 Disallow: /api/
 Allow: /api/og
 
-# Allow all AI example pages
+# Allow core pages
 Allow: /ai-examples/
 Allow: /ai-examples/category/
 Allow: /ai-examples/tag/
+Allow: /tools/
+Allow: /blog/
 
-# Crawl delay (optional - helps prevent overwhelming your server)
+# Block dead/removed sections
+Disallow: /skills/
+Disallow: /ideas/
+Disallow: /how-to/
+Disallow: /generators/
+Disallow: /playbook/
+Disallow: /500-ways-to-use-llms-for-work
+Disallow: /ai-workplace-quiz
+Disallow: /ai-workplace-personality
+Disallow: /build-club
+Disallow: /prompt-bundle
+Disallow: /context
+Disallow: /investors
+Disallow: /jobs
+Disallow: /learn-ai
+Disallow: /skill-architect
+Disallow: /stacks
+Disallow: /ideas-database
+
+# Crawl delay
 Crawl-delay: 1

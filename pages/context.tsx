@@ -16,6 +16,7 @@ export default function ContextLibrary() {
   return (
     <div className="min-h-screen bg-primary-bg font-sans text-black selection:bg-[#ff00ff] selection:text-white">
       <Head>
+        <meta name="robots" content="noindex, nofollow" />
         <title>Master Skills | Real AI Examples</title>
         <meta name="description" content="500+ consolidated AI blueprints. One file per department. Drop in and go." />
       </Head>

@@ -27,6 +27,7 @@ export default function IdeasDatabase() {
   return (
     <div className="min-h-screen bg-black text-white selection:bg-[#ccff00] selection:text-black font-mono">
       <Head>
+        <meta name="robots" content="noindex, nofollow" />
         <title>668 Practical Ideas to Save Time | Real AI Examples</title>
         <meta name="description" content="Browse 668 simple ideas to get your time back. From sales to marketing, find exactly what works for your business." />
       </Head>

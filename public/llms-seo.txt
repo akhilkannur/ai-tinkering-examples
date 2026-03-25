@@ -5,11 +5,21 @@ URL: https://realaiexamples.com/skills/ai-internal-linking-agent
 Description: Stop manually hunting for anchor text. Let AI map your internal linking strategy.
 
 ---
-title: "AI Internal Linking Agent"
+title: AI Internal Linking Agent
 id: ai-internal-linking-agent
 category: SEO
-tagline: "Stop manually hunting for anchor text. Let AI map your internal linking strategy."
-description: "A specialized agent that reads your entire content library and identifies the exact spots where you should link to other pages to boost your domain authority."
+tagline: >-
+  Stop manually hunting for anchor text. Let AI map your internal linking
+  strategy.
+description: >-
+  A specialized agent that reads your entire content library and identifies the
+  exact spots where you should link to other pages to boost your domain
+  authority.
+isPremium: true
+inputs:
+  - Target URL
+outputs:
+  - SEO Audit / Fixes
 ---
 
 # The Internal Link Bottleneck
@@ -63,8 +73,6 @@ id: alternative-to-builder
 category: SEO
 title: The 'Alternative To' Hub Builder
 tagline: Steal traffic from all your competitors at once.
-difficulty: Advanced
-time: 30 mins
 archetype: Hybrid
 description: >-
   High-intent buyers search for 'Alternatives to [Competitor]'. This agent reads
@@ -78,6 +86,12 @@ sampleData:
     HubSpot,Marketing Automation
     Pipedrive,SMB Sales
 isPremium: false
+inputs:
+  - Target URL
+  - Local File + Search
+outputs:
+  - SEO Audit / Fixes
+  - Enriched Document
 ---
 
 # Agent Configuration: The 'Alternative To' Hub Builder
@@ -121,8 +135,6 @@ id: app-store-screenshot-optimizer
 category: SEO
 title: The App Store Screenshot Optimizer
 tagline: 'More downloads, same traffic.'
-difficulty: Intermediate
-time: Batch
 archetype: Hybrid
 description: >-
   Screenshots are your app's billboard. This agent researches top-ranking
@@ -136,6 +148,12 @@ sampleData:
     Duolingo,Education,Language Learning
     Notion,Productivity,Note Taking
 isPremium: false
+inputs:
+  - Target URL
+  - Local File + Search
+outputs:
+  - SEO Audit / Fixes
+  - Enriched Document
 ---
 
 # Agent Configuration: The App Store Screenshot Optimizer
@@ -185,8 +203,6 @@ id: backlink-quality-scorer
 category: SEO
 title: Backlink Quality Auditor
 tagline: Filter the gold from the spam.
-difficulty: Intermediate
-time: Monthly
 archtype: Processor
 description: >-
   Scores a list of backlinks based on Domain Authority (DA) and Spam Score
@@ -199,6 +215,10 @@ sampleData:
     spammy.xyz,10,60
     medium.com,90,5
 isPremium: false
+inputs:
+  - Target URL
+outputs:
+  - SEO Audit / Fixes
 ---
 
 # Agent Configuration: The Link Builder
@@ -245,8 +265,6 @@ id: backlink-toxicity-checker
 category: SEO
 title: The Backlink Toxicity Checker
 tagline: Is that link helping or hurting?
-difficulty: Intermediate
-time: Monthly
 archetype: Processor
 description: >-
   Not all links are good. This agent audits a list of backlinks for 'Risk
@@ -259,6 +277,12 @@ sampleData:
     baddomain.xyz/links,5,60,Buy Viagar,.xyz
     goodblog.com/post,45,2,Marketing Tips,.com
 isPremium: false
+inputs:
+  - Target URL
+  - Local File (CSV/MD)
+outputs:
+  - SEO Audit / Fixes
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Bodyguard
@@ -304,8 +328,6 @@ id: broken-image-finder
 category: SEO
 title: Broken Image Hunter
 tagline: Find images returning 404 errors.
-difficulty: Beginner
-time: Monthly
 archtype: Processor
 description: Parses a list of image URLs and their status codes to identify broken assets.
 sampleData:
@@ -315,6 +337,10 @@ sampleData:
     img1.jpg,200
     img2.png,404
 isPremium: false
+inputs:
+  - Target URL
+outputs:
+  - SEO Audit / Fixes
 ---
 
 # Agent Configuration: The SEO Site Health Guardian
@@ -364,8 +390,6 @@ id: canonical-tag-auditor
 category: SEO
 title: The Technical SEO Doctor
 tagline: 'One scan to find Canonical conflicts, NoIndex errors, and Broken Links.'
-difficulty: Intermediate
-time: Monthly
 archetype: Hybrid
 description: >-
   Technical debt is invisible until traffic drops. This agent crawls a list of
@@ -378,6 +402,12 @@ sampleData:
     https://yoursite.com/
     https://yoursite.com/blog/post-1
 isPremium: false
+inputs:
+  - Target URL
+  - Local File + Search
+outputs:
+  - SEO Audit / Fixes
+  - Enriched Document
 ---
 
 # Agent Configuration: The Technical SEO Doctor
@@ -425,8 +455,6 @@ id: canonical-url-verifier
 category: SEO
 title: Canonical Tag Consistency
 tagline: Prevent duplicate content issues.
-difficulty: Advanced
-time: Monthly
 archtype: Processor
 description: Checks if the page URL matches the Canonical URL tag. Flags mismatches.
 sampleData:
@@ -437,6 +465,10 @@ sampleData:
     /product-a?ref=123,/product-a
     /blog/duplicate,/blog/original
 isPremium: false
+inputs:
+  - Target URL
+outputs:
+  - SEO Audit / Fixes
 ---
 
 # Agent Configuration: The SEO Technical Auditor
@@ -484,14 +516,12 @@ id: content-decay-alerter
 category: SEO
 title: The Content Relevance Guard
 tagline: Prevent Semantic Decay.
-difficulty: Intermediate
-time: Monthly
 archetype: Processor
 description: >-
-  Goes beyond traffic stats to detect "Semantic Decay." This agent analyzes 
-  if your content is becoming outdated compared to current AI search trends 
-  and rising industry entities, flagging exactly what needs refreshing to 
-  stay competitive.
+  Goes beyond traffic stats to detect "Semantic Decay." This agent analyzes  if
+  your content is becoming outdated compared to current AI search trends  and
+  rising industry entities, flagging exactly what needs refreshing to  stay
+  competitive.
 sampleData:
   filename: traffic_data.csv
   content: |
@@ -500,6 +530,12 @@ sampleData:
     /blog/old-playbook,100,200,2023-06-15
     /blog/new-launch,1000,500,2025-01-10
 isPremium: false
+inputs:
+  - Target URL
+  - Local File (CSV/MD)
+outputs:
+  - SEO Audit / Fixes
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Content Relevance Guard
@@ -532,6 +568,7 @@ For each URL:
 1.  **Create:** `refresh_priority_list.csv` with columns: `URL`, `Traffic_Lost`, `Semantic_Gap_Type`, `Priority_Score`, `Quick_Fix_Action`.
 2.  **Report:** "Successfully audited [X] pages. [Y] pages are suffering from Semantic Decay and need immediate entity-level updates."
 
+
 ---
 
 ## Content Decay Detector
@@ -543,8 +580,6 @@ id: content-decay-audit
 category: SEO
 title: Content Decay Detector
 tagline: Find blog posts losing traffic.
-difficulty: Intermediate
-time: Monthly
 archtype: Processor
 description: >-
   Compares organic traffic from 6 months ago vs today to identify pages needing
@@ -556,6 +591,10 @@ sampleData:
     /blog/guide-1,1000,200
     /blog/guide-2,500,550
 isPremium: true
+inputs:
+  - Target URL
+outputs:
+  - SEO Audit / Fixes
 ---
 
 # Agent Configuration: The Content Strategist
@@ -603,8 +642,6 @@ id: content-refresh-detector
 category: SEO
 title: The Portfolio Refresh Engine
 tagline: Revive dead content across 10 domains.
-difficulty: Intermediate
-time: Monthly
 description: >-
   Google punishes stale sites. This agent reads a list of domains from a CSV,
   crawls their sitemaps to find posts older than 12 months, and generates a
@@ -616,6 +653,10 @@ sampleData:
     Main_Blog,https://yoursite.com/sitemap.xml
     Microsite_A,https://microsite.com/sitemap.xml
 isPremium: true
+inputs:
+  - Target URL
+outputs:
+  - SEO Audit / Fixes
 ---
 
 # Agent Configuration: The Portfolio Refresh Engine
@@ -661,8 +702,6 @@ title: The Indexing Strategist
 tagline: >-
   Your 10k new pages won't rank if Googlebot ignores them. Predict and fix
   indexing lag.
-difficulty: Advanced
-time: Monthly
 archetype: Processor
 description: >-
   Programmatic SEO projects often fail because they flood Googlebot. This agent
@@ -677,6 +716,12 @@ sampleData:
     2024-01-01,Googlebot,/search?q=red,200
     2024-01-01,Googlebot,/product/2,200
 isPremium: true
+inputs:
+  - Target URL
+  - Local File (CSV/MD)
+outputs:
+  - SEO Audit / Fixes
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Technical SEO
@@ -723,8 +768,6 @@ id: featured-snippet-thief
 category: SEO
 title: The AI Overview Sniper
 tagline: Secure Position Zero & AI Citations.
-difficulty: Intermediate
-time: Weekly
 archetype: Processor
 description: >-
   Analyzes why competitors are being cited in Google AI Overviews, SearchGPT, 
@@ -737,6 +780,12 @@ sampleData:
     "best crm for sales ops",https://hubspot.com,AI Overview,3
     "calculating churn rate",https://investopedia.com,Perplexity,2
 isPremium: true
+inputs:
+  - Target URL
+  - Local File (CSV/MD)
+outputs:
+  - SEO Audit / Fixes
+  - Cleaned Data
 ---
 
 # Agent Configuration: The AI Overview Sniper
@@ -772,6 +821,7 @@ For each keyword:
 1.  **Create:** `citation_steal_plan.csv` with columns: `Keyword`, `Cited_URL`, `The_Trigger`, `Action_Required`, `Implementation_Difficulty`.
 2.  **Report:** "Successfully audited [X] AI Search results. Identified [Y] high-probability targets where a simple structural edit can win you the citation."
 
+
 ---
 
 ## G-Maps Photo Quality Auditor
@@ -783,8 +833,6 @@ id: gmaps-photo-auditor
 category: SEO
 title: G-Maps Photo Quality Auditor
 tagline: Remove blurry or irrelevant user photos from your listing.
-difficulty: Intermediate
-time: Batch
 archetype: Researcher
 description: >-
   Scans user-uploaded photos on your Google Maps listing. Flags "Blurry",
@@ -795,6 +843,12 @@ sampleData:
     Location_ID,Photo_URL
     Loc1,https://lh3.../photo.jpg
 isPremium: true
+inputs:
+  - Target URL
+  - Web Search Target
+outputs:
+  - SEO Audit / Fixes
+  - Curated Intel
 ---
 
 # Agent Configuration: G-Maps Photo Quality Auditor
@@ -833,10 +887,11 @@ id: gsc-index-coverage-auditor
 category: SEO
 title: GSC Index Coverage Auditor
 tagline: Find "Ghost Pages" (Indexed 404s) and Sitemap errors.
-difficulty: Intermediate
-time: 15 mins
 archetype: Processor
-description: Compares your Google Search Console "Index Coverage" report against your live Sitemap to find "Ghost Pages" (URLs Google thinks exist but are actually 404s) and "Zombie Links" (Sitemap URLs that redirect).
+description: >-
+  Compares your Google Search Console "Index Coverage" report against your live
+  Sitemap to find "Ghost Pages" (URLs Google thinks exist but are actually 404s)
+  and "Zombie Links" (Sitemap URLs that redirect).
 sampleData:
   filename: gsc_coverage.csv
   content: |
@@ -851,6 +906,12 @@ sampleOutput: |
      - *Action:* 301 Redirect or "Validate Fix" in GSC.
   2. **Sitemap Rot:** 0 found.
      - All sitemap URLs return 200 OK.
+inputs:
+  - Target URL
+  - Local File (CSV/MD)
+outputs:
+  - SEO Audit / Fixes
+  - Cleaned Data
 ---
 
 # What This Does
@@ -924,8 +985,6 @@ id: historical-content-updater
 category: SEO
 title: Historical Content Updater
 tagline: Find old blog posts that are easy wins for traffic.
-difficulty: Beginner
-time: Batch
 archetype: Researcher
 description: >-
   Identifies posts older than 1 year with declining traffic but high
@@ -936,6 +995,12 @@ sampleData:
     URL,Publish_Date,Traffic_Trend
     /blog/2020-guide,2020-01-01,-20%
 isPremium: true
+inputs:
+  - Target URL
+  - Web Search Target
+outputs:
+  - SEO Audit / Fixes
+  - Curated Intel
 ---
 
 # Agent Configuration: Historical Content Updater
@@ -974,8 +1039,6 @@ id: hreflang-tag-builder
 category: SEO
 title: The Hreflang Builder
 tagline: Fix international SEO.
-difficulty: Intermediate
-time: Batch
 description: >-
   Multi-language sites confuse Google without Hreflang. This agent generates the
   correct HTML tags mapping your English, Spanish, and German pages to prevent
@@ -991,6 +1054,10 @@ sampleData:
 
     /about,https://site.com/about,https://site.com/es/sobre-nosotros,https://site.com/de/uber-uns
 isPremium: true
+inputs:
+  - Target URL
+outputs:
+  - SEO Audit / Fixes
 ---
 
 # Agent Configuration: The Hreflang Builder
@@ -1037,8 +1104,6 @@ id: image-alt-text-auditor
 category: SEO
 title: Accessibility Auditor
 tagline: Ensure every image has descriptive text.
-difficulty: Beginner
-time: Batch
 archtype: Processor
 description: >-
   Scans a list of image tags and checks if the `alt` attribute is present and
@@ -1051,6 +1116,10 @@ sampleData:
     logo.png,Company Logo,Brand
     img_5592.jpg,,Office Culture
 isPremium: true
+inputs:
+  - Target URL
+outputs:
+  - SEO Audit / Fixes
 ---
 
 # Agent Configuration: The SEO Accessibility Fixer
@@ -1096,8 +1165,6 @@ title: The IndexNow Auto-Submitter
 tagline: >-
   Ping Bing, Yandex, and 100+ other engines immediately when you publish
   content.
-difficulty: Intermediate
-time: Weekly
 archetype: Processor
 description: >-
   Stop waiting for crawlers to find you. This script reads your local
@@ -1107,6 +1174,12 @@ sampleData:
   filename: submit-indexnow.js
   content: "const https = require('https');\nconst fs = require('fs');\nconst path = require('path');\n\n// CONFIGURATION\nconst HOST = 'realaiexamples.com';\nconst KEY = 'YOUR_GENERATED_KEY_HERE'; // e.g. 14ae016fb6...\nconst KEY_LOCATION = `https://${HOST}/${KEY}.txt`;\nconst SITEMAP_PATH = path.join(process.cwd(), 'public', 'sitemap.xml');\n\n// 1. Read Sitemap\nconsole.log('\U0001F4D6 Reading sitemap...');\nif (!fs.existsSync(SITEMAP_PATH)) {\n  console.error('❌ Sitemap not found at public/sitemap.xml');\n  process.exit(1);\n}\n\nconst sitemapContent = fs.readFileSync(SITEMAP_PATH, 'utf8');\nconst urls = [];\nconst locRegex = /<loc>(.*?)<\\/loc>/g;\nlet match;\n\nwhile ((match = locRegex.exec(sitemapContent)) !== null) {\n  urls.push(match[1]);\n}\n\nconsole.log(`✅ Found ${urls.length} URLs in sitemap.`);\n\nif (urls.length === 0) {\n  console.log('⚠️ No URLs found. Exiting.');\n  process.exit(0);\n}\n\n// 2. Prepare Payload\nconst payload = JSON.stringify({\n  host: HOST,\n  key: KEY,\n  keyLocation: KEY_LOCATION,\n  urlList: urls\n});\n\n// 3. Send to IndexNow\nconsole.log('\U0001F680 Sending ping to IndexNow...');\n\nconst options = {\n  hostname: 'api.indexnow.org',\n  path: '/indexnow',\n  method: 'POST',\n  headers: {\n    'Content-Type': 'application/json',\n    'Content-Length': payload.length\n  }\n};\n\nconst req = https.request(options, (res) => {\n  let responseData = '';\n  res.on('data', (chunk) => { responseData += chunk; });\n  res.on('end', () => {\n    if (res.statusCode >= 200 && res.statusCode < 300) {\n      console.log(`\U0001F389 Success! IndexNow received ${urls.length} URLs.`);\n    } else {\n      console.error(`❌ Error ${res.statusCode}: ${responseData}`);\n    }\n  });\n});\n\nreq.write(payload);\nreq.end();\n"
 isPremium: true
+inputs:
+  - Target URL
+  - Local File (CSV/MD)
+outputs:
+  - SEO Audit / Fixes
+  - Cleaned Data
 ---
 
 # Agent Configuration: The IndexNow Submitter
@@ -1150,8 +1223,6 @@ id: internal-link-anchor-auditor
 category: SEO
 title: Anchor Text Optimizer
 tagline: Stop using 'Click Here' for your internal links.
-difficulty: Intermediate
-time: Quarterly
 archtype: Processor
 description: >-
   Analyzes internal links to ensure anchor text contains target keywords rather
@@ -1164,6 +1235,10 @@ sampleData:
     /blog/b,/pricing,See Pricing
     /home,/about,Read More
 isPremium: true
+inputs:
+  - Target URL
+outputs:
+  - SEO Audit / Fixes
 ---
 
 # Agent Configuration: The On-Page SEO
@@ -1210,8 +1285,6 @@ id: internal-link-finder
 category: SEO
 title: The Sitemap Scanner
 tagline: Scan your live sitemap to find 'Orphan' link opportunities.
-difficulty: Intermediate
-time: Weekly
 archetype: Hybrid
 description: >-
   Don't maintain a manual content inventory. This agent crawls your live
@@ -1225,6 +1298,12 @@ sampleData:
     https://realaiexamples.com/sitemap.xml,AI
     Blueprints,https://realaiexamples.com/blueprints
 isPremium: true
+inputs:
+  - Target URL
+  - Local File + Search
+outputs:
+  - SEO Audit / Fixes
+  - Enriched Document
 ---
 
 # Agent Configuration: The Networker
@@ -1272,8 +1351,6 @@ id: internal-link-graph-visualizer
 category: SEO
 title: The Link Graph Architect
 tagline: Visualize your site structure.
-difficulty: Advanced
-time: Batch
 description: >-
   Orphaned pages don't rank. This agent processes complex internal link data and
   generates Mermaid.js diagram code to visualize your site's architecture and
@@ -1288,6 +1365,10 @@ sampleData:
     /blog/post-1,/home,Breadcrumb
     /services,/contact,CTA
 isPremium: true
+inputs:
+  - Target URL
+outputs:
+  - SEO Audit / Fixes
 ---
 
 # Agent Configuration: The Link Graph Architect
@@ -1331,8 +1412,6 @@ id: keyword-cannibalization-detective
 category: SEO
 title: The SERP Conflict Resolver
 tagline: Don't just find duplicates. Decide the winner based on CTR and Intent.
-difficulty: Intermediate
-time: Monthly
 archetype: Processor
 description: >-
   When two pages rank for the same keyword, Google gets confused. This agent
@@ -1347,6 +1426,12 @@ sampleData:
     blue widgets,/blog/top-widgets,800,50,8,Blog
     red widgets,/products/red-widget,500,10,1,Product
 isPremium: true
+inputs:
+  - Target URL
+  - Local File (CSV/MD)
+outputs:
+  - SEO Audit / Fixes
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Conflict Mediator
@@ -1399,12 +1484,11 @@ id: keyword-gap-analyst
 category: SEO
 title: The Semantic Cluster Hunter
 tagline: Identify topical authority gaps.
-difficulty: Advanced
-time: Batch
 description: >-
   Goes beyond keywords to identify missing topical authority. This agent audits 
   competitor content to map their "Semantic Clusters" and identifies exactly 
-  which entities and topics your site needs to rank as an authority in your niche.
+  which entities and topics your site needs to rank as an authority in your
+  niche.
 sampleData:
   filename: competitors.csv
   content: |
@@ -1413,6 +1497,10 @@ sampleData:
     Salesforce,https://salesforce.com,Enterprise CRM
     Pipedrive,https://pipedrive.com,Sales CRM
 isPremium: true
+inputs:
+  - Target URL
+outputs:
+  - SEO Audit / Fixes
 ---
 
 # Agent Configuration: The Semantic Cluster Hunter
@@ -1446,6 +1534,7 @@ For each competitor:
 2.  **Create:** `authority_roadmap.md` mapping out the order in which to build these clusters to maximize "Semantic Juice."
 3.  **Report:** "Successfully mapped [X] semantic clusters. Identified [Y] authority gaps where your brand is currently invisible to AI search models."
 
+
 ---
 
 ## SERP Volatility Tracker
@@ -1457,8 +1546,6 @@ id: keyword-ranking-volatility-tracker
 category: SEO
 title: SERP Volatility Tracker
 tagline: Did we just lose our rankings?
-difficulty: Intermediate
-time: Weekly
 archtype: Processor
 description: >-
   Compares ranking positions from two dates to identify big movers (gainers and
@@ -1471,6 +1558,10 @@ sampleData:
     ai writer,10,3
     marketing,3,20
 isPremium: true
+inputs:
+  - Target URL
+outputs:
+  - SEO Audit / Fixes
 ---
 
 # Agent Configuration: The SEO Strategist
@@ -1518,8 +1609,6 @@ id: link-gap-detective
 category: SEO
 title: The Link Gap Detective
 tagline: Find missing backlink opportunities.
-difficulty: Intermediate
-time: Batch
 description: >-
   Why do they rank and you don't? Links. This agent identifies websites that
   link to your competitors (or list 'Best Tools') but haven't linked to you yet,
@@ -1532,6 +1621,10 @@ sampleData:
     CompetitorB,"top sales tools for startups"
     CompetitorC,"CompetitorC reviews"
 isPremium: true
+inputs:
+  - Target URL
+outputs:
+  - SEO Audit / Fixes
 ---
 
 # Agent Configuration: The Link Gap Detective
@@ -1583,8 +1676,6 @@ id: local-seo-audit
 category: SEO
 title: The Multi-Location SEO Auditor
 tagline: Audit the map rankings for your entire franchise.
-difficulty: Advanced
-time: 15 mins
 description: >-
   Managing SEO for multiple locations is hard. This agent reads a list of
   locations from a CSV, audits their Google Maps profiles, checks NAP
@@ -1597,6 +1688,10 @@ sampleData:
     Downtown Cafe,Austin,555-0199
     Eastside Bistro,Austin,555-0122
 isPremium: true
+inputs:
+  - Target URL
+outputs:
+  - SEO Audit / Fixes
 ---
 
 # Agent Configuration: The Multi-Location SEO Auditor
@@ -1640,8 +1735,6 @@ id: log-file-parser-mock
 category: SEO
 title: The Log File Analyzer
 tagline: What is Googlebot doing?
-difficulty: Advanced
-time: Batch
 description: >-
   Server logs reveal the truth. This agent processes raw server logs to count
   how many times Googlebot hit specific pages, identifying 'Crawl Waste' and
@@ -1654,6 +1747,10 @@ sampleData:
     logs/server_2.log,Production,2024-10-01
     logs/staging.log,Staging,2024-10-01
 isPremium: true
+inputs:
+  - Target URL
+outputs:
+  - SEO Audit / Fixes
 ---
 
 # Agent Configuration: The Log File Analyzer
@@ -1701,8 +1798,6 @@ id: nextjs-codebase-seo-auditor
 category: SEO
 title: The Next.js Codebase Auditor
 tagline: Scan your local React/Next.js files for SEO gaps before you deploy.
-difficulty: Intermediate
-time: Weekly
 archetype: Processor
 description: >-
   Don't wait for a crawler to tell you your tags are missing. This agent scans
@@ -1713,6 +1808,12 @@ sampleData:
   content: |
     // Paste the audit script here
 isPremium: true
+inputs:
+  - Target URL
+  - Local File (CSV/MD)
+outputs:
+  - SEO Audit / Fixes
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Codebase Auditor
@@ -1929,8 +2030,6 @@ id: page-speed-budget-monitor
 category: SEO
 title: Speed Budget Enforcer
 tagline: Don't let your site get slow.
-difficulty: Intermediate
-time: Weekly
 archtype: Processor
 description: >-
   Checks a list of page load times against a 'budget' (e.g., 2.5s LCP). Flags
@@ -1943,6 +2042,10 @@ sampleData:
     /blog/giant-images,4.5
     /pricing,2.0
 isPremium: true
+inputs:
+  - Target URL
+outputs:
+  - SEO Audit / Fixes
 ---
 
 # Agent Configuration: The Performance Engineer
@@ -1989,8 +2092,6 @@ id: people-also-ask-scraper
 category: SEO
 title: The PAA Scraper
 tagline: Answer what they are asking.
-difficulty: Intermediate
-time: Batch
 description: >-
   Google's 'People Also Ask' box is a content goldmine. This agent takes a list
   of keywords and researches the exact questions users are asking on Google,
@@ -2003,6 +2104,10 @@ sampleData:
     How to start a garden,Home & Garden
     Remote work security,Cybersecurity
 isPremium: true
+inputs:
+  - Target URL
+outputs:
+  - SEO Audit / Fixes
 ---
 
 # Agent Configuration: The PAA Scraper
@@ -2051,8 +2156,6 @@ id: programmatic-seo-builder
 category: SEO
 title: The P-SEO Research Enricher
 tagline: Don't write empty templates. Enrich your pages with live data (Wiki/Web).
-difficulty: Advanced
-time: One-off
 archetype: Hybrid
 description: >-
   Thin content gets penalized. This agent takes a simple list of targets (e.g.,
@@ -2067,6 +2170,12 @@ sampleData:
     Seattle, WA
     Denver, CO
 isPremium: true
+inputs:
+  - Target URL
+  - Local File + Search
+outputs:
+  - SEO Audit / Fixes
+  - Enriched Document
 ---
 
 # Agent Configuration: The P-SEO Researcher
@@ -2116,8 +2225,6 @@ id: redirect-chain-fixer
 category: SEO
 title: Redirect Chain Flattener
 tagline: Fix "Redirect Hops" to improve site speed and SEO.
-difficulty: Intermediate
-time: 5 mins
 archetype: Processor
 description: >-
   Reads a CSV of redirects (Source -> Destination), identifies chains where Page
@@ -2131,6 +2238,12 @@ sampleData:
     /new-page,/final-page
     /blog/old-post,/blog/new-post
 isPremium: true
+inputs:
+  - Target URL
+  - Local File (CSV/MD)
+outputs:
+  - SEO Audit / Fixes
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Redirect Chain Flattener
@@ -2183,8 +2296,6 @@ id: redirect-map-generator
 category: SEO
 title: The Migration Doctor
 tagline: 'Map 10,000 URLs without writing 10,000 lines of code.'
-difficulty: Advanced
-time: Batch
 archetype: Processor
 description: >-
   Mapping redirects one-by-one is slow and slows down your server. This agent
@@ -2199,6 +2310,12 @@ sampleData:
     /blog/2023/post-2,/blog/post-2
     /shop/category/shoes,/collections/shoes
 isPremium: true
+inputs:
+  - Target URL
+  - Local File (CSV/MD)
+outputs:
+  - SEO Audit / Fixes
+  - Cleaned Data
 ---
 
 # Agent Configuration: The DevOps Engineer
@@ -2241,8 +2358,6 @@ id: redirect-mapping-validator
 category: SEO
 title: Migration Redirect Checker
 tagline: Did the migration actually work?
-difficulty: Intermediate
-time: One-off
 archtype: Processor
 description: Verifies a list of expected redirects against the actual response codes.
 sampleData:
@@ -2252,6 +2367,10 @@ sampleData:
     /old, /new, 301, /new
     /blog/old, /blog/new, 404,
 isPremium: true
+inputs:
+  - Target URL
+outputs:
+  - SEO Audit / Fixes
 ---
 
 # Agent Configuration: The Migration Specialist
@@ -2299,8 +2418,6 @@ id: robots-txt-architect
 category: SEO
 title: robots.txt Rules Architect
 tagline: Protect your crawl budget by guiding search bots away from low-value pages.
-difficulty: Intermediate
-time: 5 mins
 archetype: Processor
 description: >-
   Generates a standard robots.txt file based on your site structure,
@@ -2316,6 +2433,12 @@ sampleData:
 
     Sitemap: https://example.com/sitemap.xml
 isPremium: true
+inputs:
+  - Target URL
+  - Local File (CSV/MD)
+outputs:
+  - SEO Audit / Fixes
+  - Cleaned Data
 ---
 
 # Agent Configuration: The robots.txt Rules Architect
@@ -2364,8 +2487,6 @@ id: schema-markup-generator
 category: SEO
 title: Bulk Schema JSON-LD Generator
 tagline: Get "Rich Snippets" on Google by generating valid Schema markup.
-difficulty: Intermediate
-time: 10 mins
 archetype: Processor
 description: >-
   Converts a CSV of product or event data into valid JSON-LD Schema markup
@@ -2377,6 +2498,12 @@ sampleData:
     Blue Widget,29.99,USD,InStock,The best widget for your home.
     Red Gear,45.00,USD,OutOfStock,High-durability gear.
 isPremium: true
+inputs:
+  - Target URL
+  - Local File (CSV/MD)
+outputs:
+  - SEO Audit / Fixes
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Bulk Schema JSON-LD Generator
@@ -2431,8 +2558,6 @@ id: search-query-intent-miner
 category: SEO
 title: Search Intent Miner
 tagline: Extract high-intent keywords from Search Console.
-difficulty: Intermediate
-time: Weekly
 archtype: Processor
 description: >-
   Filters search query reports for 'buy', 'price', or 'alternative' keywords to
@@ -2445,6 +2570,10 @@ sampleData:
     best crm price,50,500
     salesforce alternative,30,300
 isPremium: true
+inputs:
+  - Target URL
+outputs:
+  - SEO Audit / Fixes
 ---
 
 # Agent Configuration: The SEO Manager
@@ -2491,8 +2620,6 @@ id: semantic-keyword-clusterer
 category: SEO
 title: The Keyword Clusterer
 tagline: Group keywords in seconds.
-difficulty: Advanced
-time: Batch
 description: >-
   Keyword stuffing is dead. This agent takes a raw list of keywords and groups
   them into 'Semantic Clusters' to help you plan Hub & Spoke content strategies
@@ -2507,6 +2634,10 @@ sampleData:
     top startup crms,800
     what is a crm,20000
 isPremium: true
+inputs:
+  - Target URL
+outputs:
+  - SEO Audit / Fixes
 ---
 
 # Agent Configuration: The Keyword Clusterer
@@ -2552,8 +2683,6 @@ id: seo-cluster-architect
 category: SEO
 title: The SEO Cluster Architect
 tagline: Build a content cluster that dominates search.
-difficulty: Intermediate
-time: 15 mins
 archetype: Hybrid
 description: >-
   Creates a complete content cluster plan: 1 pillar page + 5 supporting articles
@@ -2565,6 +2694,12 @@ sampleData:
     Sales Automation,Transactional
     Lead Scoring,Informational
 isPremium: true
+inputs:
+  - Target URL
+  - Local File + Search
+outputs:
+  - SEO Audit / Fixes
+  - Enriched Document
 ---
 
 # Agent Configuration: The SEO Cluster Architect
@@ -2628,8 +2763,6 @@ id: seo-interlinker
 category: SEO
 title: The SEO Interlinker
 tagline: Automated internal linking for your entire blog.
-difficulty: Intermediate
-time: Monthly
 description: >-
   Boost your 'Money Pages' by linking to them from your blog. This agent reads a
   strategy CSV (Target URL + Keywords), scans your entire `content/` folder, and
@@ -2641,6 +2774,10 @@ sampleData:
     /features/automation,"workflow automation, save time, efficiency"
     /pricing,"subscription, cost, enterprise plan"
 isPremium: true
+inputs:
+  - Target URL
+outputs:
+  - SEO Audit / Fixes
 ---
 
 # Agent Configuration: The SEO Interlinker
@@ -2684,8 +2821,6 @@ id: seo-keyword-cannibalization-mapper
 category: SEO
 title: SEO Cannibalization Visualizer
 tagline: See which pages are fighting for the same keywords.
-difficulty: Intermediate
-time: Batch
 archetype: Researcher
 description: >-
   Ingests GSC data. Identifies keywords where 2+ pages swap positions
@@ -2696,6 +2831,12 @@ sampleData:
     Keyword,Page_A_Rank,Page_B_Rank
     "AI Tools",5,6
 isPremium: true
+inputs:
+  - Target URL
+  - Web Search Target
+outputs:
+  - SEO Audit / Fixes
+  - Curated Intel
 ---
 
 # Agent Configuration: SEO Cannibalization Visualizer
@@ -2734,8 +2875,6 @@ id: seo-title-tester
 category: SEO
 title: The SEO Title Factory
 tagline: High-CTR titles for 50 keywords at once.
-difficulty: Beginner
-time: 5 mins
 description: >-
   Ranking #1 doesn't matter if no one clicks. This agent reads a list of target
   keywords from a CSV and generates 10 variations of SEO Titles and Meta
@@ -2748,6 +2887,10 @@ sampleData:
     How to scale ads,Guide
     AI Agent tutorial,Educational
 isPremium: true
+inputs:
+  - Target URL
+outputs:
+  - SEO Audit / Fixes
 ---
 
 # Agent Configuration: The SEO Title Factory
@@ -2791,8 +2934,6 @@ id: serp-intent-decoder
 category: SEO
 title: The SERP Intent Decoder
 tagline: Crack Google's psychological code.
-difficulty: Advanced
-time: Real-time
 description: >-
   Stop guessing what content to write. This agent analyzes the top ranking pages
   for your target keyword to decode exactly what format, length, and angle
@@ -2805,6 +2946,10 @@ sampleData:
     "how to train a sales agent",Medium
     "best crm for micro pe",High
 isPremium: true
+inputs:
+  - Target URL
+outputs:
+  - SEO Audit / Fixes
 ---
 
 # Agent Configuration: The SERP Intent Decoder
@@ -2859,8 +3004,6 @@ id: sitemap-health-check
 category: SEO
 title: Sitemap Health Auditor
 tagline: Find broken links and non-indexable pages in your sitemap.
-difficulty: Intermediate
-time: 10 mins
 archetype: Processor
 description: >-
   Parses an XML sitemap file, checks the HTTP status code of every URL, and
@@ -2873,6 +3016,12 @@ sampleData:
       <url><loc>https://example.com/broken-page</loc></url>
     </urlset>
 isPremium: true
+inputs:
+  - Target URL
+  - Local File (CSV/MD)
+outputs:
+  - SEO Audit / Fixes
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Sitemap Health Auditor
@@ -2928,8 +3077,6 @@ id: sitemap-orphan-page-finder
 category: SEO
 title: Orphan Page Detective
 tagline: Find pages that exist but aren't in your sitemap.
-difficulty: Advanced
-time: Monthly
 archtype: Processor
 description: >-
   Compares a crawl of your actual site structure against your `sitemap.xml` to
@@ -2942,6 +3089,10 @@ sampleData:
     /landing-old,No
     /pricing,Yes
 isPremium: true
+inputs:
+  - Target URL
+outputs:
+  - SEO Audit / Fixes
 ---
 
 # Agent Configuration: The Technical SEO
@@ -2988,8 +3139,6 @@ id: sitemap-to-csv-inventory
 category: SEO
 title: The Content Inventory Builder
 tagline: Map your entire site.
-difficulty: Intermediate
-time: Batch
 description: >-
   You can't optimize what you can't see. This agent processes multiple
   `sitemap.xml` files and converts them into clean CSV inventories, adding
@@ -3002,6 +3151,10 @@ sampleData:
     blog.io,https://blog.io/sitemap_index.xml,Production
     staging.net,https://staging.net/sitemap.xml,Staging
 isPremium: true
+inputs:
+  - Target URL
+outputs:
+  - SEO Audit / Fixes
 ---
 
 # Agent Configuration: The Content Inventory Builder
@@ -3048,8 +3201,6 @@ id: status-code-monitor-404
 category: SEO
 title: Broken Link Patroller
 tagline: Find 404s before your users do.
-difficulty: Beginner
-time: Weekly
 archtype: Processor
 description: Filters a server log or crawl list for 4xx and 5xx status codes.
 sampleData:
@@ -3060,6 +3211,10 @@ sampleData:
     /old-page,404
     /server-error,500
 isPremium: true
+inputs:
+  - Target URL
+outputs:
+  - SEO Audit / Fixes
 ---
 
 # Agent Configuration: The Link Rot Surgeon
@@ -3105,8 +3260,6 @@ id: subdomain-decider
 category: SEO
 title: The Subdomain vs. Subfolder Decider
 tagline: End the debate with logic.
-difficulty: Beginner
-time: One-off
 archetype: Processor
 description: >-
   Developers love subdomains. SEOs love subfolders. This agent runs a logic tree
@@ -3120,6 +3273,12 @@ sampleData:
     Help Center,Zendesk,Same,Supportive
     France_Site,Same,French,Localized
 isPremium: true
+inputs:
+  - Target URL
+  - Local File (CSV/MD)
+outputs:
+  - SEO Audit / Fixes
+  - Cleaned Data
 ---
 
 # Agent Configuration: The SEO Architect
@@ -3164,12 +3323,10 @@ id: technical-seo-doctor
 category: SEO
 title: The AI Search Doctor
 tagline: Technical Audit + AI Search Optimization (GEO)
-difficulty: Advanced
-time: Batch
 description: >-
-  Performs full-site technical audits with a focus on modern AI Search Overviews. 
-  This agent checks for standard technical failures while analyzing content 
-  structure for citation-readiness in Perplexity and SearchGPT.
+  Performs full-site technical audits with a focus on modern AI Search
+  Overviews.  This agent checks for standard technical failures while analyzing
+  content  structure for citation-readiness in Perplexity and SearchGPT.
 sampleData:
   filename: landing_pages.csv
   content: |
@@ -3178,6 +3335,10 @@ sampleData:
     Features,https://mysite.com/features,Feature Workflow
     Pricing,https://mysite.com/pricing,SaaS Pricing
 isPremium: true
+inputs:
+  - Target URL
+outputs:
+  - SEO Audit / Fixes
 ---
 
 # Agent Configuration: The AI Search Doctor
@@ -3213,6 +3374,7 @@ For each URL in the CSV:
 1.  **Create:** `site_health_matrix.csv` with columns: `Page_Name`, `Technical_Grade`, `GEO_Score`, `Critical_Fixes`, `File_Path`.
 2.  **Report:** "Successfully audited [X] pages. [Y] pages flagged for 'Low AI Citability' requiring structural updates to capture AI Overview traffic."
 
+
 ---
 
 ## Topic Cluster Architect
@@ -3224,8 +3386,6 @@ id: topic-cluster-architect
 category: SEO
 title: Topic Cluster Architect
 tagline: Group keywords into pillar pages.
-difficulty: Advanced
-time: Quarterly
 archetype: Processor
 description: >-
   Groups thousands of keywords into semantic clusters to plan 'Pillar' and
@@ -3251,6 +3411,12 @@ sampleOutput: |
   Total Estimated Traffic: 10,700/mo
   Content Gap identified: Comparison guides vs Salesforce.
 isPremium: true
+inputs:
+  - Target URL
+  - Local File (CSV/MD)
+outputs:
+  - SEO Audit / Fixes
+  - Cleaned Data
 ---
 
 # Agent Configuration: The SEO Strategist
@@ -3291,8 +3457,6 @@ id: zero-click-optimizer
 category: SEO
 title: The Zero-Click Optimizer
 tagline: Optimize for the answer engine.
-difficulty: Intermediate
-time: Weekly
 archetype: Processor
 description: >-
   Users want answers, not clicks. This agent reviews your informational content
@@ -3308,6 +3472,12 @@ sampleData:
 
     /how-to-solder,"Soldering is an art form that takes years..."
 isPremium: true
+inputs:
+  - Target URL
+  - Local File (CSV/MD)
+outputs:
+  - SEO Audit / Fixes
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Editor
@@ -3353,8 +3523,6 @@ id: zero-search-volume-hunter
 category: SEO
 title: The Zero-Volume Hunter
 tagline: Rank for keywords tools ignore.
-difficulty: Advanced
-time: Batch
 description: >-
   SEO tools are often wrong about volume. This agent identifies 'Zero Volume'
   keywords that actually have high intent and low competition, perfect for
@@ -3367,6 +3535,10 @@ sampleData:
     Stripe,Payments,SaaS Developers
     PostHog,Analytics,Product Managers
 isPremium: true
+inputs:
+  - Target URL
+outputs:
+  - SEO Audit / Fixes
 ---
 
 # Agent Configuration: The Zero-Volume Hunter

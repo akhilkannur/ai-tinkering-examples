@@ -9,8 +9,6 @@ id: llms-txt-generator
 category: SEO Ops
 title: LLMS.txt Generator for AI Agents
 tagline: Help AI bots understand your site by generating a /llms.txt file.
-difficulty: Beginner
-time: 5 mins
 archetype: Processor
 description: >-
   Scans your documentation and key pages to create a structured text file
@@ -21,6 +19,12 @@ sampleData:
     # My Documentation
     This is the main documentation file.
 isPremium: false
+inputs:
+  - Sitemap XML
+  - Local File (CSV/MD)
+outputs:
+  - Indexation Fixes
+  - Cleaned Data
 ---
 
 # What This Does
@@ -80,8 +84,6 @@ id: sitemap-generator
 category: SEO Ops
 title: High-Coverage Sitemap Generator
 tagline: Generate a perfect XML sitemap for thousands of dynamic pages.
-difficulty: Intermediate
-time: 5 mins
 archetype: Processor
 description: >-
   Crawls your local content and database to build a comprehensive sitemap.xml
@@ -94,6 +96,12 @@ sampleData:
       { "slug": "page-2", "updated": "2023-10-05" }
     ]
 isPremium: true
+inputs:
+  - Sitemap XML
+  - Local File (CSV/MD)
+outputs:
+  - Indexation Fixes
+  - Cleaned Data
 ---
 
 # What This Does

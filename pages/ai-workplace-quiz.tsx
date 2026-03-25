@@ -7,6 +7,7 @@ export default function AiWorkplaceQuizPage() {
   return (
     <div className="min-h-screen bg-primary-bg font-sans text-black selection:bg-[#ff00ff] selection:text-white overflow-x-hidden">
       <Head>
+        <meta name="robots" content="noindex, nofollow" />
         <title>AI in the Workplace Quiz | Test Your Knowledge | AI Examples</title>
         <meta name="description" content="Test your knowledge of the latest AI developments in marketing, sales, and HR with this interactive quiz. See how you score and challenge your colleagues!" key="description" />
       </Head>

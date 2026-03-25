@@ -11,7 +11,7 @@ import {
   EnrichedExampleRecord 
 } from '../../lib/airtable'
 import { localSocialExamples } from '../../lib/social-examples-data'
-import { getAllRecipes } from '../../lib/recipes'
+
 
 interface ExamplePageProps {
   example: EnrichedExampleRecord | null
@@ -223,19 +223,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   }
   
   if (!example) {
-    // Check if this is a recipe/blueprint (fixes 404s for old sitemap links)
-    const allRecipes = getAllRecipes();
-    const recipe = allRecipes.find(r => r.id === exampleSlug);
-    
-    if (recipe) {
-      return {
-        redirect: {
-          destination: `/how-to/automate-${recipe.id}`,
-          permanent: true,
-        },
-      };
-    }
-
     return { notFound: true };
   }
 

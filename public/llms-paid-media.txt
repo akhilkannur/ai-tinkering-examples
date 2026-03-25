@@ -9,8 +9,6 @@ id: ad-copy-character-counter
 category: Paid Media
 title: The Ad Variant Factory
 tagline: Don't just count characters. Generate 10 high-CTR variants that fit perfectly.
-difficulty: Beginner
-time: Daily
 archetype: Hybrid
 description: >-
   Counting characters is boring. This agent takes your rough draft headlines and
@@ -23,6 +21,12 @@ sampleData:
     Google,"Best CRM for small biz",Save time
     Facebook,"Launch faster with AI",Speed to market
 isPremium: false
+inputs:
+  - Ad Account Data
+  - Local File + Search
+outputs:
+  - Performance Report
+  - Enriched Document
 ---
 
 # Agent Configuration: The Ad Variant Factory
@@ -69,8 +73,6 @@ id: ad-creative-fatigue-alert
 category: Paid Media
 title: Creative Fatigue Watchdog
 tagline: Know when your ads stop working.
-difficulty: Intermediate
-time: Weekly
 archetype: Processor
 description: >-
   Flags ad creatives where the Click-Through Rate (CTR) has dropped by 50%
@@ -82,6 +84,12 @@ sampleData:
     Ad_A,2.0,1.9
     Ad_B,2.0,0.8
 isPremium: false
+inputs:
+  - Ad Account Data
+  - Local File (CSV/MD)
+outputs:
+  - Performance Report
+  - Cleaned Data
 ---
 # Agent Configuration: The Creative Strategist
 
@@ -121,8 +129,6 @@ id: ad-frequency-capper
 category: Paid Media
 title: The Ad Frequency Capper
 tagline: Stop annoying your prospects.
-difficulty: Intermediate
-time: Weekly
 archetype: Processor
 description: >-
   Ad fatigue kills ROI. This agent tracks the relationship between 'Frequency'
@@ -137,6 +143,12 @@ sampleData:
     3,1.2%,12
     4,0.5%,25
 isPremium: false
+inputs:
+  - Ad Account Data
+  - Local File (CSV/MD)
+outputs:
+  - Performance Report
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Data Analyst
@@ -179,8 +191,6 @@ id: ad-placement-exclusion-lister
 category: Paid Media
 title: Ad Waste Excluder
 tagline: Block mobile apps and kids' channels.
-difficulty: Intermediate
-time: Weekly
 archtype: Processor
 description: >-
   Filters a placement report to find URLs containing 'game', 'puzzle', or
@@ -193,6 +203,10 @@ sampleData:
     candycrush.saga,5000,0
     math-games.net,200,1
 isPremium: false
+inputs:
+  - Ad Account Data
+outputs:
+  - Performance Report
 ---
 
 # Agent Configuration: The PPC Optimizer
@@ -239,8 +253,6 @@ id: ad-spend-pacer
 category: Paid Media
 title: The Ad Spend Pacer
 tagline: Land exactly on budget.
-difficulty: Beginner
-time: Daily
 archetype: Processor
 description: >-
   Overspending gets you fired. Underspending gets you yelled at. This agent
@@ -254,6 +266,12 @@ sampleData:
     Retargeting,5000,2000,15
     Prospecting,10000,8000,15
 isPremium: false
+inputs:
+  - Ad Account Data
+  - Local File (CSV/MD)
+outputs:
+  - Performance Report
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Media Buyer
@@ -300,8 +318,6 @@ id: ad-variation-engine
 category: Paid Media
 title: The Ad Variation Engine
 tagline: Turn 1 winner into 10 tests.
-difficulty: Intermediate
-time: 10 mins
 archetype: Processor
 description: >-
   Takes one winning ad (yours or a competitor's) and generates 10 high-quality
@@ -312,6 +328,12 @@ sampleData:
     Stop wasting time on spreadsheets. Our CRM automates data entry so you can
     focus on selling. Try it free for 14 days.
 isPremium: false
+inputs:
+  - Ad Account Data
+  - Local File (CSV/MD)
+outputs:
+  - Performance Report
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Ad Variation Engine
@@ -363,8 +385,6 @@ id: ad-visual-reverse-engineer
 category: Paid Media
 title: The Ad Visual Intelligence Factory
 tagline: Reverse-engineer 10 winning ads into design briefs.
-difficulty: Experimental
-time: 5 mins
 archetype: Processor
 description: >-
   Why is the competition winning? This agent reads a folder of competitor ad
@@ -374,6 +394,12 @@ sampleData:
   filename: competitor_gallery/ad_01.png
   content: ''
 isPremium: false
+inputs:
+  - Ad Account Data
+  - Local File (CSV/MD)
+outputs:
+  - Performance Report
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Ad Visual Intelligence Factory
@@ -419,8 +445,6 @@ id: audience-overlap-checker
 category: Paid Media
 title: The Audience Overlap Checker
 tagline: Stop bidding against yourself.
-difficulty: Intermediate
-time: Monthly
 archetype: Processor
 description: >-
   Are your showing the same ad to the same person in two different ad sets? This
@@ -433,6 +457,12 @@ sampleData:
     user1@test.com,user3@test.com
     user2@test.com,user1@test.com
 isPremium: false
+inputs:
+  - Ad Account Data
+  - Local File (CSV/MD)
+outputs:
+  - Performance Report
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Efficiency Auditor
@@ -474,8 +504,6 @@ id: competitor-ad-library-visual-cluster
 category: Paid Media
 title: Competitor Ad Style Clusterer
 tagline: Group 100s of competitor ads by visual theme automatically.
-difficulty: Advanced
-time: Batch
 archtype: Researcher
 description: >-
   Downloads images from Ad Library, then uses embeddings to cluster them (e.g.,
@@ -488,6 +516,10 @@ sampleData:
     101,https://fb-ads.com/1.jpg
     102,https://fb-ads.com/2.jpg
 isPremium: true
+inputs:
+  - Ad Account Data
+outputs:
+  - Performance Report
 ---
 
 # Agent Configuration: Competitor Ad Style Clusterer
@@ -526,8 +558,6 @@ id: creative-refresh-alert
 category: Paid Media
 title: The Fatigue Detector
 tagline: Know when to swap ads.
-difficulty: Intermediate
-time: Batch
 description: >-
   Ad fatigue raises CPA. This agent analyzes your ad performance reports,
   flagging ads with High Frequency and declining CTR, signaling exactly when to
@@ -541,6 +571,10 @@ sampleData:
     AD_003,Retargeting,5.2,0.4,300
     AD_004,Prospecting,1.5,3.2,2000
 isPremium: true
+inputs:
+  - Ad Account Data
+outputs:
+  - Performance Report
 ---
 
 # Agent Configuration: The Fatigue Detector
@@ -590,8 +624,6 @@ id: cross-channel-frequency-monitor
 category: Paid Media
 title: Omnichannel Frequency Cap
 tagline: Total ad touches across FB + Google + Email.
-difficulty: Advanced
-time: Monthly
 archetype: Processor
 description: >-
   Estimates total ad touches per user across multiple channels to prevent global
@@ -603,6 +635,12 @@ sampleData:
     John,10,5,2
     Jane,50,50,10
 isPremium: true
+inputs:
+  - Ad Account Data
+  - Local File (CSV/MD)
+outputs:
+  - Performance Report
+  - Cleaned Data
 ---
 # Agent Configuration: The Media Planner
 
@@ -642,8 +680,6 @@ id: facebook-ad-creative-brief
 category: Paid Media
 title: The Facebook Ad Creative Brief
 tagline: High-converting visual concepts at scale.
-difficulty: Intermediate
-time: Batch
 description: >-
   The creative is the most important targeting lever. This agent takes a list of
   products and generates distinct visual concepts (UGC, Static, Carousel) with
@@ -656,6 +692,10 @@ sampleData:
     VelvetBloom,Busy Moms,Instant skin hydration
     PixelPounce,Pro Gamers,Zero lag performance
 isPremium: true
+inputs:
+  - Ad Account Data
+outputs:
+  - Performance Report
 ---
 
 # Agent Configuration: The Facebook Ad Creative Brief
@@ -704,8 +744,6 @@ id: facebook-offline-events-csv
 category: Paid Media
 title: The Offline Conversions Factory
 tagline: 'Format 10,000 sales for Facebook ROAS reporting.'
-difficulty: Intermediate
-time: Weekly
 description: >-
   Ads drive store visits and phone sales. This agent reads a massive CSV of
   in-store transactions, cleans the PII (Name, Email, Phone), and formats it
@@ -718,6 +756,10 @@ sampleData:
     John Doe,john@acme.com,555-0199,500,2024-01-08
     Jane Smith,jane@globex.com,555-0122,1200,2024-01-09
 isPremium: true
+inputs:
+  - Ad Account Data
+outputs:
+  - Performance Report
 ---
 
 # Agent Configuration: The Offline Conversions Factory
@@ -759,8 +801,6 @@ id: first-purchase-product-analysis
 category: Paid Media
 title: Gateway Product Analyzer
 tagline: Which product acquires the best customers?
-difficulty: Intermediate
-time: Quarterly
 archetype: Processor
 description: >-
   Identifies the 'Gateway Drug' products that appear most frequently in the
@@ -772,6 +812,12 @@ sampleData:
     John,Socks,500
     Jane,Hat,50
 isPremium: true
+inputs:
+  - Ad Account Data
+  - Local File (CSV/MD)
+outputs:
+  - Performance Report
+  - Cleaned Data
 ---
 # Agent Configuration: The Merchandising Analyst
 
@@ -811,8 +857,6 @@ id: geo-targeting-optimizer
 category: Paid Media
 title: Geo-Conversion Optimizer
 tagline: Focus spend on cities that buy.
-difficulty: Intermediate
-time: Quarterly
 archetype: Processor
 description: >-
   Identifies cities or states with the highest conversion rates to refine ad
@@ -824,6 +868,12 @@ sampleData:
     NY,1000,50
     LA,1000,10
 isPremium: true
+inputs:
+  - Ad Account Data
+  - Local File (CSV/MD)
+outputs:
+  - Performance Report
+  - Cleaned Data
 ---
 # Agent Configuration: The Growth Hacker
 
@@ -865,8 +915,6 @@ title: The Semantic Negative Keyword Factory
 tagline: >-
   Block entire intent clusters (Jobs, Research, Competitors) before they drain
   your budget.
-difficulty: Intermediate
-time: One-off
 archetype: Processor
 description: >-
   Don't just block "free" and "cheap." This agent builds comprehensive negative
@@ -880,6 +928,12 @@ sampleData:
     SaaS,CRM Software,"crm software, business crm, sales automation"
     E-com,Luxury Watches,"luxury watches, buy rolex, premium timepieces"
 isPremium: true
+inputs:
+  - Ad Account Data
+  - Local File (CSV/MD)
+outputs:
+  - Performance Report
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Semantic Negative Keyword Factory
@@ -929,8 +983,6 @@ id: google-ads-script-gen
 category: Paid Media
 title: The PPC Automator
 tagline: Deploy 'Set and Forget' rules that protect your budget while you sleep.
-difficulty: Advanced
-time: One-off
 archetype: Processor
 description: >-
   Don't rely on manual checks. This agent generates robust Google Ads Scripts
@@ -945,6 +997,12 @@ sampleData:
     Zero Impressions,Impressions == 0 AND Spend > 50,Label 'Review'
     Budget Cap,Cost > 500,Email Alert
 isPremium: true
+inputs:
+  - Ad Account Data
+  - Local File (CSV/MD)
+outputs:
+  - Performance Report
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Ad Engineer
@@ -991,8 +1049,6 @@ id: google-shopping-feed-auditor
 category: Paid Media
 title: Merchant Center Auditor
 tagline: Find missing GTINs or images.
-difficulty: Beginner
-time: Weekly
 archetype: Processor
 description: >-
   Audits your Google Shopping product feed to identify items missing critical
@@ -1004,6 +1060,12 @@ sampleData:
     123,8888,http://img
     456,NULL,http://img
 isPremium: true
+inputs:
+  - Ad Account Data
+  - Local File (CSV/MD)
+outputs:
+  - Performance Report
+  - Cleaned Data
 ---
 # Agent Configuration: The Feed Specialist
 
@@ -1058,8 +1120,6 @@ id: high-ltv-lookalike-seeder
 category: Paid Media
 title: LTV Lookalike Seeder
 tagline: Find more customers like your best ones.
-difficulty: Beginner
-time: Monthly
 archetype: Processor
 description: >-
   Exports the Top 1% of customers by Lifetime Value (LTV) to create a
@@ -1071,6 +1131,12 @@ sampleData:
     a@test.com,5000
     b@test.com,100
 isPremium: true
+inputs:
+  - Ad Account Data
+  - Local File (CSV/MD)
+outputs:
+  - Performance Report
+  - Cleaned Data
 ---
 # Agent Configuration: The Paid Social Lead
 
@@ -1110,8 +1176,6 @@ id: hook-rate-analyzer
 category: Paid Media
 title: The Hook Rate Analyzer
 tagline: Fix the first 3 seconds.
-difficulty: Intermediate
-time: Weekly
 archetype: Processor
 description: >-
   If they don't watch past 3 seconds, your creative failed. This agent
@@ -1124,6 +1188,12 @@ sampleData:
     UGC_Testimonial,1000,400,100
     Founder_Story,1000,100,80
 isPremium: true
+inputs:
+  - Ad Account Data
+  - Local File (CSV/MD)
+outputs:
+  - Performance Report
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Creative Strategist
@@ -1171,8 +1241,6 @@ id: influencer-coupon-usage-tracker
 category: Paid Media
 title: The Channel Efficiency Analyst
 tagline: Know exactly when to double down or cut the cord.
-difficulty: Intermediate
-time: Monthly
 archetype: Processor
 description: >-
   CPA is the only metric that matters. This agent compares your influencer costs
@@ -1185,6 +1253,12 @@ sampleData:
     Alice,1000,50,30
     Bob,1000,10,30
 isPremium: true
+inputs:
+  - Ad Account Data
+  - Local File (CSV/MD)
+outputs:
+  - Performance Report
+  - Cleaned Data
 ---
 # Agent Configuration: The Performance Marketer
 
@@ -1229,8 +1303,6 @@ id: landing-page-load-speed-auditor
 category: Paid Media
 title: The LP Speed Auditor
 tagline: Slow pages kill ROAS.
-difficulty: Advanced
-time: Batch
 description: >-
   If your landing page takes 3s to load, you lose 50% of your paid traffic. This
   agent uses `curl` to measure TTFB and Total Load Time across your entire
@@ -1243,6 +1315,10 @@ sampleData:
     Summer Sale,https://mysite.com/sale,Meta Ads
     Demo,https://mysite.com/demo,Google Ads
 isPremium: true
+inputs:
+  - Ad Account Data
+outputs:
+  - Performance Report
 ---
 
 # Agent Configuration: The LP Speed Auditor
@@ -1294,8 +1370,6 @@ id: linkedin-ads-audience-overlap
 category: Paid Media
 title: Audience Overlap Checker
 tagline: Stop bidding against yourself.
-difficulty: Intermediate
-time: Monthly
 archtype: Processor
 description: >-
   Analyzes exported target lists from different ad campaigns to find duplicate
@@ -1308,6 +1382,10 @@ sampleData:
     Conversion,acme.com
     Awareness,beta.io
 isPremium: true
+inputs:
+  - Ad Account Data
+outputs:
+  - Performance Report
 ---
 
 # Agent Configuration: The Paid Social Specialist
@@ -1354,8 +1432,6 @@ id: linkedin-document-ad-creator
 category: Paid Media
 title: The LinkedIn Document Ad Creator
 tagline: Stop the scroll with a PDF.
-difficulty: Intermediate
-time: Batch
 description: >-
   Document Ads (Carousels) get 3x the clicks of image ads on LinkedIn. This
   agent takes your whitepapers or guides and chunks them into 5-page 'Teaser
@@ -1368,6 +1444,10 @@ sampleData:
     AI Ethics Guide,Trust is the new currency,Register for webinar
     Remote Ops Manual,Async is the only way,Book a demo
 isPremium: true
+inputs:
+  - Ad Account Data
+outputs:
+  - Performance Report
 ---
 
 # Agent Configuration: The LinkedIn Document Ad Creator
@@ -1414,8 +1494,6 @@ id: linkedin-insight-tag-auditor
 category: Paid Media
 title: The Insight Tag Fleet Auditor
 tagline: Audit retargeting tags across your entire domain portfolio.
-difficulty: Beginner
-time: Monthly
 description: >-
   The LinkedIn Insight Tag is often missing on critical pages. This agent reads
   a list of URLs from a CSV, crawls every page to verify your Partner ID is
@@ -1428,6 +1506,10 @@ sampleData:
     Blog,https://yoursite.com/blog
     Landing_Page,https://promo.yoursite.com
 isPremium: true
+inputs:
+  - Ad Account Data
+outputs:
+  - Performance Report
 ---
 
 # Agent Configuration: The Insight Tag Fleet Auditor
@@ -1474,8 +1556,6 @@ id: lookalike-audience-seeder
 category: Paid Media
 title: The LAL Seeder Factory
 tagline: 'Standardize 10,000 customers for ''Custom Audience'' upload.'
-difficulty: Intermediate
-time: Monthly
 description: >-
   High-quality lookalikes need high-quality seeds. This agent reads your massive
   customer database, filters for the 'Top 10%' by LTV or Frequency, and formats
@@ -1487,6 +1567,10 @@ sampleData:
     John Doe,john@acme.com,5000,12
     Jane Smith,jane@globex.com,1200,3
 isPremium: true
+inputs:
+  - Ad Account Data
+outputs:
+  - Performance Report
 ---
 
 # Agent Configuration: The LAL Seeder Factory
@@ -1529,8 +1613,6 @@ id: ppc-intent-matcher
 category: Paid Media
 title: The PPC Intent Engine
 tagline: High-intent ad keywords for your entire product line.
-difficulty: Advanced
-time: Monthly
 description: >-
   Stop bidding on generic terms. This agent reads a list of product categories
   from a CSV and generates a complete Google Ads keyword set (Exact Match,
@@ -1542,6 +1624,10 @@ sampleData:
     CRM Software,"Salesforce, HubSpot"
     Email Marketing,"Mailchimp, ConvertKit"
 isPremium: true
+inputs:
+  - Ad Account Data
+outputs:
+  - Performance Report
 ---
 
 # Agent Configuration: The PPC Intent Engine
@@ -1584,8 +1670,6 @@ id: quality-score-doctor
 category: Paid Media
 title: The Quality Score Doctor
 tagline: Diagnose why your CPC is high.
-difficulty: Intermediate
-time: Weekly
 archetype: Processor
 description: >-
   Quality Score (QS) determines your cost. This agent audits your keywords,
@@ -1598,6 +1682,12 @@ sampleData:
     "buy shoes",3,Below Average,Average,Average
     "red sneakers",9,Above Average,Above Average,Above Average
 isPremium: true
+inputs:
+  - Ad Account Data
+  - Local File (CSV/MD)
+outputs:
+  - Performance Report
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Google Ads Expert
@@ -1642,8 +1732,6 @@ id: retargeting-sequence-planner
 category: Paid Media
 title: The Retargeting Sequence Planner
 tagline: The 'Stalker' ad strategy.
-difficulty: Advanced
-time: Batch
 description: >-
   98% of visitors don't buy on the first visit. This agent maps out 30-day
   retargeting ad sequences for your entire product catalog, ensuring you stay
@@ -1656,6 +1744,10 @@ sampleData:
     VelvetBloom,Organic Ingredients,Expensive compared to drugstore
     PixelPounce,1ms Latency,Is it worth the premium price?
 isPremium: true
+inputs:
+  - Ad Account Data
+outputs:
+  - Performance Report
 ---
 
 # Agent Configuration: The Retargeting Sequence Planner
@@ -1704,8 +1796,6 @@ title: The Profit-First ROAS Adjuster
 tagline: >-
   Don't get blinded by 'Gross' numbers. Calculate marketing impact on
   bottom-line profit.
-difficulty: Advanced
-time: Monthly
 archetype: Processor
 description: >-
   Standard ROAS is a vanity metric. This agent adjusts your ad performance data
@@ -1718,6 +1808,12 @@ sampleData:
     Search_Brand,1000,8000,500,0.60,200
     Social_Prospecting,5000,12000,2000,0.50,1000
 isPremium: true
+inputs:
+  - Ad Account Data
+  - Local File (CSV/MD)
+outputs:
+  - Performance Report
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Profitability Analyst
@@ -1766,8 +1862,6 @@ id: seasonal-trend-spotter
 category: Paid Media
 title: Trend Timing Assistant
 tagline: When do people start searching for 'Winter Coats'?
-difficulty: Intermediate
-time: Yearly
 archetype: Processor
 description: >-
   Identifies the historical week where search volume for a category starts
@@ -1779,6 +1873,12 @@ sampleData:
     35,Coats,100
     36,Coats,500
 isPremium: true
+inputs:
+  - Ad Account Data
+  - Local File (CSV/MD)
+outputs:
+  - Performance Report
+  - Cleaned Data
 ---
 # Agent Configuration: The Planner
 
@@ -1817,8 +1917,6 @@ id: tiktok-pixel-helper
 category: Paid Media
 title: The TikTok Event Validator
 tagline: Fix your conversion tracking from a snippet or a goal.
-difficulty: Intermediate
-time: Weekly
 description: >-
   TikTok pixels are finicky. This agent audits your existing event code (if
   provided) or researches your product type to generate a standardized event
@@ -1828,6 +1926,10 @@ sampleData:
   content: |
     ttq.track('CompletePayment', { value: 100, currency: 'USD' });
 isPremium: true
+inputs:
+  - Ad Account Data
+outputs:
+  - Performance Report
 ---
 
 # Agent Configuration: The TikTok Event Validator
@@ -1875,8 +1977,6 @@ id: utm-builder-spreadsheet
 category: Paid Media
 title: The UTM Builder Formula
 tagline: Standardize your tracking links.
-difficulty: Beginner
-time: Batch
 description: >-
   Manual tagging causes errors and messy data. This agent processes your entire
   campaign list and generates perfectly formatted, encoded UTM links for every
@@ -1889,6 +1989,10 @@ sampleData:
     https://mysite.com/pricing,newsletter,email,pro_plan_launch
     https://mysite.com/demo,google,cpc,retargeting_q4
 isPremium: true
+inputs:
+  - Ad Account Data
+outputs:
+  - Performance Report
 ---
 
 # Agent Configuration: The UTM Builder Formula
@@ -1934,8 +2038,6 @@ id: wholesale-dtc-ad-conflict
 category: Paid Media
 title: Channel Conflict Monitor
 tagline: Are we bidding against our retailers?
-difficulty: Advanced
-time: Monthly
 archetype: Processor
 description: >-
   Checks if you are bidding on keywords where your wholesale partners (e.g.
@@ -1947,6 +2049,12 @@ sampleData:
     Lipstick,1,5
     Mascara,5,1
 isPremium: true
+inputs:
+  - Ad Account Data
+  - Local File (CSV/MD)
+outputs:
+  - Performance Report
+  - Cleaned Data
 ---
 # Agent Configuration: The Channel Marketing Manager
 
@@ -1985,8 +2093,6 @@ id: youtube-ad-placement-excluder
 category: Paid Media
 title: The B2B Brand Safety Guard
 tagline: Block junk YouTube channels.
-difficulty: Intermediate
-time: Batch
 description: >-
   YouTube B2B ads often run on 'Cocomelon' because kids use parents' devices.
   This agent researches trending kids and gaming channels to build massive
@@ -1999,6 +2105,10 @@ sampleData:
     Crypto Wallet,Finance,Mobile Gaming & Bots
     HR Onboarding,People Ops,Music & Compilation Channels
 isPremium: true
+inputs:
+  - Ad Account Data
+outputs:
+  - Performance Report
 ---
 
 # Agent Configuration: The B2B Brand Safety Guard

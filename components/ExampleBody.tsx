@@ -105,6 +105,20 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
             compact={false}
           />
         </div>
+
+        {/* Setup Service CTA */}
+        <div className="mt-12 p-8 bg-[#ccff00] border-4 border-black">
+          <h3 className="font-display text-2xl uppercase mb-3 text-black">Want to build a workflow like this?</h3>
+          <p className="text-sm font-bold text-black/70 mb-6">
+            Book a 90-minute setup sprint. I'll install the AI tools on your machine and build 3 automations with you. $99, money-back guarantee.
+          </p>
+          <Link
+            href="/agent-setup-service"
+            className="inline-flex items-center gap-2 bg-black text-[#ccff00] px-6 py-3 font-black uppercase text-sm hover:translate-x-0.5 hover:translate-y-0.5 transition-transform"
+          >
+            Book My Sprint →
+          </Link>
+        </div>
       </div>
     </>
   )

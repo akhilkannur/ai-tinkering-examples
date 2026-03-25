@@ -64,6 +64,7 @@ export default function FiveHundredWays({ recipes, categories }: MegaListiclePro
   return (
     <div className="min-h-screen bg-primary-bg font-sans text-black selection:bg-[#ff00ff] selection:text-white">
       <Head>
+        <meta name="robots" content="noindex, nofollow" />
         <title>{title}</title>
         <meta name="description" content={description} key="description" />
         

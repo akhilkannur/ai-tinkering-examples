@@ -9,8 +9,6 @@ id: cart-abandonment-value-segmentation
 category: Retention
 title: High-Value Cart Recovery
 tagline: Treat $1k carts differently than $10 carts.
-difficulty: Intermediate
-time: Daily
 archetype: Processor
 description: >-
   Splits cart abandoners into 'High Value' (for personal outreach) and 'Low
@@ -22,6 +20,12 @@ sampleData:
     John,1200,john@acme.com
     Jane,25,jane@beta.com
 isPremium: false
+inputs:
+  - Customer List
+  - Local File (CSV/MD)
+outputs:
+  - Re-engagement Script
+  - Cleaned Data
 ---
 # Agent Configuration: The Conversion Specialist
 
@@ -60,8 +64,6 @@ id: churn-behavioral-flag-system
 category: Retention
 title: Heuristic Churn Predictor
 tagline: Predict churn based on login gaps and ticket volume.
-difficulty: Advanced
-time: Batch
 archtype: Processor
 description: >-
   Looking for the "Death Spiral". Flags users who have: Low Login Frequency +
@@ -73,6 +75,10 @@ sampleData:
     UserA,45,3
     UserB,2,0
 isPremium: false
+inputs:
+  - Customer List
+outputs:
+  - Re-engagement Script
 ---
 
 # Agent Configuration: Heuristic Churn Predictor
@@ -111,8 +117,6 @@ id: churn-exit-survey-analyzer
 category: Retention
 title: The Churn Survey Analyzer
 tagline: Find out why they really left.
-difficulty: Intermediate
-time: Monthly
 archetype: Processor
 description: >-
   Exit surveys are often ignored. This agent analyzes open-ended 'Why did you
@@ -127,6 +131,12 @@ sampleData:
     3,Support never replied to my ticket.
     4,Found a cheaper tool.
 isPremium: false
+inputs:
+  - Customer List
+  - Local File (CSV/MD)
+outputs:
+  - Re-engagement Script
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Churn Survey Analyzer
@@ -172,8 +182,6 @@ id: churn-exit-video-analyzer
 category: Retention
 title: Churn Exit Video Analyzer
 tagline: Analyze emotional sentiment in Loom/Video exit surveys.
-difficulty: Advanced
-time: Batch
 archtype: Processor
 description: >-
   If you ask cancelled users for a video feedback, this agent watches them. It
@@ -186,6 +194,10 @@ sampleData:
     U101,https://loom.com/share/...
     U102,https://loom.com/share/...
 isPremium: false
+inputs:
+  - Customer List
+outputs:
+  - Re-engagement Script
 ---
 
 # Agent Configuration: Churn Exit Video Analyzer
@@ -224,8 +236,6 @@ id: cross-sell-recommender
 category: Retention
 title: Cross-Sell Recommender
 tagline: 'If they bought X, sell them Y.'
-difficulty: Intermediate
-time: Monthly
 archetype: Processor
 description: >-
   Identifies customers who bought a specific primary product (e.g., Tent) but
@@ -238,6 +248,12 @@ sampleData:
     Jane,Tent
     Bob,Tent;Footprint
 isPremium: false
+inputs:
+  - Customer List
+  - Local File (CSV/MD)
+outputs:
+  - Re-engagement Script
+  - Cleaned Data
 ---
 # Agent Configuration: The Email Strategist
 
@@ -276,8 +292,6 @@ id: holiday-shopper-reactivation
 category: Retention
 title: Holiday Shopper Wake-Up
 tagline: Re-engage Black Friday-only buyers.
-difficulty: Beginner
-time: Yearly
 archetype: Processor
 description: >-
   Segments users who *only* purchase during Q4 (Black Friday/Cyber Monday) for
@@ -290,6 +304,12 @@ sampleData:
     Sarah,2022-11-25,Electronics,FALSE
     Mike,2023-03-01,Clothing,FALSE
 isPremium: false
+inputs:
+  - Customer List
+  - Local File (CSV/MD)
+outputs:
+  - Re-engagement Script
+  - Cleaned Data
 ---
 # Agent Configuration: The Q4 Early Bird Strategist
 
@@ -330,8 +350,6 @@ id: loyalty-point-breakage-estimator
 category: Retention
 title: Loyalty Point Breakage Estimator
 tagline: Forecast how many points will expire unused.
-difficulty: Intermediate
-time: Batch
 archetype: Processor
 description: >-
   Analyzes point accrual vs redemption rates. Predicts the liability reduction
@@ -342,6 +360,12 @@ sampleData:
     User_ID,Points_Balance,Expiry_Date
     UserA,500,2023-12-31
 isPremium: false
+inputs:
+  - Customer List
+  - Local File (CSV/MD)
+outputs:
+  - Re-engagement Script
+  - Cleaned Data
 ---
 
 # Agent Configuration: Loyalty Point Breakage Estimator
@@ -380,8 +404,6 @@ id: loyalty-point-expiry-alert
 category: Retention
 title: Point Expiry Nudge
 tagline: Create urgency with expiring points.
-difficulty: Beginner
-time: Monthly
 archetype: Processor
 description: >-
   Flags customers with loyalty points expiring in the next 30 days to drive
@@ -393,6 +415,12 @@ sampleData:
     John,500,2023-11-01
     Jane,10,2024-01-01
 isPremium: false
+inputs:
+  - Customer List
+  - Local File (CSV/MD)
+outputs:
+  - Re-engagement Script
+  - Cleaned Data
 ---
 # Agent Configuration: The Loyalty Marketer
 
@@ -431,8 +459,6 @@ id: referral-fraud-pattern-detector
 category: Retention
 title: Referral Fraud Pattern Detector
 tagline: Catch users referring themselves for credits.
-difficulty: Intermediate
-time: Batch
 archetype: Processor
 description: >-
   Checks referral logs for: Same IP, Sequential Emails (john+1@gmail.com), or
@@ -443,6 +469,12 @@ sampleData:
     Referrer_ID,Referred_Email,IP_Address
     User1,User1+test@gmail.com,192.168.1.1
 isPremium: true
+inputs:
+  - Customer List
+  - Local File (CSV/MD)
+outputs:
+  - Re-engagement Script
+  - Cleaned Data
 ---
 
 # Agent Configuration: Referral Fraud Pattern Detector
@@ -481,8 +513,6 @@ id: review-request-timer
 category: Retention
 title: Review Request Timer
 tagline: Ask for reviews when they actually get the product.
-difficulty: Intermediate
-time: Daily
 archetype: Processor
 description: >-
   Calculates the optimal review request date by adding 2 days to the actual
@@ -494,6 +524,12 @@ sampleData:
     101,2023-10-01,john@acme.com
     102,2023-10-05,jane@beta.com
 isPremium: true
+inputs:
+  - Customer List
+  - Local File (CSV/MD)
+outputs:
+  - Re-engagement Script
+  - Cleaned Data
 ---
 # Agent Configuration: The CX Marketer
 
@@ -532,8 +568,6 @@ id: second-purchase-nudge-timer
 category: Retention
 title: Replenishment Timer
 tagline: Time your re-order emails perfectly.
-difficulty: Intermediate
-time: Monthly
 archetype: Processor
 description: >-
   Calculates the average days between 1st and 2nd purchase to identify the
@@ -546,6 +580,12 @@ sampleData:
     John,2023-02-01,102
     Jane,2023-01-15,103
 isPremium: true
+inputs:
+  - Customer List
+  - Local File (CSV/MD)
+outputs:
+  - Re-engagement Script
+  - Cleaned Data
 ---
 # Agent Configuration: The Retention Marketer
 
@@ -586,8 +626,6 @@ id: subscription-churn-risk-detector
 category: Retention
 title: Subscription Churn Risk
 tagline: Flag subscribers who paused or skipped.
-difficulty: Intermediate
-time: Weekly
 archetype: Processor
 description: >-
   Flags subscribers who have paused or skipped 2 consecutive months as high-risk
@@ -600,6 +638,12 @@ sampleData:
     John,Feb,Skipped
     John,Mar,Skipped
 isPremium: true
+inputs:
+  - Customer List
+  - Local File (CSV/MD)
+outputs:
+  - Re-engagement Script
+  - Cleaned Data
 ---
 # Agent Configuration: The Subscription Manager
 
@@ -638,8 +682,6 @@ id: unsubscribed-customer-matcher
 category: Retention
 title: Unsub Retargeter
 tagline: Reach unsubscribed users via ads.
-difficulty: Intermediate
-time: Monthly
 archetype: Processor
 description: >-
   Matches unsubscribed email users to a format suitable for Facebook/Instagram
@@ -650,6 +692,12 @@ sampleData:
     Email,Phone,Name
     john@acme.com,555-1234,John Doe
 isPremium: true
+inputs:
+  - Customer List
+  - Local File (CSV/MD)
+outputs:
+  - Re-engagement Script
+  - Cleaned Data
 ---
 # Agent Configuration: The Ad Ops Specialist
 
@@ -688,8 +736,6 @@ id: vip-tier-graduation-alert
 category: Retention
 title: VIP Graduation Alert
 tagline: Nudge customers close to the next tier.
-difficulty: Beginner
-time: Weekly
 archetype: Processor
 description: >-
   Identifies customers who are within $50 of the next loyalty tier to trigger a
@@ -703,6 +749,12 @@ sampleData:
 
     Jane,jane@yahoo.com,200,Gold,1000,Free Shipping
 isPremium: true
+inputs:
+  - Customer List
+  - Local File (CSV/MD)
+outputs:
+  - Re-engagement Script
+  - Cleaned Data
 ---
 # Agent Configuration: The Gamification Revenue Driver
 
@@ -744,8 +796,6 @@ id: welcome-sequence
 category: Retention
 title: The Onboarding Factory
 tagline: Create welcome email sequences.
-difficulty: Beginner
-time: 10 mins
 archetype: Processor
 description: >-
   Creates a 5-email welcome sequence for each user persona, designed to get them
@@ -758,6 +808,12 @@ sampleData:
     SaaS Founder,Installing the tag,Churn reduction
     E-com Manager,Adding first product,Increase AOV
 isPremium: true
+inputs:
+  - Customer List
+  - Local File (CSV/MD)
+outputs:
+  - Re-engagement Script
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Onboarding Factory
@@ -819,8 +875,6 @@ id: win-back-segmenter
 category: Retention
 title: Win-Back Segmenter
 tagline: Identify lapsed VIPs for recovery.
-difficulty: Beginner
-time: Weekly
 archetype: Processor
 description: >-
   Identifies high-value customers who haven't purchased in 180 days to trigger a
@@ -833,6 +887,12 @@ sampleData:
     Beta,Old Tool v1,Missing Integrations,300
     Gamma,Standard Plan,Project Ended,100
 isPremium: true
+inputs:
+  - Customer List
+  - Local File (CSV/MD)
+outputs:
+  - Re-engagement Script
+  - Cleaned Data
 ---
 # Agent Configuration: The Ex-Customer Whisperer
 

@@ -9,8 +9,6 @@ id: ad-copy-benchmarker
 category: Competitive Intel
 title: Ad Copy Pivot Detector
 tagline: Did they change their value prop?
-difficulty: Intermediate
-time: Weekly
 archetype: Processor
 description: >-
   Compares active competitor ad headlines week-over-week to detect strategic
@@ -22,6 +20,12 @@ sampleData:
     Comp A,2023-10-01,Save time.
     Comp A,2023-10-08,Save money.
 isPremium: false
+inputs:
+  - Competitor URL
+  - Local File (CSV/MD)
+outputs:
+  - Intel Dashboard
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Creative Strategist
@@ -62,8 +66,6 @@ id: ad-counter-strike
 category: Competitive Intel
 title: The Conquest Campaigner
 tagline: Don't just attack their product. Attack their bad reviews.
-difficulty: Advanced
-time: 25 mins
 archetype: Hybrid
 description: >-
   The best ad hook isn't what you say about yourself; it's what their customers
@@ -77,6 +79,12 @@ sampleData:
     Competitor_A,https://g2.com/competitor-a
     Competitor_B,https://capterra.com/competitor-b
 isPremium: false
+inputs:
+  - Competitor URL
+  - Local File + Search
+outputs:
+  - Intel Dashboard
+  - Enriched Document
 ---
 
 # Agent Configuration: The Attack Dog
@@ -123,8 +131,6 @@ id: ad-library-archivist
 category: Competitive Intel
 title: The Ad Library Archivist
 tagline: Build a structured swipe file from 100 links.
-difficulty: Beginner
-time: Weekly
 archetype: Processor
 description: >-
   Ads disappear. This agent reads a CSV of FB Ad Library or LinkedIn Ad links
@@ -137,6 +143,12 @@ sampleData:
     Competitor_A,https://fb.com/ads/123,UGC
     Competitor_B,https://fb.com/ads/456,Discount
 isPremium: false
+inputs:
+  - Competitor URL
+  - Local File (CSV/MD)
+outputs:
+  - Intel Dashboard
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Ad Library Archivist
@@ -180,8 +192,6 @@ id: case-study-reverse-engineer
 category: Competitive Intel
 title: The Case Study Decoder
 tagline: Who are they really selling to?
-difficulty: Intermediate
-time: Batch
 archetype: Hybrid
 description: >-
   Logos reveal strategy. This agent researches the logos and case studies on a
@@ -195,6 +205,12 @@ sampleData:
     Mercury,https://mercury.com,Banking
     Loom,https://loom.com,Video Messaging
 isPremium: false
+inputs:
+  - Competitor URL
+  - Local File + Search
+outputs:
+  - Intel Dashboard
+  - Enriched Document
 ---
 
 # Agent Configuration: The Case Study Decoder
@@ -244,8 +260,6 @@ id: competitor-change-monitor
 category: Competitive Intel
 title: Competitor Site Change Detector
 tagline: Did they change their H1? Did they raise prices?
-difficulty: Intermediate
-time: Weekly
 archtype: Processor
 description: >-
   Compares the text content of a competitor's homepage from 'Before' and 'After'
@@ -261,6 +275,10 @@ sampleData:
     Header: The Enterprise Platform for Scale.
     Price: Call Sales
 isPremium: false
+inputs:
+  - Competitor URL
+outputs:
+  - Intel Dashboard
 ---
 
 # Agent Configuration: The Competitive Analyst
@@ -308,8 +326,6 @@ id: competitor-employee-churn-monitor
 category: Competitive Intel
 title: Competitor Brain Drain
 tagline: Did their VP of Sales just quit?
-difficulty: Intermediate
-time: Monthly
 archetype: Processor
 description: >-
   Tracks departures from key competitor roles (Sales VP, Product Lead) via
@@ -321,6 +337,12 @@ sampleData:
     Comp A,VP Sales,John Doe,Left
     Comp A,CTO,Jane Smith,Active
 isPremium: false
+inputs:
+  - Competitor URL
+  - Local File (CSV/MD)
+outputs:
+  - Intel Dashboard
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Market Intelligence Analyst
@@ -361,8 +383,6 @@ id: competitor-feature-parity
 category: Competitive Intel
 title: The Feature Gap Detective
 tagline: Don't guess what they have. Scrape their pricing page to prove it.
-difficulty: Intermediate
-time: Monthly
 archetype: Hybrid
 description: >-
   Manual feature matrices are always out of date. This agent visits competitor
@@ -375,6 +395,12 @@ sampleData:
     Competitor A,https://competitor-a.com/pricing
     Competitor B,https://competitor-b.com/features
 isPremium: false
+inputs:
+  - Competitor URL
+  - Local File + Search
+outputs:
+  - Intel Dashboard
+  - Enriched Document
 ---
 
 # Agent Configuration: The Product Spy
@@ -425,8 +451,6 @@ id: competitor-hiring-spy
 category: Competitive Intel
 title: The Market Hiring Spy
 tagline: Detect strategic pivots (PLG -> Enterprise) by analyzing job titles.
-difficulty: Intermediate
-time: Monthly
 archetype: Hybrid
 description: >-
   Job boards reveal secret strategies. This agent reads a list of competitor job
@@ -439,6 +463,12 @@ sampleData:
     Competitor_A,https://competitor-a.com/jobs
     Competitor_B,https://competitor-b.com/careers
 isPremium: false
+inputs:
+  - Competitor URL
+  - Local File + Search
+outputs:
+  - Intel Dashboard
+  - Enriched Document
 ---
 
 # Agent Configuration: The Market Hiring Spy
@@ -488,8 +518,6 @@ id: competitor-hook-decoder
 category: Competitive Intel
 title: The Competitor Hook Decoder
 tagline: Reverse-engineer the psychology behind their ads.
-difficulty: Intermediate
-time: Weekly
 archetype: Processor
 isPremium: true
 description: >-
@@ -508,6 +536,12 @@ sampleData:
     Copy.ai,The end of writer's block.,Generate high-converting copy in seconds.
 
     ClickUp,Save one day every week.,The all-in-one app to replace them all.
+inputs:
+  - Competitor URL
+  - Local File (CSV/MD)
+outputs:
+  - Intel Dashboard
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Competitor Hook Decoder
@@ -556,8 +590,6 @@ id: competitor-news-digest-builder
 category: Competitive Intel
 title: Competitor Radar
 tagline: Turn messy news alerts into a clean executive summary.
-difficulty: Intermediate
-time: Weekly
 archtype: Hybrid
 description: >-
   Takes a list of competitors, searches for their latest press releases or blog
@@ -569,6 +601,10 @@ sampleData:
     CompetitorB
     CompetitorC
 isPremium: true
+inputs:
+  - Competitor URL
+outputs:
+  - Intel Dashboard
 ---
 
 # Agent Configuration: The Intel Analyst
@@ -616,8 +652,6 @@ id: competitor-onboarding-spy
 category: Competitive Intel
 title: The Onboarding Teardown Factory
 tagline: Comparative UX audit of competitors at once.
-difficulty: Beginner
-time: Batch
 description: >-
   How does your signup flow stack up? This agent processes screenshots and
   emails from multiple competitor signup flows and reverse-engineers their
@@ -630,6 +664,10 @@ sampleData:
     PostHog,onboarding_vault/posthog/,Data Ingestion
     Beehiiv,onboarding_vault/beehiiv/,Newsletter Setup
 isPremium: true
+inputs:
+  - Competitor URL
+outputs:
+  - Intel Dashboard
 ---
 
 # Agent Configuration: The Onboarding Teardown Factory
@@ -678,8 +716,6 @@ id: competitor-price-watchdog
 category: Competitive Intel
 title: The Price Watchdog Fleet
 tagline: Monitor pricing changes for 10 competitors at once.
-difficulty: Intermediate
-time: Weekly
 description: >-
   Competitors change pricing quietly. This agent reads a list of competitor URLs
   from a CSV, compares their current pricing pages against previous snapshots,
@@ -691,6 +727,10 @@ sampleData:
     Competitor_A,https://competitor-a.com/pricing
     Competitor_B,https://competitor-b.com/plans
 isPremium: true
+inputs:
+  - Competitor URL
+outputs:
+  - Intel Dashboard
 ---
 
 # Agent Configuration: The Price Watchdog Fleet
@@ -738,8 +778,6 @@ id: competitor-pricing-parity
 category: Competitive Intel
 title: Price War Monitor
 tagline: Don't just calculate differences. Scrape and monitor live competitor pricing.
-difficulty: Intermediate
-time: Monthly
 archetype: Hybrid
 description: >-
   Manual price checking is tedious. This agent takes a list of your products and
@@ -753,6 +791,12 @@ sampleData:
     Pro Plan,99,https://competitor.com/pricing
     Enterprise,299,https://competitor.com/enterprise
 isPremium: true
+inputs:
+  - Competitor URL
+  - Local File + Search
+outputs:
+  - Intel Dashboard
+  - Enriched Document
 ---
 
 # Agent Configuration: The Pricing Strategist
@@ -803,8 +847,6 @@ id: competitor-promo-code-tracker
 category: Competitive Intel
 title: Competitor Discount Tracker
 tagline: Are they running a secret 20% off?
-difficulty: Intermediate
-time: Weekly
 archetype: Processor
 description: >-
   Scrapes competitor checkout pages or email newsletters to log active promo
@@ -816,6 +858,12 @@ sampleData:
     Comp A,WELCOME20,20%,2023-10-01
     Comp B,FREESHIP,Shipping,2023-10-02
 isPremium: true
+inputs:
+  - Competitor URL
+  - Local File (CSV/MD)
+outputs:
+  - Intel Dashboard
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Pricing Analyst
@@ -856,8 +904,6 @@ id: competitor-screenshot-decoder
 category: Competitive Intel
 title: The Competitor UI/UX Decoder
 tagline: Analyze competitor screenshots to steal their best design patterns.
-difficulty: Advanced
-time: Batch
 archtype: Researcher
 description: >-
   Uses Vision capabilities to analyze screenshots of competitor apps or landing
@@ -869,6 +915,10 @@ sampleData:
     Slack,https://slack.com/img1.png
     Discord,https://discord.com/img2.png
 isPremium: true
+inputs:
+  - Competitor URL
+outputs:
+  - Intel Dashboard
 ---
 
 # Agent Configuration: The Competitor UI/UX Decoder
@@ -907,8 +957,6 @@ id: competitor-spy
 category: Competitive Intel
 title: The Market Spy
 tagline: Deep Competitor Analysis.
-difficulty: Intermediate
-time: 15 mins
 archetype: Researcher
 description: >-
   Researches your competitors and builds battle cards with their pricing,
@@ -921,6 +969,12 @@ sampleData:
     Zendesk,https://zendesk.com,Help Desk
     Drift,https://drift.com,Conversational Marketing
 isPremium: true
+inputs:
+  - Competitor URL
+  - Web Search Target
+outputs:
+  - Intel Dashboard
+  - Curated Intel
 ---
 
 # Agent Configuration: The Market Spy
@@ -983,8 +1037,6 @@ id: competitor-tech-stack-spy
 category: Competitive Intel
 title: The Tech Stack Spy
 tagline: Audit the tech stack of your entire market.
-difficulty: Intermediate
-time: 10 mins
 archetype: Hybrid
 description: >-
   Why check one site when you can check them all? This agent reads a list of
@@ -998,6 +1050,12 @@ sampleData:
     HubSpot,https://www.hubspot.com
     Drift,https://www.drift.com
 isPremium: true
+inputs:
+  - Competitor URL
+  - Local File + Search
+outputs:
+  - Intel Dashboard
+  - Enriched Document
 ---
 
 # Agent Configuration: The Tech Stack Spy
@@ -1051,8 +1109,6 @@ id: competitor-visual-pricing-tracker
 category: Competitive Intel
 title: Visual Pricing Page Monitor
 tagline: Detect hidden pricing changes that text scrapers miss.
-difficulty: Advanced
-time: Batch
 archtype: Researcher
 description: >-
   Text scrapers miss "per user" badges or layout shifts. This agent visually
@@ -1063,6 +1119,10 @@ sampleData:
     Competitor,URL,Last_Screenshot_Path
     CompetitorA,https://comp-a.com/pricing,./screens/date1.png
 isPremium: true
+inputs:
+  - Competitor URL
+outputs:
+  - Intel Dashboard
 ---
 
 # Agent Configuration: Visual Pricing Page Monitor
@@ -1101,8 +1161,6 @@ id: competitor-webinar-spy
 category: Competitive Intel
 title: Competitor Event Monitor
 tagline: What topics are they pitching?
-difficulty: Beginner
-time: Monthly
 archetype: Processor
 description: >-
   Monitors competitor event pages to track their marketing themes and webinar
@@ -1114,6 +1172,12 @@ sampleData:
     Comp A,AI for Sales,2023-11-01
     Comp B,Cloud Security,2023-11-15
 isPremium: true
+inputs:
+  - Competitor URL
+  - Local File (CSV/MD)
+outputs:
+  - Intel Dashboard
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Event Marketer
@@ -1153,8 +1217,6 @@ id: competitor-win-rate-trend
 category: Competitive Intel
 title: Competitor Win Rate Trend
 tagline: Are we winning or losing against Competitor X?
-difficulty: Intermediate
-time: Monthly
 archtype: Processor
 description: >-
   Tracks the win/loss rate against a specific competitor over time to detect
@@ -1167,6 +1229,10 @@ sampleData:
     Jan,Comp X,Lost
     Feb,Comp X,Lost
 isPremium: true
+inputs:
+  - Competitor URL
+outputs:
+  - Intel Dashboard
 ---
 
 # Agent Configuration: The Competitive Analyst
@@ -1213,8 +1279,6 @@ id: feature-parity-matrix-builder
 category: Competitive Intel
 title: Feature Parity Bot
 tagline: Auto-update your comparison grid.
-difficulty: Intermediate
-time: Quarterly
 archetype: Processor
 description: >-
   Scrapes 'Pricing' and 'Features' pages to build a binary (Yes/No) comparison
@@ -1226,6 +1290,12 @@ sampleData:
     Comp A,SSO,Included
     Comp B,SSO,Add-on
 isPremium: true
+inputs:
+  - Competitor URL
+  - Local File (CSV/MD)
+outputs:
+  - Intel Dashboard
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Product Marketing Manager
@@ -1266,8 +1336,6 @@ id: funding-radar
 category: Competitive Intel
 title: The Capital Radar
 tagline: Track $1B+ in funding across 50 industries on autopilot.
-difficulty: Intermediate
-time: 10 mins
 description: >-
   Capital is intent. This agent monitors a list of industries from a CSV and
   generates a unified weekly report of every funding round (Seed to Series C),
@@ -1280,6 +1348,10 @@ sampleData:
     ClimateTech
     Logistics
 isPremium: true
+inputs:
+  - Competitor URL
+outputs:
+  - Intel Dashboard
 ---
 
 # Agent Configuration: The Capital Radar
@@ -1325,8 +1397,6 @@ id: help-center-gap-finder
 category: Competitive Intel
 title: The Help Center Forensic Agent
 tagline: Spot competitor flaws in their support docs.
-difficulty: Advanced
-time: Batch
 description: >-
   Support documentation reveals the truth. This agent researches competitor Help
   Centers to identify which features require the most 'Troubleshooting' guides,
@@ -1339,6 +1409,10 @@ sampleData:
     Intercom,https://www.intercom.com/help
     Zendesk,https://support.zendesk.com
 isPremium: true
+inputs:
+  - Competitor URL
+outputs:
+  - Intel Dashboard
 ---
 
 # Agent Configuration: The Help Center Forensic Agent
@@ -1388,8 +1462,6 @@ id: newsletter-frequency-analyst
 category: Competitive Intel
 title: The Inbox Strategy Auditor
 tagline: Know exactly when your competitors send.
-difficulty: Beginner
-time: Batch
 description: >-
   Email attention is a zero-sum game. This agent researches the send history of
   your top competitors to identify their primary send times, helping you find
@@ -1402,6 +1474,10 @@ sampleData:
     The Hustle,https://trends.co/blog/
     Milk Road,https://milkroad.com/daily/
 isPremium: true
+inputs:
+  - Competitor URL
+outputs:
+  - Intel Dashboard
 ---
 
 # Agent Configuration: The Inbox Strategy Auditor
@@ -1452,8 +1528,6 @@ id: partner-page-scraper
 category: Competitive Intel
 title: The Partner Page Scraper
 tagline: Poach their agencies.
-difficulty: Advanced
-time: Batch
 description: >-
   Agency partners drive massive distribution. This agent researches competitor
   partner directories to identify high-value service partners you can recruit to
@@ -1466,6 +1540,10 @@ sampleData:
     Shopify,https://experts.shopify.com
     HubSpot,https://www.hubspot.com/solutions-directory
 isPremium: true
+inputs:
+  - Competitor URL
+outputs:
+  - Intel Dashboard
 ---
 
 # Agent Configuration: The Partner Page Scraper
@@ -1515,8 +1593,6 @@ id: pricing-change-historian
 category: Competitive Intel
 title: The Pricing Historian
 tagline: Track their inflation.
-difficulty: Intermediate
-time: Batch
 description: >-
   Companies raise prices slowly. This agent researches competitor pricing
   history using web archives to calculate inflation and identify 'Shrinkflation'
@@ -1529,6 +1605,10 @@ sampleData:
     Zendesk,https://www.zendesk.com/pricing
     Salesforce,https://www.salesforce.com/editions-pricing/sales-cloud/
 isPremium: true
+inputs:
+  - Competitor URL
+outputs:
+  - Intel Dashboard
 ---
 
 # Agent Configuration: The Pricing Historian
@@ -1577,8 +1657,6 @@ id: review-keyword-extractor
 category: Competitive Intel
 title: Review Keyword Miner
 tagline: What do people hate about your competitor?
-difficulty: Intermediate
-time: Monthly
 archetype: Processor
 description: >-
   Extracts common 2-word and 3-word phrases from competitor G2/Capterra reviews
@@ -1590,6 +1668,12 @@ sampleData:
     Comp A,The UI is so slow and buggy.
     Comp A,Support never replies.
 isPremium: true
+inputs:
+  - Competitor URL
+  - Local File (CSV/MD)
+outputs:
+  - Intel Dashboard
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Product Marketer
@@ -1630,8 +1714,6 @@ id: review-sentiment-quantifier
 category: Competitive Intel
 title: The Review Sentiment Factory
 tagline: Quantify the emotion of 1000+ customer reviews.
-difficulty: Advanced
-time: Monthly
 description: >-
   Star ratings lie. This agent reads a massive CSV of customer reviews (yours or
   competitors'), scores every one for specific attributes (Speed, Support,
@@ -1643,6 +1725,10 @@ sampleData:
     "Great tool but the export is so slow",4
     "Support never replied to my ticket",1
 isPremium: true
+inputs:
+  - Competitor URL
+outputs:
+  - Intel Dashboard
 ---
 
 # Agent Configuration: The Review Sentiment Factory
@@ -1687,8 +1773,6 @@ id: serp-conquesting-planner
 category: Competitive Intel
 title: SERP Conquest Planner
 tagline: Steal traffic where they are weak.
-difficulty: Advanced
-time: Monthly
 archetype: Processor
 description: >-
   Identifies keywords where competitors rank in top positions but have low page
@@ -1700,6 +1784,12 @@ sampleData:
     best crm,1,20
     crm pricing,3,15
 isPremium: true
+inputs:
+  - Competitor URL
+  - Local File (CSV/MD)
+outputs:
+  - Intel Dashboard
+  - Cleaned Data
 ---
 
 # Agent Configuration: The SEO Manager
@@ -1739,8 +1829,6 @@ id: social-follower-quality-audit
 category: Competitive Intel
 title: The Social Authenticity Auditor
 tagline: Spot fake followers on your account or a competitor's.
-difficulty: Intermediate
-time: One-off
 description: >-
   Follower count is a vanity metric. This agent audits your own follower list
   (if provided) or researches a competitor's engagement to detect 'Bot Signals'
@@ -1752,6 +1840,10 @@ sampleData:
     RealHuman1,"Product Manager @Google",2024-01-08
     BotAccount1,"Buy crypto now",None
 isPremium: true
+inputs:
+  - Competitor URL
+outputs:
+  - Intel Dashboard
 ---
 
 # Agent Configuration: The Social Authenticity Auditor
@@ -1800,8 +1892,6 @@ id: technographic-prospector
 category: Competitive Intel
 title: Technographic Prospector
 tagline: Find leads using specific software.
-difficulty: Advanced
-time: Monthly
 archetype: Processor
 description: >-
   Analyzes job descriptions or source code signatures to identify companies
@@ -1813,6 +1903,12 @@ sampleData:
     Acme,Job Post,Salesforce
     Beta,Source Code,HubSpot
 isPremium: true
+inputs:
+  - Competitor URL
+  - Local File (CSV/MD)
+outputs:
+  - Intel Dashboard
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Sales Engineer
@@ -1852,8 +1948,6 @@ id: traffic-source-reverse-engineer
 category: Competitive Intel
 title: The Traffic Source Decoder
 tagline: Uncover the growth engine of any competitor.
-difficulty: Intermediate
-time: One-off
 description: >-
   SimilarWeb gives numbers, but no strategy. This agent analyzes traffic
   percentages (if provided) or researches a competitor's domain to identify
@@ -1864,6 +1958,10 @@ sampleData:
     Domain,Direct,Organic,Social,Referral
     competitor.com,20%,50%,10%,20%
 isPremium: true
+inputs:
+  - Competitor URL
+outputs:
+  - Intel Dashboard
 ---
 
 # Agent Configuration: The Traffic Source Decoder
@@ -1913,8 +2011,6 @@ id: win-loss-competitor-trends
 category: Competitive Intel
 title: Competitor Win/Loss Trend
 tagline: Are we losing more to Comp A or B?
-difficulty: Intermediate
-time: Quarterly
 archetype: Processor
 description: >-
   Analyzes CRM data to visualize win rate trends against specific competitors
@@ -1926,6 +2022,12 @@ sampleData:
     Q1,Comp A,40%
     Q2,Comp A,30%
 isPremium: true
+inputs:
+  - Competitor URL
+  - Local File (CSV/MD)
+outputs:
+  - Intel Dashboard
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Sales Analyst

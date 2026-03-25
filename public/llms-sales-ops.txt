@@ -9,8 +9,6 @@ id: 10k-report-prospector
 category: Sales Ops
 title: The 10-K Stitcher
 tagline: Turn 'Risk Factors' into 'Sales Pitches'.
-difficulty: Advanced
-time: 15 mins
 archetype: Researcher
 description: >-
   Parses a public company's 10-K (Annual Report) to extract specific 'Risk
@@ -23,6 +21,12 @@ sampleData:
     Our data security protocols may not be sufficient to prevent breaches.
     Supply chain disruptions could delay our hardware shipments.
 isPremium: false
+inputs:
+  - Lead Data (CSV)
+  - Web Search Target
+outputs:
+  - CRM-Ready Export
+  - Curated Intel
 ---
 
 # Agent Configuration: The 10-K Stitcher
@@ -66,8 +70,6 @@ id: abandoned-cart-sms
 category: Sales Ops
 title: The Abandoned Cart SMS Writer
 tagline: Generate high-converting SMS hooks by analyzing your product page.
-difficulty: Intermediate
-time: Batch
 archetype: Hybrid
 description: >-
   Don't just say "You forgot this." This agent scrapes your product page to find
@@ -80,6 +82,12 @@ sampleData:
     John Doe,https://realaiexamples.com/tools/copywriting
     Jane Smith,https://realaiexamples.com/
 isPremium: false
+inputs:
+  - Lead Data (CSV)
+  - Local File + Search
+outputs:
+  - CRM-Ready Export
+  - Enriched Document
 ---
 
 # Agent Configuration: The eCommerce Copywriter
@@ -134,8 +142,6 @@ id: abm-tiering-calculator
 category: Sales Ops
 title: ABM Account Tiering Calc
 tagline: Auto-assign Tier 1/2/3 based on ICP fit and intent.
-difficulty: Advanced
-time: Quarterly
 archtype: Processor
 description: >-
   Analyzes firmographic data and intent signals to categorize target accounts
@@ -148,6 +154,10 @@ sampleData:
     Beta Inc,Manufacturing,10M,50,20
     Gamma LLC,Software,100M,200,60
 isPremium: false
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The ABM Strategist
@@ -194,8 +204,6 @@ id: account-hierarchy-builder
 category: Sales Ops
 title: Corporate Hierarchy Builder
 tagline: Link subsidiaries to parents based on domain patterns.
-difficulty: Advanced
-time: Monthly
 archetype: Processor
 description: >-
   Groups separate account records into a parent-child hierarchy based on shared
@@ -208,6 +216,12 @@ sampleData:
     Google UK,google.com
     DeepMind,deepmind.com
 isPremium: false
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Data Architect Agent
@@ -248,8 +262,6 @@ id: activation-rate-cohort
 category: Sales Ops
 title: Activation Rate by Cohort
 tagline: Are new users activating faster?
-difficulty: Advanced
-time: Monthly
 archetype: Processor
 description: >-
   Tracks the percentage of users who reach 'Activation' within 7 days, grouped
@@ -261,6 +273,12 @@ sampleData:
     Jan,1000,200
     Feb,1200,300
 isPremium: false
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 # Agent Configuration: The Growth Analyst
 
@@ -300,8 +318,6 @@ id: api-endpoint-validator
 category: Sales Ops
 title: The API Fleet Monitor
 tagline: Health check 50 endpoints in one run.
-difficulty: Advanced
-time: Daily
 archetype: Processor
 description: >-
   Ensure the demo never breaks. This agent reads a list of API endpoints from a
@@ -314,6 +330,12 @@ sampleData:
     Auth,/api/v1/login,token
     Data,/api/v1/stats,reports
 isPremium: false
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The API Fleet Monitor
@@ -358,8 +380,6 @@ id: api-usage-biller
 category: Sales Ops
 title: The API Usage Biller
 tagline: Don't leave money on the table.
-difficulty: Intermediate
-time: Monthly
 archetype: Processor
 description: >-
   Usage-based pricing is hard to track. This agent processes a raw log of API
@@ -372,6 +392,12 @@ sampleData:
     CustA,1000,500
     CustB,1000,1500
 isPremium: false
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Accountant
@@ -417,8 +443,6 @@ id: battlecard-usage-tracker
 category: Sales Ops
 title: Content Usage Tracker
 tagline: Which battlecards do reps actually use?
-difficulty: Beginner
-time: Monthly
 archtype: Processor
 description: >-
   Analyzes CMS view logs to see which sales assets (battlecards, case studies)
@@ -430,6 +454,10 @@ sampleData:
     Competitor A Battlecard,50,2m
     Objection Handling v1,2,30s
 isPremium: false
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Enablement Lead
@@ -476,8 +504,6 @@ id: billing-contact-verification
 category: Sales Ops
 title: Billing Contact Verifier
 tagline: Will the invoice bounce?
-difficulty: Beginner
-time: Monthly
 archetype: Processor
 description: >-
   Checks if the email listed as 'Billing Contact' is valid or has recently
@@ -490,6 +516,12 @@ sampleData:
     Beta Inc,finance@beta.com,Hard Bounce,120000,beta.com
     Gamma LLC,ap@gamma.com,Soft Bounce,10000,gamma.com
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Revenue Leakage Auditor
@@ -533,8 +565,6 @@ id: billing-frequency-upsell
 category: Sales Ops
 title: Annual Pre-Pay Upsell
 tagline: Move monthly users to annual plans.
-difficulty: Beginner
-time: Quarterly
 archetype: Processor
 description: >-
   Identifies stable 'Monthly' customers ideal for 'Annual' conversion campaigns
@@ -546,6 +576,12 @@ sampleData:
     Acme,Monthly,12
     Beta,Monthly,1
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 # Agent Configuration: The Growth Marketer
 
@@ -584,8 +620,6 @@ id: builtwith-tech-pivot
 category: Sales Ops
 title: The Tech Displacement Factory
 tagline: Find every user of 10 competitors in one run.
-difficulty: Intermediate
-time: Weekly
 archetype: Processor
 description: >-
   BuiltWith reports are noisy. This agent reads a list of target technologies
@@ -598,6 +632,12 @@ sampleData:
     Marketo,10000000
     HubSpot,1000000
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Tech Displacement Factory
@@ -642,8 +682,6 @@ id: business-card-digitizer
 category: Sales Ops
 title: The Business Card Digitizer
 tagline: From pocket to CRM in seconds.
-difficulty: Experimental
-time: Batch
 archetype: Processor
 description: >-
   Don't type business cards manually. This agent takes a list of image files,
@@ -657,6 +695,12 @@ sampleData:
     booth_photos/card_stack_1.png,SaaStr,2024-09-10
     booth_photos/lunch_meeting.webp,Networking Dinner,2024-09-11
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Business Card Digitizer
@@ -702,8 +746,6 @@ id: buying-committee-gap-analyzer
 category: Sales Ops
 title: Buying Committee Auditor
 tagline: Find missing key roles in your target accounts.
-difficulty: Intermediate
-time: Weekly
 archtype: Processor
 description: >-
   Checks target accounts to see if you have contacts for required roles like
@@ -716,6 +758,10 @@ sampleData:
     Acme Corp,Jane Smith,VP Sales
     Beta Inc,Bob Hill,CTO
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Sales Ops Analyst
@@ -763,8 +809,6 @@ id: buying-signal-heatmapper
 category: Sales Ops
 title: Account Buying Signal Heatmapper
 tagline: Score account timing by aggregating intent signals.
-difficulty: Advanced
-time: Daily
 archetype: Processor
 description: >-
   Aggregates intent signals from job postings, news alerts, and website visits
@@ -777,6 +821,12 @@ sampleData:
     Beta Inc,News,2023-10-02,Series B Funding
     Acme Corp,Web Visit,2023-10-03,Pricing Page
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Revenue Intelligence Agent
@@ -817,8 +867,6 @@ id: call-sentiment-win-correlation
 category: Sales Ops
 title: Call Sentiment Optimizer
 tagline: Correlate 'Positive Sentiment' scores with win rates.
-difficulty: Advanced
-time: Quarterly
 archetype: Processor
 description: >-
   Cross-references call sentiment scores from transcripts with actual deal
@@ -831,6 +879,12 @@ sampleData:
     Deal-2,Lost,0.40
     Deal-3,Won,0.70
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Sales Coaching Agent
@@ -871,8 +925,6 @@ id: case-study-factory
 category: Sales Ops
 title: The Case Study Factory
 tagline: Turn 10 transcripts into 10 closed deals.
-difficulty: Beginner
-time: 10 mins
 archetype: Processor
 description: >-
   Sales teams need social proof. This agent reads a folder of interview
@@ -884,6 +936,12 @@ sampleData:
     User: "The workflow automation was a game changer. We saved 20 hours a week
     across the team."
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Case Study Factory
@@ -929,8 +987,6 @@ id: champion-movement-tracker
 category: Sales Ops
 title: Champion Job Change Tracker
 tagline: Detect when previous buyers move to new companies.
-difficulty: Intermediate
-time: Monthly
 archetype: Processor
 description: >-
   Compares a list of known 'Champions' (previous buyers) against a new contact
@@ -942,6 +998,12 @@ sampleData:
     John Doe,Acme Corp,john@acme.com
     Jane Smith,Beta Inc,jane@beta.com
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Customer Advocacy Agent
@@ -982,8 +1044,6 @@ id: champion-verifier
 category: Sales Ops
 title: The Champion Verifier
 tagline: Is your champion actually a champion?
-difficulty: Beginner
-time: Deal Review
 archetype: Processor
 description: >-
   False champions lose deals. This agent evaluates a specific contact based on a
@@ -996,6 +1056,12 @@ sampleData:
     John Doe,Director,Yes,Yes,No
     Jane Smith,Intern,No,Yes,Yes
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The MEDDIC Master
@@ -1047,8 +1113,6 @@ id: churn-cohort-analysis-bot
 category: Sales Ops
 title: Churn Cohort Analyzer
 tagline: Measure churn rate by customer vintage.
-difficulty: Advanced
-time: Monthly
 archetype: Processor
 description: >-
   Segments churn data by the customer's 'Join Date' to see if newer cohorts are
@@ -1061,6 +1125,12 @@ sampleData:
     Jan-23,Churned,2023-05-01
     Mar-23,Active,NULL
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Retention Analyst Agent
@@ -1101,8 +1171,6 @@ id: churn-detective
 category: Sales Ops
 title: The Churn Sentinel
 tagline: Predict at-risk customers across 500 accounts.
-difficulty: Advanced
-time: 25 mins
 archetype: Processor
 description: >-
   Prevention is better than recovery. This agent reads a CSV of recent support
@@ -1115,6 +1183,12 @@ sampleData:
     Cust_101,"The app is too slow today",-20%
     Cust_102,"I need to export my data",-50%
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Churn Sentinel
@@ -1155,8 +1229,6 @@ id: churn-risk-health-scorer
 category: Sales Ops
 title: The Trend-Based Churn Predictor
 tagline: Static scores lie. Detect negative trends (velocity) before it's too late.
-difficulty: Advanced
-time: Weekly
 archetype: Processor
 description: >-
   Most health scores are static snapshots. This agent analyzes the *change* in
@@ -1170,6 +1242,12 @@ sampleData:
     Globex,50,55,0
     Stark Ind,200,10,2
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Retention Analyst
@@ -1214,8 +1292,6 @@ id: clawback-calculator
 category: Sales Ops
 title: Commission Clawback Audit
 tagline: Identify commissions paid on deals that churned early.
-difficulty: Intermediate
-time: Monthly
 archtype: Processor
 description: >-
   Compares recent churn events against payout logs to flag commissions that need
@@ -1227,6 +1303,10 @@ sampleData:
     Deal-1,John,1000,2023-10-01,2023-09-01
     Deal-2,Jane,500,2023-12-01,2023-01-01
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Commission Manager
@@ -1273,8 +1353,6 @@ id: cold-call-objection-simulator
 category: Sales Ops
 title: Cold Call Simulator (The Grumpy Prospect)
 tagline: Practice handling "I'm not interested" before you pick up the phone.
-difficulty: Intermediate
-time: 5 mins
 archetype: Hybrid
 description: >-
   A roleplay agent that acts as a difficult prospect. It throws common
@@ -1286,6 +1364,12 @@ sampleData:
     Hi, this is John from Acme. We help companies save 20% on cloud bills. Is
     this a bad time?
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File + Search
+outputs:
+  - CRM-Ready Export
+  - Enriched Document
 ---
 
 # Agent Configuration: The Cold Call Simulator (Grumpy Prospect)
@@ -1340,8 +1424,6 @@ id: cold-email-personalization-at-scale
 category: Sales Ops
 title: Cold Email Personalizer
 tagline: Merges company news with lead lists to generate custom icebreakers.
-difficulty: Advanced
-time: 20 mins
 archetype: Hybrid
 description: >-
   Takes a CSV of leads, researches recent news for each company, and writes a
@@ -1354,6 +1436,12 @@ sampleData:
     Zapier,Wade Foster,CEO
     Loom,Joe Thomas,Founder
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File + Search
+outputs:
+  - CRM-Ready Export
+  - Enriched Document
 ---
 
 # Agent Configuration: The Cold Email Personalizer
@@ -1408,8 +1496,6 @@ id: cold-email-spam-checker
 category: Sales Ops
 title: The Spam Word Hunter
 tagline: Don't trigger the filters.
-difficulty: Beginner
-time: 5 mins
 archetype: Processor
 description: >-
   Scans your cold emails for spam trigger words and rewrites them to land in
@@ -1428,6 +1514,12 @@ sampleData:
     Quick question,"Hey, I wanted to follow up on our previous conversation
     about growth."
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Spam Word Hunter
@@ -1487,8 +1579,6 @@ id: commission-clawback-tracker
 category: Sales Ops
 title: Clawback Risk Monitor
 tagline: Track revenue at risk of clawback.
-difficulty: Intermediate
-time: Weekly
 archtype: Processor
 description: >-
   Identifies recently paid deals that are currently in 'High Support Volume' or
@@ -1500,6 +1590,10 @@ sampleData:
     Acme,Last Month,15,Down
     Beta,Last Month,0,Up
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Revenue Financial Analyst
@@ -1545,8 +1639,6 @@ id: commission-payout-calculator
 category: Sales Ops
 title: The Comp Plan Simulator
 tagline: Model the impact of 'Accelerators' and 'Spiffs' before you roll them out.
-difficulty: Intermediate
-time: Monthly
 archetype: Processor
 description: >-
   Changing commission plans is risky. This agent takes your historical deal data
@@ -1561,6 +1653,12 @@ sampleData:
     Rep B,80000,100000
     Rep C,200000,100000
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Comp Analyst
@@ -1611,8 +1709,6 @@ id: commission-payout-variance
 category: Sales Ops
 title: Commission Variance Alert
 tagline: Did John's check double MoM?
-difficulty: Intermediate
-time: Monthly
 archetype: Processor
 description: >-
   Checks for large Month-over-Month swings in rep commission checks to catch
@@ -1624,6 +1720,12 @@ sampleData:
     John,Jan,5000
     John,Feb,15000
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Comp Plan Auditor
@@ -1670,8 +1772,6 @@ id: conference-networking-planner
 category: Sales Ops
 title: Conference Networking Strategist
 tagline: Prioritize who to meet at your next event.
-difficulty: Intermediate
-time: 5 mins
 archetype: Processor
 description: >-
   Reads a list of conference attendees, filters them by your "Ideal Customer
@@ -1685,6 +1785,12 @@ sampleData:
     Jane Smith,VP of Engineering,Netflix
     Bob Jones,Consultant,Self-Employed
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Conference Networking Strategist
@@ -1736,8 +1842,6 @@ id: contact-enrichment-freshness
 category: Sales Ops
 title: Enrichment Freshness Audit
 tagline: Is your data stale?
-difficulty: Beginner
-time: Quarterly
 archetype: Processor
 description: >-
   Checks when contacts were last enriched to trigger updates for records older
@@ -1750,6 +1854,12 @@ sampleData:
     sarah@enterprise.com,2022-05-01,Trade Show
     mike@startup.io,2023-10-01,Inbound
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The CRM Data Hygienist
@@ -1794,8 +1904,6 @@ id: contact-role-density-auditor
 category: Sales Ops
 title: Account Stakeholder Density
 tagline: Ensure top accounts have >3 contacts.
-difficulty: Beginner
-time: Weekly
 archetype: Processor
 description: >-
   Audits high-value accounts to flag those with insufficient contact coverage
@@ -1807,6 +1915,12 @@ sampleData:
     Acme Corp,1M,5
     Beta Inc,500k,1
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Account Mapping Agent
@@ -1847,8 +1961,6 @@ id: contract-auto-renewal-forecaster
 category: Sales Ops
 title: Auto-Renew Forecaster
 tagline: Predict passive revenue.
-difficulty: Intermediate
-time: Monthly
 archetype: Processor
 description: >-
   Predicts revenue from contracts marked 'Auto-Renew' vs those requiring manual
@@ -1860,6 +1972,12 @@ sampleData:
     Acme,10000,Auto
     Beta,50000,Manual
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Revenue Defense System
@@ -1903,8 +2021,6 @@ id: contract-clause-variance-tracker
 category: Sales Ops
 title: The Legal Risk Scanner
 tagline: Quantify your legal exposure in dollars.
-difficulty: Advanced
-time: Monthly
 archetype: Processor
 description: >-
   Legal teams hate "Redlines," but CFOs hate "Hidden Risk." This agent scans
@@ -1919,6 +2035,12 @@ sampleData:
     Beta,100000,"Customer may terminate for convenience with 30 days notice."
     Gamma,20000,"Payment terms: Net 90."
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 # Agent Configuration: The Risk Officer
 
@@ -1963,8 +2085,6 @@ id: contract-expiry-cliff-visualizer
 category: Sales Ops
 title: Revenue Cliff Visualizer
 tagline: Identify months with dangerous renewal concentration.
-difficulty: Intermediate
-time: Monthly
 archtype: Processor
 description: >-
   Aggregates contract values by expiry month to identify 'cliffs' where a single
@@ -1977,6 +2097,10 @@ sampleData:
     Beta,50000,Jan
     Gamma,20000,Feb
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Strategic Planning Lead
@@ -2024,8 +2148,6 @@ id: contract-redline-risk-spotter
 category: Sales Ops
 title: Legal Redline Risk Spotter
 tagline: Spot deal-killing clauses in legal redlines instantly.
-difficulty: Intermediate
-time: Real-time
 archtype: Processor
 description: >-
   Pastes the diff of a contract. Highlights "Unlimited Liability", "IP
@@ -2036,6 +2158,10 @@ sampleData:
     Clause_Name,Original_Text,Redlined_Text
     Liability,Cap at 1x,Unlimited
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: Legal Redline Risk Spotter
@@ -2074,8 +2200,6 @@ id: contract-renewal-auto-quoter
 category: Sales Ops
 title: The Renewal Negotiator
 tagline: Don't send flat renewals. Adjust the offer based on actual utilization.
-difficulty: Intermediate
-time: Monthly
 archetype: Processor
 description: >-
   Blind price increases cause churn. This agent reviews customer utilization
@@ -2089,6 +2213,12 @@ sampleData:
     GhostTown LLC,10000,0.30,50
     AverageJoes,5000,0.70,10
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Renewal Negotiator
@@ -2138,8 +2268,6 @@ id: contract-renewal-date-alerter
 category: Sales Ops
 title: Renewal Radar
 tagline: Never miss an expiration date.
-difficulty: Beginner
-time: Monthly
 archtype: Processor
 description: >-
   Scans customer contracts to flag those expiring in the next 90 days for the
@@ -2152,6 +2280,10 @@ sampleData:
     Beta Inc,10000,2024-06-01,Green
     Gamma LLC,4000,2024-01-05,Red
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Renewal Command Center
@@ -2199,8 +2331,6 @@ id: contract-renewal-health-score
 category: Sales Ops
 title: Pre-Renewal Health Check
 tagline: 90-day warning system.
-difficulty: Intermediate
-time: Weekly
 archetype: Processor
 description: >-
   Calculates a specific health score that only triggers 90 days before renewal
@@ -2212,6 +2342,12 @@ sampleData:
     Acme,85,Red
     Beta,85,Green
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 # Agent Configuration: The Renewals Manager
 
@@ -2250,8 +2386,6 @@ id: credit-card-dunning-recovery
 category: Sales Ops
 title: High-Value Dunning Prioritizer
 tagline: Save the big accounts first.
-difficulty: Beginner
-time: Daily
 archetype: Processor
 description: >-
   Prioritizes failed payment outreach based on the Monthly Recurring Revenue
@@ -2264,6 +2398,12 @@ sampleData:
     Startup Inc,Visa,Monday,Insufficient Funds,500
     Individual User,Debit,Tuesday,Lost Card,20
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 # Agent Configuration: The Involuntary Churn Rescuer
 
@@ -2308,8 +2448,6 @@ id: crm-field-completion-rate
 category: Sales Ops
 title: CRM Hygiene Scorecard
 tagline: Who isn't filling out 'Next Step'?
-difficulty: Beginner
-time: Weekly
 archetype: Processor
 description: >-
   Scores reps based on the completion rate of mandatory fields (Next Step,
@@ -2321,6 +2459,12 @@ sampleData:
     John,O-1,Call
     Jane,O-2,NULL
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Sales Process Enforcer
@@ -2363,8 +2507,6 @@ id: crm-field-utilization-analyzer
 category: Sales Ops
 title: CRM Field Health Check
 tagline: Identify unused or garbage data fields in your CRM.
-difficulty: Intermediate
-time: 10 mins
 archtype: Processor
 description: >-
   Analyzes a CSV export of your CRM records to calculate fill rates for every
@@ -2377,6 +2519,10 @@ sampleData:
     002,12000,2023-11-15,Email,,
     003,3000,,,
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The CRM Architect
@@ -2424,8 +2570,6 @@ id: cross-sell-penetration-matrix
 category: Sales Ops
 title: Product Penetration Matrix
 tagline: Map customers against the full product catalog.
-difficulty: Intermediate
-time: Monthly
 archetype: Processor
 description: >-
   Generates a grid showing which products every customer owns to highlight
@@ -2438,6 +2582,12 @@ sampleData:
     Acme,API
     Beta,Base
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Expansion Agent
@@ -2478,8 +2628,6 @@ id: cross-sell-whitespace-mapper
 category: Sales Ops
 title: Cross-Sell Whitespace Matrix
 tagline: Find exactly what your customers haven't bought yet.
-difficulty: Intermediate
-time: Monthly
 archtype: Processor
 description: >-
   Generates a matrix of customers vs products to identify upsell and cross-sell
@@ -2493,6 +2641,10 @@ sampleData:
     Beta,Platform
     Gamma,Add-on B
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The RevOps Strategist
@@ -2539,8 +2691,6 @@ id: currency-exchange-normalizer
 category: Sales Ops
 title: Global Pipeline Normalizer
 tagline: Convert global deals into a single master currency.
-difficulty: Beginner
-time: Weekly
 archtype: Processor
 description: >-
   Converts a multi-currency pipeline CSV into a standard USD report for
@@ -2553,6 +2703,10 @@ sampleData:
     Deal B,500,GBP
     Deal C,1000,USD
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Revenue Controller
@@ -2599,8 +2753,6 @@ id: customer-domain-extractor
 category: Sales Ops
 title: Domain from Email Extractor
 tagline: Get company websites from a list of emails.
-difficulty: Beginner
-time: Batch
 archtype: Processor
 description: >-
   Parses a list of email addresses to extract the domain portion, filtering out
@@ -2613,6 +2765,10 @@ sampleData:
     jane@gmail.com
     bill@beta.io
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Data Enricher
@@ -2660,8 +2816,6 @@ id: deal-desk-discount-approver
 category: Sales Ops
 title: Discount Guardrails Bot
 tagline: Auto-flag quotes with excessive discounts.
-difficulty: Intermediate
-time: Daily
 archtype: Processor
 description: >-
   Checks a CSV of draft quotes to flag any line items with discounts > 20% for
@@ -2673,6 +2827,10 @@ sampleData:
     Q-101,SaaS Pro,100,80,20
     Q-102,SaaS Ent,1000,600,40
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Deal Desk Analyst
@@ -2719,8 +2877,6 @@ id: deal-push-reason-analyzer
 category: Sales Ops
 title: Deal Push Diagnostics
 tagline: Why did they delay... again?
-difficulty: Intermediate
-time: Monthly
 archetype: Processor
 description: >-
   Aggregates reasons for pushing close dates (e.g. 'Budget', 'Ghosting') to
@@ -2734,6 +2890,12 @@ sampleData:
     Soylent Corp,John,Budget,2
     Initech Deal,Mike,Competitor,1
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Pipeline Integrity Consultant
@@ -2776,8 +2938,6 @@ id: deal-rotting-alert-system
 category: Sales Ops
 title: Deal Rotting Monitor
 tagline: Flag deals that haven't moved in 14 days.
-difficulty: Beginner
-time: Weekly
 archtype: Processor
 description: >-
   Highlights opportunities that are 'rotting' in the pipeline so managers can
@@ -2790,6 +2950,10 @@ sampleData:
     Deal B,Discovery,2023-09-01
     Deal C,Demo,2023-10-15
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Pipeline Manager
@@ -2839,8 +3003,6 @@ title: The Deal Slippage Healer
 tagline: >-
   Don't just flag the slip. Diagnose the root cause with Rep-specific coaching
   questions.
-difficulty: Intermediate
-time: Weekly
 archetype: Processor
 description: >-
   Deals that push 3+ times are 90% likely to be lost. This agent analyzes your
@@ -2856,6 +3018,12 @@ sampleData:
     2,Week1,2023-10-31,Discovery,10000
     2,Week2,2023-10-31,Demo,10000
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Forecast Healer
@@ -2906,8 +3074,6 @@ id: demo-call-scripter
 category: Sales Ops
 title: The Demo Playbook Factory
 tagline: Custom demo scripts for every industry you sell to.
-difficulty: Beginner
-time: 20 mins
 description: >-
   Most demos are boring feature tours. This agent reads a list of target
   industries and their top pains from a CSV and generates a library of
@@ -2919,6 +3085,10 @@ sampleData:
     Fintech,Security Compliance,Auto-Audit Logs
     E-com,Cart Abandonment,SMS Recovery
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Demo Playbook Factory
@@ -2963,8 +3133,6 @@ id: demo-conversion-audit
 category: Sales Ops
 title: Stage Conversion Auditor
 tagline: Measure Demo -> Proposal conversion by rep.
-difficulty: Beginner
-time: Monthly
 archtype: Processor
 description: >-
   Calculates the conversion efficiency of specific sales stages to identify
@@ -2977,6 +3145,10 @@ sampleData:
     John,Demo,Closed-Lost
     Jane,Demo,Proposal
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Sales Coach
@@ -3024,8 +3196,6 @@ id: demo-no-show-analyzer
 category: Sales Ops
 title: No-Show Rate Analyzer
 tagline: Why are prospects ghosting demos?
-difficulty: Intermediate
-time: Monthly
 archtype: Processor
 description: Analyzes demo logs to calculate no-show rates by Lead Source and Rep.
 sampleData:
@@ -3036,6 +3206,10 @@ sampleData:
     Jane,Cold Call,No Show
     John,Cold Call,No Show
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The SDR Manager
@@ -3083,8 +3257,6 @@ id: demo-to-trial-conversion
 category: Sales Ops
 title: Demo-to-Trial Converter
 tagline: Are demos actually working?
-difficulty: Beginner
-time: Monthly
 archetype: Processor
 description: Measures the success rate of converting Sales Demos into Product Trials.
 sampleData:
@@ -3096,6 +3268,12 @@ sampleData:
     John,Facebook_Ads,2023-10-02,FALSE
     Mike,Referral,2023-10-03,TRUE
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Sales Funnel Physician
@@ -3138,8 +3316,6 @@ id: discount-approval-sla-tracker
 category: Sales Ops
 title: Deal Desk SLA Monitor
 tagline: How fast are quotes approved?
-difficulty: Intermediate
-time: Weekly
 archetype: Processor
 description: >-
   Measures the time between 'Quote Submitted' and 'Quote Approved' to identify
@@ -3151,6 +3327,12 @@ sampleData:
     Q1,10:00,10:30
     Q2,10:00,18:00
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Deal Desk Manager
@@ -3191,8 +3373,6 @@ id: discount-impact-on-ltv
 category: Sales Ops
 title: Discount vs LTV Auditor
 tagline: Does high discounting lead to low LTV?
-difficulty: Advanced
-time: Quarterly
 archetype: Processor
 description: >-
   Correlates initial contract discounts with long-term customer lifetime value
@@ -3204,6 +3384,12 @@ sampleData:
     Acme,0,50000
     Beta,30,10000
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Revenue Strategy Agent
@@ -3244,8 +3430,6 @@ id: discount-variance-by-region
 category: Sales Ops
 title: Regional Discount Auditor
 tagline: Find territories discounting more than the average.
-difficulty: Intermediate
-time: Monthly
 archetype: Processor
 description: >-
   Calculates average discount rates by region to identify outliers and margin
@@ -3258,6 +3442,12 @@ sampleData:
     Deal 2,EMEA,5000,25
     Deal 3,APAC,8000,10
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Pricing Auditor
@@ -3299,8 +3489,6 @@ id: discount-vs-duration-correlation
 category: Sales Ops
 title: Discount Efficiency Auditor
 tagline: Are we getting longer terms for lower prices?
-difficulty: Intermediate
-time: Quarterly
 archetype: Processor
 description: >-
   Checks if deals with high discounts actually result in longer contract
@@ -3313,6 +3501,12 @@ sampleData:
     2,20,36
     3,0,12
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 # Agent Configuration: The Deal Desk Lead
 
@@ -3351,8 +3545,6 @@ id: discovery-question-compliance
 category: Sales Ops
 title: The Sales Coach
 tagline: Don't just grade the call. Fix the deal.
-difficulty: Advanced
-time: Batch
 archetype: Processor
 description: >-
   Reviewing calls is useless if you don't act. This agent scans transcripts for
@@ -3366,6 +3558,12 @@ sampleData:
     Rep: "Great."
     (Note: No budget or timeline discussion).
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Sales Coach
@@ -3413,8 +3611,6 @@ id: drive-time-territory-balancer
 category: Sales Ops
 title: Drive-Time Territory Balancer
 tagline: Balance field sales territories by actual drive time.
-difficulty: Advanced
-time: Batch
 archetype: Processor
 description: >-
   Calculates the center of gravity for a territory. uses Maps API logic to
@@ -3426,6 +3622,12 @@ sampleData:
     RepA,"123 Main St, Austin"
     RepB,"456 Oak St, Dallas"
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: Drive-Time Territory Balancer
@@ -3464,8 +3666,6 @@ id: duplicate-account-consolidator
 category: Sales Ops
 title: Account Dupe Smasher
 tagline: Find duplicate companies using fuzzy matching.
-difficulty: Advanced
-time: Monthly
 archtype: Processor
 description: >-
   Identifies duplicate account records by comparing names (e.g., 'Acme Inc.' vs
@@ -3479,6 +3679,10 @@ sampleData:
     3,Acme Incorporated,acme.com
     4,The Beta Group,beta.io
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Data Quality Engineer
@@ -3526,8 +3730,6 @@ id: duplicate-lead-merger
 category: Sales Ops
 title: The Duplicate Lead Merger
 tagline: 'One person, one record.'
-difficulty: Intermediate
-time: Weekly
 archetype: Processor
 description: >-
   Duplicates split history and confuse reps. This agent identifies duplicate
@@ -3541,6 +3743,12 @@ sampleData:
     1,john@acme.com,,2023-01-01
     2,john@acme.com,555-0199,2023-10-01
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Librarian
@@ -3587,8 +3795,6 @@ id: email-pattern-guesser
 category: Sales Ops
 title: The Email Permutator
 tagline: Guess email addresses from names.
-difficulty: Beginner
-time: 5 mins
 archetype: Processor
 description: >-
   Generates possible email addresses for your leads based on common corporate
@@ -3601,6 +3807,12 @@ sampleData:
     Jane,Smith,globex.io
     Mike,Ross,pearsonhardman.com
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Email Permutator
@@ -3660,8 +3872,6 @@ id: enrichment-match-calculator
 category: Sales Ops
 title: The Data Health Auditor
 tagline: Don't pay for empty cells. Audit vendor performance.
-difficulty: Intermediate
-time: One-off
 archetype: Processor
 description: >-
   Data vendors over-promise and under-deliver. This agent audits your enriched
@@ -3675,6 +3885,12 @@ sampleData:
     b@test.com,,,
     c@test.com,555-0200,,Salesforce
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Data Architect
@@ -3722,8 +3938,6 @@ id: executive-relationship-mapper
 category: Sales Ops
 title: Executive Network Mapper
 tagline: Map executive relationships via calendar data.
-difficulty: Intermediate
-time: Monthly
 archetype: Processor
 description: >-
   Analyzes meeting logs to visualize which executives are already engaged with
@@ -3735,6 +3949,12 @@ sampleData:
     CEO,Big Boss,CEO,Acme Corp
     AE,John Manager,Director,Acme Corp
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Strategic Account Agent
@@ -3775,8 +3995,6 @@ id: expansion-propensity-scorer
 category: Sales Ops
 title: Upsell Propensity Scorer
 tagline: Who is ready to buy more?
-difficulty: Advanced
-time: Monthly
 archetype: Processor
 description: >-
   Matches historical upsell data to current customer profiles (Employee Growth +
@@ -3788,6 +4006,12 @@ sampleData:
     Acme,20,50
     Beta,-5,0
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 # Agent Configuration: The Account Management Ops
 
@@ -3827,8 +4051,6 @@ id: feature-gating-hit-tracker
 category: Sales Ops
 title: Paywall Hit Detector
 tagline: Who keeps clicking the 'Upgrade' button?
-difficulty: Intermediate
-time: Weekly
 archetype: Processor
 description: >-
   Tracks how often specific free users hit 'Upgrade to use this' paywalls to
@@ -3840,6 +4062,12 @@ sampleData:
     Acme,API Access,5
     Beta,SSO,1
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 # Agent Configuration: The Sales Assist Agent
 
@@ -3878,8 +4106,6 @@ id: forecast-accuracy-tracker
 category: Sales Ops
 title: Forecast vs Actuals Tracker
 tagline: Which rep is sandbagging?
-difficulty: Intermediate
-time: Monthly
 archtype: Processor
 description: >-
   Compares the 'Committed' forecast from the start of the month against actual
@@ -3891,6 +4117,10 @@ sampleData:
     John,50000,45000
     Jane,20000,40000
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Sales Ops Manager
@@ -3938,8 +4168,6 @@ id: forecast-sandbag-detector
 category: Sales Ops
 title: Forecast Integrity Auditor
 tagline: Identify reps who consistently beat their commits by 50%+.
-difficulty: Intermediate
-time: Quarterly
 archetype: Processor
 description: >-
   Compares historical forecast 'commits' against actual results to identify reps
@@ -3951,6 +4179,12 @@ sampleData:
     John,Q1,100000,160000
     Jane,Q1,100000,105000
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Forecast Auditor
@@ -3991,8 +4225,6 @@ id: free-to-paid-conversion-signal
 category: Sales Ops
 title: PQL Usage Trigger
 tagline: Flag users who hit 90% of their free limits.
-difficulty: Intermediate
-time: Daily
 archetype: Processor
 description: >-
   Monitors free user usage logs to trigger a sales alert when a user hits
@@ -4004,6 +4236,12 @@ sampleData:
     101,45,50,Free
     102,10,50,Free
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 # Agent Configuration: The Product Sales Specialist
 
@@ -4043,8 +4281,6 @@ id: funnel-architect
 category: Sales Ops
 title: The Funnel Visualizer
 tagline: Map & Fix Sales Flows.
-difficulty: Advanced
-time: Batch
 isPremium: true
 description: >-
   Process flows often hide massive revenue leaks. This agent takes descriptions
@@ -4061,6 +4297,10 @@ sampleData:
 
     Enterprise Sales,Lead -> SDR Call -> AE Demo -> Legal -> PO,Sales Cycle
     Length
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Funnel Visualizer
@@ -4107,8 +4347,6 @@ id: grandfathered-revenue-risk
 category: Sales Ops
 title: Legacy Pricing Audit
 tagline: How much are we losing on old plans?
-difficulty: Intermediate
-time: Quarterly
 archetype: Processor
 description: >-
   Calculates the revenue gap between legacy pricing and current market rates for
@@ -4120,6 +4358,12 @@ sampleData:
     Acme,500,1000
     Beta,1000,1000
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 # Agent Configuration: The Pricing Strategist
 
@@ -4159,8 +4403,6 @@ id: ideal-customer-profile-scorer
 category: Sales Ops
 title: ICP Scorer (Lead Grading)
 tagline: 'Automatically grade leads A, B, or C based on your criteria.'
-difficulty: Intermediate
-time: 5 mins
 archetype: Processor
 description: >-
   Reads a CSV of leads and scores them (0-100) based on specific "Ideal Customer
@@ -4173,6 +4415,12 @@ sampleData:
     Beta Inc,SaaS,20,HubSpot,Founder
     Gamma LLC,Consulting,5,Excel,Owner
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The ICP Scorer (Lead Grading)
@@ -4228,8 +4476,6 @@ id: inactive-contact-archiver
 category: Sales Ops
 title: 'CRM Hygiene: The Reaper'
 tagline: Identify contacts who haven't engaged in 365+ days.
-difficulty: Beginner
-time: Monthly
 archtype: Processor
 description: >-
   Flags contacts for archival based on 'Last Activity Date' to keep your CRM
@@ -4242,6 +4488,10 @@ sampleData:
     2,New Lead,2023-10-01
     3,Stale Lead,2022-01-01
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Database Admin
@@ -4289,8 +4539,6 @@ id: inbound-vs-outbound-win-rate
 category: Sales Ops
 title: Win Rate by Origin
 tagline: Compare win rates for Inbound vs Outbound leads.
-difficulty: Beginner
-time: Monthly
 archetype: Processor
 description: >-
   Calculates distinct win rates for leads originating from marketing (Inbound)
@@ -4303,6 +4551,12 @@ sampleData:
     Inbound,Lost
     Outbound,Won
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Revenue Insights Agent
@@ -4343,8 +4597,6 @@ id: industry-classification-fixer
 category: Sales Ops
 title: Industry Taxonomy Enforcer
 tagline: Map messy 'Industry' strings to a standard list.
-difficulty: Beginner
-time: Weekly
 archetype: Processor
 description: Standardizes raw industry fields into a clean list of 10 parent categories.
 sampleData:
@@ -4355,6 +4607,12 @@ sampleData:
     Beta,Manufacturing & Logistics
     Gamma,SaaS
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Data Steward Agent
@@ -4395,8 +4653,6 @@ id: last-activity-date-auditor
 category: Sales Ops
 title: Account Activity Sync
 tagline: Sync 'Last Activity' from contacts up to the account level.
-difficulty: Intermediate
-time: Daily
 archetype: Processor
 description: >-
   Rolls up the latest activity date from various contacts to update the 'Master
@@ -4409,6 +4665,12 @@ sampleData:
     Acme Corp,Jane,2023-10-05
     Beta Inc,Bob,2023-09-01
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The RevOps Analyst Agent
@@ -4449,8 +4711,6 @@ id: late-payment-frequent-flyer
 category: Sales Ops
 title: Bad Payer List
 tagline: Stop selling to people who don't pay.
-difficulty: Beginner
-time: Monthly
 archetype: Processor
 description: >-
   Identifies customers who are chronically late on invoices to prevent Sales
@@ -4463,6 +4723,12 @@ sampleData:
     Acme,102,30
     Beta,103,0
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 # Agent Configuration: The Collections Agent
 
@@ -4502,8 +4768,6 @@ id: lead-aging-alerts
 category: Sales Ops
 title: The Lead Aging Alert System
 tagline: Fresh leads taste better.
-difficulty: Intermediate
-time: Daily
 archetype: Processor
 description: >-
   Leads go cold in 48 hours. This agent scans your 'New' lead queue, identifies
@@ -4516,6 +4780,12 @@ sampleData:
     LeadA,Alice,2023-10-10 09:00,New
     LeadB,Bob,2023-10-08 09:00,New
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Alarm Clock
@@ -4561,8 +4831,6 @@ id: lead-enrichment-auditor
 category: Sales Ops
 title: Enrichment Match Rate Auditor
 tagline: Are we paying for empty data?
-difficulty: Intermediate
-time: Monthly
 archtype: Processor
 description: >-
   Analyzes your enriched lead data to see what percentage of fields (Phone,
@@ -4575,6 +4843,10 @@ sampleData:
     2,,in/jane,
     3,,,,
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Data Procurement Manager
@@ -4621,8 +4893,6 @@ id: lead-list-cleaner
 category: Sales Ops
 title: The Lead List Cleaner
 tagline: Never bounce an email again.
-difficulty: Beginner
-time: 5 mins
 archetype: Processor
 description: >-
   30% of purchased leads have dead websites. This checks each company's website
@@ -4641,6 +4911,12 @@ sampleData:
 
     Broken Link,https://httpstat.us/404,Test User,test@broken.com
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Lead List Cleaner
@@ -4696,8 +4972,6 @@ id: lead-response-time-auditor
 category: Sales Ops
 title: Speed-to-Lead Auditor
 tagline: Calculate time to first touch for every lead.
-difficulty: Beginner
-time: Daily
 archtype: Processor
 description: >-
   Measures the gap between 'Lead Created' and 'First Activity' to ensure reps
@@ -4709,6 +4983,10 @@ sampleData:
     L-1,10:00,10:04
     L-2,10:00,11:30
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The SDR Manager
@@ -4755,8 +5033,6 @@ id: lead-routing-error-checker
 category: Sales Ops
 title: Routing Rule Validator
 tagline: Did the Enterprise lead go to the SMB rep?
-difficulty: Intermediate
-time: Weekly
 archtype: Processor
 description: >-
   Audits lead assignments to ensure they match territory rules (e.g., Company
@@ -4768,6 +5044,10 @@ sampleData:
     Lead A,5000,John,SMB
     Lead B,50,Jane,SMB
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Territory Manager
@@ -4815,8 +5095,6 @@ id: lead-routing-rule-conflict-detector
 category: Sales Ops
 title: Routing Conflict Detector
 tagline: Does this lead match two reps?
-difficulty: Advanced
-time: Weekly
 archetype: Processor
 description: >-
   Simulates lead routing rules to find scenarios where a single lead matches
@@ -4828,6 +5106,12 @@ sampleData:
     Rule B: Industry=Tech -> Rep 2
     Test Lead: CA, Tech
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Systems Architect
@@ -4868,8 +5152,6 @@ id: lead-routing-validator
 category: Sales Ops
 title: The Lead Routing Validator
 tagline: Ensure no lead is left behind.
-difficulty: Intermediate
-time: Weekly
 archetype: Processor
 description: >-
   Leads often fall into 'black holes' due to broken territory logic. This agent
@@ -4884,6 +5166,12 @@ sampleData:
     102,Globex,10001,5000,Unassigned
     103,Soylent,10001,50,Jane Smith
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Router Police
@@ -4930,8 +5218,6 @@ id: lead-score-decay-model
 category: Sales Ops
 title: Lead Score Decay Calc
 tagline: Lower the score if they haven't visited in 30 days.
-difficulty: Advanced
-time: Weekly
 archtype: Processor
 description: Applies a decay factor to lead scores based on recency of engagement.
 sampleData:
@@ -4942,6 +5228,10 @@ sampleData:
     Bob,85,45
     Charlie,50,10
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Scoring Modeler
@@ -4988,8 +5278,6 @@ id: lead-scoring-logic-builder
 category: Sales Ops
 title: The Lead Scorer
 tagline: Prioritize leads from your CRM or build a model from scratch.
-difficulty: Intermediate
-time: One-off
 description: >-
   Stop wasting time on low-value leads. This agent reads your lead history CSV
   (if provided) or researches your industry to design a points-based logic
@@ -5002,22 +5290,34 @@ sampleData:
     Jane Smith,Manager,jane@gmail.com,Lost
 isPremium: true
 verifiedRun:
-  date: "2026-02-12"
-  agent: "Gemini 2.0 Flash"
+  date: '2026-02-12'
+  agent: Gemini 2.0 Flash
   log:
-    - { text: "gemini run @lead-scoring-logic-builder.md", type: "input" }
-    - { text: "● Phase 1: Creating 'lead_history.csv' from sampleData...", type: "system" }
-    - { text: "● Phase 2: Analyzing ICP (Target: Founders/CEOs)...", type: "system" }
-    - { text: "✔ Success: Processed 5 leads. Identified 2 High-priority matches.", type: "success" }
-    - { text: "✔ Output generated: 'verified-lead-scoring.csv'", type: "success" }
-    - { text: "Report: \"Scoring engine validated. Corporate domain weight successfully applied to Tier 1 leads.\"", type: "report" }
+    - text: gemini run @lead-scoring-logic-builder.md
+      type: input
+    - text: '● Phase 1: Creating ''lead_history.csv'' from sampleData...'
+      type: system
+    - text: '● Phase 2: Analyzing ICP (Target: Founders/CEOs)...'
+      type: system
+    - text: '✔ Success: Processed 5 leads. Identified 2 High-priority matches.'
+      type: success
+    - text: '✔ Output generated: ''verified-lead-scoring.csv'''
+      type: success
+    - text: >-
+        Report: "Scoring engine validated. Corporate domain weight successfully
+        applied to Tier 1 leads."
+      type: report
   outputFile:
-    name: "verified-lead-scoring.csv"
-    url: "/outputs/verified-lead-scoring.csv"
+    name: verified-lead-scoring.csv
+    url: /outputs/verified-lead-scoring.csv
     preview: |
       Email,Score,Reason
       elon@tesla.com,15,"CEO (+10), Corporate Domain (+5)"
       tim@apple.com,15,"CEO (+10), Corporate Domain (+5)"
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Lead Scorer
@@ -5063,8 +5363,6 @@ id: lead-source-attribution-fixer
 category: Sales Ops
 title: Lead Source Normalizer
 tagline: Fix messy 'Referral' vs 'referral' vs 'Friend' tags.
-difficulty: Beginner
-time: Weekly
 archtype: Processor
 description: >-
   Standardizes messy lead source data into clean categories (e.g., maps
@@ -5079,6 +5377,10 @@ sampleData:
     104,fb
     105,Friend
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Data Steward
@@ -5126,8 +5428,6 @@ id: lead-to-account-matcher
 category: Sales Ops
 title: Lead-to-Account Matcher
 tagline: Auto-associate leads with existing accounts via domain.
-difficulty: Intermediate
-time: Daily
 archtype: Processor
 description: >-
   Fuzzy matches incoming leads to existing account records to prevent duplicate
@@ -5143,6 +5443,10 @@ sampleData:
     Acme Corporation, acme.com
     Tesla Inc, tesla.com
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Sales Architect
@@ -5189,8 +5493,6 @@ id: linkedin-account-targeting-list
 category: Sales Ops
 title: LinkedIn Account Targeting Builder
 tagline: Turn a list of domains into a matched audience for LinkedIn Ads.
-difficulty: Intermediate
-time: 10 mins
 archetype: Researcher
 description: >-
   Takes a list of company domains, finds their official LinkedIn Company Page
@@ -5205,6 +5507,12 @@ sampleData:
     figma.com
     linear.app
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Web Search Target
+outputs:
+  - CRM-Ready Export
+  - Curated Intel
 ---
 
 # Agent Configuration: The LinkedIn Account Targeting Builder
@@ -5262,8 +5570,6 @@ id: linkedin-connection-request-writer-v2
 category: Sales Ops
 title: Non-Cringe LinkedIn Connector
 tagline: Writes connection requests that actually get accepted.
-difficulty: Intermediate
-time: 5 mins
 archetype: Hybrid
 description: >-
   Reads a prospect's LinkedIn profile (bio/posts), identifies a specific mutual
@@ -5281,6 +5587,12 @@ sampleData:
 
     Recent Post: "Big news! TechFlow just raised our Series B."
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File + Search
+outputs:
+  - CRM-Ready Export
+  - Enriched Document
 ---
 
 # Agent Configuration: The Non-Cringe LinkedIn Connector
@@ -5335,8 +5647,6 @@ id: linkedin-voice-note-scripter
 category: Sales Ops
 title: LinkedIn Voice DM Scripter
 tagline: Scripts for those 30-second voice notes that actually convert.
-difficulty: Beginner
-time: Batch
 archetype: Processor
 description: >-
   Reads prospect profile. Writes a 45-second script for you to record as a voice
@@ -5347,6 +5657,12 @@ sampleData:
     Prospect_Name,Highlight
     John,Ran a marathon
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: LinkedIn Voice DM Scripter
@@ -5385,8 +5701,6 @@ id: lost-deal-reviver
 category: Sales Ops
 title: The Lost Deal Reviver
 tagline: Re-engage 100 cold leads with 'New News'.
-difficulty: Intermediate
-time: Weekly
 description: >-
   A 'No' 6 months ago might be a 'Yes' today. This agent takes a CSV of leads
   lost due to specific reasons (e.g., 'Missing Feature X') and drafts a
@@ -5398,6 +5712,10 @@ sampleData:
     John Doe,john@acme.com,Missing API,January
     Jane Smith,jane@globex.com,Too expensive,March
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Lost Deal Reviver
@@ -5443,8 +5761,6 @@ id: meeting-density-tracker
 category: Sales Ops
 title: Rep Focus Time Tracker
 tagline: Audit calendar data to protect 'Selling Time'.
-difficulty: Intermediate
-time: Weekly
 archtype: Processor
 description: >-
   Analyzes rep calendar data to calculate % of day spent in internal vs external
@@ -5457,6 +5773,10 @@ sampleData:
     John,External,30
     John,Internal,30
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Sales Enablement
@@ -5504,8 +5824,6 @@ id: meeting-no-show-analyzer
 category: Sales Ops
 title: The No-Show Detective
 tagline: Why are prospects ghosting demos?
-difficulty: Intermediate
-time: Weekly
 archetype: Processor
 description: >-
   High demo volume means nothing if nobody shows up. This agent analyzes a CSV
@@ -5519,6 +5837,12 @@ sampleData:
     2,Bob,Cold Call,Fri,4pm,No-Show
     3,Alice,Webinar,Mon,9am,No-Show
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Efficiency Expert
@@ -5563,8 +5887,6 @@ id: meeting-no-show-clusterer
 category: Sales Ops
 title: No-Show Correlation Engine
 tagline: Analyze if certain sources have higher ghosting rates.
-difficulty: Intermediate
-time: Monthly
 archetype: Processor
 description: >-
   Segments meeting outcome data by lead source and day of week to find
@@ -5577,6 +5899,12 @@ sampleData:
     Webinar,Monday,No Show
     Cold Outbound,Friday,No Show
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The SDR Ops Agent
@@ -5617,8 +5945,6 @@ id: meeting-reschedule-rate-tracker
 category: Sales Ops
 title: The Calendar Defender
 tagline: Quantify the cost of flakes and enforce a 'Deposit' policy.
-difficulty: Beginner
-time: Weekly
 archetype: Processor
 description: >-
   A 20% flake rate costs you 10 hours a month in wasted prep. This agent
@@ -5632,6 +5958,12 @@ sampleData:
     Beta,No-Show,15
     Gamma,Rescheduled,10
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Time Guardian
@@ -5675,8 +6007,6 @@ id: meeting-to-opportunity-conversion
 category: Sales Ops
 title: Meeting-to-Opp Converter
 tagline: Track % of first meetings that become deals.
-difficulty: Beginner
-time: Monthly
 archetype: Processor
 description: >-
   Calculates the conversion rate between 'First Meeting' activity and
@@ -5689,6 +6019,12 @@ sampleData:
     L-2,Yes,No
     L-3,No,No
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Lead Quality Agent
@@ -5729,8 +6065,6 @@ id: mql-to-sql-velocity-auditor
 category: Sales Ops
 title: MQL Follow-up Velocity
 tagline: Measure how fast Sales accepts Marketing leads.
-difficulty: Beginner
-time: Weekly
 archetype: Processor
 description: >-
   Measures the time gap between 'Lead Status = MQL' and 'Lead Status = Accepted'
@@ -5742,6 +6076,12 @@ sampleData:
     L-1,2023-10-01 10:00,2023-10-01 10:30
     L-2,2023-10-01 10:00,2023-10-02 14:00
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Sales Process Agent
@@ -5782,8 +6122,6 @@ id: multi-threaded-deal-validator
 category: Sales Ops
 title: Single-Thread Risk Detector
 tagline: Flag deals that only have one active contact.
-difficulty: Beginner
-time: Weekly
 archetype: Processor
 description: >-
   Checks open opportunities to ensure they are 'multi-threaded' (having more
@@ -5796,6 +6134,12 @@ sampleData:
     Deal B,4
     Deal C,1
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Pipeline Integrity Agent
@@ -5835,8 +6179,6 @@ id: objection-crusher
 category: Sales Ops
 title: The Objection Crusher
 tagline: Create battle cards from your notes or competitor reviews.
-difficulty: Intermediate
-time: 15 mins
 description: >-
   Sales reps freeze when hit with a tough question. This agent reads your call
   notes (if provided) or researches a competitor's negative reviews to identify
@@ -5847,6 +6189,10 @@ sampleData:
     "Your pricing is twice as high as Competitor X."
     "We don't have the dev resources to implement this."
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Objection Crusher
@@ -5895,8 +6241,6 @@ id: objection-handling-gap-analysis
 category: Sales Ops
 title: Objection Gap Analyzer
 tagline: Identify objections where win rates are lowest.
-difficulty: Intermediate
-time: Monthly
 archetype: Processor
 description: >-
   Analyzes deal notes and outcome codes to find which specific objections (e.g.
@@ -5909,6 +6253,12 @@ sampleData:
     Deal B,Won,None
     Deal C,Lost,Feature Gap
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Sales Enablement Agent
@@ -5950,8 +6300,6 @@ id: onboarding-checklist-completion
 category: Sales Ops
 title: Onboarding Drop-off Audit
 tagline: Where do users get stuck?
-difficulty: Intermediate
-time: Monthly
 archetype: Processor
 description: >-
   Measures the completion rate of each step in the 'Getting Started' checklist
@@ -5964,6 +6312,12 @@ sampleData:
     Connect_Data,1000,500
     Invite_Team,500,100
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 # Agent Configuration: The Product Growth Agent
 
@@ -6003,8 +6357,6 @@ id: opportunity-owner-vs-account-owner
 category: Sales Ops
 title: Ownership Mismatch Finder
 tagline: Is the Opp owner different from the Account owner?
-difficulty: Beginner
-time: Weekly
 archetype: Processor
 description: >-
   Flags discrepancies where the Opportunity Owner does not match the Account
@@ -6016,6 +6368,12 @@ sampleData:
     O-1,John,John
     O-2,Jane,Bob
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Admin
@@ -6055,8 +6413,6 @@ id: opportunity-stage-age-histogram
 category: Sales Ops
 title: Stage Aging Histogram
 tagline: Visualize the distribution of deal age in each stage.
-difficulty: Intermediate
-time: Monthly
 archetype: Processor
 description: >-
   Aggregates open deals by stage and age to create a distribution report of
@@ -6069,6 +6425,12 @@ sampleData:
     Deal B,Discovery,40
     Deal C,Demo,10
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Pipeline Hygiene Agent
@@ -6109,8 +6471,6 @@ id: orphaned-contact-rehomer
 category: Sales Ops
 title: Orphaned Contact Re-Homer
 tagline: Assign contacts to account owners via domain.
-difficulty: Intermediate
-time: Daily
 archetype: Processor
 description: >-
   Identifies contacts not associated with an account and finds their correct
@@ -6122,6 +6482,12 @@ sampleData:
     john@tesla.com,NULL
     jane@spacex.com,NULL
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The CRM Architect Agent
@@ -6162,8 +6528,6 @@ id: outreach-cadence-optimizer
 category: Sales Ops
 title: Outreach Cadence Tuner
 tagline: Find the best day to send emails.
-difficulty: Intermediate
-time: Monthly
 archetype: Processor
 description: >-
   Analyzes email response rates by 'Day of Week' and 'Time of Day' to optimize
@@ -6175,6 +6539,12 @@ sampleData:
     Mon,AM,100,2
     Tue,PM,100,8
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The SDR Manager
@@ -6215,8 +6585,6 @@ id: partner-account-overlap-mapper
 category: Sales Ops
 title: Partner Account Overlap Mapper
 tagline: Find which accounts you and a partner both target.
-difficulty: Intermediate
-time: Batch
 archetype: Processor
 description: >-
   Compares your target account list with a partner's shared list (hashed).
@@ -6227,6 +6595,12 @@ sampleData:
     Account_Domain,Partner_Status
     acme.com,Customer
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: Partner Account Overlap Mapper
@@ -6265,8 +6639,6 @@ id: phone-number-formatter-e164
 category: Sales Ops
 title: Global Phone Formatter
 tagline: Standardize all numbers to E.164 format.
-difficulty: Beginner
-time: Batch
 archetype: Processor
 description: >-
   Cleans and formats phone numbers to the global E.164 standard (+1555...) for
@@ -6279,6 +6651,12 @@ sampleData:
     Jane,555.123.4567
     Bob,1-555-123-4567
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Systems Integration Agent
@@ -6319,8 +6697,6 @@ id: pipeline-coverage-ratio-monitor
 category: Sales Ops
 title: Pipeline Coverage Monitor
 tagline: Do you have 3x your quota in pipeline?
-difficulty: Beginner
-time: Weekly
 archtype: Processor
 description: >-
   Calculates the coverage ratio (Pipeline / Remaining Quota) per rep to identify
@@ -6332,6 +6708,10 @@ sampleData:
     John,300000,100000
     Jane,50000,100000
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Sales Ops
@@ -6378,8 +6758,6 @@ id: pipeline-hygiene-scorecard
 category: Sales Ops
 title: The Pipeline Hygiene Scorer
 tagline: Grade your CRM data quality.
-difficulty: Intermediate
-time: Weekly
 archetype: Processor
 description: >-
   Messy CRMs kill forecasts. This agent audits your open opportunities for 'Rot'
@@ -6392,6 +6770,12 @@ sampleData:
     1,Alice,2023-01-01,5,Call on Monday
     2,Bob,2022-12-01,90,
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The CRM Warden
@@ -6437,8 +6821,6 @@ id: pipeline-push-counter
 category: Sales Ops
 title: Deal Push Frequency Tracker
 tagline: Count how many times a deal has slipped quarters.
-difficulty: Intermediate
-time: Monthly
 archetype: Processor
 description: >-
   Analyzes historical field changes to count how many times each deal's 'Close
@@ -6451,6 +6833,12 @@ sampleData:
     Deal 1,Close_Date,2023-12-01,2024-03-01
     Deal 2,Amount,100,200
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Pipeline Integrity Agent
@@ -6492,8 +6880,6 @@ id: pipeline-stage-duration-audit
 category: Sales Ops
 title: Pipeline Bottleneck Finder
 tagline: Pinpoint exactly where deals are getting stuck.
-difficulty: Intermediate
-time: 15 mins
 archtype: Processor
 description: >-
   Calculates the average days deals spend in each stage of your funnel to
@@ -6507,6 +6893,10 @@ sampleData:
     Acme Corp,Negotiation,2023-01-20,2023-02-15
     Beta Ltd,Discovery,2023-02-01,2023-02-02
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The RevOps Analyst
@@ -6555,8 +6945,6 @@ id: pipeline-stagnation-by-product
 category: Sales Ops
 title: Product Stagnation Analyzer
 tagline: Does Product A stall deals?
-difficulty: Advanced
-time: Monthly
 archetype: Processor
 description: >-
   Correlates 'Days in Stage' with the 'Product Line' attached to the deal to see
@@ -6568,6 +6956,12 @@ sampleData:
     1,Basic,30
     2,Enterprise,90
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Product Sales Lead
@@ -6608,8 +7002,6 @@ id: pipeline-velocity-accelerator
 category: Sales Ops
 title: Slow Deal Accelerator
 tagline: Wake up deals moving slower than average.
-difficulty: Intermediate
-time: Weekly
 archetype: Processor
 description: >-
   Identifies deals that are currently moving slower than the historical average
@@ -6621,6 +7013,12 @@ sampleData:
     1,Demo,15,10
     2,Demo,5,10
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Sales Manager
@@ -6660,8 +7058,6 @@ id: pipeline-velocity-tracker
 category: Sales Ops
 title: The Pipeline Velocity Tracker
 tagline: Find the bottleneck in your sales process.
-difficulty: Advanced
-time: Monthly
 description: >-
   Why is revenue unpredictable? Usually, deals stick in one stage (e.g.,
   'Proposal Sent') too long. This agent analyzes your CRM data to calculate the
@@ -6674,6 +7070,10 @@ sampleData:
     Beta Inc,Discovery,2,5000,Sarah
     Gamma LLC,Negotiation,120,50000,John
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Pipeline Velocity Tracker
@@ -6719,8 +7119,6 @@ id: pre-meeting-dossier
 category: Sales Ops
 title: The Pre-Meeting Dossier
 tagline: Never go into a call blind.
-difficulty: Beginner
-time: Batch
 description: >-
   5 minutes before a call, you need to know everything. This agent researches
   multiple prospects simultaneously, scraping LinkedIn, company news, and tech
@@ -6733,6 +7131,10 @@ sampleData:
     Jane Smith,Globex,https://linkedin.com/in/janesmith
     Mike Ross,Pearson Hardman,https://linkedin.com/in/mikeross
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Pre-Meeting Dossier
@@ -6782,8 +7184,6 @@ id: price-variance-auditor
 category: Sales Ops
 title: Price Integrity Auditor
 tagline: Identify deals sold below standard list price.
-difficulty: Intermediate
-time: Monthly
 archetype: Processor
 description: >-
   Compares actual 'Sold Price' against the 'Standard List Price' to find
@@ -6795,6 +7195,12 @@ sampleData:
     Deal 1,1000,900
     Deal 2,1000,500
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Margin Protection Agent
@@ -6835,8 +7241,6 @@ id: pricing-migrator
 category: Sales Ops
 title: The Pricing Tier Migrator
 tagline: Move them up or move them out.
-difficulty: Advanced
-time: One-off
 archetype: Processor
 description: >-
   Changing pricing is scary. This agent analyzes your current customer base,
@@ -6849,6 +7253,12 @@ sampleData:
     Acme,100,5,10
     Globex,500,50,500
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Pricing Strategist
@@ -6894,8 +7304,6 @@ id: prospect-tone-mirroring-agent
 category: Sales Ops
 title: Sales Email Tone Mirror
 tagline: Match your prospect's communication style instantly.
-difficulty: Beginner
-time: Real-time
 archtype: Processor
 description: >-
   Pastes in the prospect's last 3 emails. Detects if they are "Direct/Brief",
@@ -6907,6 +7315,10 @@ sampleData:
     CTO_John,"Need pricing. Now."
     Marketer_Mary,"Hey! Loved the demo..."
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: Sales Email Tone Mirror
@@ -6945,8 +7357,6 @@ id: psychological-meeting-profiler
 category: Sales Ops
 title: The Psychological Buyer Profiler
 tagline: Know how to close them.
-difficulty: Advanced
-time: Batch
 description: >-
   Deeper than a summary. This agent processes a list of sales transcripts to
   identify each buyer's personality type and recommends specific negotiation
@@ -6959,6 +7369,10 @@ sampleData:
     Sarah Driver,transcripts/call_2.txt,Speed to implementation
     Mike Amiable,transcripts/call_3.txt,Team collaboration and support
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Psychological Buyer Profiler
@@ -7011,8 +7425,6 @@ id: quota-attainment-bell-curve
 category: Sales Ops
 title: Sales Performance Distro
 tagline: Visualize team performance distribution.
-difficulty: Beginner
-time: Quarterly
 archetype: Processor
 description: >-
   Ranks the sales team by attainment and segments them into Top, Mid, and Bottom
@@ -7025,6 +7437,12 @@ sampleData:
     Jane,95
     Bob,40
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Sales Leadership Agent
@@ -7065,8 +7483,6 @@ id: quota-attainment-forecaster
 category: Sales Ops
 title: The Quota Forecaster
 tagline: Predict end-of-month landing spots.
-difficulty: Beginner
-time: Daily
 archetype: Processor
 description: >-
   Don't wait until the 31st to know you missed. This agent calculates 'Run Rate'
@@ -7079,6 +7495,12 @@ sampleData:
     Alice,100000,40000,30000,10
     Bob,100000,85000,5000,10
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The FP&A Analyst
@@ -7126,8 +7548,6 @@ id: quote-line-item-validator
 category: Sales Ops
 title: Product SKU Integrity Checker
 tagline: Ensure reps don't quote incompatible SKUs.
-difficulty: Intermediate
-time: Daily
 archtype: Processor
 description: >-
   Audits draft quotes to ensure they don't contain incompatible product
@@ -7139,6 +7559,10 @@ sampleData:
     Q-1,'STARTER';'ENT_ADDON'
     Q-2,'PRO';'PRO_ADDON'
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Deal Desk
@@ -7185,8 +7609,6 @@ id: quote-to-cash-cycle-timer
 category: Sales Ops
 title: Quote-to-Cash Speedometer
 tagline: Measure the speed of closing.
-difficulty: Intermediate
-time: Monthly
 archetype: Processor
 description: >-
   Measures the average days from 'Contract Signed' to 'Invoice Paid' to optimize
@@ -7198,6 +7620,12 @@ sampleData:
     1,2023-01-01,2023-01-15
     2,2023-01-01,2023-03-01
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 # Agent Configuration: The Finance Ops
 
@@ -7237,8 +7665,6 @@ id: quote-velocity-tracker
 category: Sales Ops
 title: The Deal Friction Hunter
 tagline: Automatically nudge deals that are stuck in 'Legal' or 'Signature'.
-difficulty: Intermediate
-time: Weekly
 archetype: Processor
 description: >-
   Time kills all deals. This agent scans your open quotes, calculates exactly
@@ -7251,6 +7677,12 @@ sampleData:
     Q101,dave@acme.com,2024-01-20,Signature
     Q102,sara@beta.com,2024-01-10,Legal Review
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 # Agent Configuration: The Deal Desk Agent
 
@@ -7296,8 +7728,6 @@ id: ramp-time-variance-analyst
 category: Sales Ops
 title: Ramp Time Cohort Analyst
 tagline: Are Q1 hires faster than Q3 hires?
-difficulty: Intermediate
-time: Quarterly
 archetype: Processor
 description: >-
   Compares the 'Time to Productivity' of sales rep cohorts to evaluate
@@ -7309,6 +7739,12 @@ sampleData:
     Q1_Hires,90
     Q2_Hires,120
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Sales Trainer
@@ -7349,8 +7785,6 @@ id: reference-customer-rotator
 category: Sales Ops
 title: Sales Reference Rotator
 tagline: Prevent reference burnout by rotating happy customers.
-difficulty: Beginner
-time: Monthly
 archtype: Processor
 description: >-
   Tracks how many times a customer has been used as a reference to ensure even
@@ -7363,6 +7797,10 @@ sampleData:
     Beta,1,2023-09-01
     Gamma,0,None
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Customer Reference Manager
@@ -7409,8 +7847,6 @@ id: referral-email-generator
 category: Sales Ops
 title: Referral Request Writer
 tagline: Ask for introductions without making it awkward.
-difficulty: Beginner
-time: 5 mins
 archetype: Processor
 description: >-
   Writes a "Double Opt-In" email that your happy client can easily forward to
@@ -7423,6 +7859,12 @@ sampleData:
     Relationship: Alice and Bob worked together at Google.
     My Ask: Intro to pitch our analytics tool.
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Referral Request Writer
@@ -7472,8 +7914,6 @@ id: renewal-price-lift-calc
 category: Sales Ops
 title: Renewal Price Lift Calc
 tagline: Apply 5% CPI increases to upcoming renewals.
-difficulty: Beginner
-time: Monthly
 archtype: Processor
 description: >-
   Calculates new contract values for upcoming renewals assuming a standard price
@@ -7485,6 +7925,10 @@ sampleData:
     Acme,10000
     Beta,5000
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Expansion Revenue Architect
@@ -7531,8 +7975,6 @@ id: renewal-risk-ghosting-alert
 category: Sales Ops
 title: Renewal Ghosting Detector
 tagline: Flag accounts in renewal that haven't replied lately.
-difficulty: Intermediate
-time: Weekly
 archetype: Processor
 description: >-
   Cross-references upcoming renewals with email logs to find customers who have
@@ -7547,6 +7989,12 @@ sampleData:
     Acme, 2023-10-01
     Beta, 2023-01-01
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Churn Prevention Agent
@@ -7587,8 +8035,6 @@ id: revenue-leakage-hunter
 category: Sales Ops
 title: Revenue Leakage Audit
 tagline: Find users active on the platform without a contract.
-difficulty: Advanced
-time: Monthly
 archtype: Processor
 description: >-
   Cross-references platform login logs against active CRM contracts to find
@@ -7601,6 +8047,10 @@ sampleData:
     [Active Contracts]
     beta.com, gamma.io
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Billing Integrity Manager
@@ -7648,8 +8098,6 @@ id: saas-metric-dashboarder
 category: Sales Ops
 title: The SaaS Metric Dashboarder
 tagline: 'Your board deck, automated.'
-difficulty: Advanced
-time: Monthly
 archetype: Processor
 description: >-
   Investors want the 'Magic Number.' This agent takes raw inputs (New ARR, Sales
@@ -7665,6 +8113,12 @@ sampleData:
     Churn_Rate,0.05
     Gross_Margin,0.80
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The VC Analyst
@@ -7707,8 +8161,6 @@ id: saas-usage-red-flag-detector
 category: Sales Ops
 title: Zombie Account Hunter
 tagline: Paying but not logging in?
-difficulty: Intermediate
-time: Monthly
 archetype: Processor
 description: Flags accounts with active contracts but <10% active users (high churn risk).
 sampleData:
@@ -7718,6 +8170,12 @@ sampleData:
     Acme,100,5
     Beta,10,9
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Churn Predictor
@@ -7757,8 +8215,6 @@ id: sales-activity-efficiency-ratio
 category: Sales Ops
 title: Activity-to-Revenue Efficiency
 tagline: Calculate 'Activities required per Closed Deal'.
-difficulty: Intermediate
-time: Monthly
 archetype: Processor
 description: >-
   Calculates how many calls, emails, and meetings it takes for each rep to close
@@ -7770,6 +8226,12 @@ sampleData:
     John,1000,5
     Jane,500,5
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Efficiency Auditor
@@ -7810,8 +8272,6 @@ id: sales-activity-quota-tracker
 category: Sales Ops
 title: Rep Activity Scorecard
 tagline: Automated daily standup report for sales activity.
-difficulty: Beginner
-time: Daily
 archtype: Processor
 description: >-
   Aggregates a log of calls, emails, and meetings to see which reps are hitting
@@ -7826,6 +8286,10 @@ sampleData:
     Jane,Call,2023-10-01
     Jane,Call,2023-10-01
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Sales Manager
@@ -7874,8 +8338,6 @@ id: sales-battlecard-builder
 category: Sales Ops
 title: The Sales Battlecard Builder
 tagline: Win against competitors.
-difficulty: Intermediate
-time: 15 mins
 archetype: Researcher
 description: >-
   Creates 1-page battlecards for each competitor with their weaknesses, trap
@@ -7888,6 +8350,12 @@ sampleData:
     Drata,https://drata.com,Security Compliance
     Sprinto,https://sprinto.com,Compliance Software
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Web Search Target
+outputs:
+  - CRM-Ready Export
+  - Curated Intel
 ---
 
 # Agent Configuration: The Sales Battlecard Builder
@@ -7947,8 +8415,6 @@ id: sales-call-keyword-tracker
 category: Sales Ops
 title: Sales Script Compliance
 tagline: Did they say the pricing disclaimer?
-difficulty: Intermediate
-time: Batch
 archtype: Processor
 description: >-
   Scans call transcripts to check if reps mentioned mandatory keywords (e.g.,
@@ -7959,6 +8425,10 @@ sampleData:
     Rep: Hi, are you compliant with SOC2? Prospect: Yes.
     Rep: Great, let's move to pricing.
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The QA Specialist
@@ -8006,8 +8476,6 @@ id: sales-call-objection-heatmapper
 category: Sales Ops
 title: Sales Call Objection Heatmapper
 tagline: Visualize exactly when and why your deals are dying.
-difficulty: Intermediate
-time: Batch
 archtype: Processor
 description: >-
   Parses 50+ Zoom transcripts. key-value pairs the "Objection" vs "Minute Mark".
@@ -8019,6 +8487,10 @@ sampleData:
     Call_A,"...too expensive..."
     Call_B,"...feature missing..."
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: Sales Call Objection Heatmapper
@@ -8057,8 +8529,6 @@ id: sales-call-sentiment-tracker
 category: Sales Ops
 title: The Call Sentiment Tracker
 tagline: Analyze the mood of your sales calls.
-difficulty: Advanced
-time: Post-Call
 archetype: Processor
 description: >-
   Are your prospects angry or excited? This agent reads a CSV of call
@@ -8071,6 +8541,12 @@ sampleData:
     1,Alice,Won,"I love this feature, exactly what we need."
     2,Bob,Lost,"This is too expensive and doesn't work."
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Conversation Coach
@@ -8115,8 +8591,6 @@ id: sales-call-talk-ratio-auditor
 category: Sales Ops
 title: Talk/Listen Ratio Auditor
 tagline: Stop showing up and throwing up.
-difficulty: Intermediate
-time: Weekly
 archetype: Processor
 description: Analyzes call metrics to flag calls where the rep spoke > 60% of the time.
 sampleData:
@@ -8126,6 +8600,12 @@ sampleData:
     John,101,65%
     Jane,102,40%
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Conversation Intelligence Coach
@@ -8167,8 +8647,6 @@ id: sales-call-transcript-analyzer
 category: Sales Ops
 title: BANT Transcript Analyzer
 tagline: 'Extract Budget, Authority, Need, and Timeline from call transcripts.'
-difficulty: Intermediate
-time: 5 mins
 archetype: Processor
 description: >-
   Reads a text transcript of a sales call, identifies the key BANT criteria, and
@@ -8185,6 +8663,12 @@ sampleData:
 
     Prospect: Just me and the CTO. We want to be live by October.
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The BANT Transcript Analyzer
@@ -8236,8 +8720,6 @@ id: sales-cycle-outlier-detector
 category: Sales Ops
 title: Sales Cycle Anomaly Hunter
 tagline: Flag deals moving suspiciously fast or slow.
-difficulty: Intermediate
-time: Weekly
 archtype: Processor
 description: >-
   Identifies deals whose age significantly deviates from the historical average
@@ -8250,6 +8732,10 @@ sampleData:
     Deal B,120,45
     Deal C,40,45
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Forecast Manager
@@ -8296,8 +8782,6 @@ id: sales-discovery-question-generator
 category: Sales Ops
 title: Discovery Call Scripter
 tagline: 'Generate deep, probing questions specific to your prospect''s role.'
-difficulty: Beginner
-time: 5 mins
 archetype: Hybrid
 description: >-
   Analyzes a prospect's job title and industry to generate a list of "Discovery
@@ -8310,6 +8794,12 @@ sampleData:
     Industry: Fintech
     Company Size: 500 employees
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File + Search
+outputs:
+  - CRM-Ready Export
+  - Enriched Document
 ---
 
 # Agent Configuration: The Discovery Call Scripter
@@ -8360,8 +8850,6 @@ id: sales-email-ab-test-planner
 category: Sales Ops
 title: A/B Test Architect
 tagline: Design scientifically valid experiments for your cold emails.
-difficulty: Intermediate
-time: 10 mins
 archetype: Hybrid
 description: >-
   Takes a current control email and proposes 3 "Challenger" variants to test
@@ -8374,6 +8862,12 @@ sampleData:
     We help companies save money. Want a demo?
     Best, Me.
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File + Search
+outputs:
+  - CRM-Ready Export
+  - Enriched Document
 ---
 
 # Agent Configuration: The A/B Test Architect
@@ -8426,8 +8920,6 @@ id: sales-followup-sequence-builder
 category: Sales Ops
 title: Ghost-Busting Follow-Up
 tagline: A 4-step email sequence for leads who stopped replying.
-difficulty: Beginner
-time: 5 mins
 archetype: Processor
 description: >-
   Writes a persistent but polite sequence of emails designed to get a "Yes" or
@@ -8439,6 +8931,12 @@ sampleData:
     Last Interaction: Demo on Tuesday.
     Stalled: No reply to proposal sent Wednesday.
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Ghost-Busting Follow-Up
@@ -8488,8 +8986,6 @@ id: sales-forecast-scenario-modeler
 category: Sales Ops
 title: Forecast Scenario Modeler
 tagline: Calculate 'Best Case' vs 'Commit' pipelines.
-difficulty: Advanced
-time: Weekly
 archetype: Processor
 description: >-
   Simulates three revenue scenarios (Conservative, Realistic, Aggressive) based
@@ -8502,6 +8998,12 @@ sampleData:
     Proposal,200000
     Negotiation,100000
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The RevOps Modeler
@@ -8542,8 +9044,6 @@ id: sales-funnel-bottleneck-finder
 category: Sales Ops
 title: Pipeline Leak Detector
 tagline: Find exactly where your deals are dying.
-difficulty: Intermediate
-time: 5 mins
 archetype: Processor
 description: >-
   Reads a CSV of deal stages and conversion rates, identifies the stage with the
@@ -8556,6 +9056,12 @@ sampleData:
     Meeting to Opp,50,40,80%
     Opp to Close,40,10,25%
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Pipeline Leak Detector
@@ -8609,8 +9115,6 @@ id: sales-negotiation-script-writer
 category: Sales Ops
 title: The Closer's Script
 tagline: Handle "It's too expensive" like a pro.
-difficulty: Intermediate
-time: 5 mins
 archetype: Hybrid
 description: >-
   Generates specific negotiation scripts to handle common late-stage objections
@@ -8622,6 +9126,12 @@ sampleData:
     Objection: "We love it, but CFO says budget is frozen until Q1."
     Leverage: They have a compliance audit next month that we solve.
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File + Search
+outputs:
+  - CRM-Ready Export
+  - Enriched Document
 ---
 
 # Agent Configuration: The Closer's Script
@@ -8673,8 +9183,6 @@ id: sales-objection-battlecard-generator
 category: Sales Ops
 title: Competitor Battlecard Builder
 tagline: Arm your sales team with scripts to beat specific competitors.
-difficulty: Intermediate
-time: 15 mins
 archetype: Hybrid
 description: >-
   Researches a competitor's weaknesses (via G2/Capterra reviews) and writes
@@ -8688,6 +9196,12 @@ sampleData:
     HubSpot,Marketing Automation
     Pipedrive,SMB CRM
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File + Search
+outputs:
+  - CRM-Ready Export
+  - Enriched Document
 ---
 
 # Agent Configuration: The Competitor Battlecard Builder
@@ -8743,8 +9257,6 @@ title: Quota Scenario Planner
 tagline: >-
   Don't just calculate one path. Compare 'High Volume' vs 'High Skill'
   strategies.
-difficulty: Intermediate
-time: 5 mins
 archetype: Processor
 description: >-
   Most calculators just tell you to "make more calls." This agent models three
@@ -8756,6 +9268,12 @@ sampleData:
     Quota,Average_Deal_Size,Close_Rate,Meeting_Book_Rate,Current_Daily_Dials
     50000,10000,0.20,0.05,40
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Sales Director
@@ -8812,8 +9330,6 @@ id: sales-rep-ramp-velocity
 category: Sales Ops
 title: New Rep Ramp Tracker
 tagline: Measure 'Time to First Deal' for new hires.
-difficulty: Intermediate
-time: Monthly
 archetype: Processor
 description: >-
   Tracks the number of days from 'Start Date' to 'First Deal Closed' for new
@@ -8825,6 +9341,12 @@ sampleData:
     John,2023-01-01,2023-03-15
     Jane,2023-01-01,2023-02-10
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Enablement Auditor Agent
@@ -8865,8 +9387,6 @@ id: sales-roleplay-simulator
 category: Sales Ops
 title: The Difficult Prospect Simulator
 tagline: Practice your pitch against AI.
-difficulty: Advanced
-time: Batch
 description: >-
   Sales training is expensive. This agent generates custom 'Persona' briefs and
   grading rubrics for a list of common sales scenarios, allowing your team to
@@ -8879,6 +9399,10 @@ sampleData:
     The CFO Cut,Budget-Conscious CFO,ROI and Payback Period
     The User Pivot,Busy End-User,Time to learn a new tool
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Difficult Prospect Simulator
@@ -8924,8 +9448,6 @@ id: sales-territory-balancer
 category: Sales Ops
 title: Territory Fairness Balancer
 tagline: Ensure every rep has equal revenue potential.
-difficulty: Advanced
-time: Quarterly
 archtype: Processor
 description: >-
   Analyzes a list of accounts and their estimated revenue to balance territories
@@ -8938,6 +9460,10 @@ sampleData:
     Beta,NY,500000,Rep B
     Gamma,CA,50000,Rep A
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Territory Planner
@@ -8986,8 +9512,6 @@ id: sales-territory-mapper
 category: Sales Ops
 title: The Territory Mapper
 tagline: Balance your sales map instantly.
-difficulty: Advanced
-time: Quarterly
 archetype: Processor
 description: >-
   Redistributing territories is a headache. This agent reads a list of customer
@@ -9001,6 +9525,12 @@ sampleData:
     CustB,10002,10000
     CustC,90210,75000
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Territory Architect
@@ -9042,8 +9572,6 @@ id: sales-velocity-trend-monitor
 category: Sales Ops
 title: Pipeline Velocity Trend
 tagline: Is your sales cycle getting longer or shorter?
-difficulty: Intermediate
-time: Monthly
 archtype: Processor
 description: >-
   Compares average sales cycle time this month vs the trailing 6-month average
@@ -9057,6 +9585,10 @@ sampleData:
     July,52
     August,55
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Sales Analyst
@@ -9103,8 +9635,6 @@ id: sdr-activity-calculator
 category: Sales Ops
 title: The Quota Reverse-Engineer
 tagline: Don't just count dials. Build a balanced path to quota.
-difficulty: Beginner
-time: Monthly
 archetype: Processor
 description: >-
   Setting generic "50 dials a day" goals burns out SDRs. This agent
@@ -9118,6 +9648,12 @@ sampleData:
     Alice,10,200,0.05,0.20
     Bob,10,400,0.02,0.10
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Performance Coach
@@ -9162,8 +9698,6 @@ id: sdr-activity-to-meeting-ratio
 category: Sales Ops
 title: SDR Booking Efficiency
 tagline: Measure calls required to book 1 meeting.
-difficulty: Beginner
-time: Weekly
 archetype: Processor
 description: >-
   Calculates the booking efficiency of SDRs to find the most effective outreach
@@ -9175,6 +9709,12 @@ sampleData:
     John,500,10
     Jane,200,10
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The SDR Manager Agent
@@ -9215,8 +9755,6 @@ id: sdr-territory-saturation-check
 category: Sales Ops
 title: Territory Saturation Auditor
 tagline: Are your SDRs actually touching all their Tier 1s?
-difficulty: Intermediate
-time: Weekly
 archtype: Processor
 description: >-
   Calculates the % of Tier 1 accounts in a territory that have received at least
@@ -9229,6 +9767,10 @@ sampleData:
     Beta,1,2022-01-01
     Gamma,2,2023-10-05
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The SDR Director
@@ -9276,8 +9818,6 @@ id: seat-expansion-trigger
 category: Sales Ops
 title: License Utilization Alert
 tagline: They just hit 9/10 seats.
-difficulty: Intermediate
-time: Weekly
 archetype: Processor
 description: >-
   Alerts Sales when an account reaches >80% license utilization, signaling an
@@ -9289,6 +9829,12 @@ sampleData:
     Acme,10,9
     Beta,100,20
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 # Agent Configuration: The Account Manager
 
@@ -9328,8 +9874,6 @@ id: stalled-deal-wakeup
 category: Sales Ops
 title: The Stalled Deal Wake-Up Script
 tagline: Revive the 'Checking in' emails.
-difficulty: Beginner
-time: Weekly
 archetype: Processor
 description: >-
   Sales reps love to send 'Just checking in.' That's weak. This agent identifies
@@ -9341,6 +9885,12 @@ sampleData:
     Deal,Stage,Days_Stuck,Industry
     Acme Deal,Discovery,45,Retail
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Copywriter
@@ -9388,8 +9938,6 @@ id: startup-investor-matchmaker
 category: Sales Ops
 title: Investor Thesis Matcher
 tagline: Find the right VCs for your startup based on their investment thesis.
-difficulty: Advanced
-time: 15 mins
 archetype: Processor
 description: >-
   Reads your startup's "Blurb" and a CSV of Investor Profiles (including their
@@ -9414,6 +9962,12 @@ sampleData:
 
     SaaStr Fund,B2B SaaS,Seed
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Investor Thesis Matcher
@@ -9469,8 +10023,6 @@ id: state-region-standardizer
 category: Sales Ops
 title: State/Region Standardizer
 tagline: Fix 'Calif' vs 'CA' vs 'California'.
-difficulty: Beginner
-time: Weekly
 archetype: Processor
 description: Converts various state naming conventions to standard 2-letter ISO codes.
 sampleData:
@@ -9481,6 +10033,12 @@ sampleData:
     Beta,Calif
     Gamma,NY
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Data Quality Agent
@@ -9521,8 +10079,6 @@ id: subscription-upgrade-identifier
 category: Sales Ops
 title: PQL Hunter (Product Qualified Leads)
 tagline: Find free users who hit their limits.
-difficulty: Intermediate
-time: Daily
 archtype: Processor
 description: >-
   Filters user usage data to find accounts hitting >90% of their plan limits,
@@ -9535,6 +10091,10 @@ sampleData:
     Beta,1000,200
     Gamma,500,490
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Account Manager
@@ -9582,8 +10142,6 @@ id: support-ticket-upseller
 category: Sales Ops
 title: The Support Upseller
 tagline: Turn complaints into cash.
-difficulty: Intermediate
-time: Weekly
 description: >-
   Your support tickets are full of people asking for features they don't have.
   This agent scans ticket history for keywords like 'limit', 'upgrade', or
@@ -9604,6 +10162,10 @@ sampleData:
 
     104,mike@agency.com,Is there a way to white-label the reports?
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Support Upseller
@@ -9652,8 +10214,6 @@ id: tech-stack-seat-auditor
 category: Sales Ops
 title: SaaS Seat Auditor
 tagline: Find unused licenses in your sales tech stack.
-difficulty: Intermediate
-time: Monthly
 archtype: Processor
 description: >-
   Compares active employees against licensed users in tools like Salesforce or
@@ -9666,6 +10226,10 @@ sampleData:
     [Licensed Users]
     Dave, John, Sarah, Bill
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Revenue Systems Manager
@@ -9712,8 +10276,6 @@ id: territory-reassignment-logic
 category: Sales Ops
 title: Bulk Territory Reassigner
 tagline: Move accounts from Rep A to Rep B.
-difficulty: Intermediate
-time: Ad-hoc
 archetype: Processor
 description: >-
   Generates a bulk upload file to move accounts and open opportunities when a
@@ -9725,6 +10287,12 @@ sampleData:
     Acme,John,West
     Beta,John,East
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Sales Ops Admin
@@ -9764,8 +10332,6 @@ id: time-in-stage-stalls
 category: Sales Ops
 title: Pipeline Stage Stall Monitor
 tagline: Identify deals stuck in Legal or Security Review.
-difficulty: Intermediate
-time: Weekly
 archetype: Processor
 description: >-
   Analyzes how long deals sit in specific 'Slow Stages' like Legal to identify
@@ -9778,6 +10344,12 @@ sampleData:
     Deal B,Security,5
     Deal C,Legal,2
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Process Improvement Agent
@@ -9818,8 +10390,6 @@ id: trial-expiry-prioritizer
 category: Sales Ops
 title: Trial Closing Prioritizer
 tagline: Who gets a call 3 days before expiry?
-difficulty: Intermediate
-time: Daily
 archetype: Processor
 description: >-
   Scores active trials based on usage and company size to determine who gets a
@@ -9831,6 +10401,12 @@ sampleData:
     John,2023-10-05,High,500
     Jane,2023-10-05,Low,1
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 # Agent Configuration: The Inside Sales Agent
 
@@ -9870,8 +10446,6 @@ id: uplift-acceptance-rate
 category: Sales Ops
 title: Price Increase Success Rate
 tagline: Did they accept the +5%?
-difficulty: Intermediate
-time: Yearly
 archetype: Processor
 description: >-
   Tracks how many customers accept the standard renewal price uplift vs
@@ -9883,6 +10457,12 @@ sampleData:
     Acme,105,105
     Beta,105,100
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 # Agent Configuration: The Pricing Manager
 
@@ -9922,8 +10502,6 @@ id: upsell-architect
 category: Sales Ops
 title: The Upsell Architect
 tagline: The easiest revenue is already in your DB.
-difficulty: Advanced
-time: Monthly
 description: >-
   Don't just hunt for new business; grow what you have. This agent analyzes your
   current customer list, identifies 'Power Users' hitting usage limits, and
@@ -9937,6 +10515,10 @@ sampleData:
     Solo Dev,Free,100,20,2023-12-01
     Growth AI,Basic,1000,1050,2024-01-08
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Upsell Architect
@@ -9992,8 +10574,6 @@ id: vertical-penetration-analyzer
 category: Sales Ops
 title: Vertical Market Penetration
 tagline: How much of the Finance market do we own?
-difficulty: Advanced
-time: Quarterly
 archetype: Processor
 description: >-
   Calculates market share by comparing 'Customers' vs 'Total Addressable Market'
@@ -10005,6 +10585,12 @@ sampleData:
     Finance,50,5000
     Retail,200,10000
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Strategy Lead
@@ -10045,8 +10631,6 @@ id: viral-loop-coefficient
 category: Sales Ops
 title: The Viral Loop Doctor
 tagline: Diagnose *why* your K-factor is low (Invites vs Acceptance).
-difficulty: Intermediate
-time: Monthly
 archetype: Processor
 description: >-
   Knowing your Viral Coefficient (K-factor) is meaningless if you don't know how
@@ -10059,6 +10643,12 @@ sampleData:
     Jan,1000,200,50
     Feb,1200,100,80
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Growth Engineer
@@ -10107,8 +10697,6 @@ id: voice-agent-script-improver
 category: Sales Ops
 title: Voice Agent Script Improver
 tagline: Fix the exact moment users hang up on your AI voice agent.
-difficulty: Intermediate
-time: Batch
 archtype: Processor
 description: >-
   Analyzes call logs from Vapi/Bland AI. Identifies the specific script line
@@ -10120,6 +10708,10 @@ sampleData:
     101,"Hello I am calling from...",Hangup
     102,"I can help with...",Success
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: Voice Agent Script Improver
@@ -10158,8 +10750,6 @@ id: voicemail-ab-tester
 category: Sales Ops
 title: Cold Call Voicemail A/B Tester
 tagline: Systematically test which voicemail gets a callback.
-difficulty: Intermediate
-time: Batch
 archetype: Processor
 description: >-
   Generates 3 variant scripts for voicemails: "The Mystery", "The Value Prop",
@@ -10171,6 +10761,12 @@ sampleData:
     Mystery,12%
     Value,5%
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: Cold Call Voicemail A/B Tester
@@ -10209,8 +10805,6 @@ id: webinar-converter
 category: Sales Ops
 title: The Webinar Sequence Factory
 tagline: Process 10 event transcripts into 50 follow-up emails.
-difficulty: Intermediate
-time: 10 mins
 description: >-
   Don't let your event leads go cold. This agent reads a folder of webinar/call
   transcripts, identifies every question and objection raised, and generates a
@@ -10221,6 +10815,10 @@ sampleData:
     Attendee: "Is this secure?"
     Host: "Yes, we use 256-bit encryption."
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Webinar Sequence Factory
@@ -10269,8 +10867,6 @@ id: webinar-to-meeting-velocity
 category: Sales Ops
 title: The Event ROI Analyst
 tagline: Don't just count attendees. Segment them by Job Title to find the VIPs.
-difficulty: Intermediate
-time: Weekly
 archetype: Processor
 description: >-
   High attendance vanity metrics can hide low revenue impact. This agent
@@ -10284,6 +10880,12 @@ sampleData:
     Jane Smith,Beta,Marketing Manager,Yes,Yes
     Mike Ross,Stark Ind,Director of Ops,Yes,Yes
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Event ROI Analyst
@@ -10332,8 +10934,6 @@ id: weighted-pipeline-forecaster
 category: Sales Ops
 title: Weighted Revenue Forecaster
 tagline: Predict revenue using stage-based probabilities.
-difficulty: Intermediate
-time: Weekly
 archtype: Processor
 description: >-
   Calculates expected revenue by multiplying deal amounts by the historical win
@@ -10346,6 +10946,10 @@ sampleData:
     Deal B,50000,Proposal
     Deal C,20000,Negotiation
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Sales Analyst
@@ -10393,8 +10997,6 @@ id: win-loss-analysis-interviewer
 category: Sales Ops
 title: The Win/Loss Forensics Agent
 tagline: Uncover the real reasons you lost.
-difficulty: Intermediate
-time: Batch
 description: >-
   Sales reps rarely hear the full truth. This agent processes your internal
   'Closed-Lost' notes or researches competitor G2 reviews to uncover the real
@@ -10407,6 +11009,10 @@ sampleData:
     StartupInc,Chose an alternative with better API docs,Vanta
     TechFlow,No response after pricing proposal,Pipedrive
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Win/Loss Forensics Agent
@@ -10454,8 +11060,6 @@ id: win-loss-reason-clusterer
 category: Sales Ops
 title: Win/Loss Reason Analyzer
 tagline: Turn messy CRM notes into clean win/loss insights.
-difficulty: Advanced
-time: Monthly
 archtype: Processor
 description: >-
   Clusters qualitative CRM reason notes into standardized categories for
@@ -10468,6 +11072,10 @@ sampleData:
     Lost,They went with Competitor X due to features
     Won,Liked our ease of use
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+outputs:
+  - CRM-Ready Export
 ---
 
 # Agent Configuration: The Product Marketer
@@ -10514,8 +11122,6 @@ id: workspace-consolidation-hunter
 category: Sales Ops
 title: Enterprise Consolidation Hunter
 tagline: Find 50 free users with the same email domain.
-difficulty: Intermediate
-time: Monthly
 archetype: Processor
 description: >-
   Groups individual free users by their email domain to identify shadow IT usage
@@ -10528,6 +11134,12 @@ sampleData:
     sara@ge.com,Free
     bob@ge.com,Free
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 # Agent Configuration: The Enterprise SDR
 
@@ -10568,8 +11180,6 @@ id: zombie-user-purge
 category: Sales Ops
 title: Inactive Free User Purge
 tagline: Clean up database costs.
-difficulty: Beginner
-time: Quarterly
 archetype: Processor
 description: >-
   Identifies free tier accounts with no login activity in 12 months for deletion
@@ -10581,6 +11191,12 @@ sampleData:
     John,2022-01-01,Free
     Jane,2023-10-01,Free
 isPremium: true
+inputs:
+  - Lead Data (CSV)
+  - Local File (CSV/MD)
+outputs:
+  - CRM-Ready Export
+  - Cleaned Data
 ---
 # Agent Configuration: The Database Cost Optimizer
 

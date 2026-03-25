@@ -15,6 +15,7 @@ export default function AIWorkplacePersonalityPage() {
   return (
     <div className="min-h-screen bg-primary-bg font-sans text-text-color selection:bg-accent/30 overflow-x-hidden">
       <Head>
+        <meta name="robots" content="noindex, nofollow" />
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
         <meta property="og:title" content={pageTitle} />

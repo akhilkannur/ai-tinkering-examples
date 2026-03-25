@@ -9,8 +9,6 @@ id: bestseller-restock-alert
 category: E-commerce
 title: Back-in-Stock Campaigner
 tagline: Launch ads when bestsellers return.
-difficulty: Intermediate
-time: Weekly
 archetype: Processor
 description: >-
   Monitors inventory levels of 'A-Class' SKUs and triggers a marketing alert
@@ -22,6 +20,12 @@ sampleData:
     Shirt-Blue,A,0,500
     Sock-White,C,0,50
 isPremium: false
+inputs:
+  - Product Data
+  - Local File (CSV/MD)
+outputs:
+  - Shopify-Ready Update
+  - Cleaned Data
 ---
 # Agent Configuration: The Merchandiser
 
@@ -60,8 +64,6 @@ id: bundle-efficacy-tracker
 category: E-commerce
 title: Bundle Profitability Tracker
 tagline: Do bundles actually increase profit?
-difficulty: Intermediate
-time: Monthly
 archetype: Processor
 description: Compares Average Order Value (AOV) and Margin of bundled vs a la carte orders.
 sampleData:
@@ -75,6 +77,12 @@ sampleData:
     B2,Socks,Single,10,2
     B2,Hat,Single,35,10
 isPremium: false
+inputs:
+  - Product Data
+  - Local File (CSV/MD)
+outputs:
+  - Shopify-Ready Update
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Pricing Strategist
@@ -120,8 +128,6 @@ id: category-growth-trends
 category: E-commerce
 title: The Market Surfer
 tagline: Buy inventory *before* the trend peaks.
-difficulty: Intermediate
-time: Monthly
 archetype: Processor
 description: >-
   Don't buy based on last month's sales; buy based on next month's demand. This
@@ -134,6 +140,12 @@ sampleData:
     Pickleball,100,120,150
     FidgetSpinners,1000,800,400
 isPremium: false
+inputs:
+  - Product Data
+  - Local File (CSV/MD)
+outputs:
+  - Shopify-Ready Update
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Trend Forecaster
@@ -177,8 +189,6 @@ id: category-interest-tagger
 category: E-commerce
 title: Category Affinity Tagger
 tagline: Tag users as 'Runners' or 'Swimmers'.
-difficulty: Intermediate
-time: Monthly
 archetype: Processor
 description: >-
   Tags users based on their dominant browsing history category for personalized
@@ -191,6 +201,12 @@ sampleData:
     John,Running
     Jane,Swimming
 isPremium: false
+inputs:
+  - Product Data
+  - Local File (CSV/MD)
+outputs:
+  - Shopify-Ready Update
+  - Cleaned Data
 ---
 # Agent Configuration: The CRM Manager
 
@@ -230,8 +246,6 @@ id: customer-share-of-wallet-estimator
 category: E-commerce
 title: The Upsell Hunter
 tagline: Find the 'Sleeping Giants' in your customer base.
-difficulty: Advanced
-time: Yearly
 archetype: Processor
 description: >-
   Just because a customer spends little doesn't mean they are small. This agent
@@ -245,6 +259,12 @@ sampleData:
     BigCorp,1000,50,5000
     Startup,10,50,500
 isPremium: false
+inputs:
+  - Product Data
+  - Local File (CSV/MD)
+outputs:
+  - Shopify-Ready Update
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Account Strategist
@@ -292,8 +312,6 @@ id: discount-affinity-profiler
 category: E-commerce
 title: Discount Hunter Profiler
 tagline: Who only buys when it's on sale?
-difficulty: Intermediate
-time: Quarterly
 archetype: Processor
 description: >-
   Segments users who *only* buy items on discount vs those who buy full price,
@@ -306,6 +324,12 @@ sampleData:
     John,Yes
     Jane,No
 isPremium: false
+inputs:
+  - Product Data
+  - Local File (CSV/MD)
+outputs:
+  - Shopify-Ready Update
+  - Cleaned Data
 ---
 # Agent Configuration: The Pricing Strategist
 
@@ -345,8 +369,6 @@ id: flash-sale-inventory-monitor
 category: E-commerce
 title: Flash Sale Brake Pedal
 tagline: Stop ads when stock gets low.
-difficulty: Intermediate
-time: Hourly (Simulated)
 archetype: Processor
 description: >-
   Tracks inventory depletion during a sale event to recommend pausing ad spend
@@ -357,6 +379,12 @@ sampleData:
     SKU,Start_Stock,Current_Stock
     Promo-Item,1000,45
 isPremium: false
+inputs:
+  - Product Data
+  - Local File (CSV/MD)
+outputs:
+  - Shopify-Ready Update
+  - Cleaned Data
 ---
 # Agent Configuration: The Campaign Ops
 
@@ -396,8 +424,6 @@ id: free-shipping-threshold-tester
 category: E-commerce
 title: Free Shipping Modeler
 tagline: Should the bar be $50 or $75?
-difficulty: Advanced
-time: Ad-hoc
 archetype: Processor
 description: >-
   Simulates margin impact of moving free shipping thresholds based on current
@@ -410,6 +436,12 @@ sampleData:
     2,60
     3,40
 isPremium: false
+inputs:
+  - Product Data
+  - Local File (CSV/MD)
+outputs:
+  - Shopify-Ready Update
+  - Cleaned Data
 ---
 
 # Agent Configuration: The AOV Maximizer
@@ -454,8 +486,6 @@ id: gwp-qualifier
 category: E-commerce
 title: Gift-with-Purchase Qualifier
 tagline: Identify VIPs for surprise gifts.
-difficulty: Beginner
-time: Batch
 archetype: Processor
 description: >-
   Checks order history or basket value to identify customers eligible for a
@@ -467,6 +497,12 @@ sampleData:
     101,500,50
     102,2000,150
 isPremium: true
+inputs:
+  - Product Data
+  - Local File (CSV/MD)
+outputs:
+  - Shopify-Ready Update
+  - Cleaned Data
 ---
 # Agent Configuration: The Fulfillment Manager
 
@@ -505,8 +541,6 @@ id: high-aov-cluster-analysis
 category: E-commerce
 title: Whale Hunter (High AOV)
 tagline: Where do the big spenders come from?
-difficulty: Advanced
-time: Monthly
 archetype: Processor
 description: >-
   Finds the common acquisition channels for customers with Order Value > $200
@@ -519,6 +553,12 @@ sampleData:
     102,50,Facebook
     103,300,Google Ads
 isPremium: true
+inputs:
+  - Product Data
+  - Local File (CSV/MD)
+outputs:
+  - Shopify-Ready Update
+  - Cleaned Data
 ---
 # Agent Configuration: The Acquisition Manager
 
@@ -558,8 +598,6 @@ id: influencer-code-profitability
 category: E-commerce
 title: Influencer Profit Auditor
 tagline: 'Revenue is vanity, profit is sanity.'
-difficulty: Intermediate
-time: Monthly
 archetype: Processor
 description: >-
   Calculates net profit margin per influencer campaign (Revenue - Commission -
@@ -571,6 +609,12 @@ sampleData:
     Alice,1000,100,200,400
     Bob,500,100,50,400
 isPremium: true
+inputs:
+  - Product Data
+  - Local File (CSV/MD)
+outputs:
+  - Shopify-Ready Update
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Partnership Manager
@@ -610,8 +654,6 @@ id: influencer-gifting-logistics
 category: E-commerce
 title: The Gifting Fulfillment Engine
 tagline: Ship product to 100 creators without errors.
-difficulty: Intermediate
-time: Weekly
 description: >-
   Manual gifting is slow and error-prone. This agent reads a list of influencer
   addresses and their chosen product variant from a CSV, cleans the data for
@@ -623,6 +665,10 @@ sampleData:
     Sarah Jones,123 Main St Apt 4,Austin,BOOTS-BRN,@sarah_walks
     Mike Chen,456 Oak Rd,Seattle,TENT-UL,@mike_outdoors
 isPremium: true
+inputs:
+  - Product Data
+outputs:
+  - Shopify-Ready Update
 ---
 
 # Agent Configuration: The Gifting Fulfillment Engine
@@ -666,8 +712,6 @@ id: inventory-clearance-campaign
 category: E-commerce
 title: The Inventory Clearance Campaign
 tagline: Turn dead stock into cash.
-difficulty: Intermediate
-time: Batch
 description: >-
   Dead stock kills cash flow. This agent plans 'Mystery Box' or 'Bundle'
   campaigns to move slow-moving SKUs without explicitly devaluing the brand with
@@ -680,6 +724,10 @@ sampleData:
     HAT-22,Wool Beanie Blue,85,35
     BAG-99,Mini Duffel Bag,199,85
 isPremium: true
+inputs:
+  - Product Data
+outputs:
+  - Shopify-Ready Update
 ---
 
 # Agent Configuration: The Inventory Clearance Campaign
@@ -726,8 +774,6 @@ id: inventory-opportunity-cost
 category: E-commerce
 title: The Stockout Alarm
 tagline: Don't just count the loss. Recover it.
-difficulty: Intermediate
-time: Daily
 archetype: Processor
 description: >-
   Stockouts cost more than just the missed sale; they cost customer loyalty.
@@ -741,6 +787,12 @@ sampleData:
     Red-Dress-S,500,0.03,80,5
     Blue-Tie,50,0.02,20,10
 isPremium: true
+inputs:
+  - Product Data
+  - Local File (CSV/MD)
+outputs:
+  - Shopify-Ready Update
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Inventory Planner
@@ -784,8 +836,6 @@ id: loyalty-program-redemption-rate
 category: E-commerce
 title: Loyalty Health Monitor
 tagline: Are points being used?
-difficulty: Intermediate
-time: Quarterly
 archetype: Processor
 description: >-
   Tracks percentage of issued points that are actually redeemed to measure
@@ -797,6 +847,12 @@ sampleData:
     Jan,10000,500
     Feb,10000,5000
 isPremium: true
+inputs:
+  - Product Data
+  - Local File (CSV/MD)
+outputs:
+  - Shopify-Ready Update
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Loyalty Manager
@@ -836,8 +892,6 @@ id: new-arrival-teaser-list
 category: E-commerce
 title: New Drop Teaser List
 tagline: Notify past buyers of a brand about new arrivals.
-difficulty: Beginner
-time: Weekly
 archetype: Processor
 description: >-
   Segments buyers who previously bought 'Brand X' to notify them of 'Brand X New
@@ -849,6 +903,12 @@ sampleData:
     John,Nike
     Jane,Adidas
 isPremium: true
+inputs:
+  - Product Data
+  - Local File (CSV/MD)
+outputs:
+  - Shopify-Ready Update
+  - Cleaned Data
 ---
 # Agent Configuration: The Merchandising Marketer
 
@@ -887,8 +947,6 @@ id: price-drop-notification-list
 category: E-commerce
 title: Price Drop Notifier
 tagline: Tell browsers when price drops.
-difficulty: Intermediate
-time: Weekly
 archetype: Processor
 description: >-
   Identifies customers who viewed a specific product in the last 30 days that
@@ -900,6 +958,12 @@ sampleData:
     John,TV,2023-10-01,400,500
     Jane,Radio,2023-10-01,50,50
 isPremium: true
+inputs:
+  - Product Data
+  - Local File (CSV/MD)
+outputs:
+  - Shopify-Ready Update
+  - Cleaned Data
 ---
 # Agent Configuration: The Email Marketer
 
@@ -938,8 +1002,6 @@ id: product-description-seo
 category: E-commerce
 title: The SKU SEO Factory
 tagline: Rewrite 100 product descriptions for search in minutes.
-difficulty: Beginner
-time: 10 mins
 description: >-
   Copy-pasted manufacturer descriptions hurt your SEO. This agent reads a CSV of
   your product catalog and rewrites every description to include long-tail
@@ -954,6 +1016,10 @@ sampleData:
 
     TENT-02,Alpine Tent,2-person, 4-season, ultralight,Lightweight camping tent
 isPremium: true
+inputs:
+  - Product Data
+outputs:
+  - Shopify-Ready Update
 ---
 
 # Agent Configuration: The SKU SEO Factory
@@ -999,8 +1065,6 @@ id: product-review-velocity
 category: E-commerce
 title: The Merchandising Alert System
 tagline: Detect when a bestseller is losing social proof momentum.
-difficulty: Intermediate
-time: Weekly
 archetype: Processor
 description: >-
   Products die when they stop getting reviewed. This agent tracks the "Review
@@ -1014,6 +1078,12 @@ sampleData:
     102,Wool Hat,5,5
     103,Belt,2,0
 isPremium: true
+inputs:
+  - Product Data
+  - Local File (CSV/MD)
+outputs:
+  - Shopify-Ready Update
+  - Cleaned Data
 ---
 
 # Agent Configuration: The E-commerce Merchandiser
@@ -1060,8 +1130,6 @@ id: returns-impact-on-profit
 category: E-commerce
 title: Net Profit SKU Analyzer
 tagline: True profit after returns.
-difficulty: Advanced
-time: Monthly
 archetype: Processor
 description: >-
   Calculates 'Net Profit' per SKU after factoring in return costs and refund
@@ -1077,6 +1145,12 @@ sampleData:
 
     Socks,2000,500,0.05,3,1,200
 isPremium: true
+inputs:
+  - Product Data
+  - Local File (CSV/MD)
+outputs:
+  - Shopify-Ready Update
+  - Cleaned Data
 ---
 
 # Agent Configuration: The E-commerce Profit Architect
@@ -1120,8 +1194,6 @@ id: sample-pack-converter
 category: E-commerce
 title: Sample to Full-Size Converter
 tagline: Upsell sample buyers to the real deal.
-difficulty: Beginner
-time: Weekly
 archetype: Processor
 description: >-
   Tracks users who bought a 'Sample Pack' 14 days ago and flags them for a
@@ -1133,6 +1205,12 @@ sampleData:
     John,Sample Kit,2023-10-01
     Jane,Full Bottle,2023-10-01
 isPremium: true
+inputs:
+  - Product Data
+  - Local File (CSV/MD)
+outputs:
+  - Shopify-Ready Update
+  - Cleaned Data
 ---
 # Agent Configuration: The Lifecycle Strategist
 
@@ -1171,8 +1249,6 @@ id: seasonal-inventory-liquidator
 category: E-commerce
 title: End-of-Season Liquidator
 tagline: Clear shelves before the new line drops.
-difficulty: Intermediate
-time: Seasonal
 archetype: Processor
 description: >-
   Identifies seasonal SKUs with high remaining stock to schedule for aggressive
@@ -1184,6 +1260,12 @@ sampleData:
     Winter-Coat,Winter,500
     Summer-Tee,Summer,10
 isPremium: true
+inputs:
+  - Product Data
+  - Local File (CSV/MD)
+outputs:
+  - Shopify-Ready Update
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Planner
@@ -1223,8 +1305,6 @@ id: shopify-app-store-optimizer
 category: E-commerce
 title: The Shopify App Store Optimizer
 tagline: Get found by merchants.
-difficulty: Advanced
-time: Batch
 description: >-
   The Shopify App Store is a search engine. This agent researches top-ranking
   competitors and audits your app listings to ensure you rank for high-intent
@@ -1237,6 +1317,10 @@ sampleData:
     Order Printer Pro,https://apps.shopify.com/printer-pro,PDF Invoices
     Loyalty Loop,https://apps.shopify.com/loyalty-loop,Loyalty Program
 isPremium: true
+inputs:
+  - Product Data
+outputs:
+  - Shopify-Ready Update
 ---
 
 # Agent Configuration: The Shopify App Store Optimizer
@@ -1283,8 +1367,6 @@ id: slow-mover-bundle-builder
 category: E-commerce
 title: Dead Stock Bundler
 tagline: Clear stale inventory by bundling.
-difficulty: Advanced
-time: Quarterly
 archetype: Processor
 description: >-
   Identifies low-velocity items (Dead Stock) and pairs them with high-velocity
@@ -1296,6 +1378,12 @@ sampleData:
     Cool-Jacket,High,50
     Ugly-Hat,Low,500
 isPremium: true
+inputs:
+  - Product Data
+  - Local File (CSV/MD)
+outputs:
+  - Shopify-Ready Update
+  - Cleaned Data
 ---
 # Agent Configuration: The Inventory Planner
 
@@ -1335,8 +1423,6 @@ id: unboxing-experience-designer
 category: E-commerce
 title: The Unboxing Experience Designer
 tagline: Make them post it on Instagram.
-difficulty: Intermediate
-time: Batch
 description: >-
   The product isn't finished until the customer opens the box. This agent
   designs memorable unboxing experiences for your entire product line to
@@ -1349,6 +1435,10 @@ sampleData:
     PixelPounce,Electric Blue,Tech-forward and High-energy
     BrewBase,Warm Brown,Minimalist and Artisanal
 isPremium: true
+inputs:
+  - Product Data
+outputs:
+  - Shopify-Ready Update
 ---
 
 # Agent Configuration: The Unboxing Experience Designer

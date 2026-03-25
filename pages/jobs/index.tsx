@@ -21,6 +21,7 @@ export default function JobsPage({ jobs }: JobsPageProps) {
   return (
     <>
       <Head>
+        <meta name="robots" content="noindex, nofollow" />
         <title>AI Jobs | Find Your Next Role in AI - Real AI Examples</title>
         <meta name="description" content="Browse a curated list of AI job openings from top companies." key="description" />
 

@@ -5,9 +5,45 @@
     <link>https://realaiexamples.com</link>
     <description>Practical AI Blueprints, Recipes, and Guides for Operations, Marketing, and Sales.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 15 Feb 2026 12:59:46 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 25 Mar 2026 12:12:46 GMT</lastBuildDate>
     <atom:link href="https://realaiexamples.com/feed.xml" rel="self" type="application/rss+xml" />
     
+    <item>
+      <title><![CDATA[Your Website is the Interface. Your API is the Future.]]></title>
+      <link>https://realaiexamples.com/blog/ai-native-websites</link>
+      <guid>https://realaiexamples.com/blog/ai-native-websites</guid>
+      <pubDate>Fri, 20 Feb 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[As AI agents become a primary way users consume data, your visual UI is no longer the only interface that matters.]]></description>
+      <author>Akhil from Real Examples</author>
+    </item>
+  
+    <item>
+      <title><![CDATA[The 'Anti-Slop' Rebrand: Jamming with Variant and Breaking My Own Logic]]></title>
+      <link>https://realaiexamples.com/blog/anti-slop-rebrand</link>
+      <guid>https://realaiexamples.com/blog/anti-slop-rebrand</guid>
+      <pubDate>Fri, 20 Feb 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[A raw look at how we rebranded this site using Variant.com, why I accidentally nuked the copy, and the reality of AI-generated aesthetics.]]></description>
+      <author>Akhil from Real Examples</author>
+    </item>
+  
+    <item>
+      <title><![CDATA[How I built a 100+ API directory without hitting 'Loading...' screens]]></title>
+      <link>https://realaiexamples.com/blog/building-technical-directories</link>
+      <guid>https://realaiexamples.com/blog/building-technical-directories</guid>
+      <pubDate>Fri, 20 Feb 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Modern websites often block simple scraping, making technical research difficult. Here is how Crawl4AI handles JS-heavy sites.]]></description>
+      <author>Akhil from Real Examples</author>
+    </item>
+  
+    <item>
+      <title><![CDATA[How I Automated Instagram Direct Publishing (Without Paying for a Scheduler)]]></title>
+      <link>https://realaiexamples.com/blog/automating-instagram-direct-publishing</link>
+      <guid>https://realaiexamples.com/blog/automating-instagram-direct-publishing</guid>
+      <pubDate>Tue, 17 Feb 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[A step-by-step technical guide to building a custom Instagram auto-poster using Puppeteer, Cloudinary, and the Meta Graph API.]]></description>
+      <author>Akhil from Real Examples</author>
+    </item>
+  
     <item>
       <title><![CDATA[Practical AI Automation: 50 Ideas from the Real Examples Library]]></title>
       <link>https://realaiexamples.com/blog/50-things-to-automate</link>
@@ -50,15 +86,6 @@
       <guid>https://realaiexamples.com/blog/google-analytics-api-guide</guid>
       <pubDate>Fri, 06 Feb 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[Stop logging into Google Analytics. Here is the exact script I use to fetch my website's top pages directly in my terminal, without opening a single dashboard.]]></description>
-      <author>Akhil from Real Examples</author>
-    </item>
-  
-    <item>
-      <title><![CDATA[How I Automated Instagram Direct Publishing (Without Paying for a Scheduler)]]></title>
-      <link>https://realaiexamples.com/blog/automating-instagram-direct-publishing</link>
-      <guid>https://realaiexamples.com/blog/automating-instagram-direct-publishing</guid>
-      <pubDate>Thu, 05 Feb 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[A step-by-step technical guide to building a custom Instagram auto-poster using Puppeteer, Cloudinary, and the Meta Graph API.]]></description>
       <author>Akhil from Real Examples</author>
     </item>
   

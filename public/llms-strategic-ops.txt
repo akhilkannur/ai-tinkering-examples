@@ -9,8 +9,6 @@ id: abm-campaign-asset-builder
 category: Strategic Ops
 title: ABM Campaign Asset Builder
 tagline: Generate personalized landing page copy for target accounts.
-difficulty: Advanced
-time: 20 mins
 archetype: Hybrid
 description: >-
   Takes a high-value target account (e.g., "Nike"), researches their 10-k or
@@ -24,6 +22,12 @@ sampleData:
     Delta Airlines,delta.com,Chief Digital Officer
     Spotify,spotify.com,Head of Ad Sales
 isPremium: false
+inputs:
+  - Business Goal
+  - Local File + Search
+outputs:
+  - Operating Manual
+  - Enriched Document
 ---
 
 # Agent Configuration: The ABM Campaign Asset Builder
@@ -77,8 +81,6 @@ id: affiliate-program-launcher
 category: Strategic Ops
 title: The Affiliate Program Launcher
 tagline: Build a commission-only sales team.
-difficulty: Advanced
-time: Hybrid
 archetype: Hybrid
 description: >-
   Affiliates drive 30% of revenue for SaaS. This agent outlines your commission
@@ -92,6 +94,12 @@ sampleData:
     MarketingWeekly,Newsletter,https://marketingweekly.io
     GrowthHackers,Community,https://growthhackers.com
 isPremium: false
+inputs:
+  - Business Goal
+  - Local File + Search
+outputs:
+  - Operating Manual
+  - Enriched Document
 ---
 
 # Agent Configuration: The Affiliate Program Launcher
@@ -139,8 +147,6 @@ id: agent-context-builder
 category: Strategic Ops
 title: The Project Architect
 tagline: Make any folder AI-ready instantly.
-difficulty: Beginner
-time: One-off
 archetype: Researcher
 description: >-
   AI agents struggle when they don't know your project's structure. This agent
@@ -152,6 +158,12 @@ sampleData:
   content: |
     (No input file needed - this agent reads your actual file system)
 isPremium: false
+inputs:
+  - Business Goal
+  - Web Search Target
+outputs:
+  - Operating Manual
+  - Curated Intel
 ---
 
 # Agent Configuration: The Project Architect
@@ -224,8 +236,6 @@ id: ai-manager-handbook
 title: The AI Manager's Handbook
 category: Strategic Ops
 tagline: Teach AI your specific rules once.
-difficulty: Beginner
-time: 15 min
 archetype: Processor
 publish_date: '2026-01-13'
 tags:
@@ -236,6 +246,12 @@ description: >-
   Stop repeating yourself. Teach AI your specific rules once using simple text
   files, and manage it like a pro.
 isPremium: false
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 
 # Agent Configuration: The AI Manager's Handbook
@@ -282,11 +298,11 @@ Before showing me the result, ask yourself:
 
 *Updated Jan 2026: The new "Agent Skills" feature makes this even easier.*
 
-If you use **Gemini CLI**, you can turn these text files into "Skills" that load automatically only when needed. This saves memory and keeps the AI focused.
+If you use an AI Agent (Gemini CLI, Claude Code, Cursor), you can turn these text files into "Skills" that load automatically only when needed. This saves memory and keeps the AI focused.
 
 ### How to use it:
 1.  **Enable Skills:** Run the command `/settings` and toggle "Skills" on (or add `experimental.skills` to your config).
-2.  **Convert your files:** Move your `QA_VOICE.md` into a specific `.gemini/skills/` folder (or define them in your config).
+2.  **Convert your files:** Move your `QA_VOICE.md` into a specific `.agents/skills/` folder (Note: For Claude Code, use .claude/skills/).
 3.  **Automatic Activation:** Now, you don't even need to paste the file. If you ask for a blog post, the AI will say *"Activating Writing Skill..."* and load your rules instantly.
 
 Think of it as **equipping a toolbelt**. You don't carry a hammer, a drill, and a saw in your hands all day. You pick up the drill (The Skill) only when you need to make a hole.
@@ -305,8 +321,6 @@ id: api-error-impact-alerter
 category: Strategic Ops
 title: API Error Impact Alerter
 tagline: Know exactly which VIP customers are seeing 500 errors.
-difficulty: Advanced
-time: Real-time
 archetype: Processor
 description: >-
   Correlates server logs (500 errors) with Customer Lists. Alerts the CSM
@@ -317,6 +331,12 @@ sampleData:
     Error_Log,Customer_IP
     500 Internal Error,192.168.1.5
 isPremium: false
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 
 # Agent Configuration: API Error Impact Alerter
@@ -355,8 +375,6 @@ id: automated-swot-generator
 category: Strategic Ops
 title: Automated SWOT Generator
 tagline: Generate a SWOT analysis for any company in seconds.
-difficulty: Beginner
-time: Real-time
 archtype: Researcher
 description: >-
   Uses web search to find recent news, earnings calls, and reviews. Compiles a
@@ -367,6 +385,10 @@ sampleData:
     Company_Name,Website
     CompetitorX,https://comp-x.com
 isPremium: false
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: Automated SWOT Generator
@@ -405,8 +427,6 @@ id: automated-webinar-followup-sequence
 category: Strategic Ops
 title: Webinar Follow-Up Architect
 tagline: Segment attendees vs. no-shows and write targeted nurture sequences.
-difficulty: Intermediate
-time: 10 mins
 archetype: Processor
 description: >-
   Reads a webinar participant list, splits them into "Attended" and "Missed",
@@ -419,6 +439,12 @@ sampleData:
     Bob,bob@example.com,No Show,0
     Charlie,charlie@example.com,Attended,5
 isPremium: false
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Webinar Follow-Up Architect
@@ -478,8 +504,6 @@ id: autonomous-project-manager
 category: Strategic Ops
 title: The Autonomous Project Manager
 tagline: The 'Ralph Wiggum' Loop.
-difficulty: Advanced
-time: Batch
 archetype: Processor
 description: >-
   This is the 'Master Blueprint' for long-running autonomous tasks. Modeled
@@ -497,6 +521,12 @@ sampleData:
 
     Internal Tool,React & Supabase,Setup auth and a basic dashboard
 isPremium: false
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Autonomous Project Manager
@@ -549,8 +579,6 @@ id: beta-tester-recruiter
 category: Strategic Ops
 title: The Beta Tester Recruiter
 tagline: Find your first 50 users.
-difficulty: Beginner
-time: Batch
 archetype: Processor
 description: >-
   Launching a new feature? This agent takes a list of users and drafts
@@ -564,6 +592,12 @@ sampleData:
     Bob,bob@example.com,2024-01-08,API Access
     Charlie,charlie@example.com,2024-01-01,Dark Mode
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Beta Tester Recruiter
@@ -611,8 +645,6 @@ id: blueprint-architect
 category: Strategic Ops
 title: The Blueprint Architect
 tagline: Create your own Work-Ready blueprints.
-difficulty: Advanced
-time: Batch
 archetype: Processor
 description: >-
   The meta-agent. Use this blueprint to turn any manual business process into a
@@ -628,6 +660,12 @@ sampleData:
 
     Output: A list of 'Fatigued' campaigns and a suggested budget cut.
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Blueprint Architect
@@ -675,8 +713,6 @@ id: booth-design-checklist
 category: Strategic Ops
 title: The Event Booth Strategist
 tagline: Custom booth checklists for your event portfolio.
-difficulty: Intermediate
-time: Batch
 archetype: Hybrid
 description: >-
   Most trade show booths are invisible. This agent researches your target events
@@ -690,6 +726,12 @@ sampleData:
     CES,20x20,Las Vegas
     Web Summit,10x10,Lisbon
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File + Search
+outputs:
+  - Operating Manual
+  - Enriched Document
 ---
 
 # Agent Configuration: The Event Booth Strategist
@@ -736,8 +778,6 @@ id: booth-scan-lead-router
 category: Strategic Ops
 title: Event Lead Router
 tagline: Route badge scans to the right rep.
-difficulty: Intermediate
-time: Batch
 archetype: Processor
 description: >-
   Routes CSV exports from event badge scanners to sales reps based on territory
@@ -749,6 +789,12 @@ sampleData:
     John,Acme,CA
     Jane,Beta,NY
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 # Agent Configuration: The Event Ops Specialist
 
@@ -787,8 +833,6 @@ id: brand-voice-rewriter
 category: Strategic Ops
 title: Brand Voice Chameleon
 tagline: Rewrite any text to match your specific brand personality.
-difficulty: Intermediate
-time: 5 mins
 archetype: Processor
 description: >-
   Takes a boring paragraph of text (e.g., technical documentation or a rough
@@ -800,6 +844,12 @@ sampleData:
     Our software is good because it helps you organize files. It is very secure
     and has 2FA. You can save time.
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Brand Voice Chameleon
@@ -854,8 +904,6 @@ id: cancellation-flow-auditor
 category: Strategic Ops
 title: The Cancellation Flow Auditor
 tagline: Save them before they go.
-difficulty: Intermediate
-time: Batch
 archetype: Hybrid
 description: >-
   The 'Cancel' button is your last line of defense. This agent researches
@@ -869,6 +917,12 @@ sampleData:
     CodeCheck,https://codecheck.app,Missing Features
     HealthSync,https://healthsync.com,Not Using It
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File + Search
+outputs:
+  - Operating Manual
+  - Enriched Document
 ---
 
 # Agent Configuration: The Cancellation Flow Auditor
@@ -917,8 +971,6 @@ id: case-study-interviewer-bot
 category: Strategic Ops
 title: Case Study Interviewer
 tagline: The perfect script for extracting testimonials from happy clients.
-difficulty: Beginner
-time: 5 mins
 archetype: Processor
 description: >-
   Generates a list of interview questions tailored to the specific "Win" a
@@ -931,6 +983,12 @@ sampleData:
     Win: They saved 20 hours a week on data entry.
     Champion: Sarah, Sales Ops.
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Case Study Interviewer
@@ -984,8 +1042,6 @@ id: changelog-marketer
 category: Strategic Ops
 title: The Changelog Marketer
 tagline: Your updates are marketing assets.
-difficulty: Beginner
-time: Batch
 archetype: Processor
 description: >-
   Don't hide your hard work. This agent takes technical commit messages or Jira
@@ -1004,6 +1060,12 @@ sampleData:
 
     Zapier v2,Added 5 new triggers for automation,Easier workflow integration
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Changelog Marketer
@@ -1052,8 +1114,6 @@ id: channel-conflict-arbitrator
 category: Strategic Ops
 title: Channel Conflict Resolver
 tagline: 'Decide who owns the lead: Partner or Direct?'
-difficulty: Intermediate
-time: Daily
 archtype: Processor
 description: >-
   Compares partner registration dates against internal lead timestamps to
@@ -1066,6 +1126,10 @@ sampleData:
     [Partner Reg]
     Acme Corp, 2023-10-02
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Channel Arbitrator
@@ -1112,8 +1176,6 @@ id: channel-partner-deal-registration-tracker
 category: Strategic Ops
 title: Deal Reg Conflict Finder
 tagline: Did we already have this lead?
-difficulty: Intermediate
-time: Weekly
 archtype: Processor
 description: >-
   Compares new Partner Deal Registrations against existing CRM Opportunities to
@@ -1125,6 +1187,10 @@ sampleData:
     Reseller A,Acme Corp,2023-10-01
     Reseller B,Gamma Inc,2023-10-02
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Channel Manager
@@ -1171,8 +1237,6 @@ id: client-onboarding-checklist
 category: Strategic Ops
 title: The Onboarding Velocity Scanner
 tagline: Don't just send emails. Measure how fast clients are actually moving.
-difficulty: Intermediate
-time: Weekly
 archetype: Processor
 description: >-
   New clients ghosting during setup is the #1 cause of early churn. This agent
@@ -1186,6 +1250,12 @@ sampleData:
     SlowCo,2023-12-15,User Training,2023-12-20,5
     FastBiz,2024-01-10,Go Live,2024-01-12,1
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Implementation Manager
@@ -1235,8 +1305,6 @@ id: competitor-ad-comment-scraper
 category: Strategic Ops
 title: Competitor Dissatisfaction Miner
 tagline: Find unhappy people on their ads.
-difficulty: Intermediate
-time: Weekly
 archetype: Processor
 description: >-
   Filters comments on competitor ads for negative sentiment keywords (e.g.
@@ -1248,6 +1316,12 @@ sampleData:
     Love this!,User A
     Too expensive compared to [Us],User B
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 # Agent Configuration: The Social Prospector
 
@@ -1286,8 +1360,6 @@ id: competitor-ad-library-spy
 category: Strategic Ops
 title: Ad Library Decoder
 tagline: Reverse-engineer your competitor's ad strategy.
-difficulty: Intermediate
-time: 15 mins
 archetype: Processor
 description: >-
   Analyzes a list of ad copy text (scraped from Facebook/LinkedIn Ad Library),
@@ -1299,6 +1371,12 @@ sampleData:
     Ad 2: "The #1 rated CRM for small business. Try it free."
     Ad 3: "Drowning in data? See why 5,000+ teams switched to Us."
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Ad Library Decoder
@@ -1352,8 +1430,6 @@ id: competitor-content-pillar-analyst
 category: Strategic Ops
 title: Competitor Content Spy
 tagline: Steal the content strategy that is working for your rivals.
-difficulty: Intermediate
-time: 15 mins
 archetype: Hybrid
 description: >-
   Analyzes the titles of a competitor's top 10 blog posts or videos to identify
@@ -1366,6 +1442,12 @@ sampleData:
     https://hubspot.com/blog/email-templates
     https://hubspot.com/blog/instagram-strategy
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File + Search
+outputs:
+  - Operating Manual
+  - Enriched Document
 ---
 
 # Agent Configuration: The Competitor Content Spy
@@ -1416,8 +1498,6 @@ id: competitor-matrix-visualizer
 category: Strategic Ops
 title: Feature Parity Matrix
 tagline: Build the "Us vs Them" comparison grid for your pricing page.
-difficulty: Intermediate
-time: 15 mins
 archetype: Hybrid
 description: >-
   Researches 3 competitors to see if they have specific features (SSO, API, Dark
@@ -1441,6 +1521,12 @@ sampleOutput: |
   Free Tier,No,Yes,Yes
   API Access,Yes,Add-on ($),No
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File + Search
+outputs:
+  - Operating Manual
+  - Enriched Document
 ---
 
 # Agent Configuration: The Feature Parity Matrix
@@ -1493,8 +1579,6 @@ id: competitor-pricing-alert-system
 category: Strategic Ops
 title: Competitor Pricing Watchdog
 tagline: Detects hidden pricing changes on competitor websites.
-difficulty: Intermediate
-time: 15 mins
 archetype: Hybrid
 description: >-
   Monitors competitor pricing pages, detects changes in numbers (prices) or
@@ -1507,6 +1591,12 @@ sampleData:
     Monday,https://monday.com/pricing
     Asana,https://asana.com/pricing
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File + Search
+outputs:
+  - Operating Manual
+  - Enriched Document
 ---
 
 # Agent Configuration: The Competitor Pricing Watchdog
@@ -1564,8 +1654,6 @@ id: contract-risk-detector
 category: Strategic Ops
 title: The Contract Risk Detector
 tagline: Find the 'gotchas' in the PDF.
-difficulty: Experimental
-time: Batch
 description: >-
   Sales contracts often hide 3-year lock-ins or auto-renewals in the fine print.
   This agent scans multiple PDF agreements, highlights high-risk clauses, and
@@ -1578,6 +1666,10 @@ sampleData:
     AdsManager,contracts/ads_terms.pdf,Medium
     SaaSPro,contracts/saaspro_agreement.png,High
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Contract Risk Detector
@@ -1627,8 +1719,6 @@ id: customer-feedback-tagger
 category: Strategic Ops
 title: Feedback Auto-Tagger
 tagline: Organize messy user feedback into a clean product roadmap.
-difficulty: Intermediate
-time: 5 mins
 archetype: Processor
 description: >-
   Reads a CSV of random user comments (from emails, surveys, or Slack) and tags
@@ -1641,6 +1731,12 @@ sampleData:
     Bob,"It would be cool if this integrated with Slack."
     Charlie,"The app crashes when I upload a PDF."
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Feedback Auto-Tagger
@@ -1690,8 +1786,6 @@ id: customer-journey-mapper
 category: Strategic Ops
 title: The Customer Journey Factory
 tagline: Map the broken road for every persona.
-difficulty: Intermediate
-time: Annual
 description: >-
   Users drop off where you least expect. This agent reads a list of customer
   personas from a CSV and maps their unique 5-stage journeys (Awareness to
@@ -1703,6 +1797,10 @@ sampleData:
     Tech Founder,CTO,Scale infrastructure
     Marketing Lead,VP Growth,Lower CAC
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Customer Journey Factory
@@ -1748,8 +1846,6 @@ id: dark-social-mention-tracker
 category: Strategic Ops
 title: Community Mention Alert
 tagline: Who is talking about us in Slack?
-difficulty: Advanced
-time: Daily
 archetype: Processor
 description: >-
   Scrapes (simulated) Slack/Discord community exports for brand keywords to
@@ -1760,6 +1856,12 @@ sampleData:
     User: Has anyone tried [Brand]?
     User: Yeah it's great.
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 # Agent Configuration: The Community Lead
 
@@ -1798,8 +1900,6 @@ id: deal-reg-expiry-alert
 category: Strategic Ops
 title: Deal Reg Expiry Monitor
 tagline: Flag partner deal registrations that are about to expire.
-difficulty: Beginner
-time: Weekly
 archtype: Processor
 description: >-
   Monitors the 90-day protection window for partner deals and alerts when
@@ -1812,6 +1912,10 @@ sampleData:
     Reseller B,SpaceX Mars,2023-05-01,100000,2023-06-01
     Reseller C,Startup Inc,2023-10-15,5000,2023-10-20
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Partner Revenue Defender
@@ -1854,8 +1958,6 @@ id: direct-mail-campaign-planner
 category: Strategic Ops
 title: The ABM Direct Mail Engine
 tagline: High-impact mailers for your top 100 accounts.
-difficulty: Advanced
-time: One-off
 description: >-
   Direct mail breaks through the noise. This agent reads a list of target
   accounts and their 'Tier' from a CSV and plans a customized physical mailer
@@ -1867,6 +1969,10 @@ sampleData:
     MegaCorp,Tier 1,Infrastructure scale
     TinyStart,Tier 3,Fast setup
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The ABM Direct Mail Engine
@@ -1912,8 +2018,6 @@ id: discount-code-strategist
 category: Strategic Ops
 title: The Annual Promo Strategist
 tagline: 'Your entire year of sales, without brand damage.'
-difficulty: Intermediate
-time: Seasonal
 description: >-
   Don't slash prices; drive value. This agent reads your annual holiday list
   from a CSV and designs a 'Smart Promo' strategy for every event, ensuring you
@@ -1926,6 +2030,10 @@ sampleData:
     New Year,January,Annual retention
     Summer Sale,July,Move old inventory
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Annual Promo Strategist
@@ -1973,8 +2081,6 @@ id: distributor-stock-rotation-logic
 category: Strategic Ops
 title: Stock Rotation Auditor
 tagline: Calculate eligible stock returns for distributors.
-difficulty: Advanced
-time: Quarterly
 archtype: Processor
 description: >-
   Calculates the maximum eligible dollar amount for stock rotation based on
@@ -1986,6 +2092,10 @@ sampleData:
     Disti A,1000000,50000
     Disti B,500000,100000
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Distribution Manager
@@ -2032,8 +2142,6 @@ id: email-subject-line-tester
 category: Strategic Ops
 title: The Subject Line Factory
 tagline: Generate A/B test variations for 10 campaigns in one run.
-difficulty: Beginner
-time: 5 mins
 description: >-
   The subject line is 80% of the battle. This agent reads a list of email
   campaign goals from a CSV and generates 10 high-converting subject line
@@ -2046,6 +2154,10 @@ sampleData:
     Abandoned_Cart,Recovery,Lost buyers
     Product_Update,Education,Active users
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Subject Line Factory
@@ -2090,8 +2202,6 @@ id: employee-advocacy-leaderboard
 category: Strategic Ops
 title: Social Advocacy Leaderboard
 tagline: Who is the loudest brand champion?
-difficulty: Beginner
-time: Weekly
 archetype: Processor
 description: >-
   Ranks employees by the reach and engagement of their company-related social
@@ -2103,6 +2213,12 @@ sampleData:
     John,5,50,10
     Jane,10,200,50
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 # Agent Configuration: The Social Media Manager
 
@@ -2142,8 +2258,6 @@ id: event-influenced-pipeline
 category: Strategic Ops
 title: Event Influence Calc
 tagline: Total pipeline touched by this event.
-difficulty: Intermediate
-time: Monthly
 archetype: Processor
 description: >-
   Calculates total pipeline value where an 'Event Attendance' campaign member
@@ -2155,6 +2269,12 @@ sampleData:
     Event_X,50000,2023-01-01,2023-02-01
     Event_X,10000,2023-03-01,2023-01-01
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 # Agent Configuration: The Marketing Analyst
 
@@ -2194,8 +2314,6 @@ id: event-meeting-no-show-tracker
 category: Strategic Ops
 title: Event Meeting Auditor
 tagline: Did they show up to the booth meeting?
-difficulty: Beginner
-time: Batch
 archetype: Processor
 description: >-
   Tracks attendance of pre-booked meetings at trade shows to calculate the 'Show
@@ -2208,6 +2326,12 @@ sampleData:
     2,No Show
     3,Held
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 # Agent Configuration: The Sales Events Lead
 
@@ -2248,8 +2372,6 @@ title: The Booth ROI Predictor
 tagline: >-
   Don't just guess. Model the 'Break-Even' scenario before you sign the
   contract.
-difficulty: Intermediate
-time: 5 mins
 archetype: Processor
 description: >-
   Trade shows are money pits if you don't do the math. This agent takes the
@@ -2263,6 +2385,12 @@ sampleData:
     SaaStr,50000,10000,15000,0.02
     Local_Meetup,500,100,5000,0.05
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Event CFO
@@ -2309,8 +2437,6 @@ id: feature-adoption-analyzer
 category: Strategic Ops
 title: The Feature Adoption Analyzer
 tagline: Who is actually using your new tool?
-difficulty: Intermediate
-time: Monthly
 archetype: Processor
 description: >-
   You launched a feature, but did it land? This agent analyzes product usage
@@ -2324,6 +2450,12 @@ sampleData:
     2,SMB,False,10
     3,Enterprise,False,40
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 
 # Agent Configuration: The PMM
@@ -2370,8 +2502,6 @@ id: feature-announcement
 category: Strategic Ops
 title: The Product Marketing Engine
 tagline: Turn technical updates into sales momentum.
-difficulty: Beginner
-time: 20 mins
 description: >-
   Don't just ship code; ship value. This agent reads a list of technical updates
   from a CSV and generates a complete marketing bundle (Email, Tweet, Changelog)
@@ -2383,6 +2513,10 @@ sampleData:
     Smart Filter,Added regex support to lead table,2024-01-10
     Zapier v2,Added 5 new actions for CRM,2024-01-12
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Product Marketing Engine
@@ -2428,8 +2562,6 @@ id: feature-request-arr-weighting
 category: Strategic Ops
 title: Feature Request ARR Weighting
 tagline: 'Prioritize roadmap based on dollars, not noise.'
-difficulty: Intermediate
-time: Batch
 archtype: Processor
 description: >-
   Merges your "Feature Request" board with Salesforce data. Calculates the
@@ -2442,6 +2574,10 @@ sampleData:
     SSO,Acc1;Acc5;Acc9
     Dark_Mode,Acc2
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: Feature Request ARR Weighting
@@ -2480,8 +2616,6 @@ id: feature-request-clusterer
 category: Strategic Ops
 title: Feedback Cluster Engine
 tagline: 'Group 1,000 feedback tickets into 5 features.'
-difficulty: Intermediate
-time: Weekly
 archtype: Processor
 description: >-
   Uses keyword matching to group loose user feedback into feature buckets (e.g.,
@@ -2495,6 +2629,10 @@ sampleData:
     3,My eyes hurt, need night mode
     4,Is there an iOS app?
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Product Ops
@@ -2542,8 +2680,6 @@ id: field-dinner-nomination-logic
 category: Strategic Ops
 title: VIP Dinner Selector
 tagline: Who gets the steak dinner?
-difficulty: Intermediate
-time: Batch
 archetype: Processor
 description: >-
   Scores prospects in a city based on Title (CXO) and Account Tier to nominate
@@ -2555,6 +2691,12 @@ sampleData:
     John,CEO,Tier 1
     Jane,Manager,Tier 3
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 # Agent Configuration: The ABM Field Marketer
 
@@ -2593,8 +2735,6 @@ id: g2-review-sentiment-analyzer
 category: Strategic Ops
 title: Voice of Customer Analyzer
 tagline: Mine G2 & Capterra reviews to find product gaps and marketing hooks.
-difficulty: Intermediate
-time: 15 mins
 archetype: Hybrid
 description: >-
   Scrapes or reads reviews of a product (yours or a competitor's), categorizes
@@ -2607,6 +2747,12 @@ sampleData:
     Source: https://www.g2.com/products/asana/reviews
     Source: https://www.capterra.com/p/120537/Asana/reviews
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File + Search
+outputs:
+  - Operating Manual
+  - Enriched Document
 ---
 
 # Agent Configuration: The Voice of Customer Analyzer
@@ -2663,8 +2809,6 @@ id: gdpr-cookie-banner-copy
 category: Strategic Ops
 title: The Converting Cookie Banner
 tagline: Compliance that doesn't kill data.
-difficulty: Beginner
-time: Batch
 description: >-
   Cookie banners annoy users and kill data collection. This agent writes 'Human'
   copy for your consent manager that explains *why* you track, increasing your
@@ -2677,6 +2821,10 @@ sampleData:
     FinGuard,Cybersecurity,Professional & Trustworthy
     BrewBase,Coffee subscription,Casual & Direct
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Converting Cookie Banner
@@ -2724,8 +2872,6 @@ id: geo-expansion-planner
 category: Strategic Ops
 title: The Geographic Expansion Planner
 tagline: Where should we launch next?
-difficulty: Advanced
-time: One-off
 archetype: Processor
 description: >-
   You're big in the US, but what about Europe? This agent analyzes your current
@@ -2739,6 +2885,12 @@ sampleData:
     UK,5000,200,5
     Germany,4000,10,1
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 
 # Agent Configuration: The VP of International
@@ -2785,8 +2937,6 @@ id: google-my-business-optimizer
 category: Strategic Ops
 title: The GMB Fleet Optimizer
 tagline: Own the map pack for all 50 branches.
-difficulty: Beginner
-time: Monthly
 description: >-
   Local businesses live or die by Google Maps. This agent reads a list of
   branches from a CSV, audits their Google Business Profiles against local
@@ -2798,6 +2948,10 @@ sampleData:
     Downtown Coffee,https://g.page/downtown
     Uptown Coffee,https://g.page/uptown
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The GMB Fleet Optimizer
@@ -2844,8 +2998,6 @@ id: google-my-business-review-responder
 category: Strategic Ops
 title: Local Review Responder
 tagline: Write SEO-friendly replies to Google Reviews in seconds.
-difficulty: Beginner
-time: 5 mins
 archetype: Hybrid
 description: >-
   Reads new Google Maps reviews for your business, identifies the sentiment
@@ -2858,6 +3010,12 @@ sampleData:
     John Doe,5,Best pizza in Chicago!
     Jane Smith,1,Cold pizza and rude service.
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File + Search
+outputs:
+  - Operating Manual
+  - Enriched Document
 ---
 
 # Agent Configuration: The Local Review Responder
@@ -2911,8 +3069,6 @@ id: holiday-promo-planner
 category: Strategic Ops
 title: The Holiday Campaign Factory
 tagline: Crush Black Friday across 5 products at once.
-difficulty: Advanced
-time: Seasonal
 description: >-
   Q4 is war. This agent reads a list of products and their primary 'Deal' from a
   CSV and maps out a complete 4-week holiday campaign for every single one,
@@ -2924,6 +3080,10 @@ sampleData:
     CRM_Pro,50% off annual,$100k
     Automation_Lite,$1 first month,$20k
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Holiday Campaign Factory
@@ -2971,8 +3131,6 @@ id: indirect-revenue-forecaster
 category: Strategic Ops
 title: Indirect Revenue Forecaster
 tagline: Forecast revenue from partner-submitted pipeline.
-difficulty: Intermediate
-time: Monthly
 archtype: Processor
 description: >-
   Applies a 'Channel Discount' to partner forecasts to create a more realistic
@@ -2984,6 +3142,10 @@ sampleData:
     Reseller X,100000,High
     Reseller Y,50000,Medium
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Channel Revenue Lead
@@ -3030,8 +3192,6 @@ id: influencer-audit
 category: Strategic Ops
 title: The Influencer Auditor
 tagline: Audit 50 creators in one run.
-difficulty: Intermediate
-time: 5 mins
 description: >-
   Protect your ad budget. This agent reads a list of influencer handles from a
   CSV, calculates their real engagement rates, detects bot behavior, and
@@ -3044,6 +3204,10 @@ sampleData:
     @ai_alice,50000,LinkedIn
     @tech_tom,200000,Instagram
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Influencer Auditor
@@ -3088,8 +3252,6 @@ id: influencer-contract-drafter
 category: Strategic Ops
 title: The Influencer Contract Factory
 tagline: Generate 50 creator agreements in one run.
-difficulty: Advanced
-time: One-off
 description: >-
   Protect your brand at scale. This agent reads a list of influencers and their
   specific deal terms from a CSV and drafts a unique, plain-English agreement
@@ -3101,6 +3263,10 @@ sampleData:
     @tech_sam,1 TikTok, 2 Stories,$500,2024-02-01
     @growth_grace,1 YouTube integration,$2000,2024-02-15
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Influencer Contract Factory
@@ -3144,8 +3310,6 @@ id: influencer-outreach-manager
 category: Strategic Ops
 title: The Relationship Builder
 tagline: Don't send generic follow-ups. Contextualize every DM.
-difficulty: Intermediate
-time: 5 mins
 archetype: Hybrid
 description: >-
   Generic "Just checking in" DMs get ignored. This agent scans the recent
@@ -3158,6 +3322,12 @@ sampleData:
     @tech_guru,Negotiating,https://x.com/tech_guru
     @marketing_maven,Ghosted,https://x.com/marketing_maven
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File + Search
+outputs:
+  - Operating Manual
+  - Enriched Document
 ---
 
 # Agent Configuration: The Relationship Builder
@@ -3203,8 +3373,6 @@ id: influencer-roi-calculator
 category: Strategic Ops
 title: The Creator Economy Auditor
 tagline: Separate the 'Performers' from the 'Posers'.
-difficulty: Beginner
-time: Campaign End
 archetype: Processor
 description: >-
   Vanity metrics (Likes) rarely correlate with Wallet metrics (Sales). This
@@ -3217,6 +3385,12 @@ sampleData:
     TikTokStar,5000,200,0.15,1000000
     NicheBlogger,500,2000,0.05,5000
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 
 # Agent Configuration: The CFO
@@ -3261,8 +3435,6 @@ id: influencer-share-verification
 category: Strategic Ops
 title: Influencer Compliance Check
 tagline: Did they actually post it?
-difficulty: Intermediate
-time: Weekly
 archetype: Processor
 description: >-
   Verifies if a paid influencer actually posted the agreed content by checking
@@ -3274,6 +3446,12 @@ sampleData:
     Alice,2023-10-01,2023-10-01
     Bob,2023-10-01,NULL
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 # Agent Configuration: The Influencer Manager
 
@@ -3313,8 +3491,6 @@ id: integration-partner-finder
 category: Strategic Ops
 title: The Strategic Integration Factory
 tagline: Find 50 potential partners across 10 niches.
-difficulty: Advanced
-time: One-off
 description: >-
   Why build one integration? This agent reads a list of adjacent tool categories
   from a CSV and identifies the top 5 high-leverage partners in each, drafting a
@@ -3326,6 +3502,10 @@ sampleData:
     E-com CRM,Merchants,Cart abandonment
     HR Tech,VPs of HR,Employee churn
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Strategic Integration Factory
@@ -3369,8 +3549,6 @@ id: interview-answer-rubric-scorer
 category: Strategic Ops
 title: Interview Answer Rubric Scorer
 tagline: Remove bias from your hiring process.
-difficulty: Intermediate
-time: Batch
 archetype: Processor
 description: >-
   Takes raw interview notes or transcripts. Scores the candidate's answer to
@@ -3381,6 +3559,12 @@ sampleData:
     Candidate,Question,Answer_Text
     John,"Conflict","I just avoided it."
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 
 # Agent Configuration: Interview Answer Rubric Scorer
@@ -3419,8 +3603,6 @@ id: invoice-chaser-sequence
 category: Strategic Ops
 title: The Invoice Chaser Engine
 tagline: Recover $10k+ in overdue payments without being awkward.
-difficulty: Beginner
-time: Weekly
 description: >-
   Unpaid invoices kill cash flow. This agent reads a CSV of overdue accounts,
   categorizes them by 'Days Overdue', and drafts a 3-step personalized dunning
@@ -3432,6 +3614,10 @@ sampleData:
     MegaCorp,billing@megacorp.com,5000,5
     SmallStart,founder@small.com,1200,35
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Invoice Chaser Engine
@@ -3476,8 +3662,6 @@ id: lead-magnet-idea-generator
 category: Strategic Ops
 title: Lead Magnet Factory
 tagline: 'Generate ideas for high-converting tools, templates, and PDFs.'
-difficulty: Intermediate
-time: 10 mins
 archetype: Hybrid
 description: >-
   Analyzes your website or a competitor's site to understand the audience, then
@@ -3490,6 +3674,12 @@ sampleData:
     Audience: Marketing Managers, Sales Leaders
     Goal: Capture leads for CRM software.
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File + Search
+outputs:
+  - Operating Manual
+  - Enriched Document
 ---
 
 # Agent Configuration: The Lead Magnet Factory
@@ -3544,8 +3734,6 @@ id: link-magnet-stats-builder
 category: Strategic Ops
 title: The Full-Stack Link Magnet
 tagline: Research data & build the UI.
-difficulty: Expert
-time: Batch
 description: >-
   Don't just write a blog post; build a 'State of the Industry' landing page.
   This agent researches statistics and then generates the React/Tailwind code to
@@ -3557,6 +3745,10 @@ sampleData:
     "AI in Sales 2026",state-of-ai-sales,Sales Leaders
     "Remote Work 2026",remote-work-trends,HR Managers
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Full-Stack Link Magnet
@@ -3623,8 +3815,6 @@ id: linkedin-comment-scraper
 category: Strategic Ops
 title: The LinkedIn Comment Miner
 tagline: Turn engagement into a CSV.
-difficulty: Advanced
-time: Batch
 description: >-
   A viral post is a lead magnet. This agent processes raw HTML pastes of
   LinkedIn comment sections to extract Names, Headlines, and Profile URLs of
@@ -3637,6 +3827,10 @@ sampleData:
     post_456,raw_html/post_2.txt,PDF
     post_789,raw_html/post_3.html,Yes please
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The LinkedIn Comment Miner
@@ -3685,8 +3879,6 @@ id: linkedin-connection-acceptance-rate
 category: Strategic Ops
 title: Connection Request A/B Tester
 tagline: Which note gets more connects?
-difficulty: Intermediate
-time: Monthly
 archetype: Processor
 description: Tracks the acceptance rate of different LinkedIn connection request templates.
 sampleData:
@@ -3696,6 +3888,12 @@ sampleData:
     A (Generic),100,20
     B (Personalized),100,45
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 # Agent Configuration: The Social Selling Coach
 
@@ -3734,8 +3932,6 @@ id: linkedin-ghostwriter
 category: Strategic Ops
 title: The LinkedIn Ghostwriter
 tagline: Brain Dump -> Viral Post.
-difficulty: Intermediate
-time: Batch
 description: >-
   Dry ideas don't get reach. This agent transforms your raw brain dumps into
   structured, high-performing LinkedIn posts using viral templates and hook
@@ -3748,6 +3944,10 @@ sampleData:
     Remote Work,I hate zoom meetings that could be an email,Relatable
     AI,Agents will replace 80% of SDR work by 2025,Bold Future
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The LinkedIn Ghostwriter
@@ -3794,8 +3994,6 @@ id: linkedin-poll-architect
 category: Strategic Ops
 title: Viral Poll Builder
 tagline: Create LinkedIn polls that drive engagement and uncover leads.
-difficulty: Beginner
-time: 5 mins
 archetype: Hybrid
 description: >-
   Brainstorms polarizing or insightful poll questions related to your industry
@@ -3806,6 +4004,12 @@ sampleData:
   content: |
     Remote Work vs. Office Return
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File + Search
+outputs:
+  - Operating Manual
+  - Enriched Document
 ---
 
 # Agent Configuration: The Viral Poll Builder
@@ -3858,8 +4062,6 @@ id: list-segmentation-logic-validator
 category: Strategic Ops
 title: Segment Logic Checker
 tagline: Ensure customers aren't in 'Prospect' lists.
-difficulty: Intermediate
-time: Weekly
 archtype: Processor
 description: >-
   Checks a list of contacts to ensure no one has both 'Status=Customer' and
@@ -3871,6 +4073,10 @@ sampleData:
     john@acme.com,Customer,Prospect_Nurture;Newsletter
     jane@beta.com,Prospect,Prospect_Nurture
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Marketing Automation Ops
@@ -3917,8 +4123,6 @@ id: market-entry-simulator
 category: Strategic Ops
 title: New Market Entry Simulator
 tagline: Roleplay a launch in a new country or vertical.
-difficulty: Advanced
-time: Real-time
 archtype: Hybrid
 description: >-
   Simulates the regulatory, cultural, and competitive friction of entering a new
@@ -3931,6 +4135,10 @@ sampleData:
     Germany,HR_SaaS
     Japan,Social_App
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: New Market Entry Simulator
@@ -3969,8 +4177,6 @@ id: mdf-spend-auditor
 category: Strategic Ops
 title: MDF Budget Reconciler
 tagline: Reconcile partner receipts against approved funds.
-difficulty: Advanced
-time: Monthly
 archtype: Processor
 description: >-
   Compares partner-submitted receipts against the Market Development Fund (MDF)
@@ -3982,6 +4188,10 @@ sampleData:
     Partner X,1000,950
     Partner Y,500,600
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Partner Finance
@@ -4028,8 +4238,6 @@ id: meeting-action-item-enforcer
 category: Strategic Ops
 title: Meeting Action Item Enforcer
 tagline: The AI project manager that nags you about tasks.
-difficulty: Intermediate
-time: Batch
 archetype: Processor
 description: >-
   Parses meeting transcripts for "I will..." or "Let's...". Creates a checklist.
@@ -4040,6 +4248,12 @@ sampleData:
     Meeting_Date,Transcript_Snippet
     Oct 1,"I will fix the bug by Friday"
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 
 # Agent Configuration: Meeting Action Item Enforcer
@@ -4078,8 +4292,6 @@ id: monthly-report-generator
 category: Strategic Ops
 title: The Narrative Builder
 tagline: Clients don't read spreadsheets. They read stories.
-difficulty: Intermediate
-time: Batch
 archetype: Processor
 description: >-
   Data dumping causes churn. This agent transforms raw client performance CSVs
@@ -4092,6 +4304,12 @@ sampleData:
     Acme,+20%,+5%,10000,5000
     Beta,-5%,-10%,20000,0
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Account Strategist
@@ -4137,8 +4355,6 @@ id: newsjacker
 category: Strategic Ops
 title: The Newsjacker
 tagline: Find trending news and draft social posts on autopilot.
-difficulty: Intermediate
-time: 15 mins
 description: >-
   Content is about timing. This agent monitors a list of niches from a CSV,
   discovers the latest high-impact news stories for each, and drafts contrarian
@@ -4150,6 +4366,10 @@ sampleData:
     AI Agents,SaaS Founders
     MarTech,Growth Managers
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Newsjacker
@@ -4196,8 +4416,6 @@ id: newsletter-list-cleaner
 category: Strategic Ops
 title: List Hygiene Scrub
 tagline: Remove role-based and disposable emails.
-difficulty: Beginner
-time: Weekly
 archtype: Processor
 description: >-
   Audits your subscriber list to remove invalid emails like `support@` or
@@ -4210,6 +4428,10 @@ sampleData:
     support@tesla.com
     bill@temp-mail.org
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Email Architect
@@ -4256,8 +4478,6 @@ id: newsletter-sponsor-scout
 category: Strategic Ops
 title: The Sponsor Scout Engine
 tagline: Fill your ad slots for the next 6 months.
-difficulty: Intermediate
-time: Weekly
 description: >-
   Why wait for sponsors? This agent reads a list of competitor newsletters from
   a CSV, identifies who is *already* spending money in your niche, and drafts a
@@ -4269,6 +4489,10 @@ sampleData:
     The AI Digest,https://aidigest.com,Engineers
     Growth Daily,https://growth.com,Marketers
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Sponsor Scout Engine
@@ -4313,8 +4537,6 @@ id: okr-drafter
 category: Strategic Ops
 title: The OKR Architect
 tagline: Draft team goals from your vision or industry benchmarks.
-difficulty: Intermediate
-time: Quarterly
 description: >-
   Objectives and Key Results (OKRs) drive growth. This agent takes your
   high-level vision (if provided) or researches your business stage (Seed,
@@ -4325,6 +4547,10 @@ sampleData:
   content: |
     Goal: We want to become the #1 tool for E-com marketing teams in 2024.
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The OKR Architect
@@ -4376,8 +4602,6 @@ id: partner-certification-monitor
 category: Strategic Ops
 title: The Partner Enablement Automator
 tagline: Automatically nag partners 30 days before their certifications expire.
-difficulty: Beginner
-time: Monthly
 archetype: Processor
 description: >-
   Don't track certs in spreadsheets. This agent scans your partner database,
@@ -4390,6 +4614,12 @@ sampleData:
     Acme Resellers,john@acme.com,Solutions Architect,2024-02-01
     Beta Systems,jane@beta.com,Sales Pro,2023-12-01
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Enablement Manager
@@ -4436,8 +4666,6 @@ id: partner-event-lead-splitter
 category: Strategic Ops
 title: Co-Marketing Lead Splitter
 tagline: Share leads fairly with partners.
-difficulty: Intermediate
-time: Batch
 archetype: Processor
 description: >-
   Splits a master lead list from a co-hosted event according to the agreed
@@ -4450,6 +4678,12 @@ sampleData:
     Jane,US
     Bob,US
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 # Agent Configuration: The Partner Marketing Manager
 
@@ -4488,8 +4722,6 @@ id: partner-program-hunter
 category: Strategic Ops
 title: The Partner Hunter Fleet
 tagline: Find 100 non-competing partners at once.
-difficulty: Advanced
-time: Continuous
 description: >-
   Why sell 1-to-1 when you can sell 1-to-many? This agent reads a list of
   adjacent tool categories from a CSV, identifies the top 5 players in each, and
@@ -4501,6 +4733,10 @@ sampleData:
     Email Marketing,Increase deliverability
     CRM,Manage leads faster
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Partner Hunter Fleet
@@ -4546,8 +4782,6 @@ id: partner-portal-inactivity-audit
 category: Strategic Ops
 title: Partner Engagement Audit
 tagline: Identify 'Ghost' partners who haven't logged in.
-difficulty: Beginner
-time: Quarterly
 archtype: Processor
 description: >-
   Finds inactive partners to prioritize for re-engagement campaigns or program
@@ -4560,6 +4794,10 @@ sampleData:
     Blog Affiliate,Referral,2023-05-01,50
     Consulting Inc,Reseller,2023-10-25,2
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Partner Activation Engine
@@ -4601,8 +4839,6 @@ id: partner-tier-promotion-tracker
 category: Strategic Ops
 title: Partner Tier Auditor
 tagline: Check if partners qualify for Silver/Gold/Platinum.
-difficulty: Intermediate
-time: Quarterly
 archtype: Processor
 description: >-
   Analyzes partner revenue against thresholds to recommend tier upgrades or
@@ -4615,6 +4851,10 @@ sampleData:
     Reseller B,45000,Silver
     Reseller C,250000,Gold
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Channel Manager
@@ -4661,8 +4901,6 @@ id: partnership-mou-generator
 category: Strategic Ops
 title: The Strategic Partnership Architect
 tagline: Draft a formal MOU from your notes or a partnership goal.
-difficulty: Advanced
-time: One-off
 description: >-
   Alignment prevents disputes. This agent reads your partnership notes (if
   provided) or researches industry standards for your partnership type
@@ -4673,6 +4911,10 @@ sampleData:
     Goal: We want to swap 2 emails with Company X. They host the webinar, we
     provide the slides.
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Strategic Partnership Architect
@@ -4722,8 +4964,6 @@ id: persona-anti-targeting
 category: Strategic Ops
 title: The Anti-Targeting List Builder
 tagline: Who should you NOT sell to?
-difficulty: Beginner
-time: Quarterly
 archetype: Processor
 description: >-
   Bad leads clog pipelines. This agent analyzes your 'Closed-Lost' and 'High
@@ -4736,6 +4976,12 @@ sampleData:
     CustA,Churned,Real Estate,gmail.com
     CustB,Lost,Consultant,yahoo.com
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Gatekeeper
@@ -4777,8 +5023,6 @@ id: persona-builder
 category: Strategic Ops
 title: The AI Persona Researcher
 tagline: Build detailed customer personas.
-difficulty: Intermediate
-time: 15 mins
 archetype: Researcher
 description: >-
   Researches your target niches and creates detailed persona cards with their
@@ -4791,6 +5035,12 @@ sampleData:
     SaaS Ops Managers,Data Silos,LinkedIn
     E-com Store Owners,Ad Costs,Twitter
 isPremium: true
+inputs:
+  - Business Goal
+  - Web Search Target
+outputs:
+  - Operating Manual
+  - Curated Intel
 ---
 
 # Agent Configuration: The AI Persona Researcher
@@ -4853,8 +5103,6 @@ id: pitch-deck-red-team
 category: Strategic Ops
 title: The VC Pitch Deck Roast
 tagline: Simulate a ruthless VC tearing apart your slide deck.
-difficulty: Intermediate
-time: Real-time
 archtype: Processor
 description: >-
   Upload your pitch deck text. The agent adopts the persona of a cynical Series
@@ -4866,6 +5114,10 @@ sampleData:
     1,"We are the Uber for Cats"
     2,"TAM is $500 Trillion"
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The VC Pitch Deck Roast
@@ -4904,8 +5156,6 @@ id: pitch-deck-storyboard
 category: Strategic Ops
 title: The Pitch Deck Storyboard
 tagline: Build narratives that raise money.
-difficulty: Advanced
-time: Batch
 description: >-
   Investors scan decks in 30 seconds. This agent researches your product and
   industry to outline 12-slide storyboards following the 'Sequoia' framework for
@@ -4918,6 +5168,10 @@ sampleData:
     DataArmor,https://dataarmor.ai,Series A
     HealthHive,https://healthhive.com,Pre-seed
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Pitch Deck Storyboard
@@ -4968,8 +5222,6 @@ id: podcast-ad-script-writer
 category: Strategic Ops
 title: Podcast Ad Script Writer
 tagline: 'Write 60-second audio ads that sound natural, not robotic.'
-difficulty: Beginner
-time: 5 mins
 archetype: Processor
 description: >-
   Converts your product's value proposition into a "Host-Read" style script,
@@ -4981,6 +5233,12 @@ sampleData:
     Benefit: 75 vitamins in one scoop. Gut health.
     Offer: Free travel packs.
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Podcast Ad Script Writer
@@ -5036,8 +5294,6 @@ id: podcast-guest-prospector
 category: Strategic Ops
 title: Podcast Guest Prospector
 tagline: Find the perfect podcasts to pitch your founder to.
-difficulty: Intermediate
-time: 10 mins
 archetype: Researcher
 description: >-
   Searches for podcasts in a specific niche, validates they accept guests, and
@@ -5050,6 +5306,12 @@ sampleData:
     SaaS Marketing
     Artificial Intelligence
 isPremium: true
+inputs:
+  - Business Goal
+  - Web Search Target
+outputs:
+  - Operating Manual
+  - Curated Intel
 ---
 
 # Agent Configuration: The Podcast Guest Prospector
@@ -5106,8 +5368,6 @@ id: post-event-followup-sequence
 category: Strategic Ops
 title: The Post-Event Follow-up
 tagline: The money is in the follow-up.
-difficulty: Intermediate
-time: Batch
 description: >-
   You scanned the badges, now what? This agent drafts personalized 3-step email
   sequences for your entire list of conference leads, ensuring speed-to-lead and
@@ -5120,6 +5380,10 @@ sampleData:
     Bob Smith,bob@startup.io,Web Summit,Interested in our pricing tiers
     Charlie Brown,charlie@enterprise.co,CES,Met at the networking dinner
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Post-Event Follow-up
@@ -5165,8 +5429,6 @@ id: post-event-followup-sla
 category: Strategic Ops
 title: Event Follow-up Police
 tagline: Did Sales call the leads within 24h?
-difficulty: Intermediate
-time: Daily
 archetype: Processor
 description: >-
   Audits if reps have logged an activity for event leads within 24 hours of the
@@ -5178,6 +5440,12 @@ sampleData:
     L1,2023-10-01 09:00,2023-10-01 14:00
     L2,2023-10-01 09:00,NULL
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 # Agent Configuration: The Lead Gen Ops
 
@@ -5216,8 +5484,6 @@ id: pr-crisis-severity-scorer
 category: Strategic Ops
 title: PR Crisis Severity Scorer
 tagline: Decide if you need to wake up the CEO.
-difficulty: Intermediate
-time: Real-time
 archetype: Processor
 description: >-
   Ingests a negative press mention. Scores it based on "Outlet Reach",
@@ -5229,6 +5495,12 @@ sampleData:
     Article_URL,Outlet_Tier
     nytimes.com,Tier1
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 
 # Agent Configuration: PR Crisis Severity Scorer
@@ -5267,8 +5539,6 @@ id: pre-event-warmup-builder
 category: Strategic Ops
 title: Geo-Targeted Event Warmup
 tagline: Find prospects within 50 miles.
-difficulty: Intermediate
-time: Batch
 archetype: Processor
 description: >-
   Filters your CRM for prospects located within a specific radius of an upcoming
@@ -5281,6 +5551,12 @@ sampleData:
     Jane,San Jose,CA
     Bob,New York,NY
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 # Agent Configuration: The Field Marketer
 
@@ -5319,11 +5595,12 @@ id: press-release-drafter
 category: Strategic Ops
 title: Code-to-Press Release Architect
 tagline: Turn code commits and changelogs into journalist-grade launch assets.
-difficulty: Advanced
-time: 15 mins
 archetype: Hybrid
 description: >-
-  A Folder Agent that reads your codebase (git logs, changelogs, package.json) to extract the "hard news" of your release, interviews you for the strategic vision, and generates a full launch kit (Press Release, Founder's Email, and Social Posts).
+  A Folder Agent that reads your codebase (git logs, changelogs, package.json)
+  to extract the "hard news" of your release, interviews you for the strategic
+  vision, and generates a full launch kit (Press Release, Founder's Email, and
+  Social Posts).
 sampleData:
   filename: announcement_context.md
   content: |
@@ -5332,6 +5609,12 @@ sampleData:
     *   **Key Value Prop:** This update reduces cloud bills by 30%.
     *   **Quote Authority:** Jane Doe, CEO.
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File + Search
+outputs:
+  - Operating Manual
+  - Enriched Document
 ---
 
 # Agent Configuration: The Code-to-Press Architect
@@ -5390,6 +5673,7 @@ Using the *Technical Delta* (Phase 1) and *Strategic Context* (Phase 2), generat
 
 Start by scanning the codebase for the latest changes.
 
+
 ---
 
 ## The Product Hunt Launch Manager
@@ -5401,8 +5685,6 @@ id: product-hunt-manager
 category: Strategic Ops
 title: The Product Hunt Launch Manager
 tagline: 'Get #1 Product of the Day.'
-difficulty: Advanced
-time: Batch
 description: >-
   A launch is a project, not just a post. This agent creates complete 'Launch
   Day' schedules, writes the crucial 'Maker's Comment', and drafts community
@@ -5415,6 +5697,10 @@ sampleData:
     FileVault,Sensitive files are easily leaked in Slack,Sarah,2024-11-19
     GameGuild,Finding pro teammates for casual play is hard,Mike,2024-11-26
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Product Hunt Launch Manager
@@ -5466,8 +5752,6 @@ id: profile-optimization-score
 category: Strategic Ops
 title: LinkedIn Profile Auditor
 tagline: Does your rep look professional?
-difficulty: Intermediate
-time: Quarterly
 archetype: Processor
 description: >-
   Audits rep LinkedIn profile data for key elements (Headshot presence, Headline
@@ -5479,6 +5763,12 @@ sampleData:
     John,Yes,5
     Jane,Yes,50
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 # Agent Configuration: The Brand Compliance Agent
 
@@ -5518,8 +5808,6 @@ id: proposal-writer
 category: Strategic Ops
 title: The High-Ticket Proposal Writer
 tagline: Generate custom proposals for each lead.
-difficulty: Intermediate
-time: 15 mins
 archetype: Processor
 description: >-
   Creates personalized proposals for each prospect, focused on their specific
@@ -5532,6 +5820,12 @@ sampleData:
     Glow Skincare,High CAC on Meta,Sub-$20 customer acquisition,Growth
     TechFlow SaaS,Manual sales onboarding,Automate 80% of setup,Mid-Market
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 
 # Agent Configuration: The High-Ticket Proposal Writer
@@ -5593,8 +5887,6 @@ id: qr-code-strategy
 category: Strategic Ops
 title: The QR Code Strategist
 tagline: Bridge offline to online.
-difficulty: Beginner
-time: Batch
 description: >-
   QR codes are often wasted on homepages. This agent processes your entire
   offline footprint and suggests high-value destinations for your QR codes to
@@ -5607,6 +5899,10 @@ sampleData:
     SaaStr Booth,Physical Event,Book product demos
     Direct Mailer,Customer Home,Re-order reminder
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The QR Code Strategist
@@ -5655,8 +5951,6 @@ id: referral-commission-splitter
 category: Strategic Ops
 title: Complex Referral Splitter
 tagline: Calculate 3-way commission splits for partners.
-difficulty: Advanced
-time: Batch
 archtype: Processor
 description: >-
   Calculates revenue shares for multi-party deals involving a source partner, an
@@ -5667,6 +5961,10 @@ sampleData:
     Deal_ID,Total_Amt,Source_P,Impl_P
     Deal-1,10000,Partner A,Partner B
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Partner Analyst
@@ -5712,8 +6010,6 @@ id: referral-fraud-detector
 category: Strategic Ops
 title: The Referral Fraud Hunter
 tagline: Stop paying for fake invites.
-difficulty: Advanced
-time: Batch
 description: >-
   Self-referrals and bot farms kill your program's ROI. This agent analyzes your
   referral logs to flag suspicious behavior - including IP collisions and
@@ -5727,6 +6023,10 @@ sampleData:
     user_456,bot_army@mail.ru,45.12.33.1,2024-10-01 11:30:00
     user_789,real_friend@yahoo.com,10.0.0.5,2024-10-01 12:00:00
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Referral Fraud Hunter
@@ -5772,8 +6072,6 @@ id: referral-program-architect
 category: Strategic Ops
 title: The Referral Program Architect
 tagline: Turn users into salespeople.
-difficulty: Intermediate
-time: Batch
 description: >-
   Referrals have the lowest CAC. This agent designs 'Double-Sided' referral
   programs tailored to your specific unit economics and business model for an
@@ -5786,6 +6084,10 @@ sampleData:
     FinGuard,SaaS (B2B),5000
     BrewBase,Subscription,250
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Referral Program Architect
@@ -5834,8 +6136,6 @@ id: reseller-map-compliance
 category: Strategic Ops
 title: MAP Pricing Auditor
 tagline: Ensure resellers aren't undercutting your price.
-difficulty: Intermediate
-time: Weekly
 archtype: Processor
 description: >-
   Audits reseller pricing data to ensure compliance with Minimum Advertised
@@ -5847,6 +6147,10 @@ sampleData:
     Shop A,Widget X,95,100
     Shop B,Widget X,105,100
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Compliance Officer
@@ -5893,8 +6197,6 @@ id: review-to-ad-machine
 category: Strategic Ops
 title: The Review-to-Ad Factory
 tagline: Turn 100 reviews into 100 ad variations.
-difficulty: Intermediate
-time: 15 mins
 description: >-
   Stop guessing what to write in your ads. This agent reads a CSV of customer
   reviews, extracts the exact 'emotional trigger words', and generates
@@ -5906,6 +6208,10 @@ sampleData:
     John,CRM,It saved me 5 hours a week on manual entry.
     Sarah,Email tool,I finally stopped hitting spam filters.
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Review-to-Ad Factory
@@ -5951,8 +6257,6 @@ id: roadmap-prioritizer
 category: Strategic Ops
 title: The Roadmap Prioritizer (RICE)
 tagline: Build what matters.
-difficulty: Intermediate
-time: Batch
 description: >-
   You have 50 feature requests and 2 developers. This agent uses the RICE
   framework (Reach, Impact, Confidence, Effort) to score each request and
@@ -5966,6 +6270,10 @@ sampleData:
     AI Search,2000,3,0.5,4
     Mobile App,10000,2,0.7,6
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Roadmap Prioritizer (RICE)
@@ -6011,8 +6319,6 @@ id: saas-pricing-calculator
 category: Strategic Ops
 title: The Packaging Strategist
 tagline: Price is just a number. Packaging is psychology.
-difficulty: Intermediate
-time: Batch
 archetype: Processor
 description: >-
   Don't just pick a number. This agent analyzes your cost structure and models a
@@ -6024,6 +6330,12 @@ sampleData:
     Product,Base_Cost,Target_Margin,Key_Feature_1,Key_Feature_2,Key_Feature_3
     CloudApp,10,0.80,Basic Storage,API Access,SSO
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Pricing Psychologist
@@ -6070,8 +6382,6 @@ id: scope-creep-email-drafter
 category: Strategic Ops
 title: The Scope Creep Defender
 tagline: Say 'No' without losing the client.
-difficulty: Intermediate
-time: Batch
 description: >-
   Clients always ask for 'just one small change'. This agent drafts polite but
   firm responses that either decline requests or pivot them into paid 'Change
@@ -6084,6 +6394,10 @@ sampleData:
     Glow Design,UX Audit,We need a 50-page documentation manual by tomorrow.
     FinTech Ads,PPC Setup,Can you manage our SEO for free this month?
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Scope Creep Defender
@@ -6131,8 +6445,6 @@ id: seo-content-gap-finder-v2
 category: Strategic Ops
 title: SEO Content Gap Mapper
 tagline: Find high-value pages your competitors have but you don't.
-difficulty: Intermediate
-time: 10 mins
 archetype: Processor
 description: >-
   Compares your sitemap against a competitor's sitemap to identify "Content
@@ -6143,6 +6455,12 @@ sampleData:
     My_Sitemap: https://mywebsite.com/sitemap.xml
     Competitor_Sitemap: https://competitor.com/sitemap.xml
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 
 # Agent Configuration: The SEO Content Gap Mapper
@@ -6198,8 +6516,6 @@ id: seo-internal-linking-automator
 category: Strategic Ops
 title: Internal Link Graph Builder
 tagline: Boost SEO by finding internal linking opportunities automatically.
-difficulty: Intermediate
-time: 10 mins
 archetype: Processor
 description: >-
   Reads your new blog post draft and a list of your existing URLs, then
@@ -6226,6 +6542,12 @@ sampleData:
 
     /blog/list-building-101,List Building
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Internal Link Graph Builder
@@ -6278,8 +6600,6 @@ id: seo-meta-tag-bulk-optimizer
 category: Strategic Ops
 title: Bulk Meta Tag Writer
 tagline: Fix missing or duplicate SEO titles and descriptions in seconds.
-difficulty: Intermediate
-time: 5 mins
 archetype: Processor
 description: >-
   Reads a CSV of URLs (from a site audit), identifies missing or poor meta tags,
@@ -6292,6 +6612,12 @@ sampleData:
     /products/shoes,,Running Shoes
     /about,About Us - Company Name,
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 
 # Agent Configuration: The Bulk Meta Tag Writer
@@ -6341,8 +6667,6 @@ id: slack-contextual-welcomer
 category: Strategic Ops
 title: Slack Community Contextual Welcomer
 tagline: Welcome new members based on their bio.
-difficulty: Beginner
-time: Real-time
 archetype: Processor
 description: >-
   Reads the "Intro" channel. If they say "I'm a marketer", reply with link to
@@ -6353,6 +6677,12 @@ sampleData:
     User_Intro,Channels
     "Hi I am a dev...",#general
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 
 # Agent Configuration: Slack Community Contextual Welcomer
@@ -6391,8 +6721,6 @@ id: social-engagement-to-opportunity
 category: Strategic Ops
 title: Social-to-Deal Correlator
 tagline: Do likes lead to deals?
-difficulty: Advanced
-time: Quarterly
 archetype: Processor
 description: >-
   Correlates 'Likes/Comments' from prospects with subsequent Deal Creation
@@ -6404,6 +6732,12 @@ sampleData:
     John,2023-10-01,2023-10-05
     Jane,2023-10-01,NULL
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 # Agent Configuration: The Attribution Specialist
 
@@ -6443,8 +6777,6 @@ id: social-selling-activity-ratio
 category: Strategic Ops
 title: Social Activity Mix
 tagline: Are we doing enough social touches?
-difficulty: Beginner
-time: Weekly
 archetype: Processor
 description: >-
   Measures the mix of 'Social Touches' vs 'Traditional Touches' (Call/Email) in
@@ -6457,6 +6789,12 @@ sampleData:
     Jane (Social),20,50,5
     Mike (Lazy),10,0,0
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 # Agent Configuration: The Social Selling Behavior Coach
 
@@ -6498,8 +6836,6 @@ id: social-signal-alumni-miner
 category: Strategic Ops
 title: Alumni Champion Finder
 tagline: Track where your happy users moved.
-difficulty: Advanced
-time: Monthly
 archetype: Processor
 description: >-
   Compares a list of 'Former Customer Contacts' against 'Current Employment'
@@ -6510,6 +6846,12 @@ sampleData:
     Name,Old_Company,New_Company,New_Role
     John Doe,HappyClient Inc,Prospect Corp,VP Sales
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 # Agent Configuration: The SDR
 
@@ -6548,8 +6890,6 @@ id: speaker-session-attribution
 category: Strategic Ops
 title: Session Pipeline Attribution
 tagline: Did the CEO's keynote generate deals?
-difficulty: Advanced
-time: Quarterly
 archetype: Processor
 description: >-
   Matches session attendee scans to subsequent pipeline creation to measure the
@@ -6561,6 +6901,12 @@ sampleData:
     john@acme.com,Keynote,2023-10-15
     jane@beta.com,Keynote,NULL
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 # Agent Configuration: The Content Strategist
 
@@ -6599,8 +6945,6 @@ id: standup-blocker-extractor
 category: Strategic Ops
 title: Standup Blocker Extractor
 tagline: Auto-summarize what is actually blocking your team.
-difficulty: Beginner
-time: Batch
 archtype: Processor
 description: >-
   Reads the #standup channel. Ignores "What I did yesterday". Extracts only
@@ -6612,6 +6956,10 @@ sampleData:
     Dev1,"...Blocker: API is down"
     Dev2,"...Blocker: Waiting on Design"
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: Standup Blocker Extractor
@@ -6650,8 +6998,6 @@ id: swag-inventory-forecaster
 category: Strategic Ops
 title: Swag Demand Planner
 tagline: How many t-shirts do we need?
-difficulty: Beginner
-time: Batch
 archetype: Processor
 description: >-
   Predicts merchandise needs for an event based on estimated attendee count and
@@ -6663,6 +7009,12 @@ sampleData:
     TechConf,5000,0.2
     LocalMeetup,100,0.5
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 # Agent Configuration: The Event Logistics Lead
 
@@ -6701,8 +7053,6 @@ id: swot-analysis-generator
 category: Strategic Ops
 title: The Strategic SWOT Generator
 tagline: Build a SWOT matrix from your notes or market research.
-difficulty: Intermediate
-time: Quarterly
 description: >-
   Strategic planning requires honesty. This agent reads your internal brainstorm
   notes (if provided) or performs deep market research on your niche to build a
@@ -6713,6 +7063,10 @@ sampleData:
     Strength: Our engineering team is elite.
     Weakness: Our sales cycle is too slow (6 months).
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Strategic SWOT Generator
@@ -6759,8 +7113,6 @@ id: tam-calculator
 category: Strategic Ops
 title: The AI TAM Researcher
 tagline: Calculate your market size using real-world data.
-difficulty: Intermediate
-time: Batch
 description: >-
   Investors need to see the math. This agent researches industry sizes, pricing
   benchmarks, and customer counts to calculate your TAM, SAM, and SOM using
@@ -6773,6 +7125,10 @@ sampleData:
     Global AI Startups,Seed stage tech companies,500
     UK Law Firms,Mid-market legal practices,2000
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The AI TAM Researcher
@@ -6821,8 +7177,6 @@ id: testimonial-extractor
 category: Strategic Ops
 title: The Testimonial Factory
 tagline: Process 50 calls into a website-ready library.
-difficulty: Intermediate
-time: 10 mins
 description: >-
   Your customers say amazing things on Zoom, but it gets lost. This agent scans
   a folder of call transcripts, extracts the 'Aha! Moments', and generates a
@@ -6833,6 +7187,10 @@ sampleData:
     User: "I really loved how easy the automation setup was. Before this, I was
     spending 10 hours a week on it. Now it takes 2 minutes."
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Testimonial Factory
@@ -6867,6 +7225,42 @@ For each `.txt` file in `transcripts/`:
 
 ---
 
+## Tool Directory Manager
+URL: https://realaiexamples.com/skills/tool-directory-manager
+Description: Automated database maintenance for high-volume niche directories.
+
+---
+title: Tool Directory Manager
+id: tool-directory-manager
+category: Strategic Ops
+tagline: Automated database maintenance for high-volume niche directories.
+archetype: Processor
+description: >-
+  The automation we use to keep our 'Tool Directory' fresh. It fetches live CSV
+  data from our public Google Sheet, filters for 'Pure Salestech' using Gemini
+  intelligence, and automatically updates the site with new submissions.
+inputs:
+  - Google Sheet CSV Export URL
+  - Custom 'Pure Sales' filter logic
+outputs:
+  - Updated lib/ai-tools-data.ts
+  - Slack status notification
+isPremium: true
+---
+
+# The Maintenance Logic
+Manual directory management is dead. This skill ensures your listings are always accurate and free of spam.
+
+### Workflow:
+1. Fetch live CSV from Google Sheet export URL.
+2. Filter entries: Exclude agencies, consultants, and non-sales tools.
+3. Use Gemini to classify tool 'Archetypes' (Researcher, Processor, Hybrid).
+4. Update `lib/ai-tools-data.ts` or local JSON.
+5. Notify Slack of new verified additions.
+
+
+---
+
 ## The Auto-Plug Writer
 URL: https://realaiexamples.com/skills/twitter-auto-plug-writer
 Description: Drive traffic from viral tweets.
@@ -6876,8 +7270,6 @@ id: twitter-auto-plug-writer
 category: Strategic Ops
 title: The Auto-Plug Writer
 tagline: Drive traffic from viral tweets.
-difficulty: Beginner
-time: Batch
 description: >-
   When a tweet goes viral, you need to plug your offer. This agent drafts
   high-converting 'If you enjoyed this...' tweets for your entire suite of
@@ -6890,6 +7282,10 @@ sampleData:
     SaaS Toolkit,https://tools.io/saas,100+ vetted tools
     Agent Masterclass,https://course.com/agents,Build AI agents in 10 mins
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Auto-Plug Writer
@@ -6936,8 +7332,6 @@ id: twitter-bio-optimizer
 category: Strategic Ops
 title: The Twitter Bio Optimizer
 tagline: Get followed at a glance.
-difficulty: Beginner
-time: Batch
 description: >-
   Your bio is your personal landing page. This agent rewrites your Twitter bios
   to include the 'Who', 'What', and 'Proof' elements, ensuring new visitors hit
@@ -6950,6 +7344,10 @@ sampleData:
     Sarah Chen,Head of Design,Glow,Ex-Airbnb,UX for SaaS
     Mike Ross,SEO Lead,GrowthLabs,Ranked #1 for 'AI Tools',Search Strategy
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Twitter Bio Optimizer
@@ -6997,8 +7395,6 @@ id: twitter-thread-hook-analyzer
 category: Strategic Ops
 title: Viral Hook Analyzer
 tagline: Which first line gets the click?
-difficulty: Intermediate
-time: Monthly
 archetype: Processor
 description: Analyzes the click-through rate of different Twitter/X thread opening lines.
 sampleData:
@@ -7008,6 +7404,12 @@ sampleData:
     I made $1M in 2 days...,10000,500
     Here is a thread about sales...,1000,10
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 # Agent Configuration: The Copywriter Agent
 
@@ -7047,8 +7449,6 @@ id: use-case-matrix
 category: Strategic Ops
 title: The Use Case Matrix Builder
 tagline: Map features to pain points.
-difficulty: Intermediate
-time: One-off
 archetype: Processor
 description: >-
   Sales reps pitch features; they should pitch solutions. This agent takes a
@@ -7065,6 +7465,12 @@ sampleData:
     CTO,Too much manual work
     Field Rep,Can't access laptop
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 
 
@@ -7110,8 +7516,6 @@ id: user-group-geo-locator
 category: Strategic Ops
 title: Meetup City Selector
 tagline: Where should we host the next dinner?
-difficulty: Intermediate
-time: Quarterly
 archetype: Processor
 description: >-
   Analyzes customer address data to find geographic clusters with the highest
@@ -7124,6 +7528,12 @@ sampleData:
     Beta,Austin
     Gamma,Dallas
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File (CSV/MD)
+outputs:
+  - Operating Manual
+  - Cleaned Data
 ---
 # Agent Configuration: The Community Manager
 
@@ -7163,8 +7573,6 @@ id: vendor-negotiation-script
 category: Strategic Ops
 title: The Vendor Negotiator
 tagline: Save 20% on your software stack from a bill or a name.
-difficulty: Intermediate
-time: Annual
 description: >-
   Everything is negotiable. This agent reads your current vendor bill (if
   provided) or researches a specific tool to find competitor deals and parity
@@ -7174,6 +7582,10 @@ sampleData:
   content: |
     Service: HubSpot Pro. Monthly: $800. Renewing in 30 days.
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Vendor Negotiator
@@ -7225,8 +7637,6 @@ id: video-testimonial-script
 category: Strategic Ops
 title: The Video Testimonial Director
 tagline: Help your clients help you.
-difficulty: Beginner
-time: Batch
 description: >-
   Clients freeze up on camera. This agent generates personalized 'Interview
   Guides' for your happy customers, giving them simple questions to answer so
@@ -7239,6 +7649,10 @@ sampleData:
     John Smith,Glow Serum,Cleared skin in 14 days
     Mike Ross,SEO Course,Ranked #1 for 'B2B Sales'
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The Video Testimonial Director
@@ -7289,8 +7703,6 @@ id: weekly-newsletter-compiler
 category: Strategic Ops
 title: Newsletter Content Curator
 tagline: Automate the research for your "Weekly Round-Up" email.
-difficulty: Intermediate
-time: 15 mins
 archetype: Hybrid
 description: >-
   Visits 3-5 specific industry news sites or blogs, summarizes the top headlines
@@ -7302,6 +7714,12 @@ sampleData:
     https://www.theverge.com/tech
     https://news.ycombinator.com/
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File + Search
+outputs:
+  - Operating Manual
+  - Enriched Document
 ---
 
 # Agent Configuration: The Newsletter Content Curator
@@ -7356,8 +7774,6 @@ id: white-label-dashboard-setup
 category: Strategic Ops
 title: The White Label Dashboard Setup
 tagline: Standardize your client reporting.
-difficulty: Beginner
-time: Batch
 description: >-
   Agencies need to look professional and automate transparency. This agent
   designs standardized client-facing portals for your entire roster, ensuring
@@ -7370,6 +7786,10 @@ sampleData:
     TechFlow SaaS,Demo Bookings,HubSpot & Google Ads
     Urban Coffee,In-store Traffic,Google Maps & Square
 isPremium: true
+inputs:
+  - Business Goal
+outputs:
+  - Operating Manual
 ---
 
 # Agent Configuration: The White Label Dashboard Setup
@@ -7419,8 +7839,6 @@ id: white-paper-topic-generator
 category: Strategic Ops
 title: White Paper Ideator
 tagline: Brainstorm high-authority content that enterprise buyers actually read.
-difficulty: Intermediate
-time: 10 mins
 archetype: Hybrid
 description: >-
   Researches current industry trends and "boring" but expensive problems to
@@ -7432,6 +7850,12 @@ sampleData:
     Target: Enterprise COOs
     Product: AI Route Optimization
 isPremium: true
+inputs:
+  - Business Goal
+  - Local File + Search
+outputs:
+  - Operating Manual
+  - Enriched Document
 ---
 
 # Agent Configuration: The White Paper Ideator

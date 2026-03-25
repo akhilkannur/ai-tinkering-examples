@@ -84,6 +84,7 @@ export default function TaskLandingPage({ taskName, taskSlug, recipes, categorie
   return (
     <div className="min-h-screen bg-primary-bg font-sans text-text-color selection:bg-accent selection:text-white">
       <Head>
+        <meta name="robots" content="noindex, nofollow" />
         <title>{title}</title>
         <meta name="description" content={description} key="description" />
         <link rel="canonical" href={`${baseUrl}/generators/${taskSlug}`} />

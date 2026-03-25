@@ -24,6 +24,7 @@ export default function CategoryPage({ category, recipes, meta }: CategoryPagePr
   return (
     <div className="flex flex-col min-h-screen bg-primary-bg text-black selection:bg-[#ff00ff] selection:text-white">
       <Head>
+        <meta name="robots" content="noindex, nofollow" />
         <title>{meta.title} | Real AI Examples</title>
         <meta name="description" content={meta.description} key="description" />
         <meta property="og:title" content={meta.title} key="og:title" />

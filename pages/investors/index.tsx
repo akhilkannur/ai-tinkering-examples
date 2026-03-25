@@ -96,6 +96,7 @@ export default function InvestorsPage({ initialInvestors }: InvestorsPageProps) 
   return (
     <>
       <Head>
+        <meta name="robots" content="noindex, nofollow" />
         <title>SaaS Exit Database | 150+ PE Firms & Acquisition Partners - Real AI Examples</title>
         <meta name="description" content="A curated directory of 150+ active micro-private equity firms, search funds, and aggregators looking to acquire AI and SaaS businesses. Find your exit partner today." key="description" />
         <meta property="og:title" content="SaaS Exit Database | Find Buyers for Your Software Business" key="og:title" />
