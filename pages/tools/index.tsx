@@ -7,26 +7,25 @@ import AIToolCard from '../../components/AIToolCard';
 import ToolDetailModal from '../../components/ToolDetailModal';
 import { Filter, Sparkles, Command, Plus, Briefcase, ArrowRight } from 'lucide-react';
 
-// Mock helper to group by week (since tools data doesn't have publish_date yet, we'll assort them)
+// Helper to group by week (randomly for now till last week as requested)
 function groupByWeekTools(items: AiTool[]) {
+  // Shuffle items to randomize assortment
+  const shuffled = [...items].sort(() => Math.random() - 0.5);
+  
   const batches: { [key: string]: AiTool[] } = {};
   const itemsPerBatch = 12;
-  const numBatches = Math.ceil(items.length / itemsPerBatch);
+  const numBatches = Math.ceil(shuffled.length / itemsPerBatch);
   
-  // Starting from this week going back
+  // Starting from last week (Mar 23) going back
   for (let i = 0; i < numBatches; i++) {
-    const date = new Date();
-    date.setDate(date.getDate() - (i * 7));
-    // Get Monday
-    const day = date.getDay();
-    const diff = date.getDate() - day + (day === 0 ? -6 : 1);
-    const monday = new Date(date.setDate(diff));
-    const weekLabel = monday.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+    const startDate = new Date('2026-03-23');
+    startDate.setDate(startDate.getDate() - (i * 7));
     
-    batches[weekLabel] = items.slice(i * itemsPerBatch, (i + 1) * itemsPerBatch);
+    const weekLabel = startDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+    batches[weekLabel] = shuffled.slice(i * itemsPerBatch, (i + 1) * itemsPerBatch);
   }
 
-  return Object.entries(batches);
+  return Object.entries(batches).sort((a, b) => new Date(b[0]).getTime() - new Date(a[0]).getTime());
 }
 
 export default function ToolsIndex() {

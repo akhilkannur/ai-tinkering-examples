@@ -17,21 +17,23 @@ interface ExamplesPageProps {
   itemListSchema: any
 }
 
-// Helper to group by week
+// Helper to group by week (randomly for now till last week as requested)
 function groupByWeek(items: EnrichedExampleRecord[]) {
-  const groups: { [key: string]: EnrichedExampleRecord[] } = {};
+  // Shuffle items to randomize assortment
+  const shuffled = [...items].sort(() => Math.random() - 0.5);
   
-  items.forEach(item => {
-    const date = new Date(item.publish_date || '2026-03-01');
-    // Get Monday of the week
-    const day = date.getDay();
-    const diff = date.getDate() - day + (day === 0 ? -6 : 1);
-    const monday = new Date(date.setDate(diff));
-    const weekLabel = monday.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+  const groups: { [key: string]: EnrichedExampleRecord[] } = {};
+  const itemsPerBatch = 9;
+  const numBatches = Math.ceil(shuffled.length / itemsPerBatch);
+  
+  // Starting from last week (Mar 23) going back
+  for (let i = 0; i < numBatches; i++) {
+    const startDate = new Date('2026-03-23');
+    startDate.setDate(startDate.getDate() - (i * 7));
     
-    if (!groups[weekLabel]) groups[weekLabel] = [];
-    groups[weekLabel].push(item);
-  });
+    const weekLabel = startDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+    groups[weekLabel] = shuffled.slice(i * itemsPerBatch, (i + 1) * itemsPerBatch);
+  }
 
   return Object.entries(groups).sort((a, b) => new Date(b[0]).getTime() - new Date(a[0]).getTime());
 }
