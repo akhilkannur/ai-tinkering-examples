@@ -106,23 +106,29 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
         .border-subtle {
             border-color: #eaeaea;
         }
+        .font-display {
+            font-family: 'Archivo Black', sans-serif;
+        }
+        .font-mono {
+            font-family: 'Space Mono', monospace;
+        }
       `}</style>
 
-      <div className="min-h-screen font-sans selection:bg-black selection:text-white">
+      <div className="min-h-screen font-sans selection:bg-accent-dark selection:text-white">
         <Navbar />
         
-        <header className="hero-gradient pt-xl md:pt-[160px] pb-xl md:pb-xxl text-center px-4">
+        <header className="hero-gradient pt-xl md:pt-[160px] pb-xl md:pb-xxl text-center px-4 border-b-4 border-accent-dark">
           <div className="max-w-4xl mx-auto">
-            <div className="inline-block text-[0.75rem] font-semibold uppercase tracking-[0.05em] text-muted mb-md">
-              Real-World Implementations
+            <div className="inline-block text-[10px] font-mono font-bold uppercase tracking-[0.2em] text-secondary-text mb-md bg-white px-2 py-0.5 border border-border-color">
+              // Real-World Implementations
             </div>
             
-            <h1 className="text-[clamp(2.5rem,5vw,4rem)] font-medium tracking-[-0.03em] leading-[1.1] mb-lg text-primary-text">
-              Curated <span className="text-accent-dark">Real AI Examples</span>
+            <h1 className="text-[clamp(2.5rem,5vw,5rem)] font-display font-black tracking-[-0.02em] leading-[0.9] mb-lg text-primary-text uppercase">
+              Curated <span className="text-secondary-text">Real AI</span> <br className="hidden md:block" /> Examples
             </h1>
             
-            <p className="text-[1.125rem] font-normal text-muted max-w-2xl mx-auto mb-xl leading-relaxed">
-              I cut through the hype to find AI workflows you can actually use. No magic, just better prompts and practical automation.
+            <p className="text-[10px] md:text-[12px] font-mono font-bold text-secondary-text max-w-xl mx-auto mb-xl leading-relaxed uppercase tracking-widest bg-hero-tint border-2 border-accent-dark px-4 py-2 rotate-1 inline-block">
+              // I cut through the hype to find AI workflows you can actually use. No magic, just better prompts.
             </p>
 
             {/* Search Input Pattern */}
@@ -134,19 +140,19 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search examples (e.g. 'marketing', 'sales ops')..."
-                className="w-full pl-[60px] pr-[60px] py-[18px] bg-white border border-[rgba(0,0,0,0.05)] rounded-md shadow-search focus:shadow-[0_8px_40px_rgba(234,201,181,0.4)] focus:border-[rgba(0,0,0,0.1)] outline-none transition-all text-[1rem] placeholder:text-light-placeholder"
+                placeholder="SEARCH_EXAMPLES (E.G. 'SALES', 'MARKETING')..."
+                className="w-full pl-[60px] pr-[60px] py-[18px] bg-white border-4 border-accent-dark shadow-brutalist focus:translate-x-0.5 focus:translate-y-0.5 focus:shadow-none outline-none transition-all text-[0.875rem] font-mono font-bold uppercase placeholder:text-light-placeholder"
               />
-              <div className="absolute right-6 top-1/2 -translate-y-1/2 hidden md:flex items-center gap-1.5 px-2 py-1 bg-hero-tint border border-border-color rounded-sm text-[0.75rem] font-medium text-secondary-text pointer-events-none">
-                <span className="opacity-50">⌘</span> K
+              <div className="absolute right-6 top-1/2 -translate-y-1/2 hidden md:flex items-center gap-1.5 px-2 py-1 bg-hero-tint border-2 border-accent-dark text-[10px] font-mono font-bold text-secondary-text pointer-events-none">
+                <span className="opacity-50">CMD</span> K
               </div>
             </div>
           </div>
         </header>
 
         {/* Category Filter */}
-        <section className="max-w-7xl mx-auto px-lg mb-xl">
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-md border-b border-border-color pb-lg">
+        <section className="max-w-7xl mx-auto px-lg mt-xl mb-xl">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-md border-b-4 border-accent-dark pb-lg">
             <CategoryFilter
               categories={categories}
               selectedCategory={selectedCategory}
@@ -155,15 +161,15 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
               }}
             />
             
-            <div className="flex items-center gap-4 text-[0.875rem] font-medium text-secondary-text">
-              <span>{filteredByCategory.length} {filteredByCategory.length === 1 ? 'Result' : 'Results'}</span>
+            <div className="flex items-center gap-4 text-[10px] font-mono font-bold text-secondary-text uppercase tracking-widest">
+              <span>{filteredByCategory.length} {filteredByCategory.length === 1 ? 'Match' : 'Matches'}</span>
               {(selectedCategory !== 'All' || searchQuery) && (
                 <button 
                   onClick={() => {
                     setSelectedCategory('All');
                     setSearchQuery('');
                   }}
-                  className="text-accent-dark hover:underline"
+                  className="text-accent-dark underline underline-offset-4 decoration-2"
                 >
                   Clear all
                 </button>
@@ -186,16 +192,16 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
               ))}
             </div>
           ) : (
-            <div className="text-center py-xxl bg-hero-tint rounded-md border border-border-color">
+            <div className="text-center py-xxl bg-white border-4 border-accent-dark shadow-brutalist">
               <Search className="w-12 h-12 mx-auto mb-md text-light-placeholder" />
-              <p className="text-xl font-medium text-primary-text mb-sm">No examples found</p>
-              <p className="text-muted mb-lg">Try adjusting your search or category filter</p>
+              <p className="text-2xl font-display font-black text-primary-text mb-sm uppercase">No examples found</p>
+              <p className="text-[10px] font-mono font-bold text-secondary-text mb-lg uppercase tracking-widest">// Try adjusting your search or category filter</p>
               <button
                 onClick={() => {
                   setSelectedCategory('All');
                   setSearchQuery('');
                 }}
-                className="bg-accent-dark text-white px-lg py-sm rounded-sm text-[0.875rem] font-medium hover:bg-black transition-colors"
+                className="bg-accent-dark text-white px-lg py-sm border-2 border-accent-dark shadow-brutalist-sm hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all text-[0.875rem] font-display font-black uppercase"
               >
                 Clear all filters
               </button>
@@ -206,10 +212,10 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
             <div className="text-center mt-xl">
               <button
                 onClick={handleLoadMore}
-                className="inline-flex items-center gap-2 bg-accent-dark text-white px-xl py-lg rounded-sm text-[1rem] font-medium hover:bg-black transition-all group"
+                className="inline-flex items-center gap-4 bg-accent-dark text-white px-xl py-lg border-4 border-accent-dark shadow-brutalist hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all group font-display font-black text-xl uppercase"
               >
                 Load More Examples
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
               </button>
             </div>
           )}

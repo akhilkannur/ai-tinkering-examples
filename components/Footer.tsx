@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="bg-white text-primary-text pt-xxl pb-xl border-t border-border-color font-sans relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-lg md:px-[48px] relative z-10">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-xl mb-xl">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-xl mb-xl">
           {/* Column 1: Site */}
           <div>
             <h4 className="text-[0.75rem] font-semibold text-primary-text uppercase tracking-[0.05em] mb-lg">Site</h4>
@@ -26,17 +26,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 2: Get Started */}
-          <div>
-            <h4 className="text-[0.75rem] font-semibold text-primary-text uppercase tracking-[0.05em] mb-lg">Get Started</h4>
-            <ul className="space-y-sm text-[0.875rem] font-normal text-secondary-text">
-              <li>
-                <Link href="/agent-setup-service" className="text-primary-text font-medium hover:underline">Setup Sprint — $99</Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Column 3: Connect */}
+          {/* Column 2: Connect */}
           <div>
             <h4 className="text-[0.75rem] font-semibold text-primary-text uppercase tracking-[0.05em] mb-lg">Connect</h4>
             <ul className="space-y-sm text-[0.875rem] font-normal text-secondary-text">
@@ -51,7 +41,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 4: Legal */}
+          {/* Column 3: Legal */}
           <div>
             <h4 className="text-[0.75rem] font-semibold text-primary-text uppercase tracking-[0.05em] mb-lg">Legal</h4>
             <ul className="space-y-sm text-[0.875rem] font-normal text-secondary-text">

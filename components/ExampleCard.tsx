@@ -49,14 +49,29 @@ export default function ExampleCard({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
       transition={{ duration: 0.5 }}
-      className={`group cursor-pointer flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-card-hover rounded-md ${
+      className={`group cursor-pointer flex flex-col bg-white border-4 border-accent-dark shadow-brutalist hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all duration-300 relative overflow-hidden ${
         isPremium ? 'opacity-90' : ''
       }`}
       onClick={handleCardClick}
     >
       <div className="relative flex-grow flex flex-col">
-        {/* Image wrap: 16:10 aspect ratio */}
-        <div className="relative w-full aspect-[16/10] overflow-hidden bg-card-image-bg rounded-md mb-md">
+        {/* Top bar like Tool Cards: Tag + Action */}
+        <div className="flex items-center justify-between px-md py-sm border-b-2 border-accent-dark bg-hero-tint">
+          {example.category && (
+            <div className="text-[10px] font-mono font-bold uppercase tracking-widest text-secondary-text">
+              {example.category}
+            </div>
+          )}
+          
+          <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0">
+             <span className="text-[10px] font-mono font-bold text-white border-2 border-accent-dark px-2 py-0.5 bg-accent-dark uppercase tracking-widest flex items-center gap-1 shadow-brutalist-sm">
+               View <ArrowRight className="w-3 h-3 stroke-[3px]" />
+             </span>
+          </div>
+        </div>
+
+        {/* Screenshot Image: 16:10 aspect ratio */}
+        <div className="relative w-full aspect-[16/10] overflow-hidden bg-card-image-bg border-b-2 border-accent-dark">
           {!imageUrl || imageStatus === 'error' ? (
             <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 opacity-20">
               <svg className="w-10 h-10 text-primary-text" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -85,7 +100,6 @@ export default function ExampleCard({
                   blurDataURL: blurImageUrl,
                 })}
               />
-              {/* Subtle Overlay Gradient */}
               <div className="absolute inset-0 card-image-overlay pointer-events-none" />
             </>
           )}
@@ -93,39 +107,27 @@ export default function ExampleCard({
           {/* Premium Lock Overlay */}
           {isPremium && (
             <div className="absolute inset-0 z-20 flex flex-col items-center justify-center bg-accent-dark/80 backdrop-blur-[2px] text-center p-md">
-              <div className="bg-white p-sm rounded-sm mb-sm shadow-sm">
+              <div className="bg-white p-sm border-2 border-accent-dark mb-sm shadow-brutalist-sm">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-accent-dark">
                   <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
                   <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
                 </svg>
               </div>
-              <span className="text-white text-[0.75rem] font-semibold tracking-wider uppercase">Premium</span>
+              <span className="text-white text-[10px] font-mono font-bold tracking-widest uppercase bg-accent-dark px-2 py-0.5 border-2 border-white">Premium</span>
             </div>
           )}
         </div>
 
-        <div className="flex flex-col flex-grow">
-          {/* Tag: Uppercase, muted, above title */}
-          {example.category && (
-            <div className="text-[0.75rem] font-semibold uppercase tracking-[0.05em] text-secondary-text mb-xs">
-              {example.category}
-            </div>
-          )}
-
-          <h3 className="text-[1.125rem] font-semibold leading-tight text-primary-text mb-sm transition-colors duration-200">
+        <div className="flex flex-col flex-grow p-5 bg-white">
+          <h3 className="text-[1.125rem] font-display font-black leading-tight text-primary-text mb-md group-hover:text-secondary-text transition-colors duration-200 uppercase">
             {example.title}
           </h3>
 
           {example.summary && (
-            <p className="text-[0.875rem] font-normal text-secondary-text line-clamp-2 leading-relaxed mb-md">
-              {example.summary}
+            <p className="text-[10px] font-mono font-bold text-primary-text line-clamp-2 leading-relaxed uppercase tracking-tighter">
+              // {example.summary}
             </p>
           )}
-
-          <div className="mt-auto flex items-center gap-2 text-[0.875rem] font-medium text-primary-text group/link">
-             <span>View workflow</span>
-             <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1 group-hover:translate-x-1" />
-          </div>
         </div>
       </div>
     </motion.article>

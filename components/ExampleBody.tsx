@@ -45,13 +45,13 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
             )}
         </div>
 
-        <h1 className="text-[clamp(1.5rem,4vw,2.5rem)] font-semibold tracking-[-0.02em] leading-tight text-primary-text mb-xl">
+        <h1 className="text-[clamp(1.5rem,4vw,3.5rem)] font-display font-black tracking-[-0.02em] leading-[0.9] text-primary-text mb-xl uppercase">
           {example.title}
         </h1>
 
         {/* Sponsor Info */}
         {example.sponsor && (
-          <div className="mb-xl border-l-2 border-primary-text pl-xl py-md bg-hero-tint rounded-r-md">
+          <div className="mb-xl border-l-4 border-accent-dark pl-xl py-md bg-hero-tint">
             <SponsorDetailCard sponsor={example.sponsor} />
           </div>
         )}
@@ -60,8 +60,8 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
       {/* Main Content */}
       <div className="max-w-4xl mx-auto px-lg pb-xxl">
         {example.summary && (
-          <p className="text-[1.125rem] font-normal text-secondary-text leading-relaxed mb-xl border-b border-border-color pb-xl">
-            {example.summary}
+          <p className="text-[12px] md:text-[14px] font-mono font-bold text-secondary-text leading-relaxed mb-xl border-b-2 border-accent-dark pb-xl uppercase tracking-widest">
+            // {example.summary}
           </p>
         )}
         
@@ -72,7 +72,7 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
               const imageUrl = optimizeImageUrl(screenshot.url, publicId, 1200) || screenshot.url;
 
               return (
-                <div key={i} className="relative w-full overflow-hidden rounded-md border border-border-color bg-card-image-bg">
+                <div key={i} className="relative w-full overflow-hidden border-4 border-accent-dark shadow-brutalist-sm bg-card-image-bg">
                   <Image
                     src={imageUrl}
                     alt={`${example.title} - Step ${i + 1}`}
@@ -88,36 +88,22 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
         )}
 
         {example.workflow_steps && (
-          <div className="mb-xxl p-xl bg-hero-tint rounded-md border border-border-color relative">
-            <div className="absolute -top-3 left-6 bg-white border border-border-color px-md py-1 rounded-sm text-primary-text text-[0.75rem] font-semibold uppercase tracking-[0.05em]">Workflow Logic</div>
-            <p className="text-[1rem] text-primary-text leading-relaxed font-normal whitespace-pre-wrap">
+          <div className="mb-xxl p-xl bg-hero-tint border-4 border-accent-dark relative">
+            <div className="absolute -top-4 left-6 bg-accent-dark text-white px-3 py-1 font-display text-[10px] uppercase border-2 border-accent-dark">Workflow Logic</div>
+            <p className="text-[12px] font-mono font-bold text-primary-text leading-relaxed uppercase tracking-widest">
               {example.workflow_steps}
             </p>
           </div>
         )}
 
         {/* Social Sharing */}
-        <div className="mt-xxl py-xl border-t border-border-color">
+        <div className="mt-xxl py-xl border-t-2 border-accent-dark border-dotted">
           <SocialSharing
             example={example}
             title={example.title}
             description={example.summary}
             compact={false}
           />
-        </div>
-
-        {/* Setup Service CTA */}
-        <div className="mt-xxl p-xl bg-accent-dark text-white rounded-md shadow-lg text-center">
-          <h3 className="text-[1.5rem] font-semibold tracking-tight mb-md">Want to build a workflow like this?</h3>
-          <p className="text-[1rem] text-light-placeholder mb-xl max-w-lg mx-auto leading-relaxed">
-            Book a 90-minute setup sprint. I'll install the AI tools on your machine and build 3 automations with you. $99, money-back guarantee.
-          </p>
-          <Link
-            href="/agent-setup-service"
-            className="inline-flex items-center gap-2 bg-white text-accent-dark px-xl py-sm rounded-sm text-[0.875rem] font-medium hover:bg-hero-tint transition-all"
-          >
-            Book My Sprint
-          </Link>
         </div>
       </div>
     </>

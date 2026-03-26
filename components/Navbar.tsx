@@ -22,7 +22,6 @@ export default function Navbar() {
     { href: '/', label: 'EXAMPLES', mono: true },
     { href: '/tools', label: 'TOOLS', mono: true },
     { href: '/blog', label: 'BLOG', mono: true },
-    { href: '/agent-setup-service', label: 'GET SETUP', mono: true },
   ]
 
   const isHomePage = router.pathname === '/'

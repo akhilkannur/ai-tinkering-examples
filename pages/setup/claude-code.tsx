@@ -57,10 +57,6 @@ export default function ClaudeSetup() {
         <div className="container mx-auto max-w-5xl">
           {/* Header Section */}
           <div className="mb-16">
-            <Link href="/agent-setup-service" className="inline-flex items-center text-bright-pink hover:text-bright-pink/80 mb-6 font-bold text-xs tracking-widest uppercase transition-colors">
-                <ArrowLeft className="w-4 h-4 mr-2" /> BACK TO SERVICE PAGE
-            </Link>
-
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
                 <div>
                     <h1 className="text-4xl md:text-6xl font-extrabold text-text-color mb-4 tracking-tight">
@@ -172,29 +168,6 @@ export default function ClaudeSetup() {
                             <div className="flex gap-3 p-3 bg-primary-bg/50 border border-navy-dark rounded-lg text-xs italic text-text-secondary">
                                 <strong>Pro Tip:</strong> Always run <code className="text-bright-pink">claude</code> inside the specific project folder you want to edit.
                             </div>
-                        </div>
-                    </div>
-
-                    {/* Support Box */}
-                    <div className="bg-secondary-bg border border-navy-dark rounded-2xl overflow-hidden shadow-lg">
-                        <div className="bg-[#1e293b] px-6 py-3 flex items-center justify-between border-b border-white/5">
-                            <span className="text-[10px] font-bold text-text-secondary uppercase tracking-widest flex items-center gap-2">
-                                <Terminal className="w-3 h-3" /> Debug Console
-                            </span>
-                            <div className="flex gap-1.5 items-center">
-                                <div className="w-1.5 h-1.5 rounded-full bg-bright-pink animate-pulse"></div>
-                                <span className="text-[9px] text-bright-pink font-bold uppercase tracking-wider">Live</span>
-                            </div>
-                        </div>
-                        <div className="p-6">
-                            <h4 className="font-bold text-white mb-2 text-sm">Installation Error?</h4>
-                            <p className="text-xs text-text-secondary mb-6 leading-relaxed">
-                                Terminal environments vary wildly. If you're stuck on "PATH not found" or permission errors, I can fix it for you.
-                            </p>
-                            <Link href="/agent-setup-service" className="flex items-center justify-center gap-2 w-full py-3 bg-primary-bg hover:bg-[#0f172a] text-white font-bold rounded-lg transition-all text-xs border border-white/10 group">
-                                <span className="w-1.5 h-1.5 rounded-full bg-red-500 group-hover:bg-green-500 transition-colors"></span>
-                                GET REMOTE SUPPORT ($99)
-                            </Link>
                         </div>
                     </div>
                 </div>

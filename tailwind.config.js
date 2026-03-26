@@ -20,7 +20,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
-        display: ['Inter', 'sans-serif'],
+        display: ['"Archivo Black"', 'sans-serif'],
         mono: ['"Space Mono"', 'monospace'],
       },
       spacing: {
@@ -32,12 +32,14 @@ module.exports = {
         'xxl': '80px',
       },
       borderRadius: {
-        'sm': '6px',
-        'md': '12px',
+        'sm': '4px',
+        'md': '8px',
         'pill': '99px',
       },
       boxShadow: {
         'search': '0 8px 30px rgba(234, 201, 181, 0.2)',
+        'brutalist': '6px 6px 0px 0px #141414',
+        'brutalist-sm': '3px 3px 0px 0px #141414',
         'card-hover': '0 10px 30px rgba(0, 0, 0, 0.05)',
       },
     },

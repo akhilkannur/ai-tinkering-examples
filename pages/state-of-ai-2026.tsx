@@ -85,9 +85,6 @@ export default function StateOfAI() {
               <span className="font-bold mr-2">VERDICT:</span>
               Gemini CLI is the context king; Claude Code is the logic champion. Use both.
             </div>
-            <Link href="/agent-setup-service" className="text-xs font-bold uppercase tracking-widest bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600 transition-colors">
-              Setup My Workstation
-            </Link>
           </div>
         </div>
 

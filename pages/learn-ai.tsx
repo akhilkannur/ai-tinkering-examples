@@ -106,17 +106,6 @@ export default function LearnAIPage() {
                   <span className="text-[#ff00ff]">➜</span> <span className="text-[#ccff00]">claude</span> "Run the Lead Finder Logic"
                </div>
             </section>
-
-            {/* Help Section */}
-            <div className="bg-[#ff00ff] border-4 border-black p-8 md:p-12 brutalist-shadow text-center">
-               <h2 className="text-3xl md:text-5xl font-display text-white mb-8 uppercase tracking-tight">Need a Hand?</h2>
-               <p className="text-xl text-white font-black mb-12 uppercase leading-tight">
-                  I can jump on a 90-minute call and set everything up for you.
-               </p>
-               <Link href="/agent-setup-service" className="inline-flex items-center gap-4 bg-white text-black px-12 py-6 border-4 border-black font-display text-2xl uppercase transition-all brutalist-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none mx-auto">
-                  Book Setup Sprint <ArrowRight className="w-8 h-8 stroke-[3px]" />
-               </Link>
-            </div>
           </div>
         </div>
       </main>
