@@ -55,39 +55,39 @@ export default function ExampleModal({ example, isOpen, onClose }: ExampleModalP
   return (
     <div 
       ref={modalRef}
-      className={`fixed inset-0 z-[100] flex items-center justify-center bg-black/95 backdrop-blur-md transition-opacity duration-300 ${
+      className={`fixed inset-0 z-[100] flex items-center justify-center bg-accent-dark/90 backdrop-blur-md transition-opacity duration-300 ${
         isOpen ? 'opacity-100' : 'opacity-0'
       }`}
     >
       <div
         ref={contentRef}
-        className={`relative bg-white border-4 border-black brutalist-shadow sm:max-w-4xl max-h-full sm:max-h-[90vh] w-full h-full sm:h-auto transform transition-all duration-300 flex flex-col ${
+        className={`relative bg-white rounded-md shadow-2xl sm:max-w-4xl max-h-full sm:max-h-[90vh] w-full h-full sm:h-auto transform transition-all duration-300 flex flex-col ${
           isOpen ? 'scale-100 translate-y-0' : 'scale-95 translate-y-4'
         }`}
       >
-        <div className="absolute top-4 right-4 z-[110]">
+        <div className="absolute top-6 right-6 z-[110]">
           <button
             onClick={onClose}
-            className="p-2 bg-black text-white hover:bg-[#ff00ff] border-2 border-black transition-colors brutalist-shadow-sm"
+            className="p-2 text-secondary-text hover:text-primary-text hover:bg-hero-tint rounded-md transition-all"
             aria-label="Close modal"
           >
-            <X size={24} strokeWidth={3} />
+            <X size={24} />
           </button>
         </div>
 
-        <div className="overflow-y-auto flex-grow pt-12 pb-8 scrollbar-hide">
+        <div className="overflow-y-auto flex-grow pt-xxl pb-xl scrollbar-hide">
           <ExampleBody example={example} />
         </div>
 
         {example.original_link && (
-          <div className="border-t-4 border-black p-6 bg-gray-50 flex justify-center">
+          <div className="border-t border-border-color p-lg bg-hero-tint flex justify-center rounded-b-md">
             <a
               href={example.original_link}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center gap-3 px-10 py-4 bg-black text-[#ccff00] font-display text-xl border-4 border-black brutalist-shadow-sm hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all uppercase"
+              className="inline-flex items-center justify-center gap-2 px-xl py-sm bg-accent-dark text-white rounded-sm text-[0.875rem] font-medium hover:bg-black transition-all"
             >
-              <ExternalLink size={20} strokeWidth={3} />
+              <ExternalLink size={16} />
               View Original
             </a>
           </div>

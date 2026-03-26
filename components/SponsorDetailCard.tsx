@@ -15,11 +15,11 @@ export default function SponsorDetailCard({ sponsor }: SponsorDetailCardProps) {
       href={sponsor.website || '#'}
       target="_blank"
       rel="noopener noreferrer"
-      className="group inline-flex py-2 px-4 border-2 border-black bg-white brutalist-shadow-sm transform hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all duration-300 items-center gap-4" 
+      className="group inline-flex items-center gap-4 py-2 px-md bg-white border border-border-color rounded-md hover:border-secondary-text transition-all duration-300" 
     >
       <div className="flex items-center gap-4">
         {sponsor.logo?.[0]?.url && (
-          <div className="relative w-10 h-10 flex-shrink-0 rounded-none overflow-hidden bg-white border border-black shadow-inner rotate-3 group-hover:rotate-0 transition-transform"> 
+          <div className="relative w-8 h-8 flex-shrink-0 rounded-sm overflow-hidden bg-white border border-border-color"> 
             <Image 
               src={sponsor.logo[0].thumbnails?.large?.url || sponsor.logo[0].url}
               alt={`${sponsor.name} logo`}
@@ -33,10 +33,10 @@ export default function SponsorDetailCard({ sponsor }: SponsorDetailCardProps) {
           </div>
         )}
         <div className="flex flex-col">
-          <h3 className="text-sm font-display text-black uppercase leading-tight group-hover:text-[#ff00ff] transition-colors">{sponsor.name}</h3> 
+          <h3 className="text-[0.875rem] font-semibold text-primary-text leading-tight group-hover:text-accent-dark transition-colors">{sponsor.name}</h3> 
           {sponsor.description && (
-            <p className="text-[10px] font-black font-mono text-gray-500 uppercase tracking-widest leading-none mt-1"> 
-              // {sponsor.description}
+            <p className="text-[0.75rem] font-normal text-secondary-text leading-none mt-1"> 
+              {sponsor.description}
             </p>
           )}
         </div>

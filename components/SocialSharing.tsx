@@ -42,16 +42,16 @@ export default function SocialSharing({
 
   if (compact) {
     return (
-      <div className={`flex items-center justify-center gap-3 ${className}`}>
+      <div className={`flex items-center justify-center gap-2 ${className}`}>
         <a
           href={shareData.twitter}
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => handleShare('twitter')}
-          className="p-2 border-2 border-black bg-white hover:bg-[#ccff00] transition-all brutalist-shadow-sm"
+          className="p-2 text-secondary-text hover:text-primary-text hover:bg-hero-tint rounded-md transition-all"
           aria-label="Share on X"
         >
-          <X size={16} strokeWidth={3} />
+          <X size={16} />
         </a>
 
         <a
@@ -59,48 +59,48 @@ export default function SocialSharing({
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => handleShare('linkedin')}
-          className="p-2 border-2 border-black bg-white hover:bg-[#00ffff] transition-all brutalist-shadow-sm"
+          className="p-2 text-secondary-text hover:text-primary-text hover:bg-hero-tint rounded-md transition-all"
           aria-label="Share on LinkedIn"
         >
-          <Linkedin size={16} strokeWidth={3} />
+          <Linkedin size={16} />
         </a>
       </div>
     )
   }
 
   return (
-    <div className={`flex items-center gap-6 ${className}`}>
-      <span className="font-display text-xs text-black uppercase tracking-widest bg-[#ccff00] px-2 py-0.5 border-2 border-black transform rotate-2">SHARE</span>
-      <div className="flex items-center gap-4">
+    <div className={`flex items-center gap-4 ${className}`}>
+      <span className="text-[0.75rem] font-semibold text-secondary-text uppercase tracking-[0.05em]">Share</span>
+      <div className="flex items-center gap-2">
         <a
           href={shareData.twitter}
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => handleShare('twitter')}
-          className="w-10 h-10 flex items-center justify-center border-2 border-black bg-white hover:bg-[#00ffff] transition-all brutalist-shadow-sm"
+          className="w-10 h-10 flex items-center justify-center text-secondary-text hover:text-primary-text hover:bg-hero-tint border border-border-color rounded-md transition-all"
           aria-label="Share on X"
         >
-          <X size={20} strokeWidth={3} />
+          <X size={20} />
         </a>
         <a
           href={shareData.facebook}
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => handleShare('facebook')}
-          className="w-10 h-10 flex items-center justify-center border-2 border-black bg-white hover:bg-[#ff00ff] hover:text-white transition-all brutalist-shadow-sm"
+          className="w-10 h-10 flex items-center justify-center text-secondary-text hover:text-primary-text hover:bg-hero-tint border border-border-color rounded-md transition-all"
           aria-label="Share on Facebook"
         >
-          <Facebook size={20} strokeWidth={3} />
+          <Facebook size={20} />
         </a>
         <a
           href={shareData.linkedin}
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => handleShare('linkedin')}
-          className="w-10 h-10 flex items-center justify-center border-2 border-black bg-white hover:bg-[#ccff00] transition-all brutalist-shadow-sm"
+          className="w-10 h-10 flex items-center justify-center text-secondary-text hover:text-primary-text hover:bg-hero-tint border border-border-color rounded-md transition-all"
           aria-label="Share on LinkedIn"
         >
-          <Linkedin size={20} strokeWidth={3} />
+          <Linkedin size={20} />
         </a>
       </div>
     </div>

@@ -41,25 +41,23 @@ const NewsletterToast: React.FC = () => {
 
   return (
     <div 
-      className={`fixed bottom-4 left-4 z-40 max-w-sm w-full bg-white border border-slate-200 shadow-xl rounded-xl p-4 flex items-start gap-4 transition-all duration-500 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
+      className={`fixed bottom-4 left-4 z-40 max-w-sm w-full bg-white border border-border-color shadow-xl rounded-md p-4 flex items-start gap-4 transition-all duration-500 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
     >
-      <div className="bg-accent/10 p-2 rounded-lg text-accent">
+      <div className="bg-hero-tint p-2 rounded-md text-accent-dark">
         <Mail size={20} />
       </div>
       
       <div className="flex-1">
-        <h4 className="font-bold text-slate-900 text-sm mb-1">Get free AI blueprints</h4>
-        <p className="text-xs text-slate-600 mb-3">
-          Free blueprints starter pack and occasional updates on actionable AI tactics.
+        <h4 className="font-semibold text-primary-text text-sm mb-1">Get free AI blueprints</h4>
+        <p className="text-xs text-secondary-text mb-3 leading-relaxed">
+          Free blueprints starter pack and tactical updates on actionable AI tactics.
         </p>
         <Link 
-          href="/blog"
+          href="/#newsletter"
           onClick={(e) => {
-             // Let it scroll to newsletter section
-             // Optionally dismiss toast
              setIsVisible(false);
           }}
-          className="text-xs font-bold bg-slate-900 text-white px-3 py-1.5 rounded-md hover:bg-slate-800 transition-colors inline-block"
+          className="text-xs font-medium bg-accent-dark text-white px-3 py-1.5 rounded-sm hover:bg-black transition-colors inline-block"
         >
           Subscribe Free
         </Link>

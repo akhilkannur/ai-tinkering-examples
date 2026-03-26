@@ -16,25 +16,25 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
   return (
     <>
       {/* Article Header */}
-      <header className="max-w-4xl mx-auto px-6 py-8">
-        <div className="flex flex-wrap items-center gap-4 mb-6">
+      <header className="max-w-4xl mx-auto px-lg py-xl">
+        <div className="flex flex-wrap items-center gap-md mb-lg">
             {example.category && (
               <Link
                 href={`/ai-examples/category/${categorySlug}`}
-                className="inline-flex items-center gap-2 px-3 py-1 bg-black text-[#ccff00] font-black text-[10px] uppercase border-2 border-black transform -rotate-1 brutalist-shadow-sm hover:rotate-0 transition-transform"
+                className="inline-flex items-center gap-2 px-lg py-sm rounded-pill border border-border-color text-secondary-text hover:border-secondary-text hover:text-primary-text text-[0.75rem] font-semibold uppercase tracking-[0.05em] transition-all"
               >
-                <Tag size={12} strokeWidth={3} />
+                <Tag size={12} />
                 {example.category}
               </Link>
             )}
             {example.author_name && (
-              <div className="text-[10px] font-black font-mono text-gray-500 uppercase tracking-widest bg-gray-100 px-2 py-1 border border-black">
+              <div className="text-[0.75rem] font-medium text-secondary-text">
                 {example.author_link ? (
                   <a
                     href={example.author_link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-[#ff00ff] transition-colors"
+                    className="hover:text-primary-text underline underline-offset-4 decoration-border-color hover:decoration-secondary-text transition-colors"
                   >
                     Source: {example.author_name}
                   </a>
@@ -45,40 +45,40 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
             )}
         </div>
 
-        <h1 className="text-3xl sm:text-5xl font-display text-black mb-8 leading-tight uppercase glitch-text" data-text={example.title.toUpperCase()}>
+        <h1 className="text-[clamp(1.5rem,4vw,2.5rem)] font-semibold tracking-[-0.02em] leading-tight text-primary-text mb-xl">
           {example.title}
         </h1>
 
         {/* Sponsor Info */}
         {example.sponsor && (
-          <div className="mb-8 border-l-8 border-[#ff00ff] pl-6 py-4 bg-gray-50">
+          <div className="mb-xl border-l-2 border-primary-text pl-xl py-md bg-hero-tint rounded-r-md">
             <SponsorDetailCard sponsor={example.sponsor} />
           </div>
         )}
       </header>
 
       {/* Main Content */}
-      <div className="max-w-3xl mx-auto px-6">
+      <div className="max-w-4xl mx-auto px-lg pb-xxl">
         {example.summary && (
-          <p className="text-lg sm:text-xl text-black font-bold leading-relaxed mb-10 font-mono uppercase">
-            // {example.summary}
+          <p className="text-[1.125rem] font-normal text-secondary-text leading-relaxed mb-xl border-b border-border-color pb-xl">
+            {example.summary}
           </p>
         )}
         
         {example.screenshots && example.screenshots.length > 0 && (
-          <div className="space-y-10 mb-12">
+          <div className="space-y-xl mb-xxl">
             {example.screenshots.map((screenshot, i) => {
               const publicId = i === 0 ? example.cloudinaryPublicId : null;
               const imageUrl = optimizeImageUrl(screenshot.url, publicId, 1200) || screenshot.url;
 
               return (
-                <div key={i} className="relative w-full overflow-hidden border-4 border-black brutalist-shadow-sm bg-gray-50">
+                <div key={i} className="relative w-full overflow-hidden rounded-md border border-border-color bg-card-image-bg">
                   <Image
                     src={imageUrl}
                     alt={`${example.title} - Step ${i + 1}`}
                     width={1200}
                     height={675}
-                    className="w-full h-auto object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-500"
+                    className="w-full h-auto object-cover transition-opacity duration-500 hover:opacity-95"
                     priority={i === 0}
                   />
                 </div>
@@ -88,16 +88,16 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
         )}
 
         {example.workflow_steps && (
-          <div className="mb-12 border-4 border-black p-8 bg-[#ccff00]/10 border-dashed relative">
-            <div className="absolute -top-4 left-6 bg-black text-white px-3 py-1 font-display text-xs uppercase border-2 border-black">Workflow Logic</div>
-            <p className="text-base text-black leading-relaxed font-black font-mono uppercase">
+          <div className="mb-xxl p-xl bg-hero-tint rounded-md border border-border-color relative">
+            <div className="absolute -top-3 left-6 bg-white border border-border-color px-md py-1 rounded-sm text-primary-text text-[0.75rem] font-semibold uppercase tracking-[0.05em]">Workflow Logic</div>
+            <p className="text-[1rem] text-primary-text leading-relaxed font-normal whitespace-pre-wrap">
               {example.workflow_steps}
             </p>
           </div>
         )}
 
         {/* Social Sharing */}
-        <div className="mt-12 py-8 border-t-4 border-black border-dotted">
+        <div className="mt-xxl py-xl border-t border-border-color">
           <SocialSharing
             example={example}
             title={example.title}
@@ -107,16 +107,16 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
         </div>
 
         {/* Setup Service CTA */}
-        <div className="mt-12 p-8 bg-[#ccff00] border-4 border-black">
-          <h3 className="font-display text-2xl uppercase mb-3 text-black">Want to build a workflow like this?</h3>
-          <p className="text-sm font-bold text-black/70 mb-6">
+        <div className="mt-xxl p-xl bg-accent-dark text-white rounded-md shadow-lg text-center">
+          <h3 className="text-[1.5rem] font-semibold tracking-tight mb-md">Want to build a workflow like this?</h3>
+          <p className="text-[1rem] text-light-placeholder mb-xl max-w-lg mx-auto leading-relaxed">
             Book a 90-minute setup sprint. I'll install the AI tools on your machine and build 3 automations with you. $99, money-back guarantee.
           </p>
           <Link
             href="/agent-setup-service"
-            className="inline-flex items-center gap-2 bg-black text-[#ccff00] px-6 py-3 font-black uppercase text-sm hover:translate-x-0.5 hover:translate-y-0.5 transition-transform"
+            className="inline-flex items-center gap-2 bg-white text-accent-dark px-xl py-sm rounded-sm text-[0.875rem] font-medium hover:bg-hero-tint transition-all"
           >
-            Book My Sprint →
+            Book My Sprint
           </Link>
         </div>
       </div>
