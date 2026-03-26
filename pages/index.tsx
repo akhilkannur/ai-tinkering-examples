@@ -92,11 +92,11 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
       <style jsx global>{`
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #ffffff;
+            background-color: #fafafa;
             color: #111111;
         }
         .hero-gradient {
-            background: linear-gradient(to bottom, #ffffff, #fcf9f7);
+            background: linear-gradient(to bottom, #ffffff, #fafafa);
         }
         .font-display {
             font-family: 'Archivo Black', sans-serif;
@@ -109,7 +109,7 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
       <div className="min-h-screen selection:bg-black selection:text-white">
         <Navbar />
         
-        <header className="pt-12 md:pt-24 pb-12 text-center px-4 border-b border-gray-100">
+        <header className="pt-12 md:pt-24 pb-12 text-center px-4 border-b border-gray-200">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-[clamp(2.5rem,6vw,4.5rem)] font-display font-black text-black uppercase leading-[0.95] mb-6 tracking-tight">
               Real Workflows. <br/> AI Examples.
@@ -122,7 +122,7 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
               
               <div className="max-w-md mx-auto">
                 <NewsletterForm />
-                <p className="text-[10px] font-mono font-bold text-gray-400 uppercase tracking-widest mt-3">
+                <p className="text-[10px] font-mono font-bold text-gray-500 uppercase tracking-widest mt-3">
                   Get the weekly drop
                 </p>
               </div>
@@ -138,7 +138,7 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
               onSelect={setSelectedCategory}
             />
             
-            <div className="hidden md:flex items-center gap-4 text-[10px] font-mono font-bold text-gray-400 uppercase tracking-widest">
+            <div className="hidden md:flex items-center gap-4 text-[10px] font-mono font-bold text-gray-500 uppercase tracking-widest">
               <span>{filteredItems.length} {filteredItems.length === 1 ? 'Example' : 'Examples'}</span>
               {selectedCategory !== 'All' && (
                 <button 
@@ -156,10 +156,10 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
           {weeklyBatches.map(([week, items], batchIdx) => items.length > 0 && (
             <div key={week} className="mb-16">
               <div className="flex items-center gap-4 mb-8">
-                <span className="text-xs font-mono font-black uppercase tracking-[0.2em] text-gray-400">
+                <span className="text-xs font-mono font-black uppercase tracking-[0.2em] text-gray-600">
                   Drop / {week}
                 </span>
-                <div className="h-px flex-grow bg-gray-100"></div>
+                <div className="h-px flex-grow bg-gray-200"></div>
                 {batchIdx === 0 && (
                   <span className="text-[10px] font-mono font-bold text-black bg-white border border-black px-2 py-0.5 uppercase tracking-widest">
                     Latest

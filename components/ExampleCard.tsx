@@ -78,7 +78,7 @@ export default function ExampleCard({
       <div className="p-6 flex flex-col flex-grow border-t border-gray-100 group-hover:border-black transition-colors">
         <div className="mb-3">
           {example.category && (
-            <span className="text-[10px] font-mono font-black uppercase tracking-[0.15em] text-gray-400 group-hover:text-black transition-colors">
+            <span className="text-[10px] font-mono font-black uppercase tracking-[0.15em] text-gray-500 group-hover:text-black transition-colors">
               {example.category}
             </span>
           )}

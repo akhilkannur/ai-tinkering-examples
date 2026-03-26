@@ -45,7 +45,7 @@ export default function ToolsIndex() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-white font-sans text-black selection:bg-black selection:text-white">
+    <div className="flex flex-col min-h-screen bg-[#fafafa] font-sans text-black selection:bg-black selection:text-white">
       <Head>
         <title>AI Tools Directory | Real AI Examples</title>
         <meta name="description" content="A curated database of the latest AI tools for business and productivity." key="description" />
@@ -55,7 +55,7 @@ export default function ToolsIndex() {
 
       <main className="container mx-auto px-4 pt-16 md:pt-24 pb-16 max-w-7xl relative z-10">
         
-        <div className="text-center mb-16 max-w-3xl mx-auto border-b border-gray-100 pb-12">
+        <div className="text-center mb-16 max-w-3xl mx-auto border-b border-gray-200 pb-12">
           <h1 className="text-5xl md:text-7xl font-display font-black text-black mb-6 uppercase leading-[0.95] tracking-tight">
             The Tool <br/> Directory.
           </h1>
@@ -65,7 +65,7 @@ export default function ToolsIndex() {
           </p>
 
           <div className="flex flex-col items-center gap-4">
-            <p className="text-[10px] font-mono font-bold text-gray-400 uppercase tracking-widest">
+            <p className="text-[10px] font-mono font-bold text-gray-500 uppercase tracking-widest">
               Building something? <a href="https://forms.gle/KqN82GGdCohshtVx8" target="_blank" rel="noopener noreferrer" className="text-black hover:underline px-1 transition-colors underline-offset-4">Pitch it here.</a>
             </p>
           </div>
@@ -79,8 +79,8 @@ export default function ToolsIndex() {
                 onClick={() => setSelectedCategory(cat)}
                 className={`px-4 py-1.5 font-mono text-[10px] font-bold uppercase tracking-widest transition-all ${
                   selectedCategory === cat 
-                    ? 'bg-black text-white' 
-                    : 'bg-white text-gray-400 hover:text-black'
+                    ? 'bg-black text-white border-black' 
+                    : 'bg-white text-gray-400 border-transparent hover:text-black hover:border-black'
                 }`}
               >
                 {cat}
@@ -93,10 +93,10 @@ export default function ToolsIndex() {
           {toolBatches.map(([week, tools], batchIdx) => tools.length > 0 && (
             <div key={week}>
               <div className="flex items-center gap-4 mb-8">
-                <span className="text-xs font-mono font-black uppercase tracking-[0.2em] text-gray-400">
+                <span className="text-xs font-mono font-black uppercase tracking-[0.2em] text-gray-600">
                   Drop / {week}
                 </span>
-                <div className="h-px flex-grow bg-gray-100"></div>
+                <div className="h-px flex-grow bg-gray-200"></div>
                 {batchIdx === 0 && (
                   <span className="text-[10px] font-mono font-bold text-black bg-white border border-black px-2 py-0.5 uppercase tracking-widest">
                     New
