@@ -71,7 +71,7 @@ export default function ExampleCard({
         </div>
 
         {/* Screenshot Image: 16:10 aspect ratio */}
-        <div className="relative w-full aspect-[16/10] overflow-hidden bg-card-image-bg border-b-2 border-accent-dark">
+        <div className="relative w-full aspect-[16/10] overflow-hidden bg-card-image-bg border-b-2 border-accent-dark shadow-inner">
           {!imageUrl || imageStatus === 'error' ? (
             <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 opacity-20">
               <svg className="w-10 h-10 text-primary-text" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -89,7 +89,7 @@ export default function ExampleCard({
                 src={imageUrl}
                 alt={example.title}
                 fill
-                className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
+                className="object-cover object-top transition-all duration-700 ease-out grayscale-[15%] brightness-[0.98] group-hover:grayscale-0 group-hover:brightness-100 group-hover:scale-105"
                 sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                 priority={priority}
                 quality={85}
@@ -100,7 +100,7 @@ export default function ExampleCard({
                   blurDataURL: blurImageUrl,
                 })}
               />
-              <div className="absolute inset-0 card-image-overlay pointer-events-none" />
+              <div className="absolute inset-0 bg-accent-dark/5 pointer-events-none group-hover:bg-transparent transition-colors duration-300" />
             </>
           )}
 

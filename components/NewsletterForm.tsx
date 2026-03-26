@@ -34,34 +34,34 @@ export default function NewsletterForm() {
 
   if (status === 'success') {
     return (
-      <div className="py-6 px-10 bg-[#ccff00]/20 border-4 border-black brutalist-shadow-sm text-center">
-        <p className="text-black font-display uppercase">✓ Welcome to the Lab! Check your inbox.</p>
+      <div className="py-3 px-6 bg-[#ccff00] border-2 border-accent-dark shadow-brutalist-sm text-center">
+        <p className="text-black font-mono text-[10px] font-bold uppercase tracking-widest">✓ Welcome! Check your inbox.</p>
       </div>
     );
   }
 
   return (
-    <div className="w-full max-w-xl mx-auto">
-      <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4">
+    <div className="w-full">
+      <form onSubmit={handleSubmit} className="flex gap-2">
         <input 
           type="email" 
-          placeholder="ENTER_EMAIL_FOR_ACCESS" 
+          placeholder="your@email.com" 
           required
-          className="flex-1 px-6 py-4 bg-white border-2 border-black text-black font-display text-base uppercase focus:bg-[#ccff00] outline-none transition-all placeholder:text-gray-500" 
+          className="flex-1 px-4 py-2 bg-white border-2 border-accent-dark text-primary-text font-sans text-sm focus:bg-hero-tint outline-none transition-all placeholder:text-light-placeholder" 
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           disabled={status === 'loading'}
         />
         <button 
           type="submit"
-          className="px-10 py-4 bg-black text-[#ccff00] font-display uppercase text-xl transition-all brutalist-shadow-sm hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none disabled:bg-gray-400"
+          className="px-6 py-2 bg-black text-[#ccff00] font-display uppercase text-xs font-black border-2 border-accent-dark shadow-brutalist-sm hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none disabled:bg-gray-400 transition-all"
           disabled={status === 'loading'}
         >
-          {status === 'loading' ? 'WAITING...' : 'Join'}
+          {status === 'loading' ? '...' : 'Join'}
         </button>
       </form>
       {status === 'error' && (
-        <p className="text-red-600 font-black font-mono text-xs mt-4 uppercase text-center tracking-tighter animate-pulse">⚠️ {errorMessage}</p>
+        <p className="text-red-600 font-bold font-mono text-[10px] mt-2 uppercase text-center tracking-tighter">⚠️ {errorMessage}</p>
       )}
     </div>
   );
