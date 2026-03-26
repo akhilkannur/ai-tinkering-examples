@@ -54,8 +54,15 @@ export default function Navbar() {
           <div className="flex items-center gap-12">
             <div className="flex-shrink-0">
               <Link href="/" className="flex items-center gap-3 group">
-                <div className="w-6 h-6 bg-accent-dark text-white flex items-center justify-center text-[0.75rem] font-semibold rounded-[4px_4px_12px_4px] transition-transform group-hover:scale-105">R</div>
-                <span className="text-[1.25rem] font-semibold tracking-[-0.02em] text-primary-text uppercase">Real AI</span>
+                <div className="relative w-8 h-8 transition-transform group-hover:scale-105">
+                  <Image 
+                    src="/logo.png" 
+                    alt="Real AI Examples Logo" 
+                    fill 
+                    className="object-contain"
+                  />
+                </div>
+                <span className="text-[1.25rem] font-semibold tracking-[-0.02em] text-primary-text uppercase">Real AI Examples</span>
               </Link>
             </div>
             

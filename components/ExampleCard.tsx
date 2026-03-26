@@ -40,7 +40,7 @@ export default function ExampleCard({
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 10 }}
       transition={{ duration: 0.4 }}
-      className={`group cursor-pointer flex flex-col bg-white border border-gray-100 hover:border-black transition-all duration-300 relative ${
+      className={`group cursor-pointer flex flex-col bg-white border border-gray-200 shadow-[0_2px_10px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] hover:border-black transition-all duration-300 relative ${
         isPremium ? 'opacity-90' : ''
       }`}
       onClick={handleCardClick}
@@ -96,7 +96,7 @@ export default function ExampleCard({
 
         <div className="mt-auto pt-6 flex items-center gap-2 text-[10px] font-mono font-black uppercase tracking-widest text-black opacity-0 group-hover:opacity-100 transition-all transform translate-x-[-10px] group-hover:translate-x-0">
           <span>Read Workflow</span>
-          <ArrowRight size={12} />
+          <ArrowRight size={12} className="text-[#ff00ff]" />
         </div>
       </div>
     </motion.article>

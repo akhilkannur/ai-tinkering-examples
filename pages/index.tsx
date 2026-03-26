@@ -112,18 +112,18 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
         <header className="pt-12 md:pt-24 pb-12 text-center px-4 border-b border-gray-200">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-[clamp(2.5rem,6vw,4.5rem)] font-display font-black text-black uppercase leading-[0.95] mb-6 tracking-tight">
-              Real Workflows. <br/> AI Examples.
+              A library of real AI examples <br/> from people actually shipping.
             </h1>
             
             <div className="max-w-xl mx-auto mb-10">
               <p className="text-lg md:text-xl font-medium text-gray-600 leading-relaxed mb-8">
-                I cut through the hype to find AI workflows you can actually use. No magic, just better prompts.
+                Get curated weekly drops of prompts, strategies, and exact setups you can copy.
               </p>
               
               <div className="max-w-md mx-auto">
                 <NewsletterForm />
                 <p className="text-[10px] font-mono font-bold text-gray-500 uppercase tracking-widest mt-3">
-                  Get the weekly drop
+                  Get the next drop in your inbox
                 </p>
               </div>
             </div>
@@ -139,7 +139,6 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
             />
             
             <div className="hidden md:flex items-center gap-4 text-[10px] font-mono font-bold text-gray-500 uppercase tracking-widest">
-              <span>{filteredItems.length} {filteredItems.length === 1 ? 'Example' : 'Examples'}</span>
               {selectedCategory !== 'All' && (
                 <button 
                   onClick={() => setSelectedCategory('All')}
@@ -161,7 +160,7 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
                 </span>
                 <div className="h-px flex-grow bg-gray-200"></div>
                 {batchIdx === 0 && (
-                  <span className="text-[10px] font-mono font-bold text-black bg-white border border-black px-2 py-0.5 uppercase tracking-widest">
+                  <span className="text-[10px] font-mono font-bold text-white bg-[#ff00ff] border border-[#ff00ff] px-2 py-0.5 uppercase tracking-widest">
                     Latest
                   </span>
                 )}

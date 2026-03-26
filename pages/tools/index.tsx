@@ -90,37 +90,67 @@ export default function ToolsIndex() {
         </div>
 
         <div className="space-y-16">
-          {toolBatches.map(([week, tools], batchIdx) => tools.length > 0 && (
-            <div key={week}>
-              <div className="flex items-center gap-4 mb-8">
-                <span className="text-xs font-mono font-black uppercase tracking-[0.2em] text-gray-600">
-                  Drop / {week}
-                </span>
-                <div className="h-px flex-grow bg-gray-200"></div>
-                {batchIdx === 0 && (
-                  <span className="text-[10px] font-mono font-bold text-black bg-white border border-black px-2 py-0.5 uppercase tracking-widest">
-                    New
-                  </span>
-                )}
-              </div>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-                {tools.map((tool, idx) => (
-                  <AIToolCard
-                    key={idx}
-                    name={tool.name}
-                    description={tool.description}
-                    url={tool.url}
-                    imageUrl={tool.image}
-                    category={tool.category}
-                    featured={tool.featured}
-                    slug={slugify(tool.name)}
-                    onClick={() => setSelectedTool(tool)}
-                  />
-                ))}
-              </div>
+          {filteredTools.length === 0 ? (
+            <div className="text-center py-24 bg-white border-4 border-black brutalist-shadow">
+              <Filter className="w-16 h-16 text-gray-200 mx-auto mb-6 stroke-[3px]" />
+              <h3 className="text-3xl font-display text-black mb-4 uppercase">No tools found</h3>
+              <p className="text-black font-black font-mono uppercase text-sm mb-10 tracking-widest">Try a different category.</p>
+              <button 
+                onClick={() => setSelectedCategory('All')}
+                className="bg-[#ccff00] border-2 border-black px-8 py-3 font-display uppercase brutalist-shadow-sm hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all"
+              >
+                Clear filters
+              </button>
             </div>
-          ))}
+          ) : selectedCategory === 'All' ? (
+            toolBatches.map(([week, tools], batchIdx) => tools.length > 0 && (
+              <div key={week}>
+                <div className="flex items-center gap-4 mb-8">
+                  <span className="text-xs font-mono font-black uppercase tracking-[0.2em] text-gray-600">
+                    Drop / {week}
+                  </span>
+                  <div className="h-px flex-grow bg-gray-200"></div>
+                  {batchIdx === 0 && (
+                    <span className="text-[10px] font-mono font-bold text-white bg-[#ff00ff] border border-[#ff00ff] px-2 py-0.5 uppercase tracking-widest">
+                      New
+                    </span>
+                  )}
+                </div>
+                
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                  {tools.map((tool, idx) => (
+                    <AIToolCard
+                      key={idx}
+                      name={tool.name}
+                      description={tool.description}
+                      url={tool.url}
+                      imageUrl={tool.image}
+                      category={tool.category}
+                      featured={tool.featured}
+                      slug={slugify(tool.name)}
+                      onClick={() => setSelectedTool(tool)}
+                    />
+                  ))}
+                </div>
+              </div>
+            ))
+          ) : (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+              {filteredTools.map((tool, idx) => (
+                <AIToolCard
+                  key={idx}
+                  name={tool.name}
+                  description={tool.description}
+                  url={tool.url}
+                  imageUrl={tool.image}
+                  category={tool.category}
+                  featured={tool.featured}
+                  slug={slugify(tool.name)}
+                  onClick={() => setSelectedTool(tool)}
+                />
+              ))}
+            </div>
+          )}
         </div>
 
         {selectedTool && (

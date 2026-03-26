@@ -42,6 +42,17 @@ export default function AIToolCard({ name, description, url, imageUrl, category,
     }
   };
 
+  const getCategoryColor = (cat: string) => {
+    const c = cat.toLowerCase();
+    if (c.includes('video') || c.includes('audio')) return 'bg-red-50 text-red-700 border-red-200';
+    if (c.includes('productivity')) return 'bg-blue-50 text-blue-700 border-blue-200';
+    if (c.includes('image')) return 'bg-purple-50 text-purple-700 border-purple-200';
+    if (c.includes('copywriting') || c.includes('content')) return 'bg-orange-50 text-orange-700 border-orange-200';
+    if (c.includes('marketing')) return 'bg-green-50 text-green-700 border-green-200';
+    if (c.includes('code')) return 'bg-yellow-50 text-yellow-700 border-yellow-700';
+    return 'bg-gray-50 text-gray-700 border-gray-200';
+  };
+
   const CardContent = () => (
     <>
       {featured && (
@@ -50,20 +61,20 @@ export default function AIToolCard({ name, description, url, imageUrl, category,
         </div>
       )}
       {/* Top Bar: Icon + Action */}
-      <div className="flex items-center justify-between p-4 border-b-2 border-black bg-gray-50">
-        <div className="relative w-12 h-12 rounded-none overflow-hidden border-2 border-black bg-white brutalist-shadow-sm shadow-black/10">
+      <div className="flex items-center justify-between p-5 border-b-2 border-black bg-gray-50">
+        <div className="relative w-16 h-16 rounded-none overflow-hidden border-2 border-black bg-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
           <Image
             src={imgSrc}
             alt={`${name} logo`}
             fill
-            className="object-cover bg-white" 
+            className="object-contain p-2 bg-white" 
             onError={() => setImgSrc(fallbackLogo)}
             unoptimized={true}
           />
         </div>
         
         <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0">
-           <span className="text-[10px] font-black text-black border-2 border-black px-2 py-1 bg-[#ccff00] uppercase tracking-widest flex items-center gap-2 brutalist-shadow-sm">
+           <span className="text-[10px] font-black text-white border-2 border-black px-2 py-1 bg-black uppercase tracking-widest flex items-center gap-2 shadow-brutalist-sm">
              {slug ? 'View' : 'Open'} <ArrowRight className="w-3 h-3 stroke-[3px]" />
            </span>
         </div>
@@ -71,19 +82,19 @@ export default function AIToolCard({ name, description, url, imageUrl, category,
       
       {/* Content Body */}
       <div className="p-5 flex-grow flex flex-col relative bg-white">
-         <h3 className="text-lg font-display text-black group-hover:text-[#ff00ff] transition-colors mb-2 uppercase leading-tight">
+         <h3 className="text-xl font-display font-black text-black group-hover:text-[#ff00ff] transition-colors mb-3 uppercase leading-none tracking-tight">
            {name}
          </h3>
          
-         <p className="text-sm text-secondary-text leading-relaxed line-clamp-3">
+         <p className="text-sm text-secondary-text leading-relaxed line-clamp-3 font-medium">
            {description}
          </p>
       </div>
 
-      {/* Footer / Meta (Optional) */}
+      {/* Footer / Meta (Prominent Tags) */}
       {category && (
-        <div className="px-4 py-2 border-t-2 border-black bg-gray-100">
-          <span className="text-[10px] font-black font-mono text-gray-500 uppercase tracking-[0.2em]">
+        <div className="px-5 py-3 border-t-2 border-black bg-white">
+          <span className={`inline-block px-2 py-1 text-[9px] font-black font-mono uppercase tracking-wider border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] ${getCategoryColor(category)}`}>
             {category}
           </span>
         </div>

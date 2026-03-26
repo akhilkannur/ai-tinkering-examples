@@ -54,7 +54,7 @@ export default function NewsletterForm() {
         />
         <button 
           type="submit"
-          className="px-6 py-3 bg-black text-white font-sans text-sm font-bold hover:bg-gray-900 disabled:bg-gray-400 transition-all uppercase tracking-widest"
+          className="px-6 py-3 bg-[#ff00ff] text-white font-sans text-sm font-bold hover:bg-black disabled:bg-gray-400 transition-all uppercase tracking-widest"
           disabled={status === 'loading'}
         >
           {status === 'loading' ? '...' : 'Join'}

@@ -57,7 +57,14 @@ export default function Footer() {
 
         <div className="pt-lg border-t border-border-color flex flex-col md:flex-row justify-between items-center gap-md">
           <div className="flex items-center gap-4 group">
-             <div className="w-6 h-6 bg-accent-dark text-white flex items-center justify-center text-[0.75rem] font-semibold rounded-[4px_4px_12px_4px]">R</div>
+             <div className="relative w-6 h-6 transition-transform group-hover:scale-105">
+                <Image 
+                  src="/logo.png" 
+                  alt="Real AI Examples Logo" 
+                  fill 
+                  className="object-contain"
+                />
+             </div>
              <p className="text-secondary-text text-[0.75rem] font-normal">
                &copy; {new Date().getFullYear()} Real AI Examples. Curated for business professionals.
              </p>
