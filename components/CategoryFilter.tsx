@@ -6,25 +6,25 @@ interface CategoryFilterProps {
 
 export default function CategoryFilter({ categories, selectedCategory, onSelect }: CategoryFilterProps) {
   return (
-    <div className="flex flex-wrap gap-2 py-2 scrollbar-hide overflow-x-auto">
+    <div className="flex gap-3 overflow-x-auto pb-4 hide-scrollbar w-full p-1">
       <button 
         onClick={() => onSelect('All')} 
-        className={`px-4 py-1.5 border text-[10px] font-mono font-bold uppercase tracking-widest transition-all ${
+        className={`px-6 py-2.5 rounded-full font-medium text-sm tracking-wide whitespace-nowrap transition-all shadow-sm ${
           selectedCategory === 'All' 
-            ? 'bg-black border-black text-white' 
-            : 'bg-white border-gray-200 text-gray-500 hover:border-black hover:text-black'
+            ? 'bg-coffee-900 text-white shadow-md hover:scale-105' 
+            : 'bg-white border border-coffee-200 text-coffee-700 hover:bg-coffee-50 hover:text-coffee-900 hover:shadow'
         }`}
       >
-        All
+        All Examples
       </button>
       {categories.map(category => (
         <button 
           key={category} 
           onClick={() => onSelect(category)} 
-          className={`px-4 py-1.5 border text-[10px] font-mono font-bold uppercase tracking-widest transition-all ${
+          className={`px-6 py-2.5 rounded-full font-medium text-sm tracking-wide whitespace-nowrap transition-all shadow-sm ${
             selectedCategory === category 
-              ? 'bg-black border-black text-white' 
-              : 'bg-white border-gray-200 text-gray-500 hover:border-black hover:text-black'
+              ? 'bg-coffee-900 text-white shadow-md hover:scale-105' 
+              : 'bg-white border border-coffee-200 text-coffee-700 hover:bg-coffee-50 hover:text-coffee-900 hover:shadow'
           }`}
         >
           {category}
