@@ -119,12 +119,12 @@ export default function ExampleCard({
         </div>
 
         <div className="flex flex-col flex-grow p-5 bg-white">
-          <h3 className="text-[1.125rem] font-display font-black leading-tight text-primary-text mb-md group-hover:text-[#ff00ff] transition-colors duration-200 uppercase">
+          <h3 className="text-[1.125rem] font-display font-black leading-tight text-primary-text mb-sm group-hover:text-[#ff00ff] transition-colors duration-200 uppercase">
             {example.title}
           </h3>
 
           {example.summary && (
-            <p className="text-[10px] font-mono font-bold text-primary-text line-clamp-2 leading-relaxed uppercase tracking-tighter">
+            <p className="text-[0.875rem] font-normal text-secondary-text line-clamp-2 leading-relaxed">
               {example.summary}
             </p>
           )}

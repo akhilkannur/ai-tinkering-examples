@@ -60,7 +60,7 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
       {/* Main Content */}
       <div className="max-w-4xl mx-auto px-lg pb-xxl">
         {example.summary && (
-          <p className="text-[12px] md:text-[14px] font-mono font-bold text-secondary-text leading-relaxed mb-xl border-b-2 border-accent-dark pb-xl uppercase tracking-widest">
+          <p className="text-[1.125rem] font-normal text-secondary-text leading-relaxed mb-xl border-b-2 border-accent-dark pb-xl">
             {example.summary}
           </p>
         )}

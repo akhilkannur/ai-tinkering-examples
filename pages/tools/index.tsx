@@ -7,14 +7,14 @@ import AIToolCard from '../../components/AIToolCard';
 import ToolDetailModal from '../../components/ToolDetailModal';
 import { Filter, Sparkles, Command, Plus, Briefcase, ArrowRight } from 'lucide-react';
 
-// Helper to group by week (randomly for now till last week as requested)
+// Helper to group by week (deterministic)
 function groupByWeekTools(items: AiTool[]) {
-  // Shuffle items to randomize assortment
-  const shuffled = [...items].sort(() => Math.random() - 0.5);
+  // Sort items by name to ensure stable layout
+  const sorted = [...items].sort((a, b) => a.name.localeCompare(b.name));
   
   const batches: { [key: string]: AiTool[] } = {};
   const itemsPerBatch = 12;
-  const numBatches = Math.ceil(shuffled.length / itemsPerBatch);
+  const numBatches = Math.ceil(sorted.length / itemsPerBatch);
   
   // Starting from last week (Mar 23) going back
   for (let i = 0; i < numBatches; i++) {
@@ -22,10 +22,10 @@ function groupByWeekTools(items: AiTool[]) {
     startDate.setDate(startDate.getDate() - (i * 7));
     
     const weekLabel = startDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-    batches[weekLabel] = shuffled.slice(i * itemsPerBatch, (i + 1) * itemsPerBatch);
+    batches[weekLabel] = sorted.slice(i * itemsPerBatch, (i + 1) * itemsPerBatch);
   }
 
-  return Object.entries(batches).sort((a, b) => new Date(b[0]).getTime() - new Date(a[0]).getTime());
+  return Object.entries(batches);
 }
 
 export default function ToolsIndex() {
@@ -111,7 +111,7 @@ export default function ToolsIndex() {
             <div key={week} className="space-y-lg">
               <div className="flex items-center gap-4">
                 <div className={`px-4 py-1 border-2 border-black font-display text-sm uppercase shadow-brutalist-sm ${batchIdx === 0 ? 'bg-[#ff00ff] text-white' : 'bg-white text-black'}`}>
-                  Batch: Week of {week}
+                  Week of {week}
                 </div>
                 <div className="h-[2px] flex-grow bg-black/10"></div>
                 {batchIdx === 0 && (

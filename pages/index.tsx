@@ -17,14 +17,18 @@ interface ExamplesPageProps {
   itemListSchema: any
 }
 
-// Helper to group by week (randomly for now till last week as requested)
+// Helper to group by week (deterministic)
 function groupByWeek(items: EnrichedExampleRecord[]) {
-  // Shuffle items to randomize assortment
-  const shuffled = [...items].sort(() => Math.random() - 0.5);
+  // Sort items by date desc then title to ensure stable layout
+  const sorted = [...items].sort((a, b) => {
+    const dateDiff = new Date(b.publish_date || '2026-03-01').getTime() - new Date(a.publish_date || '2026-03-01').getTime();
+    if (dateDiff !== 0) return dateDiff;
+    return a.title.localeCompare(b.title);
+  });
   
   const groups: { [key: string]: EnrichedExampleRecord[] } = {};
   const itemsPerBatch = 9;
-  const numBatches = Math.ceil(shuffled.length / itemsPerBatch);
+  const numBatches = Math.ceil(sorted.length / itemsPerBatch);
   
   // Starting from last week (Mar 23) going back
   for (let i = 0; i < numBatches; i++) {
@@ -32,7 +36,7 @@ function groupByWeek(items: EnrichedExampleRecord[]) {
     startDate.setDate(startDate.getDate() - (i * 7));
     
     const weekLabel = startDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-    groups[weekLabel] = shuffled.slice(i * itemsPerBatch, (i + 1) * itemsPerBatch);
+    groups[weekLabel] = sorted.slice(i * itemsPerBatch, (i + 1) * itemsPerBatch);
   }
 
   return Object.entries(groups).sort((a, b) => new Date(b[0]).getTime() - new Date(a[0]).getTime());
@@ -116,10 +120,10 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
         <header className="hero-gradient pt-xl md:pt-[160px] pb-xl md:pb-xxl text-center px-4 border-b-4 border-accent-dark">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-[clamp(2.5rem,5vw,5rem)] font-display font-black tracking-[-0.02em] leading-[0.9] mb-lg text-primary-text uppercase">
-              Curated <span className="text-secondary-text">Real AI</span> <br className="hidden md:block" /> <span className="text-[#ff00ff]">Examples</span>
+              Curated <span className="text-secondary-text">Workflows &</span> <br className="hidden md:block" /> <span className="text-[#ff00ff]">AI Examples</span>
             </h1>
             
-            <p className="text-[10px] md:text-[12px] font-mono font-bold text-black max-w-xl mx-auto mb-xl leading-relaxed uppercase tracking-widest bg-[#ccff00] border-2 border-accent-dark px-4 py-2 rotate-1 inline-block">
+            <p className="text-[1.125rem] font-medium text-black max-w-xl mx-auto mb-xl leading-relaxed bg-[#ccff00] border-2 border-accent-dark px-4 py-2 rotate-1 inline-block">
               I cut through the hype to find AI workflows you can actually use. No magic, just better prompts.
             </p>
 
@@ -131,11 +135,11 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="SEARCH EXAMPLES (E.G. 'SALES', 'MARKETING')..."
-                className="w-full pl-[60px] pr-[60px] py-[18px] bg-white border-4 border-accent-dark shadow-brutalist focus:translate-x-0.5 focus:translate-y-0.5 focus:shadow-none outline-none transition-all text-[0.875rem] font-mono font-bold uppercase placeholder:text-light-placeholder"
+                placeholder="Search examples (e.g. 'sales', 'marketing')..."
+                className="w-full pl-[60px] pr-[60px] py-[18px] bg-white border-4 border-accent-dark shadow-brutalist focus:translate-x-0.5 focus:translate-y-0.5 focus:shadow-none outline-none transition-all text-[1rem] font-medium placeholder:text-light-placeholder"
               />
               <div className="absolute right-6 top-1/2 -translate-y-1/2 hidden md:flex items-center gap-1.5 px-2 py-1 bg-[#ccff00] border-2 border-accent-dark text-[10px] font-mono font-bold text-black pointer-events-none">
-                <span className="opacity-50">CMD</span> K
+                <span className="opacity-50 font-sans">⌘</span> K
               </div>
             </div>
           </div>
@@ -175,7 +179,7 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
                 <div key={week} className="space-y-lg">
                   <div className="flex items-center gap-4">
                     <div className={`px-4 py-1 border-2 border-accent-dark font-display text-sm uppercase shadow-brutalist-sm ${batchIdx === 0 ? 'bg-[#ff00ff] text-white' : 'bg-white text-primary-text'}`}>
-                      Batch: Week of {week}
+                      Week of {week}
                     </div>
                     <div className="h-[2px] flex-grow bg-accent-dark/10"></div>
                     {batchIdx === 0 && (
@@ -230,8 +234,8 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
 
 export const getStaticProps: GetStaticProps<ExamplesPageProps> = async () => {
   try {
-    const airtableExamples = await fetchEnrichedExamples()
-    const rawExamples = [...localSocialExamples, ...airtableExamples];
+    // Rely exclusively on local data as Airtable is dead
+    const rawExamples = localSocialExamples;
 
     const dateSorted = rawExamples.sort((a, b) => {
       const dateA = new Date(a.publish_date || 0).getTime();
@@ -239,75 +243,22 @@ export const getStaticProps: GetStaticProps<ExamplesPageProps> = async () => {
       return dateB - dateA;
     });
 
-    const examplesByCategory: Record<string, EnrichedExampleRecord[]> = {};
-    dateSorted.forEach(ex => {
-      const cat = ex.category || 'Uncategorized';
-      if (!examplesByCategory[cat]) examplesByCategory[cat] = [];
-      examplesByCategory[cat].push(ex);
-    });
-
-    const FREE_LIMIT = 100;
-    const freeSet = new Set<string>();
-    const categoriesList = Object.keys(examplesByCategory);
-    
-    let picks = 0;
-    let round = 0;
-
-    while (picks < FREE_LIMIT && picks < rawExamples.length) {
-      let madePick = false;
-      for (const cat of categoriesList) {
-        if (examplesByCategory[cat][round]) {
-           const ex = examplesByCategory[cat][round];
-           freeSet.add(ex.id);
-           picks++;
-           madePick = true;
-           if (picks >= FREE_LIMIT) break;
-        }
-      }
-      if (!madePick) break;
-      round++;
-    }
-
-    const freePool = dateSorted.filter(ex => freeSet.has(ex.id));
-    const premiumPool = dateSorted.filter(ex => !freeSet.has(ex.id));
-
-    const mixedExamples: EnrichedExampleRecord[] = [];
-    let f = 0;
-    let p = 0;
-
-    while (f < freePool.length || p < premiumPool.length) {
-      for (let i = 0; i < 2 && f < freePool.length; i++) {
-        mixedExamples.push({ ...freePool[f++], isPremium: false } as any);
-      }
-      if (p < premiumPool.length) {
-        mixedExamples.push({ ...premiumPool[p++], isPremium: true } as any);
-      }
-    }
-
-    const categories = mixedExamples.map(e => e.category).filter(Boolean) as string[];
+    const categories = dateSorted.map(e => e.category).filter(Boolean) as string[];
     const uniqueCategories = [...new Set(categories)];
 
     const SITE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com';
-    const itemListSchema = generateItemListSchema(mixedExamples, SITE_URL);
+    const itemListSchema = generateItemListSchema(dateSorted, SITE_URL);
 
     return { 
       props: { 
-        examples: mixedExamples,
+        examples: dateSorted,
         categories: uniqueCategories,
         itemListSchema,
       },
       revalidate: 86400
     }
   } catch (error) {
-    console.error('Failed to fetch data for examples page:', error)
-    const SITE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com';
-    return { 
-      props: { 
-        examples: localSocialExamples,
-        categories: [...new Set(localSocialExamples.map(e => e.category).filter(Boolean) as string[])],
-        itemListSchema: generateItemListSchema(localSocialExamples, SITE_URL),
-      },
-      revalidate: 3600
-    }
+    console.error('Failed to prepare data for homepage:', error)
+    return { props: { examples: [], categories: [], itemListSchema: null } }
   }
 }

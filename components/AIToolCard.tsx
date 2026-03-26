@@ -75,8 +75,8 @@ export default function AIToolCard({ name, description, url, imageUrl, category,
            {name}
          </h3>
          
-         <p className="text-xs text-black font-black font-mono leading-relaxed line-clamp-3 uppercase tracking-tighter">
-           // {description}
+         <p className="text-sm text-secondary-text leading-relaxed line-clamp-3">
+           {description}
          </p>
       </div>
 
