@@ -115,10 +115,7 @@ export default function App({ Component, pageProps }: AppProps) {
               fbq('track', 'PageView');
             `}
           </Script>
-          <Script 
-            src="https://heyo.so/embed/script?projectId=6985864ddca7d420787131e7"
-            strategy="lazyOnload"
-          />
+
         </>
       )}
     </div>

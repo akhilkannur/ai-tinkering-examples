@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Terminal, Cpu } from 'lucide-react';
+import { Terminal } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -18,7 +18,7 @@ export default function Footer() {
                 <Link href="/about" className="hover:text-punk-magenta transition-colors hover:underline decoration-wavy">About</Link>
               </li>
               <li>
-                <Link href="/ai-examples" className="hover:text-punk-magenta transition-colors hover:underline decoration-wavy">Examples</Link>
+                <Link href="/" className="hover:text-punk-magenta transition-colors hover:underline decoration-wavy">Examples</Link>
               </li>
               <li>
                 <Link href="/tools" className="hover:text-punk-magenta transition-colors hover:underline decoration-wavy">Tool Directory</Link>
@@ -36,16 +36,6 @@ export default function Footer() {
               <li>
                 <Link href="/agent-setup-service" className="text-punk-magenta hover:text-white transition-colors">Setup Sprint — $99</Link>
               </li>
-              <li>
-                <Link href="/setup/claude-code" className="hover:text-punk-magenta transition-colors hover:underline decoration-wavy">
-                  Claude Code Guide
-                </Link>
-              </li>
-              <li>
-                <Link href="/setup/gemini-cli" className="hover:text-punk-magenta transition-colors hover:underline decoration-wavy">
-                  Gemini CLI Guide
-                </Link>
-              </li>
             </ul>
           </div>
 
@@ -54,7 +44,7 @@ export default function Footer() {
             <h4 className="font-display text-lg text-punk-lime uppercase tracking-widest mb-6">// CONNECT</h4>
             <ul className="space-y-3 text-sm font-black uppercase tracking-widest">
               <li>
-                <Link href="/ai-examples" className="hover:text-punk-magenta transition-colors hover:underline decoration-wavy">Newsletter</Link>
+                <Link href="/#newsletter" className="hover:text-punk-magenta transition-colors hover:underline decoration-wavy">Newsletter</Link>
               </li>
               <li>
                 <a href="https://salestools.club/" target="_blank" rel="noopener noreferrer" className="hover:text-punk-magenta transition-colors hover:underline decoration-wavy uppercase">
@@ -86,21 +76,6 @@ export default function Footer() {
              <p className="text-gray-500 text-[10px] font-mono uppercase tracking-[0.2em]">
                &copy; {new Date().getFullYear()} Real AI Examples. Curated for business professionals.
              </p>
-          </div>
-          
-          <div className="flex items-center gap-6 px-6 py-3 bg-gray-900 border-2 border-white/20">
-            <div className="flex items-center gap-2 text-[9px] font-mono text-gray-400 uppercase tracking-widest">
-                <Cpu className="w-3 h-3 text-punk-lime" /> Works with:
-            </div>
-            <div className="flex flex-wrap items-center gap-4 text-[9px] font-mono font-bold text-white uppercase tracking-widest opacity-80">
-                <span>Claude</span>
-                <span className="text-punk-magenta">/</span>
-                <span>ChatGPT</span>
-                <span className="text-punk-magenta">/</span>
-                <span>Gemini</span>
-                <span className="text-punk-magenta">/</span>
-                <span>All Major Tools</span>
-            </div>
           </div>
         </div>
       </div>

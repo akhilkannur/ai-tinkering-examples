@@ -64,11 +64,6 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: '/',
-        destination: '/ai-examples',
-        permanent: true,
-      },
-      {
         source: '/index',
         destination: '/',
         permanent: true,
@@ -85,7 +80,7 @@ const nextConfig = {
       },
       {
         source: '/example/:path*',
-        destination: '/ai-examples',
+        destination: '/',
         permanent: true,
       },
       {
@@ -168,12 +163,12 @@ const nextConfig = {
       // 3. Old directory structure cleanup
       {
         source: '/blueprints',
-        destination: '/ai-examples',
+        destination: '/',
         permanent: true,
       },
       {
         source: '/skills',
-        destination: '/ai-examples',
+        destination: '/',
         permanent: true,
       },
       {
@@ -203,7 +198,7 @@ const nextConfig = {
       },
       {
         source: '/ai-examples/category/productivity',
-        destination: '/ai-examples',
+        destination: '/',
         permanent: true,
       },
     ]
