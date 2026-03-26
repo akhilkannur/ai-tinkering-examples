@@ -1,5 +1,6 @@
 import { useState, useEffect, useMemo } from 'react'
 import { GetStaticProps } from 'next/types'
+import Link from 'next/link'
 import Head from 'next/head'
 import Navbar from '../components/Navbar'
 import ExampleCard from '../components/ExampleCard'
