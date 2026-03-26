@@ -88,7 +88,7 @@ export default function ToolLandingPage({ toolName, toolSlug, recipes, categorie
       <Navbar />
       <StickyActionBar />
 
-      <main className="pt-24 pb-20">
+      <main className="pt-32 md:pt-40 pb-20">
         {/* Header */}
         <div className="container mx-auto px-4 mb-16 text-center max-w-4xl">
           <div className="inline-flex items-center gap-2 bg-secondary-bg border border-navy-dark px-4 py-1.5 rounded-full text-xs font-mono text-accent mb-6 shadow-sm">

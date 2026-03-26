@@ -228,7 +228,7 @@ Downloaded from RealAIExamples.com`;
       
       <Navbar />
 
-      <main className="flex-grow container mx-auto px-4 pt-32 pb-24 max-w-4xl relative z-10">
+      <main className="flex-grow container mx-auto px-4 pt-32 md:pt-40 pb-24 max-w-4xl relative z-10">
         <div className="absolute top-0 right-0 w-32 h-32 bg-[#ff00ff] opacity-10 blur-xl"></div>
         
         <div className="max-w-4xl mx-auto">

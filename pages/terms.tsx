@@ -12,7 +12,7 @@ export default function Terms() {
 
       <Navbar />
 
-      <main className="pt-24 pb-24">
+      <main className="pt-32 md:pt-40 pb-24">
         <div className="container mx-auto px-4 max-w-3xl">
           
           <div className="text-center mb-16">

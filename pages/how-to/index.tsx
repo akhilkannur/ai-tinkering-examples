@@ -60,7 +60,7 @@ export default function HowToDictionary({ problems }: HowToDictionaryProps) {
 
       <Navbar />
 
-      <main className="pt-24 pb-20">
+      <main className="pt-32 md:pt-40 pb-20">
         <div className="container mx-auto px-4 max-w-4xl text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-secondary-bg border border-navy-dark px-4 py-1.5 rounded-full text-xs font-mono text-accent mb-6">
             <BookOpen className="w-3 h-3" />

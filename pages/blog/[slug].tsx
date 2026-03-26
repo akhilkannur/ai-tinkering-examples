@@ -127,7 +127,7 @@ export default function BlogPostPage({ post, relatedRecipes }: BlogPostPageProps
 
       <Navbar />
 
-      <main className="flex-grow container mx-auto px-4 pt-32 pb-24 max-w-4xl">
+      <main className="flex-grow container mx-auto px-4 pt-32 md:pt-40 pb-24 max-w-4xl">
         <Link href="/blog" className="inline-flex items-center gap-2 text-xs font-black text-black uppercase tracking-widest hover:bg-[#ccff00] px-2 py-1 border border-black mb-12 transition-all">
           <ArrowLeft className="w-4 h-4 stroke-[3px]" /> Back to Logs
         </Link>

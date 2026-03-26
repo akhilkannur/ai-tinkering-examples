@@ -27,7 +27,7 @@ export default function ZeroBudgetMarketing() {
 
       <Navbar />
 
-      <main className="pt-32 pb-24 container mx-auto px-4 max-w-4xl relative z-10">
+      <main className="pt-32 md:pt-40 pb-24 container mx-auto px-4 max-w-4xl relative z-10">
         
         {/* HEADER */}
         <div className="mb-24 text-center">

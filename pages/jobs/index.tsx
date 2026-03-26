@@ -43,7 +43,7 @@ export default function JobsPage({ jobs }: JobsPageProps) {
       <div className="min-h-screen bg-primary-bg">
         <Navbar />
         
-        <header className="max-w-6xl mx-auto px-4 py-12 md:py-16 text-center">
+        <header className="max-w-6xl mx-auto px-4 pt-32 md:pt-40 pb-12 md:pb-16 text-center">
           <h1 className="text-4xl md:text-5xl font-headline font-bold text-text-color mb-6 tracking-tight leading-tight uppercase">
             AI Job <span className="text-accent">Board</span>
           </h1>

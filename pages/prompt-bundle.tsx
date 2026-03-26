@@ -59,7 +59,7 @@ export default function PromptBundlePage() {
 
       <Navbar />
 
-      <main className="relative pt-32 pb-24">
+      <main className="relative pt-32 md:pt-40 pb-24">
         <div className="container mx-auto px-4 max-w-6xl relative z-10">
           
           {/* HERO */}

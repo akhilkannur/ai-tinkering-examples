@@ -109,7 +109,7 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
       <div className="min-h-screen selection:bg-black selection:text-white">
         <Navbar />
         
-        <header className="pt-12 md:pt-24 pb-12 text-center px-4 border-b border-gray-200">
+        <header className="pt-28 md:pt-40 pb-12 text-center px-4 border-b border-gray-200">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-[clamp(2.5rem,6vw,4.5rem)] font-display font-black text-black uppercase leading-[0.95] mb-6 tracking-tight">
               A library of real AI examples <br/> from people actually shipping.

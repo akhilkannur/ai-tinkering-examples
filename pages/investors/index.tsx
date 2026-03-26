@@ -112,7 +112,7 @@ export default function InvestorsPage({ initialInvestors }: InvestorsPageProps) 
       <div className="min-h-screen bg-primary-bg text-text-color font-sans">
         <Navbar />
         
-        <header className="max-w-6xl mx-auto px-4 py-12 md:py-20 text-center">
+        <header className="max-w-6xl mx-auto px-4 pt-32 md:pt-40 pb-12 md:pb-20 text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 border border-accent/20 text-accent font-bold text-[10px] uppercase tracking-[0.2em] mb-6 font-mono">
               <Briefcase className="w-3 h-3" /> Acquisition Roadmap
           </div>

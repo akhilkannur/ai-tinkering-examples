@@ -12,7 +12,7 @@ export default function Privacy() {
 
       <Navbar />
 
-      <main className="pt-24 pb-24">
+      <main className="pt-32 md:pt-40 pb-24">
         <div className="container mx-auto px-4 max-w-3xl">
           <div className="text-center mb-16">
             <h1 className="text-5xl md:text-7xl font-display text-black uppercase leading-[0.95] tracking-tight">Privacy Policy</h1>

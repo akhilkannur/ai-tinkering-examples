@@ -27,7 +27,7 @@ const UtmBuilderPage = () => {
       </Head>
       <Navbar />
 
-      <main className="flex-grow container mx-auto px-4 py-12">
+      <main className="flex-grow container mx-auto px-4 pt-32 md:pt-40 pb-12">
         <div className="text-center mb-12">
           <h1 className="text-3xl md:text-5xl font-bold text-gray-800 mb-4">
             The 'Foolproof' UTM Builder

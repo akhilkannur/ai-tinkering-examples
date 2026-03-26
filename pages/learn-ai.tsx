@@ -17,7 +17,7 @@ export default function LearnAIPage() {
 
       <Navbar />
 
-      <main className="pt-32 pb-24 relative">
+      <main className="pt-32 md:pt-40 pb-24 relative">
         <div className="container mx-auto px-4 max-w-4xl relative z-10">
           
           <div className="text-center mb-24">

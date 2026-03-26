@@ -77,9 +77,9 @@ export default function ToolPage({ tool }: ToolPageProps) {
 
       <Navbar />
 
-      <main className="flex-grow flex flex-col items-center justify-center container mx-auto px-4 pt-32 pb-24 relative z-10">
+      <main className="flex-grow flex flex-col items-center justify-center container mx-auto px-4 pt-32 md:pt-40 pb-24 relative z-10">
         
-        <div className="absolute top-32 left-4 md:left-8 z-30">
+        <div className="absolute top-32 md:top-40 left-4 md:left-8 z-30">
             <Link href="/tools" className="inline-flex items-center text-secondary-text hover:text-accent-dark transition-colors text-[10px] font-mono font-bold uppercase tracking-widest group bg-white px-4 py-2 border-2 border-accent-dark shadow-brutalist-sm">
                 <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
                 Back to Tools
