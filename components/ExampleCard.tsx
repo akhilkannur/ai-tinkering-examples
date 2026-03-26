@@ -49,54 +49,35 @@ export default function ExampleCard({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
       transition={{ duration: 0.5 }}
-      className={`card group cursor-pointer relative flex flex-col bg-white border-4 border-black transition-all duration-300 brutalist-shadow hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none ${
+      className={`group cursor-pointer flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-card-hover rounded-md ${
         isPremium ? 'opacity-90' : ''
       }`}
       onClick={handleCardClick}
     >
-      {/* Category Badge */}
-      {example.category && (
-        <div className="absolute top-4 left-4 z-30 bg-black text-[#ccff00] px-2 py-0.5 text-[10px] font-display uppercase border-2 border-black">
-          {example.category}
-        </div>
-      )}
-
-      {/* Premium Lock Overlay */}
-      {isPremium && (
-        <div className="absolute inset-0 z-20 flex flex-col items-center justify-center bg-black/80 backdrop-blur-[1px] text-center p-4">
-          <div className="bg-white p-4 border-4 border-black mb-3 shadow-lg">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="text-black">
-              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-            </svg>
-          </div>
-          <span className="text-[#ff00ff] font-display tracking-widest uppercase text-xs bg-white px-3 py-1 border-2 border-black">Premium Example</span>
-        </div>
-      )}
-
-      <div className="relative z-10 flex-grow">
-        <div className="relative w-full h-48 sm:h-56 overflow-hidden bg-gray-50 border-b-4 border-black">
+      <div className="relative flex-grow flex flex-col">
+        {/* Image wrap: 16:10 aspect ratio */}
+        <div className="relative w-full aspect-[16/10] overflow-hidden bg-card-image-bg rounded-md mb-md">
           {!imageUrl || imageStatus === 'error' ? (
-            <div className="absolute inset-0 bg-gray-100 flex flex-col items-center justify-center gap-2 opacity-50">
-              <svg className="w-12 h-12 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 opacity-20">
+              <svg className="w-10 h-10 text-primary-text" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
             </div>
           ) : (
             <>
               {imageStatus === 'loading' && !blurImageUrl && (
-                <div className="absolute inset-0 bg-gray-100 flex items-center justify-center">
-                  <div className="text-black text-xs font-mono font-bold animate-pulse uppercase tracking-widest">Loading...</div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-8 h-8 border-2 border-border-color border-t-primary-text rounded-full animate-spin" />
                 </div>
               )}
               <Image
                 src={imageUrl}
                 alt={example.title}
                 fill
-                className="object-cover object-top opacity-95 group-hover:opacity-100 transition-all duration-500 ease-out grayscale-[15%] brightness-[0.98] group-hover:grayscale-0 group-hover:brightness-100"
+                className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
                 sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                 priority={priority}
-                quality={80}
+                quality={85}
                 onLoad={() => setImageStatus('loaded')}
                 onError={() => setImageStatus('error')}
                 {...(blurImageUrl && {
@@ -104,27 +85,46 @@ export default function ExampleCard({
                   blurDataURL: blurImageUrl,
                 })}
               />
-              {/* Subtle Overlay to separate white screenshots from white background */}
-              <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300 pointer-events-none" />
+              {/* Subtle Overlay Gradient */}
+              <div className="absolute inset-0 card-image-overlay pointer-events-none" />
             </>
+          )}
+
+          {/* Premium Lock Overlay */}
+          {isPremium && (
+            <div className="absolute inset-0 z-20 flex flex-col items-center justify-center bg-accent-dark/80 backdrop-blur-[2px] text-center p-md">
+              <div className="bg-white p-sm rounded-sm mb-sm shadow-sm">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-accent-dark">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+              </div>
+              <span className="text-white text-[0.75rem] font-semibold tracking-wider uppercase">Premium</span>
+            </div>
           )}
         </div>
 
-        <div className="p-5 flex flex-col gap-3 relative">
-          <div className="flex justify-between items-start gap-4">
-            <h3 className="font-display text-lg leading-tight text-black line-clamp-2 group-hover:text-[#ff00ff] transition-colors duration-200 uppercase">
-              {example.title}
-            </h3>
-          </div>
+        <div className="flex flex-col flex-grow">
+          {/* Tag: Uppercase, muted, above title */}
+          {example.category && (
+            <div className="text-[0.75rem] font-semibold uppercase tracking-[0.05em] text-secondary-text mb-xs">
+              {example.category}
+            </div>
+          )}
+
+          <h3 className="text-[1.125rem] font-semibold leading-tight text-primary-text mb-sm transition-colors duration-200">
+            {example.title}
+          </h3>
 
           {example.summary && (
-            <p className="text-sm text-black line-clamp-2 leading-relaxed font-bold font-mono">
-              // {example.summary}
+            <p className="text-[0.875rem] font-normal text-secondary-text line-clamp-2 leading-relaxed mb-md">
+              {example.summary}
             </p>
           )}
 
-          <div className="pt-4 mt-auto flex items-center justify-end border-t-2 border-black/10">
-             <ArrowRight className="w-4 h-4 text-black group-hover:translate-x-1 transition-transform" strokeWidth={3} />
+          <div className="mt-auto flex items-center gap-2 text-[0.875rem] font-medium text-primary-text group/link">
+             <span>View workflow</span>
+             <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1 group-hover:translate-x-1" />
           </div>
         </div>
       </div>

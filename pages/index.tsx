@@ -21,17 +21,22 @@ interface ExamplesPageProps {
 
 export default function HomePage({ examples, categories, itemListSchema }: ExamplesPageProps) {
   const [selectedCategory, setSelectedCategory] = useState('All')
+  const [searchQuery, setSearchQuery] = useState('')
   const [visibleExamplesCount, setVisibleExamplesCount] = useState(INITIAL_DISPLAY_COUNT)
   const [modalExample, setModalExample] = useState<EnrichedExampleRecord | null>(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
-  const [isFilterExpanded, setIsFilterExpanded] = useState(false)
 
   const filteredByCategory = useMemo(() => {
-    if (selectedCategory === 'All') {
-      return examples;
-    }
-    return examples.filter(ex => ex.category === selectedCategory);
-  }, [examples, selectedCategory]);
+    return examples.filter(ex => {
+      const matchesCategory = selectedCategory === 'All' || ex.category === selectedCategory;
+      const matchesSearch = !searchQuery || 
+        ex.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
+        ex.summary?.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        ex.category?.toLowerCase().includes(searchQuery.toLowerCase());
+      
+      return matchesCategory && matchesSearch;
+    });
+  }, [examples, selectedCategory, searchQuery]);
 
   const examplesToDisplay = useMemo(() => {
     return filteredByCategory.slice(0, visibleExamplesCount);
@@ -39,7 +44,7 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
 
   useEffect(() => {
     setVisibleExamplesCount(INITIAL_DISPLAY_COUNT);
-  }, [selectedCategory]);
+  }, [selectedCategory, searchQuery]);
 
   const handleLoadMore = () => {
     setVisibleExamplesCount(prevCount => prevCount + INITIAL_DISPLAY_COUNT);
@@ -85,117 +90,92 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
 
       <style jsx global>{`
         body {
-            font-family: 'Space Mono', monospace;
-            background-color: #f0f0f0;
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #111111;
         }
-        .font-display {
-            font-family: 'Archivo Black', sans-serif;
+        .hero-gradient {
+            background: linear-gradient(to bottom, #ffffff, #fcf9f7);
         }
-        .brutalist-shadow {
-            box-shadow: 6px 6px 0px 0px #000;
+        .card-image-overlay {
+            background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.02));
         }
-        .brutalist-shadow-sm {
-            box-shadow: 3px 3px 0px 0px #000;
+        .text-muted {
+            color: #666666;
         }
-        .glitch-text {
-            position: relative;
-        }
-        .glitch-text::before, .glitch-text::after {
-            content: attr(data-text);
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-        .glitch-text::before {
-            left: 2px;
-            text-shadow: -1px 0 #ff00c1;
-            clip: rect(44px, 450px, 56px, 0);
-            animation: glitch-anim 5s infinite linear alternate-reverse;
-        }
-        .glitch-text::after {
-            left: -2px;
-            text-shadow: -1px 0 #00fff9;
-            clip: rect(44px, 450px, 56px, 0);
-            animation: glitch-anim2 5s infinite linear alternate-reverse;
-        }
-        @keyframes glitch-anim {
-            0% { clip: rect(14px, 9999px, 12px, 0); }
-            5% { clip: rect(84px, 9999px, 4px, 0); }
-            10% { clip: rect(2px, 9999px, 86px, 0); }
-            15% { clip: rect(6px, 9999px, 20px, 0); }
-            20% { clip: rect(54px, 9999px, 27px, 0); }
-            100% { clip: rect(32px, 9999px, 66px, 0); }
+        .border-subtle {
+            border-color: #eaeaea;
         }
       `}</style>
 
-      <div className="min-h-screen font-mono text-black selection:bg-[#ff00ff] selection:text-white">
+      <div className="min-h-screen font-sans selection:bg-black selection:text-white">
         <Navbar />
         
-        <header className="max-w-6xl mx-auto px-4 pt-32 pb-16 text-center border-b-4 border-black bg-white mb-12 relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-32 h-32 bg-[#ff00ff] opacity-10 blur-xl"></div>
-          <div className="absolute bottom-0 left-0 w-32 h-32 bg-[#ccff00] opacity-10 blur-xl"></div>
-          
-          <div className="inline-block bg-black text-white px-3 py-1 text-xs font-bold uppercase tracking-[0.2em] mb-6 transform -rotate-1">
-            Real-World Implementations
+        <header className="hero-gradient pt-xl md:pt-[160px] pb-xl md:pb-xxl text-center px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="inline-block text-[0.75rem] font-semibold uppercase tracking-[0.05em] text-muted mb-md">
+              Real-World Implementations
+            </div>
+            
+            <h1 className="text-[clamp(2.5rem,5vw,4rem)] font-medium tracking-[-0.03em] leading-[1.1] mb-lg text-primary-text">
+              Curated <span className="text-accent-dark">Real AI Examples</span>
+            </h1>
+            
+            <p className="text-[1.125rem] font-normal text-muted max-w-2xl mx-auto mb-xl leading-relaxed">
+              I cut through the hype to find AI workflows you can actually use. No magic, just better prompts and practical automation.
+            </p>
+
+            {/* Search Input Pattern */}
+            <div className="relative max-w-[640px] mx-auto group">
+              <div className="absolute left-6 top-1/2 -translate-y-1/2 text-light-placeholder">
+                <Search size={20} />
+              </div>
+              <input 
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Search examples (e.g. 'marketing', 'sales ops')..."
+                className="w-full pl-[60px] pr-[60px] py-[18px] bg-white border border-[rgba(0,0,0,0.05)] rounded-md shadow-search focus:shadow-[0_8px_40px_rgba(234,201,181,0.4)] focus:border-[rgba(0,0,0,0.1)] outline-none transition-all text-[1rem] placeholder:text-light-placeholder"
+              />
+              <div className="absolute right-6 top-1/2 -translate-y-1/2 hidden md:flex items-center gap-1.5 px-2 py-1 bg-hero-tint border border-border-color rounded-sm text-[0.75rem] font-medium text-secondary-text pointer-events-none">
+                <span className="opacity-50">⌘</span> K
+              </div>
+            </div>
           </div>
-          
-          <h1 className="font-display text-4xl md:text-6xl text-black mb-6 uppercase tracking-tight leading-tight glitch-text" data-text="CURATED REAL AI EXAMPLES">
-            Curated <span className="text-[#ff00ff]">Real AI Examples</span>
-          </h1>
-          <p className="text-xl font-bold max-w-2xl mx-auto mb-8 leading-relaxed border-l-4 border-[#ccff00] pl-6 py-2 bg-gray-50">
-            I cut through the Twitter hype to find AI examples you can actually use. No magic, just better prompts.
-          </p>
         </header>
 
         {/* Category Filter */}
-        <section className="max-w-6xl mx-auto px-4 mb-12">
-          <div className="bg-white border-4 border-black brutalist-shadow relative">
-            <button 
-              onClick={() => setIsFilterExpanded(!isFilterExpanded)}
-              className="absolute -top-4 -left-4 bg-black text-[#ccff00] px-4 py-2 font-display text-xs uppercase border-2 border-black hover:translate-x-0.5 hover:translate-y-0.5 transition-all brutalist-shadow-sm flex items-center gap-2"
-            >
-              Filter by {isFilterExpanded ? '−' : '+'}
-            </button>
+        <section className="max-w-7xl mx-auto px-lg mb-xl">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-md border-b border-border-color pb-lg">
+            <CategoryFilter
+              categories={categories}
+              selectedCategory={selectedCategory}
+              onSelect={(cat) => {
+                setSelectedCategory(cat);
+              }}
+            />
             
-            <div className={`p-6 ${isFilterExpanded ? 'block' : 'hidden'}`}>
-              <CategoryFilter
-                categories={categories}
-                selectedCategory={selectedCategory}
-                onSelect={(cat) => {
-                  setSelectedCategory(cat);
-                  setIsFilterExpanded(false);
-                }}
-              />
-            </div>
-
-            <div className={`px-6 py-4 flex items-center justify-between ${isFilterExpanded ? 'border-t-2 border-black' : ''}`}>
-              <p className="text-sm font-black uppercase tracking-widest">
-                <span className="bg-black text-white px-2 py-0.5 mr-2">{filteredByCategory.length}</span>
-                {selectedCategory === 'All' ? 'Total Examples' : `Matches in ${selectedCategory}`}
-              </p>
-              <div className="flex gap-2">
-                {selectedCategory !== 'All' && (
-                  <button 
-                    onClick={() => setSelectedCategory('All')}
-                    className="text-[10px] font-black uppercase underline decoration-punk-magenta mr-4 hover:text-punk-magenta"
-                  >
-                    Clear Filter
-                  </button>
-                )}
-                <div className="w-3 h-3 bg-black"></div>
-                <div className="w-3 h-3 bg-[#ff00ff]"></div>
-                <div className="w-3 h-3 bg-[#ccff00]"></div>
-              </div>
+            <div className="flex items-center gap-4 text-[0.875rem] font-medium text-secondary-text">
+              <span>{filteredByCategory.length} {filteredByCategory.length === 1 ? 'Result' : 'Results'}</span>
+              {(selectedCategory !== 'All' || searchQuery) && (
+                <button 
+                  onClick={() => {
+                    setSelectedCategory('All');
+                    setSearchQuery('');
+                  }}
+                  className="text-accent-dark hover:underline"
+                >
+                  Clear all
+                </button>
+              )}
             </div>
           </div>
         </section>
 
         {/* Examples Grid */}
-        <main className="max-w-6xl mx-auto px-4 pb-24">
+        <main className="max-w-7xl mx-auto px-lg pb-xxl">
           {examplesToDisplay.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-xl">
               {examplesToDisplay.map((example, index) => (
                 <ExampleCard
                   key={example.id}
@@ -206,17 +186,16 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
               ))}
             </div>
           ) : (
-            <div className="text-center py-20 bg-white border-4 border-black brutalist-shadow">
-              <Search className="w-16 h-16 mx-auto mb-6 text-gray-300" />
-              <p className="font-display text-2xl text-black mb-4 uppercase">No examples found</p>
-              <p className="font-bold text-gray-600 mb-8 uppercase tracking-widest text-sm">
-                Try adjusting your search or category filter
-              </p>
+            <div className="text-center py-xxl bg-hero-tint rounded-md border border-border-color">
+              <Search className="w-12 h-12 mx-auto mb-md text-light-placeholder" />
+              <p className="text-xl font-medium text-primary-text mb-sm">No examples found</p>
+              <p className="text-muted mb-lg">Try adjusting your search or category filter</p>
               <button
                 onClick={() => {
-                  setSelectedCategory('All')
+                  setSelectedCategory('All');
+                  setSearchQuery('');
                 }}
-                className="bg-[#ccff00] border-2 border-black px-8 py-3 font-display uppercase brutalist-shadow-sm hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all"
+                className="bg-accent-dark text-white px-lg py-sm rounded-sm text-[0.875rem] font-medium hover:bg-black transition-colors"
               >
                 Clear all filters
               </button>
@@ -224,12 +203,13 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
           )}
 
           {hasMoreExamples && (
-            <div className="text-center mt-16">
+            <div className="text-center mt-xl">
               <button
                 onClick={handleLoadMore}
-                className="bg-[#ff00ff] text-white border-4 border-black px-12 py-6 font-display text-2xl uppercase brutalist-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all flex items-center justify-center gap-4 mx-auto"
+                className="inline-flex items-center gap-2 bg-accent-dark text-white px-xl py-lg rounded-sm text-[1rem] font-medium hover:bg-black transition-all group"
               >
-                Show More Stuff <Zap className="w-6 h-6 fill-current" />
+                Load More Examples
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
             </div>
           )}

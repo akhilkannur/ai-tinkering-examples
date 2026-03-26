@@ -387,29 +387,33 @@ Keep the 19 existing posts. Write new ones only when:
 - **Phase 2.3**: Setup CTA added to ExampleBody.tsx (lines 109-121)
 - **Footer cleaned**: Removed dead links (quiz, prompt-bundle, investors, jobs, learn-ai, stacks, context)
 - **sitemap-pdfs.xml deleted**
-- **Homepage redirect**: `/` now 301 redirects to `/ai-examples` (examples is the main thing)
-- **Link audit fixed**: Updated all old references (`/`, `/#newsletter`, `/#blueprints`, `/#skills`, `/ideas-database`) to point to `/ai-examples` or `/blog`
-- **Redirects updated**: `/skills` and `/blueprints` now redirect to `/ai-examples` in next.config.js
+
+### March 26 — Homepage & Navigation Overhaul ✅
+- **Homepage is now the examples page**: `pages/index.tsx` shows the full examples grid with category filters + newsletter signup form (`#newsletter` anchor)
+- **Removed corporate landing page**: Old homepage (hero → tools teaser → setup CTA layout) replaced with actual content
+- **`/ai-examples` → `/` redirect**: 301 permanent redirect so old links still work
+- **Fixed redirect loop**: Removed the old `/ → /ai-examples` redirect from `next.config.js` that would have caused an infinite loop
+- **All redirects updated**: `/example/*`, `/blueprints`, `/skills`, `/ai-examples/category/productivity` now point to `/` instead of `/ai-examples`
+- **Navbar fixed**: Logo, EXAMPLES link, and `isHomePage` check all point to `/`
+- **Footer cleaned up**:
+  - Newsletter link → `/#newsletter` (scrolls to signup form on homepage)
+  - Removed "Claude Code Guide" and "Gemini CLI Guide" links (setup page leftovers)
+  - Removed "Works with: Claude / ChatGPT / Gemini / All Major Tools" badge
+  - Examples link → `/`
+- **Sitemap updated**: Removed `/ai-examples` from static pages in `generate-sitemap.js` (it's a redirect now)
+- **Removed Heyo chatbot**: Deleted embed script from `_app.tsx`
 
 ### Issues Found ⚠️
-1. **Static sitemap.xml outdated**: Contains only 139 URLs, but build generates 181 URLs. The static file needs regeneration.
-2. **Missing URLs in static sitemap**:
-   - `/agent-setup-service` not included
-   - Individual `/ai-examples/{category}/{slug}` pages missing
-3. **Dead pages not deleted (Phase 3)**: Still present but noindexed — waiting for Google de-index
-
-### How Dead Pages Work
-- Pages like `/skills`, `/how-to`, `/500-ways-to-use-llms-for-work` still exist as files
-- Each has `<meta name="robots" content="noindex, nofollow" />` — Google won't index them
-- robots.txt blocks crawlers: `Disallow: /skills/`, etc.
-- Old URLs redirect to `/ai-examples` via next.config.js
-- Phase 3 (deletion) planned for Week 4+ after Google de-indexes
+1. **Dead pages not deleted (Phase 3)**: Still present but noindexed — waiting for Google de-index
+2. **~15-20 legacy pages still indexed** (`/investors`, `/jobs`, `/ai-workplace-quiz`, `/learn-ai`, etc.) — no harm, will deprioritize naturally
 
 ### Next Steps
-1. [x] Regenerate sitemap.xml to match build output (181 URLs)
-2. [x] Deploy updated site (homepage redirect + link audit)
-3. [ ] Monitor GSC for 404 reduction
-4. [ ] Phase 3 deletion in 2-4 weeks
+1. [x] Regenerate sitemap.xml to match build output
+2. [x] Deploy updated site
+3. [x] Fix homepage to show examples directly
+4. [x] Remove leftover UI elements (Heyo chatbot, Works With badge, setup guide footer links)
+5. [ ] Monitor GSC for 404 reduction
+6. [ ] Phase 3 deletion in 2-4 weeks
 
 ---
 
@@ -437,6 +441,16 @@ Week 1, Day 4 (Link Audit - March 25):
   ✅ Updated next.config.js: /skills and /blueprints now redirect to /ai-examples
   ✅ Deployed
 
+Week 1, Day 5 (Homepage & Cleanup - March 26):
+  ✅ Moved examples content to homepage (/ is now the examples grid)
+  ✅ /ai-examples 301 redirects to / (not the other way around)
+  ✅ Removed redirect loop (/ → /ai-examples removed from next.config.js)
+  ✅ Navbar: logo + links all point to /
+  ✅ Footer: newsletter → /#newsletter form, removed setup guide links + Works With badge
+  ✅ Removed Heyo chatbot from _app.tsx
+  ✅ Removed /ai-examples from sitemap generator
+  ✅ Deployed
+
 Week 2-4:
   ☑ Monitor GSC — confirm noindexed pages dropping out
   ☐ Start adding 2-3 curated examples per week (Phase 4.1)
@@ -453,8 +467,9 @@ Week 4+:
 
 ```
 realaiexamples.com/
-├── /                          → 301 redirect to /ai-examples
-├── /ai-examples               → Curated real-world AI examples (THE core)
+├── /                          → Curated real-world AI examples + newsletter signup (THE core)
+│   └── /#newsletter           → Newsletter signup form
+├── /ai-examples               → 301 redirect to /
 │   ├── /category/{cat}        → Category filters
 │   └── /{category}/{slug}     → Individual example pages (with setup CTA)
 ├── /tools                     → AI tool directory

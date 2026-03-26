@@ -45,29 +45,31 @@ export default function Navbar() {
           }}
         />
       </Head>
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b-4 border-black ${
-        scrolled || !isHomePage ? 'bg-white py-2' : 'bg-white/90 py-4'
+      <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${
+        scrolled || !isHomePage 
+          ? 'bg-white/90 backdrop-blur-md border-b border-border-color py-4' 
+          : 'bg-white/50 backdrop-blur-sm border-b border-transparent py-5'
       }`}>
-      <div className="container mx-auto px-4 max-w-7xl">
+      <div className="max-w-7xl mx-auto px-lg md:px-[48px]">
         <div className="flex justify-between items-center h-16">
-          <div className="flex items-center gap-8">
+          <div className="flex items-center gap-12">
             <div className="flex-shrink-0">
-              <Link href="/" className="flex items-center gap-2 group">
-                <div className="w-10 h-10 bg-black flex items-center justify-center text-[#ccff00] font-display text-2xl transform -rotate-6 transition-transform group-hover:rotate-0">R</div>
-                <span className="font-display text-xl tracking-tighter uppercase text-black">Real AI<span className="text-[#ccff00] bg-black px-1 ml-1">Examples</span></span>
+              <Link href="/" className="flex items-center gap-3 group">
+                <div className="w-6 h-6 bg-accent-dark text-white flex items-center justify-center text-[0.75rem] font-semibold rounded-[4px_4px_12px_4px] transition-transform group-hover:scale-105">R</div>
+                <span className="text-[1.25rem] font-semibold tracking-[-0.02em] text-primary-text uppercase">Real AI</span>
               </Link>
             </div>
             
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-1">
+            <div className="hidden lg:flex items-center space-x-8">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`px-3 py-1 text-xs font-black tracking-widest transition-all duration-200 border-b-2 uppercase ${
+                  className={`text-[0.875rem] font-medium transition-colors duration-200 ${
                     router.pathname === link.href
-                      ? 'bg-[#ccff00] border-black text-black'
-                      : 'border-transparent text-black hover:bg-[#ccff00] hover:border-black'
+                      ? 'text-primary-text'
+                      : 'text-secondary-text hover:text-primary-text'
                   }`}
                 >
                   {link.label}
@@ -83,7 +85,7 @@ export default function Navbar() {
           <div className="lg:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2 text-black hover:bg-punk-lime border-2 border-transparent hover:border-black transition-all"
+              className="p-2 text-primary-text hover:bg-hero-tint rounded-md transition-all"
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -93,16 +95,16 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden absolute top-full left-0 right-0 bg-white border-b-4 border-black p-4 animate-in slide-in-from-top-4 duration-300">
-          <div className="space-y-2">
+        <div className="lg:hidden absolute top-full left-0 right-0 bg-white border-b border-border-color p-lg animate-in slide-in-from-top-4 duration-300 shadow-xl">
+          <div className="space-y-1">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`block px-4 py-3 text-sm font-black tracking-widest uppercase border-2 border-transparent ${
+                className={`block px-md py-lg text-[0.875rem] font-medium rounded-md transition-colors ${
                   router.pathname === link.href
-                    ? 'bg-punk-lime border-black text-black'
-                    : 'text-black hover:bg-punk-lime hover:border-black'
+                    ? 'bg-hero-tint text-primary-text'
+                    : 'text-secondary-text hover:bg-hero-tint hover:text-primary-text'
                 }`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >

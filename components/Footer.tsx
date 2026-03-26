@@ -4,50 +4,47 @@ import { Terminal } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white pt-20 pb-12 border-t-4 border-white font-sans relative overflow-hidden">
-      {/* Background Dots */}
-      <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(#fff 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
-
-      <div className="container mx-auto px-4 max-w-6xl relative z-10">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-12 mb-16">
+    <footer className="bg-white text-primary-text pt-xxl pb-xl border-t border-border-color font-sans relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-lg md:px-[48px] relative z-10">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-xl mb-xl">
           {/* Column 1: Site */}
           <div>
-            <h4 className="font-display text-lg text-punk-lime uppercase tracking-widest mb-6">// SITE</h4>
-            <ul className="space-y-3 text-sm font-black uppercase tracking-widest">
+            <h4 className="text-[0.75rem] font-semibold text-primary-text uppercase tracking-[0.05em] mb-lg">Site</h4>
+            <ul className="space-y-sm text-[0.875rem] font-normal text-secondary-text">
               <li>
-                <Link href="/about" className="hover:text-punk-magenta transition-colors hover:underline decoration-wavy">About</Link>
+                <Link href="/about" className="hover:text-primary-text transition-colors">About</Link>
               </li>
               <li>
-                <Link href="/" className="hover:text-punk-magenta transition-colors hover:underline decoration-wavy">Examples</Link>
+                <Link href="/" className="hover:text-primary-text transition-colors">Examples</Link>
               </li>
               <li>
-                <Link href="/tools" className="hover:text-punk-magenta transition-colors hover:underline decoration-wavy">Tool Directory</Link>
+                <Link href="/tools" className="hover:text-primary-text transition-colors">Tool Directory</Link>
               </li>
               <li>
-                <Link href="/blog" className="hover:text-punk-magenta transition-colors hover:underline decoration-wavy">Blog</Link>
+                <Link href="/blog" className="hover:text-primary-text transition-colors">Blog</Link>
               </li>
             </ul>
           </div>
 
           {/* Column 2: Get Started */}
           <div>
-            <h4 className="font-display text-lg text-punk-cyan uppercase tracking-widest mb-6">// GET STARTED</h4>
-            <ul className="space-y-3 text-sm font-black uppercase tracking-widest">
+            <h4 className="text-[0.75rem] font-semibold text-primary-text uppercase tracking-[0.05em] mb-lg">Get Started</h4>
+            <ul className="space-y-sm text-[0.875rem] font-normal text-secondary-text">
               <li>
-                <Link href="/agent-setup-service" className="text-punk-magenta hover:text-white transition-colors">Setup Sprint — $99</Link>
+                <Link href="/agent-setup-service" className="text-primary-text font-medium hover:underline">Setup Sprint — $99</Link>
               </li>
             </ul>
           </div>
 
           {/* Column 3: Connect */}
           <div>
-            <h4 className="font-display text-lg text-punk-lime uppercase tracking-widest mb-6">// CONNECT</h4>
-            <ul className="space-y-3 text-sm font-black uppercase tracking-widest">
+            <h4 className="text-[0.75rem] font-semibold text-primary-text uppercase tracking-[0.05em] mb-lg">Connect</h4>
+            <ul className="space-y-sm text-[0.875rem] font-normal text-secondary-text">
               <li>
-                <Link href="/#newsletter" className="hover:text-punk-magenta transition-colors hover:underline decoration-wavy">Newsletter</Link>
+                <Link href="/#newsletter" className="hover:text-primary-text transition-colors">Newsletter</Link>
               </li>
               <li>
-                <a href="https://salestools.club/" target="_blank" rel="noopener noreferrer" className="hover:text-punk-magenta transition-colors hover:underline decoration-wavy uppercase">
+                <a href="https://salestools.club/" target="_blank" rel="noopener noreferrer" className="hover:text-primary-text transition-colors">
                   Salestools Club
                 </a>
               </li>
@@ -56,24 +53,22 @@ export default function Footer() {
 
           {/* Column 4: Legal */}
           <div>
-            <h4 className="font-display text-lg text-punk-cyan uppercase tracking-widest mb-6">// LEGAL</h4>
-            <ul className="space-y-3 text-sm font-black uppercase tracking-widest">
+            <h4 className="text-[0.75rem] font-semibold text-primary-text uppercase tracking-[0.05em] mb-lg">Legal</h4>
+            <ul className="space-y-sm text-[0.875rem] font-normal text-secondary-text">
               <li>
-                <Link href="/privacy" className="hover:text-punk-magenta transition-colors hover:underline decoration-wavy">Privacy Policy</Link>
+                <Link href="/privacy" className="hover:text-primary-text transition-colors">Privacy Policy</Link>
               </li>
               <li>
-                <Link href="/terms" className="hover:text-punk-magenta transition-colors hover:underline decoration-wavy">Terms of Service</Link>
+                <Link href="/terms" className="hover:text-primary-text transition-colors">Terms of Service</Link>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="pt-12 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-8">
+        <div className="pt-lg border-t border-border-color flex flex-col md:flex-row justify-between items-center gap-md">
           <div className="flex items-center gap-4 group">
-             <div className="w-10 h-10 bg-white border-2 border-black flex items-center justify-center text-black brutalist-shadow-sm group-hover:rotate-6 transition-transform">
-                <Terminal className="w-5 h-5" />
-             </div>
-             <p className="text-gray-500 text-[10px] font-mono uppercase tracking-[0.2em]">
+             <div className="w-6 h-6 bg-accent-dark text-white flex items-center justify-center text-[0.75rem] font-semibold rounded-[4px_4px_12px_4px]">R</div>
+             <p className="text-secondary-text text-[0.75rem] font-normal">
                &copy; {new Date().getFullYear()} Real AI Examples. Curated for business professionals.
              </p>
           </div>

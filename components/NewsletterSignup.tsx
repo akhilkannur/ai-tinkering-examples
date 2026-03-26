@@ -20,7 +20,7 @@ export default function NewsletterSignup() {
 
       if (response.ok) {
         setStatus('success')
-        setMessage('✓ Welcome to the Lab! Check your inbox.')
+        setMessage('✓ Welcome! Please check your inbox for a confirmation email.')
         setEmail('')
       } else {
         const errData = await response.json().catch(() => ({}));
@@ -34,39 +34,39 @@ export default function NewsletterSignup() {
   }
   
   return (
-    <div id="newsletter" className="max-w-2xl mx-auto p-8 md:p-12 my-12 border-4 border-black bg-white brutalist-shadow relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-32 h-32 bg-[#ccff00] opacity-10 blur-xl"></div>
-      
-      <h2 className="text-3xl md:text-5xl font-display text-black uppercase leading-[0.9] glitch-text" data-text="JOIN THE LAB">Join the <span className="text-[#ff00ff]">Lab</span></h2>
-      <p className="text-sm text-black font-black font-mono mt-4 leading-relaxed uppercase tracking-tighter italic border-l-4 border-[#ccff00] pl-4">
-        // Free blueprints starter pack and occasional updates on AI tactics.
-      </p>
-      
-      <form onSubmit={handleSubmit} className="mt-8 flex flex-col sm:flex-row gap-4 relative z-10">
-        <input 
-          aria-label="email" 
-          placeholder="ENTER_EMAIL_FOR_ACCESS" 
-          className="flex-1 px-6 py-4 bg-gray-50 border-2 border-black text-black focus:bg-[#ccff00] outline-none font-display text-base uppercase placeholder:text-gray-300" 
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-          disabled={status === 'loading' || status === 'success'}
-        />
-        <button 
-          type="submit"
-          className="px-10 py-4 bg-black text-[#ccff00] font-display uppercase text-xl transition-all brutalist-shadow-sm hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none disabled:bg-gray-400"
-          disabled={status === 'loading' || status === 'success'}
-        >
-          {status === 'loading' ? 'WAITING...' : 'Join_Now'}
-        </button>
-      </form>
-      
-      {message && (
-        <div className={`mt-6 p-4 border-2 border-black font-black font-mono text-xs uppercase tracking-widest ${status === 'success' ? 'bg-[#ccff00]/20 text-emerald-700' : 'bg-red-50 text-red-600'}`}>
-          {message}
-        </div>
-      )}
+    <div id="newsletter" className="max-w-3xl mx-auto p-xl md:p-xxl my-xxl bg-hero-tint rounded-md border border-border-color text-center relative overflow-hidden">
+      <div className="max-w-lg mx-auto relative z-10">
+        <h2 className="text-[2rem] font-medium tracking-tight text-primary-text mb-md">Join the Newsletter</h2>
+        <p className="text-[1rem] text-secondary-text mb-xl leading-relaxed">
+          Get practical AI workflows, automation blueprints, and tactical guides delivered directly to your inbox.
+        </p>
+        
+        <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-sm">
+          <input 
+            aria-label="Email address" 
+            placeholder="your@email.com" 
+            className="flex-1 px-lg py-sm bg-white border border-border-color rounded-sm text-primary-text focus:border-secondary-text outline-none text-[1rem] placeholder:text-light-placeholder transition-all" 
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+            disabled={status === 'loading' || status === 'success'}
+          />
+          <button 
+            type="submit"
+            className="px-xl py-sm bg-accent-dark text-white rounded-sm text-[0.875rem] font-medium hover:bg-black transition-all disabled:opacity-50"
+            disabled={status === 'loading' || status === 'success'}
+          >
+            {status === 'loading' ? 'Joining...' : 'Subscribe'}
+          </button>
+        </form>
+        
+        {message && (
+          <div className={`mt-lg text-[0.875rem] font-medium ${status === 'success' ? 'text-emerald-600' : 'text-red-500'}`}>
+            {message}
+          </div>
+        )}
+      </div>
     </div>
   )
 }

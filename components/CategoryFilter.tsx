@@ -6,13 +6,13 @@ interface CategoryFilterProps {
 
 export default function CategoryFilter({ categories, selectedCategory, onSelect }: CategoryFilterProps) {
   return (
-    <div className="flex flex-wrap gap-3 py-2">
+    <div className="flex flex-wrap gap-sm">
       <button 
         onClick={() => onSelect('All')} 
-        className={`px-6 py-2 border-2 border-black font-display text-sm uppercase transition-all brutalist-shadow-sm ${
+        className={`px-lg py-sm rounded-pill border text-[0.875rem] font-medium transition-all ${
           selectedCategory === 'All' 
-            ? 'bg-black text-[#ccff00]' 
-            : 'bg-white text-black hover:bg-[#ccff00]'
+            ? 'bg-accent-dark border-accent-dark text-white' 
+            : 'bg-transparent border-border-color text-secondary-text hover:border-secondary-text hover:text-primary-text'
         }`}
       >
         All
@@ -21,10 +21,10 @@ export default function CategoryFilter({ categories, selectedCategory, onSelect 
         <button 
           key={category} 
           onClick={() => onSelect(category)} 
-          className={`px-6 py-2 border-2 border-black font-display text-sm uppercase transition-all brutalist-shadow-sm ${
+          className={`px-lg py-sm rounded-pill border text-[0.875rem] font-medium transition-all ${
             selectedCategory === category 
-              ? 'bg-black text-[#ccff00]' 
-              : 'bg-white text-black hover:bg-[#ccff00]'
+              ? 'bg-accent-dark border-accent-dark text-white' 
+              : 'bg-transparent border-border-color text-secondary-text hover:border-secondary-text hover:text-primary-text'
           }`}
         >
           {category}
