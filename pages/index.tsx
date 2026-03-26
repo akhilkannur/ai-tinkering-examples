@@ -11,8 +11,6 @@ import { localSocialExamples } from '../lib/social-examples-data'
 import { generateItemListSchema } from '../lib/seo-utils'
 import { Zap, Search, ArrowRight, Calendar } from 'lucide-react'
 
-const INITIAL_DISPLAY_COUNT = 12;
-
 interface ExamplesPageProps {
   examples: EnrichedExampleRecord[]
   categories: string[]
@@ -179,7 +177,7 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
                     </div>
                     <div className="h-[2px] flex-grow bg-accent-dark/10"></div>
                     {batchIdx === 0 && (
-                      <div className="text-[10px] font-mono font-bold text-[#ccff00] bg-black px-2 py-1 uppercase tracking-widest">
+                      <div className="text-[10px] font-mono font-bold text-black bg-[#ccff00] px-2 py-1 uppercase tracking-widest border border-black">
                         New Drop
                       </div>
                     )}
@@ -218,20 +216,6 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
 
         <NewsletterSignup />
 
-        <ExampleModal
-          example={modalExample}
-          isOpen={isModalOpen}
-          onClose={handleCloseModal}
-        />
-      </div>
-    </>
-  )
-}
-
-        {/* Newsletter Signup */}
-        <NewsletterSignup />
-
-        {/* Modal */}
         <ExampleModal
           example={modalExample}
           isOpen={isModalOpen}
