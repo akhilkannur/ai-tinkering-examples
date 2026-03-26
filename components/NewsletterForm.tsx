@@ -27,41 +27,41 @@ export default function NewsletterForm() {
       }
     } catch (err: any) {
       console.error('Newsletter submission error:', err);
-      setErrorMessage(err.message || 'Something went wrong. Try again?');
+      setErrorMessage(err.message || 'Something went wrong.');
       setStatus('error');
     }
   };
 
   if (status === 'success') {
     return (
-      <div className="py-3 px-6 bg-[#ccff00] border-2 border-accent-dark shadow-brutalist-sm text-center">
-        <p className="text-black font-mono text-[10px] font-bold uppercase tracking-widest">✓ Welcome! Check your inbox.</p>
+      <div className="py-2 px-4 border border-black text-center">
+        <p className="text-black font-sans text-sm font-medium">✓ Check your inbox to confirm.</p>
       </div>
     );
   }
 
   return (
     <div className="w-full">
-      <form onSubmit={handleSubmit} className="flex gap-2">
+      <form onSubmit={handleSubmit} className="flex gap-0 border-2 border-black focus-within:ring-2 focus-within:ring-black transition-all">
         <input 
           type="email" 
           placeholder="your@email.com" 
           required
-          className="flex-1 px-4 py-2 bg-white border-2 border-accent-dark text-primary-text font-sans text-sm focus:bg-hero-tint outline-none transition-all placeholder:text-light-placeholder" 
+          className="flex-1 px-4 py-3 bg-white text-primary-text font-sans text-sm outline-none placeholder:text-gray-400" 
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           disabled={status === 'loading'}
         />
         <button 
           type="submit"
-          className="px-6 py-2 bg-black text-[#ccff00] font-display uppercase text-xs font-black border-2 border-accent-dark shadow-brutalist-sm hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none disabled:bg-gray-400 transition-all"
+          className="px-6 py-3 bg-black text-white font-sans text-sm font-bold hover:bg-gray-900 disabled:bg-gray-400 transition-all uppercase tracking-widest"
           disabled={status === 'loading'}
         >
           {status === 'loading' ? '...' : 'Join'}
         </button>
       </form>
       {status === 'error' && (
-        <p className="text-red-600 font-bold font-mono text-[10px] mt-2 uppercase text-center tracking-tighter">⚠️ {errorMessage}</p>
+        <p className="text-red-600 font-medium text-[10px] mt-2 text-center">{errorMessage}</p>
       )}
     </div>
   );

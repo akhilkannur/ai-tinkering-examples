@@ -5,22 +5,18 @@ import Navbar from '../../components/Navbar';
 import { aiTools, AiTool } from '../../lib/ai-tools-data';
 import AIToolCard from '../../components/AIToolCard';
 import ToolDetailModal from '../../components/ToolDetailModal';
-import { Filter, Sparkles, Command, Plus, Briefcase, ArrowRight } from 'lucide-react';
+import { Filter, Briefcase, ArrowRight } from 'lucide-react';
 
 // Helper to group by week (deterministic)
 function groupByWeekTools(items: AiTool[]) {
-  // Sort items by name to ensure stable layout
   const sorted = [...items].sort((a, b) => a.name.localeCompare(b.name));
-  
   const batches: { [key: string]: AiTool[] } = {};
   const itemsPerBatch = 12;
   const numBatches = Math.ceil(sorted.length / itemsPerBatch);
   
-  // Starting from last week (Mar 23) going back
   for (let i = 0; i < numBatches; i++) {
     const startDate = new Date('2026-03-23');
     startDate.setDate(startDate.getDate() - (i * 7));
-    
     const weekLabel = startDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
     batches[weekLabel] = sorted.slice(i * itemsPerBatch, (i + 1) * itemsPerBatch);
   }
@@ -45,59 +41,46 @@ export default function ToolsIndex() {
   }, [filteredTools]);
 
   const slugify = (text: string) => {
-    return text
-      .toString()
-      .toLowerCase()
-      .trim()
-      .replace(/\s+/g, '-')
-      .replace(/[^\w\-]+/g, '')
-      .replace(/\-\-+/g, '-');
+    return text.toString().toLowerCase().trim().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '').replace(/\-\-+/g, '-');
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-white font-sans text-black selection:bg-[#ff00ff] selection:text-white">
+    <div className="flex flex-col min-h-screen bg-white font-sans text-black selection:bg-black selection:text-white">
       <Head>
-        <title>AI Tools Directory | Curated List | Real AI Examples</title>
-        <meta name="description" content="A curated database of the latest AI tools for business and productivity. Hand-picked for Sales, Marketing, and Ops tinkerers." key="description" />
-        <meta property="og:type" content="website" key="og:type" />
-        <meta property="og:title" content="AI Tools Directory | Curated List" key="og:title" />
-        <meta property="og:description" content="A curated database of the latest AI tools for business and productivity. Hand-picked for Sales, Marketing, and Ops tinkerers." key="og:description" />
-        <meta property="og:image" content="https://realaiexamples.com/api/og?mode=home" key="og:image" />
+        <title>AI Tools Directory | Real AI Examples</title>
+        <meta name="description" content="A curated database of the latest AI tools for business and productivity." key="description" />
       </Head>
 
       <Navbar />
 
-      <main className="container mx-auto px-4 pt-16 md:pt-[100px] pb-16 max-w-7xl relative z-10">
+      <main className="container mx-auto px-4 pt-16 md:pt-24 pb-16 max-w-7xl relative z-10">
         
-        <div className="text-center mb-16 max-w-3xl mx-auto relative border-b-4 border-black pb-12">
-          <div className="absolute top-0 right-0 w-32 h-32 bg-[#ff00ff] opacity-10 blur-xl"></div>
-          <div className="absolute bottom-0 left-0 w-32 h-32 bg-[#ccff00] opacity-10 blur-xl"></div>
-          
-          <h1 className="text-5xl md:text-7xl font-display text-black mb-6 uppercase leading-[0.9]">
-            The Tool <span className="text-[#ff00ff]">Directory</span>
+        <div className="text-center mb-16 max-w-3xl mx-auto border-b border-gray-100 pb-12">
+          <h1 className="text-5xl md:text-7xl font-display font-black text-black mb-6 uppercase leading-[0.95] tracking-tight">
+            The Tool <br/> Directory.
           </h1>
           
-          <p className="text-xl md:text-2xl text-black font-black leading-relaxed font-mono uppercase bg-[#ccff00] px-4 py-2 border-2 border-black rotate-1 inline-block mb-8">
-            No spam. Just real AI tools for real work.
+          <p className="text-lg md:text-xl font-medium text-gray-600 leading-relaxed mb-10 max-w-xl mx-auto">
+            No spam. No hype. Just the AI tools people are actually using to ship and scale.
           </p>
 
           <div className="flex flex-col items-center gap-4">
-            <p className="text-xs text-black font-black uppercase tracking-widest">
-              Building something? <a href="https://forms.gle/KqN82GGdCohshtVx8" target="_blank" rel="noopener noreferrer" className="text-[#ff00ff] hover:bg-black hover:text-white px-1 transition-colors underline decoration-2 decoration-black underline-offset-4 text-xs">Pitch it here.</a>
+            <p className="text-[10px] font-mono font-bold text-gray-400 uppercase tracking-widest">
+              Building something? <a href="https://forms.gle/KqN82GGdCohshtVx8" target="_blank" rel="noopener noreferrer" className="text-black hover:underline px-1 transition-colors underline-offset-4">Pitch it here.</a>
             </p>
           </div>
         </div>
 
         <div className="mb-12 sticky top-24 z-30 flex justify-center">
-          <div className="bg-white border-4 border-black p-3 brutalist-shadow-sm flex overflow-x-auto gap-3 max-w-full scrollbar-hide">
+          <div className="bg-white border-2 border-black p-3 flex overflow-x-auto gap-2 max-w-full scrollbar-hide">
             {categories.map(cat => (
               <button
                 key={cat}
                 onClick={() => setSelectedCategory(cat)}
-                className={`px-4 py-1.5 font-display text-[10px] uppercase border-2 border-black transition-all ${
+                className={`px-4 py-1.5 font-mono text-[10px] font-bold uppercase tracking-widest transition-all ${
                   selectedCategory === cat 
-                    ? 'bg-black text-[#ccff00]' 
-                    : 'bg-white text-black hover:bg-[#ccff00]'
+                    ? 'bg-black text-white' 
+                    : 'bg-white text-gray-400 hover:text-black'
                 }`}
               >
                 {cat}
@@ -106,18 +89,18 @@ export default function ToolsIndex() {
           </div>
         </div>
 
-        <div className="space-y-12">
+        <div className="space-y-16">
           {toolBatches.map(([week, tools], batchIdx) => tools.length > 0 && (
-            <div key={week} className="space-y-6">
-              <div className="flex items-center gap-4">
-                <div className={`px-4 py-1 border-2 border-black font-display text-sm uppercase shadow-brutalist-sm ${batchIdx === 0 ? 'bg-[#ff00ff] text-white' : 'bg-white text-black'}`}>
-                  Week of {week}
-                </div>
-                <div className="h-[2px] flex-grow bg-black/10"></div>
+            <div key={week}>
+              <div className="flex items-center gap-4 mb-8">
+                <span className="text-xs font-mono font-black uppercase tracking-[0.2em] text-gray-400">
+                  Drop / {week}
+                </span>
+                <div className="h-px flex-grow bg-gray-100"></div>
                 {batchIdx === 0 && (
-                  <div className="text-[10px] font-mono font-bold text-black bg-[#ccff00] px-2 py-1 uppercase tracking-widest border border-black shadow-brutalist-sm">
-                    Newly Added
-                  </div>
+                  <span className="text-[10px] font-mono font-bold text-black bg-white border border-black px-2 py-0.5 uppercase tracking-widest">
+                    New
+                  </span>
                 )}
               </div>
               
@@ -138,20 +121,6 @@ export default function ToolsIndex() {
               </div>
             </div>
           ))}
-
-          {filteredTools.length === 0 && (
-            <div className="text-center py-16 bg-white border-4 border-accent-dark shadow-brutalist">
-              <Filter className="w-16 h-16 text-gray-200 mx-auto mb-6 stroke-[3px]" />
-              <h3 className="text-3xl font-display text-black mb-4 uppercase">No tools found</h3>
-              <p className="text-black font-black font-mono uppercase text-sm mb-10 tracking-widest">Try a different category.</p>
-              <button 
-                onClick={() => {setSelectedCategory('All')}}
-                className="bg-[#ccff00] border-2 border-black px-8 py-3 font-display uppercase brutalist-shadow-sm hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all"
-              >
-                Clear filters
-              </button>
-            </div>
-          )}
         </div>
 
         {selectedTool && (

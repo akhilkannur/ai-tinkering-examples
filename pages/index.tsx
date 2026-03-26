@@ -6,10 +6,27 @@ import ExampleCard from '../components/ExampleCard'
 import CategoryFilter from '../components/CategoryFilter'
 import ExampleModal from '../components/ExampleModal'
 import NewsletterForm from '../components/NewsletterForm'
-import { fetchEnrichedExamples, EnrichedExampleRecord } from '../lib/airtable'
 import { localSocialExamples } from '../lib/social-examples-data'
 import { generateItemListSchema } from '../lib/seo-utils'
-import { Search, ArrowRight } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
+
+// EnrichedExampleRecord type definition (locally for now since Airtable is dead)
+export interface EnrichedExampleRecord {
+  id: string;
+  title: string;
+  slug: string;
+  summary?: string;
+  publish_date?: string;
+  category?: string;
+  screenshots?: { url: string }[];
+  cloudinaryPublicId?: string;
+  author_name?: string;
+  author_link?: string;
+  original_link?: string;
+  isPremium?: boolean;
+  sponsor?: any;
+  workflow_steps?: string;
+}
 
 interface ExamplesPageProps {
   examples: EnrichedExampleRecord[]
@@ -19,22 +36,19 @@ interface ExamplesPageProps {
 
 // Helper to group by week (deterministic)
 function groupByWeek(items: EnrichedExampleRecord[]) {
-  // Sort items by date desc then title to ensure stable layout
   const sorted = [...items].sort((a, b) => {
-    const dateDiff = new Date(b.publish_date || '2026-03-01').getTime() - new Date(a.publish_date || '2026-03-01').getTime();
-    if (dateDiff !== 0) return dateDiff;
-    return a.title.localeCompare(b.title);
+    const dateA = new Date(a.publish_date || '2026-03-01').getTime();
+    const dateB = new Date(b.publish_date || '2026-03-01').getTime();
+    return dateB - dateA || a.title.localeCompare(b.title);
   });
   
   const groups: { [key: string]: EnrichedExampleRecord[] } = {};
   const itemsPerBatch = 9;
   const numBatches = Math.ceil(sorted.length / itemsPerBatch);
   
-  // Starting from last week (Mar 23) going back
   for (let i = 0; i < numBatches; i++) {
     const startDate = new Date('2026-03-23');
     startDate.setDate(startDate.getDate() - (i * 7));
-    
     const weekLabel = startDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
     groups[weekLabel] = sorted.slice(i * itemsPerBatch, (i + 1) * itemsPerBatch);
   }
@@ -44,21 +58,14 @@ function groupByWeek(items: EnrichedExampleRecord[]) {
 
 export default function HomePage({ examples, categories, itemListSchema }: ExamplesPageProps) {
   const [selectedCategory, setSelectedCategory] = useState('All')
-  const [searchQuery, setSearchQuery] = useState('')
   const [modalExample, setModalExample] = useState<EnrichedExampleRecord | null>(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
 
   const filteredItems = useMemo(() => {
     return examples.filter(ex => {
-      const matchesCategory = selectedCategory === 'All' || ex.category === selectedCategory;
-      const matchesSearch = !searchQuery || 
-        ex.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
-        ex.summary?.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        ex.category?.toLowerCase().includes(searchQuery.toLowerCase());
-      
-      return matchesCategory && matchesSearch;
+      return selectedCategory === 'All' || ex.category === selectedCategory;
     });
-  }, [examples, selectedCategory, searchQuery]);
+  }, [examples, selectedCategory]);
 
   const weeklyBatches = useMemo(() => {
     return groupByWeek(filteredItems);
@@ -78,20 +85,8 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
     <>
       <Head>
         <title>Real AI Examples — How People Actually Use AI at Work</title>
-        <meta name="description" content="Curated real-world AI workflows with screenshots. Not prompts. Not tools. Actual examples of people automating sales, marketing, and ops." key="description" />
-        <link rel="canonical" href={`${process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com'}/`} />
-        
-        <meta property="og:title" content="Real AI Examples" key="og:title" />
-        <meta property="og:description" content="Curated real-world AI workflows with screenshots. Not prompts. Not tools. Actual examples of people automating sales, marketing, and ops." key="og:description" />
-        <meta property="og:image" content={`${process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com'}/api/og?mode=home`} key="og:image" />
-        <meta property="og:type" content="website" key="og:type" />
-
-        {itemListSchema && (
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
-          />
-        )}
+        <meta name="description" content="Curated real-world AI workflows. No magic, just better prompts and practical automation." key="description" />
+        <link rel="canonical" href="https://realaiexamples.com/" />
       </Head>
 
       <style jsx global>{`
@@ -103,9 +98,6 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
         .hero-gradient {
             background: linear-gradient(to bottom, #ffffff, #fcf9f7);
         }
-        .card-image-overlay {
-            background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.02));
-        }
         .font-display {
             font-family: 'Archivo Black', sans-serif;
         }
@@ -114,24 +106,24 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
         }
       `}</style>
 
-      <div className="min-h-screen font-sans selection:bg-accent-dark selection:text-white">
+      <div className="min-h-screen selection:bg-black selection:text-white">
         <Navbar />
         
-        <header className="hero-gradient pt-16 md:pt-[100px] pb-12 md:pb-16 text-center px-4 border-b-4 border-accent-dark">
+        <header className="pt-12 md:pt-24 pb-12 text-center px-4 border-b border-gray-100">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-[clamp(2.5rem,5vw,5rem)] font-display font-black text-primary-text uppercase leading-[0.9] mb-6 tracking-tight">
-              Curated <span className="text-secondary-text">Workflows &</span> <br className="hidden md:block" /> <span className="text-[#ff00ff]">AI Examples</span>
+            <h1 className="text-[clamp(2.5rem,6vw,4.5rem)] font-display font-black text-black uppercase leading-[0.95] mb-6 tracking-tight">
+              Real Workflows. <br/> AI Examples.
             </h1>
             
-            <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-10 max-w-2xl mx-auto">
-              <p className="text-[1rem] md:text-[1.125rem] font-medium text-black text-left leading-snug bg-[#ccff00] border-2 border-accent-dark px-4 py-3 rotate-1 md:w-1/2">
+            <div className="max-w-xl mx-auto mb-10">
+              <p className="text-lg md:text-xl font-medium text-gray-600 leading-relaxed mb-8">
                 I cut through the hype to find AI workflows you can actually use. No magic, just better prompts.
               </p>
               
-              <div className="w-full md:w-1/2">
+              <div className="max-w-md mx-auto">
                 <NewsletterForm />
-                <p className="text-[10px] font-mono font-bold text-secondary-text uppercase tracking-widest mt-2">
-                  Get the next drop in your inbox
+                <p className="text-[10px] font-mono font-bold text-gray-400 uppercase tracking-widest mt-3">
+                  Get the weekly drop
                 </p>
               </div>
             </div>
@@ -139,98 +131,57 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
         </header>
 
         <section className="max-w-7xl mx-auto px-4 mt-8 mb-8">
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 border-b-4 border-accent-dark pb-6">
-            <div className="flex-grow">
-              <CategoryFilter
-                categories={categories}
-                selectedCategory={selectedCategory}
-                onSelect={(cat) => {
-                  setSelectedCategory(cat);
-                }}
-              />
-            </div>
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 border-b border-gray-200 pb-6">
+            <CategoryFilter
+              categories={categories}
+              selectedCategory={selectedCategory}
+              onSelect={setSelectedCategory}
+            />
             
-            <div className="flex items-center gap-4">
-              <div className="relative group min-w-[200px]">
-                <div className="absolute left-3 top-1/2 -translate-y-1/2 text-light-placeholder">
-                  <Search size={14} />
-                </div>
-                <input 
-                  type="text"
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  placeholder="Search..."
-                  className="w-full pl-9 pr-3 py-1.5 bg-white border-2 border-accent-dark shadow-brutalist-sm focus:translate-x-0.5 focus:translate-y-0.5 focus:shadow-none outline-none transition-all text-xs font-medium"
-                />
-              </div>
-
-              <div className="hidden md:flex items-center gap-4 text-[10px] font-mono font-bold text-secondary-text uppercase tracking-widest flex-shrink-0">
-                <span>{filteredItems.length} {filteredItems.length === 1 ? 'Match' : 'Matches'}</span>
-                {(selectedCategory !== 'All' || searchQuery) && (
-                  <button 
-                    onClick={() => {
-                      setSelectedCategory('All');
-                      setSearchQuery('');
-                    }}
-                    className="text-accent-dark underline underline-offset-4 decoration-2"
-                  >
-                    Clear
-                  </button>
-                )}
-              </div>
+            <div className="hidden md:flex items-center gap-4 text-[10px] font-mono font-bold text-gray-400 uppercase tracking-widest">
+              <span>{filteredItems.length} {filteredItems.length === 1 ? 'Example' : 'Examples'}</span>
+              {selectedCategory !== 'All' && (
+                <button 
+                  onClick={() => setSelectedCategory('All')}
+                  className="text-black underline underline-offset-4 decoration-1"
+                >
+                  Reset
+                </button>
+              )}
             </div>
           </div>
         </section>
 
         <main className="max-w-7xl mx-auto px-4 pb-16">
-          {weeklyBatches.length > 0 ? (
-            <div className="space-y-12">
-              {weeklyBatches.map(([week, items], batchIdx) => (
-                <div key={week} className="space-y-6">
-                  <div className="flex items-center gap-4">
-                    <div className={`px-4 py-1 border-2 border-accent-dark font-display text-sm uppercase shadow-brutalist-sm ${batchIdx === 0 ? 'bg-[#ff00ff] text-white' : 'bg-white text-primary-text'}`}>
-                      Week of {week}
-                    </div>
-                    <div className="h-[2px] flex-grow bg-accent-dark/10"></div>
-                    {batchIdx === 0 && (
-                      <div className="text-[10px] font-mono font-bold text-black bg-[#ccff00] px-2 py-1 uppercase tracking-widest border border-black shadow-brutalist-sm">
-                        New Drop
-                      </div>
-                    )}
-                  </div>
-                  
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {items.map((example, index) => (
-                      <ExampleCard
-                        key={example.id}
-                        example={example}
-                        priority={batchIdx === 0 && index < 6}
-                        onOpen={handleOpenModal}
-                      />
-                    ))}
-                  </div>
-                </div>
-              ))}
+          {weeklyBatches.map(([week, items], batchIdx) => items.length > 0 && (
+            <div key={week} className="mb-16">
+              <div className="flex items-center gap-4 mb-8">
+                <span className="text-xs font-mono font-black uppercase tracking-[0.2em] text-gray-400">
+                  Drop / {week}
+                </span>
+                <div className="h-px flex-grow bg-gray-100"></div>
+                {batchIdx === 0 && (
+                  <span className="text-[10px] font-mono font-bold text-black bg-white border border-black px-2 py-0.5 uppercase tracking-widest">
+                    Latest
+                  </span>
+                )}
+              </div>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+                {items.map((example) => (
+                  <ExampleCard
+                    key={example.id}
+                    example={example as any}
+                    onOpen={handleOpenModal}
+                  />
+                ))}
+              </div>
             </div>
-          ) : (
-            <div className="text-center py-16 bg-white border-4 border-accent-dark shadow-brutalist">
-              <Search className="w-12 h-12 mx-auto mb-4 text-light-placeholder" />
-              <p className="text-2xl font-display font-black text-primary-text mb-2 uppercase">No examples found</p>
-              <button
-                onClick={() => {
-                  setSelectedCategory('All');
-                  setSearchQuery('');
-                }}
-                className="bg-[#ccff00] text-black px-8 py-3 border-2 border-accent-dark shadow-brutalist-sm hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all text-sm font-display font-black uppercase"
-              >
-                Clear all filters
-              </button>
-            </div>
-          )}
+          ))}
         </main>
 
         <ExampleModal
-          example={modalExample}
+          example={modalExample as any}
           isOpen={isModalOpen}
           onClose={handleCloseModal}
         />
@@ -242,20 +193,20 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
 export const getStaticProps: GetStaticProps<ExamplesPageProps> = async () => {
   try {
     const rawExamples = localSocialExamples;
-    const dateSorted = rawExamples.sort((a, b) => {
+    const dateSorted = [...rawExamples].sort((a, b) => {
       const dateA = new Date(a.publish_date || 0).getTime();
       const dateB = new Date(b.publish_date || 0).getTime();
       return dateB - dateA;
     });
     const categories = Array.from(new Set(dateSorted.map(e => e.category).filter(Boolean))) as string[];
     const SITE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com';
-    const itemListSchema = generateItemListSchema(dateSorted, SITE_URL);
+    const itemListSchema = generateItemListSchema(dateSorted as any, SITE_URL);
     return { 
-      props: { examples: dateSorted, categories, itemListSchema },
+      props: { examples: dateSorted as any, categories, itemListSchema },
       revalidate: 86400
     }
   } catch (error) {
-    console.error('Failed to prepare data for homepage:', error)
+    console.error('Failed to prepare data:', error)
     return { props: { examples: [], categories: [], itemListSchema: null } }
   }
 }
