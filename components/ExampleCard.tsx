@@ -64,7 +64,7 @@ export default function ExampleCard({
           )}
           
           <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0">
-             <span className="text-[10px] font-mono font-bold text-white border-2 border-accent-dark px-2 py-0.5 bg-accent-dark uppercase tracking-widest flex items-center gap-1 shadow-brutalist-sm">
+             <span className="text-[10px] font-mono font-bold text-black border-2 border-accent-dark px-2 py-0.5 bg-[#ccff00] uppercase tracking-widest flex items-center gap-1 shadow-brutalist-sm">
                View <ArrowRight className="w-3 h-3 stroke-[3px]" />
              </span>
           </div>
@@ -119,13 +119,13 @@ export default function ExampleCard({
         </div>
 
         <div className="flex flex-col flex-grow p-5 bg-white">
-          <h3 className="text-[1.125rem] font-display font-black leading-tight text-primary-text mb-md group-hover:text-secondary-text transition-colors duration-200 uppercase">
+          <h3 className="text-[1.125rem] font-display font-black leading-tight text-primary-text mb-md group-hover:text-[#ff00ff] transition-colors duration-200 uppercase">
             {example.title}
           </h3>
 
           {example.summary && (
             <p className="text-[10px] font-mono font-bold text-primary-text line-clamp-2 leading-relaxed uppercase tracking-tighter">
-              // {example.summary}
+              {example.summary}
             </p>
           )}
         </div>

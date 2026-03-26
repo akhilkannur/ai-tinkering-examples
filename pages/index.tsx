@@ -9,7 +9,7 @@ import NewsletterSignup from '../components/NewsletterSignup'
 import { fetchEnrichedExamples, EnrichedExampleRecord } from '../lib/airtable'
 import { localSocialExamples } from '../lib/social-examples-data'
 import { generateItemListSchema } from '../lib/seo-utils'
-import { Zap, Search, ArrowRight } from 'lucide-react'
+import { Zap, Search, ArrowRight, Calendar } from 'lucide-react'
 
 const INITIAL_DISPLAY_COUNT = 12;
 
@@ -19,14 +19,32 @@ interface ExamplesPageProps {
   itemListSchema: any
 }
 
+// Helper to group by week
+function groupByWeek(items: EnrichedExampleRecord[]) {
+  const groups: { [key: string]: EnrichedExampleRecord[] } = {};
+  
+  items.forEach(item => {
+    const date = new Date(item.publish_date || '2026-03-01');
+    // Get Monday of the week
+    const day = date.getDay();
+    const diff = date.getDate() - day + (day === 0 ? -6 : 1);
+    const monday = new Date(date.setDate(diff));
+    const weekLabel = monday.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+    
+    if (!groups[weekLabel]) groups[weekLabel] = [];
+    groups[weekLabel].push(item);
+  });
+
+  return Object.entries(groups).sort((a, b) => new Date(b[0]).getTime() - new Date(a[0]).getTime());
+}
+
 export default function HomePage({ examples, categories, itemListSchema }: ExamplesPageProps) {
   const [selectedCategory, setSelectedCategory] = useState('All')
   const [searchQuery, setSearchQuery] = useState('')
-  const [visibleExamplesCount, setVisibleExamplesCount] = useState(INITIAL_DISPLAY_COUNT)
   const [modalExample, setModalExample] = useState<EnrichedExampleRecord | null>(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
 
-  const filteredByCategory = useMemo(() => {
+  const filteredItems = useMemo(() => {
     return examples.filter(ex => {
       const matchesCategory = selectedCategory === 'All' || ex.category === selectedCategory;
       const matchesSearch = !searchQuery || 
@@ -38,17 +56,9 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
     });
   }, [examples, selectedCategory, searchQuery]);
 
-  const examplesToDisplay = useMemo(() => {
-    return filteredByCategory.slice(0, visibleExamplesCount);
-  }, [filteredByCategory, visibleExamplesCount]);
-
-  useEffect(() => {
-    setVisibleExamplesCount(INITIAL_DISPLAY_COUNT);
-  }, [selectedCategory, searchQuery]);
-
-  const handleLoadMore = () => {
-    setVisibleExamplesCount(prevCount => prevCount + INITIAL_DISPLAY_COUNT);
-  };
+  const weeklyBatches = useMemo(() => {
+    return groupByWeek(filteredItems);
+  }, [filteredItems]);
 
   const handleOpenModal = (example: EnrichedExampleRecord) => {
     setModalExample(example)
@@ -60,25 +70,17 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
     setTimeout(() => setModalExample(null), 300)
   }
 
-  const hasMoreExamples = visibleExamplesCount < filteredByCategory.length;
-
   return (
     <>
       <Head>
         <title>Real AI Examples — See How People Actually Use AI at Work</title>
         <meta name="description" content="Curated real-world AI workflows with screenshots. Not prompts. Not tools. Actual examples of people automating sales, marketing, and ops." key="description" />
-        <meta name="keywords" content="AI examples, real AI examples, AI workflows, automation, prompts, artificial intelligence, guides" />
         <link rel="canonical" href={`${process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com'}/`} />
         
         <meta property="og:title" content="Real AI Examples — See How People Actually Use AI at Work" key="og:title" />
         <meta property="og:description" content="Curated real-world AI workflows with screenshots. Not prompts. Not tools. Actual examples of people automating sales, marketing, and ops." key="og:description" />
         <meta property="og:image" content={`${process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com'}/api/og?mode=home`} key="og:image" />
         <meta property="og:type" content="website" key="og:type" />
-
-        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
-        <meta name="twitter:title" content="Real AI Examples — See How People Actually Use AI at Work" key="twitter:title" />
-        <meta name="twitter:description" content="Curated real-world AI workflows with screenshots. Not prompts. Not tools. Actual examples of people automating sales, marketing, and ops." key="twitter:description" />
-        <meta name="twitter:image" content={`${process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com'}/api/og?mode=home`} key="twitter:image" />
 
         {itemListSchema && (
           <script
@@ -100,12 +102,6 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
         .card-image-overlay {
             background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.02));
         }
-        .text-muted {
-            color: #666666;
-        }
-        .border-subtle {
-            border-color: #eaeaea;
-        }
         .font-display {
             font-family: 'Archivo Black', sans-serif;
         }
@@ -119,19 +115,14 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
         
         <header className="hero-gradient pt-xl md:pt-[160px] pb-xl md:pb-xxl text-center px-4 border-b-4 border-accent-dark">
           <div className="max-w-4xl mx-auto">
-            <div className="inline-block text-[10px] font-mono font-bold uppercase tracking-[0.2em] text-secondary-text mb-md bg-white px-2 py-0.5 border border-border-color">
-              // Real-World Implementations
-            </div>
-            
             <h1 className="text-[clamp(2.5rem,5vw,5rem)] font-display font-black tracking-[-0.02em] leading-[0.9] mb-lg text-primary-text uppercase">
-              Curated <span className="text-secondary-text">Real AI</span> <br className="hidden md:block" /> Examples
+              Curated <span className="text-secondary-text">Real AI</span> <br className="hidden md:block" /> <span className="text-[#ff00ff]">Examples</span>
             </h1>
             
-            <p className="text-[10px] md:text-[12px] font-mono font-bold text-secondary-text max-w-xl mx-auto mb-xl leading-relaxed uppercase tracking-widest bg-hero-tint border-2 border-accent-dark px-4 py-2 rotate-1 inline-block">
-              // I cut through the hype to find AI workflows you can actually use. No magic, just better prompts.
+            <p className="text-[10px] md:text-[12px] font-mono font-bold text-black max-w-xl mx-auto mb-xl leading-relaxed uppercase tracking-widest bg-[#ccff00] border-2 border-accent-dark px-4 py-2 rotate-1 inline-block">
+              I cut through the hype to find AI workflows you can actually use. No magic, just better prompts.
             </p>
 
-            {/* Search Input Pattern */}
             <div className="relative max-w-[640px] mx-auto group">
               <div className="absolute left-6 top-1/2 -translate-y-1/2 text-light-placeholder">
                 <Search size={20} />
@@ -140,17 +131,16 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="SEARCH_EXAMPLES (E.G. 'SALES', 'MARKETING')..."
+                placeholder="SEARCH EXAMPLES (E.G. 'SALES', 'MARKETING')..."
                 className="w-full pl-[60px] pr-[60px] py-[18px] bg-white border-4 border-accent-dark shadow-brutalist focus:translate-x-0.5 focus:translate-y-0.5 focus:shadow-none outline-none transition-all text-[0.875rem] font-mono font-bold uppercase placeholder:text-light-placeholder"
               />
-              <div className="absolute right-6 top-1/2 -translate-y-1/2 hidden md:flex items-center gap-1.5 px-2 py-1 bg-hero-tint border-2 border-accent-dark text-[10px] font-mono font-bold text-secondary-text pointer-events-none">
+              <div className="absolute right-6 top-1/2 -translate-y-1/2 hidden md:flex items-center gap-1.5 px-2 py-1 bg-[#ccff00] border-2 border-accent-dark text-[10px] font-mono font-bold text-black pointer-events-none">
                 <span className="opacity-50">CMD</span> K
               </div>
             </div>
           </div>
         </header>
 
-        {/* Category Filter */}
         <section className="max-w-7xl mx-auto px-lg mt-xl mb-xl">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-md border-b-4 border-accent-dark pb-lg">
             <CategoryFilter
@@ -162,7 +152,7 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
             />
             
             <div className="flex items-center gap-4 text-[10px] font-mono font-bold text-secondary-text uppercase tracking-widest">
-              <span>{filteredByCategory.length} {filteredByCategory.length === 1 ? 'Match' : 'Matches'}</span>
+              <span>{filteredItems.length} {filteredItems.length === 1 ? 'Match' : 'Matches'}</span>
               {(selectedCategory !== 'All' || searchQuery) && (
                 <button 
                   onClick={() => {
@@ -178,48 +168,65 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
           </div>
         </section>
 
-        {/* Examples Grid */}
         <main className="max-w-7xl mx-auto px-lg pb-xxl">
-          {examplesToDisplay.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-xl">
-              {examplesToDisplay.map((example, index) => (
-                <ExampleCard
-                  key={example.id}
-                  example={example}
-                  priority={index < 6}
-                  onOpen={handleOpenModal}
-                />
+          {weeklyBatches.length > 0 ? (
+            <div className="space-y-xxl">
+              {weeklyBatches.map(([week, items], batchIdx) => (
+                <div key={week} className="space-y-lg">
+                  <div className="flex items-center gap-4">
+                    <div className={`px-4 py-1 border-2 border-accent-dark font-display text-sm uppercase shadow-brutalist-sm ${batchIdx === 0 ? 'bg-[#ff00ff] text-white' : 'bg-white text-primary-text'}`}>
+                      Batch: Week of {week}
+                    </div>
+                    <div className="h-[2px] flex-grow bg-accent-dark/10"></div>
+                    {batchIdx === 0 && (
+                      <div className="text-[10px] font-mono font-bold text-[#ccff00] bg-black px-2 py-1 uppercase tracking-widest">
+                        New Drop
+                      </div>
+                    )}
+                  </div>
+                  
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-xl">
+                    {items.map((example, index) => (
+                      <ExampleCard
+                        key={example.id}
+                        example={example}
+                        priority={batchIdx === 0 && index < 6}
+                        onOpen={handleOpenModal}
+                      />
+                    ))}
+                  </div>
+                </div>
               ))}
             </div>
           ) : (
             <div className="text-center py-xxl bg-white border-4 border-accent-dark shadow-brutalist">
               <Search className="w-12 h-12 mx-auto mb-md text-light-placeholder" />
               <p className="text-2xl font-display font-black text-primary-text mb-sm uppercase">No examples found</p>
-              <p className="text-[10px] font-mono font-bold text-secondary-text mb-lg uppercase tracking-widest">// Try adjusting your search or category filter</p>
+              <p className="text-[10px] font-mono font-bold text-secondary-text mb-lg uppercase tracking-widest">Try adjusting your search or category filter</p>
               <button
                 onClick={() => {
                   setSelectedCategory('All');
                   setSearchQuery('');
                 }}
-                className="bg-accent-dark text-white px-lg py-sm border-2 border-accent-dark shadow-brutalist-sm hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all text-[0.875rem] font-display font-black uppercase"
+                className="bg-[#ccff00] text-black px-lg py-sm border-2 border-accent-dark shadow-brutalist-sm hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all text-[0.875rem] font-display font-black uppercase"
               >
                 Clear all filters
               </button>
             </div>
           )}
-
-          {hasMoreExamples && (
-            <div className="text-center mt-xl">
-              <button
-                onClick={handleLoadMore}
-                className="inline-flex items-center gap-4 bg-accent-dark text-white px-xl py-lg border-4 border-accent-dark shadow-brutalist hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all group font-display font-black text-xl uppercase"
-              >
-                Load More Examples
-                <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
-              </button>
-            </div>
-          )}
         </main>
+
+        <NewsletterSignup />
+
+        <ExampleModal
+          example={modalExample}
+          isOpen={isModalOpen}
+          onClose={handleCloseModal}
+        />
+      </div>
+    </>
+  )
+}
 
         {/* Newsletter Signup */}
         <NewsletterSignup />
