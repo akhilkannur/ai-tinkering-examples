@@ -57,7 +57,7 @@ export default function ToolsIndex() {
           --color-purple: #6A37AC;
           --color-grey: #D8D8D8;
           --font-display: 'Arial Black', 'Impact', system-ui, -apple-system, sans-serif;
-          --font-body: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+          --font-body: 'Newsreader', 'Georgia', serif;
           --font-mono: 'Courier New', Courier, monospace;
           --space-xs: 0.5rem;
           --space-sm: 1rem;
@@ -66,13 +66,28 @@ export default function ToolsIndex() {
           --space-xl: 8rem;
         }
 
+        @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap');
+
         body {
           background-color: var(--bg-base) !important;
           color: var(--text-primary) !important;
           font-family: var(--font-body) !important;
           -webkit-font-smoothing: antialiased;
-          line-height: 1.2;
+          line-height: 1.5;
           overflow-x: hidden;
+        }
+
+        body::before {
+          content: '';
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          pointer-events: none;
+          z-index: 9999;
+          opacity: 0.4;
+          background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
         }
 
         .tools-wrapper {
@@ -287,6 +302,12 @@ export default function ToolsIndex() {
           display: flex;
           flex-direction: column;
           cursor: pointer;
+          transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+        }
+
+        .tool-card:hover {
+          transform: translateY(-4px);
+          box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.15);
         }
 
         .tool-card-visual {
