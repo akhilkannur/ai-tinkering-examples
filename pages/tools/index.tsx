@@ -3,24 +3,32 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { aiTools, AiTool } from '../../lib/ai-tools-data';
 import ToolDetailModal from '../../components/ToolDetailModal';
-import { Filter } from 'lucide-react';
+import { Filter, ChevronDown, ArrowRight, ShoppingBag, Search, Command } from 'lucide-react';
 
-const CARD_COLORS = ['#333333', '#6A37AC', '#D8D8D8', '#C5CC5C', '#7B7662'];
+const CARD_COLORS = ['#D8D8D8', '#6A37AC', '#C5CC5C', '#7B7662', '#333333'];
 
 export default function ToolsIndex() {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
+  const [selectedPrice, setSelectedPrice] = useState<string>('All');
+  const [selectedSkill, setSelectedSkill] = useState<string>('All');
   const [selectedTool, setSelectedTool] = useState<AiTool | null>(null);
   const [email, setEmail] = useState('');
   const [formStatus, setFormStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
   const categories = ['All', ...Array.from(new Set(aiTools.map(t => t.category)))];
+  const prices = ['All', ...Array.from(new Set(aiTools.map(t => t.tags.price)))];
+  const skills = ['All', ...Array.from(new Set(aiTools.map(t => t.tags.skill)))];
 
   const filteredTools = useMemo(() => {
-    return aiTools.filter(tool => selectedCategory === 'All' || tool.category === selectedCategory);
-  }, [selectedCategory]);
+    return aiTools.filter(tool => {
+      const matchCat = selectedCategory === 'All' || tool.category === selectedCategory;
+      const matchPrice = selectedPrice === 'All' || tool.tags.price === selectedPrice;
+      const matchSkill = selectedSkill === 'All' || tool.tags.skill === selectedSkill;
+      return matchCat && matchPrice && matchSkill;
+    });
+  }, [selectedCategory, selectedPrice, selectedSkill]);
 
-  const slugify = (text: string) =>
-    text.toLowerCase().trim().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '').replace(/\-\-+/g, '-');
+  const featuredTool = aiTools[0]; // Highlight the first tool as the "Drop"
 
   const handleNewsletterSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -40,613 +48,539 @@ export default function ToolsIndex() {
   return (
     <>
       <Head>
-        <title>AI Tools Directory | Real AI Examples</title>
-        <meta name="description" content="A curated database of the latest AI tools for business and productivity." key="description" />
+        <title>The Stack | Real AI Examples</title>
+        <meta name="description" content="A curated drop of AI tools for business professionals." key="description" />
       </Head>
 
       <style jsx global>{`
         :root {
           --bg-base: #FFFFFF;
           --text-primary: #000000;
-          --text-secondary: #555555;
+          --text-secondary: #666666;
           --border-heavy: #000000;
           --border-light: #E0E0E0;
-          --color-charcoal: #333333;
-          --color-olive: #7B7662;
-          --color-acid: #C5CC5C;
-          --color-purple: #6A37AC;
-          --color-grey: #D8D8D8;
+          --color-neon: #ccff00;
+          --color-pink: #ff00ff;
           --font-display: 'Arial Black', 'Impact', system-ui, -apple-system, sans-serif;
-          --font-body: 'Newsreader', 'Georgia', serif;
           --font-mono: 'Courier New', Courier, monospace;
-          --space-xs: 0.5rem;
+          --font-body: 'Newsreader', 'Georgia', serif;
           --space-sm: 1rem;
           --space-md: 2rem;
           --space-lg: 4rem;
-          --space-xl: 8rem;
         }
-
-        @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap');
 
         body {
           background-color: var(--bg-base) !important;
           color: var(--text-primary) !important;
           font-family: var(--font-body) !important;
-          -webkit-font-smoothing: antialiased;
-          line-height: 1.5;
           overflow-x: hidden;
         }
 
-        .tools-wrapper {
+        .store-container {
           max-width: 1600px;
           margin: 0 auto;
           padding: 0 var(--space-md);
-          position: relative;
-          z-index: 1;
-          min-height: 100vh;
-          display: flex;
-          flex-direction: column;
         }
 
-        .tools-header {
+        /* --- Global Header --- */
+        .store-nav-header {
           display: flex;
           justify-content: space-between;
           align-items: center;
           padding: var(--space-md) 0;
-          border-bottom: 2px solid var(--border-heavy);
-          margin-bottom: var(--space-xl);
-        }
-
-        .tools-logo {
-          font-family: var(--font-display);
-          font-size: 2rem;
-          text-transform: uppercase;
-          letter-spacing: -0.05em;
-          color: var(--text-primary);
-          text-decoration: none;
-        }
-
-        .tools-nav {
-          display: flex;
-          gap: var(--space-md);
-          font-family: var(--font-mono);
-          font-size: 0.85rem;
-          text-transform: uppercase;
-        }
-
-        .tools-nav a {
-          color: var(--text-primary);
-          text-decoration: none;
-        }
-
-        .tools-nav a:hover {
-          text-decoration: underline;
-        }
-
-        .tools-nav a.active {
-          font-weight: bold;
-        }
-
-        .tools-hero {
-          text-align: center;
-          margin-bottom: var(--space-xl);
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-        }
-
-        .tools-hero-title {
-          font-family: var(--font-display);
-          font-size: clamp(3rem, 8vw, 6rem);
-          text-transform: uppercase;
-          line-height: 0.9;
-          letter-spacing: -0.02em;
-          margin-bottom: var(--space-md);
-          max-width: 15ch;
-        }
-
-        .tools-newsletter {
-          display: flex;
-          width: 100%;
-          max-width: 600px;
-          border: 2px solid var(--border-heavy);
-        }
-
-        .tools-newsletter input {
-          flex-grow: 1;
-          border: none;
-          padding: var(--space-sm) var(--space-md);
-          font-family: var(--font-mono);
-          font-size: 1rem;
-          background: transparent;
-          outline: none;
-          color: var(--text-primary);
-        }
-
-        .tools-newsletter input::placeholder {
-          color: var(--text-secondary);
-        }
-
-        .tools-newsletter button {
-          background: var(--text-primary);
-          color: var(--bg-base);
-          border: none;
-          border-left: 2px solid var(--border-heavy);
-          padding: 0 var(--space-md);
-          font-family: var(--font-display);
-          text-transform: uppercase;
-          cursor: pointer;
-          transition: background 0.2s, color 0.2s;
-          font-size: 0.9rem;
-          white-space: nowrap;
-        }
-
-        .tools-newsletter button:hover {
-          background: var(--bg-base);
-          color: var(--text-primary);
-        }
-
-        .tools-newsletter button:disabled {
-          opacity: 0.5;
-          cursor: not-allowed;
-        }
-
-        .tools-hero-meta {
-          margin-top: var(--space-sm);
-          font-family: var(--font-mono);
-          font-size: 0.75rem;
-          color: var(--text-secondary);
-          text-transform: uppercase;
-        }
-
-        .tools-newsletter-success {
-          font-family: var(--font-mono);
-          font-size: 0.85rem;
-          text-transform: uppercase;
-          border: 2px solid var(--border-heavy);
-          padding: var(--space-sm) var(--space-md);
-          max-width: 600px;
-          width: 100%;
-          text-align: center;
-        }
-
-        .tools-cat-nav {
-          margin-bottom: var(--space-xl);
-          border-top: 1px solid var(--border-light);
-          border-bottom: 1px solid var(--border-light);
-          padding: var(--space-sm) 0;
-          overflow-x: auto;
-          white-space: nowrap;
-          -ms-overflow-style: none;
-          scrollbar-width: none;
-        }
-
-        .tools-cat-nav::-webkit-scrollbar {
-          display: none;
-        }
-
-        .tools-cat-list {
-          display: inline-flex;
-          gap: var(--space-md);
-          padding: 0 var(--space-md);
-          list-style: none;
-        }
-
-        .tools-cat-item {
-          font-family: var(--font-mono);
-          font-size: 0.85rem;
-          text-transform: uppercase;
-          color: var(--text-secondary);
-          cursor: pointer;
-          transition: color 0.2s;
-          white-space: nowrap;
-        }
-
-        .tools-cat-item:hover,
-        .tools-cat-item.active {
-          color: var(--text-primary);
-          font-weight: bold;
-        }
-
-        .tools-section-header {
-          display: flex;
-          justify-content: space-between;
-          align-items: flex-end;
           border-bottom: 4px solid var(--border-heavy);
-          padding-bottom: var(--space-xs);
-          margin-bottom: var(--space-md);
           position: sticky;
           top: 0;
-          background: rgba(255, 255, 255, 0.92);
-          backdrop-filter: blur(8px);
-          z-index: 10;
-          padding-top: var(--space-sm);
+          background: white;
+          z-index: 100;
         }
 
-        .tools-section-title {
+        .store-logo {
           font-family: var(--font-display);
-          font-size: clamp(1.5rem, 3vw, 2.5rem);
+          font-size: 1.5rem;
           text-transform: uppercase;
-          letter-spacing: -0.02em;
+          text-decoration: none;
+          color: black;
+          letter-spacing: -0.05em;
         }
 
-        .tools-section-badge {
-          font-family: var(--font-mono);
-          background: var(--text-primary);
-          color: var(--bg-base);
-          padding: 2px 8px;
-          font-size: 0.8rem;
-          font-weight: bold;
-        }
-
-        .tools-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-          gap: var(--space-lg) var(--space-md);
-        }
-
-        .tool-card {
+        .store-nav-links {
           display: flex;
-          flex-direction: column;
-          cursor: pointer;
-          transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+          gap: var(--space-md);
+          font-family: var(--font-mono);
+          font-size: 0.75rem;
+          text-transform: uppercase;
+          font-weight: 900;
         }
 
-        .tool-card:hover {
-          transform: translateY(-4px);
-          box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.15);
+        .store-nav-links a.active {
+          background: var(--color-neon);
+          border: 2px solid black;
+          padding: 2px 6px;
+          box-shadow: 3px 3px 0 black;
         }
 
-        .tool-card-visual {
-          aspect-ratio: 4/3;
-          width: 100%;
-          margin-bottom: var(--space-sm);
-          position: relative;
-          overflow: hidden;
+        /* --- Featured Drop (Hero) --- */
+        .featured-drop {
+          display: grid;
+          grid-template-columns: 1.2fr 1fr;
+          border: 4px solid black;
+          margin-top: var(--space-md);
+          min-height: 500px;
+          box-shadow: 12px 12px 0 black;
+          background: white;
+        }
+
+        .drop-visual {
+          background: #6A37AC;
+          border-right: 4px solid black;
           display: flex;
           align-items: center;
           justify-content: center;
-          transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-          background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.06'/%3E%3C/svg%3E");
-          background-size: cover;
-          background-position: center;
-        }
-
-        .tool-card-visual img {
-          object-fit: contain;
-          max-width: 40%;
-          max-height: 40%;
-        }
-
-        .tool-card:hover .tool-card-visual {
-          transform: translateY(-4px);
-        }
-
-        .tool-card-visual.color-light::after {
-          color: rgba(0, 0, 0, 0.2);
-        }
-
-        .tool-card-meta {
-          display: flex;
-          justify-content: space-between;
-          align-items: flex-start;
-          margin-bottom: 4px;
-          font-family: var(--font-mono);
-          font-size: 0.75rem;
-          text-transform: uppercase;
-        }
-
-        .tool-card-category {
-          color: var(--text-secondary);
-        }
-
-        .tool-card-id {
-          color: var(--border-light);
-        }
-
-        .tool-card-title {
-          font-family: var(--font-body);
-          font-weight: 700;
-          font-size: 1.1rem;
-          line-height: 1.2;
-          text-transform: uppercase;
-          margin-bottom: 0.5rem;
-        }
-
-        .tool-card-desc {
-          font-family: var(--font-body);
-          font-size: 0.9rem;
-          color: var(--text-secondary);
-          margin-bottom: 1rem;
-          flex: 1;
-          display: -webkit-box;
-          -webkit-line-clamp: 3;
-          -webkit-box-orient: vertical;
+          position: relative;
           overflow: hidden;
         }
 
-        .tool-card-price {
-          align-self: flex-start;
-          border: 2px solid var(--border-heavy);
-          padding: 4px 8px;
-          font-family: var(--font-mono);
-          font-size: 0.75rem;
-          font-weight: bold;
-          text-transform: uppercase;
-          background: var(--bg-base);
-          color: var(--text-primary);
-        }
-
-        .tools-empty {
-          text-align: center;
-          padding: var(--space-xl) 0;
-          font-family: var(--font-mono);
-          text-transform: uppercase;
-        }
-
-        .tools-empty h3 {
+        .drop-tag {
+          position: absolute;
+          top: 30px;
+          left: -40px;
+          background: var(--color-neon);
+          color: black;
           font-family: var(--font-display);
-          font-size: 2rem;
+          padding: 8px 60px;
+          transform: rotate(-45deg);
+          border: 2px solid black;
+          font-size: 0.7rem;
+        }
+
+        .drop-info {
+          padding: var(--space-lg);
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+
+        .drop-label {
+          font-family: var(--font-mono);
+          font-size: 0.7rem;
+          font-weight: 900;
+          text-transform: uppercase;
           margin-bottom: var(--space-sm);
         }
 
-        .tools-empty p {
-          color: var(--text-secondary);
-          font-size: 0.85rem;
+        .drop-title {
+          font-family: var(--font-display);
+          font-size: clamp(2.5rem, 5vw, 4.5rem);
+          line-height: 0.85;
+          text-transform: uppercase;
           margin-bottom: var(--space-md);
         }
 
-        .tools-empty button {
-          background: var(--text-primary);
-          color: var(--bg-base);
-          border: 2px solid var(--border-heavy);
-          padding: var(--space-xs) var(--space-md);
+        .drop-desc {
+          font-size: 1.25rem;
+          margin-bottom: var(--space-lg);
+          max-width: 35ch;
+          color: #333;
+        }
+
+        .drop-cta {
+          align-self: flex-start;
+          background: black;
+          color: white;
+          padding: 16px 32px;
           font-family: var(--font-display);
           text-transform: uppercase;
-          cursor: pointer;
-          transition: background 0.2s, color 0.2s;
-        }
-
-        .tools-empty button:hover {
-          background: var(--bg-base);
-          color: var(--text-primary);
-        }
-
-        .tools-footer {
-          padding: var(--space-xl) 0 var(--space-md);
-          border-top: 2px solid var(--border-heavy);
-          font-family: var(--font-mono);
-          font-size: 0.85rem;
-          text-transform: uppercase;
-          color: var(--text-secondary);
-          margin-top: auto;
-        }
-
-        .tools-footer a {
-          color: var(--text-secondary);
           text-decoration: none;
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          border: 2px solid black;
+          box-shadow: 6px 6px 0 var(--color-neon);
+          transition: transform 0.1s;
         }
 
-        .tools-footer a:hover {
-          color: var(--text-primary);
-          text-decoration: underline;
+        .drop-cta:hover {
+          transform: translate(-2px, -2px);
+          box-shadow: 8px 8px 0 var(--color-neon);
         }
 
-        .tools-footer-grid {
+        /* --- Store Layout --- */
+        .store-layout {
           display: grid;
-          grid-template-columns: repeat(3, 1fr);
+          grid-template-columns: 240px 1fr;
           gap: var(--space-lg);
+          margin-top: var(--space-lg);
           margin-bottom: var(--space-lg);
         }
 
-        .tools-footer-grid ul {
-          list-style: none;
-          padding: 0;
-          margin: 0;
-          display: flex;
-          flex-direction: column;
-          gap: 0.5rem;
+        /* --- Sidebar --- */
+        .store-sidebar {
+          position: sticky;
+          top: 100px;
+          height: fit-content;
         }
 
-        .tools-footer-heading {
+        .filter-group {
+          margin-bottom: var(--space-md);
+        }
+
+        .filter-header {
           font-family: var(--font-display);
-          font-size: 0.75rem;
-          color: var(--text-primary);
+          font-size: 0.8rem;
           text-transform: uppercase;
-          letter-spacing: 0.05em;
+          border-bottom: 2px solid black;
+          padding-bottom: 4px;
           margin-bottom: var(--space-sm);
         }
 
-        .tools-footer-bottom {
-          padding-top: var(--space-sm);
-          border-top: 1px solid var(--border-light);
-          font-size: 0.7rem;
-          letter-spacing: 0.1em;
+        .filter-list {
+          list-style: none;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
         }
 
-        @media (max-width: 640px) {
-          .tools-header {
-            flex-direction: column;
-            gap: var(--space-sm);
-            align-items: flex-start;
-          }
-          .tools-grid {
-            grid-template-columns: 1fr;
-          }
-          .tools-newsletter {
-            flex-direction: column;
-          }
-          .tools-newsletter button {
-            border-left: none;
-            border-top: 2px solid var(--border-heavy);
-            padding: var(--space-sm);
-          }
-          .tools-footer-grid {
-            grid-template-columns: 1fr 1fr;
-            gap: var(--space-md);
-          }
+        .filter-btn {
+          font-family: var(--font-mono);
+          font-size: 0.7rem;
+          text-transform: uppercase;
+          text-align: left;
+          background: none;
+          border: none;
+          cursor: pointer;
+          color: #666;
+          padding: 2px 0;
+          font-weight: 700;
+        }
+
+        .filter-btn:hover { color: black; }
+        .filter-btn.active { 
+          color: black; 
+          text-decoration: underline; 
+          text-decoration-thickness: 2px;
+          text-underline-offset: 4px;
+        }
+
+        /* --- Tool Grid --- */
+        .store-toolbar {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border-bottom: 4px solid black;
+          padding-bottom: 8px;
+          margin-bottom: var(--space-md);
+        }
+
+        .toolbar-label {
+          font-family: var(--font-mono);
+          font-size: 0.75rem;
+          font-weight: 900;
+          text-transform: uppercase;
+        }
+
+        .tool-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+          gap: var(--space-md);
+        }
+
+        .tool-tile {
+          display: flex;
+          flex-direction: column;
+          border: 4px solid black;
+          background: white;
+          cursor: pointer;
+          transition: transform 0.2s;
+          position: relative;
+        }
+
+        .tool-tile:hover {
+          transform: translate(-4px, -4px);
+          box-shadow: 8px 8px 0 black;
+        }
+
+        .tile-visual {
+          aspect-ratio: 1/1;
+          border-bottom: 4px solid black;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          overflow: hidden;
+        }
+
+        .tile-visual img {
+          width: 40%;
+          height: 40%;
+          object-fit: contain;
+        }
+
+        .tile-badge {
+          position: absolute;
+          top: 12px;
+          right: 12px;
+          background: black;
+          color: white;
+          font-family: var(--font-mono);
+          font-size: 0.6rem;
+          padding: 2px 6px;
+          text-transform: uppercase;
+          font-weight: 900;
+        }
+
+        .tile-info {
+          padding: var(--space-sm);
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+        }
+
+        .tile-meta {
+          font-family: var(--font-mono);
+          font-size: 0.65rem;
+          text-transform: uppercase;
+          color: #666;
+          display: flex;
+          justify-content: space-between;
+        }
+
+        .tile-name {
+          font-family: var(--font-display);
+          font-size: 1.1rem;
+          text-transform: uppercase;
+          line-height: 1;
+        }
+
+        .tile-price {
+          margin-top: 8px;
+          background: var(--color-neon);
+          align-self: flex-start;
+          padding: 2px 8px;
+          border: 2px solid black;
+          font-family: var(--font-mono);
+          font-size: 0.7rem;
+          font-weight: 900;
+          text-transform: uppercase;
+        }
+
+        /* --- Footer --- */
+        .store-footer {
+          border-top: 4px solid black;
+          padding: var(--space-lg) 0;
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: var(--space-md);
+          font-family: var(--font-mono);
+          font-size: 0.7rem;
+          text-transform: uppercase;
+        }
+
+        .footer-header {
+          font-family: var(--font-display);
+          font-size: 0.75rem;
+          margin-bottom: 12px;
+        }
+
+        .footer-list { list-style: none; padding: 0; }
+        .footer-list li { margin-bottom: 6px; }
+        .footer-list a { color: #666; text-decoration: none; }
+        .footer-list a:hover { color: black; text-decoration: underline; }
+
+        @media (max-width: 1024px) {
+          .featured-drop { grid-template-columns: 1fr; }
+          .drop-visual { border-right: none; border-bottom: 4px solid black; height: 300px; }
+          .store-layout { grid-template-columns: 1fr; }
+          .store-sidebar { display: none; }
         }
       `}</style>
 
-      <div className="tools-wrapper">
+      <div className="store-container">
         {/* Header */}
-        <header className="tools-header">
-          <Link href="/" className="tools-logo">realaiexamples</Link>
-          <nav className="tools-nav">
+        <header className="store-nav-header">
+          <Link href="/" className="store-logo">realaiexamples</Link>
+          <nav className="store-nav-links">
             <Link href="/">Archive</Link>
-            <Link href="/tools" className="active">Tools</Link>
-            <Link href="/blog">Blog</Link>
-            <Link href="/about">About</Link>
+            <Link href="/tools" className="active">The Stack</Link>
+            <Link href="/blog">Editorial</Link>
+            <Link href="/about">Info</Link>
           </nav>
         </header>
 
-        {/* Hero */}
-        <section className="tools-hero">
-          <h1 className="tools-hero-title">AI Tools.<br />Curated.</h1>
-
-          {formStatus === 'success' ? (
-            <div className="tools-newsletter-success">✓ Check your inbox to confirm</div>
-          ) : (
-            <form className="tools-newsletter" onSubmit={handleNewsletterSubmit}>
-              <input
-                type="email"
-                placeholder="ENTER EMAIL TO UNLOCK THE VAULT..."
-                required
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                disabled={formStatus === 'loading'}
-              />
-              <button type="submit" disabled={formStatus === 'loading'}>
-                {formStatus === 'loading' ? '...' : 'Join'}
-              </button>
-            </form>
-          )}
-
-          <div className="tools-hero-meta">
-            Join 14,204+ Operators
-            {' · '}
-            <a
-              href="https://forms.gle/KqN82GGdCohshtVx8"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ textDecoration: 'underline' }}
-            >
-              Pitch your tool
-            </a>
+        {/* Featured Drop */}
+        <section className="featured-drop">
+          <div className="drop-visual">
+            <span className="drop-tag">NEW DROP</span>
+            <img src={featuredTool.image} alt={featuredTool.name} />
           </div>
-          {formStatus === 'error' && (
-            <div className="tools-hero-meta" style={{ color: '#c00', marginTop: '0.5rem' }}>
-              Something went wrong. Try again.
-            </div>
-          )}
+          <div className="drop-info">
+            <span className="drop-label">Staff Pick / {featuredTool.category}</span>
+            <h1 className="drop-title">{featuredTool.name}</h1>
+            <p className="drop-desc">{featuredTool.description}</p>
+            <button className="drop-cta" onClick={() => setSelectedTool(featuredTool)}>
+              Get Tool <ShoppingBag size={20} />
+            </button>
+          </div>
         </section>
 
-        {/* Category Filter */}
-        <nav className="tools-cat-nav">
-          <ul className="tools-cat-list">
-            {categories.map((cat) => (
-              <li
-                key={cat}
-                className={`tools-cat-item ${selectedCategory === cat ? 'active' : ''}`}
-                onClick={() => setSelectedCategory(cat)}
-              >
-                {cat === 'All' ? 'All Tools' : cat}
-              </li>
-            ))}
-          </ul>
-        </nav>
-
-        {/* Main Content */}
-        <main style={{ flex: 1 }}>
-          {filteredTools.length === 0 ? (
-            <div className="tools-empty">
-              <h3>No Tools Found</h3>
-              <p>Try a different category.</p>
-              <button onClick={() => setSelectedCategory('All')}>Clear Filters</button>
-            </div>
-          ) : (
-            <section style={{ marginBottom: 'var(--space-xl)' }}>
-              <header className="tools-section-header">
-                <h2 className="tools-section-title">
-                  {selectedCategory === 'All'
-                    ? 'THE STACK'
-                    : selectedCategory.toUpperCase()}
-                  {' / '}
-                  {filteredTools.length} TOOLS
-                </h2>
-                <span className="tools-section-badge">UPDATED</span>
-              </header>
-
-              <div className="tools-grid">
-                {filteredTools.map((tool, i) => {
-                  const bgColor = CARD_COLORS[i % CARD_COLORS.length];
-                  const isLight = bgColor === '#C5CC5C' || bgColor === '#D8D8D8';
-
-                  return (
-                    <article
-                      key={tool.name + i}
-                      className="tool-card"
-                      onClick={() => setSelectedTool(tool)}
-                    >
-                      <div
-                        className={`tool-card-visual ${isLight ? 'color-light' : ''}`}
-                        style={{ backgroundColor: bgColor }}
-                      >
-                        <img
-                          src={tool.image}
-                          alt={tool.name}
-                          style={{ objectFit: 'contain', maxWidth: '40%', maxHeight: '40%' }}
-                        />
-                      </div>
-                      <div style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
-                        <div className="tool-card-meta">
-                          <span className="tool-card-category">{tool.category}</span>
-                          <span className="tool-card-id">T-{String(i + 1).padStart(3, '0')}</span>
-                        </div>
-                        <h3 className="tool-card-title">{tool.name}</h3>
-                        <p className="tool-card-desc">{tool.description}</p>
-                        {tool.tags.price && (
-                          <span className="tool-card-price">{tool.tags.price}</span>
-                        )}
-                      </div>
-                    </article>
-                  );
-                })}
+        {/* Store Body */}
+        <div className="store-layout">
+          {/* Sidebar */}
+          <aside className="store-sidebar">
+            <div className="filter-group">
+              <h3 className="filter-header">Category</h3>
+              <div className="filter-list">
+                {categories.map(cat => (
+                  <button 
+                    key={cat} 
+                    className={`filter-btn ${selectedCategory === cat ? 'active' : ''}`}
+                    onClick={() => setSelectedCategory(cat)}
+                  >
+                    {cat}
+                  </button>
+                ))}
               </div>
-            </section>
-          )}
-        </main>
+            </div>
 
-        {/* Footer */}
-        <footer className="tools-footer">
-          <div className="tools-footer-grid">
-            <div>
-              <h4 className="tools-footer-heading">Site</h4>
-              <ul>
-                <li><Link href="/about">About</Link></li>
-                <li><Link href="/">Examples</Link></li>
-                <li><Link href="/tools">Tool Directory</Link></li>
-                <li><Link href="/blog">Blog</Link></li>
-              </ul>
+            <div className="filter-group">
+              <h3 className="filter-header">Price</h3>
+              <div className="filter-list">
+                {prices.map(p => (
+                  <button 
+                    key={p} 
+                    className={`filter-btn ${selectedPrice === p ? 'active' : ''}`}
+                    onClick={() => setSelectedPrice(p)}
+                  >
+                    {p}
+                  </button>
+                ))}
+              </div>
             </div>
-            <div>
-              <h4 className="tools-footer-heading">Connect</h4>
-              <ul>
-                <li><Link href="/#newsletter">Newsletter</Link></li>
-                <li><a href="https://twitter.com/realaiexamples" target="_blank" rel="noopener noreferrer">Twitter</a></li>
-                <li><a href="https://salestools.club/" target="_blank" rel="noopener noreferrer">Salestools Club</a></li>
-              </ul>
+
+            <div className="filter-group">
+              <h3 className="filter-header">Expertise</h3>
+              <div className="filter-list">
+                {skills.map(s => (
+                  <button 
+                    key={s} 
+                    className={`filter-btn ${selectedSkill === s ? 'active' : ''}`}
+                    onClick={() => setSelectedSkill(s)}
+                  >
+                    {s}
+                  </button>
+                ))}
+              </div>
             </div>
-            <div>
-              <h4 className="tools-footer-heading">Legal</h4>
-              <ul>
-                <li><Link href="/privacy">Privacy Policy</Link></li>
-                <li><Link href="/terms">Terms of Service</Link></li>
-              </ul>
-            </div>
+          </aside>
+
+          {/* Product Grid Area */}
+          <main>
+            <header className="store-toolbar">
+              <div className="toolbar-label">{filteredTools.length} Total Items</div>
+              <div className="toolbar-label">Sort: Newest Arrival</div>
+            </header>
+
+            {filteredTools.length === 0 ? (
+              <div style={{ padding: 'var(--space-lg) 0', textAlign: 'center' }}>
+                <h3 className="drop-title" style={{ fontSize: '2rem' }}>Out of Stock</h3>
+                <p className="filter-btn" style={{ cursor: 'default' }}>No tools match these filters.</p>
+                <button 
+                  className="drop-cta" 
+                  style={{ marginTop: '20px', alignSelf: 'center' }}
+                  onClick={() => { setSelectedCategory('All'); setSelectedPrice('All'); setSelectedSkill('All'); }}
+                >
+                  Clear All
+                </button>
+              </div>
+            ) : (
+              <div className="tool-grid">
+                {filteredTools.map((tool, i) => (
+                  <article 
+                    key={tool.name + i} 
+                    className="tool-tile"
+                    onClick={() => setSelectedTool(tool)}
+                  >
+                    <div className="tile-visual" style={{ backgroundColor: CARD_COLORS[i % CARD_COLORS.length] }}>
+                      <img src={tool.image} alt={tool.name} />
+                      {i < 3 && <span className="tile-badge">TRENDING</span>}
+                    </div>
+                    <div className="tile-info">
+                      <div className="tile-meta">
+                        <span>{tool.category}</span>
+                        <span>{tool.tags.skill}</span>
+                      </div>
+                      <h3 className="tile-name">{tool.name}</h3>
+                      <div className="tile-price">{tool.tags.price}</div>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            )}
+          </main>
+        </div>
+
+        {/* Newsletter Store Footer */}
+        <section style={{ 
+          background: 'var(--color-neon)', 
+          border: '4px solid black', 
+          padding: 'var(--space-lg)', 
+          textAlign: 'center',
+          boxShadow: '12px 12px 0 black',
+          marginBottom: 'var(--space-lg)'
+        }}>
+          <h2 className="drop-title" style={{ fontSize: '2.5rem', marginBottom: '10px' }}>Join the Drop</h2>
+          <p className="filter-btn" style={{ cursor: 'default', color: 'black', marginBottom: '20px' }}>
+            Get notified of new AI tools every Tuesday.
+          </p>
+          <form 
+            onSubmit={(e) => e.preventDefault()}
+            style={{ display: 'flex', maxWidth: '500px', margin: '0 auto', border: '4px solid black', background: 'white' }}
+          >
+            <input 
+              type="email" 
+              placeholder="EMAIL ADDRESS..." 
+              style={{ flex: 1, border: 'none', padding: '12px', outline: 'none', fontFamily: 'var(--font-mono)' }} 
+            />
+            <button 
+              type="submit" 
+              style={{ background: 'black', color: 'white', border: 'none', padding: '0 24px', fontFamily: 'var(--font-display)', textTransform: 'uppercase' }}
+            >
+              Join
+            </button>
+          </form>
+        </section>
+
+        {/* Global Footer */}
+        <footer className="store-footer">
+          <div>
+            <h4 className="footer-header">Shop</h4>
+            <ul className="footer-list">
+              <li><Link href="/tools">The Stack</Link></li>
+              <li><Link href="/">Blueprints</Link></li>
+              <li><a href="https://forms.gle/KqN82GGdCohshtVx8">Submit Tool</a></li>
+            </ul>
           </div>
-          <div className="tools-footer-bottom">
-            © {new Date().getFullYear()} Real AI Examples. Curated for business professionals.
+          <div>
+            <h4 className="footer-header">Editorial</h4>
+            <ul className="footer-list">
+              <li><Link href="/blog">Latest</Link></li>
+              <li><Link href="/about">About</Link></li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="footer-header">Support</h4>
+            <ul className="footer-list">
+              <li><Link href="/privacy">Privacy</Link></li>
+              <li><Link href="/terms">Terms</Link></li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="footer-header">Connect</h4>
+            <ul className="footer-list">
+              <li><a href="https://twitter.com/realaiexamples">Twitter / X</a></li>
+              <li><a href="https://salestools.club">Salestools Club</a></li>
+            </ul>
           </div>
         </footer>
       </div>
