@@ -50,6 +50,7 @@ module.exports = {
         // Figment Fonts
         syne: ['Syne', 'sans-serif'],
         cormorant: ['Cormorant Garamond', 'serif'],
+      },
       spacing: {
         'xs': '4px',
         'sm': '8px',
