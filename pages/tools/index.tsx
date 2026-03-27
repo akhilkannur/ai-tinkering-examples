@@ -321,21 +321,11 @@ export default function ToolsIndex() {
           display: flex;
           align-items: center;
           justify-content: center;
-          background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.08'/%3E%3C/svg%3E");
           transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .tool-card:hover .tool-card-visual {
           transform: translateY(-4px);
-        }
-
-        .tool-card-visual::after {
-          content: '{ // tool }';
-          font-family: var(--font-mono);
-          font-size: 2rem;
-          font-weight: bold;
-          color: rgba(255, 255, 255, 0.3);
-          mix-blend-mode: overlay;
         }
 
         .tool-card-visual.color-light::after {
@@ -612,9 +602,11 @@ export default function ToolsIndex() {
                       className="tool-card"
                       onClick={() => setSelectedTool(tool)}
                     >
-                      <div
+                      <img
+                        src={tool.image}
+                        alt={tool.name}
                         className={`tool-card-visual ${isLight ? 'color-light' : ''}`}
-                        style={{ backgroundColor: bgColor }}
+                        style={{ backgroundColor: bgColor, objectFit: 'cover' }}
                       />
                       <div style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
                         <div className="tool-card-meta">
