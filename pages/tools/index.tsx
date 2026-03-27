@@ -46,17 +46,16 @@ export default function ToolsIndex() {
 
       <style jsx global>{`
         :root {
-          --bg-base: #FFFFFF;
+          --bg-base: #E8E4DF;
           --text-primary: #000000;
           --text-secondary: #555555;
           --border-heavy: #000000;
-          --border-light: #E0E0E0;
+          --border-light: #D4CEC6;
           --color-charcoal: #333333;
           --color-olive: #7B7662;
           --color-acid: #C5CC5C;
           --color-purple: #6A37AC;
           --color-grey: #D8D8D8;
-          --color-watermark: rgba(0, 0, 0, 0.04);
           --font-display: 'Arial Black', 'Impact', system-ui, -apple-system, sans-serif;
           --font-body: 'Helvetica Neue', Helvetica, Arial, sans-serif;
           --font-mono: 'Courier New', Courier, monospace;
@@ -74,28 +73,6 @@ export default function ToolsIndex() {
           -webkit-font-smoothing: antialiased;
           line-height: 1.2;
           overflow-x: hidden;
-        }
-
-        .tools-watermark {
-          position: fixed;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          width: 80vw;
-          height: 80vw;
-          max-width: 800px;
-          max-height: 800px;
-          z-index: 0;
-          pointer-events: none;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        .tools-watermark svg {
-          width: 100%;
-          height: 100%;
-          fill: var(--color-watermark);
         }
 
         .tools-wrapper {
@@ -322,6 +299,15 @@ export default function ToolsIndex() {
           align-items: center;
           justify-content: center;
           transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+          background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.06'/%3E%3C/svg%3E");
+          background-size: cover;
+          background-position: center;
+        }
+
+        .tool-card-visual img {
+          object-fit: contain;
+          max-width: 40%;
+          max-height: 40%;
         }
 
         .tool-card:hover .tool-card-visual {
@@ -494,14 +480,6 @@ export default function ToolsIndex() {
         }
       `}</style>
 
-      {/* Watermark */}
-      <div className="tools-watermark">
-        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-          <path d="M50 10 L10 90 L35 90 L50 60 L65 90 L90 90 Z" />
-          <circle cx="50" cy="65" r="15" fill="none" stroke="currentColor" strokeWidth="8" />
-        </svg>
-      </div>
-
       <div className="tools-wrapper">
         {/* Header */}
         <header className="tools-header">
@@ -602,12 +580,16 @@ export default function ToolsIndex() {
                       className="tool-card"
                       onClick={() => setSelectedTool(tool)}
                     >
-                      <img
-                        src={tool.image}
-                        alt={tool.name}
+                      <div
                         className={`tool-card-visual ${isLight ? 'color-light' : ''}`}
-                        style={{ backgroundColor: bgColor, objectFit: 'cover' }}
-                      />
+                        style={{ backgroundColor: bgColor }}
+                      >
+                        <img
+                          src={tool.image}
+                          alt={tool.name}
+                          style={{ objectFit: 'contain', maxWidth: '40%', maxHeight: '40%' }}
+                        />
+                      </div>
                       <div style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
                         <div className="tool-card-meta">
                           <span className="tool-card-category">{tool.category}</span>
