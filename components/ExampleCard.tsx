@@ -40,15 +40,15 @@ export default function ExampleCard({
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 10 }}
       transition={{ duration: 0.4 }}
-      className={`group flex flex-col bg-white rounded-[2rem] shadow-soft border border-coffee-100 hover:shadow-soft-hover hover:-translate-y-1.5 transition-all duration-300 cursor-pointer overflow-hidden h-full ${
+      className={`group flex flex-col bg-white rounded shadow-technical border border-gray-200 hover:border-terminal-green/50 hover:shadow-md hover:-translate-y-1 transition-all duration-300 cursor-pointer overflow-hidden h-full ${
         isPremium ? 'opacity-90' : ''
       }`}
       onClick={handleCardClick}
     >
-      <div className="relative aspect-[4/3] overflow-hidden bg-coffee-50 transition-colors group-hover:bg-[#f2efe9]">
+      <div className="relative aspect-[4/3] overflow-hidden bg-gray-50 transition-colors group-hover:bg-gray-100">
         {!imageUrl || imageStatus === 'error' ? (
           <div className="absolute inset-0 flex items-center justify-center opacity-10">
-            <i className="ph ph-image text-4xl text-coffee-400"></i>
+            <i className="ph ph-image text-4xl text-gray-400"></i>
           </div>
         ) : (
           <>
@@ -56,7 +56,7 @@ export default function ExampleCard({
               src={imageUrl}
               alt={example.title}
               fill
-              className="object-cover object-top grayscale-[20%] brightness-[0.98] group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-500"
+              className="object-cover object-top grayscale-[30%] brightness-[0.95] group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-500"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               priority={priority}
               onLoad={() => setImageStatus('loaded')}
@@ -65,46 +65,46 @@ export default function ExampleCard({
             <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300" />
           </>
         )}
-        
+
         {example.category && (
-          <div className="absolute top-5 right-5 bg-white/80 backdrop-blur-sm rounded-full px-4 py-1.5 font-medium text-[10px] tracking-widest uppercase text-coffee-700 shadow-sm border border-coffee-100/50">
+          <div className="absolute top-4 right-4 bg-white rounded px-3 py-1 font-mono text-[9px] tracking-widest uppercase text-secondary-text shadow-sm border border-gray-200">
             {example.category}
           </div>
         )}
 
         {isPremium && (
-          <div className="absolute inset-0 z-20 flex flex-col items-center justify-center bg-coffee-900/80 backdrop-blur-sm text-center p-4">
+          <div className="absolute inset-0 z-20 flex flex-col items-center justify-center bg-gray-900/80 backdrop-blur-sm text-center p-4">
             <span className="text-white text-[10px] font-mono font-bold tracking-widest uppercase border border-white/20 px-3 py-1">Premium</span>
           </div>
         )}
       </div>
 
-      <div className="p-8 flex flex-col flex-1">
+      <div className="p-6 flex flex-col flex-1">
         <div className="flex items-center gap-2 mb-4">
-          <span className="text-coffee-500 font-semibold uppercase text-[10px] tracking-widest">
-            {example.category || 'Example'}
+          <span className="text-light-placeholder font-mono uppercase text-[9px] tracking-widest">
+            {example.category || 'EXAMPLE'}
           </span>
         </div>
-        
-        <h3 className="text-2xl font-display font-semibold text-coffee-900 mb-3 leading-tight group-hover:text-coffee-600 transition-colors line-clamp-2">
+
+        <h3 className="text-xl font-display font-semibold text-primary-text mb-3 leading-tight group-hover:text-terminal-green transition-colors line-clamp-2">
           {example.title}
         </h3>
 
         {example.summary && (
-          <p className="text-coffee-700 font-light mb-8 line-clamp-3 leading-relaxed text-sm">
+          <p className="text-secondary-text font-light mb-6 line-clamp-3 leading-relaxed text-sm">
             {example.summary}
           </p>
         )}
 
-        <div className="mt-auto pt-6 border-t border-coffee-100 flex items-center justify-between">
+        <div className="mt-auto pt-5 border-t border-gray-100 flex items-center justify-between">
             <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-full bg-[#e6dbcf] flex items-center justify-center font-medium text-coffee-800 text-xs">
+                <div className="w-7 h-7 rounded bg-gray-100 flex items-center justify-center font-medium text-primary-text text-xs">
                     {example.author_name ? example.author_name.charAt(0) : 'R'}
                 </div>
-                <span className="font-medium text-sm text-coffee-800">{example.author_name || 'Real AI'}</span>
+                <span className="font-medium text-sm text-secondary-text">{example.author_name || 'Real AI'}</span>
             </div>
-            <div className="w-10 h-10 rounded-full bg-coffee-50 flex items-center justify-center text-coffee-500 group-hover:bg-coffee-900 group-hover:text-white transition-colors">
-                <i className="ph ph-arrow-up-right text-lg"></i>
+            <div className="w-9 h-9 rounded bg-gray-50 flex items-center justify-center text-light-placeholder group-hover:bg-terminal-green group-hover:text-white transition-colors">
+                <i className="ph ph-arrow-up-right text-base"></i>
             </div>
         </div>
       </div>

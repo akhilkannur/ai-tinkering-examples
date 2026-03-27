@@ -45,8 +45,8 @@ export default function Navbar() {
         />
       </Head>
       <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${
-        scrolled || !isHomePage 
-          ? 'bg-white/90 backdrop-blur-md border-b border-coffee-200 py-4' 
+        scrolled || !isHomePage
+          ? 'bg-white/95 backdrop-blur-md border-b border-gray-200 py-4'
           : 'bg-transparent py-6'
       }`}>
       <div className="max-w-[1440px] mx-auto px-6">
@@ -54,8 +54,8 @@ export default function Navbar() {
           <div className="flex items-center gap-12">
             <div className="flex-shrink-0">
               <Link href="/" className="flex items-center gap-3 group">
-                <div className="w-8 h-8 bg-coffee-500 rounded-full shadow-soft flex items-center justify-center transition-transform group-hover:scale-105"></div>
-                <span className="text-2xl font-display font-semibold tracking-wide text-coffee-900 uppercase">Real AI Examples</span>
+                <div className="w-8 h-8 bg-terminal-green rounded shadow-sm flex items-center justify-center transition-transform group-hover:scale-105"></div>
+                <span className="text-2xl font-display font-semibold tracking-wide text-primary-text uppercase">Real AI Examples</span>
               </Link>
             </div>
             
@@ -67,8 +67,8 @@ export default function Navbar() {
                   href={link.href}
                   className={`text-sm font-medium tracking-wide transition-colors duration-200 ${
                     router.pathname === link.href
-                      ? 'text-coffee-900 font-semibold'
-                      : 'text-coffee-700 hover:text-coffee-900'
+                      ? 'text-primary-text font-semibold'
+                      : 'text-secondary-text hover:text-primary-text'
                   }`}
                 >
                   {link.label}
@@ -78,7 +78,7 @@ export default function Navbar() {
           </div>
 
           <div className="hidden lg:flex items-center gap-4">
-            <a href="#" className="flex items-center justify-center w-10 h-10 rounded-full border border-coffee-200 bg-white hover:bg-coffee-100 transition-all shadow-sm text-coffee-600 hover:text-coffee-900">
+            <a href="#" className="flex items-center justify-center w-10 h-10 rounded border border-gray-200 bg-white hover:border-terminal-green hover:bg-terminal-green/5 transition-all shadow-sm text-secondary-text hover:text-terminal-green">
                 <i className="ph ph-twitter-logo text-lg"></i>
             </a>
           </div>
@@ -87,7 +87,7 @@ export default function Navbar() {
           <div className="lg:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2 text-coffee-900 hover:bg-coffee-100 rounded-full transition-all"
+              className="p-2 text-primary-text hover:bg-gray-100 rounded transition-all"
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -97,16 +97,16 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden absolute top-full left-0 right-0 bg-white border-b border-coffee-200 p-6 animate-in slide-in-from-top-4 duration-300 shadow-xl">
+        <div className="lg:hidden absolute top-full left-0 right-0 bg-white border-b border-gray-200 p-6 animate-in slide-in-from-top-4 duration-300 shadow-xl">
           <div className="space-y-4">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`block px-4 py-3 text-sm font-medium rounded-xl transition-colors ${
+                className={`block px-4 py-3 text-sm font-medium rounded transition-colors ${
                   router.pathname === link.href
-                    ? 'bg-coffee-100 text-coffee-900'
-                    : 'text-coffee-700 hover:bg-coffee-50 hover:text-coffee-900'
+                    ? 'bg-gray-100 text-primary-text'
+                    : 'text-secondary-text hover:bg-gray-50 hover:text-primary-text'
                 }`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >

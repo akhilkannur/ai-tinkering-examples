@@ -93,8 +93,8 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
       <style jsx global>{`
         body {
             font-family: 'Outfit', sans-serif;
-            background-color: #f5f2eb;
-            color: #3a2d26;
+            background-color: #faf9f7;
+            color: #1a1a1a;
         }
         .font-display {
             font-family: 'Fredoka', sans-serif;
@@ -111,31 +111,39 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
         }
       `}</style>
 
-      <div className="min-h-screen selection:bg-coffee-300 selection:text-coffee-900">
+      <div className="min-h-screen selection:bg-terminal-lime selection:text-black">
         <Navbar />
-        
+
         <header className="px-6 pt-28 md:pt-40 pb-20 md:pb-32 flex flex-col items-center justify-center relative overflow-hidden">
-          <div className="absolute -right-20 -top-20 w-96 h-96 bg-coffee-200/50 rounded-full blur-3xl pointer-events-none"></div>
-          <div className="absolute -left-20 -bottom-20 w-80 h-80 bg-coffee-300/20 rounded-full blur-3xl pointer-events-none"></div>
+          {/* Technical grid background */}
+          <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'linear-gradient(#000 1px, transparent 1px), linear-gradient(90deg, #000 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
+          
+          <div className="absolute -right-20 -top-20 w-96 h-96 bg-terminal-green/5 rounded-full blur-3xl pointer-events-none"></div>
+          <div className="absolute -left-20 -bottom-20 w-80 h-80 bg-link-blue/5 rounded-full blur-3xl pointer-events-none"></div>
 
           <div className="max-w-4xl mx-auto text-center relative z-10 w-full">
-            <div className="inline-block mb-8 px-5 py-2 rounded-full font-medium text-xs tracking-widest uppercase bg-white border border-coffee-200 text-coffee-600 shadow-sm">
+            <div className="inline-flex items-center gap-2 mb-8 px-4 py-2 rounded-md font-mono text-[10px] tracking-widest uppercase bg-white border border-gray-200 text-secondary-text shadow-technical">
+                <span className="w-2 h-2 rounded-full bg-terminal-green animate-pulse"></span>
                 A library of real AI examples
             </div>
-            <h1 className="text-5xl md:text-8xl font-display font-semibold text-coffee-900 tracking-tight leading-[1.1] mb-8 drop-shadow-sm">
-              From people actually <br/>
-              <span className="text-coffee-500">shipping.</span>
-            </h1>
             
+            <h1 className="text-5xl md:text-8xl font-display font-semibold text-primary-text tracking-tight leading-[1.1] mb-8">
+              From people actually <br/>
+              <span className="relative inline-block">
+                <span className="relative z-10 text-terminal-green">shipping.</span>
+                <span className="absolute inset-0 text-terminal-green blur-lg opacity-40">shipping.</span>
+              </span>
+            </h1>
+
             <div className="max-w-xl mx-auto mb-10">
-              <p className="text-lg md:text-xl font-light text-coffee-700 mb-12 max-w-2xl mx-auto leading-relaxed">
+              <p className="text-lg md:text-xl font-light text-secondary-text mb-12 max-w-2xl mx-auto leading-relaxed">
                 Get curated weekly drops of prompts, strategies, and exact setups you can copy.
               </p>
-              
+
               <div className="max-w-md mx-auto">
                 <NewsletterForm />
-                <p className="text-xs font-light text-coffee-500 mt-5">
-                  Get the next drop in your inbox. Sent every Tuesday.
+                <p className="text-xs font-mono text-light-placeholder mt-5 uppercase tracking-wider">
+                  → Next drop: Tuesday
                 </p>
               </div>
             </div>
@@ -149,8 +157,8 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
               selectedCategory={selectedCategory}
               onSelect={setSelectedCategory}
             />
-            
-            <div className="hidden lg:flex items-center gap-2 text-sm font-medium text-coffee-600 whitespace-nowrap ml-8 pb-4 cursor-pointer hover:text-coffee-900 transition-colors">
+
+            <div className="hidden lg:flex items-center gap-2 text-sm font-medium text-secondary-text whitespace-nowrap ml-8 pb-4 cursor-pointer hover:text-primary-text transition-colors">
                 <i className="ph ph-sort-descending text-lg"></i>
                 Latest First
             </div>
@@ -161,17 +169,17 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
           {weeklyBatches.map(([week, items], batchIdx) => items.length > 0 && (
             <div key={week} className="mb-20">
               <div className="flex items-center gap-4 mb-10">
-                <span className="text-xs font-mono font-bold uppercase tracking-[0.2em] text-coffee-400">
-                  Drop / {week}
+                <span className="text-xs font-mono font-bold uppercase tracking-[0.2em] text-light-placeholder">
+                  DROP / {week}
                 </span>
-                <div className="h-px flex-grow bg-coffee-200/60"></div>
+                <div className="h-px flex-grow bg-gray-200"></div>
                 {batchIdx === 0 && (
-                  <span className="text-[10px] font-mono font-bold text-white bg-coffee-900 px-3 py-1 rounded-full uppercase tracking-widest shadow-sm">
-                    Latest
+                  <span className="text-[10px] font-mono font-bold text-white bg-terminal-green px-4 py-1.5 rounded uppercase tracking-widest shadow-sm">
+                    NEW
                   </span>
                 )}
               </div>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 {items.map((example) => (
                   <ExampleCard
@@ -185,27 +193,27 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
           ))}
 
           <div className="mt-16 flex justify-center">
-            <button className="px-8 py-3.5 bg-white border border-coffee-200 rounded-full font-medium tracking-wide text-sm shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all flex items-center gap-2 text-coffee-800">
-                Load More Examples
-                <i className="ph ph-arrow-down text-coffee-500 text-lg"></i>
+            <button className="px-8 py-3.5 bg-white border border-gray-200 rounded font-mono text-xs uppercase tracking-widest shadow-technical hover:shadow-md hover:-translate-y-0.5 hover:border-terminal-green transition-all flex items-center gap-2 text-secondary-text">
+                Load More
+                <i className="ph ph-arrow-down text-terminal-green text-base"></i>
             </button>
           </div>
         </main>
 
-        <footer className="border-t border-coffee-200/60 bg-[#f5f2eb] mt-auto py-12 px-6">
+        <footer className="border-t border-gray-200 bg-white mt-auto py-12 px-6">
           <div className="max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
               <div className="flex items-center gap-3">
-                  <div className="w-4 h-4 rounded-full bg-coffee-400"></div>
-                  <div className="font-display font-medium text-xl tracking-wide text-coffee-900 mt-0.5 uppercase">Real AI Examples</div>
+                  <div className="w-4 h-4 rounded bg-terminal-green"></div>
+                  <div className="font-display font-medium text-xl tracking-wide text-primary-text mt-0.5 uppercase">Real AI Examples</div>
               </div>
-              
-              <div className="flex gap-8 font-medium text-sm text-coffee-600">
-                  <Link href="/about" className="hover:text-coffee-900 transition-colors">About</Link>
-                  <a href="https://twitter.com/realaiexamples" target="_blank" rel="noopener noreferrer" className="hover:text-coffee-900 transition-colors">Twitter</a>
-                  <Link href="/" className="hover:text-coffee-900 transition-colors">Newsletter</Link>
+
+              <div className="flex gap-8 font-medium text-sm text-secondary-text">
+                  <Link href="/about" className="hover:text-primary-text transition-colors">About</Link>
+                  <a href="https://twitter.com/realaiexamples" target="_blank" rel="noopener noreferrer" className="hover:text-primary-text transition-colors">Twitter</a>
+                  <Link href="/" className="hover:text-primary-text transition-colors">Newsletter</Link>
               </div>
-              
-              <div className="text-sm font-light text-coffee-500">
+
+              <div className="text-sm font-light text-light-placeholder">
                   © 2026 Build With AI
               </div>
           </div>
