@@ -46,11 +46,11 @@ export default function ToolsIndex() {
 
       <style jsx global>{`
         :root {
-          --bg-base: #E8E4DF;
+          --bg-base: #FFFFFF;
           --text-primary: #000000;
           --text-secondary: #555555;
           --border-heavy: #000000;
-          --border-light: #D4CEC6;
+          --border-light: #E0E0E0;
           --color-charcoal: #333333;
           --color-olive: #7B7662;
           --color-acid: #C5CC5C;
