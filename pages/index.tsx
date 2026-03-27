@@ -558,7 +558,7 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
           )}
 
           <div className="hero-meta">
-            Join 14,204+ Operators · Next Drop: Tuesday
+            Join 1,200+ AI Tinkers · Next Drop: Tuesday
           </div>
           {formStatus === 'error' && (
             <div className="hero-meta" style={{ color: '#c00', marginTop: '0.5rem' }}>
