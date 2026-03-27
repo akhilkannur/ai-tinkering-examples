@@ -109,19 +109,21 @@ export default function InvestorsPage({ initialInvestors }: InvestorsPageProps) 
         <meta name="twitter:image" content={`${process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com'}/api/og?mode=home`} key="twitter:image" />
       </Head>
 
-      <div className="min-h-screen bg-primary-bg text-text-color font-sans">
+      <div className="min-h-screen bg-coffee-100 text-coffee-900 font-sans selection:bg-coffee-300 selection:text-coffee-900">
         <Navbar />
         
-        <header className="max-w-6xl mx-auto px-4 pt-32 md:pt-40 pb-12 md:pb-20 text-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 border border-accent/20 text-accent font-bold text-[10px] uppercase tracking-[0.2em] mb-6 font-mono">
+        <header className="max-w-6xl mx-auto px-6 pt-32 md:pt-40 pb-12 md:pb-20 text-center relative overflow-hidden">
+          <div className="absolute -right-20 -top-20 w-64 h-64 bg-coffee-200/30 rounded-full blur-3xl pointer-events-none"></div>
+          
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-coffee-200 text-coffee-600 font-medium text-[10px] uppercase tracking-widest mb-8 shadow-sm">
               <Briefcase className="w-3 h-3" /> Acquisition Roadmap
           </div>
-          <h1 className="text-4xl md:text-6xl font-black text-text-color mb-6 tracking-tighter leading-tight uppercase italic">
-            The SaaS <span className="text-accent">Exit Database</span>
+          <h1 className="text-4xl md:text-7xl font-display font-semibold text-coffee-900 mb-8 tracking-tight leading-[1.1] uppercase">
+            The SaaS <span className="text-coffee-500">Exit Database</span>
           </h1>
-          <p className="text-lg text-text-color/80 max-w-2xl mx-auto mb-8 leading-relaxed font-light">
+          <p className="text-lg md:text-xl text-coffee-700 max-w-2xl mx-auto mb-12 leading-relaxed font-light">
             {isUnlocked ? (
-                <span className="text-accent font-bold flex items-center justify-center gap-2">
+                <span className="text-coffee-600 font-medium flex items-center justify-center gap-2 bg-white/50 py-2 rounded-full border border-coffee-200 shadow-inner-soft">
                     <Check className="w-5 h-5" /> Verified Exit Partners Unlocked
                 </span>
             ) : (
@@ -132,12 +134,12 @@ export default function InvestorsPage({ initialInvestors }: InvestorsPageProps) 
           
           {/* Search Bar */}
           <div className="max-w-2xl mx-auto relative group">
-            <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-              <Search className="h-5 w-5 text-gray-400 group-focus-within:text-accent transition-colors" />
+            <div className="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none">
+              <Search className="h-5 w-5 text-coffee-300 group-focus-within:text-coffee-500 transition-colors" />
             </div>
             <input
               type="text"
-              className="block w-full pl-11 pr-4 py-4 bg-secondary-bg border border-navy-dark rounded-xl text-text-color placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent shadow-2xl transition-all"
+              className="block w-full pl-12 pr-6 py-5 bg-white border border-coffee-200 rounded-[2rem] text-coffee-900 placeholder-coffee-300 focus:outline-none focus:ring-4 focus:ring-coffee-200/20 shadow-soft hover:shadow-soft-hover transition-all"
               placeholder="Search by firm name, acquisition thesis, or portfolio..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
@@ -145,23 +147,23 @@ export default function InvestorsPage({ initialInvestors }: InvestorsPageProps) 
           </div>
         </header>
 
-        <main className="max-w-7xl mx-auto px-4 pb-20 flex flex-col lg:flex-row gap-8">
+        <main className="max-w-[1440px] mx-auto px-6 pb-24 flex flex-col lg:flex-row gap-12">
           
           {/* Sidebar Filters */}
           <aside className="lg:w-1/4 space-y-6">
-            <div className="bg-secondary-bg border border-navy-dark rounded-xl p-6 shadow-sm sticky top-24">
-              <div className="flex items-center gap-2 mb-6 text-accent">
-                <Filter className="h-5 w-5" />
-                <h3 className="font-bold text-lg uppercase tracking-tight italic">Find Buyers</h3>
+            <div className="bg-white border border-coffee-100 rounded-[2rem] p-8 shadow-soft sticky top-24">
+              <div className="flex items-center gap-3 mb-8 text-coffee-900">
+                <Filter className="h-5 w-5 text-coffee-500" />
+                <h3 className="font-display font-semibold text-lg uppercase tracking-tight">Find Buyers</h3>
               </div>
 
               {/* Filter Group: Deal Type */}
-              <div className="mb-6">
-                <label className="block text-sm font-semibold text-text-secondary mb-2">Deal Type</label>
+              <div className="mb-8">
+                <label className="block text-[10px] font-bold text-coffee-400 uppercase tracking-widest mb-3">Deal Type</label>
                 <select 
                   value={selectedDealType}
                   onChange={(e) => setSelectedDealType(e.target.value)}
-                  className="w-full bg-primary-bg border border-border-color rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-accent focus:outline-none"
+                  className="w-full bg-coffee-50 border border-coffee-100 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-coffee-500 focus:bg-white focus:outline-none transition-all cursor-pointer"
                 >
                   {dealTypes.map(type => (
                     <option key={type} value={type}>{type}</option>
@@ -170,12 +172,12 @@ export default function InvestorsPage({ initialInvestors }: InvestorsPageProps) 
               </div>
 
               {/* Filter Group: Check Size */}
-              <div className="mb-6">
-                <label className="block text-sm font-semibold text-text-secondary mb-2">Check Size</label>
+              <div className="mb-8">
+                <label className="block text-[10px] font-bold text-coffee-400 uppercase tracking-widest mb-3">Check Size</label>
                 <select 
                   value={selectedCheckSize}
                   onChange={(e) => setSelectedCheckSize(e.target.value)}
-                  className="w-full bg-primary-bg border border-border-color rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-accent focus:outline-none"
+                  className="w-full bg-coffee-50 border border-coffee-100 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-coffee-500 focus:bg-white focus:outline-none transition-all cursor-pointer"
                 >
                   {checkSizes.map(size => (
                     <option key={size} value={size}>{size}</option>
@@ -184,12 +186,12 @@ export default function InvestorsPage({ initialInvestors }: InvestorsPageProps) 
               </div>
 
               {/* Filter Group: Geography */}
-              <div className="mb-6">
-                <label className="block text-sm font-semibold text-text-secondary mb-2">Geography</label>
+              <div className="mb-8">
+                <label className="block text-[10px] font-bold text-coffee-400 uppercase tracking-widest mb-3">Geography</label>
                 <select 
                   value={selectedGeo}
                   onChange={(e) => setSelectedGeo(e.target.value)}
-                  className="w-full bg-primary-bg border border-border-color rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-accent focus:outline-none"
+                  className="w-full bg-coffee-50 border border-coffee-100 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-coffee-500 focus:bg-white focus:outline-none transition-all cursor-pointer"
                 >
                   {geoLocations.map(geo => (
                     <option key={geo} value={geo}>{geo}</option>
@@ -197,9 +199,9 @@ export default function InvestorsPage({ initialInvestors }: InvestorsPageProps) 
                 </select>
               </div>
 
-              <div className="pt-4 border-t border-border-color">
-                <p className="text-xs text-gray-500 text-center">
-                  Showing {filteredInvestors.length} of {initialInvestors.length} firms
+              <div className="pt-6 border-t border-coffee-50">
+                <p className="text-[10px] font-mono text-coffee-400 text-center uppercase tracking-widest">
+                  {filteredInvestors.length} of {initialInvestors.length} firms
                 </p>
               </div>
             </div>
@@ -208,71 +210,67 @@ export default function InvestorsPage({ initialInvestors }: InvestorsPageProps) 
           {/* Results Grid */}
           <div className="lg:w-3/4">
             {filteredInvestors.length > 0 ? (
-              <div className="space-y-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="space-y-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   
                   {/* UNLOCKED INVESTORS */}
                   {displayedInvestors.map((investor, idx) => (
-                    <div key={idx} className="bg-secondary-bg border border-border-color rounded-lg p-6 hover:border-white/20 transition-all duration-300 shadow-sm group flex flex-col h-full relative">
+                    <div key={idx} className="bg-white border border-coffee-100 rounded-[2rem] p-8 hover:shadow-soft-hover hover:-translate-y-1.5 transition-all duration-300 shadow-soft group flex flex-col h-full relative overflow-hidden">
                       
-                      <div className="flex justify-between items-start mb-4">
+                      <div className="flex justify-between items-start mb-6">
                         <div>
-                          <h2 className="text-xl font-bold font-headline group-hover:text-accent transition-colors">{investor.FirmName}</h2>
-                          <div className="text-xs text-text-secondary">
+                          <h2 className="text-2xl font-display font-semibold text-coffee-900 group-hover:text-coffee-600 transition-colors uppercase leading-tight">{investor.FirmName}</h2>
+                          <div className="text-xs font-mono text-coffee-400 mt-1">
                             {investor.Website.replace(/^https?:\/\/(www\.)?/, '').split('/')[0]}
                           </div>
                         </div>
                         {investor.DealType && (
-                          <span className="bg-accent/10 text-accent text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider border border-accent/20">
+                          <span className="bg-coffee-100 text-coffee-800 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest border border-coffee-200">
                             {investor.DealType}
                           </span>
                         )}
                       </div>
 
-                      <p className="text-gray-300 text-sm mb-6 flex-grow italic">
+                      <p className="text-coffee-700 font-light text-sm mb-8 flex-grow italic leading-relaxed">
                         "{investor.InvestmentThesis}"
                       </p>
 
-                      <div className="space-y-3 mb-6">
+                      <div className="space-y-4 mb-8 pt-6 border-t border-coffee-50">
                         {investor.CheckSize && (
-                          <div className="flex items-center text-sm">
-                            <DollarSign className="h-4 w-4 text-accent mr-2" />
-                            <span className="text-text-secondary mr-2">Check Size:</span>
-                            <span className="font-semibold text-text-color">{investor.CheckSize}</span>
+                          <div className="flex items-center text-sm text-coffee-600">
+                            <DollarSign className="h-4 w-4 text-coffee-400 mr-3" />
+                            <span className="text-coffee-400 mr-2 font-medium">Check:</span>
+                            <span className="font-semibold text-coffee-900">{investor.CheckSize}</span>
                           </div>
                         )}
                         
                         {investor.TargetEBITDA && (
-                          <div className="flex items-center text-sm">
-                            <Briefcase className="h-4 w-4 text-accent mr-2" />
-                            <span className="text-text-secondary mr-2">Target:</span>
-                            <span className="text-text-color">{investor.TargetEBITDA}</span>
+                          <div className="flex items-center text-sm text-coffee-600">
+                            <Briefcase className="h-4 w-4 text-coffee-400 mr-3" />
+                            <span className="text-coffee-400 mr-2 font-medium">Target:</span>
+                            <span className="font-semibold text-coffee-900">{investor.TargetEBITDA}</span>
                           </div>
                         )}
 
                         {investor.GeographicFocus && (
-                          <div className="flex items-center text-sm">
-                            <MapPin className="h-4 w-4 text-accent mr-2" />
-                            <span className="text-text-secondary mr-2">Focus:</span>
-                            <span className="text-text-color">{investor.GeographicFocus}</span>
+                          <div className="flex items-center text-sm text-coffee-600">
+                            <MapPin className="h-4 w-4 text-coffee-400 mr-3" />
+                            <span className="text-coffee-400 mr-2 font-medium">Focus:</span>
+                            <span className="font-semibold text-coffee-900">{investor.GeographicFocus}</span>
                           </div>
                         )}
 
-                        {/* Contact Info (Always blurred in this version, or revealed if unlocked?) 
-                            The current component hardcoded it as blurred. 
-                            Let's reveal it if unlocked!
-                        */}
                         {isUnlocked ? (
-                             <div className="flex items-center text-sm bg-accent/10 p-2 rounded-lg border border-accent/20 mt-2">
-                                <Users className="h-4 w-4 text-accent mr-2" />
-                                <span className="text-text-secondary mr-2 font-bold">Verified Contact:</span>
-                                <span className="text-text-color">Partner Email Available</span>
+                             <div className="flex items-center text-sm bg-coffee-50 p-3 rounded-2xl border border-coffee-100 mt-4 shadow-inner-soft">
+                                <Users className="h-4 w-4 text-coffee-500 mr-3" />
+                                <span className="text-coffee-800 font-bold mr-2">Verified Contact:</span>
+                                <span className="text-coffee-600">Email Available</span>
                              </div>
                         ) : (
-                            <div className="flex items-center text-sm opacity-50 filter blur-[2px] select-none mt-2">
-                                <Users className="h-4 w-4 text-accent mr-2" />
-                                <span className="text-text-secondary mr-2">Contact:</span>
-                                <span className="text-text-color">John Doe (Partner) - john@firm.com</span>
+                            <div className="flex items-center text-sm opacity-30 filter blur-[3px] select-none mt-4">
+                                <Users className="h-4 w-4 text-coffee-400 mr-3" />
+                                <span className="text-coffee-400 mr-2 font-medium">Contact:</span>
+                                <span className="text-coffee-900">Partner Email Available</span>
                             </div>
                         )}
                       </div>
@@ -281,20 +279,20 @@ export default function InvestorsPage({ initialInvestors }: InvestorsPageProps) 
 
                   {/* LOCKED TEASERS (If Paywall Active) */}
                   {showPaywallOverlay && lockedTeasers.map((investor, idx) => (
-                    <div key={`locked-${idx}`} className="bg-secondary-bg/50 border border-border-color rounded-lg p-6 relative overflow-hidden opacity-80 select-none">
+                    <div key={`locked-${idx}`} className="bg-white/50 border border-coffee-100 rounded-[2rem] p-8 relative overflow-hidden opacity-60 select-none shadow-soft">
                        {/* Locked Strip */}
-                       <div className="absolute top-0 left-0 w-1.5 h-full bg-yellow-500" />
-                       <div className="absolute top-4 right-4 text-yellow-500">
-                         <Lock className="w-5 h-5" />
+                       <div className="absolute top-0 left-0 w-1.5 h-full bg-coffee-300" />
+                       <div className="absolute top-6 right-6 text-coffee-400">
+                         <Lock className="w-6 h-6" />
                        </div>
 
-                       <h2 className="text-xl font-bold font-headline text-gray-400 mb-2">{investor.FirmName}</h2>
-                       <p className="text-gray-500 text-sm mb-4 italic line-clamp-2">"{investor.InvestmentThesis}"</p>
+                       <h2 className="text-2xl font-display font-semibold text-coffee-300 mb-2 uppercase leading-tight">{investor.FirmName}</h2>
+                       <p className="text-coffee-300 text-sm mb-6 italic line-clamp-2">"{investor.InvestmentThesis}"</p>
                        
-                       <div className="space-y-2 filter blur-[3px]">
-                          <div className="h-4 bg-gray-700 rounded w-3/4"></div>
-                          <div className="h-4 bg-gray-700 rounded w-1/2"></div>
-                          <div className="h-4 bg-gray-700 rounded w-5/6"></div>
+                       <div className="space-y-3 filter blur-[4px]">
+                          <div className="h-4 bg-coffee-100 rounded-full w-3/4"></div>
+                          <div className="h-4 bg-coffee-100 rounded-full w-1/2"></div>
+                          <div className="h-4 bg-coffee-100 rounded-full w-5/6"></div>
                        </div>
                     </div>
                   ))}
@@ -304,59 +302,60 @@ export default function InvestorsPage({ initialInvestors }: InvestorsPageProps) 
                 {/* Upsell / Paywall Overlay */}
                 {showPaywallOverlay && (
                     <div className="relative mt-12 mb-20 text-center">
-                        <div className="absolute inset-0 flex items-center justify-center -top-32 bg-gradient-to-t from-primary-bg via-primary-bg/95 to-transparent z-10 pointer-events-none h-[400px]"></div>
+                        <div className="absolute inset-0 flex items-center justify-center -top-32 bg-gradient-to-t from-coffee-100 via-coffee-100/95 to-transparent z-10 pointer-events-none h-[400px]"></div>
                         
-                        <div className="relative z-20 bg-secondary-bg border border-white/10 rounded-xl p-8 md:p-12 text-center shadow-2xl max-w-2xl mx-auto transform hover:scale-[1.01] transition-transform">
+                        <div className="relative z-20 bg-coffee-900 rounded-[2rem] p-10 md:p-16 text-center shadow-soft-hover max-w-2xl mx-auto border border-coffee-800">
+                        <div className="absolute inset-0 opacity-10 pointer-events-none" style={{ backgroundImage: 'radial-gradient(#fff 1px, transparent 1px)', backgroundSize: '24px 24px' }}></div>
                         
                         {!showLicenseInput ? (
-                            <>
-                                <div className="absolute top-0 right-0 p-4 opacity-10">
-                                    <Crown className="h-32 w-32 text-accent" />
+                            <div className="relative z-10">
+                                <div className="w-20 h-20 bg-coffee-800 rounded-2xl flex items-center justify-center mx-auto mb-8 shadow-md text-coffee-300">
+                                    <Crown className="h-10 w-10 stroke-[2px]" />
                                 </div>
-                                <h2 className="text-3xl md:text-4xl font-bold font-headline mb-4 text-text-color">Get the Email List</h2>
-                                <p className="text-lg text-text-secondary mb-8 max-w-lg mx-auto leading-relaxed">
-                                    Stop searching. Get the full list with <span className="text-text-color font-bold">verified partner emails</span> and detailed investment criteria. Or don't, and spend your weekend on Google.
+                                <h2 className="text-3xl md:text-5xl font-display font-semibold mb-6 text-white uppercase">Get the Email List</h2>
+                                <p className="text-lg text-coffee-200 mb-10 max-w-lg mx-auto leading-relaxed font-light">
+                                    Stop searching. Get the full list with <span className="text-white font-bold">verified partner emails</span> and detailed investment criteria. Or don't, and spend your weekend on Google.
                                 </p>
-                                <div className="flex flex-col items-center gap-4">
+                                <div className="flex flex-col items-center gap-6">
                                 <a 
                                     href="https://checkout.dodopayments.com/buy/pdt_0NWKQ67zRM2yyxX7ulU7J?quantity=1"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="bg-accent hover:bg-opacity-90 text-primary-bg px-10 py-4 rounded-2xl font-bold text-xl transition-all shadow-xl shadow-accent/20 flex items-center gap-2"
+                                    className="bg-coffee-100 text-coffee-900 px-12 py-5 rounded-full font-display text-xl uppercase transition-all shadow-lg hover:bg-white hover:-translate-y-1 flex items-center gap-3"
                                 >
-                                    Get Full Access <ArrowRight className="w-5 h-5" />
+                                    Get Full Access <ArrowRight className="w-6 h-6 stroke-[2px]" />
                                 </a>
                                 <button 
                                     onClick={() => setShowLicenseInput(true)}
-                                    className="text-sm text-gray-500 hover:text-text-color underline decoration-gray-600 underline-offset-4 transition-colors"
+                                    className="text-sm text-coffee-400 hover:text-white underline decoration-coffee-700 underline-offset-8 transition-colors uppercase font-bold tracking-widest"
                                 >
                                     I have a license key
                                 </button>
                                 </div>
-                            </>
+                            </div>
                         ) : (
-                            <form onSubmit={handleLicenseSubmit} className="animate-fade-in max-w-sm mx-auto">
-                                <div className="flex items-center justify-between mb-6">
-                                <h3 className="text-xl font-bold text-text-color">Enter License Key</h3>
-                                <button type="button" onClick={() => setShowLicenseInput(false)} className="text-gray-500 hover:text-text-color">
-                                    <X className="w-6 h-6" />
+                            <form onSubmit={handleLicenseSubmit} className="relative z-10 animate-fade-in max-w-sm mx-auto">
+                                <div className="flex items-center justify-between mb-8 border-b border-white/10 pb-4">
+                                <h3 className="text-2xl font-display font-semibold text-white uppercase">Enter License</h3>
+                                <button type="button" onClick={() => setShowLicenseInput(false)} className="text-coffee-400 hover:text-white transition-all">
+                                    <X className="w-8 h-8" />
                                 </button>
                                 </div>
-                                <div className="mb-6">
+                                <div className="mb-8">
                                 <input 
                                     type="text" 
                                     value={licenseKeyInput}
                                     onChange={(e) => setLicenseKeyInput(e.target.value)}
                                     placeholder="TK-XXXX-XXXX-XXXX"
-                                    className="w-full bg-primary-bg border border-border-color text-text-color px-5 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent font-mono text-center uppercase tracking-widest placeholder-gray-600 text-lg"
+                                    className="w-full bg-coffee-800 border border-white/10 text-white px-6 py-5 rounded-2xl focus:outline-none focus:ring-4 focus:ring-coffee-500/30 font-mono text-center uppercase tracking-widest placeholder-coffee-700 text-xl transition-all"
                                 />
-                                {unlockError && <p className="text-red-400 text-sm mt-3">{unlockError}</p>}
+                                {unlockError && <p className="text-red-400 text-sm mt-4 font-medium">{unlockError}</p>}
                                 </div>
                                 <button 
                                 type="submit"
-                                className="w-full bg-accent text-primary-bg font-bold py-4 rounded-xl hover:bg-opacity-90 transition-colors shadow-lg flex items-center justify-center gap-2 text-lg"
+                                className="w-full bg-coffee-100 text-coffee-900 font-display text-xl py-5 rounded-2xl hover:bg-white transition-all shadow-lg flex items-center justify-center gap-3 uppercase"
                                 >
-                                <Key className="w-5 h-5" /> Activate License
+                                <Key className="w-6 h-6 stroke-[2px]" /> Activate License
                                 </button>
                             </form>
                         )}
@@ -365,10 +364,10 @@ export default function InvestorsPage({ initialInvestors }: InvestorsPageProps) 
                 )}
               </div>
             ) : (
-              <div className="text-center py-20 bg-secondary-bg rounded-3xl border border-dashed border-border-color">
-                <Search className="h-12 w-12 text-gray-600 mx-auto mb-4" />
-                <h3 className="text-xl font-bold font-headline text-text-color mb-2">No investors found</h3>
-                <p className="text-text-secondary">Try adjusting your filters or search query.</p>
+              <div className="text-center py-24 bg-white rounded-[2rem] border border-dashed border-coffee-200 shadow-inner-soft">
+                <Search className="h-16 w-16 text-coffee-100 mx-auto mb-6" />
+                <h3 className="text-2xl font-display font-semibold text-coffee-900 mb-3 uppercase">No investors found</h3>
+                <p className="text-coffee-400 font-light">Try adjusting your filters or search query.</p>
                 <button 
                   onClick={() => {
                     setSearchQuery('');
@@ -376,7 +375,7 @@ export default function InvestorsPage({ initialInvestors }: InvestorsPageProps) 
                     setSelectedGeo('All');
                     setSelectedCheckSize('All');
                   }}
-                  className="mt-6 text-accent hover:underline font-medium"
+                  className="mt-8 bg-coffee-900 text-white px-8 py-3 rounded-full font-medium shadow-md hover:bg-coffee-700 transition-all uppercase text-xs tracking-widest"
                 >
                   Clear all filters
                 </button>

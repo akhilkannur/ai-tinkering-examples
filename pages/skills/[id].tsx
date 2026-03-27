@@ -202,7 +202,7 @@ Downloaded from RealAIExamples.com`;
   const privateBlueprint = blueprintParts.length > 1 ? `### Phase 2:${blueprintParts[1]}` : '';
 
   return (
-    <div className="flex flex-col min-h-screen bg-primary-bg text-black selection:bg-[#ff00ff] selection:text-white">
+    <div className="flex flex-col min-h-screen bg-coffee-100 text-coffee-900 selection:bg-coffee-300 selection:text-coffee-900">
       <Head>
         <meta name="robots" content="noindex, nofollow" />
         <title>{recipe.title} | AI Agent Blueprint | Real AI Examples</title>
@@ -228,32 +228,32 @@ Downloaded from RealAIExamples.com`;
       
       <Navbar />
 
-      <main className="flex-grow container mx-auto px-4 pt-32 md:pt-40 pb-24 max-w-4xl relative z-10">
-        <div className="absolute top-0 right-0 w-32 h-32 bg-[#ff00ff] opacity-10 blur-xl"></div>
+      <main className="flex-grow container mx-auto px-6 pt-32 md:pt-40 pb-24 max-w-4xl relative z-10">
+        <div className="absolute top-0 right-0 w-64 h-64 bg-coffee-200/30 rounded-full blur-3xl pointer-events-none"></div>
         
         <div className="max-w-4xl mx-auto">
           {/* Breadcrumbs */}
-          <nav className="flex items-center gap-3 text-xs font-black font-mono uppercase tracking-widest text-black/40 mb-12">
-            <Link href="/ai-examples" className="hover:text-black flex items-center gap-1 shrink-0 bg-white px-2 py-1 border border-black">
-              <ArrowLeft className="w-3 h-3 stroke-[3px]" /> Hub
+          <nav className="flex items-center gap-3 text-[10px] font-bold font-mono uppercase tracking-widest text-coffee-400 mb-12">
+            <Link href="/" className="hover:text-coffee-900 flex items-center gap-1 shrink-0 bg-white px-3 py-1.5 rounded-full border border-coffee-200 shadow-sm transition-all">
+              <ArrowLeft className="w-3 h-3 stroke-[3px]" /> HUB
             </Link>
-            <span className="text-black">/</span>
-            <span className="text-black truncate">{recipe.title}</span>
+            <span>/</span>
+            <span className="text-coffee-900 truncate">{recipe.title}</span>
           </nav>
 
           {/* Header */}
           <div className="mb-12">
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8 mb-10">
               <div className="flex items-center gap-6">
-                <div className={`w-16 h-16 bg-black flex items-center justify-center border-4 border-black brutalist-shadow-sm ${isLocked ? 'text-[#ccff00]' : 'text-[#ff00ff]'}`}>
-                  {isLocked ? <Crown className="w-10 h-10 stroke-[3px]" /> : <CatIcon className="w-10 h-10 stroke-[3px]" />}
+                <div className={`w-16 h-16 rounded-2xl bg-coffee-900 flex items-center justify-center shadow-soft ${isLocked ? 'text-coffee-300' : 'text-coffee-100'}`}>
+                  {isLocked ? <Crown className="w-10 h-10 stroke-[2px]" /> : <CatIcon className="w-10 h-10 stroke-[2px]" />}
                 </div>
                 <div>
-                  <h1 className="text-3xl md:text-5xl font-display text-black uppercase leading-[0.9] glitch-text" data-text={recipe.title.toUpperCase()}>
+                  <h1 className="text-3xl md:text-5xl font-display font-semibold text-coffee-900 uppercase leading-[1.1]">
                       {recipe.title}
                   </h1>
                   <div className="flex flex-wrap items-center gap-3 mt-4">
-                    <span className={`px-2 py-0.5 border-2 border-black text-[10px] font-black uppercase tracking-widest ${isLocked ? 'bg-black text-[#ccff00]' : 'bg-[#ccff00] text-black'}`}>
+                    <span className={`px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest ${isLocked ? 'bg-coffee-800 text-white' : 'bg-coffee-200 text-coffee-800'}`}>
                       {isLocked ? 'Premium' : recipe.category}
                     </span>
                   </div>
@@ -262,8 +262,8 @@ Downloaded from RealAIExamples.com`;
             </div>
 
             {/* Mission Overview */}
-            <div className="border-l-8 border-[#ff00ff] pl-8 py-4 bg-white border-4 border-black brutalist-shadow">
-              <p className="text-black text-xl font-bold uppercase leading-tight font-sans">
+            <div className="border-l-4 border-coffee-500 pl-8 py-6 bg-white rounded-r-[2rem] shadow-soft border border-coffee-100">
+              <p className="text-coffee-800 text-xl font-light leading-relaxed">
                 <SimpleMarkdown text={linkedDescription || recipe.description} />
               </p>
             </div>
@@ -276,18 +276,18 @@ Downloaded from RealAIExamples.com`;
           )}
 
           {/* Locked or Unlocked Content */}
-          <div className="bg-black border-4 border-black brutalist-shadow mb-16 flex flex-col relative overflow-hidden">
+          <div className="bg-coffee-900 rounded-[2rem] shadow-soft mb-16 flex flex-col relative overflow-hidden border border-coffee-800">
               <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(#fff 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
               
               {/* Toolbar */}
-              <div className="bg-white px-6 py-4 border-b-4 border-black flex flex-col lg:flex-row lg:items-center justify-between gap-6 relative z-10">
+              <div className="bg-white px-8 py-6 border-b border-coffee-800/10 flex flex-col lg:flex-row lg:items-center justify-between gap-6 relative z-10">
                   <div className="flex items-center gap-4">
                       <div className="flex gap-2">
-                        <div className="w-3 h-3 bg-black"></div>
-                        <div className="w-3 h-3 bg-black"></div>
-                        <div className="w-3 h-3 bg-black"></div>
+                        <div className="w-3 h-3 rounded-full bg-coffee-200"></div>
+                        <div className="w-3 h-3 rounded-full bg-coffee-200"></div>
+                        <div className="w-3 h-3 rounded-full bg-coffee-200"></div>
                       </div>
-                      <span className="text-black font-black font-mono text-xs flex items-center gap-3 uppercase tracking-widest">
+                      <span className="text-coffee-900 font-bold font-mono text-xs flex items-center gap-3 uppercase tracking-widest">
                         <FileText className="w-4 h-4" /> {recipe.id}.md
                       </span>
                   </div>
@@ -299,43 +299,40 @@ Downloaded from RealAIExamples.com`;
                           <a
                               href={`/downloads/skills/${recipe.id}-claude.md`}
                               download
-                              className="flex-1 sm:flex-none flex items-center justify-center gap-3 bg-black text-white px-6 py-3 border-2 border-black font-display text-sm uppercase transition-all brutalist-shadow-sm hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none"
+                              className="flex-1 sm:flex-none flex items-center justify-center gap-3 bg-coffee-900 text-white px-6 py-3 rounded-full font-medium text-sm uppercase transition-all shadow-md hover:bg-coffee-700"
                           >
-                              <FileText className="w-5 h-5 stroke-[3px]" /> Download Blueprint (.md)
+                              <FileText className="w-5 h-5 stroke-[2px]" /> Blueprint (.md)
                           </a>
 
                           {/* Standard Actions */}
                           <div className="flex items-center gap-3">
                               <button
                                   onClick={handleDownloadZip}
-                                  className="bg-[#ccff00] text-black px-4 py-2 border-2 border-black font-display text-[10px] uppercase transition-all brutalist-shadow-sm hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none"
+                                  className="bg-coffee-100 text-coffee-900 px-5 py-2.5 rounded-full font-medium text-[10px] uppercase transition-all border border-coffee-200 shadow-sm hover:bg-coffee-50"
                               >
-                                  <Package className="w-4 h-4 inline mr-2 stroke-[3px]" />
-                                  TEMPLATE
+                                  <Package className="w-4 h-4 inline mr-2" />
+                                  BUNDLE
                               </button>
                               <button
                                   onClick={handleCopy}
-                                  className={`px-4 py-2 border-2 border-black font-display text-[10px] uppercase transition-all brutalist-shadow-sm hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none ${
+                                  className={`px-5 py-2.5 rounded-full font-medium text-[10px] uppercase transition-all shadow-sm ${
                                       copied
-                                      ? 'bg-emerald-400 text-black'
-                                      : 'bg-white text-black hover:bg-[#ff00ff] hover:text-white'
+                                      ? 'bg-emerald-500 text-white'
+                                      : 'bg-white text-coffee-700 border border-coffee-200 hover:bg-coffee-50'
                                   }`}
                               >
-                                  {copied ? <Check className="w-4 h-4 stroke-[3px]" /> : <Copy className="w-4 h-4 stroke-[3px]" />}
+                                  {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                                   {copied ? 'Copied' : 'Copy'}
                               </button>
                           </div>
                       </div>
-                      <p className="text-[9px] font-mono text-gray-500 uppercase tracking-widest mt-2">
-                          Works with Claude Code, Gemini CLI, Cursor, and all major agent tools
-                      </p>
                     </>
                   )}
               </div>
 
               {/* Code Content */}
-              <div className="p-8 relative z-10 bg-black/40">
-                <pre className="font-mono text-sm text-[#00ffff] whitespace-pre-wrap leading-relaxed uppercase font-black">
+              <div className="p-10 relative z-10 bg-coffee-900/40">
+                <pre className="font-mono text-sm text-coffee-100 whitespace-pre-wrap leading-relaxed font-medium">
                     {publicBlueprint}
                     {!isLocked && privateBlueprint}
                 </pre>
@@ -343,13 +340,13 @@ Downloaded from RealAIExamples.com`;
           </div>
 
           {isLocked && (
-              <div className="bg-[#ccff00] border-4 border-black p-12 text-center brutalist-shadow relative overflow-hidden mb-24">
+              <div className="bg-coffee-200 rounded-[2rem] p-12 text-center shadow-soft relative overflow-hidden mb-24 border border-coffee-300">
                  <div className="relative z-10">
-                    <div className="w-24 h-24 bg-black flex items-center justify-center mx-auto mb-10 border-4 border-black brutalist-shadow-sm shadow-[#ff00ff] rotate-3 text-white">
-                      <Lock className="w-12 h-12 stroke-[4px]" />
+                    <div className="w-20 h-20 bg-coffee-900 rounded-2xl flex items-center justify-center mx-auto mb-10 shadow-md text-coffee-100">
+                      <Lock className="w-10 h-10 stroke-[2px]" />
                     </div>
-                    <h2 className="text-4xl md:text-6xl font-display text-black mb-6 uppercase leading-tight">Logic Locked</h2>
-                    <p className="text-black font-black font-mono text-sm mb-12 uppercase tracking-[0.2em] max-w-lg mx-auto leading-relaxed">
+                    <h2 className="text-4xl md:text-6xl font-display font-semibold text-coffee-900 mb-6 uppercase leading-tight">Logic Locked</h2>
+                    <p className="text-coffee-700 font-light text-sm mb-12 uppercase tracking-[0.2em] max-w-lg mx-auto leading-relaxed">
                       // Processing and Output phases are available to Pro members.
                     </p>
                     
@@ -359,23 +356,23 @@ Downloaded from RealAIExamples.com`;
                               href="https://checkout.dodopayments.com/buy/pdt_0NW6p0szmXPS6jXW05hIP?session=sess_GCYotd6plh"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-black text-white px-12 py-6 border-4 border-white font-display text-2xl uppercase transition-all brutalist-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none"
+                              className="bg-coffee-900 text-white px-12 py-6 rounded-full font-display text-2xl uppercase transition-all shadow-lg hover:bg-coffee-700 hover:-translate-y-1"
                             >
-                              Unlock All ($39) <ArrowRight className="w-8 h-8 stroke-[4px] inline-block ml-2" />
+                              Unlock All ($39) <ArrowRight className="w-8 h-8 stroke-[2px] inline-block ml-2" />
                             </a>
                             <button 
                               onClick={() => setShowLicenseInput(true)}
-                              className="text-black font-black font-mono text-sm uppercase underline decoration-4 decoration-black underline-offset-8 hover:text-white transition-colors"
+                              className="text-coffee-900 font-bold font-mono text-sm uppercase underline decoration-2 decoration-coffee-400 underline-offset-8 hover:text-coffee-600 transition-colors"
                             >
                               Enter License Key
                             </button>
                         </div>
                     ) : (
-                        <form onSubmit={handleLicenseSubmit} className="max-w-md mx-auto bg-white border-4 border-black p-10 brutalist-shadow-sm">
-                            <div className="flex items-center justify-between mb-8 border-b-4 border-black pb-4">
-                                <h3 className="text-2xl font-display text-black uppercase">Enter Key</h3>
-                                <button type="button" onClick={() => setShowLicenseInput(false)} className="p-2 hover:bg-gray-100 border-2 border-transparent hover:border-black transition-all">
-                                    <X className="w-8 h-8 text-black stroke-[3px]" />
+                        <form onSubmit={handleLicenseSubmit} className="max-w-md mx-auto bg-white rounded-[2rem] p-10 shadow-soft border border-coffee-100">
+                            <div className="flex items-center justify-between mb-8 border-b border-coffee-100 pb-4">
+                                <h3 className="text-2xl font-display font-semibold text-coffee-900 uppercase">Enter Key</h3>
+                                <button type="button" onClick={() => setShowLicenseInput(false)} className="p-2 hover:bg-coffee-50 rounded-full transition-all">
+                                    <X className="w-8 h-8 text-coffee-400" />
                                 </button>
                             </div>
                             <input 
@@ -383,13 +380,13 @@ Downloaded from RealAIExamples.com`;
                                 value={licenseKeyInput}
                                 onChange={(e) => setLicenseKeyInput(e.target.value)}
                                 placeholder="TK-XXXX-XXXX-XXXX"
-                                className="w-full bg-gray-50 border-4 border-black text-black font-display text-xl px-6 py-5 focus:bg-[#ccff00] outline-none text-center uppercase tracking-widest placeholder-gray-300 mb-8"
+                                className="w-full bg-coffee-50 border border-coffee-200 rounded-2xl text-coffee-900 font-display text-xl px-6 py-5 focus:bg-white outline-none text-center uppercase tracking-widest placeholder-coffee-200 mb-8 transition-all"
                             />
                             <button 
                                 type="submit"
-                                className="w-full bg-black text-white font-display py-6 border-4 border-black hover:bg-[#ff00ff] transition-all brutalist-shadow-sm uppercase text-xl"
+                                className="w-full bg-coffee-900 text-white font-display py-6 rounded-2xl hover:bg-coffee-700 transition-all shadow-md uppercase text-xl"
                             >
-                                <Key className="w-8 h-8 stroke-[3px] inline mr-4" /> Activate
+                                <Key className="w-8 h-8 stroke-[2px] inline mr-4" /> Activate
                             </button>
                         </form>
                     )}
@@ -400,11 +397,11 @@ Downloaded from RealAIExamples.com`;
           {!isLocked && (
               <>
                 {recipe.sampleOutput && (
-                  <div className="mb-24 border-l-8 border-black pl-10">
-                    <h2 className="text-xl font-display text-black uppercase tracking-widest mb-8 decoration-wavy underline decoration-[#00ffff]">
+                  <div className="mb-24 border-l-4 border-coffee-900 pl-10">
+                    <h2 className="text-xl font-display font-semibold text-coffee-900 uppercase tracking-widest mb-8 decoration-wavy underline decoration-coffee-300">
                       Sample Output
                     </h2>
-                    <div className="bg-white border-4 border-black p-8 brutalist-shadow-sm font-mono text-sm text-black font-black uppercase leading-relaxed max-h-[400px] overflow-y-auto">
+                    <div className="bg-white rounded-[2rem] border border-coffee-100 p-10 shadow-soft font-mono text-sm text-coffee-800 leading-relaxed max-h-[400px] overflow-y-auto">
                       {recipe.sampleOutput}
                     </div>
                   </div>
@@ -412,19 +409,19 @@ Downloaded from RealAIExamples.com`;
 
                 {/* Simplified Instructions */}
                 <div className="mb-24">
-                    <div className="bg-white border-4 border-black p-10 brutalist-shadow">
-                        <h3 className="text-3xl font-display text-black mb-10 uppercase flex items-center gap-4">
-                            <Terminal className="w-10 h-10 stroke-[3px]" />
+                    <div className="bg-white rounded-[2rem] border border-coffee-100 p-12 shadow-soft">
+                        <h3 className="text-3xl font-display font-semibold text-coffee-900 mb-10 uppercase flex items-center gap-4">
+                            <Terminal className="w-10 h-10 stroke-[2px]" />
                             Execution
                         </h3>
                         <div className="grid md:grid-cols-2 gap-12">
-                            <div className="border-l-4 border-[#ff00ff] pl-6">
-                                <span className="text-[10px] font-black font-mono text-gray-400 uppercase tracking-widest mb-4 block">Option 1: The Easy Way</span>
-                                <p className="text-lg text-black font-bold uppercase leading-tight">Download the <span className="bg-[#ff00ff] text-white px-1">Bundle Zip</span> above. It contains everything.</p>
+                            <div className="border-l-4 border-coffee-200 pl-6">
+                                <span className="text-[10px] font-bold font-mono text-coffee-400 uppercase tracking-widest mb-4 block">Option 1: The Easy Way</span>
+                                <p className="text-lg text-coffee-900 font-light leading-snug">Download the <span className="bg-coffee-900 text-white px-2 rounded font-medium">Bundle Zip</span> above. It contains everything.</p>
                             </div>
-                            <div className="border-l-4 border-[#ccff00] pl-6">
-                                <span className="text-[10px] font-black font-mono text-gray-400 uppercase tracking-widest mb-4 block">Option 2: Terminal</span>
-                                <div className="bg-black border-2 border-black p-4 font-mono text-xs text-[#ccff00] uppercase font-black">
+                            <div className="border-l-4 border-coffee-200 pl-6">
+                                <span className="text-[10px] font-bold font-mono text-coffee-400 uppercase tracking-widest mb-4 block">Option 2: Terminal</span>
+                                <div className="bg-coffee-900 rounded-xl p-5 font-mono text-xs text-coffee-100 uppercase font-medium mt-2">
                                     gemini "Read @{recipe.id}.md execute"
                                 </div>
                             </div>
@@ -436,29 +433,30 @@ Downloaded from RealAIExamples.com`;
 
           {/* Related Blueprints */}
           {relatedRecipes && relatedRecipes.length > 0 && (
-            <div className="border-t-4 border-black pt-20 mt-20">
-              <h3 className="text-4xl font-display text-black mb-12 uppercase decoration-wavy underline decoration-[#ff00ff]">
-                <BookOpen className="w-10 h-10 text-black stroke-[3px] inline mr-4" />
+            <div className="border-t border-coffee-200 pt-20 mt-20">
+              <h3 className="text-4xl font-display font-semibold text-coffee-900 mb-12 uppercase decoration-wavy underline decoration-coffee-300">
                 Related Blueprints
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {relatedRecipes.map(related => (
-                  <Link key={related.id} href={`/skills/${related.id}`} className="group flex flex-col bg-white border-4 border-black p-6 brutalist-shadow-sm hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all h-full">
+                  <Link key={related.id} href={`/skills/${related.id}`} className="group flex flex-col bg-white rounded-3xl border border-coffee-100 p-8 shadow-soft hover:shadow-soft-hover hover:-translate-y-1.5 transition-all h-full overflow-hidden">
                     <div className="flex items-center justify-between mb-6">
-                      <span className="bg-black text-[#ccff00] text-[10px] font-black px-2 py-0.5 border-2 border-black uppercase tracking-widest">
+                      <span className="bg-coffee-100 text-coffee-800 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">
                         {related.difficulty}
                       </span>
-                      <Terminal className="w-5 h-5 text-black group-hover:text-[#ff00ff] transition-colors stroke-[3px]" />
+                      <div className="w-8 h-8 rounded-full bg-coffee-50 flex items-center justify-center text-coffee-400 group-hover:bg-coffee-900 group-hover:text-white transition-colors">
+                        <Terminal className="w-4 h-4 stroke-[2px]" />
+                      </div>
                     </div>
-                    <h4 className="text-xl font-display text-black mb-4 line-clamp-2 uppercase leading-tight group-hover:text-[#ff00ff] transition-colors">
+                    <h4 className="text-xl font-display font-semibold text-coffee-900 mb-4 line-clamp-2 uppercase leading-tight group-hover:text-coffee-600 transition-colors">
                       {related.title}
                     </h4>
-                    <p className="text-xs font-black font-mono text-black/60 mb-8 line-clamp-3 uppercase tracking-tighter">
-                      // {related.tagline}
+                    <p className="text-xs text-coffee-600 mb-8 line-clamp-3 font-light leading-relaxed">
+                      {related.tagline}
                     </p>
-                    <div className="mt-auto pt-4 border-t-2 border-black/10 text-black font-display text-[10px] uppercase">
+                    <div className="mt-auto pt-6 border-t border-coffee-50 text-coffee-400 font-display text-[10px] uppercase">
                       <span className="flex items-center gap-2">
-                        <Clock className="w-4 h-4 stroke-[3px]" /> {related.time}
+                        <Clock className="w-4 h-4" /> {related.time}
                       </span>
                     </div>
                   </Link>
@@ -468,7 +466,7 @@ Downloaded from RealAIExamples.com`;
           )}
 
           {/* Newsletter Signup */}
-          <div className="mt-32 border-t-4 border-black border-dotted pt-24">
+          <div className="mt-32 border-t border-coffee-200 border-dashed pt-24">
             <NewsletterSignup />
           </div>
 
