@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export default function NewsletterForm() {
+export default function NewsletterForm({ dark = false }: { dark?: boolean }) {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
@@ -34,22 +34,30 @@ export default function NewsletterForm() {
 
   if (status === 'success') {
     return (
-      <div className="py-3 px-6 bg-white border border-coffee-200 rounded-full text-center shadow-soft">
-        <p className="text-coffee-900 font-sans text-sm font-medium">✓ Check your inbox to confirm.</p>
+      <div className={`py-3 px-6 border rounded-full text-center ${
+        dark ? 'bg-white/5 border-white/10' : 'bg-white border-coffee-200 shadow-soft'
+      }`}>
+        <p className={`text-sm font-medium ${dark ? 'text-white' : 'text-coffee-900'}`}>✓ Check your inbox to confirm.</p>
       </div>
     );
   }
 
   return (
     <div className="w-full">
-      <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row group shadow-soft hover:shadow-soft-hover transition-all duration-300 bg-white rounded-full p-1.5 border border-coffee-200">
+      <form onSubmit={handleSubmit} className={`flex flex-col sm:flex-row group transition-all duration-300 rounded-full p-1.5 border ${
+        dark
+          ? 'bg-white/[0.04] border-white/10 hover:border-white/20'
+          : 'bg-white border-coffee-200 shadow-soft hover:shadow-soft-hover'
+      }`}>
         <div className="flex-1 flex items-center bg-transparent px-4 relative">
-          <i className="ph ph-envelope-simple text-coffee-400 text-xl absolute"></i>
+          <i className={`ph ph-envelope-simple text-xl absolute ${dark ? 'text-zinc-500' : 'text-coffee-400'}`}></i>
           <input 
             type="email" 
             placeholder="Get weekly teardowns..." 
             required
-            className="w-full py-3 pl-8 pr-4 text-base focus:outline-none font-light placeholder-coffee-400 bg-transparent text-coffee-900" 
+            className={`w-full py-3 pl-8 pr-4 text-base focus:outline-none font-light bg-transparent ${
+              dark ? 'placeholder-zinc-500 text-white' : 'placeholder-coffee-400 text-coffee-900'
+            }`}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             disabled={status === 'loading'}
@@ -57,7 +65,11 @@ export default function NewsletterForm() {
         </div>
         <button 
           type="submit"
-          className="bg-coffee-900 text-white px-8 py-4 sm:py-3 rounded-full font-medium tracking-wide hover:bg-coffee-700 transition-colors flex items-center justify-center text-sm whitespace-nowrap ml-1 disabled:bg-coffee-300"
+          className={`px-8 py-4 sm:py-3 rounded-full font-medium tracking-wide transition-colors flex items-center justify-center text-sm whitespace-nowrap ml-1 ${
+            dark
+              ? 'bg-green-500 text-black hover:bg-green-400 disabled:bg-green-800'
+              : 'bg-coffee-900 text-white hover:bg-coffee-700 disabled:bg-coffee-300'
+          }`}
           disabled={status === 'loading'}
         >
           {status === 'loading' ? '...' : 'Join 14k+ Readers'}

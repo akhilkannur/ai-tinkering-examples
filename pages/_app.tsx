@@ -82,7 +82,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="apple-touch-icon" sizes="180x180" href={`${baseUrl}/favicon_transparent.png`} />
       </Head>
       <Component {...pageProps} />
-      <Footer />
+      {router.pathname !== '/' && <Footer />}
       <NewsletterPopup />
       <NewsletterToast />
       
