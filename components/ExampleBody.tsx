@@ -89,7 +89,6 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
 
         {example.workflow_steps && (
           <div className="mb-xxl p-xl bg-hero-tint border-4 border-accent-dark relative">
-            <div className="absolute -top-4 left-6 bg-accent-dark text-white px-3 py-1 font-display text-[10px] uppercase border-2 border-accent-dark">Workflow Logic</div>
             <p className="text-[12px] font-mono font-bold text-primary-text leading-relaxed uppercase tracking-widest">
               {example.workflow_steps}
             </p>

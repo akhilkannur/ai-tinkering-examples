@@ -382,6 +382,8 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
           display: flex;
           align-items: center;
           justify-content: center;
+          border: 1px solid var(--border-light);
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
           background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.08'/%3E%3C/svg%3E");
           transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
         }
@@ -436,24 +438,61 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
         }
 
         .drops-footer {
-          text-align: center;
           padding: var(--space-xl) 0 var(--space-md);
+          border-top: 2px solid var(--border-heavy);
           font-family: var(--font-mono);
-          font-size: 0.65rem;
+          font-size: 0.85rem;
           text-transform: uppercase;
-          letter-spacing: 0.1em;
           color: var(--text-secondary);
         }
 
         .drops-footer a {
           color: var(--text-secondary);
           text-decoration: none;
-          margin: 0 var(--space-sm);
         }
 
         .drops-footer a:hover {
           color: var(--text-primary);
           text-decoration: underline;
+        }
+
+        .drops-footer-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: var(--space-lg);
+          margin-bottom: var(--space-lg);
+        }
+
+        .drops-footer-grid ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+        }
+
+        .drops-footer-heading {
+          font-family: var(--font-display);
+          font-size: 0.75rem;
+          color: var(--text-primary);
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          margin-bottom: var(--space-sm);
+        }
+
+        .drops-footer-bottom {
+          padding-top: var(--space-sm);
+          border-top: 1px solid var(--border-light);
+          font-size: 0.7rem;
+          letter-spacing: 0.1em;
+        }
+
+        @media (max-width: 640px) {
+          .drops-footer-grid {
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-md);
+          }
         }
 
         @media (max-width: 640px) {
@@ -476,18 +515,10 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
         }
       `}</style>
 
-      {/* Watermark */}
-      <div className="watermark-container">
-        <svg className="watermark-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-          <path d="M50 10 L10 90 L35 90 L50 60 L65 90 L90 90 Z" />
-          <circle cx="50" cy="65" r="15" fill="none" stroke="currentColor" strokeWidth="8" />
-        </svg>
-      </div>
-
       <div className="drops-wrapper">
         {/* Header */}
         <header className="drops-header">
-          <Link href="/" className="drops-logo">Real AI</Link>
+          <Link href="/" className="drops-logo">realaiexamples</Link>
           <nav className="drops-nav">
             <Link href="/tools">Tools</Link>
             <Link href="/blog">Blog</Link>
@@ -603,13 +634,35 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
 
         {/* Footer */}
         <footer className="drops-footer">
-          <div style={{ marginBottom: '1rem' }}>
-            <Link href="/about">About</Link>
-            <a href="https://twitter.com/realaiexamples" target="_blank" rel="noopener noreferrer">Twitter</a>
-            <Link href="/privacy">Privacy</Link>
-            <Link href="/terms">Terms</Link>
+          <div className="drops-footer-grid">
+            <div>
+              <h4 className="drops-footer-heading">Site</h4>
+              <ul>
+                <li><Link href="/about">About</Link></li>
+                <li><Link href="/">Examples</Link></li>
+                <li><Link href="/tools">Tool Directory</Link></li>
+                <li><Link href="/blog">Blog</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="drops-footer-heading">Connect</h4>
+              <ul>
+                <li><Link href="/#newsletter">Newsletter</Link></li>
+                <li><a href="https://twitter.com/realaiexamples" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+                <li><a href="https://salestools.club/" target="_blank" rel="noopener noreferrer">Salestools Club</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="drops-footer-heading">Legal</h4>
+              <ul>
+                <li><Link href="/privacy">Privacy Policy</Link></li>
+                <li><Link href="/terms">Terms of Service</Link></li>
+              </ul>
+            </div>
           </div>
-          Real AI Examples © 2026
+          <div className="drops-footer-bottom">
+            © {new Date().getFullYear()} Real AI Examples. Curated for business professionals.
+          </div>
         </footer>
       </div>
 
