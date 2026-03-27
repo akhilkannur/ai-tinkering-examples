@@ -3,18 +3,16 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { aiTools, AiTool } from '../../lib/ai-tools-data';
 import ToolDetailModal from '../../components/ToolDetailModal';
-import { Filter, ChevronDown, ArrowRight, ShoppingBag, Search, Command } from 'lucide-react';
+import { Filter, ChevronDown, ArrowRight, ShoppingBag, Search, Command, X } from 'lucide-react';
 
-const CARD_COLORS = ['#D8D8D8', '#6A37AC', '#C5CC5C', '#7B7662', '#333333'];
+const CARD_COLORS = ['#F5F5F5', '#EFEFEF', '#FAFAFA', '#F0F0F0', '#FFFFFF'];
 
 export default function ToolsIndex() {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [selectedPrice, setSelectedPrice] = useState<string>('All');
   const [selectedSkill, setSelectedSkill] = useState<string>('All');
   const [selectedTool, setSelectedTool] = useState<AiTool | null>(null);
-  const [email, setEmail] = useState('');
-  const [formStatus, setFormStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
-
+  
   const categories = ['All', ...Array.from(new Set(aiTools.map(t => t.category)))];
   const prices = ['All', ...Array.from(new Set(aiTools.map(t => t.tags.price)))];
   const skills = ['All', ...Array.from(new Set(aiTools.map(t => t.tags.skill)))];
@@ -28,379 +26,374 @@ export default function ToolsIndex() {
     });
   }, [selectedCategory, selectedPrice, selectedSkill]);
 
-  const featuredTool = aiTools[0]; // Highlight the first tool as the "Drop"
-
-  const handleNewsletterSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email) return;
-    setFormStatus('loading');
-    try {
-      const res = await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email }),
-      });
-      if (res.ok) { setFormStatus('success'); setEmail(''); }
-      else { setFormStatus('error'); }
-    } catch { setFormStatus('error'); }
-  };
+  const featuredTools = aiTools.slice(0, 3);
 
   return (
     <>
       <Head>
         <title>The Stack | Real AI Examples</title>
-        <meta name="description" content="A curated drop of AI tools for business professionals." key="description" />
+        <meta name="description" content="A technical repository of AI tools for operators." key="description" />
       </Head>
 
       <style jsx global>{`
         :root {
           --bg-base: #FFFFFF;
           --text-primary: #000000;
-          --text-secondary: #666666;
-          --border-heavy: #000000;
-          --border-light: #E0E0E0;
+          --text-secondary: #777777;
+          --border-thin: 1px solid #000000;
+          --border-medium: 2px solid #000000;
           --color-neon: #ccff00;
-          --color-pink: #ff00ff;
-          --font-display: 'Arial Black', 'Impact', system-ui, -apple-system, sans-serif;
-          --font-mono: 'Courier New', Courier, monospace;
+          --font-display: 'Arial Black', 'Impact', sans-serif;
+          --font-mono: 'JetBrains Mono', 'Courier New', monospace;
           --font-body: 'Newsreader', 'Georgia', serif;
           --space-sm: 1rem;
           --space-md: 2rem;
           --space-lg: 4rem;
         }
 
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap');
+
         body {
           background-color: var(--bg-base) !important;
           color: var(--text-primary) !important;
           font-family: var(--font-body) !important;
-          overflow-x: hidden;
+          letter-spacing: -0.01em;
+          -webkit-font-smoothing: antialiased;
         }
 
-        .store-container {
+        .stack-container {
           max-width: 1600px;
           margin: 0 auto;
-          padding: 0 var(--space-md);
+          padding: 0 var(--space-md) var(--space-lg);
         }
 
-        /* --- Global Header --- */
-        .store-nav-header {
+        /* --- Header --- */
+        .stack-header {
           display: flex;
           justify-content: space-between;
           align-items: center;
-          padding: var(--space-md) 0;
-          border-bottom: 4px solid var(--border-heavy);
-          position: sticky;
-          top: 0;
-          background: white;
-          z-index: 100;
+          padding: 1.5rem 0;
+          border-bottom: var(--border-thin);
+          margin-bottom: 2rem;
         }
 
-        .store-logo {
+        .stack-logo {
           font-family: var(--font-display);
-          font-size: 1.5rem;
+          font-size: 1.25rem;
           text-transform: uppercase;
           text-decoration: none;
           color: black;
           letter-spacing: -0.05em;
         }
 
-        .store-nav-links {
+        .stack-nav {
           display: flex;
-          gap: var(--space-md);
-          font-family: var(--font-mono);
-          font-size: 0.75rem;
-          text-transform: uppercase;
-          font-weight: 900;
-        }
-
-        .store-nav-links a.active {
-          background: var(--color-neon);
-          border: 2px solid black;
-          padding: 2px 6px;
-          box-shadow: 3px 3px 0 black;
-        }
-
-        /* --- Featured Drop (Hero) --- */
-        .featured-drop {
-          display: grid;
-          grid-template-columns: 1.2fr 1fr;
-          border: 4px solid black;
-          margin-top: var(--space-md);
-          min-height: 500px;
-          box-shadow: 12px 12px 0 black;
-          background: white;
-        }
-
-        .drop-visual {
-          background: #6A37AC;
-          border-right: 4px solid black;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          position: relative;
-          overflow: hidden;
-        }
-
-        .drop-tag {
-          position: absolute;
-          top: 30px;
-          left: -40px;
-          background: var(--color-neon);
-          color: black;
-          font-family: var(--font-display);
-          padding: 8px 60px;
-          transform: rotate(-45deg);
-          border: 2px solid black;
-          font-size: 0.7rem;
-        }
-
-        .drop-info {
-          padding: var(--space-lg);
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-        }
-
-        .drop-label {
+          gap: 2rem;
           font-family: var(--font-mono);
           font-size: 0.7rem;
-          font-weight: 900;
           text-transform: uppercase;
-          margin-bottom: var(--space-sm);
+          font-weight: 800;
         }
 
-        .drop-title {
-          font-family: var(--font-display);
-          font-size: clamp(2.5rem, 5vw, 4.5rem);
-          line-height: 0.85;
-          text-transform: uppercase;
-          margin-bottom: var(--space-md);
-        }
-
-        .drop-desc {
-          font-size: 1.25rem;
-          margin-bottom: var(--space-lg);
-          max-width: 35ch;
-          color: #333;
-        }
-
-        .drop-cta {
-          align-self: flex-start;
-          background: black;
-          color: white;
-          padding: 16px 32px;
-          font-family: var(--font-display);
-          text-transform: uppercase;
+        .stack-nav a {
           text-decoration: none;
-          display: flex;
-          align-items: center;
-          gap: 12px;
-          border: 2px solid black;
-          box-shadow: 6px 6px 0 var(--color-neon);
-          transition: transform 0.1s;
+          color: black;
         }
 
-        .drop-cta:hover {
-          transform: translate(-2px, -2px);
-          box-shadow: 8px 8px 0 var(--color-neon);
-        }
-
-        /* --- Store Layout --- */
-        .store-layout {
-          display: grid;
-          grid-template-columns: 240px 1fr;
-          gap: var(--space-lg);
-          margin-top: var(--space-lg);
-          margin-bottom: var(--space-lg);
-        }
-
-        /* --- Sidebar --- */
-        .store-sidebar {
-          position: sticky;
-          top: 100px;
-          height: fit-content;
-        }
-
-        .filter-group {
-          margin-bottom: var(--space-md);
-        }
-
-        .filter-header {
-          font-family: var(--font-display);
-          font-size: 0.8rem;
-          text-transform: uppercase;
-          border-bottom: 2px solid black;
-          padding-bottom: 4px;
-          margin-bottom: var(--space-sm);
-        }
-
-        .filter-list {
-          list-style: none;
-          padding: 0;
-          display: flex;
-          flex-direction: column;
-          gap: 4px;
-        }
-
-        .filter-btn {
-          font-family: var(--font-mono);
-          font-size: 0.7rem;
-          text-transform: uppercase;
-          text-align: left;
-          background: none;
-          border: none;
-          cursor: pointer;
-          color: #666;
-          padding: 2px 0;
-          font-weight: 700;
-        }
-
-        .filter-btn:hover { color: black; }
-        .filter-btn.active { 
-          color: black; 
-          text-decoration: underline; 
-          text-decoration-thickness: 2px;
+        .stack-nav a.active {
+          text-decoration: underline;
           text-underline-offset: 4px;
+          text-decoration-thickness: 2px;
         }
 
-        /* --- Tool Grid --- */
-        .store-toolbar {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          border-bottom: 4px solid black;
-          padding-bottom: 8px;
-          margin-bottom: var(--space-md);
-        }
-
-        .toolbar-label {
-          font-family: var(--font-mono);
-          font-size: 0.75rem;
-          font-weight: 900;
-          text-transform: uppercase;
-        }
-
-        .tool-grid {
+        /* --- Bento Hero --- */
+        .bento-hero {
           display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-          gap: var(--space-md);
+          grid-template-columns: 2fr 1fr;
+          grid-template-rows: 400px;
+          gap: 1rem;
+          margin-bottom: 3rem;
         }
 
-        .tool-tile {
+        .bento-main {
+          border: var(--border-thin);
+          display: flex;
+          background: #000;
+          color: #FFF;
+          overflow: hidden;
+          position: relative;
+          cursor: pointer;
+        }
+
+        .bento-main-info {
+          flex: 1;
+          padding: 3rem;
           display: flex;
           flex-direction: column;
-          border: 4px solid black;
-          background: white;
-          cursor: pointer;
-          transition: transform 0.2s;
-          position: relative;
+          justify-content: center;
+          z-index: 2;
         }
 
-        .tool-tile:hover {
-          transform: translate(-4px, -4px);
-          box-shadow: 8px 8px 0 black;
-        }
-
-        .tile-visual {
-          aspect-ratio: 1/1;
-          border-bottom: 4px solid black;
+        .bento-main-visual {
+          flex: 1;
           display: flex;
           align-items: center;
           justify-content: center;
-          position: relative;
-          overflow: hidden;
+          background: #111;
         }
 
-        .tile-visual img {
-          width: 40%;
-          height: 40%;
-          object-fit: contain;
-        }
-
-        .tile-badge {
-          position: absolute;
-          top: 12px;
-          right: 12px;
-          background: black;
-          color: white;
-          font-family: var(--font-mono);
-          font-size: 0.6rem;
-          padding: 2px 6px;
-          text-transform: uppercase;
-          font-weight: 900;
-        }
-
-        .tile-info {
-          padding: var(--space-sm);
-          display: flex;
-          flex-direction: column;
-          gap: 4px;
-        }
-
-        .tile-meta {
+        .bento-label {
           font-family: var(--font-mono);
           font-size: 0.65rem;
           text-transform: uppercase;
-          color: #666;
+          margin-bottom: 1rem;
           display: flex;
-          justify-content: space-between;
+          align-items: center;
+          gap: 8px;
         }
 
-        .tile-name {
+        .bento-label::before {
+          content: '';
+          width: 8px;
+          height: 8px;
+          background: var(--color-neon);
+          border-radius: 50%;
+        }
+
+        .bento-title {
           font-family: var(--font-display);
-          font-size: 1.1rem;
+          font-size: 4rem;
           text-transform: uppercase;
+          line-height: 0.9;
+          margin-bottom: 1.5rem;
+        }
+
+        .bento-desc {
+          font-size: 1.1rem;
+          max-width: 30ch;
+          opacity: 0.8;
+        }
+
+        .bento-side {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+        }
+
+        .bento-small {
+          flex: 1;
+          border: var(--border-thin);
+          padding: 2rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          background: white;
+          cursor: pointer;
+          transition: background 0.2s;
+        }
+
+        .bento-small:hover { background: #f9f9f9; }
+
+        .bento-small h3 {
+          font-family: var(--font-display);
+          font-size: 1.25rem;
+          text-transform: uppercase;
+          margin-bottom: 0.5rem;
+        }
+
+        /* --- Floating Filter Bar --- */
+        .filter-dock {
+          position: sticky;
+          top: 1rem;
+          z-index: 100;
+          display: flex;
+          justify-content: center;
+          margin-bottom: 3rem;
+        }
+
+        .filter-bar {
+          background: black;
+          color: white;
+          padding: 0.5rem;
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          border-radius: 4px;
+          border: var(--border-thin);
+          box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .filter-select-wrapper {
+          position: relative;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          padding: 0 1rem;
+          border-right: 1px solid #333;
+        }
+
+        .filter-select-wrapper:last-child { border-right: none; }
+
+        .filter-select-label {
+          font-family: var(--font-mono);
+          font-size: 0.6rem;
+          text-transform: uppercase;
+          color: #666;
+        }
+
+        .filter-select {
+          background: none;
+          border: none;
+          color: white;
+          font-family: var(--font-mono);
+          font-size: 0.7rem;
+          text-transform: uppercase;
+          font-weight: 800;
+          outline: none;
+          cursor: pointer;
+          padding: 4px 0;
+        }
+
+        /* --- Tool Grid --- */
+        .tool-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+          gap: 1px;
+          background: #000;
+          border: var(--border-thin);
+        }
+
+        .tool-item {
+          background: white;
+          padding: 2.5rem;
+          display: flex;
+          flex-direction: column;
+          cursor: pointer;
+          transition: background 0.1s;
+        }
+
+        .tool-item:hover { background: #fafafa; }
+
+        .tool-visual {
+          height: 100px;
+          display: flex;
+          align-items: flex-start;
+          margin-bottom: 2rem;
+        }
+
+        .tool-visual img {
+          width: 40px;
+          height: 40px;
+          object-fit: contain;
+          filter: grayscale(1);
+          opacity: 0.8;
+        }
+
+        .tool-item:hover .tool-visual img { filter: none; opacity: 1; }
+
+        .tool-name {
+          font-family: var(--font-display);
+          font-size: 1.5rem;
+          text-transform: uppercase;
+          margin-bottom: 0.5rem;
           line-height: 1;
         }
 
-        .tile-price {
-          margin-top: 8px;
-          background: var(--color-neon);
-          align-self: flex-start;
-          padding: 2px 8px;
-          border: 2px solid black;
+        .tool-desc {
+          font-size: 1rem;
+          color: #444;
+          margin-bottom: 2.5rem;
+          flex-grow: 1;
+          line-height: 1.4;
+        }
+
+        /* Technical Manifest Table */
+        .tool-manifest {
+          border-top: var(--border-thin);
+          padding-top: 1.5rem;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 1.5rem;
+        }
+
+        .manifest-row {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+        }
+
+        .manifest-key {
           font-family: var(--font-mono);
-          font-size: 0.7rem;
-          font-weight: 900;
+          font-size: 0.55rem;
           text-transform: uppercase;
+          color: #888;
+        }
+
+        .manifest-val {
+          font-family: var(--font-mono);
+          font-size: 0.65rem;
+          text-transform: uppercase;
+          font-weight: 800;
         }
 
         /* --- Footer --- */
-        .store-footer {
-          border-top: 4px solid black;
-          padding: var(--space-lg) 0;
-          display: grid;
-          grid-template-columns: repeat(4, 1fr);
-          gap: var(--space-md);
-          font-family: var(--font-mono);
-          font-size: 0.7rem;
-          text-transform: uppercase;
+        .stack-footer {
+          margin-top: 8rem;
+          padding-top: 4rem;
+          border-top: var(--border-thin);
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
         }
 
-        .footer-header {
+        .footer-left h4 {
           font-family: var(--font-display);
-          font-size: 0.75rem;
-          margin-bottom: 12px;
+          font-size: 2rem;
+          text-transform: uppercase;
+          margin-bottom: 1rem;
         }
 
-        .footer-list { list-style: none; padding: 0; }
-        .footer-list li { margin-bottom: 6px; }
-        .footer-list a { color: #666; text-decoration: none; }
-        .footer-list a:hover { color: black; text-decoration: underline; }
+        .footer-right {
+          font-family: var(--font-mono);
+          font-size: 0.65rem;
+          text-transform: uppercase;
+          display: flex;
+          gap: 4rem;
+        }
+
+        .footer-list {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+        }
+
+        .footer-list a {
+          text-decoration: none;
+          color: #666;
+        }
+
+        .footer-list a:hover {
+          color: black;
+          text-decoration: underline;
+        }
 
         @media (max-width: 1024px) {
-          .featured-drop { grid-template-columns: 1fr; }
-          .drop-visual { border-right: none; border-bottom: 4px solid black; height: 300px; }
-          .store-layout { grid-template-columns: 1fr; }
-          .store-sidebar { display: none; }
+          .bento-hero { grid-template-columns: 1fr; grid-template-rows: auto; }
+          .bento-main { flex-direction: column; height: auto; }
+          .bento-main-visual { height: 250px; border-top: var(--border-thin); }
+          .bento-main-info { padding: 2rem; }
         }
       `}</style>
 
-      <div className="store-container">
+      <div className="stack-container">
         {/* Header */}
-        <header className="store-nav-header">
-          <Link href="/" className="store-logo">realaiexamples</Link>
-          <nav className="store-nav-links">
+        <header className="stack-header">
+          <Link href="/" className="stack-logo">realaiexamples</Link>
+          <nav className="stack-nav">
             <Link href="/">Archive</Link>
             <Link href="/tools" className="active">The Stack</Link>
             <Link href="/blog">Editorial</Link>
@@ -408,179 +401,127 @@ export default function ToolsIndex() {
           </nav>
         </header>
 
-        {/* Featured Drop */}
-        <section className="featured-drop">
-          <div className="drop-visual">
-            <span className="drop-tag">NEW DROP</span>
-            <img src={featuredTool.image} alt={featuredTool.name} />
+        {/* Bento Hero */}
+        <section className="bento-hero">
+          <div className="bento-main" onClick={() => setSelectedTool(featuredTools[0])}>
+            <div className="bento-main-info">
+              <span className="bento-label">Primary Unit</span>
+              <h1 className="bento-title">{featuredTools[0].name}</h1>
+              <p className="bento-desc">{featuredTools[0].description}</p>
+            </div>
+            <div className="bento-main-visual">
+              <img src={featuredTools[0].image} alt={featuredTools[0].name} style={{ width: '100px', filter: 'invert(1)' }} />
+            </div>
           </div>
-          <div className="drop-info">
-            <span className="drop-label">Staff Pick / {featuredTool.category}</span>
-            <h1 className="drop-title">{featuredTool.name}</h1>
-            <p className="drop-desc">{featuredTool.description}</p>
-            <button className="drop-cta" onClick={() => setSelectedTool(featuredTool)}>
-              Get Tool <ShoppingBag size={20} />
-            </button>
+          <div className="bento-side">
+            <div className="bento-small" onClick={() => setSelectedTool(featuredTools[1])}>
+              <span className="bento-label">New Arrival</span>
+              <h3>{featuredTools[1].name}</h3>
+              <p className="manifest-val" style={{ color: '#666' }}>{featuredTools[1].category}</p>
+            </div>
+            <div className="bento-small" onClick={() => setSelectedTool(featuredTools[2])}>
+              <span className="bento-label">Status: Online</span>
+              <h3>{featuredTools[2].name}</h3>
+              <p className="manifest-val" style={{ color: '#666' }}>{featuredTools[2].tags.price}</p>
+            </div>
           </div>
         </section>
 
-        {/* Store Body */}
-        <div className="store-layout">
-          {/* Sidebar */}
-          <aside className="store-sidebar">
-            <div className="filter-group">
-              <h3 className="filter-header">Category</h3>
-              <div className="filter-list">
-                {categories.map(cat => (
-                  <button 
-                    key={cat} 
-                    className={`filter-btn ${selectedCategory === cat ? 'active' : ''}`}
-                    onClick={() => setSelectedCategory(cat)}
-                  >
-                    {cat}
-                  </button>
-                ))}
-              </div>
+        {/* Floating Filter Bar */}
+        <div className="filter-dock">
+          <div className="filter-bar">
+            <div className="filter-select-wrapper">
+              <span className="filter-select-label">Grp</span>
+              <select className="filter-select" value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)}>
+                {categories.map(c => <option key={c} value={c}>{c}</option>)}
+              </select>
             </div>
-
-            <div className="filter-group">
-              <h3 className="filter-header">Price</h3>
-              <div className="filter-list">
-                {prices.map(p => (
-                  <button 
-                    key={p} 
-                    className={`filter-btn ${selectedPrice === p ? 'active' : ''}`}
-                    onClick={() => setSelectedPrice(p)}
-                  >
-                    {p}
-                  </button>
-                ))}
-              </div>
+            <div className="filter-select-wrapper">
+              <span className="filter-select-label">Lic</span>
+              <select className="filter-select" value={selectedPrice} onChange={(e) => setSelectedPrice(e.target.value)}>
+                {prices.map(p => <option key={p} value={p}>{p}</option>)}
+              </select>
             </div>
-
-            <div className="filter-group">
-              <h3 className="filter-header">Expertise</h3>
-              <div className="filter-list">
-                {skills.map(s => (
-                  <button 
-                    key={s} 
-                    className={`filter-btn ${selectedSkill === s ? 'active' : ''}`}
-                    onClick={() => setSelectedSkill(s)}
-                  >
-                    {s}
-                  </button>
-                ))}
-              </div>
+            <div className="filter-select-wrapper">
+              <span className="filter-select-label">Lvl</span>
+              <select className="filter-select" value={selectedSkill} onChange={(e) => setSelectedSkill(e.target.value)}>
+                {skills.map(s => <option key={s} value={s}>{s}</option>)}
+              </select>
             </div>
-          </aside>
-
-          {/* Product Grid Area */}
-          <main>
-            <header className="store-toolbar">
-              <div className="toolbar-label">{filteredTools.length} Total Items</div>
-              <div className="toolbar-label">Sort: Newest Arrival</div>
-            </header>
-
-            {filteredTools.length === 0 ? (
-              <div style={{ padding: 'var(--space-lg) 0', textAlign: 'center' }}>
-                <h3 className="drop-title" style={{ fontSize: '2rem' }}>Out of Stock</h3>
-                <p className="filter-btn" style={{ cursor: 'default' }}>No tools match these filters.</p>
-                <button 
-                  className="drop-cta" 
-                  style={{ marginTop: '20px', alignSelf: 'center' }}
-                  onClick={() => { setSelectedCategory('All'); setSelectedPrice('All'); setSelectedSkill('All'); }}
-                >
-                  Clear All
-                </button>
-              </div>
-            ) : (
-              <div className="tool-grid">
-                {filteredTools.map((tool, i) => (
-                  <article 
-                    key={tool.name + i} 
-                    className="tool-tile"
-                    onClick={() => setSelectedTool(tool)}
-                  >
-                    <div className="tile-visual" style={{ backgroundColor: CARD_COLORS[i % CARD_COLORS.length] }}>
-                      <img src={tool.image} alt={tool.name} />
-                      {i < 3 && <span className="tile-badge">TRENDING</span>}
-                    </div>
-                    <div className="tile-info">
-                      <div className="tile-meta">
-                        <span>{tool.category}</span>
-                        <span>{tool.tags.skill}</span>
-                      </div>
-                      <h3 className="tile-name">{tool.name}</h3>
-                      <div className="tile-price">{tool.tags.price}</div>
-                    </div>
-                  </article>
-                ))}
-              </div>
+            {(selectedCategory !== 'All' || selectedPrice !== 'All' || selectedSkill !== 'All') && (
+              <button 
+                onClick={() => { setSelectedCategory('All'); setSelectedPrice('All'); setSelectedSkill('All'); }}
+                style={{ background: 'transparent', border: 'none', color: 'white', cursor: 'pointer', padding: '0 8px' }}
+              >
+                <X size={14} />
+              </button>
             )}
-          </main>
+          </div>
         </div>
 
-        {/* Newsletter Store Footer */}
-        <section style={{ 
-          background: 'var(--color-neon)', 
-          border: '4px solid black', 
-          padding: 'var(--space-lg)', 
-          textAlign: 'center',
-          boxShadow: '12px 12px 0 black',
-          marginBottom: 'var(--space-lg)'
-        }}>
-          <h2 className="drop-title" style={{ fontSize: '2.5rem', marginBottom: '10px' }}>Join the Drop</h2>
-          <p className="filter-btn" style={{ cursor: 'default', color: 'black', marginBottom: '20px' }}>
-            Get notified of new AI tools every Tuesday.
-          </p>
-          <form 
-            onSubmit={(e) => e.preventDefault()}
-            style={{ display: 'flex', maxWidth: '500px', margin: '0 auto', border: '4px solid black', background: 'white' }}
-          >
-            <input 
-              type="email" 
-              placeholder="EMAIL ADDRESS..." 
-              style={{ flex: 1, border: 'none', padding: '12px', outline: 'none', fontFamily: 'var(--font-mono)' }} 
-            />
-            <button 
-              type="submit" 
-              style={{ background: 'black', color: 'white', border: 'none', padding: '0 24px', fontFamily: 'var(--font-display)', textTransform: 'uppercase' }}
-            >
-              Join
-            </button>
-          </form>
-        </section>
+        {/* Technical Grid */}
+        <main>
+          {filteredTools.length === 0 ? (
+            <div style={{ padding: '8rem 0', textAlign: 'center', fontFamily: 'var(--font-mono)', textTransform: 'uppercase', color: '#888' }}>
+              <p>// No units matching parameters</p>
+            </div>
+          ) : (
+            <div className="tool-grid">
+              {filteredTools.map((tool, i) => (
+                <article key={tool.name + i} className="tool-item" onClick={() => setSelectedTool(tool)}>
+                  <div className="tool-visual">
+                    <img src={tool.image} alt={tool.name} />
+                  </div>
+                  <h3 className="tool-name">{tool.name}</h3>
+                  <p className="tool-desc">{tool.description}</p>
+                  
+                  <div className="tool-manifest">
+                    <div className="manifest-row">
+                      <span className="manifest-key">Category</span>
+                      <span className="manifest-val">{tool.category}</span>
+                    </div>
+                    <div className="manifest-row">
+                      <span className="manifest-key">License</span>
+                      <span className="manifest-val">{tool.tags.price}</span>
+                    </div>
+                    <div className="manifest-row">
+                      <span className="manifest-key">Expertise</span>
+                      <span className="manifest-val">{tool.tags.skill}</span>
+                    </div>
+                    <div className="manifest-row">
+                      <span className="manifest-key">Source</span>
+                      <span className="manifest-val">Verified</span>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          )}
+        </main>
 
-        {/* Global Footer */}
-        <footer className="store-footer">
-          <div>
-            <h4 className="footer-header">Shop</h4>
-            <ul className="footer-list">
-              <li><Link href="/tools">The Stack</Link></li>
-              <li><Link href="/">Blueprints</Link></li>
-              <li><a href="https://forms.gle/KqN82GGdCohshtVx8">Submit Tool</a></li>
-            </ul>
+        {/* Footer */}
+        <footer className="stack-footer">
+          <div className="footer-left">
+            <h4>The Stack.</h4>
+            <p className="manifest-val" style={{ color: '#888', marginTop: '0.5rem' }}>
+              System Status: Nominal / {aiTools.length} Units Indexed
+            </p>
           </div>
-          <div>
-            <h4 className="footer-header">Editorial</h4>
-            <ul className="footer-list">
-              <li><Link href="/blog">Latest</Link></li>
-              <li><Link href="/about">About</Link></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="footer-header">Support</h4>
-            <ul className="footer-list">
-              <li><Link href="/privacy">Privacy</Link></li>
-              <li><Link href="/terms">Terms</Link></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="footer-header">Connect</h4>
-            <ul className="footer-list">
-              <li><a href="https://twitter.com/realaiexamples">Twitter / X</a></li>
-              <li><a href="https://salestools.club">Salestools Club</a></li>
-            </ul>
+          <div className="footer-right">
+            <div>
+              <p className="manifest-key" style={{ marginBottom: '1rem' }}>Directories</p>
+              <ul className="footer-list">
+                <li><Link href="/tools">Full Inventory</Link></li>
+                <li><a href="https://forms.gle/KqN82GGdCohshtVx8">Submit Tool</a></li>
+              </ul>
+            </div>
+            <div>
+              <p className="manifest-key" style={{ marginBottom: '1rem' }}>Repository</p>
+              <ul className="footer-list">
+                <li><Link href="/about">About</Link></li>
+                <li><Link href="/blog">Editorial</Link></li>
+              </ul>
+            </div>
           </div>
         </footer>
       </div>
