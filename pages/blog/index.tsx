@@ -47,7 +47,7 @@ export default function BlogIndex({ posts }: BlogIndexProps) {
               <h1 className="text-5xl md:text-8xl font-display font-semibold text-coffee-900 mb-8 tracking-tight uppercase leading-[1.1]">
                 The Operator <span className="text-coffee-500">Logs</span>
               </h1>
-              <p className="text-xl md:text-2xl text-coffee-700 font-light max-w-2xl mx-auto leading-relaxed border-l-4 border-coffee-500 pl-8 py-4 bg-coffee-50/50 rounded-r-[2rem]">
+              <p className="text-xl md:text-2xl text-coffee-900 font-light max-w-2xl mx-auto leading-relaxed border-l-4 border-coffee-500 pl-8 py-4 bg-coffee-50/50 rounded-r-[2rem]">
                 I document the exact steps I take to automate work as a non-technical builder. <br/>
                 Read how I build scrapers, sales bots, and data tools from an AI-Native perspective.
               </p>
@@ -81,7 +81,7 @@ export default function BlogIndex({ posts }: BlogIndexProps) {
                       {post.title}
                     </h2>
                     
-                    <p className="text-coffee-700 text-sm font-light leading-relaxed mb-8 line-clamp-3">
+                    <p className="text-coffee-900 text-sm font-light leading-relaxed mb-8 line-clamp-3">
                       {post.excerpt}
                     </p>
                     

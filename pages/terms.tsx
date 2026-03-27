@@ -25,26 +25,26 @@ export default function Terms() {
             <div className="max-w-none space-y-10 prose prose-lg">
                 <section>
                     <h2 className="text-2xl font-display font-semibold text-coffee-900 uppercase">1. Agreement to Terms</h2>
-                    <p className="text-coffee-700 font-light leading-relaxed">By accessing or using Real AI Examples ("the Service"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree, you may not access the Service.</p>
+                    <p className="text-coffee-900 font-light leading-relaxed">By accessing or using Real AI Examples ("the Service"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree, you may not access the Service.</p>
                 </section>
 
                 <section>
                     <h2 className="text-2xl font-display font-semibold text-coffee-900 uppercase">2. Intellectual Property</h2>
-                    <p className="text-coffee-700 font-light leading-relaxed">All content, including examples, workflows, and prompts provided on the Service, is the property of Real AI Examples. You are granted a limited, non-exclusive license to use this content for your personal or professional work. <strong className="font-semibold text-coffee-900">Republishing or reselling our curated content is strictly prohibited.</strong></p>
+                    <p className="text-coffee-900 font-light leading-relaxed">All content, including examples, workflows, and prompts provided on the Service, is the property of Real AI Examples. You are granted a limited, non-exclusive license to use this content for your personal or professional work. <strong className="font-semibold text-coffee-900">Republishing or reselling our curated content is strictly prohibited.</strong></p>
                 </section>
 
                 <section>
                     <h2 className="text-2xl font-display font-semibold text-coffee-900 uppercase">3. Disclaimer of Warranties</h2>
-                    <p className="text-coffee-700 font-light leading-relaxed">The Service is provided "as is," without warranty of any kind. AI is an unpredictable field; we do not warrant that the examples or workflows will meet your requirements or be error-free. We are not responsible for any data loss, system errors, or damages resulting from their use.</p>
+                    <p className="text-coffee-900 font-light leading-relaxed">The Service is provided "as is," without warranty of any kind. AI is an unpredictable field; we do not warrant that the examples or workflows will meet your requirements or be error-free. We are not responsible for any data loss, system errors, or damages resulting from their use.</p>
                 </section>
 
                 <section>
                     <h2 className="text-2xl font-display font-semibold text-coffee-900 uppercase">4. Prohibited Uses</h2>
-                    <p className="text-coffee-700 font-light leading-relaxed">You agree not to use the Service or its content for any unlawful purpose, to solicit others to perform or participate in any unlawful acts, or to infringe upon or violate our intellectual property rights.</p>
+                    <p className="text-coffee-900 font-light leading-relaxed">You agree not to use the Service or its content for any unlawful purpose, to solicit others to perform or participate in any unlawful acts, or to infringe upon or violate our intellectual property rights.</p>
                 </section>
 
                 <section className="pt-10 border-t border-coffee-100">
-                    <p className="text-base text-coffee-700 font-light">Questions? Contact us at: <a href="mailto:akhil@realaiexamples.com" className="font-semibold text-coffee-900 underline decoration-coffee-300 underline-offset-4 hover:text-coffee-600">akhil@realaiexamples.com</a></p>
+                    <p className="text-base text-coffee-900 font-light">Questions? Contact us at: <a href="mailto:akhil@realaiexamples.com" className="font-semibold text-coffee-900 underline decoration-coffee-300 underline-offset-4 hover:text-coffee-600">akhil@realaiexamples.com</a></p>
                 </section>
             </div>
           </div>

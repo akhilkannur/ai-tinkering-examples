@@ -43,7 +43,7 @@ export default function BlogPostPage({ post, relatedRecipes }: BlogPostPageProps
       // Lists
       if (trimmedLine.startsWith('* ')) {
         return (
-          <li key={index} className="ml-6 list-none text-coffee-700 font-light mb-4 pl-4 border-l-4 border-coffee-300 text-base leading-relaxed">
+          <li key={index} className="ml-6 list-none text-coffee-900 font-light mb-4 pl-4 border-l-4 border-coffee-300 text-base leading-relaxed">
             <span dangerouslySetInnerHTML={{ __html: parseInline(line.replace('* ', '')) }} />
           </li>
         );
@@ -61,7 +61,7 @@ export default function BlogPostPage({ post, relatedRecipes }: BlogPostPageProps
 
       // Paragraphs
       return (
-        <p key={index} className="text-coffee-700 font-light leading-relaxed mb-6 text-lg">
+        <p key={index} className="text-coffee-900 font-light leading-relaxed mb-6 text-lg">
           <span dangerouslySetInnerHTML={{ __html: parseInline(line) }} />
         </p>
       );
@@ -72,11 +72,11 @@ export default function BlogPostPage({ post, relatedRecipes }: BlogPostPageProps
     // Bold
     let parsed = text.replace(/\*\*(.*?)\*\*/g, '<strong class="bg-coffee-200 px-2 py-0.5 rounded font-semibold text-coffee-900">$1</strong>');
     // Code
-    parsed = parsed.replace(/`([^`]+)`/g, '<code class="bg-coffee-900 text-coffee-100 px-2 py-0.5 rounded font-mono text-sm">$1</code>');
+    parsed = parsed.replace(/`([^`]+)`/g, '<code class="bg-coffee-900 text-coffee-50 px-2 py-0.5 rounded font-mono text-sm">$1</code>');
     // Images inside text (less common but possible)
     parsed = parsed.replace(/!\[(.*?)\]\((.*?)\)/g, '<img src="$2" alt="$1" class="inline-block max-w-full h-auto rounded-xl border border-coffee-200 my-2" />');
     // Links (Simple)
-    parsed = parsed.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" class="text-coffee-600 font-semibold underline decoration-coffee-300 underline-offset-4 hover:text-coffee-900 hover:bg-coffee-100 transition-colors">$1</a>');
+    parsed = parsed.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" class="text-coffee-700 font-semibold underline decoration-coffee-400 underline-offset-4 hover:text-coffee-900 hover:bg-coffee-100 transition-colors">$1</a>');
     return parsed;
   };
 
