@@ -1,15 +1,12 @@
-import { useState, useEffect, useMemo, useRef } from 'react'
+import { useState, useMemo } from 'react'
 import { GetStaticProps } from 'next/types'
 import Link from 'next/link'
 import Head from 'next/head'
 import Image from 'next/image'
-import Navbar from '../components/Navbar'
 import ExampleModal from '../components/ExampleModal'
-import NewsletterForm from '../components/NewsletterForm'
 import { localSocialExamples } from '../lib/social-examples-data'
 import { generateItemListSchema } from '../lib/seo-utils'
 import { optimizeImageUrl } from '../utils/cloudinary'
-import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 export interface EnrichedExampleRecord {
   id: string;
@@ -34,6 +31,8 @@ interface ExamplesPageProps {
   itemListSchema: any
 }
 
+const CARD_COLORS = ['#6A37AC', '#7B7662', '#333333', '#C5CC5C', '#D8D8D8'];
+
 function groupByWeek(items: EnrichedExampleRecord[]) {
   const sorted = [...items].sort((a, b) => {
     const dateA = new Date(a.publish_date || '2026-03-01').getTime();
@@ -55,148 +54,12 @@ function groupByWeek(items: EnrichedExampleRecord[]) {
   return Object.entries(groups).sort((a, b) => new Date(b[0]).getTime() - new Date(a[0]).getTime());
 }
 
-// --- Inline Components (dark, Spotify-style) ---
-
-function DropCard({
-  example,
-  onOpen,
-  featured = false,
-}: {
-  example: EnrichedExampleRecord;
-  onOpen: (ex: EnrichedExampleRecord) => void;
-  featured?: boolean;
-}) {
-  const [imgStatus, setImgStatus] = useState<'loading' | 'loaded' | 'error'>('loading');
-  const rawUrl = example.screenshots?.[0]?.url;
-  const imageUrl = optimizeImageUrl(rawUrl, example.cloudinaryPublicId, featured ? 800 : 400);
-
-  return (
-    <div
-      onClick={() => onOpen(example)}
-      className={`relative flex-shrink-0 rounded-xl overflow-hidden cursor-pointer group transition-all duration-300 snap-start ${
-        featured
-          ? 'w-full md:w-[380px] h-[280px] md:h-[380px]'
-          : 'w-[170px] h-[170px] md:w-[210px] md:h-[210px]'
-      }`}
-    >
-      {imageUrl && imgStatus !== 'error' ? (
-        <Image
-          src={imageUrl}
-          alt={example.title}
-          fill
-          className="object-cover transition-all duration-500 group-hover:scale-105 group-hover:brightness-110"
-          sizes={featured ? '380px' : '210px'}
-          onLoad={() => setImgStatus('loaded')}
-          onError={() => setImgStatus('error')}
-        />
-      ) : (
-        <div className="absolute inset-0 bg-[#1a1a1a] flex items-center justify-center">
-          <span className="text-zinc-700 text-3xl font-display">{example.title.charAt(0)}</span>
-        </div>
-      )}
-
-      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
-
-      <div className="absolute inset-0 rounded-xl ring-0 ring-green-500/0 group-hover:ring-2 group-hover:ring-green-500/40 transition-all duration-300 pointer-events-none" />
-
-      {example.category && (
-        <div className="absolute top-3 left-3 z-10">
-          <span className="text-[9px] font-mono font-bold uppercase tracking-widest text-green-400 bg-black/50 backdrop-blur-sm px-2.5 py-1 rounded-md">
-            {example.category}
-          </span>
-        </div>
-      )}
-
-      <div className="absolute bottom-0 left-0 right-0 p-4 z-10">
-        <h3
-          className={`text-white font-semibold leading-tight line-clamp-2 ${
-            featured ? 'text-lg md:text-xl mb-2' : 'text-[13px]'
-          }`}
-        >
-          {example.title}
-        </h3>
-        {featured && example.summary && (
-          <p className="text-white/50 text-sm line-clamp-2 mb-2">{example.summary}</p>
-        )}
-        {featured && example.author_name && (
-          <span className="text-white/30 text-xs font-mono">{example.author_name}</span>
-        )}
-      </div>
-    </div>
-  );
-}
-
-function WeeklyShelf({
-  week,
-  items,
-  isLatest,
-  onOpen,
-}: {
-  week: string;
-  items: EnrichedExampleRecord[];
-  isLatest: boolean;
-  onOpen: (ex: EnrichedExampleRecord) => void;
-}) {
-  const scrollRef = useRef<HTMLDivElement>(null);
-
-  const scroll = (direction: number) => {
-    scrollRef.current?.scrollBy({ left: direction * 300, behavior: 'smooth' });
-  };
-
-  const featured = isLatest ? items[0] : null;
-  const rest = isLatest ? items.slice(1) : items;
-
-  return (
-    <div className="mb-16">
-      <div className="flex items-center gap-4 mb-6 px-6 max-w-[1440px] mx-auto">
-        <span className="text-xs font-mono font-bold uppercase tracking-[0.2em] text-zinc-600">
-          DROP / {week}
-        </span>
-        <div className="h-px flex-grow bg-white/[0.06]" />
-        {isLatest && (
-          <span className="text-[10px] font-mono font-bold text-black bg-green-500 px-3 py-1 rounded-full uppercase tracking-widest">
-            NEW
-          </span>
-        )}
-        <div className="flex gap-1">
-          <button
-            onClick={() => scroll(-1)}
-            className="w-8 h-8 rounded-full bg-white/[0.04] hover:bg-white/10 flex items-center justify-center text-zinc-500 hover:text-white transition-colors"
-            aria-label="Scroll left"
-          >
-            <ChevronLeft size={16} />
-          </button>
-          <button
-            onClick={() => scroll(1)}
-            className="w-8 h-8 rounded-full bg-white/[0.04] hover:bg-white/10 flex items-center justify-center text-zinc-500 hover:text-white transition-colors"
-            aria-label="Scroll right"
-          >
-            <ChevronRight size={16} />
-          </button>
-        </div>
-      </div>
-
-      <div className="max-w-[1440px] mx-auto px-6">
-        <div
-          ref={scrollRef}
-          className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory hide-scrollbar"
-        >
-          {featured && <DropCard example={featured} onOpen={onOpen} featured />}
-          {rest.map((item) => (
-            <DropCard key={item.id} example={item} onOpen={onOpen} />
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}
-
-// --- Main Page ---
-
 export default function HomePage({ examples, categories, itemListSchema }: ExamplesPageProps) {
   const [selectedCategory, setSelectedCategory] = useState('All')
   const [modalExample, setModalExample] = useState<EnrichedExampleRecord | null>(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const [email, setEmail] = useState('')
+  const [formStatus, setFormStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
 
   const filteredItems = useMemo(() => {
     return examples.filter(ex => selectedCategory === 'All' || ex.category === selectedCategory);
@@ -214,6 +77,29 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
     setTimeout(() => setModalExample(null), 300)
   }
 
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email) return;
+    setFormStatus('loading');
+    try {
+      const res = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      });
+      if (res.ok) {
+        setFormStatus('success');
+        setEmail('');
+      } else {
+        setFormStatus('error');
+      }
+    } catch {
+      setFormStatus('error');
+    }
+  };
+
+  let globalCardIndex = 0;
+
   return (
     <>
       <Head>
@@ -223,149 +109,515 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
       </Head>
 
       <style jsx global>{`
+        :root {
+          --bg-base: #FFFFFF;
+          --text-primary: #000000;
+          --text-secondary: #555555;
+          --border-heavy: #000000;
+          --border-light: #E0E0E0;
+          --color-charcoal: #333333;
+          --color-olive: #7B7662;
+          --color-acid: #C5CC5C;
+          --color-purple: #6A37AC;
+          --color-grey: #D8D8D8;
+          --color-watermark: rgba(0, 0, 0, 0.04);
+          --font-display: 'Arial Black', 'Impact', system-ui, -apple-system, sans-serif;
+          --font-body: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+          --font-mono: 'Courier New', Courier, monospace;
+          --space-xs: 0.5rem;
+          --space-sm: 1rem;
+          --space-md: 2rem;
+          --space-lg: 4rem;
+          --space-xl: 8rem;
+        }
+
         body {
-          font-family: 'Outfit', sans-serif;
-          background-color: #0a0a0a;
-          color: #ffffff;
+          background-color: var(--bg-base) !important;
+          color: var(--text-primary) !important;
+          font-family: var(--font-body) !important;
+          -webkit-font-smoothing: antialiased;
+          line-height: 1.2;
+          overflow-x: hidden;
         }
-        .font-display {
-          font-family: 'Fredoka', sans-serif;
+
+        .watermark-container {
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 80vw;
+          height: 80vw;
+          max-width: 800px;
+          max-height: 800px;
+          z-index: 0;
+          pointer-events: none;
+          display: flex;
+          justify-content: center;
+          align-items: center;
         }
-        .font-mono {
-          font-family: 'JetBrains Mono', monospace;
+
+        .watermark-svg {
+          width: 100%;
+          height: 100%;
+          fill: var(--color-watermark);
         }
-        .hide-scrollbar::-webkit-scrollbar {
-          display: none;
+
+        .drops-wrapper {
+          max-width: 1600px;
+          margin: 0 auto;
+          padding: 0 var(--space-md);
+          position: relative;
+          z-index: 1;
         }
-        .hide-scrollbar {
+
+        .drops-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: var(--space-md) 0;
+          border-bottom: 2px solid var(--border-heavy);
+          margin-bottom: var(--space-xl);
+        }
+
+        .drops-logo {
+          font-family: var(--font-display);
+          font-size: 2rem;
+          text-transform: uppercase;
+          letter-spacing: -0.05em;
+          color: var(--text-primary);
+          text-decoration: none;
+        }
+
+        .drops-nav {
+          display: flex;
+          gap: var(--space-md);
+          font-family: var(--font-mono);
+          font-size: 0.85rem;
+          text-transform: uppercase;
+        }
+
+        .drops-nav a {
+          color: var(--text-primary);
+          text-decoration: none;
+        }
+
+        .drops-nav a:hover {
+          text-decoration: underline;
+        }
+
+        .hero-section {
+          text-align: center;
+          margin-bottom: var(--space-xl);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .hero-title {
+          font-family: var(--font-display);
+          font-size: clamp(3rem, 8vw, 6rem);
+          text-transform: uppercase;
+          line-height: 0.9;
+          letter-spacing: -0.02em;
+          margin-bottom: var(--space-md);
+          max-width: 20ch;
+        }
+
+        .newsletter-form {
+          display: flex;
+          width: 100%;
+          max-width: 600px;
+          border: 2px solid var(--border-heavy);
+        }
+
+        .newsletter-input {
+          flex-grow: 1;
+          border: none;
+          padding: var(--space-sm) var(--space-md);
+          font-family: var(--font-mono);
+          font-size: 1rem;
+          background: transparent;
+          outline: none;
+          color: var(--text-primary);
+        }
+
+        .newsletter-input::placeholder {
+          color: var(--text-secondary);
+        }
+
+        .newsletter-submit {
+          background: var(--text-primary);
+          color: var(--bg-base);
+          border: none;
+          border-left: 2px solid var(--border-heavy);
+          padding: 0 var(--space-md);
+          font-family: var(--font-display);
+          text-transform: uppercase;
+          cursor: pointer;
+          transition: background 0.2s, color 0.2s;
+          font-size: 0.9rem;
+          white-space: nowrap;
+        }
+
+        .newsletter-submit:hover {
+          background: var(--bg-base);
+          color: var(--text-primary);
+        }
+
+        .newsletter-submit:disabled {
+          opacity: 0.5;
+          cursor: not-allowed;
+        }
+
+        .hero-meta {
+          margin-top: var(--space-sm);
+          font-family: var(--font-mono);
+          font-size: 0.75rem;
+          color: var(--text-secondary);
+          text-transform: uppercase;
+        }
+
+        .newsletter-success {
+          font-family: var(--font-mono);
+          font-size: 0.85rem;
+          text-transform: uppercase;
+          border: 2px solid var(--border-heavy);
+          padding: var(--space-sm) var(--space-md);
+          max-width: 600px;
+          width: 100%;
+          text-align: center;
+        }
+
+        .category-nav {
+          margin-bottom: var(--space-xl);
+          border-top: 1px solid var(--border-light);
+          border-bottom: 1px solid var(--border-light);
+          padding: var(--space-sm) 0;
+          overflow-x: auto;
+          white-space: nowrap;
           -ms-overflow-style: none;
           scrollbar-width: none;
         }
-        ::-webkit-scrollbar-track {
-          background: #0a0a0a;
+
+        .category-nav::-webkit-scrollbar {
+          display: none;
         }
-        ::-webkit-scrollbar-thumb {
-          background: #333;
-          border-color: #0a0a0a;
+
+        .category-list {
+          display: inline-flex;
+          gap: var(--space-md);
+          padding: 0 var(--space-md);
+          list-style: none;
+        }
+
+        .category-item {
+          font-family: var(--font-mono);
+          font-size: 0.85rem;
+          text-transform: uppercase;
+          color: var(--text-secondary);
+          cursor: pointer;
+          transition: color 0.2s;
+          white-space: nowrap;
+        }
+
+        .category-item:hover,
+        .category-item.active {
+          color: var(--text-primary);
+          font-weight: bold;
+        }
+
+        .drop-container {
+          margin-bottom: var(--space-xl);
+        }
+
+        .drop-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+          border-bottom: 4px solid var(--border-heavy);
+          padding-bottom: var(--space-xs);
+          margin-bottom: var(--space-md);
+          position: sticky;
+          top: 0;
+          background: rgba(255, 255, 255, 0.92);
+          backdrop-filter: blur(8px);
+          z-index: 10;
+          padding-top: var(--space-sm);
+        }
+
+        .drop-title {
+          font-family: var(--font-display);
+          font-size: clamp(1.5rem, 3vw, 2.5rem);
+          text-transform: uppercase;
+          letter-spacing: -0.02em;
+        }
+
+        .drop-status {
+          font-family: var(--font-mono);
+          background: var(--text-primary);
+          color: var(--bg-base);
+          padding: 2px 8px;
+          font-size: 0.8rem;
+          font-weight: bold;
+        }
+
+        .workflow-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+          gap: var(--space-lg) var(--space-md);
+        }
+
+        .card {
+          display: flex;
+          flex-direction: column;
+          cursor: pointer;
+        }
+
+        .card-visual {
+          aspect-ratio: 4/3;
+          width: 100%;
+          margin-bottom: var(--space-sm);
+          position: relative;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.08'/%3E%3C/svg%3E");
+          transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .card:hover .card-visual {
+          transform: translateY(-4px);
+        }
+
+        .card-visual.no-image::after {
+          content: '{ // ops }';
+          font-family: var(--font-mono);
+          font-size: 2rem;
+          font-weight: bold;
+          color: rgba(255, 255, 255, 0.3);
+          mix-blend-mode: overlay;
+        }
+
+        .card-visual.color-light::after {
+          color: rgba(0, 0, 0, 0.2);
+        }
+
+        .card-visual img,
+        .card-visual > span {
+          object-fit: cover;
+          object-position: top;
+        }
+
+        .card-meta {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          margin-bottom: 4px;
+          font-family: var(--font-mono);
+          font-size: 0.75rem;
+          text-transform: uppercase;
+        }
+
+        .card-category {
+          color: var(--text-secondary);
+        }
+
+        .card-id {
+          color: var(--border-light);
+        }
+
+        .card-title {
+          font-family: var(--font-body);
+          font-weight: 700;
+          font-size: 1.1rem;
+          line-height: 1.2;
+          text-transform: uppercase;
+        }
+
+        .drops-footer {
+          text-align: center;
+          padding: var(--space-xl) 0 var(--space-md);
+          font-family: var(--font-mono);
+          font-size: 0.65rem;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+          color: var(--text-secondary);
+        }
+
+        .drops-footer a {
+          color: var(--text-secondary);
+          text-decoration: none;
+          margin: 0 var(--space-sm);
+        }
+
+        .drops-footer a:hover {
+          color: var(--text-primary);
+          text-decoration: underline;
+        }
+
+        @media (max-width: 640px) {
+          .drops-header {
+            flex-direction: column;
+            gap: var(--space-sm);
+            align-items: flex-start;
+          }
+          .workflow-grid {
+            grid-template-columns: 1fr;
+          }
+          .newsletter-form {
+            flex-direction: column;
+          }
+          .newsletter-submit {
+            border-left: none;
+            border-top: 2px solid var(--border-heavy);
+            padding: var(--space-sm);
+          }
         }
       `}</style>
 
-      <div className="min-h-screen bg-[#0a0a0a] text-white selection:bg-green-500/30 selection:text-white">
-        <Navbar />
+      {/* Watermark */}
+      <div className="watermark-container">
+        <svg className="watermark-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <path d="M50 10 L10 90 L35 90 L50 60 L65 90 L90 90 Z" />
+          <circle cx="50" cy="65" r="15" fill="none" stroke="currentColor" strokeWidth="8" />
+        </svg>
+      </div>
 
-        {/* Hero */}
-        <header className="px-6 pt-28 md:pt-40 pb-16 md:pb-24 flex flex-col items-center relative overflow-hidden">
-          <div
-            className="absolute inset-0 opacity-[0.02] pointer-events-none"
-            style={{
-              backgroundImage:
-                'linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)',
-              backgroundSize: '60px 60px',
-            }}
-          />
-          <div className="absolute -right-40 -top-40 w-[600px] h-[600px] bg-green-500/[0.07] rounded-full blur-[150px] pointer-events-none" />
-          <div className="absolute -left-40 bottom-0 w-[500px] h-[500px] bg-blue-500/[0.04] rounded-full blur-[150px] pointer-events-none" />
-
-          <div className="max-w-4xl mx-auto text-center relative z-10 w-full">
-            <div className="inline-flex items-center gap-2 mb-8 px-4 py-2 rounded-full font-mono text-[10px] tracking-widest uppercase bg-white/[0.04] border border-white/10 text-zinc-400">
-              <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-              Weekly Drops
-            </div>
-
-            <h1 className="text-5xl md:text-8xl font-display font-semibold text-white tracking-tight leading-[1.1] mb-8">
-              From people actually <br />
-              <span className="relative inline-block">
-                <span className="relative z-10 text-green-500">shipping.</span>
-                <span className="absolute inset-0 text-green-500 blur-lg opacity-40">shipping.</span>
-              </span>
-            </h1>
-
-            <p className="text-lg md:text-xl font-light text-zinc-400 mb-12 max-w-2xl mx-auto leading-relaxed">
-              Curated weekly drops of prompts, strategies, and exact setups you can copy.
-            </p>
-
-            <div className="max-w-md mx-auto">
-              <NewsletterForm dark />
-              <p className="text-xs font-mono text-zinc-600 mt-5 uppercase tracking-wider">
-                → Next drop: Tuesday
-              </p>
-            </div>
-          </div>
+      <div className="drops-wrapper">
+        {/* Header */}
+        <header className="drops-header">
+          <Link href="/" className="drops-logo">Real AI</Link>
+          <nav className="drops-nav">
+            <Link href="/tools">Tools</Link>
+            <Link href="/blog">Blog</Link>
+            <Link href="/about">About</Link>
+          </nav>
         </header>
 
-        {/* Category Filter */}
-        <section className="max-w-[1440px] mx-auto px-6 mb-12">
-          <div className="flex gap-3 overflow-x-auto pb-4 hide-scrollbar">
-            <button
-              onClick={() => setSelectedCategory('All')}
-              className={`px-5 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all ${
-                selectedCategory === 'All'
-                  ? 'bg-green-500 text-black'
-                  : 'bg-white/[0.04] text-zinc-400 hover:bg-white/10 hover:text-white border border-white/10'
-              }`}
-            >
-              All
-            </button>
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setSelectedCategory(cat)}
-                className={`px-5 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all ${
-                  selectedCategory === cat
-                    ? 'bg-green-500 text-black'
-                    : 'bg-white/[0.04] text-zinc-400 hover:bg-white/10 hover:text-white border border-white/10'
-                }`}
-              >
-                {cat}
+        {/* Hero */}
+        <section className="hero-section">
+          <h1 className="hero-title">Real Workflows.<br />Zero Bullshit.</h1>
+
+          {formStatus === 'success' ? (
+            <div className="newsletter-success">✓ Check your inbox to confirm</div>
+          ) : (
+            <form className="newsletter-form" onSubmit={handleNewsletterSubmit}>
+              <input
+                type="email"
+                className="newsletter-input"
+                placeholder="ENTER EMAIL TO UNLOCK THE VAULT..."
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                disabled={formStatus === 'loading'}
+              />
+              <button type="submit" className="newsletter-submit" disabled={formStatus === 'loading'}>
+                {formStatus === 'loading' ? '...' : 'Join'}
               </button>
-            ))}
+            </form>
+          )}
+
+          <div className="hero-meta">
+            Join 14,204+ Operators · Next Drop: Tuesday
           </div>
+          {formStatus === 'error' && (
+            <div className="hero-meta" style={{ color: '#c00', marginTop: '0.5rem' }}>
+              Something went wrong. Try again.
+            </div>
+          )}
         </section>
 
+        {/* Category Filter */}
+        <nav className="category-nav">
+          <ul className="category-list">
+            <li
+              className={`category-item ${selectedCategory === 'All' ? 'active' : ''}`}
+              onClick={() => setSelectedCategory('All')}
+            >
+              All Drops
+            </li>
+            {categories.map((cat) => (
+              <li
+                key={cat}
+                className={`category-item ${selectedCategory === cat ? 'active' : ''}`}
+                onClick={() => setSelectedCategory(cat)}
+              >
+                {cat}
+              </li>
+            ))}
+          </ul>
+        </nav>
+
         {/* Weekly Drops */}
-        <main className="pb-24">
-          {weeklyBatches.map(([week, items], idx) =>
-            items.length > 0 ? (
-              <WeeklyShelf
-                key={week}
-                week={week}
-                items={items}
-                isLatest={idx === 0}
-                onOpen={handleOpenModal}
-              />
-            ) : null
-          )}
+        <main>
+          {weeklyBatches.map(([week, items], batchIdx) => {
+            if (items.length === 0) return null;
+            return (
+              <section key={week} className="drop-container">
+                <header className="drop-header">
+                  <h2 className="drop-title">DROP / {week.toUpperCase()}</h2>
+                  {batchIdx === 0 && <span className="drop-status">NEW</span>}
+                </header>
+
+                <div className="workflow-grid">
+                  {items.map((example, i) => {
+                    const cardNum = globalCardIndex++;
+                    const rawUrl = example.screenshots?.[0]?.url;
+                    const imageUrl = optimizeImageUrl(rawUrl, example.cloudinaryPublicId, 600);
+                    const colorIdx = cardNum % CARD_COLORS.length;
+                    const bgColor = CARD_COLORS[colorIdx];
+                    const isLightCard = bgColor === '#C5CC5C' || bgColor === '#D8D8D8';
+
+                    return (
+                      <article key={example.id} className="card" onClick={() => handleOpenModal(example)}>
+                        <div
+                          className={`card-visual ${!imageUrl ? 'no-image' : ''} ${isLightCard && !imageUrl ? 'color-light' : ''}`}
+                          style={{ backgroundColor: bgColor }}
+                        >
+                          {imageUrl && (
+                            <Image
+                              src={imageUrl}
+                              alt={example.title}
+                              fill
+                              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                              style={{ objectFit: 'cover', objectPosition: 'top' }}
+                            />
+                          )}
+                        </div>
+                        <div className="card-info">
+                          <div className="card-meta">
+                            <span className="card-category">{example.category || 'EXAMPLE'}</span>
+                            <span className="card-id">ID-{String(cardNum + 1).padStart(3, '0')}</span>
+                          </div>
+                          <h3 className="card-title">{example.title}</h3>
+                        </div>
+                      </article>
+                    );
+                  })}
+                </div>
+              </section>
+            );
+          })}
         </main>
 
         {/* Footer */}
-        <footer className="border-t border-white/[0.06] py-12 px-6">
-          <div className="max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-            <div className="flex items-center gap-3">
-              <div className="w-4 h-4 rounded bg-green-500" />
-              <span className="font-display font-medium text-xl tracking-wide text-white uppercase">
-                Real AI Examples
-              </span>
-            </div>
-
-            <div className="flex gap-8 font-medium text-sm text-zinc-500">
-              <Link href="/about" className="hover:text-white transition-colors">About</Link>
-              <a href="https://twitter.com/realaiexamples" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Twitter</a>
-              <Link href="/privacy" className="hover:text-white transition-colors">Privacy</Link>
-              <Link href="/terms" className="hover:text-white transition-colors">Terms</Link>
-            </div>
-
-            <div className="text-sm font-light text-zinc-700">
-              © 2026 Build With AI
-            </div>
+        <footer className="drops-footer">
+          <div style={{ marginBottom: '1rem' }}>
+            <Link href="/about">About</Link>
+            <a href="https://twitter.com/realaiexamples" target="_blank" rel="noopener noreferrer">Twitter</a>
+            <Link href="/privacy">Privacy</Link>
+            <Link href="/terms">Terms</Link>
           </div>
+          Real AI Examples © 2026
         </footer>
-
-        <ExampleModal
-          example={modalExample as any}
-          isOpen={isModalOpen}
-          onClose={handleCloseModal}
-        />
       </div>
+
+      <ExampleModal
+        example={modalExample as any}
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+      />
     </>
   )
 }
