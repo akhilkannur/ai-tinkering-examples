@@ -34,12 +34,22 @@ module.exports = {
         },
         // Hyperlink blue for CTAs
         'link-blue': '#3b82f6',
+        // Figment Palette
+        'figment-bg': '#FFAAFA',
+        'figment-grid': '#F184EB',
+        'figment-brand': '#EF3922',
+        'figment-card-dark': '#0E0E0E',
+        'figment-card-green': '#1B7F4E',
+        'figment-card-orange': '#F46927',
+        'figment-card-light': '#F2F2F2',
       },
       fontFamily: {
         sans: ['Outfit', 'Inter', 'system-ui', 'sans-serif'],
         display: ['Fredoka', '"Archivo Black"', 'sans-serif'],
         mono: ['"JetBrains Mono"', '"Space Mono"', 'monospace'],
-      },
+        // Figment Fonts
+        syne: ['Syne', 'sans-serif'],
+        cormorant: ['Cormorant Garamond', 'serif'],
       spacing: {
         'xs': '4px',
         'sm': '8px',

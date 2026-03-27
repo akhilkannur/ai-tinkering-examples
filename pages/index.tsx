@@ -10,6 +10,9 @@ import NewsletterForm from '../components/NewsletterForm'
 import { localSocialExamples } from '../lib/social-examples-data'
 import { generateItemListSchema } from '../lib/seo-utils'
 import { ArrowRight } from 'lucide-react'
+import ScallopButton from '../components/ScallopButton'
+import NewsletterModal from '../components/NewsletterModal' // To be created
+import OrbitingCards from '../components/OrbitingCards'
 
 // EnrichedExampleRecord type definition (locally for now since Airtable is dead)
 export interface EnrichedExampleRecord {
@@ -61,6 +64,7 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
   const [selectedCategory, setSelectedCategory] = useState('All')
   const [modalExample, setModalExample] = useState<EnrichedExampleRecord | null>(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const [isNewsletterModalOpen, setIsNewsletterModalOpen] = useState(false)
 
   const filteredItems = useMemo(() => {
     return examples.filter(ex => {
@@ -82,6 +86,14 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
     setTimeout(() => setModalExample(null), 300)
   }
 
+  const handleOpenNewsletterModal = () => {
+    setIsNewsletterModalOpen(true);
+  };
+
+  const handleCloseNewsletterModal = () => {
+    setIsNewsletterModalOpen(false);
+  };
+
   return (
     <>
       <Head>
@@ -90,18 +102,58 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
         <link rel="canonical" href="https://realaiexamples.com/" />
       </Head>
 
+      {/* SVG for filters - hidden off-screen */}
+      <svg width="0" height="0" style={{ position: 'absolute', zIndex: -1 }}>
+        <defs>
+          <filter id="warp-filter" x="-20%" y="-20%" width="140%" height="140%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.003" numOctaves="2" result="noise"></feTurbulence>
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="80" xChannelSelector="R" yChannelSelector="G"></feDisplacementMap>
+          </filter>
+        </defs>
+      </svg>
+
       <style jsx global>{`
+        :root {
+            --c-bg: #FFAAFA;
+            --c-grid: #F184EB;
+            --c-brand: #EF3922;
+        }
+        }
+
         body {
-            font-family: 'Outfit', sans-serif;
-            background-color: #faf9f7;
-            color: #1a1a1a;
+            background-color: var(--c-bg); /* Use Figment background */
+            color: var(--c-brand); /* Use Figment brand color */
+            font-family: var(--f-display); /* Use Figment display font */
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden; 
+            position: relative;
         }
-        .font-display {
-            font-family: 'Fredoka', sans-serif;
+
+        .bg-grid {
+            position: absolute;
+            top: -20%;
+            left: -20%;
+            width: 140%;
+            height: 140%;
+            z-index: 0;
+            pointer-events: none;
+            background-image: 
+                linear-gradient(var(--c-grid) 1px, transparent 1px),
+                linear-gradient(90deg, var(--c-grid) 1px, transparent 1px);
+            background-size: 60px 60px;
+            background-position: center center;
+            filter: url(#warp-filter);
+            opacity: 0.7;
+            animation: breathe 20s ease-in-out infinite alternate;
         }
-        .font-mono {
-            font-family: 'JetBrains Mono', monospace;
+
+        @keyframes breathe {
+            0% { transform: scale(1) translate(0, 0); }
+            100% { transform: scale(1.05) translate(-1%, -1%); }
         }
+
+        /* The following custom font definitions are now handled by Tailwind CSS */
         .hide-scrollbar::-webkit-scrollbar {
             display: none;
         }
@@ -114,37 +166,29 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
       <div className="min-h-screen selection:bg-terminal-lime selection:text-black">
         <Navbar />
 
+        {/* This div is the new animated background */}
+        <div className="bg-grid"></div>
+
+        {/* Orbiting Cards */}
+        <OrbitingCards />
+
         <header className="px-6 pt-28 md:pt-40 pb-20 md:pb-32 flex flex-col items-center justify-center relative overflow-hidden">
-          {/* Technical grid background */}
-          <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'linear-gradient(#000 1px, transparent 1px), linear-gradient(90deg, #000 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
-          
-          <div className="absolute -right-20 -top-20 w-96 h-96 bg-terminal-green/5 rounded-full blur-3xl pointer-events-none"></div>
-          <div className="absolute -left-20 -bottom-20 w-80 h-80 bg-link-blue/5 rounded-full blur-3xl pointer-events-none"></div>
+
 
           <div className="max-w-4xl mx-auto text-center relative z-10 w-full">
-            <div className="inline-flex items-center gap-2 mb-8 px-4 py-2 rounded-md font-mono text-[10px] tracking-widest uppercase bg-white border border-gray-200 text-secondary-text shadow-technical">
-                <span className="w-2 h-2 rounded-full bg-terminal-green animate-pulse"></span>
-                A library of real AI examples
-            </div>
-            
-            <h1 className="text-5xl md:text-8xl font-display font-semibold text-primary-text tracking-tight leading-[1.1] mb-8">
-              From people actually <br/>
-              <span className="relative inline-block">
-                <span className="relative z-10 text-terminal-green">shipping.</span>
-                <span className="absolute inset-0 text-terminal-green blur-lg opacity-40">shipping.</span>
-              </span>
+            <h1 className="text-5xl md:text-8xl font-syne font-semibold text-figment-brand tracking-tight leading-[1.1] mb-8">
+              Imagine.
             </h1>
 
             <div className="max-w-xl mx-auto mb-10">
-              <p className="text-lg md:text-xl font-light text-secondary-text mb-12 max-w-2xl mx-auto leading-relaxed">
-                Get curated weekly drops of prompts, strategies, and exact setups you can copy.
+              <p className="text-lg md:text-xl font-light text-figment-brand mb-12 max-w-2xl mx-auto leading-relaxed">
+                Unlock your creative potential with our AI-powered canvas.
               </p>
 
               <div className="max-w-md mx-auto">
-                <NewsletterForm />
-                <p className="text-xs font-mono text-light-placeholder mt-5 uppercase tracking-wider">
-                  → Next drop: Tuesday
-                </p>
+                <ScallopButton onClick={handleOpenNewsletterModal} className="mt-4">
+                  Start creating
+                </ScallopButton>
               </div>
             </div>
           </div>
@@ -223,6 +267,11 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
           example={modalExample as any}
           isOpen={isModalOpen}
           onClose={handleCloseModal}
+        />
+
+        <NewsletterModal
+          isOpen={isNewsletterModalOpen}
+          onClose={handleCloseNewsletterModal}
         />
       </div>
     </>
