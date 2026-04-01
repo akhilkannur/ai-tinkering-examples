@@ -16,8 +16,8 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
   return (
     <>
       {/* Article Header */}
-      <header className="max-w-4xl mx-auto px-lg py-xl">
-        <div className="flex flex-wrap items-center gap-md mb-lg">
+      <header className="max-w-4xl mx-auto px-md py-md sm:px-lg sm:py-xl">
+        <div className="flex flex-wrap items-center gap-sm sm:gap-md mb-md sm:mb-lg">
             {example.category && (
               <Link
                 href={`/ai-examples/category/${categorySlug}`}
@@ -45,28 +45,28 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
             )}
         </div>
 
-        <h1 className="text-[clamp(1.5rem,4vw,3.5rem)] font-display font-black tracking-[-0.02em] leading-[0.9] text-primary-text mb-xl uppercase">
+        <h1 className="text-[clamp(1.25rem,4vw,3.5rem)] font-display font-black tracking-[-0.02em] leading-[0.9] text-primary-text mb-lg sm:mb-xl uppercase">
           {example.title}
         </h1>
 
         {/* Sponsor Info */}
         {example.sponsor && (
-          <div className="mb-xl border-l-4 border-accent-dark pl-xl py-md bg-hero-tint">
+          <div className="mb-lg sm:mb-xl border-l-4 border-accent-dark pl-md sm:pl-xl py-md bg-hero-tint">
             <SponsorDetailCard sponsor={example.sponsor} />
           </div>
         )}
       </header>
 
       {/* Main Content */}
-      <div className="max-w-4xl mx-auto px-lg pb-xxl">
+      <div className="max-w-4xl mx-auto px-md sm:px-lg pb-xl sm:pb-xxl">
         {example.summary && (
-          <p className="text-[1.125rem] font-normal text-secondary-text leading-relaxed mb-xl border-b-2 border-accent-dark pb-xl">
+          <p className="text-base sm:text-[1.125rem] font-normal text-secondary-text leading-relaxed mb-lg sm:mb-xl border-b-2 border-accent-dark pb-lg sm:pb-xl">
             {example.summary}
           </p>
         )}
         
         {example.screenshots && example.screenshots.length > 0 && (
-          <div className="space-y-xl mb-xxl">
+          <div className="space-y-lg sm:space-y-xl mb-xl sm:mb-xxl">
             {example.screenshots.map((screenshot, i) => {
               const publicId = i === 0 ? example.cloudinaryPublicId : null;
               const imageUrl = optimizeImageUrl(screenshot.url, publicId, 1200) || screenshot.url;
@@ -88,7 +88,7 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
         )}
 
         {example.workflow_steps && (
-          <div className="mb-xxl p-xl bg-hero-tint border-4 border-accent-dark relative">
+          <div className="mb-xl sm:mb-xxl p-md sm:p-xl bg-hero-tint border-4 border-accent-dark relative">
             <p className="text-[12px] font-mono font-bold text-primary-text leading-relaxed uppercase tracking-widest">
               {example.workflow_steps}
             </p>
@@ -96,7 +96,7 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
         )}
 
         {/* Social Sharing */}
-        <div className="mt-xxl py-xl border-t-2 border-accent-dark border-dotted">
+        <div className="mt-xl sm:mt-xxl py-lg sm:py-xl border-t-2 border-accent-dark border-dotted">
           <SocialSharing
             example={example}
             title={example.title}

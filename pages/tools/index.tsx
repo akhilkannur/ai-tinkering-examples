@@ -387,6 +387,107 @@ export default function ToolsIndex() {
           .bento-main-visual { height: 250px; border-top: var(--border-thin); }
           .bento-main-info { padding: 2rem; }
         }
+
+        @media (max-width: 640px) {
+          .stack-container {
+            padding: 0 1rem 2rem;
+          }
+          .stack-header {
+            flex-direction: column;
+            gap: 0.5rem;
+            align-items: flex-start;
+            padding: 1rem 0;
+            margin-bottom: 1rem;
+          }
+          .stack-logo {
+            font-size: 1rem;
+          }
+          .stack-nav {
+            gap: 1rem;
+            font-size: 0.65rem;
+          }
+          .bento-hero {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+          }
+          .bento-main {
+            flex-direction: column;
+            height: auto;
+          }
+          .bento-main-info {
+            padding: 1.25rem;
+          }
+          .bento-main-visual {
+            height: 120px;
+            border-top: var(--border-thin);
+          }
+          .bento-title {
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+          }
+          .bento-desc {
+            font-size: 0.9rem;
+          }
+          .bento-small {
+            padding: 1.25rem;
+          }
+          .bento-small h3 {
+            font-size: 1rem;
+          }
+          .filter-dock {
+            margin-bottom: 1.5rem;
+          }
+          .filter-bar {
+            flex-wrap: wrap;
+            width: 100%;
+          }
+          .filter-select-wrapper {
+            border-right: none;
+            border-bottom: 1px solid #333;
+            padding: 0.5rem 0.75rem;
+            flex: 1;
+            min-width: 45%;
+          }
+          .filter-select-wrapper:last-child {
+            border-bottom: none;
+          }
+          .tool-grid {
+            grid-template-columns: 1fr;
+          }
+          .tool-item {
+            padding: 1.25rem;
+          }
+          .tool-visual {
+            height: 60px;
+            margin-bottom: 1rem;
+          }
+          .tool-name {
+            font-size: 1.1rem;
+          }
+          .tool-desc {
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+          }
+          .tool-manifest {
+            padding-top: 1rem;
+            gap: 1rem;
+          }
+          .stack-footer {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 2rem;
+            margin-top: 3rem;
+            padding-top: 2rem;
+          }
+          .footer-left h4 {
+            font-size: 1.25rem;
+          }
+          .footer-right {
+            gap: 2rem;
+          }
+        }
       `}</style>
 
       <div className="stack-container">
@@ -405,7 +506,7 @@ export default function ToolsIndex() {
         <section className="bento-hero">
           <div className="bento-main" onClick={() => setSelectedTool(featuredTools[0])}>
             <div className="bento-main-info">
-              <span className="bento-label">Primary Unit</span>
+              <span className="bento-label">Featured</span>
               <h1 className="bento-title">{featuredTools[0].name}</h1>
               <p className="bento-desc">{featuredTools[0].description}</p>
             </div>
@@ -415,12 +516,12 @@ export default function ToolsIndex() {
           </div>
           <div className="bento-side">
             <div className="bento-small" onClick={() => setSelectedTool(featuredTools[1])}>
-              <span className="bento-label">New Arrival</span>
+              <span className="bento-label">Popular</span>
               <h3>{featuredTools[1].name}</h3>
               <p className="manifest-val" style={{ color: '#666' }}>{featuredTools[1].category}</p>
             </div>
             <div className="bento-small" onClick={() => setSelectedTool(featuredTools[2])}>
-              <span className="bento-label">Status: Online</span>
+              <span className="bento-label">Trending</span>
               <h3>{featuredTools[2].name}</h3>
               <p className="manifest-val" style={{ color: '#666' }}>{featuredTools[2].tags.price}</p>
             </div>
@@ -431,19 +532,19 @@ export default function ToolsIndex() {
         <div className="filter-dock">
           <div className="filter-bar">
             <div className="filter-select-wrapper">
-              <span className="filter-select-label">Grp</span>
+              <span className="filter-select-label">Category</span>
               <select className="filter-select" value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)}>
                 {categories.map(c => <option key={c} value={c}>{c}</option>)}
               </select>
             </div>
             <div className="filter-select-wrapper">
-              <span className="filter-select-label">Lic</span>
+              <span className="filter-select-label">Price</span>
               <select className="filter-select" value={selectedPrice} onChange={(e) => setSelectedPrice(e.target.value)}>
                 {prices.map(p => <option key={p} value={p}>{p}</option>)}
               </select>
             </div>
             <div className="filter-select-wrapper">
-              <span className="filter-select-label">Lvl</span>
+              <span className="filter-select-label">Skill</span>
               <select className="filter-select" value={selectedSkill} onChange={(e) => setSelectedSkill(e.target.value)}>
                 {skills.map(s => <option key={s} value={s}>{s}</option>)}
               </select>
@@ -463,7 +564,7 @@ export default function ToolsIndex() {
         <main>
           {filteredTools.length === 0 ? (
             <div style={{ padding: '8rem 0', textAlign: 'center', fontFamily: 'var(--font-mono)', textTransform: 'uppercase', color: '#888' }}>
-              <p>// No units matching parameters</p>
+              <p>No tools found for this filter</p>
             </div>
           ) : (
             <div className="tool-grid">
@@ -481,16 +582,12 @@ export default function ToolsIndex() {
                       <span className="manifest-val">{tool.category}</span>
                     </div>
                     <div className="manifest-row">
-                      <span className="manifest-key">License</span>
+                      <span className="manifest-key">Price</span>
                       <span className="manifest-val">{tool.tags.price}</span>
                     </div>
                     <div className="manifest-row">
-                      <span className="manifest-key">Expertise</span>
+                      <span className="manifest-key">Skill Level</span>
                       <span className="manifest-val">{tool.tags.skill}</span>
-                    </div>
-                    <div className="manifest-row">
-                      <span className="manifest-key">Source</span>
-                      <span className="manifest-val">Verified</span>
                     </div>
                   </div>
                 </article>
@@ -504,7 +601,7 @@ export default function ToolsIndex() {
           <div className="footer-left">
             <h4>The Stack.</h4>
             <p className="manifest-val" style={{ color: '#888', marginTop: '0.5rem' }}>
-              System Status: Nominal / {aiTools.length} Units Indexed
+              {aiTools.length} tools and counting
             </p>
           </div>
           <div className="footer-right">

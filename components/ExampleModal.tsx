@@ -65,27 +65,27 @@ export default function ExampleModal({ example, isOpen, onClose }: ExampleModalP
           isOpen ? 'scale-100 translate-y-0' : 'scale-95 translate-y-4'
         }`}
       >
-        <div className="absolute top-6 right-6 z-[110]">
+        <div className="absolute top-3 right-3 sm:top-6 sm:right-6 z-[110]">
           <button
             onClick={onClose}
             className="p-2 text-secondary-text hover:text-primary-text hover:bg-hero-tint rounded-md transition-all"
             aria-label="Close modal"
           >
-            <X size={24} />
+            <X size={20} className="sm:w-6 sm:h-6" />
           </button>
         </div>
 
-        <div className="overflow-y-auto flex-grow pt-xxl pb-xl scrollbar-hide">
+        <div className="overflow-y-auto flex-grow pt-xl pb-lg sm:pt-xxl sm:pb-xl scrollbar-hide">
           <ExampleBody example={example} />
         </div>
 
         {example.original_link && (
-          <div className="border-t border-border-color p-lg bg-hero-tint flex justify-center rounded-b-md">
+          <div className="border-t border-border-color p-md sm:p-lg bg-hero-tint flex justify-center rounded-b-md">
             <a
               href={example.original_link}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-xl py-sm bg-accent-dark text-white rounded-sm text-[0.875rem] font-medium hover:bg-black transition-all"
+              className="inline-flex items-center justify-center gap-2 px-lg py-sm sm:px-xl bg-accent-dark text-white rounded-sm text-[0.875rem] font-medium hover:bg-black transition-all"
             >
               <ExternalLink size={16} />
               View Original
