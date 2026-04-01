@@ -29,11 +29,11 @@ export default function Hero() {
             </div>
             
             <h1 className="text-4xl sm:text-6xl font-headline font-bold tracking-tight mb-4 text-brand-navy max-w-4xl uppercase">
-              AI Workflows You Can <span className="text-accent bg-clip-text">Copy.</span>
+              A library of real AI examples from people who <span className="text-accent bg-clip-text">use AI.</span>
             </h1>
 
             <p className="text-lg sm:text-xl text-brand-navy/70 max-w-2xl mx-auto mb-8 leading-relaxed font-sans">
-              Free blueprints starter pack and occasional updates on actionable AI tactics. If they suck, unsubscribe. I won't be offended.
+              Get curated weekly drops of prompts, strategies, and exact setups you can copy.
             </p>
 
             <div className="max-w-[500px] w-full mx-auto">

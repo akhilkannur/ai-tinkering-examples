@@ -536,7 +536,7 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
 
         {/* Hero */}
         <section className="hero-section">
-          <h1 className="hero-title">Real Workflows.<br />Zero Bullshit.</h1>
+          <h1 className="hero-title">A library of real AI examples from people who use AI.</h1>
 
           {formStatus === 'success' ? (
             <div className="newsletter-success">✓ Check your inbox to confirm</div>
@@ -545,7 +545,7 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
               <input
                 type="email"
                 className="newsletter-input"
-                placeholder="ENTER EMAIL TO UNLOCK THE VAULT..."
+                placeholder="Get weekly examples"
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -558,7 +558,7 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
           )}
 
           <div className="hero-meta">
-            Join 1,200+ AI Tinkers · Next Drop: Tuesday
+            Join 300+ AI Tinkers · Next Drop: Tuesday
           </div>
           {formStatus === 'error' && (
             <div className="hero-meta" style={{ color: '#c00', marginTop: '0.5rem' }}>
