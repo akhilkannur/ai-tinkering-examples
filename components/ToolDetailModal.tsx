@@ -56,12 +56,12 @@ export default function ToolDetailModal({ tool, onClose }: ToolDetailModalProps)
           <X className="w-6 h-6 stroke-[3px]" />
         </button>
 
-        <div className="p-8 md:p-12 overflow-y-auto scrollbar-hide">
-          <div className="flex flex-col md:flex-row gap-10 items-start">
+        <div className="p-5 sm:p-8 md:p-12 overflow-y-auto scrollbar-hide">
+          <div className="flex flex-col md:flex-row gap-6 sm:gap-10 items-start">
             
             {/* Logo Section */}
             <div className="flex-shrink-0">
-              <div className="w-24 h-24 md:w-40 md:h-40 relative rounded-none overflow-hidden border-4 border-black bg-white brutalist-shadow-sm rotate-3">
+              <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-40 md:h-40 relative rounded-none overflow-hidden border-4 border-black bg-white brutalist-shadow-sm">
                  <Image
                     src={imgSrc}
                     alt={`${tool.name} logo`}
@@ -75,8 +75,8 @@ export default function ToolDetailModal({ tool, onClose }: ToolDetailModalProps)
 
             {/* Content Section */}
             <div className="flex-grow">
-              <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8">
-                <h1 className="text-3xl md:text-5xl font-display text-black uppercase leading-none glitch-text" data-text={tool.name.toUpperCase()}>
+              <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 sm:gap-6 mb-6 sm:mb-8">
+                <h1 className="text-2xl sm:text-3xl md:text-5xl font-display text-black uppercase leading-none">
                   {tool.name}
                 </h1>
                 
@@ -101,7 +101,7 @@ export default function ToolDetailModal({ tool, onClose }: ToolDetailModalProps)
               </div>
 
               {/* Metadata Pills */}
-              <div className="flex flex-wrap gap-3 mb-10">
+              <div className="flex flex-wrap gap-3 mb-6 sm:mb-10">
                 <span className="bg-[#ccff00] text-black px-3 py-1 text-[10px] font-black font-mono uppercase border-2 border-black tracking-widest">
                   {tool.category}
                 </span>
@@ -110,25 +110,20 @@ export default function ToolDetailModal({ tool, onClose }: ToolDetailModalProps)
                     {tool.tags.price}
                   </span>
                 )}
-                {tool.tags.skill && (
-                  <span className="bg-[#ff00ff] text-white px-3 py-1 text-[10px] font-black font-mono uppercase border-2 border-black tracking-widest transform -rotate-1">
-                    {tool.tags.skill}
-                  </span>
-                )}
-              </div>
+                </div>
 
               {/* Description */}
-              <p className="text-xl text-black font-bold uppercase leading-tight border-l-8 border-[#ccff00] pl-6 py-4 bg-gray-50 mb-10">
+              <p className="text-base sm:text-xl text-black font-bold uppercase leading-tight border-l-8 border-[#ccff00] pl-4 sm:pl-6 py-3 sm:py-4 bg-gray-50 mb-6 sm:mb-10">
                 {tool.description}
               </p>
 
               {/* Action Row */}
-              <div className="flex flex-wrap items-center gap-6">
+              <div className="flex flex-wrap items-center gap-4 sm:gap-6">
                 <a
                   href={tool.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-black text-[#ccff00] px-10 py-4 border-4 border-black font-display text-xl uppercase transition-all brutalist-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none inline-flex items-center gap-3"
+                  className="bg-black text-[#ccff00] px-6 py-3 sm:px-10 sm:py-4 border-4 border-black font-display text-sm sm:text-xl uppercase transition-all brutalist-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none inline-flex items-center gap-3"
                 >
                   Visit Website
                   <ExternalLink className="w-6 h-6 stroke-[3px]" />
@@ -148,15 +143,7 @@ export default function ToolDetailModal({ tool, onClose }: ToolDetailModalProps)
           </div>
         </div>
 
-        {/* Footer */}
-        <div className="bg-gray-100 border-t-4 border-black px-8 py-4 flex items-center justify-between font-mono font-black text-[10px] uppercase tracking-widest">
-           <span className="text-gray-500">
-             // Verified Listing #00{Math.floor(Math.random() * 99)}
-           </span>
-           <span className="text-[#ff00ff]">
-             Real AI Examples Dept.
-           </span>
-        </div>
+
       </div>
     </div>
   );

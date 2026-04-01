@@ -10,29 +10,26 @@ const CARD_COLORS = ['#F5F5F5', '#EFEFEF', '#FAFAFA', '#F0F0F0', '#FFFFFF'];
 export default function ToolsIndex() {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [selectedPrice, setSelectedPrice] = useState<string>('All');
-  const [selectedSkill, setSelectedSkill] = useState<string>('All');
   const [selectedTool, setSelectedTool] = useState<AiTool | null>(null);
   
   const categories = ['All', ...Array.from(new Set(aiTools.map(t => t.category)))];
   const prices = ['All', ...Array.from(new Set(aiTools.map(t => t.tags.price)))];
-  const skills = ['All', ...Array.from(new Set(aiTools.map(t => t.tags.skill)))];
 
   const filteredTools = useMemo(() => {
     return aiTools.filter(tool => {
       const matchCat = selectedCategory === 'All' || tool.category === selectedCategory;
       const matchPrice = selectedPrice === 'All' || tool.tags.price === selectedPrice;
-      const matchSkill = selectedSkill === 'All' || tool.tags.skill === selectedSkill;
-      return matchCat && matchPrice && matchSkill;
+      return matchCat && matchPrice;
     });
-  }, [selectedCategory, selectedPrice, selectedSkill]);
+  }, [selectedCategory, selectedPrice]);
 
   const featuredTools = aiTools.slice(0, 3);
 
   return (
     <>
       <Head>
-        <title>The Stack | Real AI Examples</title>
-        <meta name="description" content="A technical repository of AI tools for operators." key="description" />
+        <title>AI Tools Directory | Real AI Examples</title>
+        <meta name="description" content="Browse the best AI tools — filtered by category, price, and skill level." key="description" />
       </Head>
 
       <style jsx global>{`
@@ -286,11 +283,7 @@ export default function ToolsIndex() {
           width: 40px;
           height: 40px;
           object-fit: contain;
-          filter: grayscale(1);
-          opacity: 0.8;
         }
-
-        .tool-item:hover .tool-visual img { filter: none; opacity: 1; }
 
         .tool-name {
           font-family: var(--font-display);
@@ -495,10 +488,10 @@ export default function ToolsIndex() {
         <header className="stack-header">
           <Link href="/" className="stack-logo">realaiexamples</Link>
           <nav className="stack-nav">
-            <Link href="/">Archive</Link>
-            <Link href="/tools" className="active">The Stack</Link>
-            <Link href="/blog">Editorial</Link>
-            <Link href="/about">Info</Link>
+            <Link href="/">Examples</Link>
+            <Link href="/tools" className="active">Tools</Link>
+            <Link href="/blog">Blog</Link>
+            <Link href="/about">About</Link>
           </nav>
         </header>
 
@@ -511,7 +504,7 @@ export default function ToolsIndex() {
               <p className="bento-desc">{featuredTools[0].description}</p>
             </div>
             <div className="bento-main-visual">
-              <img src={featuredTools[0].image} alt={featuredTools[0].name} style={{ width: '100px', filter: 'invert(1)' }} />
+              <img src={featuredTools[0].image} alt={featuredTools[0].name} style={{ width: '100px' }} />
             </div>
           </div>
           <div className="bento-side">
@@ -543,15 +536,9 @@ export default function ToolsIndex() {
                 {prices.map(p => <option key={p} value={p}>{p}</option>)}
               </select>
             </div>
-            <div className="filter-select-wrapper">
-              <span className="filter-select-label">Skill</span>
-              <select className="filter-select" value={selectedSkill} onChange={(e) => setSelectedSkill(e.target.value)}>
-                {skills.map(s => <option key={s} value={s}>{s}</option>)}
-              </select>
-            </div>
-            {(selectedCategory !== 'All' || selectedPrice !== 'All' || selectedSkill !== 'All') && (
+            {(selectedCategory !== 'All' || selectedPrice !== 'All') && (
               <button 
-                onClick={() => { setSelectedCategory('All'); setSelectedPrice('All'); setSelectedSkill('All'); }}
+                onClick={() => { setSelectedCategory('All'); setSelectedPrice('All'); }}
                 style={{ background: 'transparent', border: 'none', color: 'white', cursor: 'pointer', padding: '0 8px' }}
               >
                 <X size={14} />
@@ -585,10 +572,6 @@ export default function ToolsIndex() {
                       <span className="manifest-key">Price</span>
                       <span className="manifest-val">{tool.tags.price}</span>
                     </div>
-                    <div className="manifest-row">
-                      <span className="manifest-key">Skill Level</span>
-                      <span className="manifest-val">{tool.tags.skill}</span>
-                    </div>
                   </div>
                 </article>
               ))}
@@ -599,24 +582,24 @@ export default function ToolsIndex() {
         {/* Footer */}
         <footer className="stack-footer">
           <div className="footer-left">
-            <h4>The Stack.</h4>
+            <h4>AI Tools.</h4>
             <p className="manifest-val" style={{ color: '#888', marginTop: '0.5rem' }}>
               {aiTools.length} tools and counting
             </p>
           </div>
           <div className="footer-right">
             <div>
-              <p className="manifest-key" style={{ marginBottom: '1rem' }}>Directories</p>
+              <p className="manifest-key" style={{ marginBottom: '1rem' }}>Browse</p>
               <ul className="footer-list">
-                <li><Link href="/tools">Full Inventory</Link></li>
-                <li><a href="https://forms.gle/KqN82GGdCohshtVx8">Submit Tool</a></li>
+                <li><Link href="/tools">All Tools</Link></li>
+                <li><a href="https://forms.gle/KqN82GGdCohshtVx8">Submit a Tool</a></li>
               </ul>
             </div>
             <div>
-              <p className="manifest-key" style={{ marginBottom: '1rem' }}>Repository</p>
+              <p className="manifest-key" style={{ marginBottom: '1rem' }}>More</p>
               <ul className="footer-list">
                 <li><Link href="/about">About</Link></li>
-                <li><Link href="/blog">Editorial</Link></li>
+                <li><Link href="/blog">Blog</Link></li>
               </ul>
             </div>
           </div>

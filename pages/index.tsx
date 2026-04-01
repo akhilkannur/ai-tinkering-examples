@@ -646,7 +646,7 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
                         <div className="card-info">
                           <div className="card-meta">
                             <span className="card-category">{example.category || 'EXAMPLE'}</span>
-                            <span className="card-id">ID-{String(cardNum + 1).padStart(3, '0')}</span>
+                            <span className="card-id">{example.publish_date ? new Date(example.publish_date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) : ''}</span>
                           </div>
                           <h3 className="card-title">{example.title}</h3>
                         </div>
@@ -688,7 +688,7 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
             </div>
           </div>
           <div className="drops-footer-bottom">
-            © {new Date().getFullYear()} Real AI Examples. Curated for business professionals.
+            © {new Date().getFullYear()} Real AI Examples
           </div>
         </footer>
       </div>
