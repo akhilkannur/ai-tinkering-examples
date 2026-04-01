@@ -497,20 +497,35 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
         }
 
         @media (max-width: 640px) {
-          .drops-footer-grid {
-            grid-template-columns: 1fr 1fr;
-            gap: var(--space-md);
+          .drops-wrapper {
+            padding: 0 var(--space-sm);
           }
-        }
-
-        @media (max-width: 640px) {
           .drops-header {
             flex-direction: column;
-            gap: var(--space-sm);
+            gap: var(--space-xs);
             align-items: flex-start;
+            padding: var(--space-sm) 0;
+            margin-bottom: var(--space-md);
+          }
+          .drops-logo {
+            font-size: 1.25rem;
+          }
+          .hero-title {
+            font-size: clamp(1.75rem, 6vw, 3rem);
+            margin-bottom: var(--space-sm);
+          }
+          .hero-section {
+            margin-bottom: var(--space-md);
+          }
+          .category-nav {
+            margin-bottom: var(--space-md);
+          }
+          .drop-container {
+            margin-bottom: var(--space-md);
           }
           .workflow-grid {
             grid-template-columns: 1fr;
+            gap: var(--space-md) var(--space-sm);
           }
           .newsletter-form {
             flex-direction: column;
@@ -519,6 +534,10 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
             border-left: none;
             border-top: 2px solid var(--border-heavy);
             padding: var(--space-sm);
+          }
+          .drops-footer-grid {
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-md);
           }
         }
       `}</style>
