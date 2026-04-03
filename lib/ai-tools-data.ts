@@ -9,6 +9,7 @@ export interface AiTool {
     skill: string;
   };
   image: string;
+  dateAdded: string;
   featured?: boolean;
 }
 
@@ -23,7 +24,8 @@ export const aiTools: AiTool[] = [
         price: "Free",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=vidmix.ai&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=vidmix.ai&sz=128",
+    dateAdded: "2026-03-30"
 },
   {
     name: "Overvisual",
@@ -35,7 +37,8 @@ export const aiTools: AiTool[] = [
         price: "Freemium",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=www.overvisual.com&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=www.overvisual.com&sz=128",
+    dateAdded: "2026-03-31"
 },
   {
     name: "ChattyFit",
@@ -47,7 +50,8 @@ export const aiTools: AiTool[] = [
         price: "Freemium",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=chatty.fit&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=chatty.fit&sz=128",
+    dateAdded: "2026-04-01"
 },
   {
     name: "SlideWhisper",
@@ -59,7 +63,8 @@ export const aiTools: AiTool[] = [
         price: "Freemium",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=www.slidewhisper.com&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=www.slidewhisper.com&sz=128",
+    dateAdded: "2026-04-02"
 },
   {
     name: "imejis.io",
@@ -71,7 +76,8 @@ export const aiTools: AiTool[] = [
         price: "Freemium",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=www.imejis.io&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=www.imejis.io&sz=128",
+    dateAdded: "2026-04-03"
 },
   {
     name: "Email Ferret",
@@ -83,7 +89,8 @@ export const aiTools: AiTool[] = [
         price: "Freemium",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=emailferret.io&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=emailferret.io&sz=128",
+    dateAdded: "2026-03-30"
 },
   {
     name: "AgentGatePay",
@@ -95,7 +102,8 @@ export const aiTools: AiTool[] = [
         price: "Freemium",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=www.agentgatepay.com&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=www.agentgatepay.com&sz=128",
+    dateAdded: "2026-03-31"
 },
   {
     name: "Hypnotype",
@@ -107,7 +115,8 @@ export const aiTools: AiTool[] = [
         price: "Freemium",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=hypnotype.app&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=hypnotype.app&sz=128",
+    dateAdded: "2026-04-01"
 },
   {
     name: "Computer Keyboard Shortcuts",
@@ -119,7 +128,8 @@ export const aiTools: AiTool[] = [
         price: "Freemium",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=computerkeyboardshortcuts.org&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=computerkeyboardshortcuts.org&sz=128",
+    dateAdded: "2026-03-23"
 },
   {
     name: "Floowed",
@@ -131,7 +141,8 @@ export const aiTools: AiTool[] = [
         price: "Freemium",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=floowed.com&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=floowed.com&sz=128",
+    dateAdded: "2026-03-24"
 },
   {
     name: "StrideFuel",
@@ -143,7 +154,8 @@ export const aiTools: AiTool[] = [
         price: "Free",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=stride-fuel.com&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=stride-fuel.com&sz=128",
+    dateAdded: "2026-03-25"
 },
   {
     name: "Oravida AI",
@@ -155,7 +167,8 @@ export const aiTools: AiTool[] = [
         price: "Freemium",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=orav.ai&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=orav.ai&sz=128",
+    dateAdded: "2026-03-26"
 },
   {
     name: "AIRankPilot",
@@ -167,7 +180,8 @@ export const aiTools: AiTool[] = [
         price: "Freemium",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=airankpilot.com&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=airankpilot.com&sz=128",
+    dateAdded: "2026-03-27"
 },
   {
     name: "BookSwift",
@@ -179,7 +193,8 @@ export const aiTools: AiTool[] = [
         price: "Freemium",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=www.bookswift.app&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=www.bookswift.app&sz=128",
+    dateAdded: "2026-03-28"
 },
   {
     name: "SlidesCockpit",
@@ -191,7 +206,8 @@ export const aiTools: AiTool[] = [
         price: "Freemium",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=slidescockpit.com&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=slidescockpit.com&sz=128",
+    dateAdded: "2026-03-29"
 },
   {
     name: "3dSynth.app",
@@ -203,7 +219,8 @@ export const aiTools: AiTool[] = [
         price: "Freemium",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=3dsynth.app&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=3dsynth.app&sz=128",
+    dateAdded: "2026-03-23"
 },
   {
     name: "Crypto News Navigator",
@@ -215,7 +232,8 @@ export const aiTools: AiTool[] = [
         price: "Freemium",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=www.cryptonewsnavigator.com&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=www.cryptonewsnavigator.com&sz=128",
+    dateAdded: "2026-03-24"
 },
   {
     name: "Suburb Stack",
@@ -227,7 +245,8 @@ export const aiTools: AiTool[] = [
         price: "Freemium",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=suburbstack.com&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=suburbstack.com&sz=128",
+    dateAdded: "2026-03-25"
 },
   {
     name: "Sequenzy",
@@ -239,7 +258,8 @@ export const aiTools: AiTool[] = [
         price: "Freemium",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=sequenzy.com&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=sequenzy.com&sz=128",
+    dateAdded: "2026-03-26"
 },
   {
     name: "Markeplay",
@@ -251,7 +271,8 @@ export const aiTools: AiTool[] = [
         price: "Freemium",
         skill: "Intermediate"
     },
-    image: "https://www.google.com/s2/favicons?domain=www.markeplay.com&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=www.markeplay.com&sz=128",
+    dateAdded: "2026-03-27"
 },
   {
     name: "Qeeebo",
@@ -263,7 +284,8 @@ export const aiTools: AiTool[] = [
         price: "Freemium",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=www.qeeebo.com&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=www.qeeebo.com&sz=128",
+    dateAdded: "2026-03-16"
 },
   {
     name: "feynn - Strategic Intelligence Platform",
@@ -275,7 +297,8 @@ export const aiTools: AiTool[] = [
         price: "Freemium",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=feynn.ai&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=feynn.ai&sz=128",
+    dateAdded: "2026-03-17"
 },
   {
     name: "AI Thumbnail",
@@ -287,7 +310,8 @@ export const aiTools: AiTool[] = [
         price: "Freemium",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=aithumbnail.gg&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=aithumbnail.gg&sz=128",
+    dateAdded: "2026-03-18"
 },
   {
     name: "AyeWatch AI",
@@ -299,7 +323,8 @@ export const aiTools: AiTool[] = [
         price: "Freemium",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=ayewatch.ai&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=ayewatch.ai&sz=128",
+    dateAdded: "2026-03-19"
 },
   {
     name: "PentestMate",
@@ -311,7 +336,8 @@ export const aiTools: AiTool[] = [
         price: "Freemium",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=pentestmate.com&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=pentestmate.com&sz=128",
+    dateAdded: "2026-03-20"
 },
   {
     name: "Bolta",
@@ -323,7 +349,8 @@ export const aiTools: AiTool[] = [
         price: "Freemium",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=bolta.ai&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=bolta.ai&sz=128",
+    dateAdded: "2026-03-21"
 },
   {
     name: "Sana Mujer",
@@ -335,7 +362,8 @@ export const aiTools: AiTool[] = [
         price: "Freemium",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=www.sanamujer.com&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=www.sanamujer.com&sz=128",
+    dateAdded: "2026-03-22"
 },
   {
     name: "Beatable",
@@ -347,7 +375,8 @@ export const aiTools: AiTool[] = [
         price: "Freemium",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=beatable.co&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=beatable.co&sz=128",
+    dateAdded: "2026-03-16"
 },
   {
     name: "Map Your Voyage",
@@ -359,7 +388,8 @@ export const aiTools: AiTool[] = [
         price: "Freemium",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=mapyourvoyage.com&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=mapyourvoyage.com&sz=128",
+    dateAdded: "2026-03-17"
 },
   {
     name: "AyeCreate",
@@ -371,7 +401,8 @@ export const aiTools: AiTool[] = [
         price: "Freemium",
         skill: "Intermediate"
     },
-    image: "https://www.google.com/s2/favicons?domain=ayecreate.ai&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=ayecreate.ai&sz=128",
+    dateAdded: "2026-03-18"
 },
   {
     name: "Nicegram",
@@ -383,7 +414,8 @@ export const aiTools: AiTool[] = [
         price: "Freemium",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=nicegram.app&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=nicegram.app&sz=128",
+    dateAdded: "2026-03-19"
 },
   {
     name: "LocalBiz",
@@ -395,7 +427,8 @@ export const aiTools: AiTool[] = [
         price: "Freemium",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=www.localbiz.ai&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=www.localbiz.ai&sz=128",
+    dateAdded: "2026-03-20"
 },
   {
     name: "Argus AI",
@@ -407,7 +440,8 @@ export const aiTools: AiTool[] = [
         price: "Freemium",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=www.getargus.ai&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=www.getargus.ai&sz=128",
+    dateAdded: "2026-03-21"
 },
   {
     name: "POPJAM",
@@ -419,7 +453,8 @@ export const aiTools: AiTool[] = [
         price: "Freemium",
         skill: "Intermediate"
     },
-    image: "https://www.google.com/s2/favicons?domain=popjam.io&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=popjam.io&sz=128",
+    dateAdded: "2026-03-22"
 },
   {
     name: "Tekadio",
@@ -431,7 +466,8 @@ export const aiTools: AiTool[] = [
         price: "Freemium",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=tekadio.app&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=tekadio.app&sz=128",
+    dateAdded: "2026-03-16"
 },
   {
     name: "Invoplex",
@@ -443,7 +479,8 @@ export const aiTools: AiTool[] = [
         price: "Free",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=invoplex.com&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=invoplex.com&sz=128",
+    dateAdded: "2026-03-09"
 },
   {
     name: "Docutracker",
@@ -455,7 +492,8 @@ export const aiTools: AiTool[] = [
         price: "Free",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=docutracker.io&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=docutracker.io&sz=128",
+    dateAdded: "2026-03-10"
 },
   {
     name: "Time",
@@ -467,7 +505,8 @@ export const aiTools: AiTool[] = [
         price: "Free",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=menubartime.com&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=menubartime.com&sz=128",
+    dateAdded: "2026-03-11"
 },
   {
     name: "CleanMark",
@@ -479,7 +518,8 @@ export const aiTools: AiTool[] = [
         price: "Free",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=geminiwatermarkremover.net&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=geminiwatermarkremover.net&sz=128",
+    dateAdded: "2026-03-12"
 },
   {
     name: "ArchRender",
@@ -491,7 +531,8 @@ export const aiTools: AiTool[] = [
         price: "Free",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=www.archrender.ai&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=www.archrender.ai&sz=128",
+    dateAdded: "2026-03-13"
 },
   {
     name: "ModulEdge",
@@ -503,7 +544,8 @@ export const aiTools: AiTool[] = [
         price: "Free",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=www.moduledge.com&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=www.moduledge.com&sz=128",
+    dateAdded: "2026-03-14"
 },
   {
     name: "Tech Twitter",
@@ -515,7 +557,8 @@ export const aiTools: AiTool[] = [
         price: "Free",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=www.techtwitter.com&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=www.techtwitter.com&sz=128",
+    dateAdded: "2026-03-15"
 },
   {
     name: "Bank PDF Converter",
@@ -527,7 +570,8 @@ export const aiTools: AiTool[] = [
         price: "Free",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=bankpdfconverter.com&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=bankpdfconverter.com&sz=128",
+    dateAdded: "2026-03-09"
 },
   {
     name: "Squared Away",
@@ -539,7 +583,8 @@ export const aiTools: AiTool[] = [
         price: "Free",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=squaredaway.ai&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=squaredaway.ai&sz=128",
+    dateAdded: "2026-03-10"
 },
   {
     name: "logostream",
@@ -551,7 +596,8 @@ export const aiTools: AiTool[] = [
         price: "Free",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=logostream.dev&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=logostream.dev&sz=128",
+    dateAdded: "2026-03-11"
 },
   {
     name: "Archivist",
@@ -563,7 +609,8 @@ export const aiTools: AiTool[] = [
         price: "Free",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=getarchivist.org&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=getarchivist.org&sz=128",
+    dateAdded: "2026-03-12"
 },
   {
     name: "Bitvoiper",
@@ -575,7 +622,8 @@ export const aiTools: AiTool[] = [
         price: "Free",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=bitvoiper.com&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=bitvoiper.com&sz=128",
+    dateAdded: "2026-03-13"
 },
   {
     name: "vitelnk",
@@ -587,7 +635,8 @@ export const aiTools: AiTool[] = [
         price: "Free",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=vitelnk.com&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=vitelnk.com&sz=128",
+    dateAdded: "2026-03-14"
 },
   {
     name: "Roomika",
@@ -599,7 +648,8 @@ export const aiTools: AiTool[] = [
         price: "Free",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=www.roomika.ai&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=www.roomika.ai&sz=128",
+    dateAdded: "2026-03-15"
 },
   {
     name: "Multic - Multiplayer Comics",
@@ -611,7 +661,8 @@ export const aiTools: AiTool[] = [
         price: "Free",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=www.multic.com&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=www.multic.com&sz=128",
+    dateAdded: "2026-03-09"
 },
   {
     name: "Thrive",
@@ -623,7 +674,8 @@ export const aiTools: AiTool[] = [
         price: "Free",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=thrive.fi&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=thrive.fi&sz=128",
+    dateAdded: "2026-03-02"
 },
   {
     name: "PressBeat",
@@ -635,7 +687,8 @@ export const aiTools: AiTool[] = [
         price: "Free",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=pressbeat.io&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=pressbeat.io&sz=128",
+    dateAdded: "2026-03-03"
 },
   {
     name: "SimpleSeverance",
@@ -647,7 +700,8 @@ export const aiTools: AiTool[] = [
       price: "Free",
       skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=simpleseverance.co&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=simpleseverance.co&sz=128",
+    dateAdded: "2026-03-04"
   },
   {
     name: "CookieGuard",
@@ -659,7 +713,8 @@ export const aiTools: AiTool[] = [
       price: "Free",
       skill: "Intermediate"
     },
-    image: "https://www.google.com/s2/favicons?domain=cookieguard.co&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=cookieguard.co&sz=128",
+    dateAdded: "2026-03-05"
   },
   {
     name: "sHabits",
@@ -671,7 +726,8 @@ export const aiTools: AiTool[] = [
       price: "Free",
       skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=simplyhabits.io&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=simplyhabits.io&sz=128",
+    dateAdded: "2026-03-06"
   },
   {
     name: "DiffScout",
@@ -683,7 +739,8 @@ export const aiTools: AiTool[] = [
       price: "Freemium",
       skill: "Intermediate"
     },
-    image: "https://www.google.com/s2/favicons?domain=diffscout.com&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=diffscout.com&sz=128",
+    dateAdded: "2026-03-07"
   },
   {
     name: "Test-Lab.ai",
@@ -695,7 +752,8 @@ export const aiTools: AiTool[] = [
       price: "Paid",
       skill: "Advanced"
     },
-    image: "https://www.google.com/s2/favicons?domain=www.test-lab.ai&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=www.test-lab.ai&sz=128",
+    dateAdded: "2026-03-08"
   },
   {
     name: "SaaS Blueprint",
@@ -707,7 +765,8 @@ export const aiTools: AiTool[] = [
       price: "Paid",
       skill: "Advanced"
     },
-    image: "https://www.google.com/s2/favicons?domain=saasblueprint.app&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=saasblueprint.app&sz=128",
+    dateAdded: "2026-03-02"
   },
   {
     name: "Bangas",
@@ -719,7 +778,8 @@ export const aiTools: AiTool[] = [
       price: "Paid",
       skill: "Intermediate"
     },
-    image: "https://www.google.com/s2/favicons?domain=bangas.ai&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=bangas.ai&sz=128",
+    dateAdded: "2026-03-03"
   },
   {
     name: "ShortsAi",
@@ -731,7 +791,8 @@ export const aiTools: AiTool[] = [
       price: "Freemium",
       skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=shortsai.com&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=shortsai.com&sz=128",
+    dateAdded: "2026-03-04"
   },
   {
     name: "LinkedGrow",
@@ -743,7 +804,8 @@ export const aiTools: AiTool[] = [
       price: "Freemium",
       skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=linkedgrow.ai&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=linkedgrow.ai&sz=128",
+    dateAdded: "2026-03-05"
   },
   {
     name: "Credops",
@@ -755,7 +817,8 @@ export const aiTools: AiTool[] = [
       price: "Freemium",
       skill: "Intermediate"
     },
-    image: "https://www.google.com/s2/favicons?domain=www.credops.io&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=www.credops.io&sz=128",
+    dateAdded: "2026-03-06"
   },
   {
     name: "Podcept",
@@ -767,7 +830,8 @@ export const aiTools: AiTool[] = [
       price: "Freemium",
       skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=www.podcept.com&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=www.podcept.com&sz=128",
+    dateAdded: "2026-03-07"
   },
   {
     name: "Roomstage AI",
@@ -779,7 +843,8 @@ export const aiTools: AiTool[] = [
       price: "Freemium",
       skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=roomstage.ai&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=roomstage.ai&sz=128",
+    dateAdded: "2026-03-08"
   },
   {
     name: "Murmur",
@@ -791,7 +856,8 @@ export const aiTools: AiTool[] = [
       price: "Paid",
       skill: "Intermediate"
     },
-    image: "https://www.google.com/s2/favicons?domain=murmurvt.com&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=murmurvt.com&sz=128",
+    dateAdded: "2026-03-02"
   },
   {
     name: "Tails, Co.",
@@ -803,7 +869,8 @@ export const aiTools: AiTool[] = [
       price: "Free",
       skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=trytails.com&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=trytails.com&sz=128",
+    dateAdded: "2026-02-23"
   },
   {
     name: "NeonChainX",
@@ -815,7 +882,8 @@ export const aiTools: AiTool[] = [
       price: "Paid",
       skill: "Advanced"
     },
-    image: "https://www.google.com/s2/favicons?domain=neonchainx.com&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=neonchainx.com&sz=128",
+    dateAdded: "2026-02-24"
   },
   {
     name: "Roampads",
@@ -827,7 +895,8 @@ export const aiTools: AiTool[] = [
       price: "Free",
       skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=www.roampads.com&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=www.roampads.com&sz=128",
+    dateAdded: "2026-02-25"
   },
   {
     name: "Flowly Indicators",
@@ -839,7 +908,8 @@ export const aiTools: AiTool[] = [
       price: "Paid",
       skill: "Advanced"
     },
-    image: "https://www.google.com/s2/favicons?domain=www.flowly.tools&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=www.flowly.tools&sz=128",
+    dateAdded: "2026-02-26"
   },
   {
     name: "TRYremote",
@@ -851,7 +921,8 @@ export const aiTools: AiTool[] = [
       price: "Free",
       skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=tryremote.com&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=tryremote.com&sz=128",
+    dateAdded: "2026-02-27"
   },
   {
     name: "Userjam",
@@ -863,7 +934,8 @@ export const aiTools: AiTool[] = [
       price: "Paid",
       skill: "Intermediate"
     },
-    image: "https://www.google.com/s2/favicons?domain=userjam.com&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=userjam.com&sz=128",
+    dateAdded: "2026-02-28"
   },
   {
     name: "MedShotsAI",
@@ -875,7 +947,8 @@ export const aiTools: AiTool[] = [
       price: "Paid",
       skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=medshotsai.com&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=medshotsai.com&sz=128",
+    dateAdded: "2026-02-23"
   },
   {
     name: "Mixels.ai",
@@ -887,7 +960,8 @@ export const aiTools: AiTool[] = [
         price: "Free",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=mixels.ai&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=mixels.ai&sz=128",
+    dateAdded: "2026-02-24"
 },
   {
     name: "EmailVerify.ai",
@@ -899,7 +973,8 @@ export const aiTools: AiTool[] = [
         price: "Free",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=emailverify.ai&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=emailverify.ai&sz=128",
+    dateAdded: "2026-02-25"
 },
   {
     name: "Stageflow.ai",
@@ -911,7 +986,8 @@ export const aiTools: AiTool[] = [
         price: "Free",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=Stageflow.ai&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=Stageflow.ai&sz=128",
+    dateAdded: "2026-02-26"
 },
   {
     name: "Oneprofile",
@@ -923,7 +999,8 @@ export const aiTools: AiTool[] = [
         price: "Free",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=getoneprofile.com&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=getoneprofile.com&sz=128",
+    dateAdded: "2026-02-27"
 },
   {
     name: "XIMA DIGITAL",
@@ -935,7 +1012,8 @@ export const aiTools: AiTool[] = [
         price: "Free",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=www.pdfseek.com&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=www.pdfseek.com&sz=128",
+    dateAdded: "2026-02-28"
 },
   {
     name: "Eleidon",
@@ -947,7 +1025,8 @@ export const aiTools: AiTool[] = [
         price: "Free",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=eleidon.com&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=eleidon.com&sz=128",
+    dateAdded: "2026-02-23"
 },
   {
     name: "ChampSignal",
@@ -959,7 +1038,8 @@ export const aiTools: AiTool[] = [
         price: "Free",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=champsignal.com&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=champsignal.com&sz=128",
+    dateAdded: "2026-02-24"
 },
   {
     name: "GreatCompany.ai",
@@ -971,7 +1051,8 @@ export const aiTools: AiTool[] = [
         price: "Free",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=GreatCompany.ai&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=GreatCompany.ai&sz=128",
+    dateAdded: "2026-02-25"
 },
   {
     name: "Reply Champion",
@@ -983,7 +1064,8 @@ export const aiTools: AiTool[] = [
         price: "Free",
         skill: "Beginner"
     },
-    image: "/screenshots/reply-champion.png"
+    image: "/screenshots/reply-champion.png",
+    dateAdded: "2026-02-16"
 },
   {
     name: "Encamera",
@@ -995,7 +1077,8 @@ export const aiTools: AiTool[] = [
         price: "Free",
         skill: "Beginner"
     },
-    image: "/screenshots/encamera.png"
+    image: "/screenshots/encamera.png",
+    dateAdded: "2026-02-17"
 },
   {
     name: "Resideline",
@@ -1007,7 +1090,8 @@ export const aiTools: AiTool[] = [
         price: "Free",
         skill: "Beginner"
     },
-    image: "/screenshots/resideline.png"
+    image: "/screenshots/resideline.png",
+    dateAdded: "2026-02-18"
 },
   {
     name: "Applytrackr",
@@ -1019,7 +1103,8 @@ export const aiTools: AiTool[] = [
         price: "Free",
         skill: "Beginner"
     },
-    image: "/screenshots/applytrackr.png"
+    image: "/screenshots/applytrackr.png",
+    dateAdded: "2026-02-19"
 },
   {
     name: "LINO",
@@ -1031,7 +1116,8 @@ export const aiTools: AiTool[] = [
         price: "Free",
         skill: "Beginner"
     },
-    image: "/screenshots/lino.png"
+    image: "/screenshots/lino.png",
+    dateAdded: "2026-02-20"
 },
   {
     name: "HighReach",
@@ -1043,7 +1129,8 @@ export const aiTools: AiTool[] = [
         price: "Free",
         skill: "Beginner"
     },
-    image: "/screenshots/highreach.png"
+    image: "/screenshots/highreach.png",
+    dateAdded: "2026-02-21"
 },
   {
     name: "Ayudo",
@@ -1055,7 +1142,8 @@ export const aiTools: AiTool[] = [
         price: "Freemium",
         skill: "Beginner"
     },
-    image: "/screenshots/ayudo.png"
+    image: "/screenshots/ayudo.png",
+    dateAdded: "2026-02-22"
 },
   {
     name: "LinkPilot",
@@ -1067,7 +1155,8 @@ export const aiTools: AiTool[] = [
         price: "Freemium",
         skill: "Beginner"
     },
-    image: "/screenshots/linkpilot.png"
+    image: "/screenshots/linkpilot.png",
+    dateAdded: "2026-02-16"
 },
   {
     name: "Stick Audio",
@@ -1079,7 +1168,8 @@ export const aiTools: AiTool[] = [
         price: "Freemium",
         skill: "Beginner"
     },
-    image: "/screenshots/stick-audio.png"
+    image: "/screenshots/stick-audio.png",
+    dateAdded: "2026-02-17"
 },
   {
     name: "DensOps",
@@ -1091,7 +1181,8 @@ export const aiTools: AiTool[] = [
         price: "Freemium",
         skill: "Beginner"
     },
-    image: "/screenshots/densops.png"
+    image: "/screenshots/densops.png",
+    dateAdded: "2026-02-18"
 },
   {
     name: "PNGtoSTL",
@@ -1103,7 +1194,8 @@ export const aiTools: AiTool[] = [
         price: "Freemium",
         skill: "Beginner"
     },
-    image: "/screenshots/pngtostl.png"
+    image: "/screenshots/pngtostl.png",
+    dateAdded: "2026-02-19"
 },
 {
     name: "Octopost.ai",
@@ -1115,7 +1207,8 @@ export const aiTools: AiTool[] = [
         price: "Freemium",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=octopost.ai&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=octopost.ai&sz=128",
+    dateAdded: "2026-02-20"
 },
 {
     name: "Bridgecall",
@@ -1127,7 +1220,8 @@ export const aiTools: AiTool[] = [
         price: "Freemium",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=bridgecall.app&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=bridgecall.app&sz=128",
+    dateAdded: "2026-02-21"
 },
 {
     name: "Levl",
@@ -1139,7 +1233,8 @@ export const aiTools: AiTool[] = [
         price: "Freemium",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=getlevl.ai&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=getlevl.ai&sz=128",
+    dateAdded: "2026-02-22"
 },
 {
     name: "GreenPT",
@@ -1151,7 +1246,8 @@ export const aiTools: AiTool[] = [
         price: "Free",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=greenpt.nl&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=greenpt.nl&sz=128",
+    dateAdded: "2026-02-16"
 },
 {
     name: "iMeett",
@@ -1163,7 +1259,8 @@ export const aiTools: AiTool[] = [
         price: "Free",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=app.imeett.ai&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=app.imeett.ai&sz=128",
+    dateAdded: "2026-02-09"
 },
 {
     name: "Webcomparis",
@@ -1175,7 +1272,8 @@ export const aiTools: AiTool[] = [
         price: "Freemium",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=www.webcomparis.com&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=www.webcomparis.com&sz=128",
+    dateAdded: "2026-02-10"
 },
 {
     name: "PathwiseAI",
@@ -1187,7 +1285,8 @@ export const aiTools: AiTool[] = [
         price: "Freemium",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=www.pathwiseai.io&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=www.pathwiseai.io&sz=128",
+    dateAdded: "2026-02-11"
 },
 {
     name: "TransGull",
@@ -1199,7 +1298,8 @@ export const aiTools: AiTool[] = [
         price: "Freemium",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=transgull.com&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=transgull.com&sz=128",
+    dateAdded: "2026-02-12"
 },
 {
     name: "Watchflow",
@@ -1211,7 +1311,8 @@ export const aiTools: AiTool[] = [
         price: "Freemium",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=watchflow.io&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=watchflow.io&sz=128",
+    dateAdded: "2026-02-13"
 },
   {
     name: "AiArtist",
@@ -1223,7 +1324,8 @@ export const aiTools: AiTool[] = [
         price: "Free",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=www.aiartist.io&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=www.aiartist.io&sz=128",
+    dateAdded: "2026-02-14"
 },
   {
     name: "TicketsData",
@@ -1235,7 +1337,8 @@ export const aiTools: AiTool[] = [
         price: "Free",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=ticketsdata.com&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=ticketsdata.com&sz=128",
+    dateAdded: "2026-02-15"
 },
   {
     name: "71vote",
@@ -1247,7 +1350,8 @@ export const aiTools: AiTool[] = [
         price: "Free",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=www.71vote.com&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=www.71vote.com&sz=128",
+    dateAdded: "2026-02-09"
 },
   {
     name: "privatclaw",
@@ -1259,7 +1363,8 @@ export const aiTools: AiTool[] = [
         price: "Free",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=privatclaw.com&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=privatclaw.com&sz=128",
+    dateAdded: "2026-02-10"
 },
   {
     name: "PagerSync",
@@ -1271,7 +1376,8 @@ export const aiTools: AiTool[] = [
         price: "Free",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=www.pagersync.com&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=www.pagersync.com&sz=128",
+    dateAdded: "2026-02-11"
 },
   {
     name: "Polyform",
@@ -1283,7 +1389,8 @@ export const aiTools: AiTool[] = [
         price: "Free",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=polyform.to&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=polyform.to&sz=128",
+    dateAdded: "2026-02-12"
 },
   {
     name: "Status Central",
@@ -1295,7 +1402,8 @@ export const aiTools: AiTool[] = [
         price: "Free",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=www.statuscentral.io&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=www.statuscentral.io&sz=128",
+    dateAdded: "2026-02-13"
 },
   {
     name: "MiroMiro",
@@ -1307,7 +1415,8 @@ export const aiTools: AiTool[] = [
         price: "Free",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=miromiro.app&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=miromiro.app&sz=128",
+    dateAdded: "2026-02-14"
 },
   {
     name: "Traidies",
@@ -1319,7 +1428,8 @@ export const aiTools: AiTool[] = [
         price: "Free",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=www.traidies.com&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=www.traidies.com&sz=128",
+    dateAdded: "2026-02-15"
 },
   {
     name: "Glad AI",
@@ -1331,7 +1441,8 @@ export const aiTools: AiTool[] = [
         price: "Free",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=iamglad.ai&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=iamglad.ai&sz=128",
+    dateAdded: "2026-02-09"
 },
   {
     name: "Organic Pilot",
@@ -1343,7 +1454,8 @@ export const aiTools: AiTool[] = [
         price: "Free",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=www.organicpilot.ai&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=www.organicpilot.ai&sz=128",
+    dateAdded: "2026-02-02"
 },
   {
     name: "maptrics",
@@ -1355,7 +1467,8 @@ export const aiTools: AiTool[] = [
         price: "Free",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=www.maptrics.io&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=www.maptrics.io&sz=128",
+    dateAdded: "2026-02-03"
 },
   {
     name: "LLMWISE",
@@ -1367,7 +1480,8 @@ export const aiTools: AiTool[] = [
         price: "Free",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=llmwise.ai&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=llmwise.ai&sz=128",
+    dateAdded: "2026-02-04"
 },
   {
     name: "Transmit",
@@ -1379,7 +1493,8 @@ export const aiTools: AiTool[] = [
         price: "Free",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=xmit.sh&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=xmit.sh&sz=128",
+    dateAdded: "2026-02-05"
 },
   {
     name: "SecVibe",
@@ -1391,7 +1506,8 @@ export const aiTools: AiTool[] = [
         price: "Free",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=secvibe.ai&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=secvibe.ai&sz=128",
+    dateAdded: "2026-02-06"
 },
   {
     name: "Alignmint",
@@ -1403,6 +1519,7 @@ export const aiTools: AiTool[] = [
         price: "Free",
         skill: "Beginner"
     },
-    image: "https://www.google.com/s2/favicons?domain=www.getalignmint.org&sz=128"
+    image: "https://www.google.com/s2/favicons?domain=www.getalignmint.org&sz=128",
+    dateAdded: "2026-02-07"
 }
 ];

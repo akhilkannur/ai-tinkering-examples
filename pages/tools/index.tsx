@@ -1,610 +1,214 @@
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import Image from 'next/image';
 import { aiTools, AiTool } from '../../lib/ai-tools-data';
+import Navbar from '../../components/Navbar';
 import ToolDetailModal from '../../components/ToolDetailModal';
-import { Filter, ChevronDown, ArrowRight, ShoppingBag, Search, Command, X } from 'lucide-react';
+import { Filter, X, ArrowRight, ExternalLink, ChevronDown } from 'lucide-react';
 
-const CARD_COLORS = ['#F5F5F5', '#EFEFEF', '#FAFAFA', '#F0F0F0', '#FFFFFF'];
+const slugify = (text: string) =>
+  text.toLowerCase().trim().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '').replace(/\-\-+/g, '-');
+
+// Group tools by week label
+function getWeekLabel(dateStr: string): string {
+  const date = new Date(dateStr + 'T00:00:00');
+  const now = new Date();
+  const startOfThisWeek = new Date(now);
+  startOfThisWeek.setDate(now.getDate() - now.getDay());
+  startOfThisWeek.setHours(0, 0, 0, 0);
+
+  const startOfLastWeek = new Date(startOfThisWeek);
+  startOfLastWeek.setDate(startOfLastWeek.getDate() - 7);
+
+  if (date >= startOfThisWeek) return 'This Week';
+  if (date >= startOfLastWeek) return 'Last Week';
+
+  // Find the Monday of that week
+  const d = new Date(date);
+  const day = d.getDay();
+  const diff = d.getDate() - day + (day === 0 ? -6 : 1);
+  d.setDate(diff);
+  return `Week of ${d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}`;
+}
+
+function formatDate(dateStr: string): string {
+  const date = new Date(dateStr + 'T00:00:00');
+  return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+}
+
+const getCategoryColor = (cat: string) => {
+  const c = cat.toLowerCase();
+  if (c.includes('video') || c.includes('audio')) return 'bg-red-50 text-red-700 border-red-200';
+  if (c.includes('productivity')) return 'bg-blue-50 text-blue-700 border-blue-200';
+  if (c.includes('image')) return 'bg-purple-50 text-purple-700 border-purple-200';
+  if (c.includes('copywriting') || c.includes('content')) return 'bg-orange-50 text-orange-700 border-orange-200';
+  if (c.includes('marketing')) return 'bg-green-50 text-green-700 border-green-200';
+  if (c.includes('code')) return 'bg-yellow-50 text-yellow-700 border-yellow-200';
+  return 'bg-gray-50 text-gray-700 border-gray-200';
+};
 
 export default function ToolsIndex() {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [selectedPrice, setSelectedPrice] = useState<string>('All');
   const [selectedTool, setSelectedTool] = useState<AiTool | null>(null);
-  
+  const [showAll, setShowAll] = useState(false);
+
   const categories = ['All', ...Array.from(new Set(aiTools.map(t => t.category)))];
   const prices = ['All', ...Array.from(new Set(aiTools.map(t => t.tags.price)))];
 
   const filteredTools = useMemo(() => {
-    return aiTools.filter(tool => {
-      const matchCat = selectedCategory === 'All' || tool.category === selectedCategory;
-      const matchPrice = selectedPrice === 'All' || tool.tags.price === selectedPrice;
-      return matchCat && matchPrice;
-    });
+    return aiTools
+      .filter(tool => {
+        const matchCat = selectedCategory === 'All' || tool.category === selectedCategory;
+        const matchPrice = selectedPrice === 'All' || tool.tags.price === selectedPrice;
+        return matchCat && matchPrice;
+      })
+      .sort((a, b) => new Date(b.dateAdded).getTime() - new Date(a.dateAdded).getTime());
   }, [selectedCategory, selectedPrice]);
 
-  const featuredTools = aiTools.slice(0, 3);
+  // Group by week
+  const grouped = useMemo(() => {
+    const groups: { label: string; tools: AiTool[] }[] = [];
+    const map = new Map<string, AiTool[]>();
+
+    filteredTools.forEach(tool => {
+      const label = getWeekLabel(tool.dateAdded);
+      if (!map.has(label)) {
+        map.set(label, []);
+        groups.push({ label, tools: map.get(label)! });
+      }
+      map.get(label)!.push(tool);
+    });
+
+    return groups;
+  }, [filteredTools]);
+
+  const displayGroups = showAll ? grouped : grouped.slice(0, 4);
+  const hasMore = grouped.length > 4;
+
+  // Count tools added this week
+  const thisWeekCount = grouped.find(g => g.label === 'This Week')?.tools.length || 0;
 
   return (
-    <>
+    <div className="flex flex-col min-h-screen bg-page-bg font-sans text-primary-text selection:bg-[#ff00ff] selection:text-white">
       <Head>
-        <title>AI Tools Directory | Real AI Examples</title>
-        <meta name="description" content="Browse the best AI tools — filtered by category, price, and skill level." key="description" />
+        <title>AI Tools Directory — {aiTools.length} Curated Tools | Real AI Examples</title>
+        <meta name="description" content={`Browse ${aiTools.length} curated AI tools — filtered by category and price. Updated weekly.`} key="description" />
       </Head>
 
-      <style jsx global>{`
-        :root {
-          --bg-base: #FFFFFF;
-          --text-primary: #000000;
-          --text-secondary: #777777;
-          --border-thin: 1px solid #000000;
-          --border-medium: 2px solid #000000;
-          --color-neon: #ccff00;
-          --font-display: 'Arial Black', 'Impact', sans-serif;
-          --font-mono: 'JetBrains Mono', 'Courier New', monospace;
-          --font-body: 'Newsreader', 'Georgia', serif;
-          --space-sm: 1rem;
-          --space-md: 2rem;
-          --space-lg: 4rem;
-        }
+      <Navbar />
 
-        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap');
+      <main className="flex-grow container mx-auto px-4 sm:px-6 pt-28 md:pt-36 pb-24">
 
-        body {
-          background-color: var(--bg-base) !important;
-          color: var(--text-primary) !important;
-          font-family: var(--font-body) !important;
-          letter-spacing: -0.01em;
-          -webkit-font-smoothing: antialiased;
-        }
-
-        .stack-container {
-          max-width: 1600px;
-          margin: 0 auto;
-          padding: 0 var(--space-md) var(--space-lg);
-        }
-
-        /* --- Header --- */
-        .stack-header {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          padding: 1.5rem 0;
-          border-bottom: var(--border-thin);
-          margin-bottom: 2rem;
-        }
-
-        .stack-logo {
-          font-family: var(--font-display);
-          font-size: 1.25rem;
-          text-transform: uppercase;
-          text-decoration: none;
-          color: black;
-          letter-spacing: -0.05em;
-        }
-
-        .stack-nav {
-          display: flex;
-          gap: 2rem;
-          font-family: var(--font-mono);
-          font-size: 0.7rem;
-          text-transform: uppercase;
-          font-weight: 800;
-        }
-
-        .stack-nav a {
-          text-decoration: none;
-          color: black;
-        }
-
-        .stack-nav a.active {
-          text-decoration: underline;
-          text-underline-offset: 4px;
-          text-decoration-thickness: 2px;
-        }
-
-        /* --- Bento Hero --- */
-        .bento-hero {
-          display: grid;
-          grid-template-columns: 2fr 1fr;
-          grid-template-rows: 400px;
-          gap: 1rem;
-          margin-bottom: 3rem;
-        }
-
-        .bento-main {
-          border: var(--border-thin);
-          display: flex;
-          background: #000;
-          color: #FFF;
-          overflow: hidden;
-          position: relative;
-          cursor: pointer;
-        }
-
-        .bento-main-info {
-          flex: 1;
-          padding: 3rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          z-index: 2;
-        }
-
-        .bento-main-visual {
-          flex: 1;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          background: #111;
-        }
-
-        .bento-label {
-          font-family: var(--font-mono);
-          font-size: 0.65rem;
-          text-transform: uppercase;
-          margin-bottom: 1rem;
-          display: flex;
-          align-items: center;
-          gap: 8px;
-        }
-
-        .bento-label::before {
-          content: '';
-          width: 8px;
-          height: 8px;
-          background: var(--color-neon);
-          border-radius: 50%;
-        }
-
-        .bento-title {
-          font-family: var(--font-display);
-          font-size: 4rem;
-          text-transform: uppercase;
-          line-height: 0.9;
-          margin-bottom: 1.5rem;
-        }
-
-        .bento-desc {
-          font-size: 1.1rem;
-          max-width: 30ch;
-          opacity: 0.8;
-        }
-
-        .bento-side {
-          display: flex;
-          flex-direction: column;
-          gap: 1rem;
-        }
-
-        .bento-small {
-          flex: 1;
-          border: var(--border-thin);
-          padding: 2rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          background: white;
-          cursor: pointer;
-          transition: background 0.2s;
-        }
-
-        .bento-small:hover { background: #f9f9f9; }
-
-        .bento-small h3 {
-          font-family: var(--font-display);
-          font-size: 1.25rem;
-          text-transform: uppercase;
-          margin-bottom: 0.5rem;
-        }
-
-        /* --- Floating Filter Bar --- */
-        .filter-dock {
-          position: sticky;
-          top: 1rem;
-          z-index: 100;
-          display: flex;
-          justify-content: center;
-          margin-bottom: 3rem;
-        }
-
-        .filter-bar {
-          background: black;
-          color: white;
-          padding: 0.5rem;
-          display: flex;
-          align-items: center;
-          gap: 0.5rem;
-          border-radius: 4px;
-          border: var(--border-thin);
-          box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-        }
-
-        .filter-select-wrapper {
-          position: relative;
-          display: flex;
-          align-items: center;
-          gap: 8px;
-          padding: 0 1rem;
-          border-right: 1px solid #333;
-        }
-
-        .filter-select-wrapper:last-child { border-right: none; }
-
-        .filter-select-label {
-          font-family: var(--font-mono);
-          font-size: 0.6rem;
-          text-transform: uppercase;
-          color: #666;
-        }
-
-        .filter-select {
-          background: none;
-          border: none;
-          color: white;
-          font-family: var(--font-mono);
-          font-size: 0.7rem;
-          text-transform: uppercase;
-          font-weight: 800;
-          outline: none;
-          cursor: pointer;
-          padding: 4px 0;
-        }
-
-        /* --- Tool Grid --- */
-        .tool-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-          gap: 1px;
-          background: #000;
-          border: var(--border-thin);
-        }
-
-        .tool-item {
-          background: white;
-          padding: 2.5rem;
-          display: flex;
-          flex-direction: column;
-          cursor: pointer;
-          transition: background 0.1s;
-        }
-
-        .tool-item:hover { background: #fafafa; }
-
-        .tool-visual {
-          height: 100px;
-          display: flex;
-          align-items: flex-start;
-          margin-bottom: 2rem;
-        }
-
-        .tool-visual img {
-          width: 40px;
-          height: 40px;
-          object-fit: contain;
-        }
-
-        .tool-name {
-          font-family: var(--font-display);
-          font-size: 1.5rem;
-          text-transform: uppercase;
-          margin-bottom: 0.5rem;
-          line-height: 1;
-        }
-
-        .tool-desc {
-          font-size: 1rem;
-          color: #444;
-          margin-bottom: 2.5rem;
-          flex-grow: 1;
-          line-height: 1.4;
-        }
-
-        /* Technical Manifest Table */
-        .tool-manifest {
-          border-top: var(--border-thin);
-          padding-top: 1.5rem;
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 1.5rem;
-        }
-
-        .manifest-row {
-          display: flex;
-          flex-direction: column;
-          gap: 4px;
-        }
-
-        .manifest-key {
-          font-family: var(--font-mono);
-          font-size: 0.55rem;
-          text-transform: uppercase;
-          color: #888;
-        }
-
-        .manifest-val {
-          font-family: var(--font-mono);
-          font-size: 0.65rem;
-          text-transform: uppercase;
-          font-weight: 800;
-        }
-
-        /* --- Footer --- */
-        .stack-footer {
-          margin-top: 8rem;
-          padding-top: 4rem;
-          border-top: var(--border-thin);
-          display: flex;
-          justify-content: space-between;
-          align-items: flex-end;
-        }
-
-        .footer-left h4 {
-          font-family: var(--font-display);
-          font-size: 2rem;
-          text-transform: uppercase;
-          margin-bottom: 1rem;
-        }
-
-        .footer-right {
-          font-family: var(--font-mono);
-          font-size: 0.65rem;
-          text-transform: uppercase;
-          display: flex;
-          gap: 4rem;
-        }
-
-        .footer-list {
-          list-style: none;
-          padding: 0;
-          margin: 0;
-          display: flex;
-          flex-direction: column;
-          gap: 8px;
-        }
-
-        .footer-list a {
-          text-decoration: none;
-          color: #666;
-        }
-
-        .footer-list a:hover {
-          color: black;
-          text-decoration: underline;
-        }
-
-        @media (max-width: 1024px) {
-          .bento-hero { grid-template-columns: 1fr; grid-template-rows: auto; }
-          .bento-main { flex-direction: column; height: auto; }
-          .bento-main-visual { height: 250px; border-top: var(--border-thin); }
-          .bento-main-info { padding: 2rem; }
-        }
-
-        @media (max-width: 640px) {
-          .stack-container {
-            padding: 0 1rem 2rem;
-          }
-          .stack-header {
-            flex-direction: column;
-            gap: 0.5rem;
-            align-items: flex-start;
-            padding: 1rem 0;
-            margin-bottom: 1rem;
-          }
-          .stack-logo {
-            font-size: 1rem;
-          }
-          .stack-nav {
-            gap: 1rem;
-            font-size: 0.65rem;
-          }
-          .bento-hero {
-            grid-template-columns: 1fr;
-            grid-template-rows: auto;
-            gap: 0.5rem;
-            margin-bottom: 1.5rem;
-          }
-          .bento-main {
-            flex-direction: column;
-            height: auto;
-          }
-          .bento-main-info {
-            padding: 1.25rem;
-          }
-          .bento-main-visual {
-            height: 120px;
-            border-top: var(--border-thin);
-          }
-          .bento-title {
-            font-size: 2rem;
-            margin-bottom: 0.75rem;
-          }
-          .bento-desc {
-            font-size: 0.9rem;
-          }
-          .bento-small {
-            padding: 1.25rem;
-          }
-          .bento-small h3 {
-            font-size: 1rem;
-          }
-          .filter-dock {
-            margin-bottom: 1.5rem;
-          }
-          .filter-bar {
-            flex-wrap: wrap;
-            width: 100%;
-          }
-          .filter-select-wrapper {
-            border-right: none;
-            border-bottom: 1px solid #333;
-            padding: 0.5rem 0.75rem;
-            flex: 1;
-            min-width: 45%;
-          }
-          .filter-select-wrapper:last-child {
-            border-bottom: none;
-          }
-          .tool-grid {
-            grid-template-columns: 1fr;
-          }
-          .tool-item {
-            padding: 1.25rem;
-          }
-          .tool-visual {
-            height: 60px;
-            margin-bottom: 1rem;
-          }
-          .tool-name {
-            font-size: 1.1rem;
-          }
-          .tool-desc {
-            font-size: 0.9rem;
-            margin-bottom: 1.5rem;
-          }
-          .tool-manifest {
-            padding-top: 1rem;
-            gap: 1rem;
-          }
-          .stack-footer {
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 2rem;
-            margin-top: 3rem;
-            padding-top: 2rem;
-          }
-          .footer-left h4 {
-            font-size: 1.25rem;
-          }
-          .footer-right {
-            gap: 2rem;
-          }
-        }
-      `}</style>
-
-      <div className="stack-container">
-        {/* Header */}
-        <header className="stack-header">
-          <Link href="/" className="stack-logo">realaiexamples</Link>
-          <nav className="stack-nav">
-            <Link href="/">Examples</Link>
-            <Link href="/tools" className="active">Tools</Link>
-            <Link href="/blog">Blog</Link>
-            <Link href="/about">About</Link>
-          </nav>
-        </header>
-
-        {/* Bento Hero */}
-        <section className="bento-hero">
-          <div className="bento-main" onClick={() => setSelectedTool(featuredTools[0])}>
-            <div className="bento-main-info">
-              <span className="bento-label">Featured</span>
-              <h1 className="bento-title">{featuredTools[0].name}</h1>
-              <p className="bento-desc">{featuredTools[0].description}</p>
-            </div>
-            <div className="bento-main-visual">
-              <img src={featuredTools[0].image} alt={featuredTools[0].name} style={{ width: '100px' }} />
-            </div>
+        {/* Hero */}
+        <div className="max-w-4xl mx-auto mb-10 md:mb-14">
+          <div className="flex items-center gap-2 mb-4">
+            <div className="w-2 h-2 rounded-full bg-terminal-green animate-pulse" />
+            <span className="text-[10px] font-mono font-bold uppercase tracking-[0.2em] text-secondary-text">
+              Updated Weekly
+            </span>
           </div>
-          <div className="bento-side">
-            <div className="bento-small" onClick={() => setSelectedTool(featuredTools[1])}>
-              <span className="bento-label">Popular</span>
-              <h3>{featuredTools[1].name}</h3>
-              <p className="manifest-val" style={{ color: '#666' }}>{featuredTools[1].category}</p>
-            </div>
-            <div className="bento-small" onClick={() => setSelectedTool(featuredTools[2])}>
-              <span className="bento-label">Trending</span>
-              <h3>{featuredTools[2].name}</h3>
-              <p className="manifest-val" style={{ color: '#666' }}>{featuredTools[2].tags.price}</p>
-            </div>
-          </div>
-        </section>
+          <h1 className="text-4xl md:text-6xl font-display font-black uppercase tracking-tight leading-[0.9] mb-4">
+            AI Tools<br />Directory
+          </h1>
+          <p className="text-lg text-secondary-text max-w-xl mb-6">
+            {aiTools.length} curated tools{thisWeekCount > 0 && <> · <span className="text-primary-text font-semibold">{thisWeekCount} added this week</span></>}
+          </p>
 
-        {/* Floating Filter Bar */}
-        <div className="filter-dock">
-          <div className="filter-bar">
-            <div className="filter-select-wrapper">
-              <span className="filter-select-label">Category</span>
-              <select className="filter-select" value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)}>
-                {categories.map(c => <option key={c} value={c}>{c}</option>)}
+          {/* Filters */}
+          <div className="flex flex-wrap items-center gap-2">
+            <div className="flex items-center gap-2 bg-white border-2 border-accent-dark px-3 py-2 shadow-brutalist-sm">
+              <Filter className="w-3.5 h-3.5 text-secondary-text" />
+              <select
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className="bg-transparent text-[11px] font-mono font-bold uppercase tracking-wider outline-none cursor-pointer pr-4 appearance-none"
+              >
+                {categories.map(c => <option key={c} value={c}>{c === 'All' ? 'All Categories' : c}</option>)}
               </select>
             </div>
-            <div className="filter-select-wrapper">
-              <span className="filter-select-label">Price</span>
-              <select className="filter-select" value={selectedPrice} onChange={(e) => setSelectedPrice(e.target.value)}>
-                {prices.map(p => <option key={p} value={p}>{p}</option>)}
+            <div className="flex items-center gap-2 bg-white border-2 border-accent-dark px-3 py-2 shadow-brutalist-sm">
+              <select
+                value={selectedPrice}
+                onChange={(e) => setSelectedPrice(e.target.value)}
+                className="bg-transparent text-[11px] font-mono font-bold uppercase tracking-wider outline-none cursor-pointer pr-4 appearance-none"
+              >
+                {prices.map(p => <option key={p} value={p}>{p === 'All' ? 'All Prices' : p}</option>)}
               </select>
             </div>
             {(selectedCategory !== 'All' || selectedPrice !== 'All') && (
-              <button 
+              <button
                 onClick={() => { setSelectedCategory('All'); setSelectedPrice('All'); }}
-                style={{ background: 'transparent', border: 'none', color: 'white', cursor: 'pointer', padding: '0 8px' }}
+                className="flex items-center gap-1 bg-white border-2 border-accent-dark px-3 py-2 shadow-brutalist-sm text-[11px] font-mono font-bold uppercase tracking-wider hover:bg-red-50 transition-colors"
               >
-                <X size={14} />
+                <X className="w-3 h-3" /> Clear
               </button>
             )}
           </div>
         </div>
 
-        {/* Technical Grid */}
-        <main>
+        {/* Tool List */}
+        <div className="max-w-4xl mx-auto">
           {filteredTools.length === 0 ? (
-            <div style={{ padding: '8rem 0', textAlign: 'center', fontFamily: 'var(--font-mono)', textTransform: 'uppercase', color: '#888' }}>
-              <p>No tools found for this filter</p>
+            <div className="border-2 border-accent-dark bg-white p-16 text-center">
+              <p className="text-sm font-mono uppercase text-secondary-text">No tools found for this filter</p>
             </div>
           ) : (
-            <div className="tool-grid">
-              {filteredTools.map((tool, i) => (
-                <article key={tool.name + i} className="tool-item" onClick={() => setSelectedTool(tool)}>
-                  <div className="tool-visual">
-                    <img src={tool.image} alt={tool.name} />
-                  </div>
-                  <h3 className="tool-name">{tool.name}</h3>
-                  <p className="tool-desc">{tool.description}</p>
-                  
-                  <div className="tool-manifest">
-                    <div className="manifest-row">
-                      <span className="manifest-key">Category</span>
-                      <span className="manifest-val">{tool.category}</span>
-                    </div>
-                    <div className="manifest-row">
-                      <span className="manifest-key">Price</span>
-                      <span className="manifest-val">{tool.tags.price}</span>
-                    </div>
-                  </div>
-                </article>
-              ))}
-            </div>
-          )}
-        </main>
+            displayGroups.map((group) => (
+              <div key={group.label} className="mb-0">
+                {/* Week Header */}
+                <div className="sticky top-[72px] z-40 bg-page-bg border-b-2 border-accent-dark py-2 px-1 flex items-center justify-between">
+                  <span className="text-[11px] font-mono font-bold uppercase tracking-[0.15em] text-secondary-text">
+                    {group.label}
+                  </span>
+                  <span className="text-[10px] font-mono text-secondary-text">
+                    {group.tools.length} tool{group.tools.length !== 1 ? 's' : ''}
+                  </span>
+                </div>
 
-        {/* Footer */}
-        <footer className="stack-footer">
-          <div className="footer-left">
-            <h4>AI Tools.</h4>
-            <p className="manifest-val" style={{ color: '#888', marginTop: '0.5rem' }}>
-              {aiTools.length} tools and counting
-            </p>
-          </div>
-          <div className="footer-right">
+                {/* Tool Rows */}
+                <div className="border-x-2 border-b-2 border-accent-dark bg-white mb-8 divide-y divide-gray-100">
+                  {group.tools.map((tool, i) => (
+                    <ToolRow
+                      key={tool.name + i}
+                      tool={tool}
+                      onClick={() => setSelectedTool(tool)}
+                    />
+                  ))}
+                </div>
+              </div>
+            ))
+          )}
+
+          {/* Show More */}
+          {hasMore && !showAll && (
+            <button
+              onClick={() => setShowAll(true)}
+              className="w-full bg-accent-dark text-white py-4 font-mono text-xs uppercase tracking-[0.2em] font-bold hover:bg-[#ff00ff] transition-colors flex items-center justify-center gap-2 border-2 border-accent-dark"
+            >
+              Show all {filteredTools.length} tools <ChevronDown className="w-4 h-4" />
+            </button>
+          )}
+        </div>
+
+        {/* Submit CTA */}
+        <div className="max-w-4xl mx-auto mt-16">
+          <div className="bg-accent-dark text-white border-4 border-accent-dark p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6">
             <div>
-              <p className="manifest-key" style={{ marginBottom: '1rem' }}>Browse</p>
-              <ul className="footer-list">
-                <li><Link href="/tools">All Tools</Link></li>
-                <li><a href="https://forms.gle/KqN82GGdCohshtVx8">Submit a Tool</a></li>
-              </ul>
+              <h2 className="text-2xl md:text-3xl font-display uppercase mb-2">List Your Tool</h2>
+              <p className="text-sm text-gray-400">Add our badge, get verified instantly. Free forever.</p>
             </div>
-            <div>
-              <p className="manifest-key" style={{ marginBottom: '1rem' }}>More</p>
-              <ul className="footer-list">
-                <li><Link href="/about">About</Link></li>
-                <li><Link href="/blog">Blog</Link></li>
-              </ul>
-            </div>
+            <Link
+              href="/tools/badge"
+              className="inline-flex items-center gap-3 bg-[#ccff00] text-black px-6 py-3 font-display uppercase text-sm border-2 border-[#ccff00] hover:bg-white hover:border-white transition-all shadow-brutalist-sm whitespace-nowrap"
+            >
+              Submit a Tool <ArrowRight className="w-4 h-4 stroke-[3px]" />
+            </Link>
           </div>
-        </footer>
-      </div>
+        </div>
+
+      </main>
 
       {selectedTool && (
         <ToolDetailModal
@@ -612,6 +216,65 @@ export default function ToolsIndex() {
           onClose={() => setSelectedTool(null)}
         />
       )}
-    </>
+    </div>
+  );
+}
+
+// Dense tool row component
+function ToolRow({ tool, onClick }: { tool: AiTool; onClick: () => void }) {
+  const getHostname = (href: string) => {
+    try { return new URL(href).hostname; } catch { return ''; }
+  };
+  const hostname = getHostname(tool.url);
+  const fallbackLogo = `https://www.google.com/s2/favicons?domain=${hostname}&sz=128`;
+  const [imgSrc, setImgSrc] = useState(tool.image || fallbackLogo);
+
+  return (
+    <div
+      className="flex items-center gap-4 px-4 py-3.5 cursor-pointer hover:bg-gray-50 transition-colors group"
+      onClick={onClick}
+    >
+      {/* Favicon */}
+      <div className="relative w-8 h-8 flex-shrink-0 border border-gray-200 bg-white overflow-hidden rounded-sm">
+        <Image
+          src={imgSrc}
+          alt={tool.name}
+          fill
+          className="object-contain p-0.5"
+          onError={() => setImgSrc(fallbackLogo)}
+          unoptimized
+        />
+      </div>
+
+      {/* Name + Description */}
+      <div className="flex-grow min-w-0">
+        <div className="flex items-center gap-2">
+          <span className="font-display font-bold text-sm uppercase tracking-tight text-primary-text group-hover:text-[#ff00ff] transition-colors truncate">
+            {tool.name}
+          </span>
+          {tool.featured && (
+            <span className="text-[8px] font-mono font-bold uppercase tracking-wider bg-[#ff00ff] text-white px-1.5 py-0.5 flex-shrink-0">
+              Featured
+            </span>
+          )}
+        </div>
+        <p className="text-xs text-secondary-text truncate leading-snug mt-0.5">
+          {tool.description}
+        </p>
+      </div>
+
+      {/* Category pill */}
+      <span className={`hidden sm:inline-block text-[9px] font-mono font-bold uppercase tracking-wider px-2 py-1 border flex-shrink-0 ${getCategoryColor(tool.category)}`}>
+        {tool.category}
+      </span>
+
+      {/* Date */}
+      <span className="hidden md:inline-block text-[10px] font-mono text-secondary-text flex-shrink-0 w-16 text-right">
+        {formatDate(tool.dateAdded)}
+      </span>
+
+      {/* Arrow */}
+      <ArrowRight className="w-3.5 h-3.5 text-gray-300 group-hover:text-[#ff00ff] transition-colors flex-shrink-0 group-hover:translate-x-0.5 transition-transform" />
+    </div>
   );
 }
