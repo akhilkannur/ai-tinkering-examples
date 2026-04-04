@@ -329,29 +329,67 @@ function ToolMosaic({ tools, allTools, onSelectTool, selectedCategory, selectedP
     setMousePos({ x: e.clientX, y: e.clientY });
   };
 
+  // Group all tools by category for neighborhood clustering
+  const toolNeighborhoods = useMemo(() => {
+    const map = new Map<string, AiTool[]>();
+    allTools.forEach(t => {
+      if (!map.has(t.category)) map.set(t.category, []);
+      map.get(t.category)!.push(t);
+    });
+    return Array.from(map.entries());
+  }, [allTools]);
+
+  const getNeighborhoodGlow = (cat: string) => {
+    const c = cat.toLowerCase();
+    if (c.includes('video') || c.includes('audio')) return 'from-red-500/5 to-transparent';
+    if (c.includes('productivity')) return 'from-blue-500/5 to-transparent';
+    if (c.includes('image')) return 'from-purple-500/5 to-transparent';
+    if (c.includes('copywriting') || c.includes('content')) return 'from-orange-500/5 to-transparent';
+    if (c.includes('marketing')) return 'from-green-500/5 to-transparent';
+    if (c.includes('code')) return 'from-yellow-500/5 to-transparent';
+    return 'from-gray-500/5 to-transparent';
+  };
+
   return (
     <div
-      className="relative border-4 border-accent-dark bg-white p-1 md:p-2 select-none cursor-crosshair shadow-brutalist overflow-hidden"
+      className="relative border-4 border-accent-dark bg-white p-2 select-none cursor-crosshair shadow-brutalist overflow-hidden"
       onMouseMove={handleMouseMove}
       onMouseLeave={() => setHoveredTool(null)}
     >
-      <div className="grid grid-cols-[repeat(auto-fill,minmax(40px,1fr))] md:grid-cols-[repeat(auto-fill,minmax(48px,1fr))] gap-px bg-gray-100">
-        {allTools.map((tool, i) => {
-          const isMatch = tools.some(t => t.name === tool.name);
+      <div className="flex flex-col gap-8">
+        {toolNeighborhoods.map(([category, neighborhoodTools]) => {
+          // Check if this neighborhood has any matches for current filters
+          const hasMatches = neighborhoodTools.some(nt => tools.some(t => t.name === nt.name));
+          if (selectedCategory !== 'All' && category !== selectedCategory) return null;
+
           return (
-            <MosaicCell
-              key={tool.name + i}
-              tool={tool}
-              isMatch={isMatch}
-              onHover={setHoveredTool}
-              onClick={() => onSelectTool(tool)}
-            />
+            <div key={category} className={`relative p-4 border-2 border-dashed border-gray-100 bg-gradient-to-br ${getNeighborhoodGlow(category)} transition-opacity duration-500 ${!hasMatches ? 'opacity-30 grayscale' : 'opacity-100'}`}>
+              {/* Ghost Watermark */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[80px] md:text-[120px] font-display font-black uppercase text-gray-500 opacity-[0.03] whitespace-nowrap pointer-events-none select-none tracking-tighter">
+                {category}
+              </div>
+
+              <div className="relative z-10 grid grid-cols-[repeat(auto-fill,minmax(40px,1fr))] md:grid-cols-[repeat(auto-fill,minmax(52px,1fr))] gap-px bg-gray-100 shadow-sm border border-gray-100">
+                {neighborhoodTools.map((tool, i) => {
+                  const isMatch = tools.some(t => t.name === tool.name);
+                  // Make featured tools larger (2x2)
+                  const isLarge = tool.featured || i === 0;
+
+                  return (
+                    <MosaicCell
+                      key={tool.name + i}
+                      tool={tool}
+                      isMatch={isMatch}
+                      isLarge={isLarge}
+                      onHover={setHoveredTool}
+                      onClick={() => onSelectTool(tool)}
+                    />
+                  );
+                })}
+              </div>
+            </div>
           );
         })}
-        {/* Fill the remaining space to keep the grid looking full */}
-        {Array.from({ length: Math.max(0, 100 - allTools.length) }).map((_, i) => (
-          <div key={`empty-${i}`} className="aspect-square bg-gray-50 border border-gray-100" />
-        ))}
       </div>
 
       {/* "Radar" Tooltip */}
@@ -384,7 +422,7 @@ function ToolMosaic({ tools, allTools, onSelectTool, selectedCategory, selectedP
       {/* Mosaic Header Stats */}
       <div className="absolute top-2 right-4 pointer-events-none hidden md:block">
         <span className="text-[10px] font-mono font-bold uppercase text-gray-400 tracking-widest">
-          SaaS Mosaic v1.0 // {allTools.length} Tools Indexed
+          Neighborhood Bento v1.0 // {allTools.length} Tools Indexed
           {(selectedCategory !== 'All' || selectedPrice !== 'All') && (
             <span className="text-terminal-green ml-2">
               // Filtering: {tools.length} Results
@@ -396,9 +434,10 @@ function ToolMosaic({ tools, allTools, onSelectTool, selectedCategory, selectedP
   );
 }
 
-function MosaicCell({ tool, isMatch, onHover, onClick }: {
+function MosaicCell({ tool, isMatch, isLarge, onHover, onClick }: {
   tool: AiTool;
   isMatch: boolean;
+  isLarge: boolean;
   onHover: (t: AiTool | null) => void;
   onClick: () => void;
 }) {
@@ -411,7 +450,9 @@ function MosaicCell({ tool, isMatch, onHover, onClick }: {
 
   return (
     <div
-      className={`aspect-square bg-white border border-gray-100 flex items-center justify-center p-2 group transition-all duration-300 hover:z-10 hover:shadow-xl hover:scale-110 cursor-pointer ${!isMatch ? 'opacity-20 grayscale' : 'opacity-100'}`}
+      className={`aspect-square bg-white border border-gray-100 flex items-center justify-center p-2 group transition-all duration-300 hover:z-10 hover:shadow-xl hover:scale-110 cursor-pointer 
+      ${isLarge ? 'col-span-2 row-span-2' : ''} 
+      ${!isMatch ? 'opacity-20 grayscale' : 'opacity-100'}`}
       onMouseEnter={() => onHover(tool)}
       onClick={onClick}
     >
@@ -424,6 +465,11 @@ function MosaicCell({ tool, isMatch, onHover, onClick }: {
           onError={() => setImgSrc(fallbackLogo)}
           unoptimized
         />
+        {isLarge && isMatch && (
+          <div className="absolute -bottom-1 -left-1 bg-accent-dark text-white text-[8px] font-mono font-bold uppercase px-1.5 py-0.5 tracking-tighter opacity-0 group-hover:opacity-100 transition-opacity">
+            {tool.name}
+          </div>
+        )}
       </div>
     </div>
   );
