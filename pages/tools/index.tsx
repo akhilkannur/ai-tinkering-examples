@@ -1,11 +1,11 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect, useRef } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
 import { aiTools, AiTool } from '../../lib/ai-tools-data';
 import Navbar from '../../components/Navbar';
 import ToolDetailModal from '../../components/ToolDetailModal';
-import { Filter, X, ArrowRight, ExternalLink, ChevronDown } from 'lucide-react';
+import { Filter, X, ArrowRight, ExternalLink, ChevronDown, LayoutGrid, List } from 'lucide-react';
 
 const slugify = (text: string) =>
   text.toLowerCase().trim().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '').replace(/\-\-+/g, '-');
@@ -53,6 +53,7 @@ export default function ToolsIndex() {
   const [selectedPrice, setSelectedPrice] = useState<string>('All');
   const [selectedTool, setSelectedTool] = useState<AiTool | null>(null);
   const [showAll, setShowAll] = useState(false);
+  const [viewMode, setViewMode] = useState<'list' | 'mosaic'>('list');
 
   const categories = ['All', ...Array.from(new Set(aiTools.map(t => t.category)))];
   const prices = ['All', ...Array.from(new Set(aiTools.map(t => t.tags.price)))];
@@ -103,12 +104,33 @@ export default function ToolsIndex() {
 
         {/* Hero */}
         <div className="max-w-4xl mx-auto mb-10 md:mb-14">
-          <div className="flex items-center gap-2 mb-4">
-            <div className="w-2 h-2 rounded-full bg-terminal-green animate-pulse" />
-            <span className="text-[10px] font-mono font-bold uppercase tracking-[0.2em] text-secondary-text">
-              Updated Weekly
-            </span>
+          <div className="flex items-center justify-between gap-2 mb-4">
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 rounded-full bg-terminal-green animate-pulse" />
+              <span className="text-[10px] font-mono font-bold uppercase tracking-[0.2em] text-secondary-text">
+                Updated Weekly
+              </span>
+            </div>
+
+            {/* View Toggle */}
+            <div className="flex bg-white border-2 border-accent-dark shadow-brutalist-sm overflow-hidden">
+              <button
+                onClick={() => setViewMode('list')}
+                className={`p-2 transition-colors ${viewMode === 'list' ? 'bg-accent-dark text-white' : 'hover:bg-gray-100 text-accent-dark'}`}
+                title="List View"
+              >
+                <List className="w-4 h-4" />
+              </button>
+              <button
+                onClick={() => setViewMode('mosaic')}
+                className={`p-2 transition-colors ${viewMode === 'mosaic' ? 'bg-accent-dark text-white' : 'hover:bg-gray-100 text-accent-dark'}`}
+                title="Mosaic View"
+              >
+                <LayoutGrid className="w-4 h-4" />
+              </button>
+            </div>
           </div>
+
           <h1 className="text-4xl md:text-6xl font-display font-black uppercase tracking-tight leading-[0.9] mb-4">
             AI Tools<br />Directory
           </h1>
@@ -148,13 +170,13 @@ export default function ToolsIndex() {
           </div>
         </div>
 
-        {/* Tool List */}
+        {/* Tool List or Mosaic */}
         <div className="max-w-4xl mx-auto">
           {filteredTools.length === 0 ? (
             <div className="border-2 border-accent-dark bg-white p-16 text-center">
               <p className="text-sm font-mono uppercase text-secondary-text">No tools found for this filter</p>
             </div>
-          ) : (
+          ) : viewMode === 'list' ? (
             displayGroups.map((group) => (
               <div key={group.label} className="mb-0">
                 {/* Week Header */}
@@ -179,10 +201,15 @@ export default function ToolsIndex() {
                 </div>
               </div>
             ))
+          ) : (
+            <ToolMosaic
+              tools={filteredTools}
+              onSelectTool={setSelectedTool}
+            />
           )}
 
-          {/* Show More */}
-          {hasMore && !showAll && (
+          {/* Show More (only for list mode) */}
+          {viewMode === 'list' && hasMore && !showAll && (
             <button
               onClick={() => setShowAll(true)}
               className="w-full bg-accent-dark text-white py-4 font-mono text-xs uppercase tracking-[0.2em] font-bold hover:bg-[#ff00ff] transition-colors flex items-center justify-center gap-2 border-2 border-accent-dark"
@@ -275,6 +302,93 @@ function ToolRow({ tool, onClick }: { tool: AiTool; onClick: () => void }) {
 
       {/* Arrow */}
       <ArrowRight className="w-3.5 h-3.5 text-gray-300 group-hover:text-[#ff00ff] transition-colors flex-shrink-0 group-hover:translate-x-0.5 transition-transform" />
+    </div>
+  );
+}
+
+// Mosaic View Component
+function ToolMosaic({ tools, onSelectTool }: { tools: AiTool[]; onSelectTool: (tool: AiTool) => void }) {
+  const [hoveredTool, setHoveredTool] = useState<AiTool | null>(null);
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    setMousePos({ x: e.clientX, y: e.clientY });
+  };
+
+  return (
+    <div
+      className="relative border-4 border-accent-dark bg-white p-1 md:p-2 select-none cursor-crosshair shadow-brutalist overflow-hidden"
+      onMouseMove={handleMouseMove}
+      onMouseLeave={() => setHoveredTool(null)}
+    >
+      <div className="grid grid-cols-[repeat(auto-fill,minmax(40px,1fr))] md:grid-cols-[repeat(auto-fill,minmax(48px,1fr))] gap-px bg-gray-100">
+        {tools.map((tool, i) => (
+          <MosaicCell
+            key={tool.name + i}
+            tool={tool}
+            onHover={setHoveredTool}
+            onClick={() => onSelectTool(tool)}
+          />
+        ))}
+        {/* Fill the remaining space to keep the grid looking full */}
+        {Array.from({ length: Math.max(0, 100 - tools.length) }).map((_, i) => (
+          <div key={`empty-${i}`} className="aspect-square bg-gray-50 border border-gray-100" />
+        ))}
+      </div>
+
+      {/* "Radar" Tooltip */}
+      {hoveredTool && (
+        <div
+          className="fixed z-[100] pointer-events-none transform -translate-x-1/2 -translate-y-[calc(100%+20px)] transition-transform duration-75"
+          style={{ left: mousePos.x, top: mousePos.y }}
+        >
+          <div className="bg-accent-dark text-white px-3 py-2 border-2 border-white shadow-brutalist-sm whitespace-nowrap">
+            <div className="text-[10px] font-mono font-bold uppercase tracking-widest text-terminal-green mb-0.5">
+              {hoveredTool.category}
+            </div>
+            <div className="text-sm font-display font-black uppercase tracking-tight">
+              {hoveredTool.name}
+            </div>
+          </div>
+          {/* Arrow */}
+          <div className="w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[6px] border-t-accent-dark mx-auto" />
+        </div>
+      )}
+
+      {/* Mosaic Header Stats */}
+      <div className="absolute top-2 right-4 pointer-events-none hidden md:block">
+        <span className="text-[10px] font-mono font-bold uppercase text-gray-400 tracking-widest">
+          SaaS Mosaic v1.0 // {tools.length} Tools Indexed
+        </span>
+      </div>
+    </div>
+  );
+}
+
+function MosaicCell({ tool, onHover, onClick }: { tool: AiTool; onHover: (t: AiTool | null) => void; onClick: () => void }) {
+  const getHostname = (href: string) => {
+    try { return new URL(href).hostname; } catch { return ''; }
+  };
+  const hostname = getHostname(tool.url);
+  const fallbackLogo = `https://www.google.com/s2/favicons?domain=${hostname}&sz=128`;
+  const [imgSrc, setImgSrc] = useState(tool.image || fallbackLogo);
+
+  return (
+    <div
+      className="aspect-square bg-white border border-gray-100 flex items-center justify-center p-2 group transition-all duration-300 hover:z-10 hover:shadow-xl hover:scale-110"
+      onMouseEnter={() => onHover(tool)}
+      onClick={onClick}
+    >
+      <div className="relative w-full h-full filter grayscale group-hover:grayscale-0 transition-all duration-300">
+        <Image
+          src={imgSrc}
+          alt={tool.name}
+          fill
+          className="object-contain"
+          onError={() => setImgSrc(fallbackLogo)}
+          unoptimized
+        />
+      </div>
     </div>
   );
 }
