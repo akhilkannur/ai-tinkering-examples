@@ -209,7 +209,10 @@ export default function ToolsIndex() {
           ) : (
             <ToolMosaic
               tools={filteredTools}
+              allTools={aiTools}
               onSelectTool={setSelectedTool}
+              selectedCategory={selectedCategory}
+              selectedPrice={selectedPrice}
             />
           )}
 
@@ -312,7 +315,13 @@ function ToolRow({ tool, onClick }: { tool: AiTool; onClick: () => void }) {
 }
 
 // Mosaic View Component
-function ToolMosaic({ tools, onSelectTool }: { tools: AiTool[]; onSelectTool: (tool: AiTool) => void }) {
+function ToolMosaic({ tools, allTools, onSelectTool, selectedCategory, selectedPrice }: {
+  tools: AiTool[];
+  allTools: AiTool[];
+  onSelectTool: (tool: AiTool) => void;
+  selectedCategory: string;
+  selectedPrice: string;
+}) {
   const [hoveredTool, setHoveredTool] = useState<AiTool | null>(null);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
@@ -327,16 +336,20 @@ function ToolMosaic({ tools, onSelectTool }: { tools: AiTool[]; onSelectTool: (t
       onMouseLeave={() => setHoveredTool(null)}
     >
       <div className="grid grid-cols-[repeat(auto-fill,minmax(40px,1fr))] md:grid-cols-[repeat(auto-fill,minmax(48px,1fr))] gap-px bg-gray-100">
-        {tools.map((tool, i) => (
-          <MosaicCell
-            key={tool.name + i}
-            tool={tool}
-            onHover={setHoveredTool}
-            onClick={() => onSelectTool(tool)}
-          />
-        ))}
+        {allTools.map((tool, i) => {
+          const isMatch = tools.some(t => t.name === tool.name);
+          return (
+            <MosaicCell
+              key={tool.name + i}
+              tool={tool}
+              isMatch={isMatch}
+              onHover={setHoveredTool}
+              onClick={() => onSelectTool(tool)}
+            />
+          );
+        })}
         {/* Fill the remaining space to keep the grid looking full */}
-        {Array.from({ length: Math.max(0, 100 - tools.length) }).map((_, i) => (
+        {Array.from({ length: Math.max(0, 100 - allTools.length) }).map((_, i) => (
           <div key={`empty-${i}`} className="aspect-square bg-gray-50 border border-gray-100" />
         ))}
       </div>
@@ -347,30 +360,48 @@ function ToolMosaic({ tools, onSelectTool }: { tools: AiTool[]; onSelectTool: (t
           className="fixed z-[100] pointer-events-none transform -translate-x-1/2 -translate-y-[calc(100%+20px)] transition-transform duration-75"
           style={{ left: mousePos.x, top: mousePos.y }}
         >
-          <div className="bg-accent-dark text-white px-3 py-2 border-2 border-white shadow-brutalist-sm whitespace-nowrap">
-            <div className="text-[10px] font-mono font-bold uppercase tracking-widest text-terminal-green mb-0.5">
-              {hoveredTool.category}
+          <div className="bg-accent-dark text-white px-4 py-3 border-2 border-white shadow-brutalist max-w-[280px]">
+            <div className="flex items-center justify-between gap-4 mb-2">
+              <div className="text-[10px] font-mono font-bold uppercase tracking-widest text-terminal-green">
+                {hoveredTool.category}
+              </div>
+              <div className="text-[9px] font-mono font-bold uppercase text-gray-400">
+                {hoveredTool.tags.price}
+              </div>
             </div>
-            <div className="text-sm font-display font-black uppercase tracking-tight">
+            <div className="text-base font-display font-black uppercase tracking-tight mb-1">
               {hoveredTool.name}
             </div>
+            <p className="text-[11px] text-gray-300 leading-tight font-sans italic">
+              "{hoveredTool.description}"
+            </p>
           </div>
           {/* Arrow */}
-          <div className="w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[6px] border-t-accent-dark mx-auto" />
+          <div className="w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-t-[8px] border-t-accent-dark mx-auto" />
         </div>
       )}
 
       {/* Mosaic Header Stats */}
       <div className="absolute top-2 right-4 pointer-events-none hidden md:block">
         <span className="text-[10px] font-mono font-bold uppercase text-gray-400 tracking-widest">
-          SaaS Mosaic v1.0 // {tools.length} Tools Indexed
+          SaaS Mosaic v1.0 // {allTools.length} Tools Indexed
+          {(selectedCategory !== 'All' || selectedPrice !== 'All') && (
+            <span className="text-terminal-green ml-2">
+              // Filtering: {tools.length} Results
+            </span>
+          )}
         </span>
       </div>
     </div>
   );
 }
 
-function MosaicCell({ tool, onHover, onClick }: { tool: AiTool; onHover: (t: AiTool | null) => void; onClick: () => void }) {
+function MosaicCell({ tool, isMatch, onHover, onClick }: {
+  tool: AiTool;
+  isMatch: boolean;
+  onHover: (t: AiTool | null) => void;
+  onClick: () => void;
+}) {
   const getHostname = (href: string) => {
     try { return new URL(href).hostname; } catch { return ''; }
   };
@@ -380,11 +411,11 @@ function MosaicCell({ tool, onHover, onClick }: { tool: AiTool; onHover: (t: AiT
 
   return (
     <div
-      className="aspect-square bg-white border border-gray-100 flex items-center justify-center p-2 group transition-all duration-300 hover:z-10 hover:shadow-xl hover:scale-110"
+      className={`aspect-square bg-white border border-gray-100 flex items-center justify-center p-2 group transition-all duration-300 hover:z-10 hover:shadow-xl hover:scale-110 cursor-pointer ${!isMatch ? 'opacity-20 grayscale' : 'opacity-100'}`}
       onMouseEnter={() => onHover(tool)}
       onClick={onClick}
     >
-      <div className="relative w-full h-full filter grayscale group-hover:grayscale-0 transition-all duration-300">
+      <div className={`relative w-full h-full transition-all duration-300 ${isMatch ? 'filter grayscale group-hover:grayscale-0' : 'filter grayscale'}`}>
         <Image
           src={imgSrc}
           alt={tool.name}
