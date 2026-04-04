@@ -53,7 +53,7 @@ export default function ToolsIndex() {
   const [selectedPrice, setSelectedPrice] = useState<string>('All');
   const [selectedTool, setSelectedTool] = useState<AiTool | null>(null);
   const [showAll, setShowAll] = useState(false);
-  const [viewMode, setViewMode] = useState<'list' | 'mosaic'>('list');
+  const [viewMode, setViewMode] = useState<'list' | 'mosaic'>('mosaic');
 
   const categories = ['All', ...Array.from(new Set(aiTools.map(t => t.category)))];
   const prices = ['All', ...Array.from(new Set(aiTools.map(t => t.tags.price)))];
@@ -113,21 +113,26 @@ export default function ToolsIndex() {
             </div>
 
             {/* View Toggle */}
-            <div className="flex bg-white border-2 border-accent-dark shadow-brutalist-sm overflow-hidden">
-              <button
-                onClick={() => setViewMode('list')}
-                className={`p-2 transition-colors ${viewMode === 'list' ? 'bg-accent-dark text-white' : 'hover:bg-gray-100 text-accent-dark'}`}
-                title="List View"
-              >
-                <List className="w-4 h-4" />
-              </button>
-              <button
-                onClick={() => setViewMode('mosaic')}
-                className={`p-2 transition-colors ${viewMode === 'mosaic' ? 'bg-accent-dark text-white' : 'hover:bg-gray-100 text-accent-dark'}`}
-                title="Mosaic View"
-              >
-                <LayoutGrid className="w-4 h-4" />
-              </button>
+            <div className="flex items-center gap-3">
+              <span className="hidden sm:inline-block text-[10px] font-mono font-bold text-[#ff00ff] animate-bounce">
+                NEW VIEW! →
+              </span>
+              <div className="flex bg-white border-2 border-accent-dark shadow-brutalist-sm overflow-hidden">
+                <button
+                  onClick={() => setViewMode('list')}
+                  className={`p-2 transition-colors ${viewMode === 'list' ? 'bg-accent-dark text-white' : 'hover:bg-gray-100 text-accent-dark'}`}
+                  title="List View"
+                >
+                  <List className="w-4 h-4" />
+                </button>
+                <button
+                  onClick={() => setViewMode('mosaic')}
+                  className={`p-2 transition-colors ${viewMode === 'mosaic' ? 'bg-accent-dark text-white' : 'hover:bg-gray-100 text-accent-dark'}`}
+                  title="Mosaic View"
+                >
+                  <LayoutGrid className="w-4 h-4" />
+                </button>
+              </div>
             </div>
           </div>
 
