@@ -120,7 +120,13 @@ export const aiTools: AiTool[] = [
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=emailferret.io&sz=128",
-    dateAdded: "2026-03-30"
+    dateAdded: "2026-03-30",
+    maker: {
+        name: "Yalla Papi",
+        role: "Indie Maker",
+        twitter: "yallapapi",
+        image: "https://unavatar.io/twitter/yallapapi"
+    }
 },
   {
     name: "AgentGatePay",
@@ -133,7 +139,13 @@ export const aiTools: AiTool[] = [
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=www.agentgatepay.com&sz=128",
-    dateAdded: "2026-03-31"
+    dateAdded: "2026-03-31",
+    maker: {
+        name: "Yalla Papi",
+        role: "Indie Maker",
+        twitter: "yallapapi",
+        image: "https://unavatar.io/twitter/yallapapi"
+    }
 },
   {
     name: "Hypnotype",
@@ -165,7 +177,13 @@ export const aiTools: AiTool[] = [
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=computerkeyboardshortcuts.org&sz=128",
-    dateAdded: "2026-03-23"
+    dateAdded: "2026-03-23",
+    maker: {
+        name: "Daniel",
+        role: "Indie Maker",
+        twitter: "danielba777_",
+        image: "https://unavatar.io/twitter/danielba777_"
+    }
 },
   {
     name: "Floowed",
@@ -178,7 +196,13 @@ export const aiTools: AiTool[] = [
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=floowed.com&sz=128",
-    dateAdded: "2026-03-24"
+    dateAdded: "2026-03-24",
+    maker: {
+        name: "Arunima",
+        role: "SaaS Builder",
+        twitter: "saasdiff",
+        image: "https://unavatar.io/twitter/saasdiff"
+    }
 },
   {
     name: "StrideFuel",
@@ -210,7 +234,13 @@ export const aiTools: AiTool[] = [
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=orav.ai&sz=128",
-    dateAdded: "2026-03-26"
+    dateAdded: "2026-03-26",
+    maker: {
+        name: "Joakim",
+        role: "Indie Maker",
+        twitter: "Infinity-Joakim-106",
+        image: "https://unavatar.io/twitter/Infinity-Joakim-106"
+    }
 },
   {
     name: "AIRankPilot",
@@ -223,7 +253,13 @@ export const aiTools: AiTool[] = [
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=airankpilot.com&sz=128",
-    dateAdded: "2026-03-27"
+    dateAdded: "2026-03-27",
+    maker: {
+        name: "Neel Patel",
+        role: "SEO Expert",
+        twitter: "neelpatel_seo",
+        image: "https://unavatar.io/twitter/neelpatel_seo"
+    }
 },
   {
     name: "BookSwift",
@@ -236,7 +272,13 @@ export const aiTools: AiTool[] = [
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=www.bookswift.app&sz=128",
-    dateAdded: "2026-03-28"
+    dateAdded: "2026-03-28",
+    maker: {
+        name: "Yalla Papi",
+        role: "Indie Maker",
+        twitter: "yallapapi",
+        image: "https://unavatar.io/twitter/yallapapi"
+    }
 },
   {
     name: "SlidesCockpit",
@@ -249,7 +291,13 @@ export const aiTools: AiTool[] = [
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=slidescockpit.com&sz=128",
-    dateAdded: "2026-03-29"
+    dateAdded: "2026-03-29",
+    maker: {
+        name: "Daniel",
+        role: "App Builder",
+        twitter: "danielba777_",
+        image: "https://unavatar.io/twitter/danielba777_"
+    }
 },
   {
     name: "3dSynth.app",
@@ -262,7 +310,13 @@ export const aiTools: AiTool[] = [
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=3dsynth.app&sz=128",
-    dateAdded: "2026-03-23"
+    dateAdded: "2026-03-23",
+    maker: {
+        name: "Nic Polotnianko",
+        role: "Indie Hacker",
+        twitter: "nikpolale",
+        image: "https://unavatar.io/twitter/nikpolale"
+    }
 },
   {
     name: "Crypto News Navigator",
@@ -275,7 +329,13 @@ export const aiTools: AiTool[] = [
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=www.cryptonewsnavigator.com&sz=128",
-    dateAdded: "2026-03-24"
+    dateAdded: "2026-03-24",
+    maker: {
+        name: "Katerina Kulikovska",
+        role: "Crypto Analyst",
+        twitter: "katerinakulikovska",
+        image: "https://unavatar.io/twitter/katerinakulikovska"
+    }
 },
   {
     name: "Suburb Stack",
@@ -288,7 +348,13 @@ export const aiTools: AiTool[] = [
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=suburbstack.com&sz=128",
-    dateAdded: "2026-03-25"
+    dateAdded: "2026-03-25",
+    maker: {
+        name: "Nic Polotnianko",
+        role: "Indie Hacker",
+        twitter: "nikpolale",
+        image: "https://unavatar.io/twitter/nikpolale"
+    }
 },
   {
     name: "Sequenzy",
@@ -301,7 +367,13 @@ export const aiTools: AiTool[] = [
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=sequenzy.com&sz=128",
-    dateAdded: "2026-03-26"
+    dateAdded: "2026-03-26",
+    maker: {
+        name: "Nic Polotnianko",
+        role: "Indie Hacker",
+        twitter: "nikpolale",
+        image: "https://unavatar.io/twitter/nikpolale"
+    }
 },
   {
     name: "Markeplay",
@@ -314,7 +386,13 @@ export const aiTools: AiTool[] = [
         skill: "Intermediate"
     },
     image: "https://www.google.com/s2/favicons?domain=www.markeplay.com&sz=128",
-    dateAdded: "2026-03-27"
+    dateAdded: "2026-03-27",
+    maker: {
+        name: "Nic Polotnianko",
+        role: "Indie Hacker",
+        twitter: "nikpolale",
+        image: "https://unavatar.io/twitter/nikpolale"
+    }
 },
   {
     name: "Qeeebo",
@@ -327,7 +405,13 @@ export const aiTools: AiTool[] = [
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=www.qeeebo.com&sz=128",
-    dateAdded: "2026-03-16"
+    dateAdded: "2026-03-16",
+    maker: {
+        name: "Nic Polotnianko",
+        role: "Indie Hacker",
+        twitter: "nikpolale",
+        image: "https://unavatar.io/twitter/nikpolale"
+    }
 },
   {
     name: "feynn - Strategic Intelligence Platform",
@@ -340,7 +424,13 @@ export const aiTools: AiTool[] = [
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=feynn.ai&sz=128",
-    dateAdded: "2026-03-17"
+    dateAdded: "2026-03-17",
+    maker: {
+        name: "Nic Polotnianko",
+        role: "Indie Hacker",
+        twitter: "nikpolale",
+        image: "https://unavatar.io/twitter/nikpolale"
+    }
 },
   {
     name: "AI Thumbnail",
@@ -353,7 +443,13 @@ export const aiTools: AiTool[] = [
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=aithumbnail.gg&sz=128",
-    dateAdded: "2026-03-18"
+    dateAdded: "2026-03-18",
+    maker: {
+        name: "Ayush",
+        role: "Indie Maker",
+        twitter: "ayushaye",
+        image: "https://unavatar.io/twitter/ayushaye"
+    }
 },
   {
     name: "AyeWatch AI",
@@ -366,7 +462,13 @@ export const aiTools: AiTool[] = [
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=ayewatch.ai&sz=128",
-    dateAdded: "2026-03-19"
+    dateAdded: "2026-03-19",
+    maker: {
+        name: "Ayush",
+        role: "Indie Maker",
+        twitter: "ayushaye",
+        image: "https://unavatar.io/twitter/ayushaye"
+    }
 },
   {
     name: "PentestMate",
@@ -379,7 +481,13 @@ export const aiTools: AiTool[] = [
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=pentestmate.com&sz=128",
-    dateAdded: "2026-03-20"
+    dateAdded: "2026-03-20",
+    maker: {
+        name: "Aditya Sharma",
+        role: "Security Expert",
+        twitter: "adityasharmasec",
+        image: "https://unavatar.io/twitter/adityasharmasec"
+    }
 },
   {
     name: "Bolta",
@@ -392,7 +500,13 @@ export const aiTools: AiTool[] = [
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=bolta.ai&sz=128",
-    dateAdded: "2026-03-21"
+    dateAdded: "2026-03-21",
+    maker: {
+        name: "Max",
+        role: "Product Builder",
+        twitter: "bolta_ai",
+        image: "https://unavatar.io/twitter/bolta_ai"
+    }
 },
   {
     name: "Sana Mujer",
@@ -405,7 +519,13 @@ export const aiTools: AiTool[] = [
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=www.sanamujer.com&sz=128",
-    dateAdded: "2026-03-22"
+    dateAdded: "2026-03-22",
+    maker: {
+        name: "Damián Capdevila",
+        role: "Founder",
+        twitter: "damiancap",
+        image: "https://unavatar.io/twitter/damiancap"
+    }
 },
   {
     name: "Beatable",
@@ -431,7 +551,13 @@ export const aiTools: AiTool[] = [
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=mapyourvoyage.com&sz=128",
-    dateAdded: "2026-03-17"
+    dateAdded: "2026-03-17",
+    maker: {
+        name: "Anuj J.",
+        role: "Indie Maker",
+        twitter: "pameeks96",
+        image: "https://unavatar.io/twitter/pameeks96"
+    }
 },
   {
     name: "AyeCreate",
@@ -444,7 +570,13 @@ export const aiTools: AiTool[] = [
         skill: "Intermediate"
     },
     image: "https://www.google.com/s2/favicons?domain=ayecreate.ai&sz=128",
-    dateAdded: "2026-03-18"
+    dateAdded: "2026-03-18",
+    maker: {
+        name: "Ayush",
+        role: "Indie Maker",
+        twitter: "ayushaye",
+        image: "https://unavatar.io/twitter/ayushaye"
+    }
 },
   {
     name: "Nicegram",
@@ -457,7 +589,13 @@ export const aiTools: AiTool[] = [
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=nicegram.app&sz=128",
-    dateAdded: "2026-03-19"
+    dateAdded: "2026-03-19",
+    maker: {
+        name: "Sergey Sheleg",
+        role: "CPO",
+        twitter: "sergeysheleg",
+        image: "https://unavatar.io/twitter/sergeysheleg"
+    }
 },
   {
     name: "LocalBiz",
@@ -470,7 +608,13 @@ export const aiTools: AiTool[] = [
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=www.localbiz.ai&sz=128",
-    dateAdded: "2026-03-20"
+    dateAdded: "2026-03-20",
+    maker: {
+        name: "Abhi Dwivedi",
+        role: "Software Creator",
+        twitter: "abhidwivedi",
+        image: "https://unavatar.io/twitter/abhidwivedi"
+    }
 },
   {
     name: "Argus AI",
@@ -509,7 +653,13 @@ export const aiTools: AiTool[] = [
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=tekadio.app&sz=128",
-    dateAdded: "2026-03-16"
+    dateAdded: "2026-03-16",
+    maker: {
+        name: "Andreas Binder",
+        role: "Founder",
+        twitter: "andreas_binder",
+        image: "https://unavatar.io/twitter/andreas_binder"
+    }
 },
   {
     name: "Invoplex",
@@ -535,7 +685,13 @@ export const aiTools: AiTool[] = [
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=docutracker.io&sz=128",
-    dateAdded: "2026-03-10"
+    dateAdded: "2026-03-10",
+    maker: {
+        name: "Mohamed Ibrahim",
+        role: "Maker",
+        twitter: "mo_ibrahim",
+        image: "https://unavatar.io/twitter/mo_ibrahim"
+    }
 },
   {
     name: "Time",
@@ -808,7 +964,13 @@ export const aiTools: AiTool[] = [
       skill: "Advanced"
     },
     image: "https://www.google.com/s2/favicons?domain=saasblueprint.app&sz=128",
-    dateAdded: "2026-03-02"
+    dateAdded: "2026-03-02",
+    maker: {
+        name: "Mihai Sandu",
+        role: "Software Developer",
+        twitter: "mihais77",
+        image: "https://unavatar.io/twitter/mihais77"
+    }
   },
   {
     name: "Bangas",
@@ -834,7 +996,13 @@ export const aiTools: AiTool[] = [
       skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=shortsai.com&sz=128",
-    dateAdded: "2026-03-04"
+    dateAdded: "2026-03-04",
+    maker: {
+        name: "Marko Denic",
+        role: "Developer",
+        twitter: "denicmarko",
+        image: "https://unavatar.io/twitter/denicmarko"
+    }
   },
   {
     name: "LinkedGrow",
@@ -844,10 +1012,16 @@ export const aiTools: AiTool[] = [
     tags: {
       useCase: ["Business"],
       price: "Freemium",
-      skill: "Beginner"
+      skill: "Intermediate"
     },
     image: "https://www.google.com/s2/favicons?domain=linkedgrow.ai&sz=128",
-    dateAdded: "2026-03-05"
+    dateAdded: "2026-03-05",
+    maker: {
+        name: "Ambika Sarawgi",
+        role: "Founder",
+        twitter: "ambika_sarawgi",
+        image: "https://unavatar.io/twitter/ambika_sarawgi"
+    }
   },
   {
     name: "Credops",
@@ -856,11 +1030,17 @@ export const aiTools: AiTool[] = [
     category: "Productivity",
     tags: {
       useCase: ["Business"],
-      price: "Freemium",
+      price: "Free",
       skill: "Intermediate"
     },
     image: "https://www.google.com/s2/favicons?domain=www.credops.io&sz=128",
-    dateAdded: "2026-03-06"
+    dateAdded: "2026-03-06",
+    maker: {
+        name: "Prasada Prabhu",
+        role: "Founder",
+        twitter: "prasadaprabhu_",
+        image: "https://unavatar.io/twitter/prasadaprabhu_"
+    }
   },
   {
     name: "Podcept",
@@ -868,12 +1048,18 @@ export const aiTools: AiTool[] = [
     url: "https://www.podcept.com",
     category: "Marketing",
     tags: {
-      useCase: ["Creative"],
+      useCase: ["Business"],
       price: "Freemium",
       skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=www.podcept.com&sz=128",
-    dateAdded: "2026-03-07"
+    dateAdded: "2026-03-07",
+    maker: {
+        name: "Akhil MK",
+        role: "Indie Operator",
+        twitter: "akhilnairmk",
+        image: "https://unavatar.io/twitter/akhilnairmk"
+    }
   },
   {
     name: "Roomstage AI",
@@ -886,20 +1072,32 @@ export const aiTools: AiTool[] = [
       skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=roomstage.ai&sz=128",
-    dateAdded: "2026-03-08"
+    dateAdded: "2026-03-08",
+    maker: {
+        name: "Akhil MK",
+        role: "Indie Operator",
+        twitter: "akhilnairmk",
+        image: "https://unavatar.io/twitter/akhilnairmk"
+    }
   },
   {
     name: "Murmur",
     description: "Private, offline speech-to-text dictation for Windows powered by OpenAI Whisper for high-security environments.",
     url: "https://murmurvt.com",
-    category: "Video & Audio",
+    category: "Productivity",
     tags: {
       useCase: ["Business"],
       price: "Paid",
-      skill: "Intermediate"
+      skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=murmurvt.com&sz=128",
-    dateAdded: "2026-03-02"
+    dateAdded: "2026-03-09",
+    maker: {
+        name: "Akhil MK",
+        role: "Indie Operator",
+        twitter: "akhilnairmk",
+        image: "https://unavatar.io/twitter/akhilnairmk"
+    }
   },
   {
     name: "Tails, Co.",
@@ -925,7 +1123,13 @@ export const aiTools: AiTool[] = [
       skill: "Advanced"
     },
     image: "https://www.google.com/s2/favicons?domain=neonchainx.com&sz=128",
-    dateAdded: "2026-02-24"
+    dateAdded: "2026-02-24",
+    maker: {
+        name: "Alex Freas",
+        role: "Software Engineer",
+        twitter: "alex_freas",
+        image: "https://unavatar.io/twitter/alex_freas"
+    }
   },
   {
     name: "Roampads",
