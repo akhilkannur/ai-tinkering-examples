@@ -122,10 +122,10 @@ export const aiTools: AiTool[] = [
     image: "https://www.google.com/s2/favicons?domain=emailferret.io&sz=128",
     dateAdded: "2026-03-30",
     maker: {
-        name: "Yalla Papi",
+        name: "Michael Coleman",
         role: "Indie Maker",
-        twitter: "yallapapi",
-        image: "https://unavatar.io/twitter/yallapapi"
+        twitter: "michaellcoleman7",
+        image: "https://unavatar.io/twitter/michaellcoleman7"
     }
 },
   {
@@ -141,10 +141,10 @@ export const aiTools: AiTool[] = [
     image: "https://www.google.com/s2/favicons?domain=www.agentgatepay.com&sz=128",
     dateAdded: "2026-03-31",
     maker: {
-        name: "Yalla Papi",
+        name: "Michael Coleman",
         role: "Indie Maker",
-        twitter: "yallapapi",
-        image: "https://unavatar.io/twitter/yallapapi"
+        twitter: "michaellcoleman7",
+        image: "https://unavatar.io/twitter/michaellcoleman7"
     }
 },
   {
@@ -274,10 +274,10 @@ export const aiTools: AiTool[] = [
     image: "https://www.google.com/s2/favicons?domain=www.bookswift.app&sz=128",
     dateAdded: "2026-03-28",
     maker: {
-        name: "Yalla Papi",
+        name: "Michael Coleman",
         role: "Indie Maker",
-        twitter: "yallapapi",
-        image: "https://unavatar.io/twitter/yallapapi"
+        twitter: "michaellcoleman7",
+        image: "https://unavatar.io/twitter/michaellcoleman7"
     }
 },
   {
@@ -445,10 +445,10 @@ export const aiTools: AiTool[] = [
     image: "https://www.google.com/s2/favicons?domain=aithumbnail.gg&sz=128",
     dateAdded: "2026-03-18",
     maker: {
-        name: "Ayush",
+        name: "Michael Coleman",
         role: "Indie Maker",
-        twitter: "ayushaye",
-        image: "https://unavatar.io/twitter/ayushaye"
+        twitter: "michaellcoleman7",
+        image: "https://unavatar.io/twitter/michaellcoleman7"
     }
 },
   {
@@ -464,10 +464,10 @@ export const aiTools: AiTool[] = [
     image: "https://www.google.com/s2/favicons?domain=ayewatch.ai&sz=128",
     dateAdded: "2026-03-19",
     maker: {
-        name: "Ayush",
+        name: "Michael Coleman",
         role: "Indie Maker",
-        twitter: "ayushaye",
-        image: "https://unavatar.io/twitter/ayushaye"
+        twitter: "michaellcoleman7",
+        image: "https://unavatar.io/twitter/michaellcoleman7"
     }
 },
   {
@@ -572,10 +572,10 @@ export const aiTools: AiTool[] = [
     image: "https://www.google.com/s2/favicons?domain=ayecreate.ai&sz=128",
     dateAdded: "2026-03-18",
     maker: {
-        name: "Ayush",
+        name: "Michael Coleman",
         role: "Indie Maker",
-        twitter: "ayushaye",
-        image: "https://unavatar.io/twitter/ayushaye"
+        twitter: "michaellcoleman7",
+        image: "https://unavatar.io/twitter/michaellcoleman7"
     }
 },
   {
@@ -1053,13 +1053,7 @@ export const aiTools: AiTool[] = [
       skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=www.podcept.com&sz=128",
-    dateAdded: "2026-03-07",
-    maker: {
-        name: "Akhil MK",
-        role: "Indie Operator",
-        twitter: "akhilnairmk",
-        image: "https://unavatar.io/twitter/akhilnairmk"
-    }
+    dateAdded: "2026-03-07"
   },
   {
     name: "Roomstage AI",
@@ -1072,13 +1066,7 @@ export const aiTools: AiTool[] = [
       skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=roomstage.ai&sz=128",
-    dateAdded: "2026-03-08",
-    maker: {
-        name: "Akhil MK",
-        role: "Indie Operator",
-        twitter: "akhilnairmk",
-        image: "https://unavatar.io/twitter/akhilnairmk"
-    }
+    dateAdded: "2026-03-08"
   },
   {
     name: "Murmur",
@@ -1093,10 +1081,10 @@ export const aiTools: AiTool[] = [
     image: "https://www.google.com/s2/favicons?domain=murmurvt.com&sz=128",
     dateAdded: "2026-03-09",
     maker: {
-        name: "Akhil MK",
-        role: "Indie Operator",
-        twitter: "akhilnairmk",
-        image: "https://unavatar.io/twitter/akhilnairmk"
+        name: "Chase Adams",
+        role: "Founder",
+        twitter: "chaseadamsio",
+        image: "https://unavatar.io/twitter/chaseadamsio"
     }
   },
   {
@@ -1142,7 +1130,13 @@ export const aiTools: AiTool[] = [
       skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=www.roampads.com&sz=128",
-    dateAdded: "2026-02-25"
+    dateAdded: "2026-02-25",
+    maker: {
+        name: "Alex Freas",
+        role: "Software Engineer",
+        twitter: "alex_freas",
+        image: "https://unavatar.io/twitter/alex_freas"
+    }
   },
   {
     name: "Flowly Indicators",
@@ -1207,7 +1201,13 @@ export const aiTools: AiTool[] = [
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=mixels.ai&sz=128",
-    dateAdded: "2026-02-24"
+    dateAdded: "2026-02-24",
+    maker: {
+        name: "Alex Freas",
+        role: "Software Engineer",
+        twitter: "alex_freas",
+        image: "https://unavatar.io/twitter/alex_freas"
+    }
 },
   {
     name: "EmailVerify.ai",
@@ -1246,7 +1246,13 @@ export const aiTools: AiTool[] = [
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=getoneprofile.com&sz=128",
-    dateAdded: "2026-02-27"
+    dateAdded: "2026-02-27",
+    maker: {
+        name: "Alex Freas",
+        role: "Software Engineer",
+        twitter: "alex_freas",
+        image: "https://unavatar.io/twitter/alex_freas"
+    }
 },
   {
     name: "XIMA DIGITAL",
@@ -1298,7 +1304,13 @@ export const aiTools: AiTool[] = [
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=GreatCompany.ai&sz=128",
-    dateAdded: "2026-02-25"
+    dateAdded: "2026-02-25",
+    maker: {
+        name: "Alex Freas",
+        role: "Software Engineer",
+        twitter: "alex_freas",
+        image: "https://unavatar.io/twitter/alex_freas"
+    }
 },
   {
     name: "Reply Champion",
@@ -1311,7 +1323,13 @@ export const aiTools: AiTool[] = [
         skill: "Beginner"
     },
     image: "/screenshots/reply-champion.png",
-    dateAdded: "2026-02-16"
+    dateAdded: "2026-02-16",
+    maker: {
+        name: "Alex Freas",
+        role: "Software Engineer",
+        twitter: "alex_freas",
+        image: "https://unavatar.io/twitter/alex_freas"
+    }
 },
   {
     name: "Encamera",
@@ -1324,7 +1342,13 @@ export const aiTools: AiTool[] = [
         skill: "Beginner"
     },
     image: "/screenshots/encamera.png",
-    dateAdded: "2026-02-17"
+    dateAdded: "2026-02-17",
+    maker: {
+        name: "Alex Freas",
+        role: "Software Engineer",
+        twitter: "alex_freas",
+        image: "https://unavatar.io/twitter/alex_freas"
+    }
 },
   {
     name: "Resideline",
@@ -1350,7 +1374,13 @@ export const aiTools: AiTool[] = [
         skill: "Beginner"
     },
     image: "/screenshots/applytrackr.png",
-    dateAdded: "2026-02-19"
+    dateAdded: "2026-02-19",
+    maker: {
+        name: "Alex Freas",
+        role: "Software Engineer",
+        twitter: "alex_freas",
+        image: "https://unavatar.io/twitter/alex_freas"
+    }
 },
   {
     name: "LINO",
