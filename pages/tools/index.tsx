@@ -117,7 +117,7 @@ export default function ToolsIndex() {
         </div>
 
         {/* Search & Filters */}
-        <div className="max-w-5xl mx-auto mb-8 sticky top-[72px] z-40 bg-white/80 backdrop-blur-md py-4 border-b border-slate-100">
+        <div className="max-w-7xl mx-auto mb-8 sticky top-[72px] z-40 bg-white/80 backdrop-blur-md py-4 border-b border-slate-100">
           <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
             
             {/* Horizontal Pill Filters */}
@@ -151,57 +151,105 @@ export default function ToolsIndex() {
           </div>
         </div>
 
-        {/* Tools List - Weekly Groups */}
-        <div className="max-w-5xl mx-auto">
-          {filteredTools.length === 0 ? (
-            <div className="py-20 text-center border-2 border-dashed border-slate-200 rounded-3xl">
-              <p className="text-slate-400 font-bold uppercase tracking-widest text-sm">No tools found matching your search</p>
-              <button 
-                onClick={() => {setSelectedCategory('All'); setSearchQuery('');}}
-                className="mt-4 text-[#ff00ff] font-bold uppercase text-xs hover:underline"
-              >
-                Clear all filters
-              </button>
-            </div>
-          ) : (
-            <div className="flex flex-col">
-              {visibleGroups.map((group) => (
-                <div key={group.label} className="mb-12">
-                  <div className="flex items-center justify-between border-b border-slate-200 pb-2 mb-4">
-                    <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">
-                      {group.label}
-                    </h2>
-                    <span className="text-[10px] font-bold text-slate-300">
-                      {group.tools.length} TOOLS
-                    </span>
-                  </div>
-                  <div className="divide-y divide-slate-50">
-                    {group.tools.map((tool) => (
-                      <ToolDataRow 
-                        key={tool.name} 
-                        tool={tool} 
-                        onClick={() => setSelectedTool(tool)}
-                      />
-                    ))}
-                  </div>
-                </div>
-              ))}
-              
-              {/* Show More Weeks */}
-              {hasMoreWeeks && !showAllWeeks && (
-                <button
-                  onClick={() => setShowAllWeeks(true)}
-                  className="w-full py-6 mt-8 border-2 border-dashed border-slate-200 rounded-2xl text-slate-400 font-bold uppercase tracking-widest text-xs hover:border-slate-900 hover:text-slate-900 transition-all flex items-center justify-center gap-2"
+        {/* Tools List & Sidebar */}
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12">
+          
+          {/* Main Content: Tools List */}
+          <div className="flex-grow min-w-0">
+            {filteredTools.length === 0 ? (
+              <div className="py-20 text-center border-2 border-dashed border-slate-200 rounded-3xl">
+                <p className="text-slate-400 font-bold uppercase tracking-widest text-sm">No tools found matching your search</p>
+                <button 
+                  onClick={() => {setSelectedCategory('All'); setSearchQuery('');}}
+                  className="mt-4 text-[#ff00ff] font-bold uppercase text-xs hover:underline"
                 >
-                  Explore Older Backlog <ChevronDown className="w-4 h-4" />
+                  Clear all filters
                 </button>
-              )}
+              </div>
+            ) : (
+              <div className="flex flex-col">
+                {visibleGroups.map((group) => (
+                  <div key={group.label} className="mb-12">
+                    <div className="flex items-center justify-between border-b border-slate-200 pb-2 mb-4">
+                      <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">
+                        {group.label}
+                      </h2>
+                      <span className="text-[10px] font-bold text-slate-300">
+                        {group.tools.length} TOOLS
+                      </span>
+                    </div>
+                    <div className="divide-y divide-slate-50">
+                      {group.tools.map((tool) => (
+                        <ToolDataRow 
+                          key={tool.name} 
+                          tool={tool} 
+                          onClick={() => setSelectedTool(tool)}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                ))}
+                
+                {/* Show More Weeks */}
+                {hasMoreWeeks && !showAllWeeks && (
+                  <button
+                    onClick={() => setShowAllWeeks(true)}
+                    className="w-full py-6 mt-8 border-2 border-dashed border-slate-200 rounded-2xl text-slate-400 font-bold uppercase tracking-widest text-xs hover:border-slate-900 hover:text-slate-900 transition-all flex items-center justify-center gap-2"
+                  >
+                    Explore Older Backlog <ChevronDown className="w-4 h-4" />
+                  </button>
+                )}
+              </div>
+            )}
+          </div>
+
+          {/* Right Sidebar: Sponsors */}
+          <aside className="lg:w-80 flex-shrink-0">
+            <div className="sticky top-[140px]">
+              <div className="flex items-center gap-2 mb-4">
+                <div className="w-1.5 h-1.5 rounded-full bg-[#ff00ff]"></div>
+                <h3 className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">Sponsored</h3>
+              </div>
+              
+              <div className="flex flex-col gap-4">
+                <a 
+                  href="https://salestools.club/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="group block bg-slate-50 border border-slate-100 rounded-[2rem] p-6 hover:border-slate-900 transition-all hover:shadow-xl"
+                >
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-xl bg-slate-900 flex items-center justify-center text-white font-display font-black text-xl">
+                      S
+                    </div>
+                    <div>
+                      <h4 className="font-display font-black uppercase text-sm leading-tight group-hover:text-[#ff00ff] transition-colors">SalesTools.club</h4>
+                      <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Sponsor</p>
+                    </div>
+                  </div>
+                  <p className="text-xs text-slate-500 font-medium leading-relaxed mb-4">
+                    The ultimate database for modern sales operators. 500+ curated tools, APIs, and workflows to build your outbound engine.
+                  </p>
+                  <div className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-slate-900 group-hover:gap-3 transition-all">
+                    Explore Database <ArrowRight className="w-3 h-3" />
+                  </div>
+                </a>
+                
+                {/* Secondary Sponsor/Link */}
+                <Link 
+                  href="/tools/badge"
+                  className="block border-2 border-dashed border-slate-200 rounded-[2rem] p-6 text-center hover:border-slate-400 transition-colors"
+                >
+                  <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-2">Want to sponsor?</p>
+                  <p className="text-xs font-bold text-slate-900 hover:text-[#ff00ff] transition-colors underline underline-offset-4">Get in touch →</p>
+                </Link>
+              </div>
             </div>
-          )}
+          </aside>
         </div>
 
         {/* Submit CTA */}
-        <div className="max-w-5xl mx-auto mt-20">
+        <div className="max-w-7xl mx-auto mt-20">
           <div className="bg-slate-900 rounded-[2rem] p-8 md:p-12 text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden group">
             <div className="absolute top-0 right-0 w-64 h-64 bg-[#ff00ff] opacity-10 blur-[100px] -mr-32 -mt-32 transition-all group-hover:opacity-20"></div>
             <div className="relative z-10">
@@ -276,17 +324,23 @@ function ToolDataRow({ tool, onClick }: { tool: AiTool; onClick: () => void }) {
         </div>
       </div>
 
-      {/* Description */}
+      {/* Description - Full text */}
       <div className="w-full md:w-1/3 mb-4 md:mb-0">
-        <p className="text-sm text-slate-500 font-medium line-clamp-2 leading-relaxed">
+        <p className="text-sm text-slate-500 font-medium leading-relaxed">
           {tool.description}
         </p>
       </div>
 
-      {/* Human / Maker Block */}
+      {/* Human / Maker Block - Clickable to Social */}
       <div className="w-full md:w-1/5 mb-4 md:mb-0">
         {tool.maker ? (
-          <div className="flex items-center gap-3 bg-slate-50 p-2 rounded-xl border border-transparent group-hover:border-slate-200 transition-all">
+          <a 
+            href={`https://x.com/${tool.maker.twitter}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
+            className="flex items-center gap-3 bg-slate-50 p-2 rounded-xl border border-transparent hover:border-[#ff00ff] hover:bg-white transition-all shadow-sm hover:shadow-md"
+          >
             <div className="w-8 h-8 rounded-full overflow-hidden border-2 border-white flex-shrink-0 shadow-sm">
               <img 
                 src={tool.maker.image} 
@@ -298,7 +352,7 @@ function ToolDataRow({ tool, onClick }: { tool: AiTool; onClick: () => void }) {
               <div className="text-[10px] font-bold uppercase tracking-widest text-slate-400 leading-none mb-1">Maker</div>
               <div className="text-xs font-bold text-slate-900 truncate">{tool.maker.name}</div>
             </div>
-          </div>
+          </a>
         ) : (
           <div className="hidden md:block h-10"></div>
         )}

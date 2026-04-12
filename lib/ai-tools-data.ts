@@ -191,7 +191,13 @@ export const aiTools: AiTool[] = [
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=stride-fuel.com&sz=128",
-    dateAdded: "2026-03-25"
+    dateAdded: "2026-03-25",
+    maker: {
+        name: "Dave Moggio",
+        role: "Full-stack Developer",
+        twitter: "davemoggio",
+        image: "https://unavatar.io/twitter/davemoggio"
+    }
 },
   {
     name: "Oravida AI",
