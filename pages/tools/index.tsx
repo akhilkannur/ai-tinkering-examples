@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { aiTools, AiTool } from '../../lib/ai-tools-data';
 import Navbar from '../../components/Navbar';
 import ToolDetailModal from '../../components/ToolDetailModal';
-import { Filter, X, ArrowRight, ExternalLink, ChevronDown, LayoutGrid, List } from 'lucide-react';
+import { Filter, X, ArrowRight, ExternalLink, ChevronDown, Search } from 'lucide-react';
 
 const slugify = (text: string) =>
   text.toLowerCase().trim().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '').replace(/\-\-+/g, '-');
@@ -14,6 +14,8 @@ const slugify = (text: string) =>
 function getWeekLabel(dateStr: string): string {
   const date = new Date(dateStr + 'T00:00:00');
   const now = new Date();
+  
+  // Start of this week (Sunday)
   const startOfThisWeek = new Date(now);
   startOfThisWeek.setDate(now.getDate() - now.getDay());
   startOfThisWeek.setHours(0, 0, 0, 0);
@@ -24,7 +26,7 @@ function getWeekLabel(dateStr: string): string {
   if (date >= startOfThisWeek) return 'This Week';
   if (date >= startOfLastWeek) return 'Last Week';
 
-  // Find the Monday of that week
+  // Find the Monday of that week for a cleaner label
   const d = new Date(date);
   const day = d.getDay();
   const diff = d.getDate() - day + (day === 0 ? -6 : 1);
@@ -37,39 +39,27 @@ function formatDate(dateStr: string): string {
   return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
 }
 
-const getCategoryColor = (cat: string) => {
-  const c = cat.toLowerCase();
-  if (c.includes('video') || c.includes('audio')) return 'bg-red-50 text-red-700 border-red-200';
-  if (c.includes('productivity')) return 'bg-blue-50 text-blue-700 border-blue-200';
-  if (c.includes('image')) return 'bg-purple-50 text-purple-700 border-purple-200';
-  if (c.includes('copywriting') || c.includes('content')) return 'bg-orange-50 text-orange-700 border-orange-200';
-  if (c.includes('marketing')) return 'bg-green-50 text-green-700 border-green-200';
-  if (c.includes('code')) return 'bg-yellow-50 text-yellow-700 border-yellow-200';
-  return 'bg-gray-50 text-gray-700 border-gray-200';
-};
-
 export default function ToolsIndex() {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
-  const [selectedPrice, setSelectedPrice] = useState<string>('All');
+  const [searchQuery, setSearchQuery] = useState('');
   const [selectedTool, setSelectedTool] = useState<AiTool | null>(null);
-  const [showAll, setShowAll] = useState(false);
-  const [viewMode, setViewMode] = useState<'list' | 'mosaic'>('mosaic');
+  const [showAllWeeks, setShowAllWeeks] = useState(false);
 
   const categories = ['All', ...Array.from(new Set(aiTools.map(t => t.category)))];
-  const prices = ['All', ...Array.from(new Set(aiTools.map(t => t.tags.price)))];
 
   const filteredTools = useMemo(() => {
     return aiTools
       .filter(tool => {
         const matchCat = selectedCategory === 'All' || tool.category === selectedCategory;
-        const matchPrice = selectedPrice === 'All' || tool.tags.price === selectedPrice;
-        return matchCat && matchPrice;
+        const matchSearch = tool.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                           tool.description.toLowerCase().includes(searchQuery.toLowerCase());
+        return matchCat && matchSearch;
       })
       .sort((a, b) => new Date(b.dateAdded).getTime() - new Date(a.dateAdded).getTime());
-  }, [selectedCategory, selectedPrice]);
+  }, [selectedCategory, searchQuery]);
 
   // Group by week
-  const grouped = useMemo(() => {
+  const groupedWeeks = useMemo(() => {
     const groups: { label: string; tools: AiTool[] }[] = [];
     const map = new Map<string, AiTool[]>();
 
@@ -85,14 +75,18 @@ export default function ToolsIndex() {
     return groups;
   }, [filteredTools]);
 
-  const displayGroups = showAll ? grouped : grouped.slice(0, 4);
-  const hasMore = grouped.length > 4;
+  const visibleGroups = showAllWeeks ? groupedWeeks : groupedWeeks.slice(0, 4);
+  const hasMoreWeeks = groupedWeeks.length > 4;
 
-  // Count tools added this week
-  const thisWeekCount = grouped.find(g => g.label === 'This Week')?.tools.length || 0;
+  // Count tools added this month
+  const thisMonthCount = useMemo(() => {
+    const now = new Date();
+    const oneMonthAgo = new Date(now.getFullYear(), now.getMonth() - 1, now.getDate());
+    return aiTools.filter(t => new Date(t.dateAdded) >= oneMonthAgo).length;
+  }, []);
 
   return (
-    <div className="flex flex-col min-h-screen bg-page-bg font-sans text-primary-text selection:bg-[#ff00ff] selection:text-white">
+    <div className="flex flex-col min-h-screen bg-white font-sans text-slate-900 selection:bg-[#ff00ff] selection:text-white">
       <Head>
         <title>AI Tools Directory — {aiTools.length} Curated Tools | Real AI Examples</title>
         <meta name="description" content={`Browse ${aiTools.length} curated AI tools — filtered by category and price. Updated weekly.`} key="description" />
@@ -100,145 +94,125 @@ export default function ToolsIndex() {
 
       <Navbar />
 
-      <main className="flex-grow container mx-auto px-4 sm:px-6 pt-28 md:pt-36 pb-24">
-
-        {/* Hero */}
-        <div className="max-w-4xl mx-auto mb-10 md:mb-14">
-          <div className="flex items-center justify-between gap-2 mb-4">
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 rounded-full bg-terminal-green animate-pulse" />
-              <span className="text-[10px] font-mono font-bold uppercase tracking-[0.2em] text-secondary-text">
-                Updated Weekly
-              </span>
-            </div>
-
-            {/* View Toggle */}
-            <div className="flex items-center gap-3">
-              <span className="hidden sm:inline-block text-[10px] font-mono font-bold text-[#ff00ff] animate-bounce">
-                NEW VIEW! →
-              </span>
-              <div className="flex bg-white border-2 border-accent-dark shadow-brutalist-sm overflow-hidden">
-                <button
-                  onClick={() => setViewMode('list')}
-                  className={`p-2 transition-colors ${viewMode === 'list' ? 'bg-accent-dark text-white' : 'hover:bg-gray-100 text-accent-dark'}`}
-                  title="List View"
-                >
-                  <List className="w-4 h-4" />
-                </button>
-                <button
-                  onClick={() => setViewMode('mosaic')}
-                  className={`p-2 transition-colors ${viewMode === 'mosaic' ? 'bg-accent-dark text-white' : 'hover:bg-gray-100 text-accent-dark'}`}
-                  title="Mosaic View"
-                >
-                  <LayoutGrid className="w-4 h-4" />
-                </button>
-              </div>
-            </div>
+      <main className="flex-grow container mx-auto px-4 sm:px-6 pt-28 md:pt-40 pb-24">
+        
+        {/* Hero - DistributionKit Style */}
+        <div className="max-w-5xl mx-auto text-center mb-12 md:mb-20">
+          <div className="inline-flex items-center gap-2 px-3 py-1 bg-slate-50 border border-slate-200 rounded-full mb-6">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+            </span>
+            <span className="text-[10px] font-bold uppercase tracking-widest text-slate-500">
+              {aiTools.length} Tools Indexed · {thisMonthCount} New this month
+            </span>
           </div>
-
-          <h1 className="text-4xl md:text-6xl font-display font-black uppercase tracking-tight leading-[0.9] mb-4">
-            AI Tools<br />Directory
+          
+          <h1 className="text-4xl md:text-7xl font-display font-black uppercase tracking-tighter leading-[0.85] mb-6">
+            Your Workflow<br />Won't Automate Itself.
           </h1>
-          <p className="text-lg text-secondary-text max-w-xl mb-6">
-            {aiTools.length} curated tools{thisWeekCount > 0 && <> · <span className="text-primary-text font-semibold">{thisWeekCount} added this week</span></>}
+          <p className="text-lg md:text-xl text-slate-500 max-w-2xl mx-auto font-medium">
+            The most practical AI tools directory for operators. No fluff, just APIs, MCP configs, and work-ready stack.
           </p>
+        </div>
 
-          {/* Filters */}
-          <div className="flex flex-wrap items-center gap-2">
-            <div className="flex items-center gap-2 bg-white border-2 border-accent-dark px-3 py-2 shadow-brutalist-sm">
-              <Filter className="w-3.5 h-3.5 text-secondary-text" />
-              <select
-                value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
-                className="bg-transparent text-[11px] font-mono font-bold uppercase tracking-wider outline-none cursor-pointer pr-4 appearance-none"
-              >
-                {categories.map(c => <option key={c} value={c}>{c === 'All' ? 'All Categories' : c}</option>)}
-              </select>
+        {/* Search & Filters */}
+        <div className="max-w-5xl mx-auto mb-8 sticky top-[72px] z-40 bg-white/80 backdrop-blur-md py-4 border-b border-slate-100">
+          <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
+            
+            {/* Horizontal Pill Filters */}
+            <div className="flex items-center gap-2 overflow-x-auto no-scrollbar pb-2 md:pb-0 w-full md:w-auto -mx-4 px-4 md:mx-0 md:px-0">
+              {categories.map(cat => (
+                <button
+                  key={cat}
+                  onClick={() => setSelectedCategory(cat)}
+                  className={`px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap border-2 transition-all ${
+                    selectedCategory === cat 
+                    ? 'bg-slate-900 border-slate-900 text-white shadow-lg' 
+                    : 'bg-white border-slate-200 text-slate-500 hover:border-slate-400'
+                  }`}
+                >
+                  {cat}
+                </button>
+              ))}
             </div>
-            <div className="flex items-center gap-2 bg-white border-2 border-accent-dark px-3 py-2 shadow-brutalist-sm">
-              <select
-                value={selectedPrice}
-                onChange={(e) => setSelectedPrice(e.target.value)}
-                className="bg-transparent text-[11px] font-mono font-bold uppercase tracking-wider outline-none cursor-pointer pr-4 appearance-none"
-              >
-                {prices.map(p => <option key={p} value={p}>{p === 'All' ? 'All Prices' : p}</option>)}
-              </select>
+
+            {/* Search Bar */}
+            <div className="relative w-full md:w-64">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
+              <input 
+                type="text"
+                placeholder="Search tools..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-10 pr-4 py-2 bg-slate-50 border-2 border-slate-200 rounded-xl text-sm font-medium focus:outline-none focus:border-slate-900 transition-colors"
+              />
             </div>
-            {(selectedCategory !== 'All' || selectedPrice !== 'All') && (
-              <button
-                onClick={() => { setSelectedCategory('All'); setSelectedPrice('All'); }}
-                className="flex items-center gap-1 bg-white border-2 border-accent-dark px-3 py-2 shadow-brutalist-sm text-[11px] font-mono font-bold uppercase tracking-wider hover:bg-red-50 transition-colors"
-              >
-                <X className="w-3 h-3" /> Clear
-              </button>
-            )}
           </div>
         </div>
 
-        {/* Tool List or Mosaic */}
-        <div className="max-w-4xl mx-auto">
+        {/* Tools List - Weekly Groups */}
+        <div className="max-w-5xl mx-auto">
           {filteredTools.length === 0 ? (
-            <div className="border-2 border-accent-dark bg-white p-16 text-center">
-              <p className="text-sm font-mono uppercase text-secondary-text">No tools found for this filter</p>
+            <div className="py-20 text-center border-2 border-dashed border-slate-200 rounded-3xl">
+              <p className="text-slate-400 font-bold uppercase tracking-widest text-sm">No tools found matching your search</p>
+              <button 
+                onClick={() => {setSelectedCategory('All'); setSearchQuery('');}}
+                className="mt-4 text-[#ff00ff] font-bold uppercase text-xs hover:underline"
+              >
+                Clear all filters
+              </button>
             </div>
-          ) : viewMode === 'list' ? (
-            displayGroups.map((group) => (
-              <div key={group.label} className="mb-0">
-                {/* Week Header */}
-                <div className="sticky top-[72px] z-40 bg-page-bg border-b-2 border-accent-dark py-2 px-1 flex items-center justify-between">
-                  <span className="text-[11px] font-mono font-bold uppercase tracking-[0.15em] text-secondary-text">
-                    {group.label}
-                  </span>
-                  <span className="text-[10px] font-mono text-secondary-text">
-                    {group.tools.length} tool{group.tools.length !== 1 ? 's' : ''}
-                  </span>
-                </div>
-
-                {/* Tool Rows */}
-                <div className="border-x-2 border-b-2 border-accent-dark bg-white mb-8 divide-y divide-gray-100">
-                  {group.tools.map((tool, i) => (
-                    <ToolRow
-                      key={tool.name + i}
-                      tool={tool}
-                      onClick={() => setSelectedTool(tool)}
-                    />
-                  ))}
-                </div>
-              </div>
-            ))
           ) : (
-            <ToolMosaic
-              tools={filteredTools}
-              allTools={aiTools}
-              onSelectTool={setSelectedTool}
-              selectedCategory={selectedCategory}
-              selectedPrice={selectedPrice}
-            />
-          )}
-
-          {/* Show More (only for list mode) */}
-          {viewMode === 'list' && hasMore && !showAll && (
-            <button
-              onClick={() => setShowAll(true)}
-              className="w-full bg-accent-dark text-white py-4 font-mono text-xs uppercase tracking-[0.2em] font-bold hover:bg-[#ff00ff] transition-colors flex items-center justify-center gap-2 border-2 border-accent-dark"
-            >
-              Show all {filteredTools.length} tools <ChevronDown className="w-4 h-4" />
-            </button>
+            <div className="flex flex-col">
+              {visibleGroups.map((group) => (
+                <div key={group.label} className="mb-12">
+                  <div className="flex items-center justify-between border-b border-slate-200 pb-2 mb-4">
+                    <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">
+                      {group.label}
+                    </h2>
+                    <span className="text-[10px] font-bold text-slate-300">
+                      {group.tools.length} TOOLS
+                    </span>
+                  </div>
+                  <div className="divide-y divide-slate-50">
+                    {group.tools.map((tool) => (
+                      <ToolDataRow 
+                        key={tool.name} 
+                        tool={tool} 
+                        onClick={() => setSelectedTool(tool)}
+                      />
+                    ))}
+                  </div>
+                </div>
+              ))}
+              
+              {/* Show More Weeks */}
+              {hasMoreWeeks && !showAllWeeks && (
+                <button
+                  onClick={() => setShowAllWeeks(true)}
+                  className="w-full py-6 mt-8 border-2 border-dashed border-slate-200 rounded-2xl text-slate-400 font-bold uppercase tracking-widest text-xs hover:border-slate-900 hover:text-slate-900 transition-all flex items-center justify-center gap-2"
+                >
+                  Explore Older Backlog <ChevronDown className="w-4 h-4" />
+                </button>
+              )}
+            </div>
           )}
         </div>
 
         {/* Submit CTA */}
-        <div className="max-w-4xl mx-auto mt-16">
-          <div className="bg-accent-dark text-white border-4 border-accent-dark p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6">
-            <div>
-              <h2 className="text-2xl md:text-3xl font-display uppercase mb-2">List Your Tool</h2>
-              <p className="text-sm text-gray-400">Add our badge, get verified instantly. Free forever.</p>
+        <div className="max-w-5xl mx-auto mt-20">
+          <div className="bg-slate-900 rounded-[2rem] p-8 md:p-12 text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden group">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-[#ff00ff] opacity-10 blur-[100px] -mr-32 -mt-32 transition-all group-hover:opacity-20"></div>
+            <div className="relative z-10">
+              <h2 className="text-3xl md:text-4xl font-display font-black text-white uppercase mb-3">List Your Tool</h2>
+              <p className="text-slate-400 font-medium max-w-md">Join {aiTools.length} curated tools. Add our badge, get verified instantly. Free forever.</p>
             </div>
             <Link
               href="/tools/badge"
-              className="inline-flex items-center gap-3 bg-[#ccff00] text-black px-6 py-3 font-display uppercase text-sm border-2 border-[#ccff00] hover:bg-white hover:border-white transition-all shadow-brutalist-sm whitespace-nowrap"
+              className="relative z-10 inline-flex items-center gap-3 bg-[#ff00ff] text-white px-8 py-4 font-display font-black uppercase text-sm rounded-2xl hover:bg-white hover:text-black transition-all shadow-xl hover:scale-105 active:scale-95 whitespace-nowrap"
             >
-              Submit a Tool <ArrowRight className="w-4 h-4 stroke-[3px]" />
+              Get Verified <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
         </div>
@@ -251,12 +225,17 @@ export default function ToolsIndex() {
           onClose={() => setSelectedTool(null)}
         />
       )}
+
+      {/* Custom styles for scrollbar hiding */}
+      <style jsx global>{`
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+      `}</style>
     </div>
   );
 }
 
-// Dense tool row component
-function ToolRow({ tool, onClick }: { tool: AiTool; onClick: () => void }) {
+function ToolDataRow({ tool, onClick }: { tool: AiTool; onClick: () => void }) {
   const getHostname = (href: string) => {
     try { return new URL(href).hostname; } catch { return ''; }
   };
@@ -265,211 +244,79 @@ function ToolRow({ tool, onClick }: { tool: AiTool; onClick: () => void }) {
   const [imgSrc, setImgSrc] = useState(tool.image || fallbackLogo);
 
   return (
-    <div
-      className="flex items-center gap-4 px-4 py-3.5 cursor-pointer hover:bg-gray-50 transition-colors group"
+    <div 
+      className="group flex flex-col md:flex-row items-start md:items-center justify-between py-6 border-b border-slate-100 hover:bg-slate-50/50 transition-colors cursor-pointer px-4 -mx-4 rounded-xl"
       onClick={onClick}
     >
-      {/* Favicon */}
-      <div className="relative w-8 h-8 flex-shrink-0 border border-gray-200 bg-white overflow-hidden rounded-sm">
-        <Image
-          src={imgSrc}
-          alt={tool.name}
-          fill
-          className="object-contain p-0.5"
-          onError={() => setImgSrc(fallbackLogo)}
-          unoptimized
-        />
+      {/* Name + Logo */}
+      <div className="flex items-center gap-4 mb-4 md:mb-0 w-full md:w-1/4">
+        <div className="w-10 h-10 rounded-xl border border-slate-200 bg-white flex-shrink-0 flex items-center justify-center p-1.5 overflow-hidden shadow-sm group-hover:border-slate-900 transition-colors">
+          <Image 
+            src={imgSrc} 
+            alt={tool.name} 
+            width={40} 
+            height={40} 
+            className="object-contain"
+            onError={() => setImgSrc(fallbackLogo)}
+            unoptimized
+          />
+        </div>
+        <div className="min-w-0">
+          <h3 className="font-display font-black uppercase text-lg leading-tight group-hover:text-[#ff00ff] transition-colors truncate">
+            {tool.name}
+          </h3>
+          <div className="flex items-center gap-2 mt-1">
+            <span className="text-[9px] font-bold uppercase tracking-wider text-slate-400 bg-slate-100 px-1.5 py-0.5 rounded">
+              {tool.category}
+            </span>
+            <span className="md:hidden text-[9px] font-bold uppercase tracking-wider text-slate-400 bg-slate-100 px-1.5 py-0.5 rounded">
+              {tool.tags.price}
+            </span>
+          </div>
+        </div>
       </div>
 
-      {/* Name + Description */}
-      <div className="flex-grow min-w-0">
-        <div className="flex items-center gap-2">
-          <span className="font-display font-bold text-sm uppercase tracking-tight text-primary-text group-hover:text-[#ff00ff] transition-colors truncate">
-            {tool.name}
-          </span>
-          {tool.featured && (
-            <span className="text-[8px] font-mono font-bold uppercase tracking-wider bg-[#ff00ff] text-white px-1.5 py-0.5 flex-shrink-0">
-              Featured
-            </span>
-          )}
-        </div>
-        <p className="text-xs text-secondary-text truncate leading-snug mt-0.5">
+      {/* Description */}
+      <div className="w-full md:w-1/3 mb-4 md:mb-0">
+        <p className="text-sm text-slate-500 font-medium line-clamp-2 leading-relaxed">
           {tool.description}
         </p>
       </div>
 
-      {/* Category pill */}
-      <span className={`hidden sm:inline-block text-[9px] font-mono font-bold uppercase tracking-wider px-2 py-1 border flex-shrink-0 ${getCategoryColor(tool.category)}`}>
-        {tool.category}
-      </span>
-
-      {/* Date */}
-      <span className="hidden md:inline-block text-[10px] font-mono text-secondary-text flex-shrink-0 w-16 text-right">
-        {formatDate(tool.dateAdded)}
-      </span>
-
-      {/* Arrow */}
-      <ArrowRight className="w-3.5 h-3.5 text-gray-300 group-hover:text-[#ff00ff] transition-colors flex-shrink-0 group-hover:translate-x-0.5 transition-transform" />
-    </div>
-  );
-}
-
-// Mosaic View Component
-function ToolMosaic({ tools, allTools, onSelectTool, selectedCategory, selectedPrice }: {
-  tools: AiTool[];
-  allTools: AiTool[];
-  onSelectTool: (tool: AiTool) => void;
-  selectedCategory: string;
-  selectedPrice: string;
-}) {
-  const [hoveredTool, setHoveredTool] = useState<AiTool | null>(null);
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-
-  const handleMouseMove = (e: React.MouseEvent) => {
-    setMousePos({ x: e.clientX, y: e.clientY });
-  };
-
-  // Group all tools by category for neighborhood clustering
-  const toolNeighborhoods = useMemo(() => {
-    const map = new Map<string, AiTool[]>();
-    allTools.forEach(t => {
-      if (!map.has(t.category)) map.set(t.category, []);
-      map.get(t.category)!.push(t);
-    });
-    return Array.from(map.entries());
-  }, [allTools]);
-
-  const getNeighborhoodGlow = (cat: string) => {
-    const c = cat.toLowerCase();
-    if (c.includes('video') || c.includes('audio')) return 'from-red-500/5 to-transparent';
-    if (c.includes('productivity')) return 'from-blue-500/5 to-transparent';
-    if (c.includes('image')) return 'from-purple-500/5 to-transparent';
-    if (c.includes('copywriting') || c.includes('content')) return 'from-orange-500/5 to-transparent';
-    if (c.includes('marketing')) return 'from-green-500/5 to-transparent';
-    if (c.includes('code')) return 'from-yellow-500/5 to-transparent';
-    return 'from-gray-500/5 to-transparent';
-  };
-
-  return (
-    <div
-      className="relative border-4 border-accent-dark bg-white p-2 select-none cursor-crosshair shadow-brutalist overflow-hidden"
-      onMouseMove={handleMouseMove}
-      onMouseLeave={() => setHoveredTool(null)}
-    >
-      <div className="flex flex-col gap-8">
-        {toolNeighborhoods.map(([category, neighborhoodTools]) => {
-          // Check if this neighborhood has any matches for current filters
-          const hasMatches = neighborhoodTools.some(nt => tools.some(t => t.name === nt.name));
-          if (selectedCategory !== 'All' && category !== selectedCategory) return null;
-
-          return (
-            <div key={category} className={`relative p-4 border-2 border-dashed border-gray-100 bg-gradient-to-br ${getNeighborhoodGlow(category)} transition-opacity duration-500 ${!hasMatches ? 'opacity-30 grayscale' : 'opacity-100'}`}>
-              {/* Ghost Watermark */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[80px] md:text-[120px] font-display font-black uppercase text-gray-500 opacity-[0.03] whitespace-nowrap pointer-events-none select-none tracking-tighter">
-                {category}
-              </div>
-
-              <div className="relative z-10 grid grid-cols-[repeat(auto-fill,minmax(40px,1fr))] md:grid-cols-[repeat(auto-fill,minmax(52px,1fr))] gap-px bg-gray-100 shadow-sm border border-gray-100">
-                {neighborhoodTools.map((tool, i) => {
-                  const isMatch = tools.some(t => t.name === tool.name);
-                  // Make featured tools larger (2x2)
-                  const isLarge = tool.featured || i === 0;
-
-                  return (
-                    <MosaicCell
-                      key={tool.name + i}
-                      tool={tool}
-                      isMatch={isMatch}
-                      isLarge={isLarge}
-                      onHover={setHoveredTool}
-                      onClick={() => onSelectTool(tool)}
-                    />
-                  );
-                })}
-              </div>
+      {/* Human / Maker Block */}
+      <div className="w-full md:w-1/5 mb-4 md:mb-0">
+        {tool.maker ? (
+          <div className="flex items-center gap-3 bg-slate-50 p-2 rounded-xl border border-transparent group-hover:border-slate-200 transition-all">
+            <div className="w-8 h-8 rounded-full overflow-hidden border-2 border-white flex-shrink-0 shadow-sm">
+              <img 
+                src={tool.maker.image} 
+                alt={tool.maker.name} 
+                className="w-full h-full object-cover"
+              />
             </div>
-          );
-        })}
-      </div>
-
-      {/* "Radar" Tooltip */}
-      {hoveredTool && (
-        <div
-          className="fixed z-[100] pointer-events-none transform -translate-x-1/2 -translate-y-[calc(100%+20px)] transition-transform duration-75"
-          style={{ left: mousePos.x, top: mousePos.y }}
-        >
-          <div className="bg-accent-dark text-white px-4 py-3 border-2 border-white shadow-brutalist max-w-[280px]">
-            <div className="flex items-center justify-between gap-4 mb-2">
-              <div className="text-[10px] font-mono font-bold uppercase tracking-widest text-terminal-green">
-                {hoveredTool.category}
-              </div>
-              <div className="text-[9px] font-mono font-bold uppercase text-gray-400">
-                {hoveredTool.tags.price}
-              </div>
+            <div className="min-w-0">
+              <div className="text-[10px] font-bold uppercase tracking-widest text-slate-400 leading-none mb-1">Maker</div>
+              <div className="text-xs font-bold text-slate-900 truncate">{tool.maker.name}</div>
             </div>
-            <div className="text-base font-display font-black uppercase tracking-tight mb-1">
-              {hoveredTool.name}
-            </div>
-            <p className="text-[11px] text-gray-300 leading-tight font-sans italic">
-              "{hoveredTool.description}"
-            </p>
           </div>
-          {/* Arrow */}
-          <div className="w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-t-[8px] border-t-accent-dark mx-auto" />
-        </div>
-      )}
-
-      {/* Mosaic Header Stats */}
-      <div className="absolute top-2 right-4 pointer-events-none hidden md:block">
-        <span className="text-[10px] font-mono font-bold uppercase text-gray-400 tracking-widest">
-          Neighborhood Bento v1.0 // {allTools.length} Tools Indexed
-          {(selectedCategory !== 'All' || selectedPrice !== 'All') && (
-            <span className="text-terminal-green ml-2">
-              // Filtering: {tools.length} Results
-            </span>
-          )}
-        </span>
-      </div>
-    </div>
-  );
-}
-
-function MosaicCell({ tool, isMatch, isLarge, onHover, onClick }: {
-  tool: AiTool;
-  isMatch: boolean;
-  isLarge: boolean;
-  onHover: (t: AiTool | null) => void;
-  onClick: () => void;
-}) {
-  const getHostname = (href: string) => {
-    try { return new URL(href).hostname; } catch { return ''; }
-  };
-  const hostname = getHostname(tool.url);
-  const fallbackLogo = `https://www.google.com/s2/favicons?domain=${hostname}&sz=128`;
-  const [imgSrc, setImgSrc] = useState(tool.image || fallbackLogo);
-
-  return (
-    <div
-      className={`aspect-square bg-white border border-gray-100 flex items-center justify-center p-2 group transition-all duration-300 hover:z-10 hover:shadow-xl hover:scale-110 cursor-pointer 
-      ${isLarge ? 'col-span-2 row-span-2' : ''} 
-      ${!isMatch ? 'opacity-20 grayscale' : 'opacity-100'}`}
-      onMouseEnter={() => onHover(tool)}
-      onClick={onClick}
-    >
-      <div className={`relative w-full h-full transition-all duration-300 ${isMatch ? 'filter grayscale group-hover:grayscale-0' : 'filter grayscale'}`}>
-        <Image
-          src={imgSrc}
-          alt={tool.name}
-          fill
-          className="object-contain"
-          onError={() => setImgSrc(fallbackLogo)}
-          unoptimized
-        />
-        {isLarge && isMatch && (
-          <div className="absolute -bottom-1 -left-1 bg-accent-dark text-white text-[8px] font-mono font-bold uppercase px-1.5 py-0.5 tracking-tighter opacity-0 group-hover:opacity-100 transition-opacity">
-            {tool.name}
-          </div>
+        ) : (
+          <div className="hidden md:block h-10"></div>
         )}
+      </div>
+
+      {/* Metadata - Desktop Only */}
+      <div className="hidden md:flex items-center gap-6 w-1/6 justify-end pr-4">
+        <div className="flex flex-col items-end">
+          <span className="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-1">Pricing</span>
+          <span className="text-xs font-bold text-slate-900">{tool.tags.price}</span>
+        </div>
+      </div>
+
+      {/* Action */}
+      <div className="w-full md:w-auto flex justify-end">
+        <button className="flex items-center gap-2 px-5 py-2.5 bg-white border border-slate-200 rounded-xl text-xs font-bold uppercase tracking-widest text-slate-900 hover:bg-slate-900 hover:text-white hover:border-slate-900 transition-all shadow-sm group-hover:shadow-md">
+          Details <ArrowRight className="w-3.5 h-3.5" />
+        </button>
       </div>
     </div>
   );

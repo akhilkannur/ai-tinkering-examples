@@ -11,6 +11,12 @@ export interface AiTool {
   image: string;
   dateAdded: string;
   featured?: boolean;
+  maker?: {
+    name: string;
+    image: string;
+    role?: string;
+    twitter?: string;
+  };
 }
 
 export const aiTools: AiTool[] = [
@@ -38,7 +44,13 @@ export const aiTools: AiTool[] = [
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=www.overvisual.com&sz=128",
-    dateAdded: "2026-03-31"
+    dateAdded: "2026-03-31",
+    maker: {
+        name: "Ignas Sinkevičius",
+        role: "Indie Maker",
+        twitter: "ignassinkevicius",
+        image: "https://unavatar.io/twitter/ignassinkevicius"
+    }
 },
   {
     name: "ChattyFit",
@@ -51,7 +63,13 @@ export const aiTools: AiTool[] = [
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=chatty.fit&sz=128",
-    dateAdded: "2026-04-01"
+    dateAdded: "2026-04-01",
+    maker: {
+        name: "Vladimir Brejcha",
+        role: "iOS Developer",
+        twitter: "vladbrejcha",
+        image: "https://unavatar.io/twitter/vladbrejcha"
+    }
 },
   {
     name: "SlideWhisper",
@@ -64,7 +82,13 @@ export const aiTools: AiTool[] = [
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=www.slidewhisper.com&sz=128",
-    dateAdded: "2026-04-02"
+    dateAdded: "2026-04-02",
+    maker: {
+        name: "Stanislav Sedov",
+        role: "Software Engineer",
+        twitter: "stanislavsedov",
+        image: "https://unavatar.io/twitter/stanislavsedov"
+    }
 },
   {
     name: "imejis.io",
@@ -77,7 +101,13 @@ export const aiTools: AiTool[] = [
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=www.imejis.io&sz=128",
-    dateAdded: "2026-04-03"
+    dateAdded: "2026-04-03",
+    maker: {
+        name: "Dharmik Jagodana",
+        role: "CTO & Maker",
+        twitter: "dharmikjagodana",
+        image: "https://unavatar.io/twitter/dharmikjagodana"
+    }
 },
   {
     name: "Email Ferret",
@@ -116,7 +146,13 @@ export const aiTools: AiTool[] = [
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=hypnotype.app&sz=128",
-    dateAdded: "2026-04-01"
+    dateAdded: "2026-04-01",
+    maker: {
+        name: "Fabien Boco",
+        role: "AI Developer",
+        twitter: "valtiel",
+        image: "https://unavatar.io/twitter/valtiel"
+    }
 },
   {
     name: "Computer Keyboard Shortcuts",
