@@ -35,7 +35,33 @@ const nextConfig = {
   },
   
   async headers() {
+    const noindexHeader = [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }];
+    const deprecatedSections = [
+      '/skills/:path*',
+      '/skills',
+      '/how-to/:path*',
+      '/how-to',
+      '/generators/:path*',
+      '/generators',
+      '/playbook/:path*',
+      '/playbook',
+      '/ideas/:path*',
+      '/ideas',
+      '/500-ways-to-use-llms-for-work',
+      '/ai-workplace-quiz',
+      '/ai-workplace-personality',
+      '/build-club',
+      '/prompt-bundle',
+      '/context',
+      '/investors',
+      '/jobs',
+      '/learn-ai',
+      '/ideas-database',
+      '/role/:path*',
+    ];
+
     return [
+      ...deprecatedSections.map((source) => ({ source, headers: noindexHeader })),
       {
         source: '/:path*',
         headers: [
@@ -63,6 +89,145 @@ const nextConfig = {
 
   async redirects() {
     return [
+      // === Catch-all 301s for ALL deprecated sections ===
+      // These redirect everything to homepage — strongest de-index signal
+      {
+        source: '/skills/:path*',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/skills',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/how-to/:path*',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/how-to',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/generators/:path*',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/generators',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/playbook/:path*',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/playbook',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/ideas/:path*',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/ideas',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/blueprints/:path*',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/blueprints',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/role/:path*',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/ai-examples/:path*',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/example/:path*',
+        destination: '/',
+        permanent: true,
+      },
+      // Deprecated standalone pages → homepage
+      {
+        source: '/500-ways-to-use-llms-for-work',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/ai-workplace-quiz',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/ai-workplace-personality',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/build-club',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/prompt-bundle',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/context',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/investors',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/jobs',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/learn-ai',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/ideas-database',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/skill-architect',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/stacks',
+        destination: '/',
+        permanent: true,
+      },
+      // === Kept redirects (still valid) ===
       {
         source: '/index',
         destination: '/',
@@ -75,84 +240,12 @@ const nextConfig = {
       },
       {
         source: '/build',
-        destination: '/build-club',
-        permanent: true,
-      },
-      {
-        source: '/example/:path*',
         destination: '/',
         permanent: true,
       },
-      {
-        source: '/skills/partner-program-hunter',
-        destination: '/skills/integration-partner-finder',
-        permanent: true,
-      },
-      {
-        source: '/how-to/automate-partner-program-hunter',
-        destination: '/how-to/automate-integration-partner-finder',
-        permanent: true,
-      },
-      {
-        source: '/how-to/automate-partner-hunter',
-        destination: '/how-to/automate-integration-partner-finder',
-        permanent: true,
-      },
-      {
-        source: '/blueprints/partner-hunter',
-        destination: '/skills/integration-partner-finder',
-        permanent: true,
-      },
-      {
-        source: '/how-to/automate-comp-plan-simulator',
-        destination: '/',
-        permanent: true,
-      },
-      {
-        source: '/skills/review-to-ad',
-        destination: '/skills/review-to-ad-machine',
-        permanent: true,
-      },
-      {
-        source: '/how-to/automate-review-to-ad',
-        destination: '/how-to/automate-review-to-ad-machine',
-        permanent: true,
-      },
-      {
-        source: '/blueprints/review-to-ad',
-        destination: '/skills/review-to-ad-machine',
-        permanent: true,
-      },
-      // 1. Legacy Blueprint Migration (/ai-examples -> /skills)
-      {
-        source: '/ai-examples/:id',
-        destination: '/skills/:id',
-        permanent: true,
-      },
-      // 2. Catch literal code leaks (Google crawling raw dynamic filenames)
       {
         source: '/tools/[slug]',
         destination: '/tools',
-        permanent: true,
-      },
-      {
-        source: '/role/[slug]',
-        destination: '/skills',
-        permanent: true,
-      },
-      {
-        source: '/blueprints/[id]',
-        destination: '/skills',
-        permanent: true,
-      },
-      {
-        source: '/playbook',
-        destination: '/',
-        permanent: true,
-      },
-      {
-        source: '/generators',
-        destination: '/',
         permanent: true,
       },
       {
@@ -160,45 +253,9 @@ const nextConfig = {
         destination: '/tools',
         permanent: true,
       },
-      // 3. Old directory structure cleanup
       {
-        source: '/blueprints',
-        destination: '/',
-        permanent: true,
-      },
-      {
-        source: '/skills',
-        destination: '/',
-        permanent: true,
-      },
-      {
-        source: '/blueprints/:id',
-        destination: '/skills/:id',
-        permanent: true,
-      },
-      {
-        source: '/blueprints/category/:categorySlug',
-        destination: '/skills/category/:categorySlug',
-        permanent: true,
-      },
-      {
-        source: '/role/:categorySlug',
-        destination: '/skills/category/:categorySlug',
-        permanent: true,
-      },
-      {
-        source: '/ai-examples/category/building-apps',
-        destination: '/tools/for-developers',
-        permanent: true,
-      },
-      {
-        source: '/ai-examples/category/design',
-        destination: '/tools/for-content-creators',
-        permanent: true,
-      },
-      {
-        source: '/ai-examples/category/productivity',
-        destination: '/',
+        source: '/tools/for/:path*',
+        destination: '/tools',
         permanent: true,
       },
     ]

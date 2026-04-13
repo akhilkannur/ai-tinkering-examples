@@ -1,41 +1,18 @@
 # Real AI Examples - Robots.txt
+# Strategy: Allow crawling everywhere so Google can discover noindex meta tags
+# on deprecated pages and de-index them. Disallow blocks crawling, which
+# PREVENTS Google from seeing noindex, keeping pages indexed forever.
 
 User-agent: *
 Allow: /
 
-# Sitemap location
-Sitemap: https://realaiexamples.com/sitemap.xml
-
-# Disallow debug and admin pages
-Disallow: /debug
+# Only block truly private/API paths
 Disallow: /api/
 Allow: /api/og
-
-# Allow core pages
-Allow: /ai-examples/
-Allow: /ai-examples/category/
-Allow: /ai-examples/tag/
-Allow: /tools/
-Allow: /blog/
-
-# Block dead/removed sections
-Disallow: /skills/
-Disallow: /ideas/
-Disallow: /how-to/
-Disallow: /generators/
-Disallow: /playbook/
-Disallow: /500-ways-to-use-llms-for-work
-Disallow: /ai-workplace-quiz
-Disallow: /ai-workplace-personality
-Disallow: /build-club
-Disallow: /prompt-bundle
-Disallow: /context
-Disallow: /investors
-Disallow: /jobs
-Disallow: /learn-ai
-Disallow: /skill-architect
-Disallow: /stacks
-Disallow: /ideas-database
+Disallow: /debug
 
 # Crawl delay
 Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://realaiexamples.com/sitemap.xml
