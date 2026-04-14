@@ -83,7 +83,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="apple-touch-icon" sizes="180x180" href={`${baseUrl}/favicon_transparent.png`} />
       </Head>
       <Component {...pageProps} />
-      {router.pathname !== '/' && router.pathname !== '/tools' && <Footer />}
+      {router.pathname !== '/' && router.pathname !== '/tools' && router.pathname !== '/blueprint-tools' && <Footer />}
       <NewsletterPopup />
       <NewsletterToast />
       
