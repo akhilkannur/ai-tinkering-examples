@@ -234,6 +234,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/blueprint-tools',
+        destination: '/blueprint-tools',
+        permanent: false, // This is just a dummy to ensure Next doesn't treat it as part of a wildcard elsewhere if needed, but normally not needed.
+      },
+      {
         source: '/setup',
         destination: '/agent-setup-service',
         permanent: true,
