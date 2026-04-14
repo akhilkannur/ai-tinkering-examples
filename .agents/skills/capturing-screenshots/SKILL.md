@@ -51,7 +51,7 @@ node .agents/skills/capturing-screenshots/scripts/capture.js "https://x.com/user
 | `--output` | `-o` | `public/screenshots/<auto>.png` | Output file path |
 | `--selector` | `-s` | Auto-detected | CSS selector of element to capture |
 | `--full-page` | | false | Capture entire page instead of element |
-| `--padding` | | 24 | Padding (px) around the captured element |
+| `--padding` | | 40 | Padding (px) around the captured element |
 | `--width` | | 1280 | Viewport width in pixels |
 | `--scale` | | 2 | Device scale factor (2 = retina) |
 | `--format` | | png | Output format: `png`, `jpeg`, `webp` |

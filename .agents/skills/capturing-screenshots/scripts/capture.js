@@ -57,7 +57,7 @@ function getOption(flag, fallback) {
 const customSelector = getOption('--selector') || getOption('-s');
 const outputPath = getOption('--output') || getOption('-o');
 const fullPage = getFlag('--full-page');
-const padding = parseInt(getOption('--padding', '24'), 10);
+const padding = parseInt(getOption('--padding', '40'), 10);
 const viewportWidth = parseInt(getOption('--width', '1280'), 10);
 const scaleFactor = parseInt(getOption('--scale', '2'), 10);
 const format = getOption('--format', 'png');
