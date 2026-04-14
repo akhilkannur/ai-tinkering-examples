@@ -86,10 +86,15 @@ export default function ToolsIndex() {
   }, []);
 
   return (
-    <div className="flex flex-col min-h-screen bg-white font-sans text-slate-900 selection:bg-[#ff00ff] selection:text-white">
+    <div className="flex flex-col min-h-screen bg-[#F9F8F6] font-sans text-slate-900 selection:bg-[#ff00ff] selection:text-white">
       <Head>
         <title>AI Tools Directory — {aiTools.length} Curated Tools | Real AI Examples</title>
         <meta name="description" content={`Browse ${aiTools.length} curated AI tools — filtered by category and price. Updated weekly.`} key="description" />
+        <style>{`
+          .serif-title {
+            font-family: 'Cormorant Garamond', serif;
+          }
+        `}</style>
       </Head>
 
       <Navbar />
@@ -98,7 +103,7 @@ export default function ToolsIndex() {
         
         {/* Hero - DistributionKit Style */}
         <div className="max-w-5xl mx-auto text-center mb-12 md:mb-20">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-slate-50 border border-slate-200 rounded-full mb-6">
+          <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/50 border border-slate-200 rounded-full mb-6">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
@@ -117,7 +122,7 @@ export default function ToolsIndex() {
         </div>
 
         {/* Search & Filters */}
-        <div className="max-w-7xl mx-auto mb-8 sticky top-[72px] z-40 bg-white/80 backdrop-blur-md py-4 border-b border-slate-100">
+        <div className="max-w-7xl mx-auto mb-8 sticky top-[72px] z-40 bg-[#F9F8F6]/80 backdrop-blur-md py-4 border-b border-slate-200/50">
           <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
             
             {/* Horizontal Pill Filters */}
@@ -145,7 +150,7 @@ export default function ToolsIndex() {
                 placeholder="Search tools..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 bg-slate-50 border-2 border-slate-200 rounded-xl text-sm font-medium focus:outline-none focus:border-slate-900 transition-colors"
+                className="w-full pl-10 pr-4 py-2 bg-white border-2 border-slate-200 rounded-xl text-sm font-medium focus:outline-none focus:border-slate-900 transition-colors"
               />
             </div>
           </div>
@@ -171,14 +176,14 @@ export default function ToolsIndex() {
                 {visibleGroups.map((group) => (
                   <div key={group.label} className="mb-12">
                     <div className="flex items-center justify-between border-b border-slate-200 pb-2 mb-4">
-                      <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">
+                      <h2 className="serif-title text-xl font-bold italic tracking-tight text-slate-800">
                         {group.label}
                       </h2>
-                      <span className="text-[10px] font-bold text-slate-300">
+                      <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">
                         {group.tools.length} TOOLS
                       </span>
                     </div>
-                    <div className="divide-y divide-slate-50">
+                    <div className="divide-y divide-slate-200/50">
                       {group.tools.map((tool) => (
                         <ToolDataRow 
                           key={tool.name} 
@@ -310,7 +315,7 @@ function ToolDataRow({ tool, onClick }: { tool: AiTool; onClick: () => void }) {
           />
         </div>
         <div className="min-w-0">
-          <h3 className="font-display font-black uppercase text-lg leading-tight group-hover:text-[#ff00ff] transition-colors truncate">
+          <h3 className="serif-title text-xl font-bold italic leading-tight group-hover:text-[#ff00ff] transition-colors truncate">
             {tool.name}
           </h3>
           <div className="flex items-center gap-2 mt-1">
