@@ -1,80 +1,60 @@
-import React, { useState, useMemo, useRef, useEffect } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { aiTools, AiTool } from '../lib/ai-tools-data';
-import { motion, useMotionValue, useTransform } from 'framer-motion';
-import { ArrowUpRight, Maximize2, Minimize2, Move, Zap, Activity } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  ArrowUpRight, 
+  Map as MapIcon, 
+  Coffee, 
+  Video, 
+  PenTool, 
+  Terminal, 
+  Camera, 
+  Users, 
+  Search,
+  BookOpen,
+  Anchor,
+  Compass
+} from 'lucide-react';
 
-const TE_ORANGE = "#FF4F00";
-const TE_BLACK = "#121212";
-const TE_GRAY = "#F0F0F0";
-const TE_BONE = "#E8E8E1";
+const COLORS = {
+  bg: "#FDF8F1", // Warm Cream Paper
+  mustard: "#E1AD01",
+  sage: "#93A891",
+  terracotta: "#CD5C5C",
+  palePink: "#F2D2BD",
+  dustyBlue: "#7A8FA1",
+  text: "#3A3A3A"
+};
 
-// Isometric helper component for a "Room"
-const IsoRoom = ({ category, tools, color, x, y, id, active, onSelect }: any) => {
-  return (
-    <motion.div 
-      id={id}
-      initial={{ opacity: 0, scale: 0.9 }}
-      animate={{ opacity: 1, scale: 1 }}
-      style={{ 
-        position: 'absolute', 
-        left: x, 
-        top: y,
-        cursor: 'pointer'
-      }}
-      onClick={onSelect}
-      className="group"
-    >
-      {/* ISOMETRIC ROOM BASE */}
-      <div className="relative">
-        {/* ROOM TOP / FLOOR */}
-        <div 
-          className={`w-[350px] h-[350px] border-2 border-black transition-all duration-300 flex flex-col p-6 overflow-hidden ${active ? 'bg-white shadow-[12px_12px_0px_#FF4F00]' : 'bg-[#E8E8E1] hover:bg-white shadow-[8px_8px_0px_rgba(0,0,0,1)]'}`}
-          style={{ transform: 'rotateX(55deg) rotateZ(-45deg)', transformStyle: 'preserve-3d' }}
-        >
-            <div className="flex justify-between items-start mb-6">
-                <div className="bg-black text-white px-2 py-1 text-[10px] font-bold uppercase tracking-widest">{id.toUpperCase()}</div>
-                <Activity className={`w-4 h-4 ${active ? 'text-[#FF4F00]' : 'text-gray-400'}`} />
-            </div>
-            
-            <h2 className="text-2xl font-black uppercase tracking-tighter mb-4 leading-none">{category}</h2>
-            
-            {/* TOOL MODULES INSIDE ROOM */}
-            <div className="grid grid-cols-2 gap-2 mt-4">
-                {tools.slice(0, 8).map((tool: any) => (
-                    <div key={tool.name} className="flex items-center space-x-2 border border-black/10 p-2 bg-white/50 text-[9px] font-bold uppercase truncate">
-                        <div className={`w-1.5 h-1.5 rounded-full ${active ? 'bg-[#FF4F00] animate-pulse' : 'bg-gray-300'}`}></div>
-                        <span className="truncate">{tool.name}</span>
-                    </div>
-                ))}
-            </div>
+const categoryIcons: Record<string, any> = {
+  "Video & Audio": Video,
+  "Productivity": Coffee,
+  "Image Generation": Camera,
+  "Writing & Content": PenTool,
+  "Development": Terminal,
+  "Marketing & Sales": Users,
+  "Research": BookOpen,
+  "Data & Analytics": Compass,
+  "Design": Anchor
+};
 
-            {/* DECORATIVE "CIRCUIT" LINES */}
-            <div className="absolute bottom-4 right-4 flex space-x-1">
-                {[...Array(5)].map((_, i) => (
-                    <div key={i} className="w-1 h-4 bg-black/5"></div>
-                ))}
-            </div>
-        </div>
+const categoryColors: Record<string, string> = {
+  "Video & Audio": COLORS.terracotta,
+  "Productivity": COLORS.mustard,
+  "Image Generation": COLORS.dustyBlue,
+  "Writing & Content": COLORS.sage,
+  "Development": COLORS.text,
+  "Marketing & Sales": COLORS.palePink,
+  "Research": COLORS.sage,
+  "Data & Analytics": COLORS.mustard,
+  "Design": COLORS.dustyBlue
+};
 
-        {/* ROOM SIDE WALLS (FOR DEPTH) */}
-        <div className="absolute top-[175px] left-[175px] w-full h-full pointer-events-none opacity-20">
-            {/* Visual depth elements could go here */}
-        </div>
-      </div>
-    </motion.div>
-  )
-}
-
-export default function WorkspaceMap() {
+export default function WesAndersonOffice() {
   const [activeDept, setActiveDept] = useState<string | null>(null);
-  const [zoom, setZoom] = useState(1);
-  const mapRef = useRef<HTMLDivElement>(null);
-  
-  // Motion values for dragging
-  const x = useMotionValue(0);
-  const y = useMotionValue(0);
+  const [isZoomed, setIsZoomed] = useState(false);
 
   const categories = useMemo(() => {
     return Array.from(new Set(aiTools.map(t => t.category))).sort();
@@ -88,184 +68,157 @@ export default function WorkspaceMap() {
     return map;
   }, [categories]);
 
-  // Spatial arrangement for the departments
-  const roomPositions = useMemo(() => {
-    const positions: any[] = [];
-    const radius = 600;
-    categories.forEach((cat, i) => {
-        const angle = (i / categories.length) * Math.PI * 2;
-        positions.push({
-            id: `unit-${i+1}`,
-            category: cat,
-            x: Math.cos(angle) * radius + 500,
-            y: Math.sin(angle) * radius + 300,
-        });
-    });
-    return positions;
-  }, [categories]);
+  const scrollToRoom = (cat: string) => {
+    const el = document.getElementById(`room-${cat.replace(/\s+/g, '-')}`);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      setActiveDept(cat);
+      setIsZoomed(true);
+    }
+  };
 
   return (
-    <div className="fixed inset-0 bg-[#DEDEDE] overflow-hidden font-mono select-none">
+    <div className="min-h-screen bg-[#FDF8F1] font-sans text-[#3A3A3A] selection:bg-[#E1AD01] selection:text-white overflow-x-hidden">
       <Head>
-        <title>WORKSPACE_01 // TE PROTOCOL</title>
+        <title>THE DIRECTORY // A WES ANDERSON PRODUCTION</title>
         <style>{`
-          .map-grid {
-            background-image: 
-                linear-gradient(to right, #ccc 1px, transparent 1px),
-                linear-gradient(to bottom, #ccc 1px, transparent 1px);
-            background-size: 50px 50px;
+          @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400;1,700&family=Outfit:wght@300;400;600&display=swap');
+          
+          .paper-texture {
+            background-image: url("https://www.transparenttextures.com/patterns/handmade-paper.png");
+            opacity: 0.15;
+            pointer-events: none;
           }
-          .te-lcd {
-            font-family: 'JetBrains Mono', monospace;
-            text-shadow: 0 0 5px rgba(255, 79, 0, 0.2);
+          
+          .serif-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
           }
-          .analog-knob {
-            background: conic-gradient(from 0deg, #333 0%, #111 45%, #444 50%, #111 55%, #333 100%);
-            box-shadow: inset 0 2px 4px rgba(255,255,255,0.1), 0 4px 8px rgba(0,0,0,0.4);
+
+          .room-border {
+             border: 4px solid #3A3A3A;
+             box-shadow: 8px 8px 0px rgba(0,0,0,0.05);
+          }
+          
+          .room-label {
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+          }
+
+          /* Symmetry Helper */
+          .office-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+          }
+
+          @media (max-width: 768px) {
+            .office-grid {
+              grid-template-columns: 1fr;
+            }
           }
         `}</style>
       </Head>
 
-      {/* DRAGGABLE CANVAS */}
-      <motion.div 
-        drag
-        dragConstraints={{ left: -2000, right: 2000, top: -2000, bottom: 2000 }}
-        style={{ x, y, scale: zoom }}
-        className="absolute inset-0 w-[5000px] h-[5000px] map-grid flex items-center justify-center pointer-events-auto"
-      >
-        <div className="relative w-full h-full">
-            {/* CENTER CORE */}
-            <div className="absolute left-[2500px] top-[2500px] -translate-x-1/2 -translate-y-1/2">
-                <div className="w-64 h-64 border-[10px] border-black rounded-full flex items-center justify-center opacity-10">
-                    <span className="text-4xl font-black italic tracking-tighter">CENTRAL_CORE</span>
-                </div>
-                {/* CONNECTING TRACES */}
-                {roomPositions.map((pos, i) => (
-                    <div 
-                        key={i} 
-                        className="absolute h-px bg-black/10 origin-left"
-                        style={{ 
-                            width: 600, 
-                            left: 0, 
-                            top: 0, 
-                            transform: `rotate(${(i / categories.length) * 360}deg)` 
-                        }}
-                    ></div>
-                ))}
-            </div>
+      <div className="fixed inset-0 paper-texture z-50"></div>
 
-            {/* ROOMS / DEPARTMENTS */}
-            <div className="absolute left-[2000px] top-[2200px]">
-                {roomPositions.map((pos) => (
-                    <IsoRoom 
-                        key={pos.id}
-                        id={pos.id}
-                        category={pos.category}
-                        tools={categorizedTools[pos.category]}
-                        x={pos.x}
-                        y={pos.y}
-                        active={activeDept === pos.id}
-                        onSelect={() => setActiveDept(pos.id)}
-                    />
-                ))}
-            </div>
+      {/* TOP NAV - GRAND HOTEL STYLE */}
+      <header className="fixed top-0 left-0 right-0 h-24 bg-[#FDF8F1] border-b-2 border-[#3A3A3A] flex flex-col items-center justify-center z-40 px-10">
+        <h1 className="serif-title text-4xl font-bold tracking-tight">The Curated Archive of Artificial Intelligence</h1>
+        <div className="flex space-x-8 mt-2 text-[10px] room-label font-bold text-gray-400">
+            <span>OFFICE FLOOR PLAN v.26</span>
+            <span>EST. 2024</span>
+            <Link href="/tools" className="text-[#3A3A3A] hover:text-[#E1AD01] border-b border-black">Exit to standard view</Link>
         </div>
-      </motion.div>
+      </header>
 
-      {/* OVERLAY: CONTROL PANEL (THE "REMOTE") */}
-      <div className="fixed bottom-10 right-10 w-80 bg-[#1A1A1A] border-4 border-black p-6 text-white shadow-[12px_12px_0px_rgba(0,0,0,1)] z-50">
-        <div className="flex justify-between items-center mb-6 pb-4 border-b border-white/10">
-            <div className="flex flex-col">
-                <span className="text-[9px] text-gray-500 uppercase tracking-widest">NAV_CONROLLER</span>
-                <span className="text-sm font-bold uppercase tracking-tight">System v1.04</span>
-            </div>
-            <div className="w-3 h-3 bg-[#FF4F00] rounded-full animate-pulse"></div>
-        </div>
-
-        {/* ANALOG KNOB (ZOOM) */}
-        <div className="flex items-center justify-between mb-8">
-            <div className="flex flex-col">
-                <span className="text-[10px] font-bold text-gray-400 mb-2 uppercase">Scale_Multiplier</span>
-                <div className="flex space-x-2">
-                    <button onClick={() => setZoom(z => Math.max(0.5, z - 0.1))} className="w-8 h-8 bg-black border border-white/20 flex items-center justify-center hover:bg-[#FF4F00]"><Minimize2 className="w-4 h-4"/></button>
-                    <button onClick={() => setZoom(z => Math.min(2, z + 0.1))} className="w-8 h-8 bg-black border border-white/20 flex items-center justify-center hover:bg-[#FF4F00]"><Maximize2 className="w-4 h-4"/></button>
-                </div>
-            </div>
-            <div className="analog-knob w-16 h-16 rounded-full border-4 border-black relative">
-                <div className="absolute top-2 left-1/2 -translate-x-1/2 w-1.5 h-3 bg-white/20 rounded-full" style={{ transform: `rotate(${(zoom - 1) * 180}deg)`, transformOrigin: 'bottom center' }}></div>
-            </div>
-        </div>
-
-        {/* ACTIVE MODULE INFO */}
-        <div className="bg-black/50 border border-white/10 p-4 mb-6 min-h-[100px] te-lcd">
-            {activeDept ? (
-                <div>
-                    <span className="text-[9px] text-[#FF4F00] font-bold block mb-1">SELECTED_UNIT: {activeDept.toUpperCase()}</span>
-                    <h3 className="text-lg font-black uppercase tracking-tight mb-2">{roomPositions.find(r => r.id === activeDept)?.category}</h3>
-                    <p className="text-[9px] text-gray-400 leading-tight uppercase">Ready for deployment. All assets verified. Select tool module within room to execute link.</p>
-                </div>
-            ) : (
-                <div className="flex flex-col items-center justify-center h-12 text-gray-600 italic text-[10px]">
-                    <Move className="w-4 h-4 mb-2 animate-bounce" />
-                    DRAG MAP TO EXPLORE
-                </div>
-            )}
-        </div>
-
-        {/* ACTION BUTTONS */}
-        <div className="grid grid-cols-2 gap-2">
-            <Link href="/tools" className="bg-[#E8E8E1] text-black text-[10px] font-bold py-2 px-4 text-center uppercase hover:bg-white transition-colors">List_View</Link>
-            <button onClick={() => { x.set(0); y.set(0); setZoom(1); }} className="bg-[#FF4F00] text-white text-[10px] font-bold py-2 px-4 text-center uppercase hover:bg-orange-600 transition-colors">Reset_Pos</button>
-        </div>
-      </div>
-
-      {/* TOP HUD */}
-      <div className="fixed top-8 left-8 right-8 flex justify-between items-start pointer-events-none z-50">
-        <div className="bg-black text-white px-4 py-2 pointer-events-auto border-2 border-black flex items-center space-x-4 shadow-[4px_4px_0px_rgba(0,0,0,1)]">
-            <div className="w-4 h-4 bg-white flex items-center justify-center text-black font-black text-[10px]">RE</div>
-            <span className="text-[11px] font-black uppercase tracking-widest">Station: Office Floor Plan</span>
-        </div>
+      <main className="pt-40 pb-40 px-6 md:px-20 relative">
         
-        <div className="bg-white border-2 border-black p-2 pointer-events-auto shadow-[4px_4px_0px_rgba(0,0,0,1)]">
-            <div className="flex items-center space-x-3 text-[10px] font-bold uppercase tracking-widest">
-                <span className="text-gray-400">FPS: 60.0</span>
-                <span className="w-px h-3 bg-gray-200"></span>
-                <span className="text-[#FF4F00]">Signal: Optimal</span>
-            </div>
-        </div>
-      </div>
-
-      {/* FULLSCREEN OVERLAY TOOLS LIST (FOR QUICK ACCESS) */}
-      {activeDept && (
-        <motion.div 
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            className="fixed top-24 right-10 bottom-[400px] w-80 bg-white border-4 border-black p-6 overflow-y-auto shadow-[12px_12px_0px_#FF4F00] z-40"
-        >
-            <div className="flex justify-between items-center mb-6 border-b-2 border-black pb-2">
-                <h3 className="text-xs font-black uppercase">Asset_Inventory</h3>
-                <button onClick={() => setActiveDept(null)} className="text-[10px] font-bold hover:text-[#FF4F00]">CLOSE_X</button>
-            </div>
-            <div className="space-y-4">
-                {categorizedTools[roomPositions.find(r => r.id === activeDept)?.category || '']?.map(tool => (
-                    <a 
-                        key={tool.name} 
-                        href={tool.url} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="block group border border-gray-100 p-3 hover:border-black hover:bg-black hover:text-white transition-all"
+        {/* THE DIRECTORY BOARD (FIXED NAVIGATION) */}
+        <div className="fixed left-10 top-40 w-64 bg-white p-8 border-2 border-[#3A3A3A] shadow-[10px_10px_0px_#E1AD01] hidden xl:block z-30">
+            <h3 className="serif-title text-2xl border-b border-black mb-4 italic">Directory</h3>
+            <nav className="flex flex-col space-y-3">
+                {categories.map(cat => (
+                    <button 
+                        key={cat}
+                        onClick={() => scrollToRoom(cat)}
+                        className={`text-[11px] room-label text-left hover:text-[#E1AD01] transition-colors ${activeDept === cat ? 'text-[#E1AD01] font-bold' : ''}`}
                     >
-                        <div className="flex justify-between items-start">
-                            <span className="text-[11px] font-bold uppercase tracking-tight">{tool.name}</span>
-                            <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100" />
-                        </div>
-                        <p className="text-[9px] leading-tight text-gray-500 group-hover:text-gray-300 mt-1 line-clamp-2 uppercase">{tool.description}</p>
-                    </a>
+                        {cat}
+                    </button>
                 ))}
-            </div>
-        </motion.div>
-      )}
+            </nav>
+        </div>
 
+        {/* THE OFFICE FLOOR PLAN */}
+        <div className="office-grid">
+            {categories.map((cat, idx) => {
+                const tools = categorizedTools[cat];
+                const Icon = categoryIcons[cat] || MapIcon;
+                const roomColor = categoryColors[cat];
+
+                return (
+                    <motion.section 
+                        key={cat}
+                        id={`room-${cat.replace(/\s+/g, '-')}`}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className={`bg-white room-border p-10 flex flex-col items-center transition-all duration-500 ${activeDept === cat ? 'scale-105 shadow-[20px_20px_0px_rgba(0,0,0,0.1)]' : ''}`}
+                    >
+                        {/* THE ICON / DECORATIVE OBJECT */}
+                        <div className="w-16 h-16 rounded-full border-2 border-black flex items-center justify-center mb-6" style={{ backgroundColor: roomColor + '20' }}>
+                            <Icon className="w-8 h-8" style={{ color: roomColor }} />
+                        </div>
+
+                        <span className="text-[10px] room-label font-bold text-gray-400 mb-1">DEPT NO. {String(idx + 1).padStart(2, '0')}</span>
+                        <h2 className="serif-title text-3xl font-bold mb-8 text-center">{cat}</h2>
+
+                        {/* THE TOOLS - LISTED LIKE STATIONERY */}
+                        <div className="w-full space-y-4">
+                            {tools.map(tool => (
+                                <a 
+                                    key={tool.name}
+                                    href={tool.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="group block border-b border-black/10 pb-2 hover:border-[#E1AD01] transition-colors"
+                                >
+                                    <div className="flex justify-between items-center">
+                                        <span className="text-sm font-semibold tracking-tight group-hover:text-[#E1AD01] transition-colors">{tool.name}</span>
+                                        <ArrowUpRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-all text-[#E1AD01]" />
+                                    </div>
+                                    <p className="text-[11px] italic text-gray-500 mt-1 line-clamp-1">{tool.description}</p>
+                                </a>
+                            ))}
+                        </div>
+
+                        {/* THE "STAMP" */}
+                        <div className="mt-10 pt-6 border-t border-dotted border-gray-300 w-full flex justify-center">
+                            <div className="border border-black px-4 py-1 text-[9px] room-label font-bold text-gray-400">
+                                INSPECTED & VERIFIED
+                            </div>
+                        </div>
+                    </motion.section>
+                )
+            })}
+        </div>
+
+      </main>
+
+      {/* FOOTER - THE END CREDITS */}
+      <footer className="bg-[#3A3A3A] text-[#FDF8F1] py-20 px-10 flex flex-col items-center text-center">
+          <div className="w-px h-24 bg-[#FDF8F1] mb-10"></div>
+          <h2 className="serif-title text-5xl italic mb-6">Fin.</h2>
+          <p className="room-label text-[10px] font-bold tracking-[0.4em] opacity-50">A Product of Exceptional Utility</p>
+          <div className="mt-20 flex space-x-10 text-[9px] room-label font-bold uppercase">
+              <Link href="/">Homepage</Link>
+              <Link href="/tools">Standard Tools</Link>
+              <Link href="/about">About the Archive</Link>
+          </div>
+      </footer>
     </div>
   );
 }
