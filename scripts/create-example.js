@@ -44,34 +44,22 @@ async function downloadImage(url, filepath) {
   });
 }
 
-// Import the local screenshot capture function
+// Use the capturing-screenshots skill for reliable, uncropped screenshots
 async function captureLocalScreenshot(url, imageFilename) {
-  const captureScreenshotModule = require('./capture-screenshot.js');
-  // Extract just the filename without the directory structure for saving
+  const { execSync } = require('child_process');
   const fileName = path.basename(imageFilename);
-  const tempPath = path.join(process.cwd(), 'public', 'screenshots', fileName);
   const targetDir = path.join(process.cwd(), 'public', 'images', 'examples');
   const targetPath = path.join(targetDir, fileName);
 
-  // Ensure target directory exists
   fs.mkdirSync(targetDir, { recursive: true });
 
-  // Capture to temporary location using the function directly
-  await captureScreenshotModule(url, fileName);
+  const captureScript = path.join(process.cwd(), '.agents', 'skills', 'capturing-screenshots', 'scripts', 'capture.js');
+  execSync(`node "${captureScript}" "${url}" -o "${targetPath}" --format webp --wait 6000`, {
+    stdio: 'inherit',
+    cwd: process.cwd(),
+  });
 
-  // Move the file to the target location
-  if (fs.existsSync(tempPath)) {
-    fs.renameSync(tempPath, targetPath);
-    console.log(`✅ Moved screenshot to: ${targetPath}`);
-  }
-
-  // If beautiful capture is requested, process the image
-  if (useBeautifulCapture) {
-    console.log('🎨 Beautifying screenshot...');
-    const beautifyScreenshot = require('./beautify-screenshot.js');
-    await beautifyScreenshot(targetPath, targetPath); // Overwrite with beautiful version
-  }
-
+  console.log(`✅ Screenshot saved to: ${targetPath}`);
   return targetPath;
 }
 
