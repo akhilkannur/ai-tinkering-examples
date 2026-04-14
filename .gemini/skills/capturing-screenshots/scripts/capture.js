@@ -326,33 +326,35 @@ async function captureScreenshot() {
         await page.screenshot(screenshotOpts);
         console.log(`✅ Full-page fallback screenshot saved: ${finalPath}`);
       } else {
-        // Optionally scroll the element into view
-        await element.evaluate(el => el.scrollIntoView({ block: 'center' }));
-        await new Promise(r => setTimeout(r, 500));
+        const MAX_CAPTURE_HEIGHT = 1200;
+        const PADDING = 12;
 
-        // Get bounding box for the element
+        // Inject CSS padding + margin to prevent sub-pixel clipping at high DPI
+        // and ensure content isn't flush against page edges
+        await element.evaluate((el, pad) => {
+          el.style.padding = pad + 'px';
+          el.style.margin = pad + 'px';
+          el.style.boxSizing = 'content-box';
+        }, PADDING);
+        await new Promise(r => setTimeout(r, 200));
+
+        // Re-read bounding box after padding is applied
         const box = await element.boundingBox();
-        if (box) {
-          const pageWidth = await page.evaluate(() => document.documentElement.scrollWidth);
-          const pageHeight = await page.evaluate(() => document.documentElement.scrollHeight);
+        const isLong = box && box.height > MAX_CAPTURE_HEIGHT;
 
-          // Cap height for very long posts (long-form X articles, threads).
-          // Anything over 1200px logical height gets capped to a clean preview.
-          const MAX_CAPTURE_HEIGHT = 1200;
-          const captureHeight = Math.min(box.height + padding * 2, MAX_CAPTURE_HEIGHT);
-          if (box.height > MAX_CAPTURE_HEIGHT) {
-            console.log(`📏 Long content detected (${Math.round(box.height)}px). Capping to ${MAX_CAPTURE_HEIGHT}px preview.`);
-          }
-
-          screenshotOpts.clip = {
-            x: Math.max(0, box.x - padding),
-            y: Math.max(0, box.y - padding),
-            width: Math.min(box.width + padding * 2, pageWidth - Math.max(0, box.x - padding)),
-            height: Math.min(captureHeight, pageHeight - Math.max(0, box.y - padding)),
-          };
-          await page.screenshot(screenshotOpts);
+        if (isLong) {
+          console.log(`📏 Long content (${Math.round(box.height)}px). Capping to ${MAX_CAPTURE_HEIGHT}px preview.`);
+          // For long posts, inject a spacer before the element to guarantee
+          // it isn't flush against the page top (which causes top-edge clipping).
+          // For long posts, use element.screenshot which handles bounding box
+          // correctly, but first cap the visible height via CSS.
+          await element.evaluate((el, maxH) => {
+            el.style.maxHeight = (maxH - 24) + 'px';
+            el.style.overflow = 'hidden';
+          }, MAX_CAPTURE_HEIGHT);
+          await new Promise(r => setTimeout(r, 300));
+          await element.screenshot(screenshotOpts);
         } else {
-          // Direct element screenshot — Puppeteer auto-calculates bounding box
           await element.screenshot(screenshotOpts);
         }
 
