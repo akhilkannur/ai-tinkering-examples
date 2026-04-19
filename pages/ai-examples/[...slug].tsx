@@ -45,7 +45,7 @@ export default function ExamplePage({ example }: ExamplePageProps) {
             
             <aside className="lg:w-80 flex-shrink-0">
               <div className="sticky top-28 space-y-8">
-                <SocialSharing example={example} />
+                <SocialSharing example={example} title={example.title} />
               </div>
             </aside>
           </div>
