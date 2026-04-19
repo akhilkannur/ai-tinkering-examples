@@ -5,19 +5,10 @@ const nextConfig = {
   
   images: {
     domains: [
-      "dl.airtableusercontent.com",
-      "attachments.airtableusercontent.com",
-      "v5.airtableusercontent.com",
-      "airtableusercontent.com",
       "res.cloudinary.com"
     ],
     
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: '**.airtableusercontent.com',
-      }
-    ],
+    remotePatterns: [],
     
     formats: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920],
@@ -47,16 +38,10 @@ const nextConfig = {
       '/playbook',
       '/ideas/:path*',
       '/ideas',
-      '/500-ways-to-use-llms-for-work',
       '/ai-workplace-quiz',
       '/ai-workplace-personality',
-      '/build-club',
-      '/prompt-bundle',
       '/context',
-      '/investors',
-      '/jobs',
       '/learn-ai',
-      '/ideas-database',
       '/role/:path*',
     ];
 
@@ -166,37 +151,7 @@ const nextConfig = {
         destination: '/',
         permanent: true,
       },
-      // Deprecated standalone pages → homepage
-      {
-        source: '/500-ways-to-use-llms-for-work',
-        destination: '/',
-        permanent: true,
-      },
-      {
-        source: '/ai-workplace-quiz',
-        destination: '/',
-        permanent: true,
-      },
-      {
-        source: '/ai-workplace-personality',
-        destination: '/',
-        permanent: true,
-      },
-      {
-        source: '/build-club',
-        destination: '/',
-        permanent: true,
-      },
-      {
-        source: '/prompt-bundle',
-        destination: '/',
-        permanent: true,
-      },
-      {
-        source: '/context',
-        destination: '/',
-        permanent: true,
-      },
+      // Keep redirected (Off-brand for Tinker brand)
       {
         source: '/investors',
         destination: '/',
@@ -204,16 +159,6 @@ const nextConfig = {
       },
       {
         source: '/jobs',
-        destination: '/',
-        permanent: true,
-      },
-      {
-        source: '/learn-ai',
-        destination: '/',
-        permanent: true,
-      },
-      {
-        source: '/ideas-database',
         destination: '/',
         permanent: true,
       },
@@ -227,6 +172,12 @@ const nextConfig = {
         destination: '/',
         permanent: true,
       },
+      { source: "/agent-setup-service", destination: "/", permanent: true },
+      { source: "/ai-workplace-personality", destination: "/", permanent: true },
+      { source: "/ai-workplace-quiz", destination: "/", permanent: true },
+      { source: "/context", destination: "/", permanent: true },
+      { source: "/learn-ai", destination: "/", permanent: true },
+      { source: "/build-club", destination: "/", permanent: true },
       // === Kept redirects (still valid) ===
       {
         source: '/index',
