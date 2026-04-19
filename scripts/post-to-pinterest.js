@@ -73,7 +73,7 @@ async function postToPinterest() {
     // 5. Prepare Pin Data
     const title = `AI Blueprint: ${data.title}`;
     const description = `${data.description || data.tagline} - Build this AI workflow at Real AI Examples. #AI #Automation #WorkFlow #SaaS`;
-    const targetLink = `${BASE_URL}/skills/${data.id}`;
+    const targetLink = `${BASE_URL}/`;
 
     // 6. Post to Pinterest API (V5)
     const accessToken = process.env.PINTEREST_ACCESS_TOKEN;

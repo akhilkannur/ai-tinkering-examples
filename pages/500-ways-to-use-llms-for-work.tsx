@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { GetStaticProps } from 'next';
 import { Search, ArrowRight, Layers, Filter, Zap, Target, TrendingUp, Cpu } from 'lucide-react';
 import Navbar from '../components/Navbar';
-import DatabaseDownloadCta from '../components/DatabaseDownloadCta';
 import StickyActionBar from '../components/StickyActionBar';
 import { getAllRecipes } from '../lib/recipes';
 import { Recipe } from '../lib/cookbook-data';
@@ -57,7 +56,7 @@ export default function FiveHundredWays({ recipes, categories }: MegaListiclePro
       "position": index + 1,
       "name": recipe.title,
       "description": recipe.description,
-      "url": `https://realaiexamples.com/skills/${recipe.id}`
+      "url": `https://realaiexamples.com/tools/${recipe.id}`
     }))
   };
 
@@ -118,11 +117,6 @@ export default function FiveHundredWays({ recipes, categories }: MegaListiclePro
             </div>
           </div>
           
-          {/* Database Download CTA */}
-          <div id="database-download" className="mb-24 max-w-3xl mx-auto">
-             <DatabaseDownloadCta />
-          </div>
-
           {/* Search & Filter Bar */}
           <div className="bg-white border-4 border-black p-6 brutalist-shadow flex flex-col md:flex-row gap-6 max-w-3xl mx-auto sticky top-24 z-30">
             <div className="relative flex-grow">
@@ -181,7 +175,7 @@ export default function FiveHundredWays({ recipes, categories }: MegaListiclePro
                     {groupedRecipes[category].map(recipe => (
                       <Link 
                         key={recipe.id} 
-                        href={`/skills/${recipe.id}`}
+                        href={`/tools/${recipe.id}`}
                         className="group flex flex-col bg-white border-4 border-black p-8 hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all duration-300 relative brutalist-shadow h-full"
                       >
                         <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-100 transition-opacity">

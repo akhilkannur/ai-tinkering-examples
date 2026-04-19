@@ -1,6 +1,0 @@
-Email,Score,Reason,Status
-elon@tesla.com,15,"CEO (+10), Corporate Domain (+5)",High Priority
-tim@apple.com,15,"CEO (+10), Corporate Domain (+5)",High Priority
-john@acme.com,10,"VP Sales (+5), Corporate Domain (+5)",Medium Priority
-jane@gmail.com,-3,"Manager (+2), Gmail Domain (-5)",Low Priority
-sarah@startup.io,6,"SDR (+1), Corporate Domain (+5)",Nurture

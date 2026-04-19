@@ -1,9 +1,8 @@
-import type { EnrichedExampleRecord } from '../lib/airtable'
+import { EnrichedExampleRecord } from '../lib/types'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Clock, User, Tag, ExternalLink } from 'lucide-react'
 import { optimizeImageUrl } from '../utils/cloudinary'
-import SponsorDetailCard from './SponsorDetailCard'
 import SocialSharing from './SocialSharing'
 
 interface ExampleBodyProps {
@@ -48,13 +47,6 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
         <h1 className="text-[clamp(1.25rem,4vw,3.5rem)] font-display font-black tracking-[-0.02em] leading-[0.9] text-primary-text mb-lg sm:mb-xl uppercase">
           {example.title}
         </h1>
-
-        {/* Sponsor Info */}
-        {example.sponsor && (
-          <div className="mb-lg sm:mb-xl border-l-4 border-accent-dark pl-md sm:pl-xl py-md bg-hero-tint">
-            <SponsorDetailCard sponsor={example.sponsor} />
-          </div>
-        )}
       </header>
 
       {/* Main Content */}

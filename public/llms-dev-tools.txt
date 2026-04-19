@@ -1,7 +1,7 @@
 # Blueprints: Dev Tools
 
 ## Automated Screenshot Capture System
-URL: https://realaiexamples.com/skills/screenshot-automation
+URL: https://realaiexamples.com/tools/screenshot-automation
 Description: Capture beautiful, consistent screenshots from any URL programmatically.
 
 ---

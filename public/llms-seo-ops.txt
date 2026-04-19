@@ -1,7 +1,7 @@
 # Blueprints: SEO Ops
 
 ## LLMS.txt Generator for AI Agents
-URL: https://realaiexamples.com/skills/llms-txt-generator
+URL: https://realaiexamples.com/tools/llms-txt-generator
 Description: Help AI bots understand your site by generating a /llms.txt file.
 
 ---
@@ -76,7 +76,7 @@ Start now.
 ---
 
 ## High-Coverage Sitemap Generator
-URL: https://realaiexamples.com/skills/sitemap-generator
+URL: https://realaiexamples.com/tools/sitemap-generator
 Description: Generate a perfect XML sitemap for thousands of dynamic pages.
 
 ---

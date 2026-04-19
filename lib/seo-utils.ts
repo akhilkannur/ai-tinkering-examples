@@ -165,7 +165,7 @@ export function generateSoftwareAppSchema(recipe: Recipe, siteUrl: string) {
       "price": "0.00",
       "priceCurrency": "USD"
     },
-    "url": `${siteUrl}/skills/${recipe.id}`
+    "url": `${siteUrl}/tools/${recipe.id}`
   };
 }
 
@@ -198,7 +198,7 @@ export function injectInternalLinks(text: string, recipes: Recipe[]): string {
       newText = newText.replace(regex, (match) => {
         // If we successfully matched, mark as linked
         linkedslugs.add(recipe.id);
-        return `[${match}](/skills/${recipe.id})`;
+        return `[${match}](/tools/${recipe.id})`;
       });
     }
   });
@@ -215,7 +215,7 @@ export function generateItemListSchema(items: any[], siteUrl: string) {
       const isRecipe = 'blueprint' in item;
       const categorySlug = item.category?.toLowerCase().replace(/\s+/g, '-') || 'uncategorized';
       const path = isRecipe 
-        ? `/skills/${item.id}` 
+        ? `/tools/${item.id}` 
         : `/ai-examples/${categorySlug}/${item.slug || item.id}`;
       
       return {

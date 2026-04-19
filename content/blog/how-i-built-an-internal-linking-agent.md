@@ -49,7 +49,7 @@ Now, my workflow looks like this:
 1.  Finish a draft.
 2.  Run my `ai-internal-linking-agent` blueprint.
 3.  Get a report like this:
-    > *"In `content/blog/state-of-ai.md`, line 42, change 'manual data entry' to `[manual data entry](/skills/lead-list-cleaner)`."*
+    > *"In `content/blog/state-of-ai.md`, line 42, change 'manual data entry' to `[manual data entry](/tools/lead-list-cleaner)`."*
 
 I just copy/paste the suggestions and I'm done in 2 minutes. 
 
@@ -59,6 +59,6 @@ If you're building a content library, don't wait until you have 500 posts to wor
 
 When you have a manifest, your AI agent has a "map." Without a map, it's just guessing. 
 
-I’ve added the [AI Internal Linking Blueprint](/skills/ai-internal-linking-agent) to the vault. You can use it to map your own site today. 
+I’ve added the [AI Internal Linking Blueprint](/tools/ai-internal-linking-agent) to the vault. You can use it to map your own site today. 
 
 Stop hunting for keywords. Start building a map.

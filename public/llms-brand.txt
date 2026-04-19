@@ -1,7 +1,7 @@
 # Blueprints: Brand
 
 ## The Franchise Brand Guardian
-URL: https://realaiexamples.com/skills/franchise-brand-enforcer
+URL: https://realaiexamples.com/tools/franchise-brand-enforcer
 Description: Stop local franchisees from going rogue with assets or copy.
 
 ---

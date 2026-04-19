@@ -1,26 +1,26 @@
-# AI Tinkering Examples
+# Real AI Examples
 
-Minimal Next.js + Airtable site for short, visual AI examples.
+A high-performance, static-first library of real-world AI workflows and automation blueprints. Curated for "AI Tinkers" and Operations professionals.
 
-## Setup
-1. Copy `.env.example` to `.env.local` and fill the Airtable values.
-2. Create an Airtable base (table name matches NEXT_PUBLIC_AIRTABLE_TABLE or "Examples") with the schema described below.
-3. `npm install`
-4. `npm run dev`
+## Core Architecture
+- **Framework:** Next.js (TypeScript)
+- **Data Layer:** 100% Local Static Data (no external database dependencies)
+- **Styling:** Tailwind CSS (Nerdy Idealist / Tinker aesthetic)
+- **Deployment:** Vercel
 
-## Airtable schema (table: Examples)
-- Title (single line)
-- Slug (single line) - optional
-- Summary (long text)
-- Screenshots (attachment) - 1–2 images
-- Category (single select)
-- Read time (number)
-- Publish date (date)
-- Workflow steps (long text)
-- Original link (url)
-- Tags (multiple select)
-- Author name (single line)
-- Author link (url)
+## Project Structure
+- `content/blog/`: Markdown files for editorial articles.
+- `content/recipes/`: 700+ actionable AI automation blueprints.
+- `lib/social-examples-data.ts`: The curated list of visual AI examples seen on the homepage.
+- `scripts/`: Automation engine for capturing examples, generating sitemaps, and social posting.
+- `internal/`: Archived research, legacy data, and internal development tools.
 
-## Deploy
-Deploy to Vercel and add environment variables in Vercel dashboard. Set `REVALIDATE_SECRET` to protect `/api/revalidate`.
+## Setup & Development
+1. `npm install`
+2. `npm run dev`
+
+## Metadata Refresh
+- `node scripts/generate-sitemap.js`: Updates the production sitemap.
+- `node scripts/generate-llms-txt.js`: Generates niche-specific files for AI crawlers.
+- `node scripts/generate-rss.js`: Refreshes the blog feed.
+

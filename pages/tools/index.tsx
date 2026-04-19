@@ -213,7 +213,6 @@ export default function ToolsIndex() {
             <div className="sticky top-[140px]">
               <div className="flex items-center gap-2 mb-4">
                 <div className="w-1.5 h-1.5 rounded-full bg-[#ff00ff]"></div>
-                <h3 className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">Sponsored</h3>
               </div>
               
               <div className="flex flex-col gap-4">

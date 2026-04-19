@@ -1,0 +1,27 @@
+Google Search Console - URL Removal Prefixes
+=============================================
+Date: 2026-04-14
+Action: Submit each as "Remove all URLs with this prefix" in GSC Removals
+Link: https://search.google.com/search-console/removals?resource_id=sc-domain:realaiexamples.com
+
+--- Section prefixes (bulk of pages) ---
+https://realaiexamples.com/skills/
+https://realaiexamples.com/how-to/
+https://realaiexamples.com/generators/
+https://realaiexamples.com/playbook/
+https://realaiexamples.com/ideas/
+https://realaiexamples.com/blueprints/
+https://realaiexamples.com/role/
+https://realaiexamples.com/ai-examples/
+
+--- Standalone pages ---
+https://realaiexamples.com/500-ways-to-use-llms-for-work
+https://realaiexamples.com/ai-workplace-quiz
+https://realaiexamples.com/ai-workplace-personality
+https://realaiexamples.com/build-club
+https://realaiexamples.com/prompt-bundle
+https://realaiexamples.com/context
+https://realaiexamples.com/investors
+https://realaiexamples.com/jobs
+https://realaiexamples.com/learn-ai
+https://realaiexamples.com/ideas-database

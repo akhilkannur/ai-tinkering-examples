@@ -22,57 +22,57 @@
 
 ## Core Sections
 - [Home](https://realaiexamples.com)
-- [All Blueprints](https://realaiexamples.com/blueprints)
-- [Case Studies](https://realaiexamples.com/ai-examples)
+- [Tools Library](https://realaiexamples.com/tools)
+- [Example Drops](https://realaiexamples.com)
 
 ## Top Recipes
-- [The 10-K Stitcher](https://realaiexamples.com/skills/10k-report-prospector): Turn 'Risk Factors' into 'Sales Pitches'.
-- [The Abandoned Cart SMS Writer](https://realaiexamples.com/skills/abandoned-cart-sms): Generate high-converting SMS hooks by analyzing your product page.
-- [ABM Campaign Asset Builder](https://realaiexamples.com/skills/abm-campaign-asset-builder): Generate personalized landing page copy for target accounts.
-- [Intent Signal Aggregator](https://realaiexamples.com/skills/abm-intent-aggregator): Combine G2, 6sense, and Website visits.
-- [ABM Personal Gift Recommender](https://realaiexamples.com/skills/abm-personal-gift-recommender): Send gifts they actually keep, not just swag.
-- [ABM Account Tiering Calc](https://realaiexamples.com/skills/abm-tiering-calculator): Auto-assign Tier 1/2/3 based on ICP fit and intent.
-- [The About Page Storyteller](https://realaiexamples.com/skills/about-page-storyteller): Build trust with a data-backed brand story.
-- [Corporate Hierarchy Builder](https://realaiexamples.com/skills/account-hierarchy-builder): Link subsidiaries to parents based on domain patterns.
-- [Activation Rate by Cohort](https://realaiexamples.com/skills/activation-rate-cohort): Are new users activating faster?
-- [Ad Copy Pivot Detector](https://realaiexamples.com/skills/ad-copy-benchmarker): Did they change their value prop?
-- [The Ad Variant Factory](https://realaiexamples.com/skills/ad-copy-character-counter): Don't just count characters. Generate 10 high-CTR variants that fit perfectly.
-- [The Conquest Campaigner](https://realaiexamples.com/skills/ad-counter-strike): Don't just attack their product. Attack their bad reviews.
-- [Creative Fatigue Watchdog](https://realaiexamples.com/skills/ad-creative-fatigue-alert): Know when your ads stop working.
-- [The Ad Frequency Capper](https://realaiexamples.com/skills/ad-frequency-capper): Stop annoying your prospects.
-- [The Ad Library Archivist](https://realaiexamples.com/skills/ad-library-archivist): Build a structured swipe file from 100 links.
-- [Ad Waste Excluder](https://realaiexamples.com/skills/ad-placement-exclusion-lister): Block mobile apps and kids' channels.
-- [The Ad Spend Pacer](https://realaiexamples.com/skills/ad-spend-pacer): Land exactly on budget.
-- [The Ad Variation Engine](https://realaiexamples.com/skills/ad-variation-engine): Turn 1 winner into 10 tests.
-- [The Ad Visual Intelligence Factory](https://realaiexamples.com/skills/ad-visual-reverse-engineer): Reverse-engineer 10 winning ads into design briefs.
-- [Advocacy Fatigue Saver](https://realaiexamples.com/skills/advocacy-ask-balancer): Don't ask twice in one month.
-- [Affiliate Application Auto-Screener](https://realaiexamples.com/skills/affiliate-application-auto-screener): Filter out spammy affiliate applications instantly.
-- [The Affiliate Program Launcher](https://realaiexamples.com/skills/affiliate-program-launcher): Build a commission-only sales team.
-- [The Project Architect](https://realaiexamples.com/skills/agent-context-builder): Make any folder AI-ready instantly.
-- [AI Internal Linking Agent](https://realaiexamples.com/skills/ai-internal-linking-agent): Stop manually hunting for anchor text. Let AI map your internal linking strategy.
-- [The AI Manager's Handbook](https://realaiexamples.com/skills/ai-manager-handbook): Teach AI your specific rules once.
-- [The 'Alternative To' Hub Builder](https://realaiexamples.com/skills/alternative-to-builder): Steal traffic from all your competitors at once.
-- [The Alumni Network Miner](https://realaiexamples.com/skills/alumni-network-miner): Find prospects who went to the same university as your executives.
-- [The Angel Portfolio Scanner](https://realaiexamples.com/skills/angel-investor-portfolio-scanner): Prospect companies backed by friendly Angel Investors.
-- [The 10-K Strategic Hunter](https://realaiexamples.com/skills/annual-report-keyword-hunter): Scan annual reports for specific strategic initiative keywords.
-- [The API Fleet Monitor](https://realaiexamples.com/skills/api-endpoint-validator): Health check 50 endpoints in one run.
-- [API Error Impact Alerter](https://realaiexamples.com/skills/api-error-impact-alerter): Know exactly which VIP customers are seeing 500 errors.
-- [The API Key Rotator](https://realaiexamples.com/skills/api-key-rotator-checklist): Don't get hacked.
-- [The API Usage Biller](https://realaiexamples.com/skills/api-usage-biller): Don't leave money on the table.
-- [The App Store Screenshot Optimizer](https://realaiexamples.com/skills/app-store-screenshot-optimizer): More downloads, same traffic.
-- [The Attribution Modeler](https://realaiexamples.com/skills/attribution-modeler): Who actually deserves credit?
-- [Attribution Window Comparer](https://realaiexamples.com/skills/attribution-window-comparator): 1-day vs 7-day click impact.
-- [The Audience Overlap Checker](https://realaiexamples.com/skills/audience-overlap-checker): Stop bidding against yourself.
-- [Automated SWOT Generator](https://realaiexamples.com/skills/automated-swot-generator): Generate a SWOT analysis for any company in seconds.
-- [The Automated Video Producer](https://realaiexamples.com/skills/automated-video-marketing-asset): Turn any landing page into a 30s TikTok/Reels promo video.
-- [Webinar Follow-Up Architect](https://realaiexamples.com/skills/automated-webinar-followup-sequence): Segment attendees vs. no-shows and write targeted nurture sequences.
-- [The Autonomous Project Manager](https://realaiexamples.com/skills/autonomous-project-manager): The 'Ralph Wiggum' Loop.
-- [The Sales Sniper](https://realaiexamples.com/skills/autonomous-sales-sniper): Find and qualify B2B leads automatically.
-- [The AI Avatar Scriptwriter](https://realaiexamples.com/skills/avatar-video-producer): Scripts for HeyGen & Synthesia.
-- [The Ecosystem Partner Finder](https://realaiexamples.com/skills/b2b-marketplace-scraper): Find leads from AppExchange, Shopify, or HubSpot app stores.
-- [Backlink Quality Auditor](https://realaiexamples.com/skills/backlink-quality-scorer): Filter the gold from the spam.
-- [The Backlink Toxicity Checker](https://realaiexamples.com/skills/backlink-toxicity-checker): Is that link helping or hurting?
-- [The Competitor Poacher](https://realaiexamples.com/skills/bad-review-poacher): Identify users complaining about competitors on G2/Capterra.
-- [Basket Correlation Engine](https://realaiexamples.com/skills/basket-analysis-market-basket): People who buy A also buy B.
-- [Content Usage Tracker](https://realaiexamples.com/skills/battlecard-usage-tracker): Which battlecards do reps actually use?
-- [Back-in-Stock Campaigner](https://realaiexamples.com/skills/bestseller-restock-alert): Launch ads when bestsellers return.
+- [The 10-K Stitcher](https://realaiexamples.com/tools/10k-report-prospector): Turn 'Risk Factors' into 'Sales Pitches'.
+- [The Abandoned Cart SMS Writer](https://realaiexamples.com/tools/abandoned-cart-sms): Generate high-converting SMS hooks by analyzing your product page.
+- [ABM Campaign Asset Builder](https://realaiexamples.com/tools/abm-campaign-asset-builder): Generate personalized landing page copy for target accounts.
+- [Intent Signal Aggregator](https://realaiexamples.com/tools/abm-intent-aggregator): Combine G2, 6sense, and Website visits.
+- [ABM Personal Gift Recommender](https://realaiexamples.com/tools/abm-personal-gift-recommender): Send gifts they actually keep, not just swag.
+- [ABM Account Tiering Calc](https://realaiexamples.com/tools/abm-tiering-calculator): Auto-assign Tier 1/2/3 based on ICP fit and intent.
+- [The About Page Storyteller](https://realaiexamples.com/tools/about-page-storyteller): Build trust with a data-backed brand story.
+- [Corporate Hierarchy Builder](https://realaiexamples.com/tools/account-hierarchy-builder): Link subsidiaries to parents based on domain patterns.
+- [Activation Rate by Cohort](https://realaiexamples.com/tools/activation-rate-cohort): Are new users activating faster?
+- [Ad Copy Pivot Detector](https://realaiexamples.com/tools/ad-copy-benchmarker): Did they change their value prop?
+- [The Ad Variant Factory](https://realaiexamples.com/tools/ad-copy-character-counter): Don't just count characters. Generate 10 high-CTR variants that fit perfectly.
+- [The Conquest Campaigner](https://realaiexamples.com/tools/ad-counter-strike): Don't just attack their product. Attack their bad reviews.
+- [Creative Fatigue Watchdog](https://realaiexamples.com/tools/ad-creative-fatigue-alert): Know when your ads stop working.
+- [The Ad Frequency Capper](https://realaiexamples.com/tools/ad-frequency-capper): Stop annoying your prospects.
+- [The Ad Library Archivist](https://realaiexamples.com/tools/ad-library-archivist): Build a structured swipe file from 100 links.
+- [Ad Waste Excluder](https://realaiexamples.com/tools/ad-placement-exclusion-lister): Block mobile apps and kids' channels.
+- [The Ad Spend Pacer](https://realaiexamples.com/tools/ad-spend-pacer): Land exactly on budget.
+- [The Ad Variation Engine](https://realaiexamples.com/tools/ad-variation-engine): Turn 1 winner into 10 tests.
+- [The Ad Visual Intelligence Factory](https://realaiexamples.com/tools/ad-visual-reverse-engineer): Reverse-engineer 10 winning ads into design briefs.
+- [Advocacy Fatigue Saver](https://realaiexamples.com/tools/advocacy-ask-balancer): Don't ask twice in one month.
+- [Affiliate Application Auto-Screener](https://realaiexamples.com/tools/affiliate-application-auto-screener): Filter out spammy affiliate applications instantly.
+- [The Affiliate Program Launcher](https://realaiexamples.com/tools/affiliate-program-launcher): Build a commission-only sales team.
+- [The Project Architect](https://realaiexamples.com/tools/agent-context-builder): Make any folder AI-ready instantly.
+- [AI Internal Linking Agent](https://realaiexamples.com/tools/ai-internal-linking-agent): Stop manually hunting for anchor text. Let AI map your internal linking strategy.
+- [The AI Manager's Handbook](https://realaiexamples.com/tools/ai-manager-handbook): Teach AI your specific rules once.
+- [The 'Alternative To' Hub Builder](https://realaiexamples.com/tools/alternative-to-builder): Steal traffic from all your competitors at once.
+- [The Alumni Network Miner](https://realaiexamples.com/tools/alumni-network-miner): Find prospects who went to the same university as your executives.
+- [The Angel Portfolio Scanner](https://realaiexamples.com/tools/angel-investor-portfolio-scanner): Prospect companies backed by friendly Angel Investors.
+- [The 10-K Strategic Hunter](https://realaiexamples.com/tools/annual-report-keyword-hunter): Scan annual reports for specific strategic initiative keywords.
+- [The API Fleet Monitor](https://realaiexamples.com/tools/api-endpoint-validator): Health check 50 endpoints in one run.
+- [API Error Impact Alerter](https://realaiexamples.com/tools/api-error-impact-alerter): Know exactly which VIP customers are seeing 500 errors.
+- [The API Key Rotator](https://realaiexamples.com/tools/api-key-rotator-checklist): Don't get hacked.
+- [The API Usage Biller](https://realaiexamples.com/tools/api-usage-biller): Don't leave money on the table.
+- [The App Store Screenshot Optimizer](https://realaiexamples.com/tools/app-store-screenshot-optimizer): More downloads, same traffic.
+- [The Attribution Modeler](https://realaiexamples.com/tools/attribution-modeler): Who actually deserves credit?
+- [Attribution Window Comparer](https://realaiexamples.com/tools/attribution-window-comparator): 1-day vs 7-day click impact.
+- [The Audience Overlap Checker](https://realaiexamples.com/tools/audience-overlap-checker): Stop bidding against yourself.
+- [Automated SWOT Generator](https://realaiexamples.com/tools/automated-swot-generator): Generate a SWOT analysis for any company in seconds.
+- [The Automated Video Producer](https://realaiexamples.com/tools/automated-video-marketing-asset): Turn any landing page into a 30s TikTok/Reels promo video.
+- [Webinar Follow-Up Architect](https://realaiexamples.com/tools/automated-webinar-followup-sequence): Segment attendees vs. no-shows and write targeted nurture sequences.
+- [The Autonomous Project Manager](https://realaiexamples.com/tools/autonomous-project-manager): The 'Ralph Wiggum' Loop.
+- [The Sales Sniper](https://realaiexamples.com/tools/autonomous-sales-sniper): Find and qualify B2B leads automatically.
+- [The AI Avatar Scriptwriter](https://realaiexamples.com/tools/avatar-video-producer): Scripts for HeyGen & Synthesia.
+- [The Ecosystem Partner Finder](https://realaiexamples.com/tools/b2b-marketplace-scraper): Find leads from AppExchange, Shopify, or HubSpot app stores.
+- [Backlink Quality Auditor](https://realaiexamples.com/tools/backlink-quality-scorer): Filter the gold from the spam.
+- [The Backlink Toxicity Checker](https://realaiexamples.com/tools/backlink-toxicity-checker): Is that link helping or hurting?
+- [The Competitor Poacher](https://realaiexamples.com/tools/bad-review-poacher): Identify users complaining about competitors on G2/Capterra.
+- [Basket Correlation Engine](https://realaiexamples.com/tools/basket-analysis-market-basket): People who buy A also buy B.
+- [Content Usage Tracker](https://realaiexamples.com/tools/battlecard-usage-tracker): Which battlecards do reps actually use?
+- [Back-in-Stock Campaigner](https://realaiexamples.com/tools/bestseller-restock-alert): Launch ads when bestsellers return.

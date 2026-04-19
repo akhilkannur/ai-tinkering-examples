@@ -1,7 +1,7 @@
 # Blueprints: Lead Gen
 
 ## The Alumni Network Miner
-URL: https://realaiexamples.com/skills/alumni-network-miner
+URL: https://realaiexamples.com/tools/alumni-network-miner
 Description: Find prospects who went to the same university as your executives.
 
 ---
@@ -65,7 +65,7 @@ For each row in `executive_universities.csv`:
 ---
 
 ## The Angel Portfolio Scanner
-URL: https://realaiexamples.com/skills/angel-investor-portfolio-scanner
+URL: https://realaiexamples.com/tools/angel-investor-portfolio-scanner
 Description: Prospect companies backed by friendly Angel Investors.
 
 ---
@@ -131,7 +131,7 @@ For each Angel in the list:
 ---
 
 ## The 10-K Strategic Hunter
-URL: https://realaiexamples.com/skills/annual-report-keyword-hunter
+URL: https://realaiexamples.com/tools/annual-report-keyword-hunter
 Description: Scan annual reports for specific strategic initiative keywords.
 
 ---
@@ -190,7 +190,7 @@ For each company in the CSV:
 ---
 
 ## The Sales Sniper
-URL: https://realaiexamples.com/skills/autonomous-sales-sniper
+URL: https://realaiexamples.com/tools/autonomous-sales-sniper
 Description: Find and qualify B2B leads automatically.
 
 ---
@@ -267,7 +267,7 @@ Start now.
 ---
 
 ## The Ecosystem Partner Finder
-URL: https://realaiexamples.com/skills/b2b-marketplace-scraper
+URL: https://realaiexamples.com/tools/b2b-marketplace-scraper
 Description: Find leads from AppExchange, Shopify, or HubSpot app stores.
 
 ---
@@ -331,7 +331,7 @@ For each URL/Category in the CSV:
 ---
 
 ## The Competitor Poacher
-URL: https://realaiexamples.com/skills/bad-review-poacher
+URL: https://realaiexamples.com/tools/bad-review-poacher
 Description: Identify users complaining about competitors on G2/Capterra.
 
 ---
@@ -393,7 +393,7 @@ For each competitor:
 ---
 
 ## The Board Room Infiltrator
-URL: https://realaiexamples.com/skills/board-member-network-mapper
+URL: https://realaiexamples.com/tools/board-member-network-mapper
 Description: Map potential intros via board member connections.
 
 ---
@@ -453,7 +453,7 @@ For each pair or target in the list:
 ---
 
 ## The Boolean Search Architect
-URL: https://realaiexamples.com/skills/boolean-search-architect
+URL: https://realaiexamples.com/tools/boolean-search-architect
 Description: Write complex Sales Nav queries without the headache.
 
 ---
@@ -523,7 +523,7 @@ Build the string:
 ---
 
 ## The Hiring Intent Trigger
-URL: https://realaiexamples.com/skills/career-page-keyword-alert
+URL: https://realaiexamples.com/tools/career-page-keyword-alert
 Description: Trigger outreach when a prospect posts a specific job role.
 
 ---
@@ -584,7 +584,7 @@ For each domain:
 ---
 
 ## The Podcast Tour Stalker
-URL: https://realaiexamples.com/skills/ceo-podcast-tour-tracker
+URL: https://realaiexamples.com/tools/ceo-podcast-tour-tracker
 Description: Find CEOs appearing on podcasts to pitch PR or related services.
 
 ---
@@ -647,7 +647,7 @@ For each CEO:
 ---
 
 ## The Challenger Brand Hunter
-URL: https://realaiexamples.com/skills/challenger-brand-identifier
+URL: https://realaiexamples.com/tools/challenger-brand-identifier
 Description: Find Series B companies competing with Fortune 500 giants.
 
 ---
@@ -712,7 +712,7 @@ For each Incumbent:
 ---
 
 ## The Cloud Bill Shock Hunter
-URL: https://realaiexamples.com/skills/cloud-bill-shock-prospector
+URL: https://realaiexamples.com/tools/cloud-bill-shock-prospector
 Description: Target companies likely overspending on AWS/Azure based on growth signals.
 
 ---
@@ -769,7 +769,7 @@ For each company:
 ---
 
 ## The Cold DM Personalizer
-URL: https://realaiexamples.com/skills/cold-dm-personalizer
+URL: https://realaiexamples.com/tools/cold-dm-personalizer
 Description: Personalized outreach for 100 prospects at once.
 
 ---
@@ -834,7 +834,7 @@ For each prospect in the CSV:
 ---
 
 ## The Sales Comp Designer
-URL: https://realaiexamples.com/skills/commission-calculator
+URL: https://realaiexamples.com/tools/commission-calculator
 Description: Design a commission plan that drives growth.
 
 ---
@@ -898,7 +898,7 @@ For each role in the CSV:
 ---
 
 ## The Conference Batch Scraper
-URL: https://realaiexamples.com/skills/conference-scraper
+URL: https://realaiexamples.com/tools/conference-scraper
 Description: Turn multiple speaker lists into one lead list.
 
 ---
@@ -957,7 +957,7 @@ For each URL in `event_urls.csv`:
 ---
 
 ## The Sponsor List Enricher
-URL: https://realaiexamples.com/skills/conference-sponsor-list-enricher
+URL: https://realaiexamples.com/tools/conference-sponsor-list-enricher
 Description: Enrich a list of sponsors from a conference URL.
 
 ---
@@ -1016,7 +1016,7 @@ For each URL:
 ---
 
 ## The Channel Partner Scout
-URL: https://realaiexamples.com/skills/consultant-partnership-finder
+URL: https://realaiexamples.com/tools/consultant-partnership-finder
 Description: Find implementation partners for specific software.
 
 ---
@@ -1077,7 +1077,7 @@ For each ecosystem:
 ---
 
 ## The Ghost Blog Hunter
-URL: https://realaiexamples.com/skills/content-marketing-gap-hunter
+URL: https://realaiexamples.com/tools/content-marketing-gap-hunter
 Description: Find companies with blogs but no recent posts.
 
 ---
@@ -1137,7 +1137,7 @@ For each domain:
 ---
 
 ## The Open Source Stalker
-URL: https://realaiexamples.com/skills/cto-github-activity-tracker
+URL: https://realaiexamples.com/tools/cto-github-activity-tracker
 Description: Identify technical founders active in specific repos.
 
 ---
@@ -1198,7 +1198,7 @@ For each repo:
 ---
 
 ## The Support Scaler
-URL: https://realaiexamples.com/skills/customer-support-expansion-lead
+URL: https://realaiexamples.com/tools/customer-support-expansion-lead
 Description: Identify companies hiring mass support agents.
 
 ---
@@ -1256,7 +1256,7 @@ Identify companies hiring mass support agents to sell automation or outsourcing.
 ---
 
 ## The Champion Tracker
-URL: https://realaiexamples.com/skills/decision-maker-change-tracker
+URL: https://realaiexamples.com/tools/decision-maker-change-tracker
 Description: Track when a Champion leaves a target account.
 
 ---
@@ -1318,7 +1318,7 @@ For each contact:
 ---
 
 ## The DEI Initiative Spotter
-URL: https://realaiexamples.com/skills/diversity-hiring-initiative-finder
+URL: https://realaiexamples.com/tools/diversity-hiring-initiative-finder
 Description: Target companies posting DEI-specific roles or reports.
 
 ---
@@ -1376,7 +1376,7 @@ Target companies posting DEI-specific roles or reports to sell HR/Culture softwa
 ---
 
 ## The New Domain Watcher
-URL: https://realaiexamples.com/skills/domain-age-startup-spotter
+URL: https://realaiexamples.com/tools/domain-age-startup-spotter
 Description: Find newly registered domains with stealth signals.
 
 ---
@@ -1435,7 +1435,7 @@ Find newly registered domains with "stealth" signals to pitch foundational servi
 ---
 
 ## The Re-Platform Scout
-URL: https://realaiexamples.com/skills/e-commerce-platform-migrator
+URL: https://realaiexamples.com/tools/e-commerce-platform-migrator
 Description: Identify online stores that recently switched platforms.
 
 ---
@@ -1495,7 +1495,7 @@ For each store:
 ---
 
 ## The Product Hunt Poacher
-URL: https://realaiexamples.com/skills/early-adopter-product-hunt-scraper
+URL: https://realaiexamples.com/tools/early-adopter-product-hunt-scraper
 Description: Find leads who upvoted similar tools on Product Hunt.
 
 ---
@@ -1556,7 +1556,7 @@ For each launch URL:
 ---
 
 ## The Hyper-Growth Radar
-URL: https://realaiexamples.com/skills/employee-growth-surge-alert
+URL: https://realaiexamples.com/tools/employee-growth-surge-alert
 Description: Alert when headcount grows >20% in a quarter.
 
 ---
@@ -1616,7 +1616,7 @@ For each account:
 ---
 
 ## The Multi-Event Networking Planner
-URL: https://realaiexamples.com/skills/event-networker
+URL: https://realaiexamples.com/tools/event-networker
 Description: High-value hit lists for your entire conference calendar.
 
 ---
@@ -1675,7 +1675,7 @@ For each event in the calendar:
 ---
 
 ## The Alumni Boomerang
-URL: https://realaiexamples.com/skills/ex-employee-boomerang-tracker
+URL: https://realaiexamples.com/tools/ex-employee-boomerang-tracker
 Description: Find former employees who joined target accounts.
 
 ---
@@ -1734,7 +1734,7 @@ For each Target Account:
 ---
 
 ## The Family Office Hunter
-URL: https://realaiexamples.com/skills/family-office-direct-investment-finder
+URL: https://realaiexamples.com/tools/family-office-direct-investment-finder
 Description: Target family offices making direct tech bets.
 
 ---
@@ -1793,7 +1793,7 @@ For each office:
 ---
 
 ## The Franchise Empire Mapper
-URL: https://realaiexamples.com/skills/franchise-owner-contact-builder
+URL: https://realaiexamples.com/tools/franchise-owner-contact-builder
 Description: Find owners of multi-location franchises.
 
 ---
@@ -1855,7 +1855,7 @@ For each brand:
 ---
 
 ## The Outsourcing Arbitrage
-URL: https://realaiexamples.com/skills/freelance-marketplace-arbitrage
+URL: https://realaiexamples.com/tools/freelance-marketplace-arbitrage
 Description: Find companies hiring freelancers for roles you automate.
 
 ---
@@ -1913,7 +1913,7 @@ Find companies hiring freelancers for roles you automate.
 ---
 
 ## The Compliance Cop
-URL: https://realaiexamples.com/skills/gdpr-compliance-gap-hunter
+URL: https://realaiexamples.com/tools/gdpr-compliance-gap-hunter
 Description: Find sites missing cookie banners or privacy policies.
 
 ---
@@ -1972,7 +1972,7 @@ For each domain:
 ---
 
 ## The Ghost Asset Hunter
-URL: https://realaiexamples.com/skills/ghost-asset-hunter
+URL: https://realaiexamples.com/tools/ghost-asset-hunter
 Description: Find the 10-K, Podcast, or Tweet that opens the door.
 
 ---
@@ -2040,7 +2040,7 @@ Draft a `[Company]_Dossier.md` with:
 ---
 
 ## The Ghost Job Engine
-URL: https://realaiexamples.com/skills/ghost-job-hunter
+URL: https://realaiexamples.com/tools/ghost-job-hunter
 Description: Uncover 50 hidden openings across 10 niches.
 
 ---
@@ -2101,7 +2101,7 @@ For each niche in the CSV:
 ---
 
 ## The Code Headhunter
-URL: https://realaiexamples.com/skills/github-headhunter
+URL: https://realaiexamples.com/tools/github-headhunter
 Description: Recruit from a specific repo or a tech niche.
 
 ---
@@ -2162,7 +2162,7 @@ Recruit from a specific repo or a tech niche.
 ---
 
 ## The Local Review Rescuer
-URL: https://realaiexamples.com/skills/google-maps-local-dominator
+URL: https://realaiexamples.com/tools/google-maps-local-dominator
 Description: Find local businesses with <10 reviews to sell reputation management.
 
 ---
@@ -2226,7 +2226,7 @@ For each Niche/City:
 ---
 
 ## The GovCon Winner
-URL: https://realaiexamples.com/skills/government-contract-award-scraper
+URL: https://realaiexamples.com/tools/government-contract-award-scraper
 Description: Find companies who just won federal contracts.
 
 ---
@@ -2287,7 +2287,7 @@ Find companies who just won federal contracts >$1M.
 ---
 
 ## The Headless Tech Hunter
-URL: https://realaiexamples.com/skills/headless-commerce-identifier
+URL: https://realaiexamples.com/tools/headless-commerce-identifier
 Description: Target brands using specific headless CMS architectures.
 
 ---
@@ -2347,7 +2347,7 @@ For each domain:
 ---
 
 ## The Freeze Thaw Detector
-URL: https://realaiexamples.com/skills/hiring-freeze-thaw-detector
+URL: https://realaiexamples.com/tools/hiring-freeze-thaw-detector
 Description: Identify companies that just resumed hiring after a freeze.
 
 ---
@@ -2406,7 +2406,7 @@ For each company:
 ---
 
 ## The Inc. 5000 Debutante
-URL: https://realaiexamples.com/skills/inc-5000-new-entrant-scraper
+URL: https://realaiexamples.com/tools/inc-5000-new-entrant-scraper
 Description: Target companies making the Inc. 5000 list for the first time.
 
 ---
@@ -2463,7 +2463,7 @@ Target companies making the Inc. 5000 list for the first time.
 ---
 
 ## Influencer Brand Safety Scanner
-URL: https://realaiexamples.com/skills/influencer-brand-safety-scanner
+URL: https://realaiexamples.com/tools/influencer-brand-safety-scanner
 Description: Don't sponsor someone who will get you cancelled.
 
 ---
@@ -2516,7 +2516,7 @@ Don't sponsor someone who will get you cancelled.
 ---
 
 ## The Ad-Pixel Arbitrage
-URL: https://realaiexamples.com/skills/instagram-ads-library-spy
+URL: https://realaiexamples.com/tools/instagram-ads-library-spy
 Description: Find D2C brands running ads but missing pixel tracking.
 
 ---
@@ -2576,7 +2576,7 @@ For each domain:
 ---
 
 ## Investor Update Writer
-URL: https://realaiexamples.com/skills/investor-update-email-writer
+URL: https://realaiexamples.com/tools/investor-update-email-writer
 Description: Write the monthly email that keeps your VCs happy (and helpful).
 
 ---
@@ -2649,7 +2649,7 @@ Start now.
 ---
 
 ## The Pre-IPO Hawk
-URL: https://realaiexamples.com/skills/ipo-roadshow-monitor
+URL: https://realaiexamples.com/tools/ipo-roadshow-monitor
 Description: Target late-stage companies preparing for public listing.
 
 ---
@@ -2713,7 +2713,7 @@ For each company:
 ---
 
 ## The Sales Job Description Optimizer
-URL: https://realaiexamples.com/skills/job-description-optimizer
+URL: https://realaiexamples.com/tools/job-description-optimizer
 Description: Attract 'A-Players', repel tourists.
 
 ---
@@ -2775,7 +2775,7 @@ For each role in the CSV:
 ---
 
 ## The Lead Magnet Factory
-URL: https://realaiexamples.com/skills/lead-magnet-generator
+URL: https://realaiexamples.com/tools/lead-magnet-generator
 Description: Build a library of assets from customer pains.
 
 ---
@@ -2834,7 +2834,7 @@ For each segment in the CSV:
 ---
 
 ## The Niche Group Miner
-URL: https://realaiexamples.com/skills/linkedin-group-member-extractor
+URL: https://realaiexamples.com/tools/linkedin-group-member-extractor
 Description: Extract and qualify members of niche professional groups.
 
 ---
@@ -2896,7 +2896,7 @@ For each group:
 ---
 
 ## The Local Market Factory
-URL: https://realaiexamples.com/skills/local-market-analyst
+URL: https://realaiexamples.com/tools/local-market-analyst
 Description: Verified local leads for 50 cities in one run.
 
 ---
@@ -2956,7 +2956,7 @@ For each row in the CSV:
 ---
 
 ## The Golden Lead Cloner
-URL: https://realaiexamples.com/skills/lookalike-cloner
+URL: https://realaiexamples.com/tools/lookalike-cloner
 Description: Clone your best customers or competitors.
 
 ---
@@ -3020,7 +3020,7 @@ For each target in the CSV:
 ---
 
 ## The M&A Chaos Hunter
-URL: https://realaiexamples.com/skills/ma-integration-pain-prospector
+URL: https://realaiexamples.com/tools/ma-integration-pain-prospector
 Description: Target companies recently acquired or merged.
 
 ---
@@ -3083,7 +3083,7 @@ For each deal:
 ---
 
 ## The Portfolio Reverse Engineer
-URL: https://realaiexamples.com/skills/marketing-agency-client-list-miner
+URL: https://realaiexamples.com/tools/marketing-agency-client-list-miner
 Description: Reverse engineer agency portfolios for leads.
 
 ---
@@ -3143,7 +3143,7 @@ For each agency:
 ---
 
 ## The SDK Sniper
-URL: https://realaiexamples.com/skills/mobile-app-sdk-prospector
+URL: https://realaiexamples.com/tools/mobile-app-sdk-prospector
 Description: Find mobile apps using a competitor's SDK.
 
 ---
@@ -3200,7 +3200,7 @@ Find mobile apps using a competitor's SDK to displace them.
 ---
 
 ## The Newsletter Sponsor Finder
-URL: https://realaiexamples.com/skills/newsletter-sponsorship-lead-gen
+URL: https://realaiexamples.com/tools/newsletter-sponsorship-lead-gen
 Description: Find newsletters accepting sponsors in your niche.
 
 ---
@@ -3265,7 +3265,7 @@ For each niche:
 ---
 
 ## The Grant Money Hunter
-URL: https://realaiexamples.com/skills/non-profit-grant-recipient-tracker
+URL: https://realaiexamples.com/tools/non-profit-grant-recipient-tracker
 Description: Target non-profits that recently received funding.
 
 ---
@@ -3327,7 +3327,7 @@ For each foundation:
 ---
 
 ## The R&D Spy
-URL: https://realaiexamples.com/skills/patent-filing-alert-system
+URL: https://realaiexamples.com/tools/patent-filing-alert-system
 Description: Monitor new patent filings for R&D budget signals.
 
 ---
@@ -3389,7 +3389,7 @@ For each keyword:
 ---
 
 ## The PE Rollup Hunter
-URL: https://realaiexamples.com/skills/pe-firm-portfolio-consolidator
+URL: https://realaiexamples.com/tools/pe-firm-portfolio-consolidator
 Description: Map all portfolio companies of a specific PE firm.
 
 ---
@@ -3452,7 +3452,7 @@ For each firm:
 ---
 
 ## The Podcast Ad Spender
-URL: https://realaiexamples.com/skills/podcast-advertiser-database
+URL: https://realaiexamples.com/tools/podcast-advertiser-database
 Description: Log companies spending money on podcast ads.
 
 ---
@@ -3515,7 +3515,7 @@ For each feed:
 ---
 
 ## The Partnership Announcement Alert
-URL: https://realaiexamples.com/skills/press-release-partnership-scanner
+URL: https://realaiexamples.com/tools/press-release-partnership-scanner
 Description: Find companies announcing new strategic partnerships.
 
 ---
@@ -3577,7 +3577,7 @@ Find companies announcing new strategic partnerships to pitch ecosystem services
 ---
 
 ## The Quiz Funnel Builder
-URL: https://realaiexamples.com/skills/quiz-funnel-builder
+URL: https://realaiexamples.com/tools/quiz-funnel-builder
 Description: Cheaper leads than a PDF.
 
 ---
@@ -3642,7 +3642,7 @@ For each product in the CSV:
 ---
 
 ## The Reddit Signal Scout
-URL: https://realaiexamples.com/skills/reddit-scout
+URL: https://realaiexamples.com/tools/reddit-scout
 Description: Monitor 50 subreddits for buying signals.
 
 ---
@@ -3703,7 +3703,7 @@ For each row in the CSV:
 ---
 
 ## The Remote First Hunter
-URL: https://realaiexamples.com/skills/remote-work-transition-hunter
+URL: https://realaiexamples.com/tools/remote-work-transition-hunter
 Description: Find companies switching to "Remote First" policies.
 
 ---
@@ -3765,7 +3765,7 @@ Find companies switching to "Remote First" policies.
 ---
 
 ## The RFP Responder
-URL: https://realaiexamples.com/skills/rfp-responder
+URL: https://realaiexamples.com/tools/rfp-responder
 Description: Draft complex proposals instantly.
 
 ---
@@ -3835,7 +3835,7 @@ For each RFP in the CSV:
 ---
 
 ## The Price Hike Monitor
-URL: https://realaiexamples.com/skills/saas-pricing-page-change-alert
+URL: https://realaiexamples.com/tools/saas-pricing-page-change-alert
 Description: Trigger when a prospect raises prices.
 
 ---
@@ -3895,7 +3895,7 @@ For each URL:
 ---
 
 ## The Sales Interview Architect
-URL: https://realaiexamples.com/skills/sales-interview-questions
+URL: https://realaiexamples.com/tools/sales-interview-questions
 Description: Custom assessments for any sales role.
 
 ---
@@ -3957,7 +3957,7 @@ For each role in the CSV:
 ---
 
 ## The VP Sales Headhunter
-URL: https://realaiexamples.com/skills/sales-team-expansion-signal
+URL: https://realaiexamples.com/tools/sales-team-expansion-signal
 Description: Identify companies hiring their first VP of Sales.
 
 ---
@@ -4018,7 +4018,7 @@ Identify companies hiring their first VP of Sales to sell sales enablement/ops/d
 ---
 
 ## The SDR Ramp Architect
-URL: https://realaiexamples.com/skills/sdr-onboarding-schedule
+URL: https://realaiexamples.com/tools/sdr-onboarding-schedule
 Description: Build custom 30-day onboarding plans.
 
 ---
@@ -4080,7 +4080,7 @@ For each hire in the CSV:
 ---
 
 ## The Stealth Mode Breaker
-URL: https://realaiexamples.com/skills/seed-round-stealth-mode-breaker
+URL: https://realaiexamples.com/tools/seed-round-stealth-mode-breaker
 Description: Find "Stealth" startups hiring their first engineers.
 
 ---
@@ -4142,7 +4142,7 @@ Find "Stealth" startups hiring their first engineers and identify the founders.
 ---
 
 ## The Sleeping Giant Hunter
-URL: https://realaiexamples.com/skills/sleeping-giant-hunter
+URL: https://realaiexamples.com/tools/sleeping-giant-hunter
 Description: Find 50 enterprise companies using legacy tech.
 
 ---
@@ -4200,7 +4200,7 @@ For each row in the CSV:
 ---
 
 ## The Social Signal Engine
-URL: https://realaiexamples.com/skills/social-intent-scout
+URL: https://realaiexamples.com/tools/social-intent-scout
 Description: Find 100 leads asking for help across Reddit & LinkedIn.
 
 ---
@@ -4258,7 +4258,7 @@ For each row in the CSV:
 ---
 
 ## The PR Crisis Ambulance
-URL: https://realaiexamples.com/skills/social-media-crisis-ambulance
+URL: https://realaiexamples.com/tools/social-media-crisis-ambulance
 Description: Identify brands facing a PR crisis for reputation management.
 
 ---
@@ -4318,7 +4318,7 @@ For each brand:
 ---
 
 ## The Supply Chain Risk Mapper
-URL: https://realaiexamples.com/skills/supply-chain-risk-prospector
+URL: https://realaiexamples.com/tools/supply-chain-risk-prospector
 Description: Find manufacturing companies with single-source risks.
 
 ---
@@ -4375,7 +4375,7 @@ Find manufacturing companies with single-source risks to sell diversification/lo
 ---
 
 ## The TikTok Shop Scout
-URL: https://realaiexamples.com/skills/tiktok-shop-seller-scraper
+URL: https://realaiexamples.com/tools/tiktok-shop-seller-scraper
 Description: Find top sellers on TikTok Shop without a standalone site.
 
 ---
@@ -4437,7 +4437,7 @@ For each category:
 ---
 
 ## YouTube Comment Lead Miner
-URL: https://realaiexamples.com/skills/youtube-comment-lead-miner
+URL: https://realaiexamples.com/tools/youtube-comment-lead-miner
 Description: Turn video comments into qualified leads.
 
 ---

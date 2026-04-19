@@ -1,4 +1,4 @@
-import { EnrichedExampleRecord } from './airtable';
+import { EnrichedExampleRecord } from './types';
 
 export const localSocialExamples: EnrichedExampleRecord[] = [
   {
@@ -22,8 +22,6 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     author_name: "David Roberts",
     author_link: "https://x.com/recap_david",
     tags: ["Automation", "Claude"],
-    Sponsored: false,
-    sponsor: null
   },
   {
     id: "lkr-connecting-stripe-with-claude-code",
@@ -46,8 +44,6 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     author_name: "Laura Roeder",
     author_link: "https://x.com/lkr",
     tags: ["Automation"],
-    Sponsored: false,
-    sponsor: null
   },
   {
     id: "short-courses-automate-software-dev-creative-workflows-with-gemi",
@@ -70,8 +66,6 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     author_name: "DeepLearning.AI",
     author_link: "https://www.deeplearning.ai",
     tags: ["Gemini", "CLI", "Automation", "Course"],
-    Sponsored: false,
-    sponsor: null
   },
   {
     id: "aiedge_-getting-started-w-claude-cowork-10-essential-workf",
@@ -94,8 +88,6 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     author_name: "AI Edge",
     author_link: "https://x.com/aiedge_",
     tags: ["Claude", "Automation", "Workflows"],
-    Sponsored: false,
-    sponsor: null
   },
   {
     id: "mehtabkarta-ai-workflow-2026-01-23",
@@ -118,8 +110,6 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     author_name: "MehtabKarta",
     author_link: "https://x.com/MehtabKarta",
     tags: ["Deep Research", "Prompts", "Competitor Analysis"],
-    Sponsored: false,
-    sponsor: null
   },
   {
     id: "bucco-deep-research-company-overview",
@@ -142,8 +132,6 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     author_name: "BuccoCapital",
     author_link: "https://x.com/buccocapital",
     tags: ["Deep Research", "Strategy", "Due Diligence"],
-    Sponsored: false,
-    sponsor: null
   },
   {
     id: "github-copilot-agents-md-guide",
@@ -167,8 +155,6 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     author_link: "https://github.blog",
     tags: ["Agents", "Best Practices", "Copilot", "Blueprints"],
     workflow_steps: "1. Define a Specific Persona (e.g. 'Expert QA Engineer')\n2. Provide Executable Commands early in the file\n3. Specify the Tech Stack and Project Structure\n4. Offer concrete Code Examples instead of abstract rules\n5. Set Clear Boundaries using a 'Always/Ask/Never' system",
-    Sponsored: false,
-    sponsor: null
   },
   {
     id: "saastr-ai-agents-directory",
@@ -192,8 +178,6 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     author_link: "https://saastr.ai",
     tags: ["Use Cases", "SaaS", "Scaling", "Directory"],
     workflow_steps: "1. Browse the Agent Arsenal for specific business functions\n2. Analyze how SaaStr defines agent roles (e.g. AI Mentor, VC Matchmaker)\n3. See examples of third-party agent integrations\n4. Apply the 'Full Playbook' to scale your own operations",
-    Sponsored: false,
-    sponsor: null
   },
   {
     id: "matzner-jon-competitive-podcast-intel",
@@ -217,8 +201,6 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     author_link: "https://x.com/MatznerJon",
     tags: ["Competitive Intel", "NotebookLM", "Podcasts", "Strategy"],
     workflow_steps: "1. Gather all podcast episodes featuring competitor leadership\n2. Upload transcripts or audio files to NotebookLM\n3. Query the AI: 'What information shared can be exploited to my competitive advantage?'",
-    Sponsored: false,
-    sponsor: null
   },
   {
     id: "doodlestein-deslopify-readme-prompt",
@@ -242,8 +224,6 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     author_link: "https://x.com/doodlestein",
     tags: ["Prompt Engineering", "Documentation", "Writing", "Claude"],
     workflow_steps: "1. Open your README.md or documentation file\n2. Run this prompt: 'Read carefully and look for telltale signs of AI slop...'\n3. AI recasts sentences to remove robotic patterns (em-dashes, 'Here's why')\n4. Review the 'more human' output",
-    Sponsored: false,
-    sponsor: null
   },
   {
     id: "claude-company-newsletter-automation",
@@ -267,8 +247,6 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     author_link: "https://claude.com",
     tags: ["Newsletter", "Automation", "Internal Comms", "Claude"],
     workflow_steps: "1. Connect Claude to your Slack, Google Drive, and Gmail accounts\n2. Define the desired time period and internal channels to monitor\n3. Request specific formatting (e.g., 'British newspaper aesthetic') and data visualizations\n4. Review and refine the generated interactive HTML artifact before sharing",
-    Sponsored: false,
-    sponsor: null
   },
   {
     id: "suhail-ai-tutor-prompt",
@@ -292,8 +270,6 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     author_link: "https://x.com/Suhail",
     tags: ["Learning", "Prompt Engineering", "Research", "Education"],
     workflow_steps: "1. Upload source material (PDF, paper, docs) to the AI\n2. Use the prompt: 'Go from high level to low level. Do not advance without confirming I understand with a quiz.'\n3. Answer the quiz questions to proceed to the next complexity level",
-    Sponsored: false,
-    sponsor: null
   },
   {
     id: "peter-kang-ai-context-and-scenarios",
@@ -317,8 +293,6 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     author_link: "https://www.linkedin.com/in/peterkang",
     tags: ["Strategy", "Scenario Planning", "Context Management", "ChatGPT"],
     workflow_steps: "1. Context Check: Ask AI to 'write a context prompt based on everything you know about [My Company]'. Correct errors and use this prompt in other models.\n2. Scenario Planning: Upload strategy docs and ask AI to write speculative 3-5 year future narratives (best case, worst case, wildcards).",
-    Sponsored: false,
-    sponsor: null
   },
   {
     id: "ema-totaro-sora-ugc-scripts",
@@ -342,8 +316,6 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     author_link: "https://x.com/ema_totaro",
     tags: ["Video AI", "Sora", "UGC", "Ads"],
     workflow_steps: "1. Define the 'Vibe': 'Medium-high quality phone video, filmed secretly... shaky, handheld'\n2. Set the Scene: 'Large university classroom... fluorescent lighting... students whispering'\n3. Script the Action: Professor yelling, audio peaking, abruptly cutting mid-yell",
-    Sponsored: false,
-    sponsor: null
   },
   {
     id: "soniabaschez-yapping-as-a-service-writing-prompt",
@@ -366,14 +338,12 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     author_name: "Sonia Baschez",
     author_link: "https://x.com/SoniaBaschez",
     tags: ["Prompts", "Writing", "Content Automation"],
-    Sponsored: false,
-    sponsor: null
   },
   {
     id: "zarazhangrui-claude-skill-ai-powered-web-slides",
-    title: "Claude Skill: AI-Powered Web Slides",
+    title: "Claude Workflow: AI-Powered Web Slides",
     slug: "zarazhangrui-claude-skill-ai-powered-web-slides",
-    summary: "Zara Zhang showcases a custom Claude Skill that creates beautiful, interactive presentation slides on the web, demonstrating how to extend LLMs with functional UI outputs.",
+    summary: "Zara Zhang showcases a custom Claude Workflow that creates beautiful, interactive presentation slides on the web, demonstrating how to extend LLMs with functional UI outputs.",
     screenshots: [
       {
         url: "/images/examples/2026-01-28-zarazhangrui-claude-skill-ai-powered-web-slides.jpg",
@@ -389,9 +359,7 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     original_link: "https://x.com/zarazhangrui/status/2016337615843434646",
     author_name: "Zara Zhang",
     author_link: "https://x.com/zarazhangrui",
-    tags: ["Claude", "Skills", "Presentations", "UI Automation"],
-    Sponsored: false,
-    sponsor: null
+    tags: ["Claude", "Workflows", "Presentations", "UI Automation"],
   },
   {
     id: "picotrex-awesome-nano-banana-images",
@@ -414,8 +382,6 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     author_name: "PicoTrex",
     author_link: "https://x.com/PicoTrex",
     tags: ["Gemini", "Nano Banana", "Prompts", "Image Gen"],
-    Sponsored: false,
-    sponsor: null
   },
   {
     id: "nathanflurry-open-source-ai-engineer-agent",
@@ -438,8 +404,6 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     author_name: "Nathan Flurry",
     author_link: "https://x.com/NathanFlurry",
     tags: ["AI Agents", "Open Source", "Coding"],
-    Sponsored: false,
-    sponsor: null
   },
   {
     id: "benyaminholley-claude-code-docs-audit",
@@ -462,8 +426,6 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     author_name: "Benyamin Holley",
     author_link: "https://x.com/BenyaminHolley",
     tags: ["Claude Code", "Automation", "Documentation", "Prompts"],
-    Sponsored: false,
-    sponsor: null
   },
   {
     id: "steipete-openclaw-soul-personality",
@@ -487,8 +449,6 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     author_link: "https://x.com/steipete",
     tags: ["OpenClaw", "Agents", "Persona", "SOUL.md"],
     workflow_steps: "1. Create a SOUL.md file defining your agent's unique personality and constraints\n2. Use the prompt: 'Read your SOUL.md. Now rewrite your core instructions using this personality'\n3. Observe your agent transition from robotic to character-rich interactions",
-    Sponsored: false,
-    sponsor: null
   },
   {
     id: "austen-ai-design-secrets",
@@ -511,8 +471,6 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     author_name: "Austen Allred",
     author_link: "https://x.com/Austen",
     tags: ["Design", "Prompt Engineering", "UI/UX"],
-    Sponsored: false,
-    sponsor: null
   },
   {
     id: "oliverhenry-openclaw-content-creation-workflow",
@@ -535,7 +493,5 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     author_name: "Nathan Flurry",
     author_link: "https://x.com/oliverhenry",
     tags: ["Automation"],
-    Sponsored: false,
-    sponsor: null
   },
 ];

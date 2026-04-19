@@ -1,7 +1,7 @@
 # Blueprints: CRO
 
 ## The Attribution Modeler
-URL: https://realaiexamples.com/skills/attribution-modeler
+URL: https://realaiexamples.com/tools/attribution-modeler
 Description: Who actually deserves credit?
 
 ---
@@ -64,7 +64,7 @@ For each Path in `conversion_paths.csv`:
 ---
 
 ## Attribution Window Comparer
-URL: https://realaiexamples.com/skills/attribution-window-comparator
+URL: https://realaiexamples.com/tools/attribution-window-comparator
 Description: 1-day vs 7-day click impact.
 
 ---
@@ -119,7 +119,7 @@ Understand the time-lag of marketing impact.
 ---
 
 ## Basket Correlation Engine
-URL: https://realaiexamples.com/skills/basket-analysis-market-basket
+URL: https://realaiexamples.com/tools/basket-analysis-market-basket
 Description: People who buy A also buy B.
 
 ---
@@ -175,7 +175,7 @@ Increase AOV via smart bundling.
 ---
 
 ## The Efficiency Hawk
-URL: https://realaiexamples.com/skills/cac-by-month-tracker
+URL: https://realaiexamples.com/tools/cac-by-month-tracker
 Description: Detect when your acquisition engine is breaking.
 
 ---
@@ -239,7 +239,7 @@ If Alert is triggered, check:
 ---
 
 ## Checkout Flow Analyzer
-URL: https://realaiexamples.com/skills/checkout-funnel-dropoff
+URL: https://realaiexamples.com/tools/checkout-funnel-dropoff
 Description: Do they drop off at Shipping or Payment?
 
 ---
@@ -295,7 +295,7 @@ Optimize the checkout flow.
 ---
 
 ## The CTA Button Optimizer
-URL: https://realaiexamples.com/skills/cta-button-optimizer
+URL: https://realaiexamples.com/tools/cta-button-optimizer
 Description: Make them click.
 
 ---
@@ -358,7 +358,7 @@ For each page in the CSV:
 ---
 
 ## Support Cost vs LTV
-URL: https://realaiexamples.com/skills/customer-support-vs-ltv
+URL: https://realaiexamples.com/tools/customer-support-vs-ltv
 Description: Are needy customers worth it?
 
 ---
@@ -414,7 +414,7 @@ Evaluate the true cost of high-maintenance customers.
 ---
 
 ## Coupon Leak Detector
-URL: https://realaiexamples.com/skills/discount-code-leakage-monitor
+URL: https://realaiexamples.com/tools/discount-code-leakage-monitor
 Description: Did Honey scrape your exclusive code?
 
 ---
@@ -470,7 +470,7 @@ Detect and kill leaked promo codes.
 ---
 
 ## The Heatmap Predictor
-URL: https://realaiexamples.com/skills/heatmap-predictor
+URL: https://realaiexamples.com/tools/heatmap-predictor
 Description: See where they look before you launch.
 
 ---
@@ -538,7 +538,7 @@ For each Element in `page_elements.csv`:
 ---
 
 ## The "5-Second Test" Simulator
-URL: https://realaiexamples.com/skills/landing-page-clarity-score-vision
+URL: https://realaiexamples.com/tools/landing-page-clarity-score-vision
 Description: Simulate a user's first 5 seconds on your landing page.
 
 ---
@@ -591,7 +591,7 @@ Simulate a user's first 5 seconds on your landing page.
 ---
 
 ## The Landing Page Hero Auditor
-URL: https://realaiexamples.com/skills/landing-page-hero-auditor
+URL: https://realaiexamples.com/tools/landing-page-hero-auditor
 Description: Fix your site's first 5 seconds.
 
 ---
@@ -664,7 +664,7 @@ For each page in the CSV:
 ---
 
 ## Ad-to-Page Matcher
-URL: https://realaiexamples.com/skills/landing-page-intent-matcher
+URL: https://realaiexamples.com/tools/landing-page-intent-matcher
 Description: Does the Landing Page match the Ad?
 
 ---
@@ -720,7 +720,7 @@ Improve Quality Score via message matching.
 ---
 
 ## The LP Optimizer
-URL: https://realaiexamples.com/skills/landing-page-optimizer
+URL: https://realaiexamples.com/tools/landing-page-optimizer
 Description: A/B test ideas at scale.
 
 ---
@@ -784,7 +784,7 @@ For each page in the CSV:
 ---
 
 ## Device Conversion Gap
-URL: https://realaiexamples.com/skills/mobile-desktop-conversion-audit
+URL: https://realaiexamples.com/tools/mobile-desktop-conversion-audit
 Description: Is your mobile site killing sales?
 
 ---
@@ -840,7 +840,7 @@ Close the conversion gap between devices.
 ---
 
 ## Product Satisfaction Score
-URL: https://realaiexamples.com/skills/nps-by-product-scorer
+URL: https://realaiexamples.com/tools/nps-by-product-scorer
 Description: Which product makes people happiest?
 
 ---
@@ -899,7 +899,7 @@ Generate `cx_priority_report.md`:
 ---
 
 ## One-and-Done Profiler
-URL: https://realaiexamples.com/skills/one-time-buyer-analysis
+URL: https://realaiexamples.com/tools/one-time-buyer-analysis
 Description: Why do they leave after 1 buy?
 
 ---
@@ -954,7 +954,7 @@ Identify causes of single-purchase behavior.
 ---
 
 ## OOS Traffic Preserver
-URL: https://realaiexamples.com/skills/oos-traffic-redirector
+URL: https://realaiexamples.com/tools/oos-traffic-redirector
 Description: Don't let Out-of-Stock traffic bounce.
 
 ---
@@ -1009,7 +1009,7 @@ Retain traffic from OOS pages.
 ---
 
 ## Pop-up Efficiency Tracker
-URL: https://realaiexamples.com/skills/popup-engagement-tracker
+URL: https://realaiexamples.com/tools/popup-engagement-tracker
 Description: Which pop-up captures the most emails?
 
 ---
@@ -1065,7 +1065,7 @@ Maximize email list growth rate.
 ---
 
 ## The Pricing Auditor
-URL: https://realaiexamples.com/skills/pricing-page-psychologist
+URL: https://realaiexamples.com/tools/pricing-page-psychologist
 Description: Audit 10 pricing pages for conversion leaks.
 
 ---
@@ -1126,7 +1126,7 @@ For each URL in the CSV:
 ---
 
 ## PDP Performance Auditor
-URL: https://realaiexamples.com/skills/product-page-traffic-sales
+URL: https://realaiexamples.com/tools/product-page-traffic-sales
 Description: High traffic, no sales?
 
 ---
@@ -1182,7 +1182,7 @@ Identify leaks in the product funnel.
 ---
 
 ## Power User Identifier
-URL: https://realaiexamples.com/skills/product-usage-frequency-mapper
+URL: https://realaiexamples.com/tools/product-usage-frequency-mapper
 Description: Who logs in every single day?
 
 ---
@@ -1243,7 +1243,7 @@ sampleData
 ---
 
 ## Quality of Traffic Audit
-URL: https://realaiexamples.com/skills/refund-rate-marketing-channel
+URL: https://realaiexamples.com/tools/refund-rate-marketing-channel
 Description: Which ads drive returns?
 
 ---
@@ -1299,7 +1299,7 @@ Optimize spend for customer quality.
 ---
 
 ## Repurchase Rate Monitor
-URL: https://realaiexamples.com/skills/repeat-purchase-rate-tracker
+URL: https://realaiexamples.com/tools/repeat-purchase-rate-tracker
 Description: % of new customers who buy again.
 
 ---
@@ -1355,7 +1355,7 @@ Track loyalty health.
 ---
 
 ## The Competitive Review Miner
-URL: https://realaiexamples.com/skills/review-miner-pm
+URL: https://realaiexamples.com/tools/review-miner-pm
 Description: Audit the entire market's weaknesses.
 
 ---
@@ -1416,7 +1416,7 @@ For each competitor in the CSV:
 ---
 
 ## Review Sentiment Correlation
-URL: https://realaiexamples.com/skills/review-sentiment-analyzer
+URL: https://realaiexamples.com/tools/review-sentiment-analyzer
 Description: Do bad reviews tank conversion?
 
 ---
@@ -1472,7 +1472,7 @@ Quantify the impact of social proof.
 ---
 
 ## Peak Sales Timer
-URL: https://realaiexamples.com/skills/sales-velocity-day-of-week
+URL: https://realaiexamples.com/tools/sales-velocity-day-of-week
 Description: Best day to send emails?
 
 ---
@@ -1529,7 +1529,7 @@ Generate `calendar_blocks.md`:
 ---
 
 ## Speed vs Revenue Calc
-URL: https://realaiexamples.com/skills/site-speed-sales-impact
+URL: https://realaiexamples.com/tools/site-speed-sales-impact
 Description: How much does a slow site cost you?
 
 ---
@@ -1586,7 +1586,7 @@ Justify site speed optimizations with ROI.
 ---
 
 ## The SQL Cohort Builder
-URL: https://realaiexamples.com/skills/sql-cohort-analyzer
+URL: https://realaiexamples.com/tools/sql-cohort-analyzer
 Description: Standardize your retention metrics.
 
 ---
@@ -1648,7 +1648,7 @@ For each environment in the CSV:
 ---
 
 ## Trust Badge A/B Analyzer
-URL: https://realaiexamples.com/skills/trust-badge-tester
+URL: https://realaiexamples.com/tools/trust-badge-tester
 Description: Does 'Secure Checkout' actually help?
 
 ---
@@ -1705,7 +1705,7 @@ Select the highest-converting trust elements.
 ---
 
 ## Onboarding Leak Detector
-URL: https://realaiexamples.com/skills/user-onboarding-dropout-finder
+URL: https://realaiexamples.com/tools/user-onboarding-dropout-finder
 Description: Where do users quit during setup?
 
 ---
@@ -1769,7 +1769,7 @@ sampleData
 ---
 
 ## The UX Vision Auditor
-URL: https://realaiexamples.com/skills/ux-vision-auditor
+URL: https://realaiexamples.com/tools/ux-vision-auditor
 Description: An eye-tracking lab in your terminal.
 
 ---
@@ -1835,7 +1835,7 @@ For each image in the CSV:
 ---
 
 ## The Growth Loop Architect
-URL: https://realaiexamples.com/skills/viral-loop-architect
+URL: https://realaiexamples.com/tools/viral-loop-architect
 Description: Design referral engines for every user segment.
 
 ---
@@ -1894,7 +1894,7 @@ For each segment in the CSV:
 ---
 
 ## Zero-Result Search Auditor
-URL: https://realaiexamples.com/skills/zero-result-search-opportunity
+URL: https://realaiexamples.com/tools/zero-result-search-opportunity
 Description: What are people searching for that you don't have?
 
 ---

@@ -1,1 +1,0 @@
-ttq.track('CompletePayment', { value: 100, currency: 'USD' });

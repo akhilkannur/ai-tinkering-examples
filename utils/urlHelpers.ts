@@ -1,6 +1,6 @@
 // utils/urlHelpers.ts
 
-import type { ExampleRecord } from '../lib/airtable'
+import { EnrichedExampleRecord as ExampleRecord } from '../lib/types'
 
 /**
  * Generate SEO-friendly URL for an example
@@ -23,22 +23,6 @@ export function getFullExampleUrl(example: ExampleRecord, baseUrl?: string): str
   // Fallback for server-side or if baseUrl is provided
   const domain = baseUrl || process.env.NEXT_PUBLIC_SITE_URL || 'https://realaiexamples.com'
   return `${domain}${relativePath}`
-}
-
-/**
- * Generate category URL
- */
-export function getCategoryUrl(category: string): string {
-  const categorySlug = category.toLowerCase().replace(/\s+/g, '-')
-  return `/ai-examples/category/${categorySlug}`
-}
-
-/**
- * Generate tag URL
- */
-export function getTagUrl(tag: string): string {
-  const tagSlug = tag.toLowerCase().replace(/\s+/g, '-')
-  return `/ai-examples/tag/${tagSlug}`
 }
 
 /**

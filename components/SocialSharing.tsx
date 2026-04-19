@@ -1,6 +1,6 @@
 import { Facebook, X, Linkedin, Link2, Copy, Check } from 'lucide-react'
 import { useState } from 'react'
-import type { ExampleRecord } from '../lib/airtable'
+import { EnrichedExampleRecord as ExampleRecord } from '../lib/types'
 import { getSocialShareUrls } from '../utils/urlHelpers'
 import { trackEvent } from '../utils/analytics'
 

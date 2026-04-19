@@ -1,6 +1,6 @@
 ---
 name: capturing-screenshots
-description: "Captures perfect, uncropped screenshots of social media posts (Twitter/X, LinkedIn, Reddit, Threads, Bluesky, Instagram, GitHub) and web pages. Use when asked to screenshot, capture, or take a picture of a URL or social post."
+description: "Captures perfect, uncropped screenshots of social media posts and adds them as examples to the site. Use when asked to screenshot, capture, or add an example from a URL or social post."
 ---
 
 # Capturing Screenshots
@@ -130,23 +130,64 @@ When asked to capture a screenshot:
 | Bot detection / blank page | The script uses a realistic user-agent; try `--debug` to investigate |
 | Element not found | Falls back to full-page automatically with a warning |
 
-## Integration with create-example.js
+## Adding a New Example (Full Workflow)
 
-To use this capture script from `scripts/create-example.js`, replace the existing `capture-screenshot.js` call:
+When the user asks to "add this as an example" or "screenshot this and add it to the site":
 
-```js
-// In scripts/create-example.js, replace:
-const captureScreenshotModule = require('./capture-screenshot.js');
-
-// With:
-const { execSync } = require('child_process');
-function captureScreenshot(url, outputPath) {
-  execSync(`node .agents/skills/capturing-screenshots/scripts/capture.js "${url}" -o "${outputPath}" --format webp --padding 0`, {
-    stdio: 'inherit',
-    cwd: process.cwd(),
-  });
-}
+### Step 1: Capture the screenshot
+```bash
+node .agents/skills/capturing-screenshots/scripts/capture.js "<URL>" \
+  -o public/images/examples/<slug>.webp --format webp --wait 6000
 ```
+Use a descriptive slug like `ai-automation-example-<topic>.webp`.
+
+### Step 2: Read the post content
+Open the URL in the browser or use `read_web_page` to extract the actual post text, author name, and context.
+
+### Step 3: Write the description
+Based on what the post actually says, write:
+- **title**: A clear, specific title (not generic like "AI Tool Usage Tip")
+- **summary**: 1-2 sentences describing what the post demonstrates and why it's useful. Reference what the author specifically did or shared. Be concrete, not templated.
+
+**Good**: "Austen Allred crowdsourced the community's best techniques for getting AI tools to produce genuinely beautiful designs — the thread has practical prompting strategies that go beyond generic advice."
+
+**Bad**: "Austen reveals a valuable AI tool usage technique that can boost productivity."
+
+### Step 4: Add the entry to `lib/social-examples-data.ts`
+Add a new object before the closing `];`:
+
+```typescript
+{
+  id: "<handle>-<slug>",
+  title: "<your title>",
+  slug: "<handle>-<slug>",
+  summary: "<your summary>",
+  screenshots: [
+    {
+      url: "/images/examples/<filename>.webp",
+      filename: "<filename>.webp",
+      thumbnails: {
+        small: { url: "/images/examples/<filename>.webp" },
+        large: { url: "/images/examples/<filename>.webp" }
+      }
+    }
+  ],
+  category: "<Category>",
+  publish_date: "<YYYY-MM-DD>",
+  original_link: "<original URL>",
+  author_name: "<Real Author Name>",
+  author_link: "https://x.com/<handle>",
+  tags: ["Tag1", "Tag2"],
+  Sponsored: false,
+  sponsor: null
+},
+```
+
+### Categories to choose from
+Pick the most relevant: `Marketing Ops`, `Sales Ops`, `Content Ops`, `Design Ops`, `Dev Ops`, `Data Ops`, `HR Ops`, `Finance Ops`, `Product Ops`, `SEO`, `Paid Media`, `General`
+
+### Step 5: Verify
+Run `npm run build` to ensure no TypeScript errors.
 
 ## Prerequisites
 

@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { X, ExternalLink } from 'lucide-react'
-import type { EnrichedExampleRecord } from '../lib/airtable'
+import { EnrichedExampleRecord } from '../lib/types'
 import ExampleBody from './ExampleBody'
 
 interface ExampleModalProps {

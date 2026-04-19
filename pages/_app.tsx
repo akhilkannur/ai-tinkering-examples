@@ -37,24 +37,6 @@ export default function App({ Component, pageProps }: AppProps) {
     ? baseUrl 
     : baseUrl + cleanPath.replace(/\/$/, '');
 
-  useEffect(() => {
-    const handleGlobalClick = (e: MouseEvent) => {
-      const target = e.target as HTMLElement;
-      const anchor = target.closest('a');
-      
-      if (anchor && anchor.href && anchor.href.includes('dodopayments.com')) {
-        trackEvent('click_dodo_payment', {
-          event_category: 'engagement',
-          event_label: anchor.href,
-          destination: anchor.href
-        });
-      }
-    };
-
-    document.addEventListener('click', handleGlobalClick);
-    return () => document.removeEventListener('click', handleGlobalClick);
-  }, []);
-
   return (
     <div className={`${inter.variable} ${dmSans.variable} ${spaceMono.variable} font-sans`}>
       <Head>
@@ -78,12 +60,9 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="canonical" href={canonicalUrl} key="canonical" />
         <link rel="shortcut icon" href={`${baseUrl}/favicon.ico`} />
         <link rel="icon" href={`${baseUrl}/favicon.ico`} type="image/x-icon" />
-        <link rel="icon" type="image/png" sizes="16x16" href={`${baseUrl}/favicon_transparent.png`} />
-        <link rel="icon" type="image/png" sizes="32x32" href={`${baseUrl}/favicon_transparent.png`} />
-        <link rel="apple-touch-icon" sizes="180x180" href={`${baseUrl}/favicon_transparent.png`} />
       </Head>
       <Component {...pageProps} />
-      {router.pathname !== '/' && router.pathname !== '/tools' && router.pathname !== '/blueprint-tools' && <Footer />}
+      {router.pathname !== '/' && router.pathname !== '/tools' && <Footer />}
       <NewsletterPopup />
       <NewsletterToast />
       

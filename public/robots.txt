@@ -1,18 +1,15 @@
 # Real AI Examples - Robots.txt
-# Strategy: Allow crawling everywhere so Google can discover noindex meta tags
-# on deprecated pages and de-index them. Disallow blocks crawling, which
-# PREVENTS Google from seeing noindex, keeping pages indexed forever.
+# Strategy: Strong production focus. All active routes are allowed. 
+# Search engines are directed to the sitemap for priority pages.
 
 User-agent: *
 Allow: /
 
-# Only block truly private/API paths
+# Block technical and private paths
 Disallow: /api/
-Allow: /api/og
+Disallow: /_next/
+Disallow: /static/
 Disallow: /debug
-
-# Crawl delay
-Crawl-delay: 1
 
 # Sitemap location
 Sitemap: https://realaiexamples.com/sitemap.xml

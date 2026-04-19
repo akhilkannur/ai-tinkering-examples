@@ -211,7 +211,7 @@ async function main() {
 
 ${data.description || data.tagline}
 
-Build it yourself at realaiexamples.com/skills/${data.id}
+Build it yourself at realaiexamples.com/
 
 #AI #Automation #AIBlueprints`;
 
