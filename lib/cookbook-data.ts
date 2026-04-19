@@ -42,6 +42,8 @@ export const categoryIcons: Record<Category, any> = {
   'Product Ops': Database,
   'SEO Ops': Globe,
   'Dev Tools': Cpu,
+  'Brand': PieChart,
+  'Social Media': Share2,
   'Agent Documentation': FileText
 };
 
