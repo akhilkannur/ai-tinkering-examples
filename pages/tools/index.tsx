@@ -79,11 +79,6 @@ export default function ToolsIndex() {
   const hasMoreWeeks = groupedWeeks.length > 4;
 
   // Count tools added this month
-  const thisMonthCount = useMemo(() => {
-    const now = new Date();
-    const oneMonthAgo = new Date(now.getFullYear(), now.getMonth() - 1, now.getDate());
-    return aiTools.filter(t => new Date(t.dateAdded) >= oneMonthAgo).length;
-  }, []);
 
   return (
     <div className="flex flex-col min-h-screen bg-[#F9F8F6] font-sans text-slate-900 selection:bg-[#ff00ff] selection:text-white">
@@ -103,16 +98,6 @@ export default function ToolsIndex() {
         
         {/* Hero - DistributionKit Style */}
         <div className="max-w-5xl mx-auto text-center mb-12 md:mb-20">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/50 border border-slate-200 rounded-full mb-6">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-            </span>
-            <span className="text-[10px] font-bold uppercase tracking-widest text-slate-500">
-              {aiTools.length} Tools Indexed · {thisMonthCount} New this month
-            </span>
-          </div>
-          
           <h1 className="text-4xl md:text-7xl font-display font-black uppercase tracking-tighter leading-[0.85] mb-6">
             Your Workflow<br />Won't Automate Itself.
           </h1>
