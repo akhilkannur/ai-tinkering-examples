@@ -46,29 +46,29 @@ export default function Navbar() {
       </Head>
       <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${
         scrolled || !isHomePage
-          ? 'bg-white/95 backdrop-blur-md border-b border-gray-200 py-4'
-          : 'bg-transparent py-6'
+          ? 'bg-white/80 backdrop-blur-xl border-b border-micro-layer-1 py-3'
+          : 'bg-transparent py-5'
       }`}>
-      <div className="max-w-[1440px] mx-auto px-6">
-        <div className="flex justify-between items-center h-16">
-          <div className="flex items-center gap-12">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="flex justify-between items-center h-14">
+          <div className="flex items-center gap-10">
             <div className="flex-shrink-0">
-              <Link href="/" className="flex items-center gap-3 group">
-                <div className="w-8 h-8 bg-terminal-green rounded shadow-sm flex items-center justify-center transition-transform group-hover:scale-105"></div>
-                <span className="text-2xl font-display font-semibold tracking-wide text-primary-text uppercase">Real AI Examples</span>
+              <Link href="/" className="flex items-center gap-2 group">
+                <div className="w-6 h-6 bg-micro-fg rounded-md flex items-center justify-center transition-transform group-hover:scale-105"></div>
+                <span className="text-xl font-bold tracking-tight text-micro-fg">Real AI</span>
               </Link>
             </div>
             
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-10">
+            <div className="hidden lg:flex items-center space-x-8">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`text-sm font-medium tracking-wide transition-colors duration-200 ${
+                  className={`text-[13px] font-bold tracking-wide transition-colors duration-200 ${
                     router.pathname === link.href
-                      ? 'text-primary-text font-semibold'
-                      : 'text-secondary-text hover:text-primary-text'
+                      ? 'text-micro-fg'
+                      : 'text-micro-muted hover:text-micro-fg'
                   }`}
                 >
                   {link.label}
@@ -78,9 +78,9 @@ export default function Navbar() {
           </div>
 
           <div className="hidden lg:flex items-center gap-4">
-            <a href="#" className="flex items-center justify-center w-10 h-10 rounded border border-gray-200 bg-white hover:border-terminal-green hover:bg-terminal-green/5 transition-all shadow-sm text-secondary-text hover:text-terminal-green">
-                <i className="ph ph-twitter-logo text-lg"></i>
-            </a>
+            <Link href="/prompt-bundle" className="button-micro py-2 text-[12px]">
+              GET BUNDLE
+            </Link>
           </div>
 
           {/* Mobile menu button */}

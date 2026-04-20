@@ -5,71 +5,45 @@ import { Terminal } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="bg-white text-primary-text pt-xxl pb-xl border-t border-border-color font-sans relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-lg md:px-[48px] relative z-10">
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-xl mb-xl">
-          {/* Column 1: Site */}
-          <div>
-            <h4 className="text-[0.75rem] font-semibold text-primary-text uppercase tracking-[0.05em] mb-lg">Site</h4>
-            <ul className="space-y-sm text-[0.875rem] font-normal text-secondary-text">
-              <li>
-                <Link href="/about" className="hover:text-primary-text transition-colors">About</Link>
-              </li>
-              <li>
-                <Link href="/" className="hover:text-primary-text transition-colors">Examples</Link>
-              </li>
-              <li>
-                <Link href="/tools" className="hover:text-primary-text transition-colors">Tool Directory</Link>
-              </li>
-              <li>
-                <Link href="/blog" className="hover:text-primary-text transition-colors">Blog</Link>
-              </li>
-            </ul>
+    <footer className="bg-white text-micro-fg py-24 border-t border-micro-layer-1 font-sans">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-12 mb-20">
+          {/* Column 1: Brand */}
+          <div className="col-span-2">
+            <Link href="/" className="flex items-center gap-2 mb-6 group">
+                <div className="w-5 h-5 bg-micro-fg rounded flex items-center justify-center transition-transform group-hover:scale-105"></div>
+                <span className="text-lg font-bold tracking-tight text-micro-fg">Real AI</span>
+            </Link>
+            <p className="text-sm font-bold text-micro-muted max-w-xs leading-relaxed uppercase tracking-wider">
+              Real-world AI workflows and practical automations for business professionals.
+            </p>
           </div>
 
-          {/* Column 2: Connect */}
+          {/* Column 2: Site */}
           <div>
-            <h4 className="text-[0.75rem] font-semibold text-primary-text uppercase tracking-[0.05em] mb-lg">Connect</h4>
-            <ul className="space-y-sm text-[0.875rem] font-normal text-secondary-text">
-              <li>
-                <Link href="/#newsletter" className="hover:text-primary-text transition-colors">Newsletter</Link>
-              </li>
-              <li>
-                <a href="https://salestools.club/" target="_blank" rel="noopener noreferrer" className="hover:text-primary-text transition-colors">
-                  Salestools Club
-                </a>
-              </li>
+            <h4 className="text-[11px] font-bold text-micro-fg uppercase tracking-[0.1em] mb-6">Site</h4>
+            <ul className="space-y-3 text-[13px] font-bold text-micro-muted">
+              <li><Link href="/about" className="hover:text-micro-fg transition-colors">ABOUT</Link></li>
+              <li><Link href="/" className="hover:text-micro-fg transition-colors">EXAMPLES</Link></li>
+              <li><Link href="/tools" className="hover:text-micro-fg transition-colors">TOOLS</Link></li>
+              <li><Link href="/blog" className="hover:text-micro-fg transition-colors">BLOG</Link></li>
             </ul>
           </div>
 
           {/* Column 3: Legal */}
           <div>
-            <h4 className="text-[0.75rem] font-semibold text-primary-text uppercase tracking-[0.05em] mb-lg">Legal</h4>
-            <ul className="space-y-sm text-[0.875rem] font-normal text-secondary-text">
-              <li>
-                <Link href="/privacy" className="hover:text-primary-text transition-colors">Privacy Policy</Link>
-              </li>
-              <li>
-                <Link href="/terms" className="hover:text-primary-text transition-colors">Terms of Service</Link>
-              </li>
+            <h4 className="text-[11px] font-bold text-micro-fg uppercase tracking-[0.1em] mb-6">Legal</h4>
+            <ul className="space-y-3 text-[13px] font-bold text-micro-muted">
+              <li><Link href="/privacy" className="hover:text-micro-fg transition-colors">PRIVACY</Link></li>
+              <li><Link href="/terms" className="hover:text-micro-fg transition-colors">TERMS</Link></li>
             </ul>
           </div>
         </div>
 
-        <div className="pt-lg border-t border-border-color flex flex-col md:flex-row justify-between items-center gap-md">
-          <div className="flex items-center gap-4 group">
-             <div className="relative w-6 h-6 transition-transform group-hover:scale-105">
-                <Image 
-                  src="/logo.png" 
-                  alt="Real AI Examples Logo" 
-                  fill 
-                  className="object-contain"
-                />
-             </div>
-             <p className="text-secondary-text text-[0.75rem] font-normal">
-               &copy; {new Date().getFullYear()} Real AI Examples. Curated for business professionals.
-             </p>
-          </div>
+        <div className="pt-8 border-t border-micro-layer-1 flex flex-col md:flex-row justify-between items-center gap-6">
+           <p className="text-micro-muted text-[11px] font-bold uppercase tracking-widest">
+             &copy; {new Date().getFullYear()} Real AI Examples.
+           </p>
         </div>
       </div>
     </footer>

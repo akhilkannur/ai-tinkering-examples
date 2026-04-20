@@ -109,547 +109,107 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
       </Head>
 
       <style jsx global>{`
-        :root {
-          --bg-base: #FFFFFF;
-          --text-primary: #000000;
-          --text-secondary: #555555;
-          --border-heavy: #000000;
-          --border-light: #E0E0E0;
-          --color-charcoal: #333333;
-          --color-olive: #7B7662;
-          --color-acid: #C5CC5C;
-          --color-purple: #6A37AC;
-          --color-grey: #D8D8D8;
-          --color-watermark: rgba(0, 0, 0, 0.04);
-          --font-display: 'Arial Black', 'Impact', system-ui, -apple-system, sans-serif;
-          --font-body: 'Newsreader', 'Georgia', serif;
-          --font-mono: 'Courier New', Courier, monospace;
-          --space-xs: 0.5rem;
-          --space-sm: 1rem;
-          --space-md: 2rem;
-          --space-lg: 4rem;
-          --space-xl: 8rem;
-        }
-
-        @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap');
-
         body {
-          background-color: var(--bg-base) !important;
-          color: var(--text-primary) !important;
-          font-family: var(--font-body) !important;
-          -webkit-font-smoothing: antialiased;
-          line-height: 1.5;
-          overflow-x: hidden;
-        }
-
-        .watermark-container {
-          position: fixed;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          width: 80vw;
-          height: 80vw;
-          max-width: 800px;
-          max-height: 800px;
-          z-index: 0;
-          pointer-events: none;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        .watermark-svg {
-          width: 100%;
-          height: 100%;
-          fill: var(--color-watermark);
-        }
-
-        .drops-wrapper {
-          max-width: 1600px;
-          margin: 0 auto;
-          padding: 0 var(--space-md);
-          position: relative;
-          z-index: 1;
-        }
-
-        .drops-header {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          padding: var(--space-md) 0;
-          border-bottom: 2px solid var(--border-heavy);
-          margin-bottom: var(--space-xl);
-        }
-
-        .drops-logo {
-          font-family: var(--font-display);
-          font-size: 2rem;
-          text-transform: uppercase;
-          letter-spacing: -0.05em;
-          color: var(--text-primary);
-          text-decoration: none;
-        }
-
-        .drops-nav {
-          display: flex;
-          gap: var(--space-md);
-          font-family: var(--font-mono);
-          font-size: 0.85rem;
-          text-transform: uppercase;
-        }
-
-        .drops-nav a {
-          color: var(--text-primary);
-          text-decoration: none;
-        }
-
-        .drops-nav a:hover {
-          text-decoration: underline;
-        }
-
-        .hero-section {
-          text-align: center;
-          margin-bottom: var(--space-xl);
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-        }
-
-        .hero-title {
-          font-family: var(--font-display);
-          font-size: clamp(3rem, 8vw, 6rem);
-          text-transform: uppercase;
-          line-height: 0.9;
-          letter-spacing: -0.02em;
-          margin-bottom: var(--space-md);
-          max-width: 20ch;
-        }
-
-        .newsletter-form {
-          display: flex;
-          width: 100%;
-          max-width: 600px;
-          border: 2px solid var(--border-heavy);
-        }
-
-        .newsletter-input {
-          flex-grow: 1;
-          border: none;
-          padding: var(--space-sm) var(--space-md);
-          font-family: var(--font-mono);
-          font-size: 1rem;
-          background: transparent;
-          outline: none;
-          color: var(--text-primary);
-        }
-
-        .newsletter-input::placeholder {
-          color: var(--text-secondary);
-        }
-
-        .newsletter-submit {
-          background: var(--text-primary);
-          color: var(--bg-base);
-          border: none;
-          border-left: 2px solid var(--border-heavy);
-          padding: 0 var(--space-md);
-          font-family: var(--font-display);
-          text-transform: uppercase;
-          cursor: pointer;
-          transition: background 0.2s, color 0.2s;
-          font-size: 0.9rem;
-          white-space: nowrap;
-        }
-
-        .newsletter-submit:hover {
-          background: var(--bg-base);
-          color: var(--text-primary);
-        }
-
-        .newsletter-submit:disabled {
-          opacity: 0.5;
-          cursor: not-allowed;
-        }
-
-        .hero-meta {
-          margin-top: var(--space-sm);
-          font-family: var(--font-mono);
-          font-size: 0.75rem;
-          color: var(--text-secondary);
-          text-transform: uppercase;
-        }
-
-        .newsletter-success {
-          font-family: var(--font-mono);
-          font-size: 0.85rem;
-          text-transform: uppercase;
-          border: 2px solid var(--border-heavy);
-          padding: var(--space-sm) var(--space-md);
-          max-width: 600px;
-          width: 100%;
-          text-align: center;
-        }
-
-        .category-nav {
-          margin-bottom: var(--space-xl);
-          border-top: 1px solid var(--border-light);
-          border-bottom: 1px solid var(--border-light);
-          padding: var(--space-sm) 0;
-          overflow-x: auto;
-          white-space: nowrap;
-          -ms-overflow-style: none;
-          scrollbar-width: none;
-        }
-
-        .category-nav::-webkit-scrollbar {
-          display: none;
-        }
-
-        .category-list {
-          display: inline-flex;
-          gap: var(--space-md);
-          padding: 0 var(--space-md);
-          list-style: none;
-        }
-
-        .category-item {
-          font-family: var(--font-mono);
-          font-size: 0.85rem;
-          text-transform: uppercase;
-          color: var(--text-secondary);
-          cursor: pointer;
-          transition: color 0.2s;
-          white-space: nowrap;
-        }
-
-        .category-item:hover,
-        .category-item.active {
-          color: var(--text-primary);
-          font-weight: bold;
-        }
-
-        .drop-container {
-          margin-bottom: var(--space-xl);
-        }
-
-        .drop-header {
-          display: flex;
-          justify-content: space-between;
-          align-items: flex-end;
-          border-bottom: 4px solid var(--border-heavy);
-          padding-bottom: var(--space-xs);
-          margin-bottom: var(--space-md);
-          position: sticky;
-          top: 0;
-          background: rgba(255, 255, 255, 0.92);
-          backdrop-filter: blur(8px);
-          z-index: 10;
-          padding-top: var(--space-sm);
-        }
-
-        .drop-title {
-          font-family: var(--font-display);
-          font-size: clamp(1.5rem, 3vw, 2.5rem);
-          text-transform: uppercase;
-          letter-spacing: -0.02em;
-        }
-
-        .drop-status {
-          font-family: var(--font-mono);
-          background: var(--text-primary);
-          color: var(--bg-base);
-          padding: 2px 8px;
-          font-size: 0.8rem;
-          font-weight: bold;
-        }
-
-        .workflow-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-          gap: var(--space-lg) var(--space-md);
-        }
-
-        .card {
-          display: flex;
-          flex-direction: column;
-          cursor: pointer;
-          transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
-        }
-
-        .card:hover {
-          transform: translateY(-4px);
-          box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.15);
-        }
-
-        .card-visual {
-          aspect-ratio: 4/3;
-          width: 100%;
-          margin-bottom: var(--space-sm);
-          position: relative;
-          overflow: hidden;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          border: 1px solid var(--border-light);
-          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-          background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.08'/%3E%3C/svg%3E");
-          transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .card:hover .card-visual {
-          transform: translateY(-4px);
-        }
-
-        .card-visual.no-image::after {
-          content: '{ // ops }';
-          font-family: var(--font-mono);
-          font-size: 2rem;
-          font-weight: bold;
-          color: rgba(255, 255, 255, 0.3);
-          mix-blend-mode: overlay;
-        }
-
-        .card-visual.color-light::after {
-          color: rgba(0, 0, 0, 0.2);
-        }
-
-        .card-visual img,
-        .card-visual > span {
-          object-fit: cover;
-          object-position: top;
-        }
-
-        .card-meta {
-          display: flex;
-          justify-content: space-between;
-          align-items: flex-start;
-          margin-bottom: 4px;
-          font-family: var(--font-mono);
-          font-size: 0.75rem;
-          text-transform: uppercase;
-        }
-
-        .card-category {
-          color: var(--text-secondary);
-        }
-
-        .card-id {
-          color: var(--border-light);
-        }
-
-        .card-title {
-          font-family: var(--font-body);
-          font-weight: 700;
-          font-size: 1.1rem;
-          line-height: 1.2;
-          text-transform: uppercase;
-        }
-
-        .drops-footer {
-          padding: var(--space-xl) 0 var(--space-md);
-          border-top: 2px solid var(--border-heavy);
-          font-family: var(--font-mono);
-          font-size: 0.85rem;
-          text-transform: uppercase;
-          color: var(--text-secondary);
-        }
-
-        .drops-footer a {
-          color: var(--text-secondary);
-          text-decoration: none;
-        }
-
-        .drops-footer a:hover {
-          color: var(--text-primary);
-          text-decoration: underline;
-        }
-
-        .drops-footer-grid {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: var(--space-lg);
-          margin-bottom: var(--space-lg);
-        }
-
-        .drops-footer-grid ul {
-          list-style: none;
-          padding: 0;
-          margin: 0;
-          display: flex;
-          flex-direction: column;
-          gap: 0.5rem;
-        }
-
-        .drops-footer-heading {
-          font-family: var(--font-display);
-          font-size: 0.75rem;
-          color: var(--text-primary);
-          text-transform: uppercase;
-          letter-spacing: 0.05em;
-          margin-bottom: var(--space-sm);
-        }
-
-        .drops-footer-bottom {
-          padding-top: var(--space-sm);
-          border-top: 1px solid var(--border-light);
-          font-size: 0.7rem;
-          letter-spacing: 0.1em;
-        }
-
-        @media (max-width: 640px) {
-          .drops-wrapper {
-            padding: 0 var(--space-sm);
-          }
-          .drops-header {
-            flex-direction: column;
-            gap: var(--space-xs);
-            align-items: flex-start;
-            padding: var(--space-sm) 0;
-            margin-bottom: var(--space-md);
-          }
-          .drops-logo {
-            font-size: 1.25rem;
-          }
-          .hero-title {
-            font-size: clamp(1.75rem, 6vw, 3rem);
-            margin-bottom: var(--space-sm);
-          }
-          .hero-section {
-            margin-bottom: var(--space-md);
-          }
-          .category-nav {
-            margin-bottom: var(--space-md);
-          }
-          .drop-container {
-            margin-bottom: var(--space-md);
-          }
-          .workflow-grid {
-            grid-template-columns: 1fr;
-            gap: var(--space-md) var(--space-sm);
-          }
-          .newsletter-form {
-            flex-direction: column;
-          }
-          .newsletter-submit {
-            border-left: none;
-            border-top: 2px solid var(--border-heavy);
-            padding: var(--space-sm);
-          }
-          .drops-footer-grid {
-            grid-template-columns: 1fr 1fr;
-            gap: var(--space-md);
-          }
+          @apply bg-white text-micro-fg antialiased font-sans;
         }
       `}</style>
 
-      <div className="drops-wrapper">
-        {/* Header */}
-        <header className="drops-header">
-          <Link href="/" className="drops-logo">realaiexamples</Link>
-          <nav className="drops-nav">
-            <Link href="/tools">Tools</Link>
-            <Link href="/blog">Blog</Link>
-            <Link href="/about">About</Link>
-          </nav>
-        </header>
-
+      <div className="max-w-6xl mx-auto px-6 pt-32 pb-24">
         {/* Hero */}
-        <section className="hero-section">
-          <h1 className="hero-title">A library of real AI examples from people who use AI.</h1>
-
-          {formStatus === 'success' ? (
-            <div className="newsletter-success">✓ Check your inbox to confirm</div>
-          ) : (
-            <form className="newsletter-form" onSubmit={handleNewsletterSubmit}>
-              <input
-                type="email"
-                className="newsletter-input"
-                placeholder="Get weekly examples"
-                required
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                disabled={formStatus === 'loading'}
-              />
-              <button type="submit" className="newsletter-submit" disabled={formStatus === 'loading'}>
-                {formStatus === 'loading' ? '...' : 'Join'}
-              </button>
-            </form>
-          )}
-
-          <div className="hero-meta">
-            Join 300+ AI Tinkers · Next Drop: Tuesday
+        <section className="text-center mb-24 max-w-4xl mx-auto">
+          <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-8 leading-[0.95]">
+            A library of real AI examples from people who use AI.
+          </h1>
+          
+          <div className="flex flex-col items-center gap-6">
+            {formStatus === 'success' ? (
+              <div className="px-8 py-4 bg-micro-layer-1 rounded-pill font-bold text-micro-fg">
+                ✓ Check your inbox to confirm
+              </div>
+            ) : (
+              <form className="flex w-full max-w-lg p-1.5 bg-micro-layer-1 rounded-pill" onSubmit={handleNewsletterSubmit}>
+                <input
+                  type="email"
+                  className="flex-1 bg-transparent px-6 py-2 outline-none text-[15px] font-medium"
+                  placeholder="Get weekly examples"
+                  required
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  disabled={formStatus === 'loading'}
+                />
+                <button type="submit" className="button-micro px-8 py-3" disabled={formStatus === 'loading'}>
+                  {formStatus === 'loading' ? '...' : 'Join'}
+                </button>
+              </form>
+            )}
+            <p className="text-[13px] font-bold text-micro-muted uppercase tracking-widest">
+              Join 300+ AI Tinkers · Next Drop: Tuesday
+            </p>
           </div>
-          {formStatus === 'error' && (
-            <div className="hero-meta" style={{ color: '#c00', marginTop: '0.5rem' }}>
-              Something went wrong. Try again.
-            </div>
-          )}
         </section>
 
         {/* Category Filter */}
-        <nav className="category-nav">
-          <ul className="category-list">
+        <nav className="mb-16 border-b border-micro-layer-1">
+          <ul className="flex gap-8 overflow-x-auto pb-4 no-scrollbar">
             <li
-              className={`category-item ${selectedCategory === 'All' ? 'active' : ''}`}
+              className={`text-[13px] font-bold cursor-pointer transition-colors whitespace-nowrap ${selectedCategory === 'All' ? 'text-micro-fg border-b-2 border-micro-fg pb-4 -mb-4' : 'text-micro-muted hover:text-micro-fg'}`}
               onClick={() => setSelectedCategory('All')}
             >
-              All Drops
+              ALL DROPS
             </li>
             {categories.map((cat) => (
               <li
                 key={cat}
-                className={`category-item ${selectedCategory === cat ? 'active' : ''}`}
+                className={`text-[13px] font-bold cursor-pointer transition-colors whitespace-nowrap ${selectedCategory === cat ? 'text-micro-fg border-b-2 border-micro-fg pb-4 -mb-4' : 'text-micro-muted hover:text-micro-fg'}`}
                 onClick={() => setSelectedCategory(cat)}
               >
-                {cat}
+                {cat.toUpperCase()}
               </li>
             ))}
           </ul>
         </nav>
 
         {/* Weekly Drops */}
-        <main>
+        <main className="space-y-24">
           {weeklyBatches.map(([week, items], batchIdx) => {
             if (items.length === 0) return null;
             return (
-              <section key={week} className="drop-container">
-                <header className="drop-header">
-                  <h2 className="drop-title">DROP / {week.toUpperCase()}</h2>
-                  {batchIdx === 0 && <span className="drop-status">NEW</span>}
-                </header>
+              <section key={week}>
+                <div className="flex items-center justify-between mb-8">
+                  <h2 className="text-sm font-bold tracking-widest text-micro-muted">DROP / {week.toUpperCase()}</h2>
+                  {batchIdx === 0 && <span className="bg-micro-fg text-white px-2 py-0.5 rounded text-[10px] font-bold">NEW</span>}
+                </div>
 
-                <div className="workflow-grid">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {items.map((example, i) => {
                     const cardNum = globalCardIndex++;
                     const rawUrl = example.screenshots?.[0]?.url;
                     const imageUrl = optimizeImageUrl(rawUrl, example.cloudinaryPublicId, 600);
-                    const colorIdx = cardNum % CARD_COLORS.length;
-                    const bgColor = CARD_COLORS[colorIdx];
-                    const isLightCard = bgColor === '#C5CC5C' || bgColor === '#D8D8D8';
 
                     return (
-                      <article key={example.id} className="card" onClick={() => handleOpenModal(example)}>
-                        <div
-                          className={`card-visual ${!imageUrl ? 'no-image' : ''} ${isLightCard && !imageUrl ? 'color-light' : ''}`}
-                          style={{ backgroundColor: bgColor }}
-                        >
-                          {imageUrl && (
+                      <article key={example.id} className="group cursor-pointer" onClick={() => handleOpenModal(example)}>
+                        <div className="card-micro aspect-[4/3] relative overflow-hidden mb-4">
+                          {imageUrl ? (
                             <Image
                               src={imageUrl}
                               alt={example.title}
                               fill
                               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                              style={{ objectFit: 'cover', objectPosition: 'top' }}
+                              className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                             />
+                          ) : (
+                            <div className="w-full h-full bg-micro-layer-1 flex items-center justify-center font-mono text-micro-muted">
+                              {'{ // ops }'}
+                            </div>
                           )}
                         </div>
-                        <div className="card-info">
-                          <div className="card-meta">
-                            <span className="card-category">{example.category || 'EXAMPLE'}</span>
-                            <span className="card-id">{example.publish_date ? new Date(example.publish_date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) : ''}</span>
-                          </div>
-                          <h3 className="card-title">{example.title}</h3>
+                        <div className="flex justify-between items-start mb-1 text-[11px] font-bold text-micro-muted uppercase tracking-wider">
+                          <span>{example.category || 'EXAMPLE'}</span>
+                          <span>{example.publish_date ? new Date(example.publish_date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) : ''}</span>
                         </div>
+                        <h3 className="text-xl font-bold leading-tight group-hover:underline decoration-2 underline-offset-4">
+                          {example.title}
+                        </h3>
                       </article>
                     );
                   })}
@@ -658,6 +218,7 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
             );
           })}
         </main>
+      </div>
 
         {/* Footer */}
         <footer className="drops-footer">

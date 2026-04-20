@@ -4,27 +4,27 @@
 
 @layer base {
   body {
-    @apply bg-page-bg text-primary-text antialiased font-sans;
+    @apply bg-white text-micro-fg antialiased font-sans;
   }
 
-  /* Consistent heading styles based on rebrand spec */
+  /* Clean heading styles */
   h1, h2, h3, h4, h5, h6 {
-    @apply tracking-[-0.02em];
+    @apply tracking-[-0.03em] font-bold text-micro-fg;
   }
 }
 
 @layer components {
-  /* Minimalist utilities for the rebrand */
-  .card-hover-effect {
-    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-card-hover;
+  /* Micro-inspired utilities */
+  .card-micro {
+    @apply bg-white border border-micro-layer-1 rounded-micro shadow-micro transition-all duration-300 hover:shadow-lg;
   }
 
-  .input-base {
-    @apply px-lg py-sm bg-white border border-border-color rounded-sm text-primary-text focus:border-secondary-text outline-none transition-all;
+  .input-micro {
+    @apply px-lg py-sm bg-micro-layer-1 border border-transparent rounded-pill text-micro-fg focus:bg-white focus:border-micro-layer-2 outline-none transition-all;
   }
 
-  .button-primary {
-    @apply px-xl py-sm bg-accent-dark text-white rounded-sm text-[0.875rem] font-medium hover:bg-black transition-all;
+  .button-micro {
+    @apply px-xl py-sm bg-micro-fg text-white rounded-pill text-[0.875rem] font-bold hover:opacity-90 transition-all;
   }
 }
 
