@@ -221,38 +221,48 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
       </div>
 
         {/* Footer */}
-        <footer className="drops-footer">
-          <div className="drops-footer-grid">
+        <footer className="mt-24 pt-16 border-t border-micro-layer-1 text-micro-fg font-sans">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-12 mb-16">
+            <div className="col-span-2">
+              <Link href="/" className="flex items-center gap-2 mb-6 group">
+                  <div className="w-5 h-5 bg-micro-fg rounded flex items-center justify-center transition-transform group-hover:scale-105"></div>
+                  <span className="text-lg font-bold tracking-tight text-micro-fg">Real AI</span>
+              </Link>
+              <p className="text-sm font-bold text-micro-muted max-w-xs leading-relaxed uppercase tracking-wider">
+                Real-world AI workflows and practical automations for business professionals.
+              </p>
+            </div>
             <div>
-              <h4 className="drops-footer-heading">Site</h4>
-              <ul>
-                <li><Link href="/about">About</Link></li>
-                <li><Link href="/">Examples</Link></li>
-                <li><Link href="/tools">Tool Directory</Link></li>
-                <li><Link href="/blog">Blog</Link></li>
+              <h4 className="text-[11px] font-bold text-micro-fg uppercase tracking-[0.1em] mb-6">Site</h4>
+              <ul className="space-y-3 text-[13px] font-bold text-micro-muted">
+                <li><Link href="/about" className="hover:text-micro-fg transition-colors uppercase">About</Link></li>
+                <li><Link href="/" className="hover:text-micro-fg transition-colors uppercase">Examples</Link></li>
+                <li><Link href="/tools" className="hover:text-micro-fg transition-colors uppercase">Tools</Link></li>
+                <li><Link href="/blog" className="hover:text-micro-fg transition-colors uppercase">Blog</Link></li>
               </ul>
             </div>
             <div>
-              <h4 className="drops-footer-heading">Connect</h4>
-              <ul>
-                <li><Link href="/#newsletter">Newsletter</Link></li>
-                <li><a href="https://twitter.com/realaiexamples" target="_blank" rel="noopener noreferrer">Twitter</a></li>
-                <li><a href="https://salestools.club/" target="_blank" rel="noopener noreferrer">Salestools Club</a></li>
+              <h4 className="text-[11px] font-bold text-micro-fg uppercase tracking-[0.1em] mb-6">Connect</h4>
+              <ul className="space-y-3 text-[13px] font-bold text-micro-muted">
+                <li><Link href="/#newsletter" className="hover:text-micro-fg transition-colors uppercase">Newsletter</Link></li>
+                <li><a href="https://twitter.com/realaiexamples" target="_blank" rel="noopener noreferrer" className="hover:text-micro-fg transition-colors uppercase">Twitter</a></li>
+                <li><a href="https://salestools.club/" target="_blank" rel="noopener noreferrer" className="hover:text-micro-fg transition-colors uppercase">Salestools Club</a></li>
               </ul>
             </div>
             <div>
-              <h4 className="drops-footer-heading">Legal</h4>
-              <ul>
-                <li><Link href="/privacy">Privacy Policy</Link></li>
-                <li><Link href="/terms">Terms of Service</Link></li>
+              <h4 className="text-[11px] font-bold text-micro-fg uppercase tracking-[0.1em] mb-6">Legal</h4>
+              <ul className="space-y-3 text-[13px] font-bold text-micro-muted">
+                <li><Link href="/privacy" className="hover:text-micro-fg transition-colors uppercase">Privacy</Link></li>
+                <li><Link href="/terms" className="hover:text-micro-fg transition-colors uppercase">Terms</Link></li>
               </ul>
             </div>
           </div>
-          <div className="drops-footer-bottom">
-            © {new Date().getFullYear()} Real AI Examples
+          <div className="pt-8 border-t border-micro-layer-1 flex flex-col md:flex-row justify-between items-center gap-6">
+            <p className="text-micro-muted text-[11px] font-bold uppercase tracking-widest">
+              &copy; {new Date().getFullYear()} Real AI Examples.
+            </p>
           </div>
         </footer>
-      </div>
 
       <ExampleModal
         example={modalExample as any}
