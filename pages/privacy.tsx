@@ -1,19 +1,15 @@
 import Head from 'next/head'
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
 
 export default function Privacy() {
   return (
-    <div className="min-h-screen bg-micro-bg font-sans text-micro-fg selection:bg-terminal-lime selection:text-micro-bg">
+    <div className="font-sans text-micro-fg selection:bg-terminal-lime selection:text-micro-bg">
       <Head>
         <title>Privacy Policy | Real AI Examples</title>
         <meta name="description" content="Read our privacy policy to understand how we collect and protect your personal data." key="description" />
         <meta name="robots" content="noindex, follow" />
       </Head>
 
-      <Navbar />
-
-      <main className="pt-24 md:pt-32 pb-24 max-w-3xl mx-auto px-6">
+      <main className="max-w-3xl mx-auto px-6 py-12">
         <h1 className="text-3xl font-bold mb-2">Privacy Policy</h1>
         <p className="text-xs font-bold uppercase tracking-widest text-micro-muted mb-12">Last Updated: April 21, 2026</p>
 
@@ -51,8 +47,6 @@ export default function Privacy() {
           </footer>
         </div>
       </main>
-
-      <Footer />
     </div>
   )
 }
