@@ -74,11 +74,11 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     summary: "AI Edge shares 10 practical ideas to implement Claude Cowork with as little friction as possible.",
     screenshots: [
       {
-        url: "/images/examples/2026-01-22-aiedge_-getting-started-w-claude-cowork-10-essential-workf.jpg",
-        filename: "2026-01-22-aiedge_-getting-started-w-claude-cowork-10-essential-workf.jpg",
+        url: "/images/examples/2026-01-22-aiedge_-getting-started-w-claude-cowork-10-essential-workf.webp",
+        filename: "2026-01-22-aiedge_-getting-started-w-claude-cowork-10-essential-workf.webp",
         thumbnails: {
-          small: { url: "/images/examples/2026-01-22-aiedge_-getting-started-w-claude-cowork-10-essential-workf.jpg" },
-          large: { url: "/images/examples/2026-01-22-aiedge_-getting-started-w-claude-cowork-10-essential-workf.jpg" }
+          small: { url: "/images/examples/2026-01-22-aiedge_-getting-started-w-claude-cowork-10-essential-workf.webp" },
+          large: { url: "/images/examples/2026-01-22-aiedge_-getting-started-w-claude-cowork-10-essential-workf.webp" }
         }
       }
     ],

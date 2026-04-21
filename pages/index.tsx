@@ -213,14 +213,14 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
                               handleExampleClick(example);
                             }}
                           >
-                          <div className="card-micro aspect-[4/3] relative overflow-hidden mb-4">
+                          <div className="card-micro aspect-[4/3] relative overflow-hidden mb-4 bg-micro-layer-1">
                             {imageUrl ? (
                               <Image
                                 src={imageUrl}
                                 alt={example.title}
                                 fill
                                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                                className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                                className="object-contain transition-transform duration-500 group-hover:scale-105"
                               />
                             ) : (
                               <div className="w-full h-full bg-micro-layer-1 flex items-center justify-center font-mono text-micro-muted">
