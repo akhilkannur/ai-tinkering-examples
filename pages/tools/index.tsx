@@ -10,26 +10,14 @@ const slugify = (text: string) =>
 
 // Group tools by week label
 function getWeekLabel(dateStr: string): string {
-  const date = new Date(dateStr + 'T00:00:00');
-  const now = new Date();
-  
-  // Start of this week (Sunday)
-  const startOfThisWeek = new Date(now);
-  startOfThisWeek.setDate(now.getDate() - now.getDay());
-  startOfThisWeek.setHours(0, 0, 0, 0);
-
-  const startOfLastWeek = new Date(startOfThisWeek);
-  startOfLastWeek.setDate(startOfLastWeek.getDate() - 7);
-
-  if (date >= startOfThisWeek) return 'This Week';
-  if (date >= startOfLastWeek) return 'Last Week';
-
-  // Find the Monday of that week for a cleaner label
-  const d = new Date(date);
+  const d = new Date(dateStr + 'T00:00:00');
   const day = d.getDay();
+  // Adjust to Monday
   const diff = d.getDate() - day + (day === 0 ? -6 : 1);
   d.setDate(diff);
-  return `Week of ${d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}`;
+  
+  const datePart = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }).toUpperCase();
+  return `DROP / ${datePart}`;
 }
 
 function formatDate(dateStr: string): string {
@@ -112,11 +100,41 @@ export default function ToolsIndex() {
             </div>
           </div>
 
-          {/* Tools List & Sidebar */}
-          <div className="flex flex-col lg:flex-row gap-10 lg:gap-12">
-            
-            {/* Main Content: Tools List */}
-            <div className="flex-grow min-w-0">
+          {/* Horizontal CTAs */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
+            <a 
+              href="https://salestools.club/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="group flex items-center gap-6 bg-white border border-micro-layer-1 rounded-[32px] p-6 hover:border-micro-fg transition-all hover:shadow-micro"
+            >
+              <div className="w-12 h-12 rounded-2xl bg-micro-fg flex items-center justify-center text-white font-bold text-xl shadow-lg flex-shrink-0">
+                S
+              </div>
+              <div className="min-w-0">
+                <h4 className="font-bold uppercase text-[12px] tracking-widest text-micro-fg group-hover:text-terminal-lime transition-colors">SalesTools.club</h4>
+                <p className="text-[14px] text-micro-muted font-medium truncate">The ultimate database for modern sales operators.</p>
+              </div>
+              <ArrowRight className="w-4 h-4 text-micro-muted ml-auto group-hover:translate-x-1 transition-transform" />
+            </a>
+
+            <Link
+              href="/tools/badge"
+              className="group flex items-center gap-6 bg-micro-fg rounded-[32px] p-6 text-white hover:shadow-micro transition-all border border-transparent"
+            >
+              <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center text-white font-bold text-xl flex-shrink-0">
+                +
+              </div>
+              <div className="min-w-0">
+                <h4 className="font-bold uppercase text-[12px] tracking-widest text-white">List Your Tool</h4>
+                <p className="text-[14px] text-white/60 font-medium truncate">Join {aiTools.length} curated tools. Free forever.</p>
+              </div>
+              <ArrowRight className="w-4 h-4 text-white/40 ml-auto group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
+
+          {/* Main Content: Tools List (Full Width) */}
+          <div className="max-w-full">
               {filteredTools.length === 0 ? (
                 <div className="py-24 text-center border-2 border-dashed border-micro-layer-2 rounded-[40px] bg-micro-layer-1/30">
                   <p className="text-micro-muted font-bold uppercase tracking-widest text-sm">No tools found</p>
@@ -130,12 +148,16 @@ export default function ToolsIndex() {
               ) : (
                 <div className="flex flex-col">
                   {visibleGroups.map((group) => (
-                    <div key={group.label} className="mb-10 md:mb-20">
-                      <div className="flex items-center justify-between border-b border-micro-layer-1 pb-3 md:pb-4 mb-4 md:mb-8">
-                        <h2 className="text-lg md:text-2xl font-bold tracking-tight text-micro-fg">
-                          {group.label}
-                        </h2>
-                        <span className="text-[11px] font-bold text-micro-muted uppercase tracking-[0.2em]">
+                    <div key={group.label} className="mb-16 md:mb-28">
+                      <div className="flex items-center gap-6 mb-10 md:mb-14">
+                        <div className="flex items-center gap-3 bg-micro-fg px-6 py-2.5 rounded-full shadow-lg">
+                          <span className="w-2 h-2 rounded-full bg-terminal-lime animate-pulse"></span>
+                          <h2 className="text-[12px] md:text-[14px] font-black uppercase tracking-[0.2em] text-white whitespace-nowrap">
+                            {group.label}
+                          </h2>
+                        </div>
+                        <div className="h-[1px] flex-grow bg-micro-layer-1"></div>
+                        <span className="text-[10px] md:text-[11px] font-bold text-micro-muted uppercase tracking-[0.2em] whitespace-nowrap">
                           {group.tools.length} TOOLS
                         </span>
                       </div>
@@ -160,57 +182,13 @@ export default function ToolsIndex() {
                   )}
                 </div>
               )}
-            </div>
-
-            {/* Right Sidebar: Sponsors */}
-            <aside className="lg:w-96 flex-shrink-0">
-              <div className="sticky top-40 space-y-8">
-                <a 
-                  href="https://salestools.club/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="group block bg-white border border-micro-layer-1 rounded-3xl md:rounded-[40px] p-6 md:p-10 hover:border-micro-fg transition-all hover:shadow-micro"
-                >
-                  <div className="flex items-center gap-5 mb-6">
-                    <div className="w-14 h-14 rounded-2xl bg-micro-fg flex items-center justify-center text-white font-bold text-2xl shadow-lg">
-                      S
-                    </div>
-                    <div>
-                      <h4 className="font-bold uppercase text-[13px] tracking-widest text-micro-fg group-hover:text-terminal-lime transition-colors">SalesTools.club</h4>
-                      <p className="text-[10px] font-bold text-micro-muted uppercase tracking-[0.2em]">Curated Partner</p>
-                    </div>
-                  </div>
-                  <p className="text-sm text-micro-muted font-medium leading-relaxed mb-8">
-                    The ultimate database for modern sales operators. 500+ curated tools, APIs, and workflows to build your outbound engine.
-                  </p>
-                  <div className="inline-flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.2em] text-micro-fg group-hover:gap-5 transition-all">
-                    Explore Database <ArrowRight className="w-4 h-4" />
-                  </div>
-                </a>
-                
-                {/* Submit CTA */}
-                <div className="bg-micro-fg rounded-3xl md:rounded-[40px] p-6 md:p-10 text-center relative overflow-hidden group shadow-micro">
-                  <div className="absolute top-0 right-0 w-64 h-64 bg-terminal-lime opacity-10 blur-[100px] -mr-32 -mt-32 transition-all group-hover:opacity-20"></div>
-                  <div className="relative z-10">
-                    <h2 className="text-2xl font-bold text-white uppercase mb-4 tracking-tight">List Your Tool</h2>
-                    <p className="text-white/60 text-sm font-medium mb-8 leading-relaxed">Join {aiTools.length} curated tools. Get verified instantly. Free forever.</p>
-                    <Link
-                      href="/tools/badge"
-                      className="inline-flex items-center gap-3 bg-white text-micro-fg px-10 py-4 font-bold uppercase text-[11px] tracking-widest rounded-pill hover:bg-terminal-lime hover:text-micro-fg transition-all shadow-xl hover:scale-105 active:scale-95"
-                    >
-                      Get Verified <ArrowRight className="w-4 h-4" />
-                    </Link>
-                  </div>
-                </div>
               </div>
-            </aside>
-          </div>
-        </div>
-      </div>
-
-    </>
-  );
-}
+              </div>
+              </div>
+              </div>
+              </>
+              );
+              }
 
 function ToolDataRow({ tool }: { tool: AiTool }) {
   const getHostname = (href: string) => {
@@ -222,44 +200,45 @@ function ToolDataRow({ tool }: { tool: AiTool }) {
 
   return (
     <div 
-      className="group flex items-center gap-6 py-6 px-6 -mx-6 hover:bg-white transition-all cursor-pointer rounded-2xl border border-transparent hover:border-micro-layer-1 hover:shadow-soft"
+      className="group flex flex-col md:flex-row md:items-center gap-6 py-8 px-6 -mx-6 hover:bg-white transition-all cursor-pointer rounded-2xl border border-transparent hover:border-micro-layer-1 hover:shadow-soft"
     >
-      {/* Logo */}
-      <div className="w-12 h-12 rounded-xl border border-micro-layer-1 bg-white flex-shrink-0 flex items-center justify-center p-2 overflow-hidden group-hover:border-micro-fg transition-colors">
-        <Image 
-          src={imgSrc} 
-          alt={tool.name} 
-          width={48} 
-          height={48} 
-          className="object-contain"
-          onError={() => setImgSrc(fallbackLogo)}
-          unoptimized
-        />
-      </div>
+      {/* Logo & Name Mobile Group */}
+      <div className="flex items-center gap-6 flex-shrink-0 md:w-64">
+        <div className="w-14 h-14 rounded-2xl border border-micro-layer-1 bg-white flex-shrink-0 flex items-center justify-center p-2.5 overflow-hidden group-hover:border-micro-fg transition-colors shadow-sm">
+          <Image 
+            src={imgSrc} 
+            alt={tool.name} 
+            width={56} 
+            height={56} 
+            className="object-contain"
+            onError={() => setImgSrc(fallbackLogo)}
+            unoptimized
+          />
+        </div>
 
-      {/* Name */}
-      <div className="w-48 flex-shrink-0 min-w-0">
-        <h3 className="text-[16px] font-bold tracking-tight text-micro-fg truncate group-hover:underline decoration-1 underline-offset-4">
-          {tool.name}
-        </h3>
-        <span className="text-[10px] font-bold uppercase tracking-[0.1em] text-micro-muted">
-          {tool.category}
-        </span>
+        <div className="min-w-0">
+          <h3 className="text-lg font-bold tracking-tight text-micro-fg group-hover:underline decoration-2 underline-offset-4">
+            {tool.name}
+          </h3>
+          <span className="text-[10px] font-bold uppercase tracking-[0.1em] text-micro-muted">
+            {tool.category}
+          </span>
+        </div>
       </div>
 
       {/* Description */}
-      <p className="hidden md:block flex-1 text-[15px] text-micro-muted font-medium leading-snug truncate min-w-0">
-        {tool.description}
-      </p>
+      <div className="flex-1 min-w-0">
+        <p className="text-[16px] text-micro-muted font-medium leading-relaxed">
+          {tool.description}
+        </p>
+      </div>
 
-      {/* Pricing */}
-      <span className="hidden md:block text-sm font-bold text-micro-fg flex-shrink-0 w-24 text-right">
-        {tool.tags.price}
-      </span>
-
-      {/* Action */}
-      <div className="flex-shrink-0 ml-auto md:ml-0">
-        <ArrowRight className="w-5 h-5 text-micro-muted group-hover:text-micro-fg transition-colors" />
+      {/* Pricing & Link */}
+      <div className="flex items-center justify-between md:justify-end gap-10 flex-shrink-0 md:w-48">
+        <span className="text-sm font-bold text-micro-fg bg-micro-layer-1 px-4 py-1.5 rounded-full">
+          {tool.tags.price}
+        </span>
+        <ArrowRight className="w-5 h-5 text-micro-muted group-hover:text-micro-fg group-hover:translate-x-1 transition-all" />
       </div>
     </div>
   );
