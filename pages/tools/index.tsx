@@ -186,7 +186,6 @@ export default function ToolsIndex() {
           </div>
         </div>
       </div>
-    </div>
   );
 }
 
