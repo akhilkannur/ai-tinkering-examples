@@ -43,8 +43,8 @@ module.exports = {
         'link-blue': '#3b82f6',
       },
       fontFamily: {
-        sans: ['Outfit', 'Inter', 'system-ui', 'sans-serif'],
-        display: ['Outfit', '"Archivo Black"', 'sans-serif'],
+        sans: ['Geist', 'Inter', 'system-ui', 'sans-serif'],
+        display: ['"Instrument Serif"', 'serif'],
         mono: ['"JetBrains Mono"', '"Space Mono"', 'monospace'],
       },
       spacing: {

@@ -4,19 +4,23 @@
 
 @layer base {
   body {
-    @apply bg-white text-micro-fg antialiased font-sans;
+    @apply bg-[#faf9f7] text-micro-fg antialiased font-sans selection:bg-micro-layer-2;
   }
 
-  /* Clean heading styles */
+  /* Clean heading styles inspired by micro.so */
   h1, h2, h3, h4, h5, h6 {
-    @apply tracking-[-0.03em] font-bold text-micro-fg;
+    @apply tracking-[-0.04em] font-bold text-micro-fg;
+  }
+
+  .font-instrument {
+    font-family: 'Instrument Serif', serif;
   }
 }
 
 @layer components {
   /* Micro-inspired utilities */
   .card-micro {
-    @apply bg-white border border-micro-layer-1 rounded-micro shadow-micro transition-all duration-300 hover:shadow-lg;
+    @apply bg-white border border-micro-layer-1 rounded-3xl shadow-soft transition-all duration-500 hover:shadow-micro hover:-translate-y-1;
   }
 
   .input-micro {

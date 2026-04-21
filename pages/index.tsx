@@ -114,63 +114,65 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
         }
       `}</style>
 
-      <div className="max-w-6xl mx-auto px-6 pt-32 pb-24">
+      <div className="max-w-6xl mx-auto px-6 pt-40 pb-32">
         {/* Hero */}
-        <section className="text-center mb-24 max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-8 leading-[0.95]">
-            A library of real AI examples from people who use AI.
+        <section className="text-center mb-32 max-w-4xl mx-auto">
+          <h1 className="text-6xl md:text-8xl font-bold tracking-tight mb-10 leading-[0.9] text-micro-fg">
+            Real AI examples from <br/>people who use AI <span className="font-instrument font-normal italic lowercase opacity-80">at work.</span>
           </h1>
           
-          <div className="flex flex-col items-center gap-6">
+          <div className="flex flex-col items-center gap-8">
             {formStatus === 'success' ? (
-              <div className="px-8 py-4 bg-micro-layer-1 rounded-pill font-bold text-micro-fg">
+              <div className="px-10 py-5 bg-micro-layer-1 rounded-pill font-bold text-micro-fg shadow-sm">
                 ✓ Check your inbox to confirm
               </div>
             ) : (
-              <form className="flex w-full max-w-lg p-1.5 bg-micro-layer-1 rounded-pill" onSubmit={handleNewsletterSubmit}>
+              <form className="flex w-full max-w-xl p-2 bg-micro-layer-1 rounded-pill border border-micro-layer-2 shadow-sm" onSubmit={handleNewsletterSubmit}>
                 <input
                   type="email"
-                  className="flex-1 bg-transparent px-6 py-2 outline-none text-[15px] font-medium"
-                  placeholder="Get weekly examples"
+                  className="flex-1 bg-transparent px-8 py-3 outline-none text-[16px] font-medium placeholder:text-micro-muted"
+                  placeholder="Drop your email for weekly examples"
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   disabled={formStatus === 'loading'}
                 />
-                <button type="submit" className="button-micro px-8 py-3" disabled={formStatus === 'loading'}>
+                <button type="submit" className="button-micro px-10 py-4 bg-micro-fg text-white rounded-pill font-bold hover:scale-[1.02] active:scale-[0.98] transition-all" disabled={formStatus === 'loading'}>
                   {formStatus === 'loading' ? '...' : 'Join'}
                 </button>
               </form>
             )}
-            <p className="text-[13px] font-bold text-micro-muted uppercase tracking-widest">
+            <p className="text-[12px] font-bold text-micro-muted uppercase tracking-[0.2em] opacity-60">
               Join 300+ AI Tinkers · Next Drop: Tuesday
             </p>
           </div>
         </section>
 
-        {/* Category Filter */}
-        <nav className="mb-16 border-b border-micro-layer-1">
-          <ul className="flex gap-8 overflow-x-auto pb-4 no-scrollbar">
-            <li
-              className={`text-[13px] font-bold cursor-pointer transition-colors whitespace-nowrap ${selectedCategory === 'All' ? 'text-micro-fg border-b-2 border-micro-fg pb-4 -mb-4' : 'text-micro-muted hover:text-micro-fg'}`}
-              onClick={() => setSelectedCategory('All')}
-            >
-              ALL DROPS
-            </li>
-            {categories.map((cat) => (
+        {/* Floating Sheet Wrapper */}
+        <div className="bg-white rounded-[40px] shadow-micro border border-micro-layer-1 p-8 md:p-12 lg:p-16">
+          {/* Category Filter */}
+          <nav className="mb-20 border-b border-micro-layer-1">
+            <ul className="flex gap-10 overflow-x-auto pb-6 no-scrollbar">
               <li
-                key={cat}
-                className={`text-[13px] font-bold cursor-pointer transition-colors whitespace-nowrap ${selectedCategory === cat ? 'text-micro-fg border-b-2 border-micro-fg pb-4 -mb-4' : 'text-micro-muted hover:text-micro-fg'}`}
-                onClick={() => setSelectedCategory(cat)}
+                className={`text-[12px] font-bold cursor-pointer transition-colors whitespace-nowrap tracking-widest ${selectedCategory === 'All' ? 'text-micro-fg border-b-2 border-micro-fg pb-6 -mb-6' : 'text-micro-muted hover:text-micro-fg'}`}
+                onClick={() => setSelectedCategory('All')}
               >
-                {cat.toUpperCase()}
+                ALL DROPS
               </li>
-            ))}
-          </ul>
-        </nav>
+              {categories.map((cat) => (
+                <li
+                  key={cat}
+                  className={`text-[12px] font-bold cursor-pointer transition-colors whitespace-nowrap tracking-widest ${selectedCategory === cat ? 'text-micro-fg border-b-2 border-micro-fg pb-6 -mb-6' : 'text-micro-muted hover:text-micro-fg'}`}
+                  onClick={() => setSelectedCategory(cat)}
+                >
+                  {cat.toUpperCase()}
+                </li>
+              ))}
+            </ul>
+          </nav>
 
-        {/* Weekly Drops */}
-        <main className="space-y-24">
+          {/* Weekly Drops */}
+          <main className="space-y-32">
           {weeklyBatches.map(([week, items], batchIdx) => {
             if (items.length === 0) return null;
             return (
@@ -219,6 +221,7 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
           })}
         </main>
       </div>
+    </div>
 
         {/* Footer */}
         <footer className="mt-24 pt-16 border-t border-micro-layer-1 text-micro-fg font-sans">
