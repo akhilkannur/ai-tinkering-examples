@@ -34,23 +34,23 @@ export default function AboutPage() {
         />
       </Head>
 
-      <div className="max-w-7xl mx-auto px-6">
+      <div>
         {/* Hero */}
-        <div className="max-w-5xl mx-auto text-center mb-24 md:mb-32 pt-12">
-          <h1 className="text-6xl md:text-8xl font-bold tracking-tight mb-8 leading-[0.9] text-white drop-shadow-md">
+        <div className="max-w-5xl mx-auto text-center mb-12 md:mb-32 pt-8 md:pt-12">
+          <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold tracking-tight mb-4 md:mb-8 leading-[0.9] text-white drop-shadow-md">
             Real ideas. <br /><span className="font-instrument font-normal italic lowercase opacity-90">real results.</span>
           </h1>
-          <p className="text-xl md:text-2xl text-white/80 max-w-2xl mx-auto font-medium leading-relaxed">
+          <p className="text-base md:text-xl lg:text-2xl text-white/80 max-w-2xl mx-auto font-medium leading-relaxed">
             Helping business professionals and AI native operators get their time back.
           </p>
         </div>
 
-        <div className="glass-sheet rounded-[48px] p-8 md:p-16 lg:p-24 overflow-hidden">
-          <div className="grid lg:grid-cols-12 gap-20 items-start">
+        <div className="glass-sheet rounded-3xl md:rounded-[48px] p-4 md:p-16 lg:p-24 overflow-hidden">
+          <div className="grid lg:grid-cols-12 gap-10 md:gap-20 items-start">
             
             {/* Text Column */}
-            <div className="lg:col-span-7 space-y-16">
-                <section className="bg-white rounded-[40px] border border-micro-layer-1 p-12 shadow-soft">
+            <div className="lg:col-span-7 space-y-8 md:space-y-16">
+                <section className="bg-white rounded-3xl md:rounded-[40px] border border-micro-layer-1 p-6 md:p-12 shadow-soft">
                     <div className="flex items-center gap-5 mb-10">
                         <div className="w-14 h-14 rounded-2xl bg-micro-fg flex items-center justify-center text-white shadow-lg">
                             <Clock className="w-7 h-7" />
@@ -63,7 +63,7 @@ export default function AboutPage() {
                     </div>
                 </section>
 
-                <section className="bg-white rounded-[40px] border border-micro-layer-1 p-12 shadow-soft">
+                <section className="bg-white rounded-3xl md:rounded-[40px] border border-micro-layer-1 p-6 md:p-12 shadow-soft">
                     <div className="flex items-center gap-5 mb-10">
                         <div className="w-14 h-14 rounded-2xl bg-micro-fg flex items-center justify-center text-white shadow-lg">
                             <ShieldCheck className="w-7 h-7" />
@@ -75,7 +75,7 @@ export default function AboutPage() {
                     </p>
                 </section>
 
-                <div className="p-12 bg-micro-fg rounded-[40px] shadow-micro relative overflow-hidden group border border-micro-fg">
+                <div className="p-6 md:p-12 bg-micro-fg rounded-3xl md:rounded-[40px] shadow-micro relative overflow-hidden group border border-micro-fg">
                     <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(#fff 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
                     <div className="relative z-10">
                         <div className="bg-white/10 backdrop-blur-md text-white/80 px-4 py-1.5 inline-block rounded-full font-bold text-[10px] uppercase tracking-[0.2em] mb-8">A message from the founder</div>
@@ -96,8 +96,8 @@ export default function AboutPage() {
             </div>
 
             {/* Visual Column / Stats */}
-            <div className="lg:col-span-5 space-y-16">
-                <div className="bg-white rounded-[40px] border border-micro-layer-1 p-12 shadow-soft relative overflow-hidden">
+            <div className="lg:col-span-5 space-y-8 md:space-y-16">
+                <div className="bg-white rounded-3xl md:rounded-[40px] border border-micro-layer-1 p-6 md:p-12 shadow-soft relative overflow-hidden">
                     <div className="absolute top-0 right-0 p-4 opacity-[0.03]">
                         <Cpu className="w-48 h-48 text-micro-fg" />
                     </div>
@@ -120,7 +120,7 @@ export default function AboutPage() {
                     </div>
                 </div>
 
-                <div className="bg-white rounded-[40px] border border-micro-layer-1 p-12 shadow-soft">
+                <div className="bg-white rounded-3xl md:rounded-[40px] border border-micro-layer-1 p-6 md:p-12 shadow-soft">
                     <div className="flex items-center gap-4 mb-8">
                         <Mail className="w-10 h-10 text-micro-fg" />
                         <h3 className="font-bold text-2xl text-micro-fg tracking-tight">Get in Touch</h3>

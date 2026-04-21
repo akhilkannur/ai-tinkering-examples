@@ -1,11 +1,9 @@
-import React, { useState, useMemo, useEffect, useRef } from 'react';
+import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
 import { aiTools, AiTool } from '../../lib/ai-tools-data';
-import Navbar from '../../components/Navbar';
-import ToolDetailModal from '../../components/ToolDetailModal';
-import { Filter, X, ArrowRight, ExternalLink, ChevronDown, Search } from 'lucide-react';
+import { ArrowRight, ChevronDown, Search } from 'lucide-react';
 
 const slugify = (text: string) =>
   text.toLowerCase().trim().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '').replace(/\-\-+/g, '-');
@@ -42,7 +40,6 @@ function formatDate(dateStr: string): string {
 export default function ToolsIndex() {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedTool, setSelectedTool] = useState<AiTool | null>(null);
   const [showAllWeeks, setShowAllWeeks] = useState(false);
 
   const categories = ['All', ...Array.from(new Set(aiTools.map(t => t.category)))];
@@ -87,30 +84,30 @@ export default function ToolsIndex() {
         <meta name="description" content={`Browse ${aiTools.length} curated AI tools — filtered by category and price. Updated weekly.`} key="description" />
       </Head>
 
-      <div className="max-w-7xl mx-auto px-6">
+      <div>
         {/* Hero */}
-        <div className="max-w-5xl mx-auto text-center mb-24 md:mb-32 pt-12">
-          <h1 className="text-6xl md:text-8xl font-bold tracking-tight mb-8 leading-[0.9] text-white drop-shadow-md">
-            Your workflow <br /><span className="font-instrument font-normal italic lowercase opacity-90">won't automate itself.</span>
+        <div className="max-w-5xl mx-auto text-center mb-12 md:mb-32 pt-8 md:pt-12">
+          <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold tracking-tight mb-4 md:mb-8 leading-[0.9] text-white drop-shadow-md">
+            Your workflow <br /><span className="font-instrument font-normal italic lowercase opacity-90">won&apos;t automate itself.</span>
           </h1>
-          <p className="text-xl md:text-2xl text-white/80 max-w-2xl mx-auto font-medium leading-relaxed">
+          <p className="text-base md:text-xl lg:text-2xl text-white/80 max-w-2xl mx-auto font-medium leading-relaxed">
             The most practical AI tools directory for operators. No fluff, just APIs, MCP configs, and work-ready stack.
           </p>
         </div>
 
         {/* Floating Glass Sheet */}
-        <div className="glass-sheet rounded-[48px] p-8 md:p-16 lg:p-24 overflow-hidden">
+        <div className="glass-sheet rounded-3xl md:rounded-[48px] p-4 md:p-16 lg:p-24 overflow-hidden">
           {/* Search & Filters */}
-          <div className="mb-16 sticky top-4 z-40 bg-white/80 backdrop-blur-2xl py-6 px-8 rounded-3xl border border-white/30 shadow-2xl">
-            <div className="flex flex-col md:flex-row gap-8 items-center justify-between">
+          <div className="mb-8 md:mb-16 sticky top-4 z-40 bg-white/80 backdrop-blur-2xl py-4 px-4 md:py-6 md:px-8 rounded-2xl md:rounded-3xl border border-white/30 shadow-2xl">
+            <div className="flex flex-col gap-4 md:flex-row md:gap-8 items-stretch md:items-center justify-between">
               
               {/* Horizontal Pill Filters */}
-              <div className="flex items-center gap-3 overflow-x-auto no-scrollbar w-full md:w-auto">
+              <div className="flex items-center gap-2 md:gap-3 overflow-x-auto no-scrollbar w-full md:w-auto pb-1">
                 {categories.map(cat => (
                   <button
                     key={cat}
                     onClick={() => setSelectedCategory(cat)}
-                    className={`px-8 py-3 rounded-pill text-[12px] font-bold uppercase tracking-widest border transition-all whitespace-nowrap ${
+                    className={`px-4 md:px-8 py-2 md:py-3 rounded-pill text-[10px] md:text-[12px] font-bold uppercase tracking-widest border transition-all whitespace-nowrap ${
                       selectedCategory === cat 
                       ? 'bg-micro-fg border-micro-fg text-white shadow-lg' 
                       : 'bg-white/50 border-white/20 text-micro-muted hover:border-micro-fg/20'
@@ -129,14 +126,14 @@ export default function ToolsIndex() {
                   placeholder="Search tools..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-6 py-4 bg-white/50 border border-white/20 rounded-pill text-sm font-medium focus:outline-none focus:bg-white focus:border-micro-fg transition-all placeholder:text-micro-muted/60"
+                  className="w-full pl-12 pr-6 py-3 md:py-4 bg-white/50 border border-white/20 rounded-pill text-sm font-medium focus:outline-none focus:bg-white focus:border-micro-fg transition-all placeholder:text-micro-muted/60"
                 />
               </div>
             </div>
           </div>
 
           {/* Tools List & Sidebar */}
-          <div className="flex flex-col lg:flex-row gap-20">
+          <div className="flex flex-col lg:flex-row gap-10 lg:gap-20">
             
             {/* Main Content: Tools List */}
             <div className="flex-grow min-w-0">
@@ -153,9 +150,9 @@ export default function ToolsIndex() {
               ) : (
                 <div className="flex flex-col">
                   {visibleGroups.map((group) => (
-                    <div key={group.label} className="mb-20">
-                      <div className="flex items-center justify-between border-b border-micro-layer-1 pb-4 mb-8">
-                        <h2 className="text-2xl font-bold tracking-tight text-micro-fg">
+                    <div key={group.label} className="mb-10 md:mb-20">
+                      <div className="flex items-center justify-between border-b border-micro-layer-1 pb-3 md:pb-4 mb-4 md:mb-8">
+                        <h2 className="text-lg md:text-2xl font-bold tracking-tight text-micro-fg">
                           {group.label}
                         </h2>
                         <span className="text-[11px] font-bold text-micro-muted uppercase tracking-[0.2em]">
@@ -164,11 +161,9 @@ export default function ToolsIndex() {
                       </div>
                       <div className="divide-y divide-micro-layer-1">
                         {group.tools.map((tool) => (
-                          <ToolDataRow 
-                            key={tool.name} 
-                            tool={tool} 
-                            onClick={() => setSelectedTool(tool)}
-                          />
+                          <Link key={tool.name} href={`/tools/${slugify(tool.name)}`}>
+                            <ToolDataRow tool={tool} />
+                          </Link>
                         ))}
                       </div>
                     </div>
@@ -178,7 +173,7 @@ export default function ToolsIndex() {
                   {hasMoreWeeks && !showAllWeeks && (
                     <button
                       onClick={() => setShowAllWeeks(true)}
-                      className="w-full py-8 mt-12 border border-micro-layer-1 rounded-[32px] bg-white text-micro-muted font-bold uppercase tracking-widest text-[11px] hover:border-micro-fg hover:text-micro-fg transition-all flex items-center justify-center gap-3 shadow-soft hover:shadow-micro"
+                      className="w-full py-6 md:py-8 mt-8 md:mt-12 border border-micro-layer-1 rounded-2xl md:rounded-[32px] bg-white text-micro-muted font-bold uppercase tracking-widest text-[11px] hover:border-micro-fg hover:text-micro-fg transition-all flex items-center justify-center gap-3 shadow-soft hover:shadow-micro"
                     >
                       Explore Older Backlog <ChevronDown className="w-4 h-4" />
                     </button>
@@ -194,7 +189,7 @@ export default function ToolsIndex() {
                   href="https://salestools.club/" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="group block bg-white border border-micro-layer-1 rounded-[40px] p-10 hover:border-micro-fg transition-all hover:shadow-micro"
+                  className="group block bg-white border border-micro-layer-1 rounded-3xl md:rounded-[40px] p-6 md:p-10 hover:border-micro-fg transition-all hover:shadow-micro"
                 >
                   <div className="flex items-center gap-5 mb-6">
                     <div className="w-14 h-14 rounded-2xl bg-micro-fg flex items-center justify-center text-white font-bold text-2xl shadow-lg">
@@ -214,7 +209,7 @@ export default function ToolsIndex() {
                 </a>
                 
                 {/* Submit CTA */}
-                <div className="bg-micro-fg rounded-[40px] p-10 text-center relative overflow-hidden group shadow-micro">
+                <div className="bg-micro-fg rounded-3xl md:rounded-[40px] p-6 md:p-10 text-center relative overflow-hidden group shadow-micro">
                   <div className="absolute top-0 right-0 w-64 h-64 bg-terminal-lime opacity-10 blur-[100px] -mr-32 -mt-32 transition-all group-hover:opacity-20"></div>
                   <div className="relative z-10">
                     <h2 className="text-2xl font-bold text-white uppercase mb-4 tracking-tight">List Your Tool</h2>
@@ -233,17 +228,11 @@ export default function ToolsIndex() {
         </div>
       </div>
 
-      {selectedTool && (
-        <ToolDetailModal
-          tool={selectedTool}
-          onClose={() => setSelectedTool(null)}
-        />
-      )}
     </>
   );
 }
 
-function ToolDataRow({ tool, onClick }: { tool: AiTool; onClick: () => void }) {
+function ToolDataRow({ tool }: { tool: AiTool }) {
   const getHostname = (href: string) => {
     try { return new URL(href).hostname; } catch { return ''; }
   };
@@ -253,75 +242,44 @@ function ToolDataRow({ tool, onClick }: { tool: AiTool; onClick: () => void }) {
 
   return (
     <div 
-      className="group flex flex-col md:flex-row items-start md:items-center justify-between py-10 hover:bg-white transition-all cursor-pointer px-8 -mx-8 rounded-[32px] border border-transparent hover:border-micro-layer-1 hover:shadow-soft"
-      onClick={onClick}
+      className="group flex items-center gap-4 py-5 px-6 -mx-6 hover:bg-white transition-all cursor-pointer rounded-2xl border border-transparent hover:border-micro-layer-1 hover:shadow-soft"
     >
-      {/* Name + Logo */}
-      <div className="flex items-center gap-6 mb-6 md:mb-0 w-full md:w-1/4">
-        <div className="w-14 h-14 rounded-2xl border border-micro-layer-1 bg-white flex-shrink-0 flex items-center justify-center p-2.5 overflow-hidden shadow-sm group-hover:border-micro-fg transition-colors">
-          <Image 
-            src={imgSrc} 
-            alt={tool.name} 
-            width={56} 
-            height={56} 
-            className="object-contain"
-            onError={() => setImgSrc(fallbackLogo)}
-            unoptimized
-          />
-        </div>
-        <div className="min-w-0">
-          <h3 className="text-2xl font-bold tracking-tight leading-tight text-micro-fg group-hover:underline decoration-2 underline-offset-4">
-            {tool.name}
-          </h3>
-          <div className="flex items-center gap-3 mt-2">
-            <span className="text-[10px] font-bold uppercase tracking-[0.1em] text-micro-muted bg-micro-layer-1 px-2 py-1 rounded-lg">
-              {tool.category}
-            </span>
-          </div>
-        </div>
+      {/* Logo */}
+      <div className="w-10 h-10 rounded-xl border border-micro-layer-1 bg-white flex-shrink-0 flex items-center justify-center p-1.5 overflow-hidden group-hover:border-micro-fg transition-colors">
+        <Image 
+          src={imgSrc} 
+          alt={tool.name} 
+          width={40} 
+          height={40} 
+          className="object-contain"
+          onError={() => setImgSrc(fallbackLogo)}
+          unoptimized
+        />
+      </div>
+
+      {/* Name */}
+      <div className="w-40 flex-shrink-0 min-w-0">
+        <h3 className="text-sm font-bold tracking-tight text-micro-fg truncate group-hover:underline decoration-1 underline-offset-4">
+          {tool.name}
+        </h3>
+        <span className="text-[9px] font-bold uppercase tracking-[0.1em] text-micro-muted">
+          {tool.category}
+        </span>
       </div>
 
       {/* Description */}
-      <div className="w-full md:w-1/3 mb-6 md:mb-0">
-        <p className="text-sm text-micro-muted font-medium leading-relaxed">
-          {tool.description}
-        </p>
-      </div>
+      <p className="hidden md:block flex-1 text-sm text-micro-muted font-medium leading-snug truncate min-w-0">
+        {tool.description}
+      </p>
 
-      {/* Maker Block */}
-      <div className="w-full md:w-1/5 mb-6 md:mb-0">
-        {tool.maker ? (
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-white flex-shrink-0 shadow-sm">
-              <img 
-                src={tool.maker.image} 
-                alt={tool.maker.name} 
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="min-w-0">
-              <div className="text-[9px] font-bold uppercase tracking-widest text-micro-muted leading-none mb-1">Curated By</div>
-              <div className="text-xs font-bold text-micro-fg truncate">{tool.maker.name}</div>
-            </div>
-          </div>
-        ) : (
-          <div className="hidden md:block h-10"></div>
-        )}
-      </div>
-
-      {/* Metadata */}
-      <div className="hidden md:flex items-center gap-8 w-1/6 justify-end pr-6">
-        <div className="flex flex-col items-end">
-          <span className="text-[9px] font-bold uppercase tracking-widest text-micro-muted mb-1">Pricing</span>
-          <span className="text-xs font-bold text-micro-fg">{tool.tags.price}</span>
-        </div>
-      </div>
+      {/* Pricing */}
+      <span className="hidden md:block text-xs font-bold text-micro-fg flex-shrink-0 w-20 text-right">
+        {tool.tags.price}
+      </span>
 
       {/* Action */}
-      <div className="w-full md:w-auto flex justify-end">
-        <button className="flex items-center gap-3 px-8 py-3 bg-micro-fg text-white rounded-pill text-[11px] font-bold uppercase tracking-widest hover:bg-terminal-lime hover:text-micro-fg transition-all shadow-lg active:scale-95">
-          Details <ArrowRight className="w-4 h-4" />
-        </button>
+      <div className="flex-shrink-0 ml-auto md:ml-0">
+        <ArrowRight className="w-4 h-4 text-micro-muted group-hover:text-micro-fg transition-colors" />
       </div>
     </div>
   );

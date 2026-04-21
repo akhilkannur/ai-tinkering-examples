@@ -17,11 +17,11 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <div className="bg-nature min-h-screen selection:bg-micro-layer-2">
       <Navbar />
-      <div className="max-w-7xl mx-auto px-6 pt-32 pb-24 md:pt-48 md:pb-40">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 pt-24 pb-16 md:pt-48 md:pb-40">
         {isHomePage || isToolsPage || isBlogIndex || isAboutPage ? (
           children
         ) : (
-          <main className="glass-sheet rounded-[48px] overflow-hidden p-8 md:p-16 lg:p-24 min-h-[60vh]">
+          <main className="glass-sheet rounded-3xl md:rounded-[48px] overflow-hidden p-4 md:p-16 lg:p-24 min-h-[60vh]">
             {children}
           </main>
         )}

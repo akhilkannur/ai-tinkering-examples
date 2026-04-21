@@ -1,9 +1,8 @@
-import { useState, useMemo } from 'react'
+import { useMemo, useState } from 'react'
 import { GetStaticProps } from 'next/types'
 import Link from 'next/link'
 import Head from 'next/head'
 import Image from 'next/image'
-import ExampleModal from '../components/ExampleModal'
 import { localSocialExamples } from '../lib/social-examples-data'
 import { generateItemListSchema } from '../lib/seo-utils'
 import { optimizeImageUrl } from '../utils/cloudinary'
@@ -61,8 +60,6 @@ function groupByWeek(items: EnrichedExampleRecord[]) {
 
 export default function HomePage({ examples, categories, itemListSchema }: ExamplesPageProps) {
   const [selectedCategory, setSelectedCategory] = useState('All')
-  const [modalExample, setModalExample] = useState<EnrichedExampleRecord | null>(null)
-  const [isModalOpen, setIsModalOpen] = useState(false)
   const [email, setEmail] = useState('')
   const [formStatus, setFormStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
 
@@ -71,16 +68,6 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
   }, [examples, selectedCategory]);
 
   const weeklyBatches = useMemo(() => groupByWeek(filteredItems), [filteredItems]);
-
-  const handleOpenModal = (example: EnrichedExampleRecord) => {
-    setModalExample(example)
-    setIsModalOpen(true)
-  }
-
-  const handleCloseModal = () => {
-    setIsModalOpen(false)
-    setTimeout(() => setModalExample(null), 300)
-  }
 
   const handleNewsletterSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -113,11 +100,11 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
         <link rel="canonical" href="https://realaiexamples.com/" />
       </Head>
 
-      <div className="max-w-7xl mx-auto px-6">
+      <div>
         {/* Hero */}
-        <section className="text-center mb-40 max-w-5xl mx-auto pt-12">
-          <h1 className="text-7xl md:text-9xl font-bold tracking-tight mb-12 leading-[0.85] text-white drop-shadow-md">
-           A library of real AI examples <br/>from <span className="font-instrument font-normal italic lowercase opacity-90">people who use AI.</span>
+        <section className="text-center mb-16 md:mb-40 max-w-5xl mx-auto pt-8 md:pt-12">
+          <h1 className="text-4xl md:text-7xl lg:text-9xl font-bold tracking-tight mb-8 md:mb-12 leading-[0.85] text-white drop-shadow-md">
+           A library of real AI examples <br className="hidden md:block"/>from <span className="font-instrument font-normal italic lowercase opacity-90">people who use AI.</span>
           </h1>
           
           <div className="flex flex-col items-center gap-10">
@@ -126,17 +113,17 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
                 ✓ Check your inbox to confirm
               </div>
             ) : (
-              <form className="flex w-full max-w-2xl p-2.5 bg-white/90 backdrop-blur-2xl rounded-pill border border-white/30 shadow-2xl" onSubmit={handleNewsletterSubmit}>
+              <form className="flex w-full max-w-2xl p-1.5 md:p-2.5 bg-white/90 backdrop-blur-2xl rounded-pill border border-white/30 shadow-2xl" onSubmit={handleNewsletterSubmit}>
                 <input
                   type="email"
-                  className="flex-1 bg-transparent px-8 py-4 outline-none text-[18px] font-medium text-micro-fg placeholder:text-micro-muted"
+                  className="flex-1 bg-transparent px-4 md:px-8 py-3 md:py-4 outline-none text-sm md:text-[18px] font-medium text-micro-fg placeholder:text-micro-muted min-w-0"
                   placeholder="Get weekly examples"
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   disabled={formStatus === 'loading'}
                 />
-                <button type="submit" className="px-12 py-5 bg-white text-micro-fg rounded-pill font-extrabold text-sm uppercase tracking-wider hover:bg-micro-layer-1 transition-all shadow-lg active:scale-95" disabled={formStatus === 'loading'}>
+                <button type="submit" className="px-6 md:px-12 py-3 md:py-5 bg-white text-micro-fg rounded-pill font-extrabold text-xs md:text-sm uppercase tracking-wider hover:bg-micro-layer-1 transition-all shadow-lg active:scale-95 flex-shrink-0" disabled={formStatus === 'loading'}>
                   {formStatus === 'loading' ? '...' : 'Join Free'}
                 </button>
               </form>
@@ -148,12 +135,12 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
         </section>
 
         {/* Floating Glass Sheet */}
-        <div className="glass-sheet rounded-[48px] p-8 md:p-16 lg:p-24 overflow-hidden">
+        <div className="glass-sheet rounded-3xl md:rounded-[48px] p-4 md:p-16 lg:p-24 overflow-hidden">
           {/* Category Filter - Refined */}
-          <nav className="mb-24">
-            <ul className="flex flex-wrap justify-center gap-4">
+          <nav className="mb-10 md:mb-24">
+            <ul className="flex flex-wrap justify-center gap-2 md:gap-4">
               <li
-                className={`px-8 py-3 rounded-pill text-[12px] font-bold cursor-pointer transition-all tracking-widest border ${selectedCategory === 'All' ? 'bg-micro-fg text-white border-micro-fg shadow-lg scale-105' : 'bg-white text-micro-muted border-micro-layer-1 hover:border-micro-layer-2'}`}
+                className={`px-4 md:px-8 py-2 md:py-3 rounded-pill text-[11px] md:text-[12px] font-bold cursor-pointer transition-all tracking-widest border ${selectedCategory === 'All' ? 'bg-micro-fg text-white border-micro-fg shadow-lg' : 'bg-white text-micro-muted border-micro-layer-1 hover:border-micro-layer-2'}`}
                 onClick={() => setSelectedCategory('All')}
               >
                 ALL DROPS
@@ -161,7 +148,7 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
               {categories.map((cat) => (
                 <li
                   key={cat}
-                  className={`px-8 py-3 rounded-pill text-[12px] font-bold cursor-pointer transition-all tracking-widest border ${selectedCategory === cat ? 'bg-micro-fg text-white border-micro-fg shadow-lg scale-105' : 'bg-white text-micro-muted border-micro-layer-1 hover:border-micro-layer-2'}`}
+                  className={`px-4 md:px-8 py-2 md:py-3 rounded-pill text-[11px] md:text-[12px] font-bold cursor-pointer transition-all tracking-widest border ${selectedCategory === cat ? 'bg-micro-fg text-white border-micro-fg shadow-lg' : 'bg-white text-micro-muted border-micro-layer-1 hover:border-micro-layer-2'}`}
                   onClick={() => setSelectedCategory(cat)}
                 >
                   {cat.toUpperCase()}
@@ -171,7 +158,7 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
           </nav>
 
           {/* Weekly Drops */}
-          <main className="space-y-40">
+          <main className="space-y-16 md:space-y-40">
             {weeklyBatches.map(([week, items], batchIdx) => {
               if (items.length === 0) return null;
               return (
@@ -181,13 +168,14 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
                     {batchIdx === 0 && <span className="bg-micro-fg text-white px-2 py-0.5 rounded text-[10px] font-bold">NEW</span>}
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                     {items.map((example) => {
                       const rawUrl = example.screenshots?.[0]?.url;
                       const imageUrl = optimizeImageUrl(rawUrl, example.cloudinaryPublicId, 600);
 
                       return (
-                        <article key={example.id} className="group cursor-pointer" onClick={() => handleOpenModal(example)}>
+                        <article key={example.id} className="group cursor-pointer">
+                          <Link href={`/ai-examples/${(example.category || 'uncategorized').toLowerCase().replace(/\s+/g, '-')}/${example.slug}`}>
                           <div className="card-micro aspect-[4/3] relative overflow-hidden mb-4">
                             {imageUrl ? (
                               <Image
@@ -210,6 +198,7 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
                           <h3 className="text-xl font-bold leading-tight group-hover:underline decoration-2 underline-offset-4">
                             {example.title}
                           </h3>
+                          </Link>
                         </article>
                       );
                     })}
@@ -221,11 +210,6 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
         </div>
       </div>
 
-      <ExampleModal
-        example={modalExample as any}
-        isOpen={isModalOpen}
-        onClose={handleCloseModal}
-      />
     </>
   )
 }

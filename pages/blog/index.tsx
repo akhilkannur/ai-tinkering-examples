@@ -33,19 +33,19 @@ export default function BlogIndex({ posts }: BlogIndexProps) {
         <meta name="twitter:image" content={ogImage} key="twitter:image" />
       </Head>
 
-      <div className="max-w-7xl mx-auto px-6">
+      <div>
         {/* Hero */}
-        <div className="max-w-5xl mx-auto text-center mb-24 md:mb-32 pt-12">
-          <h1 className="text-6xl md:text-8xl font-bold tracking-tight mb-8 leading-[0.9] text-white drop-shadow-md">
+        <div className="max-w-5xl mx-auto text-center mb-12 md:mb-32 pt-8 md:pt-12">
+          <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold tracking-tight mb-4 md:mb-8 leading-[0.9] text-white drop-shadow-md">
             The operator <br /><span className="font-instrument font-normal italic lowercase opacity-90">logbook.</span>
           </h1>
-          <p className="text-xl md:text-2xl text-white/80 max-w-2xl mx-auto font-medium leading-relaxed">
+          <p className="text-base md:text-xl lg:text-2xl text-white/80 max-w-2xl mx-auto font-medium leading-relaxed">
             Documenting the exact steps I take to automate work as a non-technical builder. Real workflows, no fluff.
           </p>
         </div>
 
-        <div className="glass-sheet rounded-[48px] p-8 md:p-16 lg:p-24 overflow-hidden">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div className="glass-sheet rounded-3xl md:rounded-[48px] p-4 md:p-16 lg:p-24 overflow-hidden">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-12">
             {posts.map((post) => (
               <Link key={post.slug} href={`/blog/${post.slug}`} className="group h-full">
                 <article className="card-micro h-full flex flex-col overflow-hidden bg-white border border-micro-layer-1 hover:shadow-micro transition-all duration-500 hover:-translate-y-2">
@@ -60,7 +60,7 @@ export default function BlogIndex({ posts }: BlogIndexProps) {
                     </div>
                   )}
 
-                  <div className="p-10 flex flex-col flex-grow">
+                  <div className="p-5 md:p-10 flex flex-col flex-grow">
                     <div className="flex items-center gap-4 text-[10px] text-micro-muted mb-6 font-bold uppercase tracking-[0.2em]">
                       <span className="flex items-center gap-2 bg-micro-layer-1 px-3 py-1.5 rounded-full">{post.date}</span>
                     </div>

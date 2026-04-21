@@ -1,8 +1,6 @@
 import { GetStaticPaths, GetStaticProps } from 'next'
 import Head from 'next/head'
-import Navbar from '../../components/Navbar'
 import ExampleBody from '../../components/ExampleBody'
-import SocialSharing from '../../components/SocialSharing'
 import { localSocialExamples } from '../../lib/social-examples-data'
 import { EnrichedExampleRecord } from '../../lib/types'
 
@@ -12,7 +10,7 @@ interface ExamplePageProps {
 
 export default function ExamplePage({ example }: ExamplePageProps) {
   if (!example) {
-    return <div className="min-h-screen bg-page-bg flex items-center justify-center font-mono">Example not found</div>
+    return <div className="flex items-center justify-center text-micro-muted font-mono">Example not found</div>
   }
 
   const categorySlug = example.category?.toLowerCase().replace(/\s+/g, '-') || 'uncategorized'
@@ -34,23 +32,9 @@ export default function ExamplePage({ example }: ExamplePageProps) {
         <meta name="twitter:image" content={ogImage} />
       </Head>
 
-      <Navbar />
-
-      <main className="min-h-screen bg-page-bg pt-24 pb-20">
-        <div className="max-container px-4">
-          <div className="flex flex-col lg:flex-row gap-12">
-            <div className="flex-grow">
-              <ExampleBody example={example} />
-            </div>
-            
-            <aside className="lg:w-80 flex-shrink-0">
-              <div className="sticky top-28 space-y-8">
-                <SocialSharing example={example} title={example.title} />
-              </div>
-            </aside>
-          </div>
-        </div>
-      </main>
+      <div className="max-w-3xl mx-auto">
+        <ExampleBody example={example} />
+      </div>
     </>
   )
 }
