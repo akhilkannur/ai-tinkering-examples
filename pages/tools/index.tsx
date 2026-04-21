@@ -182,13 +182,13 @@ export default function ToolsIndex() {
                   )}
                 </div>
               )}
-              </div>
-              </div>
-              </div>
-              </div>
-              </>
-              );
-              }
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
 
 function ToolDataRow({ tool }: { tool: AiTool }) {
   const getHostname = (href: string) => {
