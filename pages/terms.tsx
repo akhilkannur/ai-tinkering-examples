@@ -13,51 +13,37 @@ export default function Terms() {
 
       <Navbar />
 
-      <main className="pt-32 md:pt-48 pb-24">
-        <div className="max-w-4xl mx-auto px-6">
-          <header className="mb-20">
-            <h1 className="text-5xl md:text-8xl font-bold tracking-tighter uppercase leading-[0.9]">Terms of <br/><span className="font-instrument font-normal italic lowercase opacity-60">Service</span></h1>
-            <p className="text-[11px] font-black uppercase tracking-[0.3em] text-micro-muted mt-8 flex items-center gap-3">
-              <span className="w-2 h-2 rounded-full bg-terminal-lime"></span>
-              Last Updated: April 21, 2026
+      <main className="pt-24 md:pt-32 pb-24 max-w-3xl mx-auto px-6">
+        <h1 className="text-3xl font-bold mb-2">Terms of Service</h1>
+        <p className="text-xs font-bold uppercase tracking-widest text-micro-muted mb-12">Last Updated: April 21, 2026</p>
+
+        <div className="space-y-12">
+          <section>
+            <h2 className="text-xs font-black uppercase tracking-[0.2em] text-micro-muted mb-4">Agreement</h2>
+            <p className="text-lg font-medium leading-relaxed text-micro-fg/90">
+              By accessing Real AI Examples, you agree to be bound by these Terms of Service. If you do not agree to these terms, you are prohibited from using or accessing this site.
             </p>
-          </header>
+          </section>
 
-          <div className="space-y-16 max-w-3xl">
-            <section>
-              <h2 className="text-sm font-black uppercase tracking-[0.2em] text-micro-muted mb-6">01 / Agreement</h2>
-              <p className="text-xl md:text-2xl font-medium leading-relaxed text-micro-fg/90">
-                By accessing Real AI Examples ("the Service"), you agree to be bound by these Terms of Service. If you do not agree to these terms, you are prohibited from using or accessing this site.
-              </p>
-            </section>
+          <section>
+            <h2 className="text-xs font-black uppercase tracking-[0.2em] text-micro-muted mb-4">Intellectual Property</h2>
+            <p className="text-lg font-medium leading-relaxed text-micro-fg/80">
+              All content, including examples and workflows, is the property of Real AI Examples. <strong className="text-micro-fg">Republishing or reselling our curated content without explicit permission is strictly prohibited.</strong>
+            </p>
+          </section>
 
-            <section>
-              <h2 className="text-sm font-black uppercase tracking-[0.2em] text-micro-muted mb-6">02 / Intellectual Property</h2>
-              <p className="text-lg font-medium leading-relaxed text-micro-fg/80">
-                All content, including examples, workflows, and curated prompts, is the property of Real AI Examples. You are granted a limited license for personal or professional use. <strong className="text-micro-fg">Republishing, scraping, or reselling our curated content without explicit permission is strictly prohibited.</strong>
-              </p>
-            </section>
+          <section>
+            <h2 className="text-xs font-black uppercase tracking-[0.2em] text-micro-muted mb-4">Disclaimer</h2>
+            <p className="text-lg font-medium leading-relaxed text-micro-fg/80">
+              The Service is provided "as is." We do not warrant that the workflows or prompts will be error-free or meet specific requirements. 
+            </p>
+          </section>
 
-            <section>
-              <h2 className="text-sm font-black uppercase tracking-[0.2em] text-micro-muted mb-6">03 / Disclaimer</h2>
-              <p className="text-lg font-medium leading-relaxed text-micro-fg/80">
-                The Service is provided "as is." AI is an evolving field; we do not warrant that the workflows or prompts will be error-free or meet specific requirements. We are not responsible for any outcomes resulting from the implementation of these examples.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-sm font-black uppercase tracking-[0.2em] text-micro-muted mb-6">04 / Prohibited Use</h2>
-              <p className="text-lg font-medium leading-relaxed text-micro-fg/80">
-                You agree not to use the Service for any unlawful purpose, to infringe upon our intellectual property, or to participate in any activity that disrupts the platform's performance for other users.
-              </p>
-            </section>
-
-            <footer className="pt-20 border-t border-micro-layer-1">
-              <p className="text-lg font-medium text-micro-fg/60">
-                Questions about our terms? Contact: <a href="mailto:akhil@realaiexamples.com" className="text-micro-fg underline decoration-terminal-lime decoration-2 underline-offset-8 hover:text-terminal-lime transition-colors">akhil@realaiexamples.com</a>
-              </p>
-            </footer>
-          </div>
+          <footer className="pt-12 border-t border-micro-layer-1">
+            <p className="text-base font-medium text-micro-fg/60">
+              Questions? <a href="mailto:akhil@realaiexamples.com" className="text-micro-fg underline decoration-terminal-lime decoration-2 underline-offset-4 hover:text-terminal-lime transition-colors">akhil@realaiexamples.com</a>
+            </p>
+          </footer>
         </div>
       </main>
 
