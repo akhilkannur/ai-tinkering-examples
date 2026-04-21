@@ -45,8 +45,13 @@ function groupByWeek(items: EnrichedExampleRecord[]) {
   const numBatches = Math.ceil(sorted.length / itemsPerBatch);
 
   for (let i = 0; i < numBatches; i++) {
-    const startDate = new Date('2026-03-23');
-    startDate.setDate(startDate.getDate() - (i * 7));
+    const now = new Date();
+    // Latest drop is last week (start of current week minus 7 days), then go further back
+    const startOfThisWeek = new Date(now);
+    startOfThisWeek.setDate(now.getDate() - now.getDay());
+    startOfThisWeek.setHours(0, 0, 0, 0);
+    const startDate = new Date(startOfThisWeek);
+    startDate.setDate(startDate.getDate() - 7 * (i + 1));
     const weekLabel = startDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
     groups[weekLabel] = sorted.slice(i * itemsPerBatch, (i + 1) * itemsPerBatch);
   }
@@ -112,7 +117,7 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
         {/* Hero */}
         <section className="text-center mb-40 max-w-5xl mx-auto pt-12">
           <h1 className="text-7xl md:text-9xl font-bold tracking-tight mb-12 leading-[0.85] text-white drop-shadow-md">
-            One place for work <br/>that <span className="font-instrument font-normal italic lowercase opacity-90">works for you.</span>
+           A library of real AI examples <br/>from <span className="font-instrument font-normal italic lowercase opacity-90">people who use AI.</span>
           </h1>
           
           <div className="flex flex-col items-center gap-10">
@@ -121,11 +126,11 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
                 ✓ Check your inbox to confirm
               </div>
             ) : (
-              <form className="flex w-full max-w-2xl p-2.5 bg-white/10 backdrop-blur-2xl rounded-pill border border-white/20 shadow-2xl" onSubmit={handleNewsletterSubmit}>
+              <form className="flex w-full max-w-2xl p-2.5 bg-white/90 backdrop-blur-2xl rounded-pill border border-white/30 shadow-2xl" onSubmit={handleNewsletterSubmit}>
                 <input
                   type="email"
-                  className="flex-1 bg-transparent px-8 py-4 outline-none text-[18px] font-medium text-white placeholder:text-white/60"
-                  placeholder="Drop your email for weekly examples"
+                  className="flex-1 bg-transparent px-8 py-4 outline-none text-[18px] font-medium text-micro-fg placeholder:text-micro-muted"
+                  placeholder="Get weekly examples"
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -136,14 +141,9 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
                 </button>
               </form>
             )}
-            <div className="flex items-center gap-6 opacity-80">
-              <div className="flex -space-x-3">
-                {[1,2,3,4].map(i => <div key={i} className="w-8 h-8 rounded-full border-2 border-white/20 bg-micro-layer-2" />)}
-              </div>
-              <p className="text-[13px] font-bold text-white uppercase tracking-[0.15em]">
-                Join 300+ AI Native Operators
-              </p>
-            </div>
+            <p className="text-[13px] font-bold text-white uppercase tracking-[0.15em] opacity-80">
+              Join 300+ AI Native Operators
+            </p>
           </div>
         </section>
 

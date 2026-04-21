@@ -12,7 +12,7 @@ export default function Footer() {
           <div className="col-span-2">
             <Link href="/" className="flex items-center gap-2 mb-6 group">
                 <div className="w-5 h-5 bg-micro-fg rounded flex items-center justify-center transition-transform group-hover:scale-105"></div>
-                <span className="text-lg font-bold tracking-tight text-micro-fg">Real AI</span>
+                <span className="text-lg font-bold tracking-tight text-micro-fg">Real AI Examples</span>
             </Link>
             <p className="text-sm font-bold text-micro-muted max-w-xs leading-relaxed uppercase tracking-wider">
               Real-world AI workflows and practical automations for business professionals.

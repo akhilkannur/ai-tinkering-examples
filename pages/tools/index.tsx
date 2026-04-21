@@ -101,7 +101,7 @@ export default function ToolsIndex() {
         {/* Floating Glass Sheet */}
         <div className="glass-sheet rounded-[48px] p-8 md:p-16 lg:p-24 overflow-hidden">
           {/* Search & Filters */}
-          <div className="mb-16 sticky top-4 z-40 bg-white/20 backdrop-blur-2xl py-6 px-8 rounded-3xl border border-white/20 shadow-2xl">
+          <div className="mb-16 sticky top-4 z-40 bg-white/80 backdrop-blur-2xl py-6 px-8 rounded-3xl border border-white/30 shadow-2xl">
             <div className="flex flex-col md:flex-row gap-8 items-center justify-between">
               
               {/* Horizontal Pill Filters */}
