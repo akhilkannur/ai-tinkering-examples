@@ -63,7 +63,7 @@ export default function ExampleModal({ example, isOpen, onClose }: ExampleModalP
           </button>
         </div>
 
-        <div className="overflow-y-auto flex-grow pt-xl pb-lg sm:pt-xxl sm:pb-xl scrollbar-hide">
+        <div className="overflow-y-auto flex-grow px-md sm:px-xl pt-xl pb-lg sm:pt-xxl sm:pb-xl scrollbar-hide">
           <ExampleBody example={example} />
         </div>
 
