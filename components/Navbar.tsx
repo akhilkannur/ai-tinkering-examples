@@ -46,29 +46,29 @@ export default function Navbar() {
       </Head>
       <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${
         scrolled || !isHomePage
-          ? 'bg-white/80 backdrop-blur-xl border-b border-micro-layer-1 py-3'
-          : 'bg-transparent py-5'
+          ? 'bg-white/80 backdrop-blur-xl border-b border-micro-layer-1 py-4'
+          : 'bg-transparent py-8'
       }`}>
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6">
         <div className="flex justify-between items-center h-14">
           <div className="flex items-center gap-10">
             <div className="flex-shrink-0">
               <Link href="/" className="flex items-center gap-2 group">
-                <div className="w-6 h-6 bg-micro-fg rounded-md flex items-center justify-center transition-transform group-hover:scale-105"></div>
-                <span className="text-xl font-bold tracking-tight text-micro-fg">Real AI</span>
+                <div className={`w-7 h-7 rounded-lg flex items-center justify-center transition-transform group-hover:scale-105 ${scrolled || !isHomePage ? 'bg-micro-fg' : 'bg-white'}`}></div>
+                <span className={`text-2xl font-bold tracking-tight transition-colors ${scrolled || !isHomePage ? 'text-micro-fg' : 'text-white'}`}>Real AI</span>
               </Link>
             </div>
             
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-8">
+            <div className="hidden lg:flex items-center space-x-10">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`text-[13px] font-bold tracking-wide transition-colors duration-200 ${
+                  className={`text-[12px] font-bold tracking-[0.1em] transition-colors duration-200 ${
                     router.pathname === link.href
-                      ? 'text-micro-fg'
-                      : 'text-micro-muted hover:text-micro-fg'
+                      ? (scrolled || !isHomePage ? 'text-micro-fg' : 'text-white')
+                      : (scrolled || !isHomePage ? 'text-micro-muted hover:text-micro-fg' : 'text-white/70 hover:text-white')
                   }`}
                 >
                   {link.label}
@@ -78,7 +78,11 @@ export default function Navbar() {
           </div>
 
           <div className="hidden lg:flex items-center gap-4">
-            <Link href="/prompt-bundle" className="button-micro py-2 text-[12px]">
+            <Link href="/prompt-bundle" className={`px-6 py-2.5 rounded-pill text-[11px] font-bold tracking-widest transition-all ${
+              scrolled || !isHomePage 
+                ? 'bg-micro-fg text-white hover:opacity-90 shadow-lg' 
+                : 'bg-white text-micro-fg hover:bg-micro-layer-1 shadow-2xl'
+            }`}>
               GET BUNDLE
             </Link>
           </div>

@@ -17,6 +17,17 @@
   }
 }
 
+@layer utilities {
+  .bg-nature {
+    background: linear-gradient(to bottom, #7dd3fc 0%, #bae6fd 40%, #ffffff 80%, #4ade80 100%);
+    background-attachment: fixed;
+  }
+  
+  .glass-sheet {
+    @apply bg-white/80 backdrop-blur-xl border border-white/20 shadow-micro;
+  }
+}
+
 @layer components {
   /* Micro-inspired utilities */
   .card-micro {

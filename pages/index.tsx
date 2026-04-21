@@ -114,65 +114,75 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
         }
       `}</style>
 
-      <div className="max-w-6xl mx-auto px-6 pt-40 pb-32">
-        {/* Hero */}
-        <section className="text-center mb-32 max-w-4xl mx-auto">
-          <h1 className="text-6xl md:text-8xl font-bold tracking-tight mb-10 leading-[0.9] text-micro-fg">
-            Real AI examples from <br/>people who use AI <span className="font-instrument font-normal italic lowercase opacity-80">at work.</span>
-          </h1>
-          
-          <div className="flex flex-col items-center gap-8">
-            {formStatus === 'success' ? (
-              <div className="px-10 py-5 bg-micro-layer-1 rounded-pill font-bold text-micro-fg shadow-sm">
-                ✓ Check your inbox to confirm
+      <div className="bg-nature min-h-screen">
+        <div className="max-w-7xl mx-auto px-6 pt-48 pb-40">
+          {/* Hero */}
+          <section className="text-center mb-40 max-w-5xl mx-auto">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/20 backdrop-blur-md rounded-pill border border-white/30 mb-10">
+              <span className="w-2 h-2 bg-terminal-lime rounded-full animate-pulse"></span>
+              <span className="text-[11px] font-bold text-white uppercase tracking-widest">The Work-Ready Library</span>
+            </div>
+            <h1 className="text-7xl md:text-9xl font-bold tracking-tight mb-12 leading-[0.85] text-white drop-shadow-sm">
+              One place for work <br/>that <span className="font-instrument font-normal italic lowercase opacity-90">works for you.</span>
+            </h1>
+            
+            <div className="flex flex-col items-center gap-10">
+              {formStatus === 'success' ? (
+                <div className="px-12 py-6 bg-white rounded-pill font-bold text-micro-fg shadow-xl">
+                  ✓ Check your inbox to confirm
+                </div>
+              ) : (
+                <form className="flex w-full max-w-2xl p-2.5 bg-white/10 backdrop-blur-2xl rounded-pill border border-white/20 shadow-2xl" onSubmit={handleNewsletterSubmit}>
+                  <input
+                    type="email"
+                    className="flex-1 bg-transparent px-8 py-4 outline-none text-[18px] font-medium text-white placeholder:text-white/60"
+                    placeholder="Drop your email for weekly examples"
+                    required
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    disabled={formStatus === 'loading'}
+                  />
+                  <button type="submit" className="px-12 py-5 bg-white text-micro-fg rounded-pill font-extrabold text-sm uppercase tracking-wider hover:bg-micro-layer-1 transition-all shadow-lg active:scale-95" disabled={formStatus === 'loading'}>
+                    {formStatus === 'loading' ? '...' : 'Join Free'}
+                  </button>
+                </form>
+              )}
+              <div className="flex items-center gap-6 opacity-80">
+                <div className="flex -space-x-3">
+                  {[1,2,3,4].map(i => <div key={i} className="w-8 h-8 rounded-full border-2 border-white/20 bg-micro-layer-2" />)}
+                </div>
+                <p className="text-[13px] font-bold text-white uppercase tracking-[0.15em]">
+                  Join 300+ AI Native Operators
+                </p>
               </div>
-            ) : (
-              <form className="flex w-full max-w-xl p-2 bg-micro-layer-1 rounded-pill border border-micro-layer-2 shadow-sm" onSubmit={handleNewsletterSubmit}>
-                <input
-                  type="email"
-                  className="flex-1 bg-transparent px-8 py-3 outline-none text-[16px] font-medium placeholder:text-micro-muted"
-                  placeholder="Drop your email for weekly examples"
-                  required
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  disabled={formStatus === 'loading'}
-                />
-                <button type="submit" className="button-micro px-10 py-4 bg-micro-fg text-white rounded-pill font-bold hover:scale-[1.02] active:scale-[0.98] transition-all" disabled={formStatus === 'loading'}>
-                  {formStatus === 'loading' ? '...' : 'Join'}
-                </button>
-              </form>
-            )}
-            <p className="text-[12px] font-bold text-micro-muted uppercase tracking-[0.2em] opacity-60">
-              Join 300+ AI Tinkers · Next Drop: Tuesday
-            </p>
-          </div>
-        </section>
+            </div>
+          </section>
 
-        {/* Floating Sheet Wrapper */}
-        <div className="bg-white rounded-[40px] shadow-micro border border-micro-layer-1 p-8 md:p-12 lg:p-16">
-          {/* Category Filter */}
-          <nav className="mb-20 border-b border-micro-layer-1">
-            <ul className="flex gap-10 overflow-x-auto pb-6 no-scrollbar">
-              <li
-                className={`text-[12px] font-bold cursor-pointer transition-colors whitespace-nowrap tracking-widest ${selectedCategory === 'All' ? 'text-micro-fg border-b-2 border-micro-fg pb-6 -mb-6' : 'text-micro-muted hover:text-micro-fg'}`}
-                onClick={() => setSelectedCategory('All')}
-              >
-                ALL DROPS
-              </li>
-              {categories.map((cat) => (
+          {/* Floating Glass Sheet Wrapper */}
+          <div className="glass-sheet rounded-[48px] p-8 md:p-16 lg:p-24 overflow-hidden">
+            {/* Category Filter - Refined */}
+            <nav className="mb-24">
+              <ul className="flex flex-wrap justify-center gap-4">
                 <li
-                  key={cat}
-                  className={`text-[12px] font-bold cursor-pointer transition-colors whitespace-nowrap tracking-widest ${selectedCategory === cat ? 'text-micro-fg border-b-2 border-micro-fg pb-6 -mb-6' : 'text-micro-muted hover:text-micro-fg'}`}
-                  onClick={() => setSelectedCategory(cat)}
+                  className={`px-8 py-3 rounded-pill text-[12px] font-bold cursor-pointer transition-all tracking-widest border ${selectedCategory === 'All' ? 'bg-micro-fg text-white border-micro-fg shadow-lg scale-105' : 'bg-white text-micro-muted border-micro-layer-1 hover:border-micro-layer-2'}`}
+                  onClick={() => setSelectedCategory('All')}
                 >
-                  {cat.toUpperCase()}
+                  ALL DROPS
                 </li>
-              ))}
-            </ul>
-          </nav>
+                {categories.map((cat) => (
+                  <li
+                    key={cat}
+                    className={`px-8 py-3 rounded-pill text-[12px] font-bold cursor-pointer transition-all tracking-widest border ${selectedCategory === cat ? 'bg-micro-fg text-white border-micro-fg shadow-lg scale-105' : 'bg-white text-micro-muted border-micro-layer-1 hover:border-micro-layer-2'}`}
+                    onClick={() => setSelectedCategory(cat)}
+                  >
+                    {cat.toUpperCase()}
+                  </li>
+                ))}
+              </ul>
+            </nav>
 
-          {/* Weekly Drops */}
-          <main className="space-y-32">
+            {/* Weekly Drops */}
+            <main className="space-y-40">
           {weeklyBatches.map(([week, items], batchIdx) => {
             if (items.length === 0) return null;
             return (
