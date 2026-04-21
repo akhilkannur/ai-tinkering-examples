@@ -457,11 +457,11 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     summary: "Austen Allred asked for everyone's secrets on how to force AI to design something actually beautiful. There are some interesting responses in the thread that won't blow your mind, but they're simple and effective.",
     screenshots: [
       {
-        url: "/images/examples/ai-automation-example-ai-tool-usage-tip.webp",
-        filename: "ai-automation-example-ai-tool-usage-tip.webp",
+        url: "/images/examples/austen-ai-design-secrets.webp",
+        filename: "austen-ai-design-secrets.webp",
         thumbnails: {
-          small: { url: "/images/examples/ai-automation-example-ai-tool-usage-tip.webp" },
-          large: { url: "/images/examples/ai-automation-example-ai-tool-usage-tip.webp" }
+          small: { url: "/images/examples/austen-ai-design-secrets.webp" },
+          large: { url: "/images/examples/austen-ai-design-secrets.webp" }
         }
       }
     ],

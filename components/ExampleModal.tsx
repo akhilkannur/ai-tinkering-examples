@@ -13,18 +13,6 @@ export default function ExampleModal({ example, isOpen, onClose }: ExampleModalP
   const modalRef = useRef<HTMLDivElement>(null)
   const contentRef = useRef<HTMLDivElement>(null)
 
-  // Handle browser back button
-  useEffect(() => {
-    const handlePopState = () => {
-      if (isOpen) {
-        onClose()
-      }
-    }
-
-    window.addEventListener('popstate', handlePopState)
-    return () => window.removeEventListener('popstate', handlePopState)
-  }, [isOpen, onClose])
-
   // Handle escape key and outside clicks
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {

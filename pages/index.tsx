@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useMemo, useState, useEffect } from 'react'
 import { GetStaticProps } from 'next/types'
 import Link from 'next/link'
 import Head from 'next/head'
@@ -6,6 +6,7 @@ import Image from 'next/image'
 import { localSocialExamples } from '../lib/social-examples-data'
 import { generateItemListSchema } from '../lib/seo-utils'
 import { optimizeImageUrl } from '../utils/cloudinary'
+import ExampleModal from '../components/ExampleModal'
 
 export interface EnrichedExampleRecord {
   id: string;
@@ -62,6 +63,36 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
   const [selectedCategory, setSelectedCategory] = useState('All')
   const [email, setEmail] = useState('')
   const [formStatus, setFormStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
+  const [selectedExample, setSelectedExample] = useState<EnrichedExampleRecord | null>(null)
+
+  // Sync state with URL for deep linking / back button
+  useEffect(() => {
+    const handlePopState = (e: PopStateEvent) => {
+      if (e.state?.exampleSlug) {
+        const ex = examples.find(item => item.slug === e.state.exampleSlug);
+        if (ex) setSelectedExample(ex);
+      } else {
+        setSelectedExample(null);
+      }
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, [examples]);
+
+  const handleExampleClick = (example: EnrichedExampleRecord) => {
+    setSelectedExample(example);
+    const categorySlug = (example.category || 'uncategorized').toLowerCase().replace(/\s+/g, '-');
+    const url = `/ai-examples/${categorySlug}/${example.slug}`;
+    window.history.pushState({ exampleSlug: example.slug }, '', url);
+  };
+
+  const closeModal = () => {
+    setSelectedExample(null);
+    if (window.location.pathname !== '/') {
+      window.history.pushState(null, '', '/');
+    }
+  };
 
   const filteredItems = useMemo(() => {
     return examples.filter(ex => selectedCategory === 'All' || ex.category === selectedCategory);
@@ -175,7 +206,13 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
 
                       return (
                         <article key={example.id} className="group cursor-pointer">
-                          <Link href={`/ai-examples/${(example.category || 'uncategorized').toLowerCase().replace(/\s+/g, '-')}/${example.slug}`}>
+                          <Link 
+                            href={`/ai-examples/${(example.category || 'uncategorized').toLowerCase().replace(/\s+/g, '-')}/${example.slug}`}
+                            onClick={(e) => {
+                              e.preventDefault();
+                              handleExampleClick(example);
+                            }}
+                          >
                           <div className="card-micro aspect-[4/3] relative overflow-hidden mb-4">
                             {imageUrl ? (
                               <Image
@@ -210,6 +247,11 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
         </div>
       </div>
 
+      <ExampleModal 
+        example={selectedExample} 
+        isOpen={!!selectedExample} 
+        onClose={closeModal} 
+      />
     </>
   )
 }
