@@ -1,9 +1,10 @@
 import Head from 'next/head'
 import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 
 export default function Privacy() {
   return (
-    <div className="min-h-screen bg-coffee-100 font-sans text-coffee-900 selection:bg-coffee-300 selection:text-coffee-900">
+    <div className="min-h-screen bg-micro-bg font-sans text-micro-fg selection:bg-terminal-lime selection:text-micro-bg">
       <Head>
         <title>Privacy Policy | Real AI Examples</title>
         <meta name="description" content="Read our privacy policy to understand how we collect and protect your personal data." key="description" />
@@ -12,48 +13,62 @@ export default function Privacy() {
 
       <Navbar />
 
-      <main className="pt-32 md:pt-40 pb-24">
-        <div className="container mx-auto px-6 max-w-3xl">
-          <div className="text-center mb-16 relative overflow-hidden">
-            <div className="absolute -right-20 -top-20 w-64 h-64 bg-coffee-200/30 rounded-full blur-3xl pointer-events-none"></div>
-            <h1 className="text-5xl md:text-7xl font-display font-semibold text-coffee-900 uppercase leading-[1.1] tracking-tight">Privacy Policy</h1>
-            <p className="text-[10px] font-mono font-bold text-coffee-400 uppercase tracking-widest mt-6">Last Updated: January 17, 2026</p>
-          </div>
+      <main className="pt-32 md:pt-48 pb-24">
+        <div className="max-w-4xl mx-auto px-6">
+          <header className="mb-20">
+            <h1 className="text-5xl md:text-8xl font-bold tracking-tighter uppercase leading-[0.9]">Privacy <br/><span className="font-instrument font-normal italic lowercase opacity-60">Policy</span></h1>
+            <p className="text-[11px] font-black uppercase tracking-[0.3em] text-micro-muted mt-8 flex items-center gap-3">
+              <span className="w-2 h-2 rounded-full bg-terminal-lime"></span>
+              Last Updated: April 21, 2026
+            </p>
+          </header>
 
-          <div className="bg-white rounded-[2rem] border border-coffee-100 p-10 md:p-16 shadow-soft">
-            <div className="max-w-none space-y-10 prose prose-lg">
-                <section>
-                    <h2 className="text-2xl font-display font-semibold text-coffee-900 uppercase">Introduction</h2>
-                    <p className="text-coffee-900 font-light leading-relaxed">Welcome to Real AI Examples. We respect your privacy and are committed to protecting your personal data. This policy outlines how we handle your information.</p>
-                </section>
+          <div className="space-y-16 max-w-3xl">
+            <section>
+              <h2 className="text-sm font-black uppercase tracking-[0.2em] text-micro-muted mb-6">01 / Introduction</h2>
+              <p className="text-xl md:text-2xl font-medium leading-relaxed text-micro-fg/90">
+                Welcome to Real AI Examples. We respect your privacy and are committed to protecting your personal data. This policy outlines how we handle your information in a way that allows us to provide a better service without compromising your security.
+              </p>
+            </section>
 
-                <section>
-                    <h2 className="text-2xl font-display font-semibold text-coffee-900 uppercase">Data We Collect</h2>
-                    <p className="text-coffee-900 font-light leading-relaxed">We may collect, use, and store the following types of data:</p>
-                    <ul className="space-y-3">
-                        <li className="text-coffee-900 font-light"><strong className="font-semibold text-coffee-900">Identity Data:</strong> Your email address, if you subscribe to our newsletter.</li>
-                        <li className="text-coffee-900 font-light"><strong className="font-semibold text-coffee-900">Technical Data:</strong> Anonymized data such as IP address, browser type, and device information for analytics purposes.</li>
-                        <li className="text-coffee-900 font-light"><strong className="font-semibold text-coffee-900">Usage Data:</strong> Information about how you interact with our website and the examples you view.</li>
-                    </ul>
-                </section>
+            <section>
+              <h2 className="text-sm font-black uppercase tracking-[0.2em] text-micro-muted mb-6">02 / Data Collection</h2>
+              <div className="space-y-8">
+                <p className="text-lg font-medium leading-relaxed text-micro-fg/80">We collect minimal data to ensure the platform functions efficiently:</p>
+                <ul className="space-y-6">
+                  <li className="flex gap-4">
+                    <span className="font-mono text-terminal-lime">01</span>
+                    <p className="text-lg font-medium"><strong className="text-micro-fg">Identity Data:</strong> Your email address, used exclusively for newsletter delivery if you opt-in.</p>
+                  </li>
+                  <li className="flex gap-4">
+                    <span className="font-mono text-terminal-lime">02</span>
+                    <p className="text-lg font-medium"><strong className="text-micro-fg">Technical Data:</strong> Anonymized metrics including browser type and device information for internal performance optimization.</p>
+                  </li>
+                  <li className="flex gap-4">
+                    <span className="font-mono text-terminal-lime">03</span>
+                    <p className="text-lg font-medium"><strong className="text-micro-fg">Usage Data:</strong> Aggregated interaction patterns to help us understand which AI workflows provide the most value.</p>
+                  </li>
+                </ul>
+              </div>
+            </section>
 
-                <section>
-                    <h2 className="text-2xl font-display font-semibold text-coffee-900 uppercase">How We Use Your Data</h2>
-                    <p className="text-coffee-900 font-light leading-relaxed">We use your data to provide our services, including sending newsletters, and to improve our website through anonymous usage analytics. We do not sell your personal data to third parties.</p>
-                </section>
+            <section>
+              <h2 className="text-sm font-black uppercase tracking-[0.2em] text-micro-muted mb-6">03 / Usage & Security</h2>
+              <p className="text-lg font-medium leading-relaxed text-micro-fg/80">
+                We use your data to improve the platform and communicate updates. We do not sell your personal data. All information is stored using industry-standard security protocols to prevent unauthorized access or accidental loss.
+              </p>
+            </section>
 
-                <section>
-                    <h2 className="text-2xl font-display font-semibold text-coffee-900 uppercase">Data Security</h2>
-                    <p className="text-coffee-900 font-light leading-relaxed">We have implemented appropriate security measures to prevent your personal data from being accidentally lost, used, or accessed in an unauthorized way.</p>
-                </section>
-
-                <section className="pt-10 border-t border-coffee-100">
-                    <p className="text-base text-coffee-900 font-light">Questions? Contact us at: <a href="mailto:akhil@realaiexamples.com" className="font-semibold text-coffee-900 underline decoration-coffee-300 underline-offset-4 hover:text-coffee-600">akhil@realaiexamples.com</a></p>
-                </section>
-            </div>
+            <footer className="pt-20 border-t border-micro-layer-1">
+              <p className="text-lg font-medium text-micro-fg/60">
+                Questions about your data? Reach out: <a href="mailto:akhil@realaiexamples.com" className="text-micro-fg underline decoration-terminal-lime decoration-2 underline-offset-8 hover:text-terminal-lime transition-colors">akhil@realaiexamples.com</a>
+              </p>
+            </footer>
           </div>
         </div>
       </main>
+
+      <Footer />
     </div>
   )
 }
