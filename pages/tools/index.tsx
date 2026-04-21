@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
 import { aiTools, AiTool } from '../../lib/ai-tools-data';
-import { ArrowRight, ChevronDown, Search } from 'lucide-react';
+import { ArrowRight, ChevronDown } from 'lucide-react';
 
 const slugify = (text: string) =>
   text.toLowerCase().trim().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '').replace(/\-\-+/g, '-');
@@ -39,7 +39,6 @@ function formatDate(dateStr: string): string {
 
 export default function ToolsIndex() {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
-  const [searchQuery, setSearchQuery] = useState('');
   const [showAllWeeks, setShowAllWeeks] = useState(false);
 
   const categories = ['All', ...Array.from(new Set(aiTools.map(t => t.category)))];
@@ -47,13 +46,10 @@ export default function ToolsIndex() {
   const filteredTools = useMemo(() => {
     return aiTools
       .filter(tool => {
-        const matchCat = selectedCategory === 'All' || tool.category === selectedCategory;
-        const matchSearch = tool.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
-                           tool.description.toLowerCase().includes(searchQuery.toLowerCase());
-        return matchCat && matchSearch;
+        return selectedCategory === 'All' || tool.category === selectedCategory;
       })
       .sort((a, b) => new Date(b.dateAdded).getTime() - new Date(a.dateAdded).getTime());
-  }, [selectedCategory, searchQuery]);
+  }, [selectedCategory]);
 
   // Group by week
   const groupedWeeks = useMemo(() => {
@@ -88,60 +84,44 @@ export default function ToolsIndex() {
         {/* Hero */}
         <div className="max-w-5xl mx-auto text-center mb-12 md:mb-32 pt-8 md:pt-12">
           <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold tracking-tight mb-4 md:mb-8 leading-[0.9] text-white drop-shadow-md">
-            Your workflow <br /><span className="font-instrument font-normal italic lowercase opacity-90">won&apos;t automate itself.</span>
+            Too many AI tools. <br /><span className="font-instrument font-normal italic lowercase opacity-90">Not enough time.</span>
           </h1>
           <p className="text-base md:text-xl lg:text-2xl text-white/80 max-w-2xl mx-auto font-medium leading-relaxed">
-            The most practical AI tools directory for operators. No fluff, just APIs, MCP configs, and work-ready stack.
+            Skip the marketing hype. A weekly shortlist of handpicked tools that solve real work problems.
           </p>
         </div>
 
         {/* Floating Glass Sheet */}
         <div className="glass-sheet rounded-3xl md:rounded-[48px] p-4 md:p-16 lg:p-24 overflow-hidden">
-          {/* Search & Filters */}
+          {/* Filters */}
           <div className="mb-8 md:mb-16 sticky top-4 z-40 bg-white/80 backdrop-blur-2xl py-4 px-4 md:py-6 md:px-8 rounded-2xl md:rounded-3xl border border-white/30 shadow-2xl">
-            <div className="flex flex-col gap-4 md:flex-row md:gap-8 items-stretch md:items-center justify-between">
-              
-              {/* Horizontal Pill Filters */}
-              <div className="flex items-center gap-2 md:gap-3 overflow-x-auto no-scrollbar w-full md:w-auto pb-1">
-                {categories.map(cat => (
-                  <button
-                    key={cat}
-                    onClick={() => setSelectedCategory(cat)}
-                    className={`px-4 md:px-8 py-2 md:py-3 rounded-pill text-[10px] md:text-[12px] font-bold uppercase tracking-widest border transition-all whitespace-nowrap ${
-                      selectedCategory === cat 
-                      ? 'bg-micro-fg border-micro-fg text-white shadow-lg' 
-                      : 'bg-white/50 border-white/20 text-micro-muted hover:border-micro-fg/20'
-                    }`}
-                  >
-                    {cat}
-                  </button>
-                ))}
-              </div>
-
-              {/* Search Bar */}
-              <div className="relative w-full md:w-80">
-                <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-micro-muted" />
-                <input 
-                  type="text"
-                  placeholder="Search tools..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-6 py-3 md:py-4 bg-white/50 border border-white/20 rounded-pill text-sm font-medium focus:outline-none focus:bg-white focus:border-micro-fg transition-all placeholder:text-micro-muted/60"
-                />
-              </div>
+            <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3">
+              {categories.map(cat => (
+                <button
+                  key={cat}
+                  onClick={() => setSelectedCategory(cat)}
+                  className={`px-3 md:px-5 py-1.5 md:py-2 rounded-full text-[10px] md:text-[12px] font-bold transition-all whitespace-nowrap border ${
+                    selectedCategory === cat 
+                    ? 'bg-micro-fg border-micro-fg text-white shadow-lg' 
+                    : 'bg-white/50 border-white/20 text-micro-muted hover:border-micro-fg/20'
+                  }`}
+                >
+                  {cat}
+                </button>
+              ))}
             </div>
           </div>
 
           {/* Tools List & Sidebar */}
-          <div className="flex flex-col lg:flex-row gap-10 lg:gap-20">
+          <div className="flex flex-col lg:flex-row gap-10 lg:gap-12">
             
             {/* Main Content: Tools List */}
             <div className="flex-grow min-w-0">
               {filteredTools.length === 0 ? (
                 <div className="py-24 text-center border-2 border-dashed border-micro-layer-2 rounded-[40px] bg-micro-layer-1/30">
-                  <p className="text-micro-muted font-bold uppercase tracking-widest text-sm">No tools found matching your search</p>
+                  <p className="text-micro-muted font-bold uppercase tracking-widest text-sm">No tools found</p>
                   <button 
-                    onClick={() => {setSelectedCategory('All'); setSearchQuery('');}}
+                    onClick={() => {setSelectedCategory('All');}}
                     className="mt-6 text-micro-fg font-bold uppercase text-xs hover:underline decoration-2 underline-offset-4"
                   >
                     Clear all filters
@@ -242,15 +222,15 @@ function ToolDataRow({ tool }: { tool: AiTool }) {
 
   return (
     <div 
-      className="group flex items-center gap-4 py-5 px-6 -mx-6 hover:bg-white transition-all cursor-pointer rounded-2xl border border-transparent hover:border-micro-layer-1 hover:shadow-soft"
+      className="group flex items-center gap-6 py-6 px-6 -mx-6 hover:bg-white transition-all cursor-pointer rounded-2xl border border-transparent hover:border-micro-layer-1 hover:shadow-soft"
     >
       {/* Logo */}
-      <div className="w-10 h-10 rounded-xl border border-micro-layer-1 bg-white flex-shrink-0 flex items-center justify-center p-1.5 overflow-hidden group-hover:border-micro-fg transition-colors">
+      <div className="w-12 h-12 rounded-xl border border-micro-layer-1 bg-white flex-shrink-0 flex items-center justify-center p-2 overflow-hidden group-hover:border-micro-fg transition-colors">
         <Image 
           src={imgSrc} 
           alt={tool.name} 
-          width={40} 
-          height={40} 
+          width={48} 
+          height={48} 
           className="object-contain"
           onError={() => setImgSrc(fallbackLogo)}
           unoptimized
@@ -258,28 +238,28 @@ function ToolDataRow({ tool }: { tool: AiTool }) {
       </div>
 
       {/* Name */}
-      <div className="w-40 flex-shrink-0 min-w-0">
-        <h3 className="text-sm font-bold tracking-tight text-micro-fg truncate group-hover:underline decoration-1 underline-offset-4">
+      <div className="w-48 flex-shrink-0 min-w-0">
+        <h3 className="text-[16px] font-bold tracking-tight text-micro-fg truncate group-hover:underline decoration-1 underline-offset-4">
           {tool.name}
         </h3>
-        <span className="text-[9px] font-bold uppercase tracking-[0.1em] text-micro-muted">
+        <span className="text-[10px] font-bold uppercase tracking-[0.1em] text-micro-muted">
           {tool.category}
         </span>
       </div>
 
       {/* Description */}
-      <p className="hidden md:block flex-1 text-sm text-micro-muted font-medium leading-snug truncate min-w-0">
+      <p className="hidden md:block flex-1 text-[15px] text-micro-muted font-medium leading-snug truncate min-w-0">
         {tool.description}
       </p>
 
       {/* Pricing */}
-      <span className="hidden md:block text-xs font-bold text-micro-fg flex-shrink-0 w-20 text-right">
+      <span className="hidden md:block text-sm font-bold text-micro-fg flex-shrink-0 w-24 text-right">
         {tool.tags.price}
       </span>
 
       {/* Action */}
       <div className="flex-shrink-0 ml-auto md:ml-0">
-        <ArrowRight className="w-4 h-4 text-micro-muted group-hover:text-micro-fg transition-colors" />
+        <ArrowRight className="w-5 h-5 text-micro-muted group-hover:text-micro-fg transition-colors" />
       </div>
     </div>
   );
