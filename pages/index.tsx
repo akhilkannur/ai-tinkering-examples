@@ -108,175 +108,118 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
         <link rel="canonical" href="https://realaiexamples.com/" />
       </Head>
 
-      <style jsx global>{`
-        body {
-          @apply bg-white text-micro-fg antialiased font-sans;
-        }
-      `}</style>
-
-      <div className="bg-nature min-h-screen">
-        <div className="max-w-7xl mx-auto px-6 pt-48 pb-40">
-          {/* Hero */}
-          <section className="text-center mb-40 max-w-5xl mx-auto">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/20 backdrop-blur-md rounded-pill border border-white/30 mb-10">
-              <span className="w-2 h-2 bg-terminal-lime rounded-full animate-pulse"></span>
-              <span className="text-[11px] font-bold text-white uppercase tracking-widest">The Work-Ready Library</span>
-            </div>
-            <h1 className="text-7xl md:text-9xl font-bold tracking-tight mb-12 leading-[0.85] text-white drop-shadow-sm">
-              One place for work <br/>that <span className="font-instrument font-normal italic lowercase opacity-90">works for you.</span>
-            </h1>
-            
-            <div className="flex flex-col items-center gap-10">
-              {formStatus === 'success' ? (
-                <div className="px-12 py-6 bg-white rounded-pill font-bold text-micro-fg shadow-xl">
-                  ✓ Check your inbox to confirm
-                </div>
-              ) : (
-                <form className="flex w-full max-w-2xl p-2.5 bg-white/10 backdrop-blur-2xl rounded-pill border border-white/20 shadow-2xl" onSubmit={handleNewsletterSubmit}>
-                  <input
-                    type="email"
-                    className="flex-1 bg-transparent px-8 py-4 outline-none text-[18px] font-medium text-white placeholder:text-white/60"
-                    placeholder="Drop your email for weekly examples"
-                    required
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    disabled={formStatus === 'loading'}
-                  />
-                  <button type="submit" className="px-12 py-5 bg-white text-micro-fg rounded-pill font-extrabold text-sm uppercase tracking-wider hover:bg-micro-layer-1 transition-all shadow-lg active:scale-95" disabled={formStatus === 'loading'}>
-                    {formStatus === 'loading' ? '...' : 'Join Free'}
-                  </button>
-                </form>
-              )}
-              <div className="flex items-center gap-6 opacity-80">
-                <div className="flex -space-x-3">
-                  {[1,2,3,4].map(i => <div key={i} className="w-8 h-8 rounded-full border-2 border-white/20 bg-micro-layer-2" />)}
-                </div>
-                <p className="text-[13px] font-bold text-white uppercase tracking-[0.15em]">
-                  Join 300+ AI Native Operators
-                </p>
+      <div className="max-w-7xl mx-auto px-6">
+        {/* Hero */}
+        <section className="text-center mb-40 max-w-5xl mx-auto pt-12">
+          <h1 className="text-7xl md:text-9xl font-bold tracking-tight mb-12 leading-[0.85] text-white drop-shadow-md">
+            One place for work <br/>that <span className="font-instrument font-normal italic lowercase opacity-90">works for you.</span>
+          </h1>
+          
+          <div className="flex flex-col items-center gap-10">
+            {formStatus === 'success' ? (
+              <div className="px-12 py-6 bg-white rounded-pill font-bold text-micro-fg shadow-xl">
+                ✓ Check your inbox to confirm
               </div>
-            </div>
-          </section>
-
-          {/* Floating Glass Sheet Wrapper */}
-          <div className="glass-sheet rounded-[48px] p-8 md:p-16 lg:p-24 overflow-hidden">
-            {/* Category Filter - Refined */}
-            <nav className="mb-24">
-              <ul className="flex flex-wrap justify-center gap-4">
-                <li
-                  className={`px-8 py-3 rounded-pill text-[12px] font-bold cursor-pointer transition-all tracking-widest border ${selectedCategory === 'All' ? 'bg-micro-fg text-white border-micro-fg shadow-lg scale-105' : 'bg-white text-micro-muted border-micro-layer-1 hover:border-micro-layer-2'}`}
-                  onClick={() => setSelectedCategory('All')}
-                >
-                  ALL DROPS
-                </li>
-                {categories.map((cat) => (
-                  <li
-                    key={cat}
-                    className={`px-8 py-3 rounded-pill text-[12px] font-bold cursor-pointer transition-all tracking-widest border ${selectedCategory === cat ? 'bg-micro-fg text-white border-micro-fg shadow-lg scale-105' : 'bg-white text-micro-muted border-micro-layer-1 hover:border-micro-layer-2'}`}
-                    onClick={() => setSelectedCategory(cat)}
-                  >
-                    {cat.toUpperCase()}
-                  </li>
-                ))}
-              </ul>
-            </nav>
-
-            {/* Weekly Drops */}
-            <main className="space-y-40">
-          {weeklyBatches.map(([week, items], batchIdx) => {
-            if (items.length === 0) return null;
-            return (
-              <section key={week}>
-                <div className="flex items-center justify-between mb-8">
-                  <h2 className="text-sm font-bold tracking-widest text-micro-muted">DROP / {week.toUpperCase()}</h2>
-                  {batchIdx === 0 && <span className="bg-micro-fg text-white px-2 py-0.5 rounded text-[10px] font-bold">NEW</span>}
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {items.map((example, i) => {
-                    const cardNum = globalCardIndex++;
-                    const rawUrl = example.screenshots?.[0]?.url;
-                    const imageUrl = optimizeImageUrl(rawUrl, example.cloudinaryPublicId, 600);
-
-                    return (
-                      <article key={example.id} className="group cursor-pointer" onClick={() => handleOpenModal(example)}>
-                        <div className="card-micro aspect-[4/3] relative overflow-hidden mb-4">
-                          {imageUrl ? (
-                            <Image
-                              src={imageUrl}
-                              alt={example.title}
-                              fill
-                              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                              className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                            />
-                          ) : (
-                            <div className="w-full h-full bg-micro-layer-1 flex items-center justify-center font-mono text-micro-muted">
-                              {'{ // ops }'}
-                            </div>
-                          )}
-                        </div>
-                        <div className="flex justify-between items-start mb-1 text-[11px] font-bold text-micro-muted uppercase tracking-wider">
-                          <span>{example.category || 'EXAMPLE'}</span>
-                          <span>{example.publish_date ? new Date(example.publish_date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) : ''}</span>
-                        </div>
-                        <h3 className="text-xl font-bold leading-tight group-hover:underline decoration-2 underline-offset-4">
-                          {example.title}
-                        </h3>
-                      </article>
-                    );
-                  })}
-                </div>
-              </section>
-            );
-          })}
-        </main>
-      </div>
-    </div>
-  </div>
-
-        {/* Footer */}
-        <footer className="mt-24 pt-16 border-t border-micro-layer-1 text-micro-fg font-sans">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-12 mb-16">
-            <div className="col-span-2">
-              <Link href="/" className="flex items-center gap-2 mb-6 group">
-                  <div className="w-5 h-5 bg-micro-fg rounded flex items-center justify-center transition-transform group-hover:scale-105"></div>
-                  <span className="text-lg font-bold tracking-tight text-micro-fg">Real AI</span>
-              </Link>
-              <p className="text-sm font-bold text-micro-muted max-w-xs leading-relaxed uppercase tracking-wider">
-                Real-world AI workflows and practical automations for business professionals.
+            ) : (
+              <form className="flex w-full max-w-2xl p-2.5 bg-white/10 backdrop-blur-2xl rounded-pill border border-white/20 shadow-2xl" onSubmit={handleNewsletterSubmit}>
+                <input
+                  type="email"
+                  className="flex-1 bg-transparent px-8 py-4 outline-none text-[18px] font-medium text-white placeholder:text-white/60"
+                  placeholder="Drop your email for weekly examples"
+                  required
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  disabled={formStatus === 'loading'}
+                />
+                <button type="submit" className="px-12 py-5 bg-white text-micro-fg rounded-pill font-extrabold text-sm uppercase tracking-wider hover:bg-micro-layer-1 transition-all shadow-lg active:scale-95" disabled={formStatus === 'loading'}>
+                  {formStatus === 'loading' ? '...' : 'Join Free'}
+                </button>
+              </form>
+            )}
+            <div className="flex items-center gap-6 opacity-80">
+              <div className="flex -space-x-3">
+                {[1,2,3,4].map(i => <div key={i} className="w-8 h-8 rounded-full border-2 border-white/20 bg-micro-layer-2" />)}
+              </div>
+              <p className="text-[13px] font-bold text-white uppercase tracking-[0.15em]">
+                Join 300+ AI Native Operators
               </p>
             </div>
-            <div>
-              <h4 className="text-[11px] font-bold text-micro-fg uppercase tracking-[0.1em] mb-6">Site</h4>
-              <ul className="space-y-3 text-[13px] font-bold text-micro-muted">
-                <li><Link href="/about" className="hover:text-micro-fg transition-colors uppercase">About</Link></li>
-                <li><Link href="/" className="hover:text-micro-fg transition-colors uppercase">Examples</Link></li>
-                <li><Link href="/tools" className="hover:text-micro-fg transition-colors uppercase">Tools</Link></li>
-                <li><Link href="/blog" className="hover:text-micro-fg transition-colors uppercase">Blog</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-[11px] font-bold text-micro-fg uppercase tracking-[0.1em] mb-6">Connect</h4>
-              <ul className="space-y-3 text-[13px] font-bold text-micro-muted">
-                <li><Link href="/#newsletter" className="hover:text-micro-fg transition-colors uppercase">Newsletter</Link></li>
-                <li><a href="https://twitter.com/realaiexamples" target="_blank" rel="noopener noreferrer" className="hover:text-micro-fg transition-colors uppercase">Twitter</a></li>
-                <li><a href="https://salestools.club/" target="_blank" rel="noopener noreferrer" className="hover:text-micro-fg transition-colors uppercase">Salestools Club</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-[11px] font-bold text-micro-fg uppercase tracking-[0.1em] mb-6">Legal</h4>
-              <ul className="space-y-3 text-[13px] font-bold text-micro-muted">
-                <li><Link href="/privacy" className="hover:text-micro-fg transition-colors uppercase">Privacy</Link></li>
-                <li><Link href="/terms" className="hover:text-micro-fg transition-colors uppercase">Terms</Link></li>
-              </ul>
-            </div>
           </div>
-          <div className="pt-8 border-t border-micro-layer-1 flex flex-col md:flex-row justify-between items-center gap-6">
-            <p className="text-micro-muted text-[11px] font-bold uppercase tracking-widest">
-              &copy; {new Date().getFullYear()} Real AI Examples.
-            </p>
-          </div>
-        </footer>
+        </section>
+
+        {/* Floating Glass Sheet */}
+        <div className="glass-sheet rounded-[48px] p-8 md:p-16 lg:p-24 overflow-hidden">
+          {/* Category Filter - Refined */}
+          <nav className="mb-24">
+            <ul className="flex flex-wrap justify-center gap-4">
+              <li
+                className={`px-8 py-3 rounded-pill text-[12px] font-bold cursor-pointer transition-all tracking-widest border ${selectedCategory === 'All' ? 'bg-micro-fg text-white border-micro-fg shadow-lg scale-105' : 'bg-white text-micro-muted border-micro-layer-1 hover:border-micro-layer-2'}`}
+                onClick={() => setSelectedCategory('All')}
+              >
+                ALL DROPS
+              </li>
+              {categories.map((cat) => (
+                <li
+                  key={cat}
+                  className={`px-8 py-3 rounded-pill text-[12px] font-bold cursor-pointer transition-all tracking-widest border ${selectedCategory === cat ? 'bg-micro-fg text-white border-micro-fg shadow-lg scale-105' : 'bg-white text-micro-muted border-micro-layer-1 hover:border-micro-layer-2'}`}
+                  onClick={() => setSelectedCategory(cat)}
+                >
+                  {cat.toUpperCase()}
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          {/* Weekly Drops */}
+          <main className="space-y-40">
+            {weeklyBatches.map(([week, items], batchIdx) => {
+              if (items.length === 0) return null;
+              return (
+                <section key={week}>
+                  <div className="flex items-center justify-between mb-8">
+                    <h2 className="text-sm font-bold tracking-widest text-micro-muted uppercase">DROP / {week.toUpperCase()}</h2>
+                    {batchIdx === 0 && <span className="bg-micro-fg text-white px-2 py-0.5 rounded text-[10px] font-bold">NEW</span>}
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {items.map((example) => {
+                      const rawUrl = example.screenshots?.[0]?.url;
+                      const imageUrl = optimizeImageUrl(rawUrl, example.cloudinaryPublicId, 600);
+
+                      return (
+                        <article key={example.id} className="group cursor-pointer" onClick={() => handleOpenModal(example)}>
+                          <div className="card-micro aspect-[4/3] relative overflow-hidden mb-4">
+                            {imageUrl ? (
+                              <Image
+                                src={imageUrl}
+                                alt={example.title}
+                                fill
+                                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                              />
+                            ) : (
+                              <div className="w-full h-full bg-micro-layer-1 flex items-center justify-center font-mono text-micro-muted">
+                                {'{ // ops }'}
+                              </div>
+                            )}
+                          </div>
+                          <div className="flex justify-between items-start mb-1 text-[11px] font-bold text-micro-muted uppercase tracking-wider">
+                            <span>{example.category || 'EXAMPLE'}</span>
+                            <span>{example.publish_date ? new Date(example.publish_date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) : ''}</span>
+                          </div>
+                          <h3 className="text-xl font-bold leading-tight group-hover:underline decoration-2 underline-offset-4">
+                            {example.title}
+                          </h3>
+                        </article>
+                      );
+                    })}
+                  </div>
+                </section>
+              );
+            })}
+          </main>
+        </div>
+      </div>
 
       <ExampleModal
         example={modalExample as any}

@@ -23,8 +23,11 @@ const spaceMono = Space_Mono({
 const NewsletterPopup = dynamic(() => import('../components/NewsletterPopup'), { ssr: false })
 const NewsletterToast = dynamic(() => import('../components/NewsletterToast'), { ssr: false })
 
+import Layout from '../components/Layout'
+
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
+  // ... rest of meta and og image logic ...
   const title = "AI Examples You Can Copy & Try";
   const description = "Curated AI workflows and prompts for non-technical tinkerers. No fluff, just actionable examples.";
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com';
@@ -42,7 +45,6 @@ export default function App({ Component, pageProps }: AppProps) {
       <Head>
         <title>AI Examples You Can Copy & Try</title>
         <meta name="description" content={description} key="description" />
-        {/* ... existing meta tags ... */}
         <meta property="og:title" content={title} key="og:title" />
         <meta property="og:description" content={description} key="og:description" />
         <meta property="og:url" content={canonicalUrl} key="og:url" />
@@ -61,8 +63,9 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="shortcut icon" href={`${baseUrl}/favicon.ico`} />
         <link rel="icon" href={`${baseUrl}/favicon.ico`} type="image/x-icon" />
       </Head>
-      <Component {...pageProps} />
-      {router.pathname !== '/' && router.pathname !== '/tools' && <Footer />}
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
       <NewsletterPopup />
       <NewsletterToast />
       

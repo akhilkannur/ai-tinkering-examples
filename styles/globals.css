@@ -19,7 +19,7 @@
 
 @layer utilities {
   .bg-nature {
-    background: linear-gradient(to bottom, #7dd3fc 0%, #bae6fd 40%, #ffffff 80%, #4ade80 100%);
+    background: linear-gradient(to bottom, #0284c7 0%, #0ea5e9 30%, #7dd3fc 60%, #bae6fd 80%, #4ade80 100%);
     background-attachment: fixed;
   }
   
