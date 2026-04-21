@@ -68,7 +68,7 @@ export default function ToolsIndex() {
         <meta name="description" content={`Browse ${aiTools.length} curated AI tools — filtered by category and price. Updated weekly.`} key="description" />
       </Head>
 
-      <>
+      <div>
         {/* Hero */}
         <div className="max-w-5xl mx-auto text-center mb-12 md:mb-32 pt-8 md:pt-12">
           <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold tracking-tight mb-4 md:mb-8 leading-[0.9] text-white drop-shadow-md">
