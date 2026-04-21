@@ -232,6 +232,7 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
         </main>
       </div>
     </div>
+  </div>
 
         {/* Footer */}
         <footer className="mt-24 pt-16 border-t border-micro-layer-1 text-micro-fg font-sans">
