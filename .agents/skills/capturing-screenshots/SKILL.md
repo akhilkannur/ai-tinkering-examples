@@ -63,22 +63,19 @@ node .agents/skills/capturing-screenshots/scripts/capture.js "https://x.com/user
 
 ## How It Works
 
-### The Core Technique: Element-Based Screenshots
+### Twitter/X: oEmbed Approach (Primary)
 
-Instead of:
-```js
-// ❌ BAD — hardcoded clip breaks when content height varies
-await page.screenshot({ clip: { x: 340, y: 50, width: 600, height: 600 } });
-```
+For Twitter/X URLs, the script uses Twitter's embed page directly (`platform.twitter.com/embed/Tweet.html`):
+- No login walls, no sidebar, no layout shifts
+- Consistent rendering every time  
+- Images load reliably
+- Height capped at 600px (thumbnail-friendly — shows top ~25% of long tweets)
 
-This skill does:
-```js
-// ✅ GOOD — Puppeteer auto-calculates bounding box from live DOM
-const tweet = await page.$('article[data-testid="tweet"]');
-await tweet.screenshot({ path: 'output.png' });
-```
+If the embed detects a **Twitter Article** (long-form post that renders as just a link card), it automatically falls back to the direct-page capture approach.
 
-Puppeteer internally calls `getBoundingClientRect()` on the element, so the capture always matches the actual rendered size — no matter how tall the content is.
+### All Other URLs: Direct-Page Capture
+
+For non-Twitter URLs (LinkedIn, Reddit, blogs, generic pages), the script navigates to the URL directly, waits for content to load, removes overlays/login walls, and captures the target element.
 
 ### Platform Auto-Detection
 
@@ -86,7 +83,7 @@ The script detects the platform from the URL and applies the right selectors:
 
 | Platform | Selector | What It Captures |
 |----------|----------|------------------|
-| Twitter/X | `article[data-testid="tweet"]` | The tweet card exactly |
+| Twitter/X | oEmbed (embed page) | The tweet via Twitter's embed — falls back to direct capture for Articles |
 | LinkedIn | `.feed-shared-update-v2` | The post card |
 | Reddit | `shreddit-post, .Post` | The post content |
 | Threads | `div[data-pressable-container="true"]` | The thread post |
@@ -137,21 +134,33 @@ When the user asks to "add this as an example" or "screenshot this and add it to
 ### Step 1: Capture the screenshot
 ```bash
 node .agents/skills/capturing-screenshots/scripts/capture.js "<URL>" \
-  -o public/images/examples/<slug>.webp --format webp --wait 6000
+  -o public/images/examples/<slug>.webp --format webp --wait 3000
 ```
-Use a descriptive slug like `ai-automation-example-<topic>.webp`.
+Use format: `<YYYY-MM-DD>-<handle>-<topic-slug>.webp` (e.g. `2026-01-28-shreyas-claude-chat-superpowers.webp`)
 
 ### Step 2: Read the post content
 Open the URL in the browser or use `read_web_page` to extract the actual post text, author name, and context.
 
-### Step 3: Write the description
-Based on what the post actually says, write:
-- **title**: A clear, specific title (not generic like "AI Tool Usage Tip")
-- **summary**: 1-2 sentences describing what the post demonstrates and why it's useful. Reference what the author specifically did or shared. Be concrete, not templated.
+### Step 3: Write the description (Harry Dry style)
 
-**Good**: "Austen Allred crowdsourced the community's best techniques for getting AI tools to produce genuinely beautiful designs — the thread has practical prompting strategies that go beyond generic advice."
+Write like Harry Dry at marketingexamples.com — short, punchy, no fluff:
+- **title**: Punchy, specific. Lead with the outcome or action.
+- **summary**: 1-2 short sentences. Active voice. Name + what they did + what happened. No buzzwords like "demonstrates", "streamline", "practical AI application".
 
-**Bad**: "Austen reveals a valuable AI tool usage technique that can boost productivity."
+**Style rules:**
+- Short sentences. Active voice.
+- Lead with the person's name and what they actually did.
+- End with the result or the insight.
+- No "reveals", "showcases", "leverages", "unlock", "game-changing".
+
+**Good examples:**
+- "Shreyas Doshi shared a Claude conversation that walks you through finding your superpowers and aligning your work to them. Deep, reflective stuff — not a quick hack."
+- "Maxwell Finn built a Claude skill that audits landing pages for 20-30 invisible friction points. The trick: recursive self-improvement loops that keep running until the output scores high enough."
+- "Laura plugged Stripe into Claude Code with a read-only API key. Now it pulls her business data on demand."
+
+**Bad examples:**
+- "David Roberts demonstrates a practical AI automation technique that can streamline content marketing workflows."
+- "Laura Roeder showcases how to leverage AI tools for business operations optimization."
 
 ### Step 4: Add the entry to `lib/social-examples-data.ts`
 Add a new object before the closing `];`:
@@ -182,6 +191,8 @@ Add a new object before the closing `];`:
   sponsor: null
 },
 ```
+
+**publish_date**: Use the actual post date from the source, NOT today's date.
 
 ### Categories to choose from
 Pick the most relevant: `Marketing Ops`, `Sales Ops`, `Content Ops`, `Design Ops`, `Dev Ops`, `Data Ops`, `HR Ops`, `Finance Ops`, `Product Ops`, `SEO`, `Paid Media`, `General`

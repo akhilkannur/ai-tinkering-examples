@@ -494,4 +494,92 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     author_link: "https://x.com/oliverhenry",
     tags: ["Automation"],
   },
+  {
+    id: "shreyas-claude-chat-superpowers",
+    title: "Using Claude to Discover Your Superpowers",
+    slug: "shreyas-claude-chat-superpowers",
+    summary: "Shreyas Doshi shared a Claude conversation that walks you through finding your superpowers and aligning your work to them. Deep, reflective stuff — not a quick hack.",
+    screenshots: [
+      {
+        url: "/images/examples/2026-01-28-shreyas-claude-chat-superpowers.webp",
+        filename: "2026-01-28-shreyas-claude-chat-superpowers.webp",
+        thumbnails: {
+          small: { url: "/images/examples/2026-01-28-shreyas-claude-chat-superpowers.webp" },
+          large: { url: "/images/examples/2026-01-28-shreyas-claude-chat-superpowers.webp" }
+        }
+      }
+    ],
+    category: "Product Ops",
+    publish_date: "2026-01-28",
+    original_link: "https://x.com/shreyas/status/2016551938951962823",
+    author_name: "Shreyas Doshi",
+    author_link: "https://x.com/shreyas",
+    tags: ["Claude", "Career"],
+  },
+  {
+    id: "maxwellfinn-landing-page-friction-audit-prompt",
+    title: "Recursive Prompt That Kills Landing Page Friction",
+    slug: "maxwellfinn-landing-page-friction-audit-prompt",
+    summary: "Maxwell Finn built a Claude skill that audits landing pages for 20-30 invisible friction points across cognitive, emotional, UX, and trust categories. The trick: recursive self-improvement loops that keep running until the output scores high enough.",
+    screenshots: [
+      {
+        url: "/images/examples/2026-02-01-maxwellfinn-ai-agent-workflow.webp",
+        filename: "2026-02-01-maxwellfinn-ai-agent-workflow.webp",
+        thumbnails: {
+          small: { url: "/images/examples/2026-02-01-maxwellfinn-ai-agent-workflow.webp" },
+          large: { url: "/images/examples/2026-02-01-maxwellfinn-ai-agent-workflow.webp" }
+        }
+      }
+    ],
+    category: "Marketing Ops",
+    publish_date: "2026-02-01",
+    original_link: "https://x.com/maxwellfinn/status/2018126248547864701",
+    author_name: "Maxwell Finn",
+    author_link: "https://x.com/maxwellfinn",
+    tags: ["Claude", "Landing Pages", "Prompting"],
+  },
+  {
+    id: "daniel-mac8-ai-interview-prompt",
+    title: "Let AI Interview You Before Starting a Project",
+    slug: "daniel-mac8-ai-interview-prompt",
+    summary: "One prompt flips the script: tell AI to interview you until it's 95% confident about what you actually want. The gap between what you think you want and what you need is where most projects fail.",
+    screenshots: [
+      {
+        url: "/images/examples/2026-03-28-daniel-mac8-ai-interview-prompt.webp",
+        filename: "2026-03-28-daniel-mac8-ai-interview-prompt.webp",
+        thumbnails: {
+          small: { url: "/images/examples/2026-03-28-daniel-mac8-ai-interview-prompt.webp" },
+          large: { url: "/images/examples/2026-03-28-daniel-mac8-ai-interview-prompt.webp" }
+        }
+      }
+    ],
+    category: "Product Ops",
+    publish_date: "2026-03-28",
+    original_link: "https://x.com/daniel_mac8/status/2037915114322669698",
+    author_name: "Daniel McAteer",
+    author_link: "https://x.com/daniel_mac8",
+    tags: ["Prompting"],
+  },
+  {
+    id: "charles-seo-10-claude-cowork-seo-prompts",
+    title: "10 Free SEO Prompts for Claude Cowork",
+    slug: "charles-seo-10-claude-cowork-seo-prompts",
+    summary: "Charles Floate dropped his personal Claude Cowork prompt stack — 10 prompts covering entity analysis, link profiles, content audits, and SEO dashboards. All built for operators, not beginners.",
+    screenshots: [
+      {
+        url: "/images/examples/2026-04-14-charles-seo-ai-workflow.webp",
+        filename: "2026-04-14-charles-seo-ai-workflow.webp",
+        thumbnails: {
+          small: { url: "/images/examples/2026-04-14-charles-seo-ai-workflow.webp" },
+          large: { url: "/images/examples/2026-04-14-charles-seo-ai-workflow.webp" }
+        }
+      }
+    ],
+    category: "SEO",
+    publish_date: "2026-04-14",
+    original_link: "https://x.com/Charles_SEO/status/2044010207458853314",
+    author_name: "Charles Floate",
+    author_link: "https://x.com/Charles_SEO",
+    tags: ["Claude", "SEO", "Prompting"],
+  },
 ];

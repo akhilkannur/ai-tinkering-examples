@@ -159,12 +159,143 @@ const PLATFORM_CONFIGS = {
   },
 };
 
+// ─── Twitter oEmbed Capture ────────────────────────────────────────────────
+// Uses Twitter's embed page (platform.twitter.com/embed/Tweet.html) to render
+// the tweet in isolation — no login walls, no sidebar, no layout shifts.
+//
+// HOW IT WORKS:
+//   1. Extracts tweet ID from the URL
+//   2. Loads Twitter's embed page directly (the same page used inside tweet embeds)
+//   3. Waits for the <article> element to render
+//   4. Screenshots the article with a 600px height cap (thumbnail-friendly)
+//
+// WHEN IT FALLS BACK:
+//   - Twitter Articles/long-form posts render as just a link card in the embed,
+//     so we detect that (article height < 150px) and return false to signal
+//     the caller should use the direct-page capture approach instead.
+//
+// Returns: true if capture succeeded, false if caller should fall back to direct capture.
+
+async function captureTwitterEmbed(tweetUrl, finalPath, screenshotOpts) {
+  const tweetIdMatch = tweetUrl.match(/status\/(\d+)/);
+  if (!tweetIdMatch) {
+    console.log(`⚠️  Could not extract tweet ID, falling back to direct capture`);
+    return false;
+  }
+  const tweetId = tweetIdMatch[1];
+
+  const embedUrl = `https://platform.twitter.com/embed/Tweet.html?id=${tweetId}&lang=en`;
+  console.log(`🐦 Loading Twitter embed: ${embedUrl}`);
+
+  const MAX_CAPTURE_HEIGHT = 600;
+  const MIN_ARTICLE_HEIGHT = 150; // Below this = likely just a link card (Twitter Article)
+
+  const browser = await puppeteer.launch({
+    headless: debug ? false : 'new',
+    args: ['--no-sandbox', '--disable-setuid-sandbox'],
+  });
+
+  try {
+    const page = await browser.newPage();
+    await page.setViewport({ width: 600, height: 1200, deviceScaleFactor: scaleFactor });
+    await page.setUserAgent(
+      'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+    );
+
+    if (darkMode) {
+      await page.emulateMediaFeatures([{ name: 'prefers-color-scheme', value: 'dark' }]);
+    }
+
+    await page.goto(embedUrl, { waitUntil: 'networkidle2', timeout: 30000 });
+
+    try {
+      await page.waitForSelector('article', { timeout: 15000 });
+      console.log(`✅ Tweet embed rendered`);
+    } catch {
+      console.log(`⚠️  Article not found in embed`);
+      return false;
+    }
+
+    await new Promise(r => setTimeout(r, extraWait));
+
+    const article = await page.$('article');
+    if (!article) return false;
+
+    const box = await article.boundingBox();
+    if (!box) return false;
+
+    // Detect Twitter Articles / link-only tweets: they render as a short card
+    // with just a link (e.g. "x.com/i/article/...") instead of actual content.
+    // Check both height AND content — articles show as ~220px with just a URL.
+    const isLinkOnly = await page.evaluate(() => {
+      const tweetText = document.querySelector('article')?.textContent || '';
+      return tweetText.includes('x.com/i/article') || tweetText.includes('twitter.com/i/article');
+    });
+    if (isLinkOnly || box.height < MIN_ARTICLE_HEIGHT) {
+      console.log(`⚠️  Embed shows link-only content (${Math.round(box.height)}px) — likely a Twitter Article. Falling back to direct capture.`);
+      return false;
+    }
+
+    const captureHeight = Math.min(box.height, MAX_CAPTURE_HEIGHT);
+    if (box.height > MAX_CAPTURE_HEIGHT) {
+      console.log(`📏 Long tweet (${Math.round(box.height)}px). Capturing top ${MAX_CAPTURE_HEIGHT}px as thumbnail.`);
+    }
+
+    screenshotOpts.clip = {
+      x: Math.max(0, box.x),
+      y: Math.max(0, box.y),
+      width: box.width,
+      height: captureHeight,
+    };
+    await page.screenshot(screenshotOpts);
+    console.log(`✅ Tweet screenshot saved: ${finalPath}`);
+    console.log(`📐 Captured: ${Math.round(box.width)}×${Math.round(captureHeight)}px (logical)`);
+    console.log(`📐 Output:   ${Math.round(box.width * scaleFactor)}×${Math.round(captureHeight * scaleFactor)}px (actual @ ${scaleFactor}x)`);
+    return true;
+  } finally {
+    await browser.close();
+  }
+}
+
 // ─── Main Capture Logic ────────────────────────────────────────────────────
 
 async function captureScreenshot() {
   const platform = detectPlatform(url);
   const config = PLATFORM_CONFIGS[platform];
   const effectiveSelector = customSelector || config.selector;
+
+  // Determine output path early (needed by both paths)
+  let finalPath = outputPath;
+  if (!finalPath) {
+    const slug = url
+      .replace(/https?:\/\//, '')
+      .replace(/[^a-zA-Z0-9]/g, '-')
+      .replace(/-+/g, '-')
+      .substring(0, 60);
+    const ext = format === 'jpeg' ? 'jpg' : format;
+    const dir = path.join(process.cwd(), 'public', 'screenshots');
+    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+    finalPath = path.join(dir, `${slug}.${ext}`);
+  }
+  const outDir = path.dirname(finalPath);
+  if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
+
+  const screenshotOpts = {
+    path: finalPath,
+    type: format === 'jpg' ? 'jpeg' : format,
+  };
+  if (format !== 'png') {
+    screenshotOpts.quality = quality;
+  }
+
+  // Twitter: try oEmbed first (reliable for regular tweets).
+  // Falls back to direct-page capture for Twitter Articles or if oEmbed fails.
+  if (platform === 'twitter' && !customSelector && !fullPage) {
+    console.log(`📸 Platform: twitter (trying oEmbed first)`);
+    const success = await captureTwitterEmbed(url, finalPath, screenshotOpts);
+    if (success) return;
+    console.log(`🔄 Falling back to direct-page capture for this Twitter URL`);
+  }
 
   console.log(`📸 Platform: ${platform}`);
   console.log(`🎯 Selector: ${effectiveSelector || '(full page)'}`);
@@ -285,31 +416,6 @@ async function captureScreenshot() {
     await new Promise(r => setTimeout(r, 500));
 
     // ─── Capture ───────────────────────────────────────────────────────
-    // Determine output path
-    let finalPath = outputPath;
-    if (!finalPath) {
-      const slug = url
-        .replace(/https?:\/\//, '')
-        .replace(/[^a-zA-Z0-9]/g, '-')
-        .replace(/-+/g, '-')
-        .substring(0, 60);
-      const ext = format === 'jpeg' ? 'jpg' : format;
-      const dir = path.join(process.cwd(), 'public', 'screenshots');
-      if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-      finalPath = path.join(dir, `${slug}.${ext}`);
-    }
-
-    // Ensure output directory exists
-    const outDir = path.dirname(finalPath);
-    if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
-
-    const screenshotOpts = {
-      path: finalPath,
-      type: format === 'jpg' ? 'jpeg' : format,
-    };
-    if (format !== 'png') {
-      screenshotOpts.quality = quality;
-    }
 
     if (fullPage || !effectiveSelector) {
       // Full page screenshot
@@ -326,45 +432,42 @@ async function captureScreenshot() {
         await page.screenshot(screenshotOpts);
         console.log(`✅ Full-page fallback screenshot saved: ${finalPath}`);
       } else {
-        const MAX_CAPTURE_HEIGHT = 1200;
-        const PADDING = 12;
-
-        // Inject CSS padding + margin to prevent sub-pixel clipping at high DPI
-        // and ensure content isn't flush against page edges
-        await element.evaluate((el, pad) => {
-          el.style.padding = pad + 'px';
-          el.style.margin = pad + 'px';
-          el.style.boxSizing = 'content-box';
-        }, PADDING);
-        await new Promise(r => setTimeout(r, 200));
-
-        // Re-read bounding box after padding is applied
+        // Use page.screenshot with a clip derived from the element's bounding box.
+        // This avoids the left-margin clipping bug that element.screenshot() causes
+        // when padding/margin is injected at high DPI scale factors.
         const box = await element.boundingBox();
-        const isLong = box && box.height > MAX_CAPTURE_HEIGHT;
-
-        if (isLong) {
-          console.log(`📏 Long content (${Math.round(box.height)}px). Capping to ${MAX_CAPTURE_HEIGHT}px preview.`);
-          // For long posts, inject a spacer before the element to guarantee
-          // it isn't flush against the page top (which causes top-edge clipping).
-          // For long posts, use element.screenshot which handles bounding box
-          // correctly, but first cap the visible height via CSS.
-          await element.evaluate((el, maxH) => {
-            el.style.maxHeight = (maxH - 24) + 'px';
-            el.style.overflow = 'hidden';
-          }, MAX_CAPTURE_HEIGHT);
-          await new Promise(r => setTimeout(r, 300));
-          await element.screenshot(screenshotOpts);
+        if (!box) {
+          console.log(`⚠️  Could not get bounding box, falling back to full page`);
+          screenshotOpts.fullPage = true;
+          await page.screenshot(screenshotOpts);
+          console.log(`✅ Full-page fallback screenshot saved: ${finalPath}`);
         } else {
-          await element.screenshot(screenshotOpts);
-        }
+          const MAX_CAPTURE_HEIGHT = 600; // Thumbnail-friendly: ~top 25-30% of most tweets
+          const captureHeight = Math.min(box.height, MAX_CAPTURE_HEIGHT);
 
-        console.log(`✅ Element screenshot saved: ${finalPath}`);
+          if (box.height > MAX_CAPTURE_HEIGHT) {
+            console.log(`📏 Long content (${Math.round(box.height)}px). Capturing top ${MAX_CAPTURE_HEIGHT}px as thumbnail.`);
+          }
 
-        // Report dimensions
-        const finalBox = await element.boundingBox();
-        if (finalBox) {
-          console.log(`📐 Captured: ${Math.round(finalBox.width)}×${Math.round(finalBox.height)}px (logical)`);
-          console.log(`📐 Output:   ${Math.round(finalBox.width * scaleFactor)}×${Math.round(finalBox.height * scaleFactor)}px (actual @ ${scaleFactor}x)`);
+          // Scroll element into view to ensure clip coordinates are valid
+          await element.evaluate(el => el.scrollIntoView({ block: 'start' }));
+          await new Promise(r => setTimeout(r, 300));
+
+          // Re-read box after scroll
+          const scrolledBox = await element.boundingBox();
+          const clipBox = scrolledBox || box;
+
+          screenshotOpts.clip = {
+            x: Math.max(0, clipBox.x),
+            y: Math.max(0, clipBox.y),
+            width: clipBox.width,
+            height: captureHeight,
+          };
+
+          await page.screenshot(screenshotOpts);
+          console.log(`✅ Element screenshot saved: ${finalPath}`);
+          console.log(`📐 Captured: ${Math.round(clipBox.width)}×${Math.round(captureHeight)}px (logical)`);
+          console.log(`📐 Output:   ${Math.round(clipBox.width * scaleFactor)}×${Math.round(captureHeight * scaleFactor)}px (actual @ ${scaleFactor}x)`);
         }
       }
     }
