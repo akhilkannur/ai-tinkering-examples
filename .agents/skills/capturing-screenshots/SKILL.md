@@ -152,15 +152,17 @@ Write like Harry Dry at marketingexamples.com — short, punchy, no fluff:
 - Lead with the person's name and what they actually did.
 - End with the result or the insight.
 - No "reveals", "showcases", "leverages", "unlock", "game-changing".
+- **NEVER use em dashes (—).** Use periods or commas instead. Em dashes are an AI slop signal.
 
 **Good examples:**
-- "Shreyas Doshi shared a Claude conversation that walks you through finding your superpowers and aligning your work to them. Deep, reflective stuff — not a quick hack."
+- "Shreyas Doshi shared a Claude conversation that walks you through finding your superpowers and aligning your work to them. Deep, reflective stuff. Not a quick hack."
 - "Maxwell Finn built a Claude skill that audits landing pages for 20-30 invisible friction points. The trick: recursive self-improvement loops that keep running until the output scores high enough."
 - "Laura plugged Stripe into Claude Code with a read-only API key. Now it pulls her business data on demand."
 
 **Bad examples:**
 - "David Roberts demonstrates a practical AI automation technique that can streamline content marketing workflows."
 - "Laura Roeder showcases how to leverage AI tools for business operations optimization."
+- "Deep, reflective stuff — not a quick hack." (em dash = slop)
 
 ### Step 4: Add the entry to `lib/social-examples-data.ts`
 Add a new object before the closing `];`:

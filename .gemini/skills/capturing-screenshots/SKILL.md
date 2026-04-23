@@ -16,32 +16,32 @@ Hardcoded `clip: { x, y, width, height }` coordinates break constantly because t
 Run the capture script from the project root:
 
 ```bash
-node .gemini/skills/capturing-screenshots/scripts/capture.js <url>
+node .agents/skills/capturing-screenshots/scripts/capture.js <url>
 ```
 
 ### Common Examples
 
 ```bash
 # Twitter/X post — auto-detects and captures just the tweet
-node .gemini/skills/capturing-screenshots/scripts/capture.js "https://x.com/user/status/123456"
+node .agents/skills/capturing-screenshots/scripts/capture.js "https://x.com/user/status/123456"
 
 # Save to a specific path
-node .gemini/skills/capturing-screenshots/scripts/capture.js "https://x.com/user/status/123456" -o public/images/examples/my-tweet.png
+node .agents/skills/capturing-screenshots/scripts/capture.js "https://x.com/user/status/123456" -o public/images/examples/my-tweet.png
 
 # LinkedIn post
-node .gemini/skills/capturing-screenshots/scripts/capture.js "https://linkedin.com/posts/user-123456"
+node .agents/skills/capturing-screenshots/scripts/capture.js "https://linkedin.com/posts/user-123456"
 
 # Reddit post
-node .gemini/skills/capturing-screenshots/scripts/capture.js "https://reddit.com/r/sub/comments/abc/title"
+node .agents/skills/capturing-screenshots/scripts/capture.js "https://reddit.com/r/sub/comments/abc/title"
 
 # Full page (no element targeting)
-node .gemini/skills/capturing-screenshots/scripts/capture.js "https://example.com" --full-page
+node .agents/skills/capturing-screenshots/scripts/capture.js "https://example.com" --full-page
 
 # Dark mode + WebP format
-node .gemini/skills/capturing-screenshots/scripts/capture.js "https://x.com/user/status/123" --dark --format webp
+node .agents/skills/capturing-screenshots/scripts/capture.js "https://x.com/user/status/123" --dark --format webp
 
 # Debug mode (opens visible browser)
-node .gemini/skills/capturing-screenshots/scripts/capture.js "https://x.com/user/status/123" --debug
+node .agents/skills/capturing-screenshots/scripts/capture.js "https://x.com/user/status/123" --debug
 ```
 
 ## Options
@@ -133,7 +133,7 @@ When the user asks to "add this as an example" or "screenshot this and add it to
 
 ### Step 1: Capture the screenshot
 ```bash
-node .gemini/skills/capturing-screenshots/scripts/capture.js "<URL>" \
+node .agents/skills/capturing-screenshots/scripts/capture.js "<URL>" \
   -o public/images/examples/<slug>.webp --format webp --wait 3000
 ```
 Use format: `<YYYY-MM-DD>-<handle>-<topic-slug>.webp` (e.g. `2026-01-28-shreyas-claude-chat-superpowers.webp`)
@@ -152,15 +152,17 @@ Write like Harry Dry at marketingexamples.com — short, punchy, no fluff:
 - Lead with the person's name and what they actually did.
 - End with the result or the insight.
 - No "reveals", "showcases", "leverages", "unlock", "game-changing".
+- **NEVER use em dashes (—).** Use periods or commas instead. Em dashes are an AI slop signal.
 
 **Good examples:**
-- "Shreyas Doshi shared a Claude conversation that walks you through finding your superpowers and aligning your work to them. Deep, reflective stuff — not a quick hack."
+- "Shreyas Doshi shared a Claude conversation that walks you through finding your superpowers and aligning your work to them. Deep, reflective stuff. Not a quick hack."
 - "Maxwell Finn built a Claude skill that audits landing pages for 20-30 invisible friction points. The trick: recursive self-improvement loops that keep running until the output scores high enough."
 - "Laura plugged Stripe into Claude Code with a read-only API key. Now it pulls her business data on demand."
 
 **Bad examples:**
 - "David Roberts demonstrates a practical AI automation technique that can streamline content marketing workflows."
 - "Laura Roeder showcases how to leverage AI tools for business operations optimization."
+- "Deep, reflective stuff — not a quick hack." (em dash = slop)
 
 ### Step 4: Add the entry to `lib/social-examples-data.ts`
 Add a new object before the closing `];`:

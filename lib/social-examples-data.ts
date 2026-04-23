@@ -5,7 +5,7 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     id: "recap-david-claude-automation",
     title: "Claude Cowork Automation",
     slug: "recap-david-claude-automation",
-    summary: "David Roberts built this Claude Cowork automation to handle daily content marketing tasks, freeing up ~4 hours per week.",
+    summary: "David Roberts automated his daily content marketing with Claude Cowork. Saved ~4 hours a week.",
     screenshots: [
       {
         url: "/images/examples/2026-01-21-david-roberts-recap-david-on-x.jpg",
@@ -27,7 +27,7 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     id: "lkr-connecting-stripe-with-claude-code",
     title: "Connecting Stripe with Claude Code",
     slug: "lkr-connecting-stripe-with-claude-code",
-    summary: "Laura Roeder demonstrates how to integrate Stripe with Claude Code using read-only API keys. This practical AI application can streamline business operations and save hours of manual work.",
+    summary: "Laura Roeder plugged Stripe into Claude Code with a read-only API key. Now it pulls her business data on demand. No more manual exports.",
     screenshots: [
       {
         url: "/images/examples/2026-01-22-lkr-connecting-stripe-with-claude-code.jpg",
@@ -47,9 +47,9 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
   },
   {
     id: "short-courses-automate-software-dev-creative-workflows-with-gemi",
-    title: "Automate Software Dev & Creative Workflows with Gemini CLI",
+    title: "Free Course: Gemini CLI for Dev & Creative Workflows",
     slug: "short-courses-automate-software-dev-creative-workflows-with-gemi",
-    summary: "A free course by DeepLearning.AI teaching how to use Gemini CLI and MCP to coordinate local files with cloud services like Google Workspace and Canva for automated development.",
+    summary: "DeepLearning.AI released a free course on Gemini CLI + MCP. Shows you how to wire up local files with Google Workspace and Canva, then automate the boring parts.",
     screenshots: [
       {
         url: "/images/examples/2026-01-22-short-courses-automate-software-dev-creative-workflows-with-gemi.jpg",
@@ -71,7 +71,7 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     id: "aiedge_-getting-started-w-claude-cowork-10-essential-workf",
     title: "Getting Started w/ Claude Cowork: 10 Essential Workflows (+ prompts)",
     slug: "aiedge_-getting-started-w-claude-cowork-10-essential-workf",
-    summary: "AI Edge shares 10 practical ideas to implement Claude Cowork with as little friction as possible.",
+    summary: "AI Edge listed 10 ways to start using Claude Cowork. No setup headaches. Just copy the prompts and go.",
     screenshots: [
       {
         url: "/images/examples/2026-01-22-aiedge_-getting-started-w-claude-cowork-10-essential-workf.webp",
@@ -91,9 +91,9 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
   },
   {
     id: "mehtabkarta-ai-workflow-2026-01-23",
-    title: "Competitor Promotion Schedule Hack",
+    title: "Reverse-Engineer Any Competitor's Promo Calendar",
     slug: "mehtabkarta-ai-workflow-2026-01-23",
-    summary: "A simple 1-prompt hack using Deep Research and Milled to reverse-engineer a competitor's entire annual promotion calendar, revealing seasonal offers and launch strategies.",
+    summary: "MehtabKarta fed a competitor's Milled archive into Deep Research. One prompt spat out their entire annual promotion calendar. Seasonal offers, launch timing, the lot.",
     screenshots: [
       {
         url: "/images/examples/2026-01-23-mehtabkarta-ai-workflow.jpg",
@@ -115,7 +115,7 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     id: "bucco-deep-research-company-overview",
     title: "Deep Research: 13-Point Company Overview",
     slug: "bucco-deep-research-company-overview",
-    summary: "A 13-point framework for holistic company research using Deep Research. Focuses on strategic positioning rather than just valuation.",
+    summary: "BuccoCapital shared a 13-point Deep Research prompt for company analysis. Goes way beyond valuation. Covers positioning, culture, competitive moats, everything.",
     screenshots: [
       {
         url: "/images/examples/2026-01-23-bucco-deep-research-prompt.jpg",
@@ -137,7 +137,7 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     id: "github-copilot-agents-md-guide",
     title: "How to write a great agents.md",
     slug: "github-copilot-agents-md-guide",
-    summary: "GitHub analyzed over 2,500 repositories to find out what makes an AI agent file (agents.md) effective. The key: focus on persona, commands, and explicit boundaries.",
+    summary: "GitHub studied 2,500+ repos to find what makes a good agents.md. Three things mattered most: persona, commands, and clear boundaries.",
     screenshots: [
       {
         url: "/images/examples/github-agents-md-guide.jpg",
@@ -160,7 +160,7 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     id: "saastr-ai-agents-directory",
     title: "Scaling SaaS with 20+ AI Agents",
     slug: "saastr-ai-agents-directory",
-    summary: "SaaStr.ai shows how they use a 'Agent Arsenal' to drive 8-figure revenue with a tiny team. This directory provides real-world examples of agents for mentoring, pitch analysis, and sales.",
+    summary: "SaaStr runs 8-figure revenue with a tiny team and 20+ AI agents. They published the full directory: mentoring, pitch analysis, sales, the works.",
     screenshots: [
       {
         url: "/images/examples/saastr-ai-agents.jpg",
@@ -183,7 +183,7 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     id: "matzner-jon-competitive-podcast-intel",
     title: "Turning Podcasts into Competitive Intel",
     slug: "matzner-jon-competitive-podcast-intel",
-    summary: "Jon Matzner explains how to use NotebookLM to analyze competitor podcast appearances. By feeding in transcripts, you can identify strategic details shared by their leadership that can be used to your advantage.",
+    summary: "Jon Matzner feeds competitor podcast transcripts into NotebookLM. Asks one question: 'What can I exploit?' Pulls out strategy details their leadership never meant to share publicly.",
     screenshots: [
       {
         url: "/images/examples/matzner-jon-tweet.jpg",
@@ -206,7 +206,7 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     id: "doodlestein-deslopify-readme-prompt",
     title: "De-Slopify Your READMEs",
     slug: "doodlestein-deslopify-readme-prompt",
-    summary: "Jeffrey Emanuel shares a prompt to strip 'AI Slop' from your documentation. It specifically targets robotic tropes like excessive em-dashes and 'It's not just X' sentence structures.",
+    summary: "Jeffrey Emanuel wrote a prompt that catches AI slop in your docs. Kills the em-dashes, the 'It's not just X' openers, all the robotic filler. One pass and it reads human again.",
     screenshots: [
       {
         url: "/images/examples/doodlestein-tweet.jpg",
@@ -227,9 +227,9 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
   },
   {
     id: "claude-company-newsletter-automation",
-    title: "Automating Your Company Newsletter with Claude",
+    title: "Build a Company Newsletter in Minutes with Claude",
     slug: "claude-company-newsletter-automation",
-    summary: "Claude can automate the creation of a professional, publication-style company newsletter by synthesizing information from internal channels like Slack, Google Drive, and Gmail. This AI workflow helps non-technical users quickly generate curated digests with data visualizations.",
+    summary: "Claude pulls from Slack, Drive, and Gmail, then spits out a polished company newsletter with charts. No design skills needed. Takes minutes instead of hours.",
     screenshots: [
       {
         url: "/images/examples/claude-company-newsletter.jpg",
@@ -252,7 +252,7 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     id: "suhail-ai-tutor-prompt",
     title: "The 'Step-by-Step' AI Tutor Prompt",
     slug: "suhail-ai-tutor-prompt",
-    summary: "Suhail shares a powerful prompt to turn any research paper or technical document into an interactive course. The key is instructing the AI to not advance until it quizzes you and confirms your understanding.",
+    summary: "Suhail built a prompt that turns any research paper into a course. The AI won't move on until it quizzes you and you actually get it. Simple idea, surprisingly effective.",
     screenshots: [
       {
         url: "/images/examples/suhail-tweet.jpg",
@@ -273,9 +273,9 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
   },
   {
     id: "peter-kang-ai-context-and-scenarios",
-    title: "AI as a 'Crystal Ball' for Strategy",
+    title: "Two Strategy Prompts Every Founder Should Steal",
     slug: "peter-kang-ai-context-and-scenarios",
-    summary: "Peter Kang shares two strategic workflows: 1) Asking ChatGPT to write a 'Context Prompt' of everything it knows about your company (to verify accuracy and port to other models), and 2) Using AI to simulate future scenarios (3-5 years out) based on current strategy docs.",
+    summary: "Peter Kang does two things with ChatGPT. First, he asks it to write everything it knows about his company (then corrects the mistakes). Second, he feeds it strategy docs and asks for 3-5 year future scenarios. Cheap crystal ball.",
     screenshots: [
       {
         url: "/images/examples/linkedin-post-7390468.jpg",
@@ -296,9 +296,9 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
   },
   {
     id: "ema-totaro-sora-ugc-scripts",
-    title: "Generating Viral UGC Scripts for Sora",
+    title: "Fake UGC Videos with Sora That Look Real",
     slug: "ema-totaro-sora-ugc-scripts",
-    summary: "Emanuele Totaro shares detailed prompt structures for generating realistic 'secretly filmed' phone videos using Sora. These scripts simulate user-generated content (UGC) with handheld camera movements, uneven lighting, and authentic dialogue.",
+    summary: "Emanuele Totaro wrote Sora prompts that generate 'secretly filmed' phone videos. Shaky camera, bad lighting, people whispering. Looks like real UGC. Works great for ads.",
     screenshots: [
       {
         url: "/images/examples/ema-totaro-tweet.jpg",
@@ -321,7 +321,7 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     id: "soniabaschez-yapping-as-a-service-writing-prompt",
     title: "'Yapping as a Service' Writing Prompt",
     slug: "soniabaschez-yapping-as-a-service-writing-prompt",
-    summary: "Sonia Baschez shares her most commonly used AI writing prompt for her 'Yapping as a Service' workflow, helping maintain high-volume, high-energy content production.",
+    summary: "Sonia Baschez shared her go-to writing prompt. She calls it 'Yapping as a Service.' High volume, high energy, sounds like her. Not the AI.",
     screenshots: [
       {
         url: "/images/examples/2026-01-28-soniabaschez-yapping-as-a-service-writing-prompt.jpg",
@@ -341,9 +341,9 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
   },
   {
     id: "zarazhangrui-claude-skill-ai-powered-web-slides",
-    title: "Claude Workflow: AI-Powered Web Slides",
+    title: "Claude Workflow That Builds Web Slides for You",
     slug: "zarazhangrui-claude-skill-ai-powered-web-slides",
-    summary: "Zara Zhang showcases a custom Claude Workflow that creates beautiful, interactive presentation slides on the web, demonstrating how to extend LLMs with functional UI outputs.",
+    summary: "Zara Zhang built a Claude Workflow that generates interactive presentation slides right in the browser. Describe what you want, get a working deck.",
     screenshots: [
       {
         url: "/images/examples/2026-01-28-zarazhangrui-claude-skill-ai-powered-web-slides.jpg",
@@ -365,7 +365,7 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     id: "picotrex-awesome-nano-banana-images",
     title: "Awesome Nano Banana Images",
     slug: "picotrex-awesome-nano-banana-images",
-    summary: "A curated collection of prompts and examples for the Nano Banana Gemini extension, showcasing high-quality image generation capabilities.",
+    summary: "PicoTrex put together a prompt library for Gemini's Nano Banana extension. Tons of image gen examples with the exact prompts that made them.",
     screenshots: [
       {
         url: "/images/examples/2026-01-28-picotrex-awesome-nano-banana-images.jpg",
@@ -387,7 +387,7 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     id: "nathanflurry-open-source-ai-engineer-agent",
     title: "Open Source AI Engineer Agent",
     slug: "nathanflurry-open-source-ai-engineer-agent",
-    summary: "Nathan Flurry demonstrates an open-source AI engineer agent capable of building complex features autonomously, showcasing the power of agentic orchestration.",
+    summary: "Nathan Flurry open-sourced an AI engineer agent that builds complex features on its own. Point it at a task, it figures out the rest.",
     screenshots: [
       {
         url: "/images/examples/2026-01-29-nathanflurry-open-source-ai-engineer-agent.jpg",
@@ -407,9 +407,9 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
   },
   {
     id: "benyaminholley-claude-code-docs-audit",
-    title: "Claude Code Documentation Audit Play",
+    title: "One Prompt to Audit All Your Docs",
     slug: "benyaminholley-claude-code-docs-audit",
-    summary: "Benyamin Holley shares a specific prompt for Claude Code designed to audit and optimize documentation files automatically, ensuring technical accuracy and consistent brand voice.",
+    summary: "Benyamin Holley wrote a Claude Code prompt that audits your documentation automatically. Checks technical accuracy, fixes inconsistencies, keeps your brand voice intact.",
     screenshots: [
       {
         url: "/images/examples/2026-01-29-benyaminholley-benyamin-benyaminholley-on-x.jpg",
@@ -429,9 +429,9 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
   },
   {
     id: "steipete-openclaw-soul-personality",
-    title: "Injecting Personality into OpenClaw with SOUL.md",
+    title: "Give Your OpenClaw Agent a Personality with SOUL.md",
     slug: "steipete-openclaw-soul-personality",
-    summary: "Peter Steinberger shares a technique to spice up OpenClaw agents by using a SOUL.md file to define their personality and rewrite their core instructions with more character.",
+    summary: "Peter Steinberger dropped a SOUL.md into his OpenClaw agent and told it to rewrite its own instructions with that personality. Went from robotic to genuinely fun.",
     screenshots: [
       {
         url: "/images/examples/steipete-openclaw-soul-personality.webp",
@@ -454,7 +454,7 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     id: "austen-ai-design-secrets",
     title: "How to Force AI to Design Beautifully",
     slug: "austen-ai-design-secrets",
-    summary: "Austen Allred asked for everyone's secrets on how to force AI to design something actually beautiful. There are some interesting responses in the thread that won't blow your mind, but they're simple and effective.",
+    summary: "Austen Allred asked X: 'How do you force AI to design something actually beautiful?' The replies are gold. Nothing mindblowing, just simple tricks that work.",
     screenshots: [
       {
         url: "/images/examples/austen-ai-design-secrets.webp",
@@ -474,9 +474,9 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
   },
   {
     id: "oliverhenry-openclaw-content-creation-workflow",
-    title: "OpenClaw Content Creation Workflow",
+    title: "How an OpenClaw Agent Got Millions of TikTok Views",
     slug: "oliverhenry-openclaw-content-creation-workflow",
-    summary: "A highly effective content creation workflow designed for OpenClaw, but adaptable to any platform. This blueprint streamlines high-volume output while maintaining quality across social channels.",
+    summary: "Oliver Henry built an OpenClaw agent called Larry that cranks out TikTok content. Millions of views in a week. Full step-by-step guide included.",
     screenshots: [
       {
         url: "/images/examples/ai-automation-example-openclaw-content-creation-workflow.webp",
@@ -498,7 +498,7 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     id: "shreyas-claude-chat-superpowers",
     title: "Using Claude to Discover Your Superpowers",
     slug: "shreyas-claude-chat-superpowers",
-    summary: "Shreyas Doshi shared a Claude conversation that walks you through finding your superpowers and aligning your work to them. Deep, reflective stuff — not a quick hack.",
+    summary: "Shreyas Doshi shared a Claude conversation that walks you through finding your superpowers and aligning your work to them. Deep, reflective stuff. Not a quick hack.",
     screenshots: [
       {
         url: "/images/examples/2026-01-28-shreyas-claude-chat-superpowers.webp",
@@ -564,7 +564,7 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     id: "charles-seo-10-claude-cowork-seo-prompts",
     title: "10 Free SEO Prompts for Claude Cowork",
     slug: "charles-seo-10-claude-cowork-seo-prompts",
-    summary: "Charles Floate dropped his personal Claude Cowork prompt stack — 10 prompts covering entity analysis, link profiles, content audits, and SEO dashboards. All built for operators, not beginners.",
+    summary: "Charles Floate dropped his personal Claude Cowork prompt stack. 10 prompts covering entity analysis, link profiles, content audits, and SEO dashboards. Built for operators, not beginners.",
     screenshots: [
       {
         url: "/images/examples/2026-04-14-charles-seo-ai-workflow.webp",
@@ -581,5 +581,27 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     author_name: "Charles Floate",
     author_link: "https://x.com/Charles_SEO",
     tags: ["Claude", "SEO", "Prompting"],
+  },
+  {
+    id: "dhruvtwt-nvidia-free-ai-models",
+    title: "NVIDIA Is Hosting 80+ AI Models for Free",
+    slug: "dhruvtwt-nvidia-free-ai-models",
+    summary: "Dhruv spotted that NVIDIA is quietly offering ~80 AI models via free hosted APIs. MiniMax, GLM, Kimi, DeepSeek, GPT-OSS-120B, all of them. Plugs straight into OpenClaude, OpenCode, Zed IDE, and more.",
+    screenshots: [
+      {
+        url: "/images/examples/2026-04-22-dhruvtwt-nvidia-free-ai-models.webp",
+        filename: "2026-04-22-dhruvtwt-nvidia-free-ai-models.webp",
+        thumbnails: {
+          small: { url: "/images/examples/2026-04-22-dhruvtwt-nvidia-free-ai-models.webp" },
+          large: { url: "/images/examples/2026-04-22-dhruvtwt-nvidia-free-ai-models.webp" }
+        }
+      }
+    ],
+    category: "Dev Ops",
+    publish_date: "2026-04-22",
+    original_link: "https://x.com/dhruvtwt_/status/2047006444701274380",
+    author_name: "Dhruv",
+    author_link: "https://x.com/dhruvtwt_",
+    tags: ["NVIDIA", "AI Models", "Free APIs"],
   },
 ];
