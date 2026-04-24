@@ -231,7 +231,7 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
                           </div>
                           <div className="flex justify-between items-start mb-1 text-[11px] font-bold text-micro-muted uppercase tracking-wider">
                             <span>{example.category || 'EXAMPLE'}</span>
-                            <span>{example.publish_date ? new Date(example.publish_date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) : ''}</span>
+                            <span></span>
                           </div>
                           <h3 className="text-xl font-bold leading-tight group-hover:underline decoration-2 underline-offset-4">
                             {example.title}
