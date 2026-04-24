@@ -6,13 +6,13 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     title: "Claude Cowork Automation",
     slug: "recap-david-claude-automation",
     summary: "David Roberts automated his daily content marketing with Claude Cowork. Saved ~4 hours a week.",
-    screenshots: [
+screenshots: [
       {
-        url: "/images/examples/2026-01-21-david-roberts-recap-david-on-x.jpg",
-        filename: "recap-david-claude-automation.jpg",
+        url: "/images/examples/charles-seo-prompts.webp",
+        filename: "charles-seo-prompts.webp",
         thumbnails: {
-          small: { url: "/images/examples/2026-01-21-david-roberts-recap-david-on-x.jpg" },
-          large: { url: "/images/examples/2026-01-21-david-roberts-recap-david-on-x.jpg" }
+          small: { url: "/images/examples/charles-seo-prompts.webp" },
+          large: { url: "/images/examples/charles-seo-prompts.webp" }
         }
       }
     ],
