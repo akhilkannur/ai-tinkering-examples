@@ -824,4 +824,26 @@ screenshots: [
     author_link: "https://x.com/bentossell",
     tags: ["Agents", "Coding", "Vibe Coding"],
   },
+  {
+    id: "eda-claude-code-beginners-guide",
+    title: "A Beginner's Guide to Claude Code (No Coding Required)",
+    slug: "eda-claude-code-beginners-guide",
+    summary: "Eda Akturk built a full packing list app with zero lines of code using Claude Code. Here's her step-by-step guide to building your first app.",
+    screenshots: [
+      {
+        url: "/images/examples/2026-01-26-eda-claude-code-beginners-guide.webp",
+        filename: "2026-01-26-eda-claude-code-beginners-guide.webp",
+        thumbnails: {
+          small: { url: "/images/examples/2026-01-26-eda-claude-code-beginners-guide.webp" },
+          large: { url: "/images/examples/2026-01-26-eda-claude-code-beginners-guide.webp" }
+        }
+      }
+    ],
+    category: "Vibe Coding",
+    publish_date: "2026-03-22",
+    original_link: "https://edatweets.substack.com/p/a-beginners-guide-to-claude-code",
+    author_name: "Eda Akturk",
+    author_link: "https://substack.com/@edatweets",
+    tags: ["Claude Code", "Beginners", "No-Code"],
+  },
 ];
