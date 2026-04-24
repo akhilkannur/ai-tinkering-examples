@@ -840,7 +840,7 @@ screenshots: [
       }
     ],
     category: "Vibe Coding",
-    publish_date: "2026-03-22",
+    publish_date: "2026-03-08",
     original_link: "https://edatweets.substack.com/p/a-beginners-guide-to-claude-code",
     author_name: "Eda Akturk",
     author_link: "https://substack.com/@edatweets",
