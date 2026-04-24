@@ -626,4 +626,158 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     author_link: "https://x.com/mtvmald",
     tags: ["Video AI", "Kling", "Ads", "Creative"],
   },
+  {
+    id: "startupideaspod-reverse-engineer-creator-style",
+    title: "Reverse-Engineer Any Creator's Style with One Prompt",
+    slug: "startupideaspod-reverse-engineer-creator-style",
+    summary: "Startup Ideas Pod fed a 65-second video to an AI agent with one prompt: 'Break down the style, transcribe the script, and give me a replication plan.' Got back a full creative playbook.",
+    screenshots: [
+      {
+        url: "/images/examples/2026-04-09-startupideaspod-reverse-engineer-creator-style.webp",
+        filename: "2026-04-09-startupideaspod-reverse-engineer-creator-style.webp",
+        thumbnails: {
+          small: { url: "/images/examples/2026-04-09-startupideaspod-reverse-engineer-creator-style.webp" },
+          large: { url: "/images/examples/2026-04-09-startupideaspod-reverse-engineer-creator-style.webp" }
+        }
+      }
+    ],
+    category: "Content Ops",
+    publish_date: "2026-04-09",
+    original_link: "https://x.com/startupideaspod/status/2033232665823113471",
+    author_name: "The Startup Ideas Podcast",
+    author_link: "https://x.com/startupideaspod",
+    tags: ["AI Agents", "Content Strategy", "Prompting"],
+  },
+  {
+    id: "ikaustubhchavan-dtc-ad-creatives",
+    title: "DTC Ad Creatives with Claude + GPT Images",
+    slug: "ikaustubhchavan-dtc-ad-creatives",
+    summary: "Kaustubh Chavan reverse-engineers top DTC brand ads, feeds them as references to Claude for copy and GPT for visuals. Gets polished static ad creatives without a designer.",
+    screenshots: [
+      {
+        url: "/images/examples/2026-04-23-ikaustubhchavan-dtc-ad-creatives.webp",
+        filename: "2026-04-23-ikaustubhchavan-dtc-ad-creatives.webp",
+        thumbnails: {
+          small: { url: "/images/examples/2026-04-23-ikaustubhchavan-dtc-ad-creatives.webp" },
+          large: { url: "/images/examples/2026-04-23-ikaustubhchavan-dtc-ad-creatives.webp" }
+        }
+      }
+    ],
+    category: "Paid Media",
+    publish_date: "2026-04-23",
+    original_link: "https://x.com/iKaustubhChavan/status/2047324683952120068",
+    author_name: "Kaustubh Chavan",
+    author_link: "https://x.com/iKaustubhChavan",
+    tags: ["Ads", "Claude", "GPT", "DTC", "Creative"],
+  },
+  {
+    id: "ecomchasedimond-one-prompt-campaign",
+    title: "Full Campaign Design from One ChatGPT Prompt",
+    slug: "ecomchasedimond-one-prompt-campaign",
+    summary: "Chase Dimond typed one prompt into ChatGPT Images 2.0 and got a complete Father's Day campaign. Landing page, email, SMS, ad creative, popup. All matching, all consistent. Seconds, not days.",
+    screenshots: [
+      {
+        url: "/images/examples/2026-04-23-ecomchasedimond-one-prompt-campaign.webp",
+        filename: "2026-04-23-ecomchasedimond-one-prompt-campaign.webp",
+        thumbnails: {
+          small: { url: "/images/examples/2026-04-23-ecomchasedimond-one-prompt-campaign.webp" },
+          large: { url: "/images/examples/2026-04-23-ecomchasedimond-one-prompt-campaign.webp" }
+        }
+      }
+    ],
+    category: "Marketing Ops",
+    publish_date: "2026-04-23",
+    original_link: "https://x.com/ecomchasedimond/status/2047313886848925761",
+    author_name: "Chase Dimond",
+    author_link: "https://x.com/ecomchasedimond",
+    tags: ["ChatGPT", "Campaign Design", "Email Marketing", "Creative"],
+  },
+  {
+    id: "alexgoughcooper-nano-banana-2-tutorial",
+    title: "Unlimited Image Ads with Nano Banana 2",
+    slug: "alexgoughcooper-nano-banana-2-tutorial",
+    summary: "Alex Cooper dropped a full YouTube tutorial on Nano Banana 2. Shows the exact process and prompts to generate unlimited AI image ads. 15 minutes, no fluff.",
+    screenshots: [
+      {
+        url: "/images/examples/2026-04-06-alexgoughcooper-nano-banana-2-tutorial.webp",
+        filename: "2026-04-06-alexgoughcooper-nano-banana-2-tutorial.webp",
+        thumbnails: {
+          small: { url: "/images/examples/2026-04-06-alexgoughcooper-nano-banana-2-tutorial.webp" },
+          large: { url: "/images/examples/2026-04-06-alexgoughcooper-nano-banana-2-tutorial.webp" }
+        }
+      }
+    ],
+    category: "Paid Media",
+    publish_date: "2026-04-06",
+    original_link: "https://x.com/alexgoughcooper/status/2032154426585026669",
+    author_name: "Alex Cooper",
+    author_link: "https://x.com/alexgoughcooper",
+    tags: ["Nano Banana", "Image Gen", "Ads", "Tutorial"],
+  },
+  {
+    id: "gaelbreton-ai-evals-loop",
+    title: "Stop Shipping AI on Vibes. Use Evals.",
+    slug: "gaelbreton-ai-evals-loop",
+    summary: "Gael Breton spent months shipping AI 'improvements' with no way to prove they actually helped. His fix: collect real examples, run a 20-question yes/no eval, only commit if the score goes up. Simple loop, massive difference.",
+    screenshots: [
+      {
+        url: "/images/examples/2026-04-20-gaelbreton-ai-evals-loop.webp",
+        filename: "2026-04-20-gaelbreton-ai-evals-loop.webp",
+        thumbnails: {
+          small: { url: "/images/examples/2026-04-20-gaelbreton-ai-evals-loop.webp" },
+          large: { url: "/images/examples/2026-04-20-gaelbreton-ai-evals-loop.webp" }
+        }
+      }
+    ],
+    category: "Dev Ops",
+    publish_date: "2026-04-20",
+    original_link: "https://x.com/GaelBreton/status/2046167150881296469",
+    author_name: "Gael Breton",
+    author_link: "https://x.com/GaelBreton",
+    tags: ["AI Evals", "Engineering", "Workflow"],
+  },
+  {
+    id: "alexfinn-claude-code-workflow",
+    title: "The Claude Code Creator's 8-Step Dev Workflow",
+    slug: "alexfinn-claude-code-workflow",
+    summary: "Alex Finn broke down Boris Cherny's (creator of Claude Code) development workflow into 8 steps. The mental models and processes the guy who built the tool actually uses. Video walkthrough included.",
+    screenshots: [
+      {
+        url: "/images/examples/2026-01-27-alexfinn-claude-code-workflow.webp",
+        filename: "2026-01-27-alexfinn-claude-code-workflow.webp",
+        thumbnails: {
+          small: { url: "/images/examples/2026-01-27-alexfinn-claude-code-workflow.webp" },
+          large: { url: "/images/examples/2026-01-27-alexfinn-claude-code-workflow.webp" }
+        }
+      }
+    ],
+    category: "Dev Ops",
+    publish_date: "2026-01-27",
+    original_link: "https://x.com/AlexFinn/status/2009022334683013599",
+    author_name: "Alex Finn",
+    author_link: "https://x.com/AlexFinn",
+    tags: ["Claude Code", "Workflow", "Dev"],
+  },
+  {
+    id: "juliangoldieseo-hermes-workspace-setup",
+    title: "Hermes Workspace: One Command, Full AI Environment",
+    slug: "juliangoldieseo-hermes-workspace-setup",
+    summary: "Julian Goldie shows how Hermes Workspace killed the setup tax. One curl command and you get gateway, UI, models, memory, and skills. All auto-configured. Minutes, not hours.",
+    screenshots: [
+      {
+        url: "/images/examples/2026-04-23-juliangoldieseo-hermes-workspace-setup.webp",
+        filename: "2026-04-23-juliangoldieseo-hermes-workspace-setup.webp",
+        thumbnails: {
+          small: { url: "/images/examples/2026-04-23-juliangoldieseo-hermes-workspace-setup.webp" },
+          large: { url: "/images/examples/2026-04-23-juliangoldieseo-hermes-workspace-setup.webp" }
+        }
+      }
+    ],
+    category: "Dev Ops",
+    publish_date: "2026-04-23",
+    original_link: "https://x.com/JulianGoldieSEO/status/2047446841558802647",
+    author_name: "Julian Goldie",
+    author_link: "https://x.com/JulianGoldieSEO",
+    tags: ["Hermes", "Setup", "AI Tools"],
+  },
 ];
