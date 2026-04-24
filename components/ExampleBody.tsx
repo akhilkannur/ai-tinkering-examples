@@ -84,12 +84,6 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
             </p>
           </div>
         )}
-
-        {example.original_link && (
-          <div className="pt-8 border-t border-micro-layer-1">
-            <p className="text-xs text-micro-muted">Source: <a href={example.original_link} target="_blank" rel="noopener noreferrer" className="underline hover:text-micro-fg">{example.author_name}</a></p>
-          </div>
-        )}
       </div>
     </>
   )

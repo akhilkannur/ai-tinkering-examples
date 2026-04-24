@@ -401,8 +401,8 @@ screenshots: [
     category: "Vibe Coding",
     publish_date: "2026-01-24",
     original_link: "https://x.com/NathanFlurry/status/2015128922766381249",
-    author_name: "Nathan Flurry",
-    author_link: "https://x.com/NathanFlurry",
+    author_name: "Oliver Henry",
+    author_link: "https://x.com/oliverhenry",
     tags: ["AI Agents", "Open Source", "Coding"],
   },
   {
