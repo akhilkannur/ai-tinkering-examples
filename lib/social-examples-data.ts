@@ -479,11 +479,11 @@ screenshots: [
     summary: "Oliver Henry built an OpenClaw agent called Larry that cranks out TikTok content. Millions of views in a week. Full step-by-step guide included.",
     screenshots: [
       {
-        url: "/images/examples/ai-automation-example-openclaw-content-creation-workflow.webp",
-        filename: "ai-automation-example-openclaw-content-creation-workflow.webp",
+        url: "/images/examples/oliverhenry-openclaw.webp",
+        filename: "oliverhenry-openclaw.webp",
         thumbnails: {
-          small: { url: "/images/examples/ai-automation-example-openclaw-content-creation-workflow.webp" },
-          large: { url: "/images/examples/ai-automation-example-openclaw-content-creation-workflow.webp" }
+          small: { url: "/images/examples/oliverhenry-openclaw.webp" },
+          large: { url: "/images/examples/oliverhenry-openclaw.webp" }
         }
       }
     ],
