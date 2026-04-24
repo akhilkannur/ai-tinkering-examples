@@ -16,8 +16,8 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
         }
       }
     ],
-    category: "Marketing Ops",
-    publish_date: "2026-01-21",
+    category: "Marketing",
+    publish_date: "2026-01-16",
     original_link: "https://x.com/recap_david/status/2013711400342818819",
     author_name: "David Roberts",
     author_link: "https://x.com/recap_david",
@@ -38,8 +38,8 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
         }
       }
     ],
-    category: "Marketing Ops",
-    publish_date: "2026-01-22",
+    category: "Marketing",
+    publish_date: "2026-01-17",
     original_link: "https://x.com/lkr/status/2013653497120804994",
     author_name: "Laura Roeder",
     author_link: "https://x.com/lkr",
@@ -60,8 +60,8 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
         }
       }
     ],
-    category: "Marketing Ops",
-    publish_date: "2026-01-22",
+    category: "Marketing",
+    publish_date: "2026-01-17",
     original_link: "https://www.deeplearning.ai/short-courses/gemini-cli-code-and-create-with-an-open-source-agent/",
     author_name: "DeepLearning.AI",
     author_link: "https://www.deeplearning.ai",
@@ -82,8 +82,8 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
         }
       }
     ],
-    category: "Marketing Ops",
-    publish_date: "2026-01-22",
+    category: "Marketing",
+    publish_date: "2026-01-17",
     original_link: "https://x.com/aiedge_/status/2013641070815650252",
     author_name: "AI Edge",
     author_link: "https://x.com/aiedge_",
@@ -104,8 +104,8 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
         }
       }
     ],
-    category: "Competitive Intel",
-    publish_date: "2026-01-23",
+    category: "General",
+    publish_date: "2026-01-18",
     original_link: "https://x.com/MehtabKarta/status/2014392743204999396",
     author_name: "MehtabKarta",
     author_link: "https://x.com/MehtabKarta",
@@ -126,8 +126,8 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
         }
       }
     ],
-    category: "Strategic Ops",
-    publish_date: "2026-01-23",
+    category: "General",
+    publish_date: "2026-01-18",
     original_link: "https://x.com/buccocapital/status/1995310794339176558",
     author_name: "BuccoCapital",
     author_link: "https://x.com/buccocapital",
@@ -148,8 +148,8 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
         }
       }
     ],
-    category: "Agent Documentation",
-    publish_date: "2026-01-26",
+    category: "General",
+    publish_date: "2026-01-21",
     original_link: "https://github.blog/ai-and-ml/github-copilot/how-to-write-a-great-agents-md-lessons-from-over-2500-repositories/",
     author_name: "GitHub Blog",
     author_link: "https://github.blog",
@@ -171,8 +171,8 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
         }
       }
     ],
-    category: "Agent Documentation",
-    publish_date: "2026-01-26",
+    category: "General",
+    publish_date: "2026-01-21",
     original_link: "https://saastr.ai/agents",
     author_name: "SaaStr",
     author_link: "https://saastr.ai",
@@ -194,8 +194,8 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
         }
       }
     ],
-    category: "Competitive Intel",
-    publish_date: "2026-01-26",
+    category: "General",
+    publish_date: "2026-01-21",
     original_link: "https://x.com/MatznerJon/status/2006766272990921167",
     author_name: "Jon Matzner",
     author_link: "https://x.com/MatznerJon",
@@ -217,8 +217,8 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
         }
       }
     ],
-    category: "Agent Documentation",
-    publish_date: "2026-01-26",
+    category: "General",
+    publish_date: "2026-01-21",
     original_link: "https://x.com/doodlestein/status/2007274424383250638",
     author_name: "Jeffrey Emanuel",
     author_link: "https://x.com/doodlestein",
@@ -240,8 +240,8 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
         }
       }
     ],
-    category: "Content Ops",
-    publish_date: "2026-01-26",
+    category: "General",
+    publish_date: "2026-01-21",
     original_link: "https://claude.com/resources/use-cases/create-a-company-newsletter",
     author_name: "Claude Resources",
     author_link: "https://claude.com",
@@ -263,8 +263,8 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
         }
       }
     ],
-    category: "Strategic Ops",
-    publish_date: "2026-01-26",
+    category: "General",
+    publish_date: "2026-01-21",
     original_link: "https://x.com/Suhail/status/1986156328096858361",
     author_name: "Suhail",
     author_link: "https://x.com/Suhail",
@@ -286,8 +286,8 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
         }
       }
     ],
-    category: "Strategic Ops",
-    publish_date: "2026-01-26",
+    category: "General",
+    publish_date: "2026-01-21",
     original_link: "https://www.linkedin.com/feed/update/urn:li:activity:7390468002904776704/",
     author_name: "Peter Kang",
     author_link: "https://www.linkedin.com/in/peterkang",
@@ -309,8 +309,8 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
         }
       }
     ],
-    category: "Paid Media",
-    publish_date: "2026-01-26",
+    category: "Marketing",
+    publish_date: "2026-01-21",
     original_link: "https://x.com/ema_totaro/status/1979085561223680377",
     author_name: "Emanuele Totaro",
     author_link: "https://x.com/ema_totaro",
@@ -332,8 +332,8 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
         }
       }
     ],
-    category: "Content Ops",
-    publish_date: "2026-01-28",
+    category: "General",
+    publish_date: "2026-01-23",
     original_link: "https://x.com/SoniaBaschez/status/2016297236855194046",
     author_name: "Sonia Baschez",
     author_link: "https://x.com/SoniaBaschez",
@@ -354,8 +354,8 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
         }
       }
     ],
-    category: "Strategic Ops",
-    publish_date: "2026-01-28",
+    category: "General",
+    publish_date: "2026-01-23",
     original_link: "https://x.com/zarazhangrui/status/2016337615843434646",
     author_name: "Zara Zhang",
     author_link: "https://x.com/zarazhangrui",
@@ -376,8 +376,8 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
         }
       }
     ],
-    category: "Image Generation",
-    publish_date: "2026-01-28",
+    category: "Marketing",
+    publish_date: "2026-01-23",
     original_link: "https://github.com/PicoTrex/Awesome-Nano-Banana-images",
     author_name: "PicoTrex",
     author_link: "https://x.com/PicoTrex",
@@ -398,8 +398,8 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
         }
       }
     ],
-    category: "Code Assistance",
-    publish_date: "2026-01-29",
+    category: "Vibe Coding",
+    publish_date: "2026-01-24",
     original_link: "https://x.com/NathanFlurry/status/2015128922766381249",
     author_name: "Nathan Flurry",
     author_link: "https://x.com/NathanFlurry",
@@ -420,8 +420,8 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
         }
       }
     ],
-    category: "Code Assistance",
-    publish_date: "2026-01-29",
+    category: "Vibe Coding",
+    publish_date: "2026-01-24",
     original_link: "https://x.com/BenyaminHolley/status/2016727490417307689",
     author_name: "Benyamin Holley",
     author_link: "https://x.com/BenyaminHolley",
@@ -442,8 +442,8 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
         }
       }
     ],
-    category: "Agent Documentation",
-    publish_date: "2026-02-09",
+    category: "General",
+    publish_date: "2026-02-04",
     original_link: "https://x.com/steipete/status/2020704611640705485",
     author_name: "Peter Steinberger",
     author_link: "https://x.com/steipete",
@@ -465,8 +465,8 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
         }
       }
     ],
-    category: "Design Ops",
-    publish_date: "2026-02-17",
+    category: "Marketing",
+    publish_date: "2026-02-12",
     original_link: "https://x.com/Austen/status/2023629287350309251",
     author_name: "Austen Allred",
     author_link: "https://x.com/Austen",
@@ -487,8 +487,8 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
         }
       }
     ],
-    category: "Content Ops",
-    publish_date: "2026-02-18",
+    category: "General",
+    publish_date: "2026-02-13",
     original_link: "https://x.com/oliverhenry/status/2022011925903667547",
     author_name: "Nathan Flurry",
     author_link: "https://x.com/oliverhenry",
@@ -509,8 +509,8 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
         }
       }
     ],
-    category: "Product Ops",
-    publish_date: "2026-01-28",
+    category: "General",
+    publish_date: "2026-01-23",
     original_link: "https://x.com/shreyas/status/2016551938951962823",
     author_name: "Shreyas Doshi",
     author_link: "https://x.com/shreyas",
@@ -531,8 +531,8 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
         }
       }
     ],
-    category: "Marketing Ops",
-    publish_date: "2026-02-01",
+    category: "Marketing",
+    publish_date: "2026-01-27",
     original_link: "https://x.com/maxwellfinn/status/2018126248547864701",
     author_name: "Maxwell Finn",
     author_link: "https://x.com/maxwellfinn",
@@ -553,8 +553,8 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
         }
       }
     ],
-    category: "Product Ops",
-    publish_date: "2026-03-28",
+    category: "General",
+    publish_date: "2026-03-23",
     original_link: "https://x.com/daniel_mac8/status/2037915114322669698",
     author_name: "Daniel McAteer",
     author_link: "https://x.com/daniel_mac8",
@@ -567,16 +567,16 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     summary: "Charles Floate dropped his personal Claude Cowork prompt stack. 10 prompts covering entity analysis, link profiles, content audits, and SEO dashboards. Built for operators, not beginners.",
     screenshots: [
       {
-        url: "/images/examples/2026-04-14-charles-seo-ai-workflow.webp",
-        filename: "2026-04-14-charles-seo-ai-workflow.webp",
+        url: "/images/examples/bentossell-we-got-agents-wrong.webp",
+        filename: "bentossell-we-got-agents-wrong.webp",
         thumbnails: {
-          small: { url: "/images/examples/2026-04-14-charles-seo-ai-workflow.webp" },
-          large: { url: "/images/examples/2026-04-14-charles-seo-ai-workflow.webp" }
+          small: { url: "/images/examples/bentossell-we-got-agents-wrong.webp" },
+          large: { url: "/images/examples/bentossell-we-got-agents-wrong.webp" }
         }
       }
     ],
-    category: "SEO",
-    publish_date: "2026-04-14",
+    category: "Marketing",
+    publish_date: "2026-04-09",
     original_link: "https://x.com/Charles_SEO/status/2044010207458853314",
     author_name: "Charles Floate",
     author_link: "https://x.com/Charles_SEO",
@@ -597,8 +597,8 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
         }
       }
     ],
-    category: "Dev Ops",
-    publish_date: "2026-04-22",
+    category: "Vibe Coding",
+    publish_date: "2026-04-17",
     original_link: "https://x.com/dhruvtwt_/status/2047006444701274380",
     author_name: "Dhruv",
     author_link: "https://x.com/dhruvtwt_",
@@ -619,8 +619,8 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
         }
       }
     ],
-    category: "Paid Media",
-    publish_date: "2026-04-23",
+    category: "Marketing",
+    publish_date: "2026-04-18",
     original_link: "https://x.com/mtvmald/status/2047421832014524580",
     author_name: "mtvmald",
     author_link: "https://x.com/mtvmald",
@@ -641,8 +641,8 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
         }
       }
     ],
-    category: "Content Ops",
-    publish_date: "2026-04-09",
+    category: "General",
+    publish_date: "2026-04-04",
     original_link: "https://x.com/startupideaspod/status/2033232665823113471",
     author_name: "The Startup Ideas Podcast",
     author_link: "https://x.com/startupideaspod",
@@ -663,8 +663,8 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
         }
       }
     ],
-    category: "Paid Media",
-    publish_date: "2026-04-23",
+    category: "Marketing",
+    publish_date: "2026-04-18",
     original_link: "https://x.com/iKaustubhChavan/status/2047324683952120068",
     author_name: "Kaustubh Chavan",
     author_link: "https://x.com/iKaustubhChavan",
@@ -685,8 +685,8 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
         }
       }
     ],
-    category: "Marketing Ops",
-    publish_date: "2026-04-23",
+    category: "Marketing",
+    publish_date: "2026-04-18",
     original_link: "https://x.com/ecomchasedimond/status/2047313886848925761",
     author_name: "Chase Dimond",
     author_link: "https://x.com/ecomchasedimond",
@@ -707,8 +707,8 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
         }
       }
     ],
-    category: "Paid Media",
-    publish_date: "2026-04-06",
+    category: "Marketing",
+    publish_date: "2026-04-01",
     original_link: "https://x.com/alexgoughcooper/status/2032154426585026669",
     author_name: "Alex Cooper",
     author_link: "https://x.com/alexgoughcooper",
@@ -729,8 +729,8 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
         }
       }
     ],
-    category: "Dev Ops",
-    publish_date: "2026-04-20",
+    category: "Vibe Coding",
+    publish_date: "2026-04-15",
     original_link: "https://x.com/GaelBreton/status/2046167150881296469",
     author_name: "Gael Breton",
     author_link: "https://x.com/GaelBreton",
@@ -751,8 +751,8 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
         }
       }
     ],
-    category: "Dev Ops",
-    publish_date: "2026-01-27",
+    category: "Vibe Coding",
+    publish_date: "2026-01-22",
     original_link: "https://x.com/AlexFinn/status/2009022334683013599",
     author_name: "Alex Finn",
     author_link: "https://x.com/AlexFinn",
@@ -773,11 +773,55 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
         }
       }
     ],
-    category: "Dev Ops",
-    publish_date: "2026-04-23",
+    category: "Vibe Coding",
+    publish_date: "2026-04-18",
     original_link: "https://x.com/JulianGoldieSEO/status/2047446841558802647",
     author_name: "Julian Goldie",
     author_link: "https://x.com/JulianGoldieSEO",
     tags: ["Hermes", "Setup", "AI Tools"],
+  },
+  {
+    id: "alexhillman-andrew-chen-email-assistant",
+    title: "Build Your Own AI Email Assistant in Claude Code",
+    slug: "alexhillman-andrew-chen-email-assistant",
+    summary: "Andrew Chen posted a $150k/year problem: he wants an AI that watches his inbox, scores importance, references his knowledge base, drafts replies, and files emails. Alex Hillman retweeted saying you can build this right now in Claude Code - just describe what you want and add 'ask me clarifying questions until you know what I want to build and walk me through the setup step by step.'",
+    screenshots: [
+      {
+        url: "/images/examples/alexhillman-email-assistant.webp",
+        filename: "alexhillman-email-assistant.webp",
+        thumbnails: {
+          small: { url: "/images/examples/alexhillman-email-assistant.webp" },
+          large: { url: "/images/examples/alexhillman-email-assistant.webp" }
+        }
+      }
+    ],
+    category: "Vibe Coding",
+    publish_date: "2026-04-19",
+    original_link: "https://x.com/alexhillman/status/2023770470428926449",
+    author_name: "Alex Hillman",
+    author_link: "https://x.com/alexhillman",
+    tags: ["Claude Code", "Email", "AI Assistant"],
+  },
+  {
+    id: "bentossell-agents-wrong",
+    title: "We Got Agents Wrong",
+    slug: "bentossell-agents-wrong",
+    summary: "Ben Tossell spent 3 billion tokens in four months, all through a terminal watching an agent write code he couldn't write. He doesn't read the code but reads the agent output religiously, picking up knowledge on how code works, where things fail, and where they succeed. That's his version of learning to program. The new technical class.",
+    screenshots: [
+      {
+        url: "/images/examples/bentossell-we-got-agents-wrong.webp",
+        filename: "bentossell-we-got-agents-wrong.webp",
+        thumbnails: {
+          small: { url: "/images/examples/bentossell-we-got-agents-wrong.webp" },
+          large: { url: "/images/examples/bentossell-we-got-agents-wrong.webp" }
+        }
+      }
+    ],
+    category: "General",
+    publish_date: "2026-04-19",
+    original_link: "https://x.com/bentossell/status/2006352820140749073",
+    author_name: "Ben Tossell",
+    author_link: "https://x.com/bentossell",
+    tags: ["Agents", "Coding", "Vibe Coding"],
   },
 ];

@@ -41,19 +41,20 @@ function groupByWeek(items: EnrichedExampleRecord[]) {
   });
 
   const groups: { [key: string]: EnrichedExampleRecord[] } = {};
-  const itemsPerBatch = 9;
+  const itemsPerBatch = 7;
   const numBatches = Math.ceil(sorted.length / itemsPerBatch);
 
   for (let i = 0; i < numBatches; i++) {
     const now = new Date();
-    // Latest drop is last week (start of current week minus 7 days), then go further back
     const startOfThisWeek = new Date(now);
     startOfThisWeek.setDate(now.getDate() - now.getDay());
     startOfThisWeek.setHours(0, 0, 0, 0);
     const startDate = new Date(startOfThisWeek);
     startDate.setDate(startDate.getDate() - 7 * (i + 1));
     const weekLabel = startDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-    groups[weekLabel] = sorted.slice(i * itemsPerBatch, (i + 1) * itemsPerBatch);
+    const isLastBatch = i === numBatches - 1;
+    const batchSize = isLastBatch ? 9 : itemsPerBatch;
+    groups[weekLabel] = sorted.slice(i * itemsPerBatch, i * itemsPerBatch + batchSize);
   }
 
   return Object.entries(groups).sort((a, b) => new Date(b[0]).getTime() - new Date(a[0]).getTime());
@@ -160,7 +161,7 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
               </form>
             )}
             <p className="text-[13px] font-bold text-white uppercase tracking-[0.15em] opacity-80">
-              Join 300+ AI Native Operators
+              Join 400+ AI Native Operators
             </p>
           </div>
         </section>

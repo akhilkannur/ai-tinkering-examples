@@ -86,12 +86,12 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
         )}
 
         {example.original_link && (
-          <div className="pt-8 border-t border-micro-layer-1">
+          <div className="border-t border-border-color p-md sm:p-lg bg-hero-tint flex justify-center rounded-b-md">
             <a
               href={example.original_link}
               target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-micro-layer-1 text-micro-fg text-sm font-semibold hover:bg-micro-layer-2 transition-colors"
+              rel="noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-lg py-sm sm:px-xl bg-accent-dark text-white rounded-sm text-[0.875rem] font-medium hover:bg-black transition-all"
             >
               <ExternalLink size={16} />
               View Original
