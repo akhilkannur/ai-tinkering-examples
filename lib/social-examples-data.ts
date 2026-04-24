@@ -6,13 +6,13 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     title: "Claude Cowork Automation",
     slug: "recap-david-claude-automation",
     summary: "David Roberts automated his daily content marketing with Claude Cowork. Saved ~4 hours a week.",
-screenshots: [
+    screenshots: [
       {
-        url: "/images/examples/charles-seo-prompts.webp",
-        filename: "charles-seo-prompts.webp",
+        url: "/images/examples/2026-01-21-david-roberts-recap-david-on-x.jpg",
+        filename: "2026-01-21-david-roberts-recap-david-on-x.jpg",
         thumbnails: {
-          small: { url: "/images/examples/charles-seo-prompts.webp" },
-          large: { url: "/images/examples/charles-seo-prompts.webp" }
+          small: { url: "/images/examples/2026-01-21-david-roberts-recap-david-on-x.jpg" },
+          large: { url: "/images/examples/2026-01-21-david-roberts-recap-david-on-x.jpg" }
         }
       }
     ],
@@ -567,11 +567,11 @@ screenshots: [
     summary: "Charles Floate dropped his personal Claude Cowork prompt stack. 10 prompts covering entity analysis, link profiles, content audits, and SEO dashboards. Built for operators, not beginners.",
     screenshots: [
       {
-        url: "/images/examples/bentossell-we-got-agents-wrong.webp",
-        filename: "bentossell-we-got-agents-wrong.webp",
+        url: "/images/examples/charles-seo-prompts.webp",
+        filename: "charles-seo-prompts.webp",
         thumbnails: {
-          small: { url: "/images/examples/bentossell-we-got-agents-wrong.webp" },
-          large: { url: "/images/examples/bentossell-we-got-agents-wrong.webp" }
+          small: { url: "/images/examples/charles-seo-prompts.webp" },
+          large: { url: "/images/examples/charles-seo-prompts.webp" }
         }
       }
     ],
