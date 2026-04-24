@@ -142,7 +142,7 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/ai-examples/:path*',
+        source: '/ai-workplace-personality',
         destination: '/',
         permanent: true,
       },
