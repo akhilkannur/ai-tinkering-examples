@@ -868,4 +868,26 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     author_link: "https://effortlessacademic.com/",
     tags: ["Academic Ops", "Claude Code", "Research"],
   },
+  {
+    id: "michaelcrist-claude-code-guide",
+    title: "The Non-Technical Guide to Claude Code",
+    slug: "michaelcrist-claude-code-guide",
+    summary: "Michael Crist explains why Claude Code is an agent with hands for non-coders. The secret is moving from simple prompts to briefings (CLAUDE.md) that give the AI full context of your business rules and project goals.",
+    screenshots: [
+      {
+        url: "/images/examples/2026-04-24-michaelcrist-claude-code.webp",
+        filename: "2026-04-24-michaelcrist-claude-code.webp",
+        thumbnails: {
+          small: { url: "/images/examples/2026-04-24-michaelcrist-claude-code.webp" },
+          large: { url: "/images/examples/2026-04-24-michaelcrist-claude-code.webp" }
+        }
+      }
+    ],
+    category: "General",
+    publish_date: "2026-01-21",
+    original_link: "https://michaelcrist.substack.com/p/claude-code",
+    author_name: "Michael Crist",
+    author_link: "https://michaelcrist.substack.com/",
+    tags: ["Claude Code", "Productivity", "Non-Technical"],
+  },
 ];
