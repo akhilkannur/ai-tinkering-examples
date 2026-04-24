@@ -832,10 +832,10 @@ screenshots: [
     screenshots: [
       {
         url: "/images/examples/2026-01-26-eda-claude-code-beginners-guide.webp",
-        filename: "2026-01-26-eda-claude-code-beginners-guide.webp",
+        filename: "2026-01-26-eda-claude-code-beginners-guide.png",
         thumbnails: {
-          small: { url: "/images/examples/2026-01-26-eda-claude-code-beginners-guide.webp" },
-          large: { url: "/images/examples/2026-01-26-eda-claude-code-beginners-guide.webp" }
+          small: { url: "/images/examples/2026-01-26-eda-claude-code-beginners-guide.png" },
+          large: { url: "/images/examples/2026-01-26-eda-claude-code-beginners-guide.png" }
         }
       }
     ],
