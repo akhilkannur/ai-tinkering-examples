@@ -884,10 +884,76 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
       }
     ],
     category: "General",
-    publish_date: "2026-01-21",
+    publish_date: "2026-01-23",
     original_link: "https://michaelcrist.substack.com/p/claude-code",
     author_name: "Michael Crist",
     author_link: "https://michaelcrist.substack.com/",
     tags: ["Claude Code", "Productivity", "Non-Technical"],
+  },
+  {
+    id: "michael-fritzell-claude-equity-research",
+    title: "How I Use Claude for Equity Research",
+    slug: "michael-fritzell-claude-equity-research",
+    summary: "Michael Fritzell systematized his equity research by turning Claude into an automated analyst. He uses Projects to run Bull/Bear cases instantly and Cowork to extract financial data from PDFs directly into formatted Excel tables.",
+    screenshots: [
+      {
+        url: "/images/examples/2026-04-24-asiancenturystocks-claude-equity-research.webp",
+        filename: "2026-04-24-asiancenturystocks-claude-equity-research.webp",
+        thumbnails: {
+          small: { url: "/images/examples/2026-04-24-asiancenturystocks-claude-equity-research.webp" },
+          large: { url: "/images/examples/2026-04-24-asiancenturystocks-claude-equity-research.webp" }
+        }
+      }
+    ],
+    category: "Finance Ops",
+    publish_date: "2026-01-24",
+    original_link: "https://www.asiancenturystocks.com/how-to-use-claude-for-equity-resear/",
+    author_name: "Michael Fritzell",
+    author_link: "https://www.asiancenturystocks.com/",
+    tags: ["Equity Research", "Claude Projects", "Finance"],
+  },
+  {
+    id: "leadershipinchange-claude-skills-marketing",
+    title: "My 3-Skill System for Marketing with Claude",
+    slug: "leadershipinchange-claude-skills-marketing",
+    summary: "Stop paying the 'Blank Slate Tax' by using Claude Skills—markdown files that encode your brand voice and audience. This system uses three core workflows: an Email Sequence Builder, a Competitor Intelligence Brief, and an SEO Article Optimizer.",
+    screenshots: [
+      {
+        url: "/images/examples/2026-04-24-leadershipinchange-claude-skills-marketing.webp",
+        filename: "2026-04-24-leadershipinchange-claude-skills-marketing.webp",
+        thumbnails: {
+          small: { url: "/images/examples/2026-04-24-leadershipinchange-claude-skills-marketing.webp" },
+          large: { url: "/images/examples/2026-04-24-leadershipinchange-claude-skills-marketing.webp" }
+        }
+      }
+    ],
+    category: "Marketing Ops",
+    publish_date: "2026-01-24",
+    original_link: "https://leadershipinchange.com/p/claude-skills-for-marketing-2026",
+    author_name: "Leadership in Change",
+    author_link: "https://leadershipinchange.com/",
+    tags: ["Claude Skills", "Marketing Ops", "Brand Voice"],
+  },
+  {
+    id: "marketermilk-seo-ai-agent-guide",
+    title: "How to Build a Custom SEO AI Agent",
+    slug: "marketermilk-seo-ai-agent-guide",
+    summary: "Marketer Milk explains how to build an SEO agent by documenting your expertise into markdown 'skills'. Use Claude Projects for solo work or Gumloop for team workflows, then connect them to real-time data via MCP to automate audits and content decay tracking.",
+    screenshots: [
+      {
+        url: "/images/examples/2026-04-24-marketermilk-seo-ai-agent.webp",
+        filename: "2026-04-24-marketermilk-seo-ai-agent.webp",
+        thumbnails: {
+          small: { url: "/images/examples/2026-04-24-marketermilk-seo-ai-agent.webp" },
+          large: { url: "/images/examples/2026-04-24-marketermilk-seo-ai-agent.webp" }
+        }
+      }
+    ],
+    category: "SEO",
+    publish_date: "2026-01-24",
+    original_link: "https://www.marketermilk.com/blog/seo-ai-agent",
+    author_name: "Marketer Milk",
+    author_link: "https://www.marketermilk.com/",
+    tags: ["SEO Agents", "Claude Projects", "Gumloop", "MCP"],
   },
 ];
