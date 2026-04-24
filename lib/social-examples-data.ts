@@ -831,11 +831,11 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     summary: "Eda Akturk built a full packing list app with zero lines of code using Claude Code. Here's her step-by-step guide to building your first app.",
     screenshots: [
       {
-        url: "/images/examples/2026-01-26-eda-claude-code-beginners-guide.webp",
-        filename: "2026-01-26-eda-claude-code-beginners-guide.webp",
+        url: "/images/examples/eda-claude-code-beginners-guide.webp",
+        filename: "eda-claude-code-beginners-guide.webp",
         thumbnails: {
-          small: { url: "/images/examples/2026-01-26-eda-claude-code-beginners-guide.webp" },
-          large: { url: "/images/examples/2026-01-26-eda-claude-code-beginners-guide.webp" }
+          small: { url: "/images/examples/eda-claude-code-beginners-guide.webp" },
+          large: { url: "/images/examples/eda-claude-code-beginners-guide.webp" }
         }
       }
     ],
