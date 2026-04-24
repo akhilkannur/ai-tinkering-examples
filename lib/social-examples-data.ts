@@ -604,4 +604,26 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     author_link: "https://x.com/dhruvtwt_",
     tags: ["NVIDIA", "AI Models", "Free APIs"],
   },
+  {
+    id: "mtvmald-ai-video-ad-workflow",
+    title: "Full Video Ad Made with Pinterest + Kling 3.0 + Claude",
+    slug: "mtvmald-ai-video-ad-workflow",
+    summary: "mtvmald made a polished video ad without a camera or crew. Grabbed a reference image from Pinterest, recreated it with nano banana, then animated it with Kling 3.0 and Claude. Whole thing is AI, start to finish.",
+    screenshots: [
+      {
+        url: "/images/examples/2026-04-23-mtvmald-ai-video-ad-workflow.webp",
+        filename: "2026-04-23-mtvmald-ai-video-ad-workflow.webp",
+        thumbnails: {
+          small: { url: "/images/examples/2026-04-23-mtvmald-ai-video-ad-workflow.webp" },
+          large: { url: "/images/examples/2026-04-23-mtvmald-ai-video-ad-workflow.webp" }
+        }
+      }
+    ],
+    category: "Paid Media",
+    publish_date: "2026-04-23",
+    original_link: "https://x.com/mtvmald/status/2047421832014524580",
+    author_name: "mtvmald",
+    author_link: "https://x.com/mtvmald",
+    tags: ["Video AI", "Kling", "Ads", "Creative"],
+  },
 ];
