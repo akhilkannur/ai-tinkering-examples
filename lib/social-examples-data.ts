@@ -846,4 +846,26 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     author_link: "https://substack.com/@edatweets",
     tags: ["Claude Code", "Beginners", "No-Code"],
   },
+  {
+    id: "effortlessacademic-claude-code-academics",
+    title: "Claude Code for Academics: The Beginner’s Guide",
+    slug: "effortlessacademic-claude-code-academics",
+    summary: "Effortless Academic breaks down how to use Claude Code to manage the messy middle of research. It maps local folders to the AI, uses /init to set project rules, and employs @ mentions to keep context tight while organizing notes and PDFs.",
+    screenshots: [
+      {
+        url: "/images/examples/2026-04-24-effortlessacademic-claude-code-guide.webp",
+        filename: "2026-04-24-effortlessacademic-claude-code-guide.webp",
+        thumbnails: {
+          small: { url: "/images/examples/2026-04-24-effortlessacademic-claude-code-guide.webp" },
+          large: { url: "/images/examples/2026-04-24-effortlessacademic-claude-code-guide.webp" }
+        }
+      }
+    ],
+    category: "General",
+    publish_date: "2026-04-24",
+    original_link: "https://effortlessacademic.com/claude-code-and-cowork-for-academics-beginner-guide-part-1/",
+    author_name: "Effortless Academic",
+    author_link: "https://effortlessacademic.com/",
+    tags: ["Academic Ops", "Claude Code", "Research"],
+  },
 ];
