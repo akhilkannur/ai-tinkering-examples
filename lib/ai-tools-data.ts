@@ -52,6 +52,7 @@ export const aiTools: AiTool[] = [
         price: "Freemium"
         },
     image: "https://www.google.com/s2/favicons?domain=www.overvisual.com&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fwww.overvisual.com%2F&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-31",
     maker: {
         name: "Ignas Sinkevičius",
@@ -77,6 +78,7 @@ export const aiTools: AiTool[] = [
         price: "Freemium"
         },
     image: "https://www.google.com/s2/favicons?domain=chatty.fit&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fchatty.fit&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-04-01",
     maker: {
         name: "Vladimir Brejcha",
@@ -102,6 +104,7 @@ export const aiTools: AiTool[] = [
         price: "Freemium"
         },
     image: "https://www.google.com/s2/favicons?domain=www.slidewhisper.com&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fwww.slidewhisper.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-04-02",
     maker: {
         name: "Stanislav Sedov",
@@ -127,6 +130,7 @@ export const aiTools: AiTool[] = [
         price: "Freemium"
         },
     image: "https://www.google.com/s2/favicons?domain=www.imejis.io&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fwww.imejis.io&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-04-03",
     maker: {
         name: "Dharmik Jagodana",
@@ -152,6 +156,7 @@ export const aiTools: AiTool[] = [
         price: "Paid"
         },
     image: "https://www.google.com/s2/favicons?domain=emailferret.io&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Femailferret.io&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-30",
     maker: {
         name: "Michael Coleman",
@@ -177,6 +182,7 @@ export const aiTools: AiTool[] = [
         price: "Paid"
         },
     image: "https://www.google.com/s2/favicons?domain=www.agentgatepay.com&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fwww.agentgatepay.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-31",
     maker: {
         name: "Michael Coleman",
@@ -202,6 +208,7 @@ export const aiTools: AiTool[] = [
         price: "Paid"
         },
     image: "https://www.google.com/s2/favicons?domain=hypnotype.app&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fhypnotype.app&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-04-01",
     maker: {
         name: "Fabien Boco",
@@ -227,6 +234,7 @@ export const aiTools: AiTool[] = [
         price: "Free"
         },
     image: "https://www.google.com/s2/favicons?domain=computerkeyboardshortcuts.org&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fcomputerkeyboardshortcuts.org%2F&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-23",
     maker: {
         name: "Daniel",
@@ -252,6 +260,7 @@ export const aiTools: AiTool[] = [
         price: "Paid"
         },
     image: "https://www.google.com/s2/favicons?domain=floowed.com&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Ffloowed.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-24",
     maker: {
         name: "Arunima",
@@ -277,6 +286,7 @@ export const aiTools: AiTool[] = [
         price: "Paid"
         },
     image: "https://www.google.com/s2/favicons?domain=stride-fuel.com&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fstride-fuel.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-25",
     maker: {
         name: "Dave Moggio",
@@ -302,6 +312,7 @@ export const aiTools: AiTool[] = [
         price: "Freemium"
         },
     image: "https://www.google.com/s2/favicons?domain=orav.ai&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Forav.ai%2F&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-26",
     maker: {
         name: "Joakim",
@@ -327,6 +338,7 @@ export const aiTools: AiTool[] = [
         price: "Paid"
         },
     image: "https://www.google.com/s2/favicons?domain=airankpilot.com&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fairankpilot.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-27",
     maker: {
         name: "Neel Patel",
@@ -352,6 +364,7 @@ export const aiTools: AiTool[] = [
         price: "Paid"
         },
     image: "https://www.google.com/s2/favicons?domain=www.bookswift.app&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fwww.bookswift.app&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-28",
     maker: {
         name: "Michael Coleman",
@@ -377,6 +390,7 @@ export const aiTools: AiTool[] = [
         price: "Paid"
         },
     image: "https://www.google.com/s2/favicons?domain=slidescockpit.com&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fslidescockpit.com%2F&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-29",
     maker: {
         name: "Daniel",
@@ -402,6 +416,7 @@ export const aiTools: AiTool[] = [
         price: "Paid"
         },
     image: "https://www.google.com/s2/favicons?domain=3dSynth.app&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2F3dSynth.app&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-30",
     maker: {
         name: "Nic Polotnianko",
@@ -427,6 +442,7 @@ export const aiTools: AiTool[] = [
         price: "Free"
         },
     image: "https://www.google.com/s2/favicons?domain=www.cryptonewsnavigator.com&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fwww.cryptonewsnavigator.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-24",
     maker: {
         name: "Katerina Kulikovska",
@@ -452,6 +468,7 @@ export const aiTools: AiTool[] = [
         price: "Paid"
         },
     image: "https://www.google.com/s2/favicons?domain=suburbstack.com&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fsuburbstack.com%2F&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-25",
     maker: {
         name: "Nic Polotnianko",
@@ -477,6 +494,7 @@ export const aiTools: AiTool[] = [
         price: "Freemium"
         },
     image: "https://www.google.com/s2/favicons?domain=sequenzy.com&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fsequenzy.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-26",
     maker: {
         name: "Nic Polotnianko",
@@ -502,6 +520,7 @@ export const aiTools: AiTool[] = [
         price: "Paid"
         },
     image: "https://www.google.com/s2/favicons?domain=www.markeplay.com&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fwww.markeplay.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-27",
     maker: {
         name: "Nic Polotnianko",
@@ -527,6 +546,7 @@ export const aiTools: AiTool[] = [
         price: "Paid"
         },
     image: "https://www.google.com/s2/favicons?domain=www.qeeebo.com&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fwww.qeeebo.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-16",
     maker: {
         name: "Nic Polotnianko",
@@ -552,6 +572,7 @@ export const aiTools: AiTool[] = [
         price: "Paid"
         },
     image: "https://www.google.com/s2/favicons?domain=feynn.ai&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Ffeynn.ai&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-17",
     maker: {
         name: "Nic Polotnianko",
@@ -577,6 +598,7 @@ export const aiTools: AiTool[] = [
         price: "Freemium"
         },
     image: "https://www.google.com/s2/favicons?domain=aithumbnail.gg&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Faithumbnail.gg&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-18",
     maker: {
         name: "Michael Coleman",
@@ -602,6 +624,7 @@ export const aiTools: AiTool[] = [
         price: "Freemium"
         },
     image: "https://www.google.com/s2/favicons?domain=ayewatch.ai&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fayewatch.ai%2F&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-19",
     maker: {
         name: "Michael Coleman",
@@ -627,6 +650,7 @@ export const aiTools: AiTool[] = [
         price: "Paid"
         },
     image: "https://www.google.com/s2/favicons?domain=pentestmate.com&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fpentestmate.com%2F&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-20",
     maker: {
         name: "Aditya Sharma",
@@ -652,6 +676,7 @@ export const aiTools: AiTool[] = [
         price: "Freemium"
         },
     image: "https://www.google.com/s2/favicons?domain=bolta.ai&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fbolta.ai%2F&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-21",
     maker: {
         name: "Max",
@@ -677,6 +702,7 @@ export const aiTools: AiTool[] = [
         price: "Freemium"
         },
     image: "https://www.google.com/s2/favicons?domain=www.sanamujer.com&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fwww.sanamujer.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-22",
     maker: {
         name: "Damián Capdevila",
@@ -703,6 +729,7 @@ export const aiTools: AiTool[] = [
         price: "Freemium"
         },
     image: "https://www.google.com/s2/favicons?domain=beatable.co&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fbeatable.co&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-16",
     features: [
       "Instant AI business idea validation and viability assessment",
@@ -723,6 +750,7 @@ export const aiTools: AiTool[] = [
         price: "Freemium"
         },
     image: "https://www.google.com/s2/favicons?domain=mapyourvoyage.com&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fmapyourvoyage.com%2F&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-17",
     maker: {
         name: "Anuj J.",
@@ -749,6 +777,7 @@ export const aiTools: AiTool[] = [
         price: "Paid"
         },
     image: "https://www.google.com/s2/favicons?domain=ayecreate.ai&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fayecreate.ai%2F&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-18",
     maker: {
         name: "Michael Coleman",
@@ -775,6 +804,7 @@ export const aiTools: AiTool[] = [
         price: "Freemium"
         },
     image: "https://www.google.com/s2/favicons?domain=nicegram.app&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fnicegram.app&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-19",
     maker: {
         name: "Sergey Sheleg",
@@ -801,6 +831,7 @@ export const aiTools: AiTool[] = [
         price: "Freemium"
         },
     image: "https://www.google.com/s2/favicons?domain=www.localbiz.ai&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fwww.localbiz.ai&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-20",
     maker: {
         name: "Abhi Dwivedi",
@@ -827,6 +858,7 @@ export const aiTools: AiTool[] = [
         price: "Freemium"
         },
     image: "https://www.google.com/s2/favicons?domain=www.getargus.ai&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fwww.getargus.ai&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-21",
     features: [
       "Sub-10-second crash detection via computer vision analysis",
@@ -847,6 +879,7 @@ export const aiTools: AiTool[] = [
         price: "Freemium"
         },
     image: "https://www.google.com/s2/favicons?domain=popjam.io&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fpopjam.io&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-22",
     features: [
       "Synthetic Audience Creation: Build personas to 'test before you spend'",
@@ -867,6 +900,7 @@ export const aiTools: AiTool[] = [
         price: "Freemium"
         },
     image: "https://www.google.com/s2/favicons?domain=tekadio.app&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Ftekadio.app&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-16",
     maker: {
         name: "Andreas Binder",
@@ -893,6 +927,7 @@ export const aiTools: AiTool[] = [
         price: "Free"
         },
     image: "https://www.google.com/s2/favicons?domain=invoplex.com&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Finvoplex.com%2F&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-09",
     features: [
       "Instant Quote & Invoice creation with one-click conversion",
@@ -913,6 +948,7 @@ export const aiTools: AiTool[] = [
         price: "Free"
         },
     image: "https://www.google.com/s2/favicons?domain=docutracker.io&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fdocutracker.io&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-10",
     maker: {
         name: "Mohamed Ibrahim",
@@ -939,6 +975,7 @@ export const aiTools: AiTool[] = [
         price: "Free"
         },
     image: "https://www.google.com/s2/favicons?domain=menubartime.com&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fmenubartime.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-11",
     features: [
       "Unlimited timezone tracking directly in the macOS menu bar",
@@ -959,6 +996,7 @@ export const aiTools: AiTool[] = [
         price: "Free"
         },
     image: "https://www.google.com/s2/favicons?domain=geminiwatermarkremover.net&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fgeminiwatermarkremover.net%2F&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-12",
     features: [
       "Specialized AI removal for 'Created with NotebookLM' text and logos",
@@ -979,6 +1017,7 @@ export const aiTools: AiTool[] = [
         price: "Free"
         },
     image: "https://www.google.com/s2/favicons?domain=www.archrender.ai&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fwww.archrender.ai%2F&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-13",
     features: [
       "Photorealistic AI conversion of elevation drawings and 3D models",
@@ -999,6 +1038,7 @@ export const aiTools: AiTool[] = [
         price: "Free"
         },
     image: "https://www.google.com/s2/favicons?domain=www.moduledge.com&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fwww.moduledge.com%2F&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-14",
     features: [
       "Modular data centers (MDCs) scalable from 5 kW to 150 kW per rack",
@@ -1019,6 +1059,7 @@ export const aiTools: AiTool[] = [
         price: "Free"
         },
     image: "https://www.google.com/s2/favicons?domain=www.techtwitter.com&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fwww.techtwitter.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-15",
     features: [
       "Daily weekday curation of high-signal tweets on AI and startups",
@@ -1039,6 +1080,7 @@ export const aiTools: AiTool[] = [
         price: "Free"
         },
     image: "https://www.google.com/s2/favicons?domain=bankpdfconverter.com&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fbankpdfconverter.com%2F&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-09",
     features: [
       "Automatic balance reconciliation against opening/closing totals",
@@ -1059,6 +1101,7 @@ export const aiTools: AiTool[] = [
         price: "Free"
         },
     image: "https://www.google.com/s2/favicons?domain=squaredaway.ai&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fsquaredaway.ai&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-10",
     features: [
       "AI multi-item recognition: Photograph a room or bin to auto-catalog items",
@@ -1079,6 +1122,7 @@ export const aiTools: AiTool[] = [
         price: "Free"
         },
     image: "https://www.google.com/s2/favicons?domain=logostream.dev&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Flogostream.dev&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-11",
     features: [
       "Access to 380,000+ company logos (Stocks, ETFs, Banks, Airlines)",
@@ -1099,6 +1143,7 @@ export const aiTools: AiTool[] = [
         price: "Free"
         },
     image: "https://www.google.com/s2/favicons?domain=getarchivist.org&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fgetarchivist.org%2F&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-12",
     features: [
       "AI-Powered renaming: Generates descriptive names by analyzing image content",
@@ -1119,6 +1164,7 @@ export const aiTools: AiTool[] = [
         price: "Paid"
         },
     image: "https://www.google.com/s2/favicons?domain=bitvoiper.com&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fbitvoiper.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-13",
     features: [
       "Browser-based VoIP calling via WebRTC (no app download required)",
@@ -1139,6 +1185,7 @@ export const aiTools: AiTool[] = [
         price: "Paid"
         },
     image: "https://www.google.com/s2/favicons?domain=vitelnk.com&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fvitelnk.com%2F&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-14",
     features: [
       "Secure HLS streaming: Blocks right-click downloads and browser extensions",
@@ -1159,6 +1206,7 @@ export const aiTools: AiTool[] = [
         price: "Paid"
         },
     image: "https://www.google.com/s2/favicons?domain=www.roomika.ai&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fwww.roomika.ai&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-15",
     features: [
       "AI Redesign: Transform rooms into 20+ styles in under 30 seconds",
@@ -1179,6 +1227,7 @@ export const aiTools: AiTool[] = [
         price: "Freemium"
         },
     image: "https://www.google.com/s2/favicons?domain=www.multic.com&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fwww.multic.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-09",
     features: [
       "GenAI Game Engine specifically designed for multiplayer interactive comics",
@@ -1199,6 +1248,7 @@ export const aiTools: AiTool[] = [
         price: "Free"
         },
     image: "https://www.google.com/s2/favicons?domain=thrive.fi&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fthrive.fi%2F&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-02",
     features: [
       "On-chain analysis: Deep-dive blockchain data for market trends",
@@ -1219,6 +1269,7 @@ export const aiTools: AiTool[] = [
         price: "Paid"
         },
     image: "https://www.google.com/s2/favicons?domain=pressbeat.io&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fpressbeat.io&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-03",
     features: [
       "Organic Press Autopilot: AI-driven research and targeted journalist pitching",
@@ -1239,6 +1290,7 @@ export const aiTools: AiTool[] = [
       price: "Freemium"
       },
     image: "https://www.google.com/s2/favicons?domain=simpleseverance.co&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fsimpleseverance.co&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-04",
     features: [
       "Severance Estimator: Instant payout ranges based on state and tenure",
@@ -1259,6 +1311,7 @@ export const aiTools: AiTool[] = [
       price: "Freemium"
       },
     image: "https://www.google.com/s2/favicons?domain=cookieguard.co&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fcookieguard.co&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-05",
     features: [
       "Global Compliance: Support for GDPR, CCPA, LGPD, and PIPL standards",
@@ -1279,6 +1332,7 @@ export const aiTools: AiTool[] = [
       price: "Freemium"
       },
     image: "https://www.google.com/s2/favicons?domain=simplyhabits.io&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fsimplyhabits.io%2F&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-06",
     features: [
       "Minimalist habit tracking with focused, distraction-free UI",
@@ -1299,6 +1353,7 @@ export const aiTools: AiTool[] = [
       price: "Freemium"
       },
     image: "https://www.google.com/s2/favicons?domain=diffscout.com&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fdiffscout.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-07",
     features: [
       "AI vision-based price monitoring: Works on any site without CSS selectors",
@@ -1319,6 +1374,7 @@ export const aiTools: AiTool[] = [
       price: "Freemium"
       },
     image: "https://www.google.com/s2/favicons?domain=www.test-lab.ai&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fwww.test-lab.ai%2F&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-08",
     features: [
       "Plain English test writing - no scripts, selectors, or code required",
@@ -1339,6 +1395,7 @@ export const aiTools: AiTool[] = [
       price: "Paid"
       },
     image: "https://www.google.com/s2/favicons?domain=saasblueprint.app&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fsaasblueprint.app&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-02",
     maker: {
         name: "Mihai Sandu",
@@ -1365,6 +1422,7 @@ export const aiTools: AiTool[] = [
       price: "Paid"
       },
     image: "https://www.google.com/s2/favicons?domain=bangas.ai&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fbangas.ai&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-03",
     features: [
       "Prompt-free AI ad creation for Meta and Facebook ads at scale",
@@ -1385,6 +1443,7 @@ export const aiTools: AiTool[] = [
       price: "Freemium"
       },
     image: "https://www.google.com/s2/favicons?domain=shortsai.com&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fshortsai.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-04",
     maker: {
         name: "Marko Denic",
@@ -1411,6 +1470,7 @@ export const aiTools: AiTool[] = [
       price: "Freemium"
       },
     image: "https://www.google.com/s2/favicons?domain=linkedgrow.ai&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Flinkedgrow.ai%2Fbeta&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-05",
     maker: {
         name: "Ambika Sarawgi",
@@ -1437,6 +1497,7 @@ export const aiTools: AiTool[] = [
       price: "Free"
       },
     image: "https://www.google.com/s2/favicons?domain=www.credops.io&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fwww.credops.io%2F&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-06",
     maker: {
         name: "Prasada Prabhu",
@@ -1463,6 +1524,7 @@ export const aiTools: AiTool[] = [
       price: "Paid"
       },
     image: "https://www.google.com/s2/favicons?domain=www.podcept.com&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fwww.podcept.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-07",
     features: [
       "Podcast guest booking service for hosts - research, vet, and book guests",
@@ -1483,6 +1545,7 @@ export const aiTools: AiTool[] = [
       price: "Freemium"
       },
     image: "https://www.google.com/s2/favicons?domain=roomstage.ai&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Froomstage.ai&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-08",
     features: [
       "Virtual staging for empty rooms in ~30 seconds",
@@ -1503,6 +1566,7 @@ export const aiTools: AiTool[] = [
       price: "Freemium"
       },
     image: "https://www.google.com/s2/favicons?domain=murmurvt.com&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fmurmurvt.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-09",
     maker: {
         name: "Chase Adams",
@@ -1529,6 +1593,7 @@ export const aiTools: AiTool[] = [
         price: "Free"
         },
     image: "https://www.google.com/s2/favicons?domain=trytails.com&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Ftrytails.com%2F&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-02-23",
     features: [
       "Breed-Specific Matching based on temperament",
@@ -1549,6 +1614,7 @@ export const aiTools: AiTool[] = [
         price: "Paid"
         },
     image: "https://www.google.com/s2/favicons?domain=neonchainx.com&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fneonchainx.com%2F&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-02-24",
     maker: {
         name: "Alex Freas",
@@ -1574,6 +1640,7 @@ export const aiTools: AiTool[] = [
         price: "Paid"
         },
     image: "https://www.google.com/s2/favicons?domain=www.roampads.com&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fwww.roampads.com%2F&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-02-25",
     features: [
       "Verified Infrastructure with speedtest results",
@@ -1593,6 +1660,7 @@ export const aiTools: AiTool[] = [
         price: "Paid"
         },
     image: "https://www.google.com/s2/favicons?domain=www.flowly.tools&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fwww.flowly.tools%2F&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-02-26",
     features: [
       "SubFlow Terminal: Includes liquidity heatmaps and liquidation tracking",
@@ -1613,6 +1681,7 @@ export const aiTools: AiTool[] = [
         price: "Free"
         },
     image: "https://www.google.com/s2/favicons?domain=tryremote.com&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Ftryremote.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-02-27",
     features: [
       "Skill-Based Filtering: Node.js, Python, React, Go, etc.",
@@ -1632,6 +1701,7 @@ export const aiTools: AiTool[] = [
         price: "Free"
         },
     image: "https://www.google.com/s2/favicons?domain=userjam.com&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fuserjam.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-02-28",
     features: [
       "AI-generated daily narrative reports",
@@ -1652,6 +1722,7 @@ export const aiTools: AiTool[] = [
         price: "Paid"
         },
     image: "https://www.google.com/s2/favicons?domain=medshotsai.com&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fmedshotsai.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-02-23",
     features: [
       "Role-Aware Attire: Scrubs, lab coats, business formal",
@@ -1672,6 +1743,7 @@ export const aiTools: AiTool[] = [
         price: "Freemium"
         },
     image: "https://www.google.com/s2/favicons?domain=mixels.ai&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fmixels.ai%2F&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-02-24",
     maker: {
         name: "Alex Freas",
@@ -1697,6 +1769,7 @@ export const aiTools: AiTool[] = [
         price: "Free"
         },
     image: "https://www.google.com/s2/favicons?domain=emailverify.ai&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Femailverify.ai&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-02-25",
     features: [
       "Real-time email verification with 99.9% accuracy",
@@ -1717,6 +1790,7 @@ export const aiTools: AiTool[] = [
         price: "Free"
         },
     image: "https://www.google.com/s2/favicons?domain=Stageflow.ai&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2FStageflow.ai&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-02-26",
     features: [
       "AI product lifestyle photo generation",
@@ -1737,6 +1811,7 @@ export const aiTools: AiTool[] = [
         price: "Freemium"
         },
     image: "https://www.google.com/s2/favicons?domain=getoneprofile.com&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fgetoneprofile.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-02-27",
     maker: {
         name: "Alex Freas",
@@ -1763,6 +1838,7 @@ export const aiTools: AiTool[] = [
         price: "Free"
         },
     image: "https://www.google.com/s2/favicons?domain=www.pdfseek.com&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fwww.pdfseek.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-02-28",
     features: [
       "AI Translation for multi-language documents",
@@ -1782,6 +1858,7 @@ export const aiTools: AiTool[] = [
         price: "Freemium"
         },
     image: "https://www.google.com/s2/favicons?domain=eleidon.com&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Feleidon.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-02-23",
     features: [
       "Cryptographic signing of outbound agent emails",
@@ -1802,6 +1879,7 @@ export const aiTools: AiTool[] = [
         price: "Paid"
         },
     image: "https://www.google.com/s2/favicons?domain=champsignal.com&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fchampsignal.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-02-24",
     features: [
       "AI-Filtered Alerts for relevant competitor changes",
@@ -1822,6 +1900,7 @@ export const aiTools: AiTool[] = [
         price: "Freemium"
         },
     image: "https://www.google.com/s2/favicons?domain=GreatCompany.ai&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2FGreatCompany.ai&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-02-25",
     maker: {
         name: "Alex Freas",
@@ -1854,6 +1933,7 @@ export const aiTools: AiTool[] = [
     pricingDetails: "Starts at 0/mo | 7-day Free Trial (No credit card)",
     integrations: ["Google Business Profile", "Web Widgets"],
     image: "/screenshots/reply-champion.png",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fwww.replychampion.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-02-16",
     maker: {
         name: "Alex Freas",
@@ -1878,6 +1958,7 @@ export const aiTools: AiTool[] = [
     pricingDetails: "Monthly and Annual Subscriptions | Free to start",
     integrations: ["iCloud", "iOS Widgets", "Face ID"],
     image: "/screenshots/encamera.png",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fencamera.app&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-02-17",
     maker: {
         name: "Alex Freas",
@@ -1901,6 +1982,7 @@ export const aiTools: AiTool[] = [
     pricingDetails: "Free Access",
     integrations: ["Property Data Feeds"],
     image: "/screenshots/resideline.png",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2FResideline.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-02-18"
 },
   {
@@ -1919,6 +2001,7 @@ export const aiTools: AiTool[] = [
     pricingDetails: "Free Tier | Pro Plan available",
     integrations: ["Chrome Extension", "LinkedIn", "Job Boards"],
     image: "/screenshots/applytrackr.png",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fwww.applytrackr.com%2F&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-02-19",
     maker: {
         name: "Alex Freas",
@@ -1942,6 +2025,7 @@ export const aiTools: AiTool[] = [
     pricingDetails: "Paid Subscription",
     integrations: ["Twilio", "Google Business Profile", "CRM Connectors"],
     image: "/screenshots/lino.png",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fuselino.com%2F&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-02-20"
 },
   {
@@ -1960,6 +2044,7 @@ export const aiTools: AiTool[] = [
     pricingDetails: "Starter: 9/mo | Pro: 9/mo | Ultra: 49/mo | 7-day Trial",
     integrations: ["Shopify", "Amazon", "Meta", "TikTok", "Google", "YouTube"],
     image: "/screenshots/highreach.png",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fhighreach.ai&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-02-21"
 },
   {
@@ -1978,6 +2063,7 @@ export const aiTools: AiTool[] = [
     pricingDetails: "Demo-based (Custom Enterprise plans)",
     integrations: ["Zendesk", "Salesforce", "Intercom", "Twilio", "Slack"],
     image: "/screenshots/ayudo.png",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fwww.ayudo.ai&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-02-22"
 },
   {
@@ -1989,6 +2075,7 @@ export const aiTools: AiTool[] = [
         price: "Freemium"
         },
     image: "/screenshots/linkpilot.png",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Flink-pilot.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-02-16",
     features: [
       "Voice-Matched AI writing system",
@@ -2009,6 +2096,7 @@ export const aiTools: AiTool[] = [
         price: "Freemium"
         },
     image: "/screenshots/stick-audio.png",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fstick.audio&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-02-17",
     features: [
       "Unlimited Voice Cloning",
@@ -2029,6 +2117,7 @@ export const aiTools: AiTool[] = [
         price: "Paid"
         },
     image: "/screenshots/densops.png",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fdensops.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-02-18",
     features: [
       "Natural Language Search (e.g. 'plumbers in Miami')",
@@ -2048,6 +2137,7 @@ export const aiTools: AiTool[] = [
         price: "Free"
         },
     image: "/screenshots/pngtostl.png",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fpngtostl.xyz&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-02-19",
     features: [
       "Image-to-3D model conversion",
@@ -2067,6 +2157,7 @@ export const aiTools: AiTool[] = [
         price: "Freemium"
         },
     image: "https://www.google.com/s2/favicons?domain=octopost.ai&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Foctopost.ai&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-02-20",
     features: [
       "Schedule across 8 platforms simultaneously",
@@ -2087,6 +2178,7 @@ export const aiTools: AiTool[] = [
         price: "Freemium"
         },
     image: "https://www.google.com/s2/favicons?domain=bridgecall.app&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fbridgecall.app&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-02-21",
     features: [
       "Real-time video call translation",
@@ -2106,6 +2198,7 @@ export const aiTools: AiTool[] = [
         price: "Freemium"
         },
     image: "https://www.google.com/s2/favicons?domain=getlevl.ai&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fgetlevl.ai&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-02-22",
     features: [
       "Seasonal leaderboards and XP systems",
@@ -2125,6 +2218,7 @@ export const aiTools: AiTool[] = [
         price: "Freemium"
         },
     image: "https://www.google.com/s2/favicons?domain=greenpt.nl&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fgreenpt.nl%2Ffrida&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-02-16",
     features: [
       "Landscaping/Green industry specialized AI (Frida)",
@@ -2152,6 +2246,7 @@ export const aiTools: AiTool[] = [
     pricingDetails: "Essentials: .99 one-time | Growth: 2.99/mo | Freedom: 2.99/mo",
     integrations: ["Google Drive", "Telegram", "Zoom", "Any video platform"],
     image: "https://www.google.com/s2/favicons?domain=app.imeett.ai&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fapp.imeett.ai&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-02-09"
   },
 {
@@ -2169,6 +2264,7 @@ export const aiTools: AiTool[] = [
     pricingDetails: "Freemium",
     integrations: ["SEO Tools"],
     image: "https://www.google.com/s2/favicons?domain=www.webcomparis.com&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fwww.webcomparis.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-02-10"
   },
 {
@@ -2186,6 +2282,7 @@ export const aiTools: AiTool[] = [
     pricingDetails: "Free (5 credits) | Paid from /mo |  per doc",
     integrations: ["LinkedIn", "Common App"],
     image: "https://www.google.com/s2/favicons?domain=www.pathwiseai.io&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fwww.pathwiseai.io%2F&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-02-11"
   },
 {
@@ -2203,6 +2300,7 @@ export const aiTools: AiTool[] = [
     pricingDetails: "Pay-as-you-go (Shells) | Credits never expire",
     integrations: ["Windows", "Mac", "YouTube"],
     image: "https://www.google.com/s2/favicons?domain=transgull.com&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Ftransgull.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-02-12"
   },
 {
@@ -2221,6 +2319,7 @@ export const aiTools: AiTool[] = [
     pricingDetails: "Free until May 2026 | Starter: 9/mo | Pro: 9/mo",
     integrations: ["Slack", "Teams", "Webhooks", "Make.com", "n8n", "Power Automate"],
     image: "https://www.google.com/s2/favicons?domain=watchflow.io&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fwatchflow.io&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-02-13"
   },
 {
@@ -2238,6 +2337,7 @@ export const aiTools: AiTool[] = [
     pricingDetails: "Starter: 99/mo | Pro: ,499/mo",
     integrations: ["Ticketmaster", "StubHub", "Eventbrite", "SeatGeek", "Viagogo"],
     image: "https://www.google.com/s2/favicons?domain=ticketsdata.com&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fticketsdata.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-02-15"
   },
 {
@@ -2255,6 +2355,7 @@ export const aiTools: AiTool[] = [
     pricingDetails: "Free Access",
     integrations: [],
     image: "https://www.google.com/s2/favicons?domain=www.71vote.com&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fwww.71vote.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-02-09"
   },
 {
@@ -2272,6 +2373,7 @@ export const aiTools: AiTool[] = [
     pricingDetails: "Paid Managed Hosting",
     integrations: ["Telegram", "WhatsApp", "Discord", "Slack"],
     image: "https://www.google.com/s2/favicons?domain=privatclaw.com&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fprivatclaw.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-02-10"
   },
 {
@@ -2289,6 +2391,7 @@ export const aiTools: AiTool[] = [
     pricingDetails: "Premium: 5/mo | 7-day Free Trial",
     integrations: ["PagerDuty", "Slack", "xMatters"],
     image: "https://www.google.com/s2/favicons?domain=www.pagersync.com&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fwww.pagersync.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-02-11"
   },
 {
@@ -2306,6 +2409,7 @@ export const aiTools: AiTool[] = [
     pricingDetails: "Free (Unlimited forms) | Pro: 9/mo (AI features)",
     integrations: ["Zapier", "Slack", "Google Sheets", "HubSpot", "Webhooks"],
     image: "https://www.google.com/s2/favicons?domain=polyform.to&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fpolyform.to&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-02-12"
   },
 {
@@ -2323,6 +2427,7 @@ export const aiTools: AiTool[] = [
     pricingDetails: "Free (5 services) | Pro: 9/mo",
     integrations: ["AWS", "Azure", "Google Cloud", "SaaS Status Pages"],
     image: "https://www.google.com/s2/favicons?domain=www.statuscentral.io&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fwww.statuscentral.io%2F&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-02-13"
   },
 {
@@ -2340,6 +2445,7 @@ export const aiTools: AiTool[] = [
     pricingDetails: "Pro: €9.5/mo | Lifetime: €99 | 24h Free Trial",
     integrations: ["Cursor", "Claude", "Lovable", "Bolt", "v0"],
     image: "https://www.google.com/s2/favicons?domain=miromiro.app&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fmiromiro.app&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-02-14"
   },
 {
@@ -2357,6 +2463,7 @@ export const aiTools: AiTool[] = [
     pricingDetails: "Free to start",
     integrations: ["MetaTrader 5", "MQL5"],
     image: "https://www.google.com/s2/favicons?domain=www.traidies.com&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fwww.traidies.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-02-15"
   },
 {
@@ -2374,6 +2481,7 @@ export const aiTools: AiTool[] = [
     pricingDetails: "Waitlist (Early Access)",
     integrations: ["Cursor", "VS Code", "SAST tools"],
     image: "https://www.google.com/s2/favicons?domain=secvibe.ai&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fsecvibe.ai&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-02-06"
   },
 {
@@ -2391,6 +2499,7 @@ export const aiTools: AiTool[] = [
     pricingDetails: "Free Plan available | Contact for custom quotes",
     integrations: ["Bank feeds", "Online Payments"],
     image: "https://www.google.com/s2/favicons?domain=www.getalignmint.org&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fwww.getalignmint.org&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-02-07"
   },
 {
@@ -2402,6 +2511,7 @@ export const aiTools: AiTool[] = [
         price: "Freemium"
         },
     image: "https://www.google.com/s2/favicons?domain=iamglad.ai&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fiamglad.ai&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-02-09",
     features: [
       "Voice learning from websites/blogs",
@@ -2421,6 +2531,7 @@ export const aiTools: AiTool[] = [
         price: "Freemium"
         },
     image: "https://www.google.com/s2/favicons?domain=www.organicpilot.ai&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fwww.organicpilot.ai&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-02-02",
     features: [
       "30-day AI-generated content plans",
@@ -2441,6 +2552,7 @@ export const aiTools: AiTool[] = [
         price: "Freemium"
         },
     image: "https://www.google.com/s2/favicons?domain=www.maptrics.io&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fwww.maptrics.io&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-02-03",
     features: [
       "SEO Health Score monitoring",
@@ -2461,6 +2573,7 @@ export const aiTools: AiTool[] = [
         price: "Freemium"
         },
     image: "https://www.google.com/s2/favicons?domain=llmwise.ai&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fllmwise.ai&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-02-04",
     features: [
       "Prompt Versioning and A/B testing",
@@ -2487,6 +2600,7 @@ export const aiTools: AiTool[] = [
     pricingDetails: "Managed: /mo | BYOK: /usr/bin/bash-49/mo + AWS costs",
     integrations: ["AWS SES", "Claude", "Cursor", "Clerk", "Auth0"],
     image: "https://www.google.com/s2/favicons?domain=xmit.sh&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fxmit.sh&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-02-05"
   },
 {
@@ -2498,6 +2612,7 @@ export const aiTools: AiTool[] = [
         price: "Freemium"
         },
     image: "https://www.google.com/s2/favicons?domain=docutracker.io&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Fdocutracker.io&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-01-20",
     features: [
       "Real-time open and read notifications",
@@ -2517,6 +2632,7 @@ export const aiTools: AiTool[] = [
         price: "Paid"
         },
     image: "https://www.google.com/s2/favicons?domain=urlgenius.com&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Furlgenius.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-04-25",
     features: [
       "App-to-App deep linking (IG, Amazon, YouTube)",
@@ -2537,6 +2653,7 @@ export const aiTools: AiTool[] = [
         price: "Paid"
         },
     image: "https://www.google.com/s2/favicons?domain=texthuman.ai&sz=128",
+        screenshot: "https://api.microlink.io?url=https%3A%2F%2Ftexthuman.ai&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-04-25",
     features: [
       "AI Detection Bypass (GPTZero, Originality.ai)",
