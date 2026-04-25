@@ -2263,14 +2263,136 @@ pricingDetails: "Free to try",
   },
 {
     name: "TransGull",
-    description: "Multilingual translation platform that uses contextual AI for real-world conversations, videos, and meetings.",
+    description: "AI translation for conversations, live speech, images & videos with superior accuracy",
     url: "https://transgull.com",
+    category: "Productivity",
+    tags: {
+        useCase: ["Personal"],
+        price: "Freemium",
+        skill: "Beginner"
+    },
+    image: "https://www.google.com/s2/favicons?domain=transgull.com&sz=128",
+    dateAdded: "2026-02-12",
+    features: [
+      "Dialogue translation with voice and text",
+      "Image and video subtitle translation",
+      "Simultaneous interpretation for meetings/live streams",
+      "Desktop apps for Windows and Mac",
+      "Pay-as-you-go credits (Shells) - no subscription"
+    ],
+    pricingDetails: "Free download | Pay-as-you-go credits (Shells) never expire",
+    integrations: ["iOS", "Android", "Windows", "Mac"]
+  },
+{
+    name: "Watchflow",
+    description: "Complete infrastructure monitoring - SSL, heartbeats, and APIs",
+    url: "https://watchflow.io",
     category: "Productivity",
     tags: {
         useCase: ["Business"],
         price: "Freemium",
+        skill: "Intermediate"
+    },
+    image: "https://www.google.com/s2/favicons?domain=watchflow.io&sz=128",
+    dateAdded: "2026-02-13",
+    features: [
+      "SSL certificate monitoring with auto-renewal detection",
+      "Heartbeat monitoring for scheduled tasks/cron jobs",
+      "API monitoring with schema change detection",
+      "Slack, Email, Teams, Webhook alerts",
+      "Native modules for Make.com and n8n"
+    ],
+    pricingDetails: "Free until May 2026 | Starter: $19/mo | Pro: $49/mo | Business: $99/mo",
+    integrations: ["Slack", "Microsoft Teams", "Make.com", "n8n", "Power Automate"]
+  },
+{
+    name: "TicketsData",
+    description: "Real-time ticket API for Ticketmaster, StubHub, SeatGeek and 10+ marketplaces",
+    url: "https://ticketsdata.com",
+    category: "Productivity",
+    tags: {
+        useCase: ["Business"],
+        price: "Paid",
+        skill: "Advanced"
+    },
+    image: "https://www.google.com/s2/favicons?domain=ticketsdata.com&sz=128",
+    dateAdded: "2026-02-15",
+    features: [
+      "Real-time ticket inventory and pricing API",
+      "10+ marketplaces: Ticketmaster, StubHub, SeatGeek, VividSeats, Eventbrite",
+      "Arbitrage opportunities detection",
+      "Python, Node.js, PHP, Go SDKs",
+      "99.97% uptime"
+    ],
+    pricingDetails: "Starter: $499/mo (10K credits) | Pro: $2,499/mo (250K credits) | Business: Custom",
+    integrations: ["Python", "Node.js", "PHP", "Ruby", "Go"]
+  },
+{
+    name: "71vote",
+    description: "AI panel with 20+ experts debate your decisions in real-time",
+    url: "https://www.71vote.com",
+    category: "Productivity",
+    tags: {
+        useCase: ["Personal"],
+        price: "Freemium",
         skill: "Beginner"
     },
+    image: "https://www.google.com/s2/favicons?domain=www.71vote.com&sz=128",
+    dateAdded: "2026-02-09",
+    features: [
+      "20+ AI experts debate your decisions",
+      "Health: Doctor, Psychotherapist, Dietitian, Veterinarian",
+      "Business strategy and life decisions",
+      "7 decision methods: Socratic, Red/Blue Team, Pre-mortem",
+      "Real-time structured analysis"
+    ],
+    pricingDetails: "Freemium",
+    integrations: []
+  },
+{
+    name: "PrivatClaw",
+    description: "Managed OpenClaw AI assistant on dedicated VPS",
+    url: "https://privatclaw.com",
+    category: "Productivity",
+    tags: {
+        useCase: ["Business"],
+        price: "Paid",
+        skill: "Intermediate"
+    },
+    image: "https://www.google.com/s2/favicons?domain=privatclaw.com&sz=128",
+    dateAdded: "2026-02-10",
+    features: [
+      "Dedicated VPS with OpenClaw pre-installed",
+      "Telegram, WhatsApp, Discord, Slack integrations",
+      "24/7 autonomous AI agent",
+      "Managed updates, backups, security",
+      "No DevOps required"
+    ],
+    pricingDetails: "Paid (managed hosting)",
+    integrations: ["Telegram", "WhatsApp", "Discord", "Slack"]
+  },
+{
+    name: "PagerSync",
+    description: "Sync PagerDuty on-call roster with Slack User Groups",
+    url: "https://www.pagersync.com",
+    category: "Productivity",
+    tags: {
+        useCase: ["Business"],
+        price: "Freemium",
+        skill: "Intermediate"
+    },
+    image: "https://www.google.com/s2/favicons?domain=www.pagersync.com&sz=128",
+    dateAdded: "2026-02-11",
+    features: [
+      "PagerDuty schedule to Slack sync",
+      "Auto post on-call changes to Slack",
+      "Multi-team aliases support",
+      "Incident management integration",
+      "7-day free trial"
+    ],
+    pricingDetails: "Premium: $25/mo | Enterprise: Contact for pricing",
+    integrations: ["PagerDuty", "Slack", "xMatters"]
+  },
     image: "https://www.google.com/s2/favicons?domain=transgull.com&sz=128",
     dateAdded: "2026-02-12",
     features: [
@@ -2414,7 +2536,7 @@ pricingDetails: "Free to try",
   },
 {
     name: "Polyform",
-    description: "Build beautiful forms in seconds with AI-powered form generation.",
+    description: "Build beautiful forms in seconds with AI - unlimited forms and responses",
     url: "https://polyform.to",
     category: "Productivity",
     tags: {
@@ -2422,6 +2544,128 @@ pricingDetails: "Free to try",
         price: "Free",
         skill: "Beginner"
     },
+    image: "https://www.google.com/s2/favicons?domain=polyform.to&sz=128",
+    dateAdded: "2026-02-12",
+    features: [
+      "Polly AI - describe form in plain English",
+      "Unlimited forms and responses",
+      "Advanced theming and conditional logic",
+      "Real-time collaboration",
+      "Zapier integration (8,000+ apps)"
+    ],
+    pricingDetails: "Free forever | Pro: $29/mo",
+    integrations: ["Slack", "Google Sheets", "HubSpot", "Zapier"]
+  },
+{
+    name: "Status Central",
+    description: "Monitor all your services in one place - real-time status updates",
+    url: "https://www.statuscentral.io/",
+    category: "Productivity",
+    tags: {
+        useCase: ["Business"],
+        price: "Free",
+        skill: "Beginner"
+    },
+    image: "https://www.google.com/s2/favicons?domain=www.statuscentral.io&sz=128",
+    dateAdded: "2026-02-13",
+    features: [
+      "Multi-source status aggregation",
+      "Real-time service monitoring",
+      "Cloud monitoring (AWS, Azure, GCP)",
+      "Incident management and timelines",
+      "Branded status pages"
+    ],
+    pricingDetails: "Free: 5 services | Pro: $29/mo | Enterprise: Custom",
+    integrations: ["AWS", "Azure", "Google Cloud", "Stripe"]
+  },
+{
+    name: "MiroMiro",
+    description: "Extract code, assets & design tokens from any website - paste into Cursor/Claude",
+    url: "https://miromiro.app",
+    category: "Code Assistance",
+    tags: {
+        useCase: ["Business"],
+        price: "Freemium",
+        skill: "Intermediate"
+    },
+    image: "https://www.google.com/s2/favicons?domain=miromiro.app&sz=128",
+    dateAdded: "2026-02-14",
+    features: [
+      "Hover to extract colors, fonts, spacing, CSS",
+      "Export as clean Tailwind HTML",
+      "Extract images, SVGs, icons in bulk",
+      "Full Tailwind config from any site",
+      "Chrome extension - runs locally"
+    ],
+    pricingDetails: "Free 24hr trial | Pro: €9.5/mo | Lifetime: €49 one-time",
+    integrations: ["Cursor", "Claude", "v0", "Lovable", "Bolt"]
+  },
+{
+    name: "Traidies",
+    description: "Turn trading ideas into automated MQL5 bots in seconds",
+    url: "https://www.traidies.com",
+    category: "Code Assistance",
+    tags: {
+        useCase: ["Business"],
+        price: "Freemium",
+        skill: "Intermediate"
+    },
+    image: "https://www.google.com/s2/favicons?domain=www.traidies.com&sz=128",
+    dateAdded: "2026-02-15",
+    features: [
+      "Plain English to MQL5 code",
+      "Instant Expert Advisor generation",
+      "Automated backtesting",
+      "TradingView/Pine Script conversion",
+      "MT5 platform support"
+    ],
+    pricingDetails: "Freemium",
+    integrations: ["MetaTrader 5"]
+  },
+{
+    name: "SecVibe",
+    description: "Security controls for AI-generated code - real-time analysis",
+    url: "https://secvibe.ai",
+    category: "Code Assistance",
+    tags: {
+        useCase: ["Business"],
+        price: "Paid",
+        skill: "Advanced"
+    },
+    image: "https://www.google.com/s2/favicons?domain=secvibe.ai&sz=128",
+    dateAdded: "2026-02-06",
+    features: [
+      "Specialized detection for AI-generated code",
+      "Real-time code analysis",
+      "Context-aware adaptive security",
+      "Analytics dashboard",
+      "VS Code integration"
+    ],
+    pricingDetails: "Paid (early access)",
+    integrations: ["VS Code", "Cursor"]
+  },
+{
+    name: "Alignmint",
+    description: "All-in-one nonprofit accounting, donor CRM, volunteer tracking, and fundraising",
+    url: "https://www.getalignmint.org",
+    category: "Productivity",
+    tags: {
+        useCase: ["Business"],
+        price: "Free",
+        skill: "Beginner"
+    },
+    image: "https://www.google.com/s2/favicons?domain=www.getalignmint.org&sz=128",
+    dateAdded: "2026-02-07",
+    features: [
+      "True fund accounting with restricted funds",
+      "Donor CRM with self-service portal",
+      "Volunteer management and tracking",
+      "Events and ticketing",
+      "Minty AI - ask questions about your data"
+    ],
+    pricingDetails: "Free plan available | Paid plans (no credit card to start)",
+    integrations: ["Bank feeds"]
+  },
     image: "https://www.google.com/s2/favicons?domain=polyform.to&sz=128",
     dateAdded: "2026-02-12",
     features: [
