@@ -165,10 +165,10 @@ export default function BadgePage() {
               <iframe
                 src="https://docs.google.com/forms/d/e/1FAIpQLSe1VR6EBsPYLb0rVjS4h9xyyDVzdqNcHUNjKvvhXhV6_1DV-A/viewform?embedded=true"
                 width="100%"
-                height="1304"
-                frameBorder="0"
-                marginHeight="0"
-                marginWidth="0"
+                height={1304}
+                frameBorder={0}
+                marginHeight={0}
+                marginWidth={0}
                 className="block"
               >
                 Loading…
