@@ -34,7 +34,6 @@ interface ExamplesPageProps {
 const CARD_COLORS = ['#6A37AC', '#7B7662', '#333333', '#C5CC5C', '#D8D8D8'];
 
 function groupByWeek(items: EnrichedExampleRecord[]) {
-  // Sort by publish_date descending, but latest additions go to current week's drop
   const sorted = [...items].sort((a, b) => {
     const dateA = new Date(a.publish_date || '2026-03-01').getTime();
     const dateB = new Date(b.publish_date || '2026-03-01').getTime();
@@ -44,15 +43,16 @@ function groupByWeek(items: EnrichedExampleRecord[]) {
   const groups: { [key: string]: EnrichedExampleRecord[] } = {};
   const itemsPerBatch = 7;
 
-  // Current week's Sunday
+  // Next week's Sunday (the drop date)
   const now = new Date();
-  const currentSunday = new Date(now);
-  currentSunday.setDate(now.getDate() - now.getDay());
-  currentSunday.setHours(0, 0, 0, 0);
+  const nextSunday = new Date(now);
+  nextSunday.setDate(now.getDate() + (7 - now.getDay()) % 7);
+  if (now.getDay() === 0) nextSunday.setDate(now.getDate()); // If today is Sunday, use today
+  nextSunday.setHours(0, 0, 0, 0);
 
-  // All items go into current week's drop
-  const currentWeekLabel = currentSunday.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-  groups[currentWeekLabel] = sorted.slice(0, itemsPerBatch);
+  // All items go into next Sunday's drop
+  const dropLabel = nextSunday.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+  groups[dropLabel] = sorted.slice(0, itemsPerBatch);
 
   // Remaining items go into previous weeks
   const remaining = sorted.slice(itemsPerBatch);
@@ -60,8 +60,8 @@ function groupByWeek(items: EnrichedExampleRecord[]) {
   let itemIndex = 0;
 
   while (itemIndex < remaining.length) {
-    const weekStart = new Date(currentSunday);
-    weekStart.setDate(currentSunday.getDate() - 7 * weekOffset);
+    const weekStart = new Date(nextSunday);
+    weekStart.setDate(nextSunday.getDate() - 7 * weekOffset);
     const weekLabel = weekStart.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
     const batch = remaining.slice(itemIndex, itemIndex + itemsPerBatch);
     groups[weekLabel] = batch;
