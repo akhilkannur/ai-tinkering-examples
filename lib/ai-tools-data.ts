@@ -187,8 +187,8 @@ export const aiTools: AiTool[] = [
     category: "Productivity",
     tags: {
         useCase: ["Business"],
-        price: "Freemium",
-        skill: "Beginner"
+        price: "Paid",
+        skill: "Intermediate"
     },
     image: "https://www.google.com/s2/favicons?domain=www.agentgatepay.com&sz=128",
     dateAdded: "2026-03-31",
@@ -197,7 +197,15 @@ export const aiTools: AiTool[] = [
         role: "Indie Maker",
         twitter: "michaellcoleman7",
         image: "https://unavatar.io/twitter/michaellcoleman7"
-    }
+    },
+    features: [
+      "Secure payment endpoints for autonomous AI agent transactions",
+      "Programmable digital wallets designed for non-human entities",
+      "Spending limits and permission-based usage guardrails",
+      "Real-time transaction monitoring and auditing for compliance"
+    ],
+    pricingDetails: "Enterprise Pricing (Contact for details)",
+    integrations: ["Stripe", "Ethereum", "OpenAI", "Anthropic", "REST API"]
 },
   {
     name: "Hypnotype",
@@ -206,7 +214,7 @@ export const aiTools: AiTool[] = [
     category: "Video & Audio",
     tags: {
         useCase: ["Business"],
-        price: "Freemium",
+        price: "Paid",
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=hypnotype.app&sz=128",
@@ -216,7 +224,15 @@ export const aiTools: AiTool[] = [
         role: "AI Developer",
         twitter: "valtiel",
         image: "https://unavatar.io/twitter/valtiel"
-    }
+    },
+    features: [
+      "AI Sync Engine for frame-perfect text-to-audio synchronization",
+      "Retention-first 'Premium-Minimalist' video templates",
+      "100% cloud-based video production and rendering pipeline",
+      "Synchronized visual audio waveforms for voice content"
+    ],
+    pricingDetails: "$29/mo (Creator) to $80/mo (Pro)",
+    integrations: ["YouTube", "TikTok", "Substack", "Spotify"]
 },
   {
     name: "Computer Keyboard Shortcuts",
@@ -225,7 +241,7 @@ export const aiTools: AiTool[] = [
     category: "Productivity",
     tags: {
         useCase: ["Business"],
-        price: "Freemium",
+        price: "Free",
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=computerkeyboardshortcuts.org&sz=128",
@@ -235,17 +251,25 @@ export const aiTools: AiTool[] = [
         role: "Indie Maker",
         twitter: "danielba777_",
         image: "https://unavatar.io/twitter/danielba777_"
-    }
+    },
+    features: [
+      "Cross-Platform database for Windows, MacOS, and Linux hotkeys",
+      "Application-specific mapping for Terminal, IDEs, and Browsers",
+      "Downloadable PDF and PNG cheatsheets for offline reference",
+      "Searchable responsive index for rapid shortcut lookup"
+    ],
+    pricingDetails: "Free / Open Access",
+    integrations: ["Windows", "MacOS", "Linux", "Chrome", "Firefox"]
 },
   {
     name: "Floowed",
     description: "AI-powered credit workflow automation platform that extracts, validates, and enriches application data while flagging risks.",
     url: "https://floowed.com",
-    category: "Image Generation",
+    category: "Productivity",
     tags: {
         useCase: ["Business"],
-        price: "Freemium",
-        skill: "Beginner"
+        price: "Paid",
+        skill: "Intermediate"
     },
     image: "https://www.google.com/s2/favicons?domain=floowed.com&sz=128",
     dateAdded: "2026-03-24",
@@ -254,16 +278,24 @@ export const aiTools: AiTool[] = [
         role: "SaaS Builder",
         twitter: "saasdiff",
         image: "https://unavatar.io/twitter/saasdiff"
-    }
+    },
+    features: [
+      "Intelligent Document Processing (IDP) with 99% extraction accuracy",
+      "No-code 'AI Flows' for end-to-end document routing and logic",
+      "Human-in-the-Loop verification for low-confidence data points",
+      "Automated custom business logic and validation rule engine"
+    ],
+    pricingDetails: "Enterprise (14-day Free Trial available)",
+    integrations: ["Salesforce", "HubSpot", "KYC Providers", "REST API"]
 },
   {
     name: "StrideFuel",
     description: "AI-powered nutrition and weight loss companion featuring voice logging and adaptive coaching specifically designed for GLP-1 users.",
     url: "https://stride-fuel.com",
-    category: "Image Generation",
+    category: "Productivity",
     tags: {
         useCase: ["Business"],
-        price: "Free",
+        price: "Paid",
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=stride-fuel.com&sz=128",
@@ -273,7 +305,15 @@ export const aiTools: AiTool[] = [
         role: "Full-stack Developer",
         twitter: "davemoggio",
         image: "https://unavatar.io/twitter/davemoggio"
-    }
+    },
+    features: [
+      "Multimodal AI Logging via photo, voice, and barcode scanning",
+      "Specialized GLP-1 support module for Ozempic/Wegovy users",
+      "6 distinct AI trainer personalities for adaptive coaching",
+      "Predictive analytics for weight loss velocity and health trends"
+    ],
+    pricingDetails: "$9.99/mo (Plus) with 7-day free trial",
+    integrations: ["Apple Health", "HealthKit", "iOS"]
 },
   {
     name: "Oravida AI",
@@ -292,16 +332,24 @@ export const aiTools: AiTool[] = [
         role: "Indie Maker",
         twitter: "Infinity-Joakim-106",
         image: "https://unavatar.io/twitter/Infinity-Joakim-106"
-    }
+    },
+    features: [
+      "Resume-to-Profile transformation for interactive pages",
+      "AI-Powered skill gap analysis for career growth",
+      "Dynamic portfolio hosting for media-rich case studies",
+      "Intelligence-driven career suggestions and trends"
+    ],
+    pricingDetails: "Free to build (Premium tiers available)",
+    integrations: ["LinkedIn"]
 },
   {
     name: "AIRankPilot",
     description: "Helps local businesses get discovered by search engines and AI tools by suggesting optimized content strategies.",
     url: "https://airankpilot.com",
-    category: "Productivity",
+    category: "SEO",
     tags: {
         useCase: ["Business"],
-        price: "Freemium",
+        price: "Paid",
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=airankpilot.com&sz=128",
@@ -311,7 +359,15 @@ export const aiTools: AiTool[] = [
         role: "SEO Expert",
         twitter: "neelpatel_seo",
         image: "https://unavatar.io/twitter/neelpatel_seo"
-    }
+    },
+    features: [
+      "AI Visibility Audit for ChatGPT and Perplexity",
+      "Automated Local SEO content strategy and generation",
+      "Google Business Profile (GBP) post automation",
+      "LASI Score monitoring for AI search index performance"
+    ],
+    pricingDetails: "$49/mo (Basic) to $199/mo (Pro)",
+    integrations: ["WordPress", "Google Business Profile"]
 },
   {
     name: "BookSwift",
@@ -320,7 +376,7 @@ export const aiTools: AiTool[] = [
     category: "Productivity",
     tags: {
         useCase: ["Business"],
-        price: "Freemium",
+        price: "Paid",
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=www.bookswift.app&sz=128",
@@ -330,16 +386,24 @@ export const aiTools: AiTool[] = [
         role: "Indie Maker",
         twitter: "michaellcoleman7",
         image: "https://unavatar.io/twitter/michaellcoleman7"
-    }
+    },
+    features: [
+      "AI Voice Assistant for 24/7 reception and booking",
+      "Multi-channel automation (Phone, SMS, WhatsApp)",
+      "Smart IVR call routing for professional triage",
+      "Automated follow-ups and confirmation reminders"
+    ],
+    pricingDetails: "Starts at $39/mo (14-day Free Trial)",
+    integrations: ["Google Calendar", "WhatsApp", "SMS"]
 },
   {
     name: "SlidesCockpit",
     description: "AI tool to clone viral TikTok content for your product and automate posting across platforms.",
     url: "https://slidescockpit.com/",
-    category: "Productivity",
+    category: "Marketing",
     tags: {
         useCase: ["Business"],
-        price: "Freemium",
+        price: "Paid",
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=slidescockpit.com&sz=128",
@@ -349,7 +413,15 @@ export const aiTools: AiTool[] = [
         role: "App Builder",
         twitter: "danielba777_",
         image: "https://unavatar.io/twitter/danielba777_"
-    }
+    },
+    features: [
+      "Viral Content Cloning for TikTok slideshow formats",
+      "AI-powered intelligent remixing of visuals and CTAs",
+      "Automated multi-account posting and scheduling",
+      "Built-in hooks and captions optimized for app growth"
+    ],
+    pricingDetails: "$19/mo (Starter) to $129/mo (Pro)",
+    integrations: ["TikTok", "Chrome Extension"]
 },
   {
     name: "3dSynth.app",
@@ -358,17 +430,25 @@ export const aiTools: AiTool[] = [
     category: "Productivity",
     tags: {
         useCase: ["Business"],
-        price: "Freemium",
-        skill: "Beginner"
+        price: "Paid",
+        skill: "Intermediate"
     },
-    image: "https://www.google.com/s2/favicons?domain=3dsynth.app&sz=128",
-    dateAdded: "2026-03-23",
+    image: "https://www.google.com/s2/favicons?domain=3dSynth.app&sz=128",
+    dateAdded: "2026-03-30",
     maker: {
         name: "Nic Polotnianko",
         role: "Indie Hacker",
         twitter: "nikpolale",
         image: "https://unavatar.io/twitter/nikpolale"
-    }
+    },
+    features: [
+      "Procedural Toolpath Engine for direct G-code generation",
+      "SynthBlocks node-based visual logic environment",
+      "31+ Procedural modifiers (Fractals, Noise, Ripples)",
+      "Real-time G-code visualization and Monaco editor sync"
+    ],
+    pricingDetails: "Free in-browser (Desktop commercial: $39 one-time)",
+    integrations: ["Bambu Lab", "Prusa", "Creality", "Voron"]
 },
   {
     name: "Crypto News Navigator",
