@@ -49,40 +49,42 @@ function groupByWeek(items: EnrichedExampleRecord[]) {
   nextSunday.setDate(now.getDate() + (7 - now.getDay()) % 7);
   if (now.getDay() === 0) nextSunday.setDate(now.getDate());
   nextSunday.setHours(0, 0, 0, 0);
-  const dropLabel = nextSunday.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 
-  // Items from last 7 days go to current drop (Apr 26)
+  // Items from last 7 days go to Apr 26 drop
   const sessionStart = new Date(nextSunday);
   sessionStart.setDate(nextSunday.getDate() - 7);
 
+  const currentDrop: EnrichedExampleRecord[] = [];
+  const olderItems: EnrichedExampleRecord[] = [];
+
   sorted.forEach((item) => {
     const itemDate = new Date(item.publish_date || '2026-03-01');
-    let weekStart = new Date(nextSunday);
-
     if (itemDate >= sessionStart) {
-      weekStart = new Date(nextSunday);
+      currentDrop.push(item);
     } else {
-      while (itemDate < weekStart) {
-        weekStart = new Date(weekStart.getTime() - oneWeek);
-      }
+      olderItems.push(item);
     }
-
-    const weekLabel = weekStart.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-
-    if (!groups[weekLabel]) {
-      groups[weekLabel] = [];
-    }
-    groups[weekLabel].push(item);
   });
 
-  // If last batch has < 4 items, merge into previous batch
+  // Current drop is Apr 26, 2026
+  groups[nextSunday.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })] = currentDrop;
+
+  // Older items into groups of 7, going back by week
+  let weekStart = new Date(nextSunday.getTime() - oneWeek);
+  let i = 0;
+  while (i < olderItems.length) {
+    const weekLabel = weekStart.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+    const batch = olderItems.slice(i, i + 7);
+    groups[weekLabel] = batch;
+    i += 7;
+    weekStart = new Date(weekStart.getTime() - oneWeek);
+  }
+
+  // If last batch has < 4 items, merge into previous
   const weekLabels = Object.keys(groups).sort((a, b) => new Date(b).getTime() - new Date(a).getTime());
-  if (weekLabels.length > 1) {
-    const lastBatch = groups[weekLabels[0]];
-    if (lastBatch.length < 4) {
-      groups[weekLabels[1]] = [...lastBatch, ...groups[weekLabels[1]]];
-      delete groups[weekLabels[0]];
-    }
+  if (weekLabels.length > 1 && groups[weekLabels[0]].length < 4) {
+    groups[weekLabels[1]] = [...groups[weekLabels[0]], ...groups[weekLabels[1]]];
+    delete groups[weekLabels[0]];
   }
 
   return Object.entries(groups).sort((a, b) => new Date(b[0]).getTime() - new Date(a[0]).getTime());
