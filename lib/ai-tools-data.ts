@@ -4,11 +4,10 @@ export interface AiTool {
   url: string;
   category: string;
   tags: {
-    useCase: string[];
     price: string;
-    skill: string;
   };
   image: string;
+  screenshot?: string;
   dateAdded: string;
   featured?: boolean;
   maker?: {
@@ -30,11 +29,10 @@ export const aiTools: AiTool[] = [
     url: "https://www.vidmix.ai",
     category: "Video & Audio",
     tags: {
-        useCase: ["Business"],
-        price: "Paid",
-        skill: "Beginner"
-    },
+        price: "Paid"
+        },
     image: "https://www.google.com/s2/favicons?domain=vidmix.ai&sz=128",
+    screenshot: "https://api.microlink.io?url=https%3A%2F%2Fwww.vidmix.ai&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-30",
     features: [
       "Text-to-Video generation using Sora 2 and Veo 3.1 models",
@@ -51,10 +49,8 @@ export const aiTools: AiTool[] = [
     url: "https://www.overvisual.com/",
     category: "Video & Audio",
     tags: {
-        useCase: ["Business"],
-        price: "Freemium",
-        skill: "Beginner"
-    },
+        price: "Freemium"
+        },
     image: "https://www.google.com/s2/favicons?domain=www.overvisual.com&sz=128",
     dateAdded: "2026-03-31",
     maker: {
@@ -78,10 +74,8 @@ export const aiTools: AiTool[] = [
     url: "https://chatty.fit",
     category: "Productivity",
     tags: {
-        useCase: ["Business"],
-        price: "Freemium",
-        skill: "Beginner"
-    },
+        price: "Freemium"
+        },
     image: "https://www.google.com/s2/favicons?domain=chatty.fit&sz=128",
     dateAdded: "2026-04-01",
     maker: {
@@ -105,10 +99,8 @@ export const aiTools: AiTool[] = [
     url: "https://www.slidewhisper.com",
     category: "Productivity",
     tags: {
-        useCase: ["Business"],
-        price: "Freemium",
-        skill: "Beginner"
-    },
+        price: "Freemium"
+        },
     image: "https://www.google.com/s2/favicons?domain=www.slidewhisper.com&sz=128",
     dateAdded: "2026-04-02",
     maker: {
@@ -132,10 +124,8 @@ export const aiTools: AiTool[] = [
     url: "https://www.imejis.io",
     category: "Image Generation",
     tags: {
-        useCase: ["Business"],
-        price: "Freemium",
-        skill: "Beginner"
-    },
+        price: "Freemium"
+        },
     image: "https://www.google.com/s2/favicons?domain=www.imejis.io&sz=128",
     dateAdded: "2026-04-03",
     maker: {
@@ -159,10 +149,8 @@ export const aiTools: AiTool[] = [
     url: "https://emailferret.io",
     category: "Productivity",
     tags: {
-        useCase: ["Business"],
-        price: "Paid",
-        skill: "Beginner"
-    },
+        price: "Paid"
+        },
     image: "https://www.google.com/s2/favicons?domain=emailferret.io&sz=128",
     dateAdded: "2026-03-30",
     maker: {
@@ -186,10 +174,8 @@ export const aiTools: AiTool[] = [
     url: "https://www.agentgatepay.com",
     category: "Productivity",
     tags: {
-        useCase: ["Business"],
-        price: "Paid",
-        skill: "Intermediate"
-    },
+        price: "Paid"
+        },
     image: "https://www.google.com/s2/favicons?domain=www.agentgatepay.com&sz=128",
     dateAdded: "2026-03-31",
     maker: {
@@ -213,10 +199,8 @@ export const aiTools: AiTool[] = [
     url: "https://hypnotype.app",
     category: "Video & Audio",
     tags: {
-        useCase: ["Business"],
-        price: "Paid",
-        skill: "Beginner"
-    },
+        price: "Paid"
+        },
     image: "https://www.google.com/s2/favicons?domain=hypnotype.app&sz=128",
     dateAdded: "2026-04-01",
     maker: {
@@ -240,10 +224,8 @@ export const aiTools: AiTool[] = [
     url: "https://computerkeyboardshortcuts.org/",
     category: "Productivity",
     tags: {
-        useCase: ["Business"],
-        price: "Free",
-        skill: "Beginner"
-    },
+        price: "Free"
+        },
     image: "https://www.google.com/s2/favicons?domain=computerkeyboardshortcuts.org&sz=128",
     dateAdded: "2026-03-23",
     maker: {
@@ -267,10 +249,8 @@ export const aiTools: AiTool[] = [
     url: "https://floowed.com",
     category: "Productivity",
     tags: {
-        useCase: ["Business"],
-        price: "Paid",
-        skill: "Intermediate"
-    },
+        price: "Paid"
+        },
     image: "https://www.google.com/s2/favicons?domain=floowed.com&sz=128",
     dateAdded: "2026-03-24",
     maker: {
@@ -294,10 +274,8 @@ export const aiTools: AiTool[] = [
     url: "https://stride-fuel.com",
     category: "Productivity",
     tags: {
-        useCase: ["Business"],
-        price: "Paid",
-        skill: "Beginner"
-    },
+        price: "Paid"
+        },
     image: "https://www.google.com/s2/favicons?domain=stride-fuel.com&sz=128",
     dateAdded: "2026-03-25",
     maker: {
@@ -321,10 +299,8 @@ export const aiTools: AiTool[] = [
     url: "https://orav.ai/",
     category: "Productivity",
     tags: {
-        useCase: ["Business"],
-        price: "Freemium",
-        skill: "Beginner"
-    },
+        price: "Freemium"
+        },
     image: "https://www.google.com/s2/favicons?domain=orav.ai&sz=128",
     dateAdded: "2026-03-26",
     maker: {
@@ -348,10 +324,8 @@ export const aiTools: AiTool[] = [
     url: "https://airankpilot.com",
     category: "SEO",
     tags: {
-        useCase: ["Business"],
-        price: "Paid",
-        skill: "Beginner"
-    },
+        price: "Paid"
+        },
     image: "https://www.google.com/s2/favicons?domain=airankpilot.com&sz=128",
     dateAdded: "2026-03-27",
     maker: {
@@ -375,10 +349,8 @@ export const aiTools: AiTool[] = [
     url: "https://www.bookswift.app",
     category: "Productivity",
     tags: {
-        useCase: ["Business"],
-        price: "Paid",
-        skill: "Beginner"
-    },
+        price: "Paid"
+        },
     image: "https://www.google.com/s2/favicons?domain=www.bookswift.app&sz=128",
     dateAdded: "2026-03-28",
     maker: {
@@ -402,10 +374,8 @@ export const aiTools: AiTool[] = [
     url: "https://slidescockpit.com/",
     category: "Marketing",
     tags: {
-        useCase: ["Business"],
-        price: "Paid",
-        skill: "Beginner"
-    },
+        price: "Paid"
+        },
     image: "https://www.google.com/s2/favicons?domain=slidescockpit.com&sz=128",
     dateAdded: "2026-03-29",
     maker: {
@@ -429,10 +399,8 @@ export const aiTools: AiTool[] = [
     url: "https://3dSynth.app",
     category: "Productivity",
     tags: {
-        useCase: ["Business"],
-        price: "Paid",
-        skill: "Intermediate"
-    },
+        price: "Paid"
+        },
     image: "https://www.google.com/s2/favicons?domain=3dSynth.app&sz=128",
     dateAdded: "2026-03-30",
     maker: {
@@ -456,10 +424,8 @@ export const aiTools: AiTool[] = [
     url: "https://www.cryptonewsnavigator.com",
     category: "Productivity",
     tags: {
-        useCase: ["Business"],
-        price: "Free",
-        skill: "Beginner"
-    },
+        price: "Free"
+        },
     image: "https://www.google.com/s2/favicons?domain=www.cryptonewsnavigator.com&sz=128",
     dateAdded: "2026-03-24",
     maker: {
@@ -483,10 +449,8 @@ export const aiTools: AiTool[] = [
     url: "https://suburbstack.com/",
     category: "Marketing",
     tags: {
-        useCase: ["Business"],
-        price: "Paid",
-        skill: "Beginner"
-    },
+        price: "Paid"
+        },
     image: "https://www.google.com/s2/favicons?domain=suburbstack.com&sz=128",
     dateAdded: "2026-03-25",
     maker: {
@@ -510,10 +474,8 @@ export const aiTools: AiTool[] = [
     url: "https://sequenzy.com",
     category: "Copywriting",
     tags: {
-        useCase: ["Business"],
-        price: "Freemium",
-        skill: "Intermediate"
-    },
+        price: "Freemium"
+        },
     image: "https://www.google.com/s2/favicons?domain=sequenzy.com&sz=128",
     dateAdded: "2026-03-26",
     maker: {
@@ -537,10 +499,8 @@ export const aiTools: AiTool[] = [
     url: "https://www.markeplay.com",
     category: "Marketing",
     tags: {
-        useCase: ["Business"],
-        price: "Paid",
-        skill: "Intermediate"
-    },
+        price: "Paid"
+        },
     image: "https://www.google.com/s2/favicons?domain=www.markeplay.com&sz=128",
     dateAdded: "2026-03-27",
     maker: {
@@ -564,10 +524,8 @@ export const aiTools: AiTool[] = [
     url: "https://www.qeeebo.com",
     category: "Productivity",
     tags: {
-        useCase: ["Business"],
-        price: "Paid",
-        skill: "Beginner"
-    },
+        price: "Paid"
+        },
     image: "https://www.google.com/s2/favicons?domain=www.qeeebo.com&sz=128",
     dateAdded: "2026-03-16",
     maker: {
@@ -591,10 +549,8 @@ export const aiTools: AiTool[] = [
     url: "https://feynn.ai",
     category: "Productivity",
     tags: {
-        useCase: ["Business"],
-        price: "Paid",
-        skill: "Intermediate"
-    },
+        price: "Paid"
+        },
     image: "https://www.google.com/s2/favicons?domain=feynn.ai&sz=128",
     dateAdded: "2026-03-17",
     maker: {
@@ -618,10 +574,8 @@ export const aiTools: AiTool[] = [
     url: "https://aithumbnail.gg",
     category: "Marketing",
     tags: {
-        useCase: ["Business"],
-        price: "Freemium",
-        skill: "Beginner"
-    },
+        price: "Freemium"
+        },
     image: "https://www.google.com/s2/favicons?domain=aithumbnail.gg&sz=128",
     dateAdded: "2026-03-18",
     maker: {
@@ -645,10 +599,8 @@ export const aiTools: AiTool[] = [
     url: "https://ayewatch.ai/",
     category: "Productivity",
     tags: {
-        useCase: ["Business"],
-        price: "Freemium",
-        skill: "Beginner"
-    },
+        price: "Freemium"
+        },
     image: "https://www.google.com/s2/favicons?domain=ayewatch.ai&sz=128",
     dateAdded: "2026-03-19",
     maker: {
@@ -672,10 +624,8 @@ export const aiTools: AiTool[] = [
     url: "https://pentestmate.com/",
     category: "Productivity",
     tags: {
-        useCase: ["Business"],
-        price: "Paid",
-        skill: "Intermediate"
-    },
+        price: "Paid"
+        },
     image: "https://www.google.com/s2/favicons?domain=pentestmate.com&sz=128",
     dateAdded: "2026-03-20",
     maker: {
@@ -699,10 +649,8 @@ export const aiTools: AiTool[] = [
     url: "https://bolta.ai/",
     category: "Marketing",
     tags: {
-        useCase: ["Business"],
-        price: "Freemium",
-        skill: "Beginner"
-    },
+        price: "Freemium"
+        },
     image: "https://www.google.com/s2/favicons?domain=bolta.ai&sz=128",
     dateAdded: "2026-03-21",
     maker: {
@@ -726,10 +674,8 @@ export const aiTools: AiTool[] = [
     url: "https://www.sanamujer.com",
     category: "Productivity",
     tags: {
-        useCase: ["Business"],
-        price: "Freemium",
-        skill: "Beginner"
-    },
+        price: "Freemium"
+        },
     image: "https://www.google.com/s2/favicons?domain=www.sanamujer.com&sz=128",
     dateAdded: "2026-03-22",
     maker: {
@@ -754,10 +700,8 @@ export const aiTools: AiTool[] = [
     url: "https://beatable.co",
     category: "Productivity",
     tags: {
-        useCase: ["Business"],
-        price: "Freemium",
-        skill: "Beginner"
-    },
+        price: "Freemium"
+        },
     image: "https://www.google.com/s2/favicons?domain=beatable.co&sz=128",
     dateAdded: "2026-03-16",
     features: [
@@ -776,10 +720,8 @@ export const aiTools: AiTool[] = [
     url: "https://mapyourvoyage.com/",
     category: "Productivity",
     tags: {
-        useCase: ["Business"],
-        price: "Freemium",
-        skill: "Beginner"
-    },
+        price: "Freemium"
+        },
     image: "https://www.google.com/s2/favicons?domain=mapyourvoyage.com&sz=128",
     dateAdded: "2026-03-17",
     maker: {
@@ -804,10 +746,8 @@ export const aiTools: AiTool[] = [
     url: "https://ayecreate.ai/",
     category: "Image Generation",
     tags: {
-        useCase: ["Business"],
-        price: "Paid",
-        skill: "Intermediate"
-    },
+        price: "Paid"
+        },
     image: "https://www.google.com/s2/favicons?domain=ayecreate.ai&sz=128",
     dateAdded: "2026-03-18",
     maker: {
@@ -832,10 +772,8 @@ export const aiTools: AiTool[] = [
     url: "https://nicegram.app",
     category: "Productivity",
     tags: {
-        useCase: ["Business"],
-        price: "Freemium",
-        skill: "Beginner"
-    },
+        price: "Freemium"
+        },
     image: "https://www.google.com/s2/favicons?domain=nicegram.app&sz=128",
     dateAdded: "2026-03-19",
     maker: {
@@ -860,10 +798,8 @@ export const aiTools: AiTool[] = [
     url: "https://www.localbiz.ai",
     category: "Marketing",
     tags: {
-        useCase: ["Business"],
-        price: "Freemium",
-        skill: "Beginner"
-    },
+        price: "Freemium"
+        },
     image: "https://www.google.com/s2/favicons?domain=www.localbiz.ai&sz=128",
     dateAdded: "2026-03-20",
     maker: {
@@ -888,10 +824,8 @@ export const aiTools: AiTool[] = [
     url: "https://www.getargus.ai",
     category: "Productivity",
     tags: {
-        useCase: ["Business"],
-        price: "Freemium",
-        skill: "Beginner"
-    },
+        price: "Freemium"
+        },
     image: "https://www.google.com/s2/favicons?domain=www.getargus.ai&sz=128",
     dateAdded: "2026-03-21",
     features: [
@@ -910,10 +844,8 @@ export const aiTools: AiTool[] = [
     url: "https://popjam.io",
     category: "Marketing",
     tags: {
-        useCase: ["Business"],
-        price: "Freemium",
-        skill: "Intermediate"
-    },
+        price: "Freemium"
+        },
     image: "https://www.google.com/s2/favicons?domain=popjam.io&sz=128",
     dateAdded: "2026-03-22",
     features: [
@@ -932,10 +864,8 @@ export const aiTools: AiTool[] = [
     url: "https://tekadio.app",
     category: "Productivity",
     tags: {
-        useCase: ["Business"],
-        price: "Freemium",
-        skill: "Beginner"
-    },
+        price: "Freemium"
+        },
     image: "https://www.google.com/s2/favicons?domain=tekadio.app&sz=128",
     dateAdded: "2026-03-16",
     maker: {
@@ -960,10 +890,8 @@ export const aiTools: AiTool[] = [
     url: "https://invoplex.com/",
     category: "Productivity",
     tags: {
-        useCase: ["Business"],
-        price: "Free",
-        skill: "Beginner"
-    },
+        price: "Free"
+        },
     image: "https://www.google.com/s2/favicons?domain=invoplex.com&sz=128",
     dateAdded: "2026-03-09",
     features: [
@@ -982,10 +910,8 @@ export const aiTools: AiTool[] = [
     url: "https://docutracker.io",
     category: "Productivity",
     tags: {
-        useCase: ["Business"],
-        price: "Free",
-        skill: "Beginner"
-    },
+        price: "Free"
+        },
     image: "https://www.google.com/s2/favicons?domain=docutracker.io&sz=128",
     dateAdded: "2026-03-10",
     maker: {
@@ -1010,10 +936,8 @@ export const aiTools: AiTool[] = [
     url: "https://menubartime.com",
     category: "Productivity",
     tags: {
-        useCase: ["Business"],
-        price: "Free",
-        skill: "Beginner"
-    },
+        price: "Free"
+        },
     image: "https://www.google.com/s2/favicons?domain=menubartime.com&sz=128",
     dateAdded: "2026-03-11",
     features: [
@@ -1032,10 +956,8 @@ export const aiTools: AiTool[] = [
     url: "https://geminiwatermarkremover.net/",
     category: "Image Generation",
     tags: {
-        useCase: ["Business"],
-        price: "Free",
-        skill: "Beginner"
-    },
+        price: "Free"
+        },
     image: "https://www.google.com/s2/favicons?domain=geminiwatermarkremover.net&sz=128",
     dateAdded: "2026-03-12",
     features: [
@@ -1054,10 +976,8 @@ export const aiTools: AiTool[] = [
     url: "https://www.archrender.ai/",
     category: "Image Generation",
     tags: {
-        useCase: ["Business"],
-        price: "Free",
-        skill: "Beginner"
-    },
+        price: "Free"
+        },
     image: "https://www.google.com/s2/favicons?domain=www.archrender.ai&sz=128",
     dateAdded: "2026-03-13",
     features: [
@@ -1076,10 +996,8 @@ export const aiTools: AiTool[] = [
     url: "https://www.moduledge.com/",
     category: "Productivity",
     tags: {
-        useCase: ["Business"],
-        price: "Free",
-        skill: "Beginner"
-    },
+        price: "Free"
+        },
     image: "https://www.google.com/s2/favicons?domain=www.moduledge.com&sz=128",
     dateAdded: "2026-03-14",
     features: [
@@ -1098,10 +1016,8 @@ export const aiTools: AiTool[] = [
     url: "https://www.techtwitter.com",
     category: "Productivity",
     tags: {
-        useCase: ["Business"],
-        price: "Free",
-        skill: "Beginner"
-    },
+        price: "Free"
+        },
     image: "https://www.google.com/s2/favicons?domain=www.techtwitter.com&sz=128",
     dateAdded: "2026-03-15",
     features: [
@@ -1120,10 +1036,8 @@ export const aiTools: AiTool[] = [
     url: "https://bankpdfconverter.com/",
     category: "Productivity",
     tags: {
-        useCase: ["Business"],
-        price: "Free",
-        skill: "Beginner"
-    },
+        price: "Free"
+        },
     image: "https://www.google.com/s2/favicons?domain=bankpdfconverter.com&sz=128",
     dateAdded: "2026-03-09",
     features: [
@@ -1142,10 +1056,8 @@ export const aiTools: AiTool[] = [
     url: "https://squaredaway.ai",
     category: "Productivity",
     tags: {
-        useCase: ["Business"],
-        price: "Free",
-        skill: "Beginner"
-    },
+        price: "Free"
+        },
     image: "https://www.google.com/s2/favicons?domain=squaredaway.ai&sz=128",
     dateAdded: "2026-03-10",
     features: [
@@ -1164,10 +1076,8 @@ export const aiTools: AiTool[] = [
     url: "https://logostream.dev",
     category: "Productivity",
     tags: {
-        useCase: ["Business"],
-        price: "Free",
-        skill: "Beginner"
-    },
+        price: "Free"
+        },
     image: "https://www.google.com/s2/favicons?domain=logostream.dev&sz=128",
     dateAdded: "2026-03-11",
     features: [
@@ -1186,10 +1096,8 @@ export const aiTools: AiTool[] = [
     url: "https://getarchivist.org/",
     category: "Productivity",
     tags: {
-        useCase: ["Business"],
-        price: "Free",
-        skill: "Beginner"
-    },
+        price: "Free"
+        },
     image: "https://www.google.com/s2/favicons?domain=getarchivist.org&sz=128",
     dateAdded: "2026-03-12",
     features: [
@@ -1208,10 +1116,8 @@ export const aiTools: AiTool[] = [
     url: "https://bitvoiper.com",
     category: "Productivity",
     tags: {
-        useCase: ["Business"],
-        price: "Paid",
-        skill: "Beginner"
-    },
+        price: "Paid"
+        },
     image: "https://www.google.com/s2/favicons?domain=bitvoiper.com&sz=128",
     dateAdded: "2026-03-13",
     features: [
@@ -1230,10 +1136,8 @@ export const aiTools: AiTool[] = [
     url: "https://vitelnk.com/",
     category: "Video & Audio",
     tags: {
-        useCase: ["Business"],
-        price: "Paid",
-        skill: "Beginner"
-    },
+        price: "Paid"
+        },
     image: "https://www.google.com/s2/favicons?domain=vitelnk.com&sz=128",
     dateAdded: "2026-03-14",
     features: [
@@ -1252,10 +1156,8 @@ export const aiTools: AiTool[] = [
     url: "https://www.roomika.ai",
     category: "Video & Audio",
     tags: {
-        useCase: ["Business"],
-        price: "Paid",
-        skill: "Beginner"
-    },
+        price: "Paid"
+        },
     image: "https://www.google.com/s2/favicons?domain=www.roomika.ai&sz=128",
     dateAdded: "2026-03-15",
     features: [
@@ -1274,10 +1176,8 @@ export const aiTools: AiTool[] = [
     url: "https://www.multic.com",
     category: "Productivity",
     tags: {
-        useCase: ["Business"],
-        price: "Freemium",
-        skill: "Beginner"
-    },
+        price: "Freemium"
+        },
     image: "https://www.google.com/s2/favicons?domain=www.multic.com&sz=128",
     dateAdded: "2026-03-09",
     features: [
@@ -1296,10 +1196,8 @@ export const aiTools: AiTool[] = [
     url: "https://thrive.fi/",
     category: "Productivity",
     tags: {
-        useCase: ["Business"],
-        price: "Free",
-        skill: "Beginner"
-    },
+        price: "Free"
+        },
     image: "https://www.google.com/s2/favicons?domain=thrive.fi&sz=128",
     dateAdded: "2026-03-02",
     features: [
@@ -1318,10 +1216,8 @@ export const aiTools: AiTool[] = [
     url: "https://pressbeat.io",
     category: "Marketing",
     tags: {
-        useCase: ["Business"],
-        price: "Paid",
-        skill: "Beginner"
-    },
+        price: "Paid"
+        },
     image: "https://www.google.com/s2/favicons?domain=pressbeat.io&sz=128",
     dateAdded: "2026-03-03",
     features: [
@@ -1340,10 +1236,8 @@ export const aiTools: AiTool[] = [
     url: "https://simpleseverance.co",
     category: "Productivity",
     tags: {
-      useCase: ["Personal"],
-      price: "Freemium",
-      skill: "Beginner"
-    },
+      price: "Freemium"
+      },
     image: "https://www.google.com/s2/favicons?domain=simpleseverance.co&sz=128",
     dateAdded: "2026-03-04",
     features: [
@@ -1362,10 +1256,8 @@ export const aiTools: AiTool[] = [
     url: "https://cookieguard.co",
     category: "Code Assistance",
     tags: {
-      useCase: ["Business"],
-      price: "Freemium",
-      skill: "Intermediate"
-    },
+      price: "Freemium"
+      },
     image: "https://www.google.com/s2/favicons?domain=cookieguard.co&sz=128",
     dateAdded: "2026-03-05",
     features: [
@@ -1384,10 +1276,8 @@ export const aiTools: AiTool[] = [
     url: "https://simplyhabits.io/",
     category: "Productivity",
     tags: {
-      useCase: ["Personal"],
-      price: "Freemium",
-      skill: "Beginner"
-    },
+      price: "Freemium"
+      },
     image: "https://www.google.com/s2/favicons?domain=simplyhabits.io&sz=128",
     dateAdded: "2026-03-06",
     features: [
@@ -1406,10 +1296,8 @@ export const aiTools: AiTool[] = [
     url: "https://diffscout.com",
     category: "Productivity",
     tags: {
-      useCase: ["Business"],
-      price: "Freemium",
-      skill: "Intermediate"
-    },
+      price: "Freemium"
+      },
     image: "https://www.google.com/s2/favicons?domain=diffscout.com&sz=128",
     dateAdded: "2026-03-07",
     features: [
@@ -1428,10 +1316,8 @@ export const aiTools: AiTool[] = [
     url: "https://www.test-lab.ai/",
     category: "Code Assistance",
     tags: {
-      useCase: ["Business"],
-      price: "Freemium",
-      skill: "Advanced"
-    },
+      price: "Freemium"
+      },
     image: "https://www.google.com/s2/favicons?domain=www.test-lab.ai&sz=128",
     dateAdded: "2026-03-08",
     features: [
@@ -1450,10 +1336,8 @@ export const aiTools: AiTool[] = [
     url: "https://saasblueprint.app",
     category: "Code Assistance",
     tags: {
-      useCase: ["Business"],
-      price: "Paid",
-      skill: "Advanced"
-    },
+      price: "Paid"
+      },
     image: "https://www.google.com/s2/favicons?domain=saasblueprint.app&sz=128",
     dateAdded: "2026-03-02",
     maker: {
@@ -1478,10 +1362,8 @@ export const aiTools: AiTool[] = [
     url: "https://bangas.ai",
     category: "Marketing",
     tags: {
-      useCase: ["Business"],
-      price: "Paid",
-      skill: "Intermediate"
-    },
+      price: "Paid"
+      },
     image: "https://www.google.com/s2/favicons?domain=bangas.ai&sz=128",
     dateAdded: "2026-03-03",
     features: [
@@ -1500,10 +1382,8 @@ export const aiTools: AiTool[] = [
     url: "https://shortsai.com",
     category: "Video & Audio",
     tags: {
-      useCase: ["Creative"],
-      price: "Freemium",
-      skill: "Beginner"
-    },
+      price: "Freemium"
+      },
     image: "https://www.google.com/s2/favicons?domain=shortsai.com&sz=128",
     dateAdded: "2026-03-04",
     maker: {
@@ -1528,10 +1408,8 @@ export const aiTools: AiTool[] = [
     url: "https://linkedgrow.ai/beta",
     category: "Marketing",
     tags: {
-      useCase: ["Business"],
-      price: "Freemium",
-      skill: "Intermediate"
-    },
+      price: "Freemium"
+      },
     image: "https://www.google.com/s2/favicons?domain=linkedgrow.ai&sz=128",
     dateAdded: "2026-03-05",
     maker: {
@@ -1556,10 +1434,8 @@ export const aiTools: AiTool[] = [
     url: "https://www.credops.io/",
     category: "Productivity",
     tags: {
-      useCase: ["Business"],
-      price: "Free",
-      skill: "Intermediate"
-    },
+      price: "Free"
+      },
     image: "https://www.google.com/s2/favicons?domain=www.credops.io&sz=128",
     dateAdded: "2026-03-06",
     maker: {
@@ -1584,10 +1460,8 @@ export const aiTools: AiTool[] = [
     url: "https://www.podcept.com",
     category: "Marketing",
     tags: {
-      useCase: ["Business"],
-      price: "Paid",
-      skill: "Beginner"
-    },
+      price: "Paid"
+      },
     image: "https://www.google.com/s2/favicons?domain=www.podcept.com&sz=128",
     dateAdded: "2026-03-07",
     features: [
@@ -1606,10 +1480,8 @@ export const aiTools: AiTool[] = [
     url: "https://roomstage.ai",
     category: "Image Generation",
     tags: {
-      useCase: ["Business"],
-      price: "Freemium",
-      skill: "Beginner"
-    },
+      price: "Freemium"
+      },
     image: "https://www.google.com/s2/favicons?domain=roomstage.ai&sz=128",
     dateAdded: "2026-03-08",
     features: [
@@ -1628,10 +1500,8 @@ export const aiTools: AiTool[] = [
     url: "https://murmurvt.com",
     category: "Productivity",
     tags: {
-      useCase: ["Business"],
-      price: "Freemium",
-      skill: "Beginner"
-    },
+      price: "Freemium"
+      },
     image: "https://www.google.com/s2/favicons?domain=murmurvt.com&sz=128",
     dateAdded: "2026-03-09",
     maker: {
@@ -1652,36 +1522,32 @@ export const aiTools: AiTool[] = [
   },
   {
     name: "Tails, Co.",
-    description: "AI-powered dog walker and sitter matching service in Chicago - matches by breed, energy level, and personality with verified skills.",
+    description: "A specialized pet care matching service that pairs dogs with vetted providers based on breed, energy level, and temperament. Features real-time GPS tracking and mood reports.",
     url: "https://trytails.com/",
     category: "Productivity",
     tags: {
-      useCase: ["Personal"],
-      price: "Free",
-      skill: "Beginner"
-    },
+        price: "Free"
+        },
     image: "https://www.google.com/s2/favicons?domain=trytails.com&sz=128",
     dateAdded: "2026-02-23",
     features: [
-      "Matches dogs to providers by breed, energy level, and personality",
-      "GPS tracking and real-time walk updates",
-      "Free meet & greet before booking",
-      "10% provider fee (vs 20-40% industry standard)",
-      "Backup coverage if provider cancels"
+      "Breed-Specific Matching based on temperament",
+      "Vetted Providers with skill verification",
+      "Real-Time GPS Tracking and photo updates",
+      "Detailed care reports (food, bathroom, mood)",
+      "Guaranteed backup coverage if provider cancels"
     ],
-    pricingDetails: "Free to match, provider takes bookings",
-    integrations: ["iOS", "Android", "GPS tracking"]
+    pricingDetails: "Free to match | Pay per booking | No subscription required",
+    integrations: ["iOS", "Android", "GPS Tracking"]
   },
   {
     name: "NeonChainX",
-    description: "High-speed options trading platform with direct Interactive Brokers integration for real-time execution and simplicity.",
+    description: "A professional options trading desktop interface for Interactive Brokers (IBKR) featuring a multi-chain view and automated risk management tools.",
     url: "https://neonchainx.com/",
     category: "Productivity",
     tags: {
-      useCase: ["Business"],
-      price: "Paid",
-      skill: "Advanced"
-    },
+        price: "Paid"
+        },
     image: "https://www.google.com/s2/favicons?domain=neonchainx.com&sz=128",
     dateAdded: "2026-02-24",
     maker: {
@@ -1691,132 +1557,120 @@ export const aiTools: AiTool[] = [
         image: "https://unavatar.io/twitter/alex_freas"
     },
     features: [
-      "Lightning-fast multi-chain options view",
-      "One-click trade execution",
-      "Smart TP/SL automation with dual triggers",
-      "Direct IBKR integration - no third party data",
-      "Live risk tracking and P&L monitoring"
+      "Multi-Chain View: View multiple strikes and expirations simultaneously",
+      "Smart Automation: TP/SL with dual triggers (underlying and premium)",
+      "Low-Latency Execution: Direct integration with TWS/IB Gateway",
+      "Real-Time Risk Tracking and live P&L monitoring"
     ],
-    pricingDetails: "7-day free trial, then paid (pricing not disclosed)",
-    integrations: ["Interactive Brokers TWS", "IB Gateway"]
+    pricingDetails: "7-day free trial | Paid license key required",
+    integrations: ["Interactive Brokers", "TWS", "IB Gateway"]
   },
   {
     name: "Roampads",
-    description: "Curated apartment search for digital nomads featuring verified WiFi and dedicated workspace setups for remote work.",
+    description: "A marketplace for work-ready stays vetted for digital nomads and remote professionals, featuring verified high-speed WiFi and ergonomic setups.",
     url: "https://www.roampads.com/",
     category: "Productivity",
     tags: {
-      useCase: ["Business"],
-      price: "Free",
-      skill: "Beginner"
-    },
+        price: "Paid"
+        },
     image: "https://www.google.com/s2/favicons?domain=www.roampads.com&sz=128",
     dateAdded: "2026-02-25",
-    maker: {
-        name: "Alex Freas",
-        role: "Software Engineer",
-        twitter: "alex_freas",
-        image: "https://unavatar.io/twitter/alex_freas"
-    }
+    features: [
+      "Verified Infrastructure with speedtest results",
+      "Nomad Hubs in cities like Bangkok, Mexico City, Warsaw",
+      "Roampilot concierge for custom housing searches",
+      "Direct Booking discounts with hosting partners"
+    ],
+    pricingDetails: "Monthly stays from $400 - $17,000+ | Free Roampilot requests",
+    integrations: ["WiFi Speedtests", "Nomad Cities"]
   },
   {
     name: "Flowly Indicators",
-    description: "Orderflow indicators for TradingView to spot whale activity, liquidity pools, and unusual volume with backtesting support.",
+    description: "Professional-grade orderflow and volume indicators for TradingView that reveal hidden market flows and smart money movements.",
     url: "https://www.flowly.tools/",
     category: "Productivity",
     tags: {
-      useCase: ["Business"],
-      price: "Paid",
-      skill: "Advanced"
-    },
+        price: "Paid"
+        },
     image: "https://www.google.com/s2/favicons?domain=www.flowly.tools&sz=128",
     dateAdded: "2026-02-26",
     features: [
-      "SubFlow Terminal - see hidden market flows",
-      "Liquidity Heatmap and Internal Flow",
-      "Value Area & POC indicators",
-      "Market scanning across hundreds of symbols",
-      "Custom alerts with multiple conditions"
+      "SubFlow Terminal: Includes liquidity heatmaps and liquidation tracking",
+      "Market Scanner: Scan hundreds of markets for volume events",
+      "Evidence-Based Insights: Stats on historical volume and price impact",
+      "Custom Alerts: Multi-condition alerts via email",
+      "Open Source tools: 11 open source indicators available"
     ],
-    pricingDetails: "Free trial | Monthly: $20/month | Annual: $20/month (best value)",
-    integrations: ["TradingView"]
+    pricingDetails: "7-day free trial | Starts at $20/month (billed annually)",
+    integrations: ["TradingView", "Email Alerts"]
   },
   {
     name: "TRYremote",
-    description: "Remote tech job board that allows searching by specific tech stacks and organizing listings by global regions.",
+    description: "A specialized job board for discovering top-tier remote tech jobs across Software Engineering, Data Science, and DevOps globally.",
     url: "https://tryremote.com",
     category: "Productivity",
     tags: {
-      useCase: ["Business"],
-      price: "Free",
-      skill: "Beginner"
-    },
+        price: "Free"
+        },
     image: "https://www.google.com/s2/favicons?domain=tryremote.com&sz=128",
     dateAdded: "2026-02-27",
     features: [
-      "Remote tech jobs by specific tech stacks",
-      "Search by region: Europe, US, Asia, LATAM, Worldwide",
-      "Full-time, freelance, and internship filters",
-      "Job postings from leading companies",
-      "Weekly newsletter subscription"
+      "Skill-Based Filtering: Node.js, Python, React, Go, etc.",
+      "Location Filtering: Worldwide, US, Europe, EMEA, LATAM",
+      "Weekly Job Newsletter subscription",
+      "Employer Portal for posting remote talent needs"
     ],
     pricingDetails: "Free for job seekers",
-    integrations: []
+    integrations: ["Email"]
   },
   {
     name: "Userjam",
-    description: "AI platform that transforms real-time user activity into actionable narratives rather than static dashboards.",
+    description: "Turns messy product analytics data into plain-English updates delivered directly to Slack or email, eliminating complex dashboards.",
     url: "https://userjam.com",
     category: "Marketing",
     tags: {
-      useCase: ["Business"],
-      price: "Freemium",
-      skill: "Intermediate"
-    },
+        price: "Free"
+        },
     image: "https://www.google.com/s2/favicons?domain=userjam.com&sz=128",
     dateAdded: "2026-02-28",
     features: [
-      "AI-powered user activity news feed",
-      "Customizable daily AI reports",
-      "Slack alerts for VIP users",
-      "Works with Mixpanel, Amplitude, Segment, PostHog",
-      "Plain English updates vs dashboards"
+      "AI-generated daily narrative reports",
+      "Real-time Slack/Email alerts for VIP user actions",
+      "User news feeds for team visibility",
+      "1-line snippet integration",
+      "Works with Mixpanel, Amplitude, PostHog, Segment"
     ],
-    pricingDetails: "Early access - free to apply",
+    pricingDetails: "Early Access (Free for early adopters)",
     integrations: ["Mixpanel", "Amplitude", "Segment", "PostHog", "Slack"]
   },
   {
     name: "MedShotsAI",
-    description: "AI-powered professional headshots and marketing imagery specifically tailored for medical professionals.",
+    description: "Professional AI headshot generator tailored for healthcare professionals, creating profile photos and marketing shots in clinical attire.",
     url: "https://medshotsai.com",
     category: "Image Generation",
     tags: {
-      useCase: ["Business"],
-      price: "Paid",
-      skill: "Beginner"
-    },
+        price: "Paid"
+        },
     image: "https://www.google.com/s2/favicons?domain=medshotsai.com&sz=128",
     dateAdded: "2026-02-23",
     features: [
-      "Professional headshots for doctors, nurses, dentists",
-      "Medical attire: scrubs, white coats, business",
+      "Role-Aware Attire: Scrubs, lab coats, business formal",
+      "Clinical Backgrounds and professional settings",
+      "Group Photo Generation from individual headshots",
       "4K Ultra HD resolution output",
-      "Team management and batch processing",
-      "Marketing shots for websites and campaigns"
+      "22+ Free Photo Tools (analyzer, optimizer)"
     ],
-    pricingDetails: "Credit Pack: $4.99 (5 credits) | Small Practice: $19.99/mo | Professional: $49.99/mo",
+    pricingDetails: "$4.99 (5 credits) | Subscriptions from $19.99/mo",
     integrations: ["LinkedIn", "Google Business", "Team dashboards"]
   },
   {
     name: "Mixels.ai",
-    description: "Free AI pixel art generator and pixel art editor — convert photos to pixel art, generate game-ready characters, items, and backgrounds with perfect grid alignment. Sign up and get 5 free credits instantly.",
+    description: "AI pixel art generator and online studio that creates game-ready, grid-perfect 8-bit assets, characters, and backgrounds in seconds.",
     url: "https://mixels.ai/",
     category: "Image Generation",
     tags: {
-        useCase: ["Business"],
-        price: "Free",
-        skill: "Beginner"
-    },
+        price: "Freemium"
+        },
     image: "https://www.google.com/s2/favicons?domain=mixels.ai&sz=128",
     dateAdded: "2026-02-24",
     maker: {
@@ -1824,7 +1678,15 @@ export const aiTools: AiTool[] = [
         role: "Software Engineer",
         twitter: "alex_freas",
         image: "https://unavatar.io/twitter/alex_freas"
-    }
+    },
+    features: [
+      "Text-to-Pixel Art generation",
+      "Photo-to-Pixel conversion",
+      "Full browser-based pixel editor (Aseprite alternative)",
+      "Background removal and asset management",
+      "Embedded metadata for game engines"
+    ],
+    pricingDetails: "Free (10 credits) | Pro: $12.95/mo | Studio: $99.95/mo"
 },
 {
     name: "EmailVerify.ai",
@@ -1832,10 +1694,8 @@ export const aiTools: AiTool[] = [
     url: "https://emailverify.ai",
     category: "Copywriting",
     tags: {
-        useCase: ["Business"],
-        price: "Free",
-        skill: "Beginner"
-    },
+        price: "Free"
+        },
     image: "https://www.google.com/s2/favicons?domain=emailverify.ai&sz=128",
     dateAdded: "2026-02-25",
     features: [
@@ -1854,10 +1714,8 @@ export const aiTools: AiTool[] = [
     url: "https://Stageflow.ai",
     category: "Image Generation",
     tags: {
-        useCase: ["Business"],
-        price: "Free",
-        skill: "Beginner"
-    },
+        price: "Free"
+        },
     image: "https://www.google.com/s2/favicons?domain=Stageflow.ai&sz=128",
     dateAdded: "2026-02-26",
     features: [
@@ -1867,19 +1725,17 @@ export const aiTools: AiTool[] = [
       "Iterative editing and refinement tools",
       "Reference image support for style matching"
     ],
-pricingDetails: "Free to try",
+    pricingDetails: "Free to try",
     integrations: ["Etsy", "Marketplace platforms"]
   },
   {
     name: "Oneprofile",
-    description: "Sync customer profiles and events between tools",
+    description: "An affordable Customer Data Platform (CDP) that unifies customer profiles and syncs data across tools without engineering resources.",
     url: "https://getoneprofile.com",
     category: "Productivity",
     tags: {
-        useCase: ["Business"],
-        price: "Free",
-        skill: "Beginner"
-    },
+        price: "Freemium"
+        },
     image: "https://www.google.com/s2/favicons?domain=getoneprofile.com&sz=128",
     dateAdded: "2026-02-27",
     maker: {
@@ -1887,57 +1743,84 @@ pricingDetails: "Free to try",
         role: "Software Engineer",
         twitter: "alex_freas",
         image: "https://unavatar.io/twitter/alex_freas"
-    }
+    },
+    features: [
+      "Identity Resolution across multiple platforms",
+      "Tool-to-Tool Sync (e.g., Stripe to Intercom)",
+      "User Segmentation and behavioral triggers",
+      "REST API access for Enterprise plans",
+      "100+ native integrations"
+    ],
+    pricingDetails: "Free (100k syncs) | Team: $100/mo | Enterprise: $2,000/mo",
+    integrations: ["Stripe", "Intercom", "Segment", "HubSpot"]
 },
   {
-    name: "XIMA DIGITAL",
-    description: "PDFSeek is an AI-powered platform that enables users to chat with PDFs, generate summaries, search content, and translate documents across multiple languages.",
+    name: "PDFSeek",
+    description: "AI-powered document assistant that enables users to chat with PDFs, generate summaries, and translate documents with citations.",
     url: "https://www.pdfseek.com",
     category: "Productivity",
     tags: {
-        useCase: ["Business"],
-        price: "Free",
-        skill: "Beginner"
-    },
+        price: "Free"
+        },
     image: "https://www.google.com/s2/favicons?domain=www.pdfseek.com&sz=128",
-    dateAdded: "2026-02-28"
+    dateAdded: "2026-02-28",
+    features: [
+      "AI Translation for multi-language documents",
+      "Multi-file Chat and folder organization",
+      "Side-by-side verification view",
+      "Academic and professional research assistance",
+      "Built-in citation management"
+    ],
+    pricingDetails: "Free to use"
 },
   {
     name: "Eleidon",
-    description: "Secure external messaging. The inbox that can't be phished.",
+    description: "The identity layer for agentic email, providing cryptographic signing and verification to prevent fraud in AI agent communications.",
     url: "https://eleidon.com",
     category: "Productivity",
     tags: {
-        useCase: ["Business"],
-        price: "Free",
-        skill: "Beginner"
-    },
+        price: "Freemium"
+        },
     image: "https://www.google.com/s2/favicons?domain=eleidon.com&sz=128",
-    dateAdded: "2026-02-23"
+    dateAdded: "2026-02-23",
+    features: [
+      "Cryptographic signing of outbound agent emails",
+      "Confidence scores for inbound email verification",
+      "Comprehensive Audit Trail for agent actions",
+      "REST API and TypeScript/Python SDKs",
+      "MCP Server for Claude/Cursor integration"
+    ],
+    pricingDetails: "Signing is Free | Verifications: Free (100/mo) | Paid from $9/mo",
+    integrations: ["Claude", "Cursor", "TypeScript", "Python", "REST API"]
 },
   {
     name: "ChampSignal",
-    description: "ChampSignal tracks your competitors 24/7 across websites, news, Reddit, ads, and SEO. When something important changes, you know the same day.  Most alerts are noise. ChampSignal uses AI to filter them so you only get notified when it actually matters. A price drop. A new feature launch. A shift in messaging. A Reddit thread gaining traction.  Set up in under two minutes. Enter your website and we find your competitors for you. You get your first insights right away.  What you get:  Website changes like pricing, features, and messaging. News and Reddit mentions. Google and Meta ad tracking. SEO rankings and backlinks. Email and Slack alerts on your schedule.  Need deeper analysis? Ask Champ, your AI competitive intelligence analyst. It knows everything we've tracked and gives you instant answers, battlecards, trend analysis, and positioning advice. No manual research needed.  A competitive intelligence analyst costs $80K+ a year. ChampSignal gives you the same coverage at a fraction of the cost. Try it free for 14 days.",
+    description: "Competitive intelligence suite for B2B SaaS that monitors competitors across websites, ads, news, and SEO with AI filtering.",
     url: "https://champsignal.com",
     category: "Copywriting",
     tags: {
-        useCase: ["Business"],
-        price: "Free",
-        skill: "Beginner"
-    },
+        price: "Paid"
+        },
     image: "https://www.google.com/s2/favicons?domain=champsignal.com&sz=128",
-    dateAdded: "2026-02-24"
+    dateAdded: "2026-02-24",
+    features: [
+      "AI-Filtered Alerts for relevant competitor changes",
+      "Champ AI Agent for deep competitor analysis",
+      "Google and Meta Ad tracking",
+      "Competitor Finder API for discovery integration",
+      "Email and Slack notifications"
+    ],
+    pricingDetails: "14-day Free Trial | Focused: $39/mo | Competitive: $99/mo",
+    integrations: ["Slack", "REST API", "Email"]
 },
   {
     name: "GreatCompany.ai",
-    description: "Track and optimize visibility in ChatGPT, Gemini and other AI Search engines to drive traffic to your website that converts.",
+    description: "AI Visibility Platform (GEO) that monitors and optimizes how your business appears in AI search engines like ChatGPT and Gemini.",
     url: "https://GreatCompany.ai",
-    category: "Code Assistance",
+    category: "Marketing",
     tags: {
-        useCase: ["Business"],
-        price: "Free",
-        skill: "Beginner"
-    },
+        price: "Freemium"
+        },
     image: "https://www.google.com/s2/favicons?domain=GreatCompany.ai&sz=128",
     dateAdded: "2026-02-25",
     maker: {
@@ -1945,18 +1828,33 @@ pricingDetails: "Free to try",
         role: "Software Engineer",
         twitter: "alex_freas",
         image: "https://unavatar.io/twitter/alex_freas"
-    }
+    },
+    features: [
+      "Technical GEO (Generative Engine Optimization) Audits",
+      "Visibility testing for specific AI prompts",
+      "Website AI readability scans",
+      "Competitor AI visibility tracking",
+      "AI Crawler access management"
+    ],
+    pricingDetails: "Free: 25-page scan | Pro: €39/mo for daily monitoring"
 },
   {
     name: "Reply Champion",
-    description: "Reply Champion is an automated Google review management tool built for small business owners who don't have time to respond to every review manually. Google reviews pile up. Customers expect replies. But between running your business and everything else on your plate, responding ...",
+    description: "AI-powered Google review management platform for small businesses that automates personalized, context-aware responses and drives new review growth.",
     url: "https://www.replychampion.com",
     category: "Productivity",
     tags: {
-        useCase: ["Business"],
-        price: "Free",
-        skill: "Beginner"
-    },
+        price: "Paid",
+    features: [
+      "Personalized AI Replies: Context-aware responses that avoid generic templates",
+      "Review Request Campaigns: Automated email flows to solicit new customer feedback",
+      "Multilingual Support: Native-level detection and response in 50+ languages",
+      "Industry Safeguards: Built-in ethical screening for HIPAA and legal compliance",
+      "Live Reviews Widget: Free snippet to embed real-time Google reviews on any site"
+    ],
+    pricingDetails: "Starts at 0/mo | 7-day Free Trial (No credit card)",
+    integrations: ["Google Business Profile", "Web Widgets"]
+  },
     image: "/screenshots/reply-champion.png",
     dateAdded: "2026-02-16",
     maker: {
@@ -1968,14 +1866,21 @@ pricingDetails: "Free to try",
 },
   {
     name: "Encamera",
-    description: "Encamera is the world's first truly encrypted camera app designed for those who understand that some moments are meant to stay private. Our mission is to give you complete control over your photos and videos with military-grade security that even we or Apple can't access. Store y...",
+    description: "Privacy-first encrypted camera app for iOS that captures photos and videos with military-grade security that even Apple can't access.",
     url: "https://encamera.app",
     category: "Video & Audio",
     tags: {
-        useCase: ["Business"],
-        price: "Free",
-        skill: "Beginner"
-    },
+        price: "Paid",
+    features: [
+      "Instant Encryption: Media is secured before touching the device camera roll",
+      "Zero-Knowledge Storage: Local or iCloud storage with no developer access",
+      "Stealth Mode: Disguise secure albums or hide the app icon entirely",
+      "Secure Content Import: Encrypt and move existing files from standard library",
+      "Biometric Security: Multi-factor unlock via Face ID, PIN, or password"
+    ],
+    pricingDetails: "Monthly and Annual Subscriptions | Free to start",
+    integrations: ["iCloud", "iOS Widgets", "Face ID"]
+  },
     image: "/screenshots/encamera.png",
     dateAdded: "2026-02-17",
     maker: {
@@ -1987,27 +1892,40 @@ pricingDetails: "Free to try",
 },
   {
     name: "Resideline",
-    description: "Resideline is an AI powered real estate analysis platform that helps investors quickly identify profitable residential opportunities. Using advanced AVMs, automated valuation models, Resideline estimates after repair value, market rent, and deal level returns so you can underwrit...",
+    description: "AI-powered real estate analysis platform that helps residential investors quickly identify and underwrite profitable investment opportunities.",
     url: "https://Resideline.com",
     category: "Productivity",
     tags: {
-        useCase: ["Business"],
         price: "Free",
-        skill: "Beginner"
-    },
+    features: [
+      "Automated Valuation Models (AVM) for instant ARV estimates",
+      "Market Rent Analysis for buy-and-hold residential strategy",
+      "Deal-Level ROI Forecasting with automated underwriting",
+      "Property data aggregation for residential off-market hunting"
+    ],
+    pricingDetails: "Free Access",
+    integrations: ["Property Data Feeds"]
+  },
     image: "/screenshots/resideline.png",
     dateAdded: "2026-02-18"
 },
   {
     name: "Applytrackr",
-    description: "ApplyTrackr is an all-in-one AI-powered job search management platform built to help job seekers stay organized, competitive, and confident throughout their job hunt. Searching for a job today is fragmented and overwhelming - candidates juggle spreadsheets, multiple resume versio...",
+    description: "AI job search OS that automates resume tailoring, tracks applications across boards, and finds recruiter contact info in seconds.",
     url: "https://www.applytrackr.com/",
-    category: "Code Assistance",
+    category: "Productivity",
     tags: {
-        useCase: ["Business"],
-        price: "Free",
-        skill: "Beginner"
-    },
+        price: "Freemium",
+    features: [
+      "ATS Resume Tailoring: Matches resumes to job descriptions with scoring",
+      "Automated App Tracking: Captures job data from any board via extension",
+      "Recruiter Finder: Automatically retrieves verified email addresses",
+      "One-Click Auto-Fill for repetitive application forms",
+      "AI Cover Letter Generator tailored to specific role requirements"
+    ],
+    pricingDetails: "Free Tier | Pro Plan available",
+    integrations: ["Chrome Extension", "LinkedIn", "Job Boards"]
+  },
     image: "/screenshots/applytrackr.png",
     dateAdded: "2026-02-19",
     maker: {
@@ -2019,181 +1937,218 @@ pricingDetails: "Free to try",
 },
   {
     name: "LINO",
-    description: "LINO is a missed call recovery platform built for local service businesses plumbers, HVAC technicians, electricians, salons, dental practices, and other appointment-based businesses that lose revenue every time a call goes unanswered. Here's the problem: when a potential customer...",
+    description: "Missed call recovery platform for local service businesses that uses AI to automate SMS follow-ups and capture lost leads instantly.",
     url: "https://uselino.com/",
-    category: "Code Assistance",
+    category: "Productivity",
     tags: {
-        useCase: ["Business"],
-        price: "Free",
-        skill: "Beginner"
-    },
+        price: "Paid",
+    features: [
+      "Autonomous Missed Call Detection and instant SMS response",
+      "Lead Capture automation for plumbers, HVAC, and service trades",
+      "Two-way AI conversation to qualify and book appointments",
+      "Revenue Recovery dashboard tracking saved leads"
+    ],
+    pricingDetails: "Paid Subscription",
+    integrations: ["Twilio", "Google Business Profile", "CRM Connectors"]
+  },
     image: "/screenshots/lino.png",
     dateAdded: "2026-02-20"
 },
   {
     name: "HighReach",
-    description: "HighReach helps you create video ads and social content with AI in seconds. Paste your product link generate multiple ready-to-use video and image ads without cameras, editors, or agencies. Built for founders, marketers, and small teams who want to test more creatives faster and ...",
+    description: "AI creative studio that generates ready-to-run video, image, and UGC-style ads for social platforms directly from a product link.",
     url: "https://highreach.ai",
     category: "Video & Audio",
     tags: {
-        useCase: ["Business"],
-        price: "Free",
-        skill: "Beginner"
-    },
+        price: "Paid",
+    features: [
+      "Link-to-Ad: Pulls product data from Shopify/Amazon for instant ad generation",
+      "AI UGC Avatars: Diverse digital presenters for testimonial-style content",
+      "Studio Photo Generator: Transforms raw photos into high-end lifestyle shots",
+      "Auto-Captions: Social-optimized subtitles in 75+ languages",
+      "Batch Ad Production for rapid multi-creative testing"
+    ],
+    pricingDetails: "Starter: 9/mo | Pro: 9/mo | Ultra: 49/mo | 7-day Trial",
+    integrations: ["Shopify", "Amazon", "Meta", "TikTok", "Google", "YouTube"]
+  },
     image: "/screenshots/highreach.png",
     dateAdded: "2026-02-21"
 },
   {
     name: "Ayudo",
-    description: "AI-native customer support platform that automates customer queries, resolutions, and follow-ups using a built-in workforce of AI agents.",
+    description: "Agentic customer support platform that automates complex queries and end-to-end resolutions using a workforce of AI agents.",
     url: "https://www.ayudo.ai",
     category: "Productivity",
     tags: {
-        useCase: ["Business"],
-        price: "Freemium",
-        skill: "Beginner"
-    },
+        price: "Paid",
+    features: [
+      "Agentic Workflows: AI-led management of complex support flows",
+      "Omnichannel Inbox: Unified support across WhatsApp, Slack, and Discord",
+      "Real-Time Knowledge Sync: Pulls data from G-Drive, PDFs, and URLs",
+      "Insight Agent: Surface hidden patterns and knowledge gaps automatically",
+      "Human-Agent Copilot: Proactive reply suggestions for human teams"
+    ],
+    pricingDetails: "Demo-based (Custom Enterprise plans)",
+    integrations: ["Zendesk", "Salesforce", "Intercom", "Twilio", "Slack"]
+  },
     image: "/screenshots/ayudo.png",
     dateAdded: "2026-02-22"
 },
   {
     name: "LinkPilot",
-    description: "AI-powered LinkedIn growth platform that assists with strategy, analysis, and execution. It helps generate viral content, analyze competitors, and schedule posts.",
+    description: "AI LinkedIn content system that researches authority gaps and writes voice-matched posts based on competitor intelligence.",
     url: "https://link-pilot.com",
-    category: "Productivity",
+    category: "Marketing",
     tags: {
-        useCase: ["Business"],
-        price: "Freemium",
-        skill: "Beginner"
-    },
+        price: "Freemium"
+        },
     image: "/screenshots/linkpilot.png",
-    dateAdded: "2026-02-16"
+    dateAdded: "2026-02-16",
+    features: [
+      "Voice-Matched AI writing system",
+      "30-day authority gap content planner",
+      "Competitor content tracking",
+      "Outcome-focused analytics (leads vs vanity)",
+      "REST API access for Pro/Agency tiers"
+    ],
+    pricingDetails: "Free (10 credits) | Solo: $29/mo | Pro: $79/mo | Agency: $199/mo",
+    integrations: ["LinkedIn", "REST API"]
 },
   {
     name: "Stick Audio",
-    description: "AI Text-to-Speech Generator that allows users to convert text into natural-sounding speech using AI-powered voices, with features like voice cloning and API access.",
+    description: "Natural AI text-to-speech platform featuring unlimited voice cloning and high-quality API access for developers.",
     url: "https://stick.audio",
-    category: "Productivity",
+    category: "Video & Audio",
     tags: {
-        useCase: ["Business"],
-        price: "Freemium",
-        skill: "Beginner"
-    },
+        price: "Freemium"
+        },
     image: "/screenshots/stick-audio.png",
-    dateAdded: "2026-02-17"
+    dateAdded: "2026-02-17",
+    features: [
+      "Unlimited Voice Cloning",
+      "Natural-sounding AI voices",
+      "Pay-as-you-go credit system",
+      "REST API with Node.js/Python examples",
+      "Bulk audio generation"
+    ],
+    pricingDetails: "Free (2k chars) | Starter: $10 | Creator: $20 | Pro: $50",
+    integrations: ["REST API", "Node.js", "Python"]
 },
   {
     name: "DensOps",
-    description: "A modern prospecting and go-to-market platform designed for businesses that sell to brick-and-mortar locations, helping users build local business lists with pinpoint accuracy.",
+    description: "Local business lead generation tool using natural language search to build pinpoint accurate prospecting lists.",
     url: "https://densops.com",
-    category: "Productivity",
+    category: "Marketing",
     tags: {
-        useCase: ["Business"],
-        price: "Freemium",
-        skill: "Beginner"
-    },
+        price: "Paid"
+        },
     image: "/screenshots/densops.png",
-    dateAdded: "2026-02-18"
+    dateAdded: "2026-02-18",
+    features: [
+      "Natural Language Search (e.g. 'plumbers in Miami')",
+      "Auto-enrichment of emails, phones, and socials",
+      "One-click CSV export for CRM import",
+      "Pay-once model (no subscriptions)",
+      "Verified local business data"
+    ],
+    pricingDetails: "Free (1 search) | Unlock Forever: €9 (5 searches) | Top-up packs"
 },
   {
     name: "PNGtoSTL",
-    description: "A free online converter that turns 2D PNG images into 3D-printable STL files. Upload your image, and the tool automatically generates a 3D model suitable for printing.",
+    description: "Specialized 2D to 3D converter for turning PNG/JPG images into 3D-printable STL files.",
     url: "https://pngtostl.xyz",
     category: "Productivity",
     tags: {
-        useCase: ["Business"],
-        price: "Freemium",
-        skill: "Beginner"
-    },
+        price: "Free"
+        },
     image: "/screenshots/pngtostl.png",
-    dateAdded: "2026-02-19"
+    dateAdded: "2026-02-19",
+    features: [
+      "Image-to-3D model conversion",
+      "Heightmap and depth generation",
+      "Basic 3D model adjustments",
+      "STL file export for 3D printing",
+      "Browser-based tool"
+    ],
+    pricingDetails: "Free to use"
 },
 {
     name: "Octopost.ai",
-    description: "AI-powered social media scheduling platform that centralizes workflows across Facebook, Instagram, LinkedIn, TikTok, and YouTube.",
+    description: "AI-powered social media scheduling platform centralizing workflows across FB, IG, LinkedIn, TikTok, and YouTube.",
     url: "https://octopost.ai",
     category: "Marketing",
     tags: {
-        useCase: ["Business"],
-        price: "Freemium",
-        skill: "Beginner"
-    },
+        price: "Freemium"
+        },
     image: "https://www.google.com/s2/favicons?domain=octopost.ai&sz=128",
     dateAdded: "2026-02-20",
     features: [
-      "Schedule posts across 8 platforms (FB, IG, TikTok, LinkedIn, X, YouTube, Pinterest, Threads)",
-      "AI Content Studio for caption generation",
-      "MCP integration for AI agents (Claude, Cursor)",
+      "Schedule across 8 platforms simultaneously",
+      "AI Content Studio for captions",
       "REST API and media library",
-      "OpenClaw autonomous social media agent"
+      "MCP integration for AI agents",
+      "OpenClaw autonomous agent support"
     ],
-    pricingDetails: "Free forever (no credit card)",
-    integrations: ["Meta", "Instagram", "TikTok", "LinkedIn", "X/Twitter", "YouTube", "Pinterest"]
+    pricingDetails: "Free forever tier available",
+    integrations: ["Meta", "Instagram", "TikTok", "LinkedIn", "X", "YouTube", "Pinterest"]
   },
 {
     name: "Bridgecall",
-    description: "Real-time voice translation tool that enables multilingual calls through a simple browser link.",
+    description: "Browser-based real-time voice translation tool for multilingual calls via a simple link.",
     url: "https://bridgecall.app",
     category: "Productivity",
     tags: {
-        useCase: ["Business"],
-        price: "Freemium",
-        skill: "Beginner"
-    },
+        price: "Freemium"
+        },
     image: "https://www.google.com/s2/favicons?domain=bridgecall.app&sz=128",
     dateAdded: "2026-02-21",
     features: [
       "Real-time video call translation",
-      "One-link instant join (no app install)",
+      "One-link instant join (no app required)",
       "Translated voice and live subtitles",
       "50+ languages supported",
-      "Group calls included"
+      "Group call translation"
     ],
-    pricingDetails: "Free: 30 min | Starter: $19/mo | Plus: $29/mo | Pro: $49/mo (unlimited)",
-    integrations: ["Browser-based", "No app required"]
+    pricingDetails: "Free: 30 min | Starter: $19/mo | Pro: $49/mo"
   },
 {
     name: "Levl",
-    description: "Engagement and reward platform for course builders and community leaders.",
+    description: "Gamification platform for content creators that turns videos and articles into seasonal competitions with AI challenges.",
     url: "https://getlevl.ai",
     category: "Marketing",
     tags: {
-        useCase: ["Business"],
-        price: "Freemium",
-        skill: "Beginner"
-    },
+        price: "Freemium"
+        },
     image: "https://www.google.com/s2/favicons?domain=getlevl.ai&sz=128",
     dateAdded: "2026-02-22",
     features: [
-      "AI-generated challenges for engagement",
-      "Consistency rewards system",
+      "Seasonal leaderboards and XP systems",
+      "AI-generated daily/weekly challenges",
+      "Subscriber retention and engagement tools",
       "Content consumption tracking",
-      "Community leader tools"
+      "Transaction-based revenue share"
     ],
-    pricingDetails: "Freemium",
-    integrations: []
+    pricingDetails: "No monthly fees | 10% transaction fee (5% for early signups)"
   },
 {
     name: "GreenPT",
-    description: "A green, privacy-focused AI assistant (Frida) designed with a minimal carbon footprint.",
+    description: "Privacy-focused AI assistant (Frida) designed with a minimal carbon footprint and EU hosting.",
     url: "https://greenpt.nl/frida",
     category: "Productivity",
     tags: {
-        useCase: ["Business"],
-        price: "Freemium",
-        skill: "Beginner"
-    },
+        price: "Freemium"
+        },
     image: "https://www.google.com/s2/favicons?domain=greenpt.nl&sz=128",
     dateAdded: "2026-02-16",
     features: [
-      "Self-hosted AI models (Mistral, GPT-OSS)",
-      "40% lower CO2 than hyperscalers",
-      "GDPR compliant, EU-hosted",
-      "WordPress plugin for quick deployment",
-      "Slack, Teams, WhatsApp, Discord integrations"
+      "Landscaping/Green industry specialized AI (Frida)",
+      "Automated quoting from photos",
+      "Project planning and customer CRM",
+      "GDPR compliant, EU-hosted infrastructure",
+      "40% lower CO2 than hyperscale AI"
     ],
-    pricingDetails: "Free | Individual: €49.99/mo | Pro: €149.99/mo | Business: €399.99/mo",
-    integrations: ["WordPress", "Slack", "Microsoft Teams", "WhatsApp", "Discord", "Shopify", "Notion"]
+    pricingDetails: "Free | Individual: €49.99/mo | Pro: €149.99/mo",
+    integrations: ["WordPress", "Slack", "WhatsApp", "Discord", "Shopify"]
   },
 {
     name: "iMeett",
@@ -2201,739 +2156,441 @@ pricingDetails: "Free to try",
     url: "https://app.imeett.ai",
     category: "Productivity",
     tags: {
-        useCase: ["Business"],
         price: "Freemium",
-        skill: "Beginner"
-    },
-    image: "https://www.google.com/s2/favicons?domain=app.imeett.ai&sz=128",
-    dateAdded: "2026-02-09",
     features: [
-      "Chat with your meetings transcript",
-      "Telegram command center (#list, #recap)",
-      "99+ languages with auto-detection",
-      "Persona modes (HR, Sales, Legal, Executive)",
-      "Data stays on YOUR Google Drive"
+      "Chat with Meetings: AI-powered Q&A based on meeting transcripts",
+      "Telegram Command Center: Summaries and meeting management via Telegram",
+      "Persona Modes: Tailors summaries for specific roles (HR, Sales, Legal, etc.)",
+      "Two-Tier Summaries: Provides a quick scan followed by a detailed breakdown",
+      "99+ Language Support: Automatic detection of the spoken language"
     ],
-    pricingDetails: "Essentials: $9.99 one-time (15 hrs) | Growth: $12.99/mo | Freedom: $22.99/mo (unlimited)",
-    integrations: ["Google Drive", "Telegram", "Any video platform"]
+    pricingDetails: "Essentials: .99 one-time | Growth: 2.99/mo | Freedom: 2.99/mo",
+    integrations: ["Google Drive", "Telegram", "Zoom", "Any video platform"]
+  },
+    image: "https://www.google.com/s2/favicons?domain=app.imeett.ai&sz=128",
+    dateAdded: "2026-02-09"
   },
 {
     name: "Webcomparis",
-    description: "Competitive analysis tool that uses AI to audit and compare up to five websites simultaneously.",
+    description: "AI-powered technical, SEO, and design audit tool for comparing up to five websites simultaneously to identify market gaps.",
     url: "https://www.webcomparis.com",
     category: "Marketing",
     tags: {
-        useCase: ["Business"],
         price: "Freemium",
-        skill: "Beginner"
-    },
-    image: "https://www.google.com/s2/favicons?domain=www.webcomparis.com&sz=128",
-    dateAdded: "2026-02-10",
     features: [
-      "Compare up to 5 websites simultaneously",
-      "AI-powered technical, SEO, and design audits",
-      "Professional PDF reports",
-      "Market gap identification",
-      "Competitor benchmarking"
+      "Multi-Site Comparison: Audit up to 5 websites side-by-side",
+      "AI Technical SEO Audit: Deep scans for rendering and indexing issues",
+      "Competitive Benchmarking: Map your features against industry leaders",
+      "Professional PDF Reports: White-labeled audits for client presentations"
     ],
     pricingDetails: "Freemium",
-    integrations: []
+    integrations: ["SEO Tools"]
+  },
+    image: "https://www.google.com/s2/favicons?domain=www.webcomparis.com&sz=128",
+    dateAdded: "2026-02-10"
   },
 {
     name: "PathwiseAI",
-    description: "AI-driven career platform (now Corveno) that automates job searching and application preparation.",
+    description: "AI-driven career platform (now Corveno) that automates the job search journey from resume scoring to salary negotiation.",
     url: "https://www.pathwiseai.io/",
     category: "Productivity",
     tags: {
-        useCase: ["Business"],
         price: "Freemium",
-        skill: "Beginner"
-    },
-    image: "https://www.google.com/s2/favicons?domain=www.pathwiseai.io&sz=128",
-    dateAdded: "2026-02-11",
     features: [
-      "AI cover letter and resume generation",
-      "Interview prep with STAR stories",
-      "Resume Lab with AI scoring",
-      "Application tracker",
-      "Salary negotiation tools"
+      "Resume Lab: AI scoring and ATS optimization bank",
+      "Interview Prep: Mock questions and STAR story bank builder",
+      "LinkedIn Studio: Profile optimization and headline generation",
+      "Salary & Offers: Offer comparison tools and negotiation scripts"
     ],
-    pricingDetails: "Free: 5 credits | Paid: $8/mo or $2/doc",
-    integrations: ["LinkedIn", "Google"]
+    pricingDetails: "Free (5 credits) | Paid from /mo |  per doc",
+    integrations: ["LinkedIn", "Common App"]
+  },
+    image: "https://www.google.com/s2/favicons?domain=www.pathwiseai.io&sz=128",
+    dateAdded: "2026-02-11"
   },
 {
     name: "TransGull",
-    description: "AI translation for conversations, live speech, images & videos with superior accuracy",
+    description: "Contextual AI translation for live speech, images, and videos with desktop apps for seamless simultaneous interpretation.",
     url: "https://transgull.com",
     category: "Productivity",
     tags: {
-        useCase: ["Personal"],
         price: "Freemium",
-        skill: "Beginner"
-    },
-    image: "https://www.google.com/s2/favicons?domain=transgull.com&sz=128",
-    dateAdded: "2026-02-12",
     features: [
-      "Dialogue translation with voice and text",
-      "Image and video subtitle translation",
-      "Simultaneous interpretation for meetings/live streams",
-      "Desktop apps for Windows and Mac",
-      "Pay-as-you-go credits (Shells) - no subscription"
+      "Simultaneous Interpretation: Real-time recognition for meetings and lectures",
+      "Video Translation: Generates bilingual subtitles for local or web video",
+      "Image Translation: High-quality OCR and inference for vertical/complex text",
+      "Dialog Translation: Context-aware voice and text for natural flow"
     ],
-    pricingDetails: "Free download | Pay-as-you-go credits (Shells) never expire",
-    integrations: ["iOS", "Android", "Windows", "Mac"]
+    pricingDetails: "Pay-as-you-go (Shells) | Credits never expire",
+    integrations: ["Windows", "Mac", "YouTube"]
+  },
+    image: "https://www.google.com/s2/favicons?domain=transgull.com&sz=128",
+    dateAdded: "2026-02-12"
   },
 {
     name: "Watchflow",
-    description: "Complete infrastructure monitoring - SSL, heartbeats, and APIs",
+    description: "Infrastructure monitoring suite for SSL certificates, scheduled heartbeat jobs, and API schema changes.",
     url: "https://watchflow.io",
     category: "Productivity",
     tags: {
-        useCase: ["Business"],
         price: "Freemium",
-        skill: "Intermediate"
-    },
-    image: "https://www.google.com/s2/favicons?domain=watchflow.io&sz=128",
-    dateAdded: "2026-02-13",
     features: [
-      "SSL certificate monitoring with auto-renewal detection",
-      "Heartbeat monitoring for scheduled tasks/cron jobs",
-      "API monitoring with schema change detection",
-      "Slack, Email, Teams, Webhook alerts",
-      "Native modules for Make.com and n8n"
+      "SSL Monitoring: Auto-detects self-renewing certs and new subdomains",
+      "Heartbeat Monitoring: Dead man's switch for cron jobs and ETL pipelines",
+      "API Monitoring: Tracks response times and breaking schema changes",
+      "Native Automation: Drag-and-drop modules for Make.com and n8n",
+      "Custom Metrics: Track specific business data points in real-time"
     ],
-    pricingDetails: "Free until May 2026 | Starter: $19/mo | Pro: $49/mo | Business: $99/mo",
-    integrations: ["Slack", "Microsoft Teams", "Make.com", "n8n", "Power Automate"]
+    pricingDetails: "Free until May 2026 | Starter: 9/mo | Pro: 9/mo",
+    integrations: ["Slack", "Teams", "Webhooks", "Make.com", "n8n", "Power Automate"]
+  },
+    image: "https://www.google.com/s2/favicons?domain=watchflow.io&sz=128",
+    dateAdded: "2026-02-13"
   },
 {
     name: "TicketsData",
-    description: "Real-time ticket API for Ticketmaster, StubHub, SeatGeek and 10+ marketplaces",
+    description: "Real-time ticket inventory and pricing API across major marketplaces for arbitrage and analytics.",
     url: "https://ticketsdata.com",
     category: "Productivity",
     tags: {
-        useCase: ["Business"],
         price: "Paid",
-        skill: "Advanced"
-    },
-    image: "https://www.google.com/s2/favicons?domain=ticketsdata.com&sz=128",
-    dateAdded: "2026-02-15",
     features: [
-      "Real-time ticket inventory and pricing API",
-      "10+ marketplaces: Ticketmaster, StubHub, SeatGeek, VividSeats, Eventbrite",
-      "Arbitrage opportunities detection",
-      "Python, Node.js, PHP, Go SDKs",
-      "99.97% uptime"
+      "Real-Time Data: Instant seatmaps and availability without stale caching",
+      "10+ Marketplaces: Ticketmaster, StubHub, SeatGeek, VividSeats, and more",
+      "Arbitrage Intelligence: Identifies price spreads across markets",
+      "Developer SDKs: Ready-to-use libraries for Python, Node.js, Go, and PHP"
     ],
-    pricingDetails: "Starter: $499/mo (10K credits) | Pro: $2,499/mo (250K credits) | Business: Custom",
-    integrations: ["Python", "Node.js", "PHP", "Ruby", "Go"]
+    pricingDetails: "Starter: 99/mo | Pro: ,499/mo",
+    integrations: ["Ticketmaster", "StubHub", "Eventbrite", "SeatGeek", "Viagogo"]
+  },
+    image: "https://www.google.com/s2/favicons?domain=ticketsdata.com&sz=128",
+    dateAdded: "2026-02-15"
   },
 {
     name: "71vote",
-    description: "AI panel with 20+ experts debate your decisions in real-time",
+    description: "AI decision-making platform where 20+ specialized AI experts debate your dilemmas in real-time using structured methods.",
     url: "https://www.71vote.com",
     category: "Productivity",
     tags: {
-        useCase: ["Personal"],
-        price: "Freemium",
-        skill: "Beginner"
-    },
-    image: "https://www.google.com/s2/favicons?domain=www.71vote.com&sz=128",
-    dateAdded: "2026-02-09",
+        price: "Free",
     features: [
-      "20+ AI experts debate your decisions",
-      "Health: Doctor, Psychotherapist, Dietitian, Veterinarian",
-      "Business strategy and life decisions",
-      "7 decision methods: Socratic, Red/Blue Team, Pre-mortem",
-      "Real-time structured analysis"
+      "AI Expert Panels: Debate with Doctors, Dietitians, or Business Strategists",
+      "Structured Methods: Socratic, Red/Blue Team, and Pre-mortem analysis",
+      "Real-time Debate: Watch agents discuss multiple perspectives on your query",
+      "Decision Archiving: Track the logic behind your major life and work choices"
     ],
-    pricingDetails: "Freemium",
+    pricingDetails: "Free Access",
     integrations: []
+  },
+    image: "https://www.google.com/s2/favicons?domain=www.71vote.com&sz=128",
+    dateAdded: "2026-02-09"
   },
 {
     name: "PrivatClaw",
-    description: "Managed OpenClaw AI assistant on dedicated VPS",
+    description: "Fully managed OpenClaw hosting service on dedicated VPS infrastructure for high-security autonomous AI assistants.",
     url: "https://privatclaw.com",
     category: "Productivity",
     tags: {
-        useCase: ["Business"],
         price: "Paid",
-        skill: "Intermediate"
-    },
-    image: "https://www.google.com/s2/favicons?domain=privatclaw.com&sz=128",
-    dateAdded: "2026-02-10",
     features: [
-      "Dedicated VPS with OpenClaw pre-installed",
-      "Telegram, WhatsApp, Discord, Slack integrations",
-      "24/7 autonomous AI agent",
-      "Managed updates, backups, security",
-      "No DevOps required"
+      "Dedicated VPS: Every instance runs on its own isolated virtual server",
+      "Managed Hosting: Automated updates, security hardening, and backups",
+      "Omnichannel Access: Connect to Telegram, WhatsApp, Discord, and Slack",
+      "Proactive Agents: 24/7 autonomous agents that browse and manage files"
     ],
-    pricingDetails: "Paid (managed hosting)",
+    pricingDetails: "Paid Managed Hosting",
     integrations: ["Telegram", "WhatsApp", "Discord", "Slack"]
+  },
+    image: "https://www.google.com/s2/favicons?domain=privatclaw.com&sz=128",
+    dateAdded: "2026-02-10"
   },
 {
     name: "PagerSync",
-    description: "Sync PagerDuty on-call roster with Slack User Groups",
+    description: "Syncs PagerDuty on-call rosters with Slack User Groups to ensure alerts reach the right person instantly.",
     url: "https://www.pagersync.com",
     category: "Productivity",
     tags: {
-        useCase: ["Business"],
         price: "Freemium",
-        skill: "Intermediate"
-    },
-    image: "https://www.google.com/s2/favicons?domain=www.pagersync.com&sz=128",
-    dateAdded: "2026-02-11",
     features: [
-      "PagerDuty schedule to Slack sync",
-      "Auto post on-call changes to Slack",
-      "Multi-team aliases support",
-      "Incident management integration",
-      "7-day free trial"
+      "Slack Group Sync: Automatically updates @oncall aliases in Slack",
+      "Multi-Team Aliases: Create aliases that span multiple engineering teams",
+      "Rotation Announcements: Auto-post updates when rotations change",
+      "Multi-Schedule Support: Link multiple PagerDuty schedules to one alias"
     ],
-    pricingDetails: "Premium: $25/mo | Enterprise: Contact for pricing",
+    pricingDetails: "Premium: 5/mo | 7-day Free Trial",
     integrations: ["PagerDuty", "Slack", "xMatters"]
   },
-    image: "https://www.google.com/s2/favicons?domain=transgull.com&sz=128",
-    dateAdded: "2026-02-12",
-    features: [
-      "Contextual AI translation",
-      "Real-time conversation translation",
-      "Video and meeting translation",
-      "Multi-language support"
-    ],
-    pricingDetails: "Freemium",
-    integrations: []
-  },
-{
-    name: "Watchflow",
-    description: "Infrastructure monitoring suite for SSL certificates, scheduled jobs, and APIs.",
-    url: "https://watchflow.io",
-    category: "Productivity",
-    tags: {
-        useCase: ["Business"],
-        price: "Freemium",
-        skill: "Beginner"
-    },
-    image: "https://www.google.com/s2/favicons?domain=watchflow.io&sz=128",
-    dateAdded: "2026-02-13",
-    features: [
-      "SSL certificate monitoring",
-      "Scheduled job monitoring",
-      "API health checks",
-      "Slack and Teams alerts",
-      "Instant uptime alerts"
-    ],
-    pricingDetails: "Freemium",
-    integrations: ["Slack", "Microsoft Teams"]
-  },
-{
-    name: "AiArtist",
-    description: "AI motion graphics generator for Social Media and Ads",
-    url: "https://www.aiartist.io",
-    category: "Marketing",
-    tags: {
-        useCase: ["Business"],
-        price: "Paid",
-        skill: "Beginner"
-    },
-    image: "https://www.google.com/s2/favicons?domain=www.aiartist.io&sz=128",
-    dateAdded: "2026-02-14",
-    features: [
-      "AI motion graphics from text prompts",
-      "Kinetic typography animations",
-      "9:16, 16:9 aspect ratios",
-      "Export 720p/1080p HD MP4",
-      "Commercial usage rights"
-    ],
-    pricingDetails: "$99 one-time (100 credits/mo for 1 year)",
-    integrations: ["TikTok", "Instagram", "YouTube", "Meta Ads"]
-  },
-{
-    name: "TicketsData",
-    description: "Unified API for real time ticket inventory and pricing across major marketplaces.",
-    url: "https://ticketsdata.com",
-    category: "Productivity",
-    tags: {
-        useCase: ["Business"],
-        price: "Paid",
-        skill: "Intermediate"
-    },
-    image: "https://www.google.com/s2/favicons?domain=ticketsdata.com&sz=128",
-    dateAdded: "2026-02-15",
-    features: [
-      "Normalized JSON for events",
-      "Real-time inventory data",
-      "Pricing across marketplaces",
-      "Event listings API",
-      "Availability checks"
-    ],
-    pricingDetails: "Paid API service",
-    integrations: ["Ticket marketplaces", "Event APIs"]
-  },
-{
-    name: "71vote",
-    description: "AI-powered thinking tool where multiple AI agents discuss your dilemmas in real time.",
-    url: "https://www.71vote.com",
-    category: "Productivity",
-    tags: {
-        useCase: ["Personal"],
-        price: "Free",
-        skill: "Beginner"
-    },
-    image: "https://www.google.com/s2/favicons?domain=www.71vote.com&sz=128",
-    dateAdded: "2026-02-09",
-    features: [
-      "Multiple AI agents debate topics",
-      "Perspectives from different viewpoints",
-      "Covers health, therapy, nutrition, pet care",
-      "Decision-making assistance"
-    ],
-    pricingDetails: "Free tier",
-    integrations: []
-  },
-{
-    name: "privatclaw",
-    description: "Fully managed OpenClaw hosting service - dedicated VPS with AI assistant pre-installed.",
-    url: "https://privatclaw.com",
-    category: "Productivity",
-    tags: {
-        useCase: ["Business"],
-        price: "Paid",
-        skill: "Intermediate"
-    },
-    image: "https://www.google.com/s2/favicons?domain=privatclaw.com&sz=128",
-    dateAdded: "2026-02-10",
-    features: [
-      "Dedicated VPS with OpenClaw",
-      "24/7 autonomous AI agent",
-      "Telegram, WhatsApp, Discord, Slack integrations",
-      "Managed updates and backups",
-      "No DevOps required"
-    ],
-    pricingDetails: "Paid hosting (managed service)",
-    integrations: ["Telegram", "WhatsApp", "Discord", "Slack"]
-  },
-{
-    name: "PagerSync",
-    description: "Bring Your On-Call Roster into Slack for Seamless Communication",
-    url: "https://www.pagersync.com",
-    category: "Productivity",
-    tags: {
-        useCase: ["Business"],
-        price: "Freemium",
-        skill: "Intermediate"
-    },
     image: "https://www.google.com/s2/favicons?domain=www.pagersync.com&sz=128",
-    dateAdded: "2026-02-11",
-    features: [
-      "On-call roster in Slack",
-      "Shift scheduling",
-      "Alert routing",
-      "Team availability tracking"
-    ],
-    pricingDetails: "Freemium",
-    integrations: ["Slack"]
+    dateAdded: "2026-02-11"
   },
 {
     name: "Polyform",
-    description: "Build beautiful forms in seconds with AI - unlimited forms and responses",
+    description: "AI-powered form builder that creates beautiful, intelligent forms with branching logic via natural language.",
     url: "https://polyform.to",
     category: "Productivity",
     tags: {
-        useCase: ["Business"],
         price: "Free",
-        skill: "Beginner"
-    },
-    image: "https://www.google.com/s2/favicons?domain=polyform.to&sz=128",
-    dateAdded: "2026-02-12",
     features: [
-      "Polly AI - describe form in plain English",
-      "Unlimited forms and responses",
-      "Advanced theming and conditional logic",
-      "Real-time collaboration",
-      "Zapier integration (8,000+ apps)"
+      "Polly AI Agent: Build and edit forms through a simple chat interface",
+      "Conditional Logic: Create dynamic branching paths based on responses",
+      "Real-time Collaboration: Instant syncing and team chat for builders",
+      "Journey Tracking: Visualize respondent interaction and drop-off points"
     ],
-    pricingDetails: "Free forever | Pro: $29/mo",
-    integrations: ["Slack", "Google Sheets", "HubSpot", "Zapier"]
+    pricingDetails: "Free (Unlimited forms) | Pro: 9/mo (AI features)",
+    integrations: ["Zapier", "Slack", "Google Sheets", "HubSpot", "Webhooks"]
+  },
+    image: "https://www.google.com/s2/favicons?domain=polyform.to&sz=128",
+    dateAdded: "2026-02-12"
   },
 {
     name: "Status Central",
-    description: "Monitor all your services in one place - real-time status updates",
+    description: "Multi-source status aggregation platform for real-time service monitoring across cloud providers and critical infrastructure.",
     url: "https://www.statuscentral.io/",
     category: "Productivity",
     tags: {
-        useCase: ["Business"],
         price: "Free",
-        skill: "Beginner"
-    },
-    image: "https://www.google.com/s2/favicons?domain=www.statuscentral.io&sz=128",
-    dateAdded: "2026-02-13",
     features: [
-      "Multi-source status aggregation",
-      "Real-time service monitoring",
-      "Cloud monitoring (AWS, Azure, GCP)",
-      "Incident management and timelines",
-      "Branded status pages"
+      "Status Aggregation: Consolidates multiple provider status pages into one",
+      "Branded Status Pages: Create public status pages for your own users",
+      "Cloud Monitoring: Real-time tracking for AWS, Azure, and Google Cloud",
+      "Incident Timelines: Detailed impact analysis and post-mortem logs"
     ],
-    pricingDetails: "Free: 5 services | Pro: $29/mo | Enterprise: Custom",
-    integrations: ["AWS", "Azure", "Google Cloud", "Stripe"]
+    pricingDetails: "Free (5 services) | Pro: 9/mo",
+    integrations: ["AWS", "Azure", "Google Cloud", "SaaS Status Pages"]
+  },
+    image: "https://www.google.com/s2/favicons?domain=www.statuscentral.io&sz=128",
+    dateAdded: "2026-02-13"
   },
 {
     name: "MiroMiro",
-    description: "Extract code, assets & design tokens from any website - paste into Cursor/Claude",
+    description: "Extracts code, assets, and design tokens from any website for instant use in Cursor, Claude, and Tailwind projects.",
     url: "https://miromiro.app",
     category: "Code Assistance",
     tags: {
-        useCase: ["Business"],
         price: "Freemium",
-        skill: "Intermediate"
-    },
-    image: "https://www.google.com/s2/favicons?domain=miromiro.app&sz=128",
-    dateAdded: "2026-02-14",
     features: [
-      "Hover to extract colors, fonts, spacing, CSS",
-      "Export as clean Tailwind HTML",
-      "Extract images, SVGs, icons in bulk",
-      "Full Tailwind config from any site",
-      "Chrome extension - runs locally"
+      "Tailwind Export: Converts any web element into clean Tailwind HTML",
+      "Asset Extractor: One-click download for SVGs, images, and Lottie files",
+      "Design System Scan: Pulls colors and fonts into a config file",
+      "Lottie Detection: Instant preview and download of web animations"
     ],
-    pricingDetails: "Free 24hr trial | Pro: €9.5/mo | Lifetime: €49 one-time",
-    integrations: ["Cursor", "Claude", "v0", "Lovable", "Bolt"]
+    pricingDetails: "Pro: €9.5/mo | Lifetime: €99 | 24h Free Trial",
+    integrations: ["Cursor", "Claude", "Lovable", "Bolt", "v0"]
+  },
+    image: "https://www.google.com/s2/favicons?domain=miromiro.app&sz=128",
+    dateAdded: "2026-02-14"
   },
 {
     name: "Traidies",
-    description: "Turn trading ideas into automated MQL5 bots in seconds",
+    description: "Converts plain-English trading ideas into automated MQL5 bots and Expert Advisors in seconds.",
     url: "https://www.traidies.com",
     category: "Code Assistance",
     tags: {
-        useCase: ["Business"],
         price: "Freemium",
-        skill: "Intermediate"
-    },
-    image: "https://www.google.com/s2/favicons?domain=www.traidies.com&sz=128",
-    dateAdded: "2026-02-15",
     features: [
-      "Plain English to MQL5 code",
-      "Instant Expert Advisor generation",
-      "Automated backtesting",
-      "TradingView/Pine Script conversion",
-      "MT5 platform support"
+      "AI Strategy Parser: Converts trading talk into precise MQL5 code",
+      "Expert Advisor Generation: Production-ready bots for MetaTrader 5",
+      "Automated Backtesting: Instant historical testing of generated strategies",
+      "Pine Script Conversion: Turn TradingView scripts into MT5 bots"
     ],
-    pricingDetails: "Freemium",
-    integrations: ["MetaTrader 5"]
+    pricingDetails: "Free to start",
+    integrations: ["MetaTrader 5", "MQL5"]
+  },
+    image: "https://www.google.com/s2/favicons?domain=www.traidies.com&sz=128",
+    dateAdded: "2026-02-15"
   },
 {
     name: "SecVibe",
-    description: "Security controls for AI-generated code - real-time analysis",
+    description: "AI-powered security copilot for vibe coding, detecting and fixing risks in applications developed with AI assistants.",
     url: "https://secvibe.ai",
     category: "Code Assistance",
     tags: {
-        useCase: ["Business"],
-        price: "Paid",
-        skill: "Advanced"
-    },
-    image: "https://www.google.com/s2/favicons?domain=secvibe.ai&sz=128",
-    dateAdded: "2026-02-06",
+        price: "Freemium",
     features: [
-      "Specialized detection for AI-generated code",
-      "Real-time code analysis",
-      "Context-aware adaptive security",
-      "Analytics dashboard",
-      "VS Code integration"
+      "Specialized Detection: Identifies risks unique to AI-generated code",
+      "Real-Time Analysis: Continuous monitoring as you code in Cursor",
+      "Context-Aware Controls: Adaptive security that adjusts to your stack",
+      "Intelligent Auto-Fix: Contextual remediation for detected vulnerabilities"
     ],
-    pricingDetails: "Paid (early access)",
-    integrations: ["VS Code", "Cursor"]
+    pricingDetails: "Waitlist (Early Access)",
+    integrations: ["Cursor", "VS Code", "SAST tools"]
+  },
+    image: "https://www.google.com/s2/favicons?domain=secvibe.ai&sz=128",
+    dateAdded: "2026-02-06"
   },
 {
     name: "Alignmint",
-    description: "All-in-one nonprofit accounting, donor CRM, volunteer tracking, and fundraising",
+    description: "All-in-one nonprofit accounting and management platform combining fund accounting, donor CRM, and volunteer tracking.",
     url: "https://www.getalignmint.org",
     category: "Productivity",
     tags: {
-        useCase: ["Business"],
-        price: "Free",
-        skill: "Beginner"
-    },
+        price: "Paid",
+    features: [
+      "True Fund Accounting: Restricted funds, grants, and Form 990 reports",
+      "Donor CRM: Self-service portals and automated receipting",
+      "Minty AI: Assistant that answers questions about your organization data",
+      "Volunteer Tracking: Manage hours, skills, and background checks"
+    ],
+    pricingDetails: "Free Plan available | Contact for custom quotes",
+    integrations: ["Bank feeds", "Online Payments"]
+  },
     image: "https://www.google.com/s2/favicons?domain=www.getalignmint.org&sz=128",
-    dateAdded: "2026-02-07",
-    features: [
-      "True fund accounting with restricted funds",
-      "Donor CRM with self-service portal",
-      "Volunteer management and tracking",
-      "Events and ticketing",
-      "Minty AI - ask questions about your data"
-    ],
-    pricingDetails: "Free plan available | Paid plans (no credit card to start)",
-    integrations: ["Bank feeds"]
-  },
-    image: "https://www.google.com/s2/favicons?domain=polyform.to&sz=128",
-    dateAdded: "2026-02-12",
-    features: [
-      "AI form generation",
-      "Advanced theming",
-      "Conditional logic",
-      "Real-time analytics"
-    ],
-    pricingDetails: "Free tier",
-    integrations: []
+    dateAdded: "2026-02-07"
   },
 {
-    name: "Status Central",
-    description: "Monitor All Your Services In One Place.",
-    url: "https://www.statuscentral.io/",
-    category: "Productivity",
-    tags: {
-        useCase: ["Business"],
-        price: "Free",
-        skill: "Beginner"
-    },
-    image: "https://www.google.com/s2/favicons?domain=www.statuscentral.io&sz=128",
-    dateAdded: "2026-02-13",
-    features: [
-      "Monitor multiple services in one dashboard",
-      "Real-time status updates",
-      "Outage and maintenance alerts",
-      "Service health tracking"
-    ],
-    pricingDetails: "Free tier",
-    integrations: []
-  },
-{
-    name: "MiroMiro",
-    description: "Extract colors, fonts, styles and ready-to-use code from any website in one click.",
-    url: "https://miromiro.app",
-    category: "Code Assistance",
-    tags: {
-        useCase: ["Business"],
-        price: "Freemium",
-        skill: "Intermediate"
-    },
-    image: "https://www.google.com/s2/favicons?domain=miromiro.app&sz=128",
-    dateAdded: "2026-02-14",
-    features: [
-      "Extract color palettes",
-      "Font detection",
-      "Style extraction",
-      "Ready-to-use CSS code generation"
-    ],
-    pricingDetails: "Freemium",
-    integrations: []
-  },
-{
-    name: "Traidies",
-    description: "AI-powered platform that turns plain-English trading ideas into automated trading bots.",
-    url: "https://www.traidies.com",
-    category: "Code Assistance",
-    tags: {
-        useCase: ["Business"],
-        price: "Freemium",
-        skill: "Intermediate"
-    },
-    image: "https://www.google.com/s2/favicons?domain=www.traidies.com&sz=128",
-    dateAdded: "2026-02-15",
-    features: [
-      "Plain English to trading bot code",
-      "Cloud compilation",
-      "Backtesting tools",
-      "Automated strategy generation"
-    ],
-    pricingDetails: "Freemium",
-    integrations: []
-  },
-  {
-name: "Glad AI",
-    description: "Glad AI transforms your expertise into multi-platform content - LinkedIn, X, Reddit.",
+    name: "Glad AI",
+    description: "Automated LinkedIn content assistant that learns your voice to generate authentic posts and visuals.",
     url: "https://iamglad.ai",
     category: "Marketing",
     tags: {
-        useCase: ["Business"],
-        price: "Freemium",
-        skill: "Intermediate"
-    },
+        price: "Freemium"
+        },
     image: "https://www.google.com/s2/favicons?domain=iamglad.ai&sz=128",
     dateAdded: "2026-02-09",
     features: [
-      "Voice Consistency Engine",
-      "Smart content extraction from website/blogs",
-      "Auto-pilot multi-platform growth",
+      "Voice learning from websites/blogs",
+      "AI post generation and formatting",
+      "Predictive scheduling and analytics",
       "On-brand visual generation",
-      "Predictive scheduling"
+      "AI Text Humanizer utility"
     ],
-    pricingDetails: "Freemium",
-    integrations: ["LinkedIn", "X/Twitter", "Reddit"]
+    pricingDetails: "Free (15 credits) | Starter: $29/mo | Authority: $89/mo"
   },
 {
     name: "Organic Pilot",
-    description: "Grow organic traffic on auto pilot - topic clusters, content plans, WordPress publishing.",
+    description: "Automates organic traffic growth by planning, writing, and publishing SEO-optimized content with backlink building.",
     url: "https://www.organicpilot.ai",
     category: "Marketing",
     tags: {
-        useCase: ["Business"],
-        price: "Freemium",
-        skill: "Intermediate"
-    },
+        price: "Freemium"
+        },
     image: "https://www.google.com/s2/favicons?domain=www.organicpilot.ai&sz=128",
     dateAdded: "2026-02-02",
     features: [
-      "Topic cluster generation based on search demand",
-      "30-day content planning",
-      "Content quality scoring",
-      "Direct WordPress/CMS publishing",
-      "SEO content engine for SaaS"
+      "30-day AI-generated content plans",
+      "Direct publishing to WordPress/Webflow",
+      "Automated backlink building",
+      "SEO article editor",
+      "API and Webhook integration for teams"
     ],
-    pricingDetails: "Freemium",
-    integrations: ["WordPress", "CMS platforms"]
+    pricingDetails: "Free entry | Paid plans for scale",
+    integrations: ["WordPress", "Webflow", "REST API", "Webhooks"]
   },
 {
     name: "maptrics",
-    description: "SEO monitoring and automated SEO audit with continuous monitoring.",
+    description: "SEO monitoring and health scoring platform that detects broken meta tags and explains traffic changes in plain language.",
     url: "https://www.maptrics.io",
     category: "Marketing",
     tags: {
-        useCase: ["Business"],
-        price: "Freemium",
-        skill: "Intermediate"
-    },
+        price: "Freemium"
+        },
     image: "https://www.google.com/s2/favicons?domain=www.maptrics.io&sz=128",
     dateAdded: "2026-02-03",
     features: [
-      "Continuous SEO monitoring",
-      "SEO health score",
-      "Deploy SEO checks",
-      "Regression detection",
-      "Meta tag and OG tag validation"
+      "SEO Health Score monitoring",
+      "Plain-language traffic change analysis",
+      "Sitemap discovery and validation",
+      "Broken Meta/OG tag detection",
+      "Webhook integration (Vercel supported)"
     ],
-    pricingDetails: "Freemium",
-    integrations: ["Vercel", "Google Search Console"]
+    pricingDetails: "Free forever for small sites",
+    integrations: ["Vercel", "Webhooks", "Google Search Console"]
   },
 {
     name: "LLMWISE",
-    description: "Compare, blend, and evaluate leading AI models from a single interface.",
+    description: "Management platform for LLM prompts and models with cost optimization, A/B testing, and performance tracking.",
     url: "https://llmwise.ai",
     category: "Productivity",
     tags: {
-        useCase: ["Business"],
-        price: "Freemium",
-        skill: "Intermediate"
-    },
+        price: "Freemium"
+        },
     image: "https://www.google.com/s2/favicons?domain=llmwise.ai&sz=128",
     dateAdded: "2026-02-04",
     features: [
-      "Chat with smart routing",
-      "Compare 2-4 models side-by-side",
-      "Blend outputs for superior response",
-      "Judge mode for blind evaluation",
-      "Mesh mode with failover routing"
+      "Prompt Versioning and A/B testing",
+      "Unified Cost Monitoring across providers",
+      "Blind evaluation (Judge mode)",
+      "Smart Routing for performance/cost",
+      "REST API and SDK for integration"
     ],
-    pricingDetails: "Freemium",
-    integrations: ["OpenAI", "Anthropic", "Google Gemini", "DeepSeek"]
+    pricingDetails: "Free/Hobby tier | Pro: ~$25/mo",
+    integrations: ["OpenAI", "Anthropic", "Google Gemini", "REST API"]
   },
-    image: "https://www.google.com/s2/favicons?domain=iamglad.ai&sz=128",
-    dateAdded: "2026-02-09"
-},
-  {
-    name: "Organic Pilot",
-    description: "With OrganicPilot, grow your organic traffic on auto pilot. Instead of juggling keywords, spreadsheets, and scattered drafts, OrganicPilot builds your entire content engine:  • Generates topic clusters based on search demand • Creates a 30-day content plan with briefs • Scores content quality before publishing • Publishes directly to WordPress or your CMS  It’s built for agencies and SaaS teams who want to scale organic traffic without hiring a full SEO department.  No fluff. No random AI content. Just structured organic growth.",
-    url: "https://www.organicpilot.ai",
-    category: "Image Generation",
-    tags: {
-        useCase: ["Business"],
-        price: "Free",
-        skill: "Beginner"
-    },
-    image: "https://www.google.com/s2/favicons?domain=www.organicpilot.ai&sz=128",
-    dateAdded: "2026-02-02"
-},
-  {
-    name: "maptrics",
-    description: "SEO monitoring, SEO health score, automated SEO audit, continuous SEO monitoring, deploy SEO check, site crawling, SEO regression detection, meta tag checker, OG tag validator, structured data validation, broken link checker, canonical tag monitor, robots meta checker, sitemap crawler, SEO issue tracker, page health score, SEO traffic drop, broken deploy SEO, SEO regression, post-deploy SEO check, SEO monitoring after deploy, catch SEO issues early, SEO change detection, SEO audit tool, SEO history tracking, continuous SEO vs one-time audit, real-time SEO monitoring, SEO score over time, SEO trend tracking, Vercel SEO monitoring, deploy webhook SEO, Google Search Console integration, SEO CI/CD, automated SEO testing, SEO monitoring for developers, SEO health check after deploy, track SEO changes over time, SEO audit with history, automatic SEO regression testing, SEO score dashboard, seo-monitoring, site-crawl, meta-tags, og-tags, structured-data, deploy-checks, health-score, link-checker, alt-text, canonical, seo-history, issue-tracking, vercel, sitemap",
-    url: "https://www.maptrics.io",
-    category: "Copywriting",
-    tags: {
-        useCase: ["Business"],
-        price: "Free",
-        skill: "Beginner"
-    },
-    image: "https://www.google.com/s2/favicons?domain=www.maptrics.io&sz=128",
-    dateAdded: "2026-02-03"
-},
-  {
-    name: "LLMWISE",
-    description: "LLMWise is the fastest way to compare, blend, and evaluate leading AI models — all from a single interface. Instead of juggling multiple AI subscriptions and browser   tabs, LLMWise lets you send one prompt and see how GPT-5.2, Claude Sonnet 4.5, Gemini 3 Flash, DeepSeek R1, Grok 3, and more respond side-by-side in real time.    Most professionals already use AI daily but remain locked into a single provider with no way to know if they're getting the best output. LLMWise solves this with five   powerful modes:    Chat — Talk to any model instantly. Built-in smart routing automatically picks the best model for your query — code questions go to GPT, creative writing to Claude,   translation to Gemini — so you always get optimal results without thinking about it.    Compare — Send one prompt to 2-4 models simultaneously and see responses stream in side-by-side. Perfect for evaluating which model handles your specific use case best,   whether that's drafting emails, analyzing data, or writing code.    Blend — Combines outputs from multiple models into a single, superior response. Uses Mixture-of-Agents architecture to synthesize the best reasoning from each model. The    result consistently outperforms any individual model.    Judge — Pit models against each other in a blind evaluation judged by a third AI model. Get an objective verdict on which model produces better output for your exact   prompt, complete with scoring and reasoning.    Mesh — Intelligent failover routing that automatically retries with backup models if your primary choice fails or is overloaded. Circuit-breaker protection ensures you   always get a response.    LLMWise is built for professionals who need reliable AI output without the overhead of managing multiple subscriptions. Key features include:",
-    url: "https://llmwise.ai",
-    category: "Image Generation",
-    tags: {
-        useCase: ["Business"],
-        price: "Free",
-        skill: "Beginner"
-    },
-    image: "https://www.google.com/s2/favicons?domain=llmwise.ai&sz=128",
-    dateAdded: "2026-02-04"
-},
 {
     name: "Transmit",
-    description: "Email that actually lands - transactional and marketing emails with inbox placement.",
+    description: "Email infrastructure for transactional and marketing messages with 99.2% inbox placement and AI-powered deliverability tools.",
     url: "https://xmit.sh",
     category: "Productivity",
     tags: {
-        useCase: ["Business"],
         price: "Paid",
-        skill: "Intermediate"
-    },
+    features: [
+      "Deliverability Suite: Domain warmup, validation, and reputation isolation",
+      "AI Composer: Design emails by describing them in plain text",
+      "BYOK Mode: Bring your own AWS account for full infrastructure control",
+      "MCP Server: Manage campaigns directly from Cursor or Claude"
+    ],
+    pricingDetails: "Managed: /mo | BYOK: /usr/bin/bash-49/mo + AWS costs",
+    integrations: ["AWS SES", "Claude", "Cursor", "Clerk", "Auth0"]
+  },
     image: "https://www.google.com/s2/favicons?domain=xmit.sh&sz=128",
-    dateAdded: "2026-02-05",
-    features: [
-      "99.2% inbox placement",
-      "Domain warmup auto-ramping",
-      "Email validation (block invalid addresses)",
-      "Reputation isolation per account",
-      "MCP server for AI agents"
-    ],
-    pricingDetails: "Starts at $2/mo (managed) | $0 + AWS costs (BYOK)",
-    integrations: ["Claude", "Cursor", "ChatGPT", "AWS SES"]
+    dateAdded: "2026-02-05"
   },
 {
-    name: "SecVibe",
-    description: "AI-powered security copilot for vibe coding - detect and fix security risks in AI-generated code.",
-    url: "https://secvibe.ai",
-    category: "Code Assistance",
-    tags: {
-        useCase: ["Business"],
-        price: "Freemium",
-        skill: "Intermediate"
-    },
-    image: "https://www.google.com/s2/favicons?domain=secvibe.ai&sz=128",
-    dateAdded: "2026-02-06",
-    features: [
-      "Security risk detection in AI-generated code",
-      "Cursor and VS Code integration",
-      "Secure-by-design development",
-      "Prompt and output analysis",
-      "Auto-fix recommendations"
-    ],
-    pricingDetails: "Freemium",
-    integrations: ["Cursor", "VS Code"]
-  },
-{
-    name: "Alignmint",
-    description: "All-in-one nonprofit accounting and management platform for nonprofits, churches, and schools.",
-    url: "https://www.getalignmint.org",
+    name: "Docutracker",
+    description: "Document tracking and e-signature platform that provides real-time engagement analytics to optimize sales follow-ups.",
+    url: "https://docutracker.io",
     category: "Productivity",
     tags: {
-        useCase: ["Business"],
-        price: "Paid",
-        skill: "Intermediate"
-    },
-    image: "https://www.google.com/s2/favicons?domain=www.getalignmint.org&sz=128",
-    dateAdded: "2026-02-07",
+        price: "Freemium"
+        },
+    image: "https://www.google.com/s2/favicons?domain=docutracker.io&sz=128",
+    dateAdded: "2026-01-20",
     features: [
-      "Nonprofit accounting",
-      "Church management",
-      "Private school tools",
-      "Fiscal sponsor management",
-      "US-based platform"
+      "Real-time open and read notifications",
+      "Page-level time spent analytics",
+      "Integrated E-Signatures",
+      "Document templates and management",
+      "CRM integration for teams"
     ],
-    pricingDetails: "Paid (contact for pricing)",
-    integrations: []
+    pricingDetails: "Free (3 docs) | Starter: $15/mo | Business: $25/mo"
+  },
+{
+    name: "URL Genius",
+    description: "Deep linking and QR code platform that opens mobile apps directly to increase conversion rates for social and ad campaigns.",
+    url: "https://urlgenius.com",
+    category: "Marketing",
+    tags: {
+        price: "Paid"
+        },
+    image: "https://www.google.com/s2/favicons?domain=urlgenius.com&sz=128",
+    dateAdded: "2026-04-25",
+    features: [
+      "App-to-App deep linking (IG, Amazon, YouTube)",
+      "Branded short links and custom domains",
+      "Dynamic QR code generator",
+      "Detailed click and conversion analytics",
+      "Programmatic API for link creation"
+    ],
+    pricingDetails: "Free basic links | Pro starts at $10/mo + Pay-per-click",
+    integrations: ["Instagram", "Amazon", "YouTube", "REST API"]
+},
+{
+    name: "TextHuman",
+    description: "AI text humanizer that rewrites generated content to bypass detection tools while maintaining natural readability.",
+    url: "https://texthuman.ai",
+    category: "Copywriting",
+    tags: {
+        price: "Paid"
+        },
+    image: "https://www.google.com/s2/favicons?domain=texthuman.ai&sz=128",
+    dateAdded: "2026-04-25",
+    features: [
+      "AI Detection Bypass (GPTZero, Originality.ai)",
+      "Tone and style adjustment",
+      "Natural readability preservation",
+      "Bulk processing support",
+      "Multi-language humanization"
+    ],
+    pricingDetails: "Starts at $10/mo | Credit-based options available"
   }
 ];

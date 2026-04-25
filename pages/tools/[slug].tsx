@@ -108,18 +108,7 @@ export default function ToolPage({ tool }: ToolPageProps) {
           )}
         </div>
 
-        {tool.tags.useCase.length > 0 && (
-          <div className="mb-10">
-            <h2 className="text-xs font-bold text-micro-muted uppercase tracking-[0.2em] mb-4">Use Cases</h2>
-            <div className="flex flex-wrap gap-2">
-              {tool.tags.useCase.map((uc) => (
-                <span key={uc} className="px-4 py-2 rounded-full bg-micro-layer-1 text-sm font-medium text-micro-fg">
-                  {uc}
-                </span>
-              ))}
-            </div>
-          </div>
-        )}
+
 
         {tool.maker && (
           <div className="mb-10 pb-10 border-b border-micro-layer-1">

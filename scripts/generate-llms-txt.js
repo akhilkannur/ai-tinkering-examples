@@ -42,7 +42,7 @@ ${localSocialExamples.slice(0, 50).map(ex => `- [${ex.title}](${SITE_URL}/ai-exa
       fullContent += `### ${t.name}\n`;
       fullContent += `URL: ${SITE_URL}/tools/${slugify(t.name)}\n`;
       fullContent += `Category: ${t.category}\n`;
-      fullContent += `Tags: ${t.tags.useCase.join(', ')} | ${t.tags.price} | ${t.tags.skill}\n`;
+      fullContent += `Tags: ${t.tags.price}\n`;
       fullContent += `Description: ${t.description}\n\n`;
     });
 
