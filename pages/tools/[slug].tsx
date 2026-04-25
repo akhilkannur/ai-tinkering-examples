@@ -86,18 +86,23 @@ export default function ToolPage({ tool }: ToolPageProps) {
 
         {tool.maker && (
           <div className="mb-10 pb-10 border-b border-micro-layer-1">
-            <h2 className="text-xs font-bold text-micro-muted uppercase tracking-[0.2em] mb-4">Curated By</h2>
-            <div className="flex items-center gap-4">
-              <div className="w-10 h-10 rounded-full overflow-hidden border border-micro-layer-1 flex-shrink-0">
+            <h2 className="text-xs font-bold text-micro-muted uppercase tracking-[0.2em] mb-4">Maker</h2>
+            <a 
+              href={tool.maker.twitter ? `https://x.com/${tool.maker.twitter}` : '#'} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="group/maker flex items-center gap-4 inline-flex"
+            >
+              <div className="w-10 h-10 rounded-full overflow-hidden border border-micro-layer-1 flex-shrink-0 group-hover/maker:border-micro-fg transition-colors">
                 <img src={tool.maker.image} alt={tool.maker.name} className="w-full h-full object-cover" />
               </div>
               <div>
-                <div className="text-sm font-bold text-micro-fg">{tool.maker.name}</div>
+                <div className="text-sm font-bold text-micro-fg group-hover/maker:text-terminal-lime transition-colors">{tool.maker.name}</div>
                 {tool.maker.role && (
                   <div className="text-xs text-micro-muted">{tool.maker.role}</div>
                 )}
               </div>
-            </div>
+            </a>
           </div>
         )}
 

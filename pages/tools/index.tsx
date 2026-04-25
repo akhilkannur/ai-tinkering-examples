@@ -101,7 +101,7 @@ export default function ToolsIndex() {
           </div>
 
           {/* Horizontal CTAs */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
             <a 
               href="https://salestools.club/" 
               target="_blank" 
@@ -117,20 +117,6 @@ export default function ToolsIndex() {
               </div>
               <ArrowRight className="w-4 h-4 text-micro-muted ml-auto group-hover:translate-x-1 transition-transform" />
             </a>
-
-            <Link
-              href="/tools/giveaway"
-              className="group flex items-center gap-6 bg-white border border-micro-layer-1 rounded-[32px] p-6 hover:border-micro-fg transition-all hover:shadow-micro"
-            >
-              <div className="w-12 h-12 rounded-2xl bg-terminal-lime flex items-center justify-center text-micro-fg font-bold text-xl shadow-lg flex-shrink-0">
-                🎁
-              </div>
-              <div className="min-w-0">
-                <h4 className="font-bold uppercase text-[12px] tracking-widest text-micro-fg group-hover:text-terminal-lime transition-colors">Monthly Giveaway</h4>
-                <p className="text-[14px] text-micro-muted font-medium truncate">Win $500+ in premium AI tools. Free entry.</p>
-              </div>
-              <ArrowRight className="w-4 h-4 text-micro-muted ml-auto group-hover:translate-x-1 transition-transform" />
-            </Link>
 
             <Link
               href="/tools/badge"

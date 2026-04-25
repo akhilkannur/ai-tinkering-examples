@@ -117,6 +117,31 @@ export default function ToolDetailModal({ tool, onClose }: ToolDetailModalProps)
                 {tool.description}
               </p>
 
+              {/* Maker Info */}
+              {tool.maker && (
+                <div className="mb-6 sm:mb-10 p-4 bg-micro-layer-1 border-2 border-black brutalist-shadow-sm inline-flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-none border-2 border-black overflow-hidden flex-shrink-0 bg-white">
+                    <img src={tool.maker.image} alt={tool.maker.name} className="w-full h-full object-cover" />
+                  </div>
+                  <div>
+                    <div className="text-[10px] font-black uppercase tracking-widest text-micro-muted mb-1">Maker</div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-sm font-black uppercase text-black">{tool.maker.name}</span>
+                      {tool.maker.twitter && (
+                        <a 
+                          href={`https://x.com/${tool.maker.twitter}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-micro-muted hover:text-black transition-colors"
+                        >
+                          <Twitter className="w-3 h-3 fill-current" />
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              )}
+
               {/* Action Row */}
               <div className="flex flex-wrap items-center gap-4 sm:gap-6">
                 <a

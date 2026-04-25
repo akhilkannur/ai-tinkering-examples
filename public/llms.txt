@@ -152,6 +152,3 @@
 - [How I Use Claude for Equity Research](https://realaiexamples.com/ai-examples/finance-ops/michael-fritzell-claude-equity-research): Michael Fritzell systematized his equity research by turning Claude into an automated analyst. He uses Projects to run Bull/Bear cases instantly and Cowork to extract financial data from PDFs directly into formatted Excel tables.
 - [My 3-Skill System for Marketing with Claude](https://realaiexamples.com/ai-examples/marketing-ops/leadershipinchange-claude-skills-marketing): Stop paying the 'Blank Slate Tax' by using Claude Skills—markdown files that encode your brand voice and audience. This system uses three core workflows: an Email Sequence Builder, a Competitor Intelligence Brief, and an SEO Article Optimizer.
 - [How to Build a Custom SEO AI Agent](https://realaiexamples.com/ai-examples/seo/marketermilk-seo-ai-agent-guide): Marketer Milk explains how to build an SEO agent by documenting your expertise into markdown 'skills'. Use Claude Projects for solo work or Gumloop for team workflows, then connect them to real-time data via MCP to automate audits and content decay tracking.
-
-## Documentation
-- [Monetization Plan](https://realaiexamples.com/docs/MONETIZATION-PLAN.md)

@@ -30,9 +30,6 @@ ${aiTools.slice(0, 100).map(t => `- [${t.name}](${SITE_URL}/tools/${slugify(t.na
 
 ## Recent Real-World Examples
 ${localSocialExamples.slice(0, 50).map(ex => `- [${ex.title}](${SITE_URL}/ai-examples/${(ex.category || 'uncategorized').toLowerCase().replace(/\s+/g, '-')}/${ex.slug}): ${ex.summary}`).join('\n')}
-
-## Documentation
-- [Monetization Plan](${SITE_URL}/docs/MONETIZATION-PLAN.md)
 `;
     fs.writeFileSync(path.join(OUTPUT_DIR, 'llms.txt'), mainLlms);
     console.log('✅ Generated public/llms.txt');
