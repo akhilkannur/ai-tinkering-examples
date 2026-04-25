@@ -2626,43 +2626,70 @@ name: "Glad AI",
     image: "https://www.google.com/s2/favicons?domain=llmwise.ai&sz=128",
     dateAdded: "2026-02-04"
 },
-  {
+{
     name: "Transmit",
-    description: "Your emails, your reputation. Isolated sending from $2/mo.",
+    description: "Email that actually lands - transactional and marketing emails with inbox placement.",
     url: "https://xmit.sh",
-    category: "Copywriting",
+    category: "Productivity",
     tags: {
         useCase: ["Business"],
-        price: "Free",
-        skill: "Beginner"
+        price: "Paid",
+        skill: "Intermediate"
     },
     image: "https://www.google.com/s2/favicons?domain=xmit.sh&sz=128",
-    dateAdded: "2026-02-05"
-},
-  {
+    dateAdded: "2026-02-05",
+    features: [
+      "99.2% inbox placement",
+      "Domain warmup auto-ramping",
+      "Email validation (block invalid addresses)",
+      "Reputation isolation per account",
+      "MCP server for AI agents"
+    ],
+    pricingDetails: "Starts at $2/mo (managed) | $0 + AWS costs (BYOK)",
+    integrations: ["Claude", "Cursor", "ChatGPT", "AWS SES"]
+  },
+{
     name: "SecVibe",
-    description: "SecVibe is an AI-powered security copilot built for vibe coding, helping developers automatically detect and fix security risks in AI-generated code. It analyzes prompts and outputs in tools like Cursor and VS Code to enforce secure-by-design development from the first line of code.",
+    description: "AI-powered security copilot for vibe coding - detect and fix security risks in AI-generated code.",
     url: "https://secvibe.ai",
-    category: "Image Generation",
+    category: "Code Assistance",
     tags: {
         useCase: ["Business"],
-        price: "Free",
-        skill: "Beginner"
+        price: "Freemium",
+        skill: "Intermediate"
     },
     image: "https://www.google.com/s2/favicons?domain=secvibe.ai&sz=128",
-    dateAdded: "2026-02-06"
-},
-  {
+    dateAdded: "2026-02-06",
+    features: [
+      "Security risk detection in AI-generated code",
+      "Cursor and VS Code integration",
+      "Secure-by-design development",
+      "Prompt and output analysis",
+      "Auto-fix recommendations"
+    ],
+    pricingDetails: "Freemium",
+    integrations: ["Cursor", "VS Code"]
+  },
+{
     name: "Alignmint",
-    description: "Alignmint is an all-in-one nonprofit accounting and management platform built by nonprofit directors for nonprofit directors. It serves general nonprofits, churches, private schools, and fiscal sponsors with a single platform that replaces fragmented software stacks. The company is based in the United States and is committed to making professional-grade nonprofit tools accessible to organizations of every size.",
+    description: "All-in-one nonprofit accounting and management platform for nonprofits, churches, and schools.",
     url: "https://www.getalignmint.org",
     category: "Productivity",
     tags: {
         useCase: ["Business"],
-        price: "Free",
-        skill: "Beginner"
+        price: "Paid",
+        skill: "Intermediate"
     },
     image: "https://www.google.com/s2/favicons?domain=www.getalignmint.org&sz=128",
-    dateAdded: "2026-02-07"
-}
+    dateAdded: "2026-02-07",
+    features: [
+      "Nonprofit accounting",
+      "Church management",
+      "Private school tools",
+      "Fiscal sponsor management",
+      "US-based platform"
+    ],
+    pricingDetails: "Paid (contact for pricing)",
+    integrations: []
+  }
 ];
