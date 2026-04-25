@@ -71,6 +71,43 @@ export default function ToolPage({ tool }: ToolPageProps) {
           {tool.description}
         </p>
 
+        {tool.features && tool.features.length > 0 && (
+          <div className="mb-10">
+            <h2 className="text-xs font-bold text-micro-muted uppercase tracking-[0.2em] mb-4">Key Features</h2>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {tool.features.map((feature, i) => (
+                <li key={i} className="flex items-start gap-3 p-4 bg-micro-layer-1 rounded-xl text-sm font-medium text-micro-fg">
+                  <span className="text-terminal-lime">✓</span>
+                  {feature}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-10 pb-10 border-b border-micro-layer-1">
+          {tool.pricingDetails && (
+            <div>
+              <h2 className="text-xs font-bold text-micro-muted uppercase tracking-[0.2em] mb-4">Pricing</h2>
+              <div className="p-4 bg-micro-layer-1 rounded-xl text-sm font-bold text-micro-fg">
+                {tool.pricingDetails}
+              </div>
+            </div>
+          )}
+          {tool.integrations && tool.integrations.length > 0 && (
+            <div>
+              <h2 className="text-xs font-bold text-micro-muted uppercase tracking-[0.2em] mb-4">Integrations</h2>
+              <div className="flex flex-wrap gap-2">
+                {tool.integrations.map((int) => (
+                  <span key={int} className="px-3 py-1.5 bg-micro-layer-1 rounded-lg text-xs font-bold text-micro-fg border border-micro-layer-2">
+                    {int}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+
         {tool.tags.useCase.length > 0 && (
           <div className="mb-10">
             <h2 className="text-xs font-bold text-micro-muted uppercase tracking-[0.2em] mb-4">Use Cases</h2>

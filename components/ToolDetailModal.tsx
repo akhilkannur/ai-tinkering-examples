@@ -117,6 +117,45 @@ export default function ToolDetailModal({ tool, onClose }: ToolDetailModalProps)
                 {tool.description}
               </p>
 
+              {/* Features List */}
+              {tool.features && tool.features.length > 0 && (
+                <div className="mb-6 sm:mb-10">
+                  <h3 className="text-[10px] font-black uppercase tracking-widest text-micro-muted mb-4">Core Capabilities</h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    {tool.features.map((feature, i) => (
+                      <div key={i} className="p-4 bg-gray-50 border-2 border-black brutalist-shadow-sm flex items-start gap-3">
+                        <div className="w-5 h-5 bg-[#ccff00] border-2 border-black flex items-center justify-center flex-shrink-0 mt-0.5">
+                           <Check className="w-3 h-3 text-black stroke-[4px]" />
+                        </div>
+                        <span className="text-xs font-bold uppercase text-black leading-tight">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Pricing & Integrations Row */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6 sm:mb-10">
+                 {tool.pricingDetails && (
+                    <div className="p-4 bg-black text-white border-2 border-black brutalist-shadow-sm">
+                      <div className="text-[10px] font-black uppercase tracking-widest text-white/50 mb-2">Investment</div>
+                      <div className="text-sm font-black uppercase text-[#ccff00]">{tool.pricingDetails}</div>
+                    </div>
+                 )}
+                 {tool.integrations && tool.integrations.length > 0 && (
+                    <div className="p-4 bg-white border-2 border-black brutalist-shadow-sm">
+                      <div className="text-[10px] font-black uppercase tracking-widest text-micro-muted mb-2">Native Integrations</div>
+                      <div className="flex flex-wrap gap-2">
+                        {tool.integrations.map(int => (
+                          <span key={int} className="px-2 py-1 bg-micro-layer-1 border border-black text-[10px] font-black uppercase text-black">
+                            {int}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                 )}
+              </div>
+
               {/* Maker Info */}
               {tool.maker && (
                 <div className="mb-6 sm:mb-10 p-4 bg-micro-layer-1 border-2 border-black brutalist-shadow-sm inline-flex items-center gap-4">
