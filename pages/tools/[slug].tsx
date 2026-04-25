@@ -54,9 +54,16 @@ export default function ToolPage({ tool }: ToolPageProps) {
               />
             </div>
             <div className="flex-1">
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-micro-fg leading-[0.85] mb-6">
-                {tool.name}
-              </h1>
+              <a 
+                href={tool.url} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="group/title inline-block mb-6"
+              >
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-micro-fg leading-[0.85] group-hover/title:text-micro-accent transition-colors underline decoration-micro-layer-1 decoration-4 underline-offset-8">
+                  {tool.name}
+                </h1>
+              </a>
               <div className="flex flex-wrap items-center gap-3">
                 <span className="px-5 py-2 rounded-full bg-micro-fg text-[11px] font-black uppercase tracking-[0.2em] text-white shadow-lg">
                   {tool.category}
@@ -69,19 +76,19 @@ export default function ToolPage({ tool }: ToolPageProps) {
           </div>
 
           <div className="max-w-4xl mb-16">
-            <p className="text-2xl md:text-3xl lg:text-4xl text-micro-fg font-medium leading-[1.1] tracking-tight mb-12">
+            <p className="text-xl md:text-2xl lg:text-3xl text-micro-fg font-medium leading-[1.2] tracking-tight mb-12">
               {tool.description}
             </p>
           </div>
 
           {tool.screenshot && (
             <div className="mb-20">
-              <div className="rounded-[40px] border-8 border-white overflow-hidden shadow-2xl bg-white relative aspect-[16/10]">
+              <div className="rounded-[40px] border-8 border-white overflow-hidden shadow-2xl bg-white relative aspect-[16/10] group/preview cursor-zoom-in">
                 <Image
                   src={tool.screenshot}
                   alt={`${tool.name} preview`}
                   fill
-                  className="object-cover"
+                  className="object-cover group-hover/preview:scale-[1.02] transition-transform duration-700"
                   unoptimized
                 />
               </div>
@@ -109,8 +116,8 @@ export default function ToolPage({ tool }: ToolPageProps) {
               {tool.pricingDetails && (
                 <div className="lg:col-span-2">
                   <h2 className="text-[10px] md:text-xs font-black text-micro-muted uppercase tracking-[0.3em] mb-8">Commercials</h2>
-                  <div className="p-8 md:p-12 bg-micro-fg text-white rounded-[40px] shadow-2xl flex flex-col justify-center min-h-[160px]">
-                    <div className="text-xl md:text-2xl lg:text-3xl font-bold leading-tight">
+                  <div className="p-8 md:p-10 bg-micro-fg text-white rounded-[40px] shadow-2xl flex flex-col justify-center min-h-[140px]">
+                    <div className="text-lg md:text-xl lg:text-2xl font-bold leading-snug">
                       {tool.pricingDetails}
                     </div>
                   </div>
