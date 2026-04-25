@@ -1,87 +1,81 @@
 const fs = require('fs');
 const path = require('path');
-const matter = require('gray-matter');
+
+// Helper to slugify tool names (matches pages/tools/[slug].tsx logic)
+const slugify = (text) =>
+  text.toLowerCase().trim().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '').replace(/\-\-+/g, '-');
 
 const SITE_URL = 'https://realaiexamples.com';
-const RECIPES_DIR = path.join(process.cwd(), 'content', 'recipes');
 const OUTPUT_DIR = path.join(process.cwd(), 'public');
 
+// Load Data
+const { aiTools } = require('../lib/ai-tools-data.ts');
+const { localSocialExamples } = require('../lib/social-examples-data.ts');
+
 function generateLlmsTxt() {
-  console.log('🤖 Starting multi-file llms.txt generation...');
+  console.log('🤖 Starting llms.txt generation for Tools and Examples...');
 
   try {
-    console.log('   Grouping recipes by niche...');
-    const recipeFiles = fs.readdirSync(RECIPES_DIR).filter(f => f.endsWith('.md'));
-    const recipesByCategory = {};
-    const allRecipes = [];
-
-    recipeFiles.forEach(file => {
-      const filePath = path.join(RECIPES_DIR, file);
-      const rawContent = fs.readFileSync(filePath, 'utf8');
-      const { data, content } = matter(rawContent);
-      
-      const recipe = {
-        title: data.title || file.replace('.md', ''),
-        id: file.replace('.md', ''),
-        url: `${SITE_URL}/tools/${file.replace('.md', '')}`,
-        category: data.category || 'General',
-        tagline: data.tagline || '',
-        content: rawContent
-      };
-
-      allRecipes.push(recipe);
-      
-      const normalizedCat = recipe.category.toLowerCase().replace(/[^a-z0-9]/g, '-');
-      if (!recipesByCategory[normalizedCat]) recipesByCategory[normalizedCat] = [];
-      recipesByCategory[normalizedCat].push(recipe);
-    });
-
-    // 1. Generate Main llms.txt (Index of Niche Files)
+    // 1. Generate Main llms.txt
     let mainLlms = `# RealAIExamples LLM Index
-> Actionable AI workflows for Sales, Marketing, and RevOps.
-
-## Niche-Specific Indices (Recommended for Context)
-${Object.keys(recipesByCategory).map(cat => `- [llms-${cat}.txt](${SITE_URL}/llms-${cat}.txt) - ${recipesByCategory[cat].length} recipes`).join('\n')}
+> How People Actually Use AI at Work. A curated library of real-world AI proof and tools.
 
 ## Core Sections
 - [Home](${SITE_URL})
-- [Tools Library](${SITE_URL}/tools)
-- [Example Drops](${SITE_URL})
+- [Tools Directory](${SITE_URL}/tools) - 400+ curated AI tools for operators.
+- [AI Examples](${SITE_URL}/ai-examples) - Visual swipe file of real-world AI usage.
 
-## Top Recipes
-${allRecipes.slice(0, 50).map(r => `- [${r.title}](${r.url}): ${r.tagline}`).join('\n')}
+## Top AI Tools (Programmatic)
+${aiTools.slice(0, 100).map(t => `- [${t.name}](${SITE_URL}/tools/${slugify(t.name)}): ${t.description}`).join('\n')}
+
+## Recent Real-World Examples
+${localSocialExamples.slice(0, 50).map(ex => `- [${ex.title}](${SITE_URL}/ai-examples/${(ex.category || 'uncategorized').toLowerCase().replace(/\s+/g, '-')}/${ex.slug}): ${ex.summary}`).join('\n')}
+
+## Documentation
+- [Monetization Plan](${SITE_URL}/docs/MONETIZATION-PLAN.md)
 `;
     fs.writeFileSync(path.join(OUTPUT_DIR, 'llms.txt'), mainLlms);
     console.log('✅ Generated public/llms.txt');
 
-    // 2. Generate Niche Files (llms-sales.txt, etc.)
-    for (const cat in recipesByCategory) {
-      const catRecipes = recipesByCategory[cat];
-      let catContent = `# Blueprints: ${catRecipes[0].category}\n\n`;
-      
-      catRecipes.forEach(r => {
-        catContent += `## ${r.title}\n`;
-        catContent += `URL: ${r.url}\n`;
-        catContent += `Description: ${r.tagline}\n\n`;
-        catContent += `${r.content}\n\n`;
-        catContent += `---\n\n`;
-      });
-
-      fs.writeFileSync(path.join(OUTPUT_DIR, `llms-${cat}.txt`), catContent);
-      console.log(`✅ Generated public/llms-${cat}.txt (${catRecipes.length} recipes)`);
-    }
-
-    // 3. Keep llms-full.txt for backward compatibility
-    let llmsFullTxt = `# All Blueprints Content Dump\n\n`;
-    allRecipes.forEach(r => {
-      llmsFullTxt += `## ${r.title}\n${r.content}\n\n---\n\n`;
+    // 2. Generate llms-full.txt (All Tools + Examples)
+    let fullContent = `# RealAIExamples Full Content Dump\n\n`;
+    
+    fullContent += `## TOOLS DIRECTORY (${aiTools.length} tools)\n\n`;
+    aiTools.forEach(t => {
+      fullContent += `### ${t.name}\n`;
+      fullContent += `URL: ${SITE_URL}/tools/${slugify(t.name)}\n`;
+      fullContent += `Category: ${t.category}\n`;
+      fullContent += `Tags: ${t.tags.useCase.join(', ')} | ${t.tags.price} | ${t.tags.skill}\n`;
+      fullContent += `Description: ${t.description}\n\n`;
     });
-    fs.writeFileSync(path.join(OUTPUT_DIR, 'llms-full.txt'), llmsFullTxt);
+
+    fullContent += `\n---\n\n## REAL-WORLD AI EXAMPLES (${localSocialExamples.length} examples)\n\n`;
+    localSocialExamples.forEach(ex => {
+      fullContent += `### ${ex.title}\n`;
+      fullContent += `URL: ${SITE_URL}/ai-examples/${(ex.category || 'uncategorized').toLowerCase().replace(/\s+/g, '-')}/${ex.slug}\n`;
+      fullContent += `Category: ${ex.category}\n`;
+      fullContent += `Summary: ${ex.summary}\n`;
+      if (ex.tags) fullContent += `Tags: ${ex.tags.join(', ')}\n`;
+      if (ex.original_link) fullContent += `Source: ${ex.original_link}\n`;
+      fullContent += `\n`;
+    });
+
+    fs.writeFileSync(path.join(OUTPUT_DIR, 'llms-full.txt'), fullContent);
     console.log('✅ Generated public/llms-full.txt');
+
+    // 3. Clean up legacy niche files if they exist
+    const files = fs.readdirSync(OUTPUT_DIR);
+    files.forEach(file => {
+      if (file.startsWith('llms-') && file !== 'llms-full.txt') {
+        fs.unlinkSync(path.join(OUTPUT_DIR, file));
+        console.log(`🗑️ Deleted legacy niche file: ${file}`);
+      }
+    });
 
   } catch (error) {
     console.error('❌ Error:', error);
   }
 }
 
+// Run generation
 generateLlmsTxt();

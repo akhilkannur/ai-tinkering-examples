@@ -78,13 +78,6 @@ export default function Navbar() {
           </div>
 
           <div className="hidden lg:flex items-center gap-4">
-            <Link href="/prompt-bundle" className={`px-6 py-2.5 rounded-pill text-[11px] font-bold tracking-widest transition-all ${
-              scrolled || !isHomePage 
-                ? 'bg-micro-fg text-white hover:opacity-90 shadow-lg' 
-                : 'bg-white text-micro-fg hover:bg-micro-layer-1 shadow-2xl'
-            }`}>
-              GET BUNDLE
-            </Link>
           </div>
 
           {/* Mobile menu button */}

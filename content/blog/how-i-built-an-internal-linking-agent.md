@@ -59,6 +59,6 @@ If you're building a content library, don't wait until you have 500 posts to wor
 
 When you have a manifest, your AI agent has a "map." Without a map, it's just guessing. 
 
-I’ve added the [AI Internal Linking Blueprint](/tools/ai-internal-linking-agent) to the vault. You can use it to map your own site today. 
+I’ve added the [AI Internal Linking Blueprint](/tools/ai-internal-linking-agent) as a standalone guide. You can use it to map your own site today. 
 
 Stop hunting for keywords. Start building a map.
