@@ -17,6 +17,10 @@ export interface AiTool {
     role?: string;
     twitter?: string;
   };
+  // Enrichment fields
+  features?: string[];
+  pricingDetails?: string;
+  integrations?: string[];
 }
 
 export const aiTools: AiTool[] = [
@@ -27,11 +31,19 @@ export const aiTools: AiTool[] = [
     category: "Video & Audio",
     tags: {
         useCase: ["Business"],
-        price: "Free",
+        price: "Paid",
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=vidmix.ai&sz=128",
-    dateAdded: "2026-03-30"
+    dateAdded: "2026-03-30",
+    features: [
+      "Text-to-Video generation using Sora 2 and Veo 3.1 models",
+      "Image-to-Video conversion with 98% motion consistency",
+      "AI Avatar Generator with photorealistic lip-syncing",
+      "Hollywood-grade cinematic effects and auto-soundtracks"
+    ],
+    pricingDetails: "Starts at $9/month (Basic) to $59/month (Premium)",
+    integrations: ["Sora 2", "Veo 3.1", "Kling 2.6", "Flux 2", "Discord"]
 },
   {
     name: "Overvisual",
@@ -50,7 +62,15 @@ export const aiTools: AiTool[] = [
         role: "Indie Maker",
         twitter: "ignassinkevicius",
         image: "https://unavatar.io/twitter/ignassinkevicius"
-    }
+    },
+    features: [
+      "Niche Trend Analysis to identify viral content ideas",
+      "One-Click creation of 30 days of stories and carousels",
+      "Auto-Pilot scheduling and direct social posting",
+      "Multi-Language support for 25+ different languages"
+    ],
+    pricingDetails: "Freemium (Offers 14-day money-back guarantee)",
+    integrations: ["Instagram", "LinkedIn"]
 },
   {
     name: "ChattyFit",
@@ -69,7 +89,15 @@ export const aiTools: AiTool[] = [
         role: "iOS Developer",
         twitter: "vladbrejcha",
         image: "https://unavatar.io/twitter/vladbrejcha"
-    }
+    },
+    features: [
+      "Equipment-Aware workout customization based on your gear",
+      "Real-Time AI Coaching for exercise swaps and form help",
+      "Apple HealthKit and Apple Watch native integration",
+      "Privacy-First design with secure iCloud synchronization"
+    ],
+    pricingDetails: "Free to download (Optional paid features)",
+    integrations: ["Apple HealthKit", "Apple Watch", "iCloud"]
 },
   {
     name: "SlideWhisper",
@@ -88,7 +116,15 @@ export const aiTools: AiTool[] = [
         role: "Software Engineer",
         twitter: "stanislavsedov",
         image: "https://unavatar.io/twitter/stanislavsedov"
-    }
+    },
+    features: [
+      "AI Narration for PDF and Google Slides imports",
+      "Interactive Live Q&A answered by AI in real-time",
+      "Engagement Analytics to track audience attention spans",
+      "Green Room Editor for script and narration refinement"
+    ],
+    pricingDetails: "Free to start (Premium tiers available)",
+    integrations: ["Google Slides", "PDF"]
 },
   {
     name: "imejis.io",
@@ -107,16 +143,24 @@ export const aiTools: AiTool[] = [
         role: "CTO & Maker",
         twitter: "dharmikjagodana",
         image: "https://unavatar.io/twitter/dharmikjagodana"
-    }
+    },
+    features: [
+      "API-Driven automation for scalable image generation",
+      "No-Code Public Links for form-based image creation",
+      "Branded Template Editor with Unsplash integration",
+      "Bulk Generation from spreadsheets and data sources"
+    ],
+    pricingDetails: "Freemium (No credit card required to start)",
+    integrations: ["Zapier", "Airtable", "Google Sheets", "Webflow", "Stripe"]
 },
   {
     name: "Email Ferret",
     description: "AI personal assistant for Gmail that helps manage, organize, and respond to emails more efficiently.",
     url: "https://emailferret.io",
-    category: "Copywriting",
+    category: "Productivity",
     tags: {
         useCase: ["Business"],
-        price: "Freemium",
+        price: "Paid",
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=emailferret.io&sz=128",
@@ -126,7 +170,15 @@ export const aiTools: AiTool[] = [
         role: "Indie Maker",
         twitter: "michaellcoleman7",
         image: "https://unavatar.io/twitter/michaellcoleman7"
-    }
+    },
+    features: [
+      "AI Cold Outreach Detection using 15+ heuristic signals",
+      "Transparent Risk Scoring (0-100%) for flagged emails",
+      "Smart Auto-Organization into 10+ folders (Billing, Recruiting, etc.)",
+      "Privacy-first: In-memory content analysis with no data storage"
+    ],
+    pricingDetails: "$5 per mailbox/month (14-day free trial available)",
+    integrations: ["Gmail", "Google Workspace"]
 },
   {
     name: "AgentGatePay",
