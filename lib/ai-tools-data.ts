@@ -457,7 +457,7 @@ export const aiTools: AiTool[] = [
     category: "Productivity",
     tags: {
         useCase: ["Business"],
-        price: "Freemium",
+        price: "Free",
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=www.cryptonewsnavigator.com&sz=128",
@@ -467,7 +467,15 @@ export const aiTools: AiTool[] = [
         role: "Crypto Analyst",
         twitter: "katerinakulikovska",
         image: "https://unavatar.io/twitter/katerinakulikovska"
-    }
+    },
+    features: [
+      "Real-time prices and data for 19,000+ cryptocurrencies",
+      "Automated news sentiment analysis (Bullish/Bearish)",
+      "Fear & Greed Index and Altcoin Season tracking",
+      "Crypto Academy for DeFi and blockchain onboarding"
+    ],
+    pricingDetails: "Free (Ad-supported intelligence hub)",
+    integrations: ["Exchange APIs", "50+ News RSS feeds"]
 },
   {
     name: "Suburb Stack",
@@ -476,7 +484,7 @@ export const aiTools: AiTool[] = [
     category: "Marketing",
     tags: {
         useCase: ["Business"],
-        price: "Freemium",
+        price: "Paid",
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=suburbstack.com&sz=128",
@@ -486,7 +494,15 @@ export const aiTools: AiTool[] = [
         role: "Indie Hacker",
         twitter: "nikpolale",
         image: "https://unavatar.io/twitter/nikpolale"
-    }
+    },
+    features: [
+      "Programmatic SEO for thousands of location-specific pages",
+      "Google Local Ads optimization for higher Quality Scores",
+      "No-code drag-and-drop builder for mobile-responsive layouts",
+      "Multi-client performance tracking for SEO agencies"
+    ],
+    pricingDetails: "Starts at $119/mo (14-day Free Trial)",
+    integrations: ["Google Ads", "GSC", "Facebook", "Instagram"]
 },
   {
     name: "Sequenzy",
@@ -496,7 +512,7 @@ export const aiTools: AiTool[] = [
     tags: {
         useCase: ["Business"],
         price: "Freemium",
-        skill: "Beginner"
+        skill: "Intermediate"
     },
     image: "https://www.google.com/s2/favicons?domain=sequenzy.com&sz=128",
     dateAdded: "2026-03-26",
@@ -505,16 +521,24 @@ export const aiTools: AiTool[] = [
         role: "Indie Hacker",
         twitter: "nikpolale",
         image: "https://unavatar.io/twitter/nikpolale"
-    }
+    },
+    features: [
+      "AI Sequence Builder from natural language prompts",
+      "Billing-event triggers (Stripe/Paddle failed payments)",
+      "Developer-first infrastructure with REST API and SDKs",
+      "Revenue attribution analytics powered by ClickHouse"
+    ],
+    pricingDetails: "Free (up to 2,500 emails/mo) | Paid from $19/mo",
+    integrations: ["Stripe", "Paddle", "Zapier", "Claude", "Cursor"]
 },
   {
     name: "Markeplay",
     description: "No-code AI platform for manufacturing companies to build complex, customizable B2B e-commerce solutions and automated workflows.",
     url: "https://www.markeplay.com",
-    category: "Code Assistance",
+    category: "Marketing",
     tags: {
         useCase: ["Business"],
-        price: "Freemium",
+        price: "Paid",
         skill: "Intermediate"
     },
     image: "https://www.google.com/s2/favicons?domain=www.markeplay.com&sz=128",
@@ -524,7 +548,15 @@ export const aiTools: AiTool[] = [
         role: "Indie Hacker",
         twitter: "nikpolale",
         image: "https://unavatar.io/twitter/nikpolale"
-    }
+    },
+    features: [
+      "Multi-channel content engine for brand-voice ad copy",
+      "Predictive analytics for optimal posting engagement",
+      "Automated asset creation for marketing visuals",
+      "Customizable B2B e-commerce solution for manufacturing"
+    ],
+    pricingDetails: "Starts from $29/mo (Tiered subscriptions)",
+    integrations: ["Shopify", "WordPress", "Instagram", "LinkedIn"]
 },
   {
     name: "Qeeebo",
@@ -533,7 +565,7 @@ export const aiTools: AiTool[] = [
     category: "Productivity",
     tags: {
         useCase: ["Business"],
-        price: "Freemium",
+        price: "Paid",
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=www.qeeebo.com&sz=128",
@@ -543,7 +575,15 @@ export const aiTools: AiTool[] = [
         role: "Indie Hacker",
         twitter: "nikpolale",
         image: "https://unavatar.io/twitter/nikpolale"
-    }
+    },
+    features: [
+      "Intelligent task automation using natural language",
+      "Smart document processing for invoices and receipts",
+      "Custom no-code workflow builder for cross-app logic",
+      "Automated knowledge base organization and scaling"
+    ],
+    pricingDetails: "Starts from $49/mo (Pay-as-you-go available)",
+    integrations: ["Slack", "Salesforce", "Google Workspace", "HubSpot"]
 },
   {
     name: "feynn - Strategic Intelligence Platform",
@@ -552,8 +592,8 @@ export const aiTools: AiTool[] = [
     category: "Productivity",
     tags: {
         useCase: ["Business"],
-        price: "Freemium",
-        skill: "Beginner"
+        price: "Paid",
+        skill: "Intermediate"
     },
     image: "https://www.google.com/s2/favicons?domain=feynn.ai&sz=128",
     dateAdded: "2026-03-17",
@@ -562,13 +602,21 @@ export const aiTools: AiTool[] = [
         role: "Indie Hacker",
         twitter: "nikpolale",
         image: "https://unavatar.io/twitter/nikpolale"
-    }
+    },
+    features: [
+      "Multi-Agent research with automated source verification",
+      "Strategic Posture mapping across innovation domains",
+      "Innovation Horizon tracking for disruptive tech shifts",
+      "Scenario simulation to model competitive trade-offs"
+    ],
+    pricingDetails: "Token-based Pricing (Standard & Enterprise plans)",
+    integrations: ["Market Data APIs", "RSS Feeds"]
 },
   {
     name: "AI Thumbnail",
     description: "AI tool to create clickable YouTube thumbnails by analyzing successful designs and adapting them for your content.",
     url: "https://aithumbnail.gg",
-    category: "Copywriting",
+    category: "Marketing",
     tags: {
         useCase: ["Business"],
         price: "Freemium",
@@ -581,7 +629,15 @@ export const aiTools: AiTool[] = [
         role: "Indie Maker",
         twitter: "michaellcoleman7",
         image: "https://unavatar.io/twitter/michaellcoleman7"
-    }
+    },
+    features: [
+      "AI Thumbnail generator with MRR/CTR style replication",
+      "Multi-device preview and potential CTR performance audit",
+      "Built-in creator toolkit with font AI and emoji titles",
+      "Automated SEO tag and description generation for YouTube"
+    ],
+    pricingDetails: "Free (2/wk) | Starter (~$12.90/mo) | Premium (~$29.90/mo)",
+    integrations: ["YouTube", "Chrome Extension"]
 },
   {
     name: "AyeWatch AI",
@@ -600,7 +656,15 @@ export const aiTools: AiTool[] = [
         role: "Indie Maker",
         twitter: "michaellcoleman7",
         image: "https://unavatar.io/twitter/michaellcoleman7"
-    }
+    },
+    features: [
+      "SOUL Watcher AI multi-agent filtering system",
+      "24/7 autonomous monitoring for topics and keywords",
+      "Automated AI summaries to skip reading full articles",
+      "Real-time push notifications on iOS, Android, and Web"
+    ],
+    pricingDetails: "Free (3 topics) | Pro ($9/mo) | Pro+ ($19/mo)",
+    integrations: ["iOS", "Android", "Web"]
 },
   {
     name: "PentestMate",
@@ -609,8 +673,8 @@ export const aiTools: AiTool[] = [
     category: "Productivity",
     tags: {
         useCase: ["Business"],
-        price: "Freemium",
-        skill: "Beginner"
+        price: "Paid",
+        skill: "Intermediate"
     },
     image: "https://www.google.com/s2/favicons?domain=pentestmate.com&sz=128",
     dateAdded: "2026-03-20",
@@ -619,13 +683,21 @@ export const aiTools: AiTool[] = [
         role: "Security Expert",
         twitter: "adityasharmasec",
         image: "https://unavatar.io/twitter/adityasharmasec"
-    }
+    },
+    features: [
+      "Autopilot Red Team for continuous 24/7 security scanning",
+      "Automatic issue integration with GitHub and Jira",
+      "Detects IDOR injections and exposed cloud endpoints",
+      "Fix-ready reports with actionable remediation steps"
+    ],
+    pricingDetails: "Trial ($1 for 3 days) | All-in-One ($59/mo)",
+    integrations: ["GitHub", "Jira", "Vercel", "AWS"]
 },
   {
     name: "Bolta",
     description: "Social media operating system that helps teams plan, write, and publish content across multiple channels using AI.",
     url: "https://bolta.ai/",
-    category: "Copywriting",
+    category: "Marketing",
     tags: {
         useCase: ["Business"],
         price: "Freemium",
@@ -638,7 +710,15 @@ export const aiTools: AiTool[] = [
         role: "Product Builder",
         twitter: "bolta_ai",
         image: "https://unavatar.io/twitter/bolta_ai"
-    }
+    },
+    features: [
+      "AI Reply generator for context-aware DM and comment replies",
+      "Agentic scheduling for autonomous content management",
+      "Brand Voice builder for authentic caption generation",
+      "Native support for Instagram, Threads, and X"
+    ],
+    pricingDetails: "Explorer (~$8/mo) | Premium (~$29/mo) | 14-day Free Trial",
+    integrations: ["Instagram", "Threads", "LinkedIn", "Twitter/X"]
 },
   {
     name: "Sana Mujer",
