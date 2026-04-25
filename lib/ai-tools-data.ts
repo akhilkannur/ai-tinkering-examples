@@ -737,7 +737,15 @@ export const aiTools: AiTool[] = [
         role: "Founder",
         twitter: "damiancap",
         image: "https://unavatar.io/twitter/damiancap"
-    }
+    },
+    features: [
+      "Specialized women's health services via telehealth",
+      "Spanish-first communication and support",
+      "Culturally-competent care for the US Spanish-speaking community",
+      "Integrated patient portal for appointments and records"
+    ],
+    pricingDetails: "Free initial consultation | Services covered by insurance",
+    integrations: ["Telehealth Platform", "Patient Portal"]
 },
   {
     name: "Beatable",
