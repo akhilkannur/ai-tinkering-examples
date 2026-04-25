@@ -1843,8 +1843,7 @@ export const aiTools: AiTool[] = [
     description: "AI-powered Google review management platform for small businesses that automates personalized, context-aware responses and drives new review growth.",
     url: "https://www.replychampion.com",
     category: "Productivity",
-    tags: {
-        price: "Paid",
+    tags: { price: "Paid" },
     features: [
       "Personalized AI Replies: Context-aware responses that avoid generic templates",
       "Review Request Campaigns: Automated email flows to solicit new customer feedback",
@@ -1853,8 +1852,7 @@ export const aiTools: AiTool[] = [
       "Live Reviews Widget: Free snippet to embed real-time Google reviews on any site"
     ],
     pricingDetails: "Starts at 0/mo | 7-day Free Trial (No credit card)",
-    integrations: ["Google Business Profile", "Web Widgets"]
-  },
+    integrations: ["Google Business Profile", "Web Widgets"],
     image: "/screenshots/reply-champion.png",
     dateAdded: "2026-02-16",
     maker: {
@@ -1869,8 +1867,7 @@ export const aiTools: AiTool[] = [
     description: "Privacy-first encrypted camera app for iOS that captures photos and videos with military-grade security that even Apple can't access.",
     url: "https://encamera.app",
     category: "Video & Audio",
-    tags: {
-        price: "Paid",
+    tags: { price: "Paid" },
     features: [
       "Instant Encryption: Media is secured before touching the device camera roll",
       "Zero-Knowledge Storage: Local or iCloud storage with no developer access",
@@ -1879,8 +1876,7 @@ export const aiTools: AiTool[] = [
       "Biometric Security: Multi-factor unlock via Face ID, PIN, or password"
     ],
     pricingDetails: "Monthly and Annual Subscriptions | Free to start",
-    integrations: ["iCloud", "iOS Widgets", "Face ID"]
-  },
+    integrations: ["iCloud", "iOS Widgets", "Face ID"],
     image: "/screenshots/encamera.png",
     dateAdded: "2026-02-17",
     maker: {
@@ -1895,8 +1891,7 @@ export const aiTools: AiTool[] = [
     description: "AI-powered real estate analysis platform that helps residential investors quickly identify and underwrite profitable investment opportunities.",
     url: "https://Resideline.com",
     category: "Productivity",
-    tags: {
-        price: "Free",
+    tags: { price: "Free" },
     features: [
       "Automated Valuation Models (AVM) for instant ARV estimates",
       "Market Rent Analysis for buy-and-hold residential strategy",
@@ -1904,8 +1899,7 @@ export const aiTools: AiTool[] = [
       "Property data aggregation for residential off-market hunting"
     ],
     pricingDetails: "Free Access",
-    integrations: ["Property Data Feeds"]
-  },
+    integrations: ["Property Data Feeds"],
     image: "/screenshots/resideline.png",
     dateAdded: "2026-02-18"
 },
@@ -1914,8 +1908,7 @@ export const aiTools: AiTool[] = [
     description: "AI job search OS that automates resume tailoring, tracks applications across boards, and finds recruiter contact info in seconds.",
     url: "https://www.applytrackr.com/",
     category: "Productivity",
-    tags: {
-        price: "Freemium",
+    tags: { price: "Freemium" },
     features: [
       "ATS Resume Tailoring: Matches resumes to job descriptions with scoring",
       "Automated App Tracking: Captures job data from any board via extension",
@@ -1924,8 +1917,7 @@ export const aiTools: AiTool[] = [
       "AI Cover Letter Generator tailored to specific role requirements"
     ],
     pricingDetails: "Free Tier | Pro Plan available",
-    integrations: ["Chrome Extension", "LinkedIn", "Job Boards"]
-  },
+    integrations: ["Chrome Extension", "LinkedIn", "Job Boards"],
     image: "/screenshots/applytrackr.png",
     dateAdded: "2026-02-19",
     maker: {
@@ -1940,8 +1932,7 @@ export const aiTools: AiTool[] = [
     description: "Missed call recovery platform for local service businesses that uses AI to automate SMS follow-ups and capture lost leads instantly.",
     url: "https://uselino.com/",
     category: "Productivity",
-    tags: {
-        price: "Paid",
+    tags: { price: "Paid" },
     features: [
       "Autonomous Missed Call Detection and instant SMS response",
       "Lead Capture automation for plumbers, HVAC, and service trades",
@@ -1949,8 +1940,7 @@ export const aiTools: AiTool[] = [
       "Revenue Recovery dashboard tracking saved leads"
     ],
     pricingDetails: "Paid Subscription",
-    integrations: ["Twilio", "Google Business Profile", "CRM Connectors"]
-  },
+    integrations: ["Twilio", "Google Business Profile", "CRM Connectors"],
     image: "/screenshots/lino.png",
     dateAdded: "2026-02-20"
 },
@@ -1959,8 +1949,7 @@ export const aiTools: AiTool[] = [
     description: "AI creative studio that generates ready-to-run video, image, and UGC-style ads for social platforms directly from a product link.",
     url: "https://highreach.ai",
     category: "Video & Audio",
-    tags: {
-        price: "Paid",
+    tags: { price: "Paid" },
     features: [
       "Link-to-Ad: Pulls product data from Shopify/Amazon for instant ad generation",
       "AI UGC Avatars: Diverse digital presenters for testimonial-style content",
@@ -1969,8 +1958,7 @@ export const aiTools: AiTool[] = [
       "Batch Ad Production for rapid multi-creative testing"
     ],
     pricingDetails: "Starter: 9/mo | Pro: 9/mo | Ultra: 49/mo | 7-day Trial",
-    integrations: ["Shopify", "Amazon", "Meta", "TikTok", "Google", "YouTube"]
-  },
+    integrations: ["Shopify", "Amazon", "Meta", "TikTok", "Google", "YouTube"],
     image: "/screenshots/highreach.png",
     dateAdded: "2026-02-21"
 },
@@ -1979,8 +1967,7 @@ export const aiTools: AiTool[] = [
     description: "Agentic customer support platform that automates complex queries and end-to-end resolutions using a workforce of AI agents.",
     url: "https://www.ayudo.ai",
     category: "Productivity",
-    tags: {
-        price: "Paid",
+    tags: { price: "Paid" },
     features: [
       "Agentic Workflows: AI-led management of complex support flows",
       "Omnichannel Inbox: Unified support across WhatsApp, Slack, and Discord",
@@ -1989,8 +1976,7 @@ export const aiTools: AiTool[] = [
       "Human-Agent Copilot: Proactive reply suggestions for human teams"
     ],
     pricingDetails: "Demo-based (Custom Enterprise plans)",
-    integrations: ["Zendesk", "Salesforce", "Intercom", "Twilio", "Slack"]
-  },
+    integrations: ["Zendesk", "Salesforce", "Intercom", "Twilio", "Slack"],
     image: "/screenshots/ayudo.png",
     dateAdded: "2026-02-22"
 },
@@ -2155,8 +2141,7 @@ export const aiTools: AiTool[] = [
     description: "Private AI meeting assistant that transcribes, summarizes, and organizes conversations directly into your Google Drive.",
     url: "https://app.imeett.ai",
     category: "Productivity",
-    tags: {
-        price: "Freemium",
+    tags: { price: "Freemium" },
     features: [
       "Chat with Meetings: AI-powered Q&A based on meeting transcripts",
       "Telegram Command Center: Summaries and meeting management via Telegram",
@@ -2165,8 +2150,7 @@ export const aiTools: AiTool[] = [
       "99+ Language Support: Automatic detection of the spoken language"
     ],
     pricingDetails: "Essentials: .99 one-time | Growth: 2.99/mo | Freedom: 2.99/mo",
-    integrations: ["Google Drive", "Telegram", "Zoom", "Any video platform"]
-  },
+    integrations: ["Google Drive", "Telegram", "Zoom", "Any video platform"],
     image: "https://www.google.com/s2/favicons?domain=app.imeett.ai&sz=128",
     dateAdded: "2026-02-09"
   },
@@ -2175,8 +2159,7 @@ export const aiTools: AiTool[] = [
     description: "AI-powered technical, SEO, and design audit tool for comparing up to five websites simultaneously to identify market gaps.",
     url: "https://www.webcomparis.com",
     category: "Marketing",
-    tags: {
-        price: "Freemium",
+    tags: { price: "Freemium" },
     features: [
       "Multi-Site Comparison: Audit up to 5 websites side-by-side",
       "AI Technical SEO Audit: Deep scans for rendering and indexing issues",
@@ -2184,8 +2167,7 @@ export const aiTools: AiTool[] = [
       "Professional PDF Reports: White-labeled audits for client presentations"
     ],
     pricingDetails: "Freemium",
-    integrations: ["SEO Tools"]
-  },
+    integrations: ["SEO Tools"],
     image: "https://www.google.com/s2/favicons?domain=www.webcomparis.com&sz=128",
     dateAdded: "2026-02-10"
   },
@@ -2194,8 +2176,7 @@ export const aiTools: AiTool[] = [
     description: "AI-driven career platform (now Corveno) that automates the job search journey from resume scoring to salary negotiation.",
     url: "https://www.pathwiseai.io/",
     category: "Productivity",
-    tags: {
-        price: "Freemium",
+    tags: { price: "Freemium" },
     features: [
       "Resume Lab: AI scoring and ATS optimization bank",
       "Interview Prep: Mock questions and STAR story bank builder",
@@ -2203,8 +2184,7 @@ export const aiTools: AiTool[] = [
       "Salary & Offers: Offer comparison tools and negotiation scripts"
     ],
     pricingDetails: "Free (5 credits) | Paid from /mo |  per doc",
-    integrations: ["LinkedIn", "Common App"]
-  },
+    integrations: ["LinkedIn", "Common App"],
     image: "https://www.google.com/s2/favicons?domain=www.pathwiseai.io&sz=128",
     dateAdded: "2026-02-11"
   },
@@ -2213,8 +2193,7 @@ export const aiTools: AiTool[] = [
     description: "Contextual AI translation for live speech, images, and videos with desktop apps for seamless simultaneous interpretation.",
     url: "https://transgull.com",
     category: "Productivity",
-    tags: {
-        price: "Freemium",
+    tags: { price: "Freemium" },
     features: [
       "Simultaneous Interpretation: Real-time recognition for meetings and lectures",
       "Video Translation: Generates bilingual subtitles for local or web video",
@@ -2222,8 +2201,7 @@ export const aiTools: AiTool[] = [
       "Dialog Translation: Context-aware voice and text for natural flow"
     ],
     pricingDetails: "Pay-as-you-go (Shells) | Credits never expire",
-    integrations: ["Windows", "Mac", "YouTube"]
-  },
+    integrations: ["Windows", "Mac", "YouTube"],
     image: "https://www.google.com/s2/favicons?domain=transgull.com&sz=128",
     dateAdded: "2026-02-12"
   },
@@ -2232,8 +2210,7 @@ export const aiTools: AiTool[] = [
     description: "Infrastructure monitoring suite for SSL certificates, scheduled heartbeat jobs, and API schema changes.",
     url: "https://watchflow.io",
     category: "Productivity",
-    tags: {
-        price: "Freemium",
+    tags: { price: "Freemium" },
     features: [
       "SSL Monitoring: Auto-detects self-renewing certs and new subdomains",
       "Heartbeat Monitoring: Dead man's switch for cron jobs and ETL pipelines",
@@ -2242,8 +2219,7 @@ export const aiTools: AiTool[] = [
       "Custom Metrics: Track specific business data points in real-time"
     ],
     pricingDetails: "Free until May 2026 | Starter: 9/mo | Pro: 9/mo",
-    integrations: ["Slack", "Teams", "Webhooks", "Make.com", "n8n", "Power Automate"]
-  },
+    integrations: ["Slack", "Teams", "Webhooks", "Make.com", "n8n", "Power Automate"],
     image: "https://www.google.com/s2/favicons?domain=watchflow.io&sz=128",
     dateAdded: "2026-02-13"
   },
@@ -2252,8 +2228,7 @@ export const aiTools: AiTool[] = [
     description: "Real-time ticket inventory and pricing API across major marketplaces for arbitrage and analytics.",
     url: "https://ticketsdata.com",
     category: "Productivity",
-    tags: {
-        price: "Paid",
+    tags: { price: "Paid" },
     features: [
       "Real-Time Data: Instant seatmaps and availability without stale caching",
       "10+ Marketplaces: Ticketmaster, StubHub, SeatGeek, VividSeats, and more",
@@ -2261,8 +2236,7 @@ export const aiTools: AiTool[] = [
       "Developer SDKs: Ready-to-use libraries for Python, Node.js, Go, and PHP"
     ],
     pricingDetails: "Starter: 99/mo | Pro: ,499/mo",
-    integrations: ["Ticketmaster", "StubHub", "Eventbrite", "SeatGeek", "Viagogo"]
-  },
+    integrations: ["Ticketmaster", "StubHub", "Eventbrite", "SeatGeek", "Viagogo"],
     image: "https://www.google.com/s2/favicons?domain=ticketsdata.com&sz=128",
     dateAdded: "2026-02-15"
   },
@@ -2271,8 +2245,7 @@ export const aiTools: AiTool[] = [
     description: "AI decision-making platform where 20+ specialized AI experts debate your dilemmas in real-time using structured methods.",
     url: "https://www.71vote.com",
     category: "Productivity",
-    tags: {
-        price: "Free",
+    tags: { price: "Free" },
     features: [
       "AI Expert Panels: Debate with Doctors, Dietitians, or Business Strategists",
       "Structured Methods: Socratic, Red/Blue Team, and Pre-mortem analysis",
@@ -2280,8 +2253,7 @@ export const aiTools: AiTool[] = [
       "Decision Archiving: Track the logic behind your major life and work choices"
     ],
     pricingDetails: "Free Access",
-    integrations: []
-  },
+    integrations: [],
     image: "https://www.google.com/s2/favicons?domain=www.71vote.com&sz=128",
     dateAdded: "2026-02-09"
   },
@@ -2290,8 +2262,7 @@ export const aiTools: AiTool[] = [
     description: "Fully managed OpenClaw hosting service on dedicated VPS infrastructure for high-security autonomous AI assistants.",
     url: "https://privatclaw.com",
     category: "Productivity",
-    tags: {
-        price: "Paid",
+    tags: { price: "Paid" },
     features: [
       "Dedicated VPS: Every instance runs on its own isolated virtual server",
       "Managed Hosting: Automated updates, security hardening, and backups",
@@ -2299,8 +2270,7 @@ export const aiTools: AiTool[] = [
       "Proactive Agents: 24/7 autonomous agents that browse and manage files"
     ],
     pricingDetails: "Paid Managed Hosting",
-    integrations: ["Telegram", "WhatsApp", "Discord", "Slack"]
-  },
+    integrations: ["Telegram", "WhatsApp", "Discord", "Slack"],
     image: "https://www.google.com/s2/favicons?domain=privatclaw.com&sz=128",
     dateAdded: "2026-02-10"
   },
@@ -2309,8 +2279,7 @@ export const aiTools: AiTool[] = [
     description: "Syncs PagerDuty on-call rosters with Slack User Groups to ensure alerts reach the right person instantly.",
     url: "https://www.pagersync.com",
     category: "Productivity",
-    tags: {
-        price: "Freemium",
+    tags: { price: "Freemium" },
     features: [
       "Slack Group Sync: Automatically updates @oncall aliases in Slack",
       "Multi-Team Aliases: Create aliases that span multiple engineering teams",
@@ -2318,8 +2287,7 @@ export const aiTools: AiTool[] = [
       "Multi-Schedule Support: Link multiple PagerDuty schedules to one alias"
     ],
     pricingDetails: "Premium: 5/mo | 7-day Free Trial",
-    integrations: ["PagerDuty", "Slack", "xMatters"]
-  },
+    integrations: ["PagerDuty", "Slack", "xMatters"],
     image: "https://www.google.com/s2/favicons?domain=www.pagersync.com&sz=128",
     dateAdded: "2026-02-11"
   },
@@ -2328,8 +2296,7 @@ export const aiTools: AiTool[] = [
     description: "AI-powered form builder that creates beautiful, intelligent forms with branching logic via natural language.",
     url: "https://polyform.to",
     category: "Productivity",
-    tags: {
-        price: "Free",
+    tags: { price: "Free" },
     features: [
       "Polly AI Agent: Build and edit forms through a simple chat interface",
       "Conditional Logic: Create dynamic branching paths based on responses",
@@ -2337,8 +2304,7 @@ export const aiTools: AiTool[] = [
       "Journey Tracking: Visualize respondent interaction and drop-off points"
     ],
     pricingDetails: "Free (Unlimited forms) | Pro: 9/mo (AI features)",
-    integrations: ["Zapier", "Slack", "Google Sheets", "HubSpot", "Webhooks"]
-  },
+    integrations: ["Zapier", "Slack", "Google Sheets", "HubSpot", "Webhooks"],
     image: "https://www.google.com/s2/favicons?domain=polyform.to&sz=128",
     dateAdded: "2026-02-12"
   },
@@ -2347,8 +2313,7 @@ export const aiTools: AiTool[] = [
     description: "Multi-source status aggregation platform for real-time service monitoring across cloud providers and critical infrastructure.",
     url: "https://www.statuscentral.io/",
     category: "Productivity",
-    tags: {
-        price: "Free",
+    tags: { price: "Free" },
     features: [
       "Status Aggregation: Consolidates multiple provider status pages into one",
       "Branded Status Pages: Create public status pages for your own users",
@@ -2356,8 +2321,7 @@ export const aiTools: AiTool[] = [
       "Incident Timelines: Detailed impact analysis and post-mortem logs"
     ],
     pricingDetails: "Free (5 services) | Pro: 9/mo",
-    integrations: ["AWS", "Azure", "Google Cloud", "SaaS Status Pages"]
-  },
+    integrations: ["AWS", "Azure", "Google Cloud", "SaaS Status Pages"],
     image: "https://www.google.com/s2/favicons?domain=www.statuscentral.io&sz=128",
     dateAdded: "2026-02-13"
   },
@@ -2366,8 +2330,7 @@ export const aiTools: AiTool[] = [
     description: "Extracts code, assets, and design tokens from any website for instant use in Cursor, Claude, and Tailwind projects.",
     url: "https://miromiro.app",
     category: "Code Assistance",
-    tags: {
-        price: "Freemium",
+    tags: { price: "Freemium" },
     features: [
       "Tailwind Export: Converts any web element into clean Tailwind HTML",
       "Asset Extractor: One-click download for SVGs, images, and Lottie files",
@@ -2375,8 +2338,7 @@ export const aiTools: AiTool[] = [
       "Lottie Detection: Instant preview and download of web animations"
     ],
     pricingDetails: "Pro: €9.5/mo | Lifetime: €99 | 24h Free Trial",
-    integrations: ["Cursor", "Claude", "Lovable", "Bolt", "v0"]
-  },
+    integrations: ["Cursor", "Claude", "Lovable", "Bolt", "v0"],
     image: "https://www.google.com/s2/favicons?domain=miromiro.app&sz=128",
     dateAdded: "2026-02-14"
   },
@@ -2385,8 +2347,7 @@ export const aiTools: AiTool[] = [
     description: "Converts plain-English trading ideas into automated MQL5 bots and Expert Advisors in seconds.",
     url: "https://www.traidies.com",
     category: "Code Assistance",
-    tags: {
-        price: "Freemium",
+    tags: { price: "Freemium" },
     features: [
       "AI Strategy Parser: Converts trading talk into precise MQL5 code",
       "Expert Advisor Generation: Production-ready bots for MetaTrader 5",
@@ -2394,8 +2355,7 @@ export const aiTools: AiTool[] = [
       "Pine Script Conversion: Turn TradingView scripts into MT5 bots"
     ],
     pricingDetails: "Free to start",
-    integrations: ["MetaTrader 5", "MQL5"]
-  },
+    integrations: ["MetaTrader 5", "MQL5"],
     image: "https://www.google.com/s2/favicons?domain=www.traidies.com&sz=128",
     dateAdded: "2026-02-15"
   },
@@ -2404,8 +2364,7 @@ export const aiTools: AiTool[] = [
     description: "AI-powered security copilot for vibe coding, detecting and fixing risks in applications developed with AI assistants.",
     url: "https://secvibe.ai",
     category: "Code Assistance",
-    tags: {
-        price: "Freemium",
+    tags: { price: "Freemium" },
     features: [
       "Specialized Detection: Identifies risks unique to AI-generated code",
       "Real-Time Analysis: Continuous monitoring as you code in Cursor",
@@ -2413,8 +2372,7 @@ export const aiTools: AiTool[] = [
       "Intelligent Auto-Fix: Contextual remediation for detected vulnerabilities"
     ],
     pricingDetails: "Waitlist (Early Access)",
-    integrations: ["Cursor", "VS Code", "SAST tools"]
-  },
+    integrations: ["Cursor", "VS Code", "SAST tools"],
     image: "https://www.google.com/s2/favicons?domain=secvibe.ai&sz=128",
     dateAdded: "2026-02-06"
   },
@@ -2423,8 +2381,7 @@ export const aiTools: AiTool[] = [
     description: "All-in-one nonprofit accounting and management platform combining fund accounting, donor CRM, and volunteer tracking.",
     url: "https://www.getalignmint.org",
     category: "Productivity",
-    tags: {
-        price: "Paid",
+    tags: { price: "Paid" },
     features: [
       "True Fund Accounting: Restricted funds, grants, and Form 990 reports",
       "Donor CRM: Self-service portals and automated receipting",
@@ -2432,8 +2389,7 @@ export const aiTools: AiTool[] = [
       "Volunteer Tracking: Manage hours, skills, and background checks"
     ],
     pricingDetails: "Free Plan available | Contact for custom quotes",
-    integrations: ["Bank feeds", "Online Payments"]
-  },
+    integrations: ["Bank feeds", "Online Payments"],
     image: "https://www.google.com/s2/favicons?domain=www.getalignmint.org&sz=128",
     dateAdded: "2026-02-07"
   },
@@ -2521,8 +2477,7 @@ export const aiTools: AiTool[] = [
     description: "Email infrastructure for transactional and marketing messages with 99.2% inbox placement and AI-powered deliverability tools.",
     url: "https://xmit.sh",
     category: "Productivity",
-    tags: {
-        price: "Paid",
+    tags: { price: "Paid" },
     features: [
       "Deliverability Suite: Domain warmup, validation, and reputation isolation",
       "AI Composer: Design emails by describing them in plain text",
@@ -2530,8 +2485,7 @@ export const aiTools: AiTool[] = [
       "MCP Server: Manage campaigns directly from Cursor or Claude"
     ],
     pricingDetails: "Managed: /mo | BYOK: /usr/bin/bash-49/mo + AWS costs",
-    integrations: ["AWS SES", "Claude", "Cursor", "Clerk", "Auth0"]
-  },
+    integrations: ["AWS SES", "Claude", "Cursor", "Clerk", "Auth0"],
     image: "https://www.google.com/s2/favicons?domain=xmit.sh&sz=128",
     dateAdded: "2026-02-05"
   },
