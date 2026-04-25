@@ -34,6 +34,7 @@ interface ExamplesPageProps {
 const CARD_COLORS = ['#6A37AC', '#7B7662', '#333333', '#C5CC5C', '#D8D8D8'];
 
 function groupByWeek(items: EnrichedExampleRecord[]) {
+  // Sort by publish_date descending, but latest additions go to current week's drop
   const sorted = [...items].sort((a, b) => {
     const dateA = new Date(a.publish_date || '2026-03-01').getTime();
     const dateB = new Date(b.publish_date || '2026-03-01').getTime();
@@ -42,19 +43,42 @@ function groupByWeek(items: EnrichedExampleRecord[]) {
 
   const groups: { [key: string]: EnrichedExampleRecord[] } = {};
   const itemsPerBatch = 7;
-  const numBatches = Math.ceil(sorted.length / itemsPerBatch);
 
-  for (let i = 0; i < numBatches; i++) {
-    const now = new Date();
-    const startOfThisWeek = new Date(now);
-    startOfThisWeek.setDate(now.getDate() - now.getDay());
-    startOfThisWeek.setHours(0, 0, 0, 0);
-    const startDate = new Date(startOfThisWeek);
-    startDate.setDate(startDate.getDate() - 7 * (i + 1));
-    const weekLabel = startDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-    const isLastBatch = i === numBatches - 1;
-    const batchSize = isLastBatch ? 9 : itemsPerBatch;
-    groups[weekLabel] = sorted.slice(i * itemsPerBatch, i * itemsPerBatch + batchSize);
+  // Current week's Sunday
+  const now = new Date();
+  const currentSunday = new Date(now);
+  currentSunday.setDate(now.getDate() - now.getDay());
+  currentSunday.setHours(0, 0, 0, 0);
+
+  // All items go into current week's drop
+  const currentWeekLabel = currentSunday.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+  groups[currentWeekLabel] = sorted.slice(0, itemsPerBatch);
+
+  // Remaining items go into previous weeks
+  const remaining = sorted.slice(itemsPerBatch);
+  let weekOffset = 1;
+  let itemIndex = 0;
+
+  while (itemIndex < remaining.length) {
+    const weekStart = new Date(currentSunday);
+    weekStart.setDate(currentSunday.getDate() - 7 * weekOffset);
+    const weekLabel = weekStart.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+    const batch = remaining.slice(itemIndex, itemIndex + itemsPerBatch);
+    groups[weekLabel] = batch;
+    itemIndex += itemsPerBatch;
+    weekOffset++;
+  }
+
+  // If last batch has 1-3 items, merge into previous batch
+  const weekLabels = Object.keys(groups);
+  if (weekLabels.length > 1) {
+    const lastBatch = groups[weekLabels[0]];
+    const secondLastBatch = groups[weekLabels[1]];
+
+    if (lastBatch.length <= 3) {
+      groups[weekLabels[1]] = [...lastBatch, ...secondLastBatch];
+      delete groups[weekLabels[0]];
+    }
   }
 
   return Object.entries(groups).sort((a, b) => new Date(b[0]).getTime() - new Date(a[0]).getTime());

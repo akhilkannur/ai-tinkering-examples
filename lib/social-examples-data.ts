@@ -978,4 +978,48 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     author_link: "https://www.xda-developers.com/author/parth-shah/",
     tags: ["Claude", "Productivity", "Workflows", "Google Drive", "Obsidian", "Canva"],
   },
+  {
+    id: "growthx-ai-prep-agent",
+    title: "Build an AI Prep Agent in 90 Mins",
+    slug: "growthx-ai-prep-agent",
+    summary: "GrowthX walks you through building an AI meeting prep agent with Google Apps Script, Claude, and Google Sheets. Fetches emails, groups threads by participants, and generates meeting briefs automatically.",
+    screenshots: [
+      {
+        url: "/images/examples/2026-04-24-growthx-ai-prep-agent.png",
+        filename: "2026-04-24-growthx-ai-prep-agent.png",
+        thumbnails: {
+          small: { url: "/images/examples/2026-04-24-growthx-ai-prep-agent.png" },
+          large: { url: "/images/examples/2026-04-24-growthx-ai-prep-agent.png" }
+        }
+      }
+    ],
+    category: "Vibe Coding",
+    publish_date: "2026-04-24",
+    original_link: "https://shorts.growthx.club/p/build-an-ai-prep-agent-in-90-mins",
+    author_name: "GrowthX",
+    author_link: "https://substack.com/@growthxclub",
+    tags: ["AI Agents", "Google Apps Script", "Claude", "Tutorial", "Meetings"],
+  },
+  {
+    id: "gtmstrategist-claude-code-campaigns",
+    title: "How to Build GTM Campaigns Your Prospects Would Pay to Receive",
+    slug: "gtmstrategist-claude-code-campaigns",
+    summary: "Maja Voje and Jordan Crawford show how to use Claude Code as a GTM operating system - context engineering, persistent memory, database queries, and permissionless value props that actually get responses.",
+    screenshots: [
+      {
+        url: "/images/examples/2026-04-25-gtmstrategist-claude-code-campaigns.png",
+        filename: "2026-04-25-gtmstrategist-claude-code-campaigns.png",
+        thumbnails: {
+          small: { url: "/images/examples/2026-04-25-gtmstrategist-claude-code-campaigns.png" },
+          large: { url: "/images/examples/2026-04-25-gtmstrategist-claude-code-campaigns.png" }
+        }
+      }
+    ],
+    category: "GTM",
+    publish_date: "2026-03-27",
+    original_link: "https://knowledge.gtmstrategist.com/p/how-to-build-gtm-campaigns-with-claude-code",
+    author_name: "Maja Voje",
+    author_link: "https://substack.com/@majavoje",
+    tags: ["Claude Code", "GTM", "Outbound", "Context Engineering", "Campaigns"],
+  },
 ];
