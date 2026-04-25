@@ -750,7 +750,15 @@ export const aiTools: AiTool[] = [
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=beatable.co&sz=128",
-    dateAdded: "2026-03-16"
+    dateAdded: "2026-03-16",
+    features: [
+      "AI-Powered business idea validation against market gaps",
+      "Real-time competitor mapping and landscape intelligence",
+      "Private validation environment with secure data handling",
+      "Idea generation engine to optimize concepts from market data"
+    ],
+    pricingDetails: "Free to start | Paid plans available",
+    integrations: ["Google OAuth", "Apple OAuth", "LinkedIn"]
 },
   {
     name: "Map Your Voyage",
@@ -769,7 +777,15 @@ export const aiTools: AiTool[] = [
         role: "Indie Maker",
         twitter: "pameeks96",
         image: "https://unavatar.io/twitter/pameeks96"
-    }
+    },
+    features: [
+      "99.8% accurate AI location detection from Instagram Reels",
+      "Automated organization of saved travel content into lists via DM",
+      "Day-wise travel itinerary generation from bucket lists",
+      "Integrated travel booking with 100% price match guarantee"
+    ],
+    pricingDetails: "Free | Pro: $1.49/mo or $11/year",
+    integrations: ["Instagram", "Google Maps", "YouTube"]
 },
   {
     name: "AyeCreate",
@@ -778,7 +794,7 @@ export const aiTools: AiTool[] = [
     category: "Image Generation",
     tags: {
         useCase: ["Business"],
-        price: "Freemium",
+        price: "Paid",
         skill: "Intermediate"
     },
     image: "https://www.google.com/s2/favicons?domain=ayecreate.ai&sz=128",
@@ -788,7 +804,15 @@ export const aiTools: AiTool[] = [
         role: "Indie Maker",
         twitter: "michaellcoleman7",
         image: "https://unavatar.io/twitter/michaellcoleman7"
-    }
+    },
+    features: [
+      "Unified access to premium AI models (Sora 2, Veo 3, Flux 2)",
+      "StylePack system for consistent visual outputs and face consistency",
+      "Creator marketplace for monetizing custom prompt packs",
+      "Integrated photo suite for upscaling and cinematic video generation"
+    ],
+    pricingDetails: "Pay-as-you-go credit system",
+    integrations: ["Sora", "Veo", "Flux", "Gemini", "Instagram"]
 },
   {
     name: "Nicegram",
@@ -807,7 +831,15 @@ export const aiTools: AiTool[] = [
         role: "CPO",
         twitter: "sergeysheleg",
         image: "https://unavatar.io/twitter/sergeysheleg"
-    }
+    },
+    features: [
+      "Non-custodial multichain wallet for TON, Solana, and EVM",
+      "Built-in AI Assistant (Lily AI) and Agent marketplace",
+      "NiceID on-chain reputation system (NiceScore)",
+      "Privacy-first 'Double Bottom' hidden chats"
+    ],
+    pricingDetails: "Free (Usage-based fees for AI/premium features)",
+    integrations: ["Telegram API", "TON", "Solana", "Ethereum"]
 },
   {
     name: "LocalBiz",
