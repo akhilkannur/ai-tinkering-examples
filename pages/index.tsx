@@ -51,7 +51,7 @@ function groupByWeek(items: EnrichedExampleRecord[]) {
   nextSunday.setHours(0, 0, 0, 0);
   const dropLabel = nextSunday.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 
-  // Items from this session (Apr 20 onwards) go to current drop
+  // Items from last 7 days go to current drop (Apr 26)
   const sessionStart = new Date(nextSunday);
   sessionStart.setDate(nextSunday.getDate() - 7);
 
@@ -59,7 +59,6 @@ function groupByWeek(items: EnrichedExampleRecord[]) {
     const itemDate = new Date(item.publish_date || '2026-03-01');
     let weekStart = new Date(nextSunday);
 
-    // Use current drop for recent items
     if (itemDate >= sessionStart) {
       weekStart = new Date(nextSunday);
     } else {
@@ -76,11 +75,11 @@ function groupByWeek(items: EnrichedExampleRecord[]) {
     groups[weekLabel].push(item);
   });
 
-  // If last batch has 1-3 items, merge into previous batch
+  // If last batch has < 4 items, merge into previous batch
   const weekLabels = Object.keys(groups).sort((a, b) => new Date(b).getTime() - new Date(a).getTime());
   if (weekLabels.length > 1) {
     const lastBatch = groups[weekLabels[0]];
-    if (lastBatch.length <= 3) {
+    if (lastBatch.length < 4) {
       groups[weekLabels[1]] = [...lastBatch, ...groups[weekLabels[1]]];
       delete groups[weekLabels[0]];
     }
