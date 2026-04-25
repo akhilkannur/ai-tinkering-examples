@@ -30,7 +30,7 @@ export default function BlogPostPage({ post, relatedRecipes }: BlogPostPageProps
       const imageMatch = trimmedLine.match(/^!\[(.*?)\]\s?\((.*?)\)$/);
       if (imageMatch) {
         return (
-          <div key={index} className="my-12 rounded-[40px] border border-micro-layer-1 shadow-soft overflow-hidden">
+          <div key={index} className="my-12 rounded-sm border border-micro-layer-1 shadow-soft overflow-hidden">
             <img src={imageMatch[2]} alt={imageMatch[1]} className="w-full h-auto" />
           </div>
         );
@@ -49,7 +49,7 @@ export default function BlogPostPage({ post, relatedRecipes }: BlogPostPageProps
       }
 
       if (trimmedLine.startsWith('<') && trimmedLine.endsWith('>')) {
-         return <div key={index} className="my-10 border border-micro-layer-1 p-10 bg-micro-layer-1/30 rounded-[40px] shadow-inner-soft" dangerouslySetInnerHTML={{ __html: line }} />;
+         return <div key={index} className="my-10 border border-micro-layer-1 p-10 bg-micro-layer-1/30 rounded-sm shadow-inner-soft" dangerouslySetInnerHTML={{ __html: line }} />;
       }
 
       return (
@@ -63,7 +63,7 @@ export default function BlogPostPage({ post, relatedRecipes }: BlogPostPageProps
   const parseInline = (text: string) => {
     let parsed = text.replace(/\*\*(.*?)\*\*/g, '<strong class="text-micro-fg font-bold">$1</strong>');
     parsed = parsed.replace(/`([^`]+)`/g, '<code class="bg-micro-layer-1 text-micro-fg px-2 py-0.5 rounded font-mono text-base">$1</code>');
-    parsed = parsed.replace(/!\[(.*?)\]\((.*?)\)/g, '<img src="$2" alt="$1" class="inline-block max-w-full h-auto rounded-3xl border border-micro-layer-1 my-4" />');
+    parsed = parsed.replace(/!\[(.*?)\]\((.*?)\)/g, '<img src="$2" alt="$1" class="inline-block max-w-full h-auto rounded-sm border border-micro-layer-1 my-4" />');
     parsed = parsed.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" class="text-micro-fg font-bold underline decoration-2 underline-offset-4 hover:text-terminal-lime transition-colors">$1</a>');
     return parsed;
   };
@@ -100,13 +100,13 @@ export default function BlogPostPage({ post, relatedRecipes }: BlogPostPageProps
               {post.title}
             </h1>
             <div className="flex flex-wrap items-center gap-8 text-[11px] text-micro-muted font-bold uppercase tracking-[0.2em] border-b border-micro-layer-1 pb-10">
-              <span className="flex items-center gap-3 bg-micro-layer-1 px-4 py-2 rounded-full"><Calendar className="w-4 h-4 text-micro-fg/50" /> {post.date}</span>
-              <span className="flex items-center gap-3 bg-micro-layer-1 px-4 py-2 rounded-full"><User className="w-4 h-4 text-micro-fg/50" /> {post.author.name}</span>
+              <span className="flex items-center gap-3 bg-micro-layer-1 px-4 py-2 rounded-sm"><Calendar className="w-4 h-4 text-micro-fg/50" /> {post.date}</span>
+              <span className="flex items-center gap-3 bg-micro-layer-1 px-4 py-2 rounded-sm"><User className="w-4 h-4 text-micro-fg/50" /> {post.author.name}</span>
             </div>
           </header>
 
           {post.coverImage && (
-             <div className="mb-16 rounded-[48px] border border-micro-layer-1 shadow-micro overflow-hidden">
+             <div className="mb-16 rounded-sm border border-micro-layer-1 shadow-micro overflow-hidden">
                 <img src={post.coverImage} alt={post.title} className="w-full h-auto" />
              </div>
           )}
@@ -129,10 +129,10 @@ export default function BlogPostPage({ post, relatedRecipes }: BlogPostPageProps
                   <Link key={recipe.id} href={`/skills/${recipe.id}`} className="group h-full">
                     <div className="card-micro p-10 h-full flex flex-col overflow-hidden bg-white border border-micro-layer-1 hover:shadow-micro transition-all duration-500 hover:-translate-y-2">
                       <div className="flex justify-between items-start mb-8">
-                        <div className="w-12 h-12 rounded-2xl bg-micro-layer-1 flex items-center justify-center text-micro-fg shadow-sm group-hover:bg-micro-fg group-hover:text-white transition-all">
+                        <div className="w-12 h-12 rounded-sm bg-micro-layer-1 flex items-center justify-center text-micro-fg shadow-sm group-hover:bg-micro-fg group-hover:text-white transition-all">
                           <CatIcon className="w-6 h-6" />
                         </div>
-                        <span className="text-[10px] font-bold text-micro-muted uppercase tracking-[0.2em] bg-micro-layer-1 px-3 py-1.5 rounded-lg border border-micro-layer-1">
+                        <span className="text-[10px] font-bold text-micro-muted uppercase tracking-[0.2em] bg-micro-layer-1 px-3 py-1.5 rounded-sm border border-micro-layer-1">
                           {recipe.category}
                         </span>
                       </div>

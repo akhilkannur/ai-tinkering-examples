@@ -54,7 +54,7 @@ export default function Navbar() {
           <div className="flex items-center gap-10">
             <div className="flex-shrink-0">
               <Link href="/" className="flex items-center gap-2 group">
-                <div className={`w-7 h-7 rounded-lg flex items-center justify-center transition-transform group-hover:scale-105 ${scrolled || !isHomePage ? 'bg-micro-fg' : 'bg-white'}`}></div>
+                <div className={`w-7 h-7 rounded-full flex items-center justify-center transition-transform group-hover:scale-105 ${scrolled || !isHomePage ? 'bg-micro-fg' : 'bg-white'}`}></div>
                 <span className={`text-2xl font-bold tracking-tight transition-colors ${scrolled || !isHomePage ? 'text-micro-fg' : 'text-white'}`}>Real AI Examples</span>
               </Link>
             </div>

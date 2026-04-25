@@ -44,7 +44,7 @@ export default function BlogIndex({ posts }: BlogIndexProps) {
           </p>
         </div>
 
-        <div className="glass-sheet rounded-3xl md:rounded-[48px] p-4 md:p-16 lg:p-24 overflow-hidden">
+        <div className="glass-sheet rounded-sm md:rounded-sm p-4 md:p-16 lg:p-24 overflow-hidden">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-12">
             {posts.map((post) => (
               <Link key={post.slug} href={`/blog/${post.slug}`} className="group h-full">
@@ -62,7 +62,7 @@ export default function BlogIndex({ posts }: BlogIndexProps) {
 
                   <div className="p-5 md:p-10 flex flex-col flex-grow">
                     <div className="flex items-center gap-4 text-[10px] text-micro-muted mb-6 font-bold uppercase tracking-[0.2em]">
-                      <span className="flex items-center gap-2 bg-micro-layer-1 px-3 py-1.5 rounded-full">{post.date}</span>
+                      <span className="flex items-center gap-2 bg-micro-layer-1 px-3 py-1.5 rounded-sm">{post.date}</span>
                     </div>
 
                     <h2 className="text-2xl font-bold mb-6 text-micro-fg group-hover:underline decoration-2 underline-offset-8 transition-all leading-tight">
@@ -75,7 +75,7 @@ export default function BlogIndex({ posts }: BlogIndexProps) {
 
                     <div className="mt-auto pt-8 border-t border-micro-layer-1 flex items-center justify-between text-micro-fg font-bold text-[11px] uppercase tracking-[0.2em]">
                       <span className="group-hover:text-terminal-lime transition-colors">Read Guide</span>
-                      <div className="w-12 h-12 rounded-full bg-micro-layer-1 flex items-center justify-center text-micro-fg group-hover:bg-micro-fg group-hover:text-white transition-all shadow-sm">
+                      <div className="w-12 h-12 rounded-sm bg-micro-layer-1 flex items-center justify-center text-micro-fg group-hover:bg-micro-fg group-hover:text-white transition-all shadow-sm">
                         <ArrowRight className="w-5 h-5" />
                       </div>
                     </div>

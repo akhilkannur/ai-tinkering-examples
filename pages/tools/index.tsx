@@ -80,15 +80,15 @@ export default function ToolsIndex() {
         </div>
 
         {/* Floating Glass Sheet */}
-        <div className="glass-sheet rounded-3xl md:rounded-[48px] p-4 md:p-16 lg:p-24 overflow-hidden">
+        <div className="glass-sheet rounded-sm md:rounded-sm p-4 md:p-16 lg:p-24 overflow-hidden">
           {/* Filters */}
-          <div className="mb-8 md:mb-16 sticky top-4 z-40 bg-white/80 backdrop-blur-2xl py-4 px-4 md:py-6 md:px-8 rounded-2xl md:rounded-3xl border border-white/30 shadow-2xl">
+          <div className="mb-8 md:mb-16 sticky top-4 z-40 bg-white/80 backdrop-blur-2xl py-4 px-4 md:py-6 md:px-8 rounded-sm md:rounded-sm border border-white/30 shadow-2xl">
             <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3">
               {categories.map(cat => (
                 <button
                   key={cat}
                   onClick={() => setSelectedCategory(cat)}
-                  className={`px-3 md:px-5 py-1.5 md:py-2 rounded-full text-[10px] md:text-[12px] font-bold transition-all whitespace-nowrap border ${
+                  className={`px-3 md:px-5 py-1.5 md:py-2 rounded-sm text-[10px] md:text-[12px] font-bold transition-all whitespace-nowrap border ${
                     selectedCategory === cat 
                     ? 'bg-micro-fg border-micro-fg text-white shadow-lg' 
                     : 'bg-white/50 border-white/20 text-micro-muted hover:border-micro-fg/20'
@@ -106,9 +106,9 @@ export default function ToolsIndex() {
               href="https://salestools.club/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="group flex items-center gap-6 bg-white border border-micro-layer-1 rounded-[32px] p-6 hover:border-micro-fg transition-all hover:shadow-micro"
+              className="group flex items-center gap-6 bg-white border border-micro-layer-1 rounded-sm p-6 hover:border-micro-fg transition-all hover:shadow-micro"
             >
-              <div className="w-12 h-12 rounded-2xl bg-micro-fg flex items-center justify-center text-white font-bold text-xl shadow-lg flex-shrink-0">
+              <div className="w-12 h-12 rounded-sm bg-micro-fg flex items-center justify-center text-white font-bold text-xl shadow-lg flex-shrink-0">
                 S
               </div>
               <div className="min-w-0">
@@ -120,9 +120,9 @@ export default function ToolsIndex() {
 
             <Link
               href="/tools/badge"
-              className="group flex items-center gap-6 bg-micro-fg rounded-[32px] p-6 text-white hover:shadow-micro transition-all border border-transparent"
+              className="group flex items-center gap-6 bg-micro-fg rounded-sm p-6 text-white hover:shadow-micro transition-all border border-transparent"
             >
-              <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center text-white font-bold text-xl flex-shrink-0">
+              <div className="w-12 h-12 rounded-sm bg-white/10 flex items-center justify-center text-white font-bold text-xl flex-shrink-0">
                 +
               </div>
               <div className="min-w-0">
@@ -136,7 +136,7 @@ export default function ToolsIndex() {
           {/* Main Content: Tools List (Full Width) */}
           <div className="max-w-full">
               {filteredTools.length === 0 ? (
-                <div className="py-24 text-center border-2 border-dashed border-micro-layer-2 rounded-[40px] bg-micro-layer-1/30">
+                <div className="py-24 text-center border-2 border-dashed border-micro-layer-2 rounded-sm bg-micro-layer-1/30">
                   <p className="text-micro-muted font-bold uppercase tracking-widest text-sm">No tools found</p>
                   <button 
                     onClick={() => {setSelectedCategory('All');}}
@@ -150,8 +150,8 @@ export default function ToolsIndex() {
                   {visibleGroups.map((group) => (
                     <div key={group.label} className="mb-16 md:mb-28">
                       <div className="flex items-center gap-6 mb-10 md:mb-14">
-                        <div className="flex items-center gap-3 bg-micro-fg px-6 py-2.5 rounded-full shadow-lg">
-                          <span className="w-2 h-2 rounded-full bg-terminal-lime animate-pulse"></span>
+                        <div className="flex items-center gap-3 bg-micro-fg px-6 py-2.5 rounded-sm shadow-lg">
+                          <span className="w-2 h-2 rounded-sm bg-terminal-lime animate-pulse"></span>
                           <h2 className="text-[12px] md:text-[14px] font-black uppercase tracking-[0.2em] text-white whitespace-nowrap">
                             {group.label}
                           </h2>
@@ -175,7 +175,7 @@ export default function ToolsIndex() {
                   {hasMoreWeeks && !showAllWeeks && (
                     <button
                       onClick={() => setShowAllWeeks(true)}
-                      className="w-full py-6 md:py-8 mt-8 md:mt-12 border border-micro-layer-1 rounded-2xl md:rounded-[32px] bg-white text-micro-muted font-bold uppercase tracking-widest text-[11px] hover:border-micro-fg hover:text-micro-fg transition-all flex items-center justify-center gap-3 shadow-soft hover:shadow-micro"
+                      className="w-full py-6 md:py-8 mt-8 md:mt-12 border border-micro-layer-1 rounded-sm md:rounded-sm bg-white text-micro-muted font-bold uppercase tracking-widest text-[11px] hover:border-micro-fg hover:text-micro-fg transition-all flex items-center justify-center gap-3 shadow-soft hover:shadow-micro"
                     >
                       Explore Older Backlog <ChevronDown className="w-4 h-4" />
                     </button>
@@ -199,11 +199,11 @@ function ToolDataRow({ tool }: { tool: AiTool }) {
 
   return (
     <div 
-      className="group flex flex-col md:flex-row md:items-center gap-6 py-8 px-6 -mx-6 hover:bg-white transition-all cursor-pointer rounded-2xl border border-transparent hover:border-micro-layer-1 hover:shadow-soft"
+      className="group flex flex-col md:flex-row md:items-center gap-6 py-8 px-6 -mx-6 hover:bg-white transition-all cursor-pointer rounded-sm border border-transparent hover:border-micro-layer-1 hover:shadow-soft"
     >
       {/* Logo & Name Mobile Group */}
       <div className="flex items-center gap-6 flex-shrink-0 md:w-64">
-        <div className="w-14 h-14 rounded-2xl border border-micro-layer-1 bg-white flex-shrink-0 flex items-center justify-center p-2.5 overflow-hidden group-hover:border-micro-fg transition-colors shadow-sm">
+        <div className="w-14 h-14 rounded-sm border border-micro-layer-1 bg-white flex-shrink-0 flex items-center justify-center p-2.5 overflow-hidden group-hover:border-micro-fg transition-colors shadow-sm">
           <Image 
             src={imgSrc} 
             alt={tool.name} 
@@ -234,7 +234,7 @@ function ToolDataRow({ tool }: { tool: AiTool }) {
 
       {/* Pricing & Link */}
       <div className="flex items-center justify-between md:justify-end gap-10 flex-shrink-0 md:w-48">
-        <span className="text-sm font-bold text-micro-fg bg-micro-layer-1 px-4 py-1.5 rounded-full">
+        <span className="text-sm font-bold text-micro-fg bg-micro-layer-1 px-4 py-1.5 rounded-sm">
           {tool.tags.price}
         </span>
         <ArrowRight className="w-5 h-5 text-micro-muted group-hover:text-micro-fg group-hover:translate-x-1 transition-all" />

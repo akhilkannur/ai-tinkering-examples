@@ -19,7 +19,7 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
           {example.category && (
             <Link
               href={`/ai-examples/category/${categorySlug}`}
-              className="px-4 py-1.5 rounded-full bg-micro-layer-1 text-[10px] font-bold uppercase tracking-[0.2em] text-micro-muted hover:text-micro-fg transition-colors"
+              className="px-4 py-1.5 rounded-sm bg-micro-layer-1 text-[10px] font-bold uppercase tracking-[0.2em] text-micro-muted hover:text-micro-fg transition-colors"
             >
               {example.category}
             </Link>
@@ -62,7 +62,7 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
               const imageUrl = optimizeImageUrl(screenshot.url, publicId, 1200) || screenshot.url;
 
               return (
-                <div key={i} className="rounded-3xl overflow-hidden border border-micro-layer-1 shadow-soft">
+                <div key={i} className="rounded-sm overflow-hidden border border-micro-layer-1 shadow-soft">
                   <Image
                     src={imageUrl}
                     alt={`${example.title} - Step ${i + 1}`}
@@ -78,7 +78,7 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
         )}
 
         {example.workflow_steps && (
-          <div className="mb-12 p-8 bg-micro-layer-1 rounded-2xl border border-micro-layer-1">
+          <div className="mb-12 p-8 bg-micro-layer-1 rounded-sm border border-micro-layer-1">
             <p className="text-sm font-medium text-micro-muted leading-relaxed">
               {example.workflow_steps}
             </p>

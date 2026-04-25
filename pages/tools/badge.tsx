@@ -13,7 +13,7 @@ function makeBadgeEmbed(variant: 'dark' | 'light') {
 function BadgePreview({ variant }: { variant: 'dark' | 'light' }) {
   const fileName = variant === 'dark' ? 'badge-dark.svg' : 'badge-light.svg';
   return (
-    <div className="inline-flex items-center justify-center rounded-2xl p-6 bg-micro-layer-1">
+    <div className="inline-flex items-center justify-center rounded-sm p-6 bg-micro-layer-1">
       <img src={`/images/${fileName}`} alt={`Listed on Real AI Examples ${variant}`} width="220" height="50" className="shadow-2xl" />
     </div>
   );
@@ -30,12 +30,12 @@ function CopyBlock({ code }: { code: string }) {
 
   return (
     <div className="relative">
-      <pre className="font-mono text-[11px] md:text-sm bg-micro-layer-1 rounded-2xl p-6 border border-micro-layer-2 overflow-x-auto whitespace-pre-wrap break-all text-micro-fg leading-relaxed">
+      <pre className="font-mono text-[11px] md:text-sm bg-micro-layer-1 rounded-sm p-6 border border-micro-layer-2 overflow-x-auto whitespace-pre-wrap break-all text-micro-fg leading-relaxed">
         {code}
       </pre>
       <button
         onClick={handleCopy}
-        className="absolute top-4 right-4 flex items-center gap-1.5 bg-white border border-micro-layer-2 rounded-full px-3 py-1.5 text-[10px] font-bold uppercase tracking-widest text-micro-muted hover:text-micro-fg hover:border-micro-fg transition-all shadow-sm"
+        className="absolute top-4 right-4 flex items-center gap-1.5 bg-white border border-micro-layer-2 rounded-sm px-3 py-1.5 text-[10px] font-bold uppercase tracking-widest text-micro-muted hover:text-micro-fg hover:border-micro-fg transition-all shadow-sm"
       >
         {copied ? <Check className="w-3 h-3" /> : <Copy className="w-3 h-3" />}
         {copied ? 'Copied' : 'Copy'}
@@ -85,7 +85,7 @@ export default function BadgePage() {
         <div className="max-w-5xl mx-auto text-center mb-12 md:mb-32 pt-8 md:pt-12">
           <Link
             href="/tools"
-            className="inline-flex items-center gap-2 text-[10px] md:text-xs font-bold text-white/60 uppercase tracking-widest hover:text-white transition-colors mb-10 bg-white/10 px-4 py-2 rounded-full border border-white/10"
+            className="inline-flex items-center gap-2 text-[10px] md:text-xs font-bold text-white/60 uppercase tracking-widest hover:text-white transition-colors mb-10 bg-white/10 px-4 py-2 rounded-sm border border-white/10"
           >
             <ArrowLeft className="w-3 h-3 md:w-3.5 md:h-3.5" />
             Back to Tools
@@ -101,7 +101,7 @@ export default function BadgePage() {
         </div>
 
         {/* Glass Sheet */}
-        <div className="glass-sheet rounded-[32px] md:rounded-[48px] p-6 md:p-16 lg:p-24 overflow-hidden">
+        <div className="glass-sheet rounded-sm md:rounded-sm p-6 md:p-16 lg:p-24 overflow-hidden">
           {/* Section A: Badge Preview + Embed */}
           <section className="mb-16 md:mb-28">
             <h2 className="text-[10px] md:text-[12px] font-black uppercase tracking-[0.3em] text-micro-muted mb-8 md:mb-12 border-b border-micro-layer-1 pb-4">
@@ -110,7 +110,7 @@ export default function BadgePage() {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {/* Dark Badge */}
-              <div className="bg-white border border-micro-layer-1 rounded-[32px] p-8 flex flex-col gap-8 shadow-sm">
+              <div className="bg-white border border-micro-layer-1 rounded-sm p-8 flex flex-col gap-8 shadow-sm">
                 <div className="flex items-center justify-between">
                   <span className="text-[10px] font-black uppercase tracking-[0.2em] text-micro-muted">
                     Dark Variant
@@ -123,7 +123,7 @@ export default function BadgePage() {
               </div>
 
               {/* Light Badge */}
-              <div className="bg-white border border-micro-layer-1 rounded-[32px] p-8 flex flex-col gap-8 shadow-sm">
+              <div className="bg-white border border-micro-layer-1 rounded-sm p-8 flex flex-col gap-8 shadow-sm">
                 <div className="flex items-center justify-between">
                   <span className="text-[10px] font-black uppercase tracking-[0.2em] text-micro-muted">
                     Light Variant
@@ -163,9 +163,9 @@ export default function BadgePage() {
               ].map((item) => (
                 <div
                   key={item.step}
-                  className="bg-white/50 border border-white/30 rounded-[32px] p-8 shadow-sm"
+                  className="bg-white/50 border border-white/30 rounded-sm p-8 shadow-sm"
                 >
-                  <span className="text-[10px] font-black uppercase tracking-[0.3em] text-terminal-lime bg-black px-3 py-1 rounded-full">
+                  <span className="text-[10px] font-black uppercase tracking-[0.3em] text-terminal-lime bg-black px-3 py-1 rounded-sm">
                     Step {item.step}
                   </span>
                   <h3 className="text-xl font-bold tracking-tight text-micro-fg mt-6 mb-3">
@@ -186,8 +186,8 @@ export default function BadgePage() {
             </h2>
 
             {submitted ? (
-              <div className="bg-white border border-micro-layer-1 rounded-[40px] p-12 md:p-24 text-center shadow-xl">
-                <div className="w-20 h-20 rounded-full bg-terminal-lime flex items-center justify-center mx-auto mb-8 shadow-lg">
+              <div className="bg-white border border-micro-layer-1 rounded-sm p-12 md:p-24 text-center shadow-xl">
+                <div className="w-20 h-20 rounded-sm bg-terminal-lime flex items-center justify-center mx-auto mb-8 shadow-lg">
                   <Check className="w-10 h-10 text-micro-fg" />
                 </div>
                 <h3 className="text-3xl md:text-4xl font-bold tracking-tight text-micro-fg mb-4">
@@ -200,7 +200,7 @@ export default function BadgePage() {
             ) : (
               <form
                 onSubmit={handleSubmit}
-                className="bg-white border border-micro-layer-1 rounded-[40px] p-8 md:p-16 shadow-xl"
+                className="bg-white border border-micro-layer-1 rounded-sm p-8 md:p-16 shadow-xl"
               >
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                   <div className="space-y-2">
@@ -212,7 +212,7 @@ export default function BadgePage() {
                       required
                       value={formState.name}
                       onChange={handleChange}
-                      className="w-full bg-micro-layer-1 border border-transparent rounded-2xl px-8 py-5 text-micro-fg focus:bg-white focus:border-micro-layer-2 outline-none transition-all placeholder:text-micro-muted/40 font-bold"
+                      className="w-full bg-micro-layer-1 border border-transparent rounded-sm px-8 py-5 text-micro-fg focus:bg-white focus:border-micro-layer-2 outline-none transition-all placeholder:text-micro-muted/40 font-bold"
                     />
                   </div>
                   <div className="space-y-2">
@@ -224,7 +224,7 @@ export default function BadgePage() {
                       required
                       value={formState.url}
                       onChange={handleChange}
-                      className="w-full bg-micro-layer-1 border border-transparent rounded-2xl px-8 py-5 text-micro-fg focus:bg-white focus:border-micro-layer-2 outline-none transition-all placeholder:text-micro-muted/40 font-bold"
+                      className="w-full bg-micro-layer-1 border border-transparent rounded-sm px-8 py-5 text-micro-fg focus:bg-white focus:border-micro-layer-2 outline-none transition-all placeholder:text-micro-muted/40 font-bold"
                     />
                   </div>
                 </div>
@@ -238,7 +238,7 @@ export default function BadgePage() {
                     required
                     value={formState.email}
                     onChange={handleChange}
-                    className="w-full bg-micro-layer-1 border border-transparent rounded-2xl px-8 py-5 text-micro-fg focus:bg-white focus:border-micro-layer-2 outline-none transition-all placeholder:text-micro-muted/40 font-bold"
+                    className="w-full bg-micro-layer-1 border border-transparent rounded-sm px-8 py-5 text-micro-fg focus:bg-white focus:border-micro-layer-2 outline-none transition-all placeholder:text-micro-muted/40 font-bold"
                   />
                 </div>
 
@@ -251,14 +251,14 @@ export default function BadgePage() {
                     rows={5}
                     value={formState.description}
                     onChange={handleChange}
-                    className="w-full bg-micro-layer-1 border border-transparent rounded-2xl px-8 py-5 text-micro-fg focus:bg-white focus:border-micro-layer-2 outline-none transition-all resize-none placeholder:text-micro-muted/40 font-bold"
+                    className="w-full bg-micro-layer-1 border border-transparent rounded-sm px-8 py-5 text-micro-fg focus:bg-white focus:border-micro-layer-2 outline-none transition-all resize-none placeholder:text-micro-muted/40 font-bold"
                   />
                 </div>
 
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="w-full md:w-auto bg-micro-fg text-white rounded-full text-sm font-black uppercase tracking-widest px-12 py-5 hover:bg-black transition-all disabled:opacity-50 inline-flex items-center justify-center gap-3 shadow-xl hover:shadow-2xl active:scale-[0.98]"
+                  className="w-full md:w-auto bg-micro-fg text-white rounded-sm text-sm font-black uppercase tracking-widest px-12 py-5 hover:bg-black transition-all disabled:opacity-50 inline-flex items-center justify-center gap-3 shadow-xl hover:shadow-2xl active:scale-[0.98]"
                 >
                   {submitting ? (
                     'Submitting...'

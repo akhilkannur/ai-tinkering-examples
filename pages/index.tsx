@@ -141,11 +141,11 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
           
           <div className="flex flex-col items-center gap-10">
             {formStatus === 'success' ? (
-              <div className="px-12 py-6 bg-white rounded-pill font-bold text-micro-fg shadow-xl">
+              <div className="px-12 py-6 bg-white rounded-sm font-bold text-micro-fg shadow-xl">
                 ✓ Check your inbox to confirm
               </div>
             ) : (
-              <form className="flex w-full max-w-2xl p-1.5 md:p-2.5 bg-white/90 backdrop-blur-2xl rounded-pill border border-white/30 shadow-2xl" onSubmit={handleNewsletterSubmit}>
+              <form className="flex w-full max-w-2xl p-1.5 md:p-2.5 bg-white/90 backdrop-blur-2xl rounded-sm border border-white/30 shadow-2xl" onSubmit={handleNewsletterSubmit}>
                 <input
                   type="email"
                   className="flex-1 bg-transparent px-4 md:px-8 py-3 md:py-4 outline-none text-sm md:text-[18px] font-medium text-micro-fg placeholder:text-micro-muted min-w-0"
@@ -155,7 +155,7 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
                   onChange={(e) => setEmail(e.target.value)}
                   disabled={formStatus === 'loading'}
                 />
-                <button type="submit" className="px-6 md:px-12 py-3 md:py-5 bg-white text-micro-fg rounded-pill font-extrabold text-xs md:text-sm uppercase tracking-wider hover:bg-micro-layer-1 transition-all shadow-lg active:scale-95 flex-shrink-0" disabled={formStatus === 'loading'}>
+                <button type="submit" className="px-6 md:px-12 py-3 md:py-5 bg-white text-micro-fg rounded-sm font-extrabold text-xs md:text-sm uppercase tracking-wider hover:bg-micro-layer-1 transition-all shadow-lg active:scale-95 flex-shrink-0" disabled={formStatus === 'loading'}>
                   {formStatus === 'loading' ? '...' : 'Join Free'}
                 </button>
               </form>
@@ -167,7 +167,7 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
         </section>
 
         {/* Floating Glass Sheet */}
-        <div className="glass-sheet rounded-3xl md:rounded-[48px] p-4 md:p-16 lg:p-24 overflow-hidden">
+        <div className="glass-sheet rounded-sm md:rounded-sm p-4 md:p-16 lg:p-24 overflow-hidden">
           {/* Weekly Drops */}
           <main className="space-y-16 md:space-y-40">
             {weeklyBatches.map(([week, items], batchIdx) => {

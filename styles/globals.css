@@ -31,15 +31,15 @@
 @layer components {
   /* Micro-inspired utilities */
   .card-micro {
-    @apply bg-white border border-micro-layer-1 rounded-3xl shadow-soft transition-all duration-500 hover:shadow-micro hover:-translate-y-1;
+    @apply bg-white border border-micro-layer-1 rounded-sm shadow-soft transition-all duration-500 hover:shadow-micro hover:-translate-y-1;
   }
 
   .input-micro {
-    @apply px-lg py-sm bg-micro-layer-1 border border-transparent rounded-pill text-micro-fg focus:bg-white focus:border-micro-layer-2 outline-none transition-all;
+    @apply px-lg py-sm bg-micro-layer-1 border border-transparent rounded-sm text-micro-fg focus:bg-white focus:border-micro-layer-2 outline-none transition-all;
   }
 
   .button-micro {
-    @apply px-xl py-sm bg-micro-fg text-white rounded-pill text-[0.875rem] font-bold hover:opacity-90 transition-all;
+    @apply px-xl py-sm bg-micro-fg text-white rounded-sm text-[0.875rem] font-bold hover:opacity-90 transition-all;
   }
 }
 
@@ -51,7 +51,7 @@
   @apply bg-hero-tint;
 }
 ::-webkit-scrollbar-thumb {
-  @apply bg-light-placeholder rounded-pill border-2 border-hero-tint;
+  @apply bg-light-placeholder rounded-sm border-2 border-hero-tint;
 }
 ::-webkit-scrollbar-thumb:hover {
   @apply bg-secondary-text;

@@ -39,9 +39,9 @@ export default function StickyActionBar() {
           exit={{ y: 100, opacity: 0 }}
           className="fixed bottom-0 left-0 right-0 z-50 p-4"
         >
-          <div className="container mx-auto max-w-2xl bg-secondary-bg border border-accent/20 shadow-[0_-5px_20px_rgba(0,0,0,0.3)] rounded-xl p-4 flex items-center justify-between backdrop-blur-md bg-secondary-bg/95">
+          <div className="container mx-auto max-w-2xl bg-secondary-bg border border-accent/20 shadow-[0_-5px_20px_rgba(0,0,0,0.3)] rounded-sm p-4 flex items-center justify-between backdrop-blur-md bg-secondary-bg/95">
             <div className="flex items-center gap-3">
-              <div className="bg-accent/10 p-2 rounded-lg text-accent hidden sm:block">
+              <div className="bg-accent/10 p-2 rounded-sm text-accent hidden sm:block">
                 <Download size={20} />
               </div>
               <div>
@@ -53,7 +53,7 @@ export default function StickyActionBar() {
             <div className="flex items-center gap-3">
               <button 
                 onClick={scrollToCta}
-                className="bg-accent hover:bg-accent-hover text-white text-sm font-bold py-2 px-4 rounded-lg transition-colors shadow-lg"
+                className="bg-accent hover:bg-accent-hover text-white text-sm font-bold py-2 px-4 rounded-sm transition-colors shadow-lg"
               >
                 Download CSV
               </button>

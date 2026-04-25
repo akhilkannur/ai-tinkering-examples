@@ -45,14 +45,14 @@ export default function AboutPage() {
           </p>
         </div>
 
-        <div className="glass-sheet rounded-3xl md:rounded-[48px] p-4 md:p-16 lg:p-24 overflow-hidden">
+        <div className="glass-sheet rounded-sm md:rounded-sm p-4 md:p-16 lg:p-24 overflow-hidden">
           <div className="grid lg:grid-cols-12 gap-10 md:gap-20 items-start">
             
             {/* Text Column */}
             <div className="lg:col-span-7 space-y-8 md:space-y-16">
-                <section className="bg-white rounded-3xl md:rounded-[40px] border border-micro-layer-1 p-6 md:p-12 shadow-soft">
+                <section className="bg-white rounded-sm md:rounded-sm border border-micro-layer-1 p-6 md:p-12 shadow-soft">
                     <div className="flex items-center gap-5 mb-10">
-                        <div className="w-14 h-14 rounded-2xl bg-micro-fg flex items-center justify-center text-white shadow-lg">
+                        <div className="w-14 h-14 rounded-sm bg-micro-fg flex items-center justify-center text-white shadow-lg">
                             <Clock className="w-7 h-7" />
                         </div>
                         <h2 className="text-3xl font-bold tracking-tight text-micro-fg">The "Time" Problem</h2>
@@ -63,9 +63,9 @@ export default function AboutPage() {
                     </div>
                 </section>
 
-                <section className="bg-white rounded-3xl md:rounded-[40px] border border-micro-layer-1 p-6 md:p-12 shadow-soft">
+                <section className="bg-white rounded-sm md:rounded-sm border border-micro-layer-1 p-6 md:p-12 shadow-soft">
                     <div className="flex items-center gap-5 mb-10">
-                        <div className="w-14 h-14 rounded-2xl bg-micro-fg flex items-center justify-center text-white shadow-lg">
+                        <div className="w-14 h-14 rounded-sm bg-micro-fg flex items-center justify-center text-white shadow-lg">
                             <ShieldCheck className="w-7 h-7" />
                         </div>
                         <h2 className="text-3xl font-bold tracking-tight text-micro-fg">The Practical Solution</h2>
@@ -75,15 +75,15 @@ export default function AboutPage() {
                     </p>
                 </section>
 
-                <div className="p-6 md:p-12 bg-micro-fg rounded-3xl md:rounded-[40px] shadow-micro relative overflow-hidden group border border-micro-fg">
+                <div className="p-6 md:p-12 bg-micro-fg rounded-sm md:rounded-sm shadow-micro relative overflow-hidden group border border-micro-fg">
                     <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(#fff 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
                     <div className="relative z-10">
-                        <div className="bg-white/10 backdrop-blur-md text-white/80 px-4 py-1.5 inline-block rounded-full font-bold text-[10px] uppercase tracking-[0.2em] mb-8">A message from the founder</div>
+                        <div className="bg-white/10 backdrop-blur-md text-white/80 px-4 py-1.5 inline-block rounded-sm font-bold text-[10px] uppercase tracking-[0.2em] mb-8">A message from the founder</div>
                         <p className="text-2xl text-white font-medium italic leading-relaxed mb-10">
                             "I'm not a corporate developer—I'm a tinkerer who got tired of seeing AI used for parlor tricks instead of real work. I've spent thousands of hours figuring out which workflows actually save time. My goal is to help you skip the trial-and-error."
                         </p>
                         <div className="flex items-center gap-5 pt-10 border-t border-white/10">
-                            <div className="w-20 h-20 rounded-3xl border-2 border-white/20 shadow-xl overflow-hidden -rotate-3 bg-white/5">
+                            <div className="w-20 h-20 rounded-sm border-2 border-white/20 shadow-xl overflow-hidden -rotate-3 bg-white/5">
                                 <Image src="/images/akhil.jpg" alt="Akhil MK" width={80} height={80} className="object-cover" />
                             </div>
                             <div>
@@ -97,7 +97,7 @@ export default function AboutPage() {
 
             {/* Visual Column / Stats */}
             <div className="lg:col-span-5 space-y-8 md:space-y-16">
-                <div className="bg-white rounded-3xl md:rounded-[40px] border border-micro-layer-1 p-6 md:p-12 shadow-soft relative overflow-hidden">
+                <div className="bg-white rounded-sm md:rounded-sm border border-micro-layer-1 p-6 md:p-12 shadow-soft relative overflow-hidden">
                     <div className="absolute top-0 right-0 p-4 opacity-[0.03]">
                         <Cpu className="w-48 h-48 text-micro-fg" />
                     </div>
@@ -110,17 +110,17 @@ export default function AboutPage() {
                         <div className="h-px bg-micro-layer-1"></div>
                         <div>
                             <div className="text-7xl font-bold text-micro-fg mb-2 tracking-tighter">100%</div>
-                            <div className="text-[11px] font-bold text-micro-muted uppercase tracking-[0.2em] bg-micro-layer-1 px-3 py-1 rounded-lg inline-block">Hand-Verified</div>
+                            <div className="text-[11px] font-bold text-micro-muted uppercase tracking-[0.2em] bg-micro-layer-1 px-3 py-1 rounded-sm inline-block">Hand-Verified</div>
                         </div>
                         <div className="h-px bg-micro-layer-1"></div>
                         <div>
                             <div className="text-7xl font-bold text-micro-fg mb-2 tracking-tighter">50+</div>
-                            <div className="text-[11px] font-bold text-micro-muted uppercase tracking-[0.2em] bg-micro-layer-1 px-3 py-1 rounded-lg inline-block">Hours Saved Weekly</div>
+                            <div className="text-[11px] font-bold text-micro-muted uppercase tracking-[0.2em] bg-micro-layer-1 px-3 py-1 rounded-sm inline-block">Hours Saved Weekly</div>
                         </div>
                     </div>
                 </div>
 
-                <div className="bg-white rounded-3xl md:rounded-[40px] border border-micro-layer-1 p-6 md:p-12 shadow-soft">
+                <div className="bg-white rounded-sm md:rounded-sm border border-micro-layer-1 p-6 md:p-12 shadow-soft">
                     <div className="flex items-center gap-4 mb-8">
                         <Mail className="w-10 h-10 text-micro-fg" />
                         <h3 className="font-bold text-2xl text-micro-fg tracking-tight">Get in Touch</h3>
@@ -128,7 +128,7 @@ export default function AboutPage() {
                     <p className="text-sm text-micro-muted font-medium mb-10 leading-relaxed uppercase tracking-wider">
                         Have a question about an idea? Want to share how you're using AI? I'd love to hear from you.
                     </p>
-                    <a href="mailto:akhil@realaiexamples.com" className="flex items-center justify-between p-6 bg-micro-layer-1 rounded-3xl border border-transparent hover:border-micro-fg hover:bg-white transition-all group shadow-sm">
+                    <a href="mailto:akhil@realaiexamples.com" className="flex items-center justify-between p-6 bg-micro-layer-1 rounded-sm border border-transparent hover:border-micro-fg hover:bg-white transition-all group shadow-sm">
                         <span className="text-xs font-bold text-micro-fg uppercase tracking-widest leading-none">akhil@realaiexamples.com</span>
                         <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-micro-fg group-hover:bg-micro-fg group-hover:text-white transition-all shadow-sm">
                             <ArrowRight className="w-4 h-4" />

@@ -34,7 +34,7 @@ export default function NewsletterForm({ dark = false }: { dark?: boolean }) {
 
   if (status === 'success') {
     return (
-      <div className={`py-3 px-6 border rounded-full text-center ${
+      <div className={`py-3 px-6 border rounded-sm text-center ${
         dark ? 'bg-white/5 border-white/10' : 'bg-white border-coffee-200 shadow-soft'
       }`}>
         <p className={`text-sm font-medium ${dark ? 'text-white' : 'text-coffee-900'}`}>✓ Check your inbox to confirm.</p>
@@ -44,7 +44,7 @@ export default function NewsletterForm({ dark = false }: { dark?: boolean }) {
 
   return (
     <div className="w-full">
-      <form onSubmit={handleSubmit} className={`flex flex-col sm:flex-row group transition-all duration-300 rounded-full p-1.5 border ${
+      <form onSubmit={handleSubmit} className={`flex flex-col sm:flex-row group transition-all duration-300 rounded-sm p-1.5 border ${
         dark
           ? 'bg-white/[0.04] border-white/10 hover:border-white/20'
           : 'bg-white border-coffee-200 shadow-soft hover:shadow-soft-hover'
@@ -65,7 +65,7 @@ export default function NewsletterForm({ dark = false }: { dark?: boolean }) {
         </div>
         <button 
           type="submit"
-          className={`px-8 py-4 sm:py-3 rounded-full font-medium tracking-wide transition-colors flex items-center justify-center text-sm whitespace-nowrap ml-1 ${
+          className={`px-8 py-4 sm:py-3 rounded-sm font-medium tracking-wide transition-colors flex items-center justify-center text-sm whitespace-nowrap ml-1 ${
             dark
               ? 'bg-green-500 text-black hover:bg-green-400 disabled:bg-green-800'
               : 'bg-coffee-900 text-white hover:bg-coffee-700 disabled:bg-coffee-300'

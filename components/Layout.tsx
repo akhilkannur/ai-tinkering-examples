@@ -21,7 +21,7 @@ export default function Layout({ children }: LayoutProps) {
         {isHomePage || isToolsPage || isBlogIndex || isAboutPage ? (
           children
         ) : (
-          <main className="glass-sheet rounded-3xl md:rounded-[48px] overflow-hidden p-4 md:p-16 lg:p-24 min-h-[60vh]">
+          <main className="glass-sheet rounded-sm md:rounded-sm overflow-hidden p-4 md:p-16 lg:p-24 min-h-[60vh]">
             {children}
           </main>
         )}

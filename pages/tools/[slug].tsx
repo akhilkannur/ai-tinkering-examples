@@ -33,16 +33,16 @@ export default function ToolPage({ tool }: ToolPageProps) {
       </Head>
 
       <div className="max-w-6xl mx-auto px-4 md:px-6">
-        <div className="glass-sheet rounded-[32px] md:rounded-[48px] p-6 md:p-12 lg:p-16 overflow-hidden shadow-2xl">
+        <div className="glass-sheet rounded-sm md:rounded-sm p-6 md:p-12 lg:p-16 overflow-hidden shadow-2xl">
           <Link
             href="/tools"
-            className="inline-flex items-center gap-2 text-[10px] md:text-xs font-bold text-micro-muted uppercase tracking-widest hover:text-micro-fg transition-colors mb-8 md:mb-12 bg-white/50 px-4 py-2 rounded-full border border-white/20 shadow-sm"
+            className="inline-flex items-center gap-2 text-[10px] md:text-xs font-bold text-micro-muted uppercase tracking-widest hover:text-micro-fg transition-colors mb-8 md:mb-12 bg-white/50 px-4 py-2 rounded-sm border border-white/20 shadow-sm"
           >
             <ArrowLeft className="w-3 h-3 md:w-4 md:h-4" /> Back to Tools
           </Link>
 
           <div className="flex flex-col lg:flex-row items-start gap-8 md:gap-12 mb-12 md:mb-20">
-            <div className="w-24 h-24 md:w-32 md:h-32 rounded-3xl border border-micro-layer-1 bg-white flex-shrink-0 flex items-center justify-center p-4 overflow-hidden shadow-soft">
+            <div className="w-24 h-24 md:w-32 md:h-32 rounded-sm border border-micro-layer-1 bg-white flex-shrink-0 flex items-center justify-center p-4 overflow-hidden shadow-soft">
               <Image
                 src={imgSrc}
                 alt={tool.name}
@@ -65,10 +65,10 @@ export default function ToolPage({ tool }: ToolPageProps) {
                 </h1>
               </a>
               <div className="flex flex-wrap items-center gap-3">
-                <span className="px-5 py-2 rounded-full bg-micro-fg text-[11px] font-black uppercase tracking-[0.2em] text-white shadow-lg">
+                <span className="px-5 py-2 rounded-sm bg-micro-fg text-[11px] font-black uppercase tracking-[0.2em] text-white shadow-lg">
                   {tool.category}
                 </span>
-                <span className="px-5 py-2 rounded-full bg-white border border-micro-layer-1 text-[11px] font-black uppercase tracking-[0.2em] text-micro-muted">
+                <span className="px-5 py-2 rounded-sm bg-white border border-micro-layer-1 text-[11px] font-black uppercase tracking-[0.2em] text-micro-muted">
                   {tool.tags.price}
                 </span>
               </div>
@@ -83,7 +83,7 @@ export default function ToolPage({ tool }: ToolPageProps) {
 
           {tool.screenshot && (
             <div className="mb-20">
-              <div className="rounded-[40px] border-8 border-white overflow-hidden shadow-2xl bg-white relative aspect-[16/10] group/preview cursor-zoom-in">
+              <div className="rounded-sm border-8 border-white overflow-hidden shadow-2xl bg-white relative aspect-[16/10] group/preview cursor-zoom-in">
                 <Image
                   src={tool.screenshot}
                   alt={`${tool.name} preview`}
@@ -101,8 +101,8 @@ export default function ToolPage({ tool }: ToolPageProps) {
                 <h2 className="text-[10px] md:text-xs font-black text-micro-muted uppercase tracking-[0.3em] mb-8">Core Capabilities</h2>
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {tool.features.map((feature, i) => (
-                    <li key={i} className="flex items-start gap-5 p-6 bg-white border border-micro-layer-1 rounded-[32px] text-base md:text-lg font-bold text-micro-fg shadow-sm hover:shadow-md transition-shadow">
-                      <div className="w-8 h-8 rounded-full bg-terminal-lime/20 flex items-center justify-center flex-shrink-0">
+                    <li key={i} className="flex items-start gap-5 p-6 bg-white border border-micro-layer-1 rounded-sm text-base md:text-lg font-bold text-micro-fg shadow-sm hover:shadow-md transition-shadow">
+                      <div className="w-8 h-8 rounded-sm bg-terminal-lime/20 flex items-center justify-center flex-shrink-0">
                         <span className="text-terminal-lime text-sm font-black">✓</span>
                       </div>
                       {feature}
@@ -116,7 +116,7 @@ export default function ToolPage({ tool }: ToolPageProps) {
               {tool.pricingDetails && (
                 <div className="lg:col-span-2">
                   <h2 className="text-[10px] md:text-xs font-black text-micro-muted uppercase tracking-[0.3em] mb-8">Commercials</h2>
-                  <div className="p-8 md:p-10 bg-micro-fg text-white rounded-[40px] shadow-2xl flex flex-col justify-center min-h-[140px]">
+                  <div className="p-8 md:p-10 bg-micro-fg text-white rounded-sm shadow-2xl flex flex-col justify-center min-h-[140px]">
                     <div className="text-lg md:text-xl lg:text-2xl font-bold leading-snug">
                       {tool.pricingDetails}
                     </div>
@@ -130,7 +130,7 @@ export default function ToolPage({ tool }: ToolPageProps) {
                     <h2 className="text-[10px] md:text-xs font-black text-micro-muted uppercase tracking-[0.3em] mb-8">Ecosystem</h2>
                     <div className="flex flex-wrap gap-3">
                       {tool.integrations.map((int) => (
-                        <span key={int} className="px-5 py-2.5 bg-white rounded-2xl text-[13px] font-black uppercase text-micro-fg border border-micro-layer-1 shadow-sm">
+                        <span key={int} className="px-5 py-2.5 bg-white rounded-sm text-[13px] font-black uppercase text-micro-fg border border-micro-layer-1 shadow-sm">
                           {int}
                         </span>
                       ))}
@@ -145,7 +145,7 @@ export default function ToolPage({ tool }: ToolPageProps) {
                       href={tool.maker.twitter ? `https://x.com/${tool.maker.twitter}` : '#'} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="group/maker flex items-center gap-6 p-6 bg-white border border-micro-layer-1 rounded-[32px] shadow-sm hover:border-micro-fg transition-all"
+                      className="group/maker flex items-center gap-6 p-6 bg-white border border-micro-layer-1 rounded-sm shadow-sm hover:border-micro-fg transition-all"
                     >
                       <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-white shadow-lg flex-shrink-0 group-hover/maker:scale-110 transition-transform">
                         <img src={tool.maker.image} alt={tool.maker.name} className="w-full h-full object-cover" />
@@ -172,7 +172,7 @@ export default function ToolPage({ tool }: ToolPageProps) {
               href={tool.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center gap-4 px-10 py-5 bg-micro-fg text-white rounded-full text-sm md:text-base font-black uppercase tracking-[0.1em] hover:bg-black transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1 active:translate-y-0"
+              className="group inline-flex items-center gap-4 px-10 py-5 bg-micro-fg text-white rounded-sm text-sm md:text-base font-black uppercase tracking-[0.1em] hover:bg-black transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1 active:translate-y-0"
             >
               Visit Website <ExternalLink className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
             </a>
