@@ -192,11 +192,10 @@ export default function ToolsIndex() {
                           </div>
                           <div className="divide-y divide-micro-layer-1">
                             {group.tools.map((tool) => (
-                              <Link key={tool.name} href={`/tools/${slugify(tool.name)}`}>
-                                <ToolDataRow tool={tool} />
-                              </Link>
-                            ))}
-                          </div>
+                             <Link key={tool.name} href={`/tools/${slugify(tool.name)}`}>
+                               <ToolDataRow tool={tool} isDirectory={true} />
+                             </Link>
+                            ))}                          </div>
                         </div>
                       ))}
                       
@@ -228,7 +227,7 @@ export default function ToolsIndex() {
   );
 }
 
-function ToolDataRow({ tool }: { tool: AiTool }) {
+function ToolDataRow({ tool, isDirectory }: { tool: AiTool, isDirectory?: boolean }) {
   const getHostname = (href: string) => {
     try { return new URL(href).hostname; } catch { return ''; }
   };
@@ -237,17 +236,17 @@ function ToolDataRow({ tool }: { tool: AiTool }) {
   const [imgSrc, setImgSrc] = useState(tool.image || fallbackLogo);
 
   return (
-    <div 
+    <div
       className="group flex flex-col md:flex-row md:items-center gap-6 py-8 px-6 -mx-6 hover:bg-white transition-all cursor-pointer rounded-sm border border-transparent hover:border-micro-layer-1 hover:shadow-soft"
     >
       {/* Logo & Name Mobile Group */}
       <div className="flex items-center gap-6 flex-shrink-0 md:w-64">
         <div className="w-14 h-14 rounded-sm border border-micro-layer-1 bg-white flex-shrink-0 flex items-center justify-center p-2.5 overflow-hidden group-hover:border-micro-fg transition-colors shadow-sm">
-          <Image 
-            src={imgSrc} 
-            alt={tool.name} 
-            width={56} 
-            height={56} 
+          <Image
+            src={imgSrc}
+            alt={tool.name}
+            width={56}
+            height={56}
             className="object-contain"
             onError={() => setImgSrc(fallbackLogo)}
             unoptimized
@@ -266,7 +265,7 @@ function ToolDataRow({ tool }: { tool: AiTool }) {
 
       {/* Description */}
       <div className="flex-1 min-w-0">
-        <p className="text-[16px] text-micro-muted font-medium leading-relaxed">
+        <p className={`text-[16px] text-micro-muted font-medium leading-relaxed ${isDirectory ? 'truncate' : ''}`}>
           {tool.description}
         </p>
       </div>
