@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
 import { aiTools, AiTool } from '../../lib/ai-tools-data';
-import { ExternalLink, ArrowLeft } from 'lucide-react';
+import { ExternalLink, ArrowLeft, ArrowUpRight } from 'lucide-react';
 
 const slugify = (text: string) =>
   text.toLowerCase().trim().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '').replace(/\-\-+/g, '-');
@@ -58,11 +58,12 @@ export default function ToolPage({ tool }: ToolPageProps) {
                 href={tool.url} 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="group/title inline-block mb-6"
+                className="group/title inline-flex items-start gap-2 mb-6"
               >
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-micro-fg leading-[0.85] group-hover/title:text-micro-accent transition-colors underline decoration-micro-layer-1 decoration-4 underline-offset-8">
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-micro-fg leading-[0.85] group-hover/title:text-micro-accent transition-colors">
                   {tool.name}
                 </h1>
+                <ArrowUpRight className="w-5 h-5 md:w-8 md:h-8 text-micro-muted group-hover/title:text-micro-accent group-hover/title:translate-x-1 group-hover/title:-translate-y-1 transition-all duration-300" />
               </a>
               <div className="flex flex-wrap items-center gap-3">
                 <span className="px-5 py-2 rounded-sm bg-micro-fg text-[11px] font-black uppercase tracking-[0.2em] text-white shadow-lg">
@@ -116,8 +117,8 @@ export default function ToolPage({ tool }: ToolPageProps) {
               {tool.pricingDetails && (
                 <div className="lg:col-span-2">
                   <h2 className="text-[10px] md:text-xs font-black text-micro-muted uppercase tracking-[0.3em] mb-8">Commercials</h2>
-                  <div className="p-8 md:p-10 bg-micro-fg text-white rounded-sm shadow-2xl flex flex-col justify-center min-h-[140px]">
-                    <div className="text-lg md:text-xl lg:text-2xl font-bold leading-snug">
+                  <div className="p-6 md:p-8 bg-micro-layer-1 border border-micro-layer-2 rounded-sm flex flex-col justify-center min-h-[100px]">
+                    <div className="text-base md:text-lg font-bold text-micro-fg leading-snug">
                       {tool.pricingDetails}
                     </div>
                   </div>
