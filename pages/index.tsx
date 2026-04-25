@@ -43,40 +43,52 @@ function groupByWeek(items: EnrichedExampleRecord[]) {
   const groups: { [key: string]: EnrichedExampleRecord[] } = {};
   const itemsPerBatch = 7;
 
-  // Next week's Sunday (the drop date)
+  // Next Sunday drop date
   const now = new Date();
   const nextSunday = new Date(now);
   nextSunday.setDate(now.getDate() + (7 - now.getDay()) % 7);
-  if (now.getDay() === 0) nextSunday.setDate(now.getDate()); // If today is Sunday, use today
+  if (now.getDay() === 0) nextSunday.setDate(now.getDate());
   nextSunday.setHours(0, 0, 0, 0);
 
-  // All items go into next Sunday's drop
+  // First batch goes to next Sunday drop (regardless of date)
   const dropLabel = nextSunday.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
   groups[dropLabel] = sorted.slice(0, itemsPerBatch);
 
-  // Remaining items go into previous weeks
+  // Remaining items grouped by their publish_date week
   const remaining = sorted.slice(itemsPerBatch);
-  let weekOffset = 1;
-  let itemIndex = 0;
+  const oneWeek = 7 * 24 * 60 * 60 * 1000;
 
-  while (itemIndex < remaining.length) {
-    const weekStart = new Date(nextSunday);
-    weekStart.setDate(nextSunday.getDate() - 7 * weekOffset);
+  remaining.forEach((item) => {
+    const itemDate = new Date(item.publish_date || '2026-03-01');
+    let weekStart = new Date(nextSunday);
+
+    while (itemDate < weekStart) {
+      weekStart = new Date(weekStart.getTime() - oneWeek);
+    }
+
     const weekLabel = weekStart.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-    const batch = remaining.slice(itemIndex, itemIndex + itemsPerBatch);
-    groups[weekLabel] = batch;
-    itemIndex += itemsPerBatch;
-    weekOffset++;
-  }
+
+    if (!groups[weekLabel]) {
+      groups[weekLabel] = [];
+    }
+    groups[weekLabel].push(item);
+  });
+
+  // Sort items within each group by date descending
+  Object.keys(groups).forEach(key => {
+    groups[key].sort((a, b) => {
+      const dateA = new Date(a.publish_date || '2026-03-01').getTime();
+      const dateB = new Date(b.publish_date || '2026-03-01').getTime();
+      return dateB - dateA;
+    });
+  });
 
   // If last batch has 1-3 items, merge into previous batch
-  const weekLabels = Object.keys(groups);
+  const weekLabels = Object.keys(groups).sort((a, b) => new Date(b).getTime() - new Date(a).getTime());
   if (weekLabels.length > 1) {
     const lastBatch = groups[weekLabels[0]];
-    const secondLastBatch = groups[weekLabels[1]];
-
     if (lastBatch.length <= 3) {
-      groups[weekLabels[1]] = [...lastBatch, ...secondLastBatch];
+      groups[weekLabels[1]] = [...lastBatch, ...groups[weekLabels[1]]];
       delete groups[weekLabels[0]];
     }
   }
