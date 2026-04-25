@@ -1,18 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="220" height="54" viewBox="0 0 220 54" fill="none">
-  <defs>
-    <linearGradient id="check-grad-l" x1="12" y1="12" x2="42" y2="42" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#CCFF00"/>
-      <stop offset="100%" stop-color="#A8E000"/>
-    </linearGradient>
-  </defs>
-  <!-- Background -->
-  <rect x="0.5" y="0.5" width="219" height="53" rx="8" fill="#FFFFFF" stroke="#E0E0E0" stroke-width="1"/>
-  <!-- Checkmark circle -->
-  <circle cx="27" cy="27" r="15" fill="url(#check-grad-l)"/>
-  <path d="M19.5 27L24.5 32L34.5 21" stroke="#0A0A0A" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
-  <!-- Divider -->
-  <line x1="52" y1="14" x2="52" y2="40" stroke="#E8E8E8" stroke-width="1"/>
-  <!-- Text -->
-  <text x="62" y="23" font-family="system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif" font-size="9" fill="#999" font-weight="700" letter-spacing="1.5" text-rendering="geometricPrecision">VERIFIED ON</text>
-  <text x="62" y="40" font-family="system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif" font-size="13.5" fill="#0A0A0A" font-weight="800" text-rendering="geometricPrecision">Real AI Examples</text>
+<svg width="220" height="50" viewBox="0 0 220 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="220" height="50" fill="white"/>
+  <rect x="0.5" y="0.5" width="219" height="49" stroke="black"/>
+  <rect x="10" y="10" width="30" height="30" fill="black"/>
+  <path d="M15 25H25M20 20V30" stroke="white" stroke-width="3"/>
+  <text x="50" y="24" fill="black" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="900" letter-spacing="0.1em">LISTED ON</text>
+  <text x="50" y="38" fill="black" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="900" letter-spacing="0.02em">REAL AI EXAMPLES</text>
 </svg>

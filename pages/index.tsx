@@ -168,27 +168,6 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
 
         {/* Floating Glass Sheet */}
         <div className="glass-sheet rounded-3xl md:rounded-[48px] p-4 md:p-16 lg:p-24 overflow-hidden">
-          {/* Category Filter - Refined */}
-          <nav className="mb-10 md:mb-24">
-            <ul className="flex flex-wrap justify-center gap-2 md:gap-4">
-              <li
-                className={`px-4 md:px-8 py-2 md:py-3 rounded-pill text-[11px] md:text-[12px] font-bold cursor-pointer transition-all tracking-widest border ${selectedCategory === 'All' ? 'bg-micro-fg text-white border-micro-fg shadow-lg' : 'bg-white text-micro-muted border-micro-layer-1 hover:border-micro-layer-2'}`}
-                onClick={() => setSelectedCategory('All')}
-              >
-                ALL DROPS
-              </li>
-              {categories.map((cat) => (
-                <li
-                  key={cat}
-                  className={`px-4 md:px-8 py-2 md:py-3 rounded-pill text-[11px] md:text-[12px] font-bold cursor-pointer transition-all tracking-widest border ${selectedCategory === cat ? 'bg-micro-fg text-white border-micro-fg shadow-lg' : 'bg-white text-micro-muted border-micro-layer-1 hover:border-micro-layer-2'}`}
-                  onClick={() => setSelectedCategory(cat)}
-                >
-                  {cat.toUpperCase()}
-                </li>
-              ))}
-            </ul>
-          </nav>
-
           {/* Weekly Drops */}
           <main className="space-y-16 md:space-y-40">
             {weeklyBatches.map(([week, items], batchIdx) => {

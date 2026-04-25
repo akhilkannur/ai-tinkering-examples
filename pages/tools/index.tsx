@@ -202,7 +202,7 @@ function ToolDataRow({ tool }: { tool: AiTool }) {
       className="group flex flex-col md:flex-row md:items-center gap-6 py-8 px-6 -mx-6 hover:bg-white transition-all cursor-pointer rounded-2xl border border-transparent hover:border-micro-layer-1 hover:shadow-soft"
     >
       {/* Logo & Name Mobile Group */}
-      <div className="flex items-center gap-6 flex-shrink-0 md:w-72">
+      <div className="flex items-center gap-6 flex-shrink-0 md:w-64">
         <div className="w-14 h-14 rounded-2xl border border-micro-layer-1 bg-white flex-shrink-0 flex items-center justify-center p-2.5 overflow-hidden group-hover:border-micro-fg transition-colors shadow-sm">
           <Image 
             src={imgSrc} 
@@ -225,22 +225,9 @@ function ToolDataRow({ tool }: { tool: AiTool }) {
         </div>
       </div>
 
-      {/* Screenshot Preview (New) */}
-      {tool.screenshot && (
-        <div className="hidden lg:block w-48 aspect-[1.6/1] rounded-xl border border-micro-layer-1 overflow-hidden flex-shrink-0 relative group-hover:border-micro-fg/20 transition-colors">
-          <Image
-            src={tool.screenshot}
-            alt={`${tool.name} screenshot`}
-            fill
-            className="object-cover"
-            unoptimized
-          />
-        </div>
-      )}
-
       {/* Description */}
       <div className="flex-1 min-w-0">
-        <p className="text-[16px] text-micro-muted font-medium leading-relaxed line-clamp-2">
+        <p className="text-[16px] text-micro-muted font-medium leading-relaxed">
           {tool.description}
         </p>
       </div>

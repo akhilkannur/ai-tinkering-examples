@@ -117,6 +117,22 @@ export default function ToolDetailModal({ tool, onClose }: ToolDetailModalProps)
                 {tool.description}
               </p>
 
+              {/* Tool Screenshot */}
+              {tool.screenshot && (
+                <div className="mb-6 sm:mb-10">
+                  <h3 className="text-[10px] font-black uppercase tracking-widest text-micro-muted mb-4">Preview</h3>
+                  <div className="border-4 border-black brutalist-shadow-sm aspect-[1.6/1] relative overflow-hidden bg-white">
+                    <Image
+                      src={tool.screenshot}
+                      alt={`${tool.name} preview`}
+                      fill
+                      className="object-cover"
+                      unoptimized
+                    />
+                  </div>
+                </div>
+              )}
+
               {/* Features List */}
               {tool.features && tool.features.length > 0 && (
                 <div className="mb-6 sm:mb-10">
