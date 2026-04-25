@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
 import { aiTools, AiTool } from '../../lib/ai-tools-data';
-import { ArrowRight, ChevronDown } from 'lucide-react';
+import { ArrowRight, ChevronDown, List, LayoutGrid } from 'lucide-react';
 
 const slugify = (text: string) =>
   text.toLowerCase().trim().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '').replace(/\-\-+/g, '-');
@@ -28,6 +28,7 @@ function formatDate(dateStr: string): string {
 export default function ToolsIndex() {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [showAllWeeks, setShowAllWeeks] = useState(false);
+  const [viewMode, setViewMode] = useState<'drops' | 'directory'>('drops');
 
   const categories = ['All', ...Array.from(new Set(aiTools.map(t => t.category)))];
 
@@ -35,16 +36,23 @@ export default function ToolsIndex() {
     return aiTools
       .filter(tool => {
         return selectedCategory === 'All' || tool.category === selectedCategory;
-      })
-      .sort((a, b) => new Date(b.dateAdded).getTime() - new Date(a.dateAdded).getTime());
+      });
   }, [selectedCategory]);
+
+  const chronologicalTools = useMemo(() => {
+    return [...filteredTools].sort((a, b) => new Date(b.dateAdded).getTime() - new Date(a.dateAdded).getTime());
+  }, [filteredTools]);
+
+  const alphabeticalTools = useMemo(() => {
+    return [...filteredTools].sort((a, b) => a.name.localeCompare(b.name));
+  }, [filteredTools]);
 
   // Group by week
   const groupedWeeks = useMemo(() => {
     const groups: { label: string; tools: AiTool[] }[] = [];
     const map = new Map<string, AiTool[]>();
 
-    filteredTools.forEach(tool => {
+    chronologicalTools.forEach(tool => {
       const label = getWeekLabel(tool.dateAdded);
       if (!map.has(label)) {
         map.set(label, []);
@@ -54,7 +62,7 @@ export default function ToolsIndex() {
     });
 
     return groups;
-  }, [filteredTools]);
+  }, [chronologicalTools]);
 
   const visibleGroups = showAllWeeks ? groupedWeeks : groupedWeeks.slice(0, 4);
   const hasMoreWeeks = groupedWeeks.length > 4;
@@ -81,9 +89,9 @@ export default function ToolsIndex() {
 
         {/* Floating Glass Sheet */}
         <div className="glass-sheet rounded-sm md:rounded-sm p-4 md:p-16 lg:p-24 overflow-hidden">
-          {/* Filters */}
-          <div className="mb-8 md:mb-16 sticky top-4 z-40 bg-white/80 backdrop-blur-2xl py-4 px-4 md:py-6 md:px-8 rounded-sm md:rounded-sm border border-white/30 shadow-2xl">
-            <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3">
+          {/* Filters & View Toggle */}
+          <div className="mb-8 md:mb-16 sticky top-4 z-40 bg-white/80 backdrop-blur-2xl py-4 px-4 md:py-6 md:px-8 rounded-sm border border-white/30 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3 flex-1">
               {categories.map(cat => (
                 <button
                   key={cat}
@@ -97,6 +105,25 @@ export default function ToolsIndex() {
                   {cat}
                 </button>
               ))}
+            </div>
+
+            <div className="flex items-center gap-1 bg-micro-layer-1 p-1 rounded-sm border border-micro-layer-2">
+              <button
+                onClick={() => setViewMode('drops')}
+                className={`flex items-center gap-2 px-4 py-2 rounded-sm text-[10px] font-black uppercase tracking-widest transition-all ${
+                  viewMode === 'drops' ? 'bg-white text-micro-fg shadow-sm' : 'text-micro-muted hover:text-micro-fg'
+                }`}
+              >
+                <List className="w-3 h-3" /> Drops
+              </button>
+              <button
+                onClick={() => setViewMode('directory')}
+                className={`flex items-center gap-2 px-4 py-2 rounded-sm text-[10px] font-black uppercase tracking-widest transition-all ${
+                  viewMode === 'directory' ? 'bg-white text-micro-fg shadow-sm' : 'text-micro-muted hover:text-micro-fg'
+                }`}
+              >
+                <LayoutGrid className="w-3 h-3" /> Directory
+              </button>
             </div>
           </div>
 
@@ -147,38 +174,50 @@ export default function ToolsIndex() {
                 </div>
               ) : (
                 <div className="flex flex-col">
-                  {visibleGroups.map((group) => (
-                    <div key={group.label} className="mb-16 md:mb-28">
-                      <div className="flex items-center gap-6 mb-10 md:mb-14">
-                        <div className="flex items-center gap-3 bg-micro-fg px-6 py-2.5 rounded-sm shadow-lg">
-                          <span className="w-2 h-2 rounded-sm bg-terminal-lime animate-pulse"></span>
-                          <h2 className="text-[12px] md:text-[14px] font-black uppercase tracking-[0.2em] text-white whitespace-nowrap">
-                            {group.label}
-                          </h2>
+                  {viewMode === 'drops' ? (
+                    <>
+                      {visibleGroups.map((group) => (
+                        <div key={group.label} className="mb-16 md:mb-28">
+                          <div className="flex items-center gap-6 mb-10 md:mb-14">
+                            <div className="flex items-center gap-3 bg-micro-fg px-6 py-2.5 rounded-sm shadow-lg">
+                              <span className="w-2 h-2 rounded-sm bg-terminal-lime animate-pulse"></span>
+                              <h2 className="text-[12px] md:text-[14px] font-black uppercase tracking-[0.2em] text-white whitespace-nowrap">
+                                {group.label}
+                              </h2>
+                            </div>
+                            <div className="h-[1px] flex-grow bg-micro-layer-1"></div>
+                            <span className="text-[10px] md:text-[11px] font-bold text-micro-muted uppercase tracking-[0.2em] whitespace-nowrap">
+                              {group.tools.length} TOOLS
+                            </span>
+                          </div>
+                          <div className="divide-y divide-micro-layer-1">
+                            {group.tools.map((tool) => (
+                              <Link key={tool.name} href={`/tools/${slugify(tool.name)}`}>
+                                <ToolDataRow tool={tool} />
+                              </Link>
+                            ))}
+                          </div>
                         </div>
-                        <div className="h-[1px] flex-grow bg-micro-layer-1"></div>
-                        <span className="text-[10px] md:text-[11px] font-bold text-micro-muted uppercase tracking-[0.2em] whitespace-nowrap">
-                          {group.tools.length} TOOLS
-                        </span>
-                      </div>
-                      <div className="divide-y divide-micro-layer-1">
-                        {group.tools.map((tool) => (
-                          <Link key={tool.name} href={`/tools/${slugify(tool.name)}`}>
-                            <ToolDataRow tool={tool} />
-                          </Link>
-                        ))}
-                      </div>
+                      ))}
+                      
+                      {/* Show More Weeks */}
+                      {hasMoreWeeks && !showAllWeeks && (
+                        <button
+                          onClick={() => setShowAllWeeks(true)}
+                          className="w-full py-6 md:py-8 mt-8 md:mt-12 border border-micro-layer-1 rounded-sm md:rounded-sm bg-white text-micro-muted font-bold uppercase tracking-widest text-[11px] hover:border-micro-fg hover:text-micro-fg transition-all flex items-center justify-center gap-3 shadow-soft hover:shadow-micro"
+                        >
+                          Explore Older Backlog <ChevronDown className="w-4 h-4" />
+                        </button>
+                      )}
+                    </>
+                  ) : (
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                      {alphabeticalTools.map((tool) => (
+                        <Link key={tool.name} href={`/tools/${slugify(tool.name)}`}>
+                          <ToolCard tool={tool} />
+                        </Link>
+                      ))}
                     </div>
-                  ))}
-                  
-                  {/* Show More Weeks */}
-                  {hasMoreWeeks && !showAllWeeks && (
-                    <button
-                      onClick={() => setShowAllWeeks(true)}
-                      className="w-full py-6 md:py-8 mt-8 md:mt-12 border border-micro-layer-1 rounded-sm md:rounded-sm bg-white text-micro-muted font-bold uppercase tracking-widest text-[11px] hover:border-micro-fg hover:text-micro-fg transition-all flex items-center justify-center gap-3 shadow-soft hover:shadow-micro"
-                    >
-                      Explore Older Backlog <ChevronDown className="w-4 h-4" />
-                    </button>
                   )}
                 </div>
               )}
