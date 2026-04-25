@@ -210,10 +210,10 @@ export default function ToolsIndex() {
                       )}
                     </>
                   ) : (
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                       {alphabeticalTools.map((tool) => (
                         <Link key={tool.name} href={`/tools/${slugify(tool.name)}`}>
-                          <ToolDataRow tool={tool} />
+                          <ToolTile tool={tool} />
                         </Link>
                       ))}
                     </div>
@@ -223,7 +223,55 @@ export default function ToolsIndex() {
             </div>
           </div>
         </div>
+</div>
+  );
+}
+
+function ToolTile({ tool }: { tool: AiTool }) {
+  const getHostname = (href: string) => {
+    try { return new URL(href).hostname; } catch { return ''; }
+  };
+  const hostname = getHostname(tool.url);
+  const fallbackLogo = `https://www.google.com/s2/favicons?domain=${hostname}&sz=128`;
+  const [imgSrc, setImgSrc] = useState(tool.image || fallbackLogo);
+
+  return (
+    <div className="group flex flex-col h-full bg-white border border-micro-layer-1 rounded-sm p-5 hover:border-micro-fg hover:shadow-micro transition-all cursor-pointer">
+      <div className="flex items-center gap-3 mb-3">
+        <div className="w-10 h-10 rounded-sm border border-micro-layer-1 bg-white flex-shrink-0 flex items-center justify-center p-1.5 overflow-hidden group-hover:border-micro-fg transition-colors shadow-sm">
+          <Image
+            src={imgSrc}
+            alt={tool.name}
+            width={40}
+            height={40}
+            className="object-contain"
+            onError={() => setImgSrc(fallbackLogo)}
+            unoptimized
+          />
+        </div>
+        <div className="min-w-0 flex-1">
+          <h3 className="text-base font-bold tracking-tight text-micro-fg group-hover:underline decoration-2 underline-offset-4 truncate">
+            {tool.name}
+          </h3>
+          <span className="text-[10px] font-bold uppercase tracking-[0.1em] text-micro-muted">
+            {tool.category}
+          </span>
+        </div>
       </div>
+
+      <p className="text-[13px] text-micro-muted font-medium leading-relaxed line-clamp-2 flex-1 mb-4">
+        {tool.description}
+      </p>
+
+      <div className="flex items-center justify-between mt-auto pt-3 border-t border-micro-layer-1">
+        <span className="text-xs font-bold text-micro-fg bg-micro-layer-1 px-3 py-1 rounded-sm">
+          {tool.tags.price}
+        </span>
+        <span className="text-[10px] font-bold uppercase tracking-widest text-micro-muted">
+          {hostname}
+        </span>
+      </div>
+    </div>
   );
 }
 

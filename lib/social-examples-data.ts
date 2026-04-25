@@ -956,4 +956,26 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     author_link: "https://www.marketermilk.com/",
     tags: ["SEO Agents", "Claude Projects", "Gumloop", "MCP"],
   },
+  {
+    id: "parth-shah-claude-non-coding-uses",
+    title: "4 Unique Ways to Use Claude (That Have Nothing to Do with Coding)",
+    slug: "parth-shah-claude-non-coding-uses",
+    summary: "Parth Shah shares four non-coding ways to get the most out of Claude: Google Drive file search, Finder automation with Claude Cowork, Obsidian vault generation, and Canva design suggestions via the AI connector.",
+    screenshots: [
+      {
+        url: "/images/examples/2026-04-22-parth-shah-claude-non-coding-uses.jpg",
+        filename: "2026-04-22-parth-shah-claude-non-coding-uses.jpg",
+        thumbnails: {
+          small: { url: "/images/examples/2026-04-22-parth-shah-claude-non-coding-uses.jpg" },
+          large: { url: "/images/examples/2026-04-22-parth-shah-claude-non-coding-uses.jpg" }
+        }
+      }
+    ],
+    category: "General",
+    publish_date: "2026-04-22",
+    original_link: "https://www.xda-developers.com/unique-ways-use-claude-to-get-the-best-out-of-it/",
+    author_name: "Parth Shah",
+    author_link: "https://www.xda-developers.com/author/parth-shah/",
+    tags: ["Claude", "Productivity", "Workflows", "Google Drive", "Obsidian", "Canva"],
+  },
 ];

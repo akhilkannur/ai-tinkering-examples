@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { ArrowLeft, Check, Copy, Send } from 'lucide-react';
+import { ArrowLeft, Check, Copy } from 'lucide-react';
 
 const SITE_URL = 'https://realaiexamples.com';
 
@@ -45,30 +45,6 @@ function CopyBlock({ code }: { code: string }) {
 }
 
 export default function BadgePage() {
-  const [formState, setFormState] = useState({
-    name: '',
-    url: '',
-    description: '',
-    email: '',
-  });
-  const [submitted, setSubmitted] = useState(false);
-  const [submitting, setSubmitting] = useState(false);
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormState((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitting(true);
-    // Simulate submission — wire up real endpoint later
-    await new Promise((r) => setTimeout(r, 800));
-    setSubmitted(true);
-    setSubmitting(false);
-  };
-
   return (
     <div>
       <Head>
@@ -185,91 +161,19 @@ export default function BadgePage() {
               Submit Your Tool
             </h2>
 
-            {submitted ? (
-              <div className="bg-white border border-micro-layer-1 rounded-sm p-12 md:p-24 text-center shadow-xl">
-                <div className="w-20 h-20 rounded-sm bg-terminal-lime flex items-center justify-center mx-auto mb-8 shadow-lg">
-                  <Check className="w-10 h-10 text-micro-fg" />
-                </div>
-                <h3 className="text-3xl md:text-4xl font-bold tracking-tight text-micro-fg mb-4">
-                  Submission received!
-                </h3>
-                <p className="text-lg text-micro-muted font-medium max-w-md mx-auto">
-                  We&rsquo;ll review your tool and get back to you within 48 hours. Don&rsquo;t forget to add the badge to your site.
-                </p>
-              </div>
-            ) : (
-              <form
-                onSubmit={handleSubmit}
-                className="bg-white border border-micro-layer-1 rounded-sm p-8 md:p-16 shadow-xl"
+            <div className="bg-white border border-micro-layer-1 rounded-sm shadow-xl overflow-hidden">
+              <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSe1VR6EBsPYLb0rVjS4h9xyyDVzdqNcHUNjKvvhXhV6_1DV-A/viewform?embedded=true"
+                width="100%"
+                height="1304"
+                frameBorder="0"
+                marginHeight="0"
+                marginWidth="0"
+                className="block"
               >
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                  <div className="space-y-2">
-                    <label className="text-[10px] font-black uppercase tracking-widest text-micro-muted ml-4">Tool Name</label>
-                    <input
-                      type="text"
-                      name="name"
-                      placeholder="e.g. Vidmix AI"
-                      required
-                      value={formState.name}
-                      onChange={handleChange}
-                      className="w-full bg-micro-layer-1 border border-transparent rounded-sm px-8 py-5 text-micro-fg focus:bg-white focus:border-micro-layer-2 outline-none transition-all placeholder:text-micro-muted/40 font-bold"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <label className="text-[10px] font-black uppercase tracking-widest text-micro-muted ml-4">Website URL</label>
-                    <input
-                      type="url"
-                      name="url"
-                      placeholder="https://yourtool.com"
-                      required
-                      value={formState.url}
-                      onChange={handleChange}
-                      className="w-full bg-micro-layer-1 border border-transparent rounded-sm px-8 py-5 text-micro-fg focus:bg-white focus:border-micro-layer-2 outline-none transition-all placeholder:text-micro-muted/40 font-bold"
-                    />
-                  </div>
-                </div>
-
-                <div className="space-y-2 mb-6">
-                  <label className="text-[10px] font-black uppercase tracking-widest text-micro-muted ml-4">Your Work Email</label>
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="name@company.com"
-                    required
-                    value={formState.email}
-                    onChange={handleChange}
-                    className="w-full bg-micro-layer-1 border border-transparent rounded-sm px-8 py-5 text-micro-fg focus:bg-white focus:border-micro-layer-2 outline-none transition-all placeholder:text-micro-muted/40 font-bold"
-                  />
-                </div>
-
-                <div className="space-y-2 mb-8">
-                  <label className="text-[10px] font-black uppercase tracking-widest text-micro-muted ml-4">Description & Use Cases</label>
-                  <textarea
-                    name="description"
-                    placeholder="Tell us what your tool does and who it's for..."
-                    required
-                    rows={5}
-                    value={formState.description}
-                    onChange={handleChange}
-                    className="w-full bg-micro-layer-1 border border-transparent rounded-sm px-8 py-5 text-micro-fg focus:bg-white focus:border-micro-layer-2 outline-none transition-all resize-none placeholder:text-micro-muted/40 font-bold"
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  disabled={submitting}
-                  className="w-full md:w-auto bg-micro-fg text-white rounded-sm text-sm font-black uppercase tracking-widest px-12 py-5 hover:bg-black transition-all disabled:opacity-50 inline-flex items-center justify-center gap-3 shadow-xl hover:shadow-2xl active:scale-[0.98]"
-                >
-                  {submitting ? (
-                    'Submitting...'
-                  ) : (
-                    <>
-                      Submit Tool <Send className="w-4 h-4" />
-                    </>
-                  )}
-                </button>
-              </form>
-            )}
+                Loading…
+              </iframe>
+            </div>
           </section>
         </div>
       </div>
