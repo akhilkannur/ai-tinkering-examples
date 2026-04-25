@@ -2110,7 +2110,7 @@ pricingDetails: "Free to try",
 },
 {
     name: "Octopost.ai",
-    description: "AI-powered social media scheduling platform that centralizes workflows across Facebook, Instagram, LinkedIn, TikTok, and YouTube. It simplifies content distribution for creators and startups with a focused, intuitive dashboard.",
+    description: "AI-powered social media scheduling platform that centralizes workflows across Facebook, Instagram, LinkedIn, TikTok, and YouTube.",
     url: "https://octopost.ai",
     category: "Marketing",
     tags: {
@@ -2119,11 +2119,20 @@ pricingDetails: "Free to try",
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=octopost.ai&sz=128",
-    dateAdded: "2026-02-20"
-},
+    dateAdded: "2026-02-20",
+    features: [
+      "Schedule posts across 8 platforms (FB, IG, TikTok, LinkedIn, X, YouTube, Pinterest, Threads)",
+      "AI Content Studio for caption generation",
+      "MCP integration for AI agents (Claude, Cursor)",
+      "REST API and media library",
+      "OpenClaw autonomous social media agent"
+    ],
+    pricingDetails: "Free forever (no credit card)",
+    integrations: ["Meta", "Instagram", "TikTok", "LinkedIn", "X/Twitter", "YouTube", "Pinterest"]
+  },
 {
     name: "Bridgecall",
-    description: "Real-time voice translation tool that enables multilingual calls through a simple browser link. Each participant speaks naturally and hears translated speech instantly, facilitating seamless cross-border communication.",
+    description: "Real-time voice translation tool that enables multilingual calls through a simple browser link.",
     url: "https://bridgecall.app",
     category: "Productivity",
     tags: {
@@ -2132,11 +2141,20 @@ pricingDetails: "Free to try",
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=bridgecall.app&sz=128",
-    dateAdded: "2026-02-21"
-},
+    dateAdded: "2026-02-21",
+    features: [
+      "Real-time video call translation",
+      "One-link instant join (no app install)",
+      "Translated voice and live subtitles",
+      "50+ languages supported",
+      "Group calls included"
+    ],
+    pricingDetails: "Free: 30 min | Starter: $19/mo | Plus: $29/mo | Pro: $49/mo (unlimited)",
+    integrations: ["Browser-based", "No app required"]
+  },
 {
     name: "Levl",
-    description: "Engagement and reward platform for course builders and community leaders. It uses AI-generated challenges and consistency rewards to transform passive content consumption into active, motivated participation.",
+    description: "Engagement and reward platform for course builders and community leaders.",
     url: "https://getlevl.ai",
     category: "Marketing",
     tags: {
@@ -2145,37 +2163,63 @@ pricingDetails: "Free to try",
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=getlevl.ai&sz=128",
-    dateAdded: "2026-02-22"
-},
+    dateAdded: "2026-02-22",
+    features: [
+      "AI-generated challenges for engagement",
+      "Consistency rewards system",
+      "Content consumption tracking",
+      "Community leader tools"
+    ],
+    pricingDetails: "Freemium",
+    integrations: []
+  },
 {
     name: "GreenPT",
-    description: "A green, privacy-focused AI assistant (Frida) designed with a minimal carbon footprint. It prioritizes user data protection while delivering smart, efficient AI interactions.",
+    description: "A green, privacy-focused AI assistant (Frida) designed with a minimal carbon footprint.",
     url: "https://greenpt.nl/frida",
     category: "Productivity",
     tags: {
         useCase: ["Business"],
-        price: "Free",
+        price: "Freemium",
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=greenpt.nl&sz=128",
-    dateAdded: "2026-02-16"
-},
+    dateAdded: "2026-02-16",
+    features: [
+      "Self-hosted AI models (Mistral, GPT-OSS)",
+      "40% lower CO2 than hyperscalers",
+      "GDPR compliant, EU-hosted",
+      "WordPress plugin for quick deployment",
+      "Slack, Teams, WhatsApp, Discord integrations"
+    ],
+    pricingDetails: "Free | Individual: €49.99/mo | Pro: €149.99/mo | Business: €399.99/mo",
+    integrations: ["WordPress", "Slack", "Microsoft Teams", "WhatsApp", "Discord", "Shopify", "Notion"]
+  },
 {
     name: "iMeett",
-    description: "Private AI meeting assistant that transcribes, summarizes, and organizes conversations directly into your Google Drive. It ensures data ownership by processing audio securely without third-party server storage.",
+    description: "Private AI meeting assistant that transcribes, summarizes, and organizes conversations directly into your Google Drive.",
     url: "https://app.imeett.ai",
     category: "Productivity",
     tags: {
         useCase: ["Business"],
-        price: "Free",
+        price: "Freemium",
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=app.imeett.ai&sz=128",
-    dateAdded: "2026-02-09"
-},
+    dateAdded: "2026-02-09",
+    features: [
+      "Chat with your meetings transcript",
+      "Telegram command center (#list, #recap)",
+      "99+ languages with auto-detection",
+      "Persona modes (HR, Sales, Legal, Executive)",
+      "Data stays on YOUR Google Drive"
+    ],
+    pricingDetails: "Essentials: $9.99 one-time (15 hrs) | Growth: $12.99/mo | Freedom: $22.99/mo (unlimited)",
+    integrations: ["Google Drive", "Telegram", "Any video platform"]
+  },
 {
     name: "Webcomparis",
-    description: "Competitive analysis tool that uses AI to audit and compare up to five websites simultaneously. It provides technical, SEO, and design insights through professional PDF reports to identify market gaps.",
+    description: "Competitive analysis tool that uses AI to audit and compare up to five websites simultaneously.",
     url: "https://www.webcomparis.com",
     category: "Marketing",
     tags: {
@@ -2184,11 +2228,20 @@ pricingDetails: "Free to try",
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=www.webcomparis.com&sz=128",
-    dateAdded: "2026-02-10"
-},
+    dateAdded: "2026-02-10",
+    features: [
+      "Compare up to 5 websites simultaneously",
+      "AI-powered technical, SEO, and design audits",
+      "Professional PDF reports",
+      "Market gap identification",
+      "Competitor benchmarking"
+    ],
+    pricingDetails: "Freemium",
+    integrations: []
+  },
 {
     name: "PathwiseAI",
-    description: "AI-driven career platform that automates job searching and application preparation. It generates tailored cover letters, resumes, and interview prep materials by simply providing a company name and role.",
+    description: "AI-driven career platform (now Corveno) that automates job searching and application preparation.",
     url: "https://www.pathwiseai.io/",
     category: "Productivity",
     tags: {
@@ -2197,11 +2250,20 @@ pricingDetails: "Free to try",
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=www.pathwiseai.io&sz=128",
-    dateAdded: "2026-02-11"
-},
+    dateAdded: "2026-02-11",
+    features: [
+      "AI cover letter and resume generation",
+      "Interview prep with STAR stories",
+      "Resume Lab with AI scoring",
+      "Application tracker",
+      "Salary negotiation tools"
+    ],
+    pricingDetails: "Free: 5 credits | Paid: $8/mo or $2/doc",
+    integrations: ["LinkedIn", "Google"]
+  },
 {
     name: "TransGull",
-    description: "Multilingual translation platform that uses contextual AI for real-world conversations, videos, and meetings. It moves beyond simple text conversion to provide natural, accurate translations in real-time.",
+    description: "Multilingual translation platform that uses contextual AI for real-world conversations, videos, and meetings.",
     url: "https://transgull.com",
     category: "Productivity",
     tags: {
@@ -2210,11 +2272,19 @@ pricingDetails: "Free to try",
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=transgull.com&sz=128",
-    dateAdded: "2026-02-12"
-},
+    dateAdded: "2026-02-12",
+    features: [
+      "Contextual AI translation",
+      "Real-time conversation translation",
+      "Video and meeting translation",
+      "Multi-language support"
+    ],
+    pricingDetails: "Freemium",
+    integrations: []
+  },
 {
     name: "Watchflow",
-    description: "Infrastructure monitoring suite for SSL certificates, scheduled jobs, and APIs. It delivers instant alerts via Slack and Teams to ensure critical services remain uptime and security certificates stay valid.",
+    description: "Infrastructure monitoring suite for SSL certificates, scheduled jobs, and APIs.",
     url: "https://watchflow.io",
     category: "Productivity",
     tags: {
@@ -2223,89 +2293,149 @@ pricingDetails: "Free to try",
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=watchflow.io&sz=128",
-    dateAdded: "2026-02-13"
-},
-  {
+    dateAdded: "2026-02-13",
+    features: [
+      "SSL certificate monitoring",
+      "Scheduled job monitoring",
+      "API health checks",
+      "Slack and Teams alerts",
+      "Instant uptime alerts"
+    ],
+    pricingDetails: "Freemium",
+    integrations: ["Slack", "Microsoft Teams"]
+  },
+{
     name: "AiArtist",
     description: "AI motion graphics generator for Social Media and Ads",
     url: "https://www.aiartist.io",
     category: "Marketing",
     tags: {
         useCase: ["Business"],
-        price: "Free",
+        price: "Paid",
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=www.aiartist.io&sz=128",
-    dateAdded: "2026-02-14"
-},
-  {
+    dateAdded: "2026-02-14",
+    features: [
+      "AI motion graphics from text prompts",
+      "Kinetic typography animations",
+      "9:16, 16:9 aspect ratios",
+      "Export 720p/1080p HD MP4",
+      "Commercial usage rights"
+    ],
+    pricingDetails: "$99 one-time (100 credits/mo for 1 year)",
+    integrations: ["TikTok", "Instagram", "YouTube", "Meta Ads"]
+  },
+{
     name: "TicketsData",
-    description: "TicketsData is a unified API for real time ticket inventory and pricing across major marketplaces. Get normalized JSON for events, listings, and availability in seconds.",
+    description: "Unified API for real time ticket inventory and pricing across major marketplaces.",
     url: "https://ticketsdata.com",
     category: "Productivity",
     tags: {
         useCase: ["Business"],
-        price: "Free",
-        skill: "Beginner"
+        price: "Paid",
+        skill: "Intermediate"
     },
     image: "https://www.google.com/s2/favicons?domain=ticketsdata.com&sz=128",
-    dateAdded: "2026-02-15"
-},
-  {
+    dateAdded: "2026-02-15",
+    features: [
+      "Normalized JSON for events",
+      "Real-time inventory data",
+      "Pricing across marketplaces",
+      "Event listings API",
+      "Availability checks"
+    ],
+    pricingDetails: "Paid API service",
+    integrations: ["Ticket marketplaces", "Event APIs"]
+  },
+{
     name: "71vote",
-    description: "71vote is an AI-powered thinking tool where multiple AI agents discuss your work or personal dilemmas in real time — including health, therapy, nutrition, and pet care — helping you see every angle before you decide.",
+    description: "AI-powered thinking tool where multiple AI agents discuss your dilemmas in real time.",
     url: "https://www.71vote.com",
     category: "Productivity",
     tags: {
-        useCase: ["Business"],
+        useCase: ["Personal"],
         price: "Free",
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=www.71vote.com&sz=128",
-    dateAdded: "2026-02-09"
-},
-  {
+    dateAdded: "2026-02-09",
+    features: [
+      "Multiple AI agents debate topics",
+      "Perspectives from different viewpoints",
+      "Covers health, therapy, nutrition, pet care",
+      "Decision-making assistance"
+    ],
+    pricingDetails: "Free tier",
+    integrations: []
+  },
+{
     name: "privatclaw",
-    description: "PrivatClaw is a fully managed OpenClaw hosting service that gives you a dedicated, private virtual server with OpenClaw pre-installed and ready to use. No Docker, no terminal commands, no DevOps — just sign up and start chatting with your personal AI assistant. Every PrivatClaw instance runs on its own isolated VPS, meaning your data, conversations, and configurations belong entirely to you. Unlike shared hosting solutions, there is no shared infrastructure between users — your server is yours alone. We handle everything behind the scenes: initial deployment, OpenClaw configuration, security hardening, software updates, backups, and ongoing server maintenance. If something breaks at 2 AM, that's our problem, not yours. You focus on using your AI assistant — we keep it running. PrivatClaw connects to the messaging platforms you already use — Telegram, WhatsApp, Discord, Slack, and more. Your OpenClaw instance works 24/7 as a proactive AI agent that can browse the web, manage files, run automations, and remember your preferences across conversations. It's not just a chatbot — it's a personal AI teammate that actually gets things done. Whether you want a personal productivity assistant, a team-facing support bot, or an automation engine for your business workflows, PrivatClaw delivers the full power of OpenClaw without the technical overhead. Our support team is available to help with setup, configuration, custom skills, and any issues that come up along the way. Skip the self-hosting headaches. Get a production-ready OpenClaw instance that just works.",
+    description: "Fully managed OpenClaw hosting service - dedicated VPS with AI assistant pre-installed.",
     url: "https://privatclaw.com",
-    category: "Image Generation",
+    category: "Productivity",
     tags: {
         useCase: ["Business"],
-        price: "Free",
-        skill: "Beginner"
+        price: "Paid",
+        skill: "Intermediate"
     },
     image: "https://www.google.com/s2/favicons?domain=privatclaw.com&sz=128",
-    dateAdded: "2026-02-10"
-},
-  {
+    dateAdded: "2026-02-10",
+    features: [
+      "Dedicated VPS with OpenClaw",
+      "24/7 autonomous AI agent",
+      "Telegram, WhatsApp, Discord, Slack integrations",
+      "Managed updates and backups",
+      "No DevOps required"
+    ],
+    pricingDetails: "Paid hosting (managed service)",
+    integrations: ["Telegram", "WhatsApp", "Discord", "Slack"]
+  },
+{
     name: "PagerSync",
     description: "Bring Your On-Call Roster into Slack for Seamless Communication",
     url: "https://www.pagersync.com",
     category: "Productivity",
     tags: {
         useCase: ["Business"],
-        price: "Free",
-        skill: "Beginner"
+        price: "Freemium",
+        skill: "Intermediate"
     },
     image: "https://www.google.com/s2/favicons?domain=www.pagersync.com&sz=128",
-    dateAdded: "2026-02-11"
-},
-  {
+    dateAdded: "2026-02-11",
+    features: [
+      "On-call roster in Slack",
+      "Shift scheduling",
+      "Alert routing",
+      "Team availability tracking"
+    ],
+    pricingDetails: "Freemium",
+    integrations: ["Slack"]
+  },
+{
     name: "Polyform",
-    description: "Build beautiful forms in seconds. Polyform combines AI-powered form generation with advanced theming, conditional logic, and real-time analytics, so you never start from scratch",
+    description: "Build beautiful forms in seconds with AI-powered form generation.",
     url: "https://polyform.to",
-    category: "Image Generation",
+    category: "Productivity",
     tags: {
         useCase: ["Business"],
         price: "Free",
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=polyform.to&sz=128",
-    dateAdded: "2026-02-12"
-},
-  {
+    dateAdded: "2026-02-12",
+    features: [
+      "AI form generation",
+      "Advanced theming",
+      "Conditional logic",
+      "Real-time analytics"
+    ],
+    pricingDetails: "Free tier",
+    integrations: []
+  },
+{
     name: "Status Central",
-    description: "Monitor All Your Services In One Place. Get real-time status updates from all your critical services. Stay informed about outages and maintenance windows.",
+    description: "Monitor All Your Services In One Place.",
     url: "https://www.statuscentral.io/",
     category: "Productivity",
     tags: {
@@ -2314,44 +2444,146 @@ pricingDetails: "Free to try",
         skill: "Beginner"
     },
     image: "https://www.google.com/s2/favicons?domain=www.statuscentral.io&sz=128",
-    dateAdded: "2026-02-13"
-},
-  {
+    dateAdded: "2026-02-13",
+    features: [
+      "Monitor multiple services in one dashboard",
+      "Real-time status updates",
+      "Outage and maintenance alerts",
+      "Service health tracking"
+    ],
+    pricingDetails: "Free tier",
+    integrations: []
+  },
+{
     name: "MiroMiro",
     description: "Extract colors, fonts, styles and ready-to-use code from any website in one click.",
     url: "https://miromiro.app",
     category: "Code Assistance",
     tags: {
         useCase: ["Business"],
-        price: "Free",
-        skill: "Beginner"
+        price: "Freemium",
+        skill: "Intermediate"
     },
     image: "https://www.google.com/s2/favicons?domain=miromiro.app&sz=128",
-    dateAdded: "2026-02-14"
-},
-  {
+    dateAdded: "2026-02-14",
+    features: [
+      "Extract color palettes",
+      "Font detection",
+      "Style extraction",
+      "Ready-to-use CSS code generation"
+    ],
+    pricingDetails: "Freemium",
+    integrations: []
+  },
+{
     name: "Traidies",
-    description: "Traidies is an AI-powered platform that turns plain-English trading ideas into fully functional automated trading bots — complete with code generation, cloud compilation, and backtesting tools.",
+    description: "AI-powered platform that turns plain-English trading ideas into automated trading bots.",
     url: "https://www.traidies.com",
     category: "Code Assistance",
     tags: {
         useCase: ["Business"],
-        price: "Free",
-        skill: "Beginner"
+        price: "Freemium",
+        skill: "Intermediate"
     },
     image: "https://www.google.com/s2/favicons?domain=www.traidies.com&sz=128",
-    dateAdded: "2026-02-15"
-},
+    dateAdded: "2026-02-15",
+    features: [
+      "Plain English to trading bot code",
+      "Cloud compilation",
+      "Backtesting tools",
+      "Automated strategy generation"
+    ],
+    pricingDetails: "Freemium",
+    integrations: []
+  },
   {
-    name: "Glad AI",
-    description: "Most founders and marketers are sitting on a goldmine of expertise trapped in docs, old blogs, and messy notes. The current state of marketing is a manual grind: you spend hours trying to turn one idea into a post for LinkedIn, then realize you have to rewrite it for X, then figure out how to join the conversation on Reddit without getting banned for being \"spammy.\"  Glad AI changes this. It acts as your dedicated assistant that ingests your raw data and transforms it into a multi-platform presence.   Voice Cloning: The platform uses a Voice Consistency Engine to map your vocabulary and professional tone. Your output sounds like you, not a generic robot.  Smart Extraction: Point the AI at your website or blogs. It finds the hooks and pillar topics that position you as an industry leader.  Auto-Pilot Growth: From formatting for dwell time to predictive scheduling, your social presence is handled while you sleep.  Visual Identity: On-brand graphics are generated for every post, ensuring your feed looks as good as it reads.",
+name: "Glad AI",
+    description: "Glad AI transforms your expertise into multi-platform content - LinkedIn, X, Reddit.",
     url: "https://iamglad.ai",
-    category: "Video & Audio",
+    category: "Marketing",
     tags: {
         useCase: ["Business"],
-        price: "Free",
-        skill: "Beginner"
+        price: "Freemium",
+        skill: "Intermediate"
     },
+    image: "https://www.google.com/s2/favicons?domain=iamglad.ai&sz=128",
+    dateAdded: "2026-02-09",
+    features: [
+      "Voice Consistency Engine",
+      "Smart content extraction from website/blogs",
+      "Auto-pilot multi-platform growth",
+      "On-brand visual generation",
+      "Predictive scheduling"
+    ],
+    pricingDetails: "Freemium",
+    integrations: ["LinkedIn", "X/Twitter", "Reddit"]
+  },
+{
+    name: "Organic Pilot",
+    description: "Grow organic traffic on auto pilot - topic clusters, content plans, WordPress publishing.",
+    url: "https://www.organicpilot.ai",
+    category: "Marketing",
+    tags: {
+        useCase: ["Business"],
+        price: "Freemium",
+        skill: "Intermediate"
+    },
+    image: "https://www.google.com/s2/favicons?domain=www.organicpilot.ai&sz=128",
+    dateAdded: "2026-02-02",
+    features: [
+      "Topic cluster generation based on search demand",
+      "30-day content planning",
+      "Content quality scoring",
+      "Direct WordPress/CMS publishing",
+      "SEO content engine for SaaS"
+    ],
+    pricingDetails: "Freemium",
+    integrations: ["WordPress", "CMS platforms"]
+  },
+{
+    name: "maptrics",
+    description: "SEO monitoring and automated SEO audit with continuous monitoring.",
+    url: "https://www.maptrics.io",
+    category: "Marketing",
+    tags: {
+        useCase: ["Business"],
+        price: "Freemium",
+        skill: "Intermediate"
+    },
+    image: "https://www.google.com/s2/favicons?domain=www.maptrics.io&sz=128",
+    dateAdded: "2026-02-03",
+    features: [
+      "Continuous SEO monitoring",
+      "SEO health score",
+      "Deploy SEO checks",
+      "Regression detection",
+      "Meta tag and OG tag validation"
+    ],
+    pricingDetails: "Freemium",
+    integrations: ["Vercel", "Google Search Console"]
+  },
+{
+    name: "LLMWISE",
+    description: "Compare, blend, and evaluate leading AI models from a single interface.",
+    url: "https://llmwise.ai",
+    category: "Productivity",
+    tags: {
+        useCase: ["Business"],
+        price: "Freemium",
+        skill: "Intermediate"
+    },
+    image: "https://www.google.com/s2/favicons?domain=llmwise.ai&sz=128",
+    dateAdded: "2026-02-04",
+    features: [
+      "Chat with smart routing",
+      "Compare 2-4 models side-by-side",
+      "Blend outputs for superior response",
+      "Judge mode for blind evaluation",
+      "Mesh mode with failover routing"
+    ],
+    pricingDetails: "Freemium",
+    integrations: ["OpenAI", "Anthropic", "Google Gemini", "DeepSeek"]
+  },
     image: "https://www.google.com/s2/favicons?domain=iamglad.ai&sz=128",
     dateAdded: "2026-02-09"
 },
