@@ -1022,4 +1022,26 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     author_link: "https://substack.com/@majavoje",
     tags: ["Claude Code", "GTM", "Outbound", "Context Engineering", "Campaigns"],
   },
+  {
+    id: "tobias-schneider-deterministic-data-agents",
+    title: "Building Reliable Data Pipelines with AI Agents",
+    slug: "tobias-schneider-deterministic-data-agents",
+    summary: "Tobias Schneider recommends using agents to write deterministic scripts rather than letting models transpose data directly. We've felt this pain: direct LLM enrichment often leads to silent hallucinations across thousands of rows that force total manual reviews. Scripts are the only way to build reliable pipelines at scale.",
+    screenshots: [
+      {
+        url: "/images/examples/2026-04-26-tobias-schneider-ai-content-workflow.webp",
+        filename: "2026-04-26-tobias-schneider-ai-content-workflow.webp",
+        thumbnails: {
+          small: { url: "/images/examples/2026-04-26-tobias-schneider-ai-content-workflow.webp" },
+          large: { url: "/images/examples/2026-04-26-tobias-schneider-ai-content-workflow.webp" }
+        }
+      }
+    ],
+    category: "General",
+    publish_date: "2026-04-26",
+    original_link: "https://x.com/tobiaschneider/status/2048357912955769137",
+    author_name: "Tobias Schneider",
+    author_link: "https://x.com/tobiaschneider",
+    tags: ["Data Ops", "Reliability", "Agents"],
+  },
 ];

@@ -7,7 +7,7 @@ import { aiTools, AiTool } from '../../lib/ai-tools-data';
 import { ExternalLink, ArrowLeft, ArrowUpRight } from 'lucide-react';
 
 const slugify = (text: string) =>
-  text.toLowerCase().trim().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '').replace(/\-\-+/g, '-');
+  text.toLowerCase().trim().replace(/\./g, '-').replace(/\s+/g, '-').replace(/[^\w\-]+/g, '').replace(/\-\-+/g, '-');
 
 interface ToolPageProps {
   tool: AiTool | null;

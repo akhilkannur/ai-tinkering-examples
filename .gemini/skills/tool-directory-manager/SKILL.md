@@ -18,25 +18,23 @@ curl -L "https://docs.google.com/spreadsheets/d/1VL4dAgyQK8EZLo6WqZeQ0zOmsCQcxQL
 
 *   **Policy**: You MUST present the summarized list of new tools to the user and ask for approval (or which ones to include) before proceeding to the next step.
 
-### 2. Capture Screenshots
-For approved tools, use the screenshot engine.
+### 2. Enrichment & Capture
+For each approved tool, do not rely solely on the submission. You MUST visit the live site to extract high-quality data.
 
 ```bash
-node scripts/capture-screenshot.js "https://tool-url.com" "tool-slug.png"
+# Visit site, scrape content, and capture local screenshot (unlimited)
+node scripts/enrich-batch.js
 ```
 
-*   **Config**: The engine automatically handles cropping for Twitter (X), LinkedIn, and GitHub.
-*   **Output**: Saved to `public/screenshots/`.
+*   **Scraping Policy**: Extract the meta description, headers, and body text to understand the real value proposition.
+*   **Enrichment**: Based on the scrape, generate:
+    *   **4 Key Features**: Actionable, benefit-driven bullet points.
+    *   **Pricing Details**: Identify if it's Free, Freemium, or Paid with specific tiers if visible.
+    *   **Integrations**: List specific platforms/APIs the tool works with.
+*   **Visuals**: Capture a high-res WebP screenshot locally to `public/screenshots/`. NO Microlink required.
 
 ### 3. Merge & Update
-
-If the user approves adding them to the database:
-
-```bash
-
-python3 scripts/merge_tools_csv.py
-
-```
+Generate the TypeScript object for `lib/ai-tools-data.ts`. Ensure the `slugify` logic matches (dots to dashes).
 
 
 

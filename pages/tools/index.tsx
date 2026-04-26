@@ -6,7 +6,7 @@ import { aiTools, AiTool } from '../../lib/ai-tools-data';
 import { ArrowRight, ChevronDown, List, LayoutGrid } from 'lucide-react';
 
 const slugify = (text: string) =>
-  text.toLowerCase().trim().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '').replace(/\-\-+/g, '-');
+  text.toLowerCase().trim().replace(/\./g, '-').replace(/\s+/g, '-').replace(/[^\w\-]+/g, '').replace(/\-\-+/g, '-');
 
 // Group tools by week label
 function getWeekLabel(dateStr: string): string {

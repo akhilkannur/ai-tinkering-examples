@@ -62,6 +62,8 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="canonical" href={canonicalUrl} key="canonical" />
         <link rel="shortcut icon" href={`${baseUrl}/favicon.ico`} />
         <link rel="icon" href={`${baseUrl}/favicon.ico`} type="image/x-icon" />
+        <link rel="apple-touch-icon" href={`${baseUrl}/apple-touch-icon.png`} />
+        <link rel="icon" type="image/png" sizes="512x512" href={`${baseUrl}/logo-square.png`} />
       </Head>
       <Layout>
         <Component {...pageProps} />

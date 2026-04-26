@@ -7,7 +7,7 @@ const SITE_URL = 'https://realaiexamples.com';
 
 function makeBadgeEmbed(variant: 'dark' | 'light') {
   const fileName = variant === 'dark' ? 'badge-dark.svg' : 'badge-light.svg';
-  return `<a href="${SITE_URL}/tools" target="_blank" rel="noopener noreferrer"><img src="${SITE_URL}/images/${fileName}" alt="Listed on Real AI Examples" width="220" height="50" /></a>`;
+  return `<a href="${SITE_URL}/tools" target="_blank" rel="noopener noreferrer"><img src="${SITE_URL}/images/${fileName}" alt="Featured on REAL AI EXAMPLES" width="220" height="50" /></a>`;
 }
 
 function BadgePreview({ variant }: { variant: 'dark' | 'light' }) {
