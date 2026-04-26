@@ -818,7 +818,7 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
       }
     ],
     category: "General",
-    publish_date: "2026-04-19",
+    publish_date: "2026-03-27",
     original_link: "https://x.com/bentossell/status/2006352820140749073",
     author_name: "Ben Tossell",
     author_link: "https://x.com/bentossell",
@@ -906,7 +906,7 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
       }
     ],
     category: "Finance Ops",
-    publish_date: "2026-01-24",
+    publish_date: "2026-04-26",
     original_link: "https://www.asiancenturystocks.com/how-to-use-claude-for-equity-resear/",
     author_name: "Michael Fritzell",
     author_link: "https://www.asiancenturystocks.com/",
@@ -1016,7 +1016,7 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
       }
     ],
     category: "GTM",
-    publish_date: "2026-03-27",
+    publish_date: "2026-04-26",
     original_link: "https://knowledge.gtmstrategist.com/p/how-to-build-gtm-campaigns-with-claude-code",
     author_name: "Maja Voje",
     author_link: "https://substack.com/@majavoje",
