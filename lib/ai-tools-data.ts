@@ -3,19 +3,12 @@ export interface AiTool {
   description: string;
   url: string;
   category: string;
-  tags: {
-    price: string;
-  };
+  tags: { price: string; };
   image: string;
   screenshot?: string;
   dateAdded: string;
   featured?: boolean;
-  maker?: {
-    name: string;
-    image: string;
-    role?: string;
-    twitter?: string;
-  };
+  maker?: { name: string; image: string; role?: string; twitter?: string; };
   features?: string[];
   pricingDetails?: string;
   integrations?: string[];
@@ -33,7 +26,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-26",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -50,7 +42,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-26",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -67,7 +58,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-26",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -84,7 +74,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-26",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -101,7 +90,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-26",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -118,7 +106,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-26",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -135,7 +122,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-26",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -152,7 +138,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-26",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -169,7 +154,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-26",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -186,7 +170,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-26",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -203,7 +186,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-26",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -220,7 +202,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-26",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -237,7 +218,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-26",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -254,7 +234,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-26",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -271,7 +250,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-26",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -288,7 +266,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-26",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -305,7 +282,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-26",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -322,7 +298,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-26",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -339,7 +314,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-26",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -356,7 +330,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-26",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -373,7 +346,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-26",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -390,7 +362,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-26",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -407,7 +378,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-26",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -424,7 +394,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-26",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -441,7 +410,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-26",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -458,7 +426,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-19",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -475,7 +442,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-19",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -492,7 +458,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-19",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -509,7 +474,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-19",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -526,7 +490,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-19",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -543,7 +506,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-19",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -560,7 +522,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-19",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -577,7 +538,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-19",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -594,7 +554,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-19",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -611,7 +570,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-19",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -628,7 +586,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-19",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -645,7 +602,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-19",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -662,7 +618,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-19",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -679,7 +634,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-19",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -696,7 +650,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-19",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -713,7 +666,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-19",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -730,7 +682,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-19",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -747,7 +698,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-19",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -764,7 +714,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-19",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -781,7 +730,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-19",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -798,7 +746,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-19",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -815,7 +762,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-19",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -832,7 +778,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-19",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -849,7 +794,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-19",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -866,7 +810,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-19",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -883,7 +826,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-12",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -900,7 +842,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-12",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -917,7 +858,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-12",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -934,7 +874,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-12",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -951,7 +890,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-12",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -968,7 +906,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-12",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -985,7 +922,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-12",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -1002,7 +938,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-12",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -1019,7 +954,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-12",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -1036,7 +970,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-12",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -1053,7 +986,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-12",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -1070,7 +1002,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-12",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -1087,7 +1018,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-12",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -1104,7 +1034,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-12",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -1121,7 +1050,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-12",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -1138,7 +1066,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-12",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -1155,7 +1082,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-12",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -1172,7 +1098,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-12",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -1189,7 +1114,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-12",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -1206,7 +1130,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-12",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -1223,7 +1146,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-12",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -1240,7 +1162,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-12",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -1257,7 +1178,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-12",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -1274,7 +1194,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-12",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -1291,7 +1210,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-12",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -1308,7 +1226,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-05",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -1325,7 +1242,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-05",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -1342,7 +1258,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-05",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -1359,7 +1274,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-05",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -1376,7 +1290,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-05",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -1393,7 +1306,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-05",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -1410,7 +1322,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-05",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -1427,7 +1338,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-05",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -1444,7 +1354,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-05",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -1461,7 +1370,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-05",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -1478,7 +1386,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-05",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -1495,7 +1402,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-05",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -1512,7 +1418,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-05",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -1529,7 +1434,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-05",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -1546,7 +1450,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-05",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -1563,7 +1466,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-05",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -1580,7 +1482,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-05",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -1597,7 +1498,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-05",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -1614,7 +1514,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-05",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -1631,7 +1530,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-05",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -1648,7 +1546,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-05",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -1665,7 +1562,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-05",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -1682,7 +1578,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-05",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -1699,7 +1594,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-05",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -1716,7 +1610,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-04-05",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -1733,7 +1626,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-03-29",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -1750,7 +1642,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-03-29",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -1767,7 +1658,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-03-29",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -1784,7 +1674,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-03-29",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -1801,7 +1690,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-03-29",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -1818,7 +1706,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-03-29",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -1835,7 +1722,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-03-29",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -1852,7 +1738,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-03-29",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -1869,7 +1754,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-03-29",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -1886,7 +1770,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-03-29",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -1903,7 +1786,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-03-29",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -1920,7 +1802,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-03-29",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -1937,7 +1818,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-03-29",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -1954,7 +1834,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-03-29",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -1971,7 +1850,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-03-29",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -1988,7 +1866,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-03-29",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -2005,7 +1882,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-03-29",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -2022,7 +1898,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-03-29",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -2039,7 +1914,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-03-29",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -2056,7 +1930,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-03-29",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -2073,7 +1946,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-03-29",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -2090,7 +1962,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-03-29",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -2107,7 +1978,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-03-29",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -2124,7 +1994,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-03-29",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -2141,7 +2010,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-03-29",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -2158,7 +2026,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-03-22",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -2184,7 +2051,9 @@ export const aiTools: AiTool[] = [
       "skills",
       "and background checks"
 
-    ]
+    ],
+    pricingDetails: "Free Plan available | Contact for custom quotes",
+    integrations: ["Bank feeds", "Online Payments"]
   },
   {
     name: "SecVibe",
@@ -2202,7 +2071,9 @@ export const aiTools: AiTool[] = [
       "Context-Aware Controls: Adaptive security that adjusts to your stack",
       "Intelligent Auto-Fix: Contextual remediation for detected vulnerabilities"
 
-    ]
+    ],
+    pricingDetails: "Waitlist (Early Access)",
+    integrations: ["Cursor", "VS Code", "SAST tools"]
   },
   {
     name: "Transmit",
@@ -2222,7 +2093,9 @@ export const aiTools: AiTool[] = [
       "BYOK Mode: Bring your own AWS account for full infrastructure control",
       "MCP Server: Manage campaigns directly from Cursor or Claude"
 
-    ]
+    ],
+    pricingDetails: "Managed: /mo | BYOK: /usr/bin/bash-49/mo + AWS costs",
+    integrations: ["AWS SES", "Claude", "Cursor", "Clerk", "Auth0"]
   },
   {
     name: "LLMWISE",
@@ -2241,7 +2114,9 @@ export const aiTools: AiTool[] = [
       "Smart Routing for performance/cost",
       "REST API and SDK for integration"
 
-    ]
+    ],
+    pricingDetails: "Free/Hobby tier | Pro: ~$25/mo",
+    integrations: ["OpenAI", "Anthropic", "Google Gemini", "REST API"]
   },
   {
     name: "maptrics",
@@ -2260,7 +2135,9 @@ export const aiTools: AiTool[] = [
       "Broken Meta/OG tag detection",
       "Webhook integration (Vercel supported)"
 
-    ]
+    ],
+    pricingDetails: "Free forever for small sites",
+    integrations: ["Vercel", "Webhooks", "Google Search Console"]
   },
   {
     name: "LogoLife",
@@ -2273,7 +2150,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-03-22",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -2296,7 +2172,9 @@ export const aiTools: AiTool[] = [
       "SEO article editor",
       "API and Webhook integration for teams"
 
-    ]
+    ],
+    pricingDetails: "Free entry | Paid plans for scale",
+    integrations: ["WordPress", "Webflow", "REST API", "Webhooks"]
   },
   {
     name: "Luxoret",
@@ -2309,7 +2187,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-03-22",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -2326,7 +2203,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-03-22",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -2349,7 +2225,8 @@ export const aiTools: AiTool[] = [
       "On-brand visual generation",
       "AI Text Humanizer utility"
 
-    ]
+    ],
+    pricingDetails: "Free (15 credits) | Starter: $29/mo | Authority: $89/mo"
   },
   {
     name: "now&here",
@@ -2362,7 +2239,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-03-22",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -2384,7 +2260,9 @@ export const aiTools: AiTool[] = [
       "Automated Backtesting: Instant historical testing of generated strategies",
       "Pine Script Conversion: Turn TradingView scripts into MT5 bots"
 
-    ]
+    ],
+    pricingDetails: "Free to start",
+    integrations: ["MetaTrader 5", "MQL5"]
   },
   {
     name: "MiroMiro",
@@ -2404,7 +2282,9 @@ export const aiTools: AiTool[] = [
       "Design System Scan: Pulls colors and fonts into a config file",
       "Lottie Detection: Instant preview and download of web animations"
 
-    ]
+    ],
+    pricingDetails: "Pro: \u20ac9.5/mo | Lifetime: \u20ac99 | 24h Free Trial",
+    integrations: ["Cursor", "Claude", "Lovable", "Bolt", "v0"]
   },
   {
     name: "Status Central",
@@ -2424,7 +2304,9 @@ export const aiTools: AiTool[] = [
       "and Google Cloud",
       "Incident Timelines: Detailed impact analysis and post-mortem logs"
 
-    ]
+    ],
+    pricingDetails: "Free (5 services) | Pro: 9/mo",
+    integrations: ["AWS", "Azure", "Google Cloud", "SaaS Status Pages"]
   },
   {
     name: "Polyform",
@@ -2442,7 +2324,9 @@ export const aiTools: AiTool[] = [
       "Real-time Collaboration: Instant syncing and team chat for builders",
       "Journey Tracking: Visualize respondent interaction and drop-off points"
 
-    ]
+    ],
+    pricingDetails: "Free (Unlimited forms) | Pro: 9/mo (AI features)",
+    integrations: ["Zapier", "Slack", "Google Sheets", "HubSpot", "Webhooks"]
   },
   {
     name: "Cold Email Kit",
@@ -2455,7 +2339,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-03-22",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -2477,7 +2360,9 @@ export const aiTools: AiTool[] = [
       "Rotation Announcements: Auto-post updates when rotations change",
       "Multi-Schedule Support: Link multiple PagerDuty schedules to one alias"
 
-    ]
+    ],
+    pricingDetails: "Premium: 5/mo | 7-day Free Trial",
+    integrations: ["PagerDuty", "Slack", "xMatters"]
   },
   {
     name: "Bitbiased AI",
@@ -2490,7 +2375,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-03-22",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -2517,7 +2401,9 @@ export const aiTools: AiTool[] = [
       "and Slack",
       "Proactive Agents: 24/7 autonomous agents that browse and manage files"
 
-    ]
+    ],
+    pricingDetails: "Paid Managed Hosting",
+    integrations: ["Telegram", "WhatsApp", "Discord", "Slack"]
   },
   {
     name: "71vote",
@@ -2539,7 +2425,8 @@ export const aiTools: AiTool[] = [
       "Real-time Debate: Watch agents discuss multiple perspectives on your query",
       "Decision Archiving: Track the logic behind your major life and work choices"
 
-    ]
+    ],
+    pricingDetails: "Free Access"
   },
   {
     name: "TicketsData",
@@ -2564,7 +2451,9 @@ export const aiTools: AiTool[] = [
       "Go",
       "and PHP"
 
-    ]
+    ],
+    pricingDetails: "Starter: 99/mo | Pro: ,499/mo",
+    integrations: ["Ticketmaster", "StubHub", "Eventbrite", "SeatGeek", "Viagogo"]
   },
   {
     name: "AiArtist",
@@ -2577,7 +2466,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-03-22",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -2594,7 +2482,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-03-22",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -2616,7 +2503,9 @@ export const aiTools: AiTool[] = [
       "Image Translation: High-quality OCR and inference for vertical/complex text",
       "Dialog Translation: Context-aware voice and text for natural flow"
 
-    ]
+    ],
+    pricingDetails: "Pay-as-you-go (Shells) | Credits never expire",
+    integrations: ["Windows", "Mac", "YouTube"]
   },
   {
     name: "PathwiseAI",
@@ -2634,7 +2523,9 @@ export const aiTools: AiTool[] = [
       "LinkedIn Studio: Profile optimization and headline generation",
       "Salary & Offers: Offer comparison tools and negotiation scripts"
 
-    ]
+    ],
+    pricingDetails: "Free (5 credits) | Paid from /mo |  per doc",
+    integrations: ["LinkedIn", "Common App"]
   },
   {
     name: "Webcomparis",
@@ -2652,7 +2543,9 @@ export const aiTools: AiTool[] = [
       "Competitive Benchmarking: Map your features against industry leaders",
       "Professional PDF Reports: White-labeled audits for client presentations"
 
-    ]
+    ],
+    pricingDetails: "Freemium",
+    integrations: ["SEO Tools"]
   },
   {
     name: "iMeett",
@@ -2674,7 +2567,9 @@ export const aiTools: AiTool[] = [
       "Two-Tier Summaries: Provides a quick scan followed by a detailed breakdown",
       "99+ Language Support: Automatic detection of the spoken language"
 
-    ]
+    ],
+    pricingDetails: "Essentials: .99 one-time | Growth: 2.99/mo | Freedom: 2.99/mo",
+    integrations: ["Google Drive", "Telegram", "Zoom", "Any video platform"]
   },
   {
     name: "GreenPT",
@@ -2694,7 +2589,9 @@ export const aiTools: AiTool[] = [
       "EU-hosted infrastructure",
       "40% lower CO2 than hyperscale AI"
 
-    ]
+    ],
+    pricingDetails: "Free | Individual: \u20ac49.99/mo | Pro: \u20ac149.99/mo",
+    integrations: ["WordPress", "Slack", "WhatsApp", "Discord", "Shopify"]
   },
   {
     name: "Levl",
@@ -2713,7 +2610,8 @@ export const aiTools: AiTool[] = [
       "Content consumption tracking",
       "Transaction-based revenue share"
 
-    ]
+    ],
+    pricingDetails: "No monthly fees | 10% transaction fee (5% for early signups)"
   },
   {
     name: "Bridgecall",
@@ -2732,7 +2630,8 @@ export const aiTools: AiTool[] = [
       "50+ languages supported",
       "Group call translation"
 
-    ]
+    ],
+    pricingDetails: "Free: 30 min | Starter: $19/mo | Pro: $49/mo"
   },
   {
     name: "Octopost.ai",
@@ -2751,7 +2650,9 @@ export const aiTools: AiTool[] = [
       "MCP integration for AI agents",
       "OpenClaw autonomous agent support"
 
-    ]
+    ],
+    pricingDetails: "Free forever tier available",
+    integrations: ["Meta", "Instagram", "TikTok", "LinkedIn", "X", "YouTube", "Pinterest"]
   },
   {
     name: "PNGtoSTL",
@@ -2770,7 +2671,8 @@ export const aiTools: AiTool[] = [
       "STL file export for 3D printing",
       "Browser-based tool"
 
-    ]
+    ],
+    pricingDetails: "Free to use"
   },
   {
     name: "DensOps",
@@ -2791,7 +2693,8 @@ export const aiTools: AiTool[] = [
       "Pay-once model (no subscriptions)",
       "Verified local business data"
 
-    ]
+    ],
+    pricingDetails: "Free (1 search) | Unlock Forever: \u20ac9 (5 searches) | Top-up packs"
   },
   {
     name: "Borrowing Calculator",
@@ -2804,7 +2707,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-03-15",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -2827,7 +2729,9 @@ export const aiTools: AiTool[] = [
       "REST API with Node.js/Python examples",
       "Bulk audio generation"
 
-    ]
+    ],
+    pricingDetails: "Free (2k chars) | Starter: $10 | Creator: $20 | Pro: $50",
+    integrations: ["REST API", "Node.js", "Python"]
   },
   {
     name: "LinkPilot",
@@ -2846,7 +2750,9 @@ export const aiTools: AiTool[] = [
       "Outcome-focused analytics (leads vs vanity)",
       "REST API access for Pro/Agency tiers"
 
-    ]
+    ],
+    pricingDetails: "Free (10 credits) | Solo: $29/mo | Pro: $79/mo | Agency: $199/mo",
+    integrations: ["LinkedIn", "REST API"]
   },
   {
     name: "Ayudo",
@@ -2869,7 +2775,9 @@ export const aiTools: AiTool[] = [
       "Insight Agent: Surface hidden patterns and knowledge gaps automatically",
       "Human-Agent Copilot: Proactive reply suggestions for human teams"
 
-    ]
+    ],
+    pricingDetails: "Demo-based (Custom Enterprise plans)",
+    integrations: ["Zendesk", "Salesforce", "Intercom", "Twilio", "Slack"]
   },
   {
     name: "POSUSA",
@@ -2882,7 +2790,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-03-15",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -2905,7 +2812,9 @@ export const aiTools: AiTool[] = [
       "Auto-Captions: Social-optimized subtitles in 75+ languages",
       "Batch Ad Production for rapid multi-creative testing"
 
-    ]
+    ],
+    pricingDetails: "Starter: 9/mo | Pro: 9/mo | Ultra: 49/mo | 7-day Trial",
+    integrations: ["Shopify", "Amazon", "Meta", "TikTok", "Google", "YouTube"]
   },
   {
     name: "Burn After Reading",
@@ -2918,7 +2827,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-03-15",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -2935,7 +2843,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-03-15",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
@@ -2959,7 +2866,9 @@ export const aiTools: AiTool[] = [
       "Two-way AI conversation to qualify and book appointments",
       "Revenue Recovery dashboard tracking saved leads"
 
-    ]
+    ],
+    pricingDetails: "Paid Subscription",
+    integrations: ["Twilio", "Google Business Profile", "CRM Connectors"]
   },
   {
     name: "RiskOfficer",
@@ -2972,7 +2881,6 @@ export const aiTools: AiTool[] = [
     dateAdded: "2026-03-15",
     features: [
       
-      "AI-powered automation",
       "Streamlined workflow",
       "Easy integration"
 
