@@ -1780,7 +1780,7 @@ export const aiTools: AiTool[] = [
     category: "Productivity",
     tags: { price: "Freemium" },
     image: "https://www.google.com/s2/favicons?domain=www.listmailer.dev&sz=128",
-    screenshot: "/screenshots/send-personalized-bulk-emails-directly-from-your-own-email-account-fast,-simple,-and-without-hidden-costs-.webp",
+    screenshot: "/screenshots/send-personalized-bulk-emails-directly-from-your-own-email-account--fast,-simple,-and-without-hidden-costs-.webp",
     dateAdded: "2026-03-29",
     features: [
       
@@ -1899,7 +1899,7 @@ export const aiTools: AiTool[] = [
     category: "Productivity",
     tags: { price: "Freemium" },
     image: "https://www.google.com/s2/favicons?domain=seven.radostit.com&sz=128",
-    screenshot: "/screenshots/seven-by-radost-it-is-a-privacy-first-website-analytics-tool-that-provides-powerful-insights-without-cookies-or-intrusive-tracking-it-offers-simple-setup,-clean-dashboards,-and-full-gdpr-compliance-.webp",
+    screenshot: "/screenshots/seven-by-radost-it-is-a-privacy-first-website-analytics-tool-that-provides-powerful-insights-without-cookies-or-intrusive-tracking--it-offers-simple-setup,-clean-dashboards,-and-full-gdpr-compliance-.webp",
     dateAdded: "2026-03-29",
     features: [
       
@@ -2171,7 +2171,7 @@ export const aiTools: AiTool[] = [
     category: "Productivity",
     tags: { price: "Freemium" },
     image: "https://www.google.com/s2/favicons?domain=www.getalignmint.org&sz=128",
-    screenshot: "/screenshots/alignmint.webp",
+    screenshot: "https://api.microlink.io?url=https%3A%2F%2Fwww.getalignmint.org&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-22",
     features: [
       
@@ -2193,7 +2193,7 @@ export const aiTools: AiTool[] = [
     category: "Code Assistance",
     tags: { price: "Freemium" },
     image: "https://www.google.com/s2/favicons?domain=secvibe.ai&sz=128",
-    screenshot: "/screenshots/secvibe.webp",
+    screenshot: "https://api.microlink.io?url=https%3A%2F%2Fsecvibe.ai&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-22",
     features: [
       
@@ -2211,7 +2211,7 @@ export const aiTools: AiTool[] = [
     category: "Productivity",
     tags: { price: "Freemium" },
     image: "https://www.google.com/s2/favicons?domain=xmit.sh&sz=128",
-    screenshot: "/screenshots/transmit.webp",
+    screenshot: "https://api.microlink.io?url=https%3A%2F%2Fxmit.sh&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-22",
     features: [
       
@@ -2231,7 +2231,7 @@ export const aiTools: AiTool[] = [
     category: "Productivity",
     tags: { price: "Freemium" },
     image: "https://www.google.com/s2/favicons?domain=llmwise.ai&sz=128",
-    screenshot: "/screenshots/llmwise.webp",
+    screenshot: "https://api.microlink.io?url=https%3A%2F%2Fllmwise.ai&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-22",
     features: [
       
@@ -2250,7 +2250,7 @@ export const aiTools: AiTool[] = [
     category: "Marketing",
     tags: { price: "Freemium" },
     image: "https://www.google.com/s2/favicons?domain=www.maptrics.io&sz=128",
-    screenshot: "/screenshots/maptrics.webp",
+    screenshot: "https://api.microlink.io?url=https%3A%2F%2Fwww.maptrics.io&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-22",
     features: [
       
@@ -2286,7 +2286,7 @@ export const aiTools: AiTool[] = [
     category: "Marketing",
     tags: { price: "Freemium" },
     image: "https://www.google.com/s2/favicons?domain=www.organicpilot.ai&sz=128",
-    screenshot: "/screenshots/organic-pilot.webp",
+    screenshot: "https://api.microlink.io?url=https%3A%2F%2Fwww.organicpilot.ai&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-22",
     features: [
       
@@ -2339,7 +2339,7 @@ export const aiTools: AiTool[] = [
     category: "Marketing",
     tags: { price: "Freemium" },
     image: "https://www.google.com/s2/favicons?domain=iamglad.ai&sz=128",
-    screenshot: "/screenshots/glad-ai.webp",
+    screenshot: "https://api.microlink.io?url=https%3A%2F%2Fiamglad.ai&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-22",
     features: [
       
@@ -2375,7 +2375,7 @@ export const aiTools: AiTool[] = [
     category: "Code Assistance",
     tags: { price: "Freemium" },
     image: "https://www.google.com/s2/favicons?domain=www.traidies.com&sz=128",
-    screenshot: "/screenshots/traidies.webp",
+    screenshot: "https://api.microlink.io?url=https%3A%2F%2Fwww.traidies.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-22",
     features: [
       
@@ -2393,7 +2393,7 @@ export const aiTools: AiTool[] = [
     category: "Code Assistance",
     tags: { price: "Freemium" },
     image: "https://www.google.com/s2/favicons?domain=miromiro.app&sz=128",
-    screenshot: "/screenshots/miromiro.webp",
+    screenshot: "https://api.microlink.io?url=https%3A%2F%2Fmiromiro.app&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-22",
     features: [
       
@@ -2413,7 +2413,7 @@ export const aiTools: AiTool[] = [
     category: "Productivity",
     tags: { price: "Freemium" },
     image: "https://www.google.com/s2/favicons?domain=www.statuscentral.io&sz=128",
-    screenshot: "/screenshots/status-central.webp",
+    screenshot: "https://api.microlink.io?url=https%3A%2F%2Fwww.statuscentral.io%2F&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-22",
     features: [
       
@@ -2433,7 +2433,7 @@ export const aiTools: AiTool[] = [
     category: "Productivity",
     tags: { price: "Freemium" },
     image: "https://www.google.com/s2/favicons?domain=polyform.to&sz=128",
-    screenshot: "/screenshots/polyform.webp",
+    screenshot: "https://api.microlink.io?url=https%3A%2F%2Fpolyform.to&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-22",
     features: [
       
@@ -2468,7 +2468,7 @@ export const aiTools: AiTool[] = [
     category: "Productivity",
     tags: { price: "Freemium" },
     image: "https://www.google.com/s2/favicons?domain=www.pagersync.com&sz=128",
-    screenshot: "/screenshots/pagersync.webp",
+    screenshot: "https://api.microlink.io?url=https%3A%2F%2Fwww.pagersync.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-22",
     features: [
       
@@ -2503,7 +2503,7 @@ export const aiTools: AiTool[] = [
     category: "Productivity",
     tags: { price: "Freemium" },
     image: "https://www.google.com/s2/favicons?domain=privatclaw.com&sz=128",
-    screenshot: "/screenshots/privatclaw.webp",
+    screenshot: "https://api.microlink.io?url=https%3A%2F%2Fprivatclaw.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-22",
     features: [
       
@@ -2526,7 +2526,7 @@ export const aiTools: AiTool[] = [
     category: "Productivity",
     tags: { price: "Freemium" },
     image: "https://www.google.com/s2/favicons?domain=www.71vote.com&sz=128",
-    screenshot: "/screenshots/71vote.webp",
+    screenshot: "https://api.microlink.io?url=https%3A%2F%2Fwww.71vote.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-22",
     features: [
       
@@ -2548,7 +2548,7 @@ export const aiTools: AiTool[] = [
     category: "Productivity",
     tags: { price: "Freemium" },
     image: "https://www.google.com/s2/favicons?domain=ticketsdata.com&sz=128",
-    screenshot: "/screenshots/ticketsdata.webp",
+    screenshot: "https://api.microlink.io?url=https%3A%2F%2Fticketsdata.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-22",
     features: [
       
@@ -2607,7 +2607,7 @@ export const aiTools: AiTool[] = [
     category: "Productivity",
     tags: { price: "Freemium" },
     image: "https://www.google.com/s2/favicons?domain=transgull.com&sz=128",
-    screenshot: "/screenshots/transgull.webp",
+    screenshot: "https://api.microlink.io?url=https%3A%2F%2Ftransgull.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-22",
     features: [
       
@@ -2625,7 +2625,7 @@ export const aiTools: AiTool[] = [
     category: "Productivity",
     tags: { price: "Freemium" },
     image: "https://www.google.com/s2/favicons?domain=www.pathwiseai.io&sz=128",
-    screenshot: "/screenshots/pathwiseai.webp",
+    screenshot: "https://api.microlink.io?url=https%3A%2F%2Fwww.pathwiseai.io%2F&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-15",
     features: [
       
@@ -2643,7 +2643,7 @@ export const aiTools: AiTool[] = [
     category: "Marketing",
     tags: { price: "Freemium" },
     image: "https://www.google.com/s2/favicons?domain=www.webcomparis.com&sz=128",
-    screenshot: "/screenshots/webcomparis.webp",
+    screenshot: "https://api.microlink.io?url=https%3A%2F%2Fwww.webcomparis.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-15",
     features: [
       
@@ -2661,7 +2661,7 @@ export const aiTools: AiTool[] = [
     category: "Productivity",
     tags: { price: "Freemium" },
     image: "https://www.google.com/s2/favicons?domain=app.imeett.ai&sz=128",
-    screenshot: "/screenshots/imeett.webp",
+    screenshot: "https://api.microlink.io?url=https%3A%2F%2Fapp.imeett.ai&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-15",
     features: [
       
@@ -2683,7 +2683,7 @@ export const aiTools: AiTool[] = [
     category: "Productivity",
     tags: { price: "Freemium" },
     image: "https://www.google.com/s2/favicons?domain=greenpt.nl&sz=128",
-    screenshot: "/screenshots/greenpt.webp",
+    screenshot: "https://api.microlink.io?url=https%3A%2F%2Fgreenpt.nl%2Ffrida&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-15",
     features: [
       
@@ -2703,7 +2703,7 @@ export const aiTools: AiTool[] = [
     category: "Marketing",
     tags: { price: "Freemium" },
     image: "https://www.google.com/s2/favicons?domain=getlevl.ai&sz=128",
-    screenshot: "/screenshots/levl.webp",
+    screenshot: "https://api.microlink.io?url=https%3A%2F%2Fgetlevl.ai&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-15",
     features: [
       
@@ -2722,7 +2722,7 @@ export const aiTools: AiTool[] = [
     category: "Productivity",
     tags: { price: "Freemium" },
     image: "https://www.google.com/s2/favicons?domain=bridgecall.app&sz=128",
-    screenshot: "/screenshots/bridgecall.webp",
+    screenshot: "https://api.microlink.io?url=https%3A%2F%2Fbridgecall.app&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-15",
     features: [
       
@@ -2741,7 +2741,7 @@ export const aiTools: AiTool[] = [
     category: "Marketing",
     tags: { price: "Freemium" },
     image: "https://www.google.com/s2/favicons?domain=octopost.ai&sz=128",
-    screenshot: "/screenshots/octopost-ai.webp",
+    screenshot: "https://api.microlink.io?url=https%3A%2F%2Foctopost.ai&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-15",
     features: [
       
@@ -2759,8 +2759,8 @@ export const aiTools: AiTool[] = [
     url: "https://pngtostl.xyz",
     category: "Productivity",
     tags: { price: "Freemium" },
-    image: "https://www.google.com/s2/favicons?domain=pngtostl.xyz&sz=128",
-    screenshot: "/screenshots/pngtostl.webp",
+    image: "/screenshots/pngtostl.png",
+    screenshot: "https://api.microlink.io?url=https%3A%2F%2Fpngtostl.xyz&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-15",
     features: [
       
@@ -2778,8 +2778,8 @@ export const aiTools: AiTool[] = [
     url: "https://densops.com",
     category: "Marketing",
     tags: { price: "Freemium" },
-    image: "https://www.google.com/s2/favicons?domain=densops.com&sz=128",
-    screenshot: "/screenshots/densops.webp",
+    image: "/screenshots/densops.png",
+    screenshot: "https://api.microlink.io?url=https%3A%2F%2Fdensops.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-15",
     features: [
       
@@ -2816,8 +2816,8 @@ export const aiTools: AiTool[] = [
     url: "https://stick.audio",
     category: "Video & Audio",
     tags: { price: "Freemium" },
-    image: "https://www.google.com/s2/favicons?domain=stick.audio&sz=128",
-    screenshot: "/screenshots/stick-audio.webp",
+    image: "/screenshots/stick-audio.png",
+    screenshot: "https://api.microlink.io?url=https%3A%2F%2Fstick.audio&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-15",
     features: [
       
@@ -2835,8 +2835,8 @@ export const aiTools: AiTool[] = [
     url: "https://link-pilot.com",
     category: "Marketing",
     tags: { price: "Freemium" },
-    image: "https://www.google.com/s2/favicons?domain=link-pilot.com&sz=128",
-    screenshot: "/screenshots/linkpilot.webp",
+    image: "/screenshots/linkpilot.png",
+    screenshot: "https://api.microlink.io?url=https%3A%2F%2Flink-pilot.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-15",
     features: [
       
@@ -2854,8 +2854,8 @@ export const aiTools: AiTool[] = [
     url: "https://www.ayudo.ai",
     category: "Productivity",
     tags: { price: "Freemium" },
-    image: "https://www.google.com/s2/favicons?domain=www.ayudo.ai&sz=128",
-    screenshot: "/screenshots/ayudo.webp",
+    image: "/screenshots/ayudo.png",
+    screenshot: "https://api.microlink.io?url=https%3A%2F%2Fwww.ayudo.ai&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-15",
     features: [
       
@@ -2894,8 +2894,8 @@ export const aiTools: AiTool[] = [
     url: "https://highreach.ai",
     category: "Video & Audio",
     tags: { price: "Freemium" },
-    image: "https://www.google.com/s2/favicons?domain=highreach.ai&sz=128",
-    screenshot: "/screenshots/highreach.webp",
+    image: "/screenshots/highreach.png",
+    screenshot: "https://api.microlink.io?url=https%3A%2F%2Fhighreach.ai&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-15",
     features: [
       
@@ -2947,8 +2947,8 @@ export const aiTools: AiTool[] = [
     url: "https://uselino.com",
     category: "Productivity",
     tags: { price: "Freemium" },
-    image: "https://www.google.com/s2/favicons?domain=uselino.com&sz=128",
-    screenshot: "/screenshots/lino.webp",
+    image: "/screenshots/lino.png",
+    screenshot: "https://api.microlink.io?url=https%3A%2F%2Fuselino.com%2F&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-03-15",
     features: [
       
