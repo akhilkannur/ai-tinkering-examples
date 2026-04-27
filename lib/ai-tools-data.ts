@@ -620,25 +620,40 @@ export const aiTools: AiTool[] = [
   },
   {
     name: "Schemity",
-    description: "Schemity is a native desktop ERD tool built for software engineers who need a fast, reliable way to design and document database schemas without the friction of cloud-based tools., Most ERD tools are either too primitive for real-world schema work or bloated with features you never use. Schemity sits in the middle: powerful enough for complex schemas, lightweight enough to install in seconds at just 9MB., It connects directly to PostgreSQL, MySQL, and SQL Server, reverse-engineering your existing database into a visual diagram instantly. From there, you have full control over the canvas. Relationship lines are freely routable, tables are freely positionable, and nothing is locked behind an auto-layout algorithm you cannot override., Key features include offline-first architecture, plain JSON schema storage, no account or internet connection required, N:N relationship support with automatic intermediate table generation, and one-time pricing with no subscription., Schemity is designed around how engineers actually think. You can organize your diagram to reflect domain boundaries, focus on specific areas of a large schema, and use keyboard-driven interactions to move fast. The schema file is plain JSON, so it lives in your repository alongside your code., It runs on Windows, macOS, and Linux, installs in under a minute, and does not require a cloud account or ongoing subscription. You pay once and own it., If you have spent time fighting with tools that are too limited, too slow, or require you to be online just to open a diagram, Schemity was built for you.",
+    description: "Desktop-based ERD tool for software engineers to visualize database schemas as domain-focused Context Views with Git-native JSON storage.",
     url: "https://schemity.com",
     category: "Productivity",
-    tags: { price: "Freemium" },
+    tags: { price: "Paid" },
     image: "https://www.google.com/s2/favicons?domain=schemity.com&sz=128",
     screenshot: "/screenshots/schemity.webp",
     dateAdded: "2026-04-19",
-    features: ["Improves productivity", "Advanced AI features", "Time-saving tools"],
+    features: [
+      "Context Views for creating focused, domain-specific diagrams (auth, billing, etc.)",
+      "Git-native JSON storage for committing schema designs alongside source code",
+      "BYOK AI Assistant for entity creation and field editing via natural language",
+      "Safe SQL migration diff generation from ERD changes for developer review",
+      "Offline-first architecture with direct or SSH database connection support"
+    ],
+    pricingDetails: "One-time purchase ($129); 2-week free trial; free for education",
+    integrations: ["PostgreSQL", "MySQL", "Supabase", "MariaDB", "SQL Server", "Git", "Claude", "OpenAI"],
   },
   {
     name: "Primefirms",
-    description: "Primefirms",
+    description: "Exclusive agency directory and awards platform connecting businesses with vetted top-tier software, design, and marketing firms.",
     url: "https://www.primefirms.co",
     category: "Productivity",
-    tags: { price: "Freemium" },
+    tags: { price: "Free" },
     image: "https://www.google.com/s2/favicons?domain=www.primefirms.co&sz=128",
     screenshot: "/screenshots/primefirms.webp",
     dateAdded: "2026-04-19",
-    features: ["Improves productivity", "Advanced AI features", "Time-saving tools"],
+    features: [
+      "Vetted agency registry limiting listings to the top 50 firms per category per country",
+      "Comprehensive scoring system based on portfolio quality and verified client reviews",
+      "Intelligent matching algorithms to connect businesses with specific service specialists",
+      "Global coverage across 56+ service categories including Mobile Dev and Cloud Consulting",
+      "Integrated awards platform recognizing excellence in digital and creative services"
+    ],
+    pricingDetails: "Free for businesses to search and match; agencies can join for free (subject to vetting)",
   },
   {
     name: "Credyt",
@@ -680,14 +695,22 @@ export const aiTools: AiTool[] = [
   },
   {
     name: "Portrait Gift",
-    description: "Turn your favorite photo into a custom portrait masterpiece, printed on canvas or delivered digitally. A unique, personalized gift made to surprise and impress.",
+    description: "AI-powered service transforming personal photos into custom artworks using face-swap technology across various artistic themes.",
     url: "https://www.portraitgift.com",
     category: "Productivity",
-    tags: { price: "Freemium" },
+    tags: { price: "Paid" },
     image: "https://www.google.com/s2/favicons?domain=www.portraitgift.com&sz=128",
     screenshot: "/screenshots/portrait-gift.webp",
     dateAdded: "2026-04-19",
-    features: ["Improves productivity", "Advanced AI features", "Time-saving tools"],
+    features: [
+      "Instant AI Face Swap technology for themed Renaissance and Pop Art portraits",
+      "Multiple product formats including digital downloads, glossy posters, and canvas prints",
+      "Free worldwide shipping to over 50 countries for all physical orders",
+      "No-commitment free preview allowing users to see results before purchase",
+      "30-day money-back guarantee on all custom artwork orders"
+    ],
+    pricingDetails: "Paid products (posters, canvas, digital); free preview available",
+    integrations: ["Amazon"],
   },
   {
     name: "Admark Go",
@@ -786,14 +809,22 @@ export const aiTools: AiTool[] = [
   },
   {
     name: "Speak Pro: Shadowing Lessons",
-    description: "What is the app about?, Speak Pro is an iOS language learning app designed to help you improve your speaking skills in English, Spanish, German, Dutch, French, Italian, and Portuguese. It uses the shadowing method with YouTube videos, turning them into speaking lessons., The app is primarily designed for learners from B1 level who already understand a language but want to speak more fluently and naturally. Speak Pro helps you activate your vocabulary. After 1 week practice for 15 minutes of record you will be speak much fluently., Speak Pro breaks video into sentence segments. This allows you to repeat each phrase without pausing or rewinding. Built around active speaking practice., How to use it?, You listen to a sentence, repeat it after the speaker, and record your own version. Then you receive feedback on your pronunciation, helping you understand how closely you match the original., You can practice in short sessions, even 10\\u201315 minutes a day is enough to see progress., You can use Speak Pro for free if you don\\u2019t need pronunciation feedback. If you want deeper improvement, feedback helps you refine your accent and sound more natural. You can record for free up to 3 minutes per day with feedback., You can also save your favourite phrases and revisit them later, which is especially useful for practicing difficult or important expressions., What content does Speak Pro use?, Speak Pro uses YouTube videos as learning material. There are already around 1,000+ lessons available, covering a wide range of topics and speaking styles., You can also add your own videos, for example, scenes from movies, vlogs, TED Talks, interviews, or educational content., What is the shadowing method?, The shadowing method is a scientifically proven language learning technique used for decades, including in interpreter training. It involves listening to a native speaker and repeating what they say almost immediately, trying to match their pronunciation, rhythm, and intonation., Here\\u2019s how it works step by step:, 1. Listen to a short phrase, 2. Repeat it right after the speaker, 3. Try to match pronunciation and rhythm, 4. Record yourself, 5. Compare and improve, This method train \\u201cspeaking muscle memory,\\u201d making it easier to speak automatically in real conversations., Regular YouTube is not ideal for shadowing because sentences are often too long, and you can only skip forward in fixed intervals",
+    description: "Language learning app focused on the shadowing technique, using real-world videos to improve fluency and pronunciation.",
     url: "https://speakpro.app",
     category: "Productivity",
     tags: { price: "Freemium" },
     image: "https://www.google.com/s2/favicons?domain=speakpro.app&sz=128",
     screenshot: "/screenshots/speak-pro:-shadowing-lessons.webp",
     dateAdded: "2026-04-19",
-    features: ["Improves productivity", "Advanced AI features", "Time-saving tools"],
+    features: [
+      "Interactive Shadowing Toolkit with dynamic word-by-word highlighting",
+      "Record & Compare functionality to align user speech with native audio",
+      "AI-powered pronunciation analysis providing immediate feedback",
+      "YouTube integration to generate shadowing lessons from custom video links",
+      "Progress tracking with daily streaks, reports, and curated vocabulary lists"
+    ],
+    pricingDetails: "Free to download; subscription available for advanced features",
+    integrations: ["YouTube"],
   },
   {
     name: "SignalBoss",
@@ -892,14 +923,22 @@ export const aiTools: AiTool[] = [
   },
   {
     name: "Orbbit",
-    description: "A platform for PMMs to track competitors, and for sales teams to find, qualify, and engage high-intent prospects.",
+    description: "AI-powered competitor intelligence and market analysis tool designed for product teams and founders to track landscape shifts.",
     url: "https://www.orbbit.io",
     category: "Productivity",
     tags: { price: "Freemium" },
     image: "https://www.google.com/s2/favicons?domain=www.orbbit.io&sz=128",
     screenshot: "/screenshots/orbbit.webp",
     dateAdded: "2026-04-19",
-    features: ["Improves productivity", "Advanced AI features", "Time-saving tools"],
+    features: [
+      "Automated competitor tracking for changes in pricing, positioning, and features",
+      "Visual comparisons capturing 'before-and-after' snapshots of competitor pages",
+      "Broad market signal detection including hiring trends and funding rounds",
+      "Context-aware research that learns specific product and industry nuances",
+      "Weekly market shift summaries delivered with potential strategic impact analysis"
+    ],
+    pricingDetails: "Free trial available; paid tiers typically start at $50-$100/mo",
+    integrations: ["Slack", "Microsoft Teams", "Salesforce", "HubSpot"],
   },
   {
     name: "Extralt",
@@ -910,7 +949,15 @@ export const aiTools: AiTool[] = [
     image: "https://www.google.com/s2/favicons?domain=extralt.com&sz=128",
     screenshot: "/screenshots/extralt.webp",
     dateAdded: "2026-04-12",
-    features: ["Improves productivity", "Advanced AI features", "Time-saving tools"],
+    features: [
+      "Automated ecommerce scraping with anti-bot bypass and proxy rotation",
+      "Data normalization and classification using industry standard taxonomies",
+      "Cross-seller product matching to find identical items across different sites",
+      "Semantic search and price comparison dashboards for market intelligence",
+      "AI-generated crawlers compiled to Rust for high-speed, maintenance-free execution"
+    ],
+    pricingDetails: "Start ($29/mo) with 10,000 credits; Scale ($300/mo) with 300,000 credits; 7-day free trial",
+    integrations: ["JSON Export", "Parquet Export", "Product Data API"],
   },
   {
     name: "TradeTab",
@@ -921,7 +968,15 @@ export const aiTools: AiTool[] = [
     image: "https://www.google.com/s2/favicons?domain=tradetab.co&sz=128",
     screenshot: "/screenshots/tradetab.webp",
     dateAdded: "2026-04-12",
-    features: ["Improves productivity", "Advanced AI features", "Time-saving tools"],
+    features: [
+      "Mobile-optimized invoicing for on-site billing in under 30 seconds",
+      "AI-powered line item suggestions based on specific trade job types",
+      "Branded PDF generation for professional business communication",
+      "Integrated online payment links for faster credit card collection",
+      "Centralized client history and outstanding payment tracking"
+    ],
+    pricingDetails: "Flat fee of $9/month; 14-day free trial (no credit card required)",
+    integrations: ["Venmo", "Online Credit Card Payments"],
   },
   {
     name: "Atomic Edge",
@@ -932,7 +987,15 @@ export const aiTools: AiTool[] = [
     image: "https://www.google.com/s2/favicons?domain=atomicedge.io&sz=128",
     screenshot: "/screenshots/atomic-edge.webp",
     dateAdded: "2026-04-12",
-    features: ["Improves productivity", "Advanced AI features", "Time-saving tools"],
+    features: [
+      "AI-powered real-time threat detection designed for WordPress security",
+      "Network-edge blocking of malicious bots, scrapers, and DDoS attacks",
+      "One-click deployment of OWASP Top 10 protection and security rules",
+      "No nameserver changes required; fast setup via simple A record update",
+      "Virtual patching to protect against new vulnerabilities before official fixes"
+    ],
+    pricingDetails: "Free (100 sites, basic rules); Advanced tier for unlimited sites and all rulesets",
+    integrations: ["WordPress", "CI/CD Pipelines", "Programmable APIs"],
   },
   {
     name: "PolyTest",
@@ -943,18 +1006,33 @@ export const aiTools: AiTool[] = [
     image: "https://www.google.com/s2/favicons?domain=polytest.io&sz=128",
     screenshot: "/screenshots/polytest.webp",
     dateAdded: "2026-04-12",
-    features: ["Improves productivity", "Advanced AI features", "Time-saving tools"],
+    features: [
+      "High-resolution historical orderbook snapshots with millisecond timestamps",
+      "Support for major prediction markets including BTC, ETH, and SOL",
+      "Historical depth data with up to 8 levels of bid/ask visibility",
+      "AI-optimized JSON responses designed for rapid integration with coding tools",
+      "Multiple timeframe availability for granular strategy testing (5m to 24h)"
+    ],
+    pricingDetails: "Free tier available (no credit card required); custom paid plans",
+    integrations: ["Cursor", "Claude Code", "v0", "Codex"],
   },
   {
     name: "Kiqo",
-    description: "An AI learning companion for K\\u20135 that answers kids\\u2019 questions in real time and gives parents clear insight into how they\\u2019re learning.",
+    description: "An AI learning companion for K-5 that answers kids' questions in real time and gives parents clear insight into how they're learning.",
     url: "https://www.kiqo.ai",
     category: "Productivity",
     tags: { price: "Freemium" },
     image: "https://www.google.com/s2/favicons?domain=www.kiqo.ai&sz=128",
     screenshot: "/screenshots/kiqo.webp",
     dateAdded: "2026-04-12",
-    features: ["Improves productivity", "Advanced AI features", "Time-saving tools"],
+    features: [
+      "Conversational learning platform for K-5 students focused on curiosity-led exploration",
+      "Classroom and Freestyle modes for both guided and independent learning paths",
+      "Invincible Leveling System that adjusts information density based on child preference",
+      "Real-time analytics and summaries for parents to track engagement and progress",
+      "Live safety monitoring to ensure a secure, age-appropriate digital environment"
+    ],
+    pricingDetails: "Flexible monthly subscription options; COPPA and FERPA aligned",
   },
   {
     name: "Furnea",
