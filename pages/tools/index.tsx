@@ -72,8 +72,8 @@ export default function ToolsIndex() {
   return (
     <div>
       <Head>
-        <title>AI Tools Directory — {aiTools.length} Curated Tools | Real AI Examples</title>
-        <meta name="description" content={`Browse ${aiTools.length} curated AI tools — filtered by category and price. Updated weekly.`} key="description" />
+        <title>Weekly AI Drops: New Tools & Real Use Cases for Tinkerers</title>
+        <meta name="description" content={`Every Sunday, we drop the latest AI tools from independent makers and real-world use cases. ${aiTools.length} tools curated for non-technical tinkerers.`} key="description" />
       </Head>
 
       <div>
