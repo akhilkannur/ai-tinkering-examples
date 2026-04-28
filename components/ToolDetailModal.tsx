@@ -106,7 +106,7 @@ export default function ToolDetailModal({ tool, onClose }: ToolDetailModalProps)
                   {tool.category}
                 </span>
                 {tool.tags.price && (
-                  <span className="bg-black text-white px-3 py-1 text-[10px] font-black font-mono uppercase border-2 border-black tracking-widest transform rotate-1">
+                  <span className="bg-black text-white w-24 text-center py-1 text-[10px] font-black font-mono uppercase border-2 border-black tracking-widest transform rotate-1 flex-shrink-0">
                     {tool.tags.price}
                   </span>
                 )}

@@ -69,7 +69,7 @@ export default function ToolPage({ tool }: ToolPageProps) {
                 <span className="px-5 py-2 rounded-sm bg-micro-fg text-[11px] font-black uppercase tracking-[0.2em] text-white shadow-lg">
                   {tool.category}
                 </span>
-                <span className="px-5 py-2 rounded-sm bg-white border border-micro-layer-1 text-[11px] font-black uppercase tracking-[0.2em] text-micro-muted">
+                <span className="w-28 text-center py-2 rounded-sm bg-white border border-micro-layer-1 text-[11px] font-black uppercase tracking-[0.2em] text-micro-muted flex-shrink-0">
                   {tool.tags.price}
                 </span>
               </div>

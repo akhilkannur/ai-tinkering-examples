@@ -133,8 +133,9 @@ export default function ToolsIndex() {
               href="https://salestools.club/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="group flex items-center gap-6 bg-white border border-micro-layer-1 rounded-sm p-6 hover:border-micro-fg transition-all hover:shadow-micro"
+              className="group flex items-center gap-6 bg-white border border-micro-layer-1 rounded-sm p-6 hover:border-micro-fg transition-all hover:shadow-micro relative overflow-hidden"
             >
+              <div className="absolute top-0 right-0 bg-terminal-lime text-black text-[8px] font-black px-2 py-0.5 uppercase tracking-tighter">Sponsor</div>
               <div className="w-12 h-12 rounded-sm bg-micro-fg flex items-center justify-center text-white font-bold text-xl shadow-lg flex-shrink-0">
                 S
               </div>
@@ -154,7 +155,7 @@ export default function ToolsIndex() {
               </div>
               <div className="min-w-0">
                 <h4 className="font-bold uppercase text-[12px] tracking-widest text-white">List Your Tool</h4>
-                <p className="text-[14px] text-white/60 font-medium truncate">Join {aiTools.length} curated tools. Free forever.</p>
+                <p className="text-[14px] text-white/60 font-medium truncate">Join {aiTools.length} curated tools. Free & paid options.</p>
               </div>
               <ArrowRight className="w-4 h-4 text-white/40 ml-auto group-hover:translate-x-1 transition-transform" />
             </Link>
@@ -264,7 +265,7 @@ function ToolTile({ tool }: { tool: AiTool }) {
       </p>
 
       <div className="flex items-center justify-between mt-auto pt-3 border-t border-micro-layer-1">
-        <span className="text-xs font-bold text-micro-fg bg-micro-layer-1 px-3 py-1 rounded-sm">
+        <span className="text-[10px] font-bold text-micro-fg bg-micro-layer-1 w-20 text-center py-1 rounded-sm flex-shrink-0">
           {tool.tags.price}
         </span>
         <span className="text-[10px] font-bold uppercase tracking-widest text-micro-muted">
@@ -320,7 +321,7 @@ function ToolDataRow({ tool, isDirectory }: { tool: AiTool, isDirectory?: boolea
 
       {/* Pricing & Link */}
       <div className="flex items-center justify-between md:justify-end gap-10 flex-shrink-0 md:w-48">
-        <span className="text-sm font-bold text-micro-fg bg-micro-layer-1 px-4 py-1.5 rounded-sm">
+        <span className="text-xs font-bold text-micro-fg bg-micro-layer-1 w-24 text-center py-1.5 rounded-sm flex-shrink-0">
           {tool.tags.price}
         </span>
         <ArrowRight className="w-5 h-5 text-micro-muted group-hover:text-micro-fg group-hover:translate-x-1 transition-all" />
