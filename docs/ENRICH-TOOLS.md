@@ -183,12 +183,32 @@ Notice: no integrations added because the site doesn't mention any. That's corre
 
 ---
 
+## Mandatory: Run Validation After EVERY Batch
+
+After editing each batch of tools, you MUST run:
+
+```bash
+bash scripts/validate-tools.sh
+```
+
+This checks that:
+- TypeScript compiles
+- No tools were accidentally deleted (count >= 300)
+- Enriched tools still have their integrations, makers, and pricing
+- Known-good tools are still present
+
+**If the script reports ANY errors, STOP and undo your last changes before continuing.**
+
+Do NOT skip this step. Do NOT proceed to the next batch until validation passes.
+
+---
+
 ## Checklist Before Pushing
 
 - [ ] Visited the actual website for every tool I enriched
 - [ ] No placeholder phrases in any of my updates
 - [ ] Did NOT modify any already-enriched tools
 - [ ] Did NOT remove any tools
-- [ ] File compiles: `npx tsc --noEmit lib/ai-tools-data.ts`
+- [ ] Ran `bash scripts/validate-tools.sh` and it passed
 - [ ] Committed with a message listing the specific tools enriched
 - [ ] Batch size ≤ 10 tools
