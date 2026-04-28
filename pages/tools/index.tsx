@@ -8,13 +8,13 @@ import { ArrowRight, ChevronDown, List, LayoutGrid } from 'lucide-react';
 const slugify = (text: string) =>
   text.toLowerCase().trim().replace(/\./g, '-').replace(/\s+/g, '-').replace(/[^\w\-]+/g, '').replace(/\-\-+/g, '-');
 
-// Group tools by week label
+// Group tools by week label (Sunday publication)
 function getWeekLabel(dateStr: string): string {
   const d = new Date(dateStr + 'T00:00:00');
   const day = d.getDay();
-  // Adjust to Monday
-  const diff = d.getDate() - day + (day === 0 ? -6 : 1);
-  d.setDate(diff);
+  // Adjust to the following Sunday (if not already Sunday)
+  const diff = day === 0 ? 0 : 7 - day;
+  d.setDate(d.getDate() + diff);
   
   const datePart = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }).toUpperCase();
   return `DROP / ${datePart}`;
