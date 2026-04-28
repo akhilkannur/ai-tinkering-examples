@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-12 mb-20">
           {/* Column 1: Brand */}
           <div className="col-span-2">
-            <Link href="/" className="flex items-center gap-2 mb-6 group">
+            <Link href="/" className="flex items-center gap-2 mb-6 group" aria-label="Real AI Examples Home">
                 <div className="w-5 h-5 bg-micro-fg rounded flex items-center justify-center transition-transform group-hover:scale-105"></div>
                 <span className="text-lg font-bold tracking-tight text-micro-fg">Real AI Examples</span>
             </Link>
@@ -21,7 +21,7 @@ export default function Footer() {
 
           {/* Column 2: Site */}
           <div>
-            <h4 className="text-[11px] font-bold text-micro-fg uppercase tracking-[0.1em] mb-6">Site</h4>
+            <h4 className="text-[12px] font-bold text-micro-fg uppercase tracking-[0.1em] mb-6">Site</h4>
             <ul className="space-y-3 text-[13px] font-bold text-micro-muted">
               <li><Link href="/about" className="hover:text-micro-fg transition-colors">ABOUT</Link></li>
               <li><Link href="/" className="hover:text-micro-fg transition-colors">EXAMPLES</Link></li>
@@ -32,7 +32,7 @@ export default function Footer() {
 
           {/* Column 3: Legal */}
           <div>
-            <h4 className="text-[11px] font-bold text-micro-fg uppercase tracking-[0.1em] mb-6">Legal</h4>
+            <h4 className="text-[12px] font-bold text-micro-fg uppercase tracking-[0.1em] mb-6">Legal</h4>
             <ul className="space-y-3 text-[13px] font-bold text-micro-muted">
               <li><Link href="/privacy" className="hover:text-micro-fg transition-colors">PRIVACY</Link></li>
               <li><Link href="/terms" className="hover:text-micro-fg transition-colors">TERMS</Link></li>

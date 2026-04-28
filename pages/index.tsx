@@ -157,8 +157,6 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
   return (
     <>
       <Head>
-        <title>Real AI Examples & Use Cases — Practical AI for Business</title>
-        <meta name="description" content="Explore the library of real-world AI use cases and workflows. Practical AI examples and tools curated for business owners and solo operators." key="description" />
         <link rel="canonical" href="https://realaiexamples.com/" />
       </Head>
 
@@ -210,9 +208,10 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-                    {items.map((example) => {
+                    {items.map((example, idx) => {
                       const rawUrl = example.screenshots?.[0]?.url;
                       const imageUrl = optimizeImageUrl(rawUrl, example.cloudinaryPublicId, 600);
+                      const isPriority = batchIdx === 0 && idx < 2;
 
                       return (
                         <article key={example.id} className="group cursor-pointer">
@@ -223,14 +222,16 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
                               handleExampleClick(example);
                             }}
                           >
-                          <div className="card-micro aspect-[4/3] relative overflow-hidden mb-4 bg-micro-layer-1">
+                          <div className="card-micro aspect-[4/3] relative overflow-hidden mb-4 bg-micro-layer-1" style={{ aspectRatio: '4/3' }}>
                             {imageUrl ? (
                               <Image
                                 src={imageUrl}
                                 alt={example.title}
                                 fill
-                                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
                                 className="object-contain transition-transform duration-500 group-hover:scale-105"
+                                priority={isPriority}
+                                {...(isPriority ? { fetchPriority: "high" } : {})}
                               />
                             ) : (
                               <div className="w-full h-full bg-micro-layer-1 flex items-center justify-center font-mono text-micro-muted">
