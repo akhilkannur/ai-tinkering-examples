@@ -157,8 +157,8 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
   return (
     <>
       <Head>
-        <title>Real AI Examples — How People Actually Use AI at Work</title>
-        <meta name="description" content="Curated real-world AI workflows. No magic, just better prompts and practical automation." key="description" />
+        <title>Real AI Examples & Use Cases — Practical AI for Business</title>
+        <meta name="description" content="Explore the library of real-world AI use cases and workflows. Practical AI examples and tools curated for business owners and solo operators." key="description" />
         <link rel="canonical" href="https://realaiexamples.com/" />
       </Head>
 

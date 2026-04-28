@@ -28,8 +28,8 @@ export default function ToolPage({ tool }: ToolPageProps) {
   return (
     <>
       <Head>
-        <title>{tool.name} — AI Tool | Real AI Examples</title>
-        <meta name="description" content={tool.description} key="description" />
+        <title>{tool.name}: New {tool.category} AI Tool & Use Case</title>
+        <meta name="description" content={`Discover how to use ${tool.name} in your workflow. A curated ${tool.category} tool for non-technical tinkerers. Part of the Real AI Examples directory.`} key="description" />
       </Head>
 
       <div className="max-w-6xl mx-auto px-4 md:px-6">
