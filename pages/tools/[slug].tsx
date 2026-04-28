@@ -103,8 +103,11 @@ export default function ToolPage({ tool }: ToolPageProps) {
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {tool.features.map((feature, i) => (
                     <li key={i} className="flex items-start gap-5 p-6 bg-white border border-micro-layer-1 rounded-sm text-base md:text-lg font-bold text-micro-fg shadow-sm hover:shadow-md transition-shadow">
-                      <div className="w-8 h-8 rounded-sm bg-terminal-lime/20 flex items-center justify-center flex-shrink-0">
-                        <span className="text-terminal-lime text-sm font-black">✓</span>
+                      <div className="relative w-6 h-6 flex-shrink-0 mt-1">
+                        <div className="absolute inset-0 bg-terminal-lime translate-x-[2px] translate-y-[2px]"></div>
+                        <div className="absolute inset-0 bg-micro-fg flex items-center justify-center">
+                          <div className="w-1.5 h-1.5 bg-terminal-lime"></div>
+                        </div>
                       </div>
                       {feature}
                     </li>

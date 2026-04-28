@@ -53,8 +53,16 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-14">
           <div className="flex items-center gap-10">
             <div className="flex-shrink-0">
-              <Link href="/" className="flex items-center gap-2 group">
-                <div className={`w-7 h-7 rounded-full flex items-center justify-center transition-transform group-hover:scale-105 ${scrolled || !isHomePage ? 'bg-micro-fg' : 'bg-white'}`}></div>
+              <Link href="/" className="flex items-center gap-3 group">
+                <div className={`w-8 h-8 rounded-sm overflow-hidden flex-shrink-0 transition-transform group-hover:scale-105 border ${scrolled || !isHomePage ? 'border-micro-layer-1' : 'border-white/20'}`}>
+                  <Image 
+                    src="/logo-square.png" 
+                    alt="Real AI Examples Logo" 
+                    width={32} 
+                    height={32} 
+                    className="object-cover"
+                  />
+                </div>
                 <span className={`text-2xl font-bold tracking-tight transition-colors ${scrolled || !isHomePage ? 'text-micro-fg' : 'text-white'}`}>Real AI Examples</span>
               </Link>
             </div>

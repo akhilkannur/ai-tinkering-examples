@@ -140,8 +140,11 @@ export default function ToolDetailModal({ tool, onClose }: ToolDetailModalProps)
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {tool.features.map((feature, i) => (
                       <div key={i} className="p-4 bg-gray-50 border-2 border-black brutalist-shadow-sm flex items-start gap-3">
-                        <div className="w-5 h-5 bg-[#ccff00] border-2 border-black flex items-center justify-center flex-shrink-0 mt-0.5">
-                           <Check className="w-3 h-3 text-black stroke-[4px]" />
+                        <div className="relative w-5 h-5 flex-shrink-0 mt-0.5">
+                          <div className="absolute inset-0 bg-[#ccff00] translate-x-[2px] translate-y-[2px]"></div>
+                          <div className="absolute inset-0 bg-black flex items-center justify-center">
+                            <div className="w-1 h-1 bg-[#ccff00]"></div>
+                          </div>
                         </div>
                         <span className="text-xs font-bold uppercase text-black leading-tight">{feature}</span>
                       </div>
