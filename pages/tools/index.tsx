@@ -80,7 +80,7 @@ export default function ToolsIndex() {
             Too many AI tools. <br /><span className="font-instrument font-normal italic lowercase opacity-90 text-white/90">Not enough time.</span>
           </h1>
           <p className="text-base md:text-lg lg:text-xl text-white/70 max-w-2xl mx-auto font-medium leading-relaxed mb-10 text-balance">
-            Skip the marketing hype. A weekly shortlist of handpicked tools that solve real work problems.
+            Every Sunday, we handpick a shortlist of AI tools that solve real work problems.
           </p>
 
           {/* Stats Bar */}
@@ -103,7 +103,7 @@ export default function ToolsIndex() {
         </div>
 
         {/* Main Layout: Content + Sidebar */}
-        <div className="glass-sheet rounded-sm p-4 md:p-8 lg:p-12 overflow-hidden">
+        <div className="glass-sheet rounded-sm p-4 md:p-8 lg:p-10 overflow-hidden max-w-[1400px] mx-auto">
 
           {/* Filters & View Toggle - Full Width */}
           <div className="mb-8 md:mb-10 sticky top-4 z-40 bg-white/90 backdrop-blur-2xl py-3 px-4 md:py-4 md:px-8 rounded-sm border border-white/30 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6">
@@ -205,7 +205,7 @@ export default function ToolsIndex() {
                     )}
                   </>
                 ) : (
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8">
                     {alphabeticalTools.map((tool) => {
                       const isFeatured = chronologicalTools.slice(0, 2).map(t => t.name).includes(tool.name);
                       return (
