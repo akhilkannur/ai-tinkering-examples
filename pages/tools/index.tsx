@@ -3,7 +3,8 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
 import { aiTools, AiTool } from '../../lib/ai-tools-data';
-import { ArrowRight, ChevronDown, List, LayoutGrid } from 'lucide-react';
+import { adSpots, featuredPlaceholders, AdSpot } from '../../lib/ads-data';
+import { ArrowRight, ChevronDown, List, LayoutGrid, Zap, Star, ExternalLink } from 'lucide-react';
 
 const slugify = (text: string) =>
   text.toLowerCase().trim().replace(/\./g, '-').replace(/\s+/g, '-').replace(/[^\w\-]+/g, '').replace(/\-\-+/g, '-');
@@ -18,11 +19,6 @@ function getWeekLabel(dateStr: string): string {
   
   const datePart = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }).toUpperCase();
   return `DROP / ${datePart}`;
-}
-
-function formatDate(dateStr: string): string {
-  const date = new Date(dateStr + 'T00:00:00');
-  return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
 }
 
 export default function ToolsIndex() {
@@ -67,7 +63,8 @@ export default function ToolsIndex() {
   const visibleGroups = showAllWeeks ? groupedWeeks : groupedWeeks.slice(0, 4);
   const hasMoreWeeks = groupedWeeks.length > 4;
 
-  // Count tools added this month
+  const billboardAd = adSpots.find(ad => ad.type === 'billboard' && ad.active);
+  const inlineAds = adSpots.filter(ad => ad.type === 'inline' && ad.active);
 
   return (
     <div>
@@ -78,17 +75,78 @@ export default function ToolsIndex() {
 
       <div>
         {/* Hero */}
-        <div className="max-w-5xl mx-auto text-center mb-12 md:mb-32 pt-8 md:pt-12">
+        <div className="max-w-5xl mx-auto text-center mb-12 md:mb-20 pt-8 md:pt-12">
           <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold tracking-tight mb-4 md:mb-8 leading-[0.9] text-white drop-shadow-md">
             Too many AI tools. <br /><span className="font-instrument font-normal italic lowercase opacity-90">Not enough time.</span>
           </h1>
-          <p className="text-base md:text-xl lg:text-2xl text-white/80 max-w-2xl mx-auto font-medium leading-relaxed">
+          <p className="text-base md:text-xl lg:text-2xl text-white/80 max-w-2xl mx-auto font-medium leading-relaxed mb-12">
             Skip the marketing hype. A weekly shortlist of handpicked tools that solve real work problems.
           </p>
+
+          {/* Stats Bar */}
+          <div className="inline-flex flex-wrap items-center justify-center gap-8 md:gap-16 border-t border-b border-white/10 py-6 md:py-8 px-12 bg-black/20 backdrop-blur-sm rounded-sm">
+            <div className="text-center">
+              <div className="text-2xl md:text-3xl font-black text-terminal-lime mb-1">{aiTools.length}+</div>
+              <div className="text-[10px] font-black uppercase tracking-[0.2em] text-white/40">Tools Curated</div>
+            </div>
+            <div className="h-8 w-[1px] bg-white/10 hidden md:block"></div>
+            <div className="text-center">
+              <div className="text-2xl md:text-3xl font-black text-white mb-1">{categories.length - 1}</div>
+              <div className="text-[10px] font-black uppercase tracking-[0.2em] text-white/40">Categories</div>
+            </div>
+            <div className="h-8 w-[1px] bg-white/10 hidden md:block"></div>
+            <div className="text-center">
+              <div className="text-2xl md:text-3xl font-black text-white mb-1">SUNDAY</div>
+              <div className="text-[10px] font-black uppercase tracking-[0.2em] text-white/40">Weekly Drop</div>
+            </div>
+          </div>
         </div>
+
+        {/* Billboard Ad */}
+        {billboardAd && (
+          <div className="max-w-5xl mx-auto mb-12 md:mb-20">
+            <a 
+              href={billboardAd.link} 
+              target={billboardAd.link.startsWith('http') ? "_blank" : "_self"}
+              rel="noopener noreferrer"
+              className="group block relative overflow-hidden rounded-sm border border-terminal-lime/30 bg-black/40 backdrop-blur-md p-8 md:p-12 transition-all hover:border-terminal-lime"
+            >
+              <div className="absolute top-0 right-0 bg-terminal-lime text-black text-[10px] font-black px-4 py-1 uppercase tracking-widest">Premium Billboard</div>
+              <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                <div className="w-20 h-20 md:w-32 md:h-32 bg-terminal-lime/10 border border-terminal-lime/20 rounded-sm flex items-center justify-center flex-shrink-0">
+                  <Zap className="w-10 h-10 md:w-16 md:h-16 text-terminal-lime animate-pulse" />
+                </div>
+                <div className="text-center md:text-left flex-1">
+                  <h3 className="text-2xl md:text-4xl font-bold text-white mb-4 group-hover:text-terminal-lime transition-colors">{billboardAd.title}</h3>
+                  <p className="text-base md:text-xl text-white/70 font-medium leading-relaxed max-w-3xl">
+                    {billboardAd.description}
+                  </p>
+                </div>
+                <div className="bg-terminal-lime text-black px-8 py-4 rounded-sm font-black uppercase tracking-widest text-sm hover:scale-105 transition-transform">
+                  {billboardAd.ctaText}
+                </div>
+              </div>
+            </a>
+          </div>
+        )}
 
         {/* Floating Glass Sheet */}
         <div className="glass-sheet rounded-sm md:rounded-sm p-4 md:p-16 lg:p-24 overflow-hidden">
+          
+          {/* Pinned Featured Grid (2x2) */}
+          <div className="mb-16 md:mb-24">
+            <div className="flex items-center gap-4 mb-10">
+              <Star className="w-4 h-4 text-terminal-lime fill-terminal-lime" />
+              <h2 className="text-[12px] font-black uppercase tracking-[0.3em] text-micro-muted">Pinned Featured Tools</h2>
+              <div className="h-[1px] flex-grow bg-micro-layer-1"></div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {featuredPlaceholders.map((ad) => (
+                <FeaturedCard key={ad.id} ad={ad} />
+              ))}
+            </div>
+          </div>
+
           {/* Filters & View Toggle */}
           <div className="mb-8 md:mb-16 sticky top-4 z-40 bg-white/80 backdrop-blur-2xl py-4 px-4 md:py-6 md:px-8 rounded-sm border border-white/30 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3 flex-1">
@@ -127,40 +185,6 @@ export default function ToolsIndex() {
             </div>
           </div>
 
-          {/* Horizontal CTAs */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
-            <a 
-              href="https://salestools.club/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="group flex items-center gap-6 bg-white border border-micro-layer-1 rounded-sm p-6 hover:border-micro-fg transition-all hover:shadow-micro relative overflow-hidden"
-            >
-              <div className="absolute top-0 right-0 bg-terminal-lime text-black text-[8px] font-black px-2 py-0.5 uppercase tracking-tighter">Sponsor</div>
-              <div className="w-12 h-12 rounded-sm bg-micro-fg flex items-center justify-center text-white font-bold text-xl shadow-lg flex-shrink-0">
-                S
-              </div>
-              <div className="min-w-0">
-                <h4 className="font-bold uppercase text-[12px] tracking-widest text-micro-fg group-hover:text-terminal-lime transition-colors">SalesTools.club</h4>
-                <p className="text-[14px] text-micro-muted font-medium truncate">The ultimate database for modern sales operators.</p>
-              </div>
-              <ArrowRight className="w-4 h-4 text-micro-muted ml-auto group-hover:translate-x-1 transition-transform" />
-            </a>
-
-            <Link
-              href="/tools/badge"
-              className="group flex items-center gap-6 bg-micro-fg rounded-sm p-6 text-white hover:shadow-micro transition-all border border-transparent"
-            >
-              <div className="w-12 h-12 rounded-sm bg-white/10 flex items-center justify-center text-white font-bold text-xl flex-shrink-0">
-                +
-              </div>
-              <div className="min-w-0">
-                <h4 className="font-bold uppercase text-[12px] tracking-widest text-white">List Your Tool</h4>
-                <p className="text-[14px] text-white/60 font-medium truncate">Join {aiTools.length} curated tools. Free & paid options.</p>
-              </div>
-              <ArrowRight className="w-4 h-4 text-white/40 ml-auto group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </div>
-
           {/* Main Content: Tools List (Full Width) */}
           <div className="max-w-full">
               {filteredTools.length === 0 ? (
@@ -177,27 +201,36 @@ export default function ToolsIndex() {
                 <div className="flex flex-col">
                   {viewMode === 'drops' ? (
                     <>
-                      {visibleGroups.map((group) => (
-                        <div key={group.label} className="mb-16 md:mb-28">
-                          <div className="flex items-center gap-6 mb-10 md:mb-14">
-                            <div className="flex items-center gap-3 bg-micro-fg px-6 py-2.5 rounded-sm shadow-lg">
-                              <span className="w-2 h-2 rounded-sm bg-terminal-lime animate-pulse"></span>
-                              <h2 className="text-[12px] md:text-[14px] font-black uppercase tracking-[0.2em] text-white whitespace-nowrap">
-                                {group.label}
-                              </h2>
+                      {visibleGroups.map((group, index) => (
+                        <React.Fragment key={group.label}>
+                          <div className="mb-16 md:mb-28">
+                            <div className="flex items-center gap-6 mb-10 md:mb-14">
+                              <div className="flex items-center gap-3 bg-micro-fg px-6 py-2.5 rounded-sm shadow-lg">
+                                <span className="w-2 h-2 rounded-sm bg-terminal-lime animate-pulse"></span>
+                                <h2 className="text-[12px] md:text-[14px] font-black uppercase tracking-[0.2em] text-white whitespace-nowrap">
+                                  {group.label}
+                                </h2>
+                              </div>
+                              <div className="h-[1px] flex-grow bg-micro-layer-1"></div>
+                              <span className="text-[10px] md:text-[11px] font-bold text-micro-muted uppercase tracking-[0.2em] whitespace-nowrap">
+                                {group.tools.length} TOOLS
+                              </span>
                             </div>
-                            <div className="h-[1px] flex-grow bg-micro-layer-1"></div>
-                            <span className="text-[10px] md:text-[11px] font-bold text-micro-muted uppercase tracking-[0.2em] whitespace-nowrap">
-                              {group.tools.length} TOOLS
-                            </span>
+                            <div className="divide-y divide-micro-layer-1">
+                              {group.tools.map((tool) => (
+                               <Link key={tool.name} href={`/tools/${slugify(tool.name)}`}>
+                                 <ToolDataRow tool={tool} isDirectory={true} />
+                               </Link>
+                              ))}                          
+                            </div>
                           </div>
-                          <div className="divide-y divide-micro-layer-1">
-                            {group.tools.map((tool) => (
-                             <Link key={tool.name} href={`/tools/${slugify(tool.name)}`}>
-                               <ToolDataRow tool={tool} isDirectory={true} />
-                             </Link>
-                            ))}                          </div>
-                        </div>
+                          {/* Inject Inline Ads */}
+                          {inlineAds.find(ad => ad.position === index) && (
+                            <div className="mb-16 md:mb-28">
+                              <InlineAdBanner ad={inlineAds.find(ad => ad.position === index)!} />
+                            </div>
+                          )}
+                        </React.Fragment>
                       ))}
                       
                       {/* Show More Weeks */}
@@ -225,6 +258,67 @@ export default function ToolsIndex() {
           </div>
         </div>
 </div>
+  );
+}
+
+function FeaturedCard({ ad }: { ad: AdSpot }) {
+  return (
+    <a 
+      href={ad.link} 
+      target={ad.link.startsWith('http') ? "_blank" : "_self"}
+      rel="noopener noreferrer"
+      className={`group relative flex flex-col p-8 rounded-sm border transition-all ${
+        ad.isPlaceholder 
+        ? 'bg-micro-layer-1/50 border-micro-layer-2 border-dashed hover:border-micro-fg/30' 
+        : 'bg-white border-terminal-lime shadow-lg hover:shadow-xl'
+      }`}
+    >
+      {!ad.isPlaceholder && <div className="absolute top-4 right-4 bg-terminal-lime text-black text-[8px] font-black px-2 py-0.5 uppercase tracking-widest rounded-sm">Featured</div>}
+      <h3 className="text-xl font-bold text-micro-fg mb-3 flex items-center gap-3">
+        {ad.title}
+        {!ad.isPlaceholder && <ExternalLink className="w-4 h-4 text-micro-muted group-hover:text-micro-fg transition-colors" />}
+      </h3>
+      <p className="text-sm text-micro-muted font-medium leading-relaxed mb-6">
+        {ad.description}
+      </p>
+      <div className="mt-auto pt-4 border-t border-micro-layer-1 flex items-center justify-between">
+        <span className="text-[10px] font-black uppercase tracking-widest text-micro-muted group-hover:text-micro-fg transition-colors">
+          {ad.isPlaceholder ? 'Promote Your Tool' : 'View Tool'}
+        </span>
+        <ArrowRight className="w-3 h-3 text-micro-muted group-hover:translate-x-1 transition-transform" />
+      </div>
+    </a>
+  );
+}
+
+function InlineAdBanner({ ad }: { ad: AdSpot }) {
+  return (
+    <a 
+      href={ad.link} 
+      target={ad.link.startsWith('http') ? "_blank" : "_self"}
+      rel="noopener noreferrer"
+      className={`group flex flex-col md:flex-row items-center justify-between gap-6 p-8 rounded-sm border transition-all ${
+        ad.isPlaceholder
+        ? 'bg-micro-layer-1/30 border-micro-layer-2 border-dashed text-center md:text-left'
+        : 'bg-micro-fg border-micro-fg text-white hover:shadow-micro'
+      }`}
+    >
+      <div className="flex-1">
+        <h3 className={`text-lg font-bold mb-2 ${ad.isPlaceholder ? 'text-micro-fg' : 'text-white'}`}>
+          {ad.title}
+        </h3>
+        <p className={`text-sm font-medium ${ad.isPlaceholder ? 'text-micro-muted' : 'text-white/60'}`}>
+          {ad.description}
+        </p>
+      </div>
+      <div className={`px-6 py-3 rounded-sm font-bold uppercase tracking-widest text-[11px] transition-all whitespace-nowrap ${
+        ad.isPlaceholder
+        ? 'bg-white text-micro-muted border border-micro-layer-2 group-hover:border-micro-fg group-hover:text-micro-fg'
+        : 'bg-terminal-lime text-black'
+      }`}>
+        {ad.ctaText || 'Learn More'}
+      </div>
+    </a>
   );
 }
 
