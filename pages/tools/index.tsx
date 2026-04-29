@@ -61,15 +61,10 @@ export default function ToolsIndex() {
   const hasMoreWeeks = groupedWeeks.length > 4;
 
   const billboardAd = adSpots.find(ad => ad.type === 'billboard' && ad.active);
-  const inlineAds = adSpots.filter(ad => ad.type === 'inline' && ad.active);
 
   // Last week's picks = 2nd group's first 3 tools (the previous week)
   const lastWeekPicks = groupedWeeks.length > 1 ? groupedWeeks[1].tools.slice(0, 3) : [];
   const lastWeekLabel = groupedWeeks.length > 1 ? groupedWeeks[1].label : '';
-
-  // Split featured into active sponsors and placeholders
-  const activeFeatured = featuredPlaceholders.filter(f => !f.isPlaceholder);
-  const placeholderFeatured = featuredPlaceholders.filter(f => f.isPlaceholder);
 
   return (
     <div>
@@ -157,82 +152,77 @@ export default function ToolsIndex() {
                 Clear all filters
               </button>
             </div>
-          ) : viewMode === 'directory' ? (
-            /* Directory view stays full-width */
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-              {alphabeticalTools.map((tool) => {
-                const isFeatured = chronologicalTools.slice(0, 2).map(t => t.name).includes(tool.name);
-                return (
-                  <Link key={tool.name} href={`/tools/${slugify(tool.name)}`}>
-                    <ToolTile tool={tool} isFeatured={isFeatured} />
-                  </Link>
-                );
-              })}
-            </div>
           ) : (
-            /* Drops view: two-column with sidebar */
             <div className="flex flex-col lg:flex-row gap-8 lg:gap-10">
 
-              {/* === LEFT: Main Tool Feed === */}
+              {/* === LEFT: Main Content === */}
               <div className="flex-1 min-w-0">
-                {visibleGroups.map((group, index) => (
-                  <React.Fragment key={group.label}>
-                    <div className="mb-12 md:mb-16">
-                      <div className="flex items-center gap-6 mb-8 md:mb-10">
-                        <div className="flex items-center gap-3 bg-micro-fg px-5 py-2 rounded-sm shadow-lg">
-                          <span className="w-1.5 h-1.5 rounded-sm bg-terminal-lime animate-pulse"></span>
-                          <h2 className="text-[11px] md:text-[12px] font-black uppercase tracking-[0.2em] text-white whitespace-nowrap">
-                            {group.label}
-                          </h2>
+                {viewMode === 'drops' ? (
+                  <>
+                    {visibleGroups.map((group, index) => (
+                      <React.Fragment key={group.label}>
+                        <div className="mb-12 md:mb-16">
+                          <div className="flex items-center gap-6 mb-8 md:mb-10">
+                            <div className="flex items-center gap-3 bg-micro-fg px-5 py-2 rounded-sm shadow-lg">
+                              <span className="w-1.5 h-1.5 rounded-sm bg-terminal-lime animate-pulse"></span>
+                              <h2 className="text-[11px] md:text-[12px] font-black uppercase tracking-[0.2em] text-white whitespace-nowrap">
+                                {group.label}
+                              </h2>
+                            </div>
+                            <div className="h-[1px] flex-grow bg-micro-layer-1"></div>
+                            <span className="text-[9px] md:text-[10px] font-bold text-micro-muted uppercase tracking-[0.2em] whitespace-nowrap">
+                              {group.tools.length} TOOLS
+                            </span>
+                          </div>
+                          <div className="divide-y divide-micro-layer-1">
+                            {group.tools.map((tool, tIndex) => {
+                              const isLatestDrop = index === 0;
+                              const isFeaturedInDrop = isLatestDrop && tIndex < 2;
+                              return (
+                                <Link key={tool.name} href={`/tools/${slugify(tool.name)}`}>
+                                  <div className={`${isFeaturedInDrop ? 'bg-[#f0fdf4]' : ''}`}>
+                                    <ToolDataRow
+                                      tool={tool}
+                                      isDirectory={true}
+                                      isFeatured={isFeaturedInDrop}
+                                    />
+                                  </div>
+                                </Link>
+                              );
+                            })}
+                          </div>
                         </div>
-                        <div className="h-[1px] flex-grow bg-micro-layer-1"></div>
-                        <span className="text-[9px] md:text-[10px] font-bold text-micro-muted uppercase tracking-[0.2em] whitespace-nowrap">
-                          {group.tools.length} TOOLS
-                        </span>
-                      </div>
-                      <div className="divide-y divide-micro-layer-1">
-                        {group.tools.map((tool, tIndex) => {
-                          const isLatestDrop = index === 0;
-                          const isFeaturedInDrop = isLatestDrop && tIndex < 2;
-                          return (
-                            <Link key={tool.name} href={`/tools/${slugify(tool.name)}`}>
-                              <div className={`${isFeaturedInDrop ? 'bg-[#f0fdf4]' : ''}`}>
-                                <ToolDataRow
-                                  tool={tool}
-                                  isDirectory={true}
-                                  isFeatured={isFeaturedInDrop}
-                                />
-                              </div>
-                            </Link>
-                          );
-                        })}
-                      </div>
-                    </div>
+                      </React.Fragment>
+                    ))}
 
-                    {/* Inline ad between week groups (mobile: show here, desktop: sidebar handles it) */}
-                    {index === 1 && inlineAds.length > 0 && (
-                      <div className="mb-12 md:mb-16 lg:hidden">
-                        <InlineAdBanner ad={inlineAds[0]} />
-                      </div>
+                    {hasMoreWeeks && !showAllWeeks && (
+                      <button
+                        onClick={() => setShowAllWeeks(true)}
+                        className="w-full py-6 md:py-8 mt-4 border border-micro-layer-1 rounded-sm bg-white text-micro-muted font-bold uppercase tracking-widest text-[11px] hover:border-micro-fg hover:text-micro-fg transition-all flex items-center justify-center gap-3 shadow-soft hover:shadow-micro"
+                      >
+                        Explore Older Backlog <ChevronDown className="w-4 h-4" />
+                      </button>
                     )}
-                  </React.Fragment>
-                ))}
-
-                {hasMoreWeeks && !showAllWeeks && (
-                  <button
-                    onClick={() => setShowAllWeeks(true)}
-                    className="w-full py-6 md:py-8 mt-4 border border-micro-layer-1 rounded-sm bg-white text-micro-muted font-bold uppercase tracking-widest text-[11px] hover:border-micro-fg hover:text-micro-fg transition-all flex items-center justify-center gap-3 shadow-soft hover:shadow-micro"
-                  >
-                    Explore Older Backlog <ChevronDown className="w-4 h-4" />
-                  </button>
+                  </>
+                ) : (
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                    {alphabeticalTools.map((tool) => {
+                      const isFeatured = chronologicalTools.slice(0, 2).map(t => t.name).includes(tool.name);
+                      return (
+                        <Link key={tool.name} href={`/tools/${slugify(tool.name)}`}>
+                          <ToolTile tool={tool} isFeatured={isFeatured} />
+                        </Link>
+                      );
+                    })}
+                  </div>
                 )}
               </div>
 
-              {/* === RIGHT: Sidebar (desktop) / Inline cards (mobile) === */}
-              <div className="w-full lg:w-[340px] xl:w-[360px] flex-shrink-0">
+              {/* === RIGHT: Sidebar === */}
+              <div className="w-full lg:w-[300px] flex-shrink-0">
                 <div className="lg:sticky lg:top-24 flex flex-col gap-6">
 
-                  {/* Billboard / Partner Spotlight — compact sidebar version */}
+                  {/* Billboard / Partner Spotlight */}
                   {billboardAd && (
                     <a
                       href={billboardAd.link}
@@ -261,6 +251,19 @@ export default function ToolsIndex() {
                       </div>
                     </a>
                   )}
+
+                  {/* Featured Selection — all 3 ad slots */}
+                  <div>
+                    <div className="flex items-center gap-2 mb-3">
+                      <Crown className="w-3.5 h-3.5 text-[#064e3b]" />
+                      <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-micro-muted">Featured Selection</h3>
+                    </div>
+                    <div className="flex flex-col gap-4">
+                      {featuredPlaceholders.map(ad => (
+                        <SidebarFeaturedCard key={ad.id} ad={ad} />
+                      ))}
+                    </div>
+                  </div>
 
                   {/* Last Week's Picks — organic content card */}
                   {lastWeekPicks.length > 0 && (
@@ -297,28 +300,6 @@ export default function ToolsIndex() {
                     </div>
                   )}
 
-                  {/* Featured Selection — active sponsors */}
-                  {activeFeatured.length > 0 && (
-                    <div>
-                      <div className="flex items-center gap-2 mb-3">
-                        <Crown className="w-3.5 h-3.5 text-[#064e3b]" />
-                        <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-micro-muted">Featured Selection</h3>
-                      </div>
-                      <div className="flex flex-col gap-4">
-                        {activeFeatured.map(ad => (
-                          <SidebarFeaturedCard key={ad.id} ad={ad} />
-                        ))}
-                      </div>
-                    </div>
-                  )}
-
-                  {/* Inline Ad - desktop only (mobile shows between weeks) */}
-                  {inlineAds.length > 0 && (
-                    <div className="hidden lg:block">
-                      <InlineAdBanner ad={inlineAds[0]} />
-                    </div>
-                  )}
-
                   {/* Trending Categories — organic content */}
                   <div className="rounded-sm border border-micro-layer-1 bg-white p-5">
                     <div className="flex items-center gap-2 mb-4">
@@ -337,22 +318,6 @@ export default function ToolsIndex() {
                       ))}
                     </div>
                   </div>
-
-                  {/* Featured Placement CTA — single placeholder */}
-                  {placeholderFeatured.length > 0 && (
-                    <a
-                      href={placeholderFeatured[0].link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group block rounded-sm border border-dashed border-micro-layer-2 bg-white p-5 hover:border-[#064e3b]/30 transition-all"
-                    >
-                      <h3 className="text-sm font-bold text-micro-muted mb-1 group-hover:text-[#064e3b] transition-colors">Get Featured Here</h3>
-                      <p className="text-[11px] text-micro-muted/60 font-medium leading-relaxed mb-3">Pin your product to the top of the directory. High-authority dofollow link included.</p>
-                      <span className="text-[9px] font-black uppercase tracking-widest text-micro-muted/50 group-hover:text-[#064e3b] transition-colors">
-                        Claim This Spot →
-                      </span>
-                    </a>
-                  )}
                 </div>
               </div>
             </div>
@@ -387,44 +352,6 @@ function SidebarFeaturedCard({ ad }: { ad: AdSpot }) {
           </h3>
           <p className="text-[11px] text-[#064e3b]/60 font-medium leading-relaxed line-clamp-2">{ad.description}</p>
         </div>
-      </div>
-    </a>
-  );
-}
-
-function InlineAdBanner({ ad }: { ad: AdSpot }) {
-  return (
-    <a
-      href={ad.link}
-      target={ad.link.startsWith('http') ? "_blank" : "_self"}
-      rel="noopener noreferrer"
-      className={`group flex flex-col md:flex-row items-center justify-between gap-6 p-6 rounded-sm border transition-all ${
-        ad.isPlaceholder
-        ? 'bg-white border-micro-layer-1 border-dashed text-center md:text-left hover:border-blue-500/20 shadow-sm shadow-inner-soft'
-        : 'bg-coffee-900 border-white/10 text-white hover:shadow-xl'
-      }`}
-    >
-      <div className="flex items-center gap-5 flex-1">
-        {!ad.isPlaceholder && ad.logo && (
-          <div className="w-12 h-12 bg-white rounded-sm p-2 flex-shrink-0 shadow-lg hidden md:flex items-center justify-center overflow-hidden">
-            <Image src={ad.logo} alt={ad.title} width={40} height={40} className="object-contain" unoptimized />
-          </div>
-        )}
-        <div>
-          <h3 className={`text-sm font-bold mb-1 tracking-tight ${ad.isPlaceholder ? 'text-micro-muted' : 'text-white'}`}>
-            {ad.title}
-          </h3>
-          <p className={`text-[11px] font-medium ${ad.isPlaceholder ? 'text-micro-muted/60' : 'text-white/50'}`}>
-            {ad.description}
-          </p>
-        </div>
-      </div>
-      <div className={`px-5 py-2.5 rounded-sm font-black uppercase tracking-widest text-[9px] transition-all whitespace-nowrap shadow-lg ${
-        ad.isPlaceholder
-        ? 'bg-white text-micro-muted border border-micro-layer-2 group-hover:border-blue-500 group-hover:text-blue-700'
-        : 'bg-blue-600 text-white hover:bg-white hover:text-black border border-blue-500'
-      }`}>
-        {ad.ctaText || 'Learn More'}
       </div>
     </a>
   );
