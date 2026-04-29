@@ -17,7 +17,7 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <div className="bg-nature min-h-screen selection:bg-micro-layer-2">
       <Navbar />
-      <div className="max-w-7xl mx-auto px-4 md:px-6 pt-24 pb-16 md:pt-48 md:pb-40">
+      <div className={`mx-auto px-4 md:px-6 pt-24 pb-16 md:pt-48 md:pb-40 ${isToolsPage ? 'max-w-[1400px]' : 'max-w-7xl'}`}>
         {isHomePage || isToolsPage || isBlogIndex || isAboutPage ? (
           children
         ) : (
