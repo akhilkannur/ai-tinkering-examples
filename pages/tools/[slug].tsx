@@ -4,10 +4,21 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
 import { aiTools, AiTool } from '../../lib/ai-tools-data';
-import { ExternalLink, ArrowLeft, ArrowUpRight } from 'lucide-react';
+import { ExternalLink, ArrowLeft, ArrowUpRight, Megaphone, Crown } from 'lucide-react';
+import { adSpots, featuredPlaceholders, AdSpot } from '../../lib/ads-data';
 
 const slugify = (text: string) =>
   text.toLowerCase().trim().replace(/\./g, '-').replace(/\s+/g, '-').replace(/[^\w\-]+/g, '').replace(/\-\-+/g, '-');
+
+function addRef(url: string): string {
+  try {
+    const u = new URL(url);
+    u.searchParams.set('ref', 'realaiexamples');
+    return u.toString();
+  } catch {
+    return url;
+  }
+}
 
 interface ToolPageProps {
   tool: AiTool | null;
@@ -20,6 +31,7 @@ export default function ToolPage({ tool }: ToolPageProps) {
   const hostname = tool ? getHostname(tool.url) : '';
   const fallbackLogo = `https://www.google.com/s2/favicons?domain=${hostname}&sz=128`;
   const [imgSrc, setImgSrc] = useState(tool?.image || fallbackLogo);
+  const billboardAd = adSpots.find(ad => ad.type === 'billboard' && ad.active);
 
   if (!tool) {
     return <div className="flex items-center justify-center text-micro-muted font-mono">Tool not found</div>;
@@ -32,8 +44,10 @@ export default function ToolPage({ tool }: ToolPageProps) {
         <meta name="description" content={`Discover how to use ${tool.name} in your workflow. A curated ${tool.category} tool for non-technical tinkerers. Part of the Real AI Examples directory.`} key="description" />
       </Head>
 
-      <div className="max-w-6xl mx-auto px-4 md:px-6">
-        <div className="glass-sheet rounded-sm md:rounded-sm p-6 md:p-12 lg:p-16 overflow-hidden shadow-2xl">
+      <div className="max-w-[1400px] mx-auto px-4 md:px-6">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-10">
+          <div className="flex-1 min-w-0">
+            <div className="glass-sheet rounded-sm md:rounded-sm p-6 md:p-12 lg:p-16 overflow-hidden shadow-2xl">
           <Link
             href="/tools"
             className="inline-flex items-center gap-2 text-[10px] md:text-xs font-bold text-micro-muted uppercase tracking-widest hover:text-micro-fg transition-colors mb-8 md:mb-12 bg-white/50 px-4 py-2 rounded-sm border border-white/20 shadow-sm"
@@ -55,7 +69,7 @@ export default function ToolPage({ tool }: ToolPageProps) {
             </div>
             <div className="flex-1">
               <a 
-                href={tool.url} 
+                href={addRef(tool.url)} 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="group/title inline-flex items-start gap-2 mb-6"
@@ -173,13 +187,94 @@ export default function ToolPage({ tool }: ToolPageProps) {
               <p className="text-micro-muted font-medium italic">Visit the official site to get started.</p>
             </div>
             <a
-              href={tool.url}
+              href={addRef(tool.url)}
               target="_blank"
               rel="noopener noreferrer"
               className="group inline-flex items-center gap-4 px-10 py-5 bg-micro-fg text-white rounded-sm text-sm md:text-base font-black uppercase tracking-[0.1em] hover:bg-black transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1 active:translate-y-0"
             >
               Visit Website <ExternalLink className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
             </a>
+          </div>
+            </div>
+          </div>
+
+          {/* Sidebar */}
+          <div className="w-full lg:w-[300px] flex-shrink-0">
+            <div className="lg:sticky lg:top-24 flex flex-col gap-6">
+
+              {billboardAd && (
+                <a
+                  href={billboardAd.link}
+                  target={billboardAd.link.startsWith('http') ? "_blank" : "_self"}
+                  rel="noopener noreferrer"
+                  className="group block relative overflow-hidden rounded-sm border border-white/5 bg-coffee-900/80 backdrop-blur-md p-5 transition-all hover:border-[#064e3b]/30 shadow-xl"
+                >
+                  <div className="absolute top-0 right-0 bg-[#064e3b] text-white text-[7px] font-black px-3 py-0.5 uppercase tracking-widest shadow-lg">Partner Spotlight</div>
+                  <div className="flex items-start gap-4 relative z-10">
+                    {billboardAd.logo ? (
+                      <div className="w-12 h-12 bg-white rounded-sm flex items-center justify-center flex-shrink-0 shadow-lg overflow-hidden p-2">
+                        <Image src={billboardAd.logo} alt={billboardAd.title} width={48} height={48} className="object-contain" unoptimized />
+                      </div>
+                    ) : (
+                      <div className="w-12 h-12 bg-white/5 border border-white/10 rounded-sm flex items-center justify-center flex-shrink-0">
+                        <Megaphone className="w-6 h-6 text-[#064e3b] animate-pulse" />
+                      </div>
+                    )}
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-sm font-bold text-white mb-1 group-hover:text-blue-400 transition-colors tracking-tight leading-snug">{billboardAd.title}</h3>
+                      <p className="text-[11px] text-white/50 font-medium leading-relaxed line-clamp-2">{billboardAd.description}</p>
+                      <span className="inline-block mt-3 bg-[#064e3b] text-white px-4 py-1.5 rounded-sm font-black uppercase tracking-widest text-[8px] hover:bg-white hover:text-black transition-all border border-[#064e3b]">
+                        {billboardAd.ctaText}
+                      </span>
+                    </div>
+                  </div>
+                </a>
+              )}
+
+              <div>
+                <div className="flex items-center gap-2 mb-3">
+                  <Crown className="w-3.5 h-3.5 text-[#064e3b]" />
+                  <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-micro-muted">Featured Selection</h3>
+                </div>
+                <div className="flex flex-col gap-4">
+                  {featuredPlaceholders.map(ad => (
+                    <a
+                      key={ad.id}
+                      href={ad.link}
+                      target={ad.link.startsWith('http') ? "_blank" : "_self"}
+                      rel="noopener noreferrer"
+                      className={`group block relative rounded-sm border p-4 transition-all ${
+                        ad.isPlaceholder 
+                        ? 'border-micro-layer-2 border-dashed bg-white hover:border-[#064e3b]/20'
+                        : 'border-[#064e3b]/20 bg-[#f0fdf4] hover:shadow-lg hover:border-[#064e3b]/40'
+                      }`}
+                    >
+                      {!ad.isPlaceholder && (
+                        <div className="absolute top-0 right-0 bg-[#064e3b] text-white text-[7px] font-black px-2 py-0.5 uppercase tracking-widest rounded-bl-sm">Selection</div>
+                      )}
+                      <div className="flex items-start gap-3">
+                        {!ad.isPlaceholder && (
+                          <div className="w-10 h-10 bg-white rounded-sm border border-coffee-200 p-1.5 overflow-hidden flex items-center justify-center shadow-sm flex-shrink-0">
+                            {ad.logo ? (
+                              <Image src={ad.logo} alt={ad.title} width={28} height={28} className="object-contain" unoptimized />
+                            ) : (
+                              <div className="w-full h-full bg-coffee-100 flex items-center justify-center text-coffee-800 font-bold text-xs">{ad.title[0]}</div>
+                            )}
+                          </div>
+                        )}
+                        <div className="flex-1 min-w-0">
+                          <h3 className={`text-sm font-bold mb-0.5 ${ad.isPlaceholder ? 'text-micro-muted' : 'text-[#064e3b]'}`}>
+                            {ad.isPlaceholder ? 'Get Featured Here' : ad.title}
+                          </h3>
+                          <p className={`text-[11px] font-medium leading-relaxed line-clamp-2 ${ad.isPlaceholder ? 'text-micro-muted/60' : 'text-[#064e3b]/60'}`}>{ad.description}</p>
+                        </div>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              </div>
+
+            </div>
           </div>
         </div>
       </div>

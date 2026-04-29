@@ -9,6 +9,16 @@ import { ArrowRight, ChevronDown, List, LayoutGrid, Megaphone, Crown, ExternalLi
 const slugify = (text: string) =>
   text.toLowerCase().trim().replace(/\./g, '-').replace(/\s+/g, '-').replace(/[^\w\-]+/g, '').replace(/\-\-+/g, '-');
 
+function addRef(url: string): string {
+  try {
+    const u = new URL(url);
+    u.searchParams.set('ref', 'realaiexamples');
+    return u.toString();
+  } catch {
+    return url;
+  }
+}
+
 // Group tools by week label (Sunday publication)
 function getWeekLabel(dateStr: string): string {
   const d = new Date(dateStr + 'T00:00:00');
@@ -179,7 +189,7 @@ export default function ToolsIndex() {
                               const isLatestDrop = index === 0;
                               const isFeaturedInDrop = isLatestDrop && tIndex < 2;
                               return (
-                                <Link key={tool.name} href={`/tools/${slugify(tool.name)}`}>
+                                <a key={tool.name} href={addRef(tool.url)} target="_blank" rel="noopener noreferrer">
                                   <div className={`${isFeaturedInDrop ? 'bg-[#f0fdf4]' : ''}`}>
                                     <ToolDataRow
                                       tool={tool}
@@ -187,7 +197,7 @@ export default function ToolsIndex() {
                                       isFeatured={isFeaturedInDrop}
                                     />
                                   </div>
-                                </Link>
+                                </a>
                               );
                             })}
                           </div>
@@ -209,9 +219,9 @@ export default function ToolsIndex() {
                     {alphabeticalTools.map((tool) => {
                       const isFeatured = chronologicalTools.slice(0, 2).map(t => t.name).includes(tool.name);
                       return (
-                        <Link key={tool.name} href={`/tools/${slugify(tool.name)}`}>
+                        <a key={tool.name} href={addRef(tool.url)} target="_blank" rel="noopener noreferrer">
                           <ToolTile tool={tool} isFeatured={isFeatured} />
-                        </Link>
+                        </a>
                       );
                     })}
                   </div>
@@ -274,7 +284,7 @@ export default function ToolsIndex() {
                       </div>
                       <div className="flex flex-col gap-3">
                         {lastWeekPicks.map(tool => (
-                          <Link key={tool.name} href={`/tools/${slugify(tool.name)}`}>
+                          <a key={tool.name} href={addRef(tool.url)} target="_blank" rel="noopener noreferrer">
                             <div className="group flex items-center gap-3 p-2 -mx-2 rounded-sm hover:bg-micro-layer-1 transition-all cursor-pointer">
                               <div className="w-8 h-8 rounded-sm border border-micro-layer-1 bg-white flex-shrink-0 flex items-center justify-center overflow-hidden p-1">
                                 <Image
@@ -291,7 +301,7 @@ export default function ToolsIndex() {
                                 <p className="text-[10px] text-micro-muted truncate">{tool.description}</p>
                               </div>
                             </div>
-                          </Link>
+                          </a>
                         ))}
                       </div>
                       <div className="mt-3 pt-3 border-t border-micro-layer-1">
