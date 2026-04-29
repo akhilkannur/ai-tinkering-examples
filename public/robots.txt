@@ -1,8 +1,27 @@
 # Real AI Examples - Robots.txt
 # Strategy: Strong production focus. All active routes are allowed. 
-# Search engines are directed to the sitemap for priority pages.
+# Explicitly allowing AI bots to ensure content citation.
 
 User-agent: *
+Allow: /
+
+# AI Bots
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
 Allow: /
 
 # Block technical and private paths

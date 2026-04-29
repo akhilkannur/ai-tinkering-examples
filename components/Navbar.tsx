@@ -32,15 +32,38 @@ export default function Navbar() {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'SiteNavigationElement',
-              'name': ['Examples', 'About'],
-              'url': [
-                `${process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com'}/`,
-                `${process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com'}/about`,
-              ],
-            }),
+            __html: JSON.stringify([
+              {
+                '@context': 'https://schema.org',
+                '@type': 'Organization',
+                'name': 'Real AI Examples',
+                'url': 'https://realaiexamples.com',
+                'logo': 'https://realaiexamples.com/logo.png',
+                'sameAs': [
+                  'https://x.com/akhilpedia',
+                  'https://www.linkedin.com/in/akhilmk/'
+                ],
+                'description': 'How People Actually Use AI at Work. A curated library of real-world AI proof and tools.'
+              },
+              {
+                '@context': 'https://schema.org',
+                '@type': 'WebSite',
+                'url': 'https://realaiexamples.com',
+                'name': 'Real AI Examples',
+                'description': 'A visual swipe file of real-world AI usage and a directory of curated AI tools.'
+              },
+              {
+                '@context': 'https://schema.org',
+                '@type': 'SiteNavigationElement',
+                'name': ['Examples', 'Tools', 'Blog', 'About'],
+                'url': [
+                  'https://realaiexamples.com/',
+                  'https://realaiexamples.com/tools',
+                  'https://realaiexamples.com/blog',
+                  'https://realaiexamples.com/about',
+                ],
+              }
+            ]),
           }}
         />
       </Head>
@@ -61,6 +84,7 @@ export default function Navbar() {
                     width={32} 
                     height={32} 
                     className="object-cover"
+                    priority
                   />
                 </div>
                 <span className={`text-2xl font-bold tracking-tight transition-colors ${scrolled || !isHomePage ? 'text-micro-fg' : 'text-white'}`}>Real AI Examples</span>
