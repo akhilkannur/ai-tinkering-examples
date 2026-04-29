@@ -75,7 +75,7 @@ export default function BadgePage() {
           </Link>
           <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold tracking-tight mb-4 md:mb-8 leading-[0.9] text-white drop-shadow-md text-left">
             Get discovered. <br />
-            <span className="font-instrument font-normal italic lowercase opacity-90 text-amber-400">Fast-tracked.</span>
+            <span className="font-instrument font-normal italic lowercase opacity-90 text-blue-400">Fast-tracked.</span>
           </h1>
           <p className="text-base md:text-xl lg:text-2xl text-white/70 max-w-2xl font-medium leading-relaxed text-left">
             Makers who embed the badge get priority review, a permanent SEO backlink, and a feature in our next Weekly Drop.
@@ -170,7 +170,7 @@ export default function BadgePage() {
                   key={i}
                   className="bg-white border border-micro-layer-1 rounded-sm p-8 shadow-sm hover:shadow-md transition-all"
                 >
-                  <div className="w-10 h-10 bg-black text-amber-500 rounded-sm flex items-center justify-center mb-6 shadow-brutalist-sm">
+                  <div className="w-10 h-10 bg-black text-blue-500 rounded-sm flex items-center justify-center mb-6 shadow-brutalist-sm">
                     {item.icon}
                   </div>
                   <h3 className="text-xl font-bold tracking-tight text-micro-fg mb-3">
@@ -186,7 +186,7 @@ export default function BadgePage() {
 
           {/* Section: Premium Sponsorships */}
           <section className="mb-16 md:mb-28 bg-coffee-900 p-8 md:p-16 rounded-sm border border-white/5 shadow-2xl relative overflow-hidden text-left">
-            <div className="absolute top-0 right-0 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl -mt-48 -mr-48"></div>
+            <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl -mt-48 -mr-48"></div>
             
             <div className="max-w-3xl mb-12 relative z-10">
               <h2 className="text-2xl md:text-5xl font-bold text-white mb-6 tracking-tight">Choose Your Visibility</h2>
@@ -203,23 +203,23 @@ export default function BadgePage() {
                 <h3 className="text-xl font-bold text-white mb-4">Premium Billboard</h3>
                 <p className="text-sm text-white/40 mb-8 font-medium italic leading-relaxed">The most visible spot on the site. A full-width hero banner appearing above the directory for 30 days.</p>
                 <ul className="text-sm text-white/60 space-y-4 mb-10">
-                  <li className="flex items-center gap-3"><Check className="w-4 h-4 text-amber-500" /> Full-width top banner</li>
-                  <li className="flex items-center gap-3"><Check className="w-4 h-4 text-amber-500" /> 10,000+ monthly views</li>
-                  <li className="flex items-center gap-3"><Check className="w-4 h-4 text-amber-500" /> Custom CTA & Branding</li>
+                  <li className="flex items-center gap-3"><Check className="w-4 h-4 text-blue-500" /> Full-width top banner</li>
+                  <li className="flex items-center gap-3"><Check className="w-4 h-4 text-blue-500" /> 10,000+ monthly views</li>
+                  <li className="flex items-center gap-3"><Check className="w-4 h-4 text-blue-500" /> Custom CTA & Branding</li>
                 </ul>
                 <a 
                   href="https://checkout.dodopayments.com/buy/pdt_0NdjT9bFzYo3W1ZstgIR9?quantity=1"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full py-4 bg-white text-black text-center font-black uppercase tracking-widest text-[11px] rounded-sm hover:bg-amber-500 transition-colors mt-auto shadow-xl"
+                  className="w-full py-4 bg-white text-black text-center font-black uppercase tracking-widest text-[11px] rounded-sm hover:bg-blue-500 transition-colors mt-auto shadow-xl"
                 >
                   Claim Billboard
                 </a>
               </div>
 
               {/* Tier 2: Pinned Slot */}
-              <div className="bg-white/10 border border-white/20 p-8 rounded-sm flex flex-col scale-[1.02] shadow-2xl relative group hover:border-amber-500/30 transition-all">
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-amber-500 text-black text-[8px] font-black px-3 py-1 uppercase tracking-widest rounded-sm">Most Popular</div>
+              <div className="bg-white/10 border border-white/20 p-8 rounded-sm flex flex-col scale-[1.02] shadow-2xl relative group hover:border-blue-500/30 transition-all">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-500 text-black text-[8px] font-black px-3 py-1 uppercase tracking-widest rounded-sm">Most Popular</div>
                 <div className="flex items-center justify-between mb-8">
                   <span className="text-[10px] font-black uppercase tracking-widest text-white/40">Launch Boost</span>
                   <span className="text-2xl font-black text-white">$19<span className="text-xs text-white/30 font-medium lowercase">/30d</span></span>
@@ -227,15 +227,15 @@ export default function BadgePage() {
                 <h3 className="text-xl font-bold text-white mb-4">Pinned Featured Slot</h3>
                 <p className="text-sm text-white/40 mb-8 font-medium italic leading-relaxed">Pin your tool to the top-of-directory grid for 30 days. Only 4 spots available, first-come first-served.</p>
                 <ul className="text-sm text-white/60 space-y-4 mb-10">
-                  <li className="flex items-center gap-3"><Check className="w-4 h-4 text-amber-500" /> Pinned 2x2 Grid Spot</li>
-                  <li className="flex items-center gap-3"><Check className="w-4 h-4 text-amber-500" /> Permanent Dofollow Link</li>
-                  <li className="flex items-center gap-3"><Check className="w-4 h-4 text-amber-500" /> Priority Ordering</li>
+                  <li className="flex items-center gap-3"><Check className="w-4 h-4 text-blue-500" /> Pinned 2x2 Grid Spot</li>
+                  <li className="flex items-center gap-3"><Check className="w-4 h-4 text-blue-500" /> Permanent Dofollow Link</li>
+                  <li className="flex items-center gap-3"><Check className="w-4 h-4 text-blue-500" /> Priority Ordering</li>
                 </ul>
                 <a 
                   href="https://checkout.dodopayments.com/buy/pdt_0NdjTKBElEJQkFQ9aBiwh?quantity=1"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full py-4 bg-amber-500 text-black text-center font-black uppercase tracking-widest text-[11px] rounded-sm hover:bg-white transition-colors mt-auto shadow-xl"
+                  className="w-full py-4 bg-blue-500 text-black text-center font-black uppercase tracking-widest text-[11px] rounded-sm hover:bg-white transition-colors mt-auto shadow-xl"
                 >
                   Buy Featured Slot
                 </a>
@@ -250,9 +250,9 @@ export default function BadgePage() {
                 <h3 className="text-xl font-bold text-white mb-4">Weekly Drop Highlight</h3>
                 <p className="text-sm text-white/40 mb-8 font-medium italic leading-relaxed">Dominate a specific Sunday drop for 7 days. Only 3 spots available, first-come first-served.</p>
                 <ul className="text-sm text-white/60 space-y-4 mb-10">
-                  <li className="flex items-center gap-3"><Check className="w-4 h-4 text-amber-500" /> #1 Spot in Weekly Drop</li>
-                  <li className="flex items-center gap-3"><Check className="w-4 h-4 text-amber-500" /> Highlighted Row Style</li>
-                  <li className="flex items-center gap-3"><Check className="w-4 h-4 text-amber-500" /> Dual-View Pinned Logic</li>
+                  <li className="flex items-center gap-3"><Check className="w-4 h-4 text-blue-500" /> #1 Spot in Weekly Drop</li>
+                  <li className="flex items-center gap-3"><Check className="w-4 h-4 text-blue-500" /> Highlighted Row Style</li>
+                  <li className="flex items-center gap-3"><Check className="w-4 h-4 text-blue-500" /> Dual-View Pinned Logic</li>
                 </ul>
                 <a 
                   href="https://checkout.dodopayments.com/buy/pdt_0NdjTsAfiPncaaDKhzJ79?quantity=1"

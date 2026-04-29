@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { aiTools, AiTool } from '../../lib/ai-tools-data';
 import { adSpots, featuredPlaceholders, AdSpot } from '../../lib/ads-data';
-import { ArrowRight, ChevronDown, List, LayoutGrid, Zap, Star, ExternalLink } from 'lucide-react';
+import { ArrowRight, ChevronDown, List, LayoutGrid, Megaphone, Crown, ExternalLink } from 'lucide-react';
 
 const slugify = (text: string) =>
   text.toLowerCase().trim().replace(/\./g, '-').replace(/\s+/g, '-').replace(/[^\w\-]+/g, '').replace(/\-\-+/g, '-');
@@ -86,7 +86,7 @@ export default function ToolsIndex() {
           <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold tracking-tight mb-4 md:mb-8 leading-[0.9] text-white drop-shadow-md">
             Too many AI tools. <br /><span className="font-instrument font-normal italic lowercase opacity-90 text-white/90">Not enough time.</span>
           </h1>
-          <p className="text-base md:text-xl lg:text-2xl text-white/70 max-w-2xl mx-auto font-medium leading-relaxed mb-12">
+          <p className="text-base md:text-xl lg:text-2xl text-white/70 max-w-2xl mx-auto font-medium leading-relaxed mb-12 text-balance">
             Skip the marketing hype. A weekly shortlist of handpicked tools that solve real work problems.
           </p>
 
@@ -109,43 +109,44 @@ export default function ToolsIndex() {
           </div>
         </div>
 
-        {/* Billboard Ad (Premium Coffee/Gold theme) */}
+        {/* Billboard Ad (Premium Coffee/Blue theme) */}
         {billboardAd && (
-          <div className="max-w-5xl mx-auto mb-12 md:mb-20 px-6">
+          <div className="max-w-5xl mx-auto mb-16 md:mb-28 px-6">
             <a 
               href={billboardAd.link} 
               target={billboardAd.link.startsWith('http') ? "_blank" : "_self"}
               rel="noopener noreferrer"
-              className="group block relative overflow-hidden rounded-sm border border-white/10 bg-coffee-900 backdrop-blur-md p-8 md:p-12 transition-all hover:border-amber-500/30 shadow-2xl"
+              className="group block relative overflow-hidden rounded-sm border border-white/5 bg-coffee-900 backdrop-blur-md p-10 md:p-16 transition-all hover:border-blue-500/20 shadow-2xl"
             >
-              <div className="absolute top-0 right-0 bg-amber-500 text-black text-[9px] font-black px-4 py-1 uppercase tracking-widest">Sponsored Spotlight</div>
-              <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 relative z-10">
+              <div className="absolute top-0 right-0 bg-blue-600 text-white text-[9px] font-black px-5 py-1.5 uppercase tracking-[0.2em] shadow-lg">Partner Spotlight</div>
+              <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16 relative z-10">
                 {billboardAd.logo ? (
-                  <div className="w-20 h-20 md:w-32 md:h-32 bg-white rounded-sm flex items-center justify-center flex-shrink-0 shadow-2xl overflow-hidden p-4">
+                  <div className="w-24 h-24 md:w-40 md:h-40 bg-white rounded-sm flex items-center justify-center flex-shrink-0 shadow-2xl overflow-hidden p-6">
                     <Image 
                       src={billboardAd.logo} 
                       alt={billboardAd.title} 
-                      width={128} 
-                      height={128} 
+                      width={160} 
+                      height={160} 
                       className="object-contain"
                       unoptimized
                     />
                   </div>
                 ) : (
-                  <div className="w-20 h-20 md:w-32 md:h-32 bg-white/5 border border-white/10 rounded-sm flex items-center justify-center flex-shrink-0">
-                    <Zap className="w-10 h-10 md:w-16 md:h-16 text-white animate-pulse" />
+                  <div className="w-24 h-24 md:w-32 md:h-32 bg-white/5 border border-white/10 rounded-sm flex items-center justify-center flex-shrink-0">
+                    <Megaphone className="w-10 h-10 md:w-16 md:h-16 text-blue-400 animate-pulse" />
                   </div>
                 )}
                 <div className="text-center md:text-left flex-1">
-                  <h3 className="text-2xl md:text-4xl font-bold text-white mb-4 group-hover:text-amber-400 transition-colors tracking-tight">{billboardAd.title}</h3>
-                  <p className="text-base md:text-lg text-white/50 font-medium leading-relaxed max-w-3xl">
+                  <h3 className="text-3xl md:text-5xl font-bold text-white mb-6 group-hover:text-blue-400 transition-colors tracking-tight leading-[1.1]">{billboardAd.title}</h3>
+                  <p className="text-lg md:text-xl text-white/50 font-medium leading-relaxed max-w-3xl">
                     {billboardAd.description}
                   </p>
                 </div>
-                <div className="bg-amber-500 text-black px-8 py-4 rounded-sm font-black uppercase tracking-widest text-[11px] hover:bg-white transition-colors shadow-xl">
+                <div className="bg-blue-600 text-white px-10 py-5 rounded-sm font-black uppercase tracking-widest text-[12px] hover:bg-white hover:text-black transition-all shadow-2xl group-hover:scale-105 border border-blue-500">
                   {billboardAd.ctaText}
                 </div>
               </div>
+              <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-600/5 rounded-full blur-[120px] -mb-48 -mr-48"></div>
             </a>
           </div>
         )}
@@ -154,13 +155,13 @@ export default function ToolsIndex() {
         <div className="glass-sheet rounded-sm p-4 md:p-16 lg:p-24 overflow-hidden">
           
           {/* Pinned Featured Grid (2x2) */}
-          <div className="mb-16 md:mb-24">
-            <div className="flex items-center gap-4 mb-10">
-              <Star className="w-4 h-4 text-amber-500 fill-amber-500" />
-              <h2 className="text-[12px] font-black uppercase tracking-[0.3em] text-micro-muted">Top of Directory</h2>
+          <div className="mb-16 md:mb-32">
+            <div className="flex items-center gap-4 mb-14">
+              <Crown className="w-5 h-5 text-blue-500 fill-blue-500/20" />
+              <h2 className="text-[12px] font-black uppercase tracking-[0.4em] text-micro-muted">Featured Selection</h2>
               <div className="h-[1px] flex-grow bg-micro-layer-1"></div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
               {featuredPlaceholders.map((ad) => (
                 <FeaturedCard key={ad.id} ad={ad} />
               ))}
@@ -243,7 +244,7 @@ export default function ToolsIndex() {
                                 return (
                                   <React.Fragment key={tool.name}>
                                     <Link href={`/tools/${slugify(tool.name)}`}>
-                                      <div className={`${isFeaturedInDrop ? 'bg-coffee-50 border-l-4 border-l-amber-500 shadow-inner-soft' : ''}`}>
+                                      <div className={`${isFeaturedInDrop ? 'bg-coffee-50 border-l-4 border-l-blue-600 shadow-inner-soft' : ''}`}>
                                         <ToolDataRow 
                                           tool={tool} 
                                           isDirectory={true} 
@@ -260,21 +261,21 @@ export default function ToolsIndex() {
                                         rel="noopener noreferrer"
                                         className="block"
                                       >
-                                        <div className="group flex flex-col md:flex-row md:items-center gap-6 py-10 px-8 bg-coffee-50/50 border border-coffee-200 border-dashed hover:border-amber-500/40 transition-all cursor-pointer rounded-sm mb-4 relative overflow-hidden">
-                                          <div className="absolute top-0 right-0 bg-amber-100 text-amber-800 text-[7px] font-black px-2 py-0.5 uppercase tracking-widest rounded-bl-sm border-l border-b border-amber-200">Open Slot</div>
+                                        <div className="group flex flex-col md:flex-row md:items-center gap-6 py-12 px-8 bg-coffee-50/50 border border-coffee-200 border-dashed hover:border-blue-500/40 transition-all cursor-pointer rounded-sm mb-4 relative overflow-hidden shadow-sm">
+                                          <div className="absolute top-0 right-0 bg-blue-50 text-blue-800 text-[7.5px] font-black px-3 py-1 uppercase tracking-widest rounded-bl-sm border-l border-b border-blue-100">Featured Slot</div>
                                           <div className="flex items-center gap-6 flex-shrink-0 md:w-64">
-                                            <div className="w-14 h-14 rounded-sm border border-coffee-200 bg-white flex items-center justify-center text-amber-500/40 font-bold text-2xl shadow-inner-soft">?</div>
+                                            <div className="w-14 h-14 rounded-sm border border-coffee-200 bg-white flex items-center justify-center text-blue-500/40 font-bold text-2xl shadow-inner-soft">?</div>
                                             <div className="min-w-0">
-                                              <h3 className="text-lg font-bold tracking-tight text-coffee-800 italic group-hover:text-amber-700 transition-colors">Featured Slot</h3>
-                                              <span className="text-[10px] font-black uppercase tracking-[0.1em] text-amber-600/60">Pin to Top ($9)</span>
+                                              <h3 className="text-lg font-bold tracking-tight text-coffee-800 italic group-hover:text-blue-700 transition-colors">Your Tool Here</h3>
+                                              <span className="text-[10px] font-black uppercase tracking-[0.1em] text-blue-600/60">Pin to Top ($9)</span>
                                             </div>
                                           </div>
                                           <div className="flex-1 min-w-0">
-                                            <p className="text-[15px] text-coffee-600/60 font-medium italic">Pin your tool to the top of this week's drop for maximum visibility.</p>
+                                            <p className="text-[15px] text-coffee-600/60 font-medium italic leading-relaxed">Dominate this week's drop. Pin your tool to the very top for maximum community visibility.</p>
                                           </div>
                                           <div className="flex items-center justify-between md:justify-end gap-10 flex-shrink-0 md:w-48">
-                                            <span className="text-[10px] font-black uppercase tracking-widest text-amber-700 group-hover:underline decoration-2 underline-offset-4">Secure for $9</span>
-                                            <ArrowRight className="w-5 h-5 text-amber-500 group-hover:translate-x-1 transition-all" />
+                                            <span className="text-[10px] font-black uppercase tracking-widest text-blue-700 group-hover:underline decoration-2 underline-offset-8 transition-all">Secure for $9</span>
+                                            <ArrowRight className="w-5 h-5 text-blue-500 group-hover:translate-x-1 transition-all" />
                                           </div>
                                         </div>
                                       </a>
@@ -285,13 +286,14 @@ export default function ToolsIndex() {
                             </div>
                           </div>
                           {inlineAds.find(ad => ad.position === index) && (
-                            <div className="mb-16 md:mb-28 px-4 md:px-0">
+                            <div className="mb-16 md:mb-32 px-4 md:px-0">
                               <InlineAdBanner ad={inlineAds.find(ad => ad.position === index)!} />
                             </div>
                           )}
                         </React.Fragment>
                       ))}
                       
+                      {/* Show More Weeks */}
                       {hasMoreWeeks && !showAllWeeks && (
                         <button
                           onClick={() => setShowAllWeeks(true)}
@@ -302,7 +304,7 @@ export default function ToolsIndex() {
                       )}
                     </>
                   ) : (
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                       {alphabeticalTools.map((tool) => {
                         const isFeatured = chronologicalTools.slice(0, 2).map(t => t.name).includes(tool.name);
                         return (
@@ -328,37 +330,37 @@ function FeaturedCard({ ad }: { ad: AdSpot }) {
       href={ad.link} 
       target={ad.link.startsWith('http') ? "_blank" : "_self"}
       rel="noopener noreferrer"
-      className={`group relative flex flex-col p-10 rounded-sm border transition-all ${
+      className={`group relative flex flex-col p-12 rounded-sm border transition-all ${
         ad.isPlaceholder 
-        ? 'bg-white border-coffee-200 border-dashed hover:border-amber-500/20' 
-        : 'bg-coffee-50 border-amber-500/20 shadow-sm hover:shadow-xl hover:border-amber-500/40'
+        ? 'bg-white border-coffee-200 border-dashed hover:border-blue-500/20' 
+        : 'bg-coffee-50 border-blue-500/20 shadow-sm hover:shadow-2xl hover:border-blue-500/40'
       }`}
     >
       {!ad.isPlaceholder && (
-        <div className="flex items-center justify-between mb-8">
-          <div className="w-12 h-12 bg-white rounded-sm border border-coffee-200 p-2 overflow-hidden flex items-center justify-center shadow-sm">
+        <div className="flex items-center justify-between mb-10">
+          <div className="w-14 h-14 bg-white rounded-sm border border-coffee-200 p-2.5 overflow-hidden flex items-center justify-center shadow-md">
             {ad.logo ? (
-              <Image src={ad.logo} alt={ad.title} width={32} height={32} className="object-contain" unoptimized />
+              <Image src={ad.logo} alt={ad.title} width={40} height={40} className="object-contain" unoptimized />
             ) : (
               <div className="w-full h-full bg-coffee-100 flex items-center justify-center text-coffee-800 font-bold">{ad.title[0]}</div>
             )}
           </div>
-          <div className="bg-amber-100 text-amber-800 text-[8px] font-black px-2 py-0.5 uppercase tracking-widest rounded-sm border border-amber-200">Featured Spot</div>
+          <div className="bg-blue-600 text-white text-[8.5px] font-black px-3 py-1 uppercase tracking-widest rounded-sm shadow-lg">Featured Selection</div>
         </div>
       )}
       
-      <h3 className={`text-xl font-bold mb-3 flex items-center gap-3 tracking-tight ${ad.isPlaceholder ? 'text-coffee-400' : 'text-coffee-900'}`}>
+      <h3 className={`text-2xl font-bold mb-4 flex items-center gap-3 tracking-tight ${ad.isPlaceholder ? 'text-coffee-400' : 'text-coffee-900'}`}>
         {ad.title}
-        {!ad.isPlaceholder && <ExternalLink className="w-4 h-4 text-coffee-400 group-hover:text-amber-600 transition-colors" />}
+        {!ad.isPlaceholder && <ExternalLink className="w-4 h-4 text-coffee-400 group-hover:text-blue-600 transition-colors" />}
       </h3>
-      <p className={`text-[15px] font-medium leading-relaxed mb-8 ${ad.isPlaceholder ? 'text-coffee-400/60 italic' : 'text-coffee-700/80'}`}>
+      <p className={`text-[16px] font-medium leading-relaxed mb-10 ${ad.isPlaceholder ? 'text-coffee-400/60 italic' : 'text-coffee-700/80'}`}>
         {ad.description}
       </p>
-      <div className="mt-auto pt-6 border-t border-coffee-100 flex items-center justify-between">
-        <span className={`text-[10px] font-black uppercase tracking-widest transition-colors ${ad.isPlaceholder ? 'text-coffee-300' : 'text-coffee-900 group-hover:text-amber-700'}`}>
+      <div className="mt-auto pt-8 border-t border-coffee-100 flex items-center justify-between">
+        <span className={`text-[11px] font-black uppercase tracking-widest transition-colors ${ad.isPlaceholder ? 'text-coffee-300' : 'text-coffee-900 group-hover:text-blue-700'}`}>
           {ad.isPlaceholder ? 'Claim This Spot' : 'Explore Tool'}
         </span>
-        <ArrowRight className={`w-4 h-4 transition-transform group-hover:translate-x-1 ${ad.isPlaceholder ? 'text-coffee-300' : 'text-amber-500'}`} />
+        <ArrowRight className={`w-4 h-4 transition-transform group-hover:translate-x-2 ${ad.isPlaceholder ? 'text-coffee-300' : 'text-blue-600'}`} />
       </div>
     </a>
   );
@@ -370,31 +372,31 @@ function InlineAdBanner({ ad }: { ad: AdSpot }) {
       href={ad.link} 
       target={ad.link.startsWith('http') ? "_blank" : "_self"}
       rel="noopener noreferrer"
-      className={`group flex flex-col md:flex-row items-center justify-between gap-8 p-10 rounded-sm border transition-all ${
+      className={`group flex flex-col md:flex-row items-center justify-between gap-10 p-12 rounded-sm border transition-all ${
         ad.isPlaceholder
-        ? 'bg-white border-coffee-100 border-dashed text-center md:text-left hover:border-amber-500/20'
-        : 'bg-coffee-900 border-white/10 text-white hover:shadow-2xl'
+        ? 'bg-white border-coffee-100 border-dashed text-center md:text-left hover:border-blue-500/20 shadow-sm'
+        : 'bg-coffee-900 border-white/10 text-white hover:shadow-2xl hover:border-blue-500/20'
       }`}
     >
-      <div className="flex items-center gap-8 flex-1">
+      <div className="flex items-center gap-10 flex-1">
         {!ad.isPlaceholder && ad.logo && (
-          <div className="w-16 h-16 bg-white rounded-sm p-3 flex-shrink-0 shadow-lg hidden md:flex items-center justify-center overflow-hidden">
-            <Image src={ad.logo} alt={ad.title} width={48} height={48} className="object-contain" unoptimized />
+          <div className="w-20 h-20 bg-white rounded-sm p-4 flex-shrink-0 shadow-2xl hidden md:flex items-center justify-center overflow-hidden">
+            <Image src={ad.logo} alt={ad.title} width={64} height={64} className="object-contain" unoptimized />
           </div>
         )}
         <div>
-          <h3 className={`text-xl font-bold mb-2 tracking-tight ${ad.isPlaceholder ? 'text-coffee-300' : 'text-white'}`}>
+          <h3 className={`text-2xl font-bold mb-3 tracking-tight ${ad.isPlaceholder ? 'text-coffee-300' : 'text-white'}`}>
             {ad.title}
           </h3>
-          <p className={`text-base font-medium ${ad.isPlaceholder ? 'text-coffee-300/40' : 'text-white/50'}`}>
+          <p className={`text-lg font-medium leading-relaxed ${ad.isPlaceholder ? 'text-coffee-300/40' : 'text-white/50'}`}>
             {ad.description}
           </p>
         </div>
       </div>
-      <div className={`px-8 py-4 rounded-sm font-black uppercase tracking-widest text-[10px] transition-all whitespace-nowrap shadow-xl ${
+      <div className={`px-10 py-5 rounded-sm font-black uppercase tracking-widest text-[11px] transition-all whitespace-nowrap shadow-2xl ${
         ad.isPlaceholder
-        ? 'bg-white text-coffee-400 border border-coffee-200 group-hover:border-amber-500 group-hover:text-amber-700'
-        : 'bg-amber-500 text-black hover:bg-white'
+        ? 'bg-white text-coffee-400 border border-coffee-200 group-hover:border-blue-500 group-hover:text-blue-700'
+        : 'bg-blue-600 text-white hover:bg-white hover:text-black border border-blue-500'
       }`}>
         {ad.ctaText || 'Learn More'}
       </div>
@@ -411,41 +413,41 @@ function ToolTile({ tool, isFeatured }: { tool: AiTool, isFeatured?: boolean }) 
   const [imgSrc, setImgSrc] = useState(tool.image || fallbackLogo);
 
   return (
-    <div className={`group flex flex-col h-full rounded-sm p-6 transition-all cursor-pointer border ${isFeatured ? 'bg-coffee-50 border-amber-500/30 shadow-xl z-10' : 'bg-white border-micro-layer-1 hover:border-micro-fg hover:shadow-micro'}`}>
-      <div className="flex items-center gap-4 mb-4 relative">
+    <div className={`group flex flex-col h-full rounded-sm p-8 transition-all cursor-pointer border ${isFeatured ? 'bg-coffee-50 border-blue-500/30 shadow-xl z-10' : 'bg-white border-micro-layer-1 hover:border-micro-fg hover:shadow-micro'}`}>
+      <div className="flex items-center gap-5 mb-6 relative">
         {isFeatured && (
-          <div className="absolute -top-10 -left-2 bg-amber-500 text-black text-[7px] font-black px-1.5 py-0.5 uppercase tracking-widest rounded-sm shadow-sm">Featured</div>
+          <div className="absolute -top-12 -left-2 bg-blue-600 text-white text-[7.5px] font-black px-2 py-0.5 uppercase tracking-widest rounded-sm shadow-lg">Featured Selection</div>
         )}
-        <div className={`w-12 h-12 rounded-sm border bg-white flex-shrink-0 flex items-center justify-center p-2 overflow-hidden transition-colors shadow-sm ${isFeatured ? 'border-amber-500/30' : 'border-micro-layer-1 group-hover:border-micro-fg'}`}>
+        <div className={`w-14 h-14 rounded-sm border bg-white flex-shrink-0 flex items-center justify-center p-2.5 overflow-hidden transition-colors shadow-sm ${isFeatured ? 'border-blue-500/30' : 'border-micro-layer-1 group-hover:border-micro-fg'}`}>
           <Image
             src={imgSrc}
             alt={tool.name}
-            width={44}
-            height={44}
+            width={56}
+            height={56}
             className="object-contain"
             onError={() => setImgSrc(fallbackLogo)}
             unoptimized
           />
         </div>
         <div className="min-w-0 flex-1">
-          <h3 className={`text-base font-bold tracking-tight group-hover:underline decoration-2 underline-offset-4 truncate ${isFeatured ? 'text-amber-950' : 'text-micro-fg'}`}>
+          <h3 className={`text-lg font-bold tracking-tight group-hover:underline decoration-2 underline-offset-4 truncate ${isFeatured ? 'text-blue-950' : 'text-micro-fg'}`}>
             {tool.name}
           </h3>
-          <span className={`text-[10px] font-bold uppercase tracking-[0.1em] ${isFeatured ? 'text-amber-700/60' : 'text-micro-muted'}`}>
+          <span className={`text-[11px] font-bold uppercase tracking-[0.1em] ${isFeatured ? 'text-blue-700/60' : 'text-micro-muted'}`}>
             {tool.category}
           </span>
         </div>
       </div>
 
-      <p className={`text-[13.5px] font-medium leading-relaxed line-clamp-2 flex-1 mb-5 ${isFeatured ? 'text-amber-900/70' : 'text-micro-muted'}`}>
+      <p className={`text-[15px] font-medium leading-relaxed line-clamp-2 flex-1 mb-6 ${isFeatured ? 'text-blue-950/70' : 'text-micro-muted'}`}>
         {tool.description}
       </p>
 
-      <div className="flex items-center justify-between mt-auto pt-4 border-t border-micro-layer-1">
-        <span className={`text-[10px] font-bold w-20 text-center py-1 rounded-sm flex-shrink-0 ${isFeatured ? 'bg-amber-500 text-black shadow-sm' : 'bg-micro-layer-1 text-micro-fg'}`}>
+      <div className="flex items-center justify-between mt-auto pt-5 border-t border-micro-layer-1">
+        <span className={`text-[10px] font-bold w-22 text-center py-1.5 rounded-sm flex-shrink-0 ${isFeatured ? 'bg-blue-600 text-white shadow-md' : 'bg-micro-layer-1 text-micro-fg'}`}>
           {tool.tags.price}
         </span>
-        <span className={`text-[10px] font-bold uppercase tracking-widest ${isFeatured ? 'text-amber-600' : 'text-micro-muted'}`}>
+        <span className={`text-[10px] font-bold uppercase tracking-widest ${isFeatured ? 'text-blue-600' : 'text-micro-muted'}`}>
           {hostname}
         </span>
       </div>
@@ -463,19 +465,19 @@ function ToolDataRow({ tool, isDirectory, isFeatured }: { tool: AiTool, isDirect
 
   return (
     <div
-      className={`group flex flex-col md:flex-row md:items-center gap-6 py-8 px-6 -mx-6 transition-all cursor-pointer rounded-sm border border-transparent ${isFeatured ? 'bg-coffee-50/50' : 'hover:bg-white hover:border-micro-layer-1 hover:shadow-soft'}`}
+      className={`group flex flex-col md:flex-row md:items-center gap-8 py-10 px-8 -mx-8 transition-all cursor-pointer rounded-sm border border-transparent ${isFeatured ? 'bg-coffee-50/50' : 'hover:bg-white hover:border-micro-layer-1 hover:shadow-soft'}`}
     >
       {/* Logo & Name Mobile Group */}
-      <div className="flex items-center gap-6 flex-shrink-0 md:w-64 relative">
+      <div className="flex items-center gap-8 flex-shrink-0 md:w-72 relative">
         {isFeatured && (
-          <div className="absolute -top-3 -left-3 bg-amber-500 text-black text-[7px] font-black px-1.5 py-0.5 uppercase tracking-widest rounded-sm z-10 shadow-sm">Featured</div>
+          <div className="absolute -top-3 -left-3 bg-blue-600 text-white text-[7.5px] font-black px-2 py-0.5 uppercase tracking-widest rounded-sm z-10 shadow-lg">Featured</div>
         )}
-        <div className={`w-14 h-14 rounded-sm border bg-white flex-shrink-0 flex items-center justify-center p-2.5 overflow-hidden transition-colors shadow-sm ${isFeatured ? 'border-amber-500/40' : 'border-micro-layer-1 group-hover:border-micro-fg'}`}>
+        <div className={`w-16 h-16 rounded-sm border bg-white flex-shrink-0 flex items-center justify-center p-3 overflow-hidden transition-colors shadow-sm ${isFeatured ? 'border-blue-500/40' : 'border-micro-layer-1 group-hover:border-micro-fg'}`}>
           <Image
             src={imgSrc}
             alt={tool.name}
-            width={56}
-            height={56}
+            width={64}
+            height={64}
             className="object-contain"
             onError={() => setImgSrc(fallbackLogo)}
             unoptimized
@@ -483,10 +485,10 @@ function ToolDataRow({ tool, isDirectory, isFeatured }: { tool: AiTool, isDirect
         </div>
 
         <div className="min-w-0">
-          <h3 className={`text-lg font-bold tracking-tight group-hover:underline decoration-2 underline-offset-4 ${isFeatured ? 'text-amber-950' : 'text-micro-fg'}`}>
+          <h3 className={`text-xl font-bold tracking-tight group-hover:underline decoration-2 underline-offset-4 ${isFeatured ? 'text-blue-950' : 'text-micro-fg'}`}>
             {tool.name}
           </h3>
-          <span className={`text-[10px] font-bold uppercase tracking-[0.1em] ${isFeatured ? 'text-amber-700/60' : 'text-micro-muted'}`}>
+          <span className={`text-[11px] font-bold uppercase tracking-[0.1em] ${isFeatured ? 'text-blue-700/60' : 'text-micro-muted'}`}>
             {tool.category}
           </span>
         </div>
@@ -494,17 +496,17 @@ function ToolDataRow({ tool, isDirectory, isFeatured }: { tool: AiTool, isDirect
 
       {/* Description */}
       <div className="flex-1 min-w-0">
-        <p className={`text-[16px] font-medium leading-relaxed ${isDirectory ? 'truncate' : ''} ${isFeatured ? 'text-amber-950/70' : 'text-micro-muted'}`}>
+        <p className={`text-[17px] font-medium leading-relaxed ${isDirectory ? 'truncate' : ''} ${isFeatured ? 'text-blue-950/70' : 'text-micro-muted'}`}>
           {tool.description}
         </p>
       </div>
 
       {/* Pricing & Link */}
-      <div className="flex items-center justify-between md:justify-end gap-10 flex-shrink-0 md:w-48">
-        <span className={`text-xs font-bold w-24 text-center py-1.5 rounded-sm flex-shrink-0 ${isFeatured ? 'bg-amber-500 text-black shadow-sm' : 'bg-micro-layer-1 text-micro-fg'}`}>
+      <div className="flex items-center justify-between md:justify-end gap-12 flex-shrink-0 md:w-56">
+        <span className={`text-xs font-bold w-28 text-center py-2 rounded-sm flex-shrink-0 ${isFeatured ? 'bg-blue-600 text-white shadow-md' : 'bg-micro-layer-1 text-micro-fg'}`}>
           {tool.tags.price}
         </span>
-        <ArrowRight className={`w-5 h-5 group-hover:translate-x-1 transition-all ${isFeatured ? 'text-amber-600' : 'text-micro-muted group-hover:text-micro-fg'}`} />
+        <ArrowRight className={`w-5 h-5 group-hover:translate-x-2 transition-all ${isFeatured ? 'text-blue-600' : 'text-micro-muted group-hover:text-micro-fg'}`} />
       </div>
     </div>
   );
