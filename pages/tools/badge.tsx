@@ -75,7 +75,7 @@ export default function BadgePage() {
           </Link>
           <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold tracking-tight mb-4 md:mb-8 leading-[0.9] text-white drop-shadow-md">
             Get discovered. <br />
-            <span className="font-instrument font-normal italic lowercase opacity-90 text-terminal-lime">Fast-tracked.</span>
+            <span className="font-instrument font-normal italic lowercase opacity-90 text-emerald-400">Fast-tracked.</span>
           </h1>
           <p className="text-base md:text-xl lg:text-2xl text-white/80 max-w-2xl mx-auto font-medium leading-relaxed">
             Makers who embed the badge get priority review, a permanent SEO backlink, and a feature in our next Weekly Drop.
@@ -170,7 +170,7 @@ export default function BadgePage() {
                   key={i}
                   className="bg-white/50 border border-white/30 rounded-sm p-8 shadow-sm"
                 >
-                  <div className="w-10 h-10 bg-black text-terminal-lime rounded-sm flex items-center justify-center mb-6">
+                  <div className="w-10 h-10 bg-black text-emerald-400 rounded-sm flex items-center justify-center mb-6">
                     {item.icon}
                   </div>
                   <h3 className="text-xl font-bold tracking-tight text-micro-fg mb-3">
@@ -185,39 +185,83 @@ export default function BadgePage() {
           </section>
 
           {/* Section: Premium Sponsorships */}
-          <section className="mb-16 md:mb-28 bg-black p-8 md:p-16 rounded-sm border border-terminal-lime/30">
-            <div className="max-w-3xl mb-12">
-              <h2 className="text-2xl md:text-4xl font-bold text-white mb-4">Want maximum visibility?</h2>
-              <p className="text-white/60 text-lg font-medium">Skip the queue and dominate the directory with our premium ad placements.</p>
+          <section className="mb-16 md:mb-28 bg-black p-8 md:p-16 rounded-sm border border-emerald-500/30 shadow-2xl relative overflow-hidden text-left">
+            <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl -mt-48 -mr-48"></div>
+            
+            <div className="max-w-3xl mb-12 relative z-10">
+              <h2 className="text-2xl md:text-5xl font-bold text-white mb-6 tracking-tight">Choose Your Visibility</h2>
+              <p className="text-white/60 text-lg font-medium">Skip the queue and dominate the directory with our tiered sponsorship options. All paid slots are first-come, first-served.</p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white/5 border border-white/10 p-8 rounded-sm">
-                <div className="flex items-center justify-between mb-6">
-                  <span className="text-[10px] font-black uppercase tracking-widest text-terminal-lime">Most Visible</span>
-                  <span className="text-xl font-black text-white">$49/mo</span>
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 relative z-10">
+              {/* Tier 1: Billboard */}
+              <div className="bg-white/5 border border-white/10 p-8 rounded-sm flex flex-col group hover:border-emerald-500/40 transition-all">
+                <div className="flex items-center justify-between mb-8">
+                  <span className="text-[10px] font-black uppercase tracking-widest text-emerald-400">Total Dominance</span>
+                  <span className="text-2xl font-black text-white">$29<span className="text-xs text-white/30 font-medium lowercase">/30d</span></span>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">Premium Billboard</h3>
-                <ul className="text-sm text-white/50 space-y-3 mb-8">
-                  <li className="flex items-center gap-2"><Check className="w-3 h-3 text-terminal-lime" /> Full-width top banner</li>
-                  <li className="flex items-center gap-2"><Check className="w-3 h-3 text-terminal-lime" /> Custom CTA & Visuals</li>
-                  <li className="flex items-center gap-2"><Check className="w-3 h-3 text-terminal-lime" /> 10,000+ monthly impressions</li>
+                <h3 className="text-xl font-bold text-white mb-4">Premium Billboard</h3>
+                <p className="text-sm text-white/40 mb-8 font-medium">The most visible spot on the site. A full-width hero banner appearing above the directory on all devices for 30 days.</p>
+                <ul className="text-sm text-white/50 space-y-4 mb-10">
+                  <li className="flex items-center gap-3"><ShieldCheck className="w-4 h-4 text-emerald-400" /> Full-width top banner</li>
+                  <li className="flex items-center gap-3"><ShieldCheck className="w-4 h-4 text-emerald-400" /> 10,000+ monthly views</li>
+                  <li className="flex items-center gap-3"><ShieldCheck className="w-4 h-4 text-emerald-400" /> Custom CTA & Branding</li>
                 </ul>
-                <button className="w-full py-3 bg-terminal-lime text-black font-black uppercase tracking-widest text-[11px] rounded-sm hover:scale-[1.02] transition-transform">Claim Billboard</button>
+                <a 
+                  href="https://checkout.dodopayments.com/buy/pdt_0NdjT9bFzYo3W1ZstgIR9?quantity=1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-4 bg-emerald-500 text-black text-center font-black uppercase tracking-widest text-[11px] rounded-sm hover:bg-white transition-colors mt-auto"
+                >
+                  Claim Billboard
+                </a>
               </div>
 
-              <div className="bg-white/5 border border-white/10 p-8 rounded-sm">
-                <div className="flex items-center justify-between mb-6">
-                  <span className="text-[10px] font-black uppercase tracking-widest text-white/40">Best ROI</span>
-                  <span className="text-xl font-black text-white">$19/14d</span>
+              {/* Tier 2: Pinned Slot */}
+              <div className="bg-white/5 border border-emerald-500/30 p-8 rounded-sm flex flex-col scale-[1.02] shadow-2xl relative group hover:border-emerald-500/60 transition-all">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-emerald-500 text-black text-[8px] font-black px-3 py-1 uppercase tracking-widest rounded-sm">Most Popular</div>
+                <div className="flex items-center justify-between mb-8">
+                  <span className="text-[10px] font-black uppercase tracking-widest text-white/40">Launch Boost</span>
+                  <span className="text-2xl font-black text-white">$19<span className="text-xs text-white/30 font-medium lowercase">/30d</span></span>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">Pinned Featured Slot</h3>
-                <ul className="text-sm text-white/50 space-y-3 mb-8">
-                  <li className="flex items-center gap-2"><Check className="w-3 h-3 text-terminal-lime" /> Pinned to Top of Directory</li>
-                  <li className="flex items-center gap-2"><Check className="w-3 h-3 text-terminal-lime" /> Distinct "Featured" styling</li>
-                  <li className="flex items-center gap-2"><Check className="w-3 h-3 text-terminal-lime" /> Permanent Dofollow Link</li>
+                <h3 className="text-xl font-bold text-white mb-4">Pinned Featured Slot</h3>
+                <p className="text-sm text-white/40 mb-8 font-medium">Pin your tool to the top-of-directory grid for 30 days. Only 4 spots available, first-come first-served.</p>
+                <ul className="text-sm text-white/50 space-y-4 mb-10">
+                  <li className="flex items-center gap-3"><ShieldCheck className="w-4 h-4 text-emerald-400" /> Pinned 2x2 Grid Spot</li>
+                  <li className="flex items-center gap-3"><ShieldCheck className="w-4 h-4 text-emerald-400" /> Permanent Dofollow Link</li>
+                  <li className="flex items-center gap-3"><ShieldCheck className="w-4 h-4 text-emerald-400" /> Priority Ordering</li>
                 </ul>
-                <button className="w-full py-3 bg-white text-black font-black uppercase tracking-widest text-[11px] rounded-sm hover:scale-[1.02] transition-transform">Buy Featured Slot</button>
+                <a 
+                  href="https://checkout.dodopayments.com/buy/pdt_0NdjTKBElEJQkFQ9aBiwh?quantity=1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-4 bg-white text-black text-center font-black uppercase tracking-widest text-[11px] rounded-sm hover:bg-emerald-500 transition-colors mt-auto"
+                >
+                  Buy Featured Slot
+                </a>
+              </div>
+
+              {/* Tier 3: Weekly Drop Highlight */}
+              <div className="bg-white/5 border border-white/10 p-8 rounded-sm flex flex-col group hover:border-emerald-500/40 transition-all">
+                <div className="flex items-center justify-between mb-8">
+                  <span className="text-[10px] font-black uppercase tracking-widest text-white/30">Budget Friendly</span>
+                  <span className="text-2xl font-black text-white">$9<span className="text-xs text-white/30 font-medium lowercase">/7d</span></span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">Weekly Drop Highlight</h3>
+                <p className="text-sm text-white/40 mb-8 font-medium">Dominate a specific Sunday drop for 7 days. Only 3 spots available, first-come first-served.</p>
+                <ul className="text-sm text-white/50 space-y-4 mb-10">
+                  <li className="flex items-center gap-3"><ShieldCheck className="w-4 h-4 text-emerald-400" /> #1 Spot in Weekly Drop</li>
+                  <li className="flex items-center gap-3"><ShieldCheck className="w-4 h-4 text-emerald-400" /> Highlighted Row Style</li>
+                  <li className="flex items-center gap-3"><ShieldCheck className="w-4 h-4 text-emerald-400" /> Dual-View Pinned Logic</li>
+                </ul>
+                <a 
+                  href="https://checkout.dodopayments.com/buy/pdt_0NdjTsAfiPncaaDKhzJ79?quantity=1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-4 border border-white/20 text-white text-center font-black uppercase tracking-widest text-[11px] rounded-sm hover:bg-white hover:text-black transition-colors mt-auto"
+                >
+                  Secure Spot
+                </a>
               </div>
             </div>
           </section>
