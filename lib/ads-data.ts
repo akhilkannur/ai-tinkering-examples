@@ -19,7 +19,7 @@ export const adSpots: AdSpot[] = [
     title: 'ProductPhoto.pro — Premium AI Product Renders',
     description: 'Stop paying for expensive studio shoots. Access a curated library of 100+ professional prompts for studio-quality lighting, textures, and environments. Designed for DTC founders and creative directors using Midjourney.',
     link: 'https://productphoto.pro',
-    logo: 'https://productphoto.pro/favicon.ico',
+    logo: 'https://www.google.com/s2/favicons?domain=productphoto.pro&sz=128',
     ctaText: 'Browse Prompts',
     active: true
   },
@@ -29,7 +29,7 @@ export const adSpots: AdSpot[] = [
     title: 'Build Agentic Sales Machines with SalesTools.club',
     description: 'The LEGO blocks for your AI GTM strategy. Get direct access to Sales APIs, MCP servers, and pre-configured skills to automate lead scoring, enrichment, and outreach.',
     link: 'https://salestools.club',
-    logo: 'https://salestools.club/favicon.ico',
+    logo: 'https://www.google.com/s2/favicons?domain=salestools.club&sz=128',
     ctaText: 'Get the APIs',
     active: true,
     position: 0 
@@ -39,7 +39,7 @@ export const adSpots: AdSpot[] = [
     type: 'inline',
     title: 'Your Tool Featured Here',
     description: 'Reach 10,000+ AI operators, RevOps leads, and developers building the future of work. High-visibility native placement.',
-    link: '/tools/badge',
+    link: 'https://checkout.dodopayments.com/buy/pdt_0NdjTsAfiPncaaDKhzJ79?quantity=1',
     ctaText: 'View Sponsorships',
     active: true,
     isPlaceholder: true,
@@ -54,7 +54,7 @@ export const featuredPlaceholders: AdSpot[] = [
     title: 'SalesTools.club',
     description: 'Curated infrastructure for AI sales agents: APIs, MCP servers, and Skills for automated GTM.',
     link: 'https://salestools.club',
-    logo: 'https://salestools.club/favicon.ico',
+    logo: 'https://www.google.com/s2/favicons?domain=salestools.club&sz=128',
     active: true
   },
   {
