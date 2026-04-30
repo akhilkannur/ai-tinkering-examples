@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useRef, useEffect, useCallback } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -33,6 +33,46 @@ export default function ToolsIndex() {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [showAllWeeks, setShowAllWeeks] = useState(false);
   const [viewMode, setViewMode] = useState<'drops' | 'directory'>('drops');
+  const [activeWeek, setActiveWeek] = useState<string | null>(null);
+  const weekRefs = useRef<Map<string, HTMLDivElement>>(new Map());
+  const weekNavRef = useRef<HTMLDivElement>(null);
+  const isScrollingTo = useRef(false);
+
+  const scrollToWeek = useCallback((label: string) => {
+    const el = weekRefs.current.get(label);
+    if (!el) return;
+    isScrollingTo.current = true;
+    setActiveWeek(label);
+    const offset = 160;
+    const top = el.getBoundingClientRect().top + window.scrollY - offset;
+    window.scrollTo({ top, behavior: 'smooth' });
+    setTimeout(() => { isScrollingTo.current = false; }, 800);
+  }, []);
+
+  useEffect(() => {
+    if (!activeWeek || !weekNavRef.current) return;
+    const nav = weekNavRef.current;
+    const btn = nav.querySelector(`[data-week-btn="${activeWeek}"]`) as HTMLElement | null;
+    if (btn) btn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+  }, [activeWeek]);
+
+  useEffect(() => {
+    if (viewMode !== 'drops') return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (isScrollingTo.current) return;
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            setActiveWeek(entry.target.getAttribute('data-week') || null);
+            break;
+          }
+        }
+      },
+      { rootMargin: '-160px 0px -60% 0px', threshold: 0 }
+    );
+    weekRefs.current.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, [viewMode, showAllWeeks, selectedCategory]);
 
   const categories = ['All', ...Array.from(new Set(aiTools.map(t => t.category)))];
 
@@ -152,6 +192,38 @@ export default function ToolsIndex() {
             </div>
           </div>
 
+          {/* Week Nav Bar — Drops view only */}
+          {viewMode === 'drops' && groupedWeeks.length > 1 && (
+            <div
+              ref={weekNavRef}
+              className="mb-8 md:mb-10 flex items-center gap-2 overflow-x-auto pb-2 scrollbar-hide"
+              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            >
+              <span className="text-[9px] font-black uppercase tracking-[0.2em] text-micro-muted mr-2 flex-shrink-0">Jump to:</span>
+              {(showAllWeeks ? groupedWeeks : groupedWeeks.slice(0, 4)).map((group, i) => {
+                const shortLabel = group.label.replace('DROP / ', '');
+                const isActive = activeWeek === group.label || (!activeWeek && i === 0);
+                return (
+                  <button
+                    key={group.label}
+                    data-week-btn={group.label}
+                    onClick={() => {
+                      scrollToWeek(group.label);
+                    }}
+                    className={`flex-shrink-0 px-3 py-1.5 rounded-sm text-[10px] font-bold transition-all border whitespace-nowrap ${
+                      isActive
+                        ? 'bg-micro-fg border-micro-fg text-white shadow-lg'
+                        : 'bg-white/50 border-micro-layer-1 text-micro-muted hover:border-micro-fg/30 hover:text-micro-fg'
+                    }`}
+                  >
+                    {i === 0 ? `${shortLabel} ✦` : shortLabel}
+                    <span className="ml-1.5 opacity-50">{group.tools.length}</span>
+                  </button>
+                );
+              })}
+            </div>
+          )}
+
           {filteredTools.length === 0 ? (
             <div className="py-24 text-center border-2 border-dashed border-micro-layer-2 rounded-sm bg-micro-layer-1/30">
               <p className="text-micro-muted font-bold uppercase tracking-widest text-sm">No tools found</p>
@@ -171,7 +243,11 @@ export default function ToolsIndex() {
                   <>
                     {visibleGroups.map((group, index) => (
                       <React.Fragment key={group.label}>
-                        <div className="mb-12 md:mb-16">
+                        <div
+                          className="mb-12 md:mb-16"
+                          data-week={group.label}
+                          ref={(el) => { if (el) weekRefs.current.set(group.label, el); else weekRefs.current.delete(group.label); }}
+                        >
                           <div className="flex items-center gap-6 mb-8 md:mb-10">
                             <div className="flex items-center gap-3 bg-micro-fg px-5 py-2 rounded-sm shadow-lg">
                               <span className="w-1.5 h-1.5 rounded-sm bg-terminal-lime animate-pulse"></span>
