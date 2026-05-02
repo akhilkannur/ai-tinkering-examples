@@ -8,7 +8,8 @@ const SITE_URL = 'https://realaiexamples.com';
 
 function makeBadgeEmbed(variant: 'dark' | 'light', slug: string) {
   const fileName = variant === 'dark' ? 'badge-dark.svg' : 'badge-light.svg';
-  const targetUrl = slug ? `${SITE_URL}/tools/${slug}` : `${SITE_URL}/tools`;
+  const baseUrl = slug ? `${SITE_URL}/tools/${slug}` : `${SITE_URL}/tools`;
+  const targetUrl = `${baseUrl}?utm_source=badge&utm_medium=embed&utm_campaign=featured`;
   return `<a href="${targetUrl}" target="_blank" rel="noopener noreferrer"><img src="${SITE_URL}/images/${fileName}" alt="Featured on REAL AI EXAMPLES" width="220" height="50" /></a>`;
 }
 
