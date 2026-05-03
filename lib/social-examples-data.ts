@@ -2,6 +2,116 @@ import { EnrichedExampleRecord } from './types';
 
 export const localSocialExamples: EnrichedExampleRecord[] = [
   {
+    id: "jordan-crawford-exa-ab-test",
+    title: "A/B Testing Exa against itself",
+    slug: "jordan-crawford-exa-ab-test",
+    summary: "Jordan Crawford built a lead validation pipeline using Exa, a LinkedIn scraper, and Claude Haiku. He discovered that raw search data has a 39% error rate. The fix: a multi-step workflow that discovers, enriches, and validates every profile for just $0.04 per lead.",
+    screenshots: [
+      {
+        url: "/images/examples/2026-05-03-maja-voje-ab-testing-exa.webp",
+        filename: "2026-05-03-maja-voje-ab-testing-exa.webp",
+        thumbnails: {
+          small: { url: "/images/examples/2026-05-03-maja-voje-ab-testing-exa.webp" },
+          large: { url: "/images/examples/2026-05-03-maja-voje-ab-testing-exa.webp" }
+        }
+      }
+    ],
+    category: "Marketing Ops",
+    publish_date: "2026-04-30",
+    original_link: "https://edge.blueprintgtm.com/p/i-ab-tested-exa-against-itself-the",
+    author_name: "Jordan Crawford",
+    author_link: "https://www.linkedin.com/in/jordancrawford/",
+    tags: ["Lead Gen", "Validation", "Data Ops"],
+  },
+  {
+    id: "tobias-schneider-deterministic-data-agents",
+    title: "Building Reliable Data Pipelines with AI Agents",
+    slug: "tobias-schneider-deterministic-data-agents",
+    summary: "Tobias Schneider recommends using agents to write deterministic scripts rather than letting models transpose data directly. Direct LLM enrichment often leads to silent hallucinations across thousands of rows. Scripts are the only way to build reliable pipelines at scale.",
+    screenshots: [
+      {
+        url: "/images/examples/2026-05-03-tobias-claude-artifacts.webp",
+        filename: "2026-05-03-tobias-claude-artifacts.webp",
+        thumbnails: {
+          small: { url: "/images/examples/2026-05-03-tobias-claude-artifacts.webp" },
+          large: { url: "/images/examples/2026-05-03-tobias-claude-artifacts.webp" }
+        }
+      }
+    ],
+    category: "General",
+    publish_date: "2026-04-26",
+    original_link: "https://x.com/tobiaschneider/status/2048357912955769137",
+    author_name: "Tobias Schneider",
+    author_link: "https://x.com/tobiaschneider",
+    tags: ["Data Ops", "Reliability", "Agents"],
+  },
+  {
+    id: "gippp69-meeting-notes-agent",
+    title: "The Ultimate Meeting Transcription Workflow",
+    slug: "gippp69-meeting-notes-agent",
+    summary: "Giovanni P built a custom automation that pulls meeting transcripts into a structured template. It extracts action items, key decisions, and follow-up emails in seconds. No more manual note taking during high stakes calls.",
+    screenshots: [
+      {
+        url: "/images/examples/2026-05-03-gippp69-meeting-notes.webp",
+        filename: "2026-05-03-gippp69-meeting-notes.webp",
+        thumbnails: {
+          small: { url: "/images/examples/2026-05-03-gippp69-meeting-notes.webp" },
+          large: { url: "/images/examples/2026-05-03-gippp69-meeting-notes.webp" }
+        }
+      }
+    ],
+    category: "Productivity",
+    publish_date: "2026-04-28",
+    original_link: "https://x.com/gippp69/status/2049131801780658541",
+    author_name: "Giovanni P",
+    author_link: "https://x.com/gippp69",
+    tags: ["Productivity", "Meetings", "Automation"],
+  },
+  {
+    id: "nikillinit-research-agent-army",
+    title: "How to Build a Research Agent Army",
+    slug: "nikillinit-research-agent-army",
+    summary: "Nik Sharma uses a fleet of AI agents to perform deep market research on competitors. He feeds them URLs and they return structured dossiers on pricing, features, and marketing angles. It is like having a full time research team on a monthly sub.",
+    screenshots: [
+      {
+        url: "/images/examples/2026-05-03-nikillinit-research-agent.webp",
+        filename: "2026-05-03-nikillinit-research-agent.webp",
+        thumbnails: {
+          small: { url: "/images/examples/2026-05-03-nikillinit-research-agent.webp" },
+          large: { url: "/images/examples/2026-05-03-nikillinit-research-agent.webp" }
+        }
+      }
+    ],
+    category: "Marketing Ops",
+    publish_date: "2026-04-30",
+    original_link: "https://x.com/nikillinit/status/2049867803184804124",
+    author_name: "Nik Sharma",
+    author_link: "https://x.com/nikillinit",
+    tags: ["Marketing", "Research", "Agents"],
+  },
+  {
+    id: "khalidwarsa-email-shortener",
+    title: "The 50% Rule for Email Clarity",
+    slug: "khalidwarsa-email-shortener",
+    summary: "Khalid Warsame uses a simple prompt to cut corporate fluff from his inbox. He forces the AI to rewrite emails to be exactly 50% shorter. It kills the filler while keeping the core message and original tone intact.",
+    screenshots: [
+      {
+        url: "/images/examples/2026-05-03-khalidwarsa-ai-agents.webp",
+        filename: "2026-05-03-khalidwarsa-ai-agents.webp",
+        thumbnails: {
+          small: { url: "/images/examples/2026-05-03-khalidwarsa-ai-agents.webp" },
+          large: { url: "/images/examples/2026-05-03-khalidwarsa-ai-agents.webp" }
+        }
+      }
+    ],
+    category: "Marketing Ops",
+    publish_date: "2025-02-19",
+    original_link: "https://x.com/KhalidWarsa/status/2050211442842915184",
+    author_name: "Khalid Warsame",
+    author_link: "https://x.com/KhalidWarsa",
+    tags: ["Email", "Productivity", "Writing"],
+  },
+  {
     id: "recap-david-claude-automation",
     title: "Claude Cowork Automation",
     slug: "recap-david-claude-automation",
@@ -1021,27 +1131,5 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     author_name: "Maja Voje",
     author_link: "https://substack.com/@majavoje",
     tags: ["Claude Code", "GTM", "Outbound", "Context Engineering", "Campaigns"],
-  },
-  {
-    id: "tobias-schneider-deterministic-data-agents",
-    title: "Building Reliable Data Pipelines with AI Agents",
-    slug: "tobias-schneider-deterministic-data-agents",
-    summary: "Tobias Schneider recommends using agents to write deterministic scripts rather than letting models transpose data directly. We've felt this pain: direct LLM enrichment often leads to silent hallucinations across thousands of rows that force total manual reviews. Scripts are the only way to build reliable pipelines at scale.",
-    screenshots: [
-      {
-        url: "/images/examples/2026-04-26-tobias-schneider-ai-content-workflow.webp",
-        filename: "2026-04-26-tobias-schneider-ai-content-workflow.webp",
-        thumbnails: {
-          small: { url: "/images/examples/2026-04-26-tobias-schneider-ai-content-workflow.webp" },
-          large: { url: "/images/examples/2026-04-26-tobias-schneider-ai-content-workflow.webp" }
-        }
-      }
-    ],
-    category: "General",
-    publish_date: "2026-04-26",
-    original_link: "https://x.com/tobiaschneider/status/2048357912955769137",
-    author_name: "Tobias Schneider",
-    author_link: "https://x.com/tobiaschneider",
-    tags: ["Data Ops", "Reliability", "Agents"],
   },
 ];
