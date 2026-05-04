@@ -226,14 +226,33 @@ async function captureTwitterEmbed(tweetUrl, finalPath, screenshotOpts) {
 
     // Detect Twitter Articles / link-only tweets: they render as a short card
     // with just a link (e.g. "x.com/i/article/...") instead of actual content.
-    // Check both height AND content — articles show as ~220px with just a URL.
-    const isLinkOnly = await page.evaluate(() => {
-      const tweetText = document.querySelector('article')?.textContent || '';
-      return tweetText.includes('x.com/i/article') || tweetText.includes('twitter.com/i/article');
+    // For articles, extract the article URL and capture it directly as a viewport screenshot.
+    const articleUrl = await page.evaluate(() => {
+      const links = document.querySelectorAll('article a');
+      for (const a of links) {
+        const href = a.href || '';
+        const text = a.textContent || '';
+        if (text.includes('x.com/i/article') || text.includes('twitter.com/i/article') ||
+            href.includes('/i/article/')) {
+          // Extract the actual article URL from the link text or href
+          const match = text.match(/(x\.com\/i\/article\/\d+)/) || href.match(/(x\.com\/i\/article\/\d+)/);
+          if (match) return `https://${match[1]}`;
+        }
+      }
+      return null;
     });
-    if (isLinkOnly || box.height < MIN_ARTICLE_HEIGHT) {
-      console.log(`⚠️  Embed shows link-only content (${Math.round(box.height)}px) — likely a Twitter Article. Falling back to direct capture.`);
-      return false;
+    const isLinkOnly = !!articleUrl || box.height < MIN_ARTICLE_HEIGHT;
+    if (isLinkOnly) {
+      // Twitter Articles are login-gated and can't be captured automatically.
+      const articleInfo = articleUrl ? ` (${articleUrl})` : '';
+      console.log(`\n⚠️  ===== TWITTER ARTICLE DETECTED${articleInfo} =====`);
+      console.log(`⚠️  Twitter Articles require login and cannot be screenshotted automatically.`);
+      console.log(`⚠️  Please take the screenshot manually:`);
+      console.log(`⚠️    1. Open the tweet in your browser: ${tweetUrl}`);
+      console.log(`⚠️    2. Take a viewport screenshot of the article content`);
+      console.log(`⚠️    3. Save it to: ${finalPath}`);
+      console.log(`⚠️  ================================================\n`);
+      process.exit(2);
     }
 
     const captureHeight = Math.min(box.height, MAX_CAPTURE_HEIGHT);
@@ -417,32 +436,49 @@ async function captureScreenshot() {
 
     // ─── Capture ───────────────────────────────────────────────────────
 
-    if (fullPage || !effectiveSelector) {
-      // Full page screenshot
+    if (fullPage) {
+      // Explicit --full-page flag: capture entire page
       screenshotOpts.fullPage = true;
       await page.screenshot(screenshotOpts);
       console.log(`✅ Full-page screenshot saved: ${finalPath}`);
+    } else if (!effectiveSelector) {
+      // No selector (generic pages): capture the viewport (above-the-fold)
+      // This produces a thumbnail-friendly screenshot matching what you'd see
+      // when first landing on the page, instead of a massive full-page image.
+      const vp = page.viewport();
+      screenshotOpts.clip = {
+        x: 0,
+        y: 0,
+        width: vp.width,
+        height: vp.height,
+      };
+      await page.screenshot(screenshotOpts);
+      console.log(`✅ Viewport screenshot saved: ${finalPath}`);
+      console.log(`📐 Captured: ${vp.width}×${vp.height}px (logical)`);
+      console.log(`📐 Output:   ${vp.width * scaleFactor}×${vp.height * scaleFactor}px (actual @ ${scaleFactor}x)`);
     } else {
       // Element-based screenshot — the key to avoiding cropping
       const element = await page.$(effectiveSelector);
 
       if (!element) {
-        console.log(`⚠️  Element "${effectiveSelector}" not found, falling back to full page`);
-        screenshotOpts.fullPage = true;
+        console.log(`⚠️  Element "${effectiveSelector}" not found, falling back to viewport capture`);
+        const vp = page.viewport();
+        screenshotOpts.clip = { x: 0, y: 0, width: vp.width, height: vp.height };
         await page.screenshot(screenshotOpts);
-        console.log(`✅ Full-page fallback screenshot saved: ${finalPath}`);
+        console.log(`✅ Viewport fallback screenshot saved: ${finalPath}`);
       } else {
         // Use page.screenshot with a clip derived from the element's bounding box.
         // This avoids the left-margin clipping bug that element.screenshot() causes
         // when padding/margin is injected at high DPI scale factors.
         const box = await element.boundingBox();
         if (!box) {
-          console.log(`⚠️  Could not get bounding box, falling back to full page`);
-          screenshotOpts.fullPage = true;
+          console.log(`⚠️  Could not get bounding box, falling back to viewport capture`);
+          const vp = page.viewport();
+          screenshotOpts.clip = { x: 0, y: 0, width: vp.width, height: vp.height };
           await page.screenshot(screenshotOpts);
-          console.log(`✅ Full-page fallback screenshot saved: ${finalPath}`);
+          console.log(`✅ Viewport fallback screenshot saved: ${finalPath}`);
         } else {
-          const MAX_CAPTURE_HEIGHT = 600; // Thumbnail-friendly: ~top 25-30% of most tweets
+          const MAX_CAPTURE_HEIGHT = 5000; // Increased for larger content areas like example pages
           const captureHeight = Math.min(box.height, MAX_CAPTURE_HEIGHT);
 
           if (box.height > MAX_CAPTURE_HEIGHT) {

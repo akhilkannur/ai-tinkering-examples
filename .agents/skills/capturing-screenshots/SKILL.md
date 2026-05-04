@@ -90,8 +90,8 @@ The script detects the platform from the URL and applies the right selectors:
 | Bluesky | `article, [data-testid="postThreadItem"]` | The post |
 | Mastodon | `.detailed-status, .status` | The toot/status |
 | Instagram | `article[role="presentation"]` | The post |
-| GitHub | *(full page)* | The repository page |
-| Generic | *(full page)* | Entire page |
+| GitHub | *(viewport)* | Above-the-fold viewport |
+| Generic | *(viewport)* | Above-the-fold viewport (use `--full-page` for entire page) |
 
 ### Overlay & Login Wall Removal
 

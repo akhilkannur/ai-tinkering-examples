@@ -12,7 +12,7 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
   const categorySlug = example.category?.toLowerCase().replace(/\s+/g, '-') || 'uncategorized'
 
   return (
-    <>
+    <div id="example-body">
       {/* Header */}
       <header className="mb-10">
         <div className="flex flex-wrap items-center gap-4 mb-6">
@@ -85,6 +85,6 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
           </div>
         )}
       </div>
-    </>
+    </div>
   )
 }

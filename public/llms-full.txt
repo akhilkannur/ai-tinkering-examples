@@ -1874,11 +1874,11 @@ Summary: Tobias Schneider recommends using agents to write deterministic scripts
 Tags: Data Ops, Reliability, Agents
 Source: https://x.com/tobiaschneider/status/2048357912955769137
 
-### The Ultimate Meeting Transcription Workflow
-URL: https://realaiexamples.com/ai-examples/productivity/gippp69-meeting-notes-agent
+### The Expired Patent Arbitrage System
+URL: https://realaiexamples.com/ai-examples/productivity/gippp69-expired-patent-arbitrage
 Category: Productivity
-Summary: Giovanni P built a custom automation that pulls meeting transcripts into a structured template. It extracts action items, key decisions, and follow-up emails in seconds. No more manual note taking during high stakes calls.
-Tags: Productivity, Meetings, Automation
+Summary: @gippp69 uses Claude to identify products nobody manufactures anymore. He feeds expired patents to Claude, identifies commercial viability, and launches products on Amazon with high margins. One unit costs $1.80 to manufacture and sells for $11.99.
+Tags: Productivity, Ecommerce, Claude, Patents, Automation
 Source: https://x.com/gippp69/status/2049131801780658541
 
 ### How to Build a Research Agent Army

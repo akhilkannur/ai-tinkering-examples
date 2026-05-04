@@ -47,25 +47,26 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
   },
   {
     id: "gippp69-meeting-notes-agent",
-    title: "The Ultimate Meeting Transcription Workflow",
-    slug: "gippp69-meeting-notes-agent",
-    summary: "Giovanni P built a custom automation that pulls meeting transcripts into a structured template. It extracts action items, key decisions, and follow-up emails in seconds. No more manual note taking during high stakes calls.",
+    title: "The Expired Patent Arbitrage System",
+    slug: "gippp69-expired-patent-arbitrage",
+    summary: "@gippp69 feeds expired patents to Claude to identify products nobody manufactures anymore. $0 for the blueprint. $1.80 to manufacture. $11.99 on Amazon. This workflow uses Claude to filter millions of public domain patents for commercial viability.",
     screenshots: [
       {
-        url: "/images/examples/2026-05-03-gippp69-meeting-notes.webp",
-        filename: "2026-05-03-gippp69-meeting-notes.webp",
+        url: "/images/examples/2026-05-04-gippp69-patent-system.png",
+        filename: "2026-05-04-gippp69-patent-system.png",
         thumbnails: {
-          small: { url: "/images/examples/2026-05-03-gippp69-meeting-notes.webp" },
-          large: { url: "/images/examples/2026-05-03-gippp69-meeting-notes.webp" }
+          small: { url: "/images/examples/2026-05-04-gippp69-patent-system.png" },
+          large: { url: "/images/examples/2026-05-04-gippp69-patent-system.png" }
         }
       }
     ],
     category: "Productivity",
-    publish_date: "2026-04-28",
+    publish_date: "2026-05-04",
     original_link: "https://x.com/gippp69/status/2049131801780658541",
-    author_name: "Giovanni P",
+    author_name: "@gippp69",
     author_link: "https://x.com/gippp69",
-    tags: ["Productivity", "Meetings", "Automation"],
+    tags: ["Productivity", "Ecommerce", "Claude", "Patents", "Automation"],
+    workflow_steps: "I feed expired patents to Claude. Found 6 products nobody manufactures anymore. First one is already in production.\n\n### The Problem with Volume\nOver 4.2 million US patents expired in the last decade alone. Every single one of those patents is now public domain. Free to use. Free to manufacture. Free to sell. The problem was never access; the USPTO publishes everything through their Bulk Data portal. The problem was volume. Nobody reads 4 million patents for fun. I decided Claude would.\n\n### The Pipeline\n1. **Python Scraper:** Pulls expired utility patents from the Bulk Data API.\n2. **Markitdown:** Converts any document format into clean Markdown for Claude context.\n3. **Claude Filter:** A scoring pipeline where each patent goes through Claude with a structured prompt (Commercial Viability Analyst). It estimates BOM, Amazon gaps, and review signals.\n4. **Batch Processing:** Processing batches of 50 patents at a time using files-to-prompt.\n\n### The Hits\n- **Self-watering planter insert:** Optimized wicking design. $1.80 unit cost. Amazon average price: $14-$22.\n- **Collapsible pet water bowl:** One-hand snap-lock mechanism. $0.95 unit cost. Amazon price: $8-$15.\n- **Cable management clip:** Ratcheting jaw that adjusts to cable width. 23.7% net margin.\n\n### Why This Works\nA patent is a disclosure. To get one, you must disclose enough technical detail that someone skilled in the field could reproduce it. When it expires, that blueprint stays—becoming a free manufacturing manual. Claude allows you to filter through the legal noise to find the engineering gold."
   },
   {
     id: "nikillinit-research-agent-army",

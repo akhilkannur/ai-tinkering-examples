@@ -16,32 +16,32 @@ Hardcoded `clip: { x, y, width, height }` coordinates break constantly because t
 Run the capture script from the project root:
 
 ```bash
-node .agents/skills/capturing-screenshots/scripts/capture.js <url>
+node .gemini/skills/capturing-screenshots/scripts/capture.js <url>
 ```
 
 ### Common Examples
 
 ```bash
 # Twitter/X post — auto-detects and captures just the tweet
-node .agents/skills/capturing-screenshots/scripts/capture.js "https://x.com/user/status/123456"
+node .gemini/skills/capturing-screenshots/scripts/capture.js "https://x.com/user/status/123456"
 
 # Save to a specific path
-node .agents/skills/capturing-screenshots/scripts/capture.js "https://x.com/user/status/123456" -o public/images/examples/my-tweet.png
+node .gemini/skills/capturing-screenshots/scripts/capture.js "https://x.com/user/status/123456" -o public/images/examples/my-tweet.png
 
 # LinkedIn post
-node .agents/skills/capturing-screenshots/scripts/capture.js "https://linkedin.com/posts/user-123456"
+node .gemini/skills/capturing-screenshots/scripts/capture.js "https://linkedin.com/posts/user-123456"
 
 # Reddit post
-node .agents/skills/capturing-screenshots/scripts/capture.js "https://reddit.com/r/sub/comments/abc/title"
+node .gemini/skills/capturing-screenshots/scripts/capture.js "https://reddit.com/r/sub/comments/abc/title"
 
 # Full page (no element targeting)
-node .agents/skills/capturing-screenshots/scripts/capture.js "https://example.com" --full-page
+node .gemini/skills/capturing-screenshots/scripts/capture.js "https://example.com" --full-page
 
 # Dark mode + WebP format
-node .agents/skills/capturing-screenshots/scripts/capture.js "https://x.com/user/status/123" --dark --format webp
+node .gemini/skills/capturing-screenshots/scripts/capture.js "https://x.com/user/status/123" --dark --format webp
 
 # Debug mode (opens visible browser)
-node .agents/skills/capturing-screenshots/scripts/capture.js "https://x.com/user/status/123" --debug
+node .gemini/skills/capturing-screenshots/scripts/capture.js "https://x.com/user/status/123" --debug
 ```
 
 ## Options
@@ -90,8 +90,8 @@ The script detects the platform from the URL and applies the right selectors:
 | Bluesky | `article, [data-testid="postThreadItem"]` | The post |
 | Mastodon | `.detailed-status, .status` | The toot/status |
 | Instagram | `article[role="presentation"]` | The post |
-| GitHub | *(full page)* | The repository page |
-| Generic | *(full page)* | Entire page |
+| GitHub | *(viewport)* | Above-the-fold viewport |
+| Generic | *(viewport)* | Above-the-fold viewport (use `--full-page` for entire page) |
 
 ### Overlay & Login Wall Removal
 
@@ -133,7 +133,7 @@ When the user asks to "add this as an example" or "screenshot this and add it to
 
 ### Step 1: Capture the screenshot
 ```bash
-node .agents/skills/capturing-screenshots/scripts/capture.js "<URL>" \
+node .gemini/skills/capturing-screenshots/scripts/capture.js "<URL>" \
   -o public/images/examples/<slug>.webp --format webp --wait 3000
 ```
 Use format: `<YYYY-MM-DD>-<handle>-<topic-slug>.webp` (e.g. `2026-01-28-shreyas-claude-chat-superpowers.webp`)
