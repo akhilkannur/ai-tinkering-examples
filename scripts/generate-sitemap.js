@@ -34,7 +34,20 @@ async function generateSitemap() {
       : [];
     const blogPosts = blogFiles.map(file => file.replace('.md', ''));
 
+    // 4. Tools (Local Data)
+    const toolsDataPath = path.join(process.cwd(), 'lib/ai-tools-data.ts');
+    const toolsDataRaw = fs.readFileSync(toolsDataPath, 'utf8');
+    const toolNameMatches = [...toolsDataRaw.matchAll(/name:\s*["']([^"']+)["']/g)].map(m => m[1]);
+    
+    const slugify = (text) =>
+      text.toLowerCase().trim().replace(/\./g, '-').replace(/\s+/g, '-').replace(/[^\w\-]+/g, '').replace(/\-\-+/g, '-');
+
     const currentDate = new Date().toISOString();
+    const tools = toolNameMatches.map(name => ({
+      url: `${SITE_URL}/tools/${slugify(name)}`,
+      lastmod: currentDate
+    }));
+
     let xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
 
@@ -50,10 +63,14 @@ async function generateSitemap() {
       xml += `\n  <url><loc>${SITE_URL}/blog/${slug}</loc><lastmod>${currentDate}</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>`;
     });
 
+    tools.forEach(tool => {
+      xml += `\n  <url><loc>${tool.url}</loc><lastmod>${tool.lastmod}</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>`;
+    });
+
     xml += `\n</urlset>`;
 
     fs.writeFileSync(path.join(process.cwd(), 'public', 'sitemap.xml'), xml);
-    console.log(`✅ Local-First Sitemap Generated! Total URLs: ${staticPages.length + examples.length + blogPosts.length}`);
+    console.log(`✅ Local-First Sitemap Generated! Total URLs: ${staticPages.length + examples.length + blogPosts.length + tools.length}`);
 
   } catch (error) {
     console.error('❌ Error generating sitemap:', error);
