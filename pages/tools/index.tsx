@@ -34,32 +34,9 @@ export default function ToolsIndex() {
   const [showAllWeeks, setShowAllWeeks] = useState(false);
   const [viewMode, setViewMode] = useState<'drops' | 'directory'>('drops');
   const [activeWeek, setActiveWeek] = useState<string | null>(null);
-  const [email, setEmail] = useState('');
-  const [formStatus, setFormStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const weekRefs = useRef<Map<string, HTMLDivElement>>(new Map());
   const weekNavRef = useRef<HTMLDivElement>(null);
   const isScrollingTo = useRef(false);
-
-  const handleNewsletterSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email) return;
-    setFormStatus('loading');
-    try {
-      const res = await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email }),
-      });
-      if (res.ok) {
-        setFormStatus('success');
-        setEmail('');
-      } else {
-        setFormStatus('error');
-      }
-    } catch {
-      setFormStatus('error');
-    }
-  };
 
   const scrollToWeek = useCallback((label: string) => {
     const el = weekRefs.current.get(label);
@@ -155,32 +132,6 @@ export default function ToolsIndex() {
           <p className="text-base md:text-lg lg:text-xl text-white/70 max-w-2xl mx-auto font-medium leading-relaxed mb-10 text-balance">
             Every Sunday, we handpick a shortlist of AI tools that solve real work problems.
           </p>
-
-          <div className="flex flex-col items-center gap-10 mb-16">
-            {formStatus === 'success' ? (
-              <div className="px-12 py-6 bg-white rounded-sm font-bold text-micro-fg shadow-xl">
-                ✓ Check your inbox to confirm
-              </div>
-            ) : (
-              <form className="flex w-full max-w-2xl p-1.5 md:p-2.5 bg-white/90 backdrop-blur-2xl rounded-sm border border-white/30 shadow-2xl" onSubmit={handleNewsletterSubmit}>
-                <input
-                  type="email"
-                  className="flex-1 bg-transparent px-4 md:px-8 py-3 md:py-4 outline-none text-sm md:text-[18px] font-medium text-micro-fg placeholder:text-micro-muted min-w-0"
-                  placeholder="Get weekly drops"
-                  required
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  disabled={formStatus === 'loading'}
-                />
-                <button type="submit" className="px-6 md:px-12 py-3 md:py-5 bg-white text-micro-fg rounded-sm font-extrabold text-xs md:text-sm uppercase tracking-wider hover:bg-micro-layer-1 transition-all shadow-lg active:scale-95 flex-shrink-0" disabled={formStatus === 'loading'}>
-                  {formStatus === 'loading' ? '...' : 'Join Free'}
-                </button>
-              </form>
-            )}
-            <p className="text-[13px] font-bold text-white uppercase tracking-[0.15em] opacity-80">
-              Join 400+ AI Native Operators
-            </p>
-          </div>
 
           {/* Stats Bar */}
           <div className="inline-flex flex-wrap items-center justify-center gap-6 md:gap-12 border-t border-b border-white/5 py-4 md:py-6 px-10 bg-white/5 backdrop-blur-sm rounded-sm">

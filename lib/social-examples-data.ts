@@ -49,7 +49,7 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     id: "gippp69-meeting-notes-agent",
     title: "The Expired Patent Arbitrage System",
     slug: "gippp69-expired-patent-arbitrage",
-    summary: "@gippp69 feeds expired patents to Claude to identify products nobody manufactures anymore. $0 for the blueprint. $1.80 to manufacture. $11.99 on Amazon. This workflow uses Claude to filter millions of public domain patents for commercial viability.",
+    summary: "@gippp69 uses Claude to filter millions of public domain patents for commercial viability. By scraping the USPTO Bulk Data portal and scoring expired utility patents based on manufacturing complexity and Amazon gaps, he identifies products that once worked but stopped being made. Examples include a self-watering planter ($1.80 cost vs $14 retail) and a snap-lock collapsible pet bowl ($0.95 cost). It is a pure arbitrage play: $0 for the blueprint, high margins on Amazon.",
     screenshots: [
       {
         url: "/images/examples/2026-05-04-gippp69-patent-system.png",
@@ -66,7 +66,6 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     author_name: "@gippp69",
     author_link: "https://x.com/gippp69",
     tags: ["Productivity", "Ecommerce", "Claude", "Patents", "Automation"],
-    workflow_steps: "I feed expired patents to Claude. Found 6 products nobody manufactures anymore. First one is already in production.\n\n### The Problem with Volume\nOver 4.2 million US patents expired in the last decade alone. Every single one of those patents is now public domain. Free to use. Free to manufacture. Free to sell. The problem was never access; the USPTO publishes everything through their Bulk Data portal. The problem was volume. Nobody reads 4 million patents for fun. I decided Claude would.\n\n### The Pipeline\n1. **Python Scraper:** Pulls expired utility patents from the Bulk Data API.\n2. **Markitdown:** Converts any document format into clean Markdown for Claude context.\n3. **Claude Filter:** A scoring pipeline where each patent goes through Claude with a structured prompt (Commercial Viability Analyst). It estimates BOM, Amazon gaps, and review signals.\n4. **Batch Processing:** Processing batches of 50 patents at a time using files-to-prompt.\n\n### The Hits\n- **Self-watering planter insert:** Optimized wicking design. $1.80 unit cost. Amazon average price: $14-$22.\n- **Collapsible pet water bowl:** One-hand snap-lock mechanism. $0.95 unit cost. Amazon price: $8-$15.\n- **Cable management clip:** Ratcheting jaw that adjusts to cable width. 23.7% net margin.\n\n### Why This Works\nA patent is a disclosure. To get one, you must disclose enough technical detail that someone skilled in the field could reproduce it. When it expires, that blueprint stays—becoming a free manufacturing manual. Claude allows you to filter through the legal noise to find the engineering gold."
   },
   {
     id: "nikillinit-research-agent-army",
@@ -265,7 +264,6 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     author_name: "GitHub Blog",
     author_link: "https://github.blog",
     tags: ["Agents", "Best Practices", "Copilot", "Blueprints"],
-    workflow_steps: "1. Define a Specific Persona (e.g. 'Expert QA Engineer')\n2. Provide Executable Commands early in the file\n3. Specify the Tech Stack and Project Structure\n4. Offer concrete Code Examples instead of abstract rules\n5. Set Clear Boundaries using a 'Always/Ask/Never' system",
   },
   {
     id: "saastr-ai-agents-directory",
@@ -288,7 +286,6 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     author_name: "SaaStr",
     author_link: "https://saastr.ai",
     tags: ["Use Cases", "SaaS", "Scaling", "Directory"],
-    workflow_steps: "1. Browse the Agent Arsenal for specific business functions\n2. Analyze how SaaStr defines agent roles (e.g. AI Mentor, VC Matchmaker)\n3. See examples of third-party agent integrations\n4. Apply the 'Full Playbook' to scale your own operations",
   },
   {
     id: "matzner-jon-competitive-podcast-intel",
@@ -311,7 +308,6 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     author_name: "Jon Matzner",
     author_link: "https://x.com/MatznerJon",
     tags: ["Competitive Intel", "NotebookLM", "Podcasts", "Strategy"],
-    workflow_steps: "1. Gather all podcast episodes featuring competitor leadership\n2. Upload transcripts or audio files to NotebookLM\n3. Query the AI: 'What information shared can be exploited to my competitive advantage?'",
   },
   {
     id: "doodlestein-deslopify-readme-prompt",
@@ -334,7 +330,6 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     author_name: "Jeffrey Emanuel",
     author_link: "https://x.com/doodlestein",
     tags: ["Prompt Engineering", "Documentation", "Writing", "Claude"],
-    workflow_steps: "1. Open your README.md or documentation file\n2. Run this prompt: 'Read carefully and look for telltale signs of AI slop...'\n3. AI recasts sentences to remove robotic patterns (em-dashes, 'Here's why')\n4. Review the 'more human' output",
   },
   {
     id: "claude-company-newsletter-automation",
@@ -357,7 +352,6 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     author_name: "Claude Resources",
     author_link: "https://claude.com",
     tags: ["Newsletter", "Automation", "Internal Comms", "Claude"],
-    workflow_steps: "1. Connect Claude to your Slack, Google Drive, and Gmail accounts\n2. Define the desired time period and internal channels to monitor\n3. Request specific formatting (e.g., 'British newspaper aesthetic') and data visualizations\n4. Review and refine the generated interactive HTML artifact before sharing",
   },
   {
     id: "suhail-ai-tutor-prompt",
@@ -380,7 +374,6 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     author_name: "Suhail",
     author_link: "https://x.com/Suhail",
     tags: ["Learning", "Prompt Engineering", "Research", "Education"],
-    workflow_steps: "1. Upload source material (PDF, paper, docs) to the AI\n2. Use the prompt: 'Go from high level to low level. Do not advance without confirming I understand with a quiz.'\n3. Answer the quiz questions to proceed to the next complexity level",
   },
   {
     id: "peter-kang-ai-context-and-scenarios",
@@ -403,7 +396,6 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     author_name: "Peter Kang",
     author_link: "https://www.linkedin.com/in/peterkang",
     tags: ["Strategy", "Scenario Planning", "Context Management", "ChatGPT"],
-    workflow_steps: "1. Context Check: Ask AI to 'write a context prompt based on everything you know about [My Company]'. Correct errors and use this prompt in other models.\n2. Scenario Planning: Upload strategy docs and ask AI to write speculative 3-5 year future narratives (best case, worst case, wildcards).",
   },
   {
     id: "ema-totaro-sora-ugc-scripts",
@@ -426,7 +418,6 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     author_name: "Emanuele Totaro",
     author_link: "https://x.com/ema_totaro",
     tags: ["Video AI", "Sora", "UGC", "Ads"],
-    workflow_steps: "1. Define the 'Vibe': 'Medium-high quality phone video, filmed secretly... shaky, handheld'\n2. Set the Scene: 'Large university classroom... fluorescent lighting... students whispering'\n3. Script the Action: Professor yelling, audio peaking, abruptly cutting mid-yell",
   },
   {
     id: "soniabaschez-yapping-as-a-service-writing-prompt",
@@ -559,7 +550,6 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     author_name: "Peter Steinberger",
     author_link: "https://x.com/steipete",
     tags: ["OpenClaw", "Agents", "Persona", "SOUL.md"],
-    workflow_steps: "1. Create a SOUL.md file defining your agent's unique personality and constraints\n2. Use the prompt: 'Read your SOUL.md. Now rewrite your core instructions using this personality'\n3. Observe your agent transition from robotic to character-rich interactions",
   },
   {
     id: "austen-ai-design-secrets",

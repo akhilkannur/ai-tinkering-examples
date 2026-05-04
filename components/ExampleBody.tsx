@@ -1,8 +1,7 @@
-import { useState } from 'react'
 import { EnrichedExampleRecord } from '../lib/types'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ExternalLink, Mail, ArrowRight } from 'lucide-react'
+import { ExternalLink } from 'lucide-react'
 import { optimizeImageUrl } from '../utils/cloudinary'
 
 interface ExampleBodyProps {
@@ -11,29 +10,6 @@ interface ExampleBodyProps {
 
 export default function ExampleBody({ example }: ExampleBodyProps) {
   const categorySlug = example.category?.toLowerCase().replace(/\s+/g, '-') || 'uncategorized'
-  const [email, setEmail] = useState('')
-  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
-
-  const handleSignup = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email) return;
-    setStatus('loading');
-    try {
-      const res = await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email }),
-      });
-      if (res.ok) {
-        setStatus('success');
-        setEmail('');
-      } else {
-        setStatus('error');
-      }
-    } catch {
-      setStatus('error');
-    }
-  };
 
   return (
     <div id="example-body">
@@ -72,7 +48,7 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
       </header>
 
       {/* Content */}
-      <div className="prose-container">
+      <div>
         {example.summary && (
           <p className="text-lg text-micro-muted font-medium leading-relaxed mb-10 pb-10 border-b border-micro-layer-1">
             {example.summary}
@@ -108,54 +84,6 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
             </p>
           </div>
         )}
-
-        {/* High Conversion Signup Hook */}
-        <div className="mt-16 md:mt-24 p-8 md:p-12 bg-micro-fg text-white rounded-sm shadow-2xl relative overflow-hidden group">
-          <div className="absolute top-0 right-0 p-4 opacity-10">
-            <Mail size={120} strokeWidth={1} />
-          </div>
-          
-          <div className="relative z-10 max-w-xl">
-            <h3 className="text-2xl md:text-3xl font-bold mb-4 leading-tight">
-              Don't miss the next <span className="text-terminal-lime italic">workflow drop.</span>
-            </h3>
-            <p className="text-white/70 text-base font-medium mb-8">
-              Join 400+ operators getting one actionable AI blueprint every Sunday. No slop, just implementation.
-            </p>
-
-            {status === 'success' ? (
-              <div className="py-4 px-6 bg-terminal-lime text-micro-fg font-black uppercase tracking-widest text-xs rounded-sm inline-block">
-                ✓ Check your inbox to confirm
-              </div>
-            ) : (
-              <form onSubmit={handleSignup} className="flex flex-col sm:flex-row gap-3">
-                <input
-                  type="email"
-                  placeholder="Your best email"
-                  required
-                  className="flex-1 bg-white/10 border border-white/20 px-6 py-4 rounded-sm outline-none focus:border-terminal-lime transition-colors text-white placeholder:text-white/40 font-medium"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  disabled={status === 'loading'}
-                />
-                <button 
-                  type="submit" 
-                  disabled={status === 'loading'}
-                  className="bg-white text-micro-fg px-8 py-4 rounded-sm font-black uppercase tracking-widest text-xs hover:bg-terminal-lime transition-all active:scale-95 flex items-center justify-center gap-2 flex-shrink-0"
-                >
-                  {status === 'loading' ? '...' : 'Get the Blueprints'}
-                  <ArrowRight size={16} />
-                </button>
-              </form>
-            )}
-            
-            {status === 'error' && (
-              <p className="text-red-400 text-[10px] font-bold uppercase tracking-widest mt-4">
-                Something went wrong. Try again?
-              </p>
-            )}
-          </div>
-        </div>
       </div>
     </div>
   )
