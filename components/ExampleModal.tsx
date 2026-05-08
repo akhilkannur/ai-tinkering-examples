@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import { X, ExternalLink } from 'lucide-react'
+import { X } from 'lucide-react'
 import { EnrichedExampleRecord } from '../lib/types'
 import ExampleBody from './ExampleBody'
 
@@ -67,19 +67,6 @@ export default function ExampleModal({ example, isOpen, onClose }: ExampleModalP
           <ExampleBody example={example} />
         </div>
 
-        {example.original_link && (
-          <div className="border-t border-border-color p-md sm:p-lg bg-hero-tint flex justify-center rounded-b-md">
-            <a
-              href={example.original_link}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-lg py-sm sm:px-xl bg-accent-dark text-white rounded-sm text-[0.875rem] font-medium hover:bg-black transition-all"
-            >
-              <ExternalLink size={16} />
-              View Original
-            </a>
-          </div>
-        )}
       </div>
     </div>
   )

@@ -55,6 +55,20 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
           </p>
         )}
 
+        {example.original_link && (
+          <div className="mb-10">
+            <a
+              href={example.original_link}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-micro-fg text-white rounded-sm text-xs font-bold uppercase tracking-wider hover:bg-black transition-colors"
+            >
+              <ExternalLink size={14} />
+              View Original
+            </a>
+          </div>
+        )}
+
         {example.screenshots && example.screenshots.length > 0 && (
           <div className="space-y-8 mb-12">
             {example.screenshots.map((screenshot, i) => {

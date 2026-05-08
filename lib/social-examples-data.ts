@@ -5,7 +5,7 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     id: "jordan-crawford-exa-ab-test",
     title: "A/B Testing Exa against itself",
     slug: "jordan-crawford-exa-ab-test",
-    summary: "Jordan Crawford built a lead validation pipeline using Exa, a LinkedIn scraper, and Claude Haiku. He discovered that raw search data has a 39% error rate. The fix: a multi-step workflow that discovers, enriches, and validates every profile for just $0.04 per lead.",
+    summary: "Jordan Crawford built a lead validation pipeline using Exa, a LinkedIn scraper, and Claude Haiku. He discovered that raw search data has a 39% error rate. The fix: a multi-step workflow that discovers, enriches, and validates every profile for just $0.04 per lead. Jordan is worth listening to when it comes to digging data gold with the help of LLMs, among many other things. I would recommend checking out his LinkedIn for useful tips.",
     screenshots: [
       {
         url: "/images/examples/2026-05-03-maja-voje-ab-testing-exa.webp",
@@ -27,7 +27,7 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     id: "tobias-schneider-deterministic-data-agents",
     title: "Building Reliable Data Pipelines with AI Agents",
     slug: "tobias-schneider-deterministic-data-agents",
-    summary: "Tobias Schneider recommends using agents to write deterministic scripts rather than letting models transpose data directly. Direct LLM enrichment often leads to silent hallucinations across thousands of rows. Scripts are the only way to build reliable pipelines at scale.",
+    summary: "Tobias Schneider recommends using agents to write deterministic scripts rather than letting models transpose data directly. Direct LLM enrichment often leads to silent hallucinations across thousands of rows. Scripts are the only way to build reliable pipelines at scale. I have made the mistake of using LLMs to enrich web data on multiple occasions. Even with web fetch tools, the model may not actually access the site and still act like it did the work. If you ask later, it may admit it missed the page, but not explain where it went wrong. That is how you end up with a pile of garbage data.",
     screenshots: [
       {
         url: "/images/examples/2026-05-03-tobias-claude-artifacts.webp",
@@ -71,7 +71,7 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     id: "nikillinit-research-agent-army",
     title: "How to Build a Research Agent Army",
     slug: "nikillinit-research-agent-army",
-    summary: "Nik Sharma uses a fleet of AI agents to perform deep market research on competitors. He feeds them URLs and they return structured dossiers on pricing, features, and marketing angles. It is like having a full time research team on a monthly sub.",
+    summary: "Nikhil Krishnan's takeaway from healthcare LLM workshops is simple: the first skill is not a workflow, it's learning to ask Claude for help when you're stuck. That means taking a screenshot, asking what to do next, using the model to improve the process itself, and pushing for explanations that match how you think. It is the same muscle as learning to Google well. The real lesson for readers is that AI becomes useful faster when you treat it like a debugging partner, not a person you wait on for answers.",
     screenshots: [
       {
         url: "/images/examples/2026-05-03-nikillinit-research-agent.webp",
@@ -85,7 +85,7 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     category: "Marketing Ops",
     publish_date: "2026-04-30",
     original_link: "https://x.com/nikillinit/status/2049867803184804124",
-    author_name: "Nik Sharma",
+    author_name: "Nikhil Krishnan",
     author_link: "https://x.com/nikillinit",
     tags: ["Marketing", "Research", "Agents"],
   },
