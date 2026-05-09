@@ -67,15 +67,20 @@ async function runBatch() {
   const results = [];
 
   for (const tool of allTools) {
-    const slug = tool.name.toLowerCase().trim().replace(/\./g, '-').replace(/\s+/g, '-').replace(/[^\w\-]+/g, '').replace(/\-\-+/g, '-');
-    const enriched = await enrichAndCapture(tool.url, slug);
-    if (enriched) {
-      results.push({
-        ...tool,
-        scraped: enriched
-      });
-    } else {
-        results.push({ ...tool, failed: true });
+    try {
+      const slug = tool.name.toLowerCase().trim().replace(/\./g, '-').replace(/\s+/g, '-').replace(/[^\w\-]+/g, '').replace(/\-\-+/g, '-');
+      const enriched = await enrichAndCapture(tool.url, slug);
+      if (enriched) {
+        results.push({
+          ...tool,
+          scraped: enriched
+        });
+      } else {
+          results.push({ ...tool, failed: true });
+      }
+    } catch (err) {
+      console.error(`💥 Critical failure processing ${tool.name}:`, err.message);
+      results.push({ ...tool, failed: true, error: err.message });
     }
   }
 
