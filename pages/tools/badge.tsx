@@ -2,9 +2,13 @@ import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowLeft, Check, Copy, Zap, Globe, ShieldCheck } from 'lucide-react';
+import { ArrowLeft, Check, Copy, Zap, Globe, ShieldCheck, Search, Info, Sparkles } from 'lucide-react';
+import { aiTools } from '../../lib/ai-tools-data';
 
 const SITE_URL = 'https://realaiexamples.com';
+
+const slugify = (text: string) =>
+  text.toLowerCase().trim().replace(/\./g, '-').replace(/\s+/g, '-').replace(/[^\w\-]+/g, '').replace(/\-\-+/g, '-');
 
 function makeBadgeEmbed(variant: 'dark' | 'light', slug: string) {
   const fileName = variant === 'dark' ? 'badge-dark.svg' : 'badge-light.svg';
@@ -48,11 +52,18 @@ function CopyBlock({ code }: { code: string }) {
 }
 
 export default function BadgePage() {
-  const [slug, setSlug] = useState('');
+  const [search, setSearch] = useState('');
+  const [selectedTool, setSelectedTool] = useState<{ name: string, slug: string } | null>(null);
 
-  const cleanSlug = useMemo(() => {
-    return slug.toLowerCase().trim().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '');
-  }, [slug]);
+  const filteredTools = useMemo(() => {
+    if (!search || search.length < 2) return [];
+    return aiTools
+      .filter(t => t.name.toLowerCase().includes(search.toLowerCase()))
+      .map(t => ({ name: t.name, slug: slugify(t.name) }))
+      .slice(0, 5);
+  }, [search]);
+
+  const currentSlug = selectedTool ? selectedTool.slug : '';
 
   return (
     <div>
@@ -87,32 +98,82 @@ export default function BadgePage() {
         {/* Glass Sheet */}
         <div className="glass-sheet rounded-sm md:rounded-sm p-6 md:p-16 lg:p-24 overflow-hidden">
           
-          {/* Section 0: Slug Builder */}
+          {/* Section 0: Tool Picker */}
           <section className="mb-16 md:mb-28 max-w-2xl">
             <h2 className="text-[10px] md:text-[12px] font-black uppercase tracking-[0.3em] text-micro-muted mb-8 border-b border-micro-layer-1 pb-4">
-              01. Customize Your Embed
+              01. Personalize Your Badge (Optional)
             </h2>
             <div className="p-8 bg-micro-layer-1 rounded-sm border border-micro-layer-2 shadow-inner-soft">
               <label className="block text-[10px] font-black uppercase tracking-widest text-micro-muted mb-4">
-                Enter your Tool Name or Slug
+                Already listed? Search to link directly to your page
               </label>
-              <input 
-                type="text"
-                placeholder="e.g. My AI Tool"
-                className="w-full bg-white border border-micro-layer-2 rounded-sm p-4 text-lg font-bold text-micro-fg outline-none focus:border-micro-fg transition-colors"
-                value={slug}
-                onChange={(e) => setSlug(e.target.value)}
-              />
-              <p className="mt-4 text-xs font-bold text-micro-muted uppercase tracking-wider">
-                Target URL: <span className="text-micro-fg">realaiexamples.com/tools/{cleanSlug || '[slug]'}</span>
-              </p>
+              <div className="relative">
+                <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-micro-muted" />
+                <input 
+                  type="text"
+                  placeholder="Search for your tool name..."
+                  className="w-full bg-white border border-micro-layer-2 rounded-sm p-4 pl-12 text-lg font-bold text-micro-fg outline-none focus:border-micro-fg transition-colors"
+                  value={selectedTool ? selectedTool.name : search}
+                  onChange={(e) => {
+                    setSearch(e.target.value);
+                    if (selectedTool) setSelectedTool(null);
+                  }}
+                />
+                
+                {/* Search Results */}
+                {filteredTools.length > 0 && !selectedTool && (
+                  <div className="absolute top-full left-0 right-0 mt-2 bg-white border border-micro-layer-2 rounded-sm shadow-2xl z-50 overflow-hidden">
+                    {filteredTools.map(t => (
+                      <button
+                        key={t.slug}
+                        onClick={() => {
+                          setSelectedTool(t);
+                          setSearch('');
+                        }}
+                        className="w-full text-left px-6 py-4 hover:bg-micro-layer-1 border-b border-micro-layer-1 last:border-0 transition-colors flex items-center justify-between group"
+                      >
+                        <span className="font-bold text-micro-fg">{t.name}</span>
+                        <span className="text-[10px] font-mono text-micro-muted group-hover:text-micro-fg">/tools/{t.slug}</span>
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {selectedTool ? (
+                <div className="mt-6 flex items-center justify-between bg-terminal-lime/10 p-4 rounded-sm border border-terminal-lime/20">
+                  <div className="flex items-center gap-3">
+                    <Sparkles className="w-5 h-5 text-terminal-lime" />
+                    <div>
+                      <p className="text-[10px] font-black uppercase text-micro-fg tracking-widest mb-0.5">Personalized SEO Link Active:</p>
+                      <p className="text-sm font-bold text-micro-fg">realaiexamples.com/tools/{selectedTool.slug}</p>
+                    </div>
+                  </div>
+                  <button 
+                    onClick={() => {
+                      setSelectedTool(null);
+                      setSearch('');
+                    }}
+                    className="text-[10px] font-black uppercase text-red-600 hover:underline"
+                  >
+                    Reset
+                  </button>
+                </div>
+              ) : (
+                <div className="mt-4 p-4 bg-white/40 border border-white/20 rounded-sm flex items-start gap-3">
+                  <Info className="w-5 h-5 text-micro-muted flex-shrink-0 mt-0.5" />
+                  <p className="text-xs text-micro-muted font-medium">
+                    New submitters can use the default code below. It links to the main directory and is valid for verification.
+                  </p>
+                </div>
+              )}
             </div>
           </section>
 
           {/* Section A: Badge Preview + Embed */}
           <section className="mb-16 md:mb-28">
             <h2 className="text-[10px] md:text-[12px] font-black uppercase tracking-[0.3em] text-micro-muted mb-8 md:mb-12 border-b border-micro-layer-1 pb-4">
-              02. Choose Your Style
+              02. Grab Your Embed Code
             </h2>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -126,7 +187,7 @@ export default function BadgePage() {
                 <div className="flex items-center justify-center py-4 bg-coffee-900 rounded-sm">
                   <BadgePreview variant="dark" />
                 </div>
-                <CopyBlock code={makeBadgeEmbed('dark', cleanSlug)} />
+                <CopyBlock code={makeBadgeEmbed('dark', currentSlug)} />
               </div>
 
               {/* Light Badge */}
@@ -139,7 +200,7 @@ export default function BadgePage() {
                 <div className="flex items-center justify-center py-4 bg-coffee-50 rounded-sm">
                   <BadgePreview variant="light" />
                 </div>
-                <CopyBlock code={makeBadgeEmbed('light', cleanSlug)} />
+                <CopyBlock code={makeBadgeEmbed('light', currentSlug)} />
               </div>
             </div>
           </section>
