@@ -133,9 +133,9 @@ export default function ToolsIndex() {
         {/* Hero */}
         <div className="max-w-5xl mx-auto text-center mb-10 md:mb-16 pt-8 md:pt-12 px-6">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-4 md:mb-6 leading-[0.9] text-white drop-shadow-md">
-            Too many AI tools. <br /><span className="font-instrument font-normal italic lowercase opacity-90 text-white/90">Not enough time.</span>
+            Too many AI tools. <br /><span className="font-instrument font-normal italic lowercase text-terminal-lime">Not enough time.</span>
           </h1>
-          <p className="text-base md:text-lg lg:text-xl text-white/70 max-w-2xl mx-auto font-medium leading-relaxed mb-10 text-balance">
+          <p className="text-base md:text-lg lg:text-xl text-white/90 max-w-2xl mx-auto font-medium leading-relaxed mb-10 text-balance">
             Every Sunday, we handpick a shortlist of AI tools that solve real work problems.
           </p>
 
@@ -143,17 +143,17 @@ export default function ToolsIndex() {
           <div className="inline-flex flex-wrap items-center justify-center gap-6 md:gap-12 border-t border-b border-white/5 py-4 md:py-6 px-10 bg-white/5 backdrop-blur-sm rounded-sm">
             <div className="text-center">
               <div className="text-xl md:text-2xl font-black text-terminal-lime mb-0.5">300+</div>
-              <div className="text-[9px] font-black uppercase tracking-[0.2em] text-white/40">Tools Curated</div>
+              <div className="text-[9px] font-black uppercase tracking-[0.2em] text-white/70">Tools Curated</div>
             </div>
             <div className="h-6 w-[1px] bg-white/10 hidden md:block"></div>
             <div className="text-center">
               <div className="text-xl md:text-2xl font-black text-white mb-0.5">{groupedWeeks.length}</div>
-              <div className="text-[9px] font-black uppercase tracking-[0.2em] text-white/40">Weekly Drops</div>
+              <div className="text-[9px] font-black uppercase tracking-[0.2em] text-white/70">Weekly Drops</div>
             </div>
             <div className="h-6 w-[1px] bg-white/10 hidden md:block"></div>
             <div className="text-center">
               <div className="text-xl md:text-2xl font-black text-white mb-0.5">SUNDAY</div>
-              <div className="text-[9px] font-black uppercase tracking-[0.2em] text-white/40">Next Drop</div>
+              <div className="text-[9px] font-black uppercase tracking-[0.2em] text-white/70">Next Drop</div>
             </div>
           </div>
         </div>

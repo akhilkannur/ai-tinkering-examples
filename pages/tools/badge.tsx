@@ -67,7 +67,7 @@ export default function BadgePage() {
 
       <div>
         {/* Hero */}
-        <div className="max-w-5xl mx-auto text-center mb-12 md:mb-32 pt-8 md:pt-12 px-6 text-left">
+        <div className="max-w-5xl mx-auto mb-12 md:mb-32 pt-8 md:pt-12 px-6 text-left">
           <Link
             href="/tools"
             className="inline-flex items-center gap-2 text-[10px] md:text-xs font-bold text-white/60 uppercase tracking-widest hover:text-white transition-colors mb-10 bg-white/10 px-4 py-2 rounded-sm border border-white/10"
@@ -75,11 +75,11 @@ export default function BadgePage() {
             <ArrowLeft className="w-3 h-3 md:w-3.5 md:h-3.5" />
             Back to Tools
           </Link>
-          <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold tracking-tight mb-4 md:mb-8 leading-[0.9] text-white drop-shadow-md">
+          <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold tracking-tight mb-6 md:mb-10 leading-[0.9] text-white drop-shadow-md">
             Get discovered. <br />
-            <span className="font-instrument font-normal italic lowercase opacity-90 text-[#064e3b]">Fast-tracked.</span>
+            <span className="font-instrument font-normal italic lowercase text-terminal-lime">Fast-tracked.</span>
           </h1>
-          <p className="text-base md:text-xl lg:text-2xl text-white/70 max-w-2xl font-medium leading-relaxed">
+          <p className="text-base md:text-xl lg:text-2xl text-white/90 max-w-2xl font-medium leading-relaxed">
             Makers who embed the badge get priority review, a permanent SEO backlink, and a feature in our next Weekly Drop.
           </p>
         </div>
