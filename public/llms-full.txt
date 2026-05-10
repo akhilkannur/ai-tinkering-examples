@@ -1,6 +1,78 @@
 # RealAIExamples Full Content Dump
 
-## TOOLS DIRECTORY (310 tools)
+## TOOLS DIRECTORY (322 tools)
+
+### DoneDone
+URL: https://realaiexamples.com/tools/donedone
+Category: AI Productivity
+Tags: Freemium
+Description: The verification layer for site migrations. An MCP server that allows AI agents to autonomously verify WooCommerce builds against source sites.
+
+### Novelmint
+URL: https://realaiexamples.com/tools/novelmint
+Category: AI Creative
+Tags: Freemium
+Description: AI-integrated serial fiction platform that helps authors write, publish, and monetize stories through an AI-assisted workflow.
+
+### AITuber
+URL: https://realaiexamples.com/tools/aituber
+Category: AI Video
+Tags: Freemium
+Description: AI video generation platform for creating faceless monetizable shorts and long-form 4K videos on autopilot.
+
+### Kraflio
+URL: https://realaiexamples.com/tools/kraflio
+Category: AI Marketing
+Tags: Freemium
+Description: AI content generator that learns your unique writing voice to create publication-ready posts for LinkedIn, YouTube, and X.
+
+### SocialCRM
+URL: https://realaiexamples.com/tools/socialcrm
+Category: AI Marketing
+Tags: Freemium
+Description: AI-first social media scheduler for solo founders that writes, previews, and ships content in their authentic voice.
+
+### Agensi
+URL: https://realaiexamples.com/tools/agensi
+Category: AI Productivity
+Tags: Free
+Description: The trust and distribution layer for AI agents. A curated marketplace for security-scanned SKILL.md files and agent capabilities.
+
+### Placy AR App
+URL: https://realaiexamples.com/tools/placy-ar-app
+Category: AI Creative
+Tags: Free
+Description: AR tool that generates high-fidelity 3D models from single images for virtual furniture fitting and object visualization.
+
+### YouScript
+URL: https://realaiexamples.com/tools/youscript
+Category: AI Marketing
+Tags: Free
+Description: AI-powered script engineer for YouTube that decodes winning channel patterns to write high-retention scripts.
+
+### HomeProBadge
+URL: https://realaiexamples.com/tools/homeprobadge
+Category: AI Productivity
+Tags: Free
+Description: Verified digital identity and trust platform for home service professionals to prove credibility to homeowners instantly.
+
+### Mortgage Payment
+URL: https://realaiexamples.com/tools/mortgage-payment
+Category: AI Productivity
+Tags: Free
+Description: AI-enhanced mortgage calculator and financial planning tool for homeowners to track equity and interest savings.
+
+### SwimScore
+URL: https://realaiexamples.com/tools/swimscore
+Category: AI Productivity
+Tags: Paid
+Description: Digital platform for male fertility that provides lab-grade semen analysis and hormone tracking from home.
+
+### REV Copack
+URL: https://realaiexamples.com/tools/rev-copack
+Category: AI Productivity
+Tags: Paid
+Description: Automated beverage packaging and co-packing platform for fast-growing brands to streamline fulfillment.
 
 ### VerifyRef
 URL: https://realaiexamples.com/tools/verifyref
@@ -1865,26 +1937,33 @@ Description: Document tracking and e-signature platform that provides real-time 
 
 ---
 
-## REAL-WORLD AI EXAMPLES (50 examples)
+## REAL-WORLD AI EXAMPLES (51 examples)
+
+### A/B Testing Exa against itself
+URL: https://realaiexamples.com/ai-examples/marketing-ops/jordan-crawford-exa-ab-test
+Category: Marketing Ops
+Summary: Jordan Crawford built a lead validation pipeline using Exa, a LinkedIn scraper, and Claude Haiku. He discovered that raw search data has a 39% error rate. The fix: a multi-step workflow that discovers, enriches, and validates every profile for just $0.04 per lead. Jordan is worth listening to when it comes to digging data gold with the help of LLMs, among many other things. I would recommend checking out his LinkedIn for useful tips.
+Tags: Lead Gen, Validation, Data Ops
+Source: https://edge.blueprintgtm.com/p/i-ab-tested-exa-against-itself-the
 
 ### Building Reliable Data Pipelines with AI Agents
 URL: https://realaiexamples.com/ai-examples/general/tobias-schneider-deterministic-data-agents
 Category: General
-Summary: Tobias Schneider recommends using agents to write deterministic scripts rather than letting models transpose data directly. Direct LLM enrichment often leads to silent hallucinations across thousands of rows. Scripts are the only way to build reliable pipelines at scale.
+Summary: Tobias Schneider recommends using agents to write deterministic scripts rather than letting models transpose data directly. Direct LLM enrichment often leads to silent hallucinations across thousands of rows. Scripts are the only way to build reliable pipelines at scale. I have made the mistake of using LLMs to enrich web data on multiple occasions. Even with web fetch tools, the model may not actually access the site and still act like it did the work. If you ask later, it may admit it missed the page, but not explain where it went wrong. That is how you end up with a pile of garbage data.
 Tags: Data Ops, Reliability, Agents
 Source: https://x.com/tobiaschneider/status/2048357912955769137
 
 ### The Expired Patent Arbitrage System
 URL: https://realaiexamples.com/ai-examples/productivity/gippp69-expired-patent-arbitrage
 Category: Productivity
-Summary: @gippp69 uses Claude to identify products nobody manufactures anymore. He feeds expired patents to Claude, identifies commercial viability, and launches products on Amazon with high margins. One unit costs $1.80 to manufacture and sells for $11.99.
+Summary: @gippp69 uses Claude to filter millions of public domain patents for commercial viability. By scraping the USPTO Bulk Data portal and scoring expired utility patents based on manufacturing complexity and Amazon gaps, he identifies products that once worked but stopped being made. Examples include a self-watering planter ($1.80 cost vs $14 retail) and a snap-lock collapsible pet bowl ($0.95 cost). It is a pure arbitrage play: $0 for the blueprint, high margins on Amazon.
 Tags: Productivity, Ecommerce, Claude, Patents, Automation
 Source: https://x.com/gippp69/status/2049131801780658541
 
 ### How to Build a Research Agent Army
 URL: https://realaiexamples.com/ai-examples/marketing-ops/nikillinit-research-agent-army
 Category: Marketing Ops
-Summary: Nik Sharma uses a fleet of AI agents to perform deep market research on competitors. He feeds them URLs and they return structured dossiers on pricing, features, and marketing angles. It is like having a full time research team on a monthly sub.
+Summary: Nikhil Krishnan's takeaway from healthcare LLM workshops is simple: the first skill is not a workflow, it's learning to ask Claude for help when you're stuck. That means taking a screenshot, asking what to do next, using the model to improve the process itself, and pushing for explanations that match how you think. It is the same muscle as learning to Google well. The real lesson for readers is that AI becomes useful faster when you treat it like a debugging partner, not a person you wait on for answers.
 Tags: Marketing, Research, Agents
 Source: https://x.com/nikillinit/status/2049867803184804124
 

@@ -2,6 +2,7 @@ import React, { useState, useMemo, useRef, useEffect, useCallback } from 'react'
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import { aiTools, AiTool } from '../../lib/ai-tools-data';
 import { adSpots, featuredPlaceholders, AdSpot } from '../../lib/ads-data';
 import { ArrowRight, ChevronDown, List, LayoutGrid, Megaphone, Crown, ExternalLink, TrendingUp, Clock } from 'lucide-react';
@@ -30,6 +31,7 @@ function getWeekLabel(dateStr: string): string {
 }
 
 export default function ToolsIndex() {
+  const router = useRouter();
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [showAllWeeks, setShowAllWeeks] = useState(false);
   const [viewMode, setViewMode] = useState<'drops' | 'directory'>('drops');
@@ -115,6 +117,10 @@ export default function ToolsIndex() {
   // Last week's picks = 2nd group's first 3 tools (the previous week)
   const lastWeekPicks = groupedWeeks.length > 1 ? groupedWeeks[1].tools.slice(0, 3) : [];
   const lastWeekLabel = groupedWeeks.length > 1 ? groupedWeeks[1].label : '';
+
+  const navigateToTool = (tool: AiTool) => {
+    router.push(`/tools/${slugify(tool.name)}`);
+  };
 
   return (
     <div>
@@ -265,15 +271,17 @@ export default function ToolsIndex() {
                               const isLatestDrop = index === 0;
                               const isFeaturedInDrop = isLatestDrop && tIndex < 2;
                               return (
-                                <a key={tool.name} href={addRef(tool.url)} target="_blank" rel="noopener noreferrer">
-                                  <div className={`${isFeaturedInDrop ? 'bg-[#f0fdf4]' : ''}`}>
-                                    <ToolDataRow
-                                      tool={tool}
-                                      isDirectory={true}
-                                      isFeatured={isFeaturedInDrop}
-                                    />
-                                  </div>
-                                </a>
+                                <div 
+                                  key={tool.name} 
+                                  className={`${isFeaturedInDrop ? 'bg-[#f0fdf4]' : ''} cursor-pointer`}
+                                  onClick={() => navigateToTool(tool)}
+                                >
+                                  <ToolDataRow
+                                    tool={tool}
+                                    isDirectory={true}
+                                    isFeatured={isFeaturedInDrop}
+                                  />
+                                </div>
                               );
                             })}
                           </div>
@@ -295,9 +303,13 @@ export default function ToolsIndex() {
                     {alphabeticalTools.map((tool) => {
                       const isFeatured = chronologicalTools.slice(0, 2).map(t => t.name).includes(tool.name);
                       return (
-                        <a key={tool.name} href={addRef(tool.url)} target="_blank" rel="noopener noreferrer">
+                        <div 
+                          key={tool.name} 
+                          className="cursor-pointer" 
+                          onClick={() => navigateToTool(tool)}
+                        >
                           <ToolTile tool={tool} isFeatured={isFeatured} />
-                        </a>
+                        </div>
                       );
                     })}
                   </div>
@@ -360,24 +372,36 @@ export default function ToolsIndex() {
                       </div>
                       <div className="flex flex-col gap-3">
                         {lastWeekPicks.map(tool => (
-                          <a key={tool.name} href={addRef(tool.url)} target="_blank" rel="noopener noreferrer">
-                            <div className="group flex items-center gap-3 p-2 -mx-2 rounded-sm hover:bg-micro-layer-1 transition-all cursor-pointer">
-                              <div className="w-8 h-8 rounded-sm border border-micro-layer-1 bg-white flex-shrink-0 flex items-center justify-center overflow-hidden p-1">
-                                <Image
-                                  src={tool.image || `https://www.google.com/s2/favicons?domain=${(() => { try { return new URL(tool.url).hostname; } catch { return ''; }})()}&sz=128`}
-                                  alt={tool.name}
-                                  width={24}
-                                  height={24}
-                                  className="object-contain"
-                                  unoptimized
-                                />
-                              </div>
-                              <div className="min-w-0 flex-1">
-                                <h4 className="text-xs font-bold text-micro-fg truncate group-hover:underline decoration-1 underline-offset-2">{tool.name}</h4>
-                                <p className="text-[10px] text-micro-muted truncate">{tool.description}</p>
-                              </div>
+                          <div 
+                            key={tool.name} 
+                            onClick={() => navigateToTool(tool)}
+                            className="group flex items-center gap-3 p-2 -mx-2 rounded-sm hover:bg-micro-layer-1 transition-all cursor-pointer"
+                          >
+                            <div className="w-8 h-8 rounded-sm border border-micro-layer-1 bg-white flex-shrink-0 flex items-center justify-center overflow-hidden p-1">
+                              <Image
+                                src={tool.image || `https://www.google.com/s2/favicons?domain=${(() => { try { return new URL(tool.url).hostname; } catch { return ''; }})()}&sz=128`}
+                                alt={tool.name}
+                                width={24}
+                                height={24}
+                                className="object-contain"
+                                unoptimized
+                              />
                             </div>
-                          </a>
+                            <div className="min-w-0 flex-1">
+                              <h4 className="text-xs font-bold text-micro-fg truncate">
+                                <a 
+                                  href={addRef(tool.url)} 
+                                  target="_blank" 
+                                  rel="noopener noreferrer"
+                                  className="hover:underline decoration-1 underline-offset-2"
+                                  onClick={(e) => e.stopPropagation()}
+                                >
+                                  {tool.name}
+                                </a>
+                              </h4>
+                              <p className="text-[10px] text-micro-muted truncate">{tool.description}</p>
+                            </div>
+                          </div>
                         ))}
                       </div>
                       <div className="mt-3 pt-3 border-t border-micro-layer-1">
@@ -461,8 +485,16 @@ function ToolTile({ tool, isFeatured }: { tool: AiTool, isFeatured?: boolean }) 
           <Image src={imgSrc} alt={tool.name} width={56} height={56} className="object-contain" onError={() => setImgSrc(fallbackLogo)} unoptimized />
         </div>
         <div className="min-w-0 flex-1">
-          <h3 className={`text-base md:text-lg font-bold tracking-tight group-hover:underline decoration-2 underline-offset-4 truncate ${isFeatured ? 'text-[#064e3b]' : 'text-micro-fg'}`}>
-            {tool.name}
+          <h3 className={`text-base md:text-lg font-bold tracking-tight truncate ${isFeatured ? 'text-[#064e3b]' : 'text-micro-fg'}`}>
+            <a 
+              href={addRef(tool.url)} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:underline decoration-2 underline-offset-4"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {tool.name}
+            </a>
           </h3>
           <span className={`text-[10px] md:text-[11px] font-bold uppercase tracking-[0.1em] ${isFeatured ? 'text-[#064e3b]/60' : 'text-micro-muted'}`}>
             {tool.category}
@@ -504,8 +536,16 @@ function ToolDataRow({ tool, isDirectory, isFeatured }: { tool: AiTool, isDirect
           <Image src={imgSrc} alt={tool.name} width={48} height={48} className="object-contain" onError={() => setImgSrc(fallbackLogo)} unoptimized />
         </div>
         <div className="min-w-0">
-          <h3 className={`text-base font-bold tracking-tight group-hover:underline decoration-2 underline-offset-4 ${isFeatured ? 'text-[#064e3b]' : 'text-micro-fg'}`}>
-            {tool.name}
+          <h3 className={`text-base font-bold tracking-tight ${isFeatured ? 'text-[#064e3b]' : 'text-micro-fg'}`}>
+            <a 
+              href={addRef(tool.url)} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:underline decoration-2 underline-offset-4"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {tool.name}
+            </a>
           </h3>
           <span className={`text-[10px] font-bold uppercase tracking-[0.1em] ${isFeatured ? 'text-[#064e3b]/60' : 'text-micro-muted'}`}>
             {tool.category}
