@@ -43,14 +43,14 @@ function groupByWeek(items: EnrichedExampleRecord[]) {
   const groups: { [key: string]: EnrichedExampleRecord[] } = {};
   const oneWeek = 7 * 24 * 60 * 60 * 1000;
 
-  // Next Sunday drop date (Apr 26)
+  // Latest Sunday drop date (May 10)
   const now = new Date();
   const nextSunday = new Date(now);
-  nextSunday.setDate(now.getDate() + (7 - now.getDay()) % 7);
-  if (now.getDay() === 0) nextSunday.setDate(now.getDate());
+  // If today is Mon-Sat, go back to last Sunday. If today is Sunday, use today.
+  nextSunday.setDate(now.getDate() - now.getDay());
   nextSunday.setHours(0, 0, 0, 0);
 
-  // Items from last 7 days go to Apr 26 drop
+  // Items from last 7 days go to May 10 drop
   const sessionStart = new Date(nextSunday);
   sessionStart.setDate(nextSunday.getDate() - 7);
 
@@ -66,7 +66,7 @@ function groupByWeek(items: EnrichedExampleRecord[]) {
     }
   });
 
-  // Current drop is Apr 26, 2026
+  // Current drop is May 10, 2026
   groups[nextSunday.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })] = currentDrop;
 
   // Older items into groups of 7, going back by week

@@ -179,6 +179,32 @@ ALREADY_SENT = {
     'mudit@xmit.sh',
     'alialsayond@gmail.com',
     'signup@getalignmint.org',
+    'timothy@northmarkfinance.com.au', 'posusapossystem@gmail.com', 'noamhiva@gmail.com', 'larrycottrell1973@gmail.com', 
+    'riskofficer7@gmail.com', 'hello@taunusstar.com', 'josephburns986@gmail.com', 'williamrichard1093@gmail.com', 
+    'StartupSubmit@trytails.com', 'hello@shortsai.com', 'tsvetkovn2@gmail.com', 'testlab.ai03@gmail.com', 
+    'support@diffscout.com', 'info@simplyhabits.io', 'vienstodd@gmail.com', 'christian@simpleseverance.co', 
+    'kyle@binarium.supply', 'info@aiangels.io', 'johnleech921@gmail.com', 'coldemailkit1@gmail.com', 
+    'nowandherereg@gmail.com', 'weshopstartups@gmail.com', 'luxoretai@gmail.com', 'julieaviles277@gmail.com', 
+    'julienzanet81@gmail.com', 'mayhembryan3@gmail.com', 'hello@pitchtank.io', 'utku@nextdio.com', 
+    'thevelop@gmail.com', 'dir@vun.one', 'aime@coticsy.com', 'marketing@dashtera.com', 
+    'marketing@claritysearch.ai', 'donnadknaus@gmail.com', 'hello@lunary.app', 'yixiaow98@gmail.com', 
+    'david@foundra.de', 'alaska@texastf.com', 'Sunnyrochiramani476@gmail.com', 'help@vuln0x.com', 
+    'ev24directories@gmail.com', 'ukmiapi@gmail.com', 'jaredgifford501@gmail.com', 'lxtailor97@gmail.com', 
+    'elimu.developer.ss@gmail.com', 'henriklippke653@gmail.com', 'contact@privateclawd.com', 
+    'jenniferoverstreet75@gmail.com', 'hello@rankdraft.io', 'supapin.com@gmail.com', 
+    'startup@clearmargin.app', 'angolaterra05@gmail.com', 'submissionuser@tanga.app', 
+    'temporarymokaru@gmail.com', 'yannick@applaunchflow.com', 'zane@flarewarden.com', 
+    'henrikhimmat@gmail.com', 'hello@upagents.app', 'support@flaex.ai', 'jobjourneypro@gmail.com', 
+    'hello@preuve.ai', 'hello@careerdnalabs.com', 'callcowhan@gmail.com', 'contact@aigirlfriend.wtf', 
+    'hello.yibby@gmail.com', 'joseinnorte@gmail.com', 'support@productmetrics.io', 'support@gmail.com', 
+    'masterberrys26@gmail.com', 'hey@selected.site', 'shirrelfziv@gmail.com', 'albertorohr58@gmail.com', 
+    'support@jsonyaml.com', 'contact@reppit.ai', 'validatefast@gmail.com', 'hello@availsim.com', 
+    'mgstdy@alcazarsec.com', 'app.cowork.ink@gmail.com', 'hello@blinknote.me', 'info@1app.energy', 
+    'andrewjamesy45@gmail.com', 'marketontology@gmail.com', 'dylan@joinpond.ai', 'randyalfred81@gmail.com', 
+    'alexandre@velys.software', 'support@furnea.ai', 'jadenkiqo@gmail.com', 'hello@polytest.io', 
+    'submitdirectory249@gmail.com', 'info@tradetab.co', 'extralt23@gmail.com', 'anzumfaria922@gmail.com', 
+    'support@mentalnote.ai', 'eliz@athletedata.health', 'phillip@stride.agency', 'contact@toolab.dev', 
+    'support@signalboss.io', 'seospeakpro@gmail.com', 'at@autopilotapp.io', 'socialfinderai@gmail.com',
 }
 
 def slugify(text):
@@ -228,65 +254,92 @@ def send_email(recipient, tool_name, category="Productivity"):
     tool_url = f"https://realaiexamples.com/tools/{slug}?utm_source=email&utm_medium=acceptance_notification&utm_campaign=badge_requirement"
     badge_url = "https://realaiexamples.com/tools/badge"
     clean_url = f"realaiexamples.com/tools/{slug}"
+    
+    # Generate the personalized embed code
+    embed_target = f"https://realaiexamples.com/tools/{slug}?utm_source=badge&utm_medium=embed&utm_campaign=featured"
+    embed_img = "https://realaiexamples.com/images/badge-dark.svg"
+    embed_code = f'<a href="{embed_target}" target="_blank"><img src="{embed_img}" alt="Featured on REAL AI EXAMPLES" width="220" height="50" /></a>'
 
     text_body = f"""Hey,
 
 Just letting you know I’ve added {tool_name} to the directory on Real AI Examples. You can see your listing here: {tool_url}
 
-When I started this site, I just added tools for free so makers could "submit and forget" while I did the rest. But I've realized that for this to actually be useful to everyone, we need to trade some authority.
+When I added a tool directory to the site, I just added tools for free so makers could "submit and forget" while I did the rest. But I've realized that for this to actually be useful to everyone, we need to trade some authority.
 
 I’m moving to a "Verified" model where free listings include a "Featured" badge (or a simple backlink) in exchange for the listing. A few new makers have already done this, and I’m expecting a significant DR boost for the whole directory in the coming weeks as a result.
 
 To keep your backlink active and stay in the main directory, please add the badge or a link by May 20th. 
 
-Grab your embed code here: {badge_url}
+Copy and paste this badge code:
+{embed_code}
 
-If you don't want to use the badge, a simple text link anywhere on your site works too. It only takes a minute but ensures we all get the SEO benefit from each other's efforts.
+If you don't want to use the badge, a simple text link anywhere on your site (like a footer or "As Seen In" section) works too. You can just link the text "Featured on Real AI Examples" to your listing page. It only takes a minute but ensures we all get the SEO benefit from each other's efforts.
 
 Best,
 Akhil
+Founder, RealAiExamples
 
 P.S. If you have any suggestions or edits for your listing, just reply to this email and I’ll get it updated for you."""
 
-    html_body = f"""<div style="font-family: sans-serif; line-height: 1.5; color: #333; max-width: 600px;">
-<p>Hey,</p>
-<p>Just letting you know I’ve added <strong>{tool_name}</strong> to the directory on Real AI Examples. You can see your listing here: <a href="{tool_url}" style="color: #007bff; text-decoration: none;">{clean_url}</a></p>
+    html_body = f"""<div style="background-color: #f9fafb; padding: 40px 20px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+<div style="max-width: 600px; margin: 0 auto; background-color: #ffffff; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);">
+    
+    <!-- Header/Branding -->
+    <div style="padding: 32px 40px; border-bottom: 1px solid #f3f4f6;">
+        <a href="https://realaiexamples.com" style="text-decoration: none; display: flex; align-items: center;">
+            <img src="https://realaiexamples.com/logo-square.png" alt="Real AI Examples" width="32" height="32" style="border-radius: 4px; border: 1px solid #e5e7eb;">
+            <span style="margin-left: 12px; font-size: 20px; font-weight: 800; color: #111827; letter-spacing: -0.025em;">Real AI Examples</span>
+        </a>
+    </div>
 
-<p>When I started this site, I just added tools for free so makers could "submit and forget" while I did the rest. But I've realized that for this to actually be useful to everyone, we need to trade some authority.</p>
+    <!-- Body -->
+    <div style="padding: 40px; line-height: 1.6; color: #374151; font-size: 16px;">
+        <p style="margin-top: 0; margin-bottom: 24px;">Hey,</p>
+        
+        <p style="margin-bottom: 24px;">Just letting you know I’ve added <strong>{tool_name}</strong> to the directory on Real AI Examples. You can see your listing here: <a href="{tool_url}" style="color: #064e3b; font-weight: 600; text-decoration: underline;">{clean_url}</a></p>
 
-<p>I’m moving to a "Verified" model where free listings include a "Featured" badge (or a simple backlink) in exchange for the listing. A few new makers have already done this, and I’m expecting a significant DR boost for the whole directory in the coming weeks as a result.</p>
+        <p style="margin-bottom: 24px;">When I added a tool directory to the site, I just added tools for free so makers could "submit and forget" while I did the rest. But I've realized that for this to actually be useful to everyone, we need to trade some authority.</p>
 
-<div style="margin: 20px 0; padding: 20px; background-color: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 4px;">
-<p style="margin-top: 0; font-weight: bold; color: #166534;">⚠️ Action: Add Badge or Link by May 20th</p>
-<p style="font-size: 14px; margin-bottom: 15px;">To keep your backlink active and stay in the main directory, please embed the badge or a simple text link.</p>
-<p style="margin-bottom: 0;"><a href="{badge_url}" style="display: inline-block; background-color: #166534; color: white; padding: 10px 18px; text-decoration: none; font-weight: bold; font-size: 13px; border-radius: 4px;">Get Your Embed Code →</a></p>
+        <p style="margin-bottom: 32px;">I’m moving to a "Verified" model where free listings include a "Featured" badge (or a simple backlink) in exchange for the listing. A few new makers have already done this, and I’m expecting a significant DR boost for the whole directory in the coming weeks as a result.</p>
+
+        <!-- Action Box -->
+        <div style="margin-bottom: 32px; padding: 32px; background-color: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 6px;">
+            <p style="margin-top: 0; margin-bottom: 8px; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: #166534;">⚠️ Action Required</p>
+            <h3 style="margin-top: 0; margin-bottom: 16px; font-size: 18px; font-weight: 700; color: #064e3b;">Add Badge or Link by May 20th</h3>
+            <p style="margin-bottom: 20px; font-size: 15px; color: #166534;">To keep your backlink active, please copy and embed this personalized badge code on your site:</p>
+
+            <div style="background: #ffffff; padding: 16px; border: 1px solid #bbf7d0; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 11px; color: #374151; word-break: break-all; margin-bottom: 20px; border-radius: 4px; line-height: 1.4;">
+                {embed_code.replace('<', '&lt;').replace('>', '&gt;')}
+            </div>
+
+            <a href="{badge_url}" style="display: inline-block; font-size: 14px; color: #166534; font-weight: 700; text-decoration: underline;">Need a light variant or different size? Click here →</a>
+        </div>
+
+        <p style="margin-bottom: 24px;">If you don't want to use the badge, a simple text link anywhere on your site (like a footer or "As Seen In" section) works too. You can just link the text "Featured on Real AI Examples" to your listing page. It only takes a minute but ensures we all get the SEO benefit from each other's efforts.</p>
+
+        <p style="margin-bottom: 0;">Best,<br>
+        <strong>Akhil</strong><br>
+        <span style="color: #6b7280; font-size: 14px;">Founder, RealAiExamples</span></p>
+    </div>
+
+    <!-- Footer -->
+    <div style="padding: 32px 40px; background-color: #f9fafb; border-top: 1px solid #f3f4f6; text-align: center;">
+        <p style="margin-top: 0; margin-bottom: 16px; font-size: 14px; color: #6b7280;">
+            How People Actually Use AI at Work.
+        </p>
+        <p style="margin-bottom: 0; font-size: 12px; color: #9ca3af;">
+            You're receiving this because you submitted a tool to Real AI Examples.
+        </p>
+    </div>
 </div>
-
-<p style="font-size: 14px;">If you don't want to use the badge, a simple text link anywhere on your site works too. It only takes a minute but ensures we all get the SEO benefit from each other's efforts.</p>
-
-<p>Best,<br>
-<strong>Akhil</strong></p>
-
-<p style="font-size: 12px; color: #666; border-top: 1px solid #eee; padding-top: 15px; margin-top: 25px;">
-<strong>P.S.</strong> If you have any suggestions or edits for your listing, just reply to this email and I’ll get it updated for you.
-</p>
 </div>"""
-    # Schedule for today at 10:00 AM UTC (or now if after 10:00)
-    now = datetime.utcnow()
-    # If today's 10:00 UTC has passed, schedule for tomorrow 10:00 UTC
-    if now.hour >= 10:
-        scheduled_at = now.replace(day=now.day+1, hour=10, minute=0, second=0, microsecond=0).strftime("%Y-%m-%dT%H:%M:%SZ")
-    else:
-        scheduled_at = now.replace(hour=10, minute=0, second=0, microsecond=0).strftime("%Y-%m-%dT%H:%M:%SZ")
-
     payload = {
         "from": "akhil@mail.realaiexamples.com",
         "to": [recipient],
         "reply_to": "akhil@realaiexamples.com",
         "subject": subject,
         "text": text_body,
-        "html": html_body,
-        "scheduled_at": scheduled_at
+        "html": html_body
     }
 
     json_payload = json.dumps(payload)
@@ -380,4 +433,5 @@ def process_and_send(limit=None):
             time.sleep(1) # Slow down slightly
 
 if __name__ == "__main__":
-    process_and_send(limit=None)
+    # Resend free plan limit is 100 per day
+    process_and_send(limit=100)

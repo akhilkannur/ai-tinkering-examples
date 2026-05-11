@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 // CONFIGURATION
-const KEY_FILE_PATH = '/home/akhilnairmk/findsday-airtable/indexing-key.json';
+const KEY_FILE_PATH = path.join(process.cwd(), 'ga-credentials.json');
 const SITEMAP_PATH = path.join(process.cwd(), 'public', 'sitemap.xml');
 const LOG_FILE = path.join(process.cwd(), 'indexed_google.json');
 
