@@ -205,6 +205,21 @@ ALREADY_SENT = {
     'submitdirectory249@gmail.com', 'info@tradetab.co', 'extralt23@gmail.com', 'anzumfaria922@gmail.com', 
     'support@mentalnote.ai', 'eliz@athletedata.health', 'phillip@stride.agency', 'contact@toolab.dev', 
     'support@signalboss.io', 'seospeakpro@gmail.com', 'at@autopilotapp.io', 'socialfinderai@gmail.com',
+    'neevaiesinli@gmail.com', 'outreach@rpcfast.com', 'isabell.weber@admark.ai', 'contact@portraitgift.com', 'whitecloverdevs@gmail.com', 
+    'glafira@revenew.co', 'info@primefirms.co', 'tson78190@gmail.com', 'hello@pause.do', 'erik@peopledb.co', 
+    'faknamec@gmail.com', 'workers2215s@gmail.com', 'support@emailfinder.dev', 'team@archgee.com', 'profiles@acira.ai', 
+    'gabi@idlepilot.com', 'edeten.hauckyni@gmail.com', 'hello@shepi.ai', 'expressifyseo@gmail.com', 'ceo@flameproxies.com', 
+    'devshipau@gmail.com', 'toddmeshes@gmail.com', 'contact@hi-ai.live', 'mfax.app@gmail.com', 'nokesamoyliv@gmail.com', 
+    'rob@husl.io', 'reporank60@gmail.com', 'support@pixelco.io', 'jay@algomizer.com', 'aj@driven.co.za', 
+    'adkinsirisc@gmail.com', 'support@lexdraft.ai', 'dhruv@noclick.com', 'christianford741@gmail.com', 'dina@itjobscareers.com', 
+    'bsandusky2026@gmail.com', 'cosentinoscott600@gmail.com', 'directory@blazehive.io', 'd33693515@gmail.com', 'support@silversentry.com', 
+    'hello@novavoice.app', 'pierre@getmentions.ai', 'support@movescope.global', 'gregatqria@gmail.com', 'jessicakincaid74@gmail.com', 
+    'contact@mortgagepaymentcalculator.io', 'info@agensi.io', 'hello@myswimscore.com', 'support@aituber.app', 'placysubmit@gmail.com', 
+    'noreply@socialcrm.org', 'ramosdebbiet@gmail.com', 'barretbenton@gmail.com', 'bk@youscript.pro', 'homeprobadge@gmail.com', 
+    'support@novelmint.ai',
+    'evapetersons59@gmail.com', 'info@ilty.co', 'team@adcreate.com', 'chaeseungho6@gmail.com', 
+    'joram7121@gmail.com', 'support@trybivy.ai', 'kkeithcollins7@gmail.com', 'support@resolverent.com', 
+    'info@reti.media', 'agentkit750@gmail.com'
 }
 
 def slugify(text):
@@ -268,7 +283,7 @@ When I added a tool directory to the site, I just added tools for free so makers
 
 I’m moving to a "Verified" model where free listings include a "Featured" badge (or a simple backlink) in exchange for the listing. A few new makers have already done this, and I’m expecting a significant DR boost for the whole directory in the coming weeks as a result.
 
-To keep your backlink active and stay in the main directory, please add the badge or a link by May 20th. 
+To keep your backlink active and stay in the main directory, please add the badge or a link by May 25th. 
 
 Copy and paste this badge code:
 {embed_code}
@@ -305,7 +320,7 @@ P.S. If you have any suggestions or edits for your listing, just reply to this e
         <!-- Action Box -->
         <div style="margin-bottom: 32px; padding: 32px; background-color: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 6px;">
             <p style="margin-top: 0; margin-bottom: 8px; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: #166534;">⚠️ Action Required</p>
-            <h3 style="margin-top: 0; margin-bottom: 16px; font-size: 18px; font-weight: 700; color: #064e3b;">Add Badge or Link by May 20th</h3>
+            <h3 style="margin-top: 0; margin-bottom: 16px; font-size: 18px; font-weight: 700; color: #064e3b;">Add Badge or Link by May 25th</h3>
             <p style="margin-bottom: 20px; font-size: 15px; color: #166534;">To keep your backlink active, please copy and embed this personalized badge code on your site:</p>
 
             <div style="background: #ffffff; padding: 16px; border: 1px solid #bbf7d0; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 11px; color: #374151; word-break: break-all; margin-bottom: 20px; border-radius: 4px; line-height: 1.4;">
@@ -380,6 +395,9 @@ def process_and_send(limit=None):
         if name:
             submission_map[name.lower()] = row
 
+    # Create a lowercase set for faster, case-insensitive checks
+    already_sent_lower = {e.lower() for e in ALREADY_SENT}
+
     for name_lower, row in submission_map.items():
         if name_lower not in live_names:
             continue
@@ -394,7 +412,7 @@ def process_and_send(limit=None):
         email_lower = email.lower()
 
         # DEDUP & ALREADY SENT CHECK
-        if email_lower in seen_emails or email_lower in ALREADY_SENT:
+        if email_lower in seen_emails or email_lower in already_sent_lower:
             continue
 
         seen_emails.add(email_lower)
