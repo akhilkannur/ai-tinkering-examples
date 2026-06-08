@@ -13,9 +13,9 @@ export default function handler(req: NextRequest) {
     const format = searchParams.get('format');
     
     // Default values for homepage
-    let title = searchParams.get('title') || 'AI Blueprints';
-    let category = searchParams.get('category') || 'Work Automation';
-    let tagline = searchParams.get('tagline') || 'Copy, Paste, Automate Your Work.';
+    let title = searchParams.get('title') || 'Real AI Examples';
+    let category = searchParams.get('category') || 'AI Workflows';
+    let tagline = searchParams.get('tagline') || 'A library of real AI examples from people who use AI.';
     let siteName = 'realaiexamples.com';
     let bottomLabel = 'The Work Automation Library';
 

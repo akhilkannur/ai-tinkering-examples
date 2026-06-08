@@ -16,7 +16,6 @@ export interface EnrichedExampleRecord {
   categoryId?: string | null;
   read_time?: number | null;
   publish_date?: string | null;
-  workflow_steps?: string | null;
   original_link?: string | null;
   tags?: string[] | null;
   author_name?: string | null;

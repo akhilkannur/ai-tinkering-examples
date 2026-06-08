@@ -22,7 +22,6 @@ export interface EnrichedExampleRecord {
   original_link?: string;
   isPremium?: boolean;
   sponsor?: any;
-  workflow_steps?: string;
 }
 
 interface ExamplesPageProps {

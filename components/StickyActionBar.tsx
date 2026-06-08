@@ -45,8 +45,8 @@ export default function StickyActionBar() {
                 <Download size={20} />
               </div>
               <div>
-                <p className="font-bold text-text-color text-sm sm:text-base">Get the full 500+ list</p>
-                <p className="text-xs text-text-secondary hidden sm:block">Save the database for later.</p>
+                <p className="font-bold text-text-color text-sm sm:text-base">Get the full workflow database</p>
+                <p className="text-xs text-text-secondary hidden sm:block">Access 600+ real-world AI examples.</p>
               </div>
             </div>
 

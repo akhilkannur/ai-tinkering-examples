@@ -2,8 +2,8 @@ import csv
 from datetime import datetime
 
 def find_new_submissions():
-    # Last tool processed today (Alignmint) was submitted March 5, 2026 09:02:19
-    cutoff_date = datetime(2026, 3, 5, 9, 2, 19)
+    # Last tool processed (Agentkit) was submitted May 18, 2026 01:56:34
+    cutoff_date = datetime(2026, 5, 18, 1, 56, 34)
     new_entries = []
 
     print(f"Checking for submissions after {cutoff_date}...")

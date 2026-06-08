@@ -28,8 +28,8 @@ import Layout from '../components/Layout'
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
   // ... rest of meta and og image logic ...
-  const title = "AI Examples You Can Copy & Try";
-  const description = "Curated AI workflows and prompts for non-technical tinkerers. No fluff, just actionable examples.";
+  const title = "Real AI Examples: Curated Workflows from AI-Native Operators";
+  const description = "A library of real AI workflows and systems that actually work. No fluff, just documented setups from the people building with AI.";
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com';
   const ogImage = `${baseUrl}/api/og?mode=home`;
   
@@ -43,7 +43,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <div className={`${inter.variable} ${dmSans.variable} ${spaceMono.variable} font-sans`}>
       <Head>
-        <title>AI Examples You Can Copy & Try</title>
+        <title>Real AI Examples: Curated Workflows from AI-Native Operators</title>
         <meta name="description" content={description} key="description" />
         <meta property="og:title" content={title} key="og:title" />
         <meta property="og:description" content={description} key="og:description" />

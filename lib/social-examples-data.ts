@@ -1123,4 +1123,92 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     author_link: "https://substack.com/@majavoje",
     tags: ["Claude Code", "GTM", "Outbound", "Context Engineering", "Campaigns"],
   },
+  {
+    id: "novatool-review-assistant",
+    title: "Build an AI Review Assistant with Make.com",
+    slug: "novatool-review-assistant",
+    summary: "A step-by-step guide to building an AI review monitoring system using Make.com and OpenAI. It watches Google My Business reviews, filters by sentiment, analyzes with GPT, drafts personalized responses, logs everything to Google Sheets, and sends Slack alerts for critical negative reviews. Handles 200+ reviews per week, cutting average response time from 18 hours to 2 hours.",
+    screenshots: [
+      {
+        url: "/images/examples/2026-05-11-novatool-review-assistant.webp",
+        filename: "2026-05-11-novatool-review-assistant.webp",
+        thumbnails: {
+          small: { url: "/images/examples/2026-05-11-novatool-review-assistant.webp" },
+          large: { url: "/images/examples/2026-05-11-novatool-review-assistant.webp" }
+        }
+      }
+    ],
+    category: "Marketing Ops",
+    publish_date: "2026-05-11",
+    original_link: "https://novatool.org/build-an-ai-review-assistant-with-make-com-for-free-complete-2026-beginner-guide/",
+    author_name: "NovaTool",
+    author_link: "https://novatool.org",
+    tags: ["Make.com", "OpenAI", "Review Management", "Sentiment Analysis", "Slack Alerts"],
+  },
+  {
+    id: "nitin-support-triage-agent",
+    title: "Building a Customer Support Triage Agent with Claude",
+    slug: "nitin-support-triage-agent",
+    summary: "A triage agent that reads support emails, pulls order context from Google Sheets, applies a structured returns policy, drafts responses in the brand's voice, and queues them for one-click human approval. Built with Claude Projects, Gmail connector, and a decision-tree policy document. Handles 70% of cases autonomously, pre-processes the rest.",
+    screenshots: [
+      {
+        url: "/images/examples/2026-05-05-nitin-support-triage-agent.webp",
+        filename: "2026-05-05-nitin-support-triage-agent.webp",
+        thumbnails: {
+          small: { url: "/images/examples/2026-05-05-nitin-support-triage-agent.webp" },
+          large: { url: "/images/examples/2026-05-05-nitin-support-triage-agent.webp" }
+        }
+      }
+    ],
+    category: "Marketing Ops",
+    publish_date: "2026-05-05",
+    original_link: "https://medium.com/@nitin_26346/building-a-customer-support-triage-agent-with-claude-a-walkthrough-89a812cc09bf",
+    author_name: "Nit~n",
+    author_link: "https://medium.com/@nitin_26346",
+    tags: ["Claude", "Customer Support", "Triage", "DTC", "Automation"],
+  },
+  {
+    id: "saniaspeaks-judgment-first-workflow",
+    title: "The 'Judgment-First' Creative Workflow",
+    slug: "saniaspeaks-judgment-first-workflow",
+    summary: "Sania (@saniaspeaks_) cut her content production time by 50% by delegating execution to AI while reclaiming her time for 'creative judgment.' She uses Perplexity for research, Claude for narrative arcs, and Seedream for visuals, all anchored in an intelligent canvas. Punchy, personal, and avoids the app-hopping trap.",
+    screenshots: [
+      {
+        url: "/images/examples/2026-05-18-saniaspeaks-ai-creative-workflow.webp",
+        filename: "2026-05-18-saniaspeaks-ai-creative-workflow.webp",
+        thumbnails: {
+          small: { url: "/images/examples/2026-05-18-saniaspeaks-ai-creative-workflow.webp" },
+          large: { url: "/images/examples/2026-05-18-saniaspeaks-ai-creative-workflow.webp" }
+        }
+      }
+    ],
+    category: "Content Ops",
+    publish_date: "2026-05-18",
+    original_link: "https://x.com/saniaspeaks_/status/2052329779206991962",
+    author_name: "Sania",
+    author_link: "https://x.com/saniaspeaks_",
+    tags: ["Content Ops", "Workflow", "Creative Judgment", "Claude"],
+  },
+  {
+    id: "viralops-technical-seo-agent",
+    title: "Building an Autonomous Technical SEO Agent",
+    slug: "viralops-technical-seo-agent",
+    summary: "@ViralOps_ built an autonomous SEO agent that crawls sites, identifies indexing bottlenecks, and drafts 'fix tickets' for developers. It uses a custom MCP server to query Search Console data and cross-reference it with live crawl results. No more manual auditing spreadsheets.",
+    screenshots: [
+      {
+        url: "/images/examples/2026-05-18-viralops-technical-seo-agent.png",
+        filename: "2026-05-18-viralops-technical-seo-agent.png",
+        thumbnails: {
+          small: { url: "/images/examples/2026-05-18-viralops-technical-seo-agent.png" },
+          large: { url: "/images/examples/2026-05-18-viralops-technical-seo-agent.png" }
+        }
+      }
+    ],
+    category: "SEO",
+    publish_date: "2026-05-18",
+    original_link: "https://x.com/ViralOps_/status/2052392383715938701",
+    author_name: "ViralOps",
+    author_link: "https://x.com/ViralOps_",
+    tags: ["SEO", "Agents", "Automation", "MCP"],
+  },
 ];

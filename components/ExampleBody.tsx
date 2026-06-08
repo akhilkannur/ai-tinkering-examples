@@ -91,13 +91,6 @@ export default function ExampleBody({ example }: ExampleBodyProps) {
           </div>
         )}
 
-        {example.workflow_steps && (
-          <div className="mb-12 p-8 bg-micro-layer-1 rounded-sm border border-micro-layer-1">
-            <p className="text-sm font-medium text-micro-muted leading-relaxed whitespace-pre-wrap">
-              {example.workflow_steps}
-            </p>
-          </div>
-        )}
       </div>
     </div>
   )
