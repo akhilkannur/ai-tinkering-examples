@@ -15,6 +15,70 @@ export interface AiTool {
 }
 
 export const aiTools: AiTool[] = [
+  {
+    name: "MindMesh Academy",
+    description: "Educational platform designed to help professionals pass IT, project management, and cloud certifications through structured training.",
+    url: "https://www.mindmeshacademy.com/",
+    category: "AI Education",
+    tags: { price: "Paid" },
+    image: "https://www.google.com/s2/favicons?domain=www.mindmeshacademy.com&sz=128",
+    screenshot: "https://api.microlink.io?url=https://www.mindmeshacademy.com/&screenshot=true&meta=false&embed=screenshot.url",
+    dateAdded: "2026-05-31",
+    features: [
+      "Professional IT and Cloud certification prep",
+      "Project management training modules",
+      "Expert-led curriculum and study guides",
+      "High-success rate certification paths"
+    ],
+  },
+  {
+    name: "Qollaby",
+    description: "Mobile community platform for connecting through posts, events, and auctions in a social networking environment.",
+    url: "https://apps.apple.com/us/app/qollaby/id6758202087",
+    category: "AI Productivity",
+    tags: { price: "Free" },
+    image: "https://www.google.com/s2/favicons?domain=apps.apple.com&sz=128",
+    screenshot: "https://api.microlink.io?url=https://apps.apple.com/us/app/qollaby/id6758202087&screenshot=true&meta=false&embed=screenshot.url",
+    dateAdded: "2026-05-31",
+    features: [
+      "Community-driven social networking",
+      "Event and auction management tools",
+      "Interactive user posts and engagement",
+      "Mobile-first social experience"
+    ],
+  },
+  {
+    name: "Aironprice LLC",
+    description: "Modern travel booking and support platform focused on simplifying flight reservations and travel management with real human agents.",
+    url: "https://www.aironprice.com/",
+    category: "AI Productivity",
+    tags: { price: "Free" },
+    image: "https://www.google.com/s2/favicons?domain=www.aironprice.com&sz=128",
+    screenshot: "https://api.microlink.io?url=https://www.aironprice.com/&screenshot=true&meta=false&embed=screenshot.url",
+    dateAdded: "2026-05-31",
+    features: [
+      "Simplified flight comparison and booking",
+      "Human-led customer support for reservations",
+      "Ticket changes and cancellation assistance",
+      "Baggage and travel concern resolution"
+    ],
+  },
+  {
+    name: "TDEE Calculator",
+    description: "Health and fitness tool for calculating Total Daily Energy Expenditure and tracking personalized nutrition targets.",
+    url: "https://tdee.io",
+    category: "AI Productivity",
+    tags: { price: "Free" },
+    image: "https://www.google.com/s2/favicons?domain=tdee.io&sz=128",
+    screenshot: "https://api.microlink.io?url=https://tdee.io&screenshot=true&meta=false&embed=screenshot.url",
+    dateAdded: "2026-06-07",
+    features: [
+      "Accurate TDEE and BMR calculation",
+      "Personalized macronutrient targets",
+      "Data-driven fitness and nutrition insights",
+      "Simplified tracking for health goals"
+    ],
+  },
     image: "https://www.google.com/s2/favicons?domain=mubboo.com&sz=128",
     screenshot: "https://api.microlink.io?url=https://mubboo.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-06-07",
