@@ -1,46 +1,219 @@
 [
   {
-    "name": "Kraflio",
-    "url": "https://kraflio.com"
+    "name": "Youluxeo",
+    "email": "sampan9012@gmail.com",
+    "desc": "",
+    "url": "https://youluxeo.com",
+    "date": "2026-05-19 01:31:52"
   },
   {
-    "name": "Agensi",
-    "url": "https://www.agensi.io/"
+    "name": "Minotaurus",
+    "email": "support@minotaurus.io",
+    "desc": "",
+    "url": "https://minotaurus.io",
+    "date": "2026-05-19 02:46:44"
   },
   {
-    "name": "SwimScore",
-    "url": "https://www.myswimscore.com/"
+    "name": "What To Watch",
+    "email": "roycroftrichard@gmail.com",
+    "desc": "",
+    "url": "https://whattowatch.fyi",
+    "date": "2026-05-19 11:46:48"
   },
   {
-    "name": "AITuber",
-    "url": "https://aituber.app"
+    "name": "Aironprice LLC",
+    "email": "martinsmith8533@gmail.com",
+    "desc": "",
+    "url": "https://www.aironprice.com/",
+    "date": "2026-05-20 01:39:33"
   },
   {
-    "name": "Placy AR App",
-    "url": "https://www.aroundstudio.io/projects/placy-around-digital-product"
+    "name": "Qollaby",
+    "email": "support@apps.apple.com",
+    "desc": "",
+    "url": "https://apps.apple.com/us/app/qollaby/id6758202087",
+    "date": "2026-05-20 07:05:07"
   },
   {
-    "name": "SocialCRM",
-    "url": "https://socialcrm.org/"
+    "name": "TradesAround",
+    "email": "timothytleague@gmail.com",
+    "desc": "",
+    "url": "https://www.tradesaround.com",
+    "date": "2026-05-21 06:02:41"
   },
   {
-    "name": "REV Copack",
-    "url": "https://revcopack.com/"
+    "name": "Local OS",
+    "email": "hello@localos.so",
+    "desc": "",
+    "url": "https://www.localos.so/",
+    "date": "2026-05-21 10:48:36"
   },
   {
-    "name": "DoneDone",
-    "url": "https://DoneDone.Run"
+    "name": "AISA",
+    "email": "markgarrett7800@gmail.com",
+    "desc": "",
+    "url": "https://aisa.to",
+    "date": "2026-05-21 22:01:01"
   },
   {
-    "name": "YouScript",
-    "url": "https://youscript.pro/"
+    "name": "Domus",
+    "email": "trydomus@gmail.com",
+    "desc": "",
+    "url": "https://trydomus.app",
+    "date": "2026-05-22 06:49:02"
   },
   {
-    "name": "HomeProBadge",
-    "url": "https://www.homeprobadge.com/"
+    "name": "slickful",
+    "email": "hey@slickful.net",
+    "desc": "",
+    "url": "https://slickful.net/",
+    "date": "2026-05-22 07:24:23"
   },
   {
-    "name": "Novelmint",
-    "url": "https://novelmint.ai/"
+    "name": "CommentKeyword",
+    "email": "contact@commentkeyword.com",
+    "desc": "",
+    "url": "https://commentkeyword.com/",
+    "date": "2026-05-23 07:33:53"
+  },
+  {
+    "name": "Syllaby",
+    "email": "directory@syllaby.io",
+    "desc": "",
+    "url": "https://syllaby.io/",
+    "date": "2026-05-24 07:24:22"
+  },
+  {
+    "name": "Waqi AI",
+    "email": "sanjoseeee1234@gmail.com",
+    "desc": "",
+    "url": "https://waqi.ai/",
+    "date": "2026-05-24 11:52:21"
+  },
+  {
+    "name": "ogBlocks",
+    "email": "ogblocks.dev@gmail.com",
+    "desc": "",
+    "url": "https://ogblocks.dev/",
+    "date": "2026-05-24 13:08:24"
+  },
+  {
+    "name": "devintern",
+    "email": "raulgray07@gmail.com",
+    "desc": "",
+    "url": "https://devintern.com",
+    "date": "2026-05-25 07:21:31"
+  },
+  {
+    "name": "Career Orbit",
+    "email": "careerorbit381@gmail.com",
+    "desc": "",
+    "url": "https://careerorbit.ai",
+    "date": "2026-05-27 01:18:49"
+  },
+  {
+    "name": "ServerBuddy",
+    "email": "liammmillerm@gmail.com",
+    "desc": "",
+    "url": "https://serverbuddy.net",
+    "date": "2026-05-27 02:14:47"
+  },
+  {
+    "name": "My Maternal Mind",
+    "email": "support@mymaternalmind.com",
+    "desc": "",
+    "url": "https://mymaternalmind.com",
+    "date": "2026-05-27 04:33:08"
+  },
+  {
+    "name": "CrestlineUSA",
+    "email": "tiltingfan052626@gmail.com",
+    "desc": "",
+    "url": "https://crestlineUSA.com",
+    "date": "2026-05-27 11:51:39"
+  },
+  {
+    "name": "VisibAI",
+    "email": "francesco@getvisibai.com",
+    "desc": "",
+    "url": "https://getvisibai.com",
+    "date": "2026-05-28 07:46:59"
+  },
+  {
+    "name": "CUDA Army",
+    "email": "contact@hi-ai.live",
+    "desc": "",
+    "url": "https://www.cudaarmy.com/",
+    "date": "2026-05-30 12:43:25"
+  },
+  {
+    "name": "Lovdio",
+    "email": "denniswinkleman0@gmail.com",
+    "desc": "",
+    "url": "https://lovdio.com",
+    "date": "2026-05-31 02:27:13"
+  },
+  {
+    "name": "Seedly CRM",
+    "email": "seedlysupport@gmail.com",
+    "desc": "",
+    "url": "https://seedlycrm.com/",
+    "date": "2026-05-31 08:59:29"
+  },
+  {
+    "name": "Flitz.ai",
+    "email": "robert@ctotmc.com",
+    "desc": "",
+    "url": "https://flitz.ai",
+    "date": "2026-06-02 12:39:04"
+  },
+  {
+    "name": "Speedy Games",
+    "email": "info@speedygames.com",
+    "desc": "",
+    "url": "https://speedygames.com",
+    "date": "2026-06-03 04:42:36"
+  },
+  {
+    "name": "TDEE Calculator",
+    "email": "michael@shopfamilybrands.com",
+    "desc": "",
+    "url": "https://tdee.io",
+    "date": "2026-06-03 10:22:57"
+  },
+  {
+    "name": "Potentially",
+    "email": "a@potentially.com",
+    "desc": "",
+    "url": "https://potentially.ai",
+    "date": "2026-06-05 08:03:43"
+  },
+  {
+    "name": "Business Empire Manager",
+    "email": "tammeoja@simulao.com",
+    "desc": "",
+    "url": "https://www.business-empire-manager.com/",
+    "date": "2026-06-06 02:33:50"
+  },
+  {
+    "name": "Coinask",
+    "email": "social@coinask.ai",
+    "desc": "",
+    "url": "https://coinask.ai",
+    "date": "2026-06-06 09:06:50"
+  },
+  {
+    "name": "AI Thesis Writer",
+    "email": "directorysubmitacc@gmail.com",
+    "desc": "",
+    "url": "https://aithesiswriter.io",
+    "date": "2026-06-06 12:38:13"
+  },
+  {
+    "name": "mubboo.com",
+    "email": "mubboo.submit@gmail.com",
+    "desc": "",
+    "url": "https://mubboo.com",
+    "date": "2026-06-07 00:22:51"
   }
 ]

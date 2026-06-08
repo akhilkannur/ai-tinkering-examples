@@ -79,14 +79,20 @@ export const aiTools: AiTool[] = [
       "Simplified tracking for health goals"
     ],
   },
+  {
+    name: "mubboo.com",
+    description: "AI-powered life assistant for Americans with shopping comparisons, travel deals, local guides, and 200+ free tools.",
+    url: "https://mubboo.com",
+    category: "AI Productivity",
+    tags: { price: "Free" },
     image: "https://www.google.com/s2/favicons?domain=mubboo.com&sz=128",
     screenshot: "https://api.microlink.io?url=https://mubboo.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-06-07",
     features: [
-      "AI-powered automation for mubboo.com workflows",
-      "Streamlined user interface for better accessibility",
-      "Data-driven insights and real-time analysis",
-      "Scalable solution for teams and individuals"
+      "Shopping price comparisons across 100+ platforms",
+      "Flight deals from 800+ airlines and travel planning",
+      "Local restaurant, event, and city guides",
+      "200+ free tools including tax, mortgage, and paycheck calculators"
     ],
   },
   {
@@ -121,55 +127,54 @@ export const aiTools: AiTool[] = [
       "AI-driven trade suggestions with human-in-the-loop control"
     ],
   },
+  {
+    name: "Business Empire Manager",
+    description: "Mobile business tycoon game with production chains, real player stock exchange, and hostile takeover mechanics.",
+    url: "https://www.business-empire-manager.com/",
+    category: "Other",
+    tags: { price: "Free" },
     image: "https://www.google.com/s2/favicons?domain=www.business-empire-manager.com&sz=128",
     screenshot: "https://api.microlink.io?url=https://www.business-empire-manager.com/&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-06-07",
     features: [
-      "AI-powered automation for Business Empire Manager workflows",
-      "Streamlined user interface for better accessibility",
-      "Data-driven insights and real-time analysis",
-      "Scalable solution for teams and individuals"
+      "Three complete production chains: food, resources, and oil",
+      "Real-time player stock exchange with buy and sell orders",
+      "Hostile takeover mechanics against real players",
+      "Stocks, bonds, cryptocurrency, and luxury real estate investing"
     ],
   },
   {
     name: "Potentially",
-    description: "Advanced AI solution for Potentially to streamline workflows and improve efficiency.",
+    description: "Coming soon — AI product page with no live service yet.",
     url: "https://potentially.ai",
-    category: "AI Productivity",
-    tags: { price: "Freemium" },
+    category: "Other",
+    tags: { price: "Free" },
     image: "https://www.google.com/s2/favicons?domain=potentially.ai&sz=128",
     screenshot: "https://api.microlink.io?url=https://potentially.ai&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-06-07",
     features: [
-      "AI-powered automation for Potentially workflows",
-      "Streamlined user interface for better accessibility",
-      "Data-driven insights and real-time analysis",
-      "Scalable solution for teams and individuals"
+      "No live product available yet"
     ],
   },
-    image: "https://www.google.com/s2/favicons?domain=tdee.io&sz=128",
-    screenshot: "https://api.microlink.io?url=https://tdee.io&screenshot=true&meta=false&embed=screenshot.url",
-    dateAdded: "2026-06-07",
-    features: [
-      "AI-powered automation for TDEE Calculator workflows",
-      "Streamlined user interface for better accessibility",
-      "Data-driven insights and real-time analysis",
-      "Scalable solution for teams and individuals"
-    ],
-  },
+  {
+    name: "Speedy Games",
+    description: "Affiliate marketing widget platform providing no-download slot games for webmasters to promote gambling links.",
+    url: "https://speedygames.com",
+    category: "Other",
+    tags: { price: "Free" },
     image: "https://www.google.com/s2/favicons?domain=speedygames.com&sz=128",
     screenshot: "https://api.microlink.io?url=https://speedygames.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-06-07",
     features: [
-      "AI-powered automation for Speedy Games workflows",
-      "Streamlined user interface for better accessibility",
-      "Data-driven insights and real-time analysis",
-      "Scalable solution for teams and individuals"
+      "Embeddable no-download slot game widgets",
+      "Affiliate link integration for revenue sharing",
+      "Compatible with Wix and WordPress",
+      "80-90% revenue share model for webmasters"
     ],
   },
   {
     name: "Flitz.ai",
-    description: "Advanced AI solution for Flitz.ai to streamline workflows and improve efficiency.",
+    description: "All-in-one AI business platform for Swiss SMEs with accounting, team chat, CRM, time tracking, and password vault.",
     url: "https://flitz.ai",
     category: "AI Productivity",
     tags: { price: "Freemium" },
@@ -177,58 +182,58 @@ export const aiTools: AiTool[] = [
     screenshot: "https://api.microlink.io?url=https://flitz.ai&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-06-07",
     features: [
-      "AI-powered automation for Flitz.ai workflows",
-      "Streamlined user interface for better accessibility",
-      "Data-driven insights and real-time analysis",
-      "Scalable solution for teams and individuals"
+      "AI-powered accounting with invoice scanning and bank reconciliation",
+      "Team chat, email, Jira-style work tickets, and time tracking",
+      "CRM pipeline with customer portal and IT inventory tracking",
+      "Swiss MWST/VAT reporting and GDPR/DSG compliance tools"
     ],
   },
   {
     name: "Seedly CRM",
-    description: "Advanced AI solution for Seedly CRM to streamline workflows and improve efficiency.",
+    description: "One-time purchase self-hosted CRM for agencies with workflow automation, invoicing, and email campaigns.",
     url: "https://seedlycrm.com/",
-    category: "AI Productivity",
-    tags: { price: "Freemium" },
+    category: "Sales",
+    tags: { price: "Paid" },
     image: "https://www.google.com/s2/favicons?domain=seedlycrm.com&sz=128",
     screenshot: "https://api.microlink.io?url=https://seedlycrm.com/&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-06-07",
     features: [
-      "AI-powered automation for Seedly CRM workflows",
-      "Streamlined user interface for better accessibility",
-      "Data-driven insights and real-time analysis",
-      "Scalable solution for teams and individuals"
+      "Complete source code with 25+ CRM modules and 60+ tables",
+      "Visual pipeline management and 69+ workflow automation nodes",
+      "Email campaigns, invoicing, forms, and document generation",
+      "Unlimited users and self-hosted infrastructure"
     ],
   },
   {
     name: "Lovdio",
-    description: "Advanced AI solution for Lovdio to streamline workflows and improve efficiency.",
+    description: "French-language interactive romance audio stories where listener choices shape the narrative, powered by AI.",
     url: "https://lovdio.com",
-    category: "AI Productivity",
+    category: "Entertainment",
     tags: { price: "Freemium" },
     image: "https://www.google.com/s2/favicons?domain=lovdio.com&sz=128",
     screenshot: "https://api.microlink.io?url=https://lovdio.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-06-07",
     features: [
-      "AI-powered automation for Lovdio workflows",
-      "Streamlined user interface for better accessibility",
-      "Data-driven insights and real-time analysis",
-      "Scalable solution for teams and individuals"
+      "500+ interactive romance audio stories with branching narratives",
+      "Professional voice actors and multi-path storylines",
+      "New story published daily",
+      "Adult content with intensity level indicators"
     ],
   },
   {
     name: "CUDA Army",
-    description: "Advanced AI solution for CUDA Army to streamline workflows and improve efficiency.",
+    description: "Enterprise CUDA optimization services including custom kernel development, quantization, and distributed systems optimization.",
     url: "https://www.cudaarmy.com/",
-    category: "AI Productivity",
-    tags: { price: "Freemium" },
+    category: "Development",
+    tags: { price: "Paid" },
     image: "https://www.google.com/s2/favicons?domain=www.cudaarmy.com&sz=128",
     screenshot: "https://api.microlink.io?url=https://www.cudaarmy.com/&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-06-07",
     features: [
-      "AI-powered automation for CUDA Army workflows",
-      "Streamlined user interface for better accessibility",
-      "Data-driven insights and real-time analysis",
-      "Scalable solution for teams and individuals"
+      "Custom CUDA kernel development for inference and training",
+      "Multi-GPU and multi-node distributed systems optimization",
+      "INT8/FP16 quantization and Flash Attention optimization",
+      "Custom AI model training with proprietary data"
     ],
   },
   {
@@ -247,45 +252,57 @@ export const aiTools: AiTool[] = [
       "Monthly monitoring and white-label reporting"
     ],
   },
+  {
+    name: "CrestlineUSA",
+    description: "Owner-financed land sales company offering 0% interest seller financing with no credit check.",
+    url: "https://crestlineUSA.com",
+    category: "Other",
+    tags: { price: "Paid" },
     image: "https://www.google.com/s2/favicons?domain=crestlineUSA.com&sz=128",
     screenshot: "https://api.microlink.io?url=https://crestlineUSA.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-06-07",
     features: [
-      "AI-powered automation for CrestlineUSA workflows",
-      "Streamlined user interface for better accessibility",
-      "Data-driven insights and real-time analysis",
-      "Scalable solution for teams and individuals"
+      "0% interest seller financing with no credit check",
+      "As little as 10% down payment required",
+      "24-hour closing and same-day possession",
+      "Bring-Your-Own-Lot financing for any property"
     ],
   },
   {
     name: "My Maternal Mind",
-    description: "Advanced AI solution for My Maternal Mind to streamline workflows and improve efficiency.",
+    description: "AI-powered personalized meditation and journaling app for pregnancy, TTC, and postpartum wellness.",
     url: "https://mymaternalmind.com",
-    category: "AI Productivity",
+    category: "AI Health",
     tags: { price: "Freemium" },
     image: "https://www.google.com/s2/favicons?domain=mymaternalmind.com&sz=128",
     screenshot: "https://api.microlink.io?url=https://mymaternalmind.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-06-07",
     features: [
-      "AI-powered automation for My Maternal Mind workflows",
-      "Streamlined user interface for better accessibility",
-      "Data-driven insights and real-time analysis",
-      "Scalable solution for teams and individuals"
+      "Daily AI-generated meditation tailored to your pregnancy stage",
+      "Guided journaling with daily affirmations",
+      "Progress tracking with streaks and weekly patterns",
+      "Support from TTC through postpartum"
     ],
   },
+  {
+    name: "ServerBuddy",
+    description: "Minecraft server list with live player counts, uptime tracking, and server discovery tools.",
+    url: "https://serverbuddy.net",
+    category: "Other",
+    tags: { price: "Free" },
     image: "https://www.google.com/s2/favicons?domain=serverbuddy.net&sz=128",
     screenshot: "https://api.microlink.io?url=https://serverbuddy.net&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-06-07",
     features: [
-      "AI-powered automation for ServerBuddy workflows",
-      "Streamlined user interface for better accessibility",
-      "Data-driven insights and real-time analysis",
-      "Scalable solution for teams and individuals"
+      "Live player counts and uptime tracking for 3,000+ servers",
+      "Search by game mode, version, region, and player count",
+      "Server status checker and MOTD generator tools",
+      "Free server listing with profile pages and player history"
     ],
   },
   {
     name: "Career Orbit",
-    description: "Advanced AI solution for Career Orbit to streamline workflows and improve efficiency.",
+    description: "AI-powered job search assistant covering resume optimization, applications, and career tracking.",
     url: "https://careerorbit.ai",
     category: "AI Productivity",
     tags: { price: "Freemium" },
@@ -293,10 +310,10 @@ export const aiTools: AiTool[] = [
     screenshot: "https://api.microlink.io?url=https://careerorbit.ai&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-05-31",
     features: [
-      "AI-powered automation for Career Orbit workflows",
-      "Streamlined user interface for better accessibility",
-      "Data-driven insights and real-time analysis",
-      "Scalable solution for teams and individuals"
+      "AI-powered resume optimization and job matching",
+      "Automated job application tracking",
+      "Personalized career path recommendations",
+      "Interview preparation and skill gap analysis"
     ],
   },
   {
@@ -317,23 +334,23 @@ export const aiTools: AiTool[] = [
   },
   {
     name: "ogBlocks",
-    description: "Advanced AI solution for ogBlocks to streamline workflows and improve efficiency.",
+    description: "Premium animated React UI components built with Framer Motion, Tailwind CSS, and TypeScript.",
     url: "https://ogblocks.dev/",
-    category: "AI Productivity",
-    tags: { price: "Freemium" },
+    category: "Development",
+    tags: { price: "Paid" },
     image: "https://www.google.com/s2/favicons?domain=ogblocks.dev&sz=128",
     screenshot: "https://api.microlink.io?url=https://ogblocks.dev/&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-05-31",
     features: [
-      "AI-powered automation for ogBlocks workflows",
-      "Streamlined user interface for better accessibility",
-      "Data-driven insights and real-time analysis",
-      "Scalable solution for teams and individuals"
+      "70+ animated React components with Framer Motion",
+      "Tailwind CSS and TypeScript built-in",
+      "Copy-paste integration or shadcn CLI install",
+      "10 new components added monthly with lifetime updates"
     ],
   },
   {
     name: "Waqi AI",
-    description: "Advanced AI solution for Waqi AI to streamline workflows and improve efficiency.",
+    description: "Arabic PDPL data privacy compliance and GRC platform for Saudi organizations.",
     url: "https://waqi.ai/",
     category: "AI Productivity",
     tags: { price: "Freemium" },
@@ -341,10 +358,10 @@ export const aiTools: AiTool[] = [
     screenshot: "https://api.microlink.io?url=https://waqi.ai/&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-05-31",
     features: [
-      "AI-powered automation for Waqi AI workflows",
-      "Streamlined user interface for better accessibility",
-      "Data-driven insights and real-time analysis",
-      "Scalable solution for teams and individuals"
+      "Saudi PDPL data privacy compliance management",
+      "Governance, risk, and compliance (GRC) workflows",
+      "Arabic-language interface for local organizations",
+      "Regulatory reporting and audit trail tools"
     ],
   },
   {
@@ -381,18 +398,18 @@ export const aiTools: AiTool[] = [
   },
   {
     name: "slickful",
-    description: "Advanced AI solution for slickful to streamline workflows and improve efficiency.",
+    description: "Freelance design engineer offering UX/UI product design, branding, and front-end development for SaaS startups.",
     url: "https://slickful.net/",
-    category: "AI Productivity",
-    tags: { price: "Freemium" },
+    category: "Development",
+    tags: { price: "Paid" },
     image: "https://www.google.com/s2/favicons?domain=slickful.net&sz=128",
     screenshot: "https://api.microlink.io?url=https://slickful.net/&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-05-31",
     features: [
-      "AI-powered automation for slickful workflows",
-      "Streamlined user interface for better accessibility",
-      "Data-driven insights and real-time analysis",
-      "Scalable solution for teams and individuals"
+      "UX/UI product design and branding for B2B SaaS",
+      "Front-end development and design system creation",
+      "Product strategy and UX audits",
+      "MVP to growth-stage redesign support"
     ],
   },
   {
@@ -429,54 +446,34 @@ export const aiTools: AiTool[] = [
   },
   {
     name: "Local OS",
-    description: "Advanced AI solution for Local OS to streamline workflows and improve efficiency.",
+    description: "Google Maps rank tracker and local SEO intelligence platform with competitor analysis and review monitoring.",
     url: "https://www.localos.so/",
-    category: "AI Productivity",
+    category: "AI Marketing",
     tags: { price: "Freemium" },
     image: "https://www.google.com/s2/favicons?domain=www.localos.so&sz=128",
     screenshot: "https://api.microlink.io?url=https://www.localos.so/&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-05-31",
     features: [
-      "AI-powered automation for Local OS workflows",
-      "Streamlined user interface for better accessibility",
-      "Data-driven insights and real-time analysis",
-      "Scalable solution for teams and individuals"
+      "Google Maps rank tracking with visual pin maps",
+      "Competitor intelligence and review theme analysis",
+      "Local SEO audit for profile and website signals",
+      "Multi-location management with workspace scoping"
     ],
   },
   {
     name: "TradesAround",
-    description: "Advanced AI solution for TradesAround to streamline workflows and improve efficiency.",
+    description: "AI-verified UK tradesperson directory connecting homeowners with vetted local professionals.",
     url: "https://www.tradesaround.com",
-    category: "AI Productivity",
-    tags: { price: "Freemium" },
+    category: "Other",
+    tags: { price: "Free" },
     image: "https://www.google.com/s2/favicons?domain=www.tradesaround.com&sz=128",
     screenshot: "https://api.microlink.io?url=https://www.tradesaround.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-05-31",
     features: [
-      "AI-powered automation for TradesAround workflows",
-      "Streamlined user interface for better accessibility",
-      "Data-driven insights and real-time analysis",
-      "Scalable solution for teams and individuals"
-    ],
-  },
-    image: "https://www.google.com/s2/favicons?domain=apps.apple.com&sz=128",
-    screenshot: "https://api.microlink.io?url=https://apps.apple.com/us/app/qollaby/id6758202087&screenshot=true&meta=false&embed=screenshot.url",
-    dateAdded: "2026-05-31",
-    features: [
-      "AI-powered automation for Qollaby workflows",
-      "Streamlined user interface for better accessibility",
-      "Data-driven insights and real-time analysis",
-      "Scalable solution for teams and individuals"
-    ],
-  },
-    image: "https://www.google.com/s2/favicons?domain=www.aironprice.com&sz=128",
-    screenshot: "https://api.microlink.io?url=https://www.aironprice.com/&screenshot=true&meta=false&embed=screenshot.url",
-    dateAdded: "2026-05-31",
-    features: [
-      "AI-powered automation for Aironprice LLC workflows",
-      "Streamlined user interface for better accessibility",
-      "Data-driven insights and real-time analysis",
-      "Scalable solution for teams and individuals"
+      "AI-verified trust scores across six dimensions",
+      "Local tradesperson search in Oxfordshire and Berkshire",
+      "Qualifications checked against UK trade registers",
+      "Free quote matching service for homeowners"
     ],
   },
   {
@@ -495,24 +492,36 @@ export const aiTools: AiTool[] = [
       "Multi-platform availability tracking"
     ],
   },
+  {
+    name: "Minotaurus",
+    description: "Blockchain-powered maze adventure game with $MTAUR token presale, referrals, and vesting bonuses.",
+    url: "https://minotaurus.io",
+    category: "Other",
+    tags: { price: "Paid" },
     image: "https://www.google.com/s2/favicons?domain=minotaurus.io&sz=128",
     screenshot: "https://api.microlink.io?url=https://minotaurus.io&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-05-31",
     features: [
-      "AI-powered automation for Minotaurus workflows",
-      "Streamlined user interface for better accessibility",
-      "Data-driven insights and real-time analysis",
-      "Scalable solution for teams and individuals"
+      "Blockchain-based maze gameplay with in-game currency",
+      "$MTAUR token presale on BNB Smart Chain",
+      "Referral program with up to 10% USDT bonuses",
+      "Vesting extension bonuses for early participants"
     ],
   },
+  {
+    name: "Youluxeo",
+    description: "OEM/ODM manufacturer of aromatherapy diffusers, essential oils, and wellness products based in China.",
+    url: "https://youluxeo.com",
+    category: "Other",
+    tags: { price: "Paid" },
     image: "https://www.google.com/s2/favicons?domain=youluxeo.com&sz=128",
     screenshot: "https://api.microlink.io?url=https://youluxeo.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-05-31",
     features: [
-      "AI-powered automation for Youluxeo workflows",
-      "Streamlined user interface for better accessibility",
-      "Data-driven insights and real-time analysis",
-      "Scalable solution for teams and individuals"
+      "Custom OEM/ODM aroma diffuser manufacturing",
+      "Private label and white label diffuser programs",
+      "Essential oils, nasal inhalers, and wellness products",
+      "12+ years of manufacturing experience"
     ],
   },
   {
