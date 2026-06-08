@@ -15,12 +15,6 @@ export interface AiTool {
 }
 
 export const aiTools: AiTool[] = [
-  {
-    name: "mubboo.com",
-    description: "Advanced AI solution for mubboo.com to streamline workflows and improve efficiency.",
-    url: "https://mubboo.com",
-    category: "AI Productivity",
-    tags: { price: "Freemium" },
     image: "https://www.google.com/s2/favicons?domain=mubboo.com&sz=128",
     screenshot: "https://api.microlink.io?url=https://mubboo.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-06-07",
@@ -33,7 +27,7 @@ export const aiTools: AiTool[] = [
   },
   {
     name: "AI Thesis Writer",
-    description: "Advanced AI solution for AI Thesis Writer to streamline workflows and improve efficiency.",
+    description: "Advanced academic writing tool that uses 19 specialized AI agents to generate full thesis chapters and dissertations.",
     url: "https://aithesiswriter.io",
     category: "AI Productivity",
     tags: { price: "Freemium" },
@@ -41,15 +35,15 @@ export const aiTools: AiTool[] = [
     screenshot: "https://api.microlink.io?url=https://aithesiswriter.io&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-06-07",
     features: [
-      "AI-powered automation for AI Thesis Writer workflows",
-      "Streamlined user interface for better accessibility",
-      "Data-driven insights and real-time analysis",
-      "Scalable solution for teams and individuals"
+      "19 specialized AI agents for research and writing",
+      "Reference-aware structures and embedded citations",
+      "Generates full thesis chapters and dissertations",
+      "Supports over 57 languages"
     ],
   },
   {
     name: "Coinask",
-    description: "Advanced AI solution for Coinask to streamline workflows and improve efficiency.",
+    description: "AI crypto assistant for real-time market research, portfolio analysis, and risk-aware trade suggestions.",
     url: "https://coinask.ai",
     category: "AI Productivity",
     tags: { price: "Freemium" },
@@ -57,18 +51,12 @@ export const aiTools: AiTool[] = [
     screenshot: "https://api.microlink.io?url=https://coinask.ai&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-06-07",
     features: [
-      "AI-powered automation for Coinask workflows",
-      "Streamlined user interface for better accessibility",
-      "Data-driven insights and real-time analysis",
-      "Scalable solution for teams and individuals"
+      "Real-time market data analysis with plain-English insights",
+      "Connects to 15+ exchanges via API for P&L tracking",
+      "News aggregation from 350+ sources with AI filtering",
+      "AI-driven trade suggestions with human-in-the-loop control"
     ],
   },
-  {
-    name: "Business Empire Manager",
-    description: "Advanced AI solution for Business Empire Manager to streamline workflows and improve efficiency.",
-    url: "https://www.business-empire-manager.com/",
-    category: "AI Productivity",
-    tags: { price: "Freemium" },
     image: "https://www.google.com/s2/favicons?domain=www.business-empire-manager.com&sz=128",
     screenshot: "https://api.microlink.io?url=https://www.business-empire-manager.com/&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-06-07",
@@ -95,12 +83,6 @@ export const aiTools: AiTool[] = [
       "Scalable solution for teams and individuals"
     ],
   },
-  {
-    name: "TDEE Calculator",
-    description: "Advanced AI solution for TDEE Calculator to streamline workflows and improve efficiency.",
-    url: "https://tdee.io",
-    category: "AI Productivity",
-    tags: { price: "Freemium" },
     image: "https://www.google.com/s2/favicons?domain=tdee.io&sz=128",
     screenshot: "https://api.microlink.io?url=https://tdee.io&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-06-07",
@@ -111,12 +93,6 @@ export const aiTools: AiTool[] = [
       "Scalable solution for teams and individuals"
     ],
   },
-  {
-    name: "Speedy Games",
-    description: "Advanced AI solution for Speedy Games to streamline workflows and improve efficiency.",
-    url: "https://speedygames.com",
-    category: "AI Productivity",
-    tags: { price: "Freemium" },
     image: "https://www.google.com/s2/favicons?domain=speedygames.com&sz=128",
     screenshot: "https://api.microlink.io?url=https://speedygames.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-06-07",
@@ -193,7 +169,7 @@ export const aiTools: AiTool[] = [
   },
   {
     name: "VisibAI",
-    description: "Advanced AI solution for VisibAI to streamline workflows and improve efficiency.",
+    description: "AI visibility audit platform that tracks and improves how ChatGPT, Claude, and Gemini recommend your brand.",
     url: "https://getvisibai.com",
     category: "AI Productivity",
     tags: { price: "Freemium" },
@@ -201,18 +177,12 @@ export const aiTools: AiTool[] = [
     screenshot: "https://api.microlink.io?url=https://getvisibai.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-06-07",
     features: [
-      "AI-powered automation for VisibAI workflows",
-      "Streamlined user interface for better accessibility",
-      "Data-driven insights and real-time analysis",
-      "Scalable solution for teams and individuals"
+      "Audits brand visibility across major AI platforms",
+      "Generates detailed AI Visibility Scores",
+      "Prioritized action list to improve AI recommendations",
+      "Monthly monitoring and white-label reporting"
     ],
   },
-  {
-    name: "CrestlineUSA",
-    description: "Advanced AI solution for CrestlineUSA to streamline workflows and improve efficiency.",
-    url: "https://crestlineUSA.com",
-    category: "AI Productivity",
-    tags: { price: "Freemium" },
     image: "https://www.google.com/s2/favicons?domain=crestlineUSA.com&sz=128",
     screenshot: "https://api.microlink.io?url=https://crestlineUSA.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-06-07",
@@ -239,12 +209,6 @@ export const aiTools: AiTool[] = [
       "Scalable solution for teams and individuals"
     ],
   },
-  {
-    name: "ServerBuddy",
-    description: "Advanced AI solution for ServerBuddy to streamline workflows and improve efficiency.",
-    url: "https://serverbuddy.net",
-    category: "AI Productivity",
-    tags: { price: "Freemium" },
     image: "https://www.google.com/s2/favicons?domain=serverbuddy.net&sz=128",
     screenshot: "https://api.microlink.io?url=https://serverbuddy.net&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-06-07",
@@ -273,7 +237,7 @@ export const aiTools: AiTool[] = [
   },
   {
     name: "devintern",
-    description: "Advanced AI solution for devintern to streamline workflows and improve efficiency.",
+    description: "Agentic development suite with AI agents that write code, manage backlogs, and open pull requests.",
     url: "https://devintern.com",
     category: "AI Productivity",
     tags: { price: "Freemium" },
@@ -281,10 +245,10 @@ export const aiTools: AiTool[] = [
     screenshot: "https://api.microlink.io?url=https://devintern.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-05-31",
     features: [
-      "AI-powered automation for devintern workflows",
-      "Streamlined user interface for better accessibility",
-      "Data-driven insights and real-time analysis",
-      "Scalable solution for teams and individuals"
+      "Agentic code writing and automated PR generation",
+      "Turns logs and ideas into Jira/Linear specs",
+      "Self-reviewing diffs for improved code quality",
+      "24/7 automated backlog drainage"
     ],
   },
   {
@@ -321,7 +285,7 @@ export const aiTools: AiTool[] = [
   },
   {
     name: "Syllaby",
-    description: "Advanced AI solution for Syllaby to streamline workflows and improve efficiency.",
+    description: "AI video marketing platform for creating faceless videos, digital avatars, and viral social media scripts.",
     url: "https://syllaby.io/",
     category: "AI Productivity",
     tags: { price: "Freemium" },
@@ -329,15 +293,15 @@ export const aiTools: AiTool[] = [
     screenshot: "https://api.microlink.io?url=https://syllaby.io/&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-05-31",
     features: [
-      "AI-powered automation for Syllaby workflows",
-      "Streamlined user interface for better accessibility",
-      "Data-driven insights and real-time analysis",
-      "Scalable solution for teams and individuals"
+      "Faceless video generation and AI digital avatars",
+      "Script writing based on viral search data",
+      "Voice cloning and AI thumbnail generation",
+      "Integrates with Sora 2 and Google Veo 3"
     ],
   },
   {
     name: "CommentKeyword",
-    description: "Advanced AI solution for CommentKeyword to streamline workflows and improve efficiency.",
+    description: "Instagram automation tool using AI agents to follow up on comments and DMs to qualify leads.",
     url: "https://commentkeyword.com/",
     category: "AI Productivity",
     tags: { price: "Freemium" },
@@ -345,10 +309,10 @@ export const aiTools: AiTool[] = [
     screenshot: "https://api.microlink.io?url=https://commentkeyword.com/&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-05-31",
     features: [
-      "AI-powered automation for CommentKeyword workflows",
-      "Streamlined user interface for better accessibility",
-      "Data-driven insights and real-time analysis",
-      "Scalable solution for teams and individuals"
+      "AI-powered Instagram DM follow-up agents",
+      "Keyword-triggered automation for lead qualification",
+      "Conversational AI with specific business objectives",
+      "Streamlined Instagram marketing workflows"
     ],
   },
   {
@@ -369,7 +333,7 @@ export const aiTools: AiTool[] = [
   },
   {
     name: "Domus",
-    description: "Advanced AI solution for Domus to streamline workflows and improve efficiency.",
+    description: "Family organizer app featuring AI grocery sorting, recipe generation, and receipt scanning.",
     url: "https://trydomus.app",
     category: "AI Productivity",
     tags: { price: "Freemium" },
@@ -377,15 +341,15 @@ export const aiTools: AiTool[] = [
     screenshot: "https://api.microlink.io?url=https://trydomus.app&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-05-31",
     features: [
-      "AI-powered automation for Domus workflows",
-      "Streamlined user interface for better accessibility",
-      "Data-driven insights and real-time analysis",
-      "Scalable solution for teams and individuals"
+      "AI-sorted grocery lists by store aisle",
+      "Recipe generation from prompts and URL imports",
+      "AI receipt scanning for automated expense tracking",
+      "Shared family coordination with smart task management"
     ],
   },
   {
     name: "AISA",
-    description: "Advanced AI solution for AISA to streamline workflows and improve efficiency.",
+    description: "AI skills assessment platform with conversational interviewers and personalized AI coaching.",
     url: "https://aisa.to",
     category: "AI Productivity",
     tags: { price: "Freemium" },
@@ -393,10 +357,10 @@ export const aiTools: AiTool[] = [
     screenshot: "https://api.microlink.io?url=https://aisa.to&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-05-31",
     features: [
-      "AI-powered automation for AISA workflows",
-      "Streamlined user interface for better accessibility",
-      "Data-driven insights and real-time analysis",
-      "Scalable solution for teams and individuals"
+      "Conversational AI interviewer for skills evaluation",
+      "Real-time assessment and LinkedIn-verifiable certificates",
+      "Personalized AI Coach via WhatsApp",
+      "Automated career path recommendations"
     ],
   },
   {
@@ -431,12 +395,6 @@ export const aiTools: AiTool[] = [
       "Scalable solution for teams and individuals"
     ],
   },
-  {
-    name: "Qollaby",
-    description: "Advanced AI solution for Qollaby to streamline workflows and improve efficiency.",
-    url: "https://apps.apple.com/us/app/qollaby/id6758202087",
-    category: "AI Productivity",
-    tags: { price: "Freemium" },
     image: "https://www.google.com/s2/favicons?domain=apps.apple.com&sz=128",
     screenshot: "https://api.microlink.io?url=https://apps.apple.com/us/app/qollaby/id6758202087&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-05-31",
@@ -447,12 +405,6 @@ export const aiTools: AiTool[] = [
       "Scalable solution for teams and individuals"
     ],
   },
-  {
-    name: "Aironprice LLC",
-    description: "Advanced AI solution for Aironprice LLC to streamline workflows and improve efficiency.",
-    url: "https://www.aironprice.com/",
-    category: "AI Productivity",
-    tags: { price: "Freemium" },
     image: "https://www.google.com/s2/favicons?domain=www.aironprice.com&sz=128",
     screenshot: "https://api.microlink.io?url=https://www.aironprice.com/&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-05-31",
@@ -465,26 +417,20 @@ export const aiTools: AiTool[] = [
   },
   {
     name: "What To Watch",
-    description: "Advanced AI solution for What To Watch to streamline workflows and improve efficiency.",
+    description: "AI-driven entertainment tracker with natural language search and taste-based movie recommendations.",
     url: "https://whattowatch.fyi",
     category: "AI Productivity",
-    tags: { price: "Freemium" },
+    tags: { price: "Free" },
     image: "https://www.google.com/s2/favicons?domain=whattowatch.fyi&sz=128",
     screenshot: "https://api.microlink.io?url=https://whattowatch.fyi&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-05-31",
     features: [
-      "AI-powered automation for What To Watch workflows",
-      "Streamlined user interface for better accessibility",
-      "Data-driven insights and real-time analysis",
-      "Scalable solution for teams and individuals"
+      "AI natural language search for movies and TV",
+      "Smart Picks with taste-match percentages",
+      "Library-wide analysis for personalized recommendations",
+      "Multi-platform availability tracking"
     ],
   },
-  {
-    name: "Minotaurus",
-    description: "Advanced AI solution for Minotaurus to streamline workflows and improve efficiency.",
-    url: "https://minotaurus.io",
-    category: "AI Productivity",
-    tags: { price: "Freemium" },
     image: "https://www.google.com/s2/favicons?domain=minotaurus.io&sz=128",
     screenshot: "https://api.microlink.io?url=https://minotaurus.io&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-05-31",
@@ -495,12 +441,6 @@ export const aiTools: AiTool[] = [
       "Scalable solution for teams and individuals"
     ],
   },
-  {
-    name: "Youluxeo",
-    description: "Advanced AI solution for Youluxeo to streamline workflows and improve efficiency.",
-    url: "https://youluxeo.com",
-    category: "AI Productivity",
-    tags: { price: "Freemium" },
     image: "https://www.google.com/s2/favicons?domain=youluxeo.com&sz=128",
     screenshot: "https://api.microlink.io?url=https://youluxeo.com&screenshot=true&meta=false&embed=screenshot.url",
     dateAdded: "2026-05-31",
