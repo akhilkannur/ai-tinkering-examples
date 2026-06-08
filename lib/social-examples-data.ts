@@ -1152,11 +1152,11 @@ export const localSocialExamples: EnrichedExampleRecord[] = [
     summary: "A triage agent that reads support emails, pulls order context from Google Sheets, applies a structured returns policy, drafts responses in the brand's voice, and queues them for one-click human approval. Built with Claude Projects, Gmail connector, and a decision-tree policy document. Handles 70% of cases autonomously, pre-processes the rest.",
     screenshots: [
       {
-        url: "/images/examples/2026-05-05-nitin-support-triage-agent.webp",
-        filename: "2026-05-05-nitin-support-triage-agent.webp",
+        url: "/images/examples/2026-05-05-nitin-support-triage-agent.png",
+        filename: "2026-05-05-nitin-support-triage-agent.png",
         thumbnails: {
-          small: { url: "/images/examples/2026-05-05-nitin-support-triage-agent.webp" },
-          large: { url: "/images/examples/2026-05-05-nitin-support-triage-agent.webp" }
+          small: { url: "/images/examples/2026-05-05-nitin-support-triage-agent.png" },
+          large: { url: "/images/examples/2026-05-05-nitin-support-triage-agent.png" }
         }
       }
     ],
