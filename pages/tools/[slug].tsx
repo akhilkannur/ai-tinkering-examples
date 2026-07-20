@@ -37,11 +37,25 @@ export default function ToolPage({ tool }: ToolPageProps) {
     return <div className="flex items-center justify-center text-micro-muted font-mono">Tool not found</div>;
   }
 
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://realaiexamples.com';
+  const currentUrl = `${baseUrl}/tools/${slugify(tool.name)}`;
+  const description = `Discover how to use ${tool.name} in your workflow. A curated ${tool.category} tool with verified capabilities, pricing, and integrations.`;
+  const socialImage = tool.screenshot || tool.image;
+  const socialImageUrl = socialImage.startsWith('http') ? socialImage : `${baseUrl}${socialImage}`;
+
   return (
     <>
       <Head>
         <title>{tool.name}: New {tool.category} AI Tool & Use Case</title>
-        <meta name="description" content={`Discover how to use ${tool.name} in your workflow. A curated ${tool.category} tool for non-technical tinkerers. Part of the Real AI Examples directory.`} key="description" />
+        <meta name="description" content={description} key="description" />
+        <link rel="canonical" href={currentUrl} key="canonical" />
+        <meta property="og:title" content={`${tool.name}: ${tool.category} Tool`} key="og:title" />
+        <meta property="og:description" content={description} key="og:description" />
+        <meta property="og:url" content={currentUrl} key="og:url" />
+        <meta property="og:image" content={socialImageUrl} key="og:image" />
+        <meta name="twitter:title" content={`${tool.name}: ${tool.category} Tool`} key="twitter:title" />
+        <meta name="twitter:description" content={description} key="twitter:description" />
+        <meta name="twitter:image" content={socialImageUrl} key="twitter:image" />
       </Head>
 
       <div className="max-w-[1400px] mx-auto px-4 md:px-6">

@@ -24,16 +24,44 @@ export default function ExamplePage({ example, relatedExamples }: ExamplePagePro
   const ogImage = example.screenshots?.[0]?.url 
     ? (example.screenshots[0].url.startsWith('http') ? example.screenshots[0].url : `${baseUrl}${example.screenshots[0].url}`)
     : `${baseUrl}/api/og?title=${encodeURIComponent(example.title)}`;
+  const description = example.summary || `Learn how to recreate this ${example.category} AI workflow.`
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: example.title,
+    description,
+    image: [ogImage],
+    datePublished: example.publish_date,
+    dateModified: example.publish_date,
+    mainEntityOfPage: currentUrl,
+    author: {
+      '@type': 'Person',
+      name: example.author_name || 'Real AI Examples',
+      ...(example.author_link ? { url: example.author_link } : {}),
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Real AI Examples',
+      url: baseUrl,
+      logo: { '@type': 'ImageObject', url: `${baseUrl}/logo-square.png` },
+    },
+  }
 
   return (
     <>
       <Head>
         <title>{example.title} | AI Workflow Example | Real AI Examples</title>
-        <meta name="description" content={example.summary || `Learn how to recreate this ${example.category} AI workflow.`} key="description" />
-        <link rel="canonical" href={currentUrl} />
-        <meta property="og:title" content={`${example.title} | AI Workflow`} />
-        <meta property="og:image" content={ogImage} />
-        <meta name="twitter:image" content={ogImage} />
+        <meta name="description" content={description} key="description" />
+        <link rel="canonical" href={currentUrl} key="canonical" />
+        <meta property="og:title" content={`${example.title} | AI Workflow`} key="og:title" />
+        <meta property="og:description" content={description} key="og:description" />
+        <meta property="og:url" content={currentUrl} key="og:url" />
+        <meta property="og:type" content="article" key="og:type" />
+        <meta property="og:image" content={ogImage} key="og:image" />
+        <meta name="twitter:title" content={`${example.title} | AI Workflow`} key="twitter:title" />
+        <meta name="twitter:description" content={description} key="twitter:description" />
+        <meta name="twitter:image" content={ogImage} key="twitter:image" />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       </Head>
 
       <div className="max-w-3xl mx-auto">

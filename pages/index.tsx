@@ -156,7 +156,21 @@ export default function HomePage({ examples, categories, itemListSchema }: Examp
   return (
     <>
       <Head>
-        <link rel="canonical" href="https://realaiexamples.com/" />
+        <title>Real AI Examples: Curated Workflows from AI-Native Operators</title>
+        <meta name="description" content="A library of real AI workflows and systems that actually work. No fluff, just documented setups from the people building with AI." key="description" />
+        <meta property="og:title" content="Real AI Examples: Curated Workflows from AI-Native Operators" key="og:title" />
+        <meta property="og:description" content="A library of real AI workflows and systems that actually work. No fluff, just documented setups from the people building with AI." key="og:description" />
+        <meta property="og:image" content="https://realaiexamples.com/api/og?mode=home" key="og:image" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:url" content="https://realaiexamples.com/" key="og:url" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta name="twitter:site" content="@realaiexamples" />
+        <meta name="twitter:title" content="Real AI Examples: Curated Workflows from AI-Native Operators" key="twitter:title" />
+        <meta name="twitter:description" content="A library of real AI workflows and systems that actually work. No fluff, just documented setups from the people building with AI." key="twitter:description" />
+        <meta name="twitter:image" content="https://realaiexamples.com/api/og?mode=home" key="twitter:image" />
+        <link rel="canonical" href="https://realaiexamples.com/" key="canonical" />
       </Head>
 
       <div>

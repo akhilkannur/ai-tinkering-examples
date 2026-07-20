@@ -2,17 +2,15 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { getAllPosts, getPostBySlug, BlogPost } from '../../lib/blog';
-import { getAllRecipes } from '../../lib/recipes';
-import { Recipe, categoryIcons } from '../../lib/cookbook-data';
-import { ArrowLeft, User, Calendar, ArrowRight, Terminal } from 'lucide-react';
+import { aiTools } from '../../lib/ai-tools-data';
+import { ArrowLeft, User, Calendar } from 'lucide-react';
 import React from 'react';
 
 interface BlogPostPageProps {
   post: BlogPost;
-  relatedRecipes: Recipe[];
 }
 
-export default function BlogPostPage({ post, relatedRecipes }: BlogPostPageProps) {
+export default function BlogPostPage({ post }: BlogPostPageProps) {
   const renderContent = (content: string) => {
     return content.split('\n').map((line, index) => {
       const trimmedLine = line.trim();
@@ -84,7 +82,7 @@ export default function BlogPostPage({ post, relatedRecipes }: BlogPostPageProps
   return (
     <>
       <Head>
-        <title>{post.title} | AI Blueprint Guide | Real AI Examples</title>
+        <title>{post.title} | Real AI Examples</title>
         <meta name="description" content={post.excerpt} key="description" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       </Head>
@@ -116,45 +114,6 @@ export default function BlogPostPage({ post, relatedRecipes }: BlogPostPageProps
           </div>
         </article>
 
-        {relatedRecipes.length > 0 && (
-          <div className="border-t border-micro-layer-1 pt-24">
-            <h3 className="text-3xl font-bold mb-12 flex items-center gap-5 text-micro-fg tracking-tight">
-              <Terminal className="w-10 h-10 text-terminal-lime" />
-              Blueprints Used
-            </h3>
-            <div className="grid md:grid-cols-2 gap-10">
-              {relatedRecipes.map(recipe => {
-                const CatIcon = categoryIcons[recipe.category] || Terminal;
-                return (
-                  <Link key={recipe.id} href={`/skills/${recipe.id}`} className="group h-full">
-                    <div className="card-micro p-10 h-full flex flex-col overflow-hidden bg-white border border-micro-layer-1 hover:shadow-micro transition-all duration-500 hover:-translate-y-2">
-                      <div className="flex justify-between items-start mb-8">
-                        <div className="w-12 h-12 rounded-sm bg-micro-layer-1 flex items-center justify-center text-micro-fg shadow-sm group-hover:bg-micro-fg group-hover:text-white transition-all">
-                          <CatIcon className="w-6 h-6" />
-                        </div>
-                        <span className="text-[10px] font-bold text-micro-muted uppercase tracking-[0.2em] bg-micro-layer-1 px-3 py-1.5 rounded-sm border border-micro-layer-1">
-                          {recipe.category}
-                        </span>
-                      </div>
-                      <h4 className="text-2xl font-bold text-micro-fg group-hover:underline decoration-2 underline-offset-4 mb-6 leading-tight">
-                        {recipe.title}
-                      </h4>
-                      <p className="text-sm text-micro-muted mb-8 line-clamp-2 font-medium leading-relaxed">
-                        {recipe.tagline}
-                      </p>
-                      <div className="flex items-center justify-between text-micro-fg font-bold text-[11px] uppercase tracking-[0.2em] mt-auto pt-8 border-t border-micro-layer-1">
-                        <span>Details</span>
-                        <div className="w-10 h-10 rounded-full bg-micro-layer-1 flex items-center justify-center text-micro-fg group-hover:bg-micro-fg group-hover:text-white transition-all shadow-sm">
-                          <ArrowRight className="w-4 h-4" />
-                        </div>
-                      </div>
-                    </div>
-                  </Link>
-                );
-              })}
-            </div>
-          </div>
-        )}
       </div>
     </>
   );
@@ -169,7 +128,14 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const post = getPostBySlug(params?.slug as string);
   if (!post) return { notFound: true };
-  const allRecipes = getAllRecipes();
-  const relatedRecipes = allRecipes.filter(r => post.relatedRecipes?.includes(r.id));
-  return { props: { post, relatedRecipes } };
+
+  const slugify = (value: string) =>
+    value.toLowerCase().trim().replace(/\./g, '-').replace(/\s+/g, '-').replace(/[^\w-]+/g, '').replace(/--+/g, '-');
+  const currentToolPaths = new Set(aiTools.map(tool => `/tools/${slugify(tool.name)}`));
+  const content = post.content.replace(
+    /\[([^\]]+)\]\((\/tools\/[^)]+)\)/g,
+    (link, label, href) => currentToolPaths.has(href) ? link : `**${label}**`,
+  );
+
+  return { props: { post: { ...post, content } } };
 };

@@ -13,7 +13,7 @@ ogImage:
 
 If you find yourself saying this, take a look at your recurring tasks, your manual follow-ups, and the data you process daily. Most of the friction in your workflow is likely an automation opportunity.
 
-Here are 50 practical ideas pulled directly from our **[Blueprint Library](/500-ways-to-use-llms-for-work)**.
+Here are 50 practical ideas to help you spot useful automation opportunities.
 
 1.  **[Meeting Action Enforcer](/tools/meeting-action-item-enforcer)** - Draft follow-up emails based on meeting transcripts and action items.
 2.  **[Competitor Spy](/tools/competitor-ad-library-spy)** - Receive a weekly summary of new ad creatives launched by your competitors.
@@ -66,4 +66,4 @@ Here are 50 practical ideas pulled directly from our **[Blueprint Library](/500-
 49. **[Competitor Tech Spy](/tools/competitor-tech-stack-spy)** - Track changes in the technologies your competitors are using.
 50. **[Networking Planner](/tools/conference-networking-planner)** - Identify the most relevant people to meet at upcoming industry events.
 
-**Workflow Note:** You can implement these using our **[blueprints](/500-ways-to-use-llms-for-work)** paired with an agent like Gemini or Claude to process your local files and data.
+**Workflow Note:** Start with one narrow, repetitive task and verify every output before expanding the automation.

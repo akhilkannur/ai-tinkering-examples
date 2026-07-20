@@ -58,8 +58,8 @@ Connect your tools without Zapier. Let the agent parse your logs and automate th
 
 You don't need to be a developer. You just need to be a **tinkerer**.
 
-1.  **Pick a Blueprint:** Go to our **[Master List of 500+ Blueprints](/500-ways-to-use-llms-for-work)**.
-2.  **Download the Agent:** Install `gemini-cli` or `claude-code`.
-3.  **Run It:** Drop the blueprint in a folder with your data and say "Go."
+1.  **Pick a real example:** Browse the documented workflows on the **[Real AI Examples homepage](/)**.
+2.  **Choose the right tool:** Install the tool or agent used in the example.
+3.  **Adapt the workflow:** Recreate the useful parts with your own context and data.
 
 The future belongs to those who build systems, not those who chat with bots.
